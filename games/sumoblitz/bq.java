@@ -8,44 +8,24 @@ abstract class bq {
     fr field_b;
 
     final static an a(boolean param0, int param1) {
-        an var2;
-        an stackIn_2_0 = null;
-        an stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          var2 = new an(true);
-          stackIn_2_0 = (an) (var2);
-
-          if (!param0) {
-            stackIn_3_0 = (an) ((Object) stackIn_2_0);
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = (an) ((Object) stackIn_2_0);
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        stackIn_3_0.field_c = stackIn_3_1 != 0;
-        if (param1 != 8192) {
-          field_d = (int[]) null;
-          return var2;
-        } else {
+        an var2 = new an(true);
+        var2.field_c = param0 ? true : false;
+        if (param1 == 8192) {
           return var2;
         }
+        field_d = (int[]) null;
+        return var2;
     }
 
     final static void a(int param0) {
-        if (param0 != 8192) {
-          field_d = (int[]) null;
-          cb.field_b = false;
-          ig.field_a.e(param0 ^ -23110);
-          return;
-        } else {
+        if (param0 == 8192) {
           cb.field_b = false;
           ig.field_a.e(param0 ^ -23110);
           return;
         }
+        field_d = (int[]) null;
+        cb.field_b = false;
+        ig.field_a.e(param0 ^ -23110);
     }
 
     abstract void b(int param0);
@@ -61,7 +41,7 @@ abstract class bq {
         field_d = null;
         field_a = null;
         if (param0 != -76) {
-            field_c = (da) null;
+          field_c = (da) null;
         }
     }
 
@@ -69,9 +49,9 @@ abstract class bq {
 
     bq(fr param0) {
         try {
-            this.field_b = param0;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "bq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "bq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

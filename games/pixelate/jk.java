@@ -11,10 +11,10 @@ final class jk {
     public static void a(int param0) {
         field_e = null;
         if (param0 != 20) {
-            jk.a(false, (byte) 23);
-            field_d = null;
-            field_a = null;
-            return;
+          jk.a(false, (byte) 23);
+          field_d = null;
+          field_a = null;
+          return;
         }
         field_d = null;
         field_a = null;
@@ -22,11 +22,11 @@ final class jk {
 
     final static void a(boolean param0, byte param1) {
         if (tm.a((byte) 120)) {
-            param0 = false;
+          param0 = false;
         }
         dh.a((byte) 58, param0);
         if (param1 != 83) {
-            return;
+          return;
         }
         bj.a((byte) 1);
     }

@@ -15,59 +15,54 @@ final class od extends ana {
         super(param0, param1);
         this.field_v = false;
         try {
-            this.field_x = param2 ? true : false;
-            this.field_y = param1;
+          this.field_x = param2 ? true : false;
+          this.field_y = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static boolean e(byte param0) {
-        if (param0 < -124) {
-          if (qt.field_l != null) {
-            if (!qt.field_l.b(-8455)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 >= -124) {
           od.a(-16L, 12, -52);
-          if (qt.field_l != null) {
-            if (!qt.field_l.b(-8455)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (qt.field_l == null) {
             return false;
           }
+          if (qt.field_l.b(-8455)) {
+            return true;
+          }
+          return false;
         }
+        if (qt.field_l == null) {
+          return false;
+        }
+        if (qt.field_l.b(-8455)) {
+          return true;
+        }
+        return false;
     }
 
     final static void a(long param0, String param1, boolean param2) {
         CharSequence var5 = null;
         try {
-            gk.field_d = 2;
-            bd.field_k = param1;
-            var5 = (CharSequence) ((Object) param1);
-            df.field_s = fq.a(0, var5);
-            if (param2) {
-                od.e((byte) 9);
-            }
-            eaa.field_a = param0;
-            lna.field_q = true;
+          gk.field_d = 2;
+          bd.field_k = param1;
+          var5 = (CharSequence) ((Object) param1);
+          df.field_s = fq.a(0, var5);
+          if (param2) {
+            od.e((byte) 9);
+          }
+          eaa.field_a = param0;
+          lna.field_q = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "od.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void b(boolean param0) {
         field_A = (int[][]) null;
         if (param0) {
-            return;
+          return;
         }
         field_w = null;
         field_C = null;
@@ -76,12 +71,9 @@ final class od extends ana {
     }
 
     final static void a(long param0, int param1, int param2) {
-        pf var4;
-        int var5;
-        var4 = sja.field_fb;
-        if (param2 != 2) {
-          return;
-        } else {
+        int var5 = 0;
+        pf var4 = sja.field_fb;
+        if (param2 == 2) {
           var4.c(param1, (byte) 100);
           var4.field_g = var4.field_g + 1;
           var5 = var4.field_g;
@@ -94,7 +86,7 @@ final class od extends ana {
 
     private final void f(byte param0) {
         if (param0 > -16) {
-            field_A = (int[][]) null;
+          field_A = (int[][]) null;
         }
     }
 
@@ -104,78 +96,52 @@ final class od extends ana {
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 69) {
-                break L1;
-              } else {
-                var3 = (String) null;
-                od.a(-51L, (String) null, true);
-                break L1;
-              }
-            }
-            stackIn_3_0 = ko.field_g.a((byte) 123, param0, "");
-            break L0;
+          if (param1 <= 69) {
+            var3 = (String) null;
+            od.a(-51L, (String) null, true);
           }
+          stackIn_3_0 = ko.field_g.a((byte) 123, param0, "");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("od.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("od.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final boolean c(byte param0) {
-        int fieldTemp$1 = 0;
-        int var2_int;
-        tka var2;
-        if (!this.field_x) {
-          if (!this.field_m.a((byte) -106)) {
-            fieldTemp$1 = this.field_l - 1;
-            this.field_l = this.field_l - 1;
-            if (0 <= fieldTemp$1) {
-              if (this.field_v) {
-                return false;
-              } else {
-                this.field_y.field_l.a(-27449, this.field_q).b(-1, 2);
-                var2 = new tka(this.field_q, this.field_y.field_r, this.field_y.field_u);
-                ((kj) ((Object) var2)).a(0);
-                this.field_v = true;
-                return false;
-              }
-            } else {
-              var2_int = 39 / ((param0 - 71) / 47);
-              this.f((byte) -66);
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        tka var2 = null;
+        if (this.field_x) {
           return true;
         }
+        if (this.field_m.a((byte) -106)) {
+          return false;
+        }
+        int fieldTemp$0 = this.field_l - 1;
+        this.field_l = this.field_l - 1;
+        if (0 > fieldTemp$0) {
+          int var2_int = 39 / ((param0 - 71) / 47);
+          this.f((byte) -66);
+          return true;
+        }
+        if (!this.field_v) {
+          this.field_y.field_l.a(-27449, this.field_q).b(-1, 2);
+          var2 = new tka(this.field_q, this.field_y.field_r, this.field_y.field_u);
+          ((kj) ((Object) var2)).a(0);
+          this.field_v = true;
+          return false;
+        }
+        return false;
     }
 
     static {

@@ -9,27 +9,20 @@ final class vk extends me {
     boolean field_m;
 
     final vk a(ng param0) {
-        int dupTemp$1 = 0;
         this.field_i = param0.a(this.field_i, (byte) -128);
         this.field_j = param0.a((byte) -128, this.field_j);
-        if (this.field_k == this.field_l) {
-          dupTemp$1 = param0.a(this.field_k, (byte) 101);
-          this.field_l = dupTemp$1;
-          this.field_k = dupTemp$1;
-          return (vk) (this);
-        } else {
-          L0: {
-            this.field_k = param0.a(this.field_k, (byte) 101);
-            this.field_l = param0.a(this.field_l, (byte) 101);
-            if (this.field_k != this.field_l) {
-              break L0;
-            } else {
-              this.field_k = this.field_k - 1;
-              break L0;
-            }
+        if (this.field_k != this.field_l) {
+          this.field_k = param0.a(this.field_k, (byte) 101);
+          this.field_l = param0.a(this.field_l, (byte) 101);
+          if (this.field_k == this.field_l) {
+            this.field_k = this.field_k - 1;
           }
-          return (vk) (this);
+          return this;
         }
+        int dupTemp$0 = param0.a(this.field_k, (byte) 101);
+        this.field_l = dupTemp$0;
+        this.field_k = dupTemp$0;
+        return this;
     }
 
     vk(int param0, int param1) {

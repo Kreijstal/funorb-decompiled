@@ -6,71 +6,68 @@ final class dqa extends mna {
     static jea field_e;
 
     final static jua a(int param0) {
-        if (kl.field_a != fta.field_c) {
-          if (mua.field_a != kl.field_a) {
-            if (param0 == 3239) {
-              return null;
-            } else {
-              return (jua) null;
-            }
-          } else {
-            kl.field_a = fta.field_c;
-            return ki.field_n;
-          }
-        } else {
+        if (kl.field_a == fta.field_c) {
           throw new IllegalStateException();
         }
+        if (mua.field_a == kl.field_a) {
+          kl.field_a = fta.field_c;
+          return ki.field_n;
+        }
+        if (param0 != 3239) {
+          return (jua) null;
+        }
+        return null;
     }
 
     final static void a(String param0, int param1, String param2, int param3, int param4) {
         try {
-            pq.field_g.field_sb = param2;
-            pq.field_g.field_G = pq.field_g.field_G + mka.field_b.field_G;
-            pq.field_g.field_ib = param3;
-            pq.field_g.field_r = param0;
-            mka.field_b.field_qb = mka.field_b.field_qb + mka.field_b.field_G;
-            mka.field_b.field_G = param1;
-            if (param4 < 118) {
-                cn var6 = (cn) null;
-                dqa.a((cn) null, (cn) null, (byte) 102, (cn) null);
-            }
-            pq.field_g.field_G = pq.field_g.field_G - mka.field_b.field_G;
-            mka.field_b.field_qb = mka.field_b.field_qb - mka.field_b.field_G;
+          pq.field_g.field_sb = param2;
+          pq.field_g.field_G = pq.field_g.field_G + mka.field_b.field_G;
+          pq.field_g.field_ib = param3;
+          pq.field_g.field_r = param0;
+          mka.field_b.field_qb = mka.field_b.field_qb + mka.field_b.field_G;
+          mka.field_b.field_G = param1;
+          if (param4 < 118) {
+            cn var6 = (cn) null;
+            dqa.a((cn) null, (cn) null, (byte) 102, (cn) null);
+          }
+          pq.field_g.field_G = pq.field_g.field_G - mka.field_b.field_G;
+          mka.field_b.field_qb = mka.field_b.field_qb - mka.field_b.field_G;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "dqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "dqa.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     dqa(ne[] param0) {
         try {
-            this.field_f = param0;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "dqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "dqa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         if (param0 != 11) {
-            return;
+          return;
         }
         field_e = null;
     }
 
     final static int a(boolean param0, int param1, int param2) {
         if (!param0) {
-            return 28;
+          return 28;
         }
         return (1 << -1 + param2) + param1;
     }
 
     final static void a(cn param0, cn param1, byte param2, cn param3) {
         try {
-            qra.field_l = (d) ((Object) new sja(param1, param0, param3));
-            if (param2 != 55) {
-                field_e = (jea) null;
-            }
+          qra.field_l = (d) ((Object) new sja(param1, param0, param3));
+          if (param2 != 55) {
+            field_e = (jea) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "dqa.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "dqa.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

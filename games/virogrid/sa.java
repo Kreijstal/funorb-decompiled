@@ -15,14 +15,14 @@ final class sa extends l {
 
     final static void a(byte param0, String param1, String param2, boolean param3) {
         try {
-            wd.field_d = param1;
-            pm.field_g = param2;
-            if (param0 <= 98) {
-                sa.a(-84);
-            }
-            gk.a(param3, bn.field_a, false);
+          wd.field_d = param1;
+          pm.field_g = param2;
+          if (param0 <= 98) {
+            sa.a(-84);
+          }
+          gk.a(param3, bn.field_a, false);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

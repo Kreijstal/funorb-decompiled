@@ -11,15 +11,15 @@ class kl extends dk {
 
     public final void a(boolean param0, int param1, int param2, n param3, int param4) {
         try {
-            if (param2 >= -48) {
-                field_s = (uj[]) null;
-            }
-            if (!(!param0)) {
-                tn.a(param1 + param3.field_k, param3.field_x, 152, param4 + param3.field_o, param3.field_u);
-            }
-            super.a(param0, param1, -106, param3, param4);
+          if (param2 >= -48) {
+            field_s = (uj[]) null;
+          }
+          if (param0) {
+            tn.a(param1 + param3.field_k, param3.field_x, 152, param4 + param3.field_o, param3.field_u);
+          }
+          super.a(param0, param1, -106, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -39,53 +39,19 @@ class kl extends dk {
         field_u = null;
         field_v = null;
         if (!param0) {
-            field_q = (jn) null;
+          field_q = (jn) null;
         }
     }
 
     final static nd a(boolean param0, int param1) {
-        nd var2;
-        nd stackIn_3_0 = null;
-        nd stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        nd stackIn_7_0 = null;
-        nd stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        var2 = new nd(true);
-        if (param1 != 0) {
-          L0: {
-            field_r = (String[]) null;
-            stackIn_7_0 = (nd) (var2);
-
-            if (!param0) {
-              stackIn_8_0 = (nd) ((Object) stackIn_7_0);
-              stackIn_8_1 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = (nd) ((Object) stackIn_7_0);
-              stackIn_8_1 = 1;
-              break L0;
-            }
-          }
-          stackIn_8_0.field_i = stackIn_8_1 != 0;
-          return var2;
-        } else {
-          L1: {
-            stackIn_3_0 = (nd) (var2);
-
-            if (!param0) {
-              stackIn_4_0 = (nd) ((Object) stackIn_3_0);
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = (nd) ((Object) stackIn_3_0);
-              stackIn_4_1 = 1;
-              break L1;
-            }
-          }
-          stackIn_4_0.field_i = stackIn_4_1 != 0;
+        nd var2 = new nd(true);
+        if (param1 == 0) {
+          var2.field_i = param0 ? true : false;
           return var2;
         }
+        field_r = (String[]) null;
+        var2.field_i = param0 ? true : false;
+        return var2;
     }
 
     static {

@@ -27,11 +27,7 @@ public class NativeInterface {
     final native void setAmbient(float param0);
 
     public NativeInterface(int param0, int param1) {
-        try {
-            this.init(param0, param1);
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        this.init(param0, param1);
     }
 
     final native void copyPositions(int[] param0, int[] param1, int[] param2, short[] param3, int param4, int param5, int param6, long param7);

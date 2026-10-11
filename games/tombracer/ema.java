@@ -8,8 +8,6 @@ final class ema implements isa {
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -18,87 +16,46 @@ final class ema implements isa {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int var6_intLifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
         var10 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var6_int = 0;
-            L1: while (true) {
-              if (param0.field_p < var6_int) {
-                L2: {
-                  if (param2 == 16777215) {
-                    break L2;
-                  } else {
-                    ema.a(false, 4, -88, -72, -24);
-                    break L2;
-                  }
-                }
-                var6_int = 1;
-                L3: while (true) {
-                  if (var6_int > 5) {
-                    break L0;
-                  } else {
-                    L4: {
-                      var7 = param0.field_m + param0.field_i + (param1 + -(param0.field_m >> 1008819969) + -5) - -var6_int;
-                      var8 = (param0.field_m >> 1093457473) + -(var6_int * 2);
-                      var9 = (param0.field_p - 4 >> 495510017) + (param0.field_n + (param3 - -var6_int));
-                      if (bea.field_h > var9) {
-                        break L4;
-                      } else {
-                        if (bea.field_k > var9) {
-                          L5: {
-                            if (var7 <= bea.field_b) {
-                              break L5;
-                            } else {
-                              bea.field_l[var9 * bea.field_g - (-var7 + 1)] = sea.c(16711422, bea.field_l[var7 + (bea.field_g * var9 - 1)]) >> -12545151;
-                              break L5;
-                            }
-                          }
-                          if (var7 + var8 >= bea.field_d) {
-                            break L4;
-                          } else {
-                            bea.field_l[var7 + var9 * bea.field_g + var8] = sea.c(8355711, bea.field_l[var8 + bea.field_g * var9 + var7] >> 2005619425);
-                            break L4;
-                          }
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    bea.c(var7, var9, var8, 0);
-                    var6_int++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var7 = 152 - -(var6_int * 48 / param0.field_p);
-                var8 = var7 | (var7 << 1951373904 | var7 << -514818360);
-                bea.c(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
-                var6_int++;
-                continue L1;
+          for (var6_int = 0; param0.field_p >= var6_int; var6_int++) {
+            var7 = 152 + var6_int * 48 / param0.field_p;
+            var8 = var7 | (var7 << 16 | var7 << 8);
+            bea.c(param0.field_i + param1, param0.field_n + (param3 + var6_int), param0.field_m, var8);
+          }
+          if (param2 != 16777215) {
+            ema.a(false, 4, -88, -72, -24);
+          }
+          for (var6_intLifetime1 = 1; var6_intLifetime1 <= 5; var6_intLifetime1++) {
+            var7Lifetime1 = param0.field_m + param0.field_i + (param1 - (param0.field_m >> 1) - 5) + var6_intLifetime1;
+            var8Lifetime1 = (param0.field_m >> 1) - var6_intLifetime1 * 2;
+            var9 = (param0.field_p - 4 >> 1) + (param0.field_n + (param3 + var6_intLifetime1));
+            if (bea.field_h <= var9 &&
+              bea.field_k > var9) {
+              if (var7Lifetime1 > bea.field_b) {
+                bea.field_l[var9 * bea.field_g - (-var7Lifetime1 + 1)] = sea.c(16711422, bea.field_l[var7Lifetime1 + (bea.field_g * var9 - 1)]) >> 1;
+              }
+              if (var7Lifetime1 + var8Lifetime1 < bea.field_d) {
+                bea.field_l[var7Lifetime1 + var9 * bea.field_g + var8Lifetime1] = sea.c(8355711, bea.field_l[var8Lifetime1 + bea.field_g * var9 + var7Lifetime1] >> 1);
               }
             }
+            bea.c(var7Lifetime1, var9, var8Lifetime1, 0);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var6);
-
-            stackIn_19_1 = new StringBuilder().append("ema.B(");
-
-            if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_19_0 = var6;
+          stackIn_19_1 = new StringBuilder().append("ema.B(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -108,72 +65,40 @@ final class ema implements isa {
         jpa var8;
         jpa var9;
         int stackIn_17_0 = 0;
-        L0: {
-          var8 = lm.field_p[param3];
-          var9 = var8;
-          var6 = 0;
-          if (param0) {
-            var9.b();
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        L1: {
-          if (param2 < param1) {
-            break L1;
-          } else {
-            if (0 > param4) {
-              break L1;
-            } else {
-              if (param2 >= var9.field_i) {
-                break L1;
-              } else {
-                if (param4 < var9.field_a) {
-                  L2: {
-                    var6 = var9.field_f[param2 + param4 * var8.field_i];
-                    if (var6 >= 0) {
-                      if (0 < var8.field_g[var6]) {
-                        stackIn_17_0 = 1;
-                        break L2;
-                      } else {
-                        stackIn_17_0 = 0;
-                        break L2;
-                      }
-                    } else {
-                      stackIn_17_0 = 0;
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    var7 = stackIn_17_0;
-                    if (param0) {
-                      var9.b();
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return var7 != 0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          }
-        }
+        int var6Lifetime1;
+        var8 = lm.field_p[param3];
+        var9 = var8;
+        var6 = 0;
         if (param0) {
           var9.b();
-          return false;
-        } else {
+        }
+        if (param2 >= param1 &&
+          0 <= param4 &&
+          param2 < var9.field_i &&
+          param4 < var9.field_a) {
+          var6Lifetime1 = var9.field_f[param2 + param4 * var8.field_i];
+          if (var6Lifetime1 >= 0) {
+            stackIn_17_0 = (0 < var8.field_g[var6Lifetime1]) ? 1 : 0;
+          } else {
+            stackIn_17_0 = 0;
+          }
+          var7 = stackIn_17_0;
+          if (param0) {
+            var9.b();
+          }
+          return var7 != 0;
+        }
+        if (!param0) {
           return false;
         }
+        var9.b();
+        return false;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 48) {
-            ema.a(false, 111, 21, -70, 126);
+          ema.a(false, 111, 21, -70, 126);
         }
     }
 

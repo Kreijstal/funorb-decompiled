@@ -14,78 +14,51 @@ final class dl extends rb {
         field_n = null;
         field_p = null;
         if (param0 <= 91) {
-            dl.l((byte) -94);
+          dl.l((byte) -94);
         }
     }
 
     final void g(int param0, int param1) {
-        int fieldTemp$1 = 0;
-        if (param0 < 35) {
-          return;
-        } else {
-          fieldTemp$1 = this.field_g;
+        int fieldTemp$0 = 0;
+        if (param0 >= 35) {
+          fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$1] = (byte)(this.field_l.b(256) + param1);
+          this.field_f[fieldTemp$0] = (byte)(this.field_l.b(256) + param1);
           return;
         }
     }
 
     final void a(byte[] param0, int param1, int param2, boolean param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (!param3) {
-                break L1;
-              } else {
-                field_o = 102L;
-                break L1;
-              }
-            }
-            var5_int = 0;
-            L2: while (true) {
-              if (param1 <= var5_int) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_g;
-                this.field_g = this.field_g + 1;
-                param0[param2 + var5_int] = (byte)(this.field_f[fieldTemp$2] + -this.field_l.b(256));
-                var5_int++;
-                continue L2;
-              }
-            }
+          if (param3) {
+            field_o = 102L;
           }
+          for (var5_int = 0; param1 > var5_int; var5_int++) {
+            fieldTemp$0 = this.field_g;
+            this.field_g = this.field_g + 1;
+            param0[param2 + var5_int] = (byte)(this.field_f[fieldTemp$0] - this.field_l.b(256));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("dl.E(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("dl.E(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -97,7 +70,7 @@ final class dl extends rb {
     final void m(byte param0) {
         this.field_g = (this.field_q + 7) / 8;
         if (param0 <= 33) {
-            field_n = (pa[]) null;
+          field_n = (pa[]) null;
         }
     }
 
@@ -106,77 +79,61 @@ final class dl extends rb {
     }
 
     final static String k(byte param0) {
+        int var2 = 0;
         String var1;
-        int var2;
         int var3;
         int var4;
         int var5;
         String var6;
         String var7;
         String var8;
+        String var1Lifetime1;
         var5 = AceOfSkies.field_G ? 1 : 0;
         var6 = "(" + ga.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
         var1 = var6;
-        if (ag.field_s > 0) {
-          var1 = var6 + ":";
-          var2 = 0;
-          L0: while (true) {
-            if (ag.field_s > var2) {
-              L1: {
-                var7 = var1 + ' ';
-                var1 = var7;
-                var3 = nm.field_c.field_f[var2] & 255;
-                var4 = var3 >> 1380495364;
-                if (var4 >= 10) {
-                  var4 += 55;
-                  break L1;
-                } else {
-                  var4 += 48;
-                  break L1;
-                }
-              }
-              L2: {
-                var3 = var3 & 15;
-                if (-11 >= (var3 ^ -1)) {
-                  var3 += 55;
-                  break L2;
-                } else {
-                  var3 += 48;
-                  break L2;
-                }
-              }
-              var8 = var7 + (char)var4;
-              var1 = var8 + (char)var3;
-              var2++;
-              continue L0;
-            } else {
-              if (param0 != 65) {
-                dl.k((byte) -78);
-                return var1;
-              } else {
-                return var1;
-              }
-            }
-          }
-        } else {
-          if (param0 != 65) {
-            dl.k((byte) -78);
-            return var1;
-          } else {
+        if (ag.field_s <= 0) {
+          if (param0 == 65) {
             return var1;
           }
+          dl.k((byte) -78);
+          return var1;
         }
+        var1Lifetime1 = var6 + ":";
+        for (var2 = 0; ag.field_s > var2; var2++) {
+          var7 = var1Lifetime1 + ' ';
+          var1Lifetime1 = var7;
+          var3 = nm.field_c.field_f[var2] & 255;
+          var4 = var3 >> 4;
+          if (var4 >= 10) {
+            var4 += 55;
+          } else {
+            var4 += 48;
+          }
+          var3 = var3 & 15;
+          if (var3 >= 10) {
+            var3 += 55;
+          } else {
+            var3 += 48;
+          }
+          var8 = var7 + (char)var4;
+          var1Lifetime1 = var8 + (char)var3;
+        }
+        if (param0 == 65) {
+          return var1Lifetime1;
+        }
+        dl.k((byte) -78);
+        return var1Lifetime1;
     }
 
     final void a(boolean param0, int[] param1) {
         try {
-            if (!param0) {
-                int[] var4 = (int[]) null;
-                this.a(true, (int[]) null);
-            }
-            this.field_l = new fc(param1);
+          if (!param0) {
+            int[] var4 = (int[]) null;
+            this.a(true, (int[]) null);
+          }
+          this.field_l = new fc(param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "dl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "dl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -185,39 +142,37 @@ final class dl extends rb {
     }
 
     final int j(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        if (param0 > -1) {
-          field_p = (jb) null;
-          fieldTemp$2 = this.field_g;
+        int fieldTemp$0 = 0;
+        if (param0 <= -1) {
+          fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          return 255 & this.field_f[fieldTemp$2] - this.field_l.b(256);
-        } else {
-          fieldTemp$3 = this.field_g;
-          this.field_g = this.field_g + 1;
-          return 255 & this.field_f[fieldTemp$3] - this.field_l.b(256);
+          return 255 & this.field_f[fieldTemp$0] - this.field_l.b(256);
         }
+        field_p = (jb) null;
+        int fieldTemp$1 = this.field_g;
+        this.field_g = this.field_g + 1;
+        return 255 & this.field_f[fieldTemp$1] - this.field_l.b(256);
     }
 
     final int b(byte param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = AceOfSkies.field_G ? 1 : 0;
-        int var3 = this.field_q >> 947512803;
+        int var3 = this.field_q >> 3;
         int var4 = 8 - (this.field_q & 7);
         int var6 = 97 / ((17 - param0) / 60);
         this.field_q = this.field_q + param1;
         int var5 = 0;
         while (param1 > var4) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((kp.field_f[var4] & this.field_f[incrementValue$0]) << param1 + -var4);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((kp.field_f[var4] & this.field_f[incrementValue$0]) << param1 - var4);
+          param1 = param1 - var4;
+          var4 = 8;
         }
         if (param1 == var4) {
-            var5 = var5 + (kp.field_f[var4] & this.field_f[var3]);
+          var5 = var5 + (kp.field_f[var4] & this.field_f[var3]);
         } else {
-            var5 = var5 + (this.field_f[var3] >> -param1 + var4 & kp.field_f[param1]);
+          var5 = var5 + (this.field_f[var3] >> -param1 + var4 & kp.field_f[param1]);
         }
         return var5;
     }

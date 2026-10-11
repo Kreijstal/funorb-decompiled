@@ -14,17 +14,7 @@ final class lm {
         ms.field_e[46] = 72;
         ms.field_e[47] = 73;
         ms.field_e[59] = 57;
-        if (param0 <= 85) {
-          lm.a(false);
-          ms.field_e[91] = 42;
-          ms.field_e[92] = 74;
-          ms.field_e[93] = 43;
-          ms.field_e[45] = 26;
-          ms.field_e[222] = 58;
-          ms.field_e[192] = 28;
-          ms.field_e[520] = 59;
-          return;
-        } else {
+        if (param0 > 85) {
           ms.field_e[91] = 42;
           ms.field_e[92] = 74;
           ms.field_e[93] = 43;
@@ -34,15 +24,23 @@ final class lm {
           ms.field_e[520] = 59;
           return;
         }
+        lm.a(false);
+        ms.field_e[91] = 42;
+        ms.field_e[92] = 74;
+        ms.field_e[93] = 43;
+        ms.field_e[45] = 26;
+        ms.field_e[222] = 58;
+        ms.field_e[192] = 28;
+        ms.field_e[520] = 59;
     }
 
     public static void a(boolean param0) {
         field_a = null;
         field_d = null;
         if (!param0) {
-            lm.a(false);
-            field_e = null;
-            return;
+          lm.a(false);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

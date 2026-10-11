@@ -13,15 +13,7 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
     static nf[] field_o;
 
     public static void a(int param0) {
-        if (param0 > -40) {
-          cd.a(32);
-          field_o = null;
-          field_k = null;
-          field_n = null;
-          field_j = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 <= -40) {
           field_o = null;
           field_k = null;
           field_n = null;
@@ -29,12 +21,18 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
           field_m = null;
           return;
         }
+        cd.a(32);
+        field_o = null;
+        field_k = null;
+        field_n = null;
+        field_j = null;
+        field_m = null;
     }
 
     final static boolean c(byte param0) {
         if (param0 != 6) {
-            field_j = (int[]) null;
-            return dh.field_vb.a(false);
+          field_j = (int[]) null;
+          return dh.field_vb.a(false);
         }
         return dh.field_vb.a(false);
     }
@@ -43,40 +41,25 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.field_l == param0) {
-              this.field_l = null;
-              break L0;
-            } else {
-              return;
-            }
+          if (this.field_l != param0) {
+            return;
           }
+          this.field_l = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("cd.removeConsumer(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("cd.removeConsumer(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -85,11 +68,11 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(byte param0, java.awt.Graphics param1, int param2, int param3) {
         try {
-            this.d((byte) 126);
-            int var5_int = 57 / ((param0 - 36) / 52);
-            param1.drawImage(this.field_e, param3, param2, (java.awt.image.ImageObserver) (this));
+          this.d((byte) 126);
+          int var5_int = 57 / ((param0 - 36) / 52);
+          param1.drawImage(this.field_e, param3, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "cd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -98,41 +81,41 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
         this.field_b = param1;
         this.field_c = param3;
         if (param2 > -53) {
-            return;
+          return;
         }
         try {
-            this.field_p = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_e = param0.createImage((java.awt.image.ImageProducer) (this));
-            this.d((byte) 120);
-            param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.d((byte) 125);
-            param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.d((byte) 116);
-            param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a((byte) 106);
+          this.field_p = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_e = param0.createImage((java.awt.image.ImageProducer) (this));
+          this.d((byte) 120);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.d((byte) 125);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.d((byte) 116);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.a((byte) 106);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "cd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            this.field_l = param0;
-            param0.setDimensions(this.field_b, this.field_c);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_p);
-            param0.setHints(14);
+          this.field_l = param0;
+          param0.setDimensions(this.field_b, this.field_c);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_p);
+          param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "cd.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final synchronized void d(byte param0) {
         if (param0 <= 103) {
-            return;
+          return;
         }
-        if (!(this.field_l != null)) {
-            return;
+        if (this.field_l == null) {
+          return;
         }
         this.field_l.setPixels(0, 0, this.field_b, this.field_c, this.field_p, this.field_f, 0, this.field_b);
         this.field_l.imageComplete(2);
@@ -144,41 +127,24 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = 1;
-            break L0;
-          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
-
-            stackIn_4_1 = new StringBuilder().append("cd.imageUpdate(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("cd.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_1_0 != 0;
     }
 
     cd() {
@@ -186,9 +152,9 @@ final class cd extends rb implements java.awt.image.ImageProducer, java.awt.imag
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            this.addConsumer(param0);
+          this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "cd.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

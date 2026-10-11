@@ -10,9 +10,9 @@ final class ee {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 1) {
-            field_a = 65;
-            field_c = null;
-            return;
+          field_a = 65;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -21,31 +21,33 @@ final class ee {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
+        int var9_intLifetime1;
+        int var10Lifetime1;
         try {
-            var9_int = param7 + (param8.field_D + param3) + -param5;
-            var10 = param7 + (param8.field_D + param3 - -param6);
-            var11 = param8.field_v - (-param2 + -(param8.field_w >> 1178139841));
-            wj.d(var9_int, 0, var10, var11 - -param1);
-            param8.a(param3 - 1, param2 - 1, param0);
-            param8.a(-1 + param3, param2 + 1, param0);
-            wj.a(ha.field_d);
-            wj.d(var9_int + 1, 0, var10 - -1, var11 - -param1);
-            param8.a(1 + param3, -1 + param2, param0);
-            param8.a(param3 + 1, 1 + param2, param0);
-            int var12 = 93 / ((31 - param4) / 59);
-            wj.a(ha.field_d);
-            var9_int = -param7 + param3 + (param8.field_D + param8.field_y) + -param6;
-            var10 = param8.field_D - -param8.field_y - -param3 - (param7 - -param5);
-            wj.d(var9_int, -param1 + var11, var10, 480);
-            param8.a(-1 + param3, param2 + -1, param0);
-            param8.a(param3 - 1, 1 + param2, param0);
-            wj.a(ha.field_d);
-            wj.d(1 + var9_int, -param1 + var11, 1 + var10, 480);
-            param8.a(1 + param3, -1 + param2, param0);
-            param8.a(param3 + 1, 1 + param2, param0);
-            wj.a(ha.field_d);
+          var9_int = param7 + (param8.field_D + param3) - param5;
+          var10 = param7 + (param8.field_D + param3 + param6);
+          var11 = param8.field_v - (-param2 - (param8.field_w >> 1));
+          wj.d(var9_int, 0, var10, var11 + param1);
+          param8.a(param3 - 1, param2 - 1, param0);
+          param8.a(-1 + param3, param2 + 1, param0);
+          wj.a(ha.field_d);
+          wj.d(var9_int + 1, 0, var10 + 1, var11 + param1);
+          param8.a(1 + param3, -1 + param2, param0);
+          param8.a(param3 + 1, 1 + param2, param0);
+          int var12 = 93 / ((31 - param4) / 59);
+          wj.a(ha.field_d);
+          var9_intLifetime1 = -param7 + param3 + (param8.field_D + param8.field_y) - param6;
+          var10Lifetime1 = param8.field_D + param8.field_y + param3 - (param7 + param5);
+          wj.d(var9_intLifetime1, -param1 + var11, var10Lifetime1, 480);
+          param8.a(-1 + param3, param2 - 1, param0);
+          param8.a(param3 - 1, 1 + param2, param0);
+          wj.a(ha.field_d);
+          wj.d(1 + var9_intLifetime1, -param1 + var11, 1 + var10Lifetime1, 480);
+          param8.a(1 + param3, -1 + param2, param0);
+          param8.a(param3 + 1, 1 + param2, param0);
+          wj.a(ha.field_d);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "ee.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

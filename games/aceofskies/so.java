@@ -15,35 +15,20 @@ final class so {
         RuntimeException var2_ref = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -29) {
-                break L1;
-              } else {
-                so.a(-27, (byte) -64);
-                break L1;
-              }
-            }
-            var4 = (oc) ((Object) ci.field_j.d(268435455));
-            L2: while (true) {
-              if (var4 == null) {
-                var2 = wu.field_w.d(268435455);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    lb.a(param0, 0);
-                    var2 = wu.field_w.b((byte) 103);
-                    continue L3;
-                  }
-                }
-              } else {
-                ac.a(param0, 0, var4);
-                var4 = (oc) ((Object) ci.field_j.b((byte) 103));
-                continue L2;
-              }
-            }
+          if (param1 > -29) {
+            so.a(-27, (byte) -64);
           }
+          var4 = (oc) (ci.field_j.d(268435455));
+          while (var4 != null) {
+            ac.a(param0, 0, var4);
+            var4 = (oc) (ci.field_j.b((byte) 103));
+          }
+          var2 = wu.field_w.d(268435455);
+          while (var2 != null) {
+            lb.a(param0, 0);
+            var2 = wu.field_w.b((byte) 103);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -56,7 +41,7 @@ final class so {
         field_a = null;
         field_d = null;
         if (param0 <= 0) {
-            return;
+          return;
         }
         so.a((byte) 88);
     }

@@ -8,15 +8,15 @@ final class ebb {
     final static void a(byte param0) {
         ola.field_p = null;
         if (param0 != -74) {
-            field_a = (dja) null;
+          field_a = (dja) null;
         }
     }
 
     public static void a(int param0) {
         if (param0 != 23357) {
-            ebb.a(27);
-            field_a = null;
-            return;
+          ebb.a(27);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

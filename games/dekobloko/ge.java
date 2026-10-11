@@ -14,123 +14,72 @@ final class ge {
     static boolean field_c;
 
     final static int a(lk param0, int param1) {
+        int var5 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         lk var7 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+        int var4Lifetime1;
         var6 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            if (param0 != null) {
-              L1: {
-                var2_int = 0;
-                var3 = 10000 / param0.field_O;
-                if (param1 > 14) {
-                  break L1;
-                } else {
-                  var7 = (lk) null;
-                  ge.a((lk) null, 96);
-                  break L1;
-                }
-              }
-              var4 = param0.field_z;
-              L2: while (true) {
-                if (param0.field_a <= var4) {
-                  L3: {
-                    var2_int = var2_int + var3 * param0.field_O;
-                    var4 = 0;
-                    if (-5001 < (var2_int ^ -1)) {
-                      break L3;
-                    } else {
-                      var4 = 1;
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (-20001 < (var2_int ^ -1)) {
-                      break L4;
-                    } else {
-                      var4 = 2;
-                      break L4;
-                    }
-                  }
-                  stackIn_19_0 = var4;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var5 = 0;
-                  L5: while (true) {
-                    if (param0.field_O <= var5) {
-                      var3 = var3 * 3 / 4;
-                      var4++;
-                      continue L2;
-                    } else {
-                      if (-1 != (param0.field_P[var4 * param0.field_O - -var5] ^ -1)) {
-                        var2_int = var2_int + var3;
-                        var5++;
-                        continue L5;
-                      } else {
-                        var5++;
-                        continue L5;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == null) {
+            stackIn_3_0 = 0;
+            return stackIn_3_0;
           }
+          var2_int = 0;
+          var3 = 10000 / param0.field_O;
+          if (param1 <= 14) {
+            var7 = (lk) null;
+            ge.a((lk) null, 96);
+          }
+          for (var4 = param0.field_z; param0.field_a > var4; var4++) {
+            for (var5 = 0; param0.field_O > var5; var5++) {
+              if (param0.field_P[var4 * param0.field_O + var5] != 0) {
+                var2_int = var2_int + var3;
+              }
+            }
+            var3 = var3 * 3 / 4;
+          }
+          var2_int = var2_int + var3 * param0.field_O;
+          var4Lifetime1 = 0;
+          if (var2_int >= 5000) {
+            var4Lifetime1 = 1;
+          }
+          if (var2_int >= 20000) {
+            var4Lifetime1 = 2;
+          }
+          stackIn_21_0 = var4Lifetime1;
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var2);
-
-            stackIn_22_1 = new StringBuilder().append("ge.E(");
-
-            if (param0 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("ge.E(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_19_0;
+          throw dh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static jg b(byte param0) {
         String var1 = aa.a(param0 + 35);
-        if (var1 != null && -1 >= (var1.indexOf('@') ^ -1)) {
-            var1 = "";
+        if (var1 != null &&
+          var1.indexOf('@') >= 0) {
+          var1 = "";
         }
         if (param0 != -89) {
-            field_b = 0;
+          field_b = 0;
         }
         return new jg(aa.a(-65), uk.c((byte) -17));
     }
@@ -138,7 +87,7 @@ final class ge {
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-            return;
+          return;
         }
         field_f = null;
         field_h = null;
@@ -146,18 +95,16 @@ final class ge {
     }
 
     final static ni a(byte param0, int param1, int param2, pi[] param3, byte[] param4, int param5) {
+        int var17_int = 0;
         byte[] array$0 = null;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
         int incrementValue$3 = 0;
+        int var27 = 0;
+        int incrementValue$2 = 0;
         ni stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         StringBuilder stackIn_33_1 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         int[] var6 = null;
@@ -170,7 +117,6 @@ final class ge {
         byte[][] var12 = null;
         int var14 = 0;
         int var15 = 0;
-        int var17_int = 0;
         ni var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
@@ -181,7 +127,6 @@ final class ge {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        int var27 = 0;
         int var28 = 0;
         int[] var30 = null;
         int[] var31 = null;
@@ -195,183 +140,115 @@ final class ge {
         byte[][] var41 = null;
         int[] var45 = null;
         int[] var46 = null;
+        int var24Lifetime1;
+        int var25Lifetime1;
+        int var25Lifetime2;
+        int var26Lifetime1;
         var28 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            if (256 == param3.length) {
-              var39 = new int[256];
-              var32 = var39;
-              var6 = var32;
-              var40 = new int[256];
-              var33 = var40;
-              var7 = var33;
-              var37 = new int[256];
-              var30 = var37;
-              var8 = var30;
-              var38 = new int[256];
-              var31 = var38;
-              var9 = var31;
-              var11 = -2 / ((48 - param0) / 43);
-              var10 = new int[]{0, param1, param5};
-              var41 = new byte[256][];
-              var34 = var41;
-              var12 = var34;
-              var46 = hk.field_l;
-              var14 = hk.field_j;
-              var15 = hk.field_i;
-              var45 = new int[4];
-              hk.b(var45);
-              var17_int = 0;
-              L1: while (true) {
-                if (-257 >= (var17_int ^ -1)) {
-                  var17 = new ni(param4, var39, var40, var37, var38, var10, var41);
-                  var17.field_C = var17.field_C - param2;
-                  var17.field_K = var17.field_K - param2;
-                  var17.field_R = var17.field_R - param2;
-                  hk.a(var46, var14, var15);
-                  hk.a(var45);
-                  stackIn_27_0 = (ni) (var17);
-                  break L0;
-                } else {
-                  var6[var17_int] = param3[var17_int].field_d + -param2;
-                  var7[var17_int] = param3[var17_int].field_c + -param2;
-                  var8[var17_int] = (param2 << 435946913) + param3[var17_int].field_b;
-                  var9[var17_int] = param3[var17_int].field_i + (param2 << -894393727);
-                  array$0 = new byte[var37[var17_int] * var38[var17_int]];
-                  var12[var17_int] = array$0;
-                  var18 = array$0;
-                  var19 = param3[var17_int].field_k;
-                  var20 = param3[var17_int].field_b;
-                  var21 = param3[var17_int].field_i;
-                  var22 = var37[var17_int];
-                  var23 = var22 + -var20;
-                  hk.a(new int[var38[var17_int] * var37[var17_int]], var37[var17_int], var38[var17_int]);
-                  var24 = 0;
-                  var25 = 0;
-                  L2: while (true) {
-                    if (var25 >= var21) {
-                      var24 = 0;
-                      var25 = 0;
-                      L3: while (true) {
-                        if (var18.length <= var25) {
-                          var25 = (1 + var37[var17_int]) * param2;
-                          var26 = 0;
-                          L4: while (true) {
-                            if (var26 >= var21) {
-                              var17_int++;
-                              continue L1;
-                            } else {
-                              var27 = 0;
-                              L5: while (true) {
-                                if (var20 <= var27) {
-                                  var25 = var25 + var23;
-                                  var26++;
-                                  continue L4;
-                                } else {
-                                  L6: {
-                                    incrementValue$1 = var24;
-                                    var24++;
-                                    if (var19[incrementValue$1] != 0) {
-                                      incrementValue$2 = var25;
-                                      var25++;
-                                      var18[incrementValue$2] = (byte) 1;
-                                      break L6;
-                                    } else {
-                                      var25++;
-                                      break L6;
-                                    }
-                                  }
-                                  var27++;
-                                  continue L5;
-                                }
-                              }
-                            }
-                          }
-                        } else {
-                          var18[var25] = (byte)hk.field_l[var25];
-                          var25++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      var26 = 0;
-                      L7: while (true) {
-                        if (var20 <= var26) {
-                          var25++;
-                          continue L2;
-                        } else {
-                          L8: {
-                            incrementValue$3 = var24;
-                            var24++;
-                            if (0 == var19[incrementValue$3]) {
-                              break L8;
-                            } else {
-                              hk.a(var26, var25, (param2 << 1731923329) + 1, (param2 << -1375208415) + 1, 2);
-                              break L8;
-                            }
-                          }
-                          var26++;
-                          continue L7;
-                        }
-                      }
-                    }
-                  }
+          if (256 != param3.length) {
+            throw new IllegalArgumentException();
+          }
+          var39 = new int[256];
+          var32 = var39;
+          var6 = var32;
+          var40 = new int[256];
+          var33 = var40;
+          var7 = var33;
+          var37 = new int[256];
+          var30 = var37;
+          var8 = var30;
+          var38 = new int[256];
+          var31 = var38;
+          var9 = var31;
+          var11 = -2 / ((48 - param0) / 43);
+          var10 = new int[]{0, param1, param5};
+          var41 = new byte[256][];
+          var34 = var41;
+          var12 = var34;
+          var46 = hk.field_l;
+          var14 = hk.field_j;
+          var15 = hk.field_i;
+          var45 = new int[4];
+          hk.b(var45);
+          for (var17_int = 0; var17_int < 256; var17_int++) {
+            var6[var17_int] = param3[var17_int].field_d - param2;
+            var7[var17_int] = param3[var17_int].field_c - param2;
+            var8[var17_int] = (param2 << 1) + param3[var17_int].field_b;
+            var9[var17_int] = param3[var17_int].field_i + (param2 << 1);
+            array$0 = new byte[var37[var17_int] * var38[var17_int]];
+            var12[var17_int] = array$0;
+            var18 = array$0;
+            var19 = param3[var17_int].field_k;
+            var20 = param3[var17_int].field_b;
+            var21 = param3[var17_int].field_i;
+            var22 = var37[var17_int];
+            var23 = var22 - var20;
+            hk.a(new int[var38[var17_int] * var37[var17_int]], var37[var17_int], var38[var17_int]);
+            var24 = 0;
+            for (var25 = 0; var25 < var21; var25++) {
+              for (var26 = 0; var20 > var26; var26++) {
+                incrementValue$3 = var24;
+                var24++;
+                if (0 != var19[incrementValue$3]) {
+                  hk.a(var26, var25, (param2 << 1) + 1, (param2 << 1) + 1, 2);
                 }
               }
-            } else {
-              throw new IllegalArgumentException();
+            }
+            var24Lifetime1 = 0;
+            for (var25Lifetime1 = 0; var18.length > var25Lifetime1; var25Lifetime1++) {
+              var18[var25Lifetime1] = (byte)hk.field_l[var25Lifetime1];
+            }
+            var25Lifetime2 = (1 + var37[var17_int]) * param2;
+            for (var26Lifetime1 = 0; var26Lifetime1 < var21; var26Lifetime1++) {
+              for (var27 = 0; var20 > var27; var27++) {
+                if (var19[var24Lifetime1++] != 0) {
+                  incrementValue$2 = var25Lifetime2;
+                  var25Lifetime2++;
+                  var18[incrementValue$2] = (byte) 1;
+                } else {
+                  var25Lifetime2++;
+                }
+              }
+              var25Lifetime2 = var25Lifetime2 + var23;
             }
           }
+          var17 = new ni(param4, var39, var40, var37, var38, var10, var41);
+          var17.field_C = var17.field_C - param2;
+          var17.field_K = var17.field_K - param2;
+          var17.field_R = var17.field_R - param2;
+          hk.a(var46, var14, var15);
+          hk.a(var45);
+          stackIn_27_0 = var17;
+          return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var6_ref = decompiledCaughtException;
-            stackIn_30_0 = (RuntimeException) (var6_ref);
-
-            stackIn_30_1 = new StringBuilder().append("ge.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "null";
-              break L9;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "{...}";
-              break L9;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_30_0 = var6_ref;
+          stackIn_30_1 = new StringBuilder().append("ge.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
           }
-          L10: {
-
-
-            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',');
-
-            if (param4 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L10;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L10;
-            }
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
+          if (param4 == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_31_0), stackIn_34_2 + ',' + param5 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param5).append(')').toString());
         }
-        return stackIn_27_0;
     }
 
     final static void a(int param0, int param1, byte param2, ud param3) {
         try {
-            ai.a(80, 0, param3, param0, param1);
-            if (param2 != 127) {
-                ge.a((byte) 73);
-            }
+          ai.a(80, 0, param3, param0, param1);
+          if (param2 != 127) {
+            ge.a((byte) 73);
+          }
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ge.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ge.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -391,20 +268,20 @@ final class ge {
         pn.field_bb[6] = jd.field_Zb;
         pn.field_bb[13] = vh.field_c;
         if (param0 != 123) {
-            field_e = 114;
+          field_e = 114;
         }
         pn.field_bb[16] = uj.field_e;
     }
 
     final static void a(byte param0, jk param1) {
         try {
-            if (param0 > -65) {
-                byte[] var3 = (byte[]) null;
-                ge.a((byte) -116, -89, -66, (pi[]) null, (byte[]) null, 119);
-            }
-            me.field_z = param1;
+          if (param0 > -65) {
+            byte[] var3 = (byte[]) null;
+            ge.a((byte) -116, -89, -66, (pi[]) null, (byte[]) null, 119);
+          }
+          me.field_z = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ge.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ge.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

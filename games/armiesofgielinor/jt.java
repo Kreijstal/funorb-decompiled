@@ -8,22 +8,19 @@ final class jt {
         og.a(16756, param1);
         ib.a(40, param1, param3, param2);
         if (param0 != -32216) {
-            field_a = 9;
+          field_a = 9;
         }
     }
 
     final static boolean a(byte param0) {
-        int var1;
-        var1 = 72 / ((7 - param0) / 51);
-        if (tb.field_e != null) {
-          if (!tb.field_e.d((byte) -101)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = 72 / ((7 - param0) / 51);
+        if (tb.field_e == null) {
           return false;
         }
+        if (tb.field_e.d((byte) -101)) {
+          return true;
+        }
+        return false;
     }
 
     static {

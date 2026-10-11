@@ -18,8 +18,8 @@ abstract class oga extends vg {
 
     final boolean b(byte param0) {
         if (param0 > -91) {
-            field_f = 125L;
-            return this.field_h;
+          field_f = 125L;
+          return this.field_h;
         }
         return this.field_h;
     }
@@ -28,16 +28,16 @@ abstract class oga extends vg {
 
     final boolean a(int param0) {
         if (param0 != 1) {
-            this.field_h = true;
-            return false;
+          this.field_h = true;
+          return false;
         }
         return false;
     }
 
     int b(int param0) {
         if (param0 != 13727) {
-            this.a((byte) 63);
-            return 0;
+          this.a((byte) 63);
+          return 0;
         }
         return 0;
     }
@@ -52,16 +52,16 @@ abstract class oga extends vg {
 
     final int c(int param0) {
         if (param0 != 1) {
-            return -49;
+          return -49;
         }
         return 1;
     }
 
     oga(cka param0) {
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "oga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

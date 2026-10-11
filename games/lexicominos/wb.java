@@ -20,12 +20,11 @@ abstract class wb {
     dc field_o;
 
     final int c(byte param0) {
-        if (param0 != 67) {
-          this.field_p = -101;
-          return this.field_l.b(97) + this.field_k.b(109);
-        } else {
+        if (param0 == 67) {
           return this.field_l.b(97) + this.field_k.b(109);
         }
+        this.field_p = -101;
+        return this.field_l.b(97) + this.field_k.b(109);
     }
 
     abstract boolean a(byte param0);
@@ -37,7 +36,7 @@ abstract class wb {
         field_c = null;
         field_g = null;
         if (param0 != 5) {
-            field_m = (java.math.BigInteger) null;
+          field_m = (java.math.BigInteger) null;
         }
     }
 
@@ -49,49 +48,28 @@ abstract class wb {
         gb.field_d = false;
         if (ca.field_k) {
           jj.field_a.i(15);
-          if (param0 != 50) {
-            field_g = (java.awt.Image) null;
-            return;
-          } else {
+          if (param0 == 50) {
             return;
           }
-        } else {
-          var1 = be.field_l;
-          if (var1 <= 0) {
-            jj.field_a.g(true);
-            vg.a(113);
-            if (param0 != 50) {
-              field_g = (java.awt.Image) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if ((var1 ^ -1) == -2) {
-              jj.field_d = oj.field_d;
-              jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
-              jj.field_a.g(true);
-              vg.a(113);
-              if (param0 == 50) {
-                return;
-              } else {
-                field_g = (java.awt.Image) null;
-                return;
-              }
-            } else {
-              jj.field_d = da.a(new String[]{Integer.toString(var1)}, mc.field_m, false);
-              jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
-              jj.field_a.g(true);
-              vg.a(113);
-              if (param0 == 50) {
-                return;
-              } else {
-                field_g = (java.awt.Image) null;
-                return;
-              }
-            }
-          }
+          field_g = (java.awt.Image) null;
+          return;
         }
+        var1 = be.field_l;
+        if (var1 > 0) {
+          if (var1 == 1) {
+            jj.field_d = oj.field_d;
+          } else {
+            jj.field_d = da.a(new String[]{Integer.toString(var1)}, mc.field_m, false);
+          }
+          jj.field_d = ef.a(new CharSequence[]{(CharSequence) ((Object) jj.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) gj.field_u)}, 0);
+        }
+        jj.field_a.g(true);
+        vg.a(113);
+        if (param0 == 50) {
+          return;
+        }
+        field_g = (java.awt.Image) null;
+        return;
     }
 
     abstract void c(int param0);
@@ -109,69 +87,47 @@ abstract class wb {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (!(param1 == 0)) {
-            var6[4] = gf.a((byte) -76, 64, param1);
+        if (param1 != 0) {
+          var6[4] = gf.a((byte) -76, 64, param1);
         }
         return var5;
     }
 
     final int a(boolean param0) {
-        if (!param0) {
-          this.a(-12, 71, 119, (byte) 102, true);
-          return this.field_d.b(97) + this.field_f.b(111);
-        } else {
+        if (param0) {
           return this.field_d.b(97) + this.field_f.b(111);
         }
+        this.a(-12, 71, 119, (byte) 102, true);
+        return this.field_d.b(97) + this.field_f.b(111);
     }
 
     final boolean e(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 20) {
-          L0: {
-            this.e(-75);
-            if (20 > this.c((byte) 67)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (20 > this.c((byte) 67)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 20) {
+          return 20 <= this.c((byte) 67) ? true : false;
         }
+        this.e(-75);
+        return 20 <= this.c((byte) 67) ? true : false;
     }
 
     final dc a(int param0, int param1, int param2, byte param3, boolean param4) {
         if (param0 != 5) {
-            return (dc) null;
+          return (dc) null;
         }
-        long var6 = (long)param2 + ((long)param1 << 306764576);
+        long var6 = (long)param2 + ((long)param1 << 32);
         dc var8 = new dc();
         var8.field_j = var6;
         var8.field_p = param4 ? true : false;
         var8.field_A = param3;
         if (!param4) {
-            if (!(-21 < (this.a(true) ^ -1))) {
-                throw new RuntimeException();
-            }
-            this.field_d.a(83, var8);
+          if (!(this.a(true) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_d.a(83, var8);
         } else {
-            if (!(this.c((byte) 67) < 20)) {
-                throw new RuntimeException();
-            }
-            this.field_l.a(param0 + -74, var8);
+          if (!(this.c((byte) 67) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_l.a(param0 - 74, var8);
         }
         return var8;
     }
@@ -180,9 +136,9 @@ abstract class wb {
 
     final boolean a(int param0) {
         if (param0 != 9172) {
-            return true;
+          return true;
         }
-        return (this.a(true) ^ -1) <= -21 ? true : false;
+        return this.a(true) >= 20 ? true : false;
     }
 
     wb() {

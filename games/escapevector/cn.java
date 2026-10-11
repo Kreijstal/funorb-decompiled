@@ -12,47 +12,23 @@ final class cn {
     static String field_b;
 
     final hg b(int param0) {
-        hg var2;
-        var2 = this.field_d.field_d;
-        if (this.field_d != var2) {
-          var2.c((byte) -120);
-          if (param0 != -8980) {
-            return (hg) null;
-          } else {
-            return var2;
-          }
-        } else {
+        hg var2 = this.field_d.field_d;
+        if (this.field_d == var2) {
           return null;
         }
+        var2.c((byte) -120);
+        if (param0 == -8980) {
+          return var2;
+        }
+        return (hg) null;
     }
 
     final boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 > -93) {
-          L0: {
-            this.c((byte) -39);
-            if (this.field_d != this.field_d.field_b) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_d != this.field_d.field_b) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 <= -93) {
+          return this.field_d == this.field_d.field_b ? true : false;
         }
+        this.c((byte) -39);
+        return this.field_d == this.field_d.field_b ? true : false;
     }
 
     final void a(byte param0) {
@@ -60,64 +36,59 @@ final class cn {
         int var3;
         int var2;
         var3 = EscapeVector.field_A;
-        L0: while (true) {
+        while (true) {
           var2_ref_hg = this.field_d.field_b;
           if (var2_ref_hg != this.field_d) {
             var2_ref_hg.c((byte) -46);
-            continue L0;
-          } else {
-            var2 = -116 % ((53 - param0) / 46);
-            this.field_g = null;
-            return;
+            continue;
           }
+          break;
         }
+        var2 = -116 % ((53 - param0) / 46);
+        this.field_g = null;
+        return;
     }
 
     final hg c(int param0) {
-        hg var2;
-        var2 = this.field_d.field_b;
-        if (this.field_d != var2) {
-          if (param0 != -20245) {
-            field_f = (cn) null;
-            var2.c((byte) -119);
-            return var2;
-          } else {
-            var2.c((byte) -119);
-            return var2;
-          }
-        } else {
+        hg var2 = this.field_d.field_b;
+        if (this.field_d == var2) {
           return null;
         }
+        if (param0 == -20245) {
+          var2.c((byte) -119);
+          return var2;
+        }
+        field_f = (cn) null;
+        var2.c((byte) -119);
+        return var2;
     }
 
     final hg a(boolean param0) {
-        hg var2;
-        if (!param0) {
-          var2 = this.field_d.field_b;
-          if (this.field_d == var2) {
-            this.field_g = null;
-            return null;
-          } else {
-            this.field_g = var2.field_b;
-            return var2;
-          }
-        } else {
+        hg var2 = null;
+        hg var2Lifetime1;
+        if (param0) {
           this.a(-119);
           var2 = this.field_d.field_b;
-          if (this.field_d == var2) {
-            this.field_g = null;
-            return null;
-          } else {
+          if (this.field_d != var2) {
             this.field_g = var2.field_b;
             return var2;
           }
+          this.field_g = null;
+          return null;
         }
+        var2Lifetime1 = this.field_d.field_b;
+        if (this.field_d != var2Lifetime1) {
+          this.field_g = var2Lifetime1.field_b;
+          return var2Lifetime1;
+        }
+        this.field_g = null;
+        return null;
     }
 
     public static void b(boolean param0) {
         field_e = null;
         if (!param0) {
-            return;
+          return;
         }
         field_f = null;
         field_h = null;
@@ -128,51 +99,45 @@ final class cn {
 
     final void a(hg param0, int param1) {
         try {
-            if (!(null == param0.field_d)) {
-                param0.c((byte) -67);
-            }
-            param0.field_b = this.field_d.field_b;
-            param0.field_d = this.field_d;
-            param0.field_d.field_b = param0;
-            if (param1 != 8364) {
-                this.a((byte) 45);
-            }
-            param0.field_b.field_d = param0;
+          if (null != param0.field_d) {
+            param0.c((byte) -67);
+          }
+          param0.field_b = this.field_d.field_b;
+          param0.field_d = this.field_d;
+          param0.field_d.field_b = param0;
+          if (param1 != 8364) {
+            this.a((byte) 45);
+          }
+          param0.field_b.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int c(byte param0) {
-        int var2;
-        hg var3;
-        int var4;
-        var4 = EscapeVector.field_A;
-        if (param0 <= 12) {
-          return -109;
-        } else {
+        int var2 = 0;
+        hg var3 = null;
+        int var4 = EscapeVector.field_A;
+        if (param0 > 12) {
           var2 = 0;
           var3 = this.field_d.field_b;
-          L0: while (true) {
-            if (this.field_d == var3) {
-              return var2;
-            } else {
-              var2++;
-              var3 = var3.field_b;
-              continue L0;
-            }
+          while (this.field_d != var3) {
+            var2++;
+            var3 = var3.field_b;
           }
+          return var2;
         }
+        return -109;
     }
 
     final hg b(byte param0) {
         if (param0 != 70) {
-            return (hg) null;
+          return (hg) null;
         }
         hg var2 = this.field_g;
-        if (!(var2 != this.field_d)) {
-            this.field_g = null;
-            return null;
+        if (var2 == this.field_d) {
+          this.field_g = null;
+          return null;
         }
         this.field_g = var2.field_b;
         return var2;
@@ -180,18 +145,18 @@ final class cn {
 
     final void a(int param0, hg param1) {
         try {
-            if (!(param1.field_d == null)) {
-                param1.c((byte) -25);
-            }
-            param1.field_d = this.field_d.field_d;
-            param1.field_b = this.field_d;
-            if (param0 != -12328) {
-                this.c(50);
-            }
-            param1.field_d.field_b = param1;
-            param1.field_b.field_d = param1;
+          if (param1.field_d != null) {
+            param1.c((byte) -25);
+          }
+          param1.field_d = this.field_d.field_d;
+          param1.field_b = this.field_d;
+          if (param0 != -12328) {
+            this.c(50);
+          }
+          param1.field_d.field_b = param1;
+          param1.field_b.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

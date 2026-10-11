@@ -12,39 +12,27 @@ final class um {
 
     final static void a(byte param0) {
         try {
-            Exception var1 = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == 114) {
-                break L0;
-              } else {
-                field_a = (String[][]) null;
-                break L0;
-              }
-            }
-            if (pd.field_G != null) {
-              try {
-                L1: {
-                  pd.field_G.a((byte) 4, 0L);
-                  pd.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
-                  break L1;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = (Exception) (Object) decompiledCaughtException;
-                un.field_e.field_n = un.field_e.field_n + 24;
-                return;
-              }
-              un.field_e.field_n = un.field_e.field_n + 24;
-              return;
-            } else {
+          Exception var1 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != 114) {
+            field_a = (String[][]) null;
+          }
+          if (pd.field_G != null) {
+            try {
+              pd.field_G.a((byte) 4, 0L);
+              pd.field_G.a(un.field_e.field_n, param0 + 12, 24, un.field_e.field_f);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
               un.field_e.field_n = un.field_e.field_n + 24;
               return;
             }
+          }
+          un.field_e.field_n = un.field_e.field_n + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -54,14 +42,12 @@ final class um {
         field_f = null;
         field_a = (String[][]) null;
         field_e = null;
-        if (param0 < 118) {
-          um.a(75);
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 118) {
           field_c = null;
           return;
         }
+        um.a(75);
+        field_c = null;
     }
 
     static {

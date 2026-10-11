@@ -11,26 +11,22 @@ final class dca extends or {
     }
 
     final void a(int param0, boolean param1, byte param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var4;
-        var4 = param0 * 2;
-        if (param1) {
-          dca.g(-128);
-          param2 = (byte)(127 + (param2 >> 17049473 & 127));
-          incrementValue$2 = var4;
+        int incrementValue$0 = 0;
+        int var4 = param0 * 2;
+        if (!param1) {
+          param2 = (byte)(127 + (param2 >> 1 & 127));
+          incrementValue$0 = var4;
           var4++;
-          this.field_p[incrementValue$2] = (byte)param2;
-          this.field_p[var4] = (byte)param2;
-          return;
-        } else {
-          param2 = (byte)(127 + (param2 >> 17049473 & 127));
-          incrementValue$3 = var4;
-          var4++;
-          this.field_p[incrementValue$3] = (byte)param2;
+          this.field_p[incrementValue$0] = (byte)param2;
           this.field_p[var4] = (byte)param2;
           return;
         }
+        dca.g(-128);
+        param2 = (byte)(127 + (param2 >> 1 & 127));
+        int incrementValue$1 = var4;
+        var4++;
+        this.field_p[incrementValue$1] = (byte)param2;
+        this.field_p[var4] = (byte)param2;
     }
 
     final byte[] a(int param0, int param1, int param2, int param3) {
@@ -42,8 +38,8 @@ final class dca extends or {
 
     final static String f(int param0) {
         if (param0 != 12) {
-            dca.f(68);
-            return vc.field_q.e((byte) -76);
+          dca.f(68);
+          return vc.field_q.e((byte) -76);
         }
         return vc.field_q.e((byte) -76);
     }
@@ -51,7 +47,7 @@ final class dca extends or {
     public static void g(int param0) {
         field_q = null;
         if (param0 != 2) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
     }
 

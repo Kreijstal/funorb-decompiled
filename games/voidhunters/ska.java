@@ -10,8 +10,8 @@ final class ska extends is {
 
     final Object a(int param0) {
         if (param0 < 85) {
-            this.a(-70);
-            return this.field_l;
+          this.a(-70);
+          return this.field_l;
         }
         return this.field_l;
     }
@@ -20,7 +20,7 @@ final class ska extends is {
         field_o = null;
         field_m = null;
         if (param0 != 5697) {
-            return;
+          return;
         }
         field_n = null;
     }
@@ -28,16 +28,16 @@ final class ska extends is {
     ska(Object param0, int param1) {
         super(param1);
         try {
-            this.field_l = param0;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "ska.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean e(byte param0) {
         if (param0 < 29) {
-            this.a(-56);
-            return false;
+          this.a(-56);
+          return false;
         }
         return false;
     }

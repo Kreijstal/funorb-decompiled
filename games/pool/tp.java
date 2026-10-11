@@ -15,16 +15,7 @@ final class tp {
     public static void a(int param0) {
         field_g = null;
         field_d = null;
-        if (param0 != 0) {
-          field_g = (String) null;
-          field_h = null;
-          field_a = null;
-          field_i = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_h = null;
           field_a = null;
           field_i = null;
@@ -33,6 +24,13 @@ final class tp {
           field_f = null;
           return;
         }
+        field_g = (String) null;
+        field_h = null;
+        field_a = null;
+        field_i = null;
+        field_c = null;
+        field_e = null;
+        field_f = null;
     }
 
     final static void a(boolean param0, int param1) {
@@ -42,23 +40,16 @@ final class tp {
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          L0: {
-            var4 = (bj) ((Object) tm.field_i.c((byte) 73));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param0) {
-                  break L0;
-                } else {
-                  field_f = (String) null;
-                  return;
-                }
-              } else {
-                un.a(param1, var4, (byte) -51);
-                var4 = (bj) ((Object) tm.field_i.f((byte) -5));
-                continue L1;
-              }
-            }
+          var4 = (bj) (tm.field_i.c((byte) 73));
+          while (var4 != null) {
+            un.a(param1, var4, (byte) -51);
+            var4 = (bj) (tm.field_i.f((byte) -5));
           }
+          if (param0) {
+            return;
+          }
+          field_f = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

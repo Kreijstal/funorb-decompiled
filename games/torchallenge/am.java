@@ -16,10 +16,10 @@ final class am {
 
     public static void a(int param0) {
         if (param0 < 6) {
-            am.a(-39);
-            field_b = (int[][][]) null;
-            field_c = null;
-            return;
+          am.a(-39);
+          field_b = (int[][][]) null;
+          field_c = null;
+          return;
         }
         field_b = (int[][][]) null;
         field_c = null;

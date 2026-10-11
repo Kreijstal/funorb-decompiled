@@ -7,25 +7,25 @@ final class bb {
 
     final static String a(int param0) {
         if (param0 > -97) {
-            return (String) null;
+          return (String) null;
         }
         if (qg.field_g == fh.field_B) {
-            return eb.field_z;
+          return eb.field_z;
         }
         if (!pb.field_k.a(1000)) {
-            return pb.field_k.a((byte) -53);
+          return pb.field_k.a((byte) -53);
         }
-        if (!(vc.field_F != qg.field_g)) {
-            return pb.field_k.a((byte) -116);
+        if (vc.field_F == qg.field_g) {
+          return pb.field_k.a((byte) -116);
         }
         return gi.field_b;
     }
 
     public static void a(byte param0) {
         if (param0 != 25) {
-            field_a = (String[]) null;
-            field_a = null;
-            return;
+          field_a = (String[]) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

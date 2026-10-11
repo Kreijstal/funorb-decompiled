@@ -12,24 +12,20 @@ final class hg {
     qm field_a;
 
     final void c(int param0) {
-        if (null == this.field_a) {
+        if (null != this.field_a) {
+          this.field_a.a(12574);
           this.field_h = false;
           if (param0 != -5941) {
             this.field_a = (qm) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          this.field_a.a(12574);
-          this.field_h = false;
-          if (param0 == -5941) {
-            return;
-          } else {
-            this.field_a = (qm) null;
-            return;
-          }
+          return;
         }
+        this.field_h = false;
+        if (param0 == -5941) {
+          return;
+        }
+        this.field_a = (qm) null;
     }
 
     final static be a(String param0, int param1, boolean param2) {
@@ -39,84 +35,59 @@ final class hg {
         qb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param2) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                hg.a((String) null, -41, false);
-                break L1;
-              }
-            }
-            var3 = new qb();
-            ((be) ((Object) var3)).field_b = param1;
-            ((be) ((Object) var3)).field_a = param0;
-            stackIn_3_0 = (qb) (var3);
-            break L0;
+          if (param2) {
+            var4 = (String) null;
+            hg.a((String) null, -41, false);
           }
+          var3 = new qb();
+          ((be) ((Object) var3)).field_b = param1;
+          ((be) ((Object) var3)).field_a = param0;
+          stackIn_3_0 = var3;
+          return (be) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("hg.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("hg.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return (be) ((Object) stackIn_3_0);
     }
 
     final boolean b(int param0) {
-        if (param0 == 16440) {
-          if (this.field_h) {
-            if (this.field_b) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 16440) {
           field_c = (String[]) null;
-          if (this.field_h) {
-            if (this.field_b) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (!this.field_h) {
             return false;
           }
+          if (!this.field_b) {
+            return true;
+          }
+          return false;
         }
+        if (!this.field_h) {
+          return false;
+        }
+        if (!this.field_b) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_d = null;
         field_g = null;
         if (param0 != 13648) {
-            field_g = (jea) null;
-            field_c = null;
-            return;
+          field_g = (jea) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

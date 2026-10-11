@@ -15,7 +15,7 @@ final class l {
 
     final static w a(int param0) {
         if (param0 > -72) {
-            return (w) null;
+          return (w) null;
         }
         return wf.c(-122);
     }
@@ -24,12 +24,12 @@ final class l {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
         if (param0 != 4) {
-            l.a(64);
+          l.a(64);
         }
         int[] var4 = new int[4];
         int[] var1 = var4;
         for (var2 = 0; var2 < 4; var2++) {
-            var4[var2] = bf.field_y.nextInt();
+          var4[var2] = bf.field_y.nextInt();
         }
         return var1;
     }
@@ -39,7 +39,7 @@ final class l {
         field_e = null;
         field_j = null;
         if (param0 < 118) {
-            field_h = -47L;
+          field_h = -47L;
         }
         field_i = null;
         field_b = null;
@@ -53,7 +53,7 @@ final class l {
         field_f = 0;
         field_e = "City";
         for (var0 = 0; var0 < 64; var0++) {
-            field_d[var0] = new ck(9, 9);
+          field_d[var0] = new ck(9, 9);
         }
         field_h = 0L;
         field_g = new int[8];

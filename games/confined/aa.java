@@ -6,10 +6,10 @@ final class aa {
     static String field_a;
 
     final static void a(boolean param0) {
-        if (!(null == fj.field_u)) {
-            c.a(!param0 ? true : false, fj.field_u);
-            fj.field_u = null;
-            am.g(-4258);
+        if (null != fj.field_u) {
+          c.a(!param0 ? true : false, fj.field_u);
+          fj.field_u = null;
+          am.g(-4258);
         }
         ka.field_N = cc.a(1, -14245);
         gj.field_a = cc.a(2, -14245);
@@ -43,16 +43,16 @@ final class aa {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 6) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     final static void a(byte param0, boolean param1) {
         if (param0 >= -98) {
-            field_a = (String) null;
-            wl.a(-78, param1, false);
-            return;
+          field_a = (String) null;
+          wl.a(-78, param1, false);
+          return;
         }
         wl.a(-78, param1, false);
     }

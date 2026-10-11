@@ -19,78 +19,42 @@ final class cf {
         bd stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 < -75) {
-                break L1;
-              } else {
-                cf.a(-43);
-                break L1;
-              }
-            }
-            L2: {
-              var4_long = 0L;
-              var6 = null;
-              if ((param0.indexOf('@') ^ -1) != 0) {
-                var6 = param0;
-                break L2;
-              } else {
-                var7 = (CharSequence) ((Object) param0);
-                var4_long = be.a(var7, false);
-                break L2;
-              }
-            }
-            stackIn_6_0 = ci.a(param3, (String) (var6), -62, var4_long, param1);
-            break L0;
+          if (param2 >= -75) {
+            cf.a(-43);
           }
+          var4_long = 0L;
+          var6 = null;
+          if (param0.indexOf('@') != -1) {
+            var6 = param0;
+          } else {
+            var7 = (CharSequence) ((Object) param0);
+            var4_long = be.a(var7, false);
+          }
+          stackIn_6_0 = ci.a(param3, (String) (var6), -62, var4_long, param1);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("cf.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("cf.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void a(byte param0) {

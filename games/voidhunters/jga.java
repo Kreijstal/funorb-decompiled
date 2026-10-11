@@ -7,14 +7,14 @@ final class jga implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new pe[param1]);
     }
 
     public static void a(int param0) {
         if (param0 >= -31) {
-            return;
+          return;
         }
         field_b = null;
     }

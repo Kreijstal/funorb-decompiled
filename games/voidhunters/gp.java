@@ -17,145 +17,84 @@ final class gp extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc(wda.field_q);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc(wda.field_q);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("gp.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("gp.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_o = null;
         if (param0 != -23822) {
-            return;
+          return;
         }
         field_r = (long[][]) null;
         field_q = null;
     }
 
     static {
-        $cfr$clinit: {
-            long stackIn_5_0 = 0L;
-            int var0;
-            int var1;
-            long var2;
-            long var4;
-            long var6;
-            long var8;
-            long var10;
-            long var12;
-            int var14;
-            field_o = new long[11];
-            field_r = new long[8][256];
-            var0 = 0;
-            L0: while (true) {
-              if ((var0 ^ -1) <= -257) {
-                field_o[0] = 0L;
-                var0 = 1;
-                L1: while (true) {
-                  if (-11 > (var0 ^ -1)) {
-                    break $cfr$clinit;
-                  } else {
-                    var1 = -8 + var0 * 8;
-                    field_o[var0] = ihb.a(ihb.a(ihb.a(hoa.a(16711680L, field_r[5][var1 + 5]), ihb.a(ihb.a(ihb.a(hoa.a(280375465082880L, field_r[2][var1 + 2]), ihb.a(hoa.a(field_r[1][1 + var1], 71776119061217280L), hoa.a(-72057594037927936L, field_r[0][var1]))), hoa.a(field_r[3][3 + var1], 1095216660480L)), hoa.a(field_r[4][4 + var1], 4278190080L))), hoa.a(65280L, field_r[6][var1 - -6])), hoa.a(255L, field_r[7][var1 - -7]));
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                L2: {
-                  var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-                  if ((var0 & 1) != 0) {
-                    stackIn_5_0 = (long)(255 & var1);
-                    break L2;
-                  } else {
-                    stackIn_5_0 = (long)(var1 >>> -1966732696);
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = stackIn_5_0;
-                  var4 = var2 << 1779729409;
-                  if (var4 >= 256L) {
-                    var4 = var4 ^ 285L;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  var6 = var4 << 683027585;
-                  if (256L <= var6) {
-                    var6 = var6 ^ 285L;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  var8 = var2 ^ var6;
-                  var10 = var6 << 389854849;
-                  if (var10 >= 256L) {
-                    var10 = var10 ^ 285L;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                var12 = var10 ^ var2;
-                field_r[0][var0] = nra.a(nra.a(nra.a(var8 << 826130256, nra.a(var10 << 83149912, nra.a(var2 << -713222944, nra.a(nra.a(var2 << 1046967160, var2 << -1779792144), var6 << 1742184936)))), var4 << -1554593912), var12);
-                var14 = 1;
-                L6: while (true) {
-                  if (var14 >= 8) {
-                    var0++;
-                    continue L0;
-                  } else {
-                    field_r[var14][var0] = nra.a(field_r[var14 + -1][var0] << -1967985608, field_r[var14 + -1][var0] >>> 195519112);
-                    var14++;
-                    continue L6;
-                  }
-                }
-              }
-            }
+        int var14 = 0;
+        long stackIn_5_0 = 0L;
+        int var0;
+        int var1;
+        long var2;
+        long var4;
+        long var6;
+        long var8;
+        long var10;
+        long var12;
+        field_o = new long[11];
+        field_r = new long[8][256];
+        var0 = 0;
+        L0: while (var0 < 256) {
+          var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+          if ((var0 & 1) != 0) {
+            stackIn_5_0 = (long)(255 & var1);
+          } else {
+            stackIn_5_0 = (long)(var1 >>> 8);
+          }
+          var2 = stackIn_5_0;
+          var4 = var2 << 1;
+          if (var4 >= 256L) {
+            var4 = var4 ^ 285L;
+          }
+          var6 = var4 << 1;
+          if (256L <= var6) {
+            var6 = var6 ^ 285L;
+          }
+          var8 = var2 ^ var6;
+          var10 = var6 << 1;
+          if (var10 >= 256L) {
+            var10 = var10 ^ 285L;
+          }
+          var12 = var10 ^ var2;
+          field_r[0][var0] = nra.a(nra.a(nra.a(var8 << 16, nra.a(var10 << 24, nra.a(var2 << 32, nra.a(nra.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
+          for (var14 = 1; var14 < 8; var14++) {
+            field_r[var14][var0] = nra.a(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
+          }
+          var0++;
+        }
+        field_o[0] = 0L;
+        for (var0 = 1; var0 <= 10; var0++) {
+          var1 = -8 + var0 * 8;
+          field_o[var0] = ihb.a(ihb.a(ihb.a(hoa.a(16711680L, field_r[5][var1 + 5]), ihb.a(ihb.a(ihb.a(hoa.a(280375465082880L, field_r[2][var1 + 2]), ihb.a(hoa.a(field_r[1][1 + var1], 71776119061217280L), hoa.a(-72057594037927936L, field_r[0][var1]))), hoa.a(field_r[3][3 + var1], 1095216660480L)), hoa.a(field_r[4][4 + var1], 4278190080L))), hoa.a(65280L, field_r[6][var1 + 6])), hoa.a(255L, field_r[7][var1 + 7]));
         }
     }
 }

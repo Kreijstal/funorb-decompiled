@@ -12,63 +12,38 @@ final class bh {
     final int a(byte param0) {
         int var2;
         int stackIn_4_0 = 0;
-        L0: {
-          L1: {
-            var2 = -44 % ((param0 - 9) / 63);
-            if (this.field_a == null) {
-              break L1;
-            } else {
-              if (this.field_a.length == 0) {
-                break L1;
-              } else {
-                stackIn_4_0 = this.field_a[this.field_a.length + -1];
-                break L0;
-              }
-            }
-          }
+        var2 = -44 % ((param0 - 9) / 63);
+        if (this.field_a != null &&
+          this.field_a.length != 0) {
+          stackIn_4_0 = this.field_a[this.field_a.length - 1];
+        } else {
           stackIn_4_0 = 0;
-          break L0;
         }
         return stackIn_4_0;
     }
 
     final int a(int param0, byte param1) {
-        int var3;
+        int var3 = 0;
         int var4;
-        L0: {
-          var4 = Bounce.field_N;
-          if (this.field_a == null) {
-            break L0;
-          } else {
-            if (this.field_a.length == 0) {
-              break L0;
-            } else {
-              var3 = 1;
-              L1: while (true) {
-                if (var3 >= this.field_a.length) {
-                  if (param1 >= 9) {
-                    return this.field_a.length - 1;
-                  } else {
-                    return -26;
-                  }
-                } else {
-                  if ((this.field_a[-1 + var3] - -this.field_a[var3] >> 1571861633 ^ -1) < (param0 ^ -1)) {
-                    return var3 + -1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                }
-              }
+        var4 = Bounce.field_N;
+        if (this.field_a != null &&
+          this.field_a.length != 0) {
+          for (var3 = 1; var3 < this.field_a.length; var3++) {
+            if ((this.field_a[-1 + var3] + this.field_a[var3] >> 1) > param0) {
+              return var3 - 1;
             }
           }
+          if (param1 >= 9) {
+            return this.field_a.length - 1;
+          }
+          return -26;
         }
         return 0;
     }
 
     public static void b(byte param0) {
         if (param0 < 95) {
-            return;
+          return;
         }
         field_d = null;
         field_e = null;
@@ -76,7 +51,7 @@ final class bh {
 
     bh(int param0, int param1, int param2) {
         this.field_b = param1;
-        this.field_a = new int[param2 - -1];
+        this.field_a = new int[param2 + 1];
         this.field_f = param0;
     }
 

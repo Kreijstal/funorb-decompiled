@@ -12,41 +12,38 @@ final class aj {
     final static void a(int param0, int param1, ij param2) {
         c var3 = null;
         try {
-            var3 = om.field_c;
-            var3.a(param1, true);
-            var3.f(5, -123);
-            var3.f(0, -123);
-            var3.h(-123, param2.field_n);
-            var3.f(param2.field_h, -123);
-            var3.f(param2.field_j, -123);
-            int var4 = 58 % ((param0 - -64) / 39);
+          var3 = om.field_c;
+          var3.a(param1, true);
+          var3.f(5, -123);
+          var3.f(0, -123);
+          var3.h(-123, param2.field_n);
+          var3.f(param2.field_h, -123);
+          var3.f(param2.field_j, -123);
+          int var4 = 58 % ((param0 + 64) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "aj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
-        ij var2;
         field_b = null;
         field_a = null;
         field_e = null;
-        if (param0 != 0) {
-          var2 = (ij) null;
-          aj.a(45, 15, (ij) null);
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_f = null;
           field_c = null;
           return;
         }
+        ij var2 = (ij) null;
+        aj.a(45, 15, (ij) null);
+        field_f = null;
+        field_c = null;
     }
 
     final static boolean b(int param0) {
         if (param0 > -88) {
-            field_a = (fe) null;
-            return nf.field_u;
+          field_a = (fe) null;
+          return nf.field_u;
         }
         return nf.field_u;
     }

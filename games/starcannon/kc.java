@@ -19,17 +19,17 @@ abstract class kc extends qd {
     boolean i(int param0) {
         this.j(-126);
         if (param0 >= -121) {
-            return false;
+          return false;
         }
         return super.i(-125);
     }
 
     void j(int param0) {
         if (param0 > -104) {
-            return;
+          return;
         }
-        if (!(0 < this.field_K)) {
-            return;
+        if (0 >= this.field_K) {
+          return;
         }
         this.b(this.field_J, (byte) 57, this.field_L);
         this.field_K = 0;
@@ -44,7 +44,7 @@ abstract class kc extends qd {
 
     public static void a(boolean param0) {
         if (param0) {
-            kc.a(false);
+          kc.a(false);
         }
         field_P = null;
         field_U = null;
@@ -66,6 +66,21 @@ abstract class kc extends qd {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = StarCannon.field_A;
         ki.e(param0 + 6, 35 + param2, -12 + this.field_i, this.field_f - 40, 2105376, 0);
         var5 = 211;
@@ -73,144 +88,92 @@ abstract class kc extends qd {
         var6 = 194;
         var7 = 0;
         var8 = param2;
-        L0: while (true) {
-          if (var7 >= var4) {
-            var5 = 194;
-            var4 = 22;
-            var6 = 169;
-            var8 = 77 / ((-57 - param1) / 53);
-            var7 = 0;
-            var9 = param2 + 35;
-            L1: while (true) {
-              if (var4 <= var7) {
-                jk.field_g.e(this.field_i + param0 + -90, 10 + param2);
-                wj.a(112, ed.field_o, param0 - -5, 35 + param2, this.field_i - 10);
-                wj.a(121, ti.field_e, param0, this.field_f + (param2 - 22), this.field_i);
-                var5 = 169;
-                var4 = this.field_f + -79;
-                var6 = 127;
-                var7 = 0;
-                var8 = param2 + 57;
-                L2: while (true) {
-                  if (var4 <= var7) {
-                    return;
-                  } else {
-                    var9 = var7 * (-var5 + var6) / var4 + var5;
-                    var9 = var9 | (var9 << 772155696 | var9 << -435085080);
-                    ki.b(param0, var8, 6, var9);
-                    ki.b(this.field_i + param0 - 6, var8, 6, var9);
-                    var7++;
-                    var8++;
-                    continue L2;
+        while (var7 < var4) {
+          if (ki.field_e <= var8 &&
+            var8 < ki.field_i) {
+            var9 = var7 * (-var5 + var6) / var4 + var5;
+            var10 = 0;
+            var11 = this.field_i;
+            if (var7 <= 20) {
+              while (var10 <= 20) {
+                var12 = (-var7 + 20) * (20 - var7) + (20 - var10) * (-var10 + 20);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
                   }
+                  var13 = var9 * (-var12 + 462) / 42;
+                  var13 = var13 | (var13 << 16 | var13 << 8);
+                  ki.field_a[param0 + (ki.field_j * var8 + var10)] = var13;
                 }
-              } else {
-                var10 = var5 + (-var5 + var6) * var7 / var4;
-                var10 = var10 | (var10 << 630877840 | var10 << -921811256);
-                ki.b(param0, var9, 6, var10);
-                ki.b(this.field_i + param0 + -6, var9, 6, var10);
-                var9++;
-                var7++;
-                continue L1;
+                var10++;
               }
             }
-          } else {
-            if ((ki.field_e ^ -1) >= (var8 ^ -1)) {
-              if (var8 < ki.field_i) {
-                L3: {
-                  var9 = var7 * (-var5 + var6) / var4 + var5;
-                  var10 = 0;
-                  var11 = this.field_i;
-                  if (var7 > 20) {
-                    break L3;
+            if (var7 <= 20) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = (-var7 + 20) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
+                if (var14 <= 462) {
+                  if (var14 >= 420) {
+                    var15 = (462 - var14) * var9 / 42;
+                    var15 = var15 | (var15 << 16 | var15 << 8);
+                    ki.field_a[var11 + param0 + var8 * ki.field_j] = var15;
                   } else {
-                    L4: while (true) {
-                      if (-21 > (var10 ^ -1)) {
-                        break L3;
-                      } else {
-                        var12 = (-var7 + 20) * (20 + -var7) - -((20 - var10) * (-var10 + 20));
-                        if (var12 <= 462) {
-                          if (-421 >= (var12 ^ -1)) {
-                            var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << -1118282736 | var13 << -191605208);
-                            ki.field_a[param0 + (ki.field_j * var8 - -var10)] = var13;
-                            var10++;
-                            continue L4;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          var10++;
-                          continue L4;
-                        }
-                      }
-                    }
+                    var12Lifetime1 = 1 + var11;
                   }
+                  var11++;
+                  continue;
                 }
-                L5: {
-                  if ((var7 ^ -1) >= -21) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L6: while (true) {
-                      L7: {
-                        if (var13 > 20) {
-                          break L7;
-                        } else {
-                          var14 = (-var7 + 20) * (-var7 + 20) - -(var13 * var13);
-                          if (var14 > 462) {
-                            break L7;
-                          } else {
-                            if (-421 >= (var14 ^ -1)) {
-                              var15 = (462 + -var14) * var9 / 42;
-                              var15 = var15 | (var15 << 1303633616 | var15 << -1979388888);
-                              ki.field_a[var11 + param0 + var8 * ki.field_j] = var15;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            } else {
-                              var12 = 1 + var11;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            }
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L5;
-                    }
-                  } else {
-                    break L5;
-                  }
-                }
-                var9 = var9 | (var9 << 218242128 | var9 << -1795774296);
-                ki.b(var10 + param0, var8, -var10 + var11, var9);
-                var7++;
-                var8++;
-                continue L0;
-              } else {
-                var7++;
-                var8++;
-                continue L0;
+                break;
               }
-            } else {
-              var7++;
-              var8++;
-              continue L0;
+              var11 = var12Lifetime1;
             }
+            var9 = var9 | (var9 << 16 | var9 << 8);
+            ki.b(var10 + param0, var8, -var10 + var11, var9);
           }
+          var7++;
+          var8++;
+        }
+        var5Lifetime1 = 194;
+        var4Lifetime1 = 22;
+        var6Lifetime1 = 169;
+        var8Lifetime1 = 77 / ((-57 - param1) / 53);
+        var7Lifetime1 = 0;
+        var9Lifetime1 = param2 + 35;
+        while (var4Lifetime1 > var7Lifetime1) {
+          var10Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
+          var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
+          ki.b(param0, var9Lifetime1, 6, var10Lifetime1);
+          ki.b(this.field_i + param0 - 6, var9Lifetime1, 6, var10Lifetime1);
+          var9Lifetime1++;
+          var7Lifetime1++;
+        }
+        jk.field_g.e(this.field_i + param0 - 90, 10 + param2);
+        wj.a(112, ed.field_o, param0 + 5, 35 + param2, this.field_i - 10);
+        wj.a(121, ti.field_e, param0, this.field_f + (param2 - 22), this.field_i);
+        var5Lifetime2 = 169;
+        var4Lifetime2 = this.field_f - 79;
+        var6Lifetime2 = 127;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param2 + 57;
+        while (var4Lifetime2 > var7Lifetime2) {
+          var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
+          ki.b(param0, var8Lifetime2, 6, var9Lifetime2);
+          ki.b(this.field_i + param0 - 6, var8Lifetime2, 6, var9Lifetime2);
+          var7Lifetime2++;
+          var8Lifetime2++;
         }
     }
 
     final void b(int param0, int param1, byte param2, int param3) {
-        if ((param3 ^ -1) >= -1) {
-            this.b(param0, (byte) 57, param1);
-            return;
+        if (param3 <= 0) {
+          this.b(param0, (byte) 57, param1);
+          return;
         }
         this.field_R = this.field_f;
         if (param2 != 120) {
-            kc.a(false);
+          kc.a(false);
         }
         this.field_L = param1;
         this.field_I = 0;
@@ -221,7 +184,7 @@ abstract class kc extends qd {
 
     void k(int param0) {
         if (param0 > -74) {
-            this.b(46, -67, (byte) -11, -33);
+          this.b(46, -67, (byte) -11, -33);
         }
     }
 
@@ -232,23 +195,23 @@ abstract class kc extends qd {
         int var4 = 0;
         int var5 = 0;
         if (param0 != -124) {
-            this.g((byte) -68);
+          this.g((byte) -68);
         }
-        if (-1 > (this.field_K ^ -1)) {
-            var2 = this.field_J;
-            var3 = this.field_L;
-            fieldTemp$0 = this.field_I + 1;
-            this.field_I = this.field_I + 1;
-            if (this.field_K <= fieldTemp$0) {
-                this.field_K = 0;
-                this.k(-101);
-            } else {
-                var4 = (2 * this.field_K + -this.field_I) * this.field_I;
-                var5 = this.field_K * this.field_K;
-                var2 = var4 * (-this.field_T + this.field_J) / var5 + this.field_T;
-                var3 = var4 * (this.field_L + -this.field_R) / var5 + this.field_R;
-            }
-            this.b(var2, (byte) 57, var3);
+        if (this.field_K > 0) {
+          var2 = this.field_J;
+          var3 = this.field_L;
+          fieldTemp$0 = this.field_I + 1;
+          this.field_I = this.field_I + 1;
+          if (this.field_K <= fieldTemp$0) {
+            this.field_K = 0;
+            this.k(-101);
+          } else {
+            var4 = (2 * this.field_K - this.field_I) * this.field_I;
+            var5 = this.field_K * this.field_K;
+            var2 = var4 * (-this.field_T + this.field_J) / var5 + this.field_T;
+            var3 = var4 * (this.field_L - this.field_R) / var5 + this.field_R;
+          }
+          this.b(var2, (byte) 57, var3);
         }
         return super.g((byte) -124);
     }

@@ -13,8 +13,8 @@ final class mm {
 
     final static String a(char param0, int param1) {
         if (param1 != 0) {
-            mm.a('ￛ', -125);
-            return String.valueOf(param0);
+          mm.a('ￛ', -125);
+          return String.valueOf(param0);
         }
         return String.valueOf(param0);
     }
@@ -24,7 +24,7 @@ final class mm {
         field_a = null;
         field_h = null;
         if (param0 != 12797) {
-            return;
+          return;
         }
         field_g = null;
     }

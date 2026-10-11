@@ -14,7 +14,7 @@ final class he extends za {
         field_m = null;
         field_n = null;
         if (param0 <= 119) {
-            he.a(23);
+          he.a(23);
         }
     }
 
@@ -25,7 +25,7 @@ final class he extends za {
     final void c(int param0) {
         this.field_p.a();
         if (param0 != -14365) {
-            field_m = (tf) null;
+          field_m = (tf) null;
         }
     }
 

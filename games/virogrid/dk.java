@@ -29,164 +29,108 @@ abstract class dk {
 
     final static int b(byte param0) {
         try {
-            int stackIn_9_0 = 0;
-            int stackIn_15_0 = 0;
-            int stackIn_24_0 = 0;
-            int stackIn_28_0 = 0;
-            int stackIn_33_0 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var1_int = 0;
-            IOException var1 = null;
-            jc var2 = null;
-            if (-5 < (ji.field_e.field_l ^ -1)) {
-              try {
-                L0: {
-                  if (param0 == 108) {
-                    L1: {
-                      if (ij.field_q != 0) {
-                        break L1;
-                      } else {
-                        vm.field_b = ii.field_a.a(ok.field_G, 27402, co.field_g);
-                        ij.field_q = ij.field_q + 1;
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      if (-2 != (ij.field_q ^ -1)) {
-                        break L2;
-                      } else {
-                        if (2 != vm.field_b.field_a) {
-                          if (-2 != (vm.field_b.field_a ^ -1)) {
-                            break L2;
-                          } else {
-                            ij.field_q = ij.field_q + 1;
-                            break L2;
-                          }
-                        } else {
-                          stackIn_15_0 = bk.a(-1, 1);
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        }
-                      }
-                    }
-                    L3: {
-                      if (2 != ij.field_q) {
-                        break L3;
-                      } else {
-                        ng.field_N = new el((java.net.Socket) (vm.field_b.field_f), ii.field_a);
-                        var2 = new jc(13);
-                        hj.a(fd.field_C, var2, rj.field_l, ed.field_b, 12);
-                        var2.a(15, param0 ^ -26);
-                        var2.a(dl.field_c, (byte) -42);
-                        ng.field_N.a(var2.field_g, param0 ^ 108, 0, 13);
-                        ij.field_q = ij.field_q + 1;
-                        sg.field_l = hc.a(-9986) + 30000L;
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if ((ij.field_q ^ -1) != -4) {
-                        break L4;
-                      } else {
-                        if (0 < ng.field_N.f(31479)) {
-                          var1_int = ng.field_N.a(param0 + -109);
-                          if (0 != var1_int) {
-                            stackIn_28_0 = bk.a(var1_int, 1);
-                            decompiledRegionSelector0 = 3;
-                            break L0;
-                          } else {
-                            ij.field_q = ij.field_q + 1;
-                            break L4;
-                          }
-                        } else {
-                          if ((hc.a(-9986) ^ -1L) >= (sg.field_l ^ -1L)) {
-                            break L4;
-                          } else {
-                            stackIn_24_0 = bk.a(-2, 1);
-                            decompiledRegionSelector0 = 2;
-                            break L0;
-                          }
-                        }
-                      }
-                    }
-                    if (ij.field_q == 4) {
-                      ji.field_e.a(param0 ^ -17, fb.field_i, ng.field_N);
-                      ng.field_N = null;
-                      vm.field_b = null;
-                      ij.field_q = 0;
-                      stackIn_33_0 = 0;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    stackIn_9_0 = -123;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = (IOException) (Object) decompiledCaughtException;
-                return bk.a(-3, param0 ^ 109);
+          int stackIn_9_0 = 0;
+          int stackIn_15_0 = 0;
+          int stackIn_24_0 = 0;
+          int stackIn_28_0 = 0;
+          int stackIn_33_0 = 0;
+          Throwable decompiledCaughtException = null;
+          int var1_int = 0;
+          IOException var1 = null;
+          jc var2 = null;
+          if (ji.field_e.field_l >= 4) {
+            if (ji.field_e.field_b == -1) {
+              return 3;
+            }
+            if (ji.field_e.field_b != -2) {
+              return 1;
+            }
+            return 4;
+          }
+          try {
+            if (param0 != 108) {
+              stackIn_9_0 = -123;
+              return stackIn_9_0;
+            }
+            if (ij.field_q == 0) {
+              vm.field_b = ii.field_a.a(ok.field_G, 27402, co.field_g);
+              ij.field_q = ij.field_q + 1;
+            }
+            if (ij.field_q == 1) {
+              if (2 == vm.field_b.field_a) {
+                stackIn_15_0 = bk.a(-1, 1);
+                return stackIn_15_0;
               }
-              if (decompiledRegionSelector0 == 0) {
-                return stackIn_9_0;
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  return stackIn_15_0;
-                } else {
-                  if (decompiledRegionSelector0 == 2) {
-                    return stackIn_24_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 3) {
-                      return stackIn_28_0;
-                    } else {
-                      return stackIn_33_0;
-                    }
-                  }
-                }
-              }
-            } else {
-              if (ji.field_e.field_b != -1) {
-                if ((ji.field_e.field_b ^ -1) != 1) {
-                  return 1;
-                } else {
-                  return 4;
-                }
-              } else {
-                return 3;
+              if (vm.field_b.field_a == 1) {
+                ij.field_q = ij.field_q + 1;
               }
             }
+            if (2 == ij.field_q) {
+              ng.field_N = new el((java.net.Socket) (vm.field_b.field_f), ii.field_a);
+              var2 = new jc(13);
+              hj.a(fd.field_C, var2, rj.field_l, ed.field_b, 12);
+              var2.a(15, param0 ^ -26);
+              var2.a(dl.field_c, (byte) -42);
+              ng.field_N.a(var2.field_g, param0 ^ 108, 0, 13);
+              ij.field_q = ij.field_q + 1;
+              sg.field_l = hc.a(-9986) + 30000L;
+            }
+            if (ij.field_q == 3) {
+              if (0 < ng.field_N.f(31479)) {
+                var1_int = ng.field_N.a(param0 - 109);
+                if (0 != var1_int) {
+                  stackIn_28_0 = bk.a(var1_int, 1);
+                  return stackIn_28_0;
+                }
+                ij.field_q = ij.field_q + 1;
+              } else {
+                if (hc.a(-9986) > sg.field_l) {
+                  stackIn_24_0 = bk.a(-2, 1);
+                  return stackIn_24_0;
+                }
+              }
+            }
+            if (ij.field_q != 4) {
+              return -1;
+            }
+            ji.field_e.a(param0 ^ -17, fb.field_i, ng.field_N);
+            ng.field_N = null;
+            vm.field_b = null;
+            ij.field_q = 0;
+            stackIn_33_0 = 0;
+            return stackIn_33_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (IOException) (Object) decompiledCaughtException;
+            return bk.a(-3, param0 ^ 109);
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final ub a(byte param0, int param1, boolean param2, int param3, int param4) {
-        long var6 = (long)param1 + ((long)param4 << -1150070304);
+        long var6 = (long)param1 + ((long)param4 << 32);
         ub var8 = new ub();
         var8.field_j = var6;
         var8.field_A = param0;
         var8.field_w = param2 ? true : false;
         if (param3 != -1150070304) {
-            return (ub) null;
+          return (ub) null;
         }
         if (param2) {
-            if (this.a((byte) -85) >= 20) {
-                throw new RuntimeException();
-            }
-            this.field_i.a(var8, (byte) 96);
-        } else {
-            if (-21 < (this.e(114) ^ -1)) {
-                this.field_p.a(var8, (byte) 112);
-                return var8;
-            }
+          if (this.a((byte) -85) >= 20) {
             throw new RuntimeException();
+          }
+          this.field_i.a(var8, (byte) 96);
+        } else {
+          if (this.e(114) < 20) {
+            this.field_p.a(var8, (byte) 112);
+            return var8;
+          }
+          throw new RuntimeException();
         }
         return var8;
     }
@@ -201,61 +145,19 @@ abstract class dk {
     abstract void d(byte param0);
 
     final boolean c(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 20) {
-          L0: {
-            this.b(3);
-            if (this.e(108) < 20) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.e(108) < 20) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 20) {
+          return this.e(108) >= 20 ? true : false;
         }
+        this.b(3);
+        return this.e(108) >= 20 ? true : false;
     }
 
     final boolean c(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 113) {
-          L0: {
-            this.field_k = -48;
-            if ((this.a((byte) -11) ^ -1) > -21) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((this.a((byte) -11) ^ -1) > -21) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 113) {
+          return this.a((byte) -11) >= 20 ? true : false;
         }
+        this.field_k = -48;
+        return this.a((byte) -11) >= 20 ? true : false;
     }
 
     public static void a(int param0) {
@@ -263,7 +165,7 @@ abstract class dk {
         field_q = null;
         field_m = null;
         field_j = null;
-        int var1 = 68 % ((param0 - -29) / 43);
+        int var1 = 68 % ((param0 + 29) / 43);
         field_o = null;
         field_e = null;
         field_s = null;
@@ -275,37 +177,32 @@ abstract class dk {
     abstract boolean d(int param0);
 
     final int e(int param0) {
-        if (param0 <= 79) {
-          this.e(-30);
-          return this.field_p.b(0) - -this.field_h.b(0);
-        } else {
-          return this.field_p.b(0) - -this.field_h.b(0);
+        if (param0 > 79) {
+          return this.field_p.b(0) + this.field_h.b(0);
         }
+        this.e(-30);
+        return this.field_p.b(0) + this.field_h.b(0);
     }
 
     final static void f(int param0) {
-        if (param0 == 389) {
+        if (param0 != 389) {
+          dk.b((byte) 100);
           tm.field_l.a((byte) 76);
           if (null == md.field_i) {
             md.field_i = new vc(tm.field_l, vd.field_X);
-            tm.field_l.a(param0 + -389, md.field_i);
-            return;
-          } else {
-            tm.field_l.a(param0 + -389, md.field_i);
+            tm.field_l.a(param0 - 389, md.field_i);
             return;
           }
-        } else {
-          dk.b((byte) 100);
-          tm.field_l.a((byte) 76);
-          if (null != md.field_i) {
-            tm.field_l.a(param0 + -389, md.field_i);
-            return;
-          } else {
-            md.field_i = new vc(tm.field_l, vd.field_X);
-            tm.field_l.a(param0 + -389, md.field_i);
-            return;
-          }
+          tm.field_l.a(param0 - 389, md.field_i);
+          return;
         }
+        tm.field_l.a((byte) 76);
+        if (null != md.field_i) {
+          tm.field_l.a(param0 - 389, md.field_i);
+          return;
+        }
+        md.field_i = new vc(tm.field_l, vd.field_X);
+        tm.field_l.a(param0 - 389, md.field_i);
     }
 
     abstract void b(int param0);

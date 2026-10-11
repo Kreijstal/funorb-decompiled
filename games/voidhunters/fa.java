@@ -15,15 +15,15 @@ final class fa extends ksa {
 
     final static void a(String param0, int param1, boolean param2) {
         try {
-            rg.field_b = true;
-            kmb.field_c = param2 ? true : false;
-            hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
-            if (param1 >= -119) {
-                field_d = (gd[]) null;
-            }
-            klb.field_r.a(false, hwa.field_o);
+          rg.field_b = true;
+          kmb.field_c = param2 ? true : false;
+          hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
+          if (param1 >= -119) {
+            field_d = (gd[]) null;
+          }
+          klb.field_r.a(false, hwa.field_o);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

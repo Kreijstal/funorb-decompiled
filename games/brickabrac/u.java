@@ -16,9 +16,9 @@ final class u {
         field_e = null;
         field_b = null;
         if (param0 != 2) {
-            field_b = (String) null;
-            field_f = null;
-            return;
+          field_b = (String) null;
+          field_f = null;
+          return;
         }
         field_f = null;
     }

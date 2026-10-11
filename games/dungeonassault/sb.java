@@ -7,24 +7,15 @@ final class sb {
 
     public static void a(byte param0) {
         if (param0 >= -73) {
-            sb.a((byte) -37);
-            field_a = null;
-            return;
+          sb.a((byte) -37);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0) {
-        if (param0 != 500) {
-          field_a = (nh) null;
-          hg.field_t = null;
-          uo.field_b = null;
-          jn.field_k = null;
-          jc.field_f = null;
-          fe.field_g = null;
-          ub.field_q = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == 500) {
           hg.field_t = null;
           uo.field_b = null;
           jn.field_k = null;
@@ -33,6 +24,13 @@ final class sb {
           ub.field_q = (byte[][]) null;
           return;
         }
+        field_a = (nh) null;
+        hg.field_t = null;
+        uo.field_b = null;
+        jn.field_k = null;
+        jc.field_f = null;
+        fe.field_g = null;
+        ub.field_q = (byte[][]) null;
     }
 
     static {

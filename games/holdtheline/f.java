@@ -22,9 +22,9 @@ final class f extends jf implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 != 106) {
-            this.field_e = -40;
-            param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_e = -40;
+          param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

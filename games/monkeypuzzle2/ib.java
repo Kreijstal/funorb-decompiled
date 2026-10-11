@@ -12,32 +12,12 @@ final class ib {
     }
 
     final boolean b(int param0) {
-        int stackIn_8_0 = 0;
-        if (param0 == 2) {
-          L0: {
-            L1: {
-              if (this == qk.field_c) {
-                break L1;
-              } else {
-                if (ea.field_a == this) {
-                  break L1;
-                } else {
-                  if (this != wh.field_b) {
-                    stackIn_8_0 = 0;
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-            }
-            stackIn_8_0 = 1;
-            break L0;
-          }
-          return stackIn_8_0 != 0;
-        } else {
+        boolean stackIn_8_0 = false;
+        if (param0 != 2) {
           return true;
         }
+        stackIn_8_0 = (this == qk.field_c) || (ea.field_a == this) || (this == wh.field_b);
+        return stackIn_8_0;
     }
 
     final static void c(int param0) {
@@ -45,19 +25,20 @@ final class ib {
         int var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var1_int = 0;
         for (var2 = 0; var2 < jk.field_A; var2++) {
-            if (null == jk.field_C[var2] || jk.field_C[var2].h()) {
-                var1_int = 1;
-                break;
-            }
+          if (null == jk.field_C[var2] ||
+            jk.field_C[var2].h()) {
+            var1_int = 1;
+            break;
+          }
         }
-        if (!(var1_int != 0)) {
-            return;
+        if (var1_int == 0) {
+          return;
         }
         try {
-            jk.field_C[var2] = li.a(ke.field_h[2], param0, 96);
-            na.a((byte) 38, jk.field_C[var2]);
+          jk.field_C[var2] = li.a(ke.field_h[2], param0, 96);
+          na.a((byte) 38, jk.field_C[var2]);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ')');
         }
     }
 

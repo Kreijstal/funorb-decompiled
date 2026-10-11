@@ -10,14 +10,14 @@ final class um {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 106) {
-            field_c = 55;
+          field_c = 55;
         }
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            field_b = (String) null;
-            return !ua.field_b ? true : false;
+          field_b = (String) null;
+          return !ua.field_b ? true : false;
         }
         return !ua.field_b ? true : false;
     }

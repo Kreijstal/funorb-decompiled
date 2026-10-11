@@ -17,16 +17,14 @@ final class rk extends oh {
         field_m = null;
         field_o = null;
         field_j = null;
-        if (param0 != -13095) {
-          field_j = (bi) null;
-          field_l = null;
-          field_n = null;
-          return;
-        } else {
+        if (param0 == -13095) {
           field_l = null;
           field_n = null;
           return;
         }
+        field_j = (bi) null;
+        field_l = null;
+        field_n = null;
     }
 
     private rk() throws Throwable {

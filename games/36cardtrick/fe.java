@@ -10,125 +10,65 @@ final class fe {
     static String field_d;
 
     final static long a(CharSequence param0, int param1) {
+        int var5 = 0;
         long stackIn_24_0 = 0L;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         var7 = Main.field_T;
         try {
-          L0: {
-            var2_long = 0L;
-            var4 = param0.length();
-            var5 = 0;
-            L1: while (true) {
-              L2: {
-                if (var5 >= var4) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      var2_long = var2_long * 37L;
-                      var6 = param0.charAt(var5);
-                      if (65 > var6) {
-                        break L4;
-                      } else {
-                        if (90 < var6) {
-                          break L4;
-                        } else {
-                          var2_long = var2_long + (long)(-65 + (var6 + 1));
-                          break L3;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (97 > var6) {
-                        break L5;
-                      } else {
-                        if (122 >= var6) {
-                          var2_long = var2_long + (long)(-97 + (var6 + 1));
-                          break L3;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    if (var6 < 48) {
-                      break L3;
-                    } else {
-                      if (57 < var6) {
-                        break L3;
-                      } else {
-                        var2_long = var2_long + (long)(-21 + var6);
-                        break L3;
-                      }
-                    }
-                  }
-                  if (var2_long >= 177917621779460413L) {
-                    break L2;
-                  } else {
-                    var5++;
-                    continue L1;
-                  }
-                }
-              }
-              L6: {
-                if (param1 > 57) {
-                  break L6;
-                } else {
-                  fe.a((byte) 61, -85);
-                  break L6;
-                }
-              }
-              L7: while (true) {
-                L8: {
-                  if (0L != var2_long % 37L) {
-                    break L8;
-                  } else {
-                    if ((var2_long ^ -1L) == -1L) {
-                      break L8;
-                    } else {
-                      var2_long = var2_long / 37L;
-                      continue L7;
-                    }
-                  }
-                }
-                stackIn_24_0 = var2_long;
-                break L0;
+          var2_long = 0L;
+          var4 = param0.length();
+          for (var5 = 0; var5 < var4; var5++) {
+            var2_long = var2_long * 37L;
+            var6 = param0.charAt(var5);
+            if (65 <= var6 &&
+              90 >= var6) {
+              var2_long = var2_long + (long)(-65 + (var6 + 1));
+            } else if (97 <= var6 &&
+              122 >= var6) {
+              var2_long = var2_long + (long)(-97 + (var6 + 1));
+            } else {
+              if (var6 >= 48 &&
+                57 >= var6) {
+                var2_long = var2_long + (long)(-21 + var6);
               }
             }
+            if (var2_long < 177917621779460413L) {
+              continue;
+            }
+            break;
           }
+          if (param1 <= 57) {
+            fe.a((byte) 61, -85);
+          }
+          while (0L == var2_long % 37L) {
+            if (var2_long != 0L) {
+              var2_long = var2_long / 37L;
+              continue;
+            }
+            break;
+          }
+          stackIn_24_0 = var2_long;
+          return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var2);
-
-            stackIn_27_1 = new StringBuilder().append("fe.A(");
-
-            if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L9;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L9;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_27_0 = var2;
+          stackIn_27_1 = new StringBuilder().append("fe.A(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_24_0;
     }
 
     public final String toString() {
@@ -137,79 +77,45 @@ final class fe {
 
     final static void a(byte param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            IOException var2 = null;
-            L0: {
-              if (param0 < -22) {
-                break L0;
-              } else {
-                field_a = 102;
-                break L0;
+          Throwable decompiledCaughtException = null;
+          IOException var2 = null;
+          if (param0 >= -22) {
+            field_a = 102;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          if (cb.field_j != null) {
+            if (param1 >= 0) {
+              decompiledFrameRemainder0 = (ra.field_b == ad.field_q);
+              if ((decompiledFrameRemainder0) && (na.field_r.field_i == 0 &&
+                id.a(90) > ua.field_E + 10000L)) {
+                na.field_r.h(param1, 0);
+              }
+            } else {
+              if (na.field_r.field_i == 0 &&
+                id.a(90) > ua.field_E + 10000L) {
+                na.field_r.h(param1, 0);
               }
             }
-            L1: {
-              if (cb.field_j == null) {
-                break L1;
-              } else {
-                L2: {
-                  if (param1 >= 0) {
-                    if (ra.field_b != ad.field_q) {
-                      break L1;
-                    } else {
-                      if (na.field_r.field_i != 0) {
-                        break L2;
-                      } else {
-                        if (id.a(90) <= ua.field_E - -10000L) {
-                          break L2;
-                        } else {
-                          na.field_r.h(param1, 0);
-                          break L2;
-                        }
-                      }
-                    }
-                  } else {
-                    if (na.field_r.field_i != 0) {
-                      break L2;
-                    } else {
-                      if (id.a(90) <= ua.field_E - -10000L) {
-                        break L2;
-                      } else {
-                        na.field_r.h(param1, 0);
-                        break L2;
-                      }
-                    }
-                  }
+            if (decompiledFrameRemainder0) {
+              if (na.field_r.field_i > 0) {
+                try {
+                  cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
+                  ua.field_E = id.a(125);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  mc.a((byte) -126);
                 }
-                L3: {
-                  if (na.field_r.field_i <= 0) {
-                    break L3;
-                  } else {
-                    try {
-                      L4: {
-                        cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
-                        ua.field_E = id.a(125);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        var2 = (IOException) (Object) decompiledCaughtException;
-                        mc.a((byte) -126);
-                        break L5;
-                      }
-                    }
-                    na.field_r.field_i = 0;
-                    break L3;
-                  }
-                }
-                return;
+                na.field_r.field_i = 0;
               }
+              return;
             }
-            na.field_r.field_i = 0;
+          }
+          na.field_r.field_i = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -221,7 +127,7 @@ final class fe {
         field_d = null;
         field_c = null;
         if (param0 != 17449) {
-            fe.a((byte) 108, 62);
+          fe.a((byte) 108, 62);
         }
     }
 

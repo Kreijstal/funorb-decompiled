@@ -12,11 +12,11 @@ final class pb {
 
     final static int a(boolean param0) {
         if (!param0) {
-            return -49;
+          return -49;
         }
         mb.field_u.b((byte) 111);
         if (!vh.field_e.a(false)) {
-            return tn.b(-102);
+          return tn.b(-102);
         }
         return 0;
     }

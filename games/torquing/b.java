@@ -11,17 +11,17 @@ final class b extends am {
 
     final static int g(byte param0) {
         if (param0 <= 108) {
-            b.g((byte) 51);
+          b.g((byte) 51);
         }
         return ii.field_k;
     }
 
     final static int e(int param0, int param1, int param2) {
         if (param2 != -25034) {
-            field_w = 5;
+          field_w = 5;
         }
-        int var3 = param0 - 1 & param1 >> -2051955553;
-        return var3 + ((param1 >>> 1404155359) + param1) % param0;
+        int var3 = param0 - 1 & param1 >> 31;
+        return var3 + ((param1 >>> 31) + param1) % param0;
     }
 
     public b() {
@@ -32,28 +32,28 @@ final class b extends am {
         field_t = null;
         field_s = null;
         if (param0 != 16060) {
-            b.c(118);
+          b.c(118);
         }
         field_u = null;
     }
 
     private final int d(int param0, int param1, int param2) {
         if (param0 != -5951) {
-            field_u = (int[]) null;
+          field_u = (int[]) null;
         }
-        int var4 = param2 - -(param1 * 57);
-        var4 = var4 << -225511967 ^ var4;
-        return -((1376312589 + (var4 * var4 * 15731 - -789221) * var4 & 2147483647) / 262144) + 4096;
+        int var4 = param2 + param1 * 57;
+        var4 = var4 << 1 ^ var4;
+        return -((1376312589 + (var4 * var4 * 15731 + 789221) * var4 & 2147483647) / 262144) + 4096;
     }
 
     final static void b(int param0) {
         if (param0 <= 8) {
-            field_x = -106;
+          field_x = -106;
         }
-        if ((on.field_c ^ -1) >= -21) {
-            bd.a(false, 0);
+        if (on.field_c <= 20) {
+          bd.a(false, 0);
         } else {
-            bd.a(false, on.field_c - 20);
+          bd.a(false, on.field_c - 20);
         }
     }
 
@@ -64,13 +64,13 @@ final class b extends am {
         int[] var7 = this.field_l.a(param1, 25657);
         int[] var3 = var7;
         if (param0 < 86) {
-            return (int[]) null;
+          return (int[]) null;
         }
         if (this.field_l.field_b) {
-            var4 = dp.field_a[param1];
-            for (var5 = 0; var5 < ci.field_c; var5++) {
-                var7[var5] = this.d(-5951, var4, q.field_b[var5]) % 4096;
-            }
+          var4 = dp.field_a[param1];
+          for (var5 = 0; var5 < ci.field_c; var5++) {
+            var7[var5] = this.d(-5951, var4, q.field_b[var5]) % 4096;
+          }
         }
         return var3;
     }

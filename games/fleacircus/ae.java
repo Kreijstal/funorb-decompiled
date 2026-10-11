@@ -10,20 +10,20 @@ final class ae {
 
     final static void a(int param0, String param1) {
         if (param0 < 107) {
-            return;
+          return;
         }
         try {
-            wc.field_p = param1;
+          wc.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "ae.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "ae.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(boolean param0, byte param1) {
         if (param1 < 86) {
-            field_a = (ih) null;
-            wa.a(param0, false, -96);
-            return;
+          field_a = (ih) null;
+          wa.a(param0, false, -96);
+          return;
         }
         wa.a(param0, false, -96);
     }

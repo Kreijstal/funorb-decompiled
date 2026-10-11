@@ -22,8 +22,8 @@ final class ag {
 
     final static boolean b(int param0) {
         if (param0 <= 13) {
-            field_g = (String) null;
-            return mh.field_i;
+          field_g = (String) null;
+          return mh.field_i;
         }
         return mh.field_i;
     }

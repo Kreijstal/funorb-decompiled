@@ -15,20 +15,20 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_f = true;
+          this.field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, df param1) {
         if (param0 > -76) {
-            return;
+          return;
         }
         try {
-            si.a(this.field_e, param1, true);
+          si.a(this.field_e, param1, true);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_g = null;
         field_c = null;
         if (param0 > -40) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -56,15 +56,11 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
         int var5 = 0;
         String[] var8 = null;
         int stackIn_9_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
+        boolean stackIn_10_1 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         StringBuilder stackIn_19_1 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
@@ -72,90 +68,49 @@ final class gj extends java.awt.Canvas implements java.awt.event.FocusListener {
         String[] var7 = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              na.field_S = b.field_a;
-              if (param3 == 255) {
-                L2: {
-                  stackIn_9_0 = -108;
-
-                  if (wc.field_Ob >= 13) {
-                    stackIn_10_0 = stackIn_9_0;
-                    stackIn_10_1 = 0;
-                    break L2;
-                  } else {
-                    stackIn_10_0 = stackIn_9_0;
-                    stackIn_10_1 = 1;
-                    break L2;
-                  }
-                }
-                lm.field_e = jj.a((byte) stackIn_10_0, stackIn_10_1 != 0);
-                var7 = (String[]) null;
-                fc.a(-7212, (String[]) null);
-                break L1;
+          na.field_S = b.field_a;
+          if (param3 == 255) {
+            stackIn_9_0 = -108;
+            stackIn_10_1 = !(wc.field_Ob >= 13);
+            lm.field_e = jj.$cfr$intArgs$a$81305413f30a(stackIn_9_0, stackIn_10_1);
+            var7 = (String[]) null;
+            fc.a(-7212, (String[]) null);
+          } else {
+            if (param3 < 100) {
+              lm.field_e = gd.a(4, param0, param3);
+            } else {
+              if (105 < param3) {
+                lm.field_e = gd.a(4, param0, param3);
               } else {
-                if (param3 < 100) {
-                  lm.field_e = gd.a(4, param0, param3);
-                  break L1;
-                } else {
-                  if (105 < param3) {
-                    lm.field_e = gd.a(4, param0, param3);
-                    break L1;
-                  } else {
-                    var8 = param2;
-                    fc.a(-7212, var8);
-                    lm.field_e = p.a(26663, param2);
-                    break L1;
-                  }
-                }
+                var8 = param2;
+                fc.a(-7212, var8);
+                lm.field_e = p.a(26663, param2);
               }
             }
-            if (param1) {
-              break L0;
-            } else {
-              var6 = (String[]) null;
-              gj.a((String) null, false, (String[]) null, -96);
-              return;
-            }
           }
+          if (param1) {
+            return;
+          }
+          var6 = (String[]) null;
+          gj.a((String) null, false, (String[]) null, -96);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var4);
-
-            stackIn_16_1 = new StringBuilder().append("gj.A(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L3;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_16_0 = var4;
+          stackIn_16_1 = new StringBuilder().append("gj.A(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_19_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L4;
-            }
+          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), stackIn_20_2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -13,7 +13,7 @@ final class fp {
         field_d = null;
         field_e = null;
         if (param0 != -4126) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;
@@ -21,20 +21,17 @@ final class fp {
 
     final static int a(byte param0) {
         bl.field_r.a((byte) 62);
-        if (param0 > 51) {
-          if (!hb.field_a.b((byte) 60)) {
-            return bk.a(0);
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 <= 51) {
           fp.a((byte) 113);
-          if (!hb.field_a.b((byte) 60)) {
-            return bk.a(0);
-          } else {
+          if (hb.field_a.b((byte) 60)) {
             return 0;
           }
+          return bk.a(0);
         }
+        if (hb.field_a.b((byte) 60)) {
+          return 0;
+        }
+        return bk.a(0);
     }
 
     static {

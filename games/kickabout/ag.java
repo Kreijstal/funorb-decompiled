@@ -21,18 +21,18 @@ final class ag extends gn {
         field_f = null;
         field_l = null;
         if (param0 < 66) {
-            ag.a((byte) 34);
+          ag.a((byte) 34);
         }
     }
 
     ag(vm param0, gn param1) {
         try {
-            this.field_i = param0;
-            this.field_j = param0.m();
-            this.field_k = param1;
-            this.field_i.b(128 + mn.field_a * this.field_j >> -1975549464);
+          this.field_i = param0;
+          this.field_j = param0.m();
+          this.field_k = param1;
+          this.field_i.b(128 + mn.field_a * this.field_j >> 8);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

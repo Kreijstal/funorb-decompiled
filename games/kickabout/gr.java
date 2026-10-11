@@ -50,32 +50,16 @@ final class gr {
     static String[] field_l;
 
     final boolean a(byte param0) {
+        int var3 = 0;
         int var2;
-        int var3;
         int var4;
-        L0: {
-          var4 = Kickabout.field_G;
-          var2 = -122 / ((2 - param0) / 36);
-          if (!this.c(-3)) {
-            break L0;
-          } else {
-            var3 = 0;
-            L1: while (true) {
-              if (this.field_i.length <= var3) {
-                break L0;
-              } else {
-                if (!this.field_i[var3].c(-2)) {
-                  if (!this.a((byte) 45, var3)) {
-                    return true;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                } else {
-                  var3++;
-                  continue L1;
-                }
-              }
+        var4 = Kickabout.field_G;
+        var2 = -122 / ((2 - param0) / 36);
+        if (this.c(-3)) {
+          for (var3 = 0; this.field_i.length > var3; var3++) {
+            if (!this.field_i[var3].c(-2) &&
+              !this.a((byte) 45, var3)) {
+              return true;
             }
           }
         }
@@ -83,7 +67,7 @@ final class gr {
     }
 
     final boolean a(byte param0, int param1) {
-        int var3 = -58 % ((param0 - -42) / 59);
+        int var3 = -58 % ((param0 + 42) / 59);
         return this.b((byte) -105, param1) != null ? true : false;
     }
 
@@ -95,15 +79,15 @@ final class gr {
 
     final boolean a(int param0) {
         int var3 = Kickabout.field_G;
-        cq var2 = (cq) ((Object) this.field_O.g(24009));
+        cq var2 = (cq) (this.field_O.g(24009));
         while (var2 != null) {
-            if (-4 != (var2.field_k ^ -1)) {
-                return true;
-            }
-            var2 = (cq) ((Object) this.field_O.c(33));
+          if (var2.field_k != 3) {
+            return true;
+          }
+          var2 = (cq) (this.field_O.c(33));
         }
         if (param0 != -4) {
-            return false;
+          return false;
         }
         return false;
     }
@@ -111,15 +95,15 @@ final class gr {
     final boolean c(int param0) {
         int var4 = Kickabout.field_G;
         int var2 = 0;
-        cq var3 = (cq) ((Object) this.field_O.g(24009));
+        cq var3 = (cq) (this.field_O.g(24009));
         while (var3 != null) {
-            if ((var3.field_k ^ -1) != -4) {
-                var2++;
-            }
-            var3 = (cq) ((Object) this.field_O.c(param0 ^ -36));
+          if (var3.field_k != 3) {
+            var2++;
+          }
+          var3 = (cq) (this.field_O.c(param0 ^ -36));
         }
         if (param0 != -3) {
-            this.c(-68);
+          this.c(-68);
         }
         return 5 > var2 ? true : false;
     }
@@ -130,178 +114,119 @@ final class gr {
         field_v = null;
         field_Q = null;
         if (param0 != 0) {
-            gr.b((byte) 10);
+          gr.b((byte) 10);
         }
     }
 
     final void a(gr param0, byte param1) {
+        int var4_int = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         cq var3 = null;
         RuntimeException var3_ref = null;
         cq var4 = null;
-        int var4_int = 0;
         pt var5 = null;
         int var6 = 0;
         iw var7 = null;
         pt var8 = null;
         up var9 = null;
+        int var3_intLifetime1;
+        int var3_intLifetime2;
+        int var3_intLifetime3;
         var6 = Kickabout.field_G;
         try {
-          L0: {
-            this.field_h = param0.field_h;
-            this.field_s = param0.field_s;
-            this.field_R = param0.field_R;
-            this.field_M = param0.field_M;
-            this.field_k = param0.field_k;
-            this.field_t = param0.field_t;
-            this.field_e = param0.field_e;
-            this.field_E = param0.field_E;
-            this.field_x = param0.field_x;
-            this.field_m = param0.field_m;
-            this.field_G = param0.field_G;
-            this.field_r = param0.field_r;
-            this.field_w = param0.field_w;
-            var3_int = 0;
-            L1: while (true) {
-              if (-4 >= (var3_int ^ -1)) {
-                this.field_o = param0.field_o;
-                this.field_K = param0.field_K;
-                var3_int = 0;
-                L2: while (true) {
-                  if ((var3_int ^ -1) <= -10) {
-                    this.field_O = new tf();
-                    var3 = (cq) ((Object) param0.field_O.g(24009));
-                    L3: while (true) {
-                      if (var3 == null) {
-                        this.field_g = new tf();
-                        var8 = (pt) ((Object) param0.field_g.g(24009));
-                        L4: while (true) {
-                          if (var8 == null) {
-                            this.field_p = param0.field_p;
-                            this.field_F = param0.field_F;
-                            var3_int = 0;
-                            L5: while (true) {
-                              if (var3_int >= this.field_J.length) {
-                                L6: {
-                                  if (param1 >= 12) {
-                                    break L6;
-                                  } else {
-                                    var7 = (iw) null;
-                                    this.a(63, (iw) null, 110);
-                                    break L6;
-                                  }
-                                }
-                                this.field_B = param0.field_B;
-                                this.field_H = param0.field_H;
-                                this.field_L = param0.field_L;
-                                this.field_b = param0.field_b;
-                                this.field_C = param0.field_C;
-                                this.field_z = param0.field_z;
-                                this.field_d = param0.field_d;
-                                this.field_A = param0.field_A;
-                                var3_int = 0;
-                                L7: while (true) {
-                                  if (var3_int >= this.field_N.length) {
-                                    this.field_f = param0.field_f;
-                                    this.field_P = param0.field_P;
-                                    this.field_u = param0.field_u;
-                                    this.field_j = param0.field_j;
-                                    this.field_D = param0.field_D;
-                                    this.field_n = param0.field_n;
-                                    this.field_I = param0.field_I;
-                                    break L0;
-                                  } else {
-                                    this.field_N[var3_int] = param0.field_N[var3_int];
-                                    var3_int++;
-                                    continue L7;
-                                  }
-                                }
-                              } else {
-                                this.field_J[var3_int] = param0.field_J[var3_int];
-                                var3_int++;
-                                continue L5;
-                              }
-                            }
-                          } else {
-                            var9 = new up();
-                            var9.a((byte) -65, var8.e(-128));
-                            var5 = new pt(var8.a(-29), var8.f((byte) 37), var8.f(3), var8.b(6), var9);
-                            this.field_g.a(var5, 3);
-                            var8 = (pt) ((Object) param0.field_g.c(33));
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        var4 = new cq(var3.field_k, var3.field_l, var3.field_i);
-                        this.field_O.a(var4, 3);
-                        var3 = (cq) ((Object) param0.field_O.c(33));
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    L8: {
-                      if (null == this.field_i[var3_int]) {
-                        this.field_i[var3_int] = new up();
-                        break L8;
-                      } else {
-                        break L8;
-                      }
-                    }
-                    this.field_i[var3_int].a((byte) -61, param0.field_i[var3_int]);
-                    this.field_q[var3_int] = param0.field_q[var3_int];
-                    var3_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var4_int = 0;
-                L9: while (true) {
-                  if ((var4_int ^ -1) <= -5) {
-                    var3_int++;
-                    continue L1;
-                  } else {
-                    this.field_a[var3_int][var4_int] = param0.field_a[var3_int][var4_int];
-                    var4_int++;
-                    continue L9;
-                  }
-                }
-              }
+          this.field_h = param0.field_h;
+          this.field_s = param0.field_s;
+          this.field_R = param0.field_R;
+          this.field_M = param0.field_M;
+          this.field_k = param0.field_k;
+          this.field_t = param0.field_t;
+          this.field_e = param0.field_e;
+          this.field_E = param0.field_E;
+          this.field_x = param0.field_x;
+          this.field_m = param0.field_m;
+          this.field_G = param0.field_G;
+          this.field_r = param0.field_r;
+          this.field_w = param0.field_w;
+          for (var3_int = 0; var3_int < 3; var3_int++) {
+            for (var4_int = 0; var4_int < 4; var4_int++) {
+              this.field_a[var3_int][var4_int] = param0.field_a[var3_int][var4_int];
             }
           }
+          this.field_o = param0.field_o;
+          this.field_K = param0.field_K;
+          for (var3_intLifetime1 = 0; var3_intLifetime1 < 9; var3_intLifetime1++) {
+            if (null == this.field_i[var3_intLifetime1]) {
+              this.field_i[var3_intLifetime1] = new up();
+            }
+            this.field_i[var3_intLifetime1].a((byte) -61, param0.field_i[var3_intLifetime1]);
+            this.field_q[var3_intLifetime1] = param0.field_q[var3_intLifetime1];
+          }
+          this.field_O = new tf();
+          var3 = (cq) (param0.field_O.g(24009));
+          while (var3 != null) {
+            var4 = new cq(var3.field_k, var3.field_l, var3.field_i);
+            this.field_O.a(var4, 3);
+            var3 = (cq) (param0.field_O.c(33));
+          }
+          this.field_g = new tf();
+          var8 = (pt) (param0.field_g.g(24009));
+          while (var8 != null) {
+            var9 = new up();
+            var9.a((byte) -65, var8.e(-128));
+            var5 = new pt(var8.a(-29), var8.f((byte) 37), var8.f(3), var8.b(6), var9);
+            this.field_g.a(var5, 3);
+            var8 = (pt) (param0.field_g.c(33));
+          }
+          this.field_p = param0.field_p;
+          this.field_F = param0.field_F;
+          for (var3_intLifetime2 = 0; var3_intLifetime2 < this.field_J.length; var3_intLifetime2++) {
+            this.field_J[var3_intLifetime2] = param0.field_J[var3_intLifetime2];
+          }
+          if (param1 < 12) {
+            var7 = (iw) null;
+            this.a(63, (iw) null, 110);
+          }
+          this.field_B = param0.field_B;
+          this.field_H = param0.field_H;
+          this.field_L = param0.field_L;
+          this.field_b = param0.field_b;
+          this.field_C = param0.field_C;
+          this.field_z = param0.field_z;
+          this.field_d = param0.field_d;
+          this.field_A = param0.field_A;
+          for (var3_intLifetime3 = 0; var3_intLifetime3 < this.field_N.length; var3_intLifetime3++) {
+            this.field_N[var3_intLifetime3] = param0.field_N[var3_intLifetime3];
+          }
+          this.field_f = param0.field_f;
+          this.field_P = param0.field_P;
+          this.field_u = param0.field_u;
+          this.field_j = param0.field_j;
+          this.field_D = param0.field_D;
+          this.field_n = param0.field_n;
+          this.field_I = param0.field_I;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var3_ref = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var3_ref);
-
-            stackIn_31_1 = new StringBuilder().append("gr.N(");
-
-            if (param0 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L10;
-            } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L10;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_31_0 = var3_ref;
+          stackIn_31_1 = new StringBuilder().append("gr.N(");
+          if (param0 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final String toString() {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
         int incrementValue$2 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$0 = 0;
         String var1;
         int var2;
         int var3;
@@ -320,12 +245,10 @@ final class gr {
         String var17;
         String var18;
         String var19;
-        StringBuilder stackIn_45_0 = null;
-        StringBuilder stackIn_46_0 = null;
-        String stackIn_46_1 = null;
-        StringBuilder stackIn_48_0 = null;
         StringBuilder stackIn_49_0 = null;
-        String stackIn_49_1 = null;
+        String stackIn_50_1 = null;
+        StringBuilder stackIn_52_0 = null;
+        String stackIn_53_1 = null;
         int var4;
         cq var4_ref_cq;
         pt var4_ref_pt;
@@ -353,310 +276,280 @@ final class gr {
         String var41;
         String var42;
         String var43;
-        L0: {
-          var5 = Kickabout.field_G;
-          var6 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
-          var1 = var6;
-          var1 = var6;
-          if (this.field_M) {
-            var1 = var6 + "Active - Yes\n";
-            break L0;
-          } else {
-            var1 = var6 + "Active - No\n";
-            break L0;
-          }
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var2Lifetime4;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        String var1Lifetime1;
+        String var1Lifetime2;
+        String var1Lifetime3;
+        String var1Lifetime4;
+        String var1Lifetime5;
+        String var1Lifetime6;
+        String var1Lifetime7;
+        String var1Lifetime8;
+        String var1Lifetime9;
+        String var1Lifetime10;
+        String var1Lifetime11;
+        String var1Lifetime12;
+        String var1Lifetime13;
+        String var1Lifetime14;
+        String var1Lifetime15;
+        String var1Lifetime16;
+        String var1Lifetime17;
+        String var1Lifetime18;
+        String var1Lifetime19;
+        String var1Lifetime20;
+        String var1Lifetime21;
+        String var1Lifetime22;
+        String var1Lifetime23;
+        String var1Lifetime24;
+        String var1Lifetime25;
+        String var1Lifetime26;
+        String var1Lifetime27;
+        String var1Lifetime28;
+        String var1Lifetime29;
+        String var1Lifetime30;
+        String var1Lifetime31;
+        String var1Lifetime32;
+        String var1Lifetime33;
+        String var1Lifetime34;
+        String var1Lifetime35;
+        String var1Lifetime36;
+        String var1Lifetime37;
+        String var1Lifetime38;
+        String var1Lifetime39;
+        String var1Lifetime40;
+        String var1Lifetime41;
+        String var1Lifetime42;
+        String var1Lifetime43;
+        String var1Lifetime44;
+        String var1Lifetime45;
+        String var1Lifetime46;
+        String var1Lifetime47;
+        String var1Lifetime48;
+        String var1Lifetime49;
+        String var1Lifetime50;
+        String var1Lifetime51;
+        String var22Lifetime1;
+        String var22Lifetime2;
+        String var22Lifetime3;
+        String var25Lifetime1;
+        String var25Lifetime2;
+        String var27Lifetime1;
+        String var27Lifetime2;
+        String var27Lifetime3;
+        var5 = Kickabout.field_G;
+        var6 = "=====PROFILE[" + su.a(0, this.field_e) + "]=====\n";
+        var1 = var6;
+        var1Lifetime1 = var6;
+        if (this.field_M) {
+          var1Lifetime2 = var6 + "Active - Yes\n";
+        } else {
+          var1Lifetime2 = var6 + "Active - No\n";
         }
-        L1: {
-          var7 = var1 + "Created - " + this.field_h;
-          var1 = var7;
-          var1 = var7;
-          var8 = var7 + "\n";
-          var1 = var8;
-          var1 = var8;
-          var9 = var8 + "League Week - " + this.field_G + "\n";
-          var1 = var9;
-          var1 = var9;
-          var10 = var9 + "Pts - " + this.field_E + "\n";
-          var1 = var10;
-          var1 = var10;
-          var11 = var10 + "Diamond Pts - " + this.field_r + "\n";
-          var1 = var11;
-          var1 = var11;
-          var12 = var11 + "League - " + q.field_h[this.field_t] + "\n";
-          var1 = var12;
-          var1 = var12;
-          var13 = var12 + "Trophies - " + this.field_s + "\n";
-          var1 = var13;
-          var1 = var13;
-          if (!this.field_m) {
-            var1 = var13 + "Diamond Win Dialog - No\n";
-            break L1;
-          } else {
-            var1 = var13 + "Diamond Win Dialog - Yes\n";
-            break L1;
-          }
+        var7 = var1Lifetime2 + "Created - " + this.field_h;
+        var1Lifetime3 = var7;
+        var1Lifetime4 = var7;
+        var8 = var7 + "\n";
+        var1Lifetime5 = var8;
+        var1Lifetime6 = var8;
+        var9 = var8 + "League Week - " + this.field_G + "\n";
+        var1Lifetime7 = var9;
+        var1Lifetime8 = var9;
+        var10 = var9 + "Pts - " + this.field_E + "\n";
+        var1Lifetime9 = var10;
+        var1Lifetime10 = var10;
+        var11 = var10 + "Diamond Pts - " + this.field_r + "\n";
+        var1Lifetime11 = var11;
+        var1Lifetime12 = var11;
+        var12 = var11 + "League - " + q.field_h[this.field_t] + "\n";
+        var1Lifetime13 = var12;
+        var1Lifetime14 = var12;
+        var13 = var12 + "Trophies - " + this.field_s + "\n";
+        var1Lifetime15 = var13;
+        var1Lifetime16 = var13;
+        if (!this.field_m) {
+          var1Lifetime17 = var13 + "Diamond Win Dialog - No\n";
+        } else {
+          var1Lifetime17 = var13 + "Diamond Win Dialog - Yes\n";
         }
-        var14 = var1 + "\n";
-        var1 = var14;
-        var1 = var14;
+        var14 = var1Lifetime17 + "\n";
+        var1Lifetime18 = var14;
+        var1Lifetime19 = var14;
         var15 = var14 + "Money - " + ad.a(this.field_x, 26300) + "\n";
-        var1 = var15;
-        var1 = var15;
+        var1Lifetime20 = var15;
+        var1Lifetime21 = var15;
         var16 = var15 + "\n";
-        var1 = var16;
-        var1 = var16;
+        var1Lifetime22 = var16;
+        var1Lifetime23 = var16;
         var17 = var16 + "Kit ID - " + this.field_w + "\n";
-        var1 = var17;
-        var1 = var17;
+        var1Lifetime24 = var17;
+        var1Lifetime25 = var17;
         var18 = var17 + "Pri Col - " + this.field_k + "\n";
-        var1 = var18;
-        var1 = var18;
+        var1Lifetime26 = var18;
+        var1Lifetime27 = var18;
         var19 = var18 + "Sec Col - " + this.field_R + "\n";
-        var1 = var19;
-        var1 = var19;
-        var1 = var19 + "\n";
-        var2 = 0;
-        L2: while (true) {
-          if (-4 >= (var2 ^ -1)) {
-            var20 = var1 + "Surface - " + this.field_K + "\n";
-            var22 = var20;
-            var1 = var22;
-            var1 = var20;
-            var21 = var20 + "Tier - " + this.field_o + "\n";
-            var22 = var21;
-            var1 = var22;
-            var1 = var21;
-            var1 = var21 + "\n";
-            var22 = var1;
-            var1 = var22;
-            var2 = 0;
-            L3: while (true) {
-              if (-10 >= (var2 ^ -1)) {
-                var2 = 0;
-                var3 = 0;
-                var4 = 0;
-                L4: while (true) {
-                  if (this.field_N.length <= var4) {
-                    var24 = var1 + "\n";
-                    var25 = var24;
-                    var1 = var25;
-                    var1 = var24 + "Auction Log Size - " + this.field_O.a(false) + "\n";
-                    var25 = var1;
-                    var1 = var25;
-                    var2 = 0;
-                    var4_ref_cq = (cq) ((Object) this.field_O.g(24009));
-                    L5: while (true) {
-                      if (var4_ref_cq == null) {
-                        var26 = var1 + "\n";
-                        var27 = var26;
-                        var1 = var27;
-                        var1 = var26;
-                        var2 = 0;
-                        var1 = var26 + "Resolve Log Size - " + this.field_g.a(false) + "\n";
-                        var27 = var1;
-                        var1 = var27;
-                        var4_ref_pt = (pt) ((Object) this.field_g.g(24009));
-                        L6: while (true) {
-                          if (var4_ref_pt == null) {
-                            var28 = var1 + "\n";
-                            var1 = var28;
-                            var1 = var28;
-                            var29 = var28 + "SFX Vol - " + this.field_F + "\n";
-                            var1 = var29;
-                            var1 = var29;
-                            var30 = var29 + "Music Vol - " + this.field_p + "\n";
-                            var1 = var30;
-                            var1 = var30;
-                            var1 = var30 + "Help Flags  - ";
-                            var4 = 0;
-                            L7: while (true) {
-                              if (var4 >= this.field_J.length) {
-                                L8: {
-                                  var1 = var1 + "\n";
-                                  if (!this.field_d) {
-                                    var1 = var1 + "Lock Mouse - No\n";
-                                    break L8;
-                                  } else {
-                                    var1 = var1 + "Lock Mouse - Yes\n";
-                                    break L8;
-                                  }
-                                }
-                                L9: {
-                                  if (this.field_A) {
-                                    var1 = var1 + "Autopass - Yes\n";
-                                    break L9;
-                                  } else {
-                                    var1 = var1 + "Autopass - No\n";
-                                    break L9;
-                                  }
-                                }
-                                L10: {
-                                  if (!this.field_L) {
-                                    var1 = var1 + "GFX - Low\n";
-                                    break L10;
-                                  } else {
-                                    var1 = var1 + "GFX - High\n";
-                                    break L10;
-                                  }
-                                }
-                                L11: {
-                                  var31 = var1 + "\n";
-                                  var32 = var31 + "Team Wins - " + this.field_C + "\n";
-                                  var33 = var32 + "Stadium Wins - " + Integer.toBinaryString(this.field_b) + "\n";
-                                  var34 = var33 + "Formation Wins - " + Integer.toBinaryString(this.field_B) + "\n";
-                                  var35 = var34 + "Total Goals - " + this.field_z + "\n";
-                                  var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
-                                  var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
-                                  var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
-                                  var39 = var38 + "Nemesis - " + su.a(0, this.field_H) + "\n";
-                                  var40 = var39 + "\n";
-                                  var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
-                                  stackIn_45_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");
-
-                                  if (!this.field_I) {
-                                    stackIn_46_0 = (StringBuilder) ((Object) stackIn_45_0);
-                                    stackIn_46_1 = "NO";
-                                    break L11;
-                                  } else {
-                                    stackIn_46_0 = (StringBuilder) ((Object) stackIn_45_0);
-                                    stackIn_46_1 = "YES";
-                                    break L11;
-                                  }
-                                }
-                                L12: {
-                                  var42 = stackIn_46_1 + "\n";
-                                  stackIn_48_0 = new StringBuilder().append(var42).append("Refund Confirmed? - ");
-
-                                  if (!this.field_P) {
-                                    stackIn_49_0 = (StringBuilder) ((Object) stackIn_48_0);
-                                    stackIn_49_1 = "NO";
-                                    break L12;
-                                  } else {
-                                    stackIn_49_0 = (StringBuilder) ((Object) stackIn_48_0);
-                                    stackIn_49_1 = "YES";
-                                    break L12;
-                                  }
-                                }
-                                var43 = stackIn_49_1 + "\n";
-                                var1 = var43 + "Refund Amount - £" + Integer.toString(this.field_f) + "\n";
-                                return var1;
-                              } else {
-                                if (!this.field_J[var4]) {
-                                  var1 = var1 + "0,";
-                                  var4++;
-                                  continue L7;
-                                } else {
-                                  var1 = var1 + "1,";
-                                  var4++;
-                                  continue L7;
-                                }
-                              }
-                            }
-                          } else {
-                            incrementValue$0 = var2;
-                            var2++;
-                            var27 = var1 + "   Log [" + incrementValue$0 + "]\n";
-                            var1 = var27;
-                            var1 = var27;
-                            var1 = var27 + "   " + var4_ref_pt + "\n";
-                            var4_ref_pt = (pt) ((Object) this.field_g.c(33));
-                            continue L6;
-                          }
-                        }
-                      } else {
-                        incrementValue$1 = var2;
-                        var2++;
-                        var25 = var1 + "   Log [" + incrementValue$1 + "]\n";
-                        var27 = var25;
-                        var1 = var27;
-                        var1 = var25;
-                        var1 = var25 + "   " + var4_ref_cq + "\n";
-                        var4_ref_cq = (cq) ((Object) this.field_O.c(33));
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    L13: {
-                      if (-1 == (var2 % 8 ^ -1)) {
-                        incrementValue$2 = var3;
-                        var3++;
-                        var1 = var1 + "\nShop Transaction [" + incrementValue$2 + "] ";
-                        break L13;
-                      } else {
-                        break L13;
-                      }
-                    }
-                    var1 = var1 + this.field_N[var4];
-                    var2++;
-                    var4++;
-                    continue L4;
-                  }
-                }
-              } else {
-                var22 = var1 + "Team Member [" + var2 + "]\n";
-                var1 = var22;
-                var1 = var22;
-                var23 = var22 + this.field_i[var2] + "\n";
-                var1 = var23;
-                var1 = var23;
-                var1 = var23 + "Render Order - " + this.field_q[var2] + "\n";
-                var2++;
-                continue L3;
-              }
-            }
-          } else {
-            var1 = var1 + "Bought Stadiums [" + var2 + "] - ";
-            var3 = 0;
-            L14: while (true) {
-              if (var3 >= 4) {
-                var1 = var1 + "\n";
-                var2++;
-                continue L2;
-              } else {
-                if (!this.field_a[var2][var3]) {
-                  var1 = var1 + "0,";
-                  var3++;
-                  continue L14;
-                } else {
-                  var1 = var1 + "1,";
-                  var3++;
-                  continue L14;
-                }
-              }
+        var1Lifetime28 = var19;
+        var1Lifetime29 = var19;
+        var1Lifetime30 = var19 + "\n";
+        for (var2 = 0; var2 < 3; var2++) {
+          var1Lifetime30 = var1Lifetime30 + "Bought Stadiums [" + var2 + "] - ";
+          for (var3 = 0; var3 < 4; var3++) {
+            if (!this.field_a[var2][var3]) {
+              var1Lifetime30 = var1Lifetime30 + "0,";
+            } else {
+              var1Lifetime30 = var1Lifetime30 + "1,";
             }
           }
+          var1Lifetime30 = var1Lifetime30 + "\n";
         }
+        var20 = var1Lifetime30 + "Surface - " + this.field_K + "\n";
+        var22 = var20;
+        var1Lifetime31 = var22;
+        var1Lifetime32 = var20;
+        var21 = var20 + "Tier - " + this.field_o + "\n";
+        var22Lifetime1 = var21;
+        var1Lifetime33 = var22Lifetime1;
+        var1Lifetime34 = var21;
+        var1Lifetime35 = var21 + "\n";
+        var22Lifetime2 = var1Lifetime35;
+        var1Lifetime36 = var22Lifetime2;
+        for (var2Lifetime1 = 0; var2Lifetime1 < 9; var2Lifetime1++) {
+          var22Lifetime3 = var1Lifetime36 + "Team Member [" + var2Lifetime1 + "]\n";
+          var1Lifetime36 = var22Lifetime3;
+          var1Lifetime36 = var22Lifetime3;
+          var23 = var22Lifetime3 + this.field_i[var2Lifetime1] + "\n";
+          var1Lifetime36 = var23;
+          var1Lifetime36 = var23;
+          var1Lifetime36 = var23 + "Render Order - " + this.field_q[var2Lifetime1] + "\n";
+        }
+        var2Lifetime2 = 0;
+        var3Lifetime1 = 0;
+        for (var4 = 0; this.field_N.length > var4; var4++) {
+          if (var2Lifetime2 % 8 == 0) {
+            incrementValue$2 = var3Lifetime1;
+            var3Lifetime1++;
+            var1Lifetime36 = var1Lifetime36 + "\nShop Transaction [" + incrementValue$2 + "] ";
+          }
+          var1Lifetime36 = var1Lifetime36 + this.field_N[var4];
+          var2Lifetime2++;
+        }
+        var24 = var1Lifetime36 + "\n";
+        var25 = var24;
+        var1Lifetime37 = var25;
+        var1Lifetime38 = var24 + "Auction Log Size - " + this.field_O.a(false) + "\n";
+        var25Lifetime1 = var1Lifetime38;
+        var1Lifetime39 = var25Lifetime1;
+        var2Lifetime3 = 0;
+        var4_ref_cq = (cq) (this.field_O.g(24009));
+        while (var4_ref_cq != null) {
+          incrementValue$1 = var2Lifetime3;
+          var2Lifetime3++;
+          var25Lifetime2 = var1Lifetime39 + "   Log [" + incrementValue$1 + "]\n";
+          var27 = var25Lifetime2;
+          var1Lifetime39 = var27;
+          var1Lifetime39 = var25Lifetime2;
+          var1Lifetime39 = var25Lifetime2 + "   " + var4_ref_cq + "\n";
+          var4_ref_cq = (cq) (this.field_O.c(33));
+        }
+        var26 = var1Lifetime39 + "\n";
+        var27Lifetime1 = var26;
+        var1Lifetime40 = var27Lifetime1;
+        var1Lifetime41 = var26;
+        var2Lifetime4 = 0;
+        var1Lifetime42 = var26 + "Resolve Log Size - " + this.field_g.a(false) + "\n";
+        var27Lifetime2 = var1Lifetime42;
+        var1Lifetime43 = var27Lifetime2;
+        var4_ref_pt = (pt) (this.field_g.g(24009));
+        while (var4_ref_pt != null) {
+          incrementValue$0 = var2Lifetime4;
+          var2Lifetime4++;
+          var27Lifetime3 = var1Lifetime43 + "   Log [" + incrementValue$0 + "]\n";
+          var1Lifetime43 = var27Lifetime3;
+          var1Lifetime43 = var27Lifetime3;
+          var1Lifetime43 = var27Lifetime3 + "   " + var4_ref_pt + "\n";
+          var4_ref_pt = (pt) (this.field_g.c(33));
+        }
+        var28 = var1Lifetime43 + "\n";
+        var1Lifetime44 = var28;
+        var1Lifetime45 = var28;
+        var29 = var28 + "SFX Vol - " + this.field_F + "\n";
+        var1Lifetime46 = var29;
+        var1Lifetime47 = var29;
+        var30 = var29 + "Music Vol - " + this.field_p + "\n";
+        var1Lifetime48 = var30;
+        var1Lifetime49 = var30;
+        var1Lifetime50 = var30 + "Help Flags  - ";
+        for (var4Lifetime1 = 0; var4Lifetime1 < this.field_J.length; var4Lifetime1++) {
+          if (!this.field_J[var4Lifetime1]) {
+            var1Lifetime50 = var1Lifetime50 + "0,";
+          } else {
+            var1Lifetime50 = var1Lifetime50 + "1,";
+          }
+        }
+        var1Lifetime50 = var1Lifetime50 + "\n";
+        if (!this.field_d) {
+          var1Lifetime50 = var1Lifetime50 + "Lock Mouse - No\n";
+        } else {
+          var1Lifetime50 = var1Lifetime50 + "Lock Mouse - Yes\n";
+        }
+        if (this.field_A) {
+          var1Lifetime50 = var1Lifetime50 + "Autopass - Yes\n";
+        } else {
+          var1Lifetime50 = var1Lifetime50 + "Autopass - No\n";
+        }
+        if (!this.field_L) {
+          var1Lifetime50 = var1Lifetime50 + "GFX - Low\n";
+        } else {
+          var1Lifetime50 = var1Lifetime50 + "GFX - High\n";
+        }
+        var31 = var1Lifetime50 + "\n";
+        var32 = var31 + "Team Wins - " + this.field_C + "\n";
+        var33 = var32 + "Stadium Wins - " + Integer.toBinaryString(this.field_b) + "\n";
+        var34 = var33 + "Formation Wins - " + Integer.toBinaryString(this.field_B) + "\n";
+        var35 = var34 + "Total Goals - " + this.field_z + "\n";
+        var36 = var35 + "Total Halloween Goals - " + this.field_j + "\n";
+        var37 = var36 + "Total 8+ Tournament Wins - " + this.field_u + "\n";
+        var38 = var37 + "Total 8+ Tournament Knockouts - " + this.field_D + "\n";
+        var39 = var38 + "Nemesis - " + su.a(0, this.field_H) + "\n";
+        var40 = var39 + "\n";
+        var41 = var40 + "Misc Unlockables - " + Integer.toBinaryString(this.field_n) + "\n";
+        stackIn_49_0 = new StringBuilder().append(var41).append("Refunded Trinkets? - ");
+        if (!this.field_I) {
+          stackIn_50_1 = "NO";
+        } else {
+          stackIn_50_1 = "YES";
+        }
+        var42 = ((StringBuilder) (Object) stackIn_49_0).append(stackIn_50_1).append("\n").toString();
+        stackIn_52_0 = new StringBuilder().append(var42).append("Refund Confirmed? - ");
+        if (!this.field_P) {
+          stackIn_53_1 = "NO";
+        } else {
+          stackIn_53_1 = "YES";
+        }
+        var43 = ((StringBuilder) (Object) stackIn_52_0).append(stackIn_53_1).append("\n").toString();
+        var1Lifetime51 = var43 + "Refund Amount - £" + Integer.toString(this.field_f) + "\n";
+        return var1Lifetime51;
     }
 
     private final boolean a(int param0, int param1) {
         if (param0 != -2) {
-            this.field_t = 42;
+          this.field_t = 42;
         }
-        return -2 == (1 & this.field_n >> param1 ^ -1) ? true : false;
+        return (1 & this.field_n >> param1) == 1 ? true : false;
     }
 
     final int d(int param0) {
-        int var2;
-        int var3;
-        int var4;
-        L0: {
-          var4 = Kickabout.field_G;
-          var2 = param0;
-          if (!this.c(-3)) {
-            break L0;
-          } else {
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= this.field_i.length) {
-                break L0;
-              } else {
-                if (!this.field_i[var3].c(-2)) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return var3;
-                }
-              }
+        int var3 = 0;
+        int var4 = Kickabout.field_G;
+        int var2 = param0;
+        if (this.c(-3)) {
+          for (var3 = 0; var3 < this.field_i.length; var3++) {
+            if (this.field_i[var3].c(-2)) {
+              return var3;
             }
           }
         }
@@ -666,16 +559,15 @@ final class gr {
     final boolean a(long param0, byte param1) {
         int var5 = Kickabout.field_G;
         if (param1 != -79) {
-            this.field_P = false;
+          this.field_P = false;
         }
-        cq var4 = (cq) ((Object) this.field_O.g(24009));
+        cq var4 = (cq) (this.field_O.g(24009));
         while (var4 != null) {
-            if (-1 == (var4.field_k ^ -1) || (var4.field_k ^ -1) == -2) {
-                if (!((param0 ^ -1L) != (var4.field_i ^ -1L))) {
-                    return true;
-                }
-            }
-            var4 = (cq) ((Object) this.field_O.c(33));
+          if ((var4.field_k == 0 || var4.field_k == 1) &&
+            ~param0 == ~var4.field_i) {
+            return true;
+          }
+          var4 = (cq) (this.field_O.c(33));
         }
         return false;
     }
@@ -693,105 +585,68 @@ final class gr {
         up var13;
         Random var14;
         up var15;
-        L0: {
-          var10 = Kickabout.field_G;
-          var14 = new Random(this.field_e);
-          var3 = dq.a((byte) -60, 3, var14);
-          this.field_w = dq.a((byte) 91, 3, var14);
-          this.field_k = dq.a((byte) 97, 16, var14) + 16;
-          this.field_R = dq.a((byte) 127, 16, var14);
-          if (param0 == -27595) {
-            break L0;
-          } else {
-            this.field_E = -108;
-            break L0;
-          }
+        int var4Lifetime1;
+        var10 = Kickabout.field_G;
+        var14 = new Random(this.field_e);
+        var3 = dq.$cfr$intArgs$a$7f8aad568c81(-60, 3, var14);
+        this.field_w = dq.$cfr$intArgs$a$7f8aad568c81(91, 3, var14);
+        this.field_k = dq.$cfr$intArgs$a$7f8aad568c81(97, 16, var14) + 16;
+        this.field_R = dq.$cfr$intArgs$a$7f8aad568c81(127, 16, var14);
+        if (param0 != -27595) {
+          this.field_E = -108;
         }
-        var4 = 0;
-        L1: while (true) {
-          if (4 <= var4) {
-            var12 = 4;
-            var4 = var12;
-            L2: while (true) {
-              if (var12 >= this.field_i.length) {
-                return;
-              } else {
-                var11 = new up();
-                this.field_i[var12] = var11;
-                var12++;
-                continue L2;
-              }
-            }
-          } else {
-            L3: {
-              var13 = new up();
-              var15 = var13;
-              if (var4 == 0) {
-                var13.field_q = 0;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (1 == var4) {
-                if (0 != var3) {
-                  var15.field_q = 3;
-                  break L4;
-                } else {
-                  var13.field_q = 0;
-                  break L4;
-                }
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              if ((var4 ^ -1) != -3) {
-                break L5;
-              } else {
-                if ((var3 ^ -1) != -3) {
-                  var15.field_q = 3;
-                  break L5;
-                } else {
-                  var15.field_q = 1;
-                  break L5;
-                }
-              }
-            }
-            L6: {
-              if (var4 == 3) {
-                var15.field_q = 1;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            var15.field_e = dq.a((byte) 79, td.field_a.length, var14);
-            var15.field_l = 1 + dq.a((byte) 106, -1 + ce.field_G[var15.field_q].length, var14);
-            var15.field_n = dq.a((byte) -86, 10, var14) + 6;
-            var15.field_o = dq.a((byte) 97, 10, var14) + 6;
-            var15.field_g = 6 + dq.a((byte) -111, 10, var14);
-            var15.field_r = 0;
-            var15.field_h = new int[1];
-            var15.field_h[0] = 0;
-            var6 = dq.a((byte) 84, 5, var14);
-            var7 = dq.a((byte) -70, 3, var14);
-            var8 = dq.a((byte) -57, 3, var14);
-            var9 = var8;
-            var9 = var9 | var7 << 1693997444;
-            var9 = var9 | var6 << 1492626248;
-            var15.field_j = var9;
-            this.field_i[var4] = var15;
-            var4++;
-            continue L1;
+        for (var4 = 0; 4 > var4; var4++) {
+          var13 = new up();
+          var15 = var13;
+          if (var4 == 0) {
+            var13.field_q = 0;
           }
+          if (1 == var4) {
+            if (0 != var3) {
+              var15.field_q = 3;
+            } else {
+              var13.field_q = 0;
+            }
+          }
+          if (var4 == 2) {
+            if (var3 != 2) {
+              var15.field_q = 3;
+            } else {
+              var15.field_q = 1;
+            }
+          }
+          if (var4 == 3) {
+            var15.field_q = 1;
+          }
+          var15.field_e = dq.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
+          var15.field_l = 1 + dq.$cfr$intArgs$a$7f8aad568c81(106, -1 + ce.field_G[var15.field_q].length, var14);
+          var15.field_n = dq.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
+          var15.field_o = dq.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
+          var15.field_g = 6 + dq.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
+          var15.field_r = 0;
+          var15.field_h = new int[1];
+          var15.field_h[0] = 0;
+          var6 = dq.$cfr$intArgs$a$7f8aad568c81(84, 5, var14);
+          var7 = dq.$cfr$intArgs$a$7f8aad568c81(-70, 3, var14);
+          var8 = dq.$cfr$intArgs$a$7f8aad568c81(-57, 3, var14);
+          var9 = var8;
+          var9 = var9 | var7 << 4;
+          var9 = var9 | var6 << 8;
+          var15.field_j = var9;
+          this.field_i[var4] = var15;
+        }
+        var12 = 4;
+        var4Lifetime1 = var12;
+        while (var12 < this.field_i.length) {
+          var11 = new up();
+          this.field_i[var12] = var11;
+          var12++;
         }
     }
 
     final hn a(int param0, int param1, int param2) {
         if (param1 > -55) {
-            return (hn) null;
+          return (hn) null;
         }
         int[] var6 = new int[9];
         int[] var4 = var6;
@@ -807,134 +662,89 @@ final class gr {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 15) {
-                break L1;
-              } else {
-                field_l = (String[]) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = vl.a(10, true, true, param1);
-            break L0;
+          if (param0 != 15) {
+            field_l = (String[]) null;
           }
+          stackIn_3_0 = vl.a(10, true, true, param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("gr.J(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("gr.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final boolean d(byte param0) {
+        int var3 = 0;
         int var2;
-        int var3;
         int var4;
-        int stackIn_12_0 = 0;
-        L0: {
-          var4 = Kickabout.field_G;
-          var2 = 0;
-          if (param0 >= 3) {
-            break L0;
-          } else {
-            this.d((byte) -19);
-            break L0;
+        var4 = Kickabout.field_G;
+        var2 = 0;
+        if (param0 < 3) {
+          this.d((byte) -19);
+        }
+        for (var3 = 0; var3 < 9; var3++) {
+          if (!this.field_i[var3].c(-2) &&
+            !this.a((byte) -121, var3)) {
+            var2++;
           }
         }
-        var3 = 0;
-        L1: while (true) {
-          if (-10 >= (var3 ^ -1)) {
-            L2: {
-              if (4 > var2) {
-                stackIn_12_0 = 0;
-                break L2;
-              } else {
-                stackIn_12_0 = 1;
-                break L2;
-              }
-            }
-            return stackIn_12_0 != 0;
-          } else {
-            if (!this.field_i[var3].c(-2)) {
-              if (!this.a((byte) -121, var3)) {
-                var2++;
-                var3++;
-                continue L1;
-              } else {
-                var3++;
-                continue L1;
-              }
-            } else {
-              var3++;
-              continue L1;
-            }
-          }
-        }
+        return !(4 > var2);
     }
 
     final boolean a(int param0, long param1) {
         int var5 = Kickabout.field_G;
-        cq var4 = (cq) ((Object) this.field_O.g(24009));
+        cq var4 = (cq) (this.field_O.g(24009));
         while (var4 != null) {
-            if (-3 == (var4.field_k ^ -1) && (param1 ^ -1L) == (var4.field_i ^ -1L)) {
-                return true;
-            }
-            var4 = (cq) ((Object) this.field_O.c(param0 ^ 32));
+          if (var4.field_k == 2 &&
+            ~param1 == ~var4.field_i) {
+            return true;
+          }
+          var4 = (cq) (this.field_O.c(param0 ^ 32));
         }
         if (param0 != 1) {
-            this.field_t = -7;
-            return false;
+          this.field_t = -7;
+          return false;
         }
         return false;
     }
 
     final boolean b(int param0, long param1) {
         int var5 = Kickabout.field_G;
-        cq var4 = (cq) ((Object) this.field_O.g(param0 + -6515));
+        cq var4 = (cq) (this.field_O.g(param0 - 6515));
         while (var4 != null) {
-            if ((var4.field_k ^ -1) == -4 && var4.field_i == param1) {
-                return true;
-            }
-            var4 = (cq) ((Object) this.field_O.c(33));
+          if (var4.field_k == 3 &&
+            var4.field_i == param1) {
+            return true;
+          }
+          var4 = (cq) (this.field_O.c(33));
         }
         if (param0 != 30524) {
-            this.a(-50, 63, 62);
-            return false;
+          this.a(-50, 63, 62);
+          return false;
         }
         return false;
     }
 
     final cq b(byte param0, int param1) {
         int var4 = Kickabout.field_G;
-        cq var3_ref_cq = (cq) ((Object) this.field_O.g(24009));
+        cq var3_ref_cq = (cq) (this.field_O.g(24009));
         while (var3_ref_cq != null) {
-            if (var3_ref_cq.field_k != 3 && param1 == var3_ref_cq.field_l) {
-                return var3_ref_cq;
-            }
-            var3_ref_cq = (cq) ((Object) this.field_O.c(33));
+          if (var3_ref_cq.field_k != 3 &&
+            param1 == var3_ref_cq.field_l) {
+            return var3_ref_cq;
+          }
+          var3_ref_cq = (cq) (this.field_O.c(33));
         }
         int var3 = 120 / ((-34 - param0) / 56);
         return null;
@@ -952,10 +762,7 @@ final class gr {
         int stackIn_131_0 = 0;
         RuntimeException stackIn_175_0 = null;
         StringBuilder stackIn_175_1 = null;
-        RuntimeException stackIn_176_0 = null;
-        StringBuilder stackIn_176_1 = null;
         String stackIn_176_2 = null;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_125_0;
         boolean stackOut_34_0;
@@ -978,557 +785,350 @@ final class gr {
         int var14 = 0;
         int[] var21 = null;
         int[] var22 = null;
+        up var7_ref_upLifetime1;
+        int stackIn_40_0Lifetime1;
+        int stackIn_131_0Lifetime1;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
+        int var5Lifetime4;
+        int var5Lifetime5;
+        int var5Lifetime6;
+        int var5Lifetime7;
+        int var5Lifetime8;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime3;
+        int var6Lifetime4;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var7Lifetime3;
+        int var7Lifetime4;
+        int var10_intLifetime1;
+        int stackIn_40_0Lifetime2;
         var11 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              var4_int = param0.field_i;
-              if (param2 > var4_int) {
-                break L1;
-              } else {
-                if ((var4_int ^ -1) > -11) {
-                  L2: {
-                    if (var4_int != 0) {
-                      L3: {
-                        if (1 == var4_int) {
-                          L4: {
-                            var5 = param0.field_g[0];
-                            if (-1 < (var5 ^ -1)) {
-                              break L4;
-                            } else {
-                              if (var5 >= 9) {
-                                break L4;
-                              } else {
-                                if (this.field_i[var5].c(param2 + -2)) {
-                                  throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
-                                } else {
-                                  if (!this.a((byte) -112, var5)) {
-                                    this.field_x = this.field_x + dh.a(this.field_i[var5], true);
-                                    this.field_i[var5] = new up();
-                                    break L3;
-                                  } else {
-                                    throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          throw new IllegalStateException("User tried to sell a player not in the TEAM " + param0.toString());
-                        } else {
-                          if (var4_int != 2) {
-                            if (-4 != (var4_int ^ -1)) {
-                              if ((var4_int ^ -1) != -5) {
-                                if ((var4_int ^ -1) != -6) {
-                                  if ((var4_int ^ -1) != -7) {
-                                    if (-8 == (var4_int ^ -1)) {
-                                      L5: {
-                                        var5 = param0.field_g[0];
-                                        var6 = param0.field_g[1];
-                                        if (var5 < 0) {
-                                          break L5;
-                                        } else {
-                                          if (var5 > 2) {
-                                            break L5;
-                                          } else {
-                                            L6: {
-                                              if (-1 < (var6 ^ -1)) {
-                                                break L6;
-                                              } else {
-                                                if (-4 <= (var6 ^ -1)) {
-                                                  if (!this.field_a[var5][var6]) {
-                                                    L7: {
-                                                      if ((var6 ^ -1) >= -1) {
-                                                        break L7;
-                                                      } else {
-                                                        if (this.field_a[var5][-1 + var6]) {
-                                                          break L7;
-                                                        } else {
-                                                          throw new IllegalStateException("User tried to buy a Pitch when they don't own the previous tier " + param0.toString());
-                                                        }
-                                                      }
-                                                    }
-                                                    var7 = cm.field_M[var6];
-                                                    if (var7 <= this.field_x) {
-                                                      this.field_x = this.field_x - var7;
-                                                      this.field_a[var5][var6] = true;
-                                                      this.field_o = var6;
-                                                      this.field_K = var5;
-                                                      break L2;
-                                                    } else {
-                                                      throw new IllegalStateException("User bought a Pitch but could not afford it " + param0.toString());
-                                                    }
-                                                  } else {
-                                                    throw new IllegalStateException("User tried to buy a Pitch they already own " + param0.toString());
-                                                  }
-                                                } else {
-                                                  break L6;
-                                                }
-                                              }
-                                            }
-                                            throw new IllegalStateException("User tried to buy a Tier that doesn't exist " + param0.toString());
-                                          }
-                                        }
-                                      }
-                                      throw new IllegalStateException("User tried to buy a Surface that doesn't exist " + param0.toString());
-                                    } else {
-                                      if (8 == var4_int) {
-                                        L8: {
-                                          var5 = param0.field_g[0];
-                                          var6 = param0.field_g[1];
-                                          if (-1 < (var5 ^ -1)) {
-                                            break L8;
-                                          } else {
-                                            if (2 >= var5) {
-                                              L9: {
-                                                if (-1 < (var6 ^ -1)) {
-                                                  break L9;
-                                                } else {
-                                                  if (3 >= var6) {
-                                                    if (!this.field_a[var5][var6]) {
-                                                      throw new IllegalStateException("User tried to select a Pitch they don't own " + param0.toString());
-                                                    } else {
-                                                      this.field_K = var5;
-                                                      this.field_o = var6;
-                                                      break L2;
-                                                    }
-                                                  } else {
-                                                    break L9;
-                                                  }
-                                                }
-                                              }
-                                              throw new IllegalStateException("User tried to select a Tier that doesn't exist " + param0.toString());
-                                            } else {
-                                              break L8;
-                                            }
-                                          }
-                                        }
-                                        throw new IllegalStateException("User tried to select a Surface that doesn't exist " + param0.toString());
-                                      } else {
-                                        if ((var4_int ^ -1) == -10) {
-                                          var22 = param0.field_g;
-                                          var6_ref_boolean__ = new boolean[9];
-                                          var7 = 0;
-                                          L10: while (true) {
-                                            if (-10 >= (var7 ^ -1)) {
-                                              var7 = 0;
-                                              L11: while (true) {
-                                                L12: {
-                                                  if ((var7 ^ -1) <= -10) {
-                                                    stackIn_131_0 = 0;
-                                                    break L12;
-                                                  } else {
-                                                    stackOut_125_0 = var6_ref_boolean__[var7];
-                                                    stackIn_131_0 = stackOut_125_0 ? 1 : 0;
-                                                    stackIn_126_0 = stackOut_125_0;
-                                                    if (!stackIn_126_0) {
-                                                      throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7);
-                                                    } else {
-                                                      var7++;
-                                                      continue L11;
-                                                    }
-                                                  }
-                                                }
-                                                var7 = stackIn_131_0;
-                                                L13: while (true) {
-                                                  if (-10 >= (var7 ^ -1)) {
-                                                    break L3;
-                                                  } else {
-                                                    this.field_q[var7] = var22[var7];
-                                                    var7++;
-                                                    continue L13;
-                                                  }
-                                                }
-                                              }
-                                            } else {
-                                              var6_ref_boolean__[var22[var7]] = true;
-                                              var7++;
-                                              continue L10;
-                                            }
-                                          }
-                                        } else {
-                                          break L2;
-                                        }
-                                      }
-                                    }
-                                  } else {
-                                    L14: {
-                                      var5 = param0.field_g[0];
-                                      if (0 > var5) {
-                                        break L14;
-                                      } else {
-                                        if (var5 >= 32) {
-                                          break L14;
-                                        } else {
-                                          this.field_R = var5;
-                                          break L2;
-                                        }
-                                      }
-                                    }
-                                    throw new IllegalStateException("User tried to select a Secondary Colour that doesn't exist " + param0.toString());
-                                  }
-                                } else {
-                                  L15: {
-                                    var5 = param0.field_g[0];
-                                    if (-1 < (var5 ^ -1)) {
-                                      break L15;
-                                    } else {
-                                      if (32 > var5) {
-                                        this.field_k = var5;
-                                        break L2;
-                                      } else {
-                                        break L15;
-                                      }
-                                    }
-                                  }
-                                  throw new IllegalStateException("User tried to select a Primary Colour that doesn't exist " + param0.toString());
-                                }
-                              } else {
-                                L16: {
-                                  var5 = param0.field_g[0];
-                                  if (var5 < 0) {
-                                    break L16;
-                                  } else {
-                                    if (var5 < je.field_g.length) {
-                                      this.field_w = var5;
-                                      break L2;
-                                    } else {
-                                      break L16;
-                                    }
-                                  }
-                                }
-                                throw new IllegalStateException("User tried to select a kit that doesn't exist " + param0.toString());
-                              }
-                            } else {
-                              L17: {
-                                var5 = param0.field_g[0];
-                                var6 = param0.field_g[1];
-                                if (0 > var5) {
-                                  break L17;
-                                } else {
-                                  if ((var5 ^ -1) <= -10) {
-                                    break L17;
-                                  } else {
-                                    L18: {
-                                      if (var6 < 0) {
-                                        break L18;
-                                      } else {
-                                        if ((var6 ^ -1) >= -3) {
-                                          if (this.field_i[var5].c(-2)) {
-                                            throw new IllegalStateException("User tried to level up an empty player " + param0.toString());
-                                          } else {
-                                            if (-101 >= (this.field_i[var5].field_r ^ -1)) {
-                                              L19: {
-                                                if ((var6 ^ -1) == -1) {
-                                                  if (this.field_i[var5].field_n >= 100) {
-                                                    throw new IllegalStateException("User tried to level up a POW which is max " + param0.toString());
-                                                  } else {
-                                                    dupTemp$0 = this.field_i[var5];
-                                                    dupTemp$0.field_n = dupTemp$0.field_n + 1;
-                                                    break L19;
-                                                  }
-                                                } else {
-                                                  if ((var6 ^ -1) == -2) {
-                                                    if (this.field_i[var5].field_g >= 100) {
-                                                      throw new IllegalStateException("User tried to level up a SPD which is max " + param0.toString());
-                                                    } else {
-                                                      dupTemp$1 = this.field_i[var5];
-                                                      dupTemp$1.field_g = dupTemp$1.field_g + 1;
-                                                      break L19;
-                                                    }
-                                                  } else {
-                                                    if (-3 != (var6 ^ -1)) {
-                                                      break L19;
-                                                    } else {
-                                                      if (this.field_i[var5].field_o < 100) {
-                                                        dupTemp$2 = this.field_i[var5];
-                                                        dupTemp$2.field_o = dupTemp$2.field_o + 1;
-                                                        break L19;
-                                                      } else {
-                                                        throw new IllegalStateException("User tried to level up a TCK which is max " + param0.toString());
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                              dupTemp$3 = this.field_i[var5];
-                                              dupTemp$3.field_r = dupTemp$3.field_r - 100;
-                                              break L2;
-                                            } else {
-                                              throw new IllegalStateException("User tried to level up a player who doesn't have 100 exp " + param0.toString());
-                                            }
-                                          }
-                                        } else {
-                                          break L18;
-                                        }
-                                      }
-                                    }
-                                    throw new IllegalStateException("User tried to level up an invalid stat " + param0.toString());
-                                  }
-                                }
-                              }
-                              throw new IllegalStateException("User tried to level up a player from an invalid position " + param0.toString());
-                            }
-                          } else {
-                            L20: {
-                              var5 = param0.field_g[0];
-                              var6 = param0.field_g[1];
-                              var7 = param0.field_g[2];
-                              var21 = this.field_i[var5].field_h;
-                              if ((var5 ^ -1) > -1) {
-                                break L20;
-                              } else {
-                                if (-10 < (var5 ^ -1)) {
-                                  L21: {
-                                    if (-1 < (var6 ^ -1)) {
-                                      break L21;
-                                    } else {
-                                      if ((var6 ^ -1) > (var21.length ^ -1)) {
-                                        L22: {
-                                          if (var7 < 0) {
-                                            break L22;
-                                          } else {
-                                            if (111 > var7) {
-                                              L23: {
-                                                var9 = pa.field_g[var7];
-                                                var10 = pa.field_g[var21[var6]];
-                                                if ((var9.field_h ^ -1) != -74) {
-                                                  break L23;
-                                                } else {
-                                                  if (!il.b((byte) 115)) {
-                                                    throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
-                                                  } else {
-                                                    break L23;
-                                                  }
-                                                }
-                                              }
-                                              if (var9.field_k == var10.field_k) {
-                                                L24: {
-                                                  if (72 != var9.field_h) {
-                                                    break L24;
-                                                  } else {
-                                                    if (this.a(-2, 0)) {
-                                                      break L24;
-                                                    } else {
-                                                      throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
-                                                    }
-                                                  }
-                                                }
-                                                if ((this.field_x ^ -1) <= (var9.field_e ^ -1)) {
-                                                  this.field_x = this.field_x - var9.field_e;
-                                                  var21[var6] = var7;
-                                                  break L2;
-                                                } else {
-                                                  throw new IllegalStateException("User attached a trinket but could not afford it " + param0.toString());
-                                                }
-                                              } else {
-                                                throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
-                                              }
-                                            } else {
-                                              break L22;
-                                            }
-                                          }
-                                        }
-                                        throw new IllegalStateException("User tried to attach an unknown trinket " + param0.toString());
-                                      } else {
-                                        break L21;
-                                      }
-                                    }
-                                  }
-                                  throw new IllegalStateException("User tried to attach a trinket to a slot in invalid position " + param0.toString());
-                                } else {
-                                  break L20;
-                                }
-                              }
-                            }
-                            throw new IllegalStateException("User tried to attach a trinket to a player from an invalid position " + param0.toString());
-                          }
-                        }
+          var4_int = param0.field_i;
+          if (param2 <= var4_int &&
+            var4_int < 10) {
+            if (var4_int == 0) {
+              var5 = -1 + param0.field_g[0];
+              var6 = param0.field_g[1];
+              if (var6 >= 0 &&
+                var6 < 8) {
+                if (var5 >= -1 &&
+                  var5 < 7) {
+                  boolean decompiledFrameRemainder0 = true;
+                  boolean decompiledFrameCompleted0 = true;
+                  if (-1 != var5) {
+                    var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var7_ref_up = var13;
+                    var8 = 0;
+                    if (-1 != var5) {
+                      var8 = gp.a(var7_ref_up, -576054046);
+                    }
+                    if (var8 > this.field_x) {
+                      throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
+                    }
+                    var9_int = 0;
+                    var14 = 0;
+                    var10_int = var14;
+                    boolean decompiledNaturalLoopExit0 = false;
+                    while (!(decompiledNaturalLoopExit0 = (9 <= var14))) {
+                      stackOut_34_0 = this.field_i[this.field_q[var14]].c(param2 ^ -2);
+                      stackIn_40_0 = stackOut_34_0 ? 1 : 0;
+                      stackIn_35_0 = stackOut_34_0;
+                      if (!stackIn_35_0) {
+                        var14++;
+                        continue;
                       }
-                      break L2;
-                    } else {
-                      L25: {
-                        var5 = -1 + param0.field_g[0];
-                        var6 = param0.field_g[1];
-                        if (var6 < 0) {
-                          break L25;
-                        } else {
-                          if (var6 >= 8) {
-                            break L25;
-                          } else {
-                            L26: {
-                              if (var5 < -1) {
-                                break L26;
-                              } else {
-                                if (var5 >= 7) {
-                                  break L26;
-                                } else {
-                                  L27: {
-                                    L28: {
-                                      if (-1 != var5) {
-                                        L29: {
-                                          var13 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                          var7_ref_up = var13;
-                                          var8 = 0;
-                                          if (-1 == var5) {
-                                            break L29;
-                                          } else {
-                                            var8 = gp.a(var7_ref_up, -576054046);
-                                            break L29;
-                                          }
-                                        }
-                                        if ((var8 ^ -1) >= (this.field_x ^ -1)) {
-                                          var9_int = 0;
-                                          var14 = 0;
-                                          var10_int = var14;
-                                          L30: while (true) {
-                                            if (9 <= var14) {
-                                              break L28;
-                                            } else {
-                                              stackOut_34_0 = this.field_i[this.field_q[var14]].c(param2 ^ -2);
-                                              stackIn_40_0 = stackOut_34_0 ? 1 : 0;
-                                              stackIn_35_0 = stackOut_34_0;
-                                              if (stackIn_35_0) {
-                                                this.field_i[this.field_q[var14]].a((byte) -70, var13);
-                                                this.field_i[this.field_q[var14]].field_c = false;
-                                                var9_int = 1;
-                                                break L28;
-                                              } else {
-                                                var14++;
-                                                continue L30;
-                                              }
-                                            }
-                                          }
-                                        } else {
-                                          throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
-                                        }
-                                      } else {
-                                        if (!param1) {
-                                          throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
-                                        } else {
-                                          L31: {
-                                            var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
-                                            var7_ref_up = var12;
-                                            var8 = 0;
-                                            if (-1 == var5) {
-                                              break L31;
-                                            } else {
-                                              var8 = gp.a(var7_ref_up, -576054046);
-                                              break L31;
-                                            }
-                                          }
-                                          if ((var8 ^ -1) >= (this.field_x ^ -1)) {
-                                            var9_int = 0;
-                                            var10_int = 0;
-                                            L32: while (true) {
-                                              if (9 <= var10_int) {
-                                                break L28;
-                                              } else {
-                                                stackOut_22_0 = this.field_i[this.field_q[var10_int]].c(param2 ^ -2);
-                                                stackIn_40_0 = stackOut_22_0 ? 1 : 0;
-                                                stackIn_23_0 = stackOut_22_0;
-                                                if (stackIn_23_0) {
-                                                  this.field_i[this.field_q[var10_int]].a((byte) -70, var12);
-                                                  this.field_i[this.field_q[var10_int]].field_c = false;
-                                                  var9_int = 1;
-                                                  break L28;
-                                                } else {
-                                                  var10_int++;
-                                                  continue L32;
-                                                }
-                                              }
-                                            }
-                                          } else {
-                                            throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
-                                          }
-                                        }
-                                      }
-                                    }
-                                    stackIn_40_0 = var9_int;
-                                    break L27;
-                                  }
-                                  if (stackIn_40_0 != 0) {
-                                    this.field_x = this.field_x - var8;
-                                    this.field_N[8 * var5 + 8 + var6] = this.field_N[8 * var5 + 8 + var6] + 1;
-                                    break L2;
-                                  } else {
-                                    throw new IllegalStateException("User tried to buy a player but does not have an empty slot" + param0.toString());
-                                  }
-                                }
-                              }
-                            }
-                            throw new IllegalStateException("User tried to buy a league player from a nonexistant league " + param0.toString());
-                          }
-                        }
-                      }
-                      throw new IllegalStateException("User tried to buy a player not in the shop seg size " + param0.toString());
+                      break;
+                    }
+                    if (decompiledNaturalLoopExit0) {
+                      decompiledFrameCompleted0 = false;
+                    }
+                    if (decompiledFrameCompleted0) {
+                      this.field_i[this.field_q[var14]].a((byte) -70, var13);
+                      this.field_i[this.field_q[var14]].field_c = false;
+                      var9_int = 1;
+                      decompiledFrameRemainder0 = false;
                     }
                   }
-                  break L0;
-                } else {
-                  break L1;
+                  if ((decompiledFrameRemainder0) &&
+                    (decompiledFrameCompleted0)) {
+                    if (!param1) {
+                      throw new IllegalStateException("User tried to buy a MOD player when they are not a MOD" + param0.toString());
+                    }
+                    var12 = ha.a(this.field_e, var6, this.field_N[var6 + (8 + var5 * 8)], -50, var5);
+                    var7_ref_upLifetime1 = var12;
+                    var8 = 0;
+                    if (-1 != var5) {
+                      var8 = gp.a(var7_ref_upLifetime1, -576054046);
+                    }
+                    if (var8 > this.field_x) {
+                      throw new IllegalStateException("User bought a player but did not have enough money" + param0.toString());
+                    }
+                    var9_int = 0;
+                    var10_intLifetime1 = 0;
+                    while (9 > var10_intLifetime1) {
+                      stackOut_22_0 = this.field_i[this.field_q[var10_intLifetime1]].c(param2 ^ -2);
+                      stackIn_40_0Lifetime2 = stackOut_22_0 ? 1 : 0;
+                      stackIn_23_0 = stackOut_22_0;
+                      if (!stackIn_23_0) {
+                        var10_intLifetime1++;
+                        continue;
+                      }
+                      this.field_i[this.field_q[var10_intLifetime1]].a((byte) -70, var12);
+                      this.field_i[this.field_q[var10_intLifetime1]].field_c = false;
+                      var9_int = 1;
+                      break;
+                    }
+                  }
+                  stackIn_40_0Lifetime1 = var9_int;
+                  if (stackIn_40_0Lifetime1 == 0) {
+                    throw new IllegalStateException("User tried to buy a player but does not have an empty slot" + param0.toString());
+                  }
+                  this.field_x = this.field_x - var8;
+                  this.field_N[8 * var5 + 8 + var6] = this.field_N[8 * var5 + 8 + var6] + 1;
+                  return;
                 }
+                throw new IllegalStateException("User tried to buy a league player from a nonexistant league " + param0.toString());
               }
+              throw new IllegalStateException("User tried to buy a player not in the shop seg size " + param0.toString());
             }
-            throw new IllegalStateException("Unknown Delta Type " + param0.toString());
+            if (1 == var4_int) {
+              var5Lifetime1 = param0.field_g[0];
+              if (var5Lifetime1 >= 0 &&
+                var5Lifetime1 < 9) {
+                if (this.field_i[var5Lifetime1].c(param2 - 2)) {
+                  throw new IllegalStateException("User tried to sell an empty player " + param0.toString());
+                }
+                if (this.a((byte) -112, var5Lifetime1)) {
+                  throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
+                }
+                this.field_x = this.field_x + dh.a(this.field_i[var5Lifetime1], true);
+                this.field_i[var5Lifetime1] = new up();
+                return;
+              }
+              throw new IllegalStateException("User tried to sell a player not in the TEAM " + param0.toString());
+            }
+            if (var4_int == 2) {
+              var5Lifetime2 = param0.field_g[0];
+              var6Lifetime1 = param0.field_g[1];
+              var7 = param0.field_g[2];
+              var21 = this.field_i[var5Lifetime2].field_h;
+              if (var5Lifetime2 >= 0 &&
+                var5Lifetime2 < 9) {
+                if (var6Lifetime1 >= 0 &&
+                  var6Lifetime1 < var21.length) {
+                  if (var7 >= 0 &&
+                    111 > var7) {
+                    var9 = pa.field_g[var7];
+                    var10 = pa.field_g[var21[var6Lifetime1]];
+                    if (var9.field_h == 73 &&
+                      !il.b((byte) 115)) {
+                      throw new IllegalStateException("User tried to use the Halloween Costume trinket when we haven't released it yet " + param0.toString());
+                    }
+                    if (var9.field_k != var10.field_k) {
+                      throw new IllegalStateException("User tried to attach a trinket that is the wrong shape for the slot " + param0.toString());
+                    }
+                    if (72 == var9.field_h &&
+                      !this.a(-2, 0)) {
+                      throw new IllegalStateException("User tried to attach Pumpkins trinket but they haven't unlocked the Halloween Achievement " + param0.toString());
+                    }
+                    if (this.field_x < var9.field_e) {
+                      throw new IllegalStateException("User attached a trinket but could not afford it " + param0.toString());
+                    }
+                    this.field_x = this.field_x - var9.field_e;
+                    var21[var6Lifetime1] = var7;
+                    return;
+                  }
+                  throw new IllegalStateException("User tried to attach an unknown trinket " + param0.toString());
+                }
+                throw new IllegalStateException("User tried to attach a trinket to a slot in invalid position " + param0.toString());
+              }
+              throw new IllegalStateException("User tried to attach a trinket to a player from an invalid position " + param0.toString());
+            }
+            if (var4_int == 3) {
+              var5Lifetime3 = param0.field_g[0];
+              var6Lifetime2 = param0.field_g[1];
+              if (0 <= var5Lifetime3 &&
+                var5Lifetime3 < 9) {
+                if (var6Lifetime2 >= 0 &&
+                  var6Lifetime2 <= 2) {
+                  if (this.field_i[var5Lifetime3].c(-2)) {
+                    throw new IllegalStateException("User tried to level up an empty player " + param0.toString());
+                  }
+                  if (this.field_i[var5Lifetime3].field_r < 100) {
+                    throw new IllegalStateException("User tried to level up a player who doesn't have 100 exp " + param0.toString());
+                  }
+                  if (var6Lifetime2 == 0) {
+                    if (this.field_i[var5Lifetime3].field_n >= 100) {
+                      throw new IllegalStateException("User tried to level up a POW which is max " + param0.toString());
+                    }
+                    dupTemp$0 = this.field_i[var5Lifetime3];
+                    dupTemp$0.field_n = dupTemp$0.field_n + 1;
+                  } else {
+                    if (var6Lifetime2 == 1) {
+                      if (this.field_i[var5Lifetime3].field_g >= 100) {
+                        throw new IllegalStateException("User tried to level up a SPD which is max " + param0.toString());
+                      }
+                      dupTemp$1 = this.field_i[var5Lifetime3];
+                      dupTemp$1.field_g = dupTemp$1.field_g + 1;
+                    } else {
+                      if (var6Lifetime2 == 2) {
+                        if (this.field_i[var5Lifetime3].field_o >= 100) {
+                          throw new IllegalStateException("User tried to level up a TCK which is max " + param0.toString());
+                        }
+                        dupTemp$2 = this.field_i[var5Lifetime3];
+                        dupTemp$2.field_o = dupTemp$2.field_o + 1;
+                      }
+                    }
+                  }
+                  dupTemp$3 = this.field_i[var5Lifetime3];
+                  dupTemp$3.field_r = dupTemp$3.field_r - 100;
+                  return;
+                }
+                throw new IllegalStateException("User tried to level up an invalid stat " + param0.toString());
+              }
+              throw new IllegalStateException("User tried to level up a player from an invalid position " + param0.toString());
+            }
+            if (var4_int == 4) {
+              var5Lifetime4 = param0.field_g[0];
+              if (var5Lifetime4 >= 0 &&
+                var5Lifetime4 < je.field_g.length) {
+                this.field_w = var5Lifetime4;
+                return;
+              }
+              throw new IllegalStateException("User tried to select a kit that doesn't exist " + param0.toString());
+            }
+            if (var4_int == 5) {
+              var5Lifetime5 = param0.field_g[0];
+              if (var5Lifetime5 >= 0 &&
+                32 > var5Lifetime5) {
+                this.field_k = var5Lifetime5;
+                return;
+              }
+              throw new IllegalStateException("User tried to select a Primary Colour that doesn't exist " + param0.toString());
+            }
+            if (var4_int == 6) {
+              var5Lifetime6 = param0.field_g[0];
+              if (0 <= var5Lifetime6 &&
+                var5Lifetime6 < 32) {
+                this.field_R = var5Lifetime6;
+                return;
+              }
+              throw new IllegalStateException("User tried to select a Secondary Colour that doesn't exist " + param0.toString());
+            }
+            if (var4_int == 7) {
+              var5Lifetime7 = param0.field_g[0];
+              var6Lifetime3 = param0.field_g[1];
+              if (var5Lifetime7 >= 0 &&
+                var5Lifetime7 <= 2) {
+                if (var6Lifetime3 >= 0 &&
+                  var6Lifetime3 <= 3) {
+                  if (this.field_a[var5Lifetime7][var6Lifetime3]) {
+                    throw new IllegalStateException("User tried to buy a Pitch they already own " + param0.toString());
+                  }
+                  if (var6Lifetime3 > 0 &&
+                    !this.field_a[var5Lifetime7][-1 + var6Lifetime3]) {
+                    throw new IllegalStateException("User tried to buy a Pitch when they don't own the previous tier " + param0.toString());
+                  }
+                  var7Lifetime1 = cm.field_M[var6Lifetime3];
+                  if (var7Lifetime1 > this.field_x) {
+                    throw new IllegalStateException("User bought a Pitch but could not afford it " + param0.toString());
+                  }
+                  this.field_x = this.field_x - var7Lifetime1;
+                  this.field_a[var5Lifetime7][var6Lifetime3] = true;
+                  this.field_o = var6Lifetime3;
+                  this.field_K = var5Lifetime7;
+                  return;
+                }
+                throw new IllegalStateException("User tried to buy a Tier that doesn't exist " + param0.toString());
+              }
+              throw new IllegalStateException("User tried to buy a Surface that doesn't exist " + param0.toString());
+            }
+            if (8 == var4_int) {
+              var5Lifetime8 = param0.field_g[0];
+              var6Lifetime4 = param0.field_g[1];
+              if (var5Lifetime8 >= 0 &&
+                2 >= var5Lifetime8) {
+                if (var6Lifetime4 >= 0 &&
+                  3 >= var6Lifetime4) {
+                  if (!this.field_a[var5Lifetime8][var6Lifetime4]) {
+                    throw new IllegalStateException("User tried to select a Pitch they don't own " + param0.toString());
+                  }
+                  this.field_K = var5Lifetime8;
+                  this.field_o = var6Lifetime4;
+                  return;
+                }
+                throw new IllegalStateException("User tried to select a Tier that doesn't exist " + param0.toString());
+              }
+              throw new IllegalStateException("User tried to select a Surface that doesn't exist " + param0.toString());
+            }
+            if (var4_int != 9) {
+              return;
+            }
+            var22 = param0.field_g;
+            var6_ref_boolean__ = new boolean[9];
+            for (var7Lifetime2 = 0; var7Lifetime2 < 9; var7Lifetime2++) {
+              var6_ref_boolean__[var22[var7Lifetime2]] = true;
+            }
+            var7Lifetime3 = 0;
+            while (true) {
+              if (var7Lifetime3 < 9) {
+                stackOut_125_0 = var6_ref_boolean__[var7Lifetime3];
+                stackIn_131_0 = stackOut_125_0 ? 1 : 0;
+                stackIn_126_0 = stackOut_125_0;
+                if (!stackIn_126_0) {
+                  throw new IllegalStateException("Invalid ordering. No slot allocated for player " + var7Lifetime3);
+                }
+                var7Lifetime3++;
+                continue;
+              }
+              break;
+            }
+            stackIn_131_0Lifetime1 = 0;
+            for (var7Lifetime4 = stackIn_131_0Lifetime1; var7Lifetime4 < 9; var7Lifetime4++) {
+              this.field_q[var7Lifetime4] = var22[var7Lifetime4];
+            }
+            return;
           }
+          throw new IllegalStateException("Unknown Delta Type " + param0.toString());
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L33: {
-            var4 = decompiledCaughtException;
-            stackIn_175_0 = (RuntimeException) (var4);
-
-            stackIn_175_1 = new StringBuilder().append("gr.P(");
-
-            if (param0 == null) {
-              stackIn_176_0 = (RuntimeException) ((Object) stackIn_175_0);
-              stackIn_176_1 = (StringBuilder) ((Object) stackIn_175_1);
-              stackIn_176_2 = "null";
-              break L33;
-            } else {
-              stackIn_176_0 = (RuntimeException) ((Object) stackIn_175_0);
-              stackIn_176_1 = (StringBuilder) ((Object) stackIn_175_1);
-              stackIn_176_2 = "{...}";
-              break L33;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_175_0 = var4;
+          stackIn_175_1 = new StringBuilder().append("gr.P(");
+          if (param0 == null) {
+            stackIn_176_2 = "null";
+          } else {
+            stackIn_176_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_176_0), stackIn_176_2 + ',' + param1 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_175_0), ((StringBuilder) (Object) stackIn_175_1).append(stackIn_176_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final boolean c(byte param0) {
-        int var2;
-        int var3;
-        var3 = Kickabout.field_G;
-        var2 = 0;
-        if (param0 < -55) {
-          L0: while (true) {
-            if (this.field_i.length <= var2) {
-              return false;
-            } else {
-              if (!this.field_i[var2].c(-2)) {
-                var2++;
-                continue L0;
-              } else {
-                return true;
-              }
-            }
-          }
-        } else {
+        int var3 = Kickabout.field_G;
+        int var2 = 0;
+        if (param0 >= -55) {
           return true;
         }
+        while (this.field_i.length > var2) {
+          if (this.field_i[var2].c(-2)) {
+            return true;
+          }
+          var2++;
+        }
+        return false;
     }
 
     final void a(int param0, iw param1, int param2) {
-        Object stackIn_56_0 = null;
-        Object stackIn_57_0 = null;
-        int stackIn_57_1 = 0;
-        Object stackIn_62_0 = null;
-        Object stackIn_63_0 = null;
-        int stackIn_63_1 = 0;
+        boolean stackIn_57_1 = false;
+        boolean stackIn_63_1 = false;
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
-        RuntimeException stackIn_68_0 = null;
-        StringBuilder stackIn_68_1 = null;
         String stackIn_68_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -1546,280 +1146,159 @@ final class gr {
         int var14 = 0;
         pt var14_ref_pt = null;
         int var15 = 0;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var13Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              this.field_e = param1.i((byte) -124);
-              var4_int = param1.h((byte) -105);
-              if (1 == (var4_int & 2) >> -1149923743) {
-                this.field_m = true;
-                break L1;
-              } else {
-                this.field_m = false;
-                break L1;
-              }
+          this.field_e = param1.i((byte) -124);
+          var4_int = param1.h((byte) -105);
+          if (1 == (var4_int & 2) >> 1) {
+            this.field_m = true;
+          } else {
+            this.field_m = false;
+          }
+          var5 = -89 % ((7 - param0) / 52);
+          if (1 != (1 & var4_int)) {
+            this.field_M = false;
+          } else {
+            this.field_M = true;
+          }
+          this.field_h = param1.k(4);
+          this.field_x = param1.k(4);
+          this.field_F = param1.h((byte) -108);
+          this.field_p = param1.h((byte) -114);
+          var6 = param1.k(4);
+          for (var7 = 0; var7 < this.field_J.length; var7++) {
+            if ((1 & var6 >> var7) != 1) {
+              this.field_J[var7] = false;
+            } else {
+              this.field_J[var7] = true;
             }
-            L2: {
-              var5 = -89 % ((7 - param0) / 52);
-              if (1 != (1 & var4_int)) {
-                this.field_M = false;
-                break L2;
+          }
+          var7Lifetime1 = param1.h((byte) -113);
+          if ((3 & var7Lifetime1) >> 1 == 1) {
+            this.field_L = true;
+          } else {
+            this.field_L = false;
+          }
+          if (1 != (5 & var7Lifetime1) >> 2) {
+            this.field_d = false;
+          } else {
+            this.field_d = true;
+          }
+          if ((var7Lifetime1 & 1) != 1) {
+            this.field_A = false;
+          } else {
+            this.field_A = true;
+          }
+          this.field_r = param1.i(-127);
+          var8 = 0;
+          this.field_E = param1.i(-115);
+          this.field_t = param1.h((byte) -116);
+          this.field_s = param1.h((byte) -119);
+          this.field_G = param1.a((byte) 81);
+          param1.k(4);
+          this.field_w = param1.h((byte) -119);
+          this.field_k = param1.h((byte) -122);
+          this.field_R = param1.h((byte) -116);
+          var8Lifetime1 = param1.a((byte) 81);
+          var9 = 0;
+          for (var10 = 0; var10 < 3; var10++) {
+            for (var11 = 0; var11 < 4; var11++) {
+              var12 = 1 & var8Lifetime1 >> var9;
+              var9++;
+              if (var12 != 1) {
+                this.field_a[var10][var11] = false;
               } else {
-                this.field_M = true;
-                break L2;
-              }
-            }
-            this.field_h = param1.k(4);
-            this.field_x = param1.k(4);
-            this.field_F = param1.h((byte) -108);
-            this.field_p = param1.h((byte) -114);
-            var6 = param1.k(4);
-            var7 = 0;
-            L3: while (true) {
-              if (var7 >= this.field_J.length) {
-                L4: {
-                  var7 = param1.h((byte) -113);
-                  if (-2 == ((3 & var7) >> 1629164609 ^ -1)) {
-                    this.field_L = true;
-                    break L4;
-                  } else {
-                    this.field_L = false;
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (1 != (5 & var7) >> 1646339042) {
-                    this.field_d = false;
-                    break L5;
-                  } else {
-                    this.field_d = true;
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (-2 != (var7 & 1 ^ -1)) {
-                    this.field_A = false;
-                    break L6;
-                  } else {
-                    this.field_A = true;
-                    break L6;
-                  }
-                }
-                this.field_r = param1.i(-127);
-                var8 = 0;
-                this.field_E = param1.i(-115);
-                this.field_t = param1.h((byte) -116);
-                this.field_s = param1.h((byte) -119);
-                this.field_G = param1.a((byte) 81);
-                param1.k(4);
-                this.field_w = param1.h((byte) -119);
-                this.field_k = param1.h((byte) -122);
-                this.field_R = param1.h((byte) -116);
-                var8 = param1.a((byte) 81);
-                var9 = 0;
-                var10 = 0;
-                L7: while (true) {
-                  if (-4 >= (var10 ^ -1)) {
-                    var8 = param1.h((byte) -105);
-                    this.field_K = var8 & 15;
-                    this.field_o = var8 >> 275999044 & 15;
-                    var10 = param1.a((byte) 81);
-                    var11 = 0;
-                    L8: while (true) {
-                      if (var11 >= 9) {
-                        var11 = 0;
-                        L9: while (true) {
-                          if (-10 >= (var11 ^ -1)) {
-                            this.field_O = new tf();
-                            var11 = param1.h((byte) -114);
-                            var12 = 0;
-                            L10: while (true) {
-                              if (var12 >= var11) {
-                                this.field_g = new tf();
-                                var12 = param1.h((byte) -108);
-                                var13 = 0;
-                                L11: while (true) {
-                                  if (var12 <= var13) {
-                                    var13 = 0;
-                                    L12: while (true) {
-                                      if (40 <= var13) {
-                                        L13: {
-                                          this.field_C = param1.a((byte) 81);
-                                          this.field_b = param1.a((byte) 81);
-                                          this.field_B = param1.a((byte) 81);
-                                          this.field_z = param1.a((byte) 81);
-                                          this.field_H = -1L + param1.i((byte) -124);
-                                          this.field_j = param1.h((byte) -128);
-                                          this.field_u = param1.h((byte) -125);
-                                          this.field_D = param1.h((byte) -122);
-                                          param1.h((byte) -106);
-                                          param1.k(4);
-                                          param1.k(4);
-                                          this.field_n = param1.k(4);
-                                          if (param2 > 1) {
-                                            param1.a((byte) 81);
-                                            param1.a((byte) 81);
-                                            param1.a((byte) 81);
-                                            param1.a((byte) 81);
-                                            param1.a((byte) 81);
-                                            param1.a((byte) 81);
-                                            break L13;
-                                          } else {
-                                            break L13;
-                                          }
-                                        }
-                                        L14: {
-                                          if (2 < param2) {
-                                            L15: {
-                                              stackIn_56_0 = this;
-
-                                              if (param1.h((byte) -118) != 1) {
-                                                stackIn_57_0 = this;
-                                                stackIn_57_1 = 0;
-                                                break L15;
-                                              } else {
-                                                stackIn_57_0 = this;
-                                                stackIn_57_1 = 1;
-                                                break L15;
-                                              }
-                                            }
-                                            ((gr) (this)).field_I = stackIn_57_1 != 0;
-                                            break L14;
-                                          } else {
-                                            break L14;
-                                          }
-                                        }
-                                        L16: {
-                                          if ((param2 ^ -1) < -4) {
-                                            L17: {
-                                              stackIn_62_0 = this;
-
-                                              if (param1.h((byte) -124) != 1) {
-                                                stackIn_63_0 = this;
-                                                stackIn_63_1 = 0;
-                                                break L17;
-                                              } else {
-                                                stackIn_63_0 = this;
-                                                stackIn_63_1 = 1;
-                                                break L17;
-                                              }
-                                            }
-                                            ((gr) (this)).field_P = stackIn_63_1 != 0;
-                                            this.field_f = param1.k(4);
-                                            break L16;
-                                          } else {
-                                            break L16;
-                                          }
-                                        }
-                                        break L0;
-                                      } else {
-                                        var14 = param1.h((byte) -109);
-                                        this.field_N[2 * var13] = qj.b(15, var14);
-                                        this.field_N[1 + var13 * 2] = qj.b(241, var14) >> 209210116;
-                                        var13++;
-                                        continue L12;
-                                      }
-                                    }
-                                  } else {
-                                    var14_ref_pt = new pt(param1);
-                                    this.field_g.a(var14_ref_pt, 3);
-                                    var13++;
-                                    continue L11;
-                                  }
-                                }
-                              } else {
-                                var13_ref_cq = new cq(param1);
-                                this.field_O.a(var13_ref_cq, 3);
-                                var12++;
-                                continue L10;
-                              }
-                            }
-                          } else {
-                            this.field_q[var11] = param1.h((byte) -109);
-                            var11++;
-                            continue L9;
-                          }
-                        }
-                      } else {
-                        L18: {
-                          this.field_i[var11] = new up();
-                          if ((1 & var10 >> var11) == 1) {
-                            this.field_i[var11].a(33, param1);
-                            break L18;
-                          } else {
-                            break L18;
-                          }
-                        }
-                        var11++;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    var11 = 0;
-                    L19: while (true) {
-                      if (var11 >= 4) {
-                        var10++;
-                        continue L7;
-                      } else {
-                        L20: {
-                          var12 = 1 & var8 >> var9;
-                          var9++;
-                          if (-2 != (var12 ^ -1)) {
-                            this.field_a[var10][var11] = false;
-                            break L20;
-                          } else {
-                            this.field_a[var10][var11] = true;
-                            break L20;
-                          }
-                        }
-                        var11++;
-                        continue L19;
-                      }
-                    }
-                  }
-                }
-              } else {
-                L21: {
-                  if ((1 & var6 >> var7 ^ -1) != -2) {
-                    this.field_J[var7] = false;
-                    break L21;
-                  } else {
-                    this.field_J[var7] = true;
-                    break L21;
-                  }
-                }
-                var7++;
-                continue L3;
+                this.field_a[var10][var11] = true;
               }
             }
           }
+          var8Lifetime2 = param1.h((byte) -105);
+          this.field_K = var8Lifetime2 & 15;
+          this.field_o = var8Lifetime2 >> 4 & 15;
+          var10Lifetime1 = param1.a((byte) 81);
+          for (var11Lifetime1 = 0; var11Lifetime1 < 9; var11Lifetime1++) {
+            this.field_i[var11Lifetime1] = new up();
+            if ((1 & var10Lifetime1 >> var11Lifetime1) == 1) {
+              this.field_i[var11Lifetime1].a(33, param1);
+            }
+          }
+          for (var11Lifetime2 = 0; var11Lifetime2 < 9; var11Lifetime2++) {
+            this.field_q[var11Lifetime2] = param1.h((byte) -109);
+          }
+          this.field_O = new tf();
+          var11Lifetime3 = param1.h((byte) -114);
+          for (var12Lifetime1 = 0; var12Lifetime1 < var11Lifetime3; var12Lifetime1++) {
+            var13_ref_cq = new cq(param1);
+            this.field_O.a(var13_ref_cq, 3);
+          }
+          this.field_g = new tf();
+          var12Lifetime2 = param1.h((byte) -108);
+          for (var13 = 0; var12Lifetime2 > var13; var13++) {
+            var14_ref_pt = new pt(param1);
+            this.field_g.a(var14_ref_pt, 3);
+          }
+          for (var13Lifetime1 = 0; 40 > var13Lifetime1; var13Lifetime1++) {
+            var14 = param1.h((byte) -109);
+            this.field_N[2 * var13Lifetime1] = qj.b(15, var14);
+            this.field_N[1 + var13Lifetime1 * 2] = qj.b(241, var14) >> 4;
+          }
+          this.field_C = param1.a((byte) 81);
+          this.field_b = param1.a((byte) 81);
+          this.field_B = param1.a((byte) 81);
+          this.field_z = param1.a((byte) 81);
+          this.field_H = -1L + param1.i((byte) -124);
+          this.field_j = param1.h((byte) -128);
+          this.field_u = param1.h((byte) -125);
+          this.field_D = param1.h((byte) -122);
+          param1.h((byte) -106);
+          param1.k(4);
+          param1.k(4);
+          this.field_n = param1.k(4);
+          if (param2 > 1) {
+            param1.a((byte) 81);
+            param1.a((byte) 81);
+            param1.a((byte) 81);
+            param1.a((byte) 81);
+            param1.a((byte) 81);
+            param1.a((byte) 81);
+          }
+          if (2 < param2) {
+            stackIn_57_1 = (param1.h((byte) -118) == 1);
+            this.field_I = stackIn_57_1;
+          }
+          if (param2 > 3) {
+            stackIn_63_1 = (param1.h((byte) -124) == 1);
+            this.field_P = stackIn_63_1;
+            this.field_f = param1.k(4);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L22: {
-            var4 = decompiledCaughtException;
-            stackIn_67_0 = (RuntimeException) (var4);
-
-            stackIn_67_1 = new StringBuilder().append("gr.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackIn_68_2 = "null";
-              break L22;
-            } else {
-              stackIn_68_0 = (RuntimeException) ((Object) stackIn_67_0);
-              stackIn_68_1 = (StringBuilder) ((Object) stackIn_67_1);
-              stackIn_68_2 = "{...}";
-              break L22;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_67_0 = var4;
+          stackIn_67_1 = new StringBuilder().append("gr.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_68_2 = "null";
+          } else {
+            stackIn_68_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_68_0), stackIn_68_2 + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public gr() {
         int var1 = 0;
+        int var1Lifetime1;
         this.field_I = false;
         this.field_P = false;
         this.field_h = -1;
@@ -1834,8 +1313,8 @@ final class gr {
         this.field_r = 0;
         this.field_M = false;
         this.field_w = 0;
-        for (var1 = 0; -4 < (var1 ^ -1); var1++) {
-            this.field_a[var1][0] = true;
+        for (var1 = 0; var1 < 3; var1++) {
+          this.field_a[var1][0] = true;
         }
         this.field_i = new up[9];
         this.field_o = 0;
@@ -1844,10 +1323,10 @@ final class gr {
         this.field_g = new tf();
         this.field_q = new int[9];
         int var2 = 0;
-        var1 = var2;
-        while (-10 < (var2 ^ -1)) {
-            this.field_q[var2] = var2;
-            var2++;
+        var1Lifetime1 = var2;
+        while (var2 < 9) {
+          this.field_q[var2] = var2;
+          var2++;
         }
         this.field_u = 0;
         this.field_H = -1L;

@@ -9,22 +9,22 @@ final class mf extends tm {
 
     final boolean c(int param0) {
         if (param0 != 2) {
-            field_o = true;
-            return true;
+          field_o = true;
+          return true;
         }
         return true;
     }
 
     final int a(int param0, boolean param1) {
         if (!param1) {
-            return 118;
+          return 118;
         }
         return rc.field_e[param0];
     }
 
     final static int a(int param0, double param1) {
         if (param0 != 16) {
-            return -57;
+          return -57;
         }
         return ud.a(param1, 16, 1);
     }
@@ -34,87 +34,58 @@ final class mf extends tm {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = Pool.field_O;
         try {
-          L0: {
-            this.field_a = new eg[]{this.g(-930305852), eg.a(param0, "", "balls/CLASSIC/ball1"), eg.a(param0, "", "balls/CLASSIC/ball2"), eg.a(param0, "", "balls/CLASSIC/ball3"), eg.a(param0, "", "balls/CLASSIC/ball4"), eg.a(param0, "", "balls/CLASSIC/ball5"), eg.a(param0, "", "balls/CLASSIC/ball6"), eg.a(param0, "", "balls/CLASSIC/ball7"), eg.a(param0, "", "balls/CLASSIC/ball8"), eg.a(param0, "", "balls/CLASSIC/ball9"), eg.a(param0, "", "balls/CLASSIC/ball10"), eg.a(param0, "", "balls/CLASSIC/ball11"), eg.a(param0, "", "balls/CLASSIC/ball12"), eg.a(param0, "", "balls/CLASSIC/ball13"), eg.a(param0, "", "balls/CLASSIC/ball14"), eg.a(param0, "", "balls/CLASSIC/ball15")};
-            if (param1 == 117) {
-              var3_int = 1;
-              L1: while (true) {
-                if (this.field_a.length <= var3_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  this.field_a[var3_int].a(8, 8, 8, 4);
-                  li.a(this.field_a[var3_int], 0);
-                  var3_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          this.field_a = new eg[]{this.g(-930305852), eg.a(param0, "", "balls/CLASSIC/ball1"), eg.a(param0, "", "balls/CLASSIC/ball2"), eg.a(param0, "", "balls/CLASSIC/ball3"), eg.a(param0, "", "balls/CLASSIC/ball4"), eg.a(param0, "", "balls/CLASSIC/ball5"), eg.a(param0, "", "balls/CLASSIC/ball6"), eg.a(param0, "", "balls/CLASSIC/ball7"), eg.a(param0, "", "balls/CLASSIC/ball8"), eg.a(param0, "", "balls/CLASSIC/ball9"), eg.a(param0, "", "balls/CLASSIC/ball10"), eg.a(param0, "", "balls/CLASSIC/ball11"), eg.a(param0, "", "balls/CLASSIC/ball12"), eg.a(param0, "", "balls/CLASSIC/ball13"), eg.a(param0, "", "balls/CLASSIC/ball14"), eg.a(param0, "", "balls/CLASSIC/ball15")};
+          if (param1 != 117) {
+            return;
           }
+          for (var3_int = 1; this.field_a.length > var3_int; var3_int++) {
+            this.field_a[var3_int].a(8, 8, 8, 4);
+            li.a(this.field_a[var3_int], 0);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("mf.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("mf.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(int param0, di param1) {
         dd[] dupTemp$0 = null;
         try {
-            dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
-            this.field_e = dupTemp$0;
-            d.field_a = dupTemp$0;
+          dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+          this.field_e = dupTemp$0;
+          d.field_a = dupTemp$0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "mf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "mf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void i(int param0) {
         field_n = null;
         if (param0 != 1) {
-            mf.j(26);
+          mf.j(26);
         }
     }
 
     final static void j(int param0) {
         if (param0 != 1) {
-            nm var2 = (nm) null;
-            mf.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
-            sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
-            return;
+          nm var2 = (nm) null;
+          mf.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
+          sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
+          return;
         }
         sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
     }
@@ -125,7 +96,7 @@ final class mf extends tm {
 
     final String a(byte param0, int param1) {
         if (param0 <= 9) {
-            return (String) null;
+          return (String) null;
         }
         return 0 == param1 ? me.field_w : vf.field_Q;
     }
@@ -135,13 +106,13 @@ final class mf extends tm {
         qi.field_e = param1;
         fj.field_h = param5;
         if (param0 > -24) {
-            return;
+          return;
         }
         try {
-            rm.field_b = param4;
-            bk.field_m = param3;
+          rm.field_b = param4;
+          bk.field_m = param3;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "mf.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

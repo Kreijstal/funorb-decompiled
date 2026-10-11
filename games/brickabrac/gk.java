@@ -14,7 +14,7 @@ abstract class gk {
         field_c = null;
         field_b = null;
         if (param0 < 72) {
-            field_a = 14;
+          field_a = 14;
         }
     }
 
@@ -23,7 +23,7 @@ abstract class gk {
     final static void a(int param0, byte param1) {
         vi.c((byte) -109);
         if (param1 <= 111) {
-            gk.a(-66, (byte) -49);
+          gk.a(-66, (byte) -49);
         }
     }
 

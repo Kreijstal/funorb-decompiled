@@ -14,9 +14,9 @@ final class o implements Iterator {
     final static void b(byte param0) {
         ti.a(ua.a(true));
         if (param0 >= -104) {
-            o.a((byte) -125);
-            da.field_h = 512;
-            return;
+          o.a((byte) -125);
+          da.field_h = 512;
+          return;
         }
         da.field_h = 512;
     }
@@ -29,35 +29,29 @@ final class o implements Iterator {
 
     public final void remove() {
         if (null == this.field_c) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_c.a(true);
         this.field_c = null;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = Confined.field_J ? 1 : 0;
-        if (this.field_e == this.field_a.field_j[-1 + this.field_b]) {
-          L0: while (true) {
-            if (this.field_a.field_i > this.field_b) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              if (this.field_a.field_j[fieldTemp$1].field_h != this.field_a.field_j[-1 + this.field_b]) {
-                this.field_e = this.field_a.field_j[this.field_b + -1].field_h;
-                return true;
-              } else {
-                this.field_e = this.field_a.field_j[-1 + this.field_b];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_e != this.field_a.field_j[-1 + this.field_b]) {
           return true;
         }
+        while (this.field_a.field_i > this.field_b) {
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          if (this.field_a.field_j[fieldTemp$0].field_h != this.field_a.field_j[-1 + this.field_b]) {
+            this.field_e = this.field_a.field_j[this.field_b - 1].field_h;
+            return true;
+          }
+          this.field_e = this.field_a.field_j[-1 + this.field_b];
+        }
+        return false;
     }
 
     private final void a(int param0) {
@@ -69,41 +63,35 @@ final class o implements Iterator {
     o(gh param0) {
         this.field_c = null;
         try {
-            this.field_a = param0;
-            this.a(1);
+          this.field_a = param0;
+          this.a(1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         rk var1;
         int var2;
         var2 = Confined.field_J ? 1 : 0;
-        if (this.field_a.field_j[-1 + this.field_b] == this.field_e) {
-          L0: while (true) {
-            if (this.field_a.field_i > this.field_b) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              var1 = this.field_a.field_j[fieldTemp$1].field_h;
-              if (this.field_a.field_j[this.field_b + -1] != var1) {
-                this.field_e = var1.field_h;
-                this.field_c = var1;
-                return var1;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_a.field_j[-1 + this.field_b] != this.field_e) {
           var1 = this.field_e;
           this.field_c = var1;
           this.field_e = var1.field_h;
           return var1;
         }
+        do {
+          if (this.field_a.field_i <= this.field_b) {
+            return null;
+          }
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          var1 = this.field_a.field_j[fieldTemp$0].field_h;
+        } while (this.field_a.field_j[this.field_b - 1] == var1);
+        this.field_e = var1.field_h;
+        this.field_c = var1;
+        return var1;
     }
 
     static {

@@ -7,8 +7,8 @@ final class esb extends qq implements mkb {
 
     final int b(byte param0) {
         if (param0 != 125) {
-            this.field_i = (byte) -12;
-            return this.field_i;
+          this.field_i = (byte) -12;
+          return this.field_i;
         }
         return this.field_i;
     }
@@ -17,27 +17,25 @@ final class esb extends qq implements mkb {
         this.field_i = (byte)param0;
         super.a(25427, param1);
         if (param2 <= 81) {
-            this.a(-84);
-            return true;
+          this.a(-84);
+          return true;
         }
         return true;
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
-        CharSequence var4;
-        if (param1 <= 16) {
-          var4 = (CharSequence) null;
-          esb.a(-9, (CharSequence) null);
-          return super.a(false, param0, this.field_d.field_Vc);
-        } else {
+        if (param1 > 16) {
           return super.a(false, param0, this.field_d.field_Vc);
         }
+        CharSequence var4 = (CharSequence) null;
+        esb.a(-9, (CharSequence) null);
+        return super.a(false, param0, this.field_d.field_Vc);
     }
 
     final static String a(int param0, CharSequence param1) {
+        int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
@@ -45,130 +43,66 @@ final class esb extends qq implements mkb {
         String stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var6 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var2_int = param1.length();
-              if (20 >= var2_int) {
-                break L1;
-              } else {
-                var2_int = 20;
-                break L1;
-              }
-            }
-            L2: {
-              var8 = new char[var2_int];
-              var7 = var8;
-              var3 = var7;
-              if (param0 > 2) {
-                break L2;
-              } else {
-                field_j = (asb) null;
-                break L2;
-              }
-            }
-            var4 = 0;
-            L3: while (true) {
-              if (var2_int <= var4) {
-                stackIn_22_0 = new String(var8);
-                break L0;
-              } else {
-                L4: {
-                  L5: {
-                    var5 = param1.charAt(var4);
-                    if (var5 < 65) {
-                      break L5;
-                    } else {
-                      if (var5 <= 90) {
-                        var3[var4] = (char)(var5 + 32);
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  L6: {
-                    L7: {
-                      if (97 > var5) {
-                        break L7;
-                      } else {
-                        if (var5 <= 122) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    L8: {
-                      if (var5 < 48) {
-                        break L8;
-                      } else {
-                        if (var5 <= 57) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    var3[var4] = (char)95;
-                    break L4;
-                  }
-                  var3[var4] = (char)var5;
-                  break L4;
-                }
-                var4++;
-                continue L3;
-              }
+          var2_int = param1.length();
+          if (20 < var2_int) {
+            var2_int = 20;
+          }
+          var8 = new char[var2_int];
+          var7 = var8;
+          var3 = var7;
+          if (param0 <= 2) {
+            field_j = (asb) null;
+          }
+          for (var4 = 0; var2_int > var4; var4++) {
+            var5 = param1.charAt(var4);
+            if (var5 >= 65 &&
+              var5 <= 90) {
+              var3[var4] = (char)(var5 + 32);
+            } else if ((97 > var5 ||
+              var5 > 122) &&
+              (var5 < 48 ||
+              var5 > 57)) {
+              var3[var4] = (char)95;
+            } else {
+              var3[var4] = (char)var5;
             }
           }
+          stackIn_22_0 = new String(var8);
+          return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
-
-            stackIn_25_1 = new StringBuilder().append("esb.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L9;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L9;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_25_0 = var2;
+          stackIn_25_1 = new StringBuilder().append("esb.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
-        return stackIn_22_0;
     }
 
     public final boolean b(int param0) {
-        CharSequence var3;
-        if (param0 != -20836) {
-          var3 = (CharSequence) null;
-          esb.a(91, (CharSequence) null);
-          return super.a((byte) -124, this.field_d.field_Vc);
-        } else {
+        if (param0 == -20836) {
           return super.a((byte) -124, this.field_d.field_Vc);
         }
+        CharSequence var3 = (CharSequence) null;
+        esb.a(91, (CharSequence) null);
+        return super.a((byte) -124, this.field_d.field_Vc);
     }
 
     public static void e(int param0) {
         if (param0 >= -104) {
-            CharSequence var2 = (CharSequence) null;
-            esb.a(27, (CharSequence) null);
-            field_j = null;
-            return;
+          CharSequence var2 = (CharSequence) null;
+          esb.a(27, (CharSequence) null);
+          field_j = null;
+          return;
         }
         field_j = null;
     }
@@ -179,7 +113,7 @@ final class esb extends qq implements mkb {
 
     public final void a(int param0) {
         if (param0 > -84) {
-            return;
+          return;
         }
         super.a(-119);
     }

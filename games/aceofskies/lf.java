@@ -7,15 +7,13 @@ final class lf extends pj {
     private java.awt.Component field_g;
 
     final void a(byte param0, int param1, int param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
         this.field_e = new int[1 + param1 * param2];
         this.field_b = param1;
         this.field_c = param2;
-        if (param0 >= -31) {
-          return;
-        } else {
+        if (param0 < -31) {
           var5 = new java.awt.image.DataBufferInt(this.field_e, this.field_e.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_b), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);

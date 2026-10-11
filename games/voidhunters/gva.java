@@ -7,14 +7,14 @@ final class gva extends Exception {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void a(byte param0) {
-        if (!(uab.a((byte) 44))) {
-            return;
+        if (!uab.a((byte) 44)) {
+          return;
         }
         int var1 = -35 / ((-45 - param0) / 50);
         wha.a(2, false, 4);
@@ -22,9 +22,9 @@ final class gva extends Exception {
 
     gva(String param0) {
         try {
-            this.field_b = param0;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

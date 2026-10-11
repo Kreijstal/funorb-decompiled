@@ -12,8 +12,8 @@ final class fb {
 
     final static mb b(byte param0) {
         if (param0 <= 119) {
-            field_a = (String) null;
-            return wa.field_j;
+          field_a = (String) null;
+          return wa.field_j;
         }
         return wa.field_j;
     }
@@ -22,8 +22,8 @@ final class fb {
         Boolean var1 = fj.field_e;
         fj.field_e = null;
         if (param0 != 92) {
-            fb.b((byte) 42);
-            return var1;
+          fb.b((byte) 42);
+          return var1;
         }
         return var1;
     }
@@ -32,7 +32,7 @@ final class fb {
         field_a = null;
         field_f = null;
         if (param0 < 19) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

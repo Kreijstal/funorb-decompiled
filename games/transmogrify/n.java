@@ -6,9 +6,9 @@ final class n {
     static int field_a;
 
     final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+        int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        int var5_int = 0;
         rl var5 = null;
         byte[] var6 = null;
         int var7 = 0;
@@ -18,78 +18,48 @@ final class n {
         byte[] stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (-1 > (param3 ^ -1)) {
-                var8 = new byte[param1];
-                var4 = var8;
-                var5_int = 0;
-                L2: while (true) {
-                  if (var5_int >= param1) {
-                    break L1;
-                  } else {
-                    var8[var5_int] = param0[param3 + var5_int];
-                    var5_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var4 = param0;
-                break L1;
-              }
+          if (param3 > 0) {
+            var8 = new byte[param1];
+            var4 = var8;
+            for (var5_int = 0; var5_int < param1; var5_int++) {
+              var8[var5_int] = param0[param3 + var5_int];
             }
-            L3: {
-              var5 = new rl();
-              if (param2 == -5705) {
-                break L3;
-              } else {
-                n.a(true);
-                break L3;
-              }
-            }
-            var5.a(param2 + 21003);
-            var5.a(14027, (long)(param1 * 8), var4);
-            var10 = new byte[64];
-            var9 = var10;
-            var6 = var9;
-            var5.a(var10, param2 + 5821, 0);
-            stackIn_9_0 = (byte[]) (var6);
-            break L0;
+          } else {
+            var4 = param0;
           }
+          var5 = new rl();
+          if (param2 != -5705) {
+            n.a(true);
+          }
+          var5.a(param2 + 21003);
+          var5.a(14027, (long)(param1 * 8), var4);
+          var10 = new byte[64];
+          var9 = var10;
+          var6 = var9;
+          var5.a(var10, param2 + 5821, 0);
+          stackIn_9_0 = var6;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var4_ref);
-
-            stackIn_12_1 = new StringBuilder().append("n.C(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_12_0 = var4_ref;
+          stackIn_12_1 = new StringBuilder().append("n.C(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            n.a(true);
+          n.a(true);
         }
         field_b = null;
     }

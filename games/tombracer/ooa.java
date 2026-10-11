@@ -8,62 +8,30 @@ final class ooa extends wka {
     static jea field_f;
 
     final static String a(byte param0) {
-        String var1;
-        var1 = "";
-        if (param0 >= -46) {
-          L0: {
-            ooa.a((byte) -83);
-            if (null != vn.field_b) {
-              var1 = vn.field_b.a(39);
-              break L0;
-            } else {
-              break L0;
-            }
+        String var1 = "";
+        if (param0 < -46) {
+          if (null != vn.field_b) {
+            var1 = vn.field_b.a(39);
           }
-          L1: {
-            if (var1.length() != 0) {
-              break L1;
-            } else {
-              var1 = ra.r((byte) 69);
-              break L1;
-            }
+          if (var1.length() == 0) {
+            var1 = ra.r((byte) 69);
           }
-          L2: {
-            if (var1.length() != 0) {
-              break L2;
-            } else {
-              var1 = uw.field_a;
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (null != vn.field_b) {
-              var1 = vn.field_b.a(39);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() != 0) {
-              break L4;
-            } else {
-              var1 = ra.r((byte) 69);
-              break L4;
-            }
-          }
-          L5: {
-            if (var1.length() != 0) {
-              break L5;
-            } else {
-              var1 = uw.field_a;
-              break L5;
-            }
+          if (var1.length() == 0) {
+            var1 = uw.field_a;
           }
           return var1;
         }
+        ooa.a((byte) -83);
+        if (null != vn.field_b) {
+          var1 = vn.field_b.a(39);
+        }
+        if (var1.length() == 0) {
+          var1 = ra.r((byte) 69);
+        }
+        if (var1.length() == 0) {
+          var1 = uw.field_a;
+        }
+        return var1;
     }
 
     public static void d(int param0) {
@@ -74,21 +42,10 @@ final class ooa extends wka {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        if (param2 > -42) {
-          return true;
-        } else {
-          L0: {
-            if (-1 == (param1 & 8192 ^ -1)) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return (stackIn_4_0 != 0 | cra.a(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
+        if (param2 <= -42) {
+          return (((param1 & 8192) != 0 ? true : false) | cra.a(param0, -57, param1) | wq.b(param0, param1, 8000)) & kb.a(param0, param1, (byte) 17);
         }
+        return true;
     }
 
     static {

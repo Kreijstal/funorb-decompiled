@@ -19,37 +19,18 @@ final class cb extends IOException {
         if (i.field_J != null) {
           var1 = i.field_J;
           synchronized (var1) {
-            L0: {
-              i.field_J = null;
-              break L0;
-            }
+            i.field_J = null;
           }
-          L1: {
-            if (param0 == -15) {
-              break L1;
-            } else {
-              field_b = (String) null;
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (param0 == -15) {
-              break L2;
-            } else {
-              field_b = (String) null;
-              break L2;
-            }
-          }
-          return;
+        }
+        if (param0 != -15) {
+          field_b = (String) null;
         }
     }
 
     final static void b(int param0) {
         ce.field_f = null;
         if (param0 != 32) {
-            return;
+          return;
         }
         rc.field_r = null;
     }
@@ -59,24 +40,20 @@ final class cb extends IOException {
     }
 
     final static void b(byte param0) {
-        int var1;
-        if (wc.field_a >= 224) {
-          ah.a((byte) -103, 256);
-          if (param0 == -39) {
-            return;
-          } else {
-            cb.b(-18);
-            return;
-          }
-        } else {
+        int var1 = 0;
+        if (wc.field_a < 224) {
           var1 = wc.field_a % 32;
           ah.a((byte) -69, 32 + (wc.field_a - var1));
-          if (param0 == -39) {
-            return;
-          } else {
+          if (param0 != -39) {
             cb.b(-18);
             return;
           }
+          return;
+        }
+        ah.a((byte) -103, 256);
+        if (param0 != -39) {
+          cb.b(-18);
+          return;
         }
     }
 

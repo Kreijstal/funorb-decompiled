@@ -8,10 +8,10 @@ final class nnb extends uj {
 
     public static void b(boolean param0) {
         if (param0) {
-            nnb.b(false);
-            field_d = null;
-            field_f = null;
-            return;
+          nnb.b(false);
+          field_d = null;
+          field_f = null;
+          return;
         }
         field_d = null;
         field_f = null;
@@ -19,24 +19,24 @@ final class nnb extends uj {
 
     final int a(int param0) {
         if (param0 != -1) {
-            nnb.b(true);
-            return wpa.field_p;
+          nnb.b(true);
+          return wpa.field_p;
         }
         return wpa.field_p;
     }
 
     final int b(byte param0) {
         if (param0 < 79) {
-            this.d((byte) 75);
-            return 112;
+          this.d((byte) 75);
+          return 112;
         }
         return 112;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
-            field_e = -50;
-            return oq.field_o;
+          field_e = -50;
+          return oq.field_o;
         }
         return oq.field_o;
     }
@@ -46,15 +46,15 @@ final class nnb extends uj {
 
     final boolean c(byte param0) {
         if (param0 > -104) {
-            return true;
+          return true;
         }
         return true;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            this.a(true);
-            return false;
+          this.a(true);
+          return false;
         }
         return false;
     }

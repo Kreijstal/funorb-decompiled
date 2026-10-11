@@ -14,17 +14,17 @@ final class cj {
 
     final static int[] a(byte param0) {
         if (param0 <= 107) {
-            return (int[]) null;
+          return (int[]) null;
         }
         return new int[8];
     }
 
     public static void a(int param0) {
         if (param0 != 50) {
-            cj.a(-125);
-            field_c = null;
-            field_a = null;
-            return;
+          cj.a(-125);
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -32,10 +32,10 @@ final class cj {
 
     final static void a(byte param0, td param1) {
         try {
-            na.a((byte) 46, li.a(param1, 100, 96));
-            int var2_int = -91 % ((param0 - 43) / 57);
+          na.a((byte) 46, li.a(param1, 100, 96));
+          int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

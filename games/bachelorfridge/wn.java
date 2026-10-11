@@ -12,54 +12,47 @@ final class wn extends at {
 
     private final void f(int param0) {
         if (param0 != 7) {
-            field_l = (String) null;
+          field_l = (String) null;
         }
     }
 
     public static void d(int param0) {
         if (param0 != 10) {
-            return;
+          return;
         }
         field_l = null;
         field_j = null;
     }
 
     final boolean c(byte param0) {
-        int var2;
-        L0: {
-          if (this.field_n == 0) {
-            this.field_o.a(this.field_m, 97, this.field_k);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_n == 0) {
+          this.field_o.a(this.field_m, 97, this.field_k);
         }
-        var2 = 122 % ((param0 - 71) / 47);
-        int fieldTemp$1 = this.field_n + 1;
+        int var2 = 122 % ((param0 - 71) / 47);
+        int fieldTemp$0 = this.field_n + 1;
         this.field_n = this.field_n + 1;
-        if (fieldTemp$1 >= this.e(-12304)) {
-          this.f(7);
-          return true;
-        } else {
+        if (fieldTemp$0 < this.e(-12304)) {
           return false;
         }
+        this.f(7);
+        return true;
     }
 
     private final int e(int param0) {
         if (param0 != -12304) {
-            this.c((byte) 38);
-            return 10;
+          this.c((byte) 38);
+          return 10;
         }
         return 10;
     }
 
     wn(ad param0, String param1, int param2) {
         try {
-            this.field_k = param1;
-            this.field_m = param2;
-            this.field_o = param0;
+          this.field_k = param1;
+          this.field_m = param2;
+          this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "wn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

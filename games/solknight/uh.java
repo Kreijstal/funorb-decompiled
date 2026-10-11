@@ -51,98 +51,62 @@ final class uh {
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = SolKnight.field_L ? 1 : 0;
-        if (!this.field_f) {
-          this.field_f = true;
-          var2 = param0;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (this.field_y <= var8) {
-              this.field_Q = var5;
-              this.field_t = var3;
-              this.field_m = var6;
-              this.field_N = var7;
-              this.field_E = var2;
-              this.field_G = var4;
-              return;
-            } else {
-              L1: {
-                var9 = this.field_n[var8];
-                var10 = this.field_q[var8];
-                if (var10 < var3) {
-                  var3 = var10;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                var11 = this.field_z[var8];
-                if (var6 >= var10) {
-                  break L2;
-                } else {
-                  var6 = var10;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var9 <= var5) {
-                  break L3;
-                } else {
-                  var5 = var9;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var9 >= var2) {
-                  break L4;
-                } else {
-                  var2 = var9;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var7 < var11) {
-                  var7 = var11;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (var4 > var11) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_f) {
           return;
         }
+        this.field_f = true;
+        var2 = param0;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; this.field_y > var8; var8++) {
+          var9 = this.field_n[var8];
+          var10 = this.field_q[var8];
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          var11 = this.field_z[var8];
+          if (var6 < var10) {
+            var6 = var10;
+          }
+          if (var9 > var5) {
+            var5 = var9;
+          }
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var7 < var11) {
+            var7 = var11;
+          }
+          if (var4 > var11) {
+            var4 = var11;
+          }
+        }
+        this.field_Q = var5;
+        this.field_t = var3;
+        this.field_m = var6;
+        this.field_N = var7;
+        this.field_E = var2;
+        this.field_G = var4;
     }
 
     public static void a(int param0) {
         if (param0 != -18662) {
-            field_d = -118;
+          field_d = -118;
         }
         field_l = null;
         field_r = null;
@@ -153,12 +117,12 @@ final class uh {
         int var6 = 0;
         int var7 = SolKnight.field_L ? 1 : 0;
         if (param0 != 8292) {
-            this.a(false);
+          this.a(false);
         }
         for (var6 = 0; var6 < this.field_y; var6++) {
-            this.field_n[var6] = (short)(param2 * this.field_n[var6] / param1);
-            this.field_q[var6] = (short)(param4 * this.field_q[var6] / param1);
-            this.field_z[var6] = (short)(param3 * this.field_z[var6] / param1);
+          this.field_n[var6] = (short)(param2 * this.field_n[var6] / param1);
+          this.field_q[var6] = (short)(param4 * this.field_q[var6] / param1);
+          this.field_z[var6] = (short)(param3 * this.field_z[var6] / param1);
         }
         this.a(false);
     }
@@ -167,13 +131,13 @@ final class uh {
         int var6 = SolKnight.field_L ? 1 : 0;
         int var5 = 0;
         if (param1 != -32768) {
-            this.a(56, -36, 64, 112, -90);
+          this.a(56, -36, 64, 112, -90);
         }
         while (this.field_y > var5) {
-            this.field_n[var5] = (short)(this.field_n[var5] + param0);
-            this.field_q[var5] = (short)(this.field_q[var5] + param2);
-            this.field_z[var5] = (short)(this.field_z[var5] + param3);
-            var5++;
+          this.field_n[var5] = (short)(this.field_n[var5] + param0);
+          this.field_q[var5] = (short)(this.field_q[var5] + param2);
+          this.field_z[var5] = (short)(this.field_z[var5] + param3);
+          var5++;
         }
         this.a(false);
     }

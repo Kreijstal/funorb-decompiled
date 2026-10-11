@@ -16,20 +16,21 @@ final class caa implements Runnable {
 
     final static void a(ff param0, la param1, int param2) {
         if (param2 <= 90) {
-            caa.a(-49, -51, -30, 34, 111, -46);
+          caa.a(-49, -51, -30, 34, 111, -46);
         }
-        if (vpa.a(54) || param0.k(-25319)) {
-            return;
+        if (vpa.a(54) ||
+          param0.k(-25319)) {
+          return;
         }
         if (!(0 <= param1.q((byte) -82))) {
-            return;
+          return;
         }
         try {
-            ql.field_k.k(97, -2988);
-            ql.field_k.f(-1477662136, param1.q((byte) -82));
-            ql.field_k.f(-1477662136, param1.a((byte) 107));
+          ql.field_k.k(97, -2988);
+          ql.field_k.f(-1477662136, param1.q((byte) -82));
+          ql.field_k.f(-1477662136, param1.a((byte) 107));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "caa.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -39,193 +40,108 @@ final class caa implements Runnable {
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        if (-3 < (this.field_f ^ -1)) {
-          L0: {
-            if (this.field_f != 0) {
-              break L0;
-            } else {
-              L1: {
-                if (this.field_c != null) {
-                  break L1;
-                } else {
-                  this.field_c = this.field_g.a(this.field_b, 74);
-                  break L1;
-                }
-              }
-              if (this.field_c.field_b == 0) {
-                return false;
-              } else {
-                if ((this.field_c.field_b ^ -1) == -2) {
-                  break L0;
-                } else {
-                  this.field_c = null;
-                  this.field_f = this.field_f + 1;
-                  return false;
-                }
-              }
-            }
-          }
-          L2: {
-            if (-2 == (this.field_f ^ -1)) {
-              L3: {
-                if (null == this.field_e) {
-                  this.field_e = this.field_g.a(-24818, this.field_b.getHost(), 443);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              if (this.field_e.field_b == 0) {
-                return false;
-              } else {
-                if (this.field_e.field_b != 1) {
-                  this.field_f = this.field_f + 1;
-                  this.field_e = null;
-                  return false;
-                } else {
-                  break L2;
-                }
-              }
-            } else {
-              break L2;
-            }
-          }
-          if (this.field_a == null) {
-            try {
-              L4: {
-                L5: {
-                  if (0 == this.field_f) {
-                    this.field_a = (DataInputStream) (this.field_c.field_f);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (1 != this.field_f) {
-                    break L6;
-                  } else {
-                    var4 = (java.net.Socket) (this.field_e.field_f);
-                    var4.setSoTimeout(10000);
-                    var3 = var4.getOutputStream();
-                    var3.write(17);
-                    var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
-                    var3.write(us.a(var5, param0));
-                    this.field_a = new DataInputStream(var4.getInputStream());
-                    break L6;
-                  }
-                }
-                this.field_h.field_h = 0;
-                break L4;
-              }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
-                var2 = (IOException) (Object) decompiledCaughtException;
-                this.finalize();
-                this.field_f = this.field_f + 1;
-                if (null == this.field_d) {
-                  this.field_d = this.field_g.a((Runnable) (this), 425, 5);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              if (!param0) {
-                if (this.field_d.field_b == 0) {
-                  return false;
-                } else {
-                  L8: {
-                    if (-2 != (this.field_d.field_b ^ -1)) {
-                      this.finalize();
-                      this.field_f = this.field_f + 1;
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  }
-                  return false;
-                }
-              } else {
-                this.field_a = (DataInputStream) null;
-                if (this.field_d.field_b == 0) {
-                  return false;
-                } else {
-                  L9: {
-                    if (-2 != (this.field_d.field_b ^ -1)) {
-                      this.finalize();
-                      this.field_f = this.field_f + 1;
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  return false;
-                }
-              }
-            }
-            L10: {
-              if (null == this.field_d) {
-                this.field_d = this.field_g.a((Runnable) (this), 425, 5);
-                break L10;
-              } else {
-                break L10;
-              }
-            }
-            L11: {
-              if (!param0) {
-                break L11;
-              } else {
-                this.field_a = (DataInputStream) null;
-                break L11;
-              }
-            }
-            if (this.field_d.field_b == 0) {
-              return false;
-            } else {
-              L12: {
-                if (-2 != (this.field_d.field_b ^ -1)) {
-                  this.finalize();
-                  this.field_f = this.field_f + 1;
-                  break L12;
-                } else {
-                  break L12;
-                }
-              }
-              return false;
-            }
-          } else {
-            L13: {
-              if (null == this.field_d) {
-                this.field_d = this.field_g.a((Runnable) (this), 425, 5);
-                break L13;
-              } else {
-                break L13;
-              }
-            }
-            L14: {
-              if (!param0) {
-                break L14;
-              } else {
-                this.field_a = (DataInputStream) null;
-                break L14;
-              }
-            }
-            if (this.field_d.field_b == 0) {
-              return false;
-            } else {
-              if (-2 == (this.field_d.field_b ^ -1)) {
-                return false;
-              } else {
-                this.finalize();
-                this.field_f = this.field_f + 1;
-                return false;
-              }
-            }
-          }
-        } else {
+        if (this.field_f >= 2) {
           return true;
         }
+        if (this.field_f == 0) {
+          if (this.field_c == null) {
+            this.field_c = this.field_g.a(this.field_b, 74);
+          }
+          if (this.field_c.field_b == 0) {
+            return false;
+          }
+          if (this.field_c.field_b != 1) {
+            this.field_c = null;
+            this.field_f = this.field_f + 1;
+            return false;
+          }
+        }
+        if (this.field_f == 1) {
+          if (null == this.field_e) {
+            this.field_e = this.field_g.a(-24818, this.field_b.getHost(), 443);
+          }
+          if (this.field_e.field_b == 0) {
+            return false;
+          }
+          if (this.field_e.field_b != 1) {
+            this.field_f = this.field_f + 1;
+            this.field_e = null;
+            return false;
+          }
+        }
+        if (this.field_a != null) {
+          if (null == this.field_d) {
+            this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+          }
+          if (param0) {
+            this.field_a = (DataInputStream) null;
+          }
+          if (this.field_d.field_b == 0) {
+            return false;
+          }
+          if (this.field_d.field_b == 1) {
+            return false;
+          }
+          this.finalize();
+          this.field_f = this.field_f + 1;
+          return false;
+        }
+        try {
+          if (0 == this.field_f) {
+            this.field_a = (DataInputStream) (this.field_c.field_f);
+          }
+          if (1 == this.field_f) {
+            var4 = (java.net.Socket) (this.field_e.field_f);
+            var4.setSoTimeout(10000);
+            var3 = var4.getOutputStream();
+            var3.write(17);
+            var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_b.getFile() + "\n\n"));
+            var3.write(us.a(var5, param0));
+            this.field_a = new DataInputStream(var4.getInputStream());
+          }
+          this.field_h.field_h = 0;
+        } catch (java.io.IOException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (IOException) (Object) decompiledCaughtException;
+          this.finalize();
+          this.field_f = this.field_f + 1;
+          if (null == this.field_d) {
+            this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+          }
+          if (!param0) {
+            if (this.field_d.field_b == 0) {
+              return false;
+            }
+            if (this.field_d.field_b != 1) {
+              this.finalize();
+              this.field_f = this.field_f + 1;
+            }
+            return false;
+          }
+          this.field_a = (DataInputStream) null;
+          if (this.field_d.field_b == 0) {
+            return false;
+          }
+          if (this.field_d.field_b != 1) {
+            this.finalize();
+            this.field_f = this.field_f + 1;
+          }
+          return false;
+        }
+        if (null == this.field_d) {
+          this.field_d = this.field_g.a((Runnable) (this), 425, 5);
+        }
+        if (param0) {
+          this.field_a = (DataInputStream) null;
+        }
+        if (this.field_d.field_b == 0) {
+          return false;
+        }
+        if (this.field_d.field_b != 1) {
+          this.finalize();
+          this.field_f = this.field_f + 1;
+        }
+        return false;
     }
 
     final static void a(byte param0) {
@@ -237,29 +153,29 @@ final class caa implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_c) {
-            if (!(this.field_c.field_f == null)) {
-                try {
-                    ((DataInputStream) (this.field_c.field_f)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_c = null;
-        }
-        if (this.field_e != null) {
-            if (!(null == this.field_e.field_f)) {
-                try {
-                    ((java.net.Socket) (this.field_e.field_f)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_e = null;
-        }
-        if (!(this.field_a == null)) {
+          if (this.field_c.field_f != null) {
             try {
-                this.field_a.close();
+              ((DataInputStream) (this.field_c.field_f)).close();
             } catch (Exception exception) {
             }
-            this.field_a = null;
+          }
+          this.field_c = null;
+        }
+        if (this.field_e != null) {
+          if (null != this.field_e.field_f) {
+            try {
+              ((java.net.Socket) (this.field_e.field_f)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_e = null;
+        }
+        if (this.field_a != null) {
+          try {
+            this.field_a.close();
+          } catch (Exception exception) {
+          }
+          this.field_a = null;
         }
         this.field_d = null;
     }
@@ -271,26 +187,13 @@ final class caa implements Runnable {
         RuntimeException var6 = null;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param5 == 0) {
-                break L1;
-              } else {
-                field_i = 59;
-                break L1;
-              }
-            }
-            var6_int = param3;
-            L2: while (true) {
-              if (param4 < var6_int) {
-                break L0;
-              } else {
-                nra.a((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
-                var6_int++;
-                continue L2;
-              }
-            }
+          if (param5 != 0) {
+            field_i = 59;
           }
+          for (var6_int = param3; param4 >= var6_int; var6_int++) {
+            nra.a((byte) -55, param0, param1, vaa.field_a[var6_int], param2);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -300,83 +203,69 @@ final class caa implements Runnable {
 
     public final void run() {
         try {
-            int var1_int = 0;
-            Object var1 = null;
-            Object var2 = null;
-            Throwable var3 = null;
-            int var4 = 0;
-            Throwable decompiledCaughtException = null;
-            var4 = TombRacer.field_G ? 1 : 0;
-            try {
-              L0: while (true) {
-                L1: {
-                  if (this.field_h.field_g.length <= this.field_h.field_h) {
-                    break L1;
-                  } else {
-                    var1_int = this.field_a.read(this.field_h.field_g, this.field_h.field_h, -this.field_h.field_h + this.field_h.field_g.length);
-                    if ((var1_int ^ -1) <= -1) {
-                      this.field_h.field_h = this.field_h.field_h + var1_int;
-                      continue L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                if (this.field_h.field_g.length == this.field_h.field_h) {
-                  throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
-                } else {
-                  var1 = this;
-                  synchronized (var1) {
-                    L2: {
-                      this.finalize();
-                      this.field_f = 3;
-                      break L2;
-                    }
-                  }
-                  return;
-                }
+          int var1_int = 0;
+          Object var1 = null;
+          Object var2 = null;
+          Throwable var3 = null;
+          int var4 = 0;
+          Throwable decompiledCaughtException = null;
+          var4 = TombRacer.field_G ? 1 : 0;
+          try {
+            while (this.field_h.field_g.length > this.field_h.field_h) {
+              var1_int = this.field_a.read(this.field_h.field_g, this.field_h.field_h, -this.field_h.field_h + this.field_h.field_g.length);
+              if (var1_int >= 0) {
+                this.field_h.field_h = this.field_h.field_h + var1_int;
+                continue;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2 = this;
-              synchronized (var2) {
-                L3: {
-                  this.finalize();
-                  this.field_f = this.field_f + 1;
-                  break L3;
-                }
-              }
-              return;
+              break;
             }
+            if (this.field_h.field_g.length == this.field_h.field_h) {
+              throw caa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_g.length + " " + this.field_b));
+            }
+            var1 = this;
+            synchronized (var1) {
+              this.finalize();
+              this.field_f = 3;
+            }
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var2 = this;
+            synchronized (var2) {
+              this.finalize();
+              this.field_f = this.field_f + 1;
+            }
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final uia b(byte param0) {
         if (param0 >= -115) {
-            this.b((byte) 71);
-            if (!(this.field_f != 3)) {
-                return this.field_h;
-            }
-            return null;
-        }
-        if (!(this.field_f != 3)) {
+          this.b((byte) 71);
+          if (this.field_f == 3) {
             return this.field_h;
+          }
+          return null;
+        }
+        if (this.field_f == 3) {
+          return this.field_h;
         }
         return null;
     }
 
     caa(fia param0, java.net.URL param1, int param2) {
         try {
-            this.field_b = param1;
-            this.field_g = param0;
-            this.field_h = new uia(param2);
+          this.field_b = param1;
+          this.field_g = param0;
+          this.field_h = new uia(param2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "caa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

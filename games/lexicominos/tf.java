@@ -9,8 +9,8 @@ final class tf {
 
     final static boolean a(byte param0) {
         if (param0 != -101) {
-            field_d = (df[]) null;
-            return we.field_d;
+          field_d = (df[]) null;
+          return we.field_d;
         }
         return we.field_d;
     }
@@ -26,9 +26,9 @@ final class tf {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -3082) {
-            field_c = -37;
-            field_d = null;
-            return;
+          field_c = -37;
+          field_d = null;
+          return;
         }
         field_d = null;
     }

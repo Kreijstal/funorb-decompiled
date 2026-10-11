@@ -16,15 +16,15 @@ final class tla {
     final void a(byte param0, int param1) {
         jaggl.OpenGL.glNewList(this.field_i + param1, 4864);
         if (param0 != 6) {
-            this.a(-22, '~');
+          this.a(-22, '~');
         }
     }
 
     final void a(int param0, char param1) {
         if (param0 != 4864) {
-            return;
+          return;
         }
-        jaggl.OpenGL.glCallList(this.field_i - -param1);
+        jaggl.OpenGL.glCallList(this.field_i + param1);
     }
 
     final void b(byte param0) {
@@ -34,24 +34,14 @@ final class tla {
 
     tla(cka param0, int param1) {
         try {
-            this.field_i = jaggl.OpenGL.glGenLists(param1);
+          this.field_i = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
-        if (param0 < 76) {
-          field_h = (String) null;
-          field_d = null;
-          field_c = null;
-          field_h = null;
-          field_g = null;
-          field_a = null;
-          field_f = null;
-          field_j = null;
-          return;
-        } else {
+        if (param0 >= 76) {
           field_d = null;
           field_c = null;
           field_h = null;
@@ -61,6 +51,14 @@ final class tla {
           field_j = null;
           return;
         }
+        field_h = (String) null;
+        field_d = null;
+        field_c = null;
+        field_h = null;
+        field_g = null;
+        field_a = null;
+        field_f = null;
+        field_j = null;
     }
 
     static {

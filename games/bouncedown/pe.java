@@ -12,48 +12,38 @@ final class pe {
     static String field_g;
 
     final static sa a(int param0, int param1, int param2, int param3, int param4) {
-        sa var5;
-        int var6;
-        var6 = Bounce.field_N;
-        var5 = (sa) ((Object) jl.field_f.a((byte) -50));
-        L0: while (true) {
-          if (var5 == null) {
-            var5 = new sa();
-            var5.field_n = param4;
-            var5.field_g = param1;
-            var5.field_m = param2;
-            jl.field_f.a(1, var5);
-            ha.a(-17765, var5, param0);
-            if (param3 != -16947) {
-              return (sa) null;
-            } else {
-              return var5;
-            }
-          } else {
-            if ((param4 ^ -1) != (var5.field_n ^ -1)) {
-              var5 = (sa) ((Object) jl.field_f.d((byte) -24));
-              continue L0;
-            } else {
-              return var5;
-            }
+        int var6 = Bounce.field_N;
+        sa var5 = (sa) (jl.field_f.a((byte) -50));
+        while (var5 != null) {
+          if (~param4 == ~var5.field_n) {
+            return var5;
           }
+          var5 = (sa) (jl.field_f.d((byte) -24));
         }
+        var5 = new sa();
+        var5.field_n = param4;
+        var5.field_g = param1;
+        var5.field_m = param2;
+        jl.field_f.a(1, var5);
+        ha.a(-17765, var5, param0);
+        if (param3 == -16947) {
+          return var5;
+        }
+        return (sa) null;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_h = null;
         field_f = null;
-        if (param0 != 0) {
-          pe.a(49);
-          field_g = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_g = null;
           field_a = null;
           return;
         }
+        pe.a(49);
+        field_g = null;
+        field_a = null;
     }
 
     final static we[] b(int param0) {
@@ -61,7 +51,7 @@ final class pe {
         int var3 = Bounce.field_N;
         we[] var1 = new we[nj.field_p];
         for (var2 = param0; nj.field_p > var2; var2++) {
-            var1[var2] = new we(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], he.field_k);
+          var1[var2] = new we(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], ph.field_c[var2], he.field_k);
         }
         vb.a((byte) 122);
         return var1;

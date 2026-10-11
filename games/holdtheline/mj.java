@@ -11,12 +11,12 @@ final class mj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var8 = 0;
+        int var10 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -30,78 +30,43 @@ final class mj {
         RuntimeException decompiledCaughtException = null;
         var20 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if ((param2 ^ -1) <= -1) {
-                break L1;
-              } else {
-                param0 = param0 + param2;
-                param2 = 0;
-                break L1;
-              }
-            }
-            L2: {
-              if (-1 < (param4 ^ -1)) {
-                param1 = param1 + param4;
-                param4 = 0;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (param4 + param1 <= tc.field_c) {
-                break L3;
-              } else {
-                param1 = -param4 + tc.field_c;
-                break L3;
-              }
-            }
-            L4: {
-              if (tc.field_j >= param0 + param2) {
-                break L4;
-              } else {
-                param0 = -param2 + tc.field_j;
-                break L4;
-              }
-            }
-            var6_int = -param5 + 256;
-            var7 = param4 - -param1;
-            var8 = param4;
-            L5: while (true) {
-              if (var7 <= var8) {
-                if (param3 == 0) {
-                  break L0;
-                } else {
-                  mj.a(-35);
-                  return;
-                }
-              } else {
-                var9 = var8 * tc.field_j + param2;
-                var10 = param0;
-                L6: while (true) {
-                  if (-1 <= (var10 ^ -1)) {
-                    var8++;
-                    continue L5;
-                  } else {
-                    var11 = tc.field_b[var9];
-                    var12 = (var11 & 16711680) >> 304316912;
-                    var13 = 255 & var11 >> 927944936;
-                    var14 = var11 & 255;
-                    var15 = var14 * 5 + (6 * var13 + var12 * 5);
-                    var16 = (var6_int * var15 >> -1059631284) + (param5 * var12 >> -645259768);
-                    var17 = (var6_int * var15 >> -1143322772) + (var13 * param5 >> -1782067320);
-                    var18 = (var15 * var6_int >> 1864533100) + (var14 * param5 >> 1084193608);
-                    var19 = var16 << 1525471696 | var17 << 2131926632 | var18;
-                    tc.field_b[var9] = var19;
-                    var9++;
-                    var10--;
-                    continue L6;
-                  }
-                }
-              }
+          if (param2 < 0) {
+            param0 = param0 + param2;
+            param2 = 0;
+          }
+          if (param4 < 0) {
+            param1 = param1 + param4;
+            param4 = 0;
+          }
+          if (param4 + param1 > tc.field_c) {
+            param1 = -param4 + tc.field_c;
+          }
+          if (tc.field_j < param0 + param2) {
+            param0 = -param2 + tc.field_j;
+          }
+          var6_int = -param5 + 256;
+          var7 = param4 + param1;
+          for (var8 = param4; var7 > var8; var8++) {
+            var9 = var8 * tc.field_j + param2;
+            for (var10 = param0; var10 > 0; var10--) {
+              var11 = tc.field_b[var9];
+              var12 = (var11 & 16711680) >> 16;
+              var13 = 255 & var11 >> 8;
+              var14 = var11 & 255;
+              var15 = var14 * 5 + (6 * var13 + var12 * 5);
+              var16 = (var6_int * var15 >> 12) + (param5 * var12 >> 8);
+              var17 = (var6_int * var15 >> 12) + (var13 * param5 >> 8);
+              var18 = (var15 * var6_int >> 12) + (var14 * param5 >> 8);
+              var19 = var16 << 16 | var17 << 8 | var18;
+              tc.field_b[var9] = var19;
+              var9++;
             }
           }
+          if (param3 == 0) {
+            return;
+          }
+          mj.a(-35);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

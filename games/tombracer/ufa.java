@@ -28,7 +28,7 @@ final class ufa {
 
     final static void a(boolean param0) {
         if (!param0) {
-            ufa.b(-1);
+          ufa.b(-1);
         }
         vc.field_n.setLength(0);
         bta.field_q = 0;
@@ -43,7 +43,7 @@ final class ufa {
         var1 = var1 + "CourUnlocked[" + this.field_m.toString() + "]";
         var1 = var1 + "WorldMedals[";
         for (var2 = 0; this.field_n.length > var2; var2++) {
-            var1 = var1 + this.field_n[var2] + " ,";
+          var1 = var1 + this.field_n[var2] + " ,";
         }
         var1 = var1 + "]";
         return var1;
@@ -65,7 +65,7 @@ final class ufa {
 
     final boolean a(byte param0, int param1) {
         if (param0 >= -22) {
-            return true;
+          return true;
         }
         return this.field_m.get(param1);
     }
@@ -73,10 +73,7 @@ final class ufa {
     final void a(kh param0, byte param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -84,124 +81,68 @@ final class ufa {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var3_int = param0.h(255);
-            if (-17 >= (var3_int ^ -1)) {
-              param0.h((byte) -11);
-              this.field_l = uha.a(5907, param0);
-              var4 = param0.b((byte) 44, 8);
-              var5 = 0;
-              L1: while (true) {
-                if (var4 <= var5) {
-                  var6 = -25 % ((69 - param1) / 53);
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var5 >= 13) {
-                      var5 = 0;
-                      L3: while (true) {
-                        if ((var5 ^ -1) <= -10) {
-                          var5 = 0;
-                          L4: while (true) {
-                            if (this.field_n.length <= var5) {
-                              this.field_g = param0.b((byte) 44, 4);
-                              this.field_h = param0.b((byte) 44, 8);
-                              this.field_k = param0.b((byte) 44, 8);
-                              param0.i((byte) 98);
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            } else {
-                              this.field_n[var5] = param0.b((byte) 44, 2);
-                              var5++;
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          L5: {
-                            if (!uha.a(5907, param0)) {
-                              break L5;
-                            } else {
-                              this.field_m.set(var5);
-                              break L5;
-                            }
-                          }
-                          var5++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      L6: {
-                        if (uha.a(5907, param0)) {
-                          this.field_s.set(var5);
-                          break L6;
-                        } else {
-                          break L6;
-                        }
-                      }
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  L7: {
-                    if (!uha.a(5907, param0)) {
-                      break L7;
-                    } else {
-                      this.field_o.set(var5);
-                      break L7;
-                    }
-                  }
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var3_int = param0.h(255);
+          if (var3_int < 16) {
+            return;
+          }
+          param0.h((byte) -11);
+          this.field_l = uha.a(5907, param0);
+          var4 = param0.b((byte) 44, 8);
+          for (var5 = 0; var4 > var5; var5++) {
+            if (uha.a(5907, param0)) {
+              this.field_o.set(var5);
             }
           }
+          var6 = -25 % ((69 - param1) / 53);
+          for (var5Lifetime1 = 0; var5Lifetime1 < 13; var5Lifetime1++) {
+            if (uha.a(5907, param0)) {
+              this.field_s.set(var5Lifetime1);
+            }
+          }
+          for (var5Lifetime2 = 0; var5Lifetime2 < 9; var5Lifetime2++) {
+            if (uha.a(5907, param0)) {
+              this.field_m.set(var5Lifetime2);
+            }
+          }
+          for (var5Lifetime3 = 0; this.field_n.length > var5Lifetime3; var5Lifetime3++) {
+            this.field_n[var5Lifetime3] = param0.b((byte) 44, 2);
+          }
+          this.field_g = param0.b((byte) 44, 4);
+          this.field_h = param0.b((byte) 44, 8);
+          this.field_k = param0.b((byte) 44, 8);
+          param0.i((byte) 98);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var3 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var3);
-
-            stackIn_26_1 = new StringBuilder().append("ufa.C(");
-
-            if (param0 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L8;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L8;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_26_0 = var3;
+          stackIn_26_1 = new StringBuilder().append("ufa.C(");
+          if (param0 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final boolean b(byte param0, int param1) {
         if (param0 != 4) {
-            this.field_l = false;
+          this.field_l = false;
         }
         return this.field_s.get(param1);
     }
 
     final taa c(int param0) {
         if (param0 < 29) {
-            ufa.b(90);
+          ufa.b(90);
         }
-        return (taa) ((Object) this.field_i.c(59));
+        return (taa) (this.field_i.c(59));
     }
 
     final int a(int param0) {
@@ -210,104 +151,65 @@ final class ufa {
     }
 
     final static void a(int param0, int param1) {
-        if (null == pqa.field_m || param1 > pqa.field_m.length) {
-            pqa.field_m = new int[param1];
+        if (null == pqa.field_m ||
+          param1 > pqa.field_m.length) {
+          pqa.field_m = new int[param1];
         }
         if (param0 >= -29) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
     final void a(int param0, kh param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            param1.i(16, 0);
-            param1.i(8);
-            wfa.a(this.field_l, 126, param1);
-            var3_int = -1 + this.field_o.size();
-            param1.a((byte) -4, var3_int, 8);
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var3_int) {
-                var4 = 0;
-                L2: while (true) {
-                  if (var4 >= 13) {
-                    var4 = 0;
-                    L3: while (true) {
-                      if ((var4 ^ -1) <= -10) {
-                        L4: {
-                          if (param0 == -2016804080) {
-                            break L4;
-                          } else {
-                            field_e = (int[]) null;
-                            break L4;
-                          }
-                        }
-                        var4 = 0;
-                        L5: while (true) {
-                          if (this.field_n.length <= var4) {
-                            param1.a((byte) 93, this.field_g, 4);
-                            param1.a((byte) -128, this.field_h, 8);
-                            param1.a((byte) -26, this.field_k, 8);
-                            param1.k(-1826190686);
-                            break L0;
-                          } else {
-                            param1.a((byte) -125, this.field_n[var4], 2);
-                            var4++;
-                            continue L5;
-                          }
-                        }
-                      } else {
-                        wfa.a(this.field_m.get(var4), param0 ^ -2016803978, param1);
-                        var4++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    wfa.a(this.field_s.get(var4), param0 + 2016803960, param1);
-                    var4++;
-                    continue L2;
-                  }
-                }
-              } else {
-                wfa.a(this.field_o.get(var4), -52, param1);
-                var4++;
-                continue L1;
-              }
-            }
+          param1.i(16, 0);
+          param1.i(8);
+          wfa.a(this.field_l, 126, param1);
+          var3_int = -1 + this.field_o.size();
+          param1.a((byte) -4, var3_int, 8);
+          for (var4 = 0; var4 < var3_int; var4++) {
+            wfa.a(this.field_o.get(var4), -52, param1);
           }
+          for (var4Lifetime1 = 0; var4Lifetime1 < 13; var4Lifetime1++) {
+            wfa.a(this.field_s.get(var4Lifetime1), param0 + 2016803960, param1);
+          }
+          for (var4Lifetime2 = 0; var4Lifetime2 < 9; var4Lifetime2++) {
+            wfa.a(this.field_m.get(var4Lifetime2), param0 ^ -2016803978, param1);
+          }
+          if (param0 != -2016804080) {
+            field_e = (int[]) null;
+          }
+          for (var4Lifetime3 = 0; this.field_n.length > var4Lifetime3; var4Lifetime3++) {
+            param1.a((byte) -125, this.field_n[var4Lifetime3], 2);
+          }
+          param1.a((byte) 93, this.field_g, 4);
+          param1.a((byte) -128, this.field_h, 8);
+          param1.a((byte) -26, this.field_k, 8);
+          param1.k(-1826190686);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var3 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3);
-
-            stackIn_19_1 = new StringBuilder().append("ufa.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L6;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = var3;
+          stackIn_19_1 = new StringBuilder().append("ufa.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -329,92 +231,53 @@ final class ufa {
 
     final void a(int param0, taa param1) {
         try {
-            if (param0 != 8) {
-                ufa.a(true);
-            }
-            this.field_i.b((byte) -48, param1);
+          if (param0 != 8) {
+            ufa.a(true);
+          }
+          this.field_i.b((byte) -48, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ufa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            field_u = "Won";
-            field_p = new int[256];
-            var0 = 0;
-            L0: while (true) {
-              if (256 <= var0) {
-                field_b = new int[256];
-                var0 = 0;
-                L1: while (true) {
-                  if (-257 >= (var0 ^ -1)) {
-                    field_j = new int[256];
-                    var0 = 0;
-                    L2: while (true) {
-                      if (-257 >= (var0 ^ -1)) {
-                        field_f = new int[256];
-                        var0 = 0;
-                        L3: while (true) {
-                          if (var0 >= 256) {
-                            field_d = new int[256];
-                            var0 = 0;
-                            L4: while (true) {
-                              if (256 <= var0) {
-                                field_e = new int[8];
-                                var0 = 0;
-                                L5: while (true) {
-                                  if (-9 >= (var0 ^ -1)) {
-                                    field_t = new int[8];
-                                    var0 = 0;
-                                    L6: while (true) {
-                                      if (8 <= var0) {
-                                        field_q = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
-                                        field_c = -1;
-                                        break $cfr$clinit;
-                                      } else {
-                                        field_t[var0] = fh.a(var0, fh.a(var0 << -482298736, sea.c(-127926241, var0) << -1344922165));
-                                        var0++;
-                                        continue L6;
-                                      }
-                                    }
-                                  } else {
-                                    field_e[var0] = fh.a(var0, fh.a(var0 << -1308765163, sea.c(var0, -480247777) << -1332941813));
-                                    var0++;
-                                    continue L5;
-                                  }
-                                }
-                              } else {
-                                field_d[var0] = fh.a(var0, fh.a(var0 << -2016804080, sea.c(var0, 1795162367) << 140109576));
-                                var0++;
-                                continue L4;
-                              }
-                            }
-                          } else {
-                            field_f[var0] = fh.a(var0 >> -1694236635, fh.a(var0 << -1958801712, sea.c(-1207958532, var0) << -1355441594));
-                            var0++;
-                            continue L3;
-                          }
-                        }
-                      } else {
-                        field_j[var0] = fh.a(fh.a(sea.c(65306, var0 << -43075481), sea.c(-861666308, var0) << 42100206), var0);
-                        var0++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    field_b[var0] = fh.a(fh.a(sea.c(65308, var0 << -1807910522), sea.c(var0, 762841080) << -676866195), var0);
-                    var0++;
-                    continue L1;
-                  }
-                }
-              } else {
-                field_p[var0] = fh.a(var0 >> 175413507, fh.a(var0 << -1283928720, sea.c(1342178300, var0) << 1331522726));
-                var0++;
-                continue L0;
-              }
-            }
+        int var0;
+        int var0Lifetime1;
+        int var0Lifetime2;
+        int var0Lifetime3;
+        int var0Lifetime4;
+        int var0Lifetime5;
+        int var0Lifetime6;
+        field_u = "Won";
+        field_p = new int[256];
+        for (var0 = 0; 256 > var0; var0++) {
+          field_p[var0] = fh.a(var0 >> 3, fh.a(var0 << 16, sea.c(1342178300, var0) << 6));
         }
+        field_b = new int[256];
+        for (var0Lifetime1 = 0; var0Lifetime1 < 256; var0Lifetime1++) {
+          field_b[var0Lifetime1] = fh.a(fh.a(sea.c(65308, var0Lifetime1 << 6), sea.c(var0Lifetime1, 762841080) << 13), var0Lifetime1);
+        }
+        field_j = new int[256];
+        for (var0Lifetime2 = 0; var0Lifetime2 < 256; var0Lifetime2++) {
+          field_j[var0Lifetime2] = fh.a(fh.a(sea.c(65306, var0Lifetime2 << 7), sea.c(-861666308, var0Lifetime2) << 14), var0Lifetime2);
+        }
+        field_f = new int[256];
+        for (var0Lifetime3 = 0; var0Lifetime3 < 256; var0Lifetime3++) {
+          field_f[var0Lifetime3] = fh.a(var0Lifetime3 >> 5, fh.a(var0Lifetime3 << 16, sea.c(-1207958532, var0Lifetime3) << 6));
+        }
+        field_d = new int[256];
+        for (var0Lifetime4 = 0; 256 > var0Lifetime4; var0Lifetime4++) {
+          field_d[var0Lifetime4] = fh.a(var0Lifetime4, fh.a(var0Lifetime4 << 16, sea.c(var0Lifetime4, 1795162367) << 8));
+        }
+        field_e = new int[8];
+        for (var0Lifetime5 = 0; var0Lifetime5 < 8; var0Lifetime5++) {
+          field_e[var0Lifetime5] = fh.a(var0Lifetime5, fh.a(var0Lifetime5 << 21, sea.c(var0Lifetime5, -480247777) << 11));
+        }
+        field_t = new int[8];
+        for (var0Lifetime6 = 0; 8 > var0Lifetime6; var0Lifetime6++) {
+          field_t[var0Lifetime6] = fh.a(var0Lifetime6, fh.a(var0Lifetime6 << 16, sea.c(-127926241, var0Lifetime6) << 11));
+        }
+        field_q = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
+        field_c = -1;
     }
 }

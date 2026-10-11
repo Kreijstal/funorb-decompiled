@@ -12,7 +12,7 @@ final class hc extends dl {
 
     public static void d(byte param0) {
         if (param0 != 105) {
-            return;
+          return;
         }
         field_v = null;
         field_r = null;
@@ -20,7 +20,7 @@ final class hc extends dl {
 
     final boolean d(int param0) {
         if (param0 != 8) {
-            return false;
+          return false;
         }
         return false;
     }
@@ -28,9 +28,9 @@ final class hc extends dl {
     hc(Object param0, int param1) {
         super(param1);
         try {
-            this.field_s = param0;
+          this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

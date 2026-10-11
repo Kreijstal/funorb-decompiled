@@ -44,62 +44,35 @@ final class qq extends oh {
         mg stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = mg.a(param0, param2, 20);
-            var5 = 21 / ((param1 - -64) / 43);
-            var4 = mg.a(param0, param2, 20);
-            var6 = param2.f(-20976);
-            stackIn_1_0 = new mg(var3, var4, var6);
-            break L0;
-          }
+          var3 = mg.a(param0, param2, 20);
+          var5 = 21 / ((param1 + 64) / 43);
+          var4 = mg.a(param0, param2, 20);
+          var6 = param2.f(-20976);
+          stackIn_1_0 = new mg(var3, var4, var6);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3_ref);
-
-            stackIn_4_1 = new StringBuilder().append("qq.C(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_4_0 = var3_ref;
+          stackIn_4_1 = new StringBuilder().append("qq.C(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final void d(boolean param0) {
@@ -108,7 +81,7 @@ final class qq extends oh {
         this.field_M = null;
         this.field_u = null;
         if (param0) {
-            this.field_J = -43;
+          this.field_J = -43;
         }
     }
 
@@ -119,9 +92,7 @@ final class qq extends oh {
         field_D = null;
         field_t = null;
         field_o = null;
-        if (param0 > -52) {
-          return;
-        } else {
+        if (param0 <= -52) {
           field_x = null;
           field_l = null;
           field_n = null;
@@ -133,7 +104,7 @@ final class qq extends oh {
 
     final static void c(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         cg.field_E.setLength(0);
         em.field_h = 0;

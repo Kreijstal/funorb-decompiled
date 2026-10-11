@@ -45,19 +45,19 @@ final class wma {
 
     public static void b(int param0) {
         if (param0 < 94) {
-            field_M = (String) null;
+          field_M = (String) null;
         }
         field_M = null;
     }
 
     final void a(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -65,100 +65,59 @@ final class wma {
         var12 = VoidHunters.field_G;
         if (this.field_F) {
           return;
-        } else {
-          L0: {
-            this.field_F = true;
-            var2 = 32767;
-            var3 = 32767;
-            var4 = 32767;
-            var5 = -32768;
-            if (param0 > 75) {
-              break L0;
-            } else {
-              this.field_p = (short[]) null;
-              break L0;
-            }
+        }
+        this.field_F = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        if (param0 <= 75) {
+          this.field_p = (short[]) null;
+        }
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; this.field_J > var8; var8++) {
+          var9 = this.field_r[var8];
+          var10 = this.field_o[var8];
+          if (var10 > var6) {
+            var6 = var10;
           }
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L1: while (true) {
-            if (this.field_J <= var8) {
-              this.field_B = var5;
-              this.field_q = var7;
-              this.field_u = var3;
-              this.field_s = var4;
-              this.field_a = var6;
-              this.field_d = var2;
-              return;
-            } else {
-              L2: {
-                var9 = this.field_r[var8];
-                var10 = this.field_o[var8];
-                if (var10 <= var6) {
-                  break L2;
-                } else {
-                  var6 = var10;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var5 >= var9) {
-                  break L3;
-                } else {
-                  var5 = var9;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var3 <= var10) {
-                  break L4;
-                } else {
-                  var3 = var10;
-                  break L4;
-                }
-              }
-              L5: {
-                var11 = this.field_p[var8];
-                if (var2 > var9) {
-                  var2 = var9;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if (var11 <= var7) {
-                  break L6;
-                } else {
-                  var7 = var11;
-                  break L6;
-                }
-              }
-              if (var11 < var4) {
-                var4 = var11;
-                var8++;
-                continue L1;
-              } else {
-                var8++;
-                continue L1;
-              }
-            }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          var11 = this.field_p[var8];
+          if (var2 > var9) {
+            var2 = var9;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var11 < var4) {
+            var4 = var11;
           }
         }
+        this.field_B = var5;
+        this.field_q = var7;
+        this.field_u = var3;
+        this.field_s = var4;
+        this.field_a = var6;
+        this.field_d = var2;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = VoidHunters.field_G;
         int var6 = 0;
         if (param0 != -21227) {
-            return;
+          return;
         }
         while (var6 < this.field_J) {
-            this.field_r[var6] = (short)(param3 * this.field_r[var6] / param4);
-            this.field_o[var6] = (short)(this.field_o[var6] * param2 / param4);
-            this.field_p[var6] = (short)(this.field_p[var6] * param1 / param4);
-            var6++;
+          this.field_r[var6] = (short)(param3 * this.field_r[var6] / param4);
+          this.field_o[var6] = (short)(this.field_o[var6] * param2 / param4);
+          this.field_p[var6] = (short)(this.field_p[var6] * param1 / param4);
+          var6++;
         }
         this.a((byte) -61);
     }
@@ -166,7 +125,7 @@ final class wma {
     private final void a(byte param0) {
         this.field_F = false;
         if (param0 > -21) {
-            this.field_B = -74;
+          this.field_B = -74;
         }
     }
 
@@ -175,9 +134,9 @@ final class wma {
         int var7 = VoidHunters.field_G;
         int var5 = -12 / ((param0 - 49) / 52);
         for (var6 = 0; this.field_J > var6; var6++) {
-            this.field_r[var6] = (short)(this.field_r[var6] + param2);
-            this.field_o[var6] = (short)(this.field_o[var6] + param3);
-            this.field_p[var6] = (short)(this.field_p[var6] + param1);
+          this.field_r[var6] = (short)(this.field_r[var6] + param2);
+          this.field_o[var6] = (short)(this.field_o[var6] + param3);
+          this.field_p[var6] = (short)(this.field_p[var6] + param1);
         }
         this.a((byte) -103);
     }

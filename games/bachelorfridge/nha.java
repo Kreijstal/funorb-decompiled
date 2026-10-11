@@ -12,28 +12,28 @@ final class nha {
         pf var6 = null;
         int var4 = 0;
         try {
-            var6 = sja.field_fb;
-            pf var3 = var6;
-            var6.c(param0, (byte) 110);
-            var6.field_g = var6.field_g + 1;
-            var4 = var6.field_g;
-            var6.d(1, 0);
-            if (param1.field_g != null) {
-                var6.d(param1.field_g.length, 0);
-                var6.a(0, -72, param1.field_g.length, param1.field_g);
-            } else {
-                var6.d(0, 0);
-            }
-            var6.a(var4, 19);
-            var6.field_g = var6.field_g - 4;
-            if (param2 >= -22) {
-                bga var5 = (bga) null;
-                nha.a(-98, (bga) null, (byte) 0);
-            }
-            param1.field_i = var6.f(-76);
-            var6.b((byte) 117, var6.field_g - var4);
+          var6 = sja.field_fb;
+          pf var3 = var6;
+          var6.c(param0, (byte) 110);
+          var6.field_g = var6.field_g + 1;
+          var4 = var6.field_g;
+          var6.d(1, 0);
+          if (param1.field_g != null) {
+            var6.d(param1.field_g.length, 0);
+            var6.a(0, -72, param1.field_g.length, param1.field_g);
+          } else {
+            var6.d(0, 0);
+          }
+          var6.a(var4, 19);
+          var6.field_g = var6.field_g - 4;
+          if (param2 >= -22) {
+            bga var5 = (bga) null;
+            nha.a(-98, (bga) null, (byte) 0);
+          }
+          param1.field_i = var6.f(-76);
+          var6.b((byte) 117, var6.field_g - var4);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "nha.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class nha {
         field_a = null;
         field_d = null;
         if (param0 != -18307) {
-            nha.a(91, -69, -16, true, -30, -112);
+          nha.a(91, -69, -16, true, -30, -112);
         }
         field_b = null;
         field_e = null;
@@ -62,132 +62,71 @@ final class nha {
         int[] var12 = null;
         var10 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              if (param2 > ha.field_n) {
-                break L1;
+          if (param2 <= ha.field_n &&
+            an.field_q <= param1) {
+            if (param4 < eo.field_l) {
+              var6_int = 0;
+              param4 = eo.field_l;
+            } else {
+              if (param4 <= pw.field_x) {
+                var6_int = 1;
               } else {
-                if (an.field_q <= param1) {
-                  L2: {
-                    if (param4 < eo.field_l) {
-                      var6_int = 0;
-                      param4 = eo.field_l;
-                      break L2;
-                    } else {
-                      if (param4 <= pw.field_x) {
-                        var6_int = 1;
-                        break L2;
-                      } else {
-                        var6_int = 0;
-                        param4 = pw.field_x;
-                        break L2;
-                      }
-                    }
+                var6_int = 0;
+                param4 = pw.field_x;
+              }
+            }
+            if (param5 < eo.field_l) {
+              param5 = eo.field_l;
+              var7 = 0;
+            } else {
+              if (pw.field_x < param5) {
+                var7 = 0;
+                param5 = pw.field_x;
+              } else {
+                var7 = 1;
+              }
+            }
+            if (param2 < an.field_q) {
+              param2 = an.field_q;
+            } else {
+              incrementValue$0 = param2;
+              param2++;
+              hba.a(param0, param4, tj.field_b[incrementValue$0], 7, param5);
+            }
+            if (ha.field_n >= param1) {
+              incrementValue$1 = param1;
+              param1--;
+              hba.a(param0, param4, tj.field_b[incrementValue$1], 7, param5);
+            } else {
+              param1 = ha.field_n;
+            }
+            if (var6_int != 0 &&
+              var7 != 0) {
+              for (var8 = param2; var8 <= param1; var8++) {
+                var12 = tj.field_b[var8];
+                var11 = var12;
+                var9 = var11;
+                var12[param5] = param0;
+                var9[param4] = param0;
+              }
+            } else {
+              if (var6_int != 0) {
+                for (var8 = param2; param1 >= var8; var8++) {
+                  tj.field_b[var8][param4] = param0;
+                }
+              } else {
+                if (var7 != 0) {
+                  for (var8 = param2; var8 <= param1; var8++) {
+                    tj.field_b[var8][param5] = param0;
                   }
-                  L3: {
-                    if (param5 < eo.field_l) {
-                      param5 = eo.field_l;
-                      var7 = 0;
-                      break L3;
-                    } else {
-                      if (pw.field_x < param5) {
-                        var7 = 0;
-                        param5 = pw.field_x;
-                        break L3;
-                      } else {
-                        var7 = 1;
-                        break L3;
-                      }
-                    }
-                  }
-                  L4: {
-                    if (param2 < an.field_q) {
-                      param2 = an.field_q;
-                      break L4;
-                    } else {
-                      incrementValue$0 = param2;
-                      param2++;
-                      hba.a(param0, param4, tj.field_b[incrementValue$0], 7, param5);
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (ha.field_n >= param1) {
-                      incrementValue$1 = param1;
-                      param1--;
-                      hba.a(param0, param4, tj.field_b[incrementValue$1], 7, param5);
-                      break L5;
-                    } else {
-                      param1 = ha.field_n;
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (var6_int == 0) {
-                      break L6;
-                    } else {
-                      if (var7 == 0) {
-                        break L6;
-                      } else {
-                        var8 = param2;
-                        L7: while (true) {
-                          if (var8 > param1) {
-                            break L1;
-                          } else {
-                            var12 = tj.field_b[var8];
-                            var11 = var12;
-                            var9 = var11;
-                            var12[param5] = param0;
-                            var9[param4] = param0;
-                            var8++;
-                            continue L7;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (var6_int != 0) {
-                    var8 = param2;
-                    L8: while (true) {
-                      if (param1 < var8) {
-                        break L1;
-                      } else {
-                        tj.field_b[var8][param4] = param0;
-                        var8++;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    if (var7 == 0) {
-                      break L1;
-                    } else {
-                      var8 = param2;
-                      L9: while (true) {
-                        if (var8 > param1) {
-                          break L1;
-                        } else {
-                          tj.field_b[var8][param5] = param0;
-                          var8++;
-                          continue L9;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  break L1;
                 }
               }
             }
-            L10: {
-              if (param3) {
-                break L10;
-              } else {
-                field_b = (String) null;
-                break L10;
-              }
-            }
-            break L0;
           }
+          if (!param3) {
+            field_b = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

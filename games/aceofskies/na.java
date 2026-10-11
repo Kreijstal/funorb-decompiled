@@ -9,10 +9,10 @@ final class na {
 
     public static void a(int param0) {
         if (param0 != 6481) {
-            na.a(36);
-            field_c = null;
-            field_b = null;
-            return;
+          na.a(36);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

@@ -13,14 +13,14 @@ final class ol extends uc implements java.awt.event.MouseWheelListener {
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 != 23934) {
-            return;
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 != -36) {
-            return;
+          return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

@@ -12,55 +12,35 @@ final class ip extends gh {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -472248767) {
-                break L1;
-              } else {
-                field_y = (tf) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = bc.a(false, '*', param0.field_q.length());
-            break L0;
+          if (param1 != -472248767) {
+            field_y = (tf) null;
           }
+          stackIn_3_0 = bc.a(false, '*', param0.field_q.length());
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ip.M(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ip.M(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void e(int param0) {
         field_z = null;
         field_y = null;
         if (param0 != 8192) {
-            field_y = (tf) null;
-            field_x = null;
-            return;
+          field_y = (tf) null;
+          field_x = null;
+          return;
         }
         field_x = null;
     }
@@ -71,68 +51,43 @@ final class ip extends gh {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-            java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-                    if (param0 == 93) {
-                      param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  break L0;
-                } else {
-                  return;
-                }
+              var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
+              if (param0 != 93) {
+                return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_8_1 = new StringBuilder().append("ip.L(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+              param1.getAppletContext().showDocument(lg.a(false, param1, var2), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("ip.L(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

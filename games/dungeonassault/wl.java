@@ -16,16 +16,14 @@ final class wl extends IOException {
         field_b = null;
         field_e = null;
         field_c = null;
-        if (param0 <= 68) {
-          wl.a(-114);
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 > 68) {
           field_d = null;
           field_a = null;
           return;
         }
+        wl.a(-114);
+        field_d = null;
+        field_a = null;
     }
 
     wl(String param0) {

@@ -25,87 +25,58 @@ final class id {
         var5.e(160, 1);
         var5.e(160, param1.field_u);
         if (param0 > -96) {
-            return;
+          return;
         }
         try {
-            var5.e(160, param1.field_v);
-            var5.d(param1.field_s, -116);
-            var5.d(param1.field_r, -102);
-            var5.d(param1.field_l, -112);
-            var5.d(param1.field_p, -120);
-            var5.b(var4, (byte) 84);
-            var5.f(var5.field_m - var4, -1);
+          var5.e(160, param1.field_v);
+          var5.d(param1.field_s, -116);
+          var5.d(param1.field_r, -102);
+          var5.d(param1.field_l, -112);
+          var5.d(param1.field_p, -120);
+          var5.b(var4, (byte) 84);
+          var5.f(var5.field_m - var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0) {
         if (param0 < 40) {
-            field_d = (bb) null;
+          field_d = (bb) null;
         }
         fm.field_b = new pl();
         ph.field_l.c(fm.field_b, -121);
     }
 
     final static void b(int param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
+        int var1_intLifetime2;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            im.field_Hb = new tf[param0];
-            var1_int = 0;
-            L1: while (true) {
-              if ((var1_int ^ -1) <= -3) {
-                eg.a((byte) 99);
-                qa.field_f.a(19692);
-                ii.field_p = new hh[10];
-                var1_int = 0;
-                L2: while (true) {
-                  if (var1_int >= ii.field_p.length) {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (gg.field_z.length <= var1_int) {
-                        break L0;
-                      } else {
-                        gg.field_z[var1_int] = var1_int * 526344;
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    ii.field_p[var1_int] = new hh(64, 64, 2);
-                    var2 = 0;
-                    L4: while (true) {
-                      if (ii.field_p[var1_int].field_n.length <= var2) {
-                        var1_int++;
-                        continue L2;
-                      } else {
-                        L5: {
-                          if ((ok.a(ea.field_b, param0 ^ -124, 9) ^ -1) < (var1_int ^ -1)) {
-                            ii.field_p[var1_int].field_n[var2] = (byte) 1;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-              } else {
-                im.field_Hb[var1_int] = new tf(64, 64);
-                var1_int++;
-                continue L1;
+          im.field_Hb = new tf[param0];
+          for (var1_int = 0; var1_int < 2; var1_int++) {
+            im.field_Hb[var1_int] = new tf(64, 64);
+          }
+          eg.a((byte) 99);
+          qa.field_f.a(19692);
+          ii.field_p = new hh[10];
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < ii.field_p.length; var1_intLifetime1++) {
+            ii.field_p[var1_intLifetime1] = new hh(64, 64, 2);
+            for (var2 = 0; ii.field_p[var1_intLifetime1].field_n.length > var2; var2++) {
+              if (ok.a(ea.field_b, param0 ^ -124, 9) > var1_intLifetime1) {
+                ii.field_p[var1_intLifetime1].field_n[var2] = (byte) 1;
               }
             }
           }
+          for (var1_intLifetime2 = 0; gg.field_z.length > var1_intLifetime2; var1_intLifetime2++) {
+            gg.field_z[var1_intLifetime2] = var1_intLifetime2 * 526344;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -117,7 +88,7 @@ final class id {
         qk.field_e = 0;
         ae.field_b = 0;
         if (param1 <= 104) {
-            return;
+          return;
         }
         oe.field_Sb = 0;
         jn.field_q = ui.field_k;

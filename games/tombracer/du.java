@@ -22,123 +22,36 @@ final class du {
         cma.field_m = 0;
         var3 = field_d;
         field_d = ko.field_d;
-        if (-52 == (param0 ^ -1)) {
-          L0: {
-            wg.field_l.field_n = 2;
-            ko.field_d = var3;
-            wg.field_l.field_a = wg.field_l.field_a + 1;
-            if (-3 < (wg.field_l.field_a ^ -1)) {
-              break L0;
-            } else {
-              if (51 != param0) {
-                break L0;
-              } else {
-                return 2;
-              }
-            }
-          }
-          L1: {
-            if (wg.field_l.field_a < 2) {
-              break L1;
-            } else {
-              if (param0 != 50) {
-                break L1;
-              } else {
-                return 5;
-              }
-            }
-          }
-          if ((wg.field_l.field_a ^ -1) <= -5) {
-            return 1;
-          } else {
-            return -1;
-          }
+        if (param0 == 51) {
+          wg.field_l.field_n = 2;
         } else {
-          if (-51 == (param0 ^ -1)) {
-            L2: {
-              wg.field_l.field_n = 5;
-              ko.field_d = var3;
-              wg.field_l.field_a = wg.field_l.field_a + 1;
-              if (-3 < (wg.field_l.field_a ^ -1)) {
-                break L2;
-              } else {
-                if (51 != param0) {
-                  break L2;
-                } else {
-                  return 2;
-                }
-              }
-            }
-            L3: {
-              if (wg.field_l.field_a < 2) {
-                break L3;
-              } else {
-                if (param0 != 50) {
-                  break L3;
-                } else {
-                  return 5;
-                }
-              }
-            }
-            if ((wg.field_l.field_a ^ -1) <= -5) {
-              return 1;
-            } else {
-              return -1;
-            }
+          if (param0 == 50) {
+            wg.field_l.field_n = 5;
           } else {
             wg.field_l.field_n = 1;
-            ko.field_d = var3;
-            wg.field_l.field_a = wg.field_l.field_a + 1;
-            if (-3 >= (wg.field_l.field_a ^ -1)) {
-              if (51 != param0) {
-                if (wg.field_l.field_a >= 2) {
-                  if (param0 != 50) {
-                    if ((wg.field_l.field_a ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 5;
-                  }
-                } else {
-                  if ((wg.field_l.field_a ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                }
-              } else {
-                return 2;
-              }
-            } else {
-              if (wg.field_l.field_a >= 2) {
-                if (param0 != 50) {
-                  if ((wg.field_l.field_a ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 5;
-                }
-              } else {
-                if ((wg.field_l.field_a ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
-            }
           }
         }
+        ko.field_d = var3;
+        wg.field_l.field_a = wg.field_l.field_a + 1;
+        if (wg.field_l.field_a >= 2 &&
+          51 == param0) {
+          return 2;
+        }
+        if (wg.field_l.field_a >= 2 &&
+          param0 == 50) {
+          return 5;
+        }
+        if (wg.field_l.field_a >= 4) {
+          return 1;
+        }
+        return -1;
     }
 
     public static void a(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != -6884) {
-            return;
+          return;
         }
         field_f = null;
         field_a = null;

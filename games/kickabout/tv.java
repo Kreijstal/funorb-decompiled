@@ -27,84 +27,48 @@ final class tv {
         field_k = null;
         field_e = null;
         if (param0 != 2) {
-            return;
+          return;
         }
         field_f = (int[][]) null;
         field_b = null;
     }
 
     final int b(int param0) {
-        if (!this.field_m) {
-          if (2 == this.field_c) {
-            if (this.field_o <= 0) {
-              if (param0 == 80) {
-                if (this.field_d == dd.field_c) {
-                  return 1;
-                } else {
-                  if (-3 == (ts.field_d ^ -1)) {
-                    if (lf.a(this.field_q, param0 + 18)) {
-                      return 1;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                this.field_l = (String) null;
-                if (this.field_d == dd.field_c) {
-                  return 1;
-                } else {
-                  if (-3 == (ts.field_d ^ -1)) {
-                    if (!lf.a(this.field_q, param0 + 18)) {
-                      return 0;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              }
-            } else {
-              return 2;
-            }
-          } else {
-            if (param0 == 80) {
-              if (this.field_d == dd.field_c) {
-                return 1;
-              } else {
-                if (-3 == (ts.field_d ^ -1)) {
-                  if (!lf.a(this.field_q, param0 + 18)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            } else {
-              this.field_l = (String) null;
-              if (this.field_d == dd.field_c) {
-                return 1;
-              } else {
-                if (-3 == (ts.field_d ^ -1)) {
-                  if (!lf.a(this.field_q, param0 + 18)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            }
-          }
-        } else {
+        if (this.field_m) {
           return 2;
         }
+        if (2 != this.field_c) {
+          if (param0 != 80) {
+            this.field_l = (String) null;
+          }
+        } else {
+          if (this.field_o > 0) {
+            return 2;
+          }
+          if (param0 == 80) {
+            if (this.field_d == dd.field_c) {
+              return 1;
+            }
+            if (ts.field_d != 2) {
+              return 0;
+            }
+            if (lf.a(this.field_q, param0 + 18)) {
+              return 1;
+            }
+            return 0;
+          }
+          this.field_l = (String) null;
+        }
+        if (this.field_d == dd.field_c) {
+          return 1;
+        }
+        if (ts.field_d != 2) {
+          return 0;
+        }
+        if (!lf.a(this.field_q, param0 + 18)) {
+          return 0;
+        }
+        return 1;
     }
 
     tv(boolean param0) {
@@ -114,9 +78,9 @@ final class tv {
         this.field_h = sr.field_d;
         this.field_n = oh.field_f;
         if (!param0) {
-            this.field_r = null;
+          this.field_r = null;
         } else {
-            this.field_r = gk.field_b;
+          this.field_r = gk.field_b;
         }
         this.field_c = jn.field_ob;
         this.field_j = sc.field_E;
@@ -128,20 +92,20 @@ final class tv {
 
     tv(int param0, String param1, int param2, String param3, String param4) {
         try {
-            this.field_r = null;
-            this.field_d = 0L;
-            this.field_j = 0;
-            this.field_o = 0;
-            this.field_l = param3;
-            this.field_n = param2;
-            this.field_h = param1;
-            this.field_m = true;
-            this.field_c = param0;
-            this.field_p = 0;
-            this.field_g = param4;
-            this.field_q = param1;
+          this.field_r = null;
+          this.field_d = 0L;
+          this.field_j = 0;
+          this.field_o = 0;
+          this.field_l = param3;
+          this.field_n = param2;
+          this.field_h = param1;
+          this.field_m = true;
+          this.field_c = param0;
+          this.field_p = 0;
+          this.field_g = param4;
+          this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "tv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "tv.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

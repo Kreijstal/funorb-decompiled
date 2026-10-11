@@ -13,32 +13,20 @@ class uf {
     public static void b(int param0) {
         field_f = null;
         if (param0 == 71) {
-            return;
+          return;
         }
         uf.b(75);
     }
 
     final boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        if (param0 > -21) {
-          uf.a(55, -98);
-          if (null != this.field_a) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (null == this.field_a) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 <= -21) {
+          return null != this.field_a ? true : false;
         }
+        uf.a(55, -98);
+        if (null == this.field_a) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(int param0, int param1) {
@@ -49,35 +37,20 @@ class uf {
         RuntimeException var2_ref = null;
         var3 = Terraphoenix.field_V;
         try {
-          L0: {
-            var4 = (eg) ((Object) ic.field_s.d(param0 + -11568));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  var2 = vc.field_g.d(param0 ^ 30032);
-                  if (param0 == 20840) {
-                    break L2;
-                  } else {
-                    field_f = (ci) null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    eb.a(param1, (byte) 125);
-                    var2 = vc.field_g.e((byte) -119);
-                    continue L3;
-                  }
-                }
-              } else {
-                qc.a(param1, var4, (byte) -110);
-                var4 = (eg) ((Object) ic.field_s.e((byte) -119));
-                continue L1;
-              }
-            }
+          var4 = (eg) (ic.field_s.d(param0 - 11568));
+          while (var4 != null) {
+            qc.a(param1, var4, (byte) -110);
+            var4 = (eg) (ic.field_s.e((byte) -119));
           }
+          var2 = vc.field_g.d(param0 ^ 30032);
+          if (param0 != 20840) {
+            field_f = (ci) null;
+          }
+          while (var2 != null) {
+            eb.a(param1, (byte) 125);
+            var2 = vc.field_g.e((byte) -119);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -88,16 +61,13 @@ class uf {
     final void b(byte param0) {
         if (this.field_a == null) {
           return;
-        } else {
-          this.field_a.field_d = this.field_d;
-          this.field_d.field_a = this.field_a;
-          if (param0 != 12) {
-            return;
-          } else {
-            this.field_d = null;
-            this.field_a = null;
-            return;
-          }
+        }
+        this.field_a.field_d = this.field_d;
+        this.field_d.field_a = this.field_a;
+        if (param0 == 12) {
+          this.field_d = null;
+          this.field_a = null;
+          return;
         }
     }
 

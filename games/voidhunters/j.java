@@ -12,7 +12,7 @@ final class j extends aja implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pq.a(0, (e) (this));
+          pq.a(0, (e) (this));
         }
     }
 

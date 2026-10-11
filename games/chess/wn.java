@@ -16,20 +16,19 @@ abstract class wn {
         field_d = null;
         field_b = null;
         if (param0) {
-            field_d = (int[]) null;
-            field_g = null;
-            return;
+          field_d = (int[]) null;
+          field_g = null;
+          return;
         }
         field_g = null;
     }
 
     final java.net.Socket a(boolean param0) throws IOException {
-        if (!param0) {
-          field_g = (String) null;
-          return new java.net.Socket(this.field_a, this.field_c);
-        } else {
+        if (param0) {
           return new java.net.Socket(this.field_a, this.field_c);
         }
+        field_g = (String) null;
+        return new java.net.Socket(this.field_a, this.field_c);
     }
 
     abstract java.net.Socket a(byte param0) throws IOException;

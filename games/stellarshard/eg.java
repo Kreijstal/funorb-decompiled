@@ -9,7 +9,7 @@ final class eg {
 
     public static void b(int param0) {
         if (param0 > -85) {
-            eg.b(42);
+          eg.b(42);
         }
         field_b = null;
         field_c = null;
@@ -22,46 +22,24 @@ final class eg {
         int var2 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -26) {
-                break L1;
-              } else {
-                eg.b(12);
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              if ((var1_int ^ -1) <= -3001) {
-                stackIn_11_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (null == wk.field_b[var1_int]) {
-                  stackIn_8_0 = var1_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var1_int++;
-                  continue L2;
-                }
-              }
+          if (param0 > -26) {
+            eg.b(12);
+          }
+          for (var1_int = 0; var1_int < 3000; var1_int++) {
+            if (null == wk.field_b[var1_int]) {
+              stackIn_8_0 = var1_int;
+              return stackIn_8_0;
             }
           }
+          stackIn_11_0 = -1;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var1), "eg.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
-        } else {
-          return stackIn_11_0;
         }
     }
 

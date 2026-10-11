@@ -16,22 +16,22 @@ abstract class qd {
     final void a(byte param0) {
         gf.a(this.field_c, this.field_g, this.field_d);
         if (param0 != 109) {
-            this.field_b = (java.awt.Image) null;
+          this.field_b = (java.awt.Image) null;
         }
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, byte param4, int param5, int param6) {
         if (param4 != -5) {
-            return;
+          return;
         }
         try {
-            qg.field_p[param6] = param3;
-            qg.field_r[param6] = param2;
-            qg.field_m[param6] = param5;
-            qg.field_l[param6] = param0;
-            qg.field_t[param6] = param1;
+          qg.field_p[param6] = param3;
+          qg.field_r[param6] = param2;
+          qg.field_m[param6] = param5;
+          qg.field_l[param6] = param0;
+          qg.field_t[param6] = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "qd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "qd.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

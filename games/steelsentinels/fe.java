@@ -13,7 +13,7 @@ abstract class fe extends kd {
 
     public static void e(byte param0) {
         if (param0 < 11) {
-            return;
+          return;
         }
         field_D = null;
         field_A = null;
@@ -21,7 +21,7 @@ abstract class fe extends kd {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         jl.a(false);
-        int var5 = 80 % ((param2 - -37) / 40);
+        int var5 = 80 % ((param2 + 37) / 40);
         pb.h(param0, param1, param3, param4);
     }
 
@@ -35,98 +35,54 @@ abstract class fe extends kd {
         hk var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
+        cc var1Lifetime1;
         var2 = SteelSentinels.field_G;
         try {
-          L0: {
-            var1 = (cc) ((Object) q.field_m.e(13058));
-            L1: while (true) {
-              if (var1 == null) {
-                L2: {
-                  if (param0 > 102) {
-                    break L2;
-                  } else {
-                    fe.e((byte) 19);
-                    break L2;
-                  }
+          var1 = (cc) (q.field_m.e(13058));
+          while (var1 != null) {
+            if (var1.field_Ub > 0) {
+              var1.field_Ub = var1.field_Ub - 1;
+              if (var1.field_Ub == 0) {
+                var1.field_Wb = 0;
+                if (var1.d((byte) -36)) {
+                  var1.b(4);
                 }
-                var1_ref = (hk) ((Object) ci.field_e.e(13058));
-                L3: while (true) {
-                  if (var1_ref == null) {
-                    var1 = (cc) ((Object) o.field_d.e(13058));
-                    L4: while (true) {
-                      if (var1 == null) {
-                        break L0;
-                      } else {
-                        L5: {
-                          if ((var1.field_Ub ^ -1) < -1) {
-                            var1.field_Ub = var1.field_Ub - 1;
-                            if (-1 == (var1.field_Ub ^ -1)) {
-                              var1.field_Wb = 0;
-                              if (!var1.d((byte) -36)) {
-                                break L5;
-                              } else {
-                                var1.b(4);
-                                break L5;
-                              }
-                            } else {
-                              var1 = (cc) ((Object) o.field_d.a((byte) -34));
-                              continue L4;
-                            }
-                          } else {
-                            break L5;
-                          }
-                        }
-                        var1 = (cc) ((Object) o.field_d.a((byte) -34));
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    L6: {
-                      if ((var1_ref.field_mc ^ -1) < -1) {
-                        var1_ref.field_mc = var1_ref.field_mc - 1;
-                        if (-1 == (var1_ref.field_mc ^ -1)) {
-                          var1_ref.field_Ac = 0;
-                          if (var1_ref.k(4219)) {
-                            var1_ref.b(4);
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        } else {
-                          break L6;
-                        }
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var1_ref = (hk) ((Object) ci.field_e.a((byte) -33));
-                    continue L3;
-                  }
-                }
-              } else {
-                L7: {
-                  if (-1 > (var1.field_Ub ^ -1)) {
-                    var1.field_Ub = var1.field_Ub - 1;
-                    if (var1.field_Ub == 0) {
-                      var1.field_Wb = 0;
-                      if (var1.d((byte) -36)) {
-                        var1.b(4);
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    } else {
-                      break L7;
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-                var1 = (cc) ((Object) q.field_m.a((byte) -36));
-                continue L1;
               }
             }
+            var1 = (cc) (q.field_m.a((byte) -36));
           }
+          if (param0 <= 102) {
+            fe.e((byte) 19);
+          }
+          var1_ref = (hk) (ci.field_e.e(13058));
+          while (var1_ref != null) {
+            if (var1_ref.field_mc > 0) {
+              var1_ref.field_mc = var1_ref.field_mc - 1;
+              if (var1_ref.field_mc == 0) {
+                var1_ref.field_Ac = 0;
+                if (var1_ref.k(4219)) {
+                  var1_ref.b(4);
+                }
+              }
+            }
+            var1_ref = (hk) (ci.field_e.a((byte) -33));
+          }
+          var1Lifetime1 = (cc) (o.field_d.e(13058));
+          while (var1Lifetime1 != null) {
+            if (var1Lifetime1.field_Ub > 0) {
+              var1Lifetime1.field_Ub = var1Lifetime1.field_Ub - 1;
+              if (var1Lifetime1.field_Ub != 0) {
+                var1Lifetime1 = (cc) (o.field_d.a((byte) -34));
+                continue;
+              }
+              var1Lifetime1.field_Wb = 0;
+              if (var1Lifetime1.d((byte) -36)) {
+                var1Lifetime1.b(4);
+              }
+            }
+            var1Lifetime1 = (cc) (o.field_d.a((byte) -34));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;

@@ -10,7 +10,7 @@ final class eq extends nt {
 
     public static void e(int param0) {
         if (param0 != 3190) {
-            return;
+          return;
         }
         field_w = null;
         field_v = null;
@@ -27,47 +27,29 @@ final class eq extends nt {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 < -121) {
-              break L0;
-            } else {
-              eq.e(-79);
-              break L0;
-            }
+          if (param1 >= -121) {
+            eq.e(-79);
           }
           if (this.field_u) {
-            am.field_j[this.field_t].a((float)this.field_k, (float)this.field_o, -200 + (2048 + -(int)(2048.0 * ((this.field_s - (double)this.field_p) / this.field_s))), 0, 3, 3 * this.field_p << -360268552, 1);
-            return;
-          } else {
-            uc.field_a.a((float)this.field_k, (float)this.field_o, -200 + -(int)(((double)(-this.field_p) + this.field_s) / this.field_s * 2048.0) + 2048, 0, 3, this.field_p * 2 << 1379490168, 1);
+            am.field_j[this.field_t].a((float)this.field_k, (float)this.field_o, -200 + (2048 - (int)(2048.0 * ((this.field_s - (double)this.field_p) / this.field_s))), 0, 3, 3 * this.field_p << 24, 1);
             return;
           }
+          uc.field_a.a((float)this.field_k, (float)this.field_o, -200 - (int)(((double)(-this.field_p) + this.field_s) / this.field_s * 2048.0) + 2048, 0, 3, this.field_p * 2 << 24, 1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("eq.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("eq.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -21,52 +21,31 @@ final class ru extends tn {
     final int a(long param0, int param1) {
         int var4;
         int var5;
-        L0: {
-          var5 = BachelorFridge.field_y;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            this.field_g = 55;
-            break L0;
-          }
+        var5 = BachelorFridge.field_y;
+        if (param1 != 0) {
+          this.field_g = 55;
         }
-        if (this.field_k >= this.field_f) {
-          var4 = 0;
-          L1: while (true) {
-            L2: {
-              this.field_f = this.field_f + param0;
-              var4++;
-              if (var4 >= 10) {
-                break L2;
-              } else {
-                if ((this.field_k ^ -1L) < (this.field_f ^ -1L)) {
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if ((this.field_f ^ -1L) > (this.field_k ^ -1L)) {
-                this.field_f = this.field_k;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return var4;
-          }
-        } else {
+        if (this.field_k < this.field_f) {
           this.field_e = this.field_e + (-this.field_k + this.field_f);
           this.field_k = this.field_k + (this.field_f - this.field_k);
           this.field_f = this.field_f + param0;
           return 1;
         }
+        var4 = 0;
+        do {
+          this.field_f = this.field_f + param0;
+          var4++;
+        } while (var4 < 10 &&
+          this.field_k > this.field_f);
+        if (this.field_f < this.field_k) {
+          this.field_f = this.field_k;
+        }
+        return var4;
     }
 
     public static void b(int param0) {
         if (param0 <= 33) {
-            field_d = (int[]) null;
+          field_d = (int[]) null;
         }
         field_j = null;
         field_d = null;
@@ -76,10 +55,10 @@ final class ru extends tn {
     final long a(byte param0) {
         this.field_k = this.field_k + this.c(61);
         if (param0 != 63) {
-            field_c = -123;
+          field_c = -123;
         }
         if (this.field_k < this.field_f) {
-            return (this.field_f - this.field_k) / 1000000L;
+          return (this.field_f - this.field_k) / 1000000L;
         }
         return 0L;
     }
@@ -100,29 +79,28 @@ final class ru extends tn {
         int var9 = BachelorFridge.field_y;
         long var2 = System.nanoTime();
         if (param0 <= 33) {
-            return -56L;
+          return -56L;
         }
-        long var4 = var2 + -this.field_e;
+        long var4 = var2 - this.field_e;
         this.field_e = var2;
-        if (-5000000000L < var4) {
-            if (!(5000000000L <= var4)) {
-                this.field_h[this.field_i] = var4;
-                if (1 > this.field_g) {
-                    this.field_g = this.field_g + 1;
-                }
-                this.field_i = (1 + this.field_i) % 10;
-            }
+        if (-5000000000L < var4 &&
+          5000000000L > var4) {
+          this.field_h[this.field_i] = var4;
+          if (1 > this.field_g) {
+            this.field_g = this.field_g + 1;
+          }
+          this.field_i = (1 + this.field_i) % 10;
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= this.field_g; var8++) {
-            var6 = var6 + this.field_h[(10 + -var8 + this.field_i) % 10];
+          var6 = var6 + this.field_h[(10 - var8 + this.field_i) % 10];
         }
         return var6 / (long)this.field_g;
     }
 
     final void a(boolean param0) {
         if (this.field_k < this.field_f) {
-            this.field_k = this.field_k + (-this.field_k + this.field_f);
+          this.field_k = this.field_k + (-this.field_k + this.field_f);
         }
         if (param0) {
         }

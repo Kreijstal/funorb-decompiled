@@ -10,7 +10,7 @@ final class qw {
 
     public static void a(byte param0) {
         if (param0 >= -116) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

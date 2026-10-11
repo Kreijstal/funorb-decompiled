@@ -8,10 +8,10 @@ final class tea {
 
     public static void a(byte param0) {
         if (param0 >= -122) {
-            field_b = (it) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_b = (it) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

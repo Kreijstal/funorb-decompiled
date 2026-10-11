@@ -12,8 +12,8 @@ final class gp extends tk implements wg {
 
     public final sk a(int param0) {
         if (param0 != -10116) {
-            field_K = -4;
-            return this.field_N;
+          field_K = -4;
+          return this.field_N;
         }
         return this.field_N;
     }
@@ -24,51 +24,45 @@ final class gp extends tk implements wg {
 
     final void a(int param0, gm param1, int param2, int param3) {
         try {
-            super.a(-73, param1, param2, param3);
-            this.field_O = -this.field_w + n.field_t + -param3;
-            int var5_int = -91 % ((param0 - -28) / 43);
+          super.a(-73, param1, param2, param3);
+          this.field_O = -this.field_w + n.field_t - param3;
+          int var5_int = -91 % ((param0 + 28) / 43);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final String b(int param0) {
-        if (this.field_s) {
-          if (this.field_n != null) {
-            bm.a(k.field_e, (byte) 113, -this.field_O + (this.field_p + n.field_t));
-            if (param0 != 0) {
-              return (String) null;
-            } else {
-              return this.field_n;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (!this.field_s) {
           return null;
         }
+        if (this.field_n == null) {
+          return null;
+        }
+        bm.a(k.field_e, (byte) 113, -this.field_O + (this.field_p + n.field_t));
+        if (param0 == 0) {
+          return this.field_n;
+        }
+        return (String) null;
     }
 
     final void l(int param0) {
-        int var2;
         super.l(100);
-        var2 = -94 / ((-17 - param0) / 63);
-        if (null != this.field_N) {
-          this.field_N.a(true);
-          return;
-        } else {
+        int var2 = -94 / ((-17 - param0) / 63);
+        if (null == this.field_N) {
           return;
         }
+        this.field_N.a(true);
     }
 
     final void a(sk param0, int param1) {
         try {
-            this.field_N = param0;
-            if (param1 <= 74) {
-                gp.j((byte) 91);
-            }
+          this.field_N = param0;
+          if (param1 <= 74) {
+            gp.j((byte) 91);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "gp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "gp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -77,39 +71,27 @@ final class gp extends tk implements wg {
         field_M = null;
         field_P = null;
         if (param0 <= 113) {
-            field_K = -13;
-            field_Q = null;
-            return;
+          field_K = -13;
+          field_Q = null;
+          return;
         }
         field_Q = null;
     }
 
     final static void j(byte param0) {
         dc.field_a.h(6);
-        if (param0 != -34) {
-          L0: {
-            field_P = (String) null;
-            if (d.field_r == null) {
-              d.field_r = new sp(dc.field_a, bi.field_u);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          dc.field_a.a(d.field_r, (byte) 112);
-          return;
-        } else {
-          L1: {
-            if (d.field_r == null) {
-              d.field_r = new sp(dc.field_a, bi.field_u);
-              break L1;
-            } else {
-              break L1;
-            }
+        if (param0 == -34) {
+          if (d.field_r == null) {
+            d.field_r = new sp(dc.field_a, bi.field_u);
           }
           dc.field_a.a(d.field_r, (byte) 112);
           return;
         }
+        field_P = (String) null;
+        if (d.field_r == null) {
+          d.field_r = new sp(dc.field_a, bi.field_u);
+        }
+        dc.field_a.a(d.field_r, (byte) 112);
     }
 
     static {

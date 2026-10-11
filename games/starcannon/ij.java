@@ -16,14 +16,14 @@ final class ij extends kk {
 
     final void a(int param0, byte[] param1) {
         try {
-            this.field_g = java.nio.ByteBuffer.allocateDirect(param1.length);
-            if (param0 != -5361) {
-                field_f = (ka) null;
-            }
-            this.field_g.position(0);
-            this.field_g.put(param1);
+          this.field_g = java.nio.ByteBuffer.allocateDirect(param1.length);
+          if (param0 != -5361) {
+            field_f = (ka) null;
+          }
+          this.field_g.position(0);
+          this.field_g.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ij.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ij.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,83 +33,50 @@ final class ij extends kk {
         qb stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!qa.field_a.b(false)) {
-                break L1;
-              } else {
-                if (param0.equals(qa.field_a.a((byte) 2))) {
-                  break L1;
-                } else {
-                  qa.field_a = uf.a(param0, 17);
-                  break L1;
-                }
-              }
-            }
-            if (param1 == -51) {
-              stackIn_7_0 = qa.field_a;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_5_0 = (qb) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (qa.field_a.b(false) &&
+            !param0.equals(qa.field_a.a((byte) 2))) {
+            qa.field_a = uf.a(param0, 17);
           }
+          if (param1 == -51) {
+            stackIn_7_0 = qa.field_a;
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (qb) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("ij.J(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("ij.J(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         if (param0 != 20756) {
-            return;
+          return;
         }
         field_f = null;
     }
 
     final byte[] a(int param0) {
-        byte[] var2;
-        byte[] var3;
-        if (param0 != 4208) {
-          return (byte[]) null;
-        } else {
+        byte[] var3 = null;
+        if (param0 == 4208) {
           var3 = new byte[this.field_g.capacity()];
-          var2 = var3;
+          byte[] var2 = var3;
           this.field_g.position(0);
           this.field_g.get(var3);
           return var3;
         }
+        return (byte[]) null;
     }
 
     ij() {
@@ -117,13 +84,13 @@ final class ij extends kk {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            hi.a(0, "", param1);
-            if (param0 != 18065) {
-                field_f = (ka) null;
-            }
-            wj.a(param1, 0);
+          hi.a(0, "", param1);
+          if (param0 != 18065) {
+            field_f = (ka) null;
+          }
+          wj.a(param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ij.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

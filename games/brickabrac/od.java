@@ -8,17 +8,17 @@ final class od extends java.awt.Canvas {
 
     od(java.awt.Component param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_a.paint(param0);
+          this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "od.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,10 +32,8 @@ final class od extends java.awt.Canvas {
         L0: {
           var2 = BrickABrac.field_J ? 1 : 0;
           if (13 != pp.field_a) {
-            if ((pp.field_a ^ -1) == -15) {
-              if (0 >= jl.field_a) {
-                break L0;
-              } else {
+            if (pp.field_a == 14) {
+              if (0 < jl.field_a) {
                 fieldTemp$0 = jl.field_a - 1;
                 jl.field_a = jl.field_a - 1;
                 if (0 == fieldTemp$0) {
@@ -45,16 +43,11 @@ final class od extends java.awt.Canvas {
                   jl.field_a = 250;
                   ga.field_i = 0;
                   c.field_i = un.field_e;
-                  break L0;
-                } else {
-                  break L0;
                 }
               }
             } else {
-              if (-1 == (pp.field_a ^ -1)) {
-                if (0 >= jl.field_a) {
-                  break L0;
-                } else {
+              if (pp.field_a == 0) {
+                if (0 < jl.field_a) {
                   fieldTemp$1 = jl.field_a - 1;
                   jl.field_a = jl.field_a - 1;
                   if (0 == fieldTemp$1) {
@@ -64,87 +57,51 @@ final class od extends java.awt.Canvas {
                     c.field_i = un.field_e;
                     mn.field_v = de.field_x;
                     tb.field_eb = va.field_d;
-                    break L0;
-                  } else {
-                    break L0;
                   }
                 }
               } else {
-                if (pp.field_a == 1) {
-                  break L0;
-                } else {
+                if (pp.field_a != 1) {
                   if (2 == pp.field_a) {
-                    if (0 >= jl.field_a) {
-                      break L0;
-                    } else {
+                    if (0 < jl.field_a) {
                       fieldTemp$2 = jl.field_a - 1;
                       jl.field_a = jl.field_a - 1;
-                      if (0 != fieldTemp$2) {
-                        break L0;
-                      } else {
+                      if (0 == fieldTemp$2) {
                         tb.field_eb = op.field_b;
                         pp.field_a = -1;
                         ga.field_i = 3;
-                        break L0;
                       }
                     }
                   } else {
-                    if (-4 == (pp.field_a ^ -1)) {
-                      break L0;
-                    } else {
-                      if (-5 != (pp.field_a ^ -1)) {
-                        if (pp.field_a != 5) {
-                          if ((pp.field_a ^ -1) == -7) {
-                            pp.field_a = da.field_G;
+                    if (pp.field_a != 3 &&
+                      pp.field_a != 4 &&
+                      pp.field_a != 5) {
+                      if (pp.field_a == 6) {
+                        pp.field_a = da.field_G;
+                        ga.field_i = da.field_G;
+                      } else {
+                        if (pp.field_a != 8 &&
+                          pp.field_a != 9) {
+                          if (pp.field_a == 10) {
                             ga.field_i = da.field_G;
-                            break L0;
+                            pp.field_a = da.field_G;
                           } else {
-                            L1: {
-                              if ((pp.field_a ^ -1) == -9) {
-                                break L1;
-                              } else {
-                                if ((pp.field_a ^ -1) != -10) {
-                                  if (pp.field_a != 10) {
-                                    if (-12 == (pp.field_a ^ -1)) {
-                                      break L0;
-                                    } else {
-                                      if ((pp.field_a ^ -1) == -13) {
-                                        break L0;
-                                      } else {
-                                        break L0;
-                                      }
-                                    }
-                                  } else {
-                                    ga.field_i = da.field_G;
-                                    pp.field_a = da.field_G;
-                                    break L0;
-                                  }
-                                } else {
-                                  break L1;
-                                }
-                              }
-                            }
-                            if ((jl.field_a ^ -1) >= -1) {
+                            if (((pp.field_a != 11)) &&
+                              (pp.field_a == 12)) {
                               break L0;
-                            } else {
-                              fieldTemp$3 = jl.field_a - 1;
-                              jl.field_a = jl.field_a - 1;
-                              if (fieldTemp$3 != 0) {
-                                break L0;
-                              } else {
-                                ga.field_i = 11;
-                                pp.field_a = -1;
-                                tb.field_eb = bj.field_U;
-                                wl.field_N = true;
-                                break L0;
-                              }
                             }
                           }
-                        } else {
                           break L0;
                         }
-                      } else {
-                        break L0;
+                        if (jl.field_a > 0) {
+                          fieldTemp$3 = jl.field_a - 1;
+                          jl.field_a = jl.field_a - 1;
+                          if (fieldTemp$3 == 0) {
+                            ga.field_i = 11;
+                            pp.field_a = -1;
+                            tb.field_eb = bj.field_U;
+                            wl.field_N = true;
+                          }
+                        }
                       }
                     }
                   }
@@ -152,40 +109,30 @@ final class od extends java.awt.Canvas {
               }
             }
           } else {
-            if (0 >= jl.field_a) {
-              break L0;
-            } else {
+            if (0 < jl.field_a) {
               fieldTemp$4 = jl.field_a - 1;
               jl.field_a = jl.field_a - 1;
-              if (0 != fieldTemp$4) {
-                break L0;
-              } else {
+              if (0 == fieldTemp$4) {
                 mn.field_v = de.field_x;
                 pp.field_a = -1;
                 c.field_i = un.field_e;
                 tb.field_eb = sb.field_d;
                 jl.field_a = 250;
                 ga.field_i = 14;
-                break L0;
               }
             }
           }
         }
-        L2: {
-          if (param0 == 32) {
-            break L2;
-          } else {
-            field_c = 109;
-            break L2;
-          }
+        if (param0 != 32) {
+          field_c = 109;
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_a.update(param0);
+          this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "od.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "od.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -196,93 +143,44 @@ final class od extends java.awt.Canvas {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_22_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (0 >= param0) {
-                break L1;
-              } else {
-                if (param0 < 128) {
-                  stackIn_8_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (param0 < 160) {
-                break L2;
-              } else {
-                if (param0 > 255) {
-                  break L2;
-                } else {
-                  return true;
-                }
-              }
-            }
-            L3: {
-              if (param0 != 0) {
-                var6 = ai.field_r;
-                var2 = var6;
-                var3 = 0;
-                L4: while (true) {
-                  if (var3 >= var6.length) {
-                    break L3;
-                  } else {
-                    var4 = var6[var3];
-                    if (var4 != param0) {
-                      var3++;
-                      continue L4;
-                    } else {
-                      stackIn_17_0 = 1;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
-                break L3;
-              }
-            }
-            L5: {
-              if (param1 == -12) {
-                break L5;
-              } else {
-                field_c = -78;
-                break L5;
-              }
-            }
-            stackIn_22_0 = 0;
-            decompiledRegionSelector0 = 2;
-            break L0;
+          if (0 < param0 &&
+            param0 < 128) {
+            return true;
           }
+          if (param0 >= 160 &&
+            param0 <= 255) {
+            return true;
+          }
+          if (param0 != 0) {
+            var6 = ai.field_r;
+            var2 = var6;
+            var3 = 0;
+            while (var3 < var6.length) {
+              var4 = var6[var3];
+              if (var4 != param0) {
+                var3++;
+                continue;
+              }
+              return true;
+            }
+          }
+          if (param1 != -12) {
+            field_c = -78;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw qb.a((Throwable) ((Object) var2_ref), "od.D(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_17_0 != 0;
-          } else {
-            return stackIn_22_0 != 0;
-          }
-        }
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            od.a((byte) 23);
+          od.a((byte) 23);
         }
         field_b = null;
     }
@@ -290,91 +188,49 @@ final class od extends java.awt.Canvas {
     final static void a(int param0, long param1, StringBuilder param2) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
+        int var6 = 0;
         StringBuilder discarded$6 = null;
         int var4_int = 0;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              gh.field_e.setLength(0);
-              if (param0 == -9) {
-                break L1;
-              } else {
-                field_c = -91;
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 >= 0L) {
-                stackIn_6_0 = 0;
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L2;
-              }
-            }
-            var4_int = stackIn_6_0;
-            var5 = 0;
-            L3: while (true) {
-              discarded$4 = gh.field_e.append((char)(48 + (int)(param1 % 10L)));
-              param1 = param1 / 10L;
-              var5++;
-              if (0L != param1) {
-                continue L3;
-              } else {
-                L4: {
-                  if (var4_int == 0) {
-                    break L4;
-                  } else {
-                    discarded$5 = gh.field_e.append('-');
-                    break L4;
-                  }
-                }
-                var6 = var5 - 1;
-                L5: while (true) {
-                  if ((var6 ^ -1) > -1) {
-                    break L0;
-                  } else {
-                    discarded$6 = param2.append(gh.field_e.charAt(var6));
-                    var6--;
-                    continue L5;
-                  }
-                }
-              }
-            }
+          gh.field_e.setLength(0);
+          if (param0 != -9) {
+            field_c = -91;
           }
+          stackIn_6_0 = (param1 >= 0L) ? 0 : 1;
+          var4_int = stackIn_6_0;
+          var5 = 0;
+          do {
+            discarded$4 = gh.field_e.append((char)(48 + (int)(param1 % 10L)));
+            param1 = param1 / 10L;
+            var5++;
+          } while (0L != param1);
+          if (var4_int != 0) {
+            discarded$5 = gh.field_e.append('-');
+          }
+          for (var6 = var5 - 1; var6 >= 0; var6--) {
+            discarded$6 = param2.append(gh.field_e.charAt(var6));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var4);
-
-            stackIn_16_1 = new StringBuilder().append("od.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_16_0 = var4;
+          stackIn_16_1 = new StringBuilder().append("od.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

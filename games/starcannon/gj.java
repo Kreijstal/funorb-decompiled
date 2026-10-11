@@ -19,14 +19,12 @@ abstract class gj {
         field_e = null;
         field_f = null;
         field_b = null;
-        if (param0 != 15686) {
-          gj.a(44);
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 15686) {
           field_a = null;
           return;
         }
+        gj.a(44);
+        field_a = null;
     }
 
     abstract void a(int param0, java.awt.Component param1);

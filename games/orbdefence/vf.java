@@ -9,7 +9,7 @@ final class vf {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 1) {
-            return;
+          return;
         }
         field_c = (byte[][]) null;
         field_a = null;
@@ -17,7 +17,7 @@ final class vf {
 
     final static hj[] a(int param0, int param1, int param2, byte param3) {
         if (param3 >= -44) {
-            vf.a(45);
+          vf.a(45);
         }
         return kd.a(1, param2, 119, param0, param1);
     }
@@ -27,124 +27,64 @@ final class vf {
         int var4 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         RuntimeException var3_ref = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            if (param2.field_t == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var3_int = 0;
-              L1: while (true) {
-                L2: {
-                  if (var3_int >= 50) {
-                    break L2;
-                  } else {
-                    if (null == param2.field_t.peekEvent()) {
-                      break L2;
-                    } else {
-                      hb.a(1L, 97);
-                      var3_int++;
-                      continue L1;
-                    }
-                  }
-                }
-                try {
-                  L3: {
-                    L4: {
-                      if (param0 != null) {
-                        param2.field_t.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param0, 1001, "dummy")));
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    break L3;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var3 = (Exception) (Object) decompiledCaughtException;
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (param1 == 50) {
-                    break L6;
-                  } else {
-                    vf.a(9, -82, 8, (byte) 43);
-                    break L6;
-                  }
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param2.field_t == null) {
+            return;
           }
+          for (var3_int = 0; var3_int < 50; var3_int++) {
+            if (null != param2.field_t.peekEvent()) {
+              hb.a(1L, 97);
+              continue;
+            }
+            break;
+          }
+          try {
+            if (param0 != null) {
+              param2.field_t.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param0, 1001, "dummy")));
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+          }
+          if (param1 != 50) {
+            vf.a(9, -82, 8, (byte) 43);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L7: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
-
-            stackIn_18_1 = new StringBuilder().append("vf.A(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L7;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L7;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("vf.A(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L8;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L8;
-            }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw dd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final static void a(byte param0, String param1, String param2) {
         try {
-            if (param0 <= 84) {
-                vf.a(-58, 69, -47, (byte) 17);
-            }
-            pc.a(-1, param2, param1, false);
+          if (param0 <= 84) {
+            vf.a(-58, 69, -47, (byte) 17);
+          }
+          pc.a(-1, param2, param1, false);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

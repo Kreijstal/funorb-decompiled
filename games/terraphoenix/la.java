@@ -18,33 +18,20 @@ public class la {
         field_d = param1;
         field_a = param2;
         try {
-          L0: {
-            L1: {
-              field_b = System.getProperty("user.home");
-              if (null == field_b) {
-                break L1;
-              } else {
-                field_b = field_b + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_b = System.getProperty("user.home");
+          if (null != field_b) {
+            field_b = field_b + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         var3 = 9 % ((param0 - 7) / 47);
         field_c = true;
-        if (null == field_b) {
-          field_b = "~/";
-          return;
-        } else {
+        if (null != field_b) {
           return;
         }
+        field_b = "~/";
     }
 
     public static File a(String param0, int param1) {

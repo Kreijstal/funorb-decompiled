@@ -10,7 +10,7 @@ final class pb extends kd {
     final static boolean c(boolean param0) {
         nl.field_c = param0 ? true : false;
         mc.field_i = 15000L + rf.c(0);
-        return (ta.field_g ^ -1) == -12 ? true : false;
+        return ta.field_g == 11 ? true : false;
     }
 
     private pb() throws Throwable {
@@ -18,20 +18,18 @@ final class pb extends kd {
     }
 
     public static void a(byte param0) {
-        if (param0 != -48) {
-          pb.a((byte) -113);
-          field_h = null;
-          field_j = null;
-          field_i = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == -48) {
           field_h = null;
           field_j = null;
           field_i = null;
           field_k = null;
           return;
         }
+        pb.a((byte) -113);
+        field_h = null;
+        field_j = null;
+        field_i = null;
+        field_k = null;
     }
 
     static {

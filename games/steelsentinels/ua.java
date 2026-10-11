@@ -34,14 +34,12 @@ final class ua extends ck {
     final static void a(int param0, int param1) {
         cf.field_o = param1 * 400 / 150;
         cf.field_D = 100 * param1 / 150;
-        if (param0 != -10931) {
-          ua.a(-70, -65);
-          cf.field_x = (param1 << 358871152) / 150;
-          return;
-        } else {
-          cf.field_x = (param1 << 358871152) / 150;
+        if (param0 == -10931) {
+          cf.field_x = (param1 << 16) / 150;
           return;
         }
+        ua.a(-70, -65);
+        cf.field_x = (param1 << 16) / 150;
     }
 
     public static void a(byte param0) {

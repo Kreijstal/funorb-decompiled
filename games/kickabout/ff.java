@@ -9,10 +9,10 @@ final class ff {
 
     public static void a(byte param0) {
         if (param0 <= 100) {
-            ff.a((byte) 118);
-            field_c = null;
-            field_b = null;
-            return;
+          ff.a((byte) 118);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

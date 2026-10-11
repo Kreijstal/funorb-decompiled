@@ -20,35 +20,20 @@ final class pb {
         RuntimeException var2 = null;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_b = (String) null;
-                break L1;
-              }
-            }
-            var4 = (bh) ((Object) wi.field_j.c((byte) 47));
-            L2: while (true) {
-              if (var4 == null) {
-                var5 = (ll) ((Object) jj.field_S.c((byte) 47));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    ak.a(-14722, var5, param0);
-                    var5 = (ll) ((Object) jj.field_S.b((byte) -105));
-                    continue L3;
-                  }
-                }
-              } else {
-                s.a(param1 ^ -4471, param0, var4);
-                var4 = (bh) ((Object) wi.field_j.b((byte) -105));
-                continue L2;
-              }
-            }
+          if (param1 != 0) {
+            field_b = (String) null;
           }
+          var4 = (bh) (wi.field_j.c((byte) 47));
+          while (var4 != null) {
+            s.a(param1 ^ -4471, param0, var4);
+            var4 = (bh) (wi.field_j.b((byte) -105));
+          }
+          var5 = (ll) (jj.field_S.c((byte) 47));
+          while (var5 != null) {
+            ak.a(-14722, var5, param0);
+            var5 = (ll) (jj.field_S.b((byte) -105));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -57,45 +42,28 @@ final class pb {
     }
 
     final static void b(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            var1_int = ed.field_c[0];
-            if (param0 > 42) {
-              var2 = 1;
-              L1: while (true) {
-                if (ed.field_c.length <= var2) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var3 = ed.field_c[var2];
-                  dm.a(pk.field_J, var2 << 800311396, pk.field_J, var1_int, var3);
-                  var1_int = var1_int + var3;
-                  var2++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var1_int = ed.field_c[0];
+          if (param0 <= 42) {
+            return;
           }
+          for (var2 = 1; ed.field_c.length > var2; var2++) {
+            var3 = ed.field_c[var2];
+            dm.a(pk.field_J, var2 << 4, pk.field_J, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw pf.a((Throwable) ((Object) var1), "pb.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -108,7 +76,7 @@ final class pb {
         field_e = null;
         field_c = null;
         if (param0 >= -80) {
-            field_c = (dd) null;
+          field_c = (dd) null;
         }
     }
 

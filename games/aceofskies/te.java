@@ -20,81 +20,53 @@ final class te extends wf {
         cp stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              var2 = new cp(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
-              if (param1 <= -75) {
-                kf.f(1);
-                stackIn_7_0 = (cp) (var2);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_5_0 = (cp) null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == null) {
+            stackIn_2_0 = null;
+            return (cp) (stackIn_2_0);
           }
+          var2 = new cp(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
+          if (param1 > -75) {
+            stackIn_5_0 = (cp) null;
+            return stackIn_5_0;
+          }
+          kf.f(1);
+          stackIn_7_0 = var2;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2_ref);
-
-            stackIn_10_1 = new StringBuilder().append("te.C(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (cp) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_10_0 = var2_ref;
+          stackIn_10_1 = new StringBuilder().append("te.C(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
           } else {
-            return stackIn_7_0;
+            stackIn_11_2 = "{...}";
           }
+          throw pn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         int var1_int = 0;
         int var2 = AceOfSkies.field_G ? 1 : 0;
+        int var1_intLifetime1;
         try {
-            io.field_c.a(0);
-            for (var1_int = 0; 32 > var1_int; var1_int++) {
-                pn.field_b[var1_int] = 0L;
-            }
-            if (param0 < 31) {
-                field_e = (char[]) null;
-            }
-            for (var1_int = 0; 32 > var1_int; var1_int++) {
-                ob.field_c[var1_int] = 0L;
-            }
-            eu.field_g = 0;
+          io.field_c.a(0);
+          for (var1_int = 0; 32 > var1_int; var1_int++) {
+            pn.field_b[var1_int] = 0L;
+          }
+          if (param0 < 31) {
+            field_e = (char[]) null;
+          }
+          for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
+            ob.field_c[var1_intLifetime1] = 0L;
+          }
+          eu.field_g = 0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + param0 + ')');
         }
     }
 
@@ -102,55 +74,45 @@ final class te extends wf {
         field_e = null;
         field_f = null;
         if (param0) {
-            return;
+          return;
         }
         field_g = null;
     }
 
     final static void a(int param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            int var2 = 0;
-            Throwable var3 = null;
-            var2 = 112 % ((param1 - 8) / 34);
-            try {
-              L0: {
-                fe.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var3 = decompiledCaughtException;
-                break L1;
-              }
-            }
+          Throwable decompiledCaughtException = null;
+          int var2 = 0;
+          Throwable var3 = null;
+          var2 = 112 % ((param1 - 8) / 34);
+          try {
+            fe.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void b(boolean param0) {
-        if (param0) {
+        if (!param0) {
+          field_i = -60L;
           if (null != ft.field_l) {
             ft.field_l.a(1);
             ft.field_l = null;
             return;
-          } else {
-            return;
           }
-        } else {
-          field_i = -60L;
-          if (null == ft.field_l) {
-            return;
-          } else {
-            ft.field_l.a(1);
-            ft.field_l = null;
-            return;
-          }
+          return;
         }
+        if (null == ft.field_l) {
+          return;
+        }
+        ft.field_l.a(1);
+        ft.field_l = null;
     }
 
     static {

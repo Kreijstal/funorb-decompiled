@@ -7,104 +7,54 @@ final class sd {
     static qk field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8, int param9) {
-        int var10;
-        int var11;
-        int var12;
-        L0: {
-          if (param3 <= 0) {
-            param3 = 0;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var12 = 0;
+        int var12Lifetime1;
+        if (param3 <= 0) {
+          param3 = 0;
         }
         if (param8 <= param3) {
           return;
-        } else {
-          L1: {
-            param5 = param5 - param3;
-            param9 = param9 - param3;
-            var10 = -param3 + param8;
-            if (param9 >= vj.field_h) {
-              break L1;
-            } else {
-              param1 = param1 - (-param9 + vj.field_h);
-              param9 = vj.field_h;
-              break L1;
-            }
+        }
+        param5 = param5 - param3;
+        param9 = param9 - param3;
+        int var10 = -param3 + param8;
+        if (param9 < vj.field_h) {
+          param1 = param1 - (-param9 + vj.field_h);
+          param9 = vj.field_h;
+        }
+        if (vj.field_f > param5) {
+          param4 = param4 - (-param5 + vj.field_f);
+          param5 = vj.field_f;
+        }
+        int var11 = 124 / ((-52 - param6) / 58);
+        if (!(param9 + param1 <= vj.field_b)) {
+          param1 = -param9 + vj.field_b;
+        }
+        if (!(vj.field_a >= param5 + param4)) {
+          param4 = -param5 + vj.field_a;
+        }
+        if (param4 <= 0) {
+          return;
+        }
+        if (param1 > 0) {
+          if (var10 <= param5 % param8) {
+            var12 = -(param5 % param8) + param8;
+            param5 = param5 + var12;
+            param4 = param4 - var12;
           }
-          L2: {
-            if (vj.field_f <= param5) {
-              break L2;
-            } else {
-              param4 = param4 - (-param5 + vj.field_f);
-              param5 = vj.field_f;
-              break L2;
-            }
+          if (var10 <= param9 % param8) {
+            var12Lifetime1 = param8 - param9 % param8;
+            param9 = param9 + var12Lifetime1;
+            param1 = param1 - var12Lifetime1;
           }
-          L3: {
-            var11 = 124 / ((-52 - param6) / 58);
-            if (param9 - -param1 > vj.field_b) {
-              param1 = -param9 + vj.field_b;
-              break L3;
-            } else {
-              break L3;
-            }
+          if (var10 <= (param4 + (param5 - 1)) % param8) {
+            param4 = param4 - (1 + (-1 + param4 + param5) % param8 - var10);
           }
-          L4: {
-            if (vj.field_a < param5 + param4) {
-              param4 = -param5 + vj.field_a;
-              break L4;
-            } else {
-              break L4;
-            }
+          if (var10 <= (param1 + param9 - 1) % param8) {
+            param1 = param1 - (-var10 + 1 + (-1 + (param1 + param9)) % param8);
           }
-          if (-1 > (param4 ^ -1)) {
-            if (param1 <= 0) {
-              return;
-            } else {
-              L5: {
-                if (var10 <= param5 % param8) {
-                  var12 = -(param5 % param8) + param8;
-                  param5 = param5 + var12;
-                  param4 = param4 - var12;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if (var10 > param9 % param8) {
-                  break L6;
-                } else {
-                  var12 = param8 - param9 % param8;
-                  param9 = param9 + var12;
-                  param1 = param1 - var12;
-                  break L6;
-                }
-              }
-              L7: {
-                if (var10 <= (param4 + (param5 + -1)) % param8) {
-                  param4 = param4 - (1 - -((-1 + param4 + param5) % param8) + -var10);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              L8: {
-                if (var10 <= (param1 + param9 + -1) % param8) {
-                  param1 = param1 - (-var10 + 1 + (-1 + (param1 + param9)) % param8);
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              ke.a(param1, vj.field_l - param4, param5 % param8, param0, -84, param2, vj.field_l * param9 + param5, param4, vj.field_j, param9 % param8, var10, param7, param3);
-              return;
-            }
-          } else {
-            return;
-          }
+          ke.a(param1, vj.field_l - param4, param5 % param8, param0, -84, param2, vj.field_l * param9 + param5, param4, vj.field_j, param9 % param8, var10, param7, param3);
+          return;
         }
     }
 
@@ -112,9 +62,9 @@ final class sd {
         field_a = null;
         field_c = null;
         if (param0 <= 21) {
-            field_a = (qk) null;
-            field_b = null;
-            return;
+          field_a = (qk) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

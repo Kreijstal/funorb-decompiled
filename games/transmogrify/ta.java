@@ -13,8 +13,8 @@ final class ta {
 
     final static int a(int param0, int param1) {
         int var2 = param0;
-        if (!(0 == (7 & param1))) {
-            var2 = -(7 & param1) + 8;
+        if (0 != (7 & param1)) {
+          var2 = -(7 & param1) + 8;
         }
         int var3 = var2 + param1;
         return var3;
@@ -24,16 +24,14 @@ final class ta {
         field_b = null;
         field_h = null;
         field_g = null;
-        if (param0 != 7) {
-          ta.a(120, -46);
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 7) {
           field_f = null;
           field_d = null;
           return;
         }
+        ta.a(120, -46);
+        field_f = null;
+        field_d = null;
     }
 
     static {

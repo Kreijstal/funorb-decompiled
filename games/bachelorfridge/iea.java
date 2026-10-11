@@ -10,7 +10,7 @@ final class iea {
     final static void a(int param0, int param1, byte param2) {
         qaa.field_c = param0;
         if (param2 > -81) {
-            return;
+          return;
         }
         mg.field_k = param1;
     }
@@ -20,7 +20,7 @@ final class iea {
         field_a = null;
         field_d = null;
         if (param0 != 24166) {
-            return;
+          return;
         }
         field_b = null;
     }

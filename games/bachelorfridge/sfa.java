@@ -9,60 +9,53 @@ abstract class sfa extends bw {
     abstract ii a(op param0, int param1);
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        int var5;
-        var5 = -51 % ((-79 - param2) / 46);
-        if (param3 >= an.field_q) {
-          if (param3 > ha.field_n) {
-            return;
-          } else {
-            param1 = cr.a(eo.field_l, param1, pw.field_x, 0);
-            param4 = cr.a(eo.field_l, param4, pw.field_x, 0);
-            ew.a(param1, param3, -82, param0, param4);
-            return;
-          }
-        } else {
+        int var5 = -51 % ((-79 - param2) / 46);
+        if (param3 < an.field_q) {
+          return;
+        }
+        if (param3 <= ha.field_n) {
+          param1 = cr.a(eo.field_l, param1, pw.field_x, 0);
+          param4 = cr.a(eo.field_l, param4, pw.field_x, 0);
+          ew.a(param1, param3, -82, param0, param4);
           return;
         }
     }
 
     sfa(int param0, int param1, nq param2) {
         try {
-            this.field_h = param2;
-            this.field_f = param0;
-            this.field_g = param1;
+          this.field_h = param2;
+          this.field_f = param0;
+          this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "sfa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pf var3;
-        var3 = sja.field_fb;
+        pf var3 = sja.field_fb;
         var3.c(param0, (byte) 119);
         var3.d(3, 0);
         var3.d(10, 0);
         var3.b(param1, -125);
-        if (param2) {
-          sfa.a(-72, -127, false);
-          return;
-        } else {
+        if (!param2) {
           return;
         }
+        sfa.a(-72, -127, false);
     }
 
     public final String toString() {
         oha var1 = al.a(123, this.field_g);
         if (var1 == null) {
-            return "Move not found.";
+          return "Move not found.";
         }
         return var1.field_f;
     }
 
     void a(int param0, lu param1) {
         try {
-            int var3_int = 34 % ((param0 - 61) / 53);
+          int var3_int = 34 % ((param0 - 61) / 53);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "sfa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

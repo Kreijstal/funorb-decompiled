@@ -20,119 +20,64 @@ final class hi {
     public static void b(int param0) {
         field_i = null;
         if (param0 < 9) {
-            field_a = 88;
-            field_h = null;
-            field_l = null;
-            return;
+          field_a = 88;
+          field_h = null;
+          field_l = null;
+          return;
         }
         field_h = null;
         field_l = null;
     }
 
     final void a(int param0) {
-        int var2;
+        int var2 = 0;
         int var4;
         int var3;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var2 = 0;
-        L0: while (true) {
-          if (30 <= var2) {
-            var3 = 39 / ((param0 - 56) / 63);
-            return;
-          } else {
-            if (this.field_c[var2] >= 0.0) {
-              if ((this.field_k[var2] ^ -1) <= -1) {
-                if (5.0 < this.field_b[var2]) {
-                  if (this.field_e[var2] > 5.0) {
-                    wj.c((int)this.field_b[var2], (int)this.field_e[var2], (int)this.field_c[var2], this.field_f[var2], this.field_k[var2]);
-                    var2++;
-                    continue L0;
-                  } else {
-                    var2++;
-                    continue L0;
-                  }
-                } else {
-                  var2++;
-                  continue L0;
-                }
-              } else {
-                var2++;
-                continue L0;
-              }
-            } else {
-              var2++;
-              continue L0;
-            }
+        for (var2 = 0; 30 > var2; var2++) {
+          if (this.field_c[var2] >= 0.0 &&
+            this.field_k[var2] >= 0 &&
+            5.0 < this.field_b[var2] &&
+            this.field_e[var2] > 5.0) {
+            wj.c((int)this.field_b[var2], (int)this.field_e[var2], (int)this.field_c[var2], this.field_f[var2], this.field_k[var2]);
           }
         }
+        var3 = 39 / ((param0 - 56) / 63);
     }
 
     final void a(int param0, int param1, double param2, double param3, int param4, double param5, double param6, double param7, int param8) {
         int var15;
         int var16;
         var16 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param1 != 30) {
-          field_l = (ok) null;
-          var15 = 0;
-          L0: while (true) {
-            if (-30 >= (var15 ^ -1)) {
-              this.field_b[29] = param7;
-              this.field_e[29] = param3;
-              this.field_c[29] = param2;
-              this.field_f[29] = param0;
-              this.field_k[29] = param8;
-              return;
-            } else {
-              this.field_c[var15] = this.field_c[var15 + 1] + (double)this.field_d * Math.random();
-              this.field_k[var15] = this.field_k[1 + var15] + -(this.field_d * 4);
-              if (0.0 < this.field_c[var15]) {
-                if ((this.field_k[var15] ^ -1) < -1) {
-                  this.field_b[var15] = this.field_b[var15 + 1] + param6 * Math.random() + (-1.0 + 2.99 * Math.random());
-                  this.field_e[var15] = this.field_e[var15 - -1] + Math.random() * param5 - (2.0 * (Math.random() + Math.random() + Math.random()) - 3.0);
-                  this.field_f[var15] = this.field_f[1 + var15];
-                  var15++;
-                  continue L0;
-                } else {
-                  var15++;
-                  continue L0;
-                }
-              } else {
-                var15++;
-                continue L0;
-              }
+        if (param1 == 30) {
+          for (var15 = 0; var15 < 29; var15++) {
+            this.field_c[var15] = this.field_c[var15 + 1] + (double)this.field_d * Math.random();
+            this.field_k[var15] = this.field_k[1 + var15] - this.field_d * 4;
+            if (0.0 < this.field_c[var15] &&
+              this.field_k[var15] > 0) {
+              this.field_b[var15] = this.field_b[var15 + 1] + param6 * Math.random() + (-1.0 + 2.99 * Math.random());
+              this.field_e[var15] = this.field_e[var15 + 1] + Math.random() * param5 - (2.0 * (Math.random() + Math.random() + Math.random()) - 3.0);
+              this.field_f[var15] = this.field_f[1 + var15];
             }
           }
         } else {
-          var15 = 0;
-          L1: while (true) {
-            if (-30 >= (var15 ^ -1)) {
-              this.field_b[29] = param7;
-              this.field_e[29] = param3;
-              this.field_c[29] = param2;
-              this.field_f[29] = param0;
-              this.field_k[29] = param8;
-              return;
-            } else {
-              this.field_c[var15] = this.field_c[var15 + 1] + (double)this.field_d * Math.random();
-              this.field_k[var15] = this.field_k[1 + var15] + -(this.field_d * 4);
-              if (0.0 < this.field_c[var15]) {
-                if ((this.field_k[var15] ^ -1) < -1) {
-                  this.field_b[var15] = this.field_b[var15 + 1] + param6 * Math.random() + (-1.0 + 2.99 * Math.random());
-                  this.field_e[var15] = this.field_e[var15 - -1] + Math.random() * param5 - (2.0 * (Math.random() + Math.random() + Math.random()) - 3.0);
-                  this.field_f[var15] = this.field_f[1 + var15];
-                  var15++;
-                  continue L1;
-                } else {
-                  var15++;
-                  continue L1;
-                }
-              } else {
-                var15++;
-                continue L1;
-              }
+          field_l = (ok) null;
+          for (var15 = 0; var15 < 29; var15++) {
+            this.field_c[var15] = this.field_c[var15 + 1] + (double)this.field_d * Math.random();
+            this.field_k[var15] = this.field_k[1 + var15] - this.field_d * 4;
+            if (0.0 < this.field_c[var15] &&
+              this.field_k[var15] > 0) {
+              this.field_b[var15] = this.field_b[var15 + 1] + param6 * Math.random() + (-1.0 + 2.99 * Math.random());
+              this.field_e[var15] = this.field_e[var15 + 1] + Math.random() * param5 - (2.0 * (Math.random() + Math.random() + Math.random()) - 3.0);
+              this.field_f[var15] = this.field_f[1 + var15];
             }
           }
         }
+        this.field_b[29] = param7;
+        this.field_e[29] = param3;
+        this.field_c[29] = param2;
+        this.field_f[29] = param0;
+        this.field_k[29] = param8;
     }
 
     final static int a(int param0, int param1, Random param2) {
@@ -144,71 +89,37 @@ final class hi {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (-1 > (param0 ^ -1)) {
-              if (!b.a(98, param0)) {
-                var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
-                L1: while (true) {
-                  var4 = param2.nextInt();
-                  if (var4 < var3_int) {
-                    if (param1 == 4) {
-                      stackIn_12_0 = DrPhlogistonSavesTheEarth.a(var4, param0, param1 + 172);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      stackIn_10_0 = 120;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  } else {
-                    continue L1;
-                  }
-                }
-              } else {
-                stackIn_4_0 = (int)((4294967295L & (long)param2.nextInt()) * (long)param0 >> -1132797152);
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              throw new IllegalArgumentException();
-            }
+          if (param0 <= 0) {
+            throw new IllegalArgumentException();
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
-
-            stackIn_15_1 = new StringBuilder().append("hi.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
+          if (b.a(98, param0)) {
+            stackIn_4_0 = (int)((4294967295L & (long)param2.nextInt()) * (long)param0 >> 32);
+            return stackIn_4_0;
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
-          } else {
+          var3_int = -(int)(4294967296L % (long)param0) + -2147483648;
+          do {
+            var4 = param2.nextInt();
+          } while (var4 >= var3_int);
+          if (param1 == 4) {
+            stackIn_12_0 = DrPhlogistonSavesTheEarth.a(var4, param0, param1 + 172);
             return stackIn_12_0;
           }
+          stackIn_10_0 = 120;
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("hi.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -220,11 +131,11 @@ final class hi {
         this.field_f = new int[30];
         this.field_e = new double[30];
         for (var2 = 0; 30 > var2; var2++) {
-            this.field_b[var2] = -1.0;
-            this.field_e[var2] = -1.0;
-            this.field_c[var2] = -1.0;
-            this.field_f[var2] = -1;
-            this.field_k[var2] = 128;
+          this.field_b[var2] = -1.0;
+          this.field_e[var2] = -1.0;
+          this.field_c[var2] = -1.0;
+          this.field_f[var2] = -1;
+          this.field_k[var2] = 128;
         }
         this.field_d = param0;
     }

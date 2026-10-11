@@ -9,7 +9,7 @@ final class ia {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -17,9 +17,9 @@ final class ia {
 
     final static void a(int param0, int param1) {
         if (param0 != -14296) {
-            field_b = (kc[]) null;
-            le.h(param0 + 12303);
-            return;
+          field_b = (kc[]) null;
+          le.h(param0 + 12303);
+          return;
         }
         le.h(param0 + 12303);
     }

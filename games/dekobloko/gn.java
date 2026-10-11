@@ -12,7 +12,7 @@ final class gn {
     public static void a(int param0) {
         field_e = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_c = (String[][]) null;
         field_d = null;
@@ -25,103 +25,54 @@ final class gn {
         java.net.URL stackIn_11_0 = null;
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        Object stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        Object var4Lifetime1;
+        Object var4Lifetime2;
         try {
-          L0: {
-            var3 = null;
-            if (param1 == -1) {
-              L1: {
-                if (null == rb.field_l) {
-                  break L1;
-                } else {
-                  if (rb.field_l.equals(param2.getParameter("settings"))) {
-                    break L1;
-                  } else {
-                    var3 = rb.field_l;
-                    var4 = var3;
-                    var4 = var3;
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                var4 = null;
-                if (u.field_a == null) {
-                  break L2;
-                } else {
-                  if (!u.field_a.equals(param2.getParameter("session"))) {
-                    var4 = u.field_a;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_11_0 = pl.a((String) (var4), (String) (var3), false, param0, -1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (java.net.URL) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var3 = null;
+          if (param1 != -1) {
+            stackIn_2_0 = (java.net.URL) null;
+            return stackIn_2_0;
           }
+          if (null != rb.field_l &&
+            !rb.field_l.equals(param2.getParameter("settings"))) {
+            var3 = rb.field_l;
+            var4 = var3;
+            var4Lifetime2 = var3;
+          }
+          var4Lifetime1 = null;
+          if (u.field_a != null &&
+            !u.field_a.equals(param2.getParameter("session"))) {
+            var4Lifetime1 = u.field_a;
+          }
+          stackIn_11_0 = pl.a((String) (var4Lifetime1), (String) (var3), false, param0, -1);
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_14_0 = var3;
-
-            stackIn_14_1 = new StringBuilder().append("gn.B(");
-
-            if (param0 == null) {
-              stackIn_15_0 = stackIn_14_0;
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = stackIn_14_0;
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("gn.B(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_11_0;
+          throw dh.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         if (param0 != -29550) {
-            return;
+          return;
         }
         ef.f((byte) 53);
         uf.k(-4840);

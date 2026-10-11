@@ -19,63 +19,38 @@ final class ej implements Runnable {
 
     final be a(int param0) {
         if (param0 != -5) {
-            return (be) null;
+          return (be) null;
         }
-        if (!(-4 != (this.field_j ^ -1))) {
-            return this.field_g;
+        if (this.field_j == 3) {
+          return this.field_g;
         }
         return null;
     }
 
     final static boolean a(boolean param0, CharSequence param1) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param0) {
-              stackIn_4_0 = mb.a(55, param1, 10, true);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!param0) {
+            stackIn_4_0 = mb.a(55, param1, 10, true);
+            return stackIn_4_0;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("ej.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("ej.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
+          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -85,183 +60,107 @@ final class ej implements Runnable {
         OutputStream var3 = null;
         java.net.Socket var4 = null;
         CharSequence var5 = null;
-        if (-3 >= (this.field_j ^ -1)) {
+        if (this.field_j >= 2) {
           return true;
-        } else {
-          L0: {
-            if (-1 == (this.field_j ^ -1)) {
-              L1: {
-                if (null == this.field_i) {
-                  this.field_i = this.field_c.a(false, this.field_l);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (-1 == (this.field_i.field_f ^ -1)) {
-                return false;
-              } else {
-                if ((this.field_i.field_f ^ -1) != -2) {
-                  this.field_j = this.field_j + 1;
-                  this.field_i = null;
-                  return false;
-                } else {
-                  break L0;
-                }
-              }
-            } else {
-              break L0;
-            }
+        }
+        if (this.field_j == 0) {
+          if (null == this.field_i) {
+            this.field_i = this.field_c.a(false, this.field_l);
           }
-          L2: {
-            if (this.field_j != 1) {
-              break L2;
-            } else {
-              L3: {
-                if (null != this.field_h) {
-                  break L3;
-                } else {
-                  this.field_h = this.field_c.a(55, 443, this.field_l.getHost());
-                  break L3;
-                }
-              }
-              if (-1 == (this.field_h.field_f ^ -1)) {
-                return false;
-              } else {
-                if (this.field_h.field_f != 1) {
-                  this.field_j = this.field_j + 1;
-                  this.field_h = null;
-                  return false;
-                } else {
-                  break L2;
-                }
-              }
-            }
+          if (this.field_i.field_f == 0) {
+            return false;
           }
-          if (this.field_a == null) {
-            try {
-              L4: {
-                L5: {
-                  if (0 != this.field_j) {
-                    break L5;
-                  } else {
-                    this.field_a = (DataInputStream) (this.field_i.field_e);
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (1 == this.field_j) {
-                    var4 = (java.net.Socket) (this.field_h.field_e);
-                    var4.setSoTimeout(10000);
-                    var3 = var4.getOutputStream();
-                    var3.write(17);
-                    var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_l.getFile() + "\n\n"));
-                    var3.write(bc.a((byte) -6, var5));
-                    this.field_a = new DataInputStream(var4.getInputStream());
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                this.field_g.field_k = 0;
-                break L4;
-              }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L7: {
-                var2 = (IOException) (Object) decompiledCaughtException;
-                this.finalize();
-                this.field_j = this.field_j + 1;
-                if (null == this.field_k) {
-                  this.field_k = this.field_c.a(5, (Runnable) (this), 72);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              if (-1 == (this.field_k.field_f ^ -1)) {
-                return false;
-              } else {
-                if (param0 >= 72) {
-                  if (-2 != (this.field_k.field_f ^ -1)) {
-                    this.finalize();
-                    this.field_j = this.field_j + 1;
-                    return false;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  this.finalize();
-                  if (-2 == (this.field_k.field_f ^ -1)) {
-                    return false;
-                  } else {
-                    this.finalize();
-                    this.field_j = this.field_j + 1;
-                    return false;
-                  }
-                }
-              }
-            }
-            L8: {
-              if (null == this.field_k) {
-                this.field_k = this.field_c.a(5, (Runnable) (this), 72);
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            if (-1 == (this.field_k.field_f ^ -1)) {
-              return false;
-            } else {
-              L9: {
-                if (param0 >= 72) {
-                  break L9;
-                } else {
-                  this.finalize();
-                  break L9;
-                }
-              }
-              L10: {
-                if (-2 == (this.field_k.field_f ^ -1)) {
-                  break L10;
-                } else {
-                  this.finalize();
-                  this.field_j = this.field_j + 1;
-                  break L10;
-                }
-              }
-              return false;
-            }
-          } else {
-            L11: {
-              if (null == this.field_k) {
-                this.field_k = this.field_c.a(5, (Runnable) (this), 72);
-                break L11;
-              } else {
-                break L11;
-              }
-            }
-            if (-1 == (this.field_k.field_f ^ -1)) {
-              return false;
-            } else {
-              L12: {
-                if (param0 >= 72) {
-                  break L12;
-                } else {
-                  this.finalize();
-                  break L12;
-                }
-              }
-              if (-2 != (this.field_k.field_f ^ -1)) {
-                this.finalize();
-                this.field_j = this.field_j + 1;
-                return false;
-              } else {
-                return false;
-              }
-            }
+          if (this.field_i.field_f != 1) {
+            this.field_j = this.field_j + 1;
+            this.field_i = null;
+            return false;
           }
         }
+        if (this.field_j == 1) {
+          if (null == this.field_h) {
+            this.field_h = this.field_c.a(55, 443, this.field_l.getHost());
+          }
+          if (this.field_h.field_f == 0) {
+            return false;
+          }
+          if (this.field_h.field_f != 1) {
+            this.field_j = this.field_j + 1;
+            this.field_h = null;
+            return false;
+          }
+        }
+        if (this.field_a != null) {
+          if (null == this.field_k) {
+            this.field_k = this.field_c.a(5, (Runnable) (this), 72);
+          }
+          if (this.field_k.field_f == 0) {
+            return false;
+          }
+          if (param0 < 72) {
+            this.finalize();
+          }
+          if (this.field_k.field_f == 1) {
+            return false;
+          }
+          this.finalize();
+          this.field_j = this.field_j + 1;
+          return false;
+        }
+        try {
+          if (0 == this.field_j) {
+            this.field_a = (DataInputStream) (this.field_i.field_e);
+          }
+          if (1 == this.field_j) {
+            var4 = (java.net.Socket) (this.field_h.field_e);
+            var4.setSoTimeout(10000);
+            var3 = var4.getOutputStream();
+            var3.write(17);
+            var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_l.getFile() + "\n\n"));
+            var3.write(bc.a((byte) -6, var5));
+            this.field_a = new DataInputStream(var4.getInputStream());
+          }
+          this.field_g.field_k = 0;
+        } catch (java.io.IOException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (IOException) (Object) decompiledCaughtException;
+          this.finalize();
+          this.field_j = this.field_j + 1;
+          if (null == this.field_k) {
+            this.field_k = this.field_c.a(5, (Runnable) (this), 72);
+          }
+          if (this.field_k.field_f == 0) {
+            return false;
+          }
+          if (param0 >= 72) {
+            if (this.field_k.field_f == 1) {
+              return false;
+            }
+            this.finalize();
+            this.field_j = this.field_j + 1;
+            return false;
+          }
+          this.finalize();
+          if (this.field_k.field_f == 1) {
+            return false;
+          }
+          this.finalize();
+          this.field_j = this.field_j + 1;
+          return false;
+        }
+        if (null == this.field_k) {
+          this.field_k = this.field_c.a(5, (Runnable) (this), 72);
+        }
+        if (this.field_k.field_f == 0) {
+          return false;
+        }
+        if (param0 < 72) {
+          this.finalize();
+        }
+        if (this.field_k.field_f != 1) {
+          this.finalize();
+          this.field_j = this.field_j + 1;
+        }
+        return false;
     }
 
     final static int a(int param0, int param1) {
@@ -278,270 +177,71 @@ final class ej implements Runnable {
           rj.field_d.field_e = rj.field_d.field_e + 1;
           if (param1 == 51) {
             rj.field_d.field_b = 2;
-            if (-3 < (rj.field_d.field_e ^ -1)) {
-              if (-3 < (rj.field_d.field_e ^ -1)) {
-                if ((rj.field_d.field_e ^ -1) > -5) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (-51 == (param1 ^ -1)) {
-                  return 5;
-                } else {
-                  if ((rj.field_d.field_e ^ -1) > -5) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            } else {
-              if ((param1 ^ -1) == -52) {
-                return 2;
-              } else {
-                if (-3 < (rj.field_d.field_e ^ -1)) {
-                  if ((rj.field_d.field_e ^ -1) > -5) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  if (-51 == (param1 ^ -1)) {
-                    return 5;
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              }
-            }
           } else {
-            if ((param1 ^ -1) != -51) {
+            if (param1 != 50) {
               rj.field_d.field_b = 1;
-              if (-3 < (rj.field_d.field_e ^ -1)) {
-                if (-3 < (rj.field_d.field_e ^ -1)) {
-                  if ((rj.field_d.field_e ^ -1) > -5) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  if (-51 == (param1 ^ -1)) {
-                    return 5;
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              } else {
-                if ((param1 ^ -1) == -52) {
-                  return 2;
-                } else {
-                  if (-3 >= (rj.field_d.field_e ^ -1)) {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      if ((rj.field_d.field_e ^ -1) > -5) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    }
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              }
             } else {
               rj.field_d.field_b = 5;
-              if (-3 < (rj.field_d.field_e ^ -1)) {
-                if (-3 < (rj.field_d.field_e ^ -1)) {
-                  if ((rj.field_d.field_e ^ -1) > -5) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  if (-51 == (param1 ^ -1)) {
-                    return 5;
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                }
-              } else {
-                if ((param1 ^ -1) == -52) {
-                  return 2;
-                } else {
-                  if (-3 < (rj.field_d.field_e ^ -1)) {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      if ((rj.field_d.field_e ^ -1) > -5) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    }
-                  }
-                }
-              }
             }
+          }
+          if (rj.field_d.field_e >= 2 &&
+            param1 == 51) {
+            return 2;
+          }
+          if (rj.field_d.field_e >= 2 &&
+            param1 == 50) {
+            return 5;
+          }
+          if (rj.field_d.field_e < 4) {
+            return -1;
+          }
+          return 1;
+        }
+        field_b = (String) null;
+        rj.field_d.field_e = rj.field_d.field_e + 1;
+        if (param1 == 51) {
+          rj.field_d.field_b = 2;
+          if (rj.field_d.field_e >= 2) {
+            if (param1 == 51) {
+              return 2;
+            }
+            if (rj.field_d.field_e >= 2 &&
+              param1 == 50) {
+              return 5;
+            }
+            if (rj.field_d.field_e < 4) {
+              return -1;
+            }
+            return 1;
+          }
+          if (rj.field_d.field_e < 2) {
+            if (rj.field_d.field_e < 4) {
+              return -1;
+            }
+            return 1;
+          }
+          if (param1 == 50) {
+            return 5;
           }
         } else {
-          field_b = (String) null;
-          rj.field_d.field_e = rj.field_d.field_e + 1;
-          if (param1 == 51) {
-            rj.field_d.field_b = 2;
-            if (-3 >= (rj.field_d.field_e ^ -1)) {
-              if ((param1 ^ -1) == -52) {
-                return 2;
-              } else {
-                if (-3 >= (rj.field_d.field_e ^ -1)) {
-                  if (-51 == (param1 ^ -1)) {
-                    return 5;
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) > -5) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  }
-                } else {
-                  if ((rj.field_d.field_e ^ -1) > -5) {
-                    return -1;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-            } else {
-              if (-3 < (rj.field_d.field_e ^ -1)) {
-                if ((rj.field_d.field_e ^ -1) > -5) {
-                  return -1;
-                } else {
-                  return 1;
-                }
-              } else {
-                if (-51 != (param1 ^ -1)) {
-                  if ((rj.field_d.field_e ^ -1) <= -5) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return 5;
-                }
-              }
-            }
+          if (param1 != 50) {
+            rj.field_d.field_b = 1;
           } else {
-            if ((param1 ^ -1) != -51) {
-              rj.field_d.field_b = 1;
-              if (-3 >= (rj.field_d.field_e ^ -1)) {
-                if ((param1 ^ -1) == -52) {
-                  return 2;
-                } else {
-                  if (-3 >= (rj.field_d.field_e ^ -1)) {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      if ((rj.field_d.field_e ^ -1) <= -5) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    }
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  }
-                }
-              } else {
-                L0: {
-                  if (-3 < (rj.field_d.field_e ^ -1)) {
-                    break L0;
-                  } else {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-                if ((rj.field_d.field_e ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              rj.field_d.field_b = 5;
-              if (-3 >= (rj.field_d.field_e ^ -1)) {
-                if ((param1 ^ -1) == -52) {
-                  return 2;
-                } else {
-                  if (-3 >= (rj.field_d.field_e ^ -1)) {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      if ((rj.field_d.field_e ^ -1) <= -5) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    }
-                  } else {
-                    if ((rj.field_d.field_e ^ -1) <= -5) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  }
-                }
-              } else {
-                L1: {
-                  if (-3 < (rj.field_d.field_e ^ -1)) {
-                    break L1;
-                  } else {
-                    if (-51 == (param1 ^ -1)) {
-                      return 5;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                if ((rj.field_d.field_e ^ -1) <= -5) {
-                  return 1;
-                } else {
-                  return -1;
-                }
-              }
-            }
+            rj.field_d.field_b = 5;
+          }
+          if (rj.field_d.field_e >= 2 &&
+            param1 == 51) {
+            return 2;
+          }
+          if (rj.field_d.field_e >= 2 &&
+            param1 == 50) {
+            return 5;
           }
         }
+        if (rj.field_d.field_e >= 4) {
+          return 1;
+        }
+        return -1;
     }
 
     final static int a(int param0, int param1, CharSequence param2) {
@@ -550,124 +250,95 @@ final class ej implements Runnable {
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = -55 % ((-73 - param1) / 38);
-            stackIn_1_0 = rd.a(8058, true, param2, param0);
-            break L0;
-          }
+          var3_int = -55 % ((-73 - param1) / 38);
+          stackIn_1_0 = rd.a(8058, true, param2, param0);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("ej.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("ej.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public final void run() {
         try {
-            int var1_int = 0;
-            Object var1 = null;
-            Object var2 = null;
-            Throwable var3 = null;
-            int var4 = 0;
-            Throwable decompiledCaughtException = null;
-            var4 = TrackController.field_F ? 1 : 0;
-            try {
-              L0: while (true) {
-                L1: {
-                  if (this.field_g.field_k >= this.field_g.field_j.length) {
-                    break L1;
-                  } else {
-                    var1_int = this.field_a.read(this.field_g.field_j, this.field_g.field_k, -this.field_g.field_k + this.field_g.field_j.length);
-                    if ((var1_int ^ -1) > -1) {
-                      break L1;
-                    } else {
-                      this.field_g.field_k = this.field_g.field_k + var1_int;
-                      continue L0;
-                    }
-                  }
-                }
-                if (this.field_g.field_j.length == this.field_g.field_k) {
-                  throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_j.length + " " + this.field_l));
-                } else {
-                  var1 = this;
-                  synchronized (var1) {
-                    L2: {
-                      this.finalize();
-                      this.field_j = 3;
-                      break L2;
-                    }
-                  }
-                  return;
-                }
+          int var1_int = 0;
+          Object var1 = null;
+          Object var2 = null;
+          Throwable var3 = null;
+          int var4 = 0;
+          Throwable decompiledCaughtException = null;
+          var4 = TrackController.field_F ? 1 : 0;
+          try {
+            while (this.field_g.field_k < this.field_g.field_j.length) {
+              var1_int = this.field_a.read(this.field_g.field_j, this.field_g.field_k, -this.field_g.field_k + this.field_g.field_j.length);
+              if (var1_int >= 0) {
+                this.field_g.field_k = this.field_g.field_k + var1_int;
+                continue;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2 = this;
-              synchronized (var2) {
-                L3: {
-                  this.finalize();
-                  this.field_j = this.field_j + 1;
-                  break L3;
-                }
-              }
-              return;
+              break;
             }
+            if (this.field_g.field_j.length == this.field_g.field_k) {
+              throw ej.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_j.length + " " + this.field_l));
+            }
+            var1 = this;
+            synchronized (var1) {
+              this.finalize();
+              this.field_j = 3;
+            }
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var2 = this;
+            synchronized (var2) {
+              this.finalize();
+              this.field_j = this.field_j + 1;
+            }
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     protected final void finalize() {
         if (null != this.field_i) {
-            if (this.field_i.field_e != null) {
-                try {
-                    ((DataInputStream) (this.field_i.field_e)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_i = null;
-        }
-        if (null != this.field_h) {
-            if (!(null == this.field_h.field_e)) {
-                try {
-                    ((java.net.Socket) (this.field_h.field_e)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_h = null;
-        }
-        if (!(this.field_a == null)) {
+          if (this.field_i.field_e != null) {
             try {
-                this.field_a.close();
+              ((DataInputStream) (this.field_i.field_e)).close();
             } catch (Exception exception) {
             }
-            this.field_a = null;
+          }
+          this.field_i = null;
+        }
+        if (null != this.field_h) {
+          if (null != this.field_h.field_e) {
+            try {
+              ((java.net.Socket) (this.field_h.field_e)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_h = null;
+        }
+        if (this.field_a != null) {
+          try {
+            this.field_a.close();
+          } catch (Exception exception) {
+          }
+          this.field_a = null;
         }
         this.field_k = null;
     }
@@ -677,20 +348,20 @@ final class ej implements Runnable {
         field_f = null;
         field_d = null;
         if (param0 != 17) {
-            field_e = (mk) null;
-            field_e = null;
-            return;
+          field_e = (mk) null;
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     ej(uf param0, java.net.URL param1, int param2) {
         try {
-            this.field_l = param1;
-            this.field_c = param0;
-            this.field_g = new be(param2);
+          this.field_l = param1;
+          this.field_c = param0;
+          this.field_g = new be(param2);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

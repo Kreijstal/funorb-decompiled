@@ -10,7 +10,7 @@ final class aj {
         field_b = null;
         field_a = null;
         if (param0 != -10619) {
-            aj.a(-62);
+          aj.a(-62);
         }
     }
 

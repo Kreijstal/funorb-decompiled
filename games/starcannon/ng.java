@@ -7,7 +7,7 @@ final class ng extends fe implements ub {
 
     public final he a(boolean param0) {
         if (param0) {
-            return (he) null;
+          return (he) null;
         }
         return this.field_L;
     }
@@ -24,67 +24,59 @@ final class ng extends fe implements ub {
 
     final String d(int param0) {
         if (!this.field_h) {
-            return null;
+          return null;
         }
         if (this.field_p == null) {
-            return null;
+          return null;
         }
-        vc.a(la.field_c, pe.field_d + -this.field_K + this.field_i, 1);
+        vc.a(la.field_c, pe.field_d - this.field_K + this.field_i, 1);
         if (param0 != 12606) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_p;
     }
 
     final static void k(int param0) {
         if (param0 <= 65) {
-            ng.k(69);
+          ng.k(69);
         }
     }
 
     final void f(boolean param0) {
         super.f(param0);
-        if (!(null == this.field_L)) {
-            this.field_L.a((byte) 58);
+        if (null != this.field_L) {
+          this.field_L.a((byte) 58);
         }
     }
 
     final void a(int param0, int param1, uj param2, int param3) {
         if (param0 < 27) {
-            return;
+          return;
         }
         try {
-            super.a(90, param1, param2, param3);
-            this.field_K = -param1 + pe.field_d + -this.field_s;
+          super.a(90, param1, param2, param3);
+          this.field_K = -param1 + pe.field_d - this.field_s;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ng.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ng.U(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static void j(int param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            var1_int = jf.field_a[0];
-            var2 = param0;
-            L1: while (true) {
-              if (var2 >= jf.field_a.length) {
-                break L0;
-              } else {
-                var3 = jf.field_a[var2];
-                ug.a(ih.field_d, var2 << -95107932, ih.field_d, var1_int, var3);
-                var1_int = var1_int + var3;
-                var2++;
-                continue L1;
-              }
-            }
+          var1_int = jf.field_a[0];
+          for (var2 = param0; var2 < jf.field_a.length; var2++) {
+            var3 = jf.field_a[var2];
+            ug.a(ih.field_d, var2 << 4, ih.field_d, var1_int, var3);
+            var1_int = var1_int + var3;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -94,13 +86,13 @@ final class ng extends fe implements ub {
 
     final void a(he param0, int param1) {
         try {
-            this.field_L = param0;
-            if (param1 != 0) {
-                he var4 = (he) null;
-                this.a((he) null, 118);
-            }
+          this.field_L = param0;
+          if (param1 != 0) {
+            he var4 = (he) null;
+            this.a((he) null, 118);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ng.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ng.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -116,84 +108,42 @@ final class ng extends fe implements ub {
         sk stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == null) {
-                break L1;
-              } else {
-                if (param1.length() == 0) {
-                  break L1;
-                } else {
-                  if (param0 >= 94) {
-                    var2_int = param1.indexOf('@');
-                    if (var2_int != -1) {
-                      var3 = param1.substring(0, var2_int);
-                      var4 = param1.substring(var2_int - -1);
-                      var5 = vk.a((byte) 63, var3);
-                      if (var5 != null) {
-                        stackIn_14_0 = (sk) (var5);
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        return b.a(var4, 112);
-                      }
-                    } else {
-                      stackIn_10_0 = qb.field_b;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  } else {
-                    stackIn_7_0 = (sk) null;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
+          if (param1 != null &&
+            param1.length() != 0) {
+            if (param0 < 94) {
+              stackIn_7_0 = (sk) null;
+              return stackIn_7_0;
             }
-            stackIn_4_0 = tg.field_x;
-            decompiledRegionSelector0 = 0;
-            break L0;
+            var2_int = param1.indexOf('@');
+            if (var2_int == -1) {
+              stackIn_10_0 = qb.field_b;
+              return stackIn_10_0;
+            }
+            var3 = param1.substring(0, var2_int);
+            var4 = param1.substring(var2_int + 1);
+            var5 = vk.a((byte) 63, var3);
+            if (var5 == null) {
+              return b.a(var4, 112);
+            }
+            stackIn_14_0 = var5;
+            return stackIn_14_0;
           }
+          stackIn_4_0 = tg.field_x;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("ng.Q(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("ng.Q(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0;
-            } else {
-              return stackIn_14_0;
-            }
+            stackIn_18_2 = "{...}";
           }
+          throw sd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

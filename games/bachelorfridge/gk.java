@@ -11,7 +11,7 @@ final class gk {
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
         field_c = (String[][]) null;

@@ -21,7 +21,7 @@ public class wi {
 
     public static File a(String param0, boolean param1) {
         if (param1) {
-            return (File) null;
+          return (File) null;
         }
         return wi.a(field_e, false, field_d, param0);
     }
@@ -32,39 +32,21 @@ public class wi {
         field_d = param2;
         field_e = param0;
         try {
-          L0: {
-            L1: {
-              field_a = System.getProperty("user.home");
-              if (field_a == null) {
-                break L1;
-              } else {
-                field_a = field_a + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_a = System.getProperty("user.home");
+          if (field_a != null) {
+            field_a = field_a + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
-        L3: {
-          if (null == field_a) {
-            field_a = "~/";
-            break L3;
-          } else {
-            break L3;
-          }
+        if (null == field_a) {
+          field_a = "~/";
         }
         if (param1 != 11217) {
           return;
-        } else {
-          field_b = true;
-          return;
         }
+        field_b = true;
     }
 
     static {

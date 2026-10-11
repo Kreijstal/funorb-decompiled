@@ -18,10 +18,10 @@ abstract class eh {
 
     final static void c(byte param0) {
         if (param0 != 90) {
-            field_b = (ei) null;
-            gp.j((byte) -34);
-            od.b(128, 4);
-            return;
+          field_b = (ei) null;
+          gp.j((byte) -34);
+          od.b(128, 4);
+          return;
         }
         gp.j((byte) -34);
         od.b(128, 4);
@@ -41,98 +41,58 @@ abstract class eh {
         var2 = this.a((byte) -57);
         if (this.field_d == null) {
           this.field_h.a(var2);
-          this.field_d = var2;
-          if (param0 == 1) {
-            return;
-          } else {
-            field_i = (bc) null;
-            return;
-          }
         } else {
-          if (this.field_d.a(var2)) {
-            this.field_d = var2;
-            if (param0 != 1) {
-              field_i = (bc) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (!this.field_d.a(var2)) {
             this.field_h.b(this.field_d);
             this.field_h.a(var2);
-            this.field_d = var2;
-            if (param0 == 1) {
-              return;
-            } else {
-              field_i = (bc) null;
-              return;
-            }
           }
         }
+        this.field_d = var2;
+        if (param0 == 1) {
+          return;
+        }
+        field_i = (bc) null;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
         int var4;
+        int var4Lifetime1;
         if (param2 == 0) {
           jg.field_t.d(param1, param0);
-          if (param3) {
-            L0: {
-              var4 = ke.field_c % jg.field_t.field_s * 2;
-              if (jg.field_t.field_s > var4) {
-                break L0;
-              } else {
-                var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
-                break L0;
-              }
-            }
-            if (var4 < 10) {
-              var4 = 10;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-              return;
-            } else {
-              if (jg.field_t.field_s - 40 >= var4) {
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              } else {
-                var4 = jg.field_t.field_s - 40;
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              }
-            }
-          } else {
+          if (!param3) {
             return;
           }
-        } else {
-          eh.b((byte) -115);
-          jg.field_t.d(param1, param0);
-          if (param3) {
-            L1: {
-              var4 = ke.field_c % jg.field_t.field_s * 2;
-              if (jg.field_t.field_s > var4) {
-                break L1;
-              } else {
-                var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
-                break L1;
-              }
-            }
-            if (var4 < 10) {
-              var4 = 10;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-              return;
-            } else {
-              if (jg.field_t.field_s - 40 >= var4) {
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              } else {
-                var4 = jg.field_t.field_s - 40;
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              }
-            }
+          var4 = ke.field_c % jg.field_t.field_s * 2;
+          if (jg.field_t.field_s <= var4) {
+            var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
+          }
+          if (var4 < 10) {
+            var4 = 10;
           } else {
-            return;
+            if (jg.field_t.field_s - 40 < var4) {
+              var4 = jg.field_t.field_s - 40;
+            }
+          }
+          eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
+          return;
+        }
+        eh.b((byte) -115);
+        jg.field_t.d(param1, param0);
+        if (!param3) {
+          return;
+        }
+        var4Lifetime1 = ke.field_c % jg.field_t.field_s * 2;
+        if (jg.field_t.field_s <= var4Lifetime1) {
+          var4Lifetime1 = -var4Lifetime1 + jg.field_t.field_s + jg.field_t.field_s;
+        }
+        if (var4Lifetime1 < 10) {
+          var4Lifetime1 = 10;
+        } else {
+          if (jg.field_t.field_s - 40 < var4Lifetime1) {
+            var4Lifetime1 = jg.field_t.field_s - 40;
           }
         }
+        eq.a(jg.field_t, 0, 1, var4Lifetime1, param1, param0, 80, 0, 30);
     }
 
     eh(double param0, double param1, double param2) {
@@ -145,20 +105,17 @@ abstract class eh {
     }
 
     final void a(int param0) {
-        if ((this.field_c ^ -1) <= -1) {
-          if (param0 != 80) {
-            this.field_a = (hc) null;
-            this.field_h.d(this.field_c);
-            this.field_h.b(this.field_d);
-            return;
-          } else {
-            this.field_h.d(this.field_c);
-            this.field_h.b(this.field_d);
-            return;
-          }
-        } else {
+        if (this.field_c < 0) {
           return;
         }
+        if (param0 == 80) {
+          this.field_h.d(this.field_c);
+          this.field_h.b(this.field_d);
+          return;
+        }
+        this.field_a = (hc) null;
+        this.field_h.d(this.field_c);
+        this.field_h.b(this.field_d);
     }
 
     final void c(int param0) {

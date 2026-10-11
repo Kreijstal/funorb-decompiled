@@ -19,7 +19,7 @@ abstract class sr {
     final static void a(boolean param0, byte param1) {
         cq.a(param0, 0);
         if (param1 >= -20) {
-            field_a = (lk[]) null;
+          field_a = (lk[]) null;
         }
         vu.a(true, param0);
     }
@@ -56,262 +56,125 @@ abstract class sr {
         nr[][] var22;
         ut var23;
         nr[][] var24;
-        L0: {
-          var21 = Kickabout.field_G;
-          var6 = new kg[6];
-          if (!param2) {
-            stackIn_3_0 = ps.field_c;
-            break L0;
-          } else {
-            stackIn_3_0 = bf.field_s;
-            break L0;
-          }
+        int var10Lifetime1;
+        int var15Lifetime1;
+        int var15Lifetime2;
+        int var16_intLifetime1;
+        int var17Lifetime1;
+        int var17Lifetime2;
+        int var18Lifetime1;
+        int var19Lifetime1;
+        int var16_intLifetime2;
+        int var19Lifetime1Lifetime1;
+        int var9Lifetime1;
+        var21 = Kickabout.field_G;
+        var6 = new kg[6];
+        if (!param2) {
+          stackIn_3_0 = ps.field_c;
+        } else {
+          stackIn_3_0 = bf.field_s;
         }
         var7 = stackIn_3_0;
         var8 = new ut[var7.length][];
-        var9 = 0;
-        L1: while (true) {
-          if (var9 >= var8.length) {
-            L2: {
-              if (!param2) {
-                stackIn_12_0 = 59;
-                break L2;
-              } else {
-                stackIn_12_0 = 50;
-                break L2;
+        for (var9 = 0; var9 < var8.length; var9++) {
+          array$0 = new ut[var7[var9].length];
+          var8[var9] = array$0;
+          for (var10 = 0; var10 < var8[var9].length; var10++) {
+            var11_ref_kg = var7[var9][var10];
+            var8[var9][var10] = var11_ref_kg.a();
+            pd.a(var8[var9][var10], 20684);
+          }
+        }
+        stackIn_12_0 = (!param2) ? 59 : 50;
+        var9Lifetime1 = stackIn_12_0;
+        if (param3 > -65) {
+          return (kg[]) null;
+        }
+        stackIn_17_0 = (param2) ? 34 : 33;
+        var10Lifetime1 = stackIn_17_0;
+        stackIn_20_0 = (param2) ? 40 : 20;
+        var11 = stackIn_20_0;
+        stackIn_23_0 = (!param2) ? 4 : 0;
+        var12 = stackIn_23_0;
+        stackIn_26_0 = (!param2) ? 5 : 3;
+        var13 = stackIn_26_0;
+        if (!vi.field_n) {
+          var23 = oa.a(param2, param5, (byte) 95);
+          iw.a(121, var23);
+          for (var15 = 0; var13 > var15; var15++) {
+            if (!param2 ||
+              var15 < 2) {
+              var16_int = 0;
+              var8[0][var15].c(var16_int, 0);
+              var16_int = var16_int + var8[0][var15].field_o;
+              for (var17 = 0; var17 < param5; var17++) {
+                var8[1][var15].c(var16_int, 0);
+                var16_int = var16_int + var8[1][var15].field_o;
               }
+              var8[2][var15].c(var16_int, 0);
             }
-            var9 = stackIn_12_0;
-            if (param3 <= -65) {
-              L3: {
+          }
+          ta.e(123);
+          var15_ref_kg = eo.a(var23);
+          for (var16_intLifetime2 = 0; var16_intLifetime2 < 6; var16_intLifetime2++) {
+            var6[var16_intLifetime2] = var15_ref_kg;
+          }
+          return var6;
+        }
+        var22 = new nr[var13][param5 + 2];
+        var24 = var22;
+        for (var15Lifetime1 = 0; var22.length > var15Lifetime1; var15Lifetime1++) {
+          for (var16_intLifetime1 = 0; var16_intLifetime1 < var22[0].length; var16_intLifetime1++) {
+            L16: {
+              if (p.a((byte) -24, 256) <= param1) {
+                var17Lifetime1 = 39 + var16_intLifetime1 * var10Lifetime1 + var15Lifetime1;
+                var18 = var9Lifetime1 + var15Lifetime1 * var11;
+                var19 = p.a((byte) -24, 5);
                 if (param2) {
-                  stackIn_17_0 = 34;
-                  break L3;
+                  var18 = var18 + p.a((byte) -24, 5);
                 } else {
-                  stackIn_17_0 = 33;
-                  break L3;
-                }
-              }
-              L4: {
-                var10 = stackIn_17_0;
-                if (param2) {
-                  stackIn_20_0 = 40;
-                  break L4;
-                } else {
-                  stackIn_20_0 = 20;
-                  break L4;
-                }
-              }
-              L5: {
-                var11 = stackIn_20_0;
-                if (!param2) {
-                  stackIn_23_0 = 4;
-                  break L5;
-                } else {
-                  stackIn_23_0 = 0;
-                  break L5;
-                }
-              }
-              L6: {
-                var12 = stackIn_23_0;
-                if (!param2) {
-                  stackIn_26_0 = 5;
-                  break L6;
-                } else {
-                  stackIn_26_0 = 3;
-                  break L6;
-                }
-              }
-              var13 = stackIn_26_0;
-              if (vi.field_n) {
-                var22 = new nr[var13][param5 + 2];
-                var24 = var22;
-                var15 = 0;
-                L7: while (true) {
-                  if (var22.length <= var15) {
-                    var15 = 0;
-                    L8: while (true) {
-                      if (6 <= var15) {
-                        return var6;
-                      } else {
-                        jm.a(100, 9863, (-param0 + param4) * var15 / 6 + param0);
-                        var16 = oa.a(param2, param5, (byte) 95);
-                        iw.a(-101, var16);
-                        var17 = 0;
-                        L9: while (true) {
-                          if (var13 <= var17) {
-                            ta.e(119);
-                            var6[var15] = eo.a(var16);
-                            var15++;
-                            continue L8;
-                          } else {
-                            var18_ref_nr__ = var24[var17];
-                            var19 = 0;
-                            L10: while (true) {
-                              if (var19 >= var18_ref_nr__.length) {
-                                L11: {
-                                  if (!param2) {
-                                    break L11;
-                                  } else {
-                                    if (2 > var17) {
-                                      break L11;
-                                    } else {
-                                      var17++;
-                                      continue L9;
-                                    }
-                                  }
-                                }
-                                var18 = 0;
-                                var8[0][var17].c(var18, 0);
-                                var18 = var18 + var8[0][var17].field_o;
-                                var19 = 0;
-                                L12: while (true) {
-                                  if (param5 <= var19) {
-                                    var8[2][var17].c(var18, 0);
-                                    var17++;
-                                    continue L9;
-                                  } else {
-                                    var8[1][var17].c(var18, 0);
-                                    var18 = var18 + var8[1][var17].field_o;
-                                    var19++;
-                                    continue L12;
-                                  }
-                                }
-                              } else {
-                                var20 = var18_ref_nr__[var19];
-                                if (var20 != null) {
-                                  var20.a(var15, -2);
-                                  var19++;
-                                  continue L10;
-                                } else {
-                                  var19++;
-                                  continue L10;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
+                  if (var15Lifetime1 == 0) {
+                    if (0 != var19 &&
+                      var19 != 2) {
+                      var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
+                      break L16;
                     }
-                  } else {
-                    var16_int = 0;
-                    L13: while (true) {
-                      if (var16_int >= var22[0].length) {
-                        var15++;
-                        continue L7;
-                      } else {
-                        if ((p.a((byte) -24, 256) ^ -1) >= (param1 ^ -1)) {
-                          L14: {
-                            var17 = 39 - -(var16_int * var10) + var15;
-                            var18 = var9 + var15 * var11;
-                            var19 = p.a((byte) -24, 5);
-                            if (param2) {
-                              var18 = var18 + p.a((byte) -24, 5);
-                              break L14;
-                            } else {
-                              if (-1 != (var15 ^ -1)) {
-                                break L14;
-                              } else {
-                                L15: {
-                                  if (0 == var19) {
-                                    break L15;
-                                  } else {
-                                    if ((var19 ^ -1) == -3) {
-                                      break L15;
-                                    } else {
-                                      var22[var15][var16_int] = new nr(var17, var18, var12, var19);
-                                      var16_int++;
-                                      continue L13;
-                                    }
-                                  }
-                                }
-                                var19++;
-                                break L14;
-                              }
-                            }
-                          }
-                          var22[var15][var16_int] = new nr(var17, var18, var12, var19);
-                          var16_int++;
-                          continue L13;
-                        } else {
-                          var16_int++;
-                          continue L13;
-                        }
-                      }
-                    }
+                    var19++;
                   }
                 }
-              } else {
-                var23 = oa.a(param2, param5, (byte) 95);
-                iw.a(121, var23);
-                var15 = 0;
-                L16: while (true) {
-                  if (var13 <= var15) {
-                    ta.e(123);
-                    var15_ref_kg = eo.a(var23);
-                    var16_int = 0;
-                    L17: while (true) {
-                      if ((var16_int ^ -1) <= -7) {
-                        return var6;
-                      } else {
-                        var6[var16_int] = var15_ref_kg;
-                        var16_int++;
-                        continue L17;
-                      }
-                    }
-                  } else {
-                    L18: {
-                      if (!param2) {
-                        break L18;
-                      } else {
-                        if (-3 < (var15 ^ -1)) {
-                          break L18;
-                        } else {
-                          var15++;
-                          continue L16;
-                        }
-                      }
-                    }
-                    var16_int = 0;
-                    var8[0][var15].c(var16_int, 0);
-                    var16_int = var16_int + var8[0][var15].field_o;
-                    var17 = 0;
-                    L19: while (true) {
-                      if (var17 >= param5) {
-                        var8[2][var15].c(var16_int, 0);
-                        var15++;
-                        continue L16;
-                      } else {
-                        var8[1][var15].c(var16_int, 0);
-                        var16_int = var16_int + var8[1][var15].field_o;
-                        var17++;
-                        continue L19;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              return (kg[]) null;
-            }
-          } else {
-            array$0 = new ut[var7[var9].length];
-            var8[var9] = array$0;
-            var10 = 0;
-            L20: while (true) {
-              if (var10 >= var8[var9].length) {
-                var9++;
-                continue L1;
-              } else {
-                var11_ref_kg = var7[var9][var10];
-                var8[var9][var10] = var11_ref_kg.a();
-                pd.a(var8[var9][var10], 20684);
-                var10++;
-                continue L20;
+                var22[var15Lifetime1][var16_intLifetime1] = new nr(var17Lifetime1, var18, var12, var19);
               }
             }
           }
         }
+        for (var15Lifetime2 = 0; 6 > var15Lifetime2; var15Lifetime2++) {
+          jm.a(100, 9863, (-param0 + param4) * var15Lifetime2 / 6 + param0);
+          var16 = oa.a(param2, param5, (byte) 95);
+          iw.a(-101, var16);
+          for (var17Lifetime2 = 0; var13 > var17Lifetime2; var17Lifetime2++) {
+            var18_ref_nr__ = var24[var17Lifetime2];
+            for (var19Lifetime1 = 0; var19Lifetime1 < var18_ref_nr__.length; var19Lifetime1++) {
+              var20 = var18_ref_nr__[var19Lifetime1];
+              if (var20 != null) {
+                var20.a(var15Lifetime2, -2);
+              }
+            }
+            if (!param2 ||
+              2 > var17Lifetime2) {
+              var18Lifetime1 = 0;
+              var8[0][var17Lifetime2].c(var18Lifetime1, 0);
+              var18Lifetime1 = var18Lifetime1 + var8[0][var17Lifetime2].field_o;
+              for (var19Lifetime1Lifetime1 = 0; param5 > var19Lifetime1Lifetime1; var19Lifetime1Lifetime1++) {
+                var8[1][var17Lifetime2].c(var18Lifetime1, 0);
+                var18Lifetime1 = var18Lifetime1 + var8[1][var17Lifetime2].field_o;
+              }
+              var8[2][var17Lifetime2].c(var18Lifetime1, 0);
+            }
+          }
+          ta.e(119);
+          var6[var15Lifetime2] = eo.a(var16);
+        }
+        return var6;
     }
 
     public static void a(byte param0) {
@@ -323,7 +186,7 @@ abstract class sr {
         field_c = null;
         field_b = null;
         if (param0 <= 86) {
-            sr.a((byte) -80);
+          sr.a((byte) -80);
         }
         field_m = null;
         field_f = null;
@@ -336,12 +199,12 @@ abstract class sr {
 
     final void a(boolean param0, int param1) {
         if (param1 <= 62) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
         if (param0) {
-            this.field_i = (this.field_i + 1) % this.a(-125);
+          this.field_i = (this.field_i + 1) % this.a(-125);
         } else {
-            this.field_i = 0;
+          this.field_i = 0;
         }
     }
 

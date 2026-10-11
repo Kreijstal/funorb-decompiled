@@ -10,187 +10,59 @@ final class ud extends sf implements he {
     private fw field_bb;
 
     final static void b(int param0, boolean param1, int param2, int param3) {
-        if (!param1) {
-          L0: {
-            if (param2 != 0) {
-              break L0;
-            } else {
-              if (param0 != ol.field_B) {
-                ol.field_B = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L0;
-              } else {
-                L1: {
-                  if (param2 != 1) {
-                    break L1;
-                  } else {
-                    if (va.field_D != param0) {
-                      va.field_D = param0;
-                      kr.field_J = true;
-                      ae.a(896, param3);
-                      break L1;
-                    } else {
-                      if (2 == param2) {
-                        if (cd.field_c != param0) {
-                          cd.field_c = param0;
-                          kr.field_J = true;
-                          ae.a(896, param3);
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    }
-                  }
+        if (param1) {
+          field_X = (wk[]) null;
+          if (param2 != 0) {
+            if (param2 == 1) {
+              if (va.field_D == param0) {
+                if (2 == param2 &&
+                  cd.field_c != param0) {
+                  cd.field_c = param0;
+                  kr.field_J = true;
+                  ae.a(896, param3);
                 }
-                if (2 == param2) {
-                  if (cd.field_c == param0) {
-                    return;
-                  } else {
-                    cd.field_c = param0;
-                    kr.field_J = true;
-                    ae.a(896, param3);
-                    return;
-                  }
-                } else {
-                  return;
-                }
+                return;
               }
-            }
-          }
-          L2: {
-            if (param2 != 1) {
-              break L2;
-            } else {
-              if (va.field_D != param0) {
-                va.field_D = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L2;
-              } else {
-                if (2 == param2) {
-                  if (cd.field_c == param0) {
-                    return;
-                  } else {
-                    cd.field_c = param0;
-                    kr.field_J = true;
-                    ae.a(896, param3);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-          if (2 == param2) {
-            if (cd.field_c != param0) {
-              cd.field_c = param0;
+              va.field_D = param0;
               kr.field_J = true;
               ae.a(896, param3);
-              return;
-            } else {
-              return;
             }
           } else {
-            return;
+            if (param0 != ol.field_B) {
+              ol.field_B = param0;
+              kr.field_J = true;
+              ae.a(896, param3);
+            }
+            if (param2 == 1 &&
+              va.field_D != param0) {
+              va.field_D = param0;
+              kr.field_J = true;
+              ae.a(896, param3);
+            }
           }
         } else {
-          field_X = (wk[]) null;
-          if (param2 == 0) {
-            L3: {
-              if (param0 != ol.field_B) {
-                ol.field_B = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (param2 == 1) {
-              L4: {
-                if (va.field_D != param0) {
-                  va.field_D = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              if (2 == param2) {
-                if (cd.field_c != param0) {
-                  cd.field_c = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              if (2 == param2) {
-                if (cd.field_c != param0) {
-                  cd.field_c = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            L5: {
-              if (param2 != 1) {
-                break L5;
-              } else {
-                if (va.field_D != param0) {
-                  va.field_D = param0;
-                  kr.field_J = true;
-                  ae.a(896, param3);
-                  break L5;
-                } else {
-                  L6: {
-                    if (2 != param2) {
-                      break L6;
-                    } else {
-                      if (cd.field_c == param0) {
-                        break L6;
-                      } else {
-                        cd.field_c = param0;
-                        kr.field_J = true;
-                        ae.a(896, param3);
-                        break L6;
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            }
-            if (2 == param2) {
-              if (cd.field_c == param0) {
-                return;
-              } else {
-                cd.field_c = param0;
-                kr.field_J = true;
-                ae.a(896, param3);
-                return;
-              }
-            } else {
-              return;
-            }
+          if (param2 == 0 &&
+            param0 != ol.field_B) {
+            ol.field_B = param0;
+            kr.field_J = true;
+            ae.a(896, param3);
+          }
+          if (param2 == 1 &&
+            va.field_D != param0) {
+            va.field_D = param0;
+            kr.field_J = true;
+            ae.a(896, param3);
           }
         }
+        if (2 != param2) {
+          return;
+        }
+        if (cd.field_c == param0) {
+          return;
+        }
+        cd.field_c = param0;
+        kr.field_J = true;
+        ae.a(896, param3);
     }
 
     private final fw a(String param0, qo param1, int param2) {
@@ -201,66 +73,39 @@ final class ud extends sf implements he {
         fw stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4 = new fw(param0, param1);
-            var4.field_k = (kh) ((Object) new nu());
-            var5 = this.field_w + -6;
-            this.field_w = this.field_w + 38;
-            var4.a(15, -16 + (-14 + this.field_l), var5, 8192, 30);
-            this.a((byte) 10, (kb) (var4));
-            this.e(0);
-            var6 = -126 / ((-6 - param2) / 40);
-            stackIn_1_0 = (fw) (var4);
-            break L0;
-          }
+          var4 = new fw(param0, param1);
+          var4.field_k = (kh) ((Object) new nu());
+          var5 = this.field_w - 6;
+          this.field_w = this.field_w + 38;
+          var4.a(15, -16 + (-14 + this.field_l), var5, 8192, 30);
+          this.a((byte) 10, (kb) (var4));
+          this.e(0);
+          var6 = -126 / ((-6 - param2) / 40);
+          stackIn_1_0 = var4;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4_ref);
-
-            stackIn_4_1 = new StringBuilder().append("ud.E(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_4_0 = var4_ref;
+          stackIn_4_1 = new StringBuilder().append("ud.E(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     ud(gk param0, jl param1) {
@@ -269,90 +114,55 @@ final class ud extends sf implements he {
         kb var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        Object stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = null;
-              if (param1 != hm.field_h) {
-                if (mp.field_Mb == param1) {
-                  this.field_w = this.field_w + 10;
-                  var3 = am.field_y;
-                  if (!pr.b(-108)) {
-                    break L1;
-                  } else {
-                    this.field_w = this.field_w + 20;
-                    var3 = field_W;
-                    break L1;
-                  }
-                } else {
-                  if (param1 != tn.field_cb) {
-                    break L1;
-                  } else {
-                    this.field_w = this.field_w + 30;
-                    var3 = hb.field_a;
-                    break L1;
-                  }
-                }
-              } else {
-                var3 = tl.field_a;
-                break L1;
+          var3 = null;
+          if (param1 != hm.field_h) {
+            if (mp.field_Mb == param1) {
+              this.field_w = this.field_w + 10;
+              var3 = am.field_y;
+              if (pr.b(-108)) {
+                this.field_w = this.field_w + 20;
+                var3 = field_W;
+              }
+            } else {
+              if (param1 == tn.field_cb) {
+                this.field_w = this.field_w + 30;
+                var3 = hb.field_a;
               }
             }
-            var4 = new kb((String) (var3), (qo) null);
-            var4.field_B = 0;
-            var4.field_p = 50;
-            var4.field_l = this.field_l;
-            var4.field_w = 80;
-            var4.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-            this.a((byte) 10, var4);
-            this.field_bb = this.a(pd.field_f, (qo) (this), 93);
-            break L0;
+          } else {
+            var3 = tl.field_a;
           }
+          var4 = new kb((String) (var3), (qo) null);
+          var4.field_B = 0;
+          var4.field_p = 50;
+          var4.field_l = this.field_l;
+          var4.field_w = 80;
+          var4.field_k = (kh) ((Object) new lk(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.a((byte) 10, var4);
+          this.field_bb = this.a(pd.field_f, (qo) (this), 93);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = var3;
-
-            stackIn_12_1 = new StringBuilder().append("ud.<init>(");
-
-            if (param0 == null) {
-              stackIn_13_0 = stackIn_12_0;
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L2;
-            } else {
-              stackIn_13_0 = stackIn_12_0;
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("ud.<init>(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-
-            if (param1 == null) {
-
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
+          throw ig.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -360,61 +170,33 @@ final class ud extends sf implements he {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 11) {
-                break L1;
-              } else {
-                field_Z = (String) null;
-                break L1;
-              }
-            }
-            if (param4 != this.field_bb) {
-              break L0;
-            } else {
-              this.i((byte) 60);
-              return;
-            }
+          if (param1 != 11) {
+            field_Z = (String) null;
           }
+          if (param4 != this.field_bb) {
+            return;
+          }
+          this.i((byte) 60);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6);
-
-            stackIn_7_1 = new StringBuilder().append("ud.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_7_0 = var6;
+          stackIn_7_1 = new StringBuilder().append("ud.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     public static void n(int param0) {
-        if (param0 != 12213) {
-          ud.n(4);
-          field_X = null;
-          field_Y = null;
-          field_Z = null;
-          field_W = null;
-          field_ab = null;
-          return;
-        } else {
+        if (param0 == 12213) {
           field_X = null;
           field_Y = null;
           field_Z = null;
@@ -422,19 +204,25 @@ final class ud extends sf implements he {
           field_ab = null;
           return;
         }
+        ud.n(4);
+        field_X = null;
+        field_Y = null;
+        field_Z = null;
+        field_W = null;
+        field_ab = null;
     }
 
     private final void i(byte param0) {
         if (param0 != 60) {
-            ud.n(-98);
-            if (!(this.field_L)) {
-                return;
-            }
-            this.field_L = false;
+          ud.n(-98);
+          if (!this.field_L) {
             return;
+          }
+          this.field_L = false;
+          return;
         }
-        if (!(this.field_L)) {
-            return;
+        if (!this.field_L) {
+          return;
         }
         this.field_L = false;
     }

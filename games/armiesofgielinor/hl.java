@@ -17,40 +17,28 @@ final class hl extends je {
     }
 
     final static wk a(boolean param0, int param1, int param2) {
-        wk var3;
-        int var4;
-        int var5;
-        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        var3 = new wk(param2, param2);
-        var4 = 0;
-        if (param0) {
-          field_Lb = (String) null;
-          L0: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
-              var4++;
-              continue L0;
-            }
+        int var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        wk var3 = new wk(param2, param2);
+        int var4 = 0;
+        if (!param0) {
+          while (var3.field_B.length > var4) {
+            var3.field_B[var4] = param1;
+            var4++;
           }
-        } else {
-          L1: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
-              var4++;
-              continue L1;
-            }
-          }
+          return var3;
         }
+        field_Lb = (String) null;
+        while (var3.field_B.length > var4) {
+          var3.field_B[var4] = param1;
+          var4++;
+        }
+        return var3;
     }
 
     public static void k(int param0) {
         field_Lb = null;
         if (param0 == -4175) {
-            return;
+          return;
         }
         hl.a(true, -43, 13);
     }

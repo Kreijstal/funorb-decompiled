@@ -10,146 +10,106 @@ final class ch {
     private int field_a;
 
     final void c(int param0, int param1) {
-        int discarded$1 = 0;
-        if ((param1 ^ -1) <= -1) {
-          if (param1 <= this.field_e) {
-            L0: {
-              if (param1 != this.field_e) {
-                eg.a(this.field_f, param1 - -1, this.field_f, param1, this.field_e + -param1);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            this.field_e = this.field_e - 1;
-            if (param0 < 122) {
-              discarded$1 = this.b(-10, -60);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          }
-        } else {
+        if (param1 < 0) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param1 > this.field_e) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (param1 != this.field_e) {
+          eg.a(this.field_f, param1 + 1, this.field_f, param1, this.field_e - param1);
+        }
+        this.field_e = this.field_e - 1;
+        if (param0 >= 122) {
+          return;
+        }
+        int discarded$0 = this.b(-10, -60);
     }
 
     final int a(boolean param0) {
         if (!param0) {
-            return 81;
+          return 81;
         }
         return this.field_e + 1;
     }
 
     final int d(int param0, int param1) {
-        if (this.field_e >= param1) {
-          if (param0 != -32240) {
-            this.c(126, 35);
-            return this.field_f[param1];
-          } else {
-            return this.field_f[param1];
-          }
-        } else {
+        if (this.field_e < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param0 == -32240) {
+          return this.field_f[param1];
+        }
+        this.c(126, 35);
+        return this.field_f[param1];
     }
 
     private final void a(int param0, int param1) {
-        int[] var3;
-        int[] var4;
-        var4 = new int[this.b(2667, param1)];
-        var3 = var4;
+        int[] var4 = new int[this.b(2667, param1)];
+        int[] var3 = var4;
         eg.a(this.field_f, 0, var4, 0, this.field_f.length);
-        if (param0 != 25613) {
-          this.field_f = (int[]) null;
-          this.field_f = var4;
-          return;
-        } else {
+        if (param0 == 25613) {
           this.field_f = var4;
           return;
         }
+        this.field_f = (int[]) null;
+        this.field_f = var4;
     }
 
     private final int b(int param0, int param1) {
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = CrazyCrystals.field_B;
-        if (param0 != 2667) {
-          this.field_f = (int[]) null;
+        if (param0 == 2667) {
           var3 = this.field_f.length;
-          L0: while (true) {
-            if (var3 > param1) {
-              return var3;
-            } else {
-              if (this.field_b) {
-                if (-1 == (var3 ^ -1)) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_a;
-                continue L0;
-              }
+          while (var3 <= param1) {
+            if (!this.field_b) {
+              var3 = var3 + this.field_a;
+              continue;
             }
-          }
-        } else {
-          var3 = this.field_f.length;
-          L1: while (true) {
-            if (var3 > param1) {
-              return var3;
-            } else {
-              if (this.field_b) {
-                if (-1 == (var3 ^ -1)) {
-                  var3 = 1;
-                  continue L1;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L1;
-                }
-              } else {
-                var3 = var3 + this.field_a;
-                continue L1;
-              }
+            if (var3 == 0) {
+              var3 = 1;
+              continue;
             }
+            var3 = var3 * this.field_a;
           }
+          return var3;
         }
+        this.field_f = (int[]) null;
+        var3Lifetime1 = this.field_f.length;
+        while (var3Lifetime1 <= param1) {
+          if (!this.field_b) {
+            var3Lifetime1 = var3Lifetime1 + this.field_a;
+            continue;
+          }
+          if (var3Lifetime1 == 0) {
+            var3Lifetime1 = 1;
+            continue;
+          }
+          var3Lifetime1 = var3Lifetime1 * this.field_a;
+        }
+        return var3Lifetime1;
     }
 
     private final void a(byte param0, int param1, int param2) {
-        L0: {
-          if (this.field_e < param2) {
-            this.field_e = param2;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_e < param2) {
+          this.field_e = param2;
         }
-        L1: {
-          if (param2 >= this.field_f.length) {
-            this.a(25613, param2);
-            break L1;
-          } else {
-            break L1;
-          }
+        if (param2 >= this.field_f.length) {
+          this.a(25613, param2);
         }
         this.field_f[param2] = param1;
-        if (param0 != -2) {
-          this.d(-98, -14);
-          return;
-        } else {
+        if (param0 == -2) {
           return;
         }
+        this.d(-98, -14);
     }
 
     final void a(int param0, byte param1) {
         this.a((byte) -2, param0, this.field_e + 1);
         if (param1 <= 121) {
-            this.field_a = 111;
+          this.field_a = 111;
         }
     }
 
@@ -157,7 +117,7 @@ final class ch {
         field_c = null;
         field_d = null;
         if (param0 != 855) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

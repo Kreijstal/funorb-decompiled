@@ -28,24 +28,24 @@ final class rpb {
         this.field_f = new int[this.field_g];
         this.field_a = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-            this.field_f[var2] = param0.e(1869);
-            this.field_a[var2] = param0.e(1869);
+          this.field_f[var2] = param0.e(1869);
+          this.field_a[var2] = param0.e(1869);
         }
     }
 
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_c >= this.field_k) {
-            fieldTemp$0 = this.field_d;
-            this.field_d = this.field_d + 1;
-            this.field_b = this.field_a[fieldTemp$0] << 15;
-            if (this.field_d >= this.field_g) {
-                this.field_d = this.field_g - 1;
-            }
-            this.field_k = (int)((double)this.field_f[this.field_d] / 65536.0 * (double)param0);
-            if (this.field_k > this.field_c) {
-                this.field_h = ((this.field_a[this.field_d] << 15) - this.field_b) / (this.field_k - this.field_c);
-            }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          this.field_b = this.field_a[fieldTemp$0] << 15;
+          if (this.field_d >= this.field_g) {
+            this.field_d = this.field_g - 1;
+          }
+          this.field_k = (int)((double)this.field_f[this.field_d] / 65536.0 * (double)param0);
+          if (this.field_k > this.field_c) {
+            this.field_h = ((this.field_a[this.field_d] << 15) - this.field_b) / (this.field_k - this.field_c);
+          }
         }
         this.field_b = this.field_b + this.field_h;
         this.field_c = this.field_c + 1;

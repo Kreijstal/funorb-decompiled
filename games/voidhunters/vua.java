@@ -8,49 +8,26 @@ final class vua extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 < -119) {
-              stackIn_4_0 = new nc(dw.field_b);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 < -119) {
+            stackIn_4_0 = new nc(dw.field_b);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("vua.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("vua.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -58,14 +35,14 @@ final class vua extends rqa {
         vba.field_p[param6] = param1;
         vba.field_r[param6] = param0;
         if (param2 >= -11) {
-            return;
+          return;
         }
         try {
-            vba.field_q[param6] = param4;
-            vba.field_s[param6] = param3;
-            vba.field_o[param6] = param5;
+          vba.field_q[param6] = param4;
+          vba.field_s[param6] = param3;
+          vba.field_o[param6] = param5;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "vua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "vua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

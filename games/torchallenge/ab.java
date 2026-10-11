@@ -18,32 +18,11 @@ final class ab {
     static int[] field_e;
 
     final static java.awt.Canvas a(int param0) {
-        Object stackIn_4_0 = null;
-        Object stackIn_8_0 = null;
-        if (param0 <= 26) {
-          L0: {
-            ab.a(81);
-            if (null == gi.field_d) {
-              stackIn_8_0 = bg.field_P;
-              break L0;
-            } else {
-              stackIn_8_0 = gi.field_d;
-              break L0;
-            }
-          }
-          return (java.awt.Canvas) ((Object) stackIn_8_0);
-        } else {
-          L1: {
-            if (null == gi.field_d) {
-              stackIn_4_0 = bg.field_P;
-              break L1;
-            } else {
-              stackIn_4_0 = gi.field_d;
-              break L1;
-            }
-          }
-          return (java.awt.Canvas) ((Object) stackIn_4_0);
+        if (param0 > 26) {
+          return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : bg.field_P;
         }
+        ab.a(81);
+        return null != gi.field_d ? (java.awt.Canvas) ((Object) gi.field_d) : bg.field_P;
     }
 
     public static void a(boolean param0) {
@@ -52,7 +31,7 @@ final class ab {
         field_m = null;
         field_g = null;
         if (!param0) {
-            ab.a(-3);
+          ab.a(-3);
         }
     }
 

@@ -15,7 +15,7 @@ class ma extends ec {
         field_n = null;
         field_o = null;
         if (!param0) {
-            ma.c(false);
+          ma.c(false);
         }
     }
 

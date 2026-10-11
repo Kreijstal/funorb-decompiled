@@ -9,23 +9,23 @@ final class gh {
 
     final static int a(boolean param0) {
         if (!param0) {
-            return 109;
+          return 109;
         }
         return ac.field_e;
     }
 
     final static boolean b(byte param0) {
         if (param0 < 31) {
-            return true;
+          return true;
         }
-        return -251 > (ni.field_d ^ -1) ? true : false;
+        return ni.field_d > 250 ? true : false;
     }
 
     public static void a(byte param0) {
         field_d = null;
         field_a = null;
         if (param0 < 87) {
-            gh.a((byte) 2);
+          gh.a((byte) 2);
         }
     }
 

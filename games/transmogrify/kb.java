@@ -10,30 +10,22 @@ class kb extends ri {
     static oh field_n;
 
     final static tf a(int param0, boolean param1) {
+        int var3 = 0;
         tf[] var2;
-        int var3;
         int var4;
         tf[] var5;
         var4 = Transmogrify.field_A ? 1 : 0;
         var5 = rh.d(-26481);
         var2 = var5;
-        if (param1) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (var5[var3].field_c != param0) {
-                var3++;
-                continue L0;
-              } else {
-                return var5[var3];
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (!param1) {
           return (tf) null;
         }
+        for (var3 = 0; var5.length > var3; var3++) {
+          if (var5[var3].field_c == param0) {
+            return var5[var3];
+          }
+        }
+        return null;
     }
 
     final static byte[] a(String param0, byte param1) {
@@ -41,46 +33,26 @@ class kb extends ri {
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 104) {
-                break L1;
-              } else {
-                kb.b(true);
-                break L1;
-              }
-            }
-            stackIn_3_0 = pi.field_g.a(param0, (byte) 118, "");
-            break L0;
+          if (param1 <= 104) {
+            kb.b(true);
           }
+          stackIn_3_0 = pi.field_g.a(param0, (byte) 118, "");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("kb.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("kb.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void b(boolean param0) {
@@ -90,7 +62,7 @@ class kb extends ri {
         field_p = null;
         field_q = null;
         if (param0) {
-            field_o = (String) null;
+          field_o = (String) null;
         }
     }
 

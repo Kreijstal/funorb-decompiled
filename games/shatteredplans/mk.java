@@ -12,16 +12,7 @@ final class mk {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 >= -20) {
-          mk.a((byte) -3);
-          field_e = null;
-          field_b = null;
-          field_f = null;
-          field_c = null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 < -20) {
           field_e = null;
           field_b = null;
           field_f = null;
@@ -30,6 +21,13 @@ final class mk {
           field_g = null;
           return;
         }
+        mk.a((byte) -3);
+        field_e = null;
+        field_b = null;
+        field_f = null;
+        field_c = null;
+        field_d = null;
+        field_g = null;
     }
 
     static {

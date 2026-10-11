@@ -20,9 +20,7 @@ final class wd implements qi {
         field_k = null;
         field_g = null;
         field_a = null;
-        if (param0 != 0) {
-          return;
-        } else {
+        if (param0 == 0) {
           field_e = null;
           field_h = null;
           field_i = null;

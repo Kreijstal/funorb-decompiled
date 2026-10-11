@@ -8,34 +8,33 @@ final class qd {
     public static void b(boolean param0) {
         field_a = null;
         if (param0) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 
     final static gb a(boolean param0) {
         String var1 = dg.a(param0);
-        if (var1 != null && 0 <= var1.indexOf('@')) {
-            var1 = "";
+        if (var1 != null &&
+          0 <= var1.indexOf('@')) {
+          var1 = "";
         }
         return new gb(dg.a(false), ca.a((byte) 81));
     }
 
     final static vb a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        vb var8;
-        var8 = new vb(param5, param4, param7, param3, param2, param0);
-        jl.field_a.b(param1 + -11680, var8);
-        if (param1 != 11803) {
-          qd.a(false);
-          vi.a(param6, var8, 1);
-          return var8;
-        } else {
+        vb var8 = new vb(param5, param4, param7, param3, param2, param0);
+        jl.field_a.b(param1 - 11680, var8);
+        if (param1 == 11803) {
           vi.a(param6, var8, 1);
           return var8;
         }
+        qd.a(false);
+        vi.a(param6, var8, 1);
+        return var8;
     }
 
     final static df a(int param0, boolean param1) {
-        int stackIn_3_0 = 0;
+        boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
@@ -47,101 +46,63 @@ final class qd {
         int var7 = 0;
         th var8 = null;
         me var9 = null;
-        L0: {
-          var7 = Lexicominos.field_L ? 1 : 0;
-          var8 = ig.field_a;
-          var2 = var8;
-          var3 = var8.d(true);
-          if ((128 & var3) == param0) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
+        var7 = Lexicominos.field_L ? 1 : 0;
+        var8 = ig.field_a;
+        var2 = var8;
+        var3 = var8.d(true);
+        stackIn_3_0 = ((128 & var3) != param0);
+        tf.field_a = stackIn_3_0;
+        kb.field_a = var3 & 127;
+        rl.field_E = var8.d(true);
+        jf.field_P = var8.f((byte) 8);
+        if (2 != kb.field_a) {
+          kc.field_c = 0;
+          fd.field_g = 0;
+        } else {
+          fd.field_g = var8.b(-1698573656);
+          kc.field_c = var8.a(86);
         }
-        L1: {
-          tf.field_a = stackIn_3_0 != 0;
-          kb.field_a = var3 & 127;
-          rl.field_E = var8.d(true);
-          jf.field_P = var8.f((byte) 8);
-          if (2 != kb.field_a) {
-            kc.field_c = 0;
-            fd.field_g = 0;
-            break L1;
-          } else {
-            fd.field_g = var8.b(-1698573656);
-            kc.field_c = var8.a(86);
-            break L1;
-          }
+        stackIn_9_0 = (1 != var8.d(true)) ? 0 : 1;
+        var4 = stackIn_9_0;
+        ik.field_k = var8.c(false);
+        if (var4 != 0) {
+          gk.field_c = var8.c(false);
+        } else {
+          gk.field_c = ik.field_k;
         }
-        L2: {
-          if (1 != var8.d(true)) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = 1;
-            break L2;
-          }
-        }
-        L3: {
-          var4 = stackIn_9_0;
-          ik.field_k = var8.c(false);
-          if (var4 != 0) {
-            gk.field_c = var8.c(false);
-            break L3;
-          } else {
-            gk.field_c = ik.field_k;
-            break L3;
-          }
-        }
-        L4: {
-          if (1 == kb.field_a) {
+        if (1 == kb.field_a) {
+          var8.b(-1698573656);
+          var8.c(false);
+        } else {
+          if (kb.field_a == 4) {
             var8.b(-1698573656);
             var8.c(false);
-            break L4;
-          } else {
-            if ((kb.field_a ^ -1) == -5) {
-              var8.b(-1698573656);
-              var8.c(false);
-              break L4;
-            } else {
-              break L4;
-            }
           }
         }
         if (!param1) {
           oe.field_b = ij.a(80, -22651, var8);
           eb.field_d = null;
           return new df(param1);
-        } else {
-          var5 = var8.b(-1698573656);
-          try {
-            L5: {
-              L6: {
-                var9 = hi.field_d.a(param0 + 27467, var5);
-                oe.field_b = var9.c(-97);
-                if (gk.field_c.equals(og.field_c)) {
-                  stackIn_22_0 = null;
-                  break L6;
-                } else {
-                  stackIn_22_0 = var9.field_r;
-                  break L6;
-                }
-              }
-              eb.field_d = stackIn_22_0;
-              break L5;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
-            uj.a("CC1", (Throwable) ((Object) var6), 1);
-            eb.field_d = null;
-            oe.field_b = null;
-            return new df(param1);
+        }
+        var5 = var8.b(-1698573656);
+        try {
+          var9 = hi.field_d.a(param0 + 27467, var5);
+          oe.field_b = var9.c(-97);
+          if (gk.field_c.equals(og.field_c)) {
+            stackIn_22_0 = null;
+          } else {
+            stackIn_22_0 = var9.field_r;
           }
+          eb.field_d = stackIn_22_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (Exception) (Object) decompiledCaughtException;
+          uj.a("CC1", (Throwable) ((Object) var6), 1);
+          eb.field_d = null;
+          oe.field_b = null;
           return new df(param1);
         }
+        return new df(param1);
     }
 
     static {

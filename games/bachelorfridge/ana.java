@@ -17,12 +17,12 @@ abstract class ana extends at {
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != -1) {
-                String var3 = (String) null;
-                ana.a(75, (String) null);
-            }
+          if (param0 != -1) {
+            String var3 = (String) null;
+            ana.a(75, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ana.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ana.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,24 +32,20 @@ abstract class ana extends at {
         field_r = null;
         field_o = null;
         field_k = null;
-        if (param0 < 113) {
-          field_k = (String[]) null;
-          field_s = null;
-          field_j = null;
-          return;
-        } else {
+        if (param0 >= 113) {
           field_s = null;
           field_j = null;
           return;
         }
+        field_k = (String[]) null;
+        field_s = null;
+        field_j = null;
     }
 
     final void a(int param0, int param1, ad param2, int param3) {
         int stackIn_11_0 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         pp var5 = null;
@@ -62,113 +58,65 @@ abstract class ana extends at {
         bm var12 = null;
         var9 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              if (param3 == 0) {
-                break L1;
-              } else {
-                field_o = (String[]) null;
-                break L1;
-              }
-            }
-            var5 = (pp) ((Object) this.field_p.field_o.b((byte) 90));
-            L2: while (true) {
-              if (var5 == null) {
-                break L0;
-              } else {
-                L3: {
-                  if (!(var5 instanceof iv)) {
-                    if (!(var5 instanceof sl)) {
-                      if (var5 instanceof bm) {
-                        var12 = (bm) ((Object) var5);
-                        if (var12.field_k != param0) {
-                          break L3;
-                        } else {
-                          if (param1 == var12.field_l) {
-                            var12.a(param2.field_s, this.field_q.field_h, 12);
-                            var5.a(false);
-                            return;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      } else {
-                        var5 = (pp) ((Object) this.field_p.field_o.c(0));
-                        continue L2;
-                      }
-                    } else {
-                      var11 = (sl) ((Object) var5);
-                      if (param0 != var11.field_i) {
-                        break L3;
-                      } else {
-                        if (var11.field_l != param1) {
-                          break L3;
-                        } else {
-                          var11.a(param2.field_s, this.field_q.field_h, param3 + 12);
-                          var5.a(false);
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    var10 = (iv) ((Object) var5);
-                    var7 = var10.field_h.a(-27449, this.field_q);
-                    if (var7.field_s.field_x != param0) {
-                      break L3;
-                    } else {
-                      if (var7.field_s.field_J != param1) {
-                        break L3;
-                      } else {
-                        L4: {
-                          if (var7.field_s.field_I <= 0) {
-                            stackIn_11_0 = 0;
-                            break L4;
-                          } else {
-                            stackIn_11_0 = 1;
-                            break L4;
-                          }
-                        }
-                        var8 = stackIn_11_0;
-                        var5.a(param2.field_s, this.field_q.field_h, 12);
-                        if (var8 == 0) {
-                          var5.a(false);
-                          return;
-                        } else {
-                          var7.b(param3 + -1, 6);
-                          this.a(param3 ^ 27799, new ek(this.field_q, var7, var10.field_f));
-                          var5.a(false);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                }
-                var5 = (pp) ((Object) this.field_p.field_o.c(0));
-                continue L2;
-              }
-            }
+          if (param3 != 0) {
+            field_o = (String[]) null;
           }
+          var5 = (pp) (this.field_p.field_o.b((byte) 90));
+          while (var5 != null) {
+            if (!(var5 instanceof iv)) {
+              if (!(var5 instanceof sl)) {
+                if (!(var5 instanceof bm)) {
+                  var5 = (pp) (this.field_p.field_o.c(0));
+                  continue;
+                }
+                var12 = (bm) (var5);
+                if (var12.field_k == param0 &&
+                  param1 == var12.field_l) {
+                  var12.a(param2.field_s, this.field_q.field_h, 12);
+                  var5.a(false);
+                  return;
+                }
+              } else {
+                var11 = (sl) (var5);
+                if (param0 == var11.field_i &&
+                  var11.field_l == param1) {
+                  var11.a(param2.field_s, this.field_q.field_h, param3 + 12);
+                  var5.a(false);
+                  return;
+                }
+              }
+            } else {
+              var10 = (iv) (var5);
+              var7 = var10.field_h.a(-27449, this.field_q);
+              if (var7.field_s.field_x == param0 &&
+                var7.field_s.field_J == param1) {
+                stackIn_11_0 = (var7.field_s.field_I <= 0) ? 0 : 1;
+                var8 = stackIn_11_0;
+                var5.a(param2.field_s, this.field_q.field_h, 12);
+                if (var8 == 0) {
+                  var5.a(false);
+                  return;
+                }
+                var7.b(param3 - 1, 6);
+                this.a(param3 ^ 27799, new ek(this.field_q, var7, var10.field_f));
+                var5.a(false);
+                return;
+              }
+            }
+            var5 = (pp) (this.field_p.field_o.c(0));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5_ref = decompiledCaughtException;
-            stackIn_32_0 = (RuntimeException) (var5_ref);
-
-            stackIn_32_1 = new StringBuilder().append("ana.M(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L5;
-            } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L5;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_32_0 = var5_ref;
+          stackIn_32_1 = new StringBuilder().append("ana.M(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_33_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -176,79 +124,48 @@ abstract class ana extends at {
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         StringBuilder stackIn_14_1 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            this.field_q = param0;
-            this.field_p = param1;
-            this.field_n = param1.field_l.a(-27449, this.field_q);
-            this.field_m = new taa(this.field_q, this.field_n);
-            this.a(27799, this.field_m);
-            this.field_n.a(16776960, 119, pk.a(param1, true));
-            this.field_l = 100;
-            if (!param1.field_p) {
-              break L0;
-            } else {
-              this.field_n.a(16761024, 111, dc.field_o);
-              break L0;
-            }
+          this.field_q = param0;
+          this.field_p = param1;
+          this.field_n = param1.field_l.a(-27449, this.field_q);
+          this.field_m = new taa(this.field_q, this.field_n);
+          this.a(27799, this.field_m);
+          this.field_n.a(16776960, 119, pk.a(param1, true));
+          this.field_l = 100;
+          if (param1.field_p) {
+            this.field_n.a(16761024, 111, dc.field_o);
           }
           if (this.field_n.field_s.a(param1.field_k, 9)) {
             this.field_n.field_s.d(param1.field_k, (byte) -118);
             return;
-          } else {
-            if (!this.field_n.field_s.a(119, 9)) {
-              this.field_n.field_s.d(param1.field_k, (byte) -118);
-              return;
-            } else {
-              this.field_n.field_s.d(119, (byte) -86);
-              return;
-            }
           }
+          if (!this.field_n.field_s.a(119, 9)) {
+            this.field_n.field_s.d(param1.field_k, (byte) -118);
+            return;
+          }
+          this.field_n.field_s.d(119, (byte) -86);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("ana.<init>(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L1;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("ana.<init>(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L2;
-            }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -266,64 +183,44 @@ abstract class ana extends at {
         int var12_int = 0;
         int[] var12 = null;
         int var13 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         var13 = BachelorFridge.field_y;
         try {
-          L0: {
-            var5_int = 0;
-            if (param0) {
-              var6 = param3;
-              var7 = -param3;
-              var8 = -1;
-              hba.a(param1, param2 - param3, tj.field_b[param4], 7, param2 - -param3);
-              L1: while (true) {
-                if (var6 <= var5_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    var8 += 2;
-                    var5_int++;
-                    var7 = var7 + var8;
-                    if ((var7 ^ -1) > -1) {
-                      break L2;
-                    } else {
-                      var6--;
-                      var7 = var7 - (var6 << 467226657);
-                      var9_ref_int__ = tj.field_b[param4 - -var6];
-                      var10_ref_int__ = tj.field_b[param4 - var6];
-                      var11_int = var5_int + param2;
-                      var12_int = param2 + -var5_int;
-                      hba.a(param1, var12_int, var9_ref_int__, 7, var11_int);
-                      hba.a(param1, var12_int, var10_ref_int__, 7, var11_int);
-                      break L2;
-                    }
-                  }
-                  var9 = var6 + param2;
-                  var10 = param2 + -var6;
-                  var11 = tj.field_b[param4 + var5_int];
-                  var12 = tj.field_b[-var5_int + param4];
-                  hba.a(param1, var10, var11, 7, var9);
-                  hba.a(param1, var10, var12, 7, var9);
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5_int = 0;
+          if (!param0) {
+            return;
           }
+          var6 = param3;
+          var7 = -param3;
+          var8 = -1;
+          hba.a(param1, param2 - param3, tj.field_b[param4], 7, param2 + param3);
+          while (var6 > var5_int) {
+            var8 += 2;
+            var5_int++;
+            var7 = var7 + var8;
+            if (var7 >= 0) {
+              var6--;
+              var7 = var7 - (var6 << 1);
+              var9_ref_int__ = tj.field_b[param4 + var6];
+              var10_ref_int__ = tj.field_b[param4 - var6];
+              var11_int = var5_int + param2;
+              var12_int = param2 - var5_int;
+              hba.a(param1, var12_int, var9_ref_int__, 7, var11_int);
+              hba.a(param1, var12_int, var10_ref_int__, 7, var11_int);
+            }
+            var9 = var6 + param2;
+            var10 = param2 - var6;
+            var11 = tj.field_b[param4 + var5_int];
+            var12 = tj.field_b[-var5_int + param4];
+            hba.a(param1, var10, var11, 7, var9);
+            hba.a(param1, var10, var12, 7, var9);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           throw pe.a((Throwable) ((Object) var5), "ana.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

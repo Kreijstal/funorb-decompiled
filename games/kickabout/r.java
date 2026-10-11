@@ -11,13 +11,13 @@ final class r {
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 == param0) {
-            var2 = ng.field_a;
+          var2 = ng.field_a;
         }
-        if (-2 == (param1 ^ -1)) {
-            var2 = q.field_b;
+        if (param1 == 1) {
+          var2 = q.field_b;
         }
-        if (!(2 != param1)) {
-            var2 = fc.field_a;
+        if (2 == param1) {
+          var2 = fc.field_a;
         }
         return var2;
     }
@@ -28,70 +28,20 @@ final class r {
 
     final static void a(boolean param0) {
         fd.h(0);
-        if (null == ic.field_d) {
-          gs.d(98);
-          vp.c(-107);
-          if (!param0) {
-            L0: {
-              field_b = (String[]) null;
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            lr.b((byte) -116);
-            return;
-          } else {
-            L1: {
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            lr.b((byte) -116);
-            return;
-          }
-        } else {
+        if (null != ic.field_d) {
           hm.a(-120, ic.field_d);
-          gs.d(98);
-          vp.c(-107);
-          if (param0) {
-            L2: {
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            lr.b((byte) -116);
-            return;
-          } else {
-            L3: {
-              field_b = (String[]) null;
-              ba.b((byte) 44);
-              if (cr.b(0)) {
-                or.field_d.b(1, (byte) -106);
-                c.a(0, false);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            lr.b((byte) -116);
-            return;
-          }
         }
+        gs.d(98);
+        vp.c(-107);
+        if (!param0) {
+          field_b = (String[]) null;
+        }
+        ba.b((byte) 44);
+        if (cr.b(0)) {
+          or.field_d.b(1, (byte) -106);
+          c.a(0, false);
+        }
+        lr.b((byte) -116);
     }
 
     public static void a(int param0) {
@@ -99,53 +49,35 @@ final class r {
         field_d = null;
         field_a = null;
         field_c = null;
-        if (param0 >= -17) {
-          r.a(-21, -111);
-          field_e = null;
-          return;
-        } else {
+        if (param0 < -17) {
           field_e = null;
           return;
         }
+        r.a(-21, -111);
+        field_e = null;
     }
 
     final boolean a(byte param0) {
-        int stackIn_7_0 = 0;
-        if (param0 < -26) {
-          if (this != gr.field_c) {
-            if (this != bm.field_H) {
-              if (jn.field_rb == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 >= -26) {
           this.a((byte) -81);
-          if (this != gr.field_c) {
-            if (this == bm.field_H) {
-              return true;
-            } else {
-              L0: {
-                if (jn.field_rb != this) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (this == gr.field_c) {
             return true;
           }
+          if (this != bm.field_H) {
+            return jn.field_rb == this ? true : false;
+          }
+          return true;
         }
+        if (this == gr.field_c) {
+          return true;
+        }
+        if (this == bm.field_H) {
+          return true;
+        }
+        if (jn.field_rb != this) {
+          return false;
+        }
+        return true;
     }
 
     static {

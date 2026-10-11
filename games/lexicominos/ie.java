@@ -11,33 +11,33 @@ final class ie extends ee implements java.awt.event.MouseWheelListener {
 
     final void a(boolean param0, java.awt.Component param1) {
         if (!param0) {
-            this.field_h = -55;
-            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_h = -55;
+          param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final synchronized int c(int param0) {
-        int var2;
-        if (param0 <= 28) {
-          this.field_h = -34;
-          var2 = this.field_h;
-          this.field_h = 0;
-          return var2;
-        } else {
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param0 > 28) {
           var2 = this.field_h;
           this.field_h = 0;
           return var2;
         }
+        this.field_h = -34;
+        var2Lifetime1 = this.field_h;
+        this.field_h = 0;
+        return var2Lifetime1;
     }
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 != 3) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a(true, (java.awt.Component) null);
-            param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a(true, (java.awt.Component) null);
+          param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

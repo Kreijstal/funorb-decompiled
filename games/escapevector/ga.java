@@ -9,7 +9,7 @@ final class ga {
 
     final void a(int param0, int param1, int param2) {
         if (param1 <= 107) {
-            return;
+          return;
         }
         this.field_c = param2;
         this.field_a = param0;
@@ -17,7 +17,7 @@ final class ga {
 
     public static void a(int param0) {
         if (param0 != -3217) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

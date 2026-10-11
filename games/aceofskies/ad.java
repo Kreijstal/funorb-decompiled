@@ -8,9 +8,9 @@ final class ad extends dg {
 
     final void d(ea param0, int param1) {
         try {
-            super.d(param0, param1);
+          super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "ad.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ad.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -20,10 +20,10 @@ final class ad extends dg {
 
     public static void e(boolean param0) {
         if (param0) {
-            field_U = -104;
-            field_V = null;
-            field_T = null;
-            return;
+          field_U = -104;
+          field_V = null;
+          field_T = null;
+          return;
         }
         field_V = null;
         field_T = null;

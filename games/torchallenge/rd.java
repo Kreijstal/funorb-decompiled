@@ -17,7 +17,7 @@ final class rd extends da {
         ol.field_f = ik.field_c[param0];
         sd.field_g = pk.field_c[param0];
         if (param1 < 85) {
-            field_i = (ka[]) null;
+          field_i = (ka[]) null;
         }
     }
 
@@ -26,7 +26,7 @@ final class rd extends da {
         field_j = null;
         field_i = null;
         if (param0 != -60) {
-            field_j = (String) null;
+          field_j = (String) null;
         }
     }
 
@@ -35,67 +35,33 @@ final class rd extends da {
         int var11 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param6 == -1012815519) {
-              var10_int = 0;
-              L1: while (true) {
-                if (param9 <= var10_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    if (!param4) {
-                      break L2;
-                    } else {
-                      param0[var10_int][0] = e.b((byte) 57, param3 * param7 >> 2014224898);
-                      param0[var10_int][1] = e.b((byte) 57, param2 * param5 >> -805282014);
-                      break L2;
-                    }
-                  }
-                  qg.a(param8 - (param7 >> -374728126) * (param3 - 4 >> 291984513) - -param0[var10_int][0] << 739857860, -((param2 >> -605843870) * (-4 + param5 >> -1012815519)) + (param1 + param0[var10_int][1]) << 1321506052, 64, 128, qe.field_A);
-                  var10_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param6 != -1012815519) {
+            return;
           }
+          for (var10_int = 0; param9 > var10_int; var10_int++) {
+            if (param4) {
+              param0[var10_int][0] = e.b((byte) 57, param3 * param7 >> 2);
+              param0[var10_int][1] = e.b((byte) 57, param2 * param5 >> 2);
+            }
+            qg.a(param8 - (param7 >> 2) * (param3 - 4 >> 1) + param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, qe.field_A);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var10 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var10);
-
-            stackIn_11_1 = new StringBuilder().append("rd.B(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var10 = decompiledCaughtException;
+          stackIn_11_0 = var10;
+          stackIn_11_1 = new StringBuilder().append("rd.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

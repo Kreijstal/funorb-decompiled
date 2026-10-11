@@ -20,133 +20,110 @@ final class si extends kna {
         fsa stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var14 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var15 = new fsa(param2, param0);
-              var15.b((byte) -11, this.field_k, this.field_l);
-              if (this.field_m == 49) {
-                var7 = 10;
-                var5 = 8;
-                var8 = 50;
-                var6 = 50;
-                break L1;
-              } else {
-                L2: {
-                  if (this.field_m == 0) {
-                    var6 = 25;
-                    var7 = 0;
-                    var8 = 50;
-                    break L2;
-                  } else {
-                    var8 = 1;
-                    var6 = 5;
-                    var7 = 1;
-                    break L2;
-                  }
-                }
-                var5 = 4;
-                break L1;
-              }
+          var15 = new fsa(param2, param0);
+          var15.b((byte) -11, this.field_k, this.field_l);
+          if (this.field_m == 49) {
+            var7 = 10;
+            var5 = 8;
+            var8 = 50;
+            var6 = 50;
+          } else {
+            if (this.field_m == 0) {
+              var6 = 25;
+              var7 = 0;
+              var8 = 50;
+            } else {
+              var8 = 1;
+              var6 = 5;
+              var7 = 1;
             }
-            var15.a((byte) -3, var5);
-            var15.h(param1, 0);
-            var15.e(true, param1 + 119);
-            var15.g(param1 + 97, 1);
-            var15.b((byte) 17, false);
-            var15.a(1, (byte) -12, true);
-            var9 = new eq(param2, param0);
-            var15.a((byte) 83, (nv) (var9));
-            var15.d(var6, -1);
-            var10 = new cu(param2, param0);
-            var10.b(1, var8, param1 + -3);
-            var11 = var10.j((byte) -106);
-            var11.a(false, 67);
-            var11.a(0, -17075, true);
-            var15.a((byte) 83, (nv) (var10));
-            var12 = rm.field_a;
-            var13 = (boa) ((Object) var12.a(7, 92));
-            var13.b(107, var7);
-            var15.a((gr) null, (byte) 124, var13);
-            stackIn_8_0 = (fsa) (var15);
-            break L0;
+            var5 = 4;
           }
+          var15.a((byte) -3, var5);
+          var15.h(param1, 0);
+          var15.e(true, param1 + 119);
+          var15.g(param1 + 97, 1);
+          var15.b((byte) 17, false);
+          var15.a(1, (byte) -12, true);
+          var9 = new eq(param2, param0);
+          var15.a((byte) 83, (nv) (var9));
+          var15.d(var6, -1);
+          var10 = new cu(param2, param0);
+          var10.b(1, var8, param1 - 3);
+          var11 = var10.j((byte) -106);
+          var11.a(false, 67);
+          var11.a(0, -17075, true);
+          var15.a((byte) 83, (nv) (var10));
+          var12 = rm.field_a;
+          var13 = (boa) (var12.a(7, 92));
+          var13.b(107, var7);
+          var15.a((gr) null, (byte) 124, var13);
+          stackIn_8_0 = var15;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4);
-
-            stackIn_11_1 = new StringBuilder().append("si.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_11_0 = var4;
+          stackIn_11_1 = new StringBuilder().append("si.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
-        return stackIn_8_0;
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            this.v(16);
-            return false;
+          this.v(16);
+          return false;
         }
         return false;
     }
 
     public static void B(int param0) {
         if (param0 < 115) {
-            field_F = (String[]) null;
-            field_F = null;
-            return;
+          field_F = (String[]) null;
+          field_F = null;
+          return;
         }
         field_F = null;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            this.q((byte) 98);
-            return false;
+          this.q((byte) 98);
+          return false;
         }
         return false;
     }
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
+          super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "si.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "si.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            la var3 = (la) null;
-            this.a(false, -29, (la) null);
-            return false;
+          la var3 = (la) null;
+          this.a(false, -29, (la) null);
+          return false;
         }
         return false;
     }
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            field_F = (String[]) null;
-            return false;
+          field_F = (String[]) null;
+          return false;
         }
         return false;
     }
@@ -156,28 +133,25 @@ final class si extends kna {
     }
 
     final static int A(int param0) {
-        if (param0 > 12) {
-          uja.field_a.a(-121);
-          if (!wg.field_l.c(81)) {
-            return qda.b((byte) -66);
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 <= 12) {
           si.A(-47);
           uja.field_a.a(-121);
-          if (!wg.field_l.c(81)) {
-            return qda.b((byte) -66);
-          } else {
+          if (wg.field_l.c(81)) {
             return 0;
           }
+          return qda.b((byte) -66);
         }
+        uja.field_a.a(-121);
+        if (wg.field_l.c(81)) {
+          return 0;
+        }
+        return qda.b((byte) -66);
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            this.q((byte) 57);
-            return 7;
+          this.q((byte) 57);
+          return 7;
         }
         return 7;
     }
@@ -188,21 +162,19 @@ final class si extends kna {
 
     final static int a(int param0, int param1, int param2, boolean param3) {
         if (param2 <= 94) {
-            field_F = (String[]) null;
-            return rl.r(-95);
+          field_F = (String[]) null;
+          return rl.r(-95);
         }
         return rl.r(-95);
     }
 
     final void q(byte param0) {
         super.q(param0);
-        if (this.field_m == 49) {
-          this.b(param0 ^ -82, 4194304, 4194304);
-          return;
-        } else {
+        if (this.field_m != 49) {
           this.b(-78, 2097152, 2097152);
           return;
         }
+        this.b(param0 ^ -82, 4194304, 4194304);
     }
 
     static {

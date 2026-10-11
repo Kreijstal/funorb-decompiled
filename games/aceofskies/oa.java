@@ -34,30 +34,22 @@ final class oa extends ha implements e {
         this.field_h = new ph(4);
         this.field_g = false;
         try {
-          L0: {
-            if (ei.a("sw3d", (byte) -16)) {
-              L1: {
-                vk.b(false);
-                this.MA(this.field_a, 0, 0);
-                fr.a(false, 0, true);
-                this.field_g = true;
-                discarded$1 = new ja();
-                this.a(new ja());
-                this.g(1);
-                this.f(0);
-                if (param0 == null) {
-                  break L1;
-                } else {
-                  this.a(param0, param2, param3);
-                  this.a(param0);
-                  break L1;
-                }
-              }
-              break L0;
-            } else {
-              throw new RuntimeException("");
-            }
+          if (!ei.a("sw3d", (byte) -16)) {
+            throw new RuntimeException("");
           }
+          vk.b(false);
+          this.MA(this.field_a, 0, 0);
+          fr.a(false, 0, true);
+          this.field_g = true;
+          discarded$1 = new ja();
+          this.a(new ja());
+          this.g(1);
+          this.f(0);
+          if (param0 != null) {
+            this.a(param0, param2, param3);
+            this.a(param0);
+          }
+          return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -67,7 +59,7 @@ final class oa extends ha implements e {
     }
 
     final void a(pa param0, boolean param1) {
-        this.n(((j) ((Object) param0)).field_nativeid, 0L);
+        this.n(((j) (param0)).field_nativeid, 0L);
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -81,7 +73,7 @@ final class oa extends ha implements e {
     private final native void n(long param0, long param1);
 
     final void a(sm param0) {
-        wa var2 = (wa) ((Object) param0);
+        wa var2 = (wa) (param0);
         this.n(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
     }
 
@@ -89,22 +81,22 @@ final class oa extends ha implements e {
 
     final void c() {
         if (this.field_j) {
-            return;
+          return;
         }
         this.field_k = null;
         this.field_d = null;
         this.field_i = null;
         this.field_h.b(0);
-        ya var1 = (ya) ((Object) this.field_m.d(268435455));
+        ya var1 = (ya) (this.field_m.d(268435455));
         while (var1 != null) {
-            var1.ga();
-            var1 = (ya) ((Object) this.field_m.b((byte) 103));
+          var1.ga();
+          var1 = (ya) (this.field_m.b((byte) 103));
         }
         this.field_m.c(268435455);
         this.FA();
         if (this.field_g) {
-            da.a(24, true, false);
-            this.field_g = false;
+          da.a(24, true, false);
+          this.field_g = false;
         }
         this.g();
         vk.a(false);
@@ -117,7 +109,7 @@ final class oa extends ha implements e {
 
     private final void a(ao param0) {
         this.field_f = param0;
-        this.ma(((ja) ((Object) param0)).field_nativeid);
+        this.ma(((ja) (param0)).field_nativeid);
     }
 
     final void a() {
@@ -137,63 +129,58 @@ final class oa extends ha implements e {
         Object var2_ref = null;
         uh var3 = null;
         Throwable var4 = null;
-        int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         var2_ref = this;
         synchronized (var2_ref) {
-          L0: {
-            var3 = this.field_a.a(false, (int) param0);
-            if (var3 != null) {
-              this.AA(param0, var3.field_t, var3.field_q, var3.field_c, var3.field_s, var3.field_h, var3.field_o, var3.field_r, var3.field_b, var3.field_n, var3.field_j, var3.field_f, var3.field_a, var3.field_p, var3.field_d, var3.field_l, var3.field_k, var3.field_i, var3.field_m, var3.field_e);
-              break L0;
-            } else {
-              stackIn_3_0 = 0;
-              return stackIn_3_0 != 0;
-            }
+          var3 = this.field_a.a(false, (int) param0);
+          if (var3 == null) {
+            return false;
           }
+          this.AA(param0, var3.field_t, var3.field_q, var3.field_c, var3.field_s, var3.field_h, var3.field_o, var3.field_r, var3.field_b, var3.field_n, var3.field_j, var3.field_f, var3.field_a, var3.field_p, var3.field_d, var3.field_l, var3.field_k, var3.field_i, var3.field_m, var3.field_e);
         }
         return true;
     }
 
     final pa a(vd param0, boolean param1) {
-        j var3 = new j((oa) (this), param0.field_f, param0.field_d, param0.field_e, 0, param0.field_h, param0.field_h, param0.field_c);
+        j var3 = new j(this, param0.field_f, param0.field_d, param0.field_e, 0, param0.field_h, param0.field_h, param0.field_c);
         ((pa) ((Object) var3)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
         return (pa) ((Object) var3);
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         try {
-            java.lang.reflect.Method var6 = null;
-            Class var7 = null;
-            p var4 = (p) ((Object) this.field_h.a((byte) 106, (long)param0.hashCode()));
-            if (var4 == null) {
-                try {
-                    var7 = Class.forName("java.awt.Canvas");
-                    var6 = var7.getMethod("setIgnoreRepaint", new Class[]{Boolean.TYPE});
-                    var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
-                } catch (Exception exception) {
-                }
-                var4 = new p((oa) (this), param0, param1, param2);
-                this.field_h.a(-125, (long)param0.hashCode(), var4);
-            } else {
-                if (var4.field_h != param1 || var4.field_g != param2) {
-                    var4.a(param0, param1, param2);
-                }
+          java.lang.reflect.Method var6 = null;
+          Class var7 = null;
+          p var4 = (p) (this.field_h.a((byte) 106, (long)param0.hashCode()));
+          if (var4 == null) {
+            try {
+              var7 = Class.forName("java.awt.Canvas");
+              var6 = var7.getMethod("setIgnoreRepaint", new Class[]{Boolean.TYPE});
+              var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
+            } catch (Exception exception) {
             }
+            var4 = new p(this, param0, param1, param2);
+            this.field_h.a(-125, (long)param0.hashCode(), var4);
+          } else {
+            if (var4.field_h != param1 ||
+              var4.field_g != param2) {
+              var4.a(param0, param1, param2);
+            }
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final void b(int param0) {
         vk.a((byte) 117);
         this.d(param0);
-        ya var2 = (ya) ((Object) this.field_m.d(268435455));
+        ya var2 = (ya) (this.field_m.d(268435455));
         while (var2 != null) {
-            var2.r();
-            var2 = (ya) ((Object) this.field_m.b((byte) 103));
+          var2.r();
+          var2 = (ya) (this.field_m.b((byte) 103));
         }
     }
 
@@ -206,18 +193,18 @@ final class oa extends ha implements e {
     public final native void w(boolean param0);
 
     final pa a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (pa) ((Object) new j((oa) (this), param0, param1, param2, param3, param4, false));
+        return (pa) ((Object) new j(this, param0, param1, param2, param3, param4, false));
     }
 
     private final void a(java.awt.Canvas param0) {
         p var2 = null;
         if (param0 != null) {
-            var2 = (p) ((Object) this.field_h.a((byte) 106, (long)param0.hashCode()));
-            this.field_d = var2;
-            this.t(var2);
+          var2 = (p) (this.field_h.a((byte) 106, (long)param0.hashCode()));
+          this.field_d = var2;
+          this.t(var2);
         } else {
-            this.field_d = null;
-            this.t((p) null);
+          this.field_d = null;
+          this.t((p) null);
         }
     }
 
@@ -230,7 +217,7 @@ final class oa extends ha implements e {
         this.field_n = param0;
         this.field_k = new a[this.field_n];
         for (var2 = 0; var2 < this.field_n; var2++) {
-            this.field_k[var2] = new a((oa) (this), this.field_e, this.field_l);
+          this.field_k[var2] = new a(this, this.field_e, this.field_l);
         }
     }
 
@@ -239,7 +226,7 @@ final class oa extends ha implements e {
     private final native void d(int param0);
 
     final za c(int param0) {
-        ya var2 = new ya((oa) (this), param0);
+        ya var2 = new ya(this, param0);
         this.field_m.a(119, var2);
         return (za) ((Object) var2);
     }
@@ -250,35 +237,22 @@ final class oa extends ha implements e {
         uh var3 = null;
         int[] var4 = null;
         Throwable var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
         Throwable decompiledCaughtException = null;
         var2_ref = this.field_a;
         synchronized (var2_ref) {
-          L0: {
-            if (this.field_a.a((int) param0, -3804)) {
-              var3 = this.field_a.a(false, (int) param0);
-              if (var3 != null) {
-                L1: {
-                  if (var3.field_q == 2) {
-                    var4 = this.field_a.a((int) param0, -10805, 128, true, 0.699999988079071f, 128);
-                    break L1;
-                  } else {
-                    var4 = this.field_a.a(128, (int) param0, (byte) -18, true, 128, 0.699999988079071f);
-                    break L1;
-                  }
-                }
-                this.CA(param0, var4, var3.field_t, var3.field_q, var3.field_c, var3.field_s, var3.field_h, var3.field_o, var3.field_r, var3.field_b, var3.field_n, var3.field_j, var3.field_f, var3.field_a, var3.field_p, var3.field_d, var3.field_l, var3.field_k, var3.field_i, var3.field_m, var3.field_e);
-                break L0;
-              } else {
-                stackIn_6_0 = 0;
-                return stackIn_6_0 != 0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              return stackIn_3_0 != 0;
-            }
+          if (!this.field_a.a((int) param0, -3804)) {
+            return false;
           }
+          var3 = this.field_a.a(false, (int) param0);
+          if (var3 == null) {
+            return false;
+          }
+          if (var3.field_q == 2) {
+            var4 = this.field_a.a((int) param0, -10805, 128, true, 0.699999988079071f, 128);
+          } else {
+            var4 = this.field_a.a(128, (int) param0, (byte) -18, true, 128, 0.699999988079071f);
+          }
+          this.CA(param0, var4, var3.field_t, var3.field_q, var3.field_c, var3.field_s, var3.field_h, var3.field_o, var3.field_r, var3.field_b, var3.field_n, var3.field_j, var3.field_f, var3.field_a, var3.field_p, var3.field_d, var3.field_l, var3.field_k, var3.field_i, var3.field_m, var3.field_e);
         }
         return true;
     }
@@ -287,7 +261,7 @@ final class oa extends ha implements e {
     }
 
     private final Object OA() {
-        return new ba((oa) (this));
+        return new ba(this);
     }
 
     final boolean d() {
@@ -295,48 +269,36 @@ final class oa extends ha implements e {
     }
 
     final da a(vs param0, vd[] param1, boolean param2) {
+        int var7 = 0;
         int[] var4;
         int[] var5;
         int var6;
-        int var7;
         var4 = new int[param1.length];
         var5 = new int[param1.length];
         var6 = 0;
-        var7 = 0;
-        L0: while (true) {
-          if (var7 >= param1.length) {
-            if (!param2) {
-              if (var6 == 0) {
-                return (da) ((Object) new n((oa) (this), this.field_i, param0, param1, (pa[]) null));
-              } else {
-                throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
-              }
-            } else {
-              if (var6 == 0) {
-                return (da) ((Object) new h((oa) (this), this.field_i, param0, param1, (pa[]) null));
-              } else {
-                throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
-              }
-            }
-          } else {
-            var4[var7] = param1[var7].field_h;
-            var5[var7] = param1[var7].field_c;
-            if (param1[var7].field_e != null) {
-              var6 = 1;
-              var7++;
-              continue L0;
-            } else {
-              var7++;
-              continue L0;
-            }
+        for (var7 = 0; var7 < param1.length; var7++) {
+          var4[var7] = param1[var7].field_h;
+          var5[var7] = param1[var7].field_c;
+          if (param1[var7].field_e != null) {
+            var6 = 1;
           }
         }
+        if (!param2) {
+          if (var6 == 0) {
+            return (da) ((Object) new n(this, this.field_i, param0, param1, (pa[]) null));
+          }
+          throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
+        }
+        if (var6 == 0) {
+          return (da) ((Object) new h(this, this.field_i, param0, param1, (pa[]) null));
+        }
+        throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }
 
     final native void T(int param0, int param1, int param2, int param3);
 
     final void a(za param0) {
-        this.field_i = (ya) ((Object) param0);
+        this.field_i = (ya) (param0);
         this.va(param0);
     }
 
@@ -354,7 +316,7 @@ final class oa extends ha implements e {
     }
 
     final sm a(ra param0, gd param1) {
-        return (sm) ((Object) new wa((oa) (this), (j) ((Object) param0), (xa) ((Object) param1)));
+        return (sm) ((Object) new wa(this, (j) (param0), (xa) (param1)));
     }
 
     private final native void ma(long param0);
@@ -370,7 +332,7 @@ final class oa extends ha implements e {
     protected final synchronized void finalize() {
         this.a(-9);
         if (this.field_nativeid != 0L) {
-            vk.a((e) (this), -111);
+          vk.a((e) (this), -111);
         }
     }
 
@@ -380,7 +342,7 @@ final class oa extends ha implements e {
 
     final void b(int param0, int param1) throws lp {
         if (this.field_d == null) {
-            throw new IllegalStateException("off");
+          throw new IllegalStateException("off");
         }
         this.field_d.a(param0, param1);
     }

@@ -18,45 +18,29 @@ final class bk {
     final int a(byte param0, int param1) {
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = TetraLink.field_J;
-        if (this.field_j != null) {
-          if (0 != this.field_j.length) {
-            if (param0 >= 62) {
-              var3 = 1;
-              L0: while (true) {
-                if (this.field_j.length > var3) {
-                  if ((param1 ^ -1) > (this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103 ^ -1)) {
-                    return var3 + -1;
-                  } else {
-                    var3++;
-                    continue L0;
-                  }
-                } else {
-                  return -1 + this.field_j.length;
-                }
-              }
-            } else {
-              this.field_h = -98;
-              var3 = 1;
-              L1: while (true) {
-                if (this.field_j.length > var3) {
-                  if ((param1 ^ -1) > (this.field_j[-1 + var3] - -this.field_j[var3] >> -655791103 ^ -1)) {
-                    return var3 + -1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                } else {
-                  return -1 + this.field_j.length;
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (this.field_j == null) {
           return 0;
         }
+        if (0 == this.field_j.length) {
+          return 0;
+        }
+        if (param0 >= 62) {
+          for (var3 = 1; this.field_j.length > var3; var3++) {
+            if (param1 < (this.field_j[-1 + var3] + this.field_j[var3] >> 1)) {
+              return var3 - 1;
+            }
+          }
+          return -1 + this.field_j.length;
+        }
+        this.field_h = -98;
+        for (var3Lifetime1 = 1; this.field_j.length > var3Lifetime1; var3Lifetime1++) {
+          if (param1 < (this.field_j[-1 + var3Lifetime1] + this.field_j[var3Lifetime1] >> 1)) {
+            return var3Lifetime1 - 1;
+          }
+        }
+        return -1 + this.field_j.length;
     }
 
     public static void b(int param0) {
@@ -66,16 +50,14 @@ final class bk {
         field_l = null;
         field_g = null;
         field_k = null;
-        if (param0 <= 48) {
-          bk.b(-43);
-          field_f = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 > 48) {
           field_f = null;
           field_e = null;
           return;
         }
+        bk.b(-43);
+        field_f = null;
+        field_e = null;
     }
 
     final static void a(int param0) {
@@ -83,35 +65,24 @@ final class bk {
         int var2;
         var2 = TetraLink.field_J;
         s.field_f = false;
-        if (param0 == 1) {
-          wg.field_b = null;
-          if (!qa.field_v) {
-            var1 = pg.field_a;
-            if (-1 > (var1 ^ -1)) {
-              if (var1 == 1) {
-                wg.field_b = pl.field_g;
-                wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
-                fl.field_u.r(param0 + -126);
-                of.b(true);
-                return;
-              } else {
-                wg.field_b = sk.a(new String[]{Integer.toString(var1)}, ll.field_z, 121);
-                wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
-                fl.field_u.r(param0 + -126);
-                of.b(true);
-                return;
-              }
-            } else {
-              fl.field_u.r(param0 + -126);
-              of.b(true);
-              return;
-            }
-          } else {
-            fl.field_u.p(param0 ^ 129);
-            return;
-          }
-        } else {
+        if (param0 != 1) {
           return;
+        }
+        wg.field_b = null;
+        if (qa.field_v) {
+          fl.field_u.p(param0 ^ 129);
+        } else {
+          var1 = pg.field_a;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              wg.field_b = pl.field_g;
+            } else {
+              wg.field_b = sk.a(new String[]{Integer.toString(var1)}, ll.field_z, 121);
+            }
+            wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
+          }
+          fl.field_u.r(param0 - 126);
+          of.b(true);
         }
     }
 
@@ -122,36 +93,20 @@ final class bk {
     }
 
     final int a(byte param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 <= -12) {
-          if (null != this.field_j) {
-            if (this.field_j.length == 0) {
-              return 0;
-            } else {
-              return this.field_j[-1 + this.field_j.length];
-            }
-          } else {
-            stackIn_11_0 = 0;
-            return stackIn_11_0;
-          }
-        } else {
+        if (param0 > -12) {
           field_f = (String) null;
-          if (null == this.field_j) {
-            return 0;
-          } else {
-            L0: {
-              if (this.field_j.length != 0) {
-                stackIn_5_0 = this.field_j[-1 + this.field_j.length];
-                break L0;
-              } else {
-                stackIn_5_0 = 0;
-                break L0;
-              }
-            }
-            return stackIn_5_0;
+          if (null != this.field_j) {
+            return this.field_j.length == 0 ? 0 : this.field_j[-1 + this.field_j.length];
           }
+          return 0;
         }
+        if (null == this.field_j) {
+          return 0;
+        }
+        if (this.field_j.length != 0) {
+          return this.field_j[-1 + this.field_j.length];
+        }
+        return 0;
     }
 
     static {

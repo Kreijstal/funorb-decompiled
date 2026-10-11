@@ -7,7 +7,7 @@ final class fi {
 
     public static void a(byte param0) {
         if (param0 < 35) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -15,18 +15,18 @@ final class fi {
 
     final static void a(byte param0, bj param1, hg param2, int param3) {
         try {
-            kc.field_d = param3 * pl.b((byte) -116) / 1000;
-            gn.a(param1, (byte) -101);
-            hj.a(param1, 347664612);
-            if (param0 <= 94) {
-                field_a = (boolean[]) null;
-            }
-            dn.a(param1, (byte) 29);
-            ul.a(8);
-            ii.a(140);
-            mn.field_x = 0 + -kc.field_d;
+          kc.field_d = param3 * pl.b((byte) -116) / 1000;
+          gn.a(param1, (byte) -101);
+          hj.a(param1, 347664612);
+          if (param0 <= 94) {
+            field_a = (boolean[]) null;
+          }
+          dn.a(param1, (byte) 29);
+          ul.a(8);
+          ii.a(140);
+          mn.field_x = 0 - kc.field_d;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "fi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "fi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

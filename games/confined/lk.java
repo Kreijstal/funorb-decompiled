@@ -16,14 +16,12 @@ final class lk {
         field_e = null;
         field_c = null;
         field_d = null;
-        if (param0) {
-          lk.a(true);
-          field_b = null;
-          return;
-        } else {
+        if (!param0) {
           field_b = null;
           return;
         }
+        lk.a(true);
+        field_b = null;
     }
 
     static {

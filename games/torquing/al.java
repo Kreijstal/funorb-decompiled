@@ -20,50 +20,30 @@ final class al {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 != null) {
-                param0.f(0);
-                param0.h(0);
-                this.field_g = this.field_g + param0.field_t;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (param1 > 51) {
-              break L0;
-            } else {
-              this.field_h = (lj) null;
-              return;
-            }
+          if (param0 != null) {
+            param0.f(0);
+            param0.h(0);
+            this.field_g = this.field_g + param0.field_t;
           }
+          if (param1 > 51) {
+            return;
+          }
+          this.field_h = (lj) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("al.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("al.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -73,18 +53,18 @@ final class al {
         field_e = null;
         field_f = null;
         if (param0 != 20) {
-            al.a((byte) -68);
+          al.a((byte) -68);
         }
     }
 
     final void a(long param0, Object param1, byte param2) {
         try {
-            if (param2 != 116) {
-                al.a(0.6495872916691957, (byte) 34);
-            }
-            this.a(1, param0, param1, true);
+          if (param2 != 116) {
+            al.a(0.6495872916691957, (byte) 34);
+          }
+          this.a(1, param0, param1, true);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -93,73 +73,63 @@ final class al {
         en var6_ref = null;
         int var7 = Torquing.field_u;
         try {
-            if (this.field_b < param0) {
-                throw new IllegalStateException();
-            }
-            this.a(param1, 18998);
-            if (!param3) {
-                al.a((byte) 76);
-            }
-            this.field_g = this.field_g - param0;
-            while (0 > this.field_g) {
-                var6 = (d) ((Object) this.field_h.a(4));
-                this.a(var6, 111);
-            }
-            var6_ref = new en(param2, param0);
-            this.field_a.a(param1, (byte) 92, var6_ref);
-            this.field_h.a(var6_ref, (byte) -60);
-            ((d) ((Object) var6_ref)).field_l = 0L;
+          if (this.field_b < param0) {
+            throw new IllegalStateException();
+          }
+          this.a(param1, 18998);
+          if (!param3) {
+            al.a((byte) 76);
+          }
+          this.field_g = this.field_g - param0;
+          while (0 > this.field_g) {
+            var6 = (d) (this.field_h.a(4));
+            this.a(var6, 111);
+          }
+          var6_ref = new en(param2, param0);
+          this.field_a.a(param1, (byte) 92, var6_ref);
+          this.field_h.a(var6_ref, (byte) -60);
+          ((d) ((Object) var6_ref)).field_l = 0L;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "al.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     private final void a(long param0, int param1) {
-        d var4;
-        var4 = (d) ((Object) this.field_a.a(param0, param1 + -19110));
+        d var4 = (d) (this.field_a.a(param0, param1 - 19110));
         this.a(var4, 111);
-        if (param1 != 18998) {
-          this.a(30, 43L);
-          return;
-        } else {
+        if (param1 == 18998) {
           return;
         }
+        this.a(30, 43L);
     }
 
     final Object a(int param0, long param1) {
-        Object var5;
-        en var6;
-        d var7;
-        var7 = (d) ((Object) this.field_a.a(param1, 115));
-        if (param0 <= -122) {
-          if (var7 != null) {
-            var5 = var7.b(12);
-            if (var5 == null) {
-              var7.f(0);
-              var7.h(0);
-              this.field_g = this.field_g + var7.field_t;
-              return null;
-            } else {
-              if (var7.c((byte) 37)) {
-                var6 = new en(var5, var7.field_t);
-                this.field_a.a(var7.field_f, (byte) 75, var6);
-                this.field_h.a(var6, (byte) -66);
-                ((d) ((Object) var6)).field_l = 0L;
-                var7.f(0);
-                var7.h(0);
-                return var5;
-              } else {
-                this.field_h.a(var7, (byte) -48);
-                var7.field_l = 0L;
-                return var5;
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        d var7 = (d) (this.field_a.a(param1, 115));
+        if (param0 > -122) {
           return (Object) null;
         }
+        if (var7 == null) {
+          return null;
+        }
+        Object var5 = var7.b(12);
+        if (var5 == null) {
+          var7.f(0);
+          var7.h(0);
+          this.field_g = this.field_g + var7.field_t;
+          return null;
+        }
+        if (!var7.c((byte) 37)) {
+          this.field_h.a(var7, (byte) -48);
+          var7.field_l = 0L;
+          return var5;
+        }
+        en var6 = new en(var5, var7.field_t);
+        this.field_a.a(var7.field_f, (byte) 75, var6);
+        this.field_h.a(var6, (byte) -66);
+        ((d) ((Object) var6)).field_l = 0L;
+        var7.f(0);
+        var7.h(0);
+        return var5;
     }
 
     private al() throws Throwable {

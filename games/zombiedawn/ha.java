@@ -12,13 +12,13 @@ final class ha {
         field_c = null;
         field_d = null;
         if (param0 != 127) {
-            field_a = -74;
+          field_a = -74;
         }
     }
 
     final static void a(byte param0) {
         if (param0 < 116) {
-            field_d = (fc) null;
+          field_d = (fc) null;
         }
         fp.field_H = dj.field_e.field_H.field_u + 300;
         ac.field_t = -300;
@@ -33,58 +33,35 @@ final class ha {
         int var5 = 0;
         var4 = ZombieDawn.field_J;
         try {
-          L0: {
-            L1: {
-              if (param0 == 27914) {
-                break L1;
-              } else {
-                ha.a(-110);
-                break L1;
-              }
-            }
-            var1 = ea.field_c;
-            synchronized (var1) {
-              L2: {
-                L3: {
-                  nl.field_s = nl.field_s + 1;
-                  he.field_e = wb.field_y;
-                  if (ih.field_F < 0) {
-                    var5 = 0;
-                    var2 = var5;
-                    L4: while (true) {
-                      if (var5 >= 112) {
-                        ih.field_F = uc.field_d;
-                        break L3;
-                      } else {
-                        bo.field_p[var5] = false;
-                        var5++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    L5: while (true) {
-                      if (ih.field_F == uc.field_d) {
-                        break L3;
-                      } else {
-                        var2 = nd.field_c[uc.field_d];
-                        uc.field_d = 127 & 1 + uc.field_d;
-                        if (-1 >= (var2 ^ -1)) {
-                          bo.field_p[var2] = true;
-                          continue L5;
-                        } else {
-                          bo.field_p[var2 ^ -1] = false;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                }
-                wb.field_y = je.field_c;
-                break L2;
-              }
-            }
-            break L0;
+          if (param0 != 27914) {
+            ha.a(-110);
           }
+          var1 = ea.field_c;
+          synchronized (var1) {
+            nl.field_s = nl.field_s + 1;
+            he.field_e = wb.field_y;
+            if (ih.field_F < 0) {
+              var5 = 0;
+              var2 = var5;
+              while (var5 < 112) {
+                bo.field_p[var5] = false;
+                var5++;
+              }
+              ih.field_F = uc.field_d;
+            } else {
+              while (ih.field_F != uc.field_d) {
+                var2 = nd.field_c[uc.field_d];
+                uc.field_d = 127 & 1 + uc.field_d;
+                if (var2 >= 0) {
+                  bo.field_p[var2] = true;
+                  continue;
+                }
+                bo.field_p[~var2] = false;
+              }
+            }
+            wb.field_y = je.field_c;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -96,5 +73,14 @@ final class ha {
         field_d = null;
         field_c = "Select Level";
         field_b = 0;
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$6121ff5511c4(int param0) {
+        if (param0 < 116) {
+          field_d = (fc) null;
+        }
+        fp.field_H = dj.field_e.field_H.field_u + 300;
+        ac.field_t = -300;
     }
 }

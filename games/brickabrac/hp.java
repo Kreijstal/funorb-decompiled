@@ -11,11 +11,11 @@ final class hp extends nm {
     static int field_m;
 
     final int b(int param0, int param1) {
-        if (!(param0 <= this.field_j)) {
-            throw new RuntimeException("State in future " + this.field_j + " " + param0);
+        if (param0 > this.field_j) {
+          throw new RuntimeException("State in future " + this.field_j + " " + param0);
         }
-        if (!(param0 >= -this.field_n + this.field_j + param1)) {
-            throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + this.field_j);
+        if (param0 < -this.field_n + this.field_j + param1) {
+          throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + this.field_j);
         }
         return this.field_o[param0 % this.field_n];
     }
@@ -25,7 +25,7 @@ final class hp extends nm {
         this.field_j = this.field_j + 1;
         this.field_o[fieldTemp$0 % this.field_n] = param1;
         if (param0 != -7255) {
-            this.a(-25, 104);
+          this.a(-25, 104);
         }
     }
 
@@ -34,7 +34,7 @@ final class hp extends nm {
         field_l = null;
         field_k = null;
         if (param0 != 67108864) {
-            field_l = (jp[]) null;
+          field_l = (jp[]) null;
         }
     }
 

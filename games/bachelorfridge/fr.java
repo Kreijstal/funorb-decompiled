@@ -17,18 +17,16 @@ final class fr extends pu {
         field_p = null;
         field_l = null;
         field_m = null;
-        if (param0 != 3) {
-          fr.d((byte) 103);
-          field_q = null;
-          field_o = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 == 3) {
           field_q = null;
           field_o = null;
           field_r = null;
           return;
         }
+        fr.d((byte) 103);
+        field_q = null;
+        field_o = null;
+        field_r = null;
     }
 
     static {

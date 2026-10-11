@@ -13,10 +13,10 @@ final class r {
     private ni[] field_e;
 
     final static String a(int param0, int param1, byte[] param2, byte param3) {
+        int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         char[] var11 = null;
@@ -24,8 +24,6 @@ final class r {
         String stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
@@ -33,92 +31,50 @@ final class r {
         byte[] var10 = null;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var12 = new char[param0];
-            var11 = var12;
-            var4 = var11;
-            var5 = 0;
-            var6 = 0;
-            L1: while (true) {
-              if (var6 >= param0) {
-                L2: {
-                  if (param3 == 8) {
-                    break L2;
-                  } else {
-                    var10 = (byte[]) null;
-                    r.a(-89, -120, (byte[]) null, (byte) -36);
-                    break L2;
-                  }
+          var12 = new char[param0];
+          var11 = var12;
+          var4 = var11;
+          var5 = 0;
+          for (var6 = 0; var6 < param0; var6++) {
+            var7 = 255 & param2[var6 + param1];
+            if (var7 != 0) {
+              if (var7 >= 128 &&
+                var7 < 160) {
+                var8 = ae.field_p[var7 - 128];
+                if (var8 == 0) {
+                  var8 = 63;
                 }
-                stackIn_16_0 = new String(var12, 0, var5);
-                break L0;
-              } else {
-                L3: {
-                  var7 = 255 & param2[var6 + param1];
-                  if ((var7 ^ -1) != -1) {
-                    L4: {
-                      if ((var7 ^ -1) > -129) {
-                        break L4;
-                      } else {
-                        if (-161 >= (var7 ^ -1)) {
-                          break L4;
-                        } else {
-                          L5: {
-                            var8 = ae.field_p[var7 - 128];
-                            if (var8 != 0) {
-                              break L5;
-                            } else {
-                              var8 = 63;
-                              break L5;
-                            }
-                          }
-                          var7 = var8;
-                          break L4;
-                        }
-                      }
-                    }
-                    incrementValue$0 = var5;
-                    var5++;
-                    var4[incrementValue$0] = (char)var7;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var6++;
-                continue L1;
+                var7 = var8;
               }
+              incrementValue$0 = var5;
+              var5++;
+              var4[incrementValue$0] = (char)var7;
             }
           }
+          if (param3 != 8) {
+            var10 = (byte[]) null;
+            r.a(-89, -120, (byte[]) null, (byte) -36);
+          }
+          stackIn_16_0 = new String(var12, 0, var5);
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var4_ref);
-
-            stackIn_19_1 = new StringBuilder().append("r.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L6;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_19_0 = var4_ref;
+          stackIn_19_1 = new StringBuilder().append("r.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param3 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_16_0;
     }
 
     public static void a(byte param0) {
         field_i = (boolean[][][]) null;
         if (param0 <= 22) {
-            field_i = (boolean[][][]) null;
+          field_i = (boolean[][][]) null;
         }
         field_h = (int[][]) null;
         field_a = null;
@@ -127,15 +83,15 @@ final class r {
     private final void a(int param0, int param1, ni param2) {
         float var4_float = 0.0f;
         try {
-            var4_float = (float)(this.field_b + param1) + (float)param0 / 100.0f;
-            if (param0 != 0) {
-                this.field_c = param2.field_j + " - " + param0 + "%";
-            } else {
-                this.field_c = param2.field_g;
-            }
-            this.field_d = var4_float * (float)this.field_f / (float)(1 + this.field_g);
+          var4_float = (float)(this.field_b + param1) + (float)param0 / 100.0f;
+          if (param0 != 0) {
+            this.field_c = param2.field_j + " - " + param0 + "%";
+          } else {
+            this.field_c = param2.field_g;
+          }
+          this.field_d = var4_float * (float)this.field_f / (float)(1 + this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "r.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,69 +99,36 @@ final class r {
         int var3;
         ni var4;
         var3 = TorChallenge.field_F ? 1 : 0;
-        L0: while (true) {
-          if (this.field_b >= this.field_g) {
-            if (param0 == 0) {
-              return true;
-            } else {
-              field_a = (int[]) null;
-              return true;
-            }
-          } else {
-            var4 = this.field_e[this.field_b];
-            if (!var4.field_a.b(-7957)) {
-              this.a(0, 1, var4);
-              return false;
-            } else {
-              L1: {
-                if (0 > var4.field_c) {
-                  break L1;
-                } else {
-                  if (var4.field_a.a(true, var4.field_c)) {
-                    break L1;
-                  } else {
-                    this.a(var4.field_a.a(var4.field_c, (byte) 12), 1, var4);
-                    return false;
-                  }
-                }
-              }
-              L2: {
-                if (null == var4.field_e) {
-                  break L2;
-                } else {
-                  if (!var4.field_a.b(5, var4.field_e)) {
-                    this.a(var4.field_a.a(118, var4.field_e), param0 ^ 1, var4);
-                    return false;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if ((var4.field_c ^ -1) <= -1) {
-                  break L3;
-                } else {
-                  if (var4.field_e != null) {
-                    break L3;
-                  } else {
-                    if (var4.field_j == null) {
-                      break L3;
-                    } else {
-                      if (!var4.field_a.b((byte) 79)) {
-                        this.a(var4.field_a.c(53), 1, var4);
-                        return false;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_b = this.field_b + 1;
-              continue L0;
-            }
+        while (this.field_b < this.field_g) {
+          var4 = this.field_e[this.field_b];
+          if (!var4.field_a.b(-7957)) {
+            this.a(0, 1, var4);
+            return false;
           }
+          if (0 <= var4.field_c &&
+            !var4.field_a.a(true, var4.field_c)) {
+            this.a(var4.field_a.a(var4.field_c, (byte) 12), 1, var4);
+            return false;
+          }
+          if (null != var4.field_e &&
+            !var4.field_a.b(5, var4.field_e)) {
+            this.a(var4.field_a.a(118, var4.field_e), param0 ^ 1, var4);
+            return false;
+          }
+          if (var4.field_c < 0 &&
+            var4.field_e == null &&
+            var4.field_j != null &&
+            !var4.field_a.b((byte) 79)) {
+            this.a(var4.field_a.c(53), 1, var4);
+            return false;
+          }
+          this.field_b = this.field_b + 1;
         }
+        if (param0 == 0) {
+          return true;
+        }
+        field_a = (int[]) null;
+        return true;
     }
 
     private r() throws Throwable {

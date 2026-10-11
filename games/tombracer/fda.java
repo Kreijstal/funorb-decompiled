@@ -7,9 +7,9 @@ final class fda {
 
     public static void a(int param0) {
         if (param0 >= -22) {
-            fda.a(50);
-            field_a = null;
-            return;
+          fda.a(50);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -18,9 +18,9 @@ abstract class ik extends bf {
         field_o = null;
         field_i = null;
         if (param0 != -69) {
-            ik.a((byte) 11);
-            field_p = null;
-            return;
+          ik.a((byte) 11);
+          field_p = null;
+          return;
         }
         field_p = null;
     }

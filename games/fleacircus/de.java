@@ -25,7 +25,7 @@ final class de {
         field_a = null;
         field_j = null;
         if (param0 != 0) {
-            de.a(38);
+          de.a(38);
         }
         field_b = null;
         field_h = null;
@@ -34,12 +34,12 @@ final class de {
 
     final static void a(byte param0, int param1, int param2, int param3) {
         if (param0 != 88) {
-            field_h = (rh) null;
+          field_h = (rh) null;
         }
         gb.a(si.field_R);
         int var4 = param1 * 16;
         int var5 = 16 * param3;
-        gb.a(var4, var5, var4 - -16, var5 + 16);
+        gb.a(var4, var5, var4 + 16, var5 + 16);
         se.field_a[param2].f(0, 0);
         gb.b(si.field_R);
     }
@@ -49,7 +49,7 @@ final class de {
         field_n = new il[255];
         field_o = "That name is not available";
         for (var0 = 0; var0 < field_n.length; var0++) {
-            field_n[var0] = new il();
+          field_n[var0] = new il();
         }
         field_j = "Waiting for fonts";
         field_k = new java.math.BigInteger("65537");

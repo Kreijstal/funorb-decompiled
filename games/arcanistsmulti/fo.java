@@ -17,16 +17,7 @@ final class fo {
 
     public static void a(int param0) {
         field_g = null;
-        if (param0 != 0) {
-          fo.a(-82);
-          field_f = null;
-          field_b = null;
-          field_e = null;
-          field_j = null;
-          field_i = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_f = null;
           field_b = null;
           field_e = null;
@@ -35,6 +26,13 @@ final class fo {
           field_c = null;
           return;
         }
+        fo.a(-82);
+        field_f = null;
+        field_b = null;
+        field_e = null;
+        field_j = null;
+        field_i = null;
+        field_c = null;
     }
 
     static {

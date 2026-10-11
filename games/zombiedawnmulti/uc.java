@@ -12,68 +12,48 @@ final class uc {
 
     final boolean d(int param0) {
         if (param0 >= -75) {
-            this.b(-57);
-            return this.field_a;
+          this.b(-57);
+          return this.field_a;
         }
         return this.field_a;
     }
 
     public static void c(int param0) {
-        if (param0 < 115) {
-          uc.c(-77);
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 >= 115) {
           field_d = null;
           field_c = null;
           field_b = null;
           field_g = null;
           return;
         }
+        uc.c(-77);
+        field_d = null;
+        field_c = null;
+        field_b = null;
+        field_g = null;
     }
 
     final String a(int param0) {
         if (param0 != 31027) {
-            field_d = (String) null;
-            return this.field_f;
+          field_d = (String) null;
+          return this.field_f;
         }
         return this.field_f;
     }
 
     final void a(int param0, boolean param1) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (!param1) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((uc) (this)).field_e = stackIn_3_1 != 0;
-        if (param0 != -17853) {
-          this.a(-102, true);
-          this.field_a = true;
-          return;
-        } else {
+        this.field_e = param1 ? true : false;
+        if (param0 == -17853) {
           this.field_a = true;
           return;
         }
+        this.a(-102, true);
+        this.field_a = true;
     }
 
     final boolean b(int param0) {
         if (param0 != 18307) {
-            return true;
+          return true;
         }
         return this.field_e;
     }
@@ -81,7 +61,7 @@ final class uc {
     final static void b(int param0, boolean param1) {
         tg.field_g.a(param0 ^ -1081, param1);
         if (param0 != 16772) {
-            uc.c(69);
+          uc.c(69);
         }
     }
 
@@ -89,9 +69,9 @@ final class uc {
         this.field_e = false;
         this.field_a = false;
         try {
-            this.field_f = param0;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

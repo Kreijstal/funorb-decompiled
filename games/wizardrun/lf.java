@@ -8,7 +8,7 @@ final class lf {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -13078) {
-            lf.a(-16);
+          lf.a(-16);
         }
     }
 

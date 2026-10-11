@@ -11,10 +11,10 @@ final class qd {
     public static void a(boolean param0) {
         field_d = null;
         if (param0) {
-            qd.a(true);
-            field_c = null;
-            field_b = null;
-            return;
+          qd.a(true);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

@@ -21,14 +21,14 @@ final class oi {
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
-            al.j(-1);
-            nb.field_a.h(-92);
-            b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
-            wj.field_i = new ub(nb.field_a, b.field_c);
-            int var4_int = 120 / ((64 - param2) / 61);
-            nb.field_a.b(3016, wj.field_i);
+          al.j(-1);
+          nb.field_a.h(-92);
+          b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
+          wj.field_i = new ub(nb.field_a, b.field_c);
+          int var4_int = 120 / ((64 - param2) / 61);
+          nb.field_a.b(3016, wj.field_i);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -39,14 +39,12 @@ final class oi {
         field_h = null;
         field_b = null;
         field_k = null;
-        if (param0 != 5378) {
-          field_h = (ja[]) null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 5378) {
           field_f = null;
           return;
         }
+        field_h = (ja[]) null;
+        field_f = null;
     }
 
     static {
@@ -54,7 +52,21 @@ final class oi {
         field_f = "Passwords must be between 5 and 20 letters and numbers";
         field_j = new ak();
         field_a = "You need a rating of <%1> to play with the current options.";
-        field_i = (int)(8.0 * Math.sqrt(2.0)) - -1;
+        field_i = (int)(8.0 * Math.sqrt(2.0)) + 1;
         field_e = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
+        try {
+          al.j(-1);
+          nb.field_a.h(-92);
+          b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
+          wj.field_i = new ub(nb.field_a, b.field_c);
+          int var4_int = 120 / ((64 - param2) / 61);
+          nb.field_a.b(3016, wj.field_i);
+        } catch (RuntimeException runtimeException) {
+          throw fa.a((Throwable) ((Object) runtimeException), "oi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
     }
 }

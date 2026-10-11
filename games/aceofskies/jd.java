@@ -13,7 +13,7 @@ final class jd {
         field_a = null;
         field_d = (vd[][]) null;
         if (param0) {
-            return;
+          return;
         }
         field_b = null;
     }

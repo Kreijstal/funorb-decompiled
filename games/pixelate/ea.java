@@ -13,7 +13,7 @@ final class ea {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
     }

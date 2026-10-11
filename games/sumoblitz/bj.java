@@ -12,8 +12,8 @@ final class bj {
 
     final boolean c(int param0) {
         if (param0 != -1) {
-            this.b(4);
-            return this.field_e;
+          this.b(4);
+          return this.field_e;
         }
         return this.field_e;
     }
@@ -21,7 +21,7 @@ final class bj {
     public static void a(int param0) {
         field_c = null;
         if (param0 > -69) {
-            return;
+          return;
         }
         field_b = null;
         field_g = null;
@@ -29,16 +29,16 @@ final class bj {
 
     final boolean a(boolean param0) {
         if (!param0) {
-            this.b(71);
-            return this.field_d;
+          this.b(71);
+          return this.field_d;
         }
         return this.field_d;
     }
 
     final String b(int param0) {
         if (param0 <= 16) {
-            field_b = (jn) null;
-            return this.field_f;
+          field_b = (jn) null;
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -50,37 +50,32 @@ final class bj {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        if (param1 == -113) {
-          if ((param0 & 2048) != 0) {
-            if (-1 == (55 & param2 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param1 != -113) {
           bj.a(-103, (byte) 12, 126);
-          if ((param0 & 2048) != 0) {
-            if (-1 == (55 & param2 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if ((param0 & 2048) == 0) {
             return false;
           }
+          if ((55 & param2) != 0) {
+            return true;
+          }
+          return false;
         }
+        if ((param0 & 2048) == 0) {
+          return false;
+        }
+        if ((55 & param2) != 0) {
+          return true;
+        }
+        return false;
     }
 
     bj(String param0) {
         this.field_e = false;
         this.field_d = false;
         try {
-            this.field_f = param0;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

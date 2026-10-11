@@ -15,7 +15,7 @@ abstract class kh {
         field_c = null;
         field_f = null;
         if (param0 != 192) {
-            field_f = (char[]) null;
+          field_f = (char[]) null;
         }
     }
 
@@ -24,39 +24,17 @@ abstract class kh {
     abstract void a(java.awt.Component param0, int param1, byte param2, int param3);
 
     final static int a(int param0, int param1) {
-        int var2;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        var2 = -73 / ((param0 - -36) / 39);
+        int var2 = -73 / ((param0 + 36) / 39);
         param1 = param1 & 8191;
-        if (-4097 < (param1 ^ -1)) {
-          L0: {
-            if (-2049 < (param1 ^ -1)) {
-              stackIn_8_0 = ad.field_g[2048 + -param1];
-              break L0;
-            } else {
-              stackIn_8_0 = -ad.field_g[-2048 + param1];
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if ((param1 ^ -1) <= -6145) {
-              stackIn_4_0 = ad.field_g[param1 + -6144];
-              break L1;
-            } else {
-              stackIn_4_0 = -ad.field_g[6144 - param1];
-              break L1;
-            }
-          }
-          return stackIn_4_0;
+        if (param1 >= 4096) {
+          return param1 < 6144 ? -ad.field_g[6144 - param1] : ad.field_g[param1 - 6144];
         }
+        return param1 >= 2048 ? -ad.field_g[-2048 + param1] : ad.field_g[2048 - param1];
     }
 
     final void a(int param0) {
         if (param0 != 200) {
-            return;
+          return;
         }
         vj.a(this.field_h, this.field_b, this.field_d);
     }

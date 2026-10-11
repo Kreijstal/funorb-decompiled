@@ -11,7 +11,7 @@ final class kc {
         field_c = null;
         field_b = null;
         if (param0 >= -98) {
-            kc.a(115);
+          kc.a(115);
         }
     }
 

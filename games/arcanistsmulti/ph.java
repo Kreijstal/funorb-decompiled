@@ -11,20 +11,18 @@ final class ph {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != -42) {
-          ph.a((byte) -83);
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -42) {
           field_d = null;
           field_c = null;
           field_e = null;
           field_b = null;
           return;
         }
+        ph.a((byte) -83);
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        field_b = null;
     }
 
     static {

@@ -10,8 +10,8 @@ final class im {
 
     final static fg a(int param0) {
         if (param0 != 28357) {
-            im.a((byte) 91);
-            return u.field_g;
+          im.a((byte) 91);
+          return u.field_g;
         }
         return u.field_g;
     }
@@ -22,7 +22,7 @@ final class im {
         field_d = null;
         field_c = null;
         if (param0 > -105) {
-            field_c = (f) null;
+          field_c = (f) null;
         }
     }
 

@@ -8,7 +8,7 @@ final class feb {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 122) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -20,86 +20,43 @@ final class feb {
         kla stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          L0: {
-            if (nsa.field_p == param0) {
-              stackIn_3_0 = eia.field_q;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                var2 = (qgb) ((Object) fgb.field_k.a((long)param0.field_b, 124));
-                if (param1) {
-                  break L1;
-                } else {
-                  field_b = (int[]) null;
-                  break L1;
-                }
-              }
-              L2: {
-                L3: {
-                  if (var2 == null) {
-                    break L3;
-                  } else {
-                    if (var2.field_e == param0) {
-                      var3 = var2.field_d;
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (var2 != null) {
-                    var2.b(-3846);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                var3 = new kla(param0);
-                fgb.field_k.a((long)param0.field_b, new qgb(param0, var3), (byte) -127);
-                break L2;
-              }
-              nsa.field_p = param0;
-              eia.field_q = var3;
-              stackIn_15_0 = (kla) (var3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          if (nsa.field_p == param0) {
+            stackIn_3_0 = eia.field_q;
+            return stackIn_3_0;
           }
+          var2 = (qgb) (fgb.field_k.a((long)param0.field_b, 124));
+          if (!param1) {
+            field_b = (int[]) null;
+          }
+          if (var2 != null &&
+            var2.field_e == param0) {
+            var3 = var2.field_d;
+          } else {
+            if (var2 != null) {
+              var2.b(-3846);
+            }
+            var3 = new kla(param0);
+            fgb.field_k.a((long)param0.field_b, new qgb(param0, var3), (byte) -127);
+          }
+          nsa.field_p = param0;
+          eia.field_q = var3;
+          stackIn_15_0 = var3;
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var2_ref);
-
-            stackIn_18_1 = new StringBuilder().append("feb.A(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_18_0 = var2_ref;
+          stackIn_18_1 = new StringBuilder().append("feb.A(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_15_0;
+          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -17,7 +17,7 @@ final class o extends wf {
 
     public static void d(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_o = null;
     }

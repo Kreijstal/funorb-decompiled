@@ -17,69 +17,41 @@ final class ck {
         kc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var13 = new kc(0L, (kc) null);
-              var13.field_v = fk.a(param0, 43, param4);
-              if (param8 >= 56) {
-                break L1;
-              } else {
-                var14 = (dj) null;
-                ck.a(-51, 34, -67, 14, 71, -24, 60, (dj) null, 32, -82, -98, 65, 2);
-                break L1;
-              }
-            }
-            var13.field_Ab = fk.a(param11, 58, param3);
-            var13.field_xb = fk.a(param12, 38, param10);
-            var13.field_hb = fk.a(param5, 110, param1);
-            var13.field_K = fk.a(param6, 58, param2);
-            var13.field_Z = param7;
-            var13.field_ob = param9;
-            stackIn_3_0 = (kc) (var13);
-            break L0;
+          var13 = new kc(0L, (kc) null);
+          var13.field_v = fk.a(param0, 43, param4);
+          if (param8 < 56) {
+            var14 = (dj) null;
+            ck.a(-51, 34, -67, 14, 71, -24, 60, (dj) null, 32, -82, -98, 65, 2);
           }
+          var13.field_Ab = fk.a(param11, 58, param3);
+          var13.field_xb = fk.a(param12, 38, param10);
+          var13.field_hb = fk.a(param5, 110, param1);
+          var13.field_K = fk.a(param6, 58, param2);
+          var13.field_Z = param7;
+          var13.field_ob = param9;
+          stackIn_3_0 = var13;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var13_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var13_ref);
-
-            stackIn_6_1 = new StringBuilder().append("ck.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-
-            if (param7 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var13_ref = decompiledCaughtException;
+          stackIn_6_0 = var13_ref;
+          stackIn_6_1 = new StringBuilder().append("ck.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+          if (param7 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_e = null;
-        if (param0 <= 84) {
-          ck.a((byte) -85);
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 > 84) {
           field_a = null;
           field_d = null;
           field_g = null;
@@ -87,20 +59,26 @@ final class ck {
           field_f = null;
           return;
         }
+        ck.a((byte) -85);
+        field_a = null;
+        field_d = null;
+        field_g = null;
+        field_c = null;
+        field_f = null;
     }
 
     final static void a(byte param0) {
-        int var1;
-        if (ul.field_A < 224) {
-          var1 = ul.field_A % 32;
-          eb.a(32 + ul.field_A + -var1, false);
-          var1 = 50 % ((47 - param0) / 38);
-          return;
-        } else {
+        int var1 = 0;
+        int var1Lifetime1;
+        int var1Lifetime2;
+        if (ul.field_A >= 224) {
           eb.a(256, false);
           var1 = 50 % ((47 - param0) / 38);
           return;
         }
+        var1Lifetime1 = ul.field_A % 32;
+        eb.a(32 + ul.field_A - var1Lifetime1, false);
+        var1Lifetime2 = 50 % ((47 - param0) / 38);
     }
 
     static {

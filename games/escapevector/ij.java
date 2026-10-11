@@ -18,9 +18,9 @@ final class ij extends hg {
 
     public static void d(int param0) {
         if (param0 >= -67) {
-            ij.d(-72);
-            field_g = null;
-            return;
+          ij.d(-72);
+          field_g = null;
+          return;
         }
         field_g = null;
     }

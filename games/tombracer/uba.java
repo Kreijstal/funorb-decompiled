@@ -15,59 +15,33 @@ final class uba extends kma implements cd, eaa {
         int var5 = 0;
         String stackIn_4_0 = null;
         Object stackIn_7_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_i.a(param0 + -1780);
-              var3 = this.field_i.d(param0 + 20939);
-              var4 = this.field_i.j((byte) 110);
-              var5 = cn.a((byte) 60);
-              if (var4 < param0) {
-                break L1;
-              } else {
-                if (-3 + var5 >= var4) {
-                  if (!fa.a(var3, var2_int, true, var4)) {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    stackIn_7_0 = null;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                } else {
-                  break L1;
-                }
-              }
+          var2_int = this.field_i.a(param0 - 1780);
+          var3 = this.field_i.d(param0 + 20939);
+          var4 = this.field_i.j((byte) 110);
+          var5 = cn.a((byte) 60);
+          if (var4 >= param0 &&
+            -3 + var5 >= var4) {
+            if (fa.a(var3, var2_int, true, var4)) {
+              stackIn_7_0 = null;
+              return (String) (stackIn_7_0);
             }
-            stackIn_4_0 = gl.a((byte) 91, era.field_b, new String[]{"1890", Integer.toString(var5 + -3)});
-            decompiledRegionSelector0 = 0;
-            break L0;
+          } else {
+            stackIn_4_0 = gl.$cfr$intArgs$a$53ce4ab4c593(91, era.field_b, new String[]{"1890", Integer.toString(var5 - 3)});
+            return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            decompiledRegionSelector0 = 1;
-            break L2;
-          }
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return nia.field_m;
-          } else {
-            return (String) ((Object) stackIn_7_0);
-          }
-        }
+        return nia.field_m;
     }
 
     public final boolean a(boolean param0) {
         if (!param0) {
-            this.field_i = (paa) null;
-            return this.field_i.i((byte) 64);
+          this.field_i = (paa) null;
+          return this.field_i.i((byte) 64);
         }
         return this.field_i.i((byte) 64);
     }
@@ -76,19 +50,19 @@ final class uba extends kma implements cd, eaa {
         field_g = null;
         field_h = null;
         if (param0 != -128) {
-            uba.b((byte) -33);
+          uba.b((byte) -33);
         }
     }
 
     public final void a(tra param0, int param1) {
         try {
-            this.c(-65);
-            if (param1 != -10) {
-                tra var4 = (tra) null;
-                this.a((tra) null, -90);
-            }
+          this.c(-65);
+          if (param1 != -10) {
+            tra var4 = (tra) null;
+            this.a((tra) null, -90);
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "uba.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -101,63 +75,40 @@ final class uba extends kma implements cd, eaa {
         it stackIn_3_0 = null;
         it stackIn_6_0 = null;
         it stackIn_10_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = this.field_i.a(111);
-            var3 = this.field_i.d(22829);
-            var4 = this.field_i.j((byte) 110);
-            var5 = cn.a((byte) 125);
-            if ((var4 ^ -1) > param0) {
-              stackIn_3_0 = fp.field_c;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (var4 <= -3 + var5) {
-                if (!fa.a(var3, var2_int, true, var4)) {
-                  stackIn_10_0 = fp.field_c;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                stackIn_6_0 = fp.field_c;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          var2_int = this.field_i.a(111);
+          var3 = this.field_i.d(22829);
+          var4 = this.field_i.j((byte) 110);
+          var5 = cn.a((byte) 125);
+          if (~var4 > param0) {
+            stackIn_3_0 = fp.field_c;
+            return stackIn_3_0;
+          }
+          if (var4 > -3 + var5) {
+            stackIn_6_0 = fp.field_c;
+            return stackIn_6_0;
+          }
+          if (!fa.a(var3, var2_int, true, var4)) {
+            stackIn_10_0 = fp.field_c;
+            return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return fp.field_c;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return uh.field_k;
-            } else {
-              return stackIn_10_0;
-            }
-          }
-        }
+        return uh.field_k;
     }
 
     public final void a(int param0, rla param1) {
         if (param0 != -3) {
-            return;
+          return;
         }
         try {
-            this.c(-81);
+          this.c(-81);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "uba.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,11 +117,11 @@ final class uba extends kma implements cd, eaa {
 
     public final void a(int param0, tra param1) {
         try {
-            if (param0 != -6038) {
-                field_f = -61;
-            }
+          if (param0 != -6038) {
+            field_f = -61;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "uba.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -16,51 +16,31 @@ final class kc {
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              jc.a(0, (java.awt.Component) ((Object) param0));
-              if (param1 == 2) {
-                break L1;
-              } else {
-                var3 = (java.awt.Canvas) null;
-                kc.a((java.awt.Canvas) null, -76);
-                break L1;
-              }
-            }
-            hi.a((java.awt.Component) ((Object) param0), param1 ^ -14764);
-            if (null == oa.field_a) {
-              break L0;
-            } else {
-              oa.field_a.a((byte) 104, (java.awt.Component) ((Object) param0));
-              return;
-            }
+          jc.a(0, (java.awt.Component) ((Object) param0));
+          if (param1 != 2) {
+            var3 = (java.awt.Canvas) null;
+            kc.a((java.awt.Canvas) null, -76);
           }
+          hi.a((java.awt.Component) ((Object) param0), param1 ^ -14764);
+          if (null == oa.field_a) {
+            return;
+          }
+          oa.field_a.a((byte) 104, (java.awt.Component) ((Object) param0));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("kc.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("kc.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -70,9 +50,7 @@ final class kc {
         field_b = null;
         field_f = null;
         field_h = null;
-        if (param0 != 123) {
-          return;
-        } else {
+        if (param0 == 123) {
           field_a = null;
           field_d = null;
           return;

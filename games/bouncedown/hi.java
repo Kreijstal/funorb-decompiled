@@ -10,24 +10,21 @@ final class hi {
         field_b = null;
         field_a = null;
         if (param0) {
-            hi.a((byte) 43);
+          hi.a((byte) 43);
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 <= -99) {
-          if (10 <= mh.field_U) {
-            if ((sa.field_k ^ -1) > -14) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 > -99) {
           return false;
         }
+        if (10 > mh.field_U) {
+          return false;
+        }
+        if (sa.field_k >= 13) {
+          return true;
+        }
+        return false;
     }
 
     static {

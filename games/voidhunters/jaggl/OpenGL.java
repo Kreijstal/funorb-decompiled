@@ -22,24 +22,16 @@ public class OpenGL {
     public final native static void glMultMatrixf(float[] param0, int param1);
 
     public final synchronized boolean a() {
-        Thread var1;
-        jaggl.OpenGL var3;
-        var1 = Thread.currentThread();
-        if (this.attachPeer()) {
-          L0: {
-            var3 = (jaggl.OpenGL) (c.put(var1, this));
-            if (var3 != null) {
-              var3.a = null;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          this.a = var1;
-          return true;
-        } else {
+        Thread var1 = Thread.currentThread();
+        if (!this.attachPeer()) {
           return false;
         }
+        jaggl.OpenGL var3 = (jaggl.OpenGL) (c.put(var1, this));
+        if (var3 != null) {
+          var3.a = null;
+        }
+        this.a = var1;
+        return true;
     }
 
     public final native static int glGetError();
@@ -166,7 +158,7 @@ public class OpenGL {
 
     public final synchronized boolean b() {
         if (this.a != Thread.currentThread()) {
-            return false;
+          return false;
         }
         this.detachPeer();
         c.remove(this.a);
@@ -365,33 +357,28 @@ public class OpenGL {
         Object var5;
         String var5_ref;
         String var4;
-        if (this.b == null) {
-          this.b = new Hashtable();
-          var2 = jaggl.OpenGL.glGetString(7939);
-          var3 = 0;
-          L0: while (true) {
-            var4_int = var2.indexOf(' ', var3);
-            if (0 != (var4_int ^ -1)) {
-              var5_ref = var2.substring(var3, var4_int).trim();
-              var3 = var4_int - -1;
-              if (var5_ref.length() == 0) {
-                continue L0;
-              } else {
-                this.b.put(var5_ref, var5_ref);
-                continue L0;
-              }
-            } else {
-              var4 = var2.substring(var3).trim();
-              if (0 == var4.length()) {
-                return this.b.containsKey(param0);
-              } else {
-                this.b.put(var4, var4);
-                return this.b.containsKey(param0);
-              }
-            }
-          }
-        } else {
+        if (this.b != null) {
           return this.b.containsKey(param0);
+        }
+        this.b = new Hashtable();
+        var2 = jaggl.OpenGL.glGetString(7939);
+        var3 = 0;
+        while (true) {
+          var4_int = var2.indexOf(' ', var3);
+          if (var4_int == -1) {
+            var4 = var2.substring(var3).trim();
+            if (0 == var4.length()) {
+              return this.b.containsKey(param0);
+            }
+            this.b.put(var4, var4);
+            return this.b.containsKey(param0);
+          }
+          var5_ref = var2.substring(var3, var4_int).trim();
+          var3 = var4_int + 1;
+          if (var5_ref.length() == 0) {
+            continue;
+          }
+          this.b.put(var5_ref, var5_ref);
         }
     }
 

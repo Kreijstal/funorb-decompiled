@@ -15,16 +15,14 @@ final class pg extends IOException {
         field_a = null;
         field_c = null;
         field_d = null;
-        if (param0 <= 40) {
-          pg.a((byte) -128);
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 > 40) {
           field_e = null;
           field_b = null;
           return;
         }
+        pg.a((byte) -128);
+        field_e = null;
+        field_b = null;
     }
 
     pg(String param0) {

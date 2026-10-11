@@ -7,9 +7,9 @@ final class nrb implements wwa {
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
         try {
-            int var6_int = 34 % ((-27 - param0) / 35);
+          int var6_int = 34 % ((-27 - param0) / 35);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nrb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nrb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -17,7 +17,7 @@ final class nrb implements wwa {
         field_b = null;
         field_a = null;
         if (param0 != 11227) {
-            nrb.a(-127);
+          nrb.a(-127);
         }
     }
 

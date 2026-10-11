@@ -15,17 +15,17 @@ final class tb extends q {
         field_o = null;
         field_l = null;
         if (param0 < 55) {
-            field_o = (ce) null;
+          field_o = (ce) null;
         }
     }
 
     final static t[] a(boolean param0) {
+        int var6_int = 0;
+        int var7 = 0;
         t[] var1;
         int var2;
         int var3;
         int[] var6;
-        int var6_int;
-        int var7;
         int var8;
         int[] var9;
         int[] var13;
@@ -33,59 +33,36 @@ final class tb extends q {
         byte[] var20;
         int[] var21;
         byte[] var22;
-        L0: {
-          var8 = Torquing.field_u;
-          var1 = new t[ti.field_g];
-          var2 = 0;
-          if (param0) {
-            break L0;
-          } else {
-            tb.a(-48, -115);
-            break L0;
-          }
+        var8 = Torquing.field_u;
+        var1 = new t[ti.field_g];
+        var2 = 0;
+        if (!param0) {
+          tb.a(-48, -115);
         }
-        L1: while (true) {
-          if (ti.field_g <= var2) {
-            go.b(0);
-            return var1;
-          } else {
-            var3 = ij.field_o[var2] * vo.field_b[var2];
-            var20 = pn.field_b[var2];
-            if (lp.field_e[var2]) {
-              var22 = fq.field_G[var2];
-              var16 = new int[var3];
-              var13 = var16;
-              var6 = var13;
-              var7 = 0;
-              L2: while (true) {
-                if (var7 >= var3) {
-                  var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
-                  var2++;
-                  continue L1;
-                } else {
-                  var6[var7] = gm.a(ie.a((int) var22[var7], 255) << -1579077768, cq.field_y[ie.a((int) var20[var7], 255)]);
-                  var7++;
-                  continue L2;
-                }
-              }
-            } else {
-              var9 = new int[var3];
-              var21 = var9;
-              var6_int = 0;
-              L3: while (true) {
-                if (var6_int >= var3) {
-                  var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
-                  var2++;
-                  continue L1;
-                } else {
-                  var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
-                  var6_int++;
-                  continue L3;
-                }
-              }
+        while (ti.field_g > var2) {
+          var3 = ij.field_o[var2] * vo.field_b[var2];
+          var20 = pn.field_b[var2];
+          if (!lp.field_e[var2]) {
+            var9 = new int[var3];
+            var21 = var9;
+            for (var6_int = 0; var6_int < var3; var6_int++) {
+              var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
             }
+            var1[var2] = new t(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
+          } else {
+            var22 = fq.field_G[var2];
+            var16 = new int[var3];
+            var13 = var16;
+            var6 = var13;
+            for (var7 = 0; var7 < var3; var7++) {
+              var6[var7] = gm.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
+            }
+            var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, fj.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
           }
+          var2++;
         }
+        go.b(0);
+        return var1;
     }
 
     tb(int param0, int param1, int param2, int param3, int param4) {
@@ -97,9 +74,9 @@ final class tb extends q {
     }
 
     final static void a(int param0, int param1) {
-        op.field_k = (param0 << 1928525872) / 150;
+        op.field_k = (param0 << 16) / 150;
         if (param1 > -123) {
-            return;
+          return;
         }
         op.field_q = param0 * 400 / 150;
         op.field_j = param0 * 100 / 150;

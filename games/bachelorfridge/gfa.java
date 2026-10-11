@@ -16,14 +16,12 @@ final class gfa {
     static String field_b;
 
     final static void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11) {
-        if (param10 < 107) {
-          field_b = (String) null;
-          oa.a(16777215, param7, param11, param3, param0, param5, param1, param4, param8, 16777215, param6, param2, false, param9);
-          return;
-        } else {
+        if (param10 >= 107) {
           oa.a(16777215, param7, param11, param3, param0, param5, param1, param4, param8, 16777215, param6, param2, false, param9);
           return;
         }
+        field_b = (String) null;
+        oa.a(16777215, param7, param11, param3, param0, param5, param1, param4, param8, 16777215, param6, param2, false, param9);
     }
 
     gfa(int param0, int param1) {
@@ -38,7 +36,7 @@ final class gfa {
         field_g = null;
         field_b = null;
         if (param0 != 17733) {
-            gfa.a(false, -37, 15, -89, true, 19, true, true, 68, false, -72, 72);
+          gfa.a(false, -37, 15, -89, true, 19, true, true, 68, false, -72, 72);
         }
     }
 

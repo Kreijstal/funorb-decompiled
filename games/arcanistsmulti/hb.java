@@ -17,17 +17,17 @@ final class hb extends kc {
     hb(long param0, kc param1, kc param2, in param3, kc param4, String param5, String param6) {
         super(param0, param1);
         try {
-            this.field_Eb = new kc(0L, (kc) null);
-            this.field_Db = new dn(0L, this.field_Eb, param2, param3);
-            this.field_Jb = new kc(0L, param4);
-            this.field_Lb = new kc(0L, param4);
-            this.field_Jb.field_rb = param5;
-            this.field_Lb.field_rb = param6;
-            this.a(this.field_Db, 84);
-            this.a(this.field_Jb, 38);
-            this.a(this.field_Lb, 31);
+          this.field_Eb = new kc(0L, (kc) null);
+          this.field_Db = new dn(0L, this.field_Eb, param2, param3);
+          this.field_Jb = new kc(0L, param4);
+          this.field_Lb = new kc(0L, param4);
+          this.field_Jb.field_rb = param5;
+          this.field_Lb.field_rb = param6;
+          this.a(this.field_Db, 84);
+          this.a(this.field_Jb, 38);
+          this.a(this.field_Lb, 31);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,10 +36,7 @@ final class hb extends kc {
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -54,113 +51,53 @@ final class hb extends kc {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          L0: {
-            L1: {
-              var9 = new wk(param1);
-              var3 = var9.e((byte) 73);
-              if (!param0) {
-                break L1;
-              } else {
-                hb.e(127);
-                break L1;
-              }
+          var9 = new wk(param1);
+          var3 = var9.e((byte) 73);
+          if (param0) {
+            hb.e(127);
+          }
+          var4 = var9.d(-10674);
+          if (var4 >= 0 && (ub.field_a == 0 ||
+            !(ub.field_a < var4))) {
+            if (var3 == 0) {
+              var12 = new byte[var4];
+              var10 = var12;
+              var5_ref_byte__ = var10;
+              var9.a((byte) 114, 0, var12, var4);
+              stackIn_9_0 = var5_ref_byte__;
+              return stackIn_9_0;
             }
-            L2: {
-              var4 = var9.d(-10674);
-              if (-1 < (var4 ^ -1)) {
-                break L2;
+            var5 = var9.d(-10674);
+            if (var5 >= 0 && (ub.field_a == 0 ||
+              !(var5 > ub.field_a))) {
+              var13 = new byte[var5];
+              var11 = var13;
+              var6 = var11;
+              if (var3 != 1) {
+                var7 = wj.field_a;
+                synchronized (var7) {
+                  wj.field_a.a(122, var13, var9);
+                }
               } else {
-                L3: {
-                  if (-1 == (ub.field_a ^ -1)) {
-                    break L3;
-                  } else {
-                    if (ub.field_a < var4) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                if (var3 != 0) {
-                  L4: {
-                    var5 = var9.d(-10674);
-                    if (-1 < (var5 ^ -1)) {
-                      break L4;
-                    } else {
-                      L5: {
-                        if (-1 == (ub.field_a ^ -1)) {
-                          break L5;
-                        } else {
-                          if (var5 > ub.field_a) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      L6: {
-                        var13 = new byte[var5];
-                        var11 = var13;
-                        var6 = var11;
-                        if (-2 != (var3 ^ -1)) {
-                          var7 = wj.field_a;
-                          synchronized (var7) {
-                            L7: {
-                              wj.field_a.a(122, var13, var9);
-                              break L7;
-                            }
-                          }
-                          break L6;
-                        } else {
-                          bf.a(var13, var5, param1, var4, 9);
-                          break L6;
-                        }
-                      }
-                      stackIn_23_0 = (byte[]) (var6);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                  throw new RuntimeException();
-                } else {
-                  var12 = new byte[var4];
-                  var10 = var12;
-                  var5_ref_byte__ = var10;
-                  var9.a((byte) 114, 0, var12, var4);
-                  stackIn_9_0 = (byte[]) (var5_ref_byte__);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+                bf.a(var13, var5, param1, var4, 9);
               }
+              stackIn_23_0 = var6;
+              return stackIn_23_0;
             }
             throw new RuntimeException();
           }
+          throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var2);
-
-            stackIn_26_1 = new StringBuilder().append("hb.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L8;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L8;
-            }
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_26_0 = var2;
+          stackIn_26_1 = new StringBuilder().append("hb.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
-        } else {
-          return stackIn_23_0;
+          throw aa.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -182,22 +119,22 @@ final class hb extends kc {
         ab var6 = null;
         int var4 = 0;
         try {
-            var6 = he.field_e;
-            var6.b((byte) -123, param1);
-            var6.field_g = var6.field_g + 1;
-            var4 = var6.field_g;
-            var6.f(1, (byte) -21);
-            var6.f(param0.field_g, (byte) -80);
-            var6.f(param0.field_i, (byte) -7);
-            int var5 = 1 / ((22 - param2) / 57);
-            var6.a(param0.field_m, (byte) -101);
-            var6.a(param0.field_n, (byte) -101);
-            var6.a(param0.field_o, (byte) -101);
-            var6.a(param0.field_k, (byte) -101);
-            var6.a(true, var4);
-            var6.b(-var4 + var6.field_g, (byte) 43);
+          var6 = he.field_e;
+          var6.b((byte) -123, param1);
+          var6.field_g = var6.field_g + 1;
+          var4 = var6.field_g;
+          var6.f(1, (byte) -21);
+          var6.f(param0.field_g, (byte) -80);
+          var6.f(param0.field_i, (byte) -7);
+          int var5 = 1 / ((22 - param2) / 57);
+          var6.a(param0.field_m, (byte) -101);
+          var6.a(param0.field_n, (byte) -101);
+          var6.a(param0.field_o, (byte) -101);
+          var6.a(param0.field_k, (byte) -101);
+          var6.a(true, var4);
+          var6.b(-var4 + var6.field_g, (byte) 43);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -205,26 +142,23 @@ final class hb extends kc {
         mo.field_p = -1;
         cb.field_c = null;
         oh.field_i = false;
-        int var1 = 57 / ((param0 - -19) / 41);
+        int var1 = 57 / ((param0 + 19) / 41);
         jh.field_f = 0;
         ka.field_p = -1;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        cm var10;
         this.field_T = param5;
         this.field_db = param4;
         this.field_I = param2;
         this.field_x = param3;
-        if (param6 != -16624) {
-          var10 = (cm) null;
-          hb.a((cm) null, -57, (byte) -106);
-          this.a(param1, param0, param7, false);
-          return;
-        } else {
+        if (param6 == -16624) {
           this.a(param1, param0, param7, false);
           return;
         }
+        cm var10 = (cm) null;
+        hb.a((cm) null, -57, (byte) -106);
+        this.a(param1, param0, param7, false);
     }
 
     hb(long param0, hb param1, String param2, String param3) {
@@ -235,7 +169,7 @@ final class hb extends kc {
         field_Ib = null;
         field_Gb = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_Hb = null;
         field_Fb = null;

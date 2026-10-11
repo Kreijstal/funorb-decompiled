@@ -24,53 +24,31 @@ abstract class eq extends ch implements sc {
     void a(int param0, sn param1) {
         this.field_X = param1;
         if (param0 != -15309) {
-            return;
+          return;
         }
         try {
-            this.field_X.field_i = (eq) (this);
+          this.field_X.field_i = this;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "eq.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "eq.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void j(byte param0) {
-        if (param0 >= -9) {
-          L0: {
-            field_S = 52;
-            if (ib.field_s != null) {
-              ib.field_s.f();
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 < -9) {
+          if (ib.field_s != null) {
+            ib.field_s.f();
           }
-          L1: {
-            if (kk.field_D != null) {
-              kk.field_D.f();
-              break L1;
-            } else {
-              break L1;
-            }
+          if (kk.field_D != null) {
+            kk.field_D.f();
           }
           return;
-        } else {
-          L2: {
-            if (ib.field_s != null) {
-              ib.field_s.f();
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (kk.field_D != null) {
-              kk.field_D.f();
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+        }
+        field_S = 52;
+        if (ib.field_s != null) {
+          ib.field_s.f();
+        }
+        if (kk.field_D != null) {
+          kk.field_D.f();
         }
     }
 
@@ -89,7 +67,7 @@ abstract class eq extends ch implements sc {
         field_Q = null;
         field_P = null;
         if (param0 != -12253) {
-            field_Q = (dd[]) null;
+          field_Q = (dd[]) null;
         }
     }
 
@@ -123,127 +101,72 @@ abstract class eq extends ch implements sc {
         cm discarded$20 = new cm(6, 180, 460, 160, 24, new int[]{28, 27, 64, 63, 45, 44, 46, 8, 65});
         sg discarded$21 = new sg(7, 180, 460, 160, 24, new int[]{29, 30, 31, 32, 33, 8});
         og discarded$22 = new og(df.field_i, 1, 180, 460, 160, 24, new int[]{40, 41, 42, 8});
-        pq.field_H = mc.field_e.b(nk.field_f[20]) - -10;
+        pq.field_H = mc.field_e.b(nk.field_f[20]) + 10;
         var1 = 10 + mc.field_e.b(nk.field_f[21]);
         if (!(pq.field_H >= var1)) {
-            pq.field_H = var1;
+          pq.field_H = var1;
         }
         jo.f((byte) -104);
     }
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            String var8 = null;
-            String stackIn_7_0 = null;
-            String stackIn_14_0 = null;
-            RuntimeException stackIn_17_0 = null;
-            StringBuilder stackIn_17_1 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_18_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          String var8 = null;
+          String stackIn_7_0 = null;
+          String stackIn_14_0 = null;
+          RuntimeException stackIn_17_0 = null;
+          StringBuilder stackIn_17_1 = null;
+          String stackIn_18_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      var8 = param0.getParameter("cookieprefix");
-                      if (param1 > 110) {
-                        break L2;
-                      } else {
-                        field_U = 74;
-                        break L2;
-                      }
-                    }
-                    var3 = var8 + "settings";
-                    var4 = (String) (mo.a((byte) 124, "getcookies", param0));
-                    var5 = jc.a(30634, var4, ';');
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var5.length <= var6) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      } else {
-                        L4: {
-                          var7 = var5[var6].indexOf('=');
-                          if (0 > var7) {
-                            break L4;
-                          } else {
-                            if (!var5[var6].substring(0, var7).trim().equals(var3)) {
-                              break L4;
-                            } else {
-                              stackIn_7_0 = var5[var6].substring(var7 + 1).trim();
-                              decompiledRegionSelector0 = 1;
-                              break L1;
-                            }
-                          }
-                        }
-                        var6++;
-                        continue L3;
-                      }
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var2 = decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
-                    break L5;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  if (ar.field_g != null) {
-                    stackIn_14_0 = ar.field_g;
-                    decompiledRegionSelector1 = 0;
-                    break L0;
-                  } else {
-                    return param0.getParameter("settings");
-                  }
-                } else {
-                  decompiledRegionSelector1 = 1;
-                  break L0;
+              var8 = param0.getParameter("cookieprefix");
+              if (param1 <= 110) {
+                field_U = 74;
+              }
+              var3 = var8 + "settings";
+              var4 = (String) (mo.a((byte) 124, "getcookies", param0));
+              var5 = jc.a(30634, var4, ';');
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (0 <= var7 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_7_0 = var5[var6].substring(var7 + 1).trim();
+                  return stackIn_7_0;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_17_0 = (RuntimeException) (var2_ref);
-
-                stackIn_17_1 = new StringBuilder().append("eq.H(");
-
-                if (param0 == null) {
-                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                  stackIn_18_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                  stackIn_18_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw wm.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_14_0;
+            if (ar.field_g == null) {
+              return param0.getParameter("settings");
+            }
+            stackIn_14_0 = ar.field_g;
+            return stackIn_14_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_17_0 = var2_ref;
+            stackIn_17_1 = new StringBuilder().append("eq.H(");
+            if (param0 == null) {
+              stackIn_18_2 = "null";
             } else {
-              return stackIn_7_0;
+              stackIn_18_2 = "{...}";
             }
+            throw wm.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

@@ -127,28 +127,28 @@ abstract class bf extends ha {
     final void T(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (param0 > this.field_R) {
-            this.field_R = param0;
-            var5 = 1;
+          this.field_R = param0;
+          var5 = 1;
         }
         if (this.field_gc > param2) {
-            var5 = 1;
-            this.field_gc = param2;
+          var5 = 1;
+          this.field_gc = param2;
         }
-        if (!(param1 <= this.field_Nb)) {
-            this.field_Nb = param1;
-            var5 = 1;
+        if (param1 > this.field_Nb) {
+          this.field_Nb = param1;
+          var5 = 1;
         }
-        if (!(this.field_V <= param3)) {
-            this.field_V = param3;
-            var5 = 1;
+        if (this.field_V > param3) {
+          this.field_V = param3;
+          var5 = 1;
         }
         if (var5 != 0) {
-            if (!(this.field_Cb)) {
-                this.field_Cb = true;
-                this.r(0);
-            }
-            this.I(80);
-            this.K(-7);
+          if (!this.field_Cb) {
+            this.field_Cb = true;
+            this.r(0);
+          }
+          this.I(80);
+          this.K(-7);
         }
     }
 
@@ -170,14 +170,14 @@ abstract class bf extends ha {
         this.l((byte) 127);
         this.u((byte) -66);
         for (var2 = -1 + this.field_h; var2 >= 0; var2--) {
-            this.a(var2, (byte) 98);
-            this.N(0);
-            this.m((byte) -127);
-            this.f(-21041);
+          this.a(var2, (byte) 98);
+          this.N(0);
+          this.m((byte) -127);
+          this.f(-21041);
         }
         this.g(param0 + 0);
         this.Q(112);
-        this.C(param0 + -122);
+        this.C(param0 - 122);
         this.b((byte) 82);
         this.v(5);
     }
@@ -211,144 +211,79 @@ abstract class bf extends ha {
         int var12;
         ec var13;
         int var14;
-        L0: {
-          L1: {
-            var14 = AceOfSkies.field_G ? 1 : 0;
-            if (param2 != this.field_ab) {
-              break L1;
-            } else {
-              L2: {
-                if (this.field_dc) {
-                  stackIn_4_0 = 0;
-                  break L2;
-                } else {
-                  stackIn_4_0 = 1;
-                  break L2;
-                }
-              }
-              L3: {
-
-
-                if (this.field_Bb) {
-
-                  stackIn_7_1 = 0;
-                  break L3;
-                } else {
-
-                  stackIn_7_1 = 1;
-                  break L3;
-                }
-              }
-              if (stackIn_4_0 != stackIn_7_1) {
-                break L1;
-              } else {
-                break L0;
-              }
-            }
+        boolean decompiledFrameRemainder0 = true;
+        var14 = AceOfSkies.field_G ? 1 : 0;
+        if (param2 == this.field_ab) {
+          stackIn_4_0 = (this.field_dc) ? 0 : 1;
+          if (this.field_Bb) {
+            stackIn_7_1 = 0;
+          } else {
+            stackIn_7_1 = 1;
           }
-          L4: {
-            var5 = null;
-            var6 = 0;
-            var7 = 0;
-            var8 = 0;
+          decompiledFrameRemainder0 = (stackIn_4_0 != stackIn_7_1);
+        }
+        if (decompiledFrameRemainder0) {
+          var5 = null;
+          var6 = 0;
+          var7 = 0;
+          var8 = 0;
+          stackIn_12_0 = (!this.field_Bb) ? 0 : 3;
+          var9 = stackIn_12_0;
+          if (0 <= param2) {
+            var5 = this.field_z.a((byte) -69, param2);
+            var10 = this.field_a.a(false, param2);
+            if (var10.field_n == 0 &&
+              var10.field_j == 0) {
+              this.f(param3 - 21044);
+            } else {
+              stackIn_20_0 = (!var10.field_o) ? 128 : 64;
+              var11 = stackIn_20_0;
+              var12 = 50 * var11;
+              var13 = this.d(12343);
+              var13.a((float)(this.field_r % var12 * var10.field_n) / (float)var12, (byte) 107, (float)(this.field_r % var12 * var10.field_j) / (float)var12, 0.0f);
+              this.a(tr.field_a, (byte) -87);
+            }
+            var6 = var10.field_e;
             if (!this.field_Bb) {
-              stackIn_12_0 = 0;
-              break L4;
-            } else {
-              stackIn_12_0 = 3;
-              break L4;
+              var9 = var10.field_c;
+              var7 = var10.field_s;
+              var8 = var10.field_h;
             }
+          } else {
+            this.f(-21041);
           }
-          L5: {
-            var9 = stackIn_12_0;
-            if (0 <= param2) {
-              L6: {
-                L7: {
-                  var5 = this.field_z.a((byte) -69, param2);
-                  var10 = this.field_a.a(false, param2);
-                  if (var10.field_n != 0) {
-                    break L7;
-                  } else {
-                    if (var10.field_j == 0) {
-                      this.f(param3 + -21044);
-                      break L6;
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-                L8: {
-                  if (!var10.field_o) {
-                    stackIn_20_0 = 128;
-                    break L8;
-                  } else {
-                    stackIn_20_0 = 64;
-                    break L8;
-                  }
-                }
-                var11 = stackIn_20_0;
-                var12 = 50 * var11;
-                var13 = this.d(12343);
-                var13.a((float)(this.field_r % var12 * var10.field_n) / (float)var12, (byte) 107, (float)(this.field_r % var12 * var10.field_j) / (float)var12, 0.0f);
-                this.a(tr.field_a, (byte) -87);
-                break L6;
-              }
-              var6 = var10.field_e;
-              if (!this.field_Bb) {
-                var9 = var10.field_c;
-                var7 = var10.field_s;
-                var8 = var10.field_h;
-                break L5;
-              } else {
-                break L5;
-              }
-            } else {
-              this.f(-21041);
-              break L5;
-            }
-          }
-          L9: {
-            this.a((byte) 122, param1, var8, param0, var9, var7);
-            if (null == this.field_nb) {
-              this.a((jj) (var5), -9135);
-              this.b(var6, false);
-              break L9;
-            } else {
-              this.field_nb.a(var6, 86, (jj) (var5));
-              break L9;
-            }
+          this.a((byte) 122, param1, var8, param0, var9, var7);
+          if (null == this.field_nb) {
+            this.a((jj) (var5), -9135);
+            this.b(var6, false);
+          } else {
+            this.field_nb.a(var6, 86, (jj) (var5));
           }
           this.field_ab = param2;
           this.field_dc = this.field_Bb;
-          break L0;
         }
-        L10: {
-          if (param3 == 3) {
-            break L10;
-          } else {
-            this.i((byte) -128);
-            break L10;
-          }
+        if (param3 != 3) {
+          this.i((byte) -128);
         }
         this.field_Yb = this.field_Yb & -8;
     }
 
     final void a(byte param0, boolean param1) {
-        if (!(this.field_ib == param1)) {
-            this.field_ib = param1 ? true : false;
-            this.d(false);
-            this.field_Yb = this.field_Yb & -32;
+        if (this.field_ib != param1) {
+          this.field_ib = param1 ? true : false;
+          this.d(false);
+          this.field_Yb = this.field_Yb & -32;
         }
         if (param0 != -1) {
-            tl var4 = (tl) null;
-            this.a(-26, (tl) null, 50);
+          tl var4 = (tl) null;
+          this.a(-26, (tl) null, 50);
         }
     }
 
     abstract void a(nf param0, boolean param1);
 
     final ec J(int param0) {
-        int var2 = -63 % ((param0 - -67) / 41);
+        int var2 = -63 % ((param0 + 67) / 41);
         return this.field_L[this.field_F];
     }
 
@@ -356,7 +291,7 @@ abstract class bf extends ha {
 
     final ec t(int param0) {
         if (param0 != -11198) {
-            return (ec) null;
+          return (ec) null;
         }
         return this.field_t;
     }
@@ -367,45 +302,45 @@ abstract class bf extends ha {
         qr var3 = null;
         int var6 = AceOfSkies.field_G ? 1 : 0;
         if (!param0) {
-            return;
+          return;
         }
         if (param1 == this.field_G) {
         } else {
-            if (param1 == 1) {
+          if (param1 == 1) {
+            var5 = 1;
+            var4 = 1;
+            var3 = pi.field_x;
+          } else {
+            if (param1 == 2) {
+              var3 = ne.field_i;
+              var5 = 0;
+              var4 = 1;
+            } else {
+              if (param1 == 128) {
+                var3 = uc.field_l;
                 var5 = 1;
                 var4 = 1;
-                var3 = pi.field_x;
-            } else {
-                if (-3 == (param1 ^ -1)) {
-                    var3 = ne.field_i;
-                    var5 = 0;
-                    var4 = 1;
-                } else {
-                    if (-129 == (param1 ^ -1)) {
-                        var3 = uc.field_l;
-                        var5 = 1;
-                        var4 = 1;
-                    } else {
-                        var4 = 0;
-                        var3 = cg.field_p;
-                        var5 = 0;
-                    }
-                }
+              } else {
+                var4 = 0;
+                var3 = cg.field_p;
+                var5 = 0;
+              }
             }
-            if (!(var5 != (!this.field_Vb ? 1 : 0))) {
-                this.field_Vb = var5 != 0 ? true : false;
-                this.u((byte) -122);
-            }
-            if ((!this.field_Db ? 1 : 0) == var4) {
-                this.field_Db = var4 != 0 ? true : false;
-                this.p((byte) -128);
-            }
-            if (!(var3 == this.field_zb)) {
-                this.field_zb = var3;
-                this.l((byte) 88);
-            }
-            this.field_Yb = this.field_Yb & -29;
-            this.field_G = param1;
+          }
+          if (var5 == (!this.field_Vb ? 1 : 0)) {
+            this.field_Vb = var5 != 0 ? true : false;
+            this.u((byte) -122);
+          }
+          if ((!this.field_Db ? 1 : 0) == var4) {
+            this.field_Db = var4 != 0 ? true : false;
+            this.p((byte) -128);
+          }
+          if (var3 != this.field_zb) {
+            this.field_zb = var3;
+            this.l((byte) 88);
+          }
+          this.field_Yb = this.field_Yb & -29;
+          this.field_G = param1;
         }
     }
 
@@ -416,7 +351,7 @@ abstract class bf extends ha {
         this.a((byte) 122, 0, bs.field_a);
         this.a(bs.field_a, 0, 0);
         this.e(true, param5);
-        this.field_ec.b((float)(param3 + -1), (float)(param2 - 1), 1.0f, -125);
+        this.field_ec.b((float)(param3 - 1), (float)(param2 - 1), 1.0f, -125);
         this.field_ec.b(-var7 + (float)param1, (byte) -125, 0.0f, -var7 + (float)param0);
         this.q((byte) 127);
         this.b((byte) -120, false);
@@ -429,34 +364,34 @@ abstract class bf extends ha {
     private final void P(int param0) {
         this.field_ac = this.a(true, (byte) 91);
         this.field_ac.a(12, -120, param0);
-        this.field_xb = this.a(new pl[]{new pl(rl.field_b)}, param0 + -152);
+        this.field_xb = this.a(new pl[]{new pl(rl.field_b)}, param0 - 152);
     }
 
     final ec y(int param0) {
         if (param0 >= -66) {
-            this.field_i = (jagex3.graphics2.hw.NativeInterface) null;
+          this.field_i = (jagex3.graphics2.hw.NativeInterface) null;
         }
         return this.field_ec;
     }
 
     final void a(boolean param0, boolean param1) {
         if ((!this.field_o ? 1 : 0) != (!param0 ? 1 : 0)) {
-            this.field_o = param0 ? true : false;
-            this.b(false);
-            this.field_Yb = this.field_Yb & -32;
+          this.field_o = param0 ? true : false;
+          this.b(false);
+          this.field_Yb = this.field_Yb & -32;
         }
         if (param1) {
-            this.U(78, 60, 115, 111, 3);
+          this.U(78, 60, 115, 111, 3);
         }
     }
 
     final void a(boolean param0, int param1) {
         if ((!this.field_pc ? 1 : 0) != (!param0 ? 1 : 0)) {
-            this.field_pc = param0 ? true : false;
-            this.T(0);
+          this.field_pc = param0 ? true : false;
+          this.T(0);
         }
         if (param1 != -26973) {
-            this.c(127, -1, -89, 21, -67, 63);
+          this.c(127, -1, -89, 21, -67, 63);
         }
     }
 
@@ -464,49 +399,49 @@ abstract class bf extends ha {
 
     final void a(byte param0, int param1) {
         if (param0 != -74) {
-            jaclib.memory.Buffer var4 = (jaclib.memory.Buffer) null;
-            this.a(39, (jaclib.memory.Buffer) null);
+          jaclib.memory.Buffer var4 = (jaclib.memory.Buffer) null;
+          this.a(39, (jaclib.memory.Buffer) null);
         }
         if (param1 != this.field_cc) {
-            this.field_cc = param1;
-            this.g(param0 ^ -74);
+          this.field_cc = param1;
+          this.g(param0 ^ -74);
         }
     }
 
     final void a(int param0, boolean param1) {
         if (param0 != -32) {
-            this.field_peer = 66L;
+          this.field_peer = 66L;
         }
-        if (!((this.field_Y ? 1 : 0) != (!param1 ? 1 : 0))) {
-            this.field_Y = param1 ? true : false;
-            this.w(param0 ^ -32);
-            this.field_Yb = this.field_Yb & -32;
+        if ((this.field_Y ? 1 : 0) == (!param1 ? 1 : 0)) {
+          this.field_Y = param1 ? true : false;
+          this.w(param0 ^ -32);
+          this.field_Yb = this.field_Yb & -32;
         }
     }
 
     final void b(int param0, boolean param1) {
         int var4 = AceOfSkies.field_G ? 1 : 0;
-        if ((param0 ^ -1) == -2) {
-            this.a(bd.field_C, true, bd.field_C);
+        if (param0 == 1) {
+          this.a(bd.field_C, true, bd.field_C);
         } else {
-            if (-1 == (param0 ^ -1)) {
-                this.a(ru.field_a, true, ru.field_a);
+          if (param0 == 0) {
+            this.a(ru.field_a, true, ru.field_a);
+          } else {
+            if (param0 == 2) {
+              this.a(du.field_l, true, bd.field_C);
             } else {
-                if (param0 == 2) {
-                    this.a(du.field_l, true, bd.field_C);
-                } else {
-                    if (param0 == 3) {
-                        this.a(lo.field_j, true, ru.field_a);
-                    } else {
-                        if (!(4 != param0)) {
-                            this.a(fs.field_d, true, fs.field_d);
-                        }
-                    }
+              if (param0 == 3) {
+                this.a(lo.field_j, true, ru.field_a);
+              } else {
+                if (4 == param0) {
+                  this.a(fs.field_d, true, fs.field_d);
                 }
+              }
             }
+          }
         }
         if (param1) {
-            this.V(-59);
+          this.V(-59);
         }
     }
 
@@ -516,7 +451,7 @@ abstract class bf extends ha {
         this.field_Lb = false;
         this.L(50);
         if (param0 <= 50) {
-            this.a((byte) 51);
+          this.a((byte) 51);
         }
     }
 
@@ -528,69 +463,34 @@ abstract class bf extends ha {
         qi stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2) {
-              stackIn_4_0 = this.a(param3, param5, param4, param1, (byte) 108, 0, 0, param0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (qi) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2) {
+            stackIn_4_0 = this.a(param3, param5, param4, param1, (byte) 108, 0, 0, param0);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (qi) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var7);
-
-            stackIn_7_1 = new StringBuilder().append("bf.VE(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("bf.VE(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -600,7 +500,7 @@ abstract class bf extends ha {
 
     private final void K(int param0) {
         if (param0 != -7) {
-            this.field_z = (sb) null;
+          this.field_z = (sb) null;
         }
     }
 
@@ -608,114 +508,61 @@ abstract class bf extends ha {
         int stackIn_8_0 = 0;
         int var7;
         int var8;
-        L0: {
-          var8 = AceOfSkies.field_G ? 1 : 0;
-          param3 = param3 & this.i(-7865);
-          var7 = -100 / ((69 - param0) / 43);
-          if (param3) {
-            break L0;
+        var8 = AceOfSkies.field_G ? 1 : 0;
+        param3 = param3 & this.i(-7865);
+        var7 = -100 / ((69 - param0) / 43);
+        if (!param3 && (param4 == 4 ||
+          8 == param4 ||
+          param4 == 9)) {
+          param4 = 2;
+          if (4 == param4) {
+            stackIn_8_0 = 1 & param5;
           } else {
-            L1: {
-              if (-5 == (param4 ^ -1)) {
-                break L1;
-              } else {
-                if (8 == param4) {
-                  break L1;
-                } else {
-                  if ((param4 ^ -1) != -10) {
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-            }
-            L2: {
-              param4 = 2;
-              if (4 == param4) {
-                stackIn_8_0 = 1 & param5;
-                break L2;
-              } else {
-                stackIn_8_0 = 1;
-                break L2;
-              }
-            }
-            param2 = stackIn_8_0;
-            param5 = 0;
-            break L0;
+            stackIn_8_0 = 1;
           }
+          param2 = stackIn_8_0;
+          param5 = 0;
         }
-        L3: {
-          if (0 == param4) {
-            break L3;
-          } else {
-            if (param1) {
-              param4 = param4 | -2147483648;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
+        if (0 != param4 &&
+          param1) {
+          param4 = param4 | -2147483648;
         }
-        L4: {
-          if (param4 == this.field_eb) {
-            if (this.field_eb == 0) {
-              break L4;
-            } else {
-              L5: {
-                this.field_Ob[2147483647 & this.field_eb].a(false, param1);
-                if (param5 != this.field_Sb) {
-                  break L5;
-                } else {
-                  if (param2 == this.field_hc) {
-                    break L4;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
+        if (param4 == this.field_eb) {
+          if (this.field_eb != 0) {
+            this.field_Ob[2147483647 & this.field_eb].a(false, param1);
+            if (param5 != this.field_Sb ||
+              param2 != this.field_hc) {
               this.field_Ob[this.field_eb & 2147483647].a(1786747298, param5, param2);
               this.field_hc = param2;
               this.field_Sb = param5;
-              break L4;
             }
-          } else {
-            L6: {
-              if (0 == this.field_eb) {
-                break L6;
-              } else {
-                this.field_Ob[2147483647 & this.field_eb].a(true);
-                break L6;
-              }
-            }
-            L7: {
-              if (0 == param4) {
-                this.field_nb = null;
-                break L7;
-              } else {
-                this.field_nb = this.field_Ob[param4 & 2147483647];
-                this.field_nb.a(param1, (byte) 8);
-                this.field_nb.a(false, param1);
-                this.field_nb.a(1786747298, param5, param2);
-                break L7;
-              }
-            }
-            this.field_eb = param4;
-            this.field_hc = param2;
-            this.field_Sb = param5;
-            break L4;
           }
+        } else {
+          if (0 != this.field_eb) {
+            this.field_Ob[2147483647 & this.field_eb].a(true);
+          }
+          if (0 == param4) {
+            this.field_nb = null;
+          } else {
+            this.field_nb = this.field_Ob[param4 & 2147483647];
+            this.field_nb.a(param1, (byte) 8);
+            this.field_nb.a(false, param1);
+            this.field_nb.a(1786747298, param5, param2);
+          }
+          this.field_eb = param4;
+          this.field_hc = param2;
+          this.field_Sb = param5;
         }
     }
 
     private final void k(int param0) {
         this.field_e = false;
         if (param0 != -23858) {
-            this.field_peer = -76L;
+          this.field_peer = -76L;
         }
         this.u(12221);
-        if (!(this.field_bb != aj.field_v)) {
-            this.g(false);
+        if (this.field_bb == aj.field_v) {
+          this.g(false);
         }
     }
 
@@ -724,75 +571,55 @@ abstract class bf extends ha {
     private final void g(byte param0) {
         float[] var2;
         float[] var3;
-        L0: {
-          if (param0 < -99) {
-            break L0;
-          } else {
-            this.field_C = (ti) null;
-            break L0;
-          }
+        if (param0 >= -99) {
+          this.field_C = (ti) null;
         }
-        L1: {
-          if (!this.field_Zb) {
-            L2: {
-              L3: {
-                var3 = this.field_yb;
-                var2 = var3;
-                if (this.field_Z == 0) {
-                  break L3;
-                } else {
-                  if (0 == this.field_jb) {
-                    break L3;
-                  } else {
-                    var3[12] = -1.0f;
-                    var3[7] = 0.0f;
-                    var3[10] = 0.5f;
-                    var3[3] = 0.0f;
-                    var3[2] = 0.0f;
-                    var3[0] = 2.0f / (float)this.field_Z;
-                    var3[8] = 0.0f;
-                    var3[6] = 0.0f;
-                    var3[4] = 0.0f;
-                    var3[11] = 0.0f;
-                    var3[14] = 0.5f;
-                    var3[9] = 0.0f;
-                    var3[13] = 1.0f;
-                    var3[15] = 1.0f;
-                    var3[1] = 0.0f;
-                    var3[5] = -2.0f / (float)this.field_jb;
-                    break L2;
-                  }
-                }
-              }
-              var2[5] = 1.0f;
-              var2[13] = 0.0f;
-              var2[11] = 0.0f;
-              var2[10] = 1.0f;
-              var2[9] = 0.0f;
-              var2[0] = 1.0f;
-              var2[3] = 0.0f;
-              var2[15] = 1.0f;
-              var2[7] = 0.0f;
-              var2[8] = 0.0f;
-              var2[12] = 0.0f;
-              var2[4] = 0.0f;
-              var2[6] = 0.0f;
-              var2[14] = 0.0f;
-              var2[2] = 0.0f;
-              var2[1] = 0.0f;
-              break L2;
-            }
-            this.field_Zb = true;
-            break L1;
+        if (!this.field_Zb) {
+          var3 = this.field_yb;
+          var2 = var3;
+          if (this.field_Z != 0 &&
+            0 != this.field_jb) {
+            var3[12] = -1.0f;
+            var3[7] = 0.0f;
+            var3[10] = 0.5f;
+            var3[3] = 0.0f;
+            var3[2] = 0.0f;
+            var3[0] = 2.0f / (float)this.field_Z;
+            var3[8] = 0.0f;
+            var3[6] = 0.0f;
+            var3[4] = 0.0f;
+            var3[11] = 0.0f;
+            var3[14] = 0.5f;
+            var3[9] = 0.0f;
+            var3[13] = 1.0f;
+            var3[15] = 1.0f;
+            var3[1] = 0.0f;
+            var3[5] = -2.0f / (float)this.field_jb;
           } else {
-            break L1;
+            var2[5] = 1.0f;
+            var2[13] = 0.0f;
+            var2[11] = 0.0f;
+            var2[10] = 1.0f;
+            var2[9] = 0.0f;
+            var2[0] = 1.0f;
+            var2[3] = 0.0f;
+            var2[15] = 1.0f;
+            var2[7] = 0.0f;
+            var2[8] = 0.0f;
+            var2[12] = 0.0f;
+            var2[4] = 0.0f;
+            var2[6] = 0.0f;
+            var2[14] = 0.0f;
+            var2[2] = 0.0f;
+            var2[1] = 0.0f;
           }
+          this.field_Zb = true;
         }
     }
 
     final int H(int param0) {
         if (param0 <= 20) {
-            return 17;
+          return 17;
         }
         return this.field_v;
     }
@@ -807,41 +634,32 @@ abstract class bf extends ha {
 
     sk b(int param0, byte param1) {
         int var3;
-        L0: {
-          if (param1 > 31) {
-            break L0;
-          } else {
-            this.E(-25);
-            break L0;
-          }
+        if (param1 <= 31) {
+          this.E(-25);
         }
         var3 = param0;
-        if (-7 == (var3 ^ -1)) {
-          return (sk) ((Object) new cf((bf) (this)));
-        } else {
-          if (var3 == 1) {
-            return (sk) ((Object) new oj((bf) (this)));
-          } else {
-            if (2 != var3) {
-              if (-8 == (var3 ^ -1)) {
-                return (sk) ((Object) new ta((bf) (this)));
-              } else {
-                return (sk) ((Object) new ae((bf) (this)));
-              }
-            } else {
-              return (sk) ((Object) new u((bf) (this), this.field_Tb));
-            }
-          }
+        if (var3 == 6) {
+          return (sk) ((Object) new cf(this));
         }
+        if (var3 == 1) {
+          return (sk) ((Object) new oj(this));
+        }
+        if (2 == var3) {
+          return (sk) ((Object) new u(this, this.field_Tb));
+        }
+        if (var3 == 7) {
+          return (sk) ((Object) new ta(this));
+        }
+        return (sk) ((Object) new ae(this));
     }
 
     private final void e(boolean param0) {
         if (!param0) {
-            this.w((byte) 95);
+          this.w((byte) 95);
         }
         this.field_S = false;
         if (null != this.field_nb) {
-            this.field_nb.b(-126);
+          this.field_nb.b(-126);
         }
         this.v(5);
     }
@@ -854,157 +672,117 @@ abstract class bf extends ha {
         float var6;
         float var7;
         float[] var8;
-        L0: {
-          if (!this.field_e) {
-            L1: {
-              L2: {
-                var8 = this.field_n;
-                var2 = var8;
-                var3 = (float)(this.field_Mb * -this.field_Ub) / (float)this.field_oc;
-                var4 = (float)((this.field_Z + -this.field_Ub) * this.field_Mb) / (float)this.field_oc;
-                var5 = (float)(this.field_Mb * this.field_lb) / (float)this.field_M;
-                var6 = (float)(this.field_Mb * (this.field_lb + -this.field_jb)) / (float)this.field_M;
-                if (var4 == var3) {
-                  break L2;
-                } else {
-                  if (var5 == var6) {
-                    break L2;
-                  } else {
-                    var7 = 2.0f * (float)this.field_Mb;
-                    var8[1] = 0.0f;
-                    var8[8] = (var3 + var4) / (-var3 + var4);
-                    var8[4] = 0.0f;
-                    this.field_T = (float)this.field_x / (float)(-this.field_x + this.field_Mb);
-                    var8[10] = (float)this.field_x / (float)(-this.field_x + this.field_Mb);
-                    var8[7] = 0.0f;
-                    this.field_mc = (float)(this.field_Mb * this.field_x) / (float)(this.field_Mb - this.field_x);
-                    var8[14] = (float)(this.field_Mb * this.field_x) / (float)(this.field_Mb - this.field_x);
-                    var8[12] = 0.0f;
-                    var8[13] = 0.0f;
-                    var8[3] = 0.0f;
-                    var8[11] = -1.0f;
-                    var8[9] = (var6 + var5) / (var5 - var6);
-                    var8[0] = var7 / (-var3 + var4);
-                    var8[15] = 0.0f;
-                    var8[6] = 0.0f;
-                    var8[5] = var7 / (var5 - var6);
-                    var8[2] = 0.0f;
-                    break L1;
-                  }
-                }
-              }
-              var8[13] = 0.0f;
-              var8[8] = 0.0f;
-              var8[14] = 0.0f;
-              var8[3] = 0.0f;
-              var8[9] = 0.0f;
-              var8[1] = 0.0f;
-              var8[0] = 1.0f;
-              var8[4] = 0.0f;
-              var8[2] = 0.0f;
-              var8[6] = 0.0f;
-              var8[15] = 1.0f;
-              var8[12] = 0.0f;
-              var8[5] = 1.0f;
-              var8[10] = 1.0f;
-              var8[11] = 0.0f;
-              var8[7] = 0.0f;
-              break L1;
-            }
-            this.e((byte) 93);
-            this.field_e = true;
-            break L0;
+        if (!this.field_e) {
+          var8 = this.field_n;
+          var2 = var8;
+          var3 = (float)(this.field_Mb * -this.field_Ub) / (float)this.field_oc;
+          var4 = (float)((this.field_Z - this.field_Ub) * this.field_Mb) / (float)this.field_oc;
+          var5 = (float)(this.field_Mb * this.field_lb) / (float)this.field_M;
+          var6 = (float)(this.field_Mb * (this.field_lb - this.field_jb)) / (float)this.field_M;
+          if (var4 != var3 &&
+            var5 != var6) {
+            var7 = 2.0f * (float)this.field_Mb;
+            var8[1] = 0.0f;
+            var8[8] = (var3 + var4) / (-var3 + var4);
+            var8[4] = 0.0f;
+            this.field_T = (float)this.field_x / (float)(-this.field_x + this.field_Mb);
+            var8[10] = (float)this.field_x / (float)(-this.field_x + this.field_Mb);
+            var8[7] = 0.0f;
+            this.field_mc = (float)(this.field_Mb * this.field_x) / (float)(this.field_Mb - this.field_x);
+            var8[14] = (float)(this.field_Mb * this.field_x) / (float)(this.field_Mb - this.field_x);
+            var8[12] = 0.0f;
+            var8[13] = 0.0f;
+            var8[3] = 0.0f;
+            var8[11] = -1.0f;
+            var8[9] = (var6 + var5) / (var5 - var6);
+            var8[0] = var7 / (-var3 + var4);
+            var8[15] = 0.0f;
+            var8[6] = 0.0f;
+            var8[5] = var7 / (var5 - var6);
+            var8[2] = 0.0f;
           } else {
-            break L0;
+            var8[13] = 0.0f;
+            var8[8] = 0.0f;
+            var8[14] = 0.0f;
+            var8[3] = 0.0f;
+            var8[9] = 0.0f;
+            var8[1] = 0.0f;
+            var8[0] = 1.0f;
+            var8[4] = 0.0f;
+            var8[2] = 0.0f;
+            var8[6] = 0.0f;
+            var8[15] = 1.0f;
+            var8[12] = 0.0f;
+            var8[5] = 1.0f;
+            var8[10] = 1.0f;
+            var8[11] = 0.0f;
+            var8[7] = 0.0f;
           }
+          this.e((byte) 93);
+          this.field_e = true;
         }
-        L3: {
-          if (param0 == 12221) {
-            break L3;
-          } else {
-            this.field_s = (tl) null;
-            break L3;
-          }
+        if (param0 != 12221) {
+          this.field_s = (tl) null;
         }
     }
 
     abstract void j(int param0);
 
     private final void A(int param0) {
+        int var5 = 0;
         int var2;
         jaclib.memory.Buffer var3;
-        int var10;
         jaclib.memory.Stream var4;
-        int var5;
         double var6;
         float var8;
         float var9;
-        L0: {
-          var10 = AceOfSkies.field_G ? 1 : 0;
-          this.field_K = this.a(false, (byte) 118);
-          if (param0 == -32) {
-            break L0;
-          } else {
-            this.field_fb = 0.25540614128112793f;
-            break L0;
-          }
+        int var10;
+        var10 = AceOfSkies.field_G ? 1 : 0;
+        this.field_K = this.a(false, (byte) 118);
+        if (param0 != -32) {
+          this.field_fb = 0.25540614128112793f;
         }
         this.field_K.a(12, -125, 3096);
         var2 = 0;
-        L1: while (true) {
-          L2: {
-            if (4 <= var2) {
-              break L2;
-            } else {
-              var3 = this.field_K.a(true, (byte) -59);
-              if (var3 != null) {
-                var4 = this.a(-105, var3);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var4.b(0.0f);
-                var5 = 0;
-                L3: while (true) {
-                  if (256 < var5) {
-                    var4.a();
-                    if (this.field_K.a((byte) -60)) {
-                      break L2;
-                    } else {
-                      var2++;
-                      continue L1;
-                    }
-                  } else {
-                    var6 = 3.141592653589793 * (double)(2 * var5) / 256.0;
-                    var8 = (float)Math.cos(var6);
-                    var9 = (float)Math.sin(var6);
-                    if (jaclib.memory.Stream.b()) {
-                      var4.b(var9);
-                      var4.b(var8);
-                      var4.b(0.0f);
-                      var5++;
-                      continue L3;
-                    } else {
-                      var4.a(var9);
-                      var4.a(var8);
-                      var4.a(0.0f);
-                      var5++;
-                      continue L3;
-                    }
-                  }
+        L2: while (true) {
+          if (4 > var2) {
+            var3 = this.field_K.a(true, (byte) -59);
+            if (var3 != null) {
+              var4 = this.a(-105, var3);
+              var4.b(0.0f);
+              var4.b(0.0f);
+              var4.b(0.0f);
+              for (var5 = 0; 256 >= var5; var5++) {
+                var6 = 3.141592653589793 * (double)(2 * var5) / 256.0;
+                var8 = (float)Math.cos(var6);
+                var9 = (float)Math.sin(var6);
+                if (jaclib.memory.Stream.b()) {
+                  var4.b(var9);
+                  var4.b(var8);
+                  var4.b(0.0f);
+                } else {
+                  var4.a(var9);
+                  var4.a(var8);
+                  var4.a(0.0f);
                 }
-              } else {
-                var2++;
-                continue L1;
+              }
+              var4.a();
+              if (this.field_K.a((byte) -60)) {
+                break L2;
               }
             }
+            var2++;
+            continue;
           }
-          this.a(new pl[]{new pl(rl.field_b)}, -127);
-          return;
+          break;
         }
+        this.a(new pl[]{new pl(rl.field_b)}, -127);
+        return;
     }
 
     final void a(byte param0) {
         if (param0 <= 35) {
-            this.field_Ub = -59;
+          this.field_Ub = -59;
         }
         this.field_ec.a((byte) -59);
         this.field_Lb = true;
@@ -1018,17 +796,12 @@ abstract class bf extends ha {
         java.awt.Dimension var11 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
@@ -1101,128 +874,65 @@ abstract class bf extends ha {
         this.field_l = new jaclib.memory.Stream();
         ec discarded$5 = new ec();
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  this.field_lc = param4;
-                  this.field_d = param3;
-                  this.field_Fb = param1;
-                  var11 = param0.getSize();
-                  this.field_Z = var11.width;
-                  this.field_jb = var11.height;
-                  this.field_m = param5;
-                  fr.a(false, 0, true);
-                  if (null == this.field_a) {
-                    this.field_i = new jagex3.graphics2.hw.NativeInterface(0, this.field_m);
-                    this.field_z = null;
-                    break L2;
-                  } else {
-                    this.field_z = new sb((bf) (this), this.field_a);
-                    this.field_i = new jagex3.graphics2.hw.NativeInterface(this.field_a.a(28060), this.field_m);
-                    var8 = 0;
-                    L3: while (true) {
-                      if (var8 >= this.field_a.a(28060)) {
-                        break L2;
-                      } else {
-                        L4: {
-                          var9 = this.field_a.a(false, var8);
-                          if (var9 == null) {
-                            break L4;
-                          } else {
-                            this.field_i.initTextureMetrics(var8, var9.field_r, var9.field_b);
-                            break L4;
-                          }
-                        }
-                        var8++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            this.field_lc = param4;
+            this.field_d = param3;
+            this.field_Fb = param1;
+            var11 = param0.getSize();
+            this.field_Z = var11.width;
+            this.field_jb = var11.height;
+            this.field_m = param5;
+            fr.a(false, 0, true);
+            if (null != this.field_a) {
+              this.field_z = new sb(this, this.field_a);
+              this.field_i = new jagex3.graphics2.hw.NativeInterface(this.field_a.a(28060), this.field_m);
+              for (var8 = 0; var8 < this.field_a.a(28060); var8++) {
+                var9 = this.field_a.a(false, var8);
+                if (var9 != null) {
+                  this.field_i.initTextureMetrics(var8, var9.field_r, var9.field_b);
                 }
-                break L1;
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var7 = decompiledCaughtException;
-              var7.printStackTrace();
-              this.a(-9);
-              throw new RuntimeException("");
+              return;
             }
-            break L0;
+            this.field_i = new jagex3.graphics2.hw.NativeInterface(0, this.field_m);
+            this.field_z = null;
+            return;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var7 = decompiledCaughtException;
+            var7.printStackTrace();
+            this.a(-9);
+            throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
-            var7_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var7_ref);
-
-            stackIn_12_1 = new StringBuilder().append("bf.<init>(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L5;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L5;
-            }
+          var7_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_12_0 = var7_ref;
+          stackIn_12_1 = new StringBuilder().append("bf.<init>(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L6;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L6;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          L7: {
-
-
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L7;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L7;
-            }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          if (param2 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param3 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L8;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L8;
-            }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param3 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), stackIn_22_2 + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -1237,46 +947,26 @@ abstract class bf extends ha {
         qi stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 == 0) {
-                break L1;
-              } else {
-                this.field_Zb = false;
-                break L1;
-              }
-            }
-            stackIn_3_0 = this.a(0, true, param3, param4, 0, param0, param1);
-            break L0;
+          if (param2 != 0) {
+            this.field_Zb = false;
           }
+          stackIn_3_0 = this.a(0, true, param3, param4, 0, param0, param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var6);
-
-            stackIn_6_1 = new StringBuilder().append("bf.ID(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_6_0 = var6;
+          stackIn_6_1 = new StringBuilder().append("bf.ID(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void c(byte param0) {
@@ -1284,38 +974,37 @@ abstract class bf extends ha {
         java.awt.Canvas var4 = null;
         int var5 = AceOfSkies.field_G ? 1 : 0;
         Hashtable var2 = new Hashtable();
-        if (this.field_gb != null) {
-            if (!(this.field_gb.isEmpty())) {
-                var3 = this.field_gb.keys();
-                while (var3.hasMoreElements()) {
-                    var4 = (java.awt.Canvas) (var3.nextElement());
-                    var2.put(var4, this.a(-15083, var4));
-                }
-            }
+        if (this.field_gb != null &&
+          !this.field_gb.isEmpty()) {
+          var3 = this.field_gb.keys();
+          while (var3.hasMoreElements()) {
+            var4 = (java.awt.Canvas) (var3.nextElement());
+            var2.put(var4, this.a(-15083, var4));
+          }
         }
         if (param0 != 61) {
-            this.field_pc = true;
+          this.field_pc = true;
         }
         this.field_gb = var2;
         this.h(26339);
         this.P(24);
         this.A(-32);
-        this.field_wb.a((bf) (this), 0);
+        this.field_wb.a(this, 0);
     }
 
     final void a(int param0, byte param1) {
-        if (!(param0 == this.field_F)) {
-            this.field_F = param0;
-            this.w((byte) -73);
+        if (param0 != this.field_F) {
+          this.field_F = param0;
+          this.w((byte) -73);
         }
         if (param1 < 24) {
-            this.field_P = (fa) null;
+          this.field_P = (fa) null;
         }
     }
 
     final int j(byte param0) {
         if (param0 != 5) {
-            this.D(-28);
+          this.D(-28);
         }
         return this.field_bc;
     }
@@ -1337,35 +1026,35 @@ abstract class bf extends ha {
         this.field_w = new as[this.field_h];
         this.field_L = new ec[this.field_h];
         for (var2 = 0; this.field_h > var2; var2++) {
-            this.field_w[var2] = ru.field_a;
-            this.field_H[var2] = ru.field_a;
-            this.field_f[var2] = mq.field_g;
-            this.field_L[var2] = new ec();
+          this.field_w[var2] = ru.field_a;
+          this.field_H[var2] = ru.field_a;
+          this.field_f[var2] = mq.field_g;
+          this.field_L[var2] = new ec();
         }
         this.field_D = new sf[-2 + this.field_fc];
         this.field_Kb = (jj) ((Object) this.a(la.field_h, 8, 1, 1, lc.field_g));
         this.a(new gi(262144));
         this.field_Eb = this.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_j})}, -127);
-        this.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_c})}, param0 + -229);
+        this.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_c})}, param0 - 229);
         this.a(new pl[]{new pl(rl.field_b), new pl(rl.field_c), new pl(rl.field_j), new pl(rl.field_m)}, -127);
         this.a(new pl[]{new pl(rl.field_b), new pl(rl.field_c), new pl(rl.field_j)}, param0 ^ -28);
-        po discarded$0 = new po((bf) (this), 0, 0, false, false);
-        this.field_cb = new po((bf) (this), 0, 0, true, true);
+        po discarded$0 = new po(this, 0, 0, false, false);
+        this.field_cb = new po(this, 0, 0, true, true);
         if (param0 != 101) {
-            this.R(-44);
+          this.R(-44);
         }
-        po discarded$1 = new po((bf) (this), 0, 0, false, false);
-        this.field_vb = new po((bf) (this), 0, 0, true, true);
-        po discarded$2 = new po((bf) (this), 0, 0, false, false);
-        this.field_k = new po((bf) (this), 0, 0, true, true);
-        po discarded$3 = new po((bf) (this), 0, 0, false, false);
-        this.field_sb = new po((bf) (this), 0, 0, true, true);
-        po discarded$4 = new po((bf) (this), 0, 0, false, false);
-        this.field_pb = new po((bf) (this), 0, 0, true, true);
-        this.field_wb = new lm((bf) (this));
+        po discarded$1 = new po(this, 0, 0, false, false);
+        this.field_vb = new po(this, 0, 0, true, true);
+        po discarded$2 = new po(this, 0, 0, false, false);
+        this.field_k = new po(this, 0, 0, true, true);
+        po discarded$3 = new po(this, 0, 0, false, false);
+        this.field_sb = new po(this, 0, 0, true, true);
+        po discarded$4 = new po(this, 0, 0, false, false);
+        this.field_pb = new po(this, 0, 0, true, true);
+        this.field_wb = new lm(this);
         this.field_C = this.c(true, param0 ^ 8799);
         this.c((byte) 61);
-        this.field_Tb = new em((bf) (this));
+        this.field_Tb = new em(this);
         this.field_Ob[1] = this.b(1, (byte) 34);
         this.field_Ob[2] = this.b(2, (byte) 88);
         this.field_Ob[4] = this.b(4, (byte) 109);
@@ -1376,16 +1065,16 @@ abstract class bf extends ha {
         this.field_Ob[8] = this.b(8, (byte) 45);
         this.field_Ob[9] = this.b(9, (byte) 115);
         if (!this.field_Ob[2].e(3)) {
-            this.field_Ob[2] = this.b(0, (byte) 44);
+          this.field_Ob[2] = this.b(0, (byte) 44);
         }
-        if (!(this.field_Ob[4].e(3))) {
-            this.field_Ob[4] = this.field_Ob[2];
+        if (!this.field_Ob[4].e(3)) {
+          this.field_Ob[4] = this.field_Ob[2];
         }
         if (!this.field_Ob[8].e(3)) {
-            this.field_Ob[8] = this.field_Ob[4];
+          this.field_Ob[8] = this.field_Ob[4];
         }
-        if (!(this.field_Ob[9].e(3))) {
-            this.field_Ob[9] = this.field_Ob[8];
+        if (!this.field_Ob[9].e(3)) {
+          this.field_Ob[9] = this.field_Ob[8];
         }
         this.G(-122);
         this.U(param0 ^ 101);
@@ -1395,32 +1084,32 @@ abstract class bf extends ha {
     void k(byte param0) {
         this.field_ic = this.field_B;
         if (param0 < 123) {
-            return;
+          return;
         }
         this.field_B = 0;
     }
 
     final void x(int param0) {
-        if (!((this.field_Yb ^ -1) == -5)) {
-            this.c(true);
-            this.a(false, false);
-            this.b(false, 256);
-            this.a((byte) -1, false);
-            this.a(-32, false);
-            this.a(false, false, -2, 3);
-            this.e(true, 1);
-            this.b(0, false);
-            this.field_Yb = 4;
+        if (this.field_Yb != 4) {
+          this.c(true);
+          this.a(false, false);
+          this.b(false, 256);
+          this.a((byte) -1, false);
+          this.a(-32, false);
+          this.a(false, false, -2, 3);
+          this.e(true, 1);
+          this.b(0, false);
+          this.field_Yb = 4;
         }
         if (param0 != -23608) {
-            this.field_I = false;
+          this.field_I = false;
         }
     }
 
     final ec v(byte param0) {
         if (!this.field_S) {
-            this.field_tb.a(this.field_t, (byte) -93, this.field_ec);
-            this.field_S = true;
+          this.field_tb.a(this.field_t, (byte) -93, this.field_ec);
+          this.field_S = true;
         }
         int var2 = 28 % ((-8 - param0) / 33);
         return this.field_tb;
@@ -1444,7 +1133,7 @@ abstract class bf extends ha {
 
     final int M(int param0) {
         if (param0 != 7693) {
-            this.T(-76);
+          this.T(-76);
         }
         return this.field_F;
     }
@@ -1454,154 +1143,111 @@ abstract class bf extends ha {
         float[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param1[param0] = this.field_N[3];
-            param1[4] = this.field_N[1];
-            param1[8] = this.field_N[2];
-            param1[0] = this.field_N[0];
-            param1[2] = this.field_N[8];
-            param1[13] = this.field_N[7];
-            param1[5] = this.field_N[5];
-            param1[1] = this.field_N[4];
-            param1[9] = this.field_N[6];
-            param1[3] = this.field_N[12];
-            param1[14] = this.field_N[11];
-            param1[10] = this.field_N[10];
-            param1[6] = this.field_N[9];
-            param1[7] = this.field_N[13];
-            param1[11] = this.field_N[14];
-            param1[15] = this.field_N[15];
-            stackIn_1_0 = (float[]) (param1);
-            break L0;
-          }
+          param1[param0] = this.field_N[3];
+          param1[4] = this.field_N[1];
+          param1[8] = this.field_N[2];
+          param1[0] = this.field_N[0];
+          param1[2] = this.field_N[8];
+          param1[13] = this.field_N[7];
+          param1[5] = this.field_N[5];
+          param1[1] = this.field_N[4];
+          param1[9] = this.field_N[6];
+          param1[3] = this.field_N[12];
+          param1[14] = this.field_N[11];
+          param1[10] = this.field_N[10];
+          param1[6] = this.field_N[9];
+          param1[7] = this.field_N[13];
+          param1[11] = this.field_N[14];
+          param1[15] = this.field_N[15];
+          stackIn_1_0 = (float[]) (param1);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("bf.QE(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("bf.QE(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final void a(jb param0, int param1, int param2) {
         try {
-            if (param2 != 0) {
-                jb var5 = (jb) null;
-                this.a((jb) null, 23, true, (byte) 38);
-            }
-            this.a(param0, param1, false, (byte) 111);
+          if (param2 != 0) {
+            jb var5 = (jb) null;
+            this.a((jb) null, 23, true, (byte) 38);
+          }
+          this.a(param0, param1, false, (byte) 111);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.NF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.NF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void a(jj param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == this.field_u[this.field_F]) {
-                break L1;
-              } else {
-                L2: {
-                  this.field_u[this.field_F] = param0;
-                  if (param0 == null) {
-                    this.j(1);
-                    break L2;
-                  } else {
-                    param0.a((byte) -50);
-                    break L2;
-                  }
-                }
-                this.field_Yb = this.field_Yb & -2;
-                break L1;
-              }
+          if (param0 != this.field_u[this.field_F]) {
+            this.field_u[this.field_F] = param0;
+            if (param0 == null) {
+              this.j(1);
+            } else {
+              param0.a((byte) -50);
             }
-            L3: {
-              if (param1 == -9135) {
-                break L3;
-              } else {
-                this.field_mb = true;
-                break L3;
-              }
-            }
-            break L0;
+            this.field_Yb = this.field_Yb & -2;
           }
+          if (param1 != -9135) {
+            this.field_mb = true;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("bf.DG(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("bf.DG(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final boolean a(float param0, float param1, float param2, float param3, byte param4, float param5, float param6) {
         jaclib.memory.Buffer var10 = this.field_ac.a(true, (byte) -77);
-        if (!(var10 != null)) {
-            return false;
+        if (var10 == null) {
+          return false;
         }
         jaclib.memory.Stream var9 = this.a(-125, var10);
         if (!jaclib.memory.Stream.b()) {
-            var9.a(param1);
-            var9.a(param2);
-            var9.a(param3);
-            var9.a(param6);
-            var9.a(param0);
-            var9.a(param5);
+          var9.a(param1);
+          var9.a(param2);
+          var9.a(param3);
+          var9.a(param6);
+          var9.a(param0);
+          var9.a(param5);
         } else {
-            var9.b(param1);
-            var9.b(param2);
-            var9.b(param3);
-            var9.b(param6);
-            var9.b(param0);
-            var9.b(param5);
+          var9.b(param1);
+          var9.b(param2);
+          var9.b(param3);
+          var9.b(param6);
+          var9.b(param0);
+          var9.b(param5);
         }
         var9.a();
         if (param4 != 47) {
-            this.field_gc = 66;
+          this.field_gc = 66;
         }
         return this.field_ac.a((byte) -60);
     }
@@ -1612,17 +1258,17 @@ abstract class bf extends ha {
 
     final go O(int param0) {
         if (param0 != 29190) {
-            return (go) null;
+          return (go) null;
         }
         if (this.field_kb == null) {
-            return null;
+          return null;
         }
         return this.field_kb.a(0);
     }
 
     final int q(int param0) {
         if (param0 != 0) {
-            return -88;
+          return -88;
         }
         return this.field_E;
     }
@@ -1630,19 +1276,15 @@ abstract class bf extends ha {
     abstract tl a(boolean param0, byte param1);
 
     final pa a(vd param0, boolean param1) {
+        int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
         int[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
-        int[] stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
         int stackIn_17_2 = 0;
         pa stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         pa var3 = null;
@@ -1658,133 +1300,72 @@ abstract class bf extends ha {
         int[] var12 = null;
         var10 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (-1 == (param0.field_h ^ -1)) {
-                  break L2;
-                } else {
-                  if (-1 == (param0.field_c ^ -1)) {
-                    break L2;
-                  } else {
-                    L3: {
-                      var12 = new int[param0.field_c * param0.field_h];
-                      var11 = var12;
-                      var4 = var11;
-                      var5 = 0;
-                      var6 = 0;
-                      if (null == param0.field_e) {
-                        var7 = 0;
-                        L4: while (true) {
-                          if (var7 >= param0.field_c) {
-                            break L3;
-                          } else {
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var8 >= param0.field_h) {
-                                var7++;
-                                continue L4;
-                              } else {
-                                L6: {
-                                  incrementValue$0 = var5;
-                                  var5++;
-                                  var9 = param0.field_f[255 & param0.field_d[incrementValue$0]];
-                                  incrementValue$1 = var6;
-                                  var6++;
-                                  stackIn_16_0 = (int[]) (var4);
-
-                                  stackIn_16_1 = incrementValue$1;
-
-                                  if (-1 == (var9 ^ -1)) {
-                                    stackIn_17_0 = (int[]) ((Object) stackIn_16_0);
-                                    stackIn_17_1 = stackIn_16_1;
-                                    stackIn_17_2 = 0;
-                                    break L6;
-                                  } else {
-                                    stackIn_17_0 = (int[]) ((Object) stackIn_16_0);
-                                    stackIn_17_1 = stackIn_16_1;
-                                    stackIn_17_2 = vo.a(-16777216, var9);
-                                    break L6;
-                                  }
-                                }
-                                stackIn_17_0[stackIn_17_1] = stackIn_17_2;
-                                var8++;
-                                continue L5;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        var7 = 0;
-                        L7: while (true) {
-                          if (var7 >= param0.field_c) {
-                            break L3;
-                          } else {
-                            var8 = 0;
-                            L8: while (true) {
-                              if (param0.field_h <= var8) {
-                                var7++;
-                                continue L7;
-                              } else {
-                                incrementValue$2 = var6;
-                                var6++;
-                                var4[incrementValue$2] = vo.a(param0.field_e[var5] << -415068424, param0.field_f[pg.a((int) param0.field_d[var5], 255)]);
-                                var5++;
-                                var8++;
-                                continue L8;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    var3 = this.a(110, param0.field_c, var12, 0, param0.field_h, param0.field_h);
-                    break L1;
-                  }
+          if (param0.field_h != 0 &&
+            param0.field_c != 0) {
+            var12 = new int[param0.field_c * param0.field_h];
+            var11 = var12;
+            var4 = var11;
+            var5 = 0;
+            var6 = 0;
+            if (null != param0.field_e) {
+              for (var7 = 0; var7 < param0.field_c; var7++) {
+                for (var8 = 0; param0.field_h > var8; var8++) {
+                  incrementValue$2 = var6;
+                  var6++;
+                  var4[incrementValue$2] = vo.a(param0.field_e[var5] << 24, param0.field_f[pg.a((int) param0.field_d[var5], 255)]);
+                  var5++;
                 }
               }
-              var3 = this.a(105, 1, new int[]{0}, 0, 1, 1);
-              break L1;
+            } else {
+              for (var7 = 0; var7 < param0.field_c; var7++) {
+                for (var8 = 0; var8 < param0.field_h; var8++) {
+                  incrementValue$0 = var5;
+                  var5++;
+                  var9 = param0.field_f[255 & param0.field_d[incrementValue$0]];
+                  incrementValue$1 = var6;
+                  var6++;
+                  stackIn_16_0 = var4;
+                  stackIn_16_1 = incrementValue$1;
+                  if (var9 == 0) {
+                    stackIn_17_2 = 0;
+                  } else {
+                    stackIn_17_2 = vo.a(-16777216, var9);
+                  }
+                  stackIn_16_0[stackIn_16_1] = stackIn_17_2;
+                }
+              }
             }
-            var3.a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
-            stackIn_22_0 = (pa) (var3);
-            break L0;
+            var3 = this.a(110, param0.field_c, var12, 0, param0.field_h, param0.field_h);
+          } else {
+            var3 = this.a(105, 1, new int[]{0}, 0, 1, 1);
           }
+          var3.a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+          stackIn_22_0 = var3;
+          return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var3_ref = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var3_ref);
-
-            stackIn_25_1 = new StringBuilder().append("bf.HA(");
-
-            if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L9;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L9;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_25_0 = var3_ref;
+          stackIn_25_1 = new StringBuilder().append("bf.HA(");
+          if (param0 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_22_0;
     }
 
     final int n(byte param0) {
         if (param0 >= -81) {
-            return 6;
+          return 6;
         }
         return this.field_O;
     }
 
     final ec f(boolean param0) {
         if (param0) {
-            this.b();
+          this.b();
         }
         return this.field_A;
     }
@@ -1798,38 +1379,23 @@ abstract class bf extends ha {
         rp stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = new rp((bf) (this), param3, param4, param0, param1, param2);
-            break L0;
-          }
+          stackIn_1_0 = new rp(this, param3, param4, param0, param1, param2);
+          return (pa) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
-
-            stackIn_4_1 = new StringBuilder().append("bf.O(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("bf.O(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return (pa) ((Object) stackIn_1_0);
     }
 
     abstract qi a(int param0, boolean param1, boolean param2, int param3, int param4, int[] param5, int param6);
@@ -1839,24 +1405,13 @@ abstract class bf extends ha {
     abstract void Q(int param0);
 
     final void f(int param0, int param1) {
-        L0: {
-          L1: {
-            if (this.field_Mb != param0) {
-              break L1;
-            } else {
-              if (param1 != this.field_x) {
-                break L1;
-              } else {
-                break L0;
-              }
-            }
-          }
+        if (this.field_Mb != param0 ||
+          param1 != this.field_x) {
           this.field_Mb = param0;
           this.field_x = param1;
           this.k(-23858);
           this.E(-68);
           this.R(-26661);
-          break L0;
         }
     }
 
@@ -1866,93 +1421,47 @@ abstract class bf extends ha {
         int var4_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         StringBuilder stackIn_14_1 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            L1: {
-              var4_int = 0;
-              if (this.field_H[this.field_F] == param0) {
-                break L1;
-              } else {
-                this.field_H[this.field_F] = param0;
-                this.N(0);
-                var4_int = 1;
-                break L1;
-              }
-            }
-            L2: {
-              if (param1) {
-                break L2;
-              } else {
-                this.field_m = -92;
-                break L2;
-              }
-            }
-            L3: {
-              if (this.field_w[this.field_F] == param2) {
-                break L3;
-              } else {
-                this.field_w[this.field_F] = param2;
-                this.m((byte) -125);
-                var4_int = 1;
-                break L3;
-              }
-            }
-            L4: {
-              if (var4_int == 0) {
-                break L4;
-              } else {
-                this.field_Yb = this.field_Yb & -30;
-                break L4;
-              }
-            }
-            break L0;
+          var4_int = 0;
+          if (this.field_H[this.field_F] != param0) {
+            this.field_H[this.field_F] = param0;
+            this.N(0);
+            var4_int = 1;
           }
+          if (!param1) {
+            this.field_m = -92;
+          }
+          if (this.field_w[this.field_F] != param2) {
+            this.field_w[this.field_F] = param2;
+            this.m((byte) -125);
+            var4_int = 1;
+          }
+          if (var4_int != 0) {
+            this.field_Yb = this.field_Yb & -30;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4);
-
-            stackIn_11_1 = new StringBuilder().append("bf.GF(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L5;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L5;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_11_0 = var4;
+          stackIn_11_1 = new StringBuilder().append("bf.GF(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L6;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L6;
-            }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -1960,13 +1469,13 @@ abstract class bf extends ha {
         this.field_n[14] = this.field_mc;
         this.field_n[10] = this.field_T;
         if (param0 <= 7) {
-            this.field_f = (st[]) null;
+          this.field_f = (st[]) null;
         }
     }
 
     private final boolean i(int param0) {
         if (param0 != -7865) {
-            this.b(61, (byte) -27);
+          this.b(61, (byte) -27);
         }
         return this.field_Ob[3].e(3);
     }
@@ -1976,119 +1485,103 @@ abstract class bf extends ha {
         jaclib.memory.Buffer var3;
         int var5;
         jaclib.memory.Stream var4;
-        L0: {
-          var5 = AceOfSkies.field_G ? 1 : 0;
-          this.field_s = this.a(false, (byte) 111);
-          if (param0 == 26339) {
-            break L0;
-          } else {
-            this.field_Wb = 0.4179408848285675f;
-            break L0;
-          }
+        var5 = AceOfSkies.field_G ? 1 : 0;
+        this.field_s = this.a(false, (byte) 111);
+        if (param0 != 26339) {
+          this.field_Wb = 0.4179408848285675f;
         }
         this.field_s.a(28, param0 ^ -26259, 140);
         var2 = 0;
-        L1: while (true) {
-          L2: {
-            if (-5 >= (var2 ^ -1)) {
-              break L2;
-            } else {
-              var3 = this.field_s.a(true, (byte) -64);
-              if (var3 != null) {
-                L3: {
-                  var4 = this.a(84, var3);
-                  if (jaclib.memory.Stream.b()) {
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    break L3;
-                  } else {
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    break L3;
-                  }
-                }
-                var4.a();
-                if (this.field_s.a((byte) -60)) {
-                  break L2;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+        L2: while (true) {
+          if (var2 < 4) {
+            var3 = this.field_s.a(true, (byte) -64);
+            if (var3 != null) {
+              var4 = this.a(84, var3);
+              if (jaclib.memory.Stream.b()) {
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(1.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
+                var4.b(0.0f);
               } else {
-                var2++;
-                continue L1;
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(1.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+                var4.a(0.0f);
+              }
+              var4.a();
+              if (this.field_s.a((byte) -60)) {
+                break L2;
               }
             }
+            var2++;
+            continue;
           }
-          this.field_P = this.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_j, rl.field_j})}, -128);
-          return;
+          break;
         }
+        this.field_P = this.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_j, rl.field_j})}, -128);
+        return;
     }
 
     final int XA() {
@@ -2098,46 +1591,46 @@ abstract class bf extends ha {
     final void S(int param0) {
         qo var2 = null;
         if (param0 != -32) {
-            return;
+          return;
         }
-        if (!(this.field_bb == ps.field_d)) {
-            var2 = this.field_bb;
-            this.field_bb = ps.field_d;
-            if (var2.b((byte) -92)) {
-                this.e(true);
-            }
-            this.field_Yb = this.field_Yb & -32;
-            this.field_N = this.field_W;
+        if (this.field_bb != ps.field_d) {
+          var2 = this.field_bb;
+          this.field_bb = ps.field_d;
+          if (var2.b((byte) -92)) {
+            this.e(true);
+          }
+          this.field_Yb = this.field_Yb & -32;
+          this.field_N = this.field_W;
         }
     }
 
     final void d(boolean param0, int param1) {
         if (this.field_I != param0) {
-            this.field_I = param0 ? true : false;
-            this.b(false);
+          this.field_I = param0 ? true : false;
+          this.b(false);
         }
         if (param1 >= -82) {
-            this.a(-60, (byte) -4);
+          this.a(-60, (byte) -4);
         }
     }
 
     private final void L(int param0) {
         float var2_float = 0.0f;
-        if (!(this.field_bb != rh.field_e)) {
-            var2_float = this.o((byte) 42);
-            this.field_ec.b(var2_float, (byte) -127, 0.0f, var2_float);
+        if (this.field_bb == rh.field_e) {
+          var2_float = this.o((byte) 42);
+          this.field_ec.b(var2_float, (byte) -127, 0.0f, var2_float);
         }
         this.field_S = false;
         int var2 = 59 % ((-19 - param0) / 51);
         this.b((byte) 103);
         if (null != this.field_nb) {
-            this.field_nb.b((byte) -25);
+          this.field_nb.b((byte) -25);
         }
     }
 
     final jaclib.memory.heap.NativeHeapBuffer a(byte param0, int param1, boolean param2) {
         if (param0 != -77) {
-            this.h(86);
+          this.h(86);
         }
         return this.field_Qb.a(param1, param2);
     }
@@ -2148,12 +1641,12 @@ abstract class bf extends ha {
 
     final void b(boolean param0, int param1) {
         if (param1 != 256) {
-            this.field_M = -28;
+          this.field_M = -28;
         }
-        if (!(this.field_ob == param0)) {
-            this.field_ob = param0 ? true : false;
-            this.T(param1 + -256);
-            this.field_Yb = this.field_Yb & -8;
+        if (this.field_ob != param0) {
+          this.field_ob = param0 ? true : false;
+          this.T(param1 - 256);
+          this.field_Yb = this.field_Yb & -8;
         }
     }
 
@@ -2162,58 +1655,31 @@ abstract class bf extends ha {
         ig stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = new ig((bf) (this), param0, param1, param2);
-            break L0;
-          }
+          stackIn_1_0 = new ig(this, param0, param1, param2);
+          return (da) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4);
-
-            stackIn_4_1 = new StringBuilder().append("bf.E(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("bf.E(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
-        return (da) ((Object) stackIn_1_0);
     }
 
     abstract boolean a(la param0, int param1, hd param2);
@@ -2224,18 +1690,18 @@ abstract class bf extends ha {
 
     final void K(int[] param0) {
         try {
-            param0[1] = this.field_Nb;
-            param0[3] = this.field_V;
-            param0[0] = this.field_R;
-            param0[2] = this.field_gc;
+          param0[1] = this.field_Nb;
+          param0[3] = this.field_V;
+          param0[0] = this.field_R;
+          param0[2] = this.field_gc;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.K(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.K(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final ec d(int param0) {
         if (param0 != 12343) {
-            this.c(true, 123);
+          this.c(true, 123);
         }
         return this.field_L[this.field_F];
     }
@@ -2248,16 +1714,16 @@ abstract class bf extends ha {
 
     final void r(byte param0) {
         if (param0 <= 102) {
-            this.field_Ab = false;
+          this.field_Ab = false;
         }
-        if (-3 != (this.field_Yb ^ -1)) {
-            this.c(true);
-            this.a(false, false);
-            this.b(false, 256);
-            this.a((byte) -1, false);
-            this.a(-32, false);
-            this.a(false, false, -2, 3);
-            this.field_Yb = 2;
+        if (this.field_Yb != 2) {
+          this.c(true);
+          this.a(false, false);
+          this.b(false, 256);
+          this.a((byte) -1, false);
+          this.a(-32, false);
+          this.a(false, false, -2, 3);
+          this.field_Yb = 2;
         }
     }
 
@@ -2271,59 +1737,32 @@ abstract class bf extends ha {
         qi stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var7_int = -99 / ((-30 - param4) / 62);
-            stackIn_1_0 = this.a(param2, param5, param3, false, 0, param1, 0, param0);
-            break L0;
-          }
+          var7_int = -99 / ((-30 - param4) / 62);
+          stackIn_1_0 = this.a(param2, param5, param3, false, 0, param1, 0, param0);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
-
-            stackIn_4_1 = new StringBuilder().append("bf.ND(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("bf.ND(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
-            if (param3 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     abstract void w(int param0);
@@ -2332,20 +1771,20 @@ abstract class bf extends ha {
 
     private final void a(ia param0, byte param1, int param2) {
         try {
-            this.a(1, this.field_s, 0);
-            this.a(this.field_P, (byte) 75);
-            this.a(true, param0, param2, 0);
-            if (param1 <= 122) {
-                this.g(26);
-            }
+          this.a(1, this.field_s, 0);
+          this.a(this.field_P, (byte) 75);
+          this.a(true, param0, param2, 0);
+          if (param1 <= 122) {
+            this.g(26);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.KF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.KF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final int i(byte param0) {
         if (param0 >= -1) {
-            return -116;
+          return -116;
         }
         return this.field_qb + this.field_jc + this.field_j;
     }
@@ -2358,30 +1797,30 @@ abstract class bf extends ha {
         java.awt.Canvas var2 = null;
         int var3 = AceOfSkies.field_G ? 1 : 0;
         if (!this.field_qc) {
-            var1 = this.field_nc.d(268435455);
-            while (var1 != null) {
-                ((gi) ((Object) var1)).d(127);
-                var1 = this.field_nc.b((byte) 103);
-            }
-            var1_ref = this.field_gb.keys();
-            while (var1_ref.hasMoreElements()) {
-                var2 = (java.awt.Canvas) (var1_ref.nextElement());
-                this.a(0, var2, this.field_gb.get(var2));
-            }
-            da.a(63, true, false);
-            this.field_i.release();
-            this.field_qc = true;
+          var1 = this.field_nc.d(268435455);
+          while (var1 != null) {
+            ((gi) (var1)).d(127);
+            var1 = this.field_nc.b((byte) 103);
+          }
+          var1_ref = this.field_gb.keys();
+          while (var1_ref.hasMoreElements()) {
+            var2 = (java.awt.Canvas) (var1_ref.nextElement());
+            this.a(0, var2, this.field_gb.get(var2));
+          }
+          da.a(63, true, false);
+          this.field_i.release();
+          this.field_qc = true;
         }
     }
 
     final void a(byte param0, int param1, jb param2) {
         try {
-            this.a(false, param1, true, param2, false);
-            if (param0 <= 117) {
-                this.field_Vb = true;
-            }
+          this.a(false, param1, true, param2, false);
+          if (param0 <= 117) {
+            this.field_Vb = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.EE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.EE(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2392,8 +1831,8 @@ abstract class bf extends ha {
         int var4 = AceOfSkies.field_G ? 1 : 0;
         Enumeration var2 = this.field_gb.keys();
         while (var2.hasMoreElements()) {
-            var3 = (java.awt.Canvas) (var2.nextElement());
-            this.a(0, var3, this.field_gb.get(var3));
+          var3 = (java.awt.Canvas) (var2.nextElement());
+          this.a(0, var3, this.field_gb.get(var3));
         }
         this.field_s.a(4665);
         this.field_ac.a(4665);
@@ -2420,35 +1859,35 @@ abstract class bf extends ha {
 
     private final void R(int param0) {
         if (param0 != -26661) {
-            this.field_k = (po) null;
+          this.field_k = (po) null;
         }
         if (this.field_nb != null) {
-            this.field_nb.a(10);
+          this.field_nb.a(10);
         }
         this.h((byte) -121);
     }
 
     private final void z(int param0) {
         if (param0 != 27304) {
-            this.field_fb = 1.323685884475708f;
+          this.field_fb = 1.323685884475708f;
         }
     }
 
     final void c(boolean param0) {
         qo var2 = null;
         if (!param0) {
-            this.c();
+          this.c();
         }
         if (rh.field_e != this.field_bb) {
-            var2 = this.field_bb;
-            this.field_bb = rh.field_e;
-            if (!(!var2.b((byte) -92))) {
-                this.e(true);
-            }
-            this.g((byte) -122);
-            this.field_N = this.field_yb;
-            this.g(false);
-            this.field_Yb = this.field_Yb & -25;
+          var2 = this.field_bb;
+          this.field_bb = rh.field_e;
+          if (var2.b((byte) -92)) {
+            this.e(true);
+          }
+          this.g((byte) -122);
+          this.field_N = this.field_yb;
+          this.g(false);
+          this.field_Yb = this.field_Yb & -25;
         }
     }
 
@@ -2457,10 +1896,10 @@ abstract class bf extends ha {
     private final void g(boolean param0) {
         this.C(-79);
         if (null != this.field_nb) {
-            this.field_nb.c(404277666);
+          this.field_nb.c(404277666);
         }
         if (param0) {
-            this.field_ec = (ec) null;
+          this.field_ec = (ec) null;
         }
     }
 
@@ -2469,9 +1908,9 @@ abstract class bf extends ha {
         this.field_V = this.field_jb;
         this.field_R = param0;
         this.field_Nb = 0;
-        if (!(!this.field_Cb)) {
-            this.field_Cb = false;
-            this.r(0);
+        if (this.field_Cb) {
+          this.field_Cb = false;
+          this.r(0);
         }
         this.K(-7);
     }
@@ -2482,92 +1921,65 @@ abstract class bf extends ha {
         jaclib.memory.Stream stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            this.field_l.a(param1);
-            var3_int = 107 / ((param0 - -48) / 50);
-            stackIn_1_0 = this.field_l;
-            break L0;
-          }
+          this.field_l.a(param1);
+          var3_int = 107 / ((param0 + 48) / 50);
+          stackIn_1_0 = this.field_l;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("bf.RF(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("bf.RF(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7;
         float var8;
         float var9;
-        L0: {
-          L1: {
-            var7 = (float)(-param0) + (float)param2;
-            var8 = (float)param3 - (float)param1;
-            if (var7 != 0.0f) {
-              break L1;
-            } else {
-              if (0.0f == var8) {
-                var7 = 1.0f;
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
+        var7 = (float)(-param0) + (float)param2;
+        var8 = (float)param3 - (float)param1;
+        if (var7 == 0.0f &&
+          0.0f == var8) {
+          var7 = 1.0f;
+        } else {
           var9 = (float)(1.0 / Math.sqrt((double)(var8 * var8 + var7 * var7)));
           var7 = var7 * var9;
           var8 = var8 * var9;
-          break L0;
         }
-        if (this.a(var8 + (float)param3, (float)param0, (float)param1, 0.0f, (byte) 47, 0.0f, var7 + (float)param2)) {
-          this.F(84);
-          this.a((byte) -74, param4);
-          this.a((byte) 124, 0, bs.field_a);
-          this.a(bs.field_a, 0, 0);
-          this.e(true, param5);
-          this.a((byte) 120);
-          this.b((byte) -117, false);
-          this.D(0);
-          this.b((byte) -119, true);
-          this.a(dl.field_p, 0, 0);
-          this.a((byte) 123, 0, dl.field_p);
-          return;
-        } else {
+        if (!this.a(var8 + (float)param3, (float)param0, (float)param1, 0.0f, (byte) 47, 0.0f, var7 + (float)param2)) {
           return;
         }
+        this.F(84);
+        this.a((byte) -74, param4);
+        this.a((byte) 124, 0, bs.field_a);
+        this.a(bs.field_a, 0, 0);
+        this.e(true, param5);
+        this.a((byte) 120);
+        this.b((byte) -117, false);
+        this.D(0);
+        this.b((byte) -119, true);
+        this.a(dl.field_p, 0, 0);
+        this.a((byte) 123, 0, dl.field_p);
     }
 
     abstract void u(byte param0);
 
     final void a(za param0) {
         try {
-            this.field_Qb = ((gi) ((Object) param0)).field_h;
-            this.field_Q = this.field_Qb.a(32768, false);
+          this.field_Qb = ((gi) (param0)).field_h;
+          this.field_Q = this.field_Qb.a(32768, false);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.NA(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.NA(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -2579,12 +1991,12 @@ abstract class bf extends ha {
 
     final void f(int param0) {
         if (param0 != -21041) {
-            this.a((byte) 82);
+          this.a((byte) 82);
         }
         if (mq.field_g != this.field_f[this.field_F]) {
-            this.field_f[this.field_F] = mq.field_g;
-            this.field_L[this.field_F].a((byte) -59);
-            this.B(15);
+          this.field_f[this.field_F] = mq.field_g;
+          this.field_L[this.field_F].a((byte) -59);
+          this.B(15);
         }
     }
 
@@ -2597,100 +2009,80 @@ abstract class bf extends ha {
         float var7;
         float var8;
         float[] var9;
-        L0: {
-          if (param0 >= 25) {
-            break L0;
-          } else {
-            this.KA(-57, 60, -65, 127);
-            break L0;
-          }
+        if (param0 < 25) {
+          this.KA(-57, 60, -65, 127);
         }
-        L1: {
-          if (!this.field_hb) {
-            L2: {
-              L3: {
-                var9 = this.field_U;
-                var2 = var9;
-                var3 = (float)this.field_Mb;
-                var4 = (float)this.field_x;
-                var5 = (float)(-this.field_lb) * this.field_db / (float)this.field_M;
-                var6 = (float)(-this.field_Ub) * this.field_db / (float)this.field_oc;
-                var7 = (float)(this.field_Z + -this.field_Ub) * this.field_db / (float)this.field_oc;
-                var8 = (float)(-this.field_lb + this.field_jb) * this.field_db / (float)this.field_M;
-                if (var7 == var6) {
-                  break L3;
-                } else {
-                  if (var8 == var5) {
-                    break L3;
-                  } else {
-                    var9[2] = 0.0f;
-                    var9[15] = 1.0f;
-                    var9[9] = 0.0f;
-                    var9[13] = (var8 + var5) / (-var5 + var8);
-                    var9[0] = 2.0f / (-var6 + var7);
-                    var9[1] = 0.0f;
-                    var9[11] = 0.0f;
-                    var9[7] = 0.0f;
-                    var9[3] = 0.0f;
-                    var9[5] = 2.0f / (-var5 + var8);
-                    var9[6] = 0.0f;
-                    var9[10] = 1.0f / (-var4 + var3);
-                    var9[8] = 0.0f;
-                    var9[14] = var3 / (-var4 + var3);
-                    var9[4] = 0.0f;
-                    var9[12] = (var6 + var7) / (var6 - var7);
-                    break L2;
-                  }
-                }
-              }
-              var2[4] = 0.0f;
-              var2[9] = 0.0f;
-              var2[1] = 0.0f;
-              var2[14] = 0.0f;
-              var2[13] = 0.0f;
-              var2[3] = 0.0f;
-              var2[2] = 0.0f;
-              var2[8] = 0.0f;
-              var2[15] = 1.0f;
-              var2[0] = 1.0f;
-              var2[10] = 1.0f;
-              var2[11] = 0.0f;
-              var2[5] = 1.0f;
-              var2[7] = 0.0f;
-              var2[12] = 0.0f;
-              var2[6] = 0.0f;
-              break L2;
-            }
-            this.z(27304);
-            this.field_hb = true;
-            break L1;
+        if (!this.field_hb) {
+          var9 = this.field_U;
+          var2 = var9;
+          var3 = (float)this.field_Mb;
+          var4 = (float)this.field_x;
+          var5 = (float)(-this.field_lb) * this.field_db / (float)this.field_M;
+          var6 = (float)(-this.field_Ub) * this.field_db / (float)this.field_oc;
+          var7 = (float)(this.field_Z - this.field_Ub) * this.field_db / (float)this.field_oc;
+          var8 = (float)(-this.field_lb + this.field_jb) * this.field_db / (float)this.field_M;
+          if (var7 != var6 &&
+            var8 != var5) {
+            var9[2] = 0.0f;
+            var9[15] = 1.0f;
+            var9[9] = 0.0f;
+            var9[13] = (var8 + var5) / (-var5 + var8);
+            var9[0] = 2.0f / (-var6 + var7);
+            var9[1] = 0.0f;
+            var9[11] = 0.0f;
+            var9[7] = 0.0f;
+            var9[3] = 0.0f;
+            var9[5] = 2.0f / (-var5 + var8);
+            var9[6] = 0.0f;
+            var9[10] = 1.0f / (-var4 + var3);
+            var9[8] = 0.0f;
+            var9[14] = var3 / (-var4 + var3);
+            var9[4] = 0.0f;
+            var9[12] = (var6 + var7) / (var6 - var7);
           } else {
-            break L1;
+            var2[4] = 0.0f;
+            var2[9] = 0.0f;
+            var2[1] = 0.0f;
+            var2[14] = 0.0f;
+            var2[13] = 0.0f;
+            var2[3] = 0.0f;
+            var2[2] = 0.0f;
+            var2[8] = 0.0f;
+            var2[15] = 1.0f;
+            var2[0] = 1.0f;
+            var2[10] = 1.0f;
+            var2[11] = 0.0f;
+            var2[5] = 1.0f;
+            var2[7] = 0.0f;
+            var2[12] = 0.0f;
+            var2[6] = 0.0f;
           }
+          this.z(27304);
+          this.field_hb = true;
         }
     }
 
     void b(int param0) {
-        if (!(this.field_z == null)) {
-            this.field_z.a((byte) 126);
+        if (this.field_z != null) {
+          this.field_z.a((byte) 126);
         }
         this.field_r = param0 & 2147483647;
     }
 
     private final void F(int param0) {
-        if (!(this.field_Yb == 1)) {
-            this.c(true);
-            this.a(false, false);
-            this.b(false, 256);
-            this.a((byte) -1, false);
-            this.a(-32, false);
-            this.a(false, false, -2, 3);
-            this.b(1, false);
-            this.a(this.field_Kb, -9135);
-            this.field_Yb = 1;
+        if (this.field_Yb != 1) {
+          this.c(true);
+          this.a(false, false);
+          this.b(false, 256);
+          this.a((byte) -1, false);
+          this.a(-32, false);
+          this.a(false, false, -2, 3);
+          this.b(1, false);
+          this.a(this.field_Kb, -9135);
+          this.field_Yb = 1;
         }
         if (param0 <= 40) {
-            this.f(23);
+          this.f(23);
         }
     }
 
@@ -2699,17 +2091,20 @@ abstract class bf extends ha {
     abstract void I(int param0);
 
     final void KA(int param0, int param1, int param2, int param3) {
-        if (param0 <= 0 && param2 >= -1 + this.field_Z && 0 >= param1 && this.field_jb - 1 <= param3) {
-            this.U(0);
-            return;
+        if (param0 <= 0 &&
+          param2 >= -1 + this.field_Z &&
+          0 >= param1 &&
+          this.field_jb - 1 <= param3) {
+          this.U(0);
+          return;
         }
         this.field_Nb = param1 < 0 ? 0 : param1;
-        this.field_R = (param0 ^ -1) <= -1 ? param0 : 0;
+        this.field_R = param0 >= 0 ? param0 : 0;
         this.field_V = this.field_Z >= param3 ? param3 : 0;
         this.field_gc = param2 <= this.field_Z ? param2 : 0;
-        if (!(this.field_Cb)) {
-            this.field_Cb = true;
-            this.r(0);
+        if (!this.field_Cb) {
+          this.field_Cb = true;
+          this.r(0);
         }
         this.I(97);
         this.K(-7);
@@ -2717,18 +2112,18 @@ abstract class bf extends ha {
 
     void G(int param0) {
         this.n(0);
-        int var2 = 23 % ((param0 - -65) / 51);
+        int var2 = 23 % ((param0 + 65) / 51);
     }
 
     abstract qi a(la param0, int param1, int param2, int param3, hd param4);
 
     final void a(st param0, byte param1) {
         try {
-            this.field_f[this.field_F] = param0;
-            this.B(15);
-            int var3_int = 19 / ((-7 - param1) / 55);
+          this.field_f[this.field_F] = param0;
+          this.B(15);
+          int var3_int = 19 / ((-7 - param1) / 55);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "bf.LD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "bf.LD(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -2740,12 +2135,12 @@ abstract class bf extends ha {
 
     private final void E(int param0) {
         if (param0 != -68) {
-            this.field_hb = false;
+          this.field_hb = false;
         }
         this.field_hb = false;
         this.d((byte) 82);
         if (this.field_bb == nj.field_f) {
-            this.g(false);
+          this.g(false);
         }
     }
 
@@ -2755,11 +2150,11 @@ abstract class bf extends ha {
 
     private final void B(int param0) {
         this.p(-118);
-        if (!(null == this.field_nb)) {
-            this.field_nb.d(18580);
+        if (null != this.field_nb) {
+          this.field_nb.d(18580);
         }
         if (param0 != 15) {
-            this.z(1);
+          this.z(1);
         }
     }
 

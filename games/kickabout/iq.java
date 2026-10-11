@@ -10,52 +10,30 @@ abstract class iq {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-            iq.a((byte) -59, 98, 114, 64, -128);
+          iq.$cfr$intArgs$a$8e2a9e3a0d15(-59, 98, 114, 64, -128);
         }
     }
 
     final int a(byte param0) {
+        int var4 = 0;
         int var2;
         qj[] var3;
-        int var4;
         qj var5;
         int var7;
         int var6;
-        L0: {
-          var7 = Kickabout.field_G;
-          if (param0 == -25) {
-            break L0;
-          } else {
-            this.field_c = (qj[]) null;
-            break L0;
-          }
+        var7 = Kickabout.field_G;
+        if (param0 != -25) {
+          this.field_c = (qj[]) null;
         }
-        L1: {
-          var2 = -1;
-          if (null == this.field_c) {
-            break L1;
-          } else {
-            var3 = this.field_c;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var3.length) {
-                break L1;
-              } else {
-                var5 = var3[var4];
-                if (var5 != null) {
-                  var6 = var5.a((byte) -114);
-                  if (var2 < var6) {
-                    var2 = var6;
-                    var4++;
-                    continue L2;
-                  } else {
-                    var4++;
-                    continue L2;
-                  }
-                } else {
-                  var4++;
-                  continue L2;
-                }
+        var2 = -1;
+        if (null != this.field_c) {
+          var3 = this.field_c;
+          for (var4 = 0; var4 < var3.length; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.a((byte) -114);
+              if (var2 < var6) {
+                var2 = var6;
               }
             }
           }
@@ -65,29 +43,14 @@ abstract class iq {
 
     final int a(int param0) {
         int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == -1761) {
-            break L0;
-          } else {
-            field_b = (String) null;
-            break L0;
-          }
+        if (param0 != -1761) {
+          field_b = (String) null;
         }
-        L1: {
-          L2: {
-            if (null == this.field_c) {
-              break L2;
-            } else {
-              if (-1 <= (this.field_c.length ^ -1)) {
-                break L2;
-              } else {
-                stackIn_6_0 = this.field_c[this.field_c.length - 1].field_d + -this.field_c[0].field_g;
-                break L1;
-              }
-            }
-          }
+        if (null != this.field_c &&
+          this.field_c.length > 0) {
+          stackIn_6_0 = this.field_c[this.field_c.length - 1].field_d - this.field_c[0].field_g;
+        } else {
           stackIn_6_0 = 0;
-          break L1;
         }
         return stackIn_6_0;
     }
@@ -95,116 +58,71 @@ abstract class iq {
     final static int a(byte param0, int param1, int param2, int param3, int param4) {
         ut var5 = tb.field_q[param3 % 10];
         if (param0 >= -66) {
-            return -2;
+          return -2;
         }
         param2 = param2 - var5.field_q;
         var5.c(-var5.field_s + param2, param1, param4);
         param2 -= 3;
-        if (!(param3 < 10)) {
-            param2 = iq.a((byte) -109, param1, param2, param3 / 10, param4);
+        if (param3 >= 10) {
+          param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
         }
         return param2;
     }
 
     final int a(int param0, int param1, int param2, String param3) {
+        int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_21_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
+        String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         var10 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              var5_int = 0;
-              if (param1 == -61) {
-                break L1;
+          var5_int = 0;
+          if (param1 != -61) {
+            this.a(75, -37, -61);
+          }
+          var6 = 0;
+          var7 = param3.length();
+          for (var8 = 0; var8 < var7; var8++) {
+            var9 = param3.charAt(var8);
+            if (var9 == 60) {
+              var6 = 1;
+            } else {
+              if (var9 == 62) {
+                var6 = 0;
               } else {
-                this.a(75, -37, -61);
-                break L1;
-              }
-            }
-            var6 = 0;
-            var7 = param3.length();
-            var8 = 0;
-            L2: while (true) {
-              if (var8 >= var7) {
-                if (-1 <= (var5_int ^ -1)) {
-                  stackIn_21_0 = 0;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_19_0 = (-param2 + param0 << -630965016) / var5_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+                if (var6 == 0 &&
+                  var9 == 32) {
+                  var5_int++;
                 }
-              } else {
-                L3: {
-                  var9 = param3.charAt(var8);
-                  if ((var9 ^ -1) == -61) {
-                    var6 = 1;
-                    break L3;
-                  } else {
-                    if (var9 == 62) {
-                      var6 = 0;
-                      break L3;
-                    } else {
-                      if (var6 == 0) {
-                        if (var9 == 32) {
-                          var5_int++;
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        var8++;
-                        continue L2;
-                      }
-                    }
-                  }
-                }
-                var8++;
-                continue L2;
               }
             }
           }
+          if (var5_int <= 0) {
+            stackIn_22_0 = 0;
+            return stackIn_22_0;
+          }
+          stackIn_20_0 = (-param2 + param0 << 8) / var5_int;
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var5);
-
-            stackIn_24_1 = new StringBuilder().append("iq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L4;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L4;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_25_0 = var5;
+          stackIn_25_1 = new StringBuilder().append("iq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_19_0;
-        } else {
-          return stackIn_21_0;
+          throw nb.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -213,11 +131,11 @@ abstract class iq {
         qj var4 = null;
         int var5 = Kickabout.field_G;
         for (var3 = param0; this.field_c.length > var3; var3++) {
-            var4 = this.field_c[var3];
-            if (param1 < var4.field_b.length) {
-                return var3;
-            }
-            param1 = param1 - (var4.field_b.length + -1);
+          var4 = this.field_c[var3];
+          if (param1 < var4.field_b.length) {
+            return var3;
+          }
+          param1 = param1 - (var4.field_b.length - 1);
         }
         return this.field_c.length;
     }
@@ -229,79 +147,48 @@ abstract class iq {
         qj[] var7 = this.field_c;
         qj[] var3 = var7;
         for (var4 = param0; var4 < var7.length; var4++) {
-            var5 = var7[var4];
-            if (!(var5.field_b.length <= param1)) {
-                return var5.field_b[param1];
-            }
-            param1 = param1 - (var5.field_b.length - 1);
+          var5 = var7[var4];
+          if (!(var5.field_b.length <= param1)) {
+            return var5.field_b[param1];
+          }
+          param1 = param1 - (var5.field_b.length - 1);
         }
         return 0;
     }
 
     final int a(int param0, int param1, int param2) {
+        int var5 = 0;
         int var4;
-        int var5;
         qj var6;
         int var7;
         int var8;
-        L0: {
-          var8 = Kickabout.field_G;
-          if (this.field_c == null) {
-            break L0;
-          } else {
-            if (this.field_c.length == 0) {
-              break L0;
-            } else {
-              if (this.field_c[0].field_g > param0) {
-                break L0;
-              } else {
-                if (this.field_c[-1 + this.field_c.length].field_d < param0) {
-                  return -1;
-                } else {
-                  if (-2 != (this.field_c.length ^ -1)) {
-                    L1: {
-                      var4 = 0;
-                      if (param2 == 29889) {
-                        break L1;
-                      } else {
-                        this.b(19, -114);
-                        break L1;
-                      }
-                    }
-                    var5 = 0;
-                    L2: while (true) {
-                      if (this.field_c.length <= var5) {
-                        return -1;
-                      } else {
-                        L3: {
-                          var6 = this.field_c[var5];
-                          if (var6.field_g > param0) {
-                            break L3;
-                          } else {
-                            if (var6.field_d >= param0) {
-                              var7 = var6.a((byte) 101, param1);
-                              if (0 == (var7 ^ -1)) {
-                                return -1;
-                              } else {
-                                return var4 + var7;
-                              }
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        var4 = var4 + (var6.field_b.length + -1);
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    return this.field_c[0].a((byte) 101, param1);
-                  }
-                }
-              }
-            }
+        var8 = Kickabout.field_G;
+        if (this.field_c != null &&
+          this.field_c.length != 0 &&
+          this.field_c[0].field_g <= param0) {
+          if (this.field_c[-1 + this.field_c.length].field_d < param0) {
+            return -1;
           }
+          if (this.field_c.length == 1) {
+            return this.field_c[0].a((byte) 101, param1);
+          }
+          var4 = 0;
+          if (param2 != 29889) {
+            this.b(19, -114);
+          }
+          for (var5 = 0; this.field_c.length > var5; var5++) {
+            var6 = this.field_c[var5];
+            if (var6.field_g <= param0 &&
+              var6.field_d >= param0) {
+              var7 = var6.a((byte) 101, param1);
+              if (var7 == -1) {
+                return -1;
+              }
+              return var4 + var7;
+            }
+            var4 = var4 + (var6.field_b.length - 1);
+          }
+          return -1;
         }
         return -1;
     }
@@ -309,5 +196,20 @@ abstract class iq {
     static {
         field_a = new String[]{"How To Move", "Using Your Feet", "The Players", "Player Stats", "Trinkets", "What You Need To Know"};
         field_b = "Choose colours and a stylish design for your team's clothing.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static int $cfr$intArgs$a$8e2a9e3a0d15(int param0, int param1, int param2, int param3, int param4) {
+        ut var5 = tb.field_q[param3 % 10];
+        if (param0 >= -66) {
+          return -2;
+        }
+        param2 = param2 - var5.field_q;
+        var5.c(-var5.field_s + param2, param1, param4);
+        param2 -= 3;
+        if (param3 >= 10) {
+          param2 = iq.$cfr$intArgs$a$8e2a9e3a0d15(-109, param1, param2, param3 / 10, param4);
+        }
+        return param2;
     }
 }

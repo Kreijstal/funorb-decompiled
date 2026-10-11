@@ -10,37 +10,29 @@ abstract class PeerReference extends java.lang.ref.WeakReference {
 
     PeerReference(jaclib.peer.Peer param0, jaclib.peer.sha param1) {
         super(param0, param1.a);
-        param1.a(63, (jaclib.peer.PeerReference) (this));
+        param1.a(63, this);
     }
 
     final long a(byte param0) {
-        long var2;
-        if (param0 != 34) {
-          L0: {
-            this.a = (jaclib.peer.PeerReference) null;
-            if ((this.peer ^ -1L) != -1L) {
-              var2 = this.releasePeer(this.peer);
-              this.peer = 0L;
-              break L0;
-            } else {
-              var2 = 0L;
-              break L0;
-            }
-          }
-          return var2;
-        } else {
-          L1: {
-            if ((this.peer ^ -1L) != -1L) {
-              var2 = this.releasePeer(this.peer);
-              this.peer = 0L;
-              break L1;
-            } else {
-              var2 = 0L;
-              break L1;
-            }
+        long var2 = 0L;
+        long var2Lifetime1;
+        if (param0 == 34) {
+          if (this.peer == 0L) {
+            var2 = 0L;
+          } else {
+            var2 = this.releasePeer(this.peer);
+            this.peer = 0L;
           }
           return var2;
         }
+        this.a = (jaclib.peer.PeerReference) null;
+        if (this.peer == 0L) {
+          var2Lifetime1 = 0L;
+        } else {
+          var2Lifetime1 = this.releasePeer(this.peer);
+          this.peer = 0L;
+        }
+        return var2Lifetime1;
     }
 
     protected abstract long releasePeer(long param0);

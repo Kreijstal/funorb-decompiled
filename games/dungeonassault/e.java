@@ -23,47 +23,45 @@ final class e extends en {
         field_j = null;
         field_g = null;
         if (param0 != 29) {
-            e.c((byte) -101);
+          e.c((byte) -101);
         }
     }
 
     final cn b(byte param0) {
-        int var2;
-        int var3;
-        int var4;
-        cn var5;
-        if (this.field_m == null) {
-          return null;
-        } else {
+        int var2 = 0;
+        int var3 = 0;
+        cn var5 = null;
+        if (this.field_m != null) {
           var2 = db.field_v.b(this.field_m);
-          var3 = db.field_v.field_H - -db.field_v.field_E;
-          var4 = 87 % ((param0 - -58) / 35);
+          var3 = db.field_v.field_H + db.field_v.field_E;
+          int var4 = 87 % ((param0 + 58) / 35);
           var5 = new cn(var2, var3);
           jh.a(var5);
           db.field_v.b(this.field_m, 0, db.field_v.field_H, 16777215, -1);
           jh.b();
           return var5;
         }
+        return null;
     }
 
     e(String param0, String param1, String param2) {
         try {
-            this.field_h = param1;
-            this.field_m = param2;
-            this.field_f = param0;
+          this.field_h = param1;
+          this.field_m = param2;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, sa param1) {
         try {
-            if (param0 != 0) {
-                field_e = -78;
-            }
-            param1.a(false, ck.field_H.a(this.field_f, (byte) -48), (byte) 91, ck.field_H.a(this.field_h, (byte) -48), 16777215);
+          if (param0 != 0) {
+            field_e = -78;
+          }
+          param1.a(false, ck.field_H.a(this.field_f, (byte) -48), (byte) 91, ck.field_H.a(this.field_h, (byte) -48), 16777215);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

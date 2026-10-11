@@ -12,85 +12,57 @@ final class jf {
     static String field_a;
 
     final static void a(int param0, int param1) {
-        nb.field_I = (param1 & 63) >> 844148836;
-        if (2 >= nb.field_I) {
-          dk.field_p = (12 & param1) >> -1631279870;
+        nb.field_I = (param1 & 63) >> 4;
+        if (2 < nb.field_I) {
+          nb.field_I = 2;
+          dk.field_p = (12 & param1) >> 2;
           eg.field_h = param1 & 3;
           if (param0 == -1631279870) {
-            L0: {
-              if (dk.field_p > 2) {
-                dk.field_p = 2;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (2 < eg.field_h) {
-              eg.field_h = 2;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              jf.a(-111, -22);
-              if (dk.field_p > 2) {
-                dk.field_p = 2;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (2 < eg.field_h) {
-              eg.field_h = 2;
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          nb.field_I = 2;
-          dk.field_p = (12 & param1) >> -1631279870;
-          eg.field_h = param1 & 3;
-          if (param0 != -1631279870) {
-            L2: {
-              jf.a(-111, -22);
-              if (dk.field_p > 2) {
-                dk.field_p = 2;
-                break L2;
-              } else {
-                break L2;
-              }
+            if (!(dk.field_p <= 2)) {
+              dk.field_p = 2;
             }
             if (2 >= eg.field_h) {
               return;
-            } else {
-              eg.field_h = 2;
-              return;
             }
-          } else {
-            L3: {
-              if (dk.field_p > 2) {
-                dk.field_p = 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (2 < eg.field_h) {
-              eg.field_h = 2;
-              return;
-            } else {
-              return;
-            }
+            eg.field_h = 2;
+            return;
           }
+          jf.a(-111, -22);
+          if (!(dk.field_p <= 2)) {
+            dk.field_p = 2;
+          }
+          if (2 < eg.field_h) {
+            eg.field_h = 2;
+            return;
+          }
+          return;
         }
+        dk.field_p = (12 & param1) >> 2;
+        eg.field_h = param1 & 3;
+        if (param0 != -1631279870) {
+          jf.a(-111, -22);
+          if (!(dk.field_p <= 2)) {
+            dk.field_p = 2;
+          }
+          if (2 >= eg.field_h) {
+            return;
+          }
+          eg.field_h = 2;
+          return;
+        }
+        if (!(dk.field_p <= 2)) {
+          dk.field_p = 2;
+        }
+        if (2 >= eg.field_h) {
+          return;
+        }
+        eg.field_h = 2;
     }
 
     public static void a(byte param0) {
         field_f = null;
         if (param0 >= -32) {
-            return;
+          return;
         }
         field_h = null;
         field_e = null;
@@ -103,14 +75,12 @@ final class jf {
     }
 
     final static void a(String param0, byte param1) {
-        if (param1 != 19) {
-          field_d = 100;
-          System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 + -139));
-          return;
-        } else {
-          System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 + -139));
+        if (param1 == 19) {
+          System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 - 139));
           return;
         }
+        field_d = 100;
+        System.out.println("Error: " + re.a(param0, "%0a", "\n", param1 - 139));
     }
 
     static {

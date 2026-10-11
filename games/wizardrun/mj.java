@@ -10,7 +10,7 @@ final class mj {
     static int[] field_a;
 
     final static int a(byte param0) {
-        int var1 = 36 / ((param0 - -19) / 45);
+        int var1 = 36 / ((param0 + 19) / 45);
         return oc.field_a;
     }
 
@@ -21,65 +21,42 @@ final class mj {
         ea stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == -1) {
-              var3 = new ea();
-              ((ib) ((Object) var3)).field_a = param0;
-              ((ib) ((Object) var3)).field_c = param1;
-              stackIn_4_0 = (ea) (var3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (ib) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 != -1) {
+            stackIn_2_0 = (ib) null;
+            return stackIn_2_0;
           }
+          var3 = new ea();
+          ((ib) ((Object) var3)).field_a = param0;
+          ((ib) ((Object) var3)).field_c = param1;
+          stackIn_4_0 = var3;
+          return (ib) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3_ref);
-
-            stackIn_7_1 = new StringBuilder().append("mj.D(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("mj.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return (ib) ((Object) stackIn_4_0);
+          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-            param0.removeKeyListener(ff.field_H);
-            if (param1 <= 91) {
-                field_c = true;
-            }
-            param0.removeFocusListener(ff.field_H);
-            wk.field_b = -1;
+          param0.removeKeyListener(ff.field_H);
+          if (param1 <= 91) {
+            field_c = true;
+          }
+          param0.removeFocusListener(ff.field_H);
+          wk.field_b = -1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -112,20 +89,52 @@ final class mj {
         String var34;
         String var35;
         String var36;
-        L0: {
-          var13 = wizardrun.field_H;
-          if (!(param0 instanceof eb)) {
-            var2 = "";
-            var11 = var2;
-            var2 = var11;
-            var11 = var2;
-            break L0;
-          } else {
-            var15 = (eb) ((Object) param0);
-            param0 = var15.field_c;
-            var2 = var15.field_b + " | ";
-            break L0;
-          }
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        String var2Lifetime1;
+        String var2Lifetime2;
+        String var2Lifetime3;
+        String var2Lifetime4;
+        String var2Lifetime5;
+        String var11Lifetime1;
+        String var11Lifetime2;
+        String var11Lifetime3;
+        String var11Lifetime4;
+        String var11Lifetime5;
+        String var11Lifetime6;
+        String var11Lifetime7;
+        String var11Lifetime8;
+        String var11Lifetime9;
+        String var2Lifetime1Lifetime1;
+        String var2Lifetime1Lifetime2;
+        String var2Lifetime5Lifetime1;
+        String var2Lifetime5Lifetime2;
+        String var2Lifetime5Lifetime3;
+        String var2Lifetime5Lifetime4;
+        String var2Lifetime5Lifetime5;
+        String var2Lifetime5Lifetime6;
+        String var2Lifetime5Lifetime7;
+        String var2Lifetime5Lifetime8;
+        String var2Lifetime5Lifetime9;
+        String var2Lifetime5Lifetime10;
+        String var11Lifetime1Lifetime1;
+        String var11Lifetime1Lifetime2;
+        String var11Lifetime1Lifetime3;
+        String var11Lifetime1Lifetime4;
+        String var11Lifetime8Lifetime1;
+        String var11Lifetime8Lifetime2;
+        String var11Lifetime8Lifetime3;
+        var13 = wizardrun.field_H;
+        if (!(param0 instanceof eb)) {
+          var2 = "";
+          var11 = var2;
+          var2 = var11;
+          var11Lifetime9 = var2;
+        } else {
+          var15 = (eb) ((Object) param0);
+          param0 = var15.field_c;
+          var2 = var15.field_b + " | ";
         }
         var16 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var16));
@@ -133,151 +142,122 @@ final class mj {
         var4.close();
         if (param1 <= -80) {
           var21 = var16.toString();
-          var11 = var21;
-          var2 = var11;
-          var11 = var21;
+          var11Lifetime1 = var21;
+          var2Lifetime1 = var11Lifetime1;
+          var11Lifetime1Lifetime1 = var21;
           var22 = new BufferedReader((Reader) ((Object) new StringReader(var21)));
           var28 = var22.readLine();
-          var11 = var28;
-          var2 = var11;
-          var11 = var28;
-          L1: while (true) {
+          var11Lifetime1Lifetime2 = var28;
+          var2Lifetime1Lifetime1 = var11Lifetime1Lifetime2;
+          var11Lifetime1Lifetime3 = var28;
+          while (true) {
             var23 = var22.readLine();
-            var11 = var23;
-            var2 = var11;
-            var11 = var23;
+            var11Lifetime1Lifetime4 = var23;
+            var2Lifetime1Lifetime2 = var11Lifetime1Lifetime4;
+            var11Lifetime1Lifetime4 = var23;
             if (var23 == null) {
-              var2 = var2 + "| " + var28;
-              var11 = var2;
-              var2 = var11;
-              var11 = var2;
-              return var2;
+              var2Lifetime1Lifetime2 = var2Lifetime1Lifetime2 + "| " + var28;
+              var11Lifetime1Lifetime4 = var2Lifetime1Lifetime2;
+              var2Lifetime1Lifetime2 = var11Lifetime1Lifetime4;
+              var11Lifetime1Lifetime4 = var2Lifetime1Lifetime2;
+              return var2Lifetime1Lifetime2;
+            }
+            var9 = var23.indexOf('(');
+            var10 = var23.indexOf(')', var9 + 1);
+            if (-1 != var9) {
+              var11Lifetime1Lifetime4 = var23.substring(0, var9);
+              var2Lifetime1Lifetime2 = var11Lifetime1Lifetime4;
+              var2Lifetime1Lifetime2 = var11Lifetime1Lifetime4;
             } else {
-              L2: {
-                var9 = var23.indexOf('(');
-                var10 = var23.indexOf(')', var9 + 1);
-                if (-1 != var9) {
-                  var11 = var23.substring(0, var9);
-                  var2 = var11;
-                  var2 = var11;
-                  break L2;
-                } else {
-                  var11 = var23;
-                  break L2;
-                }
+              var11Lifetime1Lifetime4 = var23;
+            }
+            var24 = var11Lifetime1Lifetime4.trim();
+            var2Lifetime1Lifetime2 = var24;
+            var2Lifetime1Lifetime2 = var24;
+            var25 = var24.substring(var24.lastIndexOf(' ') + 1);
+            var2Lifetime1Lifetime2 = var25;
+            var2Lifetime1Lifetime2 = var25;
+            var26 = var25.substring(1 + var25.lastIndexOf('\t'));
+            var2Lifetime1Lifetime2 = var26;
+            var2Lifetime1Lifetime2 = var26;
+            var27 = var2Lifetime1Lifetime2 + var26;
+            var2Lifetime1Lifetime2 = var27;
+            var2Lifetime1Lifetime2 = var27;
+            var2Lifetime1Lifetime2 = var27;
+            if (-1 != var9) {
+              if (var10 == -1) {
+                var2Lifetime1Lifetime2 = var2Lifetime1Lifetime2 + ' ';
+                continue;
               }
-              L3: {
-                var24 = var11.trim();
-                var2 = var24;
-                var2 = var24;
-                var25 = var24.substring(var24.lastIndexOf(' ') + 1);
-                var2 = var25;
-                var2 = var25;
-                var26 = var25.substring(1 + var25.lastIndexOf('\t'));
-                var2 = var26;
-                var2 = var26;
-                var27 = var2 + var26;
-                var2 = var27;
-                var2 = var27;
-                var2 = var27;
-                if (-1 == var9) {
-                  break L3;
-                } else {
-                  if (0 != (var10 ^ -1)) {
-                    var12 = var23.indexOf(".java:", var9);
-                    if (-1 < (var12 ^ -1)) {
-                      break L3;
-                    } else {
-                      var2 = var27 + var23.substring(5 + var12, var10);
-                      break L3;
-                    }
-                  } else {
-                    var2 = var2 + ' ';
-                    continue L1;
-                  }
-                }
+              var12 = var23.indexOf(".java:", var9);
+              if (var12 >= 0) {
+                var2Lifetime1Lifetime2 = var27 + var23.substring(5 + var12, var10);
               }
-              var2 = var2 + ' ';
-              continue L1;
+            }
+            var2Lifetime1Lifetime2 = var2Lifetime1Lifetime2 + ' ';
+          }
+        }
+        var14 = (java.awt.Component) null;
+        mj.a((java.awt.Component) null, (byte) -41);
+        var29 = var16.toString();
+        var11Lifetime2 = var29;
+        var2Lifetime2 = var11Lifetime2;
+        var11Lifetime3 = var29;
+        var30 = new BufferedReader((Reader) ((Object) new StringReader(var29)));
+        var6 = var30;
+        var36 = var30.readLine();
+        var11Lifetime4 = var36;
+        var2Lifetime3 = var11Lifetime4;
+        var11Lifetime5 = var36;
+        var7 = var36;
+        var11Lifetime6 = var7;
+        var2Lifetime4 = var11Lifetime6;
+        var11Lifetime7 = var7;
+        while (true) {
+          var31 = var30.readLine();
+          var11Lifetime8 = var31;
+          var2Lifetime5 = var11Lifetime8;
+          var11Lifetime8Lifetime1 = var31;
+          if (var31 == null) {
+            var2Lifetime5 = var2Lifetime5 + "| " + var36;
+            var11Lifetime8Lifetime2 = var2Lifetime5;
+            var2Lifetime5 = var11Lifetime8Lifetime2;
+            var11Lifetime8Lifetime2 = var2Lifetime5;
+            return var2Lifetime5;
+          }
+          var9Lifetime1 = var31.indexOf('(');
+          var10Lifetime1 = var31.indexOf(')', var9Lifetime1 + 1);
+          if (-1 != var9Lifetime1) {
+            var11Lifetime8Lifetime3 = var31.substring(0, var9Lifetime1);
+            var2Lifetime5Lifetime1 = var11Lifetime8Lifetime3;
+            var2Lifetime5Lifetime1 = var11Lifetime8Lifetime3;
+          } else {
+            var11Lifetime8Lifetime3 = var31;
+          }
+          var32 = var11Lifetime8Lifetime3.trim();
+          var2Lifetime5Lifetime2 = var32;
+          var2Lifetime5Lifetime3 = var32;
+          var33 = var32.substring(var32.lastIndexOf(' ') + 1);
+          var2Lifetime5Lifetime4 = var33;
+          var2Lifetime5Lifetime5 = var33;
+          var34 = var33.substring(1 + var33.lastIndexOf('\t'));
+          var2Lifetime5Lifetime6 = var34;
+          var2Lifetime5Lifetime7 = var34;
+          var35 = var2Lifetime5Lifetime7 + var34;
+          var2Lifetime5Lifetime8 = var35;
+          var2Lifetime5Lifetime9 = var35;
+          var2Lifetime5Lifetime10 = var35;
+          if (-1 != var9Lifetime1) {
+            if (var10Lifetime1 == -1) {
+              var2Lifetime5Lifetime10 = var2Lifetime5Lifetime10 + ' ';
+              continue;
+            }
+            var12Lifetime1 = var31.indexOf(".java:", var9Lifetime1);
+            if (var12Lifetime1 >= 0) {
+              var2Lifetime5Lifetime10 = var35 + var31.substring(5 + var12Lifetime1, var10Lifetime1);
             }
           }
-        } else {
-          var14 = (java.awt.Component) null;
-          mj.a((java.awt.Component) null, (byte) -41);
-          var29 = var16.toString();
-          var11 = var29;
-          var2 = var11;
-          var11 = var29;
-          var30 = new BufferedReader((Reader) ((Object) new StringReader(var29)));
-          var6 = var30;
-          var36 = var30.readLine();
-          var11 = var36;
-          var2 = var11;
-          var11 = var36;
-          var7 = var36;
-          var11 = var7;
-          var2 = var11;
-          var11 = var7;
-          L4: while (true) {
-            var31 = var30.readLine();
-            var11 = var31;
-            var2 = var11;
-            var11 = var31;
-            if (var31 == null) {
-              var2 = var2 + "| " + var36;
-              var11 = var2;
-              var2 = var11;
-              var11 = var2;
-              return var2;
-            } else {
-              L5: {
-                var9 = var31.indexOf('(');
-                var10 = var31.indexOf(')', var9 + 1);
-                if (-1 != var9) {
-                  var11 = var31.substring(0, var9);
-                  var2 = var11;
-                  var2 = var11;
-                  break L5;
-                } else {
-                  var11 = var31;
-                  break L5;
-                }
-              }
-              L6: {
-                var32 = var11.trim();
-                var2 = var32;
-                var2 = var32;
-                var33 = var32.substring(var32.lastIndexOf(' ') + 1);
-                var2 = var33;
-                var2 = var33;
-                var34 = var33.substring(1 + var33.lastIndexOf('\t'));
-                var2 = var34;
-                var2 = var34;
-                var35 = var2 + var34;
-                var2 = var35;
-                var2 = var35;
-                var2 = var35;
-                if (-1 == var9) {
-                  break L6;
-                } else {
-                  if (0 != (var10 ^ -1)) {
-                    var12 = var31.indexOf(".java:", var9);
-                    if (-1 < (var12 ^ -1)) {
-                      break L6;
-                    } else {
-                      var2 = var35 + var31.substring(5 + var12, var10);
-                      break L6;
-                    }
-                  } else {
-                    var2 = var2 + ' ';
-                    continue L4;
-                  }
-                }
-              }
-              var2 = var2 + ' ';
-              continue L4;
-            }
-          }
+          var2Lifetime5Lifetime10 = var2Lifetime5Lifetime10 + ' ';
         }
     }
 
@@ -286,7 +266,7 @@ final class mj {
         field_a = null;
         field_d = null;
         if (param0 != 13214) {
-            field_b = (o) null;
+          field_b = (o) null;
         }
     }
 

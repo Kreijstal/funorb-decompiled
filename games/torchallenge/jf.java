@@ -11,9 +11,9 @@ final class jf extends n {
 
     final void c(int param0, ee param1) {
         try {
-            super.c(param0, param1);
+          super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,83 +23,52 @@ final class jf extends n {
 
     public static void n(int param0) {
         field_pb = null;
-        int var1 = -110 / ((param0 - -30) / 55);
+        int var1 = -110 / ((param0 + 30) / 55);
         field_ob = (String[][]) null;
         field_qb = null;
     }
 
     final static void m(int param0) {
+        int var10 = 0;
         double var1_double = 0.0;
         double var3 = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param0 > 88) {
-              var7 = 1024.0;
-              pa.field_z = new int[512];
-              var9 = -1;
-              var10 = 0;
-              L1: while (true) {
-                if (512 <= var10) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    if (-1 < (var9 ^ -1)) {
-                      L3: {
-                        var3 = (double)var10;
-                        var1_double = var3 / var7;
-                        var5 = Math.tan(var1_double * 3.141592653589793);
-                        if (0.0 <= var5) {
-                          break L3;
-                        } else {
-                          var5 = -var5;
-                          break L3;
-                        }
-                      }
-                      if (2048.0 > var5 * 64.0 + var3) {
-                        break L2;
-                      } else {
-                        if ((var9 ^ -1) > -1) {
-                          var9 = var10;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    } else {
-                      var5 = 0.0;
-                      break L2;
-                    }
-                  }
-                  var5 = 65536.0 * var5;
-                  pa.field_z[var10] = (int)var5;
-                  var10++;
-                  continue L1;
-                }
+          if (param0 <= 88) {
+            return;
+          }
+          var7 = 1024.0;
+          pa.field_z = new int[512];
+          var9 = -1;
+          for (var10 = 0; 512 > var10; var10++) {
+            if (var9 < 0) {
+              var3 = (double)var10;
+              var1_double = var3 / var7;
+              var5 = Math.tan(var1_double * 3.141592653589793);
+              if (0.0 > var5) {
+                var5 = -var5;
+              }
+              if (2048.0 <= var5 * 64.0 + var3 &&
+                var9 < 0) {
+                var9 = var10;
               }
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var5 = 0.0;
             }
+            var5 = 65536.0 * var5;
+            pa.field_z[var10] = (int)var5;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var1), "jf.R(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

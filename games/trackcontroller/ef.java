@@ -9,13 +9,13 @@ final class ef {
         la var3 = ra.field_C;
         var3.c(param1, 7);
         if (param2 != 10) {
-            return;
+          return;
         }
         try {
-            var3.a(param0.field_l, (byte) -95);
-            var3.b(param0.field_k, (byte) -122);
+          var3.a(param0.field_l, (byte) -95);
+          var3.b(param0.field_k, (byte) -122);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "ef.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class ef {
         field_b = null;
         field_a = null;
         if (param0 != 27887) {
-            field_a = (pf[]) null;
+          field_a = (pf[]) null;
         }
     }
 

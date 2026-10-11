@@ -18,7 +18,7 @@ final class qd {
         field_a = (int[][]) null;
         field_i = null;
         if (param0 != 15) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;
@@ -27,27 +27,14 @@ final class qd {
     final static void b(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        L0: {
-          if (ef.field_b != null) {
-            var1 = ef.field_b;
-            synchronized (var1) {
-              L1: {
-                ef.field_b = null;
-                break L1;
-              }
-            }
-            break L0;
-          } else {
-            break L0;
+        if (ef.field_b != null) {
+          var1 = ef.field_b;
+          synchronized (var1) {
+            ef.field_b = null;
           }
         }
-        L2: {
-          if (param0 == 1) {
-            break L2;
-          } else {
-            qd.b(60);
-            break L2;
-          }
+        if (param0 != 1) {
+          qd.b(60);
         }
     }
 
@@ -61,60 +48,36 @@ final class qd {
         int var8 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              var3_int = 0;
-              var4 = a.field_d;
-              if (param0 == 16452) {
-                break L1;
-              } else {
-                field_g = 47;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var3_int >= wh.field_z.length) {
-                stackIn_13_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = mn.field_Z[var3_int];
-                  if (-1 >= (var5 ^ -1)) {
-                    var6 = mh.a(true, -90, wh.field_z[var3_int]);
-                    var4 = var4 + hn.field_z;
-                    var7 = -(var6 >> -1377499807) + vk.field_A;
-                    if (l.a((ln.field_D << -1610520607) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << -919387679) + var6, var7 - aq.field_b, var4)) {
-                      stackIn_9_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var4 = var4 + (kp.field_d + (ln.field_D << -2056109855) + hn.field_z);
-                      break L3;
-                    }
-                  } else {
-                    var4 = var4 + bp.field_e;
-                    break L3;
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          var3_int = 0;
+          var4 = a.field_d;
+          if (param0 != 16452) {
+            field_g = 47;
           }
+          while (var3_int < wh.field_z.length) {
+            var5 = mn.field_Z[var3_int];
+            if (var5 >= 0) {
+              var6 = mh.a(true, -90, wh.field_z[var3_int]);
+              var4 = var4 + hn.field_z;
+              var7 = -(var6 >> 1) + vk.field_A;
+              if (l.a((ln.field_D << 1) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << 1) + var6, var7 - aq.field_b, var4)) {
+                stackIn_9_0 = var5;
+                return stackIn_9_0;
+              }
+              var4 = var4 + (kp.field_d + (ln.field_D << 1) + hn.field_z);
+            } else {
+              var4 = var4 + bp.field_e;
+            }
+            var3_int++;
+          }
+          stackIn_13_0 = -1;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw rb.a((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
-        } else {
-          return stackIn_13_0;
         }
     }
 
@@ -122,7 +85,7 @@ final class qd {
         Boolean var1 = jl.field_T;
         jl.field_T = null;
         if (param0 >= -12) {
-            field_g = 126;
+          field_g = 126;
         }
         return var1;
     }

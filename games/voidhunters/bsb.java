@@ -9,7 +9,7 @@ final class bsb {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 23870) {
-            bsb.a(81);
+          bsb.a(81);
         }
     }
 

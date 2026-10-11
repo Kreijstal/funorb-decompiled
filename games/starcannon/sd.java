@@ -11,10 +11,10 @@ final class sd {
     public static void a(boolean param0) {
         field_e = null;
         if (param0) {
-            field_c = -99;
-            field_d = null;
-            field_b = null;
-            return;
+          field_c = -99;
+          field_d = null;
+          field_b = null;
+          return;
         }
         field_d = null;
         field_b = null;
@@ -23,10 +23,10 @@ final class sd {
     final static ii a(Throwable param0, String param1) {
         ii var2 = null;
         if (param0 instanceof ii) {
-            var2 = (ii) ((Object) param0);
-            var2.field_b = var2.field_b + ' ' + param1;
+          var2 = (ii) ((Object) param0);
+          var2.field_b = var2.field_b + ' ' + param1;
         } else {
-            var2 = new ii(param0, param1);
+          var2 = new ii(param0, param1);
         }
         return var2;
     }
@@ -34,8 +34,8 @@ final class sd {
     final static void a(byte param0) {
         ee.field_a = new rk();
         if (param0 != 38) {
-            String var2 = (String) null;
-            sd.a((Throwable) null, (String) null);
+          String var2 = (String) null;
+          sd.a((Throwable) null, (String) null);
         }
     }
 

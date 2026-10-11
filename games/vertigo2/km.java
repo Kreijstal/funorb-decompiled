@@ -10,14 +10,14 @@ final class km extends gp {
 
     final static void a(String param0, boolean param1, boolean param2, String param3) {
         try {
-            ff.field_u = param3;
-            fi.field_e = param0;
-            fi.a(31820, param1, gn.field_a);
-            if (!param2) {
-                km.h(-35);
-            }
+          ff.field_u = param3;
+          fi.field_e = param0;
+          fi.a(31820, param1, gn.field_a);
+          if (!param2) {
+            km.h(-35);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "km.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "km.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,26 +25,26 @@ final class km extends gp {
         field_w = null;
         field_u = null;
         if (param0 < 7) {
-            km.i(119);
-            field_v = null;
-            return;
+          km.i(119);
+          field_v = null;
+          return;
         }
         field_v = null;
     }
 
     km(byte[] param0) {
         try {
-            this.field_t = param0;
+          this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void i(int param0) {
-        int var1 = (qg.field_G + -640) / 2;
+        int var1 = (qg.field_G - 640) / 2;
         int var2 = ld.field_b * ld.field_b;
         int var3 = var2 - rk.field_y * rk.field_y;
-        ca.field_h.a(param0 + -100, 199, bi.field_j - 214, 90, -(var3 * 199 / var2) + var1);
+        ca.field_h.a(param0 - 100, 199, bi.field_j - 214, 90, -(var3 * 199 / var2) + var1);
         ud.field_A.a(80, 438, -124 + bi.field_j, 0, 438 * var3 / var2 + (var1 + param0));
     }
 

@@ -154,7 +154,7 @@ final class ik extends ksa {
         var2[169] = np.field_o;
         var2[224] = oq.field_e;
         if (param0 != -21049) {
-            return (int[]) null;
+          return (int[]) null;
         }
         var2[166] = awa.field_q;
         var2[101] = lr.field_p;

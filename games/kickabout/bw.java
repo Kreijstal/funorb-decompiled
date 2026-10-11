@@ -11,15 +11,15 @@ final class bw {
 
     final static int a(long param0, int param1, long param2) {
         if (param1 != 249299984) {
-            bw.a(32, -61, false, -3, 30, true);
+          bw.a(32, -61, false, -3, 30, true);
         }
-        return (int)((param2 << 249299984) / param0);
+        return (int)((param2 << 16) / param0);
     }
 
     public static void a(boolean param0) {
         field_f = null;
         if (param0) {
-            bw.a(false);
+          bw.a(false);
         }
         field_c = null;
         field_d = null;
@@ -32,17 +32,17 @@ final class bw {
         int var7 = 0;
         int var8 = Kickabout.field_G;
         if (param4 != 9103) {
-            return (ak) null;
+          return (ak) null;
         }
         ak var6 = new ak(4);
-        var6.field_e = ((ot) ((Object) lu.field_p[param5 ? 1 : 0])).h();
-        if (!(!param2)) {
-            var6.field_e.g();
+        var6.field_e = ((ot) (lu.field_p[param5 ? 1 : 0])).h();
+        if (param2) {
+          var6.field_e.g();
         }
         for (var7 = 0; var7 < param1; var7++) {
-            var6.field_e.d();
+          var6.field_e.d();
         }
-        var6.field_g = -(var6.field_e.field_v >> -1507173503) + param3;
+        var6.field_g = -(var6.field_e.field_v >> 1) + param3;
         var6.field_k = param0;
         return var6;
     }
@@ -60,7 +60,7 @@ final class bw {
         field_a[7] = 100;
         field_a[3] = 50;
         for (var0 = 0; var0 < field_a.length; var0++) {
-            field_d[var0] = field_a[var0];
+          field_d[var0] = field_a[var0];
         }
         field_c = "<%0> has just resigned and left, <%1> goes through <%2>.";
         field_f = new int[8192];

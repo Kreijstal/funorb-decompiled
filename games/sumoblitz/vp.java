@@ -11,18 +11,16 @@ final class vp {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 >= -95) {
-          field_b = (String) null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -95) {
           field_c = null;
           field_e = null;
           field_d = null;
           return;
         }
+        field_b = (String) null;
+        field_c = null;
+        field_e = null;
+        field_d = null;
     }
 
     static {

@@ -11,48 +11,35 @@ final class ck {
     int field_g;
 
     final static boolean a(char param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        if (param1 == -46) {
-          if (param0 != 160) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_20_0 = 1;
-                return stackIn_20_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param1 != -46) {
           field_c = 22;
-          if (param0 != 160) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 == 160) {
             return true;
           }
+          if (param0 == 32) {
+            return true;
+          }
+          if (param0 == 95) {
+            return true;
+          }
+          if (param0 != 45) {
+            return false;
+          }
+          return true;
         }
+        if (param0 == 160) {
+          return true;
+        }
+        if (param0 == 32) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (param0 != 45) {
+          return false;
+        }
+        return true;
     }
 
     ck(boolean param0) {

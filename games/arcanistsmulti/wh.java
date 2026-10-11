@@ -17,21 +17,21 @@ final class wh {
 
     final static int a(int param0, int param1) {
         param0--;
-        param0 = param0 | param0 >>> -327065503;
-        param0 = param0 | param0 >>> -1057549438;
-        param0 = param0 | param0 >>> -469438012;
-        param0 = param0 | param0 >>> 220093928;
+        param0 = param0 | param0 >>> 1;
+        param0 = param0 | param0 >>> 2;
+        param0 = param0 | param0 >>> 4;
+        param0 = param0 | param0 >>> 8;
         if (param1 != 678231216) {
-            field_k = (ll[]) null;
+          field_k = (ll[]) null;
         }
-        param0 = param0 | param0 >>> 678231216;
+        param0 = param0 | param0 >>> 16;
         return 1 + param0;
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -83) {
-            wh.a(-29);
+          wh.a(-29);
         }
         field_e = null;
         field_h = null;
@@ -46,7 +46,7 @@ final class wh {
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 117) {
-            wh.a(89);
+          wh.a(89);
         }
         wn.field_z.a(param1, (byte) -127);
     }
@@ -55,13 +55,13 @@ final class wh {
         int var4_int = 0;
         int var5 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 > -100) {
-            field_f = (e) null;
+          field_f = (e) null;
         }
         int var1 = ho.field_i[0] * jg.field_p[0];
         byte[] var2 = ln.field_I[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {
-            var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
+          var3[var4_int] = ph.field_c[dg.a(255, (int) var2[var4_int])];
         }
         qb var4 = new qb(pb.field_g, gn.field_a, hl.field_l[0], be.field_d[0], jg.field_p[0], ho.field_i[0], var3);
         dk.a(-18229);

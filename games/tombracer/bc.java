@@ -8,13 +8,13 @@ final class bc {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            return false;
+          return false;
         }
         if (bl.field_a == null) {
-            return false;
+          return false;
         }
         if (!bl.field_a.a(false)) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -23,9 +23,9 @@ final class bc {
         field_b = null;
         field_a = null;
         if (param0 <= 71) {
-            bc.a(true);
-            field_c = null;
-            return;
+          bc.a(true);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

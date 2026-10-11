@@ -12,7 +12,7 @@ final class ha {
     public static void a(byte param0) {
         field_b = null;
         if (param0 < 54) {
-            return;
+          return;
         }
         field_e = null;
         field_d = null;

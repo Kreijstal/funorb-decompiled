@@ -17,9 +17,9 @@ final class ti extends hc {
     }
 
     final static void a(byte param0) {
-        nk var1 = (nk) ((Object) ah.field_g.c(51510));
+        nk var1 = (nk) (ah.field_g.c(51510));
         if (var1 == null) {
-            var1 = new nk();
+          var1 = new nk();
         }
         var1.a(eh.field_c, eh.field_a, eh.field_k, 0, eh.field_g, eh.field_e, eh.field_d, eh.field_f);
         int var2 = -89 % ((66 - param0) / 60);
@@ -30,22 +30,13 @@ final class ti extends hc {
         aa.field_d = param1;
         rj.field_e = param2;
         if (param0 < 74) {
-            ti.a((byte) 82);
+          ti.a((byte) 82);
         }
     }
 
     public static void c(byte param0) {
         field_L = null;
-        if (param0 != -53) {
-          field_I = (int[]) null;
-          field_P = null;
-          field_O = null;
-          field_J = null;
-          field_N = null;
-          field_K = null;
-          field_I = null;
-          return;
-        } else {
+        if (param0 == -53) {
           field_P = null;
           field_O = null;
           field_J = null;
@@ -54,39 +45,46 @@ final class ti extends hc {
           field_I = null;
           return;
         }
+        field_I = (int[]) null;
+        field_P = null;
+        field_O = null;
+        field_J = null;
+        field_N = null;
+        field_K = null;
+        field_I = null;
     }
 
     ti(String param0, rm param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_H = param2 ? true : false;
+          this.field_H = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private ti(String param0, rm param1) {
         this(param0, bd.field_c.field_m, param1);
         try {
-            this.field_A = bd.field_c.field_e;
+          this.field_A = bd.field_c.field_e;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(jb param0, boolean param1, int param2) {
         ld var3 = null;
         if (!param1) {
-            return;
+          return;
         }
         try {
-            var3 = sn.field_c;
-            var3.d((byte) -61, param2);
-            var3.c(2, 25564);
-            var3.c(0, 25564);
-            var3.c(param0.field_n, 25564);
+          var3 = sn.field_c;
+          var3.d((byte) -61, param2);
+          var3.c(2, 25564);
+          var3.c(0, 25564);
+          var3.c(param0.field_n, 25564);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ti.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ti.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -97,7 +95,7 @@ final class ti extends hc {
         byte[] var2 = db.field_b[0];
         int[] var3 = new int[var1];
         for (var4_int = param0; var1 > var4_int; var4_int++) {
-            var3[var4_int] = af.field_p[c.a(255, (int) var2[var4_int])];
+          var3[var4_int] = af.field_p[c.a(255, (int) var2[var4_int])];
         }
         ea var4 = new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var3);
         ec.a((byte) -106);
@@ -107,9 +105,9 @@ final class ti extends hc {
     private ti(String param0, ad param1, rm param2) {
         super(param0, param1, param2);
         try {
-            this.field_A = bd.field_c.field_e;
+          this.field_A = bd.field_c.field_e;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

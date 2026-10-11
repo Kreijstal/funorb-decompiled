@@ -22,86 +22,64 @@ public class tj {
         field_a = param1;
         field_b = param0;
         try {
-          L0: {
-            field_e = System.getProperty("user.home");
+          field_e = System.getProperty("user.home");
+          if (field_e == null) {
+            field_c = true;
             if (field_e != null) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              field_c = true;
-              if (field_e != null) {
-                if (param2 == -119) {
-                  return;
-                } else {
-                  var4 = (String) null;
-                  tj.a((byte) 98, (String) null);
-                  return;
-                }
-              } else {
-                field_e = "~/";
-                if (param2 != -119) {
-                  var4 = (String) null;
-                  tj.a((byte) 98, (String) null);
-                  return;
-                } else {
-                  return;
-                }
+              if (param2 == -119) {
+                return;
               }
+              var4 = (String) null;
+              tj.a((byte) 98, (String) null);
+              return;
             }
+            field_e = "~/";
+            if (param2 == -119) {
+              return;
+            }
+            var4 = (String) null;
+            tj.a((byte) 98, (String) null);
+            return;
           }
+          field_e = field_e + "/";
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;
           field_c = true;
           if (field_e != null) {
-            if (param2 != -119) {
-              var4 = (String) null;
-              tj.a((byte) 98, (String) null);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            field_e = "~/";
             if (param2 == -119) {
               return;
-            } else {
-              var4 = (String) null;
-              tj.a((byte) 98, (String) null);
-              return;
             }
-          }
-        }
-        field_c = true;
-        if (field_e != null) {
-          if (param2 != -119) {
             var4 = (String) null;
             tj.a((byte) 98, (String) null);
             return;
-          } else {
-            return;
           }
-        } else {
           field_e = "~/";
           if (param2 == -119) {
             return;
-          } else {
-            var4 = (String) null;
-            tj.a((byte) 98, (String) null);
-            return;
           }
+          var4 = (String) null;
+          tj.a((byte) 98, (String) null);
+          return;
         }
+        field_c = true;
+        if (field_e == null) {
+          field_e = "~/";
+        }
+        if (param2 == -119) {
+          return;
+        }
+        var4 = (String) null;
+        tj.a((byte) 98, (String) null);
     }
 
     public static File a(byte param0, String param1) {
-        String var3;
-        if (param0 != -61) {
-          var3 = (String) null;
-          tj.a((byte) 5, (String) null);
-          return tj.a(field_b, (byte) 83, field_a, param1);
-        } else {
+        if (param0 == -61) {
           return tj.a(field_b, (byte) 83, field_a, param1);
         }
+        String var3 = (String) null;
+        tj.a((byte) 5, (String) null);
+        return tj.a(field_b, (byte) 83, field_a, param1);
     }
 
     public static File a(int param0, byte param1, String param2, String param3) {

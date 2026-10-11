@@ -12,15 +12,7 @@ final class sb extends oa {
 
     public static void g(int param0) {
         field_bb = null;
-        if (param0 < 92) {
-          sb.g(-16);
-          field_ab = null;
-          field_X = null;
-          field_V = null;
-          field_Y = null;
-          field_W = null;
-          return;
-        } else {
+        if (param0 >= 92) {
           field_ab = null;
           field_X = null;
           field_V = null;
@@ -28,51 +20,39 @@ final class sb extends oa {
           field_W = null;
           return;
         }
+        sb.g(-16);
+        field_ab = null;
+        field_X = null;
+        field_V = null;
+        field_Y = null;
+        field_W = null;
     }
 
     sb(String param0, tn param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_T = param2 ? true : false;
+          this.field_T = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private sb(String param0, qk param1, tn param2) {
         super(param0, param1, param2);
         try {
-            this.field_p = ad.field_j.field_x;
+          this.field_p = ad.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, byte param1, int param2, int param3) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (this.field_T) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((sb) (this)).field_T = stackIn_3_1 != 0;
+        this.field_T = !this.field_T ? true : false;
         super.b(param0, (byte) -127, param2, param3);
-        if (param1 >= -122) {
-          this.b(-25, (byte) 43, -53, 29);
-          return;
-        } else {
+        if (param1 < -122) {
           return;
         }
+        this.b(-25, (byte) 43, -53, 29);
     }
 
     final static void a(boolean param0) {
@@ -83,9 +63,9 @@ final class sb extends oa {
     private sb(String param0, tn param1) {
         this(param0, ad.field_j.field_f, param1);
         try {
-            this.field_p = ad.field_j.field_x;
+          this.field_p = ad.field_j.field_x;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

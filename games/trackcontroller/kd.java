@@ -7,11 +7,11 @@ abstract class kd {
 
     final static void a(String param0, byte param1) {
         try {
-            if (param1 <= 30) {
-                field_a = (ja) null;
-            }
+          if (param1 <= 30) {
+            field_a = (ja) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "kd.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -21,7 +21,7 @@ abstract class kd {
         field_a = null;
         field_b = null;
         if (param0 < 23) {
-            field_b = (ja) null;
+          field_b = (ja) null;
         }
     }
 

@@ -16,29 +16,26 @@ final class cl extends rh {
 
     final int f(int param0) {
         if (this.field_m) {
-            return 0;
+          return 0;
         }
         if (param0 != 0) {
-            return 72;
+          return 72;
         }
         return 100;
     }
 
     final byte[] e(int param0) {
-        if (param0 == 256) {
-          if (this.field_m) {
-            throw new RuntimeException();
-          } else {
-            return this.field_B;
-          }
-        } else {
+        if (param0 != 256) {
           this.f(95);
-          if (this.field_m) {
-            throw new RuntimeException();
-          } else {
+          if (!this.field_m) {
             return this.field_B;
           }
+          throw new RuntimeException();
         }
+        if (!this.field_m) {
+          return this.field_B;
+        }
+        throw new RuntimeException();
     }
 
     cl() {

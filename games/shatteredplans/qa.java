@@ -14,15 +14,7 @@ final class qa extends df {
 
     public static void e(int param0) {
         field_o = null;
-        if (param0 != 21758) {
-          field_q = (bi) null;
-          field_q = null;
-          field_w = null;
-          field_r = null;
-          field_p = null;
-          field_s = (String[][]) null;
-          return;
-        } else {
+        if (param0 == 21758) {
           field_q = null;
           field_w = null;
           field_r = null;
@@ -30,14 +22,20 @@ final class qa extends df {
           field_s = (String[][]) null;
           return;
         }
+        field_q = (bi) null;
+        field_q = null;
+        field_w = null;
+        field_r = null;
+        field_p = null;
+        field_s = (String[][]) null;
     }
 
     qa(ln param0, int param1) {
         try {
-            this.field_u = param0;
-            this.field_v = param1;
+          this.field_u = param0;
+          this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

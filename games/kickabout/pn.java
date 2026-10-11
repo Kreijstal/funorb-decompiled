@@ -21,25 +21,23 @@ final class pn extends ij {
         field_E = null;
         field_u = null;
         field_v = null;
-        if (param0 != -1) {
-          pn.b(-99);
-          field_B = null;
-          field_w = null;
-          field_D = null;
-          field_z = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_B = null;
           field_w = null;
           field_D = null;
           field_z = null;
           return;
         }
+        pn.b(-99);
+        field_B = null;
+        field_w = null;
+        field_D = null;
+        field_z = null;
     }
 
     final static boolean g(int param0) {
         if (param0 != 2368) {
-            return false;
+          return false;
         }
         return null == e.field_m ? vb.field_k : true;
     }
@@ -47,24 +45,24 @@ final class pn extends ij {
     pn(Object param0, int param1) {
         super(param1);
         try {
-            this.field_x = param0;
+          this.field_x = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean h(byte param0) {
         if (param0 <= 105) {
-            field_t = -26;
-            return false;
+          field_t = -26;
+          return false;
         }
         return false;
     }
 
     final Object a(int param0) {
         if (param0 > -25) {
-            field_t = 51;
-            return this.field_x;
+          field_t = 51;
+          return this.field_x;
         }
         return this.field_x;
     }

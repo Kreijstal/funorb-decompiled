@@ -9,84 +9,48 @@ final class cm {
     static String field_a;
 
     final static void a(byte param0) {
-        if (param0 >= 121) {
-          if (nb.field_b != null) {
-            nb.field_b.h((byte) -126);
-            rd.field_s = new ae();
-            bj.field_f.a(rd.field_s, -24);
-            return;
-          } else {
-            rd.field_s = new ae();
-            bj.field_f.a(rd.field_s, -24);
-            return;
-          }
-        } else {
+        if (param0 < 121) {
           return;
         }
+        if (nb.field_b == null) {
+          rd.field_s = new ae();
+          bj.field_f.a(rd.field_s, -24);
+          return;
+        }
+        nb.field_b.h((byte) -126);
+        rd.field_s = new ae();
+        bj.field_f.a(rd.field_s, -24);
     }
 
     public static void c(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 > -47) {
-            return;
+          return;
         }
         field_e = null;
     }
 
     final static boolean b(byte param0) {
-        if (param0 < -8) {
-          L0: {
-            if ((qh.field_d ^ -1) != 0) {
-              break L0;
-            } else {
-              if (vc.a(-127, 1)) {
-                qh.field_d = mk.field_j.a(-16384);
-                mk.field_j.field_k = 0;
-                break L0;
-              } else {
-                return false;
-              }
-            }
-          }
-          if ((qh.field_d ^ -1) == 1) {
-            if (!vc.a(-104, 2)) {
-              return false;
-            } else {
-              qh.field_d = mk.field_j.i(-25578);
-              mk.field_j.field_k = 0;
-              return vc.a(-122, qh.field_d);
-            }
-          } else {
-            return vc.a(-122, qh.field_d);
-          }
-        } else {
-          L1: {
-            cm.c((byte) 60);
-            if ((qh.field_d ^ -1) != 0) {
-              break L1;
-            } else {
-              if (vc.a(-127, 1)) {
-                qh.field_d = mk.field_j.a(-16384);
-                mk.field_j.field_k = 0;
-                break L1;
-              } else {
-                return false;
-              }
-            }
-          }
-          if ((qh.field_d ^ -1) == 1) {
-            if (!vc.a(-104, 2)) {
-              return false;
-            } else {
-              qh.field_d = mk.field_j.i(-25578);
-              mk.field_j.field_k = 0;
-              return vc.a(-122, qh.field_d);
-            }
-          } else {
-            return vc.a(-122, qh.field_d);
-          }
+        if (param0 >= -8) {
+          cm.c((byte) 60);
         }
+        if (qh.field_d == -1) {
+          if (!vc.a(-127, 1)) {
+            return false;
+          }
+          qh.field_d = mk.field_j.a(-16384);
+          mk.field_j.field_k = 0;
+        }
+        if (qh.field_d != -2) {
+          return vc.a(-122, qh.field_d);
+        }
+        if (!vc.a(-104, 2)) {
+          return false;
+        }
+        qh.field_d = mk.field_j.i(-25578);
+        mk.field_j.field_k = 0;
+        return vc.a(-122, qh.field_d);
     }
 
     cm(int param0) {
@@ -99,8 +63,8 @@ final class cm {
 
     final static boolean a(int param0) {
         if (param0 > -116) {
-            field_a = (String) null;
-            return nf.field_c;
+          field_a = (String) null;
+          return nf.field_c;
         }
         return nf.field_c;
     }

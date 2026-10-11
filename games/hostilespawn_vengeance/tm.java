@@ -33,7 +33,7 @@ final class tm extends am {
         hh.field_e = param1;
         nf.field_m = param2;
         if (!param3) {
-            tm.a(false);
+          tm.a(false);
         }
     }
 
@@ -42,90 +42,53 @@ final class tm extends am {
         int var4_int = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if ((param1 ^ -1) > -1) {
-                  break L2;
-                } else {
-                  if (-1 < (param2 ^ -1)) {
-                    break L2;
-                  } else {
-                    if (640 < param1) {
-                      break L2;
-                    } else {
-                      if (-481 > (param2 ^ -1)) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                }
-              }
-              param3.field_i = -1;
-              break L1;
-            }
-            L3: {
-              if (0 <= param3.field_e) {
-                si.e(param1, param2, 1, 65535, -(param3.field_e * 4) + 128);
-                break L3;
-              } else {
-                si.e(param1, param2, 1, 16777215, 128);
-                break L3;
-              }
-            }
-            var4_int = 117 / ((-79 - param0) / 33);
-            break L0;
+          if (param1 < 0 ||
+            param2 < 0 ||
+            640 < param1 ||
+            param2 > 480) {
+            param3.field_i = -1;
           }
+          if (0 <= param3.field_e) {
+            si.e(param1, param2, 1, 65535, -(param3.field_e * 4) + 128);
+          } else {
+            si.e(param1, param2, 1, 16777215, 128);
+          }
+          var4_int = 117 / ((-79 - param0) / 33);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("tm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_13_0 = runtimeException;
+          stackIn_13_1 = new StringBuilder().append("tm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final void b(boolean param0) {
         this.field_A = null;
-        if (!param0) {
-          this.field_i = 82;
-          this.field_x = null;
-          this.field_r = null;
-          this.field_p = null;
-          return;
-        } else {
+        if (param0) {
           this.field_x = null;
           this.field_r = null;
           this.field_p = null;
           return;
         }
+        this.field_i = 82;
+        this.field_x = null;
+        this.field_r = null;
+        this.field_p = null;
     }
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_s = null;
         field_o = null;

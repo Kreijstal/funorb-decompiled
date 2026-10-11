@@ -11,41 +11,31 @@ abstract class nb {
     static String field_a;
 
     final static ci a(int param0, int param1, int param2) {
-        ci var3;
-        int var4;
-        int var5;
-        ci var6;
-        var5 = Terraphoenix.field_V;
-        var6 = new ci(param0, param0);
-        var3 = var6;
-        if (param2 < 117) {
-          return (ci) null;
-        } else {
-          var4 = 0;
-          L0: while (true) {
-            if (var3.field_z.length <= var4) {
-              return var3;
-            } else {
-              var6.field_z[var4] = param1;
-              var4++;
-              continue L0;
-            }
+        int var4 = 0;
+        int var5 = Terraphoenix.field_V;
+        ci var6 = new ci(param0, param0);
+        ci var3 = var6;
+        if (param2 >= 117) {
+          for (var4 = 0; var3.field_z.length > var4; var4++) {
+            var6.field_z[var4] = param1;
           }
+          return var3;
         }
+        return (ci) null;
     }
 
     final static void a(boolean param0, byte param1) {
         if (param1 != -126) {
-            field_e = 80;
-            qc.a(param0, false, 115);
-            return;
+          field_e = 80;
+          qc.a(param0, false, 115);
+          return;
         }
         qc.a(param0, false, 115);
     }
 
     final static void a(int param0) {
         if (!ei.field_R) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         wd.field_b = true;
         nb.a(true, (byte) -126);
@@ -62,9 +52,9 @@ abstract class nb {
         field_c = null;
         field_b = null;
         if (param0 != 0) {
-            nb.a(25);
-            field_d = null;
-            return;
+          nb.a(25);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

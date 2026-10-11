@@ -9,47 +9,27 @@ final class ep extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              si.a(199, 62, param0[0].a(45));
-              if (param1 < -119) {
-                break L1;
-              } else {
-                field_o = (kb) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc("void");
-            break L0;
+          si.a(199, 62, param0[0].a(45));
+          if (param1 >= -119) {
+            field_o = (kb) null;
           }
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ep.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ep.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     ep(String param0, Class[] param1, String param2) {
@@ -79,113 +59,76 @@ final class ep extends rqa {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
+        int var21Lifetime1;
+        int var22Lifetime1;
         var25 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var6_int = 0;
-              var7 = param4;
-              var8 = param3 * param3;
-              var9 = param4 * param4;
-              var10 = var9 << 1928738817;
-              var11 = var8 << -309614431;
-              var12 = param4 << -746754367;
-              var13 = var10 + var8 * (-var12 + 1);
-              var14 = var9 + -((var12 - 1) * var11);
-              var15 = var8 << -796816286;
-              var16 = var9 << -95260862;
-              var17 = var10 * ((var6_int << 1104085825) - -3);
-              var18 = var11 * ((var7 << 837083265) + -3);
-              var19 = var16 * (1 + var6_int);
-              if (lua.field_c > param1) {
-                break L1;
-              } else {
-                if (hab.field_i < param1) {
-                  break L1;
-                } else {
-                  var21 = ksa.a(31123, ob.field_j, mt.field_o, param3 + param5);
-                  var22 = ksa.a(31123, ob.field_j, mt.field_o, -param3 + param5);
-                  ww.a(param2, var21, rba.field_b[param1], (byte) 75, var22);
-                  break L1;
-                }
+          var6_int = 0;
+          var7 = param4;
+          var8 = param3 * param3;
+          var9 = param4 * param4;
+          var10 = var9 << 1;
+          var11 = var8 << 1;
+          var12 = param4 << 1;
+          var13 = var10 + var8 * (-var12 + 1);
+          var14 = var9 - (var12 - 1) * var11;
+          var15 = var8 << 2;
+          var16 = var9 << 2;
+          var17 = var10 * ((var6_int << 1) + 3);
+          var18 = var11 * ((var7 << 1) - 3);
+          var19 = var16 * (1 + var6_int);
+          if (lua.field_c <= param1 &&
+            hab.field_i >= param1) {
+            var21 = ksa.a(31123, ob.field_j, mt.field_o, param3 + param5);
+            var22 = ksa.a(31123, ob.field_j, mt.field_o, -param3 + param5);
+            ww.a(param2, var21, rba.field_b[param1], (byte) 75, var22);
+          }
+          var20 = (var7 - 1) * var15;
+          if (param0 > -112) {
+            field_o = (kb) null;
+          }
+          while (true) {
+            if (var7 <= 0) {
+              return;
+            }
+            if (0 > var13) {
+              while (var13 < 0) {
+                var14 = var14 + var19;
+                var13 = var13 + var17;
+                var6_int++;
+                var19 = var19 + var16;
+                var17 = var17 + var16;
               }
             }
-            L2: {
-              var20 = (var7 + -1) * var15;
-              if (param0 <= -112) {
-                break L2;
-              } else {
-                field_o = (kb) null;
-                break L2;
-              }
+            if (var14 < 0) {
+              var14 = var14 + var19;
+              var13 = var13 + var17;
+              var19 = var19 + var16;
+              var17 = var17 + var16;
+              var6_int++;
             }
-            L3: while (true) {
-              if ((var7 ^ -1) >= -1) {
-                break L0;
-              } else {
-                L4: {
-                  if (0 > var13) {
-                    L5: while (true) {
-                      if ((var13 ^ -1) <= -1) {
-                        break L4;
-                      } else {
-                        var14 = var14 + var19;
-                        var13 = var13 + var17;
-                        var6_int++;
-                        var19 = var19 + var16;
-                        var17 = var17 + var16;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                L6: {
-                  if (-1 < (var14 ^ -1)) {
-                    var14 = var14 + var19;
-                    var13 = var13 + var17;
-                    var19 = var19 + var16;
-                    var17 = var17 + var16;
-                    var6_int++;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                var14 = var14 + -var18;
-                var13 = var13 + -var20;
-                var7--;
-                var20 = var20 - var15;
-                var18 = var18 - var15;
-                var21 = param1 - var7;
-                var22 = var7 + param1;
-                if (var22 < lua.field_c) {
-                  continue L3;
-                } else {
-                  if (hab.field_i >= var21) {
-                    L7: {
-                      var23 = ksa.a(31123, ob.field_j, mt.field_o, param5 + var6_int);
-                      var24 = ksa.a(31123, ob.field_j, mt.field_o, -var6_int + param5);
-                      if (lua.field_c <= var21) {
-                        ww.a(param2, var23, rba.field_b[var21], (byte) 75, var24);
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    if (hab.field_i >= var22) {
-                      ww.a(param2, var23, rba.field_b[var22], (byte) 75, var24);
-                      continue L3;
-                    } else {
-                      continue L3;
-                    }
-                  } else {
-                    continue L3;
-                  }
-                }
-              }
+            var14 = var14 - var18;
+            var13 = var13 - var20;
+            var7--;
+            var20 = var20 - var15;
+            var18 = var18 - var15;
+            var21Lifetime1 = param1 - var7;
+            var22Lifetime1 = var7 + param1;
+            if (var22Lifetime1 < lua.field_c) {
+              continue;
             }
+            if (hab.field_i < var21Lifetime1) {
+              continue;
+            }
+            var23 = ksa.a(31123, ob.field_j, mt.field_o, param5 + var6_int);
+            var24 = ksa.a(31123, ob.field_j, mt.field_o, -var6_int + param5);
+            if (lua.field_c <= var21Lifetime1) {
+              ww.a(param2, var23, rba.field_b[var21Lifetime1], (byte) 75, var24);
+            }
+            if (hab.field_i < var22Lifetime1) {
+              continue;
+            }
+            ww.a(param2, var23, rba.field_b[var22Lifetime1], (byte) 75, var24);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -12,17 +12,7 @@ final class wd {
         lf.field_a[45] = 26;
         lf.field_a[93] = 43;
         lf.field_a[520] = 59;
-        if (param0) {
-          wd.a(true);
-          lf.field_a[222] = 58;
-          lf.field_a[192] = 28;
-          lf.field_a[44] = 71;
-          lf.field_a[46] = 72;
-          lf.field_a[59] = 57;
-          lf.field_a[91] = 42;
-          lf.field_a[92] = 74;
-          return;
-        } else {
+        if (!param0) {
           lf.field_a[222] = 58;
           lf.field_a[192] = 28;
           lf.field_a[44] = 71;
@@ -32,6 +22,14 @@ final class wd {
           lf.field_a[92] = 74;
           return;
         }
+        wd.a(true);
+        lf.field_a[222] = 58;
+        lf.field_a[192] = 28;
+        lf.field_a[44] = 71;
+        lf.field_a[46] = 72;
+        lf.field_a[59] = 57;
+        lf.field_a[91] = 42;
+        lf.field_a[92] = 74;
     }
 
     static {

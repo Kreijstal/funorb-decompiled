@@ -21,12 +21,12 @@ final class gl extends al {
 
     final void c(byte param0) {
         this.field_n = 0L;
-        if ((this.field_k ^ -1L) > (this.field_m ^ -1L)) {
-            this.field_k = this.field_k + (-this.field_k + this.field_m);
+        if (this.field_k < this.field_m) {
+          this.field_k = this.field_k + (-this.field_k + this.field_m);
         }
         if (param0 >= -116) {
-            String var3 = (String) null;
-            gl.a((cm) null, (byte) 47, (String) null, (String) null);
+          String var3 = (String) null;
+          gl.a((cm) null, (byte) 47, (String) null, (String) null);
         }
     }
 
@@ -38,101 +38,54 @@ final class gl extends al {
         gk stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4_int = param0.a(param2, 44);
-            if (param1 == 85) {
-              var5 = param0.a(var4_int, -32759, param3);
-              stackIn_4_0 = va.a(var4_int, param0, true, var5);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (gk) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4_int = param0.a(param2, 44);
+          if (param1 != 85) {
+            stackIn_2_0 = (gk) null;
+            return stackIn_2_0;
           }
+          var5 = param0.a(var4_int, -32759, param3);
+          stackIn_4_0 = va.a(var4_int, param0, true, var5);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4);
-
-            stackIn_7_1 = new StringBuilder().append("gl.L(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("gl.L(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_8_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw ci.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final long a(byte param0) {
         this.field_k = this.field_k + this.d((byte) -84);
-        if (!(this.field_k >= this.field_m)) {
-            return (-this.field_k + this.field_m) / 1000000L;
+        if (this.field_k < this.field_m) {
+          return (-this.field_k + this.field_m) / 1000000L;
         }
         if (param0 <= 98) {
-            this.field_k = -123L;
+          this.field_k = -123L;
         }
         return 0L;
     }
@@ -141,7 +94,7 @@ final class gl extends al {
         field_l = null;
         field_j = null;
         if (param0 != 0) {
-            gl.a(false);
+          gl.a(false);
         }
         field_y = null;
         field_t = null;
@@ -153,7 +106,7 @@ final class gl extends al {
 
     final static java.awt.Canvas a(boolean param0) {
         if (param0) {
-            field_w = (char[]) null;
+          field_w = (char[]) null;
         }
         return null == wb.field_c ? sl.field_n : (java.awt.Canvas) ((Object) wb.field_c);
     }
@@ -162,42 +115,25 @@ final class gl extends al {
         int var4;
         int var5;
         var5 = SteelSentinels.field_G;
-        if (param1 == -97) {
-          if ((this.field_k ^ -1L) > (this.field_m ^ -1L)) {
-            this.field_n = this.field_n + (-this.field_k + this.field_m);
-            this.field_k = this.field_k + (-this.field_k + this.field_m);
-            this.field_m = this.field_m + param0;
-            return 1;
-          } else {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                var4++;
-                this.field_m = this.field_m + param0;
-                if (var4 >= 10) {
-                  break L1;
-                } else {
-                  if ((this.field_k ^ -1L) < (this.field_m ^ -1L)) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if ((this.field_m ^ -1L) > (this.field_k ^ -1L)) {
-                  this.field_m = this.field_k;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return var4;
-            }
-          }
-        } else {
+        if (param1 != -97) {
           return 92;
         }
+        if (this.field_k < this.field_m) {
+          this.field_n = this.field_n + (-this.field_k + this.field_m);
+          this.field_k = this.field_k + (-this.field_k + this.field_m);
+          this.field_m = this.field_m + param0;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          var4++;
+          this.field_m = this.field_m + param0;
+        } while (var4 < 10 &&
+          this.field_k > this.field_m);
+        if (this.field_m < this.field_k) {
+          this.field_m = this.field_k;
+        }
+        return var4;
     }
 
     private final long d(byte param0) {
@@ -205,23 +141,22 @@ final class gl extends al {
         long var2 = System.nanoTime();
         long var4 = -this.field_n + var2;
         this.field_n = var2;
-        if (var4 > -5000000000L) {
-            if (!(-5000000001L >= (var4 ^ -1L))) {
-                this.field_q[this.field_o] = var4;
-                if (!((this.field_s ^ -1) <= -2)) {
-                    this.field_s = this.field_s + 1;
-                }
-                this.field_o = (1 + this.field_o) % 10;
-            }
+        if (var4 > -5000000000L &&
+          var4 < 5000000000L) {
+          this.field_q[this.field_o] = var4;
+          if (this.field_s < 1) {
+            this.field_s = this.field_s + 1;
+          }
+          this.field_o = (1 + this.field_o) % 10;
         }
         long var6 = 0L;
         int var8 = 1;
         if (param0 >= -38) {
-            return 114L;
+          return 114L;
         }
         while (var8 <= this.field_s) {
-            var6 = var6 + this.field_q[(10 + this.field_o - var8) % 10];
-            var8++;
+          var6 = var6 + this.field_q[(10 + this.field_o - var8) % 10];
+          var8++;
         }
         return var6 / (long)this.field_s;
     }

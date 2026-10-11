@@ -10,23 +10,10 @@ final class fm {
     long field_d;
 
     final static void a(int param0, boolean param1) {
-        int var3;
-        ab var4;
-        ab var5;
-        if (!param1) {
-          fm.a(48, false);
-          var4 = he.field_e;
-          var4.b((byte) -57, param0);
-          var4.field_g = var4.field_g + 1;
-          var3 = var4.field_g;
-          var4.f(2, (byte) -12);
-          var4.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
-          var4.f(q.field_L, (byte) -14);
-          var4.f(q.field_N, (byte) -3);
-          var4.a(ng.field_D, 0, (byte) -86, ng.field_D.length);
-          var4.b(var4.field_g - var3, (byte) 43);
-          return;
-        } else {
+        ab var5 = null;
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param1) {
           var5 = he.field_e;
           var5.b((byte) -57, param0);
           var5.field_g = var5.field_g + 1;
@@ -39,13 +26,24 @@ final class fm {
           var5.b(var5.field_g - var3, (byte) 43);
           return;
         }
+        fm.a(48, false);
+        ab var4 = he.field_e;
+        var4.b((byte) -57, param0);
+        var4.field_g = var4.field_g + 1;
+        var3Lifetime1 = var4.field_g;
+        var4.f(2, (byte) -12);
+        var4.a(gh.field_E, 0, (byte) -86, gh.field_E.length);
+        var4.f(q.field_L, (byte) -14);
+        var4.f(q.field_N, (byte) -3);
+        var4.a(ng.field_D, 0, (byte) -86, ng.field_D.length);
+        var4.b(var4.field_g - var3Lifetime1, (byte) 43);
     }
 
     public static void a(int param0) {
         field_c = null;
         field_e = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_a = null;
     }

@@ -6,15 +6,15 @@ final class mh {
 
     public static void a(int param0) {
         if (param0 != -16801) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static String a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
-            return e.field_c.d(true);
+          field_a = (String) null;
+          return e.field_c.d(true);
         }
         return e.field_c.d(true);
     }

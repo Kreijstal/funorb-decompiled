@@ -14,27 +14,19 @@ final class rq extends tc {
         field_k = null;
         field_o = null;
         if (param0 != -22823) {
-            rq.a(53);
-            field_n = null;
-            return;
+          rq.a(53);
+          field_n = null;
+          return;
         }
         field_n = null;
     }
 
     final static void a(byte param0) {
-        fg var1;
-        L0: {
-          var1 = (fg) ((Object) vb.field_q.c((byte) -121));
-          if (var1 == null) {
-            var1 = new fg();
-            break L0;
-          } else {
-            break L0;
-          }
+        fg var1 = (fg) (vb.field_q.c((byte) -121));
+        if (var1 == null) {
+          var1 = new fg();
         }
-        if (param0 != -56) {
-          return;
-        } else {
+        if (param0 == -56) {
           var1.a(qn.field_f, qn.field_j, qn.field_e, qn.field_d, qn.field_a, qn.field_g, qn.field_l, -89);
           md.field_y.a((byte) -119, (tc) (var1));
           return;
@@ -44,18 +36,18 @@ final class rq extends tc {
     final static void a(boolean param0) {
         ga.field_g = new kd();
         if (param0) {
-            rq.a((byte) 79);
-            lt.field_g.a(ga.field_g, (byte) 78);
-            return;
+          rq.a((byte) 79);
+          lt.field_g.a(ga.field_g, (byte) 78);
+          return;
         }
         lt.field_g.a(ga.field_g, (byte) 78);
     }
 
     rq(String param0) {
         try {
-            this.field_l = param0;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "rq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

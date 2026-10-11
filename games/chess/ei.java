@@ -17,7 +17,7 @@ class ei extends l {
         field_s = null;
         field_r = null;
         if (param0 != -55) {
-            ei.d((byte) 66);
+          ei.d((byte) 66);
         }
     }
 

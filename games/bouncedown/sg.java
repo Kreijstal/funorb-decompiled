@@ -9,10 +9,10 @@ abstract class sg {
     public static void a(byte param0) {
         field_c = null;
         if (param0 > -106) {
-            field_c = (String) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_c = (String) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -23,14 +23,12 @@ abstract class sg {
     abstract int a(int param0, long param1);
 
     final int b(int param0, long param1) {
-        long var4;
-        var4 = this.a(-32578);
-        if (var4 > (long)param0) {
-          wh.a(var4, 19406);
-          return this.a(param0 ^ -127, param1);
-        } else {
+        long var4 = this.a(-32578);
+        if (var4 <= (long)param0) {
           return this.a(param0 ^ -127, param1);
         }
+        wh.a(var4, 19406);
+        return this.a(param0 ^ -127, param1);
     }
 
     abstract void a(boolean param0);

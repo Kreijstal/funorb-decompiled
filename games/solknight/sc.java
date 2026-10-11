@@ -7,13 +7,13 @@ final class sc extends lf implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, int param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 > -117) {
-            this.field_g = 112;
+          this.field_g = 112;
         }
     }
 
     final void a(java.awt.Component param0, boolean param1) {
         if (!param1) {
-            return;
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -29,7 +29,7 @@ final class sc extends lf implements java.awt.event.MouseWheelListener {
 
     final synchronized int a(int param0) {
         if (param0 != 9408) {
-            return 60;
+          return 60;
         }
         int var2 = this.field_g;
         this.field_g = 0;

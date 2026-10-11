@@ -7,9 +7,9 @@ final class ee {
 
     public static void a(int param0) {
         if (param0 != 1600) {
-            ee.a(88);
-            field_a = null;
-            return;
+          ee.a(88);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

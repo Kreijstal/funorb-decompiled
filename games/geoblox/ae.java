@@ -48,83 +48,72 @@ final class ae {
         var2_ref_int__ = var12;
         for (var3 = 0; var3 < this.field_f; var3++) {
           var4 = this.field_a[var3];
-          if (var4 == 0) {
-            continue;
-          }
-          {
-            var5 = 1 << 32 - var4;
-            var6 = var14[var4];
-            var17[var3] = var6;
-            if ((var6 & var5) == 0) {
-              var7 = var6 | var5;
-              for (var8 = var4 - 1; var8 >= 1; var8--) {
-                var9_int = var14[var8];
-                if (var9_int != var6) {
-                  break;
+          if (var4 != 0) {
+            {
+              var5 = 1 << 32 - var4;
+              var6 = var14[var4];
+              var17[var3] = var6;
+              if ((var6 & var5) == 0) {
+                var7 = var6 | var5;
+                for (var8 = var4 - 1; var8 >= 1; var8--) {
+                  var9_int = var14[var8];
+                  if (var9_int != var6) {
+                    break;
+                  }
+                  var10 = 1 << 32 - var8;
+                  if ((var9_int & var10) != 0) {
+                    var2_ref_int__[var8] = var2_ref_int__[var8 - 1];
+                    break;
+                  }
+                  var2_ref_int__[var8] = var9_int | var10;
                 }
-                var10 = 1 << 32 - var8;
-                if ((var9_int & var10) != 0) {
-                  var2_ref_int__[var8] = var2_ref_int__[var8 - 1];
-                  break;
-                }
-                var2_ref_int__[var8] = var9_int | var10;
+              } else {
+                var7 = var2_ref_int__[var4 - 1];
               }
-            } else {
-              var7 = var2_ref_int__[var4 - 1];
             }
-          }
-          var14[var4] = var7;
-          for (var8Lifetime2 = var4 + 1; var8Lifetime2 <= 32; var8Lifetime2++) {
-            var9_intLifetime1 = var14[var8Lifetime2];
-            if (var9_intLifetime1 != var6) {
-              continue;
+            var14[var4] = var7;
+            for (var8Lifetime2 = var4 + 1; var8Lifetime2 <= 32; var8Lifetime2++) {
+              var9_intLifetime1 = var14[var8Lifetime2];
+              if (var9_intLifetime1 == var6) {
+                var14[var8Lifetime2] = var7;
+              }
             }
-            var14[var8Lifetime2] = var7;
           }
         }
         this.field_d = new int[8];
         var2 = 0;
-        var3Lifetime1 = 0;
-        while (true) {
-          if (var3Lifetime1 >= this.field_f) {
-            return;
-          }
+        for (var3Lifetime1 = 0; var3Lifetime1 < this.field_f; var3Lifetime1++) {
           var4Lifetime1 = this.field_a[var3Lifetime1];
-          if (var4Lifetime1 == 0) {
-            var3Lifetime1++;
-            continue;
-          }
-          var5Lifetime1 = var17[var3Lifetime1];
-          var6Lifetime1 = 0;
-          for (var7Lifetime1 = 0; var7Lifetime1 < var4Lifetime1; var7Lifetime1++) {
-            var8Lifetime1 = -2147483648 >>> var7Lifetime1;
-            if ((var5Lifetime1 & var8Lifetime1) == 0) {
-              var6Lifetime1++;
-            } else {
-              if (this.field_d[var6Lifetime1] == 0) {
-                this.field_d[var6Lifetime1] = var2;
+          if (var4Lifetime1 != 0) {
+            var5Lifetime1 = var17[var3Lifetime1];
+            var6Lifetime1 = 0;
+            for (var7Lifetime1 = 0; var7Lifetime1 < var4Lifetime1; var7Lifetime1++) {
+              var8Lifetime1 = -2147483648 >>> var7Lifetime1;
+              if ((var5Lifetime1 & var8Lifetime1) == 0) {
+                var6Lifetime1++;
+              } else {
+                if (this.field_d[var6Lifetime1] == 0) {
+                  this.field_d[var6Lifetime1] = var2;
+                }
+                var6Lifetime1 = this.field_d[var6Lifetime1];
               }
-              var6Lifetime1 = this.field_d[var6Lifetime1];
-            }
-            if (var6Lifetime1 >= this.field_d.length) {
-              var9 = new int[this.field_d.length * 2];
-              var11 = 0;
-              var10Lifetime1 = var11;
-              while (var11 < this.field_d.length) {
-                var9[var11] = this.field_d[var11];
-                var11++;
+              if (var6Lifetime1 >= this.field_d.length) {
+                var9 = new int[this.field_d.length * 2];
+                var11 = 0;
+                var10Lifetime1 = var11;
+                while (var11 < this.field_d.length) {
+                  var9[var11] = this.field_d[var11];
+                  var11++;
+                }
+                this.field_d = var9;
               }
-              this.field_d = var9;
+              var8Lifetime1 = var8Lifetime1 >>> 1;
             }
-            var8Lifetime1 = var8Lifetime1 >>> 1;
+            this.field_d[var6Lifetime1] = ~var3Lifetime1;
+            if (var6Lifetime1 >= var2) {
+              var2 = var6Lifetime1 + 1;
+            }
           }
-          this.field_d[var6Lifetime1] = ~var3Lifetime1;
-          if (var6Lifetime1 < var2) {
-            var3Lifetime1++;
-            continue;
-          }
-          var2 = var6Lifetime1 + 1;
-          var3Lifetime1++;
         }
     }
 
@@ -143,7 +132,7 @@ final class ae {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
-        int stackIn_23_0 = 0;
+        int stackIn_25_0 = 0;
         int var1;
         int var2;
         int var3_int;
@@ -191,10 +180,9 @@ final class ae {
             if (var2 != 0 &&
               ua.b() == 0) {
               this.field_a[var14] = 0;
-              var14++;
-              continue;
+            } else {
+              this.field_a[var14] = ua.b(5) + 1;
             }
-            this.field_a[var14] = ua.b(5) + 1;
             var14++;
           }
         }
@@ -204,8 +192,8 @@ final class ae {
           var3 = ua.d(ua.b(32));
           var4 = ua.d(ua.b(32));
           var5Lifetime1 = ua.b(4) + 1;
-          stackIn_23_0 = (ua.b() == 0) ? 0 : 1;
-          var6 = stackIn_23_0;
+          stackIn_25_0 = (ua.b() == 0) ? 0 : 1;
+          var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_f * this.field_e;
           } else {
@@ -216,7 +204,20 @@ final class ae {
             this.field_b[var8] = ua.b(var5Lifetime1);
           }
           this.field_c = new float[this.field_f][this.field_e];
-          if (var2Lifetime1 == 1) {
+          if (var2Lifetime1 != 1) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
+              var9 = 0.0f;
+              var10 = var8Lifetime1 * this.field_e;
+              for (var11 = 0; var11 < this.field_e; var11++) {
+                var12 = (float)this.field_b[var10] * var4 + var3 + var9;
+                this.field_c[var8Lifetime1][var11] = var12;
+                if (var6 != 0) {
+                  var9 = var12;
+                }
+                var10++;
+              }
+            }
+          } else {
             for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
               var9 = 0.0f;
               var10 = 1;
@@ -228,21 +229,6 @@ final class ae {
                   var9 = var13;
                 }
                 var10 = var10 * var7;
-              }
-            }
-          } else {
-            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
-              var9 = 0.0f;
-              var10 = var8Lifetime1 * this.field_e;
-              for (var11 = 0; var11 < this.field_e; var11++) {
-                var12 = (float)this.field_b[var10] * var4 + var3 + var9;
-                this.field_c[var8Lifetime1][var11] = var12;
-                if (var6 == 0) {
-                  var10++;
-                  continue;
-                }
-                var9 = var12;
-                var10++;
               }
             }
           }

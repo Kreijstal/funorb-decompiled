@@ -13,26 +13,19 @@ final class wa {
         field_c = null;
         field_a = null;
         if (param0 != -13268) {
-            wa.a(34);
-            field_f = null;
-            return;
+          wa.a(34);
+          field_f = null;
+          return;
         }
         field_f = null;
     }
 
     final static void a(boolean param0) {
-        n var1;
-        if (!param0) {
-          return;
-        } else {
-          L0: {
-            var1 = (n) ((Object) k.field_B.e((byte) 123));
-            if (var1 == null) {
-              var1 = new n();
-              break L0;
-            } else {
-              break L0;
-            }
+        n var1 = null;
+        if (param0) {
+          var1 = (n) (k.field_B.e((byte) 123));
+          if (var1 == null) {
+            var1 = new n();
           }
           var1.a(na.field_b, -94, na.field_k, na.field_f, na.field_g, na.field_e, na.field_i, na.field_d);
           qb.field_g.a(1, var1);

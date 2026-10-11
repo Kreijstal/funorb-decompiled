@@ -15,7 +15,7 @@ final class mo extends jb {
         String var2 = (String) null;
         da.a(dg.field_a, 114, (String) null);
         if (param0 >= -53) {
-            field_l = 108;
+          field_l = 108;
         }
     }
 
@@ -25,7 +25,7 @@ final class mo extends jb {
         io.field_O = param0;
         sc.field_g = param2;
         if (param4 != -16) {
-            field_l = -54;
+          field_l = -54;
         }
     }
 
@@ -38,11 +38,11 @@ final class mo extends jb {
 
     mo(long param0, int param1, byte[] param2) {
         try {
-            this.field_j = param1;
-            this.field_k = param0;
-            this.field_g = param2;
+          this.field_j = param1;
+          this.field_k = param0;
+          this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

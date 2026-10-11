@@ -18,9 +18,9 @@ final class rl extends ms {
     public static void a(int param0) {
         field_o = null;
         if (param0 != 480) {
-            rl.a(99);
-            field_l = null;
-            return;
+          rl.a(99);
+          field_l = null;
+          return;
         }
         field_l = null;
     }
@@ -30,15 +30,15 @@ final class rl extends ms {
         this.field_r = param5;
         this.field_s = param6;
         if (param4 >= -53) {
-            return;
+          return;
         }
         try {
-            this.field_p = param7;
-            this.field_u = param3;
-            this.field_m = param1;
-            this.field_t = param0;
+          this.field_p = param7;
+          this.field_u = param3;
+          this.field_m = param1;
+          this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "rl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "rl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

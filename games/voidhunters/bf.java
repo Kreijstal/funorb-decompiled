@@ -6,8 +6,8 @@ final class bf implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = (llb) null;
-            return (tv[]) ((Object) new jpa[param1]);
+          field_a = (llb) null;
+          return (tv[]) ((Object) new jpa[param1]);
         }
         return (tv[]) ((Object) new jpa[param1]);
     }
@@ -15,7 +15,7 @@ final class bf implements dja {
     public static void b(byte param0) {
         field_a = null;
         if (param0 != 27) {
-            field_a = (llb) null;
+          field_a = (llb) null;
         }
     }
 

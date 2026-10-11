@@ -17,174 +17,120 @@ class ge extends ma {
     static int field_l;
 
     final void a(int param0, byte param1, byte[] param2, int param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            if (param1 <= -113) {
-              var5_int = param0;
-              L1: while (true) {
-                if (var5_int >= param0 - -param3) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  fieldTemp$2 = this.field_v;
-                  this.field_v = this.field_v + 1;
-                  param2[var5_int] = this.field_t[fieldTemp$2];
-                  var5_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 > -113) {
+            return;
           }
+          for (var5_int = param0; var5_int < param0 + param3; var5_int++) {
+            fieldTemp$0 = this.field_v;
+            this.field_v = this.field_v + 1;
+            param2[var5_int] = this.field_t[fieldTemp$0];
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("ge.V(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("ge.V(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final int f(int param0) {
         if (param0 <= 43) {
-            this.l(-98);
+          this.l(-98);
         }
         this.field_v = this.field_v + 3;
-        return (this.field_t[this.field_v + -1] & 255) + ((this.field_t[this.field_v + -3] << 1573598160 & 16711680) - -((255 & this.field_t[-2 + this.field_v]) << -2002738872));
+        return (this.field_t[this.field_v - 1] & 255) + ((this.field_t[this.field_v - 3] << 16 & 16711680) + ((255 & this.field_t[-2 + this.field_v]) << 8));
     }
 
     final void a(byte[] param0, byte param1, int param2, int param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_n = (String) null;
-                break L1;
-              }
-            }
-            var5_int = param2;
-            L2: while (true) {
-              if (var5_int >= param3 + param2) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_v;
-                this.field_v = this.field_v + 1;
-                this.field_t[fieldTemp$2] = param0[var5_int];
-                var5_int++;
-                continue L2;
-              }
-            }
+          if (param1 != 0) {
+            field_n = (String) null;
           }
+          for (var5_int = param2; var5_int < param3 + param2; var5_int++) {
+            fieldTemp$0 = this.field_v;
+            this.field_v = this.field_v + 1;
+            this.field_t[fieldTemp$0] = param0[var5_int];
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("ge.PA(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("ge.PA(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final boolean a(boolean param0) {
         this.field_v = this.field_v - 4;
         if (param0) {
-            this.a(true);
+          this.a(true);
         }
         int var2 = oa.a(0, this.field_v, -1, this.field_t);
         int var3 = this.b(true);
         if (var3 == var2) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final int i(int param0) {
         if (param0 >= -2) {
-            return 77;
+          return 77;
         }
         int var2 = this.field_t[this.field_v] & 255;
-        if (-129 < (var2 ^ -1)) {
-            return -64 + this.g(-60);
+        if (var2 < 128) {
+          return -64 + this.g(-60);
         }
         return this.d(-1034) - 49152;
     }
 
     final String m(int param0) {
         if (this.field_t[this.field_v] == 0) {
-            this.field_v = this.field_v + 1;
-            return null;
+          this.field_v = this.field_v + 1;
+          return null;
         }
         if (param0 < 106) {
-            this.a((byte) -12, -102);
+          this.a((byte) -12, -102);
         }
         return this.j(-112);
     }
 
     final int l(int param0) {
         this.field_v = this.field_v + 3;
-        int var2 = (65280 & this.field_t[-2 + this.field_v] << -2118263256) + (((255 & this.field_t[-3 + this.field_v]) << 167900880) + (this.field_t[this.field_v - 1] & 255));
-        if (-8388608 > (var2 ^ -1)) {
-            var2 = var2 - 16777216;
+        int var2 = (65280 & this.field_t[-2 + this.field_v] << 8) + (((255 & this.field_t[-3 + this.field_v]) << 16) + (this.field_t[this.field_v - 1] & 255));
+        if (var2 > 8388607) {
+          var2 = var2 - 16777216;
         }
         if (param0 != 0) {
-            return 110;
+          return 110;
         }
         return var2;
     }
@@ -192,28 +138,28 @@ class ge extends ma {
     final void a(long param0, byte param1) {
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 445149112);
+        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 56);
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 925271152);
+        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 48);
         if (param1 >= -75) {
-            return;
+          return;
         }
         int fieldTemp$2 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 1627194088);
+        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 40);
         int fieldTemp$3 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 366413984);
+        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 32);
         int fieldTemp$4 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> -1866229224);
+        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> 24);
         int fieldTemp$5 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> -1589086768);
+        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> 16);
         int fieldTemp$6 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$6] = (byte)(int)(param0 >> -2010928376);
+        this.field_t[fieldTemp$6] = (byte)(int)(param0 >> 8);
         int fieldTemp$7 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$7] = (byte)(int)param0;
@@ -223,22 +169,22 @@ class ge extends ma {
         int var4 = 122 % ((30 - param1) / 51);
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 1187552944);
+        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 48);
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> -1535475096);
+        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 40);
         int fieldTemp$2 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> -1173962080);
+        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 32);
         int fieldTemp$3 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 2079688408);
+        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 24);
         int fieldTemp$4 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> 1793009616);
+        this.field_t[fieldTemp$4] = (byte)(int)(param0 >> 16);
         int fieldTemp$5 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> -1077156344);
+        this.field_t[fieldTemp$5] = (byte)(int)(param0 >> 8);
         int fieldTemp$6 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$6] = (byte)(int)param0;
@@ -246,7 +192,7 @@ class ge extends ma {
 
     final int g(int param0) {
         if (param0 >= -59) {
-            this.g(-3);
+          this.g(-3);
         }
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
@@ -255,140 +201,74 @@ class ge extends ma {
 
     final int c(byte param0) {
         if (param0 != -115) {
-            String var3 = (String) null;
-            this.a((String) null, 68);
+          String var3 = (String) null;
+          this.a((String) null, 68);
         }
         int var2 = this.field_t[this.field_v] & 255;
-        if (-129 < (var2 ^ -1)) {
-            return this.g(-82);
+        if (var2 < 128) {
+          return this.g(-82);
         }
-        return this.d(-1034) + -32768;
+        return this.d(-1034) - 32768;
     }
 
     final void a(String param0, int param1) {
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
+        int var8 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         long var3_long = 0L;
         RuntimeException var3 = null;
         long var5 = 0L;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         try {
-          L0: {
-            var3_long = 0L;
-            var5 = 0L;
-            if (param1 >= 77) {
-              var7 = param0.length();
-              var8 = 19;
-              L1: while (true) {
-                if (0 > var8) {
-                  this.a(var3_long, -47);
-                  this.a(var5, 109);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    var3_long = var3_long * 38L;
-                    if (var7 > var8) {
-                      L3: {
-                        L4: {
-                          var9 = param0.charAt(var8);
-                          if (65 > var9) {
-                            break L4;
-                          } else {
-                            if (var9 <= 90) {
-                              var3_long = var3_long + (long)(2 + (var9 + -65));
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        L5: {
-                          if (97 > var9) {
-                            break L5;
-                          } else {
-                            if (var9 > 122) {
-                              break L5;
-                            } else {
-                              var3_long = var3_long + (long)(-97 + var9 + 2);
-                              break L3;
-                            }
-                          }
-                        }
-                        L6: {
-                          if (48 > var9) {
-                            break L6;
-                          } else {
-                            if (var9 <= 57) {
-                              var3_long = var3_long + (long)(28 + (var9 - 48));
-                              break L3;
-                            } else {
-                              break L6;
-                            }
-                          }
-                        }
-                        var3_long = var3_long + 1L;
-                        break L3;
-                      }
-                      if (var8 == 10) {
-                        break L2;
-                      } else {
-                        var8--;
-                        continue L1;
-                      }
-                    } else {
-                      if (var8 == 10) {
-                        break L2;
-                      } else {
-                        var8--;
-                        continue L1;
-                      }
-                    }
-                  }
-                  var5 = var3_long;
-                  var3_long = 0L;
-                  var8--;
-                  continue L1;
-                }
+          var3_long = 0L;
+          var5 = 0L;
+          if (param1 < 77) {
+            return;
+          }
+          var7 = param0.length();
+          for (var8 = 19; 0 <= var8; var8--) {
+            boolean decompiledFrameRemainder0 = true;
+            var3_long = var3_long * 38L;
+            if (var7 > var8) {
+              var9 = param0.charAt(var8);
+              if (65 <= var9 &&
+                var9 <= 90) {
+                var3_long = var3_long + (long)(2 + (var9 - 65));
+              } else if (97 <= var9 &&
+                var9 <= 122) {
+                var3_long = var3_long + (long)(-97 + var9 + 2);
+              } else if (48 <= var9 &&
+                var9 <= 57) {
+                var3_long = var3_long + (long)(28 + (var9 - 48));
+              } else {
+                var3_long = var3_long + 1L;
               }
+              decompiledFrameRemainder0 = (var8 == 10);
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              decompiledFrameRemainder0 = (var8 == 10);
+            }
+            if (decompiledFrameRemainder0) {
+              var5 = var3_long;
+              var3_long = 0L;
             }
           }
+          this.a(var3_long, -47);
+          this.a(var5, 109);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var3);
-
-            stackIn_27_1 = new StringBuilder().append("ge.K(");
-
-            if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L7;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L7;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = var3;
+          stackIn_29_1 = new StringBuilder().append("ge.K(");
+          if (param0 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw wm.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -396,8 +276,6 @@ class ge extends ma {
         int incrementValue$0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -410,81 +288,62 @@ class ge extends ma {
         int var9 = 0;
         String var10 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 32052) {
-                break L1;
-              } else {
-                var10 = (String) null;
-                this.a((String) null, 85);
-                break L1;
-              }
+          if (param0 != 32052) {
+            var10 = (String) null;
+            this.a((String) null, 85);
+          }
+          var3_int = this.field_v / 8;
+          this.field_v = 0;
+          var4 = 0;
+          while (true) {
+            if (var4 >= var3_int) {
+              return;
             }
-            var3_int = this.field_v / 8;
-            this.field_v = 0;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var3_int) {
-                break L0;
-              } else {
-                var5 = this.b(true);
-                var6 = this.b(true);
-                var7 = 0;
-                var8 = -1640531527;
-                var9 = 32;
-                L3: while (true) {
-                  incrementValue$0 = var9;
-                  var9--;
-                  if ((incrementValue$0 ^ -1) >= -1) {
-                    this.field_v = this.field_v - 8;
-                    this.a(true, var5);
-                    this.a(true, var6);
-                    var4++;
-                    continue L2;
-                  } else {
-                    var5 = var5 + (var7 + param1[3 & var7] ^ var6 + (var6 >>> -1810491163 ^ var6 << -1461911068));
-                    var7 = var7 + var8;
-                    var6 = var6 + (var7 + param1[(6753 & var7) >>> 716469259] ^ var5 + (var5 >>> -800313339 ^ var5 << -307741532));
-                    continue L3;
-                  }
-                }
+            var5 = this.b(true);
+            var6 = this.b(true);
+            var7 = 0;
+            var8 = -1640531527;
+            var9 = 32;
+            while (true) {
+              incrementValue$0 = var9;
+              var9--;
+              if (incrementValue$0 > 0) {
+                var5 = var5 + (var7 + param1[3 & var7] ^ var6 + (var6 >>> 5 ^ var6 << 4));
+                var7 = var7 + var8;
+                var6 = var6 + (var7 + param1[(6753 & var7) >>> 11] ^ var5 + (var5 >>> 5 ^ var5 << 4));
+                continue;
               }
+              break;
             }
+            this.field_v = this.field_v - 8;
+            this.a(true, var5);
+            this.a(true, var6);
+            var4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("ge.KA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("ge.KA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final void b(int param0, int param1) {
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param0 >> 1606445616);
+        this.field_t[fieldTemp$0] = (byte)(param0 >> 16);
         if (param1 <= 37) {
-            this.field_v = 87;
+          this.field_v = 87;
         }
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(param0 >> -528716216);
+        this.field_t[fieldTemp$1] = (byte)(param0 >> 8);
         int fieldTemp$2 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$2] = (byte)param0;
@@ -492,16 +351,19 @@ class ge extends ma {
 
     final int k(int param0) {
         int fieldTemp$1 = 0;
+        int var2;
+        int var3;
+        int var4;
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        int var2 = this.field_t[fieldTemp$0];
-        int var4 = 22 % ((param0 - 0) / 63);
-        int var3 = 0;
-        while (-1 < (var2 ^ -1)) {
-            var3 = (var3 | var2 & 127) << -125198233;
-            fieldTemp$1 = this.field_v;
-            this.field_v = this.field_v + 1;
-            var2 = this.field_t[fieldTemp$1];
+        var2 = this.field_t[fieldTemp$0];
+        var4 = 22 % ((param0 - 0) / 63);
+        var3 = 0;
+        while (var2 < 0) {
+          var3 = (var3 | var2 & 127) << 7;
+          fieldTemp$1 = this.field_v;
+          this.field_v = this.field_v + 1;
+          var2 = this.field_t[fieldTemp$1];
         }
         return var3 | var2;
     }
@@ -509,16 +371,16 @@ class ge extends ma {
     final void a(boolean param0, int param1) {
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 1786401048);
+        this.field_t[fieldTemp$0] = (byte)(param1 >> 24);
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(param1 >> -375994736);
+        this.field_t[fieldTemp$1] = (byte)(param1 >> 16);
         if (!param0) {
-            return;
+          return;
         }
         int fieldTemp$2 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(param1 >> -760051640);
+        this.field_t[fieldTemp$2] = (byte)(param1 >> 8);
         int fieldTemp$3 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$3] = (byte)param1;
@@ -526,7 +388,7 @@ class ge extends ma {
 
     public static void e(int param0) {
         if (param0 != 4109) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
         field_o = null;
         field_m = null;
@@ -543,37 +405,37 @@ class ge extends ma {
     final int b(boolean param0) {
         this.field_v = this.field_v + 4;
         if (!param0) {
-            return 15;
+          return 15;
         }
-        return (255 & this.field_t[this.field_v - 1]) + (65280 & this.field_t[-2 + this.field_v] << -1124121144) + (this.field_t[-4 + this.field_v] << 357384600 & -16777216) + (16711680 & this.field_t[-3 + this.field_v] << 416428176);
+        return (255 & this.field_t[this.field_v - 1]) + (65280 & this.field_t[-2 + this.field_v] << 8) + (this.field_t[-4 + this.field_v] << 24 & -16777216) + (16711680 & this.field_t[-3 + this.field_v] << 16);
     }
 
     final void a(int param0, byte param1) {
-        this.field_t[-4 + (this.field_v + -param0)] = (byte)(param0 >> 849471608);
-        this.field_t[this.field_v - param0 - 3] = (byte)(param0 >> -92103664);
+        this.field_t[-4 + (this.field_v - param0)] = (byte)(param0 >> 24);
+        this.field_t[this.field_v - param0 - 3] = (byte)(param0 >> 16);
         if (param1 > -90) {
-            int[] var4 = (int[]) null;
-            this.a(125, -118, (int[]) null, -41);
+          int[] var4 = (int[]) null;
+          this.a(125, -118, (int[]) null, -41);
         }
-        this.field_t[-2 + (-param0 + this.field_v)] = (byte)(param0 >> -612497144);
+        this.field_t[-2 + (-param0 + this.field_v)] = (byte)(param0 >> 8);
         this.field_t[-param0 + this.field_v - 1] = (byte)param0;
     }
 
     final void a(int param0, int param1) {
         if (param1 != -32768) {
-            return;
+          return;
         }
         if ((param0 & -128) != 0) {
-            if (!(0 == (-16384 & param0))) {
-                if ((-2097152 & param0) != 0) {
-                    if (!(-1 == (param0 & -268435456 ^ -1))) {
-                        this.a(param0 >>> 1794573564 | 128, false);
-                    }
-                    this.a(128 | param0 >>> 1725818645, false);
-                }
-                this.a(128 | param0 >>> 208328078, false);
+          if (0 != (-16384 & param0)) {
+            if ((-2097152 & param0) != 0) {
+              if ((param0 & -268435456) != 0) {
+                this.a(param0 >>> 28 | 128, false);
+              }
+              this.a(128 | param0 >>> 21, false);
             }
-            this.a(param0 >>> 1508300519 | 128, false);
+            this.a(128 | param0 >>> 14, false);
+          }
+          this.a(param0 >>> 7 | 128, false);
         }
         this.a(param0 & 127, false);
     }
@@ -587,34 +449,34 @@ class ge extends ma {
     final void a(byte param0, int param1) {
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(param1 >> 421411976);
+        this.field_t[fieldTemp$0] = (byte)(param1 >> 8);
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$1] = (byte)param1;
         if (param0 != -81) {
-            String var4 = (String) null;
-            this.a(false, (String) null);
+          String var4 = (String) null;
+          this.a(false, (String) null);
         }
     }
 
     final long h(int param0) {
         long var2 = 4294967295L & (long)this.b(true);
         if (param0 != -412303328) {
-            field_s = (vh) null;
+          field_s = (vh) null;
         }
         long var4 = (long)this.b(true) & 4294967295L;
-        return (var2 << -412303328) + var4;
+        return (var2 << 32) + var4;
     }
 
     final void b(int param0, byte param1) {
         int fieldTemp$0 = 0;
         if (param1 != -8) {
-            return;
+          return;
         }
         while (param0 > this.field_v) {
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            this.field_t[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.field_v;
+          this.field_v = this.field_v + 1;
+          this.field_t[fieldTemp$0] = (byte) 0;
         }
     }
 
@@ -625,22 +487,22 @@ class ge extends ma {
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-            var4_int = this.field_v;
-            this.field_v = 0;
-            var5 = new byte[var4_int];
-            this.a(0, (byte) -128, var5, var4_int);
-            var6 = new java.math.BigInteger(var5);
-            var7 = var6.modPow(param0, param2);
-            var8 = var7.toByteArray();
-            this.field_v = 0;
-            if (param1 <= 39) {
-                String var9 = (String) null;
-                this.a(true, (String) null);
-            }
-            this.a((byte) -81, var8.length);
-            this.a(var8, (byte) 0, 0, var8.length);
+          var4_int = this.field_v;
+          this.field_v = 0;
+          var5 = new byte[var4_int];
+          this.a(0, (byte) -128, var5, var4_int);
+          var6 = new java.math.BigInteger(var5);
+          var7 = var6.modPow(param0, param2);
+          var8 = var7.toByteArray();
+          this.field_v = 0;
+          if (param1 <= 39) {
+            String var9 = (String) null;
+            this.a(true, (String) null);
+          }
+          this.a((byte) -81, var8.length);
+          this.a(var8, (byte) 0, 0, var8.length);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -649,40 +511,39 @@ class ge extends ma {
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$0] = (byte)param0;
         if (param1) {
-            this.c(-68);
+          this.c(-68);
         }
     }
 
     final int d(byte param0) {
         this.field_v = this.field_v + 2;
-        int var2 = (this.field_t[-1 + this.field_v] & 255) + ((this.field_t[this.field_v + -2] & 255) << 1433810280);
+        int var2 = (this.field_t[-1 + this.field_v] & 255) + ((this.field_t[this.field_v - 2] & 255) << 8);
         if (32767 < var2) {
-            var2 = var2 - 65536;
+          var2 = var2 - 65536;
         }
         if (param0 > -76) {
-            this.b(true);
+          this.b(true);
         }
         return var2;
     }
 
     final String j(int param0) {
         int fieldTemp$0 = 0;
+        int var2;
+        int var3;
         if (param0 >= -10) {
-            return (String) null;
+          return (String) null;
         }
-        int var2 = this.field_v;
-        while (true) {
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            if (this.field_t[fieldTemp$0] == 0) {
-                break;
-            }
+        var2 = this.field_v;
+        do {
+          fieldTemp$0 = this.field_v;
+          this.field_v = this.field_v + 1;
+        } while (this.field_t[fieldTemp$0] != 0);
+        var3 = -var2 + this.field_v - 1;
+        if (0 != var3) {
+          return tl.a(var3, -7510, this.field_t, var2);
         }
-        int var3 = -var2 + this.field_v - 1;
-        if (0 == var3) {
-            return "";
-        }
-        return tl.a(var3, -7510, this.field_t, var2);
+        return "";
     }
 
     final static void a(float[] param0, int[] param1, int[] param2, float[] param3, int[] param4, int[] param5, int[] param6, byte param7, int[] param8) {
@@ -711,82 +572,86 @@ class ge extends ma {
         float var24 = (float)param5[2] - var9_float;
         float var25 = -var10 + (float)param8[2];
         float var26 = -var11 + (float)param2[2];
+        float var30Lifetime1;
+        float var31Lifetime1;
+        float var32Lifetime1;
+        float var33Lifetime1;
         if (param7 < 23) {
-            return;
+          return;
         }
         try {
-            var27 = var17 * var13 - var14 * var16;
-            var28 = -(var12 * var17) + var15 * var14;
-            var29 = var12 * var16 - var15 * var13;
-            var30 = -(var17 * var28) + var29 * var16;
-            var31 = var27 * var17 - var29 * var15;
-            var32 = -(var27 * var16) + var15 * var28;
-            var33 = 1.0f / (var31 * var13 + var12 * var30 + var14 * var32);
-            param0[1] = var33 * (var32 * var23 + (var30 * var21 + var22 * var31));
-            param0[0] = (var32 * var20 + (var18 * var30 + var31 * var19)) * var33;
-            param0[2] = var33 * (var32 * var26 + (var31 * var25 + var30 * var24));
-            var30 = var13 * var29 - var28 * var14;
-            var32 = -(var13 * var27) + var28 * var12;
-            var31 = var14 * var27 - var29 * var12;
-            var33 = 1.0f / (var15 * var30 + var16 * var31 + var32 * var17);
-            param3[0] = var33 * (var30 * var18 + var31 * var19 + var32 * var20);
-            param3[1] = var33 * (var22 * var31 + var30 * var21 + var23 * var32);
-            param3[2] = (var31 * var25 + var24 * var30 + var26 * var32) * var33;
+          var27 = var17 * var13 - var14 * var16;
+          var28 = -(var12 * var17) + var15 * var14;
+          var29 = var12 * var16 - var15 * var13;
+          var30 = -(var17 * var28) + var29 * var16;
+          var31 = var27 * var17 - var29 * var15;
+          var32 = -(var27 * var16) + var15 * var28;
+          var33 = 1.0f / (var31 * var13 + var12 * var30 + var14 * var32);
+          param0[1] = var33 * (var32 * var23 + (var30 * var21 + var22 * var31));
+          param0[0] = (var32 * var20 + (var18 * var30 + var31 * var19)) * var33;
+          param0[2] = var33 * (var32 * var26 + (var31 * var25 + var30 * var24));
+          var30Lifetime1 = var13 * var29 - var28 * var14;
+          var32Lifetime1 = -(var13 * var27) + var28 * var12;
+          var31Lifetime1 = var14 * var27 - var29 * var12;
+          var33Lifetime1 = 1.0f / (var15 * var30Lifetime1 + var16 * var31Lifetime1 + var32Lifetime1 * var17);
+          param3[0] = var33Lifetime1 * (var30Lifetime1 * var18 + var31Lifetime1 * var19 + var32Lifetime1 * var20);
+          param3[1] = var33Lifetime1 * (var22 * var31Lifetime1 + var30Lifetime1 * var21 + var23 * var32Lifetime1);
+          param3[2] = (var31Lifetime1 * var25 + var24 * var30Lifetime1 + var26 * var32Lifetime1) * var33Lifetime1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.AA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.AA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(byte param0, int param1) {
-        if (param1 >= 0 && 128 > param1) {
-            this.a(param1, false);
-            return;
+        if (param1 >= 0 &&
+          128 > param1) {
+          this.a(param1, false);
+          return;
         }
         if (param0 != -49) {
-            field_x = (String) null;
+          field_x = (String) null;
         }
-        if (0 <= param1) {
-            if (!(-32769 >= (param1 ^ -1))) {
-                this.a((byte) -81, param1 + 32768);
-                return;
-            }
+        if (0 <= param1 &&
+          param1 < 32768) {
+          this.a((byte) -81, param1 + 32768);
+          return;
         }
         throw new IllegalArgumentException();
     }
 
     final void c(int param0, byte param1) {
-        this.field_t[this.field_v + (-param0 + -2)] = (byte)(param0 >> 1825337384);
+        this.field_t[this.field_v + (-param0 - 2)] = (byte)(param0 >> 8);
         if (param1 != -92) {
-            String var4 = (String) null;
-            this.a((String) null, 44);
+          String var4 = (String) null;
+          this.a((String) null, 44);
         }
         this.field_t[-1 + (this.field_v - param0)] = (byte)param0;
     }
 
     final String a(int param0) {
         int fieldTemp$1 = 0;
+        int var2;
+        int var3;
+        int var4;
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        int var2 = this.field_t[fieldTemp$0];
+        var2 = this.field_t[fieldTemp$0];
         if (0 != var2) {
-            throw new IllegalStateException("");
+          throw new IllegalStateException("");
         }
         if (param0 != 10762) {
-            return (String) null;
+          return (String) null;
         }
-        int var3 = this.field_v;
-        while (true) {
-            fieldTemp$1 = this.field_v;
-            this.field_v = this.field_v + 1;
-            if (this.field_t[fieldTemp$1] == 0) {
-                break;
-            }
+        var3 = this.field_v;
+        do {
+          fieldTemp$1 = this.field_v;
+          this.field_v = this.field_v + 1;
+        } while (this.field_t[fieldTemp$1] != 0);
+        var4 = -1 + (-var3 + this.field_v);
+        if (0 != var4) {
+          return tl.a(var4, param0 - 18272, this.field_t, var3);
         }
-        int var4 = -1 + (-var3 + this.field_v);
-        if (0 == var4) {
-            return "";
-        }
-        return tl.a(var4, param0 + -18272, this.field_t, var3);
+        return "";
     }
 
     final void a(boolean param0, String param1) {
@@ -795,42 +660,42 @@ class ge extends ma {
         CharSequence var4 = null;
         int fieldTemp$1 = 0;
         try {
-            var3_int = param1.indexOf(' ');
-            if (0 <= var3_int) {
-                throw new IllegalArgumentException("");
-            }
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            this.field_t[fieldTemp$0] = (byte) 0;
-            var4 = (CharSequence) ((Object) param1);
-            this.field_v = this.field_v + o.a(this.field_t, var4, -24984, param1.length(), 0, this.field_v);
-            if (param0) {
-                this.field_t = (byte[]) null;
-            }
-            fieldTemp$1 = this.field_v;
-            this.field_v = this.field_v + 1;
-            this.field_t[fieldTemp$1] = (byte) 0;
+          var3_int = param1.indexOf('\0');
+          if (0 <= var3_int) {
+            throw new IllegalArgumentException("");
+          }
+          fieldTemp$0 = this.field_v;
+          this.field_v = this.field_v + 1;
+          this.field_t[fieldTemp$0] = (byte) 0;
+          var4 = (CharSequence) ((Object) param1);
+          this.field_v = this.field_v + o.a(this.field_t, var4, -24984, param1.length(), 0, this.field_v);
+          if (param0) {
+            this.field_t = (byte[]) null;
+          }
+          fieldTemp$1 = this.field_v;
+          this.field_v = this.field_v + 1;
+          this.field_t[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(long param0, int param1) {
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> -1897199520);
+        this.field_t[fieldTemp$0] = (byte)(int)(param0 >> 32);
         if (param1 != 24136) {
-            this.i(-128);
+          this.i(-128);
         }
         int fieldTemp$1 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 1246471832);
+        this.field_t[fieldTemp$1] = (byte)(int)(param0 >> 24);
         int fieldTemp$2 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> -1370318384);
+        this.field_t[fieldTemp$2] = (byte)(int)(param0 >> 16);
         int fieldTemp$3 = this.field_v;
         this.field_v = this.field_v + 1;
-        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 566256520);
+        this.field_t[fieldTemp$3] = (byte)(int)(param0 >> 8);
         int fieldTemp$4 = this.field_v;
         this.field_v = this.field_v + 1;
         this.field_t[fieldTemp$4] = (byte)(int)param0;
@@ -839,15 +704,15 @@ class ge extends ma {
     final int d(int param0) {
         this.field_v = this.field_v + 2;
         if (param0 != -1034) {
-            field_s = (vh) null;
+          field_s = (vh) null;
         }
-        return (this.field_t[-2 + this.field_v] << 841803048 & 65280) + (this.field_t[this.field_v + -1] & 255);
+        return (this.field_t[-2 + this.field_v] << 8 & 65280) + (this.field_t[this.field_v - 1] & 255);
     }
 
     final int c(int param0) {
         int var2 = -95 / ((9 - param0) / 59);
         if (0 > this.field_t[this.field_v]) {
-            return this.b(true) & 2147483647;
+          return this.b(true) & 2147483647;
         }
         return this.d(-1034);
     }
@@ -859,26 +724,26 @@ class ge extends ma {
 
     ge(byte[] param0) {
         try {
-            this.field_v = 0;
-            this.field_t = param0;
+          this.field_v = 0;
+          this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void c(int param0, int param1) {
-        if (param1 < 64) {
-            if (!(-64 > param1)) {
-                this.a(param1 + 64, false);
-                return;
-            }
+        if (param1 < 64 &&
+          -64 <= param1) {
+          this.a(param1 + 64, false);
+          return;
         }
-        if ((param1 ^ -1) > -16385 && (param1 ^ -1) <= 16383) {
-            this.a((byte) -81, 49152 + param1);
-            return;
+        if (param1 < 16384 &&
+          param1 >= -16384) {
+          this.a((byte) -81, 49152 + param1);
+          return;
         }
         if (param0 > -84) {
-            return;
+          return;
         }
         throw new IllegalArgumentException();
     }
@@ -887,8 +752,6 @@ class ge extends ma {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        Object stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
@@ -897,141 +760,73 @@ class ge extends ma {
         int var4 = 0;
         int[] var5 = null;
         String var6 = null;
+        String var3Lifetime1;
+        Object var3_refLifetime1;
+        String var3Lifetime2;
         var4 = Pool.field_O;
         try {
-          L0: {
-            L1: {
-              if (param0 == -24) {
-                break L1;
-              } else {
-                var5 = (int[]) null;
-                ge.a((float[]) null, (int[]) null, (int[]) null, (float[]) null, (int[]) null, (int[]) null, (int[]) null, (byte) 9, (int[]) null);
-                break L1;
-              }
-            }
-            L2: {
-              var2 = null;
-              if (null == param1.field_j) {
-                break L2;
-              } else {
-                L3: {
-                  var6 = param1.field_j;
-                  var3 = var6;
-                  var3 = var6;
-                  var2 = var6;
-                  if (1 == param1.field_h) {
-                    var2 = "<img=0>" + var6;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if (-3 == (param1.field_h ^ -1)) {
-                  var2 = "<img=1>" + (String) (var2);
-                  var3_ref = var2;
-                  var3_ref = var2;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L4: {
-              var3 = "";
-              if (-3 == (param1.field_p ^ -1)) {
-                if (!param1.field_g) {
-                  L5: {
-                    if (param1.field_m != 0) {
-                      break L5;
-                    } else {
-                      if (param1.field_e == 0) {
-                        var3 = nr.a(new String[]{(String) (var2)}, -1, jl.field_a);
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  var3 = nr.a(new String[]{(String) (var2)}, -1, vh.field_S);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              } else {
-                L6: {
-                  if (param1.field_p != 0) {
-                    break L6;
-                  } else {
-                    if (!ej.field_l) {
-                      break L6;
-                    } else {
-                      var3 = "[" + sn.field_l + "] ";
-                      break L6;
-                    }
-                  }
-                }
-                L7: {
-                  if (param1.field_p != 1) {
-                    break L7;
-                  } else {
-                    var3 = "[" + nr.a(new String[]{param1.field_n}, -1, th.field_c) + "] ";
-                    break L7;
-                  }
-                }
-                L8: {
-                  if (-5 != (param1.field_p ^ -1)) {
-                    break L8;
-                  } else {
-                    if (null == kn.field_g) {
-                      break L8;
-                    } else {
-                      var3 = "[" + kn.field_g + "] ";
-                      break L8;
-                    }
-                  }
-                }
-                L9: {
-                  if ((param1.field_p ^ -1) != -4) {
-                    break L9;
-                  } else {
-                    var3 = "[#" + param1.field_n + "] ";
-                    break L9;
-                  }
-                }
-                if (param1.field_g) {
-                  break L4;
-                } else {
-                  var3 = var3 + (String) (var2) + ": ";
-                  break L4;
-                }
-              }
-            }
-            stackIn_31_0 = (String) (var3);
-            break L0;
+          if (param0 != -24) {
+            var5 = (int[]) null;
+            ge.a((float[]) null, (int[]) null, (int[]) null, (float[]) null, (int[]) null, (int[]) null, (int[]) null, (byte) 9, (int[]) null);
           }
+          var2 = null;
+          if (null != param1.field_j) {
+            var6 = param1.field_j;
+            var3 = var6;
+            var3Lifetime2 = var6;
+            var2 = var6;
+            if (1 == param1.field_h) {
+              var2 = "<img=0>" + var6;
+            }
+            if (param1.field_h == 2) {
+              var2 = "<img=1>" + (String) (var2);
+              var3_ref = var2;
+              var3_refLifetime1 = var2;
+            }
+          }
+          var3Lifetime1 = "";
+          if (param1.field_p == 2) {
+            if (!param1.field_g) {
+              if (param1.field_m == 0 &&
+                param1.field_e == 0) {
+                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, jl.field_a);
+              } else {
+                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, vh.field_S);
+              }
+            }
+          } else {
+            if (param1.field_p == 0 &&
+              ej.field_l) {
+              var3Lifetime1 = "[" + sn.field_l + "] ";
+            }
+            if (param1.field_p == 1) {
+              var3Lifetime1 = "[" + nr.a(new String[]{param1.field_n}, -1, th.field_c) + "] ";
+            }
+            if (param1.field_p == 4 &&
+              null != kn.field_g) {
+              var3Lifetime1 = "[" + kn.field_g + "] ";
+            }
+            if (param1.field_p == 3) {
+              var3Lifetime1 = "[#" + param1.field_n + "] ";
+            }
+            if (!param1.field_g) {
+              var3Lifetime1 = var3Lifetime1 + (String) (var2) + ": ";
+            }
+          }
+          stackIn_31_0 = var3Lifetime1;
+          return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var2 = decompiledCaughtException;
-            stackIn_34_0 = var2;
-
-            stackIn_34_1 = new StringBuilder().append("ge.U(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_35_0 = stackIn_34_0;
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "null";
-              break L10;
-            } else {
-              stackIn_35_0 = stackIn_34_0;
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "{...}";
-              break L10;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_34_0 = var2;
+          stackIn_34_1 = new StringBuilder().append("ge.U(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
+          throw wm.a((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
-        return stackIn_31_0;
     }
 
     final void a(int param0, String param1) {
@@ -1039,20 +834,20 @@ class ge extends ma {
         CharSequence var4 = null;
         int fieldTemp$0 = 0;
         try {
-            if (param0 != -9946) {
-                field_q = (jg) null;
-            }
-            var3_int = param1.indexOf(' ');
-            if ((var3_int ^ -1) <= -1) {
-                throw new IllegalArgumentException("");
-            }
-            var4 = (CharSequence) ((Object) param1);
-            this.field_v = this.field_v + o.a(this.field_t, var4, param0 + -15038, param1.length(), 0, this.field_v);
-            fieldTemp$0 = this.field_v;
-            this.field_v = this.field_v + 1;
-            this.field_t[fieldTemp$0] = (byte) 0;
+          if (param0 != -9946) {
+            field_q = (jg) null;
+          }
+          var3_int = param1.indexOf('\0');
+          if (var3_int >= 0) {
+            throw new IllegalArgumentException("");
+          }
+          var4 = (CharSequence) ((Object) param1);
+          this.field_v = this.field_v + o.a(this.field_t, var4, param0 - 15038, param1.length(), 0, this.field_v);
+          fieldTemp$0 = this.field_v;
+          this.field_v = this.field_v + 1;
+          this.field_t[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1067,46 +862,46 @@ class ge extends ma {
         int var13 = 0;
         int incrementValue$0 = 0;
         try {
-            int var6 = -28 / ((param3 - -39) / 41);
-            var5_int = this.field_v;
-            this.field_v = param1;
-            var7 = (param0 + -param1) / 8;
-            for (var8 = 0; var7 > var8; var8++) {
-                var9 = this.b(true);
-                var10 = this.b(true);
-                var11 = -957401312;
-                var12 = -1640531527;
-                var13 = 32;
-                while (true) {
-                    incrementValue$0 = var13;
-                    var13--;
-                    if (-1 <= (incrementValue$0 ^ -1)) {
-                        break;
-                    }
-                    var10 = var10 - ((var9 << -814168444 ^ var9 >>> -2134175003) + var9 ^ var11 + param2[(var11 & 8044) >>> 1819825739]);
-                    var11 = var11 - var12;
-                    var9 = var9 - (var11 - -param2[var11 & 3] ^ (var10 << 1406437572 ^ var10 >>> -53509723) - -var10);
-                }
-                this.field_v = this.field_v - 8;
-                this.a(true, var9);
-                this.a(true, var10);
+          int var6 = -28 / ((param3 + 39) / 41);
+          var5_int = this.field_v;
+          this.field_v = param1;
+          var7 = (param0 - param1) / 8;
+          for (var8 = 0; var7 > var8; var8++) {
+            var9 = this.b(true);
+            var10 = this.b(true);
+            var11 = -957401312;
+            var12 = -1640531527;
+            var13 = 32;
+            while (true) {
+              incrementValue$0 = var13;
+              var13--;
+              if (incrementValue$0 <= 0) {
+                break;
+              }
+              var10 = var10 - ((var9 << 4 ^ var9 >>> 5) + var9 ^ var11 + param2[(var11 & 8044) >>> 11]);
+              var11 = var11 - var12;
+              var9 = var9 - (var11 + param2[var11 & 3] ^ (var10 << 4 ^ var10 >>> 5) + var10);
             }
-            this.field_v = var5_int;
+            this.field_v = this.field_v - 8;
+            this.a(true, var9);
+            this.a(true, var10);
+          }
+          this.field_v = var5_int;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ge.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ge.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void b(int param0, boolean param1) {
-        this.field_t[-1 + -param0 + this.field_v] = (byte)param0;
+        this.field_t[-1 - param0 + this.field_v] = (byte)param0;
         if (!param1) {
-            field_o = (String) null;
+          field_o = (String) null;
         }
     }
 
     final byte e(byte param0) {
         if (param0 != 105) {
-            return (byte) -27;
+          return (byte) -27;
         }
         int fieldTemp$0 = this.field_v;
         this.field_v = this.field_v + 1;

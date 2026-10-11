@@ -15,78 +15,70 @@ final class da {
     static jb field_e;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        int var9;
-        var9 = Confined.field_J ? 1 : 0;
-        if (param3 <= -75) {
-          if (param7 > param2) {
-            if (param7 >= param4) {
-              if (param2 < param4) {
-                mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0, (byte) 112);
-                return;
-              } else {
-                mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1, (byte) 112);
-                return;
-              }
-            } else {
-              mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5, (byte) 112);
-              return;
-            }
-          } else {
-            if (param4 <= param2) {
-              if (param4 > param7) {
-                mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0, (byte) 112);
-                return;
-              } else {
-                mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5, (byte) 112);
-                return;
-              }
-            } else {
-              mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1, (byte) 112);
-              return;
-            }
-          }
-        } else {
+        int var9 = Confined.field_J ? 1 : 0;
+        if (param3 > -75) {
           return;
         }
+        if (param7 <= param2) {
+          if (param4 > param2) {
+            mb.a(param4, param6, param2, param7, param5, fn.field_h, param0, param1, (byte) 112);
+            return;
+          }
+          if (param4 <= param7) {
+            mb.a(param2, param6, param7, param4, param0, fn.field_h, param1, param5, (byte) 112);
+            return;
+          }
+          mb.a(param2, param6, param4, param7, param5, fn.field_h, param1, param0, (byte) 112);
+          return;
+        }
+        if (param7 < param4) {
+          mb.a(param4, param6, param7, param2, param1, fn.field_h, param0, param5, (byte) 112);
+          return;
+        }
+        if (param2 >= param4) {
+          mb.a(param7, param6, param2, param4, param0, fn.field_h, param5, param1, (byte) 112);
+          return;
+        }
+        mb.a(param7, param6, param4, param2, param1, fn.field_h, param5, param0, (byte) 112);
     }
 
     final void a(double param0, byte param1) {
-        double var4;
-        double var6;
-        double var8;
-        double var10;
-        double var12;
-        var4 = Math.sqrt(this.field_f * this.field_f + this.field_c * this.field_c + this.field_d * this.field_d);
+        double var6 = 0.0;
+        double var8 = 0.0;
+        double var10 = 0.0;
+        double var12 = 0.0;
+        double var4 = Math.sqrt(this.field_f * this.field_f + this.field_c * this.field_c + this.field_d * this.field_d);
+        double var6Lifetime1;
+        double var8Lifetime1;
+        double var10Lifetime1;
+        double var12Lifetime1;
         if (var4 <= 0.0001) {
           return;
-        } else {
-          if (param1 != -65) {
-            this.field_k = -1.916192409169927;
-            var6 = Math.atan2(var4, this.field_k);
-            var8 = this.field_f / var4;
-            var10 = this.field_c / var4;
-            var6 = var6 * param0;
-            var12 = this.field_d / var4;
-            this.field_k = Math.cos(var6);
-            var4 = Math.sin(var6);
-            this.field_c = var4 * var10;
-            this.field_f = var4 * var8;
-            this.field_d = var4 * var12;
-            return;
-          } else {
-            var6 = Math.atan2(var4, this.field_k);
-            var8 = this.field_f / var4;
-            var10 = this.field_c / var4;
-            var6 = var6 * param0;
-            var12 = this.field_d / var4;
-            this.field_k = Math.cos(var6);
-            var4 = Math.sin(var6);
-            this.field_c = var4 * var10;
-            this.field_f = var4 * var8;
-            this.field_d = var4 * var12;
-            return;
-          }
         }
+        if (param1 == -65) {
+          var6 = Math.atan2(var4, this.field_k);
+          var8 = this.field_f / var4;
+          var10 = this.field_c / var4;
+          var6 = var6 * param0;
+          var12 = this.field_d / var4;
+          this.field_k = Math.cos(var6);
+          var4 = Math.sin(var6);
+          this.field_c = var4 * var10;
+          this.field_f = var4 * var8;
+          this.field_d = var4 * var12;
+          return;
+        }
+        this.field_k = -1.916192409169927;
+        var6Lifetime1 = Math.atan2(var4, this.field_k);
+        var8Lifetime1 = this.field_f / var4;
+        var10Lifetime1 = this.field_c / var4;
+        var6Lifetime1 = var6Lifetime1 * param0;
+        var12Lifetime1 = this.field_d / var4;
+        this.field_k = Math.cos(var6Lifetime1);
+        var4 = Math.sin(var6Lifetime1);
+        this.field_c = var4 * var10Lifetime1;
+        this.field_f = var4 * var8Lifetime1;
+        this.field_d = var4 * var12Lifetime1;
     }
 
     public static void b(int param0) {
@@ -95,7 +87,7 @@ final class da {
         field_a = null;
         field_e = null;
         if (param0 != -12961) {
-            da.a(69, -21, 50, (byte) -48, 34, -124, -53, 1);
+          da.a(69, -21, 50, (byte) -48, 34, -124, -53, 1);
         }
     }
 
@@ -111,98 +103,66 @@ final class da {
         double stackIn_6_0 = 0.0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
+        double var9Lifetime1;
         var15 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            var5_double = this.field_d * param1.field_d + (param1.field_k * this.field_k + param1.field_f * this.field_f + this.field_c * param1.field_c);
-            if (1.0 <= var5_double) {
-              stackIn_6_0 = 0.0;
-              break L0;
+          var5_double = this.field_d * param1.field_d + (param1.field_k * this.field_k + param1.field_f * this.field_f + this.field_c * param1.field_c);
+          if (1.0 <= var5_double) {
+            stackIn_6_0 = 0.0;
+          } else {
+            if (!(-1.0 >= var5_double)) {
+              stackIn_6_0 = Math.acos(var5_double);
             } else {
-              if (-1.0 < var5_double) {
-                stackIn_6_0 = Math.acos(var5_double);
-                break L0;
-              } else {
-                stackIn_6_0 = 3.141592653589793;
-                break L0;
-              }
+              stackIn_6_0 = 3.141592653589793;
             }
           }
-          L1: {
-            L2: {
-              var7 = stackIn_6_0;
-              if (var7 < 0.0001) {
-                break L2;
-              } else {
-                if (var7 > 3.141492653589793) {
-                  break L2;
-                } else {
-                  var9 = Math.sin(var7);
-                  var11 = Math.sin(var7 * (1.0 - param2)) / var9;
-                  var13 = Math.sin(var7 * param2) / var9;
-                  this.field_d = this.field_d * var11 + param1.field_d * var13;
-                  this.field_f = param1.field_f * var13 + var11 * this.field_f;
-                  this.field_c = param1.field_c * var13 + var11 * this.field_c;
-                  this.field_k = this.field_k * var11 + param1.field_k * var13;
-                  break L1;
-                }
-              }
-            }
+          var7 = stackIn_6_0;
+          if (!(var7 < 0.0001) &&
+            !(var7 > 3.141492653589793)) {
+            var9 = Math.sin(var7);
+            var11 = Math.sin(var7 * (1.0 - param2)) / var9;
+            var13 = Math.sin(var7 * param2) / var9;
+            this.field_d = this.field_d * var11 + param1.field_d * var13;
+            this.field_f = param1.field_f * var13 + var11 * this.field_f;
+            this.field_c = param1.field_c * var13 + var11 * this.field_c;
+            this.field_k = this.field_k * var11 + param1.field_k * var13;
+          } else {
             this.field_d = this.field_d + (param1.field_d - this.field_d) * param2;
             this.field_k = this.field_k + param2 * (-this.field_k + param1.field_k);
             this.field_f = this.field_f + param2 * (param1.field_f - this.field_f);
             this.field_c = this.field_c + (param1.field_c - this.field_c) * param2;
-            break L1;
           }
-          L3: {
-            if (param0 == 116) {
-              break L3;
-            } else {
-              var16 = (da) null;
-              this.a(87, (da) null);
-              break L3;
-            }
+          if (param0 != 116) {
+            var16 = (da) null;
+            this.a(87, (da) null);
           }
-          var9 = this.field_d * this.field_d + (this.field_c * this.field_c + (this.field_f * this.field_f + this.field_k * this.field_k));
-          if (1e-7 > var9) {
+          var9Lifetime1 = this.field_d * this.field_d + (this.field_c * this.field_c + (this.field_f * this.field_f + this.field_k * this.field_k));
+          if (1e-7 > var9Lifetime1) {
             this.field_k = 1.0;
             this.field_c = 0.0;
             this.field_f = 0.0;
             this.field_d = 0.0;
             return;
-          } else {
-            var9 = 1.0 / var9;
-            this.field_k = this.field_k * var9;
-            this.field_f = this.field_f * var9;
-            this.field_c = this.field_c * var9;
-            this.field_d = this.field_d * var9;
-            return;
           }
+          var9Lifetime1 = 1.0 / var9Lifetime1;
+          this.field_k = this.field_k * var9Lifetime1;
+          this.field_f = this.field_f * var9Lifetime1;
+          this.field_c = this.field_c * var9Lifetime1;
+          this.field_d = this.field_d * var9Lifetime1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var5);
-
-            stackIn_18_1 = new StringBuilder().append("da.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L4;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L4;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_18_0 = var5;
+          stackIn_18_1 = new StringBuilder().append("da.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -218,28 +178,28 @@ final class da {
         double var20 = 0.0;
         double var22 = 0.0;
         try {
-            var3_double = this.field_k * this.field_k;
-            var5 = this.field_f * this.field_k;
-            var7 = this.field_c * this.field_k;
-            var9 = this.field_k * this.field_d;
-            var11 = this.field_f * this.field_f;
-            var13 = this.field_c * this.field_f;
-            var15 = this.field_f * this.field_d;
-            int var19 = -87 % ((-38 - param1) / 58);
-            var17 = this.field_c * this.field_c;
-            var20 = this.field_c * this.field_d;
-            var22 = this.field_d * this.field_d;
-            param0[11] = (int)(65536.0 * (-var11 + (var22 + var3_double - var17)));
-            param0[9] = (int)(65536.0 * (var7 + (var15 + var7 + var15)));
-            param0[8] = (int)((var20 + (var5 + var20) + var5) * 65536.0);
-            param0[4] = (int)((var9 + var13 + var13 + var9) * 65536.0);
-            param0[7] = (int)((-var22 + (var17 + var3_double - var11)) * 65536.0);
-            param0[3] = (int)(65536.0 * (var11 + var3_double - var22 - var17));
-            param0[6] = (int)((-var9 + (var13 - var9) + var13) * 65536.0);
-            param0[5] = (int)(65536.0 * (-var7 + var15 - var7 + var15));
-            param0[10] = (int)((var20 + (-var5 + (-var5 + var20))) * 65536.0);
+          var3_double = this.field_k * this.field_k;
+          var5 = this.field_f * this.field_k;
+          var7 = this.field_c * this.field_k;
+          var9 = this.field_k * this.field_d;
+          var11 = this.field_f * this.field_f;
+          var13 = this.field_c * this.field_f;
+          var15 = this.field_f * this.field_d;
+          int var19 = -87 % ((-38 - param1) / 58);
+          var17 = this.field_c * this.field_c;
+          var20 = this.field_c * this.field_d;
+          var22 = this.field_d * this.field_d;
+          param0[11] = (int)(65536.0 * (-var11 + (var22 + var3_double - var17)));
+          param0[9] = (int)(65536.0 * (var7 + (var15 + var7 + var15)));
+          param0[8] = (int)((var20 + (var5 + var20) + var5) * 65536.0);
+          param0[4] = (int)((var9 + var13 + var13 + var9) * 65536.0);
+          param0[7] = (int)((-var22 + (var17 + var3_double - var11)) * 65536.0);
+          param0[3] = (int)(65536.0 * (var11 + var3_double - var22 - var17));
+          param0[6] = (int)((-var9 + (var13 - var9) + var13) * 65536.0);
+          param0[5] = (int)(65536.0 * (-var7 + var15 - var7 + var15));
+          param0[10] = (int)((var20 + (-var5 + (-var5 + var20))) * 65536.0);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -262,35 +222,31 @@ final class da {
         param1[9] = var15 + (var7 + var15) + var7;
         param1[7] = var17 + var3_double - var11 - var21;
         if (param0 <= 19) {
-            return;
+          return;
         }
         try {
-            param1[6] = var13 - var9 - var9 + var13;
-            param1[10] = var19 + (-var5 + (-var5 + var19));
+          param1[6] = var13 - var9 - var9 + var13;
+          param1[10] = var19 + (-var5 + (-var5 + var19));
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "da.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "da.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(double param0, double param1, double param2, double param3, int param4) {
-        double var10;
-        double var12;
         param0 = param0 * 0.5;
-        var10 = Math.sin(param0);
-        var12 = Math.cos(param0);
+        double var10 = Math.sin(param0);
+        double var12 = Math.cos(param0);
         this.field_k = var12;
-        if (param4 != 7) {
-          field_a = (String) null;
-          this.field_d = param1 * var10;
-          this.field_f = var10 * param2;
-          this.field_c = var10 * param3;
-          return;
-        } else {
+        if (param4 == 7) {
           this.field_d = param1 * var10;
           this.field_f = var10 * param2;
           this.field_c = var10 * param3;
           return;
         }
+        field_a = (String) null;
+        this.field_d = param1 * var10;
+        this.field_f = var10 * param2;
+        this.field_c = var10 * param3;
     }
 
     final void a(int param0, da param1) {
@@ -303,16 +259,16 @@ final class da {
         this.field_f = var5;
         this.field_c = var7;
         if (param0 > -6) {
-            return;
+          return;
         }
         try {
-            var9 = 1.0 / Math.sqrt(this.field_c * this.field_c + (this.field_f * this.field_f + this.field_k * this.field_k) + this.field_d * this.field_d);
-            this.field_d = this.field_d * var9;
-            this.field_k = this.field_k * var9;
-            this.field_c = this.field_c * var9;
-            this.field_f = this.field_f * var9;
+          var9 = 1.0 / Math.sqrt(this.field_c * this.field_c + (this.field_f * this.field_f + this.field_k * this.field_k) + this.field_d * this.field_d);
+          this.field_d = this.field_d * var9;
+          this.field_k = this.field_k * var9;
+          this.field_c = this.field_c * var9;
+          this.field_f = this.field_f * var9;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "da.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "da.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -326,13 +282,13 @@ final class da {
     final static void a(int param0, int param1, bi param2, boolean param3, pm param4) {
         gk var5 = null;
         try {
-            var5 = new gk(param4, param2, param1);
-            var5.field_m = param0;
-            var5.field_o = param3 ? true : false;
-            var5.e(6466);
-            var5.field_t = null;
+          var5 = new gk(param4, param2, param1);
+          var5.field_m = param0;
+          var5.field_o = param3 ? true : false;
+          var5.e(6466);
+          var5.field_t = null;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "da.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "da.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -342,12 +298,12 @@ final class da {
 
     da(da param0) {
         try {
-            this.field_c = param0.field_c;
-            this.field_k = param0.field_k;
-            this.field_d = param0.field_d;
-            this.field_f = param0.field_f;
+          this.field_c = param0.field_c;
+          this.field_k = param0.field_k;
+          this.field_d = param0.field_d;
+          this.field_f = param0.field_f;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

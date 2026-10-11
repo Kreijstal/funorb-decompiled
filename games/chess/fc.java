@@ -12,7 +12,7 @@ final class fc {
     public static void a(int param0) {
         field_c = null;
         if (param0 != -29306) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;

@@ -13,34 +13,17 @@ final class gh {
         if (hc.field_d == 10) {
           ne.e(-5);
           hc.field_d = 11;
-          tf.field_bb = true;
-          if (!param0) {
-            return;
-          } else {
-            field_f = (String) null;
-            return;
-          }
         } else {
-          if (bd.d((byte) -124)) {
-            tf.field_bb = true;
-            if (param0) {
-              field_f = (String) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (!bd.d((byte) -124)) {
             ne.e(-5);
             hc.field_d = 11;
-            tf.field_bb = true;
-            if (!param0) {
-              return;
-            } else {
-              field_f = (String) null;
-              return;
-            }
           }
         }
+        tf.field_bb = true;
+        if (!param0) {
+          return;
+        }
+        field_f = (String) null;
     }
 
     gh(int param0) {
@@ -55,7 +38,7 @@ final class gh {
         field_d = null;
         field_f = null;
         if (param0 <= 42) {
-            return;
+          return;
         }
         field_b = null;
         field_c = null;

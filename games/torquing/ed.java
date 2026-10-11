@@ -13,19 +13,19 @@ final class ed {
         double var5 = 0.0;
         double var7 = 0.0;
         try {
-            if (param1 != 65536) {
-                this.a(true);
-            }
-            var3_double = -(this.field_e * param0.field_e) + (-(this.field_b * param0.field_b) + (this.field_a * param0.field_a - this.field_d * param0.field_d));
-            var5 = -(param0.field_e * this.field_b) + (this.field_e * param0.field_b + (this.field_d * param0.field_a + param0.field_d * this.field_a));
-            var7 = this.field_d * param0.field_e + (this.field_b * param0.field_a - this.field_e * param0.field_d + this.field_a * param0.field_b);
-            this.field_e = this.field_b * param0.field_d + this.field_e * param0.field_a - param0.field_b * this.field_d + param0.field_e * this.field_a;
-            this.field_b = var7;
-            this.field_d = var5;
-            this.field_a = var3_double;
-            this.a((byte) -126);
+          if (param1 != 65536) {
+            this.a(true);
+          }
+          var3_double = -(this.field_e * param0.field_e) + (-(this.field_b * param0.field_b) + (this.field_a * param0.field_a - this.field_d * param0.field_d));
+          var5 = -(param0.field_e * this.field_b) + (this.field_e * param0.field_b + (this.field_d * param0.field_a + param0.field_d * this.field_a));
+          var7 = this.field_d * param0.field_e + (this.field_b * param0.field_a - this.field_e * param0.field_d + this.field_a * param0.field_b);
+          this.field_e = this.field_b * param0.field_d + this.field_e * param0.field_a - param0.field_b * this.field_d + param0.field_e * this.field_a;
+          this.field_b = var7;
+          this.field_d = var5;
+          this.field_a = var3_double;
+          this.a((byte) -126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ed.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ed.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,28 +35,11 @@ final class ed {
     }
 
     final void a(byte param0) {
-        double var2;
-        L0: {
-          if (param0 <= -120) {
-            break L0;
-          } else {
-            this.a((byte) -88);
-            break L0;
-          }
+        if (param0 > -120) {
+          this.a((byte) -88);
         }
-        var2 = this.field_e * this.field_e + (this.field_b * this.field_b + (this.field_a * this.field_a + this.field_d * this.field_d));
-        if (0.999999999999 <= var2) {
-          if (1.000000000001 < var2) {
-            var2 = 1.0 / Math.sqrt(var2);
-            this.field_d = this.field_d * var2;
-            this.field_a = this.field_a * var2;
-            this.field_b = this.field_b * var2;
-            this.field_e = this.field_e * var2;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        double var2 = this.field_e * this.field_e + (this.field_b * this.field_b + (this.field_a * this.field_a + this.field_d * this.field_d));
+        if (0.999999999999 > var2) {
           var2 = 1.0 / Math.sqrt(var2);
           this.field_d = this.field_d * var2;
           this.field_a = this.field_a * var2;
@@ -64,44 +47,40 @@ final class ed {
           this.field_e = this.field_e * var2;
           return;
         }
+        if (!(1.000000000001 < var2)) {
+          return;
+        }
+        var2 = 1.0 / Math.sqrt(var2);
+        this.field_d = this.field_d * var2;
+        this.field_a = this.field_a * var2;
+        this.field_b = this.field_b * var2;
+        this.field_e = this.field_e * var2;
     }
 
     final void a(double param0, double param1, double param2, byte param3, double param4) {
-        double var10;
-        double var12;
         param4 = param4 * 0.5;
-        var10 = Math.sin(param4);
-        var12 = Math.cos(param4);
+        double var10 = Math.sin(param4);
+        double var12 = Math.cos(param4);
         this.field_a = var12;
         this.field_e = var10 * param2;
         this.field_b = param1 * var10;
         this.field_d = param0 * var10;
-        if (param3 >= 40) {
-          return;
-        } else {
+        if (param3 < 40) {
           this.a(-0.2909420168175892, 1.7307005239419224, 1.1204517456254055, (byte) -67, 0.31408591430502103);
           return;
         }
     }
 
     final static int a(byte param0, int param1) {
-        int var2;
-        int var3;
-        L0: {
-          var2 = 0;
-          if (0 == (param1 & 7)) {
-            break L0;
-          } else {
-            var2 = -(7 & param1) + 8;
-            break L0;
-          }
+        int var2 = 0;
+        if (0 != (param1 & 7)) {
+          var2 = -(7 & param1) + 8;
         }
-        var3 = param1 - -var2;
-        if (param0 != 72) {
-          return 76;
-        } else {
+        int var3 = param1 + var2;
+        if (param0 == 72) {
           return var3;
         }
+        return 76;
     }
 
     final void a(int[] param0, byte param1) {
@@ -116,30 +95,30 @@ final class ed {
         double var19 = 0.0;
         double var21 = 0.0;
         try {
-            var3_double = this.field_a * this.field_a;
-            var5 = this.field_a * this.field_d;
-            var7 = this.field_a * this.field_b;
-            var9 = this.field_a * this.field_e;
-            var11 = this.field_d * this.field_d;
-            var13 = this.field_b * this.field_d;
-            var15 = this.field_d * this.field_e;
-            if (param1 < 112) {
-                ed.b((byte) -77);
-            }
-            var17 = this.field_b * this.field_b;
-            var19 = this.field_e * this.field_b;
-            var21 = this.field_e * this.field_e;
-            param0[10] = (int)((-var5 + var19 - var5 + var19) * 65536.0);
-            param0[11] = (int)((-var11 + (-var17 + (var3_double + var21))) * 65536.0);
-            param0[5] = (int)((var15 + (-var7 + (var15 - var7))) * 65536.0);
-            param0[4] = (int)((var9 + (var9 + var13 + var13)) * 65536.0);
-            param0[8] = (int)(65536.0 * (var5 + (var19 + var5 + var19)));
-            param0[6] = (int)((var13 - var9 - var9 + var13) * 65536.0);
-            param0[7] = (int)((var3_double + var17 - var11 - var21) * 65536.0);
-            param0[9] = (int)((var15 + (var15 + var7) + var7) * 65536.0);
-            param0[3] = (int)((-var21 + (var3_double + var11) - var17) * 65536.0);
+          var3_double = this.field_a * this.field_a;
+          var5 = this.field_a * this.field_d;
+          var7 = this.field_a * this.field_b;
+          var9 = this.field_a * this.field_e;
+          var11 = this.field_d * this.field_d;
+          var13 = this.field_b * this.field_d;
+          var15 = this.field_d * this.field_e;
+          if (param1 < 112) {
+            ed.b((byte) -77);
+          }
+          var17 = this.field_b * this.field_b;
+          var19 = this.field_e * this.field_b;
+          var21 = this.field_e * this.field_e;
+          param0[10] = (int)((-var5 + var19 - var5 + var19) * 65536.0);
+          param0[11] = (int)((-var11 + (-var17 + (var3_double + var21))) * 65536.0);
+          param0[5] = (int)((var15 + (-var7 + (var15 - var7))) * 65536.0);
+          param0[4] = (int)((var9 + (var9 + var13 + var13)) * 65536.0);
+          param0[8] = (int)(65536.0 * (var5 + (var19 + var5 + var19)));
+          param0[6] = (int)((var13 - var9 - var9 + var13) * 65536.0);
+          param0[7] = (int)((var3_double + var17 - var11 - var21) * 65536.0);
+          param0[9] = (int)((var15 + (var15 + var7) + var7) * 65536.0);
+          param0[3] = (int)((-var21 + (var3_double + var11) - var17) * 65536.0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ed.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ed.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,35 +131,22 @@ final class ed {
         RuntimeException var1 = null;
         var3 = Torquing.field_u;
         try {
-          L0: {
-            var1_int = 0;
-            var2 = (ik) ((Object) qc.field_Y.b(param0));
-            L1: while (true) {
-              if (var2 == null) {
-                L2: while (true) {
-                  incrementValue$1 = var1_int;
-                  var1_int--;
-                  if (0 >= incrementValue$1) {
-                    break L0;
-                  } else {
-                    sn.b((byte) 88);
-                    continue L2;
-                  }
-                }
-              } else {
-                L3: {
-                  var2.a(-2857);
-                  if (!var2.e(17)) {
-                    var1_int++;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var2 = (ik) ((Object) qc.field_Y.f(-24059));
-                continue L1;
-              }
+          var1_int = 0;
+          var2 = (ik) (qc.field_Y.b(param0));
+          while (var2 != null) {
+            var2.a(-2857);
+            if (!var2.e(17)) {
+              var1_int++;
             }
+            var2 = (ik) (qc.field_Y.f(-24059));
+          }
+          while (true) {
+            incrementValue$1 = var1_int;
+            var1_int--;
+            if (0 >= incrementValue$1) {
+              return;
+            }
+            sn.b((byte) 88);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,18 +157,16 @@ final class ed {
 
     final void a(boolean param0) {
         this.field_b = 0.0;
-        if (!param0) {
-          this.field_d = 0.15882867363028105;
-          this.field_d = 0.0;
-          this.field_a = 1.0;
-          this.field_e = 0.0;
-          return;
-        } else {
+        if (param0) {
           this.field_d = 0.0;
           this.field_a = 1.0;
           this.field_e = 0.0;
           return;
         }
+        this.field_d = 0.15882867363028105;
+        this.field_d = 0.0;
+        this.field_a = 1.0;
+        this.field_e = 0.0;
     }
 
     public ed() {

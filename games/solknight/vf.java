@@ -10,15 +10,13 @@ final class vf extends pd {
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
         this.field_d = param2;
         this.field_a = param3;
         this.field_h = new int[param3 * param2 + 1];
-        if (param1 != 9387) {
-          return;
-        } else {
+        if (param1 == 9387) {
           var5 = new java.awt.image.DataBufferInt(this.field_h, this.field_h.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_a, this.field_d), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
@@ -32,7 +30,7 @@ final class vf extends pd {
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
         param3.drawImage(this.field_g, param0, param2, (java.awt.image.ImageObserver) ((Object) this.field_i));
         if (param1 != 0) {
-            this.field_i = (java.awt.Component) null;
+          this.field_i = (java.awt.Component) null;
         }
     }
 }

@@ -10,8 +10,8 @@ final class ia extends jj {
     private static String field_lb;
 
     final static java.applet.Applet g(int param0) {
-        if (!(s.field_jb == null)) {
-            return s.field_jb;
+        if (s.field_jb != null) {
+          return s.field_jb;
         }
         int var1 = -18 % ((param0 - 36) / 46);
         return (java.applet.Applet) ((Object) ib.field_l);

@@ -14,95 +14,50 @@ final class oj extends cm {
     private ou field_Y;
 
     final void a(String param0, float param1, int param2, boolean param3) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_W == param3) {
-                break L1;
-              } else {
-                L2: {
-                  stackIn_3_0 = this;
-
-                  if (!param3) {
-                    stackIn_4_0 = this;
-                    stackIn_4_1 = 0;
-                    break L2;
-                  } else {
-                    stackIn_4_0 = this;
-                    stackIn_4_1 = 1;
-                    break L2;
-                  }
-                }
-                ((oj) (this)).field_W = stackIn_4_1 != 0;
-                if (this.field_W) {
-                  this.field_Y.a((byte) 21, 4210752, 8405024);
-                  this.field_Y.field_w = true;
-                  break L1;
-                } else {
-                  this.field_Y.a((byte) 21, 4210752, 2113632);
-                  if (this.field_X) {
-                    this.field_Y.field_w = false;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
+          if (this.field_W != param3) {
+            stackIn_4_1 = (param3);
+            this.field_W = stackIn_4_1;
+            if (this.field_W) {
+              this.field_Y.a((byte) 21, 4210752, 8405024);
+              this.field_Y.field_w = true;
+            } else {
+              this.field_Y.a((byte) 21, 4210752, 2113632);
+              if (this.field_X) {
+                this.field_Y.field_w = false;
               }
             }
-            this.field_U = param0;
-            if (param2 == 9255) {
-              this.field_Y.field_C = (int)(param1 / 100.0f * 65536.0f);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
           }
+          this.field_U = param0;
+          if (param2 != 9255) {
+            return;
+          }
+          this.field_Y.field_C = (int)(param1 / 100.0f * 65536.0f);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var5);
-
-            stackIn_15_1 = new StringBuilder().append("oj.A(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_15_0 = var5;
+          stackIn_15_1 = new StringBuilder().append("oj.A(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw nb.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void p(int param0) {
         this.field_Y.field_w = false;
         if (param0 != -120) {
-            return;
+          return;
         }
         this.field_X = true;
     }
@@ -117,25 +72,22 @@ final class oj extends cm {
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4;
         super.a(param0, (byte) -128, param2);
-        fj.field_b.d(this.field_U, (this.field_n >> 1646799425) + param0, param2 - -103, 16777215, -1);
-        var4 = 80 / ((-55 - param1) / 45);
-        if (this.field_S != null) {
-          on.f(param0 + 20, -7 + (param2 - -120), 260, 8421504);
-          fj.field_b.a(this.field_S, param0 - -20, 120 + (param2 - -8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
-          return;
-        } else {
+        fj.field_b.d(this.field_U, (this.field_n >> 1) + param0, param2 + 103, 16777215, -1);
+        int var4 = 80 / ((-55 - param1) / 45);
+        if (this.field_S == null) {
           return;
         }
+        on.f(param0 + 20, -7 + (param2 + 120), 260, 8421504);
+        fj.field_b.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
     }
 
     final static void a(int param0, vc param1) {
         try {
-            np.field_Jb.a(new hk(param1, 19), 3);
-            int var2_int = -76 / ((49 - param0) / 61);
+          np.field_Jb.a(new hk(param1, 19), 3);
+          int var2_int = -76 / ((49 - param0) / 61);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "oj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -143,23 +95,23 @@ final class oj extends cm {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            this.field_S = param1;
-            if (this.field_S != null) {
-                var3_int = fj.field_b.c(this.field_S, 260, fj.field_b.field_G);
-                this.a((byte) 110, var3_int + 150, 300);
-            }
-            this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_X = false;
-            this.field_W = false;
-            this.field_Y.field_w = true;
-            this.a(-120, this.field_Y);
+          this.field_S = param1;
+          if (this.field_S != null) {
+            var3_int = fj.field_b.c(this.field_S, 260, fj.field_b.field_G);
+            this.a((byte) 110, var3_int + 150, 300);
+          }
+          this.field_Y = new ou(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_X = false;
+          this.field_W = false;
+          this.field_Y.field_w = true;
+          this.a(-120, this.field_Y);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        int var2 = 51 / ((param0 - -28) / 58);
+        int var2 = 51 / ((param0 + 28) / 58);
         np.field_Jb.a(new pw(param1), 3);
     }
 

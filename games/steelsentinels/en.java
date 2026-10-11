@@ -10,67 +10,64 @@ final class en {
     static int field_d;
 
     public static void a(boolean param0) {
-        java.awt.Canvas var2;
         field_e = null;
         field_b = null;
         field_c = null;
         field_a = null;
-        if (!param0) {
-          var2 = (java.awt.Canvas) null;
-          en.a((java.awt.Canvas) null, 17);
-          field_f = null;
-          return;
-        } else {
+        if (param0) {
           field_f = null;
           return;
         }
+        java.awt.Canvas var2 = (java.awt.Canvas) null;
+        en.a((java.awt.Canvas) null, 17);
+        field_f = null;
     }
 
     final static void a(byte param0, ak param1, int param2, int param3, ak param4, int param5) {
         try {
-            h.field_U = param3;
-            qh.field_Xb = param4;
-            tf.field_c = param5;
-            id.field_ac = param2;
-            rg.field_b = param1;
-            if (param0 > -46) {
-                en.a(70);
-            }
+          h.field_U = param3;
+          qh.field_Xb = param4;
+          tf.field_c = param5;
+          id.field_ac = param2;
+          rg.field_b = param1;
+          if (param0 > -46) {
+            en.a(70);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "en.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "en.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     private final static void a(int param0, String param1, boolean param2, float param3) {
         try {
-            if (!(r.field_r != null)) {
-                r.field_r = new ki(ag.field_p, ba.field_f);
-                ag.field_p.a(r.field_r, 79);
-            }
-            r.field_r.a(114, param2, param1, param3);
-            if (param0 > -77) {
-                en.a(-66);
-            }
-            pb.b();
-            wn.a(0, true);
+          if (r.field_r == null) {
+            r.field_r = new ki(ag.field_p, ba.field_f);
+            ag.field_p.a(r.field_r, 79);
+          }
+          r.field_r.a(114, param2, param1, param3);
+          if (param0 > -77) {
+            en.a(-66);
+          }
+          pb.b();
+          wn.a(0, true);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "en.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "en.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-            if (uj.field_d == 11) {
-                sl.a((byte) 3);
-            }
-            if (param1 != -28003) {
-                ak var3 = (ak) null;
-                en.a((byte) 126, (ak) null, -34, -85, (ak) null, -5);
-            }
-            en.a(-84, od.field_i, rg.field_h, q.field_l);
-            kg.a(0, 0, 28594, param0);
+          if (uj.field_d == 11) {
+            sl.a((byte) 3);
+          }
+          if (param1 != -28003) {
+            ak var3 = (ak) null;
+            en.a((byte) 126, (ak) null, -34, -85, (ak) null, -5);
+          }
+          en.a(-84, od.field_i, rg.field_h, q.field_l);
+          kg.a(0, 0, 28594, param0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "en.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "en.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -81,9 +78,9 @@ final class en {
 
     final static hk a(int param0, int param1) {
         if (param1 != 28858) {
-            return (hk) null;
+          return (hk) null;
         }
-        return fm.field_a != null ? (hk) ((Object) fm.field_a.a((long)param0, (byte) 98)) : null;
+        return fm.field_a != null ? (hk) (fm.field_a.a((long)param0, (byte) 98)) : null;
     }
 
     static {

@@ -16,12 +16,12 @@ final class io {
 
     final static void a(int param0, mf param1) {
         try {
-            sj.field_c.a(param1);
-            if (param0 < 93) {
-                io.a(-28);
-            }
+          sj.field_c.a(param1);
+          if (param0 < 93) {
+            io.a(-28);
+          }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,16 +38,7 @@ final class io {
         field_g = null;
         field_b = null;
         field_c = null;
-        if (param0 != 0) {
-          io.a(41);
-          field_h = null;
-          field_f = null;
-          field_e = null;
-          field_d = null;
-          field_a = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_h = null;
           field_f = null;
           field_e = null;
@@ -56,6 +47,13 @@ final class io {
           field_k = null;
           return;
         }
+        io.a(41);
+        field_h = null;
+        field_f = null;
+        field_e = null;
+        field_d = null;
+        field_a = null;
+        field_k = null;
     }
 
     static {

@@ -6,13 +6,13 @@ class io extends bob {
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
         try {
-            if (param4) {
-                npa.a(param1.field_r + param3, (byte) 115, param1.field_f, param1.field_h, param1.field_g + param2);
-            }
-            super.a(59, param1, param2, param3, param4);
-            int var6_int = -48 / ((param0 - -27) / 35);
+          if (param4) {
+            npa.a(param1.field_r + param3, (byte) 115, param1.field_f, param1.field_h, param1.field_g + param2);
+          }
+          super.a(59, param1, param2, param3, param4);
+          int var6_int = -48 / ((param0 + 27) / 35);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "io.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

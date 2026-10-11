@@ -13,7 +13,7 @@ final class qk extends k {
     public static void d(int param0) {
         field_q = null;
         if (param0 < 66) {
-            return;
+          return;
         }
         field_m = null;
         field_k = null;
@@ -22,100 +22,78 @@ final class qk extends k {
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3;
-        int[] var5;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int[] var17;
-        int[] var20;
-        int[] var21;
-        int stackIn_7_0 = 0;
-        int stackIn_17_0 = 0;
-        var16 = BachelorFridge.field_y;
-        if (param1 == 0) {
-          var17 = this.field_j.a(param0, -1);
-          var3 = var17;
-          if (!this.field_j.field_m) {
-            return var17;
-          } else {
-            var20 = this.a(0, -1 + param0 & it.field_r, (byte) 105);
-            var5 = this.a(0, param0, (byte) 116);
-            var21 = this.a(0, param0 + 1 & it.field_r, (byte) 109);
-            var7 = 0;
-            L0: while (true) {
-              if (hh.field_d <= var7) {
-                return var17;
-              } else {
-                L1: {
-                  var8 = this.field_o * (-var20[var7] + var21[var7]);
-                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * this.field_o;
-                  var10 = var9 >> 2133613836;
-                  var11 = var8 >> 1835324652;
-                  var12 = var10 * var10 >> 345903020;
-                  var13 = var11 * var11 >> -153846100;
-                  var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (-1 == (var14 ^ -1)) {
-                    stackIn_17_0 = 0;
-                    break L1;
-                  } else {
-                    stackIn_17_0 = 16777216 / var14;
-                    break L1;
-                  }
-                }
-                var15 = stackIn_17_0;
-                var17[var7] = -var15 + 4096;
-                var7++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        int[] var17 = null;
+        int[] var3 = null;
+        int[] var20 = null;
+        int[] var5 = null;
+        int[] var21 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = BachelorFridge.field_y;
+        int[] var17Lifetime1;
+        int[] var3Lifetime1;
+        int[] var20Lifetime1;
+        int[] var5Lifetime1;
+        int[] var21Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var15Lifetime1;
+        if (param1 != 0) {
           field_n = (String) null;
           var17 = this.field_j.a(param0, -1);
           var3 = var17;
-          if (!this.field_j.field_m) {
-            return var17;
-          } else {
+          if (this.field_j.field_m) {
             var20 = this.a(0, -1 + param0 & it.field_r, (byte) 105);
             var5 = this.a(0, param0, (byte) 116);
             var21 = this.a(0, param0 + 1 & it.field_r, (byte) 109);
-            var7 = 0;
-            L2: while (true) {
-              if (hh.field_d <= var7) {
-                return var17;
-              } else {
-                L3: {
-                  var8 = this.field_o * (-var20[var7] + var21[var7]);
-                  var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * this.field_o;
-                  var10 = var9 >> 2133613836;
-                  var11 = var8 >> 1835324652;
-                  var12 = var10 * var10 >> 345903020;
-                  var13 = var11 * var11 >> -153846100;
-                  var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (-1 == (var14 ^ -1)) {
-                    stackIn_7_0 = 0;
-                    break L3;
-                  } else {
-                    stackIn_7_0 = 16777216 / var14;
-                    break L3;
-                  }
-                }
-                var15 = stackIn_7_0;
-                var17[var7] = -var15 + 4096;
-                var7++;
-                continue L2;
-              }
+            for (var7 = 0; hh.field_d > var7; var7++) {
+              var8 = this.field_o * (-var20[var7] + var21[var7]);
+              var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * this.field_o;
+              var10 = var9 >> 12;
+              var11 = var8 >> 12;
+              var12 = var10 * var10 >> 12;
+              var13 = var11 * var11 >> 12;
+              var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
+              var15 = var14 != 0 ? 16777216 / var14 : 0;
+              var17[var7] = -var15 + 4096;
             }
+            return var17;
           }
+          return var17;
         }
+        var17Lifetime1 = this.field_j.a(param0, -1);
+        var3Lifetime1 = var17Lifetime1;
+        if (this.field_j.field_m) {
+          var20Lifetime1 = this.a(0, -1 + param0 & it.field_r, (byte) 105);
+          var5Lifetime1 = this.a(0, param0, (byte) 116);
+          var21Lifetime1 = this.a(0, param0 + 1 & it.field_r, (byte) 109);
+          for (var7Lifetime1 = 0; hh.field_d > var7Lifetime1; var7Lifetime1++) {
+            var8Lifetime1 = this.field_o * (-var20Lifetime1[var7Lifetime1] + var21Lifetime1[var7Lifetime1]);
+            var9Lifetime1 = (-var5Lifetime1[-1 + var7Lifetime1 & wp.field_r] + var5Lifetime1[1 + var7Lifetime1 & wp.field_r]) * this.field_o;
+            var10Lifetime1 = var9Lifetime1 >> 12;
+            var11Lifetime1 = var8Lifetime1 >> 12;
+            var12Lifetime1 = var10Lifetime1 * var10Lifetime1 >> 12;
+            var13Lifetime1 = var11Lifetime1 * var11Lifetime1 >> 12;
+            var14Lifetime1 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12Lifetime1 + var13Lifetime1)) / 4096.0f)));
+            var15Lifetime1 = var14Lifetime1 != 0 ? 16777216 / var14Lifetime1 : 0;
+            var17Lifetime1[var7Lifetime1] = -var15Lifetime1 + 4096;
+          }
+          return var17Lifetime1;
+        }
+        return var17Lifetime1;
     }
 
     public qk() {
@@ -127,48 +105,28 @@ final class qk extends k {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -71) {
-                break L1;
-              } else {
-                field_m = (int[]) null;
-                break L1;
-              }
-            }
-            if (param2 != 0) {
-              break L0;
-            } else {
-              this.field_o = param1.e((byte) 47);
-              return;
-            }
+          if (param0 != -71) {
+            field_m = (int[]) null;
           }
+          if (param2 != 0) {
+            return;
+          }
+          this.field_o = param1.e((byte) 47);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4);
-
-            stackIn_7_1 = new StringBuilder().append("qk.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("qk.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

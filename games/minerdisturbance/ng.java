@@ -20,32 +20,32 @@ final class ng {
         field_i = null;
         field_e = null;
         if (param0 != -1) {
-            ng.a(-11L, -116);
-            field_k = null;
-            return;
+          ng.a(-11L, -116);
+          field_k = null;
+          return;
         }
         field_k = null;
     }
 
     final static void a(byte param0) {
-        if (!(kf.field_d != null)) {
-            return;
+        if (kf.field_d == null) {
+          return;
         }
         ci.a(kf.field_d, 0);
         kf.field_d.a(false, qa.field_a);
         kf.field_d = null;
-        if (!(ij.field_o == null)) {
-            ij.field_o.b(-86);
+        if (ij.field_o != null) {
+          ij.field_o.b(-86);
         }
         ef.field_c.requestFocus();
         int var1 = 24 % ((-32 - param0) / 49);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -53,42 +53,24 @@ final class ng {
         RuntimeException var5 = null;
         var11 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              eh.e(param3, param4, 1 + param1, 10000536);
-              eh.e(param3, param0 + param4, param1 - -1, 12105912);
-              var5_int = 1;
-              if (var5_int + param4 < eh.field_d) {
-                var5_int = -param4 + eh.field_d;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var6 = param0;
-              if (eh.field_e >= var6 + param4) {
-                break L2;
-              } else {
-                var6 = -param4 + eh.field_e;
-                break L2;
-              }
-            }
-            var7 = 122 / ((80 - param2) / 46);
-            var8 = var5_int;
-            L3: while (true) {
-              if (var6 <= var8) {
-                break L0;
-              } else {
-                var9 = 152 + var8 * 48 / param0;
-                var10 = var9 | (var9 << 1855635080 | var9 << 1544973296);
-                eh.field_f[param3 + eh.field_g * (var8 + param4)] = var10;
-                eh.field_f[param1 + param3 + (param4 - -var8) * eh.field_g] = var10;
-                var8++;
-                continue L3;
-              }
-            }
+          eh.e(param3, param4, 1 + param1, 10000536);
+          eh.e(param3, param0 + param4, param1 + 1, 12105912);
+          var5_int = 1;
+          if (var5_int + param4 < eh.field_d) {
+            var5_int = -param4 + eh.field_d;
           }
+          var6 = param0;
+          if (eh.field_e < var6 + param4) {
+            var6 = -param4 + eh.field_e;
+          }
+          var7 = 122 / ((80 - param2) / 46);
+          for (var8 = var5_int; var6 > var8; var8++) {
+            var9 = 152 + var8 * 48 / param0;
+            var10 = var9 | (var9 << 8 | var9 << 16);
+            eh.field_f[param3 + eh.field_g * (var8 + param4)] = var10;
+            eh.field_f[param1 + param3 + (param4 + var8) * eh.field_g] = var10;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -98,29 +80,21 @@ final class ng {
 
     final static void a(long param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
-            if (param1 == 1855635080) {
-              try {
-                L0: {
-                  Thread.sleep(param0);
-                  break L0;
-                }
-              } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L1: {
-                  var3 = (InterruptedException) (Object) decompiledCaughtException;
-                  break L1;
-                }
-              }
-              return;
-            } else {
-              return;
-            }
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          if (param1 != 1855635080) {
+            return;
+          }
+          try {
+            Thread.sleep(param0);
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

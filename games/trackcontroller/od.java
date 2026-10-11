@@ -10,7 +10,7 @@ final class od {
     final static void a(byte param0, int param1) {
         ia.b(false);
         if (param0 > -56) {
-            field_a = (ki) null;
+          field_a = (ki) null;
         }
     }
 
@@ -20,7 +20,7 @@ final class od {
         field_c = null;
         field_a = null;
         if (param0 != 8192) {
-            field_a = (ki) null;
+          field_a = (ki) null;
         }
     }
 

@@ -18,12 +18,12 @@ final class k {
         field_d = param3 - param1;
         k.c();
         if (field_e.length < field_d) {
-            field_e = new int[fa.a(-102, field_d)];
+          field_e = new int[fa.a(-102, field_d)];
         }
         int var4 = param1 * lf.field_f + param0;
         for (var5 = 0; var5 < field_d; var5++) {
-            field_e[var5] = var4;
-            var4 = var4 + lf.field_f;
+          field_e[var5] = var4;
+          var4 = var4 + lf.field_f;
         }
     }
 
@@ -46,20 +46,22 @@ final class k {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_c = new int[2048];
         field_e = new int[1024];
         field_h = new int[2048];
         field_i = new int[2048];
         field_b = new int[512];
         for (var0 = 1; var0 < 512; var0++) {
-            field_b[var0] = 32768 / var0;
+          field_b[var0] = 32768 / var0;
         }
-        for (var0 = 1; var0 < 2048; var0++) {
-            field_i[var0] = 65536 / var0;
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_i[var0Lifetime1] = 65536 / var0Lifetime1;
         }
-        for (var0 = 0; var0 < 2048; var0++) {
-            field_c[var0] = (int)(65536.0 * Math.sin((double)var0 * 0.0030679615));
-            field_h[var0] = (int)(65536.0 * Math.cos((double)var0 * 0.0030679615));
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_c[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_h[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

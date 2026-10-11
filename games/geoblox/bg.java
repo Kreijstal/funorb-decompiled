@@ -53,23 +53,20 @@ final class bg extends m {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+        int var15 = 0;
+        int var20 = 0;
         int incrementValue$1 = 0;
         int var13;
         int var14;
-        int var15;
         int var16;
         int var17;
         int var18;
         int var19;
-        int var20;
         int var19Lifetime1;
         var13 = param2 - vb.field_e;
         var14 = param3 - vb.field_i;
-        var15 = var14;
-        while (true) {
-          if (var15 >= var14 + param5) {
-            return;
-          }
+        for (var15 = var14; var15 < var14 + param5; var15++) {
+          boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
           var17 = param12[var15];
           var18 = param4;
@@ -78,45 +75,42 @@ final class bg extends m {
             if (var19 >= param4) {
               param7 = param7 + (param4 + param10);
               param8 = param8 + (param4 + param9);
-              var15++;
-              continue;
+              decompiledFrameRemainder0 = false;
             }
-            param7 = param7 + var19;
-            var18 = var18 - var19;
-            param8 = param8 + var19;
+            else {
+              param7 = param7 + var19;
+              var18 = var18 - var19;
+              param8 = param8 + var19;
+            }
           } else {
             var19 = var13 - var16;
             if (var19 >= var17) {
               param7 = param7 + (param4 + param10);
               param8 = param8 + (param4 + param9);
-              var15++;
-              continue;
+              decompiledFrameRemainder0 = false;
             }
-            var17 = var17 - var19;
+            else {
+              var17 = var17 - var19;
+            }
           }
-          var19Lifetime1 = 0;
-          if (var18 >= var17) {
-            var19Lifetime1 = var18 - var17;
-          } else {
-            var17 = var18;
-          }
-          var20 = -var17;
-          while (true) {
-            if (var20 >= 0) {
-              param7 = param7 + (var19Lifetime1 + param10);
-              param8 = param8 + (var19Lifetime1 + param9);
-              var15++;
-              break;
+          if (decompiledFrameRemainder0) {
+            var19Lifetime1 = 0;
+            if (var18 >= var17) {
+              var19Lifetime1 = var18 - var17;
+            } else {
+              var17 = var18;
             }
-            if (param1[param7++] == 0) {
-              param8++;
-              var20++;
-              continue;
+            for (var20 = -var17; var20 < 0; var20++) {
+              if (param1[param7++] == 0) {
+                param8++;
+              } else {
+                incrementValue$1 = param8;
+                param8++;
+                vb.field_c[incrementValue$1] = param6;
+              }
             }
-            incrementValue$1 = param8;
-            param8++;
-            vb.field_c[incrementValue$1] = param6;
-            var20++;
+            param7 = param7 + (var19Lifetime1 + param10);
+            param8 = param8 + (var19Lifetime1 + param9);
           }
         }
     }
@@ -168,93 +162,67 @@ final class bg extends m {
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var10 = 0;
         int var9;
-        int var10;
         int var11;
+        int var11Lifetime1;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = var9; var11 < 0; var11++) {
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
           }
-          var11 = var9;
-          while (true) {
-            if (var11 >= 0) {
-              var11 = param5;
-              while (true) {
-                if (var11 >= 0) {
-                  param4 = param4 + param7;
-                  param3 = param3 + param8;
-                  var10++;
-                  continue L0;
-                }
-                if (param1[param3++] == 0) {
-                  param4++;
-                  var11++;
-                  continue;
-                }
-                param0[param4++] = param2;
-                var11++;
-              }
-            }
+          for (var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
             if (param1[param3++] == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            if (param1[param3++] == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            if (param1[param3++] == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            if (param1[param3++] == 0) {
-              param4++;
-              var11++;
-              continue;
-            }
-            param0[param4++] = param2;
-            var11++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
         int incrementValue$12 = 0;
-        int var10;
-        int var11;
         int var12;
         param2 = ((param2 & 16711935) * param9 & -16711936) + ((param2 & 65280) * param9 & 16711680) >> 8;
         param9 = 256 - param9;
-        var10 = -param6;
-        while (true) {
-          if (var10 >= 0) {
-            return;
-          }
-          var11 = -param5;
-          while (true) {
-            if (var11 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var10++;
-              break;
-            }
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = -param5; var11 < 0; var11++) {
             if (param1[param3++] == 0) {
               param4++;
-              var11++;
-              continue;
+            } else {
+              var12 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
             }
-            var12 = param0[param4];
-            incrementValue$12 = param4;
-            param4++;
-            param0[incrementValue$12] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
-            var11++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 }

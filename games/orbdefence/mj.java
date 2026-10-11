@@ -15,25 +15,23 @@ final class mj extends ca {
         field_i = null;
         field_l = null;
         field_k = null;
-        if (param0 <= 73) {
-          mj.c(-85);
-          field_j = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 > 73) {
           field_j = null;
           field_m = null;
           return;
         }
+        mj.c(-85);
+        field_j = null;
+        field_m = null;
     }
 
     final static void c(int param0) {
-        if (!(vj.a(39))) {
-            cc.field_f.b(56);
+        if (!vj.a(39)) {
+          cc.field_f.b(56);
         }
         if (param0 != -21108) {
-            field_i = (pe) null;
-            return;
+          field_i = (pe) null;
+          return;
         }
     }
 

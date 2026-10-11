@@ -8,7 +8,7 @@ final class bib extends uda {
 
     final void a(int param0, boolean param1) {
         if (param0 != 5) {
-            field_f = -59;
+          field_f = -59;
         }
     }
 
@@ -19,19 +19,19 @@ final class bib extends uda {
 
     final void a(byte param0, int param1, ura param2) {
         try {
-            this.field_d.a(param2, -123);
-            if (param0 <= 42) {
-                field_g = (java.math.BigInteger) null;
-            }
-            this.field_d.h(54, param1);
+          this.field_d.a(param2, -123);
+          if (param0 <= 42) {
+            field_g = (java.math.BigInteger) null;
+          }
+          this.field_d.h(54, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "bib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "bib.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0) {
         if (param0 != 2543) {
-            field_g = (java.math.BigInteger) null;
+          field_g = (java.math.BigInteger) null;
         }
     }
 
@@ -39,19 +39,19 @@ final class bib extends uda {
         field_g = null;
         field_e = null;
         if (param0) {
-            field_g = (java.math.BigInteger) null;
+          field_g = (java.math.BigInteger) null;
         }
     }
 
     final void b(int param0, boolean param1) {
         if (param0 != 5) {
-            field_f = -43;
+          field_f = -43;
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param2 != 5) {
-            field_f = -9;
+          field_f = -9;
         }
     }
 

@@ -8,7 +8,7 @@ final class gn extends pu {
     public static void d(byte param0) {
         field_l = null;
         if (param0 >= -9) {
-            gn.d((byte) -25);
+          gn.d((byte) -25);
         }
     }
 

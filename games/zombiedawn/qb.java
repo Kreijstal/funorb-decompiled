@@ -16,9 +16,9 @@ abstract class qb {
     abstract void a(int param0, int param1, int param2);
 
     final static String a(int param0, CharSequence param1) {
+        int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
@@ -26,111 +26,49 @@ abstract class qb {
         String stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var6 = ZombieDawn.field_J;
         try {
-          L0: {
-            L1: {
-              var2_int = param1.length();
-              if (-21 <= (var2_int ^ -1)) {
-                break L1;
-              } else {
-                var2_int = 20;
-                break L1;
-              }
-            }
-            L2: {
-              var8 = new char[var2_int];
-              var7 = var8;
-              var3 = var7;
-              if (param0 <= -106) {
-                break L2;
-              } else {
-                field_f = (String) null;
-                break L2;
-              }
-            }
-            var4 = 0;
-            L3: while (true) {
-              if (var2_int <= var4) {
-                stackIn_21_0 = new String(var8);
-                break L0;
-              } else {
-                L4: {
-                  L5: {
-                    var5 = param1.charAt(var4);
-                    if (65 > var5) {
-                      break L5;
-                    } else {
-                      if (90 < var5) {
-                        break L5;
-                      } else {
-                        var3[var4] = (char)(97 + (-65 + var5));
-                        break L4;
-                      }
-                    }
-                  }
-                  L6: {
-                    L7: {
-                      if (97 > var5) {
-                        break L7;
-                      } else {
-                        if (var5 <= 122) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    L8: {
-                      if (var5 < 48) {
-                        break L8;
-                      } else {
-                        if (var5 > 57) {
-                          break L8;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    var3[var4] = (char)95;
-                    break L4;
-                  }
-                  var3[var4] = (char)var5;
-                  break L4;
-                }
-                var4++;
-                continue L3;
-              }
+          var2_int = param1.length();
+          if (var2_int > 20) {
+            var2_int = 20;
+          }
+          var8 = new char[var2_int];
+          var7 = var8;
+          var3 = var7;
+          if (param0 > -106) {
+            field_f = (String) null;
+          }
+          for (var4 = 0; var2_int > var4; var4++) {
+            var5 = param1.charAt(var4);
+            if (65 <= var5 &&
+              90 >= var5) {
+              var3[var4] = (char)(97 + (-65 + var5));
+            } else if ((97 > var5 ||
+              var5 > 122) &&
+              (var5 < 48 ||
+              var5 > 57)) {
+              var3[var4] = (char)95;
+            } else {
+              var3[var4] = (char)var5;
             }
           }
+          stackIn_21_0 = new String(var8);
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L9;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L9;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("qb.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
-        return stackIn_21_0;
     }
 
     abstract void a(int param0, int param1);
@@ -139,89 +77,58 @@ abstract class qb {
         hn var2 = null;
         int var3 = 0;
         boolean stackIn_14_0 = false;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
+        hn var2Lifetime1;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            ge.field_c = param1;
-            if (!param0) {
-              var2 = (hn) ((Object) fj.field_i.b((byte) 26));
-              L1: while (true) {
-                if (var2 == null) {
-                  L2: {
-                    if (sf.field_n == null) {
-                      break L2;
-                    } else {
-                      var2 = (hn) ((Object) sf.field_n.b((byte) 26));
-                      L3: while (true) {
-                        if (var2 == null) {
-                          break L2;
-                        } else {
-                          stackIn_14_0 = var2.field_k.a((byte) 73);
-                          L4: {
-                            if (!stackIn_14_0) {
-                              var2.b(-27598);
-                              break L4;
-                            } else {
-                              var2.field_n.g(128 + ge.field_c * var2.field_i >> -756288440);
-                              break L4;
-                            }
-                          }
-                          var2 = (hn) ((Object) sf.field_n.a(param0));
-                          continue L3;
-                        }
-                      }
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L5: {
-                    if (var2.field_k.a((byte) 73)) {
-                      var2.field_n.g(ge.field_c * var2.field_i + 128 >> 44158888);
-                      break L5;
-                    } else {
-                      var2.b(-27598);
-                      break L5;
-                    }
-                  }
-                  var2 = (hn) ((Object) fj.field_i.a(false));
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          ge.field_c = param1;
+          if (param0) {
+            return;
           }
+          var2 = (hn) (fj.field_i.b((byte) 26));
+          while (var2 != null) {
+            if (var2.field_k.a((byte) 73)) {
+              var2.field_n.g(ge.field_c * var2.field_i + 128 >> 8);
+            } else {
+              var2.b(-27598);
+            }
+            var2 = (hn) (fj.field_i.a(false));
+          }
+          if (sf.field_n != null) {
+            var2Lifetime1 = (hn) (sf.field_n.b((byte) 26));
+            while (var2Lifetime1 != null) {
+              stackIn_14_0 = var2Lifetime1.field_k.a((byte) 73);
+              if (!stackIn_14_0) {
+                var2Lifetime1.b(-27598);
+              } else {
+                var2Lifetime1.field_n.g(128 + ge.field_c * var2Lifetime1.field_i >> 8);
+              }
+              var2Lifetime1 = (hn) (sf.field_n.a(param0));
+            }
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw sh.a((Throwable) ((Object) var2_ref), "qb.E(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final static int a(int param0, byte param1) {
-        if (param1 != 91) {
-          return 18;
-        } else {
-          return (1044493 & 15 * (param0 & 65280)) >> -559000476 | 16711935 & 15 * (param0 & 16711935) >> -601205116;
+        if (param1 == 91) {
+          return (1044493 & 15 * (param0 & 65280)) >> 4 | 16711935 & 15 * (param0 & 16711935) >> 4;
         }
+        return 18;
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != -6633) {
-            qb.a(62, (byte) -7);
-            field_f = null;
-            return;
+          qb.a(62, (byte) -7);
+          field_f = null;
+          return;
         }
         field_f = null;
     }

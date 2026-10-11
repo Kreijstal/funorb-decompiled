@@ -15,28 +15,26 @@ final class a extends ne {
         field_l = null;
         field_n = null;
         field_m = null;
-        if (param0 != 23779) {
-          field_k = (String) null;
-          field_p = null;
-          field_o = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == 23779) {
           field_p = null;
           field_o = null;
           field_k = null;
           return;
         }
+        field_k = (String) null;
+        field_p = null;
+        field_o = null;
+        field_k = null;
     }
 
     final static void a(int param0, int param1, se param2, boolean param3, boolean param4, int param5, int param6, int param7, int param8, int param9, cn[] param10, cn[] param11) {
         if (!param3) {
-            return;
+          return;
         }
         try {
-            he.a(param6, 0, param8, param7, param1, param5, param9, param11, param1, param0, param10, param2, param2, param9, param4);
+          he.a(param6, 0, param8, param7, param1, param5, param9, param11, param1, param0, param10, param2, param2, param9, param4);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "a.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "a.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + (param11 != null ? "{...}" : "null") + ')');
         }
     }
 

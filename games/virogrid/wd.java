@@ -21,110 +21,88 @@ final class wd {
         int[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var2Lifetime1Lifetime1;
+        int var3Lifetime1Lifetime1;
+        int var4Lifetime1Lifetime1;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var10 = c.field_d.field_B;
-              var8 = var10;
-              var7 = var8;
-              var11 = var7;
-              var9 = var11;
-              var1 = var9;
-              if (-1 <= (co.field_h ^ -1)) {
-                break L1;
-              } else {
-                var5 = -co.field_h + 256;
-                var4 = 256000;
-                L2: while (true) {
-                  if (-1 <= (var4 ^ -1)) {
-                    break L1;
-                  } else {
-                    var4--;
-                    var3 = var10[var4];
-                    var2 = 16711935 & var3;
-                    var2 = var2 * var5;
-                    var3 = var3 & 65280;
-                    var2 = var2 & -16711936;
-                    var3 = var3 * var5;
-                    var2 = var2 + (-16711936 & co.field_h * 16711935);
-                    var3 = var3 & 16711680;
-                    var3 = var3 + (16711680 & 65280 * co.field_h);
-                    var7[var4] = oh.a(var2, var3) >>> 684306504;
-                    continue L2;
-                  }
-                }
-              }
-            }
-            L3: {
-              if (128.0f < lj.field_r) {
-                if (lj.field_r > 256.0f) {
-                  var2 = 256000;
-                  L4: while (true) {
-                    if (var2 <= 0) {
-                      break L3;
-                    } else {
-                      var2--;
-                      var1[var2] = rb.a(var11[var2], 16579836);
-                      var1[var2] = var1[var2] >> 2;
-                      var1[var2] = var1[var2] * 3;
-                      continue L4;
-                    }
-                  }
-                } else {
-                  var3 = 100;
-                  L5: while (true) {
-                    if (var3 <= 0) {
-                      break L3;
-                    } else {
-                      var3--;
-                      var4 = 2560 * var3;
-                      var2 = 1280;
-                      L6: while (true) {
-                        var2--;
-                        if (var2 <= 0) {
-                          continue L5;
-                        } else {
-                          var1[var4] = rb.a(var11[var4], 16711422);
-                          var1[var4] = var1[var4] >> 1;
-                          var4++;
-                          continue L6;
-                        }
-                      }
-                    }
-                  }
-                }
-              } else {
-                var3 = 200;
-                L7: while (true) {
-                  if (0 >= var3) {
-                    break L3;
-                  } else {
-                    var3--;
-                    var4 = 1280 * var3;
-                    var2 = 640;
-                    L8: while (true) {
-                      var2--;
-                      if (-1 <= (var2 ^ -1)) {
-                        continue L7;
-                      } else {
-                        var1[var4] = rb.a(var11[var4], 16711422);
-                        var1[var4] = var1[var4] >> 1;
-                        var4++;
-                        continue L8;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            if (param0 == 8) {
-              break L0;
-            } else {
-              field_a = true;
-              return;
+          var10 = c.field_d.field_B;
+          var8 = var10;
+          var7 = var8;
+          var11 = var7;
+          var9 = var11;
+          var1 = var9;
+          if (co.field_h > 0) {
+            var5 = -co.field_h + 256;
+            var4 = 256000;
+            while (var4 > 0) {
+              var4--;
+              var3 = var10[var4];
+              var2 = 16711935 & var3;
+              var2 = var2 * var5;
+              var3 = var3 & 65280;
+              var2 = var2 & -16711936;
+              var3 = var3 * var5;
+              var2 = var2 + (-16711936 & co.field_h * 16711935);
+              var3 = var3 & 16711680;
+              var3 = var3 + (16711680 & 65280 * co.field_h);
+              var7[var4] = oh.a(var2, var3) >>> 8;
             }
           }
+          boolean decompiledFrameRemainder0 = true;
+          if (128.0f >= lj.field_r) {
+            var3Lifetime1 = 200;
+            while (0 < var3Lifetime1) {
+              var3Lifetime1--;
+              var4Lifetime1 = 1280 * var3Lifetime1;
+              var2Lifetime1 = 640;
+              while (true) {
+                var2Lifetime1--;
+                if (var2Lifetime1 <= 0) {
+                  break;
+                }
+                var1[var4Lifetime1] = rb.a(var11[var4Lifetime1], 16711422);
+                var1[var4Lifetime1] = var1[var4Lifetime1] >> 1;
+                var4Lifetime1++;
+              }
+            }
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            if (!(lj.field_r <= 256.0f)) {
+              var2Lifetime1Lifetime1 = 256000;
+              while (var2Lifetime1Lifetime1 > 0) {
+                var2Lifetime1Lifetime1--;
+                var1[var2Lifetime1Lifetime1] = rb.a(var11[var2Lifetime1Lifetime1], 16579836);
+                var1[var2Lifetime1Lifetime1] = var1[var2Lifetime1Lifetime1] >> 2;
+                var1[var2Lifetime1Lifetime1] = var1[var2Lifetime1Lifetime1] * 3;
+              }
+            } else {
+              var3Lifetime1Lifetime1 = 100;
+              while (var3Lifetime1Lifetime1 > 0) {
+                var3Lifetime1Lifetime1--;
+                var4Lifetime1Lifetime1 = 2560 * var3Lifetime1Lifetime1;
+                var2Lifetime1Lifetime1 = 1280;
+                while (true) {
+                  var2Lifetime1Lifetime1--;
+                  if (var2Lifetime1Lifetime1 <= 0) {
+                    break;
+                  }
+                  var1[var4Lifetime1Lifetime1] = rb.a(var11[var4Lifetime1Lifetime1], 16711422);
+                  var1[var4Lifetime1Lifetime1] = var1[var4Lifetime1Lifetime1] >> 1;
+                  var4Lifetime1Lifetime1++;
+                }
+              }
+            }
+          }
+          if (param0 == 8) {
+            return;
+          }
+          field_a = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -134,123 +112,62 @@ final class wd {
 
     final static String a(int param0, java.applet.Applet param1, String param2) {
         try {
-            String var3 = null;
-            String[] var4 = null;
-            int var5 = 0;
-            int var6 = 0;
-            int var7 = 0;
-            String stackIn_7_0 = null;
-            Object stackIn_12_0 = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var3_ref = null;
-            RuntimeException var3_ref2 = null;
-            var7 = Virogrid.field_F ? 1 : 0;
+          int var5 = 0;
+          String var3 = null;
+          String[] var4 = null;
+          int var6 = 0;
+          int var7 = 0;
+          String stackIn_7_0 = null;
+          Object stackIn_12_0 = null;
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          var7 = Virogrid.field_F ? 1 : 0;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    var3 = (String) (q.b("getcookies", 6168, param1));
-                    var4 = ql.a(var3, (byte) -123, ';');
-                    var5 = param0;
-                    L2: while (true) {
-                      if (var4.length <= var5) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      } else {
-                        L3: {
-                          var6 = var4[var5].indexOf('=');
-                          if (0 > var6) {
-                            break L3;
-                          } else {
-                            if (var4[var5].substring(0, var6).trim().equals(param2)) {
-                              stackIn_7_0 = var4[var5].substring(1 + var6).trim();
-                              decompiledRegionSelector0 = 1;
-                              break L1;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
-                    var3_ref = decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
-                    break L4;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  stackIn_12_0 = null;
-                  decompiledRegionSelector1 = 0;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 1;
-                  break L0;
+              var3 = (String) (q.b("getcookies", 6168, param1));
+              var4 = ql.a(var3, (byte) -123, ';');
+              for (var5 = param0; var4.length > var5; var5++) {
+                var6 = var4[var5].indexOf('=');
+                if (0 <= var6 &&
+                  var4[var5].substring(0, var6).trim().equals(param2)) {
+                  stackIn_7_0 = var4[var5].substring(1 + var6).trim();
+                  return stackIn_7_0;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_15_0 = (RuntimeException) (var3_ref2);
-
-                stackIn_15_1 = new StringBuilder().append("wd.C(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "{...}";
-                  break L5;
-                }
-              }
-              L6: {
-
-
-                stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
-                if (param2 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw kg.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return (String) ((Object) stackIn_12_0);
+            stackIn_12_0 = null;
+            return (String) (stackIn_12_0);
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = var3_ref2;
+            stackIn_15_1 = new StringBuilder().append("wd.C(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_16_2 = "null";
             } else {
-              return stackIn_7_0;
+              stackIn_16_2 = "{...}";
             }
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+            if (param2 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw kg.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -260,36 +177,29 @@ final class wd {
     }
 
     final static int a(byte param0, int param1) {
-        if (param0 < -43) {
-          if (param1 >= 0) {
-            if ((param1 ^ -1) < -65537) {
-              return -wl.field_c[134217728 / param1] + 2048;
-            } else {
-              return wl.field_c[param1 >> 537667685];
-            }
-          } else {
-            if (param1 >= -65536) {
-              return -wl.field_c[-param1 >> -2033357787];
-            } else {
-              return -2048 + wl.field_c[134217728 / -param1];
-            }
-          }
-        } else {
+        if (param0 >= -43) {
           wd.a((byte) -38, 106);
-          if (param1 >= 0) {
-            if ((param1 ^ -1) < -65537) {
-              return -wl.field_c[134217728 / param1] + 2048;
-            } else {
-              return wl.field_c[param1 >> 537667685];
-            }
-          } else {
-            if (param1 >= -65536) {
-              return -wl.field_c[-param1 >> -2033357787];
-            } else {
+          if (param1 < 0) {
+            if (param1 < -65536) {
               return -2048 + wl.field_c[134217728 / -param1];
             }
+            return -wl.field_c[-param1 >> 5];
           }
+          if (param1 <= 65536) {
+            return wl.field_c[param1 >> 5];
+          }
+          return -wl.field_c[134217728 / param1] + 2048;
         }
+        if (param1 < 0) {
+          if (param1 < -65536) {
+            return -2048 + wl.field_c[134217728 / -param1];
+          }
+          return -wl.field_c[-param1 >> 5];
+        }
+        if (param1 <= 65536) {
+          return wl.field_c[param1 >> 5];
+        }
+        return -wl.field_c[134217728 / param1] + 2048;
     }
 
     public static void a(int param0) {
@@ -297,7 +207,7 @@ final class wd {
         field_b = null;
         field_d = null;
         if (param0 != -8518) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 

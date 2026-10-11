@@ -10,24 +10,22 @@ final class oo {
     static String field_d;
 
     final static void a(byte param0) {
-        if (param0 > -49) {
-          oo.a(-77, 49, 26, true, 104);
-          ig.a(7655);
-          qj.a((byte) -127, 4);
-          return;
-        } else {
+        if (param0 <= -49) {
           ig.a(7655);
           qj.a((byte) -127, 4);
           return;
         }
+        oo.a(-77, 49, 26, true, 104);
+        ig.a(7655);
+        qj.a((byte) -127, 4);
     }
 
     final static void a(String param0, byte param1) {
         try {
-            fr.field_H = param0;
-            int var2_int = 81 % ((param1 - 0) / 43);
+          fr.field_H = param0;
+          int var2_int = 81 % ((param1 - 0) / 43);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "oo.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,84 +33,40 @@ final class oo {
         int var9;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= param3) {
-          if (param0 >= param2) {
+          if (param0 < param2) {
+            fp.a(param1, param7, -99, param5, param4, param0, gf.field_h, param3, param2);
+          } else {
             if (param3 < param2) {
               fp.a(param7, param1, -116, param5, param4, param2, gf.field_h, param3, param0);
-              if (!param6) {
-                field_c = (qr) null;
-                return;
-              } else {
-                return;
-              }
             } else {
               fp.a(param7, param5, -92, param1, param4, param3, gf.field_h, param2, param0);
-              if (!param6) {
-                field_c = (qr) null;
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            fp.a(param1, param7, -99, param5, param4, param0, gf.field_h, param3, param2);
-            if (!param6) {
-              field_c = (qr) null;
-              return;
-            } else {
-              return;
             }
           }
         } else {
-          if (param3 >= param2) {
+          if (param3 < param2) {
+            fp.a(param1, param5, -113, param7, param4, param3, gf.field_h, param0, param2);
+          } else {
             if (param0 >= param2) {
               fp.a(param5, param7, -98, param1, param4, param0, gf.field_h, param2, param3);
-              if (param6) {
-                return;
-              } else {
-                field_c = (qr) null;
-                return;
-              }
             } else {
               fp.a(param5, param1, -101, param7, param4, param2, gf.field_h, param0, param3);
-              if (param6) {
-                return;
-              } else {
-                field_c = (qr) null;
-                return;
-              }
-            }
-          } else {
-            fp.a(param1, param5, -113, param7, param4, param3, gf.field_h, param0, param2);
-            if (!param6) {
-              field_c = (qr) null;
-              return;
-            } else {
-              return;
             }
           }
         }
+        if (param6) {
+          return;
+        }
+        field_c = (qr) null;
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4) {
-        int var5;
-        int var6;
-        int stackIn_4_0 = 0;
-        var5 = param0 * param0 - -(param1 * param1);
-        if (!param3) {
-          return true;
-        } else {
-          L0: {
-            var6 = param2 * param2 - -(param4 * param4);
-            if (var6 <= var5) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        int var6 = 0;
+        int var5 = param0 * param0 + param1 * param1;
+        if (param3) {
+          var6 = param2 * param2 + param4 * param4;
+          return var6 > var5 ? true : false;
         }
+        return true;
     }
 
     public static void a(int param0) {
@@ -122,7 +76,7 @@ final class oo {
         field_b = null;
         field_a = null;
         if (param0 != 4) {
-            field_c = (qr) null;
+          field_c = (qr) null;
         }
     }
 

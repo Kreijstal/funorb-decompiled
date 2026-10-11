@@ -12,12 +12,12 @@ final class jn {
     final static void a(ah param0, boolean param1, ah param2) {
         lj.field_c = param2;
         if (!param1) {
-            return;
+          return;
         }
         try {
-            nn.field_T = param0;
+          nn.field_T = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "jn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,22 +25,22 @@ final class jn {
         field_a = null;
         field_d = null;
         if (param0 != 122) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
     jn(bh param0) {
         int var2_int = 0;
         try {
-            this.field_b = param0.e(127);
-            param0.d((byte) -99);
-            var2_int = param0.d((byte) -99);
-            if (var2_int != 1) {
-                throw new RuntimeException();
-            }
-            this.field_e = param0.e(127);
+          this.field_b = param0.e(127);
+          param0.d((byte) -99);
+          var2_int = param0.d((byte) -99);
+          if (var2_int != 1) {
+            throw new RuntimeException();
+          }
+          this.field_e = param0.e(127);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

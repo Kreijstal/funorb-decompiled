@@ -15,51 +15,33 @@ abstract class rf extends ii {
     static String[] field_N;
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (this.field_U != 0) {
-          if (-257 < (this.field_U ^ -1)) {
-            L0: {
-              L1: {
-                if (np.field_F == null) {
-                  break L1;
-                } else {
-                  if (this.field_x > np.field_F.field_y) {
-                    break L1;
-                  } else {
-                    if (np.field_F.field_v < this.field_s) {
-                      break L1;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-              }
-              np.field_F = new cn(this.field_x, this.field_s);
-              break L0;
-            }
-            lm.a(np.field_F, (byte) -102);
-            gf.a();
-            this.a(0, 0, false);
-            super.a(param0, -param1 + -this.field_q, param2, -this.field_v + -param3);
-            ti.c(true);
-            np.field_F.d(param1 + this.field_q, param3 + this.field_v, this.field_U);
-            return;
-          } else {
-            if (param0 != 0) {
-              return;
-            } else {
-              this.a(param3 + this.field_v, param1 + this.field_q, false);
-              super.a(param0, param1, param2 ^ 0, param3);
-              return;
-            }
-          }
-        } else {
+        if (this.field_U == 0) {
           return;
         }
+        if (this.field_U >= 256) {
+          if (param0 != 0) {
+            return;
+          }
+          this.a(param3 + this.field_v, param1 + this.field_q, false);
+          super.a(param0, param1, param2 ^ 0, param3);
+          return;
+        }
+        if (np.field_F == null ||
+          !(this.field_x <= np.field_F.field_y) ||
+          !(np.field_F.field_v >= this.field_s)) {
+          np.field_F = new cn(this.field_x, this.field_s);
+        }
+        lm.a(np.field_F, (byte) -102);
+        gf.a();
+        this.a(0, 0, false);
+        super.a(param0, -param1 - this.field_q, param2, -this.field_v - param3);
+        ti.c(true);
+        np.field_F.d(param1 + this.field_q, param3 + this.field_v, this.field_U);
     }
 
     final void b(int param0, int param1, int param2) {
         int var4 = -125 % ((param0 - 70) / 48);
-        this.b(0, param2, -param1 + vf.field_x >> 1848386273, -param2 + hn.field_t >> -1321271839, param1);
+        this.b(0, param2, -param1 + vf.field_x >> 1, -param2 + hn.field_t >> 1, param1);
     }
 
     final static q[] a(int param0, byte param1, nh param2, int param3) {
@@ -68,81 +50,58 @@ abstract class rf extends ii {
         q[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (kk.a(param2, 1, param3, param0)) {
-              if (param1 == -71) {
-                stackIn_7_0 = vl.d(-89);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                stackIn_5_0 = (q[]) null;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              return null;
-            }
+          if (!kk.a(param2, 1, param3, param0)) {
+            return null;
           }
+          if (param1 == -71) {
+            stackIn_7_0 = vl.d(-89);
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (q[]) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("rf.HA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("rf.HA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw vk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
     rf(ji param0, int param1, int param2) {
-        super(hn.field_t - param1 >> 1971152417, -param2 + vf.field_x >> 1519541057, param1, param2, (ca) null);
+        super(hn.field_t - param1 >> 1, -param2 + vf.field_x >> 1, param1, param2, (ca) null);
         try {
-            this.field_R = param0;
-            this.field_U = 0;
-            this.field_T = false;
+          this.field_R = param0;
+          this.field_U = 0;
+          this.field_T = false;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static q a(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
+        int var2Lifetime1;
         if (param0 != 10) {
-            return (q) null;
+          return (q) null;
         }
         q var4 = new q(14, 11, 2);
         q var1 = var4;
         var4.field_i[1] = 65793;
-        for (var2 = 0; (var2 ^ -1) > -7; var2++) {
-            og.a(var2 * 2 + 1, (byte) -75, 10 + -var2, var1, 5 - var2, (byte) 1);
+        for (var2 = 0; var2 < 6; var2++) {
+          og.a(var2 * 2 + 1, (byte) -75, 10 - var2, var1, 5 - var2, (byte) 1);
         }
-        for (var2 = 6; var2 < 11; var2++) {
-            og.a(3, (byte) -78, -var2 + 10, var1, 4, (byte) 1);
+        for (var2Lifetime1 = 6; var2Lifetime1 < 11; var2Lifetime1++) {
+          og.a(3, (byte) -78, -var2Lifetime1 + 10, var1, 4, (byte) 1);
         }
         return var1;
     }
@@ -155,110 +114,56 @@ abstract class rf extends ii {
         field_Q = null;
         field_K = null;
         if (param0) {
-            field_K = (fm) null;
+          field_K = (fm) null;
         }
     }
 
     boolean f(byte param0) {
         int var2;
         int var3;
-        int stackIn_13_0 = 0;
-        L0: {
-          var2 = this.j(78);
-          if (param0 == -90) {
-            break L0;
-          } else {
-            this.field_R = (ji) null;
-            break L0;
-          }
+        boolean stackIn_13_0 = false;
+        var2 = this.j(78);
+        if (param0 != -90) {
+          this.field_R = (ji) null;
         }
-        L1: {
-          var3 = -this.field_U + var2;
-          if ((var3 ^ -1) < -1) {
-            this.field_U = this.field_U + (8 + var3 - 1) / 8;
-            break L1;
-          } else {
-            break L1;
-          }
+        var3 = -this.field_U + var2;
+        if (var3 > 0) {
+          this.field_U = this.field_U + (8 + var3 - 1) / 8;
         }
-        L2: {
-          if (var3 < 0) {
-            this.field_U = this.field_U + (-15 + var3) / 16;
-            break L2;
-          } else {
-            break L2;
-          }
+        if (var3 < 0) {
+          this.field_U = this.field_U + (-15 + var3) / 16;
         }
-        L3: {
-          L4: {
-            if (0 != this.field_U) {
-              break L4;
-            } else {
-              if (-1 != (var2 ^ -1)) {
-                break L4;
-              } else {
-                if (this.field_T) {
-                  break L4;
-                } else {
-                  stackIn_13_0 = 1;
-                  break L3;
-                }
-              }
-            }
-          }
-          stackIn_13_0 = 0;
-          break L3;
-        }
-        return stackIn_13_0 != 0;
+        stackIn_13_0 = (0 == this.field_U) && (var2 == 0) && (!this.field_T);
+        return stackIn_13_0;
     }
 
     private final int j(int param0) {
         if (param0 < 61) {
-            nh var3 = (nh) null;
-            rf.a(0, (byte) 10, (nh) null, -24);
+          nh var3 = (nh) null;
+          rf.a(0, (byte) 10, (nh) null, -24);
         }
         return this.field_T ? this.field_R.i(32) != this ? 0 : 256 : 0;
     }
 
     boolean i(int param0) {
-        int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == 462) {
-            break L0;
-          } else {
-            rf.a(-12);
-            break L0;
-          }
+        boolean stackIn_6_0 = false;
+        if (param0 != 462) {
+          rf.a(-12);
         }
-        L1: {
-          L2: {
-            this.field_U = this.j(98);
-            if (this.field_U != 0) {
-              break L2;
-            } else {
-              if (this.field_T) {
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-          }
-          stackIn_6_0 = 0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        this.field_U = this.j(98);
+        stackIn_6_0 = (this.field_U == 0) && (!this.field_T);
+        return stackIn_6_0;
     }
 
     abstract void a(int param0, int param1, boolean param2);
 
     final lm g(int param0) {
         lm var2 = super.g(param0 ^ 0);
-        if (!(var2 == null)) {
-            return var2;
+        if (var2 != null) {
+          return var2;
         }
         if (param0 != -20311) {
-            this.f((byte) 104);
+          this.f((byte) 104);
         }
         return (lm) (this);
     }

@@ -16,13 +16,13 @@ final class ak {
 
     final static void a(boolean param0, String param1, String param2) {
         try {
-            if (null != jj.field_d) {
-                jj.field_d.g((byte) -122);
-            }
-            ib.field_e = new lk(param2, param1, param0, true, true);
-            ke.field_s.b(ib.field_e, (byte) 110);
+          if (null != jj.field_d) {
+            jj.field_d.g((byte) -122);
+          }
+          ib.field_e = new lk(param2, param1, param0, true, true);
+          ke.field_s.b(ib.field_e, (byte) 110);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "ak.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "ak.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class ak {
         field_b = null;
         field_i = null;
         if (param0 != -15673) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

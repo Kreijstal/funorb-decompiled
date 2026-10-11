@@ -18,40 +18,37 @@ final class cb extends le {
 
     final void a(byte[] param0, byte param1) {
         try {
-            this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_k.position(0);
-            if (param1 != 95) {
-                cb.a((byte) -7);
-            }
-            this.field_k.put(param0);
+          this.field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_k.position(0);
+          if (param1 != 95) {
+            cb.a((byte) -7);
+          }
+          this.field_k.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "cb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean c(byte param0) {
-        int var1;
-        var1 = 72 / ((param0 - -17) / 62);
-        if (bh.field_p != null) {
-          if (!bh.field_p.b(-1)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = 72 / ((param0 + 17) / 62);
+        if (bh.field_p == null) {
           return false;
         }
+        if (bh.field_p.b(-1)) {
+          return true;
+        }
+        return false;
     }
 
     final static boolean b(byte param0) {
         if (param0 >= -112) {
-            return true;
+          return true;
         }
         if (null == wg.field_f) {
-            return false;
+          return false;
         }
         if (ih.field_f != cs.field_j) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -63,28 +60,23 @@ final class cb extends le {
         field_i = null;
         field_h = null;
         field_o = null;
-        if (param0 != 104) {
-          cb.c((byte) 27);
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 104) {
           field_f = null;
           return;
         }
+        cb.c((byte) 27);
+        field_f = null;
     }
 
     final byte[] a(boolean param0) {
-        byte[] var2;
-        byte[] var3;
-        var3 = new byte[this.field_k.capacity()];
-        var2 = var3;
+        byte[] var3 = new byte[this.field_k.capacity()];
+        byte[] var2 = var3;
         this.field_k.position(0);
-        if (param0) {
-          return (byte[]) null;
-        } else {
+        if (!param0) {
           this.field_k.get(var3);
           return var3;
         }
+        return (byte[]) null;
     }
 
     static {

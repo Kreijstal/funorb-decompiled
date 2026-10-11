@@ -14,40 +14,34 @@ abstract class oj extends vh {
     int field_r;
 
     private final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        var6 = this.field_q << 294922755;
-        var7 = this.field_u << -232022461;
-        param4 = (var6 & 15) + (param4 << -174144380);
-        if (param0 != 88) {
-          this.field_v = -52;
-          param1 = (var7 & 15) + (param1 << -44610108);
-          this.a(var6, var7, param4, param1, param2, param3);
-          return;
-        } else {
-          param1 = (var7 & 15) + (param1 << -44610108);
+        int var6 = this.field_q << 3;
+        int var7 = this.field_u << 3;
+        param4 = (var6 & 15) + (param4 << 4);
+        if (param0 == 88) {
+          param1 = (var7 & 15) + (param1 << 4);
           this.a(var6, var7, param4, param1, param2, param3);
           return;
         }
+        this.field_v = -52;
+        param1 = (var7 & 15) + (param1 << 4);
+        this.a(var6, var7, param4, param1, param2, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
-        if (param4 != 21) {
-          this.a((byte) -117, -7, -108, 10, -112);
-          this.a((byte) 88, param3, param0 << -486964408, param1 << -620470107, param2);
-          return;
-        } else {
-          this.a((byte) 88, param3, param0 << -486964408, param1 << -620470107, param2);
+        if (param4 == 21) {
+          this.a((byte) 88, param3, param0 << 8, param1 << 5, param2);
           return;
         }
+        this.a((byte) -117, -7, -108, 10, -112);
+        this.a((byte) 88, param3, param0 << 8, param1 << 5, param2);
     }
 
     public static void d(byte param0) {
         if (param0 > -47) {
-            oj.d((byte) -67);
-            field_w = null;
-            field_s = null;
-            return;
+          oj.d((byte) -67);
+          field_w = null;
+          field_s = null;
+          return;
         }
         field_w = null;
         field_s = null;

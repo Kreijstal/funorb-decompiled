@@ -30,20 +30,18 @@ final class ft extends wf {
         this.field_y = null;
         this.field_e = null;
         this.field_r = null;
-        if (param0 != 11821) {
-          this.field_v = -33;
-          this.field_x = null;
-          return;
-        } else {
+        if (param0 == 11821) {
           this.field_x = null;
           return;
         }
+        this.field_v = -33;
+        this.field_x = null;
     }
 
     public static void a(byte param0) {
         field_l = null;
         if (param0 < 96) {
-            ft.a((byte) -80);
+          ft.a((byte) -80);
         }
     }
 

@@ -8,49 +8,38 @@ final class ol {
     static String field_d;
 
     final static void a(byte param0) {
-        int var1;
-        if (param0 != -94) {
-          L0: {
-            field_d = (String) null;
-            if (ee.field_J < 224) {
-              var1 = ee.field_J % 32;
-              fc.a(-var1 + (ee.field_J - -32), (byte) 52);
-              break L0;
-            } else {
-              fc.a(256, (byte) 72);
-              break L0;
-            }
+        int var1 = 0;
+        int var1Lifetime1;
+        if (param0 == -94) {
+          if (ee.field_J >= 224) {
+            fc.a(256, (byte) 72);
+          } else {
+            var1 = ee.field_J % 32;
+            fc.a(-var1 + (ee.field_J + 32), (byte) 52);
           }
           return;
+        }
+        field_d = (String) null;
+        if (ee.field_J >= 224) {
+          fc.a(256, (byte) 72);
         } else {
-          L1: {
-            if (ee.field_J < 224) {
-              var1 = ee.field_J % 32;
-              fc.a(-var1 + (ee.field_J - -32), (byte) 52);
-              break L1;
-            } else {
-              fc.a(256, (byte) 72);
-              break L1;
-            }
-          }
-          return;
+          var1Lifetime1 = ee.field_J % 32;
+          fc.a(-var1Lifetime1 + (ee.field_J + 32), (byte) 52);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 1) {
-          field_b = (String[][]) null;
-          field_a = null;
-          field_d = null;
-          field_b = (String[][]) null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_a = null;
           field_d = null;
           field_b = (String[][]) null;
           return;
         }
+        field_b = (String[][]) null;
+        field_a = null;
+        field_d = null;
+        field_b = (String[][]) null;
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -58,176 +47,89 @@ final class ol {
         int var4 = 0;
         int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param2 >= 31) {
-                break L1;
-              } else {
-                field_b = (String[][]) null;
-                break L1;
-              }
-            }
-            var3_int = 1;
-            L2: while (true) {
-              if ((param1 ^ -1) >= -2) {
-                if (param1 != 1) {
-                  stackIn_14_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_12_0 = var3_int * param0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L3: {
-                  if (0 != (param1 & 1)) {
-                    var3_int = var3_int * param0;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                param0 = param0 * param0;
-                param1 = param1 >> 1;
-                continue L2;
-              }
-            }
+          if (param2 < 31) {
+            field_b = (String[][]) null;
           }
+          var3_int = 1;
+          while (param1 > 1) {
+            if (0 != (param1 & 1)) {
+              var3_int = var3_int * param0;
+            }
+            param0 = param0 * param0;
+            param1 = param1 >> 1;
+          }
+          if (param1 != 1) {
+            stackIn_14_0 = var3_int;
+            return stackIn_14_0;
+          }
+          stackIn_12_0 = var3_int * param0;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var3), "ol.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          return stackIn_14_0;
-        }
     }
 
     final static int a(int param0, int param1) {
         int var2;
-        if (0 != param0) {
-          if (0 >= param0) {
-            L0: {
-              var2 = 2;
-              if (65535 < (param0 ^ -1)) {
-                param0 = param0 >> 16;
-                var2 += 16;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            L1: {
-              if (param0 >= -256) {
-                break L1;
-              } else {
-                var2 += 8;
-                param0 = param0 >> 8;
-                break L1;
-              }
-            }
-            L2: {
-              if (-16 <= param0) {
-                break L2;
-              } else {
-                param0 = param0 >> 4;
-                var2 += 4;
-                break L2;
-              }
-            }
-            L3: {
-              if (3 >= (param0 ^ -1)) {
-                break L3;
-              } else {
-                param0 = param0 >> 2;
-                var2 += 2;
-                break L3;
-              }
-            }
-            if (param1 != 8) {
-              L4: {
-                field_c = (ea) null;
-                if ((param0 ^ -1) > 1) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              return var2;
-            } else {
-              L5: {
-                if ((param0 ^ -1) > 1) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              return var2;
-            }
-          } else {
-            L6: {
-              var2 = 1;
-              if (param0 <= 65535) {
-                break L6;
-              } else {
-                var2 += 16;
-                param0 = param0 >> 16;
-                break L6;
-              }
-            }
-            L7: {
-              if (-256 <= (param0 ^ -1)) {
-                break L7;
-              } else {
-                var2 += 8;
-                param0 = param0 >> 8;
-                break L7;
-              }
-            }
-            L8: {
-              if (-16 > (param0 ^ -1)) {
-                var2 += 4;
-                param0 = param0 >> 4;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              if ((param0 ^ -1) < -4) {
-                var2 += 2;
-                param0 = param0 >> 2;
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            L10: {
-              if ((param0 ^ -1) < -2) {
-                var2++;
-                param0 = param0 >> 1;
-                break L10;
-              } else {
-                break L10;
-              }
-            }
-            return var2;
-          }
-        } else {
+        int var2Lifetime1;
+        if (0 == param0) {
           return 0;
         }
+        if (0 < param0) {
+          var2 = 1;
+          if (param0 > 65535) {
+            var2 += 16;
+            param0 = param0 >> 16;
+          }
+          if (param0 > 255) {
+            var2 += 8;
+            param0 = param0 >> 8;
+          }
+          if (param0 > 15) {
+            var2 += 4;
+            param0 = param0 >> 4;
+          }
+          if (param0 > 3) {
+            var2 += 2;
+            param0 = param0 >> 2;
+          }
+          if (param0 > 1) {
+            var2++;
+            param0 = param0 >> 1;
+          }
+          return var2;
+        }
+        var2Lifetime1 = 2;
+        if (param0 < -65536) {
+          param0 = param0 >> 16;
+          var2Lifetime1 += 16;
+        }
+        if (param0 < -256) {
+          var2Lifetime1 += 8;
+          param0 = param0 >> 8;
+        }
+        if (-16 > param0) {
+          param0 = param0 >> 4;
+          var2Lifetime1 += 4;
+        }
+        if (param0 < -4) {
+          param0 = param0 >> 2;
+          var2Lifetime1 += 2;
+        }
+        if (param1 != 8) {
+          field_c = (ea) null;
+        }
+        if (param0 < -2) {
+          var2Lifetime1++;
+          param0 = param0 >> 1;
+        }
+        return var2Lifetime1;
     }
 
     static {

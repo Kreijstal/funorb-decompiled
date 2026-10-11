@@ -9,67 +9,59 @@ final class ffa extends kj {
     static String field_h;
 
     final boolean b(int param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        if (this.field_g != 60) {
-          if (param0 > 21) {
-            fieldTemp$4 = this.field_g - 1;
-            this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$4 ^ -1)) {
-              jja.a(256, -1, 19);
-              dha.a(-120, this.field_f, this.field_e);
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            field_j = (String[][]) null;
-            fieldTemp$5 = this.field_g - 1;
-            this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$5 ^ -1)) {
-              jja.a(256, -1, 19);
-              dha.a(-120, this.field_f, this.field_e);
-              return true;
-            } else {
-              return false;
-            }
-          }
-        } else {
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        if (this.field_g == 60) {
           jja.a(192, -1, 25);
-          if (param0 <= 21) {
-            field_j = (String[][]) null;
-            fieldTemp$6 = this.field_g - 1;
+          if (param0 > 21) {
+            fieldTemp$0 = this.field_g - 1;
             this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$6 ^ -1)) {
-              jja.a(256, -1, 19);
-              dha.a(-120, this.field_f, this.field_e);
-              return true;
-            } else {
+            if (fieldTemp$0 >= 0) {
               return false;
             }
-          } else {
-            fieldTemp$7 = this.field_g - 1;
-            this.field_g = this.field_g - 1;
-            if (-1 < (fieldTemp$7 ^ -1)) {
-              jja.a(256, -1, 19);
-              dha.a(-120, this.field_f, this.field_e);
-              return true;
-            } else {
-              return false;
-            }
+            jja.a(256, -1, 19);
+            dha.a(-120, this.field_f, this.field_e);
+            return true;
           }
+          field_j = (String[][]) null;
+          fieldTemp$1 = this.field_g - 1;
+          this.field_g = this.field_g - 1;
+          if (fieldTemp$1 >= 0) {
+            return false;
+          }
+          jja.a(256, -1, 19);
+          dha.a(-120, this.field_f, this.field_e);
+          return true;
         }
+        if (param0 <= 21) {
+          field_j = (String[][]) null;
+          fieldTemp$2 = this.field_g - 1;
+          this.field_g = this.field_g - 1;
+          if (fieldTemp$2 >= 0) {
+            return false;
+          }
+          jja.a(256, -1, 19);
+          dha.a(-120, this.field_f, this.field_e);
+          return true;
+        }
+        int fieldTemp$3 = this.field_g - 1;
+        this.field_g = this.field_g - 1;
+        if (fieldTemp$3 >= 0) {
+          return false;
+        }
+        jja.a(256, -1, 19);
+        dha.a(-120, this.field_f, this.field_e);
+        return true;
     }
 
     ffa(gj param0, rb param1, int param2, int param3) {
         super(param0, param2, param3);
         try {
-            this.field_f = param1;
-            this.field_g = 80;
+          this.field_f = param1;
+          this.field_g = 80;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ffa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -78,190 +70,146 @@ final class ffa extends kj {
         int var3;
         var3 = BachelorFridge.field_y;
         var2 = param1;
-        if (var2 != 0) {
-          if (var2 != 1) {
-            if (var2 != 2) {
-              if (3 != var2) {
-                if ((var2 ^ -1) != -5) {
-                  if (5 != var2) {
-                    if (-7 != (var2 ^ -1)) {
-                      if (var2 != 7) {
-                        if ((var2 ^ -1) != -9) {
-                          if (var2 != 9) {
-                            if ((var2 ^ -1) != -11) {
-                              if (11 != var2) {
-                                if (-13 != (var2 ^ -1)) {
-                                  if ((var2 ^ -1) != -14) {
-                                    if ((var2 ^ -1) != -15) {
-                                      if ((var2 ^ -1) != -16) {
-                                        if (var2 != 16) {
-                                          if (var2 != 17) {
-                                            if (18 != var2) {
-                                              if (var2 != 19) {
-                                                if (20 != var2) {
-                                                  if (21 != var2) {
-                                                    if (-23 != (var2 ^ -1)) {
-                                                      if (var2 != 23) {
-                                                        if (24 != var2) {
-                                                          if (var2 != 25) {
-                                                            if (var2 != 26) {
-                                                              if (-28 != (var2 ^ -1)) {
-                                                                if ((var2 ^ -1) != -29) {
-                                                                  if (-30 != (var2 ^ -1)) {
-                                                                    if (30 != var2) {
-                                                                      if (-32 != (var2 ^ -1)) {
-                                                                        if (32 != var2) {
-                                                                          if ((var2 ^ -1) != -34) {
-                                                                            if (-35 != (var2 ^ -1)) {
-                                                                              if (35 != var2) {
-                                                                                if ((var2 ^ -1) != -37) {
-                                                                                  if (var2 == 37) {
-                                                                                    return (k) ((Object) new lfa());
-                                                                                  } else {
-                                                                                    if (38 == var2) {
-                                                                                      return (k) ((Object) new qca());
-                                                                                    } else {
-                                                                                      if ((var2 ^ -1) != -40) {
-                                                                                        if (param0 != -16) {
-                                                                                          field_i = (String) null;
-                                                                                          return null;
-                                                                                        } else {
-                                                                                          return null;
-                                                                                        }
-                                                                                      } else {
-                                                                                        return (k) ((Object) new qb());
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                } else {
-                                                                                  return (k) ((Object) new kma());
-                                                                                }
-                                                                              } else {
-                                                                                return (k) ((Object) new qk());
-                                                                              }
-                                                                            } else {
-                                                                              return (k) ((Object) new dc());
-                                                                            }
-                                                                          } else {
-                                                                            return (k) ((Object) new qna());
-                                                                          }
-                                                                        } else {
-                                                                          return (k) ((Object) new fn());
-                                                                        }
-                                                                      } else {
-                                                                        return (k) ((Object) new oj());
-                                                                      }
-                                                                    } else {
-                                                                      return (k) ((Object) new ef());
-                                                                    }
-                                                                  } else {
-                                                                    return (k) ((Object) new ama());
-                                                                  }
-                                                                } else {
-                                                                  return (k) ((Object) new gt());
-                                                                }
-                                                              } else {
-                                                                return (k) ((Object) new hda());
-                                                              }
-                                                            } else {
-                                                              return (k) ((Object) new wr());
-                                                            }
-                                                          } else {
-                                                            return (k) ((Object) new wla());
-                                                          }
-                                                        } else {
-                                                          return (k) ((Object) new sj());
-                                                        }
-                                                      } else {
-                                                        return (k) ((Object) new aea());
-                                                      }
-                                                    } else {
-                                                      return (k) ((Object) new rc());
-                                                    }
-                                                  } else {
-                                                    return (k) ((Object) new jq());
-                                                  }
-                                                } else {
-                                                  return (k) ((Object) new ag());
-                                                }
-                                              } else {
-                                                return (k) ((Object) new kba());
-                                              }
-                                            } else {
-                                              return (k) ((Object) new an());
-                                            }
-                                          } else {
-                                            return (k) ((Object) new wt());
-                                          }
-                                        } else {
-                                          return (k) ((Object) new sk());
-                                        }
-                                      } else {
-                                        return (k) ((Object) new bh());
-                                      }
-                                    } else {
-                                      return (k) ((Object) new jh());
-                                    }
-                                  } else {
-                                    return (k) ((Object) new qa());
-                                  }
-                                } else {
-                                  return (k) ((Object) new et());
-                                }
-                              } else {
-                                return (k) ((Object) new wq());
-                              }
-                            } else {
-                              return (k) ((Object) new ada());
-                            }
-                          } else {
-                            return (k) ((Object) new oba());
-                          }
-                        } else {
-                          return (k) ((Object) new afa());
-                        }
-                      } else {
-                        return (k) ((Object) new ska());
-                      }
-                    } else {
-                      return (k) ((Object) new cd());
-                    }
-                  } else {
-                    return (k) ((Object) new jia());
-                  }
-                } else {
-                  return (k) ((Object) new ig());
-                }
-              } else {
-                return (k) ((Object) new pe());
-              }
-            } else {
-              return (k) ((Object) new uv());
-            }
-          } else {
-            return (k) ((Object) new pma());
-          }
-        } else {
+        if (var2 == 0) {
           return (k) ((Object) new kfa());
         }
+        if (var2 == 1) {
+          return (k) ((Object) new pma());
+        }
+        if (var2 == 2) {
+          return (k) ((Object) new uv());
+        }
+        if (3 == var2) {
+          return (k) ((Object) new pe());
+        }
+        if (var2 == 4) {
+          return (k) ((Object) new ig());
+        }
+        if (5 == var2) {
+          return (k) ((Object) new jia());
+        }
+        if (var2 == 6) {
+          return (k) ((Object) new cd());
+        }
+        if (var2 == 7) {
+          return (k) ((Object) new ska());
+        }
+        if (var2 == 8) {
+          return (k) ((Object) new afa());
+        }
+        if (var2 == 9) {
+          return (k) ((Object) new oba());
+        }
+        if (var2 == 10) {
+          return (k) ((Object) new ada());
+        }
+        if (11 == var2) {
+          return (k) ((Object) new wq());
+        }
+        if (var2 == 12) {
+          return (k) ((Object) new et());
+        }
+        if (var2 == 13) {
+          return (k) ((Object) new qa());
+        }
+        if (var2 == 14) {
+          return (k) ((Object) new jh());
+        }
+        if (var2 == 15) {
+          return (k) ((Object) new bh());
+        }
+        if (var2 == 16) {
+          return (k) ((Object) new sk());
+        }
+        if (var2 == 17) {
+          return (k) ((Object) new wt());
+        }
+        if (18 == var2) {
+          return (k) ((Object) new an());
+        }
+        if (var2 == 19) {
+          return (k) ((Object) new kba());
+        }
+        if (20 == var2) {
+          return (k) ((Object) new ag());
+        }
+        if (21 == var2) {
+          return (k) ((Object) new jq());
+        }
+        if (var2 == 22) {
+          return (k) ((Object) new rc());
+        }
+        if (var2 == 23) {
+          return (k) ((Object) new aea());
+        }
+        if (24 == var2) {
+          return (k) ((Object) new sj());
+        }
+        if (var2 == 25) {
+          return (k) ((Object) new wla());
+        }
+        if (var2 == 26) {
+          return (k) ((Object) new wr());
+        }
+        if (var2 == 27) {
+          return (k) ((Object) new hda());
+        }
+        if (var2 == 28) {
+          return (k) ((Object) new gt());
+        }
+        if (var2 == 29) {
+          return (k) ((Object) new ama());
+        }
+        if (30 == var2) {
+          return (k) ((Object) new ef());
+        }
+        if (var2 == 31) {
+          return (k) ((Object) new oj());
+        }
+        if (32 == var2) {
+          return (k) ((Object) new fn());
+        }
+        if (var2 == 33) {
+          return (k) ((Object) new qna());
+        }
+        if (var2 == 34) {
+          return (k) ((Object) new dc());
+        }
+        if (35 == var2) {
+          return (k) ((Object) new qk());
+        }
+        if (var2 == 36) {
+          return (k) ((Object) new kma());
+        }
+        if (var2 == 37) {
+          return (k) ((Object) new lfa());
+        }
+        if (38 == var2) {
+          return (k) ((Object) new qca());
+        }
+        if (var2 == 39) {
+          return (k) ((Object) new qb());
+        }
+        if (param0 == -16) {
+          return null;
+        }
+        field_i = (String) null;
+        return null;
     }
 
     final static void a(String param0, int param1) {
         try {
-            re.field_D = param0;
-            ep.a(param1, 8192);
+          re.field_D = param0;
+          ep.a(param1, 8192);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ffa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
-        int var4;
-        var4 = (400 - -(-(this.field_g * 655360) + 52428800 >> 136562704)) * this.field_g / 80;
-        if (!param1) {
-          return;
-        } else {
-          hr.field_c.a(param2, param0 + (-var4 + -64), 192);
+        int var4 = (400 + (-(this.field_g * 655360) + 52428800 >> 16)) * this.field_g / 80;
+        if (param1) {
+          hr.field_c.a(param2, param0 + (-var4 - 64), 192);
           return;
         }
     }
@@ -271,14 +219,14 @@ final class ffa extends kj {
         field_h = null;
         field_i = null;
         if (param0 != 22533) {
-            String var2 = (String) null;
-            ffa.a((String) null, -3);
+          String var2 = (String) null;
+          ffa.a((String) null, -3);
         }
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-            this.a(-61, 93, 65);
+          this.a(-61, 93, 65);
         }
     }
 

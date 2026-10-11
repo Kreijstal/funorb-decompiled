@@ -17,120 +17,60 @@ final class sn {
         byte[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var4_int = param1.c((byte) -110, param2);
-            if (-1 != (var4_int ^ -1)) {
-              L1: {
-                L2: {
-                  if (param0 == null) {
-                    break L2;
-                  } else {
-                    if (param0.length != var4_int) {
-                      break L2;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                param0 = new byte[var4_int];
-                break L1;
-              }
-              L3: {
-                if (param3 < -78) {
-                  break L3;
-                } else {
-                  sn.a((byte) 80);
-                  break L3;
-                }
-              }
-              L4: {
-                var5 = param1.c((byte) -114, 3);
-                var6 = (byte)param1.c((byte) -96, 8);
-                if ((var5 ^ -1) < -1) {
-                  var7 = 0;
-                  L5: while (true) {
-                    if (var7 >= var4_int) {
-                      break L4;
-                    } else {
-                      param0[var7] = (byte)(param1.c((byte) -115, var5) + var6);
-                      var7++;
-                      continue L5;
-                    }
-                  }
-                } else {
-                  var7 = 0;
-                  L6: while (true) {
-                    if (var7 >= var4_int) {
-                      break L4;
-                    } else {
-                      param0[var7] = (byte)var6;
-                      var7++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
-              stackIn_18_0 = (byte[]) (param0);
-              break L0;
-            } else {
-              return null;
+          var4_int = param1.c((byte) -110, param2);
+          if (var4_int == 0) {
+            return null;
+          }
+          if (param0 == null ||
+            param0.length != var4_int) {
+            param0 = new byte[var4_int];
+          }
+          if (param3 >= -78) {
+            sn.a((byte) 80);
+          }
+          var5 = param1.c((byte) -114, 3);
+          var6 = (byte)param1.c((byte) -96, 8);
+          if (var5 > 0) {
+            for (var7 = 0; var7 < var4_int; var7++) {
+              param0[var7] = (byte)(param1.c((byte) -115, var5) + var6);
+            }
+          } else {
+            for (var7 = 0; var7 < var4_int; var7++) {
+              param0[var7] = (byte)var6;
             }
           }
+          stackIn_18_0 = (byte[]) (param0);
+          return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var4);
-
-            stackIn_21_1 = new StringBuilder().append("sn.B(");
-
-            if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L7;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_21_0 = var4;
+          stackIn_21_1 = new StringBuilder().append("sn.B(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
-
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L8;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L8;
-            }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ',' + param2 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_18_0;
     }
 
     final static boolean a(byte param0) {
         if (param0 < 81) {
-            return false;
+          return false;
         }
         return ke.field_U.a((byte) 16);
     }
@@ -141,7 +81,7 @@ final class sn {
         field_b = null;
         field_a = null;
         if (param0 != -18) {
-            sn.b((byte) 110);
+          sn.b((byte) 110);
         }
     }
 

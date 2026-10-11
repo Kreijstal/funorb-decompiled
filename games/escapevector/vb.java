@@ -9,52 +9,50 @@ final class vb implements Iterable {
     fl field_c;
 
     final fl a(byte param0) {
-        fl var2;
-        if (param0 == 102) {
-          var2 = this.field_c.field_j;
-          if (this.field_c == var2) {
-            return null;
-          } else {
-            var2.d(param0 ^ 25);
-            return var2;
-          }
-        } else {
+        fl var2 = null;
+        fl var2Lifetime1;
+        if (param0 != 102) {
           field_a = (String) null;
           var2 = this.field_c.field_j;
-          if (this.field_c == var2) {
-            return null;
-          } else {
+          if (this.field_c != var2) {
             var2.d(param0 ^ 25);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_c.field_j;
+        if (this.field_c != var2Lifetime1) {
+          var2Lifetime1.d(param0 ^ 25);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     final void a(boolean param0, fl param1) {
         try {
-            if (param0) {
-                this.iterator();
-            }
-            if (!(param1.field_i == null)) {
-                param1.d(96);
-            }
-            param1.field_i = this.field_c.field_i;
-            param1.field_j = this.field_c;
-            param1.field_i.field_j = param1;
-            param1.field_j.field_i = param1;
+          if (param0) {
+            this.iterator();
+          }
+          if (param1.field_i != null) {
+            param1.d(96);
+          }
+          param1.field_i = this.field_c.field_i;
+          param1.field_j = this.field_c;
+          param1.field_i.field_j = param1;
+          param1.field_j.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new rm((vb) (this)));
+        return (Iterator) ((Object) new rm(this));
     }
 
     public static void b(byte param0) {
         field_a = null;
         if (param0 <= 39) {
-            vb.b((byte) -113);
+          vb.b((byte) -113);
         }
     }
 

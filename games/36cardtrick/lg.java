@@ -43,9 +43,9 @@ final class lg {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 18002) {
-            field_c = (int[]) null;
-            field_I = null;
-            return;
+          field_c = (int[]) null;
+          field_I = null;
+          return;
         }
         field_I = null;
     }

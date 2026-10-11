@@ -12,16 +12,14 @@ final class aa {
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        if (param0 != 1) {
-          field_b = (vj) null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_c = null;
           field_a = null;
           return;
         }
+        field_b = (vj) null;
+        field_c = null;
+        field_a = null;
     }
 
     static {

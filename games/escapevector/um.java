@@ -8,53 +8,28 @@ final class um {
     static String field_c;
 
     final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == 17830) {
-          if ((ff.field_e ^ -1) <= -11) {
-            if (nf.field_u) {
-              return false;
-            } else {
-              L0: {
-                if (rb.a(true)) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 17830) {
           field_c = (String) null;
-          if ((ff.field_e ^ -1) <= -11) {
-            if (nf.field_u) {
-              return false;
-            } else {
-              L1: {
-                if (rb.a(true)) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (ff.field_e < 10) {
             return false;
           }
+          if (!nf.field_u) {
+            return !rb.a(true) ? true : false;
+          }
+          return false;
         }
+        if (ff.field_e < 10) {
+          return false;
+        }
+        if (!nf.field_u) {
+          return !rb.a(true) ? true : false;
+        }
+        return false;
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;

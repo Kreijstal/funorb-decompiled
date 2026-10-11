@@ -13,124 +13,52 @@ final class sq extends tc {
     private String field_r;
 
     final static boolean c(byte param0) {
-        int var1;
-        var1 = 52 / ((-9 - param0) / 42);
-        if (fs.a(false)) {
-          if (-1 != (uk.field_n & 8 ^ -1)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = 52 / ((-9 - param0) / 42);
+        if (!fs.a(false)) {
           return false;
         }
+        if ((uk.field_n & 8) == 0) {
+          return true;
+        }
+        return false;
     }
 
     final static String a(int param0, byte param1, int param2, int param3) {
-        int var4;
-        ic var5;
-        var4 = -110 / ((param1 - -76) / 36);
-        var5 = rd.field_j;
+        int var4 = -110 / ((param1 + 76) / 36);
+        ic var5 = rd.field_j;
         if (var5 == null) {
           return "No game in progress.";
-        } else {
-          if (param2 >= 0) {
-            if (var5.field_xb.field_W < param2) {
-              return "Please choose a player, 0-based.";
-            } else {
-              var5.field_xb.b(10001, param2, false);
-              var5.field_xb.field_mb[var5.field_q] = param3;
-              var5.field_xb.field_zb[var5.field_q] = param0;
-              var5.j(true);
-              return "Done.";
-            }
-          } else {
-            return "Please choose a player, 0-based.";
-          }
         }
+        if (param2 < 0) {
+          return "Please choose a player, 0-based.";
+        }
+        if (var5.field_xb.field_W >= param2) {
+          var5.field_xb.b(10001, param2, false);
+          var5.field_xb.field_mb[var5.field_q] = param3;
+          var5.field_xb.field_zb[var5.field_q] = param0;
+          var5.j(true);
+          return "Done.";
+        }
+        return "Please choose a player, 0-based.";
     }
 
     final void b(int param0, int param1) {
         int var3;
-        L0: {
-          if (0 >= this.field_m) {
-            break L0;
-          } else {
-            if (this.field_l > this.field_m) {
-              var3 = (int)(127.0 * (1.0 - Math.cos((double)this.field_m * 3.141592653589793 / (double)(this.field_l / 2))));
-              qn.a(-(this.field_p >> 37942177) + 320, param1 + (-this.field_m + -14), this.field_p, 20, 5, 0, var3);
-              rs.field_n.a(this.field_r, 320, param1 + -this.field_m, 16777215, 0, var3);
-              break L0;
-            } else {
-              if (null != this.field_b) {
-                if (this.field_b != this.field_q) {
-                  L1: {
-                    if (((sq) ((Object) this.field_b)).field_m > 0) {
-                      ((sq) ((Object) this.field_b)).b(500, param1);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  if (param0 != 500) {
-                    sq.a(false);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (param0 != 500) {
-                    sq.a(false);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param0 != 500) {
-                  sq.a(false);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
+        if (0 < this.field_m &&
+          this.field_l > this.field_m) {
+          var3 = (int)(127.0 * (1.0 - Math.cos((double)this.field_m * 3.141592653589793 / (double)(this.field_l / 2))));
+          qn.a(-(this.field_p >> 1) + 320, param1 + (-this.field_m - 14), this.field_p, 20, 5, 0, var3);
+          rs.field_n.a(this.field_r, 320, param1 - this.field_m, 16777215, 0, var3);
         }
-        if (null != this.field_b) {
-          if (this.field_b != this.field_q) {
-            if (((sq) ((Object) this.field_b)).field_m > 0) {
-              ((sq) ((Object) this.field_b)).b(500, param1);
-              if (param0 != 500) {
-                sq.a(false);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (param0 != 500) {
-                sq.a(false);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (param0 != 500) {
-              sq.a(false);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param0 != 500) {
-            sq.a(false);
-            return;
-          } else {
-            return;
-          }
+        if (null != this.field_b &&
+          this.field_b != this.field_q &&
+          ((sq) (this.field_b)).field_m > 0) {
+          ((sq) (this.field_b)).b(500, param1);
         }
+        if (param0 == 500) {
+          return;
+        }
+        sq.a(false);
     }
 
     public static void a(boolean param0) {
@@ -138,98 +66,36 @@ final class sq extends tc {
         field_n = null;
         field_s = null;
         if (param0) {
-            sq.a(24, (byte) 101, 43, 1);
+          sq.a(24, (byte) 101, 43, 1);
         }
     }
 
     sq(String param0, boolean param1, at param2) {
         try {
-            this.field_m = 0;
-            this.field_r = param0;
-            this.field_p = 8 + rs.field_n.a(this.field_r);
-            this.field_q = param2.field_d;
-            this.field_l = !param1 ? 128 : 500;
+          this.field_m = 0;
+          this.field_r = param0;
+          this.field_p = 8 + rs.field_n.a(this.field_r);
+          this.field_q = param2.field_d;
+          this.field_l = !param1 ? 128 : 500;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
         this.field_m = this.field_m + 1;
-        if (this.field_m >= 16) {
-          if (null != this.field_b) {
-            if (this.field_q == this.field_b) {
-              if (param0 == 66) {
-                if (this.field_l <= this.field_m) {
-                  this.d(-122);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                sq.c((byte) -116);
-                if (this.field_l <= this.field_m) {
-                  this.d(-122);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              ((sq) ((Object) this.field_b)).a((byte) 66);
-              if (param0 == 66) {
-                if (this.field_l <= this.field_m) {
-                  this.d(-122);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                sq.c((byte) -116);
-                if (this.field_l <= this.field_m) {
-                  this.d(-122);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          } else {
-            if (param0 == 66) {
-              if (this.field_l <= this.field_m) {
-                this.d(-122);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              sq.c((byte) -116);
-              if (this.field_l <= this.field_m) {
-                this.d(-122);
-                return;
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
-          if (param0 == 66) {
-            if (this.field_l <= this.field_m) {
-              this.d(-122);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            sq.c((byte) -116);
-            if (this.field_l <= this.field_m) {
-              this.d(-122);
-              return;
-            } else {
-              return;
-            }
-          }
+        if (this.field_m >= 16 &&
+          null != this.field_b &&
+          this.field_q != this.field_b) {
+          ((sq) (this.field_b)).a((byte) 66);
         }
+        if (param0 != 66) {
+          sq.c((byte) -116);
+        }
+        if (this.field_l > this.field_m) {
+          return;
+        }
+        this.d(-122);
     }
 
     static {

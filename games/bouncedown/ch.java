@@ -20,7 +20,7 @@ final class ch {
         field_j = null;
         field_h = null;
         if (param0) {
-            ch.a(true);
+          ch.a(true);
         }
     }
 

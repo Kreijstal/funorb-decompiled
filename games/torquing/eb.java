@@ -13,10 +13,10 @@ final class eb {
 
     final static void a(int param0) {
         if (param0 > -57) {
-            return;
+          return;
         }
         if (!kb.field_h) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         r.field_c = true;
         cb.a(true, 73);
@@ -26,7 +26,7 @@ final class eb {
     final q c(byte param0) {
         this.field_e = 0;
         if (param0 >= -118) {
-            return (q) null;
+          return (q) null;
         }
         return this.b((byte) -120);
     }
@@ -34,20 +34,20 @@ final class eb {
     final void a(boolean param0, long param1, q param2) {
         q var5 = null;
         try {
-            if (!(param2.field_h == null)) {
-                param2.f(0);
-            }
-            var5 = this.field_b[(int)(param1 & (long)(this.field_d + -1))];
-            if (param0) {
-                this.b((byte) -2);
-            }
-            param2.field_e = var5;
-            param2.field_h = var5.field_h;
-            param2.field_h.field_e = param2;
-            param2.field_e.field_h = param2;
-            param2.field_f = param1;
+          if (param2.field_h != null) {
+            param2.f(0);
+          }
+          var5 = this.field_b[(int)(param1 & (long)(this.field_d - 1))];
+          if (param0) {
+            this.b((byte) -2);
+          }
+          param2.field_e = var5;
+          param2.field_h = var5.field_h;
+          param2.field_h.field_e = param2;
+          param2.field_e.field_h = param2;
+          param2.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "eb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "eb.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,104 +55,91 @@ final class eb {
         q var4;
         q var5;
         int var6;
+        q var4Lifetime1;
+        q var5Lifetime1;
         var6 = Torquing.field_u;
         if (param1 > 80) {
           var4 = this.field_b[(int)((long)(-1 + this.field_d) & param0)];
           this.field_g = var4.field_e;
-          L0: while (true) {
-            if (this.field_g != var4) {
-              if (this.field_g.field_f == param0) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_e;
-                return var5;
-              } else {
-                this.field_g = this.field_g.field_e;
-                continue L0;
-              }
-            } else {
+          while (true) {
+            if (this.field_g == var4) {
               this.field_g = null;
               return null;
             }
-          }
-        } else {
-          field_c = (String) null;
-          var4 = this.field_b[(int)((long)(-1 + this.field_d) & param0)];
-          this.field_g = var4.field_e;
-          L1: while (true) {
-            if (this.field_g != var4) {
-              if (this.field_g.field_f == param0) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_e;
-                return var5;
-              } else {
-                this.field_g = this.field_g.field_e;
-                continue L1;
-              }
-            } else {
-              this.field_g = null;
-              return null;
+            if (this.field_g.field_f != param0) {
+              this.field_g = this.field_g.field_e;
+              continue;
             }
+            break;
           }
+          var5 = this.field_g;
+          this.field_g = this.field_g.field_e;
+          return var5;
         }
+        field_c = (String) null;
+        var4Lifetime1 = this.field_b[(int)((long)(-1 + this.field_d) & param0)];
+        this.field_g = var4Lifetime1.field_e;
+        while (true) {
+          if (this.field_g == var4Lifetime1) {
+            this.field_g = null;
+            return null;
+          }
+          if (this.field_g.field_f != param0) {
+            this.field_g = this.field_g.field_e;
+            continue;
+          }
+          break;
+        }
+        var5Lifetime1 = this.field_g;
+        this.field_g = this.field_g.field_e;
+        return var5Lifetime1;
     }
 
     final q b(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        q var2_ref_q;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
         int var2;
+        q var2_ref_q;
         int var4;
         q var5;
         q var6;
         var4 = Torquing.field_u;
         if (0 >= this.field_e) {
           var2 = 33 % ((-56 - param0) / 49);
-          L0: while (true) {
-            if (this.field_d > this.field_e) {
-              fieldTemp$2 = this.field_e;
-              this.field_e = this.field_e + 1;
-              var6 = this.field_b[fieldTemp$2].field_e;
-              if (this.field_b[-1 + this.field_e] != var6) {
-                this.field_a = var6.field_e;
-                return var6;
-              } else {
-                continue L0;
-              }
-            } else {
+          do {
+            if (this.field_d <= this.field_e) {
               return null;
             }
-          }
-        } else {
-          if (this.field_a == this.field_b[-1 + this.field_e]) {
-            var2 = 33 % ((-56 - param0) / 49);
-            L1: while (true) {
-              if (this.field_d > this.field_e) {
-                fieldTemp$3 = this.field_e;
-                this.field_e = this.field_e + 1;
-                var5 = this.field_b[fieldTemp$3].field_e;
-                if (this.field_b[-1 + this.field_e] != var5) {
-                  this.field_a = var5.field_e;
-                  return var5;
-                } else {
-                  continue L1;
-                }
-              } else {
-                return null;
-              }
-            }
-          } else {
-            var2_ref_q = this.field_a;
-            this.field_a = var2_ref_q.field_e;
-            return var2_ref_q;
-          }
+            fieldTemp$0 = this.field_e;
+            this.field_e = this.field_e + 1;
+            var6 = this.field_b[fieldTemp$0].field_e;
+          } while (this.field_b[-1 + this.field_e] == var6);
+          this.field_a = var6.field_e;
+          return var6;
         }
+        if (this.field_a != this.field_b[-1 + this.field_e]) {
+          var2_ref_q = this.field_a;
+          this.field_a = var2_ref_q.field_e;
+          return var2_ref_q;
+        }
+        var2 = 33 % ((-56 - param0) / 49);
+        do {
+          if (this.field_d <= this.field_e) {
+            return null;
+          }
+          fieldTemp$1 = this.field_e;
+          this.field_e = this.field_e + 1;
+          var5 = this.field_b[fieldTemp$1].field_e;
+        } while (this.field_b[-1 + this.field_e] == var5);
+        this.field_a = var5.field_e;
+        return var5;
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_h = null;
         if (param0 != -31) {
-            eb.a((byte) -21);
+          eb.a((byte) -21);
         }
     }
 
@@ -164,11 +151,11 @@ final class eb {
         this.field_b = new q[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new q();
-            var3 = dupTemp$0;
-            this.field_b[var2] = dupTemp$0;
-            var3.field_e = var3;
-            var3.field_h = var3;
+          dupTemp$0 = new q();
+          var3 = dupTemp$0;
+          this.field_b[var2] = dupTemp$0;
+          var3.field_e = var3;
+          var3.field_h = var3;
         }
     }
 

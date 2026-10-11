@@ -13,28 +13,23 @@ final class o {
 
     final static boolean d(int param0) {
         if (param0 != -572695519) {
-            return false;
+          return false;
         }
         return dp.field_v.a(false);
     }
 
     final static void c(int param0) {
-        L0: {
-          ta.field_e[2] = gf.field_e.a("BaB_move_thruster_loop", "", (byte) 115);
-          ta.field_e[5] = gf.field_e.a("BaB_plasma_ball_charged", "", (byte) 116);
-          ta.field_e[6] = gf.field_e.a("BaB_plasma_ball_fire", "", (byte) 108);
-          ta.field_e[10] = gf.field_e.a("BaB_teleport_00", "", (byte) 108);
-          ta.field_e[11] = gf.field_e.a("BaB_transform_block", "", (byte) 111);
-          ta.field_e[13] = gf.field_e.a("BaB_indestructable_block_destroy", "", (byte) 110);
-          cg.field_p[0] = gf.field_e.a("BaB_indestructable_block_00", "", (byte) 124);
-          cg.field_p[1] = gf.field_e.a("BaB_indestructable_block_01", "", (byte) 108);
-          cg.field_p[2] = gf.field_e.a("BaB_indestructable_block_02", "", (byte) 117);
-          if (param0 > 122) {
-            break L0;
-          } else {
-            o.c(-9);
-            break L0;
-          }
+        ta.field_e[2] = gf.field_e.a("BaB_move_thruster_loop", "", (byte) 115);
+        ta.field_e[5] = gf.field_e.a("BaB_plasma_ball_charged", "", (byte) 116);
+        ta.field_e[6] = gf.field_e.a("BaB_plasma_ball_fire", "", (byte) 108);
+        ta.field_e[10] = gf.field_e.a("BaB_teleport_00", "", (byte) 108);
+        ta.field_e[11] = gf.field_e.a("BaB_transform_block", "", (byte) 111);
+        ta.field_e[13] = gf.field_e.a("BaB_indestructable_block_destroy", "", (byte) 110);
+        cg.field_p[0] = gf.field_e.a("BaB_indestructable_block_00", "", (byte) 124);
+        cg.field_p[1] = gf.field_e.a("BaB_indestructable_block_01", "", (byte) 108);
+        cg.field_p[2] = gf.field_e.a("BaB_indestructable_block_02", "", (byte) 117);
+        if (param0 <= 122) {
+          o.c(-9);
         }
         cg.field_p[3] = gf.field_e.a("BaB_indestructable_block_03", "", (byte) 118);
         ef.field_a[5] = gf.field_e.a("bab_powerup_extralife", "", (byte) 115);
@@ -83,34 +78,28 @@ final class o {
         field_g = null;
         field_b = null;
         field_a = null;
-        if (param0 != 31583) {
-          o.d(-14);
-          field_e = null;
-          field_c = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 31583) {
           field_e = null;
           field_c = null;
           field_h = null;
           return;
         }
+        o.d(-14);
+        field_e = null;
+        field_c = null;
+        field_h = null;
     }
 
     final static void a(int param0) {
-        int var1;
-        int var2;
-        var1 = pe.a((byte) -89);
-        var2 = v.b(param0 + 29830);
-        lm.field_c.a((hn.field_a << -572695519) + var1, var2 - -(bh.field_vb << 435442209), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);
-        if (param0 != -24435) {
-          field_b = (mm) null;
-          cp.h(param0 ^ 8147);
-          return;
-        } else {
+        int var1 = pe.a((byte) -89);
+        int var2 = v.b(param0 + 29830);
+        lm.field_c.a((hn.field_a << 1) + var1, var2 + (bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + jq.field_r);
+        if (param0 == -24435) {
           cp.h(param0 ^ 8147);
           return;
         }
+        field_b = (mm) null;
+        cp.h(param0 ^ 8147);
     }
 
     static {

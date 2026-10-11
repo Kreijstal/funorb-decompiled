@@ -11,8 +11,8 @@ final class ok {
     static mh field_d;
 
     final static void a(int param0) {
-        if (!(ol.field_s)) {
-            throw new IllegalStateException();
+        if (!ol.field_s) {
+          throw new IllegalStateException();
         }
         ci.field_t = true;
         lf.a((byte) -78, false);
@@ -26,33 +26,28 @@ final class ok {
         field_e = null;
         field_b = null;
         if (param0 > -2) {
-            ok.a(false);
+          ok.a(false);
         }
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-          if (null != jj.field_a) {
-            if (!jj.field_a.a((byte) -32)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (!param0) {
           ok.a(true);
-          if (null != jj.field_a) {
-            if (!jj.field_a.a((byte) -32)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == jj.field_a) {
             return false;
           }
+          if (jj.field_a.a((byte) -32)) {
+            return true;
+          }
+          return false;
         }
+        if (null == jj.field_a) {
+          return false;
+        }
+        if (jj.field_a.a((byte) -32)) {
+          return true;
+        }
+        return false;
     }
 
     static {

@@ -18,23 +18,23 @@ final class fb implements Runnable {
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_f = true;
         try {
-            while (!this.field_h) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
-                    var2 = this.field_i[var1_int];
-                    if (var2 == null) {
-                    } else {
-                        var2.a();
-                    }
-                }
-                kk.a(10L, true);
-                Object var5 = (Object) null;
-                oh.a(this.field_d, 1, (Object) null);
+          while (!this.field_h) {
+            for (var1_int = 0; var1_int < 2; var1_int++) {
+              var2 = this.field_i[var1_int];
+              if (var2 == null) {
+              } else {
+                var2.a();
+              }
             }
+            kk.a(10L, true);
+            Object var5 = (Object) null;
+            oh.a(this.field_d, 1, (Object) null);
+          }
         } catch (Exception exception) {
-            String var6 = (String) null;
-            gb.a((Throwable) ((Object) exception), (String) null, 10);
+          String var6 = (String) null;
+          gb.a((Throwable) ((Object) exception), (String) null, 10);
         } finally {
-            this.field_f = false;
+          this.field_f = false;
         }
     }
 
@@ -43,7 +43,7 @@ final class fb implements Runnable {
         field_c = null;
         field_e = null;
         if (param0 != 256) {
-            field_c = (int[]) null;
+          field_c = (int[]) null;
         }
         field_g = null;
         field_b = null;

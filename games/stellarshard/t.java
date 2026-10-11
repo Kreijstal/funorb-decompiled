@@ -10,65 +10,36 @@ final class t {
     static String field_c;
 
     final static void a(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        L0: {
-          ih.b((byte) 108);
-          if (qd.field_j != null) {
-            nd.a(-26621, qd.field_j);
-            break L0;
-          } else {
-            break L0;
-          }
+        ih.b((byte) 108);
+        if (qd.field_j != null) {
+          nd.a(-26621, qd.field_j);
         }
         dd.a(-91);
         ra.a(126);
-        if (param0) {
-          L1: {
-            field_d = -85L;
-            if (param0) {
-              stackIn_13_0 = 0;
-              break L1;
-            } else {
-              stackIn_13_0 = 1;
-              break L1;
-            }
-          }
-          L2: {
-            id.a(stackIn_13_0 != 0);
-            if (qb.e((byte) 58)) {
-              pg.field_fb.f(1, 950);
-              ue.a((byte) -96, 0);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          oj.c(-2290);
-          return;
-        } else {
-          stackIn_6_0 = 1;
-          L3: {
-            id.a(stackIn_6_0 != 0);
-            if (qb.e((byte) 58)) {
-              pg.field_fb.f(1, 950);
-              ue.a((byte) -96, 0);
-              break L3;
-            } else {
-              break L3;
-            }
+        if (!param0) {
+          id.a(true);
+          if (qb.e((byte) 58)) {
+            pg.field_fb.f(1, 950);
+            ue.a((byte) -96, 0);
           }
           oj.c(-2290);
           return;
         }
+        field_d = -85L;
+        id.a(!param0 ? true : false);
+        if (qb.e((byte) 58)) {
+          pg.field_fb.f(1, 950);
+          ue.a((byte) -96, 0);
+        }
+        oj.c(-2290);
     }
 
     public static void a(int param0) {
         if (param0 != -6081) {
-            field_e = -69;
-            field_c = null;
-            field_b = null;
-            return;
+          field_e = -69;
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

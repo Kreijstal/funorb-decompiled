@@ -15,15 +15,7 @@ final class rk {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 52) {
-          rk.a((byte) -12);
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 52) {
           field_d = null;
           field_a = null;
           field_e = null;
@@ -31,6 +23,12 @@ final class rk {
           field_b = null;
           return;
         }
+        rk.a((byte) -12);
+        field_d = null;
+        field_a = null;
+        field_e = null;
+        field_f = null;
+        field_b = null;
     }
 
     static {

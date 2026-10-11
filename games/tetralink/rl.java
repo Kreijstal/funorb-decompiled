@@ -14,21 +14,15 @@ final class rl {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -9648) {
-          if (vi.field_a != null) {
-            var1 = vi.field_a;
-            synchronized (var1) {
-              L0: {
-                vi.field_a = null;
-                break L0;
-              }
-            }
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param0 != -9648) {
           return;
+        }
+        if (vi.field_a == null) {
+          return;
+        }
+        var1 = vi.field_a;
+        synchronized (var1) {
+          vi.field_a = null;
         }
     }
 
@@ -39,7 +33,7 @@ final class rl {
         field_f = null;
         field_c = null;
         if (param0 != 14236) {
-            rl.b(109);
+          rl.b(109);
         }
     }
 

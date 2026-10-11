@@ -13,34 +13,34 @@ final class vk extends bb {
         field_M = null;
         field_N = null;
         if (param0) {
-            field_L = 18;
+          field_L = 18;
         }
     }
 
     private vk(String param0, ch param1, kd param2) {
         super(param0, param1, param2);
         try {
-            this.field_p = nf.field_M.field_d;
+          this.field_p = nf.field_M.field_d;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     vk(String param0, kd param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_G = param2 ? true : false;
+          this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private vk(String param0, kd param1) {
         this(param0, nf.field_M.field_p, param1);
         try {
-            this.field_p = nf.field_M.field_d;
+          this.field_p = nf.field_M.field_d;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "vk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

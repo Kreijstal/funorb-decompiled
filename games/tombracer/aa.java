@@ -14,7 +14,7 @@ abstract class aa {
         field_a = null;
         field_b = null;
         if (!param0) {
-            field_a = (jpa) null;
+          field_a = (jpa) null;
         }
     }
 

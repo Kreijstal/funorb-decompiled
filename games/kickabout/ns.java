@@ -16,7 +16,7 @@ final class ns {
 
     final static void a(int param0) {
         if (param0 != 3585) {
-            return;
+          return;
         }
         hq.field_d = -21 + (480 - om.field_Bb);
     }

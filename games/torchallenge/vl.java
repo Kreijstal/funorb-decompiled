@@ -8,11 +8,11 @@ final class vl {
     static boolean[][][] field_d;
 
     final static void a(byte param0) {
-        if (!(lj.field_q)) {
-            throw new IllegalStateException();
+        if (!lj.field_q) {
+          throw new IllegalStateException();
         }
         if (param0 != -88) {
-            field_a = (uj) null;
+          field_a = (uj) null;
         }
         fh.field_g = true;
         wb.a(false, (byte) -80);
@@ -29,113 +29,55 @@ final class vl {
     }
 
     final static void a(byte[] param0, int param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (hf.field_d != null) {
-                  L2: {
-                    var2_int = 28;
-                    if (var2_int > param0.length) {
-                      break L2;
-                    } else {
-                      if (var2_int > hf.field_d.length) {
-                        break L2;
-                      } else {
-                        if (hf.field_d.length == param0.length) {
-                          L3: {
-                            if (param1 >= 6) {
-                              break L3;
-                            } else {
-                              field_d = (boolean[][][]) null;
-                              break L3;
-                            }
-                          }
-                          var3 = hf.field_d.length;
-                          var4 = 0;
-                          L4: while (true) {
-                            if (var4 >= var3) {
-                              decompiledRegionSelector0 = 3;
-                              break L0;
-                            } else {
-                              hf.field_d[var4] = (byte)p.a((int) hf.field_d[var4], (int) param0[var4]);
-                              var4++;
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      }
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  break L1;
-                }
+          if (param0 != null &&
+            hf.field_d != null) {
+            var2_int = 28;
+            if (var2_int <= param0.length &&
+              var2_int <= hf.field_d.length) {
+              if (hf.field_d.length != param0.length) {
+                return;
               }
+              if (param1 < 6) {
+                field_d = (boolean[][][]) null;
+              }
+              var3 = hf.field_d.length;
+              for (var4 = 0; var4 < var3; var4++) {
+                hf.field_d[var4] = (byte)p.a((int) hf.field_d[var4], (int) param0[var4]);
+              }
+              return;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var2);
-
-            stackIn_18_1 = new StringBuilder().append("vl.C(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var2 = decompiledCaughtException;
+          stackIn_18_0 = var2;
+          stackIn_18_1 = new StringBuilder().append("vl.C(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
+            stackIn_19_2 = "{...}";
           }
+          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_d = (boolean[][][]) null;
         if (param0 != 0) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
         field_c = null;
         field_a = null;

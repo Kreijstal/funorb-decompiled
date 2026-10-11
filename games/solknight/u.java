@@ -10,7 +10,7 @@ final class u {
 
     public static void b(int param0) {
         if (param0 != 2) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -22,7 +22,7 @@ final class u {
         fb.field_a = false;
         te.field_N.j(255);
         if (param0 != 2) {
-            u.a(-98);
+          u.a(-98);
         }
     }
 

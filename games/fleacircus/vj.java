@@ -9,14 +9,11 @@ final class vj {
     static String field_a;
 
     final void a(int param0) {
-        if (param0 > (wi.field_b ^ -1)) {
-          if (null != cm.field_b) {
-            return;
-          } else {
-            cm.field_b = va.a(mc.field_b, 40, pg.field_d, 65495, vh.field_o, (byte) -102, 3, new int[]{wi.field_b}, mc.field_a);
-            return;
-          }
-        } else {
+        if (param0 <= ~wi.field_b) {
+          return;
+        }
+        if (null == cm.field_b) {
+          cm.field_b = va.a(mc.field_b, 40, pg.field_d, 65495, vh.field_o, (byte) -102, 3, new int[]{wi.field_b}, mc.field_a);
           return;
         }
     }
@@ -27,39 +24,35 @@ final class vj {
         wi.field_b = wi.field_b + j.field_f;
         pg.field_d = pg.field_d ^ j.field_f;
         j.field_f = this.field_b;
-        if (param0) {
-          field_c = (dd) null;
-          mc.field_a = wi.field_b & 65535;
-          mc.field_b = -65536 & wi.field_b;
-          return;
-        } else {
+        if (!param0) {
           mc.field_a = wi.field_b & 65535;
           mc.field_b = -65536 & wi.field_b;
           return;
         }
+        field_c = (dd) null;
+        mc.field_a = wi.field_b & 65535;
+        mc.field_b = -65536 & wi.field_b;
     }
 
     final void a(int param0, int param1) {
-        if (param0 > -111) {
-          this.a(-120, 73);
-          j.field_f = j.field_f ^ this.field_b;
-          j.field_f = j.field_f + param1;
-          j.field_f = j.field_f ^ this.field_b;
-          return;
-        } else {
+        if (param0 <= -111) {
           j.field_f = j.field_f ^ this.field_b;
           j.field_f = j.field_f + param1;
           j.field_f = j.field_f ^ this.field_b;
           return;
         }
+        this.a(-120, 73);
+        j.field_f = j.field_f ^ this.field_b;
+        j.field_f = j.field_f + param1;
+        j.field_f = j.field_f ^ this.field_b;
     }
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
-            field_a = null;
-            field_c = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          field_c = null;
+          return;
         }
         field_a = null;
         field_c = null;
@@ -67,7 +60,7 @@ final class vj {
 
     vj() {
         fleas.field_L = 0;
-        this.field_b = db.a((byte) -115, qe.field_j, 65536) << 1207155856;
+        this.field_b = db.a((byte) -115, qe.field_j, 65536) << 16;
         this.field_b = this.field_b + db.a((byte) -115, qe.field_j, 65536);
         mc.field_b = 0;
         wi.field_b = 0;

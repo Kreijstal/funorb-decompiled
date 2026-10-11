@@ -20,78 +20,47 @@ final class eg implements de {
         bk var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          L0: {
-            L1: while (true) {
-              var3 = param2.a(param0, param1 + 12297);
-              L2: while (true) {
-                if (var3.field_b != 0) {
-                  if ((var3.field_b ^ -1) == -2) {
-                    param0.setVisible(false);
-                    param0.dispose();
-                    if (param1 == -47) {
-                      break L0;
-                    } else {
-                      eg.a((byte) -82);
-                      return;
-                    }
-                  } else {
-                    uc.a(param1 + -51, 100L);
-                    continue L1;
-                  }
-                } else {
-                  uc.a(-121, 10L);
-                  continue L2;
-                }
-              }
+          while (true) {
+            var3 = param2.a(param0, param1 + 12297);
+            while (var3.field_b == 0) {
+              uc.a(-121, 10L);
             }
+            if (var3.field_b != 1) {
+              uc.a(param1 - 51, 100L);
+              continue;
+            }
+            break;
           }
+          param0.setVisible(false);
+          param0.dispose();
+          if (param1 == -47) {
+            return;
+          }
+          eg.a((byte) -82);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3_ref);
-
-            stackIn_10_1 = new StringBuilder().append("eg.D(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_10_0 = var3_ref;
+          stackIn_10_1 = new StringBuilder().append("eg.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -101,49 +70,26 @@ final class eg implements de {
         ed stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 29723) {
-              stackIn_4_0 = new ed(param2, param1 * df.field_n / 1000);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (ed) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 29723) {
+            stackIn_4_0 = new ed(param2, param1 * df.field_n / 1000);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (ed) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -155,53 +101,54 @@ final class eg implements de {
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
+        double var9Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
         try {
-            var15 = param4 instanceof el ? (el) ((Object) param4) : null;
-            ki.d(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
-            if (var15 != null) {
-            }
-            var7 = var15.field_K + (param4.field_s + param0);
-            var8 = var15.field_G + param4.field_j + param3;
-            ki.e(var7, var8, var15.field_I, this.field_g);
-            if (var15.field_E != -1) {
-                var9 = (double)var15.field_E * 3.141592653589793 * 2.0 / (double)var15.field_B;
-                var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
-                var12 = (int)(Math.cos(var9) * (double)var15.field_I);
-                ki.e(var7 + var11, var8 + var12, 1, this.field_j);
-            }
-            ki.e(var7, var8, 2, 1);
-            var9 = (double)var15.field_F * 3.141592653589793 * 2.0 / (double)var15.field_B;
+          var15 = param4 instanceof el ? (el) (param4) : null;
+          ki.d(param0 + param4.field_s, param4.field_j + param3, param4.field_i, param4.field_f, this.field_b);
+          if (var15 != null) {
+          }
+          var7 = var15.field_K + (param4.field_s + param0);
+          var8 = var15.field_G + param4.field_j + param3;
+          ki.e(var7, var8, var15.field_I, this.field_g);
+          if (var15.field_E != -1) {
+            var9 = (double)var15.field_E * 3.141592653589793 * 2.0 / (double)var15.field_B;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_I);
-            int var13 = -54 / ((param2 - 2) / 54);
             var12 = (int)(Math.cos(var9) * (double)var15.field_I);
-            ki.a(var7, var8, var11 + var7, var12 + var8, 1);
-            if (this.field_k != null) {
-                var14 = var15.field_I + var15.field_K - -this.field_d;
-                this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << -2004493151), this.field_c, this.field_m, 1, 1, 0);
-            }
+            ki.e(var7 + var11, var8 + var12, 1, this.field_j);
+          }
+          ki.e(var7, var8, 2, 1);
+          var9Lifetime1 = (double)var15.field_F * 3.141592653589793 * 2.0 / (double)var15.field_B;
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_I);
+          int var13 = -54 / ((param2 - 2) / 54);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_I);
+          ki.a(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          if (this.field_k != null) {
+            var14 = var15.field_I + var15.field_K + this.field_d;
+            this.field_k.a(param4.field_k, var14 + param4.field_s + param0, this.field_e + param4.field_j + param3, -this.field_d + (-var14 + param4.field_i), param4.field_f - (this.field_d << 1), this.field_c, this.field_m, 1, 1, 0);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "eg.L(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
-        if (param2 >= -47) {
-          eg.b((byte) 99);
-          ig.field_b = param1;
-          sb.field_m = param3;
-          sd.field_a = param0;
-          return;
-        } else {
+        if (param2 < -47) {
           ig.field_b = param1;
           sb.field_m = param3;
           sd.field_a = param0;
           return;
         }
+        eg.b((byte) 99);
+        ig.field_b = param1;
+        sb.field_m = param3;
+        sd.field_a = param0;
     }
 
     final static void b(byte param0) {
         if (param0 >= -20) {
-            return;
+          return;
         }
         jb.field_c = null;
         nh.field_h = null;
@@ -210,7 +157,7 @@ final class eg implements de {
     public static void a(byte param0) {
         field_f = null;
         if (param0 > -11) {
-            return;
+          return;
         }
         field_i = null;
         field_a = null;
@@ -218,16 +165,16 @@ final class eg implements de {
 
     eg(qe param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_k = param0;
-            this.field_m = param4;
-            this.field_j = param6;
-            this.field_d = param1;
-            this.field_e = param2;
-            this.field_g = param5;
-            this.field_c = param3;
-            this.field_b = param7;
+          this.field_k = param0;
+          this.field_m = param4;
+          this.field_j = param6;
+          this.field_d = param1;
+          this.field_e = param2;
+          this.field_g = param5;
+          this.field_c = param3;
+          this.field_b = param7;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

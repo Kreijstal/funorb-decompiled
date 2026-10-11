@@ -9,197 +9,88 @@ final class d {
     static String field_a;
 
     final static boolean a(int param0, int param1, byte param2) {
-        if (param2 == 68) {
-          if (null == aa.field_j) {
-            if (null == aa.field_j) {
-              if (!pj.field_c.a(param0, param1, (byte) -120)) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            if (!aa.field_j.a(param0, param1, (byte) -66)) {
-              if (null == aa.field_j) {
-                if (!pj.field_c.a(param0, param1, (byte) -120)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        if (param2 != 68) {
           d.a(9, -76, (byte) 7);
-          if (null != aa.field_j) {
-            if (!aa.field_j.a(param0, param1, (byte) -66)) {
-              if (null == aa.field_j) {
-                if (!pj.field_c.a(param0, param1, (byte) -120)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (null == aa.field_j) {
-              if (!pj.field_c.a(param0, param1, (byte) -120)) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
+          if (null == aa.field_j) {
+            if (null != aa.field_j) {
               return false;
             }
+            if (pj.field_c.a(param0, param1, (byte) -120)) {
+              return true;
+            }
+            return false;
           }
+          if (aa.field_j.a(param0, param1, (byte) -66)) {
+            return true;
+          }
+          if (null != aa.field_j) {
+            return false;
+          }
+          if (pj.field_c.a(param0, param1, (byte) -120)) {
+            return true;
+          }
+          return false;
         }
+        if (null != aa.field_j) {
+          if (aa.field_j.a(param0, param1, (byte) -66)) {
+            return true;
+          }
+          if (null != aa.field_j) {
+            return false;
+          }
+          if (pj.field_c.a(param0, param1, (byte) -120)) {
+            return true;
+          }
+          return false;
+        }
+        if (null != aa.field_j) {
+          return false;
+        }
+        if (pj.field_c.a(param0, param1, (byte) -120)) {
+          return true;
+        }
+        return false;
     }
 
     final static int a(int param0, int param1) {
         int var2;
-        if (param1 == -31479) {
-          var2 = 0;
-          if (0 <= param0) {
-            if (-65537 >= (param0 ^ -1)) {
-              L0: {
-                var2 += 16;
-                param0 = param0 >>> 16;
-                if (256 <= param0) {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (-17 < (param0 ^ -1)) {
-                  break L1;
-                } else {
-                  param0 = param0 >>> 4;
-                  var2 += 4;
-                  break L1;
-                }
-              }
-              L2: {
-                if (-5 >= (param0 ^ -1)) {
-                  param0 = param0 >>> 2;
-                  var2 += 2;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if ((param0 ^ -1) <= -2) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return var2 - -param0;
-            } else {
-              L4: {
-                if (256 <= param0) {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (-17 < (param0 ^ -1)) {
-                  break L5;
-                } else {
-                  param0 = param0 >>> 4;
-                  var2 += 4;
-                  break L5;
-                }
-              }
-              L6: {
-                if (-5 >= (param0 ^ -1)) {
-                  param0 = param0 >>> 2;
-                  var2 += 2;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if ((param0 ^ -1) <= -2) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return var2 - -param0;
-            }
-          } else {
-            L8: {
-              var2 += 16;
-              param0 = param0 >>> 16;
-              if (256 <= param0) {
-                param0 = param0 >>> 8;
-                var2 += 8;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              if (-17 < (param0 ^ -1)) {
-                break L9;
-              } else {
-                param0 = param0 >>> 4;
-                var2 += 4;
-                break L9;
-              }
-            }
-            L10: {
-              if (-5 >= (param0 ^ -1)) {
-                param0 = param0 >>> 2;
-                var2 += 2;
-                break L10;
-              } else {
-                break L10;
-              }
-            }
-            L11: {
-              if ((param0 ^ -1) <= -2) {
-                param0 = param0 >>> 1;
-                var2++;
-                break L11;
-              } else {
-                break L11;
-              }
-            }
-            return var2 - -param0;
-          }
-        } else {
+        if (param1 != -31479) {
           return -39;
         }
+        var2 = 0;
+        if (0 > param0) {
+          var2 += 16;
+          param0 = param0 >>> 16;
+        } else {
+          if (param0 >= 65536) {
+            var2 += 16;
+            param0 = param0 >>> 16;
+          }
+        }
+        if (256 <= param0) {
+          param0 = param0 >>> 8;
+          var2 += 8;
+        }
+        if (param0 >= 16) {
+          param0 = param0 >>> 4;
+          var2 += 4;
+        }
+        if (param0 >= 4) {
+          param0 = param0 >>> 2;
+          var2 += 2;
+        }
+        if (param0 >= 1) {
+          param0 = param0 >>> 1;
+          var2++;
+        }
+        return var2 + param0;
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
         if (param0 != 109) {
-            d.a(-41, -22, (byte) -35);
+          d.a(-41, -22, (byte) -35);
         }
     }
 

@@ -13,7 +13,7 @@ final class aa {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -14) {
-            field_a = (qj[]) null;
+          field_a = (qj[]) null;
         }
     }
 

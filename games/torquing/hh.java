@@ -21,34 +21,13 @@ final class hh {
     }
 
     final static boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         hg.field_c = true;
         ta.field_k = 15000L + km.b(-1);
-        if (param0 != 64) {
-          L0: {
-            field_a = 82;
-            if ((op.field_i ^ -1) != -12) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((op.field_i ^ -1) != -12) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 64) {
+          return op.field_i == 11 ? true : false;
         }
+        field_a = 82;
+        return op.field_i == 11 ? true : false;
     }
 
     static {

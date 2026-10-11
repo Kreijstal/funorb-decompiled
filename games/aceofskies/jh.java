@@ -8,97 +8,69 @@ final class jh extends sk {
     private em field_i;
 
     final void b(byte param0) {
-        jagdx.IDirect3DDevice var2;
-        ec var3;
-        L0: {
-          if (null == this.field_f) {
-            break L0;
-          } else {
-            var2 = this.field_g.field_Rc;
-            var3 = this.field_g.v((byte) 56);
-            var2.a(0, var3.c(field_h, param0 ^ 74));
-            break L0;
-          }
+        jagdx.IDirect3DDevice var2 = null;
+        ec var3 = null;
+        if (null != this.field_f) {
+          var2 = this.field_g.field_Rc;
+          var3 = this.field_g.v((byte) 56);
+          var2.a(0, var3.c(field_h, param0 ^ 74));
         }
-        if (param0 != -25) {
-          this.field_f = (jagdx.IDirect3DVertexShader) null;
-          return;
-        } else {
+        if (param0 == -25) {
           return;
         }
+        this.field_f = (jagdx.IDirect3DVertexShader) null;
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2;
-        ec var3;
-        L0: {
-          if (null != this.field_f) {
-            var2 = this.field_g.field_Rc;
-            var3 = this.field_g.v((byte) -80);
-            var2.a(0, var3.c(field_h, -72));
-            break L0;
-          } else {
-            break L0;
-          }
+        jagdx.IDirect3DDevice var2 = null;
+        ec var3 = null;
+        if (null != this.field_f) {
+          var2 = this.field_g.field_Rc;
+          var3 = this.field_g.v((byte) -80);
+          var2.a(0, var3.c(field_h, -72));
         }
-        if (param0 > -117) {
-          this.a(true);
-          return;
-        } else {
+        if (param0 <= -117) {
           return;
         }
+        this.a(true);
     }
 
     final void a(int param0, int param1, int param2) {
-        jagdx.IDirect3DDevice var4;
-        float var5_float;
-        int var5;
-        L0: {
-          var4 = this.field_g.field_Rc;
-          if (!this.field_i.field_e) {
-            var5 = 16 * (this.field_b.field_r % 4000) / 4000;
-            this.field_b.a(this.field_i.field_i[var5], -9135);
-            var4.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
-            break L0;
-          } else {
-            var5_float = (float)(this.field_b.field_r % 4000) / 4000.0f;
-            this.field_b.a(this.field_i.field_f, -9135);
-            var4.b(11, var5_float, 0.0f, 0.0f, 0.0f);
-            break L0;
-          }
-        }
-        if (param0 != 1786747298) {
-          this.a(71);
-          return;
+        int var5 = 0;
+        float var5_float = 0.0f;
+        jagdx.IDirect3DDevice var4 = this.field_g.field_Rc;
+        if (this.field_i.field_e) {
+          var5_float = (float)(this.field_b.field_r % 4000) / 4000.0f;
+          this.field_b.a(this.field_i.field_f, -9135);
+          var4.b(11, var5_float, 0.0f, 0.0f, 0.0f);
         } else {
+          var5 = 16 * (this.field_b.field_r % 4000) / 4000;
+          this.field_b.a(this.field_i.field_i[var5], -9135);
+          var4.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
+        }
+        if (param0 == 1786747298) {
           return;
         }
+        this.a(71);
     }
 
     final void d(int param0) {
-        jagdx.IDirect3DDevice var2;
-        ec var3;
-        if (param0 != 18580) {
-          return;
-        } else {
-          L0: {
-            if (this.field_f == null) {
-              break L0;
-            } else {
-              var2 = this.field_g.field_Rc;
-              var3 = this.field_b.J(param0 + -18494);
-              var3.a(false, field_h);
-              field_h[7] = field_h[7] * 0.25f;
-              field_h[3] = field_h[3] * 0.25f;
-              field_h[1] = field_h[1] * 0.25f;
-              field_h[0] = field_h[0] * 0.25f;
-              field_h[2] = field_h[2] * 0.25f;
-              field_h[4] = field_h[4] * 0.25f;
-              field_h[6] = field_h[6] * 0.25f;
-              field_h[5] = field_h[5] * 0.25f;
-              var2.SetVertexShaderConstantF(8, field_h, 2);
-              break L0;
-            }
+        jagdx.IDirect3DDevice var2 = null;
+        ec var3 = null;
+        if (param0 == 18580) {
+          if (this.field_f != null) {
+            var2 = this.field_g.field_Rc;
+            var3 = this.field_b.J(param0 - 18494);
+            var3.a(false, field_h);
+            field_h[7] = field_h[7] * 0.25f;
+            field_h[3] = field_h[3] * 0.25f;
+            field_h[1] = field_h[1] * 0.25f;
+            field_h[0] = field_h[0] * 0.25f;
+            field_h[2] = field_h[2] * 0.25f;
+            field_h[4] = field_h[4] * 0.25f;
+            field_h[6] = field_h[6] * 0.25f;
+            field_h[5] = field_h[5] * 0.25f;
+            var2.SetVertexShaderConstantF(8, field_h, 2);
           }
           return;
         }
@@ -115,46 +87,36 @@ final class jh extends sk {
         this.c(404277666);
         this.a(10);
         if (param1 <= 2) {
-            this.field_g = (kr) null;
+          this.field_g = (kr) null;
         }
     }
 
     final void a(boolean param0, boolean param1) {
         this.field_b.a(du.field_l, !param0 ? true : false, lo.field_j);
         if (param0) {
-            this.a(true, (byte) -77);
-            return;
+          this.a(true, (byte) -77);
+          return;
         }
     }
 
     final void a(int param0) {
-        jagdx.IDirect3DDevice var2;
-        float var3;
-        float var4;
-        float var5;
-        if (param0 != 10) {
-          return;
-        } else {
-          L0: {
-            if (null != this.field_f) {
-              L1: {
-                var2 = this.field_g.field_Rc;
-                if (0 >= this.field_b.field_p) {
-                  var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
-                  break L1;
-                } else {
-                  var3 = this.field_b.field_y;
-                  var4 = this.field_b.field_Xb;
-                  var5 = var4 - 512.0f;
-                  var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (-var4 + var3));
-                  break L1;
-                }
-              }
-              this.field_b.a((byte) -74, this.field_b.field_X);
-              break L0;
+        jagdx.IDirect3DDevice var2 = null;
+        float var4 = 0.0f;
+        float var5 = 0.0f;
+        float var3 = 0.0f;
+        if (param0 == 10) {
+          if (null == this.field_f) {
+          } else {
+            var2 = this.field_g.field_Rc;
+            if (0 < this.field_b.field_p) {
+              var3 = this.field_b.field_y;
+              var4 = this.field_b.field_Xb;
+              var5 = var4 - 512.0f;
+              var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (-var4 + var3));
             } else {
-              break L0;
+              var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
             }
+            this.field_b.a((byte) -74, this.field_b.field_X);
           }
           return;
         }
@@ -162,27 +124,14 @@ final class jh extends sk {
 
     jh(kr param0, gk param1, em param2) {
         super(param0);
-        L0: {
-          L1: {
-            this.field_g = param0;
-            this.field_i = param2;
-            if (param1 == null) {
-              break L1;
-            } else {
-              if (!this.field_i.b(false)) {
-                break L1;
-              } else {
-                if (-258 >= (65535 & this.field_g.field_Bc.VertexShaderVersion ^ -1)) {
-                  this.field_f = this.field_g.field_Rc.b(param1.a("dx", (byte) -71, "transparent_water"));
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-          }
+        this.field_g = param0;
+        this.field_i = param2;
+        if (param1 != null &&
+          this.field_i.b(false) &&
+          (65535 & this.field_g.field_Bc.VertexShaderVersion) >= 257) {
+          this.field_f = this.field_g.field_Rc.b(param1.a("dx", (byte) -71, "transparent_water"));
+        } else {
           this.field_f = null;
-          break L0;
         }
     }
 
@@ -195,33 +144,26 @@ final class jh extends sk {
     }
 
     final void c(int param0) {
-        jagdx.IDirect3DDevice var2;
-        L0: {
-          if (this.field_f != null) {
-            var2 = this.field_g.field_Rc;
-            var2.a(4, this.field_b.a(12, field_h));
-            break L0;
-          } else {
-            break L0;
-          }
+        jagdx.IDirect3DDevice var2 = null;
+        if (this.field_f != null) {
+          var2 = this.field_g.field_Rc;
+          var2.a(4, this.field_b.a(12, field_h));
         }
-        if (param0 != 404277666) {
-          this.a(false);
-          return;
-        } else {
+        if (param0 == 404277666) {
           return;
         }
+        this.a(false);
     }
 
     final void a(int param0, int param1, jj param2) {
         if (param1 < 66) {
-            this.field_i = (em) null;
+          this.field_i = (em) null;
         }
     }
 
     final boolean e(int param0) {
         if (param0 != 3) {
-            return false;
+          return false;
         }
         return this.field_f != null ? true : false;
     }

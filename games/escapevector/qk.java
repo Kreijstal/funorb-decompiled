@@ -34,90 +34,44 @@ final class qk {
         RuntimeException var2 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var2_intLifetime1;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if ((nk.field_n ^ -1) == -98) {
-                  break L2;
-                } else {
-                  if (nk.field_n == 99) {
-                    break L2;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L3: {
-                var2_int = di.field_d.field_h;
-                var2_int++;
-                if (var2_int < param0.length) {
-                  break L3;
-                } else {
-                  var2_int = 0;
-                  break L3;
-                }
-              }
-              di.field_d.a(false, var2_int);
-              break L1;
-            }
-            L4: {
-              if (param1 == 0) {
-                break L4;
-              } else {
-                field_e = (dn) null;
-                break L4;
-              }
-            }
-            L5: {
-              if (96 == nk.field_n) {
-                break L5;
-              } else {
-                if (98 == nk.field_n) {
-                  break L5;
-                } else {
-                  return;
-                }
-              }
-            }
-            L6: {
-              var2_int = di.field_d.field_h;
-              var2_int--;
-              if (0 > var2_int) {
-                var2_int = -1 + param0.length;
-                break L6;
-              } else {
-                break L6;
-              }
+          if (nk.field_n == 97 ||
+            nk.field_n == 99) {
+            var2_int = di.field_d.field_h;
+            var2_int++;
+            if (var2_int >= param0.length) {
+              var2_int = 0;
             }
             di.field_d.a(false, var2_int);
-            break L0;
           }
+          if (param1 != 0) {
+            field_e = (dn) null;
+          }
+          if (96 != nk.field_n &&
+            98 != nk.field_n) {
+            return;
+          }
+          var2_intLifetime1 = di.field_d.field_h;
+          var2_intLifetime1--;
+          if (0 > var2_intLifetime1) {
+            var2_intLifetime1 = -1 + param0.length;
+          }
+          di.field_d.a(false, var2_intLifetime1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var2);
-
-            stackIn_18_1 = new StringBuilder().append("qk.C(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L7;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L7;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_18_0 = var2;
+          stackIn_18_1 = new StringBuilder().append("qk.C(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

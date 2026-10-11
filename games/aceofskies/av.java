@@ -8,7 +8,7 @@ final class av {
 
     final static boolean a(boolean param0) {
         if (ua.field_l[0] != null) {
-            return false;
+          return false;
         }
         za.a(34, new int[]{0, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -64);
         za.a(32, new int[]{1, 12, 13, 3, 7}, 160, 170, 1, 470, (byte) 107);
@@ -21,12 +21,12 @@ final class av {
         oq.field_K = kn.field_b.a((byte) 94, du.field_p[12]);
         int var1 = kn.field_b.a((byte) 94, du.field_p[13]);
         if (oq.field_K < var1) {
-            oq.field_K = var1;
+          oq.field_K = var1;
         }
-        int var2 = 4 + dp.field_h.field_a - -dp.field_h.field_i;
-        bk.field_e[6] = var2 + 200 + (dp.field_h.field_j - -dp.field_h.field_i);
+        int var2 = 4 + dp.field_h.field_a + dp.field_h.field_i;
+        bk.field_e[6] = var2 + 200 + (dp.field_h.field_j + dp.field_h.field_i);
         if (!param0) {
-            av.a((byte) -119);
+          av.a((byte) -119);
         }
         oo.field_Y[6] = 30 + 2 * var2;
         return true;
@@ -35,13 +35,13 @@ final class av {
     final static String a(byte param0, boolean param1, boolean param2, boolean param3) {
         int var4 = 0;
         if (param1) {
-            var4 += 4;
+          var4 += 4;
         }
         if (param2) {
-            var4 += 2;
+          var4 += 2;
         }
         if (param3) {
-            var4++;
+          var4++;
         }
         int var5 = -111 / ((-32 - param0) / 57);
         return qh.field_a[var4];
@@ -49,7 +49,7 @@ final class av {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 != 22847) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
         return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
@@ -69,34 +69,59 @@ final class av {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
+        int var1Lifetime1;
+        int var1Lifetime2;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime2Lifetime1;
         field_c = new kp();
         field_b = new int[128];
-        for (var0 = 0; (var0 ^ -1) > -65; var0++) {
-            var1 = var0 * (var0 * 192) / 4096;
-            var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
-            var3 = 255 * (var0 * (var0 * var0)) / 262144;
-            field_b[var0] = (var2 << 841758184) + (var1 << 1219902800) + var3;
+        for (var0 = 0; var0 < 64; var0++) {
+          var1 = var0 * (var0 * 192) / 4096;
+          var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
+          var3 = 255 * (var0 * (var0 * var0)) / 262144;
+          field_b[var0] = (var2 << 8) + (var1 << 16) + var3;
         }
-        for (var0 = 0; -65 < (var0 ^ -1); var0++) {
-            var1 = 96 * (var0 * var0) / 4096;
-            var2 = 32 * (var0 * (var0 * var0)) / 262144;
-            var3 = var0 * var0 * 128 / 4096;
-            field_b[-var0 + 127] = (var1 << -709126672) - (-(var2 << 1924794792) + -var3);
+        for (var0Lifetime1 = 0; var0Lifetime1 < 64; var0Lifetime1++) {
+          var1Lifetime1 = 96 * (var0Lifetime1 * var0Lifetime1) / 4096;
+          var2Lifetime1 = 32 * (var0Lifetime1 * (var0Lifetime1 * var0Lifetime1)) / 262144;
+          var3Lifetime1 = var0Lifetime1 * var0Lifetime1 * 128 / 4096;
+          field_b[-var0Lifetime1 + 127] = (var1Lifetime1 << 16) - (-(var2Lifetime1 << 8) - var3Lifetime1);
         }
-        var0 = 16711935 & field_b[63];
-        var1 = 65280 & field_b[63];
-        for (var2 = 0; -3 < (var2 ^ -1); var2++) {
-            var3 = field_b[64 - -var2];
-            var4 = 256 + -(256 * var2 / 2);
-            var5 = 16711935 & var3;
-            var6 = var3 & 65280;
-            var5 = var5 * (-var4 + 256);
-            var6 = var6 * (-var4 + 256);
-            var5 = var5 + var0 * var4;
-            var6 = var6 + var1 * var4;
-            var3 = (var6 & 16711680 | -16711936 & var5) >>> 1805483048;
-            field_b[64 - -var2] = var3;
+        var0Lifetime2 = 16711935 & field_b[63];
+        var1Lifetime2 = 65280 & field_b[63];
+        for (var2Lifetime2 = 0; var2Lifetime2 < 2; var2Lifetime2++) {
+          var3Lifetime2 = field_b[64 + var2Lifetime2];
+          var4 = 256 - 256 * var2Lifetime2 / 2;
+          var5 = 16711935 & var3Lifetime2;
+          var6 = var3Lifetime2 & 65280;
+          var5 = var5 * (-var4 + 256);
+          var6 = var6 * (-var4 + 256);
+          var5 = var5 + var0Lifetime2 * var4;
+          var6 = var6 + var1Lifetime2 * var4;
+          var3Lifetime2Lifetime1 = (var6 & 16711680 | -16711936 & var5) >>> 8;
+          field_b[64 + var2Lifetime2] = var3Lifetime2Lifetime1;
         }
         field_a = new ej(2, 4, 4, 0);
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+        int var4 = 0;
+        if (param1) {
+          var4 += 4;
+        }
+        if (param2) {
+          var4 += 2;
+        }
+        if (param3) {
+          var4++;
+        }
+        int var5 = -111 / ((-32 - param0) / 57);
+        return qh.field_a[var4];
     }
 }

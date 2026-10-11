@@ -16,42 +16,26 @@ final class rd {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                rd.a(true);
-                break L1;
-              }
-            }
-            ka.c();
-            ug.field_c = new int[260];
-            nd.field_m = 11;
-            var1_int = 0;
-            L2: while (true) {
-              if (var1_int >= 256) {
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= ug.field_c.length) {
-                    break L0;
-                  } else {
-                    ug.field_c[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L2;
-              }
-            }
+          if (!param0) {
+            rd.a(true);
           }
+          ka.c();
+          ug.field_c = new int[260];
+          nd.field_m = 11;
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < ug.field_c.length) {
+            ug.field_c[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -61,52 +45,34 @@ final class rd {
 
     final static void a(String param0, boolean param1) {
         try {
-            hi.a(-23883, param0);
-            jj.a(param1, gb.field_c, 1702);
+          hi.a(-23883, param0);
+          jj.a(param1, gb.field_c, 1702);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "rd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        int stackIn_9_0 = 0;
-        if (param0 > 46) {
-          L0: {
-            L1: {
-              if (bi.field_L < 20) {
-                break L1;
-              } else {
-                if (!pa.b(-120)) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (db.field_d <= 0) {
-                      break L2;
-                    } else {
-                      if (Transmogrify.d(false)) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                  stackIn_9_0 = 0;
-                  break L0;
-                }
-              }
-            }
-            stackIn_9_0 = 1;
-            break L0;
-          }
-          return stackIn_9_0 != 0;
-        } else {
+        boolean stackIn_9_0 = false;
+        if (param0 <= 46) {
           return false;
         }
+        boolean decompiledFrameRemainder0 = true;
+        if (bi.field_L >= 20 &&
+          pa.b(-120) && (!(db.field_d > 0) ||
+          Transmogrify.d(false))) {
+          stackIn_9_0 = false;
+          decompiledFrameRemainder0 = false;
+        }
+        else {
+          stackIn_9_0 = true;
+        }
+        return stackIn_9_0;
     }
 
     public static void a(int param0) {
         if (param0 != 28) {
-            return;
+          return;
         }
         field_e = null;
         field_c = null;

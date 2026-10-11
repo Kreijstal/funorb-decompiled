@@ -13,137 +13,70 @@ final class oh {
 
     final static String b(byte param0) {
         if (param0 != -49) {
-            field_f = 94;
-            return g.field_m;
+          field_f = 94;
+          return g.field_m;
         }
         return g.field_m;
     }
 
     final static boolean a(int param0, int param1, byte param2, int param3, int param4, jp param5) {
         RuntimeException var6 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_16_0 = 0;
+        boolean stackIn_16_0 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param0 = param0 - (param5.field_E + param4);
-            if (-1 < (param0 ^ -1)) {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param5.field_D > param0) {
-                L1: {
-                  param1 = param1 - (param3 + param5.field_F);
-                  if (-1 < (param1 ^ -1)) {
-                    break L1;
-                  } else {
-                    if (param1 < param5.field_C) {
-                      L2: {
-                        if (param2 == -24) {
-                          break L2;
-                        } else {
-                          field_f = 13;
-                          break L2;
-                        }
-                      }
-                      L3: {
-                        L4: {
-                          param4 = param5.field_G[param0 + param5.field_D * param1];
-                          if (param4 == 0) {
-                            break L4;
-                          } else {
-                            if (-1 == (-16777216 & param4 ^ -1)) {
-                              break L4;
-                            } else {
-                              stackIn_16_0 = 1;
-                              break L3;
-                            }
-                          }
-                        }
-                        stackIn_16_0 = 0;
-                        break L3;
-                      }
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                stackIn_9_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return false;
-              }
-            }
+          param0 = param0 - (param5.field_E + param4);
+          if (param0 < 0) {
+            return false;
           }
+          if (param5.field_D <= param0) {
+            return false;
+          }
+          param1 = param1 - (param3 + param5.field_F);
+          if (param1 >= 0 &&
+            param1 < param5.field_C) {
+            if (param2 != -24) {
+              field_f = 13;
+            }
+            param4 = param5.field_G[param0 + param5.field_D * param1];
+            stackIn_16_0 = (param4 != 0) && ((-16777216 & param4) != 0);
+            return stackIn_16_0;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var6);
-
-            stackIn_19_1 = new StringBuilder().append("oh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0 != 0;
+          var6 = decompiledCaughtException;
+          stackIn_19_0 = var6;
+          stackIn_19_1 = new StringBuilder().append("oh.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_20_2 = "null";
           } else {
-            return stackIn_16_0 != 0;
+            stackIn_20_2 = "{...}";
           }
+          throw qb.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     final static String a(byte param0, String param1, String param2, String param3) {
-        int var4;
-        int var5;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        var4 = param2.indexOf(param3);
-        L0: while (true) {
-          if (0 == (var4 ^ -1)) {
-            if (param0 != 13) {
-              field_b = -3;
-              return param2;
-            } else {
-              return param2;
-            }
-          } else {
-            param2 = param2.substring(0, var4) + param1 + param2.substring(var4 + param3.length());
-            var4 = param2.indexOf(param3, param1.length() + var4);
-            continue L0;
-          }
+        int var5 = BrickABrac.field_J ? 1 : 0;
+        int var4 = param2.indexOf(param3);
+        while (var4 != -1) {
+          param2 = param2.substring(0, var4) + param1 + param2.substring(var4 + param3.length());
+          var4 = param2.indexOf(param3, param1.length() + var4);
         }
+        if (param0 == 13) {
+          return param2;
+        }
+        field_b = -3;
+        return param2;
     }
 
     public static void a(byte param0) {
         field_h = null;
         if (param0 < 57) {
-            oh.a((byte) 49);
+          oh.a((byte) 49);
         }
     }
 

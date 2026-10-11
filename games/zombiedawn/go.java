@@ -9,28 +9,17 @@ final class go implements com.ms.directX.IEnumModesCallback {
     final void a(java.awt.Frame param0, int param1) {
         this.field_a.restoreDisplayMode();
         if (param1 != 6411) {
-            return;
+          return;
         }
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4, java.awt.Frame param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
-        if (param4 < 64) {
-          this.a(-19);
-          param5.setVisible(true);
-          var7 = (com.ms.awt.WComponentPeer) null;
-          var8 = var7.getHwnd();
-          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
-          this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
-          this.field_a.setDisplayMode(param1, param3, param0, param2, 0);
-          param5.setBounds(0, 0, param1, param3);
-          param5.toFront();
-          param5.requestFocus();
-          return;
-        } else {
+        com.ms.awt.WComponentPeer var7 = null;
+        int var8 = 0;
+        com.ms.awt.WComponentPeer var7Lifetime1;
+        int var8Lifetime1;
+        if (param4 >= 64) {
           param5.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
@@ -43,6 +32,17 @@ final class go implements com.ms.directX.IEnumModesCallback {
           param5.requestFocus();
           return;
         }
+        this.a(-19);
+        param5.setVisible(true);
+        var7Lifetime1 = (com.ms.awt.WComponentPeer) null;
+        var8Lifetime1 = var7Lifetime1.getHwnd();
+        com.ms.win32.User32.SetWindowLong(var8Lifetime1, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8Lifetime1, -20, 8);
+        this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param5), 17);
+        this.field_a.setDisplayMode(param1, param3, param0, param2, 0);
+        param5.setBounds(0, 0, param1, param3);
+        param5.toFront();
+        param5.requestFocus();
     }
 
     public go() {
@@ -51,21 +51,18 @@ final class go implements com.ms.directX.IEnumModesCallback {
     }
 
     final int[] a(int param0) {
-        int[] var2;
-        int[] var3;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        var3 = field_c;
-        var2 = var3;
+        int[] var3 = field_c;
+        int[] var2 = var3;
         field_c = null;
-        if (param0 != 8) {
-          return (int[]) null;
-        } else {
+        if (param0 == 8) {
           field_b = 0;
           return var3;
         }
+        return (int[]) null;
     }
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
@@ -74,20 +71,20 @@ final class go implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_c != null) {
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         }
     }
 }

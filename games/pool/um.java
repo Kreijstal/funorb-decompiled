@@ -16,35 +16,20 @@ abstract class um {
         RuntimeException var2_ref = null;
         var3 = Pool.field_O;
         try {
-          L0: {
-            var4 = (kg) ((Object) we.field_c.c((byte) 65));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param0 == 10) {
-                    break L2;
-                  } else {
-                    field_e = false;
-                    break L2;
-                  }
-                }
-                var2 = ke.field_f.c((byte) -34);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    hi.a(1, param1);
-                    var2 = ke.field_f.f((byte) -5);
-                    continue L3;
-                  }
-                }
-              } else {
-                fr.a(98, var4, param1);
-                var4 = (kg) ((Object) we.field_c.f((byte) -5));
-                continue L1;
-              }
-            }
+          var4 = (kg) (we.field_c.c((byte) 65));
+          while (var4 != null) {
+            fr.a(98, var4, param1);
+            var4 = (kg) (we.field_c.f((byte) -5));
           }
+          if (param0 != 10) {
+            field_e = false;
+          }
+          var2 = ke.field_f.c((byte) -34);
+          while (var2 != null) {
+            hi.a(1, param1);
+            var2 = ke.field_f.f((byte) -5);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -55,7 +40,7 @@ abstract class um {
     public static void a(int param0) {
         field_a = null;
         if (param0 <= 107) {
-            um.a(-2);
+          um.a(-2);
         }
     }
 

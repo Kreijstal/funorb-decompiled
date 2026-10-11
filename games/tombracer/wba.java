@@ -9,15 +9,15 @@ final class wba extends ob {
     final void a(int param0, int param1) {
         this.field_g = param1;
         if (param0 != 255) {
-            this.a((byte) 66, -128);
+          this.a((byte) 66, -128);
         }
     }
 
     final void a(byte param0, int param1) {
         if (param0 != 62) {
-            this.a((byte) 7, -0.12800447642803192f);
-            this.field_h = param1;
-            return;
+          this.a((byte) 7, -0.12800447642803192f);
+          this.field_h = param1;
+          return;
         }
         this.field_h = param1;
     }
@@ -29,10 +29,10 @@ final class wba extends ob {
     public static void e(int param0) {
         field_o = null;
         if (param0 != -25657) {
-            wba.e(-89);
-            field_q = null;
-            field_p = null;
-            return;
+          wba.e(-89);
+          field_q = null;
+          field_p = null;
+          return;
         }
         field_q = null;
         field_p = null;
@@ -48,7 +48,7 @@ final class wba extends ob {
     final void a(byte param0, float param1) {
         this.field_j = param1;
         if (param0 <= 77) {
-            field_q = (String[]) null;
+          field_q = (String[]) null;
         }
     }
 

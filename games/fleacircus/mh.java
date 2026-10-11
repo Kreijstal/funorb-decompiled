@@ -9,18 +9,16 @@ final class mh extends aa {
     static int[] field_y;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (param1 != 1) {
-          mh.b(124);
-          fb.field_c = param0;
-          cm.field_j = param3;
-          rg.field_n = param2;
-          return;
-        } else {
+        if (param1 == 1) {
           fb.field_c = param0;
           cm.field_j = param3;
           rg.field_n = param2;
           return;
         }
+        mh.b(124);
+        fb.field_c = param0;
+        cm.field_j = param3;
+        rg.field_n = param2;
     }
 
     mh(int param0) {
@@ -37,49 +35,26 @@ final class mh extends aa {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 > 21) {
-              stackIn_4_0 = ni.a(param1.field_i.length(), '*', (byte) 78);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 > 21) {
+            stackIn_4_0 = ni.a(param1.field_i.length(), '*', (byte) 78);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("mh.DA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("mh.DA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -87,9 +62,9 @@ final class mh extends aa {
         field_v = null;
         field_x = null;
         if (param0 != 705) {
-            field_w = 44;
-            field_y = null;
-            return;
+          field_w = 44;
+          field_y = null;
+          return;
         }
         field_y = null;
     }

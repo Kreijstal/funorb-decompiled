@@ -8,7 +8,7 @@ final class hw extends sna {
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_wb = null;
         field_xb = null;

@@ -11,9 +11,9 @@ final class cg {
         field_a = null;
         field_c = null;
         if (param0 != -117) {
-            field_b = (cn) null;
-            field_b = null;
-            return;
+          field_b = (cn) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

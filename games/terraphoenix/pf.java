@@ -14,18 +14,18 @@ final class pf {
         field_d = null;
         field_a = null;
         if (param0 != 6650) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 
     final static void a(e param0, byte param1, int param2, int param3) {
         try {
-            if (param1 != 71) {
-                pf.a(-67);
-            }
-            kg.field_r[76].c(param2 - 32, param3 + -64, 64);
+          if (param1 != 71) {
+            pf.a(-67);
+          }
+          kg.field_r[76].c(param2 - 32, param3 - 64, 64);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "pf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "pf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -11,139 +11,84 @@ final class mf extends wl {
     final byte[] e(int param0) {
         int var2 = 70 / ((55 - param0) / 55);
         if (this.field_n) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         return this.field_s;
     }
 
     final static String a(java.applet.Applet param0, int param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            int var8 = 0;
-            String var9 = null;
-            String stackIn_9_0 = null;
-            String stackIn_16_0 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            String stackIn_20_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            var8 = CrazyCrystals.field_B;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          int var8 = 0;
+          String var9 = null;
+          String stackIn_9_0 = null;
+          String stackIn_16_0 = null;
+          RuntimeException stackIn_19_0 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          var8 = CrazyCrystals.field_B;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      var9 = param0.getParameter("cookieprefix");
-                      var3 = var9 + "settings";
-                      var4 = (String) (hi.a(param0, "getcookies", -126));
-                      var5 = ik.a(var4, (byte) -76, ';');
-                      if (param1 == -28697) {
-                        break L2;
-                      } else {
-                        mf.f(82);
-                        break L2;
-                      }
-                    }
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var5.length <= var6) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      } else {
-                        L4: {
-                          var7 = var5[var6].indexOf('=');
-                          if (var7 < 0) {
-                            break L4;
-                          } else {
-                            if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackIn_9_0 = var5[var6].substring(var7 - -1).trim();
-                              decompiledRegionSelector0 = 1;
-                              break L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        var6++;
-                        continue L3;
-                      }
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var2 = decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
-                    break L5;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  if (to.field_f != null) {
-                    stackIn_16_0 = to.field_f;
-                    decompiledRegionSelector1 = 0;
-                    break L0;
-                  } else {
-                    return param0.getParameter("settings");
-                  }
-                } else {
-                  decompiledRegionSelector1 = 1;
-                  break L0;
+              var9 = param0.getParameter("cookieprefix");
+              var3 = var9 + "settings";
+              var4 = (String) (hi.a(param0, "getcookies", -126));
+              var5 = ik.a(var4, (byte) -76, ';');
+              if (param1 != -28697) {
+                mf.f(82);
+              }
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (var7 >= 0 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_9_0 = var5[var6].substring(var7 + 1).trim();
+                  return stackIn_9_0;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_19_0 = (RuntimeException) (var2_ref);
-
-                stackIn_19_1 = new StringBuilder().append("mf.A(");
-
-                if (param0 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw dn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_16_0;
+            if (to.field_f == null) {
+              return param0.getParameter("settings");
+            }
+            stackIn_16_0 = to.field_f;
+            return stackIn_16_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_19_0 = var2_ref;
+            stackIn_19_1 = new StringBuilder().append("mf.A(");
+            if (param0 == null) {
+              stackIn_20_2 = "null";
             } else {
-              return stackIn_9_0;
+              stackIn_20_2 = "{...}";
             }
+            throw dn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final int b(byte param0) {
         if (param0 < 18) {
-            mf.f(-91);
-            if (!(!this.field_n)) {
-                return 0;
-            }
-            return 100;
-        }
-        if (!(!this.field_n)) {
+          mf.f(-91);
+          if (this.field_n) {
             return 0;
+          }
+          return 100;
+        }
+        if (this.field_n) {
+          return 0;
         }
         return 100;
     }
@@ -151,7 +96,7 @@ final class mf extends wl {
     public static void f(int param0) {
         field_u = null;
         if (param0 <= 19) {
-            return;
+          return;
         }
         field_r = null;
     }

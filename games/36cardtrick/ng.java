@@ -24,32 +24,32 @@ final class ng extends lk {
 
     public static void a(int param0) {
         if (param0 != 2) {
-            field_H = (byte) 43;
+          field_H = (byte) 43;
         }
         field_y = null;
     }
 
     ng(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> -17623231, 8355711 & param6 >> 1367466785);
+        this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, 8355711 & param6 >> 1);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(param2 == (param3 ^ -1))) {
-            return;
+        if (param2 != ~param3) {
+          return;
         }
-        int var5 = param0 - -this.field_o;
+        int var5 = param0 + this.field_o;
         int var6 = this.field_i + param1;
         this.a(this.field_K[0], var6, false, var5);
-        if (!(65536 <= this.field_J)) {
-            ek.a(var6, this.field_h + var5, (this.field_J * this.field_h >> -1356229808) + var5, (byte) 74, this.field_q + var6);
-            this.a(this.field_K[1], var6, false, var5);
-            gg.a(14756);
+        if (65536 > this.field_J) {
+          ek.a(var6, this.field_h + var5, (this.field_J * this.field_h >> 16) + var5, (byte) 74, this.field_q + var6);
+          this.a(this.field_K[1], var6, false, var5);
+          gg.a(14756);
         }
     }
 
     final static boolean a(int param0, byte param1) {
         if (param1 >= -68) {
-            return false;
+          return false;
         }
         return (param0 & -param0) == param0 ? true : false;
     }
@@ -57,72 +57,38 @@ final class ng extends lk {
     final void a(int param0, int param1, lk param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            if (param3 == 3) {
-              L1: {
-                L2: {
-                  if (!this.field_I) {
-                    break L2;
-                  } else {
-                    this.field_B = this.field_B + 1;
-                    if (this.field_B <= 2 * this.field_G) {
-                      break L2;
-                    } else {
-                      this.field_B = this.field_B - 2 * this.field_G;
-                      break L1;
-                    }
-                  }
-                }
-                break L1;
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param3 != 3) {
+            return;
+          }
+          if (this.field_I) {
+            this.field_B = this.field_B + 1;
+            if (this.field_B > 2 * this.field_G) {
+              this.field_B = this.field_B - 2 * this.field_G;
+              return;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("ng.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("ng.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(kc param0, int param1, boolean param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -133,85 +99,49 @@ final class ng extends lk {
         lk var9 = null;
         var8 = Main.field_T;
         try {
-          L0: {
-            L1: {
-              var5_int = param3 - -this.field_h;
-              ek.a(param1, -this.field_D.field_p + var5_int, this.field_D.field_p + param3, (byte) 96, this.field_q + param1);
-              var6 = -this.field_B + param3;
-              if (!param2) {
-                break L1;
-              } else {
-                var9 = (lk) null;
-                this.a(-91, 67, (lk) null, -108);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var5_int <= var6) {
-                L3: {
-                  gg.a(14756);
-                  if (this.field_D.field_p + param3 >= vj.field_f) {
-                    dl.a(80, this.field_F);
-                    param0.d(-this.field_B, 0);
-                    param0.d(this.field_G * 2 - this.field_B, 0);
-                    this.field_E.e(0, 0);
-                    gg.a(14756);
-                    this.field_F.d(param3, param1);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (vj.field_a >= -this.field_D.field_p + var5_int) {
-                    dl.a(-103, this.field_F);
-                    var7 = this.field_h - this.field_D.field_p + this.field_B;
-                    L5: while (true) {
-                      if (var7 <= 2 * this.field_G) {
-                        param0.d(-var7, 0);
-                        param0.d(-var7 + this.field_G * 2, 0);
-                        this.field_D.e(0, 0);
-                        gg.a(14756);
-                        this.field_F.d(-this.field_D.field_p + var5_int, param1);
-                        break L4;
-                      } else {
-                        var7 = var7 - 2 * this.field_G;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                break L0;
-              } else {
-                param0.d(var6, param1);
-                var6 = var6 + param0.field_p;
-                continue L2;
-              }
-            }
+          var5_int = param3 + this.field_h;
+          ek.a(param1, -this.field_D.field_p + var5_int, this.field_D.field_p + param3, (byte) 96, this.field_q + param1);
+          var6 = -this.field_B + param3;
+          if (param2) {
+            var9 = (lk) null;
+            this.a(-91, 67, (lk) null, -108);
           }
+          while (var5_int > var6) {
+            param0.d(var6, param1);
+            var6 = var6 + param0.field_p;
+          }
+          gg.a(14756);
+          if (this.field_D.field_p + param3 >= vj.field_f) {
+            dl.a(80, this.field_F);
+            param0.d(-this.field_B, 0);
+            param0.d(this.field_G * 2 - this.field_B, 0);
+            this.field_E.e(0, 0);
+            gg.a(14756);
+            this.field_F.d(param3, param1);
+          }
+          if (vj.field_a >= -this.field_D.field_p + var5_int) {
+            dl.a(-103, this.field_F);
+            for (var7 = this.field_h - this.field_D.field_p + this.field_B; var7 > 2 * this.field_G; var7 = var7 - 2 * this.field_G) {
+            }
+            param0.d(-var7, 0);
+            param0.d(-var7 + this.field_G * 2, 0);
+            this.field_D.e(0, 0);
+            gg.a(14756);
+            this.field_F.d(-this.field_D.field_p + var5_int, param1);
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
-
-            stackIn_17_1 = new StringBuilder().append("ng.H(");
-
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L6;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L6;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_17_0 = var5;
+          stackIn_17_1 = new StringBuilder().append("ng.H(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -219,10 +149,10 @@ final class ng extends lk {
         this.field_K = new kc[]{this.a(this.field_z, this.field_M, (byte) 88), this.a(this.field_A, this.field_L, (byte) 88)};
         this.field_D = this.a(param0);
         if (param0) {
-            ng.a(-28);
+          ng.a(-28);
         }
         this.field_E = this.field_D.a();
-        this.field_F = new kc(this.field_q >> 42959233, this.field_q);
+        this.field_F = new kc(this.field_q >> 1, this.field_q);
     }
 
     private final kc a(boolean param0) {
@@ -232,22 +162,22 @@ final class ng extends lk {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = Main.field_T;
-        int var2 = this.field_q >> 1220858753;
+        int var2 = this.field_q >> 1;
         if (param0) {
-            discarded$0 = this.a(-57, 44, (byte) 37);
+          discarded$0 = this.a(-57, 44, (byte) 37);
         }
         kc var3 = new kc(var2, this.field_q);
         dl.a(-79, var3);
         for (var4 = 0; var4 < this.field_q; var4++) {
-            for (var5 = 0; var2 > var5; var5++) {
-                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_q));
-                var8 = 1;
-                if (var6 < 1.0) {
-                    var6 = Math.sqrt(1.0 - var6);
-                    var8 = 1.0 > var6 ? (int)(var6 * 255.0) : 255;
-                }
-                vj.a(var5, var4, var8 << 60704752 | (var8 << 1005872776 | var8));
+          for (var5 = 0; var2 > var5; var5++) {
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_q));
+            var8 = 1;
+            if (var6 < 1.0) {
+              var6 = Math.sqrt(1.0 - var6);
+              var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
+            vj.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+          }
         }
         gg.a(14756);
         return var3;
@@ -263,25 +193,28 @@ final class ng extends lk {
         int var12 = 0;
         int var13 = Main.field_T;
         kc var14 = new kc(2 * this.field_G, this.field_q);
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
         dl.a(102, var14);
         if (param2 != 88) {
-            return (kc) null;
+          return (kc) null;
         }
-        int var5 = this.field_q >> -723661823;
+        int var5 = this.field_q >> 1;
         for (var6 = 0; var6 < this.field_q; var6++) {
-            var7 = (var6 >> 1953269985) * (2 * this.field_G + -1) % (2 * this.field_G);
-            var8 = 16711935 & param0;
-            var9 = param0 & 65280;
-            var10 = -var5 + var6;
-            var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
-            var12 = var11 < 256 ? (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 33747176 : var9 | var8;
-            vj.d(var7, var6, this.field_G, var12);
-            var8 = 16711935 & param1;
-            var9 = param1 & 65280;
-            vj.d(var7 - 2 * this.field_G, var6, this.field_G, var12);
-            var12 = var11 >= 256 ? var9 | var8 : (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 930999976;
-            vj.d(this.field_G + var7, var6, this.field_G, var12);
-            vj.d(-this.field_G + var7, var6, this.field_G, var12);
+          var7 = (var6 >> 1) * (2 * this.field_G - 1) % (2 * this.field_G);
+          var8 = 16711935 & param0;
+          var9 = param0 & 65280;
+          var10 = -var5 + var6;
+          var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
+          var12 = var11 < 256 ? (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
+          vj.d(var7, var6, this.field_G, var12);
+          var8Lifetime1 = 16711935 & param1;
+          var9Lifetime1 = param1 & 65280;
+          vj.d(var7 - 2 * this.field_G, var6, this.field_G, var12);
+          var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (var11 * var9Lifetime1 & 16711680 | -16711936 & var11 * var8Lifetime1) >>> 8;
+          vj.d(this.field_G + var7, var6, this.field_G, var12Lifetime1);
+          vj.d(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
         }
         gg.a(param2 ^ 14844);
         return var14;
@@ -289,10 +222,10 @@ final class ng extends lk {
 
     final void a(int param0, int param1, int param2) {
         this.field_M = param1;
-        this.field_A = 8355711 & param2 >> -839634559;
-        this.field_L = (16711422 & param1) >> 1749840961;
+        this.field_A = 8355711 & param2 >> 1;
+        this.field_L = (16711422 & param1) >> 1;
         if (param0 != 0) {
-            this.field_L = -68;
+          this.field_L = -68;
         }
         this.field_z = param2;
         this.b(false);

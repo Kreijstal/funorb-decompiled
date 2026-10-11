@@ -5,111 +5,74 @@ final class sh {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
-        faa var3;
-        String var4;
-        var3 = dpa.field_p;
+        faa var3 = dpa.field_p;
         var3.h(24335, param2);
         var3.c(0, 3);
         var3.c(0, 9);
         var3.a(param0, true);
-        if (param1 != -1) {
-          var4 = (String) null;
-          sh.a((String) null, (String) null, (String) null, -75);
-          return;
-        } else {
+        if (param1 == -1) {
           return;
         }
+        String var4 = (String) null;
+        sh.a((String) null, (String) null, (String) null, -75);
     }
 
     final static String a(String param0, String param1, String param2, int param3) {
-        int var4;
-        int var5;
-        var5 = VoidHunters.field_G;
-        if (param3 == 0) {
-          var4 = param2.indexOf(param1);
-          L0: while (true) {
-            if (-1 == var4) {
-              return param2;
-            } else {
-              param2 = param2.substring(0, var4) + param0 + param2.substring(param1.length() + var4);
-              var4 = param2.indexOf(param1, var4 - -param0.length());
-              continue L0;
-            }
-          }
-        } else {
+        int var4 = 0;
+        int var5 = VoidHunters.field_G;
+        int var4Lifetime1;
+        if (param3 != 0) {
           sh.a((byte) -13);
+        } else {
           var4 = param2.indexOf(param1);
-          L1: while (true) {
-            if (-1 == var4) {
-              return param2;
-            } else {
-              param2 = param2.substring(0, var4) + param0 + param2.substring(param1.length() + var4);
-              var4 = param2.indexOf(param1, var4 - -param0.length());
-              continue L1;
-            }
+          while (-1 != var4) {
+            param2 = param2.substring(0, var4) + param0 + param2.substring(param1.length() + var4);
+            var4 = param2.indexOf(param1, var4 + param0.length());
           }
+          return param2;
         }
+        var4Lifetime1 = param2.indexOf(param1);
+        while (-1 != var4Lifetime1) {
+          param2 = param2.substring(0, var4Lifetime1) + param0 + param2.substring(param1.length() + var4Lifetime1);
+          var4Lifetime1 = param2.indexOf(param1, var4Lifetime1 + param0.length());
+        }
+        return param2;
     }
 
     final static void a(int param0) {
-        int fieldTemp$2 = 0;
-        pd var1 = null;
-        int var2 = 0;
-        int decompiledRegionSelector0 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
+        pd var1 = null;
         RuntimeException var1_ref = null;
+        int var2 = 0;
         var2 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (param0 == 20824) {
-                break L1;
-              } else {
-                field_a = (byte[][]) null;
-                break L1;
-              }
-            }
-            if (null != rb.field_c) {
-              var1 = (pd) ((Object) rb.field_c.d(0));
-              L2: while (true) {
-                if (var1 == null) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    fieldTemp$2 = var1.field_d;
-                    var1.field_d = var1.field_d - 1;
-                    if (fieldTemp$2 != 0) {
-                      break L3;
-                    } else {
-                      var1.b(param0 ^ -24158);
-                      break L3;
-                    }
-                  }
-                  var1 = (pd) ((Object) rb.field_c.a((byte) 12));
-                  continue L2;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 20824) {
+            field_a = (byte[][]) null;
           }
+          if (null == rb.field_c) {
+            return;
+          }
+          var1 = (pd) (rb.field_c.d(0));
+          while (var1 != null) {
+            fieldTemp$0 = var1.field_d;
+            var1.field_d = var1.field_d - 1;
+            if (fieldTemp$0 == 0) {
+              var1.b(param0 ^ -24158);
+            }
+            var1 = (pd) (rb.field_c.a((byte) 12));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1_ref), "sh.D(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     public static void a(byte param0) {
         if (param0 < 43) {
-            return;
+          return;
         }
         field_a = (byte[][]) null;
     }

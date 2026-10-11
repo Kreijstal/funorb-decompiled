@@ -8,18 +8,16 @@ final class fb {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          fb.a(true);
-          field_a = (byte[][]) null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0) {
           field_a = (byte[][]) null;
           field_b = null;
           field_c = null;
           return;
         }
+        fb.a(true);
+        field_a = (byte[][]) null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

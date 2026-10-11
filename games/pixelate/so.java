@@ -20,15 +20,15 @@ final class so {
     private int field_b;
 
     final int a(int param0) {
-        if (!(this.field_p != this.field_i.length)) {
-            this.field_h = true;
-            return -1;
+        if (this.field_p == this.field_i.length) {
+          this.field_h = true;
+          return -1;
         }
         if (param0 != 0) {
-            this.field_n = true;
+          this.field_n = true;
         }
-        if (!(-1 <= (this.field_p ^ -1))) {
-            this.field_l = this.field_l + 37;
+        if (this.field_p > 0) {
+          this.field_l = this.field_l + 37;
         }
         int fieldTemp$0 = this.field_p;
         this.field_p = this.field_p + 1;
@@ -37,26 +37,26 @@ final class so {
 
     final int a(byte param0) {
         if (param0 >= -88) {
-            this.field_a = -66;
+          this.field_a = -66;
         }
         return this.field_i.length;
     }
 
     final void d(int param0) {
         if (this.field_l > this.field_g) {
-            this.field_g = this.field_g + 3;
+          this.field_g = this.field_g + 3;
         }
         if (this.field_g > this.field_l) {
-            this.field_g = this.field_l;
+          this.field_g = this.field_l;
         }
         if (param0 != 27420) {
-            so.a(true);
+          so.a(true);
         }
     }
 
     final dd b(int param0) {
         if (param0 != -3060) {
-            this.field_a = 17;
+          this.field_a = 17;
         }
         return new dd(this.field_m, this.field_k, this.field_j, 60, 30, lp.field_d, 0, 0, new hh[]{lk.field_o[this.field_e]});
     }
@@ -66,50 +66,48 @@ final class so {
         this.field_n = false;
         this.field_h = false;
         this.field_f = param0 ? true : false;
-        this.field_o = 240 + -((37 * this.field_i.length + -5) / 2);
+        this.field_o = 240 - (37 * this.field_i.length - 5) / 2;
         this.field_g = this.field_o;
         this.field_l = this.field_g;
     }
 
     final static void c(int param0) {
         if (param0 != 4478) {
-            field_d = (tf[]) null;
+          field_d = (tf[]) null;
         }
         if (!ik.field_a) {
-            if (null == pk.field_f) {
-                pk.field_f = wg.b(255, 4);
-            }
-            if (pk.field_f.field_p) {
-                go.field_k = go.field_k & (pk.field_f.field_s ^ -1);
-                de.field_n = de.field_n | pk.field_f.field_s;
-                ik.field_a = true;
-                pk.field_f = null;
-            }
+          if (null == pk.field_f) {
+            pk.field_f = wg.b(255, 4);
+          }
+          if (pk.field_f.field_p) {
+            go.field_k = go.field_k & ~pk.field_f.field_s;
+            de.field_n = de.field_n | pk.field_f.field_s;
+            ik.field_a = true;
+            pk.field_f = null;
+          }
         }
         if (!db.field_U) {
-            if (null == up.field_g) {
-                up.field_g = ni.a(6, -90);
+          if (null == up.field_g) {
+            up.field_g = ni.a(6, -90);
+          }
+          if (up.field_g.field_p) {
+            db.a(false, up.field_g.field_n);
+            if (ef.field_a) {
+              kp.b((byte) 74);
             }
-            if (!(!up.field_g.field_p)) {
-                db.a(false, up.field_g.field_n);
-                if (ef.field_a) {
-                    kp.b((byte) 74);
-                }
-                up.field_g = null;
-                db.field_U = true;
-            }
+            up.field_g = null;
+            db.field_U = true;
+          }
         }
-        if (ik.field_a) {
-            if (!(!db.field_U)) {
-                eh.c(5);
-                ni.a(-31470);
-                if (-10 == (fc.field_e ^ -1)) {
-                    if (!(go.field_k != 0)) {
-                        fc.field_e = 5;
-                        la.a(ti.field_t, 5, false, -25528);
-                    }
-                }
-            }
+        if (ik.field_a &&
+          db.field_U) {
+          eh.c(5);
+          ni.a(-31470);
+          if (fc.field_e == 9 &&
+            go.field_k == 0) {
+            fc.field_e = 5;
+            la.a(ti.field_t, 5, false, -25528);
+          }
         }
     }
 
@@ -117,142 +115,94 @@ final class so {
         this.field_n = true;
         long var2 = 1L << this.field_e | jo.field_h;
         if (param0 != 20604) {
-            return;
+          return;
         }
         if (var2 != jo.field_h) {
-            jo.field_h = var2;
-            kp.b((byte) 74);
+          jo.field_h = var2;
+          kp.b((byte) 74);
         }
     }
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_d = (tf[]) null;
+          field_d = (tf[]) null;
         }
         field_d = null;
         field_c = (int[][]) null;
     }
 
     final void f(int param0) {
+        int var3 = 0;
         tf[] stackIn_6_0 = null;
-        tf[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         tf[] stackIn_9_0 = null;
-        tf[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         tf[] stackIn_12_0 = null;
-        tf[] stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         tf[] stackIn_15_0 = null;
-        tf[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int var2;
-        int var3;
         boolean[] var4;
         int var5;
-        L0: {
-          var5 = Pixelate.field_H ? 1 : 0;
-          t.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
-          t.a(535, -15 + this.field_o, 62, 15 + (this.field_b - -15), 6, 0, 128);
-          li.field_d.b(542, this.field_g + -8, 256);
-          var2 = this.field_o;
-          if (param0 == 550) {
-            break L0;
-          } else {
-            this.field_l = -112;
-            break L0;
-          }
+        var5 = Pixelate.field_H ? 1 : 0;
+        t.e(535, -15 + this.field_o, 62, 15 + this.field_b + 15, 6, 0);
+        t.a(535, -15 + this.field_o, 62, 15 + (this.field_b + 15), 6, 0, 128);
+        li.field_d.b(542, this.field_g - 8, 256);
+        var2 = this.field_o;
+        if (param0 != 550) {
+          this.field_l = -112;
         }
-        var3 = 0;
-        L1: while (true) {
-          if (var3 >= this.field_i.length) {
-            rk.field_e.a("Puzzle " + (this.field_e - -1), 30, 50, 0, -1);
-            return;
+        for (var3 = 0; var3 < this.field_i.length; var3++) {
+          var4 = vn.field_e[this.field_i[var3]];
+          stackIn_6_0 = rg.field_e.field_a;
+          if (!var4[0]) {
+            stackIn_7_1 = 0;
           } else {
-            L2: {
-              var4 = vn.field_e[this.field_i[var3]];
-              stackIn_6_0 = rg.field_e.field_a;
-
-              if (!var4[0]) {
-                stackIn_7_0 = (tf[]) ((Object) stackIn_6_0);
-                stackIn_7_1 = 0;
-                break L2;
-              } else {
-                stackIn_7_0 = (tf[]) ((Object) stackIn_6_0);
-                stackIn_7_1 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              ((tf) (Object) stackIn_7_0[stackIn_7_1]).b(550, var2);
-              stackIn_9_0 = rg.field_e.field_a;
-
-              if (var4[1]) {
-                stackIn_10_0 = (tf[]) ((Object) stackIn_9_0);
-                stackIn_10_1 = 1;
-                break L3;
-              } else {
-                stackIn_10_0 = (tf[]) ((Object) stackIn_9_0);
-                stackIn_10_1 = 0;
-                break L3;
-              }
-            }
-            L4: {
-              ((tf) (Object) stackIn_10_0[stackIn_10_1]).b(566, var2);
-              stackIn_12_0 = rg.field_e.field_a;
-
-              if (var4[2]) {
-                stackIn_13_0 = (tf[]) ((Object) stackIn_12_0);
-                stackIn_13_1 = 1;
-                break L4;
-              } else {
-                stackIn_13_0 = (tf[]) ((Object) stackIn_12_0);
-                stackIn_13_1 = 0;
-                break L4;
-              }
-            }
-            L5: {
-              ((tf) (Object) stackIn_13_0[stackIn_13_1]).b(550, var2 - -16);
-              stackIn_15_0 = rg.field_e.field_a;
-
-              if (!var4[3]) {
-                stackIn_16_0 = (tf[]) ((Object) stackIn_15_0);
-                stackIn_16_1 = 0;
-                break L5;
-              } else {
-                stackIn_16_0 = (tf[]) ((Object) stackIn_15_0);
-                stackIn_16_1 = 1;
-                break L5;
-              }
-            }
-            ((tf) (Object) stackIn_16_0[stackIn_16_1]).b(566, 16 + var2);
-            if (var3 < -1 + this.field_p) {
-              t.a(550, var2, 32, 32, 0, 128);
-              var2 += 37;
-              var3++;
-              continue L1;
-            } else {
-              var2 += 37;
-              var3++;
-              continue L1;
-            }
+            stackIn_7_1 = 1;
           }
+          ((tf) (Object) stackIn_6_0[stackIn_7_1]).b(550, var2);
+          stackIn_9_0 = rg.field_e.field_a;
+          if (var4[1]) {
+            stackIn_10_1 = 1;
+          } else {
+            stackIn_10_1 = 0;
+          }
+          ((tf) (Object) stackIn_9_0[stackIn_10_1]).b(566, var2);
+          stackIn_12_0 = rg.field_e.field_a;
+          if (var4[2]) {
+            stackIn_13_1 = 1;
+          } else {
+            stackIn_13_1 = 0;
+          }
+          ((tf) (Object) stackIn_12_0[stackIn_13_1]).b(550, var2 + 16);
+          stackIn_15_0 = rg.field_e.field_a;
+          if (!var4[3]) {
+            stackIn_16_1 = 0;
+          } else {
+            stackIn_16_1 = 1;
+          }
+          ((tf) (Object) stackIn_15_0[stackIn_16_1]).b(566, 16 + var2);
+          if (var3 < -1 + this.field_p) {
+            t.a(550, var2, 32, 32, 0, 128);
+          }
+          var2 += 37;
         }
+        rk.field_e.a("Puzzle " + (this.field_e + 1), 30, 50, 0, -1);
     }
 
     so(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         this.field_f = false;
         this.field_p = 0;
         try {
-            this.field_a = param4;
-            this.field_e = param0;
-            this.field_i = param5;
-            this.field_k = param2;
-            this.field_m = param1;
-            this.field_j = param3;
-            this.field_b = this.field_i.length * 37 - 5;
+          this.field_a = param4;
+          this.field_e = param0;
+          this.field_i = param5;
+          this.field_k = param2;
+          this.field_m = param1;
+          this.field_j = param3;
+          this.field_b = this.field_i.length * 37 - 5;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "so.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

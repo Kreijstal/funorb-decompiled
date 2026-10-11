@@ -12,50 +12,30 @@ class tb extends hq {
         cf var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            super.a(param0, param1, param2 ^ 0, param3, param4);
-            if (param2 == -15112) {
-              break L0;
-            } else {
-              var7 = (cf) null;
-              this.a(true, 39, -62, 86, (cf) null);
-              return;
-            }
+          if (param0) {
+            ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
           }
+          super.a(param0, param1, param2 ^ 0, param3, param4);
+          if (param2 == -15112) {
+            return;
+          }
+          var7 = (cf) null;
+          this.a(true, 39, -62, 86, (cf) null);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var6);
-
-            stackIn_8_1 = new StringBuilder().append("tb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_8_0 = var6;
+          stackIn_8_1 = new StringBuilder().append("tb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -67,9 +47,9 @@ class tb extends hq {
         field_v = null;
         field_t = null;
         if (param0 != 109) {
-            tb.c((byte) 124);
-            field_s = null;
-            return;
+          tb.c((byte) 124);
+          field_s = null;
+          return;
         }
         field_s = null;
     }
@@ -85,30 +65,11 @@ class tb extends hq {
         if (um.field_c != null) {
           var1 = um.field_c;
           synchronized (var1) {
-            L0: {
-              um.field_c = null;
-              break L0;
-            }
+            um.field_c = null;
           }
-          L1: {
-            if (param0 == 4862) {
-              break L1;
-            } else {
-              field_s = (ja) null;
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (param0 == 4862) {
-              break L2;
-            } else {
-              field_s = (ja) null;
-              break L2;
-            }
-          }
-          return;
+        }
+        if (param0 != 4862) {
+          field_s = (ja) null;
         }
     }
 

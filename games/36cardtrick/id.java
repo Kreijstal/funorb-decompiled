@@ -11,70 +11,54 @@ final class id {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-          id.a(8);
-          field_e = null;
-          field_a = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0) {
           field_e = null;
           field_a = null;
           field_f = null;
           field_d = null;
           return;
         }
+        id.a(8);
+        field_e = null;
+        field_a = null;
+        field_f = null;
+        field_d = null;
     }
 
     final static void a(byte param0) {
-        if ((mf.field_i ^ -1) < -11) {
-          wf.a(-10 + mf.field_i, -22);
-          if (param0 > 96) {
-            return;
-          } else {
-            id.a(78);
-            return;
-          }
-        } else {
+        if (mf.field_i <= 10) {
           wf.a(0, -12);
-          if (param0 > 96) {
-            return;
-          } else {
+          if (param0 <= 96) {
             id.a(78);
             return;
           }
+          return;
+        }
+        wf.a(-10 + mf.field_i, -22);
+        if (param0 <= 96) {
+          id.a(78);
+          return;
         }
     }
 
     final synchronized static long a(int param0) {
-        long var1;
-        if (param0 < 21) {
-          L0: {
-            id.a((byte) -72);
-            var1 = System.currentTimeMillis();
-            if (var1 < qb.field_c) {
-              ec.field_m = ec.field_m + (qb.field_c - var1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          qb.field_c = var1;
-          return ec.field_m + var1;
-        } else {
-          L1: {
-            var1 = System.currentTimeMillis();
-            if (var1 < qb.field_c) {
-              ec.field_m = ec.field_m + (qb.field_c - var1);
-              break L1;
-            } else {
-              break L1;
-            }
+        long var1 = 0L;
+        long var1Lifetime1;
+        if (param0 >= 21) {
+          var1 = System.currentTimeMillis();
+          if (!(var1 >= qb.field_c)) {
+            ec.field_m = ec.field_m + (qb.field_c - var1);
           }
           qb.field_c = var1;
           return ec.field_m + var1;
         }
+        id.a((byte) -72);
+        var1Lifetime1 = System.currentTimeMillis();
+        if (!(var1Lifetime1 >= qb.field_c)) {
+          ec.field_m = ec.field_m + (qb.field_c - var1Lifetime1);
+        }
+        qb.field_c = var1Lifetime1;
+        return ec.field_m + var1Lifetime1;
     }
 
     static {

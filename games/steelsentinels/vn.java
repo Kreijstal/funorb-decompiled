@@ -13,11 +13,11 @@ final class vn extends v implements fd, aa {
 
     public final void a(boolean param0, jf param1) {
         try {
-            if (!param0) {
-                vn.d(116);
-            }
+          if (!param0) {
+            vn.d(116);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "vn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,57 +29,30 @@ final class vn extends v implements fd, aa {
         int var5 = 0;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_n.j(-88);
-              var3 = this.field_n.k(14879);
-              var4 = this.field_n.h((byte) 17);
-              var5 = rg.d(-1900);
-              if (var4 < 1890) {
-                break L1;
-              } else {
-                if (var4 > -3 + var5) {
-                  break L1;
-                } else {
-                  if (param0 == -42) {
-                    if (!oh.a(var4, true, var2_int, var3)) {
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    stackIn_7_0 = (String) null;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
+          var2_int = this.field_n.j(-88);
+          var3 = this.field_n.k(14879);
+          var4 = this.field_n.h((byte) 17);
+          var5 = rg.d(-1900);
+          if (var4 >= 1890 &&
+            var4 <= -3 + var5) {
+            if (param0 != -42) {
+              stackIn_7_0 = (String) null;
+              return stackIn_7_0;
             }
+            if (oh.a(var4, true, var2_int, var3)) {
+              return null;
+            }
+          } else {
             stackIn_4_0 = db.a(ce.field_u, -26, new String[]{"1890", Integer.toString(var5 - 3)});
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            decompiledRegionSelector0 = 2;
-            break L2;
-          }
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            return da.field_a;
-          }
-        }
+        return da.field_a;
     }
 
     final static void d(int param0) {
@@ -87,42 +60,28 @@ final class vn extends v implements fd, aa {
         RuntimeException var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var1_intLifetime1;
         var2 = SteelSentinels.field_G;
         try {
-          L0: {
-            hm.field_a = null;
-            gd.field_jb = null;
-            vd.field_a = null;
-            bi.field_f = null;
-            kf.field_s = true;
-            lg.field_l = true;
-            rh.field_u = null;
-            kk.field_a = null;
-            var1_int = 0;
-            L1: while (true) {
-              if (wc.field_h.length <= var1_int) {
-                var1_int = 0;
-                L2: while (true) {
-                  if (cj.field_a.length <= var1_int) {
-                    if (param0 <= -25) {
-                      break L0;
-                    } else {
-                      field_k = (String) null;
-                      return;
-                    }
-                  } else {
-                    cj.field_a[var1_int] = null;
-                    var1_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                wc.field_h[var1_int] = null;
-                var1_int++;
-                continue L1;
-              }
-            }
+          hm.field_a = null;
+          gd.field_jb = null;
+          vd.field_a = null;
+          bi.field_f = null;
+          kf.field_s = true;
+          lg.field_l = true;
+          rh.field_u = null;
+          kk.field_a = null;
+          for (var1_int = 0; wc.field_h.length > var1_int; var1_int++) {
+            wc.field_h[var1_int] = null;
           }
+          for (var1_intLifetime1 = 0; cj.field_a.length > var1_intLifetime1; var1_intLifetime1++) {
+            cj.field_a[var1_intLifetime1] = null;
+          }
+          if (param0 <= -25) {
+            return;
+          }
+          field_k = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -132,12 +91,12 @@ final class vn extends v implements fd, aa {
 
     public final void a(jf param0, byte param1) {
         if (param1 != 89) {
-            return;
+          return;
         }
         try {
-            this.a(param1 + -17471);
+          this.a(param1 - 17471);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "vn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "vn.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -146,8 +105,8 @@ final class vn extends v implements fd, aa {
 
     public final boolean b(boolean param0) {
         if (!param0) {
-            vn.d(false);
-            return this.field_n.i(-7034);
+          vn.d(false);
+          return this.field_n.i(-7034);
         }
         return this.field_n.i(-7034);
     }
@@ -157,34 +116,24 @@ final class vn extends v implements fd, aa {
     }
 
     final static String a(char param0, int param1, int param2) {
-        char[] var3;
-        int var4;
-        int var5;
-        char[] var6;
-        var5 = SteelSentinels.field_G;
-        var6 = new char[param2];
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (param2 <= var4) {
-            if (param1 != -7477) {
-              return (String) null;
-            } else {
-              return new String(var3);
-            }
-          } else {
-            var6[var4] = param0;
-            var4++;
-            continue L0;
-          }
+        int var4 = 0;
+        int var5 = SteelSentinels.field_G;
+        char[] var6 = new char[param2];
+        char[] var3 = var6;
+        for (var4 = 0; param2 > var4; var4++) {
+          var6[var4] = param0;
         }
+        if (param1 == -7477) {
+          return new String(var3);
+        }
+        return (String) null;
     }
 
     final static void c(int param0) {
         if (param0 <= 0) {
-            vn.c((byte) -125);
-            vc.a(-1);
-            return;
+          vn.c((byte) -125);
+          vc.a(-1);
+          return;
         }
         vc.a(-1);
     }
@@ -198,64 +147,40 @@ final class vn extends v implements fd, aa {
         vd stackIn_2_0 = null;
         vd stackIn_6_0 = null;
         vd stackIn_10_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = this.field_n.j(-127);
-            var3 = this.field_n.k(14879);
-            var4 = this.field_n.h((byte) 79);
-            var5 = rg.d(param0 ^ 31644);
-            if (-1891 >= (var4 ^ -1)) {
-              if (var4 > -3 + var5) {
-                stackIn_6_0 = fa.field_d;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (!oh.a(var4, true, var2_int, var3)) {
-                  stackIn_10_0 = fa.field_d;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_2_0 = fa.field_d;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_int = this.field_n.j(-127);
+          var3 = this.field_n.k(14879);
+          var4 = this.field_n.h((byte) 79);
+          var5 = rg.d(param0 ^ 31644);
+          if (var4 < 1890) {
+            stackIn_2_0 = fa.field_d;
+            return stackIn_2_0;
+          }
+          if (var4 > -3 + var5) {
+            stackIn_6_0 = fa.field_d;
+            return stackIn_6_0;
+          }
+          if (!oh.a(var4, true, var2_int, var3)) {
+            stackIn_10_0 = fa.field_d;
+            return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return fa.field_d;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              if (param0 != -31992) {
-                field_i = (String) null;
-                return vf.field_b;
-              } else {
-                return vf.field_b;
-              }
-            } else {
-              return stackIn_10_0;
-            }
-          }
+        if (param0 == -31992) {
+          return vf.field_b;
         }
+        field_i = (String) null;
+        return vf.field_b;
     }
 
     final static wg c(byte param0) {
         if (param0 != 83) {
-            vn.d(true);
-            return ll.field_e;
+          vn.d(true);
+          return ll.field_e;
         }
         return ll.field_e;
     }
@@ -264,7 +189,7 @@ final class vn extends v implements fd, aa {
         field_m = null;
         field_j = null;
         if (param0) {
-            return;
+          return;
         }
         field_i = null;
         field_k = null;

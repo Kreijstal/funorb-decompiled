@@ -14,9 +14,7 @@ final class p {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        if (param0 != -24869) {
-          return;
-        } else {
+        if (param0 == -24869) {
           field_e = null;
           field_g = null;
           field_f = null;

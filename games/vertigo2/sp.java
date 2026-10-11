@@ -23,30 +23,30 @@ abstract class sp extends nm {
         int var5 = 0;
         if (0 >= this.field_L) {
         } else {
-            var2 = this.field_S;
-            var3 = this.field_T;
-            fieldTemp$0 = this.field_R + 1;
-            this.field_R = this.field_R + 1;
-            if (fieldTemp$0 >= this.field_L) {
-                this.field_L = 0;
-                this.a((byte) -24);
-            } else {
-                var4 = this.field_R * (this.field_L * 2 + -this.field_R);
-                var5 = this.field_L * this.field_L;
-                var3 = (-this.field_N + this.field_T) * var4 / var5 + this.field_N;
-                var2 = (this.field_S + -this.field_M) * var4 / var5 + this.field_M;
-            }
-            this.b(-1535749535, var2, var3);
+          var2 = this.field_S;
+          var3 = this.field_T;
+          fieldTemp$0 = this.field_R + 1;
+          this.field_R = this.field_R + 1;
+          if (fieldTemp$0 >= this.field_L) {
+            this.field_L = 0;
+            this.a((byte) -24);
+          } else {
+            var4 = this.field_R * (this.field_L * 2 - this.field_R);
+            var5 = this.field_L * this.field_L;
+            var3 = (-this.field_N + this.field_T) * var4 / var5 + this.field_N;
+            var2 = (this.field_S - this.field_M) * var4 / var5 + this.field_M;
+          }
+          this.b(-1535749535, var2, var3);
         }
         if (param0 != 17) {
-            field_P = (String) null;
+          field_P = (String) null;
         }
         return super.j(17);
     }
 
     void a(byte param0) {
         if (param0 > -19) {
-            this.field_S = 15;
+          this.field_S = 15;
         }
     }
 
@@ -57,62 +57,39 @@ abstract class sp extends nm {
         gg stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -59) {
-              var2 = new gg(param0, param0);
-              fm.field_b.a(var2, false);
-              il.field_g.a(param0);
-              stackIn_4_0 = (gg) (var2);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (gg) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 > -59) {
+            stackIn_2_0 = (gg) null;
+            return stackIn_2_0;
           }
+          var2 = new gg(param0, param0);
+          fm.field_b.a(var2, false);
+          il.field_g.a(param0);
+          stackIn_4_0 = var2;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2_ref);
-
-            stackIn_7_1 = new StringBuilder().append("sp.IA(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_7_0 = var2_ref;
+          stackIn_7_1 = new StringBuilder().append("sp.IA(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw wn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     void f(byte param0) {
-        if (!((this.field_L ^ -1) < -1)) {
-            return;
+        if (this.field_L <= 0) {
+          return;
         }
         this.b(param0 ^ 1535749512, this.field_S, this.field_T);
         if (param0 != -23) {
-            return;
+          return;
         }
         this.field_L = 0;
         this.a((byte) -56);
@@ -132,147 +109,106 @@ abstract class sp extends nm {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = Vertigo2.field_L ? 1 : 0;
-        bi.e(param1 - -6, param2 + 35, -12 + this.field_n, -40 + this.field_s, 2105376, 0);
+        bi.e(param1 + 6, param2 + 35, -12 + this.field_n, -40 + this.field_s, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param2;
-        L0: while (true) {
-          if (var4 <= var7) {
-            L1: {
-              var6 = 169;
-              var4 = 22;
-              var5 = 194;
-              if (param0 < -92) {
-                break L1;
-              } else {
-                this.a((byte) -71);
-                break L1;
+        while (var4 > var7) {
+          if (bi.field_f <= var8 &&
+            bi.field_c > var8) {
+            var9 = (var6 - var5) * var7 / var4 + var5;
+            var10 = 0;
+            var11 = this.field_n;
+            if (var7 <= 20) {
+              while (var10 <= 20) {
+                var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 - var7);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
+                  }
+                  var13 = var9 * (-var12 + 462) / 42;
+                  var13 = var13 | (var13 << 16 | var13 << 8);
+                  bi.field_l[var10 + (bi.field_e * var8 + param1)] = var13;
+                }
+                var10++;
               }
             }
-            var7 = 0;
-            var8 = 35 + param2;
-            L2: while (true) {
-              if (var4 <= var7) {
-                qo.field_y.e(-90 + (param1 + this.field_n), 10 + param2);
-                kj.a(1, this.field_n + -10, param1 + 5, bh.field_a, param2 - -35);
-                kj.a(1, this.field_n, param1, ki.field_b, -22 + (this.field_s + param2));
-                var4 = -79 + this.field_s;
-                var5 = 169;
-                var6 = 127;
-                var7 = 0;
-                var8 = param2 - -57;
-                L3: while (true) {
-                  if (var7 >= var4) {
-                    return;
+            if (var7 <= 20) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              var13Lifetime1 = 0;
+              while (var13Lifetime1 <= 20) {
+                var14 = (-var7 + 20) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
+                if (462 >= var14) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = var11 + 1;
                   } else {
-                    var9 = var5 - -(var7 * (-var5 + var6) / var4);
-                    var9 = var9 | (var9 << 827531784 | var9 << 436822288);
-                    bi.b(param1, var8, 6, var9);
-                    bi.b(-6 + (param1 - -this.field_n), var8, 6, var9);
-                    var8++;
-                    var7++;
-                    continue L3;
+                    var15 = (-var14 + 462) * var9 / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    bi.field_l[param1 + (bi.field_e * var8 + var11)] = var15;
                   }
+                  var13Lifetime1++;
+                  var11++;
+                  continue;
                 }
-              } else {
-                var9 = (-var5 + var6) * var7 / var4 + var5;
-                var9 = var9 | (var9 << -1815592344 | var9 << -183724720);
-                bi.b(param1, var8, 6, var9);
-                bi.b(-6 + this.field_n + param1, var8, 6, var9);
-                var7++;
-                var8++;
-                continue L2;
+                break;
               }
+              var11 = var12Lifetime1;
             }
-          } else {
-            if (bi.field_f <= var8) {
-              if (bi.field_c > var8) {
-                L4: {
-                  var9 = (var6 - var5) * var7 / var4 + var5;
-                  var10 = 0;
-                  var11 = this.field_n;
-                  if (var7 <= 20) {
-                    L5: while (true) {
-                      if (var10 > 20) {
-                        break L4;
-                      } else {
-                        var12 = (-var10 + 20) * (20 - var10) + (20 + -var7) * (20 + -var7);
-                        if ((var12 ^ -1) >= -463) {
-                          if (var12 < 420) {
-                            break L4;
-                          } else {
-                            var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << -2066890064 | var13 << -1211259608);
-                            bi.field_l[var10 + (bi.field_e * var8 - -param1)] = var13;
-                            var10++;
-                            continue L5;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                L6: {
-                  if ((var7 ^ -1) >= -21) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if ((var13 ^ -1) < -21) {
-                          break L8;
-                        } else {
-                          var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
-                          if (462 >= var14) {
-                            if (-421 < (var14 ^ -1)) {
-                              var12 = var11 - -1;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            } else {
-                              var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << -2100380056 | var15 << 1824125680);
-                              bi.field_l[param1 + (bi.field_e * var8 - -var11)] = var15;
-                              var13++;
-                              var11++;
-                              continue L7;
-                            }
-                          } else {
-                            break L8;
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  } else {
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << -632263152 | var9 << -1191228728);
-                bi.b(param1 + var10, var8, var11 - var10, var9);
-                var8++;
-                var7++;
-                continue L0;
-              } else {
-                var8++;
-                var7++;
-                continue L0;
-              }
-            } else {
-              var8++;
-              var7++;
-              continue L0;
-            }
+            var9 = var9 | (var9 << 16 | var9 << 8);
+            bi.b(param1 + var10, var8, var11 - var10, var9);
           }
+          var8++;
+          var7++;
+        }
+        var6Lifetime1 = 169;
+        var4Lifetime1 = 22;
+        var5Lifetime1 = 194;
+        if (param0 >= -92) {
+          this.a((byte) -71);
+        }
+        var7Lifetime1 = 0;
+        var8Lifetime1 = 35 + param2;
+        while (var4Lifetime1 > var7Lifetime1) {
+          var9Lifetime1 = (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
+          var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
+          bi.b(param1, var8Lifetime1, 6, var9Lifetime1);
+          bi.b(-6 + this.field_n + param1, var8Lifetime1, 6, var9Lifetime1);
+          var7Lifetime1++;
+          var8Lifetime1++;
+        }
+        qo.field_y.e(-90 + (param1 + this.field_n), 10 + param2);
+        kj.a(1, this.field_n - 10, param1 + 5, bh.field_a, param2 + 35);
+        kj.a(1, this.field_n, param1, ki.field_b, -22 + (this.field_s + param2));
+        var4Lifetime2 = -79 + this.field_s;
+        var5Lifetime2 = 169;
+        var6Lifetime2 = 127;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param2 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
+          bi.b(param1, var8Lifetime2, 6, var9Lifetime2);
+          bi.b(-6 + (param1 + this.field_n), var8Lifetime2, 6, var9Lifetime2);
+          var8Lifetime2++;
+          var7Lifetime2++;
         }
     }
 
@@ -284,7 +220,7 @@ abstract class sp extends nm {
 
     boolean a(int param0) {
         if (param0 != -1) {
-            return true;
+          return true;
         }
         this.f((byte) -23);
         return super.a(-1);
@@ -294,7 +230,7 @@ abstract class sp extends nm {
         field_P = null;
         field_Q = null;
         if (param0 != -6) {
-            field_O = 103;
+          field_O = 103;
         }
         field_U = null;
         field_K = null;
@@ -309,38 +245,33 @@ abstract class sp extends nm {
         IllegalArgumentException var2 = null;
         var1 = -5 / ((param0 - 60) / 44);
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              var3 = ni.field_d.a(var2_int, true);
-              if (var3.field_y) {
-                stackIn_5_0 = (ud) (var3);
-                break L0;
-              } else {
-                var2_int++;
-                continue L1;
-              }
+          var2_int = 0;
+          while (true) {
+            var3 = ni.field_d.a(var2_int, true);
+            if (var3.field_y) {
+              stackIn_5_0 = var3;
+              return stackIn_5_0;
             }
+            var2_int++;
           }
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        return stackIn_5_0;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (0 >= param0) {
-            this.b(-1535749535, param1, param2);
-            return;
+          this.b(-1535749535, param1, param2);
+          return;
         }
         this.field_R = 0;
         this.field_S = param1;
         this.field_T = param2;
         this.field_M = this.field_n;
         if (param3 <= 36) {
-            this.field_N = 65;
+          this.field_N = 65;
         }
         this.field_N = this.field_s;
         this.field_L = param0;

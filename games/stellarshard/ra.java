@@ -9,26 +9,19 @@ final class ra {
         Object var1_ref = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null == sf.field_c) {
-          var1 = 36 / ((68 - param0) / 48);
-          return;
-        } else {
+        if (null != sf.field_c) {
           var1_ref = sf.field_c;
           synchronized (var1_ref) {
-            L0: {
-              sf.field_c = null;
-              break L0;
-            }
+            sf.field_c = null;
           }
-          var1 = 36 / ((68 - param0) / 48);
-          return;
         }
+        var1 = 36 / ((68 - param0) / 48);
     }
 
     public static void b(int param0) {
         field_a = null;
         if (param0 != -14755) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

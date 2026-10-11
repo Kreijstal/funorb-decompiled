@@ -15,23 +15,23 @@ final class dk extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_e.update(param0);
+          this.field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "dk.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "dk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     dk(java.awt.Component param0) {
         try {
-            this.field_e = param0;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "dk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0) {
+        int var7 = 0;
         f dupTemp$0 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -41,7 +41,6 @@ final class dk extends java.awt.Canvas {
         int[] var4 = null;
         uf var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
         f var10 = null;
@@ -50,97 +49,63 @@ final class dk extends java.awt.Canvas {
         uf var13 = null;
         var8 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var13 = de.field_V;
-              var2 = var13.d((byte) -36);
-              if (var2 != 0) {
-                if ((var2 ^ -1) == -2) {
-                  var12 = (ki) ((Object) cg.field_c.c((byte) -66));
-                  if (var12 == null) {
-                    si.a(127);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var12.b((byte) 106);
-                    break L1;
-                  }
-                } else {
-                  if (var2 == 2) {
-                    dupTemp$0 = (f) ((Object) rc.field_e.c((byte) -64));
-                    var10 = dupTemp$0;
-                    var3_ref_f = dupTemp$0;
-                    if (var10 == null) {
-                      si.a(115);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var10.field_t = b.h(109);
-                      var10.field_u = true;
-                      var10.b((byte) 119);
-                      break L1;
-                    }
-                  } else {
-                    qb.a((Throwable) null, 16408, "A1: " + qk.d((byte) 89));
-                    si.a(90);
-                    break L1;
-                  }
+          var13 = de.field_V;
+          var2 = var13.d((byte) -36);
+          if (var2 == 0) {
+            var3_ref_int__ = b.h(56);
+            var9 = var3_ref_int__;
+            var4 = var9;
+            var5 = var13;
+            var6 = ((wl) ((Object) var5)).d((byte) -116);
+            for (var7 = 0; var6 > var7; var7++) {
+              var9[var7] = ((wl) ((Object) var5)).i(7553);
+            }
+            var11 = (f) (rc.field_e.c((byte) 92));
+            if (var11 == null) {
+              si.a(95);
+              return;
+            }
+            var11.field_u = true;
+            var11.field_t = var3_ref_int__;
+            var11.b((byte) 112);
+          } else {
+            if (var2 == 1) {
+              var12 = (ki) (cg.field_c.c((byte) -66));
+              if (var12 == null) {
+                si.a(127);
+                return;
+              }
+              var12.b((byte) 106);
+            } else {
+              if (var2 == 2) {
+                dupTemp$0 = (f) (rc.field_e.c((byte) -64));
+                var10 = dupTemp$0;
+                var3_ref_f = dupTemp$0;
+                if (var10 == null) {
+                  si.a(115);
+                  return;
                 }
+                var10.field_t = b.h(109);
+                var10.field_u = true;
+                var10.b((byte) 119);
               } else {
-                var3_ref_int__ = b.h(56);
-                var9 = var3_ref_int__;
-                var4 = var9;
-                var5 = var13;
-                var6 = ((wl) ((Object) var5)).d((byte) -116);
-                var7 = 0;
-                L2: while (true) {
-                  if (var6 <= var7) {
-                    var11 = (f) ((Object) rc.field_e.c((byte) 92));
-                    if (var11 != null) {
-                      var11.field_u = true;
-                      var11.field_t = var3_ref_int__;
-                      var11.b((byte) 112);
-                      break L1;
-                    } else {
-                      si.a(95);
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  } else {
-                    var9[var7] = ((wl) ((Object) var5)).i(7553);
-                    var7++;
-                    continue L2;
-                  }
-                }
+                qb.a((Throwable) null, 16408, "A1: " + qk.d((byte) 89));
+                si.a(90);
               }
             }
-            var3 = 17 % ((-81 - param0) / 35);
-            decompiledRegionSelector0 = 3;
-            break L0;
           }
+          var3 = 17 % ((-81 - param0) / 35);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw dh.a((Throwable) ((Object) var1), "dk.B(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
-        }
     }
 
     public static void b(int param0) {
         if (param0 != 16057) {
-            return;
+          return;
         }
         field_h = null;
         field_j = null;
@@ -151,9 +116,9 @@ final class dk extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_e.paint(param0);
+          this.field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "dk.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "dk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

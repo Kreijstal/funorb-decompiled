@@ -9,18 +9,15 @@ final class d extends lq implements lja {
     static String field_E;
 
     final void h(int param0) {
-        int var2;
-        var2 = 250;
-        if (param0 != -11409) {
-          field_E = (String) null;
-          this.field_G.a(-var2 + this.field_p >> -518864767, 25, (byte) 59, 140, -25 + (this.field_q - -20) >> -962915647);
-          this.field_C.a(140 + ((this.field_p - var2 >> 124867841) + 10), 30, (byte) 59, 100, 2 + (20 + this.field_q + -30 >> -1624959039));
-          return;
-        } else {
-          this.field_G.a(-var2 + this.field_p >> -518864767, 25, (byte) 59, 140, -25 + (this.field_q - -20) >> -962915647);
-          this.field_C.a(140 + ((this.field_p - var2 >> 124867841) + 10), 30, (byte) 59, 100, 2 + (20 + this.field_q + -30 >> -1624959039));
+        int var2 = 250;
+        if (param0 == -11409) {
+          this.field_G.a(-var2 + this.field_p >> 1, 25, (byte) 59, 140, -25 + (this.field_q + 20) >> 1);
+          this.field_C.a(140 + ((this.field_p - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.field_q - 30 >> 1));
           return;
         }
+        field_E = (String) null;
+        this.field_G.a(-var2 + this.field_p >> 1, 25, (byte) 59, 140, -25 + (this.field_q + 20) >> 1);
+        this.field_C.a(140 + ((this.field_p - var2 >> 1) + 10), 30, (byte) 59, 100, 2 + (20 + this.field_q - 30 >> 1));
     }
 
     d(int param0, int param1, int param2, int param3) {
@@ -35,30 +32,30 @@ final class d extends lq implements lja {
 
     final void a(int param0, int param1, wj param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_C.field_z = this.field_G.a(16728128).b(-19704) == cm.field_u ? true : false;
+          super.a(param0, param1, param2, param3);
+          this.field_C.field_z = this.field_G.a(16728128).b(-19704) == cm.field_u ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "d.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "d.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public final void a(int param0, hf param1, int param2, byte param3, int param4) {
-        if (!(this.field_G.a(16728128).b(-19704) == cm.field_u)) {
-            return;
+        if (this.field_G.a(16728128).b(-19704) != cm.field_u) {
+          return;
         }
         if (param3 <= 50) {
-            return;
+          return;
         }
         try {
-            tba.a((byte) 103, this.field_G.j(-1), this.field_G.f((byte) 31), this.field_G.d((byte) 47));
+          tba.a((byte) 103, this.field_G.j(-1), this.field_G.f((byte) 31), this.field_G.d((byte) 47));
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "d.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "d.AA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a((byte) 121, param1, param2, param3);
-        oc.field_l.c(gp.field_y, this.field_s + (param3 + 4), param1 - (-this.field_v + (-oc.field_l.field_u + -4)), 16777215, -1);
+        oc.field_l.c(gp.field_y, this.field_s + (param3 + 4), param1 - (-this.field_v + (-oc.field_l.field_u - 4)), 16777215, -1);
         int var5 = -15 % ((-20 - param0) / 54);
     }
 
@@ -67,7 +64,7 @@ final class d extends lq implements lja {
         field_H = null;
         field_D = null;
         if (param0 != 7) {
-            field_E = (String) null;
+          field_E = (String) null;
         }
     }
 

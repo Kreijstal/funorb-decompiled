@@ -12,8 +12,8 @@ final class cg {
 
     final static km b(int param0) {
         if (param0 != 1463) {
-            cg.a(false, 127);
-            return ch.field_a.field_Jb;
+          cg.a(false, 127);
+          return ch.field_a.field_Jb;
         }
         return ch.field_a.field_Jb;
     }
@@ -25,9 +25,7 @@ final class cg {
         field_e = null;
         field_g = null;
         field_c = null;
-        if (param0 >= -24) {
-          return;
-        } else {
+        if (param0 < -24) {
           field_f = null;
           return;
         }
@@ -35,60 +33,41 @@ final class cg {
 
     final static void a(int param0, ii param1) {
         if (param0 != 8799) {
-            return;
+          return;
         }
         try {
-            ph.field_k = param1;
+          ph.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "cg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "cg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(boolean param0, int param1) {
-        L0: {
-          if (null != wc.field_g) {
-            ob.a((byte) -83, wc.field_g);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null != wc.field_g) {
+          ob.a((byte) -83, wc.field_g);
         }
-        if (md.field_e == null) {
-          L1: {
-            ra.a((byte) 3, param0);
-            if (null != km.field_yb) {
-              km.field_yb.a(param0, param1 + 18109);
-              break L1;
-            } else {
-              break L1;
-            }
+        if (md.field_e != null) {
+          md.field_e.a((byte) -22, param0);
+          ra.a((byte) 3, param0);
+          if (null != km.field_yb) {
+            km.field_yb.a(param0, param1 + 18109);
           }
           cf.a((byte) -111, param0);
           if (param1 != 6851) {
             field_b = (String) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          L2: {
-            md.field_e.a((byte) -22, param0);
-            ra.a((byte) 3, param0);
-            if (null != km.field_yb) {
-              km.field_yb.a(param0, param1 + 18109);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          cf.a((byte) -111, param0);
-          if (param1 == 6851) {
-            return;
-          } else {
-            field_b = (String) null;
-            return;
-          }
+          return;
         }
+        ra.a((byte) 3, param0);
+        if (null != km.field_yb) {
+          km.field_yb.a(param0, param1 + 18109);
+        }
+        cf.a((byte) -111, param0);
+        if (param1 == 6851) {
+          return;
+        }
+        field_b = (String) null;
     }
 
     static {

@@ -13,9 +13,9 @@ final class vf extends wl {
 
     public static void b(boolean param0) {
         if (param0) {
-            vf.a(99);
-            field_j = null;
-            return;
+          vf.a(99);
+          field_j = null;
+          return;
         }
         field_j = null;
     }
@@ -27,34 +27,23 @@ final class vf extends wl {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = wizardrun.field_H;
         try {
-          L0: {
-            cj.c();
-            rl.field_b = 11;
-            qk.field_f = new int[260];
-            var1_int = 0;
-            L1: while (true) {
-              if (-257 >= (var1_int ^ -1)) {
-                var5 = param0;
-                var1_int = var5;
-                L2: while (true) {
-                  if (qk.field_f.length <= var5) {
-                    break L0;
-                  } else {
-                    qk.field_f[var5] = 255;
-                    var5++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                qk.field_f[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
-              }
-            }
+          cj.c();
+          rl.field_b = 11;
+          qk.field_f = new int[260];
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            qk.field_f[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
+          var5 = param0;
+          var1_intLifetime1 = var5;
+          while (qk.field_f.length > var5) {
+            qk.field_f[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

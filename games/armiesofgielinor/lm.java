@@ -17,16 +17,14 @@ final class lm {
         field_f = null;
         field_a = null;
         field_h = null;
-        if (param0 != 1638) {
-          field_f = (String) null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 1638) {
           field_d = null;
           field_b = null;
           return;
         }
+        field_f = (String) null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

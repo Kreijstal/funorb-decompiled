@@ -11,23 +11,23 @@ final class oj extends lh {
         gb.a(si.field_R);
         int var4 = param2;
         int var5 = param0;
-        gb.a(var4, var5, 16 + var4, var5 - -16);
+        gb.a(var4, var5, 16 + var4, var5 + 16);
         se.field_a[param3].f(0, param1);
         gb.b(si.field_R);
     }
 
     oj(byte[] param0) {
         try {
-            this.field_l = param0;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_i = null;
         if (param0 < 49) {
-            return;
+          return;
         }
         field_j = null;
     }

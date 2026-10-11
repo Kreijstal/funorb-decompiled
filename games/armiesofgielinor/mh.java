@@ -12,58 +12,35 @@ final class mh {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
+        te var2Lifetime1;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            bp.field_e = param0;
-            var2 = (te) ((Object) bl.field_h.e((byte) 110));
-            L1: while (true) {
-              if (var2 == null) {
-                L2: {
-                  if (ts.field_e != null) {
-                    var2 = (te) ((Object) ts.field_e.e((byte) 95));
-                    L3: while (true) {
-                      if (var2 == null) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (!var2.field_k.c(65280)) {
-                            var2.d(47);
-                            break L4;
-                          } else {
-                            var2.field_q.i(128 + bp.field_e * var2.field_o >> 929072552);
-                            break L4;
-                          }
-                        }
-                        var2 = (te) ((Object) ts.field_e.a((byte) 123));
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    break L2;
-                  }
-                }
-                if (param1 < -26) {
-                  break L0;
-                } else {
-                  field_d = (String) null;
-                  return;
-                }
+          bp.field_e = param0;
+          var2 = (te) (bl.field_h.e((byte) 110));
+          while (var2 != null) {
+            if (!var2.field_k.c(65280)) {
+              var2.d(-110);
+            } else {
+              var2.field_q.i(var2.field_o * bp.field_e + 128 >> 8);
+            }
+            var2 = (te) (bl.field_h.a((byte) 123));
+          }
+          if (ts.field_e != null) {
+            var2Lifetime1 = (te) (ts.field_e.e((byte) 95));
+            while (var2Lifetime1 != null) {
+              if (!var2Lifetime1.field_k.c(65280)) {
+                var2Lifetime1.d(47);
               } else {
-                L5: {
-                  if (!var2.field_k.c(65280)) {
-                    var2.d(-110);
-                    break L5;
-                  } else {
-                    var2.field_q.i(var2.field_o * bp.field_e - -128 >> 948244840);
-                    break L5;
-                  }
-                }
-                var2 = (te) ((Object) bl.field_h.a((byte) 123));
-                continue L1;
+                var2Lifetime1.field_q.i(128 + bp.field_e * var2Lifetime1.field_o >> 8);
               }
+              var2Lifetime1 = (te) (ts.field_e.a((byte) 123));
             }
           }
+          if (param1 < -26) {
+            return;
+          }
+          field_d = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -72,20 +49,17 @@ final class mh {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (pg.field_d != null) {
-          if (null != pg.field_d.field_g) {
-            if (param1 >= -111) {
-              field_b = (wm) null;
-              return pg.field_d.field_g.a(param0, 127, param2);
-            } else {
-              return pg.field_d.field_g.a(param0, 127, param2);
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (pg.field_d == null) {
           return 0;
         }
+        if (null == pg.field_d.field_g) {
+          return 0;
+        }
+        if (param1 < -111) {
+          return pg.field_d.field_g.a(param0, 127, param2);
+        }
+        field_b = (wm) null;
+        return pg.field_d.field_g.a(param0, 127, param2);
     }
 
     public static void a(byte param0) {
@@ -93,7 +67,7 @@ final class mh {
         field_d = null;
         field_b = null;
         if (param0 >= -83) {
-            mh.a((byte) 62);
+          mh.a((byte) 62);
         }
     }
 

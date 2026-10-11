@@ -9,53 +9,37 @@ final class nk extends fc {
     static String field_j;
 
     final static void b(boolean param0) {
-        vg var1;
-        var1 = (vg) ((Object) gd.field_q.c((byte) -123));
-        if (param0) {
-          L0: {
-            nk.d(-35);
-            if (var1 == null) {
-              var1 = new vg();
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
-          cj.field_j.a((byte) -97, var1);
-          return;
-        } else {
-          L1: {
-            if (var1 == null) {
-              var1 = new vg();
-              break L1;
-            } else {
-              break L1;
-            }
+        vg var1 = (vg) (gd.field_q.c((byte) -123));
+        if (!param0) {
+          if (var1 == null) {
+            var1 = new vg();
           }
           var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
           cj.field_j.a((byte) -97, var1);
           return;
         }
+        nk.d(-35);
+        if (var1 == null) {
+          var1 = new vg();
+        }
+        var1.a(ll.field_g, ll.field_d, 11033, ll.field_i, ll.field_a, ll.field_e, ll.field_k, ll.field_b);
+        cj.field_j.a((byte) -97, var1);
     }
 
     final static void a(int param0, int param1) {
-        la var2;
-        var2 = ra.field_C;
+        la var2 = ra.field_C;
         var2.c(param0, 7);
         var2.a(1, (byte) -70);
         var2.a(2, (byte) -65);
-        if (param1 >= -85) {
-          field_j = (String) null;
-          return;
-        } else {
+        if (param1 < -85) {
           return;
         }
+        field_j = (String) null;
     }
 
     public static void d(int param0) {
         if (param0 != 23985) {
-            return;
+          return;
         }
         field_j = null;
     }

@@ -16,7 +16,7 @@ abstract class kb {
         field_g = null;
         field_c = null;
         if (!param0) {
-            field_e = -18;
+          field_e = -18;
         }
     }
 
@@ -24,7 +24,7 @@ abstract class kb {
 
     final java.net.Socket b(boolean param0) throws IOException {
         if (param0) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_a, this.field_b);
     }

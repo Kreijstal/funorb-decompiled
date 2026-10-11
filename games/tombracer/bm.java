@@ -12,9 +12,9 @@ final class bm extends vg {
 
     public static void a(int param0) {
         if (param0 != 717) {
-            field_f = (nh[]) null;
-            field_f = null;
-            return;
+          field_f = (nh[]) null;
+          field_f = null;
+          return;
         }
         field_f = null;
     }

@@ -18,15 +18,7 @@ final class je {
         field_i = null;
         field_d = (int[][]) null;
         field_b = null;
-        if (param0 != 0) {
-          field_h = (String) null;
-          field_c = null;
-          field_h = null;
-          field_a = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_c = null;
           field_h = null;
           field_a = null;
@@ -34,6 +26,12 @@ final class je {
           field_f = null;
           return;
         }
+        field_h = (String) null;
+        field_c = null;
+        field_h = null;
+        field_a = null;
+        field_g = null;
+        field_f = null;
     }
 
     static {

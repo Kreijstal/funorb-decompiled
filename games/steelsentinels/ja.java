@@ -13,30 +13,25 @@ final class ja {
     static gk[] field_d;
 
     final static int a(int param0, boolean param1) {
-        if (!param1) {
-          param0 -= 17;
-          if ((param0 ^ -1) <= -1) {
-            if (param0 >= t.field_d.length) {
-              return -1;
-            } else {
-              return t.field_d[param0];
-            }
-          } else {
-            return -1;
-          }
-        } else {
+        if (param1) {
           field_e = (wk[]) null;
           param0 -= 17;
-          if ((param0 ^ -1) <= -1) {
-            if (param0 < t.field_d.length) {
-              return t.field_d[param0];
-            } else {
-              return -1;
-            }
-          } else {
+          if (param0 < 0) {
             return -1;
           }
+          if (!(param0 >= t.field_d.length)) {
+            return t.field_d[param0];
+          }
+          return -1;
         }
+        param0 -= 17;
+        if (param0 < 0) {
+          return -1;
+        }
+        if (param0 < t.field_d.length) {
+          return t.field_d[param0];
+        }
+        return -1;
     }
 
     final static wk b(int param0, boolean param1) {
@@ -44,108 +39,76 @@ final class ja {
         int var3;
         var3 = SteelSentinels.field_G;
         var2 = param0;
-        if (-105 != (var2 ^ -1)) {
-          if ((var2 ^ -1) != -106) {
-            if ((var2 ^ -1) != -107) {
-              if ((var2 ^ -1) != -108) {
-                if (108 != var2) {
-                  if ((var2 ^ -1) != -110) {
-                    if (-111 != (var2 ^ -1)) {
-                      if ((var2 ^ -1) != -112) {
-                        if (var2 != 112) {
-                          if ((var2 ^ -1) != -114) {
-                            if (114 != var2) {
-                              if (-116 != (var2 ^ -1)) {
-                                if ((var2 ^ -1) != -117) {
-                                  if (var2 != 117) {
-                                    if ((var2 ^ -1) != -119) {
-                                      if ((var2 ^ -1) != -120) {
-                                        if ((var2 ^ -1) != -121) {
-                                          if (-122 != (var2 ^ -1)) {
-                                            if (var2 != 122) {
-                                              if ((var2 ^ -1) != -124) {
-                                                if (param1) {
-                                                  if (-201 < (param0 ^ -1)) {
-                                                    if (param0 < rh.field_v.length) {
-                                                      return rh.field_v[param0];
-                                                    } else {
-                                                      return null;
-                                                    }
-                                                  } else {
-                                                    return nc.a(param0 - 199, (byte) -114).a();
-                                                  }
-                                                } else {
-                                                  ja.b(-72, true);
-                                                  if (-201 < (param0 ^ -1)) {
-                                                    if (param0 < rh.field_v.length) {
-                                                      return rh.field_v[param0];
-                                                    } else {
-                                                      return null;
-                                                    }
-                                                  } else {
-                                                    return nc.a(param0 - 199, (byte) -114).a();
-                                                  }
-                                                }
-                                              } else {
-                                                return hb.field_j[5];
-                                              }
-                                            } else {
-                                              return hb.field_j[19];
-                                            }
-                                          } else {
-                                            return hb.field_j[18];
-                                          }
-                                        } else {
-                                          return hb.field_j[17];
-                                        }
-                                      } else {
-                                        return hb.field_j[16];
-                                      }
-                                    } else {
-                                      return hb.field_j[15];
-                                    }
-                                  } else {
-                                    return hb.field_j[14];
-                                  }
-                                } else {
-                                  return hb.field_j[13];
-                                }
-                              } else {
-                                return hb.field_j[12];
-                              }
-                            } else {
-                              return hb.field_j[11];
-                            }
-                          } else {
-                            return hb.field_j[10];
-                          }
-                        } else {
-                          return hb.field_j[9];
-                        }
-                      } else {
-                        return hb.field_j[8];
-                      }
-                    } else {
-                      return hb.field_j[7];
-                    }
-                  } else {
-                    return hb.field_j[6];
-                  }
-                } else {
-                  return hb.field_j[4];
-                }
-              } else {
-                return hb.field_j[3];
-              }
-            } else {
-              return hb.field_j[2];
-            }
-          } else {
-            return hb.field_j[1];
-          }
-        } else {
+        if (var2 == 104) {
           return hb.field_j[0];
         }
+        if (var2 == 105) {
+          return hb.field_j[1];
+        }
+        if (var2 == 106) {
+          return hb.field_j[2];
+        }
+        if (var2 == 107) {
+          return hb.field_j[3];
+        }
+        if (108 == var2) {
+          return hb.field_j[4];
+        }
+        if (var2 == 109) {
+          return hb.field_j[6];
+        }
+        if (var2 == 110) {
+          return hb.field_j[7];
+        }
+        if (var2 == 111) {
+          return hb.field_j[8];
+        }
+        if (var2 == 112) {
+          return hb.field_j[9];
+        }
+        if (var2 == 113) {
+          return hb.field_j[10];
+        }
+        if (114 == var2) {
+          return hb.field_j[11];
+        }
+        if (var2 == 115) {
+          return hb.field_j[12];
+        }
+        if (var2 == 116) {
+          return hb.field_j[13];
+        }
+        if (var2 == 117) {
+          return hb.field_j[14];
+        }
+        if (var2 == 118) {
+          return hb.field_j[15];
+        }
+        if (var2 == 119) {
+          return hb.field_j[16];
+        }
+        if (var2 == 120) {
+          return hb.field_j[17];
+        }
+        if (var2 == 121) {
+          return hb.field_j[18];
+        }
+        if (var2 == 122) {
+          return hb.field_j[19];
+        }
+        if (var2 == 123) {
+          return hb.field_j[5];
+        }
+        if (!param1) {
+          ja.b(-72, true);
+        }
+        if (param0 >= 200) {
+          return nc.a(param0 - 199, (byte) -114).a();
+        }
+        if (param0 < rh.field_v.length) {
+          return rh.field_v[param0];
+        }
+        return null;
     }
 
     public final String toString() {
@@ -156,7 +119,7 @@ final class ja {
         field_c = null;
         field_g = null;
         if (!param0) {
-            return;
+          return;
         }
         field_h = null;
         field_d = null;

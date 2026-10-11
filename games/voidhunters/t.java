@@ -13,46 +13,46 @@ final class t {
         ha var4 = null;
         ha var3 = null;
         try {
-            var4 = param1.field_g;
-            var3 = var4;
-            var4.KA(this.field_b[0], this.field_b[1], this.field_b[2], this.field_b[3]);
-            var4.DA(this.field_d[0], this.field_d[param0], this.field_d[2], this.field_d[3]);
-            var3.f(this.field_f, this.field_a);
-            param1.field_e = this.field_c;
+          var4 = param1.field_g;
+          var3 = var4;
+          var4.KA(this.field_b[0], this.field_b[1], this.field_b[2], this.field_b[3]);
+          var4.DA(this.field_d[0], this.field_d[param0], this.field_d[2], this.field_d[3]);
+          var3.f(this.field_f, this.field_a);
+          param1.field_e = this.field_c;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, bra param1) {
         ha var3 = null;
         if (param0 != 4) {
-            return;
+          return;
         }
         try {
-            var3 = param1.field_g;
-            var3.K(this.field_b);
-            this.field_d = var3.Y();
-            this.field_f = var3.i();
-            this.field_a = var3.XA();
-            this.field_c = param1.field_e;
+          var3 = param1.field_g;
+          var3.K(this.field_b);
+          this.field_d = var3.Y();
+          this.field_f = var3.i();
+          this.field_a = var3.XA();
+          this.field_c = param1.field_e;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static sg a(int param0, byte param1) {
         if (param1 < 34) {
-            return (sg) null;
+          return (sg) null;
         }
         return rpa.a(param0, 0, true);
     }
 
     public static void a(int param0) {
         if (param0 != 1) {
-            t.a(57);
-            field_e = null;
-            return;
+          t.a(57);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

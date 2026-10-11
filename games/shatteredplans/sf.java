@@ -13,38 +13,29 @@ final class sf {
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 82) {
-          sf.a((byte) -109, 97);
-          field_a = null;
-          field_g = null;
-          field_h = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 82) {
           field_a = null;
           field_g = null;
           field_h = null;
           field_d = null;
           return;
         }
+        sf.a((byte) -109, 97);
+        field_a = null;
+        field_g = null;
+        field_h = null;
+        field_d = null;
     }
 
     final static void a(byte param0, int param1) {
-        if (param1 < ah.field_T) {
-          return;
-        } else {
-          L0: {
-            ah.field_T = param1;
-            no.field_f = new boolean[param1];
-            og.field_c = new int[param1];
-            kq.field_c = new int[param1];
-            q.field_Ab = new int[param1];
-            if (param0 >= 123) {
-              break L0;
-            } else {
-              field_e = 41L;
-              break L0;
-            }
+        if (param1 >= ah.field_T) {
+          ah.field_T = param1;
+          no.field_f = new boolean[param1];
+          og.field_c = new int[param1];
+          kq.field_c = new int[param1];
+          q.field_Ab = new int[param1];
+          if (param0 < 123) {
+            field_e = 41L;
           }
           return;
         }
@@ -52,10 +43,10 @@ final class sf {
 
     sf(gm param0, int param1) {
         try {
-            this.field_c = param1;
-            this.field_b = null;
+          this.field_c = param1;
+          this.field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

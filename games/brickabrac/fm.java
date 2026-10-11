@@ -11,10 +11,10 @@ final class fm {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != 68) {
-            fm.a((byte) -53);
-            field_a = null;
-            field_b = null;
-            return;
+          fm.a((byte) -53);
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

@@ -14,98 +14,70 @@ final class mi {
     static he[] field_i;
 
     final int a(int param0, int param1) {
-        int var3;
-        int var4;
-        var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (null != this.field_a) {
-          if (-1 != (this.field_a.length ^ -1)) {
-            var3 = 1;
-            if (param0 != -21878) {
-              this.a(84, -16);
-              L0: while (true) {
-                if (this.field_a.length <= var3) {
-                  return -1 + this.field_a.length;
-                } else {
-                  if (this.field_a[var3] + this.field_a[-1 + var3] >> -1235001183 > param1) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L0;
-                  }
-                }
-              }
-            } else {
-              L1: while (true) {
-                if (this.field_a.length <= var3) {
-                  return -1 + this.field_a.length;
-                } else {
-                  if (this.field_a[var3] + this.field_a[-1 + var3] >> -1235001183 > param1) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (null == this.field_a) {
           return 0;
         }
+        if (this.field_a.length == 0) {
+          return 0;
+        }
+        int var3 = 1;
+        if (param0 == -21878) {
+          while (this.field_a.length > var3) {
+            if (this.field_a[var3] + this.field_a[-1 + var3] >> 1 > param1) {
+              return var3 - 1;
+            }
+            var3++;
+          }
+          return -1 + this.field_a.length;
+        }
+        this.a(84, -16);
+        while (this.field_a.length > var3) {
+          if (this.field_a[var3] + this.field_a[-1 + var3] >> 1 > param1) {
+            return var3 - 1;
+          }
+          var3++;
+        }
+        return -1 + this.field_a.length;
     }
 
     final static nh a(int param0, byte param1, int param2) {
-        nh var3;
-        int var4;
-        int var5;
-        nh var6;
-        var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param1 < -62) {
-          var6 = new nh(param0, param0);
-          var3 = var6;
-          var4 = 0;
-          L0: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var6.field_B[var4] = param2;
-              var4++;
-              continue L0;
-            }
-          }
-        } else {
+        nh var6 = null;
+        nh var3 = null;
+        int var4 = 0;
+        int var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        nh var6Lifetime1;
+        nh var3Lifetime1;
+        int var4Lifetime1;
+        if (param1 >= -62) {
           mi.b((byte) 48);
+        } else {
           var6 = new nh(param0, param0);
           var3 = var6;
-          var4 = 0;
-          L1: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var6.field_B[var4] = param2;
-              var4++;
-              continue L1;
-            }
+          for (var4 = 0; var3.field_B.length > var4; var4++) {
+            var6.field_B[var4] = param2;
           }
+          return var3;
         }
+        var6Lifetime1 = new nh(param0, param0);
+        var3Lifetime1 = var6Lifetime1;
+        for (var4Lifetime1 = 0; var3Lifetime1.field_B.length > var4Lifetime1; var4Lifetime1++) {
+          var6Lifetime1.field_B[var4Lifetime1] = param2;
+        }
+        return var3Lifetime1;
     }
 
     final int a(byte param0) {
-        if (param0 > 92) {
-          if (null != this.field_a) {
-            if (this.field_a.length == 0) {
-              return 0;
-            } else {
-              return this.field_a[this.field_a.length + -1];
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 <= 92) {
           return 8;
         }
+        if (null == this.field_a) {
+          return 0;
+        }
+        if (this.field_a.length != 0) {
+          return this.field_a[this.field_a.length - 1];
+        }
+        return 0;
     }
 
     public static void b(byte param0) {
@@ -115,9 +87,7 @@ final class mi {
         field_i = null;
         field_c = null;
         field_g = null;
-        if (param0 > 61) {
-          return;
-        } else {
+        if (param0 <= 61) {
           field_f = (ge) null;
           return;
         }

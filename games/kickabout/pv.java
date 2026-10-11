@@ -13,63 +13,43 @@ final class pv extends i {
         field_F = null;
         field_G = null;
         field_J = null;
-        if (param0 >= -92) {
-          field_I = (nm[][]) null;
-          field_I = (nm[][]) null;
-          return;
-        } else {
+        if (param0 < -92) {
           field_I = (nm[][]) null;
           return;
         }
+        field_I = (nm[][]) null;
+        field_I = (nm[][]) null;
     }
 
     final void a(int param0, int param1) {
+        int var5 = 0;
         boolean[] var3;
         int var4;
-        int var5;
         int var6;
         boolean[] var7;
         var6 = Kickabout.field_G;
         super.a(84, param1);
-        if (!la.a(100)) {
-          var7 = tu.field_E.field_J;
-          var3 = var7;
-          if (param0 >= 60) {
-            if (var7[this.field_K]) {
-              return;
-            } else {
-              L0: {
-                var7[this.field_K] = true;
-                if (la.a(100)) {
-                  break L0;
-                } else {
-                  var4 = 0;
-                  var5 = 0;
-                  L1: while (true) {
-                    if (var7.length <= var5) {
-                      or.field_d.b(69, (byte) 119);
-                      or.field_d.b(-57, var4);
-                      break L0;
-                    } else {
-                      if (var7[var5]) {
-                        var4 = var4 | 1 << var5;
-                        var5++;
-                        continue L1;
-                      } else {
-                        var5++;
-                        continue L1;
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (la.a(100)) {
           return;
+        }
+        var7 = tu.field_E.field_J;
+        var3 = var7;
+        if (param0 < 60) {
+          return;
+        }
+        if (var7[this.field_K]) {
+          return;
+        }
+        var7[this.field_K] = true;
+        if (!la.a(100)) {
+          var4 = 0;
+          for (var5 = 0; var7.length > var5; var5++) {
+            if (var7[var5]) {
+              var4 = var4 | 1 << var5;
+            }
+          }
+          or.field_d.b(69, (byte) 119);
+          or.field_d.b(-57, var4);
         }
     }
 
@@ -80,8 +60,8 @@ final class pv extends i {
 
     final int b(int param0) {
         if (param0 != -1379118556) {
-            field_F = (int[]) null;
-            return 400;
+          field_F = (int[]) null;
+          return 400;
         }
         return 400;
     }

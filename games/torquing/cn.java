@@ -9,7 +9,7 @@ final class cn {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -1581) {
-            field_b = 61;
+          field_b = 61;
         }
     }
 

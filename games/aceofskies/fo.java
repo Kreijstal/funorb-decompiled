@@ -13,7 +13,7 @@ final class fo {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 25613) {
-            fo.a(-119);
+          fo.a(-119);
         }
     }
 
@@ -31,13 +31,13 @@ final class fo {
         this.field_g = param4;
         this.field_e = param1;
         if (param0 != 46) {
-            return;
+          return;
         }
         try {
-            this.field_c = param3;
-            this.field_a = param2;
+          this.field_c = param3;
+          this.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "fo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "fo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 

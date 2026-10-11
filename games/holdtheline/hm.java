@@ -10,611 +10,217 @@ final class hm {
         int var2;
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = HoldTheLine.field_D;
         ol.field_f = ol.field_f + 1;
-        var2 = 116 % ((param0 - -22) / 36);
+        var2 = 116 % ((param0 + 22) / 36);
         if (param1 != a.field_I) {
           if (!va.field_k) {
-            L0: {
-              if (ol.field_f >= HoldTheLine.field_A) {
-                if (HoldTheLine.field_A - -lc.field_h > ol.field_f) {
-                  stackIn_100_0 = 1;
-                  break L0;
-                } else {
-                  stackIn_100_0 = 0;
-                  break L0;
-                }
-              } else {
-                stackIn_100_0 = 0;
-                break L0;
-              }
+            if (ol.field_f >= HoldTheLine.field_A) {
+              stackIn_100_0 = (HoldTheLine.field_A + lc.field_h > ol.field_f) ? 1 : 0;
+            } else {
+              stackIn_100_0 = 0;
             }
             var3 = stackIn_100_0;
             if (param1 == -1) {
-              L1: {
-                ol.field_f = 0;
-                if (-1 == param1) {
-                  if (var3 == 0) {
-                    break L1;
-                  } else {
-                    va.field_k = true;
-                    break L1;
-                  }
-                } else {
-                  va.field_k = false;
-                  break L1;
-                }
-              }
-              L2: {
-                if (va.field_k) {
-                  break L2;
-                } else {
-                  if (HoldTheLine.field_A <= ol.field_f) {
-                    break L2;
-                  } else {
-                    if (na.field_k) {
-                      ol.field_f = 0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-              }
-              L3: {
-                a.field_I = param1;
-                if (!va.field_k) {
-                  break L3;
-                } else {
-                  if (ol.field_f != fd.field_d) {
-                    break L3;
-                  } else {
-                    ol.field_f = 0;
-                    va.field_k = false;
-                    break L3;
-                  }
-                }
-              }
-              return;
-            } else {
-              L4: {
-                if (va.field_k) {
-                  ol.field_f = HoldTheLine.field_A;
-                  break L4;
-                } else {
-                  if (var3 == 0) {
-                    L5: {
-                      ol.field_f = 0;
-                      if (-1 == param1) {
-                        if (var3 == 0) {
-                          break L5;
-                        } else {
-                          va.field_k = true;
-                          break L5;
-                        }
-                      } else {
-                        va.field_k = false;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      if (va.field_k) {
-                        break L6;
-                      } else {
-                        if (HoldTheLine.field_A <= ol.field_f) {
-                          break L6;
-                        } else {
-                          if (na.field_k) {
-                            ol.field_f = 0;
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                      }
-                    }
-                    a.field_I = param1;
-                    if (va.field_k) {
-                      if (ol.field_f != fd.field_d) {
-                        return;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    ol.field_f = HoldTheLine.field_A;
-                    break L4;
-                  }
-                }
-              }
+              ol.field_f = 0;
               if (-1 == param1) {
-                if (var3 == 0) {
-                  L7: {
-                    if (va.field_k) {
-                      break L7;
-                    } else {
-                      if (HoldTheLine.field_A <= ol.field_f) {
-                        break L7;
-                      } else {
-                        if (na.field_k) {
-                          ol.field_f = 0;
-                          break L7;
-                        } else {
-                          L8: {
-                            a.field_I = param1;
-                            if (!va.field_k) {
-                              break L8;
-                            } else {
-                              if (ol.field_f != fd.field_d) {
-                                break L8;
-                              } else {
-                                ol.field_f = 0;
-                                va.field_k = false;
-                                return;
-                              }
-                            }
-                          }
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  L9: {
-                    a.field_I = param1;
-                    if (!va.field_k) {
-                      break L9;
-                    } else {
-                      if (ol.field_f != fd.field_d) {
-                        break L9;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        return;
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  L10: {
-                    va.field_k = true;
-                    if (va.field_k) {
-                      break L10;
-                    } else {
-                      if (HoldTheLine.field_A <= ol.field_f) {
-                        break L10;
-                      } else {
-                        if (na.field_k) {
-                          ol.field_f = 0;
-                          break L10;
-                        } else {
-                          a.field_I = param1;
-                          if (va.field_k) {
-                            if (ol.field_f == fd.field_d) {
-                              ol.field_f = 0;
-                              va.field_k = false;
-                              return;
-                            } else {
-                              return;
-                            }
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  a.field_I = param1;
-                  if (va.field_k) {
-                    if (ol.field_f == fd.field_d) {
-                      ol.field_f = 0;
-                      va.field_k = false;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+                if (var3 != 0) {
+                  va.field_k = true;
                 }
               } else {
-                L11: {
-                  va.field_k = false;
-                  if (va.field_k) {
-                    break L11;
-                  } else {
-                    if (HoldTheLine.field_A <= ol.field_f) {
-                      break L11;
-                    } else {
-                      if (na.field_k) {
-                        ol.field_f = 0;
-                        break L11;
-                      } else {
-                        a.field_I = param1;
-                        if (va.field_k) {
-                          if (ol.field_f == fd.field_d) {
-                            ol.field_f = 0;
-                            va.field_k = false;
-                            return;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  }
+                va.field_k = false;
+              }
+              if (!va.field_k &&
+                HoldTheLine.field_A > ol.field_f &&
+                na.field_k) {
+                ol.field_f = 0;
+              }
+              a.field_I = param1;
+              if (va.field_k &&
+                ol.field_f == fd.field_d) {
+                ol.field_f = 0;
+                va.field_k = false;
+              }
+              return;
+            }
+            if (!va.field_k &&
+              var3 == 0) {
+              ol.field_f = 0;
+              if (-1 == param1) {
+                if (var3 != 0) {
+                  va.field_k = true;
                 }
-                a.field_I = param1;
-                if (va.field_k) {
-                  if (ol.field_f != fd.field_d) {
-                    return;
-                  } else {
+              } else {
+                va.field_k = false;
+              }
+            } else {
+              ol.field_f = HoldTheLine.field_A;
+              if (-1 != param1) {
+                va.field_k = false;
+              } else {
+                if (var3 == 0) {
+                  if (!va.field_k &&
+                    HoldTheLine.field_A > ol.field_f &&
+                    na.field_k) {
+                    ol.field_f = 0;
+                  }
+                  a.field_I = param1;
+                  if (va.field_k &&
+                    ol.field_f == fd.field_d) {
                     ol.field_f = 0;
                     va.field_k = false;
                     return;
                   }
-                } else {
                   return;
                 }
+                va.field_k = true;
               }
             }
-          } else {
-            var3 = 0;
-            if (param1 != -1) {
-              L12: {
-                if (!va.field_k) {
-                  if (var3 == 0) {
-                    L13: {
-                      ol.field_f = 0;
-                      if (-1 == param1) {
-                        if (var3 == 0) {
-                          break L13;
-                        } else {
-                          va.field_k = true;
-                          break L13;
-                        }
-                      } else {
-                        va.field_k = false;
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      if (!va.field_k) {
-                        if (HoldTheLine.field_A > ol.field_f) {
-                          L15: {
-                            if (na.field_k) {
-                              ol.field_f = 0;
-                              break L15;
-                            } else {
-                              break L15;
-                            }
-                          }
-                          a.field_I = param1;
-                          if (!va.field_k) {
-                            break L14;
-                          } else {
-                            if (ol.field_f != fd.field_d) {
-                              break L14;
-                            } else {
-                              ol.field_f = 0;
-                              va.field_k = false;
-                              break L14;
-                            }
-                          }
-                        } else {
-                          a.field_I = param1;
-                          if (!va.field_k) {
-                            break L14;
-                          } else {
-                            if (ol.field_f != fd.field_d) {
-                              break L14;
-                            } else {
-                              ol.field_f = 0;
-                              va.field_k = false;
-                              break L14;
-                            }
-                          }
-                        }
-                      } else {
-                        a.field_I = param1;
-                        if (!va.field_k) {
-                          break L14;
-                        } else {
-                          if (ol.field_f != fd.field_d) {
-                            break L14;
-                          } else {
-                            ol.field_f = 0;
-                            va.field_k = false;
-                            break L14;
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  } else {
-                    ol.field_f = HoldTheLine.field_A;
-                    break L12;
-                  }
-                } else {
-                  ol.field_f = HoldTheLine.field_A;
-                  break L12;
-                }
-              }
-              if (-1 == param1) {
-                if (var3 == 0) {
-                  L16: {
-                    if (va.field_k) {
-                      break L16;
-                    } else {
-                      if (HoldTheLine.field_A <= ol.field_f) {
-                        break L16;
-                      } else {
-                        if (na.field_k) {
-                          ol.field_f = 0;
-                          break L16;
-                        } else {
-                          L17: {
-                            a.field_I = param1;
-                            if (!va.field_k) {
-                              break L17;
-                            } else {
-                              if (ol.field_f != fd.field_d) {
-                                break L17;
-                              } else {
-                                ol.field_f = 0;
-                                va.field_k = false;
-                                break L17;
-                              }
-                            }
-                          }
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  a.field_I = param1;
-                  if (va.field_k) {
-                    if (ol.field_f == fd.field_d) {
-                      ol.field_f = 0;
-                      va.field_k = false;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  L18: {
-                    va.field_k = true;
-                    if (va.field_k) {
-                      break L18;
-                    } else {
-                      if (HoldTheLine.field_A <= ol.field_f) {
-                        break L18;
-                      } else {
-                        if (na.field_k) {
-                          ol.field_f = 0;
-                          break L18;
-                        } else {
-                          break L18;
-                        }
-                      }
-                    }
-                  }
-                  L19: {
-                    a.field_I = param1;
-                    if (!va.field_k) {
-                      break L19;
-                    } else {
-                      if (ol.field_f != fd.field_d) {
-                        break L19;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        break L19;
-                      }
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L20: {
-                  va.field_k = false;
-                  if (va.field_k) {
-                    break L20;
-                  } else {
-                    if (HoldTheLine.field_A <= ol.field_f) {
-                      break L20;
-                    } else {
-                      if (na.field_k) {
-                        ol.field_f = 0;
-                        break L20;
-                      } else {
-                        break L20;
-                      }
-                    }
-                  }
-                }
-                L21: {
-                  a.field_I = param1;
-                  if (!va.field_k) {
-                    break L21;
-                  } else {
-                    if (ol.field_f != fd.field_d) {
-                      break L21;
-                    } else {
-                      ol.field_f = 0;
-                      va.field_k = false;
-                      break L21;
-                    }
-                  }
-                }
-                return;
-              }
-            } else {
-              L22: {
-                ol.field_f = 0;
-                if (-1 == param1) {
-                  if (var3 == 0) {
-                    break L22;
-                  } else {
-                    va.field_k = true;
-                    break L22;
-                  }
-                } else {
-                  va.field_k = false;
-                  break L22;
-                }
-              }
-              L23: {
-                if (!va.field_k) {
-                  if (HoldTheLine.field_A > ol.field_f) {
-                    L24: {
-                      if (na.field_k) {
-                        ol.field_f = 0;
-                        break L24;
-                      } else {
-                        break L24;
-                      }
-                    }
-                    a.field_I = param1;
-                    if (!va.field_k) {
-                      break L23;
-                    } else {
-                      if (ol.field_f != fd.field_d) {
-                        break L23;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        break L23;
-                      }
-                    }
-                  } else {
-                    a.field_I = param1;
-                    if (!va.field_k) {
-                      break L23;
-                    } else {
-                      if (ol.field_f != fd.field_d) {
-                        break L23;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        break L23;
-                      }
-                    }
-                  }
-                } else {
-                  a.field_I = param1;
-                  if (!va.field_k) {
-                    break L23;
-                  } else {
-                    if (ol.field_f != fd.field_d) {
-                      break L23;
-                    } else {
-                      ol.field_f = 0;
-                      va.field_k = false;
-                      break L23;
-                    }
-                  }
-                }
-              }
+            if (!va.field_k &&
+              HoldTheLine.field_A > ol.field_f &&
+              na.field_k) {
+              ol.field_f = 0;
+            }
+            a.field_I = param1;
+            if (!va.field_k) {
               return;
             }
-          }
-        } else {
-          L25: {
-            if (va.field_k) {
-              break L25;
-            } else {
-              if (HoldTheLine.field_A <= ol.field_f) {
-                break L25;
-              } else {
-                if (na.field_k) {
-                  ol.field_f = 0;
-                  break L25;
-                } else {
-                  L26: {
-                    a.field_I = param1;
-                    if (!va.field_k) {
-                      break L26;
-                    } else {
-                      if (ol.field_f != fd.field_d) {
-                        break L26;
-                      } else {
-                        ol.field_f = 0;
-                        va.field_k = false;
-                        break L26;
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
+            if (ol.field_f != fd.field_d) {
+              return;
             }
+            ol.field_f = 0;
+            va.field_k = false;
+            return;
           }
-          a.field_I = param1;
-          if (va.field_k) {
-            if (ol.field_f == fd.field_d) {
+          var3Lifetime1 = 0;
+          if (param1 == -1) {
+            ol.field_f = 0;
+            if (-1 == param1) {
+              if (var3Lifetime1 != 0) {
+                va.field_k = true;
+              }
+            } else {
+              va.field_k = false;
+            }
+            if (!va.field_k &&
+              HoldTheLine.field_A > ol.field_f &&
+              na.field_k) {
+              ol.field_f = 0;
+            }
+            a.field_I = param1;
+            if (va.field_k &&
+              ol.field_f == fd.field_d) {
               ol.field_f = 0;
               va.field_k = false;
-              return;
-            } else {
-              return;
             }
-          } else {
+            return;
+          }
+          if (!va.field_k &&
+            var3Lifetime1 == 0) {
+            ol.field_f = 0;
+            if (-1 == param1) {
+            } else {
+              va.field_k = false;
+            }
+            if (!va.field_k &&
+              HoldTheLine.field_A > ol.field_f &&
+              na.field_k) {
+              ol.field_f = 0;
+            }
+            a.field_I = param1;
+            if (va.field_k &&
+              ol.field_f == fd.field_d) {
+              ol.field_f = 0;
+              va.field_k = false;
+            }
+            return;
+          }
+          ol.field_f = HoldTheLine.field_A;
+          if (-1 != param1) {
+            va.field_k = false;
+            if (!va.field_k &&
+              HoldTheLine.field_A > ol.field_f &&
+              na.field_k) {
+              ol.field_f = 0;
+            }
+            a.field_I = param1;
+            if (va.field_k &&
+              ol.field_f == fd.field_d) {
+              ol.field_f = 0;
+              va.field_k = false;
+            }
+            return;
+          }
+          if (var3Lifetime1 != 0) {
+            va.field_k = true;
+            if (!va.field_k &&
+              HoldTheLine.field_A > ol.field_f &&
+              na.field_k) {
+              ol.field_f = 0;
+            }
+            a.field_I = param1;
+            if (va.field_k &&
+              ol.field_f == fd.field_d) {
+              ol.field_f = 0;
+              va.field_k = false;
+            }
             return;
           }
         }
+        if (!va.field_k &&
+          HoldTheLine.field_A > ol.field_f) {
+          if (!na.field_k) {
+            a.field_I = param1;
+            if (va.field_k &&
+              ol.field_f == fd.field_d) {
+              ol.field_f = 0;
+              va.field_k = false;
+            }
+            return;
+          }
+          ol.field_f = 0;
+        }
+        a.field_I = param1;
+        if (!va.field_k) {
+          return;
+        }
+        if (ol.field_f != fd.field_d) {
+          return;
+        }
+        ol.field_f = 0;
+        va.field_k = false;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            field_b = (uf) null;
-            field_b = null;
-            return;
+          field_b = (uf) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static void a(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var4 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 60) {
-                break L1;
-              } else {
-                field_b = (uf) null;
-                break L1;
-              }
-            }
-            var1_int = qg.field_d[0];
-            var2 = 1;
-            L2: while (true) {
-              if (qg.field_d.length <= var2) {
-                break L0;
-              } else {
-                var3 = qg.field_d[var2];
-                bc.a(al.field_b, var2 << -658367100, al.field_b, var1_int, var3);
-                var1_int = var1_int + var3;
-                var2++;
-                continue L2;
-              }
-            }
+          if (param0 < 60) {
+            field_b = (uf) null;
           }
+          var1_int = qg.field_d[0];
+          for (var2 = 1; qg.field_d.length > var2; var2++) {
+            var3 = qg.field_d[var2];
+            bc.a(al.field_b, var2 << 4, al.field_b, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -627,50 +233,29 @@ final class hm {
         kg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 5499) {
-                break L1;
-              } else {
-                hm.a((byte) -81, 114);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new kg(param1);
-            break L0;
+          if (param0 != 5499) {
+            hm.a((byte) -81, 114);
           }
+          stackIn_3_0 = new kg(param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void b(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -687,97 +272,59 @@ final class hm {
         byte[] var11 = null;
         var7 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              var3 = -84 % ((-58 - param0) / 61);
-              var9 = rd.field_e;
-              var2 = var9.f((byte) -32);
-              if (var2 != 0) {
-                if (-2 == (var2 ^ -1)) {
-                  var4 = var9.a(-67);
-                  var5 = (fl) ((Object) pd.field_e.b((byte) 85));
-                  L2: while (true) {
-                    L3: {
-                      if (var5 == null) {
-                        break L3;
-                      } else {
-                        if (var4 == var5.field_k) {
-                          break L3;
-                        } else {
-                          var5 = (fl) ((Object) pd.field_e.c((byte) -26));
-                          continue L2;
-                        }
-                      }
-                    }
-                    if (var5 != null) {
-                      var5.d(0);
-                      break L1;
-                    } else {
-                      r.a(-28036);
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    }
-                  }
-                } else {
-                  bl.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
-                  r.a(-28036);
-                  break L1;
+          var3 = -84 % ((-58 - param0) / 61);
+          var9 = rd.field_e;
+          var2 = var9.f((byte) -32);
+          if (var2 != 0) {
+            if (var2 == 1) {
+              var4 = var9.a(-67);
+              var5 = (fl) (pd.field_e.b((byte) 85));
+              while (var5 != null) {
+                if (var4 != var5.field_k) {
+                  var5 = (fl) (pd.field_e.c((byte) -26));
+                  continue;
                 }
-              } else {
-                var4_ref_ie = (ie) ((Object) oc.field_d.b((byte) 94));
-                if (var4_ref_ie == null) {
-                  r.a(-28036);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  L4: {
-                    var5_int = var9.f((byte) -85);
-                    if (0 == var5_int) {
-                      var6 = null;
-                      break L4;
-                    } else {
-                      var11 = new byte[var5_int];
-                      var10 = var11;
-                      var8 = var10;
-                      var6 = var8;
-                      var9.a(var5_int, 0, (byte) 118, var11);
-                      break L4;
-                    }
-                  }
-                  var9.field_l = var9.field_l + 4;
-                  if (var9.e((byte) 78)) {
-                    var4_ref_ie.field_m = true;
-                    var4_ref_ie.field_l = (byte[]) (var6);
-                    var4_ref_ie.d(0);
-                    break L1;
-                  } else {
-                    r.a(-28036);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
+                break;
               }
+              if (var5 != null) {
+                var5.d(0);
+                return;
+              }
+              r.a(-28036);
+              return;
             }
-            decompiledRegionSelector0 = 2;
-            break L0;
+            bl.a((Throwable) null, (byte) 65, "A1: " + em.b(false));
+            r.a(-28036);
+          } else {
+            var4_ref_ie = (ie) (oc.field_d.b((byte) 94));
+            if (var4_ref_ie == null) {
+              r.a(-28036);
+              return;
+            }
+            var5_int = var9.f((byte) -85);
+            if (0 == var5_int) {
+              var6 = null;
+            } else {
+              var11 = new byte[var5_int];
+              var10 = var11;
+              var8 = var10;
+              var6 = var8;
+              var9.a(var5_int, 0, (byte) 118, var11);
+            }
+            var9.field_l = var9.field_l + 4;
+            if (!var9.e((byte) 78)) {
+              r.a(-28036);
+              return;
+            }
+            var4_ref_ie.field_m = true;
+            var4_ref_ie.field_l = (byte[]) (var6);
+            var4_ref_ie.d(0);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw kk.a((Throwable) ((Object) var1), "hm.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 

@@ -8,8 +8,6 @@ final class cc implements bf {
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -18,60 +16,34 @@ final class cc implements bf {
         o var8 = null;
         ub var9 = null;
         try {
-          L0: {
-            L1: {
-              var6_int = param2.field_o + param0;
-              var7 = param1 - -param2.field_l;
-              pe.a(param2.field_n, (byte) -14, var7, param2.field_r, var6_int);
-              if (param3) {
-                break L1;
-              } else {
-                var9 = (ub) null;
-                this.a(0, 116, (ub) null, true, true);
-                break L1;
-              }
-            }
-            L2: {
-              var8 = te.field_k[1];
-              if (!(param2 instanceof pl)) {
-                break L2;
-              } else {
-                if (((pl) ((Object) param2)).field_z) {
-                  var8.a(1 + var6_int + (param2.field_r + -var8.field_x >> -754482847), (param2.field_n - var8.field_s >> 1819292129) + (var7 - -1), 256);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            if (!param2.d((byte) 53)) {
-              break L0;
-            } else {
-              nh.a((byte) 69, param2.field_r - 4, var7 - -2, param2.field_n - 4, 2 + var6_int);
-              return;
-            }
+          var6_int = param2.field_o + param0;
+          var7 = param1 + param2.field_l;
+          pe.a(param2.field_n, (byte) -14, var7, param2.field_r, var6_int);
+          if (!param3) {
+            var9 = (ub) null;
+            this.a(0, 116, (ub) null, true, true);
           }
+          var8 = te.field_k[1];
+          if (param2 instanceof pl &&
+            ((pl) (param2)).field_z) {
+            var8.a(1 + var6_int + (param2.field_r - var8.field_x >> 1), (param2.field_n - var8.field_s >> 1) + (var7 + 1), 256);
+          }
+          if (!param2.d((byte) 53)) {
+            return;
+          }
+          nh.a((byte) 69, param2.field_r - 4, var7 + 2, param2.field_n - 4, 2 + var6_int);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
-
-            stackIn_11_1 = new StringBuilder().append("cc.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("cc.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

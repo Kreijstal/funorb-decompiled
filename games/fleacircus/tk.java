@@ -40,22 +40,22 @@ final class tk extends lh {
         field_s = null;
         field_y = null;
         if (param0 >= -90) {
-            tk.a(40);
+          tk.a(40);
         }
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
         try {
-            ia.field_p[param5] = param2;
-            ia.field_t[param5] = param1;
-            ia.field_l[param5] = param3;
-            ia.field_j[param5] = param6;
-            if (param4 > -116) {
-                field_y = (String) null;
-            }
-            ia.field_r[param5] = param0;
+          ia.field_p[param5] = param2;
+          ia.field_t[param5] = param1;
+          ia.field_l[param5] = param3;
+          ia.field_j[param5] = param6;
+          if (param4 > -116) {
+            field_y = (String) null;
+          }
+          ia.field_r[param5] = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

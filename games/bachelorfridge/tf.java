@@ -13,123 +13,75 @@ class tf extends eo {
         int var11;
         int var12;
         kv var13;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
         var12 = BachelorFridge.field_y;
         var13 = new kv(param3, param4);
         var6 = 0;
-        var7 = 0;
-        L0: while (true) {
-          if (param4 >> -2138270239 <= var7) {
-            L1: {
-              if (param0 == 119) {
-                break L1;
-              } else {
-                tf.a((byte) -3, -17, -90, -4, -52);
-                break L1;
-              }
+        for (var7 = 0; param4 >> 1 > var7; var7++) {
+          var8 = -(65793 * (32 * var7 / param4)) + 9474192;
+          var9 = ((16711422 & var8) >>> 1) + 5263440;
+          var10 = 2 * ((param4 >> 1) - 1 - var7);
+          if (0 >= -1 + param3 - 2 * (var10 + param1)) {
+            var6 = var6 + var10;
+            for (var11 = 0; -(var10 * 2) + (param3 - 1) > var11; var11++) {
+              var13.field_v[var6] = var9;
+              var6++;
             }
-            var7 = 0;
-            L2: while (true) {
-              if (param4 >> 377729473 <= var7) {
-                return var13;
-              } else {
-                var8 = (-(var7 * 32 / param4) + 128) * 65793;
-                var9 = var8 >>> 1416038945 & 8355711;
-                var10 = var7 * 2;
-                if (-1 > (-((param2 + var10) * 2) + param3 + -1 ^ -1)) {
-                  var11 = 0;
-                  L3: while (true) {
-                    if (param2 <= var11) {
-                      var6 = var6 + (param2 + var10);
-                      var11 = 0;
-                      L4: while (true) {
-                        if (-1 + param3 + -(2 * (var10 + param2)) <= var11) {
-                          var6 = var6 + (1 + var10 + param2);
-                          var7++;
-                          continue L2;
-                        } else {
-                          var13.field_v[var6] = var8;
-                          var11++;
-                          var6++;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      var13.field_v[var10 + var6 + var11] = var9;
-                      var13.field_v[param3 + var6 - (2 - (-var10 - var11))] = var9;
-                      var11++;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  var6 = var6 + var10;
-                  var11 = 0;
-                  L5: while (true) {
-                    if (var11 >= -(2 * var10) + (-1 + param3)) {
-                      var6 = var6 + (var10 + 1);
-                      var7++;
-                      continue L2;
-                    } else {
-                      var13.field_v[var6] = var9;
-                      var11++;
-                      var6++;
-                      continue L5;
-                    }
-                  }
-                }
-              }
-            }
+            var6 = var6 + (1 + var10);
           } else {
-            var8 = -(65793 * (32 * var7 / param4)) + 9474192;
-            var9 = ((16711422 & var8) >>> -2126415967) + 5263440;
-            var10 = 2 * ((param4 >> 918035553) - 1 - var7);
-            if (0 >= -1 + param3 - 2 * (var10 + param1)) {
-              var6 = var6 + var10;
-              var11 = 0;
-              L6: while (true) {
-                if (-(var10 * 2) + (param3 + -1) <= var11) {
-                  var6 = var6 + (1 + var10);
-                  var7++;
-                  continue L0;
-                } else {
-                  var13.field_v[var6] = var9;
-                  var6++;
-                  var11++;
-                  continue L6;
-                }
-              }
-            } else {
-              var11 = 0;
-              L7: while (true) {
-                if (param1 <= var11) {
-                  var6 = var6 + (param1 + var10);
-                  var11 = 0;
-                  L8: while (true) {
-                    if (var11 >= param3 + -1 - 2 * (var10 + param1)) {
-                      var6 = var6 + (param1 + (var10 + 1));
-                      var7++;
-                      continue L0;
-                    } else {
-                      var13.field_v[var6] = var8;
-                      var6++;
-                      var11++;
-                      continue L8;
-                    }
-                  }
-                } else {
-                  var13.field_v[var11 + var10 + var6] = var9;
-                  var13.field_v[-var11 + (-var10 + var6) - -param3 - 2] = var9;
-                  var11++;
-                  continue L7;
-                }
-              }
+            for (var11 = 0; param1 > var11; var11++) {
+              var13.field_v[var11 + var10 + var6] = var9;
+              var13.field_v[-var11 + (-var10 + var6) + param3 - 2] = var9;
             }
+            var6 = var6 + (param1 + var10);
+            for (var11 = 0; var11 < param3 - 1 - 2 * (var10 + param1); var11++) {
+              var13.field_v[var6] = var8;
+              var6++;
+            }
+            var6 = var6 + (param1 + (var10 + 1));
           }
         }
+        if (param0 != 119) {
+          tf.a((byte) -3, -17, -90, -4, -52);
+        }
+        for (var7Lifetime1 = 0; param4 >> 1 > var7Lifetime1; var7Lifetime1++) {
+          var8Lifetime1 = (-(var7Lifetime1 * 32 / param4) + 128) * 65793;
+          var9Lifetime1 = var8Lifetime1 >>> 1 & 8355711;
+          var10Lifetime1 = var7Lifetime1 * 2;
+          if (-((param2 + var10Lifetime1) * 2) + param3 - 1 <= 0) {
+            var6 = var6 + var10Lifetime1;
+            var11Lifetime1 = 0;
+            while (var11Lifetime1 < -(2 * var10Lifetime1) + (-1 + param3)) {
+              var13.field_v[var6] = var9Lifetime1;
+              var11Lifetime1++;
+              var6++;
+            }
+            var6 = var6 + (var10Lifetime1 + 1);
+          } else {
+            for (var11Lifetime1 = 0; param2 > var11Lifetime1; var11Lifetime1++) {
+              var13.field_v[var10Lifetime1 + var6 + var11Lifetime1] = var9Lifetime1;
+              var13.field_v[param3 + var6 - (2 - (-var10Lifetime1 - var11Lifetime1))] = var9Lifetime1;
+            }
+            var6 = var6 + (param2 + var10Lifetime1);
+            var11Lifetime1 = 0;
+            while (-1 + param3 - 2 * (var10Lifetime1 + param2) > var11Lifetime1) {
+              var13.field_v[var6] = var8Lifetime1;
+              var11Lifetime1++;
+              var6++;
+            }
+            var6 = var6 + (1 + var10Lifetime1 + param2);
+          }
+        }
+        return var13;
     }
 
     final static int a(int param0, int param1) {
         int var2 = -13 % ((-60 - param0) / 39);
-        return param1 >> 1505873032 & 255;
+        return param1 >> 8 & 255;
     }
 
     tf() {

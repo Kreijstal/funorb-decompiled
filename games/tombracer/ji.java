@@ -13,7 +13,7 @@ final class ji {
 
     public static void f(int param0) {
         if (param0 < 123) {
-            ji.a(-27, -70, -10);
+          ji.a(-27, -70, -10);
         }
         field_g = null;
         field_d = null;
@@ -23,19 +23,19 @@ final class ji {
         vg var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
         if (this.field_b == null) {
-            return null;
+          return null;
         }
         vg var2 = this.field_f[(int)(this.field_h & (long)(-1 + this.field_a))];
         if (param0 > -93) {
-            this.field_a = 32;
+          this.field_a = 32;
         }
         while (this.field_b != var2) {
-            if (!((this.field_h ^ -1L) != (this.field_b.field_d ^ -1L))) {
-                var3 = this.field_b;
-                this.field_b = this.field_b.field_a;
-                return var3;
-            }
+          if (~this.field_h == ~this.field_b.field_d) {
+            var3 = this.field_b;
             this.field_b = this.field_b.field_a;
+            return var3;
+          }
+          this.field_b = this.field_b.field_a;
         }
         this.field_b = null;
         return null;
@@ -52,14 +52,14 @@ final class ji {
         vg var4 = null;
         int var5 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; var2 < this.field_a; var2++) {
-            var3_ref_vg = this.field_f[var2];
-            while (true) {
-                var4 = var3_ref_vg.field_a;
-                if (var4 == var3_ref_vg) {
-                    break;
-                }
-                var4.p(113);
+          var3_ref_vg = this.field_f[var2];
+          while (true) {
+            var4 = var3_ref_vg.field_a;
+            if (var4 == var3_ref_vg) {
+              break;
             }
+            var4.p(113);
+          }
         }
         int var3 = -17 % ((35 - param0) / 42);
         this.field_c = null;
@@ -67,104 +67,63 @@ final class ji {
     }
 
     final vg c(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         vg var2;
         int var3;
-        L0: {
-          var3 = TombRacer.field_G ? 1 : 0;
-          if (param0 == 20806) {
-            break L0;
-          } else {
-            this.c(17);
-            break L0;
-          }
+        var3 = TombRacer.field_G ? 1 : 0;
+        if (param0 != 20806) {
+          this.c(17);
         }
-        L1: {
-          if ((this.field_e ^ -1) >= -1) {
-            break L1;
-          } else {
-            if (this.field_f[this.field_e - 1] == this.field_c) {
-              break L1;
-            } else {
-              var2 = this.field_c;
-              this.field_c = var2.field_a;
-              return var2;
-            }
-          }
+        if (this.field_e > 0 &&
+          this.field_f[this.field_e - 1] != this.field_c) {
+          var2 = this.field_c;
+          this.field_c = var2.field_a;
+          return var2;
         }
-        L2: while (true) {
-          if (this.field_a > this.field_e) {
-            fieldTemp$1 = this.field_e;
-            this.field_e = this.field_e + 1;
-            var2 = this.field_f[fieldTemp$1].field_a;
-            if (this.field_f[this.field_e + -1] != var2) {
-              this.field_c = var2.field_a;
-              return var2;
-            } else {
-              continue L2;
-            }
-          } else {
+        do {
+          if (this.field_a <= this.field_e) {
             return null;
           }
-        }
+          fieldTemp$0 = this.field_e;
+          this.field_e = this.field_e + 1;
+          var2 = this.field_f[fieldTemp$0].field_a;
+        } while (this.field_f[this.field_e - 1] == var2);
+        this.field_c = var2.field_a;
+        return var2;
     }
 
     final void a(long param0, int param1, vg param2) {
         vg var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          L0: {
-            L1: {
-              if (null != param2.field_e) {
-                param2.p(48);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var5 = this.field_f[(int)(param0 & (long)(this.field_a + -1))];
-              param2.field_a = var5;
-              param2.field_e = var5.field_e;
-              param2.field_e.field_a = param2;
-              param2.field_a.field_e = param2;
-              param2.field_d = param0;
-              if (param1 >= 100) {
-                break L2;
-              } else {
-                this.field_e = -124;
-                break L2;
-              }
-            }
-            break L0;
+          if (null != param2.field_e) {
+            param2.p(48);
           }
+          var5 = this.field_f[(int)(param0 & (long)(this.field_a - 1))];
+          param2.field_a = var5;
+          param2.field_e = var5.field_e;
+          param2.field_e.field_a = param2;
+          param2.field_a.field_e = param2;
+          param2.field_d = param0;
+          if (param1 < 100) {
+            this.field_e = -124;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
-
-            stackIn_8_1 = new StringBuilder().append("ji.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_8_0 = var5_ref;
+          stackIn_8_1 = new StringBuilder().append("ji.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -176,17 +135,17 @@ final class ji {
         this.field_a = param0;
         this.field_f = new vg[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new vg();
-            var3 = dupTemp$0;
-            this.field_f[var2] = dupTemp$0;
-            var3.field_a = var3;
-            var3.field_e = var3;
+          dupTemp$0 = new vg();
+          var3 = dupTemp$0;
+          this.field_f[var2] = dupTemp$0;
+          var3.field_a = var3;
+          var3.field_e = var3;
         }
     }
 
     final static int a(int param0, int param1, int param2) {
         if (param1 < 82) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
         return param0 << -param2 + 16;
     }
@@ -195,18 +154,18 @@ final class ji {
         vg var5 = null;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 >= -78) {
-            field_g = (jea) null;
+          field_g = (jea) null;
         }
         this.field_h = param1;
         vg var4 = this.field_f[(int)(param1 & (long)(this.field_a - 1))];
         this.field_b = var4.field_a;
         while (var4 != this.field_b) {
-            if (!(param1 != this.field_b.field_d)) {
-                var5 = this.field_b;
-                this.field_b = this.field_b.field_a;
-                return var5;
-            }
+          if (param1 == this.field_b.field_d) {
+            var5 = this.field_b;
             this.field_b = this.field_b.field_a;
+            return var5;
+          }
+          this.field_b = this.field_b.field_a;
         }
         this.field_b = null;
         return null;
@@ -218,9 +177,9 @@ final class ji {
         int var3 = -(mla.field_a * mla.field_a) + var2;
         nra.field_a.a(199, -214 + bea.field_a, -23776, 90, -(199 * var3 / var2) + var1);
         if (param0 != 16) {
-            return;
+          return;
         }
-        cka.field_fd.a(438, -4 + (-120 + bea.field_a), -23776, 0, 202 + var1 - -(438 * var3 / var2));
+        cka.field_fd.a(438, -4 + (-120 + bea.field_a), -23776, 0, 202 + var1 + 438 * var3 / var2);
     }
 
     static {

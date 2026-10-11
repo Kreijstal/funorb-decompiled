@@ -14,14 +14,14 @@ final class lf extends ji {
 
     final static int g(int param0) {
         if (param0 != 0) {
-            field_B = -62L;
+          field_B = -62L;
         }
         return ea.field_e;
     }
 
     final int[] c(int param0, int param1) {
         if (param1 < 91) {
-            lf.b((byte) 85);
+          lf.b((byte) 85);
         }
         return rh.field_O;
     }
@@ -32,73 +32,35 @@ final class lf extends ji {
 
     final static void d(int param0, int param1) {
         try {
-            IOException iOException = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (lo.field_k == null) {
-                break L0;
-              } else {
-                L1: {
-                  if (0 > param1) {
-                    break L1;
-                  } else {
-                    if (bm.field_I == rg.field_d) {
-                      break L1;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-                L2: {
-                  if (0 != uh.field_Wb.field_u) {
-                    break L2;
-                  } else {
-                    if ((10000L + bm.field_H ^ -1L) > (gk.a(55) ^ -1L)) {
-                      uh.field_Wb.j(param1, 121);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if (param0 > 37) {
-                    break L3;
-                  } else {
-                    lf.g(-114);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (uh.field_Wb.field_u > 0) {
-                    try {
-                      L5: {
-                        lo.field_k.a(0, uh.field_Wb.field_u, -93, uh.field_Wb.field_p);
-                        bm.field_H = gk.a(48);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        rm.b((byte) 115);
-                        break L6;
-                      }
-                    }
-                    uh.field_Wb.field_u = 0;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                return;
-              }
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          if (lo.field_k != null && (0 > param1 ||
+            bm.field_I == rg.field_d)) {
+            if (0 == uh.field_Wb.field_u &&
+              (10000L + bm.field_H) < gk.a(55)) {
+              uh.field_Wb.j(param1, 121);
             }
-            uh.field_Wb.field_u = 0;
+            if (param0 <= 37) {
+              lf.g(-114);
+            }
+            if (uh.field_Wb.field_u > 0) {
+              try {
+                lo.field_k.a(0, uh.field_Wb.field_u, -93, uh.field_Wb.field_p);
+                bm.field_H = gk.a(48);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+                rm.b((byte) 115);
+              }
+              uh.field_Wb.field_u = 0;
+            }
+            return;
+          }
+          uh.field_Wb.field_u = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -115,10 +77,10 @@ final class lf extends ji {
         int var0 = 0;
         int var1 = 0;
         field_A = new byte[12][4096];
-        for (var0 = 0; -13 < (var0 ^ -1); var0++) {
-            for (var1 = 0; (var1 ^ -1) > -4097; var1++) {
-                field_A[var0][var1] = (byte)(19 * var0 + 19);
-            }
+        for (var0 = 0; var0 < 12; var0++) {
+          for (var1 = 0; var1 < 4096; var1++) {
+            field_A[var0][var1] = (byte)(19 * var0 + 19);
+          }
         }
         field_E = "to keep fullscreen or";
         field_D = new byte[520];

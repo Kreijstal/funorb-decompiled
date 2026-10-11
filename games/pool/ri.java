@@ -12,9 +12,7 @@ final class ri extends fe {
     static String field_O;
 
     public static void a(int param0) {
-        if (param0 <= 65) {
-          return;
-        } else {
+        if (param0 > 65) {
           field_U = null;
           field_Q = null;
           field_R = null;
@@ -29,72 +27,38 @@ final class ri extends fe {
     private ri(String param0, cc param1) {
         this(param0, db.field_Sb.field_l, param1);
         try {
-            this.field_z = db.field_Sb.field_o;
+          this.field_z = db.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        if (param0 != 16) {
-          L0: {
-            this.a(126, 56, 57, 116);
-            stackIn_7_0 = this;
-
-            if (this.field_G) {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 1;
-              break L0;
-            }
-          }
-          ((ri) (this)).field_G = stackIn_8_1 != 0;
-          super.a(param0 + 0, param1, param2, param3);
-          return;
-        } else {
-          L1: {
-            stackIn_3_0 = this;
-
-            if (this.field_G) {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 1;
-              break L1;
-            }
-          }
-          ((ri) (this)).field_G = stackIn_4_1 != 0;
+        if (param0 == 16) {
+          this.field_G = !this.field_G ? true : false;
           super.a(param0 + 0, param1, param2, param3);
           return;
         }
+        this.a(126, 56, 57, 116);
+        this.field_G = !this.field_G ? true : false;
+        super.a(param0 + 0, param1, param2, param3);
     }
 
     private ri(String param0, fp param1, cc param2) {
         super(param0, param1, param2);
         try {
-            this.field_z = db.field_Sb.field_o;
+          this.field_z = db.field_Sb.field_o;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ri(String param0, cc param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_G = param2 ? true : false;
+          this.field_G = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

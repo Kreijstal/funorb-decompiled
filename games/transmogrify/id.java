@@ -7,12 +7,12 @@ final class id {
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 11) {
-            id.a(true, (byte) -35);
+          id.a(true, (byte) -35);
         }
     }
 
     final static sg a(boolean param0, byte param1) {
-        int stackIn_3_0 = 0;
+        boolean stackIn_3_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_25_0 = null;
         Throwable decompiledCaughtException = null;
@@ -23,108 +23,65 @@ final class id {
         int var7 = 0;
         hj var8 = null;
         rk var9 = null;
-        L0: {
-          var7 = Transmogrify.field_A ? 1 : 0;
-          var8 = nf.field_l;
-          var3 = var8.d((byte) 95);
-          kd.field_a = 127 & var3;
-          if ((128 & var3) == 0) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
+        var7 = Transmogrify.field_A ? 1 : 0;
+        var8 = nf.field_l;
+        var3 = var8.d((byte) 95);
+        kd.field_a = 127 & var3;
+        stackIn_3_0 = ((128 & var3) != 0);
+        a.field_bb = stackIn_3_0;
+        sh.field_b = var8.d((byte) 106);
+        sj.field_m = var8.e((byte) -51);
+        if (kd.field_a != 2) {
+          jd.field_b = 0;
+          u.field_d = 0;
+        } else {
+          u.field_d = var8.a((byte) -108);
+          jd.field_b = var8.g((byte) 124);
         }
-        L1: {
-          a.field_bb = stackIn_3_0 != 0;
-          sh.field_b = var8.d((byte) 106);
-          sj.field_m = var8.e((byte) -51);
-          if ((kd.field_a ^ -1) != -3) {
-            jd.field_b = 0;
-            u.field_d = 0;
-            break L1;
-          } else {
-            u.field_d = var8.a((byte) -108);
-            jd.field_b = var8.g((byte) 124);
-            break L1;
-          }
+        if (param1 != 9) {
+          id.a(true, (byte) -86);
         }
-        L2: {
-          if (param1 == 9) {
-            break L2;
-          } else {
-            id.a(true, (byte) -86);
-            break L2;
-          }
+        stackIn_11_0 = (var8.d((byte) 92) != 1) ? 0 : 1;
+        var4 = stackIn_11_0;
+        kb.field_o = var8.g(12248);
+        if (var4 != 0) {
+          fd.field_i = var8.g(param1 ^ 12241);
+        } else {
+          fd.field_i = kb.field_o;
         }
-        L3: {
-          if ((var8.d((byte) 92) ^ -1) != -2) {
-            stackIn_11_0 = 0;
-            break L3;
-          } else {
-            stackIn_11_0 = 1;
-            break L3;
-          }
-        }
-        L4: {
-          var4 = stackIn_11_0;
-          kb.field_o = var8.g(12248);
-          if (var4 != 0) {
-            fd.field_i = var8.g(param1 ^ 12241);
-            break L4;
-          } else {
-            fd.field_i = kb.field_o;
-            break L4;
-          }
-        }
-        L5: {
-          if (-2 == (kd.field_a ^ -1)) {
+        if (kd.field_a == 1) {
+          var8.a((byte) -90);
+          var8.g(12248);
+        } else {
+          if (kd.field_a == 4) {
             var8.a((byte) -90);
             var8.g(12248);
-            break L5;
-          } else {
-            if (-5 != (kd.field_a ^ -1)) {
-              break L5;
-            } else {
-              var8.a((byte) -90);
-              var8.g(12248);
-              break L5;
-            }
           }
         }
-        if (param0) {
-          var5 = var8.a((byte) -110);
-          try {
-            L6: {
-              L7: {
-                var9 = vl.field_C.b(1, var5);
-                l.field_c = var9.d((byte) -127);
-                if (!fd.field_i.equals(w.field_a)) {
-                  stackIn_25_0 = var9.field_m;
-                  break L7;
-                } else {
-                  stackIn_25_0 = null;
-                  break L7;
-                }
-              }
-              a.field_T = stackIn_25_0;
-              break L6;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
-            d.a((Throwable) ((Object) var6), -120, "CC1");
-            a.field_T = null;
-            l.field_c = null;
-            return new sg(param0);
-          }
-          return new sg(param0);
-        } else {
+        if (!param0) {
           l.field_c = u.a(false, 80, var8);
           a.field_T = null;
           return new sg(param0);
         }
+        var5 = var8.a((byte) -110);
+        try {
+          var9 = vl.field_C.b(1, var5);
+          l.field_c = var9.d((byte) -127);
+          if (!fd.field_i.equals(w.field_a)) {
+            stackIn_25_0 = var9.field_m;
+          } else {
+            stackIn_25_0 = null;
+          }
+          a.field_T = stackIn_25_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (Exception) (Object) decompiledCaughtException;
+          d.a((Throwable) ((Object) var6), -120, "CC1");
+          a.field_T = null;
+          l.field_c = null;
+          return new sg(param0);
+        }
+        return new sg(param0);
     }
 
     static {

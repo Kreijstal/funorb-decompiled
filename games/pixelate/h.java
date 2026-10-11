@@ -19,27 +19,27 @@ final class h extends qm {
     h(String param0, fn param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_M = param2 ? true : false;
+          this.field_M = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private h(String param0, fn param1) {
         this(param0, field_X.field_r, param1);
         try {
-            this.field_y = field_X.field_t;
+          this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private h(String param0, eb param1, fn param2) {
         super(param0, param1, param2);
         try {
-            this.field_y = field_X.field_t;
+          this.field_y = field_X.field_t;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,34 +50,30 @@ final class h extends qm {
 
     final static void a(int param0, tf param1) {
         try {
-            ti.a(false);
-            t.a(param1.field_G, param1.field_A, param1.field_B);
-            if (param0 >= -58) {
-                field_V = (tf[]) null;
-            }
+          ti.a(false);
+          t.a(param1.field_G, param1.field_A, param1.field_B);
+          if (param0 >= -58) {
+            field_V = (tf[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "h.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static io[] a(byte param0) {
-        tf var2;
-        if (param0 != -8) {
-          var2 = (tf) null;
-          h.a(-96, (tf) null);
-          return new io[]{ig.field_e, vm.field_a, cd.field_c};
-        } else {
+        if (param0 == -8) {
           return new io[]{ig.field_e, vm.field_a, cd.field_c};
         }
+        tf var2 = (tf) null;
+        h.a(-96, (tf) null);
+        return new io[]{ig.field_e, vm.field_a, cd.field_c};
     }
 
     public static void a(int param0) {
         field_U = null;
         field_P = null;
         field_S = null;
-        if (param0 < 43) {
-          return;
-        } else {
+        if (param0 >= 43) {
           field_N = null;
           field_X = null;
           field_V = null;

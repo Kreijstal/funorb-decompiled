@@ -13,7 +13,7 @@ final class btb {
         field_c = null;
         field_d = null;
         if (param0 != 94) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

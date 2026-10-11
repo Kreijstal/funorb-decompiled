@@ -11,7 +11,7 @@ abstract class as extends bkb {
 
     public static void c(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_c = null;
     }

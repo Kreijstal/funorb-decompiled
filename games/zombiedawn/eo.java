@@ -17,7 +17,7 @@ final class eo {
         field_c = null;
         field_h = null;
         if (param0 != -25401) {
-            return;
+          return;
         }
         field_j = null;
         field_i = null;
@@ -26,88 +26,90 @@ final class eo {
 
     final static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         jc.a((byte) 59, hc.a(0));
     }
 
     final static ah a(int param0, int param1, int param2, int param3) {
         if (param0 < 49) {
-            eo.a(false);
-            if (-10 < (param2 ^ -1)) {
-                return (ah) ((Object) new wo(param1, param3, param2));
-            }
-            if ((param2 ^ -1) > -12) {
-                return (ah) ((Object) new po(param1, param3, param2));
-            }
-            if (-18 < (param2 ^ -1)) {
-                if (ng.field_e) {
-                    return (ah) ((Object) new qk(param1, param3, param2));
-                }
-                if (-8 == (dj.field_e.field_q ^ -1)) {
-                    return (ah) ((Object) new jo(param1, param3, param2));
-                }
-                return (ah) ((Object) new qk(param1, param3, param2));
-            }
-            if (28 == param2) {
-                if (ng.field_e) {
-                    return (ah) ((Object) new qk(param1, param3, param2));
-                }
-                if (-8 != (dj.field_e.field_q ^ -1)) {
-                    return (ah) ((Object) new qk(param1, param3, param2));
-                }
-                return (ah) ((Object) new jo(param1, param3, param2));
-            }
-            if (param2 == 23) {
-                return (ah) ((Object) new si(param1, param3, param2));
-            }
-            if (-19 == (param2 ^ -1)) {
-                return (ah) ((Object) new wc(param1, param3, param2));
-            }
-            if (-20 == (param2 ^ -1)) {
-                return (ah) ((Object) new we(param1, param3, param2));
-            }
-            if (-21 == (param2 ^ -1)) {
-                return (ah) ((Object) new fc(param1, param3, param2));
-            }
-            if (27 == param2) {
-                return (ah) ((Object) new dk(param1, param3));
-            }
+          eo.a(false);
+          if (param2 < 9) {
             return (ah) ((Object) new wo(param1, param3, param2));
-        }
-        if (-10 >= (param2 ^ -1)) {
-            if ((param2 ^ -1) > -12) {
-                return (ah) ((Object) new po(param1, param3, param2));
+          }
+          if (param2 < 11) {
+            return (ah) ((Object) new po(param1, param3, param2));
+          }
+          if (param2 < 17) {
+            if (ng.field_e) {
+              return (ah) ((Object) new qk(param1, param3, param2));
             }
-            if (-18 >= (param2 ^ -1) && 28 != param2) {
-                if (param2 == 23) {
-                    return (ah) ((Object) new si(param1, param3, param2));
-                }
-                if (-19 == (param2 ^ -1)) {
-                    return (ah) ((Object) new wc(param1, param3, param2));
-                }
-                if (-20 == (param2 ^ -1)) {
-                    return (ah) ((Object) new we(param1, param3, param2));
-                }
-                if (-21 == (param2 ^ -1)) {
-                    return (ah) ((Object) new fc(param1, param3, param2));
-                }
-                if (27 == param2) {
-                    return (ah) ((Object) new dk(param1, param3));
-                }
-                return (ah) ((Object) new wo(param1, param3, param2));
-            }
-            if (!ng.field_e && -8 == (dj.field_e.field_q ^ -1)) {
-                return (ah) ((Object) new jo(param1, param3, param2));
+            if (dj.field_e.field_q == 7) {
+              return (ah) ((Object) new jo(param1, param3, param2));
             }
             return (ah) ((Object) new qk(param1, param3, param2));
+          }
+          if (28 == param2) {
+            if (ng.field_e) {
+              return (ah) ((Object) new qk(param1, param3, param2));
+            }
+            if (dj.field_e.field_q != 7) {
+              return (ah) ((Object) new qk(param1, param3, param2));
+            }
+            return (ah) ((Object) new jo(param1, param3, param2));
+          }
+          if (param2 == 23) {
+            return (ah) ((Object) new si(param1, param3, param2));
+          }
+          if (param2 == 18) {
+            return (ah) ((Object) new wc(param1, param3, param2));
+          }
+          if (param2 == 19) {
+            return (ah) ((Object) new we(param1, param3, param2));
+          }
+          if (param2 == 20) {
+            return (ah) ((Object) new fc(param1, param3, param2));
+          }
+          if (27 == param2) {
+            return (ah) ((Object) new dk(param1, param3));
+          }
+          return (ah) ((Object) new wo(param1, param3, param2));
+        }
+        if (param2 >= 9) {
+          if (param2 < 11) {
+            return (ah) ((Object) new po(param1, param3, param2));
+          }
+          if (param2 >= 17 &&
+            28 != param2) {
+            if (param2 == 23) {
+              return (ah) ((Object) new si(param1, param3, param2));
+            }
+            if (param2 == 18) {
+              return (ah) ((Object) new wc(param1, param3, param2));
+            }
+            if (param2 == 19) {
+              return (ah) ((Object) new we(param1, param3, param2));
+            }
+            if (param2 == 20) {
+              return (ah) ((Object) new fc(param1, param3, param2));
+            }
+            if (27 == param2) {
+              return (ah) ((Object) new dk(param1, param3));
+            }
+            return (ah) ((Object) new wo(param1, param3, param2));
+          }
+          if (!ng.field_e &&
+            dj.field_e.field_q == 7) {
+            return (ah) ((Object) new jo(param1, param3, param2));
+          }
+          return (ah) ((Object) new qk(param1, param3, param2));
         }
         return (ah) ((Object) new wo(param1, param3, param2));
     }
 
     final static boolean b(int param0) {
         if (param0 < 65) {
-            return false;
+          return false;
         }
         return nm.field_c;
     }

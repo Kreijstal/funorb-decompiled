@@ -12,13 +12,13 @@ final class sn {
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + n.a(true, "%0a", "\n", param1));
         if (param0 <= 43) {
-            field_c = (hl) null;
+          field_c = (hl) null;
         }
     }
 
     public static void a(int param0) {
         if (param0 > -113) {
-            return;
+          return;
         }
         field_f = null;
         field_d = null;
@@ -29,8 +29,8 @@ final class sn {
 
     final static String b(int param0) {
         if (param0 != 11137) {
-            field_d = (String) null;
-            return rb.field_Nb;
+          field_d = (String) null;
+          return rb.field_Nb;
         }
         return rb.field_Nb;
     }

@@ -9,7 +9,7 @@ class ja extends al {
     public static void f(int param0) {
         field_v = null;
         if (param0 != 150) {
-            field_u = -108;
+          field_u = -108;
         }
     }
 

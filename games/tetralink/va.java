@@ -18,8 +18,8 @@ final class va extends mc {
 
     final static int a(int param0) {
         if (param0 != -1) {
-            va.a(56);
-            return (int)(1000000000L / mb.field_B);
+          va.a(56);
+          return (int)(1000000000L / mb.field_B);
         }
         return (int)(1000000000L / mb.field_B);
     }
@@ -28,9 +28,9 @@ final class va extends mc {
         field_n = null;
         field_t = null;
         if (param0 != 44) {
-            field_n = (sj) null;
-            field_q = null;
-            return;
+          field_n = (sj) null;
+          field_q = null;
+          return;
         }
         field_q = null;
     }

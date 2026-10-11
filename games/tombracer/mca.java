@@ -9,41 +9,24 @@ final class mca {
     short[] field_c;
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_12_0 = 0;
+        boolean stackIn_12_0 = false;
         if (0 == param1) {
           return true;
-        } else {
-          if (pl.a((byte) 64) != param1) {
-            L0: {
-              if (param0 == 6) {
-                break L0;
-              } else {
-                mca.a((byte) 65, -116);
-                break L0;
-              }
-            }
-            if (!vpa.a(114)) {
-              if (mq.field_e == null) {
-                return false;
-              } else {
-                L1: {
-                  if (mq.field_e.a((byte) -102, param1)) {
-                    stackIn_12_0 = 1;
-                    break L1;
-                  } else {
-                    stackIn_12_0 = 0;
-                    break L1;
-                  }
-                }
-                return stackIn_12_0 != 0;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return true;
-          }
         }
+        if (pl.a((byte) 64) == param1) {
+          return true;
+        }
+        if (param0 != 6) {
+          mca.a((byte) 65, -116);
+        }
+        if (vpa.a(114)) {
+          return false;
+        }
+        if (mq.field_e == null) {
+          return false;
+        }
+        stackIn_12_0 = (mq.field_e.a((byte) -102, param1));
+        return stackIn_12_0;
     }
 
     final static void a(kb param0, int param1, int param2) {
@@ -53,34 +36,34 @@ final class mca {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         try {
-            var7 = ql.field_k;
-            var8 = var7;
-            var8.k(param2, -2988);
-            var8.field_h = var8.field_h + 1;
-            var4 = var8.field_h;
-            var8.i(1, 0);
-            var8.f(-1477662136, param0.field_l);
-            var8.f(-1477662136, param0.field_f);
-            var8.f(param1 ^ -1477662136, param0.field_n);
-            var8.a(param0.field_i, (byte) -36);
-            var8.a(param0.field_g, (byte) -75);
-            var8.a(param0.field_k, (byte) -63);
-            var8.a(param0.field_j, (byte) 124);
-            var8.i(param0.field_o.length, 0);
-            for (var5 = param1; var5 < param0.field_o.length; var5++) {
-                var7.a(param0.field_o[var5], (byte) 96);
-            }
-            var8.g(var4, 64);
-            var8.d(-var4 + var8.field_h, (byte) 72);
+          var7 = ql.field_k;
+          var8 = var7;
+          var8.k(param2, -2988);
+          var8.field_h = var8.field_h + 1;
+          var4 = var8.field_h;
+          var8.i(1, 0);
+          var8.f(-1477662136, param0.field_l);
+          var8.f(-1477662136, param0.field_f);
+          var8.f(param1 ^ -1477662136, param0.field_n);
+          var8.a(param0.field_i, (byte) -36);
+          var8.a(param0.field_g, (byte) -75);
+          var8.a(param0.field_k, (byte) -63);
+          var8.a(param0.field_j, (byte) 124);
+          var8.i(param0.field_o.length, 0);
+          for (var5 = param1; var5 < param0.field_o.length; var5++) {
+            var7.a(param0.field_o[var5], (byte) 96);
+          }
+          var8.g(var4, 64);
+          var8.d(-var4 + var8.field_h, (byte) 72);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "mca.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 != 0) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 

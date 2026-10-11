@@ -21,32 +21,27 @@ final class jd extends am {
     int field_n;
 
     final static int[] a(int param0, int param1, byte param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        var3 = ni.a(param1, param2 ^ -8114);
-        var4 = of.a((byte) 75, param1);
-        var5 = ni.a(param0, 8191);
-        var6 = of.a((byte) -81, param0);
-        if (param2 != -79) {
-          field_l = -78;
-          var7 = (int)((long)var5 * (long)var3 >> -1919457136);
-          var8 = (int)((long)var6 * (long)var3 >> -321886960);
-          var9 = (int)((long)var5 * (long)var4 >> 1745029456);
-          var10 = (int)((long)var6 * (long)var4 >> 881464016);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        } else {
-          var7 = (int)((long)var5 * (long)var3 >> -1919457136);
-          var8 = (int)((long)var6 * (long)var3 >> -321886960);
-          var9 = (int)((long)var5 * (long)var4 >> 1745029456);
-          var10 = (int)((long)var6 * (long)var4 >> 881464016);
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var3 = ni.a(param1, param2 ^ -8114);
+        int var4 = of.a((byte) 75, param1);
+        int var5 = ni.a(param0, 8191);
+        int var6 = of.a((byte) -81, param0);
+        if (param2 == -79) {
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var6 * (long)var3 >> 16);
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
+        field_l = -78;
+        var7 = (int)((long)var5 * (long)var3 >> 16);
+        var8 = (int)((long)var6 * (long)var3 >> 16);
+        var9 = (int)((long)var5 * (long)var4 >> 16);
+        var10 = (int)((long)var6 * (long)var4 >> 16);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     final static void a(int param0, int param1) {
@@ -58,36 +53,21 @@ final class jd extends am {
         RuntimeException var2_ref = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            var5 = (m) ((Object) wk.field_g.g(-107));
-            L1: while (true) {
-              if (var5 == null) {
-                L2: {
-                  if (param1 == 65535) {
-                    break L2;
-                  } else {
-                    var4 = (String) null;
-                    jd.a((byte) 125, (String) null, (gb) null, (String) null);
-                    break L2;
-                  }
-                }
-                var2 = ve.field_b.g(-68);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    pe.a((byte) 51, param0);
-                    var2 = ve.field_b.a(param1 ^ 52851);
-                    continue L3;
-                  }
-                }
-              } else {
-                fj.a(param0, var5, true);
-                var5 = (m) ((Object) wk.field_g.a(12684));
-                continue L1;
-              }
-            }
+          var5 = (m) (wk.field_g.g(-107));
+          while (var5 != null) {
+            fj.a(param0, var5, true);
+            var5 = (m) (wk.field_g.a(12684));
           }
+          if (param1 != 65535) {
+            var4 = (String) null;
+            jd.a((byte) 125, (String) null, (gb) null, (String) null);
+          }
+          var2 = ve.field_b.g(-68);
+          while (var2 != null) {
+            pe.a((byte) 51, param0);
+            var2 = ve.field_b.a(param1 ^ 52851);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -98,18 +78,18 @@ final class jd extends am {
     jd(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-            this.field_n = param3;
-            this.field_t = param0;
-            this.field_r = param2;
-            this.field_j = param1;
-            this.field_m = param5;
-            this.field_w = param6;
-            this.field_p = param4;
-            fieldTemp$0 = tf.field_c;
-            tf.field_c = tf.field_c + 1;
-            this.field_u = 65535 & fieldTemp$0;
+          this.field_n = param3;
+          this.field_t = param0;
+          this.field_r = param2;
+          this.field_j = param1;
+          this.field_m = param5;
+          this.field_w = param6;
+          this.field_p = param4;
+          fieldTemp$0 = tf.field_c;
+          tf.field_c = tf.field_c + 1;
+          this.field_u = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "jd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "jd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -120,88 +100,44 @@ final class jd extends am {
         bd[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 33) {
-                break L1;
-              } else {
-                jd.c(45);
-                break L1;
-              }
-            }
-            var4_int = param2.a((byte) -2, param1);
-            var5 = param2.a(var4_int, param3, -1);
-            stackIn_3_0 = mg.a(param2, var4_int, var5, false);
-            break L0;
+          if (param0 != 33) {
+            jd.c(45);
           }
+          var4_int = param2.a((byte) -2, param1);
+          var5 = param2.a(var4_int, param3, -1);
+          stackIn_3_0 = mg.a(param2, var4_int, var5, false);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var4);
-
-            stackIn_6_1 = new StringBuilder().append("jd.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("jd.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param3 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_7_0), stackIn_13_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void c(int param0) {
@@ -210,14 +146,12 @@ final class jd extends am {
         field_x = null;
         field_s = null;
         field_o = null;
-        if (param0 != 0) {
-          field_q = -13;
-          field_v = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_v = null;
           return;
         }
+        field_q = -13;
+        field_v = null;
     }
 
     static {

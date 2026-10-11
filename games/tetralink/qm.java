@@ -16,37 +16,32 @@ final class qm {
         int var6;
         int var7;
         var7 = TetraLink.field_J;
-        var4 = -94 / ((param0 - -1) / 57);
-        var3 = (this.field_d.length >> -1735415551) - 1;
+        var4 = -94 / ((param0 + 1) / 57);
+        var3 = (this.field_d.length >> 1) - 1;
         var5 = var3 & param1;
-        L0: while (true) {
-          var6 = this.field_d[var5 + (var5 - -1)];
-          if (var6 != -1) {
-            if (this.field_d[var5 + var5] != param1) {
-              var5 = var3 & var5 + 1;
-              continue L0;
-            } else {
-              return var6;
-            }
-          } else {
+        while (true) {
+          var6 = this.field_d[var5 + (var5 + 1)];
+          if (var6 == -1) {
             return -1;
           }
+          if (this.field_d[var5 + var5] == param1) {
+            return var6;
+          }
+          var5 = var3 & var5 + 1;
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
-        if (param0) {
-          field_f = (String) null;
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
+        if (!param0) {
           field_e = null;
           field_f = null;
           return;
         }
+        field_f = (String) null;
+        field_e = null;
+        field_f = null;
     }
 
     qm(int[] param0) {
@@ -55,72 +50,39 @@ final class qm {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var3Lifetime1;
         try {
-          L0: {
-            var2_int = 1;
-            L1: while (true) {
-              if (param0.length - -(param0.length >> 1782997697) < var2_int) {
-                this.field_d = new int[var2_int - -var2_int];
-                var3 = 0;
-                L2: while (true) {
-                  if (var2_int + var2_int <= var3) {
-                    var3 = 0;
-                    L3: while (true) {
-                      if (param0.length <= var3) {
-                        break L0;
-                      } else {
-                        var4 = param0[var3] & -1 + var2_int;
-                        L4: while (true) {
-                          if ((this.field_d[1 + (var4 + var4)] ^ -1) == 0) {
-                            this.field_d[var4 + var4] = param0[var3];
-                            this.field_d[1 + (var4 + var4)] = var3;
-                            var3++;
-                            continue L3;
-                          } else {
-                            var4 = var2_int - 1 & 1 + var4;
-                            continue L4;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    this.field_d[var3] = -1;
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var2_int = var2_int << 1;
-                continue L1;
-              }
-            }
+          var2_int = 1;
+          while (param0.length + (param0.length >> 1) >= var2_int) {
+            var2_int = var2_int << 1;
           }
+          this.field_d = new int[var2_int + var2_int];
+          for (var3 = 0; var2_int + var2_int > var3; var3++) {
+            this.field_d[var3] = -1;
+          }
+          for (var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
+            var4 = param0[var3Lifetime1] & -1 + var2_int;
+            while (this.field_d[1 + (var4 + var4)] != -1) {
+              var4 = var2_int - 1 & 1 + var4;
+            }
+            this.field_d[var4 + var4] = param0[var3Lifetime1];
+            this.field_d[1 + (var4 + var4)] = var3Lifetime1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("qm.<init>(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("qm.<init>(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

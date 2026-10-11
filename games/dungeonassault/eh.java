@@ -19,32 +19,12 @@ final class eh {
     int field_c;
 
     final static boolean b(int param0) {
-        int stackIn_6_0 = 0;
-        L0: {
-          if (param0 >= 83) {
-            break L0;
-          } else {
-            field_o = (ed) null;
-            break L0;
-          }
+        boolean stackIn_6_0 = false;
+        if (param0 < 83) {
+          field_o = (ed) null;
         }
-        L1: {
-          L2: {
-            if (il.field_c == null) {
-              break L2;
-            } else {
-              if (!il.field_c.b(-108)) {
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-          }
-          stackIn_6_0 = 0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        stackIn_6_0 = (il.field_c != null) && (il.field_c.b(-108));
+        return stackIn_6_0;
     }
 
     final static boolean a(boolean param0, String param1) {
@@ -53,54 +33,34 @@ final class eh {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                eh.b(-91);
-                break L1;
-              }
-            }
-            var3 = (CharSequence) ((Object) param1);
-            stackIn_3_0 = nn.field_k.equals(jm.a((byte) 59, var3));
-            break L0;
+          if (!param0) {
+            eh.b(-91);
           }
+          var3 = (CharSequence) ((Object) param1);
+          stackIn_3_0 = nn.field_k.equals(jm.a((byte) 59, var3));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("eh.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("eh.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(byte param0) {
         this.field_n = null;
         if (param0 != -19) {
-            String var3 = (String) null;
-            eh.a(true, (String) null);
+          String var3 = (String) null;
+          eh.a(true, (String) null);
         }
         this.field_l = null;
     }
@@ -110,68 +70,44 @@ final class eh {
         field_a = null;
         field_o = null;
         if (param0 <= 49) {
-            String var2 = (String) null;
-            eh.a(false, (String) null);
+          String var2 = (String) null;
+          eh.a(false, (String) null);
         }
     }
 
     private final cn a(byte param0, int param1) {
+        int var3_int = 0;
         cn var3;
-        int var3_int;
         int var5;
         int var4;
         cn var4_ref_cn;
         cn var6;
-        L0: {
-          var5 = DungeonAssault.field_K;
-          if (this.field_l != null) {
-            break L0;
-          } else {
-            this.field_l = new il[this.field_c];
-            break L0;
-          }
+        cn var3Lifetime1;
+        var5 = DungeonAssault.field_K;
+        if (this.field_l == null) {
+          this.field_l = new il[this.field_c];
         }
-        L1: {
-          if (null == this.field_l[param1]) {
-            break L1;
-          } else {
-            var3 = this.field_l[param1].a(16);
-            if (var3 == null) {
-              break L1;
-            } else {
-              return var3;
-            }
-          }
-        }
-        var3_int = 0;
-        L2: while (true) {
-          if (var3_int >= this.field_c) {
-            var4 = -62 / ((56 - param0) / 55);
-            var6 = ia.a(this.field_b, this.field_m, this.field_i, 2316, this.field_g, Integer.toString(this.field_k[param1]), this.field_d);
-            var3 = var6;
-            this.field_l[param1] = new il(var6);
+        if (null != this.field_l[param1]) {
+          var3 = this.field_l[param1].a(16);
+          if (var3 != null) {
             return var3;
-          } else {
-            if (this.field_k[var3_int] == this.field_k[param1]) {
-              if (null != this.field_l[var3_int]) {
-                var4_ref_cn = this.field_l[var3_int].a(16);
-                if (var4_ref_cn != null) {
-                  this.field_l[param1] = this.field_l[var3_int];
-                  return var4_ref_cn;
-                } else {
-                  var3_int++;
-                  continue L2;
-                }
-              } else {
-                var3_int++;
-                continue L2;
-              }
-            } else {
-              var3_int++;
-              continue L2;
+          }
+        }
+        for (var3_int = 0; var3_int < this.field_c; var3_int++) {
+          if (this.field_k[var3_int] == this.field_k[param1] &&
+            null != this.field_l[var3_int]) {
+            var4_ref_cn = this.field_l[var3_int].a(16);
+            if (var4_ref_cn != null) {
+              this.field_l[param1] = this.field_l[var3_int];
+              return var4_ref_cn;
             }
           }
         }
+        var4 = -62 / ((56 - param0) / 55);
+        var6 = ia.a(this.field_b, this.field_m, this.field_i, 2316, this.field_g, Integer.toString(this.field_k[param1]), this.field_d);
+        var3Lifetime1 = var6;
+        this.field_l[param1] = new il(var6);
+        return var3Lifetime1;
     }
 
     final cn a(int param0, int param1, int param2, int param3) {
@@ -179,81 +115,40 @@ final class eh {
         Object var6;
         int var7;
         cn var8;
-        L0: {
-          var7 = DungeonAssault.field_K;
-          if (param0 != this.field_g) {
-            break L0;
-          } else {
-            if (this.field_m != param2) {
-              break L0;
-            } else {
-              return this.a((byte) -94, param1);
-            }
-          }
+        var7 = DungeonAssault.field_K;
+        if (param0 == this.field_g &&
+          this.field_m == param2) {
+          return this.a((byte) -94, param1);
         }
-        if (param3 == 0) {
-          L1: {
-            if (this.field_n == null) {
-              this.field_n = new md();
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          var5 = (fl) ((Object) this.field_n.e(param3 ^ -24172));
-          L2: while (true) {
-            L3: {
-              if (var5 == null) {
-                break L3;
-              } else {
-                L4: {
-                  if (var5.field_q != param0) {
-                    break L4;
-                  } else {
-                    if (param2 == var5.field_p) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                var5 = (fl) ((Object) this.field_n.a(param3 ^ 4));
-                continue L2;
-              }
-            }
-            L5: {
-              if (var5 == null) {
-                var5 = new fl(param0, param2, this.field_c);
-                this.field_n.a(var5, false);
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              var6 = null;
-              if (var5.field_k[param1] == null) {
-                break L6;
-              } else {
-                var6 = var5.field_k[param1].a(param3 ^ 16);
-                break L6;
-              }
-            }
-            L7: {
-              if (var6 == null) {
-                var8 = lc.a(-121, this.a((byte) -105, param1), param0, param2);
-                var6 = var8;
-                var5.field_k[param1] = new il(var8);
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            return (cn) (var6);
-          }
-        } else {
+        if (param3 != 0) {
           return (cn) null;
         }
+        if (this.field_n == null) {
+          this.field_n = new md();
+        }
+        var5 = (fl) (this.field_n.e(param3 ^ -24172));
+        while (var5 != null) {
+          if (var5.field_q != param0 ||
+            param2 != var5.field_p) {
+            var5 = (fl) (this.field_n.a(param3 ^ 4));
+            continue;
+          }
+          break;
+        }
+        if (var5 == null) {
+          var5 = new fl(param0, param2, this.field_c);
+          this.field_n.a(var5, false);
+        }
+        var6 = null;
+        if (var5.field_k[param1] != null) {
+          var6 = var5.field_k[param1].a(param3 ^ 16);
+        }
+        if (var6 == null) {
+          var8 = lc.a(-121, this.a((byte) -105, param1), param0, param2);
+          var6 = var8;
+          var5.field_k[param1] = new il(var8);
+        }
+        return (cn) (var6);
     }
 
     static {

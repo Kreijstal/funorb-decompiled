@@ -13,8 +13,8 @@ abstract class jg {
 
     final static int c(int param0) {
         if (param0 != 24178) {
-            jg.c(61);
-            return em.field_d;
+          jg.c(61);
+          return em.field_d;
         }
         return em.field_d;
     }
@@ -33,100 +33,57 @@ abstract class jg {
         byte[] stackIn_14_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 != null) {
-              if (!(param1 instanceof byte[])) {
-                L1: {
-                  if (!param0) {
-                    break L1;
-                  } else {
-                    jg.a(-40);
-                    break L1;
-                  }
-                }
-                if (param1 instanceof hd) {
-                  var4 = (hd) (param1);
-                  stackIn_14_0 = var4.b(256);
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  throw new IllegalArgumentException();
-                }
-              } else {
-                var3 = (byte[]) (param1);
-                if (!param2) {
-                  stackIn_8_0 = (byte[]) (var3);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  stackIn_6_0 = rl.a(1, var3);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == null) {
+            stackIn_2_0 = null;
+            return (byte[]) (stackIn_2_0);
           }
+          if (param1 instanceof byte[]) {
+            var3 = (byte[]) (param1);
+            if (!param2) {
+              stackIn_8_0 = var3;
+              return stackIn_8_0;
+            }
+            stackIn_6_0 = rl.a(1, var3);
+            return stackIn_6_0;
+          }
+          if (param0) {
+            jg.a(-40);
+          }
+          if (!(param1 instanceof hd)) {
+            throw new IllegalArgumentException();
+          }
+          var4 = (hd) (param1);
+          stackIn_14_0 = var4.b(256);
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
-
-            stackIn_18_1 = new StringBuilder().append("jg.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L2;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (byte[]) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("jg.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_8_0;
-            } else {
-              return stackIn_14_0;
-            }
+            stackIn_19_2 = "{...}";
           }
+          throw pf.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 > -9) {
-          jg.a(-122);
-          field_a = null;
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 <= -9) {
           field_a = null;
           field_f = null;
           field_b = null;
           return;
         }
+        jg.a(-122);
+        field_a = null;
+        field_f = null;
+        field_b = null;
     }
 
     static {

@@ -14,7 +14,7 @@ final class hf {
 
     public static void a(byte param0) {
         if (param0 != 19) {
-            return;
+          return;
         }
         field_d = null;
         field_i = null;
@@ -39,25 +39,24 @@ final class hf {
         ef.field_d[16] = tv.field_e;
         ef.field_d[4] = tc.field_c;
         ef.field_d[15] = ig.field_r;
-        if (param0 != 7670) {
-          return;
-        } else {
+        if (param0 == 7670) {
           ef.field_d[5] = sa.field_f;
           return;
         }
     }
 
     final static void a(ha param0, byte param1, boolean param2) {
-        if (param0 == null || param0.field_b) {
-            return;
+        if (param0 == null ||
+          param0.field_b) {
+          return;
         }
         try {
-            if (param1 != 9) {
-                field_e = (String) null;
-            }
-            param0.a(true, param0.field_sb);
+          if (param1 != 9) {
+            field_e = (String) null;
+          }
+          param0.a(true, param0.field_sb);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -66,46 +65,26 @@ final class hf {
         int var4 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            var3_int = param2;
-            L1: while (true) {
-              if (param1.length <= var3_int) {
-                break L0;
-              } else {
-                fn.a(8678, param0, 0, param1[var3_int]);
-                var3_int++;
-                continue L1;
-              }
-            }
+          for (var3_int = param2; param1.length > var3_int; var3_int++) {
+            fn.a(8678, param0, 0, param1[var3_int]);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("hf.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("hf.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 

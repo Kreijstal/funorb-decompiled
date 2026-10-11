@@ -15,7 +15,7 @@ final class hb implements Iterator {
 
     public final void remove() {
         if (this.field_c == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_c.c((byte) -90);
         this.field_c = null;
@@ -25,40 +25,45 @@ final class hb implements Iterator {
         this.field_g = this.field_e.field_b[0].field_b;
         this.field_c = null;
         if (param0 != -59) {
-            this.hasNext();
+          this.hasNext();
         }
         this.field_f = 1;
     }
 
     public final boolean hasNext() {
         int fieldTemp$0 = 0;
-        int var2 = EscapeVector.field_A;
+        int var2;
+        var2 = EscapeVector.field_A;
         if (this.field_g != this.field_e.field_b[-1 + this.field_f]) {
-            return true;
+          return true;
         }
-        while (this.field_e.field_g > this.field_f) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            if (this.field_e.field_b[fieldTemp$0].field_b != this.field_e.field_b[this.field_f - 1]) {
-                this.field_g = this.field_e.field_b[-1 + this.field_f].field_b;
-                return true;
-            }
+        while (true) {
+          if (this.field_e.field_g <= this.field_f) {
+            return false;
+          }
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          if (this.field_e.field_b[fieldTemp$0].field_b == this.field_e.field_b[this.field_f - 1]) {
             this.field_g = this.field_e.field_b[-1 + this.field_f];
+            continue;
+          }
+          break;
         }
-        return false;
+        this.field_g = this.field_e.field_b[-1 + this.field_f].field_b;
+        return true;
     }
 
     public static void a(boolean param0) {
         field_d = null;
         field_a = null;
         if (param0) {
-            hb.a(true);
+          hb.a(true);
         }
         field_b = (ed[][]) null;
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         hg var1;
         int var2;
         var2 = EscapeVector.field_A;
@@ -67,33 +72,27 @@ final class hb implements Iterator {
           this.field_g = var1.field_b;
           this.field_c = var1;
           return var1;
-        } else {
-          L0: while (true) {
-            if (this.field_e.field_g > this.field_f) {
-              fieldTemp$1 = this.field_f;
-              this.field_f = this.field_f + 1;
-              var1 = this.field_e.field_b[fieldTemp$1].field_b;
-              if (this.field_e.field_b[this.field_f + -1] != var1) {
-                this.field_c = var1;
-                this.field_g = var1.field_b;
-                return var1;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
         }
+        do {
+          if (this.field_e.field_g <= this.field_f) {
+            return null;
+          }
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          var1 = this.field_e.field_b[fieldTemp$0].field_b;
+        } while (this.field_e.field_b[this.field_f - 1] == var1);
+        this.field_c = var1;
+        this.field_g = var1.field_b;
+        return var1;
     }
 
     hb(qm param0) {
         this.field_c = null;
         try {
-            this.field_e = param0;
-            this.a((byte) -59);
+          this.field_e = param0;
+          this.a((byte) -59);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,17 +104,17 @@ final class hb implements Iterator {
         int var2 = 0;
         int var1 = 0;
         field_d = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)((var0 << -812795167) + -1);
-            var6 = (long)((var0 << 103230849) + 1);
-            var3 = (int)((var6 * var6 >> -1075158958) + -32768L);
-            var2 = (int)((var4 * var4 >> 579453714) + -32768L);
-            if (!(field_d.length > var3)) {
-                var3 = -1 + field_d.length;
-            }
-            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var1 <= var3; var1++) {
-                field_d[var1] = var0;
-            }
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)((var0 << 1) - 1);
+          var6 = (long)((var0 << 1) + 1);
+          var3 = (int)((var6 * var6 >> 18) - 32768L);
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          if (!(field_d.length > var3)) {
+            var3 = -1 + field_d.length;
+          }
+          for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            field_d[var1] = var0;
+          }
         }
         field_a = "Five rock busters";
     }

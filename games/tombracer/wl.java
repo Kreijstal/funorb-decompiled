@@ -13,16 +13,16 @@ final class wl extends vg {
         field_h = null;
         field_f = (dk[][]) null;
         if (param0 >= -35) {
-            wl.a((byte) -3);
+          wl.a((byte) -3);
         }
     }
 
     wl(ha param0, ssa param1) {
         try {
-            this.field_g = param0;
-            this.field_j = param1;
+          this.field_g = param0;
+          this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

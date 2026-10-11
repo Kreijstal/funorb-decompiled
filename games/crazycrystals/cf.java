@@ -12,30 +12,22 @@ final class cf {
     static ko field_d;
 
     final static sj a(int param0, int param1) {
+        int var3 = 0;
         sj[] var2;
-        int var3;
         int var4;
         sj[] var5;
         var4 = CrazyCrystals.field_B;
         var5 = rp.a(58);
         var2 = var5;
-        if (param1 > 117) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param0 == var5[var3].field_e) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (param1 <= 117) {
           return (sj) null;
         }
+        for (var3 = 0; var5.length > var3; var3++) {
+          if (param0 == var5[var3].field_e) {
+            return var5[var3];
+          }
+        }
+        return null;
     }
 
     public static void a(int param0) {
@@ -48,7 +40,7 @@ final class cf {
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-            cf.a(-12, -56);
+          cf.a(-12, -56);
         }
     }
 

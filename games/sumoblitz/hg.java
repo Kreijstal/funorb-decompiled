@@ -26,86 +26,49 @@ final class hg extends ms {
         nj[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var4Lifetime1;
         var6 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (0 != param1[param1.length - 1]) {
-                stackIn_4_0 = 0;
-                break L1;
-              } else {
-                stackIn_4_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              var2_int = stackIn_4_0;
-              if (var2_int != 0) {
-                stackIn_7_0 = param1.length;
-                break L2;
-              } else {
-                stackIn_7_0 = param1.length + 1;
-                break L2;
-              }
-            }
-            var3 = new nj[stackIn_7_0];
-            var4 = 0;
-            var4 = 0;
-            L3: while (true) {
-              if (var4 >= param1.length) {
-                L4: {
-                  if (var4 < var3.length) {
-                    var3[var4] = new nj(0, 2);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                var5 = 34 / ((57 - param0) / 53);
-                stackIn_14_0 = (nj[]) (var3);
-                break L0;
-              } else {
-                var3[var4] = new nj(param1[var4], 2);
-                var4++;
-                continue L3;
-              }
-            }
+          stackIn_4_0 = (0 != param1[param1.length - 1]) ? 0 : 1;
+          var2_int = stackIn_4_0;
+          if (var2_int != 0) {
+            stackIn_7_0 = param1.length;
+          } else {
+            stackIn_7_0 = param1.length + 1;
           }
+          var3 = new nj[stackIn_7_0];
+          var4 = 0;
+          for (var4Lifetime1 = 0; var4Lifetime1 < param1.length; var4Lifetime1++) {
+            var3[var4Lifetime1] = new nj(param1[var4Lifetime1], 2);
+          }
+          if (var4Lifetime1 < var3.length) {
+            var3[var4Lifetime1] = new nj(0, 2);
+          }
+          var5 = 34 / ((57 - param0) / 53);
+          stackIn_14_0 = var3;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("hg.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("hg.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     public static void a(byte param0) {
         field_m = null;
         field_l = null;
         if (param0 != 12) {
-            int[] var2 = (int[]) null;
-            hg.a(-33, (int[]) null);
+          int[] var2 = (int[]) null;
+          hg.a(-33, (int[]) null);
         }
         field_t = null;
         field_k = null;
@@ -128,8 +91,8 @@ final class hg extends ms {
         field_l = new float[16384];
         double var0 = 0.0003834951969714103;
         for (var2 = 0; var2 < 16384; var2++) {
-            field_k[var2] = (float)Math.sin((double)var2 * var0);
-            field_l[var2] = (float)Math.cos(var0 * (double)var2);
+          field_k[var2] = (float)Math.sin((double)var2 * var0);
+          field_l[var2] = (float)Math.cos(var0 * (double)var2);
         }
         field_m = new int[1];
     }

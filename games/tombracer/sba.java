@@ -8,7 +8,7 @@ final class sba extends ci {
 
     public static void c(int param0) {
         if (param0 != -14063) {
-            return;
+          return;
         }
         field_n = null;
         field_m = null;
@@ -30,28 +30,28 @@ final class sba extends ci {
         int[][] var13 = var15;
         int[][] var3 = var13;
         if (param1 != -1) {
-            return (int[][]) null;
+          return (int[][]) null;
         }
-        if (!(!this.field_h.field_f)) {
-            var19 = this.a(param0, 0, -1);
-            var21 = var19[0];
-            var22 = var19[1];
-            var23 = var19[2];
-            var8 = var20[0];
-            var9 = var20[1];
-            var10 = var20[2];
-            for (var11 = 0; var11 < ns.field_g; var11++) {
-                var8[var11] = -var21[var11] + 4096;
-                var9[var11] = -var22[var11] + 4096;
-                var10[var11] = 4096 - var23[var11];
-            }
+        if (this.field_h.field_f) {
+          var19 = this.a(param0, 0, -1);
+          var21 = var19[0];
+          var22 = var19[1];
+          var23 = var19[2];
+          var8 = var20[0];
+          var9 = var20[1];
+          var10 = var20[2];
+          for (var11 = 0; var11 < ns.field_g; var11++) {
+            var8[var11] = -var21[var11] + 4096;
+            var9[var11] = -var22[var11] + 4096;
+            var10[var11] = 4096 - var23[var11];
+          }
         }
         return var13;
     }
 
     final static hja d(byte param0) {
         if (param0 <= 80) {
-            field_n = (String) null;
+          field_n = (String) null;
         }
         hja var1 = new hja(ika.field_a, kba.field_s, ak.field_p[0], pg.field_C[0], mq.field_b[0], iga.field_m[0], ck.field_c[0], mga.field_g);
         loa.a((byte) 127);
@@ -63,70 +63,32 @@ final class sba extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            L1: {
-              if (param2 != 0) {
-                break L1;
-              } else {
-                L2: {
-                  stackIn_3_0 = this;
-
-                  if (-2 != (param1.h(255) ^ -1)) {
-                    stackIn_4_0 = this;
-                    stackIn_4_1 = 0;
-                    break L2;
-                  } else {
-                    stackIn_4_0 = this;
-                    stackIn_4_1 = 1;
-                    break L2;
-                  }
-                }
-                ((sba) (this)).field_g = stackIn_4_1 != 0;
-                break L1;
-              }
-            }
-            L3: {
-              if (param0 == 107) {
-                break L3;
-              } else {
-                field_n = (String) null;
-                break L3;
-              }
-            }
-            break L0;
+          if (param2 == 0) {
+            stackIn_4_1 = (param1.h(255) == 1);
+            this.field_g = stackIn_4_1;
           }
+          if (param0 != 107) {
+            field_n = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("sba.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("sba.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -135,15 +97,15 @@ final class sba extends ci {
         int var5 = 0;
         int var6 = TombRacer.field_G ? 1 : 0;
         if (param0 != 1) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
         int[] var7 = this.field_i.a((byte) 63, param1);
         int[] var3 = var7;
         if (this.field_i.field_d) {
-            var4 = this.c(0, -106, param1);
-            for (var5 = 0; ns.field_g > var5; var5++) {
-                var7[var5] = 4096 - var4[var5];
-            }
+          var4 = this.c(0, -106, param1);
+          for (var5 = 0; ns.field_g > var5; var5++) {
+            var7[var5] = 4096 - var4[var5];
+          }
         }
         return var3;
     }

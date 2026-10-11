@@ -11,22 +11,19 @@ final class gp extends ana {
     static String[] field_B;
 
     final boolean c(byte param0) {
-        int var2;
-        int fieldTemp$1 = this.field_l - 1;
+        int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (-1 >= (fieldTemp$1 ^ -1)) {
-          if (-26 == (this.field_l ^ -1)) {
-            jja.a(256, -1, 52);
-            this.e(44);
-            return false;
-          } else {
-            return false;
-          }
-        } else {
-          var2 = 89 % ((param0 - 71) / 47);
+        if (fieldTemp$0 < 0) {
+          int var2 = 89 % ((param0 - 71) / 47);
           this.f(99);
           return true;
         }
+        if (this.field_l != 25) {
+          return false;
+        }
+        jja.a(256, -1, 52);
+        this.e(44);
+        return false;
     }
 
     public static void d(int param0) {
@@ -35,8 +32,8 @@ final class gp extends ana {
         field_B = null;
         field_v = null;
         if (param0 != -13837) {
-            String var2 = (String) null;
-            gp.b(-16, (String) null);
+          String var2 = (String) null;
+          gp.b(-16, (String) null);
         }
     }
 
@@ -44,20 +41,20 @@ final class gp extends ana {
         ad var4 = null;
         int var5 = BachelorFridge.field_y;
         if (param0 != 44) {
-            return;
+          return;
         }
         aga var2 = this.field_w.field_l.a(76, this.field_q.field_h);
-        if (!(!var2.i(69))) {
-            return;
+        if (var2.i(69)) {
+          return;
         }
-        iv var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
+        iv var3 = (iv) (this.field_w.field_o.b((byte) 90));
         al.a(107, this.field_w.field_k);
         while (var3 != null) {
-            var3.a(var2, this.field_q.field_h, 12);
-            var4 = var3.field_h.a(-27449, this.field_q);
-            var4.b(-1, 18);
-            var4.a(24831, 110, kna.field_g[44]);
-            var3 = (iv) ((Object) this.field_w.field_o.c(param0 ^ 44));
+          var3.a(var2, this.field_q.field_h, 12);
+          var4 = var3.field_h.a(-27449, this.field_q);
+          var4.b(-1, 18);
+          var4.a(24831, 110, kna.field_g[44]);
+          var3 = (iv) (this.field_w.field_o.c(param0 ^ 44));
         }
     }
 
@@ -70,30 +67,30 @@ final class gp extends ana {
         int var7 = 0;
         int var8 = 0;
         try {
-            var2_int = mk.field_p;
-            var3 = gd.field_m;
-            var4 = qs.field_m.field_jb.b(param1, 500);
-            var5 = 6 + qs.field_m.field_jb.c(param1, 500);
-            var6 = 2 + rg.field_h * var4;
-            var7 = oi.a(12, var5, var2_int, -21264);
-            if (param0 != -25942) {
-                gp.d(20);
-            }
-            var8 = nga.a(var6, var3, (byte) 126, 20);
-            dg.a(var7, var8, var5, var6, 0);
-            dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
-            qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
+          var2_int = mk.field_p;
+          var3 = gd.field_m;
+          var4 = qs.field_m.field_jb.b(param1, 500);
+          var5 = 6 + qs.field_m.field_jb.c(param1, 500);
+          var6 = 2 + rg.field_h * var4;
+          var7 = oi.a(12, var5, var2_int, -21264);
+          if (param0 != -25942) {
+            gp.d(20);
+          }
+          var8 = nga.a(var6, var3, (byte) 126, 20);
+          dg.a(var7, var8, var5, var6, 0);
+          dg.c(1 + var7, 1 + var8, var5 - 2, var6 - 2, 16777088);
+          qs.field_m.field_jb.a(param1, 3 + var7, -qs.field_m.field_jb.field_u + (df.field_r + 1 + var8), 500, 1000, 0, -1, 0, 0, rg.field_h);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     gp(gj param0, bt param1) {
         super(param0, param1);
         try {
-            this.field_w = param1;
+          this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "gp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,30 +101,15 @@ final class gp extends ana {
     final static void a(boolean param0, int param1) {
         if (it.field_l == null) {
           it.field_l = new int[param1];
-          if (param0) {
-            return;
-          } else {
-            field_v = (String) null;
-            return;
-          }
         } else {
-          if (it.field_l.length >= param1) {
-            if (!param0) {
-              field_v = (String) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (it.field_l.length < param1) {
             it.field_l = new int[param1];
-            if (param0) {
-              return;
-            } else {
-              field_v = (String) null;
-              return;
-            }
           }
         }
+        if (param0) {
+          return;
+        }
+        field_v = (String) null;
     }
 
     static {

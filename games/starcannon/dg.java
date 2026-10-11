@@ -14,8 +14,8 @@ final class dg extends rf {
 
     final static int b(byte param0) {
         if (param0 != -18) {
-            dg.a(-106);
-            return qb.field_a;
+          dg.a(-106);
+          return qb.field_a;
         }
         return qb.field_a;
     }
@@ -23,7 +23,7 @@ final class dg extends rf {
     final static void a(int param0) {
         ti.field_c = -1;
         if (param0 != 11199) {
-            return;
+          return;
         }
         di.field_m = 0;
         eg.field_h = false;

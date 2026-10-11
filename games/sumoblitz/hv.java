@@ -13,35 +13,10 @@ final class hv {
     }
 
     final boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_7_1 = 0;
-        if (param0 != -20011) {
-          return false;
-        } else {
-          L0: {
-            if (pd.field_m != this) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          L1: {
-
-
-            if (mo.field_w != this) {
-
-              stackIn_7_1 = 0;
-              break L1;
-            } else {
-
-              stackIn_7_1 = 1;
-              break L1;
-            }
-          }
-          return (stackIn_4_0 | stackIn_7_1) != 0;
+        if (param0 == -20011) {
+          return ((pd.field_m == this ? 1 : 0) | (mo.field_w == this ? 1 : 0)) != 0;
         }
+        return false;
     }
 
     public static void b(int param0) {
@@ -50,7 +25,7 @@ final class hv {
         field_b = null;
         field_e = null;
         if (param0 != -7520) {
-            hv.b(-61);
+          hv.b(-61);
         }
     }
 

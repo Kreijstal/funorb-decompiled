@@ -25,9 +25,7 @@ final class ec {
         field_k = null;
         field_p = null;
         field_i = null;
-        if (param0 < 78) {
-          return;
-        } else {
+        if (param0 >= 78) {
           field_c = null;
           field_f = null;
           field_j = null;
@@ -40,35 +38,28 @@ final class ec {
     }
 
     final static void a(int param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         uf var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            var1 = we.field_b;
-            L1: while (true) {
-              if (!sc.c((byte) -104)) {
-                if (param0 <= -91) {
-                  break L0;
-                } else {
-                  ec.a(-123);
-                  return;
-                }
-              } else {
-                var1.f(8, -4);
-                fieldTemp$1 = var1.field_n + 1;
-                var1.field_n = var1.field_n + 1;
-                var2 = fieldTemp$1;
-                ba.a(-32141, var1);
-                we.field_b.b(var1.field_n - var2, true);
-                continue L1;
-              }
-            }
+          var1 = we.field_b;
+          while (sc.c((byte) -104)) {
+            var1.f(8, -4);
+            fieldTemp$0 = var1.field_n + 1;
+            var1.field_n = var1.field_n + 1;
+            var2 = fieldTemp$0;
+            ba.a(-32141, var1);
+            we.field_b.b(var1.field_n - var2, true);
           }
+          if (param0 <= -91) {
+            return;
+          }
+          ec.a(-123);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -78,12 +69,12 @@ final class ec {
 
     ec(int param0, String param1, mm param2) {
         try {
-            this.field_d = param0;
-            this.field_o = param1;
-            this.field_n = param2.a(this.field_o) + 46;
-            this.field_r = 30;
+          this.field_d = param0;
+          this.field_o = param1;
+          this.field_n = param2.a(this.field_o) + 46;
+          this.field_r = 30;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ec.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

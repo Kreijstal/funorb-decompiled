@@ -20,22 +20,19 @@ class wt extends wf {
         field_m = null;
         field_k = null;
         if (param0 != 14349) {
-            wt.a(55);
+          wt.a(55);
         }
     }
 
     final void d(int param0) {
-        if (null != this.field_f) {
-          if (param0 > -113) {
-            return;
-          } else {
-            this.field_f.field_j = this.field_j;
-            this.field_j.field_f = this.field_f;
-            this.field_f = null;
-            this.field_j = null;
-            return;
-          }
-        } else {
+        if (null == this.field_f) {
+          return;
+        }
+        if (param0 <= -113) {
+          this.field_f.field_j = this.field_j;
+          this.field_j.field_f = this.field_f;
+          this.field_f = null;
+          this.field_j = null;
           return;
         }
     }

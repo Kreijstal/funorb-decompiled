@@ -17,7 +17,7 @@ public class nd {
 
     public static File a(String param0, int param1) {
         if (param1 != -19154) {
-            return (File) null;
+          return (File) null;
         }
         return nd.a(field_a, param0, field_d, (byte) -75);
     }
@@ -32,66 +32,41 @@ public class nd {
         field_d = param1;
         field_a = param0;
         try {
-          L0: {
-            field_e = System.getProperty("user.home");
-            if (field_e != null) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              L1: {
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (param2 <= -52) {
-                field_b = true;
-                return;
-              } else {
-                field_b = false;
-                field_b = true;
-                return;
-              }
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_e = System.getProperty("user.home");
+          if (field_e == null) {
             if (null == field_e) {
               field_e = "~/";
-              break L2;
-            } else {
-              break L2;
             }
-          }
-          if (param2 > -52) {
+            if (param2 <= -52) {
+              field_b = true;
+              return;
+            }
             field_b = false;
             field_b = true;
             return;
-          } else {
+          }
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (null == field_e) {
+            field_e = "~/";
+          }
+          if (param2 <= -52) {
             field_b = true;
             return;
           }
-        }
-        L3: {
-          if (null == field_e) {
-            field_e = "~/";
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        if (param2 > -52) {
           field_b = false;
           field_b = true;
           return;
-        } else {
-          field_b = true;
-          return;
         }
+        if (null == field_e) {
+          field_e = "~/";
+        }
+        if (param2 > -52) {
+          field_b = false;
+        }
+        field_b = true;
     }
 
     static {

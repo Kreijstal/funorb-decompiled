@@ -11,20 +11,18 @@ final class mb {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 > -93) {
-          field_a = (java.math.BigInteger) null;
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 <= -93) {
           field_b = null;
           field_a = null;
           field_e = null;
           field_c = null;
           return;
         }
+        field_a = (java.math.BigInteger) null;
+        field_b = null;
+        field_a = null;
+        field_e = null;
+        field_c = null;
     }
 
     static {

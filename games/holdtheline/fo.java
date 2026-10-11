@@ -15,7 +15,7 @@ final class fo extends hl {
         field_n = null;
         field_m = null;
         if (param0) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
     }
 

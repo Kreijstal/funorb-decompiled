@@ -15,81 +15,48 @@ final class jra extends loa {
         int var7 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var5_intLifetime1;
+        int var6Lifetime1;
         var7 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var5_int = 1;
-            L1: while (true) {
-              if (-1 + param2.field_f <= var5_int) {
-                L2: {
-                  var5_int = 2;
-                  if (param1 >= 73) {
-                    break L2;
-                  } else {
-                    jra.a(78);
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var5_int >= -2 + param2.field_a) {
-                    break L0;
-                  } else {
-                    var6 = 1 + this.field_a.a(param2.field_f + -2, 0);
-                    param2.a(var5_int, 0, 0, var6);
-                    var5_int += 2;
-                    continue L3;
-                  }
-                }
-              } else {
-                var6 = 1;
-                L4: while (true) {
-                  if (-1 + param2.field_a <= var6) {
-                    var5_int++;
-                    continue L1;
-                  } else {
-                    param2.a(var6, 0, 0, var5_int);
-                    var6 += 2;
-                    continue L4;
-                  }
-                }
-              }
+          for (var5_int = 1; -1 + param2.field_f > var5_int; var5_int++) {
+            for (var6 = 1; -1 + param2.field_a > var6; var6 += 2) {
+              param2.a(var6, 0, 0, var5_int);
             }
           }
+          var5_intLifetime1 = 2;
+          if (param1 < 73) {
+            jra.a(78);
+          }
+          while (var5_intLifetime1 < -2 + param2.field_a) {
+            var6Lifetime1 = 1 + this.field_a.a(param2.field_f - 2, 0);
+            param2.a(var5_intLifetime1, 0, 0, var6Lifetime1);
+            var5_intLifetime1 += 2;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var5);
-
-            stackIn_14_1 = new StringBuilder().append("jra.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("jra.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 19290) {
-            jra.a(30);
-            field_c = null;
-            return;
+          jra.a(30);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

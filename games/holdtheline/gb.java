@@ -46,7 +46,7 @@ final class gb {
         field_x = null;
         field_a = null;
         if (param0 >= -73) {
-            return;
+          return;
         }
         field_q = null;
     }

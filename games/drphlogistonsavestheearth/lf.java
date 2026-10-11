@@ -17,63 +17,45 @@ final class lf {
     }
 
     final static String a(long param0, byte param1) {
-        StringBuilder discarded$1 = null;
-        int var3;
-        int var4;
-        long var5;
-        StringBuilder var7;
-        long var8;
-        int var10;
-        int var11;
-        int var12;
-        var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (-1L > (param0 ^ -1L)) {
-          if (6582952005840035281L > param0) {
-            if (param0 % 37L == 0L) {
-              return null;
-            } else {
-              var3 = -106 / ((param1 - 32) / 62);
-              var4 = 0;
-              var5 = param0;
-              L0: while (true) {
-                if (var5 == 0L) {
-                  var7 = new StringBuilder(var4);
-                  L1: while (true) {
-                    if (-1L == (param0 ^ -1L)) {
-                      var7.reverse();
-                      var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
-                      return var7.toString();
-                    } else {
-                      L2: {
-                        var8 = param0;
-                        param0 = param0 / 37L;
-                        var10 = bd.field_K[(int)(-(param0 * 37L) + var8)];
-                        if (var10 != 95) {
-                          break L2;
-                        } else {
-                          var11 = var7.length() + -1;
-                          var10 = 160;
-                          var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
-                          break L2;
-                        }
-                      }
-                      discarded$1 = var7.append((char) var10);
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var5 = var5 / 37L;
-                  var4++;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        int var4 = 0;
+        long var5 = 0L;
+        StringBuilder var7 = null;
+        long var8 = 0L;
+        int var10 = 0;
+        int var11 = 0;
+        StringBuilder discarded$0 = null;
+        int var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (param0 <= 0L) {
           return null;
         }
+        if (6582952005840035281L <= param0) {
+          return null;
+        }
+        if (param0 % 37L != 0L) {
+          int var3 = -106 / ((param1 - 32) / 62);
+          var4 = 0;
+          var5 = param0;
+          while (var5 != 0L) {
+            var5 = var5 / 37L;
+            var4++;
+          }
+          var7 = new StringBuilder(var4);
+          while (param0 != 0L) {
+            var8 = param0;
+            param0 = param0 / 37L;
+            var10 = bd.field_K[(int)(-(param0 * 37L) + var8)];
+            if (var10 == 95) {
+              var11 = var7.length() - 1;
+              var10 = 160;
+              var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
+            }
+            discarded$0 = var7.append((char) var10);
+          }
+          var7.reverse();
+          var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
+          return var7.toString();
+        }
+        return null;
     }
 
     static {

@@ -11,98 +11,53 @@ final class vm {
     static String field_g;
 
     final static eq a(int param0, byte param1) {
-        lm stackIn_4_0 = null;
-        lm stackIn_8_0 = null;
-        if (param1 > -102) {
-          L0: {
-            vm.b(-99, (byte) 98);
-            if (null != dg.field_f) {
-              stackIn_8_0 = dg.field_f.a(-11434, (long)param0);
-              break L0;
-            } else {
-              stackIn_8_0 = null;
-              break L0;
-            }
-          }
-          return (eq) ((Object) stackIn_8_0);
-        } else {
-          L1: {
-            if (null != dg.field_f) {
-              stackIn_4_0 = dg.field_f.a(-11434, (long)param0);
-              break L1;
-            } else {
-              stackIn_4_0 = null;
-              break L1;
-            }
-          }
-          return (eq) ((Object) stackIn_4_0);
+        if (param1 <= -102) {
+          return null == dg.field_f ? null : (eq) (dg.field_f.a(-11434, (long)param0));
         }
+        vm.b(-99, (byte) 98);
+        return null == dg.field_f ? null : (eq) (dg.field_f.a(-11434, (long)param0));
     }
 
     final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
-        if (param1 != 22) {
-          vm.a(-98, (byte) 84);
-          return el.a(-107, param0, false, param3, param4, param2);
-        } else {
+        if (param1 == 22) {
           return el.a(-107, param0, false, param3, param4, param2);
         }
+        vm.a(-98, (byte) 84);
+        return el.a(-107, param0, false, param3, param4, param2);
     }
 
     final static void b(int param0, byte param1) {
-        if (param1 <= -62) {
-          io.field_e = 3 & param0 >> -964132796;
-          if ((io.field_e ^ -1) >= -3) {
-            L0: {
-              gh.field_v = (14 & param0) >> 923892994;
-              if (-3 > (gh.field_v ^ -1)) {
-                gh.field_v = 2;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            ib.field_e = param0 & 3;
-            if (ib.field_e > 2) {
-              ib.field_e = 2;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              io.field_e = 2;
-              gh.field_v = (14 & param0) >> 923892994;
-              if (-3 > (gh.field_v ^ -1)) {
-                gh.field_v = 2;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            ib.field_e = param0 & 3;
-            if (ib.field_e <= 2) {
-              return;
-            } else {
-              ib.field_e = 2;
-              return;
-            }
-          }
-        } else {
+        if (param1 > -62) {
           return;
         }
+        io.field_e = 3 & param0 >> 4;
+        if (io.field_e > 2) {
+          io.field_e = 2;
+          gh.field_v = (14 & param0) >> 2;
+          if (!(gh.field_v <= 2)) {
+            gh.field_v = 2;
+          }
+          ib.field_e = param0 & 3;
+          if (ib.field_e > 2) {
+            ib.field_e = 2;
+            return;
+          }
+          return;
+        }
+        gh.field_v = (14 & param0) >> 2;
+        if (!(gh.field_v <= 2)) {
+          gh.field_v = 2;
+        }
+        ib.field_e = param0 & 3;
+        if (ib.field_e <= 2) {
+          return;
+        }
+        ib.field_e = 2;
     }
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 <= 77) {
-          vm.a(11);
-          field_b = null;
-          field_g = null;
-          field_c = null;
-          field_a = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 > 77) {
           field_b = null;
           field_g = null;
           field_c = null;
@@ -110,6 +65,12 @@ final class vm {
           field_f = null;
           return;
         }
+        vm.a(11);
+        field_b = null;
+        field_g = null;
+        field_c = null;
+        field_a = null;
+        field_f = null;
     }
 
     static {

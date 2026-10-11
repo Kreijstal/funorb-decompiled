@@ -11,7 +11,7 @@ final class uaa {
         field_b = null;
         field_c = null;
         if (param0 != 5193) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;
@@ -23,79 +23,51 @@ final class uaa {
         int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
+        int var2_intLifetime1;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var2_int = sva.field_d;
-              if (param1.field_d != 2) {
-                if (-5 == (param1.field_d ^ -1)) {
-                  var2_int = bma.field_t[param1.field_d];
-                  break L1;
-                } else {
-                  if ((param1.field_i ^ -1L) != (rb.field_r ^ -1L)) {
-                    var2_int = bma.field_t[param1.field_d];
-                    break L1;
-                  } else {
-                    var2_int = pm.field_a[param1.field_d];
-                    break L1;
-                  }
-                }
+          var2_int = sva.field_d;
+          if (param1.field_d != 2) {
+            if (param1.field_d == 4) {
+              var2_intLifetime1 = bma.field_t[param1.field_d];
+            } else {
+              if (~param1.field_i != ~rb.field_r) {
+                var2_intLifetime1 = bma.field_t[param1.field_d];
               } else {
-                if (param1.field_m) {
-                  var2_int = sva.field_d;
-                  break L1;
-                } else {
-                  L2: {
-                    if (0 != param1.field_c) {
-                      break L2;
-                    } else {
-                      if (-1 != (param1.field_o ^ -1)) {
-                        break L2;
-                      } else {
-                        var2_int = pm.field_a[param1.field_d];
-                        break L1;
-                      }
-                    }
-                  }
-                  var2_int = bma.field_t[param1.field_d];
-                  break L1;
-                }
+                var2_intLifetime1 = pm.field_a[param1.field_d];
               }
             }
-            var3 = 42 / ((param0 - -71) / 44);
-            stackIn_14_0 = var2_int;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("uaa.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L3;
+          } else {
+            if (param1.field_m) {
+              var2_intLifetime1 = sva.field_d;
             } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L3;
+              if (0 == param1.field_c &&
+                param1.field_o == 0) {
+                var2_intLifetime1 = pm.field_a[param1.field_d];
+              } else {
+                var2_intLifetime1 = bma.field_t[param1.field_d];
+              }
             }
           }
-          throw tba.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          var3 = 42 / ((param0 + 71) / 44);
+          stackIn_14_0 = var2_intLifetime1;
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("uaa.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     static {

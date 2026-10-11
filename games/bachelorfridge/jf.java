@@ -10,7 +10,7 @@ final class jf extends pu {
     public static void b(int param0) {
         field_n = (int[][]) null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_l = null;
     }

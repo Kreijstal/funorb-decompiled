@@ -18,58 +18,38 @@ final class sg extends l {
         fe.field_Fb = false;
         vd.field_X = null;
         if (param0 == -2) {
-          if (!kb.field_c) {
-            var1 = mf.field_h;
-            if (0 < var1) {
-              if ((var1 ^ -1) == -2) {
-                vd.field_X = og.field_n;
-                vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              } else {
-                vd.field_X = oi.a(new String[]{Integer.toString(var1)}, di.field_t, param0 + 4);
-                vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              }
-            } else {
-              hf.field_w.h(true);
-              dk.f(389);
-              return;
-            }
-          } else {
+          if (kb.field_c) {
             hf.field_w.k(119);
             return;
           }
+          var1 = mf.field_h;
+          if (0 < var1) {
+            if (var1 == 1) {
+              vd.field_X = og.field_n;
+            } else {
+              vd.field_X = oi.a(new String[]{Integer.toString(var1)}, di.field_t, param0 + 4);
+            }
+            vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
+          }
+          hf.field_w.h(true);
+          dk.f(389);
+          return;
+        }
+        sg.d(82);
+        if (kb.field_c) {
+          hf.field_w.k(119);
         } else {
-          sg.d(82);
-          if (!kb.field_c) {
-            var1 = mf.field_h;
-            if (0 < var1) {
-              if ((var1 ^ -1) == -2) {
-                vd.field_X = og.field_n;
-                vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              } else {
-                vd.field_X = oi.a(new String[]{Integer.toString(var1)}, di.field_t, param0 + 4);
-                vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              }
+          var1 = mf.field_h;
+          if (0 < var1) {
+            if (var1 == 1) {
+              vd.field_X = og.field_n;
             } else {
-              hf.field_w.h(true);
-              dk.f(389);
-              return;
+              vd.field_X = oi.a(new String[]{Integer.toString(var1)}, di.field_t, param0 + 4);
             }
-          } else {
-            hf.field_w.k(119);
-            return;
+            vd.field_X = ll.a((byte) 67, new CharSequence[]{(CharSequence) ((Object) vd.field_X), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ie.field_c)});
           }
+          hf.field_w.h(true);
+          dk.f(389);
         }
     }
 
@@ -77,9 +57,9 @@ final class sg extends l {
         field_k = null;
         field_m = null;
         if (param0 != -2) {
-            field_i = -0.09383044391870499f;
-            field_g = null;
-            return;
+          field_i = -0.09383044391870499f;
+          field_g = null;
+          return;
         }
         field_g = null;
     }
@@ -87,15 +67,15 @@ final class sg extends l {
     final static void c(int param0) {
         rk.a(dc.field_V, (byte) -32);
         if (param0 != 0) {
-            sg.c(-27);
+          sg.c(-27);
         }
     }
 
     sg(byte[] param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

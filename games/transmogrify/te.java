@@ -12,13 +12,13 @@ final class te {
 
     final static void a(gd param0, byte param1, int param2) {
         try {
-            rh.field_r.a(param0, -101);
-            ne.a((byte) 7, param0, param2);
-            if (param1 != -10) {
-                te.a((byte) 61);
-            }
+          rh.field_r.a(param0, -101);
+          ne.a((byte) 7, param0, param2);
+          if (param1 != -10) {
+            te.a((byte) 61);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "te.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "te.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -27,64 +27,44 @@ final class te {
         int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         var3 = this.field_g.length;
-        L0: while (true) {
-          if (var3 > param0) {
-            if (param1 > -38) {
-              field_b = (String) null;
-              return var3;
-            } else {
-              return var3;
-            }
-          } else {
-            if (this.field_d) {
-              if (0 != var3) {
-                var3 = var3 * this.field_e;
-                continue L0;
-              } else {
-                var3 = 1;
-                continue L0;
-              }
-            } else {
-              var3 = var3 + this.field_e;
-              continue L0;
-            }
+        while (var3 <= param0) {
+          if (!this.field_d) {
+            var3 = var3 + this.field_e;
+            continue;
           }
+          if (0 != var3) {
+            var3 = var3 * this.field_e;
+            continue;
+          }
+          var3 = 1;
         }
+        if (param1 <= -38) {
+          return var3;
+        }
+        field_b = (String) null;
+        return var3;
     }
 
     private final void a(int param0, int param1, int param2) {
-        int discarded$1 = 0;
-        L0: {
-          if (this.field_a < param0) {
-            this.field_a = param0;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_a < param0) {
+          this.field_a = param0;
         }
-        L1: {
-          if (param0 >= this.field_g.length) {
-            this.c(param0, 0);
-            break L1;
-          } else {
-            break L1;
-          }
+        if (param0 >= this.field_g.length) {
+          this.c(param0, 0);
         }
         this.field_g[param0] = param1;
-        if (param2 > -111) {
-          discarded$1 = this.a(-66, (byte) 61);
-          return;
-        } else {
+        if (param2 <= -111) {
           return;
         }
+        int discarded$0 = this.a(-66, (byte) 61);
     }
 
     final int b(int param0, int param1) {
         if (param1 != -14927) {
-            return 44;
+          return 44;
         }
-        if (!(this.field_a >= param0)) {
-            throw new ArrayIndexOutOfBoundsException(param0);
+        if (this.field_a < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
         }
         return this.field_g[param0];
     }
@@ -92,10 +72,7 @@ final class te {
     final static void a(ti[] param0, int param1, int param2, int param3, byte param4, int param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -106,82 +83,45 @@ final class te {
         int var11 = 0;
         var11 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if ((param3 ^ -1) >= -1) {
-                  break L1;
-                } else {
-                  L2: {
-                    var6_int = param0[0].field_r;
-                    var7 = param0[2].field_r;
-                    var8 = param0[1].field_r;
-                    param0[0].a(param5, param2, param1);
-                    param0[2].a(-var7 + param5 - -param3, param2, param1);
-                    sb.a(q.field_i);
-                    if (param4 >= 13) {
-                      break L2;
-                    } else {
-                      te.a((byte) 8);
-                      break L2;
-                    }
-                  }
-                  sb.g(param5 - -var6_int, param2, -var7 + (param5 - -param3), param2 + param0[1].field_s);
-                  var9 = param5 - -var6_int;
-                  var10 = param3 + param5 + -var7;
-                  param5 = var9;
-                  L3: while (true) {
-                    if (var10 <= param5) {
-                      sb.b(q.field_i);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param0[1].a(param5, param2, param1);
-                      param5 = param5 + var8;
-                      continue L3;
-                    }
-                  }
-                }
-              }
+          if (param0 != null &&
+            param3 > 0) {
+            var6_int = param0[0].field_r;
+            var7 = param0[2].field_r;
+            var8 = param0[1].field_r;
+            param0[0].a(param5, param2, param1);
+            param0[2].a(-var7 + param5 + param3, param2, param1);
+            sb.a(q.field_i);
+            if (param4 < 13) {
+              te.a((byte) 8);
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            sb.g(param5 + var6_int, param2, -var7 + (param5 + param3), param2 + param0[1].field_s);
+            var9 = param5 + var6_int;
+            var10 = param3 + param5 - var7;
+            for (param5 = var9; var10 > param5; param5 = param5 + var8) {
+              param0[1].a(param5, param2, param1);
+            }
+            sb.b(q.field_i);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
-
-            stackIn_14_1 = new StringBuilder().append("te.I(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("te.I(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ch.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final void b(int param0, byte param1) {
-        this.a(1 + this.field_a, param0, param1 + -240);
+        this.a(1 + this.field_a, param0, param1 - 240);
         if (param1 != 118) {
-            this.field_a = -79;
+          this.field_a = -79;
         }
     }
 
@@ -190,42 +130,36 @@ final class te {
     }
 
     final int a(int param0) {
-        gd var3;
-        if (param0 != 1) {
-          var3 = (gd) null;
-          te.a((gd) null, (byte) -123, -32);
-          return 1 + this.field_a;
-        } else {
+        if (param0 == 1) {
           return 1 + this.field_a;
         }
+        gd var3 = (gd) null;
+        te.a((gd) null, (byte) -123, -32);
+        return 1 + this.field_a;
     }
 
     public static void a(byte param0) {
         field_c = null;
         if (param0 < 8) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;
     }
 
     final void a(int param0, int param1) {
-        if (param1 <= param0) {
-          if (param0 <= this.field_a) {
-            if (param0 != this.field_a) {
-              ji.a(this.field_g, param0 - -1, this.field_g, param0, this.field_a + -param0);
-              this.field_a = this.field_a - 1;
-              return;
-            } else {
-              this.field_a = this.field_a - 1;
-              return;
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param0);
-          }
-        } else {
+        if (param1 > param0) {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
+        if (param0 > this.field_a) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 == this.field_a) {
+          this.field_a = this.field_a - 1;
+          return;
+        }
+        ji.a(this.field_g, param0 + 1, this.field_g, param0, this.field_a - param0);
+        this.field_a = this.field_a - 1;
     }
 
     private final void c(int param0, int param1) {

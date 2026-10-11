@@ -19,7 +19,7 @@ abstract class mc extends df {
         field_s = null;
         field_q = null;
         if (param0) {
-            return;
+          return;
         }
         field_o = null;
     }
@@ -35,56 +35,35 @@ abstract class mc extends df {
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var4_ref2 = null;
         try {
-          L0: {
-            try {
-              L1: {
-                var4 = param2.getGraphics();
-                so.field_q.a(var4, param3, (byte) -92, param1);
-                var4.dispose();
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var4_ref2 = (Exception) (Object) decompiledCaughtException;
-                param2.repaint();
-                break L2;
-              }
-            }
-            if (param0 >= 21) {
-              break L0;
-            } else {
-              field_o = (qr) null;
-              return;
-            }
+          try {
+            var4 = param2.getGraphics();
+            so.field_q.a(var4, param3, (byte) -92, param1);
+            var4.dispose();
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var4_ref2 = (Exception) (Object) decompiledCaughtException;
+            param2.repaint();
           }
+          if (param0 >= 21) {
+            return;
+          }
+          field_o = (qr) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4_ref);
-
-            stackIn_8_1 = new StringBuilder().append("mc.I(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_8_0 = var4_ref;
+          stackIn_8_1 = new StringBuilder().append("mc.I(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -6,8 +6,8 @@ final class lka implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) 43);
-            return (tv[]) ((Object) new imb[param1]);
+          this.a((byte) 43);
+          return (tv[]) ((Object) new imb[param1]);
         }
         return (tv[]) ((Object) new imb[param1]);
     }
@@ -19,9 +19,9 @@ final class lka implements dja {
 
     public static void a(int param0) {
         if (param0 != 8192) {
-            lka.a(-29);
-            field_a = null;
-            return;
+          lka.a(-29);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -11,12 +11,12 @@ final class hd {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         if (param2 != -6) {
-            hd.a(121, -95, (byte) -105);
+          hd.a(121, -95, (byte) -105);
         }
         jp var6 = new jp(param1, param1);
         jp var3 = var6;
         for (var4 = 0; var4 < var3.field_G.length; var4++) {
-            var6.field_G[var4] = param0;
+          var6.field_G[var4] = param0;
         }
         return var3;
     }
@@ -28,7 +28,7 @@ final class hd {
         int var5 = var4.field_l;
         var4.a(-115, 6);
         if (param1 <= 35) {
-            hd.a(true);
+          hd.a(true);
         }
         var4.a(-23054, param0);
         var4.d((byte) 121, -var5 + var4.field_l);
@@ -36,18 +36,18 @@ final class hd {
 
     final static void a(int param0, ta param1, int param2, int param3) {
         try {
-            lm.field_c = param1;
-            int var4_int = -108 % ((46 - param0) / 37);
-            hn.field_a = param2;
-            bh.field_vb = param3;
+          lm.field_c = param1;
+          int var4_int = -108 % ((46 - param0) / 37);
+          hn.field_a = param2;
+          bh.field_vb = param3;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 12) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

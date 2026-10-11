@@ -16,26 +16,26 @@ final class qi implements Iterable {
     int field_g;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ho((qi) (this)));
+        return (Iterator) ((Object) new ho(this));
     }
 
     final void a(long param0, byte param1, ne param2) {
         ne var5 = null;
         if (param2.field_a != null) {
-            param2.a(false);
+          param2.a(false);
         }
         if (param1 > -127) {
-            return;
+          return;
         }
         try {
-            var5 = this.field_d[(int)(param0 & (long)(-1 + this.field_g))];
-            param2.field_a = var5.field_a;
-            param2.field_e = var5;
-            param2.field_a.field_e = param2;
-            param2.field_e.field_a = param2;
-            param2.field_h = param0;
+          var5 = this.field_d[(int)(param0 & (long)(-1 + this.field_g))];
+          param2.field_a = var5.field_a;
+          param2.field_e = var5;
+          param2.field_a.field_e = param2;
+          param2.field_e.field_a = param2;
+          param2.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "qi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "qi.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,21 +46,20 @@ final class qi implements Iterable {
         var6 = DungeonAssault.field_K;
         var4 = this.field_d[(int)((long)(this.field_g - param0) & param1)];
         this.field_j = var4.field_e;
-        L0: while (true) {
-          if (this.field_j != var4) {
-            if ((this.field_j.field_h ^ -1L) != (param1 ^ -1L)) {
-              this.field_j = this.field_j.field_e;
-              continue L0;
-            } else {
-              var5 = this.field_j;
-              this.field_j = this.field_j.field_e;
-              return var5;
-            }
-          } else {
+        while (true) {
+          if (this.field_j == var4) {
             this.field_j = null;
             return null;
           }
+          if (~this.field_j.field_h != ~param1) {
+            this.field_j = this.field_j.field_e;
+            continue;
+          }
+          break;
         }
+        var5 = this.field_j;
+        this.field_j = this.field_j.field_e;
+        return var5;
     }
 
     private qi() throws Throwable {
@@ -70,7 +69,7 @@ final class qi implements Iterable {
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
-            return;
+          return;
         }
         field_e = null;
         field_h = null;

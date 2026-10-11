@@ -10,18 +10,16 @@ final class ui extends RuntimeException {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != -10013) {
-          field_b = (pf) null;
-          field_a = (int[][]) null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -10013) {
           field_a = (int[][]) null;
           field_e = null;
           field_b = null;
           return;
         }
+        field_b = (pf) null;
+        field_a = (int[][]) null;
+        field_e = null;
+        field_b = null;
     }
 
     ui(Throwable param0, String param1) {
@@ -30,32 +28,11 @@ final class ui extends RuntimeException {
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (!param0) {
-          L0: {
-            field_b = (pf) null;
-            if (mg.field_m != tg.field_c) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (mg.field_m != tg.field_c) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0) {
+          return mg.field_m == tg.field_c ? true : false;
         }
+        field_b = (pf) null;
+        return mg.field_m == tg.field_c ? true : false;
     }
 
     static {

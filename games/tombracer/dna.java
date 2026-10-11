@@ -12,30 +12,30 @@ abstract class dna extends kna {
         field_I = null;
         field_H = null;
         if (param0 < 78) {
-            dna.r((byte) 9);
+          dna.r((byte) 9);
         }
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            field_H = (String) null;
-            return false;
+          field_H = (String) null;
+          return false;
         }
         return false;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            field_F = (jpa) null;
-            return true;
+          field_F = (jpa) null;
+          return true;
         }
         return true;
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            field_G = false;
-            return 7;
+          field_G = false;
+          return 7;
         }
         return 7;
     }
@@ -51,8 +51,8 @@ abstract class dna extends kna {
 
     final static int b(int param0, int param1) {
         if (param1 != 255) {
-            field_H = (String) null;
-            return 255 & param0;
+          field_H = (String) null;
+          return 255 & param0;
         }
         return 255 & param0;
     }
@@ -63,8 +63,8 @@ abstract class dna extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            field_F = (jpa) null;
-            return false;
+          field_F = (jpa) null;
+          return false;
         }
         return false;
     }

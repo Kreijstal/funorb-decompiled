@@ -8,8 +8,8 @@ public class NativeBuffer implements jaclib.memory.Buffer, jaclib.memory.Source 
     private long a;
 
     public void a(byte[] param0, int param1, int param2, int param3) {
-        if (!(((this.b < param3 + param2 ? 1 : 0) | ((-1L == (this.a ^ -1L) ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param3 + param1 ? 1 : 0) | (param2 < 0 ? 1 : 0))) == 0)) {
-            throw new RuntimeException();
+        if (((this.b < param3 + param2 ? 1 : 0) | ((this.a == 0L ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param0.length < param3 + param1 ? 1 : 0) | (param2 < 0 ? 1 : 0))) != 0) {
+          throw new RuntimeException();
         }
         this.put(this.a, param0, param1, param2, param3);
     }

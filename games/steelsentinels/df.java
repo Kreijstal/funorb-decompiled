@@ -10,91 +10,64 @@ final class df extends fe {
     byte[] field_L;
 
     final byte[] d(byte param0) {
-        if (param0 < -49) {
-          if (this.field_z) {
-            throw new RuntimeException();
-          } else {
-            return this.field_L;
-          }
-        } else {
+        if (param0 >= -49) {
           df.h(-48);
-          if (this.field_z) {
-            throw new RuntimeException();
-          } else {
+          if (!this.field_z) {
             return this.field_L;
           }
+          throw new RuntimeException();
         }
+        if (!this.field_z) {
+          return this.field_L;
+        }
+        throw new RuntimeException();
     }
 
     final static void a(int param0, java.awt.Canvas param1, boolean param2) {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
+        int var3_intLifetime1;
         var4 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if ((nj.field_Q ^ -1) > -11) {
-                L2: {
-                  var3_int = 0;
-                  if (dd.field_e) {
-                    dd.field_e = false;
-                    var3_int = 1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
-                break L1;
+          if (nj.field_Q < 10) {
+            var3_int = 0;
+            if (dd.field_e) {
+              dd.field_e = false;
+              var3_int = 1;
+            }
+            kc.a(sa.b((byte) 118), fi.a(true), var3_int != 0, 300, d.field_S);
+          } else {
+            if (!km.a(-124)) {
+              pb.b();
+              ff.a((byte) 17, 240, 320);
+              kg.a(0, 0, 28594, param1);
+            } else {
+              if (0 != uj.field_d) {
+                en.a(param1, -28003);
               } else {
-                if (!km.a(-124)) {
-                  pb.b();
-                  ff.a((byte) 17, 240, 320);
-                  kg.a(0, 0, 28594, param1);
-                  break L1;
-                } else {
-                  if (0 != uj.field_d) {
-                    en.a(param1, -28003);
-                    break L1;
-                  } else {
-                    fa.a(false, (byte) 88, param2);
-                    kg.a(0, 0, 28594, param1);
-                    break L1;
-                  }
-                }
+                fa.a(false, (byte) 88, param2);
+                kg.a(0, 0, 28594, param1);
               }
             }
-            var3_int = 89 % ((param0 - -66) / 44);
-            break L0;
           }
+          var3_intLifetime1 = 89 % ((param0 + 66) / 44);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
-
-            stackIn_15_1 = new StringBuilder().append("df.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("df.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -104,59 +77,49 @@ final class df extends fe {
     }
 
     final static int a(int param0, int param1) {
-        if (param0 == -3720) {
-          if (-1 < (param1 ^ -1)) {
-            if (-65536 > param1) {
-              return vn.field_m[134217728 / -param1] + -2048;
-            } else {
-              return -vn.field_m[-param1 >> 206538725];
-            }
-          } else {
-            if (param1 <= 65536) {
-              return vn.field_m[param1 >> 1282746501];
-            } else {
-              return 2048 + -vn.field_m[134217728 / param1];
-            }
-          }
-        } else {
+        if (param0 != -3720) {
           field_J = (String) null;
-          if (-1 < (param1 ^ -1)) {
-            if (-65536 > param1) {
-              return vn.field_m[134217728 / -param1] + -2048;
-            } else {
-              return -vn.field_m[-param1 >> 206538725];
+          if (param1 >= 0) {
+            if (param1 > 65536) {
+              return 2048 - vn.field_m[134217728 / param1];
             }
-          } else {
-            if (param1 <= 65536) {
-              return vn.field_m[param1 >> 1282746501];
-            } else {
-              return 2048 + -vn.field_m[134217728 / param1];
-            }
+            return vn.field_m[param1 >> 5];
           }
+          if (-65536 <= param1) {
+            return -vn.field_m[-param1 >> 5];
+          }
+          return vn.field_m[134217728 / -param1] - 2048;
         }
+        if (param1 >= 0) {
+          if (param1 > 65536) {
+            return 2048 - vn.field_m[134217728 / param1];
+          }
+          return vn.field_m[param1 >> 5];
+        }
+        if (-65536 <= param1) {
+          return -vn.field_m[-param1 >> 5];
+        }
+        return vn.field_m[134217728 / -param1] - 2048;
     }
 
     final int g(int param0) {
-        if (param0 == 16) {
-          if (this.field_z) {
-            return 0;
-          } else {
-            return 100;
-          }
-        } else {
+        if (param0 != 16) {
           this.g(65);
-          if (this.field_z) {
-            return 0;
-          } else {
+          if (!this.field_z) {
             return 100;
           }
+          return 0;
         }
+        if (!this.field_z) {
+          return 100;
+        }
+        return 0;
     }
 
     public static void i(int param0) {
         field_J = null;
         if (param0 >= -20) {
-            field_K = true;
+          field_K = true;
         }
     }
 

@@ -22,18 +22,16 @@ final class wi {
     public static void a(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 != 64) {
-          wi.a(66);
-          field_i = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 64) {
           field_i = null;
           field_f = null;
           field_d = null;
           return;
         }
+        wi.a(66);
+        field_i = null;
+        field_f = null;
+        field_d = null;
     }
 
     static {

@@ -11,7 +11,7 @@ final class gf {
     public static void a(int param0) {
         field_b = null;
         if (param0 < 5) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;

@@ -20,8 +20,8 @@ final class gb extends ug {
 
     final static int a(byte param0) {
         if (param0 != 57) {
-            field_h = (boolean[]) null;
-            return 1;
+          field_h = (boolean[]) null;
+          return 1;
         }
         return 1;
     }
@@ -29,7 +29,7 @@ final class gb extends ug {
     final static void a(int param0) {
         fk.field_d = null;
         if (param0 >= -41) {
-            return;
+          return;
         }
         qc.field_P = null;
         da.field_c = null;
@@ -39,123 +39,108 @@ final class gb extends ug {
     }
 
     final static boolean a(boolean param0) {
-        L0: {
-          if (0 != (rc.field_f ^ -1)) {
-            break L0;
-          } else {
-            if (hj.a(1, true)) {
-              rc.field_f = MonkeyPuzzle2.field_D.a((byte) 114);
-              MonkeyPuzzle2.field_D.field_h = 0;
-              break L0;
-            } else {
-              return false;
-            }
+        if (rc.field_f == -1) {
+          if (!hj.a(1, true)) {
+            return false;
           }
+          rc.field_f = MonkeyPuzzle2.field_D.a((byte) 114);
+          MonkeyPuzzle2.field_D.field_h = 0;
         }
-        L1: {
-          if (-2 != rc.field_f) {
-            break L1;
-          } else {
-            if (!hj.a(2, true)) {
-              return false;
-            } else {
-              rc.field_f = MonkeyPuzzle2.field_D.j(17277);
-              MonkeyPuzzle2.field_D.field_h = 0;
-              break L1;
-            }
+        if (-2 == rc.field_f) {
+          if (!hj.a(2, true)) {
+            return false;
           }
+          rc.field_f = MonkeyPuzzle2.field_D.j(17277);
+          MonkeyPuzzle2.field_D.field_h = 0;
         }
-        if (!param0) {
-          field_i = 83;
-          return hj.a(rc.field_f, param0);
-        } else {
+        if (param0) {
           return hj.a(rc.field_f, param0);
         }
+        field_i = 83;
+        return hj.a(rc.field_f, param0);
     }
 
     final void c(byte param0) {
-        float[] var2;
-        float var3;
-        float[] var4;
-        float[] var5;
-        float[] var6;
-        float[] var7;
-        float[] var8;
-        float[] var9;
-        if (param0 != 122) {
-          L0: {
-            this.field_k = (wg) null;
-            if (this.field_m) {
-              var9 = ac.a(this.field_k.field_e, 114, this.field_g);
-              var7 = var9;
-              var5 = var7;
-              var2 = var5;
-              var3 = wg.a(var9, (byte) 120);
-              oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
-              mh.a(this.field_k.field_e, (byte) -125, var9);
-              break L0;
-            } else {
-              var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
-              var6 = var8;
-              var4 = var6;
-              var2 = var4;
-              var3 = wg.a(var8, (byte) 115);
-              oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
-              mh.a(this.field_k.field_e, (byte) -126, var8);
-              wj.a(this.field_e.field_e, -74, var8);
-              break L0;
-            }
+        float[] var8 = null;
+        float[] var6 = null;
+        float[] var4 = null;
+        float[] var2 = null;
+        float var3 = 0.0f;
+        float[] var9 = null;
+        float[] var7 = null;
+        float[] var5 = null;
+        float[] var8Lifetime1;
+        float[] var6Lifetime1;
+        float[] var4Lifetime1;
+        float[] var2Lifetime1;
+        float[] var9Lifetime1;
+        float[] var7Lifetime1;
+        float[] var5Lifetime1;
+        float var3Lifetime1;
+        if (param0 == 122) {
+          if (!this.field_m) {
+            var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
+            var6 = var8;
+            var4 = var6;
+            var2 = var4;
+            var3 = wg.a(var8, (byte) 115);
+            oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
+            mh.a(this.field_k.field_e, (byte) -126, var8);
+            wj.a(this.field_e.field_e, -74, var8);
+          } else {
+            var9 = ac.a(this.field_k.field_e, 114, this.field_g);
+            var7 = var9;
+            var5 = var7;
+            var2 = var5;
+            var3 = wg.a(var9, (byte) 120);
+            oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
+            mh.a(this.field_k.field_e, (byte) -125, var9);
           }
           return;
+        }
+        this.field_k = (wg) null;
+        if (!this.field_m) {
+          var8Lifetime1 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
+          var6Lifetime1 = var8Lifetime1;
+          var4Lifetime1 = var6Lifetime1;
+          var2Lifetime1 = var4Lifetime1;
+          var3Lifetime1 = wg.a(var8Lifetime1, (byte) 115);
+          oa.a(this.field_l / (var3Lifetime1 + this.field_l) - 0.5f, var8Lifetime1, 107);
+          mh.a(this.field_k.field_e, (byte) -126, var8Lifetime1);
+          wj.a(this.field_e.field_e, -74, var8Lifetime1);
         } else {
-          L1: {
-            if (this.field_m) {
-              var9 = ac.a(this.field_k.field_e, 114, this.field_g);
-              var7 = var9;
-              var5 = var7;
-              var2 = var5;
-              var3 = wg.a(var9, (byte) 120);
-              oa.a((-0.5f + this.field_l / (this.field_l + var3)) * 2.0f, var9, 126);
-              mh.a(this.field_k.field_e, (byte) -125, var9);
-              break L1;
-            } else {
-              var8 = ac.a(this.field_k.field_e, 123, this.field_e.field_e);
-              var6 = var8;
-              var4 = var6;
-              var2 = var4;
-              var3 = wg.a(var8, (byte) 115);
-              oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
-              mh.a(this.field_k.field_e, (byte) -126, var8);
-              wj.a(this.field_e.field_e, -74, var8);
-              break L1;
-            }
-          }
-          return;
+          var9Lifetime1 = ac.a(this.field_k.field_e, 114, this.field_g);
+          var7Lifetime1 = var9Lifetime1;
+          var5Lifetime1 = var7Lifetime1;
+          var2Lifetime1 = var5Lifetime1;
+          var3Lifetime1 = wg.a(var9Lifetime1, (byte) 120);
+          oa.a((-0.5f + this.field_l / (this.field_l + var3Lifetime1)) * 2.0f, var9Lifetime1, 126);
+          mh.a(this.field_k.field_e, (byte) -125, var9Lifetime1);
         }
     }
 
     gb(wg param0, wg param1, float param2) {
         this.field_g = new float[2];
         try {
-            this.field_e = param1;
-            this.field_l = param2 * param2;
-            this.field_m = false;
-            this.field_k = param0;
+          this.field_e = param1;
+          this.field_l = param2 * param2;
+          this.field_m = false;
+          this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     gb(wg param0, float param1, float param2, float param3) {
         this.field_g = new float[2];
         try {
-            this.field_m = true;
-            this.field_g[0] = param1;
-            this.field_l = param3 * param3;
-            this.field_k = param0;
-            this.field_g[1] = param2;
+          this.field_m = true;
+          this.field_g[0] = param1;
+          this.field_l = param3 * param3;
+          this.field_k = param0;
+          this.field_g[1] = param2;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -163,7 +148,7 @@ final class gb extends ug {
         field_h = null;
         field_n = null;
         if (param0 > -79) {
-            gb.a(33);
+          gb.a(33);
         }
     }
 

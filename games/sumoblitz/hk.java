@@ -9,7 +9,7 @@ final class hk {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            field_c = 88;
+          field_c = 88;
         }
     }
 

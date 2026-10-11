@@ -10,16 +10,16 @@ final class ge {
 
     final static void b(int param0) {
         if (param0 != 18887) {
-            field_a = (String) null;
-            mi.d(-116);
-            return;
+          field_a = (String) null;
+          mi.d(-116);
+          return;
         }
         mi.d(-116);
     }
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 75 % ((param0 - -52) / 32);
+        int var1 = 75 % ((param0 + 52) / 32);
         field_e = null;
         field_c = null;
     }

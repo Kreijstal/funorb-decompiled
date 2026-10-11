@@ -26,31 +26,29 @@ final class gh extends da {
         field_n = null;
         field_k = (int[][][]) null;
         field_z = null;
-        if (param0 != -16742) {
-          gh.a(-119);
-          field_y = null;
-          field_i = null;
-          field_v = null;
-          return;
-        } else {
+        if (param0 == -16742) {
           field_y = null;
           field_i = null;
           field_v = null;
           return;
         }
+        gh.a(-119);
+        field_y = null;
+        field_i = null;
+        field_v = null;
     }
 
     final static void a(byte param0, String param1, boolean param2) {
         try {
-            ae.field_C = param2;
-            hl.field_e = true;
-            da.field_c = new wa(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
-            t.field_b.a((byte) 73, (ee) (da.field_c));
-            if (param0 != -116) {
-                field_y = (String) null;
-            }
+          ae.field_C = param2;
+          hl.field_e = true;
+          da.field_c = new wa(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
+          t.field_b.a((byte) 73, (ee) (da.field_c));
+          if (param0 != -116) {
+            field_y = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "gh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "gh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

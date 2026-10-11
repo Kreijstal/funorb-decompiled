@@ -31,16 +31,15 @@ final class u {
         var6 = field_e[var3] ? 1 : 0;
         for (var7 = param0 + 1; var7 <= param1; var7++) {
           var8 = field_a[var7];
-          if (var8 >= var4) {
-            continue;
+          if (var8 < var4) {
+            field_a[var3] = var8;
+            field_g[var3] = field_g[var7];
+            field_e[var3] = field_e[var7];
+            var3++;
+            field_a[var7] = field_a[var3];
+            field_g[var7] = field_g[var3];
+            field_e[var7] = field_e[var3];
           }
-          field_a[var3] = var8;
-          field_g[var3] = field_g[var7];
-          field_e[var3] = field_e[var7];
-          var3++;
-          field_a[var7] = field_a[var3];
-          field_g[var7] = field_g[var3];
-          field_e[var7] = field_e[var3];
         }
         field_a[var3] = var4;
         field_g[var3] = var5;
@@ -60,14 +59,11 @@ final class u {
         var4 = -2147483648;
         for (var5 = 0; var5 < param1; var5++) {
           var6 = param0[var5];
-          if (var6 >= var2) {
-            continue;
+          if (var6 < var2 &&
+            var6 > var4) {
+            var3 = var5;
+            var4 = var6;
           }
-          if (var6 <= var4) {
-            continue;
-          }
-          var3 = var5;
-          var4 = var6;
         }
         return var3;
     }
@@ -83,14 +79,11 @@ final class u {
         var4 = 2147483647;
         for (var5 = 0; var5 < param1; var5++) {
           var6 = param0[var5];
-          if (var6 <= var2) {
-            continue;
+          if (var6 > var2 &&
+            var6 < var4) {
+            var3 = var5;
+            var4 = var6;
           }
-          if (var6 >= var4) {
-            continue;
-          }
-          var3 = var5;
-          var4 = var6;
         }
         return var3;
     }
@@ -109,9 +102,9 @@ final class u {
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
-        int[] stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int stackIn_14_2 = 0;
+        int[] stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        int stackIn_15_2 = 0;
         int var3;
         int var4;
         boolean[] var5;
@@ -127,87 +120,77 @@ final class u {
         boolean[] var14;
         int var15;
         int var16;
+        int var6Lifetime1;
         int var7Lifetime1;
         int var8_intLifetime1;
         int var9Lifetime1;
-        int var10Lifetime1;
         int var9Lifetime2;
+        int var10Lifetime1;
         var3 = this.field_c.length;
         var4 = field_b[this.field_d - 1];
         var5 = field_e;
         field_e[1] = true;
         var5[0] = true;
-        var6 = 2;
-        while (true) {
-          if (var6 >= var3) {
-            this.a(0, var3 - 1);
-            var6 = 0;
-            var7 = field_g[0] * this.field_d;
-            var16 = 1;
-            var8_int = var16;
-            while (true) {
-              if (var16 >= var3) {
-                var8 = field_k[var7];
-                for (var9 = var6; var9 < param1; var9++) {
-                  param0[var9] = param0[var9] * var8;
-                }
-                return;
-              }
-              if (!field_e[var16]) {
-                var16++;
-                continue;
-              }
-              var9Lifetime2 = field_a[var16];
-              var10 = field_g[var16] * this.field_d;
-              this.a(var6, var7, var9Lifetime2, var10, param0, param1);
-              if (var9Lifetime2 >= param1) {
-                return;
-              }
-              var6 = var9Lifetime2;
-              var7 = var10;
-              var16++;
-            }
-          }
-          var7Lifetime1 = u.a(field_a, var6);
-          var8_intLifetime1 = u.b(field_a, var6);
-          var9Lifetime1 = this.a(field_a[var7Lifetime1], field_g[var7Lifetime1], field_a[var8_intLifetime1], field_g[var8_intLifetime1], field_a[var6]);
-          var10Lifetime1 = field_g[var6];
-          var11 = var4 - var9Lifetime1;
-          var12 = var9Lifetime1;
+        for (var6 = 2; var6 < var3; var6++) {
+          var7 = u.a(field_a, var6);
+          var8_int = u.b(field_a, var6);
+          var9 = this.a(field_a[var7], field_g[var7], field_a[var8_int], field_g[var8_int], field_a[var6]);
+          var10 = field_g[var6];
+          var11 = var4 - var9;
+          var12 = var9;
           stackIn_5_0 = (var11 >= var12) ? var12 : var11;
           var13 = stackIn_5_0 << 1;
-          if (var10Lifetime1 == 0) {
+          if (var10 == 0) {
             field_e[var6] = false;
-            field_g[var6] = var9Lifetime1;
-            var6++;
-            continue;
-          }
-          var14 = field_e;
-          var15 = var7Lifetime1;
-          field_e[var8_intLifetime1] = true;
-          var14[var15] = true;
-          field_e[var6] = true;
-          if (var10Lifetime1 < var13) {
-            stackIn_13_0 = (int[]) (field_g);
-            stackIn_13_1 = var6;
-            if ((var10Lifetime1 & 1) == 0) {
-              stackIn_14_2 = var9Lifetime1 + var10Lifetime1 / 2;
-            } else {
-              stackIn_14_2 = var9Lifetime1 - (var10Lifetime1 + 1) / 2;
-            }
-            stackIn_13_0[stackIn_13_1] = stackIn_14_2;
-            var6++;
-            continue;
-          }
-          stackIn_9_0 = (int[]) (field_g);
-          stackIn_9_1 = var6;
-          if (var11 <= var12) {
-            stackIn_10_2 = var9Lifetime1 - var10Lifetime1 + var11 - 1;
+            field_g[var6] = var9;
           } else {
-            stackIn_10_2 = var10Lifetime1 - var12 + var9Lifetime1;
+            var14 = field_e;
+            var15 = var7;
+            field_e[var8_int] = true;
+            var14[var15] = true;
+            field_e[var6] = true;
+            if (var10 < var13) {
+              stackIn_14_0 = (int[]) (field_g);
+              stackIn_14_1 = var6;
+              if ((var10 & 1) == 0) {
+                stackIn_15_2 = var9 + var10 / 2;
+              } else {
+                stackIn_15_2 = var9 - (var10 + 1) / 2;
+              }
+              stackIn_14_0[stackIn_14_1] = stackIn_15_2;
+            } else {
+              stackIn_9_0 = (int[]) (field_g);
+              stackIn_9_1 = var6;
+              if (var11 <= var12) {
+                stackIn_10_2 = var9 - var10 + var11 - 1;
+              } else {
+                stackIn_10_2 = var10 - var12 + var9;
+              }
+              stackIn_9_0[stackIn_9_1] = stackIn_10_2;
+            }
           }
-          stackIn_9_0[stackIn_9_1] = stackIn_10_2;
-          var6++;
+        }
+        this.a(0, var3 - 1);
+        var6Lifetime1 = 0;
+        var7Lifetime1 = field_g[0] * this.field_d;
+        var16 = 1;
+        var8_intLifetime1 = var16;
+        while (var16 < var3) {
+          if (field_e[var16]) {
+            var9Lifetime1 = field_a[var16];
+            var10Lifetime1 = field_g[var16] * this.field_d;
+            this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
+            if (var9Lifetime1 >= param1) {
+              return;
+            }
+            var6Lifetime1 = var9Lifetime1;
+            var7Lifetime1 = var10Lifetime1;
+          }
+          var16++;
+        }
+        var8 = field_k[var7Lifetime1];
+        for (var9Lifetime2 = var6Lifetime1; var9Lifetime2 < param1; var9Lifetime2++) {
+          param0[var9Lifetime2] = param0[var9Lifetime2] * var8;
         }
     }
 
@@ -326,10 +309,9 @@ final class u {
         for (var4 = 0; var4 < var2; var4++) {
           var5 = ua.b(4);
           this.field_l[var4] = var5;
-          if (var5 < var3) {
-            continue;
+          if (var5 >= var3) {
+            var3 = var5 + 1;
           }
-          var3 = var5 + 1;
         }
         this.field_i = new int[var3];
         this.field_h = new int[var3];

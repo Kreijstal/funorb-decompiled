@@ -18,79 +18,63 @@ final class ac {
         field_b = null;
         field_j = null;
         field_h = null;
-        if (param0 >= -52) {
-          ac.a(115);
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 < -52) {
           field_g = null;
           field_f = null;
           return;
         }
+        ac.a(115);
+        field_g = null;
+        field_f = null;
     }
 
     final ai a(int param0, byte param1) {
-        ai var3;
-        byte[] var4;
-        ai var5;
-        var3 = (ai) (this.field_i.a(true, (long)param0));
-        if (var3 == null) {
-          L0: {
-            if (32768 <= param0) {
-              var4 = this.field_e.a(1, 32767 & param0, (byte) 35);
-              break L0;
-            } else {
-              var4 = this.field_c.a(1, param0, (byte) 35);
-              break L0;
-            }
-          }
-          var5 = new ai();
-          if (var4 == null) {
-            if (32768 > param0) {
-              if (param1 != -74) {
-                return (ai) null;
-              } else {
-                this.field_i.a(var5, (long)param0, 117);
-                return var5;
-              }
-            } else {
-              var5.a((byte) 5);
-              if (param1 != -74) {
-                return (ai) null;
-              } else {
-                this.field_i.a(var5, (long)param0, 117);
-                return var5;
-              }
-            }
-          } else {
-            var5.a(new od(var4), param1 + 74);
-            if (32768 <= param0) {
-              var5.a((byte) 5);
-              if (param1 != -74) {
-                return (ai) null;
-              } else {
-                this.field_i.a(var5, (long)param0, 117);
-                return var5;
-              }
-            } else {
-              if (param1 != -74) {
-                return (ai) null;
-              } else {
-                this.field_i.a(var5, (long)param0, 117);
-                return var5;
-              }
-            }
-          }
-        } else {
+        byte[] var4 = null;
+        ai var3 = (ai) (this.field_i.a(true, (long)param0));
+        if (var3 != null) {
           return var3;
         }
+        if (32768 > param0) {
+          var4 = this.field_c.a(1, param0, (byte) 35);
+        } else {
+          var4 = this.field_e.a(1, 32767 & param0, (byte) 35);
+        }
+        ai var5 = new ai();
+        if (var4 != null) {
+          var5.a(new od(var4), param1 + 74);
+          if (32768 > param0) {
+            if (param1 == -74) {
+              this.field_i.a(var5, (long)param0, 117);
+              return var5;
+            }
+            return (ai) null;
+          }
+          var5.a((byte) 5);
+          if (param1 == -74) {
+            this.field_i.a(var5, (long)param0, 117);
+            return var5;
+          }
+          return (ai) null;
+        }
+        if (32768 <= param0) {
+          var5.a((byte) 5);
+          if (param1 == -74) {
+            this.field_i.a(var5, (long)param0, 117);
+            return var5;
+          }
+          return (ai) null;
+        }
+        if (param1 == -74) {
+          this.field_i.a(var5, (long)param0, 117);
+          return var5;
+        }
+        return (ai) null;
     }
 
     final static int a(int param0) {
         if (param0 != -1) {
-            field_h = (java.awt.Image) null;
-            return ub.field_b;
+          field_h = (java.awt.Image) null;
+          return ub.field_b;
         }
         return ub.field_b;
     }
@@ -105,7 +89,7 @@ final class ac {
         field_j = new int[]{-1, -1, -1, -1, -1, 21, -1, 29, -1, -1, -1, 33, -1, -1, -1, 47, 51, 55, 61, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
         field_d = new sj[255];
         for (var0 = 0; field_d.length > var0; var0++) {
-            field_d[var0] = new sj();
+          field_d[var0] = new sj();
         }
     }
 }

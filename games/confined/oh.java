@@ -15,9 +15,9 @@ final class oh {
         field_a = null;
         field_d = null;
         if (param0 != -32313) {
-            oh.a(115);
-            field_e = null;
-            return;
+          oh.a(115);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

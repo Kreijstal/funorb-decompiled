@@ -20,132 +20,98 @@ final class ip implements Iterator {
     public final Object next() {
         Object var1 = this.field_e;
         if (this.field_a.field_a != var1) {
-            this.field_e = ((df) (var1)).field_h;
+          this.field_e = ((df) (var1)).field_h;
         } else {
-            this.field_e = null;
-            var1 = null;
+          this.field_e = null;
+          var1 = null;
         }
         this.field_c = (df) (var1);
         return var1;
     }
 
     final static hc[] a(int param0, sl param1) {
-        int var2_int = 0;
-        int var3 = 0;
-        hc[] var4 = null;
         int var5 = 0;
-        hc var6_ref_hc = null;
-        int var6 = 0;
-        int var7 = 0;
         hc[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
         RuntimeException var2 = null;
+        int var3 = 0;
+        hc[] var4 = null;
+        int var6 = 0;
+        hc var6_ref_hc = null;
+        int var7 = 0;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            var2_int = param1.b((byte) 93, 8);
-            if (0 >= var2_int) {
-              L1: {
-                var3 = param1.b((byte) 116, 12);
-                var4 = new hc[var3];
-                if (param0 == 24243) {
-                  break L1;
-                } else {
-                  field_d = (String) null;
-                  break L1;
-                }
-              }
-              var5 = 0;
-              L2: while (true) {
-                if (var3 <= var5) {
-                  stackIn_14_0 = (hc[]) (var4);
-                  break L0;
-                } else {
-                  L3: {
-                    if (!ng.a(param1, (byte) -95)) {
-                      var6 = param1.b((byte) 127, a.a(var5 + -1, 1));
-                      var4[var5] = var4[var6];
-                      break L3;
-                    } else {
-                      var6_ref_hc = new hc();
-                      param1.b((byte) 122, 24);
-                      param1.b((byte) 80, 24);
-                      var6_ref_hc.field_a = param1.b((byte) 87, 24);
-                      param1.b((byte) 100, 9);
-                      param1.b((byte) 122, 12);
-                      param1.b((byte) 106, 12);
-                      param1.b((byte) 122, 12);
-                      var4[var5] = var6_ref_hc;
-                      break L3;
-                    }
-                  }
-                  var5++;
-                  continue L2;
-                }
-              }
+          var2_int = param1.b((byte) 93, 8);
+          if (0 < var2_int) {
+            return null;
+          }
+          var3 = param1.b((byte) 116, 12);
+          var4 = new hc[var3];
+          if (param0 != 24243) {
+            field_d = (String) null;
+          }
+          for (var5 = 0; var3 > var5; var5++) {
+            if (!ng.a(param1, (byte) -95)) {
+              var6 = param1.b((byte) 127, a.a(var5 - 1, 1));
+              var4[var5] = var4[var6];
             } else {
-              return null;
+              var6_ref_hc = new hc();
+              param1.b((byte) 122, 24);
+              param1.b((byte) 80, 24);
+              var6_ref_hc.field_a = param1.b((byte) 87, 24);
+              param1.b((byte) 100, 9);
+              param1.b((byte) 122, 12);
+              param1.b((byte) 106, 12);
+              param1.b((byte) 122, 12);
+              var4[var5] = var6_ref_hc;
             }
           }
+          stackIn_14_0 = var4;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("ip.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("ip.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     final static boolean a(byte param0) {
         if (param0 >= -90) {
-            return false;
+          return false;
         }
-        return (np.field_a.field_fc ^ -1L) == (ec.field_p ^ -1L) ? true : false;
+        return ~np.field_a.field_fc == ~ec.field_p ? true : false;
     }
 
     public static void a(int param0) {
-        sl var2;
-        if (param0 <= 123) {
-          var2 = (sl) null;
-          ip.a(-22, (sl) null);
-          field_d = null;
-          field_h = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 > 123) {
           field_d = null;
           field_h = null;
           field_g = null;
           field_f = null;
           return;
         }
+        sl var2 = (sl) null;
+        ip.a(-22, (sl) null);
+        field_d = null;
+        field_h = null;
+        field_g = null;
+        field_f = null;
     }
 
     public final void remove() {
-        if (!(this.field_c != null)) {
-            throw new IllegalStateException();
+        if (this.field_c == null) {
+          throw new IllegalStateException();
         }
         this.field_c.a(16);
         this.field_c = null;
@@ -154,11 +120,11 @@ final class ip implements Iterator {
     ip(up param0) {
         this.field_c = null;
         try {
-            this.field_a = param0;
-            this.field_e = this.field_a.field_a.field_h;
-            this.field_c = null;
+          this.field_a = param0;
+          this.field_e = this.field_a.field_a.field_h;
+          this.field_c = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

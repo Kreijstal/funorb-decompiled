@@ -25,7 +25,7 @@ final class we {
         field_f = null;
         field_j = null;
         if (param0 > -78) {
-            we.a((byte) -76);
+          we.a((byte) -76);
         }
     }
 

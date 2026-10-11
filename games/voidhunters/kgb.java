@@ -7,7 +7,7 @@ final class kgb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new hg[param1]);
     }
@@ -15,12 +15,12 @@ final class kgb implements dja {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            kgb.a(-84);
+          kgb.a(-84);
         }
     }
 
     public final tv a(byte param0) {
-        int var2 = 108 % ((param0 - -64) / 50);
+        int var2 = 108 % ((param0 + 64) / 50);
         return (tv) ((Object) new hg());
     }
 

@@ -15,48 +15,32 @@ final class ae {
         field_a = null;
         field_b = null;
         if (param0 != -67) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     final boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        if (param0 == 18544) {
-          if (this != nn.field_m) {
-            if (wi.field_s != this) {
-              if (pb.field_c == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != 18544) {
           this.toString();
-          if (this != nn.field_m) {
-            if (wi.field_s == this) {
-              return true;
-            } else {
-              L0: {
-                if (pb.field_c != this) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (this == nn.field_m) {
             return true;
           }
+          if (wi.field_s != this) {
+            return pb.field_c == this ? true : false;
+          }
+          return true;
         }
+        if (this == nn.field_m) {
+          return true;
+        }
+        if (wi.field_s == this) {
+          return true;
+        }
+        if (pb.field_c != this) {
+          return false;
+        }
+        return true;
     }
 
     static {

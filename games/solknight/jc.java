@@ -9,16 +9,14 @@ final class jc {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 1731) {
-          jc.a(16);
-          field_c = (byte[][]) null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 1731) {
           field_c = (byte[][]) null;
           field_a = null;
           return;
         }
+        jc.a(16);
+        field_c = (byte[][]) null;
+        field_a = null;
     }
 
     static {

@@ -17,50 +17,30 @@ final class ik {
         RuntimeException var1_ref = null;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            var1 = um.field_c;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  lp.field_j = kj.field_j;
-                  em.field_cb = em.field_cb + 1;
-                  if (0 <= qf.field_f) {
-                    L3: while (true) {
-                      if (fh.field_j == qf.field_f) {
-                        break L2;
-                      } else {
-                        var2 = ln.field_f[fh.field_j];
-                        fh.field_j = fh.field_j + 1 & 127;
-                        if (-1 < (var2 ^ -1)) {
-                          lc.field_m[var2 ^ -1] = false;
-                          continue L3;
-                        } else {
-                          lc.field_m[var2] = true;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if ((var2 ^ -1) <= -113) {
-                        qf.field_f = fh.field_j;
-                        break L2;
-                      } else {
-                        lc.field_m[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = um.field_c;
+          synchronized (var1) {
+            lp.field_j = kj.field_j;
+            em.field_cb = em.field_cb + 1;
+            if (0 > qf.field_f) {
+              for (var2 = 0; var2 < 112; var2++) {
+                lc.field_m[var2] = false;
+              }
+              qf.field_f = fh.field_j;
+            } else {
+              while (fh.field_j != qf.field_f) {
+                var2 = ln.field_f[fh.field_j];
+                fh.field_j = fh.field_j + 1 & 127;
+                if (var2 < 0) {
+                  lc.field_m[~var2] = false;
+                  continue;
                 }
-                kj.field_j = f.field_c;
-                break L1;
+                lc.field_m[var2] = true;
               }
             }
-            var1_int = -88 % ((param0 - -17) / 55);
-            break L0;
+            kj.field_j = f.field_c;
           }
+          var1_int = -88 % ((param0 + 17) / 55);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -73,7 +53,7 @@ final class ik {
         field_b = null;
         field_e = null;
         if (param0 <= 37) {
-            return;
+          return;
         }
         field_d = null;
     }

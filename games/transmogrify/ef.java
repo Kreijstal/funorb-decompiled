@@ -13,7 +13,7 @@ final class ef implements Runnable {
         field_e = null;
         field_c = null;
         if (param0 >= -99) {
-            ef.a(-74);
+          ef.a(-74);
         }
     }
 
@@ -23,23 +23,23 @@ final class ef implements Runnable {
         int var4 = Transmogrify.field_A ? 1 : 0;
         this.field_d = true;
         try {
-            while (!this.field_a) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
-                    var2 = this.field_f[var1_int];
-                    if (var2 == null) {
-                    } else {
-                        var2.a();
-                    }
-                }
-                pg.a(10L, -108);
-                Object var5 = (Object) null;
-                db.a(this.field_b, (Object) null, -125);
+          while (!this.field_a) {
+            for (var1_int = 0; var1_int < 2; var1_int++) {
+              var2 = this.field_f[var1_int];
+              if (var2 == null) {
+              } else {
+                var2.a();
+              }
             }
+            pg.a(10L, -108);
+            Object var5 = (Object) null;
+            db.a(this.field_b, (Object) null, -125);
+          }
         } catch (Exception exception) {
-            String var6 = (String) null;
-            d.a((Throwable) ((Object) exception), -14, (String) null);
+          String var6 = (String) null;
+          d.a((Throwable) ((Object) exception), -14, (String) null);
         } finally {
-            this.field_d = false;
+          this.field_d = false;
         }
     }
 

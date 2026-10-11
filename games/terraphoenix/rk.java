@@ -11,23 +11,23 @@ final class rk {
 
     final static void a(java.applet.Applet param0, boolean param1) {
         if (!param1) {
-            return;
+          return;
         }
         try {
-            lb.a("", param0, -1);
-            dl.a(param0, -6242);
+          lb.a("", param0, -1);
+          dl.a(param0, -6242);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "rk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            rk.a(-124);
-            field_e = null;
-            field_b = null;
-            field_f = null;
-            return;
+          rk.a(-124);
+          field_e = null;
+          field_b = null;
+          field_f = null;
+          return;
         }
         field_e = null;
         field_b = null;
@@ -47,7 +47,6 @@ final class rk {
           this.field_a[1] = 4;
           this.field_a[2] = 4;
           this.field_d[1] = 2;
-          return;
         } else {
           if (var2 == 1) {
             this.field_a[5] = 16;
@@ -57,21 +56,14 @@ final class rk {
             this.field_a[1] = 4;
             this.field_a[0] = 24;
             this.field_d[1] = 1;
-            return;
           } else {
-            L0: {
-              if (-3 != (var2 ^ -1)) {
-                break L0;
-              } else {
-                this.field_a[3] = 1;
-                this.field_a[2] = 1;
-                this.field_a[0] = 24;
-                this.field_a[5] = 8;
-                this.field_a[1] = 4;
-                break L0;
-              }
+            if (var2 == 2) {
+              this.field_a[3] = 1;
+              this.field_a[2] = 1;
+              this.field_a[0] = 24;
+              this.field_a[5] = 8;
+              this.field_a[1] = 4;
             }
-            return;
           }
         }
     }

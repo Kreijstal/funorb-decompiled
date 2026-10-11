@@ -20,123 +20,57 @@ final class od {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0) {
-              if (mj.field_g != param1) {
-                if (param1 == mj.field_i) {
-                  stackIn_27_0 = 5122;
-                  decompiledRegionSelector0 = 8;
-                  break L0;
-                } else {
-                  if (mj.field_c != param1) {
-                    if (mj.field_f != param1) {
-                      if (mj.field_e == param1) {
-                        stackIn_25_0 = 5123;
-                        decompiledRegionSelector0 = 7;
-                        break L0;
-                      } else {
-                        if (mj.field_a != param1) {
-                          if (mj.field_b == param1) {
-                            stackIn_23_0 = 5131;
-                            decompiledRegionSelector0 = 6;
-                            break L0;
-                          } else {
-                            if (param1 == mj.field_d) {
-                              stackIn_21_0 = 5126;
-                              decompiledRegionSelector0 = 5;
-                              break L0;
-                            } else {
-                              throw new IllegalArgumentException("");
-                            }
-                          }
-                        } else {
-                          stackIn_16_0 = 5125;
-                          decompiledRegionSelector0 = 4;
-                          break L0;
-                        }
-                      }
-                    } else {
-                      stackIn_12_0 = 5121;
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    }
-                  } else {
-                    stackIn_9_0 = 5124;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                }
-              } else {
-                stackIn_5_0 = 5120;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = 25;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!param0) {
+            stackIn_2_0 = 25;
+            return stackIn_2_0;
           }
+          if (mj.field_g == param1) {
+            stackIn_5_0 = 5120;
+            return stackIn_5_0;
+          }
+          if (param1 == mj.field_i) {
+            stackIn_27_0 = 5122;
+            return stackIn_27_0;
+          }
+          if (mj.field_c == param1) {
+            stackIn_9_0 = 5124;
+            return stackIn_9_0;
+          }
+          if (mj.field_f == param1) {
+            stackIn_12_0 = 5121;
+            return stackIn_12_0;
+          }
+          if (mj.field_e == param1) {
+            stackIn_25_0 = 5123;
+            return stackIn_25_0;
+          }
+          if (mj.field_a == param1) {
+            stackIn_16_0 = 5125;
+            return stackIn_16_0;
+          }
+          if (mj.field_b == param1) {
+            stackIn_23_0 = 5131;
+            return stackIn_23_0;
+          }
+          if (param1 != mj.field_d) {
+            throw new IllegalArgumentException("");
+          }
+          stackIn_21_0 = 5126;
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var2);
-
-            stackIn_31_1 = new StringBuilder().append("od.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L1;
-            } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L1;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0;
+          var2 = decompiledCaughtException;
+          stackIn_31_0 = var2;
+          stackIn_31_1 = new StringBuilder().append("od.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_32_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_9_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_12_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_16_0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_21_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_23_0;
-                    } else {
-                      if (decompiledRegionSelector0 == 7) {
-                        return stackIn_25_0;
-                      } else {
-                        return stackIn_27_0;
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            stackIn_32_2 = "{...}";
           }
+          throw rta.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

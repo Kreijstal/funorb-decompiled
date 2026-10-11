@@ -14,40 +14,38 @@ final class fk extends oh {
 
     final static void a(String param0, int param1, boolean param2) {
         try {
-            jh.field_D = param2;
-            mg.field_C = true;
-            ji.field_G = new ns(le.field_e, sl.field_p, param0, el.field_b, jh.field_D);
-            le.field_e.a(true, ji.field_G);
-            int var3_int = -116 / ((-1 - param1) / 54);
+          jh.field_D = param2;
+          mg.field_C = true;
+          ji.field_G = new ns(le.field_e, sl.field_p, param0, el.field_b, jh.field_D);
+          le.field_e.a(true, ji.field_G);
+          int var3_int = -116 / ((-1 - param1) / 54);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "fk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_o = null;
         field_l = null;
-        if (param0 < 76) {
-          fk.a((byte) 91);
-          field_m = null;
-          field_p = (sg[][]) null;
-          field_h = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 >= 76) {
           field_m = null;
           field_p = (sg[][]) null;
           field_h = null;
           field_i = null;
           return;
         }
+        fk.a((byte) 91);
+        field_m = null;
+        field_p = (sg[][]) null;
+        field_h = null;
+        field_i = null;
     }
 
     fk(byte[] param0) {
         try {
-            this.field_n = param0;
+          this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "fk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

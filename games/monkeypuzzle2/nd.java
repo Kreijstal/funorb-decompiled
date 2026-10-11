@@ -14,8 +14,8 @@ final class nd implements Iterator {
     static int field_e;
 
     public final void remove() {
-        if (!(this.field_h != null)) {
-            throw new IllegalStateException();
+        if (this.field_h == null) {
+          throw new IllegalStateException();
         }
         this.field_h.a(7847);
         this.field_h = null;
@@ -25,9 +25,9 @@ final class nd implements Iterator {
         field_d = null;
         field_b = null;
         if (param0 != 127) {
-            field_b = (le) null;
-            field_g = null;
-            return;
+          field_b = (le) null;
+          field_g = null;
+          return;
         }
         field_g = null;
     }
@@ -35,10 +35,10 @@ final class nd implements Iterator {
     public final Object next() {
         Object var1 = this.field_f;
         if (var1 == this.field_c.field_b) {
-            var1 = null;
-            this.field_f = null;
+          var1 = null;
+          this.field_f = null;
         } else {
-            this.field_f = ((bf) (var1)).field_g;
+          this.field_f = ((bf) (var1)).field_g;
         }
         this.field_h = (bf) (var1);
         return var1;
@@ -49,31 +49,25 @@ final class nd implements Iterator {
     }
 
     final static String a(byte param0) {
-        if (!ac.field_b) {
-          if (cj.field_e <= ka.field_a) {
-            if (id.field_a + cj.field_e <= ka.field_a) {
-              if (param0 <= -125) {
-                return null;
-              } else {
-                return (String) null;
-              }
-            } else {
-              return pf.field_b;
-            }
-          } else {
-            if (param0 <= -125) {
-              return null;
-            } else {
-              return (String) null;
-            }
-          }
-        } else {
-          if (param0 <= -125) {
-            return null;
-          } else {
+        if (ac.field_b) {
+          if (param0 > -125) {
             return (String) null;
           }
+          return null;
         }
+        if (cj.field_e > ka.field_a) {
+          if (param0 > -125) {
+            return (String) null;
+          }
+          return null;
+        }
+        if (id.field_a + cj.field_e > ka.field_a) {
+          return pf.field_b;
+        }
+        if (param0 > -125) {
+          return (String) null;
+        }
+        return null;
     }
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -87,75 +81,54 @@ final class nd implements Iterator {
         int[] var17 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param5 == -23487) {
-                break L1;
-              } else {
-                field_b = (le) null;
-                break L1;
-              }
+          if (param5 != -23487) {
+            field_b = (le) null;
+          }
+          while (true) {
+            param1--;
+            if (param1 < 0) {
+              return;
             }
-            L2: while (true) {
-              param1--;
-              if (-1 < (param1 ^ -1)) {
-                break L0;
-              } else {
-                var17 = param3;
-                var10 = var17;
-                var11 = param0;
-                var12 = param9;
-                var13 = param8;
-                var14 = param6;
-                var15 = var17[var11] >> -443497791 & 8355711;
-                var10[var11] = ch.a(var14 >> -1821127087, 255) - -ch.a(var13 >> 854824393, 65280) - -ch.a(16711680, var12 >> 1641302977) + var15;
-                param9 = param9 + param4;
-                param0++;
-                param6 = param6 + param2;
-                param8 = param8 + param7;
-                continue L2;
-              }
-            }
+            var17 = param3;
+            var10 = var17;
+            var11 = param0;
+            var12 = param9;
+            var13 = param8;
+            var14 = param6;
+            var15 = var17[var11] >> 1 & 8355711;
+            var10[var11] = ch.a(var14 >> 17, 255) + ch.a(var13 >> 9, 65280) + ch.a(16711680, var12 >> 1) + var15;
+            param9 = param9 + param4;
+            param0++;
+            param6 = param6 + param2;
+            param8 = param8 + param7;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var10_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var10_ref);
-
-            stackIn_8_1 = new StringBuilder().append("nd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var10_ref = decompiledCaughtException;
+          stackIn_8_0 = var10_ref;
+          stackIn_8_1 = new StringBuilder().append("nd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw la.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
     nd(ni param0) {
         this.field_h = null;
         try {
-            this.field_c = param0;
-            this.field_h = null;
-            this.field_f = this.field_c.field_b.field_g;
+          this.field_c = param0;
+          this.field_h = null;
+          this.field_f = this.field_c.field_b.field_g;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

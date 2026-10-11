@@ -9,16 +9,13 @@ abstract class tf {
     abstract long a(boolean param0);
 
     final int a(long param0, byte param1) {
-        long var4;
-        int var6;
-        var4 = this.a(false);
-        var6 = -1 % ((param1 - -69) / 33);
-        if (0L < var4) {
-          wf.a(var4, false);
-          return this.a(param0, 0);
-        } else {
+        long var4 = this.a(false);
+        int var6 = -1 % ((param1 + 69) / 33);
+        if (0L >= var4) {
           return this.a(param0, 0);
         }
+        wf.a(var4, false);
+        return this.a(param0, 0);
     }
 
     abstract void a(int param0);

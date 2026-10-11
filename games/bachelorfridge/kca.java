@@ -11,7 +11,7 @@ final class kca {
         field_c = null;
         field_b = null;
         if (param0 != 32) {
-            kca.a((byte) -1);
+          kca.a((byte) -1);
         }
     }
 

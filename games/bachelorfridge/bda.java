@@ -10,169 +10,48 @@ final class bda extends lw {
 
     public static void d(int param0) {
         field_o = null;
-        if (param0 > 0) {
-          field_l = -113;
-          field_p = null;
-          field_n = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 <= 0) {
           field_p = null;
           field_n = null;
           field_m = null;
           return;
         }
+        field_l = -113;
+        field_p = null;
+        field_n = null;
+        field_m = null;
     }
 
     final void a(int param0, byte param1) {
         int var4;
         var4 = BachelorFridge.field_y;
-        if (param0 == 34) {
-          if (0 != this.field_e) {
-            if (this.field_e != 1) {
-              L0: {
-                if (!um.a(true)) {
-                  break L0;
-                } else {
-                  if (!this.c((byte) 95)) {
-                    break L0;
-                  } else {
-                    fla.b(23621);
-                    if (param1 == 73) {
-                      return;
-                    } else {
-                      this.a(-88, (byte) -14);
-                      return;
-                    }
-                  }
-                }
-              }
-              if (param1 == 73) {
-                return;
-              } else {
-                this.a(-88, (byte) -14);
-                return;
-              }
-            } else {
-              L1: {
-                wf.field_x = true;
-                if (!um.a(true)) {
-                  break L1;
-                } else {
-                  if (!this.c((byte) 95)) {
-                    break L1;
-                  } else {
-                    fla.b(23621);
-                    if (param1 == 73) {
-                      return;
-                    } else {
-                      this.a(-88, (byte) -14);
-                      return;
-                    }
-                  }
-                }
-              }
-              if (param1 == 73) {
-                return;
-              } else {
-                this.a(-88, (byte) -14);
-                return;
-              }
-            }
-          } else {
+        if (param0 != 34) {
+          if (param0 == 19) {
             this.b(1);
-            this.c(101);
-            if (this.field_e != 1) {
-              if (um.a(true)) {
-                if (!this.c((byte) 95)) {
-                  if (param1 == 73) {
-                    return;
-                  } else {
-                    this.a(-88, (byte) -14);
-                    return;
-                  }
-                } else {
-                  fla.b(23621);
-                  if (param1 != 73) {
-                    this.a(-88, (byte) -14);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param1 != 73) {
-                  this.a(-88, (byte) -14);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              L2: {
-                wf.field_x = true;
-                if (!um.a(true)) {
-                  break L2;
-                } else {
-                  if (!this.c((byte) 95)) {
-                    break L2;
-                  } else {
-                    fla.b(23621);
-                    if (param1 != 73) {
-                      this.a(-88, (byte) -14);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              if (param1 != 73) {
-                this.a(-88, (byte) -14);
-                return;
-              } else {
-                return;
-              }
+            this.c(param1 ^ 17);
+          } else {
+            if (param0 == 18 &&
+              this.field_e >= 1) {
+              fla.b(param1 + 23548);
             }
           }
         } else {
-          if (-20 != (param0 ^ -1)) {
-            if (-19 == (param0 ^ -1)) {
-              if (this.field_e >= 1) {
-                fla.b(param1 + 23548);
-                if (param1 != 73) {
-                  this.a(-88, (byte) -14);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (param1 != 73) {
-                  this.a(-88, (byte) -14);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              if (param1 != 73) {
-                this.a(-88, (byte) -14);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
+          if (0 == this.field_e) {
             this.b(1);
-            this.c(param1 ^ 17);
-            if (param1 == 73) {
-              return;
-            } else {
-              this.a(-88, (byte) -14);
-              return;
-            }
+            this.c(101);
+          }
+          if (this.field_e == 1) {
+            wf.field_x = true;
+          }
+          if (um.a(true) &&
+            this.c((byte) 95)) {
+            fla.b(23621);
           }
         }
+        if (param1 == 73) {
+          return;
+        }
+        this.a(-88, (byte) -14);
     }
 
     final void a(int param0) {
@@ -181,18 +60,14 @@ final class bda extends lw {
     }
 
     final void a(byte param0) {
-        int var2;
-        if (param0 >= 103) {
-          var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
-          if (-2 == (this.field_e ^ -1)) {
-            vg.a(sia.field_j, 8640, 22997, 33000, var2 + 4096, 6480, 4096 - -var2, sia.field_j.field_o << -1175365565, sia.field_j.field_n << -471586781);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param0 < 103) {
           return;
         }
+        int var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
+        if (this.field_e != 1) {
+          return;
+        }
+        vg.a(sia.field_j, 8640, 22997, 33000, var2 + 4096, 6480, 4096 + var2, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
     }
 
     bda() {

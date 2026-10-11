@@ -14,14 +14,14 @@ final class md extends pu {
         field_n = null;
         field_p = null;
         if (param0 != 28075) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
     }
 
     final static int d(byte param0) {
         if (param0 > -64) {
-            field_p = (String[]) null;
-            return 1;
+          field_p = (String[]) null;
+          return 1;
         }
         return 1;
     }

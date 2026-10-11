@@ -16,24 +16,19 @@ final class gm extends hl {
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
         var1 = 61 % ((7 - param0) / 35);
-        if (sg.field_i != null) {
-          var2 = sg.field_i;
-          synchronized (var2) {
-            L0: {
-              sg.field_i = null;
-              break L0;
-            }
-          }
+        if (sg.field_i == null) {
           return;
-        } else {
-          return;
+        }
+        var2 = sg.field_i;
+        synchronized (var2) {
+          sg.field_i = null;
         }
     }
 
     public static void c(boolean param0) {
         field_ib = null;
         if (param0) {
-            return;
+          return;
         }
         field_kb = (int[][]) null;
     }

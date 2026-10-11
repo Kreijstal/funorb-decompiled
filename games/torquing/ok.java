@@ -7,14 +7,12 @@ final class ok extends lg {
     static int[] field_C;
 
     final static vn a(sm[] param0, int param1, byte[] param2) {
+        int var8 = 0;
         vn stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         int[] var3 = null;
@@ -23,7 +21,6 @@ final class ok extends lg {
         int[] var5 = null;
         int[] var6 = null;
         byte[][] var7 = null;
-        int var8 = 0;
         int var9 = 0;
         java.math.BigInteger var10 = null;
         int[] var11 = null;
@@ -39,92 +36,56 @@ final class ok extends lg {
         byte[][] var21 = null;
         var9 = Torquing.field_u;
         try {
-          L0: {
-            if ((param0.length ^ -1) == -257) {
-              L1: {
-                if (param1 == 256) {
-                  break L1;
-                } else {
-                  var10 = (java.math.BigInteger) null;
-                  ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -16);
-                  break L1;
-                }
-              }
-              var17 = new int[256];
-              var12 = var17;
-              var11 = var12;
-              var3 = var11;
-              var18 = new int[256];
-              var13 = var18;
-              var4 = var13;
-              var19 = new int[256];
-              var14 = var19;
-              var5 = var14;
-              var20 = new int[256];
-              var15 = var20;
-              var6 = var15;
-              var21 = new byte[256][];
-              var16 = var21;
-              var7 = var16;
-              var8 = 0;
-              L2: while (true) {
-                if (var8 >= 256) {
-                  stackIn_9_0 = new vn(param2, var17, var18, var19, var20, var21);
-                  break L0;
-                } else {
-                  var11[var8] = param0[var8].field_a;
-                  var4[var8] = param0[var8].field_g;
-                  var5[var8] = param0[var8].field_c;
-                  var6[var8] = param0[var8].field_d;
-                  var7[var8] = param0[var8].field_l;
-                  var8++;
-                  continue L2;
-                }
-              }
-            } else {
-              throw new IllegalArgumentException();
-            }
+          if (param0.length != 256) {
+            throw new IllegalArgumentException();
           }
+          if (param1 != 256) {
+            var10 = (java.math.BigInteger) null;
+            ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -16);
+          }
+          var17 = new int[256];
+          var12 = var17;
+          var11 = var12;
+          var3 = var11;
+          var18 = new int[256];
+          var13 = var18;
+          var4 = var13;
+          var19 = new int[256];
+          var14 = var19;
+          var5 = var14;
+          var20 = new int[256];
+          var15 = var20;
+          var6 = var15;
+          var21 = new byte[256][];
+          var16 = var21;
+          var7 = var16;
+          for (var8 = 0; var8 < 256; var8++) {
+            var11[var8] = param0[var8].field_a;
+            var4[var8] = param0[var8].field_g;
+            var5[var8] = param0[var8].field_c;
+            var6[var8] = param0[var8].field_d;
+            var7[var8] = param0[var8].field_l;
+          }
+          stackIn_9_0 = new vn(param2, var17, var18, var19, var20, var21);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("ok.A(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("ok.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     public static void a(int param0) {
@@ -136,39 +97,39 @@ final class ok extends lg {
     private ok(String param0, el param1, ca param2) {
         super(param0, param1, param2);
         try {
-            this.field_q = ah.field_c.field_i;
+          this.field_q = ah.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0) {
         if (param0 >= -81) {
-            java.math.BigInteger var2 = (java.math.BigInteger) null;
-            ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -34);
+          java.math.BigInteger var2 = (java.math.BigInteger) null;
+          ok.a((fj) null, (java.math.BigInteger) null, (fj) null, (java.math.BigInteger) null, -34);
         }
-        if (-4 == (sn.field_i ^ -1)) {
-            de.field_c[4] = de.field_c[4] - 5;
+        if (sn.field_i == 3) {
+          de.field_c[4] = de.field_c[4] - 5;
         }
     }
 
     final static void a(fj param0, java.math.BigInteger param1, fj param2, java.math.BigInteger param3, int param4) {
         try {
-            if (param4 != -4) {
-                ok.a(-30);
-            }
-            op.a((byte) 20, param2, param3, param1, param0.field_n, param0.field_j, 0);
+          if (param4 != -4) {
+            ok.a(-30);
+          }
+          op.a((byte) 20, param2, param3, param1, param0.field_n, param0.field_j, 0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ok.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ok.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     ok(String param0, ca param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_A = param2 ? true : false;
+          this.field_A = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -180,9 +141,9 @@ final class ok extends lg {
     private ok(String param0, ca param1) {
         this(param0, ah.field_c.field_k, param1);
         try {
-            this.field_q = ah.field_c.field_i;
+          this.field_q = ah.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ok.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

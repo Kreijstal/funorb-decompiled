@@ -13,7 +13,7 @@ final class oa extends lh {
     public static void a(byte param0) {
         field_l = null;
         if (param0 >= -67) {
-            return;
+          return;
         }
         field_m = null;
         field_o = null;
@@ -25,84 +25,43 @@ final class oa extends lh {
 
     final static void a(int param0, boolean param1, int param2) {
         int var3;
-        L0: {
-          if (-8 != (param0 ^ -1)) {
-            break L0;
-          } else {
-            if (qh.c((byte) 57)) {
-              break L0;
-            } else {
-              if (0 >= wc.field_q) {
-                break L0;
-              } else {
-                param0 = 0;
-                break L0;
-              }
-            }
-          }
+        int var3Lifetime1;
+        if (param0 == 7 &&
+          !qh.c((byte) 57) &&
+          0 < wc.field_q) {
+          param0 = 0;
         }
         if (bc.field_V == param0) {
           return;
-        } else {
-          pg.field_f = -60;
-          bc.field_V = param0;
-          af.field_g = 0;
-          if (bc.field_V == 0) {
-            L1: {
-              bj.field_m = bc.field_V;
-              k.a(0, td.field_j);
-              if ((bc.field_V ^ -1) <= -1) {
-                pi.field_b[bc.field_V].a(param1, true);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            var3 = -72 % ((param2 - -26) / 39);
-            if (-9 != (bc.field_V ^ -1)) {
-              return;
-            } else {
-              vf.e(-6359);
-              return;
-            }
-          } else {
-            if (-2 != bc.field_V) {
-              L2: {
-                if ((bc.field_V ^ -1) <= -1) {
-                  pi.field_b[bc.field_V].a(param1, true);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              var3 = -72 % ((param2 - -26) / 39);
-              if (-9 != (bc.field_V ^ -1)) {
-                return;
-              } else {
-                vf.e(-6359);
-                return;
-              }
-            } else {
-              L3: {
-                bj.field_m = bc.field_V;
-                k.a(0, td.field_j);
-                if ((bc.field_V ^ -1) <= -1) {
-                  pi.field_b[bc.field_V].a(param1, true);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              var3 = -72 % ((param2 - -26) / 39);
-              if (-9 != (bc.field_V ^ -1)) {
-                return;
-              } else {
-                vf.e(-6359);
-                return;
-              }
-            }
-          }
         }
+        pg.field_f = -60;
+        bc.field_V = param0;
+        af.field_g = 0;
+        if (bc.field_V == 0) {
+          bj.field_m = bc.field_V;
+          k.a(0, td.field_j);
+          if (bc.field_V >= 0) {
+            pi.field_b[bc.field_V].a(param1, true);
+          }
+          var3 = -72 % ((param2 + 26) / 39);
+          if (bc.field_V != 8) {
+            return;
+          }
+          vf.e(-6359);
+          return;
+        }
+        if (-2 == bc.field_V) {
+          bj.field_m = bc.field_V;
+          k.a(0, td.field_j);
+        }
+        if (bc.field_V >= 0) {
+          pi.field_b[bc.field_V].a(param1, true);
+        }
+        var3Lifetime1 = -72 % ((param2 + 26) / 39);
+        if (bc.field_V != 8) {
+          return;
+        }
+        vf.e(-6359);
     }
 
     final static ob a(String param0, int param1) {
@@ -114,65 +73,39 @@ final class oa extends lh {
         ob stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var2_int = param0.length();
-              var3 = 0;
-              if (param1 <= -5) {
-                break L1;
-              } else {
-                field_o = (String) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var2_int <= var3) {
-                stackIn_11_0 = je.field_M;
-                break L0;
-              } else {
-                var4 = param0.charAt(var3);
-                if (var4 >= 48) {
-                  if (57 >= var4) {
-                    var3++;
-                    continue L2;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            }
+          var2_int = param0.length();
+          var3 = 0;
+          if (param1 > -5) {
+            field_o = (String) null;
           }
+          while (var2_int > var3) {
+            var4 = param0.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (57 < var4) {
+              return null;
+            }
+            var3++;
+          }
+          stackIn_11_0 = je.field_M;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("oa.C(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("oa.C(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_11_0;
     }
 
     static {

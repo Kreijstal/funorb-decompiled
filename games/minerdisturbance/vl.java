@@ -11,10 +11,10 @@ final class vl extends em {
 
     final byte[] c(byte param0) {
         if (this.field_C) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         if (param0 != -115) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         return this.field_F;
     }
@@ -23,107 +23,53 @@ final class vl extends em {
         int var3_int = 0;
         int var4 = 0;
         pe var5 = null;
-        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              var3_int = param0.field_tb - param1.field_tb;
-              if (param2 <= -66) {
-                break L1;
-              } else {
-                var5 = (pe) null;
-                vl.a((pe) null, (pe) null, 95);
-                break L1;
-              }
-            }
-            L2: {
-              if (param0.field_nb == bd.field_j) {
-                var3_int -= 200;
-                break L2;
-              } else {
-                if (param0.field_nb == null) {
-                  var3_int += 200;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if (bd.field_j != param1.field_nb) {
-                if (null == param1.field_nb) {
-                  var3_int -= 200;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              } else {
-                var3_int += 200;
-                break L3;
-              }
-            }
-            L4: {
-              if (-1 <= (var3_int ^ -1)) {
-                stackIn_16_0 = 0;
-                break L4;
-              } else {
-                stackIn_16_0 = 1;
-                break L4;
-              }
-            }
-            break L0;
+          var3_int = param0.field_tb - param1.field_tb;
+          if (param2 > -66) {
+            var5 = (pe) null;
+            vl.a((pe) null, (pe) null, 95);
           }
+          if (param0.field_nb == bd.field_j) {
+            var3_int -= 200;
+          } else {
+            if (param0.field_nb == null) {
+              var3_int += 200;
+            }
+          }
+          if (bd.field_j != param1.field_nb) {
+            if (null == param1.field_nb) {
+              var3_int -= 200;
+            }
+          } else {
+            var3_int += 200;
+          }
+          return !(var3_int <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3);
-
-            stackIn_19_1 = new StringBuilder().append("vl.F(");
-
-            if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_19_0 = var3;
+          stackIn_19_1 = new StringBuilder().append("vl.F(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
-
-            if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_20_0), stackIn_23_2 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_16_0 != 0;
     }
 
     final static void h(int param0) {
@@ -136,7 +82,7 @@ final class vl extends em {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (param2) {
-            return;
+          return;
         }
         nm.field_e = param4;
         vd.field_z = param0;
@@ -149,14 +95,14 @@ final class vl extends em {
 
     final int f(int param0) {
         if (param0 != 100) {
-            field_G = -118;
-            if (!(!this.field_C)) {
-                return 0;
-            }
-            return 100;
-        }
-        if (!(!this.field_C)) {
+          field_G = -118;
+          if (this.field_C) {
             return 0;
+          }
+          return 100;
+        }
+        if (this.field_C) {
+          return 0;
         }
         return 100;
     }

@@ -10,7 +10,7 @@ final class c {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 != -50) {
-            return;
+          return;
         }
         og.a((byte) 89);
         sb.g(param1, param4, param0, param3);
@@ -18,10 +18,10 @@ final class c {
 
     public static void a(int param0) {
         if (param0 != 18126) {
-            c.a(-55);
-            field_a = null;
-            field_e = null;
-            return;
+          c.a(-55);
+          field_a = null;
+          field_e = null;
+          return;
         }
         field_a = null;
         field_e = null;

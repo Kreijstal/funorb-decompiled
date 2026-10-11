@@ -11,18 +11,18 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_b = true;
+          this.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ui.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ui.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(vh param0, byte param1) {
         try {
-            int var3_int = -58 % ((-46 - param1) / 36);
-            q.a(-119, this.field_c, param0);
+          int var3_int = -58 % ((-46 - param1) / 36);
+          q.a(-119, this.field_c, param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ui.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -41,15 +41,16 @@ final class ui extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(boolean param0, o[] param1) {
         try {
-            f.field_d = param1;
-            if (!param0) {
-                field_a = (o[]) null;
-            }
-            if (null != f.field_d && -4 < (param1.length ^ -1)) {
-                throw new IllegalArgumentException("");
-            }
+          f.field_d = param1;
+          if (!param0) {
+            field_a = (o[]) null;
+          }
+          if (null != f.field_d &&
+            param1.length < 3) {
+            throw new IllegalArgumentException("");
+          }
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

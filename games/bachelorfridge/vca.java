@@ -19,7 +19,7 @@ final class vca extends bw {
         field_m = null;
         field_h = null;
         if (param0 != 488250252) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
     }
 
@@ -30,10 +30,10 @@ final class vca extends bw {
 
     final static void c(boolean param0) {
         if (!param0) {
-            vca.c(true);
-            pla.field_g = f.b((byte) 73);
-            qla.field_f = 0;
-            return;
+          vca.c(true);
+          pla.field_g = f.b((byte) 73);
+          qla.field_f = 0;
+          return;
         }
         pla.field_g = f.b((byte) 73);
         qla.field_f = 0;
@@ -46,24 +46,24 @@ final class vca extends bw {
         int var9 = 0;
         kv var10 = null;
         try {
-            var6_int = 2 + (param4.a(param3) - -(param3.length() * 4));
-            var7 = 8 + (param4.field_B + param4.field_u - -2);
-            this.field_g = new kv(var6_int, var7);
-            bu.a(0, this.field_g);
-            ce.a(true, param0, 1 + param4.field_u, param3, 1, true);
-            db.b(119);
-            this.field_g.f((param0 & 16579836) >> -786958142);
-            if ((param1 ^ -1) != param2) {
-                var8 = var6_int;
-                var9 = var7;
-                var10 = new kv(var8, var9);
-                bu.a(0, var10);
-                this.field_g.c(0, 0, var8, var9);
-                db.b(111);
-                this.field_g = var10;
-            }
+          var6_int = 2 + (param4.a(param3) + param3.length() * 4);
+          var7 = 8 + (param4.field_B + param4.field_u + 2);
+          this.field_g = new kv(var6_int, var7);
+          bu.a(0, this.field_g);
+          ce.a(true, param0, 1 + param4.field_u, param3, 1, true);
+          db.b(119);
+          this.field_g.f((param0 & 16579836) >> 2);
+          if (~param1 != param2) {
+            var8 = var6_int;
+            var9 = var7;
+            var10 = new kv(var8, var9);
+            bu.a(0, var10);
+            this.field_g.c(0, 0, var8, var9);
+            db.b(111);
+            this.field_g = var10;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "vca.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "vca.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,126 +72,93 @@ final class vca extends bw {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        if (this.field_l >= this.field_n) {
-          if (this.field_n - -this.field_o > this.field_l) {
-            this.field_g.e(param1 - (this.field_g.field_q >> 701408865), -(this.field_g.field_p >> -1190990303) + -20 + (param0 + this.field_j));
-            return;
+        int var7 = 0;
+        int var8 = 0;
+        int var6 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        if (this.field_l < this.field_n) {
+          var4 = (this.field_l << 8) / this.field_n;
+          var5 = (-this.field_l + this.field_n) * 160 / this.field_n;
+          if (this.field_n - 5 <= this.field_l) {
+            var6 = (-this.field_l + (-5 + this.field_n)) * 512 / (-5 + this.field_n) + 4608;
           } else {
-            var4 = -this.field_n + (this.field_l + -this.field_o);
-            var5 = (-var4 + this.field_k << 411042152) / this.field_k;
-            if (!param2) {
-              var6 = 40 * var4 / this.field_k;
-              if (-1 <= (var5 ^ -1)) {
-                return;
-              } else {
-                this.field_g.a(-(this.field_g.field_q >> 493905217) + param1, -(this.field_g.field_p >> 150929857) + (this.field_j - -param0 - (20 - -var6)), var5);
-                return;
-              }
-            } else {
-              return;
-            }
+            var6 = 4608 * this.field_l / (this.field_n - 5);
           }
-        } else {
-          L0: {
-            var4 = (this.field_l << 2077698024) / this.field_n;
-            var5 = (-this.field_l + this.field_n) * 160 / this.field_n;
-            if (this.field_n - 5 > this.field_l) {
-              var6 = 4608 * this.field_l / (this.field_n + -5);
-              break L0;
-            } else {
-              var6 = (-this.field_l + (-5 + this.field_n)) * 512 / (-5 + this.field_n) + 4608;
-              break L0;
-            }
+          if (this.field_n - 5 <= this.field_l) {
+            var6 = (-10 + (-this.field_l + this.field_n * 2) << 12) / (this.field_n - 10);
           }
-          L1: {
-            if (this.field_n + -5 > this.field_l) {
-              break L1;
-            } else {
-              var6 = (-10 + (-this.field_l + this.field_n * 2) << -34683220) / (this.field_n - 10);
-              break L1;
-            }
-          }
-          var7 = this.field_g.field_q * var6 >> 488250252;
-          var8 = this.field_g.field_p * var6 >> -1737017556;
-          this.field_g.c(-(var7 >> -633829535) + param1, (var5 >> 2062600996) + this.field_j + (param0 - (20 - -(var8 >> 1084818497))), var7, var8, var4);
+          var7 = this.field_g.field_q * var6 >> 12;
+          var8 = this.field_g.field_p * var6 >> 12;
+          this.field_g.c(-(var7 >> 1) + param1, (var5 >> 4) + this.field_j + (param0 - (20 + (var8 >> 1))), var7, var8, var4);
+          return;
+        }
+        if (this.field_n + this.field_o > this.field_l) {
+          this.field_g.e(param1 - (this.field_g.field_q >> 1), -(this.field_g.field_p >> 1) - 20 + (param0 + this.field_j));
+          return;
+        }
+        var4Lifetime1 = -this.field_n + (this.field_l - this.field_o);
+        var5Lifetime1 = (-var4Lifetime1 + this.field_k << 8) / this.field_k;
+        if (param2) {
+          return;
+        }
+        var6Lifetime1 = 40 * var4Lifetime1 / this.field_k;
+        if (var5Lifetime1 > 0) {
+          this.field_g.a(-(this.field_g.field_q >> 1) + param1, -(this.field_g.field_p >> 1) + (this.field_j + param0 - (20 + var6Lifetime1)), var5Lifetime1);
           return;
         }
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0) {
-          L0: {
-            this.field_j = 42;
-            fieldTemp$2 = this.field_l + 1;
-            this.field_l = this.field_l + 1;
-            if (this.field_k + (this.field_n + this.field_o) >= fieldTemp$2) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            fieldTemp$3 = this.field_l + 1;
-            this.field_l = this.field_l + 1;
-            if (this.field_k + (this.field_n + this.field_o) >= fieldTemp$3) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        int fieldTemp$0 = 0;
+        if (!param0) {
+          fieldTemp$0 = this.field_l + 1;
+          this.field_l = this.field_l + 1;
+          return this.field_k + (this.field_n + this.field_o) < fieldTemp$0 ? true : false;
         }
+        this.field_j = 42;
+        int fieldTemp$1 = this.field_l + 1;
+        this.field_l = this.field_l + 1;
+        return this.field_k + (this.field_n + this.field_o) < fieldTemp$1 ? true : false;
     }
 
     private vca(po param0, String param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_o = param5;
-            this.field_k = param6;
-            this.field_l = 0;
-            this.field_n = param4;
-            this.a(param2, param3, -4097, param1, param0);
+          this.field_o = param5;
+          this.field_k = param6;
+          this.field_l = 0;
+          this.field_n = param4;
+          this.a(param2, param3, -4097, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     vca(po param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_o = param5;
-            this.field_j = param7;
-            this.field_k = param6;
-            this.field_n = param4;
-            this.field_l = 0;
-            this.a(param2, param3, -4097, param1, param0);
+          this.field_o = param5;
+          this.field_j = param7;
+          this.field_k = param6;
+          this.field_n = param4;
+          this.field_l = 0;
+          this.a(param2, param3, -4097, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     vca(kv param0, int param1, int param2, int param3) {
         try {
-            this.field_n = param1;
-            this.field_g = param0;
-            this.field_o = param2;
-            this.field_l = 0;
-            this.field_k = param3;
+          this.field_n = param1;
+          this.field_g = param0;
+          this.field_o = param2;
+          this.field_l = 0;
+          this.field_k = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "vca.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

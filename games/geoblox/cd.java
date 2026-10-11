@@ -147,6 +147,7 @@ final class cd extends jg {
     }
 
     final java.net.Socket b(int param0) throws IOException {
+        int var9 = 0;
         int stackIn_5_0 = 0;
         java.net.ProxySelector stackIn_8_0;
         java.net.URI stackIn_8_1;
@@ -162,7 +163,7 @@ final class cd extends jg {
         java.net.URI stackIn_12_1;
         java.net.URI stackIn_12_2;
         String stackIn_12_4;
-        java.net.Socket stackIn_21_0 = null;
+        java.net.Socket stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
         List var3 = null;
         List var4 = null;
@@ -171,7 +172,6 @@ final class cd extends jg {
         Object[] var6_array = null;
         Object var7 = null;
         Object[] var8 = null;
-        int var9 = 0;
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
@@ -222,27 +222,23 @@ final class cd extends jg {
         var6_array = var3.toArray();
         var7 = null;
         var8 = var6_array;
-        var9 = param0;
-        while (var9 < var8.length) {
+        for (var9 = param0; var9 < var8.length; var9++) {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
             if (false) throw (bd) null;
             var12 = this.a(var11, (byte) -18);
             if (var12 != null) {
-              stackIn_21_0 = var12;
-              return stackIn_21_0;
+              stackIn_22_0 = var12;
+              return stackIn_22_0;
             }
-            var9++;
           } catch (bd decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var12_ref = (bd) (Object) decompiledCaughtException;
             var7 = var12_ref;
-            var9++;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var12_ref2 = (IOException) (Object) decompiledCaughtException;
-            var9++;
           }
         }
         if (var7 != null) {

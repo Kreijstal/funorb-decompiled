@@ -30,12 +30,11 @@ final class ac extends o {
     }
 
     final static em a(nk param0, boolean param1) {
-        em stackIn_23_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
+        int var7 = 0;
+        em stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        String stackIn_27_2 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -43,117 +42,72 @@ final class ac extends o {
         int var4 = 0;
         em var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         var8 = Chess.field_G;
         try {
-          L0: {
-            var2_int = param0.e(117, 8);
-            if (var2_int > 0) {
-              throw new IllegalStateException("" + var2_int);
+          var2_int = param0.e(117, 8);
+          if (var2_int > 0) {
+            throw new IllegalStateException("" + var2_int);
+          }
+          var3 = r.a(true, param0) ? 1 : 0;
+          var4 = r.a(true, param0) ? 1 : 0;
+          var5 = new em();
+          var5.field_d = (short)param0.e(-58, 16);
+          var5.field_z = ml.a(var5.field_z, 16, param0, 119);
+          var5.field_a = ml.a(var5.field_a, 16, param0, 78);
+          var5.field_H = ml.a(var5.field_H, 16, param0, 50);
+          var5.field_e = (short)param0.e(119, 16);
+          var5.field_g = ml.a(var5.field_g, 16, param0, 63);
+          var5.field_A = ml.a(var5.field_A, 16, param0, 118);
+          var5.field_J = ml.a(var5.field_J, 16, param0, 62);
+          if (var3 != 0) {
+            var5.field_t = (short)param0.e(-88, 16);
+            var5.field_b = ml.a(var5.field_b, 16, param0, 106);
+            var5.field_f = ml.a(var5.field_f, 16, param0, 42);
+            var5.field_F = ml.a(var5.field_F, 16, param0, 83);
+            var5.field_l = ml.a(var5.field_l, 16, param0, 54);
+            var5.field_C = ml.a(var5.field_C, 16, param0, 52);
+            var5.field_E = ml.a(var5.field_E, 16, param0, 64);
+          }
+          if (var4 != 0) {
+            param0.e(-32, 16);
+            var5.field_B = ml.a(var5.field_B, 16, param0, 70);
+            var5.field_N = ml.a(var5.field_N, 16, param0, 89);
+            var5.field_o = ml.a(var5.field_o, 16, param0, 74);
+            var5.field_i = ml.a(var5.field_i, 16, param0, 99);
+            var5.field_R = ml.a(var5.field_R, 16, param0, 116);
+          }
+          if (r.a(true, param0)) {
+            var5.field_G = ml.a(var5.field_G, 16, param0, 107);
+          }
+          if (r.a(param1, param0)) {
+            var5.field_y = rb.a(var5.field_y, (byte) -105, param0, 16);
+            var6 = 0;
+            for (var7 = 0; var7 < var5.field_y.length; var7++) {
+              if ((255 & var5.field_y[var7]) > var6) {
+                var6 = var5.field_y[var7] & 255;
+              }
+            }
+            if (var6 == 0) {
+              var5.field_y = null;
             } else {
-              L1: {
-                var3 = r.a(true, param0) ? 1 : 0;
-                var4 = r.a(true, param0) ? 1 : 0;
-                var5 = new em();
-                var5.field_d = (short)param0.e(-58, 16);
-                var5.field_z = ml.a(var5.field_z, 16, param0, 119);
-                var5.field_a = ml.a(var5.field_a, 16, param0, 78);
-                var5.field_H = ml.a(var5.field_H, 16, param0, 50);
-                var5.field_e = (short)param0.e(119, 16);
-                var5.field_g = ml.a(var5.field_g, 16, param0, 63);
-                var5.field_A = ml.a(var5.field_A, 16, param0, 118);
-                var5.field_J = ml.a(var5.field_J, 16, param0, 62);
-                if (var3 == 0) {
-                  break L1;
-                } else {
-                  var5.field_t = (short)param0.e(-88, 16);
-                  var5.field_b = ml.a(var5.field_b, 16, param0, 106);
-                  var5.field_f = ml.a(var5.field_f, 16, param0, 42);
-                  var5.field_F = ml.a(var5.field_F, 16, param0, 83);
-                  var5.field_l = ml.a(var5.field_l, 16, param0, 54);
-                  var5.field_C = ml.a(var5.field_C, 16, param0, 52);
-                  var5.field_E = ml.a(var5.field_E, 16, param0, 64);
-                  break L1;
-                }
-              }
-              L2: {
-                if (var4 == 0) {
-                  break L2;
-                } else {
-                  param0.e(-32, 16);
-                  var5.field_B = ml.a(var5.field_B, 16, param0, 70);
-                  var5.field_N = ml.a(var5.field_N, 16, param0, 89);
-                  var5.field_o = ml.a(var5.field_o, 16, param0, 74);
-                  var5.field_i = ml.a(var5.field_i, 16, param0, 99);
-                  var5.field_R = ml.a(var5.field_R, 16, param0, 116);
-                  break L2;
-                }
-              }
-              L3: {
-                if (r.a(true, param0)) {
-                  var5.field_G = ml.a(var5.field_G, 16, param0, 107);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (!r.a(param1, param0)) {
-                  break L4;
-                } else {
-                  var5.field_y = rb.a(var5.field_y, (byte) -105, param0, 16);
-                  var6 = 0;
-                  var7 = 0;
-                  L5: while (true) {
-                    if (var7 >= var5.field_y.length) {
-                      if (var6 == 0) {
-                        var5.field_y = null;
-                        break L4;
-                      } else {
-                        var5.field_j = (byte)(1 + var6);
-                        break L4;
-                      }
-                    } else {
-                      if ((255 & var5.field_y[var7]) > var6) {
-                        var6 = var5.field_y[var7] & 255;
-                        var7++;
-                        continue L5;
-                      } else {
-                        var7++;
-                        continue L5;
-                      }
-                    }
-                  }
-                }
-              }
-              stackIn_23_0 = (em) (var5);
-              break L0;
+              var5.field_j = (byte)(1 + var6);
             }
           }
+          stackIn_24_0 = var5;
+          return stackIn_24_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var2);
-
-            stackIn_26_1 = new StringBuilder().append("ac.B(");
-
-            if (param0 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L6;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L6;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_27_0 = var2;
+          stackIn_27_1 = new StringBuilder().append("ac.B(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_23_0;
     }
 
     static {

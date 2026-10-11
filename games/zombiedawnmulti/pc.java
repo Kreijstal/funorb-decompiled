@@ -9,16 +9,16 @@ final class pc extends ae {
         wb var5 = null;
         gm var5_ref = null;
         try {
-            var5 = op.field_m.a(this.field_i, false);
-            ah.field_e.c(Integer.toString(this.field_f - param3), var5.g(-41) - param2, -param0 + var5.h(76), 4, -1);
+          var5 = op.field_m.a(this.field_i, false);
+          ah.field_e.c(Integer.toString(this.field_f - param3), var5.g(-41) - param2, -param0 + var5.h(76), 4, -1);
         } catch (Exception exception) {
         }
         try {
-            if (!param1) {
-                this.field_j = -25;
-            }
-            var5_ref = op.field_m.a(this.field_i, 105);
-            ah.field_e.c(Integer.toString(this.field_f + -param3), var5_ref.g(81) + -param2, -param0 + var5_ref.h(87), 4, -1);
+          if (!param1) {
+            this.field_j = -25;
+          }
+          var5_ref = op.field_m.a(this.field_i, 105);
+          ah.field_e.c(Integer.toString(this.field_f - param3), var5_ref.g(81) - param2, -param0 + var5_ref.h(87), 4, -1);
         } catch (Exception exception) {
         }
     }
@@ -29,49 +29,26 @@ final class pc extends ae {
         byte[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 83) {
-              stackIn_4_0 = mk.field_b.a("", param0, false);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (byte[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == 83) {
+            stackIn_4_0 = mk.field_b.a("", param0, false);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (byte[]) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("pc.B(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("pc.B(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -79,33 +56,31 @@ final class pc extends ae {
         super.a(0, param3);
         this.field_j = param1;
         if (param2) {
-            return;
+          return;
         }
         this.field_i = param0;
     }
 
     final void a(int param0, qd param1) {
         try {
-            param1.c((byte) 118, this.field_j, this.field_i);
-            if (param0 != 0) {
-                this.field_j = -79;
-            }
+          param1.c((byte) 118, this.field_j, this.field_i);
+          if (param0 != 0) {
+            this.field_j = -79;
+          }
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "pc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "pc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
-        if (param0 >= -47) {
-          this.field_j = -37;
-          super.a((byte) -86);
-          a.field_c.a((br) (this), false);
-          return;
-        } else {
+        if (param0 < -47) {
           super.a((byte) -86);
           a.field_c.a((br) (this), false);
           return;
         }
+        this.field_j = -37;
+        super.a((byte) -86);
+        a.field_c.a((br) (this), false);
     }
 
     pc() {

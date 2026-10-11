@@ -10,34 +10,34 @@ final class ii extends em {
     final static void a(java.awt.Component param0, int param1) {
         param0.setFocusTraversalKeysEnabled(false);
         if (param1 != 30) {
-            return;
+          return;
         }
         try {
-            param0.addKeyListener(tf.field_p);
-            param0.addFocusListener(tf.field_p);
+          param0.addKeyListener(tf.field_p);
+          param0.addFocusListener(tf.field_p);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ii.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ii.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(kg param0, byte param1) {
         if (param1 <= 47) {
-            return;
+          return;
         }
         try {
-            param0.a(this.field_h, (byte) 46);
-            param0.a(11404, this.field_j);
+          param0.a(this.field_h, (byte) 46);
+          param0.a(11404, this.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ii.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ii.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static java.applet.Applet b(boolean param0) {
         if (null != kc.field_d) {
-            return kc.field_d;
+          return kc.field_d;
         }
         if (param0) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
         return (java.applet.Applet) ((Object) rj.field_e);
     }
@@ -51,16 +51,16 @@ final class ii extends em {
         field_g = null;
         field_i = null;
         if (param0) {
-            ii.b(false);
+          ii.b(false);
         }
     }
 
     final static void c(byte param0) {
         int var1_int = 0;
         int var6 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_19_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -69,79 +69,30 @@ final class ii extends em {
         int var5 = 0;
         var6 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 74) {
-                break L1;
-              } else {
-                field_i = (String) null;
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              if (var1_int >= 10) {
-                break L0;
-              } else {
-                if (fb.field_d[var1_int] != null) {
-                  L3: {
-                    if ((1 << var1_int & ih.field_a) != 0) {
-                      stackIn_10_0 = 32;
-                      break L3;
-                    } else {
-                      stackIn_10_0 = 16;
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    var2 = stackIn_10_0;
-                    if ((1 << var1_int & ih.field_a) != 0) {
-                      stackIn_13_0 = 50;
-                      break L4;
-                    } else {
-                      stackIn_13_0 = 30;
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    var3 = stackIn_13_0;
-                    gb.field_a[var1_int] = gb.field_a[var1_int] + 1;
-                    if (var3 != gb.field_a[var1_int]) {
-                      L6: {
-                        if ((1 << var1_int & ih.field_a) != 0) {
-                          stackIn_18_0 = 1024;
-                          break L6;
-                        } else {
-                          stackIn_18_0 = 512;
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        var4 = stackIn_18_0 / (gb.field_a[var1_int] + 8);
-                        var5 = uh.field_g[var1_int] - var4;
-                        if (var5 >= 4 - -var2 << -1285699900) {
-                          break L7;
-                        } else {
-                          var5 = var2 + 4 << 991886948;
-                          break L7;
-                        }
-                      }
-                      uh.field_g[var1_int] = var5;
-                      break L5;
-                    } else {
-                      fb.field_d[var1_int] = null;
-                      break L5;
-                    }
-                  }
-                  var1_int++;
-                  continue L2;
-                } else {
-                  var1_int++;
-                  continue L2;
+          if (param0 != 74) {
+            field_i = (String) null;
+          }
+          for (var1_int = 0; var1_int < 10; var1_int++) {
+            if (fb.field_d[var1_int] != null) {
+              stackIn_11_0 = ((1 << var1_int & ih.field_a) != 0) ? 32 : 16;
+              var2 = stackIn_11_0;
+              stackIn_14_0 = ((1 << var1_int & ih.field_a) != 0) ? 50 : 30;
+              var3 = stackIn_14_0;
+              gb.field_a[var1_int] = gb.field_a[var1_int] + 1;
+              if (var3 != gb.field_a[var1_int]) {
+                stackIn_19_0 = ((1 << var1_int & ih.field_a) != 0) ? 1024 : 512;
+                var4 = stackIn_19_0 / (gb.field_a[var1_int] + 8);
+                var5 = uh.field_g[var1_int] - var4;
+                if (var5 < 4 + var2 << 4) {
+                  var5 = var2 + 4 << 4;
                 }
+                uh.field_g[var1_int] = var5;
+              } else {
+                fb.field_d[var1_int] = null;
               }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -151,10 +102,10 @@ final class ii extends em {
 
     ii(String param0, String param1) {
         try {
-            this.field_h = param0;
-            this.field_j = param1;
+          this.field_h = param0;
+          this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

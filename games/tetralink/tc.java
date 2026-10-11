@@ -16,27 +16,25 @@ final class tc extends mc {
     public static void a(boolean param0) {
         field_t = null;
         field_q = null;
-        if (!param0) {
-          tc.a(false);
-          field_p = null;
-          field_w = null;
-          field_n = null;
-          return;
-        } else {
+        if (param0) {
           field_p = null;
           field_w = null;
           field_n = null;
           return;
         }
+        tc.a(false);
+        field_p = null;
+        field_w = null;
+        field_n = null;
     }
 
     tc(long param0, int param1, byte[] param2) {
         try {
-            this.field_r = param0;
-            this.field_u = param1;
-            this.field_o = param2;
+          this.field_r = param0;
+          this.field_u = param1;
+          this.field_o = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "tc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

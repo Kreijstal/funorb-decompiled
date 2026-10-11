@@ -12,31 +12,29 @@ final class nj {
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 84) {
-          field_e = -125L;
-          field_c = null;
-          field_d = null;
-          field_g = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 84) {
           field_c = null;
           field_d = null;
           field_g = null;
           field_a = null;
           return;
         }
+        field_e = -125L;
+        field_c = null;
+        field_d = null;
+        field_g = null;
+        field_a = null;
     }
 
     final static void a(nh param0, nh param1, int param2) {
         try {
-            hf.field_pb = param0;
-            if (param2 != -6332) {
-                nj.a((byte) 73);
-            }
-            jb.field_Qb = param1;
+          hf.field_pb = param0;
+          if (param2 != -6332) {
+            nj.a((byte) 73);
+          }
+          jb.field_Qb = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "nj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

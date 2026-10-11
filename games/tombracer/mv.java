@@ -13,109 +13,73 @@ final class mv {
     boolean field_d;
 
     final int[] a(byte param0, int param1) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_8_0 = null;
-        Object stackIn_9_0 = null;
-        int stackIn_9_1 = 0;
+        boolean stackIn_4_1 = false;
+        boolean stackIn_9_1 = false;
         int var3;
         tba var4;
         tba var5;
         int var6;
+        tba var5Lifetime1;
+        tba var5Lifetime2;
         var6 = TombRacer.field_G ? 1 : 0;
-        var3 = 8 % ((param0 - -43) / 59);
-        if (this.field_e != this.field_b) {
-          if (1 != this.field_e) {
-            L0: {
-              var4 = this.field_f[param1];
-              var5 = var4;
-              var5 = var4;
-              if (var4 == null) {
-                L1: {
-                  this.field_d = true;
-                  if (this.field_c < this.field_e) {
-                    var4 = new tba(param1, this.field_c);
-                    this.field_c = this.field_c + 1;
-                    break L1;
-                  } else {
-                    var5 = (tba) ((Object) this.field_g.b(3));
-                    var4 = new tba(param1, var5.field_j);
-                    this.field_f[var5.field_h] = null;
-                    var5.p(69);
-                    break L1;
-                  }
-                }
-                this.field_f[param1] = var4;
-                break L0;
-              } else {
-                this.field_d = false;
-                break L0;
-              }
-            }
-            this.field_g.a((byte) 103, (vg) (var4));
-            return this.field_a[var4.field_j];
-          } else {
-            L2: {
-              stackIn_8_0 = this;
-
-              if (param1 == this.field_h) {
-                stackIn_9_0 = this;
-                stackIn_9_1 = 0;
-                break L2;
-              } else {
-                stackIn_9_0 = this;
-                stackIn_9_1 = 1;
-                break L2;
-              }
-            }
-            ((mv) (this)).field_d = stackIn_9_1 != 0;
-            this.field_h = param1;
-            return this.field_a[0];
-          }
-        } else {
-          L3: {
-            stackIn_3_0 = this;
-
-            if (this.field_f[param1] != null) {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 0;
-              break L3;
-            } else {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 1;
-              break L3;
-            }
-          }
-          ((mv) (this)).field_d = stackIn_4_1 != 0;
+        var3 = 8 % ((param0 + 43) / 59);
+        if (this.field_e == this.field_b) {
+          stackIn_4_1 = (this.field_f[param1] == null);
+          this.field_d = stackIn_4_1;
           this.field_f[param1] = nea.field_a;
           return this.field_a[param1];
         }
+        if (1 == this.field_e) {
+          stackIn_9_1 = (param1 != this.field_h);
+          this.field_d = stackIn_9_1;
+          this.field_h = param1;
+          return this.field_a[0];
+        }
+        var4 = this.field_f[param1];
+        var5 = var4;
+        var5Lifetime1 = var4;
+        if (var4 == null) {
+          this.field_d = true;
+          if (this.field_c < this.field_e) {
+            var4 = new tba(param1, this.field_c);
+            this.field_c = this.field_c + 1;
+          } else {
+            var5Lifetime2 = (tba) (this.field_g.b(3));
+            var4 = new tba(param1, var5Lifetime2.field_j);
+            this.field_f[var5Lifetime2.field_h] = null;
+            var5Lifetime2.p(69);
+          }
+          this.field_f[param1] = var4;
+        } else {
+          this.field_d = false;
+        }
+        this.field_g.a((byte) 103, (vg) (var4));
+        return this.field_a[var4.field_j];
     }
 
     final void a(boolean param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
         for (var2 = 0; var2 < this.field_e; var2++) {
-            this.field_a[var2] = null;
+          this.field_a[var2] = null;
         }
         this.field_a = (int[][]) null;
         this.field_f = null;
         this.field_g.d(8);
         this.field_g = null;
         if (param0) {
-            this.a(true);
+          this.a(true);
         }
     }
 
     final int[][] a(int param0) {
         int var2 = 0;
         int var3 = TombRacer.field_G ? 1 : 0;
-        if (!(this.field_e == this.field_b)) {
-            throw new RuntimeException("Can only retrieve a full image cache");
+        if (this.field_e != this.field_b) {
+          throw new RuntimeException("Can only retrieve a full image cache");
         }
         for (var2 = param0; var2 < this.field_e; var2++) {
-            this.field_f[var2] = nea.field_a;
+          this.field_f[var2] = nea.field_a;
         }
         return this.field_a;
     }

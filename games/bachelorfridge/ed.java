@@ -13,18 +13,16 @@ final class ed {
     public static void a(int param0) {
         field_c = null;
         field_f = null;
-        if (param0 < 41) {
-          field_f = (kv[]) null;
-          field_e = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 >= 41) {
           field_e = null;
           field_d = null;
           field_b = null;
           return;
         }
+        field_f = (kv[]) null;
+        field_e = null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

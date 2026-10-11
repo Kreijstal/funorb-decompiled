@@ -17,43 +17,37 @@ final class ll extends lh {
     static int field_m;
 
     public static void a(int param0) {
-        if (param0 <= 3) {
-          field_j = false;
-          field_n = null;
-          field_o = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 > 3) {
           field_n = null;
           field_o = null;
           field_r = null;
           return;
         }
+        field_j = false;
+        field_n = null;
+        field_o = null;
+        field_r = null;
     }
 
     final static void d(int param0) {
-        if (null != fl.field_b) {
+        if (null == fl.field_b) {
+          fl.field_b = new dd(640, 336);
           fl.field_b.f();
           oe.a((byte) -118, rh.field_c.field_x, fleas.field_E);
           gi.field_b.a((byte) 71);
           if (param0 != 336) {
             ll.a(-25);
             return;
-          } else {
-            return;
           }
-        } else {
-          fl.field_b = new dd(640, 336);
-          fl.field_b.f();
-          oe.a((byte) -118, rh.field_c.field_x, fleas.field_E);
-          gi.field_b.a((byte) 71);
-          if (param0 == 336) {
-            return;
-          } else {
-            ll.a(-25);
-            return;
-          }
+          return;
         }
+        fl.field_b.f();
+        oe.a((byte) -118, rh.field_c.field_x, fleas.field_E);
+        gi.field_b.a((byte) 71);
+        if (param0 == 336) {
+          return;
+        }
+        ll.a(-25);
     }
 
     ll() {

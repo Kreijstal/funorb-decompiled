@@ -20,7 +20,7 @@ final class ah {
         field_h = null;
         field_b = null;
         if (param0) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
     }
 
@@ -29,12 +29,12 @@ final class ah {
 
     ah(ah param0) {
         try {
-            this.field_a = param0.field_a;
-            this.field_j = param0.field_j;
-            this.field_f = param0.field_f;
-            this.field_d = param0.field_d;
+          this.field_a = param0.field_a;
+          this.field_j = param0.field_j;
+          this.field_f = param0.field_f;
+          this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,16 +9,16 @@ final class we {
     final static void a(byte param0) {
         mf.field_i = new vl();
         if (param0 != -46) {
-            we.a(12);
+          we.a(12);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != -8495) {
-            we.a((byte) -45);
-            field_b = null;
-            return;
+          we.a((byte) -45);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

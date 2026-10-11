@@ -9,33 +9,21 @@ final class nn extends ne {
     static int[] field_j;
 
     final void a(byte param0) {
-        ie var2;
-        int var3;
-        var3 = DungeonAssault.field_K;
-        if (param0 != 80) {
-          return;
-        } else {
-          var2 = (ie) ((Object) this.field_m.e(param0 ^ -24124));
-          L0: while (true) {
-            if (var2 == null) {
-              this.field_l = null;
-              return;
-            } else {
-              L1: {
-                var2.field_m.field_p = mo.field_a;
-                var2.field_m.field_m = -256 + mo.field_a;
-                if (var2.field_m.field_B) {
-                  var2.field_m.field_L = mo.field_a;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var2.field_m.field_B = false;
-              var2 = (ie) ((Object) this.field_m.a(4));
-              continue L0;
+        ie var2 = null;
+        int var3 = DungeonAssault.field_K;
+        if (param0 == 80) {
+          var2 = (ie) (this.field_m.e(param0 ^ -24124));
+          while (var2 != null) {
+            var2.field_m.field_p = mo.field_a;
+            var2.field_m.field_m = -256 + mo.field_a;
+            if (var2.field_m.field_B) {
+              var2.field_m.field_L = mo.field_a;
             }
+            var2.field_m.field_B = false;
+            var2 = (ie) (this.field_m.a(4));
           }
+          this.field_l = null;
+          return;
         }
     }
 
@@ -49,71 +37,40 @@ final class nn extends ne {
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              var3 = (ie) ((Object) this.field_m.e(-24172));
-              if (param1 == -256) {
-                break L1;
-              } else {
-                this.field_l = (gd) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var3 == null) {
-                param0.field_C = mo.field_a;
-                param0.field_B = true;
-                this.field_l = param0;
-                break L0;
-              } else {
-                L3: {
-                  var3.field_m.field_m = mo.field_a + -256;
-                  var3.field_m.field_p = mo.field_a;
-                  if (var3.field_m == param0) {
-                    break L3;
-                  } else {
-                    if (var3.field_m.field_B) {
-                      var3.field_m.field_B = false;
-                      var3.field_m.field_L = mo.field_a;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                var3 = (ie) ((Object) this.field_m.a(4));
-                continue L2;
-              }
-            }
+          var3 = (ie) (this.field_m.e(-24172));
+          if (param1 != -256) {
+            this.field_l = (gd) null;
           }
+          while (var3 != null) {
+            var3.field_m.field_m = mo.field_a - 256;
+            var3.field_m.field_p = mo.field_a;
+            if (var3.field_m != param0 &&
+              var3.field_m.field_B) {
+              var3.field_m.field_B = false;
+              var3.field_m.field_L = mo.field_a;
+            }
+            var3 = (ie) (this.field_m.a(4));
+          }
+          param0.field_C = mo.field_a;
+          param0.field_B = true;
+          this.field_l = param0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var3_ref);
-
-            stackIn_14_1 = new StringBuilder().append("nn.F(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_14_0 = var3_ref;
+          stackIn_14_1 = new StringBuilder().append("nn.F(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -121,22 +78,22 @@ final class nn extends ne {
         ie var3 = null;
         int var4 = DungeonAssault.field_K;
         try {
-            if (!(this == param0.field_M)) {
-                throw new RuntimeException();
+          if (this != param0.field_M) {
+            throw new RuntimeException();
+          }
+          if (param1 != 29339) {
+            field_k = (String) null;
+          }
+          var3 = (ie) (this.field_m.e(-24172));
+          while (var3 != null) {
+            if (var3.field_m == param0) {
+              var3.a(false);
             }
-            if (param1 != 29339) {
-                field_k = (String) null;
-            }
-            var3 = (ie) ((Object) this.field_m.e(-24172));
-            while (var3 != null) {
-                if (!(var3.field_m != param0)) {
-                    var3.a(false);
-                }
-                var3 = (ie) ((Object) this.field_m.a(4));
-            }
-            param0.field_M = null;
+            var3 = (ie) (this.field_m.a(4));
+          }
+          param0.field_M = null;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "nn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "nn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -146,71 +103,38 @@ final class nn extends ne {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (param0.field_M != null) {
-                param0.field_M.b(param0, 29339);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            param0.field_M = (nn) (this);
-            var3 = (ie) ((Object) this.field_m.e(param1 ^ 24184));
-            L2: while (true) {
-              if (var3 == null) {
-                this.field_m.a(new ie(param0), false);
-                if (param1 == -20) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  this.field_l = (gd) null;
-                  return;
-                }
-              } else {
-                if (param0 != var3.field_m) {
-                  var3 = (ie) ((Object) this.field_m.a(param1 + 24));
-                  continue L2;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
+          if (param0.field_M != null) {
+            param0.field_M.b(param0, 29339);
           }
+          param0.field_M = this;
+          var3 = (ie) (this.field_m.e(param1 ^ 24184));
+          while (var3 != null) {
+            if (param0 == var3.field_m) {
+              return;
+            }
+            var3 = (ie) (this.field_m.a(param1 + 24));
+          }
+          this.field_m.a(new ie(param0), false);
+          if (param1 == -20) {
+            return;
+          }
+          this.field_l = (gd) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3_ref);
-
-            stackIn_15_1 = new StringBuilder().append("nn.C(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_15_0 = var3_ref;
+          stackIn_15_1 = new StringBuilder().append("nn.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw vk.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -218,7 +142,7 @@ final class nn extends ne {
         field_k = null;
         field_j = null;
         if (param0 == -80) {
-            return;
+          return;
         }
         nn.b((byte) 94);
     }
@@ -227,23 +151,23 @@ final class nn extends ne {
         ie var3 = null;
         int var5 = DungeonAssault.field_K;
         if (!this.field_i) {
-            return;
+          return;
         }
         try {
-            var3 = (ie) ((Object) this.field_m.e(-24172));
-            while (var3 != null) {
-                var3.field_m.field_m = -256 + mo.field_a;
-                var3.field_m.field_p = mo.field_a;
-                var3 = (ie) ((Object) this.field_m.a(4));
-            }
-            param1.field_L = mo.field_a;
-            int var4 = 43 / ((param0 - -7) / 51);
-            if (param1 == this.field_l) {
-                this.field_l = null;
-            }
-            param1.field_B = false;
+          var3 = (ie) (this.field_m.e(-24172));
+          while (var3 != null) {
+            var3.field_m.field_m = -256 + mo.field_a;
+            var3.field_m.field_p = mo.field_a;
+            var3 = (ie) (this.field_m.a(4));
+          }
+          param1.field_L = mo.field_a;
+          int var4 = 43 / ((param0 + 7) / 51);
+          if (param1 == this.field_l) {
+            this.field_l = null;
+          }
+          param1.field_B = false;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "nn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "nn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

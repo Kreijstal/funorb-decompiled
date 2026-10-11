@@ -12,41 +12,39 @@ final class ho extends bw {
         field_j = null;
         field_g = null;
         if (param0 < 70) {
-            return;
+          return;
         }
         field_f = null;
     }
 
     final ho c(byte param0) {
-        if (param0 <= 45) {
-          field_j = (ee[]) null;
-          return new ho(this.field_h, this.field_i);
-        } else {
+        if (param0 > 45) {
           return new ho(this.field_h, this.field_i);
         }
+        field_j = (ee[]) null;
+        return new ho(this.field_h, this.field_i);
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        if (param0 <= 25) {
-          return -114;
-        } else {
-          var2 = param1 >>> 1263232353;
-          var2 = var2 | var2 >>> -628180191;
-          var2 = var2 | var2 >>> 1607567298;
-          var2 = var2 | var2 >>> 1019541828;
-          var2 = var2 | var2 >>> 227066056;
-          var2 = var2 | var2 >>> 679278160;
-          return (var2 ^ -1) & param1;
+        int var2 = 0;
+        if (param0 > 25) {
+          var2 = param1 >>> 1;
+          var2 = var2 | var2 >>> 1;
+          var2 = var2 | var2 >>> 2;
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return ~var2 & param1;
         }
+        return -114;
     }
 
     ho(pd param0, int param1) {
         try {
-            this.field_i = param1;
-            this.field_h = param0;
+          this.field_i = param1;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ho.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -9,9 +9,9 @@ final class iwa {
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -68) {
-            iwa.a((byte) -94, 6);
-            field_c = null;
-            return;
+          iwa.a((byte) -94, 6);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -23,23 +23,16 @@ final class iwa {
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          L0: {
-            var4 = (lsa) ((Object) vfa.field_p.d(0));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param0 == -30) {
-                  break L0;
-                } else {
-                  field_b = -29;
-                  return;
-                }
-              } else {
-                fgb.a(62, param1, var4);
-                var4 = (lsa) ((Object) vfa.field_p.a((byte) 109));
-                continue L1;
-              }
-            }
+          var4 = (lsa) (vfa.field_p.d(0));
+          while (var4 != null) {
+            fgb.a(62, param1, var4);
+            var4 = (lsa) (vfa.field_p.a((byte) 109));
           }
+          if (param0 == -30) {
+            return;
+          }
+          field_b = -29;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

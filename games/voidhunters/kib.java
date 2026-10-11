@@ -6,37 +6,37 @@ final class kib extends uj {
 
     final int b(byte param0) {
         if (param0 <= 79) {
-            this.a(56);
-            return 113;
+          this.a(56);
+          return 113;
         }
         return 113;
     }
 
     final int b(int param0) {
         if (param0 != -25131) {
-            return 46;
+          return 46;
         }
         return oq.field_y;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
-            return 5;
+          return 5;
         }
         return oq.field_e;
     }
 
     final int a(int param0) {
         if (param0 != -1) {
-            this.b((byte) -66);
-            return rrb.field_a;
+          this.b((byte) -66);
+          return rrb.field_a;
         }
         return rrb.field_a;
     }
 
     final boolean c(byte param0) {
         if (param0 > -104) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -46,7 +46,7 @@ final class kib extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-            return true;
+          return true;
         }
         return false;
     }

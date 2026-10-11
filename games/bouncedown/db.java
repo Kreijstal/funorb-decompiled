@@ -15,18 +15,11 @@ final class db extends wk {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, -57, param2);
-        if (param1 >= -6) {
-          return;
-        } else {
-          L0: {
-            ne.field_v.a(this.field_W, param2 + (this.field_k >> 763654849), 103 + param0, 16777215, -1);
-            if (null != this.field_P) {
-              na.a(20 + param2, -7 + param0 - -120, 260, 8421504);
-              ne.field_v.a(this.field_P, 20 + param2, param0 + 120 - -8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param1 < -6) {
+          ne.field_v.a(this.field_W, param2 + (this.field_k >> 1), 103 + param0, 16777215, -1);
+          if (null != this.field_P) {
+            na.a(20 + param2, -7 + param0 + 120, 260, 8421504);
+            ne.field_v.a(this.field_P, 20 + param2, param0 + 120 + 8, 260, 100, 16777215, -1, 1, 0, ne.field_v.field_s);
           }
           return;
         }
@@ -35,31 +28,31 @@ final class db extends wk {
     final void m(int param0) {
         this.field_N.field_C = false;
         if (param0 != 65536) {
-            field_O = (String) null;
-            this.field_Q = true;
-            return;
+          field_O = (String) null;
+          this.field_Q = true;
+          return;
         }
         this.field_Q = true;
     }
 
     final void a(boolean param0, float param1, String param2, int param3) {
         try {
-            if (param0 != this.field_U) {
-                this.field_U = param0 ? true : false;
-                if (this.field_U) {
-                    this.field_N.a(4210752, (byte) 126, 8405024);
-                    this.field_N.field_C = true;
-                } else {
-                    this.field_N.a(4210752, (byte) 126, 2113632);
-                    if (this.field_Q) {
-                        this.field_N.field_C = false;
-                    }
-                }
+          if (param0 != this.field_U) {
+            this.field_U = param0 ? true : false;
+            if (this.field_U) {
+              this.field_N.a(4210752, (byte) 126, 8405024);
+              this.field_N.field_C = true;
+            } else {
+              this.field_N.a(4210752, (byte) 126, 2113632);
+              if (this.field_Q) {
+                this.field_N.field_C = false;
+              }
             }
-            this.field_W = param2;
-            this.field_N.field_F = (int)(param1 / 100.0f * (float)param3);
+          }
+          this.field_W = param2;
+          this.field_N.field_F = (int)(param1 / 100.0f * (float)param3);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "db.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "db.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -67,18 +60,18 @@ final class db extends wk {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            this.field_P = param1;
-            if (null != this.field_P) {
-                var3_int = ne.field_v.b(this.field_P, 260, ne.field_v.field_s);
-                this.c(-463076575, 300, var3_int + 150);
-            }
-            this.field_N = new ll(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_N.field_C = true;
-            this.field_U = false;
-            this.field_Q = false;
-            this.b(this.field_N, true);
+          this.field_P = param1;
+          if (null != this.field_P) {
+            var3_int = ne.field_v.b(this.field_P, 260, ne.field_v.field_s);
+            this.c(-463076575, 300, var3_int + 150);
+          }
+          this.field_N = new ll(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_N.field_C = true;
+          this.field_U = false;
+          this.field_Q = false;
+          this.b(this.field_N, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "db.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,54 +80,34 @@ final class db extends wk {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 8351) {
-                break L1;
-              } else {
-                field_O = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = vd.a((byte) 88, param0, false);
-            break L0;
+          if (param1 != 8351) {
+            field_O = (String) null;
           }
+          stackIn_3_0 = vd.a((byte) 88, param0, false);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("db.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("db.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void n(int param0) {
         field_T = null;
         field_O = null;
         if (param0 != 260) {
-            CharSequence var2 = (CharSequence) null;
-            db.a((CharSequence) null, -82);
+          CharSequence var2 = (CharSequence) null;
+          db.a((CharSequence) null, -82);
         }
     }
 

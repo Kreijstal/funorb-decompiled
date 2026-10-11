@@ -11,7 +11,7 @@ final class up implements Iterable {
     static String field_e;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ip((up) (this)));
+        return (Iterator) ((Object) new ip(this));
     }
 
     public static void a(int param0) {
@@ -23,42 +23,37 @@ final class up implements Iterable {
 
     final void a(df param0, int param1) {
         try {
-            if (null != param0.field_j) {
-                param0.a(param1 ^ 22);
-            }
-            param0.field_j = this.field_a.field_j;
-            if (param1 != 6) {
-                this.a((byte) 95);
-            }
-            param0.field_h = this.field_a;
-            param0.field_j.field_h = param0;
-            param0.field_h.field_j = param0;
+          if (null != param0.field_j) {
+            param0.a(param1 ^ 22);
+          }
+          param0.field_j = this.field_a.field_j;
+          if (param1 != 6) {
+            this.a((byte) 95);
+          }
+          param0.field_h = this.field_a;
+          param0.field_j.field_h = param0;
+          param0.field_h.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "up.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final df a(byte param0) {
-        df var2;
-        df var3;
-        var2 = this.field_a.field_h;
-        if (param0 == -20) {
-          if (this.field_a == var2) {
-            return null;
-          } else {
-            var2.a(16);
-            return var2;
-          }
-        } else {
-          var3 = (df) null;
+        df var2 = this.field_a.field_h;
+        if (param0 != -20) {
+          df var3 = (df) null;
           this.a((df) null, 90);
-          if (this.field_a == var2) {
-            return null;
-          } else {
+          if (this.field_a != var2) {
             var2.a(16);
             return var2;
           }
+          return null;
         }
+        if (this.field_a != var2) {
+          var2.a(16);
+          return var2;
+        }
+        return null;
     }
 
     up() {

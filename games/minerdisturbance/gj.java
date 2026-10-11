@@ -8,37 +8,25 @@ final class gj {
     static String field_b;
 
     final static boolean a(int param0, int param1) {
-        int stackIn_7_0 = 0;
         if (param1 == -1) {
           return true;
-        } else {
-          if (param0 != 18740) {
-            return true;
-          } else {
-            L0: {
-              if (-1 == (ef.field_a & 1 << param1 ^ -1)) {
-                stackIn_7_0 = 0;
-                break L0;
-              } else {
-                stackIn_7_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_7_0 != 0;
-          }
         }
+        if (param0 == 18740) {
+          return (ef.field_a & 1 << param1) != 0 ? true : false;
+        }
+        return true;
     }
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener(di.field_O);
-            param1.removeFocusListener(di.field_O);
-            cg.field_H = -1;
-            if (param0 != 2670) {
-                gj.a(83, 12);
-            }
+          param1.removeKeyListener(di.field_O);
+          param1.removeFocusListener(di.field_O);
+          cg.field_H = -1;
+          if (param0 != 2670) {
+            gj.a(83, 12);
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "gj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -48,18 +36,16 @@ final class gj {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 29748) {
-          field_c = (String) null;
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 29748) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
+        field_c = (String) null;
+        field_c = null;
+        field_a = null;
+        field_b = null;
     }
 
     static {

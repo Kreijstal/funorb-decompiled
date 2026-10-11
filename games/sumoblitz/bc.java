@@ -8,7 +8,7 @@ final class bc {
 
     public static void a(int param0) {
         if (param0 <= 101) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

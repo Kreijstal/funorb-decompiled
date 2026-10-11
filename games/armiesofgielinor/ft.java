@@ -12,7 +12,7 @@ final class ft extends tc {
 
     public static void a(int param0) {
         if (param0 != -10) {
-            ft.e(-3);
+          ft.e(-3);
         }
         field_m = null;
         field_q = null;
@@ -28,11 +28,11 @@ final class ft extends tc {
         var7[0] = hl.a(false, param2, param3);
         int var5 = 1;
         if (param1 > -8) {
-            ft.e(-23);
+          ft.e(-23);
         }
-        while ((var5 ^ -1) > -10) {
-            var4[var5] = var4[0];
-            var5++;
+        while (var5 < 9) {
+          var4[var5] = var4[0];
+          var5++;
         }
         var4[4] = hl.a(false, param0, 64);
         return var4;

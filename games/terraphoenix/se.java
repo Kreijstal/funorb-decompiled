@@ -15,9 +15,9 @@ final class se {
 
     public static void a(int param0) {
         if (param0 != -1) {
-            se.a(74);
-            field_c = null;
-            return;
+          se.a(74);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -27,15 +27,16 @@ final class se {
         this.field_b = param1;
         this.field_a = param0;
         if (param3 != -22899) {
-            return;
+          return;
         }
         try {
-            this.field_g = param2;
-            if (param4 != null && (param4.field_t ^ -1) == -10) {
-                param1 = 12;
-            }
+          this.field_g = param2;
+          if (param4 != null &&
+            param4.field_t == 9) {
+            param1 = 12;
+          }
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "se.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

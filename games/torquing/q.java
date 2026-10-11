@@ -14,47 +14,44 @@ class q {
 
     final static void a(int param0, int param1, int param2, fj param3, int param4) {
         try {
-            param3.b(90, 12);
-            param3.a(17, 124);
-            param3.a(param2, 120);
-            param3.a(param4, 71);
-            param3.b(90, param0);
-            if (param1 <= 94) {
-                fj var6 = (fj) null;
-                q.a(-127, 58, -29, (fj) null, -68);
-            }
+          param3.b(90, 12);
+          param3.a(17, 124);
+          param3.a(param2, 120);
+          param3.a(param4, 71);
+          param3.b(90, param0);
+          if (param1 <= 94) {
+            fj var6 = (fj) null;
+            q.a(-127, 58, -29, (fj) null, -68);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "q.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "q.GB(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     final void f(int param0) {
-        if (null != this.field_h) {
-          if (param0 != 0) {
-            this.field_e = (q) null;
-            this.field_h.field_e = this.field_e;
-            this.field_e.field_h = this.field_h;
-            this.field_h = null;
-            this.field_e = null;
-            return;
-          } else {
-            this.field_h.field_e = this.field_e;
-            this.field_e.field_h = this.field_h;
-            this.field_h = null;
-            this.field_e = null;
-            return;
-          }
-        } else {
+        if (null == this.field_h) {
           return;
         }
+        if (param0 == 0) {
+          this.field_h.field_e = this.field_e;
+          this.field_e.field_h = this.field_h;
+          this.field_h = null;
+          this.field_e = null;
+          return;
+        }
+        this.field_e = (q) null;
+        this.field_h.field_e = this.field_e;
+        this.field_e.field_h = this.field_h;
+        this.field_h = null;
+        this.field_e = null;
     }
 
     final boolean e(int param0) {
         if (this.field_h == null) {
-            return false;
+          return false;
         }
         if (param0 != 17) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -65,8 +62,8 @@ class q {
         field_c = null;
         field_a = null;
         if (param0 != 92) {
-            fj var2 = (fj) null;
-            q.a(81, 94, -8, (fj) null, -107);
+          fj var2 = (fj) null;
+          q.a(81, 94, -8, (fj) null, -107);
         }
     }
 

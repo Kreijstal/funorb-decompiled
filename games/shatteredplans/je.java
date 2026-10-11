@@ -17,87 +17,63 @@ final class je {
         int stackIn_19_0 = 0;
         if (param1 == -104) {
           param0 = param0 & 8191;
-          if ((param0 ^ -1) <= -4097) {
-            L0: {
-              if ((param0 ^ -1) > -6145) {
-                stackIn_19_0 = -br.field_o[param0 + -4096];
-                break L0;
-              } else {
-                stackIn_19_0 = -br.field_o[-param0 + 8192];
-                break L0;
-              }
+          if (param0 >= 4096) {
+            if (param0 < 6144) {
+              stackIn_19_0 = -br.field_o[param0 - 4096];
+            } else {
+              stackIn_19_0 = -br.field_o[-param0 + 8192];
             }
             return stackIn_19_0;
-          } else {
-            L1: {
-              if (2048 <= param0) {
-                stackIn_15_0 = br.field_o[4096 - param0];
-                break L1;
-              } else {
-                stackIn_15_0 = br.field_o[param0];
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
-        } else {
-          field_c = -25;
-          param0 = param0 & 8191;
-          if ((param0 ^ -1) <= -4097) {
-            L2: {
-              if ((param0 ^ -1) > -6145) {
-                stackIn_9_0 = -br.field_o[param0 + -4096];
-                break L2;
-              } else {
-                stackIn_9_0 = -br.field_o[-param0 + 8192];
-                break L2;
-              }
-            }
-            return stackIn_9_0;
+          if (2048 <= param0) {
+            stackIn_15_0 = br.field_o[4096 - param0];
           } else {
-            L3: {
-              if (2048 <= param0) {
-                stackIn_5_0 = br.field_o[4096 - param0];
-                break L3;
-              } else {
-                stackIn_5_0 = br.field_o[param0];
-                break L3;
-              }
-            }
-            return stackIn_5_0;
+            stackIn_15_0 = br.field_o[param0];
           }
+          return stackIn_15_0;
         }
+        field_c = -25;
+        param0 = param0 & 8191;
+        if (param0 >= 4096) {
+          if (param0 < 6144) {
+            stackIn_9_0 = -br.field_o[param0 - 4096];
+          } else {
+            stackIn_9_0 = -br.field_o[-param0 + 8192];
+          }
+          return stackIn_9_0;
+        }
+        if (2048 <= param0) {
+          stackIn_5_0 = br.field_o[4096 - param0];
+        } else {
+          stackIn_5_0 = br.field_o[param0];
+        }
+        return stackIn_5_0;
     }
 
     final static void a(byte param0, int param1) {
-        sl var2;
-        var2 = js.field_f;
+        sl var2 = js.field_f;
         var2.h(param1, 255);
-        if (param0 <= 32) {
-          je.a(-116, (byte) -104);
-          var2.c(1, (byte) -104);
-          var2.c(1, (byte) -93);
-          return;
-        } else {
+        if (param0 > 32) {
           var2.c(1, (byte) -104);
           var2.c(1, (byte) -93);
           return;
         }
+        je.a(-116, (byte) -104);
+        var2.c(1, (byte) -104);
+        var2.c(1, (byte) -93);
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-          field_e = false;
-          field_b = null;
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_b = null;
           field_f = null;
           field_a = null;
           return;
         }
+        field_e = false;
+        field_b = null;
+        field_f = null;
+        field_a = null;
     }
 
     static {

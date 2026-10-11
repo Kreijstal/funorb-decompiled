@@ -14,148 +14,96 @@ final class de extends km {
         field_v = null;
         field_t = null;
         if (param0 != 2) {
-            de.g(47);
-            field_s = null;
-            return;
+          de.g(47);
+          field_s = null;
+          return;
         }
         field_s = null;
     }
 
     final void b(byte param0) {
         lb.d();
-        if (param0 > -14) {
-          L0: {
-            de.g(61);
-            if (ff.field_c != null) {
-              ff.field_c.e((byte) -93);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 <= -14) {
+          if (ff.field_c != null) {
+            ff.field_c.e((byte) -93);
           }
           return;
-        } else {
-          L1: {
-            if (ff.field_c != null) {
-              ff.field_c.e((byte) -93);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        de.g(61);
+        if (ff.field_c != null) {
+          ff.field_c.e((byte) -93);
         }
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (param1) {
-          L0: {
-            de.f(-8);
-            if (null != tn.field_m) {
-              tn.field_m.a(true, param0);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (!param1) {
+          if (null != tn.field_m) {
+            tn.field_m.a(true, param0);
           }
           return;
-        } else {
-          L1: {
-            if (null != tn.field_m) {
-              tn.field_m.a(true, param0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        de.f(-8);
+        if (null != tn.field_m) {
+          tn.field_m.a(true, param0);
         }
     }
 
     final static long f(int param0) {
         if (param0 != -6792) {
-            field_s = (jp) null;
-            return ue.a(false) - oj.field_t;
+          field_s = (jp) null;
+          return ue.a(false) - oj.field_t;
         }
         return ue.a(false) - oj.field_t;
     }
 
     private final boolean c(int param0, int param1) {
-        int var3;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 460) {
-          if (-1 != (param1 ^ -1)) {
-            if (3 == param1) {
-              return false;
-            } else {
-              L0: {
-                if (param1 != 2) {
-                  stackIn_8_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_8_0 = 1;
-                  break L0;
-                }
-              }
-              L1: {
-                var3 = stackIn_8_0;
-                ng.a(var3 != 0, param0 + -386, this.a(true));
-                if (var3 != 0) {
-                  stackIn_11_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_11_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_11_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        int var3 = 0;
+        if (param0 != 460) {
           return false;
         }
+        if (param1 == 0) {
+          return false;
+        }
+        if (3 != param1) {
+          var3 = param1 == 2 ? 1 : 0;
+          ng.a(var3 != 0, param0 - 386, this.a(true));
+          return var3 == 0 ? true : false;
+        }
+        return false;
     }
 
     de(mf param0) {
         super(12, 180, 460, 150, 35, (int[]) null);
         try {
-            this.field_u = param0;
+          this.field_u = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0, boolean param1, int param2) {
-        boolean discarded$1 = false;
-        int var5;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        if (param2 < -52) {
-          if (null != this.field_r) {
-            if (ff.field_c == null) {
-              ff.field_c = new w(sl.field_C, oc.field_u, this.field_r, false, hq.field_u);
-              return;
-            } else {
-              discarded$1 = this.c(460, ff.field_c.a(false, param1));
-              return;
-            }
-          } else {
-            this.field_r = wq.a("benefits", this.field_u, "members_benefits_screenshots", -946715356);
-            return;
-          }
-        } else {
+        boolean discarded$0 = false;
+        int var5 = BrickABrac.field_J ? 1 : 0;
+        if (param2 >= -52) {
           return;
         }
+        if (null == this.field_r) {
+          this.field_r = wq.a("benefits", this.field_u, "members_benefits_screenshots", -946715356);
+          return;
+        }
+        if (ff.field_c != null) {
+          discarded$0 = this.c(460, ff.field_c.a(false, param1));
+          return;
+        }
+        ff.field_c = new w(sl.field_C, oc.field_u, this.field_r, false, hq.field_u);
     }
 
     final boolean a(char param0, int param1, int param2) {
         if (param1 <= 98) {
-            return false;
+          return false;
         }
         if (null != ff.field_c) {
-            return this.c(460, ff.field_c.a((byte) -93));
+          return this.c(460, ff.field_c.a((byte) -93));
         }
         return false;
     }

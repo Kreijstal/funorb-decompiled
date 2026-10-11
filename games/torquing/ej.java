@@ -36,11 +36,11 @@ final class ej implements lm {
         field_g[1] = (double)param1 - this.field_v;
         field_g[2] = (double)param2 - this.field_f;
         if (ap.a(field_g, 0, field_n, 0) > 0.0) {
-            ap.a(field_g, 0, field_n, 0, field_g, 3);
-            var4 = ap.a(field_g, 3, field_g, 3);
-            if (var4 < this.field_A) {
-                return 2;
-            }
+          ap.a(field_g, 0, field_n, 0, field_g, 3);
+          var4 = ap.a(field_g, 3, field_g, 3);
+          if (var4 < this.field_A) {
+            return 2;
+          }
         }
         return 0;
     }
@@ -65,160 +65,84 @@ final class ej implements lm {
         double var42;
         double var44;
         double var46;
-        L0: {
-          field_g[6] = (double)param9;
-          field_g[7] = (double)param10;
-          field_g[8] = (double)param11;
-          var13 = ap.a(field_g, 6, field_n, 0);
-          field_g[0] = (double)param3 - this.field_e;
-          field_g[1] = (double)param4 - this.field_v;
-          field_g[2] = (double)param5 - this.field_f;
-          var15 = ap.a(field_g, 6, field_g, 0) / var13;
-          if (Double.isInfinite(var15)) {
-            break L0;
+        field_g[6] = (double)param9;
+        field_g[7] = (double)param10;
+        field_g[8] = (double)param11;
+        var13 = ap.a(field_g, 6, field_n, 0);
+        field_g[0] = (double)param3 - this.field_e;
+        field_g[1] = (double)param4 - this.field_v;
+        field_g[2] = (double)param5 - this.field_f;
+        var15 = ap.a(field_g, 6, field_g, 0) / var13;
+        if (!Double.isInfinite(var15) &&
+          !Double.isNaN(var15)) {
+          var17 = Math.abs(field_g[6]);
+          var19 = Math.abs(field_g[7]);
+          var21 = Math.abs(field_g[8]);
+          if (!(var17 > var19)) {
+            stackIn_10_0 = (!(var19 > var21)) ? 2 : 1;
           } else {
-            if (!Double.isNaN(var15)) {
-              L1: {
-                var17 = Math.abs(field_g[6]);
-                var19 = Math.abs(field_g[7]);
-                var21 = Math.abs(field_g[8]);
-                if (var17 <= var19) {
-                  if (var19 <= var21) {
-                    stackIn_10_0 = 2;
-                    break L1;
-                  } else {
-                    stackIn_10_0 = 1;
-                    break L1;
-                  }
-                } else {
-                  if (var17 <= var21) {
-                    stackIn_10_0 = 2;
-                    break L1;
-                  } else {
-                    stackIn_10_0 = 0;
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                var23 = stackIn_10_0;
-                if (var23 != 0) {
-                  if (var23 != 1) {
-                    var24 = (double)(param0 - param3);
-                    var26 = (double)(param6 - param3);
-                    var28 = this.field_e + var15 * field_n[0] - (double)param3;
-                    var30 = (double)(param1 - param4);
-                    var32 = (double)(param7 - param4);
-                    var34 = this.field_v + var15 * field_n[1] - (double)param4;
-                    var36 = var21;
-                    break L2;
-                  } else {
-                    var24 = (double)(param2 - param5);
-                    var26 = (double)(param8 - param5);
-                    var28 = this.field_f + var15 * field_n[2] - (double)param5;
-                    var30 = (double)(param0 - param3);
-                    var32 = (double)(param6 - param3);
-                    var34 = this.field_e + var15 * field_n[0] - (double)param3;
-                    var36 = var19;
-                    break L2;
-                  }
-                } else {
-                  var24 = (double)(param1 - param4);
-                  var26 = (double)(param7 - param4);
-                  var28 = this.field_v + var15 * field_n[1] - (double)param4;
-                  var30 = (double)(param2 - param5);
-                  var32 = (double)(param8 - param5);
-                  var34 = this.field_f + var15 * field_n[2] - (double)param5;
-                  var36 = var17;
-                  break L2;
-                }
-              }
-              L3: {
-                var38 = var34 * var26 - var28 * var32;
-                var40 = var28 * var30 - var34 * var24;
-                if (var38 < 0.0) {
-                  break L3;
-                } else {
-                  if (var40 < 0.0) {
-                    break L3;
-                  } else {
-                    if (var38 + var40 > var36) {
-                      break L3;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-              L4: {
-                this.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
-                if (this.field_y < this.field_A) {
-                  break L4;
-                } else {
-                  if (this.field_c + this.field_l + this.field_y < this.field_A) {
-                    break L4;
-                  } else {
-                    if (this.field_t + this.field_k + this.field_y >= this.field_A) {
-                      L5: {
-                        if (this.field_l >= 0.0) {
-                          break L5;
-                        } else {
-                          if (-this.field_l >= 2.0 * this.field_c) {
-                            break L5;
-                          } else {
-                            if (4.0 * this.field_c * this.field_y - this.field_l * this.field_l >= this.field_A * 4.0 * this.field_c) {
-                              break L5;
-                            } else {
-                              return true;
-                            }
-                          }
-                        }
-                      }
-                      L6: {
-                        if (this.field_k >= 0.0) {
-                          break L6;
-                        } else {
-                          if (-this.field_k >= 2.0 * this.field_t) {
-                            break L6;
-                          } else {
-                            if (4.0 * this.field_t * this.field_y - this.field_k * this.field_k >= this.field_A * 4.0 * this.field_t) {
-                              break L6;
-                            } else {
-                              return true;
-                            }
-                          }
-                        }
-                      }
-                      L7: {
-                        var42 = this.field_t + this.field_c - this.field_d;
-                        var44 = this.field_d + this.field_k - 2.0 * this.field_c - this.field_l;
-                        var46 = this.field_c + this.field_l + this.field_y;
-                        if (var44 >= 0.0) {
-                          break L7;
-                        } else {
-                          if (-var44 >= 2.0 * var42) {
-                            break L7;
-                          } else {
-                            if (4.0 * var42 * var46 - var44 * var44 >= (double)(this.field_o * 4) * var42) {
-                              break L7;
-                            } else {
-                              return true;
-                            }
-                          }
-                        }
-                      }
-                      return false;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-              }
-              return true;
-            } else {
-              break L0;
-            }
+            stackIn_10_0 = (!(var17 > var21)) ? 2 : 0;
           }
+          var23 = stackIn_10_0;
+          if (var23 != 0) {
+            if (var23 != 1) {
+              var24 = (double)(param0 - param3);
+              var26 = (double)(param6 - param3);
+              var28 = this.field_e + var15 * field_n[0] - (double)param3;
+              var30 = (double)(param1 - param4);
+              var32 = (double)(param7 - param4);
+              var34 = this.field_v + var15 * field_n[1] - (double)param4;
+              var36 = var21;
+            } else {
+              var24 = (double)(param2 - param5);
+              var26 = (double)(param8 - param5);
+              var28 = this.field_f + var15 * field_n[2] - (double)param5;
+              var30 = (double)(param0 - param3);
+              var32 = (double)(param6 - param3);
+              var34 = this.field_e + var15 * field_n[0] - (double)param3;
+              var36 = var19;
+            }
+          } else {
+            var24 = (double)(param1 - param4);
+            var26 = (double)(param7 - param4);
+            var28 = this.field_v + var15 * field_n[1] - (double)param4;
+            var30 = (double)(param2 - param5);
+            var32 = (double)(param8 - param5);
+            var34 = this.field_f + var15 * field_n[2] - (double)param5;
+            var36 = var17;
+          }
+          var38 = var34 * var26 - var28 * var32;
+          var40 = var28 * var30 - var34 * var24;
+          if (var38 >= 0.0 &&
+            var40 >= 0.0 &&
+            var38 + var40 <= var36) {
+            return true;
+          }
+          this.a(param0, param1, param2, param3, param4, param5, param6, param7, param8);
+          if (!(this.field_y < this.field_A) &&
+            !(this.field_c + this.field_l + this.field_y < this.field_A) &&
+            !(this.field_t + this.field_k + this.field_y < this.field_A)) {
+            if (this.field_l < 0.0 &&
+              -this.field_l < 2.0 * this.field_c &&
+              4.0 * this.field_c * this.field_y - this.field_l * this.field_l < this.field_A * 4.0 * this.field_c) {
+              return true;
+            }
+            if (this.field_k < 0.0 &&
+              -this.field_k < 2.0 * this.field_t &&
+              4.0 * this.field_t * this.field_y - this.field_k * this.field_k < this.field_A * 4.0 * this.field_t) {
+              return true;
+            }
+            var42 = this.field_t + this.field_c - this.field_d;
+            var44 = this.field_d + this.field_k - 2.0 * this.field_c - this.field_l;
+            var46 = this.field_c + this.field_l + this.field_y;
+            if (var44 < 0.0 &&
+              -var44 < 2.0 * var42 &&
+              4.0 * var42 * var46 - var44 * var44 < (double)(this.field_o * 4) * var42) {
+              return true;
+            }
+            return false;
+          }
+          return true;
         }
         return false;
     }
@@ -234,37 +158,22 @@ final class ej implements lm {
 
     public final boolean a(lm param0) {
         ej var2;
-        int stackIn_7_0 = 0;
-        L0: {
-          L1: {
-            if (!(param0 instanceof ej)) {
-              break L1;
-            } else {
-              var2 = (ej) ((Object) param0);
-              if (this.field_e != var2.field_e) {
-                break L1;
-              } else {
-                if (this.field_v != var2.field_v) {
-                  break L1;
-                } else {
-                  if (this.field_f != var2.field_f) {
-                    break L1;
-                  } else {
-                    if (this.field_a != var2.field_a) {
-                      break L1;
-                    } else {
-                      stackIn_7_0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-              }
-            }
+        boolean stackIn_7_0 = false;
+        boolean decompiledFrameRemainder0 = true;
+        if (param0 instanceof ej) {
+          var2 = (ej) (param0);
+          if (this.field_e == var2.field_e &&
+            this.field_v == var2.field_v &&
+            this.field_f == var2.field_f &&
+            this.field_a == var2.field_a) {
+            stackIn_7_0 = true;
+            decompiledFrameRemainder0 = false;
           }
-          stackIn_7_0 = 0;
-          break L0;
         }
-        return stackIn_7_0 != 0;
+        if (decompiledFrameRemainder0) {
+          stackIn_7_0 = false;
+        }
+        return stackIn_7_0;
     }
 
     public final boolean a() {
@@ -272,51 +181,28 @@ final class ej implements lm {
     }
 
     public final long a(int param0, int param1) {
+        int var5 = 0;
         long var3;
-        int var5;
-        L0: {
-          L1: {
-            this.field_r = param0 * this.field_p + param1 * this.field_h + this.field_x;
-            this.field_j = param0 * ((param0 * this.field_s + param1 * this.field_m) / this.field_z + this.field_b) / this.field_z + param1 * (param1 * this.field_i / this.field_z + this.field_q) / this.field_z + this.field_u;
-            this.field_w = param0 * this.field_m + this.field_i;
-            if (this.field_r <= 0) {
-              break L1;
-            } else {
-              if (this.field_j >= this.field_o) {
-                break L1;
-              } else {
-                var3 = 1L;
-                break L0;
-              }
-            }
-          }
+        this.field_r = param0 * this.field_p + param1 * this.field_h + this.field_x;
+        this.field_j = param0 * ((param0 * this.field_s + param1 * this.field_m) / this.field_z + this.field_b) / this.field_z + param1 * (param1 * this.field_i / this.field_z + this.field_q) / this.field_z + this.field_u;
+        this.field_w = param0 * this.field_m + this.field_i;
+        if (this.field_r > 0 &&
+          this.field_j < this.field_o) {
+          var3 = 1L;
+        } else {
           var3 = 0L;
-          break L0;
         }
-        var5 = 0;
-        L2: while (true) {
-          if (var5 >= 63) {
-            return var3;
-          } else {
-            var3 = var3 << 1;
-            param1--;
-            this.field_r = this.field_r - this.field_h;
-            this.field_j = this.field_j - ((2 * param1 * this.field_i + this.field_w) / this.field_z + this.field_q) / this.field_z;
-            if (this.field_r > 0) {
-              if (this.field_j < this.field_o) {
-                var3 = var3 + 1L;
-                var5++;
-                continue L2;
-              } else {
-                var5++;
-                continue L2;
-              }
-            } else {
-              var5++;
-              continue L2;
-            }
+        for (var5 = 0; var5 < 63; var5++) {
+          var3 = var3 << 1;
+          param1--;
+          this.field_r = this.field_r - this.field_h;
+          this.field_j = this.field_j - ((2 * param1 * this.field_i + this.field_w) / this.field_z + this.field_q) / this.field_z;
+          if (this.field_r > 0 &&
+            this.field_j < this.field_o) {
+            var3 = var3 + 1L;
           }
         }
+        return var3;
     }
 
     public final void a(int[] param0, int[] param1, int[] param2, int param3) {
@@ -340,13 +226,13 @@ final class ej implements lm {
         var5[2] = param2[2] - (int)(1.0 + this.field_f);
         int var7 = ke.a(ap.a(var12, 0, var12, 0), (byte) -97);
         if (var7 % 2 == 0) {
-            var8 = 1 << var7 / 2;
+          var8 = 1 << var7 / 2;
         } else {
-            var8 = 1518500249 >> 30 - var7 / 2;
+          var8 = 1518500249 >> 30 - var7 / 2;
         }
         int var9 = 67108864 / (var8 * 17);
         if (var9 > 303104) {
-            var9 = 303104;
+          var9 = 303104;
         }
         var5[0] = var9 * param0[2] - (int)(0.5 + (double)var9 * this.field_e);
         var5[1] = var9 * param1[2] - (int)(-0.5 + (double)var9 * this.field_v);

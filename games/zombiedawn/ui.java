@@ -12,7 +12,7 @@ final class ui {
 
     public static void b(int param0) {
         if (param0 < 111) {
-            return;
+          return;
         }
         field_e = null;
         field_f = null;
@@ -24,8 +24,8 @@ final class ui {
 
     final static fi a(int param0) {
         if (param0 != 0) {
-            field_g = (af) null;
-            return t.field_i;
+          field_g = (af) null;
+          return t.field_i;
         }
         return t.field_i;
     }

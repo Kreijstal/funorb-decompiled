@@ -11,88 +11,60 @@ final class qj {
     static String field_c;
 
     final int a(byte param0) {
-        int var2;
-        var2 = -121 / ((-14 - param0) / 44);
-        if (this.field_b != null) {
-          if (this.field_b.length == 0) {
-            return 0;
-          } else {
-            return this.field_b[-1 + this.field_b.length];
-          }
-        } else {
+        int var2 = -121 / ((-14 - param0) / 44);
+        if (this.field_b == null) {
           return 0;
         }
+        if (this.field_b.length != 0) {
+          return this.field_b[-1 + this.field_b.length];
+        }
+        return 0;
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        L0: {
-          var2 = ig.a(param1, param0 ^ -2167);
-          if (ia.field_c) {
-            var2 = -var2 + 1344;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var2 = ig.a(param1, param0 ^ -2167);
+        if (ia.field_c) {
+          var2 = -var2 + 1344;
         }
-        if (param0 != -6779) {
-          qj.b((byte) -5);
-          return var2;
-        } else {
+        if (param0 == -6779) {
           return var2;
         }
+        qj.b((byte) -5);
+        return var2;
     }
 
     final int a(byte param0, int param1) {
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = Kickabout.field_G;
         if (param0 == 101) {
-          if (this.field_b != null) {
-            if (-1 != (this.field_b.length ^ -1)) {
-              var3 = 1;
-              L0: while (true) {
-                if (this.field_b.length > var3) {
-                  if (this.field_b[-1 + var3] - -this.field_b[var3] >> -1613831583 > param1) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L0;
-                  }
-                } else {
-                  return this.field_b.length + -1;
-                }
-              }
-            } else {
-              return 0;
-            }
-          } else {
+          if (this.field_b == null) {
             return 0;
           }
-        } else {
-          field_e = -68;
-          if (this.field_b != null) {
-            if (-1 != (this.field_b.length ^ -1)) {
-              var3 = 1;
-              L1: while (true) {
-                if (this.field_b.length > var3) {
-                  if (this.field_b[-1 + var3] - -this.field_b[var3] >> -1613831583 > param1) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                } else {
-                  return this.field_b.length + -1;
-                }
-              }
-            } else {
-              return 0;
-            }
-          } else {
+          if (this.field_b.length == 0) {
             return 0;
+          }
+          for (var3 = 1; this.field_b.length > var3; var3++) {
+            if (this.field_b[-1 + var3] + this.field_b[var3] >> 1 > param1) {
+              return var3 - 1;
+            }
+          }
+          return this.field_b.length - 1;
+        }
+        field_e = -68;
+        if (this.field_b == null) {
+          return 0;
+        }
+        if (this.field_b.length == 0) {
+          return 0;
+        }
+        for (var3Lifetime1 = 1; this.field_b.length > var3Lifetime1; var3Lifetime1++) {
+          if (this.field_b[-1 + var3Lifetime1] + this.field_b[var3Lifetime1] >> 1 > param1) {
+            return var3Lifetime1 - 1;
           }
         }
+        return this.field_b.length - 1;
     }
 
     static int b(int param0, int param1) {
@@ -103,9 +75,9 @@ final class qj {
         field_a = null;
         field_c = null;
         if (param0 >= -25) {
-            qj.a(75, 93);
-            field_f = null;
-            return;
+          qj.a(75, 93);
+          field_f = null;
+          return;
         }
         field_f = null;
     }

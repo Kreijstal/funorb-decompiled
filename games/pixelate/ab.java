@@ -14,16 +14,14 @@ final class ab {
         field_e = null;
         field_a = null;
         field_d = null;
-        if (param0) {
-          ab.a(true);
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_c = null;
           return;
         }
+        ab.a(true);
+        field_f = null;
+        field_c = null;
     }
 
     static {

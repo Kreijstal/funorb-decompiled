@@ -17,7 +17,7 @@ final class vk {
     public static void a(int param0) {
         field_d = null;
         if (param0 != -4740) {
-            return;
+          return;
         }
         field_c = null;
         field_e = null;

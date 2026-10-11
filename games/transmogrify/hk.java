@@ -10,22 +10,22 @@ final class hk {
         field_a = null;
         field_c = null;
         if (param0 < 26) {
-            hk.a((byte) 26);
-            field_b = null;
-            return;
+          hk.a((byte) 26);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static void a(kg param0, int param1, int param2, kg param3) {
         try {
-            gd.field_m = param2;
-            tb.field_c = param3;
-            ce.field_b = param0;
-            me.a(false, sb.field_c / param1, sb.field_g / 2);
-            dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
+          gd.field_m = param2;
+          tb.field_c = param3;
+          ce.field_b = param0;
+          me.a(false, sb.field_c / param1, sb.field_g / 2);
+          dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class hk {
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = param0; param1 > var4; var4++) {
-            var6[var4] = param2;
+          var6[var4] = param2;
         }
         return new String(var6);
     }

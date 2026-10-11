@@ -15,8 +15,8 @@ abstract class th {
     abstract void a(int param0, int param1, int param2);
 
     final static void a(int param0) {
-        if (!(null == lr.field_k)) {
-            return;
+        if (null != lr.field_k) {
+          return;
         }
         lr.field_k = new String[35];
         lr.field_k[23] = maa.field_x;

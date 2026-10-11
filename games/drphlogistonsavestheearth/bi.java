@@ -11,10 +11,10 @@ final class bi extends lb {
 
     final byte[] i(int param0) {
         if (param0 != 13095) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         if (this.field_u) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         return this.field_F;
     }
@@ -28,14 +28,14 @@ final class bi extends lb {
 
     final static void a(String param0, int param1, nh param2) {
         try {
-            hf.field_D = param2;
-            df.field_b = param0;
-            if (param1 < 119) {
-                nh var4 = (nh) null;
-                bi.a((String) null, -46, (nh) null);
-            }
+          hf.field_D = param2;
+          df.field_b = param0;
+          if (param1 < 119) {
+            nh var4 = (nh) null;
+            bi.a((String) null, -46, (nh) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,12 +43,12 @@ final class bi extends lb {
     }
 
     final int g(int param0) {
-        if (!(!this.field_u)) {
-            return 0;
+        if (this.field_u) {
+          return 0;
         }
         if (param0 > -38) {
-            this.i(116);
-            return 100;
+          this.i(116);
+          return 100;
         }
         return 100;
     }

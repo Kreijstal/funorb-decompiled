@@ -14,89 +14,53 @@ final class br extends ob {
     }
 
     final void b(int param0, boolean param1, int param2) {
-        int var4;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        var4 = this.field_h[param2];
-        if (23 == var4) {
-          if (this.field_B.b((byte) 61)) {
-            L0: {
-              stackIn_6_0 = null;
-
-              if (!oe.a(false, hp.field_c)) {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 16;
-                break L0;
-              } else {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 18;
-                break L0;
-              }
-            }
-            nk.a((String) ((Object) stackIn_7_0), stackIn_7_1, (byte) 121);
-            return;
-          } else {
-            super.b(param0, param1, param2);
-            return;
-          }
-        } else {
+        int var4 = this.field_h[param2];
+        if (23 != var4) {
           super.b(param0, param1, param2);
           return;
         }
+        if (!this.field_B.b((byte) 61)) {
+          super.b(param0, param1, param2);
+          return;
+        }
+        nk.a((String) null, oe.a(false, hp.field_c) ? 18 : 16, (byte) 121);
     }
 
     final static void f(int param0) {
         lh.field_c = new nf();
         tn.field_n.d(lh.field_c, 30);
         if (param0 != 35) {
-            field_J = (vh) null;
+          field_J = (vh) null;
         }
     }
 
     final void a(byte param0) {
         if (param0 >= -11) {
-            field_J = (vh) null;
+          field_J = (vh) null;
         }
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-          field_J = (vh) null;
-          field_K = null;
-          field_J = null;
-          field_M = null;
-          field_L = null;
-          return;
-        } else {
+        if (!param0) {
           field_K = null;
           field_J = null;
           field_M = null;
           field_L = null;
           return;
         }
+        field_J = (vh) null;
+        field_K = null;
+        field_J = null;
+        field_M = null;
+        field_L = null;
     }
 
     final void c(int param0) {
-        int var2;
-        int var3;
-        String var4;
-        int stackIn_3_0 = 0;
-        L0: {
-          super.c(91);
-          var2 = oe.a(false, hp.field_c) ? 1 : 0;
-          if (ti.field_d == null) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
-        }
-        var3 = stackIn_3_0;
-        if (param0 <= 36) {
-          return;
-        } else {
+        String var4 = null;
+        super.c(91);
+        int var2 = oe.a(false, hp.field_c) ? 1 : 0;
+        int var3 = ti.field_d != null ? 1 : 0;
+        if (param0 > 36) {
           var4 = oe.field_O;
           var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.field_f}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           this.a(sa.field_h, new int[]{sa.field_h.field_G}, 140, -16097, var4, 280, 15658734);

@@ -18,78 +18,58 @@ abstract class gg implements ip {
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = 43 / ((param0 - 33) / 60);
-            stackIn_1_0 = me.field_r.a(false, param1, "");
-            break L0;
-          }
+          var2_int = 43 / ((param0 - 33) / 60);
+          stackIn_1_0 = me.field_r.a(false, param1, "");
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
-
-            stackIn_4_1 = new StringBuilder().append("gg.I(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("gg.I(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-          if (10 <= fk.field_ab) {
-            if (-14 < (sf.field_y ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (!param0) {
           gg.e(39);
-          if (10 <= fk.field_ab) {
-            if (-14 < (sf.field_y ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (10 > fk.field_ab) {
             return false;
           }
+          if (sf.field_y >= 13) {
+            return true;
+          }
+          return false;
         }
+        if (10 > fk.field_ab) {
+          return false;
+        }
+        if (sf.field_y >= 13) {
+          return true;
+        }
+        return false;
     }
 
     public final void b(int param0) {
         if (param0 != 11755) {
-            this.field_e = 87L;
-            this.field_e = rl.a((byte) -109);
-            return;
+          this.field_e = 87L;
+          this.field_e = rl.a((byte) -109);
+          return;
         }
         this.field_e = rl.a((byte) -109);
     }
 
     public static void e(int param0) {
         if (param0 != -1) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -104,169 +84,118 @@ abstract class gg implements ip {
         wc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = new wc(false);
-              if (param1) {
-                break L1;
-              } else {
-                var4 = (java.applet.Applet) null;
-                gg.a((java.applet.Applet) null, (byte) 49);
-                break L1;
-              }
-            }
-            var3.field_g = param0;
-            var3.field_b = param2;
-            stackIn_3_0 = (wc) (var3);
-            break L0;
+          var3 = new wc(false);
+          if (!param1) {
+            var4 = (java.applet.Applet) null;
+            gg.a((java.applet.Applet) null, (byte) 49);
           }
+          var3.field_g = param0;
+          var3.field_b = param2;
+          stackIn_3_0 = var3;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("gg.H(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("gg.H(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public final na c(int param0) {
         if (this.d(-3)) {
           return wm.field_Pb;
-        } else {
-          if (param0 == -31873) {
-            if ((350L + this.field_e ^ -1L) < (rl.a((byte) -101) ^ -1L)) {
-              return ji.field_h;
-            } else {
-              return this.g(param0 ^ 17779);
-            }
-          } else {
-            field_g = -106;
-            if ((350L + this.field_e ^ -1L) < (rl.a((byte) -101) ^ -1L)) {
-              return ji.field_h;
-            } else {
-              return this.g(param0 ^ 17779);
-            }
-          }
         }
+        if (param0 != -31873) {
+          field_g = -106;
+          if ((350L + this.field_e) <= rl.a((byte) -101)) {
+            return this.g(param0 ^ 17779);
+          }
+          return ji.field_h;
+        }
+        if ((350L + this.field_e) <= rl.a((byte) -101)) {
+          return this.g(param0 ^ 17779);
+        }
+        return ji.field_h;
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-            String var2 = null;
-            RuntimeException var2_ref = null;
-            int var3 = 0;
-            String var4 = null;
-            java.net.URL var5 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            String stackIn_11_2 = null;
-            Throwable decompiledCaughtException = null;
-            Exception var2_ref2 = null;
+          String var2 = null;
+          RuntimeException var2_ref = null;
+          int var3 = 0;
+          String var4 = null;
+          java.net.URL var5 = null;
+          RuntimeException stackIn_10_0 = null;
+          StringBuilder stackIn_10_1 = null;
+          String stackIn_11_2 = null;
+          Throwable decompiledCaughtException = null;
+          Exception var2_ref2 = null;
+          String var4Lifetime1;
+          String var4Lifetime2;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      var2 = param0.getDocumentBase().getFile();
-                      var4 = var2;
-                      var4 = var2;
-                      var3 = var2.indexOf('?');
-                      var4 = "reload.ws";
-                      if (-1 < (var3 ^ -1)) {
-                        break L2;
-                      } else {
-                        var4 = var4 + var2.substring(var3);
-                        break L2;
-                      }
-                    }
-                    var5 = new java.net.URL(param0.getCodeBase(), var4);
-                    param0.getAppletContext().showDocument(p.a((byte) -103, var5, param0), "_self");
-                    break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var2_ref2 = (Exception) (Object) decompiledCaughtException;
-                    var2_ref2.printStackTrace();
-                    break L3;
-                  }
-                }
-                if (param1 < -45) {
-                  break L0;
-                } else {
-                  gg.a(false);
-                  return;
-                }
+              var2 = param0.getDocumentBase().getFile();
+              var4 = var2;
+              var4Lifetime1 = var2;
+              var3 = var2.indexOf('?');
+              var4Lifetime2 = "reload.ws";
+              if (var3 >= 0) {
+                var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_10_0 = (RuntimeException) (var2_ref);
-
-                stackIn_10_1 = new StringBuilder().append("gg.D(");
-
-                if (param0 == null) {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "{...}";
-                  break L4;
-                }
-              }
-              throw wm.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+              var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
+              param0.getAppletContext().showDocument(p.a((byte) -103, var5, param0), "_self");
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref2 = (Exception) (Object) decompiledCaughtException;
+              var2_ref2.printStackTrace();
             }
+            if (param1 < -45) {
+              return;
+            }
+            gg.a(false);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_10_0 = var2_ref;
+            stackIn_10_1 = new StringBuilder().append("gg.D(");
+            if (param0 == null) {
+              stackIn_11_2 = "null";
+            } else {
+              stackIn_11_2 = "{...}";
+            }
+            throw wm.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     abstract na g(int param0);
 
     public final String a(int param0) {
-        if (!this.d(-3)) {
-          if (rl.a((byte) -123) >= this.field_e - -350L) {
-            if (param0 <= 61) {
-              field_c = (String) null;
-              return this.f(-120);
-            } else {
-              return this.f(-120);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (this.d(-3)) {
           return null;
         }
+        if (rl.a((byte) -123) < this.field_e + 350L) {
+          return null;
+        }
+        if (param0 > 61) {
+          return this.f(-120);
+        }
+        field_c = (String) null;
+        return this.f(-120);
     }
 
     static {

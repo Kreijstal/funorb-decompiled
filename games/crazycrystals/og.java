@@ -17,102 +17,46 @@ class og extends qm implements he {
         qm var6 = null;
         int var7 = 0;
         tm var8 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = CrazyCrystals.field_B;
         try {
-          L0: {
-            if (!this.field_v.b(-16497)) {
-              var8 = new tm(this.field_v);
-              if (param0 < -50) {
-                var4 = (qm) ((Object) var8.d(100));
-                L1: while (true) {
-                  if (var4 == null) {
-                    stackIn_20_0 = 0;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    L2: {
-                      if (var4.e(-126)) {
-                        var5 = new tm(this.field_v);
-                        var5.a(var4, 200);
-                        var6 = (qm) ((Object) var5.c(-43));
-                        L3: while (true) {
-                          if (var6 == null) {
-                            break L2;
-                          } else {
-                            if (var6.a(true, param1)) {
-                              stackIn_16_0 = 1;
-                              decompiledRegionSelector0 = 2;
-                              break L0;
-                            } else {
-                              var6 = (qm) ((Object) var5.c(-90));
-                              continue L3;
-                            }
-                          }
-                        }
-                      } else {
-                        break L2;
-                      }
-                    }
-                    var4 = (qm) ((Object) var8.c(124));
-                    continue L1;
-                  }
-                }
-              } else {
-                stackIn_6_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (this.field_v.b(-16497)) {
+            return false;
           }
+          var8 = new tm(this.field_v);
+          if (param0 >= -50) {
+            return true;
+          }
+          var4 = (qm) (var8.d(100));
+          while (var4 != null) {
+            if (var4.e(-126)) {
+              var5 = new tm(this.field_v);
+              var5.a(var4, 200);
+              var6 = (qm) (var5.c(-43));
+              while (var6 != null) {
+                if (var6.a(true, param1)) {
+                  return true;
+                }
+                var6 = (qm) (var5.c(-90));
+              }
+            }
+            var4 = (qm) (var8.c(124));
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var3);
-
-            stackIn_23_1 = new StringBuilder().append("og.BB(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L4;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L4;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
+          var3 = decompiledCaughtException;
+          stackIn_23_0 = var3;
+          stackIn_23_1 = new StringBuilder().append("og.BB(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_24_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0 != 0;
-            } else {
-              return stackIn_20_0 != 0;
-            }
+            stackIn_24_2 = "{...}";
           }
+          throw dn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -120,29 +64,19 @@ class og extends qm implements he {
         tm var2;
         qm var3;
         int var4;
-        L0: {
-          var4 = CrazyCrystals.field_B;
-          if (!param0) {
-            break L0;
-          } else {
-            field_u = (String) null;
-            break L0;
-          }
+        var4 = CrazyCrystals.field_B;
+        if (param0) {
+          field_u = (String) null;
         }
         var2 = new tm(this.field_v);
-        var3 = (qm) ((Object) var2.a((byte) 83));
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.e(-114)) {
-              return var3;
-            } else {
-              var3 = (qm) ((Object) var2.b(108));
-              continue L1;
-            }
-          } else {
-            return null;
+        var3 = (qm) (var2.a((byte) 83));
+        while (var3 != null) {
+          if (var3.e(-114)) {
+            return var3;
           }
+          var3 = (qm) (var2.b(108));
         }
+        return null;
     }
 
     final boolean a(qm param0, int param1) {
@@ -153,100 +87,47 @@ class og extends qm implements he {
         int var7 = 0;
         qm var8 = null;
         tm var9 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = CrazyCrystals.field_B;
         try {
-          L0: {
-            if (!this.field_v.b(-16497)) {
-              L1: {
-                var9 = new tm(this.field_v);
-                var4 = (qm) ((Object) var9.a((byte) 120));
-                if (param1 == -25911) {
-                  break L1;
-                } else {
-                  var8 = (qm) null;
-                  this.a(60, 5, (qm) null, 34, 14, 16, -17);
-                  break L1;
-                }
-              }
-              L2: while (true) {
-                if (var4 == null) {
-                  stackIn_17_0 = 0;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L3: {
-                    if (!var4.e(param1 + 25789)) {
-                      break L3;
-                    } else {
-                      var5 = new tm(this.field_v);
-                      var5.a((byte) 58, var4);
-                      var6 = (qm) ((Object) var5.b(param1 ^ -25952));
-                      L4: while (true) {
-                        if (var6 == null) {
-                          break L3;
-                        } else {
-                          if (var6.a(true, param0)) {
-                            stackIn_13_0 = 1;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            var6 = (qm) ((Object) var5.b(118));
-                            continue L4;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  var4 = (qm) ((Object) var9.b(param1 ^ 25974));
-                  continue L2;
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (this.field_v.b(-16497)) {
+            return false;
           }
+          var9 = new tm(this.field_v);
+          var4 = (qm) (var9.a((byte) 120));
+          if (param1 != -25911) {
+            var8 = (qm) null;
+            this.a(60, 5, (qm) null, 34, 14, 16, -17);
+          }
+          while (var4 != null) {
+            if (var4.e(param1 + 25789)) {
+              var5 = new tm(this.field_v);
+              var5.a((byte) 58, var4);
+              var6 = (qm) (var5.b(param1 ^ -25952));
+              while (var6 != null) {
+                if (var6.a(true, param0)) {
+                  return true;
+                }
+                var6 = (qm) (var5.b(118));
+              }
+            }
+            var4 = (qm) (var9.b(param1 ^ 25974));
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var3);
-
-            stackIn_20_1 = new StringBuilder().append("og.EB(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L5;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L5;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0 != 0;
+          var3 = decompiledCaughtException;
+          stackIn_20_0 = var3;
+          stackIn_20_1 = new StringBuilder().append("og.EB(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
           } else {
-            return stackIn_17_0 != 0;
+            stackIn_21_2 = "{...}";
           }
+          throw dn.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -256,124 +137,67 @@ class og extends qm implements he {
         int var7 = 0;
         qm var8 = null;
         tm var9 = null;
-        int stackIn_10_0 = 0;
         boolean stackIn_16_0 = false;
-        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (param1 == 19279) {
-                break L1;
-              } else {
-                field_y = (String) null;
-                break L1;
-              }
-            }
-            var9 = new tm(this.field_v);
-            var8 = (qm) ((Object) var9.a((byte) 32));
-            L2: while (true) {
-              L3: {
-                if (var8 == null) {
-                  break L3;
-                } else {
-                  if (!var8.b(-72)) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (!var8.e(-123)) {
-                        break L4;
-                      } else {
-                        if (var8.a(param0, param1 + 0, param2, param3)) {
-                          stackIn_10_0 = 1;
-                          decompiledRegionSelector0 = 0;
-                          break L0;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    var8 = (qm) ((Object) var9.b(106));
-                    continue L2;
-                  }
-                }
-              }
-              var6 = param0;
-              if (80 != var6) {
-                stackIn_18_0 = 0;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                L5: {
-                  if (cp.field_k[81]) {
-                    stackIn_16_0 = this.a((byte) -57, param2);
-                    break L5;
-                  } else {
-                    stackIn_16_0 = this.a(param2, -25911);
-                    break L5;
-                  }
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param1 != 19279) {
+            field_y = (String) null;
           }
+          var9 = new tm(this.field_v);
+          var8 = (qm) (var9.a((byte) 32));
+          while (var8 != null) {
+            if (var8.b(-72)) {
+              if (var8.e(-123) &&
+                var8.a(param0, param1 + 0, param2, param3)) {
+                return true;
+              }
+              var8 = (qm) (var9.b(106));
+              continue;
+            }
+            break;
+          }
+          var6 = param0;
+          if (80 != var6) {
+            return false;
+          }
+          if (cp.field_k[81]) {
+            stackIn_16_0 = this.a((byte) -57, param2);
+          } else {
+            stackIn_16_0 = this.a(param2, -25911);
+          }
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var5);
-
-            stackIn_21_1 = new StringBuilder().append("og.AA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_16_0;
+          var5 = decompiledCaughtException;
+          stackIn_21_0 = var5;
+          stackIn_21_1 = new StringBuilder().append("og.AA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_22_2 = "null";
           } else {
-            return stackIn_18_0 != 0;
+            stackIn_22_2 = "{...}";
           }
+          throw dn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (!(fl.field_a != null)) {
-            return -1;
+        if (fl.field_a == null) {
+          return -1;
         }
-        if (pa.field_F <= param2 && pa.field_F + fl.field_a.field_l > param2 && kb.field_a <= param1) {
-            if (!(fl.field_a.field_u + kb.field_a <= param1)) {
-                return 0;
-            }
+        if (pa.field_F <= param2 && pa.field_F + fl.field_a.field_l > param2 && kb.field_a <= param1 &&
+          !(fl.field_a.field_u + kb.field_a <= param1)) {
+          return 0;
         }
         if (param0 != 0) {
-            og.h(124);
+          og.h(124);
         }
-        if (md.field_q <= param2 && md.field_q + fl.field_a.field_l > param2 && param1 >= gf.field_a) {
-            if (!(gf.field_a + fl.field_a.field_u <= param1)) {
-                return 1;
-            }
+        if (md.field_q <= param2 && md.field_q + fl.field_a.field_l > param2 && param1 >= gf.field_a &&
+          !(gf.field_a + fl.field_a.field_u <= param1)) {
+          return 1;
         }
         return -1;
     }
@@ -381,13 +205,13 @@ class og extends qm implements he {
     final void b(byte param0) {
         int var4 = CrazyCrystals.field_B;
         tm var2 = new tm(this.field_v);
-        qm var3 = (qm) ((Object) var2.a((byte) 88));
+        qm var3 = (qm) (var2.a((byte) 88));
         while (var3 != null) {
-            var3.b((byte) -93);
-            var3 = (qm) ((Object) var2.b(-34));
+          var3.b((byte) -93);
+          var3 = (qm) (var2.b(-34));
         }
         if (param0 >= -84) {
-            field_y = (String) null;
+          field_y = (String) null;
         }
     }
 
@@ -398,70 +222,63 @@ class og extends qm implements he {
         int var5;
         var5 = CrazyCrystals.field_B;
         var2 = new tm(this.field_v);
-        var3 = (qm) ((Object) var2.a((byte) 112));
-        if (param0 < -23) {
-          L0: while (true) {
-            if (var3 != null) {
-              var4 = var3.a((byte) -110);
-              if (var4 != null) {
-                return var4;
-              } else {
-                var3 = (qm) ((Object) var2.b(-2));
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        var3 = (qm) (var2.a((byte) 112));
+        if (param0 >= -23) {
           return (String) null;
         }
+        while (var3 != null) {
+          var4 = var3.a((byte) -110);
+          if (var4 != null) {
+            return var4;
+          }
+          var3 = (qm) (var2.b(-2));
+        }
+        return null;
     }
 
     private final void d(byte param0) {
         int var4 = CrazyCrystals.field_B;
         if (param0 <= 31) {
-            field_w = (Random) null;
+          field_w = (Random) null;
         }
         tm var2 = new tm(this.field_v);
-        qm var3 = (qm) ((Object) var2.a((byte) 63));
+        qm var3 = (qm) (var2.a((byte) 63));
         while (var3 != null) {
-            var3.f(-102);
-            var3 = (qm) ((Object) var2.b(-81));
+          var3.f(-102);
+          var3 = (qm) (var2.b(-81));
         }
     }
 
     void a(int param0, byte param1, int param2, int param3) {
         int var7 = CrazyCrystals.field_B;
-        if (0 == param3) {
-            if (!(null == this.field_i)) {
-                this.field_i.a(param0, false, param2, (qm) (this), true);
-            }
+        if (0 == param3 &&
+          null != this.field_i) {
+          this.field_i.a(param0, false, param2, (qm) (this), true);
         }
         tm var5 = new tm(this.field_v);
         if (param1 > -12) {
-            return;
+          return;
         }
-        qm var6 = (qm) ((Object) var5.d(9));
+        qm var6 = (qm) (var5.d(9));
         while (var6 != null) {
-            var6.a(param0 + this.field_j, (byte) -69, param2 - -this.field_r, param3);
-            var6 = (qm) ((Object) var5.c(-31));
+          var6.a(param0 + this.field_j, (byte) -69, param2 + this.field_r, param3);
+          var6 = (qm) (var5.c(-31));
         }
     }
 
     final boolean e(int param0) {
         if (param0 >= -107) {
-            this.a(-54, -99, 76, -102, (byte) -121);
+          this.a(-54, -99, 76, -102, (byte) -121);
         }
         return this.b(false) != null ? true : false;
     }
 
     final void b(qm param0, int param1) {
         try {
-            int var3_int = -34 % ((-70 - param1) / 41);
-            this.field_v.b(0, param0);
+          int var3_int = -34 % ((-70 - param1) / 41);
+          this.field_v.b(0, param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "og.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "og.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -473,138 +290,81 @@ class og extends qm implements he {
         int var8 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = CrazyCrystals.field_B;
         try {
-          L0: {
-            super.a(param0, 11, param2, param3);
-            var5 = new tm(this.field_v);
-            var7 = -15 % ((param1 - -50) / 59);
-            var6 = (qm) ((Object) var5.a((byte) 32));
-            L1: while (true) {
-              L2: {
-                if (var6 == null) {
-                  break L2;
-                } else {
-                  if (!var6.b(120)) {
-                    break L2;
-                  } else {
-                    var6.a(param0, -124, this.field_j + param2, param3 + this.field_r);
-                    var6 = (qm) ((Object) var5.b(-118));
-                    continue L1;
-                  }
-                }
-              }
-              break L0;
+          super.a(param0, 11, param2, param3);
+          var5 = new tm(this.field_v);
+          var7 = -15 % ((param1 + 50) / 59);
+          var6 = (qm) (var5.a((byte) 32));
+          while (var6 != null) {
+            if (var6.b(120)) {
+              var6.a(param0, -124, this.field_j + param2, param3 + this.field_r);
+              var6 = (qm) (var5.b(-118));
+              continue;
             }
+            break;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (runtimeException);
-
-            stackIn_8_1 = new StringBuilder().append("og.N(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_8_0 = runtimeException;
+          stackIn_8_1 = new StringBuilder().append("og.N(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(int param0, Hashtable param1, byte param2, StringBuilder param3) {
         StringBuilder discarded$3 = null;
+        int var7 = 0;
         StringBuilder discarded$4 = null;
         tm var5 = null;
         qm var6 = null;
-        int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         var8 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var5 = new tm(this.field_v);
-            var6 = (qm) ((Object) var5.a(param2));
-            L1: while (true) {
-              if (var6 == null) {
-                break L0;
-              } else {
-                discarded$3 = param3.append('\n');
-                var7 = 0;
-                L2: while (true) {
-                  if (param0 < var7) {
-                    var6.a(1 + param0, param2 ^ -34, param1, param3);
-                    var6 = (qm) ((Object) var5.b(103));
-                    continue L1;
-                  } else {
-                    discarded$4 = param3.append(' ');
-                    var7++;
-                    continue L2;
-                  }
-                }
-              }
+          var5 = new tm(this.field_v);
+          var6 = (qm) (var5.a(param2));
+          while (var6 != null) {
+            discarded$3 = param3.append('\n');
+            for (var7 = 0; param0 >= var7; var7++) {
+              discarded$4 = param3.append(' ');
             }
+            var6.a(1 + param0, param2 ^ -34, param1, param3);
+            var6 = (qm) (var5.b(103));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
-
-            stackIn_10_1 = new StringBuilder().append("og.CB(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_10_0 = var5_ref;
+          stackIn_10_1 = new StringBuilder().append("og.CB(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -613,71 +373,39 @@ class og extends qm implements he {
         RuntimeException var3_ref = null;
         qm var4 = null;
         int var5 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              var3 = new tm(this.field_v);
-              var4 = (qm) ((Object) var3.a((byte) 34));
-              if (param0) {
-                break L1;
-              } else {
-                field_x = (sj) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var4 == null) {
-                stackIn_9_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (!var4.a(true, param1)) {
-                  var4 = (qm) ((Object) var3.b(-13));
-                  continue L2;
-                } else {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
+          var3 = new tm(this.field_v);
+          var4 = (qm) (var3.a((byte) 34));
+          if (!param0) {
+            field_x = (sj) null;
           }
+          while (true) {
+            if (var4 == null) {
+              return false;
+            }
+            if (!var4.a(true, param1)) {
+              var4 = (qm) (var3.b(-13));
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("og.P(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("og.P(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw dn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -698,65 +426,35 @@ class og extends qm implements he {
         int var9 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var9 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var7 = new tm(this.field_v);
-            var8 = (qm) ((Object) var7.a((byte) 89));
-            if (param5 == 0) {
-              L1: while (true) {
-                L2: {
-                  if (var8 == null) {
-                    break L2;
-                  } else {
-                    if (!var8.b(-94)) {
-                      break L2;
-                    } else {
-                      var8.a(param0, param1 - -this.field_j, this.field_r + param2, param3, param4, 0);
-                      var8 = (qm) ((Object) var7.b(param5 ^ 3));
-                      continue L1;
-                    }
-                  }
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var7 = new tm(this.field_v);
+          var8 = (qm) (var7.a((byte) 89));
+          if (param5 != 0) {
+            return;
           }
+          while (var8 != null) {
+            if (var8.b(-94)) {
+              var8.a(param0, param1 + this.field_j, this.field_r + param2, param3, param4, 0);
+              var8 = (qm) (var7.b(param5 ^ 3));
+              continue;
+            }
+            break;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("og.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_9_0 = runtimeException;
+          stackIn_9_1 = new StringBuilder().append("og.PA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw dn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -765,78 +463,39 @@ class og extends qm implements he {
         RuntimeException var8_ref = null;
         qm var9 = null;
         int var10 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (!param3) {
-                break L1;
-              } else {
-                field_y = (String) null;
-                break L1;
-              }
-            }
-            var8 = new tm(this.field_v);
-            var9 = (qm) ((Object) var8.a((byte) 72));
-            L2: while (true) {
-              L3: {
-                if (var9 == null) {
-                  break L3;
-                } else {
-                  if (!var9.b(110)) {
-                    break L3;
-                  } else {
-                    if (var9.a(this.field_r + param0, param1, param2, param3, param4 + this.field_j, param5, param6)) {
-                      stackIn_9_0 = 1;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var9 = (qm) ((Object) var8.b(-22));
-                      continue L2;
-                    }
-                  }
-                }
-              }
-              stackIn_12_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          if (param3) {
+            field_y = (String) null;
           }
+          var8 = new tm(this.field_v);
+          var9 = (qm) (var8.a((byte) 72));
+          while (var9 != null) {
+            if (var9.b(110)) {
+              if (var9.a(this.field_r + param0, param1, param2, param3, param4 + this.field_j, param5, param6)) {
+                return true;
+              }
+              var9 = (qm) (var8.b(-22));
+              continue;
+            }
+            break;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var8_ref = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var8_ref);
-
-            stackIn_15_1 = new StringBuilder().append("og.KA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
+          var8_ref = decompiledCaughtException;
+          stackIn_15_0 = var8_ref;
+          stackIn_15_1 = new StringBuilder().append("og.KA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0 != 0;
-        } else {
-          return stackIn_12_0 != 0;
+          throw dn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -845,88 +504,40 @@ class og extends qm implements he {
         RuntimeException var8_ref = null;
         qm var9 = null;
         int var10 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var8 = new tm(this.field_v);
-            if (param0 == 1) {
-              var9 = (qm) ((Object) var8.a((byte) 112));
-              L1: while (true) {
-                L2: {
-                  if (var9 == null) {
-                    break L2;
-                  } else {
-                    if (!var9.b(param0 + -62)) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (!var9.e(param0 ^ -128)) {
-                          break L3;
-                        } else {
-                          if (!var9.a(1, param1, param2, param3, param4, param5, param6)) {
-                            break L3;
-                          } else {
-                            stackIn_10_0 = 1;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
-                        }
-                      }
-                      var9 = (qm) ((Object) var8.b(-103));
-                      continue L1;
-                    }
-                  }
-                }
-                stackIn_13_0 = 0;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var8 = new tm(this.field_v);
+          if (param0 != 1) {
+            return false;
           }
+          var9 = (qm) (var8.a((byte) 112));
+          while (var9 != null) {
+            if (var9.b(param0 - 62)) {
+              if (var9.e(param0 ^ -128) &&
+                var9.a(1, param1, param2, param3, param4, param5, param6)) {
+                return true;
+              }
+              var9 = (qm) (var8.b(-103));
+              continue;
+            }
+            break;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var8_ref = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var8_ref);
-
-            stackIn_16_1 = new StringBuilder().append("og.FB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
-          }
-          throw dn.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0 != 0;
+          var8_ref = decompiledCaughtException;
+          stackIn_16_0 = var8_ref;
+          stackIn_16_1 = new StringBuilder().append("og.FB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
           } else {
-            return stackIn_13_0 != 0;
+            stackIn_17_2 = "{...}";
           }
+          throw dn.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -935,75 +546,38 @@ class og extends qm implements he {
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (this.a(0, param0, param3, param2)) {
-                this.a(param0, (byte) 126, param3, param2);
-                this.a(param0, param2, (byte) 81, param3);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 < -85) {
-                break L2;
-              } else {
-                field_y = (String) null;
-                break L2;
-              }
-            }
-            stackIn_6_0 = (StringBuilder) (param3);
-            break L0;
+          if (this.a(0, param0, param3, param2)) {
+            this.a(param0, (byte) 126, param3, param2);
+            this.a(param0, param2, (byte) 81, param3);
           }
+          if (param1 >= -85) {
+            field_y = (String) null;
+          }
+          stackIn_6_0 = (StringBuilder) (param3);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("og.MA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("og.MA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void h(int param0) {
@@ -1012,7 +586,7 @@ class og extends qm implements he {
         field_y = null;
         field_x = null;
         if (param0 != 697) {
-            field_y = (String) null;
+          field_y = (String) null;
         }
     }
 
@@ -1022,15 +596,15 @@ class og extends qm implements he {
         int var2 = 0;
         tm var3 = new tm(this.field_v);
         if (param0 <= 30) {
-            this.field_v = (wb) null;
+          this.field_v = (wb) null;
         }
-        qm var4 = (qm) ((Object) var3.a((byte) 80));
+        qm var4 = (qm) (var3.a((byte) 80));
         while (var4 != null) {
-            var5 = var4.c((byte) 76);
-            if (var5 > var2) {
-                var2 = var5;
-            }
-            var4 = (qm) ((Object) var3.b(-46));
+          var5 = var4.c((byte) 76);
+          if (var5 > var2) {
+            var2 = var5;
+          }
+          var4 = (qm) (var3.b(-46));
         }
         return var2;
     }

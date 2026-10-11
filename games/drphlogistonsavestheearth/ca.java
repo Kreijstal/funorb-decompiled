@@ -18,7 +18,7 @@ abstract class ca extends bd {
 
     boolean j(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         this.g((byte) -125);
         return super.j(param0 ^ 0);
@@ -26,9 +26,9 @@ abstract class ca extends bd {
 
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = -87 % ((-2 - param3) / 59);
-        if (-1 <= (param0 ^ -1)) {
-            this.b(param2, 1688990433, param1);
-            return;
+        if (param0 <= 0) {
+          this.b(param2, 1688990433, param1);
+          return;
         }
         this.field_U = this.field_w;
         this.field_ab = param1;
@@ -46,7 +46,7 @@ abstract class ca extends bd {
 
     void l(int param0) {
         if (param0 != -24626) {
-            this.g((byte) 40);
+          this.g((byte) 40);
         }
     }
 
@@ -68,103 +68,99 @@ abstract class ca extends bd {
         String var17;
         String var18;
         String var19;
-        L0: {
-          var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-          if (param0 instanceof gl) {
-            var14 = (gl) ((Object) param0);
-            var2 = var14.field_d + " | ";
-            var11 = var2;
-            param0 = var14.field_a;
-            break L0;
-          } else {
-            var2 = "";
-            break L0;
-          }
+        String var2Lifetime1;
+        String var2Lifetime2;
+        String var2Lifetime3;
+        String var11Lifetime1;
+        String var11Lifetime2;
+        String var11Lifetime3;
+        String var2Lifetime3Lifetime1;
+        String var2Lifetime3Lifetime2;
+        String var2Lifetime3Lifetime3;
+        String var2Lifetime3Lifetime4;
+        String var2Lifetime3Lifetime5;
+        String var2Lifetime3Lifetime6;
+        String var2Lifetime3Lifetime7;
+        String var2Lifetime3Lifetime8;
+        String var2Lifetime3Lifetime9;
+        String var2Lifetime3Lifetime10;
+        String var2Lifetime3Lifetime11;
+        String var2Lifetime3Lifetime12;
+        String var11Lifetime3Lifetime1;
+        var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        if (param0 instanceof gl) {
+          var14 = (gl) ((Object) param0);
+          var2 = var14.field_d + " | ";
+          var11 = var2;
+          param0 = var14.field_a;
+        } else {
+          var2 = "";
         }
-        L1: {
-          var15 = new StringWriter();
-          var4 = new PrintWriter((Writer) ((Object) var15));
-          param0.printStackTrace(var4);
-          if (param1 == -36) {
-            break L1;
-          } else {
-            field_bb = (he[]) null;
-            break L1;
-          }
+        var15 = new StringWriter();
+        var4 = new PrintWriter((Writer) ((Object) var15));
+        param0.printStackTrace(var4);
+        if (param1 != -36) {
+          field_bb = (he[]) null;
         }
         var4.close();
         var5 = var15.toString();
-        var2 = var5;
-        var11 = var5;
+        var2Lifetime1 = var5;
+        var11Lifetime1 = var5;
         var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
         var7 = var6.readLine();
-        var2 = var7;
-        var11 = var7;
-        L2: while (true) {
+        var2Lifetime2 = var7;
+        var11Lifetime2 = var7;
+        while (true) {
           var8 = var6.readLine();
-          var2 = var8;
-          var11 = var8;
-          var2 = var11;
-          if (var8 != null) {
-            L3: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', 1 + var9);
-              if (0 == (var9 ^ -1)) {
-                var11 = var8;
-                var2 = var11;
-                var2 = var11;
-                break L3;
-              } else {
-                var11 = var8.substring(0, var9);
-                break L3;
-              }
-            }
-            L4: {
-              var16 = var11.trim();
-              var2 = var16;
-              var2 = var16;
-              var17 = var16.substring(var16.lastIndexOf(' ') + 1);
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(var17.lastIndexOf('\t') + 1);
-              var2 = var18;
-              var2 = var18;
-              var19 = var2 + var18;
-              var2 = var19;
-              var2 = var19;
-              var2 = var19;
-              if (var9 == -1) {
-                break L4;
-              } else {
-                if (-1 != var10) {
-                  var12 = var8.indexOf(".java:", var9);
-                  if (var12 >= 0) {
-                    var2 = var19 + var8.substring(5 + var12, var10);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                } else {
-                  var2 = var2 + ' ';
-                  continue L2;
-                }
-              }
-            }
-            var2 = var2 + ' ';
-            continue L2;
-          } else {
-            var2 = var11;
-            var11 = var2;
-            var2 = var11;
-            var2 = var2 + "| " + var7;
-            return var2;
+          var2Lifetime3 = var8;
+          var11Lifetime3 = var8;
+          var2Lifetime3Lifetime1 = var11Lifetime3;
+          if (var8 == null) {
+            var2Lifetime3Lifetime2 = var11Lifetime3;
+            var11Lifetime3 = var2Lifetime3Lifetime2;
+            var2Lifetime3Lifetime2 = var11Lifetime3;
+            var2Lifetime3Lifetime2 = var2Lifetime3Lifetime2 + "| " + var7;
+            return var2Lifetime3Lifetime2;
           }
+          var9 = var8.indexOf('(');
+          var10 = var8.indexOf(')', 1 + var9);
+          if (var9 == -1) {
+            var11Lifetime3Lifetime1 = var8;
+            var2Lifetime3Lifetime3 = var11Lifetime3Lifetime1;
+            var2Lifetime3Lifetime3 = var11Lifetime3Lifetime1;
+          } else {
+            var11Lifetime3Lifetime1 = var8.substring(0, var9);
+          }
+          var16 = var11Lifetime3Lifetime1.trim();
+          var2Lifetime3Lifetime4 = var16;
+          var2Lifetime3Lifetime5 = var16;
+          var17 = var16.substring(var16.lastIndexOf(' ') + 1);
+          var2Lifetime3Lifetime6 = var17;
+          var2Lifetime3Lifetime7 = var17;
+          var18 = var17.substring(var17.lastIndexOf('\t') + 1);
+          var2Lifetime3Lifetime8 = var18;
+          var2Lifetime3Lifetime9 = var18;
+          var19 = var2Lifetime3Lifetime9 + var18;
+          var2Lifetime3Lifetime10 = var19;
+          var2Lifetime3Lifetime11 = var19;
+          var2Lifetime3Lifetime12 = var19;
+          if (var9 != -1) {
+            if (-1 == var10) {
+              var2Lifetime3Lifetime12 = var2Lifetime3Lifetime12 + ' ';
+              continue;
+            }
+            var12 = var8.indexOf(".java:", var9);
+            if (var12 >= 0) {
+              var2Lifetime3Lifetime12 = var19 + var8.substring(5 + var12, var10);
+            }
+          }
+          var2Lifetime3Lifetime12 = var2Lifetime3Lifetime12 + ' ';
         }
     }
 
     final static String b(boolean param0) {
         if (param0) {
-            return (String) null;
+          return (String) null;
         }
         return dh.field_N.b((byte) -102);
     }
@@ -174,7 +170,7 @@ abstract class ca extends bd {
         field_bb = null;
         field_Y = null;
         if (param0 != -2110416344) {
-            ca.b(false);
+          ca.b(false);
         }
         field_W = null;
     }
@@ -193,143 +189,104 @@ abstract class ca extends bd {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        wj.f(param2 + 6, 35 + param0, this.field_w + -12, -40 + this.field_k, 2105376, 0);
+        wj.f(param2 + 6, 35 + param0, this.field_w - 12, -40 + this.field_k, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
-        L0: while (true) {
-          if (var7 >= var4) {
-            var6 = 169;
-            var4 = 22;
-            var5 = 194;
-            var7 = 0;
-            var8 = 35 + param0;
-            L1: while (true) {
-              if (var7 >= var4) {
-                if (param1 >= 26) {
-                  ck.field_l.d(-90 + (param2 + this.field_w), 10 + param0);
-                  pe.a(ob.field_f, 110, 5 + param2, this.field_w - 10, param0 - -35);
-                  pe.a(kc.field_i, 90, param2, this.field_w, -22 + (this.field_k + param0));
-                  var4 = -79 + this.field_k;
-                  var6 = 127;
-                  var5 = 169;
-                  var7 = 0;
-                  var8 = param0 + 57;
-                  L2: while (true) {
-                    if (var7 >= var4) {
-                      return;
-                    } else {
-                      var9 = var5 - -(var7 * (var6 - var5) / var4);
-                      var9 = var9 | (var9 << -991798680 | var9 << -1067903088);
-                      wj.g(param2, var8, 6, var9);
-                      wj.g(-6 + this.field_w + param2, var8, 6, var9);
-                      var8++;
-                      var7++;
-                      continue L2;
-                    }
+        while (var7 < var4) {
+          if (wj.field_e <= var8 &&
+            wj.field_j > var8) {
+            var9 = var5 + (var6 - var5) * var7 / var4;
+            var10 = 0;
+            var11 = this.field_w;
+            if (var7 <= 20) {
+              while (var10 <= 20) {
+                var12 = (20 - var7) * (20 - var7) + (20 - var10) * (-var10 + 20);
+                if (462 >= var12) {
+                  if (var12 < 420) {
+                    break;
                   }
-                } else {
-                  return;
+                  var13 = var9 * (-var12 + 462) / 42;
+                  var13 = var13 | (var13 << 16 | var13 << 8);
+                  wj.field_l[param2 + wj.field_k * var8 + var10] = var13;
                 }
-              } else {
-                var9 = var7 * (-var5 + var6) / var4 + var5;
-                var9 = var9 | (var9 << -1237673936 | var9 << -1410742232);
-                wj.g(param2, var8, 6, var9);
-                wj.g(this.field_w + param2 + -6, var8, 6, var9);
-                var8++;
-                var7++;
-                continue L1;
+                var10++;
               }
             }
-          } else {
-            if ((wj.field_e ^ -1) >= (var8 ^ -1)) {
-              if (wj.field_j > var8) {
-                L3: {
-                  var9 = var5 - -((var6 + -var5) * var7 / var4);
-                  var10 = 0;
-                  var11 = this.field_w;
-                  if ((var7 ^ -1) < -21) {
-                    break L3;
+            if (var7 <= 20) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = (20 - var7) * (20 - var7) + var13Lifetime1 * var13Lifetime1;
+                if (462 >= var14) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = 1 + var11;
                   } else {
-                    L4: while (true) {
-                      if (-21 > (var10 ^ -1)) {
-                        break L3;
-                      } else {
-                        var12 = (20 + -var7) * (20 + -var7) + (20 + -var10) * (-var10 + 20);
-                        if (462 >= var12) {
-                          if (-421 >= (var12 ^ -1)) {
-                            var13 = var9 * (-var12 + 462) / 42;
-                            var13 = var13 | (var13 << 501420496 | var13 << -1063594616);
-                            wj.field_l[param2 + wj.field_k * var8 - -var10] = var13;
-                            var10++;
-                            continue L4;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          var10++;
-                          continue L4;
-                        }
-                      }
-                    }
+                    var15 = var9 * (-var14 + 462) / 42;
+                    var15 = var15 | (var15 << 16 | var15 << 8);
+                    wj.field_l[var11 + (param2 + wj.field_k * var8)] = var15;
                   }
+                  var11++;
+                  continue;
                 }
-                L5: {
-                  if (var7 > 20) {
-                    break L5;
-                  } else {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L6: while (true) {
-                      L7: {
-                        if (var13 > 20) {
-                          break L7;
-                        } else {
-                          var14 = (20 + -var7) * (20 - var7) - -(var13 * var13);
-                          if (462 < var14) {
-                            break L7;
-                          } else {
-                            if ((var14 ^ -1) > -421) {
-                              var12 = 1 + var11;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            } else {
-                              var15 = var9 * (-var14 + 462) / 42;
-                              var15 = var15 | (var15 << -1384699824 | var15 << -2110416344);
-                              wj.field_l[var11 + (param2 + wj.field_k * var8)] = var15;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            }
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L5;
-                    }
-                  }
-                }
-                var9 = var9 | (var9 << -1789228432 | var9 << 222051784);
-                wj.g(param2 + var10, var8, var11 + -var10, var9);
-                var8++;
-                var7++;
-                continue L0;
-              } else {
-                var8++;
-                var7++;
-                continue L0;
+                break;
               }
-            } else {
-              var8++;
-              var7++;
-              continue L0;
+              var11 = var12Lifetime1;
             }
+            var9 = var9 | (var9 << 16 | var9 << 8);
+            wj.g(param2 + var10, var8, var11 - var10, var9);
           }
+          var8++;
+          var7++;
+        }
+        var6Lifetime1 = 169;
+        var4Lifetime1 = 22;
+        var5Lifetime1 = 194;
+        var7Lifetime1 = 0;
+        var8Lifetime1 = 35 + param0;
+        while (var7Lifetime1 < var4Lifetime1) {
+          var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
+          var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
+          wj.g(param2, var8Lifetime1, 6, var9Lifetime1);
+          wj.g(this.field_w + param2 - 6, var8Lifetime1, 6, var9Lifetime1);
+          var8Lifetime1++;
+          var7Lifetime1++;
+        }
+        if (param1 < 26) {
+          return;
+        }
+        ck.field_l.d(-90 + (param2 + this.field_w), 10 + param0);
+        pe.a(ob.field_f, 110, 5 + param2, this.field_w - 10, param0 + 35);
+        pe.a(kc.field_i, 90, param2, this.field_w, -22 + (this.field_k + param0));
+        var4Lifetime2 = -79 + this.field_k;
+        var6Lifetime2 = 127;
+        var5Lifetime2 = 169;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param0 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
+          wj.g(param2, var8Lifetime2, 6, var9Lifetime2);
+          wj.g(-6 + this.field_w + param2, var8Lifetime2, 6, var9Lifetime2);
+          var8Lifetime2++;
+          var7Lifetime2++;
         }
     }
 
@@ -339,35 +296,35 @@ abstract class ca extends bd {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var5 = 0;
-        if ((this.field_eb ^ -1) >= -1) {
+        if (this.field_eb <= 0) {
         } else {
-            var2 = this.field_X;
-            var3 = this.field_ab;
-            fieldTemp$0 = this.field_Z + 1;
-            this.field_Z = this.field_Z + 1;
-            if (this.field_eb <= fieldTemp$0) {
-                this.field_eb = 0;
-                this.l(param0 ^ -27562);
-            } else {
-                var4 = (this.field_eb * 2 + -this.field_Z) * this.field_Z;
-                var5 = this.field_eb * this.field_eb;
-                var2 = var4 * (-this.field_U + this.field_X) / var5 + this.field_U;
-                var3 = var4 * (this.field_ab + -this.field_cb) / var5 + this.field_cb;
-            }
-            this.b(var2, 1688990433, var3);
+          var2 = this.field_X;
+          var3 = this.field_ab;
+          fieldTemp$0 = this.field_Z + 1;
+          this.field_Z = this.field_Z + 1;
+          if (this.field_eb <= fieldTemp$0) {
+            this.field_eb = 0;
+            this.l(param0 ^ -27562);
+          } else {
+            var4 = (this.field_eb * 2 - this.field_Z) * this.field_Z;
+            var5 = this.field_eb * this.field_eb;
+            var2 = var4 * (-this.field_U + this.field_X) / var5 + this.field_U;
+            var3 = var4 * (this.field_ab - this.field_cb) / var5 + this.field_cb;
+          }
+          this.b(var2, 1688990433, var3);
         }
         if (param0 != 2968) {
-            this.k(-35);
+          this.k(-35);
         }
         return super.k(2968);
     }
 
     void g(byte param0) {
-        if ((this.field_eb ^ -1) >= -1) {
-            return;
+        if (this.field_eb <= 0) {
+          return;
         }
         if (param0 > -111) {
-            return;
+          return;
         }
         this.b(this.field_X, 1688990433, this.field_ab);
         this.field_eb = 0;

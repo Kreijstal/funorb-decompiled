@@ -10,8 +10,8 @@ class rf {
 
     final static String c(int param0) {
         if (param0 != 1) {
-            rf.b(false);
-            return se.field_p.a(param0 ^ -14);
+          rf.b(false);
+          return se.field_p.a(param0 ^ -14);
         }
         return se.field_p.a(param0 ^ -14);
     }
@@ -19,36 +19,33 @@ class rf {
     final boolean a(byte param0) {
         int var2 = -51 / ((-50 - param0) / 46);
         if (this.field_d == null) {
-            return false;
+          return false;
         }
         return true;
     }
 
     final void b(int param0) {
-        if (null != this.field_d) {
-          this.field_d.field_a = this.field_a;
-          if (param0 != 4) {
-            field_c = 114;
-            this.field_a.field_d = this.field_d;
-            this.field_a = null;
-            this.field_d = null;
-            return;
-          } else {
-            this.field_a.field_d = this.field_d;
-            this.field_a = null;
-            this.field_d = null;
-            return;
-          }
-        } else {
+        if (null == this.field_d) {
           return;
         }
+        this.field_d.field_a = this.field_a;
+        if (param0 == 4) {
+          this.field_a.field_d = this.field_d;
+          this.field_a = null;
+          this.field_d = null;
+          return;
+        }
+        field_c = 114;
+        this.field_a.field_d = this.field_d;
+        this.field_a = null;
+        this.field_d = null;
     }
 
     public static void b(boolean param0) {
         if (param0) {
-            rf.b(false);
-            field_e = null;
-            return;
+          rf.b(false);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

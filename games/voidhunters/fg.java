@@ -5,17 +5,13 @@ abstract class fg {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4;
-        var4 = -107 % ((0 - param3) / 34);
-        if (li.field_i) {
-          if (!ne.field_v) {
-            return;
-          } else {
-            og.field_r.a(1, (byte) 120, param0 | -16777216, 1, param1, param2);
-            return;
-          }
-        } else {
+        int var4 = -107 % ((0 - param3) / 34);
+        if (!li.field_i) {
           dma.a(param2, param1, param0);
+          return;
+        }
+        if (ne.field_v) {
+          og.field_r.a(1, (byte) 120, param0 | -16777216, 1, param1, param2);
           return;
         }
     }
@@ -25,7 +21,7 @@ abstract class fg {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -25692) {
-            fg.a(4);
+          fg.a(4);
         }
     }
 
@@ -34,48 +30,35 @@ abstract class fg {
     abstract int b(int param0);
 
     final static boolean a(char param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        if (param1 > 22) {
-          if (param0 != 160) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (45 == param0) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_20_0 = 1;
-                return stackIn_20_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param1 <= 22) {
           field_a = (String) null;
-          if (param0 != 160) {
-            if (param0 != 32) {
-              if (param0 != 95) {
-                if (45 == param0) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 == 160) {
             return true;
           }
+          if (param0 == 32) {
+            return true;
+          }
+          if (param0 == 95) {
+            return true;
+          }
+          if (45 != param0) {
+            return false;
+          }
+          return true;
         }
+        if (param0 == 160) {
+          return true;
+        }
+        if (param0 == 32) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (45 != param0) {
+          return false;
+        }
+        return true;
     }
 
     static {

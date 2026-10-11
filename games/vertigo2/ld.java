@@ -9,7 +9,7 @@ final class ld {
 
     public static void a(int param0) {
         if (param0 != 1151) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;

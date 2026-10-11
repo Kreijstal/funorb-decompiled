@@ -4,14 +4,14 @@
 final class ifb extends mfb {
     final int f(byte param0) {
         if (param0 <= 0) {
-            return -105;
+          return -105;
         }
         return qaa.field_b;
     }
 
     final boolean h(byte param0) {
         if (param0 < 18) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -21,53 +21,32 @@ final class ifb extends mfb {
 
     final static void l(int param0) {
         if (param0 > -115) {
-            return;
+          return;
         }
         if (ov.field_o != null) {
-            ov.field_o.b(1);
-            ov.field_o = null;
+          ov.field_o.b(1);
+          ov.field_o = null;
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 >= -21) {
-          L0: {
-            ifb.l(71);
-            if (0 == (param1 & 1024)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (0 == (param1 & 1024)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 < -21) {
+          return 0 != (param1 & 1024) ? true : false;
         }
+        ifb.l(71);
+        return 0 != (param1 & 1024) ? true : false;
     }
 
     final boolean c(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         return true;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            return -71;
+          return -71;
         }
         return df.field_p;
     }
@@ -79,8 +58,8 @@ final class ifb extends mfb {
 
     final int a(boolean param0) {
         if (param0) {
-            this.b(-100);
-            return 87;
+          this.b(-100);
+          return 87;
         }
         return 87;
     }

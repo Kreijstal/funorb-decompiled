@@ -12,10 +12,10 @@ final class oi {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
+        int var2 = 0;
         int dupTemp$6 = 0;
         byte[][] arrayValue$7 = null;
         byte[] var2_ref_byte__;
-        int var2;
         byte[] var3;
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
@@ -47,22 +47,16 @@ final class oi {
           return var2_ref_byte__Lifetime2;
         }
         if (sg.field_c != null) {
-          var2 = 0;
-          while (!(var2 >= nk.field_c.length)) {
-            if (nk.field_c[var2] != param1) {
-              var2++;
-              continue;
+          for (var2 = 0; var2 < nk.field_c.length; var2++) {
+            if (nk.field_c[var2] == param1 &&
+              0 < oa.field_b[var2]) {
+              dupTemp$6 = oa.field_b[var2] - 1;
+              arrayValue$7 = sg.field_c[var2];
+              oa.field_b[var2] = dupTemp$6;
+              var3 = arrayValue$7[dupTemp$6];
+              sg.field_c[var2][oa.field_b[var2]] = null;
+              return var3;
             }
-            if (0 >= oa.field_b[var2]) {
-              var2++;
-              continue;
-            }
-            dupTemp$6 = oa.field_b[var2] - 1;
-            arrayValue$7 = sg.field_c[var2];
-            oa.field_b[var2] = dupTemp$6;
-            var3 = arrayValue$7[dupTemp$6];
-            sg.field_c[var2][oa.field_b[var2]] = null;
-            return var3;
           }
         }
         return new byte[param1];

@@ -14,15 +14,7 @@ final class bi {
 
     public static void b(int param0) {
         field_g = (int[][][][]) null;
-        if (param0 != 0) {
-          field_d = (uf) null;
-          field_b = null;
-          field_c = null;
-          field_e = (int[][][]) null;
-          field_a = (int[][]) null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_b = null;
           field_c = null;
           field_e = (int[][][]) null;
@@ -30,13 +22,19 @@ final class bi {
           field_d = null;
           return;
         }
+        field_d = (uf) null;
+        field_b = null;
+        field_c = null;
+        field_e = (int[][][]) null;
+        field_a = (int[][]) null;
+        field_d = null;
     }
 
     final static void a(int param0) {
         if (param0 <= 123) {
-            bi.b(99);
-            nj.b(-124);
-            return;
+          bi.b(99);
+          nj.b(-124);
+          return;
         }
         nj.b(-124);
     }

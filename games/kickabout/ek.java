@@ -16,8 +16,8 @@ final class ek extends i {
     }
 
     private final hd g(byte param0) {
+        int var4 = 0;
         int var3;
-        int var4;
         fn var5;
         int var7;
         hd var8;
@@ -25,67 +25,32 @@ final class ek extends i {
         var7 = Kickabout.field_G;
         var8 = new hd();
         var3 = 0;
-        if (param0 <= -46) {
-          var4 = 0;
-          L0: while (true) {
-            if (var4 >= pa.field_g.length) {
-              var8.a(true, 270, 0, 0, var3);
-              return var8;
-            } else {
-              var5 = pa.field_g[var4];
-              if (this.field_J == var5.field_k) {
-                if (0 != var5.field_h) {
-                  L1: {
-                    if (72 != var5.field_h) {
-                      break L1;
-                    } else {
-                      if ((1 & ic.field_h.field_n >> 881634240 ^ -1) == -2) {
-                        break L1;
-                      } else {
-                        var4++;
-                        continue L0;
-                      }
-                    }
-                  }
-                  L2: {
-                    if (var5.field_h != 73) {
-                      break L2;
-                    } else {
-                      if (vl.b(0)) {
-                        break L2;
-                      } else {
-                        var4++;
-                        continue L0;
-                      }
-                    }
-                  }
-                  var6 = new at(var4);
-                  var6.field_s = 5;
-                  var6.field_J = var3;
-                  var3 = var3 + var6.field_mb;
-                  var8.a((byte) -114, (hd) (var6));
-                  var4++;
-                  continue L0;
-                } else {
-                  var4++;
-                  continue L0;
-                }
-              } else {
-                var4++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (param0 > -46) {
           return (hd) null;
         }
+        for (var4 = 0; var4 < pa.field_g.length; var4++) {
+          var5 = pa.field_g[var4];
+          if (this.field_J == var5.field_k &&
+            0 != var5.field_h && ((72 != var5.field_h ||
+            (1 & ic.field_h.field_n >> 0) == 1) &&
+            (var5.field_h != 73 ||
+            vl.b(0)))) {
+            var6 = new at(var4);
+            var6.field_s = 5;
+            var6.field_J = var3;
+            var3 = var3 + var6.field_mb;
+            var8.a((byte) -114, (hd) (var6));
+          }
+        }
+        var8.a(true, 270, 0, 0, var3);
+        return var8;
     }
 
     final static ak b(boolean param0, int param1, int param2) {
         ak var3 = new ak(0);
         var3.field_k = param1;
         if (!param0) {
-            return (ak) null;
+          return (ak) null;
         }
         var3.field_e = (4 & (param2 ^ param1)) != 0 ? re.field_o : nn.field_K;
         var3.field_g = param2 - 4;
@@ -94,7 +59,7 @@ final class ek extends i {
 
     final int b(int param0) {
         if (param0 != -1379118556) {
-            field_M = (String) null;
+          field_M = (String) null;
         }
         return 500;
     }
@@ -107,156 +72,98 @@ final class ek extends i {
         int var10 = Kickabout.field_G;
         super.a((byte) -25, param1, param2);
         tk var11 = this.field_L;
-        this.field_L.a(true, 210, param1 - -250, param2 + 55, 240);
+        this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.b(0, true);
-        on.a(-4 + var11.field_F, var11.field_T + -5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
+        on.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
-            return;
+          return;
         }
-        if (!(!var11.field_Eb.e((byte) -113))) {
-            on.g(var11.field_Eb.field_F - -3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
+        if (var11.field_Eb.e((byte) -113)) {
+          on.g(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
-        pt.a(-2 + (var11.field_F - (-var11.field_q - -15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
+        pt.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
-        at var6_ref_at = (at) ((Object) this.field_L.field_Db.field_jb.g(24009));
+        at var6_ref_at = (at) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
-            if (this.field_H == var6_ref_at) {
-                on.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-                on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
-            } else {
-                if (var6_ref_at.field_gb) {
-                    on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
-                }
+          if (this.field_H == var6_ref_at) {
+            on.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
+            on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+          } else {
+            if (var6_ref_at.field_gb) {
+              on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
-            var6_ref_at.i((byte) -76);
-            var6_ref_at = (at) ((Object) this.field_L.field_Db.field_jb.c(33));
+          }
+          var6_ref_at.i((byte) -76);
+          var6_ref_at = (at) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
-            this.a(this.field_v, (lv) (var5), (ut) null, -94, this.field_u);
+          this.a(this.field_v, (lv) (var5), (ut) null, -94, this.field_u);
         }
         ta.e(123);
         if (null != this.field_H) {
-            var6 = 130 + param1;
-            var7 = 160 + param2;
-            var8 = this.field_H.field_Cb.b(0);
-            var9 = this.field_H.field_Cb.a(15);
-            on.a(-(var8 >> 1423910401) + var6 - 10, -(var9 >> -1676881183) + (var7 + -10), 20 + var8, var9 + 40, 10, 65793, 128);
-            this.field_H.field_Cb.a(var7, 23, var6);
-            pb.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1364747137) + var7), this.field_H.c(true), -1);
-            if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
-                pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 955037633) + var7), 16777215, -1);
-            }
+          var6 = 130 + param1;
+          var7 = 160 + param2;
+          var8 = this.field_H.field_Cb.b(0);
+          var9 = this.field_H.field_Cb.a(15);
+          on.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
+          this.field_H.field_Cb.a(var7, 23, var6);
+          pb.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
+          if (!(this.field_H.field_Db <= ic.field_h.field_x)) {
+            pb.field_C.d(ef.field_n, var6, 62 + ((var9 >> 1) + var7), 16777215, -1);
+          }
         }
         this.field_L.a(117, false);
-        pb.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 354273121) + param1, 312 + param2, 13421772, -1);
+        pb.field_C.d(jw.field_Bb, (this.b(-1379118556) >> 1) + param1, 312 + param2, 13421772, -1);
     }
 
     final static void g(int param0) {
         np.field_Jb.a(new kn(), 3);
         if (param0 != -29315) {
-            ek.b(true, -105, 126);
+          ek.b(true, -105, 126);
         }
     }
 
     final void a(int param0, boolean param1) {
         hd stackIn_23_0 = null;
-        hd stackIn_24_0 = null;
-        int stackIn_24_1 = 0;
+        boolean stackIn_24_1 = false;
         int var3;
         at var4;
         int var5;
-        L0: {
-          var5 = Kickabout.field_G;
-          if (this.field_K > 0) {
-            this.field_K = this.field_K - 1;
-            break L0;
-          } else {
-            break L0;
-          }
+        var5 = Kickabout.field_G;
+        if (this.field_K > 0) {
+          this.field_K = this.field_K - 1;
         }
-        L1: {
-          var3 = this.field_L.field_Db.field_J;
-          this.field_L.b(0, param1);
-          this.field_L.a(id.field_v * 32, true, (byte) -78, 32);
-          if (var3 >= this.field_L.field_Db.field_J) {
-            break L1;
-          } else {
-            if (-1 == (this.field_K ^ -1)) {
-              sp.c(59, 52);
-              this.field_K = 10;
-              break L1;
+        var3 = this.field_L.field_Db.field_J;
+        this.field_L.b(0, param1);
+        this.field_L.a(id.field_v * 32, true, (byte) -78, 32);
+        if (var3 < this.field_L.field_Db.field_J &&
+          this.field_K == 0) {
+          sp.c(59, 52);
+          this.field_K = 10;
+        }
+        if (this.field_L.field_Db.field_J < var3 &&
+          this.field_K == 0) {
+          sp.c(60, -119);
+          this.field_K = 10;
+        }
+        if (param0 != 3) {
+          this.a((byte) 5, 15, 25);
+        }
+        var4 = (at) (this.field_L.field_Db.field_jb.g(param0 + 24006));
+        while (var4 != null) {
+          if (1 == var4.field_sb) {
+            kj.a((byte) -98);
+            if (this.field_H != var4) {
+              this.field_H = var4;
             } else {
-              break L1;
+              this.field_H = null;
             }
           }
+          var4 = (at) (this.field_L.field_Db.field_jb.c(param0 + 30));
         }
-        L2: {
-          if (this.field_L.field_Db.field_J >= var3) {
-            break L2;
-          } else {
-            if (this.field_K == 0) {
-              sp.c(60, -119);
-              this.field_K = 10;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-        }
-        L3: {
-          if (param0 == 3) {
-            break L3;
-          } else {
-            this.a((byte) 5, 15, 25);
-            break L3;
-          }
-        }
-        var4 = (at) ((Object) this.field_L.field_Db.field_jb.g(param0 + 24006));
-        L4: while (true) {
-          if (var4 == null) {
-            L5: {
-              L6: {
-                stackIn_23_0 = this.field_i[0];
-
-                if (this.field_H == null) {
-                  break L6;
-                } else {
-                  stackIn_23_0 = (hd) ((Object) stackIn_23_0);
-
-                  if (this.field_H.field_Db > ic.field_h.field_x) {
-                    break L6;
-                  } else {
-                    stackIn_24_0 = (hd) ((Object) stackIn_23_0);
-                    stackIn_24_1 = 1;
-                    break L5;
-                  }
-                }
-              }
-              stackIn_24_0 = (hd) ((Object) stackIn_23_0);
-              stackIn_24_1 = 0;
-              break L5;
-            }
-            stackIn_24_0.field_lb = stackIn_24_1 != 0;
-            return;
-          } else {
-            L7: {
-              if (1 != var4.field_sb) {
-                break L7;
-              } else {
-                kj.a((byte) -98);
-                if (this.field_H != var4) {
-                  this.field_H = var4;
-                  break L7;
-                } else {
-                  this.field_H = null;
-                  break L7;
-                }
-              }
-            }
-            var4 = (at) ((Object) this.field_L.field_Db.field_jb.c(param0 + 30));
-            continue L4;
-          }
-        }
+        stackIn_23_0 = this.field_i[0];
+        stackIn_24_1 = (this.field_H != null) && (this.field_H.field_Db <= ic.field_h.field_x);
+        stackIn_23_0.field_lb = stackIn_24_1;
     }
 
     ek(int param0, int param1, int param2) {
@@ -273,7 +180,7 @@ final class ek extends i {
 
     public static void d(boolean param0) {
         if (param0) {
-            field_G = 36;
+          field_G = 36;
         }
         field_M = null;
     }
@@ -281,35 +188,23 @@ final class ek extends i {
     final int a(byte param0) {
         hd discarded$0 = null;
         if (param0 <= 75) {
-            discarded$0 = this.g((byte) 21);
+          discarded$0 = this.g((byte) 21);
         }
         return 380;
     }
 
     final void a(int param0, int param1) {
         int var3;
-        if (param0 >= 60) {
-          L0: {
-            L1: {
-              if (-1 != (param1 ^ -1)) {
-                break L1;
-              } else {
-                if (null == this.field_H) {
-                  break L1;
-                } else {
-                  var3 = this.field_H.field_yb;
-                  ge.a(var3, this.field_I, (byte) 123, this.field_F);
-                  sp.c(50, -110);
-                  break L0;
-                }
-              }
-            }
-            ii.a((byte) -120);
-            break L0;
-          }
+        if (param0 < 60) {
           return;
+        }
+        if (param1 == 0 &&
+          null != this.field_H) {
+          var3 = this.field_H.field_yb;
+          ge.a(var3, this.field_I, (byte) 123, this.field_F);
+          sp.c(50, -110);
         } else {
-          return;
+          ii.a((byte) -120);
         }
     }
 

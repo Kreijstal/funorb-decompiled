@@ -29,67 +29,36 @@ final class wc extends id {
         RuntimeException var1_ref = null;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              ej.field_n = null;
-              mh.field_c = null;
-              la.field_k = false;
-              if (cg.field_i != null) {
-                cg.field_i.e(-30986);
-                cg.field_i = null;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              hq.field_c = null;
-              if (tn.field_C == null) {
-                break L2;
-              } else {
-                tn.field_C.e(-30986);
-                tn.field_C = null;
-                break L2;
-              }
-            }
-            L3: {
-              af.field_h = null;
-              if (null == nh.field_g) {
-                break L3;
-              } else {
-                nh.field_g.e(-30986);
-                nh.field_g = null;
-                break L3;
-              }
-            }
-            L4: {
-              kp.field_o = null;
-              if (hq.field_c != null) {
-                var1 = (dm) ((Object) hq.field_c.a((byte) 7));
-                L5: while (true) {
-                  if (var1 == null) {
-                    hq.field_c = null;
-                    break L4;
-                  } else {
-                    var1.a(param0 ^ 32692);
-                    var1 = (dm) ((Object) hq.field_c.c((byte) 97));
-                    continue L5;
-                  }
-                }
-              } else {
-                break L4;
-              }
-            }
-            L6: {
-              if (param0 == -28264) {
-                break L6;
-              } else {
-                field_M = (ja[]) null;
-                break L6;
-              }
-            }
-            break L0;
+          ej.field_n = null;
+          mh.field_c = null;
+          la.field_k = false;
+          if (cg.field_i != null) {
+            cg.field_i.e(-30986);
+            cg.field_i = null;
           }
+          hq.field_c = null;
+          if (tn.field_C != null) {
+            tn.field_C.e(-30986);
+            tn.field_C = null;
+          }
+          af.field_h = null;
+          if (null != nh.field_g) {
+            nh.field_g.e(-30986);
+            nh.field_g = null;
+          }
+          kp.field_o = null;
+          if (hq.field_c != null) {
+            var1 = (dm) (hq.field_c.a((byte) 7));
+            while (var1 != null) {
+              var1.a(param0 ^ 32692);
+              var1 = (dm) (hq.field_c.c((byte) 97));
+            }
+            hq.field_c = null;
+          }
+          if (param0 != -28264) {
+            field_M = (ja[]) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -98,710 +67,186 @@ final class wc extends id {
     }
 
     public static void g(byte param0) {
-        if (param0 != -66) {
-          wc.a(62, false);
-          field_H = null;
-          field_M = null;
-          field_K = null;
-          field_G = null;
-          return;
-        } else {
+        if (param0 == -66) {
           field_H = null;
           field_M = null;
           field_K = null;
           field_G = null;
           return;
         }
+        wc.a(62, false);
+        field_H = null;
+        field_M = null;
+        field_K = null;
+        field_G = null;
     }
 
     final static void a(int param0, boolean param1) {
         int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_7_2 = 0;
+        boolean stackIn_4_1 = false;
+        boolean stackIn_7_2 = false;
         int stackIn_17_0 = 0;
-        int stackIn_20_1 = 0;
-        int stackIn_21_1 = 0;
-        int stackIn_21_2 = 0;
-        int stackIn_33_1 = 0;
-        int stackIn_34_1 = 0;
-        int stackIn_34_2 = 0;
+        boolean stackIn_20_1 = false;
+        boolean stackIn_21_2 = false;
+        boolean stackIn_33_1 = false;
+        boolean stackIn_34_2 = false;
         int stackIn_50_0 = 0;
-        int stackIn_50_1 = 0;
-        int stackIn_53_2 = 0;
+        boolean stackIn_50_1 = false;
+        boolean stackIn_53_2 = false;
         int stackIn_63_0 = 0;
-        int stackIn_66_1 = 0;
-        int stackIn_67_1 = 0;
-        int stackIn_67_2 = 0;
-        int stackIn_79_1 = 0;
-        int stackIn_80_1 = 0;
-        int stackIn_80_2 = 0;
+        boolean stackIn_66_1 = false;
+        boolean stackIn_67_2 = false;
+        boolean stackIn_79_1 = false;
+        boolean stackIn_80_2 = false;
         int stackIn_94_0 = 0;
-        int stackIn_94_1 = 0;
-        int stackIn_97_2 = 0;
+        boolean stackIn_94_1 = false;
+        boolean stackIn_97_2 = false;
         int stackIn_107_0 = 0;
-        int stackIn_110_1 = 0;
-        int stackIn_111_1 = 0;
-        int stackIn_111_2 = 0;
-        int stackIn_123_1 = 0;
-        int stackIn_124_1 = 0;
-        int stackIn_124_2 = 0;
+        boolean stackIn_110_1 = false;
+        boolean stackIn_111_2 = false;
+        boolean stackIn_123_1 = false;
+        boolean stackIn_124_2 = false;
         int stackIn_138_0 = 0;
-        int stackIn_138_1 = 0;
-        int stackIn_141_2 = 0;
+        boolean stackIn_138_1 = false;
+        boolean stackIn_141_2 = false;
         int stackIn_151_0 = 0;
-        int stackIn_154_1 = 0;
-        int stackIn_155_1 = 0;
-        int stackIn_155_2 = 0;
-        int stackIn_167_1 = 0;
-        int stackIn_168_1 = 0;
-        int stackIn_168_2 = 0;
+        boolean stackIn_154_1 = false;
+        boolean stackIn_155_2 = false;
+        boolean stackIn_167_1 = false;
+        boolean stackIn_168_2 = false;
         int var2;
         hi.h(2);
-        if (null != mh.field_c) {
-          if (-3 == (mh.field_c.field_cc ^ -1)) {
-            var2 = 1;
-            stackIn_151_0 = 1;
-
-            if (!hh.field_b) {
-
-
-              if (cp.field_K) {
-                L0: {
-
-
-                  stackIn_167_1 = 1;
-
-                  if (ib.field_a <= 50) {
-
-                    stackIn_168_1 = stackIn_167_1;
-                    stackIn_168_2 = 0;
-                    break L0;
-                  } else {
-
-                    stackIn_168_1 = stackIn_167_1;
-                    stackIn_168_2 = 1;
-                    break L0;
-                  }
-                }
-                L1: {
-                  df.a(stackIn_151_0 != 0, stackIn_168_1 != 0, stackIn_168_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                  if (cf.field_r) {
-                    ma.field_a.b((byte) -35, 57);
-                    cf.field_r = false;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (uk.field_N) {
-                    ma.field_a.b((byte) -35, 10);
-                    uk.field_N = false;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (pb.field_f) {
-                    qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                    pb.field_f = false;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                return;
-              } else {
-                L4: {
-
-
-                  stackIn_154_1 = 0;
-
-                  if (ib.field_a <= 50) {
-
-                    stackIn_155_1 = stackIn_154_1;
-                    stackIn_155_2 = 0;
-                    break L4;
-                  } else {
-
-                    stackIn_155_1 = stackIn_154_1;
-                    stackIn_155_2 = 1;
-                    break L4;
-                  }
-                }
-                L5: {
-                  df.a(stackIn_151_0 != 0, stackIn_155_1 != 0, stackIn_155_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                  if (cf.field_r) {
-                    ma.field_a.b((byte) -35, 57);
-                    cf.field_r = false;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (uk.field_N) {
-                    ma.field_a.b((byte) -35, 10);
-                    uk.field_N = false;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (pb.field_f) {
-                    qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                    pb.field_f = false;
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                return;
-              }
-            } else {
-              stackIn_138_0 = stackIn_151_0;
-              stackIn_138_1 = 1;
-              L8: {
-
-
-
-
-                if (ib.field_a <= 50) {
-
-
-                  stackIn_141_2 = 0;
-                  break L8;
-                } else {
-
-
-                  stackIn_141_2 = 1;
-                  break L8;
-                }
-              }
-              L9: {
-                df.a(stackIn_138_0 != 0, stackIn_138_1 != 0, stackIn_141_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                if (cf.field_r) {
-                  ma.field_a.b((byte) -35, 57);
-                  cf.field_r = false;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              L10: {
-                if (uk.field_N) {
-                  ma.field_a.b((byte) -35, 10);
-                  uk.field_N = false;
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L11: {
-                if (pb.field_f) {
-                  qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                  pb.field_f = false;
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              return;
-            }
+        if (null == mh.field_c) {
+          var2 = 0;
+          stackIn_17_0 = 1;
+          if (hh.field_b) {
+            stackIn_4_0 = stackIn_17_0;
+            stackIn_4_1 = true;
+            stackIn_7_2 = (ib.field_a <= 50) ? false : true;
+            df.a(stackIn_4_0 != 0, stackIn_4_1, stackIn_7_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
           } else {
-            if (-5 == (mh.field_c.field_cc ^ -1)) {
-              var2 = 1;
-              stackIn_107_0 = 1;
-
-              if (!hh.field_b) {
-
-
-                if (cp.field_K) {
-                  L12: {
-
-
-                    stackIn_123_1 = 1;
-
-                    if (ib.field_a <= 50) {
-
-                      stackIn_124_1 = stackIn_123_1;
-                      stackIn_124_2 = 0;
-                      break L12;
-                    } else {
-
-                      stackIn_124_1 = stackIn_123_1;
-                      stackIn_124_2 = 1;
-                      break L12;
-                    }
-                  }
-                  L13: {
-                    df.a(stackIn_107_0 != 0, stackIn_124_1 != 0, stackIn_124_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                    if (cf.field_r) {
-                      ma.field_a.b((byte) -35, 57);
-                      cf.field_r = false;
-                      break L13;
-                    } else {
-                      break L13;
-                    }
-                  }
-                  L14: {
-                    if (uk.field_N) {
-                      ma.field_a.b((byte) -35, 10);
-                      uk.field_N = false;
-                      break L14;
-                    } else {
-                      break L14;
-                    }
-                  }
-                  L15: {
-                    if (pb.field_f) {
-                      qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                      pb.field_f = false;
-                      break L15;
-                    } else {
-                      break L15;
-                    }
-                  }
-                  return;
-                } else {
-                  L16: {
-
-
-                    stackIn_110_1 = 0;
-
-                    if (ib.field_a <= 50) {
-
-                      stackIn_111_1 = stackIn_110_1;
-                      stackIn_111_2 = 0;
-                      break L16;
-                    } else {
-
-                      stackIn_111_1 = stackIn_110_1;
-                      stackIn_111_2 = 1;
-                      break L16;
-                    }
-                  }
-                  L17: {
-                    df.a(stackIn_107_0 != 0, stackIn_111_1 != 0, stackIn_111_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                    if (cf.field_r) {
-                      ma.field_a.b((byte) -35, 57);
-                      cf.field_r = false;
-                      break L17;
-                    } else {
-                      break L17;
-                    }
-                  }
-                  L18: {
-                    if (uk.field_N) {
-                      ma.field_a.b((byte) -35, 10);
-                      uk.field_N = false;
-                      break L18;
-                    } else {
-                      break L18;
-                    }
-                  }
-                  L19: {
-                    if (pb.field_f) {
-                      qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                      pb.field_f = false;
-                      break L19;
-                    } else {
-                      break L19;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                stackIn_94_0 = stackIn_107_0;
-                stackIn_94_1 = 1;
-                L20: {
-
-
-
-
-                  if (ib.field_a <= 50) {
-
-
-                    stackIn_97_2 = 0;
-                    break L20;
-                  } else {
-
-
-                    stackIn_97_2 = 1;
-                    break L20;
-                  }
-                }
-                L21: {
-                  df.a(stackIn_94_0 != 0, stackIn_94_1 != 0, stackIn_97_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                  if (cf.field_r) {
-                    ma.field_a.b((byte) -35, 57);
-                    cf.field_r = false;
-                    break L21;
-                  } else {
-                    break L21;
-                  }
-                }
-                L22: {
-                  if (uk.field_N) {
-                    ma.field_a.b((byte) -35, 10);
-                    uk.field_N = false;
-                    break L22;
-                  } else {
-                    break L22;
-                  }
-                }
-                L23: {
-                  if (pb.field_f) {
-                    qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                    pb.field_f = false;
-                    break L23;
-                  } else {
-                    break L23;
-                  }
-                }
-                return;
-              }
+            if (cp.field_K) {
+              stackIn_33_1 = true;
+              stackIn_34_2 = (ib.field_a <= 50) ? false : true;
+              df.a(stackIn_17_0 != 0, stackIn_33_1, stackIn_34_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
-              var2 = 0;
-              stackIn_63_0 = 1;
-
-              if (!hh.field_b) {
-
-
-                if (cp.field_K) {
-                  L24: {
-
-
-                    stackIn_79_1 = 1;
-
-                    if (ib.field_a <= 50) {
-
-                      stackIn_80_1 = stackIn_79_1;
-                      stackIn_80_2 = 0;
-                      break L24;
-                    } else {
-
-                      stackIn_80_1 = stackIn_79_1;
-                      stackIn_80_2 = 1;
-                      break L24;
-                    }
-                  }
-                  L25: {
-                    df.a(stackIn_63_0 != 0, stackIn_80_1 != 0, stackIn_80_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                    if (cf.field_r) {
-                      ma.field_a.b((byte) -35, 57);
-                      cf.field_r = false;
-                      break L25;
-                    } else {
-                      break L25;
-                    }
-                  }
-                  L26: {
-                    if (uk.field_N) {
-                      ma.field_a.b((byte) -35, 10);
-                      uk.field_N = false;
-                      break L26;
-                    } else {
-                      break L26;
-                    }
-                  }
-                  L27: {
-                    if (pb.field_f) {
-                      qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                      pb.field_f = false;
-                      break L27;
-                    } else {
-                      break L27;
-                    }
-                  }
-                  return;
-                } else {
-                  L28: {
-
-
-                    stackIn_66_1 = 0;
-
-                    if (ib.field_a <= 50) {
-
-                      stackIn_67_1 = stackIn_66_1;
-                      stackIn_67_2 = 0;
-                      break L28;
-                    } else {
-
-                      stackIn_67_1 = stackIn_66_1;
-                      stackIn_67_2 = 1;
-                      break L28;
-                    }
-                  }
-                  L29: {
-                    df.a(stackIn_63_0 != 0, stackIn_67_1 != 0, stackIn_67_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                    if (cf.field_r) {
-                      ma.field_a.b((byte) -35, 57);
-                      cf.field_r = false;
-                      break L29;
-                    } else {
-                      break L29;
-                    }
-                  }
-                  L30: {
-                    if (uk.field_N) {
-                      ma.field_a.b((byte) -35, 10);
-                      uk.field_N = false;
-                      break L30;
-                    } else {
-                      break L30;
-                    }
-                  }
-                  L31: {
-                    if (pb.field_f) {
-                      qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                      pb.field_f = false;
-                      break L31;
-                    } else {
-                      break L31;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                stackIn_50_0 = stackIn_63_0;
-                stackIn_50_1 = 1;
-                L32: {
-
-
-
-
-                  if (ib.field_a <= 50) {
-
-
-                    stackIn_53_2 = 0;
-                    break L32;
-                  } else {
-
-
-                    stackIn_53_2 = 1;
-                    break L32;
-                  }
-                }
-                L33: {
-                  df.a(stackIn_50_0 != 0, stackIn_50_1 != 0, stackIn_53_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                  if (cf.field_r) {
-                    ma.field_a.b((byte) -35, 57);
-                    cf.field_r = false;
-                    break L33;
-                  } else {
-                    break L33;
-                  }
-                }
-                L34: {
-                  if (uk.field_N) {
-                    ma.field_a.b((byte) -35, 10);
-                    uk.field_N = false;
-                    break L34;
-                  } else {
-                    break L34;
-                  }
-                }
-                L35: {
-                  if (pb.field_f) {
-                    qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                    pb.field_f = false;
-                    break L35;
-                  } else {
-                    break L35;
-                  }
-                }
-                return;
-              }
+              stackIn_20_1 = false;
+              stackIn_21_2 = (ib.field_a <= 50) ? false : true;
+              df.a(stackIn_17_0 != 0, stackIn_20_1, stackIn_21_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             }
           }
         } else {
-          var2 = 0;
-          stackIn_17_0 = 1;
-
-          if (!hh.field_b) {
-
-
-            if (cp.field_K) {
-              L36: {
-
-
-                stackIn_33_1 = 1;
-
-                if (ib.field_a <= 50) {
-
-                  stackIn_34_1 = stackIn_33_1;
-                  stackIn_34_2 = 0;
-                  break L36;
-                } else {
-
-                  stackIn_34_1 = stackIn_33_1;
-                  stackIn_34_2 = 1;
-                  break L36;
-                }
-              }
-              L37: {
-                df.a(stackIn_17_0 != 0, stackIn_34_1 != 0, stackIn_34_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                if (cf.field_r) {
-                  ma.field_a.b((byte) -35, 57);
-                  cf.field_r = false;
-                  break L37;
-                } else {
-                  break L37;
-                }
-              }
-              L38: {
-                if (uk.field_N) {
-                  ma.field_a.b((byte) -35, 10);
-                  uk.field_N = false;
-                  break L38;
-                } else {
-                  break L38;
-                }
-              }
-              L39: {
-                if (pb.field_f) {
-                  qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                  pb.field_f = false;
-                  break L39;
-                } else {
-                  break L39;
-                }
-              }
-              return;
+          if (mh.field_c.field_cc == 2) {
+            var2 = 1;
+            stackIn_151_0 = 1;
+            if (hh.field_b) {
+              stackIn_138_0 = stackIn_151_0;
+              stackIn_138_1 = true;
+              stackIn_141_2 = (ib.field_a <= 50) ? false : true;
+              df.a(stackIn_138_0 != 0, stackIn_138_1, stackIn_141_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
             } else {
-              L40: {
-
-
-                stackIn_20_1 = 0;
-
-                if (ib.field_a <= 50) {
-
-                  stackIn_21_1 = stackIn_20_1;
-                  stackIn_21_2 = 0;
-                  break L40;
-                } else {
-
-                  stackIn_21_1 = stackIn_20_1;
-                  stackIn_21_2 = 1;
-                  break L40;
-                }
-              }
-              L41: {
-                df.a(stackIn_17_0 != 0, stackIn_21_1 != 0, stackIn_21_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-                if (cf.field_r) {
-                  ma.field_a.b((byte) -35, 57);
-                  cf.field_r = false;
-                  break L41;
-                } else {
-                  break L41;
-                }
-              }
-              L42: {
-                if (uk.field_N) {
-                  ma.field_a.b((byte) -35, 10);
-                  uk.field_N = false;
-                  break L42;
-                } else {
-                  break L42;
-                }
-              }
-              L43: {
-                if (pb.field_f) {
-                  qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                  pb.field_f = false;
-                  break L43;
-                } else {
-                  break L43;
-                }
-              }
-              return;
-            }
-          } else {
-            stackIn_4_0 = stackIn_17_0;
-            stackIn_4_1 = 1;
-            L44: {
-
-
-
-
-              if (ib.field_a <= 50) {
-
-
-                stackIn_7_2 = 0;
-                break L44;
+              if (cp.field_K) {
+                stackIn_167_1 = true;
+                stackIn_168_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_151_0 != 0, stackIn_167_1, stackIn_168_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               } else {
-
-
-                stackIn_7_2 = 1;
-                break L44;
+                stackIn_154_1 = false;
+                stackIn_155_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_151_0 != 0, stackIn_154_1, stackIn_155_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               }
             }
-            L45: {
-              df.a(stackIn_4_0 != 0, stackIn_4_1 != 0, stackIn_7_2 != 0, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
-              if (cf.field_r) {
-                ma.field_a.b((byte) -35, 57);
-                cf.field_r = false;
-                break L45;
-              } else {
-                break L45;
-              }
+            if (cf.field_r) {
+              ma.field_a.b((byte) -35, 57);
+              cf.field_r = false;
             }
-            L46: {
-              if (uk.field_N) {
-                ma.field_a.b((byte) -35, 10);
-                uk.field_N = false;
-                break L46;
-              } else {
-                break L46;
-              }
+            if (uk.field_N) {
+              ma.field_a.b((byte) -35, 10);
+              uk.field_N = false;
             }
-            L47: {
-              if (pb.field_f) {
-                qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
-                pb.field_f = false;
-                break L47;
-              } else {
-                break L47;
-              }
+            if (pb.field_f) {
+              qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
+              pb.field_f = false;
             }
             return;
           }
+          if (mh.field_c.field_cc == 4) {
+            var2 = 1;
+            stackIn_107_0 = 1;
+            if (hh.field_b) {
+              stackIn_94_0 = stackIn_107_0;
+              stackIn_94_1 = true;
+              stackIn_97_2 = (ib.field_a <= 50) ? false : true;
+              df.a(stackIn_94_0 != 0, stackIn_94_1, stackIn_97_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+            } else {
+              if (cp.field_K) {
+                stackIn_123_1 = true;
+                stackIn_124_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_107_0 != 0, stackIn_123_1, stackIn_124_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              } else {
+                stackIn_110_1 = false;
+                stackIn_111_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_107_0 != 0, stackIn_110_1, stackIn_111_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              }
+            }
+          } else {
+            var2 = 0;
+            stackIn_63_0 = 1;
+            if (hh.field_b) {
+              stackIn_50_0 = stackIn_63_0;
+              stackIn_50_1 = true;
+              stackIn_53_2 = (ib.field_a <= 50) ? false : true;
+              df.a(stackIn_50_0 != 0, stackIn_50_1, stackIn_53_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+            } else {
+              if (cp.field_K) {
+                stackIn_79_1 = true;
+                stackIn_80_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_63_0 != 0, stackIn_79_1, stackIn_80_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              } else {
+                stackIn_66_1 = false;
+                stackIn_67_2 = (ib.field_a <= 50) ? false : true;
+                df.a(stackIn_63_0 != 0, stackIn_66_1, stackIn_67_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
+              }
+            }
+          }
+        }
+        if (cf.field_r) {
+          ma.field_a.b((byte) -35, 57);
+          cf.field_r = false;
+        }
+        if (uk.field_N) {
+          ma.field_a.b((byte) -35, 10);
+          uk.field_N = false;
+        }
+        if (pb.field_f) {
+          qf.a(1, pl.field_I, true, (byte) 93, bl.field_e);
+          pb.field_f = false;
         }
     }
 
     final void f(byte param0) {
-        if (param0 < -79) {
-          if (0 < this.field_F) {
-            this.field_F = this.field_F - 7;
-            this.field_E = this.field_E - 131072;
-            if (0 <= this.field_F) {
-              return;
-            } else {
-              this.field_F = 0;
-              return;
-            }
-          } else {
-            this.a(true);
-            return;
-          }
-        } else {
+        if (param0 >= -79) {
           wc.a(8, false);
-          if (0 < this.field_F) {
-            this.field_F = this.field_F - 7;
-            this.field_E = this.field_E - 131072;
-            if (0 <= this.field_F) {
-              return;
-            } else {
-              this.field_F = 0;
-              return;
-            }
-          } else {
+          if (0 >= this.field_F) {
             this.a(true);
             return;
           }
+          this.field_F = this.field_F - 7;
+          this.field_E = this.field_E - 131072;
+          if (0 > this.field_F) {
+            this.field_F = 0;
+            return;
+          }
+          return;
+        }
+        if (0 >= this.field_F) {
+          this.a(true);
+          return;
+        }
+        this.field_F = this.field_F - 7;
+        this.field_E = this.field_E - 131072;
+        if (0 > this.field_F) {
+          this.field_F = 0;
+          return;
         }
     }
 
@@ -811,73 +256,46 @@ final class wc extends id {
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              var3_int = param1.c(this.g(param0 ^ -10199), -20126);
-              var4 = param1.d(this.h(-109), 116);
-              ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
-              if (null != this.field_R) {
-                if (this.field_R.k()) {
-                  this.field_R = null;
-                  this.field_L = null;
-                  break L1;
-                } else {
-                  var5 = sd.b(125, var4, var3_int);
-                  this.field_R.h(var5);
-                  if (this.field_L == null) {
-                    break L1;
-                  } else {
-                    this.field_L.h(var5);
-                    break L1;
-                  }
-                }
-              } else {
-                break L1;
+          var3_int = param1.c(this.g(param0 ^ -10199), -20126);
+          var4 = param1.d(this.h(-109), 116);
+          ah.field_e.a(this.field_P, var3_int, var4, 3, -1, this.field_F);
+          if (null != this.field_R) {
+            if (this.field_R.k()) {
+              this.field_R = null;
+              this.field_L = null;
+            } else {
+              var5 = sd.b(125, var4, var3_int);
+              this.field_R.h(var5);
+              if (this.field_L != null) {
+                this.field_L.h(var5);
               }
             }
-            L2: {
-              if (param0 == -10136) {
-                break L2;
-              } else {
-                field_H = (cj) null;
-                break L2;
-              }
-            }
-            break L0;
           }
+          if (param0 != -10136) {
+            field_H = (cj) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("wc.H(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("wc.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final static boolean j(int param0) {
         if (param0 <= 88) {
-            return false;
+          return false;
         }
         return og.field_N;
     }
@@ -889,7 +307,7 @@ final class wc extends id {
         this.field_P = Integer.toString(param2);
         this.field_F = 255;
         if (!param3) {
-            this.field_R = nm.b(-128, 55);
+          this.field_R = nm.b(-128, 55);
         }
     }
 

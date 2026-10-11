@@ -21,24 +21,22 @@ abstract class iq {
         field_a = null;
         field_d = null;
         field_l = null;
-        if (param0 != -26830) {
-          field_g = (String) null;
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == -26830) {
           field_g = null;
           field_b = null;
           field_f = null;
           return;
         }
+        field_g = (String) null;
+        field_g = null;
+        field_b = null;
+        field_f = null;
     }
 
     final void b(int param0) {
         qh.a(this.field_h, this.field_e, this.field_k);
         if (param0 != 15100) {
-            this.b(78);
+          this.b(78);
         }
     }
 

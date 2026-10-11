@@ -14,15 +14,7 @@ final class we {
     String field_e;
 
     public static void a(byte param0) {
-        if (param0 != 120) {
-          we.a(2, (byte) 125);
-          field_g = null;
-          field_f = null;
-          field_h = null;
-          field_i = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 120) {
           field_g = null;
           field_f = null;
           field_h = null;
@@ -30,6 +22,12 @@ final class we {
           field_a = null;
           return;
         }
+        we.a(2, (byte) 125);
+        field_g = null;
+        field_f = null;
+        field_h = null;
+        field_i = null;
+        field_a = null;
     }
 
     static long a(long param0, long param1) {
@@ -40,47 +38,27 @@ final class we {
         fd var2;
         int var3;
         at stackIn_5_0 = null;
-        at stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        if (null != bk.field_e) {
-          L0: {
-            stackIn_5_0 = bk.field_e;
-
-            if (param1) {
-              stackIn_6_0 = (at) ((Object) stackIn_5_0);
-              stackIn_6_1 = 0;
-              break L0;
-            } else {
-              stackIn_6_0 = (at) ((Object) stackIn_5_0);
-              stackIn_6_1 = 1;
-              break L0;
-            }
-          }
-          if (((at) (Object) stackIn_6_0).b(stackIn_6_1 != 0) != 0) {
-            if (param1) {
-              var2 = (fd) ((Object) bk.field_e.e((byte) 109));
-              L1: while (true) {
-                if (var2 != null) {
-                  var3 = var2.field_k;
-                  if (var3 == param0) {
-                    return var2.field_p;
-                  } else {
-                    var2 = (fd) ((Object) bk.field_e.a((byte) 123));
-                    continue L1;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              return (wp) null;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        boolean stackIn_6_1 = false;
+        if (null == bk.field_e) {
           return null;
         }
+        stackIn_5_0 = bk.field_e;
+        stackIn_6_1 = (param1) ? false : true;
+        if (((at) (Object) stackIn_5_0).b(stackIn_6_1) == 0) {
+          return null;
+        }
+        if (!param1) {
+          return (wp) null;
+        }
+        var2 = (fd) (bk.field_e.e((byte) 109));
+        while (var2 != null) {
+          var3 = var2.field_k;
+          if (var3 == param0) {
+            return var2.field_p;
+          }
+          var2 = (fd) (bk.field_e.a((byte) 123));
+        }
+        return null;
     }
 
     final static te a(int param0, int param1, sn param2) {
@@ -89,83 +67,50 @@ final class we {
         te stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 100) {
-              stackIn_4_0 = ne.a(param0 + -145, aa.a(param2, 100, param1));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (te) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 100) {
+            stackIn_4_0 = ne.a(param0 - 145, aa.a(param2, 100, param1));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (te) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("we.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("we.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static char a(int param0, byte param1) {
-        int var2;
-        int var3;
-        var2 = 255 & param1;
+        int var3 = 0;
+        int var2 = 255 & param1;
         if (var2 == 0) {
           throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-        } else {
-          if (param0 <= -115) {
-            if (-129 >= (var2 ^ -1)) {
-              if ((var2 ^ -1) <= -161) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = ou.field_a[var2 + -128];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          } else {
-            return 'ﾍ';
-          }
         }
+        if (param0 > -115) {
+          return 'ﾍ';
+        }
+        if (var2 < 128) {
+          return (char)var2;
+        }
+        if (var2 < 160) {
+          var3 = ou.field_a[var2 - 128];
+          if (var3 == 0) {
+            var3 = 63;
+          }
+          var2 = var3;
+          return (char)var2;
+        }
+        return (char)var2;
     }
 
     private we() throws Throwable {

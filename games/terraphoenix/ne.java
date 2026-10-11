@@ -11,8 +11,8 @@ final class ne implements Iterator {
     static int field_e;
 
     public final void remove() {
-        if (!(null != this.field_c)) {
-            throw new IllegalStateException();
+        if (null == this.field_c) {
+          throw new IllegalStateException();
         }
         this.field_c.c((byte) 13);
         this.field_c = null;
@@ -25,10 +25,10 @@ final class ne implements Iterator {
     public final Object next() {
         Object var1 = this.field_a;
         if (this.field_d.field_a == var1) {
-            var1 = null;
-            this.field_a = null;
+          var1 = null;
+          this.field_a = null;
         } else {
-            this.field_a = ((vh) (var1)).field_o;
+          this.field_a = ((vh) (var1)).field_o;
         }
         this.field_c = (vh) (var1);
         return var1;
@@ -42,11 +42,11 @@ final class ne implements Iterator {
     ne(tc param0) {
         this.field_c = null;
         try {
-            this.field_d = param0;
-            this.field_c = null;
-            this.field_a = this.field_d.field_a.field_o;
+          this.field_d = param0;
+          this.field_c = null;
+          this.field_a = this.field_d.field_a.field_o;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

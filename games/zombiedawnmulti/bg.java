@@ -29,62 +29,55 @@ final class bg implements nl {
         field_k = null;
         field_m = null;
         field_n = null;
-        if (param0 != -104) {
-          bg.a((byte) -90);
-          field_o = null;
-          return;
-        } else {
+        if (param0 == -104) {
           field_o = null;
           return;
         }
+        bg.a((byte) -90);
+        field_o = null;
     }
 
     final static void a(int param0, byte param1, boolean param2) {
-        ml var3;
-        jb var4;
-        String var5_ref_String;
-        int var5;
-        int var6;
-        if (param1 <= 43) {
-          L0: {
-            bg.a(-59);
-            var3 = mp.a(param0, param2, (byte) -119);
-            if (var3 != null) {
-              pk.field_b.a(false, (byte) -110);
-              var4 = pk.field_b;
-              var5_ref_String = dg.field_I;
-              var4.field_j.a((byte) -118, var5_ref_String, 5);
-              var4 = pk.field_b;
-              var5 = vb.field_f;
-              var6 = ka.field_t;
-              var4.field_j.b(4542, var5, 0, var6, 0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          uf.a(param0, param2, (byte) 39);
-          return;
-        } else {
-          L1: {
-            var3 = mp.a(param0, param2, (byte) -119);
-            if (var3 != null) {
-              pk.field_b.a(false, (byte) -110);
-              var4 = pk.field_b;
-              var5_ref_String = dg.field_I;
-              var4.field_j.a((byte) -118, var5_ref_String, 5);
-              var4 = pk.field_b;
-              var5 = vb.field_f;
-              var6 = ka.field_t;
-              var4.field_j.b(4542, var5, 0, var6, 0);
-              break L1;
-            } else {
-              break L1;
-            }
+        ml var3 = null;
+        jb var4 = null;
+        String var5_ref_String = null;
+        int var5 = 0;
+        int var6 = 0;
+        ml var3Lifetime1;
+        jb var4Lifetime1;
+        String var5_ref_StringLifetime1;
+        jb var4Lifetime2;
+        jb var4Lifetime1Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        if (param1 > 43) {
+          var3 = mp.a(param0, param2, (byte) -119);
+          if (var3 != null) {
+            pk.field_b.a(false, (byte) -110);
+            var4 = pk.field_b;
+            var5_ref_String = dg.field_I;
+            var4.field_j.a((byte) -118, var5_ref_String, 5);
+            var4Lifetime2 = pk.field_b;
+            var5 = vb.field_f;
+            var6 = ka.field_t;
+            var4Lifetime2.field_j.b(4542, var5, 0, var6, 0);
           }
           uf.a(param0, param2, (byte) 39);
           return;
         }
+        bg.a(-59);
+        var3Lifetime1 = mp.a(param0, param2, (byte) -119);
+        if (var3Lifetime1 != null) {
+          pk.field_b.a(false, (byte) -110);
+          var4Lifetime1 = pk.field_b;
+          var5_ref_StringLifetime1 = dg.field_I;
+          var4Lifetime1.field_j.a((byte) -118, var5_ref_StringLifetime1, 5);
+          var4Lifetime1Lifetime1 = pk.field_b;
+          var5Lifetime1 = vb.field_f;
+          var6Lifetime1 = ka.field_t;
+          var4Lifetime1Lifetime1.field_j.b(4542, var5Lifetime1, 0, var6Lifetime1, 0);
+        }
+        uf.a(param0, param2, (byte) 39);
     }
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
@@ -95,79 +88,61 @@ final class bg implements nl {
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
+        double var9Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
         try {
-            var15 = !(param4 instanceof ud) ? null : (ud) ((Object) param4);
-            oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_j);
-            if (var15 != null) {
-            }
-            var7 = var15.field_R + (param4.field_y + param3);
-            var8 = param1 - -param4.field_i + var15.field_bb;
-            oo.d(var7, var8, var15.field_X, this.field_f);
-            if (param2 != -15112) {
-                cf var14 = (cf) null;
-                this.a(true, 88, 109, -117, (cf) null);
-            }
-            if (!(-1 == var15.field_W)) {
-                var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
-                var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
-                var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-                oo.d(var11 + var7, var12 + var8, 1, this.field_b);
-            }
-            oo.d(var7, var8, 2, 1);
-            var9 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
+          var15 = !(param4 instanceof ud) ? null : (ud) (param4);
+          oo.e(param4.field_y + param3, param4.field_i + param1, param4.field_n, param4.field_w, this.field_j);
+          if (var15 != null) {
+          }
+          var7 = var15.field_R + (param4.field_y + param3);
+          var8 = param1 + param4.field_i + var15.field_bb;
+          oo.d(var7, var8, var15.field_X, this.field_f);
+          if (param2 != -15112) {
+            cf var14 = (cf) null;
+            this.a(true, 88, 109, -117, (cf) null);
+          }
+          if (-1 != var15.field_W) {
+            var9 = 3.141592653589793 * (double)var15.field_W * 2.0 / (double)var15.field_U;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_X);
             var12 = (int)(Math.cos(var9) * (double)var15.field_X);
-            oo.g(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (this.field_g != null) {
-                var13 = this.field_h + (var15.field_X + var15.field_R);
-                this.field_g.a(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 - -param4.field_i), param4.field_n + -this.field_h + -var13, -(this.field_h << 1287508609) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
-            }
+            oo.d(var11 + var7, var12 + var8, 1, this.field_b);
+          }
+          oo.d(var7, var8, 2, 1);
+          var9Lifetime1 = 3.141592653589793 * (double)var15.field_T * 2.0 / (double)var15.field_U;
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_X);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_X);
+          oo.g(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          if (this.field_g != null) {
+            var13 = this.field_h + (var15.field_X + var15.field_R);
+            this.field_g.a(param4.field_j, var13 + (param4.field_y + param3), this.field_l + (param1 + param4.field_i), param4.field_n - this.field_h - var13, -(this.field_h << 1) + param4.field_w, this.field_c, this.field_i, 1, 1, 0);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "bg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 2) {
-          L0: {
-            bg.a(-5, (byte) 74, true);
-            if (dj.field_k != ta.field_hb) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (dj.field_k != ta.field_hb) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 2) {
+          return dj.field_k == ta.field_hb ? true : false;
         }
+        bg.a(-5, (byte) 74, true);
+        return dj.field_k == ta.field_hb ? true : false;
     }
 
     bg(fm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_c = param3;
-            this.field_f = param5;
-            this.field_h = param1;
-            this.field_j = param7;
-            this.field_i = param4;
-            this.field_g = param0;
-            this.field_l = param2;
-            this.field_b = param6;
+          this.field_c = param3;
+          this.field_f = param5;
+          this.field_h = param1;
+          this.field_j = param7;
+          this.field_i = param4;
+          this.field_g = param0;
+          this.field_l = param2;
+          this.field_b = param6;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "bg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

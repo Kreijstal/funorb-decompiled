@@ -23,7 +23,7 @@ final class bf {
         field_g = null;
         field_l = null;
         if (param0 != -14471) {
-            bf.a(-119, 98, (byte) 12);
+          bf.a(-119, 98, (byte) 12);
         }
         field_o = (int[][]) null;
         field_d = (int[][]) null;
@@ -32,45 +32,27 @@ final class bf {
 
     final static ka[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 30) {
-            return (ka[]) null;
+          return (ka[]) null;
         }
         return e.a(3, param2, 1, 1065, 1, param4, param3, param0, 1);
     }
 
     final int a(byte param0) {
-        L0: {
-          if (this.field_i) {
-            break L0;
-          } else {
-            L1: {
-              if ((this.field_b ^ -1) != -3) {
-                break L1;
-              } else {
-                if (0 < this.field_h) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (jl.field_h == this.field_e) {
-              return 1;
-            } else {
-              if (param0 == -116) {
-                if (2 != oj.field_f) {
-                  return 0;
-                } else {
-                  if (ta.a(-93, this.field_a)) {
-                    return 1;
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                return -107;
-              }
-            }
+        if (!this.field_i && (this.field_b != 2 ||
+          0 >= this.field_h)) {
+          if (jl.field_h == this.field_e) {
+            return 1;
           }
+          if (param0 != -116) {
+            return -107;
+          }
+          if (2 != oj.field_f) {
+            return 0;
+          }
+          if (ta.a(-93, this.field_a)) {
+            return 1;
+          }
+          return 0;
         }
         return 2;
     }
@@ -82,65 +64,40 @@ final class bf {
         int var5;
         int var6;
         int var7;
-        L0: {
-          var8 = TorChallenge.field_F ? 1 : 0;
-          var4 = 7 % ((param2 - -45) / 32);
-          if (0 != param1) {
-            if (param1 != 1) {
-              return;
-            } else {
-              var3 = nk.field_h;
-              break L0;
-            }
-          } else {
-            var3 = sh.field_r;
-            break L0;
+        var8 = TorChallenge.field_F ? 1 : 0;
+        var4 = 7 % ((param2 + 45) / 32);
+        if (0 != param1) {
+          if (param1 != 1) {
+            return;
           }
+          var3 = nk.field_h;
+        } else {
+          var3 = sh.field_r;
         }
-        L1: {
-          if (var3 > param0 >> -159820605) {
-            L2: {
-              var5 = var3 % (param0 >> -1008216381);
-              if (0 != var5) {
-                break L2;
-              } else {
-                var5 = param0 >> 2039392611;
-                break L2;
-              }
+        if (var3 > param0 >> 3) {
+          var5 = var3 % (param0 >> 3);
+          if (0 == var5) {
+            var5 = param0 >> 3;
+          }
+          var6 = var3 - var5;
+          var7 = param0 - (param0 >> 3 << 3);
+          if (var7 >= param0 - var6) {
+            var6 = (7 * param0 >> 3) - var5;
+          }
+          if (0 == param1) {
+            vk.a(var6, (byte) 74);
+          } else {
+            if (param1 == 1) {
+              nb.b(var6, -1);
             }
-            L3: {
-              var6 = var3 - var5;
-              var7 = param0 + -(param0 >> -272691421 << -366370717);
-              if (var7 >= param0 + -var6) {
-                var6 = (7 * param0 >> -540830685) + -var5;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (0 == param1) {
-              vk.a(var6, (byte) 74);
-              break L1;
-            } else {
-              if (-2 == (param1 ^ -1)) {
-                nb.b(var6, -1);
-                break L1;
-              } else {
-                break L1;
-              }
+          }
+        } else {
+          if (param1 != 0) {
+            if (param1 == 1) {
+              nb.b(0, -1);
             }
           } else {
-            if (param1 != 0) {
-              if ((param1 ^ -1) == -2) {
-                nb.b(0, -1);
-                break L1;
-              } else {
-                break L1;
-              }
-            } else {
-              vk.a(0, (byte) 81);
-              break L1;
-            }
+            vk.a(0, (byte) 81);
           }
         }
     }
@@ -151,9 +108,9 @@ final class bf {
         this.field_b = uk.field_L;
         this.field_a = lk.field_b;
         if (!param0) {
-            this.field_j = null;
+          this.field_j = null;
         } else {
-            this.field_j = eb.field_k;
+          this.field_j = eb.field_k;
         }
         this.field_h = ih.field_K;
         this.field_n = td.field_q;

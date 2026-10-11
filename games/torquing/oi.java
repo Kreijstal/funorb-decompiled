@@ -7,39 +7,34 @@ final class oi {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            oi.a(93, (byte) 89);
-            field_a = null;
-            return;
+          oi.a(93, (byte) 89);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final static sm a(byte param0) {
-        sm var1;
-        var1 = new sm(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
+        sm var1 = new sm(fm.field_E, rh.field_d, fj.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
-        if (param0 >= -59) {
-          return (sm) null;
-        } else {
+        if (param0 < -59) {
           return var1;
         }
+        return (sm) null;
     }
 
     final static void a(int param0, byte param1) {
-        if (param1 >= 9) {
-          if (param0 != 50) {
-            throw new IllegalArgumentException();
-          } else {
-            return;
-          }
-        } else {
+        if (param1 < 9) {
           field_a = (String) null;
-          if (param0 != 50) {
-            throw new IllegalArgumentException();
-          } else {
+          if (param0 == 50) {
             return;
           }
+          throw new IllegalArgumentException();
         }
+        if (param0 == 50) {
+          return;
+        }
+        throw new IllegalArgumentException();
     }
 
     static {

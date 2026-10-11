@@ -10,7 +10,7 @@ final class dn {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = -56 % ((param0 - -40) / 62);
+        int var1 = -56 % ((param0 + 40) / 62);
         field_b = null;
         field_a = null;
         field_d = null;
@@ -21,10 +21,10 @@ final class dn {
     final static ub a(Throwable param0, String param1) {
         ub var2 = null;
         if (!(param0 instanceof ub)) {
-            var2 = new ub(param0, param1);
+          var2 = new ub(param0, param1);
         } else {
-            var2 = (ub) ((Object) param0);
-            var2.field_a = var2.field_a + ' ' + param1;
+          var2 = (ub) ((Object) param0);
+          var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }

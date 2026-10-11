@@ -24,8 +24,8 @@ final class bk {
     final static int a(int param0) {
         wk.a(nj.a(-70), 0);
         if (param0 != 2) {
-            bk.a(31);
-            return oa.field_a.get(2);
+          bk.a(31);
+          return oa.field_a.get(2);
         }
         return oa.field_a.get(2);
     }

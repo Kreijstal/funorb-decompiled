@@ -13,16 +13,14 @@ final class ef extends ca {
     public static void c(boolean param0) {
         field_g = (byte[][][]) null;
         field_i = null;
-        if (!param0) {
-          ef.c(false);
-          field_j = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0) {
           field_j = null;
           field_h = null;
           return;
         }
+        ef.c(false);
+        field_j = null;
+        field_h = null;
     }
 
     private ef() throws Throwable {

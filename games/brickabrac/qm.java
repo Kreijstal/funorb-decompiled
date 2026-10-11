@@ -13,35 +13,29 @@ final class qm {
         field_d = null;
         field_c = null;
         if (param0 > -100) {
-            field_b = (String) null;
-            field_e = null;
-            return;
+          field_b = (String) null;
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final static void a(int param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            int var2 = 0;
-            Throwable var3 = null;
-            var2 = 25 / ((42 - param0) / 40);
-            try {
-              L0: {
-                ne.a(new Object[]{new Integer(param1)}, 78, uc.e((byte) -82), "resizing");
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var3 = decompiledCaughtException;
-                break L1;
-              }
-            }
+          Throwable decompiledCaughtException = null;
+          int var2 = 0;
+          Throwable var3 = null;
+          var2 = 25 / ((42 - param0) / 40);
+          try {
+            ne.a(new Object[]{new Integer(param1)}, 78, uc.e((byte) -82), "resizing");
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

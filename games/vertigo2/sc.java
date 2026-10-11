@@ -7,12 +7,9 @@ final class sc {
     static String field_a;
 
     final static void a(boolean param0, int param1) {
-        int var2;
-        var2 = (-268435329 & param1) << 1662533540;
+        int var2 = (-268435329 & param1) << 4;
         ke.field_e[3] = oo.field_h[var2];
-        if (!param0) {
-          return;
-        } else {
+        if (param0) {
           ke.field_e[4] = 0;
           ke.field_e[5] = -oo.field_j[var2];
           ke.field_e[7] = 65536;
@@ -30,7 +27,7 @@ final class sc {
         field_c = null;
         field_a = null;
         if (param0 != 4) {
-            sc.a(true, 15);
+          sc.a(true, 15);
         }
     }
 

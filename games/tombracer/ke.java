@@ -7,9 +7,9 @@ final class ke {
 
     public static void a(int param0) {
         if (param0 != 3712) {
-            ke.a(-86);
-            field_a = null;
-            return;
+          ke.a(-86);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

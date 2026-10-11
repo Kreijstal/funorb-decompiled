@@ -21,14 +21,14 @@ final class sh extends mh {
         field_h = null;
         field_e = null;
         if (param0 != 4352) {
-            field_g = (qk) null;
+          field_g = (qk) null;
         }
     }
 
     final static String a(CharSequence param0, byte param1) {
+        int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         CharSequence var7 = null;
@@ -37,112 +37,50 @@ final class sh extends mh {
         String stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var6 = Main.field_T;
         try {
-          L0: {
-            L1: {
-              var2_int = param0.length();
-              if (-21 <= (var2_int ^ -1)) {
-                break L1;
-              } else {
-                var2_int = 20;
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 == -128) {
-                break L2;
-              } else {
-                var7 = (CharSequence) null;
-                sh.a((CharSequence) null, (byte) 31);
-                break L2;
-              }
-            }
-            var9 = new char[var2_int];
-            var8 = var9;
-            var3 = var8;
-            var4 = 0;
-            L3: while (true) {
-              if (var2_int <= var4) {
-                stackIn_21_0 = new String(var9);
-                break L0;
-              } else {
-                L4: {
-                  L5: {
-                    var5 = param0.charAt(var4);
-                    if (65 > var5) {
-                      break L5;
-                    } else {
-                      if (var5 > 90) {
-                        break L5;
-                      } else {
-                        var3[var4] = (char)(-65 + var5 + 97);
-                        break L4;
-                      }
-                    }
-                  }
-                  L6: {
-                    L7: {
-                      if (var5 < 97) {
-                        break L7;
-                      } else {
-                        if (var5 <= 122) {
-                          break L6;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    L8: {
-                      if (48 > var5) {
-                        break L8;
-                      } else {
-                        if (var5 <= 57) {
-                          break L6;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    var3[var4] = (char)95;
-                    break L4;
-                  }
-                  var3[var4] = (char)var5;
-                  break L4;
-                }
-                var4++;
-                continue L3;
-              }
+          var2_int = param0.length();
+          if (var2_int > 20) {
+            var2_int = 20;
+          }
+          if (param1 != -128) {
+            var7 = (CharSequence) null;
+            sh.a((CharSequence) null, (byte) 31);
+          }
+          var9 = new char[var2_int];
+          var8 = var9;
+          var3 = var8;
+          for (var4 = 0; var2_int > var4; var4++) {
+            var5 = param0.charAt(var4);
+            if (65 <= var5 &&
+              var5 <= 90) {
+              var3[var4] = (char)(-65 + var5 + 97);
+            } else if ((var5 < 97 ||
+              var5 > 122) &&
+              (48 > var5 ||
+              var5 > 57)) {
+              var3[var4] = (char)95;
+            } else {
+              var3[var4] = (char)var5;
             }
           }
+          stackIn_21_0 = new String(var9);
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("sh.F(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L9;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L9;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("sh.F(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_21_0;
     }
 
     static {

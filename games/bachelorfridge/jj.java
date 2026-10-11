@@ -15,7 +15,7 @@ final class jj extends sna {
     public static void b(boolean param0) {
         field_wb = null;
         if (param0) {
-            jj.b(true);
+          jj.b(true);
         }
     }
 

@@ -10,52 +10,49 @@ final class qca extends llb {
     private qca(long param0, llb param1, llb param2, String param3) {
         super(param0, (llb) null);
         try {
-            this.field_vb = new llb(0L, param1);
-            this.field_xb = new llb(0L, param2);
-            this.field_xb.field_R = param3;
-            this.b(-561, this.field_vb);
-            this.b(-561, this.field_xb);
-            this.g(123);
+          this.field_vb = new llb(0L, param1);
+          this.field_xb = new llb(0L, param2);
+          this.field_xb.field_R = param3;
+          this.b(-561, this.field_vb);
+          this.b(-561, this.field_xb);
+          this.g(123);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
-        if (!param3) {
-          field_yb = 104;
-          vbb.e(3);
-          dma.g(param2, param4, param0, param1);
-          return;
-        } else {
+        if (param3) {
           vbb.e(3);
           dma.g(param2, param4, param0, param1);
           return;
         }
+        field_yb = 104;
+        vbb.e(3);
+        dma.g(param2, param4, param0, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         if (param5) {
-            return;
+          return;
         }
         this.a(param0, 121, param4, param3, param1);
         this.a(param2, 64);
     }
 
     private final void a(int param0, int param1) {
-        int var3;
-        if (param1 != 64) {
-          field_wb = -46;
-          this.field_vb.a(0, -57, this.field_vb.e(78), 0, this.field_G);
-          var3 = param0 + this.field_vb.field_hb;
-          this.field_xb.a(var3, 120, this.field_hb - var3, 0, this.field_G);
-          return;
-        } else {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param1 == 64) {
           this.field_vb.a(0, -57, this.field_vb.e(78), 0, this.field_G);
           var3 = param0 + this.field_vb.field_hb;
           this.field_xb.a(var3, 120, this.field_hb - var3, 0, this.field_G);
           return;
         }
+        field_wb = -46;
+        this.field_vb.a(0, -57, this.field_vb.e(78), 0, this.field_G);
+        var3Lifetime1 = param0 + this.field_vb.field_hb;
+        this.field_xb.a(var3Lifetime1, 120, this.field_hb - var3Lifetime1, 0, this.field_G);
     }
 
     qca(long param0, qca param1, String param2) {
@@ -63,22 +60,21 @@ final class qca extends llb {
     }
 
     final int b(int param0, int param1) {
-        if (param1 != 0) {
-          field_yb = -94;
-          return this.field_vb.e(param1 ^ 80) + (param0 + this.field_xb.e(param1 ^ 61));
-        } else {
+        if (param1 == 0) {
           return this.field_vb.e(param1 ^ 80) + (param0 + this.field_xb.e(param1 ^ 61));
         }
+        field_yb = -94;
+        return this.field_vb.e(param1 ^ 80) + (param0 + this.field_xb.e(param1 ^ 61));
     }
 
     qca(long param0, phb param1, phb param2, int param3, llb param4, String param5) {
         this(param0, (llb) null, param4, param5);
         try {
-            this.field_vb.field_q = param1;
-            this.field_vb.field_tb = param2;
-            this.field_vb.field_B = param3;
+          this.field_vb.field_q = param1;
+          this.field_vb.field_tb = param2;
+          this.field_vb.field_B = param3;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "qca.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

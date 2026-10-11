@@ -11,7 +11,7 @@ final class km extends jtb {
     public static void g(byte param0) {
         field_s = null;
         if (param0 != 114) {
-            km.g((byte) -103);
+          km.g((byte) -103);
         }
     }
 
@@ -19,21 +19,19 @@ final class km extends jtb {
         int var2;
         if (this.field_n) {
           throw new RuntimeException();
-        } else {
-          if (this.field_p.field_e >= this.field_p.field_h.length - this.field_q) {
-            var2 = 9 / ((17 - param0) / 58);
-            return this.field_p.field_h;
-          } else {
-            throw new RuntimeException();
-          }
         }
+        if (this.field_p.field_e < this.field_p.field_h.length - this.field_q) {
+          throw new RuntimeException();
+        }
+        var2 = 9 / ((17 - param0) / 58);
+        return this.field_p.field_h;
     }
 
     final static void e(int param0) {
         fva.field_p = true;
         ow.field_b = 0;
         if (param0 != 1) {
-            field_o = -76;
+          field_o = -76;
         }
     }
 
@@ -48,121 +46,66 @@ final class km extends jtb {
         faa var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          L0: {
-            var8 = new faa(param0.a("", true, "logo.fo3d"));
-            var10 = var8;
-            var3 = var10.e((byte) -87);
-            var10.p(-23497);
-            gs.field_a = bh.a(var10, (byte) -122);
-            raa.field_p = new int[var3][];
-            eha.field_o = new wma[var3];
-            var4 = 0;
-            L1: while (true) {
-              if (var3 <= var4) {
-                var10.f((byte) -79);
-                var9 = 0;
-                var4 = var9;
-                if (param1 == 36) {
-                  L2: while (true) {
-                    if (var9 >= var3) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var5 = eha.field_o[var9];
-                      var5.a(-21227, 6, 6, 6, 1);
-                      var5.a(param1 + 83);
-                      var6 = new int[]{var5.field_B + var5.field_d >> 1428307521, var5.field_a + var5.field_u >> 459000545, var5.field_s + var5.field_q >> 1353702081};
-                      raa.field_p[var9] = var6;
-                      var5.a(param1 + -45, -var6[2], -var6[0], -var6[1]);
-                      var9++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                eha.field_o[var4] = ur.a(var8, (byte) -105);
-                var4++;
-                continue L1;
-              }
-            }
+          var8 = new faa(param0.a("", true, "logo.fo3d"));
+          var10 = var8;
+          var3 = var10.e((byte) -87);
+          var10.p(-23497);
+          gs.field_a = bh.a(var10, (byte) -122);
+          raa.field_p = new int[var3][];
+          eha.field_o = new wma[var3];
+          for (var4 = 0; var3 > var4; var4++) {
+            eha.field_o[var4] = ur.a(var8, (byte) -105);
           }
+          var10.f((byte) -79);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          if (param1 != 36) {
+            return;
+          }
+          while (var9 < var3) {
+            var5 = eha.field_o[var9];
+            var5.a(-21227, 6, 6, 6, 1);
+            var5.a(param1 + 83);
+            var6 = new int[]{var5.field_B + var5.field_d >> 1, var5.field_a + var5.field_u >> 1, var5.field_s + var5.field_q >> 1};
+            raa.field_p[var9] = var6;
+            var5.a(param1 - 45, -var6[2], -var6[0], -var6[1]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var2);
-
-            stackIn_11_1 = new StringBuilder().append("km.A(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_11_0 = var2;
+          stackIn_11_1 = new StringBuilder().append("km.A(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw rta.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void f(byte param0) {
-        if (param0 == -119) {
-          if (-11 == (qmb.field_q ^ -1)) {
-            twa.b(param0 ^ -108);
-            qmb.field_q = 11;
-            dga.field_a = true;
-            return;
-          } else {
-            if (!nua.b(true)) {
-              twa.b(param0 ^ -108);
-              qmb.field_q = 11;
-              dga.field_a = true;
-              return;
-            } else {
-              dga.field_a = true;
-              return;
-            }
-          }
-        } else {
+        if (param0 != -119) {
           km.g((byte) 33);
-          if (-11 == (qmb.field_q ^ -1)) {
+        }
+        if (qmb.field_q == 10) {
+          twa.b(param0 ^ -108);
+          qmb.field_q = 11;
+        } else {
+          if (!nua.b(true)) {
             twa.b(param0 ^ -108);
             qmb.field_q = 11;
-            dga.field_a = true;
-            return;
-          } else {
-            if (!nua.b(true)) {
-              twa.b(param0 ^ -108);
-              qmb.field_q = 11;
-              dga.field_a = true;
-              return;
-            } else {
-              dga.field_a = true;
-              return;
-            }
           }
         }
+        dga.field_a = true;
     }
 
     km() {
@@ -170,10 +113,10 @@ final class km extends jtb {
 
     final int e(byte param0) {
         if (null == this.field_p) {
-            return 0;
+          return 0;
         }
         if (param0 != -4) {
-            return -96;
+          return -96;
         }
         return this.field_p.field_e * 100 / (this.field_p.field_h.length - this.field_q);
     }

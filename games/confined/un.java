@@ -13,88 +13,70 @@ final class un {
     private int field_e;
 
     final void a(int param0) {
-        int var2;
-        L0: {
-          this.field_c.field_m.field_Y = this.field_c.field_m.field_Y + 0.002;
-          if (this.field_c.field_m.field_Y > 1.0) {
-            this.field_c.field_m.field_Y = 1.0;
-            break L0;
-          } else {
-            break L0;
-          }
+        this.field_c.field_m.field_Y = this.field_c.field_m.field_Y + 0.002;
+        if (this.field_c.field_m.field_Y > 1.0) {
+          this.field_c.field_m.field_Y = 1.0;
         }
-        var2 = 53 / ((param0 - -47) / 52);
-        if (this.field_c.field_x.field_a <= 1) {
-          if (-513 >= (this.field_e ^ -1)) {
-            this.field_c.field_B.field_jb.a((byte) 85, this.field_f);
-            this.field_g.a(26214, this.field_f, 0.000009765625 * (double)this.field_e);
-            return;
-          } else {
-            this.field_e = this.field_e + 1;
-            this.field_c.field_B.field_jb.a((byte) 85, this.field_f);
-            this.field_g.a(26214, this.field_f, 0.000009765625 * (double)this.field_e);
-            return;
-          }
-        } else {
+        int var2 = 53 / ((param0 + 47) / 52);
+        if (this.field_c.field_x.field_a > 1) {
           return;
         }
+        if (this.field_e < 512) {
+          this.field_e = this.field_e + 1;
+        } else {
+          this.field_c.field_B.field_jb.a((byte) 85, this.field_f);
+          this.field_g.a(26214, this.field_f, 0.000009765625 * (double)this.field_e);
+          return;
+        }
+        this.field_c.field_B.field_jb.a((byte) 85, this.field_f);
+        this.field_g.a(26214, this.field_f, 0.000009765625 * (double)this.field_e);
     }
 
     public static void d(int param0) {
         field_a = null;
-        if (param0 != 1) {
-          un.c(21);
-          field_d = null;
-          field_i = (byte[][]) null;
-          field_b = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_d = null;
           field_i = (byte[][]) null;
           field_b = null;
           field_h = null;
           return;
         }
+        un.c(21);
+        field_d = null;
+        field_i = (byte[][]) null;
+        field_b = null;
+        field_h = null;
     }
 
     final static void c(int param0) {
         tj.a(param0 ^ 18996, rd.field_Jb, (String) null);
         if (param0 != -18997) {
-            field_h = (bi) null;
+          field_h = (bi) null;
         }
     }
 
     final void b(int param0) {
-        int var2;
-        double var3;
-        if (param0 > -55) {
-          L0: {
-            this.field_g = (kn) null;
-            var2 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
-            if (this.field_e != 0) {
-              var3 = 0.000009765625 * (double)this.field_e;
-              this.field_g.a(var2, this.field_f[9] * var3, this.field_f[10] * var3, var3 * this.field_f[11], this.field_c.field_m, -1212126616);
-              break L0;
-            } else {
-              this.field_g.a((byte) -121, var2, this.field_c.field_m);
-              break L0;
-            }
+        int var2 = 0;
+        double var3 = 0.0;
+        int var2Lifetime1;
+        double var3Lifetime1;
+        if (param0 <= -55) {
+          var2 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
+          if (this.field_e == 0) {
+            this.field_g.a((byte) -121, var2, this.field_c.field_m);
+          } else {
+            var3 = 0.000009765625 * (double)this.field_e;
+            this.field_g.a(var2, this.field_f[9] * var3, this.field_f[10] * var3, var3 * this.field_f[11], this.field_c.field_m, -1212126616);
           }
           return;
+        }
+        this.field_g = (kn) null;
+        var2Lifetime1 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
+        if (this.field_e == 0) {
+          this.field_g.a((byte) -121, var2Lifetime1, this.field_c.field_m);
         } else {
-          L1: {
-            var2 = (int)(this.field_c.a((byte) 81, 256.0) + 0.5);
-            if (this.field_e != 0) {
-              var3 = 0.000009765625 * (double)this.field_e;
-              this.field_g.a(var2, this.field_f[9] * var3, this.field_f[10] * var3, var3 * this.field_f[11], this.field_c.field_m, -1212126616);
-              break L1;
-            } else {
-              this.field_g.a((byte) -121, var2, this.field_c.field_m);
-              break L1;
-            }
-          }
-          return;
+          var3Lifetime1 = 0.000009765625 * (double)this.field_e;
+          this.field_g.a(var2Lifetime1, this.field_f[9] * var3Lifetime1, this.field_f[10] * var3Lifetime1, var3Lifetime1 * this.field_f[11], this.field_c.field_m, -1212126616);
         }
     }
 
@@ -103,14 +85,14 @@ final class un {
         this.field_f = new double[12];
         this.field_e = 0;
         try {
-            this.field_c = param0;
-            param0.field_M = true;
-            rm.field_f = new eg(100);
-            bg.field_f = 0;
-            ie.field_a = true;
-            hc.field_u = ve.field_e;
+          this.field_c = param0;
+          param0.field_M = true;
+          rm.field_f = new eg(100);
+          bg.field_f = 0;
+          ie.field_a = true;
+          hc.field_u = ve.field_e;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "un.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

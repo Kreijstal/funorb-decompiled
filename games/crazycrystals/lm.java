@@ -19,20 +19,17 @@ final class lm {
         Object var1 = null;
         var1 = tm.field_b;
         synchronized (var1) {
-          L0: {
-            gg.field_c = uc.field_b;
-            aq.field_s = aq.field_s + 1;
-            qh.field_i = fq.field_C;
-            bm.field_h = tn.field_s;
-            ij.field_h = wl.field_m;
-            wl.field_m = false;
-            pj.field_v = th.field_y;
-            to.field_a = kk.field_g;
-            dp.field_h = sb.field_I;
-            th.field_y = 0;
-            var2 = 33 % ((-53 - param0) / 49);
-            break L0;
-          }
+          gg.field_c = uc.field_b;
+          aq.field_s = aq.field_s + 1;
+          qh.field_i = fq.field_C;
+          bm.field_h = tn.field_s;
+          ij.field_h = wl.field_m;
+          wl.field_m = false;
+          pj.field_v = th.field_y;
+          to.field_a = kk.field_g;
+          dp.field_h = sb.field_I;
+          th.field_y = 0;
+          var2 = 33 % ((-53 - param0) / 49);
         }
     }
 
@@ -41,14 +38,12 @@ final class lm {
         field_g = null;
         field_a = null;
         field_e = null;
-        if (param0 != -26377) {
-          lm.a((byte) -120);
-          field_d = null;
-          return;
-        } else {
+        if (param0 == -26377) {
           field_d = null;
           return;
         }
+        lm.a((byte) -120);
+        field_d = null;
     }
 
     private lm() throws Throwable {

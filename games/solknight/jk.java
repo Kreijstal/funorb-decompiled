@@ -10,39 +10,36 @@ final class jk extends ci implements ka {
     jk(i param0, rf param1) {
         super(param0, uc.field_g, rc.field_p, false, false);
         try {
-            this.field_vb = param1;
+          this.field_vb = param1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void n(int param0) {
         field_ub = null;
         if (param0 != 6) {
-            field_ub = (da) null;
+          field_ub = (da) null;
         }
     }
 
     public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
         if (this.field_wb) {
-            hl.a(true, 24574, false);
-            return;
+          hl.a(true, 24574, false);
+          return;
         }
         try {
-            ua.a((byte) -110);
-            this.f(param4);
+          ua.a((byte) -110);
+          this.f(param4);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "jk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "jk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     private final void a(boolean param0, byte param1, wg param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
@@ -50,168 +47,115 @@ final class jk extends ci implements ka {
         int var6 = 0;
         var6 = SolKnight.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              this.field_tb = true;
-              if (param2.field_c) {
-                var4 = lk.field_d;
-                break L1;
-              } else {
-                if (null == param2.field_a) {
-                  var4 = param2.field_d;
-                  if (-249 == (param2.field_b ^ -1)) {
-                    L2: {
-                      if (!param0) {
-                        pk.i(918092705);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    this.field_wb = true;
-                    var4 = ce.field_a;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  var4 = pc.field_d;
-                  if (null != this.field_vb) {
-                    this.field_vb.a((byte) 22);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
+          this.field_tb = true;
+          if (param2.field_c) {
+            var4 = lk.field_d;
+          } else {
+            if (null == param2.field_a) {
+              var4 = param2.field_d;
+              if (param2.field_b == 248) {
+                if (!param0) {
+                  pk.i(918092705);
                 }
+                this.field_wb = true;
+                var4 = ce.field_a;
               }
-            }
-            L3: {
-              var5 = new lj((ci) (this), uc.field_g, var4);
-              if (!param2.field_c) {
-                L4: {
-                  if (this.field_wb) {
-                    var5.a(0, dd.field_a, (dg) (this));
-                    break L4;
-                  } else {
-                    if (-6 == (param2.field_b ^ -1)) {
-                      var5.a(11, cl.field_k, 1);
-                      var5.a(17, ph.field_e, 1);
-                      break L4;
-                    } else {
-                      var5.a(-1, u.field_e, 1);
-                      break L4;
-                    }
-                  }
-                }
-                if (3 != param2.field_b) {
-                  if (6 == param2.field_b) {
-                    var5.a(9, ik.field_d, 1);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                } else {
-                  var5.a(7, qd.field_a, 1);
-                  break L3;
-                }
-              } else {
-                if (!param2.field_f) {
-                  var5.a(0, dd.field_a, (dg) (this));
-                  break L3;
-                } else {
-                  this.c(-3399, new qe((jk) (this)));
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
-            this.c(-3399, var5);
-            if (param1 > 19) {
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
-              this.field_tb = false;
+              var4 = pc.field_d;
+              if (null != this.field_vb) {
+                this.field_vb.a((byte) 22);
+              }
+            }
+          }
+          var5 = new lj((ci) (this), uc.field_g, var4);
+          if (!param2.field_c) {
+            if (this.field_wb) {
+              var5.a(0, dd.field_a, (dg) (this));
+            } else {
+              if (param2.field_b == 5) {
+                var5.a(11, cl.field_k, 1);
+                var5.a(17, ph.field_e, 1);
+              } else {
+                var5.a(-1, u.field_e, 1);
+              }
+            }
+            if (3 != param2.field_b) {
+              if (6 == param2.field_b) {
+                var5.a(9, ik.field_d, 1);
+              }
+            } else {
+              var5.a(7, qd.field_a, 1);
+            }
+          } else {
+            if (param2.field_f) {
+              this.c(-3399, new qe(this));
               return;
             }
+            var5.a(0, dd.field_a, (dg) (this));
           }
+          this.c(-3399, var5);
+          if (param1 > 19) {
+            return;
+          }
+          this.field_tb = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_33_0 = (RuntimeException) (var4_ref);
-
-            stackIn_33_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L5;
-            } else {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_33_0 = var4_ref;
+          stackIn_33_1 = new StringBuilder().append("jk.QA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw fc.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
     final void h(byte param0) {
         this.a(true, (byte) 58, mh.a(248, true, ce.field_a));
         if (param0 != -63) {
-            this.field_wb = false;
+          this.field_wb = false;
         }
     }
 
     final boolean h(int param0) {
-        wg var2;
-        if (param0 == 1784) {
-          if (this.field_J) {
-            if (!this.field_tb) {
-              var2 = r.b(83);
-              if (var2 == null) {
-                return super.h(1784);
-              } else {
-                this.a(false, (byte) 97, var2);
-                return super.h(1784);
-              }
-            } else {
-              return super.h(1784);
-            }
-          } else {
-            return super.h(1784);
-          }
-        } else {
+        wg var2 = null;
+        wg var2Lifetime1;
+        if (param0 != 1784) {
           this.field_vb = (rf) null;
-          if (this.field_J) {
-            if (!this.field_tb) {
-              var2 = r.b(83);
-              if (var2 == null) {
-                return super.h(1784);
-              } else {
-                this.a(false, (byte) 97, var2);
-                return super.h(1784);
-              }
-            } else {
-              return super.h(1784);
-            }
-          } else {
+          if (!this.field_J) {
             return super.h(1784);
           }
+          if (this.field_tb) {
+            return super.h(1784);
+          }
+          var2 = r.b(83);
+          if (var2 != null) {
+            this.a(false, (byte) 97, var2);
+            return super.h(1784);
+          }
+          return super.h(1784);
         }
+        if (!this.field_J) {
+          return super.h(1784);
+        }
+        if (this.field_tb) {
+          return super.h(1784);
+        }
+        var2Lifetime1 = r.b(83);
+        if (var2Lifetime1 != null) {
+          this.a(false, (byte) 97, var2Lifetime1);
+          return super.h(1784);
+        }
+        return super.h(1784);
     }
 
     final static int i(byte param0) {
         if (param0 < 112) {
-            field_ub = (da) null;
-            return ak.field_a;
+          field_ub = (da) null;
+          return ak.field_a;
         }
         return ak.field_a;
     }

@@ -20,37 +20,40 @@ final class hj {
 
     final static String a(byte param0) {
         int var2 = 0;
-        String var7 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var8 = null;
-        int var5 = MinerDisturbance.field_ab;
-        String var6 = "(" + lc.field_s + " " + rd.field_a + " " + ud.field_a + ") " + oj.field_K;
-        String var1 = var6;
-        if ((rj.field_d ^ -1) < -1) {
-            var1 = var6 + ":";
-            for (var2 = 0; rj.field_d > var2; var2++) {
-                var7 = var1 + ' ';
-                var1 = var7;
-                var3 = kj.field_a.field_u[var2] & 255;
-                var4 = var3 >> 347664612;
-                var3 = var3 & 15;
-                if (var4 < 10) {
-                    var4 += 48;
-                } else {
-                    var4 += 55;
-                }
-                if ((var3 ^ -1) <= -11) {
-                    var3 += 55;
-                } else {
-                    var3 += 48;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
+        String var1;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        var5 = MinerDisturbance.field_ab;
+        var6 = "(" + lc.field_s + " " + rd.field_a + " " + ud.field_a + ") " + oj.field_K;
+        var1 = var6;
+        if (rj.field_d > 0) {
+          var1 = var6 + ":";
+          for (var2 = 0; rj.field_d > var2; var2++) {
+            var7 = var1 + ' ';
+            var1 = var7;
+            var3 = kj.field_a.field_u[var2] & 255;
+            var4 = var3 >> 4;
+            var3 = var3 & 15;
+            if (var4 >= 10) {
+              var4 += 55;
+            } else {
+              var4 += 48;
             }
+            if (var3 < 10) {
+              var3 += 48;
+            } else {
+              var3 += 55;
+            }
+            var8 = var7 + (char)var4;
+            var1 = var8 + (char)var3;
+          }
         }
         if (param0 <= 48) {
-            field_e = (sj) null;
+          field_e = (sj) null;
         }
         return var1;
     }
@@ -66,81 +69,49 @@ final class hj {
         ld var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            if (param1 == 347664612) {
-              var8 = new ld(param0.a("", 0, "logo.fo3d"));
-              var10 = var8;
-              var3 = var10.d((byte) -54);
-              var10.f((byte) 16);
-              bl.field_v = tk.a(-123, var10);
-              aj.field_b = new pb[var3];
-              pa.field_b = new int[var3][];
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= var3) {
-                  var10.o(-98);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var3 <= var9) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var5 = aj.field_b[var9];
-                      var5.a(1, 6, 6, 6, (byte) -81);
-                      var5.a(true);
-                      var6 = new int[]{var5.field_v + var5.field_H >> 130271905, var5.field_h + var5.field_l >> 1490739201, var5.field_J + var5.field_j >> -111880767};
-                      pa.field_b[var9] = var6;
-                      var5.a(-var6[2], -var6[1], 0, -var6[0]);
-                      var9++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  aj.field_b[var4] = lj.a(var8, (byte) -62);
-                  var4++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 347664612) {
+            return;
           }
+          var8 = new ld(param0.a("", 0, "logo.fo3d"));
+          var10 = var8;
+          var3 = var10.d((byte) -54);
+          var10.f((byte) 16);
+          bl.field_v = tk.a(-123, var10);
+          aj.field_b = new pb[var3];
+          pa.field_b = new int[var3][];
+          for (var4 = 0; var4 < var3; var4++) {
+            aj.field_b[var4] = lj.a(var8, (byte) -62);
+          }
+          var10.o(-98);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          while (var3 > var9) {
+            var5 = aj.field_b[var9];
+            var5.a(1, 6, 6, 6, (byte) -81);
+            var5.a(true);
+            var6 = new int[]{var5.field_v + var5.field_H >> 1, var5.field_h + var5.field_l >> 1, var5.field_J + var5.field_j >> 1};
+            pa.field_b[var9] = var6;
+            var5.a(-var6[2], -var6[1], 0, -var6[0]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("hj.B(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("hj.B(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw lj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -148,7 +119,7 @@ final class hj {
         field_i = null;
         field_a = null;
         if (param0) {
-            hj.a(false);
+          hj.a(false);
         }
         field_c = null;
         field_b = null;
@@ -175,17 +146,17 @@ final class hj {
         field_a = "Just play";
         field_k = new ta();
         field_c = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)(-1 + (var0 << 1678240737));
-            var6 = (long)((var0 << -922672735) - -1);
-            var2 = (int)((var4 * var4 >> -884165806) + -32768L);
-            var3 = (int)((var6 * var6 >> -2085222830) - 32768L);
-            if (field_c.length <= var3) {
-                var3 = -1 + field_c.length;
-            }
-            for (var1 = -1 >= (var2 ^ -1) ? var2 : 0; var3 >= var1; var1++) {
-                field_c[var1] = var0;
-            }
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)((var0 << 1) + 1);
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          var3 = (int)((var6 * var6 >> 18) - 32768L);
+          if (field_c.length <= var3) {
+            var3 = -1 + field_c.length;
+          }
+          for (var1 = var2 >= 0 ? var2 : 0; var3 >= var1; var1++) {
+            field_c[var1] = var0;
+          }
         }
         field_n = new char[128];
         field_b = new ta();

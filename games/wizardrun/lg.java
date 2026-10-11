@@ -8,18 +8,16 @@ final class lg {
     static String field_b;
 
     public static void a(byte param0) {
-        if (param0 <= 89) {
-          field_a = (o[]) null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 > 89) {
           field_a = null;
           field_b = null;
           field_c = null;
           return;
         }
+        field_a = (o[]) null;
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     public final String toString() {

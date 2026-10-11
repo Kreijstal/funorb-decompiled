@@ -19,15 +19,7 @@ final class mp extends je {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
-        if (param7 > -34) {
-          mp.k(17);
-          this.field_gb = param4;
-          this.field_S = param0;
-          this.field_ab = param5;
-          this.field_ob = param6;
-          this.a((byte) -110, param1, param3, param2);
-          return;
-        } else {
+        if (param7 <= -34) {
           this.field_gb = param4;
           this.field_S = param0;
           this.field_ab = param5;
@@ -35,6 +27,12 @@ final class mp extends je {
           this.a((byte) -110, param1, param3, param2);
           return;
         }
+        mp.k(17);
+        this.field_gb = param4;
+        this.field_S = param0;
+        this.field_ab = param5;
+        this.field_ob = param6;
+        this.a((byte) -110, param1, param3, param2);
     }
 
     public static void l(int param0) {
@@ -42,12 +40,12 @@ final class mp extends je {
         field_Qb = null;
         field_Ob = null;
         if (param0 != -8291) {
-            mp.l(-93);
-            field_Jb = null;
-            field_Sb = null;
-            field_Mb = null;
-            field_Lb = null;
-            return;
+          mp.l(-93);
+          field_Jb = null;
+          field_Sb = null;
+          field_Mb = null;
+          field_Lb = null;
+          return;
         }
         field_Jb = null;
         field_Sb = null;
@@ -58,33 +56,30 @@ final class mp extends je {
     mp(long param0, je param1, je param2, ll param3, je param4, String param5, String param6) {
         super(param0, param1);
         try {
-            this.field_Nb = new je(0L, (je) null);
-            this.field_Kb = new dn(0L, this.field_Nb, param2, param3);
-            this.field_Ib = new je(0L, param4);
-            this.field_Rb = new je(0L, param4);
-            this.field_Ib.field_X = param5;
-            this.field_Rb.field_X = param6;
-            this.a(this.field_Kb, 41);
-            this.a(this.field_Ib, 80);
-            this.a(this.field_Rb, 111);
+          this.field_Nb = new je(0L, (je) null);
+          this.field_Kb = new dn(0L, this.field_Nb, param2, param3);
+          this.field_Ib = new je(0L, param4);
+          this.field_Rb = new je(0L, param4);
+          this.field_Ib.field_X = param5;
+          this.field_Rb.field_X = param6;
+          this.a(this.field_Kb, 41);
+          this.a(this.field_Ib, 80);
+          this.a(this.field_Rb, 111);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int k(int param0) {
-        if (param0 > -38) {
-          return 60;
-        } else {
-          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1472789153) - -(nr.field_e.field_y >> 738224194) + 3);
+        if (param0 <= -38) {
+          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1) + (nr.field_e.field_y >> 2) + 3);
         }
+        return 60;
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var5 = (this.field_gb + param3) / 2;
-        var6 = this.field_ob - param2;
+        int var5 = (this.field_gb + param3) / 2;
+        int var6 = this.field_ob - param2;
         this.field_Kb.a(0, false, this.field_gb, param3, param1, 0, -param3 + var6);
         this.field_Ib.field_S = 0;
         this.field_Ib.field_ob = param2;
@@ -94,12 +89,10 @@ final class mp extends je {
         this.field_Rb.field_gb = this.field_gb - var5;
         this.field_Rb.field_S = var5;
         this.field_Rb.field_ob = param2;
-        if (param0 != -110) {
-          this.a((byte) 61, 6, 46, 70);
-          return;
-        } else {
+        if (param0 == -110) {
           return;
         }
+        this.a((byte) 61, 6, 46, 70);
     }
 
     static {

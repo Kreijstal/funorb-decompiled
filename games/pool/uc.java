@@ -7,7 +7,7 @@ final class uc {
 
     public static void b(byte param0) {
         if (param0 != 112) {
-            uc.a((byte) 104);
+          uc.a((byte) 104);
         }
         field_b = null;
         field_a = null;
@@ -16,142 +16,86 @@ final class uc {
     final static boolean a(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
           return false;
-        } else {
-          if (!td.a(param0, (byte) 5)) {
-            L0: {
-              if (param1 == -51) {
-                break L0;
-              } else {
-                uc.a(80);
-                break L0;
-              }
-            }
-            L1: {
-              if (param0 == 45) {
-                break L1;
-              } else {
-                if (param0 == 160) {
-                  break L1;
-                } else {
-                  if (param0 == 32) {
-                    break L1;
-                  } else {
-                    if (95 != param0) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-            }
-            return true;
-          } else {
-            return true;
-          }
         }
+        if (td.a(param0, (byte) 5)) {
+          return true;
+        }
+        if (param1 != -51) {
+          uc.a(80);
+        }
+        if (param0 != 45 &&
+          param0 != 160 &&
+          param0 != 32) {
+          if (95 != param0) {
+            return false;
+          }
+          return true;
+        }
+        return true;
     }
 
     final static boolean a(int param0) {
         if (param0 > -95) {
-            return false;
+          return false;
         }
         return true;
     }
 
     final static void a(byte param0) {
-        tn var1 = (tn) ((Object) cb.field_e.b(-1));
+        tn var1 = (tn) (cb.field_e.b(-1));
         int var2 = 34 % ((-56 - param0) / 50);
         if (var1 == null) {
-            var1 = new tn();
+          var1 = new tn();
         }
         var1.a(qh.field_l, qh.field_f, qh.field_b, qh.field_g, -95, qh.field_j, qh.field_d, qh.field_c);
         nf.field_S.b((byte) 83, var1);
     }
 
     final static double[][] a(boolean param0, double[][][] param1) {
+        int var3_int = 0;
+        int var5 = 0;
+        int var6 = 0;
         int incrementValue$1 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3_int = 0;
         double[][] var3 = null;
         int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         double[][] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = 0;
-              if (param0) {
-                break L1;
-              } else {
-                uc.a((byte) 42);
-                break L1;
-              }
-            }
-            var3_int = 0;
-            L2: while (true) {
-              if (param1.length <= var3_int) {
-                var3 = new double[var2_int][6];
-                var4 = 0;
-                var5 = 0;
-                L3: while (true) {
-                  if (param1.length <= var5) {
-                    stackIn_12_0 = (double[][]) (var3);
-                    break L0;
-                  } else {
-                    var6 = 0;
-                    L4: while (true) {
-                      if (var6 >= param1[var5].length) {
-                        var5++;
-                        continue L3;
-                      } else {
-                        incrementValue$1 = var4;
-                        var4++;
-                        var3[incrementValue$1] = param1[var5][var6];
-                        var6++;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-              } else {
-                var2_int = var2_int + param1[var3_int].length;
-                var3_int++;
-                continue L2;
-              }
+          var2_int = 0;
+          if (!param0) {
+            uc.a((byte) 42);
+          }
+          for (var3_int = 0; param1.length > var3_int; var3_int++) {
+            var2_int = var2_int + param1[var3_int].length;
+          }
+          var3 = new double[var2_int][6];
+          var4 = 0;
+          for (var5 = 0; param1.length > var5; var5++) {
+            for (var6 = 0; var6 < param1[var5].length; var6++) {
+              incrementValue$1 = var4;
+              var4++;
+              var3[incrementValue$1] = param1[var5][var6];
             }
           }
+          stackIn_12_0 = var3;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("uc.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("uc.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_12_0;
     }
 
     static {

@@ -12,31 +12,27 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
     static String[] field_o;
 
     private final synchronized void c(int param0) {
-        if (!(null != this.field_j)) {
-            return;
+        if (null == this.field_j) {
+          return;
         }
         this.field_j.setPixels(0, 0, this.field_d, this.field_h, this.field_l, this.field_f, param0, this.field_d);
         this.field_j.imageComplete(2);
     }
 
     final static boolean c(byte param0) {
-        if (param0 == 54) {
-          if (!e.a(-111)) {
-            if (f.field_e) {
-              if (e.field_a) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != 54) {
           return false;
         }
+        if (e.a(-111)) {
+          return true;
+        }
+        if (!f.field_e) {
+          return false;
+        }
+        if (!e.field_a) {
+          return false;
+        }
+        return true;
     }
 
     public static void d(int param0) {
@@ -45,70 +41,70 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
         field_n = null;
         field_m = null;
         if (param0 != 0) {
-            field_m = (int[]) null;
+          field_m = (int[]) null;
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            this.field_j = param0;
-            param0.setDimensions(this.field_d, this.field_h);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_l);
-            param0.setHints(14);
+          this.field_j = param0;
+          param0.setDimensions(this.field_d, this.field_h);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_l);
+          param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            if (param0 == this.field_j) {
-                this.field_j = null;
-            }
+          if (param0 == this.field_j) {
+            this.field_j = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "cg.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "cg.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            this.addConsumer(param0);
+          this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
         try {
-            this.c(0);
-            param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) (this));
-            if (param1 != -29402) {
-                java.awt.Image var6 = (java.awt.Image) null;
-                this.imageUpdate((java.awt.Image) null, -29, -34, 122, 69, 70);
-            }
+          this.c(0);
+          param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) (this));
+          if (param1 != -29402) {
+            java.awt.Image var6 = (java.awt.Image) null;
+            this.imageUpdate((java.awt.Image) null, -29, -34, 122, 69, 70);
+          }
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "cg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "cg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(byte param0, int param1, java.awt.Component param2, int param3) {
         try {
-            this.field_h = param1;
-            this.field_f = new int[param1 * param3 + 1];
-            this.field_d = param3;
-            this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_g = param2.createImage((java.awt.image.ImageProducer) (this));
-            this.c(0);
-            param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-            int var5_int = -33 / ((-53 - param0) / 36);
-            this.c(0);
-            param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-            this.c(0);
-            param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-            this.b(91);
+          this.field_h = param1;
+          this.field_f = new int[param1 * param3 + 1];
+          this.field_d = param3;
+          this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_g = param2.createImage((java.awt.image.ImageProducer) (this));
+          this.c(0);
+          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+          int var5_int = -33 / ((-53 - param0) / 36);
+          this.c(0);
+          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+          this.c(0);
+          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
+          this.b(91);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -117,41 +113,24 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = 1;
-            break L0;
-          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
-
-            stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_1_0 != 0;
     }
 
     cg() {

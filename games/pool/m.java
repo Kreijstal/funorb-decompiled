@@ -15,7 +15,7 @@ final class m {
         field_a = null;
         field_b = null;
         if (param0 > -31) {
-            m.a((byte) 74);
+          m.a((byte) 74);
         }
     }
 

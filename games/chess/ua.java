@@ -13,14 +13,12 @@ abstract class ua {
         field_b = null;
         field_e = null;
         field_c = null;
-        if (param0 != 1007) {
-          field_b = (int[]) null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 1007) {
           field_a = null;
           return;
         }
+        field_b = (int[]) null;
+        field_a = null;
     }
 
     abstract int b(int param0, int param1);
@@ -30,32 +28,11 @@ abstract class ua {
     abstract byte[] c(int param0, int param1);
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param1 != 14) {
-          L0: {
-            ua.a(-87);
-            if ((param0 & -param0) != param0) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((param0 & -param0) != param0) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param1 == 14) {
+          return (param0 & -param0) == param0 ? true : false;
         }
+        ua.a(-87);
+        return (param0 & -param0) == param0 ? true : false;
     }
 
     static {

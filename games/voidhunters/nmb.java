@@ -13,75 +13,48 @@ final class nmb extends hrb {
         int var4;
         int var5;
         var5 = VoidHunters.field_G;
-        if (param0 == 0) {
-          if ((this.field_g ^ -1L) > (this.field_e ^ -1L)) {
-            this.field_d = this.field_d + (-this.field_g + this.field_e);
-            this.field_g = this.field_g + (-this.field_g + this.field_e);
-            this.field_e = this.field_e + param1;
-            return 1;
-          } else {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                var4++;
-                this.field_e = this.field_e + param1;
-                if (var4 >= 10) {
-                  break L1;
-                } else {
-                  if (this.field_g > this.field_e) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (this.field_e >= this.field_g) {
-                  break L2;
-                } else {
-                  this.field_e = this.field_g;
-                  break L2;
-                }
-              }
-              return var4;
-            }
-          }
-        } else {
+        if (param0 != 0) {
           return 1;
         }
+        if (this.field_g < this.field_e) {
+          this.field_d = this.field_d + (-this.field_g + this.field_e);
+          this.field_g = this.field_g + (-this.field_g + this.field_e);
+          this.field_e = this.field_e + param1;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          var4++;
+          this.field_e = this.field_e + param1;
+        } while (var4 < 10 &&
+          this.field_g > this.field_e);
+        if (this.field_e < this.field_g) {
+          this.field_e = this.field_g;
+        }
+        return var4;
     }
 
     final static void d(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (param0 <= -57) {
-          L0: {
-            if (gha.field_q == null) {
-              break L0;
-            } else {
-              var1 = gha.field_q;
-              synchronized (var1) {
-                L1: {
-                  gha.field_q = null;
-                  break L1;
-                }
-              }
-              break L0;
-            }
+        if (param0 > -57) {
+          return;
+        }
+        if (gha.field_q != null) {
+          var1 = gha.field_q;
+          synchronized (var1) {
+            gha.field_q = null;
           }
-          return;
-        } else {
-          return;
         }
     }
 
     final long a(byte param0) {
         this.field_g = this.field_g + this.c(-110);
         if (param0 != -81) {
-            this.field_h = 67;
+          this.field_h = 67;
         }
         if (this.field_g < this.field_e) {
-            return (-this.field_g + this.field_e) / 1000000L;
+          return (-this.field_g + this.field_e) / 1000000L;
         }
         return 0L;
     }
@@ -90,48 +63,22 @@ final class nmb extends hrb {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            kpb.field_q.a(param1.field_e);
-            if (param0 < -73) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
-          }
+          kpb.field_q.a(param1.field_e);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
-
-            stackIn_4_1 = new StringBuilder().append("nmb.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("nmb.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw rta.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -152,12 +99,12 @@ final class nmb extends hrb {
     }
 
     final void a(int param0) {
-        if (!(this.field_g >= this.field_e)) {
-            this.field_g = this.field_g + (-this.field_g + this.field_e);
+        if (this.field_g < this.field_e) {
+          this.field_g = this.field_g + (-this.field_g + this.field_e);
         }
         this.field_d = 0L;
         if (param0 >= -78) {
-            nmb.d(13);
+          nmb.d(13);
         }
     }
 
@@ -165,23 +112,22 @@ final class nmb extends hrb {
         int var8 = 0;
         int var9 = VoidHunters.field_G;
         long var2 = System.nanoTime();
-        long var4 = var2 + -this.field_d;
+        long var4 = var2 - this.field_d;
         this.field_d = var2;
-        if (-5000000000L < var4) {
-            if (!(-5000000001L >= (var4 ^ -1L))) {
-                this.field_f[this.field_c] = var4;
-                this.field_c = (this.field_c + 1) % 10;
-                if ((this.field_h ^ -1) > -2) {
-                    this.field_h = this.field_h + 1;
-                }
-            }
+        if (-5000000000L < var4 &&
+          var4 < 5000000000L) {
+          this.field_f[this.field_c] = var4;
+          this.field_c = (this.field_c + 1) % 10;
+          if (this.field_h < 1) {
+            this.field_h = this.field_h + 1;
+          }
         }
         if (param0 >= -71) {
-            this.field_g = 79L;
+          this.field_g = 79L;
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= this.field_h; var8++) {
-            var6 = var6 + this.field_f[(10 + this.field_c + -var8) % 10];
+          var6 = var6 + this.field_f[(10 + this.field_c - var8) % 10];
         }
         return var6 / (long)this.field_h;
     }

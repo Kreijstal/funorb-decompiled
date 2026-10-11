@@ -15,16 +15,7 @@ final class rf extends pg {
     static String field_g;
 
     public static void a(int param0) {
-        if (param0 <= 33) {
-          field_n = 36L;
-          field_g = null;
-          field_k = null;
-          field_j = null;
-          field_l = null;
-          field_q = null;
-          field_p = null;
-          return;
-        } else {
+        if (param0 > 33) {
           field_g = null;
           field_k = null;
           field_j = null;
@@ -33,6 +24,13 @@ final class rf extends pg {
           field_p = null;
           return;
         }
+        field_n = 36L;
+        field_g = null;
+        field_k = null;
+        field_j = null;
+        field_l = null;
+        field_q = null;
+        field_p = null;
     }
 
     private rf() throws Throwable {

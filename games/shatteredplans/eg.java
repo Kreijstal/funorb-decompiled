@@ -22,16 +22,16 @@ final class eg extends oh {
 
     final static fb a(int param0, int param1) {
         if (param1 != 30888) {
-            return (fb) null;
+          return (fb) null;
         }
-        return ea.field_b == null ? null : (fb) ((Object) ea.field_b.a(65280, (long)param0));
+        return ea.field_b == null ? null : (fb) (ea.field_b.a(65280, (long)param0));
     }
 
     public static void a(int param0) {
         field_q = null;
         field_u = null;
         if (param0 <= 5) {
-            field_s = (String) null;
+          field_s = (String) null;
         }
         field_r = null;
         field_x = null;
@@ -46,7 +46,7 @@ final class eg extends oh {
 
     final void a(int param0, int param1, int param2) {
         if (param1 != 14775) {
-            field_r = (String) null;
+          field_r = (String) null;
         }
         this.field_n = this.field_n + param2;
         this.field_v.a((byte) -113, new ne(this.field_w, param0, param2, 0));
@@ -70,22 +70,22 @@ final class eg extends oh {
         var8.e(11135, param1.field_l);
         var8.c(param1.field_i.length, (byte) -104);
         if (!param2) {
-            return;
+          return;
         }
         try {
-            for (var5 = 0; var5 < param1.field_i.length; var5++) {
-                var7.e(11135, param1.field_i[var5]);
-            }
-            var8.a(var4, -24);
-            var8.b(-var4 + var8.field_j, (byte) 127);
+          for (var5 = 0; var5 < param1.field_i.length; var5++) {
+            var7.e(11135, param1.field_i[var5]);
+          }
+          var8.a(var4, -24);
+          var8.b(-var4 + var8.field_j, (byte) 127);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static boolean a(byte param0) {
         if (param0 < 73) {
-            eg.b(44, -8, 127);
+          eg.b(44, -8, 127);
         }
         return null != ck.field_a ? true : false;
     }
@@ -93,51 +93,51 @@ final class eg extends oh {
     final static tq c(int param0, int param1) {
         tq var2 = new tq(param0, false);
         if (param1 != 0) {
-            field_u = (qr) null;
+          field_u = (qr) null;
         }
         return var2;
     }
 
     final void a(byte param0, int[] param1) {
         try {
-            if (param0 <= 35) {
-                this.field_j = (int[]) null;
-            }
-            this.field_k = param1;
+          if (param0 <= 35) {
+            this.field_j = (int[]) null;
+          }
+          this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eg.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eg.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, mg param2, int param3) {
         try {
-            this.field_v.a((byte) -113, new ne(param2, param3, param0));
-            this.field_n = this.field_n + param3;
-            if (param1 != 0) {
-                this.field_w = (fs) null;
-            }
+          this.field_v.a((byte) -113, new ne(param2, param3, param0));
+          this.field_n = this.field_n + param3;
+          if (param1 != 0) {
+            this.field_w = (fs) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eg.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     eg(ln param0, fs[] param1, int[] param2) {
         try {
-            this.field_h = param1;
-            this.field_p = param0;
-            this.field_j = (int[]) ((Object) param2.clone());
-            this.field_w = this.field_p.field_y;
-            this.field_v = new pf();
-            this.field_n = 0;
+          this.field_h = param1;
+          this.field_p = param0;
+          this.field_j = (int[]) ((Object) param2.clone());
+          this.field_w = this.field_p.field_y;
+          this.field_v = new pf();
+          this.field_n = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1, int param2) {
         cn.field_w = param0;
         if (param2 != 0) {
-            field_u = (qr) null;
+          field_u = (qr) null;
         }
         dm.field_i = param1;
     }

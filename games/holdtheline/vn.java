@@ -12,14 +12,12 @@ class vn {
     static oa field_h;
 
     void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != -51) {
-          field_c = -23;
-          hi.a(this.field_g, param1, true, param3, param4, param0);
-          return;
-        } else {
+        if (param2 == -51) {
           hi.a(this.field_g, param1, true, param3, param4, param0);
           return;
         }
+        field_c = -23;
+        hi.a(this.field_g, param1, true, param3, param4, param0);
     }
 
     final static void a(int param0, Object param1, ib param2) {
@@ -56,141 +54,102 @@ class vn {
                     try {
                         if (null == param2.field_t) {
                             statePc = 3;
+                            continue stateLoop;
                         } else {
-                            statePc = 2;
+                            /* Inlined CFG state: 2. */
+                            {
+                                /* Sequential CFG blocks: 2, 4. */
+                                {
+                                }
+                                {
+                                    var3_int = param0;
+                                    statePc = 5;
+                                    continue stateLoop;
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_1) {
+                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 17 : -1);
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                        }
                         caughtException = stateCaught_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 17;
                         continue stateLoop;
                     }
                 }
                 case 3: {
                     return;
                 }
-                case 4: {
-                    try {
-                        var3_int = param0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
                 case 5: {
                     try {
-                        if (-51 >= (var3_int ^ -1)) {
+                        if (var3_int >= 50) {
                             statePc = 10;
+                            continue stateLoop;
                         } else {
-                            statePc = 6;
+                            /* Inlined CFG state: 6. */
+                            {
+                                stackIn_13_0 = param2.field_t;
+                                stackIn_7_0 = stackIn_13_0;
+                                if (var4 != 0) {
+                                    statePc = 13;
+                                    continue stateLoop;
+                                } else {
+                                    /* Inlined CFG state: 7. */
+                                    {
+                                        if (((java.awt.EventQueue) (Object) stackIn_7_0).peekEvent() == null) {
+                                            statePc = 10;
+                                            continue stateLoop;
+                                        } else {
+                                            /* Inlined CFG state: 8. */
+                                            {
+                                                qe.a(1L, (byte) 45);
+                                                var3_int++;
+                                                if (var4 == 0) {
+                                                    statePc = 5;
+                                                    continue stateLoop;
+                                                } else {
+                                                    /* Inlined CFG state: 9. */
+                                                    {
+                                                        statePc = 10;
+                                                        continue stateLoop;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_5) {
+                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 17 : -1);
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                        }
                         caughtException = stateCaught_5;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackIn_13_0 = param2.field_t;
-                        stackIn_7_0 = stackIn_13_0;
-                        if (var4 != 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (((java.awt.EventQueue) (Object) stackIn_7_0).peekEvent() == null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        qe.a(1L, (byte) 45);
-                        var3_int++;
-                        if (var4 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 17;
                         continue stateLoop;
                     }
                 }
                 case 10: {
                     try {
                         if (param1 != null) {
-                            statePc = 12;
+                            /* Inlined CFG state: 12. */
+                            {
+                                stackIn_13_0 = param2.field_t;
+                                statePc = 13;
+                                continue stateLoop;
+                            }
                         } else {
-                            statePc = 11;
+                            /* Inlined CFG state: 11. */
+                            {
+                                return;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_10) {
+                        statePc = ((Object) stateCaught_10 instanceof Exception ? 15 : ((Object) stateCaught_10 instanceof RuntimeException ? 17 : -1));
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                        }
                         caughtException = stateCaught_10;
-                        statePc = ((Object) stateCaught_10 instanceof Exception ? 15 : 17);
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        return;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = ((Object) stateCaught_11 instanceof Exception ? 15 : 17);
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackIn_13_0 = param2.field_t;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = ((Object) stateCaught_12 instanceof Exception ? 15 : 17);
                         continue stateLoop;
                     }
                 }
@@ -200,8 +159,11 @@ class vn {
                         statePc = 14;
                         continue stateLoop;
                     } catch (Throwable stateCaught_13) {
+                        statePc = ((Object) stateCaught_13 instanceof Exception ? 15 : ((Object) stateCaught_13 instanceof RuntimeException ? 17 : -1));
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
+                        }
                         caughtException = stateCaught_13;
-                        statePc = ((Object) stateCaught_13 instanceof Exception ? 15 : 17);
                         continue stateLoop;
                     }
                 }
@@ -209,8 +171,11 @@ class vn {
                     try {
                         return;
                     } catch (Throwable stateCaught_14) {
+                        statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 17 : -1);
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
+                        }
                         caughtException = stateCaught_14;
-                        statePc = 17;
                         continue stateLoop;
                     }
                 }
@@ -220,8 +185,11 @@ class vn {
                         statePc = 16;
                         continue stateLoop;
                     } catch (Throwable stateCaught_15) {
+                        statePc = ((Object) stateCaught_15 instanceof RuntimeException ? 17 : -1);
+                        if (statePc == -1) {
+                            throw vn.<RuntimeException>$cfr$sneakyThrow(stateCaught_15);
+                        }
                         caughtException = stateCaught_15;
-                        statePc = 17;
                         continue stateLoop;
                     }
                 }
@@ -242,47 +210,46 @@ class vn {
                     continue stateLoop;
                 }
                 case 18: {
-                    stackIn_20_0 = (RuntimeException) ((Object) stackIn_18_0);
-                    stackIn_20_1 = (StringBuilder) ((Object) stackIn_18_1);
+                    stackIn_20_0 = stackIn_18_0;
+                    stackIn_20_1 = stackIn_18_1;
                     stackIn_20_2 = "{...}";
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 19: {
-                    stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                    stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
+                    stackIn_20_0 = stackIn_19_0;
+                    stackIn_20_1 = stackIn_19_1;
                     stackIn_20_2 = "null";
                     statePc = 20;
                     continue stateLoop;
                 }
                 case 20: {
-                    stackIn_22_0 = (RuntimeException) ((Object) stackIn_20_0);
+                    stackIn_22_0 = stackIn_20_0;
                     stackIn_21_0 = stackIn_22_0;
                     stackIn_22_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(',');
                     stackIn_21_1 = stackIn_22_1;
                     if (param2 == null) {
-                        statePc = 22;
+                        /* Inlined CFG state: 22. */
+                        {
+                            stackIn_23_0 = stackIn_22_0;
+                            stackIn_23_1 = stackIn_22_1;
+                            stackIn_23_2 = "null";
+                            statePc = 23;
+                            continue stateLoop;
+                        }
                     } else {
-                        statePc = 21;
+                        /* Inlined CFG state: 21. */
+                        {
+                            stackIn_23_0 = stackIn_21_0;
+                            stackIn_23_1 = stackIn_21_1;
+                            stackIn_23_2 = "{...}";
+                            statePc = 23;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 21: {
-                    stackIn_23_0 = (RuntimeException) ((Object) stackIn_21_0);
-                    stackIn_23_1 = (StringBuilder) ((Object) stackIn_21_1);
-                    stackIn_23_2 = "{...}";
-                    statePc = 23;
-                    continue stateLoop;
-                }
-                case 22: {
-                    stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-                    stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-                    stackIn_23_2 = "null";
-                    statePc = 23;
-                    continue stateLoop;
                 }
                 case 23: {
-                    throw kk.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+                    throw kk.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(')').toString());
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -294,9 +261,7 @@ class vn {
         field_h = null;
         field_a = null;
         field_b = null;
-        if (param0 == -1) {
-          return;
-        } else {
+        if (param0 != -1) {
           vn.a(30, (Object) null, (ib) null);
           return;
         }
@@ -305,65 +270,22 @@ class vn {
     final static String a(String param0, String param1, int param2, String param3) {
         int var4 = 0;
         int var5 = 0;
-        String stackIn_5_0 = null;
         String stackIn_6_0 = null;
-        int statePc = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = HoldTheLine.field_D;
-                    var4 = param3.indexOf(param1);
-                    if (param2 <= -53) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    vn.a((String) null, (String) null, 105, (String) null);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (var4 != -1) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    return param3;
-                }
-                case 4: {
-                    param3 = param3.substring(0, var4) + param0 + param3.substring(var4 - -param1.length());
-                    stackIn_6_0 = (String) (param3);
-                    stackIn_5_0 = stackIn_6_0;
-                    if (var5 == 0) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    var4 = ((String) (Object) stackIn_6_0).indexOf(param1, var4 + param0.length());
-                    if (var5 == 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    return param3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var5 = HoldTheLine.field_D;
+        var4 = param3.indexOf(param1);
+        if (param2 > -53) {
+          vn.a((String) null, (String) null, 105, (String) null);
+        }
+        while (true) {
+          if (var4 == -1) {
+            return param3;
+          }
+          param3 = param3.substring(0, var4) + param0 + param3.substring(var4 + param1.length());
+          stackIn_6_0 = (String) (param3);
+          if (var5 != 0) {
+            return stackIn_6_0;
+          }
+          var4 = ((String) (Object) stackIn_6_0).indexOf(param1, var4 + param0.length());
         }
     }
 
@@ -372,5 +294,10 @@ class vn {
         field_b = "Reload game";
         field_e = "Unfortunately you are not eligible to create an account.";
         field_a = "Play free version";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

@@ -19,50 +19,51 @@ final class wo extends wf {
 
     final static boolean a(int param0, boolean param1) {
         try {
-            if (nm.field_c.field_g >= param0) {
-                return true;
-            }
-            if (!(null != ft.field_l)) {
-                return false;
-            }
-            if (!param1) {
-                field_l = (char[]) null;
-            }
-            int var2_int = ft.field_l.b(-118);
-            if (!(var2_int <= 0)) {
-                if (!(var2_int <= param0 + -nm.field_c.field_g)) {
-                    var2_int = param0 - nm.field_c.field_g;
-                }
-                ft.field_l.a(nm.field_c.field_g, var2_int, nm.field_c.field_f, true);
-                ff.field_b = kh.a(-127);
-                nm.field_c.field_g = nm.field_c.field_g + var2_int;
-                if (!(nm.field_c.field_g >= param0)) {
-                    return false;
-                }
-                nm.field_c.field_g = 0;
-                return true;
-            }
-            try {
-                if (false) throw (IOException) null;
-                if (var2_int >= 0 && -30001L <= (gm.g(-1) ^ -1L)) {
-                    return false;
-                }
-                te.b(true);
-            } catch (IOException iOException) {
-                te.b(true);
-            }
+          if (nm.field_c.field_g >= param0) {
+            return true;
+          }
+          if (null == ft.field_l) {
             return false;
+          }
+          if (!param1) {
+            field_l = (char[]) null;
+          }
+          int var2_int = ft.field_l.b(-118);
+          if (var2_int > 0) {
+            if (!(var2_int <= param0 - nm.field_c.field_g)) {
+              var2_int = param0 - nm.field_c.field_g;
+            }
+            ft.field_l.a(nm.field_c.field_g, var2_int, nm.field_c.field_f, true);
+            ff.field_b = kh.a(-127);
+            nm.field_c.field_g = nm.field_c.field_g + var2_int;
+            if (!(nm.field_c.field_g >= param0)) {
+              return false;
+            }
+            nm.field_c.field_g = 0;
+            return true;
+          }
+          try {
+            if (false) throw (IOException) null;
+            if (var2_int >= 0 &&
+              gm.g(-1) <= 30000L) {
+              return false;
+            }
+            te.b(true);
+          } catch (IOException iOException) {
+            te.b(true);
+          }
+          return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(int param0) {
         field_n = null;
         field_e = null;
-        int var1 = 101 % ((param0 - -20) / 42);
+        int var1 = 101 % ((param0 + 20) / 42);
         field_l = null;
         field_h = null;
     }
@@ -75,15 +76,15 @@ final class wo extends wf {
         this.field_j = param5;
         this.field_m = param4;
         if (param1 != 251) {
-            return;
+          return;
         }
         try {
-            this.field_f = param0;
-            this.field_i = param7;
-            this.field_k = param3;
-            this.field_p = param2;
+          this.field_f = param0;
+          this.field_i = param7;
+          this.field_k = param3;
+          this.field_p = param2;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 

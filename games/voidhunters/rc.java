@@ -12,8 +12,8 @@ final class rc implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a(127, -95);
-            return (tv[]) ((Object) new qdb[param1]);
+          this.a(127, -95);
+          return (tv[]) ((Object) new qdb[param1]);
         }
         return (tv[]) ((Object) new qdb[param1]);
     }
@@ -26,7 +26,7 @@ final class rc implements dja {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 540800) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

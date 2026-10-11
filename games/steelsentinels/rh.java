@@ -16,103 +16,76 @@ final class rh extends ck {
     final static void a(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
-        if (vb.field_e) {
-          if (param3 == 635) {
-            L0: {
-              qf.field_c.a((byte) -80, param1);
-              var4 = jk.field_i.m(109) ? 1 : 0;
-              if (lb.field_gc == 0) {
-                break L0;
-              } else {
-                if (var4 != 0) {
-                  break L0;
-                } else {
-                  pm.a((byte) 48);
-                  param1 = false;
-                  break L0;
-                }
-              }
-            }
-            L1: {
-              if (param1) {
-                jk.field_i.a((byte) 68, param2, param0);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (var4 == 0) {
-              var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
-              if (-641 <= (var5 ^ -1)) {
-                if (var5 < 635) {
-                  if (0 >= ed.field_i) {
-                    return;
-                  } else {
-                    ed.field_i = ed.field_i - 5;
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                ed.field_i = ed.field_i + 5;
-                return;
-              }
-            } else {
-              qf.field_c.a((byte) -37, param1);
-              var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
-              if (-641 <= (var5 ^ -1)) {
-                if (var5 < 635) {
-                  if (0 >= ed.field_i) {
-                    return;
-                  } else {
-                    ed.field_i = ed.field_i - 5;
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                ed.field_i = ed.field_i + 5;
-                return;
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
+        int var5Lifetime1;
+        if (!vb.field_e) {
           return;
         }
+        if (param3 != 635) {
+          return;
+        }
+        qf.field_c.a((byte) -80, param1);
+        var4 = jk.field_i.m(109) ? 1 : 0;
+        if (lb.field_gc != 0 &&
+          var4 == 0) {
+          pm.a((byte) 48);
+          param1 = false;
+        }
+        if (param1) {
+          jk.field_i.a((byte) 68, param2, param0);
+        }
+        if (var4 == 0) {
+          var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
+          if (var5 > 640) {
+            ed.field_i = ed.field_i + 5;
+            return;
+          }
+          if (var5 >= 635) {
+            return;
+          }
+          if (0 >= ed.field_i) {
+            return;
+          }
+          ed.field_i = ed.field_i - 5;
+          return;
+        }
+        qf.field_c.a((byte) -37, param1);
+        var5Lifetime1 = jk.field_i.j(0) + jk.field_i.field_Rb;
+        if (var5Lifetime1 > 640) {
+          ed.field_i = ed.field_i + 5;
+          return;
+        }
+        if (var5Lifetime1 >= 635) {
+          return;
+        }
+        if (0 >= ed.field_i) {
+          return;
+        }
+        ed.field_i = ed.field_i - 5;
+        return;
     }
 
     final static void a(boolean param0) {
-        if (an.field_i != null) {
-          if (null != an.field_i.field_c) {
-            an.field_i.field_c.field_G = false;
-            if (param0) {
-              return;
-            } else {
-              an.field_i = null;
-              la.field_c = null;
-              return;
-            }
-          } else {
-            if (param0) {
-              return;
-            } else {
-              an.field_i = null;
-              la.field_c = null;
-              return;
-            }
-          }
-        } else {
-          if (param0) {
-            return;
-          } else {
+        if (an.field_i == null) {
+          if (!param0) {
             an.field_i = null;
             la.field_c = null;
             return;
           }
+          return;
+        }
+        if (null == an.field_i.field_c) {
+          if (!param0) {
+            an.field_i = null;
+            la.field_c = null;
+            return;
+          }
+          return;
+        }
+        an.field_i.field_c.field_G = false;
+        if (!param0) {
+          an.field_i = null;
+          la.field_c = null;
+          return;
         }
     }
 
@@ -120,42 +93,40 @@ final class rh extends ck {
         field_q = null;
         field_u = null;
         field_t = null;
-        if (param0) {
-          rh.a(true);
-          field_p = null;
-          field_w = null;
-          field_o = null;
-          field_v = null;
-          return;
-        } else {
+        if (!param0) {
           field_p = null;
           field_w = null;
           field_o = null;
           field_v = null;
           return;
         }
+        rh.a(true);
+        field_p = null;
+        field_w = null;
+        field_o = null;
+        field_v = null;
     }
 
     final static void a(int param0, int param1, jm param2) {
         kj var3 = null;
         if (param1 != 0) {
-            return;
+          return;
         }
         try {
-            var3 = mm.field_g;
-            var3.a(param0, (byte) -117);
-            var3.a((byte) 123, param2.field_q);
-            var3.d(param2.field_s, 77);
+          var3 = mm.field_g;
+          var3.a(param0, (byte) -117);
+          var3.a((byte) 123, param2.field_q);
+          var3.d(param2.field_s, 77);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "rh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     rh(byte[] param0) {
         try {
-            this.field_r = param0;
+          this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

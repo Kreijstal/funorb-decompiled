@@ -14,17 +14,17 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            if (param0 == this.field_k) {
-                this.field_k = null;
-            }
+          if (param0 == this.field_k) {
+            this.field_k = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final synchronized void b(int param0) {
-        if (!(this.field_k != null)) {
-            return;
+        if (this.field_k == null) {
+          return;
         }
         this.field_k.setPixels(0, 0, this.field_d, this.field_h, this.field_j, this.field_i, 0, this.field_d);
         this.field_k.imageComplete(param0);
@@ -32,70 +32,53 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
-        int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            stackIn_1_0 = 1;
-            break L0;
-          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var7);
-
-            stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("cg.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_1_0 != 0;
     }
 
     public static void f(int param0) {
         field_l = null;
         if (param0 != -1) {
-            field_l = (java.awt.Font) null;
+          field_l = (java.awt.Font) null;
         }
     }
 
     final void a(int param0, int param1, java.awt.Component param2, int param3) {
         try {
-            this.field_i = new int[1 + param3 * param1];
-            this.field_h = param3;
-            this.field_d = param1;
-            this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_f = param2.createImage((java.awt.image.ImageProducer) (this));
-            this.b(2);
-            param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-            this.b(2);
-            param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-            if (param0 != 1018) {
-                java.awt.Image var6 = (java.awt.Image) null;
-                this.imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
-            }
-            this.b(2);
-            param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
-            this.a(param0 + -895);
+          this.field_i = new int[1 + param3 * param1];
+          this.field_h = param3;
+          this.field_d = param1;
+          this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_f = param2.createImage((java.awt.image.ImageProducer) (this));
+          this.b(2);
+          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
+          this.b(2);
+          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
+          if (param0 != 1018) {
+            java.awt.Image var6 = (java.awt.Image) null;
+            this.imageUpdate((java.awt.Image) null, 84, -46, -64, -30, -50);
+          }
+          this.b(2);
+          param2.prepareImage(this.field_f, (java.awt.image.ImageObserver) (this));
+          this.a(param0 - 895);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -104,21 +87,21 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            this.field_k = param0;
-            param0.setDimensions(this.field_d, this.field_h);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_j);
-            param0.setHints(14);
+          this.field_k = param0;
+          param0.setDimensions(this.field_d, this.field_h);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_j);
+          param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            this.addConsumer(param0);
+          this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -141,41 +124,37 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
     final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
         this.b(2);
         if (param1 != 0) {
-            return;
+          return;
         }
         try {
-            param3.drawImage(this.field_f, param0, param2, (java.awt.image.ImageObserver) (this));
+          param3.drawImage(this.field_f, param0, param2, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void d(int param0) {
         bo.field_F.l(17415);
-        if (jb.field_r != null) {
+        if (jb.field_r == null) {
+          jb.field_r = new w(bo.field_F, dj.field_b);
           if (param0 != 32) {
             field_l = (java.awt.Font) null;
             bo.field_F.b(jb.field_r, 61);
             return;
-          } else {
-            bo.field_F.b(jb.field_r, 61);
-            return;
           }
-        } else {
-          jb.field_r = new w(bo.field_F, dj.field_b);
-          if (param0 == 32) {
-            bo.field_F.b(jb.field_r, 61);
-            return;
-          } else {
-            field_l = (java.awt.Font) null;
-            bo.field_F.b(jb.field_r, 61);
-            return;
-          }
+          bo.field_F.b(jb.field_r, 61);
+          return;
         }
+        if (param0 == 32) {
+          bo.field_F.b(jb.field_r, 61);
+          return;
+        }
+        field_l = (java.awt.Font) null;
+        bo.field_F.b(jb.field_r, 61);
     }
 
     final static void c(int param0) {
-        int decompiledRegionSelector0 = 0;
+        int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -183,7 +162,6 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         int[] var4 = null;
         c var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
@@ -193,97 +171,60 @@ final class cg extends vn implements java.awt.image.ImageProducer, java.awt.imag
         jh var15 = null;
         var8 = EscapeVector.field_A;
         try {
-          L0: {
-            if (param0 > 68) {
-              var14 = om.field_g;
-              var2 = var14.e(0);
-              if (-1 != (var2 ^ -1)) {
-                if ((var2 ^ -1) != -2) {
-                  if (-3 == (var2 ^ -1)) {
-                    var15 = (jh) ((Object) bc.field_b.a(false));
-                    if (var15 != null) {
-                      var15.field_i = v.a(-92);
-                      var15.field_g = true;
-                      var15.field_h = true;
-                      var15.c((byte) -77);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      nm.a(16);
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    }
-                  } else {
-                    pf.a(false, "A1: " + hf.b((byte) 58), (Throwable) null);
-                    nm.a(16);
-                    return;
-                  }
-                } else {
-                  var12 = (qd) ((Object) mi.field_l.a(false));
-                  if (var12 == null) {
-                    nm.a(16);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var12.c((byte) -64);
-                    return;
-                  }
-                }
-              } else {
-                var11 = v.a(-84);
-                var3 = var11;
-                var10 = var11;
-                var4 = var10;
-                var5 = var14;
-                var6 = ((n) ((Object) var5)).e(0);
-                var7 = 0;
-                L1: while (true) {
-                  if (var6 <= var7) {
-                    var13 = (jh) ((Object) bc.field_b.a(false));
-                    if (var13 != null) {
-                      var13.field_i = var3;
-                      var13.field_g = false;
-                      var13.field_h = true;
-                      var13.c((byte) -86);
-                      return;
-                    } else {
-                      nm.a(16);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  } else {
-                    var10[var7] = ((n) ((Object) var5)).g(-5053);
-                    var7++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 <= 68) {
+            return;
           }
+          var14 = om.field_g;
+          var2 = var14.e(0);
+          if (var2 == 0) {
+            var11 = v.a(-84);
+            var3 = var11;
+            var10 = var11;
+            var4 = var10;
+            var5 = var14;
+            var6 = ((n) ((Object) var5)).e(0);
+            for (var7 = 0; var6 > var7; var7++) {
+              var10[var7] = ((n) ((Object) var5)).g(-5053);
+            }
+            var13 = (jh) (bc.field_b.a(false));
+            if (var13 == null) {
+              nm.a(16);
+              return;
+            }
+            var13.field_i = var3;
+            var13.field_g = false;
+            var13.field_h = true;
+            var13.c((byte) -86);
+            return;
+          }
+          if (var2 == 1) {
+            var12 = (qd) (mi.field_l.a(false));
+            if (var12 == null) {
+              nm.a(16);
+              return;
+            }
+            var12.c((byte) -64);
+            return;
+          }
+          if (var2 != 2) {
+            pf.a(false, "A1: " + hf.b((byte) 58), (Throwable) null);
+            nm.a(16);
+            return;
+          }
+          var15 = (jh) (bc.field_b.a(false));
+          if (var15 == null) {
+            nm.a(16);
+            return;
+          }
+          var15.field_i = v.a(-92);
+          var15.field_g = true;
+          var15.field_h = true;
+          var15.c((byte) -77);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var1), "cg.J(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return;
-              } else {
-                return;
-              }
-            }
-          }
         }
     }
 

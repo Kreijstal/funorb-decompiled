@@ -17,69 +17,47 @@ final class cr extends sf {
         fo stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 4210752) {
-                break L1;
-              } else {
-                field_bb = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new fo(param0);
-            break L0;
+          if (param1 != 4210752) {
+            field_bb = (String) null;
           }
+          stackIn_3_0 = new fo(param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("cr.G(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("cr.G(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        bv.field_t.c(this.field_cb, (this.field_l >> 1902847169) + param0, param2 - -103, 16777215, -1);
+        bv.field_t.c(this.field_cb, (this.field_l >> 1) + param0, param2 + 103, 16777215, -1);
         if (null != this.field_X) {
-            qn.e(20 + param0, -7 + (120 + param2), 260, 8421504);
-            bv.field_t.a(this.field_X, 20 + param0, param2 - -120 - -8, 260, 100, 16777215, -1, 1, 0, bv.field_t.field_H);
+          qn.e(20 + param0, -7 + (120 + param2), 260, 8421504);
+          bv.field_t.a(this.field_X, 20 + param0, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, bv.field_t.field_H);
         }
     }
 
     public static void n(int param0) {
         field_eb = null;
-        if (param0 != 260) {
-          cr.n(-8);
-          field_W = (String[][]) null;
-          field_bb = null;
-          return;
-        } else {
+        if (param0 == 260) {
           field_W = (String[][]) null;
           field_bb = null;
           return;
         }
+        cr.n(-8);
+        field_W = (String[][]) null;
+        field_bb = null;
     }
 
     final void a(float param0, int param1, boolean param2, String param3) {
@@ -87,108 +65,52 @@ final class cr extends sf {
         String var6 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
-        Object stackIn_12_0 = null;
-        Object stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
+        boolean stackIn_13_1 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 30) {
-                break L1;
-              } else {
-                var6 = (String) null;
-                cr.a((String) null, -94);
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_ab) {
-                stackIn_5_0 = 0;
-                break L2;
-              } else {
-                stackIn_5_0 = 1;
-                break L2;
-              }
-            }
-            L3: {
-
-
-              if (param2) {
-
-                stackIn_8_1 = 0;
-                break L3;
-              } else {
-
-                stackIn_8_1 = 1;
-                break L3;
-              }
-            }
-            if (stackIn_5_0 != stackIn_8_1) {
-              L4: {
-                stackIn_12_0 = this;
-
-                if (!param2) {
-                  stackIn_13_0 = this;
-                  stackIn_13_1 = 0;
-                  break L4;
-                } else {
-                  stackIn_13_0 = this;
-                  stackIn_13_1 = 1;
-                  break L4;
-                }
-              }
-              L5: {
-                ((cr) (this)).field_ab = stackIn_13_1 != 0;
-                if (this.field_ab) {
-                  this.field_Y.c(4210752, 8405024, 27178);
-                  this.field_Y.field_R = true;
-                  break L5;
-                } else {
-                  this.field_Y.c(4210752, 2113632, 27178);
-                  if (!this.field_db) {
-                    break L5;
-                  } else {
-                    this.field_Y.field_R = false;
-                    break L5;
-                  }
-                }
-              }
-              this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
-              this.field_cb = param3;
-              break L0;
-            } else {
-              this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
-              this.field_cb = param3;
-              return;
+          if (param1 != 30) {
+            var6 = (String) null;
+            cr.a((String) null, -94);
+          }
+          stackIn_5_0 = (this.field_ab) ? 0 : 1;
+          if (param2) {
+            stackIn_8_1 = 0;
+          } else {
+            stackIn_8_1 = 1;
+          }
+          if (stackIn_5_0 == stackIn_8_1) {
+            this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
+            this.field_cb = param3;
+            return;
+          }
+          stackIn_13_1 = (param2);
+          this.field_ab = stackIn_13_1;
+          if (this.field_ab) {
+            this.field_Y.c(4210752, 8405024, 27178);
+            this.field_Y.field_R = true;
+          } else {
+            this.field_Y.c(4210752, 2113632, 27178);
+            if (this.field_db) {
+              this.field_Y.field_R = false;
             }
           }
+          this.field_Y.field_D = (int)(param0 / 100.0f * 65536.0f);
+          this.field_cb = param3;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var5 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var5);
-
-            stackIn_21_1 = new StringBuilder().append("cr.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_21_0 = var5;
+          stackIn_21_1 = new StringBuilder().append("cr.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -196,18 +118,18 @@ final class cr extends sf {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            this.field_X = param1;
-            if (this.field_X != null) {
-                var3_int = bv.field_t.a(this.field_X, 260, bv.field_t.field_H);
-                this.a(300, (byte) 100, 150 - -var3_int);
-            }
-            this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_db = false;
-            this.field_ab = false;
-            this.field_Y.field_R = true;
-            this.a((byte) 10, (kb) (this.field_Y));
+          this.field_X = param1;
+          if (this.field_X != null) {
+            var3_int = bv.field_t.a(this.field_X, 260, bv.field_t.field_H);
+            this.a(300, (byte) 100, 150 + var3_int);
+          }
+          this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_db = false;
+          this.field_ab = false;
+          this.field_Y.field_R = true;
+          this.a((byte) 10, (kb) (this.field_Y));
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -215,7 +137,7 @@ final class cr extends sf {
         this.field_db = true;
         this.field_Y.field_R = false;
         if (param0 < 1) {
-            this.field_cb = (String) null;
+          this.field_cb = (String) null;
         }
     }
 

@@ -7,24 +7,24 @@ final class jc {
     static char field_c;
 
     final static boolean c(int param0) {
-        int var1 = 51 % ((param0 - -13) / 37);
+        int var1 = 51 % ((param0 + 13) / 37);
         return !di.field_g.b(0) ? true : false;
     }
 
     public static void b(int param0) {
         field_a = null;
         if (param0 != -1) {
-            field_b = true;
+          field_b = true;
         }
     }
 
     final static void a(int param0) {
-        if (!(bk.field_r == null)) {
-            bk.field_r.a((byte) -122);
+        if (bk.field_r != null) {
+          bk.field_r.a((byte) -122);
         }
         if (param0 != 1) {
-            jc.b(-49);
-            return;
+          jc.b(-49);
+          return;
         }
     }
 

@@ -24,16 +24,14 @@ final class qn {
         field_f = null;
         field_b = null;
         field_d = null;
-        if (param0 != 0) {
-          qn.a(-30);
-          field_h = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_h = null;
           field_e = null;
           return;
         }
+        qn.a(-30);
+        field_h = null;
+        field_e = null;
     }
 
     static {

@@ -14,7 +14,7 @@ final class oo {
         field_c = null;
         field_b = null;
         if (param0 != 13054) {
-            oo.a(-79);
+          oo.a(-79);
         }
     }
 

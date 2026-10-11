@@ -10,37 +10,33 @@ final class ida {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 122) {
-            ida.a((byte) -7);
-            field_b = null;
-            return;
+          ida.a((byte) -7);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static String a(long param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
+        int var8 = 0;
+        int var9 = 0;
+        int var8Lifetime1;
+        int var9Lifetime1;
         qla.field_b.setTime(new Date(param0));
-        var3 = qla.field_b.get(7);
-        var4 = qla.field_b.get(5);
-        var5 = qla.field_b.get(2);
-        var6 = qla.field_b.get(1);
-        var7 = qla.field_b.get(11);
-        if (param1 != -1) {
-          field_a = (String) null;
-          var8 = qla.field_b.get(12);
-          var9 = qla.field_b.get(13);
-          return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
+        int var3 = qla.field_b.get(7);
+        int var4 = qla.field_b.get(5);
+        int var5 = qla.field_b.get(2);
+        int var6 = qla.field_b.get(1);
+        int var7 = qla.field_b.get(11);
+        if (param1 == -1) {
           var8 = qla.field_b.get(12);
           var9 = qla.field_b.get(13);
           return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
+        field_a = (String) null;
+        var8Lifetime1 = qla.field_b.get(12);
+        var9Lifetime1 = qla.field_b.get(13);
+        return mr.field_x[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + pv.field_p[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static {

@@ -6,39 +6,28 @@ final class na extends ha {
     byte[] field_i;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var11 = 0;
+        int var12 = 0;
         int incrementValue$12 = 0;
         int var10;
-        int var11;
-        int var12;
         int var13;
         int var14;
         var10 = 256 - param9;
-        var11 = -param6;
-        while (true) {
-          if (var11 >= 0) {
-            return;
-          }
-          var12 = -param5;
-          while (true) {
-            if (var12 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var11++;
-              break;
-            }
+        for (var11 = -param6; var11 < 0; var11++) {
+          for (var12 = -param5; var12 < 0; var12++) {
             var13 = param1[param3++];
             if (var13 == 0) {
               param4++;
-              var12++;
-              continue;
+            } else {
+              var13 = param2[var13 & 255];
+              var14 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
             }
-            var13 = param2[var13 & 255];
-            var14 = param0[param4];
-            incrementValue$12 = param4;
-            param4++;
-            param0[incrementValue$12] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
-            var12++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -231,44 +220,19 @@ final class na extends ha {
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$1 = 0;
+        int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
         int incrementValue$7 = 0;
         int incrementValue$9 = 0;
+        int incrementValue$1 = 0;
         int var10;
-        int var11;
         int var12;
+        int var12Lifetime1;
         var10 = -(param6 >> 2);
         param6 = -(param6 & 3);
-        var11 = -param7;
-        L0: while (true) {
-          if (var11 >= 0) {
-            return;
-          }
-          var12 = var10;
-          while (true) {
-            if (var12 >= 0) {
-              var12 = param6;
-              while (true) {
-                if (var12 >= 0) {
-                  param5 = param5 + param8;
-                  param4 = param4 + param9;
-                  var11++;
-                  continue L0;
-                }
-                param3 = param1[param4++];
-                if (param3 == 0) {
-                  param5++;
-                  var12++;
-                  continue;
-                }
-                incrementValue$1 = param5;
-                param5++;
-                param0[incrementValue$1] = param2[param3 & 255];
-                var12++;
-              }
-            }
+        for (var11 = -param7; var11 < 0; var11++) {
+          for (var12 = var10; var12 < 0; var12++) {
             param3 = param1[param4++];
             if (param3 == 0) {
               param5++;
@@ -296,14 +260,24 @@ final class na extends ha {
             param3 = param1[param4++];
             if (param3 == 0) {
               param5++;
-              var12++;
-              continue;
+            } else {
+              incrementValue$9 = param5;
+              param5++;
+              param0[incrementValue$9] = param2[param3 & 255];
             }
-            incrementValue$9 = param5;
-            param5++;
-            param0[incrementValue$9] = param2[param3 & 255];
-            var12++;
           }
+          for (var12Lifetime1 = param6; var12Lifetime1 < 0; var12Lifetime1++) {
+            param3 = param1[param4++];
+            if (param3 == 0) {
+              param5++;
+            } else {
+              incrementValue$1 = param5;
+              param5++;
+              param0[incrementValue$1] = param2[param3 & 255];
+            }
+          }
+          param5 = param5 + param8;
+          param4 = param4 + param9;
         }
     }
 

@@ -11,7 +11,7 @@ final class uia {
 
     public static void a(int param0) {
         if (param0 != -4353) {
-            return;
+          return;
         }
         field_a = null;
     }

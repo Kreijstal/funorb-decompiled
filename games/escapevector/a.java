@@ -11,9 +11,9 @@ final class a extends ca implements java.awt.event.MouseWheelListener {
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 != -5070) {
-            this.field_e = -54;
-            param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_e = -54;
+          param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -25,23 +25,20 @@ final class a extends ca implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, boolean param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a(-63, (java.awt.Component) null);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a(-63, (java.awt.Component) null);
         }
     }
 
     final synchronized int a(int param0) {
-        int var2;
-        java.awt.Component var3;
-        var2 = this.field_e;
-        if (param0 > -3) {
-          var3 = (java.awt.Component) null;
-          this.a((java.awt.Component) null, true);
-          this.field_e = 0;
-          return var2;
-        } else {
+        int var2 = this.field_e;
+        if (param0 <= -3) {
           this.field_e = 0;
           return var2;
         }
+        java.awt.Component var3 = (java.awt.Component) null;
+        this.a((java.awt.Component) null, true);
+        this.field_e = 0;
+        return var2;
     }
 }

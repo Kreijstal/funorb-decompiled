@@ -10,7 +10,7 @@ final class b {
 
     final static int a(int param0) {
         if (param0 != 14638) {
-            return -31;
+          return -31;
         }
         return ug.field_c;
     }
@@ -20,9 +20,9 @@ final class b {
         field_c = null;
         field_e = null;
         if (param0 != 2) {
-            b.b(-97);
-            field_b = null;
-            return;
+          b.b(-97);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

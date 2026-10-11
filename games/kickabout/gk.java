@@ -16,13 +16,13 @@ final class gk {
         oc.field_f = param0;
         nu.field_j = true;
         if (param4 > -49) {
-            return;
+          return;
         }
         try {
-            qh.field_c = param2;
-            qs.field_K = param3;
+          qh.field_c = param2;
+          qs.field_K = param3;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -31,16 +31,14 @@ final class gk {
         field_h = null;
         field_c = null;
         field_b = null;
-        if (param0 != -127) {
-          gk.a((String) null, 72, 78L, 101, (byte) 105);
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -127) {
           field_f = null;
           field_a = null;
           return;
         }
+        gk.a((String) null, 72, 78L, 101, (byte) 105);
+        field_f = null;
+        field_a = null;
     }
 
     static {

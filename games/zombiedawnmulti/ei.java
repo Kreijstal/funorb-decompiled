@@ -15,21 +15,19 @@ final class ei {
         field_d = null;
         field_g = (String[][]) null;
         field_c = null;
-        if (param0 != -5794) {
-          field_e = (String) null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == -5794) {
           field_e = null;
           return;
         }
+        field_e = (String) null;
+        field_e = null;
     }
 
     final static void a(int param0, int param1, int param2) {
         aq.field_x = param2;
         pm.field_Q = param0;
         if (param1 != 25938) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 

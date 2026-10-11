@@ -9,16 +9,16 @@ final class jm extends kp {
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
         try {
-            fe.f(-1);
-            le.field_e.k(104);
-            no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
-            if (param2 > -50) {
-                field_s = (String) null;
-            }
-            ae.field_f = new hk(le.field_e, no.field_e);
-            le.field_e.a(true, ae.field_f);
+          fe.f(-1);
+          le.field_e.k(104);
+          no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
+          if (param2 > -50) {
+            field_s = (String) null;
+          }
+          ae.field_f = new hk(le.field_e, no.field_e);
+          le.field_e.a(true, ae.field_f);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class jm extends kp {
         field_q = null;
         field_s = null;
         if (param0 != 22595) {
-            field_r = (bi) null;
+          field_r = (bi) null;
         }
     }
 
@@ -36,12 +36,28 @@ final class jm extends kp {
     }
 
     final ds a(byte param0) {
-        int var2 = -78 / ((param0 - -7) / 41);
+        int var2 = -78 / ((param0 + 7) / 41);
         return tm.field_p;
     }
 
     static {
         field_s = "Members";
         field_q = "<%0> points, <%1> points per turn.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$88c6728ee5b1(String param0, boolean param1, int param2, boolean param3) {
+        try {
+          fe.f(-1);
+          le.field_e.k(104);
+          no.field_e = new ri(qh.field_B, (String) null, el.field_b, param3, param1);
+          if (param2 > -50) {
+            field_s = (String) null;
+          }
+          ae.field_f = new hk(le.field_e, no.field_e);
+          le.field_e.a(true, ae.field_f);
+        } catch (RuntimeException runtimeException) {
+          throw r.a((Throwable) ((Object) runtimeException), "jm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
     }
 }

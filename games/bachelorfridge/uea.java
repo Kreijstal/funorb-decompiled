@@ -21,42 +21,31 @@ final class uea extends kj {
     }
 
     final boolean b(int param0) {
-        int fieldTemp$1 = 0;
-        int stackIn_4_0 = 0;
-        if (param0 <= 21) {
-          return true;
-        } else {
-          L0: {
-            fieldTemp$1 = this.field_h - 1;
-            this.field_h = this.field_h - 1;
-            if ((fieldTemp$1 ^ -1) < -1) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        int fieldTemp$0 = 0;
+        if (param0 > 21) {
+          fieldTemp$0 = this.field_h - 1;
+          this.field_h = this.field_h - 1;
+          return fieldTemp$0 <= 0 ? true : false;
         }
+        return true;
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            this.field_f = (kv) null;
+          this.field_f = (kv) null;
         }
     }
 
     uea(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
         try {
-            this.field_h = 50;
-            this.field_f = new kv(128, 64);
-            bu.a(0, this.field_f);
-            param0.field_s.field_p.e(0, 0, param3);
-            db.b(100);
+          this.field_h = 50;
+          this.field_f = new kv(128, 64);
+          bu.a(0, this.field_f);
+          param0.field_s.field_p.e(0, 0, param3);
+          db.b(100);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

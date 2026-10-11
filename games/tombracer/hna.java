@@ -15,10 +15,10 @@ final class hna {
 
     public static void a(int param0) {
         if (param0 <= 115) {
-            hna.a(-38);
-            field_a = null;
-            field_e = null;
-            return;
+          hna.a(-38);
+          field_a = null;
+          field_e = null;
+          return;
         }
         field_a = null;
         field_e = null;

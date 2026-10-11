@@ -9,114 +9,74 @@ final class ja {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         if (!param2) {
-            return;
+          return;
         }
         nj.a(cq.field_b, (byte) -125, param0, param3, param4, param1);
         if (param0 > param1) {
-            mj.field_b.c(param3 - -(-mj.field_b.field_w + param0 >> 1785210113), param4);
-            jp.field_T.c(param3 - -(-jp.field_T.field_w + param0 >> 965330817), -jp.field_T.field_y + (param1 + param4));
+          mj.field_b.c(param3 + (-mj.field_b.field_w + param0 >> 1), param4);
+          jp.field_T.c(param3 + (-jp.field_T.field_w + param0 >> 1), -jp.field_T.field_y + (param1 + param4));
         } else {
-            bi.field_a.c(param3, (param1 + -bi.field_a.field_y >> 726237729) + param4);
-            wk.field_T.c(param3 - -param0 - wk.field_T.field_w, param4 - -(-wk.field_T.field_y + param1 >> 565494017));
+          bi.field_a.c(param3, (param1 - bi.field_a.field_y >> 1) + param4);
+          wk.field_T.c(param3 + param0 - wk.field_T.field_w, param4 + (-wk.field_T.field_y + param1 >> 1));
         }
     }
 
     public static void a(int param0) {
         if (param0 != 726237729) {
-            ja.a(50, -94);
+          ja.a(50, -94);
         }
         field_d = null;
     }
 
     final synchronized static byte[] a(int param0, int param1) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int dupTemp$6 = 0;
-        byte[][] arrayValue$7 = null;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int var2 = 0;
+        int dupTemp$3 = 0;
+        byte[][] arrayValue$4 = null;
         byte[] var2_ref_byte__;
-        int var2;
         byte[] var3;
-        L0: {
-          if (100 != param0) {
-            break L0;
-          } else {
-            if ((to.field_p ^ -1) < -1) {
-              fieldTemp$3 = to.field_p - 1;
-              to.field_p = to.field_p - 1;
-              var2_ref_byte__ = uf.field_y[fieldTemp$3];
-              uf.field_y[to.field_p] = null;
-              return var2_ref_byte__;
-            } else {
-              break L0;
-            }
-          }
+        byte[] var2_ref_byte__Lifetime1;
+        byte[] var2_ref_byte__Lifetime2;
+        if (100 == param0 &&
+          to.field_p > 0) {
+          fieldTemp$0 = to.field_p - 1;
+          to.field_p = to.field_p - 1;
+          var2_ref_byte__ = uf.field_y[fieldTemp$0];
+          uf.field_y[to.field_p] = null;
+          return var2_ref_byte__;
         }
-        L1: {
-          if (-5001 != (param0 ^ -1)) {
-            break L1;
-          } else {
-            if (-1 > (em.field_I ^ -1)) {
-              fieldTemp$4 = em.field_I - 1;
-              em.field_I = em.field_I - 1;
-              var2_ref_byte__ = th.field_j[fieldTemp$4];
-              th.field_j[em.field_I] = null;
-              return var2_ref_byte__;
-            } else {
-              break L1;
-            }
-          }
+        if (param0 == 5000 &&
+          em.field_I > 0) {
+          fieldTemp$1 = em.field_I - 1;
+          em.field_I = em.field_I - 1;
+          var2_ref_byte__Lifetime1 = th.field_j[fieldTemp$1];
+          th.field_j[em.field_I] = null;
+          return var2_ref_byte__Lifetime1;
         }
-        L2: {
-          if (param0 != 30000) {
-            break L2;
-          } else {
-            if (ii.field_a <= 0) {
-              break L2;
-            } else {
-              fieldTemp$5 = ii.field_a - 1;
-              ii.field_a = ii.field_a - 1;
-              var2_ref_byte__ = ec.field_g[fieldTemp$5];
-              ec.field_g[ii.field_a] = null;
-              return var2_ref_byte__;
-            }
-          }
+        if (param0 == 30000 &&
+          ii.field_a > 0) {
+          fieldTemp$2 = ii.field_a - 1;
+          ii.field_a = ii.field_a - 1;
+          var2_ref_byte__Lifetime2 = ec.field_g[fieldTemp$2];
+          ec.field_g[ii.field_a] = null;
+          return var2_ref_byte__Lifetime2;
         }
-        L3: {
-          if (param1 == -1) {
-            break L3;
-          } else {
-            field_c = 109;
-            break L3;
-          }
+        if (param1 != -1) {
+          field_c = 109;
         }
-        L4: {
-          if (null != nk.field_l) {
-            var2 = 0;
-            L5: while (true) {
-              if (var2 >= s.field_f.length) {
-                break L4;
-              } else {
-                if (s.field_f[var2] == param0) {
-                  if ((ho.field_l[var2] ^ -1) < -1) {
-                    dupTemp$6 = ho.field_l[var2] - 1;
-                    arrayValue$7 = nk.field_l[var2];
-                    ho.field_l[var2] = dupTemp$6;
-                    var3 = arrayValue$7[dupTemp$6];
-                    nk.field_l[var2][ho.field_l[var2]] = null;
-                    return var3;
-                  } else {
-                    var2++;
-                    continue L5;
-                  }
-                } else {
-                  var2++;
-                  continue L5;
-                }
-              }
+        if (null != nk.field_l) {
+          for (var2 = 0; var2 < s.field_f.length; var2++) {
+            if (s.field_f[var2] == param0 &&
+              ho.field_l[var2] > 0) {
+              dupTemp$3 = ho.field_l[var2] - 1;
+              arrayValue$4 = nk.field_l[var2];
+              ho.field_l[var2] = dupTemp$3;
+              var3 = arrayValue$4[dupTemp$3];
+              nk.field_l[var2][ho.field_l[var2]] = null;
+              return var3;
             }
-          } else {
-            break L4;
           }
         }
         return new byte[param0];
@@ -126,7 +86,7 @@ final class ja {
         jo.field_J = 0;
         ne.field_n = -1;
         if (!param0) {
-            return;
+          return;
         }
         nn.field_d = false;
         id.field_b = -1;

@@ -12,15 +12,13 @@ final class n extends ci {
     }
 
     final void a(java.awt.Component param0, int param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
         this.field_c = param3;
         this.field_d = param1;
         this.field_f = new int[param1 * param3 + 1];
-        if (param2 != 13961) {
-          return;
-        } else {
+        if (param2 == 13961) {
           var5 = new java.awt.image.DataBufferInt(this.field_f, this.field_f.length);
           var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_d), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);

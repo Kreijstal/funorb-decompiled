@@ -12,17 +12,17 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_a = null;
         field_d = null;
         if (!param0) {
-            field_b = -14;
+          field_b = -14;
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            if (null != va.field_w) {
-                us.field_c = -1;
-            }
+          if (null != va.field_w) {
+            us.field_c = -1;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "hg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,76 +49,40 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (va.field_w == null) {
-                break L1;
-              } else {
-                L2: {
-                  L3: {
-                    fc.field_b = 0;
-                    var2_int = param0.getKeyCode();
-                    if ((var2_int ^ -1) > -1) {
-                      break L3;
-                    } else {
-                      if (var2_int >= kw.field_M.length) {
-                        break L3;
-                      } else {
-                        var2_int = -129 & kw.field_M[var2_int];
-                        break L2;
-                      }
-                    }
-                  }
-                  var2_int = -1;
-                  break L2;
-                }
-                if (us.field_c < 0) {
-                  break L1;
-                } else {
-                  if ((var2_int ^ -1) > -1) {
-                    break L1;
-                  } else {
-                    ee.field_x[us.field_c] = var2_int ^ -1;
-                    us.field_c = 127 & 1 + us.field_c;
-                    if (cc.field_a == us.field_c) {
-                      us.field_c = -1;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
+          if (va.field_w != null) {
+            fc.field_b = 0;
+            var2_int = param0.getKeyCode();
+            if (var2_int >= 0 &&
+              var2_int < kw.field_M.length) {
+              var2_int = -129 & kw.field_M[var2_int];
+            } else {
+              var2_int = -1;
+            }
+            if (us.field_c >= 0 &&
+              var2_int >= 0) {
+              ee.field_x[us.field_c] = ~var2_int;
+              us.field_c = 127 & 1 + us.field_c;
+              if (cc.field_a == us.field_c) {
+                us.field_c = -1;
               }
             }
-            param0.consume();
-            break L0;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (runtimeException);
-
-            stackIn_14_1 = new StringBuilder().append("hg.keyReleased(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_14_0 = runtimeException;
+          stackIn_14_1 = new StringBuilder().append("hg.keyReleased(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -129,22 +93,21 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-            if (!(null == va.field_w)) {
-                var2_int = param0.getKeyChar();
-                if (var2_int != 0 && var2_int != 65535) {
-                    if (!(!jb.a((char) var2_int, 16150))) {
-                        var3 = 127 & cr.field_Z + 1;
-                        if (var3 != be.field_E) {
-                            gt.field_d[cr.field_Z] = -1;
-                            ua.field_u[cr.field_Z] = (char)var2_int;
-                            cr.field_Z = var3;
-                        }
-                    }
-                }
+          if (null != va.field_w) {
+            var2_int = param0.getKeyChar();
+            if (var2_int != 0 && var2_int != 65535 &&
+              jb.a((char) var2_int, 16150)) {
+              var3 = 127 & cr.field_Z + 1;
+              if (var3 != be.field_E) {
+                gt.field_d[cr.field_Z] = -1;
+                ua.field_u[cr.field_Z] = (char)var2_int;
+                cr.field_Z = var3;
+              }
             }
-            param0.consume();
+          }
+          param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "hg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "hg.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,118 +116,65 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var3Lifetime1;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (null == va.field_w) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      fc.field_b = 0;
-                      var2_int = param0.getKeyCode();
-                      if (0 > var2_int) {
-                        break L4;
-                      } else {
-                        if (kw.field_M.length <= var2_int) {
-                          break L4;
-                        } else {
-                          var2_int = kw.field_M[var2_int];
-                          if (0 == (128 & var2_int)) {
-                            break L3;
-                          } else {
-                            var2_int = -1;
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                    var2_int = -1;
-                    break L3;
-                  }
-                  L5: {
-                    if (us.field_c < 0) {
-                      break L5;
-                    } else {
-                      if (0 > var2_int) {
-                        break L5;
-                      } else {
-                        ee.field_x[us.field_c] = var2_int;
-                        us.field_c = us.field_c + 1 & 127;
-                        if (cc.field_a != us.field_c) {
-                          break L5;
-                        } else {
-                          us.field_c = -1;
-                          break L5;
-                        }
-                      }
-                    }
-                  }
-                  L6: {
-                    if ((var2_int ^ -1) > -1) {
-                      break L6;
-                    } else {
-                      var3 = 127 & cr.field_Z - -1;
-                      if (var3 == be.field_E) {
-                        break L6;
-                      } else {
-                        gt.field_d[cr.field_Z] = var2_int;
-                        ua.field_u[cr.field_Z] = (char)0;
-                        cr.field_Z = var3;
-                        break L6;
-                      }
-                    }
-                  }
-                  var3 = param0.getModifiers();
-                  if (0 != (var3 & 10)) {
-                    param0.consume();
-                    break L1;
-                  } else {
-                    if (-86 == (var2_int ^ -1)) {
-                      param0.consume();
-                      break L1;
-                    } else {
-                      if (10 != var2_int) {
-                        break L2;
-                      } else {
-                        param0.consume();
-                        break L1;
-                      }
-                    }
-                  }
-                }
+          if (null != va.field_w) {
+            fc.field_b = 0;
+            var2_int = param0.getKeyCode();
+            if (0 <= var2_int &&
+              kw.field_M.length > var2_int) {
+              var2_int = kw.field_M[var2_int];
+              if (0 != (128 & var2_int)) {
+                var2_int = -1;
               }
-              break L1;
+            } else {
+              var2_int = -1;
             }
-            break L0;
+            if (us.field_c >= 0 &&
+              0 <= var2_int) {
+              ee.field_x[us.field_c] = var2_int;
+              us.field_c = us.field_c + 1 & 127;
+              if (cc.field_a == us.field_c) {
+                us.field_c = -1;
+              }
+            }
+            if (var2_int >= 0) {
+              var3 = 127 & cr.field_Z + 1;
+              if (var3 != be.field_E) {
+                gt.field_d[cr.field_Z] = var2_int;
+                ua.field_u[cr.field_Z] = (char)0;
+                cr.field_Z = var3;
+              }
+            }
+            var3Lifetime1 = param0.getModifiers();
+            if (0 != (var3Lifetime1 & 10)) {
+              param0.consume();
+              return;
+            }
+            if (var2_int == 85) {
+              param0.consume();
+              return;
+            }
+            if (10 == var2_int) {
+              param0.consume();
+              return;
+            }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
-
-            stackIn_23_1 = new StringBuilder().append("hg.keyPressed(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = var2;
+          stackIn_23_1 = new StringBuilder().append("hg.keyPressed(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -272,84 +182,41 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            if (param0 <= -5) {
-              if (wn.a(param1, 1, true)) {
-                var2_int = 0;
-                L1: while (true) {
-                  if (var2_int >= param1.length()) {
-                    stackIn_14_0 = 1;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    if (ph.a(-48, param1.charAt(var2_int))) {
-                      var2_int++;
-                      continue L1;
-                    } else {
-                      stackIn_11_0 = 0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
-                stackIn_6_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 > -5) {
+            return true;
           }
+          if (!wn.a(param1, 1, true)) {
+            return false;
+          }
+          var2_int = 0;
+          while (true) {
+            if (var2_int >= param1.length()) {
+              return true;
+            }
+            if (ph.a(-48, param1.charAt(var2_int))) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ig.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0 != 0;
-            } else {
-              return stackIn_14_0 != 0;
-            }
+            stackIn_18_2 = "{...}";
           }
+          throw ig.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

@@ -11,216 +11,60 @@ public final class qt {
     public final void a(byte param0) {
         this.a(-25120);
         if (param0 != 23) {
-            jaclib.peer.PeerReference var3 = (jaclib.peer.PeerReference) null;
-            this.a((jaclib.peer.PeerReference) null, 2);
+          jaclib.peer.PeerReference var3 = (jaclib.peer.PeerReference) null;
+          this.a((jaclib.peer.PeerReference) null, 2);
         }
     }
 
     private final void a(jaclib.peer.PeerReference param0, int param1) {
         param0.a(param1 + 26222);
-        if (param1 == -26315) {
-          if (param0 != this.c) {
-            if (param0 == this.b) {
-              L0: {
-                this.b = param0.a;
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return;
-            } else {
-              L2: {
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return;
-            }
-          } else {
-            this.c = param0.b;
-            if (param0 == this.b) {
-              L4: {
-                this.b = param0.a;
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              return;
-            } else {
-              L6: {
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return;
-            }
-          }
-        } else {
+        if (param1 != -26315) {
           this.a = (java.lang.ref.ReferenceQueue) null;
-          if (param0 == this.c) {
-            this.c = param0.b;
-            if (param0 != this.b) {
-              L8: {
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              L9: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              return;
-            } else {
-              L10: {
-                this.b = param0.a;
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L11: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              return;
-            }
-          } else {
-            if (param0 == this.b) {
-              L12: {
-                this.b = param0.a;
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L12;
-                } else {
-                  break L12;
-                }
-              }
-              L13: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L13;
-                } else {
-                  break L13;
-                }
-              }
-              return;
-            } else {
-              L14: {
-                if (null != param0.a) {
-                  param0.a.b = param0.b;
-                  break L14;
-                } else {
-                  break L14;
-                }
-              }
-              L15: {
-                if (null != param0.b) {
-                  param0.b.a = param0.a;
-                  break L15;
-                } else {
-                  break L15;
-                }
-              }
-              return;
-            }
-          }
+        }
+        if (param0 == this.c) {
+          this.c = param0.b;
+        }
+        if (param0 == this.b) {
+          this.b = param0.a;
+        }
+        if (null != param0.a) {
+          param0.a.b = param0.b;
+        }
+        if (null != param0.b) {
+          param0.b.a = param0.a;
         }
     }
 
     public final void b(byte param0) {
         this.a(-25120);
-        L0: while (true) {
-          if (this.c == null) {
-            if (param0 < 46) {
-              this.a = (java.lang.ref.ReferenceQueue) null;
-              this.a(-25120);
-              return;
-            } else {
-              this.a(-25120);
-              return;
-            }
-          } else {
-            this.a(this.c, -26315);
-            continue L0;
-          }
+        while (this.c != null) {
+          this.a(this.c, -26315);
         }
+        if (param0 >= 46) {
+          this.a(-25120);
+          return;
+        }
+        this.a = (java.lang.ref.ReferenceQueue) null;
+        this.a(-25120);
     }
 
     private final void a(int param0) {
         java.lang.ref.Reference var2;
         jaclib.peer.PeerReference var3;
-        L0: while (true) {
+        while (true) {
           var2 = this.a.poll();
           if (var2 != null) {
             var3 = (jaclib.peer.PeerReference) ((Object) var2);
             this.a(var3, -26315);
-            continue L0;
-          } else {
-            if (param0 != -25120) {
-              this.b((byte) 50);
-              return;
-            } else {
-              return;
-            }
+            continue;
           }
+          break;
         }
+        if (param0 == -25120) {
+          return;
+        }
+        this.b((byte) 50);
+        return;
     }
 
     public qt() {
@@ -230,17 +74,11 @@ public final class qt {
     final void b(jaclib.peer.PeerReference param0, int param1) {
         param0.a = null;
         param0.b = this.c;
-        if (param1 != -19676) {
-          return;
-        } else {
-          L0: {
-            if (null == this.b) {
-              this.b = param0;
-              break L0;
-            } else {
-              this.c.a = param0;
-              break L0;
-            }
+        if (param1 == -19676) {
+          if (null != this.b) {
+            this.c.a = param0;
+          } else {
+            this.b = param0;
           }
           this.c = param0;
           return;

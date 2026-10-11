@@ -102,10 +102,9 @@ final class ck {
           for (var15 = 0; bm.field_l.length > var15; var15++) {
             var16 = 0;
             for (var17_int = 1; bm.field_l.length > var17_int; var17_int++) {
-              if (var21[var17_int] <= var21[var16]) {
-                continue;
+              if (var21[var17_int] > var21[var16]) {
+                var16 = var17_int;
               }
-              var16 = var17_int;
             }
             var21[var16] = -2147483648;
             var17 = bm.field_l[var16];

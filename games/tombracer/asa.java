@@ -36,22 +36,22 @@ final class asa extends gda {
     final void a(gda param0, byte param1) {
         asa var5 = null;
         try {
-            var5 = (asa) ((Object) param0);
-            this.field_g = var5.field_g;
-            this.field_f = var5.field_p;
-            this.field_l = var5.field_k;
-            this.field_k = var5.field_l;
-            int var4 = -22 % ((73 - param1) / 49);
-            this.field_m = var5.field_o;
-            this.field_q = var5.field_q;
-            this.field_p = var5.field_f;
-            this.field_h = var5.field_h;
-            this.field_e = -(this.field_l * var5.field_n + var5.field_e * this.field_g + var5.field_i * this.field_f);
-            this.field_o = var5.field_m;
-            this.field_n = -(this.field_m * var5.field_i + (this.field_q * var5.field_n + this.field_k * var5.field_e));
-            this.field_i = -(var5.field_e * this.field_p + var5.field_n * this.field_o + var5.field_i * this.field_h);
+          var5 = (asa) (param0);
+          this.field_g = var5.field_g;
+          this.field_f = var5.field_p;
+          this.field_l = var5.field_k;
+          this.field_k = var5.field_l;
+          int var4 = -22 % ((73 - param1) / 49);
+          this.field_m = var5.field_o;
+          this.field_q = var5.field_q;
+          this.field_p = var5.field_f;
+          this.field_h = var5.field_h;
+          this.field_e = -(this.field_l * var5.field_n + var5.field_e * this.field_g + var5.field_i * this.field_f);
+          this.field_o = var5.field_m;
+          this.field_n = -(this.field_m * var5.field_i + (this.field_q * var5.field_n + this.field_k * var5.field_e));
+          this.field_i = -(var5.field_e * this.field_p + var5.field_n * this.field_o + var5.field_i * this.field_h);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -85,12 +85,11 @@ final class asa extends gda {
     }
 
     final float a(float param0, float param1, byte param2, float param3) {
-        if (param2 > -40) {
-          this.a(0.7830915451049805f, 11, -1.1317301988601685f, 0.6542510986328125f);
-          return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
-        } else {
+        if (param2 <= -40) {
           return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
         }
+        this.a(0.7830915451049805f, 11, -1.1317301988601685f, 0.6542510986328125f);
+        return param0 * this.field_h + (this.field_p * param1 + this.field_o * param3) + this.field_i;
     }
 
     final void b(gda param0, int param1) {
@@ -104,45 +103,45 @@ final class asa extends gda {
         float var10 = 0.0f;
         float var11 = 0.0f;
         try {
-            var12 = (asa) ((Object) param0);
-            var4 = this.field_g;
-            var5 = this.field_k;
-            var6 = this.field_l;
-            var7 = this.field_q;
-            var8 = this.field_f;
-            var9 = this.field_m;
-            var10 = this.field_e;
-            this.field_k = this.field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
-            this.field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * this.field_p;
-            var11 = this.field_n;
-            if (param1 != 3) {
-                this.field_e = -1.1916428804397583f;
-            }
-            this.field_q = var6 * var12.field_k + var7 * var12.field_q + var12.field_m * this.field_o;
-            this.field_l = var12.field_f * this.field_o + (var12.field_g * var6 + var7 * var12.field_l);
-            this.field_p = this.field_p * var12.field_h + (var5 * var12.field_o + var4 * var12.field_p);
-            this.field_m = var8 * var12.field_k + var12.field_q * var9 + this.field_h * var12.field_m;
-            this.field_f = this.field_h * var12.field_f + (var12.field_l * var9 + var12.field_g * var8);
-            this.field_o = this.field_o * var12.field_h + (var12.field_o * var7 + var12.field_p * var6);
-            this.field_h = var12.field_h * this.field_h + (var12.field_p * var8 + var12.field_o * var9);
-            this.field_n = var12.field_n + (var12.field_q * var11 + var12.field_k * var10 + var12.field_m * this.field_i);
-            this.field_e = var10 * var12.field_g + var12.field_l * var11 + var12.field_f * this.field_i + var12.field_e;
-            this.field_i = var11 * var12.field_o + var10 * var12.field_p + this.field_i * var12.field_h + var12.field_i;
+          var12 = (asa) (param0);
+          var4 = this.field_g;
+          var5 = this.field_k;
+          var6 = this.field_l;
+          var7 = this.field_q;
+          var8 = this.field_f;
+          var9 = this.field_m;
+          var10 = this.field_e;
+          this.field_k = this.field_p * var12.field_m + (var12.field_q * var5 + var4 * var12.field_k);
+          this.field_g = var12.field_l * var5 + var12.field_g * var4 + var12.field_f * this.field_p;
+          var11 = this.field_n;
+          if (param1 != 3) {
+            this.field_e = -1.1916428804397583f;
+          }
+          this.field_q = var6 * var12.field_k + var7 * var12.field_q + var12.field_m * this.field_o;
+          this.field_l = var12.field_f * this.field_o + (var12.field_g * var6 + var7 * var12.field_l);
+          this.field_p = this.field_p * var12.field_h + (var5 * var12.field_o + var4 * var12.field_p);
+          this.field_m = var8 * var12.field_k + var12.field_q * var9 + this.field_h * var12.field_m;
+          this.field_f = this.field_h * var12.field_f + (var12.field_l * var9 + var12.field_g * var8);
+          this.field_o = this.field_o * var12.field_h + (var12.field_o * var7 + var12.field_p * var6);
+          this.field_h = var12.field_h * this.field_h + (var12.field_p * var8 + var12.field_o * var9);
+          this.field_n = var12.field_n + (var12.field_q * var11 + var12.field_k * var10 + var12.field_m * this.field_i);
+          this.field_e = var10 * var12.field_g + var12.field_l * var11 + var12.field_f * this.field_i + var12.field_e;
+          this.field_i = var11 * var12.field_o + var10 * var12.field_p + this.field_i * var12.field_h + var12.field_i;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(float[] param0, float param1, byte param2, float param3, float param4) {
         param0[1] = this.field_m * param3 + (param1 * this.field_q + this.field_k * param4);
         if (param2 < 42) {
-            return;
+          return;
         }
         try {
-            param0[2] = this.field_p * param4 + param1 * this.field_o + this.field_h * param3;
-            param0[0] = this.field_f * param3 + (this.field_g * param4 + this.field_l * param1);
+          param0[2] = this.field_p * param4 + param1 * this.field_o + this.field_h * param3;
+          param0[0] = this.field_f * param3 + (this.field_g * param4 + this.field_l * param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -156,27 +155,14 @@ final class asa extends gda {
         this.field_n = -this.field_n;
         this.field_q = -this.field_q;
         if (param0 != 42) {
-            this.a((byte) -117, -0.41521722078323364f, -0.9205878973007202f, -0.2643323540687561f);
+          this.a((byte) -117, -0.41521722078323364f, -0.9205878973007202f, -0.2643323540687561f);
         }
     }
 
     final void a(byte param0, float param1, float param2, float param3) {
         this.field_h = 1.0f;
         this.field_q = 1.0f;
-        if (param0 < 116) {
-          field_j = (vna) null;
-          this.field_l = 0.0f;
-          this.field_k = 0.0f;
-          this.field_i = param2;
-          this.field_g = 1.0f;
-          this.field_o = 0.0f;
-          this.field_m = 0.0f;
-          this.field_f = 0.0f;
-          this.field_n = param1;
-          this.field_p = 0.0f;
-          this.field_e = param3;
-          return;
-        } else {
+        if (param0 >= 116) {
           this.field_l = 0.0f;
           this.field_k = 0.0f;
           this.field_i = param2;
@@ -189,6 +175,17 @@ final class asa extends gda {
           this.field_e = param3;
           return;
         }
+        field_j = (vna) null;
+        this.field_l = 0.0f;
+        this.field_k = 0.0f;
+        this.field_i = param2;
+        this.field_g = 1.0f;
+        this.field_o = 0.0f;
+        this.field_m = 0.0f;
+        this.field_f = 0.0f;
+        this.field_n = param1;
+        this.field_p = 0.0f;
+        this.field_e = param3;
     }
 
     final float[] a(float[] param0, byte param1) {
@@ -197,65 +194,42 @@ final class asa extends gda {
         float[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param0[3] = 0.0f;
-            param0[14] = this.field_i;
-            param0[7] = 0.0f;
-            if (param1 == -37) {
-              param0[2] = this.field_p;
-              param0[8] = this.field_f;
-              param0[6] = this.field_o;
-              param0[0] = this.field_g;
-              param0[11] = 0.0f;
-              param0[9] = this.field_m;
-              param0[13] = this.field_n;
-              param0[1] = this.field_k;
-              param0[15] = 1.0f;
-              param0[10] = this.field_h;
-              param0[4] = this.field_l;
-              param0[5] = this.field_q;
-              param0[12] = this.field_e;
-              stackIn_4_0 = (float[]) (param0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (float[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param0[3] = 0.0f;
+          param0[14] = this.field_i;
+          param0[7] = 0.0f;
+          if (param1 != -37) {
+            stackIn_2_0 = (float[]) null;
+            return stackIn_2_0;
           }
+          param0[2] = this.field_p;
+          param0[8] = this.field_f;
+          param0[6] = this.field_o;
+          param0[0] = this.field_g;
+          param0[11] = 0.0f;
+          param0[9] = this.field_m;
+          param0[13] = this.field_n;
+          param0[1] = this.field_k;
+          param0[15] = 1.0f;
+          param0[10] = this.field_h;
+          param0[4] = this.field_l;
+          param0[5] = this.field_q;
+          param0[12] = this.field_e;
+          stackIn_4_0 = (float[]) (param0);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("asa.IA(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("asa.IA(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -265,65 +239,42 @@ final class asa extends gda {
         float[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param1[10] = this.field_h;
-            param1[3] = this.field_e;
-            param1[7] = this.field_n;
-            param1[13] = 0.0f;
-            param1[9] = this.field_o;
-            param1[2] = this.field_f;
-            param1[5] = this.field_q;
-            if (!param0) {
-              param1[8] = this.field_p;
-              param1[4] = this.field_k;
-              param1[6] = this.field_m;
-              param1[11] = this.field_i;
-              param1[12] = 0.0f;
-              param1[1] = this.field_l;
-              param1[0] = this.field_g;
-              param1[15] = 1.0f;
-              param1[14] = 0.0f;
-              stackIn_4_0 = (float[]) (param1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (float[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param1[10] = this.field_h;
+          param1[3] = this.field_e;
+          param1[7] = this.field_n;
+          param1[13] = 0.0f;
+          param1[9] = this.field_o;
+          param1[2] = this.field_f;
+          param1[5] = this.field_q;
+          if (param0) {
+            stackIn_2_0 = (float[]) null;
+            return stackIn_2_0;
           }
+          param1[8] = this.field_p;
+          param1[4] = this.field_k;
+          param1[6] = this.field_m;
+          param1[11] = this.field_i;
+          param1[12] = 0.0f;
+          param1[1] = this.field_l;
+          param1[0] = this.field_g;
+          param1[15] = 1.0f;
+          param1[14] = 0.0f;
+          stackIn_4_0 = (float[]) (param1);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("asa.H(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("asa.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -349,7 +300,7 @@ final class asa extends gda {
         this.field_n = this.field_n + param0;
         this.field_e = this.field_e + param2;
         if (param1 >= -15) {
-            this.field_p = 0.7425627112388611f;
+          this.field_p = 0.7425627112388611f;
         }
     }
 
@@ -358,18 +309,7 @@ final class asa extends gda {
         this.field_i = this.field_i * param1;
         this.field_g = this.field_g * param3;
         this.field_e = this.field_e * param3;
-        if (param0 != 11403) {
-          this.field_f = 0.17367041110992432f;
-          this.field_o = this.field_o * param1;
-          this.field_l = this.field_l * param3;
-          this.field_h = this.field_h * param1;
-          this.field_n = this.field_n * param2;
-          this.field_m = this.field_m * param2;
-          this.field_p = this.field_p * param1;
-          this.field_q = this.field_q * param2;
-          this.field_f = this.field_f * param3;
-          return;
-        } else {
+        if (param0 == 11403) {
           this.field_o = this.field_o * param1;
           this.field_l = this.field_l * param3;
           this.field_h = this.field_h * param1;
@@ -380,6 +320,15 @@ final class asa extends gda {
           this.field_f = this.field_f * param3;
           return;
         }
+        this.field_f = 0.17367041110992432f;
+        this.field_o = this.field_o * param1;
+        this.field_l = this.field_l * param3;
+        this.field_h = this.field_h * param1;
+        this.field_n = this.field_n * param2;
+        this.field_m = this.field_m * param2;
+        this.field_p = this.field_p * param1;
+        this.field_q = this.field_q * param2;
+        this.field_f = this.field_f * param3;
     }
 
     final void c(int param0) {
@@ -420,65 +369,42 @@ final class asa extends gda {
         float[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param1[15] = 1.0f;
-            param1[11] = 0.0f;
-            if (param0 <= -112) {
-              param1[13] = 0.0f;
-              param1[1] = this.field_k;
-              param1[7] = 0.0f;
-              param1[3] = 0.0f;
-              param1[12] = 0.0f;
-              param1[0] = this.field_g;
-              param1[6] = 0.0f;
-              param1[8] = this.field_e;
-              param1[5] = this.field_q;
-              param1[10] = this.field_i;
-              param1[14] = 0.0f;
-              param1[9] = this.field_n;
-              param1[2] = 0.0f;
-              param1[4] = this.field_l;
-              stackIn_4_0 = (float[]) (param1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (float[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param1[15] = 1.0f;
+          param1[11] = 0.0f;
+          if (param0 > -112) {
+            stackIn_2_0 = (float[]) null;
+            return stackIn_2_0;
           }
+          param1[13] = 0.0f;
+          param1[1] = this.field_k;
+          param1[7] = 0.0f;
+          param1[3] = 0.0f;
+          param1[12] = 0.0f;
+          param1[0] = this.field_g;
+          param1[6] = 0.0f;
+          param1[8] = this.field_e;
+          param1[5] = this.field_q;
+          param1[10] = this.field_i;
+          param1[14] = 0.0f;
+          param1[9] = this.field_n;
+          param1[2] = 0.0f;
+          param1[4] = this.field_l;
+          stackIn_4_0 = (float[]) (param1);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("asa.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("asa.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -505,57 +431,34 @@ final class asa extends gda {
         float[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            param0[7] = this.field_n;
-            if (param1 < -88) {
-              param0[3] = this.field_e;
-              param0[0] = this.field_g;
-              param0[4] = this.field_k;
-              param0[1] = this.field_l;
-              param0[5] = this.field_q;
-              param0[6] = this.field_m;
-              param0[2] = this.field_f;
-              stackIn_4_0 = (float[]) (param0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (float[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param0[7] = this.field_n;
+          if (param1 >= -88) {
+            stackIn_2_0 = (float[]) null;
+            return stackIn_2_0;
           }
+          param0[3] = this.field_e;
+          param0[0] = this.field_g;
+          param0[4] = this.field_k;
+          param0[1] = this.field_l;
+          param0[5] = this.field_q;
+          param0[6] = this.field_m;
+          param0[2] = this.field_f;
+          stackIn_4_0 = (float[]) (param0);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("asa.K(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("asa.K(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -563,45 +466,30 @@ final class asa extends gda {
         asa var6 = null;
         asa var5 = null;
         try {
-            var6 = (asa) ((Object) param0);
-            var5 = (asa) ((Object) param1);
-            if (param2 < 118) {
-                this.field_o = -0.8563432097434998f;
-            }
-            this.field_g = var5.field_g * var6.field_g + var5.field_k * var6.field_l + var6.field_f * var5.field_p;
-            this.field_k = var6.field_m * var5.field_p + (var6.field_q * var5.field_k + var6.field_k * var5.field_g);
-            this.field_p = var5.field_g * var6.field_p + var5.field_k * var6.field_o + var5.field_p * var6.field_h;
-            this.field_l = var5.field_q * var6.field_l + var5.field_l * var6.field_g + var6.field_f * var5.field_o;
-            this.field_q = var6.field_m * var5.field_o + (var5.field_q * var6.field_q + var6.field_k * var5.field_l);
-            this.field_f = var6.field_f * var5.field_h + (var5.field_f * var6.field_g + var5.field_m * var6.field_l);
-            this.field_o = var6.field_o * var5.field_q + var6.field_p * var5.field_l + var5.field_o * var6.field_h;
-            this.field_m = var5.field_m * var6.field_q + var6.field_k * var5.field_f + var5.field_h * var6.field_m;
-            this.field_e = var6.field_e + (var6.field_l * var5.field_n + var6.field_g * var5.field_e + var6.field_f * var5.field_i);
-            this.field_h = var6.field_o * var5.field_m + var5.field_f * var6.field_p + var6.field_h * var5.field_h;
-            this.field_n = var5.field_n * var6.field_q + var6.field_k * var5.field_e + var6.field_m * var5.field_i + var6.field_n;
-            this.field_i = var6.field_i + (var6.field_h * var5.field_i + (var5.field_n * var6.field_o + var5.field_e * var6.field_p));
+          var6 = (asa) (param0);
+          var5 = (asa) (param1);
+          if (param2 < 118) {
+            this.field_o = -0.8563432097434998f;
+          }
+          this.field_g = var5.field_g * var6.field_g + var5.field_k * var6.field_l + var6.field_f * var5.field_p;
+          this.field_k = var6.field_m * var5.field_p + (var6.field_q * var5.field_k + var6.field_k * var5.field_g);
+          this.field_p = var5.field_g * var6.field_p + var5.field_k * var6.field_o + var5.field_p * var6.field_h;
+          this.field_l = var5.field_q * var6.field_l + var5.field_l * var6.field_g + var6.field_f * var5.field_o;
+          this.field_q = var6.field_m * var5.field_o + (var5.field_q * var6.field_q + var6.field_k * var5.field_l);
+          this.field_f = var6.field_f * var5.field_h + (var5.field_f * var6.field_g + var5.field_m * var6.field_l);
+          this.field_o = var6.field_o * var5.field_q + var6.field_p * var5.field_l + var5.field_o * var6.field_h;
+          this.field_m = var5.field_m * var6.field_q + var6.field_k * var5.field_f + var5.field_h * var6.field_m;
+          this.field_e = var6.field_e + (var6.field_l * var5.field_n + var6.field_g * var5.field_e + var6.field_f * var5.field_i);
+          this.field_h = var6.field_o * var5.field_m + var5.field_f * var6.field_p + var6.field_h * var5.field_h;
+          this.field_n = var5.field_n * var6.field_q + var6.field_k * var5.field_e + var6.field_m * var5.field_i + var6.field_n;
+          this.field_i = var6.field_i + (var6.field_h * var5.field_i + (var5.field_n * var6.field_o + var5.field_e * var6.field_p));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.V(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.V(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(float param0, float param1, byte param2, float param3, float param4, float param5, float param6, float param7, float param8, float param9) {
-        if (param2 <= 12) {
-          this.field_g = -1.8287684917449951f;
-          this.field_i = 0.0f;
-          this.field_q = param9;
-          this.field_f = param1;
-          this.field_m = param3;
-          this.field_k = param7;
-          this.field_o = param0;
-          this.field_p = param4;
-          this.field_e = 0.0f;
-          this.field_h = param8;
-          this.field_l = param6;
-          this.field_n = 0.0f;
-          this.field_g = param5;
-          return;
-        } else {
+        if (param2 > 12) {
           this.field_i = 0.0f;
           this.field_q = param9;
           this.field_f = param1;
@@ -616,39 +504,51 @@ final class asa extends gda {
           this.field_g = param5;
           return;
         }
+        this.field_g = -1.8287684917449951f;
+        this.field_i = 0.0f;
+        this.field_q = param9;
+        this.field_f = param1;
+        this.field_m = param3;
+        this.field_k = param7;
+        this.field_o = param0;
+        this.field_p = param4;
+        this.field_e = 0.0f;
+        this.field_h = param8;
+        this.field_l = param6;
+        this.field_n = 0.0f;
+        this.field_g = param5;
     }
 
     final void a(int param0, gda param1) {
         asa var3 = null;
         try {
-            if (param0 != 1217) {
-                asa.e(-51);
-            }
-            var3 = (asa) ((Object) param1);
-            this.field_p = var3.field_p;
-            this.field_f = var3.field_f;
-            this.field_l = var3.field_l;
-            this.field_m = var3.field_m;
-            this.field_h = var3.field_h;
-            this.field_q = var3.field_q;
-            this.field_o = var3.field_o;
-            this.field_n = 0.0f;
-            this.field_g = var3.field_g;
-            this.field_i = 0.0f;
-            this.field_e = 0.0f;
-            this.field_k = var3.field_k;
+          if (param0 != 1217) {
+            asa.e(-51);
+          }
+          var3 = (asa) (param1);
+          this.field_p = var3.field_p;
+          this.field_f = var3.field_f;
+          this.field_l = var3.field_l;
+          this.field_m = var3.field_m;
+          this.field_h = var3.field_h;
+          this.field_q = var3.field_q;
+          this.field_o = var3.field_o;
+          this.field_n = 0.0f;
+          this.field_g = var3.field_g;
+          this.field_i = 0.0f;
+          this.field_e = 0.0f;
+          this.field_k = var3.field_k;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final float a(float param0, float param1, float param2, byte param3) {
-        if (param3 < 122) {
-          this.field_f = 0.6931706070899963f;
-          return this.field_m * param1 + (param2 * this.field_q + this.field_k * param0) + this.field_n;
-        } else {
+        if (param3 >= 122) {
           return this.field_m * param1 + (param2 * this.field_q + this.field_k * param0) + this.field_n;
         }
+        this.field_f = 0.6931706070899963f;
+        return this.field_m * param1 + (param2 * this.field_q + this.field_k * param0) + this.field_n;
     }
 
     final float[] b(float[] param0, int param1) {
@@ -657,146 +557,117 @@ final class asa extends gda {
         float[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              param0[1] = this.field_l;
-              param0[4] = this.field_k;
-              param0[9] = this.field_o;
-              param0[2] = this.field_f;
-              param0[12] = 0.0f;
-              param0[8] = this.field_p;
-              if (param1 > 1) {
-                break L1;
-              } else {
-                var4 = (gda) null;
-                this.b((gda) null, -14);
-                break L1;
-              }
-            }
-            param0[7] = 0.0f;
-            param0[10] = this.field_h;
-            param0[3] = 0.0f;
-            param0[15] = 0.0f;
-            param0[11] = 0.0f;
-            param0[14] = 0.0f;
-            param0[0] = this.field_g;
-            param0[6] = this.field_m;
-            param0[5] = this.field_q;
-            param0[13] = 0.0f;
-            stackIn_3_0 = (float[]) (param0);
-            break L0;
+          param0[1] = this.field_l;
+          param0[4] = this.field_k;
+          param0[9] = this.field_o;
+          param0[2] = this.field_f;
+          param0[12] = 0.0f;
+          param0[8] = this.field_p;
+          if (param1 <= 1) {
+            var4 = (gda) null;
+            this.b((gda) null, -14);
           }
+          param0[7] = 0.0f;
+          param0[10] = this.field_h;
+          param0[3] = 0.0f;
+          param0[15] = 0.0f;
+          param0[11] = 0.0f;
+          param0[14] = 0.0f;
+          param0[0] = this.field_g;
+          param0[6] = this.field_m;
+          param0[5] = this.field_q;
+          param0[13] = 0.0f;
+          stackIn_3_0 = (float[]) (param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("asa.LA(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("asa.LA(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(float param0, int param1, int param2, int param3, int param4, float param5, float param6) {
-        float var8;
-        float var9;
-        gda var10;
-        L0: {
-          if (param3 != 0) {
-            var8 = ph.field_c[16383 & param3];
-            var9 = ph.field_n[16383 & param3];
-            this.field_e = (-(0.5f * var8) + 0.5f * var9) * (float)(2 * param1) + param0;
-            this.field_f = 0.0f;
-            this.field_l = (float)param2 * (var9 * -2.0f);
-            this.field_p = 0.0f;
-            this.field_n = param6 + (-(0.5f * var8) + -0.5f * var9) * (float)(param2 * 2);
-            this.field_m = 0.0f;
-            this.field_h = 1.0f;
-            this.field_k = var9 * 2.0f * (float)param1;
-            this.field_o = 0.0f;
-            this.field_i = param5;
-            this.field_g = (float)param1 * (var8 * 2.0f);
-            this.field_q = var8 * 2.0f * (float)param2;
-            break L0;
-          } else {
-            this.field_o = 0.0f;
-            this.field_i = param5;
-            this.field_e = (float)(-param1) + param0;
-            this.field_l = 0.0f;
-            this.field_p = 0.0f;
-            this.field_m = 0.0f;
-            this.field_f = 0.0f;
-            this.field_n = (float)(-param2) + param6;
-            this.field_h = 1.0f;
-            this.field_g = (float)(param1 * 2);
-            this.field_q = (float)(param2 * 2);
-            this.field_k = 0.0f;
-            break L0;
-          }
-        }
-        if (param4 != 2) {
-          var10 = (gda) null;
-          this.a(-20, (gda) null);
-          return;
+        float var8 = 0.0f;
+        float var9 = 0.0f;
+        if (param3 == 0) {
+          this.field_o = 0.0f;
+          this.field_i = param5;
+          this.field_e = (float)(-param1) + param0;
+          this.field_l = 0.0f;
+          this.field_p = 0.0f;
+          this.field_m = 0.0f;
+          this.field_f = 0.0f;
+          this.field_n = (float)(-param2) + param6;
+          this.field_h = 1.0f;
+          this.field_g = (float)(param1 * 2);
+          this.field_q = (float)(param2 * 2);
+          this.field_k = 0.0f;
         } else {
+          var8 = ph.field_c[16383 & param3];
+          var9 = ph.field_n[16383 & param3];
+          this.field_e = (-(0.5f * var8) + 0.5f * var9) * (float)(2 * param1) + param0;
+          this.field_f = 0.0f;
+          this.field_l = (float)param2 * (var9 * -2.0f);
+          this.field_p = 0.0f;
+          this.field_n = param6 + (-(0.5f * var8) + -0.5f * var9) * (float)(param2 * 2);
+          this.field_m = 0.0f;
+          this.field_h = 1.0f;
+          this.field_k = var9 * 2.0f * (float)param1;
+          this.field_o = 0.0f;
+          this.field_i = param5;
+          this.field_g = (float)param1 * (var8 * 2.0f);
+          this.field_q = var8 * 2.0f * (float)param2;
+        }
+        if (param4 == 2) {
           return;
         }
+        gda var10 = (gda) null;
+        this.a(-20, (gda) null);
     }
 
     public static void e(int param0) {
         if (param0 != 14) {
-            asa.e(96);
-            field_j = null;
-            return;
+          asa.e(96);
+          field_j = null;
+          return;
         }
         field_j = null;
     }
 
     final static void a(int param0, eua param1) {
-        if (!(param1 != null)) {
-            return;
+        if (param1 == null) {
+          return;
         }
         try {
-            kga.field_n = param1;
-            rua.field_gb.field_J.d(8);
-            rua.field_gb.b(-125, kga.field_n);
-            if (param0 >= -20) {
-                field_j = (vna) null;
-            }
-            vo.field_b = true;
+          kga.field_n = param1;
+          rua.field_gb.field_J.d(8);
+          rua.field_gb.b(-125, kga.field_n);
+          if (param0 >= -20) {
+            field_j = (vna) null;
+          }
+          vo.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final float a(int param0, float param1, float param2, float param3) {
-        gda var6;
-        if (param0 != 1) {
-          var6 = (gda) null;
-          this.b((gda) null, -20);
-          return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
-        } else {
+        if (param0 == 1) {
           return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
         }
+        gda var6 = (gda) null;
+        this.b((gda) null, -20);
+        return this.field_e + (param3 * this.field_f + (this.field_l * param2 + param1 * this.field_g));
     }
 
     final void a(int param0, float param1, float param2, float[] param3, float param4, float param5) {
@@ -807,112 +678,61 @@ final class asa extends gda {
         int var11 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         var11 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            if (param0 == 32560) {
-              L1: {
-                L2: {
-                  param3[1] = this.field_k * param2 + param5 * this.field_q + param1 * this.field_m;
-                  param3[0] = param1 * this.field_f + (this.field_l * param5 + param2 * this.field_g);
-                  if (0.00390625f < param2) {
-                    break L2;
-                  } else {
-                    if (param2 >= -0.00390625f) {
-                      L3: {
-                        if (param5 > 0.00390625f) {
-                          break L3;
-                        } else {
-                          if (-0.00390625f > param5) {
-                            break L3;
-                          } else {
-                            var10 = -param4 / param1;
-                            var7_float = this.field_e + var10 * this.field_f;
-                            var9 = this.field_i + var10 * this.field_h;
-                            var8 = var10 * this.field_m + this.field_n;
-                            break L1;
-                          }
-                        }
-                      }
-                      var10 = -param4 / param5;
-                      var8 = this.field_n + this.field_q * var10;
-                      var9 = this.field_i + this.field_o * var10;
-                      var7_float = var10 * this.field_l + this.field_e;
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var10 = -param4 / param2;
-                var7_float = this.field_e + this.field_g * var10;
-                var9 = this.field_i + var10 * this.field_p;
-                var8 = this.field_k * var10 + this.field_n;
-                break L1;
-              }
-              param3[2] = this.field_p * param2 + this.field_o * param5 + param1 * this.field_h;
-              param3[3] = -(var9 * param3[2] + (var8 * param3[1] + param3[0] * var7_float));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 32560) {
+            return;
           }
+          param3[1] = this.field_k * param2 + param5 * this.field_q + param1 * this.field_m;
+          param3[0] = param1 * this.field_f + (this.field_l * param5 + param2 * this.field_g);
+          if (!(0.00390625f < param2) &&
+            !(param2 < -0.00390625f)) {
+            if (!(param5 > 0.00390625f) &&
+              !(-0.00390625f > param5)) {
+              var10 = -param4 / param1;
+              var7_float = this.field_e + var10 * this.field_f;
+              var9 = this.field_i + var10 * this.field_h;
+              var8 = var10 * this.field_m + this.field_n;
+            } else {
+              var10 = -param4 / param5;
+              var8 = this.field_n + this.field_q * var10;
+              var9 = this.field_i + this.field_o * var10;
+              var7_float = var10 * this.field_l + this.field_e;
+            }
+          } else {
+            var10 = -param4 / param2;
+            var7_float = this.field_e + this.field_g * var10;
+            var9 = this.field_i + var10 * this.field_p;
+            var8 = this.field_k * var10 + this.field_n;
+          }
+          param3[2] = this.field_p * param2 + this.field_o * param5 + param1 * this.field_h;
+          param3[3] = -(var9 * param3[2] + (var8 * param3[1] + param3[0] * var7_float));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var7 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var7);
-
-            stackIn_15_1 = new StringBuilder().append("asa.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_15_0 = var7;
+          stackIn_15_1 = new StringBuilder().append("asa.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final void a(float param0, float param1, boolean param2, float param3) {
-        gda var6;
         this.field_e = 0.0f;
         this.field_k = 0.0f;
         this.field_g = param1;
         this.field_o = 0.0f;
         this.field_i = 0.0f;
         this.field_f = 0.0f;
-        if (param2) {
-          var6 = (gda) null;
-          this.b((gda) null, 20);
-          this.field_n = 0.0f;
-          this.field_m = 0.0f;
-          this.field_h = param0;
-          this.field_p = 0.0f;
-          this.field_q = param3;
-          this.field_l = 0.0f;
-          return;
-        } else {
+        if (!param2) {
           this.field_n = 0.0f;
           this.field_m = 0.0f;
           this.field_h = param0;
@@ -921,29 +741,37 @@ final class asa extends gda {
           this.field_l = 0.0f;
           return;
         }
+        gda var6 = (gda) null;
+        this.b((gda) null, 20);
+        this.field_n = 0.0f;
+        this.field_m = 0.0f;
+        this.field_h = param0;
+        this.field_p = 0.0f;
+        this.field_q = param3;
+        this.field_l = 0.0f;
     }
 
     final void a(gda param0, int param1) {
         asa var3 = null;
         try {
-            var3 = (asa) ((Object) param0);
-            this.field_q = var3.field_q;
-            this.field_k = var3.field_k;
-            this.field_g = var3.field_g;
-            this.field_i = var3.field_i;
-            this.field_e = var3.field_e;
-            this.field_h = var3.field_h;
-            this.field_n = var3.field_n;
-            this.field_p = var3.field_p;
-            if (param1 != 1) {
-                this.field_e = 0.3872254192829132f;
-            }
-            this.field_o = var3.field_o;
-            this.field_f = var3.field_f;
-            this.field_m = var3.field_m;
-            this.field_l = var3.field_l;
+          var3 = (asa) (param0);
+          this.field_q = var3.field_q;
+          this.field_k = var3.field_k;
+          this.field_g = var3.field_g;
+          this.field_i = var3.field_i;
+          this.field_e = var3.field_e;
+          this.field_h = var3.field_h;
+          this.field_n = var3.field_n;
+          this.field_p = var3.field_p;
+          if (param1 != 1) {
+            this.field_e = 0.3872254192829132f;
+          }
+          this.field_o = var3.field_o;
+          this.field_f = var3.field_f;
+          this.field_m = var3.field_m;
+          this.field_l = var3.field_l;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "asa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "asa.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -952,18 +780,7 @@ final class asa extends gda {
         this.field_p = 0.0f;
         this.field_o = 0.0f;
         this.field_e = (float)param1;
-        if (param0) {
-          this.a(-0.05258991941809654f, 0.013552773743867874f, false, 0.009597906842827797f);
-          this.field_f = 0.0f;
-          this.field_m = 0.0f;
-          this.field_i = (float)param3;
-          this.field_g = 1.0f;
-          this.field_k = 0.0f;
-          this.field_h = 1.0f;
-          this.field_l = 0.0f;
-          this.field_q = 1.0f;
-          return;
-        } else {
+        if (!param0) {
           this.field_f = 0.0f;
           this.field_m = 0.0f;
           this.field_i = (float)param3;
@@ -974,6 +791,15 @@ final class asa extends gda {
           this.field_q = 1.0f;
           return;
         }
+        this.a(-0.05258991941809654f, 0.013552773743867874f, false, 0.009597906842827797f);
+        this.field_f = 0.0f;
+        this.field_m = 0.0f;
+        this.field_i = (float)param3;
+        this.field_g = 1.0f;
+        this.field_k = 0.0f;
+        this.field_h = 1.0f;
+        this.field_l = 0.0f;
+        this.field_q = 1.0f;
     }
 
     asa() {

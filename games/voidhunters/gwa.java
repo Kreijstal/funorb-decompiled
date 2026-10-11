@@ -10,46 +10,26 @@ final class gwa extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_o = true;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(65, 126));
-            break L0;
+          if (param1 > -119) {
+            field_o = true;
           }
+          stackIn_3_0 = new nc(frb.a(65, 126));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("gwa.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("gwa.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     gwa(String param0, Class[] param1, String param2) {
@@ -59,172 +39,72 @@ final class gwa extends rqa {
     final static void a(int param0, int param1, double param2, int param3, double param4) {
         int var8;
         var8 = VoidHunters.field_G;
-        if (param1 != (cd.field_c ^ -1)) {
-          if (param0 == 0) {
-            L0: {
-              mlb.field_q = null;
-              cd.field_c = param0;
-              aib.field_c = param4;
-              if (-1 != (rw.field_q ^ -1)) {
-                break L0;
-              } else {
-                if ((param3 ^ -1) >= -1) {
-                  break L0;
-                } else {
-                  bfa.field_o = new ij();
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                }
-              }
-            }
-            if (-1 != (param3 ^ -1)) {
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+        if (param1 != ~cd.field_c) {
+          if (param0 != 0) {
+            cd.field_c = param0;
+            aib.field_c = param4;
+            if (rw.field_q == 0 &&
+              param3 > 0) {
+              bfa.field_o = new ij();
             } else {
-              bfa.field_o = null;
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+              if (param3 == 0) {
+                bfa.field_o = null;
+              }
             }
           } else {
-            L1: {
-              cd.field_c = param0;
-              aib.field_c = param4;
-              if (-1 != (rw.field_q ^ -1)) {
-                break L1;
-              } else {
-                if ((param3 ^ -1) >= -1) {
-                  break L1;
-                } else {
-                  bfa.field_o = new ij();
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                }
-              }
-            }
-            if (-1 != (param3 ^ -1)) {
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+            mlb.field_q = null;
+            cd.field_c = param0;
+            aib.field_c = param4;
+            if (rw.field_q == 0 &&
+              param3 > 0) {
+              bfa.field_o = new ij();
             } else {
-              bfa.field_o = null;
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+              if (param3 == 0) {
+                bfa.field_o = null;
+              }
             }
           }
         } else {
-          if (-1 > (param0 ^ -1)) {
-            L2: {
-              mlb.field_q = new ij();
-              cd.field_c = param0;
-              aib.field_c = param4;
-              if (-1 != (rw.field_q ^ -1)) {
-                break L2;
-              } else {
-                if ((param3 ^ -1) >= -1) {
-                  break L2;
-                } else {
-                  bfa.field_o = new ij();
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                }
-              }
-            }
-            if (-1 != (param3 ^ -1)) {
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+          if (param0 > 0) {
+            mlb.field_q = new ij();
+            cd.field_c = param0;
+            aib.field_c = param4;
+            if (rw.field_q == 0 &&
+              param3 > 0) {
+              bfa.field_o = new ij();
             } else {
-              bfa.field_o = null;
-              rw.field_q = param3;
-              npa.field_c = param2;
-              return;
+              if (param3 == 0) {
+                bfa.field_o = null;
+              }
             }
           } else {
             if (param0 == 0) {
               mlb.field_q = null;
-              cd.field_c = param0;
-              aib.field_c = param4;
-              if (-1 == (rw.field_q ^ -1)) {
-                if ((param3 ^ -1) >= -1) {
-                  L3: {
-                    if (-1 == (param3 ^ -1)) {
-                      bfa.field_o = null;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                } else {
-                  bfa.field_o = new ij();
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                }
-              } else {
-                L4: {
-                  if (-1 == (param3 ^ -1)) {
-                    bfa.field_o = null;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                rw.field_q = param3;
-                npa.field_c = param2;
-                return;
+            }
+            cd.field_c = param0;
+            aib.field_c = param4;
+            if (rw.field_q != 0) {
+              if (param3 == 0) {
+                bfa.field_o = null;
               }
             } else {
-              cd.field_c = param0;
-              aib.field_c = param4;
-              if (-1 == (rw.field_q ^ -1)) {
-                if ((param3 ^ -1) >= -1) {
-                  L5: {
-                    if (-1 == (param3 ^ -1)) {
-                      bfa.field_o = null;
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                } else {
-                  bfa.field_o = new ij();
-                  rw.field_q = param3;
-                  npa.field_c = param2;
-                  return;
-                }
+              if (param3 > 0) {
+                bfa.field_o = new ij();
               } else {
-                L6: {
-                  if (-1 == (param3 ^ -1)) {
-                    bfa.field_o = null;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
+                if (param3 == 0) {
+                  bfa.field_o = null;
                 }
-                rw.field_q = param3;
-                npa.field_c = param2;
-                return;
               }
             }
           }
         }
+        rw.field_q = param3;
+        npa.field_c = param2;
     }
 
     public static void b(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_p = null;
     }

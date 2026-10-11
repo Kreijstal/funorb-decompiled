@@ -20,35 +20,30 @@ final class fm extends kn {
         int var5;
         var5 = Chess.field_G;
         var2 = new qj(this.field_N);
-        var3 = (eh) ((Object) var2.c(-20229));
-        var4 = 115 / ((param0 - -77) / 42);
-        L0: while (true) {
-          if (var3 != null) {
-            if (var3.field_P) {
-              return var3;
-            } else {
-              var3 = (eh) ((Object) var2.b(8922));
-              continue L0;
-            }
-          } else {
-            return null;
+        var3 = (eh) (var2.c(-20229));
+        var4 = 115 / ((param0 + 77) / 42);
+        while (var3 != null) {
+          if (var3.field_P) {
+            return var3;
           }
+          var3 = (eh) (var2.b(8922));
         }
+        return null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = Chess.field_G;
         if (this.field_n != null) {
-            this.field_n.a((byte) 66, param3, param0, true, (mf) (this));
+          this.field_n.a((byte) 66, param3, param0, true, (mf) (this));
         }
         qj var5 = new qj(this.field_N);
         if (param2 >= -80) {
-            this.a(55);
+          this.a(55);
         }
-        mf var6 = (mf) ((Object) var5.a((byte) 121));
+        mf var6 = (mf) (var5.a((byte) 121));
         while (var6 != null) {
-            var6.a(param0 - -this.field_r, param1, -95, this.field_u + param3);
-            var6 = (mf) ((Object) var5.b((byte) -121));
+          var6.a(param0 + this.field_r, param1, -95, this.field_u + param3);
+          var6 = (mf) (var5.b((byte) -121));
         }
     }
 
@@ -56,45 +51,45 @@ final class fm extends kn {
         int var4 = Chess.field_G;
         qj var2 = new qj(this.field_N);
         if (param0 != 0) {
-            this.a(-52);
+          this.a(-52);
         }
-        eh var3 = (eh) ((Object) var2.c(-20229));
+        eh var3 = (eh) (var2.c(-20229));
         while (var3 != null) {
-            var3.field_P = false;
-            var3 = (eh) ((Object) var2.b(8922));
+          var3.field_P = false;
+          var3 = (eh) (var2.b(8922));
         }
         this.field_M = null;
     }
 
     final void b(mf param0, byte param1) {
         if (!(param0 instanceof eh)) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
-        eh var3 = (eh) ((Object) param0);
+        eh var3 = (eh) (param0);
         this.field_N.a(var3, 91);
         var3.field_P = true;
         if (param1 >= -8) {
-            return;
+          return;
         }
         try {
-            var3.a(0, (mf) (this));
+          var3.a(0, (mf) (this));
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "fm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "fm.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void j(int param0) {
         int var4 = Chess.field_G;
         qj var2 = new qj(this.field_N);
-        eh var3 = (eh) ((Object) var2.c(-20229));
+        eh var3 = (eh) (var2.c(-20229));
         while (var3 != null) {
-            if (var3.a(param0 + -10812)) {
-                var3.c(-2193);
-            }
-            var3 = (eh) ((Object) var2.b(8922));
+          if (var3.a(param0 - 10812)) {
+            var3.c(-2193);
+          }
+          var3 = (eh) (var2.b(8922));
         }
         if (param0 != 10907) {
-            this.i(35);
+          this.i(35);
         }
     }
 
@@ -109,35 +104,29 @@ final class fm extends kn {
         int var4;
         var4 = Chess.field_G;
         var2 = new qj(this.field_N);
-        var3 = (eh) ((Object) var2.c(-20229));
-        if (param0 == 0) {
-          L0: while (true) {
-            if (var3 != null) {
-              if (!var3.field_P) {
-                var3 = (eh) ((Object) var2.b(param0 ^ 8922));
-                continue L0;
-              } else {
-                return var3.e((byte) 19);
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        var3 = (eh) (var2.c(-20229));
+        if (param0 != 0) {
           return (mf) null;
         }
+        while (var3 != null) {
+          if (var3.field_P) {
+            return var3.e((byte) 19);
+          }
+          var3 = (eh) (var2.b(param0 ^ 8922));
+        }
+        return null;
     }
 
     final void f(byte param0) {
         int var5 = Chess.field_G;
         int var3 = -125 / ((-55 - param0) / 55);
         qj var2 = new qj(this.field_N);
-        eh var4 = (eh) ((Object) var2.c(-20229));
+        eh var4 = (eh) (var2.c(-20229));
         while (var4 != null) {
-            if (var4.g((byte) -73)) {
-                var4.c(-2193);
-            }
-            var4 = (eh) ((Object) var2.b(8922));
+          if (var4.g((byte) -73)) {
+            var4.c(-2193);
+          }
+          var4 = (eh) (var2.b(8922));
         }
         this.field_M = (mf) ((Object) this.k(-122));
     }
@@ -147,25 +136,25 @@ final class fm extends kn {
         ci var5 = null;
         int var3 = Chess.field_G;
         if (param1 >= -59) {
-            return;
+          return;
         }
         try {
-            var4 = (ci) ((Object) param0.field_I.g(-18110));
-            ci var2 = var4;
-            while (var4 != null) {
-                var4.field_pb = 0;
-                var4.field_vb = 0;
-                var4.field_N = 0;
-                var4.field_V = 0;
-                var5 = (ci) ((Object) param0.field_I.a((byte) -102));
-                var5 = var5;
-            }
-            param0.field_N = 0;
-            param0.field_vb = 0;
-            param0.field_pb = 0;
-            param0.field_V = 0;
+          var4 = (ci) (param0.field_I.g(-18110));
+          ci var2 = var4;
+          while (var4 != null) {
+            var4.field_pb = 0;
+            var4.field_vb = 0;
+            var4.field_N = 0;
+            var4.field_V = 0;
+            var5 = (ci) (param0.field_I.a((byte) -102));
+            var5 = var5;
+          }
+          param0.field_N = 0;
+          param0.field_vb = 0;
+          param0.field_pb = 0;
+          param0.field_V = 0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "fm.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "fm.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

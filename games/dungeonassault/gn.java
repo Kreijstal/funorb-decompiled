@@ -15,86 +15,61 @@ final class gn {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener(ib.field_f);
-            param1.removeMouseMotionListener(ib.field_f);
-            param1.removeFocusListener(ib.field_f);
-            int var2_int = -90 % ((69 - param0) / 55);
-            ua.field_a = 0;
+          param1.removeMouseListener(ib.field_f);
+          param1.removeMouseMotionListener(ib.field_f);
+          param1.removeFocusListener(ib.field_f);
+          int var2_int = -90 % ((69 - param0) / 55);
+          ua.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 194) {
-            gn.a(3);
-            field_i = null;
-            field_c = null;
-            return;
+          gn.a(3);
+          field_i = null;
+          field_c = null;
+          return;
         }
         field_i = null;
         field_c = null;
     }
 
     final void a(byte param0) {
-        int var2;
-        int var3;
-        java.awt.Component var4;
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
+        int var3 = 0;
+        int var3Lifetime1;
         this.field_b = rf.field_K.a(this.field_e, (byte) -48);
         this.field_f = rf.field_K.a(this.field_j, (byte) -48);
-        var2 = oj.a(this.field_f, -1, new int[]{194}, la.field_b);
+        int var2 = oj.a(this.field_f, -1, new int[]{194}, la.field_b);
         this.field_a = 10 + la.field_b.field_H * var2;
-        if (param0 <= -68) {
-          if (null != this.field_b) {
-            L0: {
-              if (null == this.field_b) {
-                stackIn_13_0 = 0;
-                break L0;
-              } else {
-                stackIn_13_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
-                break L0;
-              }
-            }
-            var3 = stackIn_13_0;
-            this.field_g = var3 * ne.field_c.field_H;
-            this.field_a = this.field_a + (ne.field_c.field_H * var3 + 10);
-            return;
-          } else {
-            this.field_g = 0;
-            return;
-          }
-        } else {
-          var4 = (java.awt.Component) null;
+        if (param0 > -68) {
+          java.awt.Component var4 = (java.awt.Component) null;
           gn.a((byte) 33, (java.awt.Component) null);
-          if (null != this.field_b) {
-            L1: {
-              if (null == this.field_b) {
-                stackIn_6_0 = 0;
-                break L1;
-              } else {
-                stackIn_6_0 = oj.a(this.field_b, -1, new int[]{194}, ne.field_c);
-                break L1;
-              }
-            }
-            var3 = stackIn_6_0;
-            this.field_g = var3 * ne.field_c.field_H;
-            this.field_a = this.field_a + (ne.field_c.field_H * var3 + 10);
-            return;
-          } else {
+          if (null == this.field_b) {
             this.field_g = 0;
             return;
           }
+          var3 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, ne.field_c) : 0;
+          this.field_g = var3 * ne.field_c.field_H;
+          this.field_a = this.field_a + (ne.field_c.field_H * var3 + 10);
+          return;
         }
+        if (null == this.field_b) {
+          this.field_g = 0;
+          return;
+        }
+        var3Lifetime1 = null != this.field_b ? oj.a(this.field_b, -1, new int[]{194}, ne.field_c) : 0;
+        this.field_g = var3Lifetime1 * ne.field_c.field_H;
+        this.field_a = this.field_a + (ne.field_c.field_H * var3Lifetime1 + 10);
     }
 
     gn(String param0, String param1) {
         try {
-            this.field_j = param1;
-            this.field_e = param0;
+          this.field_j = param1;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

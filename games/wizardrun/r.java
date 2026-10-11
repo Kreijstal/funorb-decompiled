@@ -16,71 +16,42 @@ abstract class r implements dk {
         o[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == 13469) {
-              if (h.a(param3, param0, param1, -120)) {
-                stackIn_7_0 = dc.a(19999);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_5_0 = null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = (o[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 != 13469) {
+            stackIn_2_0 = (o[]) null;
+            return stackIn_2_0;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("r.L(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
-          }
-          throw bd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (o[]) ((Object) stackIn_5_0);
-          } else {
+          if (h.a(param3, param0, param1, -120)) {
+            stackIn_7_0 = dc.a(19999);
             return stackIn_7_0;
           }
+          stackIn_5_0 = null;
+          return (o[]) (stackIn_5_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("r.L(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw bd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public final ok a(boolean param0) {
         if (this.b(7245)) {
-            return va.field_o;
+          return va.field_o;
         }
-        if (!(d.a((byte) 25) >= this.field_f - -350L)) {
-            return nf.field_c;
+        if (!(d.a((byte) 25) >= this.field_f + 350L)) {
+          return nf.field_c;
         }
         if (!param0) {
-            field_b = (qc) null;
+          field_b = (qc) null;
         }
         return this.b(true);
     }
@@ -95,37 +66,37 @@ abstract class r implements dk {
         int var3 = 0;
         int var4 = wizardrun.field_H;
         try {
-            var1 = new o(540, 140);
-            ud.a(var1, false);
-            cj.c();
-            ed.d();
-            jd.field_f = 0;
-            gf.k(param0 ^ -301);
-            var2 = var1.e();
-            for (var3 = 0; (var3 ^ -1) > -16; var3++) {
-                var2.b(-2, -2, 16777215);
-                ed.c(4, 4, 0, 0, 540, 140);
-            }
-            ag.field_t.b();
-            var1.a(0, 0);
-            if (param0 != 350) {
-                field_a = 72;
-            }
-            bb.b(4);
+          var1 = new o(540, 140);
+          ud.a(var1, false);
+          cj.c();
+          ed.d();
+          jd.field_f = 0;
+          gf.k(param0 ^ -301);
+          var2 = var1.e();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.b(-2, -2, 16777215);
+            ed.c(4, 4, 0, 0, 540, 140);
+          }
+          ag.field_t.b();
+          var1.a(0, 0);
+          if (param0 != 350) {
+            field_a = 72;
+          }
+          bb.b(4);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "r.N(" + param0 + ')');
         }
     }
 
     public final String a(int param0) {
         if (param0 != -2864) {
-            this.a(false);
+          this.a(false);
         }
         if (this.b(7245)) {
-            return null;
+          return null;
         }
-        if ((this.field_f - -350L ^ -1L) < (d.a((byte) 29) ^ -1L)) {
-            return null;
+        if ((this.field_f + 350L) > d.a((byte) 29)) {
+          return null;
         }
         return this.b((byte) -82);
     }
@@ -135,13 +106,13 @@ abstract class r implements dk {
         field_c = null;
         field_b = null;
         if (param0 < 105) {
-            r.d(-68);
+          r.d(-68);
         }
     }
 
     public final void a(byte param0) {
         if (param0 >= -59) {
-            return;
+          return;
         }
         this.field_f = d.a((byte) 31);
     }

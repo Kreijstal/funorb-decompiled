@@ -17,22 +17,27 @@ abstract class gg {
     abstract void a(int param0, int param1, byte param2);
 
     private final void a(byte param0) {
-        int var5 = 0;
-        int var6 = 0;
-        int var4 = 0;
-        Random var7 = new Random((long)this.field_c);
-        Random var2 = var7;
-        int var3 = -35 / ((param0 - -73) / 50);
-        for (var4 = 0; (var4 ^ -1) > -256; var4++) {
-            this.field_d[var4] = (short)var4;
+        Random var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        Random var7;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        var7 = new Random((long)this.field_c);
+        var2 = var7;
+        var3 = -35 / ((param0 + 73) / 50);
+        for (var4 = 0; var4 < 255; var4++) {
+          this.field_d[var4] = (short)var4;
         }
-        for (var3 = 0; 255 > var3; var3++) {
-            var4 = 255 + -var3;
-            var5 = bs.a(-1, var7, var4);
-            var6 = this.field_d[var5];
-            this.field_d[var5] = this.field_d[var4];
-            this.field_d[256 + var4] = (short) var6;
-            this.field_d[var4] = (short) var6;
+        for (var3Lifetime1 = 0; 255 > var3Lifetime1; var3Lifetime1++) {
+          var4Lifetime1 = 255 - var3Lifetime1;
+          var5 = bs.a(-1, var7, var4Lifetime1);
+          var6 = this.field_d[var5];
+          this.field_d[var5] = this.field_d[var4Lifetime1];
+          this.field_d[256 + var4Lifetime1] = (short) var6;
+          this.field_d[var4Lifetime1] = (short) var6;
         }
     }
 
@@ -44,52 +49,29 @@ abstract class gg {
         byte[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var12 = new byte[param4 * param5 * param9];
-            var11 = var12;
-            if (param1 <= -63) {
-              fr.a(param7, param6, 0, param8, param2, param9, var12, param4, param5, param10, param0, 0, param3);
-              stackIn_4_0 = (byte[]) (var12);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (byte[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var12 = new byte[param4 * param5 * param9];
+          var11 = var12;
+          if (param1 > -63) {
+            stackIn_2_0 = (byte[]) null;
+            return stackIn_2_0;
           }
+          fr.a(param7, param6, 0, param8, param2, param9, var12, param4, param5, param10, param0, 0, param3);
+          stackIn_4_0 = var12;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var11_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var11_ref);
-
-            stackIn_7_1 = new StringBuilder().append("gg.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var11_ref = decompiledCaughtException;
+          stackIn_7_0 = var11_ref;
+          stackIn_7_1 = new StringBuilder().append("gg.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(')').toString());
         }
     }
 
@@ -100,53 +82,33 @@ abstract class gg {
         rh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 == -27227) {
-                break L1;
-              } else {
-                field_a = (al) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = jo.a(param0, param1, (byte) -33);
-            break L0;
+          if (param2 != -27227) {
+            field_a = (al) null;
           }
+          stackIn_3_0 = jo.a(param0, param1, (byte) -33);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("gg.H(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("gg.H(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void b(byte param0) {
         nf.field_a = false;
         if (param0 != -98) {
-            ai var2 = (ai) null;
-            gg.a(121, 109, 0.5157560110092163f, (ai) null, 51, 109, -0.17956805229187012f, 1.0828834772109985f, -1.4294534921646118f, 111, 0.21281719207763672f);
+          ai var2 = (ai) null;
+          gg.a(121, 109, 0.5157560110092163f, (ai) null, 51, 109, -0.17956805229187012f, 1.0828834772109985f, -1.4294534921646118f, 111, 0.21281719207763672f);
         }
         ss.field_t = false;
         oi.a(-1, 20665);
@@ -156,8 +118,8 @@ abstract class gg {
 
     public static void a(boolean param0) {
         if (!param0) {
-            ai var2 = (ai) null;
-            gg.a(-90, 43, 0.35438913106918335f, (ai) null, 65, -70, 1.1266902685165405f, -1.0076642036437988f, -1.1031489372253418f, -37, 0.5276761054992676f);
+          ai var2 = (ai) null;
+          gg.a(-90, 43, 0.35438913106918335f, (ai) null, 65, -70, 1.1266902685165405f, -1.0076642036437988f, -1.1031489372253418f, -37, 0.5276761054992676f);
         }
         field_a = null;
         field_i = null;
@@ -199,8 +161,19 @@ abstract class gg {
         int var33 = 0;
         int var34 = 0;
         int var42 = 0;
+        int var29Lifetime1;
+        int var29Lifetime2;
+        int var29Lifetime3;
+        int var30Lifetime1;
+        int var30Lifetime2;
+        int var30Lifetime3;
+        int var31Lifetime1;
+        int var32Lifetime1;
+        int var42Lifetime1;
+        int var42Lifetime2;
+        int var42Lifetime3;
         if (!param0) {
-            gg.a(false);
+          gg.a(false);
         }
         int[] var47 = new int[param2];
         int[] var44 = var47;
@@ -209,99 +182,99 @@ abstract class gg {
         int[] var45 = var48;
         int[] var40 = var45;
         for (var42 = 0; param2 > var42; var42++) {
-            var39[var42] = (var42 << 190855084) / param2;
+          var39[var42] = (var42 << 12) / param2;
         }
         int[] var46 = new int[param1];
         int[] var43 = var46;
         int[] var41 = var43;
-        for (var42 = 0; param3 > var42; var42++) {
-            var40[var42] = (var42 << -687629812) / param3;
+        for (var42Lifetime1 = 0; param3 > var42Lifetime1; var42Lifetime1++) {
+          var40[var42Lifetime1] = (var42Lifetime1 << 12) / param3;
         }
-        for (var42 = 0; param1 > var42; var42++) {
-            var41[var42] = (var42 << -1260232500) / param1;
+        for (var42Lifetime2 = 0; param1 > var42Lifetime2; var42Lifetime2++) {
+          var41[var42Lifetime2] = (var42Lifetime2 << 12) / param1;
         }
         this.c(-30042);
         for (var37 = 0; var37 < param1; var37++) {
-            for (var36 = 0; param3 > var36; var36++) {
-                for (var35 = 0; param2 > var35; var35++) {
-                    for (var38 = 0; this.field_f > var38; var38++) {
-                        var42 = this.field_h[var38] << 533233740;
-                        var9 = this.field_e * var42 >> -1425613812;
-                        var7 = var42 * var46[var37] >> 154286220;
-                        var10 = this.field_g * var42 >> 939605004;
-                        var5 = var42 * var47[var35] >> 399166156;
-                        var6 = var42 * var48[var36] >> 1816855564;
-                        var8 = var42 * this.field_b >> -1652920180;
-                        var6 = var6 * this.field_e;
-                        var7 = var7 * this.field_g;
-                        var5 = var5 * this.field_b;
-                        var11 = var5 >> -654915028;
-                        var12 = var11 - -1;
-                        var11 = var11 & 255;
-                        var13 = var6 >> 1572466956;
-                        var14 = 1 + var13;
-                        var13 = var13 & 255;
-                        var15 = var7 >> 1514339596;
-                        var16 = var15 + 1;
-                        if (var16 < var10) {
-                            var16 = var16 & 255;
-                        } else {
-                            var16 = 0;
-                        }
-                        if (var8 > var12) {
-                            var12 = var12 & 255;
-                        } else {
-                            var12 = 0;
-                        }
-                        var6 = var6 & 4095;
-                        var15 = var15 & 255;
-                        if (var14 < var9) {
-                            var14 = var14 & 255;
-                        } else {
-                            var14 = 0;
-                        }
-                        var5 = var5 & 4095;
-                        var7 = var7 & 4095;
-                        var22 = var7 - 4096;
-                        var21 = -4096 + var6;
-                        var17 = ua.field_h[var5];
-                        var20 = -4096 + var5;
-                        var23 = this.field_d[var15];
-                        var24 = this.field_d[var16];
-                        var18 = ua.field_h[var6];
-                        var19 = ua.field_h[var7];
-                        var26 = this.field_d[var23 + var14];
-                        var27 = this.field_d[var24 + var13];
-                        var28 = this.field_d[var14 - -var24];
-                        var25 = this.field_d[var23 + var13];
-                        var29 = mq.a((byte) -128, var5, var7, (int) this.field_d[var25 + var11], var6);
-                        var30 = mq.a((byte) -125, var20, var7, (int) this.field_d[var12 - -var25], var6);
-                        var31 = var29 - -(var17 * (-var29 + var30) >> 1788394348);
-                        var29 = mq.a((byte) -84, var5, var7, (int) this.field_d[var26 + var11], var21);
-                        var30 = mq.a((byte) -109, var20, var7, (int) this.field_d[var26 + var12], var21);
-                        var32 = ((-var29 + var30) * var17 >> -1631052468) + var29;
-                        var33 = var31 + (var18 * (var32 + -var31) >> -1710995508);
-                        var29 = mq.a((byte) 78, var5, var22, (int) this.field_d[var27 + var11], var6);
-                        var30 = mq.a((byte) -62, var20, var22, (int) this.field_d[var12 + var27], var6);
-                        var31 = var29 - -((var30 - var29) * var17 >> -566593140);
-                        var29 = mq.a((byte) 110, var5, var22, (int) this.field_d[var11 - -var28], var21);
-                        var30 = mq.a((byte) 108, var20, var22, (int) this.field_d[var12 - -var28], var21);
-                        var32 = ((var30 + -var29) * var17 >> 1614552428) + var29;
-                        var34 = var31 - -(var18 * (var32 - var31) >> -1619336596);
-                        this.a(var38, var33 - -(var19 * (-var33 + var34) >> 1277909004), (byte) 119);
-                    }
-                    this.a(0);
+          for (var36 = 0; param3 > var36; var36++) {
+            for (var35 = 0; param2 > var35; var35++) {
+              for (var38 = 0; this.field_f > var38; var38++) {
+                var42Lifetime3 = this.field_h[var38] << 12;
+                var9 = this.field_e * var42Lifetime3 >> 12;
+                var7 = var42Lifetime3 * var46[var37] >> 12;
+                var10 = this.field_g * var42Lifetime3 >> 12;
+                var5 = var42Lifetime3 * var47[var35] >> 12;
+                var6 = var42Lifetime3 * var48[var36] >> 12;
+                var8 = var42Lifetime3 * this.field_b >> 12;
+                var6 = var6 * this.field_e;
+                var7 = var7 * this.field_g;
+                var5 = var5 * this.field_b;
+                var11 = var5 >> 12;
+                var12 = var11 + 1;
+                var11 = var11 & 255;
+                var13 = var6 >> 12;
+                var14 = 1 + var13;
+                var13 = var13 & 255;
+                var15 = var7 >> 12;
+                var16 = var15 + 1;
+                if (var16 < var10) {
+                  var16 = var16 & 255;
+                } else {
+                  var16 = 0;
                 }
+                if (var8 > var12) {
+                  var12 = var12 & 255;
+                } else {
+                  var12 = 0;
+                }
+                var6 = var6 & 4095;
+                var15 = var15 & 255;
+                if (var14 < var9) {
+                  var14 = var14 & 255;
+                } else {
+                  var14 = 0;
+                }
+                var5 = var5 & 4095;
+                var7 = var7 & 4095;
+                var22 = var7 - 4096;
+                var21 = -4096 + var6;
+                var17 = ua.field_h[var5];
+                var20 = -4096 + var5;
+                var23 = this.field_d[var15];
+                var24 = this.field_d[var16];
+                var18 = ua.field_h[var6];
+                var19 = ua.field_h[var7];
+                var26 = this.field_d[var23 + var14];
+                var27 = this.field_d[var24 + var13];
+                var28 = this.field_d[var14 + var24];
+                var25 = this.field_d[var23 + var13];
+                var29 = mq.a((byte) -128, var5, var7, (int) this.field_d[var25 + var11], var6);
+                var30 = mq.a((byte) -125, var20, var7, (int) this.field_d[var12 + var25], var6);
+                var31 = var29 + (var17 * (-var29 + var30) >> 12);
+                var29Lifetime1 = mq.a((byte) -84, var5, var7, (int) this.field_d[var26 + var11], var21);
+                var30Lifetime1 = mq.a((byte) -109, var20, var7, (int) this.field_d[var26 + var12], var21);
+                var32 = ((-var29Lifetime1 + var30Lifetime1) * var17 >> 12) + var29Lifetime1;
+                var33 = var31 + (var18 * (var32 - var31) >> 12);
+                var29Lifetime2 = mq.a((byte) 78, var5, var22, (int) this.field_d[var27 + var11], var6);
+                var30Lifetime2 = mq.a((byte) -62, var20, var22, (int) this.field_d[var12 + var27], var6);
+                var31Lifetime1 = var29Lifetime2 + ((var30Lifetime2 - var29Lifetime2) * var17 >> 12);
+                var29Lifetime3 = mq.a((byte) 110, var5, var22, (int) this.field_d[var11 + var28], var21);
+                var30Lifetime3 = mq.a((byte) 108, var20, var22, (int) this.field_d[var12 + var28], var21);
+                var32Lifetime1 = ((var30Lifetime3 - var29Lifetime3) * var17 >> 12) + var29Lifetime3;
+                var34 = var31Lifetime1 + (var18 * (var32Lifetime1 - var31Lifetime1) >> 12);
+                this.a(var38, var33 + (var19 * (-var33 + var34) >> 12), (byte) 119);
+              }
+              this.a(0);
             }
+          }
         }
     }
 
     private final void b(int param0) {
         int var2 = 0;
         this.field_h = new short[this.field_f];
-        int var3 = 61 / ((param0 - -67) / 53);
+        int var3 = 61 / ((param0 + 67) / 53);
         for (var2 = 0; this.field_f > var2; var2++) {
-            this.field_h[var2] = (short)(int)Math.pow(2.0, (double)var2);
+          this.field_h[var2] = (short)(int)Math.pow(2.0, (double)var2);
         }
     }
 

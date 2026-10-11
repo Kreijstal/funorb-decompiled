@@ -8,32 +8,12 @@ final class cm {
     static int field_a;
 
     final static boolean a(int param0) {
-        int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == -2043140287) {
-            break L0;
-          } else {
-            cm.a(-80);
-            break L0;
-          }
+        boolean stackIn_6_0 = false;
+        if (param0 != -2043140287) {
+          cm.a(-80);
         }
-        L1: {
-          L2: {
-            if (null == lk.field_h) {
-              break L2;
-            } else {
-              if (!d.field_f.a(-1)) {
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-          }
-          stackIn_6_0 = 0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        stackIn_6_0 = (null != lk.field_h) && (d.field_f.a(-1));
+        return stackIn_6_0;
     }
 
     final static int a(byte param0, int param1, int param2) {
@@ -46,67 +26,43 @@ final class cm {
         int var8 = 0;
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (param0 == 110) {
-                break L1;
-              } else {
-                cm.a((byte) 84);
-                break L1;
-              }
-            }
-            var3_int = 0;
-            var4 = ie.field_j;
-            L2: while (true) {
-              if (var3_int >= ii.field_b.length) {
-                stackIn_13_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = cd.field_f[var3_int];
-                  if ((var5 ^ -1) <= -1) {
-                    var6 = h.a(ii.field_b[var3_int], (byte) -113, true);
-                    var7 = -(var6 >> 943837537) + mk.field_i;
-                    var4 = var4 + dc.field_bb;
-                    if (!mo.a((vf.field_w << -221223775) + w.field_b, param2, var6 - -(pg.field_G << -2043140287), param1, 27, -pg.field_G + var7, var4)) {
-                      var4 = var4 + ((vf.field_w << -1855829503) + dc.field_bb - -w.field_b);
-                      break L3;
-                    } else {
-                      stackIn_9_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  } else {
-                    var4 = var4 + hn.field_M;
-                    break L3;
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          if (param0 != 110) {
+            cm.a((byte) 84);
           }
+          var3_int = 0;
+          var4 = ie.field_j;
+          while (var3_int < ii.field_b.length) {
+            var5 = cd.field_f[var3_int];
+            if (var5 >= 0) {
+              var6 = h.$cfr$intArgs$a$1694234bddb3(ii.field_b[var3_int], -113, true);
+              var7 = -(var6 >> 1) + mk.field_i;
+              var4 = var4 + dc.field_bb;
+              if (mo.a((vf.field_w << 1) + w.field_b, param2, var6 + (pg.field_G << 1), param1, 27, -pg.field_G + var7, var4)) {
+                stackIn_9_0 = var5;
+                return stackIn_9_0;
+              }
+              var4 = var4 + ((vf.field_w << 1) + dc.field_bb + w.field_b);
+            } else {
+              var4 = var4 + hn.field_M;
+            }
+            var3_int++;
+          }
+          stackIn_13_0 = -1;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw kk.a((Throwable) ((Object) var3), "cm.C(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_9_0;
-        } else {
-          return stackIn_13_0;
         }
     }
 
     public static void a(byte param0) {
         field_d = null;
         if (param0 >= -28) {
-            field_a = 78;
+          field_a = 78;
         }
         field_c = null;
     }

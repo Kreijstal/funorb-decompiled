@@ -9,87 +9,58 @@ final class fu extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                fu.e((byte) -53);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(ew.field_o);
-            break L0;
+          if (param1 >= -119) {
+            fu.e((byte) -53);
           }
+          stackIn_3_0 = new nc(ew.field_o);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("fu.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("fu.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static boolean a(int param0) {
-        if (param0 >= 43) {
-          if (ef.field_z >= 20) {
-            if (eu.a(true)) {
-              if (-1 > (jl.field_p ^ -1)) {
-                if (nua.b(true)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 < 43) {
           field_o = (jra) null;
-          if (ef.field_z >= 20) {
-            if (eu.a(true)) {
-              if (-1 > (jl.field_p ^ -1)) {
-                if (nua.b(true)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (ef.field_z < 20) {
             return true;
           }
+          if (!eu.a(true)) {
+            return true;
+          }
+          if (jl.field_p <= 0) {
+            return false;
+          }
+          if (!nua.b(true)) {
+            return true;
+          }
+          return false;
         }
+        if (ef.field_z < 20) {
+          return true;
+        }
+        if (!eu.a(true)) {
+          return true;
+        }
+        if (jl.field_p <= 0) {
+          return false;
+        }
+        if (!nua.b(true)) {
+          return true;
+        }
+        return false;
     }
 
     fu(String param0, Class[] param1, String param2) {
@@ -98,7 +69,7 @@ final class fu extends rqa {
 
     public static void e(byte param0) {
         if (param0 >= -121) {
-            return;
+          return;
         }
         field_o = null;
     }

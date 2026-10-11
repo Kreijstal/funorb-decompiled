@@ -15,45 +15,45 @@ final class d extends jc {
     final void b(boolean param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_A);
-        kh var3 = (kh) ((Object) var2.a((byte) -13));
+        kh var3 = (kh) (var2.a((byte) -13));
         if (param0) {
-            field_N = (bg[]) null;
+          field_N = (bg[]) null;
         }
         while (var3 != null) {
-            var3.field_J = false;
-            var3 = (kh) ((Object) var2.c(55));
+          var3.field_J = false;
+          var3 = (kh) (var2.c(55));
         }
         this.field_F = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = Terraphoenix.field_V;
-        if (!(null == this.field_l)) {
-            this.field_l.a(param3, (gl) (this), param0, -24381, true);
+        if (null != this.field_l) {
+          this.field_l.a(param3, (gl) (this), param0, -24381, true);
         }
         k var5 = new k(this.field_A);
-        gl var6 = (gl) ((Object) var5.b(94));
+        gl var6 = (gl) (var5.b(94));
         while (var6 != null) {
-            var6.a(param0 - -this.field_w, -122, param2, param3 - -this.field_u);
-            var6 = (gl) ((Object) var5.d(-96));
+          var6.a(param0 + this.field_w, -122, param2, param3 + this.field_u);
+          var6 = (gl) (var5.d(-96));
         }
         if (param1 > -106) {
-            field_H = false;
+          field_H = false;
         }
     }
 
     final void i(byte param0) {
         int var4 = Terraphoenix.field_V;
         k var2 = new k(this.field_A);
-        kh var3 = (kh) ((Object) var2.a((byte) -13));
+        kh var3 = (kh) (var2.a((byte) -13));
         if (param0 < 122) {
-            field_I = (nk) null;
+          field_I = (nk) null;
         }
         while (var3 != null) {
-            if (var3.f((byte) -121)) {
-                var3.b((byte) 12);
-            }
-            var3 = (kh) ((Object) var2.c(101));
+          if (var3.f((byte) -121)) {
+            var3.b((byte) 12);
+          }
+          var3 = (kh) (var2.c(101));
         }
         this.field_F = (gl) ((Object) this.c(true));
     }
@@ -63,30 +63,20 @@ final class d extends jc {
         kh var3;
         int var4;
         gl var5;
-        L0: {
-          var4 = Terraphoenix.field_V;
-          var2 = new k(this.field_A);
-          var3 = (kh) ((Object) var2.a((byte) -13));
-          if (param0) {
-            break L0;
-          } else {
-            var5 = (gl) null;
-            this.a((gl) null, (byte) -108);
-            break L0;
-          }
+        var4 = Terraphoenix.field_V;
+        var2 = new k(this.field_A);
+        var3 = (kh) (var2.a((byte) -13));
+        if (!param0) {
+          var5 = (gl) null;
+          this.a((gl) null, (byte) -108);
         }
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_J) {
-              var3 = (kh) ((Object) var2.c(42));
-              continue L1;
-            } else {
-              return var3;
-            }
-          } else {
-            return null;
+        while (var3 != null) {
+          if (var3.field_J) {
+            return var3;
           }
+          var3 = (kh) (var2.c(42));
         }
+        return null;
     }
 
     public d() {
@@ -98,12 +88,12 @@ final class d extends jc {
         int var5 = Terraphoenix.field_V;
         k var2 = new k(this.field_A);
         int var4 = -99 % ((param0 - 39) / 45);
-        kh var3 = (kh) ((Object) var2.a((byte) -13));
+        kh var3 = (kh) (var2.a((byte) -13));
         while (var3 != null) {
-            if (var3.i(113)) {
-                var3.b((byte) 12);
-            }
-            var3 = (kh) ((Object) var2.c(8));
+          if (var3.i(113)) {
+            var3.b((byte) 12);
+          }
+          var3 = (kh) (var2.c(8));
         }
     }
 
@@ -111,29 +101,19 @@ final class d extends jc {
         k var2;
         kh var3;
         int var4;
-        L0: {
-          var4 = Terraphoenix.field_V;
-          if (param0 == 82) {
-            break L0;
-          } else {
-            this.a(-6, -54, -122, -16);
-            break L0;
-          }
+        var4 = Terraphoenix.field_V;
+        if (param0 != 82) {
+          this.a(-6, -54, -122, -16);
         }
         var2 = new k(this.field_A);
-        var3 = (kh) ((Object) var2.a((byte) -13));
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_J) {
-              var3 = (kh) ((Object) var2.c(74));
-              continue L1;
-            } else {
-              return var3.e((byte) -116);
-            }
-          } else {
-            return null;
+        var3 = (kh) (var2.a((byte) -13));
+        while (var3 != null) {
+          if (var3.field_J) {
+            return var3.e((byte) -116);
           }
+          var3 = (kh) (var2.c(74));
         }
+        return null;
     }
 
     public static void g(byte param0) {
@@ -149,18 +129,18 @@ final class d extends jc {
     final void a(gl param0, byte param1) {
         kh var3 = null;
         if (!(param0 instanceof kh)) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         if (param1 != -1) {
-            return;
+          return;
         }
         try {
-            var3 = (kh) ((Object) param0);
-            this.field_A.a((uf) (var3), (byte) 0);
-            var3.field_J = true;
-            var3.a((byte) 14, (gl) (this));
+          var3 = (kh) (param0);
+          this.field_A.a((uf) (var3), (byte) 0);
+          var3.field_J = true;
+          var3.a((byte) 14, (gl) (this));
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

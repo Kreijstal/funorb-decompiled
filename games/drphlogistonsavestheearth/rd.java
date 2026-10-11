@@ -16,16 +16,16 @@ final class rd extends wh {
 
     final boolean a(byte param0) {
         if (param0 != 28) {
-            return false;
+          return false;
         }
         return false;
     }
 
     final Object b(byte param0) {
         if (param0 <= 57) {
-            vj var3 = (vj) null;
-            rd.a(-9, true, -89, (vj) null);
-            return this.field_I;
+          vj var3 = (vj) null;
+          rd.a(-9, true, -89, (vj) null);
+          return this.field_I;
         }
         return this.field_I;
     }
@@ -35,46 +35,29 @@ final class rd extends wh {
         he[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1) {
-              if (fl.a(param0, param3, param2, (byte) -98)) {
-                return ih.k(24782);
-              } else {
-                return null;
-              }
-            } else {
-              stackIn_2_0 = (he[]) null;
-              break L0;
-            }
+          if (!param1) {
+            stackIn_2_0 = (he[]) null;
+            return stackIn_2_0;
           }
+          if (fl.a(param0, param3, param2, (byte) -98)) {
+            return ih.k(24782);
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L1;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("rd.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_2_0;
     }
 
     public static void g(int param0) {
@@ -84,37 +67,33 @@ final class rd extends wh {
         field_E = null;
         field_A = null;
         if (param0 > -102) {
-            rd.h(-77);
+          rd.h(-77);
         }
     }
 
     final static void h(int param0) {
-        if (param0 == 300) {
-          if (-11 > (dg.field_e ^ -1)) {
-            lc.a(dg.field_e - 10, (byte) 24);
-            return;
-          } else {
-            lc.a(0, (byte) 24);
-            return;
-          }
-        } else {
+        if (param0 != 300) {
           rd.g(37);
-          if (-11 > (dg.field_e ^ -1)) {
-            lc.a(dg.field_e - 10, (byte) 24);
-            return;
-          } else {
+          if (dg.field_e <= 10) {
             lc.a(0, (byte) 24);
             return;
           }
+          lc.a(dg.field_e - 10, (byte) 24);
+          return;
         }
+        if (dg.field_e <= 10) {
+          lc.a(0, (byte) 24);
+          return;
+        }
+        lc.a(dg.field_e - 10, (byte) 24);
     }
 
     rd(Object param0, int param1) {
         super(param1);
         try {
-            this.field_I = param0;
+          this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

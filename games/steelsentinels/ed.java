@@ -15,49 +15,25 @@ final class ed {
 
     final static void b(byte param0) {
         try {
-            Exception var1 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == -105) {
-                break L0;
-              } else {
-                field_b = (String) null;
-                break L0;
-              }
+          Exception var1 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != -105) {
+            field_b = (String) null;
+          }
+          if (null != va.field_h) {
+            try {
+              va.field_h.a(-94, 0L);
+              va.field_h.a(rf.field_d.field_p, 24, param0 ^ -67, rf.field_d.field_t);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
             }
-            L1: {
-              if (null == va.field_h) {
-                break L1;
-              } else {
-                try {
-                  L2: {
-                    va.field_h.a(-94, 0L);
-                    va.field_h.a(rf.field_d.field_p, 24, param0 ^ -67, rf.field_d.field_t);
-                    decompiledRegionSelector0 = 0;
-                    break L2;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var1 = (Exception) (Object) decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L3;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  rf.field_d.field_p = rf.field_d.field_p + 24;
-                  return;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            rf.field_d.field_p = rf.field_d.field_p + 24;
+          }
+          rf.field_d.field_p = rf.field_d.field_p + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

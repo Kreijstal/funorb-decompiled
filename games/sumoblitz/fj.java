@@ -10,9 +10,9 @@ abstract class fj {
 
     void a(ji param0, int param1) {
         if (param1 != 15149) {
-            this.field_c = (io) null;
-            this.field_a = param0;
-            return;
+          this.field_c = (io) null;
+          this.field_a = param0;
+          return;
         }
         this.field_a = param0;
     }

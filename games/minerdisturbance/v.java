@@ -11,9 +11,9 @@ final class v implements uj {
     public final void a(boolean param0) {
         om.field_g = 12;
         if (param0) {
-            this.a(true);
-            tb.field_a = 4;
-            return;
+          this.a(true);
+          tb.field_a = 4;
+          return;
         }
         tb.field_a = 4;
     }
@@ -27,7 +27,7 @@ final class v implements uj {
         field_d = null;
         field_b = null;
         if (param0 > -25) {
-            return;
+          return;
         }
         field_a = null;
     }

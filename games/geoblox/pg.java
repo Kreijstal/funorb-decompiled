@@ -31,6 +31,7 @@ final class pg {
 
     final static void a(int param0, d param1, int param2, qc param3) {
         try {
+          int var5 = 0;
           int var11_int = 0;
           int var12_int = 0;
           byte[] array$0 = null;
@@ -39,10 +40,8 @@ final class pg {
           String stackIn_42_2 = null;
           StringBuilder stackIn_44_1 = null;
           String stackIn_45_2 = null;
-          int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           RuntimeException var4 = null;
-          int var5 = 0;
           int var6_int = 0;
           ClassNotFoundException var6 = null;
           SecurityException var6_ref = null;
@@ -77,21 +76,14 @@ final class pg {
             var19.field_n = new cb[var19.field_f];
             var19.field_k = new int[var19.field_f];
             var19.field_o = new byte[var19.field_f][][];
-            var5 = 0;
-            while (var5 < var19.field_f) {
+            for (var5 = 0; var5 < var19.field_f; var5++) {
               try {
-                boolean decompiledFrameRemainder0 = true;
                 var6_int = param3.c((byte) 34);
                 if (0 != var6_int &&
                   1 != var6_int &&
                   var6_int != 2) {
-                  if (var6_int != 3 &&
-                    var6_int != 4) {
-                    var5++;
-                    decompiledRegionSelector0 = 1;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
+                  if (var6_int == 3 ||
+                    var6_int == 4) {
                     var21 = param3.e((byte) 103);
                     var8 = param3.e((byte) 98);
                     var9 = param3.c((byte) 34);
@@ -134,39 +126,27 @@ final class pg {
                   var19.field_g[var5] = var9;
                   var19.field_n[var5] = param1.a(ag.a(var16, false), 0, var17);
                 }
-                if (decompiledFrameRemainder0) {
-                  decompiledRegionSelector0 = 0;
-                }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
                 var19.field_j[var5] = -1;
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (SecurityException) (Object) decompiledCaughtException;
                 var19.field_j[var5] = -2;
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
                 var19.field_j[var5] = -3;
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var6_ref3 = (Exception) (Object) decompiledCaughtException;
                 var19.field_j[var5] = -4;
-                decompiledRegionSelector0 = 0;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var6_ref4 = decompiledCaughtException;
                 var19.field_j[var5] = -5;
-                decompiledRegionSelector0 = 0;
               }
-              if (decompiledRegionSelector0 != 0) {
-                continue;
-              }
-              var5++;
             }
             if (param0 != -4) {
               var15 = (qc) null;

@@ -7,18 +7,18 @@ final class fl {
 
     public static void a(int param0) {
         if (param0 != -20562) {
-            fl.a(-20);
-            field_b = null;
-            return;
+          fl.a(-20);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static void a(ka param0, int param1) {
         try {
-            param0.field_M.field_w = (double)param1;
+          param0.field_M.field_w = (double)param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "fl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "fl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

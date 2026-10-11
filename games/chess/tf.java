@@ -10,61 +10,44 @@ final class tf extends o {
     byte[] field_j;
 
     final static String a(int param0, long param1) {
-        StringBuilder discarded$1 = null;
-        int var3;
-        long var4;
-        StringBuilder var6;
-        long var7;
-        int var9;
-        int var10;
-        int var11;
-        var11 = Chess.field_G;
-        if (-1L > (param1 ^ -1L)) {
-          if ((param1 ^ -1L) > -6582952005840035282L) {
-            if (0L == param1 % (long)param0) {
-              return null;
-            } else {
-              var3 = 0;
-              var4 = param1;
-              L0: while (true) {
-                if (var4 == 0L) {
-                  var6 = new StringBuilder(var3);
-                  L1: while (true) {
-                    if ((param1 ^ -1L) == -1L) {
-                      var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                      return var6.toString();
-                    } else {
-                      L2: {
-                        var7 = param1;
-                        param1 = param1 / 37L;
-                        var9 = sa.field_a[(int)(var7 + -(param1 * 37L))];
-                        if (95 != var9) {
-                          break L2;
-                        } else {
-                          var10 = -1 + var6.length();
-                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                          var9 = 160;
-                          break L2;
-                        }
-                      }
-                      discarded$1 = var6.append((char) var9);
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var3++;
-                  var4 = var4 / 37L;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        int var3 = 0;
+        long var4 = 0L;
+        StringBuilder var6 = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
+        StringBuilder discarded$0 = null;
+        int var11 = Chess.field_G;
+        if (param1 <= 0L) {
           return null;
         }
+        if (param1 >= 6582952005840035281L) {
+          return null;
+        }
+        if (0L != param1 % (long)param0) {
+          var3 = 0;
+          var4 = param1;
+          while (var4 != 0L) {
+            var3++;
+            var4 = var4 / 37L;
+          }
+          var6 = new StringBuilder(var3);
+          while (param1 != 0L) {
+            var7 = param1;
+            param1 = param1 / 37L;
+            var9 = sa.field_a[(int)(var7 - param1 * 37L)];
+            if (95 == var9) {
+              var10 = -1 + var6.length();
+              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+              var9 = 160;
+            }
+            discarded$0 = var6.append((char) var9);
+          }
+          var6.reverse();
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+          return var6.toString();
+        }
+        return null;
     }
 
     final static String a(int param0, CharSequence param1) {
@@ -72,46 +55,26 @@ final class tf extends o {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -25) {
-                break L1;
-              } else {
-                tf.a(10, (byte) -9, -40);
-                break L1;
-              }
-            }
-            stackIn_3_0 = cf.a(param1, -51, false);
-            break L0;
+          if (param0 >= -25) {
+            tf.a(10, (byte) -9, -40);
           }
+          stackIn_3_0 = cf.a(param1, -51, false);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("tf.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("tf.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0) {
@@ -119,13 +82,13 @@ final class tf extends o {
         int var2 = ug.field_b * ug.field_b;
         int var3 = -(an.field_e * an.field_e) + var2;
         ql.field_d.a(-(var3 * 199 / var2) + var1, 199, -2147483648, -4 + (-120 + (wb.field_c - param0)), 90);
-        rb.field_c.a(var3 * 438 / var2 + (var1 - -202), 438, -2147483648, -120 + wb.field_c + -4, 0);
+        rb.field_c.a(var3 * 438 / var2 + (var1 + 202), 438, -2147483648, -120 + wb.field_c - 4, 0);
     }
 
     final static km[] a(int param0, byte param1, int param2) {
         if (param1 != -46) {
-            field_k = (String) null;
-            return om.a(1, param0, param2, (byte) -87);
+          field_k = (String) null;
+          return om.a(1, param0, param2, (byte) -87);
         }
         return om.a(1, param0, param2, (byte) -87);
     }
@@ -133,18 +96,18 @@ final class tf extends o {
     public static void a(boolean param0) {
         field_k = null;
         if (param0) {
-            return;
+          return;
         }
         field_l = null;
     }
 
     tf(long param0, int param1, byte[] param2) {
         try {
-            this.field_j = param2;
-            this.field_m = param0;
-            this.field_n = param1;
+          this.field_j = param2;
+          this.field_m = param0;
+          this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "tf.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "tf.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,16 +8,16 @@ final class hh {
 
     final static boolean a(int param0, byte param1, int param2) {
         if (param1 != 5) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final static void a(int param0, boolean param1) {
         if (param0 != 40) {
-            field_a = (String[]) null;
-            wi.field_s.b(108, param1);
-            return;
+          field_a = (String[]) null;
+          wi.field_s.b(108, param1);
+          return;
         }
         wi.field_s.b(108, param1);
     }
@@ -26,9 +26,9 @@ final class hh {
         field_c = null;
         field_a = null;
         if (param0) {
-            hh.a(54, false);
-            field_b = null;
-            return;
+          hh.a(54, false);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

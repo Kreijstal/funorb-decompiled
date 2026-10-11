@@ -12,7 +12,7 @@ final class v {
     public static void a(int param0) {
         field_c = null;
         if (param0 < 100) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

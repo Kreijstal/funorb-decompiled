@@ -8,15 +8,15 @@ abstract class sc implements eeb {
     public final void a(int param0) {
         this.field_a = wt.a(false);
         if (param0 <= 6) {
-            this.field_a = -33L;
+          this.field_a = -33L;
         }
     }
 
     public static void c(int param0) {
         if (param0 < 36) {
-            sc.c(-26);
-            field_b = null;
-            return;
+          sc.c(-26);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -24,18 +24,15 @@ abstract class sc implements eeb {
     public final qrb a(byte param0) {
         if (this.b((byte) -120)) {
           return mp.field_p;
-        } else {
-          if (350L + this.field_a > wt.a(false)) {
-            return tg.field_p;
-          } else {
-            if (param0 != 35) {
-              field_b = (String) null;
-              return this.b(-1);
-            } else {
-              return this.b(-1);
-            }
-          }
         }
+        if (!(350L + this.field_a <= wt.a(false))) {
+          return tg.field_p;
+        }
+        if (param0 == 35) {
+          return this.b(-1);
+        }
+        field_b = (String) null;
+        return this.b(-1);
     }
 
     abstract String d(int param0);
@@ -43,19 +40,16 @@ abstract class sc implements eeb {
     abstract qrb b(int param0);
 
     public final String c(byte param0) {
-        if (param0 == -79) {
-          if (!this.b((byte) -115)) {
-            if ((wt.a(false) ^ -1L) > (this.field_a - -350L ^ -1L)) {
-              return null;
-            } else {
-              return this.d(16384);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 != -79) {
           return (String) null;
         }
+        if (this.b((byte) -115)) {
+          return null;
+        }
+        if (wt.a(false) >= (this.field_a + 350L)) {
+          return this.d(16384);
+        }
+        return null;
     }
 
     static {

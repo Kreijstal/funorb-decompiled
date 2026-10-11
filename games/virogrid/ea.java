@@ -11,10 +11,10 @@ final class ea {
 
     public static void a(int param0) {
         if (param0 > -47) {
-            ea.a(35);
-            field_c = null;
-            field_e = null;
-            return;
+          ea.a(35);
+          field_c = null;
+          field_e = null;
+          return;
         }
         field_c = null;
         field_e = null;

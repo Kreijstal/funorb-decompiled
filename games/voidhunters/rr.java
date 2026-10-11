@@ -12,53 +12,29 @@ final class rr extends rqa {
         caa stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (pa.a(param2, 2, param1, param3)) {
-              if (param0 == -32431) {
-                stackIn_7_0 = dlb.a(-115);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                stackIn_5_0 = (caa) null;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              return null;
-            }
+          if (!pa.a(param2, 2, param1, param3)) {
+            return null;
           }
+          if (param0 == -32431) {
+            stackIn_7_0 = dlb.a(-115);
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (caa) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("rr.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("rr.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -69,231 +45,175 @@ final class rr extends rqa {
         var4 = VoidHunters.field_G;
         var2 = 92 / ((param1 - 11) / 34);
         var3 = param0;
-        if (-33 != (var3 ^ -1)) {
-          if (var3 != 160) {
-            if ((var3 ^ -1) != -96) {
-              if ((var3 ^ -1) != -46) {
-                if (var3 != 91) {
-                  if (-94 != (var3 ^ -1)) {
-                    if (-36 != (var3 ^ -1)) {
-                      if ((var3 ^ -1) != -225) {
-                        if (225 != var3) {
-                          if (226 != var3) {
-                            if (228 != var3) {
-                              if (var3 != 227) {
-                                if ((var3 ^ -1) != -193) {
-                                  if ((var3 ^ -1) != -194) {
-                                    if (-195 != (var3 ^ -1)) {
-                                      if ((var3 ^ -1) != -197) {
-                                        if (-196 != (var3 ^ -1)) {
-                                          if (var3 != 232) {
-                                            if (var3 != 233) {
-                                              if (-235 != (var3 ^ -1)) {
-                                                if ((var3 ^ -1) != -236) {
-                                                  if (-201 != (var3 ^ -1)) {
-                                                    if ((var3 ^ -1) != -202) {
-                                                      if (-203 != (var3 ^ -1)) {
-                                                        if (203 != var3) {
-                                                          if (-238 != (var3 ^ -1)) {
-                                                            if ((var3 ^ -1) != -239) {
-                                                              if (-240 != (var3 ^ -1)) {
-                                                                if (205 != var3) {
-                                                                  if (206 != var3) {
-                                                                    if ((var3 ^ -1) != -208) {
-                                                                      if ((var3 ^ -1) != -243) {
-                                                                        if (243 != var3) {
-                                                                          if (-245 != (var3 ^ -1)) {
-                                                                            if (var3 != 246) {
-                                                                              if (var3 != 245) {
-                                                                                if (210 != var3) {
-                                                                                  if (-212 != (var3 ^ -1)) {
-                                                                                    if (212 != var3) {
-                                                                                      if ((var3 ^ -1) != -215) {
-                                                                                        if (-214 != (var3 ^ -1)) {
-                                                                                          if (var3 != 249) {
-                                                                                            if ((var3 ^ -1) != -251) {
-                                                                                              if (-252 != (var3 ^ -1)) {
-                                                                                                if (-253 != (var3 ^ -1)) {
-                                                                                                  if (217 != var3) {
-                                                                                                    if (var3 != 218) {
-                                                                                                      if (var3 != 219) {
-                                                                                                        if ((var3 ^ -1) != -221) {
-                                                                                                          if (var3 != 231) {
-                                                                                                            if (199 != var3) {
-                                                                                                              if ((var3 ^ -1) != -256) {
-                                                                                                                if (-377 != (var3 ^ -1)) {
-                                                                                                                  if (241 != var3) {
-                                                                                                                    if (209 != var3) {
-                                                                                                                      if (223 != var3) {
-                                                                                                                        return Character.toLowerCase(param0);
-                                                                                                                      } else {
-                                                                                                                        return 'b';
-                                                                                                                      }
-                                                                                                                    } else {
-                                                                                                                      return 'n';
-                                                                                                                    }
-                                                                                                                  } else {
-                                                                                                                    return 'n';
-                                                                                                                  }
-                                                                                                                } else {
-                                                                                                                  return 'y';
-                                                                                                                }
-                                                                                                              } else {
-                                                                                                                return 'y';
-                                                                                                              }
-                                                                                                            } else {
-                                                                                                              return 'c';
-                                                                                                            }
-                                                                                                          } else {
-                                                                                                            return 'c';
-                                                                                                          }
-                                                                                                        } else {
-                                                                                                          return 'u';
-                                                                                                        }
-                                                                                                      } else {
-                                                                                                        return 'u';
-                                                                                                      }
-                                                                                                    } else {
-                                                                                                      return 'u';
-                                                                                                    }
-                                                                                                  } else {
-                                                                                                    return 'u';
-                                                                                                  }
-                                                                                                } else {
-                                                                                                  return 'u';
-                                                                                                }
-                                                                                              } else {
-                                                                                                return 'u';
-                                                                                              }
-                                                                                            } else {
-                                                                                              return 'u';
-                                                                                            }
-                                                                                          } else {
-                                                                                            return 'u';
-                                                                                          }
-                                                                                        } else {
-                                                                                          return 'o';
-                                                                                        }
-                                                                                      } else {
-                                                                                        return 'o';
-                                                                                      }
-                                                                                    } else {
-                                                                                      return 'o';
-                                                                                    }
-                                                                                  } else {
-                                                                                    return 'o';
-                                                                                  }
-                                                                                } else {
-                                                                                  return 'o';
-                                                                                }
-                                                                              } else {
-                                                                                return 'o';
-                                                                              }
-                                                                            } else {
-                                                                              return 'o';
-                                                                            }
-                                                                          } else {
-                                                                            return 'o';
-                                                                          }
-                                                                        } else {
-                                                                          return 'o';
-                                                                        }
-                                                                      } else {
-                                                                        return 'o';
-                                                                      }
-                                                                    } else {
-                                                                      return 'i';
-                                                                    }
-                                                                  } else {
-                                                                    return 'i';
-                                                                  }
-                                                                } else {
-                                                                  return 'i';
-                                                                }
-                                                              } else {
-                                                                return 'i';
-                                                              }
-                                                            } else {
-                                                              return 'i';
-                                                            }
-                                                          } else {
-                                                            return 'i';
-                                                          }
-                                                        } else {
-                                                          return 'e';
-                                                        }
-                                                      } else {
-                                                        return 'e';
-                                                      }
-                                                    } else {
-                                                      return 'e';
-                                                    }
-                                                  } else {
-                                                    return 'e';
-                                                  }
-                                                } else {
-                                                  return 'e';
-                                                }
-                                              } else {
-                                                return 'e';
-                                              }
-                                            } else {
-                                              return 'e';
-                                            }
-                                          } else {
-                                            return 'e';
-                                          }
-                                        } else {
-                                          return 'a';
-                                        }
-                                      } else {
-                                        return 'a';
-                                      }
-                                    } else {
-                                      return 'a';
-                                    }
-                                  } else {
-                                    return 'a';
-                                  }
-                                } else {
-                                  return 'a';
-                                }
-                              } else {
-                                return 'a';
-                              }
-                            } else {
-                              return 'a';
-                            }
-                          } else {
-                            return 'a';
-                          }
-                        } else {
-                          return 'a';
-                        }
-                      } else {
-                        return 'a';
-                      }
-                    } else {
-                      return param0;
-                    }
-                  } else {
-                    return param0;
-                  }
-                } else {
-                  return param0;
-                }
-              } else {
-                return '_';
-              }
-            } else {
-              return '_';
-            }
-          } else {
-            return '_';
-          }
-        } else {
+        if (var3 == 32) {
           return '_';
         }
+        if (var3 == 160) {
+          return '_';
+        }
+        if (var3 == 95) {
+          return '_';
+        }
+        if (var3 == 45) {
+          return '_';
+        }
+        if (var3 == 91) {
+          return param0;
+        }
+        if (var3 == 93) {
+          return param0;
+        }
+        if (var3 == 35) {
+          return param0;
+        }
+        if (var3 == 224) {
+          return 'a';
+        }
+        if (225 == var3) {
+          return 'a';
+        }
+        if (226 == var3) {
+          return 'a';
+        }
+        if (228 == var3) {
+          return 'a';
+        }
+        if (var3 == 227) {
+          return 'a';
+        }
+        if (var3 == 192) {
+          return 'a';
+        }
+        if (var3 == 193) {
+          return 'a';
+        }
+        if (var3 == 194) {
+          return 'a';
+        }
+        if (var3 == 196) {
+          return 'a';
+        }
+        if (var3 == 195) {
+          return 'a';
+        }
+        if (var3 == 232) {
+          return 'e';
+        }
+        if (var3 == 233) {
+          return 'e';
+        }
+        if (var3 == 234) {
+          return 'e';
+        }
+        if (var3 == 235) {
+          return 'e';
+        }
+        if (var3 == 200) {
+          return 'e';
+        }
+        if (var3 == 201) {
+          return 'e';
+        }
+        if (var3 == 202) {
+          return 'e';
+        }
+        if (203 == var3) {
+          return 'e';
+        }
+        if (var3 == 237) {
+          return 'i';
+        }
+        if (var3 == 238) {
+          return 'i';
+        }
+        if (var3 == 239) {
+          return 'i';
+        }
+        if (205 == var3) {
+          return 'i';
+        }
+        if (206 == var3) {
+          return 'i';
+        }
+        if (var3 == 207) {
+          return 'i';
+        }
+        if (var3 == 242) {
+          return 'o';
+        }
+        if (243 == var3) {
+          return 'o';
+        }
+        if (var3 == 244) {
+          return 'o';
+        }
+        if (var3 == 246) {
+          return 'o';
+        }
+        if (var3 == 245) {
+          return 'o';
+        }
+        if (210 == var3) {
+          return 'o';
+        }
+        if (var3 == 211) {
+          return 'o';
+        }
+        if (212 == var3) {
+          return 'o';
+        }
+        if (var3 == 214) {
+          return 'o';
+        }
+        if (var3 == 213) {
+          return 'o';
+        }
+        if (var3 == 249) {
+          return 'u';
+        }
+        if (var3 == 250) {
+          return 'u';
+        }
+        if (var3 == 251) {
+          return 'u';
+        }
+        if (var3 == 252) {
+          return 'u';
+        }
+        if (217 == var3) {
+          return 'u';
+        }
+        if (var3 == 218) {
+          return 'u';
+        }
+        if (var3 == 219) {
+          return 'u';
+        }
+        if (var3 == 220) {
+          return 'u';
+        }
+        if (var3 == 231) {
+          return 'c';
+        }
+        if (199 == var3) {
+          return 'c';
+        }
+        if (var3 == 255) {
+          return 'y';
+        }
+        if (var3 == 376) {
+          return 'y';
+        }
+        if (241 == var3) {
+          return 'n';
+        }
+        if (209 == var3) {
+          return 'n';
+        }
+        if (223 != var3) {
+          return Character.toLowerCase(param0);
+        }
+        return 'b';
     }
 
     final nc a(nc[] param0, int param1) {
@@ -302,49 +222,26 @@ final class rr extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc(frb.a(171, 115));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc(frb.a(171, 115));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("rr.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("rr.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

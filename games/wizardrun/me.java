@@ -14,14 +14,14 @@ final class me {
         field_d = null;
         field_b = null;
         if (param0 != -31) {
-            field_f = -76;
+          field_f = -76;
         }
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
         if ((7 & param0) != 0) {
-            var2 = -(param0 & 7) + 8;
+          var2 = -(param0 & 7) + 8;
         }
         int var4 = 77 / ((10 - param1) / 47);
         int var3 = param0 + var2;
@@ -32,21 +32,19 @@ final class me {
         String var2 = (String) null;
         rj.a((String) null, we.field_a, true);
         if (param0 != 7) {
-            me.a((byte) -55);
+          me.a((byte) -55);
         }
     }
 
     final static void a(int param0, boolean param1) {
         jf.field_f = mf.field_g[param0];
         bl.field_c = af.field_c[param0];
-        if (!param1) {
-          me.a((byte) -45);
-          td.field_e = wh.field_e[param0];
-          return;
-        } else {
+        if (param1) {
           td.field_e = wh.field_e[param0];
           return;
         }
+        me.a((byte) -45);
+        td.field_e = wh.field_e[param0];
     }
 
     static {

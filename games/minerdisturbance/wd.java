@@ -13,7 +13,7 @@ final class wd {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        int var1 = -102 / ((param0 - -6) / 46);
+        int var1 = -102 / ((param0 + 6) / 46);
     }
 
     static {

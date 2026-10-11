@@ -8,65 +8,38 @@ abstract class ar {
     static String field_a;
 
     final int a(int param0, int param1, int param2) {
+        int var5 = 0;
         int var4;
-        int var5;
         toa var6;
         int var7;
         int var8;
-        L0: {
-          var8 = VoidHunters.field_G;
-          if (this.field_c == null) {
-            break L0;
-          } else {
-            if (0 == this.field_c.length) {
-              break L0;
-            } else {
-              if (this.field_c[0].field_b > param0) {
-                break L0;
-              } else {
-                if (this.field_c[-1 + this.field_c.length].field_a < param0) {
-                  return -1;
-                } else {
-                  if (param1 == -23381) {
-                    if (1 == this.field_c.length) {
-                      return this.field_c[0].a(-74, param2);
-                    } else {
-                      var4 = 0;
-                      var5 = 0;
-                      L1: while (true) {
-                        if (var5 >= this.field_c.length) {
-                          return -1;
-                        } else {
-                          L2: {
-                            var6 = this.field_c[var5];
-                            if (var6.field_b > param0) {
-                              break L2;
-                            } else {
-                              if (param0 <= var6.field_a) {
-                                var7 = var6.a(-88, param2);
-                                if (-1 != var7) {
-                                  return var4 + var7;
-                                } else {
-                                  return -1;
-                                }
-                              } else {
-                                break L2;
-                              }
-                            }
-                          }
-                          var4 = var4 + (-1 + var6.field_c.length);
-                          var5++;
-                          continue L1;
-                        }
-                      }
-                    }
-                  } else {
-                    return 25;
-                  }
-                }
-              }
-            }
+        var8 = VoidHunters.field_G;
+        if (this.field_c != null &&
+          0 != this.field_c.length &&
+          this.field_c[0].field_b <= param0) {
+          if (this.field_c[-1 + this.field_c.length].field_a < param0) {
+            return -1;
           }
+          if (param1 != -23381) {
+            return 25;
+          }
+          if (1 == this.field_c.length) {
+            return this.field_c[0].a(-74, param2);
+          }
+          var4 = 0;
+          for (var5 = 0; var5 < this.field_c.length; var5++) {
+            var6 = this.field_c[var5];
+            if (var6.field_b <= param0 &&
+              param0 <= var6.field_a) {
+              var7 = var6.a(-88, param2);
+              if (-1 != var7) {
+                return var4 + var7;
+              }
+              return -1;
+            }
+            var4 = var4 + (-1 + var6.field_c.length);
+          }
+          return -1;
         }
         return -1;
     }
@@ -74,124 +47,70 @@ abstract class ar {
     final int a(int param0) {
         String var3;
         int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == 29565) {
-            break L0;
-          } else {
-            var3 = (String) null;
-            this.a(true, -112, -23, (String) null);
-            break L0;
-          }
+        if (param0 != 29565) {
+          var3 = (String) null;
+          this.a(true, -112, -23, (String) null);
         }
-        L1: {
-          L2: {
-            if (this.field_c == null) {
-              break L2;
-            } else {
-              if (this.field_c.length <= 0) {
-                break L2;
-              } else {
-                stackIn_6_0 = -this.field_c[0].field_b + this.field_c[this.field_c.length + -1].field_a;
-                break L1;
-              }
-            }
-          }
+        if (this.field_c != null &&
+          this.field_c.length > 0) {
+          stackIn_6_0 = -this.field_c[0].field_b + this.field_c[this.field_c.length - 1].field_a;
+        } else {
           stackIn_6_0 = 0;
-          break L1;
         }
         return stackIn_6_0;
     }
 
     final int a(boolean param0, int param1, int param2, String param3) {
+        int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_15_0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
-          L0: {
-            var5_int = 0;
-            var6 = param0 ? 1 : 0;
-            var7 = param3.length();
-            var8 = 0;
-            L1: while (true) {
-              if (var8 >= var7) {
-                if ((var5_int ^ -1) >= -1) {
-                  stackIn_17_0 = 0;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_15_0 = (-param2 + param1 << -891458168) / var5_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+          var5_int = 0;
+          var6 = param0 ? 1 : 0;
+          var7 = param3.length();
+          for (var8 = 0; var8 < var7; var8++) {
+            var9 = param3.charAt(var8);
+            if (60 != var9) {
+              if (var9 != 62) {
+                if (var6 == 0 &&
+                  var9 == 32) {
+                  var5_int++;
                 }
               } else {
-                L2: {
-                  var9 = param3.charAt(var8);
-                  if (60 != var9) {
-                    if (var9 != 62) {
-                      if (var6 != 0) {
-                        break L2;
-                      } else {
-                        if (var9 != 32) {
-                          break L2;
-                        } else {
-                          var5_int++;
-                          break L2;
-                        }
-                      }
-                    } else {
-                      var6 = 0;
-                      break L2;
-                    }
-                  } else {
-                    var6 = 1;
-                    break L2;
-                  }
-                }
-                var8++;
-                continue L1;
+                var6 = 0;
               }
+            } else {
+              var6 = 1;
             }
           }
+          if (var5_int <= 0) {
+            stackIn_17_0 = 0;
+            return stackIn_17_0;
+          }
+          stackIn_15_0 = (-param2 + param1 << 8) / var5_int;
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var5);
-
-            stackIn_20_1 = new StringBuilder().append("ar.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L3;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_20_0 = var5;
+          stackIn_20_1 = new StringBuilder().append("ar.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_15_0;
-        } else {
-          return stackIn_17_0;
+          throw rta.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -200,14 +119,14 @@ abstract class ar {
         toa var4 = null;
         int var5 = VoidHunters.field_G;
         if (!param0) {
-            return -43;
+          return -43;
         }
         for (var3 = 0; this.field_c.length > var3; var3++) {
-            var4 = this.field_c[var3];
-            if (!(param1 >= var4.field_c.length)) {
-                return var3;
-            }
-            param1 = param1 - (-1 + var4.field_c.length);
+          var4 = this.field_c[var3];
+          if (!(param1 >= var4.field_c.length)) {
+            return var3;
+          }
+          param1 = param1 - (-1 + var4.field_c.length);
         }
         return this.field_c.length;
     }
@@ -218,211 +137,125 @@ abstract class ar {
         int stackIn_56_0 = 0;
         int var3;
         int var4;
-        L0: {
-          if (param1 >= 102) {
-            break L0;
-          } else {
-            field_b = 115;
-            break L0;
-          }
+        int var4Lifetime1;
+        int var4Lifetime2;
+        if (param1 < 102) {
+          field_b = 115;
         }
-        L1: {
-          var4 = param0 >> -158384769;
-          param0 = var4 ^ var4 + param0;
-          var4 = param2 >> -1104817025;
-          param2 = var4 ^ param2 + var4;
-          var3 = 0;
-          if (param2 > param0) {
-            var4 = param0;
-            param0 = param2;
-            param2 = var4;
-            break L1;
-          } else {
-            break L1;
-          }
+        var4 = param0 >> 31;
+        param0 = var4 ^ var4 + param0;
+        var4Lifetime1 = param2 >> 31;
+        param2 = var4Lifetime1 ^ param2 + var4Lifetime1;
+        var3 = 0;
+        if (param2 > param0) {
+          var4Lifetime2 = param0;
+          param0 = param2;
+          param2 = var4Lifetime2;
         }
-        L2: {
-          if (-32769 < (param0 ^ -1)) {
-            break L2;
-          } else {
-            L3: {
-              if (param0 < 1073741824) {
-                break L3;
-              } else {
-                param0 = param0 >> 16;
-                var3 += 16;
-                break L3;
-              }
-            }
-            L4: {
-              if ((param0 ^ -1) > -4194305) {
-                break L4;
-              } else {
-                var3 += 8;
-                param0 = param0 >> 8;
-                break L4;
-              }
-            }
-            L5: {
-              if (262144 > param0) {
-                break L5;
-              } else {
-                var3 += 4;
-                param0 = param0 >> 4;
-                break L5;
-              }
-            }
-            L6: {
-              if (-65537 >= (param0 ^ -1)) {
-                param0 = param0 >> 2;
-                var3 += 2;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              if (param0 < 32768) {
-                break L7;
-              } else {
-                var3++;
-                param0 = param0 >> 1;
-                break L7;
-              }
-            }
-            param2 = param2 >> var3;
-            break L2;
+        if (param0 >= 32768) {
+          if (param0 >= 1073741824) {
+            param0 = param0 >> 16;
+            var3 += 16;
           }
-        }
-        if (param0 > param2 << 1888444485) {
-          return param0 << var3;
-        } else {
-          param0 = param2 * param2 + param0 * param0;
+          if (param0 >= 4194304) {
+            var3 += 8;
+            param0 = param0 >> 8;
+          }
+          if (262144 <= param0) {
+            var3 += 4;
+            param0 = param0 >> 4;
+          }
           if (param0 >= 65536) {
-            if (16777216 <= param0) {
-              if (-268435457 < (param0 ^ -1)) {
-                if (-67108865 < (param0 ^ -1)) {
-                  L8: {
-                    if (var3 >= 3) {
-                      stackIn_56_0 = eo.field_o[param0 >> 1860748338] << -3 + var3;
-                      break L8;
-                    } else {
-                      stackIn_56_0 = eo.field_o[param0 >> -762980814] >> -var3 + 3;
-                      break L8;
-                    }
-                  }
-                  return stackIn_56_0;
-                } else {
-                  L9: {
-                    if ((var3 ^ -1) > -3) {
-                      stackIn_52_0 = eo.field_o[param0 >> -70313740] >> 2 + -var3;
-                      break L9;
-                    } else {
-                      stackIn_52_0 = eo.field_o[param0 >> 615335380] << var3 - 2;
-                      break L9;
-                    }
-                  }
-                  return stackIn_52_0;
-                }
-              } else {
-                if (1073741824 > param0) {
-                  L10: {
-                    if (var3 >= 1) {
-                      stackIn_47_0 = eo.field_o[param0 >> 1574831190] << -1 + var3;
-                      break L10;
-                    } else {
-                      stackIn_47_0 = eo.field_o[param0 >> 1046894582] >> 1 - var3;
-                      break L10;
-                    }
-                  }
-                  return stackIn_47_0;
-                } else {
-                  return eo.field_o[param0 >> 1628591128] << var3;
-                }
-              }
-            } else {
-              if (-1048577 < (param0 ^ -1)) {
-                if (262144 <= param0) {
-                  return eo.field_o[param0 >> 782844172] >> -1544320026;
-                } else {
-                  return eo.field_o[param0 >> -1161863990] >> 1046900583;
-                }
-              } else {
-                if (param0 < 4194304) {
-                  return eo.field_o[param0 >> 1136719950] >> 2017888485;
-                } else {
-                  return eo.field_o[param0 >> -102332720] >> 884362884;
-                }
-              }
-            }
-          } else {
-            if ((param0 ^ -1) <= -257) {
-              if (4096 <= param0) {
-                if (param0 < 16384) {
-                  return eo.field_o[param0 >> 2107089254] >> -905256823;
-                } else {
-                  return eo.field_o[param0 >> 697391720] >> -57817688;
-                }
-              } else {
-                if (param0 >= 1024) {
-                  return eo.field_o[param0 >> -504990076] >> -709833174;
-                } else {
-                  return eo.field_o[param0 >> -1083719934] >> -1084556789;
-                }
-              }
-            } else {
-              if ((param0 ^ -1) > -1) {
-                return -1;
-              } else {
-                return eo.field_o[param0] >> -507549300;
-              }
-            }
+            param0 = param0 >> 2;
+            var3 += 2;
           }
+          if (param0 >= 32768) {
+            var3++;
+            param0 = param0 >> 1;
+          }
+          param2 = param2 >> var3;
         }
+        if (param0 > param2 << 5) {
+          return param0 << var3;
+        }
+        param0 = param2 * param2 + param0 * param0;
+        if (param0 < 65536) {
+          if (param0 < 256) {
+            if (param0 < 0) {
+              return -1;
+            }
+            return eo.field_o[param0] >> 12;
+          }
+          if (4096 <= param0) {
+            if (param0 < 16384) {
+              return eo.field_o[param0 >> 6] >> 9;
+            }
+            return eo.field_o[param0 >> 8] >> 8;
+          }
+          if (param0 >= 1024) {
+            return eo.field_o[param0 >> 4] >> 10;
+          }
+          return eo.field_o[param0 >> 2] >> 11;
+        }
+        if (16777216 > param0) {
+          if (param0 < 1048576) {
+            if (262144 <= param0) {
+              return eo.field_o[param0 >> 12] >> 6;
+            }
+            return eo.field_o[param0 >> 10] >> 7;
+          }
+          if (param0 < 4194304) {
+            return eo.field_o[param0 >> 14] >> 5;
+          }
+          return eo.field_o[param0 >> 16] >> 4;
+        }
+        if (param0 >= 268435456) {
+          if (1073741824 <= param0) {
+            return eo.field_o[param0 >> 24] << var3;
+          }
+          if (var3 >= 1) {
+            stackIn_47_0 = eo.field_o[param0 >> 22] << -1 + var3;
+          } else {
+            stackIn_47_0 = eo.field_o[param0 >> 22] >> 1 - var3;
+          }
+          return stackIn_47_0;
+        }
+        if (param0 < 67108864) {
+          if (var3 >= 3) {
+            stackIn_56_0 = eo.field_o[param0 >> 18] << -3 + var3;
+          } else {
+            stackIn_56_0 = eo.field_o[param0 >> 18] >> -var3 + 3;
+          }
+          return stackIn_56_0;
+        }
+        if (var3 < 2) {
+          stackIn_52_0 = eo.field_o[param0 >> 20] >> 2 - var3;
+        } else {
+          stackIn_52_0 = eo.field_o[param0 >> 20] << var3 - 2;
+        }
+        return stackIn_52_0;
     }
 
     final int c(int param0) {
+        int var4 = 0;
         int var2;
         toa[] var3;
-        int var4;
         toa var5;
         int var7;
         int var6;
-        L0: {
-          var7 = VoidHunters.field_G;
-          if (param0 == -18877) {
-            break L0;
-          } else {
-            ar.a(-4, (byte) -85, -6);
-            break L0;
-          }
+        var7 = VoidHunters.field_G;
+        if (param0 != -18877) {
+          ar.a(-4, (byte) -85, -6);
         }
-        L1: {
-          var2 = -1;
-          if (null == this.field_c) {
-            break L1;
-          } else {
-            var3 = this.field_c;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var3.length) {
-                break L1;
-              } else {
-                var5 = var3[var4];
-                if (var5 != null) {
-                  var6 = var5.a(0);
-                  if (var6 > var2) {
-                    var2 = var6;
-                    var4++;
-                    continue L2;
-                  } else {
-                    var4++;
-                    continue L2;
-                  }
-                } else {
-                  var4++;
-                  continue L2;
-                }
+        var2 = -1;
+        if (null != this.field_c) {
+          var3 = this.field_c;
+          for (var4 = 0; var4 < var3.length; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.a(0);
+              if (var6 > var2) {
+                var2 = var6;
               }
             }
           }
@@ -433,7 +266,7 @@ abstract class ar {
     public static void b(int param0) {
         field_a = null;
         if (param0 < 41) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
@@ -444,14 +277,14 @@ abstract class ar {
         toa[] var7 = this.field_c;
         toa[] var3 = var7;
         if (param1 > -107) {
-            this.c(-56);
+          this.c(-56);
         }
         for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (var5.field_c.length > param0) {
-                return var5.field_c[param0];
-            }
-            param0 = param0 - (-1 + var5.field_c.length);
+          var5 = var7[var4];
+          if (var5.field_c.length > param0) {
+            return var5.field_c[param0];
+          }
+          param0 = param0 - (-1 + var5.field_c.length);
         }
         return 0;
     }

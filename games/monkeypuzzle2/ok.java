@@ -11,8 +11,8 @@ final class ok {
 
     final static boolean a(boolean param0) {
         if (param0) {
-            ok.a(-101);
-            return ha.field_db;
+          ok.a(-101);
+          return ha.field_db;
         }
         return ha.field_db;
     }
@@ -25,48 +25,35 @@ final class ok {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        if (param0 < -38) {
-          if (param1 != 160) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (45 == param1) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_20_0 = 1;
-                return stackIn_20_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 >= -38) {
           ok.b(90);
-          if (param1 != 160) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (45 == param1) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param1 == 160) {
             return true;
           }
+          if (param1 == 32) {
+            return true;
+          }
+          if (param1 == 95) {
+            return true;
+          }
+          if (45 != param1) {
+            return false;
+          }
+          return true;
         }
+        if (param1 == 160) {
+          return true;
+        }
+        if (param1 == 32) {
+          return true;
+        }
+        if (param1 == 95) {
+          return true;
+        }
+        if (45 != param1) {
+          return false;
+        }
+        return true;
     }
 
     final static void b(int param0) {
@@ -82,19 +69,7 @@ final class ok {
         ma.field_a[14] = gg.field_b;
         ma.field_a[6] = me.field_n;
         ma.field_a[15] = lh.field_a;
-        if (param0 != -29387) {
-          field_e = true;
-          ma.field_a[3] = qj.field_E;
-          ma.field_a[1] = nc.field_a;
-          ma.field_a[8] = bg.field_B[1];
-          ma.field_a[17] = wa.field_c;
-          ma.field_a[19] = ph.field_a;
-          ma.field_a[7] = bg.field_B[0];
-          ma.field_a[18] = ej.field_a;
-          ma.field_a[16] = pe.field_c;
-          ma.field_a[9] = bg.field_B[2];
-          return;
-        } else {
+        if (param0 == -29387) {
           ma.field_a[3] = qj.field_E;
           ma.field_a[1] = nc.field_a;
           ma.field_a[8] = bg.field_B[1];
@@ -106,13 +81,23 @@ final class ok {
           ma.field_a[9] = bg.field_B[2];
           return;
         }
+        field_e = true;
+        ma.field_a[3] = qj.field_E;
+        ma.field_a[1] = nc.field_a;
+        ma.field_a[8] = bg.field_B[1];
+        ma.field_a[17] = wa.field_c;
+        ma.field_a[19] = ph.field_a;
+        ma.field_a[7] = bg.field_B[0];
+        ma.field_a[18] = ej.field_a;
+        ma.field_a[16] = pe.field_c;
+        ma.field_a[9] = bg.field_B[2];
     }
 
     final static void a(int param0) {
         if (param0 != 15376) {
-            ok.a(-54, '>');
-            qh.a(4, true);
-            return;
+          ok.a(-54, '>');
+          qh.a(4, true);
+          return;
         }
         qh.a(4, true);
     }

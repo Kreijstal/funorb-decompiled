@@ -20,111 +20,65 @@ final class hh extends ai {
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != 0) {
-                hh.a(true);
-            }
-            mc.field_d = param1;
+          if (param0 != 0) {
+            hh.a(true);
+          }
+          mc.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "hh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(byte param0) {
         try {
-            Throwable decompiledCaughtException = null;
-            IOException var1 = null;
-            int var1_int = 0;
-            RuntimeException var1_ref = null;
-            IOException var2 = null;
-            int var3 = 0;
-            var3 = Bounce.field_N;
-            try {
-              L0: {
-                L1: {
-                  if (null != tb.field_p) {
-                    tb.field_p.a(param0 + -134);
-                    break L1;
-                  } else {
-                    break L1;
+          int var1_int = 0;
+          Throwable decompiledCaughtException = null;
+          IOException var1 = null;
+          RuntimeException var1_ref = null;
+          IOException var2 = null;
+          int var3 = 0;
+          var3 = Bounce.field_N;
+          try {
+            if (null != tb.field_p) {
+              tb.field_p.a(param0 - 134);
+            }
+            if (hb.field_F != null) {
+              hb.field_F.d(-1);
+            }
+            if (jg.field_C != null) {
+              try {
+                jg.field_C.b(-747969087);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (pd.field_a != null) {
+              for (var1_int = 0; pd.field_a.length > var1_int; var1_int++) {
+                if (null != pd.field_a[var1_int]) {
+                  try {
+                    pd.field_a[var1_int].b(-747969087);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
                   }
-                }
-                L2: {
-                  if (hb.field_F == null) {
-                    break L2;
-                  } else {
-                    hb.field_F.d(-1);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (jg.field_C == null) {
-                    break L3;
-                  } else {
-                    try {
-                      L4: {
-                        jg.field_C.b(-747969087);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        var1 = (IOException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
-                    }
-                    break L3;
-                  }
-                }
-                L6: {
-                  if (pd.field_a == null) {
-                    break L6;
-                  } else {
-                    var1_int = 0;
-                    L7: while (true) {
-                      if (pd.field_a.length <= var1_int) {
-                        break L6;
-                      } else {
-                        L8: {
-                          if (null != pd.field_a[var1_int]) {
-                            try {
-                              L9: {
-                                pd.field_a[var1_int].b(-747969087);
-                                break L9;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L10: {
-                                var2 = (IOException) (Object) decompiledCaughtException;
-                                break L10;
-                              }
-                            }
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        var1_int++;
-                        continue L7;
-                      }
-                    }
-                  }
-                }
-                if (param0 == 48) {
-                  break L0;
-                } else {
-                  hh.a(false);
-                  return;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-              throw ii.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
             }
+            if (param0 == 48) {
+              return;
+            }
+            hh.a(false);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+            throw ii.a((Throwable) ((Object) var1_ref), "hh.B(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -134,83 +88,49 @@ final class hh extends ai {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 >= 37) {
-                break L1;
-              } else {
-                field_k = true;
-                break L1;
-              }
-            }
-            var4 = (String) null;
-            stackIn_3_0 = vb.a(false, (String) null, -89, 0, param1, 0, param0);
-            break L0;
+          if (param2 < 37) {
+            field_k = true;
           }
+          var4 = (String) null;
+          stackIn_3_0 = vb.a(false, (String) null, -89, 0, param1, 0, param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("hh.D(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("hh.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(boolean param0) {
         field_r = (byte[][]) null;
-        if (param0) {
-          field_k = false;
-          field_p = null;
-          field_q = null;
-          field_h = null;
-          return;
-        } else {
+        if (!param0) {
           field_p = null;
           field_q = null;
           field_h = null;
           return;
         }
+        field_k = false;
+        field_p = null;
+        field_q = null;
+        field_h = null;
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {
@@ -219,15 +139,15 @@ final class hh extends ai {
         k.field_D = param3;
         qd.field_b = param1;
         if (param4 != 0) {
-            field_h = (int[]) null;
+          field_h = (int[]) null;
         }
     }
 
     final static void c(byte param0) {
         if (param0 != -60) {
-            field_q = (byte[]) null;
-            oh.a(94, 17);
-            return;
+          field_q = (byte[]) null;
+          oh.a(94, 17);
+          return;
         }
         oh.a(94, 17);
     }

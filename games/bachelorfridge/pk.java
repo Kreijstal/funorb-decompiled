@@ -9,7 +9,7 @@ abstract class pk implements qu {
 
     public final void a(int param0) {
         if (param0 != 574) {
-            return;
+          return;
         }
         this.field_d = f.b((byte) 73);
     }
@@ -18,7 +18,7 @@ abstract class pk implements qu {
 
     public static void c(int param0) {
         if (param0 >= -41) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -27,28 +27,23 @@ abstract class pk implements qu {
     abstract jg c(byte param0);
 
     public final String a(byte param0) {
-        if (param0 >= 27) {
-          if (!this.b((byte) 5)) {
-            if ((f.b((byte) 73) ^ -1L) > (this.field_d - -350L ^ -1L)) {
-              return null;
-            } else {
-              return this.d((byte) 115);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 < 27) {
           this.d((byte) -26);
-          if (!this.b((byte) 5)) {
-            if ((f.b((byte) 73) ^ -1L) > (this.field_d - -350L ^ -1L)) {
-              return null;
-            } else {
-              return this.d((byte) 115);
-            }
-          } else {
+          if (this.b((byte) 5)) {
             return null;
           }
+          if (f.b((byte) 73) >= (this.field_d + 350L)) {
+            return this.d((byte) 115);
+          }
+          return null;
         }
+        if (this.b((byte) 5)) {
+          return null;
+        }
+        if (f.b((byte) 73) >= (this.field_d + 350L)) {
+          return this.d((byte) 115);
+        }
+        return null;
     }
 
     final static String a(bca param0, boolean param1) {
@@ -58,67 +53,41 @@ abstract class pk implements qu {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2 = (hd) ((Object) al.a(-56, param0.field_k));
-            if (param1) {
-              stackIn_4_0 = var2.field_f;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2 = (hd) (al.a(-56, param0.field_k));
+          if (param1) {
+            stackIn_4_0 = var2.field_f;
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2_ref);
-
-            stackIn_7_1 = new StringBuilder().append("pk.M(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_7_0 = var2_ref;
+          stackIn_7_1 = new StringBuilder().append("pk.M(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final jg b(int param0) {
         if (this.b((byte) 5)) {
           return md.field_o;
-        } else {
-          if (param0 == -19704) {
-            if ((f.b((byte) 73) ^ -1L) > (350L + this.field_d ^ -1L)) {
-              return cq.field_g;
-            } else {
-              return this.c((byte) 35);
-            }
-          } else {
-            return (jg) null;
-          }
         }
+        if (param0 != -19704) {
+          return (jg) null;
+        }
+        if (f.b((byte) 73) >= (350L + this.field_d)) {
+          return this.c((byte) 35);
+        }
+        return cq.field_g;
     }
 
     static {

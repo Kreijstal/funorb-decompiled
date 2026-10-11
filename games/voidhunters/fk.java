@@ -8,7 +8,7 @@ final class fk extends tb {
 
     public static void a(byte param0) {
         if (param0 < 15) {
-            return;
+          return;
         }
         field_d = null;
     }

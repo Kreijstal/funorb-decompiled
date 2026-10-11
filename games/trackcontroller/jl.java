@@ -25,16 +25,16 @@ final class jl {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_d >= this.field_b) {
-            fieldTemp$0 = this.field_e;
-            this.field_e = this.field_e + 1;
-            this.field_c = this.field_j[fieldTemp$0] << 15;
-            if (this.field_e >= this.field_f) {
-                this.field_e = this.field_f - 1;
-            }
-            this.field_b = (int)((double)this.field_i[this.field_e] / 65536.0 * (double)param0);
-            if (this.field_b > this.field_d) {
-                this.field_h = ((this.field_j[this.field_e] << 15) - this.field_c) / (this.field_b - this.field_d);
-            }
+          fieldTemp$0 = this.field_e;
+          this.field_e = this.field_e + 1;
+          this.field_c = this.field_j[fieldTemp$0] << 15;
+          if (this.field_e >= this.field_f) {
+            this.field_e = this.field_f - 1;
+          }
+          this.field_b = (int)((double)this.field_i[this.field_e] / 65536.0 * (double)param0);
+          if (this.field_b > this.field_d) {
+            this.field_h = ((this.field_j[this.field_e] << 15) - this.field_c) / (this.field_b - this.field_d);
+          }
         }
         this.field_c = this.field_c + this.field_h;
         this.field_d = this.field_d + 1;
@@ -54,8 +54,8 @@ final class jl {
         this.field_i = new int[this.field_f];
         this.field_j = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
-            this.field_i[var2] = param0.d((byte) -62);
-            this.field_j[var2] = param0.d((byte) -102);
+          this.field_i[var2] = param0.d((byte) -62);
+          this.field_j[var2] = param0.d((byte) -102);
         }
     }
 

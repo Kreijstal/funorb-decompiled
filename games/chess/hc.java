@@ -14,10 +14,10 @@ final class hc implements Iterator {
     public final Object next() {
         Object var1 = this.field_c;
         if (var1 == this.field_a.field_c) {
-            var1 = null;
-            this.field_c = null;
+          var1 = null;
+          this.field_c = null;
         } else {
-            this.field_c = ((l) (var1)).field_p;
+          this.field_c = ((l) (var1)).field_p;
         }
         this.field_f = (l) (var1);
         return var1;
@@ -30,7 +30,7 @@ final class hc implements Iterator {
     public static void a(boolean param0) {
         field_e = null;
         if (param0) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;
@@ -38,7 +38,7 @@ final class hc implements Iterator {
 
     public final void remove() {
         if (this.field_f == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_f.d(-1);
         this.field_f = null;
@@ -55,11 +55,11 @@ final class hc implements Iterator {
     hc(cn param0) {
         this.field_f = null;
         try {
-            this.field_a = param0;
-            this.field_f = null;
-            this.field_c = this.field_a.field_c.field_p;
+          this.field_a = param0;
+          this.field_f = null;
+          this.field_c = this.field_a.field_c.field_p;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

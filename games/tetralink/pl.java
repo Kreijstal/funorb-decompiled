@@ -13,7 +13,7 @@ final class pl {
     public static void a(byte param0) {
         field_c = null;
         field_f = null;
-        int var1 = 70 % ((param0 - -45) / 36);
+        int var1 = 70 % ((param0 + 45) / 36);
         field_a = null;
         field_g = null;
         field_e = null;
@@ -33,12 +33,11 @@ final class pl {
     }
 
     final static ah a(int param0, boolean param1, boolean param2, int param3, byte param4) {
-        if (param4 >= -47) {
-          pl.a(-52, (byte) 50);
-          return ai.a(param2, param0, false, param3, (byte) 122, param1);
-        } else {
+        if (param4 < -47) {
           return ai.a(param2, param0, false, param3, (byte) 122, param1);
         }
+        pl.a(-52, (byte) 50);
+        return ai.a(param2, param0, false, param3, (byte) 122, param1);
     }
 
     static {

@@ -13,131 +13,101 @@ final class ki extends ac {
     static String field_ob;
 
     final static int[] b(int param0, byte param1) {
+        int var5_int = 0;
         int incrementValue$0 = 0;
         int[] var2;
         int[] var3;
         int var4;
-        int var5_int;
+        int[] var5;
+        int var6;
         int var7;
         int[] var8;
+        int var9;
         int[] var10;
         int[] var11;
         int[] var12;
         int[] var13;
-        int[] var5;
-        int var6;
-        int var9;
+        int var6Lifetime1;
+        int var4Lifetime1;
         var7 = SteelSentinels.field_G;
         var12 = nl.a(param0, (byte) 125);
         var10 = var12;
         var8 = var10;
         var2 = var8;
-        if (var8 != null) {
-          if (var12.length != 0) {
-            L0: {
-              var13 = new int[8];
-              var11 = var13;
-              var3 = var11;
-              ii.a(var8, var12.length - 8, var3, 0, var13.length);
-              var4 = 0;
-              if (param1 <= -77) {
-                break L0;
-              } else {
-                field_ib = true;
-                break L0;
-              }
-            }
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= var13.length) {
-                var5 = new int[var4];
-                var4 = 0;
-                var9 = 0;
-                var6 = var9;
-                L2: while (true) {
-                  if (var9 >= var13.length) {
-                    return var5;
-                  } else {
-                    if (-1 != var13[var9]) {
-                      incrementValue$0 = var4;
-                      var4++;
-                      var5[incrementValue$0] = var13[var9];
-                      var9++;
-                      continue L2;
-                    } else {
-                      var9++;
-                      continue L2;
-                    }
-                  }
-                }
-              } else {
-                if ((var13[var5_int] ^ -1) <= -1) {
-                  var4++;
-                  var6 = var5_int - -1;
-                  L3: while (true) {
-                    if (var6 < var13.length) {
-                      if (var13[var5_int] == var13[var6]) {
-                        var13[var6] = -1;
-                        var6++;
-                        continue L3;
-                      } else {
-                        var6++;
-                        continue L3;
-                      }
-                    } else {
-                      var5_int++;
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var5_int++;
-                  continue L1;
-                }
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (var8 == null) {
           return null;
         }
+        if (var12.length == 0) {
+          return null;
+        }
+        var13 = new int[8];
+        var11 = var13;
+        var3 = var11;
+        ii.a(var8, var12.length - 8, var3, 0, var13.length);
+        var4 = 0;
+        if (param1 > -77) {
+          field_ib = true;
+        }
+        for (var5_int = 0; var5_int < var13.length; var5_int++) {
+          if (var13[var5_int] >= 0) {
+            var4++;
+            for (var6 = var5_int + 1; var6 < var13.length; var6++) {
+              if (var13[var5_int] == var13[var6]) {
+                var13[var6] = -1;
+              }
+            }
+          }
+        }
+        var5 = new int[var4];
+        var4Lifetime1 = 0;
+        var9 = 0;
+        var6Lifetime1 = var9;
+        while (var9 < var13.length) {
+          if (-1 != var13[var9]) {
+            incrementValue$0 = var4Lifetime1;
+            var4Lifetime1++;
+            var5[incrementValue$0] = var13[var9];
+          }
+          var9++;
+        }
+        return var5;
     }
 
     final void m(int param0) {
         this.field_mb.field_N = false;
         if (param0 != -13521) {
-            String var3 = (String) null;
-            this.a(-17, true, (String) null, 0.5387943387031555f);
+          String var3 = (String) null;
+          this.a(-17, true, (String) null, 0.5387943387031555f);
         }
         this.field_lb = true;
     }
 
     final static long l(int param0) {
         if (param0 != 150) {
-            ki.b(-91, (byte) -45);
+          ki.b(-91, (byte) -45);
         }
         return -oe.field_b + mm.a(115);
     }
 
     final void a(int param0, boolean param1, String param2, float param3) {
         try {
-            if ((!param1 ? 1 : 0) == (this.field_nb ? 1 : 0)) {
-                this.field_nb = param1 ? true : false;
-                if (this.field_nb) {
-                    this.field_mb.b(4210752, 8405024, 16711422);
-                    this.field_mb.field_N = true;
-                } else {
-                    this.field_mb.b(4210752, 2113632, 16711422);
-                    if (!(!this.field_lb)) {
-                        this.field_mb.field_N = false;
-                    }
-                }
+          if ((!param1 ? 1 : 0) == (this.field_nb ? 1 : 0)) {
+            this.field_nb = param1 ? true : false;
+            if (this.field_nb) {
+              this.field_mb.b(4210752, 8405024, 16711422);
+              this.field_mb.field_N = true;
+            } else {
+              this.field_mb.b(4210752, 2113632, 16711422);
+              if (this.field_lb) {
+                this.field_mb.field_N = false;
+              }
             }
-            this.field_mb.field_I = (int)(param3 / 100.0f * 65536.0f);
-            this.field_qb = param2;
-            int var5_int = 68 / ((param0 - 52) / 57);
+          }
+          this.field_mb.field_I = (int)(param3 / 100.0f * 65536.0f);
+          this.field_qb = param2;
+          int var5_int = 68 / ((param0 - 52) / 57);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -152,41 +122,41 @@ final class ki extends ac {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            this.field_jb = param1;
-            if (this.field_jb != null) {
-                var3_int = gf.field_d.a(this.field_jb, 260, gf.field_d.field_G);
-                this.a((byte) 67, 300, 150 - -var3_int);
-            }
-            this.field_mb = new bk(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_lb = false;
-            this.field_mb.field_N = true;
-            this.field_nb = false;
-            this.a(this.field_mb, -110);
+          this.field_jb = param1;
+          if (this.field_jb != null) {
+            var3_int = gf.field_d.a(this.field_jb, 260, gf.field_d.field_G);
+            this.a((byte) 67, 300, 150 + var3_int);
+          }
+          this.field_mb = new bk(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_lb = false;
+          this.field_mb.field_N = true;
+          this.field_nb = false;
+          this.a(this.field_mb, -110);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ki.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, String[] param1) {
         try {
-            if (!(null == da.field_b)) {
-                da.field_b.field_S.a(true, param1);
-            }
-            if (null != nm.field_o) {
-                nm.field_o.field_R.a(true, param1);
-            }
-            int var2_int = -30 / ((15 - param0) / 62);
+          if (null != da.field_b) {
+            da.field_b.field_S.a(true, param1);
+          }
+          if (null != nm.field_o) {
+            nm.field_o.field_R.a(true, param1);
+          }
+          int var2_int = -30 / ((15 - param0) / 62);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "ki.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ki.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0, param1, param2);
-        gf.field_d.a(this.field_qb, param0 + (this.field_x >> -1550069311), 103 + param1, 16777215, -1);
-        if (!(null == this.field_jb)) {
-            pb.g(20 + param0, -7 + param1 - -120, 260, 8421504);
-            gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
+        gf.field_d.a(this.field_qb, param0 + (this.field_x >> 1), 103 + param1, 16777215, -1);
+        if (null != this.field_jb) {
+          pb.g(20 + param0, -7 + param1 + 120, 260, 8421504);
+          gf.field_d.a(this.field_jb, 20 + param0, 128 + param1, 260, 100, 16777215, -1, 1, 0, gf.field_d.field_G);
         }
     }
 

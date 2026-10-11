@@ -16,29 +16,27 @@ final class nb {
         field_a = null;
         field_e = null;
         field_c = null;
-        if (param0 <= 84) {
-          nb.a(1);
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 > 84) {
           field_b = null;
           field_d = null;
           return;
         }
+        nb.a(1);
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(int param0) {
         if (param0 != 22) {
-            return;
+          return;
         }
         if (wh.field_d) {
-            return;
+          return;
         }
         wh.field_d = rf.field_S;
-        if (!(!wh.field_d)) {
-            ck.h(94);
-            bo.g(1);
+        if (wh.field_d) {
+          ck.h(94);
+          bo.g(1);
         }
     }
 

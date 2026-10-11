@@ -13,54 +13,33 @@ final class i {
         RuntimeException var1_ref = null;
         var4 = Main.field_T;
         try {
-          L0: {
-            var1 = sj.field_d;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  ab.field_t = ce.field_b;
-                  mh.field_b = mh.field_b + 1;
-                  if (-1 >= (bg.field_rb ^ -1)) {
-                    L3: while (true) {
-                      if (bg.field_rb == be.field_b) {
-                        break L2;
-                      } else {
-                        var2 = oc.field_h[be.field_b];
-                        be.field_b = 127 & be.field_b - -1;
-                        if (0 <= var2) {
-                          ge.field_c[var2] = true;
-                          continue L3;
-                        } else {
-                          ge.field_c[var2 ^ -1] = false;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if (112 <= var2) {
-                        bg.field_rb = be.field_b;
-                        break L2;
-                      } else {
-                        ge.field_c[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = sj.field_d;
+          synchronized (var1) {
+            ab.field_t = ce.field_b;
+            mh.field_b = mh.field_b + 1;
+            if (bg.field_rb < 0) {
+              for (var2 = 0; 112 > var2; var2++) {
+                ge.field_c[var2] = false;
+              }
+              bg.field_rb = be.field_b;
+            } else {
+              while (bg.field_rb != be.field_b) {
+                var2 = oc.field_h[be.field_b];
+                be.field_b = 127 & be.field_b + 1;
+                if (0 <= var2) {
+                  ge.field_c[var2] = true;
+                  continue;
                 }
-                ce.field_b = sa.field_b;
-                break L1;
+                ge.field_c[~var2] = false;
               }
             }
-            if (param0 < -123) {
-              break L0;
-            } else {
-              field_a = (ak) null;
-              return;
-            }
+            ce.field_b = sa.field_b;
           }
+          if (param0 < -123) {
+            return;
+          }
+          field_a = (ak) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -72,7 +51,7 @@ final class i {
         field_a = null;
         field_b = null;
         if (param0 >= 40) {
-            return;
+          return;
         }
         field_a = (ak) null;
     }

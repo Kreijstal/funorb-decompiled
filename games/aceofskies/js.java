@@ -12,10 +12,10 @@ final class js implements Iterator {
     public final Object next() {
         Object var1 = this.field_d;
         if (var1 == this.field_b.field_c) {
-            this.field_d = null;
-            var1 = null;
+          this.field_d = null;
+          var1 = null;
         } else {
-            this.field_d = ((wt) (var1)).field_j;
+          this.field_d = ((wt) (var1)).field_j;
         }
         this.field_a = (wt) (var1);
         return var1;
@@ -23,7 +23,7 @@ final class js implements Iterator {
 
     public final void remove() {
         if (null == this.field_a) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_a.d(-118);
         this.field_a = null;
@@ -41,11 +41,11 @@ final class js implements Iterator {
     js(hs param0) {
         this.field_a = null;
         try {
-            this.field_b = param0;
-            this.field_a = null;
-            this.field_d = this.field_b.field_c.field_j;
+          this.field_b = param0;
+          this.field_a = null;
+          this.field_d = this.field_b.field_c.field_j;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

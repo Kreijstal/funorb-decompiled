@@ -9,31 +9,26 @@ final class cc {
     private int field_d;
 
     private final void a(int param0) {
-        int var2;
-        var2 = qo.a(-8905, (long)this.field_a, (long)this.field_a) + qo.a(-8905, (long)this.field_b, (long)this.field_b) - (-qo.a(-8905, (long)this.field_c, (long)this.field_c) - qo.a(-8905, (long)this.field_d, (long)this.field_d));
-        if (param0 > 34) {
-          if (var2 >= 65535) {
-            if (65537 < var2) {
-              var2 = pc.a(var2, -524289);
-              this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
-              this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
-              this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
-              this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            var2 = pc.a(var2, -524289);
-            this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
-            this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
-            this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
-            this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
-            return;
-          }
-        } else {
+        int var2 = qo.a(-8905, (long)this.field_a, (long)this.field_a) + qo.a(-8905, (long)this.field_b, (long)this.field_b) - (-qo.a(-8905, (long)this.field_c, (long)this.field_c) - qo.a(-8905, (long)this.field_d, (long)this.field_d));
+        if (param0 <= 34) {
           return;
         }
+        if (var2 < 65535) {
+          var2 = pc.a(var2, -524289);
+          this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
+          this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
+          this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
+          this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
+          return;
+        }
+        if (65537 >= var2) {
+          return;
+        }
+        var2 = pc.a(var2, -524289);
+        this.field_a = bw.a((long)var2, 249299984, (long)this.field_a);
+        this.field_b = bw.a((long)var2, 249299984, (long)this.field_b);
+        this.field_c = bw.a((long)var2, 249299984, (long)this.field_c);
+        this.field_d = bw.a((long)var2, 249299984, (long)this.field_d);
     }
 
     final void a(cc param0, int param1) {
@@ -41,38 +36,29 @@ final class cc {
         int var4 = 0;
         int var5 = 0;
         try {
-            var3_int = qo.a(-8905, (long)param0.field_a, (long)this.field_a) - (qo.a(-8905, (long)param0.field_b, (long)this.field_b) - (-qo.a(-8905, (long)param0.field_c, (long)this.field_c) + -qo.a(-8905, (long)param0.field_d, (long)this.field_d)));
-            var4 = qo.a(-8905, (long)param0.field_a, (long)this.field_b) + (qo.a(-8905, (long)param0.field_b, (long)this.field_a) + (qo.a(-8905, (long)param0.field_c, (long)this.field_d) + -qo.a(-8905, (long)param0.field_d, (long)this.field_c)));
-            var5 = qo.a(-8905, (long)param0.field_a, (long)this.field_c) - (qo.a(-8905, (long)param0.field_b, (long)this.field_d) + -qo.a(-8905, (long)param0.field_c, (long)this.field_a)) + qo.a(-8905, (long)param0.field_d, (long)this.field_b);
-            if (param1 > -28) {
-                this.a(122);
-            }
-            this.field_d = qo.a(-8905, (long)param0.field_a, (long)this.field_d) - -qo.a(-8905, (long)param0.field_b, (long)this.field_c) - (qo.a(-8905, (long)param0.field_c, (long)this.field_b) + -qo.a(-8905, (long)param0.field_d, (long)this.field_a));
-            this.field_a = var3_int;
-            this.field_c = var5;
-            this.field_b = var4;
-            this.a(62);
+          var3_int = qo.a(-8905, (long)param0.field_a, (long)this.field_a) - (qo.a(-8905, (long)param0.field_b, (long)this.field_b) - (-qo.a(-8905, (long)param0.field_c, (long)this.field_c) - qo.a(-8905, (long)param0.field_d, (long)this.field_d)));
+          var4 = qo.a(-8905, (long)param0.field_a, (long)this.field_b) + (qo.a(-8905, (long)param0.field_b, (long)this.field_a) + (qo.a(-8905, (long)param0.field_c, (long)this.field_d) - qo.a(-8905, (long)param0.field_d, (long)this.field_c)));
+          var5 = qo.a(-8905, (long)param0.field_a, (long)this.field_c) - (qo.a(-8905, (long)param0.field_b, (long)this.field_d) - qo.a(-8905, (long)param0.field_c, (long)this.field_a)) + qo.a(-8905, (long)param0.field_d, (long)this.field_b);
+          if (param1 > -28) {
+            this.a(122);
+          }
+          this.field_d = qo.a(-8905, (long)param0.field_a, (long)this.field_d) + qo.a(-8905, (long)param0.field_b, (long)this.field_c) - (qo.a(-8905, (long)param0.field_c, (long)this.field_b) - qo.a(-8905, (long)param0.field_d, (long)this.field_a));
+          this.field_a = var3_int;
+          this.field_c = var5;
+          this.field_b = var4;
+          this.a(62);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "cc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, boolean param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        cc var8;
+        int var6 = 0;
+        int var7 = 0;
+        int var6Lifetime1;
+        int var7Lifetime1;
         param4 = param4 >> 1;
-        if (!param1) {
-          var8 = (cc) null;
-          this.a((cc) null, 27);
-          var6 = rn.b(param4, 3);
-          var7 = sb.a(param4, -127);
-          this.field_a = var7;
-          this.field_b = qo.a(-8905, (long)param3, (long)var6);
-          this.field_c = qo.a(-8905, (long)param0, (long)var6);
-          this.field_d = qo.a(-8905, (long)param2, (long)var6);
-          return;
-        } else {
+        if (param1) {
           var6 = rn.b(param4, 3);
           var7 = sb.a(param4, -127);
           this.field_a = var7;
@@ -81,6 +67,14 @@ final class cc {
           this.field_d = qo.a(-8905, (long)param2, (long)var6);
           return;
         }
+        cc var8 = (cc) null;
+        this.a((cc) null, 27);
+        var6Lifetime1 = rn.b(param4, 3);
+        var7Lifetime1 = sb.a(param4, -127);
+        this.field_a = var7Lifetime1;
+        this.field_b = qo.a(-8905, (long)param3, (long)var6Lifetime1);
+        this.field_c = qo.a(-8905, (long)param0, (long)var6Lifetime1);
+        this.field_d = qo.a(-8905, (long)param2, (long)var6Lifetime1);
     }
 
     final void a(int param0, int[] param1) {
@@ -95,27 +89,27 @@ final class cc {
         int var11 = 0;
         int var12 = 0;
         try {
-            var3_int = qo.a(-8905, (long)this.field_a, (long)this.field_a);
-            var4 = qo.a(-8905, (long)this.field_a, (long)this.field_b);
-            var5 = qo.a(-8905, (long)this.field_a, (long)this.field_c);
-            var6 = qo.a(-8905, (long)this.field_a, (long)this.field_d);
-            var7 = qo.a(-8905, (long)this.field_b, (long)this.field_b);
-            var8 = qo.a(-8905, (long)this.field_b, (long)this.field_c);
-            var9 = qo.a(-8905, (long)this.field_b, (long)this.field_d);
-            var10 = qo.a(-8905, (long)this.field_c, (long)this.field_c);
-            var11 = qo.a(param0 ^ -8897, (long)this.field_c, (long)this.field_d);
-            var12 = qo.a(param0 ^ -8897, (long)this.field_d, (long)this.field_d);
-            param1[4] = var6 + (var8 - (-var6 + -var8));
-            param1[7] = -var12 + (var10 + var3_int + -var7);
-            param1[9] = var5 + (var9 + var5 + var9);
-            param1[5] = -var5 + -var5 + (var9 + var9);
-            param1[10] = -var4 + (-var4 + (var11 + var11));
-            param1[3] = -var10 + var7 - (-var3_int + var12);
-            param1[11] = -var7 + -var10 + (var3_int + var12);
-            param1[6] = var8 + -var6 + var8 + -var6;
-            param1[param0] = var4 + var11 + (var11 - -var4);
+          var3_int = qo.a(-8905, (long)this.field_a, (long)this.field_a);
+          var4 = qo.a(-8905, (long)this.field_a, (long)this.field_b);
+          var5 = qo.a(-8905, (long)this.field_a, (long)this.field_c);
+          var6 = qo.a(-8905, (long)this.field_a, (long)this.field_d);
+          var7 = qo.a(-8905, (long)this.field_b, (long)this.field_b);
+          var8 = qo.a(-8905, (long)this.field_b, (long)this.field_c);
+          var9 = qo.a(-8905, (long)this.field_b, (long)this.field_d);
+          var10 = qo.a(-8905, (long)this.field_c, (long)this.field_c);
+          var11 = qo.a(param0 ^ -8897, (long)this.field_c, (long)this.field_d);
+          var12 = qo.a(param0 ^ -8897, (long)this.field_d, (long)this.field_d);
+          param1[4] = var6 + (var8 - (-var6 - var8));
+          param1[7] = -var12 + (var10 + var3_int - var7);
+          param1[9] = var5 + (var9 + var5 + var9);
+          param1[5] = -var5 - var5 + (var9 + var9);
+          param1[10] = -var4 + (-var4 + (var11 + var11));
+          param1[3] = -var10 + var7 - (-var3_int + var12);
+          param1[11] = -var7 - var10 + (var3_int + var12);
+          param1[6] = var8 - var6 + var8 - var6;
+          param1[param0] = var4 + var11 + (var11 + var4);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "cc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "cc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

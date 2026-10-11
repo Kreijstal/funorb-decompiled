@@ -28,14 +28,12 @@ final class vg extends br {
         field_r = null;
         field_q = null;
         field_f = null;
-        if (param0 != 8220) {
-          field_s = (char[]) null;
-          field_s = null;
-          return;
-        } else {
+        if (param0 == 8220) {
           field_s = null;
           return;
         }
+        field_s = (char[]) null;
+        field_s = null;
     }
 
     vg() {

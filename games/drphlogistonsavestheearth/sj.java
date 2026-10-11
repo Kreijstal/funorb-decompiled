@@ -12,27 +12,23 @@ final class sj {
 
     public static void a(boolean param0) {
         field_c = (byte[][]) null;
-        if (!param0) {
-          sj.a(-79, -85, 54);
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0) {
           field_f = null;
           field_b = null;
           return;
         }
+        sj.a(-79, -85, 54);
+        field_f = null;
+        field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3;
-        var3 = param2 >>> -682951649;
-        if (param0 >= -57) {
-          field_c = (byte[][]) null;
-          return -var3 + (var3 + param2) / param1;
-        } else {
+        int var3 = param2 >>> 31;
+        if (param0 < -57) {
           return -var3 + (var3 + param2) / param1;
         }
+        field_c = (byte[][]) null;
+        return -var3 + (var3 + param2) / param1;
     }
 
     static {

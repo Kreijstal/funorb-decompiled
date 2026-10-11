@@ -16,74 +16,44 @@ final class wp extends am {
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = Torquing.field_u;
         try {
-          L0: {
-            if (param1 == 35) {
-              L1: {
-                var4_int = param2;
-                if (-1 == (var4_int ^ -1)) {
-                  this.field_x = param0.i((byte) -101);
-                  break L1;
-                } else {
-                  if ((var4_int ^ -1) != -2) {
-                    if (-3 == (var4_int ^ -1)) {
-                      this.field_z = param0.i((byte) -101);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    this.field_s = param0.i(param1 ^ 7059);
-                    break L1;
-                  }
-                }
+          if (param1 != 35) {
+            return;
+          }
+          var4_int = param2;
+          if (var4_int == 0) {
+            this.field_x = param0.i((byte) -101);
+          } else {
+            if (var4_int != 1) {
+              if (var4_int == 2) {
+                this.field_z = param0.i((byte) -101);
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              this.field_s = param0.i(param1 ^ 7059);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4);
-
-            stackIn_14_1 = new StringBuilder().append("wp.H(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L2;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_14_0 = var4;
+          stackIn_14_1 = new StringBuilder().append("wp.H(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static da b(int param0) {
         if (param0 >= -51) {
-            return (da) null;
+          return (da) null;
         }
         return new da(of.d((byte) -77), sd.b(2));
     }
@@ -91,10 +61,7 @@ final class wp extends am {
     final static void a(int param0, int param1, int param2, boolean param3, int param4, t[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -105,75 +72,40 @@ final class wp extends am {
         int var11 = 0;
         var11 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              if (param5 == null) {
-                break L1;
-              } else {
-                if (0 < param2) {
-                  L2: {
-                    var6_int = param5[0].field_w;
-                    var7 = param5[2].field_w;
-                    var8 = param5[1].field_w;
-                    param5[0].c(param4, param0, param1);
-                    param5[2].c(param2 + param4 - var7, param0, param1);
-                    ph.b(lj.field_c);
-                    ph.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
-                    var9 = var6_int + param4;
-                    var10 = -var7 + (param4 - -param2);
-                    param4 = var9;
-                    if (!param3) {
-                      break L2;
-                    } else {
-                      field_v = (t[]) null;
-                      break L2;
-                    }
-                  }
-                  L3: while (true) {
-                    if (var10 <= param4) {
-                      ph.a(lj.field_c);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param5[1].c(param4, param0, param1);
-                      param4 = param4 + var8;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  break L1;
-                }
-              }
+          if (param5 != null &&
+            0 < param2) {
+            var6_int = param5[0].field_w;
+            var7 = param5[2].field_w;
+            var8 = param5[1].field_w;
+            param5[0].c(param4, param0, param1);
+            param5[2].c(param2 + param4 - var7, param0, param1);
+            ph.b(lj.field_c);
+            ph.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
+            var9 = var6_int + param4;
+            var10 = -var7 + (param4 + param2);
+            param4 = var9;
+            if (param3) {
+              field_v = (t[]) null;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            while (var10 > param4) {
+              param5[1].c(param4, param0, param1);
+              param4 = param4 + var8;
+            }
+            ph.a(lj.field_c);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var6);
-
-            stackIn_12_1 = new StringBuilder().append("wp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_12_0 = var6;
+          stackIn_12_1 = new StringBuilder().append("wp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw rb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -184,16 +116,16 @@ final class wp extends am {
         int var2 = 0;
         this.field_t = new int[this.field_x + 1];
         int var3 = 4096 / this.field_x;
-        int var4 = this.field_s * var3 >> -657712948;
+        int var4 = this.field_s * var3 >> 12;
         for (var5 = 0; this.field_x > var5; var5++) {
-            this.field_t[var5] = var2;
-            this.field_u[var5] = var2 - -var4;
-            var2 = var2 + var3;
+          this.field_t[var5] = var2;
+          this.field_u[var5] = var2 + var4;
+          var2 = var2 + var3;
         }
         this.field_t[this.field_x] = 4096;
-        this.field_u[this.field_x] = 4096 - -this.field_u[0];
+        this.field_u[this.field_x] = 4096 + this.field_u[0];
         if (param0 != 39) {
-            this.a((byte) 98);
+          this.a((byte) 98);
         }
     }
 
@@ -209,113 +141,79 @@ final class wp extends am {
         int var11;
         int[] var12;
         int[] var13;
-        L0: {
-          var10 = Torquing.field_u;
-          var13 = this.field_l.a(param1, 25657);
-          var12 = var13;
-          var3 = var12;
-          if (param0 >= 86) {
-            break L0;
-          } else {
-            this.field_z = -102;
-            break L0;
-          }
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var9Lifetime1;
+        var10 = Torquing.field_u;
+        var13 = this.field_l.a(param1, 25657);
+        var12 = var13;
+        var3 = var12;
+        if (param0 < 86) {
+          this.field_z = -102;
         }
-        L1: {
-          if (!this.field_l.field_b) {
-            break L1;
-          } else {
-            var4 = dp.field_a[param1];
-            if (this.field_z == 0) {
-              var5 = 0;
-              var6 = 0;
-              L2: while (true) {
-                L3: {
-                  if (var6 >= this.field_x) {
+        boolean decompiledFrameRemainder0 = true;
+        if (this.field_l.field_b) {
+          var4 = dp.field_a[param1];
+          if (this.field_z == 0) {
+            var5 = 0;
+            var6 = 0;
+            L3: while (true) {
+              if (var6 < this.field_x) {
+                if (var4 >= this.field_t[var6] &&
+                  this.field_t[var6 + 1] > var4) {
+                  if (var4 < this.field_u[var6]) {
+                    var5 = 4096;
                     break L3;
-                  } else {
-                    if (var4 >= this.field_t[var6]) {
-                      if (this.field_t[var6 - -1] > var4) {
-                        if (var4 < this.field_u[var6]) {
-                          var5 = 4096;
-                          break L3;
-                        } else {
-                          dk.a(var13, 0, ci.field_c, var5);
-                          return var3;
-                        }
-                      } else {
-                        var6++;
-                        continue L2;
-                      }
-                    } else {
-                      var6++;
-                      continue L2;
-                    }
                   }
+                  dk.a(var13, 0, ci.field_c, var5);
+                  return var3;
                 }
-                dk.a(var13, 0, ci.field_c, var5);
-                break L1;
+                var6++;
+                continue;
               }
-            } else {
-              var5 = 0;
-              L4: while (true) {
-                if (ci.field_c <= var5) {
-                  break L1;
+              break;
+            }
+            dk.a(var13, 0, ci.field_c, var5);
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            var5Lifetime1 = 0;
+            while (!(ci.field_c <= var5Lifetime1)) {
+              var6Lifetime1 = 0;
+              var7 = 0;
+              var8 = q.field_b[var5Lifetime1];
+              var9 = this.field_z;
+              if (var9 == 1) {
+                var6Lifetime1 = var8;
+              } else {
+                if (var9 != 2) {
+                  if (var9 == 3) {
+                    var6Lifetime1 = (var8 - var4 >> 1) + 2048;
+                  }
                 } else {
-                  L5: {
-                    var6 = 0;
-                    var7 = 0;
-                    var8 = q.field_b[var5];
-                    var9 = this.field_z;
-                    if ((var9 ^ -1) == -2) {
-                      var6 = var8;
-                      break L5;
-                    } else {
-                      if (var9 != 2) {
-                        if ((var9 ^ -1) != -4) {
-                          break L5;
-                        } else {
-                          var6 = (var8 + -var4 >> 611861953) + 2048;
-                          break L5;
-                        }
-                      } else {
-                        var6 = (var4 + -4096 + var8 >> -149594879) + 2048;
-                        break L5;
-                      }
-                    }
-                  }
-                  var11 = 0;
-                  var9 = var11;
-                  L6: while (true) {
-                    L7: {
-                      if (var11 >= this.field_x) {
-                        break L7;
-                      } else {
-                        if (this.field_t[var11] <= var6) {
-                          if (var6 < this.field_t[var11 + 1]) {
-                            if (var6 >= this.field_u[var11]) {
-                              break L7;
-                            } else {
-                              var7 = 4096;
-                              break L7;
-                            }
-                          } else {
-                            var11++;
-                            continue L6;
-                          }
-                        } else {
-                          var11++;
-                          continue L6;
-                        }
-                      }
-                    }
-                    var13 = var12;
-                    var13[var5] = var7;
-                    var5++;
-                    continue L4;
-                  }
+                  var6Lifetime1 = (var4 - 4096 + var8 >> 1) + 2048;
                 }
               }
+              var11 = 0;
+              var9Lifetime1 = var11;
+              L8: while (true) {
+                if (var11 < this.field_x) {
+                  if (this.field_t[var11] <= var6Lifetime1 &&
+                    var6Lifetime1 < this.field_t[var11 + 1]) {
+                    if (var6Lifetime1 >= this.field_u[var11]) {
+                      break L8;
+                    }
+                    var7 = 4096;
+                    break L8;
+                  }
+                  var11++;
+                  continue;
+                }
+                break;
+              }
+              var13 = var12;
+              var13[var5Lifetime1] = var7;
+              var5Lifetime1++;
             }
           }
         }
@@ -324,7 +222,7 @@ final class wp extends am {
 
     final void a(byte param0) {
         if (param0 <= 123) {
-            this.field_s = 91;
+          this.field_s = 91;
         }
         this.g((byte) 39);
     }
@@ -339,7 +237,7 @@ final class wp extends am {
     public static void a(boolean param0) {
         field_v = null;
         if (!param0) {
-            wp.b(110);
+          wp.b(110);
         }
     }
 

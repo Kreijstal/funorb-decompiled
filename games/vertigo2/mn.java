@@ -21,141 +21,86 @@ final class mn extends li {
         field_o = null;
         field_q = null;
         if (param0 != 6) {
-            field_p = (String) null;
+          field_p = (String) null;
         }
     }
 
     final static void b(boolean param0, int param1) {
         int var3;
-        L0: {
-          L1: {
-            var3 = Vertigo2.field_L ? 1 : 0;
-            if (param0) {
-              break L1;
+        var3 = Vertigo2.field_L ? 1 : 0;
+        if (param0 ||
+          null == gd.field_j) {
+          im.field_g = false;
+        }
+        if (param0) {
+          if (rk.field_y <= 0) {
+            if (ko.field_P > 0) {
+              ko.field_P = ko.field_P - 1;
             } else {
-              if (null == gd.field_j) {
-                break L1;
-              } else {
-                break L0;
+              if (0 < mp.field_b) {
+                mp.field_b = mp.field_b - 1;
               }
             }
+          } else {
+            rk.field_y = rk.field_y - 1;
           }
-          im.field_g = false;
-          break L0;
-        }
-        L2: {
-          if (param0) {
-            if (-1 <= (rk.field_y ^ -1)) {
-              if ((ko.field_P ^ -1) < -1) {
+        } else {
+          if (null != gd.field_j) {
+            if (0 >= rk.field_y) {
+              if (ko.field_P > 0) {
                 ko.field_P = ko.field_P - 1;
-                break L2;
               } else {
-                if (0 >= mp.field_b) {
-                  break L2;
-                } else {
-                  mp.field_b = mp.field_b - 1;
-                  break L2;
+                if (ld.field_b > mp.field_b) {
+                  if (0 == mp.field_b) {
+                    ed.a(false, false);
+                  }
+                  mp.field_b = mp.field_b + 1;
                 }
               }
             } else {
               rk.field_y = rk.field_y - 1;
-              break L2;
             }
           } else {
-            if (null != gd.field_j) {
-              if (0 >= rk.field_y) {
-                if (ko.field_P > 0) {
-                  ko.field_P = ko.field_P - 1;
-                  break L2;
+            if (sj.field_d != null) {
+              if (rk.field_y <= 0) {
+                if (0 < mp.field_b) {
+                  mp.field_b = mp.field_b - 1;
                 } else {
-                  if (ld.field_b > mp.field_b) {
-                    L3: {
-                      if (0 == mp.field_b) {
-                        ed.a(false, false);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
+                  if (ko.field_P < ld.field_b) {
+                    if (ko.field_P == 0) {
+                      ed.a(true, false);
                     }
-                    mp.field_b = mp.field_b + 1;
-                    break L2;
-                  } else {
-                    break L2;
+                    ko.field_P = ko.field_P + 1;
                   }
                 }
               } else {
                 rk.field_y = rk.field_y - 1;
-                break L2;
               }
             } else {
-              if (sj.field_d != null) {
-                if ((rk.field_y ^ -1) >= -1) {
-                  if (0 < mp.field_b) {
-                    mp.field_b = mp.field_b - 1;
-                    break L2;
-                  } else {
-                    if (ko.field_P < ld.field_b) {
-                      L4: {
-                        if (ko.field_P != 0) {
-                          break L4;
-                        } else {
-                          ed.a(true, false);
-                          break L4;
-                        }
-                      }
-                      ko.field_P = ko.field_P + 1;
-                      break L2;
-                    } else {
-                      break L2;
+              im.field_g = false;
+              if (0 >= ko.field_P) {
+                if (0 >= mp.field_b) {
+                  if (rk.field_y < ld.field_b) {
+                    if (rk.field_y == 0) {
+                      ne.c(false);
                     }
+                    rk.field_y = rk.field_y + 1;
                   }
                 } else {
-                  rk.field_y = rk.field_y - 1;
-                  break L2;
+                  mp.field_b = mp.field_b - 1;
                 }
               } else {
-                im.field_g = false;
-                if (0 >= ko.field_P) {
-                  if (0 >= mp.field_b) {
-                    if (rk.field_y >= ld.field_b) {
-                      break L2;
-                    } else {
-                      L5: {
-                        if (rk.field_y == 0) {
-                          ne.c(false);
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      }
-                      rk.field_y = rk.field_y + 1;
-                      break L2;
-                    }
-                  } else {
-                    mp.field_b = mp.field_b - 1;
-                    break L2;
-                  }
-                } else {
-                  ko.field_P = ko.field_P - 1;
-                  break L2;
-                }
+                ko.field_P = ko.field_P - 1;
               }
             }
           }
         }
-        L6: {
-          if (param1 <= -113) {
-            break L6;
-          } else {
-            mn.a((byte) 97, -80);
-            break L6;
-          }
+        if (param1 > -113) {
+          mn.a((byte) 97, -80);
         }
     }
 
     final static void a(boolean param0) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
         RuntimeException decompiledCaughtException = null;
         float var1_float = 0.0f;
         RuntimeException var1 = null;
@@ -183,309 +128,206 @@ final class mn extends li {
         int var31 = 0;
         int[] var32 = null;
         int[] var33 = null;
+        float var1_floatLifetime1;
+        int var2Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        double var8Lifetime1;
+        double var10Lifetime1;
+        int var12Lifetime1;
+        double var13Lifetime1;
+        double var15Lifetime1;
+        double var17Lifetime1;
+        double var19Lifetime1;
+        double var21_doubleLifetime1;
+        int var21Lifetime1;
+        int var22Lifetime1;
+        double var23_doubleLifetime1;
+        int var23Lifetime1;
+        int var24Lifetime1;
+        double var25Lifetime1;
+        double var27Lifetime1;
+        double var29Lifetime1;
         var31 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            var1_float = 1.399999976158142f;
-            oo.b(var1_float);
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= bm.field_G.length) {
-                var1_float = 1.399999976158142f;
-                var2 = 0;
-                L2: while (true) {
-                  if (var2 >= Vertigo2.field_J.length) {
-                    L3: {
-                      if (!param0) {
-                        break L3;
+          var1_float = 1.399999976158142f;
+          oo.b(var1_float);
+          for (var2 = 0; var2 < bm.field_G.length; var2++) {
+            var32 = bm.field_G[var2];
+            var4 = 0;
+            var5 = 512;
+            var6 = var4 * 128;
+            var1_float = var1_float - 0.10000000149011612f;
+            for (var7 = var4; var7 < var5; var7++) {
+              var8 = (double)(var7 >> 3) / 64.0 + 0.0078125;
+              var10 = (double)(var7 & 7) / 8.0 + 0.0625;
+              for (var12 = 0; var12 < 128; var12++) {
+                var13 = (double)var12 / 128.0;
+                var15 = var13;
+                var17 = var13;
+                var19 = var13;
+                if (var10 != 0.0) {
+                  if (0.5 > var13) {
+                    var21_double = (var10 + 1.0) * var13;
+                  } else {
+                    var21_double = var13 + var10 - var13 * var10;
+                  }
+                  var23_double = var13 * 2.0 - var21_double;
+                  var25 = 0.3333333333333333 + var8;
+                  if (1.0 < var25) {
+                    var25 = var25 - 1.0;
+                  }
+                  var27 = var8;
+                  var29 = var8 - 0.3333333333333333;
+                  if (!(var27 * 6.0 < 1.0)) {
+                    if (1.0 > 2.0 * var27) {
+                      var17 = var21_double;
+                    } else {
+                      if (!(2.0 > 3.0 * var27)) {
+                        var17 = var23_double;
                       } else {
-                        mn.b(false, 65);
-                        break L3;
+                        var17 = var23_double + 6.0 * ((0.6666666666666666 - var27) * (-var23_double + var21_double));
                       }
                     }
-                    oo.c();
-                    break L0;
                   } else {
-                    var33 = Vertigo2.field_J[var2];
-                    var4 = 0;
-                    var5 = 512;
-                    var1_float = var1_float + 0.07000000029802322f;
-                    var6 = var4 * 128;
-                    var7 = var4;
-                    L4: while (true) {
-                      if (var7 >= var5) {
-                        var2++;
-                        continue L2;
+                    var17 = var27 * ((-var23_double + var21_double) * 6.0) + var23_double;
+                  }
+                  if (!(1.0 > 6.0 * var25)) {
+                    if (!(2.0 * var25 < 1.0)) {
+                      if (3.0 * var25 < 2.0) {
+                        var15 = (-var25 + 0.6666666666666666) * (-var23_double + var21_double) * 6.0 + var23_double;
                       } else {
-                        var8 = (double)(var7 >> 983210691) / 64.0 + 0.0078125;
-                        var10 = (double)(7 & var7) / 8.0 + 0.0625;
-                        var12 = 0;
-                        L5: while (true) {
-                          if ((var12 ^ -1) <= -129) {
-                            var7++;
-                            continue L4;
-                          } else {
-                            L6: {
-                              var13 = (double)var12 / 128.0;
-                              var15 = var13;
-                              var17 = var13;
-                              var19 = var13;
-                              if (var10 == 0.0) {
-                                break L6;
-                              } else {
-                                L7: {
-                                  if (var13 < 0.5) {
-                                    var21_double = var13 * (1.0 + var10);
-                                    break L7;
-                                  } else {
-                                    var21_double = var10 + var13 - var13 * var10;
-                                    break L7;
-                                  }
-                                }
-                                L8: {
-                                  var23_double = 2.0 * var13 - var21_double;
-                                  var25 = var8 + 0.3333333333333333;
-                                  if (1.0 < var25) {
-                                    var25 = var25 - 1.0;
-                                    break L8;
-                                  } else {
-                                    break L8;
-                                  }
-                                }
-                                L9: {
-                                  var27 = var8;
-                                  var29 = var8 - 0.3333333333333333;
-                                  if (1.0 <= var27 * 6.0) {
-                                    if (1.0 <= 2.0 * var27) {
-                                      if (2.0 > 3.0 * var27) {
-                                        var17 = var23_double + 6.0 * ((-var23_double + var21_double) * (0.6666666666666666 - var27));
-                                        break L9;
-                                      } else {
-                                        var17 = var23_double;
-                                        break L9;
-                                      }
-                                    } else {
-                                      var17 = var21_double;
-                                      break L9;
-                                    }
-                                  } else {
-                                    var17 = var27 * ((-var23_double + var21_double) * 6.0) + var23_double;
-                                    break L9;
-                                  }
-                                }
-                                L10: {
-                                  if (1.0 > var25 * 6.0) {
-                                    var15 = var23_double + var25 * ((var21_double - var23_double) * 6.0);
-                                    break L10;
-                                  } else {
-                                    if (1.0 <= var25 * 2.0) {
-                                      if (var25 * 3.0 < 2.0) {
-                                        var15 = 6.0 * ((var21_double - var23_double) * (-var25 + 0.6666666666666666)) + var23_double;
-                                        break L10;
-                                      } else {
-                                        var15 = var23_double;
-                                        break L10;
-                                      }
-                                    } else {
-                                      var15 = var21_double;
-                                      break L10;
-                                    }
-                                  }
-                                }
-                                L11: {
-                                  if (var29 < 0.0) {
-                                    var29 = var29 + 1.0;
-                                    break L11;
-                                  } else {
-                                    break L11;
-                                  }
-                                }
-                                if (1.0 > 6.0 * var29) {
-                                  var19 = var29 * (6.0 * (var21_double - var23_double)) + var23_double;
-                                  break L6;
-                                } else {
-                                  if (2.0 * var29 >= 1.0) {
-                                    if (var29 * 3.0 >= 2.0) {
-                                      var19 = var23_double;
-                                      break L6;
-                                    } else {
-                                      var19 = var23_double + 6.0 * ((0.6666666666666666 - var29) * (-var23_double + var21_double));
-                                      break L6;
-                                    }
-                                  } else {
-                                    var19 = var21_double;
-                                    break L6;
-                                  }
-                                }
-                              }
-                            }
-                            L12: {
-                              var15 = Math.pow(var15, (double)var1_float);
-                              var17 = Math.pow(var17, (double)var1_float);
-                              var19 = Math.pow(var19, (double)var1_float);
-                              var21 = (int)(256.0 * var15);
-                              var22 = (int)(256.0 * var17);
-                              var23 = (int)(var19 * 256.0);
-                              var24 = (var22 << 106252808) + ((var21 << 445991056) - -var23);
-                              if (0 != var24) {
-                                break L12;
-                              } else {
-                                var24 = 1;
-                                break L12;
-                              }
-                            }
-                            incrementValue$0 = var6;
-                            var6++;
-                            var33[incrementValue$0] = var24;
-                            var12++;
-                            continue L5;
-                          }
-                        }
+                        var15 = var23_double;
+                      }
+                    } else {
+                      var15 = var21_double;
+                    }
+                  } else {
+                    var15 = var23_double + (-var23_double + var21_double) * 6.0 * var25;
+                  }
+                  if (0.0 > var29) {
+                    var29 = var29 + 1.0;
+                  }
+                  if (var29 * 6.0 < 1.0) {
+                    var19 = var23_double + var29 * ((-var23_double + var21_double) * 6.0);
+                  } else {
+                    if (2.0 * var29 < 1.0) {
+                      var19 = var21_double;
+                    } else {
+                      if (!(2.0 > var29 * 3.0)) {
+                        var19 = var23_double;
+                      } else {
+                        var19 = var23_double + (var21_double - var23_double) * (-var29 + 0.6666666666666666) * 6.0;
                       }
                     }
                   }
                 }
-              } else {
-                var32 = bm.field_G[var2];
-                var4 = 0;
-                var5 = 512;
-                var6 = var4 * 128;
-                var1_float = var1_float - 0.10000000149011612f;
-                var7 = var4;
-                L13: while (true) {
-                  if (var7 >= var5) {
-                    var2++;
-                    continue L1;
-                  } else {
-                    var8 = (double)(var7 >> -1724663261) / 64.0 + 0.0078125;
-                    var10 = (double)(var7 & 7) / 8.0 + 0.0625;
-                    var12 = 0;
-                    L14: while (true) {
-                      if (-129 >= (var12 ^ -1)) {
-                        var7++;
-                        continue L13;
-                      } else {
-                        L15: {
-                          var13 = (double)var12 / 128.0;
-                          var15 = var13;
-                          var17 = var13;
-                          var19 = var13;
-                          if (var10 != 0.0) {
-                            L16: {
-                              if (0.5 > var13) {
-                                var21_double = (var10 + 1.0) * var13;
-                                break L16;
-                              } else {
-                                var21_double = var13 + var10 - var13 * var10;
-                                break L16;
-                              }
-                            }
-                            L17: {
-                              var23_double = var13 * 2.0 - var21_double;
-                              var25 = 0.3333333333333333 + var8;
-                              if (1.0 >= var25) {
-                                break L17;
-                              } else {
-                                var25 = var25 - 1.0;
-                                break L17;
-                              }
-                            }
-                            L18: {
-                              var27 = var8;
-                              var29 = var8 - 0.3333333333333333;
-                              if (var27 * 6.0 >= 1.0) {
-                                if (1.0 > 2.0 * var27) {
-                                  var17 = var21_double;
-                                  break L18;
-                                } else {
-                                  if (2.0 <= 3.0 * var27) {
-                                    var17 = var23_double;
-                                    break L18;
-                                  } else {
-                                    var17 = var23_double + 6.0 * ((0.6666666666666666 - var27) * (-var23_double + var21_double));
-                                    break L18;
-                                  }
-                                }
-                              } else {
-                                var17 = var27 * ((-var23_double + var21_double) * 6.0) + var23_double;
-                                break L18;
-                              }
-                            }
-                            L19: {
-                              if (1.0 <= 6.0 * var25) {
-                                if (2.0 * var25 >= 1.0) {
-                                  if (3.0 * var25 < 2.0) {
-                                    var15 = (-var25 + 0.6666666666666666) * (-var23_double + var21_double) * 6.0 + var23_double;
-                                    break L19;
-                                  } else {
-                                    var15 = var23_double;
-                                    break L19;
-                                  }
-                                } else {
-                                  var15 = var21_double;
-                                  break L19;
-                                }
-                              } else {
-                                var15 = var23_double + (-var23_double + var21_double) * 6.0 * var25;
-                                break L19;
-                              }
-                            }
-                            L20: {
-                              if (0.0 > var29) {
-                                var29 = var29 + 1.0;
-                                break L20;
-                              } else {
-                                break L20;
-                              }
-                            }
-                            if (var29 * 6.0 < 1.0) {
-                              var19 = var23_double + var29 * ((-var23_double + var21_double) * 6.0);
-                              break L15;
-                            } else {
-                              if (2.0 * var29 < 1.0) {
-                                var19 = var21_double;
-                                break L15;
-                              } else {
-                                if (2.0 <= var29 * 3.0) {
-                                  var19 = var23_double;
-                                  break L15;
-                                } else {
-                                  var19 = var23_double + (var21_double - var23_double) * (-var29 + 0.6666666666666666) * 6.0;
-                                  break L15;
-                                }
-                              }
-                            }
-                          } else {
-                            break L15;
-                          }
-                        }
-                        L21: {
-                          var15 = Math.pow(var15, (double)var1_float);
-                          var17 = Math.pow(var17, (double)var1_float);
-                          var19 = Math.pow(var19, (double)var1_float);
-                          var21 = (int)(var15 * 256.0);
-                          var22 = (int)(256.0 * var17);
-                          var23 = (int)(256.0 * var19);
-                          var24 = var23 + (var21 << 1241838128) - -(var22 << -1097999416);
-                          if (0 == var24) {
-                            var24 = 1;
-                            break L21;
-                          } else {
-                            break L21;
-                          }
-                        }
-                        incrementValue$1 = var6;
-                        var6++;
-                        var32[incrementValue$1] = var24;
-                        var12++;
-                        continue L14;
-                      }
-                    }
-                  }
+                var15 = Math.pow(var15, (double)var1_float);
+                var17 = Math.pow(var17, (double)var1_float);
+                var19 = Math.pow(var19, (double)var1_float);
+                var21 = (int)(var15 * 256.0);
+                var22 = (int)(256.0 * var17);
+                var23 = (int)(256.0 * var19);
+                var24 = var23 + (var21 << 16) + (var22 << 8);
+                if (0 == var24) {
+                  var24 = 1;
                 }
+                var32[var6++] = var24;
               }
             }
           }
+          var1_floatLifetime1 = 1.399999976158142f;
+          for (var2Lifetime1 = 0; var2Lifetime1 < Vertigo2.field_J.length; var2Lifetime1++) {
+            var33 = Vertigo2.field_J[var2Lifetime1];
+            var4Lifetime1 = 0;
+            var5Lifetime1 = 512;
+            var1_floatLifetime1 = var1_floatLifetime1 + 0.07000000029802322f;
+            var6Lifetime1 = var4Lifetime1 * 128;
+            for (var7Lifetime1 = var4Lifetime1; var7Lifetime1 < var5Lifetime1; var7Lifetime1++) {
+              var8Lifetime1 = (double)(var7Lifetime1 >> 3) / 64.0 + 0.0078125;
+              var10Lifetime1 = (double)(7 & var7Lifetime1) / 8.0 + 0.0625;
+              for (var12Lifetime1 = 0; var12Lifetime1 < 128; var12Lifetime1++) {
+                var13Lifetime1 = (double)var12Lifetime1 / 128.0;
+                var15Lifetime1 = var13Lifetime1;
+                var17Lifetime1 = var13Lifetime1;
+                var19Lifetime1 = var13Lifetime1;
+                if (var10Lifetime1 != 0.0) {
+                  if (var13Lifetime1 < 0.5) {
+                    var21_doubleLifetime1 = var13Lifetime1 * (1.0 + var10Lifetime1);
+                  } else {
+                    var21_doubleLifetime1 = var10Lifetime1 + var13Lifetime1 - var13Lifetime1 * var10Lifetime1;
+                  }
+                  var23_doubleLifetime1 = 2.0 * var13Lifetime1 - var21_doubleLifetime1;
+                  var25Lifetime1 = var8Lifetime1 + 0.3333333333333333;
+                  if (1.0 < var25Lifetime1) {
+                    var25Lifetime1 = var25Lifetime1 - 1.0;
+                  }
+                  var27Lifetime1 = var8Lifetime1;
+                  var29Lifetime1 = var8Lifetime1 - 0.3333333333333333;
+                  if (!(1.0 > var27Lifetime1 * 6.0)) {
+                    if (!(1.0 > 2.0 * var27Lifetime1)) {
+                      if (2.0 > 3.0 * var27Lifetime1) {
+                        var17Lifetime1 = var23_doubleLifetime1 + 6.0 * ((-var23_doubleLifetime1 + var21_doubleLifetime1) * (0.6666666666666666 - var27Lifetime1));
+                      } else {
+                        var17Lifetime1 = var23_doubleLifetime1;
+                      }
+                    } else {
+                      var17Lifetime1 = var21_doubleLifetime1;
+                    }
+                  } else {
+                    var17Lifetime1 = var27Lifetime1 * ((-var23_doubleLifetime1 + var21_doubleLifetime1) * 6.0) + var23_doubleLifetime1;
+                  }
+                  if (1.0 > var25Lifetime1 * 6.0) {
+                    var15Lifetime1 = var23_doubleLifetime1 + var25Lifetime1 * ((var21_doubleLifetime1 - var23_doubleLifetime1) * 6.0);
+                  } else {
+                    if (!(1.0 > var25Lifetime1 * 2.0)) {
+                      if (var25Lifetime1 * 3.0 < 2.0) {
+                        var15Lifetime1 = 6.0 * ((var21_doubleLifetime1 - var23_doubleLifetime1) * (-var25Lifetime1 + 0.6666666666666666)) + var23_doubleLifetime1;
+                      } else {
+                        var15Lifetime1 = var23_doubleLifetime1;
+                      }
+                    } else {
+                      var15Lifetime1 = var21_doubleLifetime1;
+                    }
+                  }
+                  if (var29Lifetime1 < 0.0) {
+                    var29Lifetime1 = var29Lifetime1 + 1.0;
+                  }
+                  if (1.0 > 6.0 * var29Lifetime1) {
+                    var19Lifetime1 = var29Lifetime1 * (6.0 * (var21_doubleLifetime1 - var23_doubleLifetime1)) + var23_doubleLifetime1;
+                  } else {
+                    if (!(2.0 * var29Lifetime1 < 1.0)) {
+                      if (!(var29Lifetime1 * 3.0 < 2.0)) {
+                        var19Lifetime1 = var23_doubleLifetime1;
+                      } else {
+                        var19Lifetime1 = var23_doubleLifetime1 + 6.0 * ((0.6666666666666666 - var29Lifetime1) * (-var23_doubleLifetime1 + var21_doubleLifetime1));
+                      }
+                    } else {
+                      var19Lifetime1 = var21_doubleLifetime1;
+                    }
+                  }
+                }
+                var15Lifetime1 = Math.pow(var15Lifetime1, (double)var1_floatLifetime1);
+                var17Lifetime1 = Math.pow(var17Lifetime1, (double)var1_floatLifetime1);
+                var19Lifetime1 = Math.pow(var19Lifetime1, (double)var1_floatLifetime1);
+                var21Lifetime1 = (int)(256.0 * var15Lifetime1);
+                var22Lifetime1 = (int)(256.0 * var17Lifetime1);
+                var23Lifetime1 = (int)(var19Lifetime1 * 256.0);
+                var24Lifetime1 = (var22Lifetime1 << 8) + ((var21Lifetime1 << 16) + var23Lifetime1);
+                if (0 == var24Lifetime1) {
+                  var24Lifetime1 = 1;
+                }
+                var33[var6Lifetime1++] = var24Lifetime1;
+              }
+            }
+          }
+          if (param0) {
+            mn.b(false, 65);
+          }
+          oo.c();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -495,11 +337,11 @@ final class mn extends li {
 
     final static void b(int param0, int param1) {
         if (rr.field_z[param1]) {
-            eg.a(85, rr.field_B[param1]);
-            rr.field_z[param1] = false;
+          eg.a(85, rr.field_B[param1]);
+          rr.field_z[param1] = false;
         }
         if (param0 != 6) {
-            mn.b(true, -91);
+          mn.b(true, -91);
         }
     }
 
@@ -508,14 +350,15 @@ final class mn extends li {
         int var2 = -54 / ((param1 - 8) / 40);
         int var3 = param0 & 255;
         if (var3 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(var3, 16));
+          throw new IllegalArgumentException("" + Integer.toString(var3, 16));
         }
-        if ((var3 ^ -1) <= -129 && -161 < (var3 ^ -1)) {
-            var4 = fa.field_o[var3 + -128];
-            if (!(var4 != 0)) {
-                var4 = 63;
-            }
-            var3 = var4;
+        if (var3 >= 128 &&
+          var3 < 160) {
+          var4 = fa.field_o[var3 - 128];
+          if (var4 == 0) {
+            var4 = 63;
+          }
+          var3 = var4;
         }
         return (char)var3;
     }

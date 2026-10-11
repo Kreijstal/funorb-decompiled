@@ -7,42 +7,21 @@ final class rl {
     static String field_c;
 
     final static boolean b(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         rf.field_r = true;
-        if (param0 != 0) {
-          L0: {
-            rl.a(-78);
-            ah.field_z = 15000L + ll.a(param0 + 1000);
-            if (-12 != (q.field_Jb ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            ah.field_z = 15000L + ll.a(param0 + 1000);
-            if (-12 != (q.field_Jb ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 0) {
+          ah.field_z = 15000L + ll.a(param0 + 1000);
+          return q.field_Jb == 11 ? true : false;
         }
+        rl.a(-78);
+        ah.field_z = 15000L + ll.a(param0 + 1000);
+        return q.field_Jb == 11 ? true : false;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != -19959) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -53,55 +32,30 @@ final class rl {
         int var4 = 0;
         int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Terraphoenix.field_V;
         try {
-          L0: {
-            L1: {
-              if (!param2) {
-                break L1;
-              } else {
-                field_b = (String[]) null;
-                break L1;
-              }
-            }
-            var3_int = 1;
-            L2: while (true) {
-              if (-2 <= (param1 ^ -1)) {
-                if (1 != param1) {
-                  stackIn_14_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_12_0 = param0 * var3_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L3: {
-                  if (0 == (1 & param1)) {
-                    break L3;
-                  } else {
-                    var3_int = var3_int * param0;
-                    break L3;
-                  }
-                }
-                param0 = param0 * param0;
-                param1 = param1 >> 1;
-                continue L2;
-              }
-            }
+          if (param2) {
+            field_b = (String[]) null;
           }
+          var3_int = 1;
+          while (param1 > 1) {
+            if (0 != (1 & param1)) {
+              var3_int = var3_int * param0;
+            }
+            param0 = param0 * param0;
+            param1 = param1 >> 1;
+          }
+          if (1 != param1) {
+            stackIn_14_0 = var3_int;
+            return stackIn_14_0;
+          }
+          stackIn_12_0 = param0 * var3_int;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw qk.a((Throwable) ((Object) var3), "rl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          return stackIn_14_0;
         }
     }
 

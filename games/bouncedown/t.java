@@ -8,8 +8,8 @@ final class t extends eg {
 
     final boolean c(byte param0) {
         if (param0 > -123) {
-            this.c((byte) -60);
-            return false;
+          this.c((byte) -60);
+          return false;
         }
         return false;
     }
@@ -17,18 +17,18 @@ final class t extends eg {
     t(Object param0, int param1) {
         super(param1);
         try {
-            this.field_s = param0;
+          this.field_s = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "t.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void f(int param0) {
         field_t = null;
         if (param0 != -32504) {
-            field_r = (String[]) null;
-            field_r = null;
-            return;
+          field_r = (String[]) null;
+          field_r = null;
+          return;
         }
         field_r = null;
     }

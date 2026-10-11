@@ -14,59 +14,53 @@ final class td extends o {
 
     final static void a(le param0, int param1, int param2, int param3) {
         try {
-            if (param3 != 200) {
-                td.a(40);
-            }
-            tm.field_d = param2;
-            tn.field_m = param1;
-            bl.field_d = param0;
+          if (param3 != 200) {
+            td.a(40);
+          }
+          tm.field_d = param2;
+          tn.field_m = param1;
+          bl.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "td.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static km[] a(int param0, int param1) {
-        km[] var2;
-        le var3;
-        km[] var4;
-        var4 = new km[9];
-        var2 = var4;
-        if (param0 != -31056) {
-          var3 = (le) null;
-          td.a((le) null, -77, -59, -123);
-          var4[4] = rd.a(64, param1, 14727);
-          return var2;
-        } else {
+        km[] var4 = new km[9];
+        km[] var2 = var4;
+        if (param0 == -31056) {
           var4[4] = rd.a(64, param1, 14727);
           return var2;
         }
+        le var3 = (le) null;
+        td.a((le) null, -77, -59, -123);
+        var4[4] = rd.a(64, param1, 14727);
+        return var2;
     }
 
     td(byte[] param0) {
         try {
-            this.field_q = param0;
+          this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_j = null;
         field_n = null;
-        if (param0 != 5239) {
-          field_p = 73;
-          field_m = null;
-          field_l = null;
-          field_r = null;
-          field_o = null;
-          return;
-        } else {
+        if (param0 == 5239) {
           field_m = null;
           field_l = null;
           field_r = null;
           field_o = null;
           return;
         }
+        field_p = 73;
+        field_m = null;
+        field_l = null;
+        field_r = null;
+        field_o = null;
     }
 
     static {

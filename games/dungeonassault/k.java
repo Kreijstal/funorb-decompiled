@@ -16,27 +16,28 @@ final class k {
 
     k(String param0, String param1, k param2) {
         try {
-            this.field_g = param0;
-            this.field_d = param2;
-            this.field_i = param1;
+          this.field_g = param0;
+          this.field_d = param2;
+          this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(byte param0, int param1, int param2, int param3) {
-        long var4;
-        String var6;
-        if (param0 != -122) {
-          k.a((byte) 65, -82, -76, 109);
-          var4 = 60000L * ((long)param3 + 16912800L);
-          var6 = java.text.DateFormat.getDateTimeInstance(param2, param1).format(new Date(var4));
-          return var6;
-        } else {
+        long var4 = 0L;
+        String var6 = null;
+        String var6Lifetime1;
+        long var4Lifetime1;
+        if (param0 == -122) {
           var4 = 60000L * ((long)param3 + 16912800L);
           var6 = java.text.DateFormat.getDateTimeInstance(param2, param1).format(new Date(var4));
           return var6;
         }
+        k.a((byte) 65, -82, -76, 109);
+        var4Lifetime1 = 60000L * ((long)param3 + 16912800L);
+        var6Lifetime1 = java.text.DateFormat.getDateTimeInstance(param2, param1).format(new Date(var4Lifetime1));
+        return var6Lifetime1;
     }
 
     public static void a(boolean param0) {
@@ -45,14 +46,12 @@ final class k {
         field_h = null;
         field_c = null;
         field_e = null;
-        if (!param0) {
-          field_e = (ef) null;
-          field_b = null;
-          return;
-        } else {
+        if (param0) {
           field_b = null;
           return;
         }
+        field_e = (ef) null;
+        field_b = null;
     }
 
     static {

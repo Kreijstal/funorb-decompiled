@@ -10,10 +10,10 @@ final class kk {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 4) {
-            field_a = (int[]) null;
-            field_b = null;
-            field_c = null;
-            return;
+          field_a = (int[]) null;
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;

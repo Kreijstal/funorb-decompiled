@@ -11,32 +11,29 @@ final class wj extends v implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, int param1) {
         if (param1 >= -86) {
-            this.field_f = 98;
-            param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_f = 98;
+          param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 != 18421) {
-            return;
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final synchronized int b(boolean param0) {
-        int var2;
-        java.awt.Component var3;
-        var2 = this.field_f;
+        int var2 = this.field_f;
         this.field_f = 0;
-        if (!param0) {
-          var3 = (java.awt.Component) null;
-          this.a(-71, (java.awt.Component) null);
-          return var2;
-        } else {
+        if (param0) {
           return var2;
         }
+        java.awt.Component var3 = (java.awt.Component) null;
+        this.a(-71, (java.awt.Component) null);
+        return var2;
     }
 
     wj() {

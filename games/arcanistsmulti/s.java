@@ -15,32 +15,23 @@ abstract class s {
     int field_g;
 
     final static void a(boolean param0) {
-        int var1;
-        if (param0) {
-          L0: {
-            field_b = (String) null;
-            if (224 > si.field_l) {
-              var1 = si.field_l % 32;
-              mf.a(si.field_l - -32 - var1, 21298);
-              break L0;
-            } else {
-              mf.a(256, 21298);
-              break L0;
-            }
+        int var1 = 0;
+        int var1Lifetime1;
+        if (!param0) {
+          if (224 <= si.field_l) {
+            mf.a(256, 21298);
+          } else {
+            var1 = si.field_l % 32;
+            mf.a(si.field_l + 32 - var1, 21298);
           }
           return;
+        }
+        field_b = (String) null;
+        if (224 <= si.field_l) {
+          mf.a(256, 21298);
         } else {
-          L1: {
-            if (224 > si.field_l) {
-              var1 = si.field_l % 32;
-              mf.a(si.field_l - -32 - var1, 21298);
-              break L1;
-            } else {
-              mf.a(256, 21298);
-              break L1;
-            }
-          }
-          return;
+          var1Lifetime1 = si.field_l % 32;
+          mf.a(si.field_l + 32 - var1Lifetime1, 21298);
         }
     }
 
@@ -50,7 +41,7 @@ abstract class s {
         field_a = null;
         field_b = null;
         field_d = null;
-        int var1 = -45 % ((param0 - -49) / 37);
+        int var1 = -45 % ((param0 + 49) / 37);
         field_i = null;
         field_e = (nl[][]) null;
     }

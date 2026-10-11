@@ -17,7 +17,7 @@ final class fh {
         field_e = null;
         field_h = null;
         if (param0 != -29988) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;

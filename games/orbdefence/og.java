@@ -22,54 +22,46 @@ final class og {
         field_n = null;
         field_j = null;
         if (param0 > -9) {
-            og.a((byte) -121);
-            field_g = null;
-            return;
+          og.a((byte) -121);
+          field_g = null;
+          return;
         }
         field_g = null;
     }
 
     final int b(byte param0) {
-        int var2;
-        if (!this.field_l) {
-          if (-3 != (this.field_d ^ -1)) {
-            var2 = -57 / ((53 - param0) / 43);
-            if ((ea.field_h ^ -1L) != (this.field_m ^ -1L)) {
-              if (-3 == (ob.field_H ^ -1)) {
-                if (ll.a(this.field_h, -153798488)) {
-                  return 1;
-                } else {
-                  return 0;
-                }
-              } else {
-                return 0;
-              }
-            } else {
-              return 1;
-            }
-          } else {
-            if (0 >= this.field_e) {
-              var2 = -57 / ((53 - param0) / 43);
-              if ((ea.field_h ^ -1L) != (this.field_m ^ -1L)) {
-                if (-3 == (ob.field_H ^ -1)) {
-                  if (ll.a(this.field_h, -153798488)) {
-                    return 1;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  return 0;
-                }
-              } else {
-                return 1;
-              }
-            } else {
-              return 2;
-            }
-          }
-        } else {
+        int var2 = 0;
+        int var2Lifetime1;
+        if (this.field_l) {
           return 2;
         }
+        if (this.field_d == 2) {
+          if (0 < this.field_e) {
+            return 2;
+          }
+          var2 = -57 / ((53 - param0) / 43);
+          if (~ea.field_h == ~this.field_m) {
+            return 1;
+          }
+          if (ob.field_H != 2) {
+            return 0;
+          }
+          if (!ll.a(this.field_h, -153798488)) {
+            return 0;
+          }
+          return 1;
+        }
+        var2Lifetime1 = -57 / ((53 - param0) / 43);
+        if (~ea.field_h == ~this.field_m) {
+          return 1;
+        }
+        if (ob.field_H != 2) {
+          return 0;
+        }
+        if (!ll.a(this.field_h, -153798488)) {
+          return 0;
+        }
+        return 1;
     }
 
     og(boolean param0) {
@@ -81,9 +73,9 @@ final class og {
         this.field_h = vk.field_v;
         this.field_m = tf.field_l;
         if (!param0) {
-            this.field_i = null;
+          this.field_i = null;
         } else {
-            this.field_i = n.field_c;
+          this.field_i = n.field_c;
         }
         this.field_f = gb.field_b;
     }

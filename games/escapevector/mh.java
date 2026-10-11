@@ -16,7 +16,7 @@ final class mh {
         field_g = null;
         field_a = null;
         if (!param0) {
-            mh.b((byte) 81);
+          mh.b((byte) 81);
         }
         field_d = null;
         field_h = null;
@@ -25,17 +25,17 @@ final class mh {
 
     final static String b(byte param0) {
         String var1 = "";
-        if (!(null == dd.field_d)) {
-            var1 = dd.field_d.j(35);
+        if (null != dd.field_d) {
+          var1 = dd.field_d.j(35);
         }
         if (var1.length() == 0) {
-            var1 = tg.i(0);
+          var1 = tg.i(0);
         }
         if (param0 <= 50) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
-        if (-1 == (var1.length() ^ -1)) {
-            var1 = fi.field_e;
+        if (var1.length() == 0) {
+          var1 = fi.field_e;
         }
         return var1;
     }
@@ -43,71 +43,50 @@ final class mh {
     final static void a(byte param0, boolean param1) {
         wc.a(param1, 1983, true);
         if (param0 >= -68) {
-            mh.b((byte) 6);
+          mh.b((byte) 6);
         }
     }
 
     final static int a(int param0, CharSequence param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = EscapeVector.field_A;
         try {
-          L0: {
-            var2_int = param1.length();
-            var3 = 0;
-            var4 = param0;
-            L1: while (true) {
-              if (var4 >= var2_int) {
-                stackIn_5_0 = var3;
-                break L0;
-              } else {
-                var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 1321276677));
-                var4++;
-                continue L1;
-              }
-            }
+          var2_int = param1.length();
+          var3 = 0;
+          for (var4 = param0; var4 < var2_int; var4++) {
+            var3 = hf.a(78, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
+          stackIn_5_0 = var3;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("mh.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("mh.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0;
     }
 
     final static void a(byte param0) {
         if (null != bk.field_r) {
-            bk.field_r.a((byte) -109);
+          bk.field_r.a((byte) -109);
         }
         if (param0 != 119) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

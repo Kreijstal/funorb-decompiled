@@ -16,7 +16,7 @@ abstract class vv extends am {
         field_s = null;
         field_o = null;
         if (param0 != 18) {
-            vv.g((byte) 127);
+          vv.g((byte) 127);
         }
     }
 

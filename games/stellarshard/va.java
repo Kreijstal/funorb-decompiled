@@ -15,21 +15,21 @@ final class va extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(ej param0, int param1) {
         try {
-            kf.a(this.field_d, 16711935, param0);
-            if (param1 > -10) {
-                java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
-                this.focusGained((java.awt.event.FocusEvent) null);
-            }
+          kf.a(this.field_d, 16711935, param0);
+          if (param1 > -10) {
+            java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
+            this.focusGained((java.awt.event.FocusEvent) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_c = true;
+          this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "va.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "va.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,9 +41,9 @@ final class va extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(boolean param0, int param1) {
         if (param1 != -844) {
-            va.a(false, 19);
-            th.a(param0, false, 4);
-            return;
+          va.a(false, 19);
+          th.a(param0, false, 4);
+          return;
         }
         th.a(param0, false, 4);
     }

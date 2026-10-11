@@ -11,9 +11,9 @@ final class cf {
 
     public static void a(byte param0) {
         if (param0 != -87) {
-            field_e = -67;
-            field_b = null;
-            return;
+          field_e = -67;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -11,19 +11,18 @@ final class gj extends rh {
 
     final Object c(byte param0) {
         if (param0 != 30) {
-            gj.d(70);
-            return this.field_v;
+          gj.d(70);
+          return this.field_v;
         }
         return this.field_v;
     }
 
     final static db[] a(int param0, int param1, boolean param2, int param3) {
-        if (param2) {
-          field_s = (byte[][]) null;
-          return wb.a(param0, param1, 1, param3, 3);
-        } else {
+        if (!param2) {
           return wb.a(param0, param1, 1, param3, 3);
         }
+        field_s = (byte[][]) null;
+        return wb.a(param0, param1, 1, param3, 3);
     }
 
     final boolean d(byte param0) {
@@ -36,9 +35,9 @@ final class gj extends rh {
         field_s = (byte[][]) null;
         field_u = null;
         if (param0 != -8601) {
-            gj.d(-12);
-            field_x = null;
-            return;
+          gj.d(-12);
+          field_x = null;
+          return;
         }
         field_x = null;
     }
@@ -46,9 +45,9 @@ final class gj extends rh {
     gj(Object param0, int param1) {
         super(param1);
         try {
-            this.field_v = param0;
+          this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

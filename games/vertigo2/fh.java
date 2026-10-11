@@ -18,21 +18,21 @@ class fh extends gp {
         int var4 = 0;
         int var5 = 0;
         try {
-            rh.field_I.field_S = param0;
-            ce.field_c = true;
-            var2_int = ro.field_g.field_i;
-            var3 = ro.field_g.field_d;
-            var4 = rh.field_I.field_z.a(param0, 272, rh.field_I.field_qb);
-            if (param1 != -19615) {
-                fh.h(-30);
-            }
-            var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
-            oc.field_v.a(77, 320, -120 + var3 - var5 * 2, var5, (-320 + var2_int) / 2);
-            oc.field_v.field_Bb = vl.a(oc.field_v.field_db, 3, 0, 2105376, 11579568, 8421504);
-            rh.field_I.a(125, -48 + oc.field_v.field_Fb, -20 + (oc.field_v.field_db + -24), 16, 24);
-            gb.field_c.a(79, 80, 24, -44 + oc.field_v.field_db, 120);
+          rh.field_I.field_S = param0;
+          ce.field_c = true;
+          var2_int = ro.field_g.field_i;
+          var3 = ro.field_g.field_d;
+          var4 = rh.field_I.field_z.a(param0, 272, rh.field_I.field_qb);
+          if (param1 != -19615) {
+            fh.h(-30);
+          }
+          var5 = -(var4 / 2) + 7 + (-110 + var3 / 2);
+          oc.field_v.a(77, 320, -120 + var3 - var5 * 2, var5, (-320 + var2_int) / 2);
+          oc.field_v.field_Bb = vl.a(oc.field_v.field_db, 3, 0, 2105376, 11579568, 8421504);
+          rh.field_I.a(125, -48 + oc.field_v.field_Fb, -20 + (oc.field_v.field_db - 24), 16, 24);
+          gb.field_c.a(79, 80, 24, -44 + oc.field_v.field_db, 120);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "fh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "fh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

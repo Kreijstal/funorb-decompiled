@@ -16,16 +16,16 @@ final class cb {
 
     final static void a(int param0, String param1, String param2) {
         try {
-            i.a(false, param2, -5136, param1);
-            int var3_int = 59 % ((param0 - 43) / 38);
+          i.a(false, param2, -5136, param1);
+          int var3_int = 59 % ((param0 - 43) / 38);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "cb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "cb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -1) {
-            return;
+          return;
         }
         field_e = null;
         field_k = null;
@@ -40,57 +40,32 @@ final class cb {
         RuntimeException var1_ref = null;
         var4 = Chess.field_G;
         try {
-          L0: {
-            var1 = lg.field_d;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  ph.field_h = ta.field_y;
-                  si.field_o = si.field_o + 1;
-                  if (0 <= lk.field_e) {
-                    L3: while (true) {
-                      if (sc.field_i == lk.field_e) {
-                        break L2;
-                      } else {
-                        var2 = kl.field_h[sc.field_i];
-                        sc.field_i = 1 + sc.field_i & 127;
-                        if (0 <= var2) {
-                          ok.field_Jb[var2] = true;
-                          continue L3;
-                        } else {
-                          ok.field_Jb[var2 ^ -1] = false;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if (var2 >= 112) {
-                        lk.field_e = sc.field_i;
-                        break L2;
-                      } else {
-                        ok.field_Jb[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = lg.field_d;
+          synchronized (var1) {
+            ph.field_h = ta.field_y;
+            si.field_o = si.field_o + 1;
+            if (0 > lk.field_e) {
+              for (var2 = 0; var2 < 112; var2++) {
+                ok.field_Jb[var2] = false;
+              }
+              lk.field_e = sc.field_i;
+            } else {
+              while (sc.field_i != lk.field_e) {
+                var2 = kl.field_h[sc.field_i];
+                sc.field_i = 1 + sc.field_i & 127;
+                if (0 <= var2) {
+                  ok.field_Jb[var2] = true;
+                  continue;
                 }
-                L5: {
-                  ta.field_y = ce.field_e;
-                  if (param0 == 12) {
-                    break L5;
-                  } else {
-                    field_k = (int[]) null;
-                    break L5;
-                  }
-                }
-                break L1;
+                ok.field_Jb[~var2] = false;
               }
             }
-            break L0;
+            ta.field_y = ce.field_e;
+            if (param0 != 12) {
+              field_k = (int[]) null;
+            }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

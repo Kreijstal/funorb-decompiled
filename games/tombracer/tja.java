@@ -10,22 +10,22 @@ final class tja extends pb {
         field_p = null;
         field_q = null;
         if (param0) {
-            tja.a(false);
+          tja.a(false);
         }
     }
 
     final boolean a(int param0) {
         if (param0 != 14646) {
-            this.f(6);
-            return false;
+          this.f(6);
+          return false;
         }
         return false;
     }
 
     final Object f(int param0) {
         if (param0 != 29243) {
-            this.f(77);
-            return this.field_o;
+          this.f(77);
+          return this.field_o;
         }
         return this.field_o;
     }
@@ -33,9 +33,9 @@ final class tja extends pb {
     tja(Object param0, int param1) {
         super(param1);
         try {
-            this.field_o = param0;
+          this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "tja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "tja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

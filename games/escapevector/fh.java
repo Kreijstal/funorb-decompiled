@@ -15,9 +15,7 @@ abstract class fh {
     public static void a(byte param0) {
         field_i = null;
         field_f = null;
-        if (param0 != 86) {
-          return;
-        } else {
+        if (param0 == 86) {
           field_b = null;
           field_h = null;
           field_d = null;
@@ -32,9 +30,9 @@ abstract class fh {
 
     final static void b(int param0) {
         if (param0 > -27) {
-            fh.a((byte) 2);
-            lj.a(17, 27);
-            return;
+          fh.a((byte) 2);
+          lj.a(17, 27);
+          return;
         }
         lj.a(17, 27);
     }

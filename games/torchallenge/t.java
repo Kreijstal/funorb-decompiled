@@ -7,10 +7,10 @@ abstract class t {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param2 <= 112) {
-            field_a = (String[]) null;
+          field_a = (String[]) null;
         }
         if (0 != (1 << param0 & param1)) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -18,50 +18,26 @@ abstract class t {
     abstract void a(uf param0, int param1);
 
     final static void b(boolean param0) {
-        int[] dupTemp$1 = null;
         int var1_int = 0;
         int var2 = 0;
+        int[] dupTemp$1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var1_int = 0;
-            L1: while (true) {
-              if (8 <= var1_int) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    field_b = (si) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                var2 = 0;
-                L3: while (true) {
-                  if ((var2 ^ -1) <= -4) {
-                    var1_int++;
-                    continue L1;
-                  } else {
-                    L4: {
-                      if (-1 <= (ol.field_c[var1_int][var2][4] ^ -1)) {
-                        break L4;
-                      } else {
-                        dupTemp$1 = ol.field_c[var1_int][var2];
-                        dupTemp$1[4] = dupTemp$1[4] - 1;
-                        break L4;
-                      }
-                    }
-                    var2++;
-                    continue L3;
-                  }
-                }
+          for (var1_int = 0; 8 > var1_int; var1_int++) {
+            for (var2 = 0; var2 < 3; var2++) {
+              if (ol.field_c[var1_int][var2][4] > 0) {
+                dupTemp$1 = ol.field_c[var1_int][var2];
+                dupTemp$1[4] = dupTemp$1[4] - 1;
               }
             }
           }
+          if (!param0) {
+            field_b = (si) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -114,10 +90,11 @@ abstract class t {
     }
 
     final static void c(int param0) {
-        if (0 - vk.field_h != jc.field_c && jc.field_c == 250 + -vk.field_h) {
+        if (0 - vk.field_h != jc.field_c &&
+          jc.field_c == 250 - vk.field_h) {
         }
         if (param0 != 3870) {
-            return;
+          return;
         }
         jc.field_c = jc.field_c + 1;
     }

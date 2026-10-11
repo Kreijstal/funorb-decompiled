@@ -9,9 +9,9 @@ final class r {
     public static void b(int param0) {
         field_a = null;
         if (param0 != 33423361) {
-            field_a = (String) null;
-            field_b = null;
-            return;
+          field_a = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -35,45 +35,34 @@ final class r {
         RuntimeException var5 = null;
         var14 = Torquing.field_u;
         try {
-          L0: {
-            var5_int = 0;
-            var7 = -80 % ((param2 - 4) / 43);
-            var6 = param1;
-            var8 = -param1;
-            var9 = -1;
-            di.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 - -param1);
-            L1: while (true) {
-              if (var5_int >= var6) {
-                break L0;
-              } else {
-                L2: {
-                  var9 += 2;
-                  var5_int++;
-                  var8 = var8 + var9;
-                  if (var8 < 0) {
-                    break L2;
-                  } else {
-                    var6--;
-                    var8 = var8 - (var6 << -602293023);
-                    var10_ref_int__ = qd.field_a[param4 + var6];
-                    var11_ref_int__ = qd.field_a[param4 + -var6];
-                    var12_int = param0 + var5_int;
-                    var13_int = param0 + -var5_int;
-                    di.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
-                    di.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
-                    break L2;
-                  }
-                }
-                var10 = var6 + param0;
-                var11 = param0 - var6;
-                var12 = qd.field_a[var5_int + param4];
-                var13 = qd.field_a[param4 - var5_int];
-                di.a(var11, (byte) 39, param3, var12, var10);
-                di.a(var11, (byte) -95, param3, var13, var10);
-                continue L1;
-              }
+          var5_int = 0;
+          var7 = -80 % ((param2 - 4) / 43);
+          var6 = param1;
+          var8 = -param1;
+          var9 = -1;
+          di.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 + param1);
+          while (var5_int < var6) {
+            var9 += 2;
+            var5_int++;
+            var8 = var8 + var9;
+            if (var8 >= 0) {
+              var6--;
+              var8 = var8 - (var6 << 1);
+              var10_ref_int__ = qd.field_a[param4 + var6];
+              var11_ref_int__ = qd.field_a[param4 - var6];
+              var12_int = param0 + var5_int;
+              var13_int = param0 - var5_int;
+              di.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
+              di.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
             }
+            var10 = var6 + param0;
+            var11 = param0 - var6;
+            var12 = qd.field_a[var5_int + param4];
+            var13 = qd.field_a[param4 - var5_int];
+            di.a(var11, (byte) 39, param3, var12, var10);
+            di.a(var11, (byte) -95, param3, var13, var10);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -82,20 +71,20 @@ final class r {
     }
 
     final static void a(int param0) {
-        bg var1 = (bg) ((Object) bf.field_a.b((byte) 42));
+        bg var1 = (bg) (bf.field_a.b((byte) 42));
         if (param0 <= 120) {
-            field_b = (byte[]) null;
-            if (!(var1 != null)) {
-                throw new IllegalStateException();
-            }
-            ph.a(var1.field_p, var1.field_l, var1.field_q);
-            ph.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
-            var1.field_p = null;
-            rf.field_t.a((byte) 54, var1);
-            return;
-        }
-        if (!(var1 != null)) {
+          field_b = (byte[]) null;
+          if (var1 == null) {
             throw new IllegalStateException();
+          }
+          ph.a(var1.field_p, var1.field_l, var1.field_q);
+          ph.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);
+          var1.field_p = null;
+          rf.field_t.a((byte) 54, var1);
+          return;
+        }
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         ph.a(var1.field_p, var1.field_l, var1.field_q);
         ph.g(var1.field_k, var1.field_m, var1.field_j, var1.field_o);

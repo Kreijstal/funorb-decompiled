@@ -17,11 +17,11 @@ final class ss extends bd {
 
     final void a(int param0, ha param1) {
         try {
-            if (param0 != 64) {
-                field_s = (String[]) null;
-            }
+          if (param0 != 64) {
+            field_s = (String[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "ss.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ss.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -16,26 +16,24 @@ abstract class c {
     abstract void a(int param0, boolean param1, java.awt.Graphics param2, int param3);
 
     final void a(boolean param0) {
-        if (!param0) {
-          field_h = (java.awt.Canvas) null;
-          gf.a(this.field_g, this.field_b, this.field_f);
-          return;
-        } else {
+        if (param0) {
           gf.a(this.field_g, this.field_b, this.field_f);
           return;
         }
+        field_h = (java.awt.Canvas) null;
+        gf.a(this.field_g, this.field_b, this.field_f);
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
         if (param3 < 26) {
-            return;
+          return;
         }
         vd.a(param1, 0, -14561, 0, param0, param2);
     }
 
     public static void a(int param0) {
         if (param0 != -9431) {
-            return;
+          return;
         }
         field_h = null;
         field_c = null;

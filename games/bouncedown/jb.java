@@ -11,9 +11,9 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_f = true;
+          this.field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "jb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "jb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,12 +22,12 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(byte param0, si param1) {
         try {
-            ib.a(param1, this.field_e, (byte) 110);
-            if (param0 >= -106) {
-                jb.a(true);
-            }
+          ib.a(param1, this.field_e, (byte) 110);
+          if (param0 >= -106) {
+            jb.a(true);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "jb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -51,8 +51,8 @@ final class jb extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static int a(int param0) {
         if (param0 != 31083) {
-            field_c = (lg) null;
-            return ak.field_y;
+          field_c = (lg) null;
+          return ak.field_y;
         }
         return ak.field_y;
     }

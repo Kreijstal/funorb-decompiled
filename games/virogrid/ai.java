@@ -14,13 +14,13 @@ final class ai {
 
     final static void a(int param0, um param1, int[] param2, String param3, long param4, String param5, int param6, km param7, int param8) {
         try {
-            if (param8 <= 43) {
-                ai.b(false);
-            }
-            wf.field_d = param1;
-            md.field_e = new dj(param7, param4, param5, param3, param6, param0, param2);
+          if (param8 <= 43) {
+            ai.b(false);
+          }
+          wf.field_d = param1;
+          md.field_e = new dj(param7, param4, param5, param3, param6, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -29,38 +29,35 @@ final class ai {
         field_i = null;
         field_b = null;
         if (param0) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
     }
 
     final static void a(boolean param0) {
-        Object var1;
-        qg var1_ref;
-        var1 = null;
-        if (param0) {
-          var1_ref = (qg) ((Object) jk.field_a.b(15));
-          if (var1_ref == null) {
-            throw new IllegalStateException();
-          } else {
-            df.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
-            df.a(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
-            var1_ref.field_p = null;
-            sg.field_m.a(var1_ref, (byte) -84);
-            return;
-          }
-        } else {
+        qg var1_ref = null;
+        Object var1 = null;
+        qg var1_refLifetime1;
+        if (!param0) {
           ai.a(false);
-          var1_ref = (qg) ((Object) jk.field_a.b(15));
-          if (var1_ref == null) {
-            throw new IllegalStateException();
-          } else {
+          var1_ref = (qg) (jk.field_a.b(15));
+          if (var1_ref != null) {
             df.a(var1_ref.field_p, var1_ref.field_q, var1_ref.field_v);
             df.a(var1_ref.field_o, var1_ref.field_k, var1_ref.field_t, var1_ref.field_i);
             var1_ref.field_p = null;
             sg.field_m.a(var1_ref, (byte) -84);
             return;
           }
+          throw new IllegalStateException();
         }
+        var1_refLifetime1 = (qg) (jk.field_a.b(15));
+        if (var1_refLifetime1 != null) {
+          df.a(var1_refLifetime1.field_p, var1_refLifetime1.field_q, var1_refLifetime1.field_v);
+          df.a(var1_refLifetime1.field_o, var1_refLifetime1.field_k, var1_refLifetime1.field_t, var1_refLifetime1.field_i);
+          var1_refLifetime1.field_p = null;
+          sg.field_m.a(var1_refLifetime1, (byte) -84);
+          return;
+        }
+        throw new IllegalStateException();
     }
 
     static {

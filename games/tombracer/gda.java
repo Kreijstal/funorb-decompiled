@@ -12,7 +12,7 @@ abstract class gda {
     public static void a(int param0) {
         field_d = null;
         if (param0 != 27316) {
-            field_d = (jpa[]) null;
+          field_d = (jpa[]) null;
         }
     }
 
@@ -20,17 +20,17 @@ abstract class gda {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (-1 == (param0 ^ -1)) {
-            var2 = k.field_A;
+        if (param0 == 0) {
+          var2 = k.field_A;
         }
         if (param1 != -20011) {
-            gda.a(-61, -111);
+          gda.a(-61, -111);
         }
-        if ((param0 ^ -1) == -2) {
-            var2 = nba.field_b;
+        if (param0 == 1) {
+          var2 = nba.field_b;
         }
-        if (-3 == (param0 ^ -1)) {
-            var2 = caa.field_i;
+        if (param0 == 2) {
+          var2 = caa.field_i;
         }
         return var2;
     }
@@ -49,68 +49,41 @@ abstract class gda {
         byte[] var14 = null;
         int var9 = TombRacer.field_G ? 1 : 0;
         try {
-            hga.a(true, param0.a("", (byte) 124, "roomdata.csv"));
-            var10 = cm.field_a;
-            for (var3 = 0; var3 < var10.length; var3++) {
-                var4 = var10[var3];
-                var5 = var4.field_c;
-                for (var6 = 0; var6 < var5.length; var6++) {
-                    var7 = var5[var6];
-                    bt.field_b = bt.field_b + 1;
-                    var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
-                    var7.field_c = new kh(var14);
-                    var7.field_c.h((byte) -38);
-                    var7.field_e = m.a(-1, var7.field_c);
-                    var7.field_c.i((byte) 98);
-                }
-                lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
+          hga.a(true, param0.a("", (byte) 124, "roomdata.csv"));
+          var10 = cm.field_a;
+          for (var3 = 0; var3 < var10.length; var3++) {
+            var4 = var10[var3];
+            var5 = var4.field_c;
+            for (var6 = 0; var6 < var5.length; var6++) {
+              var7 = var5[var6];
+              bt.field_b = bt.field_b + 1;
+              var14 = param0.a(var7.field_g, (byte) 127, var7.field_b);
+              var7.field_c = new kh(var14);
+              var7.field_c.h((byte) -38);
+              var7.field_e = m.a(-1, var7.field_c);
+              var7.field_c.i((byte) 98);
             }
-            if (param1 != 17572) {
-                field_a = 31;
-            }
-            du.field_e = true;
+            lva.a(var4.field_c, 0, -1 + var4.field_c.length, -1);
+          }
+          if (param1 != 17572) {
+            field_a = 31;
+          }
+          du.field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "gda.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean b(int param0, int param1, int param2) {
         int var3;
         boolean stackIn_2_0 = false;
-        boolean stackIn_3_0 = false;
-        int stackIn_3_1 = 0;
-        int stackIn_8_0 = 0;
-        L0: {
-          var3 = -120 % ((param0 - 65) / 42);
-          stackIn_2_0 = mpa.a(false, param1, param2);
-
-          if ((param2 & 262144) == 0) {
-            stackIn_3_0 = stackIn_2_0;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = stackIn_2_0;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (stackIn_3_0 | stackIn_3_1 != 0) {
-              break L2;
-            } else {
-              if (!vua.e(param2, param1, 13650)) {
-                stackIn_8_0 = 0;
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          stackIn_8_0 = 1;
-          break L1;
-        }
-        return stackIn_8_0 != 0;
+        boolean stackIn_3_1 = false;
+        boolean stackIn_8_0 = false;
+        var3 = -120 % ((param0 - 65) / 42);
+        stackIn_2_0 = mpa.a(false, param1, param2);
+        stackIn_3_1 = ((param2 & 262144) == 0) ? false : true;
+        stackIn_8_0 = !(stackIn_2_0 | !stackIn_3_1) || (vua.e(param2, param1, 13650));
+        return stackIn_8_0;
     }
 
     abstract void a();
@@ -121,7 +94,7 @@ abstract class gda {
         roa var1 = new roa();
         var1.field_f = new up(0, 5);
         if (!param0) {
-            return (roa) null;
+          return (roa) null;
         }
         var1.field_f.b(1, 9);
         var1.field_d = 0;

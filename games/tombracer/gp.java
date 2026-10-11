@@ -22,17 +22,7 @@ final class gp {
         field_j = null;
         field_a = null;
         field_l = null;
-        if (param0 >= -76) {
-          gp.a(-113);
-          field_d = null;
-          field_b = null;
-          field_f = null;
-          field_e = null;
-          field_i = null;
-          field_c = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 < -76) {
           field_d = null;
           field_b = null;
           field_f = null;
@@ -42,6 +32,14 @@ final class gp {
           field_k = null;
           return;
         }
+        gp.a(-113);
+        field_d = null;
+        field_b = null;
+        field_f = null;
+        field_e = null;
+        field_i = null;
+        field_c = null;
+        field_k = null;
     }
 
     static {

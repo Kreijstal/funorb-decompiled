@@ -15,9 +15,9 @@ final class ff {
 
     final static void a(int param0, boolean param1) {
         if (param0 != 0) {
-            field_c = false;
-            uq.field_D.a((byte) -79, param1);
-            return;
+          field_c = false;
+          uq.field_D.a((byte) -79, param1);
+          return;
         }
         uq.field_D.a((byte) -79, param1);
     }
@@ -28,9 +28,7 @@ final class ff {
         field_d = null;
         field_i = null;
         field_e = null;
-        if (param0 <= 56) {
-          return;
-        } else {
+        if (param0 > 56) {
           field_a = null;
           field_g = null;
           field_j = null;
@@ -43,12 +41,12 @@ final class ff {
         int var2 = 0;
         int var3 = 0;
         fd.field_J = param1;
-        if (!(em.field_P == ir.field_h)) {
-            var2 = ir.field_h * ir.field_h;
-            var3 = -(em.field_P * em.field_P) + var2;
-            param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
+        if (em.field_P != ir.field_h) {
+          var2 = ir.field_h * ir.field_h;
+          var3 = -(em.field_P * em.field_P) + var2;
+          param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
         }
-        fl.field_q.b(param1, param0 + -2147483625, tn.field_u, 640, 120);
+        fl.field_q.b(param1, param0 - 2147483625, tn.field_u, 640, 120);
         mm.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, kj.field_j);
     }
 

@@ -18,7 +18,7 @@ final class ah {
         field_g = null;
         field_d = null;
         if (!param0) {
-            field_f = 2;
+          field_f = 2;
         }
     }
 
@@ -32,120 +32,59 @@ final class ah {
         long stackIn_21_0 = 0L;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var2_long = 0L;
-            var4 = param1.length();
-            var5 = 0;
-            if (param0 == -97) {
-              L1: while (true) {
-                L2: {
-                  if (var5 >= var4) {
-                    break L2;
-                  } else {
-                    L3: {
-                      L4: {
-                        var2_long = var2_long * 37L;
-                        var6 = param1.charAt(var5);
-                        if (var6 < 65) {
-                          break L4;
-                        } else {
-                          if (var6 > 90) {
-                            break L4;
-                          } else {
-                            var2_long = var2_long + (long)(var6 + -64);
-                            break L3;
-                          }
-                        }
-                      }
-                      L5: {
-                        if (var6 < 97) {
-                          break L5;
-                        } else {
-                          if (var6 > 122) {
-                            break L5;
-                          } else {
-                            var2_long = var2_long + (long)(-97 + (1 + var6));
-                            break L3;
-                          }
-                        }
-                      }
-                      if (var6 < 48) {
-                        break L3;
-                      } else {
-                        if (var6 > 57) {
-                          break L3;
-                        } else {
-                          var2_long = var2_long + (long)(27 + var6 - 48);
-                          break L3;
-                        }
-                      }
-                    }
-                    if ((var2_long ^ -1L) <= -177917621779460414L) {
-                      break L2;
-                    } else {
-                      var5++;
-                      continue L1;
-                    }
-                  }
-                }
-                L6: while (true) {
-                  L7: {
-                    if (0L != var2_long % 37L) {
-                      break L7;
-                    } else {
-                      if (var2_long == 0L) {
-                        break L7;
-                      } else {
-                        var2_long = var2_long / 37L;
-                        continue L6;
-                      }
-                    }
-                  }
-                  stackIn_21_0 = var2_long;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_3_0 = -72L;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_long = 0L;
+          var4 = param1.length();
+          var5 = 0;
+          if (param0 != -97) {
+            stackIn_3_0 = -72L;
+            return stackIn_3_0;
           }
+          while (var5 < var4) {
+            var2_long = var2_long * 37L;
+            var6 = param1.charAt(var5);
+            if (var6 >= 65 &&
+              var6 <= 90) {
+              var2_long = var2_long + (long)(var6 - 64);
+            } else if (var6 >= 97 &&
+              var6 <= 122) {
+              var2_long = var2_long + (long)(-97 + (1 + var6));
+            } else {
+              if (var6 >= 48 &&
+                var6 <= 57) {
+                var2_long = var2_long + (long)(27 + var6 - 48);
+              }
+            }
+            if (var2_long < 177917621779460413L) {
+              var5++;
+              continue;
+            }
+            break;
+          }
+          while (0L == var2_long % 37L) {
+            if (var2_long != 0L) {
+              var2_long = var2_long / 37L;
+              continue;
+            }
+            break;
+          }
+          stackIn_21_0 = var2_long;
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("ah.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L8;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L8;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("ah.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_21_0;
+          throw lj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

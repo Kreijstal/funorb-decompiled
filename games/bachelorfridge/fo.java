@@ -9,7 +9,7 @@ final class fo {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -15135) {
-            return;
+          return;
         }
         field_a = null;
     }

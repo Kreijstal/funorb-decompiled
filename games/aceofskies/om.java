@@ -6,8 +6,8 @@ final class om extends bn implements fq {
 
     public final int a(int param0) {
         if (param0 != 6530) {
-            om.c(5);
-            return 0;
+          om.c(5);
+          return 0;
         }
         return 0;
     }
@@ -15,22 +15,21 @@ final class om extends bn implements fq {
     public static void b(int param0) {
         field_c = null;
         if (param0 != -21649) {
-            field_c = (wq) null;
+          field_c = (wq) null;
         }
     }
 
     final static String a(int param0, int param1, byte param2) {
-        if (param2 != 66) {
-          om.b(-71);
-          return param1 + "/" + param0;
-        } else {
+        if (param2 == 66) {
           return param1 + "/" + param0;
         }
+        om.b(-71);
+        return param1 + "/" + param0;
     }
 
     final static void c(int param0) {
         if (param0 != 5665) {
-            om.c(-43);
+          om.c(-43);
         }
     }
 

@@ -54,163 +54,112 @@ abstract class ota {
         int var46 = 0;
         var47 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var8_int = 0;
-              var9 = param1;
-              var10 = 0;
-              var11 = -param0 + param2;
-              var12 = param1 - param0;
-              var13 = param2 * param2;
-              var14 = param1 * param1;
-              if (param5 == -1923382751) {
-                break L1;
-              } else {
-                field_b = (cn) null;
-                break L1;
+          var8_int = 0;
+          var9 = param1;
+          var10 = 0;
+          var11 = -param0 + param2;
+          var12 = param1 - param0;
+          var13 = param2 * param2;
+          var14 = param1 * param1;
+          if (param5 != -1923382751) {
+            field_b = (cn) null;
+          }
+          var15 = var11 * var11;
+          var16 = var12 * var12;
+          var17 = var14 << 1;
+          var18 = var13 << 1;
+          var19 = var16 << 1;
+          var20 = var15 << 1;
+          var21 = param1 << 1;
+          var22 = var12 << 1;
+          var23 = var17 + (-var21 + 1) * var13;
+          var24 = -((var21 - 1) * var18) + var14;
+          var25 = (-var22 + 1) * var15 + var19;
+          var26 = var16 - var20 * (-1 + var22);
+          var27 = var13 << 2;
+          var28 = var14 << 2;
+          var29 = var15 << 2;
+          var30 = var16 << 2;
+          var31 = var17 * 3;
+          var32 = (var21 - 3) * var18;
+          var33 = 3 * var19;
+          var34 = (-3 + var22) * var20;
+          var35 = var28;
+          var36 = var27 * (-1 + param1);
+          var37 = var30;
+          var38 = (-1 + var12) * var29;
+          var49 = vaa.field_a[param7];
+          var48 = var49;
+          var39 = var48;
+          nra.a((byte) -55, param3, param4 - var11, var39, -param2 + param4);
+          nra.a((byte) -55, param6, param4 + var11, var39, param4 - var11);
+          nra.a((byte) -55, param3, param2 + param4, var49, param4 + var11);
+          while (true) {
+            if (var9 <= 0) {
+              return;
+            }
+            stackIn_8_0 = (var12 < var9) ? 0 : 1;
+            var40 = stackIn_8_0;
+            if (0 > var23) {
+              while (0 > var23) {
+                var24 = var24 + var35;
+                var23 = var23 + var31;
+                var35 = var35 + var28;
+                var8_int++;
+                var31 = var31 + var28;
               }
             }
-            var15 = var11 * var11;
-            var16 = var12 * var12;
-            var17 = var14 << 453246881;
-            var18 = var13 << -865266815;
-            var19 = var16 << -881731839;
-            var20 = var15 << -701983231;
-            var21 = param1 << -1637823263;
-            var22 = var12 << -1923382751;
-            var23 = var17 + (-var21 + 1) * var13;
-            var24 = -((var21 + -1) * var18) + var14;
-            var25 = (-var22 + 1) * var15 - -var19;
-            var26 = var16 + -(var20 * (-1 + var22));
-            var27 = var13 << -1770773694;
-            var28 = var14 << 401114786;
-            var29 = var15 << 676459202;
-            var30 = var16 << 2024441922;
-            var31 = var17 * 3;
-            var32 = (var21 + -3) * var18;
-            var33 = 3 * var19;
-            var34 = (-3 + var22) * var20;
-            var35 = var28;
-            var36 = var27 * (-1 + param1);
-            var37 = var30;
-            var38 = (-1 + var12) * var29;
-            var49 = vaa.field_a[param7];
-            var48 = var49;
-            var39 = var48;
-            nra.a((byte) -55, param3, param4 + -var11, var39, -param2 + param4);
-            nra.a((byte) -55, param6, param4 + var11, var39, param4 + -var11);
-            nra.a((byte) -55, param3, param2 + param4, var49, param4 + var11);
-            L2: while (true) {
-              if (-1 <= (var9 ^ -1)) {
-                break L0;
-              } else {
-                L3: {
-                  if (var12 < var9) {
-                    stackIn_8_0 = 0;
-                    break L3;
-                  } else {
-                    stackIn_8_0 = 1;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var40 = stackIn_8_0;
-                  if (0 <= var23) {
-                    break L4;
-                  } else {
-                    L5: while (true) {
-                      if (0 <= var23) {
-                        break L4;
-                      } else {
-                        var24 = var24 + var35;
-                        var23 = var23 + var31;
-                        var35 = var35 + var28;
-                        var8_int++;
-                        var31 = var31 + var28;
-                        continue L5;
-                      }
-                    }
-                  }
-                }
-                L6: {
-                  if (var40 != 0) {
-                    L7: {
-                      if (-1 < (var25 ^ -1)) {
-                        L8: while (true) {
-                          if (var25 >= 0) {
-                            break L7;
-                          } else {
-                            var26 = var26 + var37;
-                            var25 = var25 + var33;
-                            var33 = var33 + var30;
-                            var37 = var37 + var30;
-                            var10++;
-                            continue L8;
-                          }
-                        }
-                      } else {
-                        break L7;
-                      }
-                    }
-                    L9: {
-                      if (-1 < (var26 ^ -1)) {
-                        var26 = var26 + var37;
-                        var25 = var25 + var33;
-                        var10++;
-                        var37 = var37 + var30;
-                        var33 = var33 + var30;
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    var25 = var25 + -var38;
-                    var26 = var26 + -var34;
-                    var38 = var38 - var29;
-                    var34 = var34 - var29;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L10: {
-                  if ((var24 ^ -1) > -1) {
-                    var23 = var23 + var31;
-                    var24 = var24 + var35;
-                    var31 = var31 + var28;
-                    var35 = var35 + var28;
-                    var8_int++;
-                    break L10;
-                  } else {
-                    break L10;
-                  }
-                }
-                var24 = var24 + -var32;
-                var23 = var23 + -var36;
-                var9--;
-                var32 = var32 - var27;
-                var36 = var36 - var27;
-                var41 = -var9 + param7;
-                var42 = var9 + param7;
-                var43 = param4 + var8_int;
-                var44 = -var8_int + param4;
-                if (var40 != 0) {
-                  var45 = param4 + var10;
-                  var46 = param4 + -var10;
-                  nra.a((byte) -55, param3, var46, vaa.field_a[var41], var44);
-                  nra.a((byte) -55, param6, var45, vaa.field_a[var41], var46);
-                  nra.a((byte) -55, param3, var43, vaa.field_a[var41], var45);
-                  nra.a((byte) -55, param3, var46, vaa.field_a[var42], var44);
-                  nra.a((byte) -55, param6, var45, vaa.field_a[var42], var46);
-                  nra.a((byte) -55, param3, var43, vaa.field_a[var42], var45);
-                  continue L2;
-                } else {
-                  nra.a((byte) -55, param3, var43, vaa.field_a[var41], var44);
-                  nra.a((byte) -55, param3, var43, vaa.field_a[var42], var44);
-                  continue L2;
+            if (var40 != 0) {
+              if (var25 < 0) {
+                while (var25 < 0) {
+                  var26 = var26 + var37;
+                  var25 = var25 + var33;
+                  var33 = var33 + var30;
+                  var37 = var37 + var30;
+                  var10++;
                 }
               }
+              if (var26 < 0) {
+                var26 = var26 + var37;
+                var25 = var25 + var33;
+                var10++;
+                var37 = var37 + var30;
+                var33 = var33 + var30;
+              }
+              var25 = var25 - var38;
+              var26 = var26 - var34;
+              var38 = var38 - var29;
+              var34 = var34 - var29;
             }
+            if (var24 < 0) {
+              var23 = var23 + var31;
+              var24 = var24 + var35;
+              var31 = var31 + var28;
+              var35 = var35 + var28;
+              var8_int++;
+            }
+            var24 = var24 - var32;
+            var23 = var23 - var36;
+            var9--;
+            var32 = var32 - var27;
+            var36 = var36 - var27;
+            var41 = -var9 + param7;
+            var42 = var9 + param7;
+            var43 = param4 + var8_int;
+            var44 = -var8_int + param4;
+            if (var40 == 0) {
+              nra.a((byte) -55, param3, var43, vaa.field_a[var41], var44);
+              nra.a((byte) -55, param3, var43, vaa.field_a[var42], var44);
+              continue;
+            }
+            var45 = param4 + var10;
+            var46 = param4 - var10;
+            nra.a((byte) -55, param3, var46, vaa.field_a[var41], var44);
+            nra.a((byte) -55, param6, var45, vaa.field_a[var41], var46);
+            nra.a((byte) -55, param3, var43, vaa.field_a[var41], var45);
+            nra.a((byte) -55, param3, var46, vaa.field_a[var42], var44);
+            nra.a((byte) -55, param6, var45, vaa.field_a[var42], var46);
+            nra.a((byte) -55, param3, var43, vaa.field_a[var42], var45);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -226,93 +175,42 @@ abstract class ota {
     final static boolean a(long param0, byte param1, String param2) {
         mu var4 = null;
         RuntimeException var4_ref = null;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
+        boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 13) {
-                break L1;
-              } else {
-                ota.a(-17, -67, 51, -71, -111, -94, -55, 8);
-                break L1;
-              }
-            }
-            L2: {
-              var4 = wp.a(126, param2);
-              if (var4 == null) {
-                break L2;
-              } else {
-                if (null != var4.field_Cb) {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              L4: {
-                if (null == uu.field_a) {
-                  break L4;
-                } else {
-                  if (null == vba.a((byte) -40, param0)) {
-                    break L4;
-                  } else {
-                    stackIn_11_0 = 1;
-                    break L3;
-                  }
-                }
-              }
-              stackIn_11_0 = 0;
-              break L3;
-            }
-            decompiledRegionSelector0 = 1;
-            break L0;
+          if (param1 != 13) {
+            ota.a(-17, -67, 51, -71, -111, -94, -55, 8);
           }
+          var4 = wp.a(126, param2);
+          if (var4 != null &&
+            null != var4.field_Cb) {
+            return true;
+          }
+          stackIn_11_0 = (null != uu.field_a) && (null != vba.a((byte) -40, param0));
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4_ref);
-
-            stackIn_14_1 = new StringBuilder().append("ota.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_14_0 = var4_ref;
+          stackIn_14_1 = new StringBuilder().append("ota.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_11_0 != 0;
+          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            ota.a(1);
-            field_a = null;
-            return;
+          ota.a(1);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

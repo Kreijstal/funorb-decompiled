@@ -23,35 +23,20 @@ final class d extends ug {
         RuntimeException var2_ref = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (vl) ((Object) ob.field_s.a((byte) -117));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param1 == 5) {
-                    break L2;
-                  } else {
-                    field_e = 54;
-                    break L2;
-                  }
-                }
-                var2 = cj.field_a.a((byte) -117);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    f.a(param0, 22492);
-                    var2 = cj.field_a.d((byte) 63);
-                    continue L3;
-                  }
-                }
-              } else {
-                pf.a((byte) -104, var4, param0);
-                var4 = (vl) ((Object) ob.field_s.d((byte) 63));
-                continue L1;
-              }
-            }
+          var4 = (vl) (ob.field_s.a((byte) -117));
+          while (var4 != null) {
+            pf.a((byte) -104, var4, param0);
+            var4 = (vl) (ob.field_s.d((byte) 63));
           }
+          if (param1 != 5) {
+            field_e = 54;
+          }
+          var2 = cj.field_a.a((byte) -117);
+          while (var2 != null) {
+            f.a(param0, 22492);
+            var2 = cj.field_a.d((byte) 63);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -62,25 +47,25 @@ final class d extends ug {
     public static void a(boolean param0) {
         field_h = null;
         if (!param0) {
-            field_e = -39;
+          field_e = -39;
         }
     }
 
     d(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-            this.field_j = param4;
-            this.field_p = param1;
-            this.field_l = param5;
-            this.field_o = param2;
-            this.field_m = param0;
-            this.field_i = param3;
-            this.field_f = param6;
-            fieldTemp$0 = qa.field_a;
-            qa.field_a = qa.field_a + 1;
-            this.field_n = fieldTemp$0 & 65535;
+          this.field_j = param4;
+          this.field_p = param1;
+          this.field_l = param5;
+          this.field_o = param2;
+          this.field_m = param0;
+          this.field_i = param3;
+          this.field_f = param6;
+          fieldTemp$0 = qa.field_a;
+          qa.field_a = qa.field_a + 1;
+          this.field_n = fieldTemp$0 & 65535;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "d.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "d.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

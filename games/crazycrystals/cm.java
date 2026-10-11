@@ -10,20 +10,20 @@ final class cm {
         field_b = null;
         field_a = null;
         if (param0 > -113) {
-            cm.b(40);
-            field_c = null;
-            return;
+          cm.b(40);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final static void a(int param0) {
-        if (!(fj.a(136))) {
-            return;
+        if (!fj.a(136)) {
+          return;
         }
         a.a(112, 4, false);
         if (param0 != -15544) {
-            cm.b(44);
+          cm.b(44);
         }
     }
 

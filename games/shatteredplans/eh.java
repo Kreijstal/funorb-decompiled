@@ -13,10 +13,10 @@ final class eh extends ek implements bp {
 
     final void a(int param0, int param1, vg param2, byte param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_M.field_y = this.field_J.a((byte) 127).c(100) == p.field_g ? true : false;
+          super.a(param0, param1, param2, param3);
+          this.field_M.field_y = this.field_J.a((byte) 127).c(100) == p.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eh.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -25,78 +25,58 @@ final class eh extends ek implements bp {
         pd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 25) {
-                break L1;
-              } else {
-                field_N = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new pd(param1);
-            break L0;
+          if (param0 != 25) {
+            field_N = (String) null;
           }
+          stackIn_3_0 = new pd(param1);
+          return (hb) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("eh.M(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("eh.M(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (hb) ((Object) stackIn_3_0);
     }
 
     public static void i(int param0) {
         field_N = null;
         field_I = null;
         field_L = null;
-        int var1 = -111 / ((param0 - -43) / 42);
+        int var1 = -111 / ((param0 + 43) / 42);
     }
 
     final void h(int param0) {
         int var2 = 250;
-        this.field_J.a(this.field_n + 20 - 25 >> -682304991, 25, (byte) 118, -var2 + this.field_x >> 156642689, 140);
-        this.field_M.a((this.field_n + -10 >> -794103839) - -2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 2005975585) + 10), 100);
-        int var3 = -95 / ((param0 - -31) / 62);
+        this.field_J.a(this.field_n + 20 - 25 >> 1, 25, (byte) 118, -var2 + this.field_x >> 1, 140);
+        this.field_M.a((this.field_n - 10 >> 1) + 2, 30, (byte) 103, 140 + ((this.field_x - var2 >> 1) + 10), 100);
+        int var3 = -95 / ((param0 + 31) / 62);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        mf.field_x.d(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (mf.field_x.field_J - -4)), 16777215, -1);
+        mf.field_x.d(kr.field_c, this.field_m + (param3 + 4), this.field_q + (param2 + (mf.field_x.field_J + 4)), 16777215, -1);
     }
 
     public final void a(kg param0, int param1, int param2, int param3, int param4) {
-        if (!(this.field_J.a((byte) 111).c(-123) == p.field_g)) {
-            return;
+        if (this.field_J.a((byte) 111).c(-123) != p.field_g) {
+          return;
         }
         try {
-            vf.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
-            if (param1 != 6) {
-                field_Q = -62;
-            }
+          vf.a(this.field_J.l(88), this.field_J.f((byte) 96), 4, this.field_J.d(false));
+          if (param1 != 6) {
+            field_Q = -62;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "eh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "eh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

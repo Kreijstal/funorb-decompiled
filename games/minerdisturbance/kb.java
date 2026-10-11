@@ -16,28 +16,18 @@ final class kb {
     }
 
     final static String a(int param0, boolean param1, char param2) {
-        char[] var3;
-        int var4;
-        int var5;
-        char[] var6;
-        var5 = MinerDisturbance.field_ab;
-        var6 = new char[param0];
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (param0 <= var4) {
-            if (param1) {
-              kb.a((byte) 81);
-              return new String(var3);
-            } else {
-              return new String(var3);
-            }
-          } else {
-            var6[var4] = param2;
-            var4++;
-            continue L0;
-          }
+        int var4 = 0;
+        int var5 = MinerDisturbance.field_ab;
+        char[] var6 = new char[param0];
+        char[] var3 = var6;
+        for (var4 = 0; param0 > var4; var4++) {
+          var6[var4] = param2;
         }
+        if (!param1) {
+          return new String(var3);
+        }
+        kb.a((byte) 81);
+        return new String(var3);
     }
 
     static {

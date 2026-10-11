@@ -12,10 +12,10 @@ class ah extends gg {
 
     final void c(byte param0) {
         if (param0 != 36) {
-            return;
+          return;
         }
-        if (!(this.field_l != null)) {
-            return;
+        if (this.field_l == null) {
+          return;
         }
         this.field_l.field_m = this.field_m;
         this.field_m.field_l = this.field_l;
@@ -27,19 +27,19 @@ class ah extends gg {
         param0.removeKeyListener(pk.field_e);
         param0.removeFocusListener(pk.field_e);
         if (param1) {
-            return;
+          return;
         }
         try {
-            se.field_H = -1;
+          se.field_H = -1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ah.EB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ah.EB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_k = null;
         if (param0 != -31) {
-            return;
+          return;
         }
         field_n = null;
         field_q = null;
@@ -48,16 +48,16 @@ class ah extends gg {
 
     final static boolean a(int param0) {
         if (param0 != -1) {
-            ah.d(12);
-            return cg.field_a;
+          ah.d(12);
+          return cg.field_a;
         }
         return cg.field_a;
     }
 
     final static boolean d(int param0) {
         if (param0 != -12171) {
-            field_q = (java.awt.Frame) null;
-            return vh.a(true, hf.a((byte) -6));
+          field_q = (java.awt.Frame) null;
+          return vh.a(true, hf.a((byte) -6));
         }
         return vh.a(true, hf.a((byte) -6));
     }

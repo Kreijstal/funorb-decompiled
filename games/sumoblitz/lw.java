@@ -10,7 +10,7 @@ final class lw {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -1685) {
-            return;
+          return;
         }
         field_c = null;
     }

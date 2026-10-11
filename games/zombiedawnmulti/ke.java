@@ -24,31 +24,18 @@ final class ke {
         RuntimeException var5 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              array$1 = new int[ah.field_e.field_P[0].length];
-              ah.field_e.field_P[param1] = array$1;
-              ah.field_e.field_P[param1][ia.field_s] = param0;
-              ah.field_e.field_P[param1][rj.field_F] = param3;
-              ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
-              if (param2 == -17895) {
-                break L1;
-              } else {
-                ke.a(92, -5L);
-                break L1;
-              }
-            }
-            var5_int = 1;
-            L2: while (true) {
-              if (wm.field_Q.length <= var5_int) {
-                break L0;
-              } else {
-                ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int + -1]], false);
-                var5_int++;
-                continue L2;
-              }
-            }
+          array$1 = new int[ah.field_e.field_P[0].length];
+          ah.field_e.field_P[param1] = array$1;
+          ah.field_e.field_P[param1][ia.field_s] = param0;
+          ah.field_e.field_P[param1][rj.field_F] = param3;
+          ah.field_e.field_P[param1][wm.field_Q[0]] = param4;
+          if (param2 != -17895) {
+            ke.a(92, -5L);
           }
+          for (var5_int = 1; wm.field_Q.length > var5_int; var5_int++) {
+            ah.field_e.field_P[param1][wm.field_Q[var5_int]] = ui.a(ah.field_e.field_P[param1][wm.field_Q[var5_int - 1]], false);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -57,36 +44,28 @@ final class ke {
     }
 
     final static String a(int param0, long param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
+        int var9 = 0;
+        int var9Lifetime1;
         cp.field_U.setTime(new Date(param1));
-        var3 = cp.field_U.get(7);
-        var4 = cp.field_U.get(5);
-        var5 = cp.field_U.get(2);
-        var6 = cp.field_U.get(1);
-        var7 = cp.field_U.get(11);
-        var8 = cp.field_U.get(12);
-        if (param0 != -29971) {
-          field_b = -87;
-          var9 = cp.field_U.get(13);
-          return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
+        int var3 = cp.field_U.get(7);
+        int var4 = cp.field_U.get(5);
+        int var5 = cp.field_U.get(2);
+        int var6 = cp.field_U.get(1);
+        int var7 = cp.field_U.get(11);
+        int var8 = cp.field_U.get(12);
+        if (param0 == -29971) {
           var9 = cp.field_U.get(13);
           return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
+        field_b = -87;
+        var9Lifetime1 = cp.field_U.get(13);
+        return ud.field_O[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + hm.field_q[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     public static void a(boolean param0) {
         field_i = null;
         field_c = null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           field_h = null;
           field_f = null;
           field_j = null;

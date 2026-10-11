@@ -11,8 +11,8 @@ final class vi extends kd {
     final static void a(byte param0) {
         ni.a(75, 17);
         if (param0 < 62) {
-            vb var2 = (vb) null;
-            vi.a(-73, (vb) null, 90);
+          vb var2 = (vb) null;
+          vi.a(-73, (vb) null, 90);
         }
     }
 
@@ -25,17 +25,17 @@ final class vi extends kd {
         int var7 = Lexicominos.field_L ? 1 : 0;
         db[] var1 = new db[th.field_t];
         for (var2 = 0; var2 < th.field_t; var2++) {
-            var3 = pb.field_h[var2] * bd.field_m[var2];
-            var4 = be.field_f[var2];
-            var5 = new int[var3];
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
-            }
-            var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
+          var3 = pb.field_h[var2] * bd.field_m[var2];
+          var4 = be.field_f[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = ci.field_b[vg.a((int) var4[var6], 255)];
+          }
+          var1[var2] = new db(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var5);
         }
         gk.a(param0 ^ 27773);
         if (param0 != 23793) {
-            return (db[]) null;
+          return (db[]) null;
         }
         return var1;
     }
@@ -44,21 +44,21 @@ final class vi extends kd {
         th var5 = null;
         int var4 = 0;
         try {
-            var5 = ed.field_q;
-            var5.h(param0, 0);
-            var5.field_h = var5.field_h + 1;
-            var4 = var5.field_h;
-            var5.c(param2, param2 + -2);
-            var5.c(param1.field_n, -1);
-            var5.c(param1.field_p, -1);
-            var5.f(param1.field_j, -32287);
-            var5.f(param1.field_q, -32287);
-            var5.f(param1.field_h, -32287);
-            var5.f(param1.field_o, -32287);
-            var5.a(var4, (byte) 119);
-            var5.d(-var4 + var5.field_h, (byte) -122);
+          var5 = ed.field_q;
+          var5.h(param0, 0);
+          var5.field_h = var5.field_h + 1;
+          var4 = var5.field_h;
+          var5.c(param2, param2 - 2);
+          var5.c(param1.field_n, -1);
+          var5.c(param1.field_p, -1);
+          var5.f(param1.field_j, -32287);
+          var5.f(param1.field_q, -32287);
+          var5.f(param1.field_h, -32287);
+          var5.f(param1.field_o, -32287);
+          var5.a(var4, (byte) 119);
+          var5.d(-var4 + var5.field_h, (byte) -122);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "vi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -75,61 +75,32 @@ final class vi extends kd {
         cd stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              if (param1 >= 100) {
-                var2 = new cd(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
-                gk.a(12428);
-                stackIn_7_0 = (cd) (var2);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_5_0 = (cd) null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == null) {
+            stackIn_2_0 = null;
+            return (cd) (stackIn_2_0);
           }
+          if (param1 < 100) {
+            stackIn_5_0 = (cd) null;
+            return stackIn_5_0;
+          }
+          var2 = new cd(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, be.field_f);
+          gk.a(12428);
+          stackIn_7_0 = var2;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2_ref);
-
-            stackIn_10_1 = new StringBuilder().append("vi.E(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
-          }
-          throw ld.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (cd) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_10_0 = var2_ref;
+          stackIn_10_1 = new StringBuilder().append("vi.E(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
           } else {
-            return stackIn_7_0;
+            stackIn_11_2 = "{...}";
           }
+          throw ld.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 

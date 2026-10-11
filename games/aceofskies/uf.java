@@ -10,13 +10,13 @@ final class uf {
 
     final static boolean a(boolean param0) {
         if (param0) {
-            return true;
+          return true;
         }
         if (aj.field_s == null) {
-            return false;
+          return false;
         }
         if (!aj.field_s.a(false)) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -35,10 +35,10 @@ final class uf {
 
     uf(wl param0, int param1, int param2) {
         try {
-            this.field_a = param2;
-            this.field_c = param0;
+          this.field_a = param2;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

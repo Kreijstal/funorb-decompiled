@@ -11,15 +11,7 @@ final class gd {
     static tk field_c;
 
     public static void a(int param0) {
-        if (param0 != -2182) {
-          field_f = (ge) null;
-          field_f = null;
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -2182) {
           field_f = null;
           field_e = null;
           field_a = null;
@@ -27,27 +19,29 @@ final class gd {
           field_c = null;
           return;
         }
+        field_f = (ge) null;
+        field_f = null;
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static String a(boolean param0) {
-        if (wd.field_Lb != ra.field_e) {
-          if (ig.field_j.a(98)) {
-            if (pa.field_I != ra.field_e) {
-              if (!param0) {
-                gd.a(-107);
-                return qo.field_x;
-              } else {
-                return qo.field_x;
-              }
-            } else {
-              return ig.field_j.b(2);
-            }
-          } else {
-            return ig.field_j.b(2);
-          }
-        } else {
+        if (wd.field_Lb == ra.field_e) {
           return re.field_d;
         }
+        if (!ig.field_j.a(98)) {
+          return ig.field_j.b(2);
+        }
+        if (pa.field_I == ra.field_e) {
+          return ig.field_j.b(2);
+        }
+        if (param0) {
+          return qo.field_x;
+        }
+        gd.a(-107);
+        return qo.field_x;
     }
 
     static {

@@ -14,7 +14,7 @@ abstract class ve {
         field_b = null;
         field_c = null;
         if (param0 != 8192) {
-            ve.a(-70);
+          ve.a(-70);
         }
     }
 

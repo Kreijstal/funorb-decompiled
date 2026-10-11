@@ -12,7 +12,7 @@ final class be {
 
     final static km[] a(int param0, boolean param1, int param2, int param3, int param4) {
         if (param1) {
-            return (km[]) null;
+          return (km[]) null;
         }
         return jc.a(3, 1, param3, param2, 1, param4, 1, param0, 0);
     }
@@ -21,18 +21,16 @@ final class be {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (param0 < 120) {
-          field_b = (String[]) null;
-          field_a = null;
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 >= 120) {
           field_a = null;
           field_g = null;
           field_e = null;
           return;
         }
+        field_b = (String[]) null;
+        field_a = null;
+        field_g = null;
+        field_e = null;
     }
 
     static {

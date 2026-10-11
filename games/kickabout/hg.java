@@ -12,7 +12,7 @@ final class hg extends i {
         String var6 = Integer.toString(ps.field_d[param0]);
         String var2 = var6;
         String var3 = q.field_h[param0];
-        String var4 = vo.a((byte) -18, gd.field_e[10], new String[]{var6, var3});
+        String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
         ut var5 = kb.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
         this.a(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
@@ -26,35 +26,20 @@ final class hg extends i {
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          L0: {
-            var4 = (hr) ((Object) ti.field_c.g(24009));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param1 < -120) {
-                    break L2;
-                  } else {
-                    hg.h(96);
-                    break L2;
-                  }
-                }
-                var5 = (dl) ((Object) ru.field_M.g(24009));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    pf.a(param0, var5, (byte) -114);
-                    var5 = (dl) ((Object) ru.field_M.c(33));
-                    continue L3;
-                  }
-                }
-              } else {
-                rf.a(var4, param0, true);
-                var4 = (hr) ((Object) ti.field_c.c(33));
-                continue L1;
-              }
-            }
+          var4 = (hr) (ti.field_c.g(24009));
+          while (var4 != null) {
+            rf.a(var4, param0, true);
+            var4 = (hr) (ti.field_c.c(33));
           }
+          if (param1 >= -120) {
+            hg.h(96);
+          }
+          var5 = (dl) (ru.field_M.g(24009));
+          while (var5 != null) {
+            pf.a(param0, var5, (byte) -114);
+            var5 = (dl) (ru.field_M.c(33));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -73,100 +58,59 @@ final class hg extends i {
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
         try {
-          L0: {
-            wd.field_l.a(cq.field_n, 31947, iw.field_i, true);
-            var1_int = -43 % ((param0 - -39) / 43);
-            wd.field_l.n(2);
-            L1: while (true) {
-              if (!nk.b((byte) -59)) {
-                if (0 != (kt.field_j ^ -1)) {
-                  var2 = kt.field_j;
-                  qd.b(38, -1);
-                  stackIn_7_0 = var2;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  if (!wq.field_g) {
-                    if (mj.field_a == nr.field_f) {
-                      stackIn_14_0 = 1;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      if (!lc.field_e.a((byte) -80)) {
-                        stackIn_18_0 = 1;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        if (wk.field_f != nr.field_f) {
-                          stackIn_23_0 = -1;
-                          decompiledRegionSelector0 = 5;
-                          break L0;
-                        } else {
-                          stackIn_21_0 = 2;
-                          decompiledRegionSelector0 = 4;
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    stackIn_10_0 = 3;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              } else {
-                wd.field_l.a(il.field_c, (byte) -88, cc.field_e);
-                continue L1;
-              }
-            }
+          wd.field_l.a(cq.field_n, 31947, iw.field_i, true);
+          var1_int = -43 % ((param0 + 39) / 43);
+          wd.field_l.n(2);
+          while (nk.$cfr$intArgs$b$c4997cb15529(-59)) {
+            wd.field_l.a(il.field_c, (byte) -88, cc.field_e);
           }
+          if (kt.field_j != -1) {
+            var2 = kt.field_j;
+            qd.b(38, -1);
+            stackIn_7_0 = var2;
+            return stackIn_7_0;
+          }
+          if (wq.field_g) {
+            stackIn_10_0 = 3;
+            return stackIn_10_0;
+          }
+          if (mj.field_a == nr.field_f) {
+            stackIn_14_0 = 1;
+            return stackIn_14_0;
+          }
+          if (!lc.field_e.a((byte) -80)) {
+            stackIn_18_0 = 1;
+            return stackIn_18_0;
+          }
+          if (wk.field_f != nr.field_f) {
+            stackIn_23_0 = -1;
+            return stackIn_23_0;
+          }
+          stackIn_21_0 = 2;
+          return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw nb.a((Throwable) ((Object) var1), "hg.A(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_14_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_18_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_21_0;
-                } else {
-                  return stackIn_23_0;
-                }
-              }
-            }
-          }
-        }
     }
 
     public static void h(int param0) {
-        if (param0 != 22100) {
-          field_I = (int[]) null;
-          field_F = null;
-          field_G = null;
-          field_I = null;
-          field_H = null;
-          return;
-        } else {
+        if (param0 == 22100) {
           field_F = null;
           field_G = null;
           field_I = null;
           field_H = null;
           return;
         }
+        field_I = (int[]) null;
+        field_F = null;
+        field_G = null;
+        field_I = null;
+        field_H = null;
     }
 
     static {

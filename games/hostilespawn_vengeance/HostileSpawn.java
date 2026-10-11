@@ -14,291 +14,268 @@ public final class HostileSpawn extends d {
     public static boolean field_I;
 
     private final void i(byte param0) {
+        RuntimeException runtimeException = null;
         int var2_int = 0;
-        int var7 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
-        RuntimeException decompiledCaughtException = null;
         bd[] var2 = null;
         pg[] var2_array = null;
-        RuntimeException var2_ref = null;
         int var3_int = 0;
         pg var3 = null;
+        bd var4 = null;
         int var4_int = 0;
-        pg[] var4 = null;
-        bd var4_ref = null;
+        pg[] var4_array = null;
         int var5_int = 0;
         pg[] var5 = null;
         int var6 = 0;
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        pg[] var2_arrayLifetime1;
+        pg[] var2_arrayLifetime2;
+        pg[] var2_arrayLifetime3;
+        pg[] var2_arrayLifetime4;
         var7 = field_I ? 1 : 0;
         try {
-          L0: {
-            gj.a(20, ig.field_H, 77.0f);
-            this.a((byte) -76);
-            this.t(13119);
-            wk.field_b[0] = ia.field_e;
-            wk.field_b[3] = qm.field_P;
-            wk.field_b[2] = sc.field_a;
-            wk.field_b[1] = ue.field_f;
-            wk.field_b[4] = fg.a("", "key", vd.field_C, false);
-            wk.field_b[11] = jg.field_f;
-            kh.field_bb = new int[101];
-            wk.field_b[10] = aa.field_b;
-            wk.field_b[5] = e.field_r;
-            wk.field_b[9] = bn.field_l;
-            wk.field_b[8] = mg.field_b;
-            wk.field_b[6] = jg.field_h;
-            wk.field_b[7] = qh.field_l;
-            var2_int = 0;
-            L1: while (true) {
-              if (101 <= var2_int) {
-                ee.field_d = jd.a((byte) 33, "", vd.field_C, "crosshair");
-                var2 = ee.field_d;
-                var3_int = 0;
-                L2: while (true) {
-                  if (var3_int >= var2.length) {
-                    var3 = new pg(24, 24, 2);
-                    var3.field_k[1] = 65280;
-                    var4_int = 0;
-                    L3: while (true) {
-                      if ((var3.field_j.length ^ -1) >= (var4_int ^ -1)) {
-                        var4 = new pg[256];
-                        var5_int = 0;
-                        L4: while (true) {
-                          if ((var5_int ^ -1) <= (var4.length ^ -1)) {
-                            L5: {
-                              ak.field_b = new pg[2048];
-                              var2_array = sg.a(true, "", vd.field_C, "wall_hammerhead");
-                              kf.a(var2_array, 0, ak.field_b, 0, 256);
-                              kf.a(var4, 0, ak.field_b, 256, 256);
-                              var2_array = sg.a(true, "", vd.field_C, "wall_normal_kerrus");
-                              kf.a(var2_array, 0, ak.field_b, 512, 256);
-                              var2_array = sg.a(true, "", vd.field_C, "wall_station");
-                              kf.a(var2_array, 0, ak.field_b, 768, 256);
-                              var2_array = sg.a(true, "", vd.field_C, "wall_hive");
-                              kf.a(var2_array, 0, ak.field_b, 1024, 256);
-                              kf.a(var4, 0, ak.field_b, 1280, 256);
-                              kf.a(var4, 0, ak.field_b, 1536, 256);
-                              var2_array = sg.a(true, "", vd.field_C, "wall_office");
-                              kf.a(var2_array, 0, ak.field_b, 1792, 256);
-                              var4 = null;
-                              al.field_Z = th.a(vd.field_C, -124, "digitalserial_10", te.field_J, "");
-                              wh.field_d = th.a(vd.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
-                              mk.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
-                              id.field_A = th.a(vd.field_C, -127, "digitalserial_12", te.field_J, "");
-                              wc.a("basicfont12", gb.field_a, 83, wd.field_a, "");
-                              of.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
-                              lm.field_y = fg.a("", "splat_guard", vd.field_C, false);
-                              d.field_s = fg.a("", "splat_dormant", vd.field_C, false);
-                              ee.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
-                              fk.field_c = fg.a("", "splat_queen", vd.field_C, false);
-                              rh.field_x = fg.a("", "splat_runner", vd.field_C, false);
-                              tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
-                              ta.field_jb = fg.a("", "splat_egg", vd.field_C, false);
-                              pe.field_fb = jd.a((byte) 33, "", vd.field_C, "muzzle");
-                              ln.field_m = ei.a(vd.field_C, 105, "", "newexplosion");
-                              me.field_ib = ln.field_m;
-                              if (!ib.a((byte) -72)) {
-                                var5 = sg.a(true, "", vd.field_C, "member_benefits");
-                                dh.field_a = new e(ni.field_g, aj.field_g, var5, ci.field_i);
-                                break L5;
-                              } else {
-                                break L5;
-                              }
-                            }
-                            var5 = sg.a(true, "", vd.field_C, "keys");
-                            var6 = 0;
-                            L6: while (true) {
-                              if (var5.length <= var6) {
-                                al.field_Z.a(var5, (int[]) null);
-                                id.field_A.a(var5, (int[]) null);
-                                il.field_c = jd.a((byte) 33, "", vd.field_C, "infoscreen");
-                                qi.field_H = ci.a("", 27, "numkeys", vd.field_C);
-                                pl.field_f = ci.a("", 114, "secweaponkeys", vd.field_C);
-                                fj.field_Kb = jd.a((byte) 33, "", vd.field_C, "achievements_lrg");
-                                qc.field_v = qm.a("", 0, "hs_unachieved", vd.field_C);
-                                de.field_i = ci.a("basic", param0 + 222, "locked", wd.field_a);
-                                ob.field_B = sg.a(true, "", vd.field_C, "hs_coins");
-                                nm.field_f = ci.a("", -100, "sliderbutton", vd.field_C);
-                                oa.field_m = new bd[9];
-                                oa.field_m[0] = new bd(4, 4);
-                                oa.field_m[1] = new bd(4, 4);
-                                var6 = 0;
-                                L7: while (true) {
-                                  if (oa.field_m[1].field_D.length <= var6) {
-                                    oa.field_m[6] = oa.field_m[0];
-                                    oa.field_m[8] = oa.field_m[0];
-                                    oa.field_m[4] = oa.field_m[1];
-                                    oa.field_m[2] = oa.field_m[0];
-                                    oa.field_m[3] = oa.field_m[0];
-                                    oa.field_m[5] = oa.field_m[0];
-                                    oa.field_m[7] = oa.field_m[1];
-                                    qc.field_x = jd.a((byte) 33, "", vd.field_C, "level_select_mouseover_frame");
-                                    fm.field_a = jd.a((byte) 33, "", vd.field_C, "level_select_selected_frame");
-                                    ul.field_J = jd.a((byte) 33, "", vd.field_C, "menu_frame");
-                                    ul.field_J[4] = null;
-                                    o.field_n.b((byte) -36);
-                                    cf.field_q = ei.a(vd.field_C, param0 + 218, "", "marine_run");
-                                    ng.field_p = new bd[5][];
-                                    ng.field_p[2] = ei.a(vd.field_C, param0 + 228, "", "marine_legs_left");
-                                    ng.field_p[3] = ei.a(vd.field_C, 97, "", "marine_legs_right");
-                                    ng.field_p[1] = ei.a(vd.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
-                                    ng.field_p[4] = ei.a(vd.field_C, 116, "", "marine_legs_back");
-                                    ng.field_p[4] = jh.a(ng.field_p[4], 150, 27);
-                                    ng.field_p[0] = null;
-                                    km.field_A = ei.a(vd.field_C, 96, "", "marine_idle");
-                                    vj.field_e = km.field_A;
-                                    dn.field_i = ei.a(vd.field_C, 104, "", "marine_interact");
-                                    od.field_G = ei.a(vd.field_C, 100, "", "marine_firing");
-                                    od.field_G = jh.a(od.field_G, 150, 25);
-                                    aa.field_d = ei.a(vd.field_C, param0 ^ -7, "", "marine_death");
-                                    gj.a(param0 ^ -101, ig.field_H, 84.0f);
-                                    this.a((byte) -106);
-                                    oc.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
-                                    jg.field_d = fg.a("", "hud_bottom", vd.field_C, false);
-                                    gj.field_d = fg.a("", "hud_progress_bar", vd.field_C, false);
-                                    ti.field_j = fg.a("", "hud_gun_box", vd.field_C, false);
-                                    field_J = new bd[3];
-                                    field_J[0] = fg.a("", "hud_health_base", vd.field_C, false);
-                                    field_J[1] = fg.a("", "hud_health_slice", vd.field_C, false);
-                                    field_J[2] = fg.a("", "hud_health_top", vd.field_C, false);
-                                    vg.field_c = qm.a("", 0, "marine_face", vd.field_C);
-                                    nj.field_d = new pg[2][10];
-                                    nj.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
-                                    nj.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
-                                    nj.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
-                                    nj.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", vd.field_C);
-                                    nj.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", vd.field_C);
-                                    nj.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", vd.field_C);
-                                    nj.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", vd.field_C);
-                                    nj.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", vd.field_C);
-                                    nj.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", vd.field_C);
-                                    nj.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", vd.field_C);
-                                    nj.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", vd.field_C);
-                                    nj.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", vd.field_C);
-                                    nj.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", vd.field_C);
-                                    nj.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", vd.field_C);
-                                    nj.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", vd.field_C);
-                                    nj.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", vd.field_C);
-                                    nj.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", vd.field_C);
-                                    nj.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
-                                    nj.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
-                                    nj.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
-                                    this.s(param0 + 152);
-                                    ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
-                                    ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
-                                    ci.field_b = fg.a("", "cragturret", vd.field_C, false);
-                                    ia.field_l[13] = fg.a("", "barrel", vd.field_C, false);
-                                    jd.a((byte) 33, "", vd.field_C, "spawneyes0");
-                                    ia.field_l[23] = ci.a("", -32, "doorgfx", vd.field_C);
-                                    wg.field_zb = fg.a("", "hatching", vd.field_C, false);
-                                    gj.a(param0 + 133, ig.field_H, 91.0f);
-                                    this.a((byte) -51);
-                                    qa.field_g = ei.a(vd.field_C, 101, "", "guns");
-                                    di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
-                                    jj.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
-                                    sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
-                                    ue.field_c = ci.a("", -36, "bullet_rocket", vd.field_C);
-                                    df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
-                                    id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
-                                    fg.a("", "impact_rail", vd.field_C, false);
-                                    ci.a("", 116, "scorchmark_alpha", vd.field_C);
-                                    lg.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
-                                    if (param0 == -113) {
-                                      om.field_d = fg.a("", "bullet_pistol", vd.field_C, false);
-                                      te.field_G = ei.a(vd.field_C, 109, "", "grenade_roll");
-                                      sc.field_l = fg.a("", "acid_drop", vd.field_C, false);
-                                      v.field_j = fg.a("", "battle_damaged_cragturret", vd.field_C, false);
-                                      rl.field_d = fg.a("", "battle_damaged_gunturret", vd.field_C, false);
-                                      this.l((byte) 114);
-                                      fa.field_d = jd.a((byte) 33, "", vd.field_C, "lights");
-                                      gj.a(20, ig.field_H, 99.0f);
-                                      this.a((byte) -69);
-                                      pi.field_a[0] = ci.a("", 116, "shadow0", vd.field_C);
-                                      pi.field_a[1] = ci.a("", 110, "shadow1", vd.field_C);
-                                      pi.field_a[2] = ci.a("", param0 + 232, "shadow2", vd.field_C);
-                                      hh.field_a = ei.a(vd.field_C, 97, "", "ammo");
-                                      fg.a("", "pointer", vd.field_C, false);
-                                      li.field_t = fg.a("", "compass", vd.field_C, false);
-                                      pi.field_b = ci.a("", param0 + 225, "health", vd.field_C);
-                                      eg.field_v = fg.a("", "dragged_egg", vd.field_C, false);
-                                      qg.field_q = fg.a("", "dragged_slime", vd.field_C, false);
-                                      uf.field_g = new pg[3];
-                                      uf.field_g[0] = qm.a("", 0, "win_kerrus", vd.field_C);
-                                      uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", vd.field_C);
-                                      uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", vd.field_C);
-                                      vd.field_C = null;
-                                      gb.field_a = null;
-                                      var6 = 0;
-                                      L8: while (true) {
-                                        if ((ia.field_l.length ^ -1) >= (var6 ^ -1)) {
-                                          decompiledRegionSelector0 = 1;
-                                          break L0;
-                                        } else {
-                                          L9: {
-                                            if (null == ia.field_l[var6]) {
-                                              break L9;
-                                            } else {
-                                              dc.field_a[var6] = ne.a(ia.field_l[var6], (byte) -93);
-                                              break L9;
-                                            }
-                                          }
-                                          var6++;
-                                          continue L8;
-                                        }
-                                      }
-                                    } else {
-                                      decompiledRegionSelector0 = 0;
-                                      break L0;
-                                    }
-                                  } else {
-                                    oa.field_m[1].field_D[var6] = 14342656;
-                                    var6++;
-                                    continue L7;
-                                  }
-                                }
-                              } else {
-                                var5[var6].field_i = var5[var6].field_a;
-                                var5[var6].field_c = 0;
-                                var6++;
-                                continue L6;
-                              }
-                            }
-                          } else {
-                            var4[var5_int] = var3;
-                            var5_int++;
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        var3.field_j[var4_int] = (byte) 1;
-                        var4_int++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    var4_ref = var2[var3_int];
-                    var4_ref.c();
-                    var3_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                kh.field_bb[var2_int] = var2_int * 131586;
-                var2_int++;
-                continue L1;
-              }
+          gj.a(20, ig.field_H, 77.0f);
+          this.a((byte) -76);
+          this.t(13119);
+          wk.field_b[0] = ia.field_e;
+          wk.field_b[3] = qm.field_P;
+          wk.field_b[2] = sc.field_a;
+          wk.field_b[1] = ue.field_f;
+          wk.field_b[4] = fg.a("", "key", vd.field_C, false);
+          wk.field_b[11] = jg.field_f;
+          kh.field_bb = new int[101];
+          wk.field_b[10] = aa.field_b;
+          wk.field_b[5] = e.field_r;
+          wk.field_b[9] = bn.field_l;
+          wk.field_b[8] = mg.field_b;
+          wk.field_b[6] = jg.field_h;
+          wk.field_b[7] = qh.field_l;
+          var2_int = 0;
+          do {
+            if (101 <= var2_int) {
+              ee.field_d = jd.a((byte) 33, "", vd.field_C, "crosshair");
+              break;
             }
+            kh.field_bb[var2_int] = var2_int * 131586;
+            var2_int++;
+          } while (var7 == 0);
+          var2 = ee.field_d;
+          var3_int = 0;
+          while (var3_int < var2.length) {
+            var4 = var2[var3_int];
+            var4.c();
+            var3_int++;
+            if (var7 == 0) {
+              continue;
+            }
+            break;
           }
+          var3 = new pg(24, 24, 2);
+          var3.field_k[1] = 65280;
+          var4_int = 0;
+          while (var3.field_j.length > var4_int) {
+            var3.field_j[var4_int] = (byte) 1;
+            var4_int++;
+            if (var7 == 0) {
+              continue;
+            }
+            break;
+          }
+          var4_array = new pg[256];
+          var5_int = 0;
+          do {
+            if (var5_int >= var4_array.length) {
+              ak.field_b = new pg[2048];
+              break;
+            }
+            var4_array[var5_int] = var3;
+            var5_int++;
+          } while (var7 == 0);
+          var2_array = sg.a(true, "", vd.field_C, "wall_hammerhead");
+          kf.a(var2_array, 0, ak.field_b, 0, 256);
+          kf.a(var4_array, 0, ak.field_b, 256, 256);
+          var2_arrayLifetime1 = sg.a(true, "", vd.field_C, "wall_normal_kerrus");
+          kf.a(var2_arrayLifetime1, 0, ak.field_b, 512, 256);
+          var2_arrayLifetime2 = sg.a(true, "", vd.field_C, "wall_station");
+          kf.a(var2_arrayLifetime2, 0, ak.field_b, 768, 256);
+          var2_arrayLifetime3 = sg.a(true, "", vd.field_C, "wall_hive");
+          kf.a(var2_arrayLifetime3, 0, ak.field_b, 1024, 256);
+          kf.a(var4_array, 0, ak.field_b, 1280, 256);
+          kf.a(var4_array, 0, ak.field_b, 1536, 256);
+          var2_arrayLifetime4 = sg.a(true, "", vd.field_C, "wall_office");
+          kf.a(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
+          var4_array = null;
+          al.field_Z = th.a(vd.field_C, -124, "digitalserial_10", te.field_J, "");
+          wh.field_d = th.a(vd.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
+          mk.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
+          id.field_A = th.a(vd.field_C, -127, "digitalserial_12", te.field_J, "");
+          wc.a("basicfont12", gb.field_a, 83, wd.field_a, "");
+          of.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
+          lm.field_y = fg.a("", "splat_guard", vd.field_C, false);
+          d.field_s = fg.a("", "splat_dormant", vd.field_C, false);
+          ee.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
+          fk.field_c = fg.a("", "splat_queen", vd.field_C, false);
+          rh.field_x = fg.a("", "splat_runner", vd.field_C, false);
+          tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
+          ta.field_jb = fg.a("", "splat_egg", vd.field_C, false);
+          pe.field_fb = jd.a((byte) 33, "", vd.field_C, "muzzle");
+          ln.field_m = ei.a(vd.field_C, 105, "", "newexplosion");
+          me.field_ib = ln.field_m;
+          if (!ib.a((byte) -72)) {
+            var5 = sg.a(true, "", vd.field_C, "member_benefits");
+            dh.field_a = new e(ni.field_g, aj.field_g, var5, ci.field_i);
+          }
+          var5 = sg.a(true, "", vd.field_C, "keys");
+          var6 = 0;
+          do {
+            if (var5.length <= var6) {
+              al.field_Z.a(var5, (int[]) null);
+              id.field_A.a(var5, (int[]) null);
+              il.field_c = jd.a((byte) 33, "", vd.field_C, "infoscreen");
+              qi.field_H = ci.a("", 27, "numkeys", vd.field_C);
+              pl.field_f = ci.a("", 114, "secweaponkeys", vd.field_C);
+              fj.field_Kb = jd.a((byte) 33, "", vd.field_C, "achievements_lrg");
+              qc.field_v = qm.a("", 0, "hs_unachieved", vd.field_C);
+              de.field_i = ci.a("basic", param0 + 222, "locked", wd.field_a);
+              ob.field_B = sg.a(true, "", vd.field_C, "hs_coins");
+              nm.field_f = ci.a("", -100, "sliderbutton", vd.field_C);
+              oa.field_m = new bd[9];
+              oa.field_m[0] = new bd(4, 4);
+              oa.field_m[1] = new bd(4, 4);
+              break;
+            }
+            var5[var6].field_i = var5[var6].field_a;
+            var5[var6].field_c = 0;
+            var6++;
+          } while (var7 == 0);
+          var6 = 0;
+          do {
+            if (!(oa.field_m[1].field_D.length > var6)) {
+              oa.field_m[6] = oa.field_m[0];
+              oa.field_m[8] = oa.field_m[0];
+              oa.field_m[4] = oa.field_m[1];
+              oa.field_m[2] = oa.field_m[0];
+              oa.field_m[3] = oa.field_m[0];
+              oa.field_m[5] = oa.field_m[0];
+              oa.field_m[7] = oa.field_m[1];
+              qc.field_x = jd.a((byte) 33, "", vd.field_C, "level_select_mouseover_frame");
+              fm.field_a = jd.a((byte) 33, "", vd.field_C, "level_select_selected_frame");
+              ul.field_J = jd.a((byte) 33, "", vd.field_C, "menu_frame");
+              ul.field_J[4] = null;
+              o.field_n.b((byte) -36);
+              cf.field_q = ei.a(vd.field_C, param0 + 218, "", "marine_run");
+              ng.field_p = new bd[5][];
+              ng.field_p[2] = ei.a(vd.field_C, param0 + 228, "", "marine_legs_left");
+              ng.field_p[3] = ei.a(vd.field_C, 97, "", "marine_legs_right");
+              ng.field_p[1] = ei.a(vd.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
+              ng.field_p[4] = ei.a(vd.field_C, 116, "", "marine_legs_back");
+              ng.field_p[4] = jh.a(ng.field_p[4], 150, 27);
+              ng.field_p[0] = null;
+              km.field_A = ei.a(vd.field_C, 96, "", "marine_idle");
+              vj.field_e = km.field_A;
+              dn.field_i = ei.a(vd.field_C, 104, "", "marine_interact");
+              od.field_G = ei.a(vd.field_C, 100, "", "marine_firing");
+              od.field_G = jh.a(od.field_G, 150, 25);
+              aa.field_d = ei.a(vd.field_C, param0 ^ -7, "", "marine_death");
+              gj.a(param0 ^ -101, ig.field_H, 84.0f);
+              this.a((byte) -106);
+              oc.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
+              jg.field_d = fg.a("", "hud_bottom", vd.field_C, false);
+              gj.field_d = fg.a("", "hud_progress_bar", vd.field_C, false);
+              ti.field_j = fg.a("", "hud_gun_box", vd.field_C, false);
+              field_J = new bd[3];
+              field_J[0] = fg.a("", "hud_health_base", vd.field_C, false);
+              field_J[1] = fg.a("", "hud_health_slice", vd.field_C, false);
+              field_J[2] = fg.a("", "hud_health_top", vd.field_C, false);
+              vg.field_c = qm.a("", 0, "marine_face", vd.field_C);
+              nj.field_d = new pg[2][10];
+              nj.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
+              nj.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
+              nj.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
+              nj.field_d[0][3] = qm.a("", 0, "kerrus_4_preview", vd.field_C);
+              nj.field_d[0][4] = qm.a("", param0 + 113, "kerrus_5_preview", vd.field_C);
+              nj.field_d[0][5] = qm.a("", 0, "kerrus_6_preview", vd.field_C);
+              nj.field_d[0][6] = qm.a("", param0 + 113, "kerrus_7_preview", vd.field_C);
+              nj.field_d[0][7] = qm.a("", bm.a((int) param0, -113), "kerrus_8_preview", vd.field_C);
+              nj.field_d[0][8] = qm.a("", 0, "kerrus_9_preview", vd.field_C);
+              nj.field_d[0][9] = qm.a("", 0, "kerrus_10_preview", vd.field_C);
+              nj.field_d[1][0] = qm.a("", bm.a((int) param0, -113), "vengeance_1_preview", vd.field_C);
+              nj.field_d[1][1] = qm.a("", 0, "vengeance_2_preview", vd.field_C);
+              nj.field_d[1][2] = qm.a("", 0, "vengeance_3_preview", vd.field_C);
+              nj.field_d[1][3] = qm.a("", 0, "vengeance_4_preview", vd.field_C);
+              nj.field_d[1][4] = qm.a("", 0, "vengeance_5_preview", vd.field_C);
+              nj.field_d[1][5] = qm.a("", 0, "vengeance_6_preview", vd.field_C);
+              nj.field_d[1][6] = qm.a("", param0 + 113, "vengeance_7_preview", vd.field_C);
+              nj.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
+              nj.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
+              nj.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
+              this.s(param0 + 152);
+              ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
+              ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
+              ci.field_b = fg.a("", "cragturret", vd.field_C, false);
+              ia.field_l[13] = fg.a("", "barrel", vd.field_C, false);
+              jd.a((byte) 33, "", vd.field_C, "spawneyes0");
+              ia.field_l[23] = ci.a("", -32, "doorgfx", vd.field_C);
+              wg.field_zb = fg.a("", "hatching", vd.field_C, false);
+              gj.a(param0 + 133, ig.field_H, 91.0f);
+              this.a((byte) -51);
+              qa.field_g = ei.a(vd.field_C, 101, "", "guns");
+              di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
+              jj.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
+              sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
+              ue.field_c = ci.a("", -36, "bullet_rocket", vd.field_C);
+              df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
+              id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
+              fg.a("", "impact_rail", vd.field_C, false);
+              ci.a("", 116, "scorchmark_alpha", vd.field_C);
+              lg.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
+              break;
+            }
+            oa.field_m[1].field_D[var6] = 14342656;
+            var6++;
+          } while (var7 == 0);
+          if (param0 != -113) {
+            return;
+          }
+          om.field_d = fg.a("", "bullet_pistol", vd.field_C, false);
+          te.field_G = ei.a(vd.field_C, 109, "", "grenade_roll");
+          sc.field_l = fg.a("", "acid_drop", vd.field_C, false);
+          v.field_j = fg.a("", "battle_damaged_cragturret", vd.field_C, false);
+          rl.field_d = fg.a("", "battle_damaged_gunturret", vd.field_C, false);
+          this.l((byte) 114);
+          fa.field_d = jd.a((byte) 33, "", vd.field_C, "lights");
+          gj.a(20, ig.field_H, 99.0f);
+          this.a((byte) -69);
+          pi.field_a[0] = ci.a("", 116, "shadow0", vd.field_C);
+          pi.field_a[1] = ci.a("", 110, "shadow1", vd.field_C);
+          pi.field_a[2] = ci.a("", param0 + 232, "shadow2", vd.field_C);
+          hh.field_a = ei.a(vd.field_C, 97, "", "ammo");
+          fg.a("", "pointer", vd.field_C, false);
+          li.field_t = fg.a("", "compass", vd.field_C, false);
+          pi.field_b = ci.a("", param0 + 225, "health", vd.field_C);
+          eg.field_v = fg.a("", "dragged_egg", vd.field_C, false);
+          qg.field_q = fg.a("", "dragged_slime", vd.field_C, false);
+          uf.field_g = new pg[3];
+          uf.field_g[0] = qm.a("", 0, "win_kerrus", vd.field_C);
+          uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", vd.field_C);
+          uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", vd.field_C);
+          vd.field_C = null;
+          gb.field_a = null;
+          var6 = 0;
+          while (ia.field_l.length > var6) {
+            if (var7 != 0) {
+              return;
+            }
+            if (null != ia.field_l[var6]) {
+              dc.field_a[var6] = ne.a(ia.field_l[var6], (byte) -93);
+            }
+            var6++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.W(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          runtimeException = decompiledCaughtException;
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.W(" + param0 + ')');
         }
     }
 
@@ -307,208 +284,201 @@ public final class HostileSpawn extends d {
         bd var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = new bd(1, 1);
-              ia.field_l[99] = vf.field_H;
-              ia.field_l[118] = tb.field_L;
-              ia.field_l[145] = n.field_q;
-              ia.field_l[141] = ln.field_g;
-              ia.field_l[164] = pi.field_c;
-              ia.field_l[108] = cn.field_h;
-              ia.field_l[162] = ga.field_a;
-              ia.field_l[115] = td.field_f;
-              ia.field_l[212] = qc.field_q;
-              ia.field_l[140] = gi.field_j;
-              ia.field_l[207] = wc.field_e;
-              ia.field_l[74] = ki.field_b;
-              ia.field_l[177] = el.field_d;
-              ia.field_l[201] = vb.field_Lb;
-              ia.field_l[41] = og.field_d;
-              ia.field_l[120] = ub.field_c;
-              ia.field_l[210] = hj.field_r;
-              ia.field_l[146] = ml.field_a;
-              ia.field_l[130] = vi.field_k;
-              ia.field_l[62] = rb.field_y;
-              ia.field_l[89] = tc.field_b;
-              ia.field_l[105] = ig.field_R;
-              ia.field_l[189] = oa.field_i;
-              ia.field_l[128] = bm.field_f;
-              ia.field_l[54] = cl.field_j;
-              ia.field_l[91] = km.field_z;
-              ia.field_l[209] = dn.field_h;
-              ia.field_l[173] = sm.field_i;
-              ia.field_l[55] = de.field_o;
-              ia.field_l[137] = rh.field_C;
-              ia.field_l[129] = ca.field_b;
-              ia.field_l[61] = lc.field_b;
-              ia.field_l[135] = mg.field_f;
-              ia.field_l[60] = ci.field_k;
-              ia.field_l[125] = mn.field_b;
-              ia.field_l[127] = hh.field_b;
-              ia.field_l[186] = dc.field_b;
-              ia.field_l[138] = rh.field_z;
-              ia.field_l[149] = hf.field_e;
-              ia.field_l[217] = ed.field_a;
-              ia.field_l[114] = rj.field_N;
-              ia.field_l[208] = ui.field_c;
-              ia.field_l[176] = sf.field_T;
-              ia.field_l[79] = oa.field_e;
-              ia.field_l[136] = le.field_xb;
-              ia.field_l[171] = ul.field_G;
-              ia.field_l[163] = oh.field_a;
-              ia.field_l[75] = nh.field_C;
-              ia.field_l[159] = ci.field_j;
-              ia.field_l[170] = bh.field_h;
-              ia.field_l[219] = t.field_l;
-              ia.field_l[40] = f.field_b;
-              ia.field_l[168] = id.field_w;
-              ia.field_l[58] = an.field_l;
-              ia.field_l[77] = gi.field_c;
-              ia.field_l[175] = gm.field_j;
-              ia.field_l[123] = ci.field_l;
-              ia.field_l[65] = wa.field_o;
-              ia.field_l[66] = sm.field_h;
-              ia.field_l[97] = df.field_a;
-              ia.field_l[203] = qh.field_g;
-              ia.field_l[102] = lh.field_e;
-              ia.field_l[111] = qg.field_m;
-              ia.field_l[92] = ab.field_a;
-              ia.field_l[184] = ra.field_b;
-              ia.field_l[104] = ui.field_b;
-              ia.field_l[180] = nb.field_E;
-              ia.field_l[32] = kd.field_y;
-              ia.field_l[134] = mj.field_a;
-              ia.field_l[93] = vc.field_k;
-              ia.field_l[211] = pj.field_l;
-              ia.field_l[199] = var2;
-              ia.field_l[202] = uh.field_f;
-              ia.field_l[84] = gf.field_a;
-              ia.field_l[197] = var2;
-              ia.field_l[103] = vg.field_d;
-              ia.field_l[198] = var2;
-              ia.field_l[51] = eh.field_b;
-              ia.field_l[121] = fa.field_e;
-              ia.field_l[206] = vk.field_p;
-              ia.field_l[44] = oe.field_g;
-              ia.field_l[150] = gb.field_l;
-              ia.field_l[190] = om.field_e;
-              ia.field_l[96] = q.field_c;
-              ia.field_l[70] = e.field_d;
-              ia.field_l[182] = gf.field_g;
-              ia.field_l[133] = wa.field_n;
-              ia.field_l[221] = s.field_d;
-              ia.field_l[152] = ni.field_b;
-              ia.field_l[158] = jn.field_B;
-              ia.field_l[63] = ue.field_h;
-              ia.field_l[113] = ld.field_p;
-              ia.field_l[48] = hf.field_b;
-              ia.field_l[94] = jc.field_a;
-              ia.field_l[187] = bb.field_a;
-              ia.field_l[205] = j.field_a;
-              ia.field_l[193] = cf.field_t;
-              ia.field_l[144] = sj.field_b;
-              ia.field_l[139] = in.field_d;
-              if (param0 > 113) {
-                break L1;
-              } else {
-                this.o(-63);
-                break L1;
-              }
-            }
-            ia.field_l[42] = r.field_e;
-            ia.field_l[78] = el.field_f;
-            ia.field_l[218] = nb.field_J;
-            ia.field_l[183] = sd.field_w;
-            ia.field_l[81] = ue.field_f;
-            ia.field_l[53] = bi.field_b;
-            ia.field_l[153] = fm.field_b;
-            ia.field_l[131] = ri.field_k;
-            ia.field_l[174] = la.field_e;
-            ia.field_l[220] = uc.field_a;
-            ia.field_l[69] = en.field_w;
-            ia.field_l[132] = ci.field_g;
-            ia.field_l[116] = dd.field_j;
-            ia.field_l[73] = vc.field_h;
-            ia.field_l[178] = df.field_j;
-            ia.field_l[38] = oc.field_d;
-            ia.field_l[64] = jg.field_j;
-            ia.field_l[88] = ea.field_e;
-            ia.field_l[147] = p.field_d;
-            ia.field_l[192] = ne.field_n;
-            ia.field_l[155] = o.field_g;
-            ia.field_l[59] = vi.field_j;
-            ia.field_l[169] = ld.field_o;
-            ia.field_l[117] = ck.field_C;
-            ia.field_l[80] = qa.field_g[7];
-            ia.field_l[85] = bl.field_c;
-            ia.field_l[90] = oe.field_d;
-            ia.field_l[194] = uj.field_r;
-            ia.field_l[36] = ih.field_v;
-            ia.field_l[143] = kc.field_d;
-            ia.field_l[160] = ln.field_j;
-            ia.field_l[67] = pl.field_j;
-            ia.field_l[156] = wi.field_e;
-            ia.field_l[68] = pe.field_hb;
-            ia.field_l[39] = hg.field_a;
-            ia.field_l[213] = field_C;
-            ia.field_l[72] = f.field_d;
-            ia.field_l[166] = bn.field_o;
-            ia.field_l[112] = qc.field_B;
-            ia.field_l[56] = an.field_j;
-            ia.field_l[100] = nd.field_a;
-            ia.field_l[200] = sd.field_t;
-            ia.field_l[196] = hf.field_j;
-            ia.field_l[98] = sj.field_g;
-            ia.field_l[122] = ej.field_d;
-            ia.field_l[216] = gf.field_d;
-            ia.field_l[87] = vj.field_p;
-            ia.field_l[188] = qg.field_i;
-            ia.field_l[109] = jh.field_cb;
-            ia.field_l[107] = eb.field_b;
-            ia.field_l[191] = ei.field_n;
-            ia.field_l[154] = pl.field_p;
-            ia.field_l[148] = wk.field_a;
-            ia.field_l[185] = t.field_j;
-            ia.field_l[110] = fe.field_c;
-            ia.field_l[82] = ia.field_e;
-            ia.field_l[215] = la.field_h;
-            ia.field_l[167] = dl.field_r;
-            ia.field_l[195] = var2;
-            ia.field_l[165] = sm.field_d;
-            ia.field_l[35] = om.field_c;
-            ia.field_l[161] = jg.field_i;
-            ia.field_l[86] = u.field_h;
-            ia.field_l[52] = lc.field_a;
-            ia.field_l[119] = wd.field_b;
-            ia.field_l[83] = kj.field_f;
-            ia.field_l[172] = ei.field_p;
-            ia.field_l[124] = ng.field_i;
-            ia.field_l[95] = hm.field_l;
-            ia.field_l[37] = wj.field_L;
-            ia.field_l[50] = bj.field_j;
-            ia.field_l[71] = ig.field_S;
-            ia.field_l[46] = ng.field_v;
-            ia.field_l[45] = rd.field_a;
-            ia.field_l[101] = el.field_l;
-            ia.field_l[151] = wh.field_e;
-            ia.field_l[179] = dk.field_n;
-            ia.field_l[43] = r.field_b;
-            ia.field_l[49] = qj.field_l;
-            ia.field_l[126] = ln.field_c;
-            ia.field_l[57] = gi.field_f;
-            ia.field_l[181] = ni.field_d;
-            ia.field_l[34] = jd.field_h;
-            ia.field_l[33] = c.field_f[0];
-            ia.field_l[76] = wb.field_W;
-            ia.field_l[106] = ic.field_k;
-            ia.field_l[142] = li.field_y;
-            ia.field_l[204] = ei.field_m;
-            ia.field_l[214] = rg.field_a;
-            ia.field_l[157] = fg.field_d;
-            ia.field_l[47] = re.field_q;
-            break L0;
+          var2 = new bd(1, 1);
+          ia.field_l[99] = vf.field_H;
+          ia.field_l[118] = tb.field_L;
+          ia.field_l[145] = n.field_q;
+          ia.field_l[141] = ln.field_g;
+          ia.field_l[164] = pi.field_c;
+          ia.field_l[108] = cn.field_h;
+          ia.field_l[162] = ga.field_a;
+          ia.field_l[115] = td.field_f;
+          ia.field_l[212] = qc.field_q;
+          ia.field_l[140] = gi.field_j;
+          ia.field_l[207] = wc.field_e;
+          ia.field_l[74] = ki.field_b;
+          ia.field_l[177] = el.field_d;
+          ia.field_l[201] = vb.field_Lb;
+          ia.field_l[41] = og.field_d;
+          ia.field_l[120] = ub.field_c;
+          ia.field_l[210] = hj.field_r;
+          ia.field_l[146] = ml.field_a;
+          ia.field_l[130] = vi.field_k;
+          ia.field_l[62] = rb.field_y;
+          ia.field_l[89] = tc.field_b;
+          ia.field_l[105] = ig.field_R;
+          ia.field_l[189] = oa.field_i;
+          ia.field_l[128] = bm.field_f;
+          ia.field_l[54] = cl.field_j;
+          ia.field_l[91] = km.field_z;
+          ia.field_l[209] = dn.field_h;
+          ia.field_l[173] = sm.field_i;
+          ia.field_l[55] = de.field_o;
+          ia.field_l[137] = rh.field_C;
+          ia.field_l[129] = ca.field_b;
+          ia.field_l[61] = lc.field_b;
+          ia.field_l[135] = mg.field_f;
+          ia.field_l[60] = ci.field_k;
+          ia.field_l[125] = mn.field_b;
+          ia.field_l[127] = hh.field_b;
+          ia.field_l[186] = dc.field_b;
+          ia.field_l[138] = rh.field_z;
+          ia.field_l[149] = hf.field_e;
+          ia.field_l[217] = ed.field_a;
+          ia.field_l[114] = rj.field_N;
+          ia.field_l[208] = ui.field_c;
+          ia.field_l[176] = sf.field_T;
+          ia.field_l[79] = oa.field_e;
+          ia.field_l[136] = le.field_xb;
+          ia.field_l[171] = ul.field_G;
+          ia.field_l[163] = oh.field_a;
+          ia.field_l[75] = nh.field_C;
+          ia.field_l[159] = ci.field_j;
+          ia.field_l[170] = bh.field_h;
+          ia.field_l[219] = t.field_l;
+          ia.field_l[40] = f.field_b;
+          ia.field_l[168] = id.field_w;
+          ia.field_l[58] = an.field_l;
+          ia.field_l[77] = gi.field_c;
+          ia.field_l[175] = gm.field_j;
+          ia.field_l[123] = ci.field_l;
+          ia.field_l[65] = wa.field_o;
+          ia.field_l[66] = sm.field_h;
+          ia.field_l[97] = df.field_a;
+          ia.field_l[203] = qh.field_g;
+          ia.field_l[102] = lh.field_e;
+          ia.field_l[111] = qg.field_m;
+          ia.field_l[92] = ab.field_a;
+          ia.field_l[184] = ra.field_b;
+          ia.field_l[104] = ui.field_b;
+          ia.field_l[180] = nb.field_E;
+          ia.field_l[32] = kd.field_y;
+          ia.field_l[134] = mj.field_a;
+          ia.field_l[93] = vc.field_k;
+          ia.field_l[211] = pj.field_l;
+          ia.field_l[199] = var2;
+          ia.field_l[202] = uh.field_f;
+          ia.field_l[84] = gf.field_a;
+          ia.field_l[197] = var2;
+          ia.field_l[103] = vg.field_d;
+          ia.field_l[198] = var2;
+          ia.field_l[51] = eh.field_b;
+          ia.field_l[121] = fa.field_e;
+          ia.field_l[206] = vk.field_p;
+          ia.field_l[44] = oe.field_g;
+          ia.field_l[150] = gb.field_l;
+          ia.field_l[190] = om.field_e;
+          ia.field_l[96] = q.field_c;
+          ia.field_l[70] = e.field_d;
+          ia.field_l[182] = gf.field_g;
+          ia.field_l[133] = wa.field_n;
+          ia.field_l[221] = s.field_d;
+          ia.field_l[152] = ni.field_b;
+          ia.field_l[158] = jn.field_B;
+          ia.field_l[63] = ue.field_h;
+          ia.field_l[113] = ld.field_p;
+          ia.field_l[48] = hf.field_b;
+          ia.field_l[94] = jc.field_a;
+          ia.field_l[187] = bb.field_a;
+          ia.field_l[205] = j.field_a;
+          ia.field_l[193] = cf.field_t;
+          ia.field_l[144] = sj.field_b;
+          ia.field_l[139] = in.field_d;
+          if (param0 <= 113) {
+            this.o(-63);
           }
+          ia.field_l[42] = r.field_e;
+          ia.field_l[78] = el.field_f;
+          ia.field_l[218] = nb.field_J;
+          ia.field_l[183] = sd.field_w;
+          ia.field_l[81] = ue.field_f;
+          ia.field_l[53] = bi.field_b;
+          ia.field_l[153] = fm.field_b;
+          ia.field_l[131] = ri.field_k;
+          ia.field_l[174] = la.field_e;
+          ia.field_l[220] = uc.field_a;
+          ia.field_l[69] = en.field_w;
+          ia.field_l[132] = ci.field_g;
+          ia.field_l[116] = dd.field_j;
+          ia.field_l[73] = vc.field_h;
+          ia.field_l[178] = df.field_j;
+          ia.field_l[38] = oc.field_d;
+          ia.field_l[64] = jg.field_j;
+          ia.field_l[88] = ea.field_e;
+          ia.field_l[147] = p.field_d;
+          ia.field_l[192] = ne.field_n;
+          ia.field_l[155] = o.field_g;
+          ia.field_l[59] = vi.field_j;
+          ia.field_l[169] = ld.field_o;
+          ia.field_l[117] = ck.field_C;
+          ia.field_l[80] = qa.field_g[7];
+          ia.field_l[85] = bl.field_c;
+          ia.field_l[90] = oe.field_d;
+          ia.field_l[194] = uj.field_r;
+          ia.field_l[36] = ih.field_v;
+          ia.field_l[143] = kc.field_d;
+          ia.field_l[160] = ln.field_j;
+          ia.field_l[67] = pl.field_j;
+          ia.field_l[156] = wi.field_e;
+          ia.field_l[68] = pe.field_hb;
+          ia.field_l[39] = hg.field_a;
+          ia.field_l[213] = field_C;
+          ia.field_l[72] = f.field_d;
+          ia.field_l[166] = bn.field_o;
+          ia.field_l[112] = qc.field_B;
+          ia.field_l[56] = an.field_j;
+          ia.field_l[100] = nd.field_a;
+          ia.field_l[200] = sd.field_t;
+          ia.field_l[196] = hf.field_j;
+          ia.field_l[98] = sj.field_g;
+          ia.field_l[122] = ej.field_d;
+          ia.field_l[216] = gf.field_d;
+          ia.field_l[87] = vj.field_p;
+          ia.field_l[188] = qg.field_i;
+          ia.field_l[109] = jh.field_cb;
+          ia.field_l[107] = eb.field_b;
+          ia.field_l[191] = ei.field_n;
+          ia.field_l[154] = pl.field_p;
+          ia.field_l[148] = wk.field_a;
+          ia.field_l[185] = t.field_j;
+          ia.field_l[110] = fe.field_c;
+          ia.field_l[82] = ia.field_e;
+          ia.field_l[215] = la.field_h;
+          ia.field_l[167] = dl.field_r;
+          ia.field_l[195] = var2;
+          ia.field_l[165] = sm.field_d;
+          ia.field_l[35] = om.field_c;
+          ia.field_l[161] = jg.field_i;
+          ia.field_l[86] = u.field_h;
+          ia.field_l[52] = lc.field_a;
+          ia.field_l[119] = wd.field_b;
+          ia.field_l[83] = kj.field_f;
+          ia.field_l[172] = ei.field_p;
+          ia.field_l[124] = ng.field_i;
+          ia.field_l[95] = hm.field_l;
+          ia.field_l[37] = wj.field_L;
+          ia.field_l[50] = bj.field_j;
+          ia.field_l[71] = ig.field_S;
+          ia.field_l[46] = ng.field_v;
+          ia.field_l[45] = rd.field_a;
+          ia.field_l[101] = el.field_l;
+          ia.field_l[151] = wh.field_e;
+          ia.field_l[179] = dk.field_n;
+          ia.field_l[43] = r.field_b;
+          ia.field_l[49] = qj.field_l;
+          ia.field_l[126] = ln.field_c;
+          ia.field_l[57] = gi.field_f;
+          ia.field_l[181] = ni.field_d;
+          ia.field_l[34] = jd.field_h;
+          ia.field_l[33] = c.field_f[0];
+          ia.field_l[76] = wb.field_W;
+          ia.field_l[106] = ic.field_k;
+          ia.field_l[142] = li.field_y;
+          ia.field_l[204] = ei.field_m;
+          ia.field_l[214] = rg.field_a;
+          ia.field_l[157] = fg.field_d;
+          ia.field_l[47] = re.field_q;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -517,25 +487,14 @@ public final class HostileSpawn extends d {
     }
 
     final void a(int param0, int param1) {
-        boolean stackIn_35_0 = false;
-        int stackIn_41_0 = 0;
-        int stackIn_44_0 = 0;
-        int stackIn_44_1 = 0;
-        int stackIn_109_0 = 0;
-        int stackIn_109_1 = 0;
-        int stackIn_114_0 = 0;
-        int stackIn_114_1 = 0;
-        int stackIn_122_0 = 0;
-        int stackIn_122_1 = 0;
-        int stackIn_130_0 = 0;
-        int stackIn_130_1 = 0;
-        int stackIn_138_0 = 0;
-        int stackIn_138_1 = 0;
-        int stackIn_152_0 = 0;
-        int stackIn_152_1 = 0;
-        boolean stackOut_34_0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        boolean stackIn_37_0 = false;
+        int stackIn_43_0 = 0;
+        int stackIn_111_0 = 0;
+        int stackIn_111_1 = 0;
+        int stackIn_155_0 = 0;
+        int stackIn_155_1 = 0;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_36_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -550,1461 +509,241 @@ public final class HostileSpawn extends d {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var12 = field_I ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var6 = ln.field_a.field_d;
-                        var7 = ln.field_a.field_a;
-                        var8_int = 0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        if ((-1 + var6 ^ -1) >= (var8_int ^ -1)) {
-                            statePc = 32;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var9_int = 0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        if (var7 + -1 <= var9_int) {
-                            statePc = 31;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var4 = var9_int * param1 - -1;
-                        var3_int = var8_int * param1 - -1;
-                        var5 = var8_int + var6 * var9_int;
-                        if (null == pk.field_d[ln.field_a.field_y[var5]]) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        pk.field_d[ln.field_a.field_y[var5]].a(var3_int, var4, param1, param1);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var10 = ln.field_a.field_o[var5];
-                        if (0 > var10) {
-                            statePc = 17;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        ak.field_b[var10].a(var3_int, var4, param1, param1);
-                        if (-1 == (r.field_a ^ -1)) {
-                            statePc = 16;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        si.a(var3_int, var4, param1, param1, 0, 128);
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        var11 = ln.field_a.field_i[var5];
-                        if (ln.field_a.field_f[var5] != 0) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        var11 = 0;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        var11 = var11 * 5;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        if (-1 > (var11 ^ -1)) {
-                            statePc = 24;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        si.c(var3_int, var4, param1, param1, 0);
-                        statePc = 30;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        if (-26 < (var11 ^ -1)) {
-                            statePc = 29;
-                        } else {
-                            statePc = 25;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        statePc = 27;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    try {
-                        statePc = 30;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        si.a(var3_int, var4, param1, param1, 0, 255 - 10 * var11);
-                        statePc = 30;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        var9_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    try {
-                        var8_int++;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_31) {
-                        caughtException = stateCaught_31;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 32: {
-                    try {
-                        var8 = new oc(0, 0);
-                        var5 = 0;
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        if (ll.field_a <= var5) {
-                            statePc = 40;
-                        } else {
-                            statePc = 34;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_33) {
-                        caughtException = stateCaught_33;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        var9 = wh.field_b[var5];
-                        stackOut_34_0 = ln.field_a.field_B[var9.field_j.b(-4)];
-                        stackIn_41_0 = stackOut_34_0 ? 1 : 0;
-                        stackIn_35_0 = stackOut_34_0;
-                        if (false) {
-                            statePc = 41;
-                        } else {
-                            statePc = 35;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_34) {
-                        caughtException = stateCaught_34;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 35: {
-                    try {
-                        if (!stackIn_35_0) {
-                            statePc = 39;
-                        } else {
-                            statePc = 36;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_35) {
-                        caughtException = stateCaught_35;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    try {
-                        statePc = 38;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_36) {
-                        caughtException = stateCaught_36;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 38: {
-                    try {
-                        var3_int = 1 + param1 * var9.field_j.field_e;
-                        var4 = 1 + var9.field_j.field_g * param1;
-                        si.c(var3_int + -1, var4 - 1, param1, param1, 16776960);
-                        si.a(-2 + var3_int, var4 - 2, param1 - -2, 2 + param1, 16776960, 32);
-                        si.a(var3_int - 3, var4 - 3, param1 - -4, param1 - -4, 16776960, 32);
-                        statePc = 39;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_38) {
-                        caughtException = stateCaught_38;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 39: {
-                    try {
-                        var5++;
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_39) {
-                        caughtException = stateCaught_39;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 40: {
-                    try {
-                        stackIn_41_0 = 0;
-                        statePc = 41;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_40) {
-                        caughtException = stateCaught_40;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 41: {
-                    try {
-                        var5 = stackIn_41_0;
-                        statePc = 42;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_41) {
-                        caughtException = stateCaught_41;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 42: {
-                    try {
-                        if (el.field_j <= var5) {
-                            statePc = 84;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_42) {
-                        caughtException = stateCaught_42;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 43: {
-                    try {
-                        var9_ref = mm.field_m[var5];
-                        stackIn_152_0 = var9_ref.field_i;
-                        stackIn_44_0 = stackIn_152_0;
-                        stackIn_152_1 = 1;
-                        stackIn_44_1 = stackIn_152_1;
-                        if (false) {
-                            statePc = 152;
-                        } else {
-                            statePc = 44;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_43) {
-                        caughtException = stateCaught_43;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 44: {
-                    try {
-                        if (stackIn_44_0 == stackIn_44_1) {
-                            statePc = 74;
-                        } else {
-                            statePc = 45;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_44) {
-                        caughtException = stateCaught_44;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 45: {
-                    try {
-                        statePc = 47;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_45) {
-                        caughtException = stateCaught_45;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 47: {
-                    try {
-                        if (-3 == (var9_ref.field_i ^ -1)) {
-                            statePc = 74;
-                        } else {
-                            statePc = 48;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_47) {
-                        caughtException = stateCaught_47;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 48: {
-                    try {
-                        statePc = 50;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_48) {
-                        caughtException = stateCaught_48;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 50: {
-                    try {
-                        if (-19 == (var9_ref.field_i ^ -1)) {
-                            statePc = 74;
-                        } else {
-                            statePc = 51;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_50) {
-                        caughtException = stateCaught_50;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 51: {
-                    try {
-                        statePc = 53;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_51) {
-                        caughtException = stateCaught_51;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 53: {
-                    try {
-                        if (19 == var9_ref.field_i) {
-                            statePc = 74;
-                        } else {
-                            statePc = 54;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_53) {
-                        caughtException = stateCaught_53;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 54: {
-                    try {
-                        statePc = 56;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_54) {
-                        caughtException = stateCaught_54;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 56: {
-                    try {
-                        if ((var9_ref.field_i ^ -1) == -24) {
-                            statePc = 74;
-                        } else {
-                            statePc = 57;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_56) {
-                        caughtException = stateCaught_56;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 57: {
-                    try {
-                        statePc = 59;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_57) {
-                        caughtException = stateCaught_57;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 59: {
-                    try {
-                        if ((var9_ref.field_i ^ -1) != -25) {
-                            statePc = 65;
-                        } else {
-                            statePc = 60;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_59) {
-                        caughtException = stateCaught_59;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 60: {
-                    try {
-                        statePc = 62;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_60) {
-                        caughtException = stateCaught_60;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 62: {
-                    try {
-                        if (var9_ref.field_s) {
-                            statePc = 74;
-                        } else {
-                            statePc = 63;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_62) {
-                        caughtException = stateCaught_62;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 63: {
-                    try {
-                        statePc = 65;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_63) {
-                        caughtException = stateCaught_63;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 65: {
-                    try {
-                        if (var9_ref.field_i == 25) {
-                            statePc = 74;
-                        } else {
-                            statePc = 66;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_65) {
-                        caughtException = stateCaught_65;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 66: {
-                    try {
-                        statePc = 68;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_66) {
-                        caughtException = stateCaught_66;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 68: {
-                    try {
-                        if (var9_ref.field_i == 27) {
-                            statePc = 74;
-                        } else {
-                            statePc = 69;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_68) {
-                        caughtException = stateCaught_68;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 69: {
-                    try {
-                        statePc = 71;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_69) {
-                        caughtException = stateCaught_69;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 71: {
-                    try {
-                        if (var9_ref.field_i != 28) {
-                            statePc = 83;
-                        } else {
-                            statePc = 72;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_71) {
-                        caughtException = stateCaught_71;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 72: {
-                    try {
-                        statePc = 74;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_72) {
-                        caughtException = stateCaught_72;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 74: {
-                    try {
-                        if (!var9_ref.field_n) {
-                            statePc = 83;
-                        } else {
-                            statePc = 75;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_74) {
-                        caughtException = stateCaught_74;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 75: {
-                    try {
-                        statePc = 77;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_75) {
-                        caughtException = stateCaught_75;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 77: {
-                    try {
-                        if (ln.field_a.field_i[var9_ref.field_j.b(-4)] > 0) {
-                            statePc = 82;
-                        } else {
-                            statePc = 78;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_77) {
-                        caughtException = stateCaught_77;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 78: {
-                    try {
-                        statePc = 80;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_78) {
-                        caughtException = stateCaught_78;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 80: {
-                    try {
-                        statePc = 83;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_80) {
-                        caughtException = stateCaught_80;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 82: {
-                    try {
-                        var3_int = param1 * var9_ref.field_j.field_e - -1;
-                        var4 = 1 + var9_ref.field_j.field_g * param1;
-                        si.e(param1 / 2 + var3_int, param1 / 2 + var4, param1 / 2, 16711680);
-                        si.f(var3_int - -(param1 / 2), var4 + param1 / 2, param1 / 2 - -1, 16711680, 128);
-                        si.f(var3_int - -(param1 / 2), param1 / 2 + var4, param1 / 2 - -2, 16711680, 64);
-                        statePc = 83;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_82) {
-                        caughtException = stateCaught_82;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 83: {
-                    try {
-                        var5++;
-                        statePc = 42;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_83) {
-                        caughtException = stateCaught_83;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 84: {
-                    try {
-                        var9_int = ha.field_t;
-                        if ((var9_int ^ -1) != -1) {
-                            statePc = 88;
-                        } else {
-                            statePc = 85;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_84) {
-                        caughtException = stateCaught_84;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 85: {
-                    try {
-                        statePc = 106;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_85) {
-                        caughtException = stateCaught_85;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 88: {
-                    try {
-                        if ((var9_int ^ -1) == -7) {
-                            statePc = 106;
-                        } else {
-                            statePc = 89;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_88) {
-                        caughtException = stateCaught_88;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 89: {
-                    try {
-                        statePc = 91;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_89) {
-                        caughtException = stateCaught_89;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 91: {
-                    try {
-                        if (2 == var9_int) {
-                            statePc = 119;
-                        } else {
-                            statePc = 92;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_91) {
-                        caughtException = stateCaught_91;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 92: {
-                    try {
-                        statePc = 94;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_92) {
-                        caughtException = stateCaught_92;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 94: {
-                    try {
-                        if (-4 != (var9_int ^ -1)) {
-                            statePc = 100;
-                        } else {
-                            statePc = 95;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_94) {
-                        caughtException = stateCaught_94;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 95: {
-                    try {
-                        statePc = 97;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_95) {
-                        caughtException = stateCaught_95;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 97: {
-                    try {
-                        statePc = 127;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_97) {
-                        caughtException = stateCaught_97;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 100: {
-                    try {
-                        if (12 != var9_int) {
-                            statePc = 147;
-                        } else {
-                            statePc = 101;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_100) {
-                        caughtException = stateCaught_100;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 101: {
-                    try {
-                        statePc = 103;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_101) {
-                        caughtException = stateCaught_101;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 103: {
-                    try {
-                        statePc = 135;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_103) {
-                        caughtException = stateCaught_103;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 106: {
-                    try {
-                        var8.field_e = 0;
-                        statePc = 108;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_106) {
-                        caughtException = stateCaught_106;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 108: {
-                    try {
-                        stackIn_109_0 = var6;
-                        stackIn_109_1 = var8.field_e;
-                        statePc = 109;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_108) {
-                        caughtException = stateCaught_108;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 109: {
-                    try {
-                        if (stackIn_109_0 <= stackIn_109_1) {
-                            statePc = 151;
-                        } else {
-                            statePc = 110;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_109) {
-                        caughtException = stateCaught_109;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 110: {
-                    try {
-                        var8.field_g = 0;
-                        statePc = 112;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_110) {
-                        caughtException = stateCaught_110;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 112: {
-                    try {
-                        if (var7 <= var8.field_g) {
-                            statePc = 118;
-                        } else {
-                            statePc = 113;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_112) {
-                        caughtException = stateCaught_112;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 113: {
-                    try {
-                        stackIn_109_0 = ln.field_a.field_y[var8.b(-4)] ^ -1;
-                        stackIn_114_0 = stackIn_109_0;
-                        stackIn_109_1 = -149;
-                        stackIn_114_1 = stackIn_109_1;
-                        if (false) {
-                            statePc = 109;
-                        } else {
-                            statePc = 114;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_113) {
-                        caughtException = stateCaught_113;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 114: {
-                    try {
-                        if (stackIn_114_0 == stackIn_114_1) {
-                            statePc = 116;
-                        } else {
-                            statePc = 115;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_114) {
-                        caughtException = stateCaught_114;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 115: {
-                    try {
-                        statePc = 117;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_115) {
-                        caughtException = stateCaught_115;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 116: {
-                    try {
-                        var4 = 1 + (var8.field_g - 1) * param1;
-                        var3_int = 1 + (-1 + var8.field_e) * param1;
-                        si.c(var3_int, var4, param1 * 3, param1 * 3, 255);
-                        si.a(var3_int - 1, -1 + var4, 3 * param1 - -2, 3 * param1 + 2, 255, 32);
-                        si.a(var3_int - 2, -2 + var4, 3 * param1 - -4, 4 + 3 * param1, 255, 32);
-                        statePc = 117;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_116) {
-                        caughtException = stateCaught_116;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 117: {
-                    try {
-                        var8.field_g = var8.field_g + 1;
-                        statePc = 112;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_117) {
-                        caughtException = stateCaught_117;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 118: {
-                    try {
-                        var8.field_e = var8.field_e + 1;
-                        statePc = 108;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_118) {
-                        caughtException = stateCaught_118;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 119: {
-                    try {
-                        var5 = 0;
-                        statePc = 120;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_119) {
-                        caughtException = stateCaught_119;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 120: {
-                    try {
-                        if (var5 >= el.field_j) {
-                            statePc = 151;
-                        } else {
-                            statePc = 121;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_120) {
-                        caughtException = stateCaught_120;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 121: {
-                    try {
-                        var9_ref = mm.field_m[var5];
-                        stackIn_152_0 = -5;
-                        stackIn_122_0 = stackIn_152_0;
-                        stackIn_152_1 = var9_ref.field_i ^ -1;
-                        stackIn_122_1 = stackIn_152_1;
-                        if (false) {
-                            statePc = 152;
-                        } else {
-                            statePc = 122;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_121) {
-                        caughtException = stateCaught_121;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 122: {
-                    try {
-                        if (stackIn_122_0 != stackIn_122_1) {
-                            statePc = 126;
-                        } else {
-                            statePc = 123;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_122) {
-                        caughtException = stateCaught_122;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 123: {
-                    try {
-                        statePc = 125;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_123) {
-                        caughtException = stateCaught_123;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 125: {
-                    try {
-                        var4 = 1 + var9_ref.field_j.field_g * param1;
-                        var3_int = 1 + var9_ref.field_j.field_e * param1;
-                        si.c(var3_int, var4, param1, param1, 16711680);
-                        si.a(var3_int + -1, -1 + var4, param1 + 2, 2 + param1, 16711680, 32);
-                        si.a(var3_int + -2, -2 + var4, 4 + param1, param1 - -4, 16711680, 32);
-                        statePc = 126;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_125) {
-                        caughtException = stateCaught_125;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 126: {
-                    try {
-                        var5++;
-                        statePc = 120;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_126) {
-                        caughtException = stateCaught_126;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 127: {
-                    try {
-                        var5 = 0;
-                        statePc = 128;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_127) {
-                        caughtException = stateCaught_127;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 128: {
-                    try {
-                        if ((var5 ^ -1) <= (el.field_j ^ -1)) {
-                            statePc = 151;
-                        } else {
-                            statePc = 129;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_128) {
-                        caughtException = stateCaught_128;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 129: {
-                    try {
-                        var9_ref = mm.field_m[var5];
-                        stackIn_152_0 = var9_ref.field_i ^ -1;
-                        stackIn_130_0 = stackIn_152_0;
-                        stackIn_152_1 = -9;
-                        stackIn_130_1 = stackIn_152_1;
-                        if (false) {
-                            statePc = 152;
-                        } else {
-                            statePc = 130;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_129) {
-                        caughtException = stateCaught_129;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 130: {
-                    try {
-                        if (stackIn_130_0 != stackIn_130_1) {
-                            statePc = 134;
-                        } else {
-                            statePc = 131;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_130) {
-                        caughtException = stateCaught_130;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 131: {
-                    try {
-                        statePc = 133;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_131) {
-                        caughtException = stateCaught_131;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 133: {
-                    try {
-                        var4 = var9_ref.field_j.field_g * param1 - -1;
-                        var3_int = var9_ref.field_j.field_e * param1 + 1;
-                        si.c(var3_int - 1, -1 + var4, 2 * param1, param1 * 2, 16711680);
-                        si.a(var3_int + -2, -2 + var4, 2 * param1 - -2, param1 * 2 - -2, 16711680, 32);
-                        si.a(var3_int + -3, var4 + -3, 4 + param1 * 2, 4 + param1 * 2, 16711680, 32);
-                        statePc = 134;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_133) {
-                        caughtException = stateCaught_133;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 134: {
-                    try {
-                        var5++;
-                        statePc = 128;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_134) {
-                        caughtException = stateCaught_134;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 135: {
-                    try {
-                        var5 = 0;
-                        statePc = 136;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_135) {
-                        caughtException = stateCaught_135;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 136: {
-                    try {
-                        if ((var5 ^ -1) <= (ll.field_a ^ -1)) {
-                            statePc = 151;
-                        } else {
-                            statePc = 137;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_136) {
-                        caughtException = stateCaught_136;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 137: {
-                    try {
-                        var9 = wh.field_b[var5];
-                        stackIn_152_0 = var9.field_i ^ -1;
-                        stackIn_138_0 = stackIn_152_0;
-                        stackIn_152_1 = -3;
-                        stackIn_138_1 = stackIn_152_1;
-                        if (false) {
-                            statePc = 152;
-                        } else {
-                            statePc = 138;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_137) {
-                        caughtException = stateCaught_137;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 138: {
-                    try {
-                        if (stackIn_138_0 == stackIn_138_1) {
-                            statePc = 142;
-                        } else {
-                            statePc = 139;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_138) {
-                        caughtException = stateCaught_138;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 139: {
-                    try {
-                        statePc = 141;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_139) {
-                        caughtException = stateCaught_139;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 141: {
-                    try {
-                        statePc = 146;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_141) {
-                        caughtException = stateCaught_141;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 142: {
-                    try {
-                        if (-12 == (var9.field_h ^ -1)) {
-                            statePc = 145;
-                        } else {
-                            statePc = 143;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_142) {
-                        caughtException = stateCaught_142;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 143: {
-                    try {
-                        statePc = 146;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_143) {
-                        caughtException = stateCaught_143;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 145: {
-                    try {
-                        var4 = 1 + param1 * var9.field_j.field_g;
-                        var3_int = var9.field_j.field_e * param1 - -1;
-                        si.c(-1 + var3_int, var4 + -1, param1, param1, 16711680);
-                        si.a(-2 + var3_int, var4 + -2, param1 + 2, 2 + param1, 16711680, 32);
-                        si.a(var3_int + -3, -3 + var4, 4 + param1, param1 + 4, 16711680, 32);
-                        statePc = 146;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_145) {
-                        caughtException = stateCaught_145;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 146: {
-                    try {
-                        var5++;
-                        statePc = 136;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_146) {
-                        caughtException = stateCaught_146;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 147: {
-                    try {
-                        if ((nh.field_E.field_e ^ -1) <= -1) {
-                            statePc = 150;
-                        } else {
-                            statePc = 148;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_147) {
-                        caughtException = stateCaught_147;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 148: {
-                    try {
-                        statePc = 151;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_148) {
-                        caughtException = stateCaught_148;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 150: {
-                    try {
-                        var4 = 1 + param1 * nh.field_E.field_g;
-                        var3_int = 1 + nh.field_E.field_e * param1;
-                        si.f(var3_int, var4, 2 + param1, 16711680, 32);
-                        si.b(var3_int, var4, param1 + 4, 16711680);
-                        statePc = 151;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_150) {
-                        caughtException = stateCaught_150;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 151: {
-                    try {
-                        stackIn_152_0 = param0;
-                        stackIn_152_1 = 4;
-                        statePc = 152;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_151) {
-                        caughtException = stateCaught_151;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 152: {
-                    try {
-                        if (stackIn_152_0 == stackIn_152_1) {
-                            statePc = 155;
-                        } else {
-                            statePc = 153;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_152) {
-                        caughtException = stateCaught_152;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 153: {
-                    try {
-                        this.a((java.awt.Canvas) null, -115);
-                        statePc = 155;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_153) {
-                        caughtException = stateCaught_153;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 155: {
-                    try {
-                        var4 = param1 * mm.field_m[0].field_j.field_g;
-                        var3_int = mm.field_m[0].field_j.field_e * param1;
-                        si.c(var3_int, var4, param1, param1, 16777215);
-                        statePc = 158;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_155) {
-                        caughtException = stateCaught_155;
-                        statePc = 157;
-                        continue stateLoop;
-                    }
-                }
-                case 157: {
-                    var3 = (RuntimeException) ((Object) caughtException);
-                    throw wg.a((Throwable) ((Object) var3), "HostileSpawn.TA(" + param0 + ',' + param1 + ')');
-                }
-                case 158: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        p var9Lifetime1;
+        int stackIn_111_0Lifetime1;
+        int stackIn_111_1Lifetime1;
+        int var3_intLifetime1;
+        int var3_intLifetime2;
+        int var3_intLifetime3;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var9_intLifetime1;
+        var12 = field_I ? 1 : 0;
+        try {
+          var6 = ln.field_a.field_d;
+          var7 = ln.field_a.field_a;
+          var8_int = 0;
+          L0: while ((-1 + var6) > var8_int) {
+            var9_int = 0;
+            while (true) {
+              if (var7 - 1 > var9_int) {
+                var4 = var9_int * param1 + 1;
+                var3_int = var8_int * param1 + 1;
+                var5 = var8_int + var6 * var9_int;
+                if (var12 == 0) {
+                  if (null != pk.field_d[ln.field_a.field_y[var5]]) {
+                    pk.field_d[ln.field_a.field_y[var5]].a(var3_int, var4, param1, param1);
+                  }
+                  var10 = ln.field_a.field_o[var5];
+                  if (0 <= var10) {
+                    ak.field_b[var10].a(var3_int, var4, param1, param1);
+                    if (r.field_a == 0) {
+                      si.a(var3_int, var4, param1, param1, 0, 128);
+                    }
+                  }
+                  var11 = ln.field_a.field_i[var5];
+                  if (ln.field_a.field_f[var5] == 0) {
+                    var11 = 0;
+                  } else {
+                    var11 = var11 * 5;
+                  }
+                  if (var11 <= 0) {
+                    si.c(var3_int, var4, param1, param1, 0);
+                  } else {
+                    if (var11 < 25) {
+                      si.a(var3_int, var4, param1, param1, 0, 255 - 10 * var11);
+                    }
+                  }
+                  var9_int++;
+                  continue;
+                }
+              } else {
+                var8_int++;
+              }
+              break;
             }
+            if (var12 == 0) {
+              continue L0;
+            }
+            break;
+          }
+          var8 = new oc(0, 0);
+          var5Lifetime1 = 0;
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (!(ll.field_a > var5Lifetime1)))) {
+            var9 = wh.field_b[var5Lifetime1];
+            stackOut_36_0 = ln.field_a.field_B[var9.field_j.b(-4)];
+            stackIn_43_0 = stackOut_36_0 ? 1 : 0;
+            stackIn_37_0 = stackOut_36_0;
+            if (var12 == 0) {
+              if (stackIn_37_0) {
+                var3_intLifetime1 = 1 + param1 * var9.field_j.field_e;
+                var4Lifetime1 = 1 + var9.field_j.field_g * param1;
+                si.c(var3_intLifetime1 - 1, var4Lifetime1 - 1, param1, param1, 16776960);
+                si.a(-2 + var3_intLifetime1, var4Lifetime1 - 2, param1 + 2, 2 + param1, 16776960, 32);
+                si.a(var3_intLifetime1 - 3, var4Lifetime1 - 3, param1 + 4, param1 + 4, 16776960, 32);
+              }
+              var5Lifetime1++;
+              continue;
+            }
+            break;
+          }
+          if (decompiledNaturalLoopExit0) {
+            stackIn_43_0 = 0;
+          }
+          var5Lifetime2 = stackIn_43_0;
+          L16: while (true) {
+            boolean decompiledFrameCompleted0 = true;
+            if (el.field_j > var5Lifetime2) {
+              var9_ref = mm.field_m[var5Lifetime2];
+              stackIn_155_0 = var9_ref.field_i;
+              stackIn_155_1 = 1;
+              if (var12 == 0) {
+                if ((stackIn_155_0 == stackIn_155_1 ||
+                  var9_ref.field_i == 2 ||
+                  var9_ref.field_i == 18 ||
+                  19 == var9_ref.field_i ||
+                  var9_ref.field_i == 23 ||
+                  var9_ref.field_i == 24 &&
+                  var9_ref.field_s ||
+                  (var9_ref.field_i == 25 ||
+                  var9_ref.field_i == 27 ||
+                  var9_ref.field_i == 28)) && (var9_ref.field_n &&
+                  ln.field_a.field_i[var9_ref.field_j.b(-4)] > 0)) {
+                  var3_intLifetime2 = param1 * var9_ref.field_j.field_e + 1;
+                  var4Lifetime2 = 1 + var9_ref.field_j.field_g * param1;
+                  si.e(param1 / 2 + var3_intLifetime2, param1 / 2 + var4Lifetime2, param1 / 2, 16711680);
+                  si.f(var3_intLifetime2 + param1 / 2, var4Lifetime2 + param1 / 2, param1 / 2 + 1, 16711680, 128);
+                  si.f(var3_intLifetime2 + param1 / 2, param1 / 2 + var4Lifetime2, param1 / 2 + 2, 16711680, 64);
+                }
+                var5Lifetime2++;
+                continue;
+              }
+            } else {
+              boolean decompiledFrameRemainder0 = true;
+              boolean decompiledFrameCompleted1 = true;
+              L23: {
+                var9_intLifetime1 = ha.field_t;
+                if ((var9_intLifetime1 != 0 ||
+                  var12 != 0) && var9_intLifetime1 != 6) {
+                  if (2 == var9_intLifetime1) {
+                    break L23;
+                  }
+                  if (var9_intLifetime1 == 3 &&
+                    var12 == 0) {
+                    for (var5Lifetime2 = 0; var5Lifetime2 < el.field_j; var5Lifetime2++) {
+                      var9_ref = mm.field_m[var5Lifetime2];
+                      stackIn_155_0 = ~var9_ref.field_i;
+                      stackIn_155_1 = -9;
+                      if (stackIn_155_0 == stackIn_155_1) {
+                        var4Lifetime2 = var9_ref.field_j.field_g * param1 + 1;
+                        var3_intLifetime2 = var9_ref.field_j.field_e * param1 + 1;
+                        si.c(var3_intLifetime2 - 1, -1 + var4Lifetime2, 2 * param1, param1 * 2, 16711680);
+                        si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 2 * param1 + 2, param1 * 2 + 2, 16711680, 32);
+                        si.a(var3_intLifetime2 - 3, var4Lifetime2 - 3, 4 + param1 * 2, 4 + param1 * 2, 16711680, 32);
+                      }
+                    }
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    if (12 != var9_intLifetime1) {
+                      if (!(nh.field_E.field_e < 0)) {
+                        var4Lifetime2 = 1 + param1 * nh.field_E.field_g;
+                        var3_intLifetime2 = 1 + nh.field_E.field_e * param1;
+                        si.f(var3_intLifetime2, var4Lifetime2, 2 + param1, 16711680, 32);
+                        si.b(var3_intLifetime2, var4Lifetime2, param1 + 4, 16711680);
+                      }
+                      decompiledFrameRemainder0 = false;
+                    }
+                    else {
+                      if (var12 == 0) {
+                        for (var5Lifetime2 = 0; var5Lifetime2 < ll.field_a; var5Lifetime2++) {
+                          var9Lifetime1 = wh.field_b[var5Lifetime2];
+                          stackIn_155_0 = ~var9Lifetime1.field_i;
+                          stackIn_155_1 = -3;
+                          if (stackIn_155_0 == stackIn_155_1 &&
+                            var9Lifetime1.field_h == 11) {
+                            var4Lifetime2 = 1 + param1 * var9Lifetime1.field_j.field_g;
+                            var3_intLifetime2 = var9Lifetime1.field_j.field_e * param1 + 1;
+                            si.c(-1 + var3_intLifetime2, var4Lifetime2 - 1, param1, param1, 16711680);
+                            si.a(-2 + var3_intLifetime2, var4Lifetime2 - 2, param1 + 2, 2 + param1, 16711680, 32);
+                            si.a(var3_intLifetime2 - 3, -3 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
+                          }
+                        }
+                        decompiledFrameRemainder0 = false;
+                      }
+                    }
+                  }
+                }
+                if (decompiledFrameRemainder0) {
+                  var8.field_e = 0;
+                  while (true) {
+                    stackIn_111_0 = var6;
+                    stackIn_111_1 = var8.field_e;
+                    if (stackIn_111_0 <= stackIn_111_1) {
+                      decompiledFrameCompleted1 = false;
+                      break;
+                    }
+                    if (var12 != 0) {
+                      break L16;
+                    }
+                    var8.field_g = 0;
+                    while (var7 > var8.field_g) {
+                      stackIn_111_0Lifetime1 = ~ln.field_a.field_y[var8.b(-4)];
+                      stackIn_111_1Lifetime1 = -149;
+                      if (stackIn_111_0Lifetime1 == stackIn_111_1Lifetime1) {
+                        var4Lifetime2 = 1 + (var8.field_g - 1) * param1;
+                        var3_intLifetime2 = 1 + (-1 + var8.field_e) * param1;
+                        si.c(var3_intLifetime2, var4Lifetime2, param1 * 3, param1 * 3, 255);
+                        si.a(var3_intLifetime2 - 1, -1 + var4Lifetime2, 3 * param1 + 2, 3 * param1 + 2, 255, 32);
+                        si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 3 * param1 + 4, 4 + 3 * param1, 255, 32);
+                      }
+                      var8.field_g = var8.field_g + 1;
+                    }
+                    var8.field_e = var8.field_e + 1;
+                  }
+                }
+              }
+              if ((decompiledFrameRemainder0) &&
+                (decompiledFrameCompleted1)) {
+                for (var5Lifetime2 = 0; var5Lifetime2 < el.field_j; var5Lifetime2++) {
+                  var9_ref = mm.field_m[var5Lifetime2];
+                  stackIn_155_0 = -5;
+                  stackIn_155_1 = ~var9_ref.field_i;
+                  if (var12 != 0) {
+                    decompiledFrameCompleted0 = false;
+                    break;
+                  }
+                  if (stackIn_155_0 == stackIn_155_1) {
+                    var4Lifetime2 = 1 + var9_ref.field_j.field_g * param1;
+                    var3_intLifetime2 = 1 + var9_ref.field_j.field_e * param1;
+                    si.c(var3_intLifetime2, var4Lifetime2, param1, param1, 16711680);
+                    si.a(var3_intLifetime2 - 1, -1 + var4Lifetime2, param1 + 2, 2 + param1, 16711680, 32);
+                    si.a(var3_intLifetime2 - 2, -2 + var4Lifetime2, 4 + param1, param1 + 4, 16711680, 32);
+                  }
+                }
+              }
+              if (decompiledFrameCompleted0) {
+                stackIn_155_0 = param0;
+                stackIn_155_1 = 4;
+              }
+            }
+            if (stackIn_155_0 != stackIn_155_1) {
+              this.a((java.awt.Canvas) null, -115);
+            }
+            break;
+          }
+          var4Lifetime3 = param1 * mm.field_m[0].field_j.field_g;
+          var3_intLifetime3 = mm.field_m[0].field_j.field_e * param1;
+          si.c(var3_intLifetime3, var4Lifetime3, param1, param1, 16777215);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw wg.a((Throwable) ((Object) var3), "HostileSpawn.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2012,27 +751,15 @@ public final class HostileSpawn extends d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              if (null != wa.field_q) {
-                tb.f((byte) -100);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              la.b(19659);
-              if (param0 == 21085) {
-                break L2;
-              } else {
-                field_C = (bd) null;
-                break L2;
-              }
-            }
-            tg.a((byte) 75);
-            break L0;
+          if (null != wa.field_q) {
+            tb.f((byte) -100);
           }
+          la.b(19659);
+          if (param0 != 21085) {
+            field_C = (bd) null;
+          }
+          tg.a((byte) 75);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -2042,285 +769,251 @@ public final class HostileSpawn extends d {
 
     private final nm q(int param0) {
         nm var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        nm stackIn_48_0 = null;
+        nm stackIn_57_0 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         var4 = field_I ? 1 : 0;
         try {
-          L0: {
-            gj.a(20, ac.field_e, 56.0f);
-            this.a((byte) -80);
-            nd.field_e = new rd(ul.field_P, ph.field_F);
-            var2 = new nm(22050, ug.field_g);
-            em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().a(var2);
-            em.field_a[11] = va.a(ul.field_P, "", "footstep1").a().a(var2);
-            em.field_a[12] = va.a(ul.field_P, "", "footstep2").a().a(var2);
-            em.field_a[19] = va.a(ul.field_P, "", "slidingdoor_close").a().a(var2);
-            em.field_a[20] = va.a(ul.field_P, "", "slidingdoor_open").a().a(var2);
-            em.field_a[22] = va.a(ul.field_P, "", "spawn_kill").a().a(var2);
-            em.field_a[23] = va.a(ul.field_P, "", "spawnhurt_splat").a().a(var2);
-            lm.field_A[1] = va.a(ul.field_P, "", "acid_spit").a().a(var2);
-            lm.field_A[3] = va.a(ul.field_P, "", "menu_beep").a().a(var2);
-            lm.field_A[4] = va.a(ul.field_P, "", "menu_click").a().a(var2);
-            lm.field_A[5] = va.a(ul.field_P, "", "burning_fire_loop").a().a(var2);
-            lm.field_A[6] = va.a(ul.field_P, "", "queen_spawn").a().a(var2);
-            lm.field_A[7] = va.a(ul.field_P, "", "fast_spawn").a().a(var2);
-            lm.field_A[8] = va.a(ul.field_P, "", "final_explosion").a().a(var2);
-            lm.field_A[9] = va.a(ul.field_P, "", "baby_spawn").a().a(var2);
-            lm.field_A[14] = va.a(ul.field_P, "", "crate_explode").a().a(var2);
-            lm.field_A[13] = em.field_a[14];
-            lm.field_A[17] = va.a(ul.field_P, "", "explode").a().a(var2);
-            lm.field_A[20] = va.a(ul.field_P, "", "normal_alien_attack").a().a(var2);
-            lm.field_A[21] = va.a(ul.field_P, "", "lift_up").a().a(var2);
-            lm.field_A[22] = va.a(ul.field_P, "", "lift_down").a().a(var2);
-            lm.field_A[23] = va.a(ul.field_P, "", "trigger_reactor").a().a(var2);
-            ua.field_c = new jb[]{lm.field_A[24], lm.field_A[5]};
-            var3 = 0;
-            L1: while (true) {
-              if (5 <= var3) {
-                var3 = 0;
-                L2: while (true) {
-                  if (-3 >= (var3 ^ -1)) {
-                    var3 = 0;
-                    L3: while (true) {
-                      if (-4 >= (var3 ^ -1)) {
-                        sf.field_V[15] = va.a(ul.field_P, "", "HS_pistol_equip_01").a().a(var2);
-                        sf.field_V[16] = va.a(ul.field_P, "", "HS_machine_gun_equip_01").a().a(var2);
-                        sf.field_V[17] = va.a(ul.field_P, "", "HS_shotgun_equip_01").a().a(var2);
-                        sf.field_V[18] = va.a(ul.field_P, "", "HS_flamethrower_equip").a().a(var2);
-                        sf.field_V[19] = va.a(ul.field_P, "", "HS_railgun_equip").a().a(var2);
-                        sf.field_V[20] = va.a(ul.field_P, "", "HS_rocket_equip").a().a(var2);
-                        sf.field_V[21] = va.a(ul.field_P, "", "HS_plasma_equip_01").a().a(var2);
-                        sf.field_V[22] = va.a(ul.field_P, "", "HS_grenade_equip").a().a(var2);
-                        var3 = 0;
-                        L4: while (true) {
-                          if (var3 >= 5) {
-                            var3 = 0;
-                            L5: while (true) {
-                              if (-4 >= (var3 ^ -1)) {
-                                var3 = 0;
-                                L6: while (true) {
-                                  if (4 <= var3) {
-                                    sf.field_V[35] = va.a(ul.field_P, "", "HS_flamethrower_all").a().a(var2);
-                                    sf.field_V[36] = va.a(ul.field_P, "", "HS_flamethrower_end").a().a(var2);
-                                    sf.field_V[37] = va.a(ul.field_P, "", "HS_rocket_fire_02").a().a(var2);
-                                    sf.field_V[38] = va.a(ul.field_P, "", "HS_plasma_impact_01").a().a(var2);
-                                    sf.field_V[39] = va.a(ul.field_P, "", "HS_grenade_fire_01").a().a(var2);
-                                    fg.field_b[23] = va.a(ul.field_P, "", "HS_collect_charge_01").a().a(var2);
-                                    fg.field_b[25] = va.a(ul.field_P, "", "HS_force_field_01").a().a(var2);
-                                    fg.field_b[26] = va.a(ul.field_P, "", "HS_rumble_bgsound").a().a(var2);
-                                    var3 = 0;
-                                    L7: while (true) {
-                                      if ((var3 ^ -1) <= -6) {
-                                        L8: {
-                                          if (param0 <= -94) {
-                                            break L8;
-                                          } else {
-                                            this.b((byte) 51);
-                                            break L8;
-                                          }
-                                        }
-                                        stackIn_48_0 = (nm) (var2);
-                                        break L0;
-                                      } else {
-                                        sf.field_V[var3 + 41] = va.a(ul.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().a(var2);
-                                        sf.field_V[46 - -var3] = va.a(ul.field_P, "", "HS_turret_0" + (1 + var3)).a().a(var2);
-                                        var3++;
-                                        continue L7;
-                                      }
-                                    }
-                                  } else {
-                                    sf.field_V[var3 + 31] = va.a(ul.field_P, "", "HS_railgun_0" + (var3 - -1)).a().a(var2);
-                                    var3++;
-                                    continue L6;
-                                  }
-                                }
-                              } else {
-                                sf.field_V[var3 + 28] = va.a(ul.field_P, "", "HS_plasma_0" + (1 + var3)).a().a(var2);
-                                var3++;
-                                continue L5;
-                              }
-                            }
-                          } else {
-                            sf.field_V[23 + var3] = va.a(ul.field_P, "", "HS_shotgun_0" + (1 + var3)).a().a(var2);
-                            var3++;
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        sf.field_V[var3 + 12] = va.a(ul.field_P, "", "HS_pistol_0" + (1 + var3)).a().a(var2);
-                        var3++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    sf.field_V[var3 + 10] = va.a(ul.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().a(var2);
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                sf.field_V[var3 + 5] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 - -1) + "_tail").a().a(var2);
-                sf.field_V[0 + var3] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 - -1) + "_no_tail").a().a(var2);
-                var3++;
-                continue L1;
-              }
+          gj.a(20, ac.field_e, 56.0f);
+          this.a((byte) -80);
+          nd.field_e = new rd(ul.field_P, ph.field_F);
+          var2 = new nm(22050, ug.field_g);
+          em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().a(var2);
+          em.field_a[11] = va.a(ul.field_P, "", "footstep1").a().a(var2);
+          em.field_a[12] = va.a(ul.field_P, "", "footstep2").a().a(var2);
+          em.field_a[19] = va.a(ul.field_P, "", "slidingdoor_close").a().a(var2);
+          em.field_a[20] = va.a(ul.field_P, "", "slidingdoor_open").a().a(var2);
+          em.field_a[22] = va.a(ul.field_P, "", "spawn_kill").a().a(var2);
+          em.field_a[23] = va.a(ul.field_P, "", "spawnhurt_splat").a().a(var2);
+          lm.field_A[1] = va.a(ul.field_P, "", "acid_spit").a().a(var2);
+          lm.field_A[3] = va.a(ul.field_P, "", "menu_beep").a().a(var2);
+          lm.field_A[4] = va.a(ul.field_P, "", "menu_click").a().a(var2);
+          lm.field_A[5] = va.a(ul.field_P, "", "burning_fire_loop").a().a(var2);
+          lm.field_A[6] = va.a(ul.field_P, "", "queen_spawn").a().a(var2);
+          lm.field_A[7] = va.a(ul.field_P, "", "fast_spawn").a().a(var2);
+          lm.field_A[8] = va.a(ul.field_P, "", "final_explosion").a().a(var2);
+          lm.field_A[9] = va.a(ul.field_P, "", "baby_spawn").a().a(var2);
+          lm.field_A[14] = va.a(ul.field_P, "", "crate_explode").a().a(var2);
+          lm.field_A[13] = em.field_a[14];
+          lm.field_A[17] = va.a(ul.field_P, "", "explode").a().a(var2);
+          lm.field_A[20] = va.a(ul.field_P, "", "normal_alien_attack").a().a(var2);
+          lm.field_A[21] = va.a(ul.field_P, "", "lift_up").a().a(var2);
+          lm.field_A[22] = va.a(ul.field_P, "", "lift_down").a().a(var2);
+          lm.field_A[23] = va.a(ul.field_P, "", "trigger_reactor").a().a(var2);
+          ua.field_c = new jb[]{lm.field_A[24], lm.field_A[5]};
+          var3 = 0;
+          do {
+            if (5 <= var3) {
+              var3 = 0;
+              break;
             }
-          }
+            sf.field_V[var3 + 5] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().a(var2);
+            sf.field_V[0 + var3] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          do {
+            if (var3 >= 2) {
+              var3 = 0;
+              break;
+            }
+            sf.field_V[var3 + 10] = va.a(ul.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          do {
+            if (var3 >= 3) {
+              sf.field_V[15] = va.a(ul.field_P, "", "HS_pistol_equip_01").a().a(var2);
+              sf.field_V[16] = va.a(ul.field_P, "", "HS_machine_gun_equip_01").a().a(var2);
+              sf.field_V[17] = va.a(ul.field_P, "", "HS_shotgun_equip_01").a().a(var2);
+              sf.field_V[18] = va.a(ul.field_P, "", "HS_flamethrower_equip").a().a(var2);
+              sf.field_V[19] = va.a(ul.field_P, "", "HS_railgun_equip").a().a(var2);
+              sf.field_V[20] = va.a(ul.field_P, "", "HS_rocket_equip").a().a(var2);
+              sf.field_V[21] = va.a(ul.field_P, "", "HS_plasma_equip_01").a().a(var2);
+              sf.field_V[22] = va.a(ul.field_P, "", "HS_grenade_equip").a().a(var2);
+              break;
+            }
+            sf.field_V[var3 + 12] = va.a(ul.field_P, "", "HS_pistol_0" + (1 + var3)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          var3 = 0;
+          do {
+            if (var3 >= 5) {
+              var3 = 0;
+              break;
+            }
+            sf.field_V[23 + var3] = va.a(ul.field_P, "", "HS_shotgun_0" + (1 + var3)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          do {
+            if (var3 >= 3) {
+              var3 = 0;
+              break;
+            }
+            sf.field_V[var3 + 28] = va.a(ul.field_P, "", "HS_plasma_0" + (1 + var3)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          do {
+            if (4 <= var3) {
+              sf.field_V[35] = va.a(ul.field_P, "", "HS_flamethrower_all").a().a(var2);
+              sf.field_V[36] = va.a(ul.field_P, "", "HS_flamethrower_end").a().a(var2);
+              sf.field_V[37] = va.a(ul.field_P, "", "HS_rocket_fire_02").a().a(var2);
+              sf.field_V[38] = va.a(ul.field_P, "", "HS_plasma_impact_01").a().a(var2);
+              sf.field_V[39] = va.a(ul.field_P, "", "HS_grenade_fire_01").a().a(var2);
+              fg.field_b[23] = va.a(ul.field_P, "", "HS_collect_charge_01").a().a(var2);
+              fg.field_b[25] = va.a(ul.field_P, "", "HS_force_field_01").a().a(var2);
+              fg.field_b[26] = va.a(ul.field_P, "", "HS_rumble_bgsound").a().a(var2);
+              break;
+            }
+            sf.field_V[var3 + 31] = va.a(ul.field_P, "", "HS_railgun_0" + (var3 + 1)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          var3 = 0;
+          do {
+            if (var3 >= 5) {
+              if (param0 > -94) {
+                this.b((byte) 51);
+              }
+              break;
+            }
+            sf.field_V[var3 + 41] = va.a(ul.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().a(var2);
+            sf.field_V[46 + var3] = va.a(ul.field_P, "", "HS_turret_0" + (1 + var3)).a().a(var2);
+            var3++;
+          } while (var4 == 0);
+          stackIn_57_0 = var2;
+          return stackIn_57_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.KA(" + param0 + ')');
         }
-        return stackIn_48_0;
     }
 
     private final void m(int param0) {
         try {
-            lk.a(4, 16776960, 4, mk.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (bd[]) null, (bd[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
-            this.j((byte) -91);
+          lk.a(4, 16776960, 4, mk.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (bd[]) null, (bd[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
+          this.j((byte) -91);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
         }
     }
 
     private final void a(int param0, nm param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              gj.a(20, ac.field_e, 63.0f);
-              this.a((byte) -43);
-              em.field_a[0] = qf.a(ph.field_F, "", "bang1").c().a(param1);
-              em.field_a[1] = qf.a(ph.field_F, "", "bang4").c().a(param1);
-              em.field_a[6] = qf.a(ph.field_F, "", "spawnhurt").c().a(param1);
-              em.field_a[7] = qf.a(ph.field_F, "", "spawnhurt2").c().a(param1);
-              em.field_a[8] = qf.a(ph.field_F, "", "spawnkill").c().a(param1);
-              em.field_a[24] = qf.a(ph.field_F, "", "bigspawnkill").c().a(param1);
-              sf.field_V[40] = qf.a(ph.field_F, "", "reload").c().a(param1);
-              fg.field_b[0] = qf.a(ph.field_F, "", "acid_hit_01").c().a(param1);
-              fg.field_b[1] = qf.a(ph.field_F, "", "human_pain_01").c().a(param1);
-              fg.field_b[2] = qf.a(ph.field_F, "", "human_pain_02").c().a(param1);
-              fg.field_b[3] = qf.a(ph.field_F, "", "human_pain_03").c().a(param1);
-              fg.field_b[4] = qf.a(ph.field_F, "", "human_pain_04").c().a(param1);
-              fg.field_b[5] = qf.a(ph.field_F, "", "human_pain_05").c().a(param1);
-              fg.field_b[6] = qf.a(ph.field_F, "", "human_pain_06").c().a(param1);
-              fg.field_b[7] = qf.a(ph.field_F, "", "human_pain_07").c().a(param1);
-              fg.field_b[8] = qf.a(ph.field_F, "", "human_pain_08").c().a(param1);
-              fg.field_b[9] = qf.a(ph.field_F, "", "human_pain_09").c().a(param1);
-              fg.field_b[10] = qf.a(ph.field_F, "", "human_pain_10").c().a(param1);
-              fg.field_b[11] = qf.a(ph.field_F, "", "human_pain_11").c().a(param1);
-              fg.field_b[12] = qf.a(ph.field_F, "", "human_pain_12").c().a(param1);
-              fg.field_b[13] = qf.a(ph.field_F, "", "human_pain_13").c().a(param1);
-              fg.field_b[14] = qf.a(ph.field_F, "", "human_pain_14").c().a(param1);
-              if (param0 == 22) {
-                break L1;
-              } else {
-                field_B = (java.applet.Applet) null;
-                break L1;
-              }
-            }
-            fg.field_b[15] = qf.a(ph.field_F, "", "human_pain_15").c().a(param1);
-            fg.field_b[17] = qf.a(ph.field_F, "", "human_death_01").c().a(param1);
-            fg.field_b[18] = qf.a(ph.field_F, "", "heal_killcount").c().a(param1);
-            fg.field_b[19] = qf.a(ph.field_F, "", "heal_small").c().a(param1);
-            fg.field_b[20] = qf.a(ph.field_F, "", "heal_large").c().a(param1);
-            fg.field_b[21] = qf.a(ph.field_F, "", "pass_card").c().a(param1);
-            fg.field_b[22] = qf.a(ph.field_F, "", "lift_powerup").c().a(param1);
-            fg.field_b[24] = qf.a(ph.field_F, "", "door_locked").c().a(param1);
-            jc.field_c[0] = qf.a(ph.field_F, "", "basic_attack_01").c().a(param1);
-            jc.field_c[1] = qf.a(ph.field_F, "", "bullet_hit_01").c().a(param1);
-            jc.field_c[2] = qf.a(ph.field_F, "", "bullet_hit_02").c().a(param1);
-            jc.field_c[3] = qf.a(ph.field_F, "", "bullet_hit_03").c().a(param1);
-            jc.field_c[4] = qf.a(ph.field_F, "", "bullet_hit_04").c().a(param1);
-            jc.field_c[5] = qf.a(ph.field_F, "", "bullet_hit_05").c().a(param1);
-            jc.field_c[6] = qf.a(ph.field_F, "", "bullet_hit_06").c().a(param1);
-            jc.field_c[7] = qf.a(ph.field_F, "", "bullet_hit_07").c().a(param1);
-            jc.field_c[8] = qf.a(ph.field_F, "", "bullet_hit_08").c().a(param1);
-            jc.field_c[9] = qf.a(ph.field_F, "", "basic_die_01").c().a(param1);
-            jc.field_c[10] = qf.a(ph.field_F, "", "basic_die_02").c().a(param1);
-            jc.field_c[11] = qf.a(ph.field_F, "", "basic_die_03").c().a(param1);
-            jc.field_c[12] = qf.a(ph.field_F, "", "basic_roar_01").c().a(param1);
-            jc.field_c[13] = qf.a(ph.field_F, "", "basic_roar_02").c().a(param1);
-            jc.field_c[14] = qf.a(ph.field_F, "", "basic_roar_03").c().a(param1);
-            jc.field_c[15] = qf.a(ph.field_F, "", "basic_roar_04").c().a(param1);
-            jc.field_c[16] = qf.a(ph.field_F, "", "basic_roar_05").c().a(param1);
-            jc.field_c[17] = qf.a(ph.field_F, "", "basic_roar_06").c().a(param1);
-            jc.field_c[18] = qf.a(ph.field_F, "", "runner_roar_01").c().a(param1);
-            jc.field_c[19] = qf.a(ph.field_F, "", "runner_roar_02").c().a(param1);
-            jc.field_c[20] = qf.a(ph.field_F, "", "runner_roar_03").c().a(param1);
-            jc.field_c[21] = qf.a(ph.field_F, "", "runner_die_01").c().a(param1);
-            jc.field_c[22] = qf.a(ph.field_F, "", "runner_die_02").c().a(param1);
-            jc.field_c[23] = qf.a(ph.field_F, "", "runner_die_03").c().a(param1);
-            jc.field_c[24] = qf.a(ph.field_F, "", "spitter_die_03").c().a(param1);
-            jc.field_c[26] = jc.field_c[24];
-            jc.field_c[25] = jc.field_c[24];
-            jc.field_c[27] = qf.a(ph.field_F, "", "guard_hurt_loop_01").c().a(param1);
-            jc.field_c[28] = qf.a(ph.field_F, "", "guard_roar_01").c().a(param1);
-            jc.field_c[29] = qf.a(ph.field_F, "", "guard_roar_02").c().a(param1);
-            jc.field_c[30] = qf.a(ph.field_F, "", "guard_roar_03").c().a(param1);
-            jc.field_c[32] = qf.a(ph.field_F, "", "queen_roar_01").c().a(param1);
-            jc.field_c[33] = qf.a(ph.field_F, "", "queen_roar_02").c().a(param1);
-            jc.field_c[34] = qf.a(ph.field_F, "", "queen_roar_03").c().a(param1);
-            jc.field_c[31] = qf.a(ph.field_F, "", "queen_big_roar_01").c().a(param1);
-            jc.field_c[35] = qf.a(ph.field_F, "", "queen_bite_01").c().a(param1);
-            jc.field_c[36] = qf.a(ph.field_F, "", "queen_bite_02").c().a(param1);
-            jc.field_c[37] = qf.a(ph.field_F, "", "queen_bite_03").c().a(param1);
-            jc.field_c[38] = qf.a(ph.field_F, "", "queen_bite_04").c().a(param1);
-            jc.field_c[39] = qf.a(ph.field_F, "", "queen_bite_05").c().a(param1);
-            jc.field_c[40] = qf.a(ph.field_F, "", "queen_die_proc_01").c().a(param1);
-            jc.field_c[41] = qf.a(ph.field_F, "", "dormant_hatch_01").c().a(param1);
-            jc.field_c[42] = qf.a(ph.field_F, "", "dormant_hatch_02").c().a(param1);
-            jc.field_c[43] = qf.a(ph.field_F, "", "dormant_hatch_03").c().a(param1);
-            jc.field_c[44] = qf.a(ph.field_F, "", "dormant_hatch_04").c().a(param1);
-            jc.field_c[45] = qf.a(ph.field_F, "", "dormant_hatch_05").c().a(param1);
-            jc.field_c[46] = qf.a(ph.field_F, "", "dormant_hatch_06").c().a(param1);
-            jc.field_c[47] = qf.a(ph.field_F, "", "egg_burst_01").c().a(param1);
-            jc.field_c[48] = qf.a(ph.field_F, "", "egg_burst_02").c().a(param1);
-            jc.field_c[49] = qf.a(ph.field_F, "", "egg_burst_03").c().a(param1);
-            jc.field_c[55] = qf.a(ph.field_F, "", "larva_die_01").c().a(param1);
-            jc.field_c[56] = qf.a(ph.field_F, "", "larva_die_02").c().a(param1);
-            jc.field_c[57] = qf.a(ph.field_F, "", "larva_die_03").c().a(param1);
-            jc.field_c[58] = qf.a(ph.field_F, "", "larva_die_04").c().a(param1);
-            jc.field_c[59] = qf.a(ph.field_F, "", "larva_die_05").c().a(param1);
-            jc.field_c[60] = qf.a(ph.field_F, "", "larva_die_06").c().a(param1);
-            jc.field_c[61] = qf.a(ph.field_F, "", "larva_die_07").c().a(param1);
-            jc.field_c[62] = qf.a(ph.field_F, "", "spitter_spit_01").c().a(param1);
-            jc.field_c[63] = qf.a(ph.field_F, "", "spitter_spit_02").c().a(param1);
-            jc.field_c[64] = qf.a(ph.field_F, "", "spitter_spit_03").c().a(param1);
-            lm.field_A[11] = qf.a(ph.field_F, "", "barrel_hit_mg_only").c().a(param1);
-            param1 = null;
-            break L0;
+          gj.a(20, ac.field_e, 63.0f);
+          this.a((byte) -43);
+          em.field_a[0] = qf.a(ph.field_F, "", "bang1").c().a(param1);
+          em.field_a[1] = qf.a(ph.field_F, "", "bang4").c().a(param1);
+          em.field_a[6] = qf.a(ph.field_F, "", "spawnhurt").c().a(param1);
+          em.field_a[7] = qf.a(ph.field_F, "", "spawnhurt2").c().a(param1);
+          em.field_a[8] = qf.a(ph.field_F, "", "spawnkill").c().a(param1);
+          em.field_a[24] = qf.a(ph.field_F, "", "bigspawnkill").c().a(param1);
+          sf.field_V[40] = qf.a(ph.field_F, "", "reload").c().a(param1);
+          fg.field_b[0] = qf.a(ph.field_F, "", "acid_hit_01").c().a(param1);
+          fg.field_b[1] = qf.a(ph.field_F, "", "human_pain_01").c().a(param1);
+          fg.field_b[2] = qf.a(ph.field_F, "", "human_pain_02").c().a(param1);
+          fg.field_b[3] = qf.a(ph.field_F, "", "human_pain_03").c().a(param1);
+          fg.field_b[4] = qf.a(ph.field_F, "", "human_pain_04").c().a(param1);
+          fg.field_b[5] = qf.a(ph.field_F, "", "human_pain_05").c().a(param1);
+          fg.field_b[6] = qf.a(ph.field_F, "", "human_pain_06").c().a(param1);
+          fg.field_b[7] = qf.a(ph.field_F, "", "human_pain_07").c().a(param1);
+          fg.field_b[8] = qf.a(ph.field_F, "", "human_pain_08").c().a(param1);
+          fg.field_b[9] = qf.a(ph.field_F, "", "human_pain_09").c().a(param1);
+          fg.field_b[10] = qf.a(ph.field_F, "", "human_pain_10").c().a(param1);
+          fg.field_b[11] = qf.a(ph.field_F, "", "human_pain_11").c().a(param1);
+          fg.field_b[12] = qf.a(ph.field_F, "", "human_pain_12").c().a(param1);
+          fg.field_b[13] = qf.a(ph.field_F, "", "human_pain_13").c().a(param1);
+          fg.field_b[14] = qf.a(ph.field_F, "", "human_pain_14").c().a(param1);
+          if (param0 != 22) {
+            field_B = (java.applet.Applet) null;
           }
+          fg.field_b[15] = qf.a(ph.field_F, "", "human_pain_15").c().a(param1);
+          fg.field_b[17] = qf.a(ph.field_F, "", "human_death_01").c().a(param1);
+          fg.field_b[18] = qf.a(ph.field_F, "", "heal_killcount").c().a(param1);
+          fg.field_b[19] = qf.a(ph.field_F, "", "heal_small").c().a(param1);
+          fg.field_b[20] = qf.a(ph.field_F, "", "heal_large").c().a(param1);
+          fg.field_b[21] = qf.a(ph.field_F, "", "pass_card").c().a(param1);
+          fg.field_b[22] = qf.a(ph.field_F, "", "lift_powerup").c().a(param1);
+          fg.field_b[24] = qf.a(ph.field_F, "", "door_locked").c().a(param1);
+          jc.field_c[0] = qf.a(ph.field_F, "", "basic_attack_01").c().a(param1);
+          jc.field_c[1] = qf.a(ph.field_F, "", "bullet_hit_01").c().a(param1);
+          jc.field_c[2] = qf.a(ph.field_F, "", "bullet_hit_02").c().a(param1);
+          jc.field_c[3] = qf.a(ph.field_F, "", "bullet_hit_03").c().a(param1);
+          jc.field_c[4] = qf.a(ph.field_F, "", "bullet_hit_04").c().a(param1);
+          jc.field_c[5] = qf.a(ph.field_F, "", "bullet_hit_05").c().a(param1);
+          jc.field_c[6] = qf.a(ph.field_F, "", "bullet_hit_06").c().a(param1);
+          jc.field_c[7] = qf.a(ph.field_F, "", "bullet_hit_07").c().a(param1);
+          jc.field_c[8] = qf.a(ph.field_F, "", "bullet_hit_08").c().a(param1);
+          jc.field_c[9] = qf.a(ph.field_F, "", "basic_die_01").c().a(param1);
+          jc.field_c[10] = qf.a(ph.field_F, "", "basic_die_02").c().a(param1);
+          jc.field_c[11] = qf.a(ph.field_F, "", "basic_die_03").c().a(param1);
+          jc.field_c[12] = qf.a(ph.field_F, "", "basic_roar_01").c().a(param1);
+          jc.field_c[13] = qf.a(ph.field_F, "", "basic_roar_02").c().a(param1);
+          jc.field_c[14] = qf.a(ph.field_F, "", "basic_roar_03").c().a(param1);
+          jc.field_c[15] = qf.a(ph.field_F, "", "basic_roar_04").c().a(param1);
+          jc.field_c[16] = qf.a(ph.field_F, "", "basic_roar_05").c().a(param1);
+          jc.field_c[17] = qf.a(ph.field_F, "", "basic_roar_06").c().a(param1);
+          jc.field_c[18] = qf.a(ph.field_F, "", "runner_roar_01").c().a(param1);
+          jc.field_c[19] = qf.a(ph.field_F, "", "runner_roar_02").c().a(param1);
+          jc.field_c[20] = qf.a(ph.field_F, "", "runner_roar_03").c().a(param1);
+          jc.field_c[21] = qf.a(ph.field_F, "", "runner_die_01").c().a(param1);
+          jc.field_c[22] = qf.a(ph.field_F, "", "runner_die_02").c().a(param1);
+          jc.field_c[23] = qf.a(ph.field_F, "", "runner_die_03").c().a(param1);
+          jc.field_c[24] = qf.a(ph.field_F, "", "spitter_die_03").c().a(param1);
+          jc.field_c[26] = jc.field_c[24];
+          jc.field_c[25] = jc.field_c[24];
+          jc.field_c[27] = qf.a(ph.field_F, "", "guard_hurt_loop_01").c().a(param1);
+          jc.field_c[28] = qf.a(ph.field_F, "", "guard_roar_01").c().a(param1);
+          jc.field_c[29] = qf.a(ph.field_F, "", "guard_roar_02").c().a(param1);
+          jc.field_c[30] = qf.a(ph.field_F, "", "guard_roar_03").c().a(param1);
+          jc.field_c[32] = qf.a(ph.field_F, "", "queen_roar_01").c().a(param1);
+          jc.field_c[33] = qf.a(ph.field_F, "", "queen_roar_02").c().a(param1);
+          jc.field_c[34] = qf.a(ph.field_F, "", "queen_roar_03").c().a(param1);
+          jc.field_c[31] = qf.a(ph.field_F, "", "queen_big_roar_01").c().a(param1);
+          jc.field_c[35] = qf.a(ph.field_F, "", "queen_bite_01").c().a(param1);
+          jc.field_c[36] = qf.a(ph.field_F, "", "queen_bite_02").c().a(param1);
+          jc.field_c[37] = qf.a(ph.field_F, "", "queen_bite_03").c().a(param1);
+          jc.field_c[38] = qf.a(ph.field_F, "", "queen_bite_04").c().a(param1);
+          jc.field_c[39] = qf.a(ph.field_F, "", "queen_bite_05").c().a(param1);
+          jc.field_c[40] = qf.a(ph.field_F, "", "queen_die_proc_01").c().a(param1);
+          jc.field_c[41] = qf.a(ph.field_F, "", "dormant_hatch_01").c().a(param1);
+          jc.field_c[42] = qf.a(ph.field_F, "", "dormant_hatch_02").c().a(param1);
+          jc.field_c[43] = qf.a(ph.field_F, "", "dormant_hatch_03").c().a(param1);
+          jc.field_c[44] = qf.a(ph.field_F, "", "dormant_hatch_04").c().a(param1);
+          jc.field_c[45] = qf.a(ph.field_F, "", "dormant_hatch_05").c().a(param1);
+          jc.field_c[46] = qf.a(ph.field_F, "", "dormant_hatch_06").c().a(param1);
+          jc.field_c[47] = qf.a(ph.field_F, "", "egg_burst_01").c().a(param1);
+          jc.field_c[48] = qf.a(ph.field_F, "", "egg_burst_02").c().a(param1);
+          jc.field_c[49] = qf.a(ph.field_F, "", "egg_burst_03").c().a(param1);
+          jc.field_c[55] = qf.a(ph.field_F, "", "larva_die_01").c().a(param1);
+          jc.field_c[56] = qf.a(ph.field_F, "", "larva_die_02").c().a(param1);
+          jc.field_c[57] = qf.a(ph.field_F, "", "larva_die_03").c().a(param1);
+          jc.field_c[58] = qf.a(ph.field_F, "", "larva_die_04").c().a(param1);
+          jc.field_c[59] = qf.a(ph.field_F, "", "larva_die_05").c().a(param1);
+          jc.field_c[60] = qf.a(ph.field_F, "", "larva_die_06").c().a(param1);
+          jc.field_c[61] = qf.a(ph.field_F, "", "larva_die_07").c().a(param1);
+          jc.field_c[62] = qf.a(ph.field_F, "", "spitter_spit_01").c().a(param1);
+          jc.field_c[63] = qf.a(ph.field_F, "", "spitter_spit_02").c().a(param1);
+          jc.field_c[64] = qf.a(ph.field_F, "", "spitter_spit_03").c().a(param1);
+          lm.field_A[11] = qf.a(ph.field_F, "", "barrel_hit_mg_only").c().a(param1);
+          param1 = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("HostileSpawn.LA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("HostileSpawn.LA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -2328,22 +1021,15 @@ public final class HostileSpawn extends d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          L0: {
-            L1: {
-              field_K = null;
-              field_C = null;
-              field_B = null;
-              field_E = null;
-              if (param0 > 126) {
-                break L1;
-              } else {
-                HostileSpawn.a(21, (byte) 54);
-                break L1;
-              }
-            }
-            field_J = null;
-            break L0;
+          field_K = null;
+          field_C = null;
+          field_B = null;
+          field_E = null;
+          if (param0 <= 126) {
+            HostileSpawn.a(21, (byte) 54);
           }
+          field_J = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -2353,457 +1039,455 @@ public final class HostileSpawn extends d {
 
     private final void u(int param0) {
         try {
-            gj.a(20, wh.field_a, 70.0f);
-            this.a((byte) -124);
-            vg.field_h = ji.a(tk.field_a, "", "hostilespawntitle");
-            rb.field_s = ji.a(tk.field_a, "", "hostilespawninstructions");
-            dg.field_tb = ji.a(tk.field_a, "", "hostilespawnmissioncomplete");
-            pe.field_ab = ji.a(tk.field_a, "", "hostilespawngameover");
-            cl.field_o = ji.a(tk.field_a, "", "Hostilespawnloop");
-            bb.field_b = ji.a(tk.field_a, "", "Hostilespawnloop_planet");
-            uk.field_d = ji.a(tk.field_a, "", "Hostilespawnloop_goo");
-            bb.field_e = ji.a(tk.field_a, "", "Hostilespawnthreat");
-            int var2_int = -11 % ((57 - param0) / 52);
-            en.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
-            ua.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
-            ph.field_F = null;
-            ul.field_P = null;
-            tk.field_a = null;
-            ha.field_w.field_F.a(0, vg.field_h, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, rb.field_s, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, dg.field_tb, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, pe.field_ab, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, cl.field_o, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, bb.field_b, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, uk.field_d, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, bb.field_e, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, en.field_u, ej.field_h, nd.field_e, false);
-            ha.field_w.field_F.a(0, ua.field_f, ej.field_h, nd.field_e, false);
-            nd.field_e = null;
-            ej.field_h = null;
+          gj.a(20, wh.field_a, 70.0f);
+          this.a((byte) -124);
+          vg.field_h = ji.a(tk.field_a, "", "hostilespawntitle");
+          rb.field_s = ji.a(tk.field_a, "", "hostilespawninstructions");
+          dg.field_tb = ji.a(tk.field_a, "", "hostilespawnmissioncomplete");
+          pe.field_ab = ji.a(tk.field_a, "", "hostilespawngameover");
+          cl.field_o = ji.a(tk.field_a, "", "Hostilespawnloop");
+          bb.field_b = ji.a(tk.field_a, "", "Hostilespawnloop_planet");
+          uk.field_d = ji.a(tk.field_a, "", "Hostilespawnloop_goo");
+          bb.field_e = ji.a(tk.field_a, "", "Hostilespawnthreat");
+          int var2_int = -11 % ((57 - param0) / 52);
+          en.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
+          ua.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
+          ph.field_F = null;
+          ul.field_P = null;
+          tk.field_a = null;
+          ha.field_w.field_F.a(0, vg.field_h, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, rb.field_s, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, dg.field_tb, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, pe.field_ab, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, cl.field_o, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, bb.field_b, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, uk.field_d, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, bb.field_e, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, en.field_u, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.a(0, ua.field_f, ej.field_h, nd.field_e, false);
+          nd.field_e = null;
+          ej.field_h = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.DA(" + param0 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.DA(" + param0 + ')');
         }
     }
 
     public final void init() {
         try {
-            this.a("hostilespawn", 480, 14);
+          this.a("hostilespawn", 480, 14);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.init()");
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.init()");
         }
     }
 
     final void c(int param0) {
         try {
-            HostileSpawn.k((byte) 127);
-            t.d(-15154);
-            vl.f(param0 + 51);
-            cm.a((byte) -105);
-            kd.c((byte) -13);
-            r.a(13496);
-            em.a((byte) 126);
-            ga.a((byte) -94);
-            kh.a((byte) -34);
-            ki.a(true);
-            om.a((byte) 122);
-            eh.a(true);
-            ib.a(121);
-            tg.a(param0 ^ 111);
-            d.g((byte) -106);
-            kc.a(-82);
-            se.c((byte) 88);
-            sc.a(-87);
-            jg.b(-69);
-            ci.b(-31);
-            kb.c((byte) -63);
-            si.b();
-            gb.b(-16199);
-            gf.b((byte) -105);
-            il.a(-91);
-            vi.g(255);
-            hn.a(false);
-            ie.a((byte) 4);
-            vg.a(param0 + -26);
-            ec.a(99);
-            rl.a(719371458);
-            tc.a(true);
-            wh.a(0);
-            oa.a(32);
-            ln.a(31311);
-            nl.a(false);
-            in.a(-107);
-            sm.a((byte) -102);
-            ja.a(26);
-            ue.a((byte) -27);
-            gn.a(-40);
-            e.b(param0 ^ 103);
-            he.b(true);
-            re.a(83);
-            cg.a(false);
-            mg.a(-12586);
-            oc.c(-9575);
-            eg.c(-1);
-            qh.a((byte) -66);
-            bi.a(true);
-            nm.a((byte) 76);
-            am.b((byte) -50);
-            ej.d(-21742);
-            dh.b(-3);
-            sg.b(-106);
-            bn.a(false);
-            td.b(200);
-            im.a(-14986);
-            lh.a(-95);
-            oj.g((byte) 118);
-            v.b(2);
-            ql.a(-3);
-            we.c((byte) 122);
-            p.d(-4676);
-            qm.h(-13);
-            id.a((byte) 21);
-            ia.a((byte) -8);
-            rd.b(1);
-            og.a((byte) -50);
-            w.a(false);
-            jm.a(true);
-            tm.a(true);
-            gh.f();
-            dl.d(-1);
-            ug.g();
-            ch.a(false);
-            sa.a((byte) -121);
-            ua.a((byte) 60);
-            l.a((byte) -7);
-            i.a(true);
-            ml.a((byte) -67);
-            s.a(false);
-            pi.a(param0 ^ param0);
-            c.a(true);
-            bl.a(120);
-            ca.a(param0 ^ 29);
-            en.r(-10723);
-            jc.a((byte) 89);
-            uc.a(212563556);
-            kl.a(126);
-            fm.a((byte) -102);
-            vm.a();
-            be.a(param0 ^ 28);
-            pc.b(1);
-            bb.a((byte) -85);
-            gg.a(false);
-            wg.b(true);
-            pe.q(8421504);
-            ta.g((byte) 24);
-            dg.q(param0 ^ -285);
-            mk.l(param0 ^ 28);
-            nb.k(82);
-            lk.j(param0 + 27191);
-            ij.e((byte) 75);
-            na.a(param0 + 61);
-            oh.a(-32278);
-            wc.a(-17514);
-            fh.b(9992);
-            uk.b(param0 + -109);
-            pb.f(param0 + -139);
-            th.d((byte) 16);
-            fj.i(-24510);
-            cf.a(false);
-            le.e(-3354);
-            wk.a(2);
-            dk.a((byte) 71);
-            aj.a(-46);
-            vh.a(false);
-            ni.b(param0 ^ 107);
-            qc.a(true);
-            qf.a();
-            rm.b();
-            ok.a();
-            aa.a((byte) -104);
-            wl.a(110);
-            eb.b(param0 + 32);
-            lc.a(param0 ^ 63);
-            qg.a(true);
-            ih.f(param0 ^ 212);
-            bh.a(-4);
-            lm.b(true);
-            um.a(255);
-            rh.e(param0 ^ 26);
-            rb.a(false);
-            ee.b(param0 + -28);
-            fg.a((byte) -98);
-            ae.a(true);
-            gi.b(true);
-            uf.g(24);
-            pa.g(param0 ^ 107);
-            an.g(2);
-            pj.c((byte) 98);
-            dd.b(true);
-            ob.d((byte) -127);
-            vj.g(param0 + 112);
-            o.g(43);
-            pk.h(param0 + -26);
-            jk.b(-100);
-            jh.g((byte) -115);
-            cn.a(param0 ^ 110);
-            ge.c();
-            sj.a((byte) 58);
-            u.a(true);
-            pf.a(true);
-            wd.a((byte) 69);
-            ad.a(-24221);
-            qa.b(true);
-            tk.a(117);
-            lb.a(-16182);
-            cb.a((byte) -122);
-            vc.a(119);
-            mf.b(-33);
-            rg.a(1);
-            nj.b((byte) -93);
-            wf.a();
-            ck.a(-665);
-            ng.c(10448);
-            hf.a(false);
-            ve.a(0);
-            rf.b(5592405);
-            ha.b(true);
-            ra.a(11129);
-            h.a((byte) 76);
-            ce.b(param0 + 6909);
-            ag.d(5956);
-            ph.i(84);
-            fc.h(1);
-            wb.n(420);
-            ul.k(param0 ^ -1847325763);
-            vd.a((byte) 75);
-            fl.a((byte) -52);
-            dc.a(256);
-            hh.a(-1);
-            hj.e(-97);
-            ik.a((byte) -63);
-            ac.a((byte) 44);
-            dn.a((byte) 16);
-            ud.a((byte) -120);
-            rc.a(param0 + 8253);
-            q.a(50);
-            mj.a((byte) 122);
-            fe.a((byte) -112);
-            ab.a(-128);
-            lg.b((byte) -121);
-            wa.c((byte) 107);
-            hg.a(0);
-            ak.a(param0 + -15701);
-            ea.a(0);
-            bf.a(2107940192);
-            bc.a((byte) -52);
-            nf.c(118);
-            pl.a(true);
-            j.a((byte) -120);
-            nh.k(0);
-            sf.p(10);
-            ig.m(25);
-            me.f((byte) -56);
-            mc.j(-125);
-            cj.a(true);
-            wj.j(11460);
-            al.a((byte) 78);
-            vf.a((byte) -72);
-            hi.e(param0 + -4);
-            of.a(true);
-            te.j(0);
-            g.j(-123);
-            tb.e((byte) 83);
-            dj.a();
-            tf.a(16976);
-            mb.c(param0 + 99);
-            md.c((byte) 70);
-            df.a(49);
-            rj.e((byte) -122);
-            od.e((byte) -55);
-            nd.a(30401);
-            ed.a(-1);
-            ui.a(-1667734544);
-            lj.f(param0 + -13);
-            hb.a(false);
-            el.b(true);
-            di.a(89);
-            oe.a(65);
-            kj.a((byte) -13);
-            qb.a(false);
-            mn.b((byte) 111);
-            cl.c(-128);
-            ke.b(true);
-            ti.a(70);
-            sd.b(param0 + -822203963);
-            km.c(param0 + 93);
-            f.b((byte) -90);
-            jn.k(608);
-            ic.c(128);
-            jd.c(0);
-            wi.a(24074);
-            vb.f(17469);
-            qj.c(-13206);
-            gj.a((byte) -104);
-            ri.c(-1);
-            hm.d(5);
-            uj.c(param0 ^ 29);
-            m.b(false);
-            de.a(false);
-            ne.a((byte) 86);
-            ii.b(-111);
-            ub.a(90);
-            ei.c(3);
-            fa.a(false);
-            uh.b(64);
-            vk.d(126);
-            la.a((byte) -62);
-            hk.c(-20150);
-            fk.b((byte) -125);
-            jj.a(47);
-            qi.j(66);
-            jf.a((byte) -99);
-            gm.a(0);
-            pm.b((byte) -12);
-            n.d((byte) -69);
-            db.d((byte) -87);
-            ka.f(117);
-            hd.f(-1);
-            ld.f(83);
-            li.d((byte) -109);
-            je.a(34);
-            mm.a((byte) 10);
-            bm.a(-88);
-            bj.c(125);
-            ll.a(-125);
-            this.field_G = null;
-            this.field_o = null;
+          HostileSpawn.k((byte) 127);
+          t.d(-15154);
+          vl.f(param0 + 51);
+          cm.a((byte) -105);
+          kd.c((byte) -13);
+          r.a(13496);
+          em.a((byte) 126);
+          ga.a((byte) -94);
+          kh.a((byte) -34);
+          ki.a(true);
+          om.a((byte) 122);
+          eh.a(true);
+          ib.a(121);
+          tg.a(param0 ^ 111);
+          d.g((byte) -106);
+          kc.a(-82);
+          se.c((byte) 88);
+          sc.a(-87);
+          jg.b(-69);
+          ci.b(-31);
+          kb.c((byte) -63);
+          si.b();
+          gb.b(-16199);
+          gf.b((byte) -105);
+          il.a(-91);
+          vi.g(255);
+          hn.a(false);
+          ie.a((byte) 4);
+          vg.a(param0 - 26);
+          ec.a(99);
+          rl.a(719371458);
+          tc.a(true);
+          wh.a(0);
+          oa.a(32);
+          ln.a(31311);
+          nl.a(false);
+          in.a(-107);
+          sm.a((byte) -102);
+          ja.a(26);
+          ue.a((byte) -27);
+          gn.a(-40);
+          e.b(param0 ^ 103);
+          he.b(true);
+          re.a(83);
+          cg.a(false);
+          mg.a(-12586);
+          oc.c(-9575);
+          eg.c(-1);
+          qh.a((byte) -66);
+          bi.a(true);
+          nm.a((byte) 76);
+          am.b((byte) -50);
+          ej.d(-21742);
+          dh.b(-3);
+          sg.b(-106);
+          bn.a(false);
+          td.b(200);
+          im.a(-14986);
+          lh.a(-95);
+          oj.g((byte) 118);
+          v.b(2);
+          ql.a(-3);
+          we.c((byte) 122);
+          p.d(-4676);
+          qm.h(-13);
+          id.a((byte) 21);
+          ia.a((byte) -8);
+          rd.b(1);
+          og.a((byte) -50);
+          w.a(false);
+          jm.a(true);
+          tm.a(true);
+          gh.f();
+          dl.d(-1);
+          ug.g();
+          ch.a(false);
+          sa.a((byte) -121);
+          ua.a((byte) 60);
+          l.a((byte) -7);
+          i.a(true);
+          ml.a((byte) -67);
+          s.a(false);
+          pi.a(param0 ^ param0);
+          c.a(true);
+          bl.a(120);
+          ca.a(param0 ^ 29);
+          en.r(-10723);
+          jc.a((byte) 89);
+          uc.a(212563556);
+          kl.a(126);
+          fm.a((byte) -102);
+          vm.a();
+          be.a(param0 ^ 28);
+          pc.b(1);
+          bb.a((byte) -85);
+          gg.a(false);
+          wg.b(true);
+          pe.q(8421504);
+          ta.g((byte) 24);
+          dg.q(param0 ^ -285);
+          mk.l(param0 ^ 28);
+          nb.k(82);
+          lk.j(param0 + 27191);
+          ij.e((byte) 75);
+          na.a(param0 + 61);
+          oh.a(-32278);
+          wc.a(-17514);
+          fh.b(9992);
+          uk.b(param0 - 109);
+          pb.f(param0 - 139);
+          th.d((byte) 16);
+          fj.i(-24510);
+          cf.a(false);
+          le.e(-3354);
+          wk.a(2);
+          dk.a((byte) 71);
+          aj.a(-46);
+          vh.a(false);
+          ni.b(param0 ^ 107);
+          qc.a(true);
+          qf.a();
+          rm.b();
+          ok.a();
+          aa.a((byte) -104);
+          wl.a(110);
+          eb.b(param0 + 32);
+          lc.a(param0 ^ 63);
+          qg.a(true);
+          ih.f(param0 ^ 212);
+          bh.a(-4);
+          lm.b(true);
+          um.a(255);
+          rh.e(param0 ^ 26);
+          rb.a(false);
+          ee.b(param0 - 28);
+          fg.a((byte) -98);
+          ae.a(true);
+          gi.b(true);
+          uf.g(24);
+          pa.g(param0 ^ 107);
+          an.g(2);
+          pj.c((byte) 98);
+          dd.b(true);
+          ob.d((byte) -127);
+          vj.g(param0 + 112);
+          o.g(43);
+          pk.h(param0 - 26);
+          jk.b(-100);
+          jh.g((byte) -115);
+          cn.a(param0 ^ 110);
+          ge.c();
+          sj.a((byte) 58);
+          u.a(true);
+          pf.a(true);
+          wd.a((byte) 69);
+          ad.a(-24221);
+          qa.b(true);
+          tk.a(117);
+          lb.a(-16182);
+          cb.a((byte) -122);
+          vc.a(119);
+          mf.b(-33);
+          rg.a(1);
+          nj.b((byte) -93);
+          wf.a();
+          ck.a(-665);
+          ng.c(10448);
+          hf.a(false);
+          ve.a(0);
+          rf.b(5592405);
+          ha.b(true);
+          ra.a(11129);
+          h.a((byte) 76);
+          ce.b(param0 + 6909);
+          ag.d(5956);
+          ph.i(84);
+          fc.h(1);
+          wb.n(420);
+          ul.k(param0 ^ -1847325763);
+          vd.a((byte) 75);
+          fl.a((byte) -52);
+          dc.a(256);
+          hh.a(-1);
+          hj.e(-97);
+          ik.a((byte) -63);
+          ac.a((byte) 44);
+          dn.a((byte) 16);
+          ud.a((byte) -120);
+          rc.a(param0 + 8253);
+          q.a(50);
+          mj.a((byte) 122);
+          fe.a((byte) -112);
+          ab.a(-128);
+          lg.b((byte) -121);
+          wa.c((byte) 107);
+          hg.a(0);
+          ak.a(param0 - 15701);
+          ea.a(0);
+          bf.a(2107940192);
+          bc.a((byte) -52);
+          nf.c(118);
+          pl.a(true);
+          j.a((byte) -120);
+          nh.k(0);
+          sf.p(10);
+          ig.m(25);
+          me.f((byte) -56);
+          mc.j(-125);
+          cj.a(true);
+          wj.j(11460);
+          al.a((byte) 78);
+          vf.a((byte) -72);
+          hi.e(param0 - 4);
+          of.a(true);
+          te.j(0);
+          g.j(-123);
+          tb.e((byte) 83);
+          dj.a();
+          tf.a(16976);
+          mb.c(param0 + 99);
+          md.c((byte) 70);
+          df.a(49);
+          rj.e((byte) -122);
+          od.e((byte) -55);
+          nd.a(30401);
+          ed.a(-1);
+          ui.a(-1667734544);
+          lj.f(param0 - 13);
+          hb.a(false);
+          el.b(true);
+          di.a(89);
+          oe.a(65);
+          kj.a((byte) -13);
+          qb.a(false);
+          mn.b((byte) 111);
+          cl.c(-128);
+          ke.b(true);
+          ti.a(70);
+          sd.b(param0 - 822203963);
+          km.c(param0 + 93);
+          f.b((byte) -90);
+          jn.k(608);
+          ic.c(128);
+          jd.c(0);
+          wi.a(24074);
+          vb.f(17469);
+          qj.c(-13206);
+          gj.a((byte) -104);
+          ri.c(-1);
+          hm.d(5);
+          uj.c(param0 ^ 29);
+          m.b(false);
+          de.a(false);
+          ne.a((byte) 86);
+          ii.b(-111);
+          ub.a(90);
+          ei.c(3);
+          fa.a(false);
+          uh.b(64);
+          vk.d(126);
+          la.a((byte) -62);
+          hk.c(-20150);
+          fk.b((byte) -125);
+          jj.a(47);
+          qi.j(66);
+          jf.a((byte) -99);
+          gm.a(0);
+          pm.b((byte) -12);
+          n.d((byte) -69);
+          db.d((byte) -87);
+          ka.f(117);
+          hd.f(-1);
+          ld.f(83);
+          li.d((byte) -109);
+          je.a(34);
+          mm.a((byte) 10);
+          bm.a(-88);
+          bj.c(125);
+          ll.a(-125);
+          this.field_G = null;
+          this.field_o = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.PA(" + param0 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.PA(" + param0 + ')');
         }
     }
 
     private final void j(byte param0) {
         try {
-            Class var3 = null;
-            Class var2 = java.awt.Toolkit.class;
-            try {
-                kh.field_eb = var2.getMethod("createCustomCursor", new Class[]{java.awt.Image.class, java.awt.Point.class, String.class});
-                var3 = Class.forName("java.awt.image.BufferedImage");
-                od.field_F = var3.getConstructor(new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE});
-                le.field_eb = var3.getField("TYPE_INT_ARGB").getInt((Object) null);
-                aa.field_e = var3.getMethod("setRGB", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE, int[].class, Integer.TYPE, Integer.TYPE});
-            } catch (IllegalAccessException illegalAccessException) {
-                kh.field_eb = null;
-                return;
-            } catch (ClassNotFoundException classNotFoundException) {
-                kh.field_eb = null;
-                return;
-            } catch (NoSuchMethodException noSuchMethodException) {
-                kh.field_eb = null;
-                return;
-            } catch (NoSuchFieldException noSuchFieldException) {
-                kh.field_eb = null;
-                return;
+          Class var3 = null;
+          Class var2 = java.awt.Toolkit.class;
+          try {
+            kh.field_eb = var2.getMethod("createCustomCursor", new Class[]{java.awt.Image.class, java.awt.Point.class, String.class});
+            var3 = Class.forName("java.awt.image.BufferedImage");
+            od.field_F = var3.getConstructor(new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE});
+            le.field_eb = var3.getField("TYPE_INT_ARGB").getInt((Object) null);
+            aa.field_e = var3.getMethod("setRGB", new Class[]{Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE, int[].class, Integer.TYPE, Integer.TYPE});
+          } catch (IllegalAccessException illegalAccessException) {
+            kh.field_eb = null;
+            return;
+          } catch (ClassNotFoundException classNotFoundException) {
+            kh.field_eb = null;
+            return;
+          } catch (NoSuchMethodException noSuchMethodException) {
+            kh.field_eb = null;
+            return;
+          } catch (NoSuchFieldException noSuchFieldException) {
+            kh.field_eb = null;
+            return;
+          }
+          try {
+            if (param0 >= -30) {
+              field_K = (int[]) null;
             }
-            try {
-                if (param0 >= -30) {
-                    field_K = (int[]) null;
-                }
-            } catch (RuntimeException runtimeException) {
-                throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.U(" + param0 + ')');
-            }
+          } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.U(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     private final void s(int param0) {
-        bd[] dupTemp$4 = null;
+        bd[] dupTemp$0 = null;
+        bd[][] stackIn_10_0 = null;
+        int stackIn_10_1 = 0;
+        RuntimeException decompiledCaughtException = null;
         bd[][][] var2 = null;
+        RuntimeException var2_ref = null;
         bd[][][] var3 = null;
+        bd[] var3_array = null;
         int var4 = 0;
         bd[][] var5 = null;
         int var6 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        bd[] var3_array = null;
         var6 = field_I ? 1 : 0;
         try {
-          L0: {
-            vd.field_y = new bd[7][];
-            re.field_D = new bd[7][];
-            of.field_c = new bd[7][];
-            cb.field_g = new bd[7][];
-            wc.field_f = new bd[7][];
-            ck.field_y = new bd[7][];
-            lb.field_a = new bd[7][];
-            pa.field_i = new bd[7][];
-            bf.field_f = new bd[7][];
-            kl.field_b = new bd[7][];
-            jh.field_eb = new bd[7][];
-            pa.field_i[4] = ei.a(vd.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
-            pa.field_i[5] = ei.a(vd.field_C, 92, "", "spawn_guard_death");
-            pa.field_i[0] = ei.a(vd.field_C, 122, "", "spawn_guard_idle");
-            if (param0 == 39) {
-              pa.field_i[1] = ei.a(vd.field_C, param0 + 86, "", "spawn_guard_walk");
-              bf.field_f[5] = ei.a(vd.field_C, 115, "", "spawn_dormant_death");
-              bf.field_f[1] = ei.a(vd.field_C, 124, "", "spawn_dormant_walk");
-              bf.field_f[5] = bf.field_f[1];
-              bf.field_f[0] = bf.field_f[1];
-              bf.field_f[4] = bf.field_f[1];
-              re.field_D[4] = ei.a(vd.field_C, 102, "", "spawn_queen_attack");
-              re.field_D[5] = ei.a(vd.field_C, bm.a(param0, 87), "", "spawn_queen_death");
-              re.field_D[0] = ei.a(vd.field_C, 91, "", "spawn_queen_idle");
-              re.field_D[1] = ei.a(vd.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
-              kl.field_b[4] = ei.a(vd.field_C, 102, "", "spawn_runner_attack");
-              kl.field_b[5] = ei.a(vd.field_C, 102, "", "spawn_runner_death");
-              kl.field_b[0] = ei.a(vd.field_C, param0 + 69, "", "spawn_runner_idle");
-              kl.field_b[1] = ei.a(vd.field_C, 125, "", "spawn_runner_walk");
-              lb.field_a[4] = ei.a(vd.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
-              lb.field_a[5] = ei.a(vd.field_C, 93, "", "spawn_spitter_death");
-              lb.field_a[0] = ei.a(vd.field_C, 117, "", "spawn_spitter_idle");
-              lb.field_a[1] = ei.a(vd.field_C, 126, "", "spawn_spitter_walk");
-              wc.field_f[4] = ei.a(vd.field_C, 119, "", "spawn_praetorian_attack");
-              wc.field_f[5] = ei.a(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
-              wc.field_f[0] = ei.a(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
-              wc.field_f[1] = ei.a(vd.field_C, 93, "", "spawn_praetorian_walk");
-              var2 = new bd[][][]{of.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, wc.field_f};
-              var3 = var2;
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= var3.length) {
-                  var3_array = new bd[lb.field_a[0].length + lb.field_a[4].length];
-                  kf.a(lb.field_a[4], 0, var3_array, 0, lb.field_a[4].length);
-                  kf.a(lb.field_a[0], 0, var3_array, lb.field_a[4].length, lb.field_a[0].length);
-                  lb.field_a[4] = var3_array;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var5 = var3[var4];
-                  dupTemp$4 = var5[1];
-                  var5[3] = dupTemp$4;
-                  var5[2] = dupTemp$4;
-                  var4++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          vd.field_y = new bd[7][];
+          re.field_D = new bd[7][];
+          of.field_c = new bd[7][];
+          cb.field_g = new bd[7][];
+          wc.field_f = new bd[7][];
+          ck.field_y = new bd[7][];
+          lb.field_a = new bd[7][];
+          pa.field_i = new bd[7][];
+          bf.field_f = new bd[7][];
+          kl.field_b = new bd[7][];
+          jh.field_eb = new bd[7][];
+          pa.field_i[4] = ei.a(vd.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
+          pa.field_i[5] = ei.a(vd.field_C, 92, "", "spawn_guard_death");
+          pa.field_i[0] = ei.a(vd.field_C, 122, "", "spawn_guard_idle");
+          if (param0 != 39) {
+            return;
           }
+          pa.field_i[1] = ei.a(vd.field_C, param0 + 86, "", "spawn_guard_walk");
+          bf.field_f[5] = ei.a(vd.field_C, 115, "", "spawn_dormant_death");
+          bf.field_f[1] = ei.a(vd.field_C, 124, "", "spawn_dormant_walk");
+          bf.field_f[5] = bf.field_f[1];
+          bf.field_f[0] = bf.field_f[1];
+          bf.field_f[4] = bf.field_f[1];
+          re.field_D[4] = ei.a(vd.field_C, 102, "", "spawn_queen_attack");
+          re.field_D[5] = ei.a(vd.field_C, bm.a(param0, 87), "", "spawn_queen_death");
+          re.field_D[0] = ei.a(vd.field_C, 91, "", "spawn_queen_idle");
+          re.field_D[1] = ei.a(vd.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
+          kl.field_b[4] = ei.a(vd.field_C, 102, "", "spawn_runner_attack");
+          kl.field_b[5] = ei.a(vd.field_C, 102, "", "spawn_runner_death");
+          kl.field_b[0] = ei.a(vd.field_C, param0 + 69, "", "spawn_runner_idle");
+          kl.field_b[1] = ei.a(vd.field_C, 125, "", "spawn_runner_walk");
+          lb.field_a[4] = ei.a(vd.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
+          lb.field_a[5] = ei.a(vd.field_C, 93, "", "spawn_spitter_death");
+          lb.field_a[0] = ei.a(vd.field_C, 117, "", "spawn_spitter_idle");
+          lb.field_a[1] = ei.a(vd.field_C, 126, "", "spawn_spitter_walk");
+          wc.field_f[4] = ei.a(vd.field_C, 119, "", "spawn_praetorian_attack");
+          wc.field_f[5] = ei.a(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
+          wc.field_f[0] = ei.a(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
+          wc.field_f[1] = ei.a(vd.field_C, 93, "", "spawn_praetorian_walk");
+          var2 = new bd[][][]{of.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, wc.field_f};
+          var3 = var2;
+          var4 = 0;
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (var4 >= var3.length))) {
+            var5 = var3[var4];
+            stackIn_10_0 = var5;
+            stackIn_10_1 = 2;
+            if (var6 == 0) {
+              dupTemp$0 = var5[1];
+              var5[3] = dupTemp$0;
+              stackIn_10_0[stackIn_10_1] = dupTemp$0;
+              var4++;
+              continue;
+            }
+            break;
+          }
+          if (decompiledNaturalLoopExit0) {
+            stackIn_10_0 = lb.field_a;
+            stackIn_10_1 = 0;
+          }
+          var3_array = new bd[stackIn_10_0[stackIn_10_1].length + lb.field_a[4].length];
+          kf.a(lb.field_a[4], 0, var3_array, 0, lb.field_a[4].length);
+          kf.a(lb.field_a[0], 0, var3_array, lb.field_a[4].length, lb.field_a[0].length);
+          lb.field_a[4] = var3_array;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.IA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -2811,39 +1495,38 @@ public final class HostileSpawn extends d {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
+        Object stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = field_I ? 1 : 0;
         try {
-          L0: {
-            oc.field_h[0][3] = bi.field_h.a("level01-new.dat", "", 0);
-            oc.field_h[0][4] = bi.field_h.a("level02-new.dat", "", 0);
-            oc.field_h[0][5] = bi.field_h.a("level03-new.dat", "", param0 + 0);
-            oc.field_h[0][6] = bi.field_h.a("level04-new.dat", "", 0);
-            oc.field_h[0][7] = bi.field_h.a("level05-new.dat", "", 0);
-            oc.field_h[0][8] = bi.field_h.a("level06-new.dat", "", 0);
-            oc.field_h[0][9] = bi.field_h.a("level07-new.dat", "", 0);
-            oc.field_h[0][0] = bi.field_h.a("levelf1-new.dat", "", param0);
-            oc.field_h[0][1] = bi.field_h.a("levelf2-new.dat", "", 0);
-            oc.field_h[0][2] = bi.field_h.a("levelf3-new.dat", "", bm.a(param0, 0));
-            var2_int = 0;
-            L1: while (true) {
-              if (-11 >= (var2_int ^ -1)) {
-                bi.field_h = null;
-                break L0;
-              } else {
-                L2: {
-                  if (null == oc.field_h[0][var2_int]) {
-                    System.err.println("Error loading leveldata for kerrus[" + var2_int + "]");
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                var2_int++;
-                continue L1;
+          oc.field_h[0][3] = bi.field_h.a("level01-new.dat", "", 0);
+          oc.field_h[0][4] = bi.field_h.a("level02-new.dat", "", 0);
+          oc.field_h[0][5] = bi.field_h.a("level03-new.dat", "", param0 + 0);
+          oc.field_h[0][6] = bi.field_h.a("level04-new.dat", "", 0);
+          oc.field_h[0][7] = bi.field_h.a("level05-new.dat", "", 0);
+          oc.field_h[0][8] = bi.field_h.a("level06-new.dat", "", 0);
+          oc.field_h[0][9] = bi.field_h.a("level07-new.dat", "", 0);
+          oc.field_h[0][0] = bi.field_h.a("levelf1-new.dat", "", param0);
+          oc.field_h[0][1] = bi.field_h.a("levelf2-new.dat", "", 0);
+          oc.field_h[0][2] = bi.field_h.a("levelf3-new.dat", "", bm.a(param0, 0));
+          var2_int = 0;
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (var2_int >= 10))) {
+            stackIn_12_0 = null;
+            if (var3 == 0) {
+              if (stackIn_12_0 == oc.field_h[0][var2_int]) {
+                System.err.println("Error loading leveldata for kerrus[" + var2_int + "]");
               }
+              var2_int++;
+              continue;
             }
+            break;
           }
+          if (decompiledNaturalLoopExit0) {
+            stackIn_12_0 = null;
+          }
+          bi.field_h = (gb) (stackIn_12_0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -2853,9 +1536,7 @@ public final class HostileSpawn extends d {
 
     final void b(byte param0) {
         boolean discarded$0 = false;
-        Object stackIn_17_0 = null;
-        Object stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
+        boolean stackIn_18_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         m var2 = null;
@@ -2863,210 +1544,155 @@ public final class HostileSpawn extends d {
         int var3_int = 0;
         hm var3 = null;
         int var4 = 0;
+        int var2_intLifetime1;
         var4 = field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              em.field_c = em.field_c + 1;
-              q.b(14470);
-              if (null == mb.field_s) {
-                break L1;
-              } else {
-                mb.field_s.b(param0 ^ 53);
-                break L1;
-              }
-            }
-            L2: {
-              if (param0 == -35) {
-                break L2;
-              } else {
-                this.e(-72);
-                break L2;
-              }
-            }
-            L3: {
-              if (!wh.field_f) {
-                break L3;
-              } else {
-                if (!ha.field_w.a(dg.field_tb, 105)) {
-                  sj.b(true);
-                  wh.field_f = false;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            L4: {
-              stackIn_17_0 = this;
-
-              if (null != wa.field_q) {
-                stackIn_18_0 = this;
-                stackIn_18_1 = 1;
-                break L4;
-              } else {
-                stackIn_18_0 = this;
-                stackIn_18_1 = 0;
-                break L4;
-              }
-            }
-            L5: {
-              this.a(stackIn_18_1 != 0, param0 + 9803);
-              if (!ri.field_m) {
-                break L5;
-              } else {
-                cf.d(-112);
-                ri.field_m = false;
-                break L5;
-              }
-            }
-            L6: {
-              if (null == wa.field_q) {
-                break L6;
-              } else {
-                if (wa.field_q.field_g) {
-                  td.c((byte) 113);
-                  v.a(-112, wa.field_q);
-                  wa.field_q.a(true, gf.field_b);
-                  wa.field_q = null;
-                  se.field_h.requestFocus();
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-            }
-            L7: {
-              if (cm.b((byte) -97)) {
-                this.h(-12752);
-                break L7;
-              } else {
-                L8: {
-                  if (ul.field_N) {
-                    if (null == sg.field_j) {
-                      if (el.field_h[0] == null) {
-                        if (el.field_h[1] != null) {
-                          this.a((byte) 113, 1);
-                          break L8;
-                        } else {
-                          if (nh.field_L == null) {
-                            this.m((byte) 76);
-                            break L8;
-                          } else {
-                            if (nh.field_L.field_j) {
-                              nh.field_L = null;
-                              break L8;
-                            } else {
-                              break L8;
-                            }
-                          }
-                        }
-                      } else {
-                        this.a((byte) 113, 0);
-                        break L8;
-                      }
-                    } else {
-                      if (sg.field_j.field_l) {
-                        var2_int = sg.field_j.field_j.length;
-                        var3_int = 0;
-                        L9: while (true) {
-                          if (var2_int <= var3_int) {
-                            L10: {
-                              if (hb.a(18, pb.field_Ob, false)) {
-                                bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, sf.field_Y);
-                                break L10;
-                              } else {
-                                break L10;
-                              }
-                            }
-                            sg.field_j = null;
-                            kb.b((byte) -43);
-                            var3 = (hm) ((Object) vl.field_c.g(param0 + -68));
-                            L11: while (true) {
-                              if (var3 == null) {
-                                break L8;
-                              } else {
-                                jh.a(125, 4, var3);
-                                var3 = (hm) ((Object) vl.field_c.a(12684));
-                                continue L11;
-                              }
-                            }
-                          } else {
-                            pb.field_Ob[var3_int] = sg.field_j.field_j[var3_int];
-                            uk.field_c[var3_int] = ll.a(uk.field_c[var3_int], pb.field_Ob[var3_int]);
-                            var3_int++;
-                            continue L9;
-                          }
-                        }
-                      } else {
-                        break L8;
-                      }
-                    }
-                  } else {
-                    discarded$0 = this.p(4);
-                    break L8;
-                  }
-                }
-                L12: {
-                  if (ta.p(3)) {
-                    break L12;
-                  } else {
-                    L13: while (true) {
-                      var2 = (m) ((Object) tm.field_o.c(18120));
-                      if (null == var2) {
-                        break L12;
-                      } else {
-                        g.a(var2, 6, -7347);
-                        continue L13;
-                      }
-                    }
-                  }
-                }
-                L14: while (true) {
-                  if (!wd.a(23278, ng.field_l)) {
-                    mb.d(0, -22370);
-                    if (ig.c(false)) {
-                      L15: {
-                        L16: {
-                          var2_int = this.d((byte) -75);
-                          if ((var2_int ^ -1) == -1) {
-                            break L16;
-                          } else {
-                            if (-2 == (var2_int ^ -1)) {
-                              break L16;
-                            } else {
-                              break L15;
-                            }
-                          }
-                        }
-                        jh.b(2, -107);
-                        qj.a((byte) -21, 3);
-                        vh.a((byte) 113, 4);
-                        og.a(-22248, 5);
-                        jd.a(6, 65535);
-                        break L15;
-                      }
-                      L17: {
-                        if ((var2_int ^ -1) == -3) {
-                          cf.b(true);
-                          break L17;
-                        } else {
-                          break L17;
-                        }
-                      }
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  } else {
-                    this.h((byte) 126);
-                    continue L14;
-                  }
-                }
-              }
-            }
-            break L0;
+          em.field_c = em.field_c + 1;
+          q.b(14470);
+          if (null != mb.field_s) {
+            mb.field_s.b(param0 ^ 53);
           }
+          if (param0 != -35) {
+            this.e(-72);
+          }
+          if (wh.field_f &&
+            !ha.field_w.a(dg.field_tb, 105)) {
+            sj.b(true);
+            wh.field_f = false;
+          }
+          stackIn_18_1 = (null != wa.field_q);
+          this.a(stackIn_18_1, param0 + 9803);
+          if (ri.field_m) {
+            cf.d(-112);
+            ri.field_m = false;
+          }
+          if (null != wa.field_q &&
+            wa.field_q.field_g) {
+            td.c((byte) 113);
+            v.a(-112, wa.field_q);
+            wa.field_q.a(true, gf.field_b);
+            wa.field_q = null;
+            se.field_h.requestFocus();
+          }
+          if (!cm.b((byte) -97)) {
+            boolean decompiledFrameRemainder0 = true;
+            boolean decompiledFrameCompleted2 = true;
+            if (!ul.field_N) {
+              discarded$0 = this.p(4);
+              decompiledFrameRemainder0 = (var4 != 0);
+            }
+            if (decompiledFrameRemainder0) {
+              if ((null != sg.field_j) &&
+                (decompiledFrameRemainder0 = !(!sg.field_j.field_l))) {
+                var2_int = sg.field_j.field_j.length;
+                var3_int = 0;
+                L12: while (true) {
+                  if (var2_int > var3_int) {
+                    pb.field_Ob[var3_int] = sg.field_j.field_j[var3_int];
+                    uk.field_c[var3_int] = ll.a(uk.field_c[var3_int], pb.field_Ob[var3_int]);
+                    var3_int++;
+                    if (var4 == 0) {
+                      continue;
+                    }
+                  } else {
+                    if (!hb.a(18, pb.field_Ob, false)) {
+                      break L12;
+                    }
+                  }
+                  bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, sf.field_Y);
+                  break;
+                }
+                sg.field_j = null;
+                kb.b((byte) -43);
+                var3 = (hm) (vl.field_c.g(param0 - 68));
+                while (var3 != null) {
+                  jh.a(125, 4, var3);
+                  var3 = (hm) (vl.field_c.a(12684));
+                  if (var4 != 0) {
+                    decompiledFrameCompleted2 = false;
+                    break;
+                  }
+                }
+                if (decompiledFrameCompleted2) {
+                  decompiledFrameRemainder0 = (var4 != 0);
+                }
+              }
+              if ((decompiledFrameRemainder0) &&
+                (decompiledFrameCompleted2)) {
+                if (el.field_h[0] != null) {
+                  this.a((byte) 113, 0);
+                  decompiledFrameRemainder0 = (var4 != 0);
+                }
+                if (decompiledFrameRemainder0) {
+                  if (el.field_h[1] == null) {
+                    if (nh.field_L != null) {
+                      if (nh.field_L.field_j) {
+                        nh.field_L = null;
+                        if (var4 != 0) {
+                          this.m((byte) 76);
+                          this.a((byte) 113, 1);
+                        }
+                      }
+                    } else {
+                      this.m((byte) 76);
+                      if (var4 != 0) {
+                        this.a((byte) 113, 1);
+                      }
+                    }
+                  } else {
+                    this.a((byte) 113, 1);
+                  }
+                }
+              }
+            }
+            boolean decompiledFrameCompleted1 = true;
+            boolean decompiledFrameCompleted0 = true;
+            if (!ta.p(3)) {
+              while (true) {
+                var2 = (m) (tm.field_o.c(18120));
+                if (null == var2) {
+                  break;
+                }
+                g.a(var2, 6, -7347);
+                if (var4 != 0) {
+                  decompiledFrameCompleted1 = false;
+                  break;
+                }
+              }
+            }
+            if (decompiledFrameCompleted1) {
+              while (wd.a(23278, ng.field_l)) {
+                this.h((byte) 126);
+                if (var4 != 0) {
+                  decompiledFrameCompleted0 = false;
+                  break;
+                }
+              }
+              if (decompiledFrameCompleted0) {
+                mb.d(0, -22370);
+              }
+            }
+            if (!ig.c(false)) {
+              return;
+            }
+            var2_intLifetime1 = this.d((byte) -75);
+            if (var2_intLifetime1 == 0 ||
+              var2_intLifetime1 == 1) {
+              jh.b(2, -107);
+              qj.a((byte) -21, 3);
+              vh.a((byte) 113, 4);
+              og.a(-22248, 5);
+              jd.a(6, 65535);
+            }
+            if (var2_intLifetime1 == 2) {
+              cf.b(true);
+            }
+            if (var4 == 0) {
+              return;
+            }
+          }
+          this.h(-12752);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -3081,560 +1707,243 @@ public final class HostileSpawn extends d {
         RuntimeException decompiledCaughtException = null;
         int var3 = 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 3) {
-                break L1;
-              } else {
-                field_F = false;
-                break L1;
-              }
-            }
-            var2_int = 255 & param1;
-            if (0 != var2_int) {
-              L2: {
-                if (128 > var2_int) {
-                  break L2;
-                } else {
-                  if ((var2_int ^ -1) > -161) {
-                    L3: {
-                      var3 = kh.field_hb[-128 + var2_int];
-                      if ((var3 ^ -1) == -1) {
-                        var3 = 63;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var2_int = var3;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_18_0 = (char)var2_int;
-              break L0;
-            } else {
-              throw new IllegalArgumentException("" + Integer.toString(var2_int, 16));
-            }
+          if (param0 != 3) {
+            field_F = false;
           }
+          var2_int = 255 & param1;
+          if (0 == var2_int) {
+            throw new IllegalArgumentException("" + Integer.toString(var2_int, 16));
+          }
+          if (128 <= var2_int &&
+            var2_int < 160) {
+            var3 = kh.field_hb[-128 + var2_int];
+            if (var3 == 0) {
+              var3 = 63;
+            }
+            var2_int = var3;
+          }
+          stackIn_18_0 = (char)var2_int;
+          return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var2), "HostileSpawn.SA(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_18_0;
     }
 
     public HostileSpawn() {
         this.field_D = 0;
         try {
-            ni.field_g = (java.applet.Applet) (this);
+          ni.field_g = (java.applet.Applet) (this);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.<init>()");
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.<init>()");
         }
     }
 
     private final boolean p(int param0) {
-        int stackIn_37_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_56_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_70_0 = 0;
-        int stackIn_76_0 = 0;
-        int stackIn_82_0 = 0;
-        int stackIn_90_0 = 0;
-        int stackIn_99_0 = 0;
-        int stackIn_105_0 = 0;
-        int stackIn_114_0 = 0;
-        int stackIn_122_0 = 0;
-        int stackIn_128_0 = 0;
-        int stackIn_136_0 = 0;
-        int stackIn_142_0 = 0;
-        int stackIn_144_0 = 0;
-        int stackIn_147_0 = 0;
-        int stackIn_150_0 = 0;
-        int stackIn_153_0 = 0;
-        int stackIn_159_0 = 0;
-        int stackIn_164_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         NullPointerException var2 = null;
         int var2_int = 0;
         nm var2_ref = null;
         RuntimeException var2_ref2 = null;
         int var3 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         var3 = field_I ? 1 : 0;
         try {
-          L0: {
-            sc.a((byte) 118);
-            try {
-              L1: {
-                ml.a((byte) 112, ll.field_c);
-                break L1;
+          sc.a((byte) 118);
+          try {
+            ml.a((byte) 112, ll.field_c);
+          } catch (java.lang.NullPointerException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NullPointerException) (Object) decompiledCaughtException;
+          }
+          boolean decompiledFrameCompleted0 = true;
+          boolean decompiledFrameCompleted1 = true;
+          boolean decompiledFrameCompleted2 = true;
+          boolean decompiledFrameCompleted3 = true;
+          boolean decompiledFrameCompleted4 = true;
+          if (mm.field_m == null) {
+            mm.field_m = new oj[3000];
+            var2_int = 0;
+            while (var2_int < 3000) {
+              mm.field_m[var2_int] = new oj();
+              var2_int++;
+              if (var3 != 0) {
+                decompiledFrameCompleted4 = false;
+                break;
               }
-            } catch (java.lang.NullPointerException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var2 = (NullPointerException) (Object) decompiledCaughtException;
-                break L2;
-              }
-            }
-            L3: {
-              if (mm.field_m != null) {
-                break L3;
-              } else {
-                mm.field_m = new oj[3000];
-                var2_int = 0;
-                L4: while (true) {
-                  if (-3001 >= (var2_int ^ -1)) {
-                    break L3;
-                  } else {
-                    mm.field_m[var2_int] = new oj();
-                    var2_int++;
-                    continue L4;
-                  }
-                }
-              }
-            }
-            L5: {
-              if (null != re.field_n) {
-                break L5;
-              } else {
-                re.field_n = new oj[3000];
-                var2_int = 0;
-                L6: while (true) {
-                  if (3000 <= var2_int) {
-                    break L5;
-                  } else {
-                    re.field_n[var2_int] = new oj();
-                    var2_int++;
-                    continue L6;
-                  }
-                }
-              }
-            }
-            L7: {
-              if (vj.field_w != null) {
-                break L7;
-              } else {
-                vj.field_w = new qm[3000];
-                var2_int = 0;
-                L8: while (true) {
-                  if (3000 <= var2_int) {
-                    break L7;
-                  } else {
-                    vj.field_w[var2_int] = new qm();
-                    var2_int++;
-                    continue L8;
-                  }
-                }
-              }
-            }
-            L9: {
-              if (null != jn.field_F) {
-                break L9;
-              } else {
-                jn.field_F = new p[8000];
-                var2_int = 0;
-                L10: while (true) {
-                  if (-8001 >= (var2_int ^ -1)) {
-                    break L9;
-                  } else {
-                    jn.field_F[var2_int] = new p();
-                    var2_int++;
-                    continue L10;
-                  }
-                }
-              }
-            }
-            L11: {
-              if (wh.field_b != null) {
-                break L11;
-              } else {
-                wh.field_b = new p[1000];
-                var2_int = 0;
-                L12: while (true) {
-                  if ((var2_int ^ -1) <= -1001) {
-                    break L11;
-                  } else {
-                    wh.field_b[var2_int] = new p();
-                    var2_int++;
-                    continue L12;
-                  }
-                }
-              }
-            }
-            if (param0 == 4) {
-              if (null != ul.field_P) {
-                L13: {
-                  if (!ul.field_P.a(-15879)) {
-                    break L13;
-                  } else {
-                    if (!ul.field_P.e(param0 ^ 4)) {
-                      break L13;
-                    } else {
-                      L14: {
-                        if (!ph.field_F.a(param0 + -15883)) {
-                          break L14;
-                        } else {
-                          if (!ph.field_F.e(0)) {
-                            break L14;
-                          } else {
-                            L15: {
-                              if (!ej.field_h.a(-15879)) {
-                                break L15;
-                              } else {
-                                if (ej.field_h.e(0)) {
-                                  L16: {
-                                    if (!tk.field_a.a(param0 ^ -15875)) {
-                                      break L16;
-                                    } else {
-                                      if (!tk.field_a.e(0)) {
-                                        break L16;
-                                      } else {
-                                        L17: {
-                                          if (!vd.field_C.a(-15879)) {
-                                            break L17;
-                                          } else {
-                                            if (vd.field_C.e(param0 ^ 4)) {
-                                              L18: {
-                                                if (!bi.field_h.a(param0 ^ -15875)) {
-                                                  break L18;
-                                                } else {
-                                                  if (bi.field_h.e(param0 ^ 4)) {
-                                                    L19: {
-                                                      if (!gi.field_h.a(-15879)) {
-                                                        break L19;
-                                                      } else {
-                                                        if (!gi.field_h.e(0)) {
-                                                          break L19;
-                                                        } else {
-                                                          L20: {
-                                                            if (null == wd.field_a) {
-                                                              break L20;
-                                                            } else {
-                                                              L21: {
-                                                                if (!wd.field_a.a(param0 ^ -15875)) {
-                                                                  break L21;
-                                                                } else {
-                                                                  if (wd.field_a.a(-8088, "basic")) {
-                                                                    break L20;
-                                                                  } else {
-                                                                    break L21;
-                                                                  }
-                                                                }
-                                                              }
-                                                              gj.a(param0 ^ 16, s.a(wd.field_a, "basic", 47, cl.field_h, lj.field_r), 40.0f);
-                                                              stackIn_99_0 = 0;
-                                                              decompiledRegionSelector0 = 8;
-                                                              break L0;
-                                                            }
-                                                          }
-                                                          L22: {
-                                                            if (!he.field_t.a(-15879)) {
-                                                              break L22;
-                                                            } else {
-                                                              if (he.field_t.e(0)) {
-                                                                L23: {
-                                                                  if (te.field_J == null) {
-                                                                    break L23;
-                                                                  } else {
-                                                                    L24: {
-                                                                      if (!te.field_J.a(-15879)) {
-                                                                        break L24;
-                                                                      } else {
-                                                                        if (te.field_J.e(param0 ^ 4)) {
-                                                                          break L23;
-                                                                        } else {
-                                                                          break L24;
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                    gj.a(param0 ^ 16, md.a(in.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
-                                                                    stackIn_114_0 = 0;
-                                                                    decompiledRegionSelector0 = 10;
-                                                                    break L0;
-                                                                  }
-                                                                }
-                                                                L25: {
-                                                                  if (!wd.field_a.a(param0 + -15883)) {
-                                                                    break L25;
-                                                                  } else {
-                                                                    if (!wd.field_a.a(-8088, "basicfont12")) {
-                                                                      break L25;
-                                                                    } else {
-                                                                      L26: {
-                                                                        if (!gb.field_a.a(-15879)) {
-                                                                          break L26;
-                                                                        } else {
-                                                                          if (gb.field_a.a(param0 ^ -8084, "basicfont12")) {
-                                                                            L27: {
-                                                                              if (!wd.field_a.a(-15879)) {
-                                                                                break L27;
-                                                                              } else {
-                                                                                if (!wd.field_a.a(param0 + -8092, "kartika13")) {
-                                                                                  break L27;
-                                                                                } else {
-                                                                                  L28: {
-                                                                                    if (!gb.field_a.a(-15879)) {
-                                                                                      break L28;
-                                                                                    } else {
-                                                                                      if (gb.field_a.a(-8088, "kartika13")) {
-                                                                                        kb.b((byte) -43);
-                                                                                        u.field_e = u.field_e - w.field_r;
-                                                                                        w.field_r = 0;
-                                                                                        hg.field_e = 0;
-                                                                                        var2_ref = this.q(-96);
-                                                                                        this.a(22, var2_ref);
-                                                                                        this.u(111);
-                                                                                        stackIn_144_0 = 0;
-                                                                                        decompiledRegionSelector0 = 15;
-                                                                                        break L0;
-                                                                                      } else {
-                                                                                        break L28;
-                                                                                      }
-                                                                                    }
-                                                                                  }
-                                                                                  gj.a(param0 + 16, s.a(gb.field_a, "kartika13", 84, cf.field_r, in.field_a), 17.0f);
-                                                                                  stackIn_142_0 = 0;
-                                                                                  decompiledRegionSelector0 = 14;
-                                                                                  break L0;
-                                                                                }
-                                                                              }
-                                                                            }
-                                                                            gj.a(20, s.a(wd.field_a, "kartika13", 113, cl.field_h, lj.field_r), 11.0f);
-                                                                            stackIn_136_0 = 0;
-                                                                            decompiledRegionSelector0 = 13;
-                                                                            break L0;
-                                                                          } else {
-                                                                            break L26;
-                                                                          }
-                                                                        }
-                                                                      }
-                                                                      gj.a(20, s.a(gb.field_a, "basicfont12", 125, cf.field_r, in.field_a), 15.0f);
-                                                                      stackIn_128_0 = 0;
-                                                                      decompiledRegionSelector0 = 12;
-                                                                      break L0;
-                                                                    }
-                                                                  }
-                                                                }
-                                                                gj.a(20, s.a(wd.field_a, "basicfont12", param0 ^ 57, cl.field_h, lj.field_r), 14.0f);
-                                                                stackIn_122_0 = 0;
-                                                                decompiledRegionSelector0 = 11;
-                                                                break L0;
-                                                              } else {
-                                                                break L22;
-                                                              }
-                                                            }
-                                                          }
-                                                          gj.a(20, s.a(tk.field_a, "", 66, cl.field_h, lj.field_r), 80.0f);
-                                                          stackIn_105_0 = 0;
-                                                          decompiledRegionSelector0 = 9;
-                                                          break L0;
-                                                        }
-                                                      }
-                                                    }
-                                                    gj.a(20, md.a(ci.field_f, gi.field_h, dg.field_rb, (byte) -82), 35.0f);
-                                                    stackIn_90_0 = 0;
-                                                    decompiledRegionSelector0 = 7;
-                                                    break L0;
-                                                  } else {
-                                                    break L18;
-                                                  }
-                                                }
-                                              }
-                                              gj.a(param0 ^ 16, md.a(ci.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
-                                              stackIn_82_0 = 0;
-                                              decompiledRegionSelector0 = 6;
-                                              break L0;
-                                            } else {
-                                              break L17;
-                                            }
-                                          }
-                                        }
-                                        gj.a(20, md.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
-                                        stackIn_76_0 = 0;
-                                        decompiledRegionSelector0 = 5;
-                                        break L0;
-                                      }
-                                    }
-                                  }
-                                  gj.a(param0 ^ 16, md.a(fh.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
-                                  stackIn_70_0 = 0;
-                                  decompiledRegionSelector0 = 4;
-                                  break L0;
-                                } else {
-                                  break L15;
-                                }
-                              }
-                            }
-                            gj.a(20, md.a(fh.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
-                            stackIn_62_0 = 0;
-                            decompiledRegionSelector0 = 3;
-                            break L0;
-                          }
-                        }
-                      }
-                      gj.a(param0 ^ 16, md.a(sd.field_v, ph.field_F, hn.field_c, (byte) 84), 10.0f);
-                      stackIn_56_0 = 0;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  }
-                }
-                gj.a(20, md.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
-                stackIn_48_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (vd.field_C == null) {
-                  if (null == he.field_t) {
-                    if (null == bi.field_h) {
-                      L29: {
-                        if (wb.field_S <= 0) {
-                          break L29;
-                        } else {
-                          if (null == gi.field_h) {
-                            break L29;
-                          } else {
-                            this.o(28974);
-                            stackIn_159_0 = 0;
-                            decompiledRegionSelector0 = 19;
-                            break L0;
-                          }
-                        }
-                      }
-                      L30: {
-                        li.a(50, param0 ^ 3);
-                        ij.a((byte) -17, vg.field_h);
-                        am.field_d = (HostileSpawn) (this);
-                        this.m(300);
-                        of.field_h = new re(true);
-                        if (ta.p(3)) {
-                          break L30;
-                        } else {
-                          sg.field_j = wk.a(4, -2178);
-                          of.field_h.f(-121);
-                          break L30;
-                        }
-                      }
-                      ul.field_N = true;
-                      ql.f(8036);
-                      stackIn_164_0 = 1;
-                      decompiledRegionSelector0 = 20;
-                      break L0;
-                    } else {
-                      this.n(param0 + -4);
-                      stackIn_153_0 = 0;
-                      decompiledRegionSelector0 = 18;
-                      break L0;
-                    }
-                  } else {
-                    this.l(-4);
-                    stackIn_150_0 = 0;
-                    decompiledRegionSelector0 = 17;
-                    break L0;
-                  }
-                } else {
-                  this.i((byte) -113);
-                  stackIn_147_0 = 0;
-                  decompiledRegionSelector0 = 16;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_37_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          if ((decompiledFrameCompleted4) &&
+            (null == re.field_n)) {
+            re.field_n = new oj[3000];
+            var2_int = 0;
+            while (3000 > var2_int) {
+              re.field_n[var2_int] = new oj();
+              var2_int++;
+              if (var3 != 0) {
+                decompiledFrameCompleted3 = false;
+                break;
+              }
+            }
+          }
+          if ((decompiledFrameCompleted3) &&
+            (vj.field_w == null)) {
+            vj.field_w = new qm[3000];
+            var2_int = 0;
+            while (3000 > var2_int) {
+              vj.field_w[var2_int] = new qm();
+              var2_int++;
+              if (var3 != 0) {
+                decompiledFrameCompleted2 = false;
+                break;
+              }
+            }
+          }
+          if ((decompiledFrameCompleted2) &&
+            (null == jn.field_F)) {
+            jn.field_F = new p[8000];
+            var2_intLifetime2 = 0;
+            while (var2_intLifetime2 < 8000) {
+              jn.field_F[var2_intLifetime2] = new p();
+              var2_intLifetime2++;
+              if (var3 != 0) {
+                decompiledFrameCompleted1 = false;
+                break;
+              }
+            }
+          }
+          if ((decompiledFrameCompleted1) &&
+            (wh.field_b == null)) {
+            wh.field_b = new p[1000];
+            var2_intLifetime1 = 0;
+            while (var2_intLifetime1 < 1000) {
+              wh.field_b[var2_intLifetime1] = new p();
+              var2_intLifetime1++;
+              if (var3 != 0) {
+                decompiledFrameCompleted0 = false;
+                break;
+              }
+            }
+          }
+          if ((decompiledFrameCompleted0) &&
+            (param0 != 4)) {
+            return false;
+          }
+          if (null == ul.field_P) {
+            if (vd.field_C != null) {
+              this.i((byte) -113);
+              return false;
+            }
+            if (null != he.field_t) {
+              this.l(-4);
+              return false;
+            }
+            if (null != bi.field_h) {
+              this.n(param0 - 4);
+              return false;
+            }
+            if (wb.field_S > 0 &&
+              null != gi.field_h) {
+              this.o(28974);
+              return false;
+            }
+            li.a(50, param0 ^ 3);
+            ij.a((byte) -17, vg.field_h);
+            am.field_d = this;
+            this.m(300);
+            of.field_h = new re(true);
+            if (!ta.p(3)) {
+              sg.field_j = wk.a(4, -2178);
+              of.field_h.f(-121);
+            }
+            ul.field_N = true;
+            ql.f(8036);
+            return true;
+          }
+          if (ul.field_P.a(-15879) &&
+            ul.field_P.e(param0 ^ 4)) {
+            if (ph.field_F.a(param0 - 15883) &&
+              ph.field_F.e(0)) {
+              if (ej.field_h.a(-15879) &&
+                ej.field_h.e(0)) {
+                if (tk.field_a.a(param0 ^ -15875) &&
+                  tk.field_a.e(0)) {
+                  if (vd.field_C.a(-15879) &&
+                    vd.field_C.e(param0 ^ 4)) {
+                    if (bi.field_h.a(param0 ^ -15875) &&
+                      bi.field_h.e(param0 ^ 4)) {
+                      if (gi.field_h.a(-15879) &&
+                        gi.field_h.e(0)) {
+                        if (null != wd.field_a && (!wd.field_a.a(param0 ^ -15875) ||
+                          !wd.field_a.a(-8088, "basic"))) {
+                          gj.a(param0 ^ 16, s.a(wd.field_a, "basic", 47, cl.field_h, lj.field_r), 40.0f);
+                          return false;
+                        }
+                        if (he.field_t.a(-15879) &&
+                          he.field_t.e(0)) {
+                          if (te.field_J != null && (!te.field_J.a(-15879) ||
+                            !te.field_J.e(param0 ^ 4))) {
+                            gj.a(param0 ^ 16, md.a(in.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
+                            return false;
+                          }
+                          if (wd.field_a.a(param0 - 15883) &&
+                            wd.field_a.a(-8088, "basicfont12")) {
+                            if (gb.field_a.a(-15879) &&
+                              gb.field_a.a(param0 ^ -8084, "basicfont12")) {
+                              if (wd.field_a.a(-15879) &&
+                                wd.field_a.a(param0 - 8092, "kartika13")) {
+                                if (gb.field_a.a(-15879) &&
+                                  gb.field_a.a(-8088, "kartika13")) {
+                                  kb.b((byte) -43);
+                                  u.field_e = u.field_e - w.field_r;
+                                  w.field_r = 0;
+                                  hg.field_e = 0;
+                                  var2_ref = this.q(-96);
+                                  this.a(22, var2_ref);
+                                  this.u(111);
+                                  return false;
+                                }
+                                gj.a(param0 + 16, s.a(gb.field_a, "kartika13", 84, cf.field_r, in.field_a), 17.0f);
+                                return false;
+                              }
+                              gj.a(20, s.a(wd.field_a, "kartika13", 113, cl.field_h, lj.field_r), 11.0f);
+                              return false;
+                            }
+                            gj.a(20, s.a(gb.field_a, "basicfont12", 125, cf.field_r, in.field_a), 15.0f);
+                            return false;
+                          }
+                          gj.a(20, s.a(wd.field_a, "basicfont12", param0 ^ 57, cl.field_h, lj.field_r), 14.0f);
+                          return false;
+                        }
+                        gj.a(20, s.a(tk.field_a, "", 66, cl.field_h, lj.field_r), 80.0f);
+                        return false;
+                      }
+                      gj.a(20, md.a(ci.field_f, gi.field_h, dg.field_rb, (byte) -82), 35.0f);
+                      return false;
+                    }
+                    gj.a(param0 ^ 16, md.a(ci.field_f, bi.field_h, dg.field_rb, (byte) 68), 30.0f);
+                    return false;
+                  }
+                  gj.a(20, md.a(lj.field_r, vd.field_C, cl.field_h, (byte) -88), 25.0f);
+                  return false;
+                }
+                gj.a(param0 ^ 16, md.a(fh.field_i, tk.field_a, rd.field_g, (byte) 79), 20.0f);
+                return false;
+              }
+              gj.a(20, md.a(fh.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
+              return false;
+            }
+            gj.a(param0 ^ 16, md.a(sd.field_v, ph.field_F, hn.field_c, (byte) 84), 10.0f);
+            return false;
+          }
+          gj.a(20, md.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var2_ref2), "HostileSpawn.VA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_37_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_48_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_56_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_62_0 != 0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_70_0 != 0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_76_0 != 0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_82_0 != 0;
-                    } else {
-                      if (decompiledRegionSelector0 == 7) {
-                        return stackIn_90_0 != 0;
-                      } else {
-                        if (decompiledRegionSelector0 == 8) {
-                          return stackIn_99_0 != 0;
-                        } else {
-                          if (decompiledRegionSelector0 == 9) {
-                            return stackIn_105_0 != 0;
-                          } else {
-                            if (decompiledRegionSelector0 == 10) {
-                              return stackIn_114_0 != 0;
-                            } else {
-                              if (decompiledRegionSelector0 == 11) {
-                                return stackIn_122_0 != 0;
-                              } else {
-                                if (decompiledRegionSelector0 == 12) {
-                                  return stackIn_128_0 != 0;
-                                } else {
-                                  if (decompiledRegionSelector0 == 13) {
-                                    return stackIn_136_0 != 0;
-                                  } else {
-                                    if (decompiledRegionSelector0 == 14) {
-                                      return stackIn_142_0 != 0;
-                                    } else {
-                                      if (decompiledRegionSelector0 == 15) {
-                                        return stackIn_144_0 != 0;
-                                      } else {
-                                        if (decompiledRegionSelector0 == 16) {
-                                          return stackIn_147_0 != 0;
-                                        } else {
-                                          if (decompiledRegionSelector0 == 17) {
-                                            return stackIn_150_0 != 0;
-                                          } else {
-                                            if (decompiledRegionSelector0 == 18) {
-                                              return stackIn_153_0 != 0;
-                                            } else {
-                                              if (decompiledRegionSelector0 == 19) {
-                                                return stackIn_159_0 != 0;
-                                              } else {
-                                                return stackIn_164_0 != 0;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
     }
 
@@ -3642,34 +1951,17 @@ public final class HostileSpawn extends d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (!el.field_h[param1].field_j) {
-                break L1;
-              } else {
-                L2: {
-                  if ((el.field_h[param1].field_h[0] ^ -1) >= (gn.field_k[param1] ^ -1)) {
-                    break L2;
-                  } else {
-                    gn.field_k[param1] = el.field_h[param1].field_h[0];
-                    break L2;
-                  }
-                }
-                el.field_h[param1] = null;
-                break L1;
-              }
+          if (el.field_h[param1].field_j) {
+            if (el.field_h[param1].field_h[0] > gn.field_k[param1]) {
+              gn.field_k[param1] = el.field_h[param1].field_h[0];
             }
-            L3: {
-              of.field_h.field_E = null;
-              if (param0 == 113) {
-                break L3;
-              } else {
-                field_C = (bd) null;
-                break L3;
-              }
-            }
-            break L0;
+            el.field_h[param1] = null;
           }
+          of.field_h.field_E = null;
+          if (param0 != 113) {
+            field_C = (bd) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -3687,42 +1979,32 @@ public final class HostileSpawn extends d {
         RuntimeException var2_ref = null;
         var5 = field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 < -113) {
-                break L1;
-              } else {
-                discarded$1 = this.q(-36);
-                break L1;
-              }
-            }
-            L2: {
-              var2 = (t) ((Object) ac.field_i.g(-54));
-              if (null == var2) {
-                break L2;
-              } else {
-                L3: {
-                  var4 = this.field_D;
-                  if (80 > var4) {
-                    var3 = var4 / 2 - 32;
-                    break L3;
-                  } else {
-                    if (-231 >= (var4 ^ -1)) {
-                      var3 = -(var4 / 2) + 123;
-                      break L3;
-                    } else {
-                      var3 = 8;
-                      break L3;
-                    }
-                  }
-                }
-                fj.field_Kb[var2.field_h].b(8, var3);
-                al.field_Z.c(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
-                break L2;
-              }
-            }
-            break L0;
+          if (param0 >= -113) {
+            discarded$1 = this.q(-36);
           }
+          var2 = (t) (ac.field_i.g(-54));
+          if (null != var2) {
+            var4 = this.field_D;
+            if (80 <= var4) {
+              if (var4 < 230) {
+                var3 = 8;
+                if (var5 != 0) {
+                  var3 = -(var4 / 2) + 123;
+                  var3 = var4 / 2 - 32;
+                }
+              } else {
+                var3 = -(var4 / 2) + 123;
+                if (var5 != 0) {
+                  var3 = var4 / 2 - 32;
+                }
+              }
+            } else {
+              var3 = var4 / 2 - 32;
+            }
+            fj.field_Kb[var2.field_h].b(8, var3);
+            al.field_Z.c(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -3731,464 +2013,275 @@ public final class HostileSpawn extends d {
     }
 
     final void a(byte param0) {
-        ue var2 = null;
-        int var4 = 0;
         Object stackIn_5_0 = null;
-        int stackIn_12_0 = 0;
+        boolean stackIn_12_0 = false;
         Object stackIn_12_1 = null;
-        int stackIn_15_0 = 0;
-        Object stackIn_15_1 = null;
-        int stackIn_15_2 = 0;
-        int decompiledRegionSelector0 = 0;
+        boolean stackIn_15_2 = false;
         RuntimeException decompiledCaughtException = null;
-        Object var2_ref = null;
-        RuntimeException var2_ref2 = null;
+        Object var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        int var4 = 0;
         var4 = field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (wa.field_q == null) {
-                stackIn_5_0 = se.field_h;
-                break L1;
-              } else {
-                stackIn_5_0 = wa.field_q;
-                break L1;
-              }
+          if (wa.field_q == null) {
+            stackIn_5_0 = se.field_h;
+          } else {
+            stackIn_5_0 = wa.field_q;
+          }
+          var2 = stackIn_5_0;
+          if (cm.b((byte) -97)) {
+            stackIn_12_0 = false;
+            stackIn_12_1 = var2;
+            stackIn_15_2 = (wa.field_q != null) || (nm.field_a);
+            gb.a(stackIn_12_0, (java.awt.Canvas) (stackIn_12_1), stackIn_15_2);
+            return;
+          }
+          if (!ul.field_N) {
+            ad.a((java.awt.Canvas) (var2), false);
+            return;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          if (null != ei.field_o) {
+            si.d();
+            ei.field_o.a(104);
+            decompiledFrameRemainder0 = (var4 != 0);
+          }
+          if (decompiledFrameRemainder0) {
+            if (null != of.field_h) {
+              me.b(108, 0);
+              of.field_h.h(26);
+              decompiledFrameRemainder0 = (var4 != 0);
             }
-            var2_ref = stackIn_5_0;
-            if (cm.b((byte) -97)) {
-              L2: {
-                L3: {
-                  stackIn_12_0 = 0;
-
-                  stackIn_12_1 = var2_ref;
-
-                  if (wa.field_q != null) {
-                    break L3;
-                  } else {
-
-
-
-
-                    if (!nm.field_a) {
-                      stackIn_15_0 = stackIn_12_0;
-                      stackIn_15_1 = stackIn_12_1;
-                      stackIn_15_2 = 0;
-                      break L2;
-                    } else {
-
-
-                      break L3;
-                    }
-                  }
-                }
-                stackIn_15_0 = stackIn_12_0;
-                stackIn_15_1 = stackIn_12_1;
-                stackIn_15_2 = 1;
-                break L2;
+            if (decompiledFrameRemainder0) {
+              boolean decompiledSharedTail0 = (null == this.field_G);
+              if (!decompiledSharedTail0) {
+                this.field_G.b((byte) -99);
+                decompiledSharedTail0 = (var4 != 0);
               }
-              gb.a(stackIn_15_0 != 0, (java.awt.Canvas) ((Object) stackIn_15_1), stackIn_15_2 != 0);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (!ul.field_N) {
-                ad.a((java.awt.Canvas) (var2_ref), false);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L4: {
-                  if (null == ei.field_o) {
-                    if (null == of.field_h) {
-                      if (null == this.field_G) {
-                        L5: {
-                          var3 = 1;
-                          if (0 > ri.field_h) {
-                            if ((hf.field_i ^ -1) <= -1) {
-                              var3 = 2;
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          } else {
-                            var3 = 0;
-                            break L5;
-                          }
-                        }
-                        me.b(105, var3);
-                        rd.a(false);
-                        break L4;
-                      } else {
-                        this.field_G.b((byte) -99);
-                        break L4;
-                      }
-                    } else {
-                      me.b(108, 0);
-                      of.field_h.h(26);
-                      break L4;
-                    }
-                  } else {
-                    si.d();
-                    ei.field_o.a(104);
-                    break L4;
+              if (decompiledSharedTail0) {
+                var3 = 1;
+                if (0 <= ri.field_h) {
+                  var3 = 0;
+                  if (var4 != 0 &&
+                    hf.field_i >= 0) {
+                    var3 = 2;
+                  }
+                } else {
+                  if (hf.field_i >= 0) {
+                    var3 = 2;
                   }
                 }
-                L6: {
-                  this.a((java.awt.Canvas) (var2_ref), 67);
-                  if (param0 <= -34) {
-                    break L6;
-                  } else {
-                    this.l(112);
-                    break L6;
-                  }
-                }
-                decompiledRegionSelector0 = 2;
-                break L0;
+                me.b(105, var3);
+                rd.a(false);
               }
             }
           }
+          this.a((java.awt.Canvas) (var2), 67);
+          if (param0 > -34) {
+            this.l(112);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2_ref2), "HostileSpawn.MA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
+          var2_ref = decompiledCaughtException;
+          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.MA(" + param0 + ')');
         }
     }
 
     private final void l(int param0) {
-        RuntimeException runtimeException = null;
+        bd[][] stackIn_11_0 = null;
+        RuntimeException decompiledCaughtException = null;
         bd[][] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
+        bd[][] var2Lifetime1;
+        int var3Lifetime1;
         var4 = field_I ? 1 : 0;
         try {
-          L0: {
-            uf.field_i[4] = new bd(he.field_t.a("starfield.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
-            var2 = new bd[8][];
-            var2[0] = gl.a(new bd(he.field_t.a("floors_1.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            var2[1] = gl.a(new bd(he.field_t.a("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            var2[2] = gl.a(new bd(he.field_t.a("floors_3.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            var2[3] = gl.a(new bd(he.field_t.a("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            var2[5] = gl.a(new bd(he.field_t.a("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            var2[6] = gl.a(new bd(he.field_t.a("floors_7.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
-            pk.field_d = new bd[1280];
-            var3 = 0;
-            L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
-                var2 = (bd[][]) null;
-                ri.field_p = new bd(he.field_t.a("bg.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
-                hk.field_h = new bd(he.field_t.a("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
-                var3 = 0;
-                L2: while (true) {
-                  if ((hk.field_h.field_D.length ^ -1) >= (var3 ^ -1)) {
-                    o.field_n.b((byte) 125);
-                    he.field_t = null;
-                    break L0;
-                  } else {
-                    L3: {
-                      if (-11 >= (255 & hk.field_h.field_D[var3] >> 753806480 ^ -1)) {
-                        break L3;
-                      } else {
-                        hk.field_h.field_D[var3] = 0;
-                        break L3;
-                      }
-                    }
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                L4: {
-                  if (var2[var3] == null) {
-                    break L4;
-                  } else {
-                    kf.a(var2[var3], 0, pk.field_d, var3 * 160, 160);
-                    break L4;
-                  }
-                }
-                var3++;
-                continue L1;
+          uf.field_i[4] = new bd(he.field_t.a("starfield.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
+          var2 = new bd[8][];
+          var2[0] = gl.a(new bd(he.field_t.a("floors_1.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[1] = gl.a(new bd(he.field_t.a("floors_2.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[2] = gl.a(new bd(he.field_t.a("floors_3.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[3] = gl.a(new bd(he.field_t.a("floors_4.jpg", "", bm.a(param0, param0)), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[5] = gl.a(new bd(he.field_t.a("floors_6.jpg", "", param0 + 4), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          var2[6] = gl.a(new bd(he.field_t.a("floors_7.jpg", "", 0), (java.awt.Component) ((Object) se.field_h)), 20, 8);
+          pk.field_d = new bd[1280];
+          var3 = 0;
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (var3 >= 8))) {
+            stackIn_11_0 = var2;
+            if (var4 == 0) {
+              if (stackIn_11_0[var3] != null) {
+                kf.a(var2[var3], 0, pk.field_d, var3 * 160, 160);
               }
+              var3++;
+              continue;
             }
+            break;
           }
+          if (decompiledNaturalLoopExit0) {
+            stackIn_11_0 = (bd[][]) null;
+          }
+          var2Lifetime1 = stackIn_11_0;
+          ri.field_p = new bd(he.field_t.a("bg.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
+          hk.field_h = new bd(he.field_t.a("hs_logo.jpg", "", 0), (java.awt.Component) ((Object) se.field_h));
+          var3Lifetime1 = 0;
+          while (hk.field_h.field_D.length > var3Lifetime1) {
+            if (var4 != 0) {
+              return;
+            }
+            if ((255 & hk.field_h.field_D[var3Lifetime1] >> 16) < 10) {
+              hk.field_h.field_D[var3Lifetime1] = 0;
+            }
+            var3Lifetime1++;
+          }
+          o.field_n.b((byte) 125);
+          he.field_t = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.V(" + param0 + ')');
+          var2_ref = decompiledCaughtException;
+          throw wg.a((Throwable) ((Object) var2_ref), "HostileSpawn.V(" + param0 + ')');
         }
     }
 
     private final void o(int param0) {
         try {
-            oc.field_h[1][0] = gi.field_h.a("level_01.dat", "", 0);
-            oc.field_h[1][1] = gi.field_h.a("level_02.dat", "", bm.a(param0, 28974));
-            oc.field_h[1][2] = gi.field_h.a("level_03.dat", "", bm.a(param0, 28974));
-            oc.field_h[1][3] = gi.field_h.a("level_04.dat", "", bm.a(param0, param0));
-            oc.field_h[1][4] = gi.field_h.a("level_05.dat", "", param0 + -28974);
-            oc.field_h[1][5] = gi.field_h.a("level_06.dat", "", param0 + -28974);
-            oc.field_h[1][6] = gi.field_h.a("level_07.dat", "", 0);
-            oc.field_h[1][7] = gi.field_h.a("level_08.dat", "", 0);
-            oc.field_h[1][8] = gi.field_h.a("level_09.dat", "", 0);
-            oc.field_h[1][9] = gi.field_h.a("level_10.dat", "", 0);
-            gi.field_h = null;
+          oc.field_h[1][0] = gi.field_h.a("level_01.dat", "", 0);
+          oc.field_h[1][1] = gi.field_h.a("level_02.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][2] = gi.field_h.a("level_03.dat", "", bm.a(param0, 28974));
+          oc.field_h[1][3] = gi.field_h.a("level_04.dat", "", bm.a(param0, param0));
+          oc.field_h[1][4] = gi.field_h.a("level_05.dat", "", param0 - 28974);
+          oc.field_h[1][5] = gi.field_h.a("level_06.dat", "", param0 - 28974);
+          oc.field_h[1][6] = gi.field_h.a("level_07.dat", "", 0);
+          oc.field_h[1][7] = gi.field_h.a("level_08.dat", "", 0);
+          oc.field_h[1][8] = gi.field_h.a("level_09.dat", "", 0);
+          oc.field_h[1][9] = gi.field_h.a("level_10.dat", "", 0);
+          gi.field_h = null;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
         }
     }
 
     private final void m(byte param0) {
         int fieldTemp$0 = 0;
-        Object stackIn_24_0 = null;
-        Object stackIn_26_0 = null;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
-        int decompiledRegionSelector0 = 0;
+        boolean stackIn_27_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
+        int var2_intLifetime1;
         try {
-          L0: {
-            L1: {
-              q.field_n = q.field_n + j.field_c;
-              in.field_b = in.field_b - j.field_c;
-              if (ig.field_L == 0) {
-                break L1;
-              } else {
-                lg.field_m = lg.field_m + 1;
-                q.field_n = q.field_n + fa.field_a;
-                in.field_b = in.field_b - pf.field_o * lg.field_m;
-                fa.field_a = fa.field_a - pf.field_o;
-                break L1;
+          q.field_n = q.field_n + j.field_c;
+          in.field_b = in.field_b - j.field_c;
+          if (ig.field_L != 0) {
+            lg.field_m = lg.field_m + 1;
+            q.field_n = q.field_n + fa.field_a;
+            in.field_b = in.field_b - pf.field_o * lg.field_m;
+            fa.field_a = fa.field_a - pf.field_o;
+          }
+          if (m.field_l) {
+            of.field_h.f(param0 ^ -35);
+            cn.a(false, (byte) 99);
+            m.field_l = false;
+          }
+          if (jk.a(-23322)) {
+            var2_int = lj.d(-83);
+            if (var2_int == 2 &&
+              wa.field_q != null) {
+              v.a(15, wa.field_q);
+              wa.field_q.a(true, gf.field_b);
+              wa.field_q = null;
+              se.field_h.requestFocus();
+            }
+            if (var2_int == 3) {
+              nh.a(true, (byte) -90);
+            }
+            if (var2_int == 4) {
+              m.field_l = true;
+              od.k(0);
+            }
+            return;
+          }
+          if (pf.a(param0 - 202)) {
+            stackIn_27_1 = (wa.field_q != null);
+            var2_intLifetime1 = this.b(stackIn_27_1, param0 - 77);
+            if (var2_intLifetime1 != 1) {
+              if (var2_intLifetime1 != 2) {
+                return;
+              }
+              if (wa.field_q != null) {
+                v.a(15, wa.field_q);
+                wa.field_q.a(true, gf.field_b);
+                wa.field_q = null;
+                se.field_h.requestFocus();
+              }
+              dc.a(param0 - 1, bn.c(-1));
+              if (!field_I) {
+                return;
               }
             }
-            L2: {
-              if (!m.field_l) {
-                break L2;
-              } else {
-                of.field_h.f(param0 ^ -35);
-                cn.a(false, (byte) 99);
-                m.field_l = false;
-                break L2;
-              }
+            if (null != wa.field_q) {
+              v.a(param0 - 38, wa.field_q);
+              wa.field_q.a(true, gf.field_b);
+              wa.field_q = null;
+              se.field_h.requestFocus();
             }
-            if (!jk.a(-23322)) {
-              if (!pf.a(param0 + -202)) {
-                if (null != ei.field_o) {
-                  L3: {
-                    ei.field_o.a((byte) -114);
-                    if (0 != pf.field_o) {
-                      ei.field_o.d(param0 ^ -816);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (ei.field_o.b((byte) -66)) {
-                      ei.field_o = null;
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L5: {
-                    if (param0 == 76) {
-                      break L5;
-                    } else {
-                      field_K = (int[]) null;
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if (null == ac.field_i.g(-103)) {
-                      break L6;
-                    } else {
-                      fieldTemp$0 = this.field_D + 1;
-                      this.field_D = this.field_D + 1;
-                      if ((fieldTemp$0 ^ -1) != -336) {
-                        break L6;
-                      } else {
-                        this.field_D = 0;
-                        ac.field_i.c(18120);
-                        break L6;
-                      }
-                    }
-                  }
-                  L7: {
-                    ca.field_c = ca.field_c + 10;
-                    if (0 >= this.field_H) {
-                      break L7;
-                    } else {
-                      this.field_H = this.field_H - 1;
-                      break L7;
-                    }
-                  }
-                  L8: {
-                    if (-513 > (ca.field_c ^ -1)) {
-                      ca.field_c = 0;
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  }
-                  L9: {
-                    if (wa.field_q == null) {
-                      break L9;
-                    } else {
-                      if (!wa.field_q.field_g) {
-                        break L9;
-                      } else {
-                        td.c((byte) 110);
-                        v.a(29, wa.field_q);
-                        wa.field_q.a(true, gf.field_b);
-                        wa.field_q = null;
-                        se.field_h.requestFocus();
-                        break L9;
-                      }
-                    }
-                  }
-                  if (of.field_h == null) {
-                    if (null != this.field_G) {
-                      this.field_G.b(32);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      wj.a((byte) -59);
-                      decompiledRegionSelector0 = 5;
-                      break L0;
-                    }
-                  } else {
-                    cg.a(-27587);
-                    mb.field_s.b(0, (byte) 95);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                }
-              } else {
-                L10: {
-                  stackIn_26_0 = this;
-
-                  if (wa.field_q == null) {
-                    stackIn_27_0 = this;
-                    stackIn_27_1 = 0;
-                    break L10;
-                  } else {
-                    stackIn_24_0 = this;
-                    stackIn_27_0 = this;
-                    stackIn_27_1 = 1;
-                    break L10;
-                  }
-                }
-                L11: {
-                  var2_int = this.b(stackIn_27_1 != 0, param0 + -77);
-                  if (-2 == (var2_int ^ -1)) {
-                    if (null == wa.field_q) {
-                      break L11;
-                    } else {
-                      v.a(param0 + -38, wa.field_q);
-                      wa.field_q.a(true, gf.field_b);
-                      wa.field_q = null;
-                      se.field_h.requestFocus();
-                      break L11;
-                    }
-                  } else {
-                    if ((var2_int ^ -1) != -3) {
-                      break L11;
-                    } else {
-                      L12: {
-                        if (wa.field_q == null) {
-                          break L12;
-                        } else {
-                          v.a(15, wa.field_q);
-                          wa.field_q.a(true, gf.field_b);
-                          wa.field_q = null;
-                          se.field_h.requestFocus();
-                          break L12;
-                        }
-                      }
-                      dc.a(param0 + -1, bn.c(-1));
-                      break L11;
-                    }
-                  }
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              L13: {
-                var2_int = lj.d(-83);
-                if (var2_int != 2) {
-                  break L13;
-                } else {
-                  if (wa.field_q == null) {
-                    break L13;
-                  } else {
-                    v.a(15, wa.field_q);
-                    wa.field_q.a(true, gf.field_b);
-                    wa.field_q = null;
-                    se.field_h.requestFocus();
-                    break L13;
-                  }
-                }
-              }
-              L14: {
-                if ((var2_int ^ -1) != -4) {
-                  break L14;
-                } else {
-                  nh.a(true, (byte) -90);
-                  break L14;
-                }
-              }
-              L15: {
-                if (var2_int != 4) {
-                  break L15;
-                } else {
-                  m.field_l = true;
-                  od.k(0);
-                  break L15;
-                }
-              }
-              decompiledRegionSelector0 = 0;
-              break L0;
+            return;
+          }
+          if (null != ei.field_o) {
+            ei.field_o.a((byte) -114);
+            if (0 != pf.field_o) {
+              ei.field_o.d(param0 ^ -816);
+            }
+            if (ei.field_o.b((byte) -66)) {
+              ei.field_o = null;
+            }
+            return;
+          }
+          if (param0 != 76) {
+            field_K = (int[]) null;
+          }
+          if (null != ac.field_i.g(-103)) {
+            fieldTemp$0 = this.field_D + 1;
+            this.field_D = this.field_D + 1;
+            if (fieldTemp$0 == 335) {
+              this.field_D = 0;
+              ac.field_i.c(18120);
             }
           }
+          ca.field_c = ca.field_c + 10;
+          if (0 < this.field_H) {
+            this.field_H = this.field_H - 1;
+          }
+          if (ca.field_c > 512) {
+            ca.field_c = 0;
+          }
+          if (wa.field_q != null &&
+            wa.field_q.field_g) {
+            td.c((byte) 110);
+            v.a(29, wa.field_q);
+            wa.field_q.a(true, gf.field_b);
+            wa.field_q = null;
+            se.field_h.requestFocus();
+          }
+          if (of.field_h != null) {
+            cg.a(-27587);
+            mb.field_s.b(0, (byte) 95);
+            return;
+          }
+          if (null != this.field_G) {
+            this.field_G.b(32);
+            return;
+          }
+          wj.a((byte) -59);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var2), "HostileSpawn.BA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
         }
     }
 
@@ -4201,38 +2294,31 @@ public final class HostileSpawn extends d {
         kd var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.a(9, false, 11, 23, 0, false, 13, 10);
-              eh.field_c = new wm();
-              var2 = new w();
-              var2.c(param0 + 4325, 128, 9);
-              var3 = new kh();
-              var4 = new kh(var3);
-              var5 = new kh(var3);
-              var6 = new kd(var3, var4, var5);
-              mb.field_s = new he(var5);
-              aj.a(var6, -25127, 22050, (java.awt.Component) ((Object) se.field_h), true, gf.field_b);
-              if (param0 == -4323) {
-                break L1;
-              } else {
-                this.m(-15);
-                break L1;
-              }
-            }
-            kd.field_v = new gd(eh.field_c);
-            kd.field_v.f(0.5f);
-            kd.field_v.b(0.699999988079071f);
-            kd.field_v.e(30.0f);
-            kd.field_v.c(0.4000000059604645f);
-            kd.field_v.a(0.6000000238418579f);
-            kd.field_v.d(0.30000001192092896f);
-            eb.field_e.a(kd.field_v);
-            wj.field_O = wj.field_O / 4;
-            uj.field_p = new oc();
-            this.a(true, (byte) 44, true, true, true);
-            break L0;
+          this.a(9, false, 11, 23, 0, false, 13, 10);
+          eh.field_c = new wm();
+          var2 = new w();
+          var2.c(param0 + 4325, 128, 9);
+          var3 = new kh();
+          var4 = new kh(var3);
+          var5 = new kh(var3);
+          var6 = new kd(var3, var4, var5);
+          mb.field_s = new he(var5);
+          aj.a(var6, -25127, 22050, (java.awt.Component) ((Object) se.field_h), true, gf.field_b);
+          if (param0 != -4323) {
+            this.m(-15);
           }
+          kd.field_v = new gd(eh.field_c);
+          kd.field_v.f(0.5f);
+          kd.field_v.b(0.699999988079071f);
+          kd.field_v.e(30.0f);
+          kd.field_v.c(0.4000000059604645f);
+          kd.field_v.a(0.6000000238418579f);
+          kd.field_v.d(0.30000001192092896f);
+          eb.field_e.a(kd.field_v);
+          wj.field_O = wj.field_O / 4;
+          uj.field_p = new oc();
+          this.a(true, (byte) 44, true, true, true);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -4242,29 +2328,27 @@ public final class HostileSpawn extends d {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            java.net.URL var2 = null;
-            if (param1 > -18) {
-                HostileSpawn.a(-115, (byte) 85);
-            }
-            try {
-                var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-                param0.getAppletContext().showDocument(nj.a(param0, true, var2), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
-            }
+          java.net.URL var2 = null;
+          if (param1 > -18) {
+            HostileSpawn.a(-115, (byte) 85);
+          }
+          try {
+            var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
+            param0.getAppletContext().showDocument(nj.a(param0, true, var2), "_top");
+          } catch (Exception exception) {
+            exception.printStackTrace();
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     private final void a(java.awt.Canvas param0, int param1) {
-        int stackIn_10_0 = 0;
+        boolean stackIn_10_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -4273,388 +2357,333 @@ public final class HostileSpawn extends d {
         int var5 = 0;
         int var6 = 0;
         try {
-          L0: {
-            L1: {
-              this.r(param1 ^ -59);
-              if (jk.a(param1 + -23389)) {
+          this.r(param1 ^ -59);
+          if (!jk.a(param1 - 23389)) {
+            if (pf.a(param1 - 178)) {
+              stackIn_10_0 = (wa.field_q != null);
+              hi.a(stackIn_10_0, (byte) 127);
+              if (field_I) {
                 si.a(0, 0, 640, 480, 0, 128);
-                var3_int = -8 + (320 + -(lm.e(0) / 2) + -8);
-                var4 = -8 + (240 + -(ti.a((byte) -1) / 2)) + -8;
-                var5 = 16 + lm.e(param1 ^ 67) - -16;
+                var3_int = -8 + (320 - lm.e(0) / 2 - 8);
+                var4 = -8 + (240 - ti.a((byte) -1) / 2) - 8;
+                var5 = 16 + lm.e(param1 ^ 67) + 16;
                 var6 = 16 + (ti.a((byte) -1) + 16);
-                si.c(var3_int - 8, -8 + var4, var5 - -16, var6 - -16, 0);
+                si.c(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
                 wh.b(param1 + 44);
-                break L1;
-              } else {
-                if (!pf.a(param1 + -178)) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (wa.field_q != null) {
-                      stackIn_10_0 = 1;
-                      break L2;
-                    } else {
-                      stackIn_10_0 = 0;
-                      break L2;
-                    }
-                  }
-                  hi.a(stackIn_10_0 != 0, (byte) 127);
-                  break L1;
-                }
               }
             }
-            L3: {
-              if (param1 == 67) {
-                break L3;
-              } else {
-                this.field_D = 109;
-                break L3;
-              }
-            }
-            ui.a(0, param0, (byte) 97, 0);
-            break L0;
+          } else {
+            si.a(0, 0, 640, 480, 0, 128);
+            var3_int = -8 + (320 - lm.e(0) / 2 - 8);
+            var4 = -8 + (240 - ti.a((byte) -1) / 2) - 8;
+            var5 = 16 + lm.e(param1 ^ 67) + 16;
+            var6 = 16 + (ti.a((byte) -1) + 16);
+            si.c(var3_int - 8, -8 + var4, var5 + 16, var6 + 16, 0);
+            wh.b(param1 + 44);
           }
+          if (param1 != 67) {
+            this.field_D = 109;
+          }
+          ui.a(0, param0, (byte) 97, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var3);
-
-            stackIn_20_1 = new StringBuilder().append("HostileSpawn.QA(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L4;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_20_0 = var3;
+          stackIn_20_1 = new StringBuilder().append("HostileSpawn.QA(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void t(int param0) {
+        RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         var3 = field_I ? 1 : 0;
         try {
-          L0: {
-            kd.field_y = ci.a("", 127, "Scenery_1", vd.field_C);
-            c.field_f = ei.a(vd.field_C, 97, "", "Scenery_2");
-            jd.field_h = fg.a("", "Scenery_3", vd.field_C, false);
-            om.field_c = fg.a("", "Scenery_4", vd.field_C, false);
-            ih.field_v = fg.a("", "Scenery_5", vd.field_C, false);
-            wj.field_L = fg.a("", "Scenery_6", vd.field_C, false);
-            oc.field_d = fg.a("", "Scenery_7", vd.field_C, false);
-            hg.field_a = fg.a("", "Scenery_8", vd.field_C, false);
-            f.field_b = ci.a("", -76, "Scenery_9", vd.field_C);
-            og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
-            r.field_e = fg.a("", "Scenery_11", vd.field_C, false);
-            r.field_b = fg.a("", "Scenery_12", vd.field_C, false);
-            oe.field_g = ci.a("", -74, "Scenery_13", vd.field_C);
-            rd.field_a = fg.a("", "Scenery_14", vd.field_C, false);
-            ng.field_v = fg.a("", "Scenery_15", vd.field_C, false);
-            re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
-            hf.field_b = fg.a("", "Scenery_17", vd.field_C, false);
-            qj.field_l = fg.a("", "Scenery_18", vd.field_C, false);
-            bj.field_j = fg.a("", "Scenery_19", vd.field_C, false);
-            eh.field_b = fg.a("", "Scenery_20", vd.field_C, false);
-            lc.field_a = fg.a("", "computer_console1_e_tga", vd.field_C, false);
-            bi.field_b = fg.a("", "computer_console1_n_tga", vd.field_C, false);
-            cl.field_j = fg.a("", "computer_console1_s_tga", vd.field_C, false);
-            de.field_o = fg.a("", "computer_console1_w_tga", vd.field_C, false);
-            an.field_j = fg.a("", "computer_console2_e_tga", vd.field_C, false);
-            gi.field_f = fg.a("", "computer_console2_n_tga", vd.field_C, false);
-            an.field_l = fg.a("", "computer_console2_s_tga", vd.field_C, false);
-            vi.field_j = fg.a("", "computer_console2_w_tga", vd.field_C, false);
-            ci.field_k = fg.a("", "Scenery_21", vd.field_C, false);
-            lc.field_b = fg.a("", "Scenery_22", vd.field_C, false);
-            rb.field_y = fg.a("", "Scenery_23", vd.field_C, false);
-            ue.field_h = fg.a("", "Scenery_24", vd.field_C, false);
-            jg.field_j = fg.a("", "Scenery_25", vd.field_C, false);
-            wa.field_o = fg.a("", "Scenery_26", vd.field_C, false);
-            sm.field_h = fg.a("", "Scenery_27", vd.field_C, false);
-            pl.field_j = fg.a("", "Scenery_28", vd.field_C, false);
-            pe.field_hb = fg.a("", "Scenery_29", vd.field_C, false);
-            en.field_w = fg.a("", "Scenery_30", vd.field_C, false);
-            e.field_d = fg.a("", "Scenery_31", vd.field_C, false);
-            ig.field_S = fg.a("", "Scenery_32", vd.field_C, false);
-            f.field_d = fg.a("", "Scenery_33", vd.field_C, false);
-            vc.field_h = fg.a("", "Scenery_34", vd.field_C, false);
-            ki.field_b = fg.a("", "Scenery_35", vd.field_C, false);
-            nh.field_C = fg.a("", "Scenery_36", vd.field_C, false);
-            wb.field_W = fg.a("", "explosive_crate_e_tga", vd.field_C, false);
-            gi.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
-            el.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
-            oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
-            ue.field_f = fg.a("", "health_big_tga", vd.field_C, false);
-            ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
-            kj.field_f = fg.a("", "Scenery_37", vd.field_C, false);
-            gf.field_a = fg.a("", "Scenery_38", vd.field_C, false);
-            bl.field_c = fg.a("", "Scenery_39", vd.field_C, false);
-            u.field_h = fg.a("", "Scenery_40", vd.field_C, false);
-            vj.field_p = fg.a("", "Scenery_41", vd.field_C, false);
-            ea.field_e = fg.a("", "Scenery_42", vd.field_C, false);
-            tc.field_b = fg.a("", "Scenery_43", vd.field_C, false);
-            oe.field_d = fg.a("", "Scenery_44", vd.field_C, false);
-            km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
-            ab.field_a = fg.a("", "Scenery_46", vd.field_C, false);
-            vc.field_k = fg.a("", "Scenery_47", vd.field_C, false);
-            jc.field_a = fg.a("", "Scenery_48", vd.field_C, false);
-            hm.field_l = fg.a("", "Scenery_49", vd.field_C, false);
-            q.field_c = fg.a("", "Scenery_50", vd.field_C, false);
-            df.field_a = fg.a("", "Scenery_51", vd.field_C, false);
-            sj.field_g = fg.a("", "Scenery_52", vd.field_C, false);
-            vf.field_H = fg.a("", "Scenery_53", vd.field_C, false);
-            nd.field_a = fg.a("", "Scenery_54", vd.field_C, false);
-            el.field_l = fg.a("", "Scenery_55", vd.field_C, false);
-            lh.field_e = fg.a("", "Scenery_56", vd.field_C, false);
-            vg.field_d = fg.a("", "Scenery_57", vd.field_C, false);
-            ui.field_b = fg.a("", "Scenery_58", vd.field_C, false);
-            ig.field_R = fg.a("", "Scenery_59", vd.field_C, false);
-            ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
-            eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
-            cn.field_h = fg.a("", "Scenery_62", vd.field_C, false);
-            jh.field_cb = fg.a("", "Scenery_63", vd.field_C, false);
-            fe.field_c = fg.a("", "Scenery_64", vd.field_C, false);
-            qg.field_m = fg.a("", "Scenery_65", vd.field_C, false);
-            qc.field_B = fg.a("", "Scenery_66", vd.field_C, false);
-            ld.field_p = fg.a("", "Scenery_67", vd.field_C, false);
-            rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
-            td.field_f = fg.a("", "Scenery_69", vd.field_C, false);
-            dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
-            ck.field_C = fg.a("", "Scenery_71", vd.field_C, false);
-            tb.field_L = fg.a("", "Scenery_72", vd.field_C, false);
-            wd.field_b = fg.a("", "Scenery_73", vd.field_C, false);
-            ub.field_c = fg.a("", "Scenery_74", vd.field_C, false);
-            fa.field_e = fg.a("", "Scenery_75", vd.field_C, false);
-            ej.field_d = fg.a("", "Scenery_76", vd.field_C, false);
-            ci.field_l = fg.a("", "Scenery_77", vd.field_C, false);
-            ng.field_i = fg.a("", "Scenery_78", vd.field_C, false);
-            mn.field_b = fg.a("", "Scenery_79", vd.field_C, false);
-            ln.field_c = fg.a("", "Scenery_80", vd.field_C, false);
-            hh.field_b = fg.a("", "Scenery_81", vd.field_C, false);
-            bm.field_f = fg.a("", "reactor_tga", vd.field_C, false);
-            ca.field_b = fg.a("", "reactor_damaged_tga", vd.field_C, false);
-            vi.field_k = fg.a("", "shuttle_tga", vd.field_C, false);
-            sc.field_a = ci.a("", param0 ^ 13124, "shield_module", vd.field_C);
-            qm.field_P = fg.a("", "explosive_charge", vd.field_C, false);
-            ci.a("", -21, "cloak_module", vd.field_C);
-            e.field_r = ci.a("", -78, "invulnerability_module", vd.field_C);
-            jg.field_h = ci.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
-            qh.field_l = ci.a("", 120, "fusion_power", vd.field_C);
-            mg.field_b = ci.a("", -67, "incendiary_rockets", vd.field_C);
-            bn.field_l = ci.a("", 111, "plasma_fire", vd.field_C);
-            if (param0 == 13119) {
-              aa.field_b = ci.a("", -48, "powered_boots", vd.field_C);
-              jg.field_f = fg.a("", "security_pass", vd.field_C, false);
-              im.field_a = jd.a((byte) 33, "", vd.field_C, "doors_hammerhead");
-              ak.field_a = ci.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
-              an.field_d = ci.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
-              jd.field_o = jd.a((byte) 33, "", vd.field_C, "doors_planet");
-              ce.field_a = ci.a("", 118, "door_twiddles_planet_h", vd.field_C);
-              r.field_c = ci.a("", 125, "door_twiddles_planet_v", vd.field_C);
-              th.field_Hb = jd.a((byte) 33, "", vd.field_C, "doors_station");
-              qa.field_c = ci.a("", param0 + -13003, "door_twiddles_station_h", vd.field_C);
-              gi.field_d = ci.a("", -86, "door_twiddles_station_v", vd.field_C);
-              ri.field_k = fg.a("", "Scenery_82", vd.field_C, false);
-              ci.field_g = fg.a("", "Scenery_83", vd.field_C, false);
-              wa.field_n = fg.a("", "Scenery_84", vd.field_C, false);
-              mj.field_a = fg.a("", "Scenery_85", vd.field_C, false);
-              mg.field_f = fg.a("", "Scenery_86", vd.field_C, false);
-              le.field_xb = fg.a("", "Scenery_87", vd.field_C, false);
-              rh.field_C = fg.a("", "Scenery_88", vd.field_C, false);
-              rh.field_z = fg.a("", "Scenery_89", vd.field_C, false);
-              in.field_d = fg.a("", "Scenery_90", vd.field_C, false);
-              gi.field_j = ci.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
-              ln.field_g = ci.a("", -91, "Scenery_92", vd.field_C);
-              li.field_y = fg.a("", "Scenery_93", vd.field_C, false);
-              kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
-              sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
-              n.field_q = fg.a("", "Scenery_96", vd.field_C, false);
-              ml.field_a = fg.a("", "Scenery_97", vd.field_C, false);
-              p.field_d = ci.a("", -33, "Scenery_98", vd.field_C);
-              wk.field_a = fg.a("", "Scenery_99", vd.field_C, false);
-              hf.field_e = fg.a("", "Scenery_100", vd.field_C, false);
-              gb.field_l = ci.a("", 110, "Scenery_101", vd.field_C);
-              wh.field_e = ci.a("", 120, "bend_a_1", vd.field_C);
-              wi.field_e = ci.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
-              dl.field_r = ci.a("", 123, "corner_c_1", vd.field_C);
-              id.field_w = ci.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
-              ld.field_o = ci.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
-              la.field_e = ci.a("", 24, "corner_d_4", vd.field_C);
-              bb.field_a = ci.a("", param0 + -13007, "diagonal_d_1", vd.field_C);
-              qg.field_i = ci.a("", param0 + -13121, "diagonal_d_2", vd.field_C);
-              oa.field_i = ci.a("", -46, "diagonal_d_3", vd.field_C);
-              hf.field_j = ci.a("", -112, "Scenery_103", vd.field_C);
-              sd.field_t = fg.a("", "Scenery_107", vd.field_C, false);
-              vb.field_Lb = fg.a("", "Scenery_108", vd.field_C, false);
-              uh.field_f = fg.a("", "Scenery_109", vd.field_C, false);
-              qh.field_g = fg.a("", "Scenery_110", vd.field_C, false);
-              ei.field_m = fg.a("", "Scenery_111", vd.field_C, false);
-              j.field_a = fg.a("", "Scenery_112", vd.field_C, false);
-              vk.field_p = fg.a("", "Scenery_113", vd.field_C, false);
-              wc.field_e = fg.a("", "Scenery_114", vd.field_C, false);
-              ui.field_c = ci.a("", 1, "Scenery_115", vd.field_C);
-              dn.field_h = fg.a("", "Scenery_116", vd.field_C, false);
-              hj.field_r = fg.a("", "Scenery_117", vd.field_C, false);
-              pj.field_l = fg.a("", "Scenery_118", vd.field_C, false);
-              qc.field_q = fg.a("", "Scenery_119", vd.field_C, false);
-              field_C = fg.a("", "Scenery_120", vd.field_C, false);
-              rg.field_a = fg.a("", "Scenery_121", vd.field_C, false);
-              la.field_h = fg.a("", "Scenery_122", vd.field_C, false);
-              gf.field_d = fg.a("", "Scenery_123", vd.field_C, false);
-              ed.field_a = fg.a("", "Scenery_124", vd.field_C, false);
-              nb.field_J = fg.a("", "Scenery_125", vd.field_C, false);
-              t.field_l = fg.a("", "Scenery_126", vd.field_C, false);
-              uc.field_a = fg.a("", "Scenery_127", vd.field_C, false);
-              s.field_d = fg.a("", "Scenery_128", vd.field_C, false);
-              qg.field_g = new bd[106];
-              vb.field_Kb = new bd[qg.field_g.length];
-              var2_int = 0;
-              L1: while (true) {
-                if (var2_int >= 43) {
-                  ie.field_b = jd.a((byte) 33, "", vd.field_C, "spinning_fans");
-                  qg.field_g[43] = fg.a("", "tentacles_corner2", vd.field_C, false);
-                  qg.field_g[44] = fg.a("", "tentacles_straight2", vd.field_C, false);
-                  qg.field_g[45] = fg.a("", "tentacles_straight4", vd.field_C, false);
-                  qg.field_g[46] = fg.a("", "tentacles_straight6", vd.field_C, false);
-                  qg.field_g[47] = fg.a("", "tentacles_straight8", vd.field_C, false);
-                  qg.field_g[48] = fg.a("", "tentacles_t_junction2", vd.field_C, false);
-                  qg.field_g[49] = fg.a("", "tentacles_x_junction2", vd.field_C, false);
-                  qg.field_g[50] = fg.a("", "floor_tentacles_fadeleft", vd.field_C, false);
-                  qg.field_g[51] = fg.a("", "floor_tentacles_faderight", vd.field_C, false);
-                  qg.field_g[52] = fg.a("", "floor_tentacles_innercorner3a", vd.field_C, false);
-                  qg.field_g[53] = fg.a("", "floor_tentacles_innercorner5a", vd.field_C, false);
-                  qg.field_g[54] = fg.a("", "floor_tentacles_innerstraight3_2a", vd.field_C, false);
-                  qg.field_g[55] = fg.a("", "floor_tentacles_innerstraight3_3a", vd.field_C, false);
-                  qg.field_g[56] = fg.a("", "floor_tentacles_innerstraight5_3a", vd.field_C, false);
-                  qg.field_g[57] = fg.a("", "floor_tentacles_innerstraight5_4a", vd.field_C, false);
-                  qg.field_g[58] = fg.a("", "floor_tentacles_outercorner3a", vd.field_C, false);
-                  qg.field_g[59] = fg.a("", "floor_tentacles_outercorner5a", vd.field_C, false);
-                  qg.field_g[60] = fg.a("", "floor_tentacles_outerstraight3_2a", vd.field_C, false);
-                  qg.field_g[61] = fg.a("", "floor_tentacles_outerstraight3_3a", vd.field_C, false);
-                  qg.field_g[62] = fg.a("", "floor_tentacles_outerstraight5_3a", vd.field_C, false);
-                  qg.field_g[63] = fg.a("", "floor_tentacles_outerstraight5_4a", vd.field_C, false);
-                  qg.field_g[64] = fg.a("", "floor_tentacles_patch_straight1", vd.field_C, false);
-                  qg.field_g[65] = fg.a("", "floor_tentacles_patch_straight2", vd.field_C, false);
-                  qg.field_g[66] = fg.a("", "floor_tentacles_patch_straight3", vd.field_C, false);
-                  qg.field_g[67] = fg.a("", "floor_tentacles_patch_outercorner1", vd.field_C, false);
-                  qg.field_g[68] = fg.a("", "floor_tentacles_patch_outercorner2", vd.field_C, false);
-                  qg.field_g[69] = fg.a("", "floor_tentacles_patch_innercorner1", vd.field_C, false);
-                  qg.field_g[70] = fg.a("", "floor_tentacles_patch_innercorner2", vd.field_C, false);
-                  qg.field_g[71] = fg.a("", "floor_tentacles_patch_small1", vd.field_C, false);
-                  qg.field_g[72] = fg.a("", "floor_tentacles_patch_small2", vd.field_C, false);
-                  qg.field_g[73] = fg.a("", "floor_tentacles_patch_small3", vd.field_C, false);
-                  qg.field_g[74] = fg.a("", "floor_tentacles_patch_small4", vd.field_C, false);
-                  qg.field_g[75] = fg.a("", "extra_scenery_f5", vd.field_C, false);
-                  qg.field_g[76] = fg.a("", "extra_scenery_f6", vd.field_C, false);
-                  qg.field_g[77] = fg.a("", "scenery_e4", vd.field_C, false);
-                  qg.field_g[78] = fg.a("", "scenery_e5", vd.field_C, false);
-                  qg.field_g[79] = fg.a("", "scenery_e6", vd.field_C, false);
-                  qg.field_g[80] = fg.a("", "scenery_e7", vd.field_C, false);
-                  qg.field_g[81] = fg.a("", "scenery_e8", vd.field_C, false);
-                  qg.field_g[82] = fg.a("", "scenery_e9", vd.field_C, false);
-                  qg.field_g[83] = fg.a("", "scenery_e10", vd.field_C, false);
-                  qg.field_g[84] = fg.a("", "bookshelf1", vd.field_C, false);
-                  qg.field_g[85] = fg.a("", "bookshelf2", vd.field_C, false);
-                  qg.field_g[86] = fg.a("", "bookshelf3", vd.field_C, false);
-                  qg.field_g[87] = fg.a("", "bookshelf4", vd.field_C, false);
-                  qg.field_g[88] = fg.a("", "bookshelf5", vd.field_C, false);
-                  qg.field_g[89] = fg.a("", "bookshelf6", vd.field_C, false);
-                  qg.field_g[90] = fg.a("", "allthatwasleft", vd.field_C, false);
-                  qg.field_g[91] = fg.a("", "bigradialscorch", vd.field_C, false);
-                  qg.field_g[92] = fg.a("", "bloodsplat_green", vd.field_C, false);
-                  qg.field_g[93] = fg.a("", "bloodsplat_red", vd.field_C, false);
-                  qg.field_g[94] = fg.a("", "oilslick1", vd.field_C, false);
-                  qg.field_g[95] = fg.a("", "oilslick2", vd.field_C, false);
-                  qg.field_g[96] = fg.a("", "scorchmark1", vd.field_C, false);
-                  qg.field_g[97] = fg.a("", "skid", vd.field_C, false);
-                  qg.field_g[98] = fg.a("", "smallradialscorch", vd.field_C, false);
-                  qg.field_g[99] = fg.a("", "flightcontrolpanel1", vd.field_C, false);
-                  qg.field_g[100] = fg.a("", "flightcontrolpanel2", vd.field_C, false);
-                  qg.field_g[101] = fg.a("", "flightcontrolpanel3", vd.field_C, false);
-                  qg.field_g[102] = fg.a("", "onebigrock", vd.field_C, false);
-                  qg.field_g[103] = fg.a("", "tinyrocks", vd.field_C, false);
-                  qg.field_g[104] = fg.a("", "tinyrocks2", vd.field_C, false);
-                  qg.field_g[105] = fg.a("", "tinyrocks3", vd.field_C, false);
-                  var2_int = 0;
-                  L2: while (true) {
-                    if (-107 >= (var2_int ^ -1)) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      vb.field_Kb[var2_int] = ne.a(qg.field_g[var2_int], (byte) -74);
-                      var2_int++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  qg.field_g[var2_int] = fg.a("", "extra_scenery_" + var2_int, vd.field_C, false);
-                  var2_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          kd.field_y = ci.a("", 127, "Scenery_1", vd.field_C);
+          c.field_f = ei.a(vd.field_C, 97, "", "Scenery_2");
+          jd.field_h = fg.a("", "Scenery_3", vd.field_C, false);
+          om.field_c = fg.a("", "Scenery_4", vd.field_C, false);
+          ih.field_v = fg.a("", "Scenery_5", vd.field_C, false);
+          wj.field_L = fg.a("", "Scenery_6", vd.field_C, false);
+          oc.field_d = fg.a("", "Scenery_7", vd.field_C, false);
+          hg.field_a = fg.a("", "Scenery_8", vd.field_C, false);
+          f.field_b = ci.a("", -76, "Scenery_9", vd.field_C);
+          og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
+          r.field_e = fg.a("", "Scenery_11", vd.field_C, false);
+          r.field_b = fg.a("", "Scenery_12", vd.field_C, false);
+          oe.field_g = ci.a("", -74, "Scenery_13", vd.field_C);
+          rd.field_a = fg.a("", "Scenery_14", vd.field_C, false);
+          ng.field_v = fg.a("", "Scenery_15", vd.field_C, false);
+          re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
+          hf.field_b = fg.a("", "Scenery_17", vd.field_C, false);
+          qj.field_l = fg.a("", "Scenery_18", vd.field_C, false);
+          bj.field_j = fg.a("", "Scenery_19", vd.field_C, false);
+          eh.field_b = fg.a("", "Scenery_20", vd.field_C, false);
+          lc.field_a = fg.a("", "computer_console1_e_tga", vd.field_C, false);
+          bi.field_b = fg.a("", "computer_console1_n_tga", vd.field_C, false);
+          cl.field_j = fg.a("", "computer_console1_s_tga", vd.field_C, false);
+          de.field_o = fg.a("", "computer_console1_w_tga", vd.field_C, false);
+          an.field_j = fg.a("", "computer_console2_e_tga", vd.field_C, false);
+          gi.field_f = fg.a("", "computer_console2_n_tga", vd.field_C, false);
+          an.field_l = fg.a("", "computer_console2_s_tga", vd.field_C, false);
+          vi.field_j = fg.a("", "computer_console2_w_tga", vd.field_C, false);
+          ci.field_k = fg.a("", "Scenery_21", vd.field_C, false);
+          lc.field_b = fg.a("", "Scenery_22", vd.field_C, false);
+          rb.field_y = fg.a("", "Scenery_23", vd.field_C, false);
+          ue.field_h = fg.a("", "Scenery_24", vd.field_C, false);
+          jg.field_j = fg.a("", "Scenery_25", vd.field_C, false);
+          wa.field_o = fg.a("", "Scenery_26", vd.field_C, false);
+          sm.field_h = fg.a("", "Scenery_27", vd.field_C, false);
+          pl.field_j = fg.a("", "Scenery_28", vd.field_C, false);
+          pe.field_hb = fg.a("", "Scenery_29", vd.field_C, false);
+          en.field_w = fg.a("", "Scenery_30", vd.field_C, false);
+          e.field_d = fg.a("", "Scenery_31", vd.field_C, false);
+          ig.field_S = fg.a("", "Scenery_32", vd.field_C, false);
+          f.field_d = fg.a("", "Scenery_33", vd.field_C, false);
+          vc.field_h = fg.a("", "Scenery_34", vd.field_C, false);
+          ki.field_b = fg.a("", "Scenery_35", vd.field_C, false);
+          nh.field_C = fg.a("", "Scenery_36", vd.field_C, false);
+          wb.field_W = fg.a("", "explosive_crate_e_tga", vd.field_C, false);
+          gi.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
+          el.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
+          oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
+          ue.field_f = fg.a("", "health_big_tga", vd.field_C, false);
+          ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
+          kj.field_f = fg.a("", "Scenery_37", vd.field_C, false);
+          gf.field_a = fg.a("", "Scenery_38", vd.field_C, false);
+          bl.field_c = fg.a("", "Scenery_39", vd.field_C, false);
+          u.field_h = fg.a("", "Scenery_40", vd.field_C, false);
+          vj.field_p = fg.a("", "Scenery_41", vd.field_C, false);
+          ea.field_e = fg.a("", "Scenery_42", vd.field_C, false);
+          tc.field_b = fg.a("", "Scenery_43", vd.field_C, false);
+          oe.field_d = fg.a("", "Scenery_44", vd.field_C, false);
+          km.field_z = fg.a("", "Scenery_45", vd.field_C, false);
+          ab.field_a = fg.a("", "Scenery_46", vd.field_C, false);
+          vc.field_k = fg.a("", "Scenery_47", vd.field_C, false);
+          jc.field_a = fg.a("", "Scenery_48", vd.field_C, false);
+          hm.field_l = fg.a("", "Scenery_49", vd.field_C, false);
+          q.field_c = fg.a("", "Scenery_50", vd.field_C, false);
+          df.field_a = fg.a("", "Scenery_51", vd.field_C, false);
+          sj.field_g = fg.a("", "Scenery_52", vd.field_C, false);
+          vf.field_H = fg.a("", "Scenery_53", vd.field_C, false);
+          nd.field_a = fg.a("", "Scenery_54", vd.field_C, false);
+          el.field_l = fg.a("", "Scenery_55", vd.field_C, false);
+          lh.field_e = fg.a("", "Scenery_56", vd.field_C, false);
+          vg.field_d = fg.a("", "Scenery_57", vd.field_C, false);
+          ui.field_b = fg.a("", "Scenery_58", vd.field_C, false);
+          ig.field_R = fg.a("", "Scenery_59", vd.field_C, false);
+          ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
+          eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
+          cn.field_h = fg.a("", "Scenery_62", vd.field_C, false);
+          jh.field_cb = fg.a("", "Scenery_63", vd.field_C, false);
+          fe.field_c = fg.a("", "Scenery_64", vd.field_C, false);
+          qg.field_m = fg.a("", "Scenery_65", vd.field_C, false);
+          qc.field_B = fg.a("", "Scenery_66", vd.field_C, false);
+          ld.field_p = fg.a("", "Scenery_67", vd.field_C, false);
+          rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
+          td.field_f = fg.a("", "Scenery_69", vd.field_C, false);
+          dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
+          ck.field_C = fg.a("", "Scenery_71", vd.field_C, false);
+          tb.field_L = fg.a("", "Scenery_72", vd.field_C, false);
+          wd.field_b = fg.a("", "Scenery_73", vd.field_C, false);
+          ub.field_c = fg.a("", "Scenery_74", vd.field_C, false);
+          fa.field_e = fg.a("", "Scenery_75", vd.field_C, false);
+          ej.field_d = fg.a("", "Scenery_76", vd.field_C, false);
+          ci.field_l = fg.a("", "Scenery_77", vd.field_C, false);
+          ng.field_i = fg.a("", "Scenery_78", vd.field_C, false);
+          mn.field_b = fg.a("", "Scenery_79", vd.field_C, false);
+          ln.field_c = fg.a("", "Scenery_80", vd.field_C, false);
+          hh.field_b = fg.a("", "Scenery_81", vd.field_C, false);
+          bm.field_f = fg.a("", "reactor_tga", vd.field_C, false);
+          ca.field_b = fg.a("", "reactor_damaged_tga", vd.field_C, false);
+          vi.field_k = fg.a("", "shuttle_tga", vd.field_C, false);
+          sc.field_a = ci.a("", param0 ^ 13124, "shield_module", vd.field_C);
+          qm.field_P = fg.a("", "explosive_charge", vd.field_C, false);
+          ci.a("", -21, "cloak_module", vd.field_C);
+          e.field_r = ci.a("", -78, "invulnerability_module", vd.field_C);
+          jg.field_h = ci.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
+          qh.field_l = ci.a("", 120, "fusion_power", vd.field_C);
+          mg.field_b = ci.a("", -67, "incendiary_rockets", vd.field_C);
+          bn.field_l = ci.a("", 111, "plasma_fire", vd.field_C);
+          if (param0 != 13119) {
+            return;
+          }
+          aa.field_b = ci.a("", -48, "powered_boots", vd.field_C);
+          jg.field_f = fg.a("", "security_pass", vd.field_C, false);
+          im.field_a = jd.a((byte) 33, "", vd.field_C, "doors_hammerhead");
+          ak.field_a = ci.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
+          an.field_d = ci.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
+          jd.field_o = jd.a((byte) 33, "", vd.field_C, "doors_planet");
+          ce.field_a = ci.a("", 118, "door_twiddles_planet_h", vd.field_C);
+          r.field_c = ci.a("", 125, "door_twiddles_planet_v", vd.field_C);
+          th.field_Hb = jd.a((byte) 33, "", vd.field_C, "doors_station");
+          qa.field_c = ci.a("", param0 - 13003, "door_twiddles_station_h", vd.field_C);
+          gi.field_d = ci.a("", -86, "door_twiddles_station_v", vd.field_C);
+          ri.field_k = fg.a("", "Scenery_82", vd.field_C, false);
+          ci.field_g = fg.a("", "Scenery_83", vd.field_C, false);
+          wa.field_n = fg.a("", "Scenery_84", vd.field_C, false);
+          mj.field_a = fg.a("", "Scenery_85", vd.field_C, false);
+          mg.field_f = fg.a("", "Scenery_86", vd.field_C, false);
+          le.field_xb = fg.a("", "Scenery_87", vd.field_C, false);
+          rh.field_C = fg.a("", "Scenery_88", vd.field_C, false);
+          rh.field_z = fg.a("", "Scenery_89", vd.field_C, false);
+          in.field_d = fg.a("", "Scenery_90", vd.field_C, false);
+          gi.field_j = ci.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
+          ln.field_g = ci.a("", -91, "Scenery_92", vd.field_C);
+          li.field_y = fg.a("", "Scenery_93", vd.field_C, false);
+          kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
+          sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
+          n.field_q = fg.a("", "Scenery_96", vd.field_C, false);
+          ml.field_a = fg.a("", "Scenery_97", vd.field_C, false);
+          p.field_d = ci.a("", -33, "Scenery_98", vd.field_C);
+          wk.field_a = fg.a("", "Scenery_99", vd.field_C, false);
+          hf.field_e = fg.a("", "Scenery_100", vd.field_C, false);
+          gb.field_l = ci.a("", 110, "Scenery_101", vd.field_C);
+          wh.field_e = ci.a("", 120, "bend_a_1", vd.field_C);
+          wi.field_e = ci.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
+          dl.field_r = ci.a("", 123, "corner_c_1", vd.field_C);
+          id.field_w = ci.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
+          ld.field_o = ci.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
+          la.field_e = ci.a("", 24, "corner_d_4", vd.field_C);
+          bb.field_a = ci.a("", param0 - 13007, "diagonal_d_1", vd.field_C);
+          qg.field_i = ci.a("", param0 - 13121, "diagonal_d_2", vd.field_C);
+          oa.field_i = ci.a("", -46, "diagonal_d_3", vd.field_C);
+          hf.field_j = ci.a("", -112, "Scenery_103", vd.field_C);
+          sd.field_t = fg.a("", "Scenery_107", vd.field_C, false);
+          vb.field_Lb = fg.a("", "Scenery_108", vd.field_C, false);
+          uh.field_f = fg.a("", "Scenery_109", vd.field_C, false);
+          qh.field_g = fg.a("", "Scenery_110", vd.field_C, false);
+          ei.field_m = fg.a("", "Scenery_111", vd.field_C, false);
+          j.field_a = fg.a("", "Scenery_112", vd.field_C, false);
+          vk.field_p = fg.a("", "Scenery_113", vd.field_C, false);
+          wc.field_e = fg.a("", "Scenery_114", vd.field_C, false);
+          ui.field_c = ci.a("", 1, "Scenery_115", vd.field_C);
+          dn.field_h = fg.a("", "Scenery_116", vd.field_C, false);
+          hj.field_r = fg.a("", "Scenery_117", vd.field_C, false);
+          pj.field_l = fg.a("", "Scenery_118", vd.field_C, false);
+          qc.field_q = fg.a("", "Scenery_119", vd.field_C, false);
+          field_C = fg.a("", "Scenery_120", vd.field_C, false);
+          rg.field_a = fg.a("", "Scenery_121", vd.field_C, false);
+          la.field_h = fg.a("", "Scenery_122", vd.field_C, false);
+          gf.field_d = fg.a("", "Scenery_123", vd.field_C, false);
+          ed.field_a = fg.a("", "Scenery_124", vd.field_C, false);
+          nb.field_J = fg.a("", "Scenery_125", vd.field_C, false);
+          t.field_l = fg.a("", "Scenery_126", vd.field_C, false);
+          uc.field_a = fg.a("", "Scenery_127", vd.field_C, false);
+          s.field_d = fg.a("", "Scenery_128", vd.field_C, false);
+          qg.field_g = new bd[106];
+          vb.field_Kb = new bd[qg.field_g.length];
+          var2_int = 0;
+          do {
+            if (var2_int >= 43) {
+              ie.field_b = jd.a((byte) 33, "", vd.field_C, "spinning_fans");
+              qg.field_g[43] = fg.a("", "tentacles_corner2", vd.field_C, false);
+              qg.field_g[44] = fg.a("", "tentacles_straight2", vd.field_C, false);
+              qg.field_g[45] = fg.a("", "tentacles_straight4", vd.field_C, false);
+              qg.field_g[46] = fg.a("", "tentacles_straight6", vd.field_C, false);
+              qg.field_g[47] = fg.a("", "tentacles_straight8", vd.field_C, false);
+              qg.field_g[48] = fg.a("", "tentacles_t_junction2", vd.field_C, false);
+              qg.field_g[49] = fg.a("", "tentacles_x_junction2", vd.field_C, false);
+              qg.field_g[50] = fg.a("", "floor_tentacles_fadeleft", vd.field_C, false);
+              qg.field_g[51] = fg.a("", "floor_tentacles_faderight", vd.field_C, false);
+              qg.field_g[52] = fg.a("", "floor_tentacles_innercorner3a", vd.field_C, false);
+              qg.field_g[53] = fg.a("", "floor_tentacles_innercorner5a", vd.field_C, false);
+              qg.field_g[54] = fg.a("", "floor_tentacles_innerstraight3_2a", vd.field_C, false);
+              qg.field_g[55] = fg.a("", "floor_tentacles_innerstraight3_3a", vd.field_C, false);
+              qg.field_g[56] = fg.a("", "floor_tentacles_innerstraight5_3a", vd.field_C, false);
+              qg.field_g[57] = fg.a("", "floor_tentacles_innerstraight5_4a", vd.field_C, false);
+              qg.field_g[58] = fg.a("", "floor_tentacles_outercorner3a", vd.field_C, false);
+              qg.field_g[59] = fg.a("", "floor_tentacles_outercorner5a", vd.field_C, false);
+              qg.field_g[60] = fg.a("", "floor_tentacles_outerstraight3_2a", vd.field_C, false);
+              qg.field_g[61] = fg.a("", "floor_tentacles_outerstraight3_3a", vd.field_C, false);
+              qg.field_g[62] = fg.a("", "floor_tentacles_outerstraight5_3a", vd.field_C, false);
+              qg.field_g[63] = fg.a("", "floor_tentacles_outerstraight5_4a", vd.field_C, false);
+              qg.field_g[64] = fg.a("", "floor_tentacles_patch_straight1", vd.field_C, false);
+              qg.field_g[65] = fg.a("", "floor_tentacles_patch_straight2", vd.field_C, false);
+              qg.field_g[66] = fg.a("", "floor_tentacles_patch_straight3", vd.field_C, false);
+              qg.field_g[67] = fg.a("", "floor_tentacles_patch_outercorner1", vd.field_C, false);
+              qg.field_g[68] = fg.a("", "floor_tentacles_patch_outercorner2", vd.field_C, false);
+              qg.field_g[69] = fg.a("", "floor_tentacles_patch_innercorner1", vd.field_C, false);
+              qg.field_g[70] = fg.a("", "floor_tentacles_patch_innercorner2", vd.field_C, false);
+              qg.field_g[71] = fg.a("", "floor_tentacles_patch_small1", vd.field_C, false);
+              qg.field_g[72] = fg.a("", "floor_tentacles_patch_small2", vd.field_C, false);
+              qg.field_g[73] = fg.a("", "floor_tentacles_patch_small3", vd.field_C, false);
+              qg.field_g[74] = fg.a("", "floor_tentacles_patch_small4", vd.field_C, false);
+              qg.field_g[75] = fg.a("", "extra_scenery_f5", vd.field_C, false);
+              qg.field_g[76] = fg.a("", "extra_scenery_f6", vd.field_C, false);
+              qg.field_g[77] = fg.a("", "scenery_e4", vd.field_C, false);
+              qg.field_g[78] = fg.a("", "scenery_e5", vd.field_C, false);
+              qg.field_g[79] = fg.a("", "scenery_e6", vd.field_C, false);
+              qg.field_g[80] = fg.a("", "scenery_e7", vd.field_C, false);
+              qg.field_g[81] = fg.a("", "scenery_e8", vd.field_C, false);
+              qg.field_g[82] = fg.a("", "scenery_e9", vd.field_C, false);
+              qg.field_g[83] = fg.a("", "scenery_e10", vd.field_C, false);
+              qg.field_g[84] = fg.a("", "bookshelf1", vd.field_C, false);
+              qg.field_g[85] = fg.a("", "bookshelf2", vd.field_C, false);
+              qg.field_g[86] = fg.a("", "bookshelf3", vd.field_C, false);
+              qg.field_g[87] = fg.a("", "bookshelf4", vd.field_C, false);
+              qg.field_g[88] = fg.a("", "bookshelf5", vd.field_C, false);
+              qg.field_g[89] = fg.a("", "bookshelf6", vd.field_C, false);
+              qg.field_g[90] = fg.a("", "allthatwasleft", vd.field_C, false);
+              qg.field_g[91] = fg.a("", "bigradialscorch", vd.field_C, false);
+              qg.field_g[92] = fg.a("", "bloodsplat_green", vd.field_C, false);
+              qg.field_g[93] = fg.a("", "bloodsplat_red", vd.field_C, false);
+              qg.field_g[94] = fg.a("", "oilslick1", vd.field_C, false);
+              qg.field_g[95] = fg.a("", "oilslick2", vd.field_C, false);
+              qg.field_g[96] = fg.a("", "scorchmark1", vd.field_C, false);
+              qg.field_g[97] = fg.a("", "skid", vd.field_C, false);
+              qg.field_g[98] = fg.a("", "smallradialscorch", vd.field_C, false);
+              qg.field_g[99] = fg.a("", "flightcontrolpanel1", vd.field_C, false);
+              qg.field_g[100] = fg.a("", "flightcontrolpanel2", vd.field_C, false);
+              qg.field_g[101] = fg.a("", "flightcontrolpanel3", vd.field_C, false);
+              qg.field_g[102] = fg.a("", "onebigrock", vd.field_C, false);
+              qg.field_g[103] = fg.a("", "tinyrocks", vd.field_C, false);
+              qg.field_g[104] = fg.a("", "tinyrocks2", vd.field_C, false);
+              qg.field_g[105] = fg.a("", "tinyrocks3", vd.field_C, false);
+              break;
+            }
+            qg.field_g[var2_int] = fg.a("", "extra_scenery_" + var2_int, vd.field_C, false);
+            var2_int++;
+          } while (var3 == 0);
+          var2_int = 0;
+          while (var2_int < 106) {
+            vb.field_Kb[var2_int] = ne.a(qg.field_g[var2_int], (byte) -74);
+            var2_int++;
+            if (var3 != 0) {
+              return;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw wg.a((Throwable) ((Object) var2), "HostileSpawn.NA(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          runtimeException = decompiledCaughtException;
+          throw wg.a((Throwable) ((Object) runtimeException), "HostileSpawn.NA(" + param0 + ')');
         }
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            int var1;
-            field_K = new int[]{24, 5};
-            field_F = false;
-            field_E = new int[255];
-            var0 = 0;
-            L0: while (true) {
-              if (255 <= var0) {
-                break $cfr$clinit;
-              } else {
-                L1: {
-                  var1 = (var0 + -128) * 3;
-                  if (var1 > 255) {
-                    var1 = 255;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (var1 >= 0) {
-                    break L2;
-                  } else {
-                    var1 = 0;
-                    break L2;
-                  }
-                }
-                field_E[var0] = 65792 * var0 - -var1;
-                var0++;
-                continue L0;
-              }
-            }
+        int var0 = 0;
+        int var1;
+        field_K = new int[]{24, 5};
+        field_F = false;
+        field_E = new int[255];
+        for (var0 = 0; 255 > var0; var0++) {
+          var1 = (var0 - 128) * 3;
+          if (var1 > 255) {
+            var1 = 255;
+          }
+          if (var1 < 0) {
+            var1 = 0;
+          }
+          field_E[var0] = 65792 * var0 + var1;
         }
     }
 }

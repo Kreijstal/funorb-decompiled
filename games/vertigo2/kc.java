@@ -17,7 +17,7 @@ final class kc {
         field_d = null;
         field_c = null;
         if (param0) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

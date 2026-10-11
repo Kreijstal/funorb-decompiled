@@ -15,39 +15,30 @@ final class ta {
 
     final static void a(byte param0, int param1) {
         if (param0 < 9) {
-            return;
+          return;
         }
         cj.a(-104);
     }
 
     final static void b(byte param0, int param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          L0: {
-            var2_int = -28 % ((57 - param0) / 48);
-            ri.a(be.field_I, param1, true, kg.field_c, (byte) -81, bb.field_G, 0);
-            var3 = 0;
-            L1: while (true) {
-              if (kg.field_c <= var3) {
-                ri.a(dc.field_o, param1 + param1, false, param1 + kg.field_c, (byte) -81, bi.field_e, param1);
-                if (param1 >= kg.field_c) {
-                  break L0;
-                } else {
-                  kg.field_c = param1;
-                  return;
-                }
-              } else {
-                pd.field_e[param1 + var3] = var3;
-                var3++;
-                continue L1;
-              }
-            }
+          var2_int = -28 % ((57 - param0) / 48);
+          ri.a(be.field_I, param1, true, kg.field_c, (byte) -81, bb.field_G, 0);
+          for (var3 = 0; kg.field_c > var3; var3++) {
+            pd.field_e[param1 + var3] = var3;
           }
+          ri.a(dc.field_o, param1 + param1, false, param1 + kg.field_c, (byte) -81, bi.field_e, param1);
+          if (param1 >= kg.field_c) {
+            return;
+          }
+          kg.field_c = param1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -57,23 +48,23 @@ final class ta {
 
     final static void a(boolean param0, int param1, o[] param2, int param3, int param4, mg param5, int param6, int param7, int param8, o[] param9, int param10, int param11, mg param12, int param13, boolean param14) {
         try {
-            o[] var16 = (o[]) null;
-            pk.a(param1, 0, param4, param12, param7, rj.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (o[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
-            if (param0) {
-                ta.b((byte) 72);
-            }
-            ck.a(param14, (byte) 66);
+          o[] var16 = (o[]) null;
+          pk.a(param1, 0, param4, param12, param7, rj.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (o[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
+          if (param0) {
+            ta.b((byte) 72);
+          }
+          ck.a(param14, (byte) 66);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 
     public static void b(byte param0) {
         if (param0 != 14) {
-            ta.a((byte) -21);
-            field_e = null;
-            field_c = null;
-            return;
+          ta.a((byte) -21);
+          field_e = null;
+          field_c = null;
+          return;
         }
         field_e = null;
         field_c = null;

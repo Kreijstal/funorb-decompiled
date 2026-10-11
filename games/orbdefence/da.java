@@ -44,14 +44,14 @@ final class da {
         field_m = null;
         field_r = null;
         if (param0 != 16) {
-            field_r = (tl) null;
+          field_r = (tl) null;
         }
     }
 
     final static String a(int param0) {
         if (param0 > -79) {
-            da.a(-50);
-            return tj.field_a;
+          da.a(-50);
+          return tj.field_a;
         }
         return tj.field_a;
     }

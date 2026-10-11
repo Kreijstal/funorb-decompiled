@@ -8,98 +8,69 @@ final class fn {
     static String field_a;
 
     final static am a(int param0, fj param1) {
+        int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         am var3 = null;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         am stackIn_3_0 = null;
         am stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Torquing.field_u;
         try {
-          L0: {
-            param1.i((byte) -101);
-            var2_int = param1.i((byte) -101);
-            var3 = tj.a(var2_int, 37);
-            var3.field_k = param1.i((byte) -101);
-            var4 = param1.i((byte) -101);
-            if (param0 < -46) {
-              var5 = 0;
-              L1: while (true) {
-                if (var4 <= var5) {
-                  var3.a((byte) 125);
-                  stackIn_8_0 = (am) (var3);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var6 = param1.i((byte) -101);
-                  var3.a(param1, 35, var6);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = (am) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param1.i((byte) -101);
+          var2_int = param1.i((byte) -101);
+          var3 = tj.a(var2_int, 37);
+          var3.field_k = param1.i((byte) -101);
+          var4 = param1.i((byte) -101);
+          if (param0 >= -46) {
+            stackIn_3_0 = (am) null;
+            return stackIn_3_0;
           }
+          for (var5 = 0; var4 > var5; var5++) {
+            var6 = param1.i((byte) -101);
+            var3.a(param1, 35, var6);
+          }
+          var3.a((byte) 125);
+          stackIn_8_0 = var3;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var2);
-
-            stackIn_11_1 = new StringBuilder().append("fn.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_11_0 = var2;
+          stackIn_11_1 = new StringBuilder().append("fn.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_8_0;
+          throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     fn(t[] param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "fn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            fj var2 = (fj) null;
-            fn.a(15, (fj) null);
+          fj var2 = (fj) null;
+          fn.a(15, (fj) null);
         }
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var6 = 84 / ((param3 - -59) / 54);
+        int var6 = 84 / ((param3 + 59) / 54);
         rh.a(param0, param1, (byte) 71, param4, param2, this.field_d);
     }
 

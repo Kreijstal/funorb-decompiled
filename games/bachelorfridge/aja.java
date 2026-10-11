@@ -11,28 +11,24 @@ final class aja extends pv {
     private int field_k;
 
     private final int d(int param0) {
-        if (param0 < 121) {
-          this.field_k = -18;
-          return 100 * Math.abs(this.field_k) / 56;
-        } else {
+        if (param0 >= 121) {
           return 100 * Math.abs(this.field_k) / 56;
         }
+        this.field_k = -18;
+        return 100 * Math.abs(this.field_k) / 56;
     }
 
     final static boolean e(int param0) {
-        if (param0 == 11) {
-          if (gja.b(param0 + -16114)) {
-            if ((vr.field_b & 8) != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 11) {
           return true;
         }
+        if (!gja.b(param0 - 16114)) {
+          return false;
+        }
+        if ((vr.field_b & 8) == 0) {
+          return true;
+        }
+        return false;
     }
 
     public static void b(int param0) {
@@ -44,72 +40,55 @@ final class aja extends pv {
 
     private final void c(int param0) {
         if (param0 != 64) {
-            this.field_n = 44;
+          this.field_n = 44;
         }
     }
 
     private final int c(byte param0) {
-        if (param0 >= -14) {
-          this.field_k = 90;
-          return this.field_n + (int)((double)this.field_g * this.field_j);
-        } else {
+        if (param0 < -14) {
           return this.field_n + (int)((double)this.field_g * this.field_j);
         }
+        this.field_k = 90;
+        return this.field_n + (int)((double)this.field_g * this.field_j);
     }
 
     final boolean b(boolean param0) {
         int discarded$1 = 0;
         int fieldTemp$0 = this.field_g + 1;
         this.field_g = this.field_g + 1;
-        if (fieldTemp$0 <= this.d(124)) {
-          if (param0) {
-            if (this.field_g == 1) {
-              if (-1 >= (this.field_k ^ -1)) {
-                this.field_f.field_u = this.field_f.field_u + 1;
-                this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
-                this.field_f.field_n = this.c((byte) -92);
-                return false;
-              } else {
-                this.field_f.field_u = this.field_f.field_u - 1;
-                this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
-                this.field_f.field_n = this.c((byte) -92);
-                return false;
-              }
-            } else {
-              this.field_f.field_n = this.c((byte) -92);
-              return false;
-            }
-          } else {
-            discarded$1 = this.d(-44);
-            if (this.field_g == 1) {
-              if (-1 >= (this.field_k ^ -1)) {
-                this.field_f.field_u = this.field_f.field_u + 1;
-                this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
-                this.field_f.field_n = this.c((byte) -92);
-                return false;
-              } else {
-                this.field_f.field_u = this.field_f.field_u - 1;
-                this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
-                this.field_f.field_n = this.c((byte) -92);
-                return false;
-              }
-            } else {
-              this.field_f.field_n = this.c((byte) -92);
-              return false;
-            }
-          }
-        } else {
+        if (fieldTemp$0 > this.d(124)) {
           this.c(64);
           return true;
         }
+        if (param0) {
+          if (this.field_g == 1) {
+            if (this.field_k >= 0) {
+              this.field_f.field_u = this.field_f.field_u + 1;
+            } else {
+              this.field_f.field_u = this.field_f.field_u - 1;
+            }
+            this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
+          }
+          this.field_f.field_n = this.c((byte) -92);
+          return false;
+        }
+        discarded$1 = this.d(-44);
+        if (this.field_g == 1) {
+          if (this.field_k >= 0) {
+            this.field_f.field_u = this.field_f.field_u + 1;
+          } else {
+            this.field_f.field_u = this.field_f.field_u - 1;
+          }
+          this.field_f.field_v.a((byte) 49, this.field_f.field_g.field_o.field_b, 15);
+        }
+        this.field_f.field_n = this.c((byte) -92);
+        return false;
     }
 
     aja(jfa param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -117,34 +96,23 @@ final class aja extends pv {
           this.field_f = param0;
           this.field_n = this.field_f.field_n;
           this.field_j = (double)this.field_k / (double)this.d(124);
-          if ((this.field_k ^ -1) > -1) {
+          if (this.field_k < 0) {
             this.field_f.field_s = false;
             return;
-          } else {
-            this.field_f.field_s = true;
-            return;
           }
+          this.field_f.field_s = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("aja.<init>(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L0;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L0;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("aja.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -12,7 +12,7 @@ final class qa {
 
     public static void a(int param0) {
         if (param0 > -1) {
-            return;
+          return;
         }
         field_e = null;
         field_b = null;

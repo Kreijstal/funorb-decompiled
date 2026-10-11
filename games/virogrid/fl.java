@@ -19,18 +19,16 @@ final class fl extends l {
     public static void a(int param0) {
         field_k = null;
         field_s = null;
-        if (param0 != -24488) {
-          fl.a(-64);
-          field_r = null;
-          field_j = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == -24488) {
           field_r = null;
           field_j = null;
           field_g = null;
           return;
         }
+        fl.a(-64);
+        field_r = null;
+        field_j = null;
+        field_g = null;
     }
 
     fl(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

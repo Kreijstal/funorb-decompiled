@@ -15,44 +15,35 @@ final class il {
         field_f = null;
         field_d = null;
         field_c = null;
-        if (param0 >= -43) {
-          il.a(-15);
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -43) {
           field_b = null;
           return;
         }
+        il.a(-15);
+        field_b = null;
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2;
-        var2 = -24 / ((param1 - -7) / 40);
-        if (param0 < 65) {
-          if (param0 >= 97) {
-            if (param0 <= 122) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          if (90 < param0) {
-            if (param0 >= 97) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
+        int var2 = -24 / ((param1 + 7) / 40);
+        if (param0 >= 65) {
+          if (90 >= param0) {
             return true;
           }
+          if (param0 < 97) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
         }
+        if (param0 < 97) {
+          return false;
+        }
+        if (param0 > 122) {
+          return false;
+        }
+        return true;
     }
 
     static {

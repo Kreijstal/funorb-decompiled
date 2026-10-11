@@ -9,16 +9,16 @@ final class deb extends mfb {
 
     final int b(boolean param0) {
         if (param0) {
-            this.b(true);
-            return kg.field_o;
+          this.b(true);
+          return kg.field_o;
         }
         return kg.field_o;
     }
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_b = (String) null;
-            return tea.field_b;
+          field_b = (String) null;
+          return tea.field_b;
         }
         return tea.field_b;
     }
@@ -29,47 +29,31 @@ final class deb extends mfb {
     }
 
     final static boolean a(int param0, char param1) {
-        int stackIn_7_0 = 0;
-        if (param0 <= -107) {
-          if (param1 != 32) {
-            if (40 != param1) {
-              if (param1 == 41) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 > -107) {
           deb.a(-27, 5);
-          if (param1 != 32) {
-            if (40 == param1) {
-              return true;
-            } else {
-              L0: {
-                if (param1 != 41) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (param1 == 32) {
             return true;
           }
+          if (40 != param1) {
+            return param1 == 41 ? true : false;
+          }
+          return true;
         }
+        if (param1 == 32) {
+          return true;
+        }
+        if (40 == param1) {
+          return true;
+        }
+        if (param1 != 41) {
+          return false;
+        }
+        return true;
     }
 
     public static void i(byte param0) {
         field_b = null;
-        int var1 = -124 % ((param0 - -63) / 32);
+        int var1 = -124 % ((param0 + 63) / 32);
     }
 
     final int a(byte param0) {
@@ -79,55 +63,48 @@ final class deb extends mfb {
 
     final int d(byte param0) {
         if (param0 > -52) {
-            this.g((byte) 55);
-            return jga.field_a;
+          this.g((byte) 55);
+          return jga.field_a;
         }
         return jga.field_a;
     }
 
     final int g(int param0) {
         if (param0 != 2769) {
-            deb.i((byte) 112);
-            return ls.field_p;
+          deb.i((byte) 112);
+          return ls.field_p;
         }
         return ls.field_p;
     }
 
     final int k(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
-            return 0;
+          field_b = (String) null;
+          return 0;
         }
         return 0;
     }
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
-            return ffa.field_b;
+          field_b = (String) null;
+          return ffa.field_b;
         }
         return ffa.field_b;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            this.a(true);
-            return uda.field_b;
+          this.a(true);
+          return uda.field_b;
         }
         return uda.field_b;
     }
 
     final static void a(int param0, int param1) {
-        faa var2;
-        if (param0 != 40) {
-          deb.i((byte) 62);
-          var2 = dpa.field_p;
-          var2.h(24335, param1);
-          var2.c(0, 2);
-          var2.c(0, 4);
-          var2.c(0, kua.a((byte) 75));
-          return;
-        } else {
+        faa var2 = null;
+        faa var2Lifetime1;
+        if (param0 == 40) {
           var2 = dpa.field_p;
           var2.h(24335, param1);
           var2.c(0, 2);
@@ -135,19 +112,25 @@ final class deb extends mfb {
           var2.c(0, kua.a((byte) 75));
           return;
         }
+        deb.i((byte) 62);
+        var2Lifetime1 = dpa.field_p;
+        var2Lifetime1.h(24335, param1);
+        var2Lifetime1.c(0, 2);
+        var2Lifetime1.c(0, 4);
+        var2Lifetime1.c(0, kua.a((byte) 75));
     }
 
     final int a(boolean param0) {
         if (param0) {
-            return 17;
+          return 17;
         }
         return 31;
     }
 
     final int f(byte param0) {
         if (param0 <= 0) {
-            deb.a(-4, 20);
-            return vt.field_o;
+          deb.a(-4, 20);
+          return vt.field_o;
         }
         return vt.field_o;
     }

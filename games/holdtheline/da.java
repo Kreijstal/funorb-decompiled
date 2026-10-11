@@ -11,32 +11,32 @@ final class da extends th {
 
     final void h(byte param0) {
         if (8 > this.field_t) {
-            this.field_l = this.field_l + 1;
-            this.field_t = 8;
+          this.field_l = this.field_l + 1;
+          this.field_t = 8;
         }
         if (param0 != 0) {
-            field_s = (String) null;
+          field_s = (String) null;
         }
     }
 
     final int h(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = HoldTheLine.field_D;
-        int var3 = this.field_q >> -69987869;
-        int var4 = 8 + -(this.field_q & param1);
+        int var3 = this.field_q >> 3;
+        int var4 = 8 - (this.field_q & param1);
         int var5 = 0;
         this.field_q = this.field_q + param0;
         while (param0 > var4) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((vd.field_c[var4] & this.field_i[incrementValue$0]) << -var4 + param0);
-            param0 = param0 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((vd.field_c[var4] & this.field_i[incrementValue$0]) << -var4 + param0);
+          param0 = param0 - var4;
+          var4 = 8;
         }
         if (param0 != var4) {
-            var5 = var5 + (this.field_i[var3] >> -param0 + var4 & vd.field_c[param0]);
+          var5 = var5 + (this.field_i[var3] >> -param0 + var4 & vd.field_c[param0]);
         } else {
-            var5 = var5 + (vd.field_c[var4] & this.field_i[var3]);
+          var5 = var5 + (vd.field_c[var4] & this.field_i[var3]);
         }
         return var5;
     }
@@ -49,61 +49,36 @@ final class da extends th {
     }
 
     final void a(byte[] param0, int param1, int param2, boolean param3) {
-        int fieldTemp$1 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = HoldTheLine.field_D;
         try {
-          L0: {
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= param1) {
-                L2: {
-                  if (param3) {
-                    break L2;
-                  } else {
-                    field_p = (da) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                fieldTemp$1 = this.field_l;
-                this.field_l = this.field_l + 1;
-                param0[param2 + var5_int] = (byte)(this.field_i[fieldTemp$1] + -this.field_r.c(256));
-                var5_int++;
-                continue L1;
-              }
-            }
+          for (var5_int = 0; var5_int < param1; var5_int++) {
+            fieldTemp$0 = this.field_l;
+            this.field_l = this.field_l + 1;
+            param0[param2 + var5_int] = (byte)(this.field_i[fieldTemp$0] - this.field_r.c(256));
           }
+          if (!param3) {
+            field_p = (da) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("da.K(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("da.K(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -112,41 +87,43 @@ final class da extends th {
         this.field_l = this.field_l + 1;
         this.field_i[fieldTemp$0] = (byte)(param1 + this.field_r.c(wb.a((int) param0, 289)));
         if (param0 != 33) {
-            this.field_q = -105;
+          this.field_q = -105;
         }
     }
 
     final void a(int param0, int param1, int param2) {
+        int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        int fieldTemp$2 = 0;
-        int var5 = HoldTheLine.field_D;
+        int var4;
+        int var5;
+        var5 = HoldTheLine.field_D;
         param2 = param2 & vd.field_c[param1];
-        int var4 = 39 % ((14 - param0) / 57);
+        var4 = 39 % ((14 - param0) / 57);
         while (this.field_t < param1) {
-            param1 = param1 - this.field_t;
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            this.field_i[fieldTemp$0] = (byte)(this.field_i[fieldTemp$0] + (param2 >>> param1));
-            this.field_i[this.field_l] = (byte) 0;
-            this.field_t = 8;
+          param1 = param1 - this.field_t;
+          fieldTemp$1 = this.field_l;
+          this.field_l = this.field_l + 1;
+          this.field_i[fieldTemp$1] = (byte)(this.field_i[fieldTemp$1] + (param2 >>> param1));
+          this.field_i[this.field_l] = (byte) 0;
+          this.field_t = 8;
         }
-        if (param1 == this.field_t) {
-            fieldTemp$2 = this.field_l;
-            this.field_l = this.field_l + 1;
-            this.field_i[fieldTemp$2] = (byte)(this.field_i[fieldTemp$2] + param2);
-            this.field_i[this.field_l] = (byte) 0;
-            this.field_t = 8;
+        if (param1 != this.field_t) {
+          this.field_t = this.field_t - param1;
+          this.field_i[this.field_l] = (byte)(this.field_i[this.field_l] + (param2 << this.field_t));
         } else {
-            this.field_t = this.field_t - param1;
-            this.field_i[this.field_l] = (byte)(this.field_i[this.field_l] + (param2 << this.field_t));
+          fieldTemp$0 = this.field_l;
+          this.field_l = this.field_l + 1;
+          this.field_i[fieldTemp$0] = (byte)(this.field_i[fieldTemp$0] + param2);
+          this.field_i[this.field_l] = (byte) 0;
+          this.field_t = 8;
         }
     }
 
     final void l(int param0) {
         if (param0 > -6) {
-            this.field_r = (wn) null;
+          this.field_r = (wn) null;
         }
-        this.field_l = (this.field_q - -7) / 8;
+        this.field_l = (this.field_q + 7) / 8;
     }
 
     final void i(byte param0) {
@@ -158,30 +135,30 @@ final class da extends th {
         gn.field_g = param0;
         aa.field_k = true;
         if (param2 != 22676) {
-            return;
+          return;
         }
         try {
-            sb.field_c = new ab(ka.field_b, de.field_I, param1, ci.field_o, gn.field_g);
-            ka.field_b.a(sb.field_c, false);
+          sb.field_c = new ab(ka.field_b, de.field_I, param1, ci.field_o, gn.field_g);
+          ka.field_b.a(sb.field_c, false);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "da.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "da.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(int[] param0, boolean param1) {
         try {
-            this.field_r = new wn(param0);
-            if (param1) {
-                this.g((byte) 92);
-            }
+          this.field_r = new wn(param0);
+          if (param1) {
+            this.g((byte) 92);
+          }
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void e(boolean param0) {
         if (!param0) {
-            field_u = (int[]) null;
+          field_u = (int[]) null;
         }
         this.field_q = this.field_l * 8;
     }

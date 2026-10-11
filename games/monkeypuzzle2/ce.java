@@ -8,7 +8,7 @@ final class ce {
     public static void a(int param0) {
         field_a = null;
         if (param0 <= 10) {
-            ce.a(69);
+          ce.a(69);
         }
     }
 

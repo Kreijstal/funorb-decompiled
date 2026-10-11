@@ -15,10 +15,7 @@ final class af extends gg {
     final static void a(int param0, int param1, int param2, int param3, pb[] param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -29,75 +26,38 @@ final class af extends gg {
         int var11 = 0;
         var11 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param4 == null) {
-                break L1;
-              } else {
-                if (0 < param2) {
-                  var6_int = param4[0].field_w;
-                  var7 = param4[2].field_w;
-                  var8 = param4[1].field_w;
-                  param4[0].a(param5, param3, param1);
-                  param4[2].a(-var7 + param2 + param5, param3, param1);
-                  ti.a(og.field_b);
-                  ti.a(var6_int + param5, param3, param2 + param5 - var7, param4[1].field_x + param3);
-                  var9 = var6_int + param5;
-                  var10 = -var7 + (param5 - -param2);
-                  param5 = var9;
-                  L2: while (true) {
-                    if (var10 <= param5) {
-                      L3: {
-                        if (param0 <= -38) {
-                          break L3;
-                        } else {
-                          field_o = -74;
-                          break L3;
-                        }
-                      }
-                      ti.b(og.field_b);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param4[1].a(param5, param3, param1);
-                      param5 = param5 + var8;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  break L1;
-                }
-              }
+          if (param4 != null &&
+            0 < param2) {
+            var6_int = param4[0].field_w;
+            var7 = param4[2].field_w;
+            var8 = param4[1].field_w;
+            param4[0].a(param5, param3, param1);
+            param4[2].a(-var7 + param2 + param5, param3, param1);
+            ti.a(og.field_b);
+            ti.a(var6_int + param5, param3, param2 + param5 - var7, param4[1].field_x + param3);
+            var9 = var6_int + param5;
+            var10 = -var7 + (param5 + param2);
+            for (param5 = var9; var10 > param5; param5 = param5 + var8) {
+              param4[1].a(param5, param3, param1);
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            if (param0 > -38) {
+              field_o = -74;
+            }
+            ti.b(og.field_b);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var6);
-
-            stackIn_13_1 = new StringBuilder().append("af.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("af.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ma.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -109,9 +69,9 @@ final class af extends gg {
 
     final static void a(boolean param0, byte param1) {
         if (param1 >= -41) {
-            af.a(true, (byte) 62);
-            na.field_d.a(0, 0, 0);
-            return;
+          af.a(true, (byte) 62);
+          na.field_d.a(0, 0, 0);
+          return;
         }
         na.field_d.a(0, 0, 0);
     }
@@ -119,116 +79,64 @@ final class af extends gg {
     final static int a(int param0, int param1, int param2) {
         if (ui.field_F == null) {
           return -1;
+        }
+        if (param0 == 1) {
+          if (param1 >= wc.field_y &&
+            param1 < ui.field_F.field_v + wc.field_y &&
+            vi.field_a <= param2 &&
+            vi.field_a + ui.field_F.field_y > param2) {
+            return 0;
+          }
         } else {
-          if (param0 == 1) {
-            L0: {
-              if (param1 < wc.field_y) {
-                break L0;
-              } else {
-                if (param1 >= ui.field_F.field_v + wc.field_y) {
-                  break L0;
-                } else {
-                  if (vi.field_a > param2) {
-                    break L0;
-                  } else {
-                    if (vi.field_a - -ui.field_F.field_y <= param2) {
-                      break L0;
-                    } else {
-                      return 0;
-                    }
-                  }
-                }
-              }
-            }
-            if (param1 >= cm.field_a) {
-              if (param1 < ui.field_F.field_v + cm.field_a) {
-                if (param2 >= field_l) {
-                  if (ui.field_F.field_y + field_l > param2) {
-                    return 1;
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            } else {
+          field_l = 68;
+          if (param1 < wc.field_y) {
+            if (param1 < cm.field_a) {
               return -1;
             }
-          } else {
-            field_l = 68;
-            if (param1 >= wc.field_y) {
-              if (param1 < ui.field_F.field_v + wc.field_y) {
-                L1: {
-                  if (vi.field_a > param2) {
-                    break L1;
-                  } else {
-                    if (vi.field_a - -ui.field_F.field_y <= param2) {
-                      break L1;
-                    } else {
-                      return 0;
-                    }
-                  }
-                }
-                if (param1 >= cm.field_a) {
-                  if (param1 < ui.field_F.field_v + cm.field_a) {
-                    if (param2 >= field_l) {
-                      if (ui.field_F.field_y + field_l > param2) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                if (param1 >= cm.field_a) {
-                  if (param1 < ui.field_F.field_v + cm.field_a) {
-                    if (param2 >= field_l) {
-                      if (ui.field_F.field_y + field_l <= param2) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              if (param1 >= cm.field_a) {
-                if (param1 < ui.field_F.field_v + cm.field_a) {
-                  if (param2 >= field_l) {
-                    if (ui.field_F.field_y + field_l <= param2) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
+            if (param1 >= ui.field_F.field_v + cm.field_a) {
+              return -1;
             }
+            if (param2 < field_l) {
+              return -1;
+            }
+            if (ui.field_F.field_y + field_l <= param2) {
+              return -1;
+            }
+            return 1;
+          }
+          if (param1 >= ui.field_F.field_v + wc.field_y) {
+            if (param1 < cm.field_a) {
+              return -1;
+            }
+            if (param1 >= ui.field_F.field_v + cm.field_a) {
+              return -1;
+            }
+            if (param2 < field_l) {
+              return -1;
+            }
+            if (ui.field_F.field_y + field_l <= param2) {
+              return -1;
+            }
+            return 1;
+          }
+          if (vi.field_a <= param2 &&
+            vi.field_a + ui.field_F.field_y > param2) {
+            return 0;
           }
         }
+        if (param1 < cm.field_a) {
+          return -1;
+        }
+        if (param1 >= ui.field_F.field_v + cm.field_a) {
+          return -1;
+        }
+        if (param2 < field_l) {
+          return -1;
+        }
+        if (ui.field_F.field_y + field_l > param2) {
+          return 1;
+        }
+        return -1;
     }
 
     af() {

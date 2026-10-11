@@ -8,32 +8,29 @@ final class qc {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         og.a(param4, this.field_a, 96, param0, param3, param2);
         if (param1 != 0) {
-            field_b = 91;
+          field_b = 91;
         }
     }
 
     final static void a(int param0) {
-        if (ci.field_f) {
-          tb.field_c = true;
-          ae.a(true, (byte) 119);
-          if (param0 != 500) {
-            field_b = 26;
-            bh.field_t = 0;
-            return;
-          } else {
-            bh.field_t = 0;
-            return;
-          }
-        } else {
+        if (!ci.field_f) {
           throw new IllegalStateException();
         }
+        tb.field_c = true;
+        ae.a(true, (byte) 119);
+        if (param0 == 500) {
+          bh.field_t = 0;
+          return;
+        }
+        field_b = 26;
+        bh.field_t = 0;
     }
 
     qc(dd[] param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

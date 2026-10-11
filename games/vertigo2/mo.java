@@ -18,9 +18,7 @@ class mo {
         field_d = null;
         field_b = null;
         field_g = null;
-        if (param0 <= 84) {
-          return;
-        } else {
+        if (param0 > 84) {
           field_i = null;
           field_e = null;
           field_h = null;
@@ -38,30 +36,19 @@ class mo {
         RuntimeException var1 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var1_int = 55;
-              var2 = 0;
-              if (param0) {
-                break L1;
-              } else {
-                mo.a(38);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (rk.field_A.length <= var2) {
-                break L0;
-              } else {
-                var3 = tk.field_c.c(rk.field_A[var2]);
-                qi.a(false, -var3 + 620, var3, var1_int);
-                tk.field_c.b(rk.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
-                var1_int += 50;
-                var2++;
-                continue L2;
-              }
-            }
+          var1_int = 55;
+          var2 = 0;
+          if (!param0) {
+            mo.a(38);
           }
+          while (rk.field_A.length > var2) {
+            var3 = tk.field_c.c(rk.field_A[var2]);
+            qi.a(false, -var3 + 620, var3, var1_int);
+            tk.field_c.b(rk.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
+            var1_int += 50;
+            var2++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

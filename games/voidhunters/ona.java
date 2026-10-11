@@ -21,110 +21,67 @@ abstract class ona {
     public static void c(int param0) {
         field_l = null;
         if (param0 < 124) {
-            field_l = (String) null;
+          field_l = (String) null;
         }
     }
 
     abstract boolean e(int param0);
 
     final boolean d(int param0) {
-        Object var3;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 <= 38) {
-          L0: {
-            var3 = (Object) null;
-            this.a((Object) null, true, false);
-            if (this.f(13223) < 20) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.f(13223) < 20) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 > 38) {
+          return this.f(13223) >= 20 ? true : false;
         }
+        Object var3 = (Object) null;
+        this.a((Object) null, true, false);
+        return this.f(13223) >= 20 ? true : false;
     }
 
     final boolean b(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 32) {
-          L0: {
-            ona.c(58);
-            if (-21 < (this.b(-3666) ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-21 < (this.b(-3666) ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 32) {
+          return this.b(-3666) >= 20 ? true : false;
         }
+        ona.c(58);
+        return this.b(-3666) >= 20 ? true : false;
     }
 
     abstract void a(Object param0, boolean param1, boolean param2);
 
     final int f(int param0) {
         if (param0 != 13223) {
-            return -111;
+          return -111;
         }
-        return this.field_a.c(0) + this.field_d.c(param0 + -13223);
+        return this.field_a.c(0) + this.field_d.c(param0 - 13223);
     }
 
     abstract void a(byte param0);
 
     final km a(boolean param0, int param1, int param2, byte param3, int param4) {
         if (param1 != -21) {
-            return (km) null;
+          return (km) null;
         }
-        long var6 = ((long)param4 << 1633492640) + (long)param2;
+        long var6 = ((long)param4 << 32) + (long)param2;
         km var8 = new km();
         var8.field_i = var6;
         var8.field_l = param0 ? true : false;
         var8.field_q = param3;
         if (param0) {
-            if (!((this.f(13223) ^ -1) > -21)) {
-                throw new RuntimeException();
-            }
-            this.field_a.a(var8, -75);
-        } else {
-            if (-21 < (this.b(-3666) ^ -1)) {
-                this.field_c.a(var8, -90);
-                return var8;
-            }
+          if (!(this.f(13223) < 20)) {
             throw new RuntimeException();
+          }
+          this.field_a.a(var8, -75);
+        } else {
+          if (this.b(-3666) < 20) {
+            this.field_c.a(var8, -90);
+            return var8;
+          }
+          throw new RuntimeException();
         }
         return var8;
     }
 
     final int b(int param0) {
         if (param0 != -3666) {
-            return -55;
+          return -55;
         }
         return this.field_c.c(0) + this.field_f.c(0);
     }

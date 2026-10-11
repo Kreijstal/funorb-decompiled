@@ -11,11 +11,11 @@ final class q extends rf {
 
     q(long param0, int param1, byte[] param2) {
         try {
-            this.field_f = param1;
-            this.field_k = param2;
-            this.field_g = param0;
+          this.field_f = param1;
+          this.field_k = param2;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,7 +23,7 @@ final class q extends rf {
         field_i = null;
         field_h = null;
         if (param0 < 104) {
-            q.b((byte) -41);
+          q.b((byte) -41);
         }
     }
 

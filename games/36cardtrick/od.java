@@ -8,9 +8,9 @@ final class od {
 
     public static void a(int param0) {
         if (param0 != -28178) {
-            od.a(-38);
-            field_b = null;
-            return;
+          od.a(-38);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -10,9 +10,9 @@ final class qp {
         field_a = null;
         field_c = null;
         if (param0 < 24) {
-            qp.a((byte) 47);
-            field_b = null;
-            return;
+          qp.a((byte) 47);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -21,68 +21,53 @@ final class qp {
         int var2;
         int var3;
         var3 = ZombieDawn.field_J;
-        if (param1 > 32) {
-          var2 = param0;
-          if (0 != var2) {
-            if (-2 != (var2 ^ -1)) {
-              if ((var2 ^ -1) != -3) {
-                if ((var2 ^ -1) != -4) {
-                  if ((var2 ^ -1) != -5) {
-                    if (var2 != 5) {
-                      if (-7 != (var2 ^ -1)) {
-                        if (var2 != 7) {
-                          if (var2 != 9) {
-                            if (-11 != (var2 ^ -1)) {
-                              if ((var2 ^ -1) != -14) {
-                                if (-13 != (var2 ^ -1)) {
-                                  if (var2 != 14) {
-                                    if ((var2 ^ -1) != -16) {
-                                      return null;
-                                    } else {
-                                      return tl.field_k;
-                                    }
-                                  } else {
-                                    return ig.field_Bb;
-                                  }
-                                } else {
-                                  return pa.field_C;
-                                }
-                              } else {
-                                return dm.field_s;
-                              }
-                            } else {
-                              return ub.field_h;
-                            }
-                          } else {
-                            return fe.field_J;
-                          }
-                        } else {
-                          return bh.field_h;
-                        }
-                      } else {
-                        return ij.field_J;
-                      }
-                    } else {
-                      return ti.field_d;
-                    }
-                  } else {
-                    return rg.field_K;
-                  }
-                } else {
-                  return cl.field_a;
-                }
-              } else {
-                return ah.field_bb;
-              }
-            } else {
-              return mm.field_l;
-            }
-          } else {
-            return tk.field_b;
-          }
-        } else {
+        if (param1 <= 32) {
           return (String) null;
         }
+        var2 = param0;
+        if (0 == var2) {
+          return tk.field_b;
+        }
+        if (var2 == 1) {
+          return mm.field_l;
+        }
+        if (var2 == 2) {
+          return ah.field_bb;
+        }
+        if (var2 == 3) {
+          return cl.field_a;
+        }
+        if (var2 == 4) {
+          return rg.field_K;
+        }
+        if (var2 == 5) {
+          return ti.field_d;
+        }
+        if (var2 == 6) {
+          return ij.field_J;
+        }
+        if (var2 == 7) {
+          return bh.field_h;
+        }
+        if (var2 == 9) {
+          return fe.field_J;
+        }
+        if (var2 == 10) {
+          return ub.field_h;
+        }
+        if (var2 == 13) {
+          return dm.field_s;
+        }
+        if (var2 == 12) {
+          return pa.field_C;
+        }
+        if (var2 == 14) {
+          return ig.field_Bb;
+        }
+        if (var2 != 15) {
+          return null;
+        }
+        return tl.field_k;
     }
 
     static {

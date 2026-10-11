@@ -10,18 +10,16 @@ final class bk {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 >= -9) {
-          bk.a(77);
-          field_b = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 < -9) {
           field_b = null;
           field_d = null;
           field_e = null;
           return;
         }
+        bk.a(77);
+        field_b = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

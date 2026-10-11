@@ -11,9 +11,9 @@ abstract class ng {
     static int field_d;
 
     final static so a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        so var9 = (so) ((Object) fk.field_n.g(75));
-        if (!(var9 != null)) {
-            var9 = new so();
+        so var9 = (so) (fk.field_n.g(75));
+        if (var9 == null) {
+          var9 = new so();
         }
         var9.a(param3, param4, param5, param7, param6, param8, param0, false, param2);
         int var10 = -109 % ((-78 - param1) / 44);
@@ -21,189 +21,82 @@ abstract class ng {
     }
 
     final static boolean a(int param0, boolean param1, CharSequence param2, int param3) {
-        int stackIn_7_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_31_0 = 0;
-        int stackIn_38_0 = 0;
+        int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param3 < 2) {
-                break L1;
-              } else {
-                if (param3 <= 36) {
-                  var4_int = 0;
-                  var5 = 0;
-                  var6 = 0;
-                  var7 = param2.length();
-                  if (param0 == -49) {
-                    var8 = 0;
-                    L2: while (true) {
-                      if (var8 >= var7) {
-                        stackIn_42_0 = var5;
-                        decompiledRegionSelector0 = 4;
-                        break L0;
-                      } else {
-                        L3: {
-                          L4: {
-                            var9 = param2.charAt(var8);
-                            if (var8 == 0) {
-                              if (var9 != 45) {
-                                if (var9 != 43) {
-                                  break L4;
-                                } else {
-                                  if (!param1) {
-                                    break L4;
-                                  } else {
-                                    break L3;
-                                  }
-                                }
-                              } else {
-                                var4_int = 1;
-                                break L3;
-                              }
-                            } else {
-                              break L4;
-                            }
-                          }
-                          L5: {
-                            L6: {
-                              if (var9 < 48) {
-                                break L6;
-                              } else {
-                                if (var9 > 57) {
-                                  break L6;
-                                } else {
-                                  var9 -= 48;
-                                  break L5;
-                                }
-                              }
-                            }
-                            L7: {
-                              if (var9 < 65) {
-                                break L7;
-                              } else {
-                                if (var9 <= 90) {
-                                  var9 -= 55;
-                                  break L5;
-                                } else {
-                                  break L7;
-                                }
-                              }
-                            }
-                            L8: {
-                              if (var9 < 97) {
-                                break L8;
-                              } else {
-                                if (var9 > 122) {
-                                  break L8;
-                                } else {
-                                  var9 -= 87;
-                                  break L5;
-                                }
-                              }
-                            }
-                            stackIn_27_0 = 0;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
-                          if (param3 > var9) {
-                            L9: {
-                              if (var4_int != 0) {
-                                var9 = -var9;
-                                break L9;
-                              } else {
-                                break L9;
-                              }
-                            }
-                            var10 = var9 + param3 * var6;
-                            if (var10 / param3 != var6) {
-                              stackIn_38_0 = 0;
-                              decompiledRegionSelector0 = 3;
-                              break L0;
-                            } else {
-                              var5 = 1;
-                              var6 = var10;
-                              break L3;
-                            }
-                          } else {
-                            stackIn_31_0 = 0;
-                            decompiledRegionSelector0 = 2;
-                            break L0;
-                          }
-                        }
-                        var8++;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    stackIn_7_0 = 1;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
+          if (param3 >= 2 &&
+            param3 <= 36) {
+            var4_int = 0;
+            var5 = 0;
+            var6 = 0;
+            var7 = param2.length();
+            if (param0 != -49) {
+              return true;
+            }
+            for (var8 = 0; var8 < var7; var8++) {
+              boolean decompiledFrameRemainder0 = true;
+              var9 = param2.charAt(var8);
+              if ((var8 == 0) &&
+                (var9 == 45)) {
+                var4_int = 1;
+                decompiledFrameRemainder0 = false;
+              }
+              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+                !param1))) {
+                if (var9 >= 48 &&
+                  var9 <= 57) {
+                  var9 -= 48;
+                } else if (var9 >= 65 &&
+                  var9 <= 90) {
+                  var9 -= 55;
+                } else if (var9 >= 97 &&
+                  var9 <= 122) {
+                  var9 -= 87;
                 } else {
-                  break L1;
+                  return false;
                 }
+                if (param3 <= var9) {
+                  return false;
+                }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = var9 + param3 * var6;
+                if (var10 / param3 != var6) {
+                  return false;
+                }
+                var5 = 1;
+                var6 = var10;
               }
             }
-            throw new IllegalArgumentException("" + param3);
+            stackIn_42_0 = var5;
+            return stackIn_42_0 != 0;
           }
+          throw new IllegalArgumentException("" + param3);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var4 = decompiledCaughtException;
-            stackIn_45_0 = (RuntimeException) (var4);
-
-            stackIn_45_1 = new StringBuilder().append("ng.O(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "null";
-              break L10;
-            } else {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "{...}";
-              break L10;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_27_0 != 0;
+          var4 = decompiledCaughtException;
+          stackIn_45_0 = var4;
+          stackIn_45_1 = new StringBuilder().append("ng.O(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_46_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_31_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_38_0 != 0;
-              } else {
-                return stackIn_42_0 != 0;
-              }
-            }
+            stackIn_46_2 = "{...}";
           }
+          throw fa.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -212,9 +105,9 @@ abstract class ng {
     abstract int b(int param0, int param1);
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -222,41 +115,23 @@ abstract class ng {
         RuntimeException var5 = null;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              oo.b(param1, param3, param2 + param0, 10000536);
-              oo.b(param1, param4 + param3, 1 + param2, 12105912);
-              var5_int = 1;
-              if (var5_int + param3 >= oo.field_e) {
-                break L1;
-              } else {
-                var5_int = oo.field_e + -param3;
-                break L1;
-              }
-            }
-            L2: {
-              var6 = param4;
-              if (oo.field_d < param3 - -var6) {
-                var6 = -param3 + oo.field_d;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var7 = var5_int;
-            L3: while (true) {
-              if (var6 <= var7) {
-                break L0;
-              } else {
-                var8 = var7 * 48 / param4 + 152;
-                var9 = var8 | (var8 << 555333552 | var8 << 764982632);
-                oo.field_i[oo.field_b * (param3 + var7) - -param1] = var9;
-                oo.field_i[(param3 + var7) * oo.field_b - (-param1 + -param2)] = var9;
-                var7++;
-                continue L3;
-              }
-            }
+          oo.b(param1, param3, param2 + param0, 10000536);
+          oo.b(param1, param4 + param3, 1 + param2, 12105912);
+          var5_int = 1;
+          if (var5_int + param3 < oo.field_e) {
+            var5_int = oo.field_e - param3;
           }
+          var6 = param4;
+          if (oo.field_d < param3 + var6) {
+            var6 = -param3 + oo.field_d;
+          }
+          for (var7 = var5_int; var6 > var7; var7++) {
+            var8 = var7 * 48 / param4 + 152;
+            var9 = var8 | (var8 << 16 | var8 << 8);
+            oo.field_i[oo.field_b * (param3 + var7) + param1] = var9;
+            oo.field_i[(param3 + var7) * oo.field_b - (-param1 - param2)] = var9;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -271,7 +146,7 @@ abstract class ng {
         field_g = null;
         field_c = null;
         if (param0 != 816) {
-            field_f = (String) null;
+          field_f = (String) null;
         }
     }
 
@@ -289,109 +164,57 @@ abstract class ng {
         Object stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = (CharSequence) ((Object) param0);
-            if (!em.a(var8, (byte) -38)) {
-              stackIn_3_0 = u.field_f;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if ((ge.field_zb ^ -1) != -3) {
-                stackIn_7_0 = id.field_A;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var7 = md.a((byte) 90, param1);
-                if (var7 == null) {
-                  stackIn_11_0 = vl.a(mf.field_a, new String[]{param1}, 2);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L1: {
-                    var7.a(true);
-                    var7.a(-4564);
-                    fn.field_d = fn.field_d - 1;
-                    if (param2 <= -21) {
-                      break L1;
-                    } else {
-                      ng.a(-125);
-                      break L1;
-                    }
-                  }
-                  var5 = ma.field_a;
-                  var5.b((byte) -35, param3);
-                  var5.field_j = var5.field_j + 1;
-                  var6 = var5.field_j;
-                  var5.a(113, 3);
-                  var5.a(param0, (byte) 105);
-                  var5.e(89, -var6 + var5.field_j);
-                  stackIn_15_0 = null;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                }
-              }
-            }
+          var8 = (CharSequence) ((Object) param0);
+          if (!em.a(var8, (byte) -38)) {
+            stackIn_3_0 = u.field_f;
+            return stackIn_3_0;
           }
+          if (ge.field_zb != 2) {
+            stackIn_7_0 = id.field_A;
+            return stackIn_7_0;
+          }
+          var7 = md.a((byte) 90, param1);
+          if (var7 == null) {
+            stackIn_11_0 = vl.a(mf.field_a, new String[]{param1}, 2);
+            return stackIn_11_0;
+          }
+          var7.a(true);
+          var7.a(-4564);
+          fn.field_d = fn.field_d - 1;
+          if (param2 > -21) {
+            ng.a(-125);
+          }
+          var5 = ma.field_a;
+          var5.b((byte) -35, param3);
+          var5.field_j = var5.field_j + 1;
+          var6 = var5.field_j;
+          var5.a(113, 3);
+          var5.a(param0, (byte) 105);
+          var5.e(89, -var6 + var5.field_j);
+          stackIn_15_0 = null;
+          return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var4);
-
-            stackIn_18_1 = new StringBuilder().append("ng.Q(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L2;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L3;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L3;
-            }
-          }
-          throw fa.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var4 = decompiledCaughtException;
+          stackIn_18_0 = var4;
+          stackIn_18_1 = new StringBuilder().append("ng.Q(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0;
-            } else {
-              return (String) ((Object) stackIn_15_0);
-            }
+            stackIn_19_2 = "{...}";
           }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw fa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

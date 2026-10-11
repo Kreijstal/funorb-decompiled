@@ -13,8 +13,6 @@ final class bb implements ub {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -26,91 +24,51 @@ final class bb implements ub {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param3.field_q) {
-                  break L2;
-                } else {
-                  if (param3.f(-67)) {
-                    break L2;
-                  } else {
-                    stackIn_5_0 = 2188450;
-                    break L1;
-                  }
-                }
-              }
-              stackIn_5_0 = 3249872;
-              break L1;
-            }
-            L3: {
-              var6_int = stackIn_5_0;
-              this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_A + "</u>", param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, var6_int, -1, this.field_d, this.field_f, this.field_b.field_P + this.field_b.field_F);
-              if (param1 == -20618) {
-                break L3;
-              } else {
-                field_a = (String) null;
-                break L3;
-              }
-            }
-            if (param3.f(-54)) {
-              L4: {
-                var7 = this.field_b.c(param3.field_A);
-                var8 = this.field_b.field_P + this.field_b.field_F;
-                var9 = param3.field_o + param2;
-                if ((this.field_d ^ -1) == -3) {
-                  var9 = var9 + (-var7 + param3.field_t);
-                  break L4;
-                } else {
-                  if ((this.field_d ^ -1) == -2) {
-                    var9 = var9 + (-var7 + param3.field_t >> 154134369);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              L5: {
-                var10 = param3.field_w + param4;
-                if (-3 == (this.field_f ^ -1)) {
-                  var10 = var10 + (-var8 + param3.field_s);
-                  break L5;
-                } else {
-                  if (1 != this.field_f) {
-                    break L5;
-                  } else {
-                    var10 = var10 + (-var8 + param3.field_s >> 1539710945);
-                    break L5;
-                  }
-                }
-              }
-              hj.a(var10 + 2, var9 - 2, param1 ^ -20727, var8, var7 + 4);
-              break L0;
-            } else {
-              return;
+          if (!param3.field_q &&
+            !param3.f(-67)) {
+            stackIn_5_0 = 2188450;
+          } else {
+            stackIn_5_0 = 3249872;
+          }
+          var6_int = stackIn_5_0;
+          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_A + "</u>", param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, var6_int, -1, this.field_d, this.field_f, this.field_b.field_P + this.field_b.field_F);
+          if (param1 != -20618) {
+            field_a = (String) null;
+          }
+          if (!param3.f(-54)) {
+            return;
+          }
+          var7 = this.field_b.c(param3.field_A);
+          var8 = this.field_b.field_P + this.field_b.field_F;
+          var9 = param3.field_o + param2;
+          if (this.field_d == 2) {
+            var9 = var9 + (-var7 + param3.field_t);
+          } else {
+            if (this.field_d == 1) {
+              var9 = var9 + (-var7 + param3.field_t >> 1);
             }
           }
+          var10 = param3.field_w + param4;
+          if (this.field_f == 2) {
+            var10 = var10 + (-var8 + param3.field_s);
+          } else {
+            if (1 == this.field_f) {
+              var10 = var10 + (-var8 + param3.field_s >> 1);
+            }
+          }
+          hj.a(var10 + 2, var9 - 2, param1 ^ -20727, var8, var7 + 4);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("bb.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("bb.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -123,20 +81,20 @@ final class bb implements ub {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-            field_c = (me) null;
-            field_a = null;
-            return;
+          field_c = (me) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     bb(dh param0, int param1, int param2) {
         try {
-            this.field_d = param1;
-            this.field_b = param0;
-            this.field_f = param2;
+          this.field_d = param1;
+          this.field_b = param0;
+          this.field_f = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

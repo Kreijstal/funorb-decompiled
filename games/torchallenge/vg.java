@@ -44,87 +44,73 @@ final class vg {
     short[] field_I;
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var6 = TorChallenge.field_F ? 1 : 0;
-        if (param0 < 67) {
-          this.field_s = (byte) 40;
-          var5 = 0;
-          L0: while (true) {
-            if (this.field_d <= var5) {
-              this.a(1);
-              return;
-            } else {
-              this.field_g[var5] = (short)(this.field_g[var5] + param1);
-              this.field_t[var5] = (short)(this.field_t[var5] + param3);
-              this.field_q[var5] = (short)(this.field_q[var5] + param2);
-              var5++;
-              continue L0;
-            }
+        int var5 = 0;
+        int var6 = TorChallenge.field_F ? 1 : 0;
+        int var5Lifetime1;
+        if (param0 >= 67) {
+          for (var5 = 0; this.field_d > var5; var5++) {
+            this.field_g[var5] = (short)(this.field_g[var5] + param1);
+            this.field_t[var5] = (short)(this.field_t[var5] + param3);
+            this.field_q[var5] = (short)(this.field_q[var5] + param2);
           }
-        } else {
-          var5 = 0;
-          L1: while (true) {
-            if (this.field_d <= var5) {
-              this.a(1);
-              return;
-            } else {
-              this.field_g[var5] = (short)(this.field_g[var5] + param1);
-              this.field_t[var5] = (short)(this.field_t[var5] + param3);
-              this.field_q[var5] = (short)(this.field_q[var5] + param2);
-              var5++;
-              continue L1;
-            }
-          }
+          this.a(1);
+          return;
         }
+        this.field_s = (byte) 40;
+        for (var5Lifetime1 = 0; this.field_d > var5Lifetime1; var5Lifetime1++) {
+          this.field_g[var5Lifetime1] = (short)(this.field_g[var5Lifetime1] + param1);
+          this.field_t[var5Lifetime1] = (short)(this.field_t[var5Lifetime1] + param3);
+          this.field_q[var5Lifetime1] = (short)(this.field_q[var5Lifetime1] + param2);
+        }
+        this.a(1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = TorChallenge.field_F ? 1 : 0;
         for (var6 = 0; this.field_d > var6; var6++) {
-            this.field_g[var6] = (short)(param0 * this.field_g[var6] / param4);
-            this.field_t[var6] = (short)(param1 * this.field_t[var6] / param4);
-            this.field_q[var6] = (short)(param3 * this.field_q[var6] / param4);
+          this.field_g[var6] = (short)(param0 * this.field_g[var6] / param4);
+          this.field_t[var6] = (short)(param1 * this.field_t[var6] / param4);
+          this.field_q[var6] = (short)(param3 * this.field_q[var6] / param4);
         }
         this.a(param2);
     }
 
     final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = param2.field_s + (param3 + (param1 - param7));
-        int var10 = param6 + param3 + (param2.field_s - -param1);
-        int var11 = (param2.field_x >> 606002657) + param2.field_p - -param4;
+        int var10 = param6 + param3 + (param2.field_s + param1);
+        int var11 = (param2.field_x >> 1) + param2.field_p + param4;
         qg.a(var9_int, 0, var10, param5 + var11);
-        param2.b(param3 + -1, -1 + param4, param0);
-        param2.b(param3 + -1, 1 + param4, param0);
+        param2.b(param3 - 1, -1 + param4, param0);
+        param2.b(param3 - 1, 1 + param4, param0);
         qg.b(ck.field_c);
-        qg.a(var9_int - -1, 0, 1 + var10, var11 - -param5);
-        param2.b(param3 - -1, -1 + param4, param0);
+        qg.a(var9_int + 1, 0, 1 + var10, var11 + param5);
+        param2.b(param3 + 1, -1 + param4, param0);
         param2.b(param3 + 1, param4 + 1, param0);
         qg.b(ck.field_c);
-        var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s + -param1);
-        var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u - -param7);
+        var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s - param1);
+        var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u + param7);
         qg.a(var9_int, var11 - param5, var10, 480);
         if (param8 <= 56) {
-            return;
+          return;
         }
         try {
-            param2.b(-1 + param3, param4 + -1, param0);
-            param2.b(param3 - 1, 1 + param4, param0);
-            qg.b(ck.field_c);
-            qg.a(1 + var9_int, var11 - param5, var10 - -1, 480);
-            param2.b(1 + param3, param4 + -1, param0);
-            param2.b(param3 + 1, param4 + 1, param0);
-            qg.b(ck.field_c);
+          param2.b(-1 + param3, param4 - 1, param0);
+          param2.b(param3 - 1, 1 + param4, param0);
+          qg.b(ck.field_c);
+          qg.a(1 + var9_int, var11 - param5, var10 + 1, 480);
+          param2.b(1 + param3, param4 - 1, param0);
+          param2.b(param3 + 1, param4 + 1, param0);
+          qg.b(ck.field_c);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     private final void a(int param0) {
         this.field_v = false;
         if (param0 != 1) {
-            this.field_o = (int[]) null;
+          this.field_o = (int[]) null;
         }
     }
 
@@ -132,142 +118,86 @@ final class vg {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (-11 >= (var2_int ^ -1)) {
-                L2: {
-                  if (param1 == -1) {
-                    break L2;
-                  } else {
-                    field_b = (String[][]) null;
-                    break L2;
-                  }
-                }
-                stackIn_11_0 = 0;
-                break L0;
-              } else {
-                if (ba.field_g[var2_int] != param0) {
-                  var2_int++;
-                  continue L1;
-                } else {
-                  return true;
-                }
-              }
+          for (var2_int = 0; var2_int < 10; var2_int++) {
+            if (ba.field_g[var2_int] == param0) {
+              return true;
             }
           }
+          if (param1 != -1) {
+            field_b = (String[][]) null;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var2), "vg.D(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_11_0 != 0;
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = TorChallenge.field_F ? 1 : 0;
-        if (!this.field_v) {
-          this.field_v = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (this.field_d <= var8) {
-              this.field_K = var3;
-              this.field_N = var6;
-              this.field_p = var2;
-              this.field_B = var7;
-              if (param0 >= -88) {
-                this.field_o = (int[]) null;
-                this.field_h = var4;
-                this.field_e = var5;
-                return;
-              } else {
-                this.field_h = var4;
-                this.field_e = var5;
-                return;
-              }
-            } else {
-              L1: {
-                var9 = this.field_g[var8];
-                var10 = this.field_t[var8];
-                if (var9 > var5) {
-                  var5 = var9;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (var6 < var10) {
-                  var6 = var10;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (var2 <= var9) {
-                  break L3;
-                } else {
-                  var2 = var9;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var10 < var3) {
-                  var3 = var10;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                var11 = this.field_q[var8];
-                if (var11 > var7) {
-                  var7 = var11;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (var11 < var4) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_v) {
           return;
         }
+        this.field_v = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; this.field_d > var8; var8++) {
+          var9 = this.field_g[var8];
+          var10 = this.field_t[var8];
+          if (var9 > var5) {
+            var5 = var9;
+          }
+          if (var6 < var10) {
+            var6 = var10;
+          }
+          if (var2 > var9) {
+            var2 = var9;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          var11 = this.field_q[var8];
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var11 < var4) {
+            var4 = var11;
+          }
+        }
+        this.field_K = var3;
+        this.field_N = var6;
+        this.field_p = var2;
+        this.field_B = var7;
+        if (param0 >= -88) {
+          this.field_o = (int[]) null;
+        }
+        this.field_h = var4;
+        this.field_e = var5;
+        return;
     }
 
     public static void c(int param0) {
         if (param0 != 606002657) {
-            return;
+          return;
         }
         field_b = (String[][]) null;
     }

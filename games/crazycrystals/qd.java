@@ -10,43 +10,41 @@ final class qd extends ib {
     public static void i(int param0) {
         field_p = null;
         if (param0 != 400) {
-            field_r = 18;
+          field_r = 18;
         }
     }
 
     final static void a(int param0, int param1) {
         h.field_c = 400 * param1 / 150;
-        h.field_a = (param1 << -798739728) / 150;
-        if (param0 >= -71) {
-          qd.a(-106, -80);
-          h.field_b = 100 * param1 / 150;
-          return;
-        } else {
+        h.field_a = (param1 << 16) / 150;
+        if (param0 < -71) {
           h.field_b = 100 * param1 / 150;
           return;
         }
+        qd.a(-106, -80);
+        h.field_b = 100 * param1 / 150;
     }
 
     qd(Object param0, int param1) {
         super(param1);
         try {
-            this.field_o = param0;
+          this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean h(int param0) {
         if (param0 != -964) {
-            field_q = true;
-            return false;
+          field_q = true;
+          return false;
         }
         return false;
     }
 
     final Object f(int param0) {
         if (param0 != -18088) {
-            return (Object) null;
+          return (Object) null;
         }
         return this.field_o;
     }

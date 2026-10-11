@@ -9,8 +9,8 @@ final class df {
 
     final static int a(byte param0) {
         if (param0 <= 97) {
-            df.a((byte) 125);
-            return kj.field_e;
+          df.a((byte) 125);
+          return kj.field_e;
         }
         return kj.field_e;
     }
@@ -18,7 +18,7 @@ final class df {
     public static void a(boolean param0) {
         field_d = null;
         if (param0) {
-            field_d = (ri) null;
+          field_d = (ri) null;
         }
     }
 

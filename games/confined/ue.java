@@ -7,7 +7,7 @@ class ue extends jl {
     static int field_t;
 
     public static void c(int param0) {
-        int var1 = -3 / ((param0 - -31) / 56);
+        int var1 = -3 / ((param0 + 31) / 56);
         field_s = null;
         field_u = null;
     }
@@ -19,7 +19,7 @@ class ue extends jl {
         nm.field_z = param2;
         af.field_Z = param1;
         if (param4 != 243) {
-            return;
+          return;
         }
         dh.field_Ab = param3;
         wm.field_bb = param0;

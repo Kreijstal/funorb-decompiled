@@ -9,7 +9,7 @@ final class ig {
 
     public static void b(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;

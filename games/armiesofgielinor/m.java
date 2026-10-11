@@ -17,20 +17,20 @@ final class m implements Iterable {
     final void a(tc param0, boolean param1, long param2) {
         tc var5 = null;
         try {
-            if (param1) {
-                field_i = -49;
-            }
-            if (!(param0.field_j == null)) {
-                param0.d(-118);
-            }
-            var5 = this.field_c[(int)((long)(this.field_d - 1) & param2)];
-            param0.field_b = var5;
-            param0.field_j = var5.field_j;
-            param0.field_j.field_b = param0;
-            param0.field_b.field_j = param0;
-            param0.field_i = param2;
+          if (param1) {
+            field_i = -49;
+          }
+          if (param0.field_j != null) {
+            param0.d(-118);
+          }
+          var5 = this.field_c[(int)((long)(this.field_d - 1) & param2)];
+          param0.field_b = var5;
+          param0.field_j = var5.field_j;
+          param0.field_j.field_b = param0;
+          param0.field_b.field_j = param0;
+          param0.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -41,57 +41,56 @@ final class m implements Iterable {
         field_h = null;
         field_b = null;
         if (param0) {
-            m.a(false);
+          m.a(false);
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new tl((m) (this)));
+        return (Iterator) ((Object) new tl(this));
     }
 
     final tc a(int param0, long param1) {
         tc var4;
         tc var5;
         int var6;
+        tc var4Lifetime1;
+        tc var5Lifetime1;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 == 13497) {
           var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
           this.field_e = var4.field_b;
-          L0: while (true) {
+          while (true) {
             if (var4 == this.field_e) {
               this.field_e = null;
               return null;
-            } else {
-              if (param1 != this.field_e.field_i) {
-                this.field_e = this.field_e.field_b;
-                continue L0;
-              } else {
-                var5 = this.field_e;
-                this.field_e = this.field_e.field_b;
-                return var5;
-              }
             }
-          }
-        } else {
-          field_f = (boolean[][]) null;
-          var4 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
-          this.field_e = var4.field_b;
-          L1: while (true) {
-            if (var4 == this.field_e) {
-              this.field_e = null;
-              return null;
-            } else {
-              if (param1 != this.field_e.field_i) {
-                this.field_e = this.field_e.field_b;
-                continue L1;
-              } else {
-                var5 = this.field_e;
-                this.field_e = this.field_e.field_b;
-                return var5;
-              }
+            if (param1 != this.field_e.field_i) {
+              this.field_e = this.field_e.field_b;
+              continue;
             }
+            break;
           }
+          var5 = this.field_e;
+          this.field_e = this.field_e.field_b;
+          return var5;
         }
+        field_f = (boolean[][]) null;
+        var4Lifetime1 = this.field_c[(int)((long)(this.field_d - 1) & param1)];
+        this.field_e = var4Lifetime1.field_b;
+        while (true) {
+          if (var4Lifetime1 == this.field_e) {
+            this.field_e = null;
+            return null;
+          }
+          if (param1 != this.field_e.field_i) {
+            this.field_e = this.field_e.field_b;
+            continue;
+          }
+          break;
+        }
+        var5Lifetime1 = this.field_e;
+        this.field_e = this.field_e.field_b;
+        return var5Lifetime1;
     }
 
     m(int param0) {
@@ -101,11 +100,11 @@ final class m implements Iterable {
         this.field_c = new tc[param0];
         this.field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new tc();
-            var3 = dupTemp$0;
-            this.field_c[var2] = dupTemp$0;
-            var3.field_b = var3;
-            var3.field_j = var3;
+          dupTemp$0 = new tc();
+          var3 = dupTemp$0;
+          this.field_c[var2] = dupTemp$0;
+          var3.field_b = var3;
+          var3.field_j = var3;
         }
     }
 

@@ -14,7 +14,7 @@ final class ol {
 
     final static int b(int param0) {
         if (param0 > -115) {
-            return 44;
+          return 44;
         }
         return (int)(1000000000L / cj.field_i);
     }
@@ -27,7 +27,7 @@ final class ol {
         field_f = null;
         field_g = null;
         if (param0 > -41) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
     }
 
@@ -37,178 +37,76 @@ final class ol {
         e stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -116) {
-                break L1;
-              } else {
-                var4 = (fe) null;
-                ol.a(-70, (fe) null, -27);
-                break L1;
-              }
-            }
-            stackIn_3_0 = we.a(nc.a(param1, 100, param2), 6222);
-            break L0;
+          if (param0 > -116) {
+            var4 = (fe) null;
+            ol.a(-70, (fe) null, -27);
           }
+          stackIn_3_0 = we.a(nc.a(param1, 100, param2), 6222);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ol.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ol.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static boolean a(String param0, boolean param1) {
+        int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
-        int var3 = 0;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            try {
-              L1: {
-                if (uj.field_a.startsWith("win")) {
-                  L2: {
-                    if (param0.startsWith("http://")) {
-                      break L2;
-                    } else {
-                      if (param0.startsWith("https://")) {
-                        break L2;
-                      } else {
-                        stackIn_7_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  L3: {
-                    if (param1) {
-                      break L3;
-                    } else {
-                      ol.a((byte) -9);
-                      break L3;
-                    }
-                  }
-                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                  var3 = 0;
-                  L4: while (true) {
-                    if (var3 >= param0.length()) {
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackIn_18_0 = 1;
-                      decompiledRegionSelector0 = 3;
-                      break L1;
-                    } else {
-                      if (-1 == var2.indexOf((int) param0.charAt(var3))) {
-                        stackIn_15_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L1;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
-                    }
-                  }
-                } else {
-                  stackIn_3_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_20_0 = 0;
-              return stackIn_20_0 != 0;
+          try {
+            if (!uj.field_a.startsWith("win")) {
+              return false;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
-              } else {
-                if (decompiledRegionSelector0 == 2) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 3;
-                  break L0;
-                }
+            if (!param0.startsWith("http://") &&
+              !param0.startsWith("https://")) {
+              return false;
+            }
+            if (!param1) {
+              ol.a((byte) -9);
+            }
+            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            for (var3 = 0; var3 < param0.length(); var3++) {
+              if (-1 == var2.indexOf((int) param0.charAt(var3))) {
+                return false;
               }
             }
+            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+            return true;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2_ref2);
-
-            stackIn_23_1 = new StringBuilder().append("ol.D(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L5;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L5;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_7_0 != 0;
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_23_0 = var2_ref2;
+          stackIn_23_1 = new StringBuilder().append("ol.D(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
           } else {
-            if (decompiledRegionSelector1 == 2) {
-              return stackIn_15_0 != 0;
-            } else {
-              return stackIn_18_0 != 0;
-            }
+            stackIn_24_2 = "{...}";
           }
+          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -217,55 +115,35 @@ final class ol {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -119) {
-                break L1;
-              } else {
-                ol.b(-70);
-                break L1;
-              }
-            }
-            stackIn_3_0 = param1.a((byte) -76);
-            break L0;
+          if (param0 != -119) {
+            ol.b(-70);
           }
+          stackIn_3_0 = param1.a((byte) -76);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ol.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ol.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if ((var1 ^ -1L) > (vk.field_f ^ -1L)) {
-            mh.field_f = mh.field_f + (-var1 + vk.field_f);
+        if (var1 < vk.field_f) {
+          mh.field_f = mh.field_f + (-var1 + vk.field_f);
         }
         if (param0 != 256) {
-            field_b = (String[]) null;
+          field_b = (String[]) null;
         }
         vk.field_f = var1;
         return var1 + mh.field_f;

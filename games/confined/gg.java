@@ -11,7 +11,7 @@ final class gg extends rk {
     public static void b(int param0) {
         field_p = null;
         if (param0 <= 7) {
-            return;
+          return;
         }
         field_q = null;
         field_m = null;

@@ -8,9 +8,9 @@ final class ch {
 
     public static void a(int param0) {
         if (param0 != -5691) {
-            ch.a(1);
-            field_a = null;
-            return;
+          ch.a(1);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

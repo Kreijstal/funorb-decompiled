@@ -14,39 +14,27 @@ final class pg {
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var1_intLifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            ep.e();
-            na.field_K = new int[260];
-            eq.field_g = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if (256 <= var1_int) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (na.field_K.length <= var5) {
-                    if (!param0) {
-                      break L0;
-                    } else {
-                      field_d = (String[]) null;
-                      return;
-                    }
-                  } else {
-                    na.field_K[var5] = 255;
-                    var5++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                na.field_K[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
-              }
-            }
+          ep.e();
+          na.field_K = new int[260];
+          eq.field_g = 11;
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = 15.0;
+            na.field_K[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (na.field_K.length > var5) {
+            na.field_K[var5] = 255;
+            var5++;
+          }
+          if (!param0) {
+            return;
+          }
+          field_d = (String[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -55,88 +43,55 @@ final class pg {
     }
 
     final static gm a(int param0, byte param1, int param2, int param3) {
-        String var5;
-        if (param1 >= -65) {
-          var5 = (String) null;
-          pg.a((String) null, (byte) -66);
-          return (gm) ((Object) new hg(param0, param3, param2));
-        } else {
+        if (param1 < -65) {
           return (gm) ((Object) new hg(param0, param3, param2));
         }
+        String var5 = (String) null;
+        pg.a((String) null, (byte) -66);
+        return (gm) ((Object) new hg(param0, param3, param2));
     }
 
     final static ma a(String param0, byte param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         ma stackIn_3_0 = null;
         ma stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length();
-            if (param1 < -85) {
-              var3 = 0;
-              L1: while (true) {
-                if (var2_int <= var3) {
-                  stackIn_13_0 = so.field_t;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var4 = param0.charAt(var3);
-                  if (var4 >= 48) {
-                    if (var4 <= 57) {
-                      var3++;
-                      continue L1;
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    return null;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = (ma) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var2_int = param0.length();
+          if (param1 >= -85) {
+            stackIn_3_0 = (ma) null;
+            return stackIn_3_0;
+          }
+          for (var3 = 0; var2_int > var3; var3++) {
+            var4 = param0.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
             }
           }
+          stackIn_13_0 = so.field_t;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("pg.B(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L2;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("pg.B(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_13_0;
+          throw fa.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -145,7 +100,7 @@ final class pg {
         field_a = null;
         field_d = null;
         if (param0) {
-            return;
+          return;
         }
         pg.a(77, (byte) -46, -11, 35);
     }

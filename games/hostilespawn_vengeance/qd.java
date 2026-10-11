@@ -15,44 +15,26 @@ public class qd {
         Exception exception = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 == -1) {
-            break L0;
-          } else {
-            var4 = (String) null;
-            qd.a(107, 107, (String) null);
-            break L0;
-          }
+        if (param0 != -1) {
+          var4 = (String) null;
+          qd.a(107, 107, (String) null);
         }
         field_e = param2;
         field_a = param1;
         try {
-          L1: {
-            L2: {
-              field_d = System.getProperty("user.home");
-              if (null == field_d) {
-                break L2;
-              } else {
-                field_d = field_d + "/";
-                break L2;
-              }
-            }
-            break L1;
+          field_d = System.getProperty("user.home");
+          if (null != field_d) {
+            field_d = field_d + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L3;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_b = true;
-        if (null == field_d) {
-          field_d = "~/";
-          return;
-        } else {
+        if (null != field_d) {
           return;
         }
+        field_d = "~/";
     }
 
     public static File a(int param0, String param1, String param2, boolean param3) {
@@ -64,14 +46,12 @@ public class qd {
     }
 
     public static File a(String param0, int param1) {
-        String var3;
-        if (param1 != -19005) {
-          var3 = (String) null;
-          qd.a(107, -10, (String) null);
-          return qd.a(field_a, field_e, param0, true);
-        } else {
+        if (param1 == -19005) {
           return qd.a(field_a, field_e, param0, true);
         }
+        String var3 = (String) null;
+        qd.a(107, -10, (String) null);
+        return qd.a(field_a, field_e, param0, true);
     }
 
     static {

@@ -25,141 +25,83 @@ final class jo implements eb {
 
     final static void a(int param0, String param1, Throwable param2) {
         try {
-            cb stackIn_15_0;
-            int stackIn_15_1;
-            java.net.URL stackIn_15_2;
-            java.net.URL stackIn_15_3;
-            java.net.URL stackIn_15_4;
-            StringBuilder stackIn_15_5;
-            cb stackIn_16_0;
-            int stackIn_16_1;
-            java.net.URL stackIn_16_2;
-            java.net.URL stackIn_16_3;
-            java.net.URL stackIn_16_4;
-            StringBuilder stackIn_16_5;
-            String stackIn_16_6;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            String var3 = null;
-            Exception var3_ref = null;
-            ei var4 = null;
-            DataInputStream var5 = null;
-            int var6 = 0;
-            String var7 = null;
-            String var8 = null;
-            String var9 = null;
-            String var10 = null;
-            var6 = Pixelate.field_H ? 1 : 0;
-            try {
-              L0: {
-                L1: {
-                  var3 = "";
-                  if (param2 == null) {
-                    break L1;
-                  } else {
-                    var3 = oa.a(param2, (byte) 120);
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (param1 != null) {
-                    L3: {
-                      if (param2 != null) {
-                        var3 = var3 + " | ";
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var3 = var3 + param1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L4: {
-                  al.a(var3, 0);
-                  var7 = qk.a(var3, ":", "%3a", -123);
-                  var8 = qk.a(var7, "@", "%40", -128);
-                  if (param0 == 1) {
-                    break L4;
-                  } else {
-                    jo.a(-53);
-                    break L4;
-                  }
-                }
-                var9 = qk.a(var8, "&", "%26", -126);
-                var10 = qk.a(var9, "#", "%23", -127);
-                if (null != qm.field_L) {
-                  L5: {
-                    stackIn_15_0 = fp.field_c;
-
-                    stackIn_15_1 = -44;
-
-                    stackIn_15_2 = null;
-
-                    stackIn_15_3 = null;
-
-                    stackIn_15_4 = qm.field_L.getCodeBase();
-
-                    stackIn_15_5 = new StringBuilder().append("clienterror.ws?c=").append(jh.field_M).append("&u=");
-
-                    if (null == ui.field_c) {
-                      stackIn_16_0 = (cb) ((Object) stackIn_15_0);
-                      stackIn_16_1 = stackIn_15_1;
-                      stackIn_16_2 = null;
-                      stackIn_16_3 = null;
-                      stackIn_16_4 = (java.net.URL) ((Object) stackIn_15_4);
-                      stackIn_16_5 = (StringBuilder) ((Object) stackIn_15_5);
-                      stackIn_16_6 = "" + ff.field_d;
-                      break L5;
-                    } else {
-                      stackIn_16_0 = (cb) ((Object) stackIn_15_0);
-                      stackIn_16_1 = stackIn_15_1;
-                      stackIn_16_2 = null;
-                      stackIn_16_3 = null;
-                      stackIn_16_4 = (java.net.URL) ((Object) stackIn_15_4);
-                      stackIn_16_5 = (StringBuilder) ((Object) stackIn_15_5);
-                      stackIn_16_6 = ui.field_c;
-                      break L5;
-                    }
-                  }
-                  var4 = ((cb) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, stackIn_16_6 + "&v1=" + cb.field_o + "&v2=" + cb.field_l + "&e=" + var10));
-                  L6: while (true) {
-                    if (0 != var4.field_b) {
-                      if ((var4.field_b ^ -1) == -2) {
-                        var5 = (DataInputStream) (var4.field_e);
-                        var5.read();
-                        var5.close();
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      vg.a(1L, (byte) 23);
-                      continue L6;
-                    }
-                  }
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+          cb stackIn_15_0;
+          int stackIn_15_1;
+          java.net.URL stackIn_15_2;
+          java.net.URL stackIn_15_3;
+          java.net.URL stackIn_15_4;
+          StringBuilder stackIn_15_5;
+          java.net.URL stackIn_16_2;
+          java.net.URL stackIn_16_3;
+          String stackIn_16_6;
+          Throwable decompiledCaughtException = null;
+          String var3 = null;
+          Exception var3_ref = null;
+          ei var4 = null;
+          DataInputStream var5 = null;
+          int var6 = 0;
+          String var7 = null;
+          String var8 = null;
+          String var9 = null;
+          String var10 = null;
+          var6 = Pixelate.field_H ? 1 : 0;
+          try {
+            var3 = "";
+            if (param2 != null) {
+              var3 = oa.a(param2, (byte) 120);
+            }
+            if (param1 != null) {
+              if (param2 != null) {
+                var3 = var3 + " | ";
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = (Exception) (Object) decompiledCaughtException;
+              var3 = var3 + param1;
+            }
+            al.a(var3, 0);
+            var7 = qk.a(var3, ":", "%3a", -123);
+            var8 = qk.a(var7, "@", "%40", -128);
+            if (param0 != 1) {
+              jo.a(-53);
+            }
+            var9 = qk.a(var8, "&", "%26", -126);
+            var10 = qk.a(var9, "#", "%23", -127);
+            if (null == qm.field_L) {
               return;
             }
-            if (decompiledRegionSelector0 == 0) {
-              return;
+            stackIn_15_0 = fp.field_c;
+            stackIn_15_1 = -44;
+            stackIn_15_2 = null;
+            stackIn_15_3 = null;
+            stackIn_15_4 = qm.field_L.getCodeBase();
+            stackIn_15_5 = new StringBuilder().append("clienterror.ws?c=").append(jh.field_M).append("&u=");
+            if (null == ui.field_c) {
+              stackIn_16_2 = null;
+              stackIn_16_3 = null;
+              stackIn_16_6 = "" + ff.field_d;
             } else {
+              stackIn_16_2 = null;
+              stackIn_16_3 = null;
+              stackIn_16_6 = ui.field_c;
+            }
+            var4 = ((cb) (Object) stackIn_15_0).a((byte) stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(cb.field_o).append("&v2=").append(cb.field_l).append("&e=").append(var10).toString()));
+            while (0 == var4.field_b) {
+              vg.a(1L, (byte) 23);
+            }
+            if (var4.field_b != 1) {
               return;
             }
+            var5 = (DataInputStream) (var4.field_e);
+            var5.read();
+            var5.close();
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3_ref = (Exception) (Object) decompiledCaughtException;
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -167,8 +109,6 @@ final class jo implements eb {
         ng stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -178,110 +118,71 @@ final class jo implements eb {
         int var10 = 0;
         h var11 = null;
         try {
-          L0: {
-            L1: {
-              if (!(param0 instanceof h)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (ng) (param0);
-                break L1;
-              }
-            }
-            L2: {
-              var11 = (h) ((Object) stackIn_3_0);
-              if (param1 == -124) {
-                break L2;
-              } else {
-                this.field_g = -59;
-                break L2;
-              }
-            }
-            L3: {
-              if (var11 == null) {
-                break L3;
-              } else {
-                param4 = param4 & var11.field_H;
-                break L3;
-              }
-            }
-            L4: {
-              var7 = 5592405;
-              if (!param4) {
-                break L4;
-              } else {
-                var7 = 16777215;
-                break L4;
-              }
-            }
-            L5: {
-              t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
-              var8 = this.field_f + (param3 + param0.field_z);
-              var9 = param2 + param0.field_p - -this.field_l;
-              t.c(var8, var9, this.field_q, this.field_p, 5592405);
-              t.d(var8, var9, this.field_q, this.field_p, var7);
-              if (var11.field_M) {
-                t.b(var8, var9, var8 - -this.field_q, var9 - -this.field_p, 1);
-                t.b(var8 + this.field_q, var9, var8, var9 + this.field_p, 1);
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            if (this.field_m != null) {
-              var10 = this.field_q - (-this.field_f + -this.field_b);
-              this.field_m.a(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 - -this.field_b), param0.field_C - (this.field_b << -1127572639), this.field_g, this.field_i, this.field_e, this.field_o, 0);
-              break L0;
-            } else {
-              return;
-            }
+          if (!(param0 instanceof h)) {
+            stackIn_3_0 = null;
+          } else {
+            stackIn_3_0 = (ng) (param0);
           }
+          var11 = (h) (stackIn_3_0);
+          if (param1 != -124) {
+            this.field_g = -59;
+          }
+          if (var11 != null) {
+            param4 = param4 & var11.field_H;
+          }
+          var7 = 5592405;
+          if (param4) {
+            var7 = 16777215;
+          }
+          t.d(param3 + param0.field_z, param0.field_p + param2, param0.field_E, param0.field_C, this.field_a);
+          var8 = this.field_f + (param3 + param0.field_z);
+          var9 = param2 + param0.field_p + this.field_l;
+          t.c(var8, var9, this.field_q, this.field_p, 5592405);
+          t.d(var8, var9, this.field_q, this.field_p, var7);
+          if (var11.field_M) {
+            t.b(var8, var9, var8 + this.field_q, var9 + this.field_p, 1);
+            t.b(var8 + this.field_q, var9, var8, var9 + this.field_p, 1);
+          }
+          if (this.field_m == null) {
+            return;
+          }
+          var10 = this.field_q - (-this.field_f - this.field_b);
+          this.field_m.a(param0.field_q, param0.field_z + param3 + var10, this.field_d + (param0.field_p + param2), param0.field_E - (var10 + this.field_b), param0.field_C - (this.field_b << 1), this.field_g, this.field_i, this.field_e, this.field_o, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var6);
-
-            stackIn_18_1 = new StringBuilder().append("jo.A(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L6;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_18_0 = var6;
+          stackIn_18_1 = new StringBuilder().append("jo.A(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
-        if (param0 > -103) {
-          field_j = (tf) null;
-          field_c = null;
-          field_n = null;
-          field_j = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 <= -103) {
           field_c = null;
           field_n = null;
           field_j = null;
           field_k = null;
           return;
         }
+        field_j = (tf) null;
+        field_c = null;
+        field_n = null;
+        field_j = null;
+        field_k = null;
     }
 
     final static void a(int param0) {
         fl.a((byte) -125);
         te.a(4, -2671);
         if (param0 != -22218) {
-            jo.a(-34);
+          jo.a(-34);
         }
     }
 
@@ -289,18 +190,18 @@ final class jo implements eb {
         this.field_e = 1;
         this.field_o = 1;
         try {
-            this.field_a = param9;
-            this.field_d = param2;
-            this.field_g = param3;
-            this.field_f = param5;
-            this.field_l = param6;
-            this.field_i = param4;
-            this.field_q = param8;
-            this.field_m = param0;
-            this.field_p = param7;
-            this.field_b = param1;
+          this.field_a = param9;
+          this.field_d = param2;
+          this.field_g = param3;
+          this.field_f = param5;
+          this.field_l = param6;
+          this.field_i = param4;
+          this.field_q = param8;
+          this.field_m = param0;
+          this.field_p = param7;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "jo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

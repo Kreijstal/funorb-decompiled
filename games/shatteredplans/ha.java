@@ -9,60 +9,45 @@ final class ha {
     int field_e;
 
     final int a(boolean param0, int param1) {
-        int var3;
+        int var3 = 0;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (!param0) {
-          if (null != this.field_b) {
-            if (this.field_b.length != 0) {
-              var3 = 1;
-              L0: while (true) {
-                if (this.field_b.length > var3) {
-                  if ((param1 ^ -1) <= (this.field_b[var3] + this.field_b[-1 + var3] >> -838636703 ^ -1)) {
-                    var3++;
-                    continue L0;
-                  } else {
-                    return var3 - 1;
-                  }
-                } else {
-                  return this.field_b.length + -1;
-                }
-              }
-            } else {
-              return 0;
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0) {
           return -25;
         }
+        if (null == this.field_b) {
+          return 0;
+        }
+        if (this.field_b.length == 0) {
+          return 0;
+        }
+        for (var3 = 1; this.field_b.length > var3; var3++) {
+          if (param1 < (this.field_b[var3] + this.field_b[-1 + var3] >> 1)) {
+            return var3 - 1;
+          }
+        }
+        return this.field_b.length - 1;
     }
 
     final int b(int param0) {
-        int stackIn_5_0 = 0;
-        if (param0 >= 20) {
-          if (null != this.field_b) {
-            if (this.field_b.length == 0) {
-              return 0;
-            } else {
-              return this.field_b[-1 + this.field_b.length];
-            }
-          } else {
-            stackIn_5_0 = 0;
-            return stackIn_5_0;
-          }
-        } else {
+        if (param0 < 20) {
           return -36;
         }
+        if (null == this.field_b) {
+          return 0;
+        }
+        if (this.field_b.length != 0) {
+          return this.field_b[-1 + this.field_b.length];
+        }
+        return 0;
     }
 
     public static void a(int param0) {
         if (param0 != 4324) {
-            ha.a(-34);
-            field_a = null;
-            field_d = null;
-            return;
+          ha.a(-34);
+          field_a = null;
+          field_d = null;
+          return;
         }
         field_a = null;
         field_d = null;
@@ -71,22 +56,18 @@ final class ha {
     final static boolean a(byte param0) {
         if (!sr.field_h) {
           return false;
-        } else {
-          if (param0 > 94) {
-            if (em.field_h != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            ha.a((byte) 11);
-            if (em.field_h != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          }
         }
+        if (param0 <= 94) {
+          ha.a((byte) 11);
+          if (em.field_h == 0) {
+            return true;
+          }
+          return false;
+        }
+        if (em.field_h == 0) {
+          return true;
+        }
+        return false;
     }
 
     ha(int param0, int param1, int param2) {

@@ -6,7 +6,7 @@ final class uc {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
         field_a = null;
     }
@@ -19,44 +19,29 @@ final class uc {
         int var3 = 0;
         int var4 = 0;
         boolean[] var5 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          L0: {
-            var5 = qd.field_a;
-            var1 = var5;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= var5.length) {
-                var1_int = 15 / ((param0 - -54) / 33);
-                stackIn_8_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var3 = var5[var2] ? 1 : 0;
-                if (var3 == 0) {
-                  var2++;
-                  continue L1;
-                } else {
-                  stackIn_5_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
+          var5 = qd.field_a;
+          var1 = var5;
+          var2 = 0;
+          while (true) {
+            if (var2 >= var5.length) {
+              var1_int = 15 / ((param0 + 54) / 33);
+              return false;
             }
+            var3 = var5[var2] ? 1 : 0;
+            if (var3 == 0) {
+              var2++;
+              continue;
+            }
+            break;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1_ref), "uc.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_8_0 != 0;
         }
     }
 

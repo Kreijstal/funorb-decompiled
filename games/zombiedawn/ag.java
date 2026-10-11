@@ -23,79 +23,42 @@ final class ag implements Iterator {
         byte[] stackIn_15_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              if (param0 instanceof byte[]) {
-                var3 = (byte[]) (param0);
-                if (!param2) {
-                  stackIn_9_0 = (byte[]) (var3);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_7_0 = jl.a(var3, (byte) 45);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                if (param1 >= 80) {
-                  if (!(param0 instanceof rf)) {
-                    throw new IllegalArgumentException();
-                  } else {
-                    var4 = (rf) (param0);
-                    stackIn_15_0 = var4.a((byte) -116);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                } else {
-                  stackIn_12_0 = (byte[]) null;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            } else {
-              return null;
-            }
+          if (param0 == null) {
+            return null;
           }
+          if (param0 instanceof byte[]) {
+            var3 = (byte[]) (param0);
+            if (!param2) {
+              stackIn_9_0 = var3;
+              return stackIn_9_0;
+            }
+            stackIn_7_0 = jl.a(var3, (byte) 45);
+            return stackIn_7_0;
+          }
+          if (param1 < 80) {
+            stackIn_12_0 = (byte[]) null;
+            return stackIn_12_0;
+          }
+          if (!(param0 instanceof rf)) {
+            throw new IllegalArgumentException();
+          }
+          var4 = (rf) (param0);
+          stackIn_15_0 = var4.a((byte) -116);
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3_ref);
-
-            stackIn_19_1 = new StringBuilder().append("ag.A(");
-
-            if (param0 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L1;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L1;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
+          var3_ref = decompiledCaughtException;
+          stackIn_19_0 = var3_ref;
+          stackIn_19_1 = new StringBuilder().append("ag.A(");
+          if (param0 == null) {
+            stackIn_20_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0;
-            } else {
-              return stackIn_15_0;
-            }
+            stackIn_20_2 = "{...}";
           }
+          throw sh.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -105,7 +68,7 @@ final class ag implements Iterator {
 
     public static void a(byte param0) {
         if (param0 != 48) {
-            return;
+          return;
         }
         field_a = null;
         field_h = null;
@@ -115,24 +78,17 @@ final class ag implements Iterator {
     }
 
     final static void a(int param0, boolean param1) {
-        Object var2;
-        L0: {
-          var2 = null;
-          if (!param1) {
-            var2 = new wh();
-            break L0;
-          } else {
-            var2 = new cl();
-            break L0;
-          }
+        Object var2 = null;
+        if (param1) {
+          var2 = new cl();
+        } else {
+          var2 = new wh();
         }
         nl.a(new lg((wa) (var2)), (byte) -121);
-        if (param0 > -105) {
-          field_e = (String) null;
-          return;
-        } else {
+        if (param0 <= -105) {
           return;
         }
+        field_e = (String) null;
     }
 
     final static void a(int param0, boolean param1, bo param2) {
@@ -148,23 +104,23 @@ final class ag implements Iterator {
         var5.h(98, param2.field_m);
         var5.h(-118, param2.field_l);
         if (!param1) {
-            return;
+          return;
         }
         try {
-            var5.e(-69, var4);
-            var5.d(-60, -var4 + var5.field_j);
+          var5.e(-69, var4);
+          var5.d(-60, -var4 + var5.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "ag.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Object next() {
         Object var1 = this.field_g;
         if (this.field_f.field_c != var1) {
-            this.field_g = ((nb) (var1)).field_i;
+          this.field_g = ((nb) (var1)).field_i;
         } else {
-            this.field_g = null;
-            var1 = null;
+          this.field_g = null;
+          var1 = null;
         }
         this.field_d = (nb) (var1);
         return var1;
@@ -173,17 +129,17 @@ final class ag implements Iterator {
     ag(ii param0) {
         this.field_d = null;
         try {
-            this.field_f = param0;
-            this.field_d = null;
-            this.field_g = this.field_f.field_c.field_i;
+          this.field_f = param0;
+          this.field_d = null;
+          this.field_g = this.field_f.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
         if (null == this.field_d) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_d.c((byte) -9);
         this.field_d = null;

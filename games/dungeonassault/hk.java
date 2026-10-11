@@ -13,7 +13,7 @@ final class hk {
         field_c = null;
         field_a = null;
         if (param0 >= -59) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

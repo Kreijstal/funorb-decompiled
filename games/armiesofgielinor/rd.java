@@ -22,7 +22,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_h = null;
         field_e = null;
         if (param0 != 20000000) {
-            field_e = (je) null;
+          field_e = (je) null;
         }
     }
 
@@ -31,18 +31,18 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_k = true;
+          this.field_k = true;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "rd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "rd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0) {
         if (param0 != 8445) {
-            rd.b(33);
-            qj.field_C.setLength(0);
-            rs.field_t = 0;
-            return;
+          rd.b(33);
+          qj.field_C.setLength(0);
+          rs.field_t = 0;
+          return;
         }
         qj.field_C.setLength(0);
         rs.field_t = 0;
@@ -56,12 +56,12 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(int param0, hd param1) {
         try {
-            fj.a(this.field_c, param1, param0 ^ 30916);
-            if (param0 != -30918) {
-                field_f = (String) null;
-            }
+          fj.a(this.field_c, param1, param0 ^ 30916);
+          if (param0 != -30918) {
+            field_f = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

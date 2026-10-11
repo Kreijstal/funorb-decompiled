@@ -24,8 +24,8 @@ final class kc extends ck {
         field_o = null;
         field_C = null;
         if (param0 != -1341) {
-            int[] var2 = (int[]) null;
-            kc.a((int[]) null, (int[]) null, -79);
+          int[] var2 = (int[]) null;
+          kc.a((int[]) null, (int[]) null, -79);
         }
         field_t = null;
         field_y = null;
@@ -36,11 +36,8 @@ final class kc extends ck {
     final static void a(String param0, int param1, boolean param2, int param3, java.awt.Color param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         StringBuilder stackIn_23_1 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var5 = null;
@@ -51,149 +48,86 @@ final class kc extends ck {
         java.awt.Graphics var9 = null;
         java.awt.Graphics var10 = null;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  var9 = sl.field_n.getGraphics();
-                  if (null != wc.field_f) {
-                    break L2;
-                  } else {
-                    wc.field_f = new java.awt.Font("Helvetica", 1, 13);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (param2) {
-                    var9.setColor(java.awt.Color.black);
-                    var9.fillRect(0, 0, na.field_i, li.field_A);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (param4 != null) {
-                    break L4;
-                  } else {
-                    param4 = new java.awt.Color(140, 17, 17);
-                    break L4;
-                  }
-                }
-                try {
-                  L5: {
-                    L6: {
-                      if (ll.field_j == null) {
-                        ll.field_j = sl.field_n.createImage(304, 34);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var10 = ll.field_j.getGraphics();
-                    var10.setColor(param4);
-                    var10.drawRect(0, 0, 303, 33);
-                    var10.fillRect(2, 2, param1 * 3, 30);
-                    var10.setColor(java.awt.Color.black);
-                    var10.drawRect(1, 1, 301, 31);
-                    var10.fillRect(3 * param1 + 2, 2, param3 - 3 * param1, 30);
-                    var10.setFont(wc.field_f);
-                    var10.setColor(java.awt.Color.white);
-                    var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
-                    var9.drawImage(ll.field_j, -152 + na.field_i / 2, -18 + li.field_A / 2, (java.awt.image.ImageObserver) null);
-                    break L5;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L7: {
-                    var6 = (Exception) (Object) decompiledCaughtException;
-                    var7 = na.field_i / 2 + -152;
-                    var8 = -18 + li.field_A / 2;
-                    var9.setColor(param4);
-                    var9.drawRect(var7, var8, 303, 33);
-                    var9.fillRect(2 + var7, var8 + 2, param1 * 3, 30);
-                    var9.setColor(java.awt.Color.black);
-                    var9.drawRect(1 + var7, var8 - -1, 301, 31);
-                    var9.fillRect(2 + var7 + 3 * param1, 2 + var8, 300 + -(param1 * 3), 30);
-                    var9.setFont(wc.field_f);
-                    var9.setColor(java.awt.Color.white);
-                    var9.drawString(param0, var7 - -((-(6 * param0.length()) + 304) / 2), 22 + var8);
-                    break L7;
-                  }
-                }
-                L8: {
-                  if (id.field_Wb == null) {
-                    break L8;
-                  } else {
-                    var9.setFont(wc.field_f);
-                    var9.setColor(java.awt.Color.white);
-                    var9.drawString(id.field_Wb, na.field_i / 2 + -(6 * id.field_Wb.length() / 2), -26 + li.field_A / 2);
-                    break L8;
-                  }
-                }
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L9: {
-                var5 = (Exception) (Object) decompiledCaughtException;
-                sl.field_n.repaint();
-                break L9;
-              }
+          try {
+            var9 = sl.field_n.getGraphics();
+            if (null == wc.field_f) {
+              wc.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
-            break L0;
+            if (param2) {
+              var9.setColor(java.awt.Color.black);
+              var9.fillRect(0, 0, na.field_i, li.field_A);
+            }
+            if (param4 == null) {
+              param4 = new java.awt.Color(140, 17, 17);
+            }
+            try {
+              if (ll.field_j == null) {
+                ll.field_j = sl.field_n.createImage(304, 34);
+              }
+              var10 = ll.field_j.getGraphics();
+              var10.setColor(param4);
+              var10.drawRect(0, 0, 303, 33);
+              var10.fillRect(2, 2, param1 * 3, 30);
+              var10.setColor(java.awt.Color.black);
+              var10.drawRect(1, 1, 301, 31);
+              var10.fillRect(3 * param1 + 2, 2, param3 - 3 * param1, 30);
+              var10.setFont(wc.field_f);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param0, (304 - 6 * param0.length()) / 2, 22);
+              var9.drawImage(ll.field_j, -152 + na.field_i / 2, -18 + li.field_A / 2, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = (Exception) (Object) decompiledCaughtException;
+              var7 = na.field_i / 2 - 152;
+              var8 = -18 + li.field_A / 2;
+              var9.setColor(param4);
+              var9.drawRect(var7, var8, 303, 33);
+              var9.fillRect(2 + var7, var8 + 2, param1 * 3, 30);
+              var9.setColor(java.awt.Color.black);
+              var9.drawRect(1 + var7, var8 + 1, 301, 31);
+              var9.fillRect(2 + var7 + 3 * param1, 2 + var8, 300 - param1 * 3, 30);
+              var9.setFont(wc.field_f);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(param0, var7 + (-(6 * param0.length()) + 304) / 2, 22 + var8);
+            }
+            if (id.field_Wb != null) {
+              var9.setFont(wc.field_f);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(id.field_Wb, na.field_i / 2 - 6 * id.field_Wb.length() / 2, -26 + li.field_A / 2);
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            sl.field_n.repaint();
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
-          L10: {
-            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var5_ref);
-
-            stackIn_20_1 = new StringBuilder().append("kc.C(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L10;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L10;
-            }
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_20_0 = var5_ref;
+          stackIn_20_1 = new StringBuilder().append("kc.C(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          L11: {
-
-
-            stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L11;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L11;
-            }
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_21_0), stackIn_24_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
     final static String a(int[] param0, int[] param1, int param2) {
-        String stackIn_134_0 = null;
-        RuntimeException stackIn_137_0 = null;
-        StringBuilder stackIn_137_1 = null;
-        RuntimeException stackIn_138_0 = null;
-        StringBuilder stackIn_138_1 = null;
-        String stackIn_138_2 = null;
+        String stackIn_137_0 = null;
+        RuntimeException stackIn_140_0 = null;
         StringBuilder stackIn_140_1 = null;
-        StringBuilder stackIn_141_1 = null;
         String stackIn_141_2 = null;
+        StringBuilder stackIn_143_1 = null;
+        String stackIn_144_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -203,485 +137,193 @@ final class kc extends ck {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var8Lifetime1;
         var9 = SteelSentinels.field_G;
         try {
-          L0: {
-            var3_int = 0;
-            var4 = 0;
-            var6 = 0;
-            L1: while (true) {
-              if (var6 >= param0.length) {
-                var6 = 0;
-                L2: while (true) {
-                  if (var6 >= 8) {
-                    L3: {
-                      var5 = cd.field_c[1];
-                      var6 = ul.a((byte) -84, param0[0]);
-                      if (-1 < (var6 ^ -1)) {
-                        break L3;
-                      } else {
-                        if (var6 >= cd.field_c.length) {
-                          break L3;
-                        } else {
-                          var5 = cd.field_c[var6];
-                          break L3;
-                        }
-                      }
-                    }
-                    L4: {
-                      if (-1 == (var6 ^ -1)) {
-                        var3_int = var3_int ^ 8176765;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      var5 = var5 + "-";
-                      if ((var6 ^ -1) == -2) {
-                        var3_int = var3_int ^ 1155849;
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      if (param2 != var6) {
-                        break L6;
-                      } else {
-                        var3_int = var3_int ^ 5624312;
-                        break L6;
-                      }
-                    }
-                    L7: {
-                      if ((var6 ^ -1) == -4) {
-                        var3_int = var3_int ^ 7177436;
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    L8: {
-                      if (var6 == 4) {
-                        var3_int = var3_int ^ 5318225;
-                        break L8;
-                      } else {
-                        break L8;
-                      }
-                    }
-                    L9: {
-                      if (var6 != 5) {
-                        break L9;
-                      } else {
-                        var3_int = var3_int ^ 18177652;
-                        break L9;
-                      }
-                    }
-                    L10: {
-                      if (var6 == 6) {
-                        var3_int = var3_int ^ 7171409;
-                        break L10;
-                      } else {
-                        break L10;
-                      }
-                    }
-                    L11: {
-                      if (-8 != (var6 ^ -1)) {
-                        break L11;
-                      } else {
-                        var3_int = var3_int ^ 3140392;
-                        break L11;
-                      }
-                    }
-                    L12: {
-                      if (8 == var6) {
-                        var3_int = var3_int ^ 5104464;
-                        break L12;
-                      } else {
-                        break L12;
-                      }
-                    }
-                    L13: {
-                      if ((var6 ^ -1) == -10) {
-                        var3_int = var3_int ^ 5940651;
-                        break L13;
-                      } else {
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      if ((var6 ^ -1) != -11) {
-                        break L14;
-                      } else {
-                        var3_int = var3_int ^ 7257749;
-                        break L14;
-                      }
-                    }
-                    L15: {
-                      if (var6 == 11) {
-                        var3_int = var3_int ^ 2016943;
-                        break L15;
-                      } else {
-                        break L15;
-                      }
-                    }
-                    var7 = var3_int;
-                    var8 = 0;
-                    L16: while (true) {
-                      if (-6 >= (var8 ^ -1)) {
-                        var8 = 0;
-                        L17: while (true) {
-                          if (param1.length <= var8) {
-                            L18: {
-                              if (1 == var4) {
-                                var5 = var5 + "-V1";
-                                break L18;
-                              } else {
-                                break L18;
-                              }
-                            }
-                            L19: {
-                              if ((var4 ^ -1) == -3) {
-                                var5 = var5 + "-V2";
-                                break L19;
-                              } else {
-                                break L19;
-                              }
-                            }
-                            L20: {
-                              if (-4 != (var4 ^ -1)) {
-                                break L20;
-                              } else {
-                                var5 = var5 + "-V3";
-                                break L20;
-                              }
-                            }
-                            L21: {
-                              if (var4 != 4) {
-                                break L21;
-                              } else {
-                                var5 = var5 + "-V4";
-                                break L21;
-                              }
-                            }
-                            L22: {
-                              if (var4 != 5) {
-                                break L22;
-                              } else {
-                                var5 = var5 + "-V5";
-                                break L22;
-                              }
-                            }
-                            L23: {
-                              if (var4 == 6) {
-                                var5 = var5 + "-<img=18>";
-                                break L23;
-                              } else {
-                                break L23;
-                              }
-                            }
-                            stackIn_134_0 = (String) (var5);
-                            break L0;
-                          } else {
-                            L24: {
-                              if ((param1[var8] ^ -1) != -1) {
-                                break L24;
-                              } else {
-                                if ((var4 ^ -1) > -2) {
-                                  var4 = 1;
-                                  break L24;
-                                } else {
-                                  break L24;
-                                }
-                              }
-                            }
-                            L25: {
-                              if (1 != param1[var8]) {
-                                break L25;
-                              } else {
-                                if (2 <= var4) {
-                                  break L25;
-                                } else {
-                                  var4 = 2;
-                                  break L25;
-                                }
-                              }
-                            }
-                            L26: {
-                              if (-3 != (param1[var8] ^ -1)) {
-                                break L26;
-                              } else {
-                                if ((var4 ^ -1) > -4) {
-                                  var4 = 3;
-                                  break L26;
-                                } else {
-                                  break L26;
-                                }
-                              }
-                            }
-                            L27: {
-                              if (-4 != (param1[var8] ^ -1)) {
-                                break L27;
-                              } else {
-                                if (var4 < 4) {
-                                  var4 = 4;
-                                  break L27;
-                                } else {
-                                  break L27;
-                                }
-                              }
-                            }
-                            L28: {
-                              if (param1[var8] != 4) {
-                                break L28;
-                              } else {
-                                if (var4 >= 5) {
-                                  break L28;
-                                } else {
-                                  var4 = 5;
-                                  break L28;
-                                }
-                              }
-                            }
-                            L29: {
-                              if (param1[var8] != 5) {
-                                break L29;
-                              } else {
-                                if ((var4 ^ -1) > -2) {
-                                  var4 = 1;
-                                  break L29;
-                                } else {
-                                  break L29;
-                                }
-                              }
-                            }
-                            L30: {
-                              if (param1[var8] != 6) {
-                                break L30;
-                              } else {
-                                if (-3 < (var4 ^ -1)) {
-                                  var4 = 2;
-                                  break L30;
-                                } else {
-                                  break L30;
-                                }
-                              }
-                            }
-                            L31: {
-                              if (param1[var8] != 7) {
-                                break L31;
-                              } else {
-                                if (-4 < (var4 ^ -1)) {
-                                  var4 = 3;
-                                  break L31;
-                                } else {
-                                  break L31;
-                                }
-                              }
-                            }
-                            L32: {
-                              if (param1[var8] != 8) {
-                                break L32;
-                              } else {
-                                if ((var4 ^ -1) > -5) {
-                                  var4 = 4;
-                                  break L32;
-                                } else {
-                                  break L32;
-                                }
-                              }
-                            }
-                            L33: {
-                              if (param1[var8] != 9) {
-                                break L33;
-                              } else {
-                                if ((var4 ^ -1) <= -6) {
-                                  break L33;
-                                } else {
-                                  var4 = 5;
-                                  break L33;
-                                }
-                              }
-                            }
-                            L34: {
-                              if ((param1[var8] ^ -1) != -11) {
-                                break L34;
-                              } else {
-                                if ((var4 ^ -1) > -2) {
-                                  var4 = 1;
-                                  break L34;
-                                } else {
-                                  break L34;
-                                }
-                              }
-                            }
-                            L35: {
-                              if (param1[var8] != 11) {
-                                break L35;
-                              } else {
-                                if ((var4 ^ -1) <= -3) {
-                                  break L35;
-                                } else {
-                                  var4 = 2;
-                                  break L35;
-                                }
-                              }
-                            }
-                            L36: {
-                              if (param1[var8] != 12) {
-                                break L36;
-                              } else {
-                                if (-4 >= (var4 ^ -1)) {
-                                  break L36;
-                                } else {
-                                  var4 = 3;
-                                  break L36;
-                                }
-                              }
-                            }
-                            L37: {
-                              if (param1[var8] != 13) {
-                                break L37;
-                              } else {
-                                if (var4 < 4) {
-                                  var4 = 4;
-                                  break L37;
-                                } else {
-                                  break L37;
-                                }
-                              }
-                            }
-                            L38: {
-                              if ((param1[var8] ^ -1) != -15) {
-                                break L38;
-                              } else {
-                                if ((var4 ^ -1) <= -6) {
-                                  break L38;
-                                } else {
-                                  var4 = 5;
-                                  break L38;
-                                }
-                              }
-                            }
-                            if (-21 == (param1[var8] ^ -1)) {
-                              if (6 > var4) {
-                                var4 = 6;
-                                var8++;
-                                continue L17;
-                              } else {
-                                var8++;
-                                continue L17;
-                              }
-                            } else {
-                              var8++;
-                              continue L17;
-                            }
-                          }
-                        }
-                      } else {
-                        L39: {
-                          L40: {
-                            if (-1 <= (var7 % 35 ^ -1)) {
-                              break L40;
-                            } else {
-                              if ((var7 % 35 ^ -1) > -27) {
-                                var5 = var5 + (char)(65 - -((var7 % 35 - 1) % 26));
-                                break L39;
-                              } else {
-                                break L40;
-                              }
-                            }
-                          }
-                          if (-27 >= (var7 % 35 ^ -1)) {
-                            var5 = var5 + (char)((-26 + var7 % 35) % 10 + 48);
-                            break L39;
-                          } else {
-                            break L39;
-                          }
-                        }
-                        var7 = var7 / 35;
-                        var8++;
-                        continue L16;
-                      }
-                    }
-                  } else {
-                    var3_int = 8388607 & (var3_int ^ 10 * var3_int);
-                    var6++;
-                    continue L2;
-                  }
-                }
-              } else {
-                L41: {
-                  if (-1 == param0[var6]) {
-                    break L41;
-                  } else {
-                    var3_int = var3_int + param0[var6];
-                    break L41;
-                  }
-                }
-                L42: {
-                  if ((param0[var6] ^ -1) == -50) {
-                    var4 = 6;
-                    break L42;
-                  } else {
-                    break L42;
-                  }
-                }
-                var3_int = (var3_int ^ 10 * var3_int) & 8388607;
-                var6++;
-                continue L1;
+          var3_int = 0;
+          var4 = 0;
+          for (var6 = 0; var6 < param0.length; var6++) {
+            if (-1 != param0[var6]) {
+              var3_int = var3_int + param0[var6];
+            }
+            if (param0[var6] == 49) {
+              var4 = 6;
+            }
+            var3_int = (var3_int ^ 10 * var3_int) & 8388607;
+          }
+          for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
+            var3_int = 8388607 & (var3_int ^ 10 * var3_int);
+          }
+          var5 = cd.field_c[1];
+          var6Lifetime2 = ul.a((byte) -84, param0[0]);
+          if (var6Lifetime2 >= 0 &&
+            var6Lifetime2 < cd.field_c.length) {
+            var5 = cd.field_c[var6Lifetime2];
+          }
+          if (var6Lifetime2 == 0) {
+            var3_int = var3_int ^ 8176765;
+          }
+          var5 = var5 + "-";
+          if (var6Lifetime2 == 1) {
+            var3_int = var3_int ^ 1155849;
+          }
+          if (param2 == var6Lifetime2) {
+            var3_int = var3_int ^ 5624312;
+          }
+          if (var6Lifetime2 == 3) {
+            var3_int = var3_int ^ 7177436;
+          }
+          if (var6Lifetime2 == 4) {
+            var3_int = var3_int ^ 5318225;
+          }
+          if (var6Lifetime2 == 5) {
+            var3_int = var3_int ^ 18177652;
+          }
+          if (var6Lifetime2 == 6) {
+            var3_int = var3_int ^ 7171409;
+          }
+          if (var6Lifetime2 == 7) {
+            var3_int = var3_int ^ 3140392;
+          }
+          if (8 == var6Lifetime2) {
+            var3_int = var3_int ^ 5104464;
+          }
+          if (var6Lifetime2 == 9) {
+            var3_int = var3_int ^ 5940651;
+          }
+          if (var6Lifetime2 == 10) {
+            var3_int = var3_int ^ 7257749;
+          }
+          if (var6Lifetime2 == 11) {
+            var3_int = var3_int ^ 2016943;
+          }
+          var7 = var3_int;
+          for (var8 = 0; var8 < 5; var8++) {
+            if (var7 % 35 > 0 &&
+              var7 % 35 < 26) {
+              var5 = var5 + (char)(65 + (var7 % 35 - 1) % 26);
+            } else {
+              if (var7 % 35 >= 26) {
+                var5 = var5 + (char)((-26 + var7 % 35) % 10 + 48);
               }
             }
+            var7 = var7 / 35;
           }
+          for (var8Lifetime1 = 0; param1.length > var8Lifetime1; var8Lifetime1++) {
+            if (param1[var8Lifetime1] == 0 &&
+              var4 < 1) {
+              var4 = 1;
+            }
+            if (1 == param1[var8Lifetime1] &&
+              2 > var4) {
+              var4 = 2;
+            }
+            if (param1[var8Lifetime1] == 2 &&
+              var4 < 3) {
+              var4 = 3;
+            }
+            if (param1[var8Lifetime1] == 3 &&
+              var4 < 4) {
+              var4 = 4;
+            }
+            if (param1[var8Lifetime1] == 4 &&
+              var4 < 5) {
+              var4 = 5;
+            }
+            if (param1[var8Lifetime1] == 5 &&
+              var4 < 1) {
+              var4 = 1;
+            }
+            if (param1[var8Lifetime1] == 6 &&
+              var4 < 2) {
+              var4 = 2;
+            }
+            if (param1[var8Lifetime1] == 7 &&
+              var4 < 3) {
+              var4 = 3;
+            }
+            if (param1[var8Lifetime1] == 8 &&
+              var4 < 4) {
+              var4 = 4;
+            }
+            if (param1[var8Lifetime1] == 9 &&
+              var4 < 5) {
+              var4 = 5;
+            }
+            if (param1[var8Lifetime1] == 10 &&
+              var4 < 1) {
+              var4 = 1;
+            }
+            if (param1[var8Lifetime1] == 11 &&
+              var4 < 2) {
+              var4 = 2;
+            }
+            if (param1[var8Lifetime1] == 12 &&
+              var4 < 3) {
+              var4 = 3;
+            }
+            if (param1[var8Lifetime1] == 13 &&
+              var4 < 4) {
+              var4 = 4;
+            }
+            if (param1[var8Lifetime1] == 14 &&
+              var4 < 5) {
+              var4 = 5;
+            }
+            if (param1[var8Lifetime1] == 20 &&
+              6 > var4) {
+              var4 = 6;
+            }
+          }
+          if (1 == var4) {
+            var5 = var5 + "-V1";
+          }
+          if (var4 == 2) {
+            var5 = var5 + "-V2";
+          }
+          if (var4 == 3) {
+            var5 = var5 + "-V3";
+          }
+          if (var4 == 4) {
+            var5 = var5 + "-V4";
+          }
+          if (var4 == 5) {
+            var5 = var5 + "-V5";
+          }
+          if (var4 == 6) {
+            var5 = var5 + "-<img=18>";
+          }
+          stackIn_137_0 = var5;
+          return stackIn_137_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L43: {
-            var3 = decompiledCaughtException;
-            stackIn_137_0 = (RuntimeException) (var3);
-
-            stackIn_137_1 = new StringBuilder().append("kc.A(");
-
-            if (param0 == null) {
-              stackIn_138_0 = (RuntimeException) ((Object) stackIn_137_0);
-              stackIn_138_1 = (StringBuilder) ((Object) stackIn_137_1);
-              stackIn_138_2 = "null";
-              break L43;
-            } else {
-              stackIn_138_0 = (RuntimeException) ((Object) stackIn_137_0);
-              stackIn_138_1 = (StringBuilder) ((Object) stackIn_137_1);
-              stackIn_138_2 = "{...}";
-              break L43;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_140_0 = var3;
+          stackIn_140_1 = new StringBuilder().append("kc.A(");
+          if (param0 == null) {
+            stackIn_141_2 = "null";
+          } else {
+            stackIn_141_2 = "{...}";
           }
-          L44: {
-
-
-            stackIn_140_1 = ((StringBuilder) (Object) stackIn_138_1).append(stackIn_138_2).append(',');
-
-            if (param1 == null) {
-              stackIn_138_0 = (RuntimeException) ((Object) stackIn_138_0);
-              stackIn_141_1 = (StringBuilder) ((Object) stackIn_140_1);
-              stackIn_141_2 = "null";
-              break L44;
-            } else {
-              stackIn_138_0 = (RuntimeException) ((Object) stackIn_138_0);
-              stackIn_141_1 = (StringBuilder) ((Object) stackIn_140_1);
-              stackIn_141_2 = "{...}";
-              break L44;
-            }
+          stackIn_143_1 = ((StringBuilder) (Object) stackIn_140_1).append(stackIn_141_2).append(',');
+          if (param1 == null) {
+            stackIn_144_2 = "null";
+          } else {
+            stackIn_144_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_138_0), stackIn_141_2 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_140_0), ((StringBuilder) (Object) stackIn_143_1).append(stackIn_144_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_134_0;
     }
 
     kc(long param0, int param1, byte[] param2) {
         try {
-            this.field_p = param1;
-            this.field_v = param0;
-            this.field_B = param2;
+          this.field_p = param1;
+          this.field_v = param0;
+          this.field_B = param2;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "kc.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

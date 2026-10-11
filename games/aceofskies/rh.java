@@ -12,15 +12,15 @@ final class rh extends wf {
         field_e = null;
         field_f = null;
         if (param0 != 32081) {
-            field_e = (qo) null;
+          field_e = (qo) null;
         }
     }
 
     final void b(int param0, int param1) {
         if (param0 != -2580) {
-            this.b(108, -13);
-            this.field_g.g(param1);
-            return;
+          this.b(108, -13);
+          this.field_g.g(param1);
+          return;
         }
         this.field_g.g(param1);
     }
@@ -28,24 +28,22 @@ final class rh extends wf {
     final void a(int param0, int param1) {
         param1 = param1 << 6;
         this.field_h = param1;
-        if (param0 != -128) {
-          rh.a(-71);
-          this.field_g.f(128 + param1 * gn.field_a >> 1233910472);
-          return;
-        } else {
-          this.field_g.f(128 + param1 * gn.field_a >> 1233910472);
+        if (param0 == -128) {
+          this.field_g.f(128 + param1 * gn.field_a >> 8);
           return;
         }
+        rh.a(-71);
+        this.field_g.f(128 + param1 * gn.field_a >> 8);
     }
 
     rh(su param0, wf param1) {
         try {
-            this.field_g = param0;
-            this.field_h = param0.i();
-            this.field_i = param1;
-            this.field_g.f(this.field_h * gn.field_a - -128 >> -1623071768);
+          this.field_g = param0;
+          this.field_h = param0.i();
+          this.field_i = param1;
+          this.field_g.f(this.field_h * gn.field_a + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

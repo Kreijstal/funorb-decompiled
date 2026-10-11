@@ -8,20 +8,19 @@ final class aq {
     static ci[] field_a;
 
     final static String a(int param0, int param1) {
-        if (param1 < 79) {
-          field_b = (Calendar) null;
-          return param0 + 1 + "/" + rb.field_n.length;
-        } else {
+        if (param1 >= 79) {
           return param0 + 1 + "/" + rb.field_n.length;
         }
+        field_b = (Calendar) null;
+        return param0 + 1 + "/" + rb.field_n.length;
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-            field_a = (ci[]) null;
-            field_a = null;
-            return;
+          field_a = (ci[]) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -32,49 +31,26 @@ final class aq {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 < -52) {
-              stackIn_4_0 = hq.a(0, (byte) -112, param1, param1.length);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 < -52) {
+            stackIn_4_0 = hq.a(0, (byte) -112, param1, param1.length);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("aq.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("aq.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -82,28 +58,22 @@ final class aq {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == 0) {
-          if (wp.field_g != null) {
-            var1 = wp.field_g;
-            synchronized (var1) {
-              L0: {
-                wp.field_g = null;
-                break L0;
-              }
-            }
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param0 != 0) {
           return;
+        }
+        if (wp.field_g == null) {
+          return;
+        }
+        var1 = wp.field_g;
+        synchronized (var1) {
+          wp.field_g = null;
         }
     }
 
     final static void b(int param0) {
-        of.field_Ob = -no.field_q.field_w + qh.field_l >> 618839329;
+        of.field_Ob = -no.field_q.field_w + qh.field_l >> 1;
         fm.field_M = -no.field_q.field_A;
-        vk.field_H = of.field_Ob - -224;
+        vk.field_H = of.field_Ob + 224;
         ac.b(param0, (byte) -94);
     }
 

@@ -14,9 +14,9 @@ final class ac extends oh {
     private ac(int param0, int param1, int param2, int param3, ur param4, uf param5, iq param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            this.field_C = param6;
+          this.field_C = param6;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ac.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,41 +25,40 @@ final class ac extends oh {
         field_M = null;
         field_K = null;
         field_I = null;
-        if (param0 <= 61) {
-          field_G = (r) null;
-          field_O = (byte[][]) null;
-          field_L = null;
-          field_J = null;
-          field_N = null;
-          return;
-        } else {
+        if (param0 > 61) {
           field_O = (byte[][]) null;
           field_L = null;
           field_J = null;
           field_N = null;
           return;
         }
+        field_G = (r) null;
+        field_O = (byte[][]) null;
+        field_L = null;
+        field_J = null;
+        field_N = null;
     }
 
     final void a(iq param0, byte param1, int param2, int param3, int param4, int param5) {
         qg var7 = null;
         try {
-            super.a(param0, param1, param2, param3, param4, param5);
-            var7 = um.field_E;
-            if (var7 != null && this.a(0, param3, param2, param4, param5)) {
-                if (this.field_v instanceof sh) {
-                    ((sh) ((Object) this.field_v)).a(param1 ^ -13387, var7, (ac) (this));
-                    um.field_E = null;
-                    return;
-                }
-                if (!(var7.field_v instanceof sh)) {
-                    return;
-                }
-                ((sh) ((Object) var7.field_v)).a(param1 ^ -13387, var7, (ac) (this));
-                um.field_E = null;
+          super.a(param0, param1, param2, param3, param4, param5);
+          var7 = um.field_E;
+          if (var7 != null &&
+            this.a(0, param3, param2, param4, param5)) {
+            if (this.field_v instanceof sh) {
+              ((sh) (this.field_v)).a(param1 ^ -13387, var7, this);
+              um.field_E = null;
+              return;
             }
+            if (!(var7.field_v instanceof sh)) {
+              return;
+            }
+            ((sh) (var7.field_v)).a(param1 ^ -13387, var7, this);
+            um.field_E = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "ac.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ac.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

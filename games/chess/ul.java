@@ -18,64 +18,40 @@ public class ul {
     public static void a(int param0, String param1, int param2) {
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 == 21747) {
-            break L0;
-          } else {
-            field_c = -58;
-            break L0;
-          }
+        if (param0 != 21747) {
+          field_c = -58;
         }
         field_a = param1;
         field_c = param2;
         try {
-          L1: {
-            field_d = System.getProperty("user.home");
-            if (field_d != null) {
-              field_d = field_d + "/";
-              break L1;
-            } else {
-              L2: {
-                if (null == field_d) {
-                  field_d = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              field_b = true;
-              return;
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_d = System.getProperty("user.home");
+          if (field_d == null) {
             if (null == field_d) {
               field_d = "~/";
-              break L3;
-            } else {
-              break L3;
             }
+            field_b = true;
+            return;
+          }
+          field_d = field_d + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (null == field_d) {
+            field_d = "~/";
           }
           field_b = true;
           return;
         }
-        L4: {
-          if (null == field_d) {
-            field_d = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        if (null == field_d) {
+          field_d = "~/";
         }
         field_b = true;
     }
 
     public static File a(byte param0, String param1) {
         if (param0 >= -49) {
-            field_e = (Hashtable) null;
-            return ul.a(field_a, field_c, param1, (byte) 86);
+          field_e = (Hashtable) null;
+          return ul.a(field_a, field_c, param1, (byte) 86);
         }
         return ul.a(field_a, field_c, param1, (byte) 86);
     }

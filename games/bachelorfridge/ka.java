@@ -7,9 +7,9 @@ final class ka {
 
     public static void a(byte param0) {
         if (param0 <= 0) {
-            ka.a((byte) -17);
-            field_a = (int[][]) null;
-            return;
+          ka.a((byte) -17);
+          field_a = (int[][]) null;
+          return;
         }
         field_a = (int[][]) null;
     }

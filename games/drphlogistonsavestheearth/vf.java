@@ -21,52 +21,33 @@ public class vf {
         field_b = param1;
         field_d = param2;
         try {
-          L0: {
-            field_e = System.getProperty("user.home");
-            if (field_e != null) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              L1: {
-                field_a = param0;
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return;
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_e = System.getProperty("user.home");
+          if (field_e == null) {
             field_a = param0;
             if (null == field_e) {
               field_e = "~/";
-              break L2;
-            } else {
-              break L2;
             }
+            return;
           }
-          return;
-        }
-        L3: {
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
           field_a = param0;
           if (null == field_e) {
             field_e = "~/";
-            break L3;
-          } else {
-            break L3;
           }
+          return;
+        }
+        field_a = param0;
+        if (null == field_e) {
+          field_e = "~/";
         }
     }
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return (File) null;
+          return (File) null;
         }
         return vf.a(field_d, 1387, field_b, param1);
     }

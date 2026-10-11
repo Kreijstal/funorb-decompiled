@@ -10,10 +10,10 @@ final class tm {
     public static void a(int param0) {
         field_b = null;
         if (param0 <= 124) {
-            field_b = (cr) null;
-            field_a = null;
-            field_c = null;
-            return;
+          field_b = (cr) null;
+          field_a = null;
+          field_c = null;
+          return;
         }
         field_a = null;
         field_c = null;

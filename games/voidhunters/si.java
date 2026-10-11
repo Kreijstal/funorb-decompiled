@@ -13,47 +13,27 @@ final class si extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              si.a(164, 62, param0[0].a(60));
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                si.a(100, -78, -48);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc("void");
-            break L0;
+          si.a(164, 62, param0[0].a(60));
+          if (param1 > -119) {
+            si.a(100, -78, -48);
           }
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("si.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("si.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     si(String param0, Class[] param1, String param2) {
@@ -62,7 +42,7 @@ final class si extends rqa {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_s = 71;
+          field_s = 71;
         }
         field_q = null;
         field_o = null;
@@ -71,32 +51,35 @@ final class si extends rqa {
     final static void a(int param0, int param1, int param2) {
         hna var3 = null;
         if (param1 != 62) {
-            field_r = 110;
+          field_r = 110;
         }
         if (vqa.field_g != null) {
-            var3 = new hna();
-            var3.field_r = new tw();
-            var3.field_r.field_d = new so(param0, param2);
-            vqa.field_g.a(param1 ^ 62, true, var3);
+          var3 = new hna();
+          var3.field_r = new tw();
+          var3.field_r.field_d = new so(param0, param2);
+          vqa.field_g.a(param1 ^ 62, true, var3);
         }
     }
 
     static {
         int var0_int = 0;
+        int var0_intLifetime1;
+        int var0_intLifetime2;
+        int var0_intLifetime3;
         ogb.a(105, 50);
         field_o = new boolean[112];
         field_q = new int[128];
         for (var0_int = 0; field_q.length > var0_int; var0_int++) {
-            field_q[var0_int] = -1;
+          field_q[var0_int] = -1;
         }
-        for (var0_int = 65; var0_int <= 90; var0_int++) {
-            field_q[var0_int] = var0_int - 65;
+        for (var0_intLifetime1 = 65; var0_intLifetime1 <= 90; var0_intLifetime1++) {
+          field_q[var0_intLifetime1] = var0_intLifetime1 - 65;
         }
-        for (var0_int = 97; -123 <= (var0_int ^ -1); var0_int++) {
-            field_q[var0_int] = 26 + (var0_int - 97);
+        for (var0_intLifetime2 = 97; var0_intLifetime2 <= 122; var0_intLifetime2++) {
+          field_q[var0_intLifetime2] = 26 + (var0_intLifetime2 - 97);
         }
-        for (var0_int = 48; var0_int <= 57; var0_int++) {
-            field_q[var0_int] = -48 + (var0_int + 52);
+        for (var0_intLifetime3 = 48; var0_intLifetime3 <= 57; var0_intLifetime3++) {
+          field_q[var0_intLifetime3] = -48 + (var0_intLifetime3 + 52);
         }
         int[] var0 = field_q;
         field_q[43] = 62;

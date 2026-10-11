@@ -11,18 +11,16 @@ final class dh {
 
     public static void a(int param0) {
         field_b = (String[][]) null;
-        if (param0 > -115) {
-          field_a = (String) null;
-          field_d = null;
-          field_a = null;
-          field_c = (String[][]) null;
-          return;
-        } else {
+        if (param0 <= -115) {
           field_d = null;
           field_a = null;
           field_c = (String[][]) null;
           return;
         }
+        field_a = (String) null;
+        field_d = null;
+        field_a = null;
+        field_c = (String[][]) null;
     }
 
     static {

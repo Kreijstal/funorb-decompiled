@@ -10,21 +10,20 @@ abstract class bg {
     static int field_d;
 
     final java.net.Socket b(int param0) throws IOException {
-        if (param0 != 5101) {
-          this.field_a = 29;
-          return new java.net.Socket(this.field_c, this.field_a);
-        } else {
+        if (param0 == 5101) {
           return new java.net.Socket(this.field_c, this.field_a);
         }
+        this.field_a = 29;
+        return new java.net.Socket(this.field_c, this.field_a);
     }
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
     public static void a(int param0) {
         if (param0 != 16857) {
-            field_d = 93;
-            field_b = null;
-            return;
+          field_d = 93;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -10,25 +10,23 @@ final class df {
         nb.field_i[param0].c(param1 ^ -5495, param2);
         nb.field_i[param0].b((byte) -81);
         mc.field_w = param2;
-        if (param1 != 5494) {
-          df.a((byte) -76);
-          q.field_c = param0;
-          oj.field_J = param0;
-          return;
-        } else {
+        if (param1 == 5494) {
           q.field_c = param0;
           oj.field_J = param0;
           return;
         }
+        df.a((byte) -76);
+        q.field_c = param0;
+        oj.field_J = param0;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 < 115) {
-            field_a = (rc) null;
-            field_a = null;
-            return;
+          field_a = (rc) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

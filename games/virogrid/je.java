@@ -12,11 +12,12 @@ final class je extends ec {
 
     final static uh h(boolean param0) {
         if (!param0) {
-            field_I = (String) null;
+          field_I = (String) null;
         }
         String var1 = ne.a((byte) -52);
-        if (var1 != null && 0 <= var1.indexOf('@')) {
-            var1 = "";
+        if (var1 != null &&
+          0 <= var1.indexOf('@')) {
+          var1 = "";
         }
         return new uh(ne.a((byte) -52), db.b(16));
     }
@@ -31,7 +32,7 @@ final class je extends ec {
         field_E = null;
         field_B = null;
         if (param0 != -202) {
-            field_G = (String) null;
+          field_G = (String) null;
         }
         field_G = null;
         field_I = null;
@@ -43,93 +44,63 @@ final class je extends ec {
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 > 87) {
-                break L1;
-              } else {
-                field_J = (boolean[]) null;
-                break L1;
-              }
-            }
-            param0.a(false);
-            var2 = (lk) ((Object) ci.field_o.a((byte) -64));
-            L2: while (true) {
-              L3: {
-                if (var2 == null) {
-                  break L3;
-                } else {
-                  if (!var2.a(37, param0)) {
-                    break L3;
-                  } else {
-                    var2 = (lk) ((Object) ci.field_o.a(16213));
-                    continue L2;
-                  }
-                }
-              }
-              L4: {
-                if (var2 != null) {
-                  td.a(var2, (byte) -73, param0);
-                  break L4;
-                } else {
-                  ci.field_o.a(param0, (byte) -91);
-                  break L4;
-                }
-              }
-              break L0;
-            }
+          if (param1 <= 87) {
+            field_J = (boolean[]) null;
           }
+          param0.a(false);
+          var2 = (lk) (ci.field_o.a((byte) -64));
+          while (var2 != null) {
+            if (var2.a(37, param0)) {
+              var2 = (lk) (ci.field_o.a(16213));
+              continue;
+            }
+            break;
+          }
+          if (var2 != null) {
+            td.a(var2, (byte) -73, param0);
+          } else {
+            ci.field_o.a(param0, (byte) -91);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2_ref = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2_ref);
-
-            stackIn_13_1 = new StringBuilder().append("je.B(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_13_0 = var2_ref;
+          stackIn_13_1 = new StringBuilder().append("je.B(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void f(int param0) {
         int var1 = (-640 + eb.field_f) / 2;
         int var2 = ve.field_t * ve.field_t;
-        int var3 = var2 + -(kh.field_d * kh.field_d);
-        fd.field_y.a(-(199 * var3 / var2) + var1, -124 + df.field_f + -90, 199, (byte) -115, 90);
+        int var3 = var2 - kh.field_d * kh.field_d;
+        fd.field_y.a(-(199 * var3 / var2) + var1, -124 + df.field_f - 90, 199, (byte) -115, 90);
         if (param0 != -17491) {
-            je.h(84);
+          je.h(84);
         }
-        hg.field_p.a(var1 - (-202 - 438 * var3 / var2), -120 + (df.field_f + -4), 438, (byte) -42, 0);
+        hg.field_p.a(var1 - (-202 - 438 * var3 / var2), -120 + (df.field_f - 4), 438, (byte) -42, 0);
     }
 
     final void i(int param0) {
         int var5 = Virogrid.field_F ? 1 : 0;
         ma var2 = new ma(this.field_F);
-        gg var3 = (gg) ((Object) var2.c(12677));
+        gg var3 = (gg) (var2.c(12677));
         while (var3 != null) {
-            if (var3.f(3)) {
-                var3.a(false);
-            }
-            var3 = (gg) ((Object) var2.b(41));
+          if (var3.f(3)) {
+            var3.a(false);
+          }
+          var3 = (gg) (var2.b(41));
         }
         int var4 = 91 / ((param0 - 65) / 38);
         this.field_x = (fi) ((Object) this.c((byte) 51));
@@ -139,72 +110,62 @@ final class je extends ec {
         ma var2;
         gg var3;
         int var4;
-        L0: {
-          var4 = Virogrid.field_F ? 1 : 0;
-          if (param0 == 51) {
-            break L0;
-          } else {
-            field_H = (String) null;
-            break L0;
-          }
+        var4 = Virogrid.field_F ? 1 : 0;
+        if (param0 != 51) {
+          field_H = (String) null;
         }
         var2 = new ma(this.field_F);
-        var3 = (gg) ((Object) var2.c(12677));
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.field_G) {
-              return var3;
-            } else {
-              var3 = (gg) ((Object) var2.b(41));
-              continue L1;
-            }
-          } else {
-            return null;
+        var3 = (gg) (var2.c(12677));
+        while (var3 != null) {
+          if (var3.field_G) {
+            return var3;
           }
+          var3 = (gg) (var2.b(41));
         }
+        return null;
     }
 
     final void g(int param0) {
         int var5 = Virogrid.field_F ? 1 : 0;
-        int var2 = -32 % ((param0 - -40) / 48);
+        int var2 = -32 % ((param0 + 40) / 48);
         ma var3 = new ma(this.field_F);
-        gg var4 = (gg) ((Object) var3.c(12677));
+        gg var4 = (gg) (var3.c(12677));
         while (var4 != null) {
-            if (var4.a((byte) -75)) {
-                var4.a(false);
-            }
-            var4 = (gg) ((Object) var3.b(41));
+          if (var4.a((byte) -75)) {
+            var4.a(false);
+          }
+          var4 = (gg) (var3.b(41));
         }
     }
 
     final void a(int param0, fi param1) {
         gg var3 = null;
         try {
-            if (!(param1 instanceof gg)) {
-                throw new IllegalArgumentException();
-            }
-            var3 = (gg) ((Object) param1);
-            if (param0 != 0) {
-                je.h(112);
-            }
-            this.field_F.b(var3, (byte) -45);
-            var3.field_G = true;
-            var3.a((fi) (this), param0 ^ -8515);
+          if (!(param1 instanceof gg)) {
+            throw new IllegalArgumentException();
+          }
+          var3 = (gg) (param1);
+          if (param0 != 0) {
+            je.h(112);
+          }
+          this.field_F.b(var3, (byte) -45);
+          var3.field_G = true;
+          var3.a((fi) (this), param0 ^ -8515);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "je.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "je.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
         ma var2 = new ma(this.field_F);
-        gg var3 = (gg) ((Object) var2.c(12677));
+        gg var3 = (gg) (var2.c(12677));
         if (param0 != 76) {
-            this.g(true);
+          this.g(true);
         }
         while (var3 != null) {
-            var3.field_G = false;
-            var3 = (gg) ((Object) var2.b(41));
+          var3.field_G = false;
+          var3 = (gg) (var2.b(41));
         }
         this.field_x = null;
     }
@@ -213,44 +174,34 @@ final class je extends ec {
         ma var2;
         gg var3;
         int var4;
-        L0: {
-          var4 = Virogrid.field_F ? 1 : 0;
-          var2 = new ma(this.field_F);
-          var3 = (gg) ((Object) var2.c(12677));
-          if (!param0) {
-            break L0;
-          } else {
-            this.a((byte) -34);
-            break L0;
-          }
+        var4 = Virogrid.field_F ? 1 : 0;
+        var2 = new ma(this.field_F);
+        var3 = (gg) (var2.c(12677));
+        if (param0) {
+          this.a((byte) -34);
         }
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.field_G) {
-              return var3.c((byte) -3);
-            } else {
-              var3 = (gg) ((Object) var2.b(41));
-              continue L1;
-            }
-          } else {
-            return null;
+        while (var3 != null) {
+          if (var3.field_G) {
+            return var3.c((byte) -3);
           }
+          var3 = (gg) (var2.b(41));
         }
+        return null;
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var7 = Virogrid.field_F ? 1 : 0;
-        if (!(null == this.field_w)) {
-            this.field_w.a(param1, (fi) (this), true, param2, -23294);
+        if (null != this.field_w) {
+          this.field_w.a(param1, (fi) (this), true, param2, -23294);
         }
         if (param0 != 37) {
-            return;
+          return;
         }
         ma var5 = new ma(this.field_F);
-        fi var6 = (fi) ((Object) var5.a((byte) 48));
+        fi var6 = (fi) (var5.a((byte) 48));
         while (var6 != null) {
-            var6.a((byte) 37, this.field_l + param1, param2 + this.field_u, param3);
-            var6 = (fi) ((Object) var5.a(-1));
+          var6.a((byte) 37, this.field_l + param1, param2 + this.field_u, param3);
+          var6 = (fi) (var5.a(-1));
         }
     }
 

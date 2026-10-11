@@ -12,12 +12,12 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(int param0, cb param1) {
         try {
-            dc.a((byte) -124, this.field_f, param1);
-            if (param0 != 6511) {
-                mk.a((byte) 114);
-            }
+          dc.a((byte) -124, this.field_f, param1);
+          if (param0 != 6511) {
+            mk.a((byte) 114);
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "mk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -25,15 +25,7 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     public static void a(byte param0) {
-        if (param0 >= -81) {
-          field_d = (tf) null;
-          field_a = null;
-          field_e = null;
-          field_c = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -81) {
           field_a = null;
           field_e = null;
           field_c = null;
@@ -41,6 +33,12 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
           field_b = null;
           return;
         }
+        field_d = (tf) null;
+        field_a = null;
+        field_e = null;
+        field_c = null;
+        field_d = null;
+        field_b = null;
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -52,9 +50,9 @@ final class mk extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_g = true;
+          this.field_g = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "mk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "mk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

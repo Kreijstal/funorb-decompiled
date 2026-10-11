@@ -14,6 +14,9 @@ final class ea {
     private int field_b;
 
     final void a(int param0, double param1, int[] param2) {
+        int var31 = 0;
+        int var32 = 0;
+        int var15 = 0;
         int incrementValue$0 = 0;
         double var5;
         double var7;
@@ -21,7 +24,6 @@ final class ea {
         double var11;
         int var13;
         int var14;
-        int var15;
         int var16;
         int var17;
         int var18;
@@ -35,8 +37,6 @@ final class ea {
         int var28;
         int var29;
         int[] var30;
-        int var31;
-        int var32;
         double var33;
         double var35;
         int var37;
@@ -46,82 +46,50 @@ final class ea {
         var39 = oo.field_i;
         var38 = var39;
         var30 = var38;
-        var31 = 0;
-        L0: while (true) {
-          if (var31 >= this.field_b) {
-            return;
-          } else {
-            var32 = 0;
-            L1: while (true) {
-              if (var32 >= this.field_j) {
-                var31++;
-                continue L0;
-              } else {
-                if (var39[var29] != 0) {
-                  var7 = this.field_h[var32][var31];
-                  var5 = this.field_d[var32][var31];
-                  var16 = 0;
-                  var33 = var7 / 64.0;
-                  var35 = var5 / 4.0;
-                  var15 = param0;
-                  L2: while (true) {
-                    if (var15 <= 0) {
-                      L3: {
-                        var16 = (int)((double)var16 / ((var5 + 1.0) / 2.0));
-                        var16 = var16 >> 8;
-                        if (var16 >= 0) {
-                          if (var16 <= 255) {
-                            break L3;
-                          } else {
-                            var16 = 255;
-                            break L3;
-                          }
-                        } else {
-                          var16 = 0;
-                          break L3;
-                        }
-                      }
-                      incrementValue$0 = var29;
-                      var29++;
-                      var30[incrementValue$0] = param2[var16];
-                      var32++;
-                      continue L1;
-                    } else {
-                      L4: {
-                        var27 = 2 << var15;
-                        var28 = var27 << 2;
-                        var11 = (double)var27 * var33;
-                        var9 = param1 + (double)var27 * var35;
-                        var14 = (int)var11;
-                        var13 = (int)var9;
-                        var23 = var9 - (double)var13;
-                        var25 = var11 - (double)var14;
-                        var37 = var28 * var13;
-                        var17 = this.field_e[var14 + var37 & 65535];
-                        var18 = this.field_e[var14 + var37 + var28 & 65535];
-                        var14++;
-                        if (var14 < var28) {
-                          break L4;
-                        } else {
-                          var14 = var14 - var28;
-                          break L4;
-                        }
-                      }
-                      var19 = this.field_e[var14 + var37 & 65535];
-                      var20 = this.field_e[var14 + var37 + var28 & 65535];
-                      var21 = ea.a(var17, var18, var23);
-                      var22 = ea.a(var19, var20, var23);
-                      var16 = var16 + (ea.a(var21, var22, var25) << 8) / var27;
-                      var15--;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  var29++;
-                  var32++;
-                  continue L1;
+        for (var31 = 0; var31 < this.field_b; var31++) {
+          for (var32 = 0; var32 < this.field_j; var32++) {
+            if (var39[var29] != 0) {
+              var7 = this.field_h[var32][var31];
+              var5 = this.field_d[var32][var31];
+              var16 = 0;
+              var33 = var7 / 64.0;
+              var35 = var5 / 4.0;
+              for (var15 = param0; var15 > 0; var15--) {
+                var27 = 2 << var15;
+                var28 = var27 << 2;
+                var11 = (double)var27 * var33;
+                var9 = param1 + (double)var27 * var35;
+                var14 = (int)var11;
+                var13 = (int)var9;
+                var23 = var9 - (double)var13;
+                var25 = var11 - (double)var14;
+                var37 = var28 * var13;
+                var17 = this.field_e[var14 + var37 & 65535];
+                var18 = this.field_e[var14 + var37 + var28 & 65535];
+                var14++;
+                if (var14 >= var28) {
+                  var14 = var14 - var28;
                 }
+                var19 = this.field_e[var14 + var37 & 65535];
+                var20 = this.field_e[var14 + var37 + var28 & 65535];
+                var21 = ea.a(var17, var18, var23);
+                var22 = ea.a(var19, var20, var23);
+                var16 = var16 + (ea.a(var21, var22, var25) << 8) / var27;
               }
+              var16 = (int)((double)var16 / ((var5 + 1.0) / 2.0));
+              var16 = var16 >> 8;
+              if (var16 >= 0) {
+                if (var16 > 255) {
+                  var16 = 255;
+                }
+              } else {
+                var16 = 0;
+              }
+              incrementValue$0 = var29;
+              var29++;
+              var30[incrementValue$0] = param2[var16];
+            } else {
+              var29++;
             }
           }
         }
@@ -139,12 +107,13 @@ final class ea {
     }
 
     public ea() {
+        int var4 = 0;
         double[] dupTemp$0 = null;
         double[] dupTemp$1 = null;
         int var1;
         int var2;
         int var3;
-        int var4;
+        int var3Lifetime1;
         this.field_j = oo.field_b;
         this.field_b = oo.field_l;
         this.field_g = oo.field_b / 2;
@@ -154,50 +123,26 @@ final class ea {
         this.field_i = 40.74366543152521;
         this.field_d = new double[oo.field_b][oo.field_l];
         this.field_h = new double[oo.field_b][oo.field_l];
-        var3 = 0;
-        L0: while (true) {
-          if (var3 >= oo.field_b) {
-            this.field_e = new int[65536];
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= 65536) {
-                return;
+        for (var3 = 0; var3 < oo.field_b; var3++) {
+          var1 = var3 - this.field_g;
+          for (var4 = 0; var4 < oo.field_l; var4++) {
+            var2 = var4 - this.field_c;
+            this.field_d[var3][var4] = Math.tan(this.field_a * ((double)this.field_f - Math.sqrt((double)(var1 * var1 + var2 * var2))));
+            this.field_h[var3][var4] = 128.0 + this.field_i * Math.atan((double)var2 / ((double)var1 + 0.5));
+            if (var1 < 0) {
+              if (var2 <= 0) {
+                dupTemp$0 = this.field_h[var3];
+                dupTemp$0[var4] = dupTemp$0[var4] - 128.0;
               } else {
-                this.field_e[var3] = ea.a(var3);
-                var3++;
-                continue L1;
-              }
-            }
-          } else {
-            var1 = var3 - this.field_g;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= oo.field_l) {
-                var3++;
-                continue L0;
-              } else {
-                var2 = var4 - this.field_c;
-                this.field_d[var3][var4] = Math.tan(this.field_a * ((double)this.field_f - Math.sqrt((double)(var1 * var1 + var2 * var2))));
-                this.field_h[var3][var4] = 128.0 + this.field_i * Math.atan((double)var2 / ((double)var1 + 0.5));
-                if (var1 < 0) {
-                  if (var2 <= 0) {
-                    dupTemp$0 = this.field_h[var3];
-                    dupTemp$0[var4] = dupTemp$0[var4] - 128.0;
-                    var4++;
-                    continue L2;
-                  } else {
-                    dupTemp$1 = this.field_h[var3];
-                    dupTemp$1[var4] = dupTemp$1[var4] + 128.0;
-                    var4++;
-                    continue L2;
-                  }
-                } else {
-                  var4++;
-                  continue L2;
-                }
+                dupTemp$1 = this.field_h[var3];
+                dupTemp$1[var4] = dupTemp$1[var4] + 128.0;
               }
             }
           }
+        }
+        this.field_e = new int[65536];
+        for (var3Lifetime1 = 0; var3Lifetime1 < 65536; var3Lifetime1++) {
+          this.field_e[var3Lifetime1] = ea.a(var3Lifetime1);
         }
     }
 }

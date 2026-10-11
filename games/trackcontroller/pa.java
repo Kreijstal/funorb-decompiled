@@ -8,7 +8,7 @@ final class pa {
 
     public static void a(byte param0) {
         if (param0 > -120) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -21,35 +21,20 @@ final class pa {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (dh) ((Object) field_c.b(param1 + -38));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param1 == 40) {
-                    break L2;
-                  } else {
-                    pa.b((byte) 41);
-                    break L2;
-                  }
-                }
-                var5 = (nk) ((Object) qh.field_e.b(param1 ^ 42));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    gj.a(2, var5, param0);
-                    var5 = (nk) ((Object) qh.field_e.a(10));
-                    continue L3;
-                  }
-                }
-              } else {
-                me.a(var4, 0, param0);
-                var4 = (dh) ((Object) field_c.a(param1 + -30));
-                continue L1;
-              }
-            }
+          var4 = (dh) (field_c.b(param1 - 38));
+          while (var4 != null) {
+            me.a(var4, 0, param0);
+            var4 = (dh) (field_c.a(param1 - 30));
           }
+          if (param1 != 40) {
+            pa.b((byte) 41);
+          }
+          var5 = (nk) (qh.field_e.b(param1 ^ 42));
+          while (var5 != null) {
+            gj.a(2, var5, param0);
+            var5 = (nk) (qh.field_e.a(10));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -59,7 +44,7 @@ final class pa {
 
     final static boolean b(byte param0) {
         if (param0 != 91) {
-            return true;
+          return true;
         }
         return af.a(9819, gd.b((byte) 77));
     }

@@ -14,21 +14,19 @@ abstract class de implements of {
 
     public final void b(int param0) {
         if (param0 != 18340) {
-            return;
+          return;
         }
         this.field_e = gk.a(57);
     }
 
     final static byte[] a(int param0, byte param1, int param2, byte[] param3) {
-        byte[] var4 = null;
         int var5_int = 0;
+        byte[] var4 = null;
         int var7 = 0;
         byte[] var9 = null;
         byte[] stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
@@ -39,86 +37,58 @@ abstract class de implements of {
         byte[] var11 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if ((param0 ^ -1) >= -1) {
-                var4 = param3;
-                break L1;
-              } else {
-                var9 = new byte[param2];
-                var4 = var9;
-                var5_int = 0;
-                L2: while (true) {
-                  if (var5_int >= param2) {
-                    break L1;
-                  } else {
-                    var9[var5_int] = param3[param0 + var5_int];
-                    var5_int++;
-                    continue L2;
-                  }
-                }
-              }
+          if (param0 > 0) {
+            var9 = new byte[param2];
+            var4 = var9;
+            for (var5_int = 0; var5_int < param2; var5_int++) {
+              var9[var5_int] = param3[param0 + var5_int];
             }
-            L3: {
-              var5 = new bd();
-              var5.a(8);
-              var5.a(var4, (long)(8 * param2), 127);
-              var11 = new byte[64];
-              var10 = var11;
-              var6 = var10;
-              var5.a(var11, 125, 0);
-              if (param1 <= -85) {
-                break L3;
-              } else {
-                var8 = (byte[]) null;
-                de.a(-127, (byte) -38, -80, (byte[]) null);
-                break L3;
-              }
-            }
-            stackIn_9_0 = (byte[]) (var6);
-            break L0;
+          } else {
+            var4 = param3;
           }
+          var5 = new bd();
+          var5.a(8);
+          var5.a(var4, (long)(8 * param2), 127);
+          var11 = new byte[64];
+          var10 = var11;
+          var6 = var10;
+          var5.a(var11, 125, 0);
+          if (param1 > -85) {
+            var8 = (byte[]) null;
+            de.a(-127, (byte) -38, -80, (byte[]) null);
+          }
+          stackIn_9_0 = var6;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var4_ref);
-
-            stackIn_12_1 = new StringBuilder().append("de.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_12_0 = var4_ref;
+          stackIn_12_1 = new StringBuilder().append("de.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     public final String d(int param0) {
         if (param0 != -27183) {
-            field_f = 93;
+          field_f = 93;
         }
         if (this.c(param0 + 14972)) {
-            return null;
+          return null;
         }
         if (gk.a(88) < this.field_e + 350L) {
-            return null;
+          return null;
         }
         return this.f(param0 ^ 27232);
     }
 
     public static void e(int param0) {
         if (param0 != 21283) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;
@@ -129,25 +99,25 @@ abstract class de implements of {
 
     final static void a(int param0, nf param1, int param2) {
         try {
-            ki.field_a.a(param1, false);
-            jc.a(-14499, param2, param1);
-            if (param0 < 3) {
-                field_a = (String) null;
-            }
+          ki.field_a.a(param1, false);
+          jc.a(-14499, param2, param1);
+          if (param0 < 3) {
+            field_a = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "de.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "de.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public final ba a(int param0) {
-        if (!(!this.c(-12211))) {
-            return nh.field_r;
+        if (this.c(-12211)) {
+          return nh.field_r;
         }
         if (param0 != -23996) {
-            field_d = (int[]) null;
+          field_d = (int[]) null;
         }
-        if ((gk.a(54) ^ -1L) > (350L + this.field_e ^ -1L)) {
-            return tk.field_n;
+        if (gk.a(54) < (350L + this.field_e)) {
+          return tk.field_n;
         }
         return this.a((byte) 76);
     }

@@ -18,9 +18,9 @@ final class ia extends da {
         field_p = (int[][]) null;
         field_l = null;
         if (param0 != 79) {
-            ia.b((byte) 52);
-            field_i = (fe[][][]) null;
-            return;
+          ia.b((byte) 52);
+          field_i = (fe[][][]) null;
+          return;
         }
         field_i = (fe[][][]) null;
     }

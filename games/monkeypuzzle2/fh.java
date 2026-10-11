@@ -11,9 +11,9 @@ abstract class fh extends ug {
 
     final void a(int[] param0, int param1, int param2) {
         if (this.field_h) {
-            this.b(param0, param1, param2);
+          this.b(param0, param1, param2);
         } else {
-            this.a(param2);
+          this.a(param2);
         }
     }
 

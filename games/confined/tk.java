@@ -12,11 +12,11 @@ abstract class tk {
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != 13) {
-                tk.a(-71);
-            }
+          if (param0 != 13) {
+            tk.a(-71);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "tk.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "tk.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ abstract class tk {
     final static void a(byte param0, boolean param1) {
         dl.a(param1, true, true);
         if (param0 >= -89) {
-            field_e = (String[]) null;
+          field_e = (String[]) null;
         }
     }
 
@@ -40,7 +40,7 @@ abstract class tk {
         field_f = null;
         field_e = null;
         if (param0 != 15866) {
-            field_a = (od) null;
+          field_a = (od) null;
         }
     }
 

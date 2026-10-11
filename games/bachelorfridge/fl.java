@@ -13,81 +13,59 @@ final class fl extends at {
 
     public static void b(boolean param0) {
         field_m = null;
-        if (param0) {
-          fl.b(true);
-          field_o = null;
-          field_l = null;
-          field_p = null;
-          field_j = null;
-          return;
-        } else {
+        if (!param0) {
           field_o = null;
           field_l = null;
           field_p = null;
           field_j = null;
           return;
         }
+        fl.b(true);
+        field_o = null;
+        field_l = null;
+        field_p = null;
+        field_j = null;
     }
 
     private final void d(byte param0) {
-        if (param0 != -82) {
-          L0: {
-            field_p = (int[]) null;
-            if (this.field_n.field_s.field_y == 31) {
-              this.field_n.a(24831, 101, kna.field_g[31]);
-              wf.a(34, (byte) 126);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == -82) {
+          if (this.field_n.field_s.field_y == 31) {
+            this.field_n.a(24831, 101, kna.field_g[31]);
+            wf.a(34, (byte) 126);
           }
           return;
-        } else {
-          L1: {
-            if (this.field_n.field_s.field_y == 31) {
-              this.field_n.a(24831, 101, kna.field_g[31]);
-              wf.a(34, (byte) 126);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        field_p = (int[]) null;
+        if (this.field_n.field_s.field_y == 31) {
+          this.field_n.a(24831, 101, kna.field_g[31]);
+          wf.a(34, (byte) 126);
         }
     }
 
     final boolean c(byte param0) {
-        int var2;
-        L0: {
-          if (this.field_k == 10) {
-            aba.a((byte) -67, 19);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_k == 10) {
+          aba.a((byte) -67, 19);
         }
-        int fieldTemp$1 = this.field_k - 1;
+        int fieldTemp$0 = this.field_k - 1;
         this.field_k = this.field_k - 1;
-        if (-1 <= (fieldTemp$1 ^ -1)) {
-          if ((this.field_n.field_j ^ -1) < -1) {
-            return false;
-          } else {
-            this.d((byte) -82);
-            var2 = 2 % ((param0 - 71) / 47);
-            return true;
-          }
-        } else {
+        if (fieldTemp$0 > 0) {
           return false;
         }
+        if (this.field_n.field_j <= 0) {
+          this.d((byte) -82);
+          int var2 = 2 % ((param0 - 71) / 47);
+          return true;
+        }
+        return false;
     }
 
     fl(gj param0, ad param1) {
         try {
-            this.field_n = param1;
-            this.field_n.field_f.a((byte) 18, this.field_n.field_s.field_o.field_b, 5);
-            this.field_k = 25;
+          this.field_n = param1;
+          this.field_n.field_f.a((byte) 18, this.field_n.field_s.field_o.field_b, 5);
+          this.field_k = 25;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "fl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -26,7 +26,7 @@ abstract class sm {
         field_h = null;
         field_i = null;
         if (param0 != -102) {
-            return;
+          return;
         }
         field_d = null;
     }
@@ -41,85 +41,47 @@ abstract class sm {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int var5Lifetime1;
+        int var6Lifetime1;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -11003) {
-                break L1;
-              } else {
-                sm.a((byte) 109);
-                break L1;
-              }
-            }
-            L2: {
-              if (qi.field_J < param2) {
-                qi.field_J = param2;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var3_int = 366;
-              var4 = 614;
-              si.c(var4 + 4, 70 + var3_int, 12, 12, 0);
-              if (-1 > (param1 ^ -1)) {
-                L4: {
-                  if (param1 * 4 >= param2) {
-                    if (param2 <= param1 * 2) {
-                      stackIn_13_0 = 128;
-                      break L4;
-                    } else {
-                      stackIn_13_0 = 64;
-                      break L4;
-                    }
-                  } else {
-                    stackIn_13_0 = 32;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var5 = stackIn_13_0;
-                  var6 = var5 + -1 & sg.field_i;
-                  if (var5 / 2 <= var6) {
-                    var6 = var5 - var6;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                si.a(var4 - -4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            HostileSpawn.field_J[0].e(var4, var3_int);
-            var5 = var3_int + 64;
-            var6 = param2;
-            var7 = var3_int;
-            L6: while (true) {
-              if (var7 <= -var6 + var5) {
-                L7: {
-                  var7 = var7 - HostileSpawn.field_J[2].field_A;
-                  if (param1 <= param2) {
-                    break L7;
-                  } else {
-                    param1 = param2;
-                    break L7;
-                  }
-                }
-                HostileSpawn.field_J[2].e(var4, var7);
-                si.a(7 + var4, 1 + var5 - param1, 6, param1, 16776960, 128);
-                break L0;
-              } else {
-                var7 = var7 - HostileSpawn.field_J[1].field_A;
-                HostileSpawn.field_J[1].e(var4, var7);
-                continue L6;
-              }
-            }
+          if (param0 != -11003) {
+            sm.a((byte) 109);
           }
+          if (qi.field_J < param2) {
+            qi.field_J = param2;
+          }
+          var3_int = 366;
+          var4 = 614;
+          si.c(var4 + 4, 70 + var3_int, 12, 12, 0);
+          if (param1 > 0) {
+            if (param1 * 4 >= param2) {
+              stackIn_13_0 = (param2 <= param1 * 2) ? 128 : 64;
+            } else {
+              stackIn_13_0 = 32;
+            }
+            var5 = stackIn_13_0;
+            var6 = var5 - 1 & sg.field_i;
+            if (var5 / 2 <= var6) {
+              var6 = var5 - var6;
+            }
+            si.a(var4 + 4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
+          }
+          HostileSpawn.field_J[0].e(var4, var3_int);
+          var5Lifetime1 = var3_int + 64;
+          var6Lifetime1 = param2;
+          var7 = var3_int;
+          while (var7 > -var6Lifetime1 + var5Lifetime1) {
+            var7 = var7 - HostileSpawn.field_J[1].field_A;
+            HostileSpawn.field_J[1].e(var4, var7);
+          }
+          var7 = var7 - HostileSpawn.field_J[2].field_A;
+          if (param1 > param2) {
+            param1 = param2;
+          }
+          HostileSpawn.field_J[2].e(var4, var7);
+          si.a(7 + var4, 1 + var5Lifetime1 - param1, 6, param1, 16776960, 128);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -11,8 +11,8 @@ final class bd extends ot {
 
     final wba a(byte param0) {
         if (param0 != -106) {
-            this.a((byte) 64);
-            return jda.field_g;
+          this.a((byte) 64);
+          return jda.field_g;
         }
         return jda.field_g;
     }
@@ -26,9 +26,9 @@ final class bd extends ot {
         field_i = null;
         field_k = null;
         if (param0 >= -119) {
-            bd.c((byte) 21);
-            field_h = null;
-            return;
+          bd.c((byte) 21);
+          field_h = null;
+          return;
         }
         field_h = null;
     }

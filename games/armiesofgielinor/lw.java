@@ -11,12 +11,12 @@ final class lw extends pt {
 
     final static void a(byte param0, mq param1) {
         try {
-            as.field_E.a(param1, 80);
-            if (param0 != 79) {
-                field_nb = (String) null;
-            }
+          as.field_E.a(param1, 80);
+          if (param0 != 79) {
+            field_nb = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -26,17 +26,17 @@ final class lw extends pt {
 
     final void a(kb param0, byte param1) {
         try {
-            int var3_int = -61 % ((-27 - param1) / 44);
-            super.a(param0, (byte) 87);
+          int var3_int = -61 % ((-27 - param1) / 44);
+          super.a(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void j(byte param0) {
         field_ob = null;
         if (param0 != 49) {
-            return;
+          return;
         }
         field_kb = null;
         field_pb = null;
@@ -45,14 +45,12 @@ final class lw extends pt {
     }
 
     final static nv n(int param0) {
-        mq var2;
-        if (param0 != 0) {
-          var2 = (mq) null;
-          lw.a((byte) -16, (mq) null);
-          return new nv(0, 0, t.field_c.field_a, 0, (kh) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
-        } else {
+        if (param0 == 0) {
           return new nv(0, 0, t.field_c.field_a, 0, (kh) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
         }
+        mq var2 = (mq) null;
+        lw.a((byte) -16, (mq) null);
+        return new nv(0, 0, t.field_c.field_a, 0, (kh) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
     }
 
     static {

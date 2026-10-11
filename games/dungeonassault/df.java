@@ -17,46 +17,24 @@ final class df {
         ja var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        ai var2Lifetime1;
         var3 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (param0 == 16) {
-                break L1;
-              } else {
-                var4 = (ja) null;
-                df.a((byte) 115, (ja) null);
-                break L1;
-              }
+          if (param0 != 16) {
+            var4 = (ja) null;
+            df.a((byte) 115, (ja) null);
+          }
+          for (var1_int = 0; var1_int < 49; var1_int++) {
+            var2 = qj.field_c[var1_int];
+            if (var2 != null) {
+              var2.field_f = qe.a(var2, false, false, 0);
             }
-            var1_int = 0;
-            L2: while (true) {
-              if (-50 >= (var1_int ^ -1)) {
-                break L0;
-              } else {
-                L3: {
-                  var2 = qj.field_c[var1_int];
-                  if (var2 != null) {
-                    var2.field_f = qe.a(var2, false, false, 0);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  var2 = gm.field_d.field_L[var1_int];
-                  if (var2 == null) {
-                    break L4;
-                  } else {
-                    var2.field_f = qe.a(var2, false, false, 0);
-                    break L4;
-                  }
-                }
-                var1_int++;
-                continue L2;
-              }
+            var2Lifetime1 = gm.field_d.field_L[var1_int];
+            if (var2Lifetime1 != null) {
+              var2Lifetime1.field_f = qe.a(var2Lifetime1, false, false, 0);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -66,18 +44,17 @@ final class df {
 
     final static int a(byte param0) {
         if (param0 != -38) {
-            return -45;
+          return -45;
         }
         return (int)(-16912800L + kd.c(-2456) / 60000L);
     }
 
     final static qh a(boolean param0, wj param1) {
-        qh stackIn_26_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
+        int var7 = 0;
+        qh stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        String stackIn_30_2 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -85,136 +62,86 @@ final class df {
         int var4 = 0;
         qh var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         var8 = DungeonAssault.field_K;
         try {
-          L0: {
-            var2_int = param1.j(114, 8);
-            if (0 >= var2_int) {
-              L1: {
-                var3 = jl.a(param1, -123) ? 1 : 0;
-                var4 = jl.a(param1, 90) ? 1 : 0;
-                var5 = new qh();
-                var5.field_B = (short)param1.j(-101, 16);
-                var5.field_L = aj.a(param1, var5.field_L, (byte) 31, 16);
-                var5.field_S = aj.a(param1, var5.field_S, (byte) 31, 16);
-                var5.field_z = aj.a(param1, var5.field_z, (byte) 31, 16);
-                var5.field_h = (short)param1.j(-43, 16);
-                var5.field_A = aj.a(param1, var5.field_A, (byte) 31, 16);
-                var5.field_x = aj.a(param1, var5.field_x, (byte) 31, 16);
-                var5.field_N = aj.a(param1, var5.field_N, (byte) 31, 16);
-                if (!param0) {
-                  break L1;
-                } else {
-                  field_a = (String) null;
-                  break L1;
-                }
+          var2_int = param1.j(114, 8);
+          if (0 < var2_int) {
+            throw new IllegalStateException("" + var2_int);
+          }
+          var3 = jl.a(param1, -123) ? 1 : 0;
+          var4 = jl.a(param1, 90) ? 1 : 0;
+          var5 = new qh();
+          var5.field_B = (short)param1.j(-101, 16);
+          var5.field_L = aj.a(param1, var5.field_L, (byte) 31, 16);
+          var5.field_S = aj.a(param1, var5.field_S, (byte) 31, 16);
+          var5.field_z = aj.a(param1, var5.field_z, (byte) 31, 16);
+          var5.field_h = (short)param1.j(-43, 16);
+          var5.field_A = aj.a(param1, var5.field_A, (byte) 31, 16);
+          var5.field_x = aj.a(param1, var5.field_x, (byte) 31, 16);
+          var5.field_N = aj.a(param1, var5.field_N, (byte) 31, 16);
+          if (param0) {
+            field_a = (String) null;
+          }
+          if (var3 != 0) {
+            var5.field_c = (short)param1.j(-79, 16);
+            var5.field_d = aj.a(param1, var5.field_d, (byte) 31, 16);
+            var5.field_P = aj.a(param1, var5.field_P, (byte) 31, 16);
+            var5.field_v = aj.a(param1, var5.field_v, (byte) 31, 16);
+            var5.field_e = aj.a(param1, var5.field_e, (byte) 31, 16);
+            var5.field_s = aj.a(param1, var5.field_s, (byte) 31, 16);
+            var5.field_F = aj.a(param1, var5.field_F, (byte) 31, 16);
+          }
+          if (var4 != 0) {
+            param1.j(-97, 16);
+            var5.field_t = aj.a(param1, var5.field_t, (byte) 31, 16);
+            var5.field_Q = aj.a(param1, var5.field_Q, (byte) 31, 16);
+            var5.field_I = aj.a(param1, var5.field_I, (byte) 31, 16);
+            var5.field_n = aj.a(param1, var5.field_n, (byte) 31, 16);
+            var5.field_C = aj.a(param1, var5.field_C, (byte) 31, 16);
+          }
+          if (jl.a(param1, -120)) {
+            var5.field_o = aj.a(param1, var5.field_o, (byte) 31, 16);
+          }
+          if (jl.a(param1, 95)) {
+            var5.field_y = rj.a(param1, false, 16, var5.field_y);
+            var6 = 0;
+            for (var7 = 0; var7 < var5.field_y.length; var7++) {
+              if (var6 < (255 & var5.field_y[var7])) {
+                var6 = var5.field_y[var7] & 255;
               }
-              L2: {
-                if (var3 == 0) {
-                  break L2;
-                } else {
-                  var5.field_c = (short)param1.j(-79, 16);
-                  var5.field_d = aj.a(param1, var5.field_d, (byte) 31, 16);
-                  var5.field_P = aj.a(param1, var5.field_P, (byte) 31, 16);
-                  var5.field_v = aj.a(param1, var5.field_v, (byte) 31, 16);
-                  var5.field_e = aj.a(param1, var5.field_e, (byte) 31, 16);
-                  var5.field_s = aj.a(param1, var5.field_s, (byte) 31, 16);
-                  var5.field_F = aj.a(param1, var5.field_F, (byte) 31, 16);
-                  break L2;
-                }
-              }
-              L3: {
-                if (var4 != 0) {
-                  param1.j(-97, 16);
-                  var5.field_t = aj.a(param1, var5.field_t, (byte) 31, 16);
-                  var5.field_Q = aj.a(param1, var5.field_Q, (byte) 31, 16);
-                  var5.field_I = aj.a(param1, var5.field_I, (byte) 31, 16);
-                  var5.field_n = aj.a(param1, var5.field_n, (byte) 31, 16);
-                  var5.field_C = aj.a(param1, var5.field_C, (byte) 31, 16);
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (jl.a(param1, -120)) {
-                  var5.field_o = aj.a(param1, var5.field_o, (byte) 31, 16);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (jl.a(param1, 95)) {
-                  var5.field_y = rj.a(param1, false, 16, var5.field_y);
-                  var6 = 0;
-                  var7 = 0;
-                  L6: while (true) {
-                    if (var7 >= var5.field_y.length) {
-                      if (var6 == 0) {
-                        var5.field_y = null;
-                        break L5;
-                      } else {
-                        var5.field_w = (byte)(1 + var6);
-                        break L5;
-                      }
-                    } else {
-                      if ((var6 ^ -1) > (255 & var5.field_y[var7] ^ -1)) {
-                        var6 = var5.field_y[var7] & 255;
-                        var7++;
-                        continue L6;
-                      } else {
-                        var7++;
-                        continue L6;
-                      }
-                    }
-                  }
-                } else {
-                  break L5;
-                }
-              }
-              stackIn_26_0 = (qh) (var5);
-              break L0;
+            }
+            if (var6 == 0) {
+              var5.field_y = null;
             } else {
-              throw new IllegalStateException("" + var2_int);
+              var5.field_w = (byte)(1 + var6);
             }
           }
+          stackIn_27_0 = var5;
+          return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_29_0 = (RuntimeException) (var2);
-
-            stackIn_29_1 = new StringBuilder().append("df.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "null";
-              break L7;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "{...}";
-              break L7;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_30_0 = var2;
+          stackIn_30_1 = new StringBuilder().append("df.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
-        return stackIn_26_0;
     }
 
     final static void a(byte param0, ja param1) {
         try {
-            qh.field_G = param1;
-            if (param0 != 11) {
-                wj var3 = (wj) null;
-                df.a(true, (wj) null);
-            }
+          qh.field_G = param1;
+          if (param0 != 11) {
+            wj var3 = (wj) null;
+            df.a(true, (wj) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "df.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "df.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -225,8 +152,8 @@ final class df {
         field_f = null;
         field_e = null;
         if (param0 != 255) {
-            wj var2 = (wj) null;
-            df.a(true, (wj) null);
+          wj var2 = (wj) null;
+          df.a(true, (wj) null);
         }
         field_c = null;
         field_a = null;

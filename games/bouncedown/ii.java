@@ -14,7 +14,7 @@ final class ii extends wi {
 
     public static void l(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_n = null;
         field_l = null;
@@ -23,23 +23,23 @@ final class ii extends wi {
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         od.field_f.a(param1, param0 - 1, param2, 0, 0);
         if (param4 != 8) {
-            return;
+          return;
         }
         try {
-            od.field_f.a(param1, param0, -1 + param2, 0, 0);
-            od.field_f.a(param1, param0, param2, param3, -1);
+          od.field_f.a(param1, param0, -1 + param2, 0, 0);
+          od.field_f.a(param1, param0, param2, param3, -1);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "ii.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void n(int param0) {
         lg.field_b = new gh();
         if (param0 != 8) {
-            String var2 = (String) null;
-            ii.a((Throwable) null, (String) null);
-            ed.field_c.a(10768, lg.field_b);
-            return;
+          String var2 = (String) null;
+          ii.a((Throwable) null, (String) null);
+          ed.field_c.a(10768, lg.field_b);
+          return;
         }
         ed.field_c.a(10768, lg.field_b);
     }
@@ -49,7 +49,7 @@ final class ii extends wi {
         this.field_h = this.field_h + 1;
         this.field_i[fieldTemp$0] = (byte)(param1 + this.field_o.b((byte) 123));
         if (param0) {
-            return;
+          return;
         }
         this.field_m = 20;
     }
@@ -57,7 +57,7 @@ final class ii extends wi {
     final void m(int param0) {
         this.field_h = (this.field_m + 7) / 8;
         if (param0 <= -36) {
-            return;
+          return;
         }
         byte[] var3 = (byte[]) null;
         this.a(-77, -85, 1, (byte[]) null);
@@ -65,22 +65,22 @@ final class ii extends wi {
 
     final void b(int[] param0, int param1) {
         try {
-            this.field_o = new qb(param0);
-            if (param1 <= 83) {
-                this.f(60, 33);
-            }
+          this.field_o = new qb(param0);
+          if (param1 <= 83) {
+            this.f(60, 33);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "ii.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int h(byte param0) {
         if (param0 <= 1) {
-            return -119;
+          return -119;
         }
         int fieldTemp$0 = this.field_h;
         this.field_h = this.field_h + 1;
-        return this.field_i[fieldTemp$0] + -this.field_o.b((byte) 123) & 255;
+        return this.field_i[fieldTemp$0] - this.field_o.b((byte) 123) & 255;
     }
 
     ii(int param0) {
@@ -94,95 +94,68 @@ final class ii extends wi {
     final static ga a(Throwable param0, String param1) {
         ga var2 = null;
         if (!(param0 instanceof ga)) {
-            var2 = new ga(param0, param1);
+          var2 = new ga(param0, param1);
         } else {
-            var2 = (ga) ((Object) param0);
-            var2.field_a = var2.field_a + ' ' + param1;
+          var2 = (ga) ((Object) param0);
+          var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) {
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = Bounce.field_N;
         try {
-          L0: {
-            var5_int = 0;
-            if (param1 == 8) {
-              L1: while (true) {
-                if (var5_int >= param0) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  fieldTemp$2 = this.field_h;
-                  this.field_h = this.field_h + 1;
-                  param3[var5_int - -param2] = (byte)(this.field_i[fieldTemp$2] + -this.field_o.b((byte) 123));
-                  var5_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5_int = 0;
+          if (param1 != 8) {
+            return;
           }
+          while (var5_int < param0) {
+            fieldTemp$0 = this.field_h;
+            this.field_h = this.field_h + 1;
+            param3[var5_int + param2] = (byte)(this.field_i[fieldTemp$0] - this.field_o.b((byte) 123));
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("ii.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("ii.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ii.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final int f(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = Bounce.field_N;
-        int var3 = this.field_m >> 1238811907;
+        int var3 = this.field_m >> 3;
         int var4 = 8 - (this.field_m & param0);
         this.field_m = this.field_m + param1;
         int var5 = 0;
         while (var4 < param1) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((this.field_i[incrementValue$0] & nh.field_N[var4]) << -var4 + param1);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.field_i[incrementValue$0] & nh.field_N[var4]) << -var4 + param1);
+          param1 = param1 - var4;
+          var4 = 8;
         }
         if (var4 == param1) {
-            var5 = var5 + (nh.field_N[var4] & this.field_i[var3]);
+          var5 = var5 + (nh.field_N[var4] & this.field_i[var3]);
         } else {
-            var5 = var5 + (this.field_i[var3] >> -param1 + var4 & nh.field_N[param1]);
+          var5 = var5 + (this.field_i[var3] >> -param1 + var4 & nh.field_N[param1]);
         }
         return var5;
     }

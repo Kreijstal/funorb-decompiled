@@ -11,15 +11,15 @@ final class rm extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_a.paint(param0);
+          this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "rm.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_f = false;
+          field_f = false;
         }
         field_e = null;
         field_c = null;
@@ -42,35 +42,35 @@ final class rm extends java.awt.Canvas {
         var8.h(-124, param2.field_m);
         var8.h(-118, param2.field_l);
         if (param0 >= -47) {
-            return;
+          return;
         }
         try {
-            var8.h(40, param2.field_t);
-            var8.i(param2.field_k.length, 87);
-            for (var5 = 0; var5 < param2.field_k.length; var5++) {
-                var7.h(30, param2.field_k[var5]);
-            }
-            var8.e(-123, var4);
-            var8.d(50, -var4 + var8.field_j);
+          var8.h(40, param2.field_t);
+          var8.i(param2.field_k.length, 87);
+          for (var5 = 0; var5 < param2.field_k.length; var5++) {
+            var7.h(30, param2.field_k[var5]);
+          }
+          var8.e(-123, var4);
+          var8.d(50, -var4 + var8.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "rm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, int param1, boolean param2) {
         if (param2) {
-            rc var4 = (rc) null;
-            rm.a((byte) -68, 88, (rc) null);
+          rc var4 = (rc) null;
+          rm.a((byte) -68, 88, (rc) null);
         }
-        int var3 = param1 >>> 1802605695;
+        int var3 = param1 >>> 31;
         return (var3 + param1) / param0 - var3;
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_a.update(param0);
+          this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "rm.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,71 +78,41 @@ final class rm extends java.awt.Canvas {
         int var1;
         int var3;
         int stackIn_11_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_12_1 = 0;
+        boolean stackIn_12_1 = false;
         int var2;
-        L0: {
-          var3 = ZombieDawn.field_J;
-          var1 = param0 ? 1 : 0;
-          if (we.o((byte) -80)) {
-            hi.a((byte) 120);
+        var3 = ZombieDawn.field_J;
+        var1 = param0 ? 1 : 0;
+        if (we.o((byte) -80)) {
+          hi.a((byte) 120);
+          var1 = 1;
+        } else {
+          if (!dl.a(false)) {
+            if (ac.d(50)) {
+              bi.h(0, 0, bi.field_f, bi.field_a);
+              oe.a((byte) -116);
+              var1 = 1;
+            }
+          } else {
+            ql.d(-160793343);
             var1 = 1;
-            break L0;
-          } else {
-            if (!dl.a(false)) {
-              if (ac.d(50)) {
-                bi.h(0, 0, bi.field_f, bi.field_a);
-                oe.a((byte) -116);
-                var1 = 1;
-                break L0;
-              } else {
-                break L0;
-              }
-            } else {
-              ql.d(-160793343);
-              var1 = 1;
-              break L0;
-            }
           }
         }
-        L1: {
-          if (!nk.b(15000)) {
-            break L1;
+        if (nk.b(15000) &&
+          !dl.a(false)) {
+          stackIn_11_0 = 80;
+          if (cn.field_b != null) {
+            stackIn_12_1 = true;
           } else {
-            if (dl.a(false)) {
-              break L1;
-            } else {
-              L2: {
-                stackIn_11_0 = 80;
-
-                if (cn.field_b != null) {
-                  stackIn_12_0 = stackIn_11_0;
-                  stackIn_12_1 = 1;
-                  break L2;
-                } else {
-                  stackIn_12_0 = stackIn_11_0;
-                  stackIn_12_1 = mp.field_c ? 1 : 0;
-                  break L2;
-                }
-              }
-              dm.a((byte) stackIn_12_0, stackIn_12_1 != 0);
-              var1 = 1;
-              break L1;
-            }
+            stackIn_12_1 = mp.field_c;
           }
+          dm.$cfr$intArgs$a$7ffe4b125357(stackIn_11_0, stackIn_12_1);
+          var1 = 1;
         }
-        L3: {
-          if (!bg.a(2)) {
-            break L3;
-          } else {
-            var2 = (ln.field_b + -1 << 1442659304) / 16;
-            if ((var2 ^ -1) >= -1) {
-              break L3;
-            } else {
-              bi.a(0, 0, bi.field_f, bi.field_a, 0, var2);
-              var1 = 1;
-              break L3;
-            }
+        if (bg.a(2)) {
+          var2 = (ln.field_b - 1 << 8) / 16;
+          if (var2 > 0) {
+            bi.a(0, 0, bi.field_f, bi.field_a, 0, var2);
+            var1 = 1;
           }
         }
         return var1 != 0;
@@ -150,9 +120,9 @@ final class rm extends java.awt.Canvas {
 
     rm(java.awt.Component param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

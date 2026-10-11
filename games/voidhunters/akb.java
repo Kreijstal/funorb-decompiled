@@ -6,8 +6,8 @@ final class akb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            akb.b((byte) -90);
-            return (tv[]) ((Object) new bba[param1]);
+          akb.b((byte) -90);
+          return (tv[]) ((Object) new bba[param1]);
         }
         return (tv[]) ((Object) new bba[param1]);
     }
@@ -18,7 +18,7 @@ final class akb implements dja {
     }
 
     public static void b(byte param0) {
-        int var1 = -21 % ((param0 - -35) / 34);
+        int var1 = -21 % ((param0 + 35) / 34);
         field_a = null;
     }
 

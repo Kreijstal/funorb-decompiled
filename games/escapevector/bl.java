@@ -17,57 +17,36 @@ final class bl extends hg {
         te[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (uc.a(param2, 100, param3, param0)) {
-              L1: {
-                if (param1 == 255) {
-                  break L1;
-                } else {
-                  var5 = (mf) null;
-                  bl.a(49, -40, (mf) null, 15);
-                  break L1;
-                }
-              }
-              stackIn_6_0 = fg.a(13029);
-              break L0;
-            } else {
-              return null;
-            }
+          if (!uc.a(param2, 100, param3, param0)) {
+            return null;
           }
+          if (param1 != 255) {
+            var5 = (mf) null;
+            bl.a(49, -40, (mf) null, 15);
+          }
+          stackIn_6_0 = fg.a(13029);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("bl.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("bl.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void d(int param0) {
         field_l = null;
         if (param0 != 255) {
-            bl.d(125);
+          bl.d(125);
         }
     }
 

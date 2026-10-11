@@ -19,16 +19,16 @@ final class kh {
 
     final void a(java.applet.Applet param0, int param1) {
         try {
-            hi.a(param1, 31536000L, "jagex-last-login-method", this.field_a, param0);
+          hi.a(param1, 31536000L, "jagex-last-login-method", this.field_a, param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "kh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
         ci.field_f.a(0, -46, 0);
         if (param0 > -28) {
-            kh.a((byte) 88);
+          kh.a((byte) 88);
         }
     }
 
@@ -36,7 +36,7 @@ final class kh {
         field_c = null;
         field_e = null;
         if (param0 != 0) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
@@ -45,53 +45,33 @@ final class kh {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_d = -51;
-                break L1;
-              }
-            }
-            stackIn_3_0 = this.field_a.equals(param0);
-            break L0;
+          if (param1 != 0) {
+            field_d = -51;
           }
+          stackIn_3_0 = this.field_a.equals(param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("kh.D(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("kh.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     kh(String param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "kh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

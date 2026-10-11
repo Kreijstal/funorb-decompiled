@@ -8,10 +8,10 @@ final class sc {
 
     public static void a(int param0) {
         if (param0 < 1) {
-            field_a = (String) null;
-            field_b = null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -19,11 +19,11 @@ final class sc {
 
     final static void b(int param0) {
         if (param0 > -75) {
-            return;
+          return;
         }
-        ii var1 = (ii) ((Object) hi.field_v.a(113));
-        if (!(var1 != null)) {
-            throw new IllegalStateException();
+        ii var1 = (ii) (hi.field_v.a(113));
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         lb.a(var1.field_i, var1.field_m, var1.field_p);
         lb.e(var1.field_n, var1.field_o, var1.field_t, var1.field_k);

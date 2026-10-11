@@ -18,9 +18,7 @@ final class te extends IOException {
         field_f = null;
         field_b = null;
         field_a = null;
-        if (param0 <= 122) {
-          return;
-        } else {
+        if (param0 > 122) {
           field_g = null;
           field_d = null;
           field_c = null;
@@ -37,61 +35,47 @@ final class te extends IOException {
         hg var5 = null;
         int var4 = 0;
         try {
-            var5 = gk.field_g;
-            var5.g(param2, 8);
-            var5.field_l = var5.field_l + 1;
-            var4 = var5.field_l;
-            var5.a(param0, 98);
-            var5.a(param1.field_i, 88);
-            var5.a(param1.field_k, param0 + -124);
-            var5.a(param1.field_j, (byte) -42);
-            var5.a(param1.field_h, (byte) -42);
-            var5.a(param1.field_g, (byte) -42);
-            var5.a(param1.field_n, (byte) -42);
-            var5.b((byte) -111, var4);
-            var5.b(-var4 + var5.field_l, -1);
+          var5 = gk.field_g;
+          var5.g(param2, 8);
+          var5.field_l = var5.field_l + 1;
+          var4 = var5.field_l;
+          var5.a(param0, 98);
+          var5.a(param1.field_i, 88);
+          var5.a(param1.field_k, param0 - 124);
+          var5.a(param1.field_j, (byte) -42);
+          var5.a(param1.field_h, (byte) -42);
+          var5.a(param1.field_g, (byte) -42);
+          var5.a(param1.field_n, (byte) -42);
+          var5.b((byte) -111, var4);
+          var5.b(-var4 + var5.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3;
-        int var4;
-        L0: {
-          if (null == km.field_yb) {
-            break L0;
-          } else {
-            var3 = km.field_yb.a(2105376, param0);
-            if ((var3 ^ -1) != 1) {
-              L1: {
-                if (var3 != -1) {
-                  var4 = km.field_yb.h(140) ? 1 : 0;
-                  kf.a(param2, var3, km.field_yb.field_Mb, 125, km.field_yb.e((byte) -72), var4 != 0);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              km.field_yb = null;
-              ch.a(true);
-              break L0;
-            } else {
-              if (param1 < -118) {
-                return;
-              } else {
-                field_f = (p) null;
-                return;
-              }
+        int var3 = 0;
+        int var4 = 0;
+        if (null != km.field_yb) {
+          var3 = km.field_yb.a(2105376, param0);
+          if (var3 == -2) {
+            if (param1 >= -118) {
+              field_f = (p) null;
+              return;
             }
+            return;
           }
+          if (var3 != -1) {
+            var4 = km.field_yb.h(140) ? 1 : 0;
+            kf.a(param2, var3, km.field_yb.field_Mb, 125, km.field_yb.e((byte) -72), var4 != 0);
+          }
+          km.field_yb = null;
+          ch.a(true);
         }
-        if (param1 >= -118) {
-          field_f = (p) null;
-          return;
-        } else {
+        if (param1 < -118) {
           return;
         }
+        field_f = (p) null;
     }
 
     static {

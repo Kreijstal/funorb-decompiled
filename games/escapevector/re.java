@@ -15,43 +15,33 @@ class re extends k {
         Throwable var2 = null;
         tj var3 = null;
         Throwable decompiledCaughtException = null;
+        tj var3Lifetime1;
         if (null == ck.field_v) {
-          if (param0 != 2) {
-            var3 = (tj) null;
-            re.a(68, (tj) null);
-            return;
-          } else {
+          if (param0 == 2) {
             return;
           }
-        } else {
-          var1 = ck.field_v;
-          synchronized (var1) {
-            L0: {
-              ck.field_v = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 == 2) {
-              break L1;
-            } else {
-              var3 = (tj) null;
-              re.a(68, (tj) null);
-              break L1;
-            }
-          }
+          var3 = (tj) null;
+          re.a(68, (tj) null);
           return;
+        }
+        var1 = ck.field_v;
+        synchronized (var1) {
+          ck.field_v = null;
+        }
+        if (param0 != 2) {
+          var3Lifetime1 = (tj) null;
+          re.a(68, (tj) null);
         }
     }
 
     final static void a(int param0, tj param1) {
         try {
-            mg.field_e.a(-12328, param1);
-            if (param0 != 1820) {
-                field_r = (String[]) null;
-            }
+          mg.field_e.a(-12328, param1);
+          if (param0 != 1820) {
+            field_r = (String[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "re.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "re.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,49 +49,29 @@ class re extends k {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param4) {
-                break L1;
-              } else {
-                mn.a(-27951, param0 - -param3.field_k, param1 - -param3.field_j, param3.field_g, param3.field_x);
-                break L1;
-              }
-            }
-            super.a(param0, param1, -60, param3, param4);
-            if (param2 < -14) {
-              break L0;
-            } else {
-              field_s = (rf) null;
-              return;
-            }
+          if (param4) {
+            mn.a(-27951, param0 + param3.field_k, param1 + param3.field_j, param3.field_g, param3.field_x);
           }
+          super.a(param0, param1, -60, param3, param4);
+          if (param2 < -14) {
+            return;
+          }
+          field_s = (rf) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6);
-
-            stackIn_7_1 = new StringBuilder().append("re.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_7_0 = var6;
+          stackIn_7_1 = new StringBuilder().append("re.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -110,7 +80,7 @@ class re extends k {
         field_s = null;
         field_q = null;
         if (param0 != -11967) {
-            field_s = (rf) null;
+          field_s = (rf) null;
         }
     }
 

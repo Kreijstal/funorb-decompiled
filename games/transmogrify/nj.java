@@ -28,130 +28,71 @@ final class nj extends wf {
     }
 
     final static ti[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var14 = 0;
         int var9;
         ti[] var10;
         ti[] var11_ref_ti__;
         int var11;
         int var12;
         ti var13;
-        int var14;
         int var15;
-        L0: {
-          var15 = Transmogrify.field_A ? 1 : 0;
-          var9 = param4 + param7 + param0;
-          var10 = new ti[]{new ti(var9, var9), new ti(param3, var9), new ti(var9, var9), new ti(var9, param3), new ti(64, 64), new ti(var9, param3), new ti(var9, var9), new ti(param3, var9), new ti(var9, var9)};
-          var11_ref_ti__ = var10;
-          var12 = 0;
-          if (param6 >= 42) {
-            break L0;
-          } else {
-            nj.d(-32);
-            break L0;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime3;
+        int var12Lifetime4;
+        var15 = Transmogrify.field_A ? 1 : 0;
+        var9 = param4 + param7 + param0;
+        var10 = new ti[]{new ti(var9, var9), new ti(param3, var9), new ti(var9, var9), new ti(var9, param3), new ti(64, 64), new ti(var9, param3), new ti(var9, var9), new ti(param3, var9), new ti(var9, var9)};
+        var11_ref_ti__ = var10;
+        var12 = 0;
+        if (param6 < 42) {
+          nj.d(-32);
+        }
+        while (var12 < var11_ref_ti__.length) {
+          var13 = var11_ref_ti__[var12];
+          for (var14 = 0; var13.field_w.length > var14; var14++) {
+            var13.field_w[var14] = param5;
+          }
+          var12++;
+        }
+        for (var11 = 0; param0 > var11; var11++) {
+          for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {
+            var10[6].field_w[(-1 - var11 + var9) * var9 + var12Lifetime1] = param2;
+            var10[8].field_w[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param2;
+            var10[2].field_w[var12Lifetime1 * var9 + var9 + (-1 - var11)] = param2;
+            var10[8].field_w[var12Lifetime1 * var9 + var9 - 1 - var11] = param2;
           }
         }
-        L1: while (true) {
-          if (var12 >= var11_ref_ti__.length) {
-            var11 = 0;
-            L2: while (true) {
-              if (param0 <= var11) {
-                var11 = 0;
-                L3: while (true) {
-                  if (param0 <= var11) {
-                    var11 = 0;
-                    L4: while (true) {
-                      if (var11 >= param3) {
-                        var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param3 >> 80973185) {
-                            return var10;
-                          } else {
-                            var12 = 0;
-                            L6: while (true) {
-                              if (param4 > var12) {
-                                var10[1].field_w[var11 + param3 * (-1 + (var9 - var12))] = param8;
-                                var10[3].field_w[var11 * var9 - var12 - -var9 + -1] = param8;
-                                var10[7].field_w[var11 + var12 * param3] = param8;
-                                var10[5].field_w[var12 + var9 * var11] = param8;
-                                var12++;
-                                continue L6;
-                              } else {
-                                var11++;
-                                continue L5;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        var12 = 0;
-                        L7: while (true) {
-                          if (var12 < param0) {
-                            var10[7].field_w[(-1 + -var12 + var9) * param3 + var11] = param2;
-                            var10[5].field_w[var9 + -1 + (-var12 + var11 * var9)] = param2;
-                            var10[1].field_w[var11 + var12 * param3] = param1;
-                            var10[3].field_w[var9 * var11 + var12] = param1;
-                            var12++;
-                            continue L7;
-                          } else {
-                            var11++;
-                            continue L4;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    var12 = 0;
-                    L8: while (true) {
-                      if (var12 >= var9) {
-                        var11++;
-                        continue L3;
-                      } else {
-                        var10[0].field_w[var12 + var9 * var11] = param1;
-                        var10[0].field_w[var9 * var12 - -var11] = param1;
-                        if ((var9 + -var11 ^ -1) < (var12 ^ -1)) {
-                          var10[2].field_w[var12 + var11 * var9] = param1;
-                          var10[6].field_w[var11 + var12 * var9] = param1;
-                          var12++;
-                          continue L8;
-                        } else {
-                          var12++;
-                          continue L8;
-                        }
-                      }
-                    }
-                  }
-                }
-              } else {
-                var12 = 0;
-                L9: while (true) {
-                  if (var9 <= var12) {
-                    var11++;
-                    continue L2;
-                  } else {
-                    var10[6].field_w[(-1 + -var11 + var9) * var9 + var12] = param2;
-                    var10[8].field_w[var12 + (-var11 + (var9 - 1)) * var9] = param2;
-                    var10[2].field_w[var12 * var9 - -var9 + (-1 - var11)] = param2;
-                    var10[8].field_w[var12 * var9 + var9 - 1 + -var11] = param2;
-                    var12++;
-                    continue L9;
-                  }
-                }
-              }
-            }
-          } else {
-            var13 = var11_ref_ti__[var12];
-            var14 = 0;
-            L10: while (true) {
-              if (var13.field_w.length <= var14) {
-                var12++;
-                continue L1;
-              } else {
-                var13.field_w[var14] = param5;
-                var14++;
-                continue L10;
-              }
+        for (var11Lifetime1 = 0; param0 > var11Lifetime1; var11Lifetime1++) {
+          for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
+            var10[0].field_w[var12Lifetime2 + var9 * var11Lifetime1] = param1;
+            var10[0].field_w[var9 * var12Lifetime2 + var11Lifetime1] = param1;
+            if ((var9 - var11Lifetime1) > var12Lifetime2) {
+              var10[2].field_w[var12Lifetime2 + var11Lifetime1 * var9] = param1;
+              var10[6].field_w[var11Lifetime1 + var12Lifetime2 * var9] = param1;
             }
           }
         }
+        for (var11Lifetime2 = 0; var11Lifetime2 < param3; var11Lifetime2++) {
+          for (var12Lifetime3 = 0; var12Lifetime3 < param0; var12Lifetime3++) {
+            var10[7].field_w[(-1 - var12Lifetime3 + var9) * param3 + var11Lifetime2] = param2;
+            var10[5].field_w[var9 - 1 + (-var12Lifetime3 + var11Lifetime2 * var9)] = param2;
+            var10[1].field_w[var11Lifetime2 + var12Lifetime3 * param3] = param1;
+            var10[3].field_w[var9 * var11Lifetime2 + var12Lifetime3] = param1;
+          }
+        }
+        for (var11Lifetime3 = 0; var11Lifetime3 < param3 >> 1; var11Lifetime3++) {
+          for (var12Lifetime4 = 0; param4 > var12Lifetime4; var12Lifetime4++) {
+            var10[1].field_w[var11Lifetime3 + param3 * (-1 + (var9 - var12Lifetime4))] = param8;
+            var10[3].field_w[var11Lifetime3 * var9 - var12Lifetime4 + var9 - 1] = param8;
+            var10[7].field_w[var11Lifetime3 + var12Lifetime4 * param3] = param8;
+            var10[5].field_w[var12Lifetime4 + var9 * var11Lifetime3] = param8;
+          }
+        }
+        return var10;
     }
 
     nj(int param0, int param1, int param2, int param3, int param4) {

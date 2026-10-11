@@ -15,16 +15,16 @@ final class sj extends k {
         int[] var10 = this.field_j.a(param0, -1);
         int[] var3 = var10;
         if (param1 != 0) {
-            return (int[]) null;
+          return (int[]) null;
         }
-        if (!(!this.field_j.field_m)) {
-            var4 = this.a((byte) -62, 0, param0);
-            var5 = var4[0];
-            var6 = var4[1];
-            var7 = var4[2];
-            for (var8 = 0; var8 < hh.field_d; var8++) {
-                var10[var8] = (var5[var8] - (-var6[var8] - var7[var8])) / 3;
-            }
+        if (this.field_j.field_m) {
+          var4 = this.a((byte) -62, 0, param0);
+          var5 = var4[0];
+          var6 = var4[1];
+          var7 = var4[2];
+          for (var8 = 0; var8 < hh.field_d; var8++) {
+            var10[var8] = (var5[var8] - (-var6[var8] - var7[var8])) / 3;
+          }
         }
         return var3;
     }
@@ -33,7 +33,7 @@ final class sj extends k {
         field_k = null;
         field_l = null;
         if (param0 != 0) {
-            sj.d(79);
+          sj.d(79);
         }
     }
 

@@ -20,14 +20,12 @@ public class dk {
     }
 
     public static File a(boolean param0, String param1) {
-        String var3;
-        if (param0) {
-          var3 = (String) null;
-          dk.a((String) null, -87, (byte) -32);
-          return dk.a(field_d, field_c, (byte) 117, param1);
-        } else {
+        if (!param0) {
           return dk.a(field_d, field_c, (byte) 117, param1);
         }
+        String var3 = (String) null;
+        dk.a((String) null, -87, (byte) -32);
+        return dk.a(field_d, field_c, (byte) 117, param1);
     }
 
     public static void a(String param0, int param1, byte param2) {
@@ -37,51 +35,36 @@ public class dk {
         field_c = param1;
         field_d = param0;
         try {
-          L0: {
-            L1: {
-              if (param2 >= 28) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                dk.a((String) null, -40, (byte) 13);
-                break L1;
-              }
-            }
-            field_e = System.getProperty("user.home");
-            if (field_e != null) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              if (field_e != null) {
-                field_b = true;
-                return;
-              } else {
-                field_e = "~/";
-                field_b = true;
-                return;
-              }
-            }
+          if (param2 < 28) {
+            var4 = (String) null;
+            dk.a((String) null, -40, (byte) 13);
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          field_e = System.getProperty("user.home");
           if (field_e == null) {
+            if (field_e != null) {
+              field_b = true;
+              return;
+            }
             field_e = "~/";
             field_b = true;
             return;
-          } else {
+          }
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (field_e != null) {
             field_b = true;
             return;
           }
-        }
-        if (field_e == null) {
           field_e = "~/";
           field_b = true;
           return;
-        } else {
-          field_b = true;
-          return;
         }
+        if (field_e == null) {
+          field_e = "~/";
+        }
+        field_b = true;
     }
 
     static {

@@ -20,62 +20,35 @@ final class qb {
         int var4_int = 0;
         RuntimeException var4 = null;
         byte[] var5 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4_int = 52 / ((15 - param0) / 60);
-            var5 = param3.a(param1, true, param2);
-            if (var5 != null) {
-              hi.a(var5, 0);
-              stackIn_4_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4_int = 52 / ((15 - param0) / 60);
+          var5 = param3.a(param1, true, param2);
+          if (var5 == null) {
+            return false;
           }
+          hi.a(var5, 0);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4);
-
-            stackIn_7_1 = new StringBuilder().append("qb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("qb.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0 != 0;
+          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final void a(boolean param0, boolean param1) {
         if (param1) {
-            return;
+          return;
         }
         this.field_k = true;
         this.field_f = param0 ? true : false;
@@ -83,8 +56,8 @@ final class qb {
 
     final String a(byte param0) {
         if (param0 != 2) {
-            this.field_i = (String) null;
-            return this.field_i;
+          this.field_i = (String) null;
+          return this.field_i;
         }
         return this.field_i;
     }
@@ -99,15 +72,7 @@ final class qb {
 
     public static void a(int param0) {
         field_g = null;
-        if (param0 >= -49) {
-          field_j = 100;
-          field_b = null;
-          field_m = null;
-          field_c = null;
-          field_l = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -49) {
           field_b = null;
           field_m = null;
           field_c = null;
@@ -115,23 +80,29 @@ final class qb {
           field_d = null;
           return;
         }
+        field_j = 100;
+        field_b = null;
+        field_m = null;
+        field_c = null;
+        field_l = null;
+        field_d = null;
     }
 
     final boolean b(boolean param0) {
         if (param0) {
-            return false;
+          return false;
         }
         return this.field_k;
     }
 
     final boolean b(byte param0) {
-        int var2 = 14 % ((param0 - -8) / 44);
+        int var2 = 14 % ((param0 + 8) / 44);
         return this.field_f;
     }
 
     final static fi a(boolean param0) {
         if (!param0) {
-            return (fi) null;
+          return (fi) null;
         }
         return (fi) ((Object) new hf());
     }
@@ -140,9 +111,9 @@ final class qb {
         this.field_f = false;
         this.field_k = false;
         try {
-            this.field_i = param0;
+          this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

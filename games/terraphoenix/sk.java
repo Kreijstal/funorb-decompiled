@@ -14,90 +14,55 @@ final class sk implements cj {
     private pk field_g;
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
+        int var10 = 0;
         gl stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         wi var12 = null;
         var11 = Terraphoenix.field_V;
         try {
-          L0: {
-            L1: {
-              if (param1 instanceof wi) {
-                stackIn_4_0 = (gl) (param1);
-                break L1;
-              } else {
-                stackIn_4_0 = null;
-                break L1;
-              }
-            }
-            L2: {
-              var12 = (wi) ((Object) stackIn_4_0);
-              if (var12 == null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              l.f(param2 - -param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
-              var7 = -(2 * var12.field_M) + param1.field_p;
-              var8 = var12.field_M + param2 - -param1.field_w;
-              var9 = var12.field_K + (param0 + param1.field_u);
-              l.c(var8, var9, var8 - -var7, var9, this.field_j);
-              if (param3 == -24381) {
-                break L3;
-              } else {
-                sk.a(false);
-                break L3;
-              }
-            }
-            var10 = -1 + var12.g(1);
-            L4: while (true) {
-              if (-1 < (var10 ^ -1)) {
-                if (null != this.field_g) {
-                  this.field_g.c(var12.field_o, var8 + var7 / 2, var12.field_K + (var9 - -this.field_g.field_w), this.field_i, this.field_f);
-                  break L0;
-                } else {
-                  return;
-                }
-              } else {
-                l.e(var8 - -(var12.b(var10, 0) * var7 / var12.a(0)), var9, this.field_e, this.field_h);
-                var10--;
-                continue L4;
-              }
-            }
+          if (param1 instanceof wi) {
+            stackIn_4_0 = (gl) (param1);
+          } else {
+            stackIn_4_0 = null;
           }
+          var12 = (wi) (stackIn_4_0);
+          if (var12 == null) {
+          }
+          l.f(param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, this.field_c);
+          var7 = -(2 * var12.field_M) + param1.field_p;
+          var8 = var12.field_M + param2 + param1.field_w;
+          var9 = var12.field_K + (param0 + param1.field_u);
+          l.c(var8, var9, var8 + var7, var9, this.field_j);
+          if (param3 != -24381) {
+            sk.a(false);
+          }
+          for (var10 = -1 + var12.g(1); var10 >= 0; var10--) {
+            l.e(var8 + var12.b(var10, 0) * var7 / var12.a(0), var9, this.field_e, this.field_h);
+          }
+          if (null == this.field_g) {
+            return;
+          }
+          this.field_g.c(var12.field_o, var8 + var7 / 2, var12.field_K + (var9 + this.field_g.field_w), this.field_i, this.field_f);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var6);
-
-            stackIn_16_1 = new StringBuilder().append("sk.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_16_0 = var6;
+          stackIn_16_1 = new StringBuilder().append("sk.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -106,21 +71,21 @@ final class sk implements cj {
         field_a = null;
         field_d = null;
         if (!param0) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
     sk(pk param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_c = param4;
-            this.field_f = param2;
-            this.field_j = param3;
-            this.field_h = param6;
-            this.field_i = param1;
-            this.field_e = param5;
-            this.field_g = param0;
+          this.field_c = param4;
+          this.field_f = param2;
+          this.field_j = param3;
+          this.field_h = param6;
+          this.field_i = param1;
+          this.field_e = param5;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

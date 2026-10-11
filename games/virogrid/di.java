@@ -22,100 +22,52 @@ final class di extends qe {
         wl stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var5 = (CharSequence) ((Object) param0);
-            if (ee.a(88, var5)) {
-              L1: {
-                if (param1) {
-                  break L1;
-                } else {
-                  var4 = (String) null;
-                  this.a((String) null, false);
-                  break L1;
-                }
-              }
-              L2: {
-                if (param0.equals(this.field_s)) {
-                  break L2;
-                } else {
-                  L3: {
-                    var3 = sh.a(648093968, param0);
-                    if (var3 == null) {
-                      break L3;
-                    } else {
-                      if (var3.field_e != null) {
-                        break L3;
-                      } else {
-                        this.field_s = param0;
-                        this.field_p = var3.field_a;
-                        break L2;
-                      }
-                    }
-                  }
-                  stackIn_10_0 = te.field_d;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              }
-              L4: {
-                if (this.field_p) {
-                  stackIn_15_0 = bm.field_i;
-                  break L4;
-                } else {
-                  stackIn_15_0 = ee.field_c;
-                  break L4;
-                }
-              }
-              decompiledRegionSelector0 = 2;
-              break L0;
+          var5 = (CharSequence) ((Object) param0);
+          if (!ee.a(88, var5)) {
+            stackIn_2_0 = ee.field_c;
+            return stackIn_2_0;
+          }
+          if (!param1) {
+            var4 = (String) null;
+            this.a((String) null, false);
+          }
+          if (!param0.equals(this.field_s)) {
+            var3 = sh.a(648093968, param0);
+            if (var3 != null &&
+              var3.field_e == null) {
+              this.field_s = param0;
+              this.field_p = var3.field_a;
             } else {
-              stackIn_2_0 = ee.field_c;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              stackIn_10_0 = te.field_d;
+              return stackIn_10_0;
             }
           }
+          if (this.field_p) {
+            stackIn_15_0 = bm.field_i;
+          } else {
+            stackIn_15_0 = ee.field_c;
+          }
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
-
-            stackIn_18_1 = new StringBuilder().append("di.E(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("di.E(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
           } else {
-            return stackIn_15_0;
+            stackIn_19_2 = "{...}";
           }
+          throw kg.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void c(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         this.field_s = null;
     }
@@ -130,87 +82,46 @@ final class di extends qe {
         String stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -26358) {
-                break L1;
-              } else {
-                field_u = (String) null;
-                break L1;
-              }
-            }
-            var5 = (CharSequence) ((Object) param1);
-            var3 = ce.a(-1, var5);
-            if (var3 == null) {
-              L2: {
-                if (param1.equals(this.field_s)) {
-                  break L2;
-                } else {
-                  var4 = sh.a(param0 ^ -648103910, param1);
-                  if (var4 != null) {
-                    if (var4.field_e == null) {
-                      this.field_s = param1;
-                      this.field_p = var4.field_a;
-                      break L2;
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    return null;
-                  }
-                }
-              }
-              if (this.field_p) {
-                stackIn_16_0 = sh.field_sb;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_14_0 = dm.field_t;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_4_0 = (String) (var3);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -26358) {
+            field_u = (String) null;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var3_ref);
-
-            stackIn_19_1 = new StringBuilder().append("di.H(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L3;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L3;
-            }
+          var5 = (CharSequence) ((Object) param1);
+          var3 = ce.a(-1, var5);
+          if (var3 != null) {
+            stackIn_4_0 = var3;
+            return stackIn_4_0;
           }
-          throw kg.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_14_0;
-          } else {
+          if (!param1.equals(this.field_s)) {
+            var4 = sh.a(param0 ^ -648103910, param1);
+            if (var4 == null) {
+              return null;
+            }
+            if (var4.field_e != null) {
+              return null;
+            }
+            this.field_s = param1;
+            this.field_p = var4.field_a;
+          }
+          if (this.field_p) {
+            stackIn_16_0 = sh.field_sb;
             return stackIn_16_0;
           }
+          stackIn_14_0 = dm.field_t;
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_19_0 = var3_ref;
+          stackIn_19_1 = new StringBuilder().append("di.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -220,34 +131,25 @@ final class di extends qe {
     }
 
     public static void h(int param0) {
-        sc var2;
         field_r = null;
         field_q = null;
-        if (param0 < 34) {
-          var2 = (sc) null;
-          di.a((sc) null, -36, true);
-          field_v = null;
-          field_u = null;
-          field_t = null;
-          field_n = null;
-          return;
-        } else {
+        if (param0 >= 34) {
           field_v = null;
           field_u = null;
           field_t = null;
           field_n = null;
           return;
         }
+        sc var2 = (sc) null;
+        di.a((sc) null, -36, true);
+        field_v = null;
+        field_u = null;
+        field_t = null;
+        field_n = null;
     }
 
     final static id c(byte param0) {
-        if (null != ca.field_Q) {
-          if (param0 != -6) {
-            return (id) null;
-          } else {
-            return ca.field_Q;
-          }
-        } else {
+        if (null == ca.field_Q) {
           ca.field_Q = new id();
           ca.field_Q.a((byte) 119, dj.field_h);
           ca.field_Q.field_n = 5;
@@ -258,20 +160,23 @@ final class di extends qe {
           ca.field_Q.field_s = 7697781;
           ca.field_Q.field_q = 0;
           ca.field_Q.field_m = 4;
-          if (param0 != -6) {
-            return (id) null;
-          } else {
+          if (param0 == -6) {
             return ca.field_Q;
           }
+          return (id) null;
         }
+        if (param0 == -6) {
+          return ca.field_Q;
+        }
+        return (id) null;
     }
 
     final static void a(sc param0, int param1, boolean param2) {
         try {
-            la.a(-1, 256, param2, param0);
-            int var3_int = -19 / ((param1 - 65) / 42);
+          la.a(-1, 256, param2, param0);
+          int var3_int = -19 / ((param1 - 65) / 42);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "di.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "di.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

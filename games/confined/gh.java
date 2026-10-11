@@ -18,7 +18,7 @@ final class gh implements Iterable {
 
     final static int a(boolean param0) {
         if (!param0) {
-            return -80;
+          return -80;
         }
         return nh.field_b;
     }
@@ -30,21 +30,20 @@ final class gh implements Iterable {
         var6 = Confined.field_J ? 1 : 0;
         var4 = this.field_j[(int)((long)(this.field_i - param0) & param1)];
         this.field_g = var4.field_h;
-        L0: while (true) {
-          if (this.field_g != var4) {
-            if ((param1 ^ -1L) != (this.field_g.field_i ^ -1L)) {
-              this.field_g = this.field_g.field_h;
-              continue L0;
-            } else {
-              var5 = this.field_g;
-              this.field_g = this.field_g.field_h;
-              return var5;
-            }
-          } else {
+        while (true) {
+          if (this.field_g == var4) {
             this.field_g = null;
             return null;
           }
+          if (~param1 != ~this.field_g.field_i) {
+            this.field_g = this.field_g.field_h;
+            continue;
+          }
+          break;
         }
+        var5 = this.field_g;
+        this.field_g = this.field_g.field_h;
+        return var5;
     }
 
     public static void a(int param0) {
@@ -52,9 +51,7 @@ final class gh implements Iterable {
         field_b = null;
         field_h = null;
         field_d = null;
-        if (param0 > -45) {
-          return;
-        } else {
+        if (param0 <= -45) {
           field_f = null;
           field_a = null;
           field_e = null;
@@ -65,22 +62,22 @@ final class gh implements Iterable {
     final void a(rk param0, long param1, int param2) {
         rk var5 = null;
         try {
-            if (!(null == param0.field_a)) {
-                param0.a(true);
-            }
-            var5 = this.field_j[(int)((long)(this.field_i + param2) & param1)];
-            param0.field_h = var5;
-            param0.field_a = var5.field_a;
-            param0.field_a.field_h = param0;
-            param0.field_h.field_a = param0;
-            param0.field_i = param1;
+          if (null != param0.field_a) {
+            param0.a(true);
+          }
+          var5 = this.field_j[(int)((long)(this.field_i + param2) & param1)];
+          param0.field_h = var5;
+          param0.field_a = var5.field_a;
+          param0.field_a.field_h = param0;
+          param0.field_h.field_a = param0;
+          param0.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new o((gh) (this)));
+        return (Iterator) ((Object) new o(this));
     }
 
     private gh() throws Throwable {

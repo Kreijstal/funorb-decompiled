@@ -14,7 +14,7 @@ abstract class cj {
 
     final static void a(boolean param0, int param1) {
         if (param1 != 793) {
-            return;
+          return;
         }
         ec.a(true, param0, 106);
     }
@@ -31,8 +31,8 @@ abstract class cj {
     final void a(int param0) {
         sb.a(this.field_a, this.field_d, this.field_g);
         if (param0 <= 102) {
-            java.awt.Graphics var3 = (java.awt.Graphics) null;
-            this.a(-68, -104, (java.awt.Graphics) null, 18);
+          java.awt.Graphics var3 = (java.awt.Graphics) null;
+          this.a(-68, -104, (java.awt.Graphics) null, 18);
         }
     }
 
@@ -41,51 +41,31 @@ abstract class cj {
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 13861) {
-                break L1;
-              } else {
-                var3 = (java.awt.Canvas) null;
-                cj.a((java.awt.Canvas) null, -52);
-                break L1;
-              }
-            }
-            hj.a((java.awt.Component) ((Object) param0), param1 + -13863);
-            jl.a((java.awt.Component) ((Object) param0), 0);
-            if (null == ga.field_a) {
-              break L0;
-            } else {
-              ga.field_a.a(false, (java.awt.Component) ((Object) param0));
-              return;
-            }
+          if (param1 != 13861) {
+            var3 = (java.awt.Canvas) null;
+            cj.a((java.awt.Canvas) null, -52);
           }
+          hj.a((java.awt.Component) ((Object) param0), param1 - 13863);
+          jl.a((java.awt.Component) ((Object) param0), 0);
+          if (null == ga.field_a) {
+            return;
+          }
+          ga.field_a.a(false, (java.awt.Component) ((Object) param0));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("cj.L(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("cj.L(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

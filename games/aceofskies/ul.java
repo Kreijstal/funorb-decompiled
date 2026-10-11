@@ -11,81 +11,34 @@ final class ul extends sl {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= param0.length()) {
-                if (param1 <= -103) {
-                  stackIn_12_0 = 0;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  stackIn_10_0 = 1;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  var3 = param0.charAt(var2_int);
-                  if (df.a((char) var3, 63)) {
-                    break L2;
-                  } else {
-                    if (oj.a((char) var3, (byte) -15)) {
-                      break L2;
-                    } else {
-                      stackIn_6_0 = 1;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  }
-                }
-                var2_int++;
-                continue L1;
-              }
+          for (var2_int = 0; var2_int < param0.length(); var2_int++) {
+            var3 = param0.charAt(var2_int);
+            if (!df.a((char) var3, 63) &&
+              !oj.a((char) var3, (byte) -15)) {
+              return true;
             }
           }
+          if (param1 <= -103) {
+            return false;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("ul.O(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pn.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("ul.O(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
           } else {
-            return stackIn_12_0 != 0;
+            stackIn_16_2 = "{...}";
           }
+          throw pn.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -95,39 +48,24 @@ final class ul extends sl {
         String stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = -91 / ((3 - param1) / 35);
-            stackIn_1_0 = pt.a((byte) -126, param0.field_f.length(), '*');
-            break L0;
-          }
+          var3_int = -91 / ((3 - param1) / 35);
+          stackIn_1_0 = pt.a((byte) -126, param0.field_f.length(), '*');
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("ul.AA(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("ul.AA(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     private ul(hc param0, int param1) {
@@ -136,12 +74,12 @@ final class ul extends sl {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param1) {
-            vp.a();
+          vp.a();
         } else {
-            vp.b(0, 0, vp.field_i, vp.field_c, 0, 192);
+          vp.b(0, 0, vp.field_i, vp.field_c, 0, 192);
         }
         if (param2 != -7395) {
-            field_t = (String) null;
+          field_t = (String) null;
         }
         si.a(param1, -32106);
     }
@@ -153,7 +91,7 @@ final class ul extends sl {
     public static void a(byte param0) {
         field_t = null;
         field_r = null;
-        int var1 = 11 / ((param0 - -50) / 55);
+        int var1 = 11 / ((param0 + 50) / 55);
         field_s = null;
     }
 

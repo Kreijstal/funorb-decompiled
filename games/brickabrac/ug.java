@@ -9,8 +9,8 @@ abstract class ug extends ib implements je {
 
     public final ia a(int param0) {
         if (param0 != -11011) {
-            this.i(111);
-            return (ia) ((Object) this.field_H);
+          this.i(111);
+          return (ia) ((Object) this.field_H);
         }
         return (ia) ((Object) this.field_H);
     }
@@ -26,55 +26,35 @@ abstract class ug extends ib implements je {
         mh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var13 = new mh(0L, (mh) null);
-              var13.field_Jb = se.a(param0, (byte) -18, param3);
-              var13.field_Gb = se.a(param12, (byte) -18, param7);
-              var13.field_D = se.a(param11, (byte) -18, param1);
-              var13.field_pb = se.a(param5, (byte) -18, param4);
-              if (param2 >= 96) {
-                break L1;
-              } else {
-                var14 = (dh) null;
-                ug.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (dh) null, 4, -79, 47, -32);
-                break L1;
-              }
-            }
-            var13.field_Ab = se.a(param6, (byte) -18, param10);
-            var13.field_X = param9;
-            var13.field_O = param8;
-            stackIn_3_0 = (mh) (var13);
-            break L0;
+          var13 = new mh(0L, (mh) null);
+          var13.field_Jb = se.a(param0, (byte) -18, param3);
+          var13.field_Gb = se.a(param12, (byte) -18, param7);
+          var13.field_D = se.a(param11, (byte) -18, param1);
+          var13.field_pb = se.a(param5, (byte) -18, param4);
+          if (param2 < 96) {
+            var14 = (dh) null;
+            ug.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (dh) null, 4, -79, 47, -32);
           }
+          var13.field_Ab = se.a(param6, (byte) -18, param10);
+          var13.field_X = param9;
+          var13.field_O = param8;
+          stackIn_3_0 = var13;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var13_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var13_ref);
-
-            stackIn_6_1 = new StringBuilder().append("ug.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-
-            if (param8 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var13_ref = decompiledCaughtException;
+          stackIn_6_0 = var13_ref;
+          stackIn_6_1 = new StringBuilder().append("ug.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          if (param8 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     abstract int i(int param0);
@@ -83,20 +63,20 @@ abstract class ug extends ib implements je {
         field_J = null;
         field_K = null;
         if (param0 != 0) {
-            dh var2 = (dh) null;
-            ug.a(102, -93, (byte) 33, 30, -107, 27, -54, 36, (dh) null, 50, -58, -25, 44);
+          dh var2 = (dh) null;
+          ug.a(102, -93, (byte) 33, 30, -107, 27, -54, 36, (dh) null, 50, -58, -25, 44);
         }
     }
 
     void a(an param0, byte param1) {
         try {
-            this.field_H = param0;
-            this.field_H.field_l = (ug) (this);
-            if (param1 != -12) {
-                this.field_H = (an) null;
-            }
+          this.field_H = param0;
+          this.field_H.field_l = this;
+          if (param1 != -12) {
+            this.field_H = (an) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ug.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ug.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

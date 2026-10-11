@@ -12,7 +12,7 @@ final class jw {
         field_d = null;
         field_a = null;
         if (param0) {
-            jw.a(false);
+          jw.a(false);
         }
     }
 

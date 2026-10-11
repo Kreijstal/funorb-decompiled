@@ -8,96 +8,56 @@ final class jia implements ms {
 
     public static void a(byte param0) {
         if (param0 != 31) {
-            field_a = (jqa) null;
+          field_a = (jqa) null;
         }
         field_a = null;
     }
 
     public final void a(int param0, int param1, int param2) {
+        int var5 = 0;
         int stackIn_8_0 = 0;
         waa[] var4;
-        int var5;
         waa var6;
         int var7;
         waa[] var8;
         var7 = TombRacer.field_G ? 1 : 0;
         var8 = this.field_c;
         var4 = var8;
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= var8.length) {
-            L1: {
-              if (!this.field_b.field_b) {
-                stackIn_8_0 = 1348493408;
-                break L1;
-              } else {
-                if (!oj.field_tb[hra.field_b]) {
-                  stackIn_8_0 = 1627324416;
-                  break L1;
-                } else {
-                  stackIn_8_0 = 805371648;
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              L3: {
-                qk.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.a(-8660), 20 + this.a(false), 16, -10 + param2);
-                if (oj.field_tb[hra.field_b]) {
-                  break L3;
-                } else {
-                  if (this.field_b.field_b) {
-                    qr.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.a(false), 0, (nh[]) null, param2, 1);
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (!oj.field_tb[hra.field_b]) {
-                  break L4;
-                } else {
-                  if (!this.field_b.field_b) {
-                    break L4;
-                  } else {
-                    qr.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.a(false), 0, (nh[]) null, param2, 1);
-                    break L2;
-                  }
-                }
-              }
-              qr.field_v.a((aa) null, this.a(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, qqa.field_p, (byte) -38, this.a(false), 0, (nh[]) null, param2, 1);
-              break L2;
-            }
-            L5: {
-              if (param1 == 20726) {
-                break L5;
-              } else {
-                this.field_c = (waa[]) null;
-                break L5;
-              }
-            }
-            this.field_b.a((byte) 74, param0, param2);
-            return;
-          } else {
-            var6 = var8[var5];
-            var6.a(param2, 6, param0);
-            var5++;
-            continue L0;
-          }
+        for (var5 = 0; var5 < var8.length; var5++) {
+          var6 = var8[var5];
+          var6.a(param2, 6, param0);
         }
+        if (!this.field_b.field_b) {
+          stackIn_8_0 = 1348493408;
+        } else {
+          stackIn_8_0 = (!oj.field_tb[hra.field_b]) ? 1627324416 : 805371648;
+        }
+        qk.a(stackIn_8_0, tga.field_a, param0, param1 ^ 20688, this.a(-8660), 20 + this.a(false), 16, -10 + param2);
+        if (!oj.field_tb[hra.field_b] &&
+          this.field_b.field_b) {
+          qr.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, pg.field_A, (byte) -122, this.a(false), 0, (nh[]) null, param2, 1);
+        } else if (oj.field_tb[hra.field_b] &&
+          this.field_b.field_b) {
+          qr.field_v.a((aa) null, this.a(false), 0, 0, param0, -1, (int[]) null, 1, -16711423, gka.field_f, (byte) 93, this.a(false), 0, (nh[]) null, param2, 1);
+        } else {
+          qr.field_v.a((aa) null, this.a(false), 0, 0, param0, 553648127, (int[]) null, 1, -2147417855, qqa.field_p, (byte) -38, this.a(false), 0, (nh[]) null, param2, 1);
+        }
+        if (param1 != 20726) {
+          this.field_c = (waa[]) null;
+        }
+        this.field_b.a((byte) 74, param0, param2);
     }
 
     public final boolean a(int param0, int param1, char param2) {
         if (param0 != -18602) {
-            this.b(114);
+          this.b(114);
         }
         return false;
     }
 
     public final int a(boolean param0) {
         if (param0) {
-            field_a = (jqa) null;
+          field_a = (jqa) null;
         }
         return 140;
     }
@@ -110,86 +70,58 @@ final class jia implements ms {
         int var4;
         int var5;
         waa[] var6;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          if (param0 == -7109) {
-            break L0;
-          } else {
-            field_a = (jqa) null;
-            break L0;
-          }
+        int var3Lifetime1;
+        var5 = TombRacer.field_G ? 1 : 0;
+        if (param0 != -7109) {
+          field_a = (jqa) null;
         }
         var6 = this.field_c;
         var2_ref_waa__ = var6;
-        var3 = 0;
-        L1: while (true) {
-          if (var6.length <= var3) {
-            L2: {
-              this.field_b.c(param0 + 4637);
-              var2 = this.field_b.a((byte) -120);
-              var3 = this.field_b.a(param0 ^ -7082);
-              var4 = 0;
-              if (-1 < (var2 ^ -1)) {
-                var2 = 0;
-                var4 = 1;
-                break L2;
-              } else {
-                if (var2 > this.a(false)) {
-                  var2 = this.a(false);
-                  var4 = 1;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if (var3 >= 0) {
-                if (var3 <= this.a(-8660)) {
-                  break L3;
-                } else {
-                  var3 = this.a(param0 + -1551);
-                  var4 = 1;
-                  break L3;
-                }
-              } else {
-                var4 = 1;
-                var3 = 0;
-                break L3;
-              }
-            }
-            L4: {
-              if (var4 != 0) {
-                this.field_b.a(-115, var3, var2);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return;
-          } else {
-            var4_ref_waa = var6[var3];
-            var4_ref_waa.b(-9310);
-            var3++;
-            continue L1;
+        for (var3 = 0; var6.length > var3; var3++) {
+          var4_ref_waa = var6[var3];
+          var4_ref_waa.b(-9310);
+        }
+        this.field_b.c(param0 + 4637);
+        var2 = this.field_b.a((byte) -120);
+        var3Lifetime1 = this.field_b.a(param0 ^ -7082);
+        var4 = 0;
+        if (var2 < 0) {
+          var2 = 0;
+          var4 = 1;
+        } else {
+          if (var2 > this.a(false)) {
+            var2 = this.a(false);
+            var4 = 1;
           }
+        }
+        if (var3Lifetime1 >= 0) {
+          if (var3Lifetime1 > this.a(-8660)) {
+            var3Lifetime1 = this.a(param0 - 1551);
+            var4 = 1;
+          }
+        } else {
+          var4 = 1;
+          var3Lifetime1 = 0;
+        }
+        if (var4 != 0) {
+          this.field_b.a(-115, var3Lifetime1, var2);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param5 < 15) {
-            jia.a((byte) -91);
+          jia.a((byte) -91);
         }
         if (ica.field_a) {
-            tga.field_a.v(param4 >> -314275922, -param2 >> 1588050638, -param6 >> -2051801074, param0 >> 2090526094, -param8 >> 1559144270, -param7 >> 1600498158, jg.a(param1, (byte) -60, param3), 1);
+          tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.a(param1, (byte) -60, param3), 1);
         } else {
-            tga.field_a.ea(param4 >> -1130138354, -param2 >> -465189650, -param6 >> -1995171346, param0 >> 1847811534, -param8 >> -792386290, -param7 >> -714847058, 2048, jg.a(param1, (byte) -107, param3), 1);
+          tga.field_a.ea(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.a(param1, (byte) -107, param3), 1);
         }
     }
 
     public final int a(int param0) {
         if (param0 != -8660) {
-            this.field_b = (lw) null;
+          this.field_b = (lw) null;
         }
         return 140;
     }
@@ -200,7 +132,7 @@ final class jia implements ms {
         this.field_b = new lw();
         this.field_b.a(-112, this.a(-8660) / 2, this.a(false) / 2);
         for (var1 = 0; this.field_c.length > var1; var1++) {
-            this.field_c[var1] = new waa(this.a(false), this.a(-8660));
+          this.field_c[var1] = new waa(this.a(false), this.a(-8660));
         }
     }
 

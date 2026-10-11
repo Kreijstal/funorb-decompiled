@@ -26,19 +26,18 @@ abstract class ar {
     abstract void e(int param0);
 
     final int a(byte param0) {
-        if (param0 != 0) {
-          this.c(-35);
-          return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
-        } else {
-          return this.field_h.c((byte) 123) - -this.field_j.c((byte) 83);
+        if (param0 == 0) {
+          return this.field_h.c((byte) 123) + this.field_j.c((byte) 83);
         }
+        this.c(-35);
+        return this.field_h.c((byte) 123) + this.field_j.c((byte) 83);
     }
 
     abstract void a(byte param0, boolean param1, Object param2);
 
     final int b(int param0) {
         if (param0 != -5205) {
-            return -48;
+          return -48;
         }
         return this.field_m.c((byte) -111) + this.field_f.c((byte) -109);
     }
@@ -47,81 +46,75 @@ abstract class ar {
 
     final boolean c(byte param0) {
         int var2 = -70 % ((47 - param0) / 56);
-        return -21 >= (this.b(-5205) ^ -1) ? true : false;
+        return this.b(-5205) >= 20 ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        int var6;
-        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> -1998687981 == 0) {
-          var6 = -104 % ((-50 - param3) / 36);
-          if (Math.abs(param0 - param1) < Math.abs(param2 + -param4)) {
-            in.a(param5, param4, 80, param2, param1, param0);
-            return;
-          } else {
-            kr.a(param2, (byte) -55, param1, param0, param5, param4);
-            return;
-          }
-        } else {
+        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 != 0) {
           return;
         }
+        int var6 = -104 % ((-50 - param3) / 36);
+        if (Math.abs(param0 - param1) >= Math.abs(param2 - param4)) {
+          kr.a(param2, (byte) -55, param1, param0, param5, param4);
+          return;
+        }
+        in.a(param5, param4, 80, param2, param1, param0);
     }
 
     final tk a(boolean param0, int param1, byte param2, int param3, int param4) {
-        long var6 = ((long)param1 << -2057056416) - -(long)param4;
+        long var6 = ((long)param1 << 32) + (long)param4;
         tk var8 = new tk();
         var8.field_w = param2;
         var8.field_q = param0 ? true : false;
         var8.field_l = var6;
         if (param3 != -2057056416) {
-            this.c(-16);
-            if (param0) {
-                if (!(this.a((byte) 0) < 20)) {
-                    throw new RuntimeException();
-                }
-                this.field_h.a(var8, 32);
-            } else {
-                if (!(-21 < (this.b(-5205) ^ -1))) {
-                    throw new RuntimeException();
-                }
-                this.field_m.a(var8, 32);
-            }
-            return var8;
-        }
-        if (param0) {
+          this.c(-16);
+          if (param0) {
             if (!(this.a((byte) 0) < 20)) {
-                throw new RuntimeException();
+              throw new RuntimeException();
             }
             this.field_h.a(var8, 32);
-        } else {
-            if (!(-21 < (this.b(-5205) ^ -1))) {
-                throw new RuntimeException();
+          } else {
+            if (!(this.b(-5205) < 20)) {
+              throw new RuntimeException();
             }
             this.field_m.a(var8, 32);
+          }
+          return var8;
+        }
+        if (param0) {
+          if (!(this.a((byte) 0) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_h.a(var8, 32);
+        } else {
+          if (!(this.b(-5205) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_m.a(var8, 32);
         }
         return var8;
     }
 
     final boolean c(int param0) {
         if (param0 != 27356) {
-            return false;
+          return false;
         }
-        return (this.a((byte) 0) ^ -1) <= -21 ? true : false;
+        return this.a((byte) 0) >= 20 ? true : false;
     }
 
     public static void a(int param0) {
         field_g = null;
-        if (param0 != 16967) {
-          ar.a(-27);
-          field_e = null;
-          field_r = null;
-          field_o = null;
-          return;
-        } else {
+        if (param0 == 16967) {
           field_e = null;
           field_r = null;
           field_o = null;
           return;
         }
+        ar.a(-27);
+        field_e = null;
+        field_r = null;
+        field_o = null;
     }
 
     ar() {
@@ -142,5 +135,18 @@ abstract class ar {
         field_g = "Resign";
         field_e = "This game option has not yet been unlocked for use.";
         field_b = -1;
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$c3a94e747ff6(int param0, int param1, int param2, int param3, int param4, int param5) {
+        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 != 0) {
+          return;
+        }
+        int var6 = -104 % ((-50 - param3) / 36);
+        if (Math.abs(param0 - param1) >= Math.abs(param2 - param4)) {
+          kr.a(param2, (byte) -55, param1, param0, param5, param4);
+          return;
+        }
+        in.a(param5, param4, 80, param2, param1, param0);
     }
 }

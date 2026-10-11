@@ -14,10 +14,10 @@ final class es extends bw {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_h = (String) null;
-            field_h = null;
-            field_j = null;
-            return;
+          field_h = (String) null;
+          field_h = null;
+          field_j = null;
+          return;
         }
         field_h = null;
         field_j = null;

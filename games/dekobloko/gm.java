@@ -10,14 +10,12 @@ final class gm extends di {
         ql.field_d = new int[3];
         kf.field_M = param1;
         pd.field_g = new hl[param1 * 15];
-        if (param0 != -3504) {
-          field_J = (String) null;
-          ic.field_c = 0;
-          return;
-        } else {
+        if (param0 == -3504) {
           ic.field_c = 0;
           return;
         }
+        field_J = (String) null;
+        ic.field_c = 0;
     }
 
     private gm(mm param0, int param1) {
@@ -39,57 +37,41 @@ final class gm extends di {
         String stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = 61 / ((param1 - 59) / 53);
-            stackIn_1_0 = vb.a('*', param0.field_E.length(), -12681);
-            break L0;
-          }
+          var3_int = 61 / ((param1 - 59) / 53);
+          stackIn_1_0 = vb.a('*', param0.field_E.length(), -12681);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("gm.D(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("gm.D(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final static void b(int param0, int param1) {
-        uf var2;
-        if (param1 <= 35) {
-          field_J = (String) null;
-          var2 = we.field_b;
-          var2.f(param0, -4);
-          var2.a(true, 1);
-          var2.a(true, 2);
-          return;
-        } else {
+        uf var2 = null;
+        uf var2Lifetime1;
+        if (param1 > 35) {
           var2 = we.field_b;
           var2.f(param0, -4);
           var2.a(true, 1);
           var2.a(true, 2);
           return;
         }
+        field_J = (String) null;
+        var2Lifetime1 = we.field_b;
+        var2Lifetime1.f(param0, -4);
+        var2Lifetime1.a(true, 1);
+        var2Lifetime1.a(true, 2);
     }
 
     static {

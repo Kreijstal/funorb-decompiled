@@ -15,15 +15,15 @@ final class ld extends gj {
 
     final boolean f(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         return false;
     }
 
     final Object e(int param0) {
         if (param0 > -114) {
-            field_z = (String) null;
-            return this.field_B;
+          field_z = (String) null;
+          return this.field_B;
         }
         return this.field_B;
     }
@@ -31,9 +31,9 @@ final class ld extends gj {
     ld(Object param0, int param1) {
         super(param1);
         try {
-            this.field_B = param0;
+          this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ld.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,19 +42,17 @@ final class ld extends gj {
         field_D = null;
         field_z = null;
         field_x = null;
-        if (param0 != 13438) {
-          ld.g(64);
-          field_G = null;
-          return;
-        } else {
+        if (param0 == 13438) {
           field_G = null;
           return;
         }
+        ld.g(64);
+        field_G = null;
     }
 
     final static void e(byte param0) {
         if (param0 != -111) {
-            return;
+          return;
         }
         wk.field_c = false;
         h.field_c = -1;

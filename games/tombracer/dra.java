@@ -9,43 +9,32 @@ final class dra {
         field_a = null;
         field_b = null;
         if (param0 > -108) {
-            field_a = (String[]) null;
+          field_a = (String[]) null;
         }
     }
 
     final static void a(boolean param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         kh var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                field_b = (String[]) null;
-                break L1;
-              }
-            }
-            var1 = ql.field_k;
-            L2: while (true) {
-              if (!sea.l(10371)) {
-                break L0;
-              } else {
-                var1.k(8, -2988);
-                fieldTemp$2 = var1.field_h + 1;
-                var1.field_h = var1.field_h + 1;
-                var2 = fieldTemp$2;
-                hk.a(true, var1);
-                ql.field_k.d(var1.field_h - var2, (byte) -17);
-                continue L2;
-              }
-            }
+          if (!param0) {
+            field_b = (String[]) null;
           }
+          var1 = ql.field_k;
+          while (sea.l(10371)) {
+            var1.k(8, -2988);
+            fieldTemp$0 = var1.field_h + 1;
+            var1.field_h = var1.field_h + 1;
+            var2 = fieldTemp$0;
+            hk.a(true, var1);
+            ql.field_k.d(var1.field_h - var2, (byte) -17);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

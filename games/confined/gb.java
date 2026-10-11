@@ -12,7 +12,7 @@ final class gb {
         field_c = null;
         field_b = null;
         if (param0 < 44) {
-            field_d = -70;
+          field_d = -70;
         }
     }
 
@@ -25,65 +25,38 @@ final class gb {
         double var10 = 0.0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_double = param1.field_E - param0.field_E;
-            var5 = -param0.field_t + param1.field_t;
-            var7 = 50 / ((param2 - 6) / 56);
-            var8 = -param0.field_D + param1.field_D;
-            var10 = var5 * var5 + var3_double * var3_double + var8 * var8;
-            if ((param1.field_C + param0.field_C) * (param1.field_C + param0.field_C) > var10) {
-              param0.a(param1, -88);
-              break L0;
-            } else {
-              return;
-            }
+          var3_double = param1.field_E - param0.field_E;
+          var5 = -param0.field_t + param1.field_t;
+          var7 = 50 / ((param2 - 6) / 56);
+          var8 = -param0.field_D + param1.field_D;
+          var10 = var5 * var5 + var3_double * var3_double + var8 * var8;
+          if (!((param1.field_C + param0.field_C) * (param1.field_C + param0.field_C) > var10)) {
+            return;
           }
+          param0.a(param1, -88);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("gb.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("gb.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -92,16 +65,16 @@ final class gb {
         String var3 = null;
         long var4 = 0L;
         try {
-            jc.field_g = true;
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            var4 = -1L;
-            if (param0 != -94) {
-                field_a = (int[]) null;
-            }
-            kn.a(124, param1, var4, var3, var2);
+          jc.field_g = true;
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          var4 = -1L;
+          if (param0 != -94) {
+            field_a = (int[]) null;
+          }
+          kn.a(124, param1, var4, var3, var2);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

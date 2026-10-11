@@ -48,7 +48,7 @@ final class ok {
     public static void a(byte param0) {
         field_k = null;
         if (param0 != 28) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;

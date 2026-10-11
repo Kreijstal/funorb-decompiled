@@ -13,41 +13,36 @@ final class gka extends at {
     static String field_r;
 
     final static void a(int param0, int param1) {
-        int var2;
-        var2 = -95 / ((12 - param0) / 62);
+        int var2 = -95 / ((12 - param0) / 62);
         bs.field_k = param1;
-        if (null == uf.field_c) {
+        if (null != uf.field_c) {
+          uf.field_c.a(23679, param1);
           if (null != kw.field_j) {
             kw.field_j.a(param1, true);
             return;
-          } else {
-            return;
           }
-        } else {
-          uf.field_c.a(23679, param1);
-          if (null == kw.field_j) {
-            return;
-          } else {
-            kw.field_j.a(param1, true);
-            return;
-          }
+          return;
         }
+        if (null == kw.field_j) {
+          return;
+        }
+        kw.field_j.a(param1, true);
     }
 
     public static void e(int param0) {
         field_r = null;
         field_m = null;
         if (param0 != -3) {
-            field_n = (rga) null;
-            field_n = null;
-            return;
+          field_n = (rga) null;
+          field_n = null;
+          return;
         }
         field_n = null;
     }
 
     private final void d(int param0) {
         if (param0 < 80) {
-            this.field_k = (taa) null;
+          this.field_k = (taa) null;
         }
     }
 
@@ -59,100 +54,67 @@ final class gka extends at {
         rk stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = param0.b(16711935);
-            if (var2_int != param1) {
-              var3 = new rk(gfa.field_a[var2_int]);
-              var3.a(param0, false);
-              stackIn_4_0 = (rk) (var3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_int = param0.b(16711935);
+          if (var2_int == param1) {
+            stackIn_2_0 = null;
+            return (rk) (stackIn_2_0);
           }
+          var3 = new rk(gfa.field_a[var2_int]);
+          var3.a(param0, false);
+          stackIn_4_0 = var3;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("gka.D(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("gka.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (rk) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_4_0;
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final boolean c(byte param0) {
-        int var2;
-        ad var3;
-        if (!this.field_k.a((byte) -106)) {
-          L0: {
-            var2 = 112 % ((71 - param0) / 47);
-            if (!this.field_q) {
-              this.field_q = true;
-              wf.a(43, (byte) 126);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!this.field_j) {
-            this.field_p.field_s.field_d = this.field_p.field_s.field_d - 2;
-            if (0 <= this.field_p.field_s.field_d) {
-              return false;
-            } else {
-              var3 = this.field_o.field_n.a(-27449, this.field_p);
-              this.field_k = new taa(this.field_p, var3);
-              this.a(27799, this.field_k);
-              this.field_j = true;
-              this.field_l = new mr(this.field_p, this.field_o, var3.field_s.field_x, var3.field_s.field_J);
-              return false;
-            }
-          } else {
-            this.a(27799, new fha(this.field_l));
-            this.d(91);
-            return true;
-          }
-        } else {
+        if (this.field_k.a((byte) -106)) {
           return false;
         }
+        int var2 = 112 % ((71 - param0) / 47);
+        if (!this.field_q) {
+          this.field_q = true;
+          wf.a(43, (byte) 126);
+        }
+        if (this.field_j) {
+          this.a(27799, new fha(this.field_l));
+          this.d(91);
+          return true;
+        }
+        this.field_p.field_s.field_d = this.field_p.field_s.field_d - 2;
+        if (!(0 > this.field_p.field_s.field_d)) {
+          return false;
+        }
+        ad var3 = this.field_o.field_n.a(-27449, this.field_p);
+        this.field_k = new taa(this.field_p, var3);
+        this.a(27799, this.field_k);
+        this.field_j = true;
+        this.field_l = new mr(this.field_p, this.field_o, var3.field_s.field_x, var3.field_s.field_J);
+        return false;
     }
 
     gka(gj param0, ns param1) {
         this.field_q = false;
         try {
-            this.field_p = param0;
-            this.field_o = param1;
-            this.field_k = new taa(this.field_p, (this.field_p.field_h.field_z >> -155576383) - 1, -3);
-            this.a(27799, this.field_k);
+          this.field_p = param0;
+          this.field_o = param1;
+          this.field_k = new taa(this.field_p, (this.field_p.field_h.field_z >> 1) - 1, -3);
+          this.a(27799, this.field_k);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

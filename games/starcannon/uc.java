@@ -8,40 +8,37 @@ abstract class uc implements he {
     static kl[] field_d;
 
     public final String a(int param0) {
-        if (param0 == 26162) {
-          if (!this.a(true)) {
-            if ((this.field_c - -350L ^ -1L) < (dd.b(101) ^ -1L)) {
-              return null;
-            } else {
-              return this.b(-128);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 != 26162) {
           return (String) null;
         }
+        if (this.a(true)) {
+          return null;
+        }
+        if ((this.field_c + 350L) <= dd.b(101)) {
+          return this.b(-128);
+        }
+        return null;
     }
 
     public final void a(byte param0) {
         this.field_c = dd.b(118);
-        int var2 = -69 % ((param0 - -29) / 45);
+        int var2 = -69 % ((param0 + 29) / 45);
     }
 
     public final p b(byte param0) {
         if (this.a(true)) {
-            return uh.field_g;
+          return uh.field_g;
         }
-        int var2 = -87 / ((param0 - -85) / 36);
-        if (!((this.field_c + 350L ^ -1L) >= (dd.b(61) ^ -1L))) {
-            return cg.field_g;
+        int var2 = -87 / ((param0 + 85) / 36);
+        if (!((this.field_c + 350L) <= dd.b(61))) {
+          return cg.field_g;
         }
         return this.c(4096);
     }
 
     final static String c(byte param0) {
         if (param0 <= 47) {
-            return (String) null;
+          return (String) null;
         }
         return jk.field_b;
     }
@@ -49,30 +46,23 @@ abstract class uc implements he {
     abstract String b(int param0);
 
     final static void a(int param0, long param1) {
-        if (param1 > 0L) {
-          if (param0 >= -90) {
-            return;
+        if (param1 <= 0L) {
+          return;
+        }
+        if (param0 < -90) {
+          if (0L == param1 % 10L) {
+            r.a(18780, param1 - 1L);
+            r.a(18780, 1L);
           } else {
-            L0: {
-              if (0L != param1 % 10L) {
-                r.a(18780, param1);
-                break L0;
-              } else {
-                r.a(18780, param1 + -1L);
-                r.a(18780, 1L);
-                break L0;
-              }
-            }
-            return;
+            r.a(18780, param1);
           }
-        } else {
           return;
         }
     }
 
     public static void e(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;
@@ -82,29 +72,23 @@ abstract class uc implements he {
     abstract p c(int param0);
 
     final static void d(int param0) {
-        if (qb.field_h != -mh.field_k + 0) {
-          if (qb.field_h == 250 + -mh.field_k) {
-            if (param0 != 1) {
-              return;
-            } else {
-              qb.field_h = qb.field_h + 1;
-              return;
-            }
-          } else {
-            if (param0 != 1) {
-              return;
-            } else {
-              qb.field_h = qb.field_h + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0 != 1) {
-            return;
-          } else {
+        if (qb.field_h == -mh.field_k + 0) {
+          if (param0 == 1) {
             qb.field_h = qb.field_h + 1;
             return;
           }
+          return;
+        }
+        if (qb.field_h != 250 - mh.field_k) {
+          if (param0 == 1) {
+            qb.field_h = qb.field_h + 1;
+            return;
+          }
+          return;
+        }
+        if (param0 == 1) {
+          qb.field_h = qb.field_h + 1;
+          return;
         }
     }
 

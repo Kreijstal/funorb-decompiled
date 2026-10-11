@@ -11,21 +11,21 @@ final class sd extends da {
     sd(lm param0) {
         super(param0.field_q, param0.field_v, param0.field_x, param0.field_s, (ca) null, (pg) null);
         try {
-            param0.b(0, this.field_x, 0, 0, this.field_s);
-            this.field_H = 256;
-            this.field_D = param0;
+          param0.b(0, this.field_x, 0, 0, this.field_s);
+          this.field_H = 256;
+          this.field_D = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, cn param1, int param2, int param3, int param4, int param5) {
         try {
-            int var6_int = -14 / ((param2 - -15) / 36);
-            param1.h(param0, param5);
-            db.field_v.b(Integer.toString(param4), 20 + param0, param5 - -(la.field_b.field_H + param1.field_v >> 2085626497), param3, -1);
+          int var6_int = -14 / ((param2 + 15) / 36);
+          param1.h(param0, param5);
+          db.field_v.b(Integer.toString(param4), 20 + param0, param5 + (la.field_b.field_H + param1.field_v >> 1), param3, -1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -33,9 +33,9 @@ final class sd extends da {
         field_F = null;
         field_G = null;
         if (param0) {
-            sd.b(true);
-            field_I = null;
-            return;
+          sd.b(true);
+          field_I = null;
+          return;
         }
         field_I = null;
     }
@@ -46,18 +46,18 @@ final class sd extends da {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(0 == param0)) {
-            return;
+        if (0 != param0) {
+          return;
         }
         if (null == this.field_D) {
-            return;
+          return;
         }
-        if (!(-1 != (this.field_H ^ -1))) {
-            return;
+        if (this.field_H == 0) {
+          return;
         }
-        if (!(this.field_H != 256)) {
-            this.field_D.a(param0, this.field_q + param1, 0, this.field_v + param3);
-            return;
+        if (this.field_H == 256) {
+          this.field_D.a(param0, this.field_q + param1, 0, this.field_v + param3);
+          return;
         }
         cn var6 = new cn(this.field_D.field_x, this.field_D.field_s);
         lm.a(var6, (byte) -79);

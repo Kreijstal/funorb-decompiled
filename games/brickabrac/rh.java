@@ -12,18 +12,16 @@ final class rh {
     public static void a(int param0) {
         field_c = null;
         field_e = null;
-        if (param0 <= 116) {
-          rh.a(42);
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 > 116) {
           field_b = null;
           field_d = null;
           field_a = null;
           return;
         }
+        rh.a(42);
+        field_b = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

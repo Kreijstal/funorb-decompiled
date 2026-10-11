@@ -8,7 +8,7 @@ final class ya extends za implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            vk.a((e) (this), 81);
+          vk.a((e) (this), 81);
         }
     }
 

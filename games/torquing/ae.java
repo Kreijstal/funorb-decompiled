@@ -19,14 +19,14 @@ final class ae extends w {
         String var3 = null;
         long var4 = 0L;
         try {
-            sb.field_p = true;
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            var4 = -1L;
-            ni.a((byte) 81, param0, var3, var4, var2);
-            int var6 = 114 % ((param1 - 66) / 33);
+          sb.field_p = true;
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          var4 = -1L;
+          ni.a((byte) 81, param0, var3, var4, var2);
+          int var6 = 114 % ((param1 - 66) / 33);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ae.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,9 +34,9 @@ final class ae extends w {
         field_lb = null;
         field_mb = null;
         if (param0 != 112) {
-            field_lb = (String) null;
-            field_nb = null;
-            return;
+          field_lb = (String) null;
+          field_nb = null;
+          return;
         }
         field_nb = null;
     }

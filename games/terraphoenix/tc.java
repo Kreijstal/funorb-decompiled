@@ -16,13 +16,13 @@ final class tc implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ne((tc) (this)));
+        return (Iterator) ((Object) new ne(this));
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 > -51) {
-            field_c = (int[]) null;
+          field_c = (int[]) null;
         }
         field_f = null;
         field_c = null;
@@ -31,11 +31,11 @@ final class tc implements Iterable {
 
     final vh c(int param0) {
         if (param0 != 0) {
-            this.c(117);
+          this.c(117);
         }
         vh var2 = this.field_a.field_o;
         if (this.field_a == var2) {
-            return null;
+          return null;
         }
         var2.c((byte) 13);
         return var2;
@@ -49,57 +49,32 @@ final class tc implements Iterable {
         RuntimeException var1_ref = null;
         var4 = Terraphoenix.field_V;
         try {
-          L0: {
-            var1 = th.field_g;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  eb.field_F = eb.field_F + 1;
-                  r.field_V = d.field_M;
-                  if (0 <= dj.field_e) {
-                    L3: while (true) {
-                      if (vl.field_h == dj.field_e) {
-                        break L2;
-                      } else {
-                        var2 = sj.field_g[vl.field_h];
-                        vl.field_h = vl.field_h + 1 & 127;
-                        if (-1 >= (var2 ^ -1)) {
-                          bh.field_e[var2] = true;
-                          continue L3;
-                        } else {
-                          bh.field_e[var2 ^ -1] = false;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if (-113 >= (var2 ^ -1)) {
-                        dj.field_e = vl.field_h;
-                        break L2;
-                      } else {
-                        bh.field_e[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = th.field_g;
+          synchronized (var1) {
+            eb.field_F = eb.field_F + 1;
+            r.field_V = d.field_M;
+            if (0 > dj.field_e) {
+              for (var2 = 0; var2 < 112; var2++) {
+                bh.field_e[var2] = false;
+              }
+              dj.field_e = vl.field_h;
+            } else {
+              while (vl.field_h != dj.field_e) {
+                var2 = sj.field_g[vl.field_h];
+                vl.field_h = vl.field_h + 1 & 127;
+                if (var2 >= 0) {
+                  bh.field_e[var2] = true;
+                  continue;
                 }
-                d.field_M = u.field_g;
-                break L1;
+                bh.field_e[~var2] = false;
               }
             }
-            L5: {
-              if (param0 == 1) {
-                break L5;
-              } else {
-                tc.a(122);
-                break L5;
-              }
-            }
-            break L0;
+            d.field_M = u.field_g;
           }
+          if (param0 != 1) {
+            tc.a(122);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -109,125 +84,83 @@ final class tc implements Iterable {
 
     final void a(vh param0, byte param1) {
         try {
-            if (!(param0.field_i == null)) {
-                param0.c((byte) 13);
-            }
-            param0.field_i = this.field_a.field_i;
-            param0.field_o = this.field_a;
-            param0.field_i.field_o = param0;
-            int var3_int = -73 / ((param1 - -57) / 49);
-            param0.field_o.field_i = param0;
+          if (param0.field_i != null) {
+            param0.c((byte) 13);
+          }
+          param0.field_i = this.field_a.field_i;
+          param0.field_o = this.field_a;
+          param0.field_i.field_o = param0;
+          int var3_int = -73 / ((param1 + 57) / 49);
+          param0.field_o.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "tc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "tc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static String a(byte param0, byte[] param1, int param2, int param3) {
+        int var6 = 0;
         int incrementValue$0 = 0;
         char[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         char[] var10 = null;
         char[] var11 = null;
         char[] var12 = null;
-        String stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_18_2 = null;
+        String stackIn_16_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         int var8 = 0;
         var9 = Terraphoenix.field_V;
         try {
-          L0: {
-            L1: {
-              var12 = new char[param2];
-              var11 = var12;
-              var10 = var11;
-              var4 = var10;
-              if (param0 == -114) {
-                break L1;
-              } else {
-                field_b = (String) null;
-                break L1;
-              }
-            }
-            var5 = 0;
-            var6 = 0;
-            L2: while (true) {
-              if (var6 >= param2) {
-                stackIn_14_0 = new String(var12, 0, var5);
-                break L0;
-              } else {
-                var7 = 255 & param1[var6 + param3];
-                if (var7 != 0) {
-                  L3: {
-                    if (-129 < (var7 ^ -1)) {
-                      break L3;
-                    } else {
-                      if (-161 >= (var7 ^ -1)) {
-                        break L3;
-                      } else {
-                        L4: {
-                          var8 = oj.field_s[var7 + -128];
-                          if (0 != var8) {
-                            break L4;
-                          } else {
-                            var8 = 63;
-                            break L4;
-                          }
-                        }
-                        var7 = var8;
-                        break L3;
-                      }
-                    }
-                  }
-                  incrementValue$0 = var5;
-                  var5++;
-                  var10[incrementValue$0] = (char)var7;
-                  var6++;
-                  continue L2;
-                } else {
-                  var6++;
-                  continue L2;
+          var12 = new char[param2];
+          var11 = var12;
+          var10 = var11;
+          var4 = var10;
+          if (param0 != -114) {
+            field_b = (String) null;
+          }
+          var5 = 0;
+          for (var6 = 0; var6 < param2; var6++) {
+            var7 = 255 & param1[var6 + param3];
+            if (var7 != 0) {
+              if (var7 >= 128 &&
+                var7 < 160) {
+                var8 = oj.field_s[var7 - 128];
+                if (0 == var8) {
+                  var8 = 63;
                 }
+                var7 = var8;
               }
+              incrementValue$0 = var5;
+              var5++;
+              var10[incrementValue$0] = (char)var7;
             }
           }
+          stackIn_16_0 = new String(var12, 0, var5);
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4_ref);
-
-            stackIn_17_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_19_0 = var4_ref;
+          stackIn_19_1 = new StringBuilder().append("tc.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     final static int a(boolean param0, int param1, int param2, int param3, int param4) {
         if (param0) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
-        return (param1 + -param3) * (-param3 + param1) + (-param2 + param4) * (-param2 + param4);
+        return (param1 - param3) * (-param3 + param1) + (-param2 + param4) * (-param2 + param4);
     }
 
     static {

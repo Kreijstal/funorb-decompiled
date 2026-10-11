@@ -6,21 +6,16 @@ abstract class ni {
     static String field_b;
 
     final static boolean a(int param0, int param1) {
-        int stackIn_5_0 = 0;
-        if (param1 == 11764) {
-          if (!ke.field_X[param0]) {
-            if (d.a(param0, cm.field_o, (byte) 68)) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_5_0 = 1;
-            return stackIn_5_0 != 0;
-          }
-        } else {
+        if (param1 != 11764) {
           return false;
         }
+        if (ke.field_X[param0]) {
+          return true;
+        }
+        if (!d.a(param0, cm.field_o, (byte) 68)) {
+          return false;
+        }
+        return true;
     }
 
     abstract byte[] a(int param0);

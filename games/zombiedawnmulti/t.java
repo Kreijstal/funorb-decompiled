@@ -13,19 +13,19 @@ abstract class t {
 
     final static void a(ul param0, ul param1, int param2, boolean param3) {
         try {
-            en.a(cm.field_b, m.field_B, jj.field_L, qc.field_u, vo.field_m, ra.field_j, param3, td.field_f, 16736511, up.field_g, rb.field_d, nq.field_v);
-            wp.field_j = pb.a("lobby", param1, param2 ^ -256, "chatfilter");
-            vg.field_h[2] = hj.field_h;
-            vg.field_h[1] = of.field_p;
-            vg.field_h[param2] = dp.field_a;
-            ap.a(param0, (byte) -37, fd.field_G);
+          en.a(cm.field_b, m.field_B, jj.field_L, qc.field_u, vo.field_m, ra.field_j, param3, td.field_f, 16736511, up.field_g, rb.field_d, nq.field_v);
+          wp.field_j = pb.a("lobby", param1, param2 ^ -256, "chatfilter");
+          vg.field_h[2] = hj.field_h;
+          vg.field_h[1] = of.field_p;
+          vg.field_h[param2] = dp.field_a;
+          ap.a(param0, (byte) -37, fd.field_G);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "t.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "t.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static int b(int param0) {
-        int var1 = -9 / ((param0 - -67) / 57);
+        int var1 = -9 / ((param0 + 67) / 57);
         return em.field_cb;
     }
 
@@ -43,53 +43,35 @@ abstract class t {
         RuntimeException var4_ref2 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                var4 = param2.getGraphics();
-                dl.field_h.a(param1, var4, 2, param3);
-                var4.dispose();
-                if (!param0) {
-                  break L1;
-                } else {
-                  field_a = (String) null;
-                  return;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = (Exception) (Object) decompiledCaughtException;
-              param2.repaint();
+          try {
+            var4 = param2.getGraphics();
+            dl.field_h.a(param1, var4, 2, param3);
+            var4.dispose();
+            if (!param0) {
               return;
             }
-            break L0;
+            field_a = (String) null;
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var4_ref = (Exception) (Object) decompiledCaughtException;
+            param2.repaint();
+            return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L2: {
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4_ref2);
-
-            stackIn_7_1 = new StringBuilder().append("t.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_7_0 = var4_ref2;
+          stackIn_7_1 = new StringBuilder().append("t.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 

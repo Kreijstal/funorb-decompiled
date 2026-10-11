@@ -16,16 +16,7 @@ abstract class mg {
     abstract wh a(int param0);
 
     public static void b(int param0) {
-        if (param0 >= -86) {
-          field_a = -24;
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_h = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 < -86) {
           field_d = null;
           field_g = null;
           field_b = null;
@@ -34,6 +25,13 @@ abstract class mg {
           field_f = null;
           return;
         }
+        field_a = -24;
+        field_d = null;
+        field_g = null;
+        field_b = null;
+        field_h = null;
+        field_c = null;
+        field_f = null;
     }
 
     final static void a(int param0, db param1) {
@@ -41,76 +39,41 @@ abstract class mg {
         int var3 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (le.field_g != null) {
-                break L1;
-              } else {
-                le.field_g = new dl[4][];
-                cd.field_v = new int[10];
-                cd.field_v[2] = 8;
-                cd.field_v[7] = 12;
-                cd.field_v[6] = 8;
-                cd.field_v[1] = 4;
-                cd.field_v[5] = 4;
-                cd.field_v[9] = 12;
-                break L1;
-              }
-            }
-            L2: {
-              if (param0 < -99) {
-                break L2;
-              } else {
-                mg.b(-23);
-                break L2;
-              }
-            }
-            var2_int = 0;
-            L3: while (true) {
-              if (-5 >= (var2_int ^ -1)) {
-                break L0;
-              } else {
-                L4: {
-                  if (null != le.field_g[var2_int]) {
-                    break L4;
-                  } else {
-                    le.field_g[var2_int] = bf.a(-1, oe.field_d[var2_int], "", param1);
-                    break L4;
-                  }
-                }
-                var2_int++;
-                continue L3;
-              }
+          if (le.field_g == null) {
+            le.field_g = new dl[4][];
+            cd.field_v = new int[10];
+            cd.field_v[2] = 8;
+            cd.field_v[7] = 12;
+            cd.field_v[6] = 8;
+            cd.field_v[1] = 4;
+            cd.field_v[5] = 4;
+            cd.field_v[9] = 12;
+          }
+          if (param0 >= -99) {
+            mg.b(-23);
+          }
+          for (var2_int = 0; var2_int < 4; var2_int++) {
+            if (null == le.field_g[var2_int]) {
+              le.field_g[var2_int] = bf.a(-1, oe.field_d[var2_int], "", param1);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("mg.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("mg.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

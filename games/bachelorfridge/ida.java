@@ -25,8 +25,6 @@ abstract class ida extends at {
         String stackIn_39_0 = null;
         RuntimeException stackIn_42_0 = null;
         StringBuilder stackIn_42_1 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
         char[] var4 = null;
@@ -43,190 +41,121 @@ abstract class ida extends at {
         char[] var14 = null;
         var10 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var14 = new char[param0];
-              var13 = var14;
-              var12 = var13;
-              var4 = var12;
-              var5 = 0;
-              if (param3 == 258048) {
-                break L1;
-              } else {
-                var11 = (vr) null;
-                ida.a(-52, (vr) null, -120);
-                break L1;
-              }
-            }
-            var6 = param2;
-            var7 = param2 - -param0;
-            L2: while (true) {
-              if (var7 <= var6) {
-                stackIn_39_0 = new String(var14, 0, var5);
-                break L0;
-              } else {
-                L3: {
-                  incrementValue$0 = var6;
-                  var6++;
-                  var8 = param1[incrementValue$0] & 255;
-                  if (var8 >= 128) {
-                    if (var8 >= 192) {
-                      if (var8 >= 224) {
-                        if (240 > var8) {
-                          L4: {
-                            if (1 + var6 >= var7) {
-                              break L4;
-                            } else {
-                              if (-129 != (192 & param1[var6] ^ -1)) {
-                                break L4;
-                              } else {
-                                if (-129 == (param1[1 + var6] & 192 ^ -1)) {
-                                  incrementValue$1 = var6;
-                                  var6++;
-                                  incrementValue$2 = var6;
-                                  var6++;
-                                  var9 = param1[incrementValue$1] << 1471130918 & 4032 | var8 << 2034350924 & 61440 | 63 & param1[incrementValue$2];
-                                  if ((var9 ^ -1) <= -2049) {
-                                    break L3;
-                                  } else {
-                                    var9 = 65533;
-                                    break L3;
-                                  }
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                          }
-                          var9 = 65533;
-                          break L3;
-                        } else {
-                          if (var8 >= 248) {
-                            var9 = 65533;
-                            break L3;
-                          } else {
-                            L5: {
-                              if (var6 - -2 >= var7) {
-                                break L5;
-                              } else {
-                                if (128 != (192 & param1[var6])) {
-                                  break L5;
-                                } else {
-                                  if ((param1[1 + var6] & 192) != 128) {
-                                    break L5;
-                                  } else {
-                                    if ((param1[2 + var6] & 192) != 128) {
-                                      break L5;
-                                    } else {
-                                      L6: {
-                                        incrementValue$3 = var6;
-                                        var6++;
-                                        incrementValue$4 = var6;
-                                        var6++;
-                                        incrementValue$5 = var6;
-                                        var6++;
-                                        var9 = 258048 & param1[incrementValue$3] << -74573204 | 1835008 & var8 << 1214871954 | 4032 & param1[incrementValue$4] << -886791098 | param1[incrementValue$5] & 63;
-                                        if (-65537 < (var9 ^ -1)) {
-                                          break L6;
-                                        } else {
-                                          if (-1114112 > (var9 ^ -1)) {
-                                            break L6;
-                                          } else {
-                                            var9 = 65533;
-                                            break L3;
-                                          }
-                                        }
-                                      }
-                                      var9 = 65533;
-                                      break L3;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            var9 = 65533;
-                            break L3;
-                          }
-                        }
-                      } else {
-                        L7: {
-                          if (var7 <= var6) {
-                            break L7;
-                          } else {
-                            if (128 != (192 & param1[var6])) {
-                              break L7;
-                            } else {
-                              incrementValue$6 = var6;
-                              var6++;
-                              var9 = (var8 & 31) << 731110502 | 63 & param1[incrementValue$6];
-                              if ((var9 ^ -1) > -129) {
-                                var9 = 65533;
-                                break L3;
-                              } else {
-                                break L3;
-                              }
-                            }
-                          }
-                        }
+          var14 = new char[param0];
+          var13 = var14;
+          var12 = var13;
+          var4 = var12;
+          var5 = 0;
+          if (param3 != 258048) {
+            var11 = (vr) null;
+            ida.a(-52, (vr) null, -120);
+          }
+          var6 = param2;
+          var7 = param2 + param0;
+          while (var7 > var6) {
+            boolean decompiledFrameRemainder0 = true;
+            incrementValue$0 = var6;
+            var6++;
+            var8 = param1[incrementValue$0] & 255;
+            if (var8 >= 128) {
+              if (var8 >= 192) {
+                if (var8 >= 224) {
+                  if (240 > var8) {
+                    if (1 + var6 < var7 &&
+                      (192 & param1[var6]) == 128 &&
+                      (param1[1 + var6] & 192) == 128) {
+                      incrementValue$1 = var6;
+                      var6++;
+                      incrementValue$2 = var6;
+                      var6++;
+                      var9 = param1[incrementValue$1] << 6 & 4032 | var8 << 12 & 61440 | 63 & param1[incrementValue$2];
+                      if (!(var9 >= 2048)) {
                         var9 = 65533;
-                        break L3;
                       }
-                    } else {
+                      decompiledFrameRemainder0 = false;
+                    }
+                    else {
                       var9 = 65533;
-                      break L3;
                     }
                   } else {
-                    if (0 != var8) {
-                      var9 = var8;
-                      break L3;
-                    } else {
+                    if (var8 >= 248) {
                       var9 = 65533;
-                      break L3;
+                    } else {
+                      if (var6 + 2 < var7 &&
+                        128 == (192 & param1[var6]) &&
+                        (param1[1 + var6] & 192) == 128 &&
+                        (param1[2 + var6] & 192) == 128) {
+                        incrementValue$3 = var6;
+                        var6++;
+                        incrementValue$4 = var6;
+                        var6++;
+                        incrementValue$5 = var6;
+                        var6++;
+                        var9 = 258048 & param1[incrementValue$3] << 12 | 1835008 & var8 << 18 | 4032 & param1[incrementValue$4] << 6 | param1[incrementValue$5] & 63;
+                        if (var9 >= 65536 &&
+                          var9 <= 1114111) {
+                          var9 = 65533;
+                        } else {
+                          var9 = 65533;
+                        }
+                        decompiledFrameRemainder0 = false;
+                      }
+                      else {
+                        var9 = 65533;
+                      }
                     }
                   }
+                } else {
+                  if (var7 > var6 &&
+                    128 == (192 & param1[var6])) {
+                    incrementValue$6 = var6;
+                    var6++;
+                    var9 = (var8 & 31) << 6 | 63 & param1[incrementValue$6];
+                    if (!(var9 >= 128)) {
+                      var9 = 65533;
+                    }
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    var9 = 65533;
+                  }
                 }
-                incrementValue$7 = var5;
-                var5++;
-                var12[incrementValue$7] = (char)var9;
-                continue L2;
+              } else {
+                var9 = 65533;
               }
+            } else {
+              var9 = (0 != var8) ? var8 : 65533;
             }
+            incrementValue$7 = var5;
+            var5++;
+            var12[incrementValue$7] = (char)var9;
           }
+          stackIn_39_0 = new String(var14, 0, var5);
+          return stackIn_39_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var4_ref = decompiledCaughtException;
-            stackIn_42_0 = (RuntimeException) (var4_ref);
-
-            stackIn_42_1 = new StringBuilder().append("ida.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackIn_43_2 = "null";
-              break L8;
-            } else {
-              stackIn_43_0 = (RuntimeException) ((Object) stackIn_42_0);
-              stackIn_43_1 = (StringBuilder) ((Object) stackIn_42_1);
-              stackIn_43_2 = "{...}";
-              break L8;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_42_0 = var4_ref;
+          stackIn_42_1 = new StringBuilder().append("ida.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_43_2 = "null";
+          } else {
+            stackIn_43_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_43_0), stackIn_43_2 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_39_0;
     }
 
     public static void b(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_o = null;
     }
 
     final static kv[] a(int param0, int param1, int param2, int param3) {
         if (param1 > -13) {
-            return (kv[]) null;
+          return (kv[]) null;
         }
         return to.a(param0, param2, -25974, 1, param3);
     }
@@ -236,75 +165,34 @@ abstract class ida extends at {
         pn stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_o = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = vw.field_a[param2];
-            break L0;
+          if (param0 != 0) {
+            field_o = (String) null;
           }
+          stackIn_3_0 = vw.field_a[param2];
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ida.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ida.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final boolean d(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 >= -109) {
-          L0: {
-            this.field_l = 82;
-            if (this.field_n <= this.field_q) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_n <= this.field_q) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 < -109) {
+          return this.field_n > this.field_q ? true : false;
         }
+        this.field_l = 82;
+        return this.field_n > this.field_q ? true : false;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -313,58 +201,28 @@ abstract class ida extends at {
         var5 = BachelorFridge.field_y;
         var4 = this.field_p.a(64, this.field_s.field_h);
         this.field_s.b(var4, -23990);
-        if (param2 == 27230) {
-          this.field_l = 0;
-          this.field_j = 0;
-          this.field_n = 0;
-          if ((param0 ^ -1) != -3) {
-            if (-2 != (param0 ^ -1)) {
-              if (4 != param0) {
-                if ((param0 ^ -1) != -4) {
-                  return;
-                } else {
-                  this.field_j = param1;
-                  return;
-                }
-              } else {
-                this.field_l = param1;
-                return;
-              }
-            } else {
-              this.field_j = -param1;
-              return;
-            }
-          } else {
-            this.field_l = -param1;
-            return;
-          }
-        } else {
+        if (param2 != 27230) {
           this.field_n = -76;
-          this.field_l = 0;
-          this.field_j = 0;
-          this.field_n = 0;
-          if ((param0 ^ -1) != -3) {
-            if (-2 != (param0 ^ -1)) {
-              if (4 != param0) {
-                if ((param0 ^ -1) != -4) {
-                  return;
-                } else {
-                  this.field_j = param1;
-                  return;
-                }
-              } else {
-                this.field_l = param1;
-                return;
-              }
-            } else {
-              this.field_j = -param1;
-              return;
-            }
-          } else {
-            this.field_l = -param1;
-            return;
-          }
         }
+        this.field_l = 0;
+        this.field_j = 0;
+        this.field_n = 0;
+        if (param0 == 2) {
+          this.field_l = -param1;
+          return;
+        }
+        if (param0 == 1) {
+          this.field_j = -param1;
+          return;
+        }
+        if (4 == param0) {
+          this.field_l = param1;
+          return;
+        }
+        if (param0 != 3) {
+          return;
+        }
+        this.field_j = param1;
     }
 
     final static n a(String param0, int param1) {
@@ -373,57 +231,37 @@ abstract class ida extends at {
         n stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -203) {
-                break L1;
-              } else {
-                var3 = (String) null;
-                ida.a((String) null, -32);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new n(param0);
-            break L0;
+          if (param1 != -203) {
+            var3 = (String) null;
+            ida.a((String) null, -32);
           }
+          stackIn_3_0 = new n(param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ida.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ida.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     ida(gj param0, nq param1, int param2, int param3) {
         try {
-            this.field_k = param2;
-            this.field_s = param0;
-            this.field_r = param3;
-            this.field_p = param1;
+          this.field_k = param2;
+          this.field_s = param0;
+          this.field_r = param3;
+          this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ida.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ida.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class uc {
 
     final static ci b(int param0) {
         if (param0 != -17260) {
-            return (ci) null;
+          return (ci) null;
         }
         return ib.field_c.field_Kb;
     }
@@ -30,25 +30,15 @@ final class uc {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 <= -33) {
-            break L0;
-          } else {
-            field_g = (le) null;
-            break L0;
-          }
+        if (param0 > -33) {
+          field_g = (le) null;
         }
         if (bj.field_cb == null) {
           return;
-        } else {
-          var1 = bj.field_cb;
-          synchronized (var1) {
-            L1: {
-              bj.field_cb = null;
-              break L1;
-            }
-          }
-          return;
+        }
+        var1 = bj.field_cb;
+        synchronized (var1) {
+          bj.field_cb = null;
         }
     }
 

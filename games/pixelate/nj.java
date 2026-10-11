@@ -14,37 +14,31 @@ final class nj {
     final static void a(fm param0, byte param1) {
         qd var2 = null;
         try {
-            if (param1 != 14) {
-                field_e = (int[]) null;
-            }
-            qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
-            var2 = qd.a(param0, "jagex logo2.packvorbis", "");
-            var2.a();
+          if (param1 != 14) {
+            field_e = (int[]) null;
+          }
+          qd.a(param0.a((byte) 24, "", "headers.packvorbis"));
+          var2 = qd.a(param0, "jagex logo2.packvorbis", "");
+          var2.a();
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "nj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int b(int param0) {
-        int var2;
-        lm var3;
-        int var4;
-        var4 = Pixelate.field_H ? 1 : 0;
-        if (param0 <= 96) {
-          return 62;
-        } else {
+        int var2 = 0;
+        lm var3 = null;
+        int var4 = Pixelate.field_H ? 1 : 0;
+        if (param0 > 96) {
           var2 = 0;
           var3 = this.field_b.field_p;
-          L0: while (true) {
-            if (var3 == this.field_b) {
-              return var2;
-            } else {
-              var3 = var3.field_p;
-              var2++;
-              continue L0;
-            }
+          while (var3 != this.field_b) {
+            var3 = var3.field_p;
+            var2++;
           }
+          return var2;
         }
+        return 62;
     }
 
     public static void b(byte param0) {
@@ -52,128 +46,95 @@ final class nj {
         field_e = null;
         field_d = null;
         if (param0 < 26) {
-            return;
+          return;
         }
         field_h = null;
         field_c = null;
     }
 
     final lm a(byte param0) {
-        lm var2;
-        var2 = this.field_b.field_p;
-        if (var2 != this.field_b) {
-          var2.e(17);
-          if (param0 != 80) {
-            this.field_a = (lm) null;
-            return var2;
-          } else {
-            return var2;
-          }
-        } else {
+        lm var2 = this.field_b.field_p;
+        if (var2 == this.field_b) {
           return null;
         }
+        var2.e(17);
+        if (param0 == 80) {
+          return var2;
+        }
+        this.field_a = (lm) null;
+        return var2;
     }
 
     final static void d(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            if (ql.e(114)) {
-              lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
-              lb.field_x.d((byte) 111);
-              L1: while (true) {
-                if (!bh.b((byte) 126)) {
-                  if (param0 == 49661) {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    nj.b((byte) -125);
-                    return;
-                  }
-                } else {
-                  lb.field_x.a(field_f, ke.field_a, false);
-                  continue L1;
-                }
-              }
-            } else {
-              L2: {
-                if (null == ib.field_f) {
-                  break L2;
-                } else {
-                  if (!ib.field_f.field_g) {
-                    break L2;
-                  } else {
-                    ln.a(49);
-                    lb.field_x.b(param0 + -55844, new ic(lb.field_x, ia.field_c));
-                    break L2;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!ql.e(114)) {
+            if (null != ib.field_f &&
+              ib.field_f.field_g) {
+              ln.a(49);
+              lb.field_x.b(param0 - 55844, new ic(lb.field_x, ia.field_c));
             }
+            return;
           }
+          lb.field_x.a(qk.field_i, true, (byte) 99, nh.field_b);
+          lb.field_x.d((byte) 111);
+          while (bh.$cfr$intArgs$b$c4997cb15529(126)) {
+            lb.field_x.a(field_f, ke.field_a, false);
+          }
+          if (param0 == 49661) {
+            return;
+          }
+          nj.b((byte) -125);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw aa.a((Throwable) ((Object) var1), "nj.E(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final lm c(int param0) {
-        lm var2;
-        if (param0 >= 53) {
-          var2 = this.field_b.field_p;
-          if (this.field_b == var2) {
-            this.field_a = null;
-            return null;
-          } else {
-            this.field_a = var2.field_p;
-            return var2;
-          }
-        } else {
+        if (param0 < 53) {
           return (lm) null;
         }
+        lm var2 = this.field_b.field_p;
+        if (this.field_b != var2) {
+          this.field_a = var2.field_p;
+          return var2;
+        }
+        this.field_a = null;
+        return null;
     }
 
     final void a(int param0, lm param1) {
         try {
-            if (param1.field_r != null) {
-                param1.e(17);
-            }
-            param1.field_r = this.field_b.field_r;
-            param1.field_p = this.field_b;
-            param1.field_r.field_p = param1;
-            param1.field_p.field_r = param1;
-            int var3_int = -65 % ((31 - param0) / 45);
+          if (param1.field_r != null) {
+            param1.e(17);
+          }
+          param1.field_r = this.field_b.field_r;
+          param1.field_p = this.field_b;
+          param1.field_r.field_p = param1;
+          param1.field_p.field_r = param1;
+          int var3_int = -65 % ((31 - param0) / 45);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "nj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final lm a(int param0) {
-        lm var2;
-        var2 = this.field_a;
+        lm var2 = this.field_a;
         if (var2 == this.field_b) {
           this.field_a = null;
           return null;
-        } else {
-          this.field_a = var2.field_p;
-          if (param0 != 65151) {
-            return (lm) null;
-          } else {
-            return var2;
-          }
         }
+        this.field_a = var2.field_p;
+        if (param0 == 65151) {
+          return var2;
+        }
+        return (lm) null;
     }
 
     public nj() {

@@ -35,31 +35,33 @@ final class bl {
         field_i = param3 - param1;
         bl.a();
         if (field_b.length < field_i) {
-            field_b = new int[bf.a(true, field_i)];
+          field_b = new int[bf.a(true, field_i)];
         }
         int var4 = param1 * gb.field_d + param0;
         for (var5 = 0; var5 < field_i; var5++) {
-            field_b[var5] = var4;
-            var4 = var4 + gb.field_d;
+          field_b[var5] = var4;
+          var4 = var4 + gb.field_d;
         }
     }
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_h = new int[512];
         field_e = new int[2048];
         field_d = new int[2048];
         field_b = new int[1024];
         field_g = new int[2048];
         for (var0 = 1; var0 < 512; var0++) {
-            field_h[var0] = 32768 / var0;
+          field_h[var0] = 32768 / var0;
         }
-        for (var0 = 1; var0 < 2048; var0++) {
-            field_e[var0] = 65536 / var0;
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_e[var0Lifetime1] = 65536 / var0Lifetime1;
         }
-        for (var0 = 0; var0 < 2048; var0++) {
-            field_g[var0] = (int)(65536.0 * Math.sin((double)var0 * 0.0030679615));
-            field_d[var0] = (int)(65536.0 * Math.cos((double)var0 * 0.0030679615));
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_g[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_d[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

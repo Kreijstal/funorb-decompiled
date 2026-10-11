@@ -9,19 +9,19 @@ final class dh {
 
     final static void a(boolean param0, byte param1) {
         if (param1 < 65) {
-            dh.a(true, (byte) 62);
-            pd.a(param0, true, 0);
-            return;
+          dh.a(true, (byte) 62);
+          pd.a(param0, true, 0);
+          return;
         }
         pd.a(param0, true, 0);
     }
 
     public static void a(int param0) {
         if (param0 < 116) {
-            field_a = -109L;
-            field_c = null;
-            field_b = null;
-            return;
+          field_a = -109L;
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

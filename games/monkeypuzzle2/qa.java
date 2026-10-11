@@ -21,308 +21,203 @@ final class qa implements Runnable {
         hh.field_u = param1;
         wg.field_h = param2;
         if (param0 != -39) {
-            return;
+          return;
         }
         try {
-            rb.field_cb = param3;
+          rb.field_cb = param3;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "qa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "qa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(byte param0) {
-        gg var2;
         field_d = null;
-        if (param0 <= 20) {
-          var2 = (gg) null;
-          qa.a((byte) -50, (gg) null, 114, 54);
-          field_i = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 > 20) {
           field_i = null;
           field_b = null;
           return;
         }
+        gg var2 = (gg) null;
+        qa.a((byte) -50, (gg) null, 114, 54);
+        field_i = null;
+        field_b = null;
     }
 
     final gk a(int param0) {
-        if (param0 >= 13) {
-          if (-4 != (this.field_k ^ -1)) {
-            return null;
-          } else {
-            return this.field_e;
-          }
-        } else {
+        if (param0 < 13) {
           field_d = (pj) null;
-          if (-4 != (this.field_k ^ -1)) {
-            return null;
-          } else {
+          if (this.field_k == 3) {
             return this.field_e;
           }
+          return null;
         }
+        if (this.field_k == 3) {
+          return this.field_e;
+        }
+        return null;
     }
 
     final synchronized boolean c(int param0) {
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
         IOException var3 = null;
         OutputStream var4 = null;
         java.net.Socket var5 = null;
         CharSequence var6 = null;
-        if (this.field_k < 2) {
-          L0: {
-            if (-1 == (this.field_k ^ -1)) {
-              L1: {
-                if (this.field_j != null) {
-                  break L1;
-                } else {
-                  this.field_j = this.field_h.a((byte) 112, this.field_f);
-                  break L1;
-                }
-              }
-              if (-1 == (this.field_j.field_g ^ -1)) {
-                return false;
-              } else {
-                if ((this.field_j.field_g ^ -1) != -2) {
-                  this.field_k = this.field_k + 1;
-                  this.field_j = null;
-                  return false;
-                } else {
-                  break L0;
-                }
-              }
-            } else {
-              break L0;
-            }
-          }
-          L2: {
-            if (1 != this.field_k) {
-              break L2;
-            } else {
-              L3: {
-                if (this.field_g != null) {
-                  break L3;
-                } else {
-                  this.field_g = this.field_h.a(this.field_f.getHost(), 0, 443);
-                  break L3;
-                }
-              }
-              if (-1 != (this.field_g.field_g ^ -1)) {
-                if (1 != this.field_g.field_g) {
-                  this.field_k = this.field_k + 1;
-                  this.field_g = null;
-                  return false;
-                } else {
-                  break L2;
-                }
-              } else {
-                return false;
-              }
-            }
-          }
-          L4: {
-            var2 = -62 / ((-17 - param0) / 60);
-            if (null != this.field_l) {
-              break L4;
-            } else {
-              try {
-                L5: {
-                  L6: {
-                    if (0 != this.field_k) {
-                      break L6;
-                    } else {
-                      this.field_l = (DataInputStream) (this.field_j.field_b);
-                      break L6;
-                    }
-                  }
-                  L7: {
-                    if (1 == this.field_k) {
-                      var5 = (java.net.Socket) (this.field_g.field_b);
-                      var5.setSoTimeout(10000);
-                      var4 = var5.getOutputStream();
-                      var4.write(17);
-                      var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_f.getFile() + "\n\n"));
-                      var4.write(pj.a(3231, var6));
-                      this.field_l = new DataInputStream(var5.getInputStream());
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  this.field_e.field_h = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L5;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L8: {
-                  var3 = (IOException) (Object) decompiledCaughtException;
-                  this.finalize();
-                  this.field_k = this.field_k + 1;
-                  decompiledRegionSelector0 = 1;
-                  break L8;
-                }
-              }
-              if (decompiledRegionSelector0 == 0) {
-                L9: {
-                  if (this.field_c != null) {
-                    break L9;
-                  } else {
-                    this.field_c = this.field_h.a((Runnable) (this), 5, 0);
-                    break L9;
-                  }
-                }
-                if (this.field_c.field_g != 0) {
-                  if (-2 != (this.field_c.field_g ^ -1)) {
-                    this.finalize();
-                    this.field_k = this.field_k + 1;
-                    return false;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                break L4;
-              }
-            }
-          }
-          if (this.field_c != null) {
-            if (this.field_c.field_g != 0) {
-              if (-2 != (this.field_c.field_g ^ -1)) {
-                this.finalize();
-                this.field_k = this.field_k + 1;
-                return false;
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            this.field_c = this.field_h.a((Runnable) (this), 5, 0);
-            if (this.field_c.field_g != 0) {
-              if (-2 == (this.field_c.field_g ^ -1)) {
-                return false;
-              } else {
-                this.finalize();
-                this.field_k = this.field_k + 1;
-                return false;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_k >= 2) {
           return true;
         }
+        if (this.field_k == 0) {
+          if (this.field_j == null) {
+            this.field_j = this.field_h.a((byte) 112, this.field_f);
+          }
+          if (this.field_j.field_g == 0) {
+            return false;
+          }
+          if (this.field_j.field_g != 1) {
+            this.field_k = this.field_k + 1;
+            this.field_j = null;
+            return false;
+          }
+        }
+        if (1 == this.field_k) {
+          if (this.field_g == null) {
+            this.field_g = this.field_h.a(this.field_f.getHost(), 0, 443);
+          }
+          if (this.field_g.field_g == 0) {
+            return false;
+          }
+          if (1 != this.field_g.field_g) {
+            this.field_k = this.field_k + 1;
+            this.field_g = null;
+            return false;
+          }
+        }
+        var2 = -62 / ((-17 - param0) / 60);
+        if (null == this.field_l) {
+          try {
+            if (0 == this.field_k) {
+              this.field_l = (DataInputStream) (this.field_j.field_b);
+            }
+            if (1 == this.field_k) {
+              var5 = (java.net.Socket) (this.field_g.field_b);
+              var5.setSoTimeout(10000);
+              var4 = var5.getOutputStream();
+              var4.write(17);
+              var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_f.getFile() + "\n\n"));
+              var4.write(pj.a(3231, var6));
+              this.field_l = new DataInputStream(var5.getInputStream());
+            }
+            this.field_e.field_h = 0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (IOException) (Object) decompiledCaughtException;
+            this.finalize();
+            this.field_k = this.field_k + 1;
+          }
+        }
+        if (this.field_c == null) {
+          this.field_c = this.field_h.a((Runnable) (this), 5, 0);
+        }
+        if (this.field_c.field_g == 0) {
+          return false;
+        }
+        if (this.field_c.field_g == 1) {
+          return false;
+        }
+        this.finalize();
+        this.field_k = this.field_k + 1;
+        return false;
     }
 
     protected final void finalize() {
-        if (!(null == this.field_j)) {
-            if (null != this.field_j.field_b) {
-                try {
-                    ((DataInputStream) (this.field_j.field_b)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_j = null;
-        }
-        if (!(this.field_g == null)) {
-            if (!(null == this.field_g.field_b)) {
-                try {
-                    ((java.net.Socket) (this.field_g.field_b)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_g = null;
-        }
-        if (null != this.field_l) {
+        if (null != this.field_j) {
+          if (null != this.field_j.field_b) {
             try {
-                this.field_l.close();
+              ((DataInputStream) (this.field_j.field_b)).close();
             } catch (Exception exception) {
             }
-            this.field_l = null;
+          }
+          this.field_j = null;
+        }
+        if (this.field_g != null) {
+          if (null != this.field_g.field_b) {
+            try {
+              ((java.net.Socket) (this.field_g.field_b)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_g = null;
+        }
+        if (null != this.field_l) {
+          try {
+            this.field_l.close();
+          } catch (Exception exception) {
+          }
+          this.field_l = null;
         }
         this.field_c = null;
     }
 
     final static int b(int param0) {
         if (param0 < 120) {
-            field_a = -111;
-            return je.field_c;
+          field_a = -111;
+          return je.field_c;
         }
         return je.field_c;
     }
 
     public final void run() {
         try {
-            int var1_int = 0;
-            Object var1 = null;
-            Object var2 = null;
-            Throwable var3 = null;
-            int var4 = 0;
-            Throwable decompiledCaughtException = null;
-            var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-            try {
-              L0: while (true) {
-                L1: {
-                  if (this.field_e.field_h >= this.field_e.field_g.length) {
-                    break L1;
-                  } else {
-                    var1_int = this.field_l.read(this.field_e.field_g, this.field_e.field_h, -this.field_e.field_h + this.field_e.field_g.length);
-                    if (-1 >= (var1_int ^ -1)) {
-                      this.field_e.field_h = this.field_e.field_h + var1_int;
-                      continue L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                if (this.field_e.field_h != this.field_e.field_g.length) {
-                  var1 = this;
-                  synchronized (var1) {
-                    L2: {
-                      this.finalize();
-                      this.field_k = 3;
-                      break L2;
-                    }
-                  }
-                  return;
-                } else {
-                  throw qa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.field_g.length + " " + this.field_f));
-                }
+          int var1_int = 0;
+          Object var1 = null;
+          Object var2 = null;
+          Throwable var3 = null;
+          int var4 = 0;
+          Throwable decompiledCaughtException = null;
+          var4 = MonkeyPuzzle2.field_F ? 1 : 0;
+          try {
+            while (this.field_e.field_h < this.field_e.field_g.length) {
+              var1_int = this.field_l.read(this.field_e.field_g, this.field_e.field_h, -this.field_e.field_h + this.field_e.field_g.length);
+              if (var1_int >= 0) {
+                this.field_e.field_h = this.field_e.field_h + var1_int;
+                continue;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2 = this;
-              synchronized (var2) {
-                L3: {
-                  this.finalize();
-                  this.field_k = this.field_k + 1;
-                  break L3;
-                }
-              }
-              return;
+              break;
             }
+            if (this.field_e.field_h == this.field_e.field_g.length) {
+              throw qa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.field_g.length + " " + this.field_f));
+            }
+            var1 = this;
+            synchronized (var1) {
+              this.finalize();
+              this.field_k = 3;
+            }
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var2 = this;
+            synchronized (var2) {
+              this.finalize();
+              this.field_k = this.field_k + 1;
+            }
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     qa(md param0, java.net.URL param1, int param2) {
         try {
-            this.field_h = param0;
-            this.field_f = param1;
-            this.field_e = new gk(param2);
+          this.field_h = param0;
+          this.field_f = param1;
+          this.field_e = new gk(param2);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class ji {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -14186) {
-            return;
+          return;
         }
         field_a = null;
         field_e = null;

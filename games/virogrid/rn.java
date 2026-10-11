@@ -13,42 +13,34 @@ abstract class rn {
     static int field_c;
 
     final java.net.Socket a(boolean param0) throws IOException {
-        if (param0) {
-          field_a = (String) null;
-          return new java.net.Socket(this.field_d, this.field_b);
-        } else {
+        if (!param0) {
           return new java.net.Socket(this.field_d, this.field_b);
         }
+        field_a = (String) null;
+        return new java.net.Socket(this.field_d, this.field_b);
     }
 
     public static void a(byte param0) {
         field_f = null;
         if (param0 != -38) {
-            rn.a((byte) 51);
-            field_a = null;
-            field_g = null;
-            return;
+          rn.a((byte) 51);
+          field_a = null;
+          field_g = null;
+          return;
         }
         field_a = null;
         field_g = null;
     }
 
     final static void a(int param0) {
-        L0: {
-          if (ac.field_e) {
-            df.g(df.field_i, df.field_g, df.field_k + -df.field_i, -df.field_g + df.field_h);
-            cm.field_h.a(false, 24960);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (ac.field_e) {
+          df.g(df.field_i, df.field_g, df.field_k - df.field_i, -df.field_g + df.field_h);
+          cm.field_h.a(false, 24960);
         }
-        if (param0 != -26808) {
-          field_g = (String) null;
-          return;
-        } else {
+        if (param0 == -26808) {
           return;
         }
+        field_g = (String) null;
     }
 
     abstract java.net.Socket b(int param0) throws IOException;

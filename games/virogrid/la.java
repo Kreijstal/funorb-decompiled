@@ -15,30 +15,28 @@ final class la extends l {
     final static void a(int param0, eh param1) {
         gj var2 = null;
         if (param0 != 1048576) {
-            return;
+          return;
         }
         try {
-            gj.a(param1.a("headers.packvorbis", 100, ""));
-            var2 = gj.a(param1, "jagex logo2.packvorbis", "");
-            var2.a();
+          gj.a(param1.a("headers.packvorbis", 100, ""));
+          var2 = gj.a(param1, "jagex logo2.packvorbis", "");
+          var2.a();
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
-        if (param0 < 45) {
-          field_g = 115;
-          field_h = null;
-          field_i = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 >= 45) {
           field_h = null;
           field_i = null;
           field_m = null;
           return;
         }
+        field_g = 115;
+        field_h = null;
+        field_i = null;
+        field_m = null;
     }
 
     final static void a(int param0, int param1, boolean param2, sc param3) {
@@ -46,103 +44,59 @@ final class la extends l {
         Throwable var5 = null;
         Object stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        Object stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == wc.field_f) {
-                break L1;
-              } else {
-                wl.a(1048576, param0 + -10509, param1, param3, param2);
-                break L1;
-              }
+          if (null != wc.field_f) {
+            wl.a(1048576, param0 - 10509, param1, param3, param2);
+          }
+          if (param0 != -1) {
+            return;
+          }
+          if (vg.field_B == null) {
+            return;
+          }
+          var4 = ae.field_g;
+          synchronized (var4) {
+            vg.field_B.a(param1, true, -1);
+            if (param3 == qi.field_b) {
+              return;
             }
-            if (param0 == -1) {
-              if (vg.field_B != null) {
-                var4 = ae.field_g;
-                synchronized (var4) {
-                  L2: {
-                    vg.field_B.a(param1, true, -1);
-                    if (param3 != qi.field_b) {
-                      L3: {
-                        vg.field_B.c(false);
-                        ae.field_g.h();
-                        qi.field_b = param3;
-                        if (null == qi.field_b) {
-                          break L3;
-                        } else {
-                          vg.field_B.a(param2, 37, qi.field_b);
-                          break L3;
-                        }
-                      }
-                      break L2;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-                return;
-              } else {
-                return;
-              }
-            } else {
-              break L0;
+            vg.field_B.c(false);
+            ae.field_g.h();
+            qi.field_b = param3;
+            if (null != qi.field_b) {
+              vg.field_B.a(param2, 37, qi.field_b);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_19_0 = var4;
-
-            stackIn_19_1 = new StringBuilder().append("la.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_20_0 = stackIn_19_0;
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L4;
-            } else {
-              stackIn_20_0 = stackIn_19_0;
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L4;
-            }
+          var4 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_19_0 = var4;
+          stackIn_19_1 = new StringBuilder().append("la.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw kg.a((Throwable) (stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2;
-        sc var3;
         we.field_c.a(param1, 24960);
-        var2 = fh.field_c;
-        if (param0 >= -60) {
-          L0: {
-            var3 = (sc) null;
-            la.a(22, -99, true, (sc) null);
-            if (var2 != null) {
-              var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
-              break L0;
-            } else {
-              break L0;
-            }
+        ab var2 = fh.field_c;
+        if (param0 < -60) {
+          if (var2 != null) {
+            var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
           }
           return;
-        } else {
-          L1: {
-            if (var2 != null) {
-              var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        sc var3 = (sc) null;
+        la.a(22, -99, true, (sc) null);
+        if (var2 != null) {
+          var2.a(0, we.field_c.field_J, we.field_c.field_Bb);
         }
     }
 

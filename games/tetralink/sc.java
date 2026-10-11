@@ -11,9 +11,9 @@ final class sc {
         field_b = null;
         field_c = null;
         if (param0 != 26740) {
-            sc.a(-4);
-            field_a = (int[][]) null;
-            return;
+          sc.a(-4);
+          field_a = (int[][]) null;
+          return;
         }
         field_a = (int[][]) null;
     }

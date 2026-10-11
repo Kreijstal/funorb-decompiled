@@ -14,46 +14,34 @@ final class li extends ag {
     static wk[][] field_D;
 
     final static boolean c(int param0) {
-        if (param0 == 8) {
-          if (qb.g(2)) {
-            if ((8 & a.field_c) != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 8) {
           li.d(28);
-          if (qb.g(2)) {
-            if ((8 & a.field_c) != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (!qb.g(2)) {
             return false;
           }
+          if ((8 & a.field_c) == 0) {
+            return true;
+          }
+          return false;
         }
+        if (!qb.g(2)) {
+          return false;
+        }
+        if ((8 & a.field_c) == 0) {
+          return true;
+        }
+        return false;
     }
 
     final static void e(int param0) {
-        L0: {
-          if (vb.field_e) {
-            pb.f(pb.field_i, pb.field_l, pb.field_b - pb.field_i, -pb.field_l + pb.field_d);
-            qf.field_c.a(false, (byte) 127);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (vb.field_e) {
+          pb.f(pb.field_i, pb.field_l, pb.field_b - pb.field_i, -pb.field_l + pb.field_d);
+          qf.field_c.a(false, (byte) 127);
         }
-        if (param0 != 0) {
-          field_D = (wk[][]) null;
-          return;
-        } else {
+        if (param0 == 0) {
           return;
         }
+        field_D = (wk[][]) null;
     }
 
     li(int param0) {
@@ -65,46 +53,26 @@ final class li extends ag {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_y = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = vn.a('*', -7477, param1.field_y.length());
-            break L0;
+          if (param0 != -1) {
+            field_y = (String) null;
           }
+          stackIn_3_0 = vn.a('*', -7477, param1.field_y.length());
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("li.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("li.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void d(int param0) {
@@ -113,16 +81,14 @@ final class li extends ag {
         field_C = null;
         field_z = null;
         field_D = (wk[][]) null;
-        if (param0 != -30874) {
-          li.d(-15);
-          field_E = null;
-          field_B = null;
-          return;
-        } else {
+        if (param0 == -30874) {
           field_E = null;
           field_B = null;
           return;
         }
+        li.d(-15);
+        field_E = null;
+        field_B = null;
     }
 
     private li(mi param0, int param1) {

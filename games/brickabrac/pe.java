@@ -20,18 +20,16 @@ final class pe extends nm {
 
     public static void a(int param0) {
         field_l = null;
-        if (param0 != 112) {
-          pe.a((byte) 91);
-          field_p = null;
-          field_o = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == 112) {
           field_p = null;
           field_o = null;
           field_k = null;
           return;
         }
+        pe.a((byte) 91);
+        field_p = null;
+        field_o = null;
+        field_k = null;
     }
 
     final static void c(int param0) {
@@ -40,7 +38,7 @@ final class pe extends nm {
     }
 
     final static int a(byte param0) {
-        int var1 = 119 % ((param0 - -15) / 60);
+        int var1 = 119 % ((param0 + 15) / 60);
         return ci.field_u - np.field_b;
     }
 

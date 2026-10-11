@@ -18,110 +18,57 @@ final class sb {
         long stackIn_20_0 = 0L;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var8 = wizardrun.field_H;
         try {
-          L0: {
-            var2_long = 0L;
-            var4 = param1.length();
-            var5 = 0;
-            var6 = 62 / ((58 - param0) / 62);
-            L1: while (true) {
-              L2: {
-                if (var5 >= var4) {
-                  break L2;
-                } else {
-                  L3: {
-                    L4: {
-                      var2_long = var2_long * 37L;
-                      var7 = param1.charAt(var5);
-                      if (65 > var7) {
-                        break L4;
-                      } else {
-                        if (var7 <= 90) {
-                          var2_long = var2_long + (long)(-65 + (1 + var7));
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (var7 < 97) {
-                        break L5;
-                      } else {
-                        if (var7 > 122) {
-                          break L5;
-                        } else {
-                          var2_long = var2_long + (long)(var7 + -96);
-                          break L3;
-                        }
-                      }
-                    }
-                    if (48 > var7) {
-                      break L3;
-                    } else {
-                      if (var7 > 57) {
-                        break L3;
-                      } else {
-                        var2_long = var2_long + (long)(-21 - -var7);
-                        break L3;
-                      }
-                    }
-                  }
-                  if ((var2_long ^ -1L) > -177917621779460414L) {
-                    var5++;
-                    continue L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L6: while (true) {
-                L7: {
-                  if (var2_long % 37L != 0L) {
-                    break L7;
-                  } else {
-                    if (var2_long == 0L) {
-                      break L7;
-                    } else {
-                      var2_long = var2_long / 37L;
-                      continue L6;
-                    }
-                  }
-                }
-                stackIn_20_0 = var2_long;
-                break L0;
+          var2_long = 0L;
+          var4 = param1.length();
+          var5 = 0;
+          var6 = 62 / ((58 - param0) / 62);
+          while (var5 < var4) {
+            var2_long = var2_long * 37L;
+            var7 = param1.charAt(var5);
+            if (65 <= var7 &&
+              var7 <= 90) {
+              var2_long = var2_long + (long)(-65 + (1 + var7));
+            } else if (var7 >= 97 &&
+              var7 <= 122) {
+              var2_long = var2_long + (long)(var7 - 96);
+            } else {
+              if (48 <= var7 &&
+                var7 <= 57) {
+                var2_long = var2_long + (long)(-21 + var7);
               }
             }
+            if (var2_long < 177917621779460413L) {
+              var5++;
+              continue;
+            }
+            break;
           }
+          while (var2_long % 37L == 0L) {
+            if (var2_long != 0L) {
+              var2_long = var2_long / 37L;
+              continue;
+            }
+            break;
+          }
+          stackIn_20_0 = var2_long;
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
-
-            stackIn_23_1 = new StringBuilder().append("sb.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L8;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L8;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = var2;
+          stackIn_23_1 = new StringBuilder().append("sb.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
-        return stackIn_20_0;
     }
 
     public static void a(int param0) {
@@ -129,8 +76,8 @@ final class sb {
         field_b = null;
         field_e = null;
         if (param0 != 553) {
-            CharSequence var2 = (CharSequence) null;
-            sb.a((byte) 18, (CharSequence) null);
+          CharSequence var2 = (CharSequence) null;
+          sb.a((byte) 18, (CharSequence) null);
         }
     }
 

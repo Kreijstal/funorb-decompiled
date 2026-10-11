@@ -23,48 +23,26 @@ public class ub {
         field_a = param1;
         field_d = param0;
         try {
-          L0: {
-            L1: {
-              field_e = System.getProperty("user.home");
-              if (null == field_e) {
-                break L1;
-              } else {
-                field_e = field_e + "/";
-                break L1;
-              }
+          field_e = System.getProperty("user.home");
+          if (null != field_e) {
+            field_e = field_e + "/";
+          }
+          if (param2 != -26761) {
+            var4 = (String) null;
+            ub.a((String) null, (byte) 19);
+            field_b = true;
+            if (null == field_e) {
+              field_e = "~/";
             }
-            if (param2 == -26761) {
-              break L0;
-            } else {
-              L2: {
-                var4 = (String) null;
-                ub.a((String) null, (byte) 19);
-                field_b = true;
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return;
-            }
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L3;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
-        L4: {
-          field_b = true;
-          if (null == field_e) {
-            field_e = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        field_b = true;
+        if (null == field_e) {
+          field_e = "~/";
         }
     }
 

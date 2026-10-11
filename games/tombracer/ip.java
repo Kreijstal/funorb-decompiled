@@ -6,22 +6,18 @@ abstract class ip {
     static boolean field_b;
 
     final int a(byte param0, long param1) {
-        long var4;
-        var4 = this.a((byte) 47);
-        if ((var4 ^ -1L) >= -1L) {
-          if (param0 <= 3) {
-            return 67;
-          } else {
-            return this.a(param1, 0);
-          }
-        } else {
+        long var4 = this.a((byte) 47);
+        if (var4 > 0L) {
           vja.a(0, var4);
-          if (param0 <= 3) {
-            return 67;
-          } else {
+          if (param0 > 3) {
             return this.a(param1, 0);
           }
+          return 67;
         }
+        if (param0 > 3) {
+          return this.a(param1, 0);
+        }
+        return 67;
     }
 
     abstract void a(int param0);
@@ -29,15 +25,15 @@ abstract class ip {
     final static void a(upa param0, int param1, int param2) {
         kh var3 = null;
         try {
-            var3 = ql.field_k;
-            var3.k(param1, -2988);
-            var3.i(param0.field_n, 0);
-            if (param2 != 2147) {
-                field_a = (String[]) null;
-            }
-            var3.i(param0.field_k, param2 + -2147);
+          var3 = ql.field_k;
+          var3.k(param1, -2988);
+          var3.i(param0.field_n, 0);
+          if (param2 != 2147) {
+            field_a = (String[]) null;
+          }
+          var3.i(param0.field_k, param2 - 2147);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ip.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ip.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

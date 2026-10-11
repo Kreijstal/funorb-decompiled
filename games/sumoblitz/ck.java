@@ -15,7 +15,7 @@ final class ck {
         field_c = null;
         field_a = null;
         if (param0 > -28) {
-            ck.a(99);
+          ck.a(99);
         }
     }
 

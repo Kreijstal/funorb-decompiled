@@ -11,50 +11,51 @@ final class io {
 
     final String a(byte param0) {
         if (param0 != -41) {
-            this.field_d = true;
-            return this.field_e;
+          this.field_d = true;
+          return this.field_e;
         }
         return this.field_e;
     }
 
     final static String a(int param0, byte param1) {
-        int var2;
-        int var3;
-        char[] var4;
+        int var2 = 0;
+        int var3 = 0;
+        char[] var4 = null;
+        char[] var4Lifetime1;
+        int var2Lifetime1;
+        int var3Lifetime1;
         if (0 > param0) {
           return "--:--";
-        } else {
-          if (param1 != -61) {
-            io.a(34, (byte) -85);
-            var2 = param0 / 50;
-            var3 = var2 / 60;
-            var2 = var2 % 60;
-            var4 = new char[5];
-            var4[3] = (char)(var2 / 10 + 48);
-            var4[0] = (char)(48 + var3 / 10 % 10);
-            var4[1] = (char)(var3 % 10 + 48);
-            var4[2] = (char)58;
-            var4[4] = (char)(var2 % 10 + 48);
-            return new String(var4);
-          } else {
-            var2 = param0 / 50;
-            var3 = var2 / 60;
-            var2 = var2 % 60;
-            var4 = new char[5];
-            var4[3] = (char)(var2 / 10 + 48);
-            var4[0] = (char)(48 + var3 / 10 % 10);
-            var4[1] = (char)(var3 % 10 + 48);
-            var4[2] = (char)58;
-            var4[4] = (char)(var2 % 10 + 48);
-            return new String(var4);
-          }
         }
+        if (param1 == -61) {
+          var2 = param0 / 50;
+          var3 = var2 / 60;
+          var2 = var2 % 60;
+          var4 = new char[5];
+          var4[3] = (char)(var2 / 10 + 48);
+          var4[0] = (char)(48 + var3 / 10 % 10);
+          var4[1] = (char)(var3 % 10 + 48);
+          var4[2] = (char)58;
+          var4[4] = (char)(var2 % 10 + 48);
+          return new String(var4);
+        }
+        io.a(34, (byte) -85);
+        var2Lifetime1 = param0 / 50;
+        var3Lifetime1 = var2Lifetime1 / 60;
+        var2Lifetime1 = var2Lifetime1 % 60;
+        var4Lifetime1 = new char[5];
+        var4Lifetime1[3] = (char)(var2Lifetime1 / 10 + 48);
+        var4Lifetime1[0] = (char)(48 + var3Lifetime1 / 10 % 10);
+        var4Lifetime1[1] = (char)(var3Lifetime1 % 10 + 48);
+        var4Lifetime1[2] = (char)58;
+        var4Lifetime1[4] = (char)(var2Lifetime1 % 10 + 48);
+        return new String(var4Lifetime1);
     }
 
     final boolean b(byte param0) {
         if (param0 >= -22) {
-            field_c = (ah) null;
-            return this.field_d;
+          field_c = (ah) null;
+          return this.field_d;
         }
         return this.field_d;
     }
@@ -64,74 +65,40 @@ final class io {
         field_c = null;
         field_f = null;
         if (param0 != 10) {
-            field_f = (String) null;
+          field_f = (String) null;
         }
     }
 
     io(String param0, boolean param1) {
         RuntimeException var3 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
+        boolean stackIn_6_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_e = param0;
-              if (this.field_e != null) {
-                break L1;
-              } else {
-                this.field_e = "";
-                break L1;
-              }
-            }
-            L2: {
-              stackIn_5_0 = this;
-
-              if (!param1) {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 0;
-                break L2;
-              } else {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 1;
-                break L2;
-              }
-            }
-            ((io) (this)).field_d = stackIn_6_1 != 0;
-            if (0 == this.field_e.length()) {
-              this.field_d = false;
-              break L0;
-            } else {
-              return;
-            }
+          this.field_e = param0;
+          if (this.field_e == null) {
+            this.field_e = "";
           }
+          stackIn_6_1 = (param1);
+          this.field_d = stackIn_6_1;
+          if (0 != this.field_e.length()) {
+            return;
+          }
+          this.field_d = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3);
-
-            stackIn_12_1 = new StringBuilder().append("io.<init>(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("io.<init>(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

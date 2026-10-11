@@ -13,88 +13,75 @@ final class nf {
     int[] field_a;
 
     final int b(int param0) {
-        if (param0 == -6375) {
-          if (null != this.field_a) {
-            if (0 == this.field_a.length) {
-              return 0;
-            } else {
-              return this.field_a[this.field_a.length - 1];
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 != -6375) {
           this.b(75);
-          if (null != this.field_a) {
-            if (0 == this.field_a.length) {
-              return 0;
-            } else {
-              return this.field_a[this.field_a.length - 1];
-            }
-          } else {
+          if (null == this.field_a) {
             return 0;
           }
+          if (0 != this.field_a.length) {
+            return this.field_a[this.field_a.length - 1];
+          }
+          return 0;
         }
+        if (null == this.field_a) {
+          return 0;
+        }
+        if (0 != this.field_a.length) {
+          return this.field_a[this.field_a.length - 1];
+        }
+        return 0;
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        fl.a(param3 - -20, 256, 16777215, o.field_c, param1, w.field_kb);
+        fl.a(param3 + 20, 256, 16777215, o.field_c, param1, w.field_kb);
         se.field_S.a(jg.field_k[param0], param1, param3 + 24, 120, 200, 16777215, -1, 0, 0, 16);
-        if (-1 != (param0 ^ -1)) {
-          if (param2 >= 59) {
-            if (-2 == (param0 ^ -1)) {
-              fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
-              fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
-              fb.field_c[param4][4].c(param1 - -66, param3 - -101, 18, 18);
-              fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
-              fb.field_c[param4][4].c(66 + param1, param3 - -83, 18, 18);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            field_d = (lm) null;
-            if (-2 == (param0 ^ -1)) {
-              fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
-              fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
-              fb.field_c[param4][4].c(param1 - -66, param3 - -101, 18, 18);
-              fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
-              fb.field_c[param4][4].c(66 + param1, param3 - -83, 18, 18);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
+        if (param0 == 0) {
           fb.field_c[param4][0].c(30 + param1, param3 + 101, 18, 18);
           fb.field_c[param4][0].c(48 + param1, 101 + param3, 18, 18);
-          fb.field_c[param4][0].c(param1 - -66, param3 - -101, 18, 18);
+          fb.field_c[param4][0].c(param1 + 66, param3 + 101, 18, 18);
           fb.field_c[param4][0].c(48 + param1, 83 + param3, 18, 18);
-          if (param2 < 59) {
-            field_d = (lm) null;
-            if (-2 != (param0 ^ -1)) {
-              return;
-            } else {
-              fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
-              fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
-              fb.field_c[param4][4].c(param1 - -66, param3 - -101, 18, 18);
-              fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
-              fb.field_c[param4][4].c(66 + param1, param3 - -83, 18, 18);
+          if (param2 >= 59) {
+            if (param0 != 1) {
               return;
             }
-          } else {
-            if (-2 == (param0 ^ -1)) {
-              fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
-              fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
-              fb.field_c[param4][4].c(param1 - -66, param3 - -101, 18, 18);
-              fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
-              fb.field_c[param4][4].c(66 + param1, param3 - -83, 18, 18);
-              return;
-            } else {
-              return;
-            }
+            fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
+            fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
+            fb.field_c[param4][4].c(param1 + 66, param3 + 101, 18, 18);
+            fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
+            fb.field_c[param4][4].c(66 + param1, param3 + 83, 18, 18);
+            return;
           }
+          field_d = (lm) null;
+          if (param0 == 1) {
+            fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
+            fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
+            fb.field_c[param4][4].c(param1 + 66, param3 + 101, 18, 18);
+            fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
+            fb.field_c[param4][4].c(66 + param1, param3 + 83, 18, 18);
+            return;
+          }
+          return;
         }
+        if (param2 < 59) {
+          field_d = (lm) null;
+          if (param0 != 1) {
+            return;
+          }
+          fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
+          fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
+          fb.field_c[param4][4].c(param1 + 66, param3 + 101, 18, 18);
+          fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
+          fb.field_c[param4][4].c(66 + param1, param3 + 83, 18, 18);
+          return;
+        }
+        if (param0 != 1) {
+          return;
+        }
+        fb.field_c[param4][4].c(param1 + 30, param3 + 101, 18, 18);
+        fb.field_c[param4][4].c(48 + param1, 101 + param3, 18, 18);
+        fb.field_c[param4][4].c(param1 + 66, param3 + 101, 18, 18);
+        fb.field_c[param4][4].c(30 + param1, param3 + 83, 18, 18);
+        fb.field_c[param4][4].c(66 + param1, param3 + 83, 18, 18);
     }
 
     public static void a(int param0) {
@@ -105,41 +92,31 @@ final class nf {
     }
 
     final int a(int param0, int param1) {
-        int var3;
+        int var3 = 0;
         int var4;
         var4 = client.field_A ? 1 : 0;
-        if (this.field_a != null) {
-          if (-1 != (this.field_a.length ^ -1)) {
-            var3 = 1;
-            L0: while (true) {
-              if (this.field_a.length <= var3) {
-                if (param1 <= 103) {
-                  nf.a(-11);
-                  return -1 + this.field_a.length;
-                } else {
-                  return -1 + this.field_a.length;
-                }
-              } else {
-                if ((param0 ^ -1) > (this.field_a[-1 + var3] + this.field_a[var3] >> 4945089 ^ -1)) {
-                  return var3 + -1;
-                } else {
-                  var3++;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (this.field_a == null) {
           return 0;
         }
+        if (this.field_a.length == 0) {
+          return 0;
+        }
+        for (var3 = 1; this.field_a.length > var3; var3++) {
+          if (param0 < (this.field_a[-1 + var3] + this.field_a[var3] >> 1)) {
+            return var3 - 1;
+          }
+        }
+        if (param1 > 103) {
+          return -1 + this.field_a.length;
+        }
+        nf.a(-11);
+        return -1 + this.field_a.length;
     }
 
     final static boolean c(int param0) {
         if (param0 != 48) {
-            nf.a(-116, 95, (byte) -90, 127, 46);
-            return sc.field_l.a(true);
+          nf.a(-116, 95, (byte) -90, 127, 46);
+          return sc.field_l.a(true);
         }
         return sc.field_l.a(true);
     }

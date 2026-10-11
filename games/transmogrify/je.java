@@ -9,37 +9,32 @@ final class je {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 >= -125) {
-          field_a = (String) null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -125) {
           field_a = null;
           field_d = null;
           field_b = null;
           return;
         }
+        field_a = (String) null;
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static void a(int param0) {
-        if ((gl.field_y ^ -1) != param0) {
-          if (Transmogrify.d(false)) {
-            g.field_A = true;
-            return;
-          } else {
-            bk.c(-19317);
-            gl.field_y = 11;
-            g.field_A = true;
-            return;
-          }
-        } else {
+        if (~gl.field_y == param0) {
           bk.c(-19317);
           gl.field_y = 11;
           g.field_A = true;
           return;
         }
+        if (!Transmogrify.d(false)) {
+          bk.c(-19317);
+          gl.field_y = 11;
+          g.field_A = true;
+          return;
+        }
+        g.field_A = true;
     }
 
     static {

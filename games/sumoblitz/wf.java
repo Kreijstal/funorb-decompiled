@@ -8,7 +8,7 @@ final class wf {
     public static void a(int param0) {
         field_a = null;
         if (param0 <= 70) {
-            wf.a(34);
+          wf.a(34);
         }
     }
 

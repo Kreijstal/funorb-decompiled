@@ -15,91 +15,73 @@ final class br {
 
     final static void a(long param0, byte param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
-            try {
-              L0: {
-                Thread.sleep(param0);
-                if (param1 == -21) {
-                  break L0;
-                } else {
-                  br.a(-109L, (byte) 47);
-                  return;
-                }
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L1;
-              }
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          try {
+            Thread.sleep(param0);
+            if (param1 != -21) {
+              br.a(-109L, (byte) 47);
+              return;
             }
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int b(int param0) {
         if (param0 > -3) {
-            br.a(101);
-            return 1;
+          br.a(101);
+          return 1;
         }
         return 1;
     }
 
     final int c(int param0) {
-        if (!this.field_f) {
-          if (2 != this.field_g) {
-            if (param0 < -79) {
-              if (this.field_j == qj.field_d) {
-                return 1;
-              } else {
-                if (-3 == (wh.field_s ^ -1)) {
-                  if (!lc.a(false, this.field_d)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            } else {
-              return -19;
-            }
-          } else {
-            if ((this.field_a ^ -1) >= -1) {
-              if (param0 < -79) {
-                if (this.field_j == qj.field_d) {
-                  return 1;
-                } else {
-                  if (-3 == (wh.field_s ^ -1)) {
-                    if (!lc.a(false, this.field_d)) {
-                      return 0;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                return -19;
-              }
-            } else {
-              return 2;
-            }
-          }
-        } else {
+        if (this.field_f) {
           return 2;
         }
+        if (2 == this.field_g) {
+          if (this.field_a > 0) {
+            return 2;
+          }
+          if (param0 >= -79) {
+            return -19;
+          }
+          if (this.field_j == qj.field_d) {
+            return 1;
+          }
+          if (wh.field_s != 2) {
+            return 0;
+          }
+          if (lc.a(false, this.field_d)) {
+            return 1;
+          }
+          return 0;
+        }
+        if (param0 >= -79) {
+          return -19;
+        }
+        if (this.field_j == qj.field_d) {
+          return 1;
+        }
+        if (wh.field_s != 2) {
+          return 0;
+        }
+        if (lc.a(false, this.field_d)) {
+          return 1;
+        }
+        return 0;
     }
 
     public static void a(int param0) {
         if (param0 != 23050) {
-            return;
+          return;
         }
         field_i = null;
     }
@@ -114,9 +96,9 @@ final class br {
         this.field_e = oi.field_c;
         this.field_d = fu.field_E;
         if (!param0) {
-            this.field_b = null;
+          this.field_b = null;
         } else {
-            this.field_b = tm.field_c;
+          this.field_b = tm.field_c;
         }
     }
 

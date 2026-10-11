@@ -15,8 +15,8 @@ class fl extends hg {
 
     final void d(int param0) {
         int var2 = 125 / ((param0 - 31) / 57);
-        if (!(this.field_i != null)) {
-            return;
+        if (this.field_i == null) {
+          return;
         }
         this.field_i.field_j = this.field_j;
         this.field_j.field_i = this.field_i;
@@ -26,52 +26,24 @@ class fl extends hg {
 
     final static String e(int param0) {
         if (dg.field_o == dn.field_q) {
-            return tf.field_h;
+          return tf.field_h;
         }
-        if (!(dg.field_o != ui.field_b)) {
-            return tc.field_j;
+        if (dg.field_o == ui.field_b) {
+          return tc.field_j;
         }
         if (!di.field_g.b(param0)) {
-            return tc.field_j;
+          return tc.field_j;
         }
         return vk.field_v;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        L0: {
-          if (param2 == -1) {
-            break L0;
-          } else {
-            field_k = (int[]) null;
-            break L0;
-          }
+        boolean stackIn_8_0 = false;
+        if (param2 != -1) {
+          field_k = (int[]) null;
         }
-        L1: {
-          L2: {
-            if (param0 < param4) {
-              break L2;
-            } else {
-              if (param5 + param4 <= param0) {
-                break L2;
-              } else {
-                if (param6 < param3) {
-                  break L2;
-                } else {
-                  if (param3 - -param1 <= param6) {
-                    break L2;
-                  } else {
-                    stackIn_8_0 = 1;
-                    break L1;
-                  }
-                }
-              }
-            }
-          }
-          stackIn_8_0 = 0;
-          break L1;
-        }
-        return stackIn_8_0 != 0;
+        stackIn_8_0 = (param0 >= param4) && (param5 + param4 > param0) && (param6 >= param3) && (param3 + param1 > param6);
+        return stackIn_8_0;
     }
 
     final static void a(int param0, int param1) {
@@ -83,31 +55,31 @@ class fl extends hg {
         int var2_int = 4 == param1 ? 1 : 0;
         ed[] var3 = mb.field_f;
         if (var2_int != 0) {
-            var3 = ob.field_b;
+          var3 = ob.field_b;
         }
-        if (!(var3 != null)) {
-            return;
+        if (var3 == null) {
+          return;
         }
         ed[] var4 = jm.field_K;
         if (param0 != -1) {
-            field_h = (String) null;
+          field_h = (String) null;
         }
-        if (!(var4 != null)) {
-            return;
+        if (var4 == null) {
+          return;
         }
         try {
-            if (!(null != bf.field_M)) {
-                bf.field_M = new rk[var3.length];
-            }
-            for (var5 = 0; var5 < var3.length; var5++) {
-                var6 = var3[var5];
-                var7 = var4[var5];
-                var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
-                bf.field_M[var5] = new rk(var6, var7, var8);
-            }
-            ka.a(105);
+          if (null == bf.field_M) {
+            bf.field_M = new rk[var3.length];
+          }
+          for (var5 = 0; var5 < var3.length; var5++) {
+            var6 = var3[var5];
+            var7 = var4[var5];
+            var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
+            bf.field_M[var5] = new rk(var6, var7, var8);
+          }
+          ka.a(105);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fl.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -116,19 +88,19 @@ class fl extends hg {
         tl.field_l = param7;
         kl.field_n = param8;
         if (param3 != -22183) {
-            return;
+          return;
         }
         try {
-            rh.field_N = param2;
-            he.field_y = param4;
-            ce.field_j = param5;
-            mn.field_n = param6;
-            kh.field_c = param0;
-            od.field_j = (sb) ((Object) new bk());
-            uk.field_b = new kk(param1);
-            af.field_e = new sk(od.field_j, uk.field_b);
+          rh.field_N = param2;
+          he.field_y = param4;
+          ce.field_j = param5;
+          mn.field_n = param6;
+          kh.field_c = param0;
+          od.field_j = (sb) ((Object) new bk());
+          uk.field_b = new kk(param1);
+          af.field_e = new sk(od.field_j, uk.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fl.W(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

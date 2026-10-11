@@ -11,7 +11,7 @@ final class bj extends IOException {
 
     final static void a(int param0) {
         fl.a(-128, true, mj.field_d, uf.field_j);
-        int var1 = 25 / ((param0 - -28) / 48);
+        int var1 = 25 / ((param0 + 28) / 48);
         ae.field_C = true;
     }
 
@@ -19,25 +19,25 @@ final class bj extends IOException {
         int var1_int = 0;
         int var2 = TorChallenge.field_F ? 1 : 0;
         try {
-            if (param0 != 71) {
-                field_a = (int[]) null;
-            }
-            if (!(null != wa.field_pb)) {
-                wa.field_pb = new boolean[5];
-            }
-            for (var1_int = 0; var1_int < 5; var1_int++) {
-                mh.field_d[var1_int] = -1;
-                wa.field_pb[var1_int] = false;
-            }
-            gh.field_m = false;
-            bi.field_f = false;
-            vi.field_a = 0;
-            jj.field_d = false;
-            qk.field_lb = 0;
-            wj.field_a = 0;
-            ih.a(param0 ^ 55);
+          if (param0 != 71) {
+            field_a = (int[]) null;
+          }
+          if (null == wa.field_pb) {
+            wa.field_pb = new boolean[5];
+          }
+          for (var1_int = 0; var1_int < 5; var1_int++) {
+            mh.field_d[var1_int] = -1;
+            wa.field_pb[var1_int] = false;
+          }
+          gh.field_m = false;
+          bi.field_f = false;
+          vi.field_a = 0;
+          jj.field_d = false;
+          qk.field_lb = 0;
+          wj.field_a = 0;
+          ih.a(param0 ^ 55);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ')');
         }
     }
 
@@ -62,7 +62,6 @@ final class bj extends IOException {
         int stackIn_20_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_30_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -73,117 +72,63 @@ final class bj extends IOException {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        int var7Lifetime1;
+        int var9Lifetime1;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            if (!param1) {
-              L1: {
-                var5_int = -param0 + param4;
-                var6 = -param2 + param3;
-                var7 = 0;
-                var8 = 1;
-                if (-1 >= (var5_int ^ -1)) {
-                  break L1;
-                } else {
-                  var8 = -1;
-                  var5_int = -var5_int;
-                  break L1;
-                }
-              }
-              L2: {
-                var9 = 0;
-                if (var5_int > 32) {
-                  var9 = -var8;
-                  break L2;
-                } else {
-                  var9 = var8;
-                  break L2;
-                }
-              }
-              L3: {
-                if (-1 < (var6 ^ -1)) {
-                  var6 = -var6;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var5_int >= 32) {
-                  var5_int = -var5_int + 64;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              if (-65 <= (var5_int ^ -1)) {
-                if (-17 <= (var5_int ^ -1)) {
-                  if (-241 <= (var6 * 64 ^ -1)) {
-                    var10 = var5_int * var5_int;
-                    var11 = 0;
-                    L5: while (true) {
-                      if (-1 <= (var10 ^ -1)) {
-                        L6: {
-                          var7 = -var11 + 9;
-                          var7 = var7 << -1895311033;
-                          if (var9 <= 0) {
-                            break L6;
-                          } else {
-                            var7 = -var7 + 256;
-                            break L6;
-                          }
-                        }
-                        stackIn_30_0 = var7;
-                        decompiledRegionSelector0 = 4;
-                        break L0;
-                      } else {
-                        var11++;
-                        var10 = var10 >> -2126403423;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    stackIn_23_0 = -1;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                } else {
-                  stackIn_20_0 = -1;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                stackIn_17_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = -82;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1) {
+            stackIn_3_0 = -82;
+            return stackIn_3_0;
           }
+          var5_int = -param0 + param4;
+          var6 = -param2 + param3;
+          var7 = 0;
+          var8 = 1;
+          if (var5_int < 0) {
+            var8 = -1;
+            var5_int = -var5_int;
+          }
+          var9 = 0;
+          if (var5_int > 32) {
+            var9Lifetime1 = -var8;
+          } else {
+            var9Lifetime1 = var8;
+          }
+          if (var6 < 0) {
+            var6 = -var6;
+          }
+          if (var5_int >= 32) {
+            var5_int = -var5_int + 64;
+          }
+          if (var5_int > 64) {
+            stackIn_17_0 = -1;
+            return stackIn_17_0;
+          }
+          if (var5_int > 16) {
+            stackIn_20_0 = -1;
+            return stackIn_20_0;
+          }
+          if (var6 * 64 > 240) {
+            stackIn_23_0 = -1;
+            return stackIn_23_0;
+          }
+          var10 = var5_int * var5_int;
+          var11 = 0;
+          while (var10 > 0) {
+            var11++;
+            var10 = var10 >> 1;
+          }
+          var7Lifetime1 = -var11 + 9;
+          var7Lifetime1 = var7Lifetime1 << 7;
+          if (var9Lifetime1 > 0) {
+            var7Lifetime1 = -var7Lifetime1 + 256;
+          }
+          stackIn_30_0 = var7Lifetime1;
+          return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var5), "bj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_17_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_20_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_23_0;
-              } else {
-                return stackIn_30_0;
-              }
-            }
-          }
         }
     }
 

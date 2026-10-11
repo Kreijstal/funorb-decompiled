@@ -19,41 +19,36 @@ final class wc {
 
     final static int d(int param0) {
         if (param0 != 20) {
-            wc.a(-3, 'E');
-            return ef.field_b;
+          wc.a(-3, 'E');
+          return ef.field_b;
         }
         return ef.field_b;
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 48) {
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 48) {
           field_a = -6;
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (48 > param1) {
             return false;
           }
+          if (param1 <= 57) {
+            return true;
+          }
+          return false;
         }
+        if (48 > param1) {
+          return false;
+        }
+        if (param1 <= 57) {
+          return true;
+        }
+        return false;
     }
 
     public static void c(int param0) {
         field_g = null;
         if (param0 != -1) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;
@@ -64,32 +59,24 @@ final class wc {
 
     final static gj b(int param0) {
         try {
-            Throwable var1 = null;
-            gj stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (param0 == 5220) {
-                    break L1;
-                  } else {
-                    wc.a(14, '￉');
-                    break L1;
-                  }
-                }
-                stackIn_3_0 = (gj) (Class.forName("me").newInstance());
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
+          Throwable var1 = null;
+          gj stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 != 5220) {
+              wc.a(14, '￉');
             }
+            stackIn_3_0 = (gj) (Class.forName("me").newInstance());
             return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

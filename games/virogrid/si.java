@@ -13,34 +13,34 @@ final class si {
         int var3 = 0;
         int[] var2 = new int[param0.length];
         for (var3 = param0.length - 1; var3 >= 0; var3--) {
-            var2[var3] = (int)Math.round(param0[var3] * (double)(1 << param1));
+          var2[var3] = (int)Math.round(param0[var3] * (double)(1 << param1));
         }
         return var2;
     }
 
     private final static void b(int param0, int param1, int param2, mg param3, int param4, int param5, int param6) {
         if (param2 == 0) {
-            return;
+          return;
         }
         int var7 = (param6 - param5) / param2;
         int var8 = param5;
         if (param1 < 0) {
-            param2 = param2 + param1;
-            var8 = var8 - param1 * var7;
-            param1 = 0;
+          param2 = param2 + param1;
+          var8 = var8 - param1 * var7;
+          param1 = 0;
         }
         if (param1 + param2 > df.field_f) {
-            param2 = df.field_f - param1;
+          param2 = df.field_f - param1;
         }
         int var9 = df.field_e * param1 + param0;
         while (true) {
-            param2--;
-            if (param2 < 0) {
-                break;
-            }
-            df.field_d[var9] = param3.field_B[(var8 >> 16) * param3.field_w + param4];
-            var9 = var9 + df.field_e;
-            var8 = var8 + var7;
+          param2--;
+          if (param2 < 0) {
+            break;
+          }
+          df.field_d[var9] = param3.field_B[(var8 >> 16) * param3.field_w + param4];
+          var9 = var9 + df.field_e;
+          var8 = var8 + var7;
         }
     }
 
@@ -94,117 +94,80 @@ final class si {
         int var25;
         int var26;
         int var27;
-        if (param2 != 0) {
-          L0: {
-            var7 = (param6 - param5) / param2;
-            var8 = param5;
-            if (param1 >= 0) {
-              break L0;
-            } else {
-              param2 = param2 + param1;
-              var8 = var8 - param1 * var7;
-              param1 = 0;
-              break L0;
-            }
-          }
-          L1: {
-            if (param1 + param2 <= df.field_f) {
-              break L1;
-            } else {
-              param2 = df.field_f - param1;
-              break L1;
-            }
-          }
-          var9 = df.field_e * param1 + param0;
-          var13 = param4 >> 16;
-          var14 = param4 >> 12 & 15;
-          var15 = 16 - var14;
-          L2: while (true) {
-            param2--;
-            if (param2 < 0) {
-              return;
-            } else {
-              L3: {
-                L4: {
-                  var16 = var8 >> 16;
-                  var17 = var8 >> 12 & 15;
-                  var18 = 16 - var17;
-                  var10 = param3.field_B[var16 * param3.field_w + var13];
-                  var11 = var10 & 16711935;
-                  var12 = var10 & 65280;
-                  if (var10 == 0) {
-                    break L4;
-                  } else {
-                    if (var14 == 0) {
-                      break L4;
-                    } else {
-                      if (var13 >= param3.field_w - 1) {
-                        break L4;
-                      } else {
-                        L5: {
-                          var11 = var11 * var15;
-                          var12 = var12 * var15;
-                          var19 = param3.field_B[var16 * param3.field_w + var13 + 1];
-                          var20 = (var19 & 16711935) * var14;
-                          var21 = (var19 & 65280) * var14;
-                          if (var17 == 0) {
-                            break L5;
-                          } else {
-                            if (var16 >= param3.field_p - 1) {
-                              break L5;
-                            } else {
-                              var11 = var11 * var18;
-                              var12 = var12 * var18;
-                              var20 = var20 * var18;
-                              var21 = var21 * var18;
-                              var22 = param3.field_B[(var16 + 1) * param3.field_w + var13];
-                              var23 = (var22 & 16711935) * var15 * var17;
-                              var24 = (var22 & 65280) * var15 * var17;
-                              var25 = param3.field_B[(var16 + 1) * param3.field_w + var13 + 1];
-                              var26 = (var25 & 16711935) * var14 * var17;
-                              var27 = (var25 & 65280) * var14 * var17;
-                              var11 = (var11 + var20 + var23 + var26 & -16711936) >>> 8;
-                              var12 = (var12 + var21 + var24 + var27 & 16711680) >>> 8;
-                              break L3;
-                            }
-                          }
-                        }
-                        var11 = (var11 + var20 & 267390960) >>> 4;
-                        var12 = (var12 + var21 & 1044480) >>> 4;
-                        break L3;
-                      }
-                    }
-                  }
-                }
-                if (var17 == 0) {
-                  break L3;
-                } else {
-                  if (var16 >= param3.field_p - 1) {
-                    break L3;
-                  } else {
-                    var11 = var11 * var18;
-                    var12 = var12 * var18;
-                    var19 = param3.field_B[(var16 + 1) * param3.field_w + var13];
-                    var20 = (var19 & 16711935) * var17;
-                    var21 = (var19 & 65280) * var17;
-                    var11 = (var11 + var20 & 267390960) >>> 4;
-                    var12 = (var12 + var21 & 1044480) >>> 4;
-                    break L3;
-                  }
-                }
-              }
-              var10 = var11 | var12;
-              var10 = (var10 & 16579836) >> 2;
-              var10 = var10 * 3;
-              var10 = var10 + ((df.field_d[var9] & 16579836) >> 2);
-              df.field_d[var9] = var10;
-              var9 = var9 + df.field_e;
-              var8 = var8 + var7;
-              continue L2;
-            }
-          }
-        } else {
+        int var10Lifetime1;
+        if (param2 == 0) {
           return;
+        }
+        var7 = (param6 - param5) / param2;
+        var8 = param5;
+        if (param1 < 0) {
+          param2 = param2 + param1;
+          var8 = var8 - param1 * var7;
+          param1 = 0;
+        }
+        if (param1 + param2 > df.field_f) {
+          param2 = df.field_f - param1;
+        }
+        var9 = df.field_e * param1 + param0;
+        var13 = param4 >> 16;
+        var14 = param4 >> 12 & 15;
+        var15 = 16 - var14;
+        while (true) {
+          param2--;
+          if (param2 < 0) {
+            return;
+          }
+          var16 = var8 >> 16;
+          var17 = var8 >> 12 & 15;
+          var18 = 16 - var17;
+          var10 = param3.field_B[var16 * param3.field_w + var13];
+          var11 = var10 & 16711935;
+          var12 = var10 & 65280;
+          if (var10 != 0 &&
+            var14 != 0 &&
+            var13 < param3.field_w - 1) {
+            var11 = var11 * var15;
+            var12 = var12 * var15;
+            var19 = param3.field_B[var16 * param3.field_w + var13 + 1];
+            var20 = (var19 & 16711935) * var14;
+            var21 = (var19 & 65280) * var14;
+            if (var17 != 0 &&
+              var16 < param3.field_p - 1) {
+              var11 = var11 * var18;
+              var12 = var12 * var18;
+              var20 = var20 * var18;
+              var21 = var21 * var18;
+              var22 = param3.field_B[(var16 + 1) * param3.field_w + var13];
+              var23 = (var22 & 16711935) * var15 * var17;
+              var24 = (var22 & 65280) * var15 * var17;
+              var25 = param3.field_B[(var16 + 1) * param3.field_w + var13 + 1];
+              var26 = (var25 & 16711935) * var14 * var17;
+              var27 = (var25 & 65280) * var14 * var17;
+              var11 = (var11 + var20 + var23 + var26 & -16711936) >>> 8;
+              var12 = (var12 + var21 + var24 + var27 & 16711680) >>> 8;
+            } else {
+              var11 = (var11 + var20 & 267390960) >>> 4;
+              var12 = (var12 + var21 & 1044480) >>> 4;
+            }
+          } else {
+            if (var17 != 0 &&
+              var16 < param3.field_p - 1) {
+              var11 = var11 * var18;
+              var12 = var12 * var18;
+              var19 = param3.field_B[(var16 + 1) * param3.field_w + var13];
+              var20 = (var19 & 16711935) * var17;
+              var21 = (var19 & 65280) * var17;
+              var11 = (var11 + var20 & 267390960) >>> 4;
+              var12 = (var12 + var21 & 1044480) >>> 4;
+            }
+          }
+          var10Lifetime1 = var11 | var12;
+          var10Lifetime1 = (var10Lifetime1 & 16579836) >> 2;
+          var10Lifetime1 = var10Lifetime1 * 3;
+          var10Lifetime1 = var10Lifetime1 + ((df.field_d[var9] & 16579836) >> 2);
+          df.field_d[var9] = var10Lifetime1;
+          var9 = var9 + df.field_e;
+          var8 = var8 + var7;
         }
     }
 
@@ -237,62 +200,53 @@ final class si {
         double var45;
         double var47;
         int var49;
-        L0: {
-          L1: {
-            var62 = new double[3];
-            si.a(param0, param1, param2, -param3, -param4, var62);
-            var64 = new double[3];
-            var63 = new double[3];
-            si.a(param0, param1, param2, param3, -param4, var63);
-            var65 = new double[3];
-            si.c(param0, var62);
-            si.c(param0, var63);
-            if (var62[2] < 32.0) {
-              break L1;
-            } else {
-              if (var63[2] >= 32.0) {
-                si.a(param0, param1, param2, -param3, param4, var64);
-                si.a(param0, param1, param2, param3, param4, var65);
-                si.a(param0, param1, param2, -param3, -param4, var62);
-                si.a(param0, param1, param2, param3, -param4, var63);
-                si.b(param0, var62);
-                si.b(param0, var63);
-                break L0;
-              } else {
-                break L1;
-              }
-            }
+        double var23Lifetime1;
+        double var25Lifetime1;
+        double var27Lifetime1;
+        double var29Lifetime1;
+        double var31Lifetime1;
+        double var31Lifetime2;
+        double var33Lifetime1;
+        double var35Lifetime1;
+        double var37Lifetime1;
+        int var41Lifetime1;
+        int var49Lifetime1;
+        var62 = new double[3];
+        si.a(param0, param1, param2, -param3, -param4, var62);
+        var64 = new double[3];
+        var63 = new double[3];
+        si.a(param0, param1, param2, param3, -param4, var63);
+        var65 = new double[3];
+        si.c(param0, var62);
+        si.c(param0, var63);
+        if (!(var62[2] < 32.0) &&
+          !(var63[2] < 32.0)) {
+          si.a(param0, param1, param2, -param3, param4, var64);
+          si.a(param0, param1, param2, param3, param4, var65);
+          si.a(param0, param1, param2, -param3, -param4, var62);
+          si.a(param0, param1, param2, param3, -param4, var63);
+          si.b(param0, var62);
+          si.b(param0, var63);
+        } else {
+          if (var62[2] < 32.0 &&
+            var63[2] < 32.0) {
+            return;
           }
-          L2: {
-            if (var62[2] >= 32.0) {
-              break L2;
-            } else {
-              if (var63[2] >= 32.0) {
-                break L2;
-              } else {
-                return;
-              }
-            }
-          }
-          L3: {
-            var17_double = param1[0] - param0[0];
-            var19_double = param1[1] - param0[1];
-            var21_double = param1[2] - param0[2];
-            var23 = param0[9] * var17_double + param0[10] * var19_double + param0[11] * var21_double;
-            var25 = 32.0 - var23;
-            var27 = param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2];
-            var25 = var25 / var27;
-            var29 = -param3;
-            var31 = param3;
-            if (var62[2] >= 32.0) {
-              var31 = var25;
-              param7 = param6 + (int)(0.5 * (1.0 + var25 / param3) * (double)(param7 - param6));
-              break L3;
-            } else {
-              var29 = var25;
-              param6 = param6 + (int)(0.5 * (1.0 + var25 / param3) * (double)(param7 - param6));
-              break L3;
-            }
+          var17_double = param1[0] - param0[0];
+          var19_double = param1[1] - param0[1];
+          var21_double = param1[2] - param0[2];
+          var23 = param0[9] * var17_double + param0[10] * var19_double + param0[11] * var21_double;
+          var25 = 32.0 - var23;
+          var27 = param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2];
+          var25 = var25 / var27;
+          var29 = -param3;
+          var31 = param3;
+          if (!(var62[2] < 32.0)) {
+            var31 = var25;
+            param7 = param6 + (int)(0.5 * (1.0 + var25 / param3) * (double)(param7 - param6));
+          } else {
+            var29 = var25;
+            param6 = param6 + (int)(0.5 * (1.0 + var25 / param3) * (double)(param7 - param6));
           }
           si.a(param0, param1, param2, var29, -param4, var62);
           si.a(param0, param1, param2, var29, param4, var64);
@@ -300,115 +254,80 @@ final class si {
           si.a(param0, param1, param2, var31, param4, var65);
           si.b(param0, var62);
           si.b(param0, var63);
-          break L0;
         }
-        L4: {
-          si.b(param0, var64);
-          si.b(param0, var65);
-          var17 = (int)var62[0];
-          var18 = (int)var63[0];
-          var19 = (int)var62[1];
-          var20 = (int)var63[1];
-          var21 = (int)(var64[1] - var62[1]);
-          var22 = (int)(var65[1] - var63[1]);
-          var23 = 1.0 / (double)(var18 - var17);
-          var25 = (double)(var20 - var19) * var23;
-          var27 = (double)(var22 - var21) * var23;
-          var29 = (var63[2] - var62[2]) * var23;
-          var31 = (double)var19;
-          var33 = (double)var21;
-          var35 = var62[2];
-          var37 = (double)param6 * var35;
-          var39 = ((double)param7 * var63[2] - (double)param6 * var62[2]) / (double)(var18 - var17);
-          if (var17 <= var18) {
-            break L4;
-          } else {
-            var41 = var17;
-            var17 = var18;
-            var18 = var41;
-            var25 = -var25;
-            var27 = -var27;
-            var29 = -var29;
-            var39 = -var39;
-            var31 = (double)var20;
-            var33 = (double)var22;
-            var35 = var63[2];
-            var37 = (double)param7 * var35;
-            break L4;
-          }
+        si.b(param0, var64);
+        si.b(param0, var65);
+        var17 = (int)var62[0];
+        var18 = (int)var63[0];
+        var19 = (int)var62[1];
+        var20 = (int)var63[1];
+        var21 = (int)(var64[1] - var62[1]);
+        var22 = (int)(var65[1] - var63[1]);
+        var23Lifetime1 = 1.0 / (double)(var18 - var17);
+        var25Lifetime1 = (double)(var20 - var19) * var23Lifetime1;
+        var27Lifetime1 = (double)(var22 - var21) * var23Lifetime1;
+        var29Lifetime1 = (var63[2] - var62[2]) * var23Lifetime1;
+        var31Lifetime1 = (double)var19;
+        var33 = (double)var21;
+        var35 = var62[2];
+        var37 = (double)param6 * var35;
+        var39 = ((double)param7 * var63[2] - (double)param6 * var62[2]) / (double)(var18 - var17);
+        if (var17 > var18) {
+          var41 = var17;
+          var17 = var18;
+          var18 = var41;
+          var25Lifetime1 = -var25Lifetime1;
+          var27Lifetime1 = -var27Lifetime1;
+          var29Lifetime1 = -var29Lifetime1;
+          var39 = -var39;
+          var31Lifetime1 = (double)var20;
+          var33 = (double)var22;
+          var35 = var63[2];
+          var37 = (double)param7 * var35;
         }
-        L5: {
-          if (var17 >= 0) {
-            break L5;
-          } else {
-            var31 = var31 - (double)var17 * var25;
-            var33 = var33 - (double)var17 * var27;
-            var35 = var35 - (double)var17 * var29;
-            var37 = var37 - (double)var17 * var39;
-            var17 = 0;
-            break L5;
-          }
+        if (var17 < 0) {
+          var31Lifetime1 = var31Lifetime1 - (double)var17 * var25Lifetime1;
+          var33 = var33 - (double)var17 * var27Lifetime1;
+          var35 = var35 - (double)var17 * var29Lifetime1;
+          var37 = var37 - (double)var17 * var39;
+          var17 = 0;
         }
-        L6: {
-          if (var18 <= df.field_e - 1) {
-            break L6;
-          } else {
-            var18 = df.field_e - 1;
-            break L6;
-          }
+        if (var18 > df.field_e - 1) {
+          var18 = df.field_e - 1;
         }
         if (!param10) {
-          var41 = var17;
-          L7: while (true) {
-            if (var41 > var18) {
-              return;
-            } else {
-              si.b(var41, (int)var31, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
-              var31 = var31 + var25;
-              var33 = var33 + var27;
-              var35 = var35 + var29;
-              var37 = var37 + var39;
-              var41++;
-              continue L7;
-            }
+          for (var41Lifetime1 = var17; var41Lifetime1 <= var18; var41Lifetime1++) {
+            si.b(var41Lifetime1, (int)var31Lifetime1, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
+            var31Lifetime1 = var31Lifetime1 + var25Lifetime1;
+            var33 = var33 + var27Lifetime1;
+            var35 = var35 + var29Lifetime1;
+            var37 = var37 + var39;
           }
-        } else {
-          var41_double = var31;
-          var43 = var33;
-          var45 = var35;
-          var47 = var37;
-          var49 = var17;
-          L8: while (true) {
-            if (var49 > var18) {
-              var31 = var41_double;
-              var33 = var43;
-              var35 = var45;
-              var37 = var47;
-              var49 = var17;
-              L9: while (true) {
-                if (var49 > var18) {
-                  return;
-                } else {
-                  si.a(var49, (int)var31, (int)var33, param5, (int)(var37 / var35), param8, param9);
-                  var31 = var31 + var25;
-                  var33 = var33 + var27;
-                  var35 = var35 + var29;
-                  var37 = var37 + var39;
-                  var49++;
-                  continue L9;
-                }
-              }
-            } else {
-              si.b(var49, (int)var31, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
-              var31 = var31 + var25;
-              var33 = var33 + var27;
-              var35 = var35 + var29;
-              var37 = var37 + var39;
-              var49++;
-              continue L8;
-            }
-          }
+          return;
         }
+        var41_double = var31Lifetime1;
+        var43 = var33;
+        var45 = var35;
+        var47 = var37;
+        for (var49 = var17; var49 <= var18; var49++) {
+          si.b(var49, (int)var31Lifetime1, (int)var33, param5, (int)(var37 / var35) >> 16, param8, param9);
+          var31Lifetime1 = var31Lifetime1 + var25Lifetime1;
+          var33 = var33 + var27Lifetime1;
+          var35 = var35 + var29Lifetime1;
+          var37 = var37 + var39;
+        }
+        var31Lifetime2 = var41_double;
+        var33Lifetime1 = var43;
+        var35Lifetime1 = var45;
+        var37Lifetime1 = var47;
+        for (var49Lifetime1 = var17; var49Lifetime1 <= var18; var49Lifetime1++) {
+          si.a(var49Lifetime1, (int)var31Lifetime2, (int)var33Lifetime1, param5, (int)(var37Lifetime1 / var35Lifetime1), param8, param9);
+          var31Lifetime2 = var31Lifetime2 + var25Lifetime1;
+          var33Lifetime1 = var33Lifetime1 + var27Lifetime1;
+          var35Lifetime1 = var35Lifetime1 + var29Lifetime1;
+          var37Lifetime1 = var37Lifetime1 + var39;
+        }
+        return;
     }
 
     final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, int[] param5, int param6, int param7) {
@@ -426,95 +345,67 @@ final class si {
         int var18;
         int var19;
         int var20;
-        if (param6 >= 4) {
-          L0: {
-            L1: {
-              var33 = new double[3];
-              si.a(param0, param1, param2, -param3, -param4, var33);
-              var35 = new double[3];
-              var34 = new double[3];
-              si.a(param0, param1, param2, param3, -param4, var34);
-              var36 = new double[3];
-              si.c(param0, var33);
-              si.c(param0, var34);
-              var14 = 0;
-              if (var33[2] < 0.5) {
-                break L1;
-              } else {
-                if (var34[2] >= 0.5) {
-                  si.a(param0, param1, param2, -param3, param4, var35);
-                  si.a(param0, param1, param2, param3, param4, var36);
-                  si.a(param0, param1, param2, -param3, -param4, var33);
-                  si.a(param0, param1, param2, param3, -param4, var34);
-                  si.b(param0, var33);
-                  si.b(param0, var34);
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (var33[2] >= 0.5) {
-                break L2;
-              } else {
-                if (var34[2] >= 0.5) {
-                  break L2;
-                } else {
-                  return;
-                }
-              }
-            }
-            L3: {
-              var15_double = 0.5 - param0[9] * (param1[0] - param0[0]) + param0[10] * (param1[1] - param0[1]) + param0[11] * (param1[2] - param0[2]);
-              var15_double = var15_double / (param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2]);
-              var17_double = -param3;
-              var19_double = param3;
-              if (var33[2] >= 0.5) {
-                var19_double = var15_double;
-                var14 = 2;
-                break L3;
-              } else {
-                var17_double = var15_double;
-                var14 = 1;
-                break L3;
-              }
-            }
-            si.a(param0, param1, param2, var17_double, -param4, var33);
-            si.a(param0, param1, param2, var17_double, param4, var35);
-            si.a(param0, param1, param2, var19_double, -param4, var34);
-            si.a(param0, param1, param2, var19_double, param4, var36);
-            si.b(param0, var33);
-            si.b(param0, var34);
-            break L0;
-          }
-          L4: {
-            si.b(param0, var35);
-            si.b(param0, var36);
-            var15 = (int)var33[0];
-            var16 = (int)var34[0];
-            var17 = (int)var33[1];
-            var18 = (int)var34[1];
-            var19 = (int)(var35[1] - var33[1]);
-            var20 = (int)(var36[1] - var34[1]);
-            rk.a(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
-            if (var14 == 1) {
-              break L4;
-            } else {
-              rk.a(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
-              break L4;
-            }
-          }
-          rk.a(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
-          if (var14 == 2) {
-            return;
-          } else {
-            rk.a(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
-            return;
-          }
-        } else {
+        if (param6 < 4) {
           return;
         }
+        var33 = new double[3];
+        si.a(param0, param1, param2, -param3, -param4, var33);
+        var35 = new double[3];
+        var34 = new double[3];
+        si.a(param0, param1, param2, param3, -param4, var34);
+        var36 = new double[3];
+        si.c(param0, var33);
+        si.c(param0, var34);
+        var14 = 0;
+        if (!(var33[2] < 0.5) &&
+          !(var34[2] < 0.5)) {
+          si.a(param0, param1, param2, -param3, param4, var35);
+          si.a(param0, param1, param2, param3, param4, var36);
+          si.a(param0, param1, param2, -param3, -param4, var33);
+          si.a(param0, param1, param2, param3, -param4, var34);
+          si.b(param0, var33);
+          si.b(param0, var34);
+        } else {
+          if (var33[2] < 0.5 &&
+            var34[2] < 0.5) {
+            return;
+          }
+          var15_double = 0.5 - param0[9] * (param1[0] - param0[0]) + param0[10] * (param1[1] - param0[1]) + param0[11] * (param1[2] - param0[2]);
+          var15_double = var15_double / (param0[9] * param2[0] + param0[10] * param2[1] + param0[11] * param2[2]);
+          var17_double = -param3;
+          var19_double = param3;
+          if (!(var33[2] < 0.5)) {
+            var19_double = var15_double;
+            var14 = 2;
+          } else {
+            var17_double = var15_double;
+            var14 = 1;
+          }
+          si.a(param0, param1, param2, var17_double, -param4, var33);
+          si.a(param0, param1, param2, var17_double, param4, var35);
+          si.a(param0, param1, param2, var19_double, -param4, var34);
+          si.a(param0, param1, param2, var19_double, param4, var36);
+          si.b(param0, var33);
+          si.b(param0, var34);
+        }
+        si.b(param0, var35);
+        si.b(param0, var36);
+        var15 = (int)var33[0];
+        var16 = (int)var34[0];
+        var17 = (int)var33[1];
+        var18 = (int)var34[1];
+        var19 = (int)(var35[1] - var33[1]);
+        var20 = (int)(var36[1] - var34[1]);
+        rk.a(var15, var17, var16, var18, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        if (var14 != 1) {
+          rk.a(var15, var17, var15, var17 + var19, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        }
+        rk.a(var15, var17 + var19, var16, var18 + var20, (int)((double)(param6 << 7) * var33[2]), param7, param5);
+        if (var14 == 2) {
+          return;
+        }
+        rk.a(var16, var18, var16, var18 + var20, (int)((double)(param6 << 7) * var34[2]), param7, param5);
+        return;
     }
 
     final static int a(int param0) {
@@ -532,110 +423,55 @@ final class si {
         int var9;
         int var10;
         int var11;
-        L0: {
-          var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
-          var2 = (float)((param0 & 65280) >> 8) / 255.0f;
-          var3 = (float)(param0 & 255) / 255.0f;
-          if (var1 <= var2) {
-            if (var2 <= var3) {
-              stackIn_7_0 = var3;
-              break L0;
+        var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
+        var2 = (float)((param0 & 65280) >> 8) / 255.0f;
+        var3 = (float)(param0 & 255) / 255.0f;
+        if (!(var1 > var2)) {
+          stackIn_7_0 = (!(var2 > var3)) ? var3 : var2;
+        } else {
+          stackIn_7_0 = (!(var1 > var3)) ? var3 : var1;
+        }
+        var4 = stackIn_7_0;
+        if (!(var1 < var2)) {
+          stackIn_14_0 = (!(var2 < var3)) ? var3 : var2;
+        } else {
+          stackIn_14_0 = (!(var1 < var3)) ? var3 : var1;
+        }
+        var5 = stackIn_14_0;
+        if (var4 != var5) {
+          if (var4 != var1) {
+            if (var4 != var2) {
+              var6 = (var1 - var2) / (var4 - var5) + 4.0f;
             } else {
-              stackIn_7_0 = var2;
-              break L0;
+              var6 = (var3 - var1) / (var4 - var5) + 2.0f;
             }
           } else {
-            if (var1 <= var3) {
-              stackIn_7_0 = var3;
-              break L0;
-            } else {
-              stackIn_7_0 = var1;
-              break L0;
-            }
+            var6 = (var2 - var3) / (var4 - var5);
           }
+        } else {
+          var6 = 0.0f;
         }
-        L1: {
-          var4 = stackIn_7_0;
-          if (var1 >= var2) {
-            if (var2 >= var3) {
-              stackIn_14_0 = var3;
-              break L1;
-            } else {
-              stackIn_14_0 = var2;
-              break L1;
-            }
+        for (var6 = var6 / 6.0f; var6 < 0.0f; var6 = var6 + 1.0f) {
+        }
+        while (var6 > 1.0f) {
+          var6 = var6 - 1.0f;
+        }
+        var8 = (var4 + var5) / 2.0f;
+        if (var8 != 0.0f &&
+          var4 != var5) {
+          if (!(var8 < 0.5f)) {
+            stackIn_32_0 = (var4 - var5) / (2.0f - 2.0f * var8);
           } else {
-            if (var1 >= var3) {
-              stackIn_14_0 = var3;
-              break L1;
-            } else {
-              stackIn_14_0 = var1;
-              break L1;
-            }
+            stackIn_32_0 = (var4 - var5) / (2.0f * var8);
           }
+        } else {
+          stackIn_32_0 = 0.0f;
         }
-        L2: {
-          var5 = stackIn_14_0;
-          if (var4 != var5) {
-            if (var4 != var1) {
-              if (var4 != var2) {
-                var6 = (var1 - var2) / (var4 - var5) + 4.0f;
-                break L2;
-              } else {
-                var6 = (var3 - var1) / (var4 - var5) + 2.0f;
-                break L2;
-              }
-            } else {
-              var6 = (var2 - var3) / (var4 - var5);
-              break L2;
-            }
-          } else {
-            var6 = 0.0f;
-            break L2;
-          }
-        }
-        var6 = var6 / 6.0f;
-        L3: while (true) {
-          if (var6 >= 0.0f) {
-            L4: while (true) {
-              if (var6 <= 1.0f) {
-                L5: {
-                  L6: {
-                    var8 = (var4 + var5) / 2.0f;
-                    if (var8 == 0.0f) {
-                      break L6;
-                    } else {
-                      if (var4 != var5) {
-                        if (var8 >= 0.5f) {
-                          stackIn_32_0 = (var4 - var5) / (2.0f - 2.0f * var8);
-                          break L5;
-                        } else {
-                          stackIn_32_0 = (var4 - var5) / (2.0f * var8);
-                          break L5;
-                        }
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  stackIn_32_0 = 0.0f;
-                  break L5;
-                }
-                var7 = stackIn_32_0;
-                var9 = (int)(var6 * 63.0f + 0.5f);
-                var10 = (int)(var7 * 7.0f + 0.5f);
-                var11 = (int)(var8 * 127.0f + 0.5f);
-                return var9 << 10 | var10 << 7 | var11;
-              } else {
-                var6 = var6 - 1.0f;
-                continue L4;
-              }
-            }
-          } else {
-            var6 = var6 + 1.0f;
-            continue L3;
-          }
-        }
+        var7 = stackIn_32_0;
+        var9 = (int)(var6 * 63.0f + 0.5f);
+        var10 = (int)(var7 * 7.0f + 0.5f);
+        var11 = (int)(var8 * 127.0f + 0.5f);
+        return var9 << 10 | var10 << 7 | var11;
     }
 
     private final static void b(double[] param0, double[] param1) {
@@ -656,15 +492,15 @@ final class si {
         int var6 = 0;
         int var7 = 0;
         for (var4 = 0; var4 < 3; var4++) {
-            param1[var4] = param1[var4] - (param0[0] << 4);
-            param2[var4] = param2[var4] - (param0[1] << 4);
-            param3[var4] = param3[var4] - (param0[2] << 4);
-            var5 = param0[3] * param1[var4] + param0[4] * param2[var4] + param0[5] * param3[var4];
-            var6 = param0[6] * param1[var4] + param0[7] * param2[var4] + param0[8] * param3[var4];
-            var7 = param0[9] * param1[var4] + param0[10] * param2[var4] + param0[11] * param3[var4];
-            param1[var4] = var5 >> 20;
-            param2[var4] = var6 >> 20;
-            param3[var4] = var7 >> 20;
+          param1[var4] = param1[var4] - (param0[0] << 4);
+          param2[var4] = param2[var4] - (param0[1] << 4);
+          param3[var4] = param3[var4] - (param0[2] << 4);
+          var5 = param0[3] * param1[var4] + param0[4] * param2[var4] + param0[5] * param3[var4];
+          var6 = param0[6] * param1[var4] + param0[7] * param2[var4] + param0[8] * param3[var4];
+          var7 = param0[9] * param1[var4] + param0[10] * param2[var4] + param0[11] * param3[var4];
+          param1[var4] = var5 >> 20;
+          param2[var4] = var6 >> 20;
+          param3[var4] = var7 >> 20;
         }
     }
 
@@ -674,7 +510,7 @@ final class si {
         double var5 = param0[2];
         double var7 = var1 * var1 + var3 * var3 + var5 * var5;
         if (Math.abs(var7 - 1.0) < 1e-16) {
-            return;
+          return;
         }
         var7 = Math.sqrt(var7);
         param0[0] = var1 / var7;

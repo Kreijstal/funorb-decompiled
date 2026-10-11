@@ -18,10 +18,10 @@ final class am extends qr {
         field_zb = null;
         field_Ab = null;
         if (param0 != 23880) {
-            bi var2 = (bi) null;
-            am.a(-49, 17, (bi) null, -112, 60, 124, (byte) -54);
-            field_xb = null;
-            return;
+          bi var2 = (bi) null;
+          am.a(-49, 17, (bi) null, -112, 60, 124, (byte) -54);
+          field_xb = null;
+          return;
         }
         field_xb = null;
     }
@@ -33,29 +33,29 @@ final class am extends qr {
     am(long param0, qr param1, qr param2, ur param3, qr param4, String param5, String param6) {
         super(param0, param1);
         try {
-            this.field_Eb = new qr(0L, (qr) null);
-            this.field_Db = new ub(0L, this.field_Eb, param2, param3);
-            this.field_Fb = new qr(0L, param4);
-            this.field_yb = new qr(0L, param4);
-            this.field_Fb.field_z = param5;
-            this.field_yb.field_z = param6;
-            this.a(4, this.field_Db);
-            this.a(4, this.field_Fb);
-            this.a(4, this.field_yb);
+          this.field_Eb = new qr(0L, (qr) null);
+          this.field_Db = new ub(0L, this.field_Eb, param2, param3);
+          this.field_Fb = new qr(0L, param4);
+          this.field_yb = new qr(0L, param4);
+          this.field_Fb.field_z = param5;
+          this.field_yb.field_z = param6;
+          this.a(4, this.field_Db);
+          this.a(4, this.field_Fb);
+          this.a(4, this.field_yb);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "am.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "am.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = (this.field_K + param0) / 2;
         int var6 = this.field_mb - param3;
-        this.field_Db.a(this.field_K, 0, 0, param0, param2 ^ -126, var6 + -param0, param1);
+        this.field_Db.a(this.field_K, 0, 0, param0, param2 ^ -126, var6 - param0, param1);
         this.field_Fb.field_mb = param3;
         this.field_Fb.field_hb = param2;
         this.field_Fb.field_K = -param0 + var5;
         this.field_Fb.field_db = var6;
-        this.field_yb.field_K = this.field_K + -var5;
+        this.field_yb.field_K = this.field_K - var5;
         this.field_yb.field_hb = var5;
         this.field_yb.field_db = var6;
         this.field_yb.field_mb = param3;
@@ -64,12 +64,12 @@ final class am extends qr {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {
         this.field_db = param1;
         if (param6 < 78) {
-            this.field_yb = (qr) null;
-            this.field_mb = param0;
-            this.field_hb = param7;
-            this.field_K = param5;
-            this.a(param3, param2, 0, param4);
-            return;
+          this.field_yb = (qr) null;
+          this.field_mb = param0;
+          this.field_hb = param7;
+          this.field_K = param5;
+          this.a(param3, param2, 0, param4);
+          return;
         }
         this.field_mb = param0;
         this.field_hb = param7;
@@ -78,48 +78,31 @@ final class am extends qr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var9 = 0;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            var6_int = param3 / 10 + 1;
-            var7 = 96 / var6_int;
-            if (param2 < -14) {
-              jq.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
-              var8 = 96;
-              var9 = 1;
-              L1: while (true) {
-                if (var9 >= var6_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var8 = var8 - var7;
-                  jq.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
-                  var9++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var6_int = param3 / 10 + 1;
+          var7 = 96 / var6_int;
+          if (param2 >= -14) {
+            return;
           }
+          jq.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
+          var8 = 96;
+          for (var9 = 1; var9 < var6_int; var9++) {
+            var8 = var8 - var7;
+            jq.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           throw r.a((Throwable) ((Object) var6), "am.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -132,54 +115,38 @@ final class am extends qr {
         int var10 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            param1 = param1 - param2.field_x;
-            param3 = param3 - param2.field_t;
-            var8 = 103 / ((param6 - 72) / 52);
-            var7_int = param1 * param2.field_z - -param3;
-            var9 = gf.field_b * param5 + param0;
-            L1: while (true) {
-              param4--;
-              if (param4 < 0) {
-                break L0;
-              } else {
-                incrementValue$4 = var9;
-                var9++;
-                incrementValue$5 = var7_int;
-                var7_int++;
-                gf.field_h[incrementValue$4] = param2.field_B[incrementValue$5];
-                continue L1;
-              }
+          param1 = param1 - param2.field_x;
+          param3 = param3 - param2.field_t;
+          var8 = 103 / ((param6 - 72) / 52);
+          var7_int = param1 * param2.field_z + param3;
+          var9 = gf.field_b * param5 + param0;
+          while (true) {
+            param4--;
+            if (param4 < 0) {
+              return;
             }
+            incrementValue$4 = var9;
+            var9++;
+            incrementValue$5 = var7_int;
+            var7_int++;
+            gf.field_h[incrementValue$4] = param2.field_B[incrementValue$5];
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var7 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var7);
-
-            stackIn_7_1 = new StringBuilder().append("am.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("am.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw r.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

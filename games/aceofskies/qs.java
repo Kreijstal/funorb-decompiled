@@ -11,164 +11,84 @@ final class qs {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
-        RuntimeException stackIn_44_0 = null;
-        StringBuilder stackIn_44_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              ok.field_o = ok.field_o + 1;
-              if (ik.field_k != -1) {
-                break L1;
-              } else {
-                if (0 == (rs.field_v ^ -1)) {
-                  ik.field_k = ic.field_b;
-                  rs.field_v = cf.field_g;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              L3: {
-                if (param1 == null) {
-                  if (qj.field_s == null) {
-                    break L3;
-                  } else {
-                    break L2;
-                  }
-                } else {
-                  if (param1.equals(qj.field_s)) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (!ht.field_g) {
-                  if (ok.field_o >= jp.field_b) {
-                    if (ok.field_o < jp.field_b - -ct.field_B) {
-                      stackIn_17_0 = 1;
-                      break L4;
-                    } else {
-                      stackIn_17_0 = 0;
-                      break L4;
-                    }
-                  } else {
-                    stackIn_17_0 = 0;
-                    break L4;
-                  }
-                } else {
-                  stackIn_17_0 = 0;
-                  break L4;
-                }
-              }
-              L5: {
-                var2_int = stackIn_17_0;
-                if (param1 == null) {
-                  ok.field_o = 0;
-                  break L5;
-                } else {
-                  L6: {
-                    if (ht.field_g) {
-                      break L6;
-                    } else {
-                      if (var2_int != 0) {
-                        break L6;
-                      } else {
-                        ok.field_o = 0;
-                        break L5;
-                      }
-                    }
-                  }
-                  ok.field_o = jp.field_b;
-                  break L5;
-                }
-              }
-              we.field_c = ik.field_k;
-              nl.field_o = rs.field_v;
-              if (param1 != null) {
-                ht.field_g = false;
-                break L2;
-              } else {
-                if (var2_int != 0) {
-                  ht.field_g = true;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L7: {
-              if (ht.field_g) {
-                break L7;
-              } else {
-                if (ok.field_o >= jp.field_b) {
-                  break L7;
-                } else {
-                  if (!uu.field_e) {
-                    break L7;
-                  } else {
-                    we.field_c = ik.field_k;
-                    nl.field_o = rs.field_v;
-                    ok.field_o = 0;
-                    break L7;
-                  }
-                }
-              }
-            }
-            L8: {
-              qj.field_s = param1;
-              if (param0 == -6939) {
-                break L8;
-              } else {
-                field_a = (Calendar) null;
-                break L8;
-              }
-            }
-            L9: {
-              if (!ht.field_g) {
-                break L9;
-              } else {
-                if (wm.field_j == ok.field_o) {
-                  ok.field_o = 0;
-                  ht.field_g = false;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-            }
-            ik.field_k = -1;
-            rs.field_v = -1;
-            break L0;
+          ok.field_o = ok.field_o + 1;
+          if (ik.field_k == -1 &&
+            rs.field_v == -1) {
+            ik.field_k = ic.field_b;
+            rs.field_v = cf.field_g;
           }
+          boolean decompiledFrameRemainder0 = true;
+          if (param1 == null) {
+            decompiledFrameRemainder0 = (qj.field_s == null);
+          } else {
+            decompiledFrameRemainder0 = !(param1.equals(qj.field_s));
+          }
+          if (decompiledFrameRemainder0) {
+            if (!ht.field_g) {
+              if (ok.field_o >= jp.field_b) {
+                stackIn_17_0 = (ok.field_o < jp.field_b + ct.field_B) ? 1 : 0;
+              } else {
+                stackIn_17_0 = 0;
+              }
+            } else {
+              stackIn_17_0 = 0;
+            }
+            var2_int = stackIn_17_0;
+            if (param1 == null) {
+              ok.field_o = 0;
+            } else {
+              if (!ht.field_g &&
+                var2_int == 0) {
+                ok.field_o = 0;
+              } else {
+                ok.field_o = jp.field_b;
+              }
+            }
+            we.field_c = ik.field_k;
+            nl.field_o = rs.field_v;
+            if (param1 != null) {
+              ht.field_g = false;
+            } else {
+              if (var2_int != 0) {
+                ht.field_g = true;
+              }
+            }
+          }
+          if (!ht.field_g &&
+            ok.field_o < jp.field_b &&
+            uu.field_e) {
+            we.field_c = ik.field_k;
+            nl.field_o = rs.field_v;
+            ok.field_o = 0;
+          }
+          qj.field_s = param1;
+          if (param0 != -6939) {
+            field_a = (Calendar) null;
+          }
+          if (ht.field_g &&
+            wm.field_j == ok.field_o) {
+            ok.field_o = 0;
+            ht.field_g = false;
+          }
+          ik.field_k = -1;
+          rs.field_v = -1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var2 = decompiledCaughtException;
-            stackIn_43_0 = (RuntimeException) (var2);
-
-            stackIn_43_1 = new StringBuilder().append("qs.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackIn_44_2 = "null";
-              break L10;
-            } else {
-              stackIn_44_0 = (RuntimeException) ((Object) stackIn_43_0);
-              stackIn_44_1 = (StringBuilder) ((Object) stackIn_43_1);
-              stackIn_44_2 = "{...}";
-              break L10;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_43_0 = var2;
+          stackIn_43_1 = new StringBuilder().append("qs.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_44_2 = "null";
+          } else {
+            stackIn_44_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_44_0), stackIn_44_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 
@@ -180,7 +100,7 @@ final class qs {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 10) {
-            field_b = 125;
+          field_b = 125;
         }
     }
 

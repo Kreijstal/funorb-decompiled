@@ -13,7 +13,7 @@ public class e {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return (File) null;
+          return (File) null;
         }
         return e.a(param1, field_d, -8204, field_c);
     }
@@ -24,38 +24,20 @@ public class e {
         field_d = param1;
         field_c = param0;
         try {
-          L0: {
-            L1: {
-              field_e = System.getProperty("user.home");
-              if (field_e == null) {
-                break L1;
-              } else {
-                field_e = field_e + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_e = System.getProperty("user.home");
+          if (field_e != null) {
+            field_e = field_e + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_b = true;
         if (param2 != -19960) {
           return;
-        } else {
-          L3: {
-            if (null != field_e) {
-              break L3;
-            } else {
-              field_e = "~/";
-              break L3;
-            }
-          }
-          return;
+        }
+        if (null == field_e) {
+          field_e = "~/";
         }
     }
 

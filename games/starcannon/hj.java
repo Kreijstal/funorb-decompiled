@@ -11,20 +11,20 @@ final class hj {
 
     final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, String param7, int param8) {
         try {
-            md.field_b = param7;
-            int var9_int = 22 / ((param4 - -10) / 56);
-            wj.field_b = param1;
-            kc.field_M = param6;
-            va.field_s = param8;
-            ac.field_e = param5;
-            ld.field_fb = param0;
-            ij.field_f = param2;
-            ob.field_b = param3;
-            jh.field_b = (eh) ((Object) new vh());
-            bc.field_j = new ef(param2);
-            bl.field_b = new jc(jh.field_b, bc.field_j);
+          md.field_b = param7;
+          int var9_int = 22 / ((param4 + 10) / 56);
+          wj.field_b = param1;
+          kc.field_M = param6;
+          va.field_s = param8;
+          ac.field_e = param5;
+          ld.field_fb = param0;
+          ij.field_f = param2;
+          ob.field_b = param3;
+          jh.field_b = (eh) ((Object) new vh());
+          bc.field_j = new ef(param2);
+          bl.field_b = new jc(jh.field_b, bc.field_j);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -32,7 +32,7 @@ final class hj {
         field_c = null;
         field_b = null;
         if (param0 >= -23) {
-            field_d = -20;
+          field_d = -20;
         }
     }
 

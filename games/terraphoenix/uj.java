@@ -18,10 +18,10 @@ abstract class uj {
     public static void b(byte param0) {
         field_e = null;
         if (param0 >= -47) {
-            uj.b((byte) -117);
-            field_b = null;
-            field_a = null;
-            return;
+          uj.b((byte) -117);
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

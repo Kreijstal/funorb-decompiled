@@ -12,7 +12,7 @@ final class fk {
     public static void a(int param0) {
         field_d = (byte[][]) null;
         if (param0 != 14934) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

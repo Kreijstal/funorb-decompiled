@@ -17,8 +17,8 @@ final class sf implements Iterator {
     }
 
     public final void remove() {
-        if (!(null != this.field_f)) {
-            throw new IllegalStateException();
+        if (null == this.field_f) {
+          throw new IllegalStateException();
         }
         this.field_f.e(0);
         this.field_f = null;
@@ -29,17 +29,17 @@ final class sf implements Iterator {
         field_c = null;
         field_a = null;
         if (param0 > -97) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 
     public final Object next() {
         Object var1 = this.field_g;
         if (this.field_e.field_e != var1) {
-            this.field_g = ((gb) (var1)).field_o;
+          this.field_g = ((gb) (var1)).field_o;
         } else {
-            var1 = null;
-            this.field_g = null;
+          var1 = null;
+          this.field_g = null;
         }
         this.field_f = (gb) (var1);
         return var1;
@@ -48,21 +48,20 @@ final class sf implements Iterator {
     sf(rk param0) {
         this.field_f = null;
         try {
-            this.field_e = param0;
-            this.field_f = null;
-            this.field_g = this.field_e.field_e.field_o;
+          this.field_e = param0;
+          this.field_f = null;
+          this.field_g = this.field_e.field_e.field_o;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static gd a(int param0, long param1) {
-        if (param0 != -18701) {
-          sf.a((byte) -94);
-          return (gd) ((Object) dg.field_g.a(param1, param0 ^ -18702));
-        } else {
-          return (gd) ((Object) dg.field_g.a(param1, param0 ^ -18702));
+        if (param0 == -18701) {
+          return (gd) (dg.field_g.a(param1, param0 ^ -18702));
         }
+        sf.a((byte) -94);
+        return (gd) (dg.field_g.a(param1, param0 ^ -18702));
     }
 
     static {

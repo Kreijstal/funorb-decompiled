@@ -12,7 +12,7 @@ final class kn extends i {
     public static void g(int param0) {
         field_J = null;
         if (param0 != 2) {
-            field_H = (String) null;
+          field_H = (String) null;
         }
         field_F = null;
         field_G = null;
@@ -26,60 +26,63 @@ final class kn extends i {
         this.field_K = new hd();
         this.field_I = new dn[ok.field_a.a(false)];
         int var1 = 0;
-        oi var2 = (oi) ((Object) ok.field_a.g(24009));
+        oi var2 = (oi) (ok.field_a.g(24009));
         while (var2 != null) {
-            var3 = new dn(var2.field_j);
-            var3.field_J = var3.field_mb * (var1 / 5);
-            var3.field_s = var1 % 5 * var3.field_q;
-            this.field_K.a((byte) -107, (hd) (var3));
-            incrementValue$0 = var1;
-            var1++;
-            this.field_I[incrementValue$0] = var3;
-            var2 = (oi) ((Object) ok.field_a.c(33));
+          var3 = new dn(var2.field_j);
+          var3.field_J = var3.field_mb * (var1 / 5);
+          var3.field_s = var1 % 5 * var3.field_q;
+          this.field_K.a((byte) -107, (hd) (var3));
+          incrementValue$0 = var1;
+          var1++;
+          this.field_I[incrementValue$0] = var3;
+          var2 = (oi) (ok.field_a.c(33));
         }
         this.field_K.a(true, 300, 100, 80, 200);
     }
 
     final int a(byte param0) {
         if (param0 < 75) {
-            return 97;
+          return 97;
         }
         return 320;
     }
 
     final int b(int param0) {
         if (param0 != -1379118556) {
-            this.field_I = (dn[]) null;
+          this.field_I = (dn[]) null;
         }
         return 470;
     }
 
     final static int a(int param0, int param1, boolean param2, int param3) {
         if (param1 <= 40) {
-            kn.a(-66, -60, false, 126);
+          kn.a(-66, -60, false, 126);
         }
-        if (param3 == 0 || (param3 ^ -1) == -2 || !param2) {
-            if (0 == param0) {
-                return 2;
-            }
-            if ((param0 ^ -1) == -2) {
-                return 1;
-            }
-            if (!(2 != param0)) {
-                return 3;
-            }
+        if (param3 == 0 ||
+          param3 == 1 ||
+          !param2) {
+          if (0 == param0) {
+            return 2;
+          }
+          if (param0 == 1) {
+            return 1;
+          }
+          if (2 == param0) {
+            return 3;
+          }
         }
-        if (!(param3 != 2)) {
-            return 4;
+        if (param3 == 2) {
+          return 4;
         }
         if (param3 != 3) {
-            return 0;
+          return 0;
         }
         return 6;
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var5;
+        int var5 = 0;
+        int var11 = 0;
         dn var6;
         int var12;
         dn[] var13;
@@ -87,64 +90,38 @@ final class kn extends i {
         int var8;
         int var9;
         int var10;
-        int var11;
         var12 = Kickabout.field_G;
         super.a((byte) -68, param1, param2);
         var13 = this.field_I;
-        var5 = 0;
-        L0: while (true) {
-          if (var13.length <= var5) {
-            L1: {
-              this.field_K.field_J = param2 + 70;
-              this.field_K.field_s = 245 + param1;
-              if (param0 < -11) {
-                break L1;
-              } else {
-                field_H = (String) null;
-                break L1;
-              }
-            }
-            this.field_K.a(79, false);
-            return;
-          } else {
-            var6 = var13[var5];
-            if (var6 != null) {
-              if (var6.field_gb) {
-                on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
-                on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
-                qe.field_i[iw.field_e[var6.field_Bb]].c(64 + param1, param2 - -70);
-                un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[iw.field_e[var6.field_Bb]].field_q >> 348142625) + (64 + param1), 205 + param2, 16777215, -1);
-                var7 = new String[16];
-                var8 = un.field_d.a(lw.field_a[var6.field_Bb], new int[]{240}, var7);
-                var9 = 0;
-                var10 = un.field_d.field_p + un.field_d.field_L;
-                var11 = 0;
-                L2: while (true) {
-                  if (var11 < var8) {
-                    un.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
-                    var9 = var9 + var10;
-                    var11++;
-                    continue L2;
-                  } else {
-                    var5++;
-                    continue L0;
-                  }
-                }
-              } else {
-                var5++;
-                continue L0;
-              }
-            } else {
-              var5++;
-              continue L0;
+        for (var5 = 0; var13.length > var5; var5++) {
+          var6 = var13[var5];
+          if (var6 != null &&
+            var6.field_gb) {
+            on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
+            on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
+            qe.field_i[iw.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
+            un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[iw.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
+            var7 = new String[16];
+            var8 = un.field_d.a(lw.field_a[var6.field_Bb], new int[]{240}, var7);
+            var9 = 0;
+            var10 = un.field_d.field_p + un.field_d.field_L;
+            for (var11 = 0; var11 < var8; var11++) {
+              un.field_d.a(var7[var11].toLowerCase(), -20 + param1, var9 + 162 + param2, 300, 100, 11184810, -1, 1, 1, 0);
+              var9 = var9 + var10;
             }
           }
         }
+        this.field_K.field_J = param2 + 70;
+        this.field_K.field_s = 245 + param1;
+        if (param0 >= -11) {
+          field_H = (String) null;
+        }
+        this.field_K.a(79, false);
     }
 
     final void a(int param0, boolean param1) {
         if (param0 != 3) {
-            field_H = (String) null;
+          field_H = (String) null;
         }
         this.field_K.b(0, param1);
     }
@@ -152,7 +129,7 @@ final class kn extends i {
     final void a(int param0, int param1) {
         super.a(82, param1);
         if (param0 < 60) {
-            this.a(-61, -29);
+          this.a(-61, -29);
         }
     }
 

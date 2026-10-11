@@ -20,9 +20,7 @@ final class kl extends bh {
     static String field_w;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          return;
-        } else {
+        if (param0) {
           field_B = null;
           field_r = null;
           field_x = null;
@@ -37,10 +35,10 @@ final class kl extends bh {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 11024) {
-            kl.a(-96, 40, 17);
-            u.field_e = param2;
-            sa.field_p = param1;
-            return;
+          kl.a(-96, 40, 17);
+          u.field_e = param2;
+          sa.field_p = param1;
+          return;
         }
         u.field_e = param2;
         sa.field_p = param1;

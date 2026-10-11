@@ -10,77 +10,41 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              if (di.field_O != null) {
-                L2: {
-                  L3: {
-                    hb.field_b = 0;
-                    var2_int = param0.getKeyCode();
-                    if (0 > var2_int) {
-                      break L3;
-                    } else {
-                      if (d.field_d.length > var2_int) {
-                        var2_int = d.field_d[var2_int] & -129;
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2_int = -1;
-                  break L2;
-                }
-                if ((cg.field_H ^ -1) > -1) {
-                  break L1;
-                } else {
-                  if (-1 < (var2_int ^ -1)) {
-                    break L1;
-                  } else {
-                    ib.field_b[cg.field_H] = var2_int ^ -1;
-                    cg.field_H = 127 & 1 + cg.field_H;
-                    if (dm.field_b == cg.field_H) {
-                      cg.field_H = -1;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-              } else {
-                break L1;
+          if (di.field_O != null) {
+            hb.field_b = 0;
+            var2_int = param0.getKeyCode();
+            if (0 <= var2_int &&
+              d.field_d.length > var2_int) {
+              var2_int = d.field_d[var2_int] & -129;
+            } else {
+              var2_int = -1;
+            }
+            if (cg.field_H >= 0 &&
+              var2_int >= 0) {
+              ib.field_b[cg.field_H] = ~var2_int;
+              cg.field_H = 127 & 1 + cg.field_H;
+              if (dm.field_b == cg.field_H) {
+                cg.field_H = -1;
               }
             }
-            param0.consume();
-            break L0;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("gi.keyReleased(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("gi.keyReleased(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -92,35 +56,20 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2_ref = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var4 = (hf) ((Object) kk.field_a.b(96));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param0 == 85) {
-                    break L2;
-                  } else {
-                    gi.a(-40, 0);
-                    break L2;
-                  }
-                }
-                var2 = ag.field_b.b(param0 + -8);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    ca.a(param1, 1);
-                    var2 = ag.field_b.b((byte) 56);
-                    continue L3;
-                  }
-                }
-              } else {
-                ag.a(var4, param1, param0 + -195);
-                var4 = (hf) ((Object) kk.field_a.b((byte) 56));
-                continue L1;
-              }
-            }
+          var4 = (hf) (kk.field_a.b(96));
+          while (var4 != null) {
+            ag.a(var4, param1, param0 - 195);
+            var4 = (hf) (kk.field_a.b((byte) 56));
           }
+          if (param0 != 85) {
+            gi.a(-40, 0);
+          }
+          var2 = ag.field_b.b(param0 - 8);
+          while (var2 != null) {
+            ca.a(param1, 1);
+            var2 = ag.field_b.b((byte) 56);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -131,18 +80,18 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            if (null != di.field_O) {
-                cg.field_H = -1;
-            }
+          if (null != di.field_O) {
+            cg.field_H = -1;
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "gi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "gi.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -153,22 +102,21 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-            if (null != di.field_O) {
-                var2_int = param0.getKeyChar();
-                if (0 != var2_int && var2_int != 65535) {
-                    if (!(!bn.a(93, (char) var2_int))) {
-                        var3 = 127 & 1 + qf.field_n;
-                        if (var3 != dn.field_w) {
-                            jk.field_ib[qf.field_n] = -1;
-                            hj.field_n[qf.field_n] = (char)var2_int;
-                            qf.field_n = var3;
-                        }
-                    }
-                }
+          if (null != di.field_O) {
+            var2_int = param0.getKeyChar();
+            if (0 != var2_int && var2_int != 65535 &&
+              bn.a(93, (char) var2_int)) {
+              var3 = 127 & 1 + qf.field_n;
+              if (var3 != dn.field_w) {
+                jk.field_ib[qf.field_n] = -1;
+                hj.field_n[qf.field_n] = (char)var2_int;
+                qf.field_n = var3;
+              }
             }
-            param0.consume();
+          }
+          param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "gi.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,114 +124,61 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
+        int var3Lifetime1;
         try {
-          L0: {
-            if (null != di.field_O) {
-              L1: {
-                L2: {
-                  hb.field_b = 0;
-                  var2_int = param0.getKeyCode();
-                  if ((var2_int ^ -1) > -1) {
-                    break L2;
-                  } else {
-                    if (d.field_d.length <= var2_int) {
-                      break L2;
-                    } else {
-                      var2_int = d.field_d[var2_int];
-                      if ((128 & var2_int) != 0) {
-                        var2_int = -1;
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                }
-                var2_int = -1;
-                break L1;
-              }
-              L3: {
-                if (0 > cg.field_H) {
-                  break L3;
-                } else {
-                  if (-1 < (var2_int ^ -1)) {
-                    break L3;
-                  } else {
-                    ib.field_b[cg.field_H] = var2_int;
-                    cg.field_H = 127 & cg.field_H - -1;
-                    if (cg.field_H != dm.field_b) {
-                      break L3;
-                    } else {
-                      cg.field_H = -1;
-                      break L3;
-                    }
-                  }
-                }
-              }
-              L4: {
-                if (0 <= var2_int) {
-                  var3 = qf.field_n - -1 & 127;
-                  if (var3 == dn.field_w) {
-                    break L4;
-                  } else {
-                    jk.field_ib[qf.field_n] = var2_int;
-                    hj.field_n[qf.field_n] = (char)0;
-                    qf.field_n = var3;
-                    break L4;
-                  }
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                var3 = param0.getModifiers();
-                if (0 != (10 & var3)) {
-                  break L5;
-                } else {
-                  if (var2_int == 85) {
-                    break L5;
-                  } else {
-                    if ((var2_int ^ -1) == -11) {
-                      break L5;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              param0.consume();
-              break L0;
-            } else {
-              return;
+          if (null == di.field_O) {
+            return;
+          }
+          hb.field_b = 0;
+          var2_int = param0.getKeyCode();
+          if (var2_int >= 0 &&
+            d.field_d.length > var2_int) {
+            var2_int = d.field_d[var2_int];
+            if ((128 & var2_int) != 0) {
+              var2_int = -1;
+            }
+          } else {
+            var2_int = -1;
+          }
+          if (0 <= cg.field_H &&
+            var2_int >= 0) {
+            ib.field_b[cg.field_H] = var2_int;
+            cg.field_H = 127 & cg.field_H + 1;
+            if (cg.field_H == dm.field_b) {
+              cg.field_H = -1;
             }
           }
+          if (0 <= var2_int) {
+            var3 = qf.field_n + 1 & 127;
+            if (var3 != dn.field_w) {
+              jk.field_ib[qf.field_n] = var2_int;
+              hj.field_n[qf.field_n] = (char)0;
+              qf.field_n = var3;
+            }
+          }
+          var3Lifetime1 = param0.getModifiers();
+          if (0 == (10 & var3Lifetime1) &&
+            var2_int != 85 &&
+            var2_int != 10) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("gi.keyPressed(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L6;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L6;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("gi.keyPressed(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

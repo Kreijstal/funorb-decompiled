@@ -13,22 +13,20 @@ final class am {
         field_e = null;
         field_c = null;
         field_a = null;
-        if (param0 != 2) {
-          am.a(5);
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 2) {
           field_f = null;
           field_d = null;
           return;
         }
+        am.a(5);
+        field_f = null;
+        field_d = null;
     }
 
     final static void b(int param0) {
-        int var1;
-        int var2;
-        var2 = SteelSentinels.field_G;
+        int var1 = 0;
+        int var2 = SteelSentinels.field_G;
+        int var1Lifetime1;
         mg.a(jk.field_j, 7411, 5);
         mg.a(bj.field_b, 7411, 6);
         mg.a(ji.field_d, 7411, 8);
@@ -36,106 +34,62 @@ final class am {
         mg.a(id.field_cc, 7411, 14);
         mg.a(ql.field_ac, 7411, 20);
         gd.field_sb = null;
-        if ((rd.field_b ^ -1) < -1) {
-          mg.a(bj.field_b, 7411, 6);
-          mg.a(ji.field_d, 7411, 8);
-          var1 = 111 / ((param0 - -35) / 35);
-          if (-1 > (rd.field_b ^ -1)) {
-            L0: {
-              mg.a(ra.field_c, 7411, 0);
-              mg.a(fa.field_c, 7411, 19);
-              if (nk.f((byte) -128)) {
-                ti.field_A[34] = oe.field_l;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            L1: {
-              if (!vi.l(13539)) {
-                mg.a(ul.field_c, 7411, 1);
-                mg.a(qi.field_f, 7411, 2);
-                mg.a(vb.field_b, 7411, 3);
-                mg.a(ri.field_a, 7411, 4);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return;
-          } else {
-            L2: {
-              mg.a(nc.field_h, 7411, 19);
-              if (nk.f((byte) -128)) {
-                ti.field_A[34] = oe.field_l;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (!vi.l(13539)) {
-                mg.a(ul.field_c, 7411, 1);
-                mg.a(qi.field_f, 7411, 2);
-                mg.a(vb.field_b, 7411, 3);
-                mg.a(ri.field_a, 7411, 4);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return;
-          }
-        } else {
+        if (rd.field_b <= 0) {
           mg.a(od.field_k, 7411, 6);
           mg.a(ug.field_H, 7411, 8);
-          var1 = 111 / ((param0 - -35) / 35);
-          if (-1 > (rd.field_b ^ -1)) {
-            L4: {
-              mg.a(ra.field_c, 7411, 0);
-              mg.a(fa.field_c, 7411, 19);
-              if (nk.f((byte) -128)) {
-                ti.field_A[34] = oe.field_l;
-                break L4;
-              } else {
-                break L4;
-              }
+          var1 = 111 / ((param0 + 35) / 35);
+          if (rd.field_b <= 0) {
+            mg.a(nc.field_h, 7411, 19);
+            if (nk.f((byte) -128)) {
+              ti.field_A[34] = oe.field_l;
             }
-            L5: {
-              if (!vi.l(13539)) {
-                mg.a(ul.field_c, 7411, 1);
-                mg.a(qi.field_f, 7411, 2);
-                mg.a(vb.field_b, 7411, 3);
-                mg.a(ri.field_a, 7411, 4);
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            return;
-          } else {
-            L6: {
-              mg.a(nc.field_h, 7411, 19);
-              if (nk.f((byte) -128)) {
-                ti.field_A[34] = oe.field_l;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              if (!vi.l(13539)) {
-                mg.a(ul.field_c, 7411, 1);
-                mg.a(qi.field_f, 7411, 2);
-                mg.a(vb.field_b, 7411, 3);
-                mg.a(ri.field_a, 7411, 4);
-                break L7;
-              } else {
-                break L7;
-              }
+            if (!vi.l(13539)) {
+              mg.a(ul.field_c, 7411, 1);
+              mg.a(qi.field_f, 7411, 2);
+              mg.a(vb.field_b, 7411, 3);
+              mg.a(ri.field_a, 7411, 4);
             }
             return;
           }
+          mg.a(ra.field_c, 7411, 0);
+          mg.a(fa.field_c, 7411, 19);
+          if (nk.f((byte) -128)) {
+            ti.field_A[34] = oe.field_l;
+          }
+          if (!vi.l(13539)) {
+            mg.a(ul.field_c, 7411, 1);
+            mg.a(qi.field_f, 7411, 2);
+            mg.a(vb.field_b, 7411, 3);
+            mg.a(ri.field_a, 7411, 4);
+          }
+          return;
+        }
+        mg.a(bj.field_b, 7411, 6);
+        mg.a(ji.field_d, 7411, 8);
+        var1Lifetime1 = 111 / ((param0 + 35) / 35);
+        if (rd.field_b <= 0) {
+          mg.a(nc.field_h, 7411, 19);
+          if (nk.f((byte) -128)) {
+            ti.field_A[34] = oe.field_l;
+          }
+          if (!vi.l(13539)) {
+            mg.a(ul.field_c, 7411, 1);
+            mg.a(qi.field_f, 7411, 2);
+            mg.a(vb.field_b, 7411, 3);
+            mg.a(ri.field_a, 7411, 4);
+          }
+          return;
+        }
+        mg.a(ra.field_c, 7411, 0);
+        mg.a(fa.field_c, 7411, 19);
+        if (nk.f((byte) -128)) {
+          ti.field_A[34] = oe.field_l;
+        }
+        if (!vi.l(13539)) {
+          mg.a(ul.field_c, 7411, 1);
+          mg.a(qi.field_f, 7411, 2);
+          mg.a(vb.field_b, 7411, 3);
+          mg.a(ri.field_a, 7411, 4);
         }
     }
 

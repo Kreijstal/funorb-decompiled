@@ -14,9 +14,9 @@ final class fl extends ma {
         field_m = null;
         field_q = null;
         if (param0 != 59) {
-            fl.a(-121);
-            field_n = null;
-            return;
+          fl.a(-121);
+          field_n = null;
+          return;
         }
         field_n = null;
     }
@@ -29,15 +29,7 @@ final class fl extends ma {
         el.field_H[520] = 59;
         el.field_H[91] = 42;
         el.field_H[93] = 43;
-        if (!param0) {
-          field_q = (vh) null;
-          el.field_H[59] = 57;
-          el.field_H[46] = 72;
-          el.field_H[45] = 26;
-          el.field_H[92] = 74;
-          el.field_H[61] = 27;
-          return;
-        } else {
+        if (param0) {
           el.field_H[59] = 57;
           el.field_H[46] = 72;
           el.field_H[45] = 26;
@@ -45,6 +37,12 @@ final class fl extends ma {
           el.field_H[61] = 27;
           return;
         }
+        field_q = (vh) null;
+        el.field_H[59] = 57;
+        el.field_H[46] = 72;
+        el.field_H[45] = 26;
+        el.field_H[92] = 74;
+        el.field_H[61] = 27;
     }
 
     private fl() throws Throwable {

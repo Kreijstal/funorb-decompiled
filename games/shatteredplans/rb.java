@@ -12,8 +12,8 @@ final class rb extends ib implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, int param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 <= 63) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, false);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, false);
         }
     }
 
@@ -27,8 +27,8 @@ final class rb extends ib implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, boolean param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, -90);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, -90);
         }
     }
 

@@ -16,7 +16,7 @@ final class kg {
         field_c = null;
         field_g = null;
         if (param0 != 123) {
-            kg.b((byte) 16);
+          kg.b((byte) 16);
         }
     }
 
@@ -24,9 +24,9 @@ final class kg {
         this.field_b = false;
         this.field_d = false;
         try {
-            this.field_f = param0;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,9 +37,9 @@ final class kg {
 
     final String a(int param0) {
         if (param0 != 32) {
-            String var3 = (String) null;
-            kg.a((Throwable) null, (String) null);
-            return this.field_f;
+          String var3 = (String) null;
+          kg.a((Throwable) null, (String) null);
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -47,17 +47,17 @@ final class kg {
     final static rg a(Throwable param0, String param1) {
         rg var2 = null;
         if (!(param0 instanceof rg)) {
-            var2 = new rg(param0, param1);
+          var2 = new rg(param0, param1);
         } else {
-            var2 = (rg) ((Object) param0);
-            var2.field_c = var2.field_c + ' ' + param1;
+          var2 = (rg) ((Object) param0);
+          var2.field_c = var2.field_c + ' ' + param1;
         }
         return var2;
     }
 
     final void a(boolean param0, int param1) {
         if (param1 != 11358) {
-            return;
+          return;
         }
         this.field_d = param0 ? true : false;
         this.field_b = true;
@@ -65,7 +65,7 @@ final class kg {
 
     final boolean b(int param0) {
         if (param0 > -42) {
-            return false;
+          return false;
         }
         return this.field_b;
     }

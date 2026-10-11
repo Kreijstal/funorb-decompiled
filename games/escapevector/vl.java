@@ -13,49 +13,38 @@ final class vl {
         field_f = null;
         field_c = null;
         if (param0 != -19467) {
-            vl.a(42);
+          vl.a(42);
         }
     }
 
     final int b(int param0) {
         int var2;
         int stackIn_5_0 = 0;
-        L0: {
-          L1: {
-            var2 = -117 % ((param0 - 60) / 52);
-            if (this.field_b == null) {
-              break L1;
-            } else {
-              if (this.field_b.length != 0) {
-                stackIn_5_0 = this.field_b[-1 + this.field_b.length];
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
+        var2 = -117 % ((param0 - 60) / 52);
+        if (this.field_b != null &&
+          this.field_b.length != 0) {
+          stackIn_5_0 = this.field_b[-1 + this.field_b.length];
+        } else {
           stackIn_5_0 = 0;
-          break L0;
         }
         return stackIn_5_0;
     }
 
     final static int a(int param0, int param1) {
         if (param1 >= -113) {
-            return -7;
+          return -7;
         }
         return bi.field_d[param0 & 2047];
     }
 
     final static void b(int param0, int param1) {
+        int var5 = 0;
         int stackIn_4_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         ed[] var3 = null;
         ed[] var4 = null;
-        int var5 = 0;
         ed var6 = null;
         int var7 = 0;
         ed[] var8 = null;
@@ -63,124 +52,52 @@ final class vl {
         int var10 = 0;
         var10 = EscapeVector.field_A;
         try {
-          L0: {
-            L1: {
-              if (param1 != 4) {
-                stackIn_4_0 = 0;
-                break L1;
-              } else {
-                stackIn_4_0 = 1;
-                break L1;
-              }
-            }
-            var2_int = stackIn_4_0;
-            if (hb.field_b == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (null == qi.field_M) {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L2: {
-                  L3: {
-                    if (param1 < 0) {
-                      break L3;
-                    } else {
-                      if (-8 >= (param1 ^ -1)) {
-                        break L3;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  param1 = 0;
-                  break L2;
-                }
-                L4: {
-                  L5: {
-                    if (-6 == (param1 ^ -1)) {
-                      break L5;
-                    } else {
-                      if ((param1 ^ -1) != -7) {
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  param1 = 0;
-                  break L4;
-                }
-                L6: {
-                  var3 = hb.field_b[param1];
-                  if (var2_int != 0) {
-                    var3 = v.field_a;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (param0 == 1) {
-                    break L7;
-                  } else {
-                    vl.a(98);
-                    break L7;
-                  }
-                }
-                var4 = qi.field_M[param1];
-                var5 = 0;
-                L8: while (true) {
-                  if (3 <= var5) {
-                    fl.a(-1, param1);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    L9: {
-                      if (var3 == null) {
-                        param1 = 0;
-                        var3 = hb.field_b[param1];
-                        var4 = qi.field_M[param1];
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    L10: {
-                      var6 = var3[var5];
-                      var7 = var5 + 14;
-                      var8 = mb.field_f;
-                      if (var2_int == 0) {
-                        break L10;
-                      } else {
-                        var8 = ob.field_b;
-                        break L10;
-                      }
-                    }
-                    var8[var7] = var6;
-                    var9 = var4[var5];
-                    jm.field_K[var7] = var9;
-                    var5++;
-                    continue L8;
-                  }
-                }
-              }
-            }
+          stackIn_4_0 = (param1 != 4) ? 0 : 1;
+          var2_int = stackIn_4_0;
+          if (hb.field_b == null) {
+            return;
           }
+          if (null == qi.field_M) {
+            return;
+          }
+          if (param1 < 0 ||
+            param1 >= 7) {
+            param1 = 0;
+          }
+          if (param1 == 5 ||
+            param1 == 6) {
+            param1 = 0;
+          }
+          var3 = hb.field_b[param1];
+          if (var2_int != 0) {
+            var3 = v.field_a;
+          }
+          if (param0 != 1) {
+            vl.a(98);
+          }
+          var4 = qi.field_M[param1];
+          for (var5 = 0; 3 > var5; var5++) {
+            if (var3 == null) {
+              param1 = 0;
+              var3 = hb.field_b[param1];
+              var4 = qi.field_M[param1];
+            }
+            var6 = var3[var5];
+            var7 = var5 + 14;
+            var8 = mb.field_f;
+            if (var2_int != 0) {
+              var8 = ob.field_b;
+            }
+            var8[var7] = var6;
+            var9 = var4[var5];
+            jm.field_K[var7] = var9;
+          }
+          fl.a(-1, param1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var2), "vl.B(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -190,33 +107,21 @@ final class vl {
         var4 = EscapeVector.field_A;
         if (this.field_b == null) {
           return 0;
-        } else {
-          if (0 != this.field_b.length) {
-            L0: {
-              var3 = 1;
-              if (param0 == 52) {
-                break L0;
-              } else {
-                this.a((byte) -102, -12);
-                break L0;
-              }
-            }
-            L1: while (true) {
-              if (this.field_b.length <= var3) {
-                return this.field_b.length - 1;
-              } else {
-                if (this.field_b[var3] + this.field_b[-1 + var3] >> 1601182817 <= param1) {
-                  var3++;
-                  continue L1;
-                } else {
-                  return -1 + var3;
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
         }
+        if (0 == this.field_b.length) {
+          return 0;
+        }
+        var3 = 1;
+        if (param0 != 52) {
+          this.a((byte) -102, -12);
+        }
+        while (this.field_b.length > var3) {
+          if (this.field_b[var3] + this.field_b[-1 + var3] >> 1 > param1) {
+            return -1 + var3;
+          }
+          var3++;
+        }
+        return this.field_b.length - 1;
     }
 
     vl(int param0, int param1, int param2) {
@@ -231,10 +136,10 @@ final class vl {
         int[] var7 = new int[param2];
         int[] var4 = var7;
         for (var5 = 0; var5 < param2; var5++) {
-            var7[var5] = (var5 + (param1 - -1)) * param0;
+          var7[var5] = (var5 + (param1 + 1)) * param0;
         }
         if (param3 != -17) {
-            field_f = (boolean[]) null;
+          field_f = (boolean[]) null;
         }
         return var4;
     }

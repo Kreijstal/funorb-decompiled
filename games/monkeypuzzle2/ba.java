@@ -15,25 +15,19 @@ abstract class ba {
     final static boolean a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         Throwable decompiledCaughtException = null;
         var1 = wj.field_k;
         synchronized (var1) {
-          L0: {
-            if (o.field_b == bh.field_e) {
-              stackIn_4_0 = 0;
-              return stackIn_4_0 != 0;
-            } else {
-              oa.field_H = oi.field_e[o.field_b];
-              rd.field_p = ia.field_d[o.field_b];
-              o.field_b = o.field_b - param0 & 127;
-              stackIn_6_0 = 1;
-              break L0;
-            }
+          if (o.field_b == bh.field_e) {
+            return false;
           }
+          oa.field_H = oi.field_e[o.field_b];
+          rd.field_p = ia.field_d[o.field_b];
+          o.field_b = o.field_b - param0 & 127;
+          stackIn_6_0 = true;
         }
-        return stackIn_6_0 != 0;
+        return stackIn_6_0;
     }
 
     abstract void a(int param0, java.awt.Component param1, int param2, int param3);
@@ -42,7 +36,7 @@ abstract class ba {
         field_h = null;
         field_a = (le[][]) null;
         if (param0) {
-            return;
+          return;
         }
         field_f = null;
         field_d = null;
@@ -52,14 +46,12 @@ abstract class ba {
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
     final void a(byte param0) {
-        if (param0 < 106) {
-          this.field_e = (int[]) null;
-          ge.a(this.field_e, this.field_g, this.field_i);
-          return;
-        } else {
+        if (param0 >= 106) {
           ge.a(this.field_e, this.field_g, this.field_i);
           return;
         }
+        this.field_e = (int[]) null;
+        ge.a(this.field_e, this.field_g, this.field_i);
     }
 
     static {

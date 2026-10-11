@@ -58,24 +58,24 @@ final class pe {
         int var6 = 0;
         int var7 = SteelSentinels.field_G;
         for (var6 = 0; var6 < this.field_L; var6++) {
-            this.field_z[var6] = (short)(this.field_z[var6] * param1 / param2);
-            this.field_m[var6] = (short)(this.field_m[var6] * param3 / param2);
-            this.field_C[var6] = (short)(param0 * this.field_C[var6] / param2);
+          this.field_z[var6] = (short)(this.field_z[var6] * param1 / param2);
+          this.field_m[var6] = (short)(this.field_m[var6] * param3 / param2);
+          this.field_C[var6] = (short)(param0 * this.field_C[var6] / param2);
         }
         if (param4 != 14866) {
-            return;
+          return;
         }
         this.a(param4 ^ 14956);
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -83,79 +83,43 @@ final class pe {
         var12 = SteelSentinels.field_G;
         if (this.field_f) {
           return;
-        } else {
-          this.field_f = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = param0;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= this.field_L) {
-              this.field_n = var7;
-              this.field_W = var6;
-              this.field_s = var4;
-              this.field_J = var2;
-              this.field_c = var5;
-              this.field_p = var3;
-              return;
-            } else {
-              L1: {
-                var9 = this.field_z[var8];
-                var10 = this.field_m[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (var5 < var9) {
-                  var5 = var9;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                var11 = this.field_C[var8];
-                if (var10 <= var6) {
-                  break L3;
-                } else {
-                  var6 = var10;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var3 <= var10) {
-                  break L4;
-                } else {
-                  var3 = var10;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var11 <= var7) {
-                  break L5;
-                } else {
-                  var7 = var11;
-                  break L5;
-                }
-              }
-              if (var4 > var11) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
+        }
+        this.field_f = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = param0;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_L; var8++) {
+          var9 = this.field_z[var8];
+          var10 = this.field_m[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          var11 = this.field_C[var8];
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var4 > var11) {
+            var4 = var11;
           }
         }
+        this.field_n = var7;
+        this.field_W = var6;
+        this.field_s = var4;
+        this.field_J = var2;
+        this.field_c = var5;
+        this.field_p = var3;
     }
 
     final static void a(int param0, int param1) {
@@ -164,148 +128,78 @@ final class pe {
         int var4;
         int var5;
         int var6;
-        L0: {
-          var6 = SteelSentinels.field_G;
-          var2 = 0;
-          var3 = vn.field_h;
-          if (-6 < (var3 ^ -1)) {
-            var2 = var3 * var3 * 8192 / 1100;
-            break L0;
-          } else {
-            if ((var3 ^ -1) > -106) {
-              var2 = (16384 * var3 - 40960) / 220;
-              break L0;
-            } else {
-              if (120 > var3) {
-                var3 = -var3 + 120;
-                var2 = 8192 + -(8192 * (var3 * var3) / 3300);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-          }
-        }
-        L1: {
-          var4 = 1;
-          var5 = 0;
-          if (3 != param0) {
-            break L1;
-          } else {
-            var4 = -1;
-            break L1;
-          }
-        }
-        L2: {
-          if (1 != param0) {
-            break L2;
-          } else {
-            var5 = 1;
-            break L2;
-          }
-        }
-        L3: {
-          if (-5 == (param0 ^ -1)) {
-            var5 = 1;
-            var4 = 1;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          if (-6 != (param0 ^ -1)) {
-            break L4;
-          } else {
-            var4 = -1;
-            var5 = 1;
-            break L4;
-          }
-        }
-        L5: {
-          if (param0 != 6) {
-            break L5;
-          } else {
-            var5 = -1;
-            var4 = 1;
-            break L5;
-          }
-        }
-        if (param1 < -24) {
-          L6: {
-            L7: {
-              if (-8 == (param0 ^ -1)) {
-                break L7;
-              } else {
-                if (8 == param0) {
-                  break L7;
-                } else {
-                  break L6;
-                }
-              }
-            }
-            var5 = -1;
-            var4 = -1;
-            break L6;
-          }
-          L8: {
-            if (11 == param0) {
-              var4 = -1;
-              break L8;
-            } else {
-              break L8;
-            }
-          }
-          L9: {
-            if (param0 != 12) {
-              break L9;
-            } else {
-              var4 = -1;
-              var5 = -1;
-              break L9;
-            }
-          }
-          L10: {
-            if (13 == param0) {
-              var5 = -1;
-              var4 = 1;
-              break L10;
-            } else {
-              break L10;
-            }
-          }
-          L11: {
-            if (-15 != (param0 ^ -1)) {
-              break L11;
-            } else {
-              var4 = -1;
-              var5 = 1;
-              break L11;
-            }
-          }
-          L12: {
-            if (-16 != (param0 ^ -1)) {
-              break L12;
-            } else {
-              var4 = 1;
-              var5 = 1;
-              break L12;
-            }
-          }
-          bl.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
-          return;
+        var6 = SteelSentinels.field_G;
+        var2 = 0;
+        var3 = vn.field_h;
+        if (var3 < 5) {
+          var2 = var3 * var3 * 8192 / 1100;
         } else {
+          if (var3 < 105) {
+            var2 = (16384 * var3 - 40960) / 220;
+          } else {
+            if (120 > var3) {
+              var3 = -var3 + 120;
+              var2 = 8192 - 8192 * (var3 * var3) / 3300;
+            }
+          }
+        }
+        var4 = 1;
+        var5 = 0;
+        if (3 == param0) {
+          var4 = -1;
+        }
+        if (1 == param0) {
+          var5 = 1;
+        }
+        if (param0 == 4) {
+          var5 = 1;
+          var4 = 1;
+        }
+        if (param0 == 5) {
+          var4 = -1;
+          var5 = 1;
+        }
+        if (param0 == 6) {
+          var5 = -1;
+          var4 = 1;
+        }
+        if (param1 >= -24) {
           return;
         }
+        if (param0 == 7 ||
+          8 == param0) {
+          var5 = -1;
+          var4 = -1;
+        }
+        if (11 == param0) {
+          var4 = -1;
+        }
+        if (param0 == 12) {
+          var4 = -1;
+          var5 = -1;
+        }
+        if (13 == param0) {
+          var5 = -1;
+          var4 = 1;
+        }
+        if (param0 == 14) {
+          var4 = -1;
+          var5 = 1;
+        }
+        if (param0 == 15) {
+          var4 = 1;
+          var5 = 1;
+        }
+        bl.field_e = dn.a(var5 * var2, var4 * var2, (byte) 71);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = SteelSentinels.field_G;
         for (var5 = param0; var5 < this.field_L; var5++) {
-            this.field_z[var5] = (short)(this.field_z[var5] + param3);
-            this.field_m[var5] = (short)(this.field_m[var5] + param1);
-            this.field_C[var5] = (short)(this.field_C[var5] + param2);
+          this.field_z[var5] = (short)(this.field_z[var5] + param3);
+          this.field_m[var5] = (short)(this.field_m[var5] + param1);
+          this.field_C[var5] = (short)(this.field_C[var5] + param2);
         }
         this.a(-20);
     }
@@ -320,7 +214,7 @@ final class pe {
         field_h = null;
         field_O = null;
         if (param0 >= -114) {
-            return;
+          return;
         }
         field_v = null;
         field_o = null;
@@ -343,6 +237,12 @@ final class pe {
         int var1 = 0;
         int var3 = 0;
         int var4 = 0;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var0Lifetime1;
+        int var1Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
         field_R = "Help";
         field_D = new String[]{"<%1> fell into <%0>'s flak", "<%1> was perforated by <%0>'s minigun", "<%1> was incinerated by <%0>", "<%1> felt <%0>'s electrostatic force", "<%1> was lasered by <%0>", "<%1> was melted by <%0>", "<%1> couldn't dodge <%0>'s missile", "<%1> was pierced by <%0>", "<%1> short-circuited because of <%0>", "<%1> was fragged by <%0>", "<%1> was electrocuted by <%0>", "<%1> fell into <%0>'s heavy flak", "<%1> was perforated by <%0>'s heavy gun", "<%1> decided to catch <%0>'s shell", "<%1> fell foul of <%0>'s artillery", "<%1> was sniped by <%0>", "<%1> got erased by <%0>", "<%1> was taught about the power of light by <%0>", "<%1> was vaporised by <%0>", "<%1> was engulfed by <%0>'s rocket spread", "<%1> got a present from <%0>", "<%1> caught <%0>'s lightning", "", "", "", "", "<%1> looked down the barrel of <%0>'s ultra gun", "<%1> rode <%0>'s shell", "<%1> had death rained down from <%0>", "<%1> was turned into slag by <%0>", "<%1> stared into <%0>'s sun for too long", "<%1> was atomised by <%0>", "<%1> fell to <%0>'s judgement", "<%1> was lost when <%0>'s rocket found its mark", "<%1> failed to avoid <%0>'s missile", "<%1> received serenity from <%0>"};
         field_U = "Game full";
@@ -352,25 +252,25 @@ final class pe {
         field_d = -1;
         field_N = new int[128];
         field_o = new int[128];
-        for (var2 = 0; (var2 ^ -1) > -129; var2++) {
-            var0 = 1114111;
-            var1 = (var0 & 16711935) * ((255 + var2 * 255) / 128);
-            field_o[var2] = ec.a(-16711936, var1) - -ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> -930670712;
-            var0 = 16776976;
-            var1 = (255 + var2 * 255) / 128 * (var0 & 16711935);
-            field_N[var2] = ec.a(-var1 + (1 + var2) * 255 / 128 * var0, 16711680) + ec.a(var1, -16711936) >>> -1086323128;
+        for (var2 = 0; var2 < 128; var2++) {
+          var0 = 1114111;
+          var1 = (var0 & 16711935) * ((255 + var2 * 255) / 128);
+          field_o[var2] = ec.a(-16711936, var1) + ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> 8;
+          var0Lifetime1 = 16776976;
+          var1Lifetime1 = (255 + var2 * 255) / 128 * (var0Lifetime1 & 16711935);
+          field_N[var2] = ec.a(-var1Lifetime1 + (1 + var2) * 255 / 128 * var0Lifetime1, 16711680) + ec.a(var1Lifetime1, -16711936) >>> 8;
         }
         field_b = new int[128];
-        for (var2 = 0; -129 < (var2 ^ -1); var2++) {
-            var3 = 255 & field_o[var2];
-            var4 = field_o[var2] >> -937322256 & 255;
-            field_b[var2] = (var3 << 248522256) - -(257 * var4);
+        for (var2Lifetime1 = 0; var2Lifetime1 < 128; var2Lifetime1++) {
+          var3 = 255 & field_o[var2Lifetime1];
+          var4 = field_o[var2Lifetime1] >> 16 & 255;
+          field_b[var2Lifetime1] = (var3 << 16) + 257 * var4;
         }
         field_q = new int[128];
-        for (var2 = 0; 128 > var2; var2++) {
-            var3 = field_o[var2] & 255;
-            var4 = (16719614 & field_o[var2]) >> -689682448;
-            field_q[var2] = var4 + 65792 * var3;
+        for (var2Lifetime2 = 0; 128 > var2Lifetime2; var2Lifetime2++) {
+          var3Lifetime1 = field_o[var2Lifetime2] & 255;
+          var4Lifetime1 = (16719614 & field_o[var2Lifetime2]) >> 16;
+          field_q[var2Lifetime2] = var4Lifetime1 + 65792 * var3Lifetime1;
         }
     }
 }

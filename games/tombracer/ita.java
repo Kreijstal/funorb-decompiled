@@ -15,9 +15,9 @@ final class ita implements mw {
         field_c = null;
         field_a = null;
         if (param0 != 48) {
-            field_g = -90;
-            field_e = null;
-            return;
+          field_g = -90;
+          field_e = null;
+          return;
         }
         field_e = null;
     }

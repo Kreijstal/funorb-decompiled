@@ -13,42 +13,43 @@ final class dib extends ev {
     final static void a(File param0, int param1, byte[] param2, byte param3) throws IOException {
         DataInputStream var4 = null;
         try {
-            var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param0)))));
-            try {
-                var4.readFully(param2, 0, param1);
-            } catch (EOFException eOFException) {
-            }
-            if (param3 != 119) {
-                field_j = (String) null;
-            }
-            var4.close();
+          var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param0)))));
+          try {
+            var4.readFully(param2, 0, param1);
+          } catch (EOFException eOFException) {
+          }
+          if (param3 != 119) {
+            field_j = (String) null;
+          }
+          var4.close();
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "dib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "dib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
         int var4 = 0;
+        int var4Lifetime1;
         if (param0 <= 49) {
-            String var5 = (String) null;
-            dib.a((String) null, 68);
-            if (param2 >= 256) {
-                return param1;
-            }
-            if (!(-1 > (param2 ^ -1))) {
-                return param3;
-            }
-            var4 = 256 + -param2;
-            return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 2083025192) + (-16711936 & ((-16711855 & param1) >>> 37992968) * param2 + ((param3 & -16711919) >>> 25640488) * var4);
+          String var5 = (String) null;
+          dib.a((String) null, 68);
+          if (param2 >= 256) {
+            return param1;
+          }
+          if (param2 <= 0) {
+            return param3;
+          }
+          var4 = 256 - param2;
+          return (16711935 & var4 * (param3 & 16711935) + param2 * (16711935 & param1) >>> 8) + (-16711936 & ((-16711855 & param1) >>> 8) * param2 + ((param3 & -16711919) >>> 8) * var4);
         }
         if (param2 >= 256) {
-            return param1;
+          return param1;
         }
-        if (!(-1 > (param2 ^ -1))) {
-            return param3;
+        if (param2 <= 0) {
+          return param3;
         }
-        var4 = 256 + -param2;
-        return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 2083025192) + (-16711936 & ((-16711855 & param1) >>> 37992968) * param2 + ((param3 & -16711919) >>> 25640488) * var4);
+        var4Lifetime1 = 256 - param2;
+        return (16711935 & var4Lifetime1 * (param3 & 16711935) + param2 * (16711935 & param1) >>> 8) + (-16711936 & ((-16711855 & param1) >>> 8) * param2 + ((param3 & -16711919) >>> 8) * var4Lifetime1);
     }
 
     dib(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -72,164 +73,108 @@ final class dib extends ev {
         tsa[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          L0: {
-            if (param0.equals(tkb.field_o)) {
-              stackIn_4_0 = neb.field_q;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var2 = ck.a(-1, param0);
-              var3 = new tsa[var2.c(3)];
-              var4 = 0;
-              var5 = (tsa) ((Object) var2.d(0));
-              if (param1 >= 32) {
-                L1: while (true) {
-                  if (var5 == null) {
-                    neb.field_q = var3;
-                    tkb.field_o = param0;
-                    stackIn_11_0 = (tsa[]) (var3);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    incrementValue$1 = var4;
-                    var4++;
-                    var3[incrementValue$1] = var5;
-                    var5 = (tsa) ((Object) var2.a((byte) 82));
-                    continue L1;
-                  }
-                }
-              } else {
-                stackIn_7_0 = (tsa[]) null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param0.equals(tkb.field_o)) {
+            stackIn_4_0 = neb.field_q;
+            return stackIn_4_0;
           }
+          var2 = ck.a(-1, param0);
+          var3 = new tsa[var2.c(3)];
+          var4 = 0;
+          var5 = (tsa) (var2.d(0));
+          if (param1 < 32) {
+            stackIn_7_0 = (tsa[]) null;
+            return stackIn_7_0;
+          }
+          while (var5 != null) {
+            incrementValue$1 = var4;
+            var4++;
+            var3[incrementValue$1] = var5;
+            var5 = (tsa) (var2.a((byte) 82));
+          }
+          neb.field_q = var3;
+          tkb.field_o = param0;
+          stackIn_11_0 = var3;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2_ref);
-
-            stackIn_14_1 = new StringBuilder().append("dib.H(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L2;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L2;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_14_0 = var2_ref;
+          stackIn_14_1 = new StringBuilder().append("dib.H(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
           } else {
-            return stackIn_11_0;
+            stackIn_15_2 = "{...}";
           }
+          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = param2 * this.field_g >> -131278068;
-        int var5 = this.field_i * param2 >> -1375694164;
-        int var6 = this.field_f * param1 >> 159812396;
+        int var4 = param2 * this.field_g >> 12;
+        int var5 = this.field_i * param2 >> 12;
+        int var6 = this.field_f * param1 >> 12;
         int var8 = 62 % ((-48 - param0) / 40);
-        int var7 = this.field_h * param1 >> 535509932;
+        int var7 = this.field_h * param1 >> 12;
         pda.a(var7, var4, this.field_d, var6, -2, var5, this.field_a);
     }
 
     final void b(byte param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var4 = param1 * this.field_g >> 864555308;
-        var5 = this.field_i * param1 >> -456668532;
-        if (param0 != -112) {
-          dib.a((byte) 92, -127, 80, 107);
-          var6 = param2 * this.field_f >> 783961356;
-          var7 = this.field_h * param2 >> -1415387124;
-          fcb.a(this.field_e, var7, var6, var4, var5, (byte) -117);
-          return;
-        } else {
-          var6 = param2 * this.field_f >> 783961356;
-          var7 = this.field_h * param2 >> -1415387124;
+        int var6 = 0;
+        int var7 = 0;
+        int var4 = param1 * this.field_g >> 12;
+        int var5 = this.field_i * param1 >> 12;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        if (param0 == -112) {
+          var6 = param2 * this.field_f >> 12;
+          var7 = this.field_h * param2 >> 12;
           fcb.a(this.field_e, var7, var6, var4, var5, (byte) -117);
           return;
         }
+        dib.a((byte) 92, -127, 80, 107);
+        var6Lifetime1 = param2 * this.field_f >> 12;
+        var7Lifetime1 = this.field_h * param2 >> 12;
+        fcb.a(this.field_e, var7Lifetime1, var6Lifetime1, var4, var5, (byte) -117);
     }
 
     final void a(int param0, byte param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var4 = this.field_g * param2 >> -1259938868;
-        if (param1 != 110) {
-          field_j = (String) null;
-          var5 = this.field_i * param2 >> 6262668;
-          var6 = param0 * this.field_f >> 1495800812;
-          var7 = this.field_h * param0 >> -628585908;
-          kpa.a(this.field_a, var5, this.field_e, var6, this.field_d, var4, var7, 0);
-          return;
-        } else {
-          var5 = this.field_i * param2 >> 6262668;
-          var6 = param0 * this.field_f >> 1495800812;
-          var7 = this.field_h * param0 >> -628585908;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var4 = this.field_g * param2 >> 12;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        if (param1 == 110) {
+          var5 = this.field_i * param2 >> 12;
+          var6 = param0 * this.field_f >> 12;
+          var7 = this.field_h * param0 >> 12;
           kpa.a(this.field_a, var5, this.field_e, var6, this.field_d, var4, var7, 0);
           return;
         }
+        field_j = (String) null;
+        var5Lifetime1 = this.field_i * param2 >> 12;
+        var6Lifetime1 = param0 * this.field_f >> 12;
+        var7Lifetime1 = this.field_h * param0 >> 12;
+        kpa.a(this.field_a, var5Lifetime1, this.field_e, var6Lifetime1, this.field_d, var4, var7Lifetime1, 0);
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 < 93) {
-          L0: {
-            field_j = (String) null;
-            if (2 > param1) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (2 > param1) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 >= 93) {
+          return 2 <= param1 ? true : false;
         }
+        field_j = (String) null;
+        return 2 <= param1 ? true : false;
     }
 
     public static void a(byte param0) {
         field_j = null;
         if (param0 == 89) {
-            return;
+          return;
         }
         dib.a((byte) 40);
     }

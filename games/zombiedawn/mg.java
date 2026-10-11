@@ -9,40 +9,40 @@ final class mg extends le {
     final static void a(int param0) {
         hn var1 = null;
         int var2 = ZombieDawn.field_J;
+        hn var1Lifetime1;
         try {
-            sh.field_d.g();
-            cf.field_fb.g();
-            if (param0 > -30) {
-                field_j = 75;
+          sh.field_d.g();
+          cf.field_fb.g();
+          if (param0 > -30) {
+            field_j = 75;
+          }
+          d.field_b = d.field_b - 1;
+          if (d.field_b == 0) {
+            d.field_b = 200;
+            var1 = (hn) (fj.field_i.b((byte) 26));
+            while (var1 != null) {
+              if (!var1.field_k.a((byte) 73)) {
+                var1.b(-27598);
+              }
+              var1 = (hn) (fj.field_i.a(false));
             }
-            d.field_b = d.field_b - 1;
-            if (!(d.field_b != 0)) {
-                d.field_b = 200;
-                var1 = (hn) ((Object) fj.field_i.b((byte) 26));
-                while (var1 != null) {
-                    if (!(var1.field_k.a((byte) 73))) {
-                        var1.b(-27598);
-                    }
-                    var1 = (hn) ((Object) fj.field_i.a(false));
+            if (sf.field_n != null) {
+              var1Lifetime1 = (hn) (sf.field_n.b((byte) 26));
+              while (var1Lifetime1 != null) {
+                if (!var1Lifetime1.field_k.a((byte) 73)) {
+                  var1Lifetime1.b(-27598);
                 }
-                if (sf.field_n != null) {
-                    var1 = (hn) ((Object) sf.field_n.b((byte) 26));
-                    while (var1 != null) {
-                        if (!(var1.field_k.a((byte) 73))) {
-                            var1.b(-27598);
-                        }
-                        var1 = (hn) ((Object) sf.field_n.a(false));
-                    }
-                }
+                var1Lifetime1 = (hn) (sf.field_n.a(false));
+              }
             }
-            if (uh.field_o != null) {
-                if (!uh.field_o.c((byte) -34)) {
-                    te.field_kb = null;
-                    return;
-                }
-            }
+          }
+          if (uh.field_o != null &&
+            !uh.field_o.c((byte) -34)) {
+            te.field_kb = null;
+            return;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "mg.A(" + param0 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class mg extends le {
         se.field_j = oj.b(0);
         wo.field_xb = new dn();
         if (param0) {
-            return;
+          return;
         }
         ad.c((byte) 122);
     }

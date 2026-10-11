@@ -15,10 +15,10 @@ final class ba extends ok {
     public static void k(int param0) {
         field_sb = null;
         if (param0 > -19) {
-            field_vb = (vh) null;
-            field_vb = null;
-            field_ub = null;
-            return;
+          field_vb = (vh) null;
+          field_vb = null;
+          field_ub = null;
+          return;
         }
         field_vb = null;
         field_ub = null;
@@ -26,9 +26,9 @@ final class ba extends ok {
 
     final void d(ei param0, int param1) {
         try {
-            super.d(param0, param1);
+          super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ba.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ba.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

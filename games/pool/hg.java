@@ -8,89 +8,66 @@ final class hg {
 
     final static void a(String param0, boolean param1) {
         try {
-            if (!param1) {
-                hg.a(true);
-            }
+          if (!param1) {
+            hg.a(true);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "hg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "hg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
+        int var4Lifetime1;
         if (param0 == 0) {
           o.field_C.c(param1, param3);
-          if (param2) {
-            L0: {
-              var4 = uf.field_X % o.field_C.field_z * 2;
-              if (var4 < o.field_C.field_z) {
-                break L0;
-              } else {
-                var4 = o.field_C.field_z + (-var4 + o.field_C.field_z);
-                break L0;
-              }
-            }
-            if (10 > var4) {
-              var4 = 10;
-              wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-              return;
-            } else {
-              if (-40 + o.field_C.field_z >= var4) {
-                wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-                return;
-              } else {
-                var4 = -40 + o.field_C.field_z;
-                wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-                return;
-              }
-            }
-          } else {
+          if (!param2) {
             return;
           }
-        } else {
-          field_b = (String) null;
-          o.field_C.c(param1, param3);
-          if (param2) {
-            L1: {
-              var4 = uf.field_X % o.field_C.field_z * 2;
-              if (var4 < o.field_C.field_z) {
-                break L1;
-              } else {
-                var4 = o.field_C.field_z + (-var4 + o.field_C.field_z);
-                break L1;
-              }
-            }
-            if (10 > var4) {
-              var4 = 10;
-              wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-              return;
-            } else {
-              if (-40 + o.field_C.field_z >= var4) {
-                wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-                return;
-              } else {
-                var4 = -40 + o.field_C.field_z;
-                wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
-                return;
-              }
-            }
+          var4 = uf.field_X % o.field_C.field_z * 2;
+          if (var4 >= o.field_C.field_z) {
+            var4 = o.field_C.field_z + (-var4 + o.field_C.field_z);
+          }
+          if (10 > var4) {
+            var4 = 10;
           } else {
-            return;
+            if (-40 + o.field_C.field_z < var4) {
+              var4 = -40 + o.field_C.field_z;
+            }
+          }
+          wf.a(-68, 80, 0, o.field_C, var4, 0, param1, 30, param3);
+          return;
+        }
+        field_b = (String) null;
+        o.field_C.c(param1, param3);
+        if (!param2) {
+          return;
+        }
+        var4Lifetime1 = uf.field_X % o.field_C.field_z * 2;
+        if (var4Lifetime1 >= o.field_C.field_z) {
+          var4Lifetime1 = o.field_C.field_z + (-var4Lifetime1 + o.field_C.field_z);
+        }
+        if (10 > var4Lifetime1) {
+          var4Lifetime1 = 10;
+        } else {
+          if (-40 + o.field_C.field_z < var4Lifetime1) {
+            var4Lifetime1 = -40 + o.field_C.field_z;
           }
         }
+        wf.a(-68, 80, 0, o.field_C, var4Lifetime1, 0, param1, 30, param3);
     }
 
     final static java.awt.Container a(boolean param0) {
         if (param0) {
-            String var2 = (String) null;
-            hg.a((String) null, true);
-            if (!(null == op.field_e)) {
-                return (java.awt.Container) ((Object) op.field_e);
-            }
-            return (java.awt.Container) ((Object) hk.d(95));
-        }
-        if (!(null == op.field_e)) {
+          String var2 = (String) null;
+          hg.a((String) null, true);
+          if (null != op.field_e) {
             return (java.awt.Container) ((Object) op.field_e);
+          }
+          return (java.awt.Container) ((Object) hk.d(95));
+        }
+        if (null != op.field_e) {
+          return (java.awt.Container) ((Object) op.field_e);
         }
         return (java.awt.Container) ((Object) hk.d(95));
     }
@@ -99,7 +76,7 @@ final class hg {
         field_c = null;
         field_b = null;
         if (param0) {
-            field_c = (vh) null;
+          field_c = (vh) null;
         }
     }
 

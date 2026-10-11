@@ -11,21 +11,15 @@ final class oe {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -19495) {
-          if (null == ji.field_c) {
-            return;
-          } else {
-            var1 = ji.field_c;
-            synchronized (var1) {
-              L0: {
-                ji.field_c = null;
-                break L0;
-              }
-            }
-            return;
-          }
-        } else {
+        if (param0 != -19495) {
           return;
+        }
+        if (null == ji.field_c) {
+          return;
+        }
+        var1 = ji.field_c;
+        synchronized (var1) {
+          ji.field_c = null;
         }
     }
 

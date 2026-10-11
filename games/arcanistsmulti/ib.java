@@ -15,7 +15,7 @@ class ib extends jm {
         u.field_l = param1;
         tm.field_b = param3;
         if (param4 < 92) {
-            return;
+          return;
         }
         mh.field_H = param0;
     }
@@ -32,15 +32,7 @@ class ib extends jm {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-          ib.a(127, -74);
-          field_p = null;
-          field_q = null;
-          field_s = null;
-          field_t = null;
-          field_v = null;
-          return;
-        } else {
+        if (param0) {
           field_p = null;
           field_q = null;
           field_s = null;
@@ -48,39 +40,34 @@ class ib extends jm {
           field_v = null;
           return;
         }
+        ib.a(127, -74);
+        field_p = null;
+        field_q = null;
+        field_s = null;
+        field_t = null;
+        field_v = null;
     }
 
     final static boolean b(boolean param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         var1_ref = ch.field_a;
         synchronized (var1_ref) {
-          L0: {
-            if (gn.field_b != vk.field_u) {
-              L1: {
-                vn.field_d = v.field_p[vk.field_u];
-                ed.field_Bb = qa.field_i[vk.field_u];
-                vk.field_u = 1 + vk.field_u & 127;
-                if (!param0) {
-                  break L1;
-                } else {
-                  ib.a(false, -118);
-                  break L1;
-                }
-              }
-              stackIn_7_0 = 1;
-              break L0;
-            } else {
-              stackIn_3_0 = 0;
-              return stackIn_3_0 != 0;
-            }
+          if (gn.field_b == vk.field_u) {
+            return false;
           }
+          vn.field_d = v.field_p[vk.field_u];
+          ed.field_Bb = qa.field_i[vk.field_u];
+          vk.field_u = 1 + vk.field_u & 127;
+          if (param0) {
+            ib.a(false, -118);
+          }
+          stackIn_7_0 = true;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_7_0;
     }
 
     final static km a(int param0, String param1) {
@@ -88,86 +75,52 @@ class ib extends jm {
         km stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 2) {
-                break L1;
-              } else {
-                ib.a(false, 33);
-                break L1;
-              }
-            }
-            L2: {
-              if (!wn.field_z.a((byte) -94)) {
-                break L2;
-              } else {
-                if (!param1.equals(wn.field_z.a(true))) {
-                  wn.field_z = nj.a(param1, -100);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            stackIn_7_0 = wn.field_z;
-            break L0;
+          if (param0 != 2) {
+            ib.a(false, 33);
           }
+          if (wn.field_z.a((byte) -94) &&
+            !param1.equals(wn.field_z.a(true))) {
+            wn.field_z = nj.a(param1, -100);
+          }
+          stackIn_7_0 = wn.field_z;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("ib.FA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("ib.FA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     final static void a(boolean param0, int param1) {
-        if (pm.field_b != null) {
-          if (pm.field_b.c(param0, (byte) 48)) {
-            pm.field_b = null;
-            if (param1 != 2) {
-              ib.a(41, -89);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param1 != 2) {
-              ib.a(41, -89);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param1 != 2) {
-            ib.a(41, -89);
-            return;
-          } else {
+        if (pm.field_b == null) {
+          if (param1 == 2) {
             return;
           }
+          ib.a(41, -89);
+          return;
         }
+        if (!pm.field_b.c(param0, (byte) 48)) {
+          if (param1 == 2) {
+            return;
+          }
+          ib.a(41, -89);
+          return;
+        }
+        pm.field_b = null;
+        if (param1 == 2) {
+          return;
+        }
+        ib.a(41, -89);
     }
 
     ib(dj param0, int param1) {
@@ -176,12 +129,12 @@ class ib extends jm {
 
     public final void a(qm param0, int param1, int param2, int param3, boolean param4) {
         try {
-            if (!(!param4)) {
-                kh.a(param0.field_v, param0.field_n + param2, param3 - -param0.field_j, param0.field_k, 82);
-            }
-            super.a(param0, param1, param2, param3, param4);
+          if (param4) {
+            kh.a(param0.field_v, param0.field_n + param2, param3 + param0.field_j, param0.field_k, 82);
+          }
+          super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ib.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

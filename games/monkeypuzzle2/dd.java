@@ -28,10 +28,7 @@ final class dd extends RuntimeException {
         am stackIn_41_0 = null;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
         String stackIn_48_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -39,165 +36,84 @@ final class dd extends RuntimeException {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length();
-            if (0 != var2_int) {
-              if (-65 <= (var2_int ^ -1)) {
-                if (34 != param0.charAt(0)) {
-                  var3 = param1 ? 1 : 0;
-                  var4 = 0;
-                  L1: while (true) {
-                    if (var2_int > var4) {
-                      L2: {
-                        var5 = param0.charAt(var4);
-                        if (var5 != 46) {
-                          if (-1 == qd.field_b.indexOf(var5)) {
-                            stackIn_41_0 = lh.field_c;
-                            decompiledRegionSelector0 = 5;
-                            break L0;
-                          } else {
-                            var3 = 0;
-                            break L2;
-                          }
-                        } else {
-                          L3: {
-                            if (-1 == (var4 ^ -1)) {
-                              break L3;
-                            } else {
-                              if (var4 == var2_int + -1) {
-                                break L3;
-                              } else {
-                                if (var3 == 0) {
-                                  var3 = 1;
-                                  break L2;
-                                } else {
-                                  break L3;
-                                }
-                              }
-                            }
-                          }
-                          stackIn_36_0 = lh.field_c;
-                          decompiledRegionSelector0 = 4;
-                          break L0;
-                        }
-                      }
-                      var4++;
-                      continue L1;
-                    } else {
-                      return null;
-                    }
-                  }
-                } else {
-                  if (-35 == (param0.charAt(-1 + var2_int) ^ -1)) {
-                    var3 = 0;
-                    var4 = 1;
-                    L4: while (true) {
-                      if (var4 < -1 + var2_int) {
-                        L5: {
-                          var5 = param0.charAt(var4);
-                          if (var5 == 92) {
-                            L6: {
-                              if (var3 != 0) {
-                                stackIn_19_0 = 0;
-                                break L6;
-                              } else {
-                                stackIn_19_0 = 1;
-                                break L6;
-                              }
-                            }
-                            var3 = stackIn_19_0;
-                            break L5;
-                          } else {
-                            L7: {
-                              if (var5 != 34) {
-                                break L7;
-                              } else {
-                                if (var3 != 0) {
-                                  break L7;
-                                } else {
-                                  stackIn_23_0 = lh.field_c;
-                                  decompiledRegionSelector0 = 3;
-                                  break L0;
-                                }
-                              }
-                            }
-                            var3 = 0;
-                            break L5;
-                          }
-                        }
-                        var4++;
-                        continue L4;
-                      } else {
-                        return null;
-                      }
-                    }
-                  } else {
-                    stackIn_10_0 = lh.field_c;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                }
+          var2_int = param0.length();
+          if (0 == var2_int) {
+            stackIn_3_0 = si.field_s;
+            return stackIn_3_0;
+          }
+          if (var2_int > 64) {
+            stackIn_6_0 = wk.field_f;
+            return stackIn_6_0;
+          }
+          if (34 == param0.charAt(0)) {
+            if (param0.charAt(-1 + var2_int) != 34) {
+              stackIn_10_0 = lh.field_c;
+              return stackIn_10_0;
+            }
+            var3 = 0;
+            for (var4 = 1; var4 < -1 + var2_int; var4++) {
+              var5 = param0.charAt(var4);
+              if (var5 == 92) {
+                stackIn_19_0 = (var3 != 0) ? 0 : 1;
+                var3 = stackIn_19_0;
               } else {
-                stackIn_6_0 = wk.field_f;
-                decompiledRegionSelector0 = 1;
-                break L0;
+                if (var5 == 34 &&
+                  var3 == 0) {
+                  stackIn_23_0 = lh.field_c;
+                  return stackIn_23_0;
+                }
+                var3 = 0;
               }
-            } else {
-              stackIn_3_0 = si.field_s;
-              decompiledRegionSelector0 = 0;
-              break L0;
+            }
+            return null;
+          }
+          var3Lifetime1 = param1 ? 1 : 0;
+          for (var4Lifetime1 = 0; var2_int > var4Lifetime1; var4Lifetime1++) {
+            boolean decompiledFrameRemainder0 = true;
+            var5Lifetime1 = param0.charAt(var4Lifetime1);
+            if (var5Lifetime1 == 46) {
+              if (var4Lifetime1 != 0 &&
+                var4Lifetime1 != var2_int - 1 &&
+                var3Lifetime1 == 0) {
+                var3Lifetime1 = 1;
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                stackIn_36_0 = lh.field_c;
+                return stackIn_36_0;
+              }
+            }
+            if (decompiledFrameRemainder0) {
+              if (-1 == qd.field_b.indexOf(var5Lifetime1)) {
+                stackIn_41_0 = lh.field_c;
+                return stackIn_41_0;
+              }
+              var3Lifetime1 = 0;
             }
           }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_47_0 = (RuntimeException) (var2);
-
-            stackIn_47_1 = new StringBuilder().append("dd.B(");
-
-            if (param0 == null) {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "null";
-              break L8;
-            } else {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "{...}";
-              break L8;
-            }
-          }
-          throw la.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var2 = decompiledCaughtException;
+          stackIn_47_0 = var2;
+          stackIn_47_1 = new StringBuilder().append("dd.B(");
+          if (param0 == null) {
+            stackIn_48_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_23_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_36_0;
-                } else {
-                  return stackIn_41_0;
-                }
-              }
-            }
+            stackIn_48_2 = "{...}";
           }
+          throw la.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 != 0) {
-            field_d = 21;
+          field_d = 21;
         }
     }
 

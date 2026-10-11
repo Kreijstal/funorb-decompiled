@@ -11,19 +11,19 @@ final class sg {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            if (param0 != -6988) {
-                sg.a((byte) -81);
-            }
-            hg.a(param1, -1, "");
-            bf.a(63, param1);
+          if (param0 != -6988) {
+            sg.a((byte) -81);
+          }
+          hg.a(param1, -1, "");
+          bf.a(63, param1);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "sg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "sg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -57) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;
@@ -34,9 +34,9 @@ final class sg {
 
     final static void a(boolean param0) {
         if (!param0) {
-            sg.a((byte) 45);
-            sf.a(17, 11649);
-            return;
+          sg.a((byte) 45);
+          sf.a(17, 11649);
+          return;
         }
         sf.a(17, 11649);
     }

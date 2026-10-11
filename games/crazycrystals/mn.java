@@ -18,19 +18,19 @@ final class mn extends pd {
 
     final pb b(byte param0) {
         if (param0 >= -127) {
-            mn.b(true);
+          mn.b(true);
         }
         return (pb) ((Object) new ti());
     }
 
     final static dl[] c(int param0) {
+        int var2 = 0;
+        int var6 = 0;
+        int var7 = 0;
         dl[] var1;
-        int var2;
         int var3;
         byte[] var5;
-        int var6;
         int[] var6_ref_int__;
-        int var7;
         int var8;
         byte[] var9;
         int[] var10;
@@ -42,59 +42,39 @@ final class mn extends pd {
         int[] var22;
         var8 = CrazyCrystals.field_B;
         var1 = new dl[mg.field_a];
-        var2 = param0;
-        L0: while (true) {
-          if (var2 >= mg.field_a) {
-            ok.a(param0 ^ 2188450);
-            return var1;
-          } else {
-            var3 = je.field_c[var2] * uo.field_l[var2];
-            var21 = ui.field_c[var2];
-            if (!rh.field_a[var2]) {
-              var10 = new int[var3];
-              var22 = var10;
-              var6 = 0;
-              L1: while (true) {
-                if (var6 >= var3) {
-                  var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
-                  var2++;
-                  continue L0;
-                } else {
-                  var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
-                  var6++;
-                  continue L1;
-                }
-              }
-            } else {
-              var16 = ng.field_g[var2];
-              var12 = var16;
-              var9 = var12;
-              var5 = var9;
-              var17 = new int[var3];
-              var13 = var17;
-              var6_ref_int__ = var13;
-              var7 = 0;
-              L2: while (true) {
-                if (var7 >= var3) {
-                  var1[var2] = (dl) ((Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
-                  var2++;
-                  continue L0;
-                } else {
-                  var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << -621880424);
-                  var7++;
-                  continue L2;
-                }
-              }
+        for (var2 = param0; var2 < mg.field_a; var2++) {
+          var3 = je.field_c[var2] * uo.field_l[var2];
+          var21 = ui.field_c[var2];
+          if (!rh.field_a[var2]) {
+            var10 = new int[var3];
+            var22 = var10;
+            for (var6 = 0; var6 < var3; var6++) {
+              var10[var6] = gh.field_z[pf.b((int) var21[var6], 255)];
             }
+            var1[var2] = new dl(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var22);
+          } else {
+            var16 = ng.field_g[var2];
+            var12 = var16;
+            var9 = var12;
+            var5 = var9;
+            var17 = new int[var3];
+            var13 = var17;
+            var6_ref_int__ = var13;
+            for (var7 = 0; var7 < var3; var7++) {
+              var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << 24);
+            }
+            var1[var2] = (dl) ((Object) new vi(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
           }
         }
+        ok.a(param0 ^ 2188450);
+        return var1;
     }
 
     final static void b(boolean param0) {
         vl.field_f.a((byte) -116);
         vl.field_f = null;
         if (param0) {
-            field_l = (String[]) null;
+          field_l = (String[]) null;
         }
         be.field_d.a((byte) -21);
         be.field_d = null;
@@ -116,19 +96,19 @@ final class mn extends pd {
         field_m = null;
         field_j = null;
         if (param0 != 19) {
-            field_j = (sj) null;
+          field_j = (sj) null;
         }
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
         int var6 = CrazyCrystals.field_B;
         if (!param0) {
-            field_j = (sj) null;
+          field_j = (sj) null;
         }
         param2 = param2 + param3;
         while (param2 > param3) {
-            pd.field_g[param1] = pd.field_g[param1] + (4 > q.field_a[ma.field_n[param1]].field_c[param3] ? 50 : 100);
-            param3++;
+          pd.field_g[param1] = pd.field_g[param1] + (4 > q.field_a[ma.field_n[param1]].field_c[param3] ? 50 : 100);
+          param3++;
         }
     }
 
@@ -144,61 +124,30 @@ final class mn extends pd {
         f stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param0) {
-              L1: {
-                this.field_k = this.field_k + param3;
-                this.field_h = this.field_h + 1;
-                if ((q.field_a[ma.field_n[param1]].field_c[param2] ^ -1) > -5) {
-                  stackIn_6_0 = 50;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 100;
-                  break L1;
-                }
-              }
-              ph.a(stackIn_6_0, (byte) 107, param1, param4);
-              stackIn_7_0 = bm.field_g;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (f) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0) {
+            stackIn_2_0 = (f) null;
+            return stackIn_2_0;
           }
+          this.field_k = this.field_k + param3;
+          this.field_h = this.field_h + 1;
+          stackIn_6_0 = (q.field_a[ma.field_n[param1]].field_c[param2] < 4) ? 50 : 100;
+          ph.a(stackIn_6_0, (byte) 107, param1, param4);
+          stackIn_7_0 = bm.field_g;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
-
-            stackIn_10_1 = new StringBuilder().append("mn.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_10_0 = var6;
+          stackIn_10_1 = new StringBuilder().append("mn.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_7_0;
+          throw dn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

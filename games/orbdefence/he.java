@@ -36,7 +36,7 @@ final class he extends ca {
         field_p = null;
         field_o = null;
         if (param0 < 13) {
-            field_C = -47;
+          field_C = -47;
         }
     }
 
@@ -47,14 +47,12 @@ final class he extends ca {
         this.field_g = null;
         this.field_x = null;
         this.field_D = null;
-        if (param0 != 5) {
-          he.c(48);
-          this.field_l = null;
-          return;
-        } else {
+        if (param0 == 5) {
           this.field_l = null;
           return;
         }
+        he.c(48);
+        this.field_l = null;
     }
 
     static {

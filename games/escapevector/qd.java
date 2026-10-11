@@ -12,64 +12,57 @@ final class qd extends hg {
     static volatile boolean field_l;
 
     final static boolean a(int param0, int param1) {
-        int var2;
-        int var3;
-        if (param1 < -85) {
-          var2 = dh.field_e.length;
-          if (0 <= param0) {
-            if (var2 > param0) {
-              var3 = dh.field_e[param0];
-              if ((var3 ^ -1) == -3) {
-                if (bj.e((byte) -56)) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        int var2 = 0;
+        int var3 = 0;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        if (param1 >= -85) {
           field_n = (cn) null;
           var2 = dh.field_e.length;
-          if (0 <= param0) {
-            if (var2 > param0) {
-              var3 = dh.field_e[param0];
-              if ((var3 ^ -1) == -3) {
-                if (!bj.e((byte) -56)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (0 > param0) {
             return false;
           }
+          if (var2 <= param0) {
+            return false;
+          }
+          var3 = dh.field_e[param0];
+          if (var3 != 2) {
+            return true;
+          }
+          if (bj.e((byte) -56)) {
+            return true;
+          }
+          return false;
         }
+        var2Lifetime1 = dh.field_e.length;
+        if (0 > param0) {
+          return false;
+        }
+        if (var2Lifetime1 <= param0) {
+          return false;
+        }
+        var3Lifetime1 = dh.field_e[param0];
+        if (var3Lifetime1 != 2) {
+          return true;
+        }
+        if (!bj.e((byte) -56)) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(int param0, String param1) {
         try {
-            ca.field_d = param1;
-            lj.a(param0, 39);
+          ca.field_d = param1;
+          lj.a(param0, 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_n = null;
     }
@@ -77,58 +70,20 @@ final class qd extends hg {
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4;
         var4 = 0;
-        if (param2 == -8) {
-          L0: {
-            if (param0) {
-              var4 += 4;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (!param3) {
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
-          } else {
-            var4 += 2;
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
-          }
-        } else {
-          L1: {
-            field_l = false;
-            if (param0) {
-              var4 += 4;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (param3) {
-            var4 += 2;
-            if (!param1) {
-              return fd.field_f[var4];
-            } else {
-              var4++;
-              return fd.field_f[var4];
-            }
-          } else {
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
-          }
+        if (param2 != -8) {
+          field_l = false;
         }
+        if (param0) {
+          var4 += 4;
+        }
+        if (param3) {
+          var4 += 2;
+        }
+        if (!param1) {
+          return fd.field_f[var4];
+        }
+        var4++;
+        return fd.field_f[var4];
     }
 
     final static void a(boolean param0) {
@@ -138,59 +93,39 @@ final class qd extends hg {
         dj.field_b = null;
         if (param0) {
           ei.field_i = false;
-          if (!eb.field_H) {
-            var1 = am.field_g;
-            if (-1 > (var1 ^ -1)) {
-              if ((var1 ^ -1) == -2) {
-                dj.field_b = cf.field_a;
-                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              } else {
-                dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
-                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              }
-            } else {
-              be.field_b.o(-18861);
-              cg.d(32);
-              return;
-            }
-          } else {
+          if (eb.field_H) {
             be.field_b.r(94);
             return;
           }
+          var1 = am.field_g;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              dj.field_b = cf.field_a;
+            } else {
+              dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
+            }
+            dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
+          }
+          be.field_b.o(-18861);
+          cg.d(32);
+          return;
+        }
+        field_n = (cn) null;
+        ei.field_i = false;
+        if (eb.field_H) {
+          be.field_b.r(94);
         } else {
-          field_n = (cn) null;
-          ei.field_i = false;
-          if (!eb.field_H) {
-            var1 = am.field_g;
-            if (-1 > (var1 ^ -1)) {
-              if ((var1 ^ -1) == -2) {
-                dj.field_b = cf.field_a;
-                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              } else {
-                dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
-                dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              }
+          var1 = am.field_g;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              dj.field_b = cf.field_a;
             } else {
-              be.field_b.o(-18861);
-              cg.d(32);
-              return;
+              dj.field_b = r.a(mi.field_j, -63, new String[]{Integer.toString(var1)});
             }
-          } else {
-            be.field_b.r(94);
-            return;
+            dj.field_b = s.a((byte) -31, new CharSequence[]{(CharSequence) ((Object) dj.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qa.field_I)});
           }
+          be.field_b.o(-18861);
+          cg.d(32);
         }
     }
 
@@ -206,5 +141,25 @@ final class qd extends hg {
     static {
         field_n = new cn();
         field_l = true;
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static String $cfr$intArgs$a$3214d41809e1(boolean param0, boolean param1, int param2, boolean param3) {
+        int var4;
+        var4 = 0;
+        if (param2 != -8) {
+          field_l = false;
+        }
+        if (param0) {
+          var4 += 4;
+        }
+        if (param3) {
+          var4 += 2;
+        }
+        if (!param1) {
+          return fd.field_f[var4];
+        }
+        var4++;
+        return fd.field_f[var4];
     }
 }

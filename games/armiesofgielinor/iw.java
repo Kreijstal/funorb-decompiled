@@ -17,9 +17,9 @@ final class iw extends tc {
         field_o = null;
         field_p = null;
         if (param0 != -25771) {
-            field_l = (kl) null;
-            field_l = null;
-            return;
+          field_l = (kl) null;
+          field_l = null;
+          return;
         }
         field_l = null;
     }

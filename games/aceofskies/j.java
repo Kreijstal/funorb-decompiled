@@ -26,7 +26,7 @@ final class j extends pa implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            vk.a((e) (this), -113);
+          vk.a((e) (this), -113);
         }
     }
 

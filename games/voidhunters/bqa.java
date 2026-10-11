@@ -12,31 +12,25 @@ final class bqa {
     public static void a(byte param0) {
         field_f = null;
         if (param0 <= 104) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_7_0 = 0;
-        if (!param0) {
-          L0: {
-            if (fda.e((byte) 119)) {
-              stackIn_7_0 = 1;
-              break L0;
-            } else {
-              if ((hcb.field_o ^ -1) < -1) {
-                stackIn_7_0 = 0;
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          return stackIn_7_0 != 0;
-        } else {
+        boolean stackIn_7_0 = false;
+        if (param0) {
           return false;
         }
+        if (fda.e((byte) 119)) {
+          stackIn_7_0 = true;
+        } else {
+          if (hcb.field_o <= 0) {
+            return true;
+          }
+          stackIn_7_0 = false;
+        }
+        return stackIn_7_0;
     }
 
     private bqa() throws Throwable {

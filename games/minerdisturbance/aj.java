@@ -18,16 +18,16 @@ final class aj implements uj {
         field_b = null;
         field_c = null;
         if (param0 < 87) {
-            field_c = (ch) null;
+          field_c = (ch) null;
         }
     }
 
     public final void a(boolean param0) {
         if (param0) {
-            aj.b(-107);
-            db.field_d = 0;
-            kd.field_i = true;
-            return;
+          aj.b(-107);
+          db.field_d = 0;
+          kd.field_i = true;
+          return;
         }
         db.field_d = 0;
         kd.field_i = true;

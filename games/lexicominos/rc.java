@@ -24,68 +24,44 @@ final class rc {
         int var8 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3_int = 0;
-              if (param1 == 29532) {
-                break L1;
-              } else {
-                field_a = (sc) null;
-                break L1;
-              }
-            }
-            var4 = rf.field_c;
-            L2: while (true) {
-              if (ee.field_g.length <= var3_int) {
-                stackIn_15_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = ni.field_a[var3_int];
-                  if (var5 >= 0) {
-                    var6 = ii.a(ee.field_g[var3_int], true, 0);
-                    var4 = var4 + we.field_l;
-                    var7 = -(var6 >> 870040769) + uh.field_D;
-                    if (sj.a(param2, (oh.field_b << -603556095) + fb.field_g, var4, var6 + (jh.field_e << -960709887), param0, true, -jh.field_e + var7)) {
-                      stackIn_10_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var4 = var4 + (fb.field_g + (oh.field_b << 1762055041) + we.field_l);
-                      break L3;
-                    }
-                  } else {
-                    var4 = var4 + hc.field_fb;
-                    break L3;
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          var3_int = 0;
+          if (param1 != 29532) {
+            field_a = (sc) null;
           }
+          var4 = rf.field_c;
+          while (ee.field_g.length > var3_int) {
+            var5 = ni.field_a[var3_int];
+            if (var5 >= 0) {
+              var6 = ii.a(ee.field_g[var3_int], true, 0);
+              var4 = var4 + we.field_l;
+              var7 = -(var6 >> 1) + uh.field_D;
+              if (sj.a(param2, (oh.field_b << 1) + fb.field_g, var4, var6 + (jh.field_e << 1), param0, true, -jh.field_e + var7)) {
+                stackIn_10_0 = var5;
+                return stackIn_10_0;
+              }
+              var4 = var4 + (fb.field_g + (oh.field_b << 1) + we.field_l);
+            } else {
+              var4 = var4 + hc.field_fb;
+            }
+            var3_int++;
+          }
+          stackIn_15_0 = -1;
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw ld.a((Throwable) ((Object) var3), "rc.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          return stackIn_15_0;
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 870040769) {
-            field_a = (sc) null;
+          field_a = (sc) null;
         }
     }
 

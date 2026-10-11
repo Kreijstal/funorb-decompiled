@@ -8,7 +8,7 @@ final class ch extends fh {
 
     final void a(int param0, int param1, java.awt.Graphics param2, boolean param3) {
         if (!param3) {
-            return;
+          return;
         }
         param2.drawImage(this.field_a, param0, param1, (java.awt.image.ImageObserver) ((Object) this.field_g));
     }

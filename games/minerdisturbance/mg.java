@@ -18,49 +18,29 @@ final class mg {
         sa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = new sa(param1, param1);
-              hj.field_b.a((byte) -107, var2);
-              hj.field_f.b(param1);
-              if (param0 == 1963987425) {
-                break L1;
-              } else {
-                field_c = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = (sa) (var2);
-            break L0;
+          var2 = new sa(param1, param1);
+          hj.field_b.a((byte) -107, var2);
+          hj.field_f.b(param1);
+          if (param0 != 1963987425) {
+            field_c = (String) null;
           }
+          stackIn_3_0 = var2;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2_ref);
-
-            stackIn_6_1 = new StringBuilder().append("mg.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("mg.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(byte param0) {
@@ -72,38 +52,30 @@ final class mg {
         tm var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
+        tm var1Lifetime1;
         var2 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -84) {
-                break L1;
-              } else {
-                field_f = 8;
-                break L1;
-              }
+          if (param0 > -84) {
+            field_f = 8;
+          }
+          while (true) {
+            dupTemp$2 = (tm) (ok.field_b.e(63854));
+            var3 = dupTemp$2;
+            var1 = var3;
+            if (null != dupTemp$2) {
+              ke.field_X[var3.field_s] = false;
+              continue;
             }
-            L2: while (true) {
-              dupTemp$2 = (tm) ((Object) ok.field_b.e(63854));
-              var3 = dupTemp$2;
-              var1 = var3;
-              if (null == dupTemp$2) {
-                L3: while (true) {
-                  dupTemp$3 = (tm) ((Object) ec.field_c.e(63854));
-                  var4 = dupTemp$3;
-                  var1 = var4;
-                  if (null == dupTemp$3) {
-                    break L0;
-                  } else {
-                    ke.field_X[var4.field_s] = false;
-                    continue L3;
-                  }
-                }
-              } else {
-                ke.field_X[var3.field_s] = false;
-                continue L2;
-              }
+            break;
+          }
+          while (true) {
+            dupTemp$3 = (tm) (ec.field_c.e(63854));
+            var4 = dupTemp$3;
+            var1Lifetime1 = var4;
+            if (null == dupTemp$3) {
+              return;
             }
+            ke.field_X[var4.field_s] = false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,29 +92,14 @@ final class mg {
 
     final int b(int param0) {
         int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == -23719) {
-            break L0;
-          } else {
-            mg.a((byte) -12);
-            break L0;
-          }
+        if (param0 != -23719) {
+          mg.a((byte) -12);
         }
-        L1: {
-          L2: {
-            if (this.field_d == null) {
-              break L2;
-            } else {
-              if (this.field_d.length == 0) {
-                break L2;
-              } else {
-                stackIn_6_0 = this.field_d[this.field_d.length + -1];
-                break L1;
-              }
-            }
-          }
+        if (this.field_d != null &&
+          this.field_d.length != 0) {
+          stackIn_6_0 = this.field_d[this.field_d.length - 1];
+        } else {
           stackIn_6_0 = 0;
-          break L1;
         }
         return stackIn_6_0;
     }
@@ -152,41 +109,26 @@ final class mg {
         field_b = null;
         field_g = null;
         if (param0 < 48) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         field_c = null;
     }
 
     final int a(int param0, int param1) {
-        int var3;
+        int var3 = 0;
         int var4;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          if (this.field_d == null) {
-            break L0;
-          } else {
-            if (0 == this.field_d.length) {
-              break L0;
-            } else {
-              var3 = 1;
-              L1: while (true) {
-                if (var3 >= this.field_d.length) {
-                  if (param1 == -24040) {
-                    return this.field_d.length - 1;
-                  } else {
-                    return -91;
-                  }
-                } else {
-                  if ((this.field_d[var3] + this.field_d[-1 + var3] >> 1963987425 ^ -1) < (param0 ^ -1)) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                }
-              }
+        var4 = MinerDisturbance.field_ab;
+        if (this.field_d != null &&
+          0 != this.field_d.length) {
+          for (var3 = 1; var3 < this.field_d.length; var3++) {
+            if ((this.field_d[var3] + this.field_d[-1 + var3] >> 1) > param0) {
+              return var3 - 1;
             }
           }
+          if (param1 == -24040) {
+            return this.field_d.length - 1;
+          }
+          return -91;
         }
         return 0;
     }

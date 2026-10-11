@@ -13,21 +13,19 @@ final class de extends mb {
         field_ob = null;
         field_pb = null;
         field_sb = null;
-        if (param0) {
-          field_sb = (String) null;
-          field_rb = null;
-          return;
-        } else {
+        if (!param0) {
           field_rb = null;
           return;
         }
+        field_sb = (String) null;
+        field_rb = null;
     }
 
     final void b(fi param0, byte param1) {
         try {
-            super.b(param0, param1);
+          super.b(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "de.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "de.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

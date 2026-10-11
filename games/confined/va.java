@@ -35,8 +35,6 @@ final class va {
         nf[] stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -44,216 +42,120 @@ final class va {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
+        int var2_intLifetime3;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime3;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
+        int var5Lifetime4;
+        int var5Lifetime5;
+        int var5Lifetime6;
+        int var5Lifetime7;
         try {
-          L0: {
-            L1: {
-              if (param1[2].field_u != 0) {
-                break L1;
-              } else {
-                param1[2].field_s = param1[2].field_t;
-                break L1;
-              }
-            }
-            L2: {
-              if (0 != param1[5].field_u) {
-                break L2;
-              } else {
-                param1[5].field_s = param1[5].field_t;
-                break L2;
-              }
-            }
-            L3: {
-              if (0 == param1[8].field_u) {
-                param1[8].field_s = param1[8].field_t;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (param1[6].field_w == 0) {
-                param1[6].field_v = param1[6].field_x;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              if (param1[7].field_w != 0) {
-                break L5;
-              } else {
-                param1[7].field_v = param1[7].field_x;
-                break L5;
-              }
-            }
-            L6: {
-              if (0 == param1[8].field_w) {
-                param1[8].field_v = param1[8].field_x;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              var3 = param1[3].field_s + param1[3].field_u;
-              var2_int = param1[0].field_u + param1[0].field_s;
-              var4 = param1[6].field_u + param1[6].field_s;
-              if (var3 < var2_int) {
-                stackIn_18_0 = var2_int;
-                break L7;
-              } else {
-                stackIn_18_0 = var3;
-                break L7;
-              }
-            }
-            L8: {
-              var5 = stackIn_18_0;
-              if (var5 > var4) {
-                stackIn_21_0 = var5;
-                break L8;
-              } else {
-                stackIn_21_0 = var4;
-                break L8;
-              }
-            }
-            L9: {
-              var5 = stackIn_21_0;
-              var2_int = param1[2].field_s;
-              var3 = param1[5].field_s;
-              var4 = param1[8].field_s;
-              dupTemp$0 = param1[6];
-              dupTemp$0.field_t = var5;
-              dupTemp$1 = param1[3];
-              dupTemp$1.field_t = var5;
-              param1[0].field_t = var5;
-              if (var2_int < var3) {
-                stackIn_24_0 = var2_int;
-                break L9;
-              } else {
-                stackIn_24_0 = var3;
-                break L9;
-              }
-            }
-            L10: {
-              var5 = stackIn_24_0;
-              if (var5 < var4) {
-                stackIn_27_0 = var5;
-                break L10;
-              } else {
-                stackIn_27_0 = var4;
-                break L10;
-              }
-            }
-            L11: {
-              var5 = stackIn_27_0;
-              dupTemp$2 = param1[2];
-              dupTemp$2.field_t = dupTemp$2.field_t - var5;
-              dupTemp$3 = param1[2];
-              dupTemp$3.field_s = dupTemp$3.field_s - var5;
-              dupTemp$4 = param1[5];
-              dupTemp$4.field_t = dupTemp$4.field_t - var5;
-              dupTemp$5 = param1[5];
-              dupTemp$5.field_s = dupTemp$5.field_s - var5;
-              dupTemp$6 = param1[8];
-              dupTemp$6.field_t = dupTemp$6.field_t - var5;
-              var3 = param1[1].field_v - -param1[1].field_w;
-              var4 = param1[2].field_w + param1[2].field_v;
-              dupTemp$7 = param1[8];
-              dupTemp$7.field_s = dupTemp$7.field_s - var5;
-              var2_int = param1[0].field_v + param1[0].field_w;
-              if (var3 >= var2_int) {
-                stackIn_30_0 = var3;
-                break L11;
-              } else {
-                stackIn_30_0 = var2_int;
-                break L11;
-              }
-            }
-            L12: {
-              var5 = stackIn_30_0;
-              if (var5 > var4) {
-                stackIn_33_0 = var5;
-                break L12;
-              } else {
-                stackIn_33_0 = var4;
-                break L12;
-              }
-            }
-            L13: {
-              var5 = stackIn_33_0;
-              var2_int = param1[6].field_v;
-              var3 = param1[7].field_v;
-              var4 = param1[8].field_v;
-              dupTemp$8 = param1[2];
-              dupTemp$8.field_x = var5;
-              dupTemp$9 = param1[1];
-              dupTemp$9.field_x = var5;
-              param1[0].field_x = var5;
-              if (param0 > 113) {
-                break L13;
-              } else {
-                field_a = 85;
-                break L13;
-              }
-            }
-            L14: {
-              if (var3 <= var2_int) {
-                stackIn_38_0 = var3;
-                break L14;
-              } else {
-                stackIn_38_0 = var2_int;
-                break L14;
-              }
-            }
-            L15: {
-              var5 = stackIn_38_0;
-              if (var5 >= var4) {
-                stackIn_41_0 = var4;
-                break L15;
-              } else {
-                stackIn_41_0 = var5;
-                break L15;
-              }
-            }
-            var5 = stackIn_41_0;
-            dupTemp$10 = param1[6];
-            dupTemp$10.field_v = dupTemp$10.field_v - var5;
-            dupTemp$11 = param1[6];
-            dupTemp$11.field_x = dupTemp$11.field_x - var5;
-            dupTemp$12 = param1[7];
-            dupTemp$12.field_v = dupTemp$12.field_v - var5;
-            dupTemp$13 = param1[7];
-            dupTemp$13.field_x = dupTemp$13.field_x - var5;
-            dupTemp$14 = param1[8];
-            dupTemp$14.field_v = dupTemp$14.field_v - var5;
-            dupTemp$15 = param1[8];
-            dupTemp$15.field_x = dupTemp$15.field_x - var5;
-            stackIn_42_0 = (nf[]) (param1);
-            break L0;
+          if (param1[2].field_u == 0) {
+            param1[2].field_s = param1[2].field_t;
           }
+          if (0 == param1[5].field_u) {
+            param1[5].field_s = param1[5].field_t;
+          }
+          if (0 == param1[8].field_u) {
+            param1[8].field_s = param1[8].field_t;
+          }
+          if (param1[6].field_w == 0) {
+            param1[6].field_v = param1[6].field_x;
+          }
+          if (param1[7].field_w == 0) {
+            param1[7].field_v = param1[7].field_x;
+          }
+          if (0 == param1[8].field_w) {
+            param1[8].field_v = param1[8].field_x;
+          }
+          var3 = param1[3].field_s + param1[3].field_u;
+          var2_int = param1[0].field_u + param1[0].field_s;
+          var4 = param1[6].field_u + param1[6].field_s;
+          stackIn_18_0 = (var3 < var2_int) ? var2_int : var3;
+          var5 = stackIn_18_0;
+          stackIn_21_0 = (var5 > var4) ? var5 : var4;
+          var5Lifetime1 = stackIn_21_0;
+          var2_intLifetime1 = param1[2].field_s;
+          var3Lifetime1 = param1[5].field_s;
+          var4Lifetime1 = param1[8].field_s;
+          dupTemp$0 = param1[6];
+          dupTemp$0.field_t = var5Lifetime1;
+          dupTemp$1 = param1[3];
+          dupTemp$1.field_t = var5Lifetime1;
+          param1[0].field_t = var5Lifetime1;
+          stackIn_24_0 = (var2_intLifetime1 < var3Lifetime1) ? var2_intLifetime1 : var3Lifetime1;
+          var5Lifetime2 = stackIn_24_0;
+          stackIn_27_0 = (var5Lifetime2 < var4Lifetime1) ? var5Lifetime2 : var4Lifetime1;
+          var5Lifetime3 = stackIn_27_0;
+          dupTemp$2 = param1[2];
+          dupTemp$2.field_t = dupTemp$2.field_t - var5Lifetime3;
+          dupTemp$3 = param1[2];
+          dupTemp$3.field_s = dupTemp$3.field_s - var5Lifetime3;
+          dupTemp$4 = param1[5];
+          dupTemp$4.field_t = dupTemp$4.field_t - var5Lifetime3;
+          dupTemp$5 = param1[5];
+          dupTemp$5.field_s = dupTemp$5.field_s - var5Lifetime3;
+          dupTemp$6 = param1[8];
+          dupTemp$6.field_t = dupTemp$6.field_t - var5Lifetime3;
+          var3Lifetime2 = param1[1].field_v + param1[1].field_w;
+          var4Lifetime2 = param1[2].field_w + param1[2].field_v;
+          dupTemp$7 = param1[8];
+          dupTemp$7.field_s = dupTemp$7.field_s - var5Lifetime3;
+          var2_intLifetime2 = param1[0].field_v + param1[0].field_w;
+          stackIn_30_0 = (var3Lifetime2 >= var2_intLifetime2) ? var3Lifetime2 : var2_intLifetime2;
+          var5Lifetime4 = stackIn_30_0;
+          stackIn_33_0 = (var5Lifetime4 > var4Lifetime2) ? var5Lifetime4 : var4Lifetime2;
+          var5Lifetime5 = stackIn_33_0;
+          var2_intLifetime3 = param1[6].field_v;
+          var3Lifetime3 = param1[7].field_v;
+          var4Lifetime3 = param1[8].field_v;
+          dupTemp$8 = param1[2];
+          dupTemp$8.field_x = var5Lifetime5;
+          dupTemp$9 = param1[1];
+          dupTemp$9.field_x = var5Lifetime5;
+          param1[0].field_x = var5Lifetime5;
+          if (param0 <= 113) {
+            field_a = 85;
+          }
+          stackIn_38_0 = (var3Lifetime3 <= var2_intLifetime3) ? var3Lifetime3 : var2_intLifetime3;
+          var5Lifetime6 = stackIn_38_0;
+          stackIn_41_0 = (var5Lifetime6 >= var4Lifetime3) ? var4Lifetime3 : var5Lifetime6;
+          var5Lifetime7 = stackIn_41_0;
+          dupTemp$10 = param1[6];
+          dupTemp$10.field_v = dupTemp$10.field_v - var5Lifetime7;
+          dupTemp$11 = param1[6];
+          dupTemp$11.field_x = dupTemp$11.field_x - var5Lifetime7;
+          dupTemp$12 = param1[7];
+          dupTemp$12.field_v = dupTemp$12.field_v - var5Lifetime7;
+          dupTemp$13 = param1[7];
+          dupTemp$13.field_x = dupTemp$13.field_x - var5Lifetime7;
+          dupTemp$14 = param1[8];
+          dupTemp$14.field_v = dupTemp$14.field_v - var5Lifetime7;
+          dupTemp$15 = param1[8];
+          dupTemp$15.field_x = dupTemp$15.field_x - var5Lifetime7;
+          stackIn_42_0 = (nf[]) (param1);
+          return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L16: {
-            var2 = decompiledCaughtException;
-            stackIn_45_0 = (RuntimeException) (var2);
-
-            stackIn_45_1 = new StringBuilder().append("va.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "null";
-              break L16;
-            } else {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "{...}";
-              break L16;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_45_0 = var2;
+          stackIn_45_1 = new StringBuilder().append("va.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_46_2 = "null";
+          } else {
+            stackIn_46_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
-        return stackIn_42_0;
     }
 
     final static String a(int param0, byte[] param1) {
@@ -262,47 +164,27 @@ final class va {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                var3 = (byte[]) null;
-                va.a(7, (byte[]) null);
-                break L1;
-              }
-            }
-            stackIn_3_0 = kh.a(param1, param1.length, 0, 0);
-            break L0;
+          if (param0 != 0) {
+            var3 = (byte[]) null;
+            va.a(7, (byte[]) null);
           }
+          stackIn_3_0 = kh.a(param1, param1.length, 0, 0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("va.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("va.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public final String toString() {
@@ -322,7 +204,7 @@ final class va {
 
     final static boolean b(int param0) {
         if (param0 != 8) {
-            field_a = 74;
+          field_a = 74;
         }
         return hd.field_d;
     }

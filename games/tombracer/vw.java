@@ -10,7 +10,7 @@ abstract class vw {
 
     void c(boolean param0) {
         if (!param0) {
-            field_a = (nl) null;
+          field_a = (nl) null;
         }
     }
 
@@ -22,8 +22,8 @@ abstract class vw {
         field_b = null;
         field_a = null;
         if (param0 != 101) {
-            ffa var2 = (ffa) null;
-            vw.a(-92, (ffa) null, -43, true);
+          ffa var2 = (ffa) null;
+          vw.a(-92, (ffa) null, -43, true);
         }
     }
 
@@ -34,85 +34,58 @@ abstract class vw {
         q stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var4 = (q) ((Object) vga.field_n.c(27));
-              if (var4 == null) {
-                var4 = new q(param1, param0, param2);
-                break L1;
-              } else {
-                var4.a(param0, param1, (byte) 116, param2);
-                break L1;
-              }
-            }
-            if (param3) {
-              stackIn_7_0 = (q) (var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_5_0 = (q) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4 = (q) (vga.field_n.c(27));
+          if (var4 == null) {
+            var4 = new q(param1, param0, param2);
+          } else {
+            var4.a(param0, param1, (byte) 116, param2);
           }
+          if (param3) {
+            stackIn_7_0 = var4;
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (q) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4_ref);
-
-            stackIn_10_1 = new StringBuilder().append("vw.Q(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_10_0 = var4_ref;
+          stackIn_10_1 = new StringBuilder().append("vw.Q(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     void b(byte param0) {
         if (param0 != 107) {
-            this.b((byte) 23);
+          this.b((byte) 23);
         }
     }
 
     void a(boolean param0) {
         if (!param0) {
-            this.a(false);
+          this.a(false);
         }
     }
 
     void b(int param0) {
         if (param0 <= 64) {
-            this.a((byte) 45, -125, -56);
+          this.a((byte) 45, -125, -56);
         }
     }
 
     vw(eo param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "vw.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +95,7 @@ abstract class vw {
 
     void b(boolean param0) {
         if (!param0) {
-            field_b = (jea) null;
+          field_b = (jea) null;
         }
     }
 

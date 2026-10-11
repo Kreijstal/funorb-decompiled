@@ -13,7 +13,7 @@ final class fk {
         field_c = null;
         field_b = null;
         if (param0 < 59) {
-            field_d = -118;
+          field_d = -118;
         }
     }
 

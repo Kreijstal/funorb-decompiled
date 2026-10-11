@@ -10,7 +10,7 @@ abstract class d extends ta {
     public static void a(int param0) {
         field_q = null;
         field_r = null;
-        int var1 = 112 % ((param0 - -54) / 34);
+        int var1 = 112 % ((param0 + 54) / 34);
     }
 
     d(int param0) {
@@ -18,34 +18,27 @@ abstract class d extends ta {
     }
 
     final static void d(byte param0) {
-        L0: {
-          if (gn.field_m != null) {
-            gn.field_m.b(true);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (gn.field_m != null) {
+          gn.field_m.b(true);
         }
         je.field_g = new th();
-        if (param0 > -43) {
-          d.a(8);
-          hb.field_x.c(je.field_g, 33);
-          return;
-        } else {
+        if (param0 <= -43) {
           hb.field_x.c(je.field_g, 33);
           return;
         }
+        d.a(8);
+        hb.field_x.c(je.field_g, 33);
     }
 
     final static void a(String param0, byte param1) {
         try {
-            if (param1 != 31) {
-                field_r = (sp) null;
-            }
-            eb.field_c = param0;
-            od.b(param1 + 97, 12);
+          if (param1 != 31) {
+            field_r = (sp) null;
+          }
+          eb.field_c = param0;
+          od.b(param1 + 97, 12);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class ue {
         field_b = null;
         field_a = null;
         if (param0 != -114) {
-            return;
+          return;
         }
         field_f = null;
     }
@@ -21,11 +21,11 @@ final class ue {
     final synchronized static long a(boolean param0) {
         long var1 = System.currentTimeMillis();
         if (!(jl.field_c <= var1)) {
-            gn.field_C = gn.field_C + (jl.field_c + -var1);
+          gn.field_C = gn.field_C + (jl.field_c - var1);
         }
         jl.field_c = var1;
         if (param0) {
-            ue.a(false);
+          ue.a(false);
         }
         return gn.field_C + var1;
     }

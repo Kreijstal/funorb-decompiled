@@ -12,14 +12,12 @@ public class hu {
     private static String field_e;
 
     public static File a(String param0, int param1) {
-        String var3;
-        if (param1 != 0) {
-          var3 = (String) null;
-          hu.a((String) null, -116);
-          return hu.a(field_a, param0, field_e, 1);
-        } else {
+        if (param1 == 0) {
           return hu.a(field_a, param0, field_e, 1);
         }
+        String var3 = (String) null;
+        hu.a((String) null, -116);
+        return hu.a(field_a, param0, field_e, 1);
     }
 
     public static File a(int param0, String param1, String param2, int param3) {
@@ -33,43 +31,25 @@ public class hu {
     public static void a(int param0, int param1, String param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          field_e = param2;
-          if (param0 == 0) {
-            break L0;
-          } else {
-            field_b = (String) null;
-            break L0;
-          }
+        field_e = param2;
+        if (param0 != 0) {
+          field_b = (String) null;
         }
         field_a = param1;
         try {
-          L1: {
-            L2: {
-              field_b = System.getProperty("user.home");
-              if (field_b == null) {
-                break L2;
-              } else {
-                field_b = field_b + "/";
-                break L2;
-              }
-            }
-            break L1;
+          field_b = System.getProperty("user.home");
+          if (field_b != null) {
+            field_b = field_b + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L3;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_d = true;
-        if (null == field_b) {
-          field_b = "~/";
-          return;
-        } else {
+        if (null != field_b) {
           return;
         }
+        field_b = "~/";
     }
 
     static {

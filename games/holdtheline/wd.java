@@ -30,47 +30,27 @@ abstract class wd extends wc {
         hj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -63) {
-                break L1;
-              } else {
-                var3 = (String) null;
-                wd.b((String) null, (byte) -20);
-                break L1;
-              }
-            }
-            stackIn_3_0 = dl.a(fb.field_i, param0, false, "");
-            break L0;
+          if (param1 != -63) {
+            var3 = (String) null;
+            wd.b((String) null, (byte) -20);
           }
+          stackIn_3_0 = dl.a(fb.field_i, param0, false, "");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("wd.TA(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("wd.TA(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     abstract qm a(int param0, float param1);
@@ -81,56 +61,31 @@ abstract class wd extends wc {
         int var2_int = 0;
         int var3 = 0;
         int[][] stackIn_4_0 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                stackIn_4_0 = fk.field_b;
-                break L1;
-              } else {
-                stackIn_4_0 = dl.field_k;
-                break L1;
-              }
-            }
-            em.field_i = stackIn_4_0;
-            if (param1 == 97) {
-              var2_int = 0;
-              L2: while (true) {
-                if (l.field_a.length <= var2_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    if (-14 != (var2_int ^ -1)) {
-                      ((ti) ((Object) l.field_a[var2_int])).e(-127);
-                      break L3;
-                    } else {
-                      ((ec) ((Object) l.field_a[var2_int])).a(true, 6267);
-                      break L3;
-                    }
-                  }
-                  var2_int++;
-                  continue L2;
-                }
-              }
+          if (!param0) {
+            stackIn_4_0 = fk.field_b;
+          } else {
+            stackIn_4_0 = dl.field_k;
+          }
+          em.field_i = stackIn_4_0;
+          if (param1 != 97) {
+            return;
+          }
+          for (var2_int = 0; l.field_a.length > var2_int; var2_int++) {
+            if (var2_int != 13) {
+              ((ti) (l.field_a[var2_int])).e(-127);
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              ((ec) (l.field_a[var2_int])).a(true, 6267);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw kk.a((Throwable) ((Object) var2), "wd.VA(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -140,7 +95,7 @@ abstract class wd extends wc {
         field_u = null;
         field_v = null;
         if (param0 != -3369) {
-            return;
+          return;
         }
         field_p = null;
         field_l = null;
@@ -148,7 +103,7 @@ abstract class wd extends wc {
 
     final static String j(int param0) {
         if (param0 != -14) {
-            return (String) null;
+          return (String) null;
         }
         return sg.field_Y;
     }

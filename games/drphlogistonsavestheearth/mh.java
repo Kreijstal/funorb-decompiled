@@ -13,16 +13,16 @@ final class mh {
     final static void a(int param0, byte param1, vb param2) {
         lh var3 = null;
         try {
-            int var4 = -117 % ((-28 - param1) / 32);
-            var3 = nj.field_p;
-            var3.d(param0, -18392);
-            var3.c(5, (byte) -99);
-            var3.c(0, (byte) -88);
-            var3.c(param2.field_i, -17402);
-            var3.c(param2.field_h, (byte) -127);
-            var3.c(param2.field_m, (byte) -99);
+          int var4 = -117 % ((-28 - param1) / 32);
+          var3 = nj.field_p;
+          var3.d(param0, -18392);
+          var3.c(5, (byte) -99);
+          var3.c(0, (byte) -88);
+          var3.c(param2.field_i, -17402);
+          var3.c(param2.field_h, (byte) -127);
+          var3.c(param2.field_m, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "mh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "mh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,9 +31,9 @@ final class mh {
         field_a = null;
         field_c = null;
         if (param0 != -9) {
-            field_g = (he[]) null;
-            field_g = null;
-            return;
+          field_g = (he[]) null;
+          field_g = null;
+          return;
         }
         field_g = null;
     }

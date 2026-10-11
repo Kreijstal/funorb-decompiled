@@ -23,12 +23,12 @@ final class mg {
         field_b = param3 - param1;
         mg.a();
         if (field_g.length < field_b) {
-            field_g = new int[fj.a(field_b, (byte) 108)];
+          field_g = new int[fj.a(field_b, (byte) 108)];
         }
         int var4 = param1 * lb.field_c + param0;
         for (var5 = 0; var5 < field_b; var5++) {
-            field_g[var5] = var4;
-            var4 = var4 + lb.field_c;
+          field_g[var5] = var4;
+          var4 = var4 + lb.field_c;
         }
     }
 
@@ -46,20 +46,22 @@ final class mg {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_h = new int[2048];
         field_g = new int[1024];
         field_i = new int[512];
         field_c = new int[2048];
         field_f = new int[2048];
         for (var0 = 1; var0 < 512; var0++) {
-            field_i[var0] = 32768 / var0;
+          field_i[var0] = 32768 / var0;
         }
-        for (var0 = 1; var0 < 2048; var0++) {
-            field_h[var0] = 65536 / var0;
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_h[var0Lifetime1] = 65536 / var0Lifetime1;
         }
-        for (var0 = 0; var0 < 2048; var0++) {
-            field_f[var0] = (int)(65536.0 * Math.sin((double)var0 * 0.0030679615));
-            field_c[var0] = (int)(65536.0 * Math.cos((double)var0 * 0.0030679615));
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_f[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_c[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

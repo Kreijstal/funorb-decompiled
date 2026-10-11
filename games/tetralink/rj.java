@@ -19,52 +19,34 @@ final class rj {
     private String field_m;
 
     final void a(boolean param0, int param1) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (!param0) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((rj) (this)).field_e = stackIn_3_1 != 0;
-        if (param1 != 8) {
-          this.a((byte) 28);
-          this.field_k = true;
-          return;
-        } else {
+        this.field_e = param0 ? true : false;
+        if (param1 == 8) {
           this.field_k = true;
           return;
         }
+        this.a((byte) 28);
+        this.field_k = true;
     }
 
     final boolean c(boolean param0) {
         if (param0) {
-            this.field_k = false;
-            return this.field_k;
+          this.field_k = false;
+          return this.field_k;
         }
         return this.field_k;
     }
 
     final String a(byte param0) {
         if (param0 != 72) {
-            field_i = (int[]) null;
-            return this.field_m;
+          field_i = (int[]) null;
+          return this.field_m;
         }
         return this.field_m;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-            return false;
+          return false;
         }
         return this.field_e;
     }
@@ -73,9 +55,9 @@ final class rj {
         this.field_k = false;
         this.field_e = false;
         try {
-            this.field_m = param0;
+          this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "rj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,14 +71,12 @@ final class rj {
         field_i = null;
         field_b = null;
         field_l = null;
-        if (!param0) {
-          field_o = (int[]) null;
-          field_h = null;
-          return;
-        } else {
+        if (param0) {
           field_h = null;
           return;
         }
+        field_o = (int[]) null;
+        field_h = null;
     }
 
     static {

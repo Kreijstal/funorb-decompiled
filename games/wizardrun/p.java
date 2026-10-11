@@ -17,105 +17,69 @@ final class p extends og implements wa {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = wizardrun.field_H;
         try {
-          L0: {
-            L1: {
-              var2_int = param1.charAt(0);
-              var3 = 1;
-              if (!param0) {
-                break L1;
-              } else {
-                field_W = 38;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var3 >= param1.length()) {
-                stackIn_10_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (param1.charAt(var3) != var2_int) {
-                  stackIn_7_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var3++;
-                  continue L2;
-                }
-              }
-            }
+          var2_int = param1.charAt(0);
+          var3 = 1;
+          if (param0) {
+            field_W = 38;
           }
+          while (var3 < param1.length()) {
+            if (param1.charAt(var3) != var2_int) {
+              return false;
+            }
+            var3++;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("p.FA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("p.FA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
+          throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, ub param3) {
         if (param0 != 10000536) {
-            return;
+          return;
         }
         try {
-            super.a(param0 + 0, param1, param2, param3);
-            this.field_X = -param2 + (pg.field_n + -this.field_o);
+          super.a(param0 + 0, param1, param2, param3);
+          this.field_X = -param2 + (pg.field_n - this.field_o);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "p.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, dk param1) {
         if (param0 != 0) {
-            return;
+          return;
         }
         try {
-            this.field_T = param1;
+          this.field_T = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "p.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "p.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void i(byte param0) {
         super.i((byte) -73);
         if (param0 > -59) {
-            dk var3 = (dk) null;
-            this.a(-16, (dk) null);
+          dk var3 = (dk) null;
+          this.a(-16, (dk) null);
         }
-        if (!(null == this.field_T)) {
-            this.field_T.a((byte) -115);
+        if (null != this.field_T) {
+          this.field_T.a((byte) -115);
         }
     }
 
@@ -126,37 +90,37 @@ final class p extends og implements wa {
 
     final static void a(byte param0, String param1, boolean param2, float param3) {
         try {
-            if (!(ea.field_e != null)) {
-                ea.field_e = new hk(u.field_A, bh.field_a);
-                u.field_A.b((ub) (ea.field_e), (byte) 126);
-            }
-            int var4_int = 25 % ((param0 - -75) / 34);
-            ea.field_e.a(param1, param3, 2113632, param2);
-            ed.d();
-            od.a(-117, true);
+          if (ea.field_e == null) {
+            ea.field_e = new hk(u.field_A, bh.field_a);
+            u.field_A.b((ub) (ea.field_e), (byte) 126);
+          }
+          int var4_int = 25 % ((param0 + 75) / 34);
+          ea.field_e.a(param1, param3, 2113632, param2);
+          ed.d();
+          od.a(-117, true);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "p.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final static uf[] l(byte param0) {
         if (param0 != 100) {
-            return (uf[]) null;
+          return (uf[]) null;
         }
         return new uf[]{hd.field_C, jf.field_e, ra.field_j};
     }
 
     final String c(boolean param0) {
         if (!this.field_v) {
-            return null;
+          return null;
         }
         if (null == this.field_p) {
-            return null;
+          return null;
         }
         if (param0) {
-            this.a((byte) -27);
+          this.a((byte) -27);
         }
-        og.a(pg.field_n + -this.field_X + this.field_r, fi.field_B, -91);
+        og.a(pg.field_n - this.field_X + this.field_r, fi.field_B, -91);
         return this.field_p;
     }
 

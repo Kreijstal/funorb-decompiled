@@ -8,20 +8,21 @@ final class mia extends cia {
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = BachelorFridge.field_y;
+        int var1_intLifetime1;
         try {
-            ena.field_m.a(false);
-            for (var1_int = 0; var1_int < 32; var1_int++) {
-                ta.field_d[var1_int] = 0L;
-            }
-            if (param0 != 32) {
-                mia.d((byte) 3);
-            }
-            for (var1_int = 0; var1_int < 32; var1_int++) {
-                baa.field_C[var1_int] = 0L;
-            }
-            ea.field_f = 0;
+          ena.field_m.a(false);
+          for (var1_int = 0; var1_int < 32; var1_int++) {
+            ta.field_d[var1_int] = 0L;
+          }
+          if (param0 != 32) {
+            mia.d((byte) 3);
+          }
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+            baa.field_C[var1_intLifetime1] = 0L;
+          }
+          ea.field_f = 0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "mia.I(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "mia.I(" + param0 + ')');
         }
     }
 
@@ -35,7 +36,7 @@ final class mia extends cia {
 
     final static sna d(byte param0) {
         if (param0 != -104) {
-            mia.b(-95);
+          mia.b(-95);
         }
         return kja.a((byte) 20);
     }

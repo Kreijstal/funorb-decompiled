@@ -13,91 +13,61 @@ final class ja {
 
     final static boolean a(int param0) {
         if (!il.field_a) {
-            return false;
+          return false;
         }
-        if (param0 != (ui.field_g ^ -1)) {
-            return false;
+        if (param0 != ~ui.field_g) {
+          return false;
         }
         return true;
     }
 
     final static String a(String param0, byte param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         String stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var2_int = param0.length();
-              var3 = new char[var2_int];
-              if (param1 == -44) {
-                break L1;
-              } else {
-                ja.a(75);
-                break L1;
-              }
-            }
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var2_int) {
-                stackIn_10_0 = new String(var3);
-                break L0;
-              } else {
-                L3: {
-                  var5 = param0.charAt(var4);
-                  if (var4 == 0) {
-                    var5 = jp.a(true, (char) var5);
-                    break L3;
-                  } else {
-                    var5 = Character.toLowerCase((char) var5);
-                    break L3;
-                  }
-                }
-                var3[var4] = (char)var5;
-                var4++;
-                continue L2;
-              }
-            }
+          var2_int = param0.length();
+          var3 = new char[var2_int];
+          if (param1 != -44) {
+            ja.a(75);
           }
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var5 = param0.charAt(var4);
+            if (var4 == 0) {
+              var5 = jp.a(true, (char) var5);
+            } else {
+              var5 = Character.toLowerCase((char) var5);
+            }
+            var3[var4] = (char)var5;
+          }
+          stackIn_10_0 = new String(var3);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("ja.A(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("ja.A(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_10_0;
     }
 
     public static void b(int param0) {
         if (param0 <= 114) {
-            return;
+          return;
         }
         field_f = null;
         field_e = null;

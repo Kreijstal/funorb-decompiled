@@ -7,7 +7,7 @@ final class ue extends mf implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, byte param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != 62) {
-            this.b(-86);
+          this.b(-86);
         }
     }
 

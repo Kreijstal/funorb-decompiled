@@ -11,7 +11,7 @@ final class ug {
     final static void a(int param0) {
         ef.a(el.field_y[eh.a(28207, sk.field_n, el.field_y.length)], -102);
         if (param0 < 81) {
-            field_a = -35;
+          field_a = -35;
         }
     }
 
@@ -21,7 +21,7 @@ final class ug {
 
     final static void b(boolean param0) {
         if (param0) {
-            ug.a(-48);
+          ug.a(-48);
         }
     }
 
@@ -31,18 +31,17 @@ final class ug {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         return in.field_a;
     }
 
     final static r a(byte param0, long param1) {
-        if (param0 > -75) {
-          ug.a((byte) -33, -47L);
-          return (r) ((Object) d.field_Mb.a(param1, 3000));
-        } else {
-          return (r) ((Object) d.field_Mb.a(param1, 3000));
+        if (param0 <= -75) {
+          return (r) (d.field_Mb.a(param1, 3000));
         }
+        ug.a((byte) -33, -47L);
+        return (r) (d.field_Mb.a(param1, 3000));
     }
 
     static {

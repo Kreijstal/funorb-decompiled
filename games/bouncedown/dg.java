@@ -23,133 +23,83 @@ final class dg {
         int var7;
         int var8;
         int var9;
-        L0: {
-          var9 = Bounce.field_N;
-          var4 = this.field_d;
-          if (var4 == 0) {
-            if (this.field_b != 0) {
-              kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h - od.field_f.field_s * (this.field_b + 2));
-              var4 = param1 + (int)this.field_c;
-              var5_int = -(od.field_f.field_s * (2 + this.field_b)) + (16 + ((int)this.field_h + 16));
-              var5_int -= 64;
-              var6 = od.field_f.b(hf.field_c);
-              var7 = od.field_f.field_s;
-              ii.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
-              ve.a(8 + (var7 + 16), var5_int + -27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 + -(var6 / 2));
-              break L0;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime3;
+        int var3Lifetime4;
+        boolean decompiledFrameRemainder0 = true;
+        var9 = Bounce.field_N;
+        var4 = this.field_d;
+        if (var4 == 0) {
+          if (this.field_b != 0) {
+            kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h - od.field_f.field_s * (this.field_b + 2));
+            var4 = param1 + (int)this.field_c;
+            var5_int = -(od.field_f.field_s * (2 + this.field_b)) + (16 + ((int)this.field_h + 16));
+            var5_int -= 64;
+            var6 = od.field_f.b(hf.field_c);
+            var7 = od.field_f.field_s;
+            ii.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
+            ve.a(8 + (var7 + 16), var5_int - 27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 - var6 / 2);
+          } else {
+            kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
+          }
+        } else {
+          if (var4 != 1) {
+            if (var4 != 2) {
+              if (var4 != 3 &&
+                var4 != 4) {
+                if ((5 == var4)) {
+                  if (this.field_b == 2) {
+                    var3 = this.field_g * 4 / 256;
+                    nk.field_h[var3].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+                    var3Lifetime4 = this.field_g * 16 / 256 % 20;
+                    if (var3Lifetime4 > 1) {
+                      var3Lifetime4 = 0;
+                    }
+                    nl.field_d[var3Lifetime4].a((int)((double)param1 + this.field_c - 64.0), -16 + (int)this.field_h);
+                  }
+                  if (this.field_b == 0) {
+                    var3Lifetime2 = 3 * this.field_g / 256;
+                    wb.field_e[var3Lifetime2].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
+                  }
+                  if ((this.field_b == 1)) {
+                    var3Lifetime3 = this.field_g * 3 / 256;
+                    bd.field_j[var3Lifetime3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
+                  }
+                }
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                var3Lifetime1 = this.field_b * 6 / 256;
+                if (4 == this.field_d) {
+                  fd.field_n[var3Lifetime1].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+                } else {
+                  fd.field_n[var3Lifetime1].d((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
+                }
+              }
             } else {
-              kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
-              break L0;
+              if (this.field_b < 16) {
+                q.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
+              }
+              if (vh.a(0, (byte) 88)) {
+                for (var4 = 0; 2 > var4; var4++) {
+                  var5 = 3.14 * (double)var4 + (0.05 * this.field_h + this.field_c);
+                  var7 = (int)(Math.abs(this.field_h) / 10.0 + (double)var4) % 4;
+                  var8 = 16 + this.field_b;
+                  uk.field_f[var7].a((int)(this.field_c + (double)param1 + Math.sin(var5) * (double)(4 * var8) - (double)(uk.field_f[var7].field_t / 2)), (int)(this.field_h + Math.cos((double)(1 + var4) * var5) * (double)var8 - (double)(4 * this.field_b)));
+                }
+              }
             }
           } else {
-            if (var4 != 1) {
-              if ((var4 ^ -1) != -3) {
-                L1: {
-                  if ((var4 ^ -1) != -4) {
-                    if (-5 == (var4 ^ -1)) {
-                      break L1;
-                    } else {
-                      if (5 == var4) {
-                        L2: {
-                          if ((this.field_b ^ -1) != -3) {
-                            break L2;
-                          } else {
-                            L3: {
-                              var3 = this.field_g * 4 / 256;
-                              nk.field_h[var3].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
-                              var3 = this.field_g * 16 / 256 % 20;
-                              if ((var3 ^ -1) < -2) {
-                                var3 = 0;
-                                break L3;
-                              } else {
-                                break L3;
-                              }
-                            }
-                            nl.field_d[var3].a((int)((double)param1 + this.field_c - 64.0), -16 + (int)this.field_h);
-                            break L2;
-                          }
-                        }
-                        L4: {
-                          if (this.field_b != 0) {
-                            break L4;
-                          } else {
-                            var3 = 3 * this.field_g / 256;
-                            wb.field_e[var3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
-                            break L4;
-                          }
-                        }
-                        if ((this.field_b ^ -1) != -2) {
-                          break L0;
-                        } else {
-                          var3 = this.field_g * 3 / 256;
-                          bd.field_j[var3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
-                          break L0;
-                        }
-                      } else {
-                        if (-7 == (var4 ^ -1)) {
-                          break L0;
-                        } else {
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    break L1;
-                  }
-                }
-                var3 = this.field_b * 6 / 256;
-                if (4 == this.field_d) {
-                  fd.field_n[var3].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
-                  break L0;
-                } else {
-                  fd.field_n[var3].d((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
-                  break L0;
-                }
-              } else {
-                L5: {
-                  if (this.field_b < 16) {
-                    q.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                if (!vh.a(0, (byte) 88)) {
-                  break L0;
-                } else {
-                  var4 = 0;
-                  L6: while (true) {
-                    if (2 <= var4) {
-                      break L0;
-                    } else {
-                      var5 = 3.14 * (double)var4 + (0.05 * this.field_h + this.field_c);
-                      var7 = (int)(Math.abs(this.field_h) / 10.0 + (double)var4) % 4;
-                      var8 = 16 + this.field_b;
-                      uk.field_f[var7].a((int)(this.field_c + (double)param1 + Math.sin(var5) * (double)(4 * var8) - (double)(uk.field_f[var7].field_t / 2)), (int)(this.field_h + Math.cos((double)(1 + var4) * var5) * (double)var8 - (double)(4 * this.field_b)));
-                      var4++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
+            if (0 >= this.field_b) {
+              re.field_a.a((int)(-64.0 + ((double)param1 + this.field_c)), -re.field_a.field_q + (int)this.field_h + a.field_f.field_q);
             } else {
-              if (0 >= this.field_b) {
-                re.field_a.a((int)(-64.0 + ((double)param1 + this.field_c)), -re.field_a.field_q + (int)this.field_h + a.field_f.field_q);
-                break L0;
-              } else {
-                a.field_f.a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
-                break L0;
-              }
+              a.field_f.a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
             }
           }
         }
-        L7: {
-          if (param0 == 1) {
-            break L7;
-          } else {
-            this.a(87, 11);
-            break L7;
-          }
+        if (param0 != 1) {
+          this.a(87, 11);
         }
     }
 
@@ -159,7 +109,7 @@ final class dg {
         field_k = null;
         field_a = null;
         if (param0 != 64) {
-            return;
+          return;
         }
         field_e = null;
     }
@@ -167,55 +117,30 @@ final class dg {
     final void a(int param0) {
         int var2;
         int var3;
-        L0: {
-          var3 = Bounce.field_N;
-          var2 = this.field_d;
-          if (var2 != 0) {
-            if (1 != var2) {
-              if ((var2 ^ -1) == -3) {
-                this.field_j = this.field_h;
-                if (-1 <= (this.field_b ^ -1)) {
-                  break L0;
-                } else {
-                  L1: {
-                    if (16 >= this.field_b) {
-                      break L1;
-                    } else {
-                      this.field_j = 580.0;
-                      break L1;
-                    }
-                  }
-                  this.field_b = this.field_b + 1;
-                  break L0;
+        var3 = Bounce.field_N;
+        var2 = this.field_d;
+        if (var2 != 0) {
+          if (1 != var2) {
+            if (var2 == 2) {
+              this.field_j = this.field_h;
+              if (this.field_b > 0) {
+                if (16 < this.field_b) {
+                  this.field_j = 580.0;
                 }
-              } else {
-                if (3 != var2) {
-                  if (4 != var2) {
-                    if (5 == var2) {
-                      this.field_j = this.field_h;
-                      this.field_g = this.field_g + 10;
-                      if (-257 >= (this.field_g ^ -1)) {
-                        this.field_g = this.field_g - 256;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    } else {
-                      if ((var2 ^ -1) == -7) {
-                        this.field_j = this.field_h;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
+                this.field_b = this.field_b + 1;
+              }
+            } else {
+              if (3 != var2) {
+                if (4 != var2) {
+                  if (5 == var2) {
+                    this.field_j = this.field_h;
+                    this.field_g = this.field_g + 10;
+                    if (this.field_g >= 256) {
+                      this.field_g = this.field_g - 256;
                     }
                   } else {
-                    this.field_j = this.field_h;
-                    this.field_b = this.field_b + 10;
-                    if (this.field_b < 256) {
-                      break L0;
-                    } else {
-                      this.field_b = this.field_b - 256;
-                      break L0;
+                    if (var2 == 6) {
+                      this.field_j = this.field_h;
                     }
                   }
                 } else {
@@ -223,51 +148,41 @@ final class dg {
                   this.field_b = this.field_b + 10;
                   if (this.field_b >= 256) {
                     this.field_b = this.field_b - 256;
-                    break L0;
-                  } else {
-                    break L0;
                   }
                 }
-              }
-            } else {
-              this.field_j = (double)(-re.field_a.field_q) + ((double)a.field_f.field_q + this.field_h);
-              if (0 >= this.field_b) {
-                break L0;
               } else {
-                this.field_b = this.field_b + 1;
-                this.field_j = (double)(-re.field_a.field_q) + (this.field_h + (double)a.field_f.field_q);
-                if (-25 < (this.field_b ^ -1)) {
-                  break L0;
-                } else {
-                  this.field_b = 0;
-                  break L0;
+                this.field_j = this.field_h;
+                this.field_b = this.field_b + 10;
+                if (this.field_b >= 256) {
+                  this.field_b = this.field_b - 256;
                 }
               }
             }
           } else {
-            this.field_j = this.field_h;
-            if (-1 <= (this.field_b ^ -1)) {
-              break L0;
-            } else {
-              this.field_j = this.field_j - (double)((2 + this.field_b) * od.field_f.field_s);
-              break L0;
+            this.field_j = (double)(-re.field_a.field_q) + ((double)a.field_f.field_q + this.field_h);
+            if (0 < this.field_b) {
+              this.field_b = this.field_b + 1;
+              this.field_j = (double)(-re.field_a.field_q) + (this.field_h + (double)a.field_f.field_q);
+              if (this.field_b >= 24) {
+                this.field_b = 0;
+              }
             }
           }
-        }
-        L2: {
-          if (param0 == -64) {
-            break L2;
-          } else {
-            field_e = (uf) null;
-            break L2;
+        } else {
+          this.field_j = this.field_h;
+          if (this.field_b > 0) {
+            this.field_j = this.field_j - (double)((2 + this.field_b) * od.field_f.field_s);
           }
+        }
+        if (param0 != -64) {
+          field_e = (uf) null;
         }
     }
 
     final static void b(int param0) {
         hf.field_b = false;
         if (param0 != 16) {
-            field_a = (tg[]) null;
+          field_a = (tg[]) null;
         }
         jc.field_g.d((byte) -72);
     }
@@ -279,11 +194,11 @@ final class dg {
         this.field_b = 0;
         this.field_j = this.field_h;
         this.field_g = 0;
-        if (!(this.field_d != 5)) {
-            this.field_b = (int)(Math.random() * 3.0);
+        if (this.field_d == 5) {
+          this.field_b = (int)(Math.random() * 3.0);
         }
         if (param0 <= 23) {
-            this.field_j = -0.44957444926435286;
+          this.field_j = -0.44957444926435286;
         }
     }
 
@@ -300,11 +215,11 @@ final class dg {
         char[] var3 = new char[param0];
         int var4 = 0;
         if (param2 != -13810) {
-            dg.b(32);
+          dg.b(32);
         }
         while (var4 < param0) {
-            var3[var4] = param1;
-            var4++;
+          var3[var4] = param1;
+          var4++;
         }
         return new String(var3);
     }

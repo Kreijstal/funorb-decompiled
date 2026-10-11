@@ -12,7 +12,7 @@ final class fj {
         field_a = null;
         field_b = null;
         if (param0 != -11965) {
-            field_c = -2;
+          field_c = -2;
         }
     }
 

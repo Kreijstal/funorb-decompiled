@@ -11,7 +11,7 @@ final class ps {
 
     public static void a(int param0) {
         if (param0 != 28) {
-            return;
+          return;
         }
         field_d = null;
         field_e = null;

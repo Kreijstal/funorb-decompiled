@@ -24,12 +24,12 @@ final class bq extends ji {
 
     final static void a(aa param0, int param1) {
         try {
-            ql.field_L.b(param0, param1 ^ -120);
-            if (param1 != -1) {
-                bq.g(-18);
-            }
+          ql.field_L.b(param0, param1 ^ -120);
+          if (param1 != -1) {
+            bq.g(-18);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "bq.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "bq.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class bq extends ji {
         field_C = null;
         field_G = null;
         if (param0 <= 7) {
-            field_G = (String[]) null;
+          field_G = (String[]) null;
         }
         field_A = null;
         field_D = null;
@@ -65,50 +65,53 @@ final class bq extends ji {
         int var13 = 0;
         int var21 = Vertigo2.field_L ? 1 : 0;
         if (param0 != -3780) {
-            field_A = (String) null;
+          field_A = (String) null;
         }
         int[][] var29 = this.field_v.a(param1, -2);
         int[][] var23 = var29;
         int[][] var22 = var23;
         int[][] var3 = var22;
         if (this.field_v.field_c) {
-            var40 = this.a(0, -1, -1 + param1 & fk.field_x);
-            var5 = this.a(0, -1, param1);
-            var41 = this.a(0, -1, 1 + param1 & fk.field_x);
-            var42 = var29[0];
-            var43 = var29[1];
-            var44 = var29[2];
-            for (var10 = 0; var10 < we.field_M; var10++) {
-                var14 = (-var40[var10] + var41[var10]) * this.field_y;
-                var15 = (var5[1 + var10 & rm.field_z] + -var5[var10 + -1 & rm.field_z]) * this.field_y;
-                var16 = var15 >> 958383596;
-                var17 = var14 >> 1233262572;
-                var18 = var16 * var16 >> -752775700;
-                var19 = var17 * var17 >> 1199701964;
-                var20 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)));
-                if (-1 == (var20 ^ -1)) {
-                    var11 = 0;
-                    var12 = 0;
-                    var13 = 0;
-                } else {
-                    var11 = var15 / var20;
-                    var12 = var14 / var20;
-                    var13 = 16777216 / var20;
-                }
-                if (this.field_z) {
-                    var13 = (var13 >> -2008517247) + 2048;
-                    var11 = (var11 >> -141644575) + 2048;
-                    var12 = 2048 + (var12 >> -972630783);
-                }
-                var42[var10] = var11;
-                var43[var10] = var12;
-                var44[var10] = var13;
+          var40 = this.a(0, -1, -1 + param1 & fk.field_x);
+          var5 = this.a(0, -1, param1);
+          var41 = this.a(0, -1, 1 + param1 & fk.field_x);
+          var42 = var29[0];
+          var43 = var29[1];
+          var44 = var29[2];
+          for (var10 = 0; var10 < we.field_M; var10++) {
+            var14 = (-var40[var10] + var41[var10]) * this.field_y;
+            var15 = (var5[1 + var10 & rm.field_z] - var5[var10 - 1 & rm.field_z]) * this.field_y;
+            var16 = var15 >> 12;
+            var17 = var14 >> 12;
+            var18 = var16 * var16 >> 12;
+            var19 = var17 * var17 >> 12;
+            var20 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var19 + var18)) / 4096.0f)));
+            if (var20 == 0) {
+              var11 = 0;
+              var12 = 0;
+              var13 = 0;
+            } else {
+              var11 = var15 / var20;
+              var12 = var14 / var20;
+              var13 = 16777216 / var20;
             }
+            if (this.field_z) {
+              var13 = (var13 >> 1) + 2048;
+              var11 = (var11 >> 1) + 2048;
+              var12 = 2048 + (var12 >> 1);
+            }
+            var42[var10] = var11;
+            var43[var10] = var12;
+            var44[var10] = var13;
+          }
         }
         return var22;
     }
 
     final static void h(int param0) {
+        int var15 = 0;
+        int var17_int = 0;
+        int var18 = 0;
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
@@ -125,126 +128,88 @@ final class bq extends ji {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int var15 = 0;
         int var16 = 0;
-        int var17_int = 0;
         jp var17 = null;
-        int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var3Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        double var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var19 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            tf.field_o = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-            var1_int = cg.field_b.length;
-            var21 = new int[var1_int];
-            var20 = var21;
-            var2 = var20;
-            var3 = 0;
-            L1: while (true) {
-              if (var1_int <= var3) {
-                L2: {
-                  var3 = tf.field_o[9] >> 1865500264;
-                  var4 = tf.field_o[10] >> -1110081560;
-                  var5 = tf.field_o[11] >> 1638730184;
-                  var6 = hm.field_F << -901694492;
-                  var7 = 0;
-                  var8 = nf.a((byte) -28, var6) >> -1588055800;
-                  var9 = fk.a((byte) -118, var6) >> 259698824;
-                  if (ed.field_n == -1) {
-                    break L2;
-                  } else {
-                    if (-1 != gb.field_d) {
-                      var9 = -128;
-                      var7 = -320 + ed.field_n;
-                      var8 = 240 - gb.field_d;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  var10 = 256.0 / Math.sqrt((double)(var9 * var9 + (var8 * var8 + var7 * var7)));
-                  var8 = (int)((double)var8 * var10);
-                  var9 = (int)((double)var9 * var10);
-                  var7 = (int)((double)var7 * var10);
-                  var12 = -var3 + var7;
-                  var13 = var8 - var4;
-                  var14 = -var5 + var9;
-                  if (param0 < -97) {
-                    break L3;
-                  } else {
-                    bq.g(19);
-                    break L3;
-                  }
-                }
-                var10 = 256.0 / Math.sqrt((double)(var14 * var14 + var13 * var13 + var12 * var12));
-                var13 = (int)((double)var13 * var10);
-                var12 = (int)((double)var12 * var10);
-                var14 = (int)((double)var14 * var10);
-                var15 = 0;
-                L4: while (true) {
-                  if (cg.field_b.length <= var15) {
-                    break L0;
-                  } else {
-                    var16 = 0;
-                    var17_int = 1;
-                    L5: while (true) {
-                      if (var17_int >= cg.field_b.length) {
-                        var21[var16] = -2147483648;
-                        var17 = cg.field_b[var16];
-                        c.a(var16, -3797);
-                        var18 = 0;
-                        L6: while (true) {
-                          if ((var18 ^ -1) <= -4) {
-                            ti.a(ba.field_g, (byte) -53, false, false, true, tf.field_o, var17);
-                            pb.a(var12, var8, var13, var17, var7, var14, var9, 73);
-                            var15++;
-                            continue L4;
-                          } else {
-                            ba.field_g[var18] = ba.field_g[var18] + jg.field_j[var15][var18];
-                            var18++;
-                            continue L6;
-                          }
-                        }
-                      } else {
-                        L7: {
-                          if (var21[var17_int] > var21[var16]) {
-                            var16 = var17_int;
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        var17_int++;
-                        continue L5;
-                      }
-                    }
-                  }
-                }
-              } else {
-                var4_ref_jp = cg.field_b[var3];
-                var4_ref_jp.a((byte) 117);
-                c.a(var3, -3797);
-                var5 = var4_ref_jp.field_D + var4_ref_jp.field_S >> -1956838559;
-                var6 = var4_ref_jp.field_E + var4_ref_jp.field_t >> 1483501601;
-                var7 = var4_ref_jp.field_B + var4_ref_jp.field_k >> -225308543;
-                var8 = tf.field_o[9] >> 67895810;
-                var9 = tf.field_o[10] >> 1118853442;
-                var10_int = tf.field_o[11] >> 650033538;
-                var11 = ba.field_g[4] * var9 + (var8 * ba.field_g[3] + ba.field_g[5] * var10_int) >> -1215364050;
-                var12 = ba.field_g[8] * var10_int + ba.field_g[7] * var9 + var8 * ba.field_g[6] >> 351844046;
-                var13 = ba.field_g[9] * var8 - (-(ba.field_g[10] * var9) - ba.field_g[11] * var10_int) >> -1401476946;
-                var2[var3] = var13 * var7 + (var5 * var11 + var12 * var6) >> 611473168;
-                var3++;
-                continue L1;
+          tf.field_o = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          var1_int = cg.field_b.length;
+          var21 = new int[var1_int];
+          var20 = var21;
+          var2 = var20;
+          for (var3 = 0; var1_int > var3; var3++) {
+            var4_ref_jp = cg.field_b[var3];
+            var4_ref_jp.a((byte) 117);
+            c.a(var3, -3797);
+            var5 = var4_ref_jp.field_D + var4_ref_jp.field_S >> 1;
+            var6 = var4_ref_jp.field_E + var4_ref_jp.field_t >> 1;
+            var7 = var4_ref_jp.field_B + var4_ref_jp.field_k >> 1;
+            var8 = tf.field_o[9] >> 2;
+            var9 = tf.field_o[10] >> 2;
+            var10_int = tf.field_o[11] >> 2;
+            var11 = ba.field_g[4] * var9 + (var8 * ba.field_g[3] + ba.field_g[5] * var10_int) >> 14;
+            var12 = ba.field_g[8] * var10_int + ba.field_g[7] * var9 + var8 * ba.field_g[6] >> 14;
+            var13 = ba.field_g[9] * var8 - (-(ba.field_g[10] * var9) - ba.field_g[11] * var10_int) >> 14;
+            var2[var3] = var13 * var7 + (var5 * var11 + var12 * var6) >> 16;
+          }
+          var3Lifetime1 = tf.field_o[9] >> 8;
+          var4 = tf.field_o[10] >> 8;
+          var5Lifetime1 = tf.field_o[11] >> 8;
+          var6Lifetime1 = hm.field_F << 4;
+          var7Lifetime1 = 0;
+          var8Lifetime1 = nf.a((byte) -28, var6Lifetime1) >> 8;
+          var9Lifetime1 = fk.a((byte) -118, var6Lifetime1) >> 8;
+          if (ed.field_n != -1 &&
+            -1 != gb.field_d) {
+            var9Lifetime1 = -128;
+            var7Lifetime1 = -320 + ed.field_n;
+            var8Lifetime1 = 240 - gb.field_d;
+          }
+          var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
+          var8Lifetime1 = (int)((double)var8Lifetime1 * var10);
+          var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
+          var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
+          var12Lifetime1 = -var3Lifetime1 + var7Lifetime1;
+          var13Lifetime1 = var8Lifetime1 - var4;
+          var14 = -var5Lifetime1 + var9Lifetime1;
+          if (param0 >= -97) {
+            bq.g(19);
+          }
+          var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + var13Lifetime1 * var13Lifetime1 + var12Lifetime1 * var12Lifetime1));
+          var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
+          var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
+          var14 = (int)((double)var14 * var10Lifetime1);
+          for (var15 = 0; cg.field_b.length > var15; var15++) {
+            var16 = 0;
+            for (var17_int = 1; var17_int < cg.field_b.length; var17_int++) {
+              if (var21[var17_int] > var21[var16]) {
+                var16 = var17_int;
               }
             }
+            var21[var16] = -2147483648;
+            var17 = cg.field_b[var16];
+            c.a(var16, -3797);
+            for (var18 = 0; var18 < 3; var18++) {
+              ba.field_g[var18] = ba.field_g[var18] + jg.field_j[var15][var18];
+            }
+            ti.a(ba.field_g, (byte) -53, false, false, true, tf.field_o, var17);
+            pb.a(var12Lifetime1, var8Lifetime1, var13Lifetime1, var17, var7Lifetime1, var14, var9Lifetime1, 73);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -255,77 +220,38 @@ final class bq extends ji {
     final void a(byte param0, int param1, ed param2) {
         int var4_int = 0;
         int var5 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
+        boolean stackIn_8_1 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var4_int = param1;
-              if (var4_int == 0) {
-                this.field_y = param2.a((byte) -11);
-                break L1;
-              } else {
-                if (var4_int != 1) {
-                  break L1;
-                } else {
-                  L2: {
-                    stackIn_7_0 = this;
-
-                    if ((param2.h(-11) ^ -1) != -2) {
-                      stackIn_8_0 = this;
-                      stackIn_8_1 = 0;
-                      break L2;
-                    } else {
-                      stackIn_8_0 = this;
-                      stackIn_8_1 = 1;
-                      break L2;
-                    }
-                  }
-                  ((bq) (this)).field_z = stackIn_8_1 != 0;
-                  break L1;
-                }
-              }
+          var4_int = param1;
+          if (var4_int == 0) {
+            this.field_y = param2.a((byte) -11);
+          } else {
+            if (var4_int == 1) {
+              stackIn_8_1 = (param2.h(-11) == 1);
+              this.field_z = stackIn_8_1;
             }
-            L3: {
-              if (param0 == 110) {
-                break L3;
-              } else {
-                field_C = (String) null;
-                break L3;
-              }
-            }
-            break L0;
           }
+          if (param0 != 110) {
+            field_C = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4);
-
-            stackIn_14_1 = new StringBuilder().append("bq.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_14_0 = var4;
+          stackIn_14_1 = new StringBuilder().append("bq.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -12,33 +12,32 @@ final class fd {
     static lu field_d;
 
     final fd a(byte param0) {
-        if (param0 != 78) {
-          return (fd) null;
-        } else {
+        if (param0 == 78) {
           return new fd(this.field_c, this.field_b, this.field_f, this.field_h, this.field_a, this.field_g);
         }
+        return (fd) null;
     }
 
     final void a(int param0, fd param1) {
         try {
-            this.field_c = param1.field_c;
-            this.field_f = param1.field_f;
-            this.field_h = param1.field_h;
-            this.field_b = param1.field_b;
-            if (param0 != 167) {
-                field_d = (lu) null;
-            }
-            this.field_g = param1.field_g;
-            this.field_a = param1.field_a;
+          this.field_c = param1.field_c;
+          this.field_f = param1.field_f;
+          this.field_h = param1.field_h;
+          this.field_b = param1.field_b;
+          if (param0 != 167) {
+            field_d = (lu) null;
+          }
+          this.field_g = param1.field_g;
+          this.field_a = param1.field_a;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(byte param0) {
         field_d = null;
         if (param0 >= -103) {
-            field_d = (lu) null;
+          field_d = (lu) null;
         }
     }
 

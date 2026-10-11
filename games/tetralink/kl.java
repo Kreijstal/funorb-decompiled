@@ -14,16 +14,14 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
-        if (param3 != -79) {
-          kl.a(20, -54, 32, (byte) 91, -80);
-          nm.b((byte) 75);
-          ra.b(param4, param2, param0, param1);
-          return;
-        } else {
+        if (param3 == -79) {
           nm.b((byte) 75);
           ra.b(param4, param2, param0, param1);
           return;
         }
+        kl.a(20, -54, 32, (byte) 91, -80);
+        nm.b((byte) 75);
+        ra.b(param4, param2, param0, param1);
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -31,20 +29,20 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(byte param0, ie param1) {
         try {
-            if (param0 <= 33) {
-                java.awt.Graphics var4 = (java.awt.Graphics) null;
-                this.paint((java.awt.Graphics) null);
-            }
-            r.a(param1, this.field_d, 0);
+          if (param0 <= 33) {
+            java.awt.Graphics var4 = (java.awt.Graphics) null;
+            this.paint((java.awt.Graphics) null);
+          }
+          r.a(param1, this.field_d, 0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "kl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
         if (param0 >= -87) {
-            return;
+          return;
         }
         field_f = null;
         field_g = null;
@@ -58,9 +56,9 @@ final class kl extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_c = true;
+          this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "kl.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,12 +14,12 @@ final class g extends bw {
 
     final static void a(String param0, String param1, byte param2) {
         try {
-            wi.a(false, param1, param0, (byte) -68);
-            if (param2 <= 55) {
-                g.c((byte) 93);
-            }
+          wi.a(false, param1, param0, (byte) -68);
+          if (param2 <= 55) {
+            g.c((byte) 93);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "g.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "g.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -27,72 +27,40 @@ final class g extends bw {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5 = param3.b(108, param0, param1);
-              var4 = var5;
-              if (param2 == -30744) {
-                break L1;
-              } else {
-                g.c((byte) 41);
-                break L1;
-              }
-            }
-            if (var5 != null) {
-              hia.a(-42, var5);
-              stackIn_6_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5 = param3.b(108, param0, param1);
+          var4 = var5;
+          if (param2 != -30744) {
+            g.c((byte) 41);
           }
+          if (var5 == null) {
+            return false;
+          }
+          hia.a(-42, var5);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4_ref);
-
-            stackIn_9_1 = new StringBuilder().append("g.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_9_0 = var4_ref;
+          stackIn_9_1 = new StringBuilder().append("g.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          return stackIn_6_0 != 0;
+          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     g(byte[] param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -18,8 +18,8 @@ final class aa extends ii {
     final static ra b(int param0, int param1) {
         ra var2 = new ra();
         if (param0 != -19300) {
-            uj var3 = (uj) null;
-            aa.a(true, (uj) null);
+          uj var3 = (uj) null;
+          aa.a(true, (uj) null);
         }
         so.field_j.a(var2, false);
         qo.b(true, param1);
@@ -28,34 +28,33 @@ final class aa extends ii {
 
     final long a(byte param0) {
         this.field_k = this.field_k + this.d(1);
-        if (!((this.field_k ^ -1L) <= (this.field_i ^ -1L))) {
-            return (this.field_i + -this.field_k) / 1000000L;
+        if (this.field_k < this.field_i) {
+          return (this.field_i - this.field_k) / 1000000L;
         }
         int var2 = 33 % ((73 - param0) / 46);
         return 0L;
     }
 
     final static void a(byte param0, boolean param1) {
-        if (!(ki.field_e == null)) {
-            if (ki.field_e.b(0, param1)) {
-                ki.field_e = null;
-            }
+        if (ki.field_e != null &&
+          ki.field_e.b(0, param1)) {
+          ki.field_e = null;
         }
         if (param0 <= 113) {
-            field_l = (cj) null;
+          field_l = (cj) null;
         }
     }
 
     final static boolean e(int param0) {
         if (param0 != 0) {
-            field_n = (String[]) null;
+          field_n = (String[]) null;
         }
         return ch.field_e;
     }
 
     public static void f(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_n = null;
         field_p = null;
@@ -68,18 +67,19 @@ final class aa extends ii {
         int var8 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         long var2 = System.nanoTime();
-        long var4 = var2 + -this.field_m;
+        long var4 = var2 - this.field_m;
         this.field_m = var2;
-        if (var4 > -5000000000L && var4 < 5000000000L) {
-            this.field_g[this.field_q] = var4;
-            if (!(1 <= this.field_f)) {
-                this.field_f = this.field_f + 1;
-            }
-            this.field_q = (this.field_q - -1) % 10;
+        if (var4 > -5000000000L &&
+          var4 < 5000000000L) {
+          this.field_g[this.field_q] = var4;
+          if (1 > this.field_f) {
+            this.field_f = this.field_f + 1;
+          }
+          this.field_q = (this.field_q + 1) % 10;
         }
         long var6 = 0L;
         for (var8 = param0; var8 <= this.field_f; var8++) {
-            var6 = var6 + this.field_g[(-var8 + (this.field_q - -10)) % 10];
+          var6 = var6 + this.field_g[(-var8 + (this.field_q + 10)) % 10];
         }
         return var6 / (long)this.field_f;
     }
@@ -88,62 +88,45 @@ final class aa extends ii {
         int var4;
         int var5;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param1) {
-          if ((this.field_k ^ -1L) <= (this.field_i ^ -1L)) {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                this.field_i = this.field_i + param0;
-                var4++;
-                if (var4 >= 10) {
-                  break L1;
-                } else {
-                  if (this.field_k > this.field_i) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (this.field_i < this.field_k) {
-                  this.field_i = this.field_k;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return var4;
-            }
-          } else {
-            this.field_m = this.field_m + (this.field_i - this.field_k);
-            this.field_k = this.field_k + (this.field_i - this.field_k);
-            this.field_i = this.field_i + param0;
-            return 1;
-          }
-        } else {
+        if (!param1) {
           return 31;
         }
+        if (this.field_k < this.field_i) {
+          this.field_m = this.field_m + (this.field_i - this.field_k);
+          this.field_k = this.field_k + (this.field_i - this.field_k);
+          this.field_i = this.field_i + param0;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          this.field_i = this.field_i + param0;
+          var4++;
+        } while (var4 < 10 &&
+          this.field_k > this.field_i);
+        if (this.field_i < this.field_k) {
+          this.field_i = this.field_k;
+        }
+        return var4;
     }
 
     final static void a(boolean param0, uj param1) {
         if (!param0) {
-            return;
+          return;
         }
         try {
-            bh.field_a.a(param1);
+          bh.field_a.a(param1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "aa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "aa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0) {
-        if (!(this.field_i <= this.field_k)) {
-            this.field_k = this.field_k + (this.field_i + -this.field_k);
+        if (this.field_i > this.field_k) {
+          this.field_k = this.field_k + (this.field_i - this.field_k);
         }
         this.field_m = 0L;
         if (param0 >= -93) {
-            field_l = (cj) null;
+          field_l = (cj) null;
         }
     }
 

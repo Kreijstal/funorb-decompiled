@@ -12,7 +12,7 @@ final class ih extends ni {
     }
 
     final void m(int param0) {
-        this.field_i = (this.field_o - -7) / param0;
+        this.field_i = (this.field_o + 7) / param0;
     }
 
     ih(byte[] param0) {
@@ -20,24 +20,22 @@ final class ih extends ni {
     }
 
     final int f(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        if (param0 != 47) {
-          this.m(-38);
-          fieldTemp$2 = this.field_i;
+        int fieldTemp$0 = 0;
+        if (param0 == 47) {
+          fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          return this.field_k[fieldTemp$2] - this.field_n.a(995108848) & 255;
-        } else {
-          fieldTemp$3 = this.field_i;
-          this.field_i = this.field_i + 1;
-          return this.field_k[fieldTemp$3] - this.field_n.a(995108848) & 255;
+          return this.field_k[fieldTemp$0] - this.field_n.a(995108848) & 255;
         }
+        this.m(-38);
+        int fieldTemp$1 = this.field_i;
+        this.field_i = this.field_i + 1;
+        return this.field_k[fieldTemp$1] - this.field_n.a(995108848) & 255;
     }
 
     public static void j(int param0) {
         field_m = null;
         if (param0 != 8) {
-            return;
+          return;
         }
         field_l = null;
     }
@@ -47,84 +45,66 @@ final class ih extends ni {
         this.field_i = this.field_i + 1;
         this.field_k[fieldTemp$0] = (byte)(this.field_n.a(995108848) + param1);
         if (param0 != 8) {
-            this.field_n = (pc) null;
+          this.field_n = (pc) null;
         }
     }
 
     final int b(int param0, byte param1) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = fleas.field_A ? 1 : 0;
-        var3 = this.field_o >> 41183555;
-        if (param1 == -87) {
-          var4 = 8 + -(this.field_o & 7);
-          var5 = 0;
-          this.field_o = this.field_o + param0;
-          L0: while (true) {
-            if (var4 >= param0) {
-              L1: {
-                if (var4 == param0) {
-                  var5 = var5 + (ek.field_d[var4] & this.field_k[var3]);
-                  break L1;
-                } else {
-                  var5 = var5 + (this.field_k[var3] >> var4 + -param0 & ek.field_d[param0]);
-                  break L1;
-                }
-              }
-              return var5;
-            } else {
-              incrementValue$2 = var3;
-              var3++;
-              var5 = var5 + ((ek.field_d[var4] & this.field_k[incrementValue$2]) << param0 - var4);
-              param0 = param0 - var4;
-              var4 = 8;
-              continue L0;
-            }
-          }
-        } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = fleas.field_A ? 1 : 0;
+        int var3 = this.field_o >> 3;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        if (param1 != -87) {
           ih.j(33);
-          var4 = 8 + -(this.field_o & 7);
+        } else {
+          var4 = 8 - (this.field_o & 7);
           var5 = 0;
           this.field_o = this.field_o + param0;
-          L2: while (true) {
-            if (var4 >= param0) {
-              L3: {
-                if (var4 == param0) {
-                  var5 = var5 + (ek.field_d[var4] & this.field_k[var3]);
-                  break L3;
-                } else {
-                  var5 = var5 + (this.field_k[var3] >> var4 + -param0 & ek.field_d[param0]);
-                  break L3;
-                }
-              }
-              return var5;
-            } else {
-              incrementValue$3 = var3;
-              var3++;
-              var5 = var5 + ((ek.field_d[var4] & this.field_k[incrementValue$3]) << param0 - var4);
-              param0 = param0 - var4;
-              var4 = 8;
-              continue L2;
-            }
+          while (var4 < param0) {
+            incrementValue$0 = var3;
+            var3++;
+            var5 = var5 + ((ek.field_d[var4] & this.field_k[incrementValue$0]) << param0 - var4);
+            param0 = param0 - var4;
+            var4 = 8;
           }
+          if (var4 != param0) {
+            var5 = var5 + (this.field_k[var3] >> var4 - param0 & ek.field_d[param0]);
+          } else {
+            var5 = var5 + (ek.field_d[var4] & this.field_k[var3]);
+          }
+          return var5;
         }
+        var4Lifetime1 = 8 - (this.field_o & 7);
+        var5Lifetime1 = 0;
+        this.field_o = this.field_o + param0;
+        while (var4Lifetime1 < param0) {
+          incrementValue$1 = var3;
+          var3++;
+          var5Lifetime1 = var5Lifetime1 + ((ek.field_d[var4Lifetime1] & this.field_k[incrementValue$1]) << param0 - var4Lifetime1);
+          param0 = param0 - var4Lifetime1;
+          var4Lifetime1 = 8;
+        }
+        if (var4Lifetime1 != param0) {
+          var5Lifetime1 = var5Lifetime1 + (this.field_k[var3] >> var4Lifetime1 - param0 & ek.field_d[param0]);
+        } else {
+          var5Lifetime1 = var5Lifetime1 + (ek.field_d[var4Lifetime1] & this.field_k[var3]);
+        }
+        return var5Lifetime1;
     }
 
     final static void l(int param0) {
-        if (param0 != 255) {
-          field_l = (sf) null;
-          af.a(ef.field_j, true, oa.field_o, (byte) 54);
-          ud.field_c = true;
-          return;
-        } else {
+        if (param0 == 255) {
           af.a(ef.field_j, true, oa.field_o, (byte) 54);
           ud.field_c = true;
           return;
         }
+        field_l = (sf) null;
+        af.a(ef.field_j, true, oa.field_o, (byte) 54);
+        ud.field_c = true;
     }
 
     ih(int param0) {
@@ -132,72 +112,47 @@ final class ih extends ni {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 66) {
-                break L1;
-              } else {
-                ih.j(-43);
-                break L1;
-              }
-            }
-            var5_int = 0;
-            L2: while (true) {
-              if (param1 <= var5_int) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_i;
-                this.field_i = this.field_i + 1;
-                param3[param2 + var5_int] = (byte)(this.field_k[fieldTemp$2] + -this.field_n.a(995108848));
-                var5_int++;
-                continue L2;
-              }
-            }
+          if (param0 < 66) {
+            ih.j(-43);
           }
+          for (var5_int = 0; param1 > var5_int; var5_int++) {
+            fieldTemp$0 = this.field_i;
+            this.field_i = this.field_i + 1;
+            param3[param2 + var5_int] = (byte)(this.field_k[fieldTemp$0] - this.field_n.a(995108848));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("ih.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("ih.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void a(int[] param0, byte param1) {
         try {
-            this.field_n = new pc(param0);
-            if (param1 != 12) {
-                this.e(-95, -126);
-            }
+          this.field_n = new pc(param0);
+          if (param1 != 12) {
+            this.e(-95, -126);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "ih.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "ih.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

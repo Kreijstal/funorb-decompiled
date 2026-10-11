@@ -16,29 +16,19 @@ final class fj {
 
     final static void a(int param0, byte param1, ud param2) {
         try {
-            ai.a(103, 0, param2, 128, param0);
-            if (param1 != -89) {
-                field_e = true;
-            }
+          ai.a(103, 0, param2, 128, param0);
+          if (param1 != -89) {
+            field_e = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_j = null;
         field_g = null;
-        if (param0 != 25988) {
-          fj.a(-61);
-          field_f = null;
-          field_a = null;
-          field_i = null;
-          field_c = null;
-          field_k = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 25988) {
           field_f = null;
           field_a = null;
           field_i = null;
@@ -48,6 +38,14 @@ final class fj {
           field_d = null;
           return;
         }
+        fj.a(-61);
+        field_f = null;
+        field_a = null;
+        field_i = null;
+        field_c = null;
+        field_k = null;
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -55,12 +53,10 @@ final class fj {
         jh.field_d.e(param0 + 35, param3, param1);
         sk.field_g.e(param0 + 605, param3, param1);
         fl.field_f.e(param0, param3 + 35, param1);
-        wm.field_n.e(param0 + 605, param3 - -35, param1);
-        if (param2 > -7) {
-          return;
-        } else {
+        wm.field_n.e(param0 + 605, param3 + 35, param1);
+        if (param2 <= -7) {
           vg.field_x.e(param0, 445 + param3, param1);
-          pg.field_f.e(param0 - -35, param3 + 445, param1);
+          pg.field_f.e(param0 + 35, param3 + 445, param1);
           wc.field_r.e(param0 + 605, param3 + 445, param1);
           return;
         }

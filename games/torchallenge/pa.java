@@ -22,91 +22,68 @@ final class pa extends uf {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) {
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5_int = 0;
-              if (param0 == -25038) {
-                break L1;
-              } else {
-                pa.n(-36);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (param1 <= var5_int) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_q;
-                this.field_q = this.field_q + 1;
-                param3[var5_int + param2] = (byte)(this.field_m[fieldTemp$2] + -this.field_w.d(126));
-                var5_int++;
-                continue L2;
-              }
-            }
+          var5_int = 0;
+          if (param0 != -25038) {
+            pa.n(-36);
           }
+          while (param1 > var5_int) {
+            fieldTemp$0 = this.field_q;
+            this.field_q = this.field_q + 1;
+            param3[var5_int + param2] = (byte)(this.field_m[fieldTemp$0] - this.field_w.d(126));
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("pa.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("pa.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
-            String var7 = null;
-            String var4 = null;
-            String var8 = null;
-            String var5 = null;
-            e.field_i = param0;
-            try {
-                var7 = param2.getParameter("cookieprefix");
-                var4 = param2.getParameter("cookiehost");
-                var8 = var7 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                var5 = var8;
-                if (!(-1 != (param0.length() ^ -1))) {
-                    var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                }
-                ff.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 1);
-            } catch (Throwable throwable) {
+          String var7 = null;
+          String var4 = null;
+          String var8 = null;
+          String var5 = null;
+          e.field_i = param0;
+          try {
+            var7 = param2.getParameter("cookieprefix");
+            var4 = param2.getParameter("cookiehost");
+            var8 = var7 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+            var5 = var8;
+            if (param0.length() == 0) {
+              var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            ok.a(param2, -1);
-            if (param1 != 8) {
-                ka[] var6 = (ka[]) null;
-                pa.a(-68, (ka[]) null);
-            }
+            ff.a(param2, "document.cookie=\"" + var5 + "\"", (byte) 1);
+          } catch (Throwable throwable) {
+          }
+          ok.a(param2, -1);
+          if (param1 != 8) {
+            ka[] var6 = (ka[]) null;
+            pa.a(-68, (ka[]) null);
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -114,62 +91,36 @@ final class pa extends uf {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -98) {
-                break L1;
-              } else {
-                field_t = (String) null;
-                break L1;
-              }
-            }
-            L2: {
-              gi.field_f = param1;
-              if (null == gi.field_f) {
-                break L2;
-              } else {
-                if (3 > param1.length) {
-                  throw new IllegalArgumentException("");
-                } else {
-                  break L2;
-                }
-              }
-            }
-            break L0;
+          if (param0 >= -98) {
+            field_t = (String) null;
           }
+          gi.field_f = param1;
+          if (null != gi.field_f &&
+            3 > param1.length) {
+            throw new IllegalArgumentException("");
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2);
-
-            stackIn_9_1 = new StringBuilder().append("pa.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("pa.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     public static void n(int param0) {
         field_z = null;
         if (param0 != 6) {
-            return;
+          return;
         }
         field_t = null;
         field_s = (boolean[][]) null;
@@ -179,7 +130,7 @@ final class pa extends uf {
 
     final int o(int param0) {
         if (param0 != 11650) {
-            this.m(-112);
+          this.m(-112);
         }
         int fieldTemp$0 = this.field_q;
         this.field_q = this.field_q + 1;
@@ -191,7 +142,7 @@ final class pa extends uf {
         this.field_q = this.field_q + 1;
         this.field_m[fieldTemp$0] = (byte)(param1 + this.field_w.d(127));
         if (param0 != 25) {
-            field_z = (int[]) null;
+          field_z = (int[]) null;
         }
     }
 
@@ -202,22 +153,22 @@ final class pa extends uf {
     final int e(int param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = TorChallenge.field_F ? 1 : 0;
-        int var3 = this.field_y >> -320247805;
+        int var3 = this.field_y >> 3;
         int var4 = -(7 & this.field_y) + 8;
         int var6 = -20 % ((param1 - 57) / 37);
         int var5 = 0;
         this.field_y = this.field_y + param0;
         while (param0 > var4) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((this.field_m[incrementValue$0] & ah.field_e[var4]) << -var4 + param0);
-            param0 = param0 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.field_m[incrementValue$0] & ah.field_e[var4]) << -var4 + param0);
+          param0 = param0 - var4;
+          var4 = 8;
         }
         if (param0 != var4) {
-            var5 = var5 + (this.field_m[var3] >> -param0 + var4 & ah.field_e[param0]);
+          var5 = var5 + (this.field_m[var3] >> -param0 + var4 & ah.field_e[param0]);
         } else {
-            var5 = var5 + (this.field_m[var3] & ah.field_e[var4]);
+          var5 = var5 + (this.field_m[var3] & ah.field_e[var4]);
         }
         return var5;
     }
@@ -228,114 +179,65 @@ final class pa extends uf {
 
     final void a(byte param0, int[] param1) {
         try {
-            if (param0 != 61) {
-                field_u = (String) null;
-            }
-            this.field_w = new ed(param1);
+          if (param0 != 61) {
+            field_u = (String) null;
+          }
+          this.field_w = new ed(param1);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "pa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "pa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void f(byte param0) {
         try {
-            IOException iOException = null;
-            IOException var2_ref = null;
-            int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            var3 = TorChallenge.field_F ? 1 : 0;
-            try {
-              L0: {
-                L1: {
-                  if (null != gb.field_d) {
-                    gb.field_d.a(param0 + -19424);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (gi.field_a == null) {
-                    break L2;
-                  } else {
-                    gi.field_a.a(4);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (null != jj.field_b) {
-                    try {
-                      L4: {
-                        jj.field_b.a((byte) -57);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
-                    }
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L6: {
-                  if (param0 == 109) {
-                    break L6;
-                  } else {
-                    field_z = (int[]) null;
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (null != ij.field_y) {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= ij.field_y.length) {
-                        break L7;
-                      } else {
-                        L9: {
-                          if (null != ij.field_y[var1_int]) {
-                            try {
-                              L10: {
-                                ij.field_y[var1_int].a((byte) -57);
-                                break L10;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L11: {
-                                var2_ref = (IOException) (Object) decompiledCaughtException;
-                                break L11;
-                              }
-                            }
-                            break L9;
-                          } else {
-                            break L9;
-                          }
-                        }
-                        var1_int++;
-                        continue L8;
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw oj.a((Throwable) ((Object) var1), "pa.H(" + param0 + ')');
+          int var1_int = 0;
+          IOException iOException = null;
+          IOException var2_ref = null;
+          int var3 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          var3 = TorChallenge.field_F ? 1 : 0;
+          try {
+            if (null != gb.field_d) {
+              gb.field_d.a(param0 - 19424);
             }
+            if (gi.field_a != null) {
+              gi.field_a.a(4);
+            }
+            if (null != jj.field_b) {
+              try {
+                jj.field_b.a((byte) -57);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (param0 != 109) {
+              field_z = (int[]) null;
+            }
+            if (null != ij.field_y) {
+              for (var1_int = 0; var1_int < ij.field_y.length; var1_int++) {
+                if (null != ij.field_y[var1_int]) {
+                  try {
+                    ij.field_y[var1_int].a((byte) -57);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2_ref = (IOException) (Object) decompiledCaughtException;
+                  }
+                }
+              }
+              return;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw oj.a((Throwable) ((Object) var1), "pa.H(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

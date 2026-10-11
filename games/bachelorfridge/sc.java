@@ -8,16 +8,13 @@ final class sc extends lw {
     static nv field_m;
 
     final void a(byte param0) {
-        int var2;
-        var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
-        if (param0 <= 103) {
-          this.a(48, (byte) -20);
-          vg.a(sia.field_j, 8640, 22997, 32000, var2 + 4096, 6400, var2 + 4096, sia.field_j.field_o << 2021307907, sia.field_j.field_n << 1265191587);
-          return;
-        } else {
-          vg.a(sia.field_j, 8640, 22997, 32000, var2 + 4096, 6400, var2 + 4096, sia.field_j.field_o << 2021307907, sia.field_j.field_n << 1265191587);
+        int var2 = (int)((1.0 - Math.cos((double)(vr.field_b * 4) * 3.141592653589793 / 100.0)) * 256.0);
+        if (param0 > 103) {
+          vg.a(sia.field_j, 8640, 22997, 32000, var2 + 4096, 6400, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
           return;
         }
+        this.a(48, (byte) -20);
+        vg.a(sia.field_j, 8640, 22997, 32000, var2 + 4096, 6400, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
     }
 
     final void a(int param0) {
@@ -26,24 +23,17 @@ final class sc extends lw {
     }
 
     final void a(int param0, byte param1) {
-        L0: {
-          if (param0 == 39) {
-            this.b(1);
-            fla.b(23621);
-            mka.field_j = true;
-            pka.field_f = true;
-            iaa.field_a = true;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (param0 == 39) {
+          this.b(1);
+          fla.b(23621);
+          mka.field_j = true;
+          pka.field_f = true;
+          iaa.field_a = true;
         }
-        if (param1 != 73) {
-          sc.d(-97);
-          return;
-        } else {
+        if (param1 == 73) {
           return;
         }
+        sc.d(-97);
     }
 
     sc() {
@@ -57,7 +47,7 @@ final class sc extends lw {
         field_n = null;
         field_m = null;
         if (param0 != -31258) {
-            field_l = (String) null;
+          field_l = (String) null;
         }
     }
 

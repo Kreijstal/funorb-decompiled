@@ -13,10 +13,10 @@ final class nw extends td {
     nw(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            this.field_n = param3;
-            this.field_k = param2;
+          this.field_n = param3;
+          this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "nw.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -27,63 +27,35 @@ final class nw extends td {
         cja stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = this.field_h.a(57, param0);
-              var4 = new cja(this.field_g, new nq(var3));
-              var4.field_s = this.field_k;
-              var4.field_u = this.field_n;
-              if (param1 == 3) {
-                break L1;
-              } else {
-                field_p = (kv[]) null;
-                break L1;
-              }
-            }
-            var4.field_q = 2 * kla.a(4, param0.field_w, param1 ^ -2147483645) + 6;
-            stackIn_3_0 = (cja) (var4);
-            break L0;
+          var3 = this.field_h.a(57, param0);
+          var4 = new cja(this.field_g, new nq(var3));
+          var4.field_s = this.field_k;
+          var4.field_u = this.field_n;
+          if (param1 != 3) {
+            field_p = (kv[]) null;
           }
+          var4.field_q = 2 * kla.a(4, param0.field_w, param1 ^ -2147483645) + 6;
+          stackIn_3_0 = var4;
+          return (ii) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("nw.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("nw.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return (ii) ((Object) stackIn_3_0);
     }
 
     public static void c(boolean param0) {
-        if (param0) {
-          nw.a(false, false, (byte) -101);
-          field_t = null;
-          field_s = null;
-          field_p = null;
-          field_r = null;
-          field_q = null;
-          return;
-        } else {
+        if (!param0) {
           field_t = null;
           field_s = null;
           field_p = null;
@@ -91,11 +63,17 @@ final class nw extends td {
           field_q = null;
           return;
         }
+        nw.a(false, false, (byte) -101);
+        field_t = null;
+        field_s = null;
+        field_p = null;
+        field_r = null;
+        field_q = null;
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
         String var4 = (String) null;
-        vma.a((byte) -6, param0, param1, (String) null);
+        vma.$cfr$intArgs$a$842e35442ba4(-6, param0, param1, (String) null);
         int var3 = -72 / ((-21 - param2) / 58);
     }
 
@@ -114,60 +92,63 @@ final class nw extends td {
         byte[] var16 = null;
         byte[] var12 = null;
         byte[] var7 = null;
+        byte[] var2Lifetime1;
+        byte[] var2Lifetime2;
+        byte[] var2Lifetime3;
         try {
-            var13 = param0.a((byte) 123, "MoveTable.csv", "");
-            var8 = var13;
-            var4 = var8;
-            var2 = var4;
-            var9 = new lu(var13);
-            wca.a((byte) -121);
-            vi.b(16);
-            ln.f(-93);
-            hba.c(7);
-            kma.d(param1 + -109);
-            lg.c(8);
-            li.e(-117);
-            mk.a((byte) -43);
-            ut.c(-22021);
-            ev.a((byte) 80);
-            if (param1 != 2) {
-                field_t = (String) null;
-            }
-            lka.field_E = qs.a(false, var9);
-            hga.a(true, var13);
-            var14 = param0.a((byte) 123, "UnlockTable.csv", "");
-            var10 = var14;
-            var5 = var10;
-            var2 = var5;
-            qh.a((byte) -104);
-            bj.a(var14, (byte) 22);
-            lg.a(-92);
-            var15 = param0.a((byte) 123, "UnlockerTable.csv", "");
-            var11 = var15;
-            var6 = var11;
-            var2 = var6;
-            sp.a(var15, param1 ^ -5);
-            var16 = param0.a((byte) 123, "CreatureTable.csv", "");
-            var12 = var16;
-            var7 = var12;
-            var2 = var7;
-            lu var3 = new lu(var16);
-            qs.b(false);
-            an.a(var16, -49);
-            wv.a((byte) -73, var16);
-            fi.field_m = null;
-            me.field_t = null;
-            du.field_a = null;
-            oi.field_v = null;
-            dl.field_h = null;
-            cma.field_x = null;
-            id.field_i = null;
-            ng.field_f = null;
-            cw.field_zb = null;
-            eo.field_f = null;
-            i.field_h = null;
+          var13 = param0.a((byte) 123, "MoveTable.csv", "");
+          var8 = var13;
+          var4 = var8;
+          var2 = var4;
+          var9 = new lu(var13);
+          wca.a((byte) -121);
+          vi.b(16);
+          ln.f(-93);
+          hba.c(7);
+          kma.d(param1 - 109);
+          lg.c(8);
+          li.e(-117);
+          mk.a((byte) -43);
+          ut.c(-22021);
+          ev.a((byte) 80);
+          if (param1 != 2) {
+            field_t = (String) null;
+          }
+          lka.field_E = qs.a(false, var9);
+          hga.a(true, var13);
+          var14 = param0.a((byte) 123, "UnlockTable.csv", "");
+          var10 = var14;
+          var5 = var10;
+          var2Lifetime1 = var5;
+          qh.a((byte) -104);
+          bj.a(var14, (byte) 22);
+          lg.a(-92);
+          var15 = param0.a((byte) 123, "UnlockerTable.csv", "");
+          var11 = var15;
+          var6 = var11;
+          var2Lifetime2 = var6;
+          sp.a(var15, param1 ^ -5);
+          var16 = param0.a((byte) 123, "CreatureTable.csv", "");
+          var12 = var16;
+          var7 = var12;
+          var2Lifetime3 = var7;
+          lu var3 = new lu(var16);
+          qs.b(false);
+          an.a(var16, -49);
+          wv.a((byte) -73, var16);
+          fi.field_m = null;
+          me.field_t = null;
+          du.field_a = null;
+          oi.field_v = null;
+          dl.field_h = null;
+          cma.field_x = null;
+          id.field_i = null;
+          ng.field_f = null;
+          cw.field_zb = null;
+          eo.field_f = null;
+          i.field_h = null;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "nw.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -131,10 +131,9 @@ final class nf {
           if (var11 > var7) {
             var7 = var11;
           }
-          if (var4 <= var11) {
-            continue;
+          if (var4 > var11) {
+            var4 = var11;
           }
-          var4 = var11;
         }
         this.field_H = var6;
         this.field_s = var3;

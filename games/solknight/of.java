@@ -13,18 +13,16 @@ final class of {
     static o field_f;
 
     public static void a(int param0) {
-        if (param0 != 1) {
-          field_g = 47;
-          field_f = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_f = null;
           field_b = null;
           field_d = null;
           return;
         }
+        field_g = 47;
+        field_f = null;
+        field_b = null;
+        field_d = null;
     }
 
     final void c(int param0, int param1) {
@@ -39,51 +37,35 @@ final class of {
         var3 = this.field_a.length;
         if (param1 >= -98) {
           return -103;
-        } else {
-          L0: while (true) {
-            if (var3 > param0) {
-              return var3;
-            } else {
-              if (!this.field_i) {
-                var3 = var3 + this.field_c;
-                continue L0;
-              } else {
-                if (var3 != 0) {
-                  var3 = var3 * this.field_c;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
-              }
-            }
-          }
         }
+        while (var3 <= param0) {
+          if (!this.field_i) {
+            var3 = var3 + this.field_c;
+            continue;
+          }
+          if (var3 != 0) {
+            var3 = var3 * this.field_c;
+            continue;
+          }
+          var3 = 1;
+        }
+        return var3;
     }
 
     final void a(boolean param0, int param1) {
-        if ((param1 ^ -1) <= -1) {
-          if (param1 <= this.field_h) {
-            L0: {
-              if (this.field_h != param1) {
-                fk.a(this.field_a, 1 + param1, this.field_a, param1, -param1 + this.field_h);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            this.field_h = this.field_h - 1;
-            if (param0) {
-              return;
-            } else {
-              this.b(-55);
-              return;
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          }
-        } else {
+        if (param1 < 0) {
           throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (param1 > this.field_h) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (this.field_h != param1) {
+          fk.a(this.field_a, 1 + param1, this.field_a, param1, -param1 + this.field_h);
+        }
+        this.field_h = this.field_h - 1;
+        if (!param0) {
+          this.b(-55);
+          return;
         }
     }
 
@@ -92,34 +74,25 @@ final class of {
     }
 
     private final void a(int param0, byte param1, int param2) {
-        L0: {
-          if (param0 > this.field_h) {
-            this.field_h = param0;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (param0 > this.field_h) {
+          this.field_h = param0;
         }
-        if (this.field_a.length > param0) {
+        if (this.field_a.length <= param0) {
+          this.b(param0, 0);
           if (param1 != 61) {
             field_f = (o) null;
             this.field_a[param0] = param2;
             return;
-          } else {
-            this.field_a[param0] = param2;
-            return;
           }
-        } else {
-          this.b(param0, 0);
-          if (param1 == 61) {
-            this.field_a[param0] = param2;
-            return;
-          } else {
-            field_f = (o) null;
-            this.field_a[param0] = param2;
-            return;
-          }
+          this.field_a[param0] = param2;
+          return;
         }
+        if (param1 == 61) {
+          this.field_a[param0] = param2;
+          return;
+        }
+        field_f = (o) null;
+        this.field_a[param0] = param2;
     }
 
     private final void b(int param0, int param1) {
@@ -130,24 +103,22 @@ final class of {
     }
 
     final int a(byte param0, int param1) {
-        if (this.field_h >= param1) {
-          if (param0 != 43) {
-            this.field_h = 68;
-            return this.field_a[param1];
-          } else {
-            return this.field_a[param1];
-          }
-        } else {
+        if (this.field_h < param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param0 == 43) {
+          return this.field_a[param1];
+        }
+        this.field_h = 68;
+        return this.field_a[param1];
     }
 
     final int b(int param0) {
         if (param0 <= 74) {
-            this.a((byte) -24, -1);
-            return this.field_h - -1;
+          this.a((byte) -24, -1);
+          return this.field_h + 1;
         }
-        return this.field_h - -1;
+        return this.field_h + 1;
     }
 
     static {

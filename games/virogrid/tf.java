@@ -10,9 +10,9 @@ final class tf {
     final static void a(byte param0) {
         sd.field_e = 0;
         if (param0 <= 69) {
-            tf.a((byte) -83);
-            sg.c(0);
-            return;
+          tf.a((byte) -83);
+          sg.c(0);
+          return;
         }
         sg.c(0);
     }
@@ -22,7 +22,7 @@ final class tf {
         field_d = null;
         field_c = null;
         if (param0 != 0) {
-            tf.a(-121);
+          tf.a(-121);
         }
     }
 

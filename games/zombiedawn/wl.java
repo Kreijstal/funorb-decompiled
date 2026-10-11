@@ -7,9 +7,9 @@ final class wl {
 
     public static void a(byte param0) {
         if (param0 >= -79) {
-            wl.a((byte) -46);
-            field_a = null;
-            return;
+          wl.a((byte) -46);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -14,121 +14,78 @@ final class jq extends dr {
         nd stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == -24872) {
-              stackIn_4_0 = new nd(im.a(param0 + 24994, (String) (param1[0].field_c)));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nd) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == -24872) {
+            stackIn_4_0 = new nd(im.a(param0 + 24994, (String) (param1[0].field_c)));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nd) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("jq.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("jq.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static wk[] a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
-        int[] var6;
-        int var7;
-        int var8;
-        wk var9;
-        Object var10;
-        Object var11;
-        int[] var12;
-        wk var13;
-        wk var14;
-        int[] var15;
-        int[] var16;
-        L0: {
-          var16 = qn.field_d;
-          var15 = var16;
-          var12 = var15;
-          var6 = var12;
-          var7 = qn.field_l;
-          var8 = qn.field_g;
-          var9 = new wk(16, param3);
-          var9.b();
-          qn.a(0, 0, 16, param3, param5, param1);
-          var10 = null;
-          var11 = null;
-          if (param0) {
-            var13 = var9.g();
-            var10 = var13;
-            var13.b();
-            qn.e(0, 0, 5, 0);
-            qn.e(0, 1, 3, 0);
-            qn.e(0, 2, 2, 0);
-            qn.e(0, 3, 1, 0);
-            qn.e(0, 4, 1, 0);
-            break L0;
-          } else {
-            break L0;
-          }
+        wk var13 = null;
+        wk var14 = null;
+        int[] var16 = qn.field_d;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = qn.field_l;
+        int var8 = qn.field_g;
+        wk var9 = new wk(16, param3);
+        var9.b();
+        qn.a(0, 0, 16, param3, param5, param1);
+        Object var10 = null;
+        Object var11 = null;
+        if (param0) {
+          var13 = var9.g();
+          var10 = var13;
+          var13.b();
+          qn.e(0, 0, 5, 0);
+          qn.e(0, 1, 3, 0);
+          qn.e(0, 2, 2, 0);
+          qn.e(0, 3, 1, 0);
+          qn.e(0, 4, 1, 0);
         }
-        L1: {
-          if (param4) {
-            var14 = var9.g();
-            var11 = var14;
-            var14.b();
-            qn.e(11, 0, 5, 0);
-            qn.e(13, 1, 3, 0);
-            qn.e(14, 2, 2, 0);
-            qn.e(15, 3, 1, 0);
-            qn.e(15, 4, 1, 0);
-            break L1;
-          } else {
-            break L1;
-          }
+        if (param4) {
+          var14 = var9.g();
+          var11 = var14;
+          var14.b();
+          qn.e(11, 0, 5, 0);
+          qn.e(13, 1, 3, 0);
+          qn.e(14, 2, 2, 0);
+          qn.e(15, 3, 1, 0);
+          qn.e(15, 4, 1, 0);
         }
-        if (param2 != -20600) {
-          field_I = (String[][]) null;
-          qn.a(var16, var7, var8);
-          return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
-        } else {
+        if (param2 == -20600) {
           qn.a(var16, var7, var8);
           return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
         }
+        field_I = (String[][]) null;
+        qn.a(var16, var7, var8);
+        return new wk[]{null, null, null, (wk) (var10), var9, (wk) (var11), null, null, null};
     }
 
     final static int b(int param0, int param1) {
         int var2 = 0;
         if ((param0 & param1) != 0) {
-            var2 = 8 + -(7 & param1);
+          var2 = 8 - (7 & param1);
         }
-        int var3 = param1 - -var2;
+        int var3 = param1 + var2;
         return var3;
     }
 
@@ -137,20 +94,18 @@ final class jq extends dr {
     }
 
     public static void g(int param0) {
-        if (param0 >= -2) {
-          field_I = (String[][]) null;
-          field_E = null;
-          field_G = null;
-          field_H = null;
-          field_I = (String[][]) null;
-          return;
-        } else {
+        if (param0 < -2) {
           field_E = null;
           field_G = null;
           field_H = null;
           field_I = (String[][]) null;
           return;
         }
+        field_I = (String[][]) null;
+        field_E = null;
+        field_G = null;
+        field_H = null;
+        field_I = (String[][]) null;
     }
 
     static {

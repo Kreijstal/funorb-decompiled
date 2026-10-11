@@ -16,31 +16,32 @@ final class lf {
 
     final void a(byte param0, wl param1, byte[] param2) {
         try {
-            try {
-                if ((param1.field_r[param1.field_n] ^ -1) != -32 || -117 != param1.field_r[1 + param1.field_n]) {
-                    throw new RuntimeException("");
-                }
-                if (this.field_a == null) {
-                    this.field_a = new java.util.zip.Inflater(true);
-                }
-                if (param0 < 105) {
-                    lf.a(-120);
-                }
-                try {
-                    this.field_a.setInput(param1.field_r, 10 + param1.field_n, -10 + -param1.field_n + -8 + param1.field_r.length);
-                    this.field_a.inflate(param2);
-                } catch (Exception exception) {
-                    this.field_a.reset();
-                    throw new RuntimeException("");
-                }
-                this.field_a.reset();
-            } catch (RuntimeException runtimeException) {
-                throw dh.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          try {
+            if (param1.field_r[param1.field_n] != 31 ||
+              -117 != param1.field_r[1 + param1.field_n]) {
+              throw new RuntimeException("");
             }
+            if (this.field_a == null) {
+              this.field_a = new java.util.zip.Inflater(true);
+            }
+            if (param0 < 105) {
+              lf.a(-120);
+            }
+            try {
+              this.field_a.setInput(param1.field_r, 10 + param1.field_n, -10 - param1.field_n - 8 + param1.field_r.length);
+              this.field_a.inflate(param2);
+            } catch (Exception exception) {
+              this.field_a.reset();
+              throw new RuntimeException("");
+            }
+            this.field_a.reset();
+          } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -51,7 +52,7 @@ final class lf {
         field_h = null;
         field_e = null;
         if (param0 != -13495) {
-            return;
+          return;
         }
         field_f = null;
         field_i = null;

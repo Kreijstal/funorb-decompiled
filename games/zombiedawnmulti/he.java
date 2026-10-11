@@ -18,8 +18,6 @@ final class he implements nl {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -31,99 +29,54 @@ final class he implements nl {
         int var11 = 0;
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == -15112) {
-                break L1;
-              } else {
-                field_k = (th) null;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (param4.field_l) {
-                  break L3;
-                } else {
-                  if (param4.c(param2 ^ -15226)) {
-                    break L3;
-                  } else {
-                    stackIn_7_0 = 2188450;
-                    break L2;
-                  }
-                }
-              }
-              stackIn_7_0 = 3249872;
-              break L2;
-            }
-            L4: {
-              var6_int = stackIn_7_0;
-              this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 - -param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.field_r + this.field_g.field_C);
-              if (param4.c(127)) {
-                L5: {
-                  var7 = this.field_g.a(param4.field_j);
-                  var8 = this.field_g.field_r + this.field_g.field_C;
-                  var9 = param4.field_y + param3;
-                  if (-3 != (this.field_j ^ -1)) {
-                    if (1 == this.field_j) {
-                      var9 = var9 + (-var7 + param4.field_n >> -774066207);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    var9 = var9 + (-var7 + param4.field_n);
-                    break L5;
-                  }
-                }
-                L6: {
-                  var10 = param1 + param4.field_i;
-                  if ((this.field_h ^ -1) == -3) {
-                    var10 = var10 + (-var8 + param4.field_w);
-                    break L6;
-                  } else {
-                    if (this.field_h != 1) {
-                      break L6;
-                    } else {
-                      var10 = var10 + (param4.field_w - var8 >> 389530145);
-                      break L6;
-                    }
-                  }
-                }
-                hl.a(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            break L0;
+          if (param2 != -15112) {
+            field_k = (th) null;
           }
+          if (!param4.field_l &&
+            !param4.c(param2 ^ -15226)) {
+            stackIn_7_0 = 2188450;
+          } else {
+            stackIn_7_0 = 3249872;
+          }
+          var6_int = stackIn_7_0;
+          this.field_g.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_j + "</u>", param3 + param4.field_y, param4.field_i + param1, param4.field_n, param4.field_w, var6_int, -1, this.field_j, this.field_h, this.field_g.field_r + this.field_g.field_C);
+          if (param4.c(127)) {
+            var7 = this.field_g.a(param4.field_j);
+            var8 = this.field_g.field_r + this.field_g.field_C;
+            var9 = param4.field_y + param3;
+            if (this.field_j != 2) {
+              if (1 == this.field_j) {
+                var9 = var9 + (-var7 + param4.field_n >> 1);
+              }
+            } else {
+              var9 = var9 + (-var7 + param4.field_n);
+            }
+            var10 = param1 + param4.field_i;
+            if (this.field_h == 2) {
+              var10 = var10 + (-var8 + param4.field_w);
+            } else {
+              if (this.field_h == 1) {
+                var10 = var10 + (param4.field_w - var8 >> 1);
+              }
+            }
+            hl.a(var10 + 2, -2 + var9, (byte) 97, 4 + var7, var8);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("he.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L7;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L7;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("he.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -139,111 +92,68 @@ final class he implements nl {
         byte[] var12 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -9355) {
-                break L1;
-              } else {
-                he.a(-53);
-                break L1;
-              }
-            }
-            L2: {
-              var10 = s.field_e;
-              var2 = var10.g(31365);
-              if (var2 == 0) {
-                var9 = (cr) ((Object) dc.field_Gb.c(param0 + 9430));
-                if (var9 == null) {
-                  ak.a((byte) -128);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L3: {
-                    var4 = var10.g(param0 + 40720);
-                    if (var4 != 0) {
-                      var12 = new byte[var4];
-                      var11 = var12;
-                      var8 = var11;
-                      var5 = var8;
-                      var10.a(0, -6351, var4, var12);
-                      break L3;
-                    } else {
-                      var5 = null;
-                      break L3;
-                    }
-                  }
-                  var10.field_j = var10.field_j + 4;
-                  if (!var10.c(false)) {
-                    ak.a((byte) -113);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    var9.field_f = (byte[]) (var5);
-                    var9.field_h = true;
-                    var9.a(true);
-                    break L2;
-                  }
-                }
-              } else {
-                if (-2 == (var2 ^ -1)) {
-                  var3 = var10.i(-1478490344);
-                  var4_ref_n = (n) ((Object) nq.field_s.c(param0 ^ -9398));
-                  L4: while (true) {
-                    L5: {
-                      if (var4_ref_n == null) {
-                        break L5;
-                      } else {
-                        if (var4_ref_n.field_h != var3) {
-                          var4_ref_n = (n) ((Object) nq.field_s.b(param0 + 9361));
-                          continue L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    if (var4_ref_n == null) {
-                      ak.a((byte) -114);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var4_ref_n.a(true);
-                      break L2;
-                    }
-                  }
-                } else {
-                  bd.a("A1: " + ci.a(0), (Throwable) null, false);
-                  ak.a((byte) -111);
-                  break L2;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
+          if (param0 != -9355) {
+            he.a(-53);
           }
+          var10 = s.field_e;
+          var2 = var10.g(31365);
+          if (var2 == 0) {
+            var9 = (cr) (dc.field_Gb.c(param0 + 9430));
+            if (var9 == null) {
+              ak.a((byte) -128);
+              return;
+            }
+            var4 = var10.g(param0 + 40720);
+            if (var4 != 0) {
+              var12 = new byte[var4];
+              var11 = var12;
+              var8 = var11;
+              var5 = var8;
+              var10.a(0, -6351, var4, var12);
+            } else {
+              var5 = null;
+            }
+            var10.field_j = var10.field_j + 4;
+            if (!var10.c(false)) {
+              ak.a((byte) -113);
+              return;
+            }
+            var9.field_f = (byte[]) (var5);
+            var9.field_h = true;
+            var9.a(true);
+          } else {
+            if (var2 == 1) {
+              var3 = var10.i(-1478490344);
+              var4_ref_n = (n) (nq.field_s.c(param0 ^ -9398));
+              while (var4_ref_n != null) {
+                if (var4_ref_n.field_h != var3) {
+                  var4_ref_n = (n) (nq.field_s.b(param0 + 9361));
+                  continue;
+                }
+                break;
+              }
+              if (var4_ref_n == null) {
+                ak.a((byte) -114);
+                return;
+              }
+              var4_ref_n.a(true);
+              return;
+            }
+            bd.a("A1: " + ci.a(0), (Throwable) null, false);
+            ak.a((byte) -111);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw fa.a((Throwable) ((Object) var1), "he.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -3) {
-            he.a((byte) 77);
+          he.a((byte) 77);
         }
         field_c = null;
         field_f = null;
@@ -260,17 +170,17 @@ final class he implements nl {
 
     he(fm param0, int param1, int param2) {
         try {
-            this.field_g = param0;
-            this.field_h = param2;
-            this.field_j = param1;
+          this.field_g = param0;
+          this.field_h = param2;
+          this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "he.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static long b(byte param0) {
         if (param0 != -22) {
-            field_e = 45L;
+          field_e = 45L;
         }
         return -mo.field_Gb + bl.a((byte) 56);
     }

@@ -11,9 +11,9 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_c = true;
+          this.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "dg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "dg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_d = null;
         field_e = null;
         if (param0 != -1) {
-            dg.c(3);
+          dg.c(3);
         }
     }
 
@@ -44,26 +44,22 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void b(int param0) {
         ci.field_f.k(31410);
-        if (null != gh.field_m) {
+        if (null == gh.field_m) {
+          gh.field_m = new sd(ci.field_f, tg.field_c);
           if (param0 >= -9) {
             dg.a(54);
             ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
-          } else {
-            ci.field_f.b((qg) (gh.field_m), (byte) -71);
-            return;
           }
-        } else {
-          gh.field_m = new sd(ci.field_f, tg.field_c);
-          if (param0 < -9) {
-            ci.field_f.b((qg) (gh.field_m), (byte) -71);
-            return;
-          } else {
-            dg.a(54);
-            ci.field_f.b((qg) (gh.field_m), (byte) -71);
-            return;
-          }
+          ci.field_f.b((qg) (gh.field_m), (byte) -71);
+          return;
         }
+        if (param0 < -9) {
+          ci.field_f.b((qg) (gh.field_m), (byte) -71);
+          return;
+        }
+        dg.a(54);
+        ci.field_f.b((qg) (gh.field_m), (byte) -71);
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -71,12 +67,12 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(int param0, fe param1) {
         if (param0 > -96) {
-            return;
+          return;
         }
         try {
-            ra.a(param1, this.field_f, 100);
+          ra.a(param1, this.field_f, 100);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,57 +15,41 @@ final class qn {
         as stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2 = new as(param1);
-            var3 = -54 % ((-34 - param0) / 45);
-            stackIn_1_0 = (as) (var2);
-            break L0;
-          }
+          var2 = new as(param1);
+          var3 = -54 % ((-34 - param0) / 45);
+          stackIn_1_0 = var2;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2_ref);
-
-            stackIn_4_1 = new StringBuilder().append("qn.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_4_0 = var2_ref;
+          stackIn_4_1 = new StringBuilder().append("qn.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final static void a(ik[] param0, int param1, boolean param2) {
         try {
-            bj.k(26987);
-            bk.a(param0, 0);
-            if (!param2) {
-                field_c = -118;
-            }
-            vp.c(-20677, param1);
+          bj.k(26987);
+          bk.a(param0, 0);
+          if (!param2) {
+            field_c = -118;
+          }
+          vp.c(-20677, param1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         hd var1 = null;
         RuntimeException var1_ref = null;
@@ -76,59 +60,39 @@ final class qn {
         int var6 = 0;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            if (cb.field_h != null) {
-              var1 = (hd) ((Object) cb.field_h.d(0));
-              var2 = (int)ra.field_e + 20;
-              var3 = 20;
-              var4 = 63 % ((param0 - -56) / 39);
-              L1: while (true) {
-                if (var1 == null) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  if (-1 >= (var1.field_h ^ -1)) {
-                    L2: {
-                      if (230 > var1.field_h) {
-                        wc.a(-27030, var1.field_h << 1500934308, var3, var1.field_i, var2, 256);
-                        break L2;
-                      } else {
-                        if (var1.field_h >= 250) {
-                          var5 = -(5 * var1.field_h) + 1500;
-                          wc.a(-27030, var1.field_h << 814392388, -3 + var3, var1.field_o, var2 - 3, var5);
-                          wc.a(-27030, var1.field_h << 2057711524, var3, var1.field_i, var2, var5);
-                          break L2;
-                        } else {
-                          wc.a(-27030, var1.field_h << -148616476, -3 + var3, var1.field_o, var2 - 3, -2760 + 12 * var1.field_h);
-                          wc.a(-27030, var1.field_h << -989994556, var3, var1.field_i, var2, 256);
-                          break L2;
-                        }
-                      }
-                    }
-                    var2 = var2 + var1.field_i.field_w;
-                    var1 = (hd) ((Object) cb.field_h.a((byte) -71));
-                    continue L1;
-                  } else {
-                    var2 = var2 + var1.field_i.field_w;
-                    var1 = (hd) ((Object) cb.field_h.a((byte) -71));
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (cb.field_h == null) {
+            return;
           }
+          var1 = (hd) (cb.field_h.d(0));
+          var2 = (int)ra.field_e + 20;
+          var3 = 20;
+          var4 = 63 % ((param0 + 56) / 39);
+          while (var1 != null) {
+            if (var1.field_h < 0) {
+              var2 = var2 + var1.field_i.field_w;
+              var1 = (hd) (cb.field_h.a((byte) -71));
+              continue;
+            }
+            if (230 > var1.field_h) {
+              wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
+            } else {
+              if (var1.field_h >= 250) {
+                var5 = -(5 * var1.field_h) + 1500;
+                wc.a(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, var5);
+                wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, var5);
+              } else {
+                wc.a(-27030, var1.field_h << 4, -3 + var3, var1.field_o, var2 - 3, -2760 + 12 * var1.field_h);
+                wc.a(-27030, var1.field_h << 4, var3, var1.field_i, var2, 256);
+              }
+            }
+            var2 = var2 + var1.field_i.field_w;
+            var1 = (hd) (cb.field_h.a((byte) -71));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw r.a((Throwable) ((Object) var1_ref), "qn.D(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -136,15 +100,15 @@ final class qn {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < 82) {
-            return;
+          return;
         }
         try {
-            for (var1_int = 0; var1_int < da.field_g; var1_int++) {
-                wm.field_d[var1_int] = null;
-            }
-            da.field_g = 0;
+          for (var1_int = 0; var1_int < da.field_g; var1_int++) {
+            wm.field_d[var1_int] = null;
+          }
+          da.field_g = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "qn.C(" + param0 + ')');
         }
     }
 
@@ -154,7 +118,7 @@ final class qn {
         field_e = null;
         field_d = null;
         if (param0 != -989994556) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 

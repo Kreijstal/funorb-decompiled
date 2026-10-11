@@ -10,10 +10,10 @@ final class ih {
 
     public static void a(int param0) {
         if (param0 < 45) {
-            field_a = 19;
-            field_b = null;
-            field_d = null;
-            return;
+          field_a = 19;
+          field_b = null;
+          field_d = null;
+          return;
         }
         field_b = null;
         field_d = null;

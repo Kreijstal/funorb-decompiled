@@ -14,14 +14,14 @@ final class me {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.setFocusTraversalKeysEnabled(false);
-            param0.addKeyListener(vi.field_a);
-            param0.addFocusListener(vi.field_a);
-            if (param1 != 250) {
-                me.a((byte) 114);
-            }
+          param0.setFocusTraversalKeysEnabled(false);
+          param0.addKeyListener(vi.field_a);
+          param0.addFocusListener(vi.field_a);
+          if (param1 != 250) {
+            me.a((byte) 114);
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "me.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "me.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -33,19 +33,17 @@ final class me {
         ml.field_ib[vc.field_c] = ra.field_g;
         gh.field_a[vc.field_c] = ra.field_f;
         hc.field_s[vc.field_c] = ra.field_e;
-        if (param0) {
-          me.b((byte) 92);
-          vc.field_c = vc.field_c + 1;
-          return;
-        } else {
+        if (!param0) {
           vc.field_c = vc.field_c + 1;
           return;
         }
+        me.b((byte) 92);
+        vc.field_c = vc.field_c + 1;
     }
 
     public static void b(byte param0) {
         if (param0 > -91) {
-            return;
+          return;
         }
         field_i = null;
         field_h = null;
@@ -57,43 +55,22 @@ final class me {
     final static void a(int param0) {
         int var1 = 0;
         if (param0 >= jj.field_a) {
-            ve.a(0, param0 ^ 66);
+          ve.a(0, param0 ^ 66);
         } else {
-            var1 = jj.field_a % 32;
-            if (!(var1 != 0)) {
-                var1 = 32;
-            }
-            ve.a(jj.field_a + -var1, param0 ^ 125);
+          var1 = jj.field_a % 32;
+          if (var1 == 0) {
+            var1 = 32;
+          }
+          ve.a(jj.field_a - var1, param0 ^ 125);
         }
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != -99) {
-          L0: {
-            me.a((byte) -112);
-            if (250 >= en.field_K) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (250 >= en.field_K) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -99) {
+          return 250 < en.field_K ? true : false;
         }
+        me.a((byte) -112);
+        return 250 < en.field_K ? true : false;
     }
 
     static {

@@ -31,7 +31,7 @@ final class hg extends gg {
     final void a(byte param0) {
         this.field_D = null;
         if (param0 <= 90) {
-            return;
+          return;
         }
         this.field_w = null;
         this.field_u = null;
@@ -40,22 +40,22 @@ final class hg extends gg {
 
     final static void a(int param0, String param1, String param2) {
         try {
-            hc.a(param2, false, param1, false);
-            if (param0 != 8192) {
-                String var4 = (String) null;
-                hg.a(40, (String) null, (String) null);
-            }
+          hc.a(param2, false, param1, false);
+          if (param0 != 8192) {
+            String var4 = (String) null;
+            hg.a(40, (String) null, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_B = null;
         if (param0 != 8192) {
-            hg.a(15);
-            field_E = null;
-            return;
+          hg.a(15);
+          field_E = null;
+          return;
         }
         field_E = null;
     }

@@ -9,42 +9,36 @@ abstract class li implements n {
     static nj field_a;
 
     public final String a(int param0) {
-        if (!this.a((byte) -41)) {
-          if ((lo.a((byte) -72) ^ -1L) <= (350L + this.field_b ^ -1L)) {
-            if (param0 != -16774) {
-              this.b((byte) -60);
-              return this.a(false);
-            } else {
-              return this.a(false);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (this.a((byte) -41)) {
           return null;
         }
+        if (lo.a((byte) -72) < (350L + this.field_b)) {
+          return null;
+        }
+        if (param0 == -16774) {
+          return this.a(false);
+        }
+        this.b((byte) -60);
+        return this.a(false);
     }
 
     public final oi c(byte param0) {
-        if (param0 == 45) {
-          if (this.a((byte) -41)) {
-            return pe.field_p;
-          } else {
-            if ((this.field_b + 350L ^ -1L) < (lo.a((byte) 84) ^ -1L)) {
-              return ta.field_h;
-            } else {
-              return this.b(51);
-            }
-          }
-        } else {
+        if (param0 != 45) {
           return (oi) null;
         }
+        if (this.a((byte) -41)) {
+          return pe.field_p;
+        }
+        if ((this.field_b + 350L) <= lo.a((byte) 84)) {
+          return this.b(51);
+        }
+        return ta.field_h;
     }
 
     public final void b(byte param0) {
         this.field_b = lo.a((byte) 76);
         if (param0 != 78) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
@@ -52,9 +46,9 @@ abstract class li implements n {
         field_d = null;
         field_e = null;
         if (param0 != 350) {
-            field_e = (String) null;
-            field_a = null;
-            return;
+          field_e = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

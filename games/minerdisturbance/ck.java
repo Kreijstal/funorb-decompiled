@@ -14,8 +14,8 @@ final class ck {
         field_b = null;
         field_a = null;
         if (param0 != -100) {
-            bj var2 = (bj) null;
-            ck.a(-35, -80, 96, (bj) null);
+          bj var2 = (bj) null;
+          ck.a(-35, -80, 96, (bj) null);
         }
     }
 
@@ -24,89 +24,63 @@ final class ck {
         ea[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (cn.a(param0, 258, param2, param3)) {
-              L1: {
-                if (param1 == 64) {
-                  break L1;
-                } else {
-                  field_b = (String) null;
-                  break L1;
-                }
-              }
-              stackIn_6_0 = kk.a(94);
-              break L0;
-            } else {
-              return null;
-            }
+          if (!cn.a(param0, 258, param2, param3)) {
+            return null;
           }
+          if (param1 != 64) {
+            field_b = (String) null;
+          }
+          stackIn_6_0 = kk.a(94);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("ck.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("ck.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final static ea[] a(byte param0, int param1) {
-        ea[] var2;
-        ea[] var3;
-        var3 = new ea[9];
-        var2 = var3;
+        ea[] var3 = new ea[9];
+        ea[] var2 = var3;
         var3[4] = hb.a(64, 32768, param1);
-        if (param0 != 126) {
-          field_d = -100L;
-          return var2;
-        } else {
+        if (param0 == 126) {
           return var2;
         }
+        field_d = -100L;
+        return var2;
     }
 
     final static void a(int param0) {
-        byte[] var1;
-        byte[] var2;
-        if (!kj.a(false)) {
-          if (aa.field_j != null) {
-            if (param0 != -30833) {
-              field_e = (String) null;
-              var2 = en.a((byte) -92);
-              var1 = var2;
-              le.a(0, var2, 6);
-              return;
-            } else {
-              var2 = en.a((byte) -92);
-              var1 = var2;
-              le.a(0, var2, 6);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        byte[] var2 = null;
+        byte[] var1 = null;
+        byte[] var2Lifetime1;
+        byte[] var1Lifetime1;
+        if (kj.a(false)) {
           return;
         }
+        if (aa.field_j == null) {
+          return;
+        }
+        if (param0 == -30833) {
+          var2 = en.a((byte) -92);
+          var1 = var2;
+          le.a(0, var2, 6);
+          return;
+        }
+        field_e = (String) null;
+        var2Lifetime1 = en.a((byte) -92);
+        var1Lifetime1 = var2Lifetime1;
+        le.a(0, var2Lifetime1, 6);
     }
 
     static {

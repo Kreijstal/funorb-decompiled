@@ -46,7 +46,7 @@ final class ma {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_k = null;
     }
@@ -55,118 +55,77 @@ final class ma {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         for (var5 = param1; var5 < this.field_g; var5++) {
-            this.field_x[var5] = (short)(this.field_x[var5] + param3);
-            this.field_O[var5] = (short)(this.field_O[var5] + param2);
-            this.field_r[var5] = (short)(this.field_r[var5] + param0);
+          this.field_x[var5] = (short)(this.field_x[var5] + param3);
+          this.field_O[var5] = (short)(this.field_O[var5] + param2);
+          this.field_r[var5] = (short)(this.field_r[var5] + param0);
         }
         this.c(-119);
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var12;
         int var11;
         var12 = BachelorFridge.field_y;
-        if (!this.field_J) {
-          this.field_J = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= this.field_g) {
-              L1: {
-                this.field_A = var5;
-                if (param0 >= 100) {
-                  break L1;
-                } else {
-                  this.field_u = -119;
-                  break L1;
-                }
-              }
-              this.field_I = var7;
-              this.field_G = var3;
-              this.field_q = var4;
-              this.field_u = var2;
-              this.field_B = var6;
-              return;
-            } else {
-              L2: {
-                var9 = this.field_x[var8];
-                var10 = this.field_O[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (var10 >= var3) {
-                  break L3;
-                } else {
-                  var3 = var10;
-                  break L3;
-                }
-              }
-              L4: {
-                var11 = this.field_r[var8];
-                if (var5 < var9) {
-                  var5 = var9;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (var10 <= var6) {
-                  break L5;
-                } else {
-                  var6 = var10;
-                  break L5;
-                }
-              }
-              L6: {
-                if (var11 <= var7) {
-                  break L6;
-                } else {
-                  var7 = var11;
-                  break L6;
-                }
-              }
-              if (var4 > var11) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_J) {
           return;
         }
+        this.field_J = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_g; var8++) {
+          var9 = this.field_x[var8];
+          var10 = this.field_O[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          var11 = this.field_r[var8];
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var4 > var11) {
+            var4 = var11;
+          }
+        }
+        this.field_A = var5;
+        if (param0 < 100) {
+          this.field_u = -119;
+        }
+        this.field_I = var7;
+        this.field_G = var3;
+        this.field_q = var4;
+        this.field_u = var2;
+        this.field_B = var6;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = BachelorFridge.field_y;
         for (var6 = param0; this.field_g > var6; var6++) {
-            this.field_x[var6] = (short)(param2 * this.field_x[var6] / param4);
-            this.field_O[var6] = (short)(this.field_O[var6] * param1 / param4);
-            this.field_r[var6] = (short)(this.field_r[var6] * param3 / param4);
+          this.field_x[var6] = (short)(param2 * this.field_x[var6] / param4);
+          this.field_O[var6] = (short)(this.field_O[var6] * param1 / param4);
+          this.field_r[var6] = (short)(this.field_r[var6] * param3 / param4);
         }
         this.c(-69);
     }
@@ -174,7 +133,7 @@ final class ma {
     private final void c(int param0) {
         this.field_J = false;
         if (param0 >= -16) {
-            this.c(83);
+          this.c(83);
         }
     }
 

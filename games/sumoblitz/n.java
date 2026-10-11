@@ -8,7 +8,7 @@ final class n extends da implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pa.a((e) (this), (byte) -37);
+          pa.a((e) (this), (byte) -37);
         }
     }
 
@@ -25,11 +25,11 @@ final class n extends da implements e {
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
         for (var11 = 0; var11 < param3.length; var11++) {
-            var6[var11] = param3[var11].field_e;
-            var7[var11] = param3[var11].field_h;
-            var8[var11] = param3[var11].field_i;
-            var9[var11] = param3[var11].field_c;
-            var10[var11] = param3[var11].field_d;
+          var6[var11] = param3[var11].field_e;
+          var7[var11] = param3[var11].field_h;
+          var8[var11] = param3[var11].field_i;
+          var9[var11] = param3[var11].field_c;
+          var10[var11] = param3[var11].field_d;
         }
         this.S(param0, param1, var6, param3[0].field_g, var7, var8, var9, var10);
     }

@@ -14,9 +14,9 @@ final class ng extends fj {
 
     final void a(hm param0, int param1) {
         try {
-            super.a(param0, param1);
+          super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ng.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class ng extends fj {
         field_mb = null;
         field_lb = null;
         if (param0 != 124) {
-            ng.j((byte) -12);
+          ng.j((byte) -12);
         }
     }
 

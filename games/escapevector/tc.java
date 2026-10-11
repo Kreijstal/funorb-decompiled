@@ -27,101 +27,67 @@ final class tc extends hg {
     }
 
     private final void a(byte param0) {
-        int var2;
+        int var2 = 0;
         ed var3;
         int var4;
         var4 = EscapeVector.field_A;
         this.field_m = 0;
         if (null == this.field_l) {
           return;
-        } else {
-          if (0 != this.field_l.length) {
-            L0: {
-              if (param0 > 84) {
-                break L0;
-              } else {
-                tc.e(-24);
-                break L0;
-              }
-            }
-            var2 = 0;
-            L1: while (true) {
-              if (this.field_l.length <= var2) {
-                return;
-              } else {
-                var3 = this.field_l[var2];
-                if (var3 != null) {
-                  this.field_m = this.field_m + var3.field_A;
-                  this.field_m = this.field_m + this.field_q;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
-              }
-            }
-          } else {
-            return;
+        }
+        if (0 == this.field_l.length) {
+          return;
+        }
+        if (param0 <= 84) {
+          tc.e(-24);
+        }
+        for (var2 = 0; this.field_l.length > var2; var2++) {
+          var3 = this.field_l[var2];
+          if (var3 != null) {
+            this.field_m = this.field_m + var3.field_A;
+            this.field_m = this.field_m + this.field_q;
           }
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
+        int var4 = 0;
         ed var5;
         int var6;
-        L0: {
-          var6 = EscapeVector.field_A;
-          if (param0 == 103) {
-            break L0;
-          } else {
-            field_n = (char[]) null;
-            break L0;
-          }
+        var6 = EscapeVector.field_A;
+        if (param0 != 103) {
+          field_n = (char[]) null;
         }
         if (this.field_l == null) {
           return;
-        } else {
-          if (this.field_l.length == 0) {
-            return;
-          } else {
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= this.field_l.length) {
-                return;
-              } else {
-                var5 = this.field_l[var4];
-                if (var5 != null) {
-                  var5.e(param1, param2);
-                  param1 = param1 + var5.field_A;
-                  param1 = param1 + this.field_q;
-                  var4++;
-                  continue L1;
-                } else {
-                  var4++;
-                  continue L1;
-                }
-              }
-            }
+        }
+        if (this.field_l.length == 0) {
+          return;
+        }
+        for (var4 = 0; var4 < this.field_l.length; var4++) {
+          var5 = this.field_l[var4];
+          if (var5 != null) {
+            var5.e(param1, param2);
+            param1 = param1 + var5.field_A;
+            param1 = param1 + this.field_q;
           }
         }
     }
 
     final int d(int param0) {
         if (param0 != 11384) {
-            this.a((byte) -120);
+          this.a((byte) -120);
         }
         return this.field_m;
     }
 
     tc(ed[] param0, int param1) {
         try {
-            this.field_q = param1;
-            this.field_l = param0;
-            this.a((byte) 112);
+          this.field_q = param1;
+          this.field_l = param0;
+          this.a((byte) 112);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

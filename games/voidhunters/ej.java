@@ -11,7 +11,7 @@ final class ej implements dja {
         field_a = null;
         field_c = null;
         if (param0 < 102) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 
@@ -22,8 +22,8 @@ final class ej implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            ej.b((byte) 12);
-            return (tv[]) ((Object) new nbb[param1]);
+          ej.b((byte) 12);
+          return (tv[]) ((Object) new nbb[param1]);
         }
         return (tv[]) ((Object) new nbb[param1]);
     }

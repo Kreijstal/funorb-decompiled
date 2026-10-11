@@ -18,26 +18,21 @@ final class gh extends km {
     km field_Gb;
 
     final static String a(long param0, byte param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         wc.field_l.setTime(new Date(param0));
-        var3 = wc.field_l.get(7);
-        var4 = wc.field_l.get(5);
-        var5 = wc.field_l.get(2);
-        var6 = wc.field_l.get(1);
-        if (param1 <= 74) {
-          return (String) null;
-        } else {
+        int var3 = wc.field_l.get(7);
+        int var4 = wc.field_l.get(5);
+        int var5 = wc.field_l.get(2);
+        int var6 = wc.field_l.get(1);
+        if (param1 > 74) {
           var7 = wc.field_l.get(11);
           var8 = wc.field_l.get(12);
           var9 = wc.field_l.get(13);
-          return fn.field_b[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + pg.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return fn.field_b[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + pg.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
+        return (String) null;
     }
 
     public static void d(boolean param0) {
@@ -46,7 +41,7 @@ final class gh extends km {
         field_Ib = null;
         field_Kb = null;
         if (param0) {
-            gh.d(true);
+          gh.d(true);
         }
     }
 

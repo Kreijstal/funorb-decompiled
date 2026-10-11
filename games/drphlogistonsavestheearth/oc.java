@@ -43,14 +43,12 @@ final class oc {
         gf.field_o = null;
         vi.field_b = null;
         aj.field_a = null;
-        if (param0 != -21) {
-          field_B = -28;
-          a.field_e = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == -21) {
           a.field_e = (byte[][]) null;
           return;
         }
+        field_B = -28;
+        a.field_e = (byte[][]) null;
     }
 
     oc() {

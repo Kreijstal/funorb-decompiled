@@ -8,7 +8,7 @@ final class vd {
     static String field_b;
 
     public static void a(byte param0) {
-        int var1 = 80 % ((param0 - -41) / 47);
+        int var1 = 80 % ((param0 + 41) / 47);
         field_b = null;
         field_c = null;
         field_d = null;
@@ -20,97 +20,47 @@ final class vd {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
+        int var7Lifetime1;
+        int var7Lifetime2;
         var8 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              var6_int = wh.field_g.field_d;
-              if (2 == param3) {
-                param0 = param0 - var6_int;
-                param4 = param4 + var6_int;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              jh.c();
-              if (2 != param1) {
-                break L2;
-              } else {
-                param0 = param0 - var6_int;
-                break L2;
-              }
-            }
-            L3: {
-              gf.e(param4, param5, param4 + param0, 8 + param5);
-              var7 = 0;
-              if (param2 == -14561) {
-                break L3;
-              } else {
-                vd.a(-78, 112, -21, -44, 75, -60);
-                break L3;
-              }
-            }
-            L4: while (true) {
-              if (param0 <= var7) {
-                L5: {
-                  jh.b();
-                  if ((param3 ^ -1) == -3) {
-                    wh.field_g.j(-var6_int + param4, param5);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (-3 != (param1 ^ -1)) {
-                    break L6;
-                  } else {
-                    wh.field_g.h(param0 + param4, param5);
-                    break L6;
-                  }
-                }
-                L7: {
-                  if ((param3 ^ -1) != -2) {
-                    break L7;
-                  } else {
-                    var7 = 0;
-                    L8: while (true) {
-                      if (8 <= var7) {
-                        break L7;
-                      } else {
-                        qe.b(param4 - -var7, param5, 8, 0, -(24 * var7) + 192);
-                        var7++;
-                        continue L8;
-                      }
-                    }
-                  }
-                }
-                L9: {
-                  if (param1 == 1) {
-                    var7 = 0;
-                    L10: while (true) {
-                      if (var7 >= 8) {
-                        break L9;
-                      } else {
-                        qe.b(param0 + (param4 - (1 - -var7)), param5, 8, 0, 192 - 24 * var7);
-                        var7++;
-                        continue L10;
-                      }
-                    }
-                  } else {
-                    break L9;
-                  }
-                }
-                break L0;
-              } else {
-                bk.field_e.b(var7 + param4, param5);
-                var7 = var7 + bk.field_e.field_d;
-                continue L4;
-              }
+          var6_int = wh.field_g.field_d;
+          if (2 == param3) {
+            param0 = param0 - var6_int;
+            param4 = param4 + var6_int;
+          }
+          jh.c();
+          if (2 == param1) {
+            param0 = param0 - var6_int;
+          }
+          gf.e(param4, param5, param4 + param0, 8 + param5);
+          var7 = 0;
+          if (param2 != -14561) {
+            vd.a(-78, 112, -21, -44, 75, -60);
+          }
+          while (param0 > var7) {
+            bk.field_e.b(var7 + param4, param5);
+            var7 = var7 + bk.field_e.field_d;
+          }
+          jh.b();
+          if (param3 == 2) {
+            wh.field_g.j(-var6_int + param4, param5);
+          }
+          if (param1 == 2) {
+            wh.field_g.h(param0 + param4, param5);
+          }
+          if (param3 == 1) {
+            for (var7Lifetime1 = 0; 8 > var7Lifetime1; var7Lifetime1++) {
+              qe.b(param4 + var7Lifetime1, param5, 8, 0, -(24 * var7Lifetime1) + 192);
             }
           }
+          if (param1 == 1) {
+            for (var7Lifetime2 = 0; var7Lifetime2 < 8; var7Lifetime2++) {
+              qe.b(param0 + (param4 - (1 + var7Lifetime2)), param5, 8, 0, 192 - 24 * var7Lifetime2);
+            }
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

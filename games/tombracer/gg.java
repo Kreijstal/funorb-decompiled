@@ -11,55 +11,43 @@ final class gg {
     static vna field_e;
 
     final void a(int param0) {
-        L0: {
-          if (this.field_d != null) {
-            this.field_d.a(12574);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_d != null) {
+          this.field_d.a(12574);
         }
         this.field_a = false;
-        if (param0 != -17253) {
-          this.field_d = (eja) null;
-          return;
-        } else {
+        if (param0 == -17253) {
           return;
         }
+        this.field_d = (eja) null;
     }
 
     final boolean a(boolean param0) {
-        if (!param0) {
-          if (this.field_a) {
-            if (this.field_g) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           gg.a((byte) 69);
-          if (this.field_a) {
-            if (this.field_g) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (!this.field_a) {
             return false;
           }
+          if (!this.field_g) {
+            return true;
+          }
+          return false;
         }
+        if (!this.field_a) {
+          return false;
+        }
+        if (!this.field_g) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
         field_f = null;
         field_b = null;
         if (param0 >= -70) {
-            gg.a((byte) -71);
-            field_e = null;
-            return;
+          gg.a((byte) -71);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

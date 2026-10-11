@@ -13,7 +13,6 @@ final class h extends ji {
     final int[][] b(int param0, int param1) {
         int incrementValue$0 = 0;
         int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         int[][] var3;
         int var4;
@@ -32,72 +31,46 @@ final class h extends ji {
         var13 = var14;
         var12 = var13;
         var3 = var12;
-        if (param0 == -3780) {
-          L0: {
-            if (!this.field_v.field_c) {
-              break L0;
-            } else {
-              L1: {
-                stackIn_5_0 = this.field_B;
-
-                if (aa.field_Vb != this.field_C) {
-                  stackIn_6_0 = stackIn_5_0;
-                  stackIn_6_1 = this.field_C * param1 / aa.field_Vb;
-                  break L1;
-                } else {
-                  stackIn_6_0 = stackIn_5_0;
-                  stackIn_6_1 = param1;
-                  break L1;
-                }
-              }
-              var4 = stackIn_6_0 * stackIn_6_1;
-              var5 = var14[0];
-              var6 = var14[1];
-              var7 = var14[2];
-              if (this.field_B != we.field_M) {
-                var8 = 0;
-                L2: while (true) {
-                  if (var8 >= we.field_M) {
-                    break L0;
-                  } else {
-                    var9 = var8 * this.field_B / we.field_M;
-                    var10 = this.field_z[var9 + var4];
-                    var7[var8] = b.a(var10, 255) << 170044612;
-                    var6[var8] = b.a(var10, 65280) >> -1349095228;
-                    var5[var8] = b.a(4080, var10 >> -1300720084);
-                    var8++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var8 = 0;
-                L3: while (true) {
-                  if (var8 >= we.field_M) {
-                    break L0;
-                  } else {
-                    incrementValue$0 = var4;
-                    var4++;
-                    var9 = this.field_z[incrementValue$0];
-                    var7[var8] = b.a(4080, var9 << -581700572);
-                    var6[var8] = b.a(var9, 65280) >> 1727446532;
-                    var5[var8] = b.a(var9 >> 1670616140, 4080);
-                    var8++;
-                    continue L3;
-                  }
-                }
-              }
-            }
-          }
-          return var3;
-        } else {
+        if (param0 != -3780) {
           return (int[][]) null;
         }
+        if (this.field_v.field_c) {
+          stackIn_5_0 = this.field_B;
+          if (aa.field_Vb != this.field_C) {
+            stackIn_6_1 = this.field_C * param1 / aa.field_Vb;
+          } else {
+            stackIn_6_1 = param1;
+          }
+          var4 = stackIn_5_0 * stackIn_6_1;
+          var5 = var14[0];
+          var6 = var14[1];
+          var7 = var14[2];
+          if (this.field_B != we.field_M) {
+            for (var8 = 0; var8 < we.field_M; var8++) {
+              var9 = var8 * this.field_B / we.field_M;
+              var10 = this.field_z[var9 + var4];
+              var7[var8] = b.a(var10, 255) << 4;
+              var6[var8] = b.a(var10, 65280) >> 4;
+              var5[var8] = b.a(4080, var10 >> 12);
+            }
+          } else {
+            for (var8 = 0; var8 < we.field_M; var8++) {
+              incrementValue$0 = var4;
+              var4++;
+              var9 = this.field_z[incrementValue$0];
+              var7[var8] = b.a(4080, var9 << 4);
+              var6[var8] = b.a(var9, 65280) >> 4;
+              var5[var8] = b.a(var9 >> 12, 4080);
+            }
+          }
+        }
+        return var3;
     }
 
     final void f(int param0) {
         super.f(param0 ^ 0);
         if (param0 != 2) {
-            return;
+          return;
         }
         this.field_z = null;
     }
@@ -110,19 +83,18 @@ final class h extends ji {
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
         super.b(param0, param1, param2);
-        if ((this.field_E ^ -1) <= -1) {
-            if (!(null == mk.field_P)) {
-                var4 = mk.field_P.e(this.field_E, param2 ^ -256).field_c ? 64 : 128;
-                this.field_z = mk.field_P.a(param2 + -9973, 1.0f, this.field_E, false, var4, var4);
-                this.field_B = var4;
-                this.field_C = var4;
-            }
+        if (this.field_E >= 0 &&
+          null != mk.field_P) {
+          var4 = mk.field_P.e(this.field_E, param2 ^ -256).field_c ? 64 : 128;
+          this.field_z = mk.field_P.a(param2 - 9973, 1.0f, this.field_E, false, var4, var4);
+          this.field_B = var4;
+          this.field_C = var4;
         }
     }
 
     final int e(int param0) {
         if (param0 != 6557) {
-            this.field_B = 51;
+          this.field_B = 51;
         }
         return this.field_E;
     }
@@ -131,14 +103,14 @@ final class h extends ji {
         field_D = null;
         field_A = null;
         if (param0 != 1) {
-            field_A = (String) null;
+          field_A = (String) null;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var7 = 0;
         int var5_int = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -146,41 +118,23 @@ final class h extends ji {
         RuntimeException var5 = null;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              bi.b(param0, param2, 1 + param3, 10000536);
-              bi.b(param0, param2 + param4, param3 - -1, 12105912);
-              var5_int = param1;
-              var6 = param4;
-              if (bi.field_f > var5_int + param2) {
-                var5_int = -param2 + bi.field_f;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (bi.field_c >= param2 + var6) {
-                break L2;
-              } else {
-                var6 = -param2 + bi.field_c;
-                break L2;
-              }
-            }
-            var7 = var5_int;
-            L3: while (true) {
-              if (var7 >= var6) {
-                break L0;
-              } else {
-                var8 = var7 * 48 / param4 + 152;
-                var9 = var8 << 1765133840 | var8 << -1079343544 | var8;
-                bi.field_l[bi.field_e * (var7 + param2) - -param0] = var9;
-                bi.field_l[param3 + (var7 + param2) * bi.field_e - -param0] = var9;
-                var7++;
-                continue L3;
-              }
-            }
+          bi.b(param0, param2, 1 + param3, 10000536);
+          bi.b(param0, param2 + param4, param3 + 1, 12105912);
+          var5_int = param1;
+          var6 = param4;
+          if (bi.field_f > var5_int + param2) {
+            var5_int = -param2 + bi.field_f;
           }
+          if (bi.field_c < param2 + var6) {
+            var6 = -param2 + bi.field_c;
+          }
+          for (var7 = var5_int; var7 < var6; var7++) {
+            var8 = var7 * 48 / param4 + 152;
+            var9 = var8 << 16 | var8 << 8 | var8;
+            bi.field_l[bi.field_e * (var7 + param2) + param0] = var9;
+            bi.field_l[param3 + (var7 + param2) * bi.field_e + param0] = var9;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -191,52 +145,28 @@ final class h extends ji {
     final void a(byte param0, int param1, ed param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            L1: {
-              if (-1 == (param1 ^ -1)) {
-                this.field_E = param2.a((byte) -11);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param0 == 110) {
-                break L2;
-              } else {
-                field_y = 47;
-                break L2;
-              }
-            }
-            break L0;
+          if (param1 == 0) {
+            this.field_E = param2.a((byte) -11);
           }
+          if (param0 != 110) {
+            field_y = 47;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4);
-
-            stackIn_8_1 = new StringBuilder().append("h.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_8_0 = var4;
+          stackIn_8_1 = new StringBuilder().append("h.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

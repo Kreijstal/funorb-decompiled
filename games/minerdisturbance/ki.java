@@ -7,7 +7,7 @@ final class ki extends pi {
     boolean field_o;
 
     final static void a(int param0) {
-        int decompiledRegionSelector0 = 0;
+        int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -15,7 +15,6 @@ final class ki extends pi {
         int[] var4 = null;
         ld var5 = null;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
@@ -25,94 +24,58 @@ final class ki extends pi {
         ki var14 = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0 == -15003) {
-                break L1;
-              } else {
-                field_n = -89;
-                break L1;
-              }
-            }
-            var13 = kj.field_a;
-            var2 = var13.d((byte) -54);
-            if (0 == var2) {
-              var10 = hk.b(0);
-              var3 = var10;
-              var9 = var10;
-              var4 = var9;
-              var5 = var13;
-              var6 = ((sb) ((Object) var5)).d((byte) -54);
-              var7 = 0;
-              L2: while (true) {
-                if (var6 <= var7) {
-                  var12 = (ki) ((Object) on.field_v.b(110));
-                  if (var12 != null) {
-                    var12.field_p = var3;
-                    var12.field_o = true;
-                    var12.b(34);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    si.a(param0 + 14967);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                } else {
-                  var9[var7] = ((sb) ((Object) var5)).b((byte) 118);
-                  var7++;
-                  continue L2;
-                }
-              }
-            } else {
-              if (-2 != (var2 ^ -1)) {
-                if (-3 == (var2 ^ -1)) {
-                  var14 = (ki) ((Object) on.field_v.b(64));
-                  if (var14 == null) {
-                    si.a(-79);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var14.field_p = hk.b(param0 + 15003);
-                    var14.field_o = true;
-                    var14.b(34);
-                    return;
-                  }
-                } else {
-                  di.a((Throwable) null, param0 ^ -15004, "A1: " + hj.a((byte) 116));
-                  si.a(-110);
-                  return;
-                }
-              } else {
-                var11 = (sl) ((Object) tc.field_v.b(101));
-                if (var11 == null) {
-                  si.a(param0 + 14908);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var11.b(param0 + 15037);
-                  return;
-                }
-              }
-            }
+          if (param0 != -15003) {
+            field_n = -89;
           }
+          var13 = kj.field_a;
+          var2 = var13.d((byte) -54);
+          if (0 == var2) {
+            var10 = hk.b(0);
+            var3 = var10;
+            var9 = var10;
+            var4 = var9;
+            var5 = var13;
+            var6 = ((sb) ((Object) var5)).d((byte) -54);
+            for (var7 = 0; var6 > var7; var7++) {
+              var9[var7] = ((sb) ((Object) var5)).b((byte) 118);
+            }
+            var12 = (ki) (on.field_v.b(110));
+            if (var12 == null) {
+              si.a(param0 + 14967);
+              return;
+            }
+            var12.field_p = var3;
+            var12.field_o = true;
+            var12.b(34);
+            return;
+          }
+          if (var2 == 1) {
+            var11 = (sl) (tc.field_v.b(101));
+            if (var11 == null) {
+              si.a(param0 + 14908);
+              return;
+            }
+            var11.b(param0 + 15037);
+            return;
+          }
+          if (var2 != 2) {
+            di.a((Throwable) null, param0 ^ -15004, "A1: " + hj.a((byte) 116));
+            si.a(-110);
+            return;
+          }
+          var14 = (ki) (on.field_v.b(64));
+          if (var14 == null) {
+            si.a(-79);
+            return;
+          }
+          var14.field_p = hk.b(param0 + 15003);
+          var14.field_o = true;
+          var14.b(34);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var1), "ki.A(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -122,51 +85,30 @@ final class ki extends pi {
         ea[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (cn.a(param0, param3 ^ -261, param2, param1)) {
-              L1: {
-                if (param3 == -7) {
-                  break L1;
-                } else {
-                  var5 = (bj) null;
-                  ki.a(-56, (bj) null, -11, (byte) 16);
-                  break L1;
-                }
-              }
-              stackIn_6_0 = wc.a(-29);
-              break L0;
-            } else {
-              return null;
-            }
+          if (!cn.a(param0, param3 ^ -261, param2, param1)) {
+            return null;
           }
+          if (param3 != -7) {
+            var5 = (bj) null;
+            ki.a(-56, (bj) null, -11, (byte) 16);
+          }
+          stackIn_6_0 = wc.a(-29);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("ki.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("ki.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     ki() {

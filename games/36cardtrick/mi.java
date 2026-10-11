@@ -8,45 +8,45 @@ class mi extends ff {
 
     fe a(byte param0) {
         if (param0 != -24) {
-            return (fe) null;
+          return (fe) null;
         }
         return hc.field_h;
     }
 
     public static void c(int param0) {
         if (param0 != -3731) {
-            return;
+          return;
         }
         field_c = null;
     }
 
     final void a(int param0, pb param1) {
         if (param0 != -1) {
-            return;
+          return;
         }
         try {
-            param1.a(this.field_d, (byte) 98);
-            param1.b(this.field_e, 15045);
+          param1.a(this.field_d, (byte) 98);
+          param1.b(this.field_e, 15045);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "mi.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, ib param1, int param2, int param3) {
         try {
-            gh.a(li.a(param1, param2, param3), (byte) -111);
-            int var4_int = 81 % ((31 - param0) / 46);
+          gh.a(li.a(param1, param2, param3), (byte) -111);
+          int var4_int = 81 % ((31 - param0) / 46);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "mi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "mi.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     mi(long param0, String param1) {
         try {
-            this.field_d = param0;
-            this.field_e = param1;
+          this.field_d = param0;
+          this.field_e = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "mi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

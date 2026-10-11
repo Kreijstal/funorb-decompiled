@@ -13,7 +13,7 @@ abstract class jp {
 
     public static void b(byte param0) {
         if (param0 >= -42) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;
@@ -22,47 +22,42 @@ abstract class jp {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param1 > 110) {
-          bn.field_I.a(param5, param0, param4, 256, param2);
-          if (null != bo.field_h) {
-            bo.field_h.a(param0, param6 + -di.field_a, param3, param6, (byte) -94, param0);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param1 <= 110) {
           jp.b((byte) -3);
           bn.field_I.a(param5, param0, param4, 256, param2);
-          if (null == bo.field_h) {
-            return;
-          } else {
-            bo.field_h.a(param0, param6 + -di.field_a, param3, param6, (byte) -94, param0);
+          if (null != bo.field_h) {
+            bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
             return;
           }
+          return;
         }
+        bn.field_I.a(param5, param0, param4, 256, param2);
+        if (null == bo.field_h) {
+          return;
+        }
+        bo.field_h.a(param0, param6 - di.field_a, param3, param6, (byte) -94, param0);
     }
 
     final static void a(int param0) {
-        int var1;
-        if (null != eg.field_n) {
-          if (null == eg.field_n.field_o) {
-            eg.field_n = null;
-            bj.field_d = null;
-            var1 = -128 / ((-64 - param0) / 33);
-            return;
-          } else {
-            eg.field_n.field_o.field_U = false;
-            eg.field_n = null;
-            bj.field_d = null;
-            var1 = -128 / ((-64 - param0) / 33);
-            return;
-          }
-        } else {
+        int var1 = 0;
+        int var1Lifetime1;
+        int var1Lifetime2;
+        if (null == eg.field_n) {
           eg.field_n = null;
           bj.field_d = null;
           var1 = -128 / ((-64 - param0) / 33);
           return;
         }
+        if (null != eg.field_n.field_o) {
+          eg.field_n.field_o.field_U = false;
+          eg.field_n = null;
+          bj.field_d = null;
+          var1Lifetime1 = -128 / ((-64 - param0) / 33);
+          return;
+        }
+        eg.field_n = null;
+        bj.field_d = null;
+        var1Lifetime2 = -128 / ((-64 - param0) / 33);
     }
 
     final static int a(String param0, int param1, boolean param2) {
@@ -71,57 +66,29 @@ abstract class jp {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 8192) {
-                break L1;
-              } else {
-                field_d = (String) null;
-                break L1;
-              }
-            }
-            if (!param2) {
-              stackIn_6_0 = lm.field_o.c(param0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = ie.field_G.c(param0);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 8192) {
+            field_d = (String) null;
           }
+          if (!param2) {
+            stackIn_6_0 = lm.field_o.c(param0);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = ie.field_G.c(param0);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("jp.A(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("jp.A(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return stackIn_6_0;
+          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

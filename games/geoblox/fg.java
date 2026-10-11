@@ -12,11 +12,11 @@ final class fg {
     }
 
     private final byte[] b() {
+        int var4 = 0;
         int var8 = 0;
         int var1;
         int var2;
         byte[] var3;
-        int var4;
         int var5;
         int var6;
         int var9;
@@ -24,40 +24,31 @@ final class fg {
         int var2Lifetime1;
         var1 = 0;
         for (var2 = 0; var2 < 10; var2++) {
-          if (this.field_a[var2] == null) {
-            continue;
+          if (this.field_a[var2] != null &&
+            this.field_a[var2].field_d + this.field_a[var2].field_v > var1) {
+            var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
           }
-          if (this.field_a[var2].field_d + this.field_a[var2].field_v <= var1) {
-            continue;
-          }
-          var1 = this.field_a[var2].field_d + this.field_a[var2].field_v;
         }
         if (var1 == 0) {
           return new byte[]{};
         }
         var2Lifetime1 = 22050 * var1 / 1000;
         var3 = new byte[var2Lifetime1];
-        var4 = 0;
-        while (true) {
-          if (var4 >= 10) {
-            return var3;
-          }
-          if (this.field_a[var4] == null) {
-            var4++;
-            continue;
-          }
-          var5 = this.field_a[var4].field_d * 22050 / 1000;
-          var6 = this.field_a[var4].field_v * 22050 / 1000;
-          var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
-          for (var8 = 0; var8 < var5; var8++) {
-            var9 = var3[var8 + var6] + (var13[var8] >> 8);
-            if ((var9 + 128 & -256) != 0) {
-              var9 = var9 >> 31 ^ 127;
+        for (var4 = 0; var4 < 10; var4++) {
+          if (this.field_a[var4] != null) {
+            var5 = this.field_a[var4].field_d * 22050 / 1000;
+            var6 = this.field_a[var4].field_v * 22050 / 1000;
+            var13 = this.field_a[var4].a(var5, this.field_a[var4].field_d);
+            for (var8 = 0; var8 < var5; var8++) {
+              var9 = var3[var8 + var6] + (var13[var8] >> 8);
+              if ((var9 + 128 & -256) != 0) {
+                var9 = var9 >> 31 ^ 127;
+              }
+              var3[var8 + var6] = (byte)var9;
             }
-            var3[var8 + var6] = (byte)var9;
           }
-          var4++;
         }
+        return var3;
     }
 
     private fg(qc param0) {
@@ -66,12 +57,11 @@ final class fg {
         this.field_a = new ed[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.c((byte) 34);
-          if (var3 == 0) {
-            continue;
+          if (var3 != 0) {
+            param0.field_f = param0.field_f - 1;
+            this.field_a[var2] = new ed();
+            this.field_a[var2].a(param0);
           }
-          param0.field_f = param0.field_f - 1;
-          this.field_a[var2] = new ed();
-          this.field_a[var2].a(param0);
         }
         this.field_c = param0.b(true);
         this.field_b = param0.b(true);

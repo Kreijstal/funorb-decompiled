@@ -108,27 +108,25 @@ final class em {
     final void a(byte param0) {
         int var2;
         int var3;
-        bj stackIn_16_0 = null;
+        bj stackIn_19_0 = null;
         int var2Lifetime1;
         var3 = Geoblox.field_C;
         if (null == this.field_d) {
           return;
         }
         for (var2 = 0; this.field_d.length > var2; var2++) {
-          if (this.field_d[var2] == null) {
-            continue;
+          if (this.field_d[var2] != null) {
+            this.field_d[var2].a(6924);
           }
-          this.field_d[var2].a(6924);
         }
         if (param0 != -65) {
           em.a('\031', 15);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < this.field_d.length; var2Lifetime1++) {
-          if (null == this.field_d[var2Lifetime1]) {
-            continue;
+          if (null != this.field_d[var2Lifetime1]) {
+            stackIn_19_0 = this.field_d[var2Lifetime1];
+            ((bj) (Object) stackIn_19_0).b((byte) -38);
           }
-          stackIn_16_0 = this.field_d[var2Lifetime1];
-          ((bj) (Object) stackIn_16_0).b((byte) -38);
         }
     }
 

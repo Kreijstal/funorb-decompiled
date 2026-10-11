@@ -11,23 +11,21 @@ final class kn {
 
     final static void a(int param0) {
         if (param0 != 16) {
-            kn.a(108);
+          kn.a(108);
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
         field_d = null;
-        if (!param0) {
-          kn.a(62);
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0) {
           field_c = null;
           field_f = null;
           return;
         }
+        kn.a(62);
+        field_c = null;
+        field_f = null;
     }
 
     static {

@@ -15,55 +15,48 @@ class di extends a {
         field_G = null;
         field_D = null;
         field_E = null;
-        if (param0 <= 44) {
-          field_C = (String) null;
-          field_B = null;
-          field_C = null;
-          return;
-        } else {
+        if (param0 > 44) {
           field_B = null;
           field_C = null;
           return;
         }
+        field_C = (String) null;
+        field_B = null;
+        field_C = null;
     }
 
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
         if (param0) {
-            ke.a(param4.field_u + param1, param2 + param4.field_D, param4.field_t, param4.field_y, (byte) 112);
+          ke.a(param4.field_u + param1, param2 + param4.field_D, param4.field_t, param4.field_y, (byte) 112);
         }
         if (param3 > -60) {
-            return;
+          return;
         }
         try {
-            super.a(param0, param1, param2, (byte) -120, param4);
+          super.a(param0, param1, param2, (byte) -120, param4);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "di.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          if (null != qc.field_s) {
-            if (!ph.field_xb.b(22277)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           di.a(false);
-          if (null != qc.field_s) {
-            if (!ph.field_xb.b(22277)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == qc.field_s) {
             return false;
           }
+          if (ph.field_xb.b(22277)) {
+            return true;
+          }
+          return false;
         }
+        if (null == qc.field_s) {
+          return false;
+        }
+        if (ph.field_xb.b(22277)) {
+          return true;
+        }
+        return false;
     }
 
     di(mm param0, int param1) {
@@ -87,16 +80,16 @@ class di extends a {
         field_E = "Set up new unrated game";
         field_B = new int[98304];
         for (var0 = 92682; var0 >= 46341; var0--) {
-            var4 = (long)(-1 + (var0 << -1906740639));
-            var6 = (long)(1 + (var0 << -1894538015));
-            var3 = (int)(-32768L + (var6 * var6 >> -1783657518));
-            var2 = (int)((var4 * var4 >> 217359698) - 32768L);
-            if (!(field_B.length > var3)) {
-                var3 = field_B.length - 1;
-            }
-            for (var1 = (var2 ^ -1) > -1 ? 0 : var2; var3 >= var1; var1++) {
-                field_B[var1] = var0;
-            }
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)(1 + (var0 << 1));
+          var3 = (int)(-32768L + (var6 * var6 >> 18));
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          if (!(field_B.length > var3)) {
+            var3 = field_B.length - 1;
+          }
+          for (var1 = var2 < 0 ? 0 : var2; var3 >= var1; var1++) {
+            field_B[var1] = var0;
+          }
         }
         field_G = "Names should contain a maximum of 12 characters";
     }

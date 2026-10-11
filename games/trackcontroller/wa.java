@@ -13,16 +13,16 @@ final class wa extends fc {
         field_n = null;
         field_k = null;
         field_j = null;
-        int var1 = -98 / ((param0 - -19) / 58);
+        int var1 = -98 / ((param0 + 19) / 58);
     }
 
     wa(long param0, int param1, byte[] param2) {
         try {
-            this.field_m = param2;
-            this.field_i = param1;
-            this.field_l = param0;
+          this.field_m = param2;
+          this.field_i = param1;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "wa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "wa.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,9 +9,9 @@ final class lt {
     public static void b(byte param0) {
         field_c = null;
         if (param0 >= -4) {
-            lt.b((byte) 37);
-            field_a = null;
-            return;
+          lt.b((byte) 37);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -21,52 +21,45 @@ final class lt {
     }
 
     final static boolean a(byte param0) {
-        if (param0 == 99) {
-          if (null != dma.field_b) {
-            if (!eia.field_a.a(23716)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 99) {
           field_c = (String) null;
-          if (null != dma.field_b) {
-            if (!eia.field_a.a(23716)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == dma.field_b) {
             return false;
           }
+          if (eia.field_a.a(23716)) {
+            return true;
+          }
+          return false;
         }
+        if (null == dma.field_b) {
+          return false;
+        }
+        if (eia.field_a.a(23716)) {
+          return true;
+        }
+        return false;
     }
 
     final static boolean b(int param0, int param1) {
-        String var2;
-        if (param0 == 28427) {
-          var2 = lka.field_E[param1][17];
-          var2 = var2.trim();
-          var2 = var2.toLowerCase();
-          if (var2.equals("yes")) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
+        String var2 = null;
+        String var2Lifetime1;
+        if (param0 != 28427) {
           lt.b((byte) -113);
           var2 = lka.field_E[param1][17];
           var2 = var2.trim();
           var2 = var2.toLowerCase();
-          if (var2.equals("yes")) {
-            return true;
-          } else {
+          if (!var2.equals("yes")) {
             return false;
           }
+          return true;
         }
+        var2Lifetime1 = lka.field_E[param1][17];
+        var2Lifetime1 = var2Lifetime1.trim();
+        var2Lifetime1 = var2Lifetime1.toLowerCase();
+        if (!var2Lifetime1.equals("yes")) {
+          return false;
+        }
+        return true;
     }
 
     static {

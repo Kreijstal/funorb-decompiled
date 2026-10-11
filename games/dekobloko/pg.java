@@ -12,15 +12,16 @@ final class pg {
 
     final static Boolean a(int param0) {
         Boolean var1 = null;
+        Boolean var1Lifetime1;
         if (param0 != 24994) {
-            field_g = (String) null;
-            var1 = wb.field_Ub;
-            wb.field_Ub = null;
-            return var1;
+          field_g = (String) null;
+          var1 = wb.field_Ub;
+          wb.field_Ub = null;
+          return var1;
         }
-        var1 = wb.field_Ub;
+        var1Lifetime1 = wb.field_Ub;
         wb.field_Ub = null;
-        return var1;
+        return var1Lifetime1;
     }
 
     public static void a(byte param0) {
@@ -31,7 +32,7 @@ final class pg {
         field_f = null;
         field_d = null;
         if (param0 != 126) {
-            pg.a((byte) 95);
+          pg.a((byte) 95);
         }
     }
 

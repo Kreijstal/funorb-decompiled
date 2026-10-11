@@ -8,54 +8,37 @@ final class bh extends le {
     static String field_h;
 
     final static void a(int param0) {
-        al[] var1 = null;
         int var2 = 0;
+        al[] var1 = null;
         al var3 = null;
         int var4 = 0;
         al[] var5 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = ZombieDawn.field_J;
         try {
-          L0: {
-            if (qg.field_d) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              qg.field_d = true;
-              var5 = qk.field_Jb;
-              var1 = var5;
-              var2 = param0;
-              L1: while (true) {
-                if (var2 >= var5.length) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var3 = var5[var2];
-                  var3.b(24136);
-                  var2++;
-                  continue L1;
-                }
-              }
-            }
+          if (qg.field_d) {
+            return;
           }
+          qg.field_d = true;
+          var5 = qk.field_Jb;
+          var1 = var5;
+          for (var2 = param0; var2 < var5.length; var2++) {
+            var3 = var5[var2];
+            var3.b(24136);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw sh.a((Throwable) ((Object) var1_ref), "bh.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
     public static void c(int param0) {
         field_h = null;
         if (param0 < 69) {
-            bh.a(-47);
+          bh.a(-47);
         }
         field_j = null;
         field_i = null;
@@ -63,9 +46,9 @@ final class bh extends le {
 
     bh(byte[] param0) {
         try {
-            this.field_k = param0;
+          this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,87 +59,43 @@ final class bh extends le {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char[] var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
         var5 = ZombieDawn.field_J;
         try {
-          L0: {
-            if (!Character.isISOControl(param0)) {
-              if (c.a(param0, 441)) {
-                stackIn_7_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var6 = hn.field_o;
-                var2 = var6;
-                var3 = 0;
-                L1: while (true) {
-                  if (var6.length <= var3) {
-                    L2: {
-                      var2 = pf.field_h;
-                      var3 = 0;
-                      if (!param1) {
-                        break L2;
-                      } else {
-                        field_h = (String) null;
-                        break L2;
-                      }
-                    }
-                    L3: while (true) {
-                      if (var3 >= var2.length) {
-                        stackIn_24_0 = 0;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        var4 = var2[var3];
-                        if (param0 == var4) {
-                          stackIn_21_0 = 1;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          var3++;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var4 = var6[var3];
-                    if ((param0 ^ -1) != (var4 ^ -1)) {
-                      var3++;
-                      continue L1;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (Character.isISOControl(param0)) {
+            return false;
+          }
+          if (c.a(param0, 441)) {
+            return true;
+          }
+          var6 = hn.field_o;
+          var2 = var6;
+          for (var3 = 0; var6.length > var3; var3++) {
+            var4 = var6[var3];
+            if (~param0 == ~var4) {
+              return true;
             }
           }
+          var2Lifetime1 = pf.field_h;
+          var3Lifetime1 = 0;
+          if (param1) {
+            field_h = (String) null;
+          }
+          while (var3Lifetime1 < var2Lifetime1.length) {
+            var4Lifetime1 = var2Lifetime1[var3Lifetime1];
+            if (param0 == var4Lifetime1) {
+              return true;
+            }
+            var3Lifetime1++;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw sh.a((Throwable) ((Object) var2_ref), "bh.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_21_0 != 0;
-            } else {
-              return stackIn_24_0 != 0;
-            }
-          }
         }
     }
 

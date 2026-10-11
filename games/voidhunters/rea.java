@@ -7,10 +7,10 @@ final class rea extends uj {
 
     public static void d(int param0) {
         if (param0 < 56) {
-            field_d = (String) null;
-            field_d = null;
-            field_e = null;
-            return;
+          field_d = (String) null;
+          field_d = null;
+          field_e = null;
+          return;
         }
         field_d = null;
         field_e = null;
@@ -18,16 +18,16 @@ final class rea extends uj {
 
     final boolean c(int param0) {
         if (param0 <= 63) {
-            rea.d(-112);
-            return true;
+          rea.d(-112);
+          return true;
         }
         return true;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
-            field_d = (String) null;
-            return oq.field_t;
+          field_d = (String) null;
+          return oq.field_t;
         }
         return oq.field_t;
     }
@@ -37,16 +37,16 @@ final class rea extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-            field_d = (String) null;
-            return false;
+          field_d = (String) null;
+          return false;
         }
         return false;
     }
 
     final int b(byte param0) {
         if (param0 < 79) {
-            field_d = (String) null;
-            return 103;
+          field_d = (String) null;
+          return 103;
         }
         return 103;
     }

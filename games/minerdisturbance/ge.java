@@ -14,90 +14,42 @@ final class ge {
     final static void a(int param0, byte param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var5 = 0;
+        int var3_intLifetime1;
         var4 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            if (param1 == 85) {
-              L1: {
-                if (!param2) {
-                  var5 = 0;
-                  var3_int = var5;
-                  L2: while (true) {
-                    if ((var5 ^ -1) <= -26) {
-                      break L1;
-                    } else {
-                      L3: {
-                        if (sd.field_c[var5] != param0) {
-                          break L3;
-                        } else {
-                          if (null == gl.field_u[var5]) {
-                            break L3;
-                          } else {
-                            kf.a(gl.field_u[var5], (byte) -111);
-                            gl.field_u[var5] = null;
-                            decompiledRegionSelector0 = 2;
-                            break L0;
-                          }
-                        }
-                      }
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  var3_int = 0;
-                  L4: while (true) {
-                    if (-26 >= (var3_int ^ -1)) {
-                      break L1;
-                    } else {
-                      L5: {
-                        if (rb.field_l[var3_int] != param0) {
-                          break L5;
-                        } else {
-                          if (null != dn.field_t[var3_int]) {
-                            kf.a(dn.field_t[var3_int], (byte) -114);
-                            dn.field_t[var3_int] = null;
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3_int++;
-                      continue L4;
-                    }
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 3;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 85) {
+            return;
           }
+          if (param2) {
+            for (var3_int = 0; var3_int < 25; var3_int++) {
+              if (rb.field_l[var3_int] == param0 &&
+                null != dn.field_t[var3_int]) {
+                kf.a(dn.field_t[var3_int], (byte) -114);
+                dn.field_t[var3_int] = null;
+                return;
+              }
+            }
+            return;
+          }
+          var5 = 0;
+          var3_intLifetime1 = var5;
+          while (var5 < 25) {
+            if (sd.field_c[var5] == param0 &&
+              null != gl.field_u[var5]) {
+              kf.a(gl.field_u[var5], (byte) -111);
+              gl.field_u[var5] = null;
+              return;
+            }
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var3), "ge.C(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -107,7 +59,7 @@ final class ge {
         field_a = null;
         field_e = null;
         if (param0 < 95) {
-            field_c = false;
+          field_c = false;
         }
         field_b = null;
         field_h = null;
@@ -119,52 +71,31 @@ final class ge {
         ih stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              L1: {
-                if (param1 == -569) {
-                  break L1;
-                } else {
-                  field_d = (String) null;
-                  break L1;
-                }
-              }
-              var2 = new ih(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, db.field_b);
-              ec.a((byte) -111);
-              stackIn_6_0 = (ih) (var2);
-              break L0;
-            } else {
-              return null;
-            }
+          if (param0 == null) {
+            return null;
           }
+          if (param1 != -569) {
+            field_d = (String) null;
+          }
+          var2 = new ih(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, db.field_b);
+          ec.a((byte) -111);
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2_ref);
-
-            stackIn_9_1 = new StringBuilder().append("ge.A(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("ge.A(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     static {

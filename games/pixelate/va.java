@@ -16,39 +16,21 @@ public class va {
         Throwable decompiledCaughtException = null;
         field_a = param2;
         field_b = param0;
-        if (param1 >= 56) {
-          try {
-            L0: {
-              L1: {
-                field_e = System.getProperty("user.home");
-                if (field_e == null) {
-                  break L1;
-                } else {
-                  field_e = field_e + "/";
-                  break L1;
-                }
-              }
-              break L0;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L2: {
-              exception = (Exception) (Object) decompiledCaughtException;
-              break L2;
-            }
-          }
-          L3: {
-            field_c = true;
-            if (null == field_e) {
-              field_e = "~/";
-              break L3;
-            } else {
-              break L3;
-            }
-          }
+        if (param1 < 56) {
           return;
-        } else {
-          return;
+        }
+        try {
+          field_e = System.getProperty("user.home");
+          if (field_e != null) {
+            field_e = field_e + "/";
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          exception = (Exception) (Object) decompiledCaughtException;
+        }
+        field_c = true;
+        if (null == field_e) {
+          field_e = "~/";
         }
     }
 
@@ -58,8 +40,8 @@ public class va {
 
     public static File a(String param0, byte param1) {
         if (param1 != -61) {
-            field_b = (String) null;
-            return va.a(field_b, field_a, true, param0);
+          field_b = (String) null;
+          return va.a(field_b, field_a, true, param0);
         }
         return va.a(field_b, field_a, true, param0);
     }

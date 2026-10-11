@@ -24,7 +24,7 @@ final class jq {
         field_d = null;
         field_e = null;
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
     }

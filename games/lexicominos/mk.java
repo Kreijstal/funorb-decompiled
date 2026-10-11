@@ -12,15 +12,12 @@ final class mk extends kd {
     final static void a(int param0) {
         if (!qg.field_d) {
           throw new IllegalStateException();
-        } else {
-          if (param0 != 14891) {
-            return;
-          } else {
-            u.field_tb = true;
-            q.a((byte) -69, true);
-            ta.field_g = 0;
-            return;
-          }
+        }
+        if (param0 == 14891) {
+          u.field_tb = true;
+          q.a((byte) -69, true);
+          ta.field_g = 0;
+          return;
         }
     }
 
@@ -32,10 +29,10 @@ final class mk extends kd {
 
     mk(int param0, ij param1) {
         try {
-            this.field_i = param0;
-            this.field_k = param1;
+          this.field_i = param0;
+          this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "mk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

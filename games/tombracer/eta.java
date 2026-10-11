@@ -8,7 +8,7 @@ class eta {
     public static void a(int param0) {
         field_a = (jpa[][]) null;
         if (param0 != 29574) {
-            eta.a(59);
+          eta.a(59);
         }
     }
 

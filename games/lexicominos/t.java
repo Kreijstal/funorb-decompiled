@@ -7,13 +7,13 @@ final class t {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 12307) {
-            t.a(-10);
+          t.a(-10);
         }
     }
 
     final static ik b(int param0) {
-        if (!(uc.field_kb != null)) {
-            uc.field_kb = new ik(cl.field_T, 20, 0, 0, 0, 11579568, -1, 0, 0, cl.field_T.field_E, -1, 2147483647, true);
+        if (uc.field_kb == null) {
+          uc.field_kb = new ik(cl.field_T, 20, 0, 0, 0, 11579568, -1, 0, 0, cl.field_T.field_E, -1, 2147483647, true);
         }
         int var1 = 28 % ((param0 - 69) / 52);
         return uc.field_kb;

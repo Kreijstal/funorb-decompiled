@@ -6,15 +6,15 @@ final class lg extends uj {
 
     final int b(byte param0) {
         if (param0 < 79) {
-            return -43;
+          return -43;
         }
         return 108;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            this.a(-39);
-            return false;
+          this.a(-39);
+          return false;
         }
         return false;
     }
@@ -24,24 +24,24 @@ final class lg extends uj {
 
     final int d(byte param0) {
         if (param0 != 64) {
-            field_d = (String) null;
-            return oq.field_a;
+          field_d = (String) null;
+          return oq.field_a;
         }
         return oq.field_a;
     }
 
     final int a(int param0) {
         if (param0 != -1) {
-            return 56;
+          return 56;
         }
         return cbb.field_h;
     }
 
     public static void d(int param0) {
         if (param0 != 108) {
-            field_d = (String) null;
-            field_d = null;
-            return;
+          field_d = (String) null;
+          field_d = null;
+          return;
         }
         field_d = null;
     }

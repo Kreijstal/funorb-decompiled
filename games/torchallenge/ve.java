@@ -12,173 +12,111 @@ final class ve {
         int var5;
         int var6;
         int var7;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
         var7 = TorChallenge.field_F ? 1 : 0;
-        if (param0 <= 49) {
-          ve.a(34, 8, 89);
-          if (0 != param1) {
-            if (1 == param1) {
-              var3 = nk.field_h;
-              if (param2 * 7 >> 879808291 > var3) {
-                L0: {
-                  var4 = var3 % (param2 >> -952840093);
-                  var5 = (param2 >> 1829086403) + (var3 - var4);
-                  var6 = -(param2 >> -103974045 << 350476579) + param2;
-                  if (var6 >= param2 + -var5) {
-                    var5 = param2;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                if (0 != param1) {
-                  if ((param1 ^ -1) == -2) {
-                    nb.b(var5, -1);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  vk.a(var5, (byte) 106);
-                  return;
-                }
-              } else {
-                if (0 != param1) {
-                  if (1 == param1) {
-                    nb.b(param2, -1);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  vk.a(param2, (byte) 87);
-                  return;
-                }
-              }
-            } else {
+        if (param0 > 49) {
+          if (0 == param1) {
+            var3 = sh.field_r;
+          } else {
+            if (1 != param1) {
               return;
             }
-          } else {
-            var3 = sh.field_r;
-            if (param2 * 7 >> 879808291 > var3) {
-              L1: {
-                var4 = var3 % (param2 >> -952840093);
-                var5 = (param2 >> 1829086403) + (var3 - var4);
-                var6 = -(param2 >> -103974045 << 350476579) + param2;
-                if (var6 >= param2 + -var5) {
-                  var5 = param2;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (0 != param1) {
-                if ((param1 ^ -1) == -2) {
-                  nb.b(var5, -1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                vk.a(var5, (byte) 106);
-                return;
-              }
-            } else {
-              if (0 != param1) {
-                if (1 == param1) {
-                  nb.b(param2, -1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                vk.a(param2, (byte) 87);
-                return;
-              }
-            }
+            var3 = nk.field_h;
           }
-        } else {
-          if (0 != param1) {
-            if (1 == param1) {
-              var3 = nk.field_h;
-              if (param2 * 7 >> 879808291 > var3) {
-                L2: {
-                  var4 = var3 % (param2 >> -952840093);
-                  var5 = (param2 >> 1829086403) + (var3 - var4);
-                  var6 = -(param2 >> -103974045 << 350476579) + param2;
-                  if (var6 >= param2 + -var5) {
-                    var5 = param2;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                if (0 != param1) {
-                  if ((param1 ^ -1) != -2) {
-                    return;
-                  } else {
-                    nb.b(var5, -1);
-                    return;
-                  }
-                } else {
-                  vk.a(var5, (byte) 106);
-                  return;
-                }
-              } else {
-                if (0 != param1) {
-                  if (1 == param1) {
-                    nb.b(param2, -1);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  vk.a(param2, (byte) 87);
-                  return;
-                }
-              }
-            } else {
+          if (param2 * 7 >> 3 <= var3) {
+            if (0 == param1) {
+              vk.a(param2, (byte) 87);
               return;
             }
-          } else {
-            var3 = sh.field_r;
-            if (param2 * 7 >> 879808291 > var3) {
-              L3: {
-                var4 = var3 % (param2 >> -952840093);
-                var5 = (param2 >> 1829086403) + (var3 - var4);
-                var6 = -(param2 >> -103974045 << 350476579) + param2;
-                if (var6 >= param2 + -var5) {
-                  var5 = param2;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              if (0 != param1) {
-                if ((param1 ^ -1) != -2) {
-                  return;
-                } else {
-                  nb.b(var5, -1);
-                  return;
-                }
-              } else {
-                vk.a(var5, (byte) 106);
-                return;
-              }
-            } else {
-              if (0 != param1) {
-                if (1 == param1) {
-                  nb.b(param2, -1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                vk.a(param2, (byte) 87);
-                return;
-              }
+            if (1 != param1) {
+              return;
             }
+            nb.b(param2, -1);
+            return;
           }
+          var4 = var3 % (param2 >> 3);
+          var5 = (param2 >> 3) + (var3 - var4);
+          var6 = -(param2 >> 3 << 3) + param2;
+          if (var6 >= param2 - var5) {
+            var5 = param2;
+          }
+          if (0 == param1) {
+            vk.a(var5, (byte) 106);
+            return;
+          }
+          if (param1 != 1) {
+            return;
+          }
+          nb.b(var5, -1);
+          return;
         }
+        ve.a(34, 8, 89);
+        if (0 == param1) {
+          var3Lifetime1 = sh.field_r;
+          if (param2 * 7 >> 3 <= var3Lifetime1) {
+            if (0 == param1) {
+              vk.a(param2, (byte) 87);
+              return;
+            }
+            if (1 != param1) {
+              return;
+            }
+            nb.b(param2, -1);
+            return;
+          }
+          var4Lifetime1 = var3Lifetime1 % (param2 >> 3);
+          var5Lifetime1 = (param2 >> 3) + (var3Lifetime1 - var4Lifetime1);
+          var6Lifetime1 = -(param2 >> 3 << 3) + param2;
+          if (var6Lifetime1 >= param2 - var5Lifetime1) {
+            var5Lifetime1 = param2;
+          }
+          if (0 == param1) {
+            vk.a(var5Lifetime1, (byte) 106);
+            return;
+          }
+          if (param1 != 1) {
+            return;
+          }
+          nb.b(var5Lifetime1, -1);
+          return;
+        }
+        if (1 != param1) {
+          return;
+        }
+        var3Lifetime2 = nk.field_h;
+        if (param2 * 7 >> 3 <= var3Lifetime2) {
+          if (0 == param1) {
+            vk.a(param2, (byte) 87);
+            return;
+          }
+          if (1 != param1) {
+            return;
+          }
+          nb.b(param2, -1);
+          return;
+        }
+        var4Lifetime2 = var3Lifetime2 % (param2 >> 3);
+        var5Lifetime2 = (param2 >> 3) + (var3Lifetime2 - var4Lifetime2);
+        var6Lifetime2 = -(param2 >> 3 << 3) + param2;
+        if (var6Lifetime2 >= param2 - var5Lifetime2) {
+          var5Lifetime2 = param2;
+        }
+        if (0 == param1) {
+          vk.a(var5Lifetime2, (byte) 106);
+          return;
+        }
+        if (param1 != 1) {
+          return;
+        }
+        nb.b(var5Lifetime2, -1);
+        return;
     }
 
     public static void a(int param0) {

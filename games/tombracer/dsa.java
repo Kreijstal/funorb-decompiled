@@ -10,8 +10,8 @@ final class dsa {
     final static vb a(int param0) {
         int var1 = uca.field_c.a(6, 0);
         if (param0 > -11) {
-            field_b = 76;
-            return it.a(255, var1);
+          field_b = 76;
+          return it.a(255, var1);
         }
         return it.a(255, var1);
     }

@@ -9,129 +9,75 @@ final class h {
     public static void a(int param0) {
         field_b = (int[][][]) null;
         if (param0 <= 9) {
-            h.a(66);
+          h.a(66);
         }
         field_a = (byte[][]) null;
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4) {
+        int var9 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
+        int var8Lifetime1;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            if (0 >= param4) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                param2[param0] = param3;
-                param2[-1 + param4] = param1;
-                if (param3 >= param1) {
-                  var6 = -1;
-                  var5_int = -param1 + param3;
-                  break L1;
-                } else {
-                  var6 = 1;
-                  var5_int = -param3 + param1;
-                  break L1;
-                }
-              }
-              var7 = param4;
-              if (2 != var7) {
-                L2: {
-                  if ((var7 ^ -1) != -2) {
-                    break L2;
-                  } else {
-                    param2[0] = param1 + param3 >> 1152917025;
-                    break L2;
-                  }
-                }
-                if (0 != var7) {
-                  var8 = 0;
-                  var9 = 1;
-                  L3: while (true) {
-                    if (var9 >= var7 - 1) {
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    } else {
-                      L4: {
-                        param2[var9] = param2[0];
-                        var8 = var9 * var5_int;
-                        param2[var9] = param2[var9] + var6 * var8 / (var7 - 1);
-                        if ((var7 - 1) / 2 <= var8 * var6 % (var7 + -1)) {
-                          param2[var9] = param2[var9] + 1;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      var9++;
-                      continue L3;
-                    }
-                  }
-                } else {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
+          if (0 >= param4) {
+            return;
+          }
+          param2[param0] = param3;
+          param2[-1 + param4] = param1;
+          if (param3 >= param1) {
+            var6 = -1;
+            var5_int = -param1 + param3;
+          } else {
+            var6 = 1;
+            var5_int = -param3 + param1;
+          }
+          var7 = param4;
+          if (2 == var7) {
+            return;
+          }
+          if (var7 == 1) {
+            param2[0] = param1 + param3 >> 1;
+          }
+          if (0 == var7) {
+            return;
+          }
+          var8 = 0;
+          for (var9 = 1; var9 < var7 - 1; var9++) {
+            param2[var9] = param2[0];
+            var8Lifetime1 = var9 * var5_int;
+            param2[var9] = param2[var9] + var6 * var8Lifetime1 / (var7 - 1);
+            if ((var7 - 1) / 2 <= var8Lifetime1 * var6 % (var7 - 1)) {
+              param2[var9] = param2[var9] + 1;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var5);
-
-            stackIn_22_1 = new StringBuilder().append("h.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L5;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L5;
-            }
-          }
-          throw oj.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var5 = decompiledCaughtException;
+          stackIn_22_0 = var5;
+          stackIn_22_1 = new StringBuilder().append("h.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_23_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
+            stackIn_23_2 = "{...}";
           }
+          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1) {
         if (param1 != 4) {
-            return;
+          return;
         }
         fe var2 = cg.field_a[param0];
         int var3 = hb.field_b[param0];
@@ -141,15 +87,15 @@ final class h {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         hd.a(this.field_c, param0, param4, (byte) -66, param1, param3);
         if (param2 != -1) {
-            this.field_c = (ka[]) null;
+          this.field_c = (ka[]) null;
         }
     }
 
     h(ka[] param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

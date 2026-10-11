@@ -4,6 +4,8 @@
 final class pa extends kv {
     final void e(int param0, int param1) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var3 = param0 + param1 * dg.field_i;
@@ -13,40 +15,42 @@ final class pa extends kv {
         int var7 = dg.field_i - var6;
         int var8 = 0;
         if (param1 < dg.field_j) {
-            var9 = dg.field_j - param1;
-            var5 = var5 - var9;
-            param1 = dg.field_j;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * dg.field_i;
+          var9 = dg.field_j - param1;
+          var5 = var5 - var9;
+          param1 = dg.field_j;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * dg.field_i;
         }
         if (param1 + var5 > dg.field_k) {
-            var5 = var5 - (param1 + var5 - dg.field_k);
+          var5 = var5 - (param1 + var5 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var9 = dg.field_f - param0;
-            var6 = var6 - var9;
-            param0 = dg.field_f;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime1 = dg.field_f - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = dg.field_f;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > dg.field_h) {
-            var9 = param0 + var6 - dg.field_h;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime2 = param0 + var6 - dg.field_h;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
-            if (var5 <= 0) {
-                return;
-            }
-            pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          if (var5 <= 0) {
             return;
+          }
+          pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          return;
         }
     }
 
     final void d(int param0, int param1) {
+        int var10 = 0;
+        int var11 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -58,8 +62,6 @@ final class pa extends kv {
         int var7;
         int var8;
         int[] var9;
-        int var10;
-        int var11;
         int var12;
         int var13;
         int var14;
@@ -72,116 +74,71 @@ final class pa extends kv {
         int var21;
         int[] var22;
         int[] var23;
-        L0: {
-          var3 = this.field_q >> 2;
-          var4 = this.field_p >> 2;
-          param0 = param0 + this.field_t / 4;
-          param1 = param1 + this.field_u / 4;
-          if (param0 >= dg.field_f) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = dg.field_f - param0 << 2;
-            break L0;
-          }
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var15Lifetime1;
+        int var19Lifetime1;
+        int[] var23Lifetime1;
+        var3 = this.field_q >> 2;
+        var4 = this.field_p >> 2;
+        param0 = param0 + this.field_t / 4;
+        param1 = param1 + this.field_u / 4;
+        if (param0 >= dg.field_f) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = dg.field_f - param0 << 2;
         }
-        L1: {
-          var5 = stackIn_3_0;
-          if (param0 + var3 <= dg.field_h) {
-            stackIn_6_0 = this.field_q - 4;
-            break L1;
-          } else {
-            stackIn_6_0 = (dg.field_h - param0 << 2) - 4;
-            break L1;
-          }
+        var5 = stackIn_3_0;
+        if (param0 + var3 <= dg.field_h) {
+          stackIn_6_0 = this.field_q - 4;
+        } else {
+          stackIn_6_0 = (dg.field_h - param0 << 2) - 4;
         }
-        L2: {
-          var6 = stackIn_6_0;
-          if (param1 >= dg.field_j) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = dg.field_j - param1 << 2;
-            break L2;
-          }
+        var6 = stackIn_6_0;
+        if (param1 >= dg.field_j) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = dg.field_j - param1 << 2;
         }
-        L3: {
-          var7 = stackIn_9_0;
-          if (param1 + var4 <= dg.field_k) {
-            stackIn_12_0 = this.field_p - 4;
-            break L3;
-          } else {
-            stackIn_12_0 = (dg.field_k - param1 << 2) - 4;
-            break L3;
-          }
+        var7 = stackIn_9_0;
+        if (param1 + var4 <= dg.field_k) {
+          stackIn_12_0 = this.field_p - 4;
+        } else {
+          stackIn_12_0 = (dg.field_k - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
         var22 = var23;
         var9 = var22;
-        var10 = var7;
-        L4: while (true) {
-          if (var10 > var8) {
-            return;
-          } else {
-            var11 = var5;
-            L5: while (true) {
-              if (var11 > var6) {
-                var10 += 4;
-                continue L4;
-              } else {
-                var12 = var10 * this.field_q + var11;
-                var13 = (param1 + (var10 >> 2)) * dg.field_i + (param0 + (var11 >> 2));
-                var14 = 0;
-                L6: while (true) {
-                  if (var14 >= 4) {
-                    var23 = var22;
-                    var14 = 0;
-                    var15 = 0;
-                    var16 = 0;
-                    var17 = 0;
-                    var18 = 0;
-                    var19 = 0;
-                    L7: while (true) {
-                      if (var19 >= 16) {
-                        if (var15 != 0) {
-                          var16 = (var16 / var15 << 16) + var18 / var15;
-                          var17 = var17 / var15 << 8;
-                          var19 = var15 >> 4;
-                          var20 = 256 - var19;
-                          var21 = dg.field_e[var13];
-                          dg.field_e[var13] = (var19 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
-                          var11 += 4;
-                          continue L5;
-                        } else {
-                          var11 += 4;
-                          continue L5;
-                        }
-                      } else {
-                        var14 = var23[var19] >>> 24;
-                        var15 = var15 + var14;
-                        var16 = var16 + var14 * (var23[var19] >> 16 & 255);
-                        var17 = var17 + var14 * (var23[var19] >> 8 & 255);
-                        var18 = var18 + var14 * (var23[var19] & 255);
-                        var19++;
-                        continue L7;
-                      }
-                    }
-                  } else {
-                    var15 = 0;
-                    L8: while (true) {
-                      if (var15 >= 4) {
-                        var14++;
-                        continue L6;
-                      } else {
-                        var9[(var14 << 2) + var15] = this.field_v[var12 + var14 * this.field_q + var15];
-                        var15++;
-                        continue L8;
-                      }
-                    }
-                  }
-                }
+        for (var10 = var7; var10 <= var8; var10 += 4) {
+          for (var11 = var5; var11 <= var6; var11 += 4) {
+            var12 = var10 * this.field_q + var11;
+            var13 = (param1 + (var10 >> 2)) * dg.field_i + (param0 + (var11 >> 2));
+            for (var14 = 0; var14 < 4; var14++) {
+              for (var15 = 0; var15 < 4; var15++) {
+                var9[(var14 << 2) + var15] = this.field_v[var12 + var14 * this.field_q + var15];
               }
+            }
+            var23Lifetime1 = var22;
+            var14Lifetime1 = 0;
+            var15Lifetime1 = 0;
+            var16 = 0;
+            var17 = 0;
+            var18 = 0;
+            for (var19 = 0; var19 < 16; var19++) {
+              var14Lifetime2 = var23Lifetime1[var19] >>> 24;
+              var15Lifetime1 = var15Lifetime1 + var14Lifetime2;
+              var16 = var16 + var14Lifetime2 * (var23Lifetime1[var19] >> 16 & 255);
+              var17 = var17 + var14Lifetime2 * (var23Lifetime1[var19] >> 8 & 255);
+              var18 = var18 + var14Lifetime2 * (var23Lifetime1[var19] & 255);
+            }
+            if (var15Lifetime1 != 0) {
+              var16 = (var16 / var15Lifetime1 << 16) + var18 / var15Lifetime1;
+              var17 = var17 / var15Lifetime1 << 8;
+              var19Lifetime1 = var15Lifetime1 >> 4;
+              var20 = 256 - var19Lifetime1;
+              var21 = dg.field_e[var13];
+              dg.field_e[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -199,64 +156,70 @@ final class pa extends kv {
         int var15 = 0;
         int var14 = 0;
         int var16 = 0;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var16Lifetime1;
+        int var16Lifetime2;
         if (param2 > 0) {
-            if (param3 <= 0) {
-                return;
-            }
-            var6 = this.field_q;
-            var7 = this.field_p;
-            var8 = 0;
-            var9 = 0;
-            var10 = this.field_n;
-            var11 = this.field_o;
-            var12 = (var10 << 16) / param2;
-            var13 = (var11 << 16) / param3;
-            if (this.field_t > 0) {
-                var14 = ((this.field_t << 16) + var12 - 1) / var12;
-                param0 = param0 + var14;
-                var8 = var8 + (var14 * var12 - (this.field_t << 16));
-            }
-            if (this.field_u > 0) {
-                var14 = ((this.field_u << 16) + var13 - 1) / var13;
-                param1 = param1 + var14;
-                var9 = var9 + (var14 * var13 - (this.field_u << 16));
-            }
-            if (var6 < var10) {
-                param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
-            }
-            if (var7 < var11) {
-                param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
-            }
-            var14 = param0 + param1 * dg.field_i;
-            var15 = dg.field_i - param2;
-            if (param1 + param3 > dg.field_k) {
-                param3 = param3 - (param1 + param3 - dg.field_k);
-            }
-            if (param1 < dg.field_j) {
-                var16 = dg.field_j - param1;
-                param3 = param3 - var16;
-                var14 = var14 + var16 * dg.field_i;
-                var9 = var9 + var13 * var16;
-            }
-            if (param0 + param2 > dg.field_h) {
-                var16 = param0 + param2 - dg.field_h;
-                param2 = param2 - var16;
-                var15 = var15 + var16;
-            }
-            if (param0 < dg.field_f) {
-                var16 = dg.field_f - param0;
-                param2 = param2 - var16;
-                var14 = var14 + var16;
-                var8 = var8 + var12 * var16;
-                var15 = var15 + var16;
-            }
-            pa.c(dg.field_e, this.field_v, 0, var8, var9, var14, var15, param2, param3, var12, var13, var6, param4);
+          if (param3 <= 0) {
             return;
+          }
+          var6 = this.field_q;
+          var7 = this.field_p;
+          var8 = 0;
+          var9 = 0;
+          var10 = this.field_n;
+          var11 = this.field_o;
+          var12 = (var10 << 16) / param2;
+          var13 = (var11 << 16) / param3;
+          if (this.field_t > 0) {
+            var14 = ((this.field_t << 16) + var12 - 1) / var12;
+            param0 = param0 + var14;
+            var8 = var8 + (var14 * var12 - (this.field_t << 16));
+          }
+          if (this.field_u > 0) {
+            var14Lifetime1 = ((this.field_u << 16) + var13 - 1) / var13;
+            param1 = param1 + var14Lifetime1;
+            var9 = var9 + (var14Lifetime1 * var13 - (this.field_u << 16));
+          }
+          if (var6 < var10) {
+            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          }
+          if (var7 < var11) {
+            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+          }
+          var14Lifetime2 = param0 + param1 * dg.field_i;
+          var15 = dg.field_i - param2;
+          if (param1 + param3 > dg.field_k) {
+            param3 = param3 - (param1 + param3 - dg.field_k);
+          }
+          if (param1 < dg.field_j) {
+            var16 = dg.field_j - param1;
+            param3 = param3 - var16;
+            var14Lifetime2 = var14Lifetime2 + var16 * dg.field_i;
+            var9 = var9 + var13 * var16;
+          }
+          if (param0 + param2 > dg.field_h) {
+            var16Lifetime1 = param0 + param2 - dg.field_h;
+            param2 = param2 - var16Lifetime1;
+            var15 = var15 + var16Lifetime1;
+          }
+          if (param0 < dg.field_f) {
+            var16Lifetime2 = dg.field_f - param0;
+            param2 = param2 - var16Lifetime2;
+            var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
+            var8 = var8 + var12 * var16Lifetime2;
+            var15 = var15 + var16Lifetime2;
+          }
+          pa.c(dg.field_e, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          return;
         }
     }
 
     final void e(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var4 = param0 + param1 * dg.field_i;
@@ -266,41 +229,43 @@ final class pa extends kv {
         int var8 = dg.field_i - var7;
         int var9 = 0;
         if (param1 < dg.field_j) {
-            var10 = dg.field_j - param1;
-            var6 = var6 - var10;
-            param1 = dg.field_j;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * dg.field_i;
+          var10 = dg.field_j - param1;
+          var6 = var6 - var10;
+          param1 = dg.field_j;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * dg.field_i;
         }
         if (param1 + var6 > dg.field_k) {
-            var6 = var6 - (param1 + var6 - dg.field_k);
+          var6 = var6 - (param1 + var6 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var10 = dg.field_f - param0;
-            var7 = var7 - var10;
-            param0 = dg.field_f;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime1 = dg.field_f - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = dg.field_f;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > dg.field_h) {
-            var10 = param0 + var7 - dg.field_h;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime2 = param0 + var7 - dg.field_h;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            pa.d(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          pa.d(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var4 = param0 + param1 * dg.field_i;
@@ -310,95 +275,76 @@ final class pa extends kv {
         int var8 = dg.field_i - var7;
         int var9 = 0;
         if (param1 < dg.field_j) {
-            var10 = dg.field_j - param1;
-            var6 = var6 - var10;
-            param1 = dg.field_j;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * dg.field_i;
+          var10 = dg.field_j - param1;
+          var6 = var6 - var10;
+          param1 = dg.field_j;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * dg.field_i;
         }
         if (param1 + var6 > dg.field_k) {
-            var6 = var6 - (param1 + var6 - dg.field_k);
+          var6 = var6 - (param1 + var6 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var10 = dg.field_f - param0;
-            var7 = var7 - var10;
-            param0 = dg.field_f;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime1 = dg.field_f - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = dg.field_f;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > dg.field_h) {
-            var10 = param0 + var7 - dg.field_h;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime2 = param0 + var7 - dg.field_h;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            pa.f(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          pa.f(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int incrementValue$11 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int incrementValue$12 = 0;
         int var9;
-        int var10;
-        int var11;
         int var12;
         int var13;
         int var14;
         var9 = -param5;
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
-            var11 = var9;
-            L1: while (true) {
-              if (var11 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var10++;
-                continue L0;
-              } else {
-                incrementValue$11 = param3;
-                param3++;
-                param2 = param1[incrementValue$11];
-                var12 = param2 >>> 24;
-                if (var12 == 0) {
-                  param4++;
-                  var11++;
-                  continue L1;
-                } else {
-                  var13 = 256 - var12;
-                  var14 = param0[param4];
-                  incrementValue$12 = param4;
-                  param4++;
-                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
-                  var11++;
-                  continue L1;
-                }
-              }
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = var9; var11 < 0; var11++) {
+            param2 = param1[param3++];
+            var12 = param2 >>> 24;
+            if (var12 == 0) {
+              param4++;
+            } else {
+              var13 = 256 - var12;
+              var14 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
             }
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        int incrementValue$6 = 0;
         int var10;
         int var11;
         int var12;
         int var13;
         int var14;
-        int var15;
-        int var16;
         int var17;
         int var18;
         int var19;
@@ -412,68 +358,42 @@ final class pa extends kv {
         var13 = -(param5 >> 2);
         param5 = -(param5 & 3);
         var14 = var13 + var13 + var13 + var13 + param5;
-        var15 = -param6;
-        L0: while (true) {
-          if (var15 >= 0) {
-            return;
-          } else {
-            var16 = var14;
-            L1: while (true) {
-              if (var16 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var15++;
-                continue L0;
-              } else {
-                incrementValue$0 = param3;
-                param3++;
-                param2 = param1[incrementValue$0];
-                var17 = param2 >>> 24;
-                if (var17 == 0) {
-                  param4++;
-                  var16++;
-                  continue L1;
+        for (var15 = -param6; var15 < 0; var15++) {
+          for (var16 = var14; var16 < 0; var16++) {
+            param2 = param1[param3++];
+            var17 = param2 >>> 24;
+            if (var17 == 0) {
+              param4++;
+            } else {
+              var19 = param2 >> 16 & 255;
+              var20 = param2 >> 8 & 255;
+              var21 = param2 & 255;
+              if (var19 == var20 &&
+                var20 == var21) {
+                if (var19 > 128) {
+                  var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
                 } else {
-                  L2: {
-                    L3: {
-                      var19 = param2 >> 16 & 255;
-                      var20 = param2 >> 8 & 255;
-                      var21 = param2 & 255;
-                      if (var19 != var20) {
-                        break L3;
-                      } else {
-                        if (var20 != var21) {
-                          break L3;
-                        } else {
-                          if (var19 > 128) {
-                            var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
-                            break L2;
-                          } else {
-                            var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
-                            break L2;
-                          }
-                        }
-                      }
-                    }
-                    var18 = param2;
-                    break L2;
-                  }
-                  var22 = 256 - var17;
-                  var23 = param0[param4];
-                  incrementValue$1 = param4;
-                  param4++;
-                  param0[incrementValue$1] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
-                  var16++;
-                  continue L1;
+                  var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
                 }
+              } else {
+                var18 = param2;
               }
+              var22 = 256 - var17;
+              var23 = param0[param4];
+              incrementValue$6 = param4;
+              param4++;
+              param0[incrementValue$6] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
             }
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
     final void d(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var4 = param0 + param1 * dg.field_i;
@@ -483,80 +403,62 @@ final class pa extends kv {
         int var8 = dg.field_i - var7;
         int var9 = 0;
         if (param1 < dg.field_j) {
-            var10 = dg.field_j - param1;
-            var6 = var6 - var10;
-            param1 = dg.field_j;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * dg.field_i;
+          var10 = dg.field_j - param1;
+          var6 = var6 - var10;
+          param1 = dg.field_j;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * dg.field_i;
         }
         if (param1 + var6 > dg.field_k) {
-            var6 = var6 - (param1 + var6 - dg.field_k);
+          var6 = var6 - (param1 + var6 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var10 = dg.field_f - param0;
-            var7 = var7 - var10;
-            param0 = dg.field_f;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime1 = dg.field_f - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = dg.field_f;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > dg.field_h) {
-            var10 = param0 + var7 - dg.field_h;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime2 = param0 + var7 - dg.field_h;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            pa.b(0, 0, 0, dg.field_e, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          pa.b(0, 0, 0, dg.field_e, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int var14;
-        param8 = -param10;
-        L0: while (true) {
-          if (param8 >= 0) {
-            return;
-          } else {
-            param6 = -param9;
-            L1: while (true) {
-              if (param6 >= 0) {
-                param7 = param7 + param11;
-                param5 = param5 + param12;
-                param8++;
-                continue L0;
-              } else {
-                incrementValue$11 = param5;
-                param5++;
-                param0 = param4[incrementValue$11];
-                if (param0 == 0) {
-                  param7++;
-                  param6++;
-                  continue L1;
-                } else {
-                  var14 = param13 * (param0 >>> 24) >> 8 & 255;
-                  param1 = (param0 & 16711935) * var14;
-                  param0 = (param1 & -16711936) + (param0 * var14 - param1 & 16711680) >>> 8;
-                  param1 = param3[param7];
-                  param2 = param0 + param1;
-                  param0 = (param0 & 16711935) + (param1 & 16711935);
-                  param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-                  incrementValue$12 = param7;
-                  param7++;
-                  param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
-                  param6++;
-                  continue L1;
-                }
-              }
+        for (param8 = -param10; param8 < 0; param8++) {
+          for (param6 = -param9; param6 < 0; param6++) {
+            param0 = param4[param5++];
+            if (param0 == 0) {
+              param7++;
+            } else {
+              var14 = param13 * (param0 >>> 24) >> 8 & 255;
+              param1 = (param0 & 16711935) * var14;
+              param0 = (param1 & -16711936) + (param0 * var14 - param1 & 16711680) >>> 8;
+              param1 = param3[param7];
+              param2 = param0 + param1;
+              param0 = (param0 & 16711935) + (param1 & 16711935);
+              param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+              incrementValue$12 = param7;
+              param7++;
+              param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
             }
           }
+          param7 = param7 + param11;
+          param5 = param5 + param12;
         }
     }
 
@@ -572,59 +474,63 @@ final class pa extends kv {
         int var14 = 0;
         int var13 = 0;
         int var15 = 0;
+        int var13Lifetime1;
+        int var13Lifetime2;
+        int var15Lifetime1;
+        int var15Lifetime2;
         if (param2 > 0) {
-            if (param3 <= 0) {
-                return;
-            }
-            var5 = this.field_q;
-            var6 = this.field_p;
-            var7 = 0;
-            var8 = 0;
-            var9 = this.field_n;
-            var10 = this.field_o;
-            var11 = (var9 << 16) / param2;
-            var12 = (var10 << 16) / param3;
-            if (this.field_t > 0) {
-                var13 = ((this.field_t << 16) + var11 - 1) / var11;
-                param0 = param0 + var13;
-                var7 = var7 + (var13 * var11 - (this.field_t << 16));
-            }
-            if (this.field_u > 0) {
-                var13 = ((this.field_u << 16) + var12 - 1) / var12;
-                param1 = param1 + var13;
-                var8 = var8 + (var13 * var12 - (this.field_u << 16));
-            }
-            if (var5 < var9) {
-                param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
-            }
-            if (var6 < var10) {
-                param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
-            }
-            var13 = param0 + param1 * dg.field_i;
-            var14 = dg.field_i - param2;
-            if (param1 + param3 > dg.field_k) {
-                param3 = param3 - (param1 + param3 - dg.field_k);
-            }
-            if (param1 < dg.field_j) {
-                var15 = dg.field_j - param1;
-                param3 = param3 - var15;
-                var13 = var13 + var15 * dg.field_i;
-                var8 = var8 + var12 * var15;
-            }
-            if (param0 + param2 > dg.field_h) {
-                var15 = param0 + param2 - dg.field_h;
-                param2 = param2 - var15;
-                var14 = var14 + var15;
-            }
-            if (param0 < dg.field_f) {
-                var15 = dg.field_f - param0;
-                param2 = param2 - var15;
-                var13 = var13 + var15;
-                var7 = var7 + var11 * var15;
-                var14 = var14 + var15;
-            }
-            pa.c(dg.field_e, this.field_v, 0, var7, var8, var13, var14, param2, param3, var11, var12, var5);
+          if (param3 <= 0) {
             return;
+          }
+          var5 = this.field_q;
+          var6 = this.field_p;
+          var7 = 0;
+          var8 = 0;
+          var9 = this.field_n;
+          var10 = this.field_o;
+          var11 = (var9 << 16) / param2;
+          var12 = (var10 << 16) / param3;
+          if (this.field_t > 0) {
+            var13 = ((this.field_t << 16) + var11 - 1) / var11;
+            param0 = param0 + var13;
+            var7 = var7 + (var13 * var11 - (this.field_t << 16));
+          }
+          if (this.field_u > 0) {
+            var13Lifetime1 = ((this.field_u << 16) + var12 - 1) / var12;
+            param1 = param1 + var13Lifetime1;
+            var8 = var8 + (var13Lifetime1 * var12 - (this.field_u << 16));
+          }
+          if (var5 < var9) {
+            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+          }
+          if (var6 < var10) {
+            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+          }
+          var13Lifetime2 = param0 + param1 * dg.field_i;
+          var14 = dg.field_i - param2;
+          if (param1 + param3 > dg.field_k) {
+            param3 = param3 - (param1 + param3 - dg.field_k);
+          }
+          if (param1 < dg.field_j) {
+            var15 = dg.field_j - param1;
+            param3 = param3 - var15;
+            var13Lifetime2 = var13Lifetime2 + var15 * dg.field_i;
+            var8 = var8 + var12 * var15;
+          }
+          if (param0 + param2 > dg.field_h) {
+            var15Lifetime1 = param0 + param2 - dg.field_h;
+            param2 = param2 - var15Lifetime1;
+            var14 = var14 + var15Lifetime1;
+          }
+          if (param0 < dg.field_f) {
+            var15Lifetime2 = dg.field_f - param0;
+            param2 = param2 - var15Lifetime2;
+            var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
+            var7 = var7 + var11 * var15Lifetime2;
+            var14 = var14 + var15Lifetime2;
+          }
+          pa.c(dg.field_e, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          return;
         }
     }
 
@@ -634,6 +540,8 @@ final class pa extends kv {
 
     final void b(int param0, int param1) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + (this.field_o - this.field_p - this.field_u);
         int var3 = param0 + (param1 + this.field_p - 1) * dg.field_i;
@@ -643,41 +551,43 @@ final class pa extends kv {
         int var7 = -dg.field_i - var6;
         int var8 = 0;
         if (param1 < dg.field_j) {
-            var5 = var5 - (dg.field_j - param1);
-            param1 = dg.field_j;
+          var5 = var5 - (dg.field_j - param1);
+          param1 = dg.field_j;
         }
         if (param1 + var5 > dg.field_k) {
-            var9 = param1 + var5 - dg.field_k;
-            var5 = var5 - var9;
-            var3 = var3 - var9 * dg.field_i;
-            var4 = var4 + var9 * var6;
+          var9 = param1 + var5 - dg.field_k;
+          var5 = var5 - var9;
+          var3 = var3 - var9 * dg.field_i;
+          var4 = var4 + var9 * var6;
         }
         if (param0 < dg.field_f) {
-            var9 = dg.field_f - param0;
-            var6 = var6 - var9;
-            param0 = dg.field_f;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime1 = dg.field_f - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = dg.field_f;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > dg.field_h) {
-            var9 = param0 + var6 - dg.field_h;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime2 = param0 + var6 - dg.field_h;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
-            if (var5 <= 0) {
-                return;
-            }
-            pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          if (var5 <= 0) {
             return;
+          }
+          pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          return;
         }
     }
 
     final void c(int param0, int param1) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var3 = param0 + param1 * dg.field_i;
@@ -687,49 +597,49 @@ final class pa extends kv {
         int var7 = dg.field_i - var6;
         int var8 = 0;
         if (param1 < dg.field_j) {
-            var9 = dg.field_j - param1;
-            var5 = var5 - var9;
-            param1 = dg.field_j;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * dg.field_i;
+          var9 = dg.field_j - param1;
+          var5 = var5 - var9;
+          param1 = dg.field_j;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * dg.field_i;
         }
         if (param1 + var5 > dg.field_k) {
-            var5 = var5 - (param1 + var5 - dg.field_k);
+          var5 = var5 - (param1 + var5 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var9 = dg.field_f - param0;
-            var6 = var6 - var9;
-            param0 = dg.field_f;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime1 = dg.field_f - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = dg.field_f;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > dg.field_h) {
-            var9 = param0 + var6 - dg.field_h;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+          var9Lifetime2 = param0 + var6 - dg.field_h;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
-            if (var5 <= 0) {
-                return;
-            }
-            pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          if (var5 <= 0) {
             return;
+          }
+          pa.c(dg.field_e, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
+        int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
-        int incrementValue$8 = 0;
+        int incrementValue$2 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$3 = 0;
+        int incrementValue$4 = 0;
         double var7;
         int var9;
         int var10;
@@ -763,791 +673,566 @@ final class pa extends kv {
         int var39;
         int var40;
         int var41;
-        if (param5 != 0) {
-          L0: {
-            param0 = param0 - (this.field_t << 4);
-            param1 = param1 - (this.field_u << 4);
-            var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-            var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-            var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-            var11 = -param0 * var10 + -param1 * var9;
-            var12 = --param0 * var9 + -param1 * var10;
-            var13 = ((this.field_q << 4) - param0) * var10 + -param1 * var9;
-            var14 = -((this.field_q << 4) - param0) * var9 + -param1 * var10;
-            var15 = -param0 * var10 + ((this.field_p << 4) - param1) * var9;
-            var16 = --param0 * var9 + ((this.field_p << 4) - param1) * var10;
-            var17 = ((this.field_q << 4) - param0) * var10 + ((this.field_p << 4) - param1) * var9;
-            var18 = -((this.field_q << 4) - param0) * var9 + ((this.field_p << 4) - param1) * var10;
-            if (var11 >= var13) {
-              var19 = var13;
-              var20 = var11;
-              break L0;
-            } else {
-              var19 = var11;
-              var20 = var13;
-              break L0;
-            }
-          }
-          L1: {
-            if (var15 >= var19) {
-              break L1;
-            } else {
-              var19 = var15;
-              break L1;
-            }
-          }
-          L2: {
-            if (var17 >= var19) {
-              break L2;
-            } else {
-              var19 = var17;
-              break L2;
-            }
-          }
-          L3: {
-            if (var15 <= var20) {
-              break L3;
-            } else {
-              var20 = var15;
-              break L3;
-            }
-          }
-          L4: {
-            if (var17 <= var20) {
-              break L4;
-            } else {
-              var20 = var17;
-              break L4;
-            }
-          }
-          L5: {
-            if (var12 >= var14) {
-              var21 = var14;
-              var22 = var12;
-              break L5;
-            } else {
-              var21 = var12;
-              var22 = var14;
-              break L5;
-            }
-          }
-          L6: {
-            if (var16 >= var21) {
-              break L6;
-            } else {
-              var21 = var16;
-              break L6;
-            }
-          }
-          L7: {
-            if (var18 >= var21) {
-              break L7;
-            } else {
-              var21 = var18;
-              break L7;
-            }
-          }
-          L8: {
-            if (var16 <= var22) {
-              break L8;
-            } else {
-              var22 = var16;
-              break L8;
-            }
-          }
-          L9: {
-            if (var18 <= var22) {
-              break L9;
-            } else {
-              var22 = var18;
-              break L9;
-            }
-          }
-          L10: {
-            var19 = var19 >> 12;
-            var20 = var20 + 4095 >> 12;
-            var21 = var21 >> 12;
-            var22 = var22 + 4095 >> 12;
-            var19 = var19 + param2;
-            var20 = var20 + param2;
-            var21 = var21 + param3;
-            var22 = var22 + param3;
-            var19 = var19 >> 4;
-            var20 = var20 + 15 >> 4;
-            var21 = var21 >> 4;
-            var22 = var22 + 15 >> 4;
-            if (var19 >= dg.field_f) {
-              break L10;
-            } else {
-              var19 = dg.field_f;
-              break L10;
-            }
-          }
-          L11: {
-            if (var20 <= dg.field_h) {
-              break L11;
-            } else {
-              var20 = dg.field_h;
-              break L11;
-            }
-          }
-          L12: {
-            if (var21 >= dg.field_j) {
-              break L12;
-            } else {
-              var21 = dg.field_j;
-              break L12;
-            }
-          }
-          L13: {
-            if (var22 <= dg.field_k) {
-              break L13;
-            } else {
-              var22 = dg.field_k;
-              break L13;
-            }
-          }
-          var20 = var19 - var20;
-          if (var20 < 0) {
-            var22 = var21 - var22;
-            if (var22 < 0) {
-              L14: {
-                var23 = var21 * dg.field_i + var19;
-                var24 = 16777216.0 / (double)param5;
-                var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
-                var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
-                var28 = (var19 << 4) + 8 - param2;
-                var29 = (var21 << 4) + 8 - param3;
-                var30 = (param0 << 8) - (var29 * var26 >> 4);
-                var31 = (param1 << 8) + (var29 * var27 >> 4);
-                if (var27 != 0) {
-                  if (var27 >= 0) {
-                    if (var26 != 0) {
-                      if (var26 >= 0) {
-                        var33 = var22;
-                        L15: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L16: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              if (var35 >= 0) {
-                                break L16;
-                              } else {
-                                var32 = (var27 - 1 - var35) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L16;
-                              }
-                            }
-                            L17: {
-                              var32 = (1 + var35 - (this.field_q << 12) - var27) / var27;
-                              if ((1 + var35 - (this.field_q << 12) - var27) / var27 <= var37) {
-                                break L17;
-                              } else {
-                                var37 = var32;
-                                break L17;
-                              }
-                            }
-                            L18: {
-                              if (var36 >= 0) {
-                                break L18;
-                              } else {
-                                var32 = (var26 - 1 - var36) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L18;
-                              }
-                            }
-                            L19: {
-                              var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
-                              if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
-                                break L19;
-                              } else {
-                                var37 = var32;
-                                break L19;
-                              }
-                            }
-                            L20: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + dg.field_i;
-                                continue L15;
-                              } else {
-                                var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                var39 = dg.field_e[var34];
-                                var40 = var38 >>> 24;
-                                var41 = 256 - var40;
-                                incrementValue$0 = var34;
-                                var34++;
-                                dg.field_e[incrementValue$0] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L20;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        var33 = var22;
-                        L21: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L22: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              if (var35 >= 0) {
-                                break L22;
-                              } else {
-                                var32 = (var27 - 1 - var35) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L22;
-                              }
-                            }
-                            L23: {
-                              var32 = (1 + var35 - (this.field_q << 12) - var27) / var27;
-                              if ((1 + var35 - (this.field_q << 12) - var27) / var27 <= var37) {
-                                break L23;
-                              } else {
-                                var37 = var32;
-                                break L23;
-                              }
-                            }
-                            L24: {
-                              var32 = var36 - (this.field_p << 12);
-                              if (var36 - (this.field_p << 12) < 0) {
-                                break L24;
-                              } else {
-                                var32 = (var26 - var32) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L24;
-                              }
-                            }
-                            L25: {
-                              var32 = (var36 - var26) / var26;
-                              if ((var36 - var26) / var26 <= var37) {
-                                break L25;
-                              } else {
-                                var37 = var32;
-                                break L25;
-                              }
-                            }
-                            L26: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + dg.field_i;
-                                continue L21;
-                              } else {
-                                var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                var39 = dg.field_e[var34];
-                                var40 = var38 >>> 24;
-                                var41 = 256 - var40;
-                                incrementValue$1 = var34;
-                                var34++;
-                                dg.field_e[incrementValue$1] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L26;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      var33 = var22;
-                      L27: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L28: {
-                            var34 = var23;
-                            var35 = var30 + (var28 * var27 >> 4);
-                            var36 = var31;
-                            var37 = var20;
-                            if (var36 >= 0) {
-                              if (var36 - (this.field_p << 12) < 0) {
-                                L29: {
-                                  if (var35 >= 0) {
-                                    break L29;
-                                  } else {
-                                    var32 = (var27 - 1 - var35) / var27;
-                                    var37 = var37 + var32;
-                                    var35 = var35 + var27 * var32;
-                                    var34 = var34 + var32;
-                                    break L29;
-                                  }
-                                }
-                                L30: {
-                                  var32 = (1 + var35 - (this.field_q << 12) - var27) / var27;
-                                  if ((1 + var35 - (this.field_q << 12) - var27) / var27 <= var37) {
-                                    break L30;
-                                  } else {
-                                    var37 = var32;
-                                    break L30;
-                                  }
-                                }
-                                L31: while (true) {
-                                  if (var37 >= 0) {
-                                    break L28;
-                                  } else {
-                                    var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                    var39 = dg.field_e[var34];
-                                    var40 = var38 >>> 24;
-                                    var41 = 256 - var40;
-                                    incrementValue$2 = var34;
-                                    var34++;
-                                    dg.field_e[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                    var35 = var35 + var27;
-                                    var37++;
-                                    continue L31;
-                                  }
-                                }
-                              } else {
-                                break L28;
-                              }
-                            } else {
-                              break L28;
-                            }
-                          }
-                          var33++;
-                          var31 = var31 + var27;
-                          var23 = var23 + dg.field_i;
-                          continue L27;
-                        }
-                      }
-                    }
-                  } else {
-                    if (var26 != 0) {
-                      if (var26 >= 0) {
-                        var33 = var22;
-                        L32: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L33: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              var32 = var35 - (this.field_q << 12);
-                              if (var35 - (this.field_q << 12) < 0) {
-                                break L33;
-                              } else {
-                                var32 = (var27 - var32) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L33;
-                              }
-                            }
-                            L34: {
-                              var32 = (var35 - var27) / var27;
-                              if ((var35 - var27) / var27 <= var37) {
-                                break L34;
-                              } else {
-                                var37 = var32;
-                                break L34;
-                              }
-                            }
-                            L35: {
-                              if (var36 >= 0) {
-                                break L35;
-                              } else {
-                                var32 = (var26 - 1 - var36) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L35;
-                              }
-                            }
-                            L36: {
-                              var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
-                              if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
-                                break L36;
-                              } else {
-                                var37 = var32;
-                                break L36;
-                              }
-                            }
-                            L37: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + dg.field_i;
-                                continue L32;
-                              } else {
-                                var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                var39 = dg.field_e[var34];
-                                var40 = var38 >>> 24;
-                                var41 = 256 - var40;
-                                incrementValue$3 = var34;
-                                var34++;
-                                dg.field_e[incrementValue$3] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L37;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        var33 = var22;
-                        L38: while (true) {
-                          if (var33 >= 0) {
-                            break L14;
-                          } else {
-                            L39: {
-                              var34 = var23;
-                              var35 = var30 + (var28 * var27 >> 4);
-                              var36 = var31 + (var28 * var26 >> 4);
-                              var37 = var20;
-                              var32 = var35 - (this.field_q << 12);
-                              if (var35 - (this.field_q << 12) < 0) {
-                                break L39;
-                              } else {
-                                var32 = (var27 - var32) / var27;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L39;
-                              }
-                            }
-                            L40: {
-                              var32 = (var35 - var27) / var27;
-                              if ((var35 - var27) / var27 <= var37) {
-                                break L40;
-                              } else {
-                                var37 = var32;
-                                break L40;
-                              }
-                            }
-                            L41: {
-                              var32 = var36 - (this.field_p << 12);
-                              if (var36 - (this.field_p << 12) < 0) {
-                                break L41;
-                              } else {
-                                var32 = (var26 - var32) / var26;
-                                var37 = var37 + var32;
-                                var35 = var35 + var27 * var32;
-                                var36 = var36 + var26 * var32;
-                                var34 = var34 + var32;
-                                break L41;
-                              }
-                            }
-                            L42: {
-                              var32 = (var36 - var26) / var26;
-                              if ((var36 - var26) / var26 <= var37) {
-                                break L42;
-                              } else {
-                                var37 = var32;
-                                break L42;
-                              }
-                            }
-                            L43: while (true) {
-                              if (var37 >= 0) {
-                                var33++;
-                                var30 = var30 - var26;
-                                var31 = var31 + var27;
-                                var23 = var23 + dg.field_i;
-                                continue L38;
-                              } else {
-                                var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                var39 = dg.field_e[var34];
-                                var40 = var38 >>> 24;
-                                var41 = 256 - var40;
-                                incrementValue$4 = var34;
-                                var34++;
-                                dg.field_e[incrementValue$4] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                var35 = var35 + var27;
-                                var36 = var36 + var26;
-                                var37++;
-                                continue L43;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      var33 = var22;
-                      L44: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L45: {
-                            var34 = var23;
-                            var35 = var30 + (var28 * var27 >> 4);
-                            var36 = var31;
-                            var37 = var20;
-                            if (var36 >= 0) {
-                              if (var36 - (this.field_p << 12) < 0) {
-                                L46: {
-                                  var32 = var35 - (this.field_q << 12);
-                                  if (var35 - (this.field_q << 12) < 0) {
-                                    break L46;
-                                  } else {
-                                    var32 = (var27 - var32) / var27;
-                                    var37 = var37 + var32;
-                                    var35 = var35 + var27 * var32;
-                                    var34 = var34 + var32;
-                                    break L46;
-                                  }
-                                }
-                                L47: {
-                                  var32 = (var35 - var27) / var27;
-                                  if ((var35 - var27) / var27 <= var37) {
-                                    break L47;
-                                  } else {
-                                    var37 = var32;
-                                    break L47;
-                                  }
-                                }
-                                L48: while (true) {
-                                  if (var37 >= 0) {
-                                    break L45;
-                                  } else {
-                                    var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                    var39 = dg.field_e[var34];
-                                    var40 = var38 >>> 24;
-                                    var41 = 256 - var40;
-                                    incrementValue$5 = var34;
-                                    var34++;
-                                    dg.field_e[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                    var35 = var35 + var27;
-                                    var37++;
-                                    continue L48;
-                                  }
-                                }
-                              } else {
-                                break L45;
-                              }
-                            } else {
-                              break L45;
-                            }
-                          }
-                          var33++;
-                          var31 = var31 + var27;
-                          var23 = var23 + dg.field_i;
-                          continue L44;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  if (var26 != 0) {
-                    if (var26 >= 0) {
-                      var33 = var22;
-                      L49: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L50: {
-                            var34 = var23;
-                            var35 = var30;
-                            var36 = var31 + (var28 * var26 >> 4);
-                            var37 = var20;
-                            if (var35 >= 0) {
-                              if (var35 - (this.field_q << 12) < 0) {
-                                L51: {
-                                  if (var36 >= 0) {
-                                    break L51;
-                                  } else {
-                                    var32 = (var26 - 1 - var36) / var26;
-                                    var37 = var37 + var32;
-                                    var36 = var36 + var26 * var32;
-                                    var34 = var34 + var32;
-                                    break L51;
-                                  }
-                                }
-                                L52: {
-                                  var32 = (1 + var36 - (this.field_p << 12) - var26) / var26;
-                                  if ((1 + var36 - (this.field_p << 12) - var26) / var26 <= var37) {
-                                    break L52;
-                                  } else {
-                                    var37 = var32;
-                                    break L52;
-                                  }
-                                }
-                                L53: while (true) {
-                                  if (var37 >= 0) {
-                                    break L50;
-                                  } else {
-                                    var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                    var39 = dg.field_e[var34];
-                                    var40 = var38 >>> 24;
-                                    var41 = 256 - var40;
-                                    incrementValue$6 = var34;
-                                    var34++;
-                                    dg.field_e[incrementValue$6] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                    var36 = var36 + var26;
-                                    var37++;
-                                    continue L53;
-                                  }
-                                }
-                              } else {
-                                break L50;
-                              }
-                            } else {
-                              break L50;
-                            }
-                          }
-                          var33++;
-                          var30 = var30 - var26;
-                          var23 = var23 + dg.field_i;
-                          continue L49;
-                        }
-                      }
-                    } else {
-                      var33 = var22;
-                      L54: while (true) {
-                        if (var33 >= 0) {
-                          break L14;
-                        } else {
-                          L55: {
-                            var34 = var23;
-                            var35 = var30;
-                            var36 = var31 + (var28 * var26 >> 4);
-                            var37 = var20;
-                            if (var35 >= 0) {
-                              if (var35 - (this.field_q << 12) < 0) {
-                                L56: {
-                                  var32 = var36 - (this.field_p << 12);
-                                  if (var36 - (this.field_p << 12) < 0) {
-                                    break L56;
-                                  } else {
-                                    var32 = (var26 - var32) / var26;
-                                    var37 = var37 + var32;
-                                    var36 = var36 + var26 * var32;
-                                    var34 = var34 + var32;
-                                    break L56;
-                                  }
-                                }
-                                L57: {
-                                  var32 = (var36 - var26) / var26;
-                                  if ((var36 - var26) / var26 <= var37) {
-                                    break L57;
-                                  } else {
-                                    var37 = var32;
-                                    break L57;
-                                  }
-                                }
-                                L58: while (true) {
-                                  if (var37 >= 0) {
-                                    break L55;
-                                  } else {
-                                    var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                    var39 = dg.field_e[var34];
-                                    var40 = var38 >>> 24;
-                                    var41 = 256 - var40;
-                                    incrementValue$7 = var34;
-                                    var34++;
-                                    dg.field_e[incrementValue$7] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                    var36 = var36 + var26;
-                                    var37++;
-                                    continue L58;
-                                  }
-                                }
-                              } else {
-                                break L55;
-                              }
-                            } else {
-                              break L55;
-                            }
-                          }
-                          var33++;
-                          var30 = var30 - var26;
-                          var23 = var23 + dg.field_i;
-                          continue L54;
-                        }
-                      }
-                    }
-                  } else {
-                    var33 = var22;
-                    L59: while (true) {
-                      if (var33 >= 0) {
-                        return;
-                      } else {
-                        L60: {
-                          var34 = var23;
-                          var35 = var30;
-                          var36 = var31;
-                          var37 = var20;
-                          if (var35 >= 0) {
-                            if (var36 >= 0) {
-                              if (var35 - (this.field_q << 12) < 0) {
-                                if (var36 - (this.field_p << 12) < 0) {
-                                  L61: while (true) {
-                                    if (var37 >= 0) {
-                                      break L60;
-                                    } else {
-                                      var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
-                                      var39 = dg.field_e[var34];
-                                      var40 = var38 >>> 24;
-                                      var41 = 256 - var40;
-                                      incrementValue$8 = var34;
-                                      var34++;
-                                      dg.field_e[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                                      var37++;
-                                      continue L61;
-                                    }
-                                  }
-                                } else {
-                                  break L60;
-                                }
-                              } else {
-                                break L60;
-                              }
-                            } else {
-                              break L60;
-                            }
-                          } else {
-                            break L60;
-                          }
-                        }
-                        var33++;
-                        var23 = var23 + dg.field_i;
-                        continue L59;
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            } else {
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        int var32Lifetime1;
+        int var32Lifetime2;
+        int var32Lifetime3;
+        int var32Lifetime4;
+        int var33Lifetime1;
+        int var33Lifetime2;
+        int var33Lifetime3;
+        int var33Lifetime4;
+        int var34Lifetime1;
+        int var34Lifetime2;
+        int var34Lifetime3;
+        int var34Lifetime4;
+        int var35Lifetime1;
+        int var35Lifetime2;
+        int var35Lifetime3;
+        int var35Lifetime4;
+        int var36Lifetime1;
+        int var36Lifetime2;
+        int var36Lifetime3;
+        int var36Lifetime4;
+        int var37Lifetime1;
+        int var37Lifetime2;
+        int var37Lifetime3;
+        int var37Lifetime4;
+        int var38Lifetime1;
+        int var38Lifetime2;
+        int var38Lifetime3;
+        int var38Lifetime4;
+        int var39Lifetime1;
+        int var39Lifetime2;
+        int var39Lifetime3;
+        int var39Lifetime4;
+        int var40Lifetime1;
+        int var40Lifetime2;
+        int var40Lifetime3;
+        int var40Lifetime4;
+        int var41Lifetime1;
+        int var41Lifetime2;
+        int var41Lifetime3;
+        int var41Lifetime4;
+        int var32Lifetime5;
+        int var33Lifetime5;
+        int var33Lifetime6;
+        int var34Lifetime5;
+        int var34Lifetime6;
+        int var35Lifetime5;
+        int var35Lifetime6;
+        int var36Lifetime5;
+        int var36Lifetime6;
+        int var37Lifetime5;
+        int var37Lifetime6;
+        int var38Lifetime5;
+        int var38Lifetime6;
+        int var39Lifetime5;
+        int var39Lifetime6;
+        int var40Lifetime5;
+        int var40Lifetime6;
+        int var41Lifetime5;
+        int var41Lifetime6;
+        int var32Lifetime1Lifetime1;
+        int var32Lifetime1Lifetime2;
+        int var32Lifetime2Lifetime1;
+        int var32Lifetime3Lifetime1;
+        int var32Lifetime3Lifetime2;
+        int var32Lifetime3Lifetime3;
+        int var32Lifetime4Lifetime1;
+        int var32Lifetime4Lifetime2;
+        int var32Lifetime4Lifetime3;
+        int var33Lifetime1Lifetime1;
+        int var33Lifetime1Lifetime2;
+        int var34Lifetime1Lifetime1;
+        int var34Lifetime1Lifetime2;
+        int var35Lifetime1Lifetime1;
+        int var35Lifetime1Lifetime2;
+        int var36Lifetime1Lifetime1;
+        int var36Lifetime1Lifetime2;
+        int var37Lifetime1Lifetime1;
+        int var37Lifetime1Lifetime2;
+        int var38Lifetime1Lifetime1;
+        int var38Lifetime1Lifetime2;
+        int var39Lifetime1Lifetime1;
+        int var39Lifetime1Lifetime2;
+        int var40Lifetime1Lifetime1;
+        int var40Lifetime1Lifetime2;
+        int var41Lifetime1Lifetime1;
+        int var41Lifetime1Lifetime2;
+        int var32Lifetime6;
+        int var32Lifetime1Lifetime3;
+        int var32Lifetime5Lifetime1;
+        int var32Lifetime1Lifetime1Lifetime1;
+        int var32Lifetime1Lifetime1Lifetime2;
+        int var32Lifetime1Lifetime1Lifetime3;
+        int var32Lifetime1Lifetime2Lifetime1;
+        int var32Lifetime1Lifetime2Lifetime2;
+        int var32Lifetime1Lifetime2Lifetime3;
+        if (param5 == 0) {
           return;
         }
+        param0 = param0 - (this.field_t << 4);
+        param1 = param1 - (this.field_u << 4);
+        var7 = (double)(param4 & 65535) * 0.00009587379924285257;
+        var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
+        var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
+        var11 = -param0 * var10 + -param1 * var9;
+        var12 = -(-param0) * var9 + -param1 * var10;
+        var13 = ((this.field_q << 4) - param0) * var10 + -param1 * var9;
+        var14 = -((this.field_q << 4) - param0) * var9 + -param1 * var10;
+        var15 = -param0 * var10 + ((this.field_p << 4) - param1) * var9;
+        var16 = -(-param0) * var9 + ((this.field_p << 4) - param1) * var10;
+        var17 = ((this.field_q << 4) - param0) * var10 + ((this.field_p << 4) - param1) * var9;
+        var18 = -((this.field_q << 4) - param0) * var9 + ((this.field_p << 4) - param1) * var10;
+        if (var11 >= var13) {
+          var19 = var13;
+          var20 = var11;
+        } else {
+          var19 = var11;
+          var20 = var13;
+        }
+        if (var15 < var19) {
+          var19 = var15;
+        }
+        if (var17 < var19) {
+          var19 = var17;
+        }
+        if (var15 > var20) {
+          var20 = var15;
+        }
+        if (var17 > var20) {
+          var20 = var17;
+        }
+        if (var12 >= var14) {
+          var21 = var14;
+          var22 = var12;
+        } else {
+          var21 = var12;
+          var22 = var14;
+        }
+        if (var16 < var21) {
+          var21 = var16;
+        }
+        if (var18 < var21) {
+          var21 = var18;
+        }
+        if (var16 > var22) {
+          var22 = var16;
+        }
+        if (var18 > var22) {
+          var22 = var18;
+        }
+        var19 = var19 >> 12;
+        var20 = var20 + 4095 >> 12;
+        var21 = var21 >> 12;
+        var22 = var22 + 4095 >> 12;
+        var19 = var19 + param2;
+        var20 = var20 + param2;
+        var21 = var21 + param3;
+        var22 = var22 + param3;
+        var19 = var19 >> 4;
+        var20 = var20 + 15 >> 4;
+        var21 = var21 >> 4;
+        var22 = var22 + 15 >> 4;
+        if (var19 < dg.field_f) {
+          var19 = dg.field_f;
+        }
+        if (var20 > dg.field_h) {
+          var20 = dg.field_h;
+        }
+        if (var21 < dg.field_j) {
+          var21 = dg.field_j;
+        }
+        if (var22 > dg.field_k) {
+          var22 = dg.field_k;
+        }
+        var20 = var19 - var20;
+        if (var20 >= 0) {
+          return;
+        }
+        var22 = var21 - var22;
+        if (var22 >= 0) {
+          return;
+        }
+        var23 = var21 * dg.field_i + var19;
+        var24 = 16777216.0 / (double)param5;
+        var26 = (int)Math.floor(Math.sin(var7) * var24 + 0.5);
+        var27 = (int)Math.floor(Math.cos(var7) * var24 + 0.5);
+        var28 = (var19 << 4) + 8 - param2;
+        var29 = (var21 << 4) + 8 - param3;
+        var30 = (param0 << 8) - (var29 * var26 >> 4);
+        var31 = (param1 << 8) + (var29 * var27 >> 4);
+        if (var27 == 0) {
+          if (var26 == 0) {
+            var33 = var22;
+            while (var33 < 0) {
+              var34 = var23;
+              var35 = var30;
+              var36 = var31;
+              var37 = var20;
+              if (var35 >= 0 &&
+                var36 >= 0 &&
+                var35 - (this.field_q << 12) < 0 &&
+                var36 - (this.field_p << 12) < 0) {
+                while (var37 < 0) {
+                  var38 = this.field_v[(var36 >> 12) * this.field_q + (var35 >> 12)];
+                  var39 = dg.field_e[var34];
+                  var40 = var38 >>> 24;
+                  var41 = 256 - var40;
+                  incrementValue$8 = var34;
+                  var34++;
+                  dg.field_e[incrementValue$8] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                  var37++;
+                }
+              }
+              var33++;
+              var23 = var23 + dg.field_i;
+            }
+            return;
+          }
+          if (var26 >= 0) {
+            var33Lifetime5 = var22;
+            while (var33Lifetime5 < 0) {
+              var34Lifetime5 = var23;
+              var35Lifetime5 = var30;
+              var36Lifetime5 = var31 + (var28 * var26 >> 4);
+              var37Lifetime5 = var20;
+              if (var35Lifetime5 >= 0 &&
+                var35Lifetime5 - (this.field_q << 12) < 0) {
+                if (var36Lifetime5 < 0) {
+                  var32 = (var26 - 1 - var36Lifetime5) / var26;
+                  var37Lifetime5 = var37Lifetime5 + var32;
+                  var36Lifetime5 = var36Lifetime5 + var26 * var32;
+                  var34Lifetime5 = var34Lifetime5 + var32;
+                }
+                var32Lifetime6 = (1 + var36Lifetime5 - (this.field_p << 12) - var26) / var26;
+                if ((1 + var36Lifetime5 - (this.field_p << 12) - var26) / var26 > var37Lifetime5) {
+                  var37Lifetime5 = var32Lifetime6;
+                }
+                while (var37Lifetime5 < 0) {
+                  var38Lifetime5 = this.field_v[(var36Lifetime5 >> 12) * this.field_q + (var35Lifetime5 >> 12)];
+                  var39Lifetime5 = dg.field_e[var34Lifetime5];
+                  var40Lifetime5 = var38Lifetime5 >>> 24;
+                  var41Lifetime5 = 256 - var40Lifetime5;
+                  incrementValue$6 = var34Lifetime5;
+                  var34Lifetime5++;
+                  dg.field_e[incrementValue$6] = ((var38Lifetime5 & 16711935) * var40Lifetime5 + (var39Lifetime5 & 16711935) * var41Lifetime5 & -16711936) + ((var38Lifetime5 & 65280) * var40Lifetime5 + (var39Lifetime5 & 65280) * var41Lifetime5 & 16711680) >>> 8;
+                  var36Lifetime5 = var36Lifetime5 + var26;
+                  var37Lifetime5++;
+                }
+              }
+              var33Lifetime5++;
+              var30 = var30 - var26;
+              var23 = var23 + dg.field_i;
+            }
+            return;
+          }
+          var33Lifetime6 = var22;
+          while (var33Lifetime6 < 0) {
+            var34Lifetime6 = var23;
+            var35Lifetime6 = var30;
+            var36Lifetime6 = var31 + (var28 * var26 >> 4);
+            var37Lifetime6 = var20;
+            if (var35Lifetime6 >= 0 &&
+              var35Lifetime6 - (this.field_q << 12) < 0) {
+              var32Lifetime5 = var36Lifetime6 - (this.field_p << 12);
+              if (var36Lifetime6 - (this.field_p << 12) >= 0) {
+                var32Lifetime5 = (var26 - var32Lifetime5) / var26;
+                var37Lifetime6 = var37Lifetime6 + var32Lifetime5;
+                var36Lifetime6 = var36Lifetime6 + var26 * var32Lifetime5;
+                var34Lifetime6 = var34Lifetime6 + var32Lifetime5;
+              }
+              var32Lifetime5Lifetime1 = (var36Lifetime6 - var26) / var26;
+              if ((var36Lifetime6 - var26) / var26 > var37Lifetime6) {
+                var37Lifetime6 = var32Lifetime5Lifetime1;
+              }
+              while (var37Lifetime6 < 0) {
+                var38Lifetime6 = this.field_v[(var36Lifetime6 >> 12) * this.field_q + (var35Lifetime6 >> 12)];
+                var39Lifetime6 = dg.field_e[var34Lifetime6];
+                var40Lifetime6 = var38Lifetime6 >>> 24;
+                var41Lifetime6 = 256 - var40Lifetime6;
+                incrementValue$7 = var34Lifetime6;
+                var34Lifetime6++;
+                dg.field_e[incrementValue$7] = ((var38Lifetime6 & 16711935) * var40Lifetime6 + (var39Lifetime6 & 16711935) * var41Lifetime6 & -16711936) + ((var38Lifetime6 & 65280) * var40Lifetime6 + (var39Lifetime6 & 65280) * var41Lifetime6 & 16711680) >>> 8;
+                var36Lifetime6 = var36Lifetime6 + var26;
+                var37Lifetime6++;
+              }
+            }
+            var33Lifetime6++;
+            var30 = var30 - var26;
+            var23 = var23 + dg.field_i;
+          }
+          return;
+        }
+        if (var27 >= 0) {
+          if (var26 == 0) {
+            var33Lifetime1 = var22;
+            while (var33Lifetime1 < 0) {
+              var34Lifetime1 = var23;
+              var35Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1 = var31;
+              var37Lifetime1 = var20;
+              if (var36Lifetime1 >= 0 &&
+                var36Lifetime1 - (this.field_p << 12) < 0) {
+                if (var35Lifetime1 < 0) {
+                  var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
+                  var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+                  var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+                  var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
+                }
+                var32Lifetime1Lifetime3 = (1 + var35Lifetime1 - (this.field_q << 12) - var27) / var27;
+                if ((1 + var35Lifetime1 - (this.field_q << 12) - var27) / var27 > var37Lifetime1) {
+                  var37Lifetime1 = var32Lifetime1Lifetime3;
+                }
+                while (var37Lifetime1 < 0) {
+                  var38Lifetime1 = this.field_v[(var36Lifetime1 >> 12) * this.field_q + (var35Lifetime1 >> 12)];
+                  var39Lifetime1 = dg.field_e[var34Lifetime1];
+                  var40Lifetime1 = var38Lifetime1 >>> 24;
+                  var41Lifetime1 = 256 - var40Lifetime1;
+                  incrementValue$2 = var34Lifetime1;
+                  var34Lifetime1++;
+                  dg.field_e[incrementValue$2] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+                  var35Lifetime1 = var35Lifetime1 + var27;
+                  var37Lifetime1++;
+                }
+              }
+              var33Lifetime1++;
+              var31 = var31 + var27;
+              var23 = var23 + dg.field_i;
+            }
+            return;
+          }
+          if (var26 >= 0) {
+            var33Lifetime1Lifetime1 = var22;
+            while (var33Lifetime1Lifetime1 < 0) {
+              var34Lifetime1Lifetime1 = var23;
+              var35Lifetime1Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1Lifetime1 = var31 + (var28 * var26 >> 4);
+              var37Lifetime1Lifetime1 = var20;
+              if (var35Lifetime1Lifetime1 < 0) {
+                var32Lifetime1Lifetime1 = (var27 - 1 - var35Lifetime1Lifetime1) / var27;
+                var37Lifetime1Lifetime1 = var37Lifetime1Lifetime1 + var32Lifetime1Lifetime1;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27 * var32Lifetime1Lifetime1;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1;
+                var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1;
+              }
+              var32Lifetime1Lifetime1Lifetime1 = (1 + var35Lifetime1Lifetime1 - (this.field_q << 12) - var27) / var27;
+              if ((1 + var35Lifetime1Lifetime1 - (this.field_q << 12) - var27) / var27 > var37Lifetime1Lifetime1) {
+                var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime1;
+              }
+              if (var36Lifetime1Lifetime1 < 0) {
+                var32Lifetime1Lifetime1Lifetime2 = (var26 - 1 - var36Lifetime1Lifetime1) / var26;
+                var37Lifetime1Lifetime1 = var37Lifetime1Lifetime1 + var32Lifetime1Lifetime1Lifetime2;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27 * var32Lifetime1Lifetime1Lifetime2;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1Lifetime2;
+                var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1Lifetime2;
+              }
+              var32Lifetime1Lifetime1Lifetime3 = (1 + var36Lifetime1Lifetime1 - (this.field_p << 12) - var26) / var26;
+              if ((1 + var36Lifetime1Lifetime1 - (this.field_p << 12) - var26) / var26 > var37Lifetime1Lifetime1) {
+                var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime3;
+              }
+              while (var37Lifetime1Lifetime1 < 0) {
+                var38Lifetime1Lifetime1 = this.field_v[(var36Lifetime1Lifetime1 >> 12) * this.field_q + (var35Lifetime1Lifetime1 >> 12)];
+                var39Lifetime1Lifetime1 = dg.field_e[var34Lifetime1Lifetime1];
+                var40Lifetime1Lifetime1 = var38Lifetime1Lifetime1 >>> 24;
+                var41Lifetime1Lifetime1 = 256 - var40Lifetime1Lifetime1;
+                incrementValue$0 = var34Lifetime1Lifetime1;
+                var34Lifetime1Lifetime1++;
+                dg.field_e[incrementValue$0] = ((var38Lifetime1Lifetime1 & 16711935) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 16711935) * var41Lifetime1Lifetime1 & -16711936) + ((var38Lifetime1Lifetime1 & 65280) * var40Lifetime1Lifetime1 + (var39Lifetime1Lifetime1 & 65280) * var41Lifetime1Lifetime1 & 16711680) >>> 8;
+                var35Lifetime1Lifetime1 = var35Lifetime1Lifetime1 + var27;
+                var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26;
+                var37Lifetime1Lifetime1++;
+              }
+              var33Lifetime1Lifetime1++;
+              var30 = var30 - var26;
+              var31 = var31 + var27;
+              var23 = var23 + dg.field_i;
+            }
+            return;
+          }
+          var33Lifetime1Lifetime2 = var22;
+          while (var33Lifetime1Lifetime2 < 0) {
+            var34Lifetime1Lifetime2 = var23;
+            var35Lifetime1Lifetime2 = var30 + (var28 * var27 >> 4);
+            var36Lifetime1Lifetime2 = var31 + (var28 * var26 >> 4);
+            var37Lifetime1Lifetime2 = var20;
+            if (var35Lifetime1Lifetime2 < 0) {
+              var32Lifetime1Lifetime2 = (var27 - 1 - var35Lifetime1Lifetime2) / var27;
+              var37Lifetime1Lifetime2 = var37Lifetime1Lifetime2 + var32Lifetime1Lifetime2;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27 * var32Lifetime1Lifetime2;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26 * var32Lifetime1Lifetime2;
+              var34Lifetime1Lifetime2 = var34Lifetime1Lifetime2 + var32Lifetime1Lifetime2;
+            }
+            var32Lifetime1Lifetime2Lifetime1 = (1 + var35Lifetime1Lifetime2 - (this.field_q << 12) - var27) / var27;
+            if ((1 + var35Lifetime1Lifetime2 - (this.field_q << 12) - var27) / var27 > var37Lifetime1Lifetime2) {
+              var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime1;
+            }
+            var32Lifetime1Lifetime2Lifetime2 = var36Lifetime1Lifetime2 - (this.field_p << 12);
+            if (var36Lifetime1Lifetime2 - (this.field_p << 12) >= 0) {
+              var32Lifetime1Lifetime2Lifetime2 = (var26 - var32Lifetime1Lifetime2Lifetime2) / var26;
+              var37Lifetime1Lifetime2 = var37Lifetime1Lifetime2 + var32Lifetime1Lifetime2Lifetime2;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27 * var32Lifetime1Lifetime2Lifetime2;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26 * var32Lifetime1Lifetime2Lifetime2;
+              var34Lifetime1Lifetime2 = var34Lifetime1Lifetime2 + var32Lifetime1Lifetime2Lifetime2;
+            }
+            var32Lifetime1Lifetime2Lifetime3 = (var36Lifetime1Lifetime2 - var26) / var26;
+            if ((var36Lifetime1Lifetime2 - var26) / var26 > var37Lifetime1Lifetime2) {
+              var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime3;
+            }
+            while (var37Lifetime1Lifetime2 < 0) {
+              var38Lifetime1Lifetime2 = this.field_v[(var36Lifetime1Lifetime2 >> 12) * this.field_q + (var35Lifetime1Lifetime2 >> 12)];
+              var39Lifetime1Lifetime2 = dg.field_e[var34Lifetime1Lifetime2];
+              var40Lifetime1Lifetime2 = var38Lifetime1Lifetime2 >>> 24;
+              var41Lifetime1Lifetime2 = 256 - var40Lifetime1Lifetime2;
+              incrementValue$1 = var34Lifetime1Lifetime2;
+              var34Lifetime1Lifetime2++;
+              dg.field_e[incrementValue$1] = ((var38Lifetime1Lifetime2 & 16711935) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 16711935) * var41Lifetime1Lifetime2 & -16711936) + ((var38Lifetime1Lifetime2 & 65280) * var40Lifetime1Lifetime2 + (var39Lifetime1Lifetime2 & 65280) * var41Lifetime1Lifetime2 & 16711680) >>> 8;
+              var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27;
+              var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26;
+              var37Lifetime1Lifetime2++;
+            }
+            var33Lifetime1Lifetime2++;
+            var30 = var30 - var26;
+            var31 = var31 + var27;
+            var23 = var23 + dg.field_i;
+          }
+          return;
+        }
+        if (var26 == 0) {
+          var33Lifetime2 = var22;
+          while (var33Lifetime2 < 0) {
+            var34Lifetime2 = var23;
+            var35Lifetime2 = var30 + (var28 * var27 >> 4);
+            var36Lifetime2 = var31;
+            var37Lifetime2 = var20;
+            if (var36Lifetime2 >= 0 &&
+              var36Lifetime2 - (this.field_p << 12) < 0) {
+              var32Lifetime2 = var35Lifetime2 - (this.field_q << 12);
+              if (var35Lifetime2 - (this.field_q << 12) >= 0) {
+                var32Lifetime2 = (var27 - var32Lifetime2) / var27;
+                var37Lifetime2 = var37Lifetime2 + var32Lifetime2;
+                var35Lifetime2 = var35Lifetime2 + var27 * var32Lifetime2;
+                var34Lifetime2 = var34Lifetime2 + var32Lifetime2;
+              }
+              var32Lifetime2Lifetime1 = (var35Lifetime2 - var27) / var27;
+              if ((var35Lifetime2 - var27) / var27 > var37Lifetime2) {
+                var37Lifetime2 = var32Lifetime2Lifetime1;
+              }
+              while (var37Lifetime2 < 0) {
+                var38Lifetime2 = this.field_v[(var36Lifetime2 >> 12) * this.field_q + (var35Lifetime2 >> 12)];
+                var39Lifetime2 = dg.field_e[var34Lifetime2];
+                var40Lifetime2 = var38Lifetime2 >>> 24;
+                var41Lifetime2 = 256 - var40Lifetime2;
+                incrementValue$5 = var34Lifetime2;
+                var34Lifetime2++;
+                dg.field_e[incrementValue$5] = ((var38Lifetime2 & 16711935) * var40Lifetime2 + (var39Lifetime2 & 16711935) * var41Lifetime2 & -16711936) + ((var38Lifetime2 & 65280) * var40Lifetime2 + (var39Lifetime2 & 65280) * var41Lifetime2 & 16711680) >>> 8;
+                var35Lifetime2 = var35Lifetime2 + var27;
+                var37Lifetime2++;
+              }
+            }
+            var33Lifetime2++;
+            var31 = var31 + var27;
+            var23 = var23 + dg.field_i;
+          }
+          return;
+        }
+        if (var26 >= 0) {
+          var33Lifetime3 = var22;
+          while (var33Lifetime3 < 0) {
+            var34Lifetime3 = var23;
+            var35Lifetime3 = var30 + (var28 * var27 >> 4);
+            var36Lifetime3 = var31 + (var28 * var26 >> 4);
+            var37Lifetime3 = var20;
+            var32Lifetime3 = var35Lifetime3 - (this.field_q << 12);
+            if (var35Lifetime3 - (this.field_q << 12) >= 0) {
+              var32Lifetime3 = (var27 - var32Lifetime3) / var27;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3;
+            }
+            var32Lifetime3Lifetime1 = (var35Lifetime3 - var27) / var27;
+            if ((var35Lifetime3 - var27) / var27 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3Lifetime1;
+            }
+            if (var36Lifetime3 < 0) {
+              var32Lifetime3Lifetime2 = (var26 - 1 - var36Lifetime3) / var26;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3Lifetime2;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3Lifetime2;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3Lifetime2;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3Lifetime2;
+            }
+            var32Lifetime3Lifetime3 = (1 + var36Lifetime3 - (this.field_p << 12) - var26) / var26;
+            if ((1 + var36Lifetime3 - (this.field_p << 12) - var26) / var26 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3Lifetime3;
+            }
+            while (var37Lifetime3 < 0) {
+              var38Lifetime3 = this.field_v[(var36Lifetime3 >> 12) * this.field_q + (var35Lifetime3 >> 12)];
+              var39Lifetime3 = dg.field_e[var34Lifetime3];
+              var40Lifetime3 = var38Lifetime3 >>> 24;
+              var41Lifetime3 = 256 - var40Lifetime3;
+              incrementValue$3 = var34Lifetime3;
+              var34Lifetime3++;
+              dg.field_e[incrementValue$3] = ((var38Lifetime3 & 16711935) * var40Lifetime3 + (var39Lifetime3 & 16711935) * var41Lifetime3 & -16711936) + ((var38Lifetime3 & 65280) * var40Lifetime3 + (var39Lifetime3 & 65280) * var41Lifetime3 & 16711680) >>> 8;
+              var35Lifetime3 = var35Lifetime3 + var27;
+              var36Lifetime3 = var36Lifetime3 + var26;
+              var37Lifetime3++;
+            }
+            var33Lifetime3++;
+            var30 = var30 - var26;
+            var31 = var31 + var27;
+            var23 = var23 + dg.field_i;
+          }
+          return;
+        }
+        var33Lifetime4 = var22;
+        while (var33Lifetime4 < 0) {
+          var34Lifetime4 = var23;
+          var35Lifetime4 = var30 + (var28 * var27 >> 4);
+          var36Lifetime4 = var31 + (var28 * var26 >> 4);
+          var37Lifetime4 = var20;
+          var32Lifetime4 = var35Lifetime4 - (this.field_q << 12);
+          if (var35Lifetime4 - (this.field_q << 12) >= 0) {
+            var32Lifetime4 = (var27 - var32Lifetime4) / var27;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4;
+          }
+          var32Lifetime4Lifetime1 = (var35Lifetime4 - var27) / var27;
+          if ((var35Lifetime4 - var27) / var27 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4Lifetime1;
+          }
+          var32Lifetime4Lifetime2 = var36Lifetime4 - (this.field_p << 12);
+          if (var36Lifetime4 - (this.field_p << 12) >= 0) {
+            var32Lifetime4Lifetime2 = (var26 - var32Lifetime4Lifetime2) / var26;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4Lifetime2;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4Lifetime2;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4Lifetime2;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4Lifetime2;
+          }
+          var32Lifetime4Lifetime3 = (var36Lifetime4 - var26) / var26;
+          if ((var36Lifetime4 - var26) / var26 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4Lifetime3;
+          }
+          while (var37Lifetime4 < 0) {
+            var38Lifetime4 = this.field_v[(var36Lifetime4 >> 12) * this.field_q + (var35Lifetime4 >> 12)];
+            var39Lifetime4 = dg.field_e[var34Lifetime4];
+            var40Lifetime4 = var38Lifetime4 >>> 24;
+            var41Lifetime4 = 256 - var40Lifetime4;
+            incrementValue$4 = var34Lifetime4;
+            var34Lifetime4++;
+            dg.field_e[incrementValue$4] = ((var38Lifetime4 & 16711935) * var40Lifetime4 + (var39Lifetime4 & 16711935) * var41Lifetime4 & -16711936) + ((var38Lifetime4 & 65280) * var40Lifetime4 + (var39Lifetime4 & 65280) * var41Lifetime4 & 16711680) >>> 8;
+            var35Lifetime4 = var35Lifetime4 + var27;
+            var36Lifetime4 = var36Lifetime4 + var26;
+            var37Lifetime4++;
+          }
+          var33Lifetime4++;
+          var30 = var30 - var26;
+          var31 = var31 + var27;
+          var23 = var23 + dg.field_i;
+        }
+        return;
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -1561,20 +1246,20 @@ final class pa extends kv {
         int incrementValue$0 = 0;
         int var13 = param3;
         for (var14 = -param8; var14 < 0; var14++) {
-            var15 = (param4 >> 16) * param11;
-            for (var16 = -param7; var16 < 0; var16++) {
-                var17 = param1[(param3 >> 16) + var15];
-                var18 = param0[param5];
-                var19 = (var17 >>> 24) * param12 >> 8;
-                var20 = 256 - var19;
-                incrementValue$0 = param5;
-                param5++;
-                param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
-                param3 = param3 + param9;
-            }
-            param4 = param4 + param10;
-            param3 = var13;
-            param5 = param5 + param6;
+          var15 = (param4 >> 16) * param11;
+          for (var16 = -param7; var16 < 0; var16++) {
+            var17 = param1[(param3 >> 16) + var15];
+            var18 = param0[param5];
+            var19 = (var17 >>> 24) * param12 >> 8;
+            var20 = 256 - var19;
+            incrementValue$0 = param5;
+            param5++;
+            param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
+            param3 = param3 + param9;
+          }
+          param4 = param4 + param10;
+          param3 = var13;
+          param5 = param5 + param6;
         }
     }
 
@@ -1583,61 +1268,40 @@ final class pa extends kv {
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
+        int incrementValue$1 = 0;
         int var12;
         int var13;
         int var14;
         int var15;
         int var16;
         int var17;
+        int var15Lifetime1;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
-        param6 = -param8;
-        L0: while (true) {
-          if (param6 >= 0) {
-            return;
-          } else {
-            param5 = -param7;
-            L1: while (true) {
-              if (param5 >= 0) {
-                param4 = param4 + param9;
-                param3 = param3 + param10;
-                param6++;
-                continue L0;
+        for (param6 = -param8; param6 < 0; param6++) {
+          for (param5 = -param7; param5 < 0; param5++) {
+            param2 = param1[param3++];
+            var14 = param2 >>> 24;
+            param2 = param2 & 16777215;
+            if (var14 == 0) {
+              param4++;
+            } else {
+              var15 = 0;
+              if (param2 >> 8 != (param2 & 65535)) {
+                var15Lifetime1 = param2;
               } else {
-                incrementValue$11 = param3;
-                param3++;
-                param2 = param1[incrementValue$11];
-                var14 = param2 >>> 24;
-                param2 = param2 & 16777215;
-                if (var14 == 0) {
-                  param4++;
-                  param5++;
-                  continue L1;
-                } else {
-                  L2: {
-                    var15 = 0;
-                    if (param2 >> 8 != (param2 & 65535)) {
-                      var15 = param2;
-                      break L2;
-                    } else {
-                      param2 = param2 & 255;
-                      var15 = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
-                      break L2;
-                    }
-                  }
-                  var16 = 256 - var14;
-                  var17 = param0[param4];
-                  incrementValue$12 = param4;
-                  param4++;
-                  param0[incrementValue$12] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
-                  param5++;
-                  continue L1;
-                }
+                param2 = param2 & 255;
+                var15Lifetime1 = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
               }
+              var16 = 256 - var14;
+              var17 = param0[param4];
+              incrementValue$1 = param4;
+              param4++;
+              param0[incrementValue$1] = ((var15Lifetime1 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15Lifetime1 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
             }
           }
+          param4 = param4 + param9;
+          param3 = param3 + param10;
         }
     }
 
@@ -1646,24 +1310,21 @@ final class pa extends kv {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int incrementValue$0 = 0;
         int var14 = 0;
         int var15 = 0;
         int incrementValue$1 = 0;
         for (var10 = -param6; var10 < 0; var10++) {
-            for (var11 = -param5; var11 < 0; var11++) {
-                var12 = (param1[param3] >>> 24) * param9 >> 8;
-                var13 = 256 - var12;
-                incrementValue$0 = param3;
-                param3++;
-                var14 = param1[incrementValue$0];
-                var15 = param0[param4];
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
-            }
-            param4 = param4 + param7;
-            param3 = param3 + param8;
+          for (var11 = -param5; var11 < 0; var11++) {
+            var12 = (param1[param3] >>> 24) * param9 >> 8;
+            var13 = 256 - var12;
+            var14 = param1[param3++];
+            var15 = param0[param4];
+            incrementValue$1 = param4;
+            param4++;
+            param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+          }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -1677,36 +1338,35 @@ final class pa extends kv {
         int var17 = 0;
         int var12 = param3;
         for (var13 = -param8; var13 < 0; var13++) {
-            var14 = (param4 >> 16) * param11;
-            for (var15 = -param7; var15 < 0; var15++) {
-                param2 = param1[(param3 >> 16) + var14];
-                var16 = param2 >>> 24;
-                if (var16 != 0) {
-                    var17 = 256 - var16;
-                    var18 = param0[param5];
-                    incrementValue$0 = param5;
-                    param5++;
-                    param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
-                } else {
-                    param5++;
-                }
-                param3 = param3 + param9;
+          var14 = (param4 >> 16) * param11;
+          for (var15 = -param7; var15 < 0; var15++) {
+            param2 = param1[(param3 >> 16) + var14];
+            var16 = param2 >>> 24;
+            if (var16 != 0) {
+              var17 = 256 - var16;
+              var18 = param0[param5];
+              incrementValue$0 = param5;
+              param5++;
+              param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+            } else {
+              param5++;
             }
-            param4 = param4 + param10;
-            param3 = var12;
-            param5 = param5 + param6;
+            param3 = param3 + param9;
+          }
+          param4 = param4 + param10;
+          param3 = var12;
+          param5 = param5 + param6;
         }
     }
 
     final void f(int param0, int param1) {
+        int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int[] stackIn_20_0 = null;
         int stackIn_20_1 = 0;
-        int[] stackIn_21_0 = null;
-        int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
         int var3;
         int var4;
@@ -1714,7 +1374,6 @@ final class pa extends kv {
         int var6;
         int var7;
         int var8;
-        int var9;
         int var10;
         int var11;
         int var12;
@@ -1727,128 +1386,85 @@ final class pa extends kv {
         int var19;
         int var20;
         int var21;
-        L0: {
-          var3 = this.field_q >> 1;
-          var4 = this.field_p >> 1;
-          param0 = param0 + this.field_t / 2;
-          param1 = param1 + this.field_u / 2;
-          if (param0 >= dg.field_f) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = dg.field_f - param0 << 1;
-            break L0;
-          }
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var19Lifetime1;
+        var3 = this.field_q >> 1;
+        var4 = this.field_p >> 1;
+        param0 = param0 + this.field_t / 2;
+        param1 = param1 + this.field_u / 2;
+        if (param0 >= dg.field_f) {
+          stackIn_3_0 = 0;
+        } else {
+          stackIn_3_0 = dg.field_f - param0 << 1;
         }
-        L1: {
-          var5 = stackIn_3_0;
-          if (param0 + var3 <= dg.field_h) {
-            stackIn_6_0 = this.field_q - 2;
-            break L1;
-          } else {
-            stackIn_6_0 = (dg.field_h - param0 << 1) - 2;
-            break L1;
-          }
+        var5 = stackIn_3_0;
+        if (param0 + var3 <= dg.field_h) {
+          stackIn_6_0 = this.field_q - 2;
+        } else {
+          stackIn_6_0 = (dg.field_h - param0 << 1) - 2;
         }
-        L2: {
-          var6 = stackIn_6_0;
-          if (param1 >= dg.field_j) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = dg.field_j - param1 << 1;
-            break L2;
-          }
+        var6 = stackIn_6_0;
+        if (param1 >= dg.field_j) {
+          stackIn_9_0 = 0;
+        } else {
+          stackIn_9_0 = dg.field_j - param1 << 1;
         }
-        L3: {
-          var7 = stackIn_9_0;
-          if (param1 + var4 <= dg.field_k) {
-            stackIn_12_0 = this.field_p - 2;
-            break L3;
-          } else {
-            stackIn_12_0 = (dg.field_k - param1 << 1) - 2;
-            break L3;
-          }
+        var7 = stackIn_9_0;
+        if (param1 + var4 <= dg.field_k) {
+          stackIn_12_0 = this.field_p - 2;
+        } else {
+          stackIn_12_0 = (dg.field_k - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
-        var9 = var7;
-        L4: while (true) {
-          if (var9 > var8) {
-            return;
-          } else {
-            var10 = var9 * this.field_q + var5;
-            var11 = (param1 + (var9 >> 1)) * dg.field_i + (param0 + (var5 >> 1));
-            var12 = var5;
-            L5: while (true) {
-              if (var12 > var6) {
-                var9 += 2;
-                continue L4;
+        for (var9 = var7; var9 <= var8; var9 += 2) {
+          var10 = var9 * this.field_q + var5;
+          var11 = (param1 + (var9 >> 1)) * dg.field_i + (param0 + (var5 >> 1));
+          var12 = var5;
+          while (var12 <= var6) {
+            var13 = 0;
+            var14 = 0;
+            var15 = 0;
+            var16 = 0;
+            var17 = 0;
+            var18 = 0;
+            for (var19 = 0; var19 < 4; var19++) {
+              stackIn_20_0 = this.field_v;
+              stackIn_20_1 = var10 + (var19 & 1);
+              if ((var19 & 2) != 0) {
+                stackIn_21_2 = 0;
               } else {
-                var13 = 0;
-                var14 = 0;
-                var15 = 0;
-                var16 = 0;
-                var17 = 0;
-                var18 = 0;
-                var19 = 0;
-                L6: while (true) {
-                  if (var19 >= 4) {
-                    if (var18 != 0) {
-                      var15 = (var15 / var18 << 16) + var17 / var18;
-                      var16 = var16 / var18 << 8;
-                      var19 = var18 >> 2;
-                      var20 = 256 - var19;
-                      var21 = dg.field_e[var11];
-                      dg.field_e[var11] = (var19 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
-                      var12 += 2;
-                      var11++;
-                      var10 += 2;
-                      continue L5;
-                    } else {
-                      var12 += 2;
-                      var11++;
-                      var10 += 2;
-                      continue L5;
-                    }
-                  } else {
-                    L7: {
-                      stackIn_20_0 = this.field_v;
-
-                      stackIn_20_1 = var10 + (var19 & 1);
-
-                      if ((var19 & 2) != 0) {
-                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                        stackIn_21_1 = stackIn_20_1;
-                        stackIn_21_2 = 0;
-                        break L7;
-                      } else {
-                        stackIn_21_0 = (int[]) ((Object) stackIn_20_0);
-                        stackIn_21_1 = stackIn_20_1;
-                        stackIn_21_2 = this.field_q;
-                        break L7;
-                      }
-                    }
-                    var13 = stackIn_21_0[stackIn_21_1 + stackIn_21_2];
-                    var14 = var13 >>> 24;
-                    var18 = var18 + var14;
-                    var15 = var15 + var14 * (var13 >> 16 & 255);
-                    var16 = var16 + var14 * (var13 >> 8 & 255);
-                    var17 = var17 + var14 * (var13 & 255);
-                    var19++;
-                    continue L6;
-                  }
-                }
+                stackIn_21_2 = this.field_q;
               }
+              var13Lifetime1 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
+              var14Lifetime1 = var13Lifetime1 >>> 24;
+              var18 = var18 + var14Lifetime1;
+              var15 = var15 + var14Lifetime1 * (var13Lifetime1 >> 16 & 255);
+              var16 = var16 + var14Lifetime1 * (var13Lifetime1 >> 8 & 255);
+              var17 = var17 + var14Lifetime1 * (var13Lifetime1 & 255);
             }
+            if (var18 != 0) {
+              var15 = (var15 / var18 << 16) + var17 / var18;
+              var16 = var16 / var18 << 8;
+              var19Lifetime1 = var18 >> 2;
+              var20 = 256 - var19Lifetime1;
+              var21 = dg.field_e[var11];
+              dg.field_e[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+            }
+            var12 += 2;
+            var11++;
+            var10 += 2;
           }
         }
     }
 
     final void b(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         if (param2 == 256) {
-            this.e(param0, param1);
-            return;
+          this.e(param0, param1);
+          return;
         }
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
@@ -1859,90 +1475,74 @@ final class pa extends kv {
         int var8 = dg.field_i - var7;
         int var9 = 0;
         if (param1 < dg.field_j) {
-            var10 = dg.field_j - param1;
-            var6 = var6 - var10;
-            param1 = dg.field_j;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * dg.field_i;
+          var10 = dg.field_j - param1;
+          var6 = var6 - var10;
+          param1 = dg.field_j;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * dg.field_i;
         }
         if (param1 + var6 > dg.field_k) {
-            var6 = var6 - (param1 + var6 - dg.field_k);
+          var6 = var6 - (param1 + var6 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var10 = dg.field_f - param0;
-            var7 = var7 - var10;
-            param0 = dg.field_f;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime1 = dg.field_f - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = dg.field_f;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > dg.field_h) {
-            var10 = param0 + var7 - dg.field_h;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime2 = param0 + var7 - dg.field_h;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            pa.e(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          pa.e(dg.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int incrementValue$11 = 0;
+        int var10 = 0;
+        int var11 = 0;
         int incrementValue$12 = 0;
-        int var10;
-        int var11;
         int var12;
         int var13;
         int var14;
         int var15;
         int var16;
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
-            var11 = -param5;
-            L1: while (true) {
-              if (var11 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var10++;
-                continue L0;
-              } else {
-                incrementValue$11 = param3;
-                param3++;
-                param2 = param1[incrementValue$11];
-                var12 = param2 >>> 24;
-                if (var12 == 0) {
-                  param4++;
-                  var11++;
-                  continue L1;
-                } else {
-                  var13 = param0[param4];
-                  var14 = 256 - var12;
-                  var15 = (param2 & 16711935) * param9 & -16711936;
-                  var16 = (param2 & 65280) * param9 & 16711680;
-                  param2 = (var15 | var16) >>> 8;
-                  incrementValue$12 = param4;
-                  param4++;
-                  param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
-                  var11++;
-                  continue L1;
-                }
-              }
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = -param5; var11 < 0; var11++) {
+            param2 = param1[param3++];
+            var12 = param2 >>> 24;
+            if (var12 == 0) {
+              param4++;
+            } else {
+              var13 = param0[param4];
+              var14 = 256 - var12;
+              var15 = (param2 & 16711935) * param9 & -16711936;
+              var16 = (param2 & 65280) * param9 & 16711680;
+              param2 = (var15 | var16) >>> 8;
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
             }
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
     final void f(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         param0 = param0 + this.field_t;
         param1 = param1 + this.field_u;
         int var4 = param0 + param1 * dg.field_i;
@@ -1952,36 +1552,36 @@ final class pa extends kv {
         int var8 = dg.field_i - var7;
         int var9 = 0;
         if (param1 < dg.field_j) {
-            var10 = dg.field_j - param1;
-            var6 = var6 - var10;
-            param1 = dg.field_j;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * dg.field_i;
+          var10 = dg.field_j - param1;
+          var6 = var6 - var10;
+          param1 = dg.field_j;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * dg.field_i;
         }
         if (param1 + var6 > dg.field_k) {
-            var6 = var6 - (param1 + var6 - dg.field_k);
+          var6 = var6 - (param1 + var6 - dg.field_k);
         }
         if (param0 < dg.field_f) {
-            var10 = dg.field_f - param0;
-            var7 = var7 - var10;
-            param0 = dg.field_f;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime1 = dg.field_f - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = dg.field_f;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > dg.field_h) {
-            var10 = param0 + var7 - dg.field_h;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+          var10Lifetime2 = param0 + var7 - dg.field_h;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            pa.d(dg.field_e, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          pa.d(dg.field_e, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
@@ -1994,7 +1594,7 @@ final class pa extends kv {
         var1.field_u = this.field_u;
         int var2 = this.field_v.length;
         for (var3 = 0; var3 < var2; var3++) {
-            var1.field_v[var3] = this.field_v[var3];
+          var1.field_v[var3] = this.field_v[var3];
         }
         return var1;
     }

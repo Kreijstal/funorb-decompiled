@@ -14,20 +14,20 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(byte param0, md param1) {
         if (param0 != -107) {
-            return;
+          return;
         }
         try {
-            rk.a(param1, this.field_c, false);
+          rk.a(param1, this.field_c, false);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "r.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "r.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_d = true;
+          this.field_d = true;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "r.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "r.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,61 +41,42 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
         int stackIn_19_0 = 0;
         param1 = param1 & 8191;
         if (param0 == 71) {
-          if (-4097 >= (param1 ^ -1)) {
-            L0: {
-              if (6144 > param1) {
-                stackIn_19_0 = -tj.field_b[6144 + -param1];
-                break L0;
-              } else {
-                stackIn_19_0 = tj.field_b[-6144 + param1];
-                break L0;
-              }
+          if (param1 >= 4096) {
+            if (6144 > param1) {
+              stackIn_19_0 = -tj.field_b[6144 - param1];
+            } else {
+              stackIn_19_0 = tj.field_b[-6144 + param1];
             }
             return stackIn_19_0;
-          } else {
-            L1: {
-              if (2048 > param1) {
-                stackIn_15_0 = tj.field_b[2048 - param1];
-                break L1;
-              } else {
-                stackIn_15_0 = -tj.field_b[param1 - 2048];
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
-        } else {
-          r.a((byte) -100, 80);
-          if (-4097 >= (param1 ^ -1)) {
-            L2: {
-              if (6144 > param1) {
-                stackIn_9_0 = -tj.field_b[6144 + -param1];
-                break L2;
-              } else {
-                stackIn_9_0 = tj.field_b[-6144 + param1];
-                break L2;
-              }
-            }
-            return stackIn_9_0;
+          if (2048 > param1) {
+            stackIn_15_0 = tj.field_b[2048 - param1];
           } else {
-            L3: {
-              if (2048 > param1) {
-                stackIn_5_0 = tj.field_b[2048 - param1];
-                break L3;
-              } else {
-                stackIn_5_0 = -tj.field_b[param1 - 2048];
-                break L3;
-              }
-            }
-            return stackIn_5_0;
+            stackIn_15_0 = -tj.field_b[param1 - 2048];
           }
+          return stackIn_15_0;
         }
+        r.a((byte) -100, 80);
+        if (param1 >= 4096) {
+          if (6144 > param1) {
+            stackIn_9_0 = -tj.field_b[6144 - param1];
+          } else {
+            stackIn_9_0 = tj.field_b[-6144 + param1];
+          }
+          return stackIn_9_0;
+        }
+        if (2048 > param1) {
+          stackIn_5_0 = tj.field_b[2048 - param1];
+        } else {
+          stackIn_5_0 = -tj.field_b[param1 - 2048];
+        }
+        return stackIn_5_0;
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        int var1 = -44 / ((param0 - -23) / 59);
+        int var1 = -44 / ((param0 + 23) / 59);
         field_f = null;
     }
 

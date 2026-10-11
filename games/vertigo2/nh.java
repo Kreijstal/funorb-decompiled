@@ -17,73 +17,34 @@ final class nh extends jq {
     final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
         String var3 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (param0.length() < vb.field_h) {
-                  break L1;
-                } else {
-                  if (param0.length() <= fg.field_Y) {
-                    L2: {
-                      if (param1 == -113) {
-                        break L2;
-                      } else {
-                        var3 = (String) null;
-                        nh.a((String) null, (byte) 14);
-                        break L2;
-                      }
-                    }
-                    stackIn_9_0 = 0;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
+          if (param0 != null &&
+            param0.length() >= vb.field_h) {
+            if (param0.length() > fg.field_Y) {
+              return true;
             }
-            stackIn_5_0 = 1;
-            decompiledRegionSelector0 = 0;
-            break L0;
+            if (param1 != -113) {
+              var3 = (String) null;
+              nh.a((String) null, (byte) 14);
+            }
+            return false;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("nh.C(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("nh.C(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw wn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -101,42 +62,38 @@ final class nh extends jq {
         field_i = null;
         field_n = null;
         field_l = null;
-        if (param0) {
-          field_n = (String) null;
-          field_r = null;
-          field_p = null;
-          return;
-        } else {
+        if (!param0) {
           field_r = null;
           field_p = null;
           return;
         }
+        field_n = (String) null;
+        field_r = null;
+        field_p = null;
     }
 
     final void b(int param0, byte param1, int param2) {
         if (param1 < 26) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
     }
 
     final void a(int param0, byte param1, int param2) {
         if (param1 >= -31) {
-            this.field_k = 41;
+          this.field_k = 41;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        if (param2 != 45) {
-          return;
-        } else {
-          var4 = param1 * this.field_j >> 1364542028;
-          var5 = this.field_q * param1 >> -1604299572;
-          var6 = param0 * this.field_k >> 1654680684;
-          var7 = param0 * this.field_o >> -812871380;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        if (param2 == 45) {
+          var4 = param1 * this.field_j >> 12;
+          var5 = this.field_q * param1 >> 12;
+          var6 = param0 * this.field_k >> 12;
+          var7 = param0 * this.field_o >> 12;
           eh.a(var7, var5, (byte) -4, var6, this.field_a, var4);
           return;
         }

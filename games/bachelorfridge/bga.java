@@ -12,36 +12,21 @@ final class bga extends bw {
     static cc field_l;
 
     final static void c(byte param0) {
-        L0: {
-          if (null != oq.field_b) {
-            oq.field_b.p(-79);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null != oq.field_b) {
+          oq.field_b.p(-79);
         }
         vk.field_q = new gda();
-        if (param0 >= -4) {
-          field_j = (kv[]) null;
-          kka.field_l.e(vk.field_q, 33);
-          return;
-        } else {
+        if (param0 < -4) {
           kka.field_l.e(vk.field_q, 33);
           return;
         }
+        field_j = (kv[]) null;
+        kka.field_l.e(vk.field_q, 33);
     }
 
     public static void b(boolean param0) {
         field_l = null;
-        if (param0) {
-          bga.a(-57, true);
-          field_j = null;
-          field_f = null;
-          field_k = null;
-          field_h = null;
-          field_m = null;
-          return;
-        } else {
+        if (!param0) {
           field_j = null;
           field_f = null;
           field_k = null;
@@ -49,15 +34,21 @@ final class bga extends bw {
           field_m = null;
           return;
         }
+        bga.a(-57, true);
+        field_j = null;
+        field_f = null;
+        field_k = null;
+        field_h = null;
+        field_m = null;
     }
 
     final static void a(int param0, boolean param1) {
-        if (!(wh.field_p == null)) {
-            wh.field_p.a(param1, param0 + 17884);
+        if (wh.field_p != null) {
+          wh.field_p.a(param1, param0 + 17884);
         }
         if (param0 != -10082) {
-            field_f = (String) null;
-            return;
+          field_f = (String) null;
+          return;
         }
     }
 

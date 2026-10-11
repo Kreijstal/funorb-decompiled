@@ -8,61 +8,44 @@ final class lt extends ev {
     static wk[] field_i;
 
     final static String a(int param0, long param1) {
-        StringBuilder discarded$1 = null;
-        int var3;
-        long var4;
-        StringBuilder var6;
-        long var7;
-        int var9;
-        int var10;
-        int var11;
-        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param1 > 0L) {
-          if (param1 < 6582952005840035281L) {
-            if (-1L == (param1 % 37L ^ -1L)) {
-              return null;
-            } else {
-              var3 = 0;
-              var4 = param1;
-              L0: while (true) {
-                if (-1L == (var4 ^ -1L)) {
-                  var6 = new StringBuilder(var3);
-                  L1: while (true) {
-                    if ((param1 ^ -1L) == -1L) {
-                      var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(param0)));
-                      return var6.toString();
-                    } else {
-                      L2: {
-                        var7 = param1;
-                        param1 = param1 / 37L;
-                        var9 = hq.field_b[(int)(var7 + -(37L * param1))];
-                        if (var9 == 95) {
-                          var10 = var6.length() + -1;
-                          var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                          var9 = 160;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      discarded$1 = var6.append((char) var9);
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var4 = var4 / 37L;
-                  var3++;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        int var3 = 0;
+        long var4 = 0L;
+        StringBuilder var6 = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
+        StringBuilder discarded$0 = null;
+        int var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (param1 <= 0L) {
           return null;
         }
+        if (param1 >= 6582952005840035281L) {
+          return null;
+        }
+        if (param1 % 37L != 0L) {
+          var3 = 0;
+          var4 = param1;
+          while (var4 != 0L) {
+            var4 = var4 / 37L;
+            var3++;
+          }
+          var6 = new StringBuilder(var3);
+          while (param1 != 0L) {
+            var7 = param1;
+            param1 = param1 / 37L;
+            var9 = hq.field_b[(int)(var7 - 37L * param1)];
+            if (var9 == 95) {
+              var10 = var6.length() - 1;
+              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+              var9 = 160;
+            }
+            discarded$0 = var6.append((char) var9);
+          }
+          var6.reverse();
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(param0)));
+          return var6.toString();
+        }
+        return null;
     }
 
     public lt() {
@@ -71,7 +54,7 @@ final class lt extends ev {
     public final void a(int param0, int param1, int param2) {
         super.a(param0, param1, param2);
         if (ir.field_d != null) {
-            ir.field_d.j(-128);
+          ir.field_d.j(-128);
         }
     }
 
@@ -80,9 +63,9 @@ final class lt extends ev {
         field_g = null;
         field_i = null;
         if (param0 >= -8) {
-            field_h = (wk[]) null;
-            field_h = null;
-            return;
+          field_h = (wk[]) null;
+          field_h = null;
+          return;
         }
         field_h = null;
     }

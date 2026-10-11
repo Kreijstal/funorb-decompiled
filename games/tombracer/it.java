@@ -11,7 +11,7 @@ final class it {
 
     final static vb a(int param0, int param1) {
         if (param0 != 255) {
-            return (vb) null;
+          return (vb) null;
         }
         return v.a(100, (byte) -76, 128, param1, 0, 255);
     }

@@ -12,7 +12,7 @@ final class oc {
     }
 
     final static void a(byte param0) {
-        int var1 = 77 % ((param0 - -10) / 53);
+        int var1 = 77 % ((param0 + 10) / 53);
         bi.h(4, 4, 0, 0, bi.field_f, bi.field_a);
     }
 

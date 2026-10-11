@@ -13,18 +13,18 @@ abstract class ao {
 
     final static int b(int param0, int param1) {
         if (param0 != 2048) {
-            ao.b(1, 62);
+          ao.b(1, 62);
         }
         param1 = param1 & 8191;
-        if ((param1 ^ -1) > -4097) {
-            return -2049 >= (param1 ^ -1) ? -bm.field_j[param1 + -2048] : bm.field_j[-param1 + 2048];
+        if (param1 < 4096) {
+          return param1 >= 2048 ? -bm.field_j[param1 - 2048] : bm.field_j[-param1 + 2048];
         }
-        return (param1 ^ -1) <= -6145 ? bm.field_j[param1 + -6144] : -bm.field_j[6144 - param1];
+        return param1 >= 6144 ? bm.field_j[param1 - 6144] : -bm.field_j[6144 - param1];
     }
 
     final java.net.Socket a(boolean param0) throws IOException {
         if (!param0) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_c, this.field_e);
     }
@@ -36,78 +36,38 @@ abstract class ao {
         li stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -75) {
-                break L1;
-              } else {
-                var6 = (la) null;
-                ao.a(77, 31, 80, (la) null, (la) null);
-                break L1;
-              }
-            }
-            if (nd.a(param1, param3, -1, param2)) {
-              stackIn_6_0 = ee.a(param4.a(param1, 100, param2), 7028);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 >= -75) {
+            var6 = (la) null;
+            ao.a(77, 31, 80, (la) null, (la) null);
           }
+          if (nd.a(param1, param3, -1, param2)) {
+            stackIn_6_0 = ee.a(param4.a(param1, 100, param2), 7028);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (li) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("ao.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("ao.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param4 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param4 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (li) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw rb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -116,54 +76,32 @@ abstract class ao {
     final static void a(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = Torquing.field_u;
         try {
-          L0: {
-            jg.a(param1, param0 ^ -8141, true, mc.field_l, 0, ga.field_c, vg.field_o);
-            if (param0 == 8191) {
-              var2_int = 0;
-              L1: while (true) {
-                if (var2_int >= vg.field_o) {
-                  L2: {
-                    jg.a(param1 + param1, param0 ^ -8153, false, qd.field_g, param1, lj.field_d, param1 + vg.field_o);
-                    if (vg.field_o <= param1) {
-                      break L2;
-                    } else {
-                      vg.field_o = param1;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  lp.field_g[param1 + var2_int] = var2_int;
-                  var2_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          jg.a(param1, param0 ^ -8141, true, mc.field_l, 0, ga.field_c, vg.field_o);
+          if (param0 != 8191) {
+            return;
           }
+          for (var2_int = 0; var2_int < vg.field_o; var2_int++) {
+            lp.field_g[param1 + var2_int] = var2_int;
+          }
+          jg.a(param1 + param1, param0 ^ -8153, false, qd.field_g, param1, lj.field_d, param1 + vg.field_o);
+          if (vg.field_o > param1) {
+            vg.field_o = param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw rb.a((Throwable) ((Object) var2), "ao.F(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     public static void b(int param0) {
         if (param0 != 23116) {
-            return;
+          return;
         }
         field_a = null;
     }

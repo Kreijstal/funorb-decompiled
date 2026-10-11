@@ -26,7 +26,7 @@ final class rl {
         field_h = null;
         field_g = null;
         if (param0 <= 41) {
-            field_h = (md) null;
+          field_h = (md) null;
         }
     }
 

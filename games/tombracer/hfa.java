@@ -7,7 +7,7 @@ final class hfa extends qaa implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 >= -45) {
-            this.field_b = -99;
+          this.field_b = -99;
         }
     }
 

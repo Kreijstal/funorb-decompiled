@@ -11,7 +11,7 @@ final class nd {
 
     final static df[] a(int param0) {
         if (param0 != -1) {
-            nd.b(91);
+          nd.b(91);
         }
         return new df[]{mj.field_l, vh.field_s, jc.field_a};
     }
@@ -23,7 +23,7 @@ final class nd {
         field_f = null;
         field_d = null;
         if (param0 != -16996) {
-            nd.b(-46);
+          nd.b(-46);
         }
         field_b = null;
     }
@@ -32,83 +32,52 @@ final class nd {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if ((vh.field_n ^ -1) > -11) {
-                L2: {
-                  var3_int = 0;
-                  if (hh.field_c) {
-                    var3_int = 1;
-                    hh.field_c = false;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                hc.a((byte) -96, var3_int != 0, tj.a(-112), ca.a(false), sk.field_H);
-                break L1;
-              } else {
-                if (rf.l(-28)) {
-                  if (-1 == (hi.field_k ^ -1)) {
-                    t.a(param2, true, false);
-                    kg.a(0, (byte) -83, 0, param1);
-                    break L1;
-                  } else {
-                    em.a(0, param1);
-                    break L1;
-                  }
-                } else {
-                  ul.d();
-                  cd.a(320, false, 240);
-                  kg.a(0, (byte) -83, 0, param1);
-                  break L1;
-                }
-              }
+          if (vh.field_n < 10) {
+            var3_int = 0;
+            if (hh.field_c) {
+              var3_int = 1;
+              hh.field_c = false;
             }
-            L3: {
-              if (param0 <= -43) {
-                break L3;
+            hc.a((byte) -96, var3_int != 0, tj.a(-112), ca.a(false), sk.field_H);
+          } else {
+            if (rf.l(-28)) {
+              if (hi.field_k == 0) {
+                t.a(param2, true, false);
+                kg.a(0, (byte) -83, 0, param1);
               } else {
-                nd.b(-113);
-                break L3;
+                em.a(0, param1);
               }
+            } else {
+              ul.d();
+              cd.a(320, false, 240);
+              kg.a(0, (byte) -83, 0, param1);
             }
-            break L0;
           }
+          if (param0 > -43) {
+            nd.b(-113);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
-
-            stackIn_16_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = var3;
+          stackIn_16_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
     static {
-        int var0 = 0;
         int var1 = 0;
         long var2 = 0L;
         long var4 = 0L;
@@ -119,34 +88,36 @@ final class nd {
         int var14 = 0;
         field_c = new long[8][256];
         field_d = new long[11];
-        for (var0 = 0; var0 < 256; var0++) {
+        int var0 = 0;
+        while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-            var2 = -1 != (1 & var0 ^ -1) ? (long)(255 & var1) : (long)(var1 >>> 2008428360);
-            var4 = var2 << 85931393;
-            if ((var4 ^ -1L) <= -257L) {
+            var2 = (1 & var0) != 0 ? (long)(255 & var1) : (long)(var1 >>> 8);
+            var4 = var2 << 1;
+            if (var4 >= 256L) {
                 var4 = var4 ^ 285L;
             }
-            var6 = var4 << 1942916993;
+            var6 = var4 << 1;
             if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
             }
             var8 = var6 ^ var2;
-            var10 = var6 << -126708991;
-            if (!(-257L < (var10 ^ -1L))) {
+            var10 = var6 << 1;
+            if (!(var10 < 256L)) {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_c[0][var0] = ml.a(ml.a(var4 << -1896259320, ml.a(var8 << -880550832, ml.a(ml.a(var2 << -1389029728, ml.a(var6 << 720891432, ml.a(var2 << -1216589520, var2 << 781183992))), var10 << -1633634152))), var12);
+            field_c[0][var0] = ml.a(ml.a(var4 << 8, ml.a(var8 << 16, ml.a(ml.a(var2 << 32, ml.a(var6 << 40, ml.a(var2 << 48, var2 << 56))), var10 << 24))), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_c[var14][var0] = ml.a(field_c[var14 - 1][var0] >>> 1519913672, field_c[-1 + var14][var0] << 2121176632);
+                field_c[var14][var0] = ml.a(field_c[var14 - 1][var0] >>> 8, field_c[-1 + var14][var0] << 56);
             }
+            var0++;
         }
         field_d[0] = 0L;
         int var15 = 1;
         var0 = var15;
-        while ((var15 ^ -1) >= -11) {
-            var1 = (var15 + -1) * 8;
-            field_d[var15] = j.a(j.a(bm.a(field_c[6][6 + var1], 65280L), j.a(bm.a(field_c[5][var1 + 5], 16711680L), j.a(bm.a(field_c[4][4 + var1], 4278190080L), j.a(bm.a(1095216660480L, field_c[3][var1 - -3]), j.a(bm.a(field_c[2][var1 + 2], 280375465082880L), j.a(bm.a(field_c[0][var1], -72057594037927936L), bm.a(field_c[1][1 + var1], 71776119061217280L))))))), bm.a(field_c[7][var1 + 7], 255L));
+        while (var15 <= 10) {
+            var1 = (var15 - 1) * 8;
+            field_d[var15] = j.a(j.a(bm.a(field_c[6][6 + var1], 65280L), j.a(bm.a(field_c[5][var1 + 5], 16711680L), j.a(bm.a(field_c[4][4 + var1], 4278190080L), j.a(bm.a(1095216660480L, field_c[3][var1 + 3]), j.a(bm.a(field_c[2][var1 + 2], 280375465082880L), j.a(bm.a(field_c[0][var1], -72057594037927936L), bm.a(field_c[1][1 + var1], 71776119061217280L))))))), bm.a(field_c[7][var1 + 7], 255L));
             var15++;
         }
         field_f = "TURBO BLAST";

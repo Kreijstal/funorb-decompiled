@@ -12,47 +12,27 @@ final class eaa extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                var4 = (byte[]) null;
-                eaa.a((byte) -22, false, (byte[]) null, -98, -44, -111);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(81, 89));
-            break L0;
+          if (param1 > -119) {
+            var4 = (byte[]) null;
+            eaa.a((byte) -22, false, (byte[]) null, -98, -44, -111);
           }
+          stackIn_3_0 = new nc(frb.a(81, 89));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("eaa.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("eaa.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     eaa(String param0, Class[] param1, String param2) {
@@ -65,22 +45,22 @@ final class eaa extends rqa {
         faa var6 = dpa.field_p;
         var6.h(24335, param5);
         if (param0 < 86) {
-            return;
+          return;
         }
         try {
-            var6.field_e = var6.field_e + 1;
-            var7 = var6.field_e;
-            var6.c(0, 4);
-            var6.c(0, param4);
-            var8 = param3;
-            if (!(!param1)) {
-                var8 += 128;
-            }
-            var6.c(0, var8);
-            var6.a(0, param2, -1, param2.length);
-            var6.e(var6.field_e - var7, -129);
+          var6.field_e = var6.field_e + 1;
+          var7 = var6.field_e;
+          var6.c(0, 4);
+          var6.c(0, param4);
+          var8 = param3;
+          if (param1) {
+            var8 += 128;
+          }
+          var6.c(0, var8);
+          var6.a(0, param2, -1, param2.length);
+          var6.e(var6.field_e - var7, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "eaa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "eaa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

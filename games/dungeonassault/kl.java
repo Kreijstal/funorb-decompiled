@@ -16,36 +16,27 @@ class kl {
     ph field_l;
 
     private final void c(boolean param0) {
-        int var3;
-        rj var4;
-        var3 = DungeonAssault.field_K;
-        if (!param0) {
-          qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
-          this.field_g.h(this.field_k, this.field_j);
-          var4 = (rj) ((Object) this.field_f.e(-24172));
-          L0: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              var4.d(0);
-              var4 = (rj) ((Object) this.field_f.a(4));
-              continue L0;
-            }
-          }
-        } else {
+        rj var4 = null;
+        int var3 = DungeonAssault.field_K;
+        rj var4Lifetime1;
+        if (param0) {
           this.field_a = 126;
+        } else {
           qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
           this.field_g.h(this.field_k, this.field_j);
-          var4 = (rj) ((Object) this.field_f.e(-24172));
-          L1: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              var4.d(0);
-              var4 = (rj) ((Object) this.field_f.a(4));
-              continue L1;
-            }
+          var4 = (rj) (this.field_f.e(-24172));
+          while (var4 != null) {
+            var4.d(0);
+            var4 = (rj) (this.field_f.a(4));
           }
+          return;
+        }
+        qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
+        this.field_g.h(this.field_k, this.field_j);
+        var4Lifetime1 = (rj) (this.field_f.e(-24172));
+        while (var4Lifetime1 != null) {
+          var4Lifetime1.d(0);
+          var4Lifetime1 = (rj) (this.field_f.a(4));
         }
     }
 
@@ -61,61 +52,47 @@ class kl {
         this.field_k = param2;
         this.b((byte) 37);
         nm.field_ib = new int[this.field_i * this.field_a];
-        if (param3 != -23241) {
-          this.a(true);
-          this.field_g = new ph(new cn(this.field_a, this.field_i), new cn(this.field_a, this.field_i));
-          return;
-        } else {
+        if (param3 == -23241) {
           this.field_g = new ph(new cn(this.field_a, this.field_i), new cn(this.field_a, this.field_i));
           return;
         }
+        this.a(true);
+        this.field_g = new ph(new cn(this.field_a, this.field_i), new cn(this.field_a, this.field_i));
     }
 
     void b(byte param0) {
-        int[] var2;
-        int var3_int;
-        cn var3;
-        int[] var4;
-        cn var5;
-        int var6;
-        int[] var7;
-        var6 = DungeonAssault.field_K;
-        var7 = new int[64];
-        var2 = var7;
-        var3_int = 0;
-        L0: while (true) {
-          if (64 <= var3_int) {
-            var3 = te.a(this.field_a, this.field_i, var7, 16, 8, 0.125);
-            if (param0 != 37) {
-              return;
-            } else {
-              var4 = te.b(this.field_a, this.field_i, 0.125);
-              var5 = new cn(0, 0);
-              var5.field_v = this.field_i;
-              var5.field_B = var4;
-              var5.field_y = this.field_a;
-              this.field_l = new ph(var3, var5);
-              jh.a(this.field_l);
-              ke.a(-101, 0, this.field_i, 0);
-              ke.a(21, this.field_a + -8, this.field_i, 0);
-              un.a(8, (byte) -127, this.field_a - 16, 0, true);
-              un.a(8, (byte) 50, this.field_a - 16, this.field_i - 8, true);
-              qe.a(8, 8, -16 + this.field_a, this.field_i + -16, 224, 32, 7, 128);
-              jh.b();
-              return;
-            }
-          } else {
-            var7[var3_int] = mp.a(-2147483648, 65793 * (24 - -var3_int));
-            var3_int++;
-            continue L0;
-          }
+        int var3_int = 0;
+        int[] var4 = null;
+        cn var5 = null;
+        int var6 = DungeonAssault.field_K;
+        int[] var7 = new int[64];
+        int[] var2 = var7;
+        for (var3_int = 0; 64 > var3_int; var3_int++) {
+          var7[var3_int] = mp.a(-2147483648, 65793 * (24 + var3_int));
+        }
+        cn var3 = te.a(this.field_a, this.field_i, var7, 16, 8, 0.125);
+        if (param0 == 37) {
+          var4 = te.b(this.field_a, this.field_i, 0.125);
+          var5 = new cn(0, 0);
+          var5.field_v = this.field_i;
+          var5.field_B = var4;
+          var5.field_y = this.field_a;
+          this.field_l = new ph(var3, var5);
+          jh.a(this.field_l);
+          ke.a(-101, 0, this.field_i, 0);
+          ke.a(21, this.field_a - 8, this.field_i, 0);
+          un.a(8, (byte) -127, this.field_a - 16, 0, true);
+          un.a(8, (byte) 50, this.field_a - 16, this.field_i - 8, true);
+          qe.a(8, 8, -16 + this.field_a, this.field_i - 16, 224, 32, 7, 128);
+          jh.b();
+          return;
         }
     }
 
     void a(boolean param0) {
         eg.a(this.field_f, true);
         if (param0) {
-            field_c = (String[]) null;
+          field_c = (String[]) null;
         }
     }
 
@@ -125,38 +102,29 @@ class kl {
         field_e = null;
         field_h = null;
         if (param0 <= 42) {
-            CharSequence var2 = (CharSequence) null;
-            kl.a((CharSequence) null, (byte) 88);
+          CharSequence var2 = (CharSequence) null;
+          kl.a((CharSequence) null, (byte) 88);
         }
     }
 
     void c(int param0) {
-        int var3;
-        rj var4;
-        var3 = DungeonAssault.field_K;
-        if (param0 <= -115) {
-          var4 = (rj) ((Object) this.field_f.e(-24172));
-          L0: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              var4.b((byte) 30);
-              var4 = (rj) ((Object) this.field_f.a(4));
-              continue L0;
-            }
-          }
-        } else {
+        rj var4 = null;
+        int var3 = DungeonAssault.field_K;
+        rj var4Lifetime1;
+        if (param0 > -115) {
           this.field_i = -43;
-          var4 = (rj) ((Object) this.field_f.e(-24172));
-          L1: while (true) {
-            if (var4 == null) {
-              return;
-            } else {
-              var4.b((byte) 30);
-              var4 = (rj) ((Object) this.field_f.a(4));
-              continue L1;
-            }
+        } else {
+          var4 = (rj) (this.field_f.e(-24172));
+          while (var4 != null) {
+            var4.b((byte) 30);
+            var4 = (rj) (this.field_f.a(4));
           }
+          return;
+        }
+        var4Lifetime1 = (rj) (this.field_f.e(-24172));
+        while (var4Lifetime1 != null) {
+          var4Lifetime1.b((byte) 30);
+          var4Lifetime1 = (rj) (this.field_f.a(4));
         }
     }
 
@@ -170,45 +138,36 @@ class kl {
     }
 
     final void a(int param0, int param1, int param2) {
-        this.a(-param2 + 480 >> 1577417377, param0, 640 - param0 >> -1060136639, -23241, param2);
+        this.a(-param2 + 480 >> 1, param0, 640 - param0 >> 1, -23241, param2);
         if (param1 != 0) {
-            this.b(-9);
+          this.b(-9);
         }
     }
 
     final void a(byte param0) {
-        rj var2;
-        int var3;
-        var3 = DungeonAssault.field_K;
+        rj var2 = null;
+        int var3 = DungeonAssault.field_K;
+        rj var2Lifetime1;
         jh.a(this.field_g);
-        if (param0 <= -12) {
-          this.field_l.b(0, 0);
-          var2 = (rj) ((Object) this.field_f.e(-24172));
-          L0: while (true) {
-            if (var2 == null) {
-              jh.b();
-              return;
-            } else {
-              var2.a(-this.field_k, -this.field_j, (byte) -96);
-              var2 = (rj) ((Object) this.field_f.a(4));
-              continue L0;
-            }
-          }
-        } else {
+        if (param0 > -12) {
           this.field_g = (ph) null;
+        } else {
           this.field_l.b(0, 0);
-          var2 = (rj) ((Object) this.field_f.e(-24172));
-          L1: while (true) {
-            if (var2 == null) {
-              jh.b();
-              return;
-            } else {
-              var2.a(-this.field_k, -this.field_j, (byte) -96);
-              var2 = (rj) ((Object) this.field_f.a(4));
-              continue L1;
-            }
+          var2 = (rj) (this.field_f.e(-24172));
+          while (var2 != null) {
+            var2.a(-this.field_k, -this.field_j, (byte) -96);
+            var2 = (rj) (this.field_f.a(4));
           }
+          jh.b();
+          return;
         }
+        this.field_l.b(0, 0);
+        var2Lifetime1 = (rj) (this.field_f.e(-24172));
+        while (var2Lifetime1 != null) {
+          var2Lifetime1.a(-this.field_k, -this.field_j, (byte) -96);
+          var2Lifetime1 = (rj) (this.field_f.a(4));
+        }
+        jh.b();
     }
 
     void b(int param0) {
@@ -218,7 +177,7 @@ class kl {
 
     void b(boolean param0) {
         if (param0) {
-            this.field_g = (ph) null;
+          this.field_g = (ph) null;
         }
     }
 
@@ -229,48 +188,28 @@ class kl {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = -121 % ((param1 - 36) / 62);
-              var3 = uj.a(ci.a(param0, 2), -1);
-              if (var3 != null) {
-                break L1;
-              } else {
-                var3 = "";
-                break L1;
-              }
-            }
-            stackIn_3_0 = (String) (var3);
-            break L0;
+          var2_int = -121 % ((param1 - 36) / 62);
+          var3 = uj.a(ci.a(param0, 2), -1);
+          if (var3 == null) {
+            var3 = "";
           }
+          stackIn_3_0 = var3;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("kl.BA(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("kl.BA(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public kl() {

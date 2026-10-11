@@ -8,12 +8,12 @@ abstract class rj {
     abstract int a(int param0);
 
     final static String a(ci param0, byte param1) {
+        int var6 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
@@ -22,91 +22,51 @@ abstract class rj {
         String stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            if (param0.a((byte) -123)) {
-              var9 = param0.a(false);
-              var2 = var9;
-              var3 = param0.b(79, "index");
-              var4 = 0;
-              var5 = var9;
-              if (param1 <= -2) {
-                var6 = 0;
-                L1: while (true) {
-                  if (var6 >= var5.length) {
-                    stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    L2: {
-                      var7 = var5[var6];
-                      if (var3 != var7) {
-                        var4 = var4 + param0.a(true, var7);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    var6++;
-                    continue L1;
-                  }
-                }
-              } else {
-                stackIn_6_0 = (String) null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = bd.field_r;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!param0.a((byte) -123)) {
+            stackIn_3_0 = bd.field_r;
+            return stackIn_3_0;
+          }
+          var9 = param0.a(false);
+          var2 = var9;
+          var3 = param0.b(79, "index");
+          var4 = 0;
+          var5 = var9;
+          if (param1 > -2) {
+            stackIn_6_0 = (String) null;
+            return stackIn_6_0;
+          }
+          for (var6 = 0; var6 < var5.length; var6++) {
+            var7 = var5[var6];
+            if (var3 != var7) {
+              var4 = var4 + param0.a(true, var7);
             }
           }
+          stackIn_14_0 = ne.field_c + " - " + var4 / (-1 + var9.length) + "%";
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2_ref);
-
-            stackIn_17_1 = new StringBuilder().append("rj.C(");
-
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L3;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L3;
-            }
-          }
-          throw ch.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_17_0 = var2_ref;
+          stackIn_17_1 = new StringBuilder().append("rj.C(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
           } else {
-            return stackIn_14_0;
+            stackIn_18_2 = "{...}";
           }
+          throw ch.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static h b(boolean param0) {
         if (null == eh.field_e) {
-            eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
+          eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
         }
         if (!param0) {
-            rj.b(false);
+          rj.b(false);
         }
         return eh.field_e;
     }
@@ -114,7 +74,7 @@ abstract class rj {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            field_b = false;
+          field_b = false;
         }
     }
 

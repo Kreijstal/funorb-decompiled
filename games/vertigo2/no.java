@@ -11,7 +11,7 @@ final class no {
 
     public static void a(byte param0) {
         if (param0 > -69) {
-            return;
+          return;
         }
         field_a = null;
     }

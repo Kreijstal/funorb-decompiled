@@ -14,105 +14,66 @@ final class op {
         fn stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param1) {
-                break L1;
-              } else {
-                var7 = (String) null;
-                op.a((String) null, true, (String) null, false);
-                break L1;
-              }
-            }
-            L2: {
-              var4_long = 0L;
-              var6 = null;
-              if (0 != (param2.indexOf('@') ^ -1)) {
-                var6 = param2;
-                break L2;
-              } else {
-                var8 = (CharSequence) ((Object) param2);
-                var4_long = AceOfSkies.a(var8, -47);
-                break L2;
-              }
-            }
-            stackIn_6_0 = wb.a(param3, (String) (var6), param0, var4_long, true);
-            break L0;
+          if (param1) {
+            var7 = (String) null;
+            op.a((String) null, true, (String) null, false);
           }
+          var4_long = 0L;
+          var6 = null;
+          if (param2.indexOf('@') != -1) {
+            var6 = param2;
+          } else {
+            var8 = (CharSequence) ((Object) param2);
+            var4_long = AceOfSkies.a(var8, -47);
+          }
+          stackIn_6_0 = wb.a(param3, (String) (var6), param0, var4_long, true);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("op.B(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("op.B(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void a(int param0) {
-        String var2;
-        if (param0 != 6337) {
-          var2 = (String) null;
-          op.a((String) null, true, (String) null, false);
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 6337) {
           field_b = null;
           return;
         }
+        String var2 = (String) null;
+        op.a((String) null, true, (String) null, false);
+        field_b = null;
     }
 
     final static void a(int param0, gk param1) {
         t var2 = null;
         t.a(param1.a("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {
-            return;
+          return;
         }
         try {
-            var2 = t.a(param1, "jagex logo2.packvorbis", "");
-            var2.a();
+          var2 = t.a(param1, "jagex logo2.packvorbis", "");
+          var2.a();
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -15,41 +15,32 @@ final class an extends nk {
     public static void b(byte param0) {
         field_t = null;
         field_o = null;
-        if (param0 <= 107) {
-          an.b((byte) 58);
-          field_u = null;
-          field_s = null;
-          field_q = null;
-          return;
-        } else {
+        if (param0 > 107) {
           field_u = null;
           field_s = null;
           field_q = null;
           return;
         }
+        an.b((byte) 58);
+        field_u = null;
+        field_s = null;
+        field_q = null;
     }
 
     an(int param0, int param1, String param2, int param3, String param4) {
         super(param0, param1, param2, param3);
         try {
-            this.field_p = param4;
+          this.field_p = param4;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "an.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "an.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
-        if (param2 != 1) {
-          return;
-        } else {
-          L0: {
-            wn.a(param2 ^ -2, param1, this.field_a, this.field_i, this.field_d, this.field_c);
-            if (this.field_p != null) {
-              wn.a(-1, 16777215, 377, this.field_p, -20 + this.field_d, this.field_c);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param2 == 1) {
+          wn.a(param2 ^ -2, param1, this.field_a, this.field_i, this.field_d, this.field_c);
+          if (this.field_p != null) {
+            wn.a(-1, 16777215, 377, this.field_p, -20 + this.field_d, this.field_c);
           }
           return;
         }

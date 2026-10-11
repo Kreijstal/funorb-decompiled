@@ -11,7 +11,7 @@ abstract class uda {
 
     void a(boolean param0) {
         if (!param0) {
-            this.d(-18);
+          this.d(-18);
         }
     }
 
@@ -21,44 +21,26 @@ abstract class uda {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
-          L0: {
-            if (!po.field_o) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              nma.field_b = new da[5];
-              var1_int = 0;
-              L1: while (true) {
-                if (nma.field_b.length <= var1_int) {
-                  nkb.a(false, "Finished building fonts");
-                  if (param0 == -2283) {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    uda.b((byte) 81);
-                    return;
-                  }
-                } else {
-                  nma.field_b[var1_int] = og.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
-                  var1_int++;
-                  continue L1;
-                }
-              }
-            }
+          if (!po.field_o) {
+            return;
           }
+          nma.field_b = new da[5];
+          for (var1_int = 0; nma.field_b.length > var1_int; var1_int++) {
+            nma.field_b[var1_int] = og.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
+          }
+          nkb.a(false, "Finished building fonts");
+          if (param0 == -2283) {
+            return;
+          }
+          uda.b((byte) 81);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1), "uda.L(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -66,7 +48,7 @@ abstract class uda {
 
     void c(int param0) {
         if (param0 != 5) {
-            this.a(-37);
+          this.a(-37);
         }
     }
 
@@ -75,22 +57,22 @@ abstract class uda {
     public static void b(byte param0) {
         field_a = null;
         if (param0 > -6) {
-            uda.b(-56);
-            field_c = null;
-            return;
+          uda.b(-56);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     void b(boolean param0) {
         if (!param0) {
-            field_b = -18;
+          field_b = -18;
         }
     }
 
     void c(byte param0) {
         if (param0 != 15) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 
@@ -100,15 +82,15 @@ abstract class uda {
 
     uda(pf param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     void d(int param0) {
         if (param0 != 8) {
-            this.a(-80, -4, -126);
+          this.a(-80, -4, -126);
         }
     }
 

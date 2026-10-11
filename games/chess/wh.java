@@ -16,85 +16,52 @@ final class wh {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var2_intLifetime1;
         var3 = Chess.field_G;
         try {
-          L0: {
-            L1: {
-              var2_int = uh.field_l;
-              if ((param1.field_k ^ -1) != -3) {
-                if (4 != param1.field_k) {
-                  if ((gb.field_t ^ -1L) == (param1.field_m ^ -1L)) {
-                    var2_int = vm.field_i[param1.field_k];
-                    break L1;
-                  } else {
-                    var2_int = kg.field_P[param1.field_k];
-                    break L1;
-                  }
-                } else {
-                  var2_int = kg.field_P[param1.field_k];
-                  break L1;
-                }
+          var2_int = uh.field_l;
+          if (param1.field_k != 2) {
+            if (4 != param1.field_k) {
+              if (~gb.field_t == ~param1.field_m) {
+                var2_intLifetime1 = vm.field_i[param1.field_k];
               } else {
-                if (!param1.field_d) {
-                  L2: {
-                    if (-1 != (param1.field_e ^ -1)) {
-                      break L2;
-                    } else {
-                      if (param1.field_q == 0) {
-                        var2_int = vm.field_i[param1.field_k];
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  var2_int = kg.field_P[param1.field_k];
-                  break L1;
-                } else {
-                  var2_int = uh.field_l;
-                  break L1;
-                }
+                var2_intLifetime1 = kg.field_P[param1.field_k];
               }
+            } else {
+              var2_intLifetime1 = kg.field_P[param1.field_k];
             }
-            L3: {
-              if (param0 == -1) {
-                break L3;
+          } else {
+            if (!param1.field_d) {
+              if (param1.field_e == 0 &&
+                param1.field_q == 0) {
+                var2_intLifetime1 = vm.field_i[param1.field_k];
               } else {
-                field_c = (rk) null;
-                break L3;
+                var2_intLifetime1 = kg.field_P[param1.field_k];
               }
+            } else {
+              var2_intLifetime1 = uh.field_l;
             }
-            stackIn_17_0 = var2_int;
-            break L0;
           }
+          if (param0 != -1) {
+            field_c = (rk) null;
+          }
+          stackIn_17_0 = var2_intLifetime1;
+          return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var2);
-
-            stackIn_20_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L4;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_20_0 = var2;
+          stackIn_20_1 = new StringBuilder().append("wh.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
-        return stackIn_17_0;
     }
 
     final static km[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -104,9 +71,9 @@ final class wh {
         int[] var16 = var18;
         int[] var6 = var16;
         int var7 = wb.field_h;
-        int var8 = 7 % ((param0 - -10) / 58);
+        int var8 = 7 % ((param0 + 10) / 58);
         int var9 = wb.field_c;
-        km var10 = new km(param2, param1 + -(2 * param2));
+        km var10 = new km(param2, param1 - 2 * param2);
         var10.e();
         wb.c(0, 0, param2, -(2 * param2) + param1, param3, param4);
         km var11 = new km(param2, param2);
@@ -122,11 +89,11 @@ final class wh {
         var14.e();
         wb.f(0, 0, 16, param2, param4);
         Object var15 = null;
-        if ((param5 ^ -1) < -1) {
-            var17 = new km(16, 16);
-            var15 = var17;
-            var17.e();
-            wb.f(0, 0, 16, 16, param5);
+        if (param5 > 0) {
+          var17 = new km(16, 16);
+          var15 = var17;
+          var17.e();
+          wb.f(0, 0, 16, 16, param5);
         }
         wb.a(var19, var7, var9);
         return new km[]{var11, var12, var11, var10, (km) (var15), var10, var13, var14, var13};
@@ -134,15 +101,7 @@ final class wh {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 != -46) {
-          field_b = (sa) null;
-          field_a = null;
-          field_b = null;
-          field_g = (String[][]) null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -46) {
           field_a = null;
           field_b = null;
           field_g = (String[][]) null;
@@ -150,6 +109,12 @@ final class wh {
           field_c = null;
           return;
         }
+        field_b = (sa) null;
+        field_a = null;
+        field_b = null;
+        field_g = (String[][]) null;
+        field_d = null;
+        field_c = null;
     }
 
     static {

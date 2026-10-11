@@ -10,20 +10,18 @@ final class e {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 200) {
-          e.a(103);
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 200) {
           field_d = null;
           field_c = null;
           field_e = null;
           field_b = null;
           return;
         }
+        e.a(103);
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        field_b = null;
     }
 
     static {

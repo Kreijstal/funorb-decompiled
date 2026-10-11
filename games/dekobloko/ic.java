@@ -12,7 +12,7 @@ final class ic {
         field_b = null;
         field_d = null;
         if (param0 != -18551) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

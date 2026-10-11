@@ -13,33 +13,33 @@ final class uj extends bca {
         super(param0);
         int var2_int = 0;
         try {
-            this.field_k = param0.e((byte) 59);
-            this.field_o = new eaa();
-            var2_int = param0.b(16711935);
-            while (true) {
-                var2_int--;
-                if (-1 < (var2_int ^ -1)) {
-                    break;
-                }
-                this.field_o.a(dca.a((byte) 102, param0), true);
+          this.field_k = param0.e((byte) 59);
+          this.field_o = new eaa();
+          var2_int = param0.b(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              break;
             }
-            this.field_q = param0.b(16711935);
-            this.field_t = param0.b(16711935);
+            this.field_o.a(dca.a((byte) 102, param0), true);
+          }
+          this.field_q = param0.b(16711935);
+          this.field_t = param0.b(16711935);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "uj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, lu param1) {
         try {
-            super.a((byte) -108, param1);
-            param1.d(this.field_q, 0);
-            if (param0 > -12) {
-                field_s = (char[]) null;
-            }
-            param1.d(this.field_t, 0);
+          super.a((byte) -108, param1);
+          param1.d(this.field_q, 0);
+          if (param0 > -12) {
+            field_s = (char[]) null;
+          }
+          param1.d(this.field_t, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "uj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "uj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class uj extends bca {
         field_u = null;
         field_r = null;
         if (param0 != 20) {
-            uj.d((byte) 88);
+          uj.d((byte) 88);
         }
     }
 
@@ -59,49 +59,26 @@ final class uj extends bca {
         jba stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 5) {
-              stackIn_4_0 = new jba(param1, (uj) (this));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (at) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 5) {
+            stackIn_4_0 = new jba(param1, this);
+            return (at) ((Object) stackIn_4_0);
           }
+          stackIn_2_0 = (at) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("uj.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("uj.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return (at) ((Object) stackIn_4_0);
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -118,11 +95,11 @@ final class uj extends bca {
 
     final void a(op param0, int param1) {
         try {
-            param0.a(0, this.field_q, this.field_t, false, this.d(1), 28);
-            int var3_int = -67 / ((param1 - 12) / 35);
-            this.a(param0, (byte) -2);
+          param0.a(0, this.field_q, this.field_t, false, this.d(1), 28);
+          int var3_int = -67 / ((param1 - 12) / 35);
+          this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "uj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "uj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

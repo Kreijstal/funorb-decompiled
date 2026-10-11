@@ -10,69 +10,47 @@ final class lva extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_p = -18;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(102, 96));
-            break L0;
+          if (param1 > -119) {
+            field_p = -18;
           }
+          stackIn_3_0 = new nc(frb.a(102, 96));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("lva.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("lva.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void b(boolean param0) {
-        if (param0) {
-          field_p = -73;
-          al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
-          return;
-        } else {
+        if (!param0) {
           al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
           return;
         }
+        field_p = -73;
+        al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + vda.field_p + " <b>" + fja.field_r + "</b> " + inb.field_p + "<br>" + "<br>" + msa.field_r;
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = param1 + -1 & param0 >> -1128139841;
-        int var4 = 125 % ((param2 - -6) / 41);
-        return var3 + (param0 - -(param0 >>> 617169759)) % param1;
+        int var3 = param1 - 1 & param0 >> 31;
+        int var4 = 125 % ((param2 + 6) / 41);
+        return var3 + (param0 + (param0 >>> 31)) % param1;
     }
 
     public static void a(int param0) {
         field_o = null;
         if (param0 != 617169759) {
-            lva.a(-84);
+          lva.a(-84);
         }
     }
 
@@ -84,7 +62,7 @@ final class lva extends rqa {
 
     final static void e(byte param0) {
         if (param0 != 117) {
-            return;
+          return;
         }
         qn.field_h.g((byte) -17);
         qn.field_h.a(false, new hnb(qn.field_h));

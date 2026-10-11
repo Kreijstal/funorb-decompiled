@@ -8,51 +8,30 @@ final class si {
     static int field_c;
 
     final void a(int param0, char param1) {
-        jaggl.OpenGL.glCallList(this.field_a - -param1);
+        jaggl.OpenGL.glCallList(this.field_a + param1);
         if (param0 != -23085) {
-            this.a((byte) -107, -7);
+          this.a((byte) -107, -7);
         }
     }
 
     final void b(boolean param0) {
         jaggl.OpenGL.glEndList();
         if (param0) {
-            this.field_a = -37;
+          this.field_a = -37;
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param1 != 2) {
-          L0: {
-            field_c = 120;
-            if (-1 == (param2 & 2048 ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-1 == (param2 & 2048 ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param1 == 2) {
+          return (param2 & 2048) != 0 ? true : false;
         }
+        field_c = 120;
+        return (param2 & 2048) != 0 ? true : false;
     }
 
     final static void a(boolean param0, int param1) {
         if (param1 != -32106) {
-            return;
+          return;
         }
         vn.field_f.a(0, 0, 0);
     }
@@ -60,7 +39,7 @@ final class si {
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-            si.a(false, 22);
+          si.a(false, 22);
         }
     }
 
@@ -77,9 +56,9 @@ final class si {
 
     si(wl param0, int param1) {
         try {
-            this.field_a = jaggl.OpenGL.glGenLists(param1);
+          this.field_a = jaggl.OpenGL.glGenLists(param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "si.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -16,7 +16,7 @@ class go extends rg {
 
     ea b(int param0) {
         if (param0 != -27096) {
-            return (ea) null;
+          return (ea) null;
         }
         return te.field_Nb;
     }
@@ -50,239 +50,158 @@ class go extends rg {
         Object var42;
         Object var43;
         CharSequence var44;
-        L0: {
-          var42 = null;
-          var43 = null;
-          var12 = Pixelate.field_H ? 1 : 0;
-          var3 = 1;
-          if (qo.field_z) {
-            break L0;
-          } else {
-            if (ko.field_eb != null) {
-              break L0;
-            } else {
-              var3 = 0;
-              break L0;
-            }
-          }
+        int var6Lifetime1;
+        String var8Lifetime1;
+        String var8Lifetime2;
+        String var8Lifetime1Lifetime1;
+        String var8Lifetime1Lifetime2;
+        String var8Lifetime1Lifetime3;
+        String var8Lifetime1Lifetime4;
+        String var8Lifetime1Lifetime5;
+        String var8Lifetime1Lifetime6;
+        var42 = null;
+        var43 = null;
+        var12 = Pixelate.field_H ? 1 : 0;
+        var3 = 1;
+        if (!qo.field_z &&
+          ko.field_eb == null) {
+          var3 = 0;
         }
-        L1: {
-          var4 = 30 / ((param1 - 90) / 34);
-          if (ce.field_d != 0) {
-            break L1;
-          } else {
-            if (bn.field_S != null) {
-              var3 = 0;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
+        var4 = 30 / ((param1 - 90) / 34);
+        if (ce.field_d == 0 &&
+          bn.field_S != null) {
+          var3 = 0;
         }
-        L2: {
-          if (-3 != (ce.field_d ^ -1)) {
-            break L2;
-          } else {
-            if (ra.a((byte) -96)) {
-              break L2;
-            } else {
-              var3 = 0;
-              break L2;
-            }
-          }
+        if (ce.field_d == 2 &&
+          !ra.a((byte) -96)) {
+          var3 = 0;
         }
         if (ke.field_a == 84) {
-          L3: {
-            if (var3 != 0) {
-              if (-1 > (mp.field_a.length() ^ -1)) {
-                var5_ref_String = mp.field_a.toString();
-                var8 = var5_ref_String;
-                var8 = var5_ref_String;
-                if (bc.a(var5_ref_String, 1)) {
-                  var14 = (String) null;
-                  var13 = (String) null;
-                  ti.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
-                  var16 = (String) null;
-                  var15 = (String) null;
-                  ti.a(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
-                  nd.a((byte) -23);
-                  return true;
-                } else {
-                  L4: {
-                    var6 = ce.field_d;
-                    if (-1 != (var6 ^ -1)) {
-                      break L4;
-                    } else {
-                      if (io.field_c == null) {
-                        break L4;
-                      } else {
-                        var6 = 1;
-                        break L4;
-                      }
-                    }
-                  }
-                  if (kl.a(var6, 0) != 2) {
-                    dg.a(true, ce.field_d, -1, var5_ref_String, jo.field_k, param0);
-                    nd.a((byte) -23);
-                    break L3;
-                  } else {
-                    am.a(1, -26931, var6, param2);
-                    dg.a(true, ce.field_d, -1, var5_ref_String, jo.field_k, param0);
-                    nd.a((byte) -23);
-                    break L3;
-                  }
-                }
-              } else {
+          if (var3 != 0) {
+            if (mp.field_a.length() > 0) {
+              var5_ref_String = mp.field_a.toString();
+              var8 = var5_ref_String;
+              var8Lifetime2 = var5_ref_String;
+              if (bc.a(var5_ref_String, 1)) {
+                var14 = (String) null;
+                var13 = (String) null;
+                ti.a(0, (String) null, (String) null, (byte) -76, 2, mp.field_c);
+                var16 = (String) null;
+                var15 = (String) null;
+                ti.a(0, (String) null, (String) null, (byte) -21, 2, fd.field_d);
                 nd.a((byte) -23);
-                break L3;
+                return true;
               }
+              var6 = ce.field_d;
+              if (var6 == 0 &&
+                io.field_c != null) {
+                var6 = 1;
+              }
+              if (kl.a(var6, 0) == 2) {
+                am.a(1, -26931, var6, param2);
+              }
+              dg.a(true, ce.field_d, -1, var5_ref_String, jo.field_k, param0);
+              nd.a((byte) -23);
             } else {
-              if (ce.field_d != 0) {
-                nd.a((byte) 77);
-                break L3;
-              } else {
-                return true;
-              }
-            }
-          }
-          return true;
-        } else {
-          if (ke.field_a == 85) {
-            if (var3 != 0) {
-              if ((mp.field_a.length() ^ -1) >= -1) {
-                return true;
-              } else {
-                nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                return true;
-              }
-            } else {
-              return true;
+              nd.a((byte) -23);
             }
           } else {
-            var5 = nj.field_f;
-            if (ii.a(1, (char) var5)) {
-              if (var3 != 0) {
-                if (-81 < (mp.field_a.length() ^ -1)) {
-                  L5: {
-                    discarded$0 = mp.field_a.append((char) var5);
-                    var6 = 485;
-                    var32 = kn.field_J;
-                    var8 = var32;
-                    var8 = var32;
-                    var17 = th.a(2, var32);
-                    var8 = var17;
-                    var8 = var17;
-                    var33 = var17;
-                    var8 = var33;
-                    var8 = var33;
-                    if (2 == ce.field_d) {
-                      var44 = (CharSequence) ((Object) jo.field_k);
-                      var40 = sd.a(dg.field_b, 116, new String[]{ng.a(var44, -1)});
-                      var41 = sd.a(sk.field_c, 43, new String[]{var17});
-                      var10 = vl.field_Q.c(var40);
-                      var11 = vl.field_Q.c(var41);
-                      if (var11 < var10) {
-                        var6 = var6 - var10;
-                        break L5;
-                      } else {
-                        var6 = var6 - var11;
-                        if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                          nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                          return true;
-                        } else {
-                          return true;
-                        }
-                      }
-                    } else {
-                      L6: {
-                        var8 = "";
-                        if (-1 != (ce.field_d ^ -1)) {
-                          break L6;
-                        } else {
-                          L7: {
-                            if (io.field_c != null) {
-                              break L7;
-                            } else {
-                              if (!ge.field_f) {
-                                break L7;
-                              } else {
-                                var8 = "[" + ul.field_m + "] ";
-                                break L7;
-                              }
-                            }
-                          }
-                          if (io.field_c != null) {
-                            if (!nc.field_b) {
-                              var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
-                              var38 = var37 + var33 + ": ";
-                              var6 = var6 - vl.field_Q.c(var38);
-                              if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                                nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                                return true;
-                              } else {
-                                return true;
-                              }
-                            } else {
-                              if (mn.field_f != null) {
-                                var8 = "[" + mn.field_f + "] ";
-                                break L6;
-                              } else {
-                                var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
-                                var36 = var35 + var33 + ": ";
-                                var6 = var6 - vl.field_Q.c(var36);
-                                if (vl.field_Q.c(mp.field_a.toString()) <= var6) {
-                                  return true;
-                                } else {
-                                  nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                                  return true;
-                                }
-                              }
-                            }
-                          } else {
-                            var34 = var8 + var33 + ": ";
-                            var6 = var6 - vl.field_Q.c(var34);
-                            break L5;
-                          }
-                        }
-                      }
-                      var39 = var8 + var33 + ": ";
-                      var6 = var6 - vl.field_Q.c(var39);
-                      if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                        nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                  if (vl.field_Q.c(mp.field_a.toString()) > var6) {
-                    nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
+            if (ce.field_d == 0) {
+              return true;
             }
+            nd.a((byte) 77);
+          }
+          return true;
+        }
+        if (ke.field_a == 85) {
+          if (var3 == 0) {
+            return true;
+          }
+          if (mp.field_a.length() <= 0) {
+            return true;
+          }
+          nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+          return true;
+        }
+        var5 = nj.field_f;
+        if (!ii.a(1, (char) var5)) {
+          return false;
+        }
+        if (var3 == 0) {
+          return true;
+        }
+        if (mp.field_a.length() >= 80) {
+          return true;
+        }
+        L5: {
+          discarded$0 = mp.field_a.append((char) var5);
+          var6Lifetime1 = 485;
+          var32 = kn.field_J;
+          var8Lifetime1 = var32;
+          var8Lifetime1Lifetime1 = var32;
+          var17 = th.a(2, var32);
+          var8Lifetime1Lifetime2 = var17;
+          var8Lifetime1Lifetime3 = var17;
+          var33 = var17;
+          var8Lifetime1Lifetime4 = var33;
+          var8Lifetime1Lifetime5 = var33;
+          if (2 != ce.field_d) {
+            var8Lifetime1Lifetime6 = "";
+            if (ce.field_d == 0) {
+              if (io.field_c == null &&
+                ge.field_f) {
+                var8Lifetime1Lifetime6 = "[" + ul.field_m + "] ";
+              }
+              if (io.field_c == null) {
+                var34 = var8Lifetime1Lifetime6 + var33 + ": ";
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var34);
+                break L5;
+              }
+              if (!nc.field_b) {
+                var37 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var38 = var37 + var33 + ": ";
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var38);
+                break L5;
+              }
+              if (mn.field_f == null) {
+                var35 = "[" + sd.a(fk.field_q, 49, new String[]{io.field_c.field_pc}) + "] ";
+                var36 = var35 + var33 + ": ";
+                var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var36);
+                break L5;
+              }
+              var8Lifetime1Lifetime6 = "[" + mn.field_f + "] ";
+            }
+            var39 = var8Lifetime1Lifetime6 + var33 + ": ";
+            var6Lifetime1 = var6Lifetime1 - vl.field_Q.c(var39);
+            break L5;
+          }
+          var44 = (CharSequence) ((Object) jo.field_k);
+          var40 = sd.a(dg.field_b, 116, new String[]{ng.a(var44, -1)});
+          var41 = sd.a(sk.field_c, 43, new String[]{var17});
+          var10 = vl.field_Q.c(var40);
+          var11 = vl.field_Q.c(var41);
+          if (var11 >= var10) {
+            var6Lifetime1 = var6Lifetime1 - var11;
+          } else {
+            var6Lifetime1 = var6Lifetime1 - var10;
           }
         }
+        if (vl.field_Q.c(mp.field_a.toString()) <= var6Lifetime1) {
+          return true;
+        }
+        nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
+        return true;
     }
 
     final void a(byte param0, we param1) {
         try {
-            if (param0 != -12) {
-                this.field_g = -108L;
-            }
-            param1.a(false, this.field_g);
-            param1.a(-129, this.field_j);
+          if (param0 != -12) {
+            this.field_g = -108L;
+          }
+          param1.a(false, this.field_g);
+          param1.a(-129, this.field_j);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "go.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -290,43 +209,35 @@ class go extends rg {
         field_i = null;
         field_h = null;
         if (param0 < 44) {
-            field_k = 89;
+          field_k = 89;
         }
     }
 
     final static wm a(int param0, int param1) {
+        int var3 = 0;
         wm[] var2;
-        int var3;
         int var4;
         wm[] var5;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (param1 <= -50) {
-          var5 = dd.b((byte) 62);
-          var2 = var5;
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (var5[var3].field_b == param0) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (param1 > -50) {
           return (wm) null;
         }
+        var5 = dd.b((byte) 62);
+        var2 = var5;
+        for (var3 = 0; var5.length > var3; var3++) {
+          if (var5[var3].field_b == param0) {
+            return var5[var3];
+          }
+        }
+        return null;
     }
 
     go(long param0, String param1) {
         try {
-            this.field_j = param1;
-            this.field_g = param0;
+          this.field_j = param1;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "go.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

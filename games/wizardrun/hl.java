@@ -13,10 +13,10 @@ abstract class hl {
 
     public static void a(boolean param0) {
         if (!param0) {
-            hl.a(false);
-            field_c = null;
-            field_b = null;
-            return;
+          hl.a(false);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

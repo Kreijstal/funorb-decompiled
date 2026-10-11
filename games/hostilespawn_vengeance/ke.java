@@ -23,8 +23,6 @@ final class ke extends cn {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -32,88 +30,44 @@ final class ke extends cn {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
-            L1: {
-              if (!param3.field_u) {
-                if (param3.g(param2 + -24445)) {
-                  stackIn_6_0 = 1;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 0;
-                  break L1;
-                }
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              var6_int = stackIn_6_0;
-              if (!(param3 instanceof ph)) {
-                break L2;
-              } else {
-                param4 = param4 & ((ph) ((Object) param3)).field_D;
-                break L2;
-              }
-            }
-            L3: {
-              if (param4) {
-                if (var6_int == 0) {
-                  stackIn_13_0 = this.field_y;
-                  break L3;
-                } else {
-                  stackIn_13_0 = this.field_A;
-                  break L3;
-                }
-              } else {
-                stackIn_13_0 = this.field_t;
-                break L3;
-              }
-            }
-            L4: {
-              var7 = stackIn_13_0;
-              if (!param4) {
-                stackIn_16_0 = 7105644;
-                break L4;
-              } else {
-                stackIn_16_0 = 16777215;
-                break L4;
-              }
-            }
-            L5: {
-              var8 = stackIn_16_0;
-              if (param2 == 15430) {
-                break L5;
-              } else {
-                field_x = (String) null;
-                break L5;
-              }
-            }
-            km.a(param0 - -param3.field_m + (-this.field_u[0].field_r + param3.field_x >> -1441869631), param3.field_v + param1, param3.field_s, this.field_u, var7, param2 ^ 15415);
-            this.field_g.a(param3.field_n, param1 + param3.field_v, -2 + (param0 + param3.field_m), param3.field_s, param3.field_x, var8, -1, 1, 1, this.field_g.field_y);
-            break L0;
+          if (!param3.field_u) {
+            stackIn_6_0 = (param3.g(param2 - 24445)) ? 1 : 0;
+          } else {
+            stackIn_6_0 = 1;
           }
+          var6_int = stackIn_6_0;
+          if (param3 instanceof ph) {
+            param4 = param4 & ((ph) (param3)).field_D;
+          }
+          if (param4) {
+            if (var6_int == 0) {
+              stackIn_13_0 = this.field_y;
+            } else {
+              stackIn_13_0 = this.field_A;
+            }
+          } else {
+            stackIn_13_0 = this.field_t;
+          }
+          var7 = stackIn_13_0;
+          stackIn_16_0 = (!param4) ? 7105644 : 16777215;
+          var8 = stackIn_16_0;
+          if (param2 != 15430) {
+            field_x = (String) null;
+          }
+          km.a(param0 + param3.field_m + (-this.field_u[0].field_r + param3.field_x >> 1), param3.field_v + param1, param3.field_s, this.field_u, var7, param2 ^ 15415);
+          this.field_g.a(param3.field_n, param1 + param3.field_v, -2 + (param0 + param3.field_m), param3.field_s, param3.field_x, var8, -1, 1, 1, this.field_g.field_y);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("ke.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("ke.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -128,20 +82,18 @@ final class ke extends cn {
     public static void b(boolean param0) {
         field_B = null;
         field_w = null;
-        if (!param0) {
-          ke.b(true);
-          field_s = null;
-          field_v = null;
-          field_x = null;
-          field_z = null;
-          return;
-        } else {
+        if (param0) {
           field_s = null;
           field_v = null;
           field_x = null;
           field_z = null;
           return;
         }
+        ke.b(true);
+        field_s = null;
+        field_v = null;
+        field_x = null;
+        field_z = null;
     }
 
     static {

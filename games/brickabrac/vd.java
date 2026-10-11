@@ -13,94 +13,59 @@ final class vd {
 
     final static boolean a(int param0, int param1) {
         try {
-            int var2_int = 0;
-            IOException var2 = null;
-            int stackIn_12_0 = 0;
-            int stackIn_14_0 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == 20) {
-                break L0;
-              } else {
-                vd.a(-79);
-                break L0;
-              }
-            }
-            if (param1 > jl.field_e.field_l) {
-              if (null != eq.field_g) {
-                try {
-                  L1: {
-                    var2_int = eq.field_g.d(10434);
-                    if (0 >= var2_int) {
-                      if (var2_int < 0) {
-                        hn.a((byte) 123);
-                        return false;
-                      } else {
-                        if (-30001L <= (de.f(param0 + -6812) ^ -1L)) {
-                          decompiledRegionSelector0 = 2;
-                          break L1;
-                        } else {
-                          hn.a((byte) 123);
-                          return false;
-                        }
-                      }
-                    } else {
-                      L2: {
-                        if (var2_int > param1 - jl.field_e.field_l) {
-                          var2_int = -jl.field_e.field_l + param1;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      eq.field_g.a(param0 + 25806, jl.field_e.field_k, var2_int, jl.field_e.field_l);
-                      oj.field_t = ue.a(false);
-                      jl.field_e.field_l = jl.field_e.field_l + var2_int;
-                      if (param1 <= jl.field_e.field_l) {
-                        jl.field_e.field_l = 0;
-                        stackIn_14_0 = 1;
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      } else {
-                        stackIn_12_0 = 0;
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      }
-                    }
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  hn.a((byte) 111);
-                  return false;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  return stackIn_12_0 != 0;
-                } else {
-                  if (decompiledRegionSelector0 == 1) {
-                    return stackIn_14_0 != 0;
-                  } else {
-                    return false;
-                  }
-                }
-              } else {
+          int var2_int = 0;
+          IOException var2 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != 20) {
+            vd.a(-79);
+          }
+          if (param1 <= jl.field_e.field_l) {
+            return true;
+          }
+          if (null == eq.field_g) {
+            return false;
+          }
+          try {
+            var2_int = eq.field_g.d(10434);
+            if (0 >= var2_int) {
+              if (var2_int < 0) {
+                hn.a((byte) 123);
                 return false;
               }
-            } else {
-              return true;
+              if (de.f(param0 - 6812) <= 30000L) {
+                return false;
+              }
+              hn.a((byte) 123);
+              return false;
             }
+            if (var2_int > param1 - jl.field_e.field_l) {
+              var2_int = -jl.field_e.field_l + param1;
+            }
+            eq.field_g.a(param0 + 25806, jl.field_e.field_k, var2_int, jl.field_e.field_l);
+            oj.field_t = ue.a(false);
+            jl.field_e.field_l = jl.field_e.field_l + var2_int;
+            if (param1 > jl.field_e.field_l) {
+              return false;
+            }
+            jl.field_e.field_l = 0;
+            return true;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (IOException) (Object) decompiledCaughtException;
+            hn.a((byte) 111);
+            return false;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(int param0) {
         mm.h(-29448);
         if (param0 >= -126) {
-            field_a = (mo) null;
+          field_a = (mo) null;
         }
     }
 
@@ -108,7 +73,7 @@ final class vd {
         field_f = null;
         field_a = null;
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;

@@ -17,28 +17,27 @@ final class vn {
         field_h = null;
         field_c = null;
         if (param0 < 60) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     final static void a(int param0) {
         if (!n.a((byte) -74)) {
-            return;
+          return;
         }
         eb.a(false, false, 4);
         if (param0 != -29507) {
-            vn.b(75);
+          vn.b(75);
         }
     }
 
     final static ja[] a(int param0, int param1, int param2, int param3) {
-        if (param0 <= 29) {
-          field_f = -44;
-          return qp.a(param3, 1, -102, param2, param1);
-        } else {
+        if (param0 > 29) {
           return qp.a(param3, 1, -102, param2, param1);
         }
+        field_f = -44;
+        return qp.a(param3, 1, -102, param2, param1);
     }
 
     static {

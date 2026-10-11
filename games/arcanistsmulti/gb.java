@@ -27,9 +27,7 @@ final class gb implements Iterable {
         hf.a(31, new int[]{7, 28}, 0, 11, 430, 540, 110);
         hf.a(31, new int[]{7, 27}, param0 + 9, 12, 430, 540, 110);
         hf.a(31, new int[]{7}, 0, 13, 430, 420, 220);
-        if (param0 != -9) {
-          return;
-        } else {
+        if (param0 == -9) {
           hf.a(31, new int[]{25, 26, 30, 29, 7}, 0, 14, 430, 420, 220);
           hf.a(29, new int[]{20, 21, 6, 7}, 0, 15, 146, 577, 250);
           hf.a(31, new int[]{7}, 0, 16, 200, 540, 50);
@@ -38,164 +36,99 @@ final class gb implements Iterable {
     }
 
     final tf b(int param0) {
-        tf var2;
-        if (param0 == 31) {
-          var2 = this.field_g.field_l;
-          if (var2 == this.field_g) {
-            return null;
-          } else {
-            var2.a((byte) 88);
-            return var2;
-          }
-        } else {
+        tf var2 = null;
+        tf var2Lifetime1;
+        if (param0 != 31) {
           field_a = (String) null;
           var2 = this.field_g.field_l;
-          if (var2 == this.field_g) {
-            return null;
-          } else {
+          if (var2 != this.field_g) {
             var2.a((byte) 88);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_g.field_l;
+        if (var2Lifetime1 != this.field_g) {
+          var2Lifetime1.a((byte) 88);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new fh((gb) (this)));
+        return (Iterator) ((Object) new fh(this));
     }
 
     final static String a(java.applet.Applet param0, int param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            int var8 = 0;
-            String var9 = null;
-            String stackIn_3_0 = null;
-            String stackIn_9_0 = null;
-            String stackIn_15_0 = null;
-            String stackIn_17_0 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            String stackIn_21_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            var8 = ArcanistsMulti.field_G ? 1 : 0;
-            try {
-              L0: {
-                if (param1 < -119) {
-                  try {
-                    L1: {
-                      var9 = param0.getParameter("cookieprefix");
-                      var3 = var9 + "settings";
-                      var4 = (String) (ei.a(param0, 119, "getcookies"));
-                      var5 = eh.a(false, ';', var4);
-                      var6 = 0;
-                      L2: while (true) {
-                        if (var5.length <= var6) {
-                          decompiledRegionSelector0 = 0;
-                          break L1;
-                        } else {
-                          L3: {
-                            var7 = var5[var6].indexOf('=');
-                            if (-1 < (var7 ^ -1)) {
-                              break L3;
-                            } else {
-                              if (!var5[var6].substring(0, var7).trim().equals(var3)) {
-                                break L3;
-                              } else {
-                                stackIn_9_0 = var5[var6].substring(1 + var7).trim();
-                                decompiledRegionSelector0 = 1;
-                                break L1;
-                              }
-                            }
-                          }
-                          var6++;
-                          continue L2;
-                        }
-                      }
-                    }
-                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var2 = decompiledCaughtException;
-                      decompiledRegionSelector0 = 0;
-                      break L4;
-                    }
-                  }
-                  if (decompiledRegionSelector0 == 0) {
-                    if (vm.field_b == null) {
-                      stackIn_17_0 = param0.getParameter("settings");
-                      decompiledRegionSelector1 = 2;
-                      break L0;
-                    } else {
-                      stackIn_15_0 = vm.field_b;
-                      decompiledRegionSelector1 = 1;
-                      break L0;
-                    }
-                  } else {
-                    decompiledRegionSelector1 = 3;
-                    break L0;
-                  }
-                } else {
-                  stackIn_3_0 = (String) null;
-                  decompiledRegionSelector1 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_20_0 = (RuntimeException) (var2_ref);
-
-                stackIn_20_1 = new StringBuilder().append("gb.C(");
-
-                if (param0 == null) {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw aa.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
-            }
-            if (decompiledRegionSelector1 == 0) {
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          int var8 = 0;
+          String var9 = null;
+          String stackIn_3_0 = null;
+          String stackIn_9_0 = null;
+          String stackIn_15_0 = null;
+          String stackIn_17_0 = null;
+          RuntimeException stackIn_20_0 = null;
+          StringBuilder stackIn_20_1 = null;
+          String stackIn_21_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          var8 = ArcanistsMulti.field_G ? 1 : 0;
+          try {
+            if (param1 >= -119) {
+              stackIn_3_0 = (String) null;
               return stackIn_3_0;
-            } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_15_0;
-              } else {
-                if (decompiledRegionSelector1 == 2) {
-                  return stackIn_17_0;
-                } else {
+            }
+            try {
+              var9 = param0.getParameter("cookieprefix");
+              var3 = var9 + "settings";
+              var4 = (String) (ei.a(param0, 119, "getcookies"));
+              var5 = eh.a(false, ';', var4);
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (var7 >= 0 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_9_0 = var5[var6].substring(1 + var7).trim();
                   return stackIn_9_0;
                 }
               }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
+            if (vm.field_b == null) {
+              stackIn_17_0 = param0.getParameter("settings");
+              return stackIn_17_0;
+            }
+            stackIn_15_0 = vm.field_b;
+            return stackIn_15_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_20_0 = var2_ref;
+            stackIn_20_1 = new StringBuilder().append("gb.C(");
+            if (param0 == null) {
+              stackIn_21_2 = "null";
+            } else {
+              stackIn_21_2 = "{...}";
+            }
+            throw aa.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(int param0, boolean param1) {
-        ab var2;
-        if (!param1) {
-          return;
-        } else {
+        ab var2 = null;
+        if (param1) {
           var2 = he.field_e;
           var2.b((byte) -124, param0);
           var2.f(1, (byte) -54);
@@ -205,19 +138,19 @@ final class gb implements Iterable {
     }
 
     final void a(byte param0, tf param1) {
-        if (!(null == param1.field_i)) {
-            param1.a((byte) 88);
+        if (null != param1.field_i) {
+          param1.a((byte) 88);
         }
         param1.field_l = this.field_g;
         param1.field_i = this.field_g.field_i;
         if (param0 != 37) {
-            return;
+          return;
         }
         try {
-            param1.field_i.field_l = param1;
-            param1.field_l.field_i = param1;
+          param1.field_i.field_l = param1;
+          param1.field_l.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "gb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,37 +170,27 @@ final class gb implements Iterable {
     }
 
     final static void a(int param0) {
-        java.applet.Applet var2;
-        L0: {
-          oj.field_i = false;
-          if (nn.field_q != null) {
-            nn.field_q.e(-111);
-            break L0;
-          } else {
-            break L0;
-          }
+        oj.field_i = false;
+        if (nn.field_q != null) {
+          nn.field_q.e(-111);
         }
-        if (param0 == 14) {
+        if (param0 != 14) {
+          java.applet.Applet var2 = (java.applet.Applet) null;
+          gb.a((java.applet.Applet) null, 114);
           if (nj.field_c != 0) {
             ue.b(10);
             ng.field_K = 0;
             return;
-          } else {
-            ng.field_K = 0;
-            return;
           }
-        } else {
-          var2 = (java.applet.Applet) null;
-          gb.a((java.applet.Applet) null, 114);
-          if (nj.field_c == 0) {
-            ng.field_K = 0;
-            return;
-          } else {
-            ue.b(10);
-            ng.field_K = 0;
-            return;
-          }
+          ng.field_K = 0;
+          return;
         }
+        if (nj.field_c == 0) {
+          ng.field_K = 0;
+          return;
+        }
+        ue.b(10);
+        ng.field_K = 0;
     }
 
     static {

@@ -21,28 +21,26 @@ abstract class gn extends lm {
         ec.field_q.c();
         t.e(1, 3, 28, 21, 6, 16777215);
         t.e(1, 2, 28, 21, 6, 16777215);
-        if (param0 <= 91) {
-          gn.a((byte) 36);
+        if (param0 > 91) {
           t.e(0, 2, 28, 21, 6, 65793);
           qa.field_f.a(19692);
           di.field_c = new tf(8, 25);
           di.field_c.c();
-          t.e(t.field_j + -28, 3, 28, 21, 6, 16777215);
-          t.e(-28 + t.field_j, 2, 28, 21, 6, 16777215);
-          t.e(-28 + (t.field_j - 1), 2, 28, 21, 6, 65793);
-          qa.field_f.a(19692);
-          return;
-        } else {
-          t.e(0, 2, 28, 21, 6, 65793);
-          qa.field_f.a(19692);
-          di.field_c = new tf(8, 25);
-          di.field_c.c();
-          t.e(t.field_j + -28, 3, 28, 21, 6, 16777215);
+          t.e(t.field_j - 28, 3, 28, 21, 6, 16777215);
           t.e(-28 + t.field_j, 2, 28, 21, 6, 16777215);
           t.e(-28 + (t.field_j - 1), 2, 28, 21, 6, 65793);
           qa.field_f.a(19692);
           return;
         }
+        gn.a((byte) 36);
+        t.e(0, 2, 28, 21, 6, 65793);
+        qa.field_f.a(19692);
+        di.field_c = new tf(8, 25);
+        di.field_c.c();
+        t.e(t.field_j - 28, 3, 28, 21, 6, 16777215);
+        t.e(-28 + t.field_j, 2, 28, 21, 6, 16777215);
+        t.e(-28 + (t.field_j - 1), 2, 28, 21, 6, 65793);
+        qa.field_f.a(19692);
     }
 
     public static void b(byte param0) {
@@ -52,7 +50,7 @@ abstract class gn extends lm {
         field_y = null;
         field_u = null;
         if (param0 >= -91) {
-            field_z = (int[]) null;
+          field_z = (int[]) null;
         }
     }
 

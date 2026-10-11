@@ -16,17 +16,7 @@ final class ul {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 8) {
-          ul.a((byte) -79);
-          field_f = null;
-          field_e = null;
-          field_g = null;
-          field_j = (int[][]) null;
-          field_i = null;
-          field_h = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 8) {
           field_f = null;
           field_e = null;
           field_g = null;
@@ -36,6 +26,14 @@ final class ul {
           field_b = null;
           return;
         }
+        ul.a((byte) -79);
+        field_f = null;
+        field_e = null;
+        field_g = null;
+        field_j = (int[][]) null;
+        field_i = null;
+        field_h = null;
+        field_b = null;
     }
 
     static {

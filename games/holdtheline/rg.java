@@ -16,30 +16,30 @@ final class rg {
     final void a(long param0, byte param1, ln param2) {
         ln var5 = null;
         try {
-            if (param2.field_l != null) {
-                param2.a((byte) -42);
-            }
-            if (param1 != -75) {
-                field_f = (String) null;
-            }
-            var5 = this.field_c[(int)((long)(this.field_g + -1) & param0)];
-            param2.field_l = var5.field_l;
-            param2.field_n = var5;
-            param2.field_l.field_n = param2;
-            param2.field_n.field_l = param2;
-            param2.field_i = param0;
+          if (param2.field_l != null) {
+            param2.a((byte) -42);
+          }
+          if (param1 != -75) {
+            field_f = (String) null;
+          }
+          var5 = this.field_c[(int)((long)(this.field_g - 1) & param0)];
+          param2.field_l = var5.field_l;
+          param2.field_n = var5;
+          param2.field_l.field_n = param2;
+          param2.field_n.field_l = param2;
+          param2.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "rg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "rg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0) {
         int var1 = 72 / ((param0 - 1) / 34);
-        if (!(pk.field_G == null)) {
-            pk.field_G.a();
+        if (pk.field_G != null) {
+          pk.field_G.a();
         }
-        if (!(jd.field_G == null)) {
-            jd.field_G.a();
+        if (jd.field_G != null) {
+          jd.field_G.a();
         }
     }
 
@@ -47,7 +47,7 @@ final class rg {
         field_b = null;
         field_h = null;
         if (param0 >= -76) {
-            return;
+          return;
         }
         field_f = null;
         field_d = null;
@@ -61,46 +61,37 @@ final class rg {
         this.field_a = param1;
         var4 = this.field_c[(int)((long)(this.field_g - 1) & param1)];
         this.field_i = var4.field_n;
-        if (param0 == -25839) {
-          L0: while (true) {
-            if (this.field_i != var4) {
-              if ((this.field_i.field_i ^ -1L) != (param1 ^ -1L)) {
-                this.field_i = this.field_i.field_n;
-                continue L0;
-              } else {
-                var5 = this.field_i;
-                this.field_i = this.field_i.field_n;
-                return var5;
-              }
-            } else {
-              this.field_i = null;
-              return null;
-            }
-          }
-        } else {
+        if (param0 != -25839) {
           return (ln) null;
         }
+        while (true) {
+          if (this.field_i == var4) {
+            this.field_i = null;
+            return null;
+          }
+          if (~this.field_i.field_i != ~param1) {
+            this.field_i = this.field_i.field_n;
+            continue;
+          }
+          break;
+        }
+        var5 = this.field_i;
+        this.field_i = this.field_i.field_n;
+        return var5;
     }
 
     rg(int param0) {
+        int var2 = 0;
         ln dupTemp$1 = null;
-        int var2;
         ln var3;
         this.field_c = new ln[param0];
         this.field_g = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new ln();
-            var3 = dupTemp$1;
-            this.field_c[var2] = dupTemp$1;
-            var3.field_n = var3;
-            var3.field_l = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new ln();
+          var3 = dupTemp$1;
+          this.field_c[var2] = dupTemp$1;
+          var3.field_n = var3;
+          var3.field_l = var3;
         }
     }
 
@@ -109,30 +100,27 @@ final class rg {
         ln var3;
         int var4;
         var4 = HoldTheLine.field_D;
-        if (null != this.field_i) {
-          if (param0 == 20240) {
-            var2 = this.field_c[(int)((long)(this.field_g - 1) & this.field_a)];
-            L0: while (true) {
-              if (var2 != this.field_i) {
-                if ((this.field_i.field_i ^ -1L) != (this.field_a ^ -1L)) {
-                  this.field_i = this.field_i.field_n;
-                  continue L0;
-                } else {
-                  var3 = this.field_i;
-                  this.field_i = this.field_i.field_n;
-                  return var3;
-                }
-              } else {
-                this.field_i = null;
-                return null;
-              }
-            }
-          } else {
-            return (ln) null;
-          }
-        } else {
+        if (null == this.field_i) {
           return null;
         }
+        if (param0 != 20240) {
+          return (ln) null;
+        }
+        var2 = this.field_c[(int)((long)(this.field_g - 1) & this.field_a)];
+        while (true) {
+          if (var2 == this.field_i) {
+            this.field_i = null;
+            return null;
+          }
+          if (~this.field_i.field_i != ~this.field_a) {
+            this.field_i = this.field_i.field_n;
+            continue;
+          }
+          break;
+        }
+        var3 = this.field_i;
+        this.field_i = this.field_i.field_n;
+        return var3;
     }
 
     static {

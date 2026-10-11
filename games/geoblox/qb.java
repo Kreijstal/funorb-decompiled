@@ -95,13 +95,13 @@ final class qb extends hk {
 
     final static void a(int param0, lk param1, String param2, int param3, m param4) {
         int var7 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -130,35 +130,34 @@ final class qb extends hk {
             } else {
               param1.field_c[var7] = var6;
             }
-            if (var8 != 62) {
-              continue;
+            if (var8 == 62) {
+              var6 = -1;
             }
-            var6 = -1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
+          stackIn_21_0 = var5;
+          stackIn_21_1 = new StringBuilder().append("qb.C(").append(param0).append(',');
           if (param1 == null) {
-            stackIn_20_2 = "null";
+            stackIn_22_2 = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            stackIn_22_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
           if (param2 == null) {
-            stackIn_23_2 = "null";
+            stackIn_25_2 = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            stackIn_25_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',');
+          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',');
           if (param4 == null) {
-            stackIn_26_2 = "null";
+            stackIn_28_2 = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            stackIn_28_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

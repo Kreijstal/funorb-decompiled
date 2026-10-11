@@ -11,15 +11,15 @@ final class gd {
         field_b = null;
         field_d = null;
         if (param0 != -1) {
-            return;
+          return;
         }
         field_c = null;
     }
 
     final static boolean a(byte param0) {
         if (param0 != 70) {
-            gd.a((byte) 83);
-            return gf.field_e.a((byte) -128);
+          gd.a((byte) 83);
+          return gf.field_e.a((byte) -128);
         }
         return gf.field_e.a((byte) -128);
     }

@@ -14,10 +14,10 @@ final class fa extends go implements ki {
 
     final void a(int param0, int param1, vg param2, byte param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_U = pd.field_k - (this.field_m + param0);
+          super.a(param0, param1, param2, param3);
+          this.field_U = pd.field_k - (this.field_m + param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "fa.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -26,87 +26,61 @@ final class fa extends go implements ki {
     }
 
     final String c(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        if (this.field_k) {
-          if (this.field_v != null) {
-            L0: {
-              stackIn_6_0 = bb.field_b;
-
-              if (param0) {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 0;
-                break L0;
-              } else {
-                stackIn_7_0 = stackIn_6_0;
-                stackIn_7_1 = 1;
-                break L0;
-              }
-            }
-            ur.a(stackIn_7_0, stackIn_7_1 != 0, this.field_x - this.field_U + pd.field_k);
-            if (!param0) {
-              return (String) null;
-            } else {
-              return this.field_v;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (!this.field_k) {
           return null;
         }
+        if (this.field_v == null) {
+          return null;
+        }
+        ur.a(bb.field_b, !param0 ? true : false, this.field_x - this.field_U + pd.field_k);
+        if (param0) {
+          return this.field_v;
+        }
+        return (String) null;
     }
 
     final void i(int param0) {
         super.i(param0);
         if (this.field_V != null) {
-            this.field_V.b(-72);
+          this.field_V.b(-72);
         }
     }
 
     final void a(gk param0, int param1) {
         try {
-            if (param1 != 8945) {
-                field_T = (String) null;
-            }
-            this.field_V = param0;
+          if (param1 != 8945) {
+            field_T = (String) null;
+          }
+          this.field_V = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "fa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final gk a(byte param0) {
         if (param0 <= 58) {
-            this.a((byte) -52);
-            return this.field_V;
+          this.a((byte) -52);
+          return this.field_V;
         }
         return this.field_V;
     }
 
     final static void a(int param0, byte param1) {
-        int var2;
-        int var3;
-        L0: {
-          fl.field_f = param0;
-          if (pg.field_J == ed.field_f) {
-            break L0;
-          } else {
-            var2 = ed.field_f * ed.field_f;
-            var3 = -(pg.field_J * pg.field_J) + var2;
-            param0 = param0 + (-param0 + pc.field_m) * var3 / var2;
-            break L0;
-          }
+        int var2 = 0;
+        int var3 = 0;
+        fl.field_f = param0;
+        if (pg.field_J != ed.field_f) {
+          var2 = ed.field_f * ed.field_f;
+          var3 = -(pg.field_J * pg.field_J) + var2;
+          param0 = param0 + (-param0 + pc.field_m) * var3 / var2;
         }
         tg.field_c.a(640, 120, (byte) 66, param0, tm.field_h);
-        if (param1 > -35) {
-          fa.a(-2, (byte) -122);
-          qc.a(pc.field_m + -24, 0, tg.field_a, 3, 640, 5, qo.field_b);
-          return;
-        } else {
-          qc.a(pc.field_m + -24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        if (param1 <= -35) {
+          qc.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
           return;
         }
+        fa.a(-2, (byte) -122);
+        qc.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
     }
 
     public static void l(int param0) {
@@ -118,7 +92,7 @@ final class fa extends go implements ki {
         field_S = null;
         field_J = null;
         if (param0 != 5) {
-            fa.a(-11, (byte) -25);
+          fa.a(-11, (byte) -25);
         }
     }
 

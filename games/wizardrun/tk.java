@@ -11,24 +11,24 @@ final class tk implements bf {
 
     final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
-            r.field_a = param7;
-            ta.field_a = param2;
-            ka.field_i = param3;
-            cb.field_a = param8;
-            uk.field_b = param1;
-            sl.field_r = param0;
-            if (param6 != 2) {
-                tk.a(-15);
-            }
-            jg.field_m = param5;
-            kk.field_xb = param4;
+          r.field_a = param7;
+          ta.field_a = param2;
+          ka.field_i = param3;
+          cb.field_a = param8;
+          uk.field_b = param1;
+          sl.field_r = param0;
+          if (param6 != 2) {
+            tk.a(-15);
+          }
+          jg.field_m = param5;
+          kk.field_xb = param4;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "tk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     public static void a(int param0) {
-        int var1 = -36 / ((param0 - -42) / 63);
+        int var1 = -36 / ((param0 + 42) / 63);
         field_f = null;
         field_e = null;
     }
@@ -37,8 +37,6 @@ final class tk implements bf {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -50,91 +48,51 @@ final class tk implements bf {
         int var11 = 0;
         var11 = wizardrun.field_H;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param2.field_v) {
-                  break L2;
-                } else {
-                  if (param2.d((byte) 53)) {
-                    break L2;
-                  } else {
-                    stackIn_5_0 = 2188450;
-                    break L1;
-                  }
-                }
-              }
-              stackIn_5_0 = 3249872;
-              break L1;
-            }
-            L3: {
-              var6_int = stackIn_5_0;
-              if (param3) {
-                break L3;
-              } else {
-                this.field_b = 65;
-                break L3;
-              }
-            }
-            this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
-            if (param2.d((byte) 53)) {
-              L4: {
-                var7 = this.field_d.b(param2.field_k);
-                var8 = this.field_d.field_M - -this.field_d.field_B;
-                var9 = param2.field_o + param0;
-                var10 = param2.field_l + param1;
-                if (2 == this.field_c) {
-                  var9 = var9 + (-var7 + param2.field_r);
-                  break L4;
-                } else {
-                  if ((this.field_c ^ -1) != -2) {
-                    break L4;
-                  } else {
-                    var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                    break L4;
-                  }
-                }
-              }
-              L5: {
-                if (this.field_b != 2) {
-                  if (1 == this.field_b) {
-                    var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                } else {
-                  var10 = var10 + (param2.field_n - var8);
-                  break L5;
-                }
-              }
-              nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-              break L0;
-            } else {
-              return;
+          if (!param2.field_v &&
+            !param2.d((byte) 53)) {
+            stackIn_5_0 = 2188450;
+          } else {
+            stackIn_5_0 = 3249872;
+          }
+          var6_int = stackIn_5_0;
+          if (!param3) {
+            this.field_b = 65;
+          }
+          this.field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, this.field_c, this.field_b, this.field_d.field_M + this.field_d.field_B);
+          if (!param2.d((byte) 53)) {
+            return;
+          }
+          var7 = this.field_d.b(param2.field_k);
+          var8 = this.field_d.field_M + this.field_d.field_B;
+          var9 = param2.field_o + param0;
+          var10 = param2.field_l + param1;
+          if (2 == this.field_c) {
+            var9 = var9 + (-var7 + param2.field_r);
+          } else {
+            if (this.field_c == 1) {
+              var9 = var9 + (param2.field_r - var7 >> 1);
             }
           }
+          if (this.field_b != 2) {
+            if (1 == this.field_b) {
+              var10 = var10 + (param2.field_n - var8 >> 1);
+            }
+          } else {
+            var10 = var10 + (param2.field_n - var8);
+          }
+          nh.a((byte) 69, 4 + var7, var10 + 2, var8, var9 - 2);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("tk.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("tk.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -146,11 +104,11 @@ final class tk implements bf {
 
     tk(vd param0, int param1, int param2) {
         try {
-            this.field_b = param2;
-            this.field_d = param0;
-            this.field_c = param1;
+          this.field_b = param2;
+          this.field_d = param0;
+          this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

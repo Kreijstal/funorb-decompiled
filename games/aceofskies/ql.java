@@ -19,30 +19,23 @@ final class ql extends ud {
         field_r = null;
         field_p = (byte[][]) null;
         if (param0 >= -11) {
-            field_o = (int[]) null;
+          field_o = (int[]) null;
         }
         field_o = null;
     }
 
     final void a(boolean param0, int[] param1, int param2) {
-        Object stackIn_26_0 = null;
-        Object stackIn_27_0 = null;
-        int stackIn_27_1 = 0;
-        Object stackIn_32_0 = null;
-        Object stackIn_33_0 = null;
-        int stackIn_33_1 = 0;
+        int var7 = 0;
+        boolean stackIn_27_1 = false;
+        boolean stackIn_33_1 = false;
         RuntimeException stackIn_47_0 = null;
         StringBuilder stackIn_47_1 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
         String stackIn_48_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -55,337 +48,192 @@ final class ql extends ud {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        int var4_intLifetime1;
+        int var4_intLifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var13Lifetime1;
+        int var13Lifetime2;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var15Lifetime1;
+        int var15Lifetime2;
+        int var16Lifetime1;
+        int var16Lifetime2;
+        int var17Lifetime1;
+        int var17Lifetime2;
+        int var18Lifetime1;
+        int var18Lifetime2;
+        int var4_intLifetime3;
+        int var6Lifetime3;
+        int var10Lifetime3;
         var19 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            if (param0) {
-              L1: {
-                var5 = mo.field_c[param2] * this.field_h;
-                if (-2 == (this.field_s ^ -1)) {
-                  L2: {
-                    var9 = this.field_k[0];
-                    var8 = this.field_l[0] << 1989972972;
-                    var11 = var5 * var8 >> 938898956;
-                    var13 = var8 * this.field_h >> 495279468;
-                    var12 = var8 * this.field_q >> 2117427628;
-                    var15 = var11 >> -1456252372;
-                    var16 = var15 + 1;
-                    var11 = var11 & 4095;
-                    if (var13 > var16) {
-                      break L2;
-                    } else {
-                      var16 = 0;
-                      break L2;
-                    }
-                  }
-                  var18 = 255 & this.field_i[var16 & 255];
-                  var14 = ua.field_h[var11];
-                  var17 = this.field_i[var15 & 255] & 255;
-                  if (!this.field_n) {
-                    var10 = 0;
-                    L3: while (true) {
-                      if (ms.field_d <= var10) {
-                        break L1;
-                      } else {
-                        var4_int = this.field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> 1252220428, var17, var18, var11, var14, var12);
-                        param1[var10] = var6 * var9 >> -956554868;
-                        var10++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    var10 = 0;
-                    L4: while (true) {
-                      if (var10 >= ms.field_d) {
-                        break L1;
-                      } else {
-                        var4_int = this.field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> -1549663828, var17, var18, var11, var14, var12);
-                        var6 = var6 * var9 >> -1530447252;
-                        param1[var10] = 2048 + (var6 >> -350934335);
-                        var10++;
-                        continue L4;
-                      }
-                    }
-                  }
-                } else {
-                  L5: {
-                    L6: {
-                      var9 = this.field_k[0];
-                      if (var9 > 8) {
-                        break L6;
-                      } else {
-                        if (7 < (var9 ^ -1)) {
-                          break L6;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    L7: {
-                      var8 = this.field_l[0] << -602973044;
-                      var13 = this.field_h * var8 >> 647077900;
-                      var11 = var5 * var8 >> -997316404;
-                      var12 = var8 * this.field_q >> 1294694444;
-                      var15 = var11 >> -1392880820;
-                      var16 = 1 + var15;
-                      var11 = var11 & 4095;
-                      if (var16 < var13) {
-                        break L7;
-                      } else {
-                        var16 = 0;
-                        break L7;
-                      }
-                    }
-                    var17 = this.field_i[var15 & 255] & 255;
-                    var18 = 255 & this.field_i[255 & var16];
-                    var14 = ua.field_h[var11];
-                    var10 = 0;
-                    L8: while (true) {
-                      if (var10 >= ms.field_d) {
-                        break L5;
-                      } else {
-                        var4_int = this.field_q * ct.field_v[var10];
-                        var6 = this.a(false, var4_int * var8 >> 1724090284, var17, var18, var11, var14, var12);
-                        param1[var10] = var6 * var9 >> -1739619188;
-                        var10++;
-                        continue L8;
-                      }
-                    }
-                  }
-                  var7 = 1;
-                  L9: while (true) {
-                    if (this.field_s <= var7) {
-                      break L1;
-                    } else {
-                      L10: {
-                        L11: {
-                          var9 = this.field_k[var7];
-                          if (8 < var9) {
-                            break L11;
-                          } else {
-                            if (7 >= (var9 ^ -1)) {
-                              break L10;
-                            } else {
-                              break L11;
-                            }
-                          }
-                        }
-                        L12: {
-                          var8 = this.field_l[var7] << -1472753460;
-                          var11 = var5 * var8 >> -1843211060;
-                          var12 = this.field_q * var8 >> 1371548172;
-                          var13 = var8 * this.field_h >> 745380748;
-                          var15 = var11 >> -1052743124;
-                          var16 = var15 - -1;
-                          if (var13 <= var16) {
-                            var16 = 0;
-                            break L12;
-                          } else {
-                            break L12;
-                          }
-                        }
-                        L13: {
-                          var11 = var11 & 4095;
-                          var17 = this.field_i[255 & var15] & 255;
-                          var18 = this.field_i[var16 & 255] & 255;
-                          var14 = ua.field_h[var11];
-                          if (!this.field_n) {
-                            break L13;
-                          } else {
-                            if (var7 != -1 + this.field_s) {
-                              break L13;
-                            } else {
-                              var10 = 0;
-                              L14: while (true) {
-                                if (var10 >= ms.field_d) {
-                                  break L10;
-                                } else {
-                                  L15: {
-                                    var4_int = ct.field_v[var10] * this.field_q;
-                                    stackIn_26_0 = this;
-
-                                    if (param0) {
-                                      stackIn_27_0 = this;
-                                      stackIn_27_1 = 0;
-                                      break L15;
-                                    } else {
-                                      stackIn_27_0 = this;
-                                      stackIn_27_1 = 1;
-                                      break L15;
-                                    }
-                                  }
-                                  var6 = this.a(stackIn_27_1 != 0, var8 * var4_int >> 1695595052, var17, var18, var11, var14, var12);
-                                  var6 = param1[var10] - -(var6 * var9 >> -204557012);
-                                  param1[var10] = 2048 - -(var6 >> -402420607);
-                                  var10++;
-                                  continue L14;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        var10 = 0;
-                        L16: while (true) {
-                          if (ms.field_d <= var10) {
-                            break L10;
-                          } else {
-                            L17: {
-                              var4_int = this.field_q * ct.field_v[var10];
-                              stackIn_32_0 = this;
-
-                              if (param0) {
-                                stackIn_33_0 = this;
-                                stackIn_33_1 = 0;
-                                break L17;
-                              } else {
-                                stackIn_33_0 = this;
-                                stackIn_33_1 = 1;
-                                break L17;
-                              }
-                            }
-                            var6 = this.a(stackIn_33_1 != 0, var4_int * var8 >> 729791116, var17, var18, var11, var14, var12);
-                            param1[var10] = param1[var10] + (var9 * var6 >> 520514732);
-                            var10++;
-                            continue L16;
-                          }
-                        }
-                      }
-                      var7++;
-                      continue L9;
-                    }
-                  }
+          if (!param0) {
+            return;
+          }
+          var5 = mo.field_c[param2] * this.field_h;
+          if (this.field_s == 1) {
+            var9 = this.field_k[0];
+            var8 = this.field_l[0] << 12;
+            var11 = var5 * var8 >> 12;
+            var13 = var8 * this.field_h >> 12;
+            var12 = var8 * this.field_q >> 12;
+            var15 = var11 >> 12;
+            var16 = var15 + 1;
+            var11 = var11 & 4095;
+            if (var13 <= var16) {
+              var16 = 0;
+            }
+            var18 = 255 & this.field_i[var16 & 255];
+            var14 = ua.field_h[var11];
+            var17 = this.field_i[var15 & 255] & 255;
+            if (!this.field_n) {
+              for (var10 = 0; ms.field_d > var10; var10++) {
+                var4_int = this.field_q * ct.field_v[var10];
+                var6 = this.a(false, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
+                param1[var10] = var6 * var9 >> 12;
+              }
+              return;
+            }
+            for (var10Lifetime3 = 0; var10Lifetime3 < ms.field_d; var10Lifetime3++) {
+              var4_intLifetime3 = this.field_q * ct.field_v[var10Lifetime3];
+              var6Lifetime3 = this.a(false, var4_intLifetime3 * var8 >> 12, var17, var18, var11, var14, var12);
+              var6Lifetime3 = var6Lifetime3 * var9 >> 12;
+              param1[var10Lifetime3] = 2048 + (var6Lifetime3 >> 1);
+            }
+            return;
+          }
+          var9Lifetime1 = this.field_k[0];
+          if (var9Lifetime1 > 8 ||
+            var9Lifetime1 < -8) {
+            var8Lifetime1 = this.field_l[0] << 12;
+            var13Lifetime1 = this.field_h * var8Lifetime1 >> 12;
+            var11Lifetime1 = var5 * var8Lifetime1 >> 12;
+            var12Lifetime1 = var8Lifetime1 * this.field_q >> 12;
+            var15Lifetime1 = var11Lifetime1 >> 12;
+            var16Lifetime1 = 1 + var15Lifetime1;
+            var11Lifetime1 = var11Lifetime1 & 4095;
+            if (var16Lifetime1 >= var13Lifetime1) {
+              var16Lifetime1 = 0;
+            }
+            var17Lifetime1 = this.field_i[var15Lifetime1 & 255] & 255;
+            var18Lifetime1 = 255 & this.field_i[255 & var16Lifetime1];
+            var14Lifetime1 = ua.field_h[var11Lifetime1];
+            for (var10Lifetime1 = 0; var10Lifetime1 < ms.field_d; var10Lifetime1++) {
+              var4_intLifetime1 = this.field_q * ct.field_v[var10Lifetime1];
+              var6Lifetime1 = this.a(false, var4_intLifetime1 * var8Lifetime1 >> 12, var17Lifetime1, var18Lifetime1, var11Lifetime1, var14Lifetime1, var12Lifetime1);
+              param1[var10Lifetime1] = var6Lifetime1 * var9Lifetime1 >> 12;
+            }
+          }
+          for (var7 = 1; this.field_s > var7; var7++) {
+            var9Lifetime2 = this.field_k[var7];
+            if (8 < var9Lifetime2 ||
+              var9Lifetime2 < -8) {
+              var8Lifetime2 = this.field_l[var7] << 12;
+              var11Lifetime2 = var5 * var8Lifetime2 >> 12;
+              var12Lifetime2 = this.field_q * var8Lifetime2 >> 12;
+              var13Lifetime2 = var8Lifetime2 * this.field_h >> 12;
+              var15Lifetime2 = var11Lifetime2 >> 12;
+              var16Lifetime2 = var15Lifetime2 + 1;
+              if (var13Lifetime2 <= var16Lifetime2) {
+                var16Lifetime2 = 0;
+              }
+              var11Lifetime2 = var11Lifetime2 & 4095;
+              var17Lifetime2 = this.field_i[255 & var15Lifetime2] & 255;
+              var18Lifetime2 = this.field_i[var16Lifetime2 & 255] & 255;
+              var14Lifetime2 = ua.field_h[var11Lifetime2];
+              if (this.field_n &&
+                var7 == -1 + this.field_s) {
+                for (var10Lifetime2 = 0; var10Lifetime2 < ms.field_d; var10Lifetime2++) {
+                  var4_intLifetime2 = ct.field_v[var10Lifetime2] * this.field_q;
+                  stackIn_27_1 = !(param0);
+                  var6Lifetime2 = this.a(stackIn_27_1, var8Lifetime2 * var4_intLifetime2 >> 12, var17Lifetime2, var18Lifetime2, var11Lifetime2, var14Lifetime2, var12Lifetime2);
+                  var6Lifetime2 = param1[var10Lifetime2] + (var6Lifetime2 * var9Lifetime2 >> 12);
+                  param1[var10Lifetime2] = 2048 + (var6Lifetime2 >> 1);
+                }
+              } else {
+                for (var10Lifetime2 = 0; ms.field_d > var10Lifetime2; var10Lifetime2++) {
+                  var4_intLifetime2 = this.field_q * ct.field_v[var10Lifetime2];
+                  stackIn_33_1 = !(param0);
+                  var6Lifetime2 = this.a(stackIn_33_1, var4_intLifetime2 * var8Lifetime2 >> 12, var17Lifetime2, var18Lifetime2, var11Lifetime2, var14Lifetime2, var12Lifetime2);
+                  param1[var10Lifetime2] = param1[var10Lifetime2] + (var9Lifetime2 * var6Lifetime2 >> 12);
                 }
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
-            var4 = decompiledCaughtException;
-            stackIn_47_0 = (RuntimeException) (var4);
-
-            stackIn_47_1 = new StringBuilder().append("ql.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "null";
-              break L18;
-            } else {
-              stackIn_48_0 = (RuntimeException) ((Object) stackIn_47_0);
-              stackIn_48_1 = (StringBuilder) ((Object) stackIn_47_1);
-              stackIn_48_2 = "{...}";
-              break L18;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_47_0 = var4;
+          stackIn_47_1 = new StringBuilder().append("ql.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_48_2 = "null";
+          } else {
+            stackIn_48_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_48_0), stackIn_48_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pn.a((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final void d(int param0) {
-        int var2;
+        int var2 = 0;
         int var3;
         int var4;
-        L0: {
-          var4 = AceOfSkies.field_G ? 1 : 0;
-          this.field_i = ro.b(-3992, this.field_m);
-          this.a(98);
-          if (param0 == 1) {
-            break L0;
-          } else {
-            this.field_i = (byte[]) null;
-            break L0;
-          }
+        var4 = AceOfSkies.field_G ? 1 : 0;
+        this.field_i = ro.b(-3992, this.field_m);
+        this.a(98);
+        if (param0 != 1) {
+          this.field_i = (byte[]) null;
         }
-        var2 = this.field_s + -1;
-        L1: while (true) {
-          L2: {
-            if (-2 < (var2 ^ -1)) {
-              break L2;
-            } else {
-              var3 = this.field_k[var2];
-              if (var3 > 8) {
-                break L2;
-              } else {
-                if (var3 >= -8) {
-                  this.field_s = this.field_s - 1;
-                  var2--;
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
+        for (var2 = this.field_s - 1; var2 >= 1; var2--) {
+          var3 = this.field_k[var2];
+          if (var3 <= 8 &&
+            var3 >= -8) {
+            this.field_s = this.field_s - 1;
+            continue;
           }
-          return;
+          break;
         }
     }
 
     final static void a(byte param0, boolean param1) {
         int var2;
         int var3;
-        L0: {
-          var3 = AceOfSkies.field_G ? 1 : 0;
-          if (param0 <= -72) {
-            break L0;
+        var3 = AceOfSkies.field_G ? 1 : 0;
+        if (param0 > -72) {
+          field_p = (byte[][]) null;
+        }
+        if (0 >= qr.field_a) {
+          var2 = (!cn.b(true)) ? 1 : 0;
+        } else {
+          if (aj.field_s != null) {
+            jf.field_a = aj.field_s.b((byte) -111);
+            te.a(2, 64);
           } else {
-            field_p = (byte[][]) null;
-            break L0;
+            jf.field_a = uj.a(pt.field_b, 0, 640, 0, 0, 480);
+          }
+          if (jf.field_a != null) {
+            cd.a(jf.field_a, 74);
+            var2 = 2;
+          } else {
+            var2 = 3;
           }
         }
-        L1: {
-          if (0 >= qr.field_a) {
-            if (!cn.b(true)) {
-              var2 = 1;
-              break L1;
-            } else {
-              var2 = 0;
-              break L1;
-            }
-          } else {
-            L2: {
-              if (aj.field_s != null) {
-                jf.field_a = aj.field_s.b((byte) -111);
-                te.a(2, 64);
-                break L2;
-              } else {
-                jf.field_a = uj.a(pt.field_b, 0, 640, 0, 0, 480);
-                break L2;
-              }
-            }
-            if (jf.field_a != null) {
-              cd.a(jf.field_a, 74);
-              var2 = 2;
-              break L1;
-            } else {
-              var2 = 3;
-              break L1;
-            }
-          }
-        }
-        L3: {
-          if (null != aj.field_s) {
-            break L3;
-          } else {
-            if (ta.field_h) {
-              nk.a((byte) -119, var2, param1);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
+        if (null == aj.field_s &&
+          ta.field_h) {
+          nk.a((byte) -119, var2, param1);
         }
     }
 
@@ -409,152 +257,99 @@ final class ql extends ud {
         int var16;
         int var17;
         int var18;
-        L0: {
-          var18 = AceOfSkies.field_G ? 1 : 0;
-          if (!param0) {
-            break L0;
-          } else {
-            ql.a(40, -122, 38, 74);
-            break L0;
-          }
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var14Lifetime3;
+        var18 = AceOfSkies.field_G ? 1 : 0;
+        if (param0) {
+          ql.a(40, -122, 38, 74);
         }
-        L1: {
-          var13 = param1 >> -1871141620;
-          var12 = var13 - -1;
-          if (var12 >= param6) {
-            var12 = 0;
-            break L1;
-          } else {
-            break L1;
-          }
+        var13 = param1 >> 12;
+        var12 = var13 + 1;
+        if (var12 >= param6) {
+          var12 = 0;
         }
-        L2: {
-          param1 = param1 & 4095;
-          var13 = var13 & 255;
-          var11 = param1 - 4096;
-          var12 = var12 & 255;
-          var10 = -4096 + param4;
-          var15 = ua.field_h[param1];
-          var14 = this.field_i[var13 - -param2] & 3;
-          if (-2 <= (var14 ^ -1)) {
-            L3: {
-              if (var14 != 0) {
-                stackIn_13_0 = param4 + -param1;
-                break L3;
-              } else {
-                stackIn_13_0 = param4 + param1;
-                break L3;
-              }
-            }
-            var8 = stackIn_13_0;
-            break L2;
+        param1 = param1 & 4095;
+        var13 = var13 & 255;
+        var11 = param1 - 4096;
+        var12 = var12 & 255;
+        var10 = -4096 + param4;
+        var15 = ua.field_h[param1];
+        var14 = this.field_i[var13 + param2] & 3;
+        if (var14 <= 1) {
+          if (var14 != 0) {
+            stackIn_13_0 = param4 - param1;
           } else {
-            L4: {
-              if (var14 == 2) {
-                stackIn_9_0 = param1 - param4;
-                break L4;
-              } else {
-                stackIn_9_0 = -param1 - param4;
-                break L4;
-              }
-            }
-            var8 = stackIn_9_0;
-            break L2;
+            stackIn_13_0 = param4 + param1;
           }
-        }
-        L5: {
-          var14 = 3 & this.field_i[var12 + param2];
-          if (-2 > (var14 ^ -1)) {
-            L6: {
-              if (-3 != (var14 ^ -1)) {
-                stackIn_22_0 = -param4 + -var11;
-                break L6;
-              } else {
-                stackIn_22_0 = -param4 + var11;
-                break L6;
-              }
-            }
-            var9 = stackIn_22_0;
-            break L5;
+          var8 = stackIn_13_0;
+        } else {
+          if (var14 == 2) {
+            stackIn_9_0 = param1 - param4;
           } else {
-            L7: {
-              if (-1 == (var14 ^ -1)) {
-                stackIn_18_0 = var11 - -param4;
-                break L7;
-              } else {
-                stackIn_18_0 = param4 - var11;
-                break L7;
-              }
-            }
-            var9 = stackIn_18_0;
-            break L5;
+            stackIn_9_0 = -param1 - param4;
           }
+          var8 = stackIn_9_0;
         }
-        L8: {
-          var16 = var8 + (var15 * (-var8 + var9) >> 467958540);
-          var14 = this.field_i[param3 + var13] & 3;
-          if (1 >= var14) {
-            L9: {
-              if (-1 != (var14 ^ -1)) {
-                stackIn_31_0 = var10 + -param1;
-                break L9;
-              } else {
-                stackIn_31_0 = var10 + param1;
-                break L9;
-              }
-            }
-            var8 = stackIn_31_0;
-            break L8;
+        var14Lifetime1 = 3 & this.field_i[var12 + param2];
+        if (var14Lifetime1 > 1) {
+          if (var14Lifetime1 != 2) {
+            stackIn_22_0 = -param4 - var11;
           } else {
-            L10: {
-              if (-3 != (var14 ^ -1)) {
-                stackIn_27_0 = -var10 + -param1;
-                break L10;
-              } else {
-                stackIn_27_0 = param1 + -var10;
-                break L10;
-              }
-            }
-            var8 = stackIn_27_0;
-            break L8;
+            stackIn_22_0 = -param4 + var11;
           }
-        }
-        L11: {
-          var14 = this.field_i[param3 + var12] & 3;
-          if (var14 > 1) {
-            L12: {
-              if (2 != var14) {
-                stackIn_40_0 = -var11 - var10;
-                break L12;
-              } else {
-                stackIn_40_0 = -var10 + var11;
-                break L12;
-              }
-            }
-            var9 = stackIn_40_0;
-            break L11;
+          var9 = stackIn_22_0;
+        } else {
+          if (var14Lifetime1 == 0) {
+            stackIn_18_0 = var11 + param4;
           } else {
-            L13: {
-              if (var14 == 0) {
-                stackIn_36_0 = var10 + var11;
-                break L13;
-              } else {
-                stackIn_36_0 = -var11 + var10;
-                break L13;
-              }
-            }
-            var9 = stackIn_36_0;
-            break L11;
+            stackIn_18_0 = param4 - var11;
           }
+          var9 = stackIn_18_0;
         }
-        var17 = ((-var8 + var9) * var15 >> 1968260332) + var8;
-        return var16 + (param5 * (var17 + -var16) >> 2028499116);
+        var16 = var8 + (var15 * (-var8 + var9) >> 12);
+        var14Lifetime2 = this.field_i[param3 + var13] & 3;
+        if (1 >= var14Lifetime2) {
+          if (var14Lifetime2 != 0) {
+            stackIn_31_0 = var10 - param1;
+          } else {
+            stackIn_31_0 = var10 + param1;
+          }
+          var8Lifetime1 = stackIn_31_0;
+        } else {
+          if (var14Lifetime2 != 2) {
+            stackIn_27_0 = -var10 - param1;
+          } else {
+            stackIn_27_0 = param1 - var10;
+          }
+          var8Lifetime1 = stackIn_27_0;
+        }
+        var14Lifetime3 = this.field_i[param3 + var12] & 3;
+        if (var14Lifetime3 > 1) {
+          if (2 != var14Lifetime3) {
+            stackIn_40_0 = -var11 - var10;
+          } else {
+            stackIn_40_0 = -var10 + var11;
+          }
+          var9Lifetime1 = stackIn_40_0;
+        } else {
+          if (var14Lifetime3 == 0) {
+            stackIn_36_0 = var10 + var11;
+          } else {
+            stackIn_36_0 = -var11 + var10;
+          }
+          var9Lifetime1 = stackIn_36_0;
+        }
+        var17 = ((-var8Lifetime1 + var9Lifetime1) * var15 >> 12) + var8Lifetime1;
+        return var16 + (param5 * (var17 - var16) >> 12);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         so.field_b = param2;
         if (param1 != 2048) {
-            return;
+          return;
         }
         nl.field_t = param0;
         hn.field_a = param3;
@@ -574,49 +369,23 @@ final class ql extends ud {
     private final void a(int param0) {
         int var2;
         int var3;
-        L0: {
-          var3 = AceOfSkies.field_G ? 1 : 0;
-          if (param0 >= 23) {
-            break L0;
-          } else {
-            ql.a((byte) 58);
-            break L0;
-          }
+        var3 = AceOfSkies.field_G ? 1 : 0;
+        if (param0 < 23) {
+          ql.a((byte) 58);
         }
-        L1: {
-          if (-1 > (this.field_j ^ -1)) {
+        if (this.field_j > 0) {
+          this.field_l = new short[this.field_s];
+          this.field_k = new short[this.field_s];
+          for (var2 = 0; var2 < this.field_s; var2++) {
+            this.field_k[var2] = (short)(int)(4096.0 * Math.pow((double)((float)this.field_j / 4096.0f), (double)var2));
+            this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
+          }
+        } else {
+          if (this.field_k != null &&
+            this.field_s == this.field_k.length) {
             this.field_l = new short[this.field_s];
-            this.field_k = new short[this.field_s];
-            var2 = 0;
-            L2: while (true) {
-              if (var2 >= this.field_s) {
-                break L1;
-              } else {
-                this.field_k[var2] = (short)(int)(4096.0 * Math.pow((double)((float)this.field_j / 4096.0f), (double)var2));
-                this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
-                var2++;
-                continue L2;
-              }
-            }
-          } else {
-            if (this.field_k == null) {
-              break L1;
-            } else {
-              if (this.field_s != this.field_k.length) {
-                break L1;
-              } else {
-                this.field_l = new short[this.field_s];
-                var2 = 0;
-                L3: while (true) {
-                  if (this.field_s <= var2) {
-                    break L1;
-                  } else {
-                    this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
-                    var2++;
-                    continue L3;
-                  }
-                }
-              }
+            for (var2 = 0; this.field_s > var2; var2++) {
+              this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
             }
           }
         }

@@ -11,7 +11,7 @@ final class hf {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_a = null;
         field_f = null;
@@ -21,40 +21,36 @@ final class hf {
 
     final static void a(ak param0, int param1, int param2, ak param3, int param4, int param5) {
         try {
-            rc.field_j = param1;
-            ng.field_m = param2;
-            if (param4 >= -122) {
-                ak var7 = (ak) null;
-                hf.a((ak) null, -18, -91, (ak) null, 27, -75);
-            }
-            vd.field_f = param0;
-            ud.field_y = param5;
-            kk.field_c = param3;
+          rc.field_j = param1;
+          ng.field_m = param2;
+          if (param4 >= -122) {
+            ak var7 = (ak) null;
+            hf.a((ak) null, -18, -91, (ak) null, 27, -75);
+          }
+          vd.field_f = param0;
+          ud.field_y = param5;
+          kk.field_c = param3;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != 1) {
-          hf.a(-30, 29, 66, -59, false);
-          hh.field_a.a(param0, (byte) 127);
-          return;
-        } else {
+        if (param1 == 1) {
           hh.field_a.a(param0, (byte) 127);
           return;
         }
+        hf.a(-30, 29, 66, -59, false);
+        hh.field_a.a(param0, (byte) 127);
     }
 
     final static wk[] a(int param0, int param1, int param2, int param3, boolean param4) {
-        ak var6;
-        if (!param4) {
-          var6 = (ak) null;
-          hf.a((ak) null, 52, -37, (ak) null, -67, 63);
-          return ch.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
-        } else {
+        if (param4) {
           return ch.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
         }
+        ak var6 = (ak) null;
+        hf.a((ak) null, 52, -37, (ak) null, -67, 63);
+        return ch.a(3, 1, 4, param2, param1, param3, param0, 1, 1);
     }
 
     static {

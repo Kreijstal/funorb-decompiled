@@ -17,9 +17,9 @@ abstract class li {
     public static void a(int param0) {
         field_e = (int[][]) null;
         if (param0 < 66) {
-            li.a(78);
-            field_c = null;
-            return;
+          li.a(78);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

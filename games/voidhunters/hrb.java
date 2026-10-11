@@ -7,21 +7,15 @@ abstract class hrb {
     private static String field_z;
 
     final int a(boolean param0, long param1) {
-        long var4;
-        if (param0) {
-          return 36;
-        } else {
-          L0: {
-            var4 = this.a((byte) -81);
-            if (0L < var4) {
-              gdb.b(-96, var4);
-              break L0;
-            } else {
-              break L0;
-            }
+        long var4 = 0L;
+        if (!param0) {
+          var4 = this.a((byte) -81);
+          if (0L < var4) {
+            gdb.b(-96, var4);
           }
           return this.a(0, param1);
         }
+        return 36;
     }
 
     abstract long a(byte param0);

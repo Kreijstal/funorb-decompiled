@@ -18,62 +18,48 @@ class ck {
     static gh[] field_f;
 
     final static ll a(int param0) {
-        int var1;
-        var1 = -105 / ((param0 - 83) / 42);
-        if (kh.field_w == null) {
-          kh.field_w = new ll();
-          kh.field_w.a(111, tj.field_e);
-          kh.field_w.field_t = 7697781;
-          kh.field_w.field_d = 5;
-          kh.field_w.field_b = 14;
-          kh.field_w.field_a = 0;
-          kh.field_w.field_g = 6;
-          kh.field_w.field_v = rc.field_m;
-          kh.field_w.field_n = 2763306;
-          kh.field_w.field_w = 4;
-          return kh.field_w;
-        } else {
+        int var1 = -105 / ((param0 - 83) / 42);
+        if (kh.field_w != null) {
           return kh.field_w;
         }
+        kh.field_w = new ll();
+        kh.field_w.a(111, tj.field_e);
+        kh.field_w.field_t = 7697781;
+        kh.field_w.field_d = 5;
+        kh.field_w.field_b = 14;
+        kh.field_w.field_a = 0;
+        kh.field_w.field_g = 6;
+        kh.field_w.field_v = rc.field_m;
+        kh.field_w.field_n = 2763306;
+        kh.field_w.field_w = 4;
+        return kh.field_w;
     }
 
     final void b(int param0) {
-        if (param0 == 4) {
-          if (this.field_i == null) {
-            return;
-          } else {
-            this.field_i.field_k = this.field_k;
-            this.field_k.field_i = this.field_i;
-            this.field_i = null;
-            this.field_k = null;
-            return;
-          }
-        } else {
+        if (param0 != 4) {
           field_e = -59;
-          if (this.field_i == null) {
-            return;
-          } else {
+          if (this.field_i != null) {
             this.field_i.field_k = this.field_k;
             this.field_k.field_i = this.field_i;
             this.field_i = null;
             this.field_k = null;
             return;
           }
+          return;
+        }
+        if (this.field_i != null) {
+          this.field_i.field_k = this.field_k;
+          this.field_k.field_i = this.field_i;
+          this.field_i = null;
+          this.field_k = null;
+          return;
         }
     }
 
     public static void c(int param0) {
         field_b = null;
         field_m = null;
-        if (param0 != 4433) {
-          ck.c(127);
-          field_c = null;
-          field_g = null;
-          field_d = null;
-          field_f = null;
-          field_n = null;
-          return;
-        } else {
+        if (param0 == 4433) {
           field_c = null;
           field_g = null;
           field_d = null;
@@ -81,14 +67,20 @@ class ck {
           field_n = null;
           return;
         }
+        ck.c(127);
+        field_c = null;
+        field_g = null;
+        field_d = null;
+        field_f = null;
+        field_n = null;
     }
 
     final boolean b(byte param0) {
         if (param0 != -12) {
-            return true;
+          return true;
         }
         if (this.field_i != null) {
-            return true;
+          return true;
         }
         return false;
     }

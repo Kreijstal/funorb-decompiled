@@ -17,48 +17,28 @@ final class ao extends fb {
         eo stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = new eo(false);
-              var2.field_g = args;
-              if (param1 <= -76) {
-                break L1;
-              } else {
-                field_F = (op) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = (eo) (var2);
-            break L0;
+          var2 = new eo(false);
+          var2.field_g = args;
+          if (param1 > -76) {
+            field_F = (op) null;
           }
+          stackIn_3_0 = var2;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2_ref);
-
-            stackIn_6_1 = new StringBuilder().append("ao.D(");
-
-            if (args == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("ao.D(");
+          if (args == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void i(int param0) {
@@ -75,7 +55,7 @@ final class ao extends fb {
         this.field_D = Integer.toString(param2);
         this.field_E = 255;
         if (!param3) {
-            this.field_K = kh.a(55, false);
+          this.field_K = kh.a(55, false);
         }
     }
 
@@ -84,57 +64,51 @@ final class ao extends fb {
         int var3_int = param1.a(this.a(true), (byte) -94);
         int var4 = param1.a(this.f(237239984), 0);
         if (param0 >= -76) {
-            return;
+          return;
         }
         try {
-            sg.field_jb.b(this.field_D, var3_int, var4, 3, -1, this.field_E);
-            if (this.field_K != null) {
-                if (this.field_K.l()) {
-                    this.field_H = null;
-                    this.field_K = null;
-                    return;
-                }
-                var5 = pj.a(var4, 47, var3_int);
-                this.field_K.h(var5);
-                if (this.field_H == null) {
-                    return;
-                }
-                this.field_H.h(var5);
+          sg.field_jb.b(this.field_D, var3_int, var4, 3, -1, this.field_E);
+          if (this.field_K != null) {
+            if (this.field_K.l()) {
+              this.field_H = null;
+              this.field_K = null;
+              return;
             }
+            var5 = pj.a(var4, 47, var3_int);
+            this.field_K.h(var5);
+            if (this.field_H == null) {
+              return;
+            }
+            this.field_H.h(var5);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void g(int param0) {
-        if (-1 > (this.field_E ^ -1)) {
-          this.field_x = this.field_x - 131072;
-          this.field_E = this.field_E - 7;
-          if (-1 < (this.field_E ^ -1)) {
-            this.field_E = 0;
-            if (param0 < 95) {
-              this.field_H = (fn) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param0 >= 95) {
-              return;
-            } else {
-              this.field_H = (fn) null;
-              return;
-            }
-          }
-        } else {
+        if (this.field_E <= 0) {
           this.b(-27598);
-          if (param0 >= 95) {
-            return;
-          } else {
+          if (param0 < 95) {
             this.field_H = (fn) null;
             return;
           }
+          return;
         }
+        this.field_x = this.field_x - 131072;
+        this.field_E = this.field_E - 7;
+        if (this.field_E >= 0) {
+          if (param0 < 95) {
+            this.field_H = (fn) null;
+            return;
+          }
+          return;
+        }
+        this.field_E = 0;
+        if (param0 >= 95) {
+          return;
+        }
+        this.field_H = (fn) null;
     }
 
     static {

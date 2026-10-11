@@ -15,17 +15,17 @@ final class lu {
         field_f = null;
         field_a = null;
         if (param0 != 87) {
-            lu.a((byte) 17);
+          lu.a((byte) 17);
         }
     }
 
     lu(int param0, ml param1, int param2) {
         try {
-            this.field_g = param2;
-            this.field_e = param0;
-            this.field_b = param1;
+          this.field_g = param2;
+          this.field_e = param0;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "lu.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

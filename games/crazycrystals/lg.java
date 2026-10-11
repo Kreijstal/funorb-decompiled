@@ -9,27 +9,23 @@ final class lg {
     static int field_b;
 
     final static void a(int param0) {
-        pe var1;
-        var1 = (pe) ((Object) ok.field_a.d(-125));
-        if (var1 != null) {
-          kh.a(var1.field_k, var1.field_g, var1.field_m);
-          kh.d(var1.field_f, var1.field_l, var1.field_o, var1.field_j);
-          var1.field_k = null;
-          if (param0 != 1) {
-            return;
-          } else {
-            wb.field_e.b(0, var1);
-            return;
-          }
-        } else {
+        pe var1 = (pe) (ok.field_a.d(-125));
+        if (var1 == null) {
           throw new IllegalStateException();
+        }
+        kh.a(var1.field_k, var1.field_g, var1.field_m);
+        kh.d(var1.field_f, var1.field_l, var1.field_o, var1.field_j);
+        var1.field_k = null;
+        if (param0 == 1) {
+          wb.field_e.b(0, var1);
+          return;
         }
     }
 
     public static void b(int param0) {
         field_e = null;
         if (param0 != 31039) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
@@ -38,68 +34,54 @@ final class lg {
     }
 
     final mp a(int param0, int param1) {
-        mp var3;
-        byte[] var4;
-        mp var5;
-        var3 = (mp) (this.field_d.a(101, (long)param1));
-        if (var3 == null) {
-          L0: {
-            if (param1 >= 32768) {
-              var4 = this.field_a.b(32767 & param1, 0, 1);
-              break L0;
-            } else {
-              var4 = this.field_c.b(param1, 0, 1);
-              break L0;
-            }
-          }
-          var5 = new mp();
-          if (var4 == null) {
-            if (param0 > 21) {
-              if (param1 >= 32768) {
-                var5.a((byte) -90);
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              } else {
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              }
-            } else {
-              this.field_d = (b) null;
-              if (param1 >= 32768) {
-                var5.a((byte) -90);
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              } else {
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              }
-            }
-          } else {
-            var5.a(new ng(var4), (byte) 48);
-            if (param0 <= 21) {
-              this.field_d = (b) null;
-              if (param1 < 32768) {
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              } else {
-                var5.a((byte) -90);
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              }
-            } else {
-              if (param1 >= 32768) {
-                var5.a((byte) -90);
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              } else {
-                this.field_d.a(var5, 1, (long)param1);
-                return var5;
-              }
-            }
-          }
-        } else {
+        byte[] var4 = null;
+        mp var3 = (mp) (this.field_d.a(101, (long)param1));
+        if (var3 != null) {
           return var3;
         }
+        if (param1 < 32768) {
+          var4 = this.field_c.b(param1, 0, 1);
+        } else {
+          var4 = this.field_a.b(32767 & param1, 0, 1);
+        }
+        mp var5 = new mp();
+        if (var4 != null) {
+          var5.a(new ng(var4), (byte) 48);
+          if (param0 > 21) {
+            if (param1 < 32768) {
+              this.field_d.a(var5, 1, (long)param1);
+              return var5;
+            }
+            var5.a((byte) -90);
+            this.field_d.a(var5, 1, (long)param1);
+            return var5;
+          }
+          this.field_d = (b) null;
+          if (param1 >= 32768) {
+            var5.a((byte) -90);
+            this.field_d.a(var5, 1, (long)param1);
+            return var5;
+          }
+          this.field_d.a(var5, 1, (long)param1);
+          return var5;
+        }
+        if (param0 <= 21) {
+          this.field_d = (b) null;
+          if (param1 < 32768) {
+            this.field_d.a(var5, 1, (long)param1);
+            return var5;
+          }
+          var5.a((byte) -90);
+          this.field_d.a(var5, 1, (long)param1);
+          return var5;
+        }
+        if (param1 < 32768) {
+          this.field_d.a(var5, 1, (long)param1);
+          return var5;
+        }
+        var5.a((byte) -90);
+        this.field_d.a(var5, 1, (long)param1);
+        return var5;
     }
 
     static {

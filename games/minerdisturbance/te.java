@@ -17,7 +17,7 @@ final class te implements uj {
         field_a = null;
         field_e = (ea[][]) null;
         if (param0 != 31960) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -26,7 +26,7 @@ final class te implements uj {
 
     public final void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         om.field_g = 19;
         tb.field_a = 4;
@@ -38,104 +38,61 @@ final class te implements uj {
 
     final static int a(int param0) {
         int var1;
-        if (2 <= af.field_u) {
-          var1 = 78 % ((-29 - param0) / 54);
-          if (0 == kb.field_c) {
-            if (!hj.field_i.a((byte) 125)) {
-              return 20;
-            } else {
-              if (!hj.field_i.a(false, "commonui")) {
-                return 40;
-              } else {
-                if (pb.field_r.a((byte) 89)) {
-                  if (!pb.field_r.a(false, "commonui")) {
-                    return 60;
-                  } else {
-                    if (!oh.field_C.a((byte) 94)) {
-                      return 70;
-                    } else {
-                      if (oh.field_C.b(-1)) {
-                        return 100;
-                      } else {
-                        return 80;
-                      }
-                    }
-                  }
-                } else {
-                  return 50;
-                }
-              }
-            }
-          } else {
-            if (null != sb.field_r) {
-              if (!sb.field_r.a((byte) 125)) {
-                return 14;
-              } else {
-                if (sb.field_r.b(false, "")) {
-                  if (sb.field_r.a(false, "")) {
-                    if (hj.field_i.a((byte) 94)) {
-                      if (hj.field_i.a(false, "commonui")) {
-                        if (!pb.field_r.a((byte) 104)) {
-                          return 71;
-                        } else {
-                          if (!pb.field_r.a(false, "commonui")) {
-                            return 80;
-                          } else {
-                            if (oh.field_C.a((byte) 115)) {
-                              if (oh.field_C.b(-1)) {
-                                return 100;
-                              } else {
-                                return 86;
-                              }
-                            } else {
-                              return 82;
-                            }
-                          }
-                        }
-                      } else {
-                        return 57;
-                      }
-                    } else {
-                      return 43;
-                    }
-                  } else {
-                    return 29;
-                  }
-                } else {
-                  return 29;
-                }
-              }
-            } else {
-              if (hj.field_i.a((byte) 94)) {
-                if (hj.field_i.a(false, "commonui")) {
-                  if (!pb.field_r.a((byte) 104)) {
-                    return 71;
-                  } else {
-                    if (!pb.field_r.a(false, "commonui")) {
-                      return 80;
-                    } else {
-                      if (oh.field_C.a((byte) 115)) {
-                        if (oh.field_C.b(-1)) {
-                          return 100;
-                        } else {
-                          return 86;
-                        }
-                      } else {
-                        return 82;
-                      }
-                    }
-                  }
-                } else {
-                  return 57;
-                }
-              } else {
-                return 43;
-              }
-            }
-          }
-        } else {
+        if (2 > af.field_u) {
           return 0;
         }
+        var1 = 78 % ((-29 - param0) / 54);
+        if (0 == kb.field_c) {
+          if (!hj.field_i.a((byte) 125)) {
+            return 20;
+          }
+          if (!hj.field_i.a(false, "commonui")) {
+            return 40;
+          }
+          if (!pb.field_r.a((byte) 89)) {
+            return 50;
+          }
+          if (!pb.field_r.a(false, "commonui")) {
+            return 60;
+          }
+          if (!oh.field_C.a((byte) 94)) {
+            return 70;
+          }
+          if (oh.field_C.b(-1)) {
+            return 100;
+          }
+          return 80;
+        }
+        if (null != sb.field_r) {
+          if (!sb.field_r.a((byte) 125)) {
+            return 14;
+          }
+          if (!sb.field_r.b(false, "")) {
+            return 29;
+          }
+          if (!sb.field_r.a(false, "")) {
+            return 29;
+          }
+        }
+        if (!hj.field_i.a((byte) 94)) {
+          return 43;
+        }
+        if (!hj.field_i.a(false, "commonui")) {
+          return 57;
+        }
+        if (!pb.field_r.a((byte) 104)) {
+          return 71;
+        }
+        if (!pb.field_r.a(false, "commonui")) {
+          return 80;
+        }
+        if (!oh.field_C.a((byte) 115)) {
+          return 82;
+        }
+        if (oh.field_C.b(-1)) {
+          return 100;
+        }
+        return 86;
     }
 
     static {

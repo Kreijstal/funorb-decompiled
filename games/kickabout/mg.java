@@ -19,30 +19,25 @@ final class mg {
         field_d = null;
         field_g = null;
         if (param0 != 142) {
-            up var2 = (up) null;
-            mg.a((up) null, -88, 47, false, 24, (byte) -47);
+          up var2 = (up) null;
+          mg.a((up) null, -88, 47, false, 24, (byte) -47);
         }
     }
 
     final static void a(byte param0) {
-        wh var1;
-        var1 = wt.a(72, false, em.field_e, 43, 128, 34);
-        if (var1 == null) {
+        wh var1 = wt.a(72, false, em.field_e, 43, 128, 34);
+        if (var1 != null) {
+          var1.a(150, (byte) -4);
           if (param0 != -25) {
             mg.a((byte) 127);
             return;
-          } else {
-            return;
           }
-        } else {
-          var1.a(150, (byte) -4);
-          if (param0 == -25) {
-            return;
-          } else {
-            mg.a((byte) 127);
-            return;
-          }
+          return;
         }
+        if (param0 == -25) {
+          return;
+        }
+        mg.a((byte) 127);
     }
 
     final static gm a(up param0, int param1, int param2, boolean param3, int param4, byte param5) {
@@ -53,56 +48,36 @@ final class mg {
         gm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var6 = pi.a(113, param4, param2, param0, param1, param3);
-              if (param5 > 96) {
-                break L1;
-              } else {
-                var8 = (up) null;
-                mg.a((up) null, 111, 43, false, 111, (byte) 15);
-                break L1;
-              }
-            }
-            var7 = new gm(var6, param0.field_q, true);
-            var7.a((byte) -31, 0);
-            var7.field_mb.a(dq.a((byte) -121, var7.field_mb.a(true), new Random()), -38);
-            stackIn_3_0 = (gm) (var7);
-            break L0;
+          var6 = pi.a(113, param4, param2, param0, param1, param3);
+          if (param5 <= 96) {
+            var8 = (up) null;
+            mg.a((up) null, 111, 43, false, 111, (byte) 15);
           }
+          var7 = new gm(var6, param0.field_q, true);
+          var7.a((byte) -31, 0);
+          var7.field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
+          stackIn_3_0 = var7;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var6_ref);
-
-            stackIn_6_1 = new StringBuilder().append("mg.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_6_0 = var6_ref;
+          stackIn_6_1 = new StringBuilder().append("mg.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static ki a(int param0, byte param1, int param2) {
         if (param1 != 0) {
-            return (ki) null;
+          return (ki) null;
         }
         return new ki(4, param0, param2, (byte) 0, (byte) 0);
     }
@@ -113,7 +88,7 @@ final class mg {
 
     final static ki a(boolean param0, int param1, int param2) {
         if (param0) {
-            return (ki) null;
+          return (ki) null;
         }
         return new ki(0, param2, param1, (byte) 0, (byte) 0);
     }

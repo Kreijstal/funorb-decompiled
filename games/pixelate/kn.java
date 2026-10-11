@@ -14,15 +14,15 @@ final class kn extends ie {
     final void d(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         nm var2 = new nm(this.field_N);
-        ud var3 = (ud) ((Object) var2.d(0));
+        ud var3 = (ud) (var2.d(0));
         while (var3 != null) {
-            if (!(!var3.c(false))) {
-                var3.c(2779);
-            }
-            var3 = (ud) ((Object) var2.a((byte) -104));
+          if (var3.c(false)) {
+            var3.c(2779);
+          }
+          var3 = (ud) (var2.a((byte) -104));
         }
         if (param0 < 99) {
-            this.a(-63, 101, 32, (byte) 105);
+          this.a(-63, 101, 32, (byte) 105);
         }
         this.field_H = (ng) ((Object) this.n(640));
     }
@@ -30,18 +30,18 @@ final class kn extends ie {
     final void b(int param0, ng param1) {
         ud var3 = null;
         try {
-            if (!(param1 instanceof ud)) {
-                throw new IllegalArgumentException();
-            }
-            var3 = (ud) ((Object) param1);
-            if (param0 != -6183) {
-                field_L = true;
-            }
-            this.field_N.b(param0 ^ -1392505192, var3);
-            var3.field_N = true;
-            var3.a((ng) (this), 27);
+          if (!(param1 instanceof ud)) {
+            throw new IllegalArgumentException();
+          }
+          var3 = (ud) (param1);
+          if (param0 != -6183) {
+            field_L = true;
+          }
+          this.field_N.b(param0 ^ -1392505192, var3);
+          var3.field_N = true;
+          var3.a((ng) (this), 27);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "kn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,42 +49,32 @@ final class kn extends ie {
         nm var2;
         ud var3;
         int var4;
-        L0: {
-          var4 = Pixelate.field_H ? 1 : 0;
-          if (param0 >= 48) {
-            break L0;
-          } else {
-            this.a((byte) 24);
-            break L0;
-          }
+        var4 = Pixelate.field_H ? 1 : 0;
+        if (param0 < 48) {
+          this.a((byte) 24);
         }
         var2 = new nm(this.field_N);
-        var3 = (ud) ((Object) var2.d(0));
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.field_N) {
-              return var3.k(97);
-            } else {
-              var3 = (ud) ((Object) var2.a((byte) -104));
-              continue L1;
-            }
-          } else {
-            return null;
+        var3 = (ud) (var2.d(0));
+        while (var3 != null) {
+          if (var3.field_N) {
+            return var3.k(97);
           }
+          var3 = (ud) (var2.a((byte) -104));
         }
+        return null;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         int var8 = Pixelate.field_H ? 1 : 0;
         if (this.field_y != null) {
-            this.field_y.a((ng) (this), (byte) -124, param0, param2, true);
+          this.field_y.a((ng) (this), (byte) -124, param0, param2, true);
         }
         nm var5 = new nm(this.field_N);
-        ng var6 = (ng) ((Object) var5.b(-1));
+        ng var6 = (ng) (var5.b(-1));
         int var7 = 47 / ((param3 - 70) / 49);
         while (var6 != null) {
-            var6.a(param0 - -this.field_p, param1, param2 + this.field_z, (byte) 124);
-            var6 = (ng) ((Object) var5.e(-105));
+          var6.a(param0 + this.field_p, param1, param2 + this.field_z, (byte) 124);
+          var6 = (ng) (var5.e(-105));
         }
     }
 
@@ -97,34 +87,24 @@ final class kn extends ie {
         nm var2;
         ud var3;
         int var4;
-        L0: {
-          var4 = Pixelate.field_H ? 1 : 0;
-          if (param0 == 640) {
-            break L0;
-          } else {
-            field_I = 105;
-            break L0;
-          }
+        var4 = Pixelate.field_H ? 1 : 0;
+        if (param0 != 640) {
+          field_I = 105;
         }
         var2 = new nm(this.field_N);
-        var3 = (ud) ((Object) var2.d(0));
-        L1: while (true) {
-          if (var3 != null) {
-            if (var3.field_N) {
-              return var3;
-            } else {
-              var3 = (ud) ((Object) var2.a((byte) -104));
-              continue L1;
-            }
-          } else {
-            return null;
+        var3 = (ud) (var2.d(0));
+        while (var3 != null) {
+          if (var3.field_N) {
+            return var3;
           }
+          var3 = (ud) (var2.a((byte) -104));
         }
+        return null;
     }
 
     final static boolean a(boolean param0, int param1) {
         if (!param0) {
-            field_J = (String) null;
+          field_J = (String) null;
         }
         return param1 >= 2 ? true : false;
     }
@@ -132,20 +112,20 @@ final class kn extends ie {
     final void e(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != 54) {
-            this.field_N = (bb) null;
+          this.field_N = (bb) null;
         }
         nm var2 = new nm(this.field_N);
-        ud var3 = (ud) ((Object) var2.d(param0 ^ 54));
+        ud var3 = (ud) (var2.d(param0 ^ 54));
         while (var3 != null) {
-            var3.field_N = false;
-            var3 = (ud) ((Object) var2.a((byte) -104));
+          var3.field_N = false;
+          var3 = (ud) (var2.a((byte) -104));
         }
         this.field_H = null;
     }
 
     public static void m(int param0) {
         if (param0 != 10504) {
-            field_L = true;
+          field_L = true;
         }
         field_M = null;
         field_J = null;
@@ -155,15 +135,15 @@ final class kn extends ie {
     final void a(byte param0) {
         int var4 = Pixelate.field_H ? 1 : 0;
         if (param0 != -22) {
-            this.field_N = (bb) null;
+          this.field_N = (bb) null;
         }
         nm var2 = new nm(this.field_N);
-        ud var3 = (ud) ((Object) var2.d(0));
+        ud var3 = (ud) (var2.d(0));
         while (var3 != null) {
-            if (!(!var3.a((byte) 123))) {
-                var3.c(2779);
-            }
-            var3 = (ud) ((Object) var2.a((byte) -104));
+          if (var3.a((byte) 123)) {
+            var3.c(2779);
+          }
+          var3 = (ud) (var2.a((byte) -104));
         }
     }
 

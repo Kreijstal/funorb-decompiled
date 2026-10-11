@@ -14,26 +14,24 @@ final class uk {
         ta var3;
         int var4;
         var4 = Torquing.field_u;
-        if (null != this.field_f) {
-          var2 = this.field_c[(int)(this.field_d & (long)(this.field_e + param0))];
-          L0: while (true) {
-            if (this.field_f != var2) {
-              if (this.field_f.field_l == this.field_d) {
-                var3 = this.field_f;
-                this.field_f = this.field_f.field_p;
-                return var3;
-              } else {
-                this.field_f = this.field_f.field_p;
-                continue L0;
-              }
-            } else {
-              this.field_f = null;
-              return null;
-            }
-          }
-        } else {
+        if (null == this.field_f) {
           return null;
         }
+        var2 = this.field_c[(int)(this.field_d & (long)(this.field_e + param0))];
+        while (true) {
+          if (this.field_f == var2) {
+            this.field_f = null;
+            return null;
+          }
+          if (this.field_f.field_l != this.field_d) {
+            this.field_f = this.field_f.field_p;
+            continue;
+          }
+          break;
+        }
+        var3 = this.field_f;
+        this.field_f = this.field_f.field_p;
+        return var3;
     }
 
     final ta a(long param0, int param1) {
@@ -43,80 +41,58 @@ final class uk {
         int var6;
         var6 = Torquing.field_u;
         this.field_d = param0;
-        var4 = this.field_c[(int)(param0 & (long)(this.field_e + -1))];
+        var4 = this.field_c[(int)(param0 & (long)(this.field_e - 1))];
         this.field_f = var4.field_p;
-        L0: while (true) {
-          if (var4 != this.field_f) {
-            if (param0 == this.field_f.field_l) {
-              var5 = this.field_f;
-              this.field_f = this.field_f.field_p;
-              return var5;
-            } else {
-              this.field_f = this.field_f.field_p;
-              continue L0;
-            }
-          } else {
+        while (true) {
+          if (var4 == this.field_f) {
             var5_int = -54 / ((24 - param1) / 36);
             this.field_f = null;
             return null;
           }
+          if (param0 != this.field_f.field_l) {
+            this.field_f = this.field_f.field_p;
+            continue;
+          }
+          break;
         }
+        var5 = this.field_f;
+        this.field_f = this.field_f.field_p;
+        return var5;
     }
 
     final void a(ta param0, long param1, int param2) {
         ta var5 = null;
         try {
-            if (param2 != 0) {
-                this.a(-67L, 6);
-            }
-            if (param0.field_j != null) {
-                param0.h(0);
-            }
-            var5 = this.field_c[(int)((long)(-1 + this.field_e) & param1)];
-            param0.field_p = var5;
-            param0.field_j = var5.field_j;
-            param0.field_j.field_p = param0;
-            param0.field_p.field_j = param0;
-            param0.field_l = param1;
+          if (param2 != 0) {
+            this.a(-67L, 6);
+          }
+          if (param0.field_j != null) {
+            param0.h(0);
+          }
+          var5 = this.field_c[(int)((long)(-1 + this.field_e) & param1)];
+          param0.field_p = var5;
+          param0.field_j = var5.field_j;
+          param0.field_j.field_p = param0;
+          param0.field_p.field_j = param0;
+          param0.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "uk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "uk.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static boolean a(boolean param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0) {
-          L0: {
-            field_b = (int[]) null;
-            if (param1 != (-param1 & param1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (param1 != (-param1 & param1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (!param0) {
+          return param1 == (-param1 & param1) ? true : false;
         }
+        field_b = (int[]) null;
+        return param1 == (-param1 & param1) ? true : false;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
@@ -127,11 +103,11 @@ final class uk {
         this.field_c = new ta[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new ta();
-            var3 = dupTemp$0;
-            this.field_c[var2] = dupTemp$0;
-            var3.field_p = var3;
-            var3.field_j = var3;
+          dupTemp$0 = new ta();
+          var3 = dupTemp$0;
+          this.field_c[var2] = dupTemp$0;
+          var3.field_p = var3;
+          var3.field_j = var3;
         }
     }
 

@@ -9,15 +9,15 @@ final class pb extends wl {
     public static void b(boolean param0) {
         field_i = null;
         if (param0) {
-            pb.b(false);
+          pb.b(false);
         }
     }
 
     pb(byte[] param0) {
         try {
-            this.field_j = param0;
+          this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -8,9 +8,9 @@ final class be {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -103) {
-            field_a = (String) null;
-            field_b = null;
-            return;
+          field_a = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -23,35 +23,20 @@ final class be {
         RuntimeException var2_ref = null;
         var3 = EscapeVector.field_A;
         try {
-          L0: {
-            L1: {
-              if (param1 == 17205) {
-                break L1;
-              } else {
-                be.a((byte) 71);
-                break L1;
-              }
-            }
-            var4 = (bd) ((Object) rd.field_b.a(false));
-            L2: while (true) {
-              if (var4 == null) {
-                var2 = nf.field_w.a(false);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    q.c(param0, (byte) -63);
-                    var2 = nf.field_w.b((byte) 70);
-                    continue L3;
-                  }
-                }
-              } else {
-                r.a(-118, var4, param0);
-                var4 = (bd) ((Object) rd.field_b.b((byte) 70));
-                continue L2;
-              }
-            }
+          if (param1 != 17205) {
+            be.a((byte) 71);
           }
+          var4 = (bd) (rd.field_b.a(false));
+          while (var4 != null) {
+            r.a(-118, var4, param0);
+            var4 = (bd) (rd.field_b.b((byte) 70));
+          }
+          var2 = nf.field_w.a(false);
+          while (var2 != null) {
+            q.c(param0, (byte) -63);
+            var2 = nf.field_w.b((byte) 70);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

@@ -11,9 +11,9 @@ final class df {
 
     final static int a(boolean param0) {
         if (!param0) {
-            return 51;
+          return 51;
         }
-        return new Date().getYear() - -1900;
+        return new Date().getYear() + 1900;
     }
 
     public final String toString() {
@@ -25,7 +25,7 @@ final class df {
         field_c = null;
         field_b = null;
         if (param0 > -106) {
-            df.a(true);
+          df.a(true);
         }
     }
 

@@ -15,13 +15,9 @@ final class qd extends vd {
     final void a(float param0, int[] param1, int param2, int[] param3, byte param4) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
         StringBuilder stackIn_28_1 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int[] var6 = null;
         RuntimeException var6_ref = null;
@@ -31,122 +27,62 @@ final class qd extends vd {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
+        int var7Lifetime1;
         var8 = HoldTheLine.field_D;
         try {
-          L0: {
-            if (-2 >= (param2 ^ -1)) {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param2 >= 1) {
+            return;
+          }
+          if (-1.0f > param0) {
+            param0 = -1.0f;
+          }
+          if (param4 != 49) {
+            field_j = (oa) null;
+          }
+          if (1.0f < param0) {
+            param0 = 1.0f;
+          }
+          var9 = new int[param1.length + param3.length];
+          var12 = var9;
+          var11 = var12;
+          var6 = var11;
+          for (var7 = 0; param3.length > var7; var7++) {
+            var9[var7] = param3[var7];
+          }
+          var10 = 0;
+          var7Lifetime1 = var10;
+          while (var10 < param1.length / 2) {
+            var6[param3.length + 2 * var10] = param1[-2 + (param1.length - 2 * var10)];
+            var6[var10 * 2 + param3.length + 1] = param1[-(2 * var10) + (-1 + param1.length)];
+            var10++;
+          }
+          if (param0 != 0.0f) {
+            ad.a(var12, this.field_n, (byte) 101, param0, this.field_m);
+          } else {
+            if (this.field_n != 1.0f) {
+              jh.a(this.field_m, (byte) 51, this.field_n, var12);
             } else {
-              L1: {
-                if (-1.0f > param0) {
-                  param0 = -1.0f;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (param4 == 49) {
-                  break L2;
-                } else {
-                  field_j = (oa) null;
-                  break L2;
-                }
-              }
-              L3: {
-                if (1.0f >= param0) {
-                  break L3;
-                } else {
-                  param0 = 1.0f;
-                  break L3;
-                }
-              }
-              var9 = new int[param1.length + param3.length];
-              var12 = var9;
-              var11 = var12;
-              var6 = var11;
-              var7 = 0;
-              L4: while (true) {
-                if (param3.length <= var7) {
-                  var10 = 0;
-                  var7 = var10;
-                  L5: while (true) {
-                    if (var10 >= param1.length / 2) {
-                      L6: {
-                        if (param0 != 0.0f) {
-                          ad.a(var12, this.field_n, (byte) 101, param0, this.field_m);
-                          break L6;
-                        } else {
-                          if (this.field_n != 1.0f) {
-                            jh.a(this.field_m, (byte) 51, this.field_n, var12);
-                            break L6;
-                          } else {
-                            qg.a(this.field_m, (byte) 126, var12);
-                            break L6;
-                          }
-                        }
-                      }
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var6[param3.length - -(2 * var10)] = param1[-2 + (param1.length - 2 * var10)];
-                      var6[var10 * 2 + param3.length - -1] = param1[-(2 * var10) + (-1 + param1.length)];
-                      var10++;
-                      continue L5;
-                    }
-                  }
-                } else {
-                  var9[var7] = param3[var7];
-                  var7++;
-                  continue L4;
-                }
-              }
+              qg.a(this.field_m, (byte) 126, var12);
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var6_ref = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var6_ref);
-
-            stackIn_25_1 = new StringBuilder().append("qd.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L7;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L7;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_25_0 = var6_ref;
+          stackIn_25_1 = new StringBuilder().append("qd.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_28_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L8;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L8;
-            }
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_26_0), stackIn_29_2 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw kk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -156,73 +92,59 @@ final class qd extends vd {
         field_l = null;
         field_j = null;
         field_f = null;
-        int var1 = 38 % ((param0 - -31) / 49);
+        int var1 = 38 % ((param0 + 31) / 49);
     }
 
     final static void a(int param0, int param1) {
-        L0: {
-          L1: {
-            if (null == bd.field_Q) {
-              break L1;
-            } else {
-              if (i.field_k[param1] == null) {
-                break L1;
-              } else {
-                lc.field_d = null;
-                gn.a(true, i.field_k[param1], (byte) 69, 30);
-                break L0;
-              }
-            }
-          }
+        if (null != bd.field_Q &&
+          i.field_k[param1] != null) {
+          lc.field_d = null;
+          gn.a(true, i.field_k[param1], (byte) 69, 30);
+        } else {
           bi.field_e = 0;
           ab.field_jb = param1;
-          break L0;
         }
-        L2: {
-          if (param0 == 20830) {
-            break L2;
-          } else {
-            field_l = (int[]) null;
-            break L2;
-          }
+        if (param0 != 20830) {
+          field_l = (int[]) null;
         }
     }
 
     final static void d(int param0) {
         int var1_int = 0;
         int var2 = HoldTheLine.field_D;
+        int var1_intLifetime1;
         try {
-            oi.field_e.b((byte) 45);
-            for (var1_int = 0; -33 < (var1_int ^ -1); var1_int++) {
-                bf.field_b[var1_int] = 0L;
-            }
-            if (param0 <= 23) {
-                field_g = (String) null;
-            }
-            for (var1_int = 0; -33 < (var1_int ^ -1); var1_int++) {
-                lb.field_w[var1_int] = 0L;
-            }
-            uj.field_h = 0;
+          oi.field_e.b((byte) 45);
+          for (var1_int = 0; var1_int < 32; var1_int++) {
+            bf.field_b[var1_int] = 0L;
+          }
+          if (param0 <= 23) {
+            field_g = (String) null;
+          }
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+            lb.field_w[var1_intLifetime1] = 0L;
+          }
+          uj.field_h = 0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "qd.B(" + param0 + ')');
         }
     }
 
     qd(hj param0) {
         try {
-            this.field_m = param0;
-            this.field_n = 1.0f;
+          this.field_m = param0;
+          this.field_n = 1.0f;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     qd(hj param0, float param1) {
         try {
-            this.field_n = param1;
-            this.field_m = param0;
+          this.field_n = param1;
+          this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

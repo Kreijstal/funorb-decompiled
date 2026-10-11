@@ -28,13 +28,9 @@ final class ph {
         int stackIn_65_0 = 0;
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
         String stackIn_69_2 = null;
         StringBuilder stackIn_71_1 = null;
-        StringBuilder stackIn_72_1 = null;
         String stackIn_72_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -42,300 +38,188 @@ final class ph {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var10Lifetime3;
+        int var10Lifetime4;
+        int var10Lifetime5;
+        int var10Lifetime6;
+        int var10Lifetime7;
         var11 = EscapeVector.field_A;
         try {
-          L0: {
-            if (param4 == 0) {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var7_int = 0;
-              if (param1) {
-                param4 = param4 + param2;
-                var8 = param3;
-                L1: while (true) {
-                  L2: {
-                    var9 = param5[var8];
-                    if (0 > var9) {
-                      var7_int = this.field_c[var7_int];
-                      break L2;
-                    } else {
-                      var7_int++;
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    L4: {
-                      dupTemp$0 = this.field_c[var7_int];
-                      var10 = dupTemp$0;
-                      if (dupTemp$0 >= 0) {
-                        break L4;
-                      } else {
-                        incrementValue$1 = param2;
-                        param2++;
-                        param0[incrementValue$1] = (byte)(var10 ^ -1);
-                        if (param2 >= param4) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L4;
-                        }
-                      }
-                    }
-                    L5: {
-                      if ((64 & var9) != 0) {
-                        var7_int = this.field_c[var7_int];
-                        break L5;
-                      } else {
-                        var7_int++;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      dupTemp$2 = this.field_c[var7_int];
-                      var10 = dupTemp$2;
-                      if (dupTemp$2 < 0) {
-                        incrementValue$3 = param2;
-                        param2++;
-                        param0[incrementValue$3] = (byte)(var10 ^ -1);
-                        if (param4 <= param2) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L6;
-                        }
-                      } else {
-                        break L6;
-                      }
-                    }
-                    L7: {
-                      if (0 == (var9 & 32)) {
-                        var7_int++;
-                        break L7;
-                      } else {
-                        var7_int = this.field_c[var7_int];
-                        break L7;
-                      }
-                    }
-                    L8: {
-                      dupTemp$4 = this.field_c[var7_int];
-                      var10 = dupTemp$4;
-                      if (0 > dupTemp$4) {
-                        incrementValue$5 = param2;
-                        param2++;
-                        param0[incrementValue$5] = (byte)(var10 ^ -1);
-                        if (param2 >= param4) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L8;
-                        }
-                      } else {
-                        break L8;
-                      }
-                    }
-                    L9: {
-                      if ((var9 & 16) == 0) {
-                        var7_int++;
-                        break L9;
-                      } else {
-                        var7_int = this.field_c[var7_int];
-                        break L9;
-                      }
-                    }
-                    L10: {
-                      dupTemp$6 = this.field_c[var7_int];
-                      var10 = dupTemp$6;
-                      if (-1 >= (dupTemp$6 ^ -1)) {
-                        break L10;
-                      } else {
-                        incrementValue$7 = param2;
-                        param2++;
-                        param0[incrementValue$7] = (byte)(var10 ^ -1);
-                        if (param4 <= param2) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L10;
-                        }
-                      }
-                    }
-                    L11: {
-                      if (-1 != (var9 & 8 ^ -1)) {
-                        var7_int = this.field_c[var7_int];
-                        break L11;
-                      } else {
-                        var7_int++;
-                        break L11;
-                      }
-                    }
-                    L12: {
-                      dupTemp$8 = this.field_c[var7_int];
-                      var10 = dupTemp$8;
-                      if (dupTemp$8 >= 0) {
-                        break L12;
-                      } else {
-                        incrementValue$9 = param2;
-                        param2++;
-                        param0[incrementValue$9] = (byte)(var10 ^ -1);
-                        if (param4 <= param2) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L12;
-                        }
-                      }
-                    }
-                    L13: {
-                      if ((var9 & 4) != 0) {
-                        var7_int = this.field_c[var7_int];
-                        break L13;
-                      } else {
-                        var7_int++;
-                        break L13;
-                      }
-                    }
-                    L14: {
-                      dupTemp$10 = this.field_c[var7_int];
-                      var10 = dupTemp$10;
-                      if (-1 >= (dupTemp$10 ^ -1)) {
-                        break L14;
-                      } else {
-                        incrementValue$11 = param2;
-                        param2++;
-                        param0[incrementValue$11] = (byte)(var10 ^ -1);
-                        if (param2 >= param4) {
-                          break L3;
-                        } else {
-                          var7_int = 0;
-                          break L14;
-                        }
-                      }
-                    }
-                    L15: {
-                      if (0 != (2 & var9)) {
-                        var7_int = this.field_c[var7_int];
-                        break L15;
-                      } else {
-                        var7_int++;
-                        break L15;
-                      }
-                    }
-                    L16: {
-                      dupTemp$12 = this.field_c[var7_int];
-                      var10 = dupTemp$12;
-                      if (-1 >= (dupTemp$12 ^ -1)) {
-                        break L16;
-                      } else {
-                        incrementValue$13 = param2;
-                        param2++;
-                        param0[incrementValue$13] = (byte)(var10 ^ -1);
-                        if (param2 < param4) {
-                          var7_int = 0;
-                          break L16;
-                        } else {
-                          return -param3 + 1 + var8;
-                        }
-                      }
-                    }
-                    L17: {
-                      if (-1 != (var9 & 1 ^ -1)) {
-                        var7_int = this.field_c[var7_int];
-                        break L17;
-                      } else {
-                        var7_int++;
-                        break L17;
-                      }
-                    }
-                    L18: {
-                      dupTemp$14 = this.field_c[var7_int];
-                      var10 = dupTemp$14;
-                      if (dupTemp$14 < 0) {
-                        incrementValue$15 = param2;
-                        param2++;
-                        param0[incrementValue$15] = (byte)(var10 ^ -1);
-                        if (param4 > param2) {
-                          var7_int = 0;
-                          break L18;
-                        } else {
-                          break L3;
-                        }
-                      } else {
-                        break L18;
-                      }
-                    }
-                    var8++;
-                    continue L1;
-                  }
-                  stackIn_65_0 = -param3 + 1 + var8;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                stackIn_7_0 = 81;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param4 == 0) {
+            stackIn_4_0 = 0;
+            return stackIn_4_0;
           }
+          var7_int = 0;
+          if (!param1) {
+            stackIn_7_0 = 81;
+            return stackIn_7_0;
+          }
+          param4 = param4 + param2;
+          var8 = param3;
+          L2: while (true) {
+            var9 = param5[var8];
+            if (0 > var9) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$0 = this.field_c[var7_int];
+            var10 = dupTemp$0;
+            if (dupTemp$0 < 0) {
+              incrementValue$1 = param2;
+              param2++;
+              param0[incrementValue$1] = (byte)(~var10);
+              if (param2 >= param4) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if ((64 & var9) != 0) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$2 = this.field_c[var7_int];
+            var10Lifetime1 = dupTemp$2;
+            if (dupTemp$2 < 0) {
+              incrementValue$3 = param2;
+              param2++;
+              param0[incrementValue$3] = (byte)(~var10Lifetime1);
+              if (param4 <= param2) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if (0 == (var9 & 32)) {
+              var7_int++;
+            } else {
+              var7_int = this.field_c[var7_int];
+            }
+            dupTemp$4 = this.field_c[var7_int];
+            var10Lifetime2 = dupTemp$4;
+            if (0 > dupTemp$4) {
+              incrementValue$5 = param2;
+              param2++;
+              param0[incrementValue$5] = (byte)(~var10Lifetime2);
+              if (param2 >= param4) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if ((var9 & 16) == 0) {
+              var7_int++;
+            } else {
+              var7_int = this.field_c[var7_int];
+            }
+            dupTemp$6 = this.field_c[var7_int];
+            var10Lifetime3 = dupTemp$6;
+            if (dupTemp$6 < 0) {
+              incrementValue$7 = param2;
+              param2++;
+              param0[incrementValue$7] = (byte)(~var10Lifetime3);
+              if (param4 <= param2) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if ((var9 & 8) != 0) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$8 = this.field_c[var7_int];
+            var10Lifetime4 = dupTemp$8;
+            if (dupTemp$8 < 0) {
+              incrementValue$9 = param2;
+              param2++;
+              param0[incrementValue$9] = (byte)(~var10Lifetime4);
+              if (param4 <= param2) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if ((var9 & 4) != 0) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$10 = this.field_c[var7_int];
+            var10Lifetime5 = dupTemp$10;
+            if (dupTemp$10 < 0) {
+              incrementValue$11 = param2;
+              param2++;
+              param0[incrementValue$11] = (byte)(~var10Lifetime5);
+              if (param2 >= param4) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            if (0 != (2 & var9)) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$12 = this.field_c[var7_int];
+            var10Lifetime6 = dupTemp$12;
+            if (dupTemp$12 < 0) {
+              incrementValue$13 = param2;
+              param2++;
+              param0[incrementValue$13] = (byte)(~var10Lifetime6);
+              if (param2 >= param4) {
+                return -param3 + 1 + var8;
+              }
+              var7_int = 0;
+            }
+            if ((var9 & 1) != 0) {
+              var7_int = this.field_c[var7_int];
+            } else {
+              var7_int++;
+            }
+            dupTemp$14 = this.field_c[var7_int];
+            var10Lifetime7 = dupTemp$14;
+            if (dupTemp$14 < 0) {
+              incrementValue$15 = param2;
+              param2++;
+              param0[incrementValue$15] = (byte)(~var10Lifetime7);
+              if (param4 <= param2) {
+                break L2;
+              }
+              var7_int = 0;
+            }
+            var8++;
+            continue;
+
+          }
+          stackIn_65_0 = -param3 + 1 + var8;
+          return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L19: {
-            var7 = decompiledCaughtException;
-            stackIn_68_0 = (RuntimeException) (var7);
-
-            stackIn_68_1 = new StringBuilder().append("ph.A(");
-
-            if (param0 == null) {
-              stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackIn_69_2 = "null";
-              break L19;
-            } else {
-              stackIn_69_0 = (RuntimeException) ((Object) stackIn_68_0);
-              stackIn_69_1 = (StringBuilder) ((Object) stackIn_68_1);
-              stackIn_69_2 = "{...}";
-              break L19;
-            }
-          }
-          L20: {
-
-
-            stackIn_71_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackIn_72_2 = "null";
-              break L20;
-            } else {
-              stackIn_69_0 = (RuntimeException) ((Object) stackIn_69_0);
-              stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
-              stackIn_72_2 = "{...}";
-              break L20;
-            }
-          }
-          throw t.a((Throwable) ((Object) stackIn_69_0), stackIn_72_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var7 = decompiledCaughtException;
+          stackIn_68_0 = var7;
+          stackIn_68_1 = new StringBuilder().append("ph.A(");
+          if (param0 == null) {
+            stackIn_69_2 = "null";
           } else {
-            return stackIn_65_0;
+            stackIn_69_2 = "{...}";
           }
+          stackIn_71_1 = ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_72_2 = "null";
+          } else {
+            stackIn_72_2 = "{...}";
+          }
+          throw t.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(')').toString());
         }
     }
 
     final static ed[] a(int param0, int param1, int param2, int param3) {
-        if (param1 != 1) {
-          ph.a((byte) 124);
-          return ob.a(param2, param3, 1, 1, param0);
-        } else {
+        if (param1 == 1) {
           return ob.a(param2, param3, 1, 1, param0);
         }
+        ph.a((byte) 124);
+        return ob.a(param2, param3, 1, 1, param0);
     }
 
     private ph() throws Throwable {
@@ -344,9 +228,9 @@ final class ph {
 
     public static void a(byte param0) {
         if (param0 != 106) {
-            field_b = (fn) null;
-            field_b = null;
-            return;
+          field_b = (fn) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

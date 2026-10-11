@@ -24,7 +24,7 @@ final class pl extends ld {
         field_m = null;
         field_i = null;
         if (param0 != 256) {
-            return;
+          return;
         }
         field_s = null;
         field_j = null;
@@ -33,7 +33,7 @@ final class pl extends ld {
 
     final fk a(byte param0) {
         if (param0 != 32) {
-            return (fk) null;
+          return (fk) null;
         }
         return ui.field_a;
     }
@@ -43,50 +43,33 @@ final class pl extends ld {
     }
 
     final static int[] d(int param0) {
-        if (!(null == bk.field_r)) {
-            return bk.field_r.c(0);
+        if (null != bk.field_r) {
+          return bk.field_r.c(0);
         }
         int var1 = -48 % ((param0 - 76) / 47);
         return null;
     }
 
     static {
-        $cfr$clinit: {
-            long var0;
-            int var2;
-            int var3;
-            field_l = new long[256];
-            var2 = 0;
-            L0: while (true) {
-              if ((var2 ^ -1) <= -257) {
-                field_s = new String[]{"Retrieval - Normal", "Retrieval - Hard", "Retribution", "Simulator"};
-                field_m = new om(4, 1, 1, 1);
-                field_i = "Type your password again to make sure it's correct";
-                field_k = new String[]{"fuel", "crate", "turret", "magnet", "repeller", "tnt", "laser_left", "laser_right", "barrier", "powerup_shield", "powerup_triple_shot", "powerup_thrust", "powerup_one_rockbuster", "powerup_five_rockbusters"};
-                field_p = "Simulator objectives";
-                break $cfr$clinit;
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L1: while (true) {
-                  if (8 <= var3) {
-                    field_l[var2] = var0;
-                    var2++;
-                    continue L0;
-                  } else {
-                    if ((var0 & 1L ^ -1L) == -2L) {
-                      var0 = var0 >>> 541030913 ^ -3932672073523589310L;
-                      var3++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var2 = 0;
+        int var3 = 0;
+        long var0;
+        field_l = new long[256];
+        for (var2 = 0; var2 < 256; var2++) {
+          var0 = (long)var2;
+          for (var3 = 0; 8 > var3; var3++) {
+            if ((var0 & 1L) == 1L) {
+              var0 = var0 >>> 1 ^ -3932672073523589310L;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_l[var2] = var0;
         }
+        field_s = new String[]{"Retrieval - Normal", "Retrieval - Hard", "Retribution", "Simulator"};
+        field_m = new om(4, 1, 1, 1);
+        field_i = "Type your password again to make sure it's correct";
+        field_k = new String[]{"fuel", "crate", "turret", "magnet", "repeller", "tnt", "laser_left", "laser_right", "barrier", "powerup_shield", "powerup_triple_shot", "powerup_thrust", "powerup_one_rockbuster", "powerup_five_rockbusters"};
+        field_p = "Simulator objectives";
     }
 }

@@ -10,15 +10,13 @@ final class vs {
     static String field_a;
 
     final static gb a(byte param0, int param1) {
-        gb var2;
-        var2 = new gb();
+        gb var2 = new gb();
         vl.field_o.a((byte) -113, var2);
         bo.a(param1, 2);
-        if (param0 != 88) {
-          return (gb) null;
-        } else {
+        if (param0 == 88) {
           return var2;
         }
+        return (gb) null;
     }
 
     public static void a(int param0) {
@@ -38,35 +36,20 @@ final class vs {
         RuntimeException var2_ref = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (lq) ((Object) rs.field_Bb.d(0));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param1 <= -18) {
-                    break L2;
-                  } else {
-                    field_b = (String) null;
-                    break L2;
-                  }
-                }
-                var2 = vl.field_o.d(0);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    bo.a(param0, 2);
-                    var2 = vl.field_o.a((byte) -71);
-                    continue L3;
-                  }
-                }
-              } else {
-                wj.a(320, param0, var4);
-                var4 = (lq) ((Object) rs.field_Bb.a((byte) -71));
-                continue L1;
-              }
-            }
+          var4 = (lq) (rs.field_Bb.d(0));
+          while (var4 != null) {
+            wj.a(320, param0, var4);
+            var4 = (lq) (rs.field_Bb.a((byte) -71));
           }
+          if (param1 > -18) {
+            field_b = (String) null;
+          }
+          var2 = vl.field_o.d(0);
+          while (var2 != null) {
+            bo.a(param0, 2);
+            var2 = vl.field_o.a((byte) -71);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

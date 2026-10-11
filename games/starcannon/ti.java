@@ -14,28 +14,26 @@ abstract class ti {
 
     final static int b(int param0, int param1) {
         if (param1 != 2047) {
-            field_f = (vi) null;
-            return gl.field_b[param0 & 2047];
+          field_f = (vi) null;
+          return gl.field_b[param0 & 2047];
         }
         return gl.field_b[param0 & 2047];
     }
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 13) {
-          ti.b(-127, 29);
-          field_b = null;
-          field_g = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 13) {
           field_b = null;
           field_g = null;
           field_a = null;
           field_e = null;
           return;
         }
+        ti.b(-127, 29);
+        field_b = null;
+        field_g = null;
+        field_a = null;
+        field_e = null;
     }
 
     final static void a(int param0, int param1) {
@@ -45,23 +43,16 @@ abstract class ti {
         RuntimeException decompiledCaughtException = null;
         var3 = StarCannon.field_A;
         try {
-          L0: {
-            var4 = (rh) ((Object) a.field_f.c(-3905));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param0 > 32) {
-                  break L0;
-                } else {
-                  field_d = false;
-                  return;
-                }
-              } else {
-                ha.a(param1, 121, var4);
-                var4 = (rh) ((Object) a.field_f.a(-16913));
-                continue L1;
-              }
-            }
+          var4 = (rh) (a.field_f.c(-3905));
+          while (var4 != null) {
+            ha.a(param1, 121, var4);
+            var4 = (rh) (a.field_f.a(-16913));
           }
+          if (param0 > 32) {
+            return;
+          }
+          field_d = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

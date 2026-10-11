@@ -11,20 +11,21 @@ final class gi {
     static boolean field_g;
 
     final static hl[] a(int param0, int param1) {
-        hl[] var2;
-        hl[] var3;
-        if (param0 != 4477) {
-          field_g = false;
-          var3 = new hl[9];
-          var2 = var3;
-          var3[4] = oj.a(0, param1, 64);
-          return var2;
-        } else {
+        hl[] var3 = null;
+        hl[] var2 = null;
+        hl[] var3Lifetime1;
+        hl[] var2Lifetime1;
+        if (param0 == 4477) {
           var3 = new hl[9];
           var2 = var3;
           var3[4] = oj.a(0, param1, 64);
           return var2;
         }
+        field_g = false;
+        var3Lifetime1 = new hl[9];
+        var2Lifetime1 = var3Lifetime1;
+        var3Lifetime1[4] = oj.a(0, param1, 64);
+        return var2Lifetime1;
     }
 
     final static void a(int param0) {
@@ -34,30 +35,30 @@ final class gi {
         int var6 = StarCannon.field_A;
         int var1_int = ki.field_j;
         int var2 = ki.field_f;
-        for (var3 = -1 + var2 * var1_int; (var3 ^ -1) <= -1; var3--) {
-            var4 = ki.field_a[var3];
-            var5 = 0;
-            if ((var4 & 8388608) == 8388608) {
-                var5 = var5 | var4 & 8323072;
-            }
-            if ((var4 & 32768 ^ -1) == -32769) {
-                var5 = var5 | var4 & 32512;
-            }
-            if ((128 & var4) == 128) {
-                var5 = var5 | var4 & 127;
-            }
-            bi.field_a.field_B[var3] = var5 << -814369855;
+        for (var3 = -1 + var2 * var1_int; var3 >= 0; var3--) {
+          var4 = ki.field_a[var3];
+          var5 = 0;
+          if ((var4 & 8388608) == 8388608) {
+            var5 = var5 | var4 & 8323072;
+          }
+          if ((var4 & 32768) == 32768) {
+            var5 = var5 | var4 & 32512;
+          }
+          if ((128 & var4) == 128) {
+            var5 = var5 | var4 & 127;
+          }
+          bi.field_a.field_B[var3] = var5 << 1;
         }
         jj.field_A.e();
         sc.a(3, bi.field_a.field_B, 3, 30603);
         hg.field_y.b(33);
         if (param0 != 4) {
-            return;
+          return;
         }
         try {
-            jj.field_A.b(0, 0, 640, 480, se.field_u);
+          jj.field_A.b(0, 0, 640, 480, se.field_u);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
         }
     }
 
@@ -67,15 +68,15 @@ final class gi {
         field_b = null;
         field_a = null;
         if (param0 != 640) {
-            gi.a(-22, -65);
+          gi.a(-22, -65);
         }
     }
 
     gi(hl[] param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

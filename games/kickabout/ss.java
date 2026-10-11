@@ -17,16 +17,7 @@ final class ss {
         field_b = null;
         field_i = null;
         field_f = null;
-        if (param0 != -90) {
-          ss.a((byte) -76, 109, 26, -32);
-          field_g = null;
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          field_h = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -90) {
           field_g = null;
           field_d = null;
           field_e = null;
@@ -35,86 +26,48 @@ final class ss {
           field_c = null;
           return;
         }
+        ss.a((byte) -76, 109, 26, -32);
+        field_g = null;
+        field_d = null;
+        field_e = null;
+        field_a = null;
+        field_h = null;
+        field_c = null;
     }
 
     final static void a(String param0, byte param1, String param2) {
         try {
-            ql.a(false, param0, param2, 3960);
-            if (param1 >= -114) {
-                field_h = (String) null;
-            }
+          ql.a(false, param0, param2, 3960);
+          if (param1 >= -114) {
+            field_h = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ss.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(byte param0, int param1, int param2, int param3) {
-        if (param0 == 88) {
-          if (null != wi.field_v) {
-            if (!wi.field_v.a((byte) -52)) {
-              if (null != ck.field_b) {
-                if (!ck.field_b.h((byte) 37)) {
-                  if (!br.a(param0 ^ 62)) {
-                    if (ni.a(param3, param2, param1, -20859)) {
-                      return true;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  ck.field_b = null;
-                  da.b(85);
-                  return true;
-                }
-              } else {
-                if (!br.a(param0 ^ 62)) {
-                  if (ni.a(param3, param2, param1, -20859)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              }
-            } else {
-              da.b(param0 ^ 21);
-              return true;
-            }
-          } else {
-            if (null != ck.field_b) {
-              if (!ck.field_b.h((byte) 37)) {
-                if (!br.a(param0 ^ 62)) {
-                  if (ni.a(param3, param2, param1, -20859)) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                ck.field_b = null;
-                da.b(85);
-                return true;
-              }
-            } else {
-              if (!br.a(param0 ^ 62)) {
-                if (ni.a(param3, param2, param1, -20859)) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                return true;
-              }
-            }
-          }
-        } else {
+        if (param0 != 88) {
           return true;
         }
+        if (null != wi.field_v &&
+          wi.field_v.a((byte) -52)) {
+          da.b(param0 ^ 21);
+          return true;
+        }
+        if (null != ck.field_b &&
+          ck.field_b.h((byte) 37)) {
+          ck.field_b = null;
+          da.b(85);
+          return true;
+        }
+        if (br.a(param0 ^ 62)) {
+          return true;
+        }
+        if (ni.a(param3, param2, param1, -20859)) {
+          return true;
+        }
+        return false;
     }
 
     static {

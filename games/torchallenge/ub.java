@@ -37,7 +37,6 @@ final class ub {
         int stackIn_25_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -50,139 +49,63 @@ final class ub {
         int var12 = 0;
         int var13 = 0;
         int[][] var17 = null;
+        int var7Lifetime1;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var4_int = param2;
-            var5 = param3 + var4_int;
-            if (param1 > 30) {
-              L1: {
-                var6 = 2048;
-                if (var5 < var6) {
-                  break L1;
-                } else {
-                  var5 = var5 - var6;
-                  break L1;
-                }
-              }
-              var7 = -1;
-              var17 = pa.field_v[param0];
-              var9 = s.field_i[param0];
-              var13 = 0;
-              var7 = var13;
-              L2: while (true) {
-                if (var9 <= var13) {
-                  stackIn_33_0 = -1;
-                  decompiledRegionSelector0 = 4;
-                  break L0;
-                } else {
-                  L3: {
-                    var10 = 32 * var17[var13][0];
-                    if (var10 < var6) {
-                      break L3;
-                    } else {
-                      var10 = var10 - var6;
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    var11 = (var17[var13][1] - -1) * 32;
-                    if (var6 <= var11) {
-                      var11 = var11 - var6;
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    L6: {
-                      if (var10 > var11) {
-                        break L6;
-                      } else {
-                        if (var4_int > var5) {
-                          break L6;
-                        } else {
-                          if (var10 > var5) {
-                            break L5;
-                          } else {
-                            if (var4_int > var11) {
-                              break L5;
-                            } else {
-                              stackIn_18_0 = var13;
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    L7: {
-                      if (var10 < var11) {
-                        break L7;
-                      } else {
-                        if (var5 < var4_int) {
-                          break L7;
-                        } else {
-                          L8: {
-                            if (var5 >= var10) {
-                              break L8;
-                            } else {
-                              if (var4_int > var11) {
-                                break L5;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          stackIn_25_0 = var13;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      }
-                    }
-                    if (var11 > var10) {
-                      break L5;
-                    } else {
-                      if (var4_int >= var5) {
-                        stackIn_30_0 = var13;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  var13++;
-                  continue L2;
-                }
-              }
-            } else {
-              stackIn_3_0 = 81;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4_int = param2;
+          var5 = param3 + var4_int;
+          if (param1 <= 30) {
+            stackIn_3_0 = 81;
+            return stackIn_3_0;
           }
+          var6 = 2048;
+          if (var5 >= var6) {
+            var5 = var5 - var6;
+          }
+          var7 = -1;
+          var17 = pa.field_v[param0];
+          var9 = s.field_i[param0];
+          var13 = 0;
+          var7Lifetime1 = var13;
+          while (var9 > var13) {
+            var10 = 32 * var17[var13][0];
+            if (var10 >= var6) {
+              var10 = var10 - var6;
+            }
+            var11 = (var17[var13][1] + 1) * 32;
+            if (var6 <= var11) {
+              var11 = var11 - var6;
+            }
+            boolean decompiledFrameRemainder0 = true;
+            if ((var10 <= var11 &&
+              var4_int <= var5) &&
+              (decompiledFrameRemainder0 = !(var10 > var5)) &&
+              (decompiledFrameRemainder0 = !(var4_int > var11))) {
+              stackIn_18_0 = var13;
+              return stackIn_18_0;
+            }
+            if (decompiledFrameRemainder0) {
+              if ((var10 >= var11 &&
+                var5 >= var4_int) &&
+                (decompiledFrameRemainder0 = (!(var5 < var10) ||
+                !(var4_int > var11)))) {
+                stackIn_25_0 = var13;
+                return stackIn_25_0;
+              }
+              if ((decompiledFrameRemainder0) && (var11 <= var10 &&
+                var4_int >= var5)) {
+                stackIn_30_0 = var13;
+                return stackIn_30_0;
+              }
+            }
+            var13++;
+          }
+          stackIn_33_0 = -1;
+          return stackIn_33_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var4), "ub.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_18_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_25_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_30_0;
-              } else {
-                return stackIn_33_0;
-              }
-            }
-          }
         }
     }
 
@@ -195,8 +118,8 @@ final class ub {
         field_n = -1;
         field_l = new int[]{96, 96, 96, 96, 96, 96};
         field_i = false;
-        field_a = new int[]{field_l[0] + field_b[0] >> 1626538849, field_l[1] + field_b[1] >> -2058231839, field_l[2] + field_b[2] >> 1807388961, field_l[3] - -field_b[3] >> 1177122177, field_l[4] - -field_b[4] >> -1139605151, field_b[5] + field_l[5] >> 2006380481};
+        field_a = new int[]{field_l[0] + field_b[0] >> 1, field_l[1] + field_b[1] >> 1, field_l[2] + field_b[2] >> 1, field_l[3] + field_b[3] >> 1, field_l[4] + field_b[4] >> 1, field_b[5] + field_l[5] >> 1};
         field_j = 2;
-        field_k = new int[]{-field_l[0] + field_b[0] >> 481525185, field_b[1] - field_l[1] >> 432480833, field_b[2] - field_l[2] >> 1409236449, field_b[3] - field_l[3] >> -1232959775, field_b[4] + -field_l[4] >> 2112182337, field_b[5] - field_l[5] >> -73940127};
+        field_k = new int[]{-field_l[0] + field_b[0] >> 1, field_b[1] - field_l[1] >> 1, field_b[2] - field_l[2] >> 1, field_b[3] - field_l[3] >> 1, field_b[4] - field_l[4] >> 1, field_b[5] - field_l[5] >> 1};
     }
 }

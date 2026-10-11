@@ -8,28 +8,12 @@ final class ri {
     static String field_b;
 
     final static boolean b(byte param0) {
-        int stackIn_6_0 = 0;
-        if (param0 >= 5) {
-          L0: {
-            L1: {
-              if (cd.field_e < 10) {
-                break L1;
-              } else {
-                if (13 > g.field_A) {
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L0;
-                }
-              }
-            }
-            stackIn_6_0 = 0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
+        boolean stackIn_6_0 = false;
+        if (param0 < 5) {
           return false;
         }
+        stackIn_6_0 = (cd.field_e >= 10) && (13 <= g.field_A);
+        return stackIn_6_0;
     }
 
     final static void a(byte param0) {
@@ -37,24 +21,25 @@ final class ri {
         kc var2 = null;
         int var3 = 0;
         int var4 = Main.field_T;
+        int var3Lifetime1;
         try {
-            var1 = new kc(540, 140);
-            dl.a(-78, var1);
-            jb.b();
-            vj.d();
-            h.field_F = 0;
-            de.b(30);
-            var2 = var1.b();
-            for (var3 = 0; (var3 ^ -1) > -16; var3++) {
-                var2.d(-2, -2, 16777215);
-                vj.c(4, 4, 0, 0, 540, 140);
-            }
-            rc.field_i.c();
-            var3 = -29 / ((param0 - 1) / 58);
-            var1.c(0, 0);
-            gg.a(14756);
+          var1 = new kc(540, 140);
+          dl.a(-78, var1);
+          jb.b();
+          vj.d();
+          h.field_F = 0;
+          de.b(30);
+          var2 = var1.b();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.d(-2, -2, 16777215);
+            vj.c(4, 4, 0, 0, 540, 140);
+          }
+          rc.field_i.c();
+          var3Lifetime1 = -29 / ((param0 - 1) / 58);
+          var1.c(0, 0);
+          gg.a(14756);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');
         }
     }
 
@@ -62,7 +47,7 @@ final class ri {
         field_b = null;
         field_d = null;
         if (param0 != -2) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         field_c = null;
         field_a = null;

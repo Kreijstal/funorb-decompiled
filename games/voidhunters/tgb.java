@@ -9,13 +9,13 @@ final class tgb extends abb {
         field_c = null;
         field_d = null;
         if (param0 != -58) {
-            tgb.b((byte) 51);
+          tgb.b((byte) 51);
         }
     }
 
     final long a(byte param0) {
         if (param0 != -110) {
-            return 75L;
+          return 75L;
         }
         return System.nanoTime();
     }

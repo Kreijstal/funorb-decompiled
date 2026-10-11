@@ -10,39 +10,29 @@ final class ih {
 
     final static int b(int param0, int param1) {
         if (param1 != 64763) {
-            return 81;
+          return 81;
         }
         return cc.field_g[param0 & 2047];
     }
 
     final synchronized static long a(byte param0) {
-        long var1;
-        if (param0 != -98) {
-          L0: {
-            ih.a(-100);
-            var1 = System.currentTimeMillis();
-            if (bh.field_c > var1) {
-              gg.field_a = gg.field_a + (bh.field_c - var1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          bh.field_c = var1;
-          return gg.field_a + var1;
-        } else {
-          L1: {
-            var1 = System.currentTimeMillis();
-            if (bh.field_c > var1) {
-              gg.field_a = gg.field_a + (bh.field_c - var1);
-              break L1;
-            } else {
-              break L1;
-            }
+        long var1 = 0L;
+        long var1Lifetime1;
+        if (param0 == -98) {
+          var1 = System.currentTimeMillis();
+          if (!(bh.field_c <= var1)) {
+            gg.field_a = gg.field_a + (bh.field_c - var1);
           }
           bh.field_c = var1;
           return gg.field_a + var1;
         }
+        ih.a(-100);
+        var1Lifetime1 = System.currentTimeMillis();
+        if (!(bh.field_c <= var1Lifetime1)) {
+          gg.field_a = gg.field_a + (bh.field_c - var1Lifetime1);
+        }
+        bh.field_c = var1Lifetime1;
+        return gg.field_a + var1Lifetime1;
     }
 
     static int a(int param0, int param1) {
@@ -50,60 +40,53 @@ final class ih {
     }
 
     final static void b(byte param0) {
-        if (!(pd.field_f != null)) {
-            return;
+        if (pd.field_f == null) {
+          return;
         }
         nd.a(-26621, pd.field_f);
         int var1 = -104 / ((param0 - 71) / 35);
         pd.field_f.a(ic.field_d, -79);
         pd.field_f = null;
-        if (!(ja.field_m == null)) {
-            ja.field_m.c(-1);
+        if (ja.field_m != null) {
+          ja.field_m.c(-1);
         }
         qd.field_j.requestFocus();
     }
 
     final static boolean b(int param0) {
-        if (param0 == 12871) {
-          if (null != ob.field_b) {
-            if (la.field_O != sl.field_d) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 12871) {
           field_a = (th) null;
-          if (null != ob.field_b) {
-            if (la.field_O != sl.field_d) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == ob.field_b) {
             return false;
           }
+          if (la.field_O == sl.field_d) {
+            return true;
+          }
+          return false;
         }
+        if (null == ob.field_b) {
+          return false;
+        }
+        if (la.field_O == sl.field_d) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 38858) {
-          field_d = (int[]) null;
-          field_e = null;
-          field_a = null;
-          field_c = null;
-          field_b = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == 38858) {
           field_e = null;
           field_a = null;
           field_c = null;
           field_b = (byte[][]) null;
           return;
         }
+        field_d = (int[]) null;
+        field_e = null;
+        field_a = null;
+        field_c = null;
+        field_b = (byte[][]) null;
     }
 
     static {

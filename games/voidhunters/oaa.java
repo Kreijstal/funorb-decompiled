@@ -9,7 +9,7 @@ final class oaa extends mnb implements uq {
 
     public final int a(boolean param0) {
         if (!param0) {
-            return 121;
+          return 121;
         }
         return this.field_f;
     }
@@ -17,7 +17,7 @@ final class oaa extends mnb implements uq {
     public static void c(int param0) {
         field_k = null;
         if (param0 < 78) {
-            return;
+          return;
         }
         field_j = null;
         field_h = null;
@@ -33,15 +33,15 @@ final class oaa extends mnb implements uq {
 
     final static boolean a(byte param0) {
         if (param0 > -33) {
-            return false;
+          return false;
         }
         return ola.field_p != null ? true : false;
     }
 
     final static double b(byte param0) {
         if (param0 >= -43) {
-            oaa.a((byte) 83);
-            return npa.field_c;
+          oaa.a((byte) 83);
+          return npa.field_c;
         }
         return npa.field_c;
     }

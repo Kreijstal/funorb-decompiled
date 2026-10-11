@@ -11,9 +11,9 @@ final class wb extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_d.paint(param0);
+          this.field_d.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "wb.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "wb.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -22,26 +22,26 @@ final class wb extends java.awt.Canvas {
         field_a = null;
         field_f = null;
         if (param0 > -47) {
-            wb.a(false, -3);
-            field_b = null;
-            return;
+          wb.a(false, -3);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_d.update(param0);
+          this.field_d.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "wb.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "wb.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     wb(java.awt.Component param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "wb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class wb extends java.awt.Canvas {
         cd.field_d = new c(qe.field_g);
         cd.field_d.field_n = cd.field_d.field_n | param0;
         if (param1 != -7869) {
-            return;
+          return;
         }
         va.field_p = -1;
     }

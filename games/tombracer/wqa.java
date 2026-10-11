@@ -15,67 +15,60 @@ final class wqa extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            this.field_I = 69;
-            return true;
+          this.field_I = 69;
+          return true;
         }
         return true;
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            la var3 = (la) null;
-            this.a(false, 31, (la) null);
-            return 7;
+          la var3 = (la) null;
+          this.a(false, 31, (la) null);
+          return 7;
         }
         return 7;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            field_J = (String) null;
-            return false;
+          field_J = (String) null;
+          return false;
         }
         return false;
     }
 
     final static boolean r(byte param0) {
-        int var1;
-        int stackIn_7_0 = 0;
-        var1 = -84 % ((27 - param0) / 45);
-        if (hka.field_b == null) {
-          if (!pn.h(9807)) {
-            if (null == fj.field_c) {
-              if (eba.a(true)) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              stackIn_7_0 = 1;
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = -84 % ((27 - param0) / 45);
+        if (hka.field_b != null) {
           return true;
         }
+        if (pn.h(9807)) {
+          return true;
+        }
+        if (null != fj.field_c) {
+          return true;
+        }
+        if (!eba.a(true)) {
+          return false;
+        }
+        return true;
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            wqa.r((byte) 71);
-            return false;
+          wqa.r((byte) 71);
+          return false;
         }
         return false;
     }
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
-            param1.a((byte) 15, wma.a((byte) 8, 2, this.field_I), 6);
+          super.a(param0, param1);
+          param1.a((byte) 15, wma.a((byte) 8, 2, this.field_I), 6);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wqa.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,73 +86,58 @@ final class wqa extends kna {
         fsa stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var13 = new fsa(param2, param0);
-            var13.b((byte) -11, this.field_k, this.field_l);
-            var13.a((byte) -3, 0);
-            var13.h(3, param1 ^ param1);
-            var13.e(false, param1 + 116);
-            var13.b((byte) 17, true);
-            var13.a(1, (byte) -12, true);
-            var5 = new eq(param2, param0);
-            var13.a((byte) 83, (nv) (var5));
-            var6 = new tl(param2, param0);
-            var6.a(new mg(50 * this.field_I >> 1273978480), (byte) -105);
-            var6.k((byte) -91).b(1, 97);
-            var13.a((byte) 83, (nv) (var6));
-            var7 = new fsa(param2, true);
-            var8 = param2.m((byte) -86);
-            var9 = param2.s(-127);
-            var7.b((byte) -11, var9, var8);
-            var7.b(437453352, var9 / 2, var8 / 2);
-            var7.a((byte) -3, 0);
-            var7.b((byte) 17, true);
-            var10 = new eq(param2, true);
-            var10.b((byte) -106, true);
-            var10.a(16, (byte) -22);
-            var7.a((byte) 83, (nv) (var10));
-            var7.m(-45);
-            param2.a(var7, (byte) 32);
-            var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});
-            var11 = rm.field_a;
-            var12 = (pqa) ((Object) var11.a(20, 83));
-            var13.a(var6, (byte) 124, var12);
-            stackIn_1_0 = (fsa) (var13);
-            break L0;
-          }
+          var13 = new fsa(param2, param0);
+          var13.b((byte) -11, this.field_k, this.field_l);
+          var13.a((byte) -3, 0);
+          var13.h(3, param1 ^ param1);
+          var13.e(false, param1 + 116);
+          var13.b((byte) 17, true);
+          var13.a(1, (byte) -12, true);
+          var5 = new eq(param2, param0);
+          var13.a((byte) 83, (nv) (var5));
+          var6 = new tl(param2, param0);
+          var6.a(new mg(50 * this.field_I >> 16), (byte) -105);
+          var6.k((byte) -91).b(1, 97);
+          var13.a((byte) 83, (nv) (var6));
+          var7 = new fsa(param2, true);
+          var8 = param2.m((byte) -86);
+          var9 = param2.s(-127);
+          var7.b((byte) -11, var9, var8);
+          var7.b(437453352, var9 / 2, var8 / 2);
+          var7.a((byte) -3, 0);
+          var7.b((byte) 17, true);
+          var10 = new eq(param2, true);
+          var10.b((byte) -106, true);
+          var10.a(16, (byte) -22);
+          var7.a((byte) 83, (nv) (var10));
+          var7.m(-45);
+          param2.a(var7, (byte) 32);
+          var6.k((byte) -115).h(1).a(9, new lj[]{(lj) ((Object) var7)});
+          var11 = rm.field_a;
+          var12 = (pqa) (var11.a(20, 83));
+          var13.a(var6, (byte) 124, var12);
+          stackIn_1_0 = var13;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4);
-
-            stackIn_4_1 = new StringBuilder().append("wqa.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("wqa.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public static void e(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_J = null;
         field_F = null;
@@ -170,15 +148,15 @@ final class wqa extends kna {
         super(param0, param1, param2, param3);
         this.field_I = 262144;
         try {
-            this.field_I = ji.a(param2.b((byte) 44, 6), 87, 2);
+          this.field_I = ji.a(param2.b((byte) 44, 6), 87, 2);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         return false;
     }

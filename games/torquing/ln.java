@@ -11,26 +11,26 @@ final class ln extends jh {
     final static void a(int param0, int param1, uf[] param2, byte param3) {
         uf var4 = null;
         try {
-            if (param3 != -58) {
-                field_G = 10;
-            }
-            var4 = param2[param2.length + -1];
-            var4.a(param0, param1, 86);
+          if (param3 != -58) {
+            field_G = 10;
+          }
+          var4 = param2[param2.length - 1];
+          var4.a(param0, param1, 86);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final void h(int param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_E);
-        bb var3 = (bb) ((Object) var2.a((byte) 79));
+        bb var3 = (bb) (var2.a((byte) 79));
         while (var3 != null) {
-            var3.field_D = false;
-            var3 = (bb) ((Object) var2.b(true));
+          var3.field_D = false;
+          var3 = (bb) (var2.b(true));
         }
         if (param0 < 0) {
-            return;
+          return;
         }
         this.field_C = null;
     }
@@ -38,16 +38,16 @@ final class ln extends jh {
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = Torquing.field_u;
         if (null != this.field_q) {
-            this.field_q.a(114, param2, param3, true, (gm) (this));
+          this.field_q.a(114, param2, param3, true, (gm) (this));
         }
         re var5 = new re(this.field_E);
         if (param1 > -7) {
-            return;
+          return;
         }
-        gm var6 = (gm) ((Object) var5.a(17514));
+        gm var6 = (gm) (var5.a(17514));
         while (var6 != null) {
-            var6.a(param0, (byte) -58, param2 + this.field_k, param3 - -this.field_w);
-            var6 = (gm) ((Object) var5.a(true));
+          var6.a(param0, (byte) -58, param2 + this.field_k, param3 + this.field_w);
+          var6 = (gm) (var5.a(true));
         }
     }
 
@@ -55,21 +55,21 @@ final class ln extends jh {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_E);
         if (param0 >= -63) {
-            field_G = -105;
+          field_G = -105;
         }
-        bb var3 = (bb) ((Object) var2.a((byte) 95));
+        bb var3 = (bb) (var2.a((byte) 95));
         while (var3 != null) {
-            if (!(!var3.h(-7))) {
-                var3.f(0);
-            }
-            var3 = (bb) ((Object) var2.b(true));
+          if (var3.h(-7)) {
+            var3.f(0);
+          }
+          var3 = (bb) (var2.b(true));
         }
         this.field_C = (gm) ((Object) this.a(0));
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
         if (param3 < 68) {
-            return -102;
+          return -102;
         }
         return param2 < param1 ? param1 : param0 < param2 ? param0 : param2;
     }
@@ -77,23 +77,23 @@ final class ln extends jh {
     public static void h(byte param0) {
         field_H = null;
         if (param0 < 81) {
-            ln.a(3, -20, 23, 107);
+          ln.a(3, -20, 23, 107);
         }
     }
 
     final void a(gm param0, byte param1) {
         bb var3 = null;
         try {
-            if (!(param0 instanceof bb)) {
-                throw new IllegalArgumentException();
-            }
-            var3 = (bb) ((Object) param0);
-            this.field_E.b((byte) 68, var3);
-            var3.field_D = true;
-            int var4 = 107 % ((param1 - 18) / 61);
-            var3.a((gm) (this), false);
+          if (!(param0 instanceof bb)) {
+            throw new IllegalArgumentException();
+          }
+          var3 = (bb) (param0);
+          this.field_E.b((byte) 68, var3);
+          var3.field_D = true;
+          int var4 = 107 % ((param1 - 18) / 61);
+          var3.a((gm) (this), false);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ln.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -106,29 +106,29 @@ final class ln extends jh {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_E);
         if (param0) {
-            this.field_E = (ei) null;
+          this.field_E = (ei) null;
         }
-        bb var3 = (bb) ((Object) var2.a((byte) 68));
+        bb var3 = (bb) (var2.a((byte) 68));
         while (var3 != null) {
-            if (var3.a((byte) 122)) {
-                var3.f(0);
-            }
-            var3 = (bb) ((Object) var2.b(true));
+          if (var3.a((byte) 122)) {
+            var3.f(0);
+          }
+          var3 = (bb) (var2.b(true));
         }
     }
 
     final bb a(int param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_E);
-        bb var3 = (bb) ((Object) var2.a((byte) 66));
+        bb var3 = (bb) (var2.a((byte) 66));
         while (var3 != null) {
-            if (var3.field_D) {
-                return var3;
-            }
-            var3 = (bb) ((Object) var2.b(true));
+          if (var3.field_D) {
+            return var3;
+          }
+          var3 = (bb) (var2.b(true));
         }
         if (param0 == 0) {
-            return null;
+          return null;
         }
         field_D = -119;
         return null;
@@ -143,29 +143,19 @@ final class ln extends jh {
         re var2;
         bb var3;
         int var4;
-        L0: {
-          var4 = Torquing.field_u;
-          if (param0) {
-            break L0;
-          } else {
-            this.field_E = (ei) null;
-            break L0;
-          }
+        var4 = Torquing.field_u;
+        if (!param0) {
+          this.field_E = (ei) null;
         }
         var2 = new re(this.field_E);
-        var3 = (bb) ((Object) var2.a((byte) 99));
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_D) {
-              var3 = (bb) ((Object) var2.b(true));
-              continue L1;
-            } else {
-              return var3.a(0);
-            }
-          } else {
-            return null;
+        var3 = (bb) (var2.a((byte) 99));
+        while (var3 != null) {
+          if (var3.field_D) {
+            return var3.a(0);
           }
+          var3 = (bb) (var2.b(true));
         }
+        return null;
     }
 
     static {

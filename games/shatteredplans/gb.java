@@ -15,64 +15,29 @@ final class gb extends oh {
         field_n = null;
         field_m = null;
         field_o = null;
-        int var1 = -46 % ((param0 - -22) / 47);
+        int var1 = -46 % ((param0 + 22) / 47);
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
         int var4;
-        L0: {
-          if (-1 == (param3 ^ -1)) {
-            L1: {
-              if (vm.field_Bb != param2) {
-                qh.field_v = true;
-                vm.field_Bb = param2;
-                kb.a(68, param1);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (-2 != (param3 ^ -1)) {
-              break L0;
-            } else {
-              if (sq.field_a == param2) {
-                break L0;
-              } else {
-                sq.field_a = param2;
-                qh.field_v = true;
-                kb.a(55, param1);
-                break L0;
-              }
-            }
-          } else {
-            if (-2 != (param3 ^ -1)) {
-              break L0;
-            } else {
-              if (sq.field_a == param2) {
-                break L0;
-              } else {
-                sq.field_a = param2;
-                qh.field_v = true;
-                kb.a(55, param1);
-                break L0;
-              }
-            }
-          }
+        if (param3 == 0 &&
+          vm.field_Bb != param2) {
+          qh.field_v = true;
+          vm.field_Bb = param2;
+          kb.a(68, param1);
         }
-        L2: {
-          var4 = 40 % ((-21 - param0) / 59);
-          if (param3 != 2) {
-            break L2;
-          } else {
-            if (ul.field_Hb == param2) {
-              break L2;
-            } else {
-              ul.field_Hb = param2;
-              qh.field_v = true;
-              kb.a(95, param1);
-              break L2;
-            }
-          }
+        if (param3 == 1 &&
+          sq.field_a != param2) {
+          sq.field_a = param2;
+          qh.field_v = true;
+          kb.a(55, param1);
+        }
+        var4 = 40 % ((-21 - param0) / 59);
+        if (param3 == 2 &&
+          ul.field_Hb != param2) {
+          ul.field_Hb = param2;
+          qh.field_v = true;
+          kb.a(95, param1);
         }
     }
 
@@ -81,74 +46,39 @@ final class gb extends oh {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            if (gq.a(param1, true, -4)) {
-              var2_int = 0;
-              var3 = -2 / ((param0 - -7) / 59);
-              L1: while (true) {
-                if (var2_int >= param1.length()) {
-                  stackIn_11_0 = 1;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  if (ne.a(0, param1.charAt(var2_int))) {
-                    var2_int++;
-                    continue L1;
-                  } else {
-                    stackIn_8_0 = 0;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!gq.a(param1, true, -4)) {
+            return false;
           }
+          var2_int = 0;
+          var3 = -2 / ((param0 + 7) / 59);
+          while (true) {
+            if (var2_int >= param1.length()) {
+              return true;
+            }
+            if (ne.a(0, param1.charAt(var2_int))) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("gb.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L2;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L2;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("gb.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
           } else {
-            return stackIn_11_0 != 0;
+            stackIn_15_2 = "{...}";
           }
+          throw r.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

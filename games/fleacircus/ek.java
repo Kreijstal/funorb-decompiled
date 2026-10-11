@@ -10,16 +10,14 @@ final class ek {
     public static void b(byte param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -42) {
-          field_d = (int[]) null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -42) {
           field_a = null;
           field_b = null;
           return;
         }
+        field_d = (int[]) null;
+        field_a = null;
+        field_b = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -38,149 +36,98 @@ final class ek {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime3;
         var13 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5_int = param4 + param1;
-              if (param3 == 1) {
-                break L1;
-              } else {
-                field_c = (dd) null;
-                break L1;
-              }
-            }
-            L2: {
-              var6 = param2 + param0;
-              if (gb.field_l >= param1) {
-                stackIn_6_0 = gb.field_l;
-                break L2;
-              } else {
-                stackIn_6_0 = param1;
-                break L2;
-              }
-            }
-            L3: {
-              var7 = stackIn_6_0;
-              if (param2 > gb.field_b) {
-                stackIn_9_0 = param2;
-                break L3;
-              } else {
-                stackIn_9_0 = gb.field_b;
-                break L3;
-              }
-            }
-            L4: {
-              var8 = stackIn_9_0;
-              if (gb.field_h > var5_int) {
-                stackIn_12_0 = var5_int;
-                break L4;
-              } else {
-                stackIn_12_0 = gb.field_h;
-                break L4;
-              }
-            }
-            L5: {
-              var9 = stackIn_12_0;
-              if (gb.field_i <= var6) {
-                stackIn_15_0 = gb.field_i;
-                break L5;
-              } else {
-                stackIn_15_0 = var6;
-                break L5;
-              }
-            }
-            L6: {
-              var10 = stackIn_15_0;
-              if (gb.field_l > param1) {
-                break L6;
-              } else {
-                if (param1 < gb.field_h) {
-                  var11 = param1 + gb.field_d * var8;
-                  var12 = -var8 + var10 + 1 >> -428364607;
-                  L7: while (true) {
-                    var12--;
-                    if ((var12 ^ -1) > -1) {
-                      break L6;
-                    } else {
-                      gb.field_a[var11] = 16777215;
-                      var11 = var11 + gb.field_d * 2;
-                      continue L7;
-                    }
-                  }
-                } else {
-                  break L6;
-                }
-              }
-            }
-            L8: {
-              if (gb.field_b > param2) {
-                break L8;
-              } else {
-                if (var6 >= gb.field_i) {
-                  break L8;
-                } else {
-                  var11 = param2 * gb.field_d + var7;
-                  var12 = var9 + (1 - var7) >> -384811807;
-                  L9: while (true) {
-                    var12--;
-                    if (-1 < (var12 ^ -1)) {
-                      break L8;
-                    } else {
-                      gb.field_a[var11] = 16777215;
-                      var11 += 2;
-                      continue L9;
-                    }
-                  }
-                }
-              }
-            }
-            L10: {
-              if (gb.field_l > var5_int) {
-                break L10;
-              } else {
-                if (var5_int >= gb.field_h) {
-                  break L10;
-                } else {
-                  var11 = var5_int + ((var5_int + -param1 & 1) + var8) * gb.field_d;
-                  var12 = var10 + 1 - var8 >> -738592351;
-                  L11: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L10;
-                    } else {
-                      gb.field_a[var11] = 16777215;
-                      var11 = var11 + 2 * gb.field_d;
-                      continue L11;
-                    }
-                  }
-                }
-              }
-            }
-            L12: {
-              if (gb.field_b > param2) {
-                break L12;
-              } else {
-                if (gb.field_i > var6) {
-                  var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
-                  var12 = -var7 + (var9 + 1) >> -725892063;
-                  L13: while (true) {
-                    var12--;
-                    if (0 > var12) {
-                      break L12;
-                    } else {
-                      gb.field_a[var11] = 16777215;
-                      var11 += 2;
-                      continue L13;
-                    }
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-            break L0;
+          var5_int = param4 + param1;
+          if (param3 != 1) {
+            field_c = (dd) null;
           }
+          var6 = param2 + param0;
+          if (gb.field_l >= param1) {
+            stackIn_6_0 = gb.field_l;
+          } else {
+            stackIn_6_0 = param1;
+          }
+          var7 = stackIn_6_0;
+          if (param2 > gb.field_b) {
+            stackIn_9_0 = param2;
+          } else {
+            stackIn_9_0 = gb.field_b;
+          }
+          var8 = stackIn_9_0;
+          if (gb.field_h > var5_int) {
+            stackIn_12_0 = var5_int;
+          } else {
+            stackIn_12_0 = gb.field_h;
+          }
+          var9 = stackIn_12_0;
+          if (gb.field_i <= var6) {
+            stackIn_15_0 = gb.field_i;
+          } else {
+            stackIn_15_0 = var6;
+          }
+          var10 = stackIn_15_0;
+          if (gb.field_l <= param1 &&
+            param1 < gb.field_h) {
+            var11 = param1 + gb.field_d * var8;
+            var12 = -var8 + var10 + 1 >> 1;
+            while (true) {
+              var12--;
+              if (var12 < 0) {
+                break;
+              }
+              gb.field_a[var11] = 16777215;
+              var11 = var11 + gb.field_d * 2;
+            }
+          }
+          if (gb.field_b <= param2 &&
+            var6 < gb.field_i) {
+            var11Lifetime1 = param2 * gb.field_d + var7;
+            var12Lifetime1 = var9 + (1 - var7) >> 1;
+            while (true) {
+              var12Lifetime1--;
+              if (var12Lifetime1 < 0) {
+                break;
+              }
+              gb.field_a[var11Lifetime1] = 16777215;
+              var11Lifetime1 += 2;
+            }
+          }
+          if (gb.field_l <= var5_int &&
+            var5_int < gb.field_h) {
+            var11Lifetime2 = var5_int + ((var5_int - param1 & 1) + var8) * gb.field_d;
+            var12Lifetime2 = var10 + 1 - var8 >> 1;
+            while (true) {
+              var12Lifetime2--;
+              if (0 > var12Lifetime2) {
+                break;
+              }
+              gb.field_a[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * gb.field_d;
+            }
+          }
+          if (gb.field_b <= param2) {
+            if (gb.field_i <= var6) {
+              return;
+            }
+            var11Lifetime3 = var7 + var6 * gb.field_d + (1 & -param2 + var6);
+            var12Lifetime3 = -var7 + (var9 + 1) >> 1;
+            while (true) {
+              var12Lifetime3--;
+              if (0 > var12Lifetime3) {
+                return;
+              }
+              gb.field_a[var11Lifetime3] = 16777215;
+              var11Lifetime3 += 2;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -189,47 +136,43 @@ final class ek {
     }
 
     final static void a(byte param0) {
-        String var1;
-        if (jg.field_d) {
-          if (ok.field_x == null) {
-            var1 = ni.d(true);
-            lg.field_b = new ul(var1, (String) null, true, false, false);
-            nb.field_a.b(ak.field_a, (byte) -35);
-            if (param0 != -6) {
-              ek.a((byte) 6);
-              ak.field_a.d(lg.field_b, 26034);
-              ak.field_a.l(param0 ^ 5);
-              return;
-            } else {
-              ak.field_a.d(lg.field_b, 26034);
-              ak.field_a.l(param0 ^ 5);
-              return;
-            }
-          } else {
-            ok.field_x.n(param0 ^ 22641);
-            var1 = ni.d(true);
-            lg.field_b = new ul(var1, (String) null, true, false, false);
-            nb.field_a.b(ak.field_a, (byte) -35);
-            if (param0 == -6) {
-              ak.field_a.d(lg.field_b, 26034);
-              ak.field_a.l(param0 ^ 5);
-              return;
-            } else {
-              ek.a((byte) 6);
-              ak.field_a.d(lg.field_b, 26034);
-              ak.field_a.l(param0 ^ 5);
-              return;
-            }
-          }
-        } else {
+        String var1 = null;
+        String var1Lifetime1;
+        if (!jg.field_d) {
           throw new IllegalStateException();
         }
+        if (ok.field_x != null) {
+          ok.field_x.n(param0 ^ 22641);
+          var1 = ni.d(true);
+          lg.field_b = new ul(var1, (String) null, true, false, false);
+          nb.field_a.b(ak.field_a, (byte) -35);
+          if (param0 != -6) {
+            ek.a((byte) 6);
+            ak.field_a.d(lg.field_b, 26034);
+            ak.field_a.l(param0 ^ 5);
+            return;
+          }
+          ak.field_a.d(lg.field_b, 26034);
+          ak.field_a.l(param0 ^ 5);
+          return;
+        }
+        var1Lifetime1 = ni.d(true);
+        lg.field_b = new ul(var1Lifetime1, (String) null, true, false, false);
+        nb.field_a.b(ak.field_a, (byte) -35);
+        if (param0 == -6) {
+          ak.field_a.d(lg.field_b, 26034);
+          ak.field_a.l(param0 ^ 5);
+          return;
+        }
+        ek.a((byte) 6);
+        ak.field_a.d(lg.field_b, 26034);
+        ak.field_a.l(param0 ^ 5);
     }
 
     final static void a(int param0, int param1) {
         cl.field_a = ol.field_b[param1];
         if (param0 != 10) {
-            return;
+          return;
         }
         sg.field_a = hg.field_p[param1];
         mk.field_a = sa.field_c[param1];

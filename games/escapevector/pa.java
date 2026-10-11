@@ -6,8 +6,8 @@ final class pa {
     static hh field_a;
 
     final static void a(boolean param0) {
-        if (!(nf.field_u)) {
-            throw new IllegalStateException();
+        if (!nf.field_u) {
+          throw new IllegalStateException();
         }
         c.field_u = true;
         ic.a((byte) -126, param0);
@@ -16,7 +16,7 @@ final class pa {
 
     public static void a(byte param0) {
         if (param0 != 103) {
-            field_a = (hh) null;
+          field_a = (hh) null;
         }
         field_a = null;
         field_b = null;
@@ -29,42 +29,26 @@ final class pa {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = EscapeVector.field_A;
         try {
-          L0: {
-            bi.b();
-            ij.field_i = 11;
-            pb.field_c = new int[260];
-            var1_int = 0;
-            L1: while (true) {
-              if ((var1_int ^ -1) <= -257) {
-                L2: {
-                  if (param0 < -19) {
-                    break L2;
-                  } else {
-                    field_b = (hh) null;
-                    break L2;
-                  }
-                }
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= pb.field_c.length) {
-                    break L0;
-                  } else {
-                    pb.field_c[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
-              }
-            }
+          bi.b();
+          ij.field_i = 11;
+          pb.field_c = new int[260];
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            pb.field_c[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
+          if (param0 >= -19) {
+            field_b = (hh) null;
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < pb.field_c.length) {
+            pb.field_c[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

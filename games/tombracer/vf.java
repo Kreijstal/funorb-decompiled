@@ -18,7 +18,7 @@ final class vf {
     final void b(int param0) {
         this.field_j.d(param0 ^ 323);
         if (param0 == 331) {
-            return;
+          return;
         }
         field_c = (String) null;
     }
@@ -28,79 +28,48 @@ final class vf {
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: while (true) {
-              var3 = param1.a(param2, 18885);
-              L2: while (true) {
-                if (0 != var3.field_b) {
-                  if (1 != var3.field_b) {
-                    vja.a(0, 100L);
-                    continue L1;
-                  } else {
-                    param2.setVisible(false);
-                    param2.dispose();
-                    if (param0 == 31637) {
-                      break L0;
-                    } else {
-                      field_f = 114;
-                      return;
-                    }
-                  }
-                } else {
-                  vja.a(0, 10L);
-                  continue L2;
-                }
-              }
+          while (true) {
+            var3 = param1.a(param2, 18885);
+            while (0 == var3.field_b) {
+              vja.a(0, 10L);
             }
+            if (1 != var3.field_b) {
+              vja.a(0, 100L);
+              continue;
+            }
+            break;
           }
+          param2.setVisible(false);
+          param2.dispose();
+          if (param0 == 31637) {
+            return;
+          }
+          field_f = 114;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("vf.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("vf.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',');
-
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -111,27 +80,17 @@ final class vf {
         var2 = null;
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
-          var2_ref = (oea) ((Object) this.field_j.f(-80));
-          L0: while (true) {
-            if (var2_ref != null) {
-              var2_ref.field_h.f(param0 ^ -4365);
-              var2_ref = (oea) ((Object) this.field_j.e(param0 + 111));
-              continue L0;
-            } else {
-              return;
-            }
+          var2_ref = (oea) (this.field_j.f(-80));
+          while (var2_ref != null) {
+            var2_ref.field_h.f(param0 ^ -4365);
+            var2_ref = (oea) (this.field_j.e(param0 + 111));
           }
         } else {
           field_e = (String) null;
-          var2_ref = (oea) ((Object) this.field_j.f(-80));
-          L1: while (true) {
-            if (var2_ref != null) {
-              var2_ref.field_h.f(param0 ^ -4365);
-              var2_ref = (oea) ((Object) this.field_j.e(param0 + 111));
-              continue L1;
-            } else {
-              return;
-            }
+          var2_ref = (oea) (this.field_j.f(-80));
+          while (var2_ref != null) {
+            var2_ref.field_h.f(param0 ^ -4365);
+            var2_ref = (oea) (this.field_j.e(param0 + 111));
           }
         }
     }
@@ -141,75 +100,43 @@ final class vf {
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            if (param1 == 1) {
-              var3 = (oea) ((Object) this.field_j.f(-80));
-              L1: while (true) {
-                if (var3 == null) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    if (!var3.field_h.d((byte) 48)) {
-                      break L2;
-                    } else {
-                      var3.p(92);
-                      break L2;
-                    }
-                  }
-                  var3 = (oea) ((Object) this.field_j.e(param1 ^ 124));
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 1) {
+            return;
           }
+          var3 = (oea) (this.field_j.f(-80));
+          while (var3 != null) {
+            if (var3.field_h.d((byte) 48)) {
+              var3.p(92);
+            }
+            var3 = (oea) (this.field_j.e(param1 ^ 124));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3_ref);
-
-            stackIn_11_1 = new StringBuilder().append("vf.B(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("vf.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(fo param0, byte param1) {
         try {
-            this.a((byte) 64, param0);
-            int var3_int = -113 % ((36 - param1) / 59);
-            this.field_j.b((byte) -128, new oea(param0));
+          this.a((byte) 64, param0);
+          int var3_int = -113 % ((36 - param1) / 59);
+          this.field_j.b((byte) -128, new oea(param0));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "vf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "vf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -219,57 +146,33 @@ final class vf {
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var3 = (oea) ((Object) this.field_j.f(-80));
-            L1: while (true) {
-              if (var3 == null) {
-                if (param0 == 64) {
-                  break L0;
-                } else {
-                  field_f = 27;
-                  return;
-                }
-              } else {
-                L2: {
-                  if (var3.field_h != param1) {
-                    break L2;
-                  } else {
-                    var3.p(28);
-                    break L2;
-                  }
-                }
-                var3 = (oea) ((Object) this.field_j.e(param0 + 43));
-                continue L1;
-              }
+          var3 = (oea) (this.field_j.f(-80));
+          while (var3 != null) {
+            if (var3.field_h == param1) {
+              var3.p(28);
             }
+            var3 = (oea) (this.field_j.e(param0 + 43));
           }
+          if (param0 == 64) {
+            return;
+          }
+          field_f = 27;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3_ref);
-
-            stackIn_11_1 = new StringBuilder().append("vf.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_11_0 = var3_ref;
+          stackIn_11_1 = new StringBuilder().append("vf.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -281,79 +184,46 @@ final class vf {
         iq var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3 = this.field_i.a((byte) 59);
-              var4 = (oea) ((Object) this.field_j.f(-80));
-              if (!param0) {
-                break L1;
-              } else {
-                var7 = (iq) null;
-                this.a(false, (iq) null);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var4 == null) {
-                break L0;
-              } else {
-                L3: {
-                  var5 = var4.field_h;
-                  if (var3 != null) {
-                    var3.a(0, var5, param1);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  var5.a(125, param1);
-                  if (var3 != null) {
-                    var3.a(false, var5, param1);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                var4 = (oea) ((Object) this.field_j.e(124));
-                continue L2;
-              }
-            }
+          var3 = this.field_i.a((byte) 59);
+          var4 = (oea) (this.field_j.f(-80));
+          if (param0) {
+            var7 = (iq) null;
+            this.a(false, (iq) null);
           }
+          while (var4 != null) {
+            var5 = var4.field_h;
+            if (var3 != null) {
+              var3.a(0, var5, param1);
+            }
+            var5.a(125, param1);
+            if (var3 != null) {
+              var3.a(false, var5, param1);
+            }
+            var4 = (oea) (this.field_j.e(124));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var3_ref);
-
-            stackIn_14_1 = new StringBuilder().append("vf.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_14_0 = var3_ref;
+          stackIn_14_1 = new StringBuilder().append("vf.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     public static void c(int param0) {
         if (param0 > -53) {
-            return;
+          return;
         }
         field_g = null;
         field_c = null;
@@ -366,9 +236,9 @@ final class vf {
     vf(uw param0) {
         this.field_j = new vna();
         try {
-            this.field_i = param0;
+          this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

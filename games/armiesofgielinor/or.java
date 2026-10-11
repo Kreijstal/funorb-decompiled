@@ -24,34 +24,37 @@ final class or implements kh {
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
+        double var9Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
         try {
-            var14 = param0 instanceof ws ? (ws) ((Object) param0) : null;
-            if (var14 == null) {
-            }
-            qn.f(param1 + param0.field_B, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_b);
-            var7 = var14.field_S + param0.field_B + param1;
-            if (param2 > -79) {
-                field_e = (String) null;
-            }
-            var8 = param0.field_p + param4 - -var14.field_M;
-            qn.a(var7, var8, var14.field_Q, this.field_i);
-            if (!(var14.field_N == -1)) {
-                var9 = 2.0 * ((double)var14.field_N * 3.141592653589793) / (double)var14.field_L;
-                var11 = (int)(-Math.sin(var9) * (double)var14.field_Q);
-                var12 = (int)(Math.cos(var9) * (double)var14.field_Q);
-                qn.a(var11 + var7, var12 + var8, 1, this.field_k);
-            }
-            qn.a(var7, var8, 2, 1);
-            var9 = (double)var14.field_R * 3.141592653589793 * 2.0 / (double)var14.field_L;
+          var14 = param0 instanceof ws ? (ws) (param0) : null;
+          if (var14 == null) {
+          }
+          qn.f(param1 + param0.field_B, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_b);
+          var7 = var14.field_S + param0.field_B + param1;
+          if (param2 > -79) {
+            field_e = (String) null;
+          }
+          var8 = param0.field_p + param4 + var14.field_M;
+          qn.a(var7, var8, var14.field_Q, this.field_i);
+          if (var14.field_N != -1) {
+            var9 = 2.0 * ((double)var14.field_N * 3.141592653589793) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_Q);
             var12 = (int)(Math.cos(var9) * (double)var14.field_Q);
-            qn.h(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (this.field_g != null) {
-                var13 = this.field_h + var14.field_Q + var14.field_S;
-                this.field_g.a(param0.field_v, param1 + param0.field_B - -var13, this.field_d + param4 - -param0.field_p, param0.field_l + -this.field_h + -var13, param0.field_w + -(this.field_h << -974891807), this.field_m, this.field_l, 1, 1, 0);
-            }
+            qn.a(var11 + var7, var12 + var8, 1, this.field_k);
+          }
+          qn.a(var7, var8, 2, 1);
+          var9Lifetime1 = (double)var14.field_R * 3.141592653589793 * 2.0 / (double)var14.field_L;
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_Q);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_Q);
+          qn.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          if (this.field_g != null) {
+            var13 = this.field_h + var14.field_Q + var14.field_S;
+            this.field_g.a(param0.field_v, param1 + param0.field_B + var13, this.field_d + param4 + param0.field_p, param0.field_l - this.field_h - var13, param0.field_w - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "or.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "or.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -60,25 +63,25 @@ final class or implements kh {
         field_f = null;
         field_j = null;
         if (param0) {
-            field_f = (String[]) null;
-            field_a = null;
-            return;
+          field_f = (String[]) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     or(ka param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_g = param0;
-            this.field_k = param6;
-            this.field_l = param4;
-            this.field_m = param3;
-            this.field_i = param5;
-            this.field_h = param1;
-            this.field_d = param2;
-            this.field_b = param7;
+          this.field_g = param0;
+          this.field_k = param6;
+          this.field_l = param4;
+          this.field_m = param3;
+          this.field_i = param5;
+          this.field_h = param1;
+          this.field_d = param2;
+          this.field_b = param7;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "or.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

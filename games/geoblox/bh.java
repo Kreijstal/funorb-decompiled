@@ -152,15 +152,16 @@ final class bh extends java.awt.Canvas {
 
     final static void a(boolean param0, ja param1, int param2, ja param3, boolean param4) {
         ja dupTemp$0 = null;
+        int var11 = 0;
         ja dupTemp$1 = null;
         ja dupTemp$2 = null;
-        ja stackIn_31_0 = null;
-        ja stackIn_31_1 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_42_2 = null;
+        ja stackIn_33_0 = null;
+        ja stackIn_33_1 = null;
+        RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_48_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         wd var6 = null;
@@ -168,7 +169,6 @@ final class bh extends java.awt.Canvas {
         int var8 = 0;
         int var9 = 0;
         ja var10 = null;
-        int var11 = 0;
         ja var12 = null;
         int var13 = 0;
         wd var14 = null;
@@ -201,67 +201,60 @@ final class bh extends java.awt.Canvas {
               }
               var10.a(320, var9, var10.field_M, var8);
             }
-            var11 = 0;
-            {
-              L5: while (!(var11 >= var10.field_L)) {
-                if (var10.field_n[var11].field_z != 1 ||
-                  !param4) {
-                  if (2 != var10.field_n[var11].field_z) {
-                    var11++;
-                    continue;
-                  }
-                  if (!param0) {
-                    var11++;
-                    continue;
-                  }
-                }
+            for (var11 = 0; var11 < var10.field_L; var11++) {
+              boolean decompiledFrameRemainder0 = true;
+              boolean decompiledFrameCompleted0 = true;
+              if ((var10.field_n[var11].field_z != 1 ||
+                !param4) &&
+                (decompiledFrameRemainder0 = (2 == var10.field_n[var11].field_z))) {
+                decompiledFrameRemainder0 = (param0);
+              }
+              if (decompiledFrameRemainder0) {
                 var12 = (ja) (var6.c((byte) 121));
                 while (var12 != null) {
-                  if (var10 != var12) {
-                    var12 = (ja) (var6.a(param2 - 60));
-                    continue;
+                  if (var10 == var12) {
+                    decompiledFrameCompleted0 = false;
+                    break;
                   }
-                  var11++;
-                  continue L5;
+                  var12 = (ja) (var6.a(param2 - 60));
                 }
-                if (param4) {
-                  var10.field_m = var10.field_m + 1;
-                  dupTemp$1 = var10.field_n[var11];
-                  stackIn_31_0 = dupTemp$1;
-                  stackIn_31_1 = dupTemp$1;
-                  stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
+                if (decompiledFrameCompleted0) {
+                  if (param4) {
+                    var10.field_m = var10.field_m + 1;
+                    dupTemp$1 = var10.field_n[var11];
+                    stackIn_33_0 = dupTemp$1;
+                    stackIn_33_1 = dupTemp$1;
+                    stackIn_33_0.field_m = stackIn_33_1.field_m + 1;
+                  }
+                  if (param0) {
+                    var10.field_u = param1.field_u;
+                    var10.field_N = var10.field_N + 1;
+                    dupTemp$2 = var10.field_n[var11];
+                    dupTemp$2.field_N = dupTemp$2.field_N + 1;
+                  }
+                  var14.a(var10.field_n[var11], false);
                 }
-                if (param0) {
-                  var10.field_u = param1.field_u;
-                  var10.field_N = var10.field_N + 1;
-                  dupTemp$2 = var10.field_n[var11];
-                  dupTemp$2.field_N = dupTemp$2.field_N + 1;
-                }
-                var14.a(var10.field_n[var11], false);
-                var11++;
-              }
-              {
-                var6.a(var10, false);
               }
             }
+            var6.a(var10, false);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_41_0 = var5;
-          stackIn_41_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
+          stackIn_44_0 = var5;
+          stackIn_44_1 = new StringBuilder().append("bh.D(").append(param0).append(',');
           if (param1 == null) {
-            stackIn_42_2 = "null";
-          } else {
-            stackIn_42_2 = "{...}";
-          }
-          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(',');
-          if (param3 == null) {
             stackIn_45_2 = "null";
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param4).append(')').toString());
+          stackIn_47_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_48_2 = "null";
+          } else {
+            stackIn_48_2 = "{...}";
+          }
+          throw t.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param4).append(')').toString());
         }
     }
 

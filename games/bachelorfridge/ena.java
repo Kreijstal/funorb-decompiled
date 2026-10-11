@@ -10,7 +10,7 @@ final class ena extends pu {
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_p = (byte[][]) null;
         field_o = null;
@@ -22,6 +22,8 @@ final class ena extends pu {
         int var3 = 0;
         int var2_int = 0;
         int var4 = BachelorFridge.field_y;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         System.gc();
         gna.f((byte) -98);
         cga.field_r = ch.a(param1, param0 ^ 43, "basic", "freezer_side");
@@ -35,18 +37,18 @@ final class ena extends pu {
         a.field_n = pi.a(param1, -8845, "basic", "food_icons_eaten");
         gr.field_a = new kv[dc.field_y.length];
         for (var2_int = 0; var2_int < gr.field_a.length; var2_int++) {
-            gr.field_a[var2_int] = new kv(39, 39);
-            gr.field_a[var2_int].b();
-            dg.c(0, 0, 39, 39, 16700762);
-            nk.a((pa) ((Object) dc.field_y[var2_int])).b(0, 0, 39, 39);
+          gr.field_a[var2_int] = new kv(39, 39);
+          gr.field_a[var2_int].b();
+          dg.c(0, 0, 39, 39, 16700762);
+          nk.a((pa) (dc.field_y[var2_int])).b(0, 0, 39, 39);
         }
         hga.field_U.a((byte) -10);
         kka.field_i = new kv[dc.field_y.length];
-        for (var2_int = 0; kka.field_i.length > var2_int; var2_int++) {
-            kka.field_i[var2_int] = new kv(39, 39);
-            kka.field_i[var2_int].b();
-            dg.c(0, 0, 39, 39, 12688481);
-            nk.a((pa) ((Object) dc.field_y[var2_int])).b(0, 0, 39, 39);
+        for (var2_intLifetime1 = 0; kka.field_i.length > var2_intLifetime1; var2_intLifetime1++) {
+          kka.field_i[var2_intLifetime1] = new kv(39, 39);
+          kka.field_i[var2_intLifetime1].b();
+          dg.c(0, 0, 39, 39, 12688481);
+          nk.a((pa) (dc.field_y[var2_intLifetime1])).b(0, 0, 39, 39);
         }
         hga.field_U.a((byte) 114);
         hk.a("basic_frame", param1, param0 + 152, "basic");
@@ -69,11 +71,11 @@ final class ena extends pu {
         hh.field_b = pi.a(param1, -8845, "basic", "move_icons");
         nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
         hp.field_b = new kv[nia.field_l.length];
-        for (var2_int = 0; var2_int < nia.field_l.length; var2_int++) {
-            hp.field_b[var2_int] = new kv(nia.field_l[var2_int].field_q, nia.field_l[var2_int].field_p);
-            hp.field_b[var2_int].b();
-            cja.a(5587456, nia.field_l[var2_int], (byte) -116, 0, 0);
-            hga.field_U.a((byte) -41);
+        for (var2_intLifetime2 = 0; var2_intLifetime2 < nia.field_l.length; var2_intLifetime2++) {
+          hp.field_b[var2_intLifetime2] = new kv(nia.field_l[var2_intLifetime2].field_q, nia.field_l[var2_intLifetime2].field_p);
+          hp.field_b[var2_intLifetime2].b();
+          cja.a(5587456, nia.field_l[var2_intLifetime2], (byte) -116, 0, 0);
+          hga.field_U.a((byte) -41);
         }
         cka.field_y = hca.a("basic", param1, -79, "shop_cost_left");
         wja.field_l = hca.a("basic", param1, param0 ^ -76, "shop_cost_right");
@@ -93,19 +95,19 @@ final class ena extends pu {
         int[] var5 = var6;
         int[] var2 = var5;
         for (var3 = 0; var3 < var7.length; var3++) {
-            var5[var3] = 65793 * var3;
+          var5[var3] = 65793 * var3;
         }
         ska.field_k = wfa.a("shop_list", param1, "basic", (byte) -22);
         tl.field_s = wfa.a("shop_list_hover", param1, "basic", (byte) 60);
         rfa.field_a = wfa.a("mag_hover", param1, "basic", (byte) 122);
         wfa.a("rag", param1, "basic", (byte) -35);
         wfa.a("rag_hover", param1, "basic", (byte) 67);
-        hca.a("basic", param1, param0 + -50, "bucket");
+        hca.a("basic", param1, param0 - 50, "bucket");
         hca.a("basic", param1, -125, "bucket_empty");
         ng.field_a = wfa.a("bag_hover", param1, "basic", (byte) 88);
         pea.field_k = wfa.a("bag_bg", param1, "basic", (byte) -108);
         kga.field_d = wfa.a("bag_full_hover", param1, "basic", (byte) -111);
-        ve.field_l = pi.a(param1, param0 + -8801, "basic", "arena_entrance_anim");
+        ve.field_l = pi.a(param1, param0 - 8801, "basic", "arena_entrance_anim");
         rea.field_k = wfa.a("arena_sign_off", param1, "basic", (byte) -100);
         ot.field_e = wfa.a("arena_sign_on", param1, "basic", (byte) 116);
         dp.field_n = pi.a(param1, -8845, "basic", "bin");
@@ -123,16 +125,16 @@ final class ena extends pu {
         lfa.field_s = ch.a(param1, -1, "basic", "tutorial_highlight_bag");
         rj.field_l = ch.a(param1, param0 ^ 43, "basic", "tutorial_highlight_bin");
         if (param0 != -44) {
-            return;
+          return;
         }
         try {
-            ada.field_m = ch.a(param1, param0 ^ 43, "basic", "tutorial_highlight_freezer");
-            wa.field_n = ch.a(param1, -1, "basic", "tutorial_highlight_list");
-            bn.field_i = ch.a(param1, -1, "basic", "tutorial_highlight_mag");
-            var2 = null;
-            gg.field_a = wfa.a("padlock_freezer", param1, "basic", (byte) -58);
+          ada.field_m = ch.a(param1, param0 ^ 43, "basic", "tutorial_highlight_freezer");
+          wa.field_n = ch.a(param1, -1, "basic", "tutorial_highlight_list");
+          bn.field_i = ch.a(param1, -1, "basic", "tutorial_highlight_mag");
+          var2 = null;
+          gg.field_a = wfa.a("padlock_freezer", param1, "basic", (byte) -58);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ena.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ena.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

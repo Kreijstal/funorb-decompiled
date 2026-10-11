@@ -11,8 +11,8 @@ abstract class nqa {
     void a(int param0, hs param1) {
         this.field_a = param1;
         if (param0 != 7672) {
-            hs var4 = (hs) null;
-            this.a(26, (hs) null);
+          hs var4 = (hs) null;
+          this.a(26, (hs) null);
         }
     }
 

@@ -11,14 +11,14 @@ final class ut {
         int var5 = var4.field_e;
         var4.c(0, param0);
         var4.a(param1, 105);
-        var4.e(var4.field_e + -var5, -129);
+        var4.e(var4.field_e - var5, -129);
     }
 
     public static void a(int param0) {
         if (param0 > -36) {
-            ut.a(7);
-            field_a = null;
-            return;
+          ut.a(7);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

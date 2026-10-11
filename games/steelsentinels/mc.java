@@ -14,13 +14,13 @@ final class mc {
 
     final static void a(String param0, float param1, int param2) {
         if (param2 != -21801) {
-            return;
+          return;
         }
         try {
-            od.field_i = param0;
-            q.field_l = param1;
+          od.field_i = param0;
+          q.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "mc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class mc {
         field_b = null;
         field_e = null;
         if (param0 != 23225) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;

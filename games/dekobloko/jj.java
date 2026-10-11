@@ -16,25 +16,23 @@ final class jj {
     }
 
     final static int a(int param0) {
-        int var1 = -122 / ((param0 - -40) / 55);
+        int var1 = -122 / ((param0 + 40) / 55);
         return new Date().getYear() + 1900;
     }
 
     public static void a(boolean param0) {
         field_c = null;
         field_e = null;
-        if (param0) {
-          field_f = (ta) null;
-          field_f = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_a = null;
           field_d = null;
           return;
         }
+        field_f = (ta) null;
+        field_f = null;
+        field_a = null;
+        field_d = null;
     }
 
     static {

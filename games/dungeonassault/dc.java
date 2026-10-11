@@ -53,20 +53,20 @@ final class dc {
         field_v = null;
         field_e = null;
         if (param0 <= 76) {
-            dc.a(-94);
+          dc.a(-94);
         }
     }
 
     final static String a(int param0) {
         if (param0 >= -109) {
-            dc.a((byte) -113);
-            if (tc.field_u == null) {
-                return "";
-            }
-            return tc.field_u;
+          dc.a((byte) -113);
+          if (tc.field_u == null) {
+            return "";
+          }
+          return tc.field_u;
         }
         if (tc.field_u == null) {
-            return "";
+          return "";
         }
         return tc.field_u;
     }

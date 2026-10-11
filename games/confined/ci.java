@@ -14,149 +14,103 @@ final class ci {
         nf stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (mc.a(param2, param0, param1, (byte) 119)) {
-              L1: {
-                if (!param3) {
-                  break L1;
-                } else {
-                  field_b = (kc) null;
-                  break L1;
-                }
-              }
-              stackIn_6_0 = jk.b(255);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!mc.a(param2, param0, param1, (byte) 119)) {
+            stackIn_2_0 = null;
+            return (nf) (stackIn_2_0);
           }
+          if (param3) {
+            field_b = (kc) null;
+          }
+          stackIn_6_0 = jk.b(255);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (nf) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_6_0;
+          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_7_0 = null;
-            StringBuilder stackIn_7_1 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_8_2 = null;
-            Throwable decompiledCaughtException = null;
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_7_0 = null;
+          StringBuilder stackIn_7_1 = null;
+          String stackIn_8_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                    param0.getAppletContext().showDocument(pn.a(var2, (byte) -33, param0), "_top");
-                    if (param1) {
-                      break L1;
-                    } else {
-                      field_d = (String) null;
-                      return;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                break L0;
+              var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+              param0.getAppletContext().showDocument(pn.a(var2, (byte) -33, param0), "_top");
+              if (param1) {
+                return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_7_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_7_1 = new StringBuilder().append("ci.C(");
-
-                if (param0 == null) {
-                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackIn_8_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-                  stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-                  stackIn_8_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+              field_d = (String) null;
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_7_0 = var2_ref2;
+            stackIn_7_1 = new StringBuilder().append("ci.C(");
+            if (param0 == null) {
+              stackIn_8_2 = "null";
+            } else {
+              stackIn_8_2 = "{...}";
+            }
+            throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(java.applet.Applet param0, String param1, int param2) {
         try {
-            String var6 = null;
-            String var4 = null;
-            String var7 = null;
-            String var5 = null;
+          String var6 = null;
+          String var4 = null;
+          String var7 = null;
+          String var5 = null;
+          try {
+            gk.field_v = param1;
             try {
-                gk.field_v = param1;
-                try {
-                    var6 = param0.getParameter("cookieprefix");
-                    var4 = param0.getParameter("cookiehost");
-                    var7 = var6 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
-                    var5 = var7;
-                    if (!(-1 != (param1.length() ^ -1))) {
-                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    kf.a(param0, true, "document.cookie=\"" + var5 + "\"");
-                } catch (Throwable throwable) {
-                }
-                am.a(44, param0);
-                int var3_int = 66 / ((param2 - -19) / 55);
-            } catch (RuntimeException runtimeException) {
-                throw sd.a((Throwable) ((Object) runtimeException), "ci.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+              var6 = param0.getParameter("cookieprefix");
+              var4 = param0.getParameter("cookiehost");
+              var7 = var6 + "session=" + param1 + "; version=1; path=/; domain=" + var4;
+              var5 = var7;
+              if (param1.length() == 0) {
+                var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              kf.a(param0, true, "document.cookie=\"" + var5 + "\"");
+            } catch (Throwable throwable) {
             }
+            am.a(44, param0);
+            int var3_int = 66 / ((param2 + 19) / 55);
+          } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) ((Object) runtimeException), "ci.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -165,20 +119,17 @@ final class ci {
     }
 
     public static void b(byte param0) {
-        java.applet.Applet var2;
-        if (param0 != -102) {
-          var2 = (java.applet.Applet) null;
-          ci.a((java.applet.Applet) null, true);
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == -102) {
           field_b = null;
           field_a = null;
           field_d = null;
           return;
         }
+        java.applet.Applet var2 = (java.applet.Applet) null;
+        ci.a((java.applet.Applet) null, true);
+        field_b = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static String a(byte param0) {

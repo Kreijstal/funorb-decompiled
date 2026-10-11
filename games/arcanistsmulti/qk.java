@@ -16,7 +16,7 @@ abstract class qk extends ob {
 
     final static boolean k(byte param0) {
         if (param0 < 57) {
-            field_qb = (String) null;
+          field_qb = (String) null;
         }
         return qf.field_a == wi.field_f.field_Bb ? true : false;
     }
@@ -24,77 +24,49 @@ abstract class qk extends ob {
     private final void d(int param0, qm param1) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (null != this.field_sb) {
-                this.field_sb.a(true);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 != null) {
-                param1.a(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
-                this.field_sb = new dm(param1);
-                break L2;
-              } else {
-                this.field_sb = new dm();
-                break L2;
-              }
-            }
-            L3: {
-              this.c(-126, this.field_sb);
-              this.field_V = null;
-              if (param0 == 12) {
-                break L3;
-              } else {
-                this.field_rb = (db) null;
-                break L3;
-              }
-            }
-            break L0;
+          if (null != this.field_sb) {
+            this.field_sb.a(true);
           }
+          if (param1 != null) {
+            param1.a(param1.field_k, this.field_mb + 6, param1.field_v, 6, param0 ^ -55);
+            this.field_sb = new dm(param1);
+          } else {
+            this.field_sb = new dm();
+          }
+          this.c(-126, this.field_sb);
+          this.field_V = null;
+          if (param0 != 12) {
+            this.field_rb = (db) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("qk.S(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("qk.S(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     qk(h param0, qm param1, int param2, int param3, int param4) {
-        super(param0, param1.field_v + 12, 12 + param2 - -param1.field_k);
+        super(param0, param1.field_v + 12, 12 + param2 + param1.field_k);
         try {
-            this.field_mb = param2;
-            this.field_nb = param4;
-            this.field_ob = param3;
-            this.field_kb = param3;
-            this.d(12, param1);
+          this.field_mb = param2;
+          this.field_nb = param4;
+          this.field_ob = param3;
+          this.field_kb = param3;
+          this.d(12, param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -102,48 +74,33 @@ abstract class qk extends ob {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        L0: {
-          var3 = ArcanistsMulti.field_G ? 1 : 0;
-          if (param0 >= 19) {
-            break L0;
-          } else {
-            this.a((byte) 113);
-            break L0;
-          }
+        var3 = ArcanistsMulti.field_G ? 1 : 0;
+        if (param0 < 19) {
+          this.a((byte) 113);
         }
-        L1: {
-          if (null != this.field_rb) {
-            if (this.field_rb == hc.field_i) {
-              fieldTemp$1 = this.field_jb + 1;
-              this.field_jb = this.field_jb + 1;
-              if (fieldTemp$1 == this.field_kb) {
-                this.field_rb = hc.field_h;
-                this.b(this.field_V.field_v + 12, 116, this.field_nb, this.field_V.field_k + 12 + this.field_mb);
-                this.field_jb = 0;
-                this.field_sb.field_K = 0;
-                break L1;
-              } else {
-                this.field_sb.field_K = 256 - (this.field_jb << 740201736) / this.field_kb;
-                break L1;
-              }
+        if (null != this.field_rb) {
+          if (this.field_rb == hc.field_i) {
+            fieldTemp$1 = this.field_jb + 1;
+            this.field_jb = this.field_jb + 1;
+            if (fieldTemp$1 == this.field_kb) {
+              this.field_rb = hc.field_h;
+              this.b(this.field_V.field_v + 12, 116, this.field_nb, this.field_V.field_k + 12 + this.field_mb);
+              this.field_jb = 0;
+              this.field_sb.field_K = 0;
             } else {
-              if (mj.field_u == this.field_rb) {
-                fieldTemp$2 = this.field_jb + 1;
-                this.field_jb = this.field_jb + 1;
-                if (this.field_ob == fieldTemp$2) {
-                  this.field_sb.field_K = 256;
-                  this.field_rb = null;
-                  break L1;
-                } else {
-                  this.field_sb.field_K = (this.field_jb << -1935303192) / this.field_ob;
-                  break L1;
-                }
-              } else {
-                break L1;
-              }
+              this.field_sb.field_K = 256 - (this.field_jb << 8) / this.field_kb;
             }
           } else {
-            break L1;
+            if (mj.field_u == this.field_rb) {
+              fieldTemp$2 = this.field_jb + 1;
+              this.field_jb = this.field_jb + 1;
+              if (this.field_ob == fieldTemp$2) {
+                this.field_sb.field_K = 256;
+                this.field_rb = null;
+              } else {
+                this.field_sb.field_K = (this.field_jb << 8) / this.field_ob;
+              }
+            }
           }
         }
         return super.a((byte) 57);
@@ -151,88 +108,48 @@ abstract class qk extends ob {
 
     boolean a(qm param0, byte param1, char param2, int param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (super.a(param0, (byte) -123, param2, param3)) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                if (null != this.field_sb) {
-                  L2: {
-                    if ((param3 ^ -1) == -99) {
-                      this.field_sb.a(0, param0);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  if (param3 != 99) {
-                    break L1;
-                  } else {
-                    this.field_sb.a(0, param0);
-                    break L1;
-                  }
-                } else {
-                  break L1;
-                }
-              }
-              if (param1 < -120) {
-                stackIn_14_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                field_lb = (qb[]) null;
-                return false;
-              }
+          if (super.a(param0, (byte) -123, param2, param3)) {
+            return true;
+          }
+          if (null != this.field_sb) {
+            if (param3 == 98) {
+              this.field_sb.a(0, param0);
+            }
+            if (param3 == 99) {
+              this.field_sb.a(0, param0);
             }
           }
+          if (param1 < -120) {
+            return false;
+          }
+          field_lb = (qb[]) null;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
-
-            stackIn_17_1 = new StringBuilder().append("qk.N(");
-
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L3;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_17_0 = var5;
+          stackIn_17_1 = new StringBuilder().append("qk.N(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          return stackIn_14_0 != 0;
+          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void e(boolean param0) {
         if (this.field_rb == hc.field_i) {
-            return;
+          return;
         }
         this.field_rb = mj.field_u;
         if (param0) {
-            this.field_kb = 82;
+          this.field_kb = 82;
         }
         this.field_jb = 0;
         this.d(12, this.field_V);
@@ -242,16 +159,16 @@ abstract class qk extends ob {
 
     final void a(int param0) {
         if (param0 < 89) {
-            qm var3 = (qm) null;
-            this.a((byte) -74, (qm) null);
+          qm var3 = (qm) null;
+          this.a((byte) -74, (qm) null);
         }
-        if (!(this.field_rb == null)) {
-            if (!(this.field_rb == mj.field_u)) {
-                this.a(this.field_V.field_v + 12, 0, this.field_V.field_k + (this.field_mb + 12));
-                this.d(12, this.field_V);
-            }
-            this.field_rb = null;
-            this.field_sb.field_K = 256;
+        if (this.field_rb != null) {
+          if (this.field_rb != mj.field_u) {
+            this.a(this.field_V.field_v + 12, 0, this.field_V.field_k + (this.field_mb + 12));
+            this.d(12, this.field_V);
+          }
+          this.field_rb = null;
+          this.field_sb.field_K = 256;
         }
         super.a(126);
     }
@@ -261,13 +178,13 @@ abstract class qk extends ob {
         field_qb = null;
         field_pb = null;
         if (param0 != 0) {
-            field_qb = (String) null;
+          field_qb = (String) null;
         }
     }
 
     final boolean g(byte param0) {
         if (param0 != 45) {
-            this.field_ob = -74;
+          this.field_ob = -74;
         }
         this.a(127);
         return super.g((byte) 45);
@@ -277,61 +194,36 @@ abstract class qk extends ob {
         qm var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              this.field_V = param1;
-              if (this.field_rb != hc.field_h) {
-                if (hc.field_i != this.field_rb) {
-                  this.field_jb = 0;
-                  this.field_rb = hc.field_i;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              } else {
-                this.b(this.field_V.field_v + 12, 117, this.field_nb, this.field_mb + (12 + this.field_V.field_k));
-                this.field_jb = 0;
-                break L1;
-              }
+          this.field_V = param1;
+          if (this.field_rb != hc.field_h) {
+            if (hc.field_i != this.field_rb) {
+              this.field_jb = 0;
+              this.field_rb = hc.field_i;
             }
-            L2: {
-              if (param0 == -92) {
-                break L2;
-              } else {
-                var4 = (qm) null;
-                this.d(106, (qm) null);
-                break L2;
-              }
-            }
-            break L0;
+          } else {
+            this.b(this.field_V.field_v + 12, 117, this.field_nb, this.field_mb + (12 + this.field_V.field_k));
+            this.field_jb = 0;
           }
+          if (param0 != -92) {
+            var4 = (qm) null;
+            this.d(106, (qm) null);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("qk.K(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("qk.K(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

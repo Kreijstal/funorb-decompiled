@@ -9,9 +9,9 @@ final class ic {
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_b = (int[]) null;
-            field_b = null;
-            return;
+          field_b = (int[]) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

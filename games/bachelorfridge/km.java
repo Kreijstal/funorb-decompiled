@@ -12,14 +12,9 @@ final class km extends hf {
     int field_G;
 
     final boolean b(int param0, int param1, int param2, int param3, int param4, wj param5, int param6) {
-        int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -28,109 +23,56 @@ final class km extends hf {
         int var12 = 0;
         var12 = BachelorFridge.field_y;
         try {
-          L0: {
-            if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
-              stackIn_16_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
+          if (!super.b(param0, param1, param2, param3, param4, param5, param6)) {
+            return false;
+          }
+          var8_int = -this.field_s - (param2 + (this.field_A - param0));
+          var9 = param6 - this.field_D - this.field_v - param4;
+          if (var9 * var9 + var8_int * var8_int < this.field_G * this.field_G) {
+            var10 = Math.atan2((double)var9, (double)var8_int) - nd.field_j;
+            if (0.0 > var10) {
+              var10 = var10 - 3.141592653589793 / (double)this.field_F;
             } else {
-              L1: {
-                var8_int = -this.field_s - (param2 + (this.field_A - param0));
-                var9 = param6 - this.field_D - this.field_v - param4;
-                if (var9 * var9 + var8_int * var8_int >= this.field_G * this.field_G) {
-                  break L1;
-                } else {
-                  L2: {
-                    var10 = Math.atan2((double)var9, (double)var8_int) - nd.field_j;
-                    if (0.0 > var10) {
-                      var10 = var10 - 3.141592653589793 / (double)this.field_F;
-                      break L2;
-                    } else {
-                      if (var10 > 0.0) {
-                        var10 = var10 + 3.141592653589793 / (double)this.field_F;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  this.field_I = (int)((double)this.field_F * var10 / 6.283185307179586);
-                  L3: while (true) {
-                    if (this.field_F > this.field_I) {
-                      L4: while (true) {
-                        if (-1 >= (this.field_I ^ -1)) {
-                          break L1;
-                        } else {
-                          this.field_I = this.field_I + this.field_F;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      this.field_I = this.field_I - this.field_F;
-                      continue L3;
-                    }
-                  }
-                }
+              if (var10 > 0.0) {
+                var10 = var10 + 3.141592653589793 / (double)this.field_F;
               }
-              stackIn_14_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+            }
+            this.field_I = (int)((double)this.field_F * var10 / 6.283185307179586);
+            while (this.field_F <= this.field_I) {
+              this.field_I = this.field_I - this.field_F;
+            }
+            while (this.field_I < 0) {
+              this.field_I = this.field_I + this.field_F;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var8);
-
-            stackIn_19_1 = new StringBuilder().append("km.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_19_0 = var8;
+          stackIn_19_1 = new StringBuilder().append("km.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0 != 0;
-        } else {
-          return stackIn_16_0 != 0;
+          throw pe.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
         }
     }
 
     final static String a(long param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        L0: {
-          if (param1 == -1) {
-            break L0;
-          } else {
-            km.a(-37L, 30);
-            break L0;
-          }
+        if (param1 != -1) {
+          km.a(-37L, 30);
         }
         gd.field_o.setTime(new Date(param0));
-        var3 = gd.field_o.get(7);
-        var4 = gd.field_o.get(5);
-        var5 = gd.field_o.get(2);
-        var6 = gd.field_o.get(1);
-        var7 = gd.field_o.get(11);
-        var8 = gd.field_o.get(12);
-        var9 = gd.field_o.get(13);
-        return gp.field_B[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + sh.field_E[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        int var3 = gd.field_o.get(7);
+        int var4 = gd.field_o.get(5);
+        int var5 = gd.field_o.get(2);
+        int var6 = gd.field_o.get(1);
+        int var7 = gd.field_o.get(11);
+        int var8 = gd.field_o.get(12);
+        int var9 = gd.field_o.get(13);
+        return gp.field_B[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + sh.field_E[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     private km() throws Throwable {

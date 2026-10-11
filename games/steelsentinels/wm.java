@@ -21,39 +21,24 @@ public class wm {
         field_a = param0;
         field_d = param2;
         try {
-          L0: {
-            L1: {
-              field_e = System.getProperty("user.home");
-              if (null == field_e) {
-                break L1;
-              } else {
-                field_e = field_e + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_e = System.getProperty("user.home");
+          if (null != field_e) {
+            field_e = field_e + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         if (field_e == null) {
           field_e = "~/";
-          field_c = param1;
-          return;
-        } else {
-          field_c = param1;
-          return;
         }
+        field_c = param1;
     }
 
     public static File a(int param0, String param1) {
         if (param0 != 8244) {
-            field_b = (Hashtable) null;
-            return wm.a(field_a, field_d, (byte) 26, param1);
+          field_b = (Hashtable) null;
+          return wm.a(field_a, field_d, (byte) 26, param1);
         }
         return wm.a(field_a, field_d, (byte) 26, param1);
     }

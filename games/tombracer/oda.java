@@ -11,7 +11,7 @@ final class oda extends vg {
         field_i = null;
         field_h = null;
         if (!param0) {
-            field_i = (String) null;
+          field_i = (String) null;
         }
     }
 

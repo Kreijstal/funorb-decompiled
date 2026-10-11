@@ -13,10 +13,10 @@ final class h extends RuntimeException {
 
     final static long b(int param0) {
         if (param0 <= 86) {
-            field_a = (String) null;
-            return lj.a((byte) -35) + -ug.field_d;
+          field_a = (String) null;
+          return lj.a((byte) -35) - ug.field_d;
         }
-        return lj.a((byte) -35) + -ug.field_d;
+        return lj.a((byte) -35) - ug.field_d;
     }
 
     public static void c(int param0) {
@@ -30,39 +30,33 @@ final class h extends RuntimeException {
 
     final static int[] a(byte param0) {
         if (param0 > -109) {
-            h.a(7);
-            return new int[8];
+          h.a(7);
+          return new int[8];
         }
         return new int[8];
     }
 
     final static void a(int param0) {
-        int var1;
-        L0: {
-          if (224 > gf.field_d) {
-            var1 = gf.field_d % 32;
-            ia.a(true, -var1 + (gf.field_d - -32));
-            break L0;
-          } else {
-            ia.a(true, 256);
-            break L0;
-          }
-        }
-        if (param0 != -32) {
-          h.a((byte) 30);
-          return;
+        int var1 = 0;
+        if (224 <= gf.field_d) {
+          ia.a(true, 256);
         } else {
+          var1 = gf.field_d % 32;
+          ia.a(true, -var1 + (gf.field_d + 32));
+        }
+        if (param0 == -32) {
           return;
         }
+        h.a((byte) 30);
     }
 
     final static int a(int param0, int param1) {
-        param0 = ((param0 & -1431655766) >>> 1687952609) + (param0 & 1431655765);
+        param0 = ((param0 & -1431655766) >>> 1) + (param0 & 1431655765);
         int var2 = -97 % ((-51 - param1) / 42);
-        param0 = (858993459 & param0) - -((-858993457 & param0) >>> 854086306);
-        param0 = param0 + (param0 >>> 1033602532) & 252645135;
-        param0 = param0 + (param0 >>> -1623321272);
-        param0 = param0 + (param0 >>> -1723567056);
+        param0 = (858993459 & param0) + ((-858993457 & param0) >>> 2);
+        param0 = param0 + (param0 >>> 4) & 252645135;
+        param0 = param0 + (param0 >>> 8);
+        param0 = param0 + (param0 >>> 16);
         return 255 & param0;
     }
 

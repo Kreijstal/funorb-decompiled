@@ -13,62 +13,52 @@ final class wh implements Iterator {
     final static void b(int param0) {
         qb.b(-1);
         ic.field_a = true;
-        if (param0 <= 63) {
-          wh.a(false);
-          tc.field_x = true;
-          ti.field_b.l(26756);
-          sc.a(false, (byte) 118, ui.field_n);
-          return;
-        } else {
+        if (param0 > 63) {
           tc.field_x = true;
           ti.field_b.l(26756);
           sc.a(false, (byte) 118, ui.field_n);
           return;
         }
+        wh.a(false);
+        tc.field_x = true;
+        ti.field_b.l(26756);
+        sc.a(false, (byte) 118, ui.field_n);
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = StarCannon.field_A;
-        if (this.field_a == this.field_b.field_a[this.field_c + -1]) {
-          L0: while (true) {
-            if (this.field_b.field_c > this.field_c) {
-              fieldTemp$1 = this.field_c;
-              this.field_c = this.field_c + 1;
-              if (this.field_b.field_a[fieldTemp$1].field_a != this.field_b.field_a[this.field_c + -1]) {
-                this.field_a = this.field_b.field_a[-1 + this.field_c].field_a;
-                return true;
-              } else {
-                this.field_a = this.field_b.field_a[this.field_c + -1];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_a != this.field_b.field_a[this.field_c - 1]) {
           return true;
         }
+        while (this.field_b.field_c > this.field_c) {
+          fieldTemp$0 = this.field_c;
+          this.field_c = this.field_c + 1;
+          if (this.field_b.field_a[fieldTemp$0].field_a != this.field_b.field_a[this.field_c - 1]) {
+            this.field_a = this.field_b.field_a[-1 + this.field_c].field_a;
+            return true;
+          }
+          this.field_a = this.field_b.field_a[this.field_c - 1];
+        }
+        return false;
     }
 
     private final void a(int param0) {
         this.field_a = this.field_b.field_a[0].field_a;
         this.field_c = 1;
-        if (param0 != -17399) {
-          this.a(-19);
-          this.field_d = null;
-          return;
-        } else {
+        if (param0 == -17399) {
           this.field_d = null;
           return;
         }
+        this.a(-19);
+        this.field_d = null;
     }
 
     public static void a(boolean param0) {
         field_e = null;
         if (param0) {
-            return;
+          return;
         }
         java.applet.Applet var2 = (java.applet.Applet) null;
         wh.a(124, (java.net.URL) null, (java.applet.Applet) null);
@@ -81,133 +71,76 @@ final class wh implements Iterator {
         java.net.URL stackIn_11_0 = null;
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        Object stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         StringBuilder stackIn_17_1 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 127) {
-              L1: {
-                var3 = null;
-                var4 = null;
-                if (null == qi.field_b) {
-                  break L1;
-                } else {
-                  if (qi.field_b.equals(param2.getParameter("settings"))) {
-                    break L1;
-                  } else {
-                    var3 = qi.field_b;
-                    var4 = var3;
-                    var4 = var3;
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (null == vk.field_v) {
-                  break L2;
-                } else {
-                  if (!vk.field_v.equals(param2.getParameter("session"))) {
-                    var4 = vk.field_v;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_11_0 = ig.a((String) (var3), -1, (String) (var4), param1, 1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (java.net.URL) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 127) {
+            stackIn_2_0 = (java.net.URL) null;
+            return stackIn_2_0;
           }
+          var3 = null;
+          var4 = null;
+          if (null != qi.field_b &&
+            !qi.field_b.equals(param2.getParameter("settings"))) {
+            var3 = qi.field_b;
+            var4 = var3;
+            var4 = var3;
+          }
+          if (null != vk.field_v &&
+            !vk.field_v.equals(param2.getParameter("session"))) {
+            var4 = vk.field_v;
+          }
+          stackIn_11_0 = ig.a((String) (var3), -1, (String) (var4), param1, 1);
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_14_0 = var3;
-
-            stackIn_14_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = stackIn_14_0;
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = stackIn_14_0;
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-
-            if (param2 == null) {
-
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_11_0;
+          throw sd.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         rf var1;
         int var2;
         var2 = StarCannon.field_A;
-        if (this.field_b.field_a[this.field_c + -1] == this.field_a) {
-          L0: while (true) {
-            if (this.field_b.field_c > this.field_c) {
-              fieldTemp$1 = this.field_c;
-              this.field_c = this.field_c + 1;
-              var1 = this.field_b.field_a[fieldTemp$1].field_a;
-              if (this.field_b.field_a[-1 + this.field_c] == var1) {
-                continue L0;
-              } else {
-                this.field_d = var1;
-                this.field_a = var1.field_a;
-                return var1;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_b.field_a[this.field_c - 1] != this.field_a) {
           var1 = this.field_a;
           this.field_d = var1;
           this.field_a = var1.field_a;
           return var1;
         }
+        do {
+          if (this.field_b.field_c <= this.field_c) {
+            return null;
+          }
+          fieldTemp$0 = this.field_c;
+          this.field_c = this.field_c + 1;
+          var1 = this.field_b.field_a[fieldTemp$0].field_a;
+        } while (this.field_b.field_a[-1 + this.field_c] == var1);
+        this.field_d = var1;
+        this.field_a = var1.field_a;
+        return var1;
     }
 
     public final void remove() {
         if (this.field_d == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_d.b(4);
         this.field_d = null;
@@ -216,10 +149,10 @@ final class wh implements Iterator {
     wh(ek param0) {
         this.field_d = null;
         try {
-            this.field_b = param0;
-            this.a(-17399);
+          this.field_b = param0;
+          this.a(-17399);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

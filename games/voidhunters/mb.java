@@ -9,41 +9,36 @@ final class mb extends ds {
     public static void f(byte param0) {
         field_k = null;
         if (param0 > -92) {
-            field_i = false;
+          field_i = false;
         }
     }
 
     final void b(float param0, int param1) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int var3;
-        var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$6 = this.field_e;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
+        int fieldTemp$0 = this.field_e;
         this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$6] = (byte)(var3 >> 1724347896);
-        int fieldTemp$7 = this.field_e;
+        this.field_h[fieldTemp$0] = (byte)(var3 >> 24);
+        int fieldTemp$1 = this.field_e;
         this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$7] = (byte)(var3 >> 1059949744);
-        if (param1 != 1724347896) {
-          field_i = false;
-          fieldTemp$8 = this.field_e;
+        this.field_h[fieldTemp$1] = (byte)(var3 >> 16);
+        if (param1 == 1724347896) {
+          fieldTemp$2 = this.field_e;
           this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$8] = (byte)(var3 >> -1688588312);
-          fieldTemp$9 = this.field_e;
+          this.field_h[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.field_e;
           this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$9] = (byte)var3;
-          return;
-        } else {
-          fieldTemp$10 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$10] = (byte)(var3 >> -1688588312);
-          fieldTemp$11 = this.field_e;
-          this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$11] = (byte)var3;
+          this.field_h[fieldTemp$3] = (byte)var3;
           return;
         }
+        field_i = false;
+        int fieldTemp$4 = this.field_e;
+        this.field_e = this.field_e + 1;
+        this.field_h[fieldTemp$4] = (byte)(var3 >> 8);
+        int fieldTemp$5 = this.field_e;
+        this.field_e = this.field_e + 1;
+        this.field_h[fieldTemp$5] = (byte)var3;
     }
 
     mb(int param0) {
@@ -51,26 +46,23 @@ final class mb extends ds {
     }
 
     final void a(float param0, int param1) {
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int var3;
-        var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
-        int fieldTemp$4 = this.field_e;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(param0);
+        int fieldTemp$0 = this.field_e;
         this.field_e = this.field_e + 1;
-        this.field_h[fieldTemp$4] = (byte)var3;
-        if (param1 != 1059949744) {
-          return;
-        } else {
-          fieldTemp$5 = this.field_e;
+        this.field_h[fieldTemp$0] = (byte)var3;
+        if (param1 == 1059949744) {
+          fieldTemp$1 = this.field_e;
           this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$5] = (byte)(var3 >> 1556848168);
-          fieldTemp$6 = this.field_e;
+          this.field_h[fieldTemp$1] = (byte)(var3 >> 8);
+          fieldTemp$2 = this.field_e;
           this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$6] = (byte)(var3 >> 126953520);
-          fieldTemp$7 = this.field_e;
+          this.field_h[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.field_e;
           this.field_e = this.field_e + 1;
-          this.field_h[fieldTemp$7] = (byte)(var3 >> -1646179976);
+          this.field_h[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
     }
@@ -82,88 +74,51 @@ final class mb extends ds {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (-5 >= (var2_int ^ -1)) {
-                if (param0 == -1688588312) {
-                  break L0;
-                } else {
-                  mb.f((byte) 4);
-                  return;
-                }
-              } else {
-                var3 = new ml(29);
-                var3.a(param0 ^ -1688588311, 0, new ml(24));
-                param1.a(1, var2_int, var3);
-                var2_int++;
-                continue L1;
-              }
-            }
+          for (var2_int = 0; var2_int < 4; var2_int++) {
+            var3 = new ml(29);
+            var3.a(param0 ^ -1688588311, 0, new ml(24));
+            param1.a(1, var2_int, var3);
           }
+          if (param0 == -1688588312) {
+            return;
+          }
+          mb.f((byte) 4);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2);
-
-            stackIn_9_1 = new StringBuilder().append("mb.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("mb.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final static void h(int param0, int param1) {
         try {
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            try {
-              L0: {
-                if (param1 >= 88) {
-                  ia.a(new Object[]{new Integer(param0)}, vpa.b((byte) -107), "resizing", (byte) 88);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var2 = decompiledCaughtException;
-                decompiledRegionSelector0 = 1;
-                break L1;
-              }
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return;
-            } else {
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          try {
+            if (param1 < 88) {
               return;
             }
+            ia.a(new Object[]{new Integer(param0)}, vpa.b((byte) -107), "resizing", (byte) 88);
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

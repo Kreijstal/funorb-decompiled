@@ -11,7 +11,7 @@ final class na {
     public static void a(int param0) {
         field_c = null;
         if (param0 != -4775) {
-            return;
+          return;
         }
         field_d = null;
     }
@@ -26,122 +26,55 @@ final class na {
         byte[] stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var8 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            var4_int = param1.d(0, param3);
-            if (var4_int != 0) {
-              L1: {
-                L2: {
-                  if (param2 == null) {
-                    break L2;
-                  } else {
-                    if (var4_int != param2.length) {
-                      break L2;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                param2 = new byte[var4_int];
-                break L1;
-              }
-              L3: {
-                var5 = param1.d(0, 3);
-                if (param0 == -26947) {
-                  break L3;
-                } else {
-                  field_b = -9;
-                  break L3;
-                }
-              }
-              L4: {
-                var6 = (byte)param1.d(param0 + 26947, 8);
-                if (0 >= var5) {
-                  var7 = 0;
-                  L5: while (true) {
-                    if (var4_int <= var7) {
-                      break L4;
-                    } else {
-                      param2[var7] = (byte)var6;
-                      var7++;
-                      continue L5;
-                    }
-                  }
-                } else {
-                  var7 = 0;
-                  L6: while (true) {
-                    if (var4_int <= var7) {
-                      break L4;
-                    } else {
-                      param2[var7] = (byte)(var6 + param1.d(0, var5));
-                      var7++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
-              stackIn_18_0 = (byte[]) (param2);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_3_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var4_int = param1.d(0, param3);
+          if (var4_int == 0) {
+            stackIn_3_0 = null;
+            return (byte[]) (stackIn_3_0);
+          }
+          if (param2 == null ||
+            var4_int != param2.length) {
+            param2 = new byte[var4_int];
+          }
+          var5 = param1.d(0, 3);
+          if (param0 != -26947) {
+            field_b = -9;
+          }
+          var6 = (byte)param1.d(param0 + 26947, 8);
+          if (0 >= var5) {
+            for (var7 = 0; var4_int > var7; var7++) {
+              param2[var7] = (byte)var6;
+            }
+          } else {
+            for (var7 = 0; var4_int > var7; var7++) {
+              param2[var7] = (byte)(var6 + param1.d(0, var5));
             }
           }
+          stackIn_18_0 = (byte[]) (param2);
+          return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var4);
-
-            stackIn_21_1 = new StringBuilder().append("na.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L7;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_21_0 = var4;
+          stackIn_21_1 = new StringBuilder().append("na.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',');
-
-            if (param2 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L8;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L8;
-            }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
+          if (param2 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (byte[]) ((Object) stackIn_3_0);
-        } else {
-          return stackIn_18_0;
+          throw sl.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -152,9 +85,9 @@ final class na {
 
     na(qj[] param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

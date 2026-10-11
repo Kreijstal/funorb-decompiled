@@ -37,7 +37,7 @@ final class mi extends tc {
         field_C = null;
         field_G = null;
         if (param0 != 9480) {
-            mi.f(69);
+          mi.f(69);
         }
     }
 
@@ -45,14 +45,12 @@ final class mi extends tc {
         this.field_K = null;
         this.field_H = null;
         this.field_q = null;
-        if (param0 != 13301) {
-          mi.a(-82);
-          this.field_v = null;
-          return;
-        } else {
+        if (param0 == 13301) {
           this.field_v = null;
           return;
         }
+        mi.a(-82);
+        this.field_v = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -60,15 +58,15 @@ final class mi extends tc {
         ui.field_g = param1;
         mn.field_n = param0;
         if (param3 != 3815) {
-            mi.a(-70, -81, 66, 75);
+          mi.a(-70, -81, 66, 75);
         }
     }
 
     final static void f(int param0) {
         if (param0 != -28093) {
-            mi.a(38);
-            ue.a((byte) 102);
-            return;
+          mi.a(38);
+          ue.a((byte) 102);
+          return;
         }
         ue.a((byte) 102);
     }

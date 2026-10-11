@@ -22,123 +22,57 @@ abstract class ha {
         ha stackIn_16_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         StringBuilder stackIn_23_1 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         StringBuilder stackIn_26_1 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == (param0 ^ -1)) {
-              stackIn_3_0 = kl.a(param5, param1, param4, param6, -1);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (2 != param0) {
-                if ((param0 ^ -1) != -2) {
-                  if (5 != param0) {
-                    if ((param0 ^ -1) == -4) {
-                      stackIn_16_0 = nu.a(7023, param7, param4, param1, param3);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      throw new IllegalArgumentException("UM");
-                    }
-                  } else {
-                    stackIn_12_0 = sb.a(param7, param2 ^ 6707, param4, param1, param3);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                } else {
-                  stackIn_9_0 = aw.a(param4, param1, param3, 27541);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                stackIn_6_0 = qc.a(param5, param6, param2 ^ 0, param1, param4);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param2 == ~param0) {
+            stackIn_3_0 = kl.a(param5, param1, param4, param6, -1);
+            return stackIn_3_0;
           }
+          if (2 == param0) {
+            stackIn_6_0 = qc.a(param5, param6, param2 ^ 0, param1, param4);
+            return stackIn_6_0;
+          }
+          if (param0 == 1) {
+            stackIn_9_0 = aw.a(param4, param1, param3, 27541);
+            return stackIn_9_0;
+          }
+          if (5 == param0) {
+            stackIn_12_0 = sb.a(param7, param2 ^ 6707, param4, param1, param3);
+            return stackIn_12_0;
+          }
+          if (param0 != 3) {
+            throw new IllegalArgumentException("UM");
+          }
+          stackIn_16_0 = nu.a(7023, param7, param4, param1, param3);
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var8 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var8);
-
-            stackIn_20_1 = new StringBuilder().append("ha.HG(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L1;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L1;
-            }
-          }
-          L2: {
-
-
-            stackIn_23_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L2;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L2;
-            }
-          }
-          L3: {
-
-
-            stackIn_26_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(',');
-
-            if (param7 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L3;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L3;
-            }
-          }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), stackIn_27_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var8 = decompiledCaughtException;
+          stackIn_20_0 = var8;
+          stackIn_20_1 = new StringBuilder().append("ha.HG(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_9_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_12_0;
-              } else {
-                return stackIn_16_0;
-              }
-            }
+            stackIn_21_2 = "{...}";
           }
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(',');
+          if (param7 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -153,52 +87,32 @@ abstract class ha {
         hr stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -2) {
-                break L1;
-              } else {
-                field_g = (ki) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = this.a(param5, param0, param3, param4, param2, true);
-            break L0;
+          if (param1 != -2) {
+            field_g = (ki) null;
           }
+          stackIn_3_0 = this.a(param5, param0, param3, param4, param2, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var7 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var7);
-
-            stackIn_6_1 = new StringBuilder().append("ha.IG(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_6_0 = var7;
+          stackIn_6_1 = new StringBuilder().append("ha.IG(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void e(int param0) {
         field_e = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_c = null;
         field_g = null;
@@ -208,19 +122,19 @@ abstract class ha {
     abstract boolean a();
 
     final static void a(int param0, ms param1, ms param2) {
-        if (!(null == param2.field_g)) {
-            param2.b(false);
+        if (null != param2.field_g) {
+          param2.b(false);
         }
         if (param0 != -2) {
-            return;
+          return;
         }
         try {
-            param2.field_g = param1.field_g;
-            param2.field_b = param1;
-            param2.field_g.field_b = param2;
-            param2.field_b.field_g = param2;
+          param2.field_g = param1.field_g;
+          param2.field_b = param1;
+          param2.field_g.field_b = param2;
+          param2.field_b.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ha.AG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ha.AG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -228,9 +142,9 @@ abstract class ha {
 
     final void a(boolean param0) throws rf {
         if (!param0) {
-            field_c = (pm) null;
-            this.b(0, 0);
-            return;
+          field_c = (pm) null;
+          this.b(0, 0);
+          return;
         }
         this.b(0, 0);
     }
@@ -242,19 +156,17 @@ abstract class ha {
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         this.aa(param4, param2, param1, param5, param3, 1);
         if (param0 >= -38) {
-            this.field_a = 121;
+          this.field_a = 121;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 <= 80) {
-          this.a();
-          this.U(param4, param2, param3, param0, 1);
-          return;
-        } else {
+        if (param1 > 80) {
           this.U(param4, param2, param3, param0, 1);
           return;
         }
+        this.a();
+        this.U(param4, param2, param3, param0, 1);
     }
 
     abstract vc a(bu param0, nr param1);
@@ -264,7 +176,7 @@ abstract class ha {
         uw.field_b = null;
         uw.field_c = null;
         if (param0 != 23639) {
-            return;
+          return;
         }
         hf.field_F = null;
         no.field_b = null;
@@ -290,8 +202,8 @@ abstract class ha {
         fs.field_o[this.field_a] = false;
         this.d();
         if (param0 >= -11) {
-            ms var3 = (ms) null;
-            ha.a(-61, (ms) null, (ms) null);
+          ms var3 = (ms) null;
+          ha.a(-61, (ms) null, (ms) null);
         }
     }
 
@@ -299,9 +211,9 @@ abstract class ha {
 
     void a(hr param0, boolean param1) {
         try {
-            this.a(this.a(param0, param1 ? this.a(param0.c(), param0.a()) : null));
+          this.a(this.a(param0, param1 ? this.a(param0.c(), param0.a()) : null));
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ha.MF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ha.MF(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -321,12 +233,12 @@ abstract class ha {
 
     final static void a(byte param0, String param1) {
         try {
-            if (param0 < 106) {
-                ki var3 = (ki) null;
-                ha.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ki) null);
-            }
+          if (param0 < 106) {
+            ki var3 = (ki) null;
+            ha.a(-117, (java.awt.Canvas) null, -59, 3, (d) null, -128, -20, (ki) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ha.EG(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -340,21 +252,21 @@ abstract class ha {
         int var2_int = 0;
         int var3 = 0;
         try {
-            this.field_h = param0;
-            var2_int = -1;
-            for (var3 = 0; 8 > var3; var3++) {
-                if (!fs.field_o[var3]) {
-                    fs.field_o[var3] = true;
-                    var2_int = var3;
-                    break;
-                }
+          this.field_h = param0;
+          var2_int = -1;
+          for (var3 = 0; 8 > var3; var3++) {
+            if (!fs.field_o[var3]) {
+              fs.field_o[var3] = true;
+              var2_int = var3;
+              break;
             }
-            if (var2_int == -1) {
-                throw new IllegalStateException("NFTI");
-            }
-            this.field_a = var2_int;
+          }
+          if (var2_int == -1) {
+            throw new IllegalStateException("NFTI");
+          }
+          this.field_a = var2_int;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

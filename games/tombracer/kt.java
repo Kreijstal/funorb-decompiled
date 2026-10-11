@@ -8,28 +8,28 @@ final class kt extends kna {
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            return true;
+          return true;
         }
         return true;
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            field_F = (ta) null;
-            return false;
+          field_F = (ta) null;
+          return false;
         }
         return false;
     }
 
     final void a(boolean param0, kh param1) {
         try {
-            if (param0) {
-                field_F = (ta) null;
-            }
-            super.a(param0, param1);
-            param1.a((byte) 72, this.field_G, 4);
+          if (param0) {
+            field_F = (ta) null;
+          }
+          super.a(param0, param1);
+          param1.a((byte) 72, this.field_G, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "kt.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,53 +47,38 @@ final class kt extends kna {
         fsa stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = new fsa(param2, param0);
-            var8.b((byte) -11, this.field_k, this.field_l);
-            var8.h(param1, 0);
-            var8.a(1, (byte) -12, true);
-            var8.a((byte) -3, 6);
-            var8.b((byte) 17, false);
-            var8.g(126, 2);
-            var8.a((byte) 83, (nv) (new eq(param2, param0)));
-            var5 = new pt(param2, param0);
-            var5.a(8 * this.field_G, (byte) 127);
-            var8.a(var5, 0);
-            var6 = rm.field_a;
-            var7 = (nq) ((Object) var6.a(16, param1 ^ 82));
-            var7.b(8022, 2);
-            var8.a(var5, (byte) 124, var7);
-            stackIn_1_0 = (fsa) (var8);
-            break L0;
-          }
+          var8 = new fsa(param2, param0);
+          var8.b((byte) -11, this.field_k, this.field_l);
+          var8.h(param1, 0);
+          var8.a(1, (byte) -12, true);
+          var8.a((byte) -3, 6);
+          var8.b((byte) 17, false);
+          var8.g(126, 2);
+          var8.a((byte) 83, (nv) (new eq(param2, param0)));
+          var5 = new pt(param2, param0);
+          var5.a(8 * this.field_G, (byte) 127);
+          var8.a(var5, 0);
+          var6 = rm.field_a;
+          var7 = (nq) (var6.a(16, param1 ^ 82));
+          var7.b(8022, 2);
+          var8.a(var5, (byte) 124, var7);
+          stackIn_1_0 = var8;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4);
-
-            stackIn_4_1 = new StringBuilder().append("kt.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("kt.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final void q(byte param0) {
@@ -104,9 +89,9 @@ final class kt extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-            kh var3 = (kh) null;
-            this.a(true, (kh) null);
-            return 7;
+          kh var3 = (kh) null;
+          this.a(true, (kh) null);
+          return 7;
         }
         return 7;
     }
@@ -115,9 +100,9 @@ final class kt extends kna {
         super(param0, param1, param2, param3);
         this.field_G = 4;
         try {
-            this.field_G = param2.b((byte) 44, 4);
+          this.field_G = param2.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -125,22 +110,22 @@ final class kt extends kna {
         field_H = null;
         field_F = null;
         if (param0 > -74) {
-            field_F = (ta) null;
+          field_F = (ta) null;
         }
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            kh var3 = (kh) null;
-            this.a(true, (kh) null);
-            return true;
+          kh var3 = (kh) null;
+          this.a(true, (kh) null);
+          return true;
         }
         return true;
     }

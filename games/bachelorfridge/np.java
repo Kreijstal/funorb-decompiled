@@ -10,93 +10,79 @@ final class np implements Iterator {
     private wha field_a;
 
     public final Object next() {
-        bw[] fieldTemp$2 = null;
-        int fieldTemp$3 = 0;
+        bw[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         int var2;
         bw var3;
         bw var4;
         var2 = BachelorFridge.field_y;
-        if (this.field_b == this.field_a.field_c[this.field_c + -1]) {
-          L0: while (true) {
-            if (this.field_a.field_f > this.field_c) {
-              fieldTemp$2 = this.field_a.field_c;
-              fieldTemp$3 = this.field_c;
-              this.field_c = this.field_c + 1;
-              var3 = fieldTemp$2[fieldTemp$3].field_b;
-              if (this.field_a.field_c[this.field_c + -1] != var3) {
-                this.field_d = var3;
-                this.field_b = var3.field_b;
-                return var3;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_b != this.field_a.field_c[this.field_c - 1]) {
           var4 = this.field_b;
           this.field_b = var4.field_b;
           this.field_d = var4;
           return var4;
         }
+        do {
+          if (this.field_a.field_f <= this.field_c) {
+            return null;
+          }
+          fieldTemp$0 = this.field_a.field_c;
+          fieldTemp$1 = this.field_c;
+          this.field_c = this.field_c + 1;
+          var3 = fieldTemp$0[fieldTemp$1].field_b;
+        } while (this.field_a.field_c[this.field_c - 1] == var3);
+        this.field_d = var3;
+        this.field_b = var3.field_b;
+        return var3;
     }
 
     private final void a(int param0) {
         this.field_b = this.field_a.field_c[0].field_b;
         this.field_c = 1;
-        if (param0 > -34) {
-          this.field_c = -99;
-          this.field_d = null;
-          return;
-        } else {
+        if (param0 <= -34) {
           this.field_d = null;
           return;
         }
+        this.field_c = -99;
+        this.field_d = null;
     }
 
     public final void remove() {
-        if (!(this.field_d != null)) {
-            throw new IllegalStateException();
+        if (this.field_d == null) {
+          throw new IllegalStateException();
         }
         this.field_d.a(false);
         this.field_d = null;
     }
 
     public final boolean hasNext() {
-        bw[] fieldTemp$2 = null;
-        int fieldTemp$3 = 0;
+        bw[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         int var2;
         var2 = BachelorFridge.field_y;
-        if (this.field_a.field_c[this.field_c + -1] == this.field_b) {
-          L0: while (true) {
-            if (this.field_c < this.field_a.field_f) {
-              fieldTemp$2 = this.field_a.field_c;
-              fieldTemp$3 = this.field_c;
-              this.field_c = this.field_c + 1;
-              if (fieldTemp$2[fieldTemp$3].field_b != this.field_a.field_c[this.field_c - 1]) {
-                this.field_b = this.field_a.field_c[this.field_c + -1].field_b;
-                return true;
-              } else {
-                this.field_b = this.field_a.field_c[-1 + this.field_c];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_a.field_c[this.field_c - 1] != this.field_b) {
           return true;
         }
+        while (this.field_c < this.field_a.field_f) {
+          fieldTemp$0 = this.field_a.field_c;
+          fieldTemp$1 = this.field_c;
+          this.field_c = this.field_c + 1;
+          if (fieldTemp$0[fieldTemp$1].field_b != this.field_a.field_c[this.field_c - 1]) {
+            this.field_b = this.field_a.field_c[this.field_c - 1].field_b;
+            return true;
+          }
+          this.field_b = this.field_a.field_c[-1 + this.field_c];
+        }
+        return false;
     }
 
     np(wha param0) {
         this.field_d = null;
         try {
-            this.field_a = param0;
-            this.a(-87);
+          this.field_a = param0;
+          this.a(-87);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

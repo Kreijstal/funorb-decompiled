@@ -23,29 +23,20 @@ final class nm extends mc {
         field_n = null;
         field_A = null;
         field_p = null;
-        if (param0 != 6) {
-          field_v = (String) null;
-          field_v = null;
-          return;
-        } else {
+        if (param0 == 6) {
           field_v = null;
           return;
         }
+        field_v = (String) null;
+        field_v = null;
     }
 
     final static void b(byte param0) {
-        dl var1;
-        if (param0 <= 27) {
-          return;
-        } else {
-          L0: {
-            var1 = (dl) ((Object) fm.field_a.c((byte) 125));
-            if (var1 != null) {
-              break L0;
-            } else {
-              var1 = new dl();
-              break L0;
-            }
+        dl var1 = null;
+        if (param0 > 27) {
+          var1 = (dl) (fm.field_a.c((byte) 125));
+          if (var1 == null) {
+            var1 = new dl();
           }
           var1.a(ra.field_g, ra.field_l, ra.field_f, ra.field_j, ra.field_b, true, ra.field_i, ra.field_e);
           oa.field_u.a(var1, false);

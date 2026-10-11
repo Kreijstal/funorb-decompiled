@@ -24,30 +24,35 @@ final class em extends IOException {
         ia.field_p[6] = new int[]{22};
         tk.a(70, 165, new int[]{22}, 475, -125, 6, 295);
         if (param0 > -51) {
-            em.a(19);
+          em.a(19);
         }
         pi.field_b[6] = new t(6);
         rh.field_c.field_d = rh.field_c.field_D.field_N * 11;
-        if (-1 > (wc.field_q ^ -1)) {
-            if (!(!lf.a(fg.field_q, 31849))) {
-                tk.a(34, 155, new int[]{1, 19, 12, 13, 4, 3, 7}, 485, -123, 1, 135);
-                pi.field_b[1] = new t(1);
-            }
+        if (wc.field_q > 0 &&
+          lf.a(fg.field_q, 31849)) {
+          tk.a(34, 155, new int[]{1, 19, 12, 13, 4, 3, 7}, 485, -123, 1, 135);
+          pi.field_b[1] = new t(1);
         }
     }
 
     final static int a(int param0, boolean param1, int param2) {
         if (df.field_b == null) {
-            return -1;
+          return -1;
         }
-        if (ha.field_l <= param2 && param2 < ha.field_l + df.field_b.field_w && mg.field_e <= param0 && param0 < df.field_b.field_t + mg.field_e) {
-            return 0;
+        if (ha.field_l <= param2 &&
+          param2 < ha.field_l + df.field_b.field_w &&
+          mg.field_e <= param0 &&
+          param0 < df.field_b.field_t + mg.field_e) {
+          return 0;
         }
-        if (param2 >= mh.field_w && param2 < mh.field_w - -df.field_b.field_w && rj.field_o <= param0 && df.field_b.field_t + rj.field_o > param0) {
-            return 1;
+        if (param2 >= mh.field_w &&
+          param2 < mh.field_w + df.field_b.field_w &&
+          rj.field_o <= param0 &&
+          df.field_b.field_t + rj.field_o > param0) {
+          return 1;
         }
         if (param1) {
-            em.b(-117);
+          em.b(-117);
         }
         return -1;
     }
@@ -57,151 +62,71 @@ final class em extends IOException {
     }
 
     final static String c(int param0) {
-        if (!(b.field_e != null)) {
-            return "";
+        if (b.field_e == null) {
+          return "";
         }
         if (param0 != 10158) {
-            field_d = -125;
+          field_d = -125;
         }
         return b.field_e;
     }
 
     final static void a(dd param0, byte param1) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        var9 = fleas.field_A ? 1 : 0;
-        try {
-          L0: {
-            if ((3 & (param0.field_w | param0.field_t | param0.field_q | param0.field_v)) != 0) {
-              var2_int = (3 & param0.field_q) + param0.field_w;
-              var2_int = -(3 & var2_int) - (-4 - var2_int);
-              var3 = param0.field_t - -(3 & param0.field_v);
-              var3 = 4 + -(var3 & 3) + var3;
-              var4 = new int[var3 * var2_int];
-              if (param1 < -45) {
-                var5 = 0;
-                var6 = (param0.field_v & 3) * var2_int + (3 & param0.field_q);
-                var7 = 0;
-                L1: while (true) {
-                  if (var7 >= param0.field_t) {
-                    param0.field_B = var4;
-                    param0.field_w = var2_int;
-                    param0.field_q = param0.field_q & -4;
-                    param0.field_t = var3;
-                    param0.field_v = param0.field_v & -4;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var8 = 0;
-                    L2: while (true) {
-                      if (param0.field_w <= var8) {
-                        var6 = var6 + (var2_int + -param0.field_w);
-                        var7++;
-                        continue L1;
-                      } else {
-                        incrementValue$0 = var6;
-                        var6++;
-                        incrementValue$1 = var5;
-                        var5++;
-                        var4[incrementValue$0] = param0.field_B[incrementValue$1];
-                        var8++;
-                        continue L2;
-                      }
-                    }
-                  }
-                }
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("em.F(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
-          }
-          throw pf.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var9 = fleas.field_A ? 1 : 0;
+        if ((3 & (param0.field_w | param0.field_t | param0.field_q | param0.field_v)) == 0) {
           return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
+        }
+        int var2_int = (3 & param0.field_q) + param0.field_w;
+        var2_int = -(3 & var2_int) - (-4 - var2_int);
+        int var3 = param0.field_t + (3 & param0.field_v);
+        var3 = 4 - (var3 & 3) + var3;
+        int[] var4 = new int[var3 * var2_int];
+        if (param1 >= -45) {
+          return;
+        }
+        try {
+          var5 = 0;
+          var6 = (param0.field_v & 3) * var2_int + (3 & param0.field_q);
+          for (var7 = 0; var7 < param0.field_t; var7++) {
+            for (var8 = 0; param0.field_w > var8; var8++) {
+              incrementValue$0 = var6;
+              var6++;
+              incrementValue$1 = var5;
+              var5++;
+              var4[incrementValue$0] = param0.field_B[incrementValue$1];
+            }
+            var6 = var6 + (var2_int - param0.field_w);
           }
+          param0.field_B = var4;
+          param0.field_w = var2_int;
+          param0.field_q = param0.field_q & -4;
+          param0.field_t = var3;
+          param0.field_v = param0.field_v & -4;
+        } catch (RuntimeException runtimeException) {
+          throw pf.a((Throwable) ((Object) runtimeException), "em.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_6_0 = 0;
-        L0: {
-          if (param0 <= -52) {
-            break L0;
-          } else {
-            field_d = 68;
-            break L0;
-          }
+        boolean stackIn_6_0 = false;
+        if (param0 > -52) {
+          field_d = 68;
         }
-        L1: {
-          L2: {
-            if (param1 < 48) {
-              break L2;
-            } else {
-              if (param1 > 57) {
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-          }
-          stackIn_6_0 = 0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        stackIn_6_0 = (param1 >= 48) && (param1 <= 57);
+        return stackIn_6_0;
     }
 
     public static void b(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != 3505) {
-            em.b(17);
+          em.b(17);
         }
         field_h = null;
         field_e = null;

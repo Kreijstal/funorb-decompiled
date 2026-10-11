@@ -13,9 +13,9 @@ final class kf {
         field_b = null;
         field_a = null;
         if (param0 != -17218) {
-            field_b = (String) null;
-            field_d = null;
-            return;
+          field_b = (String) null;
+          field_d = null;
+          return;
         }
         field_d = null;
     }

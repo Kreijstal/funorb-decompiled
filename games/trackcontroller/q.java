@@ -21,104 +21,65 @@ final class q {
     static String field_o;
 
     final int a(byte param0) {
-        if (!this.field_l) {
-          if (-3 == (this.field_e ^ -1)) {
-            if (this.field_h <= 0) {
-              if ((this.field_g ^ -1L) != (fe.field_P ^ -1L)) {
-                if (param0 <= -41) {
-                  if ((field_a ^ -1) == -3) {
-                    if (ie.a(this.field_d, 2)) {
-                      return 1;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  q.a(4);
-                  if ((field_a ^ -1) == -3) {
-                    if (!ie.a(this.field_d, 2)) {
-                      return 0;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                return 1;
-              }
-            } else {
-              return 2;
-            }
-          } else {
-            if ((this.field_g ^ -1L) != (fe.field_P ^ -1L)) {
-              if (param0 <= -41) {
-                if ((field_a ^ -1) == -3) {
-                  if (!ie.a(this.field_d, 2)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              } else {
-                q.a(4);
-                if ((field_a ^ -1) == -3) {
-                  if (!ie.a(this.field_d, 2)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            } else {
-              return 1;
-            }
-          }
-        } else {
+        if (this.field_l) {
           return 2;
         }
+        if (this.field_e != 2) {
+          if (~this.field_g == ~fe.field_P) {
+            return 1;
+          }
+          if (param0 > -41) {
+            q.a(4);
+          }
+        } else {
+          if (this.field_h > 0) {
+            return 2;
+          }
+          if (~this.field_g == ~fe.field_P) {
+            return 1;
+          }
+          if (param0 <= -41) {
+            if (field_a != 2) {
+              return 0;
+            }
+            if (ie.a(this.field_d, 2)) {
+              return 1;
+            }
+            return 0;
+          }
+          q.a(4);
+        }
+        if (field_a != 2) {
+          return 0;
+        }
+        if (!ie.a(this.field_d, 2)) {
+          return 0;
+        }
+        return 1;
     }
 
     final static void a(boolean param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         la var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var1 = ra.field_C;
-              if (param0) {
-                break L1;
-              } else {
-                field_j = (String) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (!lg.c(-1)) {
-                break L0;
-              } else {
-                var1.c(8, 7);
-                fieldTemp$2 = var1.field_k + 1;
-                var1.field_k = var1.field_k + 1;
-                var2 = fieldTemp$2;
-                rc.a(78, var1);
-                ra.field_C.a(param0, -var2 + var1.field_k);
-                continue L2;
-              }
-            }
+          var1 = ra.field_C;
+          if (!param0) {
+            field_j = (String) null;
           }
+          while (lg.c(-1)) {
+            var1.c(8, 7);
+            fieldTemp$0 = var1.field_k + 1;
+            var1.field_k = var1.field_k + 1;
+            var2 = fieldTemp$0;
+            rc.a(78, var1);
+            ra.field_C.a(param0, -var2 + var1.field_k);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -139,9 +100,9 @@ final class q {
         this.field_h = id.field_h;
         this.field_e = fd.field_e;
         if (!param0) {
-            this.field_i = null;
+          this.field_i = null;
         } else {
-            this.field_i = hi.field_A;
+          this.field_i = hi.field_A;
         }
         this.field_l = nl.field_b;
         this.field_g = lg.field_a;
@@ -153,79 +114,56 @@ final class q {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            int var3 = 0;
-            String var4 = null;
-            java.net.URL var5 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            String stackIn_11_2 = null;
-            Throwable decompiledCaughtException = null;
+          String var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          int var3 = 0;
+          String var4 = null;
+          java.net.URL var5 = null;
+          RuntimeException stackIn_10_0 = null;
+          StringBuilder stackIn_10_1 = null;
+          String stackIn_11_2 = null;
+          Throwable decompiledCaughtException = null;
+          String var4Lifetime1;
+          String var4Lifetime2;
+          try {
             try {
-              try {
-                L0: {
-                  L1: {
-                    if (param1 == -1) {
-                      break L1;
-                    } else {
-                      q.a(false);
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    var2 = param0.getDocumentBase().getFile();
-                    var4 = var2;
-                    var4 = var2;
-                    var3 = var2.indexOf('?');
-                    var4 = "reload.ws";
-                    if ((var3 ^ -1) > -1) {
-                      break L2;
-                    } else {
-                      var4 = var4 + var2.substring(var3);
-                      break L2;
-                    }
-                  }
-                  var5 = new java.net.URL(param0.getCodeBase(), var4);
-                  param0.getAppletContext().showDocument(of.a(param0, var5, false), "_self");
-                  break L0;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
+              if (param1 != -1) {
+                q.a(false);
               }
+              var2 = param0.getDocumentBase().getFile();
+              var4 = var2;
+              var4Lifetime1 = var2;
+              var3 = var2.indexOf('?');
+              var4Lifetime2 = "reload.ws";
+              if (var3 >= 0) {
+                var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
+              }
+              var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
+              param0.getAppletContext().showDocument(of.a(param0, var5, false), "_self");
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_10_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_10_1 = new StringBuilder().append("q.B(");
-
-                if (param0 == null) {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "{...}";
-                  break L3;
-                }
-              }
-              throw sl.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_10_0 = var2_ref2;
+            stackIn_10_1 = new StringBuilder().append("q.B(");
+            if (param0 == null) {
+              stackIn_11_2 = "null";
+            } else {
+              stackIn_11_2 = "{...}";
+            }
+            throw sl.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

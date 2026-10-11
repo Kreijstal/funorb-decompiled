@@ -8,7 +8,7 @@ final class pua extends hq {
     public static void a(byte param0) {
         field_c = null;
         if (param0 >= -45) {
-            return;
+          return;
         }
         field_d = null;
     }
@@ -27,56 +27,33 @@ final class pua extends hq {
         int var15 = 0;
         int var17 = 0;
         int[] var21 = null;
+        int var15Lifetime1;
+        int var15Lifetime2;
         var17 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var11 = rp.a(hc.field_h, -16226, gca.field_d, param2);
-            var12 = rp.a(hc.field_h, -16226, gca.field_d, param3);
-            var13 = rp.a(ss.field_c, -16226, pka.field_b, param1);
-            var14 = rp.a(ss.field_c, -16226, pka.field_b, param6);
-            var7_int = rp.a(hc.field_h, -16226, gca.field_d, param4 + param2);
-            var8 = rp.a(hc.field_h, -16226, gca.field_d, param3 + -param4);
-            var15 = var11;
-            L1: while (true) {
-              if (var7_int <= var15) {
-                var15 = var12;
-                L2: while (true) {
-                  if (var8 >= var15) {
-                    L3: {
-                      var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
-                      var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
-                      if (param0 < -11) {
-                        break L3;
-                      } else {
-                        pua.a((byte) -34);
-                        break L3;
-                      }
-                    }
-                    var15 = var7_int;
-                    L4: while (true) {
-                      if (var15 > var8) {
-                        break L0;
-                      } else {
-                        var21 = vaa.field_a[var15];
-                        nra.a((byte) -55, param5, var9, var21, var13);
-                        nra.a((byte) -55, param5, var14, var21, var10);
-                        var15++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    nra.a((byte) -55, param5, var14, vaa.field_a[var15], var13);
-                    var15--;
-                    continue L2;
-                  }
-                }
-              } else {
-                nra.a((byte) -55, param5, var14, vaa.field_a[var15], var13);
-                var15++;
-                continue L1;
-              }
-            }
+          var11 = rp.a(hc.field_h, -16226, gca.field_d, param2);
+          var12 = rp.a(hc.field_h, -16226, gca.field_d, param3);
+          var13 = rp.a(ss.field_c, -16226, pka.field_b, param1);
+          var14 = rp.a(ss.field_c, -16226, pka.field_b, param6);
+          var7_int = rp.a(hc.field_h, -16226, gca.field_d, param4 + param2);
+          var8 = rp.a(hc.field_h, -16226, gca.field_d, param3 - param4);
+          for (var15 = var11; var7_int > var15; var15++) {
+            nra.a((byte) -55, param5, var14, vaa.field_a[var15], var13);
           }
+          for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
+            nra.a((byte) -55, param5, var14, vaa.field_a[var15Lifetime1], var13);
+          }
+          var9 = rp.a(ss.field_c, -16226, pka.field_b, param4 + param1);
+          var10 = rp.a(ss.field_c, -16226, pka.field_b, -param4 + param6);
+          if (param0 >= -11) {
+            pua.a((byte) -34);
+          }
+          for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
+            var21 = vaa.field_a[var15Lifetime2];
+            nra.a((byte) -55, param5, var9, var21, var13);
+            nra.a((byte) -55, param5, var14, var21, var10);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;

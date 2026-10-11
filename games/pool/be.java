@@ -12,119 +12,74 @@ final class be extends ob {
 
     final static void a(ge param0, int param1) {
         try {
-            byte[] var2 = null;
-            int var3_int = 0;
-            Exception var3 = null;
-            int var4 = 0;
-            int var5 = 0;
-            byte[] var6 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            String stackIn_20_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var2_ref = null;
-            var5 = Pool.field_O;
-            try {
-              L0: {
-                L1: {
-                  L2: {
-                    var6 = new byte[24];
-                    var2 = var6;
-                    if (nl.field_c == null) {
-                      break L2;
-                    } else {
-                      try {
-                        L3: {
-                          nl.field_c.a(0, 0L);
-                          nl.field_c.a(param1 + 114, var6);
-                          var3_int = 0;
-                          L4: while (true) {
-                            L5: {
-                              if (-25 >= (var3_int ^ -1)) {
-                                break L5;
-                              } else {
-                                if (-1 == (var2[var3_int] ^ -1)) {
-                                  var3_int++;
-                                  continue L4;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            }
-                            if (var3_int >= 24) {
-                              throw new IOException();
-                            } else {
-                              param0.a(var2, (byte) 0, param1, 24);
-                              decompiledRegionSelector0 = 0;
-                              break L3;
-                            }
-                          }
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L6: {
-                          var3 = (Exception) (Object) decompiledCaughtException;
-                          var4 = 0;
-                          L7: while (true) {
-                            if (var4 >= 24) {
-                              decompiledRegionSelector0 = 1;
-                              break L6;
-                            } else {
-                              var2[var4] = (byte)-1;
-                              var4++;
-                              continue L7;
-                            }
-                          }
-                        }
-                      }
-                      if (decompiledRegionSelector0 == 0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
+          int var4 = 0;
+          byte[] var2 = null;
+          int var3_int = 0;
+          Exception var3 = null;
+          int var5 = 0;
+          byte[] var6 = null;
+          RuntimeException stackIn_19_0 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var2_ref = null;
+          var5 = Pool.field_O;
+          try {
+            var6 = new byte[24];
+            var2 = var6;
+            if (nl.field_c != null) {
+              try {
+                nl.field_c.a(0, 0L);
+                nl.field_c.a(param1 + 114, var6);
+                for (var3_int = 0; var3_int < 24; var3_int++) {
+                  if (var2[var3_int] == 0) {
+                    continue;
                   }
-                  param0.a(var2, (byte) 0, param1, 24);
-                  break L1;
+                  break;
                 }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L8: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_19_0 = (RuntimeException) (var2_ref);
-
-                stackIn_19_1 = new StringBuilder().append("be.FB(");
-
-                if (param0 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "null";
-                  break L8;
-                } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "{...}";
-                  break L8;
+                if (var3_int >= 24) {
+                  throw new IOException();
                 }
+                param0.a(var2, (byte) 0, param1, 24);
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var3 = (Exception) (Object) decompiledCaughtException;
+                for (var4 = 0; var4 < 24; var4++) {
+                  var2[var4] = (byte)-1;
+                }
+                decompiledRegionSelector0 = 1;
               }
-              throw wm.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+              if (decompiledRegionSelector0 == 0) {
+                return;
+              }
             }
+            param0.a(var2, (byte) 0, param1, 24);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_19_0 = var2_ref;
+            stackIn_19_1 = new StringBuilder().append("be.FB(");
+            if (param0 == null) {
+              stackIn_20_2 = "null";
+            } else {
+              stackIn_20_2 = "{...}";
+            }
+            throw wm.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void f(byte param0) {
         field_J = null;
         if (param0 != -89) {
-            field_H = -35;
+          field_H = -35;
         }
         field_L = null;
         field_K = null;
@@ -140,14 +95,14 @@ final class be extends ob {
 
     final boolean f(int param0, int param1) {
         if (param0 != -13676) {
-            field_L = (vh) null;
+          field_L = (vh) null;
         }
-        return param1 == this.field_h.length + -1 ? true : false;
+        return param1 == this.field_h.length - 1 ? true : false;
     }
 
     final int b(byte param0, int param1) {
         if (param0 != 6) {
-            this.b((byte) 113, 90);
+          this.b((byte) 113, 90);
         }
         return this.field_s * param1 + (this.field_x + (param1 != -1 + this.field_h.length ? 0 : 20));
     }
@@ -156,18 +111,19 @@ final class be extends ob {
         int[] var8 = null;
         int[] var7 = null;
         int[] var9 = null;
+        int[] var7Lifetime1;
         try {
-            var8 = mj.a(-31121);
-            var7 = var8;
-            var8[param3] = param1;
-            var8[0] = param5;
-            var8[2] = param2;
-            param4[0 + param0] = hc.a(param6, var8, (byte) 101);
-            var9 = dq.a((byte) 10, f.a((byte) 94, var8));
-            var7 = var9;
-            param4[param0 - -1] = hc.a(param6, var9, (byte) 101);
+          var8 = mj.a(-31121);
+          var7 = var8;
+          var8[param3] = param1;
+          var8[0] = param5;
+          var8[2] = param2;
+          param4[0 + param0] = hc.a(param6, var8, (byte) 101);
+          var9 = dq.a((byte) 10, f.a((byte) 94, var8));
+          var7Lifetime1 = var9;
+          param4[param0 + 1] = hc.a(param6, var9, (byte) 101);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "be.EB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "be.EB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +133,7 @@ final class be extends ob {
 
     final void c(int param0) {
         if (param0 <= 36) {
-            field_K = (String) null;
+          field_K = (String) null;
         }
         super.c(92);
     }

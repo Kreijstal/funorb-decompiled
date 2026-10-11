@@ -10,7 +10,7 @@ class sl extends qm {
     public static void b(int param0) {
         field_p = null;
         field_q = null;
-        int var1 = 7 % ((param0 - -58) / 61);
+        int var1 = 7 % ((param0 + 58) / 61);
         field_n = null;
         field_o = null;
     }
@@ -21,11 +21,11 @@ class sl extends qm {
 
     final static void c(int param0) {
         if (param0 != 2765) {
-            return;
+          return;
         }
-        wo var1 = (wo) ((Object) bo.field_i.b(4095));
-        if (!(var1 != null)) {
-            throw new IllegalStateException();
+        wo var1 = (wo) (bo.field_i.b(4095));
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         vp.a(var1.field_g, var1.field_f, var1.field_p);
         vp.e(var1.field_m, var1.field_k, var1.field_i, var1.field_j);
@@ -35,12 +35,12 @@ class sl extends qm {
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
         try {
-            if (!(!param0)) {
-                nn.a(param3.field_h + param4, (byte) 70, param3.field_p + param2, param3.field_q, param3.field_n);
-            }
-            super.a(param0, param1, param2, param3, param4);
+          if (param0) {
+            nn.a(param3.field_h + param4, (byte) 70, param3.field_p + param2, param3.field_q, param3.field_n);
+          }
+          super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "sl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "sl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

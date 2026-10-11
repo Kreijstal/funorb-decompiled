@@ -7,9 +7,9 @@ class qf {
 
     public static void a(boolean param0) {
         if (!param0) {
-            qf.a(false);
-            field_a = null;
-            return;
+          qf.a(false);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

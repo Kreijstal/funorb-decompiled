@@ -10,7 +10,7 @@ final class lg {
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = 14 / ((param0 - -69) / 51);
+        int var1 = 14 / ((param0 + 69) / 51);
         field_a = null;
         field_c = null;
         field_b = null;

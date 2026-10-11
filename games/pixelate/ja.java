@@ -27,12 +27,12 @@ final class ja {
         field_e = param3 - param1;
         ja.b();
         if (field_g.length < field_e) {
-            field_g = new int[ne.a(-1879863704, field_e)];
+          field_g = new int[ne.a(-1879863704, field_e)];
         }
         int var4 = param1 * t.field_j + param0;
         for (var5 = 0; var5 < field_e; var5++) {
-            field_g[var5] = var4;
-            var4 = var4 + t.field_j;
+          field_g[var5] = var4;
+          var4 = var4 + t.field_j;
         }
     }
 
@@ -46,20 +46,22 @@ final class ja {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_a = new int[512];
         field_h = new int[2048];
         field_c = new int[2048];
         field_g = new int[1024];
         field_f = new int[2048];
         for (var0 = 1; var0 < 512; var0++) {
-            field_a[var0] = 32768 / var0;
+          field_a[var0] = 32768 / var0;
         }
-        for (var0 = 1; var0 < 2048; var0++) {
-            field_c[var0] = 65536 / var0;
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_c[var0Lifetime1] = 65536 / var0Lifetime1;
         }
-        for (var0 = 0; var0 < 2048; var0++) {
-            field_h[var0] = (int)(65536.0 * Math.sin((double)var0 * 0.0030679615));
-            field_f[var0] = (int)(65536.0 * Math.cos((double)var0 * 0.0030679615));
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_h[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_f[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

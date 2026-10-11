@@ -25,138 +25,81 @@ abstract class cf extends lm {
         field_v = null;
         field_I = null;
         field_w = null;
-        if (param0 > -73) {
-          field_z = (String) null;
-          field_t = null;
-          field_C = null;
-          field_x = null;
-          return;
-        } else {
+        if (param0 <= -73) {
           field_t = null;
           field_C = null;
           field_x = null;
           return;
         }
+        field_z = (String) null;
+        field_t = null;
+        field_C = null;
+        field_x = null;
     }
 
     final static boolean a(long param0, int[] param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         StringBuilder stackIn_14_1 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param4 == 500) {
-                break L1;
-              } else {
-                cf.a((byte) -8);
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (param1 == null) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (param3 != 2) {
-                      break L4;
-                    } else {
-                      if (!qp.a(true, param0, param2)) {
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  stackIn_8_0 = 1;
-                  break L2;
-                }
-              }
-              stackIn_8_0 = 0;
-              break L2;
-            }
-            break L0;
+          if (param4 != 500) {
+            cf.a((byte) -8);
           }
+          boolean decompiledFrameRemainder0 = true;
+          if (param1 != null && (param3 != 2 ||
+            qp.a(true, param0, param2))) {
+            stackIn_8_0 = true;
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            stackIn_8_0 = false;
+          }
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
-
-            stackIn_11_1 = new StringBuilder().append("cf.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L5;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("cf.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L6;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L6;
-            }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ',' + param3 + ',' + param4 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
-        return stackIn_8_0 != 0;
     }
 
     final static int a(boolean param0, int param1) {
-        double var2;
-        int var4;
-        if (param0) {
-          L0: {
-            field_z = (String) null;
-            var2 = (double)(param1 - 10) / 10.0;
-            var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
-            if (500 >= var4) {
-              break L0;
-            } else {
-              var4 = 500;
-              break L0;
-            }
-          }
-          return var4;
-        } else {
-          L1: {
-            var2 = (double)(param1 - 10) / 10.0;
-            var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
-            if (500 >= var4) {
-              break L1;
-            } else {
-              var4 = 500;
-              break L1;
-            }
+        double var2 = 0.0;
+        int var4 = 0;
+        double var2Lifetime1;
+        int var4Lifetime1;
+        if (!param0) {
+          var2 = (double)(param1 - 10) / 10.0;
+          var4 = (int)(Math.exp(Math.log(2.0) * var2) * 50.0);
+          if (500 < var4) {
+            var4 = 500;
           }
           return var4;
         }
+        field_z = (String) null;
+        var2Lifetime1 = (double)(param1 - 10) / 10.0;
+        var4Lifetime1 = (int)(Math.exp(Math.log(2.0) * var2Lifetime1) * 50.0);
+        if (500 < var4Lifetime1) {
+          var4Lifetime1 = 500;
+        }
+        return var4Lifetime1;
     }
 
     cf() {

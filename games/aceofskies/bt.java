@@ -16,51 +16,43 @@ final class bt {
     }
 
     final static String a(boolean param0, long param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         qs.field_a.setTime(new Date(param1));
-        var3 = qs.field_a.get(7);
-        var4 = qs.field_a.get(5);
-        var5 = qs.field_a.get(2);
-        if (param0) {
-          return (String) null;
-        } else {
+        int var3 = qs.field_a.get(7);
+        int var4 = qs.field_a.get(5);
+        int var5 = qs.field_a.get(2);
+        if (!param0) {
           var6 = qs.field_a.get(1);
           var7 = qs.field_a.get(11);
           var8 = qs.field_a.get(12);
           var9 = qs.field_a.get(13);
-          return jc.field_Rc[var3 + -1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return jc.field_Rc[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
+        return (String) null;
     }
 
     final static void a(int param0) {
-        if (null == ml.field_m) {
+        if (null != ml.field_m) {
+          ml.field_m.h((byte) -23);
           fd.field_f = new ep();
           if (param0 != 10) {
             field_a = (pt) null;
             ak.field_d.d(fd.field_f, -30244);
             return;
-          } else {
-            ak.field_d.d(fd.field_f, -30244);
-            return;
           }
-        } else {
-          ml.field_m.h((byte) -23);
-          fd.field_f = new ep();
-          if (param0 == 10) {
-            ak.field_d.d(fd.field_f, -30244);
-            return;
-          } else {
-            field_a = (pt) null;
-            ak.field_d.d(fd.field_f, -30244);
-            return;
-          }
+          ak.field_d.d(fd.field_f, -30244);
+          return;
         }
+        fd.field_f = new ep();
+        if (param0 == 10) {
+          ak.field_d.d(fd.field_f, -30244);
+          return;
+        }
+        field_a = (pt) null;
+        ak.field_d.d(fd.field_f, -30244);
     }
 
     static {

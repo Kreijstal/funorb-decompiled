@@ -19,35 +19,20 @@ abstract class ko extends ms {
         RuntimeException var2_ref = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            var4 = (hg) ((Object) hi.field_f.b(-101));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param0 == 0) {
-                    break L2;
-                  } else {
-                    field_m = (jn) null;
-                    break L2;
-                  }
-                }
-                var2 = wr.field_E.b(-105);
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    ou.a(125, param1);
-                    var2 = wr.field_E.d((byte) 18);
-                    continue L3;
-                  }
-                }
-              } else {
-                pm.a(param1, 1, var4);
-                var4 = (hg) ((Object) hi.field_f.d((byte) 18));
-                continue L1;
-              }
-            }
+          var4 = (hg) (hi.field_f.b(-101));
+          while (var4 != null) {
+            pm.a(param1, 1, var4);
+            var4 = (hg) (hi.field_f.d((byte) 18));
           }
+          if (param0 != 0) {
+            field_m = (jn) null;
+          }
+          var2 = wr.field_E.b(-105);
+          while (var2 != null) {
+            ou.a(125, param1);
+            var2 = wr.field_E.d((byte) 18);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -57,40 +42,40 @@ abstract class ko extends ms {
 
     final int c(byte param0) {
         if (param0 != 50) {
-            this.field_l = -3.14526629447937f;
-            return this.field_r;
+          this.field_l = -3.14526629447937f;
+          return this.field_r;
         }
         return this.field_r;
     }
 
     final int d(byte param0) {
         if (param0 != 109) {
-            ko.a(39, 19);
-            return this.field_o;
+          ko.a(39, 19);
+          return this.field_o;
         }
         return this.field_o;
     }
 
     final int a(byte param0) {
         if (param0 < 71) {
-            return -46;
+          return -46;
         }
         return this.field_k;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            this.c(false);
-            return this.field_q;
+          this.c(false);
+          return this.field_q;
         }
         return this.field_q;
     }
 
     public static void d(int param0) {
         if (param0 != 0) {
-            ko.a(-33, -26);
-            field_m = null;
-            return;
+          ko.a(-33, -26);
+          field_m = null;
+          return;
         }
         field_m = null;
     }
@@ -101,15 +86,15 @@ abstract class ko extends ms {
 
     final int c(boolean param0) {
         if (!param0) {
-            return -61;
+          return -61;
         }
         return this.field_n;
     }
 
     final float a(int param0) {
         if (param0 != 0) {
-            this.field_l = 0.354354590177536f;
-            return this.field_l;
+          this.field_l = 0.354354590177536f;
+          return this.field_l;
         }
         return this.field_l;
     }

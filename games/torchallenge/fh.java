@@ -13,7 +13,7 @@ final class fh {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 != 7284) {
-            return;
+          return;
         }
         rb.field_b = 1;
         lj.field_e = param2;
@@ -21,18 +21,16 @@ final class fh {
     }
 
     public static void a(byte param0) {
-        if (param0 > -23) {
-          field_g = false;
-          field_h = null;
-          field_a = (ka[][]) null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 <= -23) {
           field_h = null;
           field_a = (ka[][]) null;
           field_f = null;
           return;
         }
+        field_g = false;
+        field_h = null;
+        field_a = (ka[][]) null;
+        field_f = null;
     }
 
     static {

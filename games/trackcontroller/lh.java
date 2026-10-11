@@ -12,10 +12,10 @@ final class lh extends tk {
 
     final byte[] g(int param0) {
         if (this.field_w) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         if (param0 != 512) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         return this.field_z;
     }
@@ -25,17 +25,17 @@ final class lh extends tk {
         field_D = null;
         field_x = null;
         if (param0 != -44) {
-            return;
+          return;
         }
         field_B = (long[][]) null;
     }
 
     final int a(byte param0) {
         if (this.field_w) {
-            return 0;
+          return 0;
         }
         if (param0 != 43) {
-            this.g(126);
+          this.g(126);
         }
         return 100;
     }
@@ -49,7 +49,6 @@ final class lh extends tk {
     }
 
     static {
-        int var0 = 0;
         int var1 = 0;
         long var2 = 0L;
         long var4 = 0L;
@@ -61,32 +60,34 @@ final class lh extends tk {
         field_x = new ud();
         field_B = new long[8][256];
         field_D = new long[11];
-        for (var0 = 0; -257 < (var0 ^ -1); var0++) {
+        int var0 = 0;
+        while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-            var2 = (var0 & 1) != 0 ? (long)(255 & var1) : (long)(var1 >>> -380795032);
-            var4 = var2 << 427065473;
-            if ((var4 ^ -1L) <= -257L) {
+            var2 = (var0 & 1) != 0 ? (long)(255 & var1) : (long)(var1 >>> 8);
+            var4 = var2 << 1;
+            if (var4 >= 256L) {
                 var4 = var4 ^ 285L;
             }
-            var6 = var4 << -196493631;
+            var6 = var4 << 1;
             if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
             }
             var8 = var2 ^ var6;
-            var10 = var6 << 676223297;
+            var10 = var6 << 1;
             if (!(256L > var10)) {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_B[0][var0] = ib.b(var12, ib.b(ib.b(var8 << 2132248144, ib.b(var10 << 599388376, ib.b(var2 << -1327450464, ib.b(var6 << 845779816, ib.b(var2 << 478458608, var2 << 1163443704))))), var4 << 309202440));
+            field_B[0][var0] = ib.b(var12, ib.b(ib.b(var8 << 16, ib.b(var10 << 24, ib.b(var2 << 32, ib.b(var6 << 40, ib.b(var2 << 48, var2 << 56))))), var4 << 8));
             for (var14 = 1; 8 > var14; var14++) {
-                field_B[var14][var0] = ib.b(field_B[var14 + -1][var0] << -897768968, field_B[var14 + -1][var0] >>> -1105933624);
+                field_B[var14][var0] = ib.b(field_B[var14 - 1][var0] << 56, field_B[var14 - 1][var0] >>> 8);
             }
+            var0++;
         }
         field_D[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = -8 + var0 * 8;
-            field_D[var0] = ib.a(al.a(255L, field_B[7][var1 + 7]), ib.a(al.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(al.a(field_B[3][var1 - -3], 1095216660480L), ib.a(al.a(field_B[2][2 + var1], 280375465082880L), ib.a(al.a(field_B[0][var1], -72057594037927936L), al.a(71776119061217280L, field_B[1][var1 + 1])))), al.a(field_B[4][4 + var1], 4278190080L)), al.a(field_B[5][var1 - -5], 16711680L))));
+            field_D[var0] = ib.a(al.a(255L, field_B[7][var1 + 7]), ib.a(al.a(field_B[6][6 + var1], 65280L), ib.a(ib.a(ib.a(al.a(field_B[3][var1 + 3], 1095216660480L), ib.a(al.a(field_B[2][2 + var1], 280375465082880L), ib.a(al.a(field_B[0][var1], -72057594037927936L), al.a(71776119061217280L, field_B[1][var1 + 1])))), al.a(field_B[4][4 + var1], 4278190080L)), al.a(field_B[5][var1 + 5], 16711680L))));
         }
     }
 }

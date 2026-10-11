@@ -20,18 +20,18 @@ abstract class lb extends w {
         int var7 = TorChallenge.field_F ? 1 : 0;
         ka[] var1 = new ka[vl.field_b];
         if (param0 != 204) {
-            field_u = (String[]) null;
+          field_u = (String[]) null;
         }
         for (var2 = 0; var2 < vl.field_b; var2++) {
-            var3 = lg.field_e[var2] * pg.field_r[var2];
-            var10 = h.field_a[var2];
-            var11 = new int[var3];
-            var9 = var11;
-            var5 = var9;
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = td.field_m[jh.a((int) var10[var6], 255)];
-            }
-            var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var11);
+          var3 = lg.field_e[var2] * pg.field_r[var2];
+          var10 = h.field_a[var2];
+          var11 = new int[var3];
+          var9 = var11;
+          var5 = var9;
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = td.field_m[jh.a((int) var10[var6], 255)];
+          }
+          var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var11);
         }
         p.a(0);
         return var1;
@@ -45,11 +45,13 @@ abstract class lb extends w {
         field_t = null;
         field_u = null;
         if (param0 != 18972) {
-            lb.d((byte) -89);
+          lb.d((byte) -89);
         }
     }
 
     final static void a(int param0, int param1, int param2) {
+        int var15 = 0;
+        int var16 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -64,80 +66,43 @@ abstract class lb extends w {
         int var12 = 0;
         int var13 = 0;
         ka var14 = null;
-        int var15 = 0;
-        int var16 = 0;
         int var17 = 0;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var9 = ak.field_a[0][0].field_q;
-            var10 = ak.field_a[0][0].field_v;
-            var13 = 4;
-            var15 = 0;
-            L1: while (true) {
-              if ((var15 ^ -1) <= -9) {
-                L2: {
-                  if (param2 > 35) {
-                    break L2;
-                  } else {
-                    lb.f(-115);
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                var16 = 0;
-                L3: while (true) {
-                  if (-4 >= (var16 ^ -1)) {
-                    var15++;
-                    continue L1;
-                  } else {
-                    var11 = ol.field_c[var15][var16][4];
-                    if ((var11 ^ -1) < -1) {
-                      L4: {
-                        if (24 > var11) {
-                          var12 = (24 + -var11) / var13;
-                          if (var12 >= 0) {
-                            if ((var12 ^ -1) > -7) {
-                              var4 = ol.field_c[var15][var16][2];
-                              var6 = ol.field_c[var15][var16][3];
-                              var5 = ol.field_c[var15][var16][1];
-                              var3_int = ol.field_c[var15][var16][0];
-                              var4 = -(256 * (var9 >> 1090809537) / 32) + var4;
-                              var3_int = var3_int + var4 / 256;
-                              var4 = var4 % 256;
-                              var6 = var6 - (var10 >> -1889079263) * 256 / 64;
-                              var5 = var5 + var6 / 256;
-                              var6 = var6 % 256;
-                              qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
-                              var14 = ak.field_a[vj.field_c][var12];
-                              var7 = dl.field_n[0];
-                              var8 = dl.field_n[2];
-                              var14.d(var7, var8, 160);
-                              break L4;
-                            } else {
-                              var16++;
-                              continue L3;
-                            }
-                          } else {
-                            var16++;
-                            continue L3;
-                          }
-                        } else {
-                          break L4;
-                        }
-                      }
-                      var16++;
-                      continue L3;
-                    } else {
-                      var16++;
-                      continue L3;
-                    }
-                  }
+          var9 = ak.field_a[0][0].field_q;
+          var10 = ak.field_a[0][0].field_v;
+          var13 = 4;
+          for (var15 = 0; var15 < 8; var15++) {
+            for (var16 = 0; var16 < 3; var16++) {
+              var11 = ol.field_c[var15][var16][4];
+              if (var11 > 0 &&
+                24 > var11) {
+                var12 = (24 - var11) / var13;
+                if (var12 >= 0 &&
+                  var12 < 6) {
+                  var4 = ol.field_c[var15][var16][2];
+                  var6 = ol.field_c[var15][var16][3];
+                  var5 = ol.field_c[var15][var16][1];
+                  var3_int = ol.field_c[var15][var16][0];
+                  var4 = -(256 * (var9 >> 1) / 32) + var4;
+                  var3_int = var3_int + var4 / 256;
+                  var4 = var4 % 256;
+                  var6 = var6 - (var10 >> 1) * 256 / 64;
+                  var5 = var5 + var6 / 256;
+                  var6 = var6 % 256;
+                  qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
+                  var14 = ak.field_a[vj.field_c][var12];
+                  var7 = dl.field_n[0];
+                  var8 = dl.field_n[2];
+                  var14.d(var7, var8, 160);
                 }
               }
             }
           }
+          if (param2 <= 35) {
+            lb.f(-115);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -148,50 +113,32 @@ abstract class lb extends w {
     abstract boolean e(int param0);
 
     final static void d(byte param0) {
+        int var9 = 0;
         double var1_double = 0.0;
         double var3 = 0.0;
         double var5 = 0.0;
         double var7 = 0.0;
-        int var9 = 0;
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              wi.field_a = new int[2048];
-              var7 = 1024.0;
-              if (param0 <= 0) {
-                break L1;
-              } else {
-                lb.d(-1);
-                break L1;
-              }
-            }
-            var9 = 0;
-            L2: while (true) {
-              if (-2049 >= (var9 ^ -1)) {
-                break L0;
-              } else {
-                L3: {
-                  var3 = (double)(var9 + 0);
-                  var1_double = var3 / var7;
-                  var5 = Math.sin(3.141592653589793 * var1_double);
-                  if (var5 < 0.0) {
-                    var5 = -var5;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var5 = 65536.0 * var5;
-                wi.field_a[var9] = (int)var5;
-                var9++;
-                continue L2;
-              }
-            }
+          wi.field_a = new int[2048];
+          var7 = 1024.0;
+          if (param0 > 0) {
+            lb.d(-1);
           }
+          for (var9 = 0; var9 < 2048; var9++) {
+            var3 = (double)(var9 + 0);
+            var1_double = var3 / var7;
+            var5 = Math.sin(3.141592653589793 * var1_double);
+            if (var5 < 0.0) {
+              var5 = -var5;
+            }
+            var5 = 65536.0 * var5;
+            wi.field_a[var9] = (int)var5;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

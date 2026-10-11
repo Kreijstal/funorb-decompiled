@@ -13,7 +13,7 @@ public class iba {
 
     public static File a(String param0, byte param1) {
         if (param1 > -67) {
-            return (File) null;
+          return (File) null;
         }
         return iba.a(field_e, param0, 0, field_a);
     }
@@ -25,36 +25,26 @@ public class iba {
         field_e = param2;
         field_a = param0;
         try {
-          L0: {
-            field_c = System.getProperty("user.home");
-            var3_int = -103 % ((51 - param1) / 60);
-            if (field_c == null) {
-              break L0;
-            } else {
-              field_c = field_c + "/";
-              field_b = true;
-              if (null != field_c) {
-                return;
-              } else {
-                field_c = "~/";
-                return;
-              }
+          field_c = System.getProperty("user.home");
+          var3_int = -103 % ((51 - param1) / 60);
+          if (field_c != null) {
+            field_c = field_c + "/";
+            field_b = true;
+            if (null != field_c) {
+              return;
             }
+            field_c = "~/";
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L1;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
         field_b = true;
-        if (null == field_c) {
-          field_c = "~/";
-          return;
-        } else {
+        if (null != field_c) {
           return;
         }
+        field_c = "~/";
     }
 
     public static File a(String param0, String param1, int param2, int param3) {

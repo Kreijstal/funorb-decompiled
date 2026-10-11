@@ -14,9 +14,9 @@ final class ct extends tc {
     public static void a(int param0) {
         field_m = null;
         if (param0 != 135) {
-            field_o = (rg[]) null;
-            field_o = null;
-            return;
+          field_o = (rg[]) null;
+          field_o = null;
+          return;
         }
         field_o = null;
     }

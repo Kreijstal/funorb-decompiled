@@ -6,7 +6,7 @@ final class h extends da implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pq.a(0, (e) (this));
+          pq.a(0, (e) (this));
         }
     }
 
@@ -23,11 +23,11 @@ final class h extends da implements e {
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
         for (var11 = 0; var11 < param3.length; var11++) {
-            var6[var11] = param3[var11].field_h;
-            var7[var11] = param3[var11].field_f;
-            var8[var11] = param3[var11].field_e;
-            var9[var11] = param3[var11].field_c;
-            var10[var11] = param3[var11].field_g;
+          var6[var11] = param3[var11].field_h;
+          var7[var11] = param3[var11].field_f;
+          var8[var11] = param3[var11].field_e;
+          var9[var11] = param3[var11].field_c;
+          var10[var11] = param3[var11].field_g;
         }
         this.JA(param0, param1, var6, var7, var8, var9, var10);
     }

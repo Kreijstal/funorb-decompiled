@@ -7,32 +7,24 @@ final class tu extends qm {
     private java.awt.Component field_h;
 
     final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
-        java.awt.Component var6;
-        if (param0 <= 27) {
-          var6 = (java.awt.Component) null;
-          this.a(-86, (java.awt.Component) null, 95, -74);
-          param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
-          return;
-        } else {
+        if (param0 > 27) {
           param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
           return;
         }
+        java.awt.Component var6 = (java.awt.Component) null;
+        this.a(-86, (java.awt.Component) null, 95, -74);
+        param2.drawImage(this.field_c, param3, param1, (java.awt.image.ImageObserver) ((Object) this.field_h));
     }
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
         this.field_b = param2;
-        this.field_e = new int[param0 * param2 - -1];
+        this.field_e = new int[param0 * param2 + 1];
         this.field_f = param0;
-        var5 = new java.awt.image.DataBufferInt(this.field_e, this.field_e.length);
-        var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_e, this.field_e.length);
+        java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
         this.field_c = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
-        if (param3 != 256) {
-          return;
-        } else {
+        if (param3 == 256) {
           this.field_h = param1;
           this.a((byte) -28);
           return;

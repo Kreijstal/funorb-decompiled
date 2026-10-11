@@ -16,9 +16,9 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_g = true;
+          this.field_g = true;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "ue.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,121 +34,56 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
         Class stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1.equals("B")) {
-              stackIn_3_0 = Byte.TYPE;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param1.equals("I")) {
-                stackIn_7_0 = Integer.TYPE;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (param1.equals("S")) {
-                  stackIn_11_0 = Short.TYPE;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  if (!param1.equals("J")) {
-                    if (!param1.equals("Z")) {
-                      if (param1.equals("F")) {
-                        stackIn_21_0 = Float.TYPE;
-                        decompiledRegionSelector0 = 5;
-                        break L0;
-                      } else {
-                        L1: {
-                          if (param0 == 0) {
-                            break L1;
-                          } else {
-                            field_c = (bd) null;
-                            break L1;
-                          }
-                        }
-                        if (!param1.equals("D")) {
-                          if (param1.equals("C")) {
-                            stackIn_30_0 = Character.TYPE;
-                            decompiledRegionSelector0 = 7;
-                            break L0;
-                          } else {
-                            return Class.forName(param1);
-                          }
-                        } else {
-                          stackIn_26_0 = Double.TYPE;
-                          decompiledRegionSelector0 = 6;
-                          break L0;
-                        }
-                      }
-                    } else {
-                      stackIn_17_0 = Boolean.TYPE;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
-                  } else {
-                    stackIn_14_0 = Long.TYPE;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                }
-              }
-            }
+          if (param1.equals("B")) {
+            stackIn_3_0 = Byte.TYPE;
+            return stackIn_3_0;
           }
+          if (param1.equals("I")) {
+            stackIn_7_0 = Integer.TYPE;
+            return stackIn_7_0;
+          }
+          if (param1.equals("S")) {
+            stackIn_11_0 = Short.TYPE;
+            return stackIn_11_0;
+          }
+          if (param1.equals("J")) {
+            stackIn_14_0 = Long.TYPE;
+            return stackIn_14_0;
+          }
+          if (param1.equals("Z")) {
+            stackIn_17_0 = Boolean.TYPE;
+            return stackIn_17_0;
+          }
+          if (param1.equals("F")) {
+            stackIn_21_0 = Float.TYPE;
+            return stackIn_21_0;
+          }
+          if (param0 != 0) {
+            field_c = (bd) null;
+          }
+          if (param1.equals("D")) {
+            stackIn_26_0 = Double.TYPE;
+            return stackIn_26_0;
+          }
+          if (!param1.equals("C")) {
+            return Class.forName(param1);
+          }
+          stackIn_30_0 = Character.TYPE;
+          return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_33_0 = (RuntimeException) (var2);
-
-            stackIn_33_1 = new StringBuilder().append("ue.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L2;
-            } else {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L2;
-            }
-          }
-          throw wg.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var2 = decompiledCaughtException;
+          stackIn_33_0 = var2;
+          stackIn_33_1 = new StringBuilder().append("ue.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_34_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_14_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_17_0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_21_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_26_0;
-                    } else {
-                      return stackIn_30_0;
-                    }
-                  }
-                }
-              }
-            }
+            stackIn_34_2 = "{...}";
           }
+          throw wg.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -159,36 +94,19 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(int param0, boolean param1) {
-        L0: {
-          if (wb.field_R <= 0) {
-            break L0;
-          } else {
-            break L0;
-          }
+        if (wb.field_R > 0) {
         }
-        if (param1) {
-          L1: {
-            ue.a((byte) -119);
-            w.field_r = w.field_r + param0;
-            qb.field_k = qb.field_k - param0;
-            if (0 < rf.field_f) {
-              break L1;
-            } else {
-              break L1;
-            }
+        if (!param1) {
+          w.field_r = w.field_r + param0;
+          qb.field_k = qb.field_k - param0;
+          if (0 >= rf.field_f) {
           }
           return;
-        } else {
-          L2: {
-            w.field_r = w.field_r + param0;
-            qb.field_k = qb.field_k - param0;
-            if (0 < rf.field_f) {
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return;
+        }
+        ue.a((byte) -119);
+        w.field_r = w.field_r + param0;
+        qb.field_k = qb.field_k - param0;
+        if (0 >= rf.field_f) {
         }
     }
 
@@ -197,12 +115,12 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(boolean param0, fd param1) {
         try {
-            sd.a(param1, -106, this.field_i);
-            if (!param0) {
-                field_h = (bd) null;
-            }
+          sd.a(param1, -106, this.field_i);
+          if (!param0) {
+            field_h = (bd) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "ue.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -214,18 +132,16 @@ final class ue extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_c = null;
         field_a = null;
         field_j = null;
-        if (param0 != -27) {
-          ue.a((byte) 62);
-          field_f = null;
-          field_k = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -27) {
           field_f = null;
           field_k = null;
           field_b = null;
           return;
         }
+        ue.a((byte) 62);
+        field_f = null;
+        field_k = null;
+        field_b = null;
     }
 
     static {

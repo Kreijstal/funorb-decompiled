@@ -10,39 +10,39 @@ final class kt extends pp {
 
     final void a(lu param0, byte param1) {
         try {
-            er.a(this.field_h, 120, param0);
-            int var3_int = 51 % ((param1 - 34) / 58);
-            param0.d(this.field_l, 0);
+          er.a(this.field_h, 120, param0);
+          int var3_int = 51 % ((param1 - 34) / 58);
+          param0.d(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "kt.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "kt.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -23401) {
-            kt.a(89);
-            field_m = null;
-            return;
+          kt.a(89);
+          field_m = null;
+          return;
         }
         field_m = null;
     }
 
     kt(nq param0, int param1) {
         try {
-            this.field_l = param1;
-            this.field_h = param0;
+          this.field_l = param1;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "kt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(aga param0, op param1, int param2) {
         aga var4 = null;
         try {
-            var4 = this.field_h.a(param2 ^ 93, param1);
-            var4.j(this.field_l, param2 ^ param2);
+          var4 = this.field_h.a(param2 ^ 93, param1);
+          var4.j(this.field_l, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "kt.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "kt.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

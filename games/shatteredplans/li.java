@@ -16,20 +16,19 @@ abstract class li {
         field_d = null;
         field_e = null;
         if (param0 != 23) {
-            li.a((byte) 79);
-            field_c = null;
-            return;
+          li.a((byte) 79);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final java.net.Socket a(int param0) throws IOException {
-        if (param0 <= 108) {
-          field_c = (String) null;
-          return new java.net.Socket(this.field_f, this.field_a);
-        } else {
+        if (param0 > 108) {
           return new java.net.Socket(this.field_f, this.field_a);
         }
+        field_c = (String) null;
+        return new java.net.Socket(this.field_f, this.field_a);
     }
 
     abstract java.net.Socket b(int param0) throws IOException;

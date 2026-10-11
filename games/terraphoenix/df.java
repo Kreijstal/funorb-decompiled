@@ -13,28 +13,15 @@ final class df extends eb {
         RuntimeException var2 = null;
         var3 = Terraphoenix.field_V;
         try {
-          L0: {
-            re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
-            var2_int = param0;
-            L1: while (true) {
-              if (var2_int >= pb.field_b) {
-                L2: {
-                  re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
-                  if (pb.field_b > param1) {
-                    pb.field_b = param1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                pf.field_b[var2_int - -param1] = var2_int;
-                var2_int++;
-                continue L1;
-              }
-            }
+          re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
+          for (var2_int = param0; var2_int < pb.field_b; var2_int++) {
+            pf.field_b[var2_int + param1] = var2_int;
           }
+          re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
+          if (pb.field_b > param1) {
+            pb.field_b = param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -47,34 +34,34 @@ final class df extends eb {
         field_M = null;
         field_K = null;
         if (param0 != -106) {
-            field_M = (String) null;
+          field_M = (String) null;
         }
     }
 
     private df(String param0, cj param1, sc param2) {
         super(param0, param1, param2);
         try {
-            this.field_l = vc.field_c.field_q;
+          this.field_l = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     df(String param0, sc param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_C = param2 ? true : false;
+          this.field_C = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private df(String param0, sc param1) {
         this(param0, vc.field_c.field_n, param1);
         try {
-            this.field_l = vc.field_c.field_q;
+          this.field_l = vc.field_c.field_q;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

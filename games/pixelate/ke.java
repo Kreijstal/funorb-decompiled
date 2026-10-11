@@ -10,7 +10,7 @@ final class ke {
 
     public static void a(int param0) {
         if (param0 != -19064) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;
@@ -18,28 +18,23 @@ final class ke {
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          if (vh.field_c != null) {
-            if (!vh.field_c.a((byte) 99)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           field_e = (String) null;
-          if (vh.field_c != null) {
-            if (!vh.field_c.a((byte) 99)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (vh.field_c == null) {
             return false;
           }
+          if (vh.field_c.a((byte) 99)) {
+            return true;
+          }
+          return false;
         }
+        if (vh.field_c == null) {
+          return false;
+        }
+        if (vh.field_c.a((byte) 99)) {
+          return true;
+        }
+        return false;
     }
 
     static {

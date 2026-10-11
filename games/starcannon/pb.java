@@ -5,13 +5,13 @@ final class pb {
     static ge field_a;
 
     final static void b(int param0) {
-        int var1 = -66 % ((param0 - -11) / 59);
+        int var1 = -66 % ((param0 + 11) / 59);
         sb.field_g = new kh();
         t.field_h.c(20317, sb.field_g);
     }
 
     final static fb a(int param0, boolean param1) {
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
@@ -27,107 +27,68 @@ final class pb {
         var8 = se.field_p;
         var2 = var8;
         var3 = var8.j(7909);
-        if (param0 == 13607) {
-          L0: {
-            pf.field_e = var3 & 127;
-            if (-1 == (var3 & 128 ^ -1)) {
-              stackIn_5_0 = 0;
-              break L0;
-            } else {
-              stackIn_5_0 = 1;
-              break L0;
-            }
-          }
-          L1: {
-            cf.field_r = stackIn_5_0 != 0;
-            lj.field_i = var8.j(7909);
-            ne.field_d = var8.c((byte) 5);
-            if ((pf.field_e ^ -1) == -3) {
-              wc.field_f = var8.i(-1174051992);
-              tk.field_e = var8.g(127);
-              break L1;
-            } else {
-              wc.field_f = 0;
-              tk.field_e = 0;
-              break L1;
-            }
-          }
-          L2: {
-            if (1 != var8.j(7909)) {
-              stackIn_11_0 = 0;
-              break L2;
-            } else {
-              stackIn_11_0 = 1;
-              break L2;
-            }
-          }
-          L3: {
-            var4 = stackIn_11_0;
-            ee.field_d = var8.a(-117);
-            if (var4 != 0) {
-              fb.field_e = var8.a(-72);
-              break L3;
-            } else {
-              fb.field_e = ee.field_d;
-              break L3;
-            }
-          }
-          L4: {
-            if (1 == pf.field_e) {
-              var8.i(-1174051992);
-              var8.a(-95);
-              break L4;
-            } else {
-              if ((pf.field_e ^ -1) == -5) {
-                var8.i(-1174051992);
-                var8.a(-95);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-          }
-          if (!param1) {
-            vd.field_e = ha.a(var8, 80, 0);
-            se.field_o = null;
-            return new fb(param1);
-          } else {
-            var5 = var8.i(param0 + -1174065599);
-            try {
-              L5: {
-                L6: {
-                  var9 = ad.field_C.a(var5, -32769);
-                  vd.field_e = var9.e(-95);
-                  if (fb.field_e.equals(we.field_i)) {
-                    stackIn_24_0 = null;
-                    break L6;
-                  } else {
-                    stackIn_24_0 = var9.field_s;
-                    break L6;
-                  }
-                }
-                se.field_o = stackIn_24_0;
-                break L5;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Exception) (Object) decompiledCaughtException;
-              hc.a((Throwable) ((Object) var6), "CC1", (byte) 81);
-              se.field_o = null;
-              vd.field_e = null;
-              return new fb(param1);
-            }
-            return new fb(param1);
-          }
-        } else {
+        if (param0 != 13607) {
           return (fb) null;
         }
+        pf.field_e = var3 & 127;
+        stackIn_5_0 = ((var3 & 128) != 0);
+        cf.field_r = stackIn_5_0;
+        lj.field_i = var8.j(7909);
+        ne.field_d = var8.c((byte) 5);
+        if (pf.field_e == 2) {
+          wc.field_f = var8.i(-1174051992);
+          tk.field_e = var8.g(127);
+        } else {
+          wc.field_f = 0;
+          tk.field_e = 0;
+        }
+        stackIn_11_0 = (1 != var8.j(7909)) ? 0 : 1;
+        var4 = stackIn_11_0;
+        ee.field_d = var8.a(-117);
+        if (var4 != 0) {
+          fb.field_e = var8.a(-72);
+        } else {
+          fb.field_e = ee.field_d;
+        }
+        if (1 == pf.field_e) {
+          var8.i(-1174051992);
+          var8.a(-95);
+        } else {
+          if (pf.field_e == 4) {
+            var8.i(-1174051992);
+            var8.a(-95);
+          }
+        }
+        if (!param1) {
+          vd.field_e = ha.a(var8, 80, 0);
+          se.field_o = null;
+          return new fb(param1);
+        }
+        var5 = var8.i(param0 - 1174065599);
+        try {
+          var9 = ad.field_C.a(var5, -32769);
+          vd.field_e = var9.e(-95);
+          if (fb.field_e.equals(we.field_i)) {
+            stackIn_24_0 = null;
+          } else {
+            stackIn_24_0 = var9.field_s;
+          }
+          se.field_o = stackIn_24_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (Exception) (Object) decompiledCaughtException;
+          hc.a((Throwable) ((Object) var6), "CC1", (byte) 81);
+          se.field_o = null;
+          vd.field_e = null;
+          return new fb(param1);
+        }
+        return new fb(param1);
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 < 70) {
-            field_a = (ge) null;
+          field_a = (ge) null;
         }
     }
 

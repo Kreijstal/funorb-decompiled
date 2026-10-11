@@ -6,8 +6,9 @@ class ora {
     jaclib.memory.Buffer field_b;
 
     final void a(byte[] param0, int param1) {
-        if (this.field_b == null || this.field_b.getSize() < param1) {
-            this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param1, false));
+        if (this.field_b == null ||
+          this.field_b.getSize() < param1) {
+          this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param1, false));
         }
         this.field_b.a(param0, 0, 0, param1);
     }
@@ -16,7 +17,7 @@ class ora {
         this.field_a = param0;
         this.field_b = (jaclib.memory.Buffer) ((Object) this.field_a.field_md.a(param2, false));
         if (param1 != null) {
-            this.field_b.a(param1, 0, 0, param2);
+          this.field_b.a(param1, 0, 0, param2);
         }
     }
 }

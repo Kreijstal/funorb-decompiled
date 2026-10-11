@@ -19,28 +19,15 @@ final class fd {
         var1 = -57 / ((param0 - 13) / 46);
         if (ad.field_b == null) {
           return;
-        } else {
-          var2 = ad.field_b;
-          synchronized (var2) {
-            L0: {
-              ad.field_b = null;
-              break L0;
-            }
-          }
-          return;
+        }
+        var2 = ad.field_b;
+        synchronized (var2) {
+          ad.field_b = null;
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -32311) {
-          field_c = -92;
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == -32311) {
           field_h = null;
           field_g = null;
           field_d = null;
@@ -48,6 +35,12 @@ final class fd {
           field_e = null;
           return;
         }
+        field_c = -92;
+        field_h = null;
+        field_g = null;
+        field_d = null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

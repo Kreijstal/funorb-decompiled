@@ -19,6 +19,7 @@ final class rh implements Runnable {
         int var1_int = 0;
         rc var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -27,46 +28,28 @@ final class rh implements Runnable {
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         this.field_a = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_f) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (-3 >= (var1_int ^ -1)) {
-                        nu.a(10L, 0);
-                        var5 = (Object) null;
-                        ne.a(this.field_b, (Object) null, true);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_d[var1_int];
-                          if (var2 == null) {
-                            break L4;
-                          } else {
-                            var2.d();
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_f) {
+              for (var1_int = 0; var1_int < 2; var1_int++) {
+                var2 = this.field_d[var1_int];
+                if (var2 != null) {
+                  var2.d();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              af.a((Throwable) ((Object) var1), 98, (String) null);
-              this.field_a = false;
-              return;
+              nu.a(10L, 0);
+              var5 = (Object) null;
+              ne.a(this.field_b, (Object) null, true);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var6 = (String) null;
+            af.a((Throwable) ((Object) var1), 98, (String) null);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

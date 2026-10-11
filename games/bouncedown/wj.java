@@ -9,35 +9,30 @@ final class wj {
     static mf field_a;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          field_e = 48;
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_b = null;
           field_c = null;
           field_a = null;
           field_d = null;
           return;
         }
+        field_e = 48;
+        field_b = null;
+        field_c = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static tg[] a(byte param0, int param1) {
-        tg[] var2;
-        tg[] var3;
-        var3 = new tg[9];
-        var2 = var3;
-        if (param0 > -53) {
-          field_b = (String) null;
-          var3[4] = hc.a(64, param1, (byte) -123);
-          return var2;
-        } else {
+        tg[] var3 = new tg[9];
+        tg[] var2 = var3;
+        if (param0 <= -53) {
           var3[4] = hc.a(64, param1, (byte) -123);
           return var2;
         }
+        field_b = (String) null;
+        var3[4] = hc.a(64, param1, (byte) -123);
+        return var2;
     }
 
     static {

@@ -13,7 +13,7 @@ abstract class r extends fh {
     public static void e(byte param0) {
         field_m = null;
         if (param0 != -123) {
-            r.e((byte) -19);
+          r.e((byte) -19);
         }
     }
 

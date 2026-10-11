@@ -10,7 +10,7 @@ abstract class rd extends fd implements fg {
 
     public final le a(int param0) {
         if (param0 != -1) {
-            return (le) null;
+          return (le) null;
         }
         return (le) ((Object) this.field_D);
     }
@@ -23,13 +23,13 @@ abstract class rd extends fd implements fg {
 
     void a(int param0, al param1) {
         try {
-            this.field_D = param1;
-            this.field_D.field_h = (rd) (this);
-            if (param0 != 2) {
-                this.a(-16);
-            }
+          this.field_D = param1;
+          this.field_D.field_h = this;
+          if (param0 != 2) {
+            this.a(-16);
+          }
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "rd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "rd.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

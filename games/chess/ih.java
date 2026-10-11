@@ -16,20 +16,20 @@ final class ih extends bf {
 
     final String g(int param0) {
         String var2 = this.field_P.g(param0 + param0);
-        if (!(var2 == null)) {
-            return var2;
+        if (var2 != null) {
+          return var2;
         }
-        if (!(!this.field_w)) {
-            return this.field_j == null ? this.field_v : this.field_j;
+        if (this.field_w) {
+          return this.field_j == null ? this.field_v : this.field_j;
         }
         return null;
     }
 
     final static void a(int param0, int param1) {
         if (param1 <= 1) {
-            ih.a(46, -13);
-            pk.a(param0, -66);
-            return;
+          ih.a(46, -13);
+          pk.a(param0, -66);
+          return;
         }
         pk.a(param0, -66);
     }
@@ -37,59 +37,49 @@ final class ih extends bf {
     ih(jm param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-            this.a(param3, 34, param5, param4, param2);
+          this.a(param3, 34, param5, param4, param2);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final boolean h(byte param0) {
-        if (this.field_R.field_v != null) {
-          if (0 != this.field_R.field_v.length()) {
-            if (null != this.field_P.field_v) {
-              if (0 != this.field_P.field_v.length()) {
-                if (null != this.field_W.field_v) {
-                  if (this.field_W.field_v.length() != 0) {
-                    if (param0 >= -118) {
-                      field_S = (byte[]) null;
-                      return false;
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (this.field_R.field_v == null) {
           return true;
         }
+        if (0 == this.field_R.field_v.length()) {
+          return true;
+        }
+        if (null == this.field_P.field_v) {
+          return true;
+        }
+        if (0 == this.field_P.field_v.length()) {
+          return true;
+        }
+        if (null == this.field_W.field_v) {
+          return true;
+        }
+        if (this.field_W.field_v.length() == 0) {
+          return true;
+        }
+        if (param0 < -118) {
+          return false;
+        }
+        field_S = (byte[]) null;
+        return false;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1, -128, param3);
-        if (param1 == 0) {
-          if (param2 > -80) {
-            return;
-          } else {
-            param3 = param3 + this.field_u;
-            param0 = param0 + this.field_r;
-            this.a(this.field_R, param3, fn.field_f, -2200, param0);
-            this.a(this.field_P, param3, mn.field_i, -2200, param0);
-            this.a(this.field_W, param3, aj.field_d, -2200, param0);
-            return;
-          }
-        } else {
+        if (param1 != 0) {
+          return;
+        }
+        if (param2 <= -80) {
+          param3 = param3 + this.field_u;
+          param0 = param0 + this.field_r;
+          this.a(this.field_R, param3, fn.field_f, -2200, param0);
+          this.a(this.field_P, param3, mn.field_i, -2200, param0);
+          this.a(this.field_W, param3, aj.field_d, -2200, param0);
           return;
         }
     }
@@ -97,23 +87,23 @@ final class ih extends bf {
     private ih(jm param0, boolean param1) {
         super(0, 0, 0, 0, (jm) null);
         try {
-            this.field_R = (qn) ((Object) new bg("", (rg) null, 2));
-            this.field_P = (qn) ((Object) new bg("", (rg) null, 2));
-            this.field_W = (qn) ((Object) new bg("", (rg) null, 4));
-            this.field_W.field_n = param0;
-            this.field_P.field_n = param0;
-            this.field_R.field_n = param0;
-            this.field_X = param1 ? true : false;
-            if (this.field_X) {
-                this.b(this.field_P, 95);
-                this.b(this.field_R, 95);
-            } else {
-                this.b(this.field_R, 95);
-                this.b(this.field_P, 95);
-            }
-            this.b(this.field_W, 95);
+          this.field_R = (qn) ((Object) new bg("", (rg) null, 2));
+          this.field_P = (qn) ((Object) new bg("", (rg) null, 2));
+          this.field_W = (qn) ((Object) new bg("", (rg) null, 4));
+          this.field_W.field_n = param0;
+          this.field_P.field_n = param0;
+          this.field_R.field_n = param0;
+          this.field_X = param1 ? true : false;
+          if (this.field_X) {
+            this.b(this.field_P, 95);
+            this.b(this.field_R, 95);
+          } else {
+            this.b(this.field_R, 95);
+            this.b(this.field_P, 95);
+          }
+          this.b(this.field_W, 95);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ih.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -121,78 +111,60 @@ final class ih extends bf {
         NumberFormatException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param0) {
-              stackIn_4_0 = Integer.parseInt(this.field_R.field_v);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = -32;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!param0) {
+            stackIn_4_0 = Integer.parseInt(this.field_R.field_v);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = -32;
+          return stackIn_2_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
-        }
     }
 
     final void a(boolean param0, ri param1) {
         try {
-            super.a(param0, param1);
-            this.field_R.field_p = (rg) ((Object) param1);
-            this.field_P.field_p = (rg) ((Object) param1);
-            this.field_W.field_p = (rg) ((Object) param1);
+          super.a(param0, param1);
+          this.field_R.field_p = (rg) ((Object) param1);
+          this.field_P.field_p = (rg) ((Object) param1);
+          this.field_W.field_p = (rg) ((Object) param1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ih.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ih.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
         super.a(param0, 34, param2, param3, param4);
-        var6 = -130 + param3 >> -1117338143;
-        if (this.field_X) {
-          this.field_P.a(0, 34, param2, 25, var6);
-          this.field_R.a(0, 34, param2, 25, var6 + 45);
-          this.field_W.a(0, (int) (char)param1, param2, 40, 90 + var6);
-          return;
-        } else {
+        int var6 = -130 + param3 >> 1;
+        if (!this.field_X) {
           this.field_R.a(0, 34, param2, 25, var6);
-          this.field_P.a(0, 34, param2, 25, var6 - -45);
+          this.field_P.a(0, 34, param2, 25, var6 + 45);
           this.field_W.a(0, (int) (char)param1, param2, 40, 90 + var6);
           return;
         }
+        this.field_P.a(0, 34, param2, 25, var6);
+        this.field_R.a(0, 34, param2, 25, var6 + 45);
+        this.field_W.a(0, (int) (char)param1, param2, 40, 90 + var6);
     }
 
     final int i(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        if (param0 >= 75) {
-          try {
-            L0: {
-              stackIn_3_0 = Integer.parseInt(this.field_W.field_v);
-              break L0;
-            }
-          } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            return -1;
-          }
-          return stackIn_3_0;
-        } else {
+        if (param0 < 75) {
           return -116;
+        }
+        try {
+          stackIn_3_0 = Integer.parseInt(this.field_W.field_v);
+          return stackIn_3_0;
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
     }
 
@@ -202,31 +174,29 @@ final class ih extends bf {
         field_T = null;
         field_Y = null;
         if (param0 != 48) {
-            return;
+          return;
         }
         field_S = null;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         rf.a((byte) -122, param1);
-        if (param3 != -1) {
-          field_U = true;
-          bb.a(param1, param3 ^ -70, param0, param2);
-          return;
-        } else {
+        if (param3 == -1) {
           bb.a(param1, param3 ^ -70, param0, param2);
           return;
         }
+        field_U = true;
+        bb.a(param1, param3 ^ -70, param0, param2);
     }
 
     private final void a(mf param0, int param1, String param2, int param3, int param4) {
         if (param3 != -2200) {
-            return;
+          return;
         }
         try {
-            rc.field_a.b(param2, (param0.field_y >> -1079263903) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
+          rc.field_a.b(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ih.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ih.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -234,29 +204,18 @@ final class ih extends bf {
         NumberFormatException var2 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == -1) {
-              stackIn_4_0 = -1 + Integer.parseInt(this.field_P.field_v);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = -6;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == -1) {
+            stackIn_4_0 = -1 + Integer.parseInt(this.field_P.field_v);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = -6;
+          return stackIn_2_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
         }
     }
 

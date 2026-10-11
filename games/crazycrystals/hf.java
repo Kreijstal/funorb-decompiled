@@ -8,15 +8,15 @@ final class hf {
 
     final static void a(int param0) {
         rf.a(param0 ^ 7);
-        rc.a(param0 + -25541, param0);
+        rc.a(param0 - 25541, param0);
     }
 
     public static void b(int param0) {
         if (param0 != 4) {
-            hf.b(-106);
-            field_c = null;
-            field_b = null;
-            return;
+          hf.b(-106);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

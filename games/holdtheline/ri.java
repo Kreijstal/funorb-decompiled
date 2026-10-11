@@ -12,17 +12,17 @@ final class ri {
 
     final static void a(byte param0, String[] param1) {
         if (null != cg.field_b) {
-            cg.field_b.field_R.a(param1, (byte) 43);
+          cg.field_b.field_R.a(param1, (byte) 43);
         }
         if (param0 <= 33) {
-            return;
+          return;
         }
         try {
-            if (vf.field_l != null) {
-                vf.field_l.field_H.a(param1, (byte) 43);
-            }
+          if (vf.field_l != null) {
+            vf.field_l.field_H.a(param1, (byte) 43);
+          }
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,24 +30,21 @@ final class ri {
         field_f = null;
         field_d = null;
         field_a = null;
-        if (param0 != 1003075272) {
-          ri.a(120);
-          field_b = null;
-          field_e = null;
-          field_g = (long[][]) null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 1003075272) {
           field_b = null;
           field_e = null;
           field_g = (long[][]) null;
           field_c = null;
           return;
         }
+        ri.a(120);
+        field_b = null;
+        field_e = null;
+        field_g = (long[][]) null;
+        field_c = null;
     }
 
     static {
-        int var0 = 0;
         int var1 = 0;
         long var2 = 0L;
         long var4 = 0L;
@@ -58,32 +55,34 @@ final class ri {
         int var14 = 0;
         field_g = new long[8][256];
         field_f = new long[11];
-        for (var0 = 0; -257 < (var0 ^ -1); var0++) {
+        int var0 = 0;
+        while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
-            var2 = (var0 & 1) != 0 ? (long)(255 & var1) : (long)(var1 >>> 1003075272);
-            var4 = var2 << -1424770047;
+            var2 = (var0 & 1) != 0 ? (long)(255 & var1) : (long)(var1 >>> 8);
+            var4 = var2 << 1;
             if (256L <= var4) {
                 var4 = var4 ^ 285L;
             }
-            var6 = var4 << 1371341761;
-            if (-257L >= (var6 ^ -1L)) {
+            var6 = var4 << 1;
+            if (var6 >= 256L) {
                 var6 = var6 ^ 285L;
             }
             var8 = var6 ^ var2;
-            var10 = var6 << -1125597695;
-            if (-257L >= (var10 ^ -1L)) {
+            var10 = var6 << 1;
+            if (var10 >= 256L) {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_g[0][var0] = ba.a(var12, ba.a(var4 << 886194120, ba.a(ba.a(ba.a(var2 << -471499168, ba.a(ba.a(var2 << 167116208, var2 << -1472782920), var6 << -6117720)), var10 << -180254760), var8 << -1238624752)));
-            for (var14 = 1; -9 < (var14 ^ -1); var14++) {
-                field_g[var14][var0] = ba.a(field_g[-1 + var14][var0] << 2067241976, field_g[-1 + var14][var0] >>> -2072694392);
+            field_g[0][var0] = ba.a(var12, ba.a(var4 << 8, ba.a(ba.a(ba.a(var2 << 32, ba.a(ba.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)));
+            for (var14 = 1; var14 < 8; var14++) {
+                field_g[var14][var0] = ba.a(field_g[-1 + var14][var0] << 56, field_g[-1 + var14][var0] >>> 8);
             }
+            var0++;
         }
         field_f[0] = 0L;
         for (var0 = 1; 10 >= var0; var0++) {
             var1 = -8 + var0 * 8;
-            field_f[var0] = en.a(en.a(gh.a(65280L, field_g[6][var1 + 6]), en.a(gh.a(16711680L, field_g[5][var1 - -5]), en.a(gh.a(field_g[4][4 + var1], 4278190080L), en.a(en.a(en.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
+            field_f[var0] = en.a(en.a(gh.a(65280L, field_g[6][var1 + 6]), en.a(gh.a(16711680L, field_g[5][var1 + 5]), en.a(gh.a(field_g[4][4 + var1], 4278190080L), en.a(en.a(en.a(gh.a(field_g[1][1 + var1], 71776119061217280L), gh.a(field_g[0][var1], -72057594037927936L)), gh.a(field_g[2][2 + var1], 280375465082880L)), gh.a(1095216660480L, field_g[3][3 + var1]))))), gh.a(255L, field_g[7][7 + var1]));
         }
         field_c = (rd) ((Object) new le(7, 30.0f, new int[]{16711680, 16777215}));
         field_d = "Service unavailable";

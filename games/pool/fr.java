@@ -15,195 +15,105 @@ final class fr extends ma {
 
     final static int a(int param0, int param1) {
         int var2;
-        if (-1 != (param1 ^ -1)) {
-          if (0 < param1) {
-            L0: {
-              var2 = 1;
-              if (-65536 <= (param1 ^ -1)) {
-                break L0;
-              } else {
-                param1 = param1 >> 16;
-                var2 += 16;
-                break L0;
-              }
-            }
-            L1: {
-              if (param1 <= 255) {
-                break L1;
-              } else {
-                var2 += 8;
-                param1 = param1 >> 8;
-                break L1;
-              }
-            }
-            L2: {
-              if ((param1 ^ -1) >= -16) {
-                break L2;
-              } else {
-                param1 = param1 >> 4;
-                var2 += 4;
-                break L2;
-              }
-            }
-            L3: {
-              if (param1 <= 3) {
-                break L3;
-              } else {
-                var2 += 2;
-                param1 = param1 >> 2;
-                break L3;
-              }
-            }
-            L4: {
-              if (param1 > 1) {
-                var2++;
-                param1 = param1 >> 1;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return var2;
-          } else {
-            L5: {
-              var2 = 2;
-              if (-65536 <= param1) {
-                break L5;
-              } else {
-                var2 += 16;
-                param1 = param1 >> 16;
-                break L5;
-              }
-            }
-            if (param0 == 16) {
-              L6: {
-                if (-256 <= param1) {
-                  break L6;
-                } else {
-                  param1 = param1 >> 8;
-                  var2 += 8;
-                  break L6;
-                }
-              }
-              L7: {
-                if ((param1 ^ -1) <= 15) {
-                  break L7;
-                } else {
-                  param1 = param1 >> 4;
-                  var2 += 4;
-                  break L7;
-                }
-              }
-              L8: {
-                if (param1 >= -4) {
-                  break L8;
-                } else {
-                  var2 += 2;
-                  param1 = param1 >> 2;
-                  break L8;
-                }
-              }
-              L9: {
-                if ((param1 ^ -1) <= 1) {
-                  break L9;
-                } else {
-                  var2++;
-                  param1 = param1 >> 1;
-                  break L9;
-                }
-              }
-              return var2;
-            } else {
-              L10: {
-                fr.c((byte) -52);
-                if (-256 <= param1) {
-                  break L10;
-                } else {
-                  param1 = param1 >> 8;
-                  var2 += 8;
-                  break L10;
-                }
-              }
-              L11: {
-                if ((param1 ^ -1) <= 15) {
-                  break L11;
-                } else {
-                  param1 = param1 >> 4;
-                  var2 += 4;
-                  break L11;
-                }
-              }
-              L12: {
-                if (param1 >= -4) {
-                  break L12;
-                } else {
-                  var2 += 2;
-                  param1 = param1 >> 2;
-                  break L12;
-                }
-              }
-              L13: {
-                if ((param1 ^ -1) <= 1) {
-                  break L13;
-                } else {
-                  var2++;
-                  param1 = param1 >> 1;
-                  break L13;
-                }
-              }
-              return var2;
-            }
-          }
-        } else {
+        int var2Lifetime1;
+        if (param1 == 0) {
           return 0;
         }
+        if (0 < param1) {
+          var2 = 1;
+          if (param1 > 65535) {
+            param1 = param1 >> 16;
+            var2 += 16;
+          }
+          if (param1 > 255) {
+            var2 += 8;
+            param1 = param1 >> 8;
+          }
+          if (param1 > 15) {
+            param1 = param1 >> 4;
+            var2 += 4;
+          }
+          if (param1 > 3) {
+            var2 += 2;
+            param1 = param1 >> 2;
+          }
+          if (param1 > 1) {
+            var2++;
+            param1 = param1 >> 1;
+          }
+          return var2;
+        }
+        var2Lifetime1 = 2;
+        if (-65536 > param1) {
+          var2Lifetime1 += 16;
+          param1 = param1 >> 16;
+        }
+        if (param0 != 16) {
+          fr.c((byte) -52);
+        }
+        if (-256 > param1) {
+          param1 = param1 >> 8;
+          var2Lifetime1 += 8;
+        }
+        if (param1 < -16) {
+          param1 = param1 >> 4;
+          var2Lifetime1 += 4;
+        }
+        if (param1 < -4) {
+          var2Lifetime1 += 2;
+          param1 = param1 >> 2;
+        }
+        if (param1 < -2) {
+          var2Lifetime1++;
+          param1 = param1 >> 1;
+        }
+        return var2Lifetime1;
     }
 
     final static void a(int param0, kg param1, int param2) {
         oq var6 = null;
         int var4 = 0;
         try {
-            var6 = ej.field_j;
-            oq var3 = var6;
-            var6.b(false, param2);
-            var6.field_v = var6.field_v + 1;
-            var4 = var6.field_v;
-            var6.a(1, false);
-            if (null != param1.field_p) {
-                var6.a(param1.field_p.length, false);
-                var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
-            } else {
-                var6.a(0, false);
-            }
-            int var5 = 48 / ((param0 - 52) / 40);
-            var6.d(-1, var4);
-            var6.field_v = var6.field_v - 4;
-            param1.field_o = var6.b(true);
-            var6.b(-var4 + var6.field_v, true);
+          var6 = ej.field_j;
+          oq var3 = var6;
+          var6.b(false, param2);
+          var6.field_v = var6.field_v + 1;
+          var4 = var6.field_v;
+          var6.a(1, false);
+          if (null != param1.field_p) {
+            var6.a(param1.field_p.length, false);
+            var6.a(param1.field_p, (byte) 0, 0, param1.field_p.length);
+          } else {
+            var6.a(0, false);
+          }
+          int var5 = 48 / ((param0 - 52) / 40);
+          var6.d(-1, var4);
+          var6.field_v = var6.field_v - 4;
+          param1.field_o = var6.b(true);
+          var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "fr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        var2 = (-640 + field_s) / 2;
-        if (param0 > -21) {
-          field_s = -62;
+        int var3 = 0;
+        int var4 = 0;
+        int var2 = (-640 + field_s) / 2;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (param0 <= -21) {
           var3 = ir.field_h * ir.field_h;
           var4 = var3 - param1 * param1;
-          so.field_k.b(90, 2147483647, var2 + -(199 * var4 / var3), 199, -90 + (-4 + (-120 + qh.field_f)));
-          uq.field_f.b(0, 2147483647, 202 + (var2 - -(438 * var4 / var3)), 438, -120 + qh.field_f - 4);
-          return;
-        } else {
-          var3 = ir.field_h * ir.field_h;
-          var4 = var3 - param1 * param1;
-          so.field_k.b(90, 2147483647, var2 + -(199 * var4 / var3), 199, -90 + (-4 + (-120 + qh.field_f)));
-          uq.field_f.b(0, 2147483647, 202 + (var2 - -(438 * var4 / var3)), 438, -120 + qh.field_f - 4);
+          so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + qh.field_f)));
+          uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + qh.field_f - 4);
           return;
         }
+        field_s = -62;
+        var3Lifetime1 = ir.field_h * ir.field_h;
+        var4Lifetime1 = var3Lifetime1 - param1 * param1;
+        so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + qh.field_f)));
+        uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + qh.field_f - 4);
     }
 
     public static void c(byte param0) {
@@ -211,17 +121,17 @@ final class fr extends ma {
         field_q = null;
         field_o = null;
         if (param0 < 39) {
-            fr.a(-16, 120);
+          fr.a(-16, 120);
         }
     }
 
     fr(long param0, int param1, byte[] param2) {
         try {
-            this.field_p = param0;
-            this.field_l = param2;
-            this.field_r = param1;
+          this.field_p = param0;
+          this.field_l = param2;
+          this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "fr.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -229,5 +139,26 @@ final class fr extends ma {
         field_m = "Please check if address is correct";
         field_o = new nl();
         field_q = "Who can join";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+        int var3 = 0;
+        int var4 = 0;
+        int var2 = (-640 + field_s) / 2;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (param0 <= -21) {
+          var3 = ir.field_h * ir.field_h;
+          var4 = var3 - param1 * param1;
+          so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + qh.field_f)));
+          uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + qh.field_f - 4);
+          return;
+        }
+        field_s = -62;
+        var3Lifetime1 = ir.field_h * ir.field_h;
+        var4Lifetime1 = var3Lifetime1 - param1 * param1;
+        so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + qh.field_f)));
+        uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + qh.field_f - 4);
     }
 }

@@ -8,66 +8,38 @@ final class gl extends pk implements fca, ufa {
 
     final static boolean a(int param0, String param1) {
         RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 3) {
-                break L1;
-              } else {
-                gl.d(0);
-                break L1;
-              }
-            }
-            L2: {
-              if (null == bna.b(-56, param1)) {
-                stackIn_5_0 = 0;
-                break L2;
-              } else {
-                stackIn_5_0 = 1;
-                break L2;
-              }
-            }
-            break L0;
+          if (param0 != 3) {
+            gl.d(0);
           }
+          stackIn_5_0 = (null != bna.b(-56, param1));
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("gl.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("gl.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     public final void a(lka param0, int param1) {
         try {
-            if (param1 != 0) {
-                field_g = (String) null;
-            }
+          if (param1 != 0) {
+            field_g = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "gl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "gl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -78,55 +50,29 @@ final class gl extends pk implements fca, ufa {
         int var4 = 0;
         int var5 = 0;
         String stackIn_4_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_e.d((byte) 112);
-              var3 = this.field_e.f((byte) 99);
-              var4 = this.field_e.j(-1);
-              var5 = kja.a(27168);
-              if (1890 > var4) {
-                break L1;
-              } else {
-                if (-3 + var5 >= var4) {
-                  if (!jp.a(var4, var3, (byte) 85, var2_int)) {
-                    L2: {
-                      if (param0 > 97) {
-                        break L2;
-                      } else {
-                        field_g = (String) null;
-                        break L2;
-                      }
-                    }
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  break L1;
-                }
-              }
+          var2_int = this.field_e.d((byte) 112);
+          var3 = this.field_e.f((byte) 99);
+          var4 = this.field_e.j(-1);
+          var5 = kja.a(27168);
+          if (1890 <= var4 &&
+            -3 + var5 >= var4) {
+            if (jp.a(var4, var3, (byte) 85, var2_int)) {
+              return null;
             }
+            if (param0 <= 97) {
+              field_g = (String) null;
+            }
+          } else {
             stackIn_4_0 = lga.a(true, new String[]{"1890", Integer.toString(var5 - 3)}, vo.field_c);
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
-            decompiledRegionSelector0 = 1;
-            break L3;
-          }
+          numberFormatException = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return eb.field_s;
-        }
+        return eb.field_s;
     }
 
     public gl() {
@@ -136,17 +82,16 @@ final class gl extends pk implements fca, ufa {
         field_f = null;
         field_g = null;
         if (param0 > -1) {
-            field_f = (String) null;
+          field_f = (String) null;
         }
     }
 
     public final boolean b(byte param0) {
-        if (param0 != 5) {
-          gl.d(97);
-          return this.field_e.k(param0 ^ -81);
-        } else {
+        if (param0 == 5) {
           return this.field_e.k(param0 ^ -81);
         }
+        gl.d(97);
+        return this.field_e.k(param0 ^ -81);
     }
 
     final jg c(byte param0) {
@@ -158,69 +103,41 @@ final class gl extends pk implements fca, ufa {
         jg stackIn_5_0 = null;
         jg stackIn_9_0 = null;
         jg stackIn_13_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_e.d((byte) 107);
-              var3 = this.field_e.f((byte) 73);
-              var4 = this.field_e.j(param0 + -36);
-              if (param0 == 35) {
-                break L1;
-              } else {
-                field_g = (String) null;
-                break L1;
-              }
-            }
-            var5 = kja.a(27168);
-            if (-1891 < (var4 ^ -1)) {
-              stackIn_5_0 = jt.field_f;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (var5 - 3 < var4) {
-                stackIn_9_0 = jt.field_f;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (!jp.a(var4, var3, (byte) 91, var2_int)) {
-                  stackIn_13_0 = jt.field_f;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            }
+          var2_int = this.field_e.d((byte) 107);
+          var3 = this.field_e.f((byte) 73);
+          var4 = this.field_e.j(param0 - 36);
+          if (param0 != 35) {
+            field_g = (String) null;
+          }
+          var5 = kja.a(27168);
+          if (var4 < 1890) {
+            stackIn_5_0 = jt.field_f;
+            return stackIn_5_0;
+          }
+          if (var5 - 3 < var4) {
+            stackIn_9_0 = jt.field_f;
+            return stackIn_9_0;
+          }
+          if (!jp.a(var4, var3, (byte) 91, var2_int)) {
+            stackIn_13_0 = jt.field_f;
+            return stackIn_13_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return jt.field_f;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return cm.field_u;
-            } else {
-              return stackIn_13_0;
-            }
-          }
-        }
+        return cm.field_u;
     }
 
     public final void a(lka param0, byte param1) {
         try {
-            int var3_int = -85 / ((param1 - 0) / 49);
-            this.a(574);
+          int var3_int = -85 / ((param1 - 0) / 49);
+          this.a(574);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "gl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "gl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -10,15 +10,15 @@ final class ga extends gi {
         field_j = null;
         field_i = null;
         if (param0 != -4) {
-            field_i = (String[]) null;
+          field_i = (String[]) null;
         }
     }
 
     ga(byte[] param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

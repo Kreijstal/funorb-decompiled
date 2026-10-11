@@ -19,21 +19,21 @@ final class lp extends vd implements gj {
     public final void a(int param0, int param1) {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_x == param1) {
-            return;
+          return;
         }
         int var3 = -this.field_i + this.field_y;
         int var4 = var3 * param1 / 65536;
         int var5 = var3 * this.field_x / 65536;
-        vd var6 = (vd) ((Object) this.field_l.d(0));
+        vd var6 = (vd) (this.field_l.d(0));
         while (var6 != null) {
-            var6.d(-var4 + var5, 0, 0);
-            var6 = (vd) ((Object) this.field_l.a((byte) -71));
+          var6.d(-var4 + var5, 0, 0);
+          var6 = (vd) (this.field_l.a((byte) -71));
         }
         if (param0 != 13280) {
-            field_A = (String) null;
+          field_A = (String) null;
         } else {
-            this.field_x = param1;
-            return;
+          this.field_x = param1;
+          return;
         }
         this.field_x = param1;
     }
@@ -45,7 +45,7 @@ final class lp extends vd implements gj {
         field_u = null;
         field_z = null;
         if (param0 != 1546006977) {
-            field_v = (qr) null;
+          field_v = (qr) null;
         }
     }
 
@@ -57,22 +57,20 @@ final class lp extends vd implements gj {
 
     final void a(vd param0, int param1) {
         try {
-            super.a(param0, param1);
-            if (param0 instanceof lp) {
-                this.field_y = this.field_y + param0.field_i;
-            }
+          super.a(param0, param1);
+          if (param0 instanceof lp) {
+            this.field_y = this.field_y + param0.field_i;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "lp.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "lp.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, sq param1) {
+        int var9 = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         String stackIn_35_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -82,226 +80,153 @@ final class lp extends vd implements gj {
         String var6 = null;
         int var7 = 0;
         lm[] var8 = null;
-        int var9 = 0;
         lm var10 = null;
         int var11 = 0;
         ob var12 = null;
         sq var13 = null;
+        String var6Lifetime1;
+        int var7Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            if (is.field_b) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              hm.field_q = param1;
-              if (param1 == null) {
-                tp.field_b = pc.field_q;
-                jb.field_d = kp.field_j + jc.field_r >> 1546006977;
-                fe.field_B = kp.field_j + jc.field_r >> 1546006977;
-                oi.field_a = be.field_h;
-                var13 = (sq) null;
-                qj.a((sq) null, -1);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L1: {
-                  sj.a(-31560);
-                  var2_int = param1.field_t;
-                  var3 = param1.field_b;
-                  var4 = param1.field_j;
-                  var5 = param1.field_q;
-                  if (param0 == 1546006977) {
-                    break L1;
-                  } else {
-                    var12 = (ob) null;
-                    lp.a((mg) null, (byte) -74, (ob) null);
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (0 != (param1.field_q ^ -1)) {
-                    break L2;
-                  } else {
-                    var6 = uq.field_m.a(5607, param1.field_c);
-                    var7 = wk.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 + -20});
-                    var5 = 34 + (rs.field_Cb.field_q - -(var7 * 13));
-                    eh.field_L = new bi[var7];
-                    if (param1.field_f != null) {
-                      var8 = param1.field_f;
-                      var9 = 0;
-                      L3: while (true) {
-                        if (var8.length <= var9) {
-                          break L2;
-                        } else {
-                          var10 = var8[var9];
-                          var6 = uq.field_m.a(5607, var10.field_b);
-                          var7 = wk.a(-9615, var6, rs.field_Cb, new int[]{-20 + (-6 + var4)});
-                          var5 = var5 + (13 * var7 - -rs.field_Cb.field_q);
-                          var9++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if ((1 & param1.field_n) == 0) {
-                    var2_int = var2_int + 3;
-                    break L4;
-                  } else {
-                    var2_int = 637 + -var2_int;
-                    break L4;
-                  }
-                }
-                L5: {
-                  if ((param1.field_n & 2) != 0) {
-                    var3 = 477 - var3;
-                    break L5;
-                  } else {
-                    var3 = 55 - -var3;
-                    break L5;
-                  }
-                }
-                L6: {
-                  if ((2 & param1.field_n) == 0) {
-                    break L6;
-                  } else {
-                    var3 = var3 - var5;
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (-1 == (param1.field_n & 1 ^ -1)) {
-                    break L7;
-                  } else {
-                    var2_int = var2_int - var4;
-                    break L7;
-                  }
-                }
-                L8: {
-                  jb.field_d = var4 + var2_int;
-                  tp.field_b = var3 + var5;
-                  oi.field_a = var3;
-                  fe.field_B = var2_int;
-                  qj.a(param1, param0 ^ -1546006978);
-                  if (0 != (param1.field_c.indexOf("<%tabresizehint>") ^ -1)) {
-                    uq.field_m.a("", 27275, "tabresizehint");
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                if (ol.field_g != null) {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  pc.field_q = tp.field_b;
-                  be.field_h = oi.field_a;
-                  kp.field_j = jb.field_d + fe.field_B >> -2127607903;
-                  jc.field_r = jb.field_d + fe.field_B >> -2127607903;
-                  return;
-                }
+          if (is.field_b) {
+            return;
+          }
+          hm.field_q = param1;
+          if (param1 == null) {
+            tp.field_b = pc.field_q;
+            jb.field_d = kp.field_j + jc.field_r >> 1;
+            fe.field_B = kp.field_j + jc.field_r >> 1;
+            oi.field_a = be.field_h;
+            var13 = (sq) null;
+            qj.a((sq) null, -1);
+            return;
+          }
+          sj.a(-31560);
+          var2_int = param1.field_t;
+          var3 = param1.field_b;
+          var4 = param1.field_j;
+          var5 = param1.field_q;
+          if (param0 != 1546006977) {
+            var12 = (ob) null;
+            lp.a((mg) null, (byte) -74, (ob) null);
+          }
+          if (param1.field_q == -1) {
+            var6 = uq.field_m.a(5607, param1.field_c);
+            var7 = wk.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 - 20});
+            var5 = 34 + (rs.field_Cb.field_q + var7 * 13);
+            eh.field_L = new bi[var7];
+            if (param1.field_f != null) {
+              var8 = param1.field_f;
+              for (var9 = 0; var8.length > var9; var9++) {
+                var10 = var8[var9];
+                var6Lifetime1 = uq.field_m.a(5607, var10.field_b);
+                var7Lifetime1 = wk.a(-9615, var6Lifetime1, rs.field_Cb, new int[]{-20 + (-6 + var4)});
+                var5 = var5 + (13 * var7Lifetime1 + rs.field_Cb.field_q);
               }
             }
           }
+          if ((1 & param1.field_n) == 0) {
+            var2_int = var2_int + 3;
+          } else {
+            var2_int = 637 - var2_int;
+          }
+          if ((param1.field_n & 2) != 0) {
+            var3 = 477 - var3;
+          } else {
+            var3 = 55 + var3;
+          }
+          if ((2 & param1.field_n) != 0) {
+            var3 = var3 - var5;
+          }
+          if ((param1.field_n & 1) != 0) {
+            var2_int = var2_int - var4;
+          }
+          jb.field_d = var4 + var2_int;
+          tp.field_b = var3 + var5;
+          oi.field_a = var3;
+          fe.field_B = var2_int;
+          qj.a(param1, param0 ^ -1546006978);
+          if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
+            uq.field_m.a("", 27275, "tabresizehint");
+          }
+          if (ol.field_g != null) {
+            return;
+          }
+          pc.field_q = tp.field_b;
+          be.field_h = oi.field_a;
+          kp.field_j = jb.field_d + fe.field_B >> 1;
+          jc.field_r = jb.field_d + fe.field_B >> 1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var2 = decompiledCaughtException;
-            stackIn_34_0 = (RuntimeException) (var2);
-
-            stackIn_34_1 = new StringBuilder().append("lp.I(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "null";
-              break L9;
-            } else {
-              stackIn_35_0 = (RuntimeException) ((Object) stackIn_34_0);
-              stackIn_35_1 = (StringBuilder) ((Object) stackIn_34_1);
-              stackIn_35_2 = "{...}";
-              break L9;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_35_0), stackIn_35_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var2 = decompiledCaughtException;
+          stackIn_34_0 = var2;
+          stackIn_34_1 = new StringBuilder().append("lp.I(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_35_2 = "null";
           } else {
-            return;
+            stackIn_35_2 = "{...}";
           }
+          throw r.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
     final static void a(mg param0, byte param1, ob param2) {
         try {
-            di.a(param0.field_y, false, param2);
-            di.a(param0.field_B, false, param2);
-            param2.d(param0.field_z, 255);
-            if (param1 > -67) {
-                field_A = (String) null;
-            }
+          di.a(param0.field_y, false, param2);
+          di.a(param0.field_B, false, param2);
+          param2.d(param0.field_z, 255);
+          if (param1 > -67) {
+            field_A = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "lp.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "lp.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final vd b(byte param0, int param1, int param2) {
-        vd var4;
-        if (param0 > 51) {
-          if (this.field_s) {
-            if (this.c(param1, param2, 0)) {
-              var4 = as.a(this.field_l, param1, (byte) 117, param2);
-              if (var4 != null) {
-                return var4;
-              } else {
-                return super.b((byte) 127, param1, param2);
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        vd var4 = null;
+        vd var4Lifetime1;
+        if (param0 <= 51) {
           field_u = (String) null;
-          if (this.field_s) {
-            if (this.c(param1, param2, 0)) {
-              var4 = as.a(this.field_l, param1, (byte) 117, param2);
-              if (var4 != null) {
-                return var4;
-              } else {
-                return super.b((byte) 127, param1, param2);
-              }
-            } else {
-              return null;
-            }
-          } else {
+          if (!this.field_s) {
             return null;
           }
+          if (!this.c(param1, param2, 0)) {
+            return null;
+          }
+          var4 = as.a(this.field_l, param1, (byte) 117, param2);
+          if (var4 == null) {
+            return super.b((byte) 127, param1, param2);
+          }
+          return var4;
         }
+        if (!this.field_s) {
+          return null;
+        }
+        if (!this.c(param1, param2, 0)) {
+          return null;
+        }
+        var4Lifetime1 = as.a(this.field_l, param1, (byte) 117, param2);
+        if (var4Lifetime1 == null) {
+          return super.b((byte) 127, param1, param2);
+        }
+        return var4Lifetime1;
     }
 
     final void a(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 64 / ((param0 - 67) / 47);
-        if (!(this.field_s)) {
-            return;
+        if (!this.field_s) {
+          return;
         }
         int[] var3 = new int[4];
         gf.a(var3);
         gf.i(this.field_k, this.field_t, this.field_m + this.field_k, this.field_t + this.field_i);
-        vd var4 = (vd) ((Object) this.field_l.f(3725));
+        vd var4 = (vd) (this.field_l.f(3725));
         while (var4 != null) {
-            var4.a(116);
-            var4 = (vd) ((Object) this.field_l.b(-124));
+          var4.a(116);
+          var4 = (vd) (this.field_l.b(-124));
         }
         gf.b(var3);
     }

@@ -21,14 +21,12 @@ final class oi extends ma {
         field_o = null;
         field_q = null;
         field_n = null;
-        if (param0 > -92) {
-          oi.c((byte) 126);
-          field_r = null;
-          return;
-        } else {
+        if (param0 <= -92) {
           field_r = null;
           return;
         }
+        oi.c((byte) 126);
+        field_r = null;
     }
 
     private oi() throws Throwable {

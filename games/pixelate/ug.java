@@ -15,59 +15,49 @@ final class ug extends fa {
     final static void a(int param0, int param1, int param2) {
         qh.field_b = param0;
         if (param2 != -26104) {
-            return;
+          return;
         }
         bq.field_d = param1;
     }
 
     final static void a(int param0) {
-        String var1;
-        String var2;
-        L0: {
-          if (null != wo.field_b) {
-            var2 = wo.field_b;
-            var1 = var2;
-            rg.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
-            wo.field_b = null;
-            break L0;
-          } else {
-            break L0;
-          }
+        String var2 = null;
+        if (null != wo.field_b) {
+          var2 = wo.field_b;
+          String var1 = var2;
+          rg.a(sd.a(ek.field_d, 113, new String[]{var2}), false);
+          wo.field_b = null;
         }
-        if (param0 != 2586) {
-          ug.a(20);
-          return;
-        } else {
+        if (param0 == 2586) {
           return;
         }
+        ug.a(20);
     }
 
     ug(long param0, int param1, byte[] param2) {
         try {
-            this.field_o = param0;
-            this.field_m = param1;
-            this.field_r = param2;
+          this.field_o = param0;
+          this.field_m = param1;
+          this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ug.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void e(int param0) {
         field_l = null;
-        if (param0 != 24857) {
-          field_p = (String) null;
-          field_p = null;
-          field_s = null;
-          field_n = null;
-          field_q = null;
-          return;
-        } else {
+        if (param0 == 24857) {
           field_p = null;
           field_s = null;
           field_n = null;
           field_q = null;
           return;
         }
+        field_p = (String) null;
+        field_p = null;
+        field_s = null;
+        field_n = null;
+        field_q = null;
     }
 
     static {

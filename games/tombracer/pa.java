@@ -10,8 +10,8 @@ final class pa {
 
     final static int b(byte param0) {
         if (param0 <= 110) {
-            pa.b((byte) 37);
-            return bt.field_b;
+          pa.b((byte) 37);
+          return bt.field_b;
         }
         return bt.field_b;
     }
@@ -19,7 +19,7 @@ final class pa {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != 117) {
-            pa.b((byte) -106);
+          pa.b((byte) -106);
         }
     }
 

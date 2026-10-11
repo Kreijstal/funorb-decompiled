@@ -16,95 +16,82 @@ final class nd {
     final void b(int param0, int param1) {
         this.a(-113, param1, this.field_i + 1);
         if (param0 != -1) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 
     private final void a(int param0, int param1, int param2) {
-        int var4;
-        if (this.field_i >= param2) {
+        int var4 = 0;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        if (this.field_i < param2) {
+          this.field_i = param2;
           if (this.field_f.length <= param2) {
             this.b((byte) -50, param2);
             this.field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
-            return;
-          } else {
-            this.field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
+            var4 = -90 / ((param0 + 39) / 56);
             return;
           }
-        } else {
-          this.field_i = param2;
-          if (this.field_f.length > param2) {
-            this.field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
-            return;
-          } else {
-            this.b((byte) -50, param2);
-            this.field_f[param2] = param1;
-            var4 = -90 / ((param0 - -39) / 56);
-            return;
-          }
+          this.field_f[param2] = param1;
+          var4Lifetime3 = -90 / ((param0 + 39) / 56);
+          return;
         }
+        if (this.field_f.length > param2) {
+          this.field_f[param2] = param1;
+          var4Lifetime1 = -90 / ((param0 + 39) / 56);
+          return;
+        }
+        this.b((byte) -50, param2);
+        this.field_f[param2] = param1;
+        var4Lifetime2 = -90 / ((param0 + 39) / 56);
     }
 
     private final void b(byte param0, int param1) {
-        int[] var3;
-        int[] var4;
-        var4 = new int[this.a(0, param1)];
-        var3 = var4;
-        if (param0 != -50) {
-          field_a = (km) null;
-          ek.a(this.field_f, 0, var4, 0, this.field_f.length);
-          this.field_f = var4;
-          return;
-        } else {
+        int[] var4 = new int[this.a(0, param1)];
+        int[] var3 = var4;
+        if (param0 == -50) {
           ek.a(this.field_f, 0, var4, 0, this.field_f.length);
           this.field_f = var4;
           return;
         }
+        field_a = (km) null;
+        ek.a(this.field_f, 0, var4, 0, this.field_f.length);
+        this.field_f = var4;
     }
 
     final static void a(byte param0, String param1, String param2) {
         try {
-            if (!(null == hf.field_w)) {
-                hf.field_w.h(true);
-            }
-            int var3_int = 94 / ((param0 - -93) / 33);
-            aa.field_a = new ca(param1, param2, false, true, true);
-            fi.field_t.b(aa.field_a, (byte) -53);
+          if (null != hf.field_w) {
+            hf.field_w.h(true);
+          }
+          int var3_int = 94 / ((param0 + 93) / 33);
+          aa.field_a = new ca(param1, param2, false, true, true);
+          fi.field_t.b(aa.field_a, (byte) -53);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "nd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "nd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, int param1) {
-        int var3;
-        if (-1 >= (param1 ^ -1)) {
-          if (param1 > this.field_i) {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          } else {
-            L0: {
-              if (param1 != this.field_i) {
-                ek.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_i);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            this.field_i = this.field_i - 1;
-            var3 = -30 / ((31 - param0) / 58);
-            return;
-          }
-        } else {
+        if (param1 < 0) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param1 <= this.field_i) {
+          if (param1 != this.field_i) {
+            ek.a(this.field_f, 1 + param1, this.field_f, param1, -param1 + this.field_i);
+          }
+          this.field_i = this.field_i - 1;
+          int var3 = -30 / ((31 - param0) / 58);
+          return;
+        }
+        throw new ArrayIndexOutOfBoundsException(param1);
     }
 
     final int a(int param0, byte param1) {
         int var3 = 68 % ((param1 - 41) / 39);
-        if (!(param0 <= this.field_i)) {
-            throw new ArrayIndexOutOfBoundsException(param0);
+        if (param0 > this.field_i) {
+          throw new ArrayIndexOutOfBoundsException(param0);
         }
         return this.field_f[param0];
     }
@@ -113,39 +100,28 @@ final class nd {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         var1_ref = w.field_L;
         synchronized (var1_ref) {
-          L0: {
-            if (ph.field_h != re.field_l) {
-              L1: {
-                um.field_Gb = cj.field_o[ph.field_h];
-                nm.field_d = hg.field_q[ph.field_h];
-                ph.field_h = ph.field_h - -1 & 127;
-                if (param0 < -95) {
-                  break L1;
-                } else {
-                  nd.a((byte) -122);
-                  break L1;
-                }
-              }
-              stackIn_7_0 = 1;
-              break L0;
-            } else {
-              stackIn_3_0 = 0;
-              return stackIn_3_0 != 0;
-            }
+          if (ph.field_h == re.field_l) {
+            return false;
           }
+          um.field_Gb = cj.field_o[ph.field_h];
+          nm.field_d = hg.field_q[ph.field_h];
+          ph.field_h = ph.field_h + 1 & 127;
+          if (param0 >= -95) {
+            nd.a((byte) -122);
+          }
+          stackIn_7_0 = true;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_7_0;
     }
 
     final int a(boolean param0) {
         if (param0) {
-            this.a(71, (byte) 14);
-            return 1 + this.field_i;
+          this.a(71, (byte) 14);
+          return 1 + this.field_i;
         }
         return 1 + this.field_i;
     }
@@ -157,7 +133,7 @@ final class nd {
         field_h = null;
         field_a = null;
         if (param0 < 108) {
-            field_h = (String) null;
+          field_h = (String) null;
         }
     }
 
@@ -166,28 +142,21 @@ final class nd {
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var3 = this.field_f.length;
-        L0: while (true) {
-          if (var3 > param1) {
-            if (param0 != 0) {
-              return 14;
-            } else {
-              return var3;
-            }
-          } else {
-            if (!this.field_e) {
-              var3 = var3 + this.field_g;
-              continue L0;
-            } else {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L0;
-              } else {
-                var3 = var3 * this.field_g;
-                continue L0;
-              }
-            }
+        while (var3 <= param1) {
+          if (!this.field_e) {
+            var3 = var3 + this.field_g;
+            continue;
           }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_g;
         }
+        if (param0 != 0) {
+          return 14;
+        }
+        return var3;
     }
 
     private nd() throws Throwable {

@@ -11,16 +11,14 @@ final class vc {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -6058) {
-          field_c = (int[]) null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -6058) {
           field_b = null;
           field_a = null;
           return;
         }
+        field_c = (int[]) null;
+        field_b = null;
+        field_a = null;
     }
 
     static {

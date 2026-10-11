@@ -7,7 +7,7 @@ final class fm implements mh {
 
     public static void a(byte param0) {
         if (param0 >= -100) {
-            fm.a((byte) -19);
+          fm.a((byte) -19);
         }
         field_a = null;
         field_b = null;
@@ -16,8 +16,6 @@ final class fm implements mh {
     public final void a(pk param0, int param1, int param2, boolean param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -26,87 +24,46 @@ final class fm implements mh {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int var6_intLifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
         var10 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == 5592405) {
-                break L1;
-              } else {
-                fm.a((byte) 119);
-                break L1;
-              }
-            }
-            var6_int = 0;
-            L2: while (true) {
-              if (param0.field_p < var6_int) {
-                var6_int = 1;
-                L3: while (true) {
-                  if (var6_int > 5) {
-                    break L0;
-                  } else {
-                    L4: {
-                      var7 = -(param0.field_q >> -790897375) + (param0.field_q + (param4 + param0.field_r) + (-5 - -var6_int));
-                      var8 = -(2 * var6_int) + (param0.field_q >> 1987058209);
-                      var9 = (-4 + param0.field_p >> 984733729) + (param1 + param0.field_v + var6_int);
-                      if (var9 < lk.field_i) {
-                        break L4;
-                      } else {
-                        if (lk.field_e <= var9) {
-                          break L4;
-                        } else {
-                          L5: {
-                            if (lk.field_k < var7) {
-                              lk.field_a[var9 * lk.field_b - (-var7 - -1)] = eb.a(16711422, lk.field_a[var7 + (var9 * lk.field_b - 1)]) >> -753764543;
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          if (var7 + var8 < lk.field_j) {
-                            lk.field_a[var8 + (var9 * lk.field_b - -var7)] = eb.a(8355711, lk.field_a[var9 * lk.field_b + var7 - -var8] >> -1558945407);
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
-                    lk.f(var7, var9, var8, 0);
-                    var6_int++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var7 = 152 - -(48 * var6_int / param0.field_p);
-                var8 = var7 << -779123760 | var7 << -1695338296 | var7;
-                lk.f(param4 - -param0.field_r, var6_int + param0.field_v + param1, param0.field_q, var8);
-                var6_int++;
-                continue L2;
-              }
-            }
+          if (param2 != 5592405) {
+            fm.a((byte) 119);
           }
+          for (var6_int = 0; param0.field_p >= var6_int; var6_int++) {
+            var7 = 152 + 48 * var6_int / param0.field_p;
+            var8 = var7 << 16 | var7 << 8 | var7;
+            lk.f(param4 + param0.field_r, var6_int + param0.field_v + param1, param0.field_q, var8);
+          }
+          for (var6_intLifetime1 = 1; var6_intLifetime1 <= 5; var6_intLifetime1++) {
+            var7Lifetime1 = -(param0.field_q >> 1) + (param0.field_q + (param4 + param0.field_r) + (-5 + var6_intLifetime1));
+            var8Lifetime1 = -(2 * var6_intLifetime1) + (param0.field_q >> 1);
+            var9 = (-4 + param0.field_p >> 1) + (param1 + param0.field_v + var6_intLifetime1);
+            if (var9 >= lk.field_i &&
+              lk.field_e > var9) {
+              if (lk.field_k < var7Lifetime1) {
+                lk.field_a[var9 * lk.field_b - (-var7Lifetime1 + 1)] = eb.a(16711422, lk.field_a[var7Lifetime1 + (var9 * lk.field_b - 1)]) >> 1;
+              }
+              if (var7Lifetime1 + var8Lifetime1 < lk.field_j) {
+                lk.field_a[var8Lifetime1 + (var9 * lk.field_b + var7Lifetime1)] = eb.a(8355711, lk.field_a[var9 * lk.field_b + var7Lifetime1 + var8Lifetime1] >> 1);
+              }
+            }
+            lk.f(var7Lifetime1, var9, var8Lifetime1, 0);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var6);
-
-            stackIn_20_1 = new StringBuilder().append("fm.A(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L6;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_20_0 = var6;
+          stackIn_20_1 = new StringBuilder().append("fm.A(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

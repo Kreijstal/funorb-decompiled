@@ -12,23 +12,20 @@ final class sk extends rj implements java.awt.event.MouseWheelListener {
     final void a(byte param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 > -85) {
-            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
-            this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+          java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+          this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
         }
     }
 
     final synchronized int a(int param0) {
-        int var2;
-        java.awt.event.MouseWheelEvent var3;
-        var2 = this.field_c;
+        int var2 = this.field_c;
         this.field_c = 0;
-        if (param0 > -52) {
-          var3 = (java.awt.event.MouseWheelEvent) null;
-          this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-          return var2;
-        } else {
+        if (param0 <= -52) {
           return var2;
         }
+        java.awt.event.MouseWheelEvent var3 = (java.awt.event.MouseWheelEvent) null;
+        this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+        return var2;
     }
 
     sk() {
@@ -37,10 +34,10 @@ final class sk extends rj implements java.awt.event.MouseWheelListener {
 
     final void a(boolean param0, java.awt.Component param1) {
         if (param0) {
-            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
-            this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+          this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+          param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

@@ -15,15 +15,7 @@ final class ad {
     public static void a(boolean param0) {
         field_a = null;
         field_e = null;
-        if (!param0) {
-          field_h = true;
-          field_c = null;
-          field_f = null;
-          field_b = null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0) {
           field_c = null;
           field_f = null;
           field_b = null;
@@ -31,6 +23,12 @@ final class ad {
           field_g = null;
           return;
         }
+        field_h = true;
+        field_c = null;
+        field_f = null;
+        field_b = null;
+        field_d = null;
+        field_g = null;
     }
 
     static {

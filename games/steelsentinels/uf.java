@@ -18,80 +18,54 @@ final class uf {
         field_g = null;
         field_a = null;
         if (param0 != 24) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
     final static int a(int param0, int[] param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              var2_int = 0;
-              if (param0 >= 54) {
-                break L1;
-              } else {
-                field_b = (int[]) null;
-                break L1;
-              }
-            }
-            var3 = 0;
-            L2: while (true) {
-              if (var3 >= param1.length) {
-                stackIn_7_0 = var2_int;
-                break L0;
-              } else {
-                var2_int = var2_int + mm.a((byte) 124, param1[var3]);
-                var3++;
-                continue L2;
-              }
-            }
+          var2_int = 0;
+          if (param0 < 54) {
+            field_b = (int[]) null;
           }
+          for (var3 = 0; var3 < param1.length; var3++) {
+            var2_int = var2_int + mm.a((byte) 124, param1[var3]);
+          }
+          stackIn_7_0 = var2_int;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("uf.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("uf.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     uf(String param0, gh param1) {
         String[] var3 = null;
         gh[] var4 = null;
         try {
-            var3 = new String[]{param0, ad.field_a, cf.field_A};
-            var4 = new gh[]{param1, ig.field_m, (gh) ((Object) vi.field_W)};
-            this.field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
+          var3 = new String[]{param0, ad.field_a, cf.field_A};
+          var4 = new gh[]{param1, ig.field_m, (gh) ((Object) vi.field_W)};
+          this.field_d = new mj(0L, ka.field_U, var3, be.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,9 +74,9 @@ final class uf {
         int var7 = 5;
         this.field_d.a(10, param0, var7, param2, param4, var6, param1);
         vc.field_h.a(0, 0, db.field_b, 0, ig.field_m.field_zb);
-        mm.field_a.a(0, 2 + db.field_b, 18, 0, -2 + (-80 + ig.field_m.field_zb + (-ua.field_G + -2)));
-        dh.field_E.a(0, db.field_b + 2, 18, -ua.field_G + (ig.field_m.field_zb - 82), 82 - -ua.field_G);
-        km.field_j.a(ig.field_m.field_zb, -20 + ig.field_m.field_Lb + (-db.field_b - 2), 2, 0, 20, 122, ua.field_G, param3 + (db.field_b - -20));
+        mm.field_a.a(0, 2 + db.field_b, 18, 0, -2 + (-80 + ig.field_m.field_zb + (-ua.field_G - 2)));
+        dh.field_E.a(0, db.field_b + 2, 18, -ua.field_G + (ig.field_m.field_zb - 82), 82 + ua.field_G);
+        km.field_j.a(ig.field_m.field_zb, -20 + ig.field_m.field_Lb + (-db.field_b - 2), 2, 0, 20, 122, ua.field_G, param3 + (db.field_b + 20));
         vi.field_W.a(2, 20, param3 ^ 46, ua.field_G);
     }
 

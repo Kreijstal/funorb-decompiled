@@ -16,14 +16,12 @@ final class oja {
         field_b = null;
         field_g = null;
         field_f = null;
-        if (param0 != -32341) {
-          oja.a((byte) 92, 'R');
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -32341) {
           field_a = null;
           return;
         }
+        oja.a((byte) 92, 'R');
+        field_a = null;
     }
 
     final static String a(byte param0, char param1) {
@@ -40,9 +38,9 @@ final class oja {
         field_a[0] = 50;
         int var0 = 590;
         field_a[6] = var0;
-        for (var1 = 5; (var1 ^ -1) < -1; var1--) {
-            var0 = var0 - field_g[-1 + var1];
-            field_a[var1] = var0;
+        for (var1 = 5; var1 > 0; var1--) {
+          var0 = var0 - field_g[-1 + var1];
+          field_a[var1] = var0;
         }
         field_e = "Unfortunately we are unable to create an account for you at this time.";
     }

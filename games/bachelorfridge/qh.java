@@ -43,104 +43,98 @@ final class qh {
         wd var14 = null;
         wd var19 = null;
         int var15 = BachelorFridge.field_y;
+        wd var14Lifetime1;
+        wd var14Lifetime2;
         try {
-            var17 = new gha(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_u - -param0.field_B));
-            this.field_i = (qda) ((Object) var17);
-            var17.field_k = 16777215;
-            var4 = new wd();
-            var17.a(-44, var4);
-            var4.field_f = 11711154;
-            var4.field_p = 15658734;
-            this.field_e = 15658734;
-            this.field_o = 15658734;
-            this.field_f = 5592405;
-            this.field_d = 3;
-            this.field_c = 3;
-            this.field_m = param0;
-            this.field_k = 3;
-            this.field_n = -1;
-            this.field_p = 3;
-            var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
-            var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
-            var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
-            if (!param1) {
-                this.field_i = (qda) null;
-            }
-            var5 = new kv[9];
-            var16 = new pa(32, 32);
-            var18 = var16;
-            for (var7_int = 0; var7_int < var18.field_v.length; var7_int++) {
-                var16.field_v[var7_int] = 1077952576;
-            }
-            var5[4] = (kv) ((Object) var18);
-            var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
-            var4.a(5, (byte) 78).a(rma.a(0, 65793, 3, 0, 0), (byte) -40).a(true, -2147483648).b(-1, -25251);
-            this.field_r = (qda) ((Object) var4);
-            var6 = new wd(var4, true);
-            var6.field_m = 0;
-            var7 = new wd(var4, true);
-            var7.field_m = 0;
-            var7.a((byte) 95, qaa.a(8947848, -16));
-            var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
-            this.field_h = (qda) ((Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-            discarded$0 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-            discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
-            var8 = new wd();
-            var17.a(-24, var8);
-            var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
-            var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
-            this.field_s = (qda) ((Object) var8);
-            var9 = new kv[9];
-            var9[4] = new kv(2, 1);
-            var10 = new kv[9];
-            var10[4] = new kv(1, 2);
-            dupTemp$2 = var9[4];
-            dupTemp$2.field_v = new int[]{6710886, 7829367};
-            var10[4].field_v = new int[]{6710886, 7829367};
-            var11 = new wd();
-            var12 = new wd();
-            var11.a(0, 69, var9);
-            var12.a(0, 115, var10);
-            var13 = new kv(7, 4);
-            var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-            var14 = new wd(var4, true);
-            var14.a(var13.a(), -110);
-            var13.f();
-            var14 = new wd(var4, true);
-            var14.a(var13.a(), -99);
-            var13.f();
-            var14 = new wd(var4, true);
-            var14.a(var13.a(), -84);
-            var13.f();
-            var19 = new wd(var4, true);
-            var19.a(var13, -79);
+          var17 = new gha(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_u + param0.field_B));
+          this.field_i = (qda) ((Object) var17);
+          var17.field_k = 16777215;
+          var4 = new wd();
+          var17.a(-44, var4);
+          var4.field_f = 11711154;
+          var4.field_p = 15658734;
+          this.field_e = 15658734;
+          this.field_o = 15658734;
+          this.field_f = 5592405;
+          this.field_d = 3;
+          this.field_c = 3;
+          this.field_m = param0;
+          this.field_k = 3;
+          this.field_n = -1;
+          this.field_p = 3;
+          var4.a(0, (byte) 78).b(15658734, -25251).a(ida.a(7829367, -95, 10066329, 8947848), (byte) -40);
+          var4.a(1, (byte) 78).a(ida.a(13421772, -34, 10066329, 11184810), (byte) -40);
+          var4.a(3, (byte) 78).a(ida.a(10066329, -32, 7829367, 8947848), (byte) -40).b((byte) -88, 1).a((byte) 0, 1);
+          if (!param1) {
+            this.field_i = (qda) null;
+          }
+          var5 = new kv[9];
+          var16 = new pa(32, 32);
+          var18 = var16;
+          for (var7_int = 0; var7_int < var18.field_v.length; var7_int++) {
+            var16.field_v[var7_int] = 1077952576;
+          }
+          var5[4] = (kv) ((Object) var18);
+          var4.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+          var4.a(5, (byte) 78).a(rma.a(0, 65793, 3, 0, 0), (byte) -40).a(true, -2147483648).b(-1, -25251);
+          this.field_r = (qda) ((Object) var4);
+          var6 = new wd(var4, true);
+          var6.field_m = 0;
+          var7 = new wd(var4, true);
+          var7.field_m = 0;
+          var7.a((byte) 95, qaa.a(8947848, -16));
+          var7.a(1, (byte) 78).a(qaa.a(11184810, -25), (byte) -40).b(2236962, -25251);
+          this.field_h = (qda) ((Object) new sea(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          discarded$0 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          var8 = new wd();
+          var17.a(-24, var8);
+          var8.a(0, (byte) 78).a(ida.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
+          var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
+          this.field_s = (qda) ((Object) var8);
+          var9 = new kv[9];
+          var9[4] = new kv(2, 1);
+          var10 = new kv[9];
+          var10[4] = new kv(1, 2);
+          dupTemp$2 = var9[4];
+          dupTemp$2.field_v = new int[]{6710886, 7829367};
+          var10[4].field_v = new int[]{6710886, 7829367};
+          var11 = new wd();
+          var12 = new wd();
+          var11.a(0, 69, var9);
+          var12.a(0, 115, var10);
+          var13 = new kv(7, 4);
+          var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var14 = new wd(var4, true);
+          var14.a(var13.a(), -110);
+          var13.f();
+          var14Lifetime1 = new wd(var4, true);
+          var14Lifetime1.a(var13.a(), -99);
+          var13.f();
+          var14Lifetime2 = new wd(var4, true);
+          var14Lifetime2.a(var13.a(), -84);
+          var13.f();
+          var19 = new wd(var4, true);
+          var19.a(var13, -79);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "qh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "qh.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var3 = BachelorFridge.field_y;
         try {
-          L0: {
-            du.field_a = new js(256);
-            var1_int = 35 % ((param0 - -49) / 38);
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= rf.field_h.length) {
-                break L0;
-              } else {
-                du.field_a.a((long)rf.field_h[var2].toLowerCase().hashCode(), (byte) -34, new ji(var2));
-                var2++;
-                continue L1;
-              }
-            }
+          du.field_a = new js(256);
+          var1_int = 35 % ((param0 + 49) / 38);
+          for (var2 = 0; var2 < rf.field_h.length; var2++) {
+            du.field_a.a((long)rf.field_h[var2].toLowerCase().hashCode(), (byte) -34, new ji(var2));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -150,7 +144,7 @@ final class qh {
 
     public static void a(int param0) {
         if (param0 != 23312) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
         field_q = null;
         field_a = null;
@@ -160,8 +154,6 @@ final class qh {
     private final void a(int param0, String param1, int param2, int param3) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -176,129 +168,73 @@ final class qh {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int var11Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var13Lifetime2;
         var15 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var5_int = this.field_c + this.field_p;
-              var6 = this.field_d + this.field_k;
-              var7 = this.field_n;
-              if (var7 != -1) {
-                break L1;
-              } else {
-                var7 = this.field_m.field_u - -this.field_m.field_B;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                var8 = dg.field_i >> 1397679554;
-                var9 = this.field_m.a(param1);
-                var10 = this.field_m.field_u + this.field_m.field_B;
-                var11 = 1;
-                if (var8 < var9) {
-                  break L3;
-                } else {
-                  if ((param1.indexOf("<br>") ^ -1) == 0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (null != rna.field_a) {
-                  break L4;
-                } else {
-                  rna.field_a = new String[16];
-                  break L4;
-                }
-              }
-              L5: {
-                if (var9 <= var8) {
-                  var12 = var8;
-                  break L5;
-                } else {
-                  var13 = var9 / var8;
-                  var12 = var8 + 2 * ((var13 + var9 % var8 + -1) / var13);
-                  break L5;
-                }
-              }
-              var11 = this.field_m.a(param1, new int[]{var12}, rna.field_a);
-              var10 = var10 + (var11 - 1) * var7;
-              var9 = 0;
-              var13 = 0;
-              L6: while (true) {
-                if (var11 <= var13) {
-                  break L2;
-                } else {
-                  L7: {
-                    var14 = this.field_m.a(rna.field_a[var13]);
-                    if ((var14 ^ -1) < (var9 ^ -1)) {
-                      var9 = var14;
-                      break L7;
-                    } else {
-                      break L7;
-                    }
-                  }
-                  var13++;
-                  continue L6;
-                }
-              }
-            }
-            L8: {
-              var12 = param2;
-              if (dg.field_i < var9 + var12 - -var5_int) {
-                var12 = dg.field_i - (var9 - -var5_int);
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              var13 = -this.field_m.field_v + param3 + 32;
-              if (dg.field_c < var13 - -var10 + var6) {
-                var13 = -var6 + -var10 + param3;
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            var14 = 102 % ((param0 - 64) / 56);
-            dg.a(var12, var13, var9 + var5_int, var6 + var10, this.field_e);
-            dg.c(1 + var12, 1 + var13, var9 - (-var5_int - -2), -2 + (var10 + var6), this.field_f);
-            this.field_m.a(param1, var12 + this.field_p, var13 + this.field_k, var9, var10, this.field_o, -1, 0, 0, var7);
-            break L0;
+          var5_int = this.field_c + this.field_p;
+          var6 = this.field_d + this.field_k;
+          var7 = this.field_n;
+          if (var7 == -1) {
+            var7 = this.field_m.field_u + this.field_m.field_B;
           }
+          var8 = dg.field_i >> 2;
+          var9 = this.field_m.a(param1);
+          var10 = this.field_m.field_u + this.field_m.field_B;
+          var11 = 1;
+          if (var8 < var9 ||
+            param1.indexOf("<br>") != -1) {
+            if (null == rna.field_a) {
+              rna.field_a = new String[16];
+            }
+            if (var9 <= var8) {
+              var12 = var8;
+            } else {
+              var13 = var9 / var8;
+              var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
+            }
+            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, rna.field_a);
+            var10 = var10 + (var11Lifetime1 - 1) * var7;
+            var9 = 0;
+            for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
+              var14 = this.field_m.a(rna.field_a[var13Lifetime2]);
+              if (var14 > var9) {
+                var9 = var14;
+              }
+            }
+          }
+          var12 = param2;
+          if (dg.field_i < var9 + var12 + var5_int) {
+            var12 = dg.field_i - (var9 + var5_int);
+          }
+          var13Lifetime1 = -this.field_m.field_v + param3 + 32;
+          if (dg.field_c < var13Lifetime1 + var10 + var6) {
+            var13Lifetime1 = -var6 - var10 + param3;
+          }
+          var14Lifetime1 = 102 % ((param0 - 64) / 56);
+          dg.a(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_e);
+          dg.c(1 + var12, 1 + var13Lifetime1, var9 - (-var5_int + 2), -2 + (var10 + var6), this.field_f);
+          this.field_m.a(param1, var12 + this.field_p, var13Lifetime1 + this.field_k, var9, var10, this.field_o, -1, 0, 0, var7);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var5 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var5);
-
-            stackIn_28_1 = new StringBuilder().append("qh.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L10;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L10;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_28_0 = var5;
+          stackIn_28_1 = new StringBuilder().append("qh.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final void a(String param0, int param1, int param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -308,60 +244,38 @@ final class qh {
         int var8 = 0;
         int var9 = 0;
         try {
-          L0: {
-            L1: {
-              var5_int = this.field_m.a(param0);
-              var6 = this.field_m.field_B + this.field_m.field_v;
-              var7 = param3;
-              if (var7 + (var5_int + 6) > dg.field_i) {
-                var7 = -6 + dg.field_i + -var5_int;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var8 = 32 + (-this.field_m.field_v + param2);
-              if (var8 + (var6 - -6) > dg.field_c) {
-                var8 = dg.field_c - (var6 + 6);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            dg.a(var7, var8, 6 + var5_int, var6 - -6, this.field_o);
-            var9 = 34 / ((33 - param1) / 53);
-            dg.c(var7 + 1, 1 + var8, var5_int + 4, var6 - -4, this.field_f);
-            this.field_m.c(param0, 3 + var7, this.field_m.field_v + (3 + var8), this.field_o, -1);
-            break L0;
+          var5_int = this.field_m.a(param0);
+          var6 = this.field_m.field_B + this.field_m.field_v;
+          var7 = param3;
+          if (var7 + (var5_int + 6) > dg.field_i) {
+            var7 = -6 + dg.field_i - var5_int;
           }
+          var8 = 32 + (-this.field_m.field_v + param2);
+          if (var8 + (var6 + 6) > dg.field_c) {
+            var8 = dg.field_c - (var6 + 6);
+          }
+          dg.a(var7, var8, 6 + var5_int, var6 + 6, this.field_o);
+          var9 = 34 / ((33 - param1) / 53);
+          dg.c(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_f);
+          this.field_m.c(param0, 3 + var7, this.field_m.field_v + (3 + var8), this.field_o, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5);
-
-            stackIn_10_1 = new StringBuilder().append("qh.C(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("qh.C(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param2 != 27209) {
-            this.a(106, 96, 101, 90, 116, 89, -113);
+          this.a(106, 96, 101, 90, 116, 89, -113);
         }
         dg.f(param6, param1, param5, param4, param0, param3);
     }
@@ -370,42 +284,34 @@ final class qh {
         int var10 = BachelorFridge.field_y;
         int var8 = param6 + param0;
         if (param1 > param3) {
-            dg.e(param3, var8, 1 + (-param3 + param1), param7);
+          dg.e(param3, var8, 1 + (-param3 + param1), param7);
         } else {
-            dg.e(param1, var8, param3 - (param1 - 1), param7);
+          dg.e(param1, var8, param3 - (param1 - 1), param7);
         }
         if (param2 != -1271) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
-        int var9 = param3 + param1 >> 2022675649;
+        int var9 = param3 + param1 >> 1;
         if (param5 > var9) {
-            dg.e(var9, param4, param5 - var9, param7);
+          dg.e(var9, param4, param5 - var9, param7);
         } else {
-            dg.e(param5, param4, -param5 + var9, param7);
+          dg.e(param5, param4, -param5 + var9, param7);
         }
         if (0 >= param6) {
-            dg.f(param3, var8, -param6, param7);
-            dg.f(param1, var8, -param6, param7);
+          dg.f(param3, var8, -param6, param7);
+          dg.f(param1, var8, -param6, param7);
         } else {
-            dg.f(param3, param0, param6, param7);
-            dg.f(param1, param0, param6, param7);
+          dg.f(param3, param0, param6, param7);
+          dg.f(param1, param0, param6, param7);
         }
         if (var8 < param4) {
-            dg.f(var9, var8, -var8 + param4, param7);
+          dg.f(var9, var8, -var8 + param4, param7);
         } else {
-            dg.f(var9, param4, var8 - param4, param7);
+          dg.f(var9, param4, var8 - param4, param7);
         }
     }
 
     final static void c(byte param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -415,51 +321,24 @@ final class qh {
         RuntimeException var1_ref = null;
         var4 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var5 = wa.field_m;
-              var1 = var5;
-              var2 = 0;
-              var3 = var5.length;
-              if (param0 >= 44) {
-                break L1;
-              } else {
-                field_q = (String) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var2 >= var3) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var1[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var1[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var1[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var1[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var1[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var1[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var1[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var1[incrementValue$23] = 0;
-                continue L2;
-              }
-            }
+          var5 = wa.field_m;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          if (param0 < 44) {
+            field_q = (String) null;
           }
+          while (var2 < var3) {
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+            var1[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -470,60 +349,37 @@ final class qh {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         dg.d(param1, param2, param0, param3, param4);
         if (param5 != 1) {
-            this.field_k = 72;
+          this.field_k = 72;
         }
     }
 
     final void a(byte param0, int param1, int param2, String param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -23) {
-                break L1;
-              } else {
-                this.field_m = (po) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (!this.field_b) {
-                this.a(param3, -96, param2, param1);
-                break L2;
-              } else {
-                this.a(-24, param3, param1, param2);
-                break L2;
-              }
-            }
-            break L0;
+          if (param0 >= -23) {
+            this.field_m = (po) null;
           }
+          if (!this.field_b) {
+            this.a(param3, -96, param2, param1);
+          } else {
+            this.a(-24, param3, param1, param2);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("qh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("qh.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -532,28 +388,20 @@ final class qh {
         Object var1 = null;
         var1 = uc.field_m;
         synchronized (var1) {
-          L0: {
-            L1: {
-              tf.field_n = tf.field_n + 1;
-              fia.field_t = oga.field_q;
-              mk.field_p = ue.field_N;
-              gd.field_m = dia.field_A;
-              dda.field_f = gja.field_j;
-              gja.field_j = false;
-              lf.field_c = jh.field_l;
-              if (param0 > 103) {
-                break L1;
-              } else {
-                qh.a(94, -48, 114, -68, -92, -64, 34, 23);
-                break L1;
-              }
-            }
-            nfa.field_a = tba.field_u;
-            jc.field_r = dma.field_c;
-            jh.field_l = 0;
-            nd.field_h = cj.field_f;
-            break L0;
+          tf.field_n = tf.field_n + 1;
+          fia.field_t = oga.field_q;
+          mk.field_p = ue.field_N;
+          gd.field_m = dia.field_A;
+          dda.field_f = gja.field_j;
+          gja.field_j = false;
+          lf.field_c = jh.field_l;
+          if (param0 <= 103) {
+            qh.a(94, -48, 114, -68, -92, -64, 34, 23);
           }
+          nfa.field_a = tba.field_u;
+          jc.field_r = dma.field_c;
+          jh.field_l = 0;
+          nd.field_h = cj.field_f;
         }
     }
 

@@ -8,7 +8,7 @@ final class de extends cha {
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         if (param3 != 2) {
-            return;
+          return;
         }
         param2.drawImage(this.field_a, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }

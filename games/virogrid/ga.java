@@ -18,15 +18,15 @@ final class ga extends km {
 
     final static void a(java.awt.Component param0, boolean param1) {
         try {
-            param0.addMouseListener(pm.field_l);
-            if (param1) {
-                java.awt.Component var3 = (java.awt.Component) null;
-                ga.a((java.awt.Component) null, true);
-            }
-            param0.addMouseMotionListener(pm.field_l);
-            param0.addFocusListener(pm.field_l);
+          param0.addMouseListener(pm.field_l);
+          if (param1) {
+            java.awt.Component var3 = (java.awt.Component) null;
+            ga.a((java.awt.Component) null, true);
+          }
+          param0.addMouseMotionListener(pm.field_l);
+          param0.addFocusListener(pm.field_l);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,53 +35,41 @@ final class ga extends km {
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         this.a(param0, (byte) 98);
-        if (param0) {
-          L0: {
-            var3 = 0;
-            if (param1 == -89) {
-              break L0;
-            } else {
-              this.b(true, (byte) -14);
-              break L0;
-            }
-          }
-          L1: while (true) {
-            if (this.field_Qb <= var3) {
-              if (oi.field_g != 0) {
-                return -1;
-              } else {
-                return this.field_Nb;
-              }
-            } else {
-              if ((this.field_Gb[var3].field_nb ^ -1) != -1) {
-                return this.field_Kb[var3];
-              } else {
-                var3++;
-                continue L1;
-              }
-            }
-          }
-        } else {
+        if (!param0) {
           return -2;
         }
+        var3 = 0;
+        if (param1 != -89) {
+          this.b(true, (byte) -14);
+        }
+        while (this.field_Qb > var3) {
+          if (this.field_Gb[var3].field_nb != 0) {
+            return this.field_Kb[var3];
+          }
+          var3++;
+        }
+        if (oi.field_g != 0) {
+          return -1;
+        }
+        return this.field_Nb;
     }
 
     public static void i(int param0) {
         field_Ob = null;
         if (param0 >= -47) {
-            field_Ob = (dl) null;
+          field_Ob = (dl) null;
         }
     }
 
     final boolean g(int param0) {
-        if (!(this.field_Nb == -2)) {
-            return false;
+        if (this.field_Nb != -2) {
+          return false;
         }
         if (param0 > -34) {
-            this.field_Kb = (int[]) null;
+          this.field_Kb = (int[]) null;
         }
-        if (-14 != (um.field_Gb ^ -1)) {
-            return true;
+        if (um.field_Gb != 13) {
+          return true;
         }
         this.field_Nb = -1;
         return true;
@@ -89,39 +77,39 @@ final class ga extends km {
 
     final void a(int param0, String param1, int param2) {
         try {
-            this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, (mg) null, param1);
-            this.field_Gb[this.field_Qb].field_x = this.field_Jb;
-            this.field_Gb[this.field_Qb].field_ib = true;
-            this.field_Gb[this.field_Qb].field_D = param0;
-            this.a(param0 ^ 1, this.field_Gb[this.field_Qb]);
-            this.field_Kb[this.field_Qb] = param2;
-            this.field_Qb = this.field_Qb + 1;
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, (mg) null, param1);
+          this.field_Gb[this.field_Qb].field_x = this.field_Jb;
+          this.field_Gb[this.field_Qb].field_ib = true;
+          this.field_Gb[this.field_Qb].field_D = param0;
+          this.a(param0 ^ 1, this.field_Gb[this.field_Qb]);
+          this.field_Kb[this.field_Qb] = param2;
+          this.field_Qb = this.field_Qb + 1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ga.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(String param0, byte param1, int param2, mg param3) {
         try {
-            this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, param3, param0);
-            this.field_Gb[this.field_Qb].field_x = this.field_Jb;
-            this.field_Gb[this.field_Qb].field_ib = true;
-            this.field_Gb[this.field_Qb].field_D = 1;
-            this.a(param1 + -89, this.field_Gb[this.field_Qb]);
-            this.field_Kb[this.field_Qb] = param2;
-            this.field_Qb = this.field_Qb + 1;
-            if (param1 != 89) {
-                this.field_Fb = -30;
-            }
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Eb, param3, param0);
+          this.field_Gb[this.field_Qb].field_x = this.field_Jb;
+          this.field_Gb[this.field_Qb].field_ib = true;
+          this.field_Gb[this.field_Qb].field_D = 1;
+          this.a(param1 - 89, this.field_Gb[this.field_Qb]);
+          this.field_Kb[this.field_Qb] = param2;
+          this.field_Qb = this.field_Qb + 1;
+          if (param1 != 89) {
+            this.field_Fb = -30;
+          }
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean h(int param0) {
         if (param0 != -20940) {
-            java.awt.Component var2 = (java.awt.Component) null;
-            ga.a((java.awt.Component) null, false);
+          java.awt.Component var2 = (java.awt.Component) null;
+          ga.a((java.awt.Component) null, false);
         }
         return ql.field_q.a((byte) 19);
     }
@@ -132,69 +120,50 @@ final class ga extends km {
         this.field_Kb = new int[256];
         this.field_Gb = new hk[256];
         try {
-            this.field_Jb = param1;
-            this.field_Mb = param8;
-            this.field_Ib = param5;
-            this.field_Pb = param7;
-            this.field_Hb = param2;
-            this.field_Fb = param4;
-            this.field_Eb = param3;
-            this.field_Lb = param6;
+          this.field_Jb = param1;
+          this.field_Mb = param8;
+          this.field_Ib = param5;
+          this.field_Pb = param7;
+          this.field_Hb = param2;
+          this.field_Fb = param4;
+          this.field_Eb = param3;
+          this.field_Lb = param6;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
+        int var10 = 0;
         int var6;
         int var7;
         int var8;
-        int var9;
-        int var10;
         int var11;
-        L0: {
-          var11 = Virogrid.field_F ? 1 : 0;
-          if (-1 == (this.field_Qb ^ -1)) {
-            this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Hb, (mg) null, cg.field_a);
-            this.field_Gb[this.field_Qb].field_D = 1;
-            this.a(0, this.field_Gb[this.field_Qb]);
-            this.field_Kb[this.field_Qb] = -1;
-            this.field_Qb = this.field_Qb + 1;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var9;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        var11 = Virogrid.field_F ? 1 : 0;
+        if (this.field_Qb == 0) {
+          this.field_Gb[this.field_Qb] = new hk(0L, (km) null, (km) null, this.field_Hb, (mg) null, cg.field_a);
+          this.field_Gb[this.field_Qb].field_D = 1;
+          this.a(0, this.field_Gb[this.field_Qb]);
+          this.field_Kb[this.field_Qb] = -1;
+          this.field_Qb = this.field_Qb + 1;
         }
         var6 = 0;
-        var7 = param1;
-        L1: while (true) {
-          if (var7 >= this.field_Qb) {
-            var6 = var6 + 2 * this.field_Fb;
-            var7 = this.field_Mb * this.field_Qb + this.field_Pb - -this.field_Pb;
-            var8 = sh.b(0, param2, param3, var6);
-            var9 = p.a(-1, var7, param4, param0);
-            this.a(var8, var7, var6, (byte) -87, var9);
-            var10 = 0;
-            L2: while (true) {
-              if (var10 >= this.field_Qb) {
-                return;
-              } else {
-                this.field_Gb[var10].a(-(2 * this.field_Fb) + var6, this.field_Fb, 2, var10 * this.field_Mb + this.field_Pb, this.field_Lb, this.field_Mb, this.field_Ib);
-                var10++;
-                continue L2;
-              }
-            }
-          } else {
-            var8 = this.field_Gb[var7].c(-89, this.field_Lb, this.field_Ib);
-            if (var6 < var8) {
-              var6 = var8;
-              var7++;
-              continue L1;
-            } else {
-              var7++;
-              continue L1;
-            }
+        for (var7 = param1; var7 < this.field_Qb; var7++) {
+          var8 = this.field_Gb[var7].c(-89, this.field_Lb, this.field_Ib);
+          if (var6 < var8) {
+            var6 = var8;
           }
+        }
+        var6 = var6 + 2 * this.field_Fb;
+        var7Lifetime1 = this.field_Mb * this.field_Qb + this.field_Pb + this.field_Pb;
+        var8Lifetime1 = sh.b(0, param2, param3, var6);
+        var9 = p.a(-1, var7Lifetime1, param4, param0);
+        this.a(var8Lifetime1, var7Lifetime1, var6, (byte) -87, var9);
+        for (var10 = 0; var10 < this.field_Qb; var10++) {
+          this.field_Gb[var10].a(-(2 * this.field_Fb) + var6, this.field_Fb, 2, var10 * this.field_Mb + this.field_Pb, this.field_Lb, this.field_Mb, this.field_Ib);
         }
     }
 

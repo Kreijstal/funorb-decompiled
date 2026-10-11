@@ -10,18 +10,18 @@ final class bs extends RuntimeException {
     static String field_b;
 
     final static void a(int param0) {
-        id.field_s.a(true, -(ui.field_t ? 40 + (2 + (oe.field_f - -2)) : 0) + mc.field_d.field_q, param0, 0, 18);
-        ck.field_c.a(true, oe.field_f + 42, -40 + (-2 + -oe.field_f + mc.field_d.field_q), 0, 18);
-        bf.field_u.a(2, param0 ^ 118, mc.field_d.field_mb + -20, 20, 0, mc.field_d.field_q, oe.field_f);
+        id.field_s.a(true, -(ui.field_t ? 40 + (2 + (oe.field_f + 2)) : 0) + mc.field_d.field_q, param0, 0, 18);
+        ck.field_c.a(true, oe.field_f + 42, -40 + (-2 - oe.field_f + mc.field_d.field_q), 0, 18);
+        bf.field_u.a(2, param0 ^ 118, mc.field_d.field_mb - 20, 20, 0, mc.field_d.field_q, oe.field_f);
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -50) {
-            bs.a((byte) 40);
-            field_c = null;
-            field_a = null;
-            return;
+          bs.a((byte) 40);
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -36,68 +36,44 @@ final class bs extends RuntimeException {
         ut[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (param0.length <= var2_int) {
-                var3 = 45 % ((param1 - -62) / 35);
-                stackIn_5_0 = (ut[]) (param0);
-                break L0;
-              } else {
-                var3_ref_ut = param0[var2_int];
-                param0[var2_int].field_n = 0;
-                var3_ref_ut.field_s = 0;
-                param0[var2_int].field_o = param0[var2_int].field_q;
-                param0[var2_int].field_v = param0[var2_int].field_w;
-                var2_int++;
-                continue L1;
-              }
-            }
+          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+            var3_ref_ut = param0[var2_int];
+            param0[var2_int].field_n = 0;
+            var3_ref_ut.field_s = 0;
+            param0[var2_int].field_o = param0[var2_int].field_q;
+            param0[var2_int].field_v = param0[var2_int].field_w;
           }
+          var3 = 45 % ((param1 + 62) / 35);
+          stackIn_5_0 = (ut[]) (param0);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("bs.A(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("bs.A(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_5_0;
     }
 
     final static void a(int param0, int param1, int param2) {
-        ut[] var4;
-        if (param1 != 0) {
-          var4 = (ut[]) null;
-          bs.a((ut[]) null, (byte) 5);
-          tb.field_s = param0;
-          ta.field_A = param2;
-          return;
-        } else {
+        if (param1 == 0) {
           tb.field_s = param0;
           ta.field_A = param2;
           return;
         }
+        ut[] var4 = (ut[]) null;
+        bs.a((ut[]) null, (byte) 5);
+        tb.field_s = param0;
+        ta.field_A = param2;
     }
 
     bs(Throwable param0, String param1) {

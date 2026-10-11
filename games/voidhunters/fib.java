@@ -13,49 +13,29 @@ final class fib extends uda {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!this.field_i) {
-                this.field_d.a(param2, -107);
-                this.field_d.h(13, param1);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (param0 > 42) {
-              break L0;
-            } else {
-              this.a(-23, false);
-              return;
-            }
+          if (!this.field_i) {
+            this.field_d.a(param2, -107);
+            this.field_d.h(13, param1);
           }
+          if (param0 > 42) {
+            return;
+          }
+          this.a(-23, false);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4);
-
-            stackIn_8_1 = new StringBuilder().append("fib.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_8_0 = var4;
+          stackIn_8_1 = new StringBuilder().append("fib.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -65,69 +45,47 @@ final class fib extends uda {
     }
 
     final void a(int param0) {
-        if (param0 != 2543) {
-          L0: {
-            this.field_i = true;
-            if (this.field_i) {
-              this.field_d.g(1, -120);
-              this.field_d.a((ura) null, -112);
-              this.field_d.g(0, -91);
-              this.field_d.a((ura) null, param0 ^ -2450);
-              jaggl.OpenGL.glUseProgramObjectARB(0L);
-              this.field_i = false;
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == 2543) {
+          if (this.field_i) {
+            this.field_d.g(1, -120);
+            this.field_d.a((ura) null, -112);
+            this.field_d.g(0, -91);
+            this.field_d.a((ura) null, param0 ^ -2450);
+            jaggl.OpenGL.glUseProgramObjectARB(0L);
+            this.field_i = false;
           }
           return;
-        } else {
-          L1: {
-            if (this.field_i) {
-              this.field_d.g(1, -120);
-              this.field_d.a((ura) null, -112);
-              this.field_d.g(0, -91);
-              this.field_d.a((ura) null, param0 ^ -2450);
-              jaggl.OpenGL.glUseProgramObjectARB(0L);
-              this.field_i = false;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        this.field_i = true;
+        if (this.field_i) {
+          this.field_d.g(1, -120);
+          this.field_d.a((ura) null, -112);
+          this.field_d.g(0, -91);
+          this.field_d.a((ura) null, param0 ^ -2450);
+          jaggl.OpenGL.glUseProgramObjectARB(0L);
+          this.field_i = false;
         }
     }
 
     final void a(int param0, boolean param1) {
-        hdb var3;
-        long var4;
-        if (param0 != 5) {
-          return;
-        } else {
-          L0: {
-            var3 = this.field_d.J(param0 ^ 15);
-            if (!this.field_e) {
-              break L0;
-            } else {
-              if (var3 == null) {
-                break L0;
-              } else {
-                this.field_d.g(1, -123);
-                this.field_d.a(var3, -111);
-                this.field_d.g(0, -108);
-                this.field_d.a(this.field_g.field_e, -107);
-                var4 = this.field_f.field_b;
-                jaggl.OpenGL.glUseProgramObjectARB(var4);
-                jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
-                jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
-                jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.field_d.field_wc[0], -this.field_d.field_wc[1], -this.field_d.field_wc[2]);
-                jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.field_d.field_Sb, this.field_d.field_u, this.field_d.field_x, 1.0f);
-                jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + 928.0f * Math.abs(this.field_d.field_wc[1]));
-                this.field_i = true;
-                break L0;
-              }
-            }
+        hdb var3 = null;
+        long var4 = 0L;
+        if (param0 == 5) {
+          var3 = this.field_d.J(param0 ^ 15);
+          if (this.field_e &&
+            var3 != null) {
+            this.field_d.g(1, -123);
+            this.field_d.a(var3, -111);
+            this.field_d.g(0, -108);
+            this.field_d.a(this.field_g.field_e, -107);
+            var4 = this.field_f.field_b;
+            jaggl.OpenGL.glUseProgramObjectARB(var4);
+            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
+            jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
+            jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunDir"), -this.field_d.field_wc[0], -this.field_d.field_wc[1], -this.field_d.field_wc[2]);
+            jaggl.OpenGL.glUniform4fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunColour"), this.field_d.field_Sb, this.field_d.field_u, this.field_d.field_x, 1.0f);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "sunExponent"), 96.0f + 928.0f * Math.abs(this.field_d.field_wc[1]));
+            this.field_i = true;
           }
           return;
         }
@@ -139,19 +97,13 @@ final class fib extends uda {
         RuntimeException var4_ref = null;
         ue var5 = null;
         ue var6 = null;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
+        boolean stackIn_8_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -159,101 +111,45 @@ final class fib extends uda {
           if (param1 == null) {
             this.field_e = false;
             return;
-          } else {
-            if (!param0.field_Mc) {
-              this.field_e = false;
-              return;
-            } else {
-              if (!param0.field_Qc) {
-                this.field_e = false;
-                return;
-              } else {
-                L0: {
-                  L1: {
-                    var6 = gha.a(param1.a("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
-                    var4 = var6;
-                    var5 = gha.a(param1.a("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
-                    this.field_f = gnb.a(0, new ue[]{var6, var5}, param0);
-                    stackIn_7_0 = this;
-
-                    if (this.field_f == null) {
-                      break L1;
-                    } else {
-                      stackIn_7_0 = this;
-
-                      if (!this.field_g.b((byte) 63)) {
-                        break L1;
-                      } else {
-                        stackIn_8_0 = this;
-                        stackIn_8_1 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  stackIn_8_0 = this;
-                  stackIn_8_1 = 0;
-                  break L0;
-                }
-                ((fib) (this)).field_e = stackIn_8_1 != 0;
-                return;
-              }
-            }
           }
+          if (!param0.field_Mc) {
+            this.field_e = false;
+            return;
+          }
+          if (!param0.field_Qc) {
+            this.field_e = false;
+            return;
+          }
+          var6 = gha.a(param1.a("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
+          var4 = var6;
+          var5 = gha.a(param1.a("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
+          this.field_f = gnb.a(0, new ue[]{var6, var5}, param0);
+          stackIn_8_1 = (this.field_f != null) && (this.field_g.b((byte) 63));
+          this.field_e = stackIn_8_1;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var4_ref);
-
-            stackIn_15_1 = new StringBuilder().append("fib.<init>(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_15_0 = var4_ref;
+          stackIn_15_1 = new StringBuilder().append("fib.<init>(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L3;
-            }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L4;
-            }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param2 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_22_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -261,59 +157,52 @@ final class fib extends uda {
         field_h = null;
         field_j = null;
         if (param0 > -66) {
-            field_j = (waa) null;
+          field_j = (waa) null;
         }
     }
 
     final void b(int param0, boolean param1) {
         if (param0 != 5) {
-            this.field_i = true;
+          this.field_i = true;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        float var5;
-        int var6;
-        float var7;
-        long var8;
-        if (param2 != 5) {
-          L0: {
-            this.a(8);
-            if (this.field_i) {
-              var4 = 1 << (param1 & 3);
-              var5 = (float)(1 << (7 & param1 >> 344903587)) / 32.0f;
-              var6 = 65535 & param0;
-              var7 = (float)((198236 & param0) >> 1635449904) / 8.0f;
-              var8 = this.field_f.field_b;
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_d.field_pc % 40000) / 40000.0f);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
-              break L0;
-            } else {
-              break L0;
-            }
+        int var4 = 0;
+        float var5 = 0.0f;
+        int var6 = 0;
+        float var7 = 0.0f;
+        long var8 = 0L;
+        int var4Lifetime1;
+        float var5Lifetime1;
+        int var6Lifetime1;
+        float var7Lifetime1;
+        long var8Lifetime1;
+        if (param2 == 5) {
+          if (this.field_i) {
+            var4 = 1 << (param1 & 3);
+            var5 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
+            var6 = 65535 & param0;
+            var7 = (float)((198236 & param0) >> 16) / 8.0f;
+            var8 = this.field_f.field_b;
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_d.field_pc % 40000) / 40000.0f);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
+            jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
           }
           return;
-        } else {
-          L1: {
-            if (this.field_i) {
-              var4 = 1 << (param1 & 3);
-              var5 = (float)(1 << (7 & param1 >> 344903587)) / 32.0f;
-              var6 = 65535 & param0;
-              var7 = (float)((198236 & param0) >> 1635449904) / 8.0f;
-              var8 = this.field_f.field_b;
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(var4 * this.field_d.field_pc % 40000) / 40000.0f);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
-              jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterOffset"), var7);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        this.a(8);
+        if (this.field_i) {
+          var4Lifetime1 = 1 << (param1 & 3);
+          var5Lifetime1 = (float)(1 << (7 & param1 >> 3)) / 32.0f;
+          var6Lifetime1 = 65535 & param0;
+          var7Lifetime1 = (float)((198236 & param0) >> 16) / 8.0f;
+          var8Lifetime1 = this.field_f.field_b;
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "time"), (float)(var4Lifetime1 * this.field_d.field_pc % 40000) / 40000.0f);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "scale"), var5Lifetime1);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "breakWaterDepth"), (float)var6Lifetime1);
+          jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "breakWaterOffset"), var7Lifetime1);
         }
     }
 

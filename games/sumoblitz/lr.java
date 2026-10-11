@@ -9,19 +9,19 @@ final class lr {
 
     final static int[] a(int param0) {
         if (param0 != -14808) {
-            return (int[]) null;
+          return (int[]) null;
         }
         return new int[8];
     }
 
     final static void a(boolean param0, String param1, byte param2, String param3) {
         try {
-            int var4_int = -26 % ((76 - param2) / 42);
-            ac.field_F = param3;
-            kh.field_d = param1;
-            oc.a(us.field_m, param0, (byte) -99);
+          int var4_int = -26 % ((76 - param2) / 42);
+          ac.field_F = param3;
+          kh.field_d = param1;
+          oc.a(us.field_m, param0, (byte) -99);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "lr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,21 +29,21 @@ final class lr {
         field_b = null;
         field_a = null;
         if (param0 != 16766976) {
-            field_b = (qr) null;
-            field_c = null;
-            return;
+          field_b = (qr) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final static void a(tv param0, byte param1) {
         try {
-            if (param1 < 15) {
-                lr.a(-61);
-            }
-            jd.a(param0, (byte) 109, true);
+          if (param1 < 15) {
+            lr.a(-61);
+          }
+          jd.a(param0, (byte) 109, true);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "lr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "lr.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -51,29 +51,16 @@ final class lr {
     }
 
     final void b(int param0) {
-        String var3;
-        if (param0 != 16711680) {
-          L0: {
-            var3 = (String) null;
-            lr.a(false, (String) null, (byte) -120, (String) null);
-            if (this.field_d != null) {
-              this.field_d.b(12001);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == 16711680) {
+          if (this.field_d != null) {
+            this.field_d.b(12001);
           }
           return;
-        } else {
-          L1: {
-            if (this.field_d != null) {
-              this.field_d.b(12001);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        String var3 = (String) null;
+        lr.a(false, (String) null, (byte) -120, (String) null);
+        if (this.field_d != null) {
+          this.field_d.b(12001);
         }
     }
 

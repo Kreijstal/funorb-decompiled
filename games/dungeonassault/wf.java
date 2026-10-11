@@ -18,15 +18,7 @@ abstract class wf extends ll {
 
     public static void d(byte param0) {
         field_w = null;
-        if (param0 != -28) {
-          wf.d((byte) -46);
-          field_v = null;
-          field_B = null;
-          field_z = null;
-          field_D = null;
-          field_y = null;
-          return;
-        } else {
+        if (param0 == -28) {
           field_v = null;
           field_B = null;
           field_z = null;
@@ -34,6 +26,12 @@ abstract class wf extends ll {
           field_y = null;
           return;
         }
+        wf.d((byte) -46);
+        field_v = null;
+        field_B = null;
+        field_z = null;
+        field_D = null;
+        field_y = null;
     }
 
     wf(int param0) {

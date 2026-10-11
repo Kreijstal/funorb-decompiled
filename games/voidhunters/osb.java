@@ -7,16 +7,16 @@ final class osb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new cc[param1]);
     }
 
     public static void a(int param0) {
         if (param0 != 1) {
-            field_b = -17;
-            field_a = null;
-            return;
+          field_b = -17;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

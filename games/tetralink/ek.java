@@ -15,16 +15,7 @@ final class ek extends mc {
     }
 
     public static void b(byte param0) {
-        if (param0 > -21) {
-          ek.b((byte) -76);
-          field_s = null;
-          field_r = null;
-          field_o = null;
-          field_t = null;
-          field_n = null;
-          field_p = null;
-          return;
-        } else {
+        if (param0 <= -21) {
           field_s = null;
           field_r = null;
           field_o = null;
@@ -33,11 +24,18 @@ final class ek extends mc {
           field_p = null;
           return;
         }
+        ek.b((byte) -76);
+        field_s = null;
+        field_r = null;
+        field_o = null;
+        field_t = null;
+        field_n = null;
+        field_p = null;
     }
 
     final static hl a(boolean param0) {
         if (!param0) {
-            return (hl) null;
+          return (hl) null;
         }
         return v.field_x.field_Pb;
     }

@@ -7,14 +7,14 @@ final class dk {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     final static void a(int param0) {
         if (param0 == 9888) {
-            return;
+          return;
         }
         dk.a(99, (byte) 15);
     }
@@ -28,22 +28,16 @@ final class dk {
         var5 = fi.e(0);
         var2 = var5;
         var3 = 0;
-        if (param1 == 25) {
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (param0 == var5[var3].field_c) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (param1 != 25) {
           return (aa) null;
         }
+        while (var5.length > var3) {
+          if (param0 == var5[var3].field_c) {
+            return var5[var3];
+          }
+          var3++;
+        }
+        return null;
     }
 
     static {

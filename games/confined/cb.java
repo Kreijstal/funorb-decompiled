@@ -10,7 +10,7 @@ final class cb {
         field_a = null;
         field_b = null;
         if (param0 != 26) {
-            cb.a((byte) -2);
+          cb.a((byte) -2);
         }
     }
 

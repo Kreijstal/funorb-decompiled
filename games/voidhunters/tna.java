@@ -9,58 +9,38 @@ final class tna extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_o = -101;
-                break L1;
-              }
-            }
-            si.a(49, 62, param0[0].a(58));
-            stackIn_3_0 = new nc("void");
-            break L0;
+          if (param1 > -119) {
+            field_o = -101;
           }
+          si.a(49, 62, param0[0].a(58));
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("tna.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("tna.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(String[] args, int param1) {
         try {
-            if (param1 != 29141) {
-                String[] var3 = (String[]) null;
-                tna.a((String[]) null, -79);
-            }
-            gp.field_q = args;
+          if (param1 != 29141) {
+            String[] var3 = (String[]) null;
+            tna.a((String[]) null, -79);
+          }
+          gp.field_q = args;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "tna.B(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "tna.B(" + (args != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

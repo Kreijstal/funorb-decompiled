@@ -12,7 +12,7 @@ final class ob {
 
     public static void a(byte param0) {
         if (param0 < 49) {
-            field_f = (nh[]) null;
+          field_f = (nh[]) null;
         }
         field_e = null;
         field_d = null;
@@ -26,184 +26,96 @@ final class ob {
         nh[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -13339) {
-                break L1;
-              } else {
-                field_b = (vb) null;
-                break L1;
-              }
-            }
-            if (fl.a(param0, param2, param3, (byte) -98)) {
-              stackIn_6_0 = vd.b((byte) -22);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != -13339) {
+            field_b = (vb) null;
           }
+          if (fl.a(param0, param2, param3, (byte) -98)) {
+            stackIn_6_0 = vd.b((byte) -22);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (nh[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("ob.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("ob.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (nh[]) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static String a(byte param0, java.applet.Applet param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            int var8 = 0;
-            java.applet.Applet var9 = null;
-            String var10 = null;
-            String stackIn_9_0 = null;
-            String stackIn_15_0 = null;
-            String stackIn_17_0 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            String stackIn_21_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          int var8 = 0;
+          java.applet.Applet var9 = null;
+          String var10 = null;
+          String stackIn_9_0 = null;
+          String stackIn_15_0 = null;
+          String stackIn_17_0 = null;
+          RuntimeException stackIn_20_0 = null;
+          StringBuilder stackIn_20_1 = null;
+          String stackIn_21_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      if (param0 > 73) {
-                        break L2;
-                      } else {
-                        var9 = (java.applet.Applet) null;
-                        ob.a((byte) -24, (java.applet.Applet) null);
-                        break L2;
-                      }
-                    }
-                    var10 = param1.getParameter("cookieprefix");
-                    var3 = var10 + "settings";
-                    var4 = (String) (pb.a("getcookies", param1, true));
-                    var5 = ki.a((byte) -115, ';', var4);
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var6 >= var5.length) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      } else {
-                        L4: {
-                          var7 = var5[var6].indexOf('=');
-                          if (0 > var7) {
-                            break L4;
-                          } else {
-                            if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackIn_9_0 = var5[var6].substring(var7 + 1).trim();
-                              decompiledRegionSelector0 = 1;
-                              break L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        var6++;
-                        continue L3;
-                      }
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var2 = decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
-                    break L5;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  if (null == ih.field_J) {
-                    stackIn_17_0 = param1.getParameter("settings");
-                    decompiledRegionSelector1 = 1;
-                    break L0;
-                  } else {
-                    stackIn_15_0 = ih.field_J;
-                    decompiledRegionSelector1 = 0;
-                    break L0;
-                  }
-                } else {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
+              if (param0 <= 73) {
+                var9 = (java.applet.Applet) null;
+                ob.a((byte) -24, (java.applet.Applet) null);
+              }
+              var10 = param1.getParameter("cookieprefix");
+              var3 = var10 + "settings";
+              var4 = (String) (pb.a("getcookies", param1, true));
+              var5 = ki.a((byte) -115, ';', var4);
+              for (var6 = 0; var6 < var5.length; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (0 <= var7 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_9_0 = var5[var6].substring(var7 + 1).trim();
+                  return stackIn_9_0;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_20_0 = (RuntimeException) (var2_ref);
-
-                stackIn_20_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw ie.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_15_0;
+            if (null == ih.field_J) {
+              stackIn_17_0 = param1.getParameter("settings");
+              return stackIn_17_0;
+            }
+            stackIn_15_0 = ih.field_J;
+            return stackIn_15_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_20_0 = var2_ref;
+            stackIn_20_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_21_2 = "null";
             } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_17_0;
-              } else {
-                return stackIn_9_0;
-              }
+              stackIn_21_2 = "{...}";
             }
+            throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

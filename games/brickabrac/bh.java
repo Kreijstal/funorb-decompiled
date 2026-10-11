@@ -13,7 +13,7 @@ final class bh extends fe {
         ob.field_G = ue.a(false);
         qj.field_h = 0;
         if (param0 >= -58) {
-            bh.m(-3);
+          bh.m(-3);
         }
     }
 
@@ -25,7 +25,7 @@ final class bh extends fe {
         field_ub = null;
         field_qb = null;
         if (param0 < 26) {
-            return;
+          return;
         }
         field_tb = null;
         field_rb = null;
@@ -34,12 +34,12 @@ final class bh extends fe {
 
     final void b(byte param0, oc param1) {
         if (param0 <= 105) {
-            return;
+          return;
         }
         try {
-            super.b((byte) 120, param1);
+          super.b((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -24,98 +24,75 @@ final class tk {
     final int a(int param0, byte param1) {
         if (0 == param0) {
           return this.field_o;
-        } else {
-          if ((param0 ^ -1) != -2) {
-            if (2 == param0) {
-              return this.field_m;
-            } else {
-              if (param0 != 3) {
-                if (-5 != (param0 ^ -1)) {
-                  if ((param0 ^ -1) == -6) {
-                    return this.field_j;
-                  } else {
-                    if ((param0 ^ -1) == -7) {
-                      return this.field_b;
-                    } else {
-                      if (7 == param0) {
-                        return this.field_q;
-                      } else {
-                        if (param0 != 8) {
-                          if ((param0 ^ -1) == -10) {
-                            return this.field_n;
-                          } else {
-                            if ((param0 ^ -1) == -11) {
-                              return this.field_p;
-                            } else {
-                              if ((param0 ^ -1) != -12) {
-                                if ((param0 ^ -1) == -13) {
-                                  return this.field_h;
-                                } else {
-                                  if ((param0 ^ -1) == -14) {
-                                    return this.field_d;
-                                  } else {
-                                    if (param1 == 68) {
-                                      if (-15 == (param0 ^ -1)) {
-                                        return this.field_r;
-                                      } else {
-                                        if (param0 != 15) {
-                                          if ((param0 ^ -1) == -17) {
-                                            return this.field_c;
-                                          } else {
-                                            if (-18 == (param0 ^ -1)) {
-                                              return this.field_e;
-                                            } else {
-                                              return 0;
-                                            }
-                                          }
-                                        } else {
-                                          return this.field_i;
-                                        }
-                                      }
-                                    } else {
-                                      this.field_r = 57;
-                                      if (-15 == (param0 ^ -1)) {
-                                        return this.field_r;
-                                      } else {
-                                        if (param0 != 15) {
-                                          if ((param0 ^ -1) == -17) {
-                                            return this.field_c;
-                                          } else {
-                                            if (-18 != (param0 ^ -1)) {
-                                              return 0;
-                                            } else {
-                                              return this.field_e;
-                                            }
-                                          }
-                                        } else {
-                                          return this.field_i;
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              } else {
-                                return this.field_f;
-                              }
-                            }
-                          }
-                        } else {
-                          return this.field_a;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  return this.field_k;
-                }
-              } else {
-                return this.field_l;
-              }
-            }
-          } else {
-            return this.field_g;
-          }
         }
+        if (param0 == 1) {
+          return this.field_g;
+        }
+        if (2 == param0) {
+          return this.field_m;
+        }
+        if (param0 == 3) {
+          return this.field_l;
+        }
+        if (param0 == 4) {
+          return this.field_k;
+        }
+        if (param0 == 5) {
+          return this.field_j;
+        }
+        if (param0 == 6) {
+          return this.field_b;
+        }
+        if (7 == param0) {
+          return this.field_q;
+        }
+        if (param0 == 8) {
+          return this.field_a;
+        }
+        if (param0 == 9) {
+          return this.field_n;
+        }
+        if (param0 == 10) {
+          return this.field_p;
+        }
+        if (param0 == 11) {
+          return this.field_f;
+        }
+        if (param0 == 12) {
+          return this.field_h;
+        }
+        if (param0 == 13) {
+          return this.field_d;
+        }
+        if (param1 == 68) {
+          if (param0 == 14) {
+            return this.field_r;
+          }
+          if (param0 == 15) {
+            return this.field_i;
+          }
+          if (param0 == 16) {
+            return this.field_c;
+          }
+          if (param0 == 17) {
+            return this.field_e;
+          }
+          return 0;
+        }
+        this.field_r = 57;
+        if (param0 == 14) {
+          return this.field_r;
+        }
+        if (param0 == 15) {
+          return this.field_i;
+        }
+        if (param0 == 16) {
+          return this.field_c;
+        }
+        if (param0 != 17) {
+          return 0;
+        }
+        return this.field_e;
     }
 
     tk(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {

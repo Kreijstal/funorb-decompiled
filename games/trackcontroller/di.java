@@ -10,42 +10,26 @@ abstract class di extends v implements se {
 
     final String b(byte param0) {
         if (param0 != 22) {
-            return (String) null;
+          return (String) null;
         }
         return this.a(this.field_k.field_s, 426);
     }
 
     public final boolean b(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 24685) {
-          if (this.field_k.field_s != null) {
-            if (this.field_k.field_s.length() == 0) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 != 24685) {
           this.b((byte) 69);
-          if (this.field_k.field_s == null) {
-            return true;
-          } else {
-            L0: {
-              if (this.field_k.field_s.length() != 0) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (this.field_k.field_s != null) {
+            return this.field_k.field_s.length() == 0 ? true : false;
           }
+          return true;
         }
+        if (this.field_k.field_s == null) {
+          return true;
+        }
+        if (this.field_k.field_s.length() != 0) {
+          return false;
+        }
+        return true;
     }
 
     final ud f(int param0) {
@@ -55,12 +39,12 @@ abstract class di extends v implements se {
 
     public final void a(int param0, lb param1) {
         try {
-            this.a(52);
-            if (param0 != -12230) {
-                this.b(30);
-            }
+          this.a(52);
+          if (param0 != -12230) {
+            this.b(30);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "di.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "di.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,26 +52,26 @@ abstract class di extends v implements se {
 
     public final void b(int param0, lb param1) {
         try {
-            if (param0 >= -23) {
-                di.c((byte) -43);
-            }
+          if (param0 >= -23) {
+            di.c((byte) -43);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     di(lb param0) {
         try {
-            this.field_k = param0;
+          this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(byte param0) {
         field_l = null;
         if (param0 != 73) {
-            return;
+          return;
         }
         field_j = null;
     }

@@ -18,25 +18,16 @@ final class ca {
         field_e = null;
         field_a = null;
         field_f = null;
-        if (param0 == -72) {
-          return;
-        } else {
+        if (param0 != -72) {
           ca.a((byte) -95);
           return;
         }
     }
 
     final static void a(int param0, int param1) {
-        ml var2;
-        if (param0 != 3) {
-          ca.a(false, 'F');
-          var2 = or.field_d;
-          var2.b(param1, (byte) 119);
-          var2.a(124, 2);
-          var2.a(param0 ^ 106, 4);
-          var2.a(124, cq.a(1315216324));
-          return;
-        } else {
+        ml var2 = null;
+        ml var2Lifetime1;
+        if (param0 == 3) {
           var2 = or.field_d;
           var2.b(param1, (byte) 119);
           var2.a(124, 2);
@@ -44,6 +35,12 @@ final class ca {
           var2.a(124, cq.a(1315216324));
           return;
         }
+        ca.a(false, 'F');
+        var2Lifetime1 = or.field_d;
+        var2Lifetime1.b(param1, (byte) 119);
+        var2Lifetime1.a(124, 2);
+        var2Lifetime1.a(param0 ^ 106, 4);
+        var2Lifetime1.a(124, cq.a(1315216324));
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
@@ -57,107 +54,75 @@ final class ca {
         int[] var17 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
         var16 = Kickabout.field_G;
         try {
-          L0: {
-            if (param5 == 545806977) {
-              L1: while (true) {
-                param6--;
-                if (0 > param6) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var17 = param9;
-                  var10 = var17;
-                  var11 = param2;
-                  var12 = param4;
-                  var13 = param8;
-                  var14 = param3;
-                  var15 = 8355711 & var17[var11] >> -321140191;
-                  var10[var11] = qj.b(var13 >> -1463486999, 65280) - -qj.b(var12 >> 545806977, 16711680) + qj.b(255, var14 >> -899486383) + var15;
-                  param8 = param8 + param1;
-                  param3 = param3 + param7;
-                  param2++;
-                  param4 = param4 + param0;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param5 != 545806977) {
+            return;
+          }
+          while (true) {
+            param6--;
+            if (0 > param6) {
+              return;
             }
+            var17 = param9;
+            var10 = var17;
+            var11 = param2;
+            var12 = param4;
+            var13 = param8;
+            var14 = param3;
+            var15 = 8355711 & var17[var11] >> 1;
+            var10[var11] = qj.b(var13 >> 9, 65280) + qj.b(var12 >> 1, 16711680) + qj.b(255, var14 >> 17) + var15;
+            param8 = param8 + param1;
+            param3 = param3 + param7;
+            param2++;
+            param4 = param4 + param0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var10_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var10_ref);
-
-            stackIn_8_1 = new StringBuilder().append("ca.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-
-            if (param9 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var10_ref = decompiledCaughtException;
+          stackIn_8_0 = var10_ref;
+          stackIn_8_1 = new StringBuilder().append("ca.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
+          if (param9 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final static void a(vc param0, int param1) {
         try {
-            np.field_Jb.a(new hk(param0, 37), param1 ^ 252);
-            if (param1 != 255) {
-                vc var3 = (vc) null;
-                ca.a((vc) null, 5);
-            }
+          np.field_Jb.a(new hk(param0, 37), param1 ^ 252);
+          if (param1 != 255) {
+            vc var3 = (vc) null;
+            ca.a((vc) null, 5);
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(boolean param0, char param1) {
-        int stackIn_9_0 = 0;
-        if (!param0) {
-          if (param1 != 160) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_9_0 = 1;
-                return stackIn_9_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0) {
           return false;
         }
+        if (param1 == 160) {
+          return true;
+        }
+        if (param1 == 32) {
+          return true;
+        }
+        if (param1 == 95) {
+          return true;
+        }
+        if (param1 != 45) {
+          return false;
+        }
+        return true;
     }
 
     static {

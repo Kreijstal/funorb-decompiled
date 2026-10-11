@@ -9,16 +9,17 @@ final class nn implements dja {
         int var6_int = 0;
         int var8 = VoidHunters.field_G;
         try {
-            for (var6_int = param2; var6_int <= param5; var6_int++) {
-                ww.a(param4, param1, rba.field_b[var6_int], (byte) 75, param0);
-            }
-            int var7 = -38 % ((-5 - param3) / 63);
+          for (var6_int = param2; var6_int <= param5; var6_int++) {
+            ww.a(param4, param1, rba.field_b[var6_int], (byte) 75, param0);
+          }
+          int var7 = -38 % ((-5 - param3) / 63);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, lta param4, int param5) {
+        int var16 = 0;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -29,7 +30,6 @@ final class nn implements dja {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -39,81 +39,61 @@ final class nn implements dja {
         int var23 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var23 = VoidHunters.field_G;
         try {
-          L0: {
-            var6_int = param5;
-            var7 = param0;
-            var8 = param5;
-            var9 = param0;
-            var10 = param3 + -param5;
-            var11 = param2 + -param0;
-            var12 = var11;
-            var13 = -var10;
-            var14 = ar.a(var12, (byte) 103, var13);
-            var13 = (var13 << 1557493768) / var14;
-            var12 = (var12 << 1515227016) / var14;
-            var15 = 64;
-            var16 = param1;
-            L1: while (true) {
-              if (var15 + 1 <= var16) {
-                break L0;
-              } else {
-                var17 = fc.a(512 * kdb.field_o - (var16 << 1779826984), (byte) -65) >> -1727635698;
-                var18 = fc.a(-(var16 << 1816191304) + kdb.field_o * 500, (byte) 59) >> 1273255374;
-                var19 = var12 * var17 + var10 * var16 / var15 + param5;
-                var20 = var17 * var13 + var16 * var11 / var15 + param0;
-                var21 = param5 - -(var10 * var16 / var15) + -(var18 * var12);
-                hha.a(param4.a(var6_int, (byte) 126), (byte) 66, param4.a(var19, (byte) 126), param4.b(true, var7), 11206400, param4.b(true, var20), 200);
-                var22 = -(var13 * var18) + (param0 + var11 * var16 / var15);
-                var7 = var20;
-                hha.a(param4.a(var8, (byte) 113), (byte) 66, param4.a(var21, (byte) 125), param4.b(true, var9), 12320512, param4.b(true, var22), 240);
-                var6_int = var19;
-                var8 = var21;
-                var9 = var22;
-                var16++;
-                continue L1;
-              }
-            }
+          var6_int = param5;
+          var7 = param0;
+          var8 = param5;
+          var9 = param0;
+          var10 = param3 - param5;
+          var11 = param2 - param0;
+          var12 = var11;
+          var13 = -var10;
+          var14 = ar.a(var12, (byte) 103, var13);
+          var13 = (var13 << 8) / var14;
+          var12 = (var12 << 8) / var14;
+          var15 = 64;
+          for (var16 = param1; var15 + 1 > var16; var16++) {
+            var17 = fc.a(512 * kdb.field_o - (var16 << 8), (byte) -65) >> 14;
+            var18 = fc.a(-(var16 << 8) + kdb.field_o * 500, (byte) 59) >> 14;
+            var19 = var12 * var17 + var10 * var16 / var15 + param5;
+            var20 = var17 * var13 + var16 * var11 / var15 + param0;
+            var21 = param5 + var10 * var16 / var15 - var18 * var12;
+            hha.a(param4.a(var6_int, (byte) 126), (byte) 66, param4.a(var19, (byte) 126), param4.b(true, var7), 11206400, param4.b(true, var20), 200);
+            var22 = -(var13 * var18) + (param0 + var11 * var16 / var15);
+            var7 = var20;
+            hha.a(param4.a(var8, (byte) 113), (byte) 66, param4.a(var21, (byte) 125), param4.b(true, var9), 12320512, param4.b(true, var22), 240);
+            var6_int = var19;
+            var8 = var21;
+            var9 = var22;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6);
-
-            stackIn_7_1 = new StringBuilder().append("nn.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_7_0 = var6;
+          stackIn_7_1 = new StringBuilder().append("nn.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(')').toString());
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_b = -83;
+          field_b = -83;
         }
         return (tv[]) ((Object) new bha[param1]);
     }
 
     public final tv a(byte param0) {
-        int var2 = -59 % ((param0 - -64) / 50);
+        int var2 = -59 % ((param0 + 64) / 50);
         return (tv) ((Object) new bha());
     }
 

@@ -9,7 +9,6 @@ final class cd {
     static String field_d;
 
     final static void b(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -25,182 +24,128 @@ final class cd {
         byte[] var10 = null;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -17) {
-                break L1;
-              } else {
-                field_c = -14;
-                break L1;
-              }
-            }
-            var8 = mg.field_e;
-            var2 = var8.k(0);
-            if (var2 != 0) {
-              if (var2 == 1) {
-                var3 = var8.i(1);
-                var4 = (li) ((Object) s.field_e.e((byte) 92));
-                L2: while (true) {
-                  L3: {
-                    if (var4 == null) {
-                      break L3;
-                    } else {
-                      if (var4.field_o == var3) {
-                        break L3;
-                      } else {
-                        var4 = (li) ((Object) s.field_e.a((byte) 123));
-                        continue L2;
-                      }
-                    }
-                  }
-                  if (var4 == null) {
-                    dj.a((byte) -125);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var4.d(-102);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                }
-              } else {
-                af.a((Throwable) null, 76, "A1: " + cm.b(false));
-                dj.a((byte) -128);
-                return;
-              }
-            } else {
-              var3_ref_vg = (vg) ((Object) oe.field_Bb.e((byte) 98));
-              if (var3_ref_vg != null) {
-                L4: {
-                  var4_int = var8.k(0);
-                  if (var4_int != 0) {
-                    var10 = new byte[var4_int];
-                    var9 = var10;
-                    var7 = var9;
-                    var5 = var7;
-                    var8.a(0, var4_int, 0, var10);
-                    break L4;
-                  } else {
-                    var5 = null;
-                    break L4;
-                  }
-                }
-                var8.field_q = var8.field_q + 4;
-                if (!var8.j(4215)) {
-                  dj.a((byte) -126);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var3_ref_vg.field_n = true;
-                  var3_ref_vg.field_s = (byte[]) (var5);
-                  var3_ref_vg.d(29);
-                  return;
-                }
-              } else {
-                dj.a((byte) -126);
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            }
+          if (param0 > -17) {
+            field_c = -14;
           }
+          var8 = mg.field_e;
+          var2 = var8.k(0);
+          if (var2 != 0) {
+            if (var2 != 1) {
+              af.a((Throwable) null, 76, "A1: " + cm.b(false));
+              dj.a((byte) -128);
+              return;
+            }
+            var3 = var8.i(1);
+            var4 = (li) (s.field_e.e((byte) 92));
+            while (var4 != null) {
+              if (var4.field_o != var3) {
+                var4 = (li) (s.field_e.a((byte) 123));
+                continue;
+              }
+              break;
+            }
+            if (var4 == null) {
+              dj.a((byte) -125);
+              return;
+            }
+            var4.d(-102);
+            return;
+          }
+          var3_ref_vg = (vg) (oe.field_Bb.e((byte) 98));
+          if (var3_ref_vg == null) {
+            dj.a((byte) -126);
+            return;
+          }
+          var4_int = var8.k(0);
+          if (var4_int != 0) {
+            var10 = new byte[var4_int];
+            var9 = var10;
+            var7 = var9;
+            var5 = var7;
+            var8.a(0, var4_int, 0, var10);
+          } else {
+            var5 = null;
+          }
+          var8.field_q = var8.field_q + 4;
+          if (!var8.j(4215)) {
+            dj.a((byte) -126);
+            return;
+          }
+          var3_ref_vg.field_n = true;
+          var3_ref_vg.field_s = (byte[]) (var5);
+          var3_ref_vg.d(29);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ig.a((Throwable) ((Object) var1), "cd.D(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
     final static void a(int param0) {
         gp.field_e = null;
         if (param0 != 12) {
-            field_b = (String) null;
-            lf.field_g = null;
-            return;
+          field_b = (String) null;
+          lf.field_g = null;
+          return;
         }
         lf.field_g = null;
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
-        if (!param2) {
-          if (rs.field_q != 13) {
-            if ((rs.field_q ^ -1) == -103) {
-              qd.field_I.f((byte) -106);
-              return true;
-            } else {
-              if (qd.field_I != null) {
-                if (!qd.field_I.a(param2, param0, param1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            }
-          } else {
-            qu.e(-3);
-            return true;
-          }
-        } else {
+        if (param2) {
           field_a = (cf[]) null;
-          if (rs.field_q != 13) {
-            if ((rs.field_q ^ -1) == -103) {
-              qd.field_I.f((byte) -106);
-              return true;
-            } else {
-              if (qd.field_I != null) {
-                if (!qd.field_I.a(param2, param0, param1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            }
-          } else {
+          if (rs.field_q == 13) {
             qu.e(-3);
             return true;
           }
+          if (rs.field_q == 102) {
+            qd.field_I.f((byte) -106);
+            return true;
+          }
+          if (qd.field_I == null) {
+            return false;
+          }
+          if (qd.field_I.a(param2, param0, param1)) {
+            return true;
+          }
+          return false;
         }
+        if (rs.field_q == 13) {
+          qu.e(-3);
+          return true;
+        }
+        if (rs.field_q == 102) {
+          qd.field_I.f((byte) -106);
+          return true;
+        }
+        if (qd.field_I == null) {
+          return false;
+        }
+        if (qd.field_I.a(param2, param0, param1)) {
+          return true;
+        }
+        return false;
     }
 
     final static boolean c(int param0) {
-        if (param0 == 9501) {
-          if (ee.field_v != null) {
-            if (null == ee.field_v.a((byte) 89)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 9501) {
           field_d = (String) null;
-          if (ee.field_v != null) {
-            if (null == ee.field_v.a((byte) 89)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (ee.field_v == null) {
             return false;
           }
+          if (null != ee.field_v.a((byte) 89)) {
+            return true;
+          }
+          return false;
         }
+        if (ee.field_v == null) {
+          return false;
+        }
+        if (null != ee.field_v.a((byte) 89)) {
+          return true;
+        }
+        return false;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -211,16 +156,14 @@ final class cd {
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
-        if (param0) {
-          field_d = (String) null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
+        if (!param0) {
           field_e = null;
           field_d = null;
           return;
         }
+        field_d = (String) null;
+        field_e = null;
+        field_d = null;
     }
 
     static {

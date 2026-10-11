@@ -32,16 +32,16 @@ final class gr {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_f >= this.field_b) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            this.field_a = this.field_i[fieldTemp$0] << 15;
-            if (this.field_h >= this.field_g) {
-                this.field_h = this.field_g - 1;
-            }
-            this.field_b = (int)((double)this.field_j[this.field_h] / 65536.0 * (double)param0);
-            if (this.field_b > this.field_f) {
-                this.field_e = ((this.field_i[this.field_h] << 15) - this.field_a) / (this.field_b - this.field_f);
-            }
+          fieldTemp$0 = this.field_h;
+          this.field_h = this.field_h + 1;
+          this.field_a = this.field_i[fieldTemp$0] << 15;
+          if (this.field_h >= this.field_g) {
+            this.field_h = this.field_g - 1;
+          }
+          this.field_b = (int)((double)this.field_j[this.field_h] / 65536.0 * (double)param0);
+          if (this.field_b > this.field_f) {
+            this.field_e = ((this.field_i[this.field_h] << 15) - this.field_a) / (this.field_b - this.field_f);
+          }
         }
         this.field_a = this.field_a + this.field_e;
         this.field_f = this.field_f + 1;
@@ -54,8 +54,8 @@ final class gr {
         this.field_j = new int[this.field_g];
         this.field_i = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-            this.field_j[var2] = param0.e((byte) -104);
-            this.field_i[var2] = param0.e((byte) -104);
+          this.field_j[var2] = param0.e((byte) -104);
+          this.field_i[var2] = param0.e((byte) -104);
         }
     }
 

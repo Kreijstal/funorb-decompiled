@@ -24,7 +24,7 @@ final class mm {
         field_b = null;
         field_e = null;
         if (param0 <= 62) {
-            field_h = (mi) null;
+          field_h = (mi) null;
         }
     }
 

@@ -17,14 +17,12 @@ final class baa {
         field_d = null;
         field_f = null;
         field_e = null;
-        if (param0 < 17) {
-          field_c = -0.049238987267017365f;
-          field_a = null;
-          return;
-        } else {
+        if (param0 >= 17) {
           field_a = null;
           return;
         }
+        field_c = -0.049238987267017365f;
+        field_a = null;
     }
 
     static {

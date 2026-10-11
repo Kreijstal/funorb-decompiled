@@ -9,9 +9,9 @@ final class jq extends oo implements dn {
 
     public static void m(int param0) {
         if (param0 < 61) {
-            jq.m(-87);
-            field_fb = null;
-            return;
+          jq.m(-87);
+          field_fb = null;
+          return;
         }
         field_fb = null;
     }
@@ -24,33 +24,30 @@ final class jq extends oo implements dn {
     jq(lt param0, wd param1) {
         super(param0, b.field_c, pg.field_b, false, false);
         try {
-            this.field_db = param1;
+          this.field_db = param1;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "jq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "jq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        if (!(!this.field_eb)) {
-            hg.a(false, true, true);
-            return;
+        if (this.field_eb) {
+          hg.a(false, true, true);
+          return;
         }
         try {
-            fg.b(true);
-            this.h((byte) -15);
-            int var6_int = -106 % ((-27 - param4) / 61);
+          fg.b(true);
+          this.h((byte) -15);
+          int var6_int = -106 % ((-27 - param4) / 61);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "jq.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "jq.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void a(boolean param0, fr param1, int param2) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
-        RuntimeException stackIn_33_0 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_33_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
@@ -58,160 +55,102 @@ final class jq extends oo implements dn {
         int var6 = 0;
         var6 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              this.field_gb = true;
-              if (param2 == 11) {
-                break L1;
-              } else {
-                this.field_eb = false;
-                break L1;
-              }
-            }
-            L2: {
-              if (param1.field_b) {
-                var4 = aa.field_d;
-                break L2;
-              } else {
-                if (null != param1.field_c) {
-                  var4 = tb.field_e;
-                  if (this.field_db == null) {
-                    break L2;
-                  } else {
-                    this.field_db.a((byte) -77);
-                    break L2;
-                  }
-                } else {
-                  var4 = param1.field_f;
-                  if ((param1.field_a ^ -1) != -249) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (!param0) {
-                        ua.c(0);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var4 = rl.field_i;
-                    this.field_eb = true;
-                    break L2;
-                  }
-                }
-              }
-            }
-            L4: {
-              var5 = new jn((oo) (this), b.field_c, var4);
-              if (param1.field_b) {
-                if (param1.field_d) {
-                  this.d(new rs((jq) (this)), -30244);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var5.a((no) (this), param2 + 17536, mq.field_i);
-                  break L4;
-                }
-              } else {
-                L5: {
-                  if (!this.field_eb) {
-                    if (param1.field_a == 5) {
-                      var5.a(11, (byte) 105, ln.field_a);
-                      var5.a(17, (byte) -126, mb.field_s);
-                      break L5;
-                    } else {
-                      var5.a(-1, (byte) -51, eu.field_j);
-                      break L5;
-                    }
-                  } else {
-                    var5.a((no) (this), param2 ^ 17536, mq.field_i);
-                    break L5;
-                  }
-                }
-                if (-4 != (param1.field_a ^ -1)) {
-                  if (-7 != (param1.field_a ^ -1)) {
-                    break L4;
-                  } else {
-                    var5.a(9, (byte) -41, ao.field_d);
-                    break L4;
-                  }
-                } else {
-                  var5.a(7, (byte) -103, lu.field_a);
-                  break L4;
-                }
-              }
-            }
-            this.d(var5, -30244);
-            decompiledRegionSelector0 = 1;
-            break L0;
+          this.field_gb = true;
+          if (param2 != 11) {
+            this.field_eb = false;
           }
+          if (param1.field_b) {
+            var4 = aa.field_d;
+          } else {
+            if (null != param1.field_c) {
+              var4 = tb.field_e;
+              if (this.field_db != null) {
+                this.field_db.a((byte) -77);
+              }
+            } else {
+              var4 = param1.field_f;
+              if (param1.field_a == 248) {
+                if (!param0) {
+                  ua.c(0);
+                }
+                var4 = rl.field_i;
+                this.field_eb = true;
+              }
+            }
+          }
+          var5 = new jn((oo) (this), b.field_c, var4);
+          if (param1.field_b) {
+            if (param1.field_d) {
+              this.d(new rs(this), -30244);
+              return;
+            }
+            var5.a((no) (this), param2 + 17536, mq.field_i);
+          } else {
+            if (!this.field_eb) {
+              if (param1.field_a == 5) {
+                var5.a(11, (byte) 105, ln.field_a);
+                var5.a(17, (byte) -126, mb.field_s);
+              } else {
+                var5.a(-1, (byte) -51, eu.field_j);
+              }
+            } else {
+              var5.a((no) (this), param2 ^ 17536, mq.field_i);
+            }
+            if (param1.field_a != 3) {
+              if (param1.field_a == 6) {
+                var5.a(9, (byte) -41, ao.field_d);
+              }
+            } else {
+              var5.a(7, (byte) -103, lu.field_a);
+            }
+          }
+          this.d(var5, -30244);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4_ref = decompiledCaughtException;
-            stackIn_32_0 = (RuntimeException) (var4_ref);
-
-            stackIn_32_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "null";
-              break L6;
-            } else {
-              stackIn_33_0 = (RuntimeException) ((Object) stackIn_32_0);
-              stackIn_33_1 = (StringBuilder) ((Object) stackIn_32_1);
-              stackIn_33_2 = "{...}";
-              break L6;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_32_0 = var4_ref;
+          stackIn_32_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_33_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_33_0), stackIn_33_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pn.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final boolean h(int param0) {
-        fr var2;
-        mi var3;
-        if (param0 == 11) {
-          if (this.field_z) {
-            if (!this.field_gb) {
-              var2 = oe.d(86);
-              if (var2 != null) {
-                this.a(false, var2, 11);
-                return super.h(11);
-              } else {
-                return super.h(11);
-              }
-            } else {
-              return super.h(11);
-            }
-          } else {
-            return super.h(11);
-          }
-        } else {
-          var3 = (mi) null;
+        fr var2 = null;
+        fr var2Lifetime1;
+        if (param0 != 11) {
+          mi var3 = (mi) null;
           this.a(95, (mi) null, -21, 40, (byte) -17);
-          if (this.field_z) {
-            if (!this.field_gb) {
-              var2 = oe.d(86);
-              if (var2 != null) {
-                this.a(false, var2, 11);
-                return super.h(11);
-              } else {
-                return super.h(11);
-              }
-            } else {
-              return super.h(11);
-            }
-          } else {
+          if (!this.field_z) {
             return super.h(11);
           }
+          if (this.field_gb) {
+            return super.h(11);
+          }
+          var2 = oe.d(86);
+          if (var2 == null) {
+            return super.h(11);
+          }
+          this.a(false, var2, 11);
+          return super.h(11);
         }
+        if (!this.field_z) {
+          return super.h(11);
+        }
+        if (this.field_gb) {
+          return super.h(11);
+        }
+        var2Lifetime1 = oe.d(86);
+        if (var2Lifetime1 == null) {
+          return super.h(11);
+        }
+        this.a(false, var2Lifetime1, 11);
+        return super.h(11);
     }
 
     static {

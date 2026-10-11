@@ -9,20 +9,18 @@ final class mba {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 > -31) {
-          mba.a(18);
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 <= -31) {
           field_b = null;
           field_d = null;
           field_c = null;
           field_a = null;
           return;
         }
+        mba.a(18);
+        field_b = null;
+        field_d = null;
+        field_c = null;
+        field_a = null;
     }
 
     static {

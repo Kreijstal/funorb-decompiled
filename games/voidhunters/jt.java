@@ -7,7 +7,7 @@ final class jt extends rqa {
 
     public static void a(int param0) {
         if (param0 != 26468) {
-            return;
+          return;
         }
         field_o = null;
     }
@@ -18,50 +18,27 @@ final class jt extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            si.a(192, 62, param0[0].a(85));
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc("void");
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          si.a(192, 62, param0[0].a(85));
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc("void");
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("jt.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("jt.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,32 +63,32 @@ final class jt extends rqa {
         aja var21 = null;
         int var7 = -51 % ((-20 - param3) / 43);
         if (!li.field_i) {
-            paa.a(3377322, -77, param1, param0, param2, param6);
-            uv.a(116, param6, param2, param0, 16777215, param1);
+          paa.a(3377322, -77, param1, param0, param2, param6);
+          uv.a(116, param6, param2, param0, 16777215, param1);
         } else {
-            var8 = mmb.field_d[param4];
-            var9 = var8.d();
-            var10 = var8.a();
-            var11 = 16777215 | param5 << -1669316712;
-            var12 = 0;
-            var13 = 1;
-            var8.a(param6, param0, var12, var11, var13);
-            var14 = mmb.field_d[param4 + 1];
-            var14.b(param6 + var9, param0, param1 + -(var9 << 1045890849), var10, var12, var11, var13);
-            var15 = mmb.field_d[2 + param4];
-            var15.a(param1 + (param6 - var9), param0, var12, var11, var13);
-            var16 = mmb.field_d[3 + param4];
-            var16.b(param6, param0 + var10, var9, param2 - (var10 << -511700447), var12, var11, var13);
-            var17 = mmb.field_d[4 + param4];
-            var17.b(var9 + param6, param0 - -var10, param1 + -(var9 << -670389151), -(var10 << 15714433) + param2, var12, var11, var13);
-            var18 = mmb.field_d[param4 + 5];
-            var18.b(-var9 + param1 + param6, param0 - -var10, var9, -(var10 << -866331679) + param2, var12, var11, var13);
-            var19 = mmb.field_d[param4 + 6];
-            var19.a(param6, param2 + param0 - var10, var12, var11, var13);
-            var20 = mmb.field_d[7 + param4];
-            var20.b(param6 - -var9, -var10 + param0 - -param2, param1 + -(var9 << 241671937), var10, var12, var11, var13);
-            var21 = mmb.field_d[param4 + 8];
-            var21.a(param6 - (-param1 + var9), param0 + (param2 + -var10), var12, var11, var13);
+          var8 = mmb.field_d[param4];
+          var9 = var8.d();
+          var10 = var8.a();
+          var11 = 16777215 | param5 << 24;
+          var12 = 0;
+          var13 = 1;
+          var8.a(param6, param0, var12, var11, var13);
+          var14 = mmb.field_d[param4 + 1];
+          var14.b(param6 + var9, param0, param1 - (var9 << 1), var10, var12, var11, var13);
+          var15 = mmb.field_d[2 + param4];
+          var15.a(param1 + (param6 - var9), param0, var12, var11, var13);
+          var16 = mmb.field_d[3 + param4];
+          var16.b(param6, param0 + var10, var9, param2 - (var10 << 1), var12, var11, var13);
+          var17 = mmb.field_d[4 + param4];
+          var17.b(var9 + param6, param0 + var10, param1 - (var9 << 1), -(var10 << 1) + param2, var12, var11, var13);
+          var18 = mmb.field_d[param4 + 5];
+          var18.b(-var9 + param1 + param6, param0 + var10, var9, -(var10 << 1) + param2, var12, var11, var13);
+          var19 = mmb.field_d[param4 + 6];
+          var19.a(param6, param2 + param0 - var10, var12, var11, var13);
+          var20 = mmb.field_d[7 + param4];
+          var20.b(param6 + var9, -var10 + param0 + param2, param1 - (var9 << 1), var10, var12, var11, var13);
+          var21 = mmb.field_d[param4 + 8];
+          var21.a(param6 - (-param1 + var9), param0 + (param2 - var10), var12, var11, var13);
         }
     }
 

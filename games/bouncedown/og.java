@@ -9,7 +9,7 @@ final class og {
 
     public static void a(byte param0) {
         if (param0 <= 73) {
-            return;
+          return;
         }
         field_b = null;
     }

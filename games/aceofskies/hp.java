@@ -8,11 +8,11 @@ final class hp extends eq {
 
     final static void a(byte param0, String param1) {
         try {
-            if (param0 >= -110) {
-                field_j = (java.math.BigInteger) null;
-            }
+          if (param0 >= -110) {
+            field_j = (java.math.BigInteger) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "hp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "hp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,29 +27,16 @@ final class hp extends eq {
     }
 
     final boolean e(int param0) {
-        int stackIn_8_0 = 0;
-        if (param0 == 0) {
-          if (this.field_g.field_A) {
-            if (!this.field_g.field_lc) {
-              return false;
-            } else {
-              L0: {
-                if (!this.field_g.field_J) {
-                  stackIn_8_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_8_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_8_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 0) {
           return true;
         }
+        if (!this.field_g.field_A) {
+          return false;
+        }
+        if (this.field_g.field_lc) {
+          return this.field_g.field_J ? true : false;
+        }
+        return false;
     }
 
     hp(wl param0) {

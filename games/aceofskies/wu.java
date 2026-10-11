@@ -48,280 +48,82 @@ final class wu {
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = AceOfSkies.field_G ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (!param4) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        this.a(-126, 92, 16, -17);
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var6_int = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if ((var6_int ^ -1) <= (this.field_r ^ -1)) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        this.field_z[var6_int] = (short)(this.field_z[var6_int] * param0 / param1);
-                        this.field_P[var6_int] = (short)(this.field_P[var6_int] * param2 / param1);
-                        this.field_F[var6_int] = (short)(this.field_F[var6_int] * param3 / param1);
-                        var6_int++;
-                        if (var7 != 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var7 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        this.a(92);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var6 = (RuntimeException) ((Object) caughtException);
-                    throw pn.a((Throwable) ((Object) var6), "wu.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var7 = AceOfSkies.field_G ? 1 : 0;
+        try {
+          if (param4) {
+            this.a(-126, 92, 16, -17);
+          }
+          var6_int = 0;
+          while (var6_int < this.field_r) {
+            this.field_z[var6_int] = (short)(this.field_z[var6_int] * param0 / param1);
+            this.field_P[var6_int] = (short)(this.field_P[var6_int] * param2 / param1);
+            this.field_F[var6_int] = (short)(this.field_F[var6_int] * param3 / param1);
+            var6_int++;
+            if (var7 != 0) {
+              return;
             }
+          }
+          this.a(92);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw pn.a((Throwable) ((Object) var6), "wu.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     private final void a(int param0) {
         try {
-            this.field_O = false;
-            if (param0 < 34) {
-                this.a(15, 71, -46, 71);
-            }
+          this.field_O = false;
+          if (param0 < 34) {
+            this.a(15, 71, -46, 71);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "wu.C(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "wu.C(" + param0 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = AceOfSkies.field_G ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param1 >= 93) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_w = (kp) null;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var5_int = 0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if ((var5_int ^ -1) <= (this.field_r ^ -1)) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        this.field_z[var5_int] = (short)(this.field_z[var5_int] + param0);
-                        this.field_P[var5_int] = (short)(this.field_P[var5_int] + param2);
-                        this.field_F[var5_int] = (short)(this.field_F[var5_int] + param3);
-                        var5_int++;
-                        if (var6 != 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (var6 == 0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        this.a(76);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var5 = (RuntimeException) ((Object) caughtException);
-                    throw pn.a((Throwable) ((Object) var5), "wu.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var6 = AceOfSkies.field_G ? 1 : 0;
+        try {
+          if (param1 < 93) {
+            field_w = (kp) null;
+          }
+          var5_int = 0;
+          while (var5_int < this.field_r) {
+            this.field_z[var5_int] = (short)(this.field_z[var5_int] + param0);
+            this.field_P[var5_int] = (short)(this.field_P[var5_int] + param2);
+            this.field_F[var5_int] = (short)(this.field_F[var5_int] + param3);
+            var5_int++;
+            if (var6 != 0) {
+              return;
             }
+          }
+          this.a(76);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw pn.a((Throwable) ((Object) var5), "wu.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(boolean param0) {
         try {
-            field_l = null;
-            field_w = null;
-            field_c = null;
-            if (!param0) {
-                field_w = (kp) null;
-            }
+          field_l = null;
+          field_w = null;
+          field_c = null;
+          if (!param0) {
+            field_w = (kp) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
         }
     }
 
@@ -329,84 +131,41 @@ final class wu {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_14_1 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              wj.a(41, param3, param2, param0, param1, param5, param0, 1024);
-              if (param4 == 32767) {
-                break L1;
-              } else {
-                wu.a(47, false, (java.awt.Component) null, (rk) null, 11, (jt) null);
-                break L1;
-              }
-            }
-            break L0;
+          wj.a(41, param3, param2, param0, param1, param5, param0, 1024);
+          if (param4 != 32767) {
+            wu.a(47, false, (java.awt.Component) null, (rk) null, 11, (jt) null);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            runtimeException = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (runtimeException);
-
-            stackIn_6_1 = new StringBuilder().append("wu.F(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_6_0 = runtimeException;
+          stackIn_6_1 = new StringBuilder().append("wu.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param3 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_15_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -423,945 +182,520 @@ final class wu {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var12 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            if (!this.field_O) {
-              this.field_O = true;
-              var2_int = 32767;
-              var3 = 32767;
-              var4 = param0;
-              var5 = -32768;
-              var6 = -32768;
-              var7 = -32768;
-              var8 = 0;
-              L1: while (true) {
-                L2: {
-                  L3: {
-                    if (var8 >= this.field_r) {
-                      break L3;
-                    } else {
-                      var9 = this.field_z[var8];
-                      var10 = this.field_P[var8];
-                      var11 = this.field_F[var8];
-                      if (var12 != 0) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (var2_int > var9) {
-                            var2_int = var9;
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        L5: {
-                          if (var9 > var5) {
-                            var5 = var9;
-                            break L5;
-                          } else {
-                            break L5;
-                          }
-                        }
-                        L6: {
-                          if (var6 < var10) {
-                            var6 = var10;
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        }
-                        L7: {
-                          if (var10 < var3) {
-                            var3 = var10;
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        L8: {
-                          if (var11 >= var4) {
-                            break L8;
-                          } else {
-                            var4 = var11;
-                            break L8;
-                          }
-                        }
-                        L9: {
-                          if ((var11 ^ -1) >= (var7 ^ -1)) {
-                            break L9;
-                          } else {
-                            var7 = var11;
-                            break L9;
-                          }
-                        }
-                        var8++;
-                        if (var12 == 0) {
-                          continue L1;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                  }
-                  this.field_N = var2_int;
-                  this.field_s = var4;
-                  this.field_h = var6;
-                  this.field_b = var5;
-                  this.field_J = var3;
-                  this.field_A = var7;
-                  break L2;
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (this.field_O) {
+            return;
           }
+          this.field_O = true;
+          var2_int = 32767;
+          var3 = 32767;
+          var4 = param0;
+          var5 = -32768;
+          var6 = -32768;
+          var7 = -32768;
+          var8 = 0;
+          while (var8 < this.field_r) {
+            var9 = this.field_z[var8];
+            var10 = this.field_P[var8];
+            var11 = this.field_F[var8];
+            if (var12 != 0) {
+              return;
+            }
+            if (var2_int > var9) {
+              var2_int = var9;
+            }
+            if (var9 > var5) {
+              var5 = var9;
+            }
+            if (var6 < var10) {
+              var6 = var10;
+            }
+            if (var10 < var3) {
+              var3 = var10;
+            }
+            if (var11 < var4) {
+              var4 = var11;
+            }
+            if (var11 > var7) {
+              var7 = var11;
+            }
+            var8++;
+          }
+          this.field_N = var2_int;
+          this.field_s = var4;
+          this.field_h = var6;
+          this.field_b = var5;
+          this.field_J = var3;
+          this.field_A = var7;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "wu.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
     final static void a(int param0, gk param1) {
         RuntimeException stackIn_312_0 = null;
         StringBuilder stackIn_312_1 = null;
-        RuntimeException stackIn_313_0 = null;
-        StringBuilder stackIn_313_1 = null;
         String stackIn_313_2 = null;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
+        byte[] var2Lifetime1;
+        byte[] var2Lifetime2;
+        byte[] var2Lifetime3;
+        byte[] var2Lifetime4;
+        byte[] var2Lifetime5;
+        byte[] var2Lifetime6;
+        byte[] var2Lifetime7;
+        byte[] var2Lifetime8;
+        byte[] var2Lifetime9;
+        byte[] var2Lifetime10;
+        byte[] var2Lifetime11;
+        byte[] var2Lifetime12;
+        byte[] var2Lifetime13;
+        byte[] var2Lifetime14;
+        byte[] var2Lifetime15;
+        byte[] var2Lifetime16;
+        byte[] var2Lifetime17;
+        byte[] var2Lifetime18;
+        byte[] var2Lifetime19;
+        byte[] var2Lifetime20;
+        byte[] var2Lifetime21;
+        byte[] var2Lifetime22;
+        byte[] var2Lifetime23;
+        byte[] var2Lifetime24;
+        byte[] var2Lifetime25;
+        byte[] var2Lifetime26;
+        byte[] var2Lifetime27;
+        byte[] var2Lifetime28;
+        byte[] var2Lifetime29;
+        byte[] var2Lifetime30;
+        byte[] var2Lifetime31;
+        byte[] var2Lifetime32;
+        byte[] var2Lifetime33;
+        byte[] var2Lifetime34;
+        byte[] var2Lifetime35;
+        byte[] var2Lifetime36;
+        byte[] var2Lifetime37;
+        byte[] var2Lifetime38;
+        byte[] var2Lifetime39;
+        byte[] var2Lifetime40;
+        byte[] var2Lifetime41;
+        byte[] var2Lifetime42;
+        byte[] var2Lifetime43;
+        byte[] var2Lifetime44;
+        byte[] var2Lifetime45;
+        byte[] var2Lifetime46;
+        byte[] var2Lifetime47;
+        byte[] var2Lifetime48;
+        byte[] var2Lifetime49;
+        byte[] var2Lifetime50;
+        byte[] var2Lifetime51;
+        byte[] var2Lifetime52;
+        byte[] var2Lifetime53;
+        byte[] var2Lifetime54;
+        byte[] var2Lifetime55;
+        byte[] var2Lifetime56;
+        byte[] var2Lifetime57;
+        byte[] var2Lifetime58;
+        byte[] var2Lifetime59;
+        byte[] var2Lifetime60;
+        byte[] var2Lifetime61;
+        byte[] var2Lifetime62;
+        byte[] var2Lifetime63;
+        byte[] var2Lifetime64;
+        byte[] var2Lifetime65;
+        byte[] var2Lifetime66;
+        byte[] var2Lifetime67;
+        byte[] var2Lifetime68;
+        byte[] var2Lifetime69;
+        byte[] var2Lifetime70;
+        byte[] var2Lifetime71;
+        byte[] var2Lifetime72;
+        byte[] var2Lifetime73;
+        byte[] var2Lifetime74;
+        byte[] var2Lifetime75;
+        byte[] var2Lifetime76;
+        byte[] var2Lifetime77;
+        byte[] var2Lifetime78;
+        byte[] var2Lifetime79;
+        byte[] var2Lifetime80;
+        byte[] var2Lifetime81;
+        byte[] var2Lifetime82;
+        byte[] var2Lifetime83;
+        byte[] var2Lifetime84;
+        byte[] var2Lifetime85;
+        byte[] var2Lifetime86;
         try {
-          L0: {
-            L1: {
-              q.field_q = param1;
-              var2 = im.a(83, "gamename");
-              if (null == var2) {
-                break L1;
-              } else {
-                ea.a(0, var2);
-                break L1;
-              }
-            }
-            L2: {
-              var2 = im.a(63, "youwon");
-              if (null != var2) {
-                ea.a(0, var2);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var2 = im.a(76, "institle");
-              if (var2 != null) {
-                bt.field_b = ea.a(0, var2);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              var2 = im.a(121, "pausetitle");
-              if (var2 != null) {
-                kg.field_c = ea.a(0, var2);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              var2 = im.a(110, "settingstitle");
-              if (var2 != null) {
-                sd.field_m = ea.a(0, var2);
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              var2 = im.a(46, "scoretitle");
-              if (var2 == null) {
-                break L6;
-              } else {
-                fd.field_c = ea.a(0, var2);
-                break L6;
-              }
-            }
-            L7: {
-              var2 = im.a(97, "wavetitle");
-              if (var2 != null) {
-                ao.field_a = ea.a(0, var2);
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            L8: {
-              var2 = im.a(47, "nametitle");
-              if (var2 != null) {
-                ob.field_f = ea.a(0, var2);
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              var2 = im.a(49, "bsths");
-              if (var2 != null) {
-                jo.field_l = ea.a(0, var2);
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            L10: {
-              var2 = im.a(63, "myhs");
-              if (var2 == null) {
-                break L10;
-              } else {
-                wl.field_zc = ea.a(0, var2);
-                break L10;
-              }
-            }
-            L11: {
-              var2 = im.a(37, "allhs");
-              if (var2 == null) {
-                break L11;
-              } else {
-                mf.field_a = ea.a(0, var2);
-                break L11;
-              }
-            }
-            L12: {
-              var2 = im.a(91, "thisishidden");
-              if (var2 == null) {
-                break L12;
-              } else {
-                pe.field_c = ea.a(0, var2);
-                break L12;
-              }
-            }
-            L13: {
-              var2 = im.a(57, "orbcoin");
-              if (null == var2) {
-                break L13;
-              } else {
-                sd.field_e = ea.a(0, var2);
-                break L13;
-              }
-            }
-            L14: {
-              var2 = im.a(63, "unknownstuff");
-              if (null != var2) {
-                fh.field_g = ea.a(0, var2);
-                break L14;
-              } else {
-                break L14;
-              }
-            }
-            L15: {
-              var2 = im.a(73, "orbpoints");
-              if (var2 != null) {
-                jk.field_c = ea.a(0, var2);
-                break L15;
-              } else {
-                break L15;
-              }
-            }
-            L16: {
-              var2 = im.a(96, "achievethisgame");
-              if (var2 != null) {
-                pm.field_d = ea.a(0, var2);
-                break L16;
-              } else {
-                break L16;
-              }
-            }
-            L17: {
-              var2 = im.a(37, "achieve");
-              if (var2 == null) {
-                break L17;
-              } else {
-                ro.field_p = ea.a(0, var2);
-                break L17;
-              }
-            }
-            L18: {
-              var2 = im.a(85, "thousandseperator");
-              if (var2 == null) {
-                break L18;
-              } else {
-                kp.field_b = ea.a(0, var2);
-                break L18;
-              }
-            }
-            L19: {
-              var2 = im.a(38, "classicmodeonly");
-              if (null == var2) {
-                break L19;
-              } else {
-                ef.field_g = ea.a(0, var2);
-                break L19;
-              }
-            }
-            L20: {
-              var2 = im.a(104, "startgame");
-              if (var2 == null) {
-                break L20;
-              } else {
-                gl.field_c = ea.a(0, var2);
-                break L20;
-              }
-            }
-            L21: {
-              var2 = im.a(102, "startarcadegame");
-              if (var2 == null) {
-                break L21;
-              } else {
-                iu.field_f = ea.a(0, var2);
-                break L21;
-              }
-            }
-            L22: {
-              var2 = im.a(83, "arcadescores");
-              if (null != var2) {
-                wq.field_i = ea.a(0, var2);
-                break L22;
-              } else {
-                break L22;
-              }
-            }
-            L23: {
-              var2 = im.a(94, "regularscores");
-              if (var2 == null) {
-                break L23;
-              } else {
-                ki.field_c = ea.a(0, var2);
-                break L23;
-              }
-            }
-            L24: {
-              var2 = im.a(103, "settings");
-              if (null != var2) {
-                ii.field_l = ea.a(0, var2);
-                break L24;
-              } else {
-                break L24;
-              }
-            }
-            L25: {
-              var2 = im.a(89, "wave_announce,0");
-              if (var2 == null) {
-                break L25;
-              } else {
-                oe.field_f[0] = ea.a(0, var2);
-                break L25;
-              }
-            }
-            L26: {
-              var2 = im.a(110, "wave_announce,1");
-              if (var2 == null) {
-                break L26;
-              } else {
-                oe.field_f[1] = ea.a(0, var2);
-                break L26;
-              }
-            }
-            L27: {
-              var2 = im.a(94, "wave_announce,2");
-              if (null != var2) {
-                oe.field_f[2] = ea.a(0, var2);
-                break L27;
-              } else {
-                break L27;
-              }
-            }
-            L28: {
-              var2 = im.a(75, "wave_announce,3");
-              if (null == var2) {
-                break L28;
-              } else {
-                oe.field_f[3] = ea.a(0, var2);
-                break L28;
-              }
-            }
-            L29: {
-              var2 = im.a(100, "wave_announce,4");
-              if (var2 != null) {
-                oe.field_f[4] = ea.a(0, var2);
-                break L29;
-              } else {
-                break L29;
-              }
-            }
-            L30: {
-              var2 = im.a(75, "wave_announce,5");
-              if (null == var2) {
-                break L30;
-              } else {
-                oe.field_f[5] = ea.a(0, var2);
-                break L30;
-              }
-            }
-            L31: {
-              var2 = im.a(87, "wave_announce,6");
-              if (null != var2) {
-                oe.field_f[6] = ea.a(0, var2);
-                break L31;
-              } else {
-                break L31;
-              }
-            }
-            L32: {
-              var2 = im.a(89, "wave_announce,7");
-              if (null != var2) {
-                oe.field_f[7] = ea.a(0, var2);
-                break L32;
-              } else {
-                break L32;
-              }
-            }
-            L33: {
-              var2 = im.a(118, "wave_announce,8");
-              if (null != var2) {
-                oe.field_f[8] = ea.a(0, var2);
-                break L33;
-              } else {
-                break L33;
-              }
-            }
-            L34: {
-              var2 = im.a(108, "wave_announce,9");
-              if (var2 == null) {
-                break L34;
-              } else {
-                oe.field_f[9] = ea.a(0, var2);
-                break L34;
-              }
-            }
-            L35: {
-              var2 = im.a(127, "wave_announce,10");
-              if (var2 != null) {
-                oe.field_f[10] = ea.a(0, var2);
-                break L35;
-              } else {
-                break L35;
-              }
-            }
-            L36: {
-              var2 = im.a(77, "wave_announce,11");
-              if (var2 == null) {
-                break L36;
-              } else {
-                oe.field_f[11] = ea.a(0, var2);
-                break L36;
-              }
-            }
-            L37: {
-              var2 = im.a(44, "wave_announce,12");
-              if (null != var2) {
-                oe.field_f[12] = ea.a(0, var2);
-                break L37;
-              } else {
-                break L37;
-              }
-            }
-            L38: {
-              var2 = im.a(101, "wave_announce,13");
-              if (null == var2) {
-                break L38;
-              } else {
-                oe.field_f[13] = ea.a(0, var2);
-                break L38;
-              }
-            }
-            L39: {
-              var2 = im.a(70, "wave_announce,14");
-              if (var2 != null) {
-                oe.field_f[14] = ea.a(0, var2);
-                break L39;
-              } else {
-                break L39;
-              }
-            }
-            L40: {
-              var2 = im.a(80, "wave_announce,15");
-              if (var2 == null) {
-                break L40;
-              } else {
-                oe.field_f[15] = ea.a(0, var2);
-                break L40;
-              }
-            }
-            L41: {
-              var2 = im.a(63, "wave_announce,16");
-              if (var2 == null) {
-                break L41;
-              } else {
-                oe.field_f[16] = ea.a(0, var2);
-                break L41;
-              }
-            }
-            L42: {
-              var2 = im.a(105, "wave_announce,17");
-              if (var2 == null) {
-                break L42;
-              } else {
-                oe.field_f[17] = ea.a(0, var2);
-                break L42;
-              }
-            }
-            L43: {
-              var2 = im.a(117, "wave_announce,18");
-              if (null != var2) {
-                oe.field_f[18] = ea.a(0, var2);
-                break L43;
-              } else {
-                break L43;
-              }
-            }
-            L44: {
-              var2 = im.a(59, "wave_announce,19");
-              if (var2 != null) {
-                oe.field_f[19] = ea.a(0, var2);
-                break L44;
-              } else {
-                break L44;
-              }
-            }
-            L45: {
-              var2 = im.a(44, "wave_announce,20");
-              if (null != var2) {
-                oe.field_f[20] = ea.a(0, var2);
-                break L45;
-              } else {
-                break L45;
-              }
-            }
-            L46: {
-              var2 = im.a(112, "powerup_messages,0");
-              if (var2 == null) {
-                break L46;
-              } else {
-                ke.field_c[0] = ea.a(0, var2);
-                break L46;
-              }
-            }
-            L47: {
-              var2 = im.a(66, "powerup_messages,1");
-              if (null != var2) {
-                ke.field_c[1] = ea.a(0, var2);
-                break L47;
-              } else {
-                break L47;
-              }
-            }
-            L48: {
-              var2 = im.a(73, "powerup_messages,2");
-              if (null == var2) {
-                break L48;
-              } else {
-                ke.field_c[2] = ea.a(0, var2);
-                break L48;
-              }
-            }
-            L49: {
-              var2 = im.a(127, "powerup_messages,3");
-              if (null != var2) {
-                ke.field_c[3] = ea.a(0, var2);
-                break L49;
-              } else {
-                break L49;
-              }
-            }
-            L50: {
-              var2 = im.a(67, "achievement_names,0");
-              if (null != var2) {
-                lb.field_a[0] = ea.a(0, var2);
-                break L50;
-              } else {
-                break L50;
-              }
-            }
-            L51: {
-              var2 = im.a(98, "achievement_names,1");
-              if (null == var2) {
-                break L51;
-              } else {
-                lb.field_a[1] = ea.a(0, var2);
-                break L51;
-              }
-            }
-            L52: {
-              var2 = im.a(103, "achievement_names,2");
-              if (null != var2) {
-                lb.field_a[2] = ea.a(0, var2);
-                break L52;
-              } else {
-                break L52;
-              }
-            }
-            L53: {
-              var2 = im.a(42, "achievement_names,3");
-              if (var2 != null) {
-                lb.field_a[3] = ea.a(0, var2);
-                break L53;
-              } else {
-                break L53;
-              }
-            }
-            L54: {
-              var2 = im.a(121, "achievement_names,4");
-              if (var2 == null) {
-                break L54;
-              } else {
-                lb.field_a[4] = ea.a(0, var2);
-                break L54;
-              }
-            }
-            L55: {
-              var2 = im.a(113, "achievement_names,5");
-              if (var2 == null) {
-                break L55;
-              } else {
-                lb.field_a[5] = ea.a(0, var2);
-                break L55;
-              }
-            }
-            L56: {
-              var2 = im.a(84, "achievement_names,6");
-              if (null == var2) {
-                break L56;
-              } else {
-                lb.field_a[6] = ea.a(0, var2);
-                break L56;
-              }
-            }
-            L57: {
-              var2 = im.a(75, "achievement_names,7");
-              if (null == var2) {
-                break L57;
-              } else {
-                lb.field_a[7] = ea.a(0, var2);
-                break L57;
-              }
-            }
-            L58: {
-              var2 = im.a(99, "achievement_names,8");
-              if (null != var2) {
-                lb.field_a[8] = ea.a(0, var2);
-                break L58;
-              } else {
-                break L58;
-              }
-            }
-            L59: {
-              var2 = im.a(106, "achievement_criteria,0");
-              if (null != var2) {
-                hn.field_b[0] = ea.a(0, var2);
-                break L59;
-              } else {
-                break L59;
-              }
-            }
-            L60: {
-              var2 = im.a(117, "achievement_criteria,1");
-              if (null == var2) {
-                break L60;
-              } else {
-                hn.field_b[1] = ea.a(0, var2);
-                break L60;
-              }
-            }
-            L61: {
-              var2 = im.a(78, "achievement_criteria,2");
-              if (var2 == null) {
-                break L61;
-              } else {
-                hn.field_b[2] = ea.a(0, var2);
-                break L61;
-              }
-            }
-            L62: {
-              var2 = im.a(35, "achievement_criteria,3");
-              if (null != var2) {
-                hn.field_b[3] = ea.a(0, var2);
-                break L62;
-              } else {
-                break L62;
-              }
-            }
-            L63: {
-              var2 = im.a(65, "achievement_criteria,4");
-              if (null == var2) {
-                break L63;
-              } else {
-                hn.field_b[4] = ea.a(0, var2);
-                break L63;
-              }
-            }
-            L64: {
-              var2 = im.a(99, "achievement_criteria,5");
-              if (null == var2) {
-                break L64;
-              } else {
-                hn.field_b[5] = ea.a(0, var2);
-                break L64;
-              }
-            }
-            L65: {
-              var2 = im.a(82, "achievement_criteria,6");
-              if (var2 == null) {
-                break L65;
-              } else {
-                hn.field_b[6] = ea.a(0, var2);
-                break L65;
-              }
-            }
-            L66: {
-              var2 = im.a(123, "achievement_criteria,7");
-              if (var2 != null) {
-                hn.field_b[7] = ea.a(0, var2);
-                break L66;
-              } else {
-                break L66;
-              }
-            }
-            L67: {
-              var2 = im.a(48, "achievement_criteria,8");
-              if (var2 == null) {
-                break L67;
-              } else {
-                hn.field_b[8] = ea.a(0, var2);
-                break L67;
-              }
-            }
-            L68: {
-              var2 = im.a(68, "score_colon_space");
-              if (null != var2) {
-                ea.a(0, var2);
-                break L68;
-              } else {
-                break L68;
-              }
-            }
-            L69: {
-              var2 = im.a(79, "instructions_pages,0");
-              if (var2 != null) {
-                io.field_a[0] = ea.a(0, var2);
-                break L69;
-              } else {
-                break L69;
-              }
-            }
-            L70: {
-              var2 = im.a(102, "instructions_pages,1");
-              if (var2 == null) {
-                break L70;
-              } else {
-                io.field_a[1] = ea.a(0, var2);
-                break L70;
-              }
-            }
-            L71: {
-              var2 = im.a(54, "instructions_pages,2");
-              if (null == var2) {
-                break L71;
-              } else {
-                io.field_a[2] = ea.a(0, var2);
-                break L71;
-              }
-            }
-            L72: {
-              var2 = im.a(105, "instructions_pages,3");
-              if (null != var2) {
-                io.field_a[3] = ea.a(0, var2);
-                break L72;
-              } else {
-                break L72;
-              }
-            }
-            L73: {
-              var2 = im.a(95, "purchasables,0");
-              if (var2 != null) {
-                ii.field_e[0] = ea.a(0, var2);
-                break L73;
-              } else {
-                break L73;
-              }
-            }
-            L74: {
-              var2 = im.a(55, "purchasables,1");
-              if (var2 == null) {
-                break L74;
-              } else {
-                ii.field_e[1] = ea.a(0, var2);
-                break L74;
-              }
-            }
-            L75: {
-              var2 = im.a(109, "purchasables,2");
-              if (var2 != null) {
-                ii.field_e[2] = ea.a(0, var2);
-                break L75;
-              } else {
-                break L75;
-              }
-            }
-            L76: {
-              var2 = im.a(35, "purchasables,3");
-              if (null != var2) {
-                ii.field_e[3] = ea.a(0, var2);
-                break L76;
-              } else {
-                break L76;
-              }
-            }
-            L77: {
-              var2 = im.a(125, "purchasables,4");
-              if (null == var2) {
-                break L77;
-              } else {
-                ii.field_e[4] = ea.a(0, var2);
-                break L77;
-              }
-            }
-            L78: {
-              var2 = im.a(48, "purchasables,5");
-              if (null != var2) {
-                ii.field_e[5] = ea.a(0, var2);
-                break L78;
-              } else {
-                break L78;
-              }
-            }
-            L79: {
-              var2 = im.a(107, "purchasables,6");
-              if (var2 == null) {
-                break L79;
-              } else {
-                ii.field_e[6] = ea.a(0, var2);
-                break L79;
-              }
-            }
-            L80: {
-              var2 = im.a(118, "purchasemessages,0");
-              if (null != var2) {
-                ae.field_h[0] = ea.a(0, var2);
-                break L80;
-              } else {
-                break L80;
-              }
-            }
-            L81: {
-              var2 = im.a(97, "purchasemessages,1");
-              if (var2 != null) {
-                ae.field_h[1] = ea.a(0, var2);
-                break L81;
-              } else {
-                break L81;
-              }
-            }
-            L82: {
-              var2 = im.a(72, "purchasemessages,2");
-              if (null != var2) {
-                ae.field_h[2] = ea.a(0, var2);
-                break L82;
-              } else {
-                break L82;
-              }
-            }
-            L83: {
-              if (param0 < -35) {
-                break L83;
-              } else {
-                wu.a(true);
-                break L83;
-              }
-            }
-            L84: {
-              var2 = im.a(80, "purchasemessages,3");
-              if (null == var2) {
-                break L84;
-              } else {
-                ae.field_h[3] = ea.a(0, var2);
-                break L84;
-              }
-            }
-            L85: {
-              var2 = im.a(48, "purchasemessages,4");
-              if (var2 != null) {
-                ae.field_h[4] = ea.a(0, var2);
-                break L85;
-              } else {
-                break L85;
-              }
-            }
-            L86: {
-              var2 = im.a(122, "purchasemessages,5");
-              if (null == var2) {
-                break L86;
-              } else {
-                ae.field_h[5] = ea.a(0, var2);
-                break L86;
-              }
-            }
-            L87: {
-              var2 = im.a(109, "purchasemessages,6");
-              if (var2 == null) {
-                break L87;
-              } else {
-                ae.field_h[6] = ea.a(0, var2);
-                break L87;
-              }
-            }
-            L88: {
-              var2 = im.a(85, "arcadeunlocked");
-              if (null == var2) {
-                break L88;
-              } else {
-                ab.field_r = ea.a(0, var2);
-                break L88;
-              }
-            }
-            q.field_q = null;
-            break L0;
+          q.field_q = param1;
+          var2 = im.a(83, "gamename");
+          if (null != var2) {
+            ea.a(0, var2);
           }
+          var2Lifetime1 = im.a(63, "youwon");
+          if (null != var2Lifetime1) {
+            ea.a(0, var2Lifetime1);
+          }
+          var2Lifetime2 = im.a(76, "institle");
+          if (var2Lifetime2 != null) {
+            bt.field_b = ea.a(0, var2Lifetime2);
+          }
+          var2Lifetime3 = im.a(121, "pausetitle");
+          if (var2Lifetime3 != null) {
+            kg.field_c = ea.a(0, var2Lifetime3);
+          }
+          var2Lifetime4 = im.a(110, "settingstitle");
+          if (var2Lifetime4 != null) {
+            sd.field_m = ea.a(0, var2Lifetime4);
+          }
+          var2Lifetime5 = im.a(46, "scoretitle");
+          if (var2Lifetime5 != null) {
+            fd.field_c = ea.a(0, var2Lifetime5);
+          }
+          var2Lifetime6 = im.a(97, "wavetitle");
+          if (var2Lifetime6 != null) {
+            ao.field_a = ea.a(0, var2Lifetime6);
+          }
+          var2Lifetime7 = im.a(47, "nametitle");
+          if (var2Lifetime7 != null) {
+            ob.field_f = ea.a(0, var2Lifetime7);
+          }
+          var2Lifetime8 = im.a(49, "bsths");
+          if (var2Lifetime8 != null) {
+            jo.field_l = ea.a(0, var2Lifetime8);
+          }
+          var2Lifetime9 = im.a(63, "myhs");
+          if (var2Lifetime9 != null) {
+            wl.field_zc = ea.a(0, var2Lifetime9);
+          }
+          var2Lifetime10 = im.a(37, "allhs");
+          if (var2Lifetime10 != null) {
+            mf.field_a = ea.a(0, var2Lifetime10);
+          }
+          var2Lifetime11 = im.a(91, "thisishidden");
+          if (var2Lifetime11 != null) {
+            pe.field_c = ea.a(0, var2Lifetime11);
+          }
+          var2Lifetime12 = im.a(57, "orbcoin");
+          if (null != var2Lifetime12) {
+            sd.field_e = ea.a(0, var2Lifetime12);
+          }
+          var2Lifetime13 = im.a(63, "unknownstuff");
+          if (null != var2Lifetime13) {
+            fh.field_g = ea.a(0, var2Lifetime13);
+          }
+          var2Lifetime14 = im.a(73, "orbpoints");
+          if (var2Lifetime14 != null) {
+            jk.field_c = ea.a(0, var2Lifetime14);
+          }
+          var2Lifetime15 = im.a(96, "achievethisgame");
+          if (var2Lifetime15 != null) {
+            pm.field_d = ea.a(0, var2Lifetime15);
+          }
+          var2Lifetime16 = im.a(37, "achieve");
+          if (var2Lifetime16 != null) {
+            ro.field_p = ea.a(0, var2Lifetime16);
+          }
+          var2Lifetime17 = im.a(85, "thousandseperator");
+          if (var2Lifetime17 != null) {
+            kp.field_b = ea.a(0, var2Lifetime17);
+          }
+          var2Lifetime18 = im.a(38, "classicmodeonly");
+          if (null != var2Lifetime18) {
+            ef.field_g = ea.a(0, var2Lifetime18);
+          }
+          var2Lifetime19 = im.a(104, "startgame");
+          if (var2Lifetime19 != null) {
+            gl.field_c = ea.a(0, var2Lifetime19);
+          }
+          var2Lifetime20 = im.a(102, "startarcadegame");
+          if (var2Lifetime20 != null) {
+            iu.field_f = ea.a(0, var2Lifetime20);
+          }
+          var2Lifetime21 = im.a(83, "arcadescores");
+          if (null != var2Lifetime21) {
+            wq.field_i = ea.a(0, var2Lifetime21);
+          }
+          var2Lifetime22 = im.a(94, "regularscores");
+          if (var2Lifetime22 != null) {
+            ki.field_c = ea.a(0, var2Lifetime22);
+          }
+          var2Lifetime23 = im.a(103, "settings");
+          if (null != var2Lifetime23) {
+            ii.field_l = ea.a(0, var2Lifetime23);
+          }
+          var2Lifetime24 = im.a(89, "wave_announce,0");
+          if (var2Lifetime24 != null) {
+            oe.field_f[0] = ea.a(0, var2Lifetime24);
+          }
+          var2Lifetime25 = im.a(110, "wave_announce,1");
+          if (var2Lifetime25 != null) {
+            oe.field_f[1] = ea.a(0, var2Lifetime25);
+          }
+          var2Lifetime26 = im.a(94, "wave_announce,2");
+          if (null != var2Lifetime26) {
+            oe.field_f[2] = ea.a(0, var2Lifetime26);
+          }
+          var2Lifetime27 = im.a(75, "wave_announce,3");
+          if (null != var2Lifetime27) {
+            oe.field_f[3] = ea.a(0, var2Lifetime27);
+          }
+          var2Lifetime28 = im.a(100, "wave_announce,4");
+          if (var2Lifetime28 != null) {
+            oe.field_f[4] = ea.a(0, var2Lifetime28);
+          }
+          var2Lifetime29 = im.a(75, "wave_announce,5");
+          if (null != var2Lifetime29) {
+            oe.field_f[5] = ea.a(0, var2Lifetime29);
+          }
+          var2Lifetime30 = im.a(87, "wave_announce,6");
+          if (null != var2Lifetime30) {
+            oe.field_f[6] = ea.a(0, var2Lifetime30);
+          }
+          var2Lifetime31 = im.a(89, "wave_announce,7");
+          if (null != var2Lifetime31) {
+            oe.field_f[7] = ea.a(0, var2Lifetime31);
+          }
+          var2Lifetime32 = im.a(118, "wave_announce,8");
+          if (null != var2Lifetime32) {
+            oe.field_f[8] = ea.a(0, var2Lifetime32);
+          }
+          var2Lifetime33 = im.a(108, "wave_announce,9");
+          if (var2Lifetime33 != null) {
+            oe.field_f[9] = ea.a(0, var2Lifetime33);
+          }
+          var2Lifetime34 = im.a(127, "wave_announce,10");
+          if (var2Lifetime34 != null) {
+            oe.field_f[10] = ea.a(0, var2Lifetime34);
+          }
+          var2Lifetime35 = im.a(77, "wave_announce,11");
+          if (var2Lifetime35 != null) {
+            oe.field_f[11] = ea.a(0, var2Lifetime35);
+          }
+          var2Lifetime36 = im.a(44, "wave_announce,12");
+          if (null != var2Lifetime36) {
+            oe.field_f[12] = ea.a(0, var2Lifetime36);
+          }
+          var2Lifetime37 = im.a(101, "wave_announce,13");
+          if (null != var2Lifetime37) {
+            oe.field_f[13] = ea.a(0, var2Lifetime37);
+          }
+          var2Lifetime38 = im.a(70, "wave_announce,14");
+          if (var2Lifetime38 != null) {
+            oe.field_f[14] = ea.a(0, var2Lifetime38);
+          }
+          var2Lifetime39 = im.a(80, "wave_announce,15");
+          if (var2Lifetime39 != null) {
+            oe.field_f[15] = ea.a(0, var2Lifetime39);
+          }
+          var2Lifetime40 = im.a(63, "wave_announce,16");
+          if (var2Lifetime40 != null) {
+            oe.field_f[16] = ea.a(0, var2Lifetime40);
+          }
+          var2Lifetime41 = im.a(105, "wave_announce,17");
+          if (var2Lifetime41 != null) {
+            oe.field_f[17] = ea.a(0, var2Lifetime41);
+          }
+          var2Lifetime42 = im.a(117, "wave_announce,18");
+          if (null != var2Lifetime42) {
+            oe.field_f[18] = ea.a(0, var2Lifetime42);
+          }
+          var2Lifetime43 = im.a(59, "wave_announce,19");
+          if (var2Lifetime43 != null) {
+            oe.field_f[19] = ea.a(0, var2Lifetime43);
+          }
+          var2Lifetime44 = im.a(44, "wave_announce,20");
+          if (null != var2Lifetime44) {
+            oe.field_f[20] = ea.a(0, var2Lifetime44);
+          }
+          var2Lifetime45 = im.a(112, "powerup_messages,0");
+          if (var2Lifetime45 != null) {
+            ke.field_c[0] = ea.a(0, var2Lifetime45);
+          }
+          var2Lifetime46 = im.a(66, "powerup_messages,1");
+          if (null != var2Lifetime46) {
+            ke.field_c[1] = ea.a(0, var2Lifetime46);
+          }
+          var2Lifetime47 = im.a(73, "powerup_messages,2");
+          if (null != var2Lifetime47) {
+            ke.field_c[2] = ea.a(0, var2Lifetime47);
+          }
+          var2Lifetime48 = im.a(127, "powerup_messages,3");
+          if (null != var2Lifetime48) {
+            ke.field_c[3] = ea.a(0, var2Lifetime48);
+          }
+          var2Lifetime49 = im.a(67, "achievement_names,0");
+          if (null != var2Lifetime49) {
+            lb.field_a[0] = ea.a(0, var2Lifetime49);
+          }
+          var2Lifetime50 = im.a(98, "achievement_names,1");
+          if (null != var2Lifetime50) {
+            lb.field_a[1] = ea.a(0, var2Lifetime50);
+          }
+          var2Lifetime51 = im.a(103, "achievement_names,2");
+          if (null != var2Lifetime51) {
+            lb.field_a[2] = ea.a(0, var2Lifetime51);
+          }
+          var2Lifetime52 = im.a(42, "achievement_names,3");
+          if (var2Lifetime52 != null) {
+            lb.field_a[3] = ea.a(0, var2Lifetime52);
+          }
+          var2Lifetime53 = im.a(121, "achievement_names,4");
+          if (var2Lifetime53 != null) {
+            lb.field_a[4] = ea.a(0, var2Lifetime53);
+          }
+          var2Lifetime54 = im.a(113, "achievement_names,5");
+          if (var2Lifetime54 != null) {
+            lb.field_a[5] = ea.a(0, var2Lifetime54);
+          }
+          var2Lifetime55 = im.a(84, "achievement_names,6");
+          if (null != var2Lifetime55) {
+            lb.field_a[6] = ea.a(0, var2Lifetime55);
+          }
+          var2Lifetime56 = im.a(75, "achievement_names,7");
+          if (null != var2Lifetime56) {
+            lb.field_a[7] = ea.a(0, var2Lifetime56);
+          }
+          var2Lifetime57 = im.a(99, "achievement_names,8");
+          if (null != var2Lifetime57) {
+            lb.field_a[8] = ea.a(0, var2Lifetime57);
+          }
+          var2Lifetime58 = im.a(106, "achievement_criteria,0");
+          if (null != var2Lifetime58) {
+            hn.field_b[0] = ea.a(0, var2Lifetime58);
+          }
+          var2Lifetime59 = im.a(117, "achievement_criteria,1");
+          if (null != var2Lifetime59) {
+            hn.field_b[1] = ea.a(0, var2Lifetime59);
+          }
+          var2Lifetime60 = im.a(78, "achievement_criteria,2");
+          if (var2Lifetime60 != null) {
+            hn.field_b[2] = ea.a(0, var2Lifetime60);
+          }
+          var2Lifetime61 = im.a(35, "achievement_criteria,3");
+          if (null != var2Lifetime61) {
+            hn.field_b[3] = ea.a(0, var2Lifetime61);
+          }
+          var2Lifetime62 = im.a(65, "achievement_criteria,4");
+          if (null != var2Lifetime62) {
+            hn.field_b[4] = ea.a(0, var2Lifetime62);
+          }
+          var2Lifetime63 = im.a(99, "achievement_criteria,5");
+          if (null != var2Lifetime63) {
+            hn.field_b[5] = ea.a(0, var2Lifetime63);
+          }
+          var2Lifetime64 = im.a(82, "achievement_criteria,6");
+          if (var2Lifetime64 != null) {
+            hn.field_b[6] = ea.a(0, var2Lifetime64);
+          }
+          var2Lifetime65 = im.a(123, "achievement_criteria,7");
+          if (var2Lifetime65 != null) {
+            hn.field_b[7] = ea.a(0, var2Lifetime65);
+          }
+          var2Lifetime66 = im.a(48, "achievement_criteria,8");
+          if (var2Lifetime66 != null) {
+            hn.field_b[8] = ea.a(0, var2Lifetime66);
+          }
+          var2Lifetime67 = im.a(68, "score_colon_space");
+          if (null != var2Lifetime67) {
+            ea.a(0, var2Lifetime67);
+          }
+          var2Lifetime68 = im.a(79, "instructions_pages,0");
+          if (var2Lifetime68 != null) {
+            io.field_a[0] = ea.a(0, var2Lifetime68);
+          }
+          var2Lifetime69 = im.a(102, "instructions_pages,1");
+          if (var2Lifetime69 != null) {
+            io.field_a[1] = ea.a(0, var2Lifetime69);
+          }
+          var2Lifetime70 = im.a(54, "instructions_pages,2");
+          if (null != var2Lifetime70) {
+            io.field_a[2] = ea.a(0, var2Lifetime70);
+          }
+          var2Lifetime71 = im.a(105, "instructions_pages,3");
+          if (null != var2Lifetime71) {
+            io.field_a[3] = ea.a(0, var2Lifetime71);
+          }
+          var2Lifetime72 = im.a(95, "purchasables,0");
+          if (var2Lifetime72 != null) {
+            ii.field_e[0] = ea.a(0, var2Lifetime72);
+          }
+          var2Lifetime73 = im.a(55, "purchasables,1");
+          if (var2Lifetime73 != null) {
+            ii.field_e[1] = ea.a(0, var2Lifetime73);
+          }
+          var2Lifetime74 = im.a(109, "purchasables,2");
+          if (var2Lifetime74 != null) {
+            ii.field_e[2] = ea.a(0, var2Lifetime74);
+          }
+          var2Lifetime75 = im.a(35, "purchasables,3");
+          if (null != var2Lifetime75) {
+            ii.field_e[3] = ea.a(0, var2Lifetime75);
+          }
+          var2Lifetime76 = im.a(125, "purchasables,4");
+          if (null != var2Lifetime76) {
+            ii.field_e[4] = ea.a(0, var2Lifetime76);
+          }
+          var2Lifetime77 = im.a(48, "purchasables,5");
+          if (null != var2Lifetime77) {
+            ii.field_e[5] = ea.a(0, var2Lifetime77);
+          }
+          var2Lifetime78 = im.a(107, "purchasables,6");
+          if (var2Lifetime78 != null) {
+            ii.field_e[6] = ea.a(0, var2Lifetime78);
+          }
+          var2Lifetime79 = im.a(118, "purchasemessages,0");
+          if (null != var2Lifetime79) {
+            ae.field_h[0] = ea.a(0, var2Lifetime79);
+          }
+          var2Lifetime80 = im.a(97, "purchasemessages,1");
+          if (var2Lifetime80 != null) {
+            ae.field_h[1] = ea.a(0, var2Lifetime80);
+          }
+          var2Lifetime81 = im.a(72, "purchasemessages,2");
+          if (null != var2Lifetime81) {
+            ae.field_h[2] = ea.a(0, var2Lifetime81);
+          }
+          if (param0 >= -35) {
+            wu.a(true);
+          }
+          var2Lifetime82 = im.a(80, "purchasemessages,3");
+          if (null != var2Lifetime82) {
+            ae.field_h[3] = ea.a(0, var2Lifetime82);
+          }
+          var2Lifetime83 = im.a(48, "purchasemessages,4");
+          if (var2Lifetime83 != null) {
+            ae.field_h[4] = ea.a(0, var2Lifetime83);
+          }
+          var2Lifetime84 = im.a(122, "purchasemessages,5");
+          if (null != var2Lifetime84) {
+            ae.field_h[5] = ea.a(0, var2Lifetime84);
+          }
+          var2Lifetime85 = im.a(109, "purchasemessages,6");
+          if (var2Lifetime85 != null) {
+            ae.field_h[6] = ea.a(0, var2Lifetime85);
+          }
+          var2Lifetime86 = im.a(85, "arcadeunlocked");
+          if (null != var2Lifetime86) {
+            ab.field_r = ea.a(0, var2Lifetime86);
+          }
+          q.field_q = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L89: {
-            var2_ref = decompiledCaughtException;
-            stackIn_312_0 = (RuntimeException) (var2_ref);
-
-            stackIn_312_1 = new StringBuilder().append("wu.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_313_0 = (RuntimeException) ((Object) stackIn_312_0);
-              stackIn_313_1 = (StringBuilder) ((Object) stackIn_312_1);
-              stackIn_313_2 = "null";
-              break L89;
-            } else {
-              stackIn_313_0 = (RuntimeException) ((Object) stackIn_312_0);
-              stackIn_313_1 = (StringBuilder) ((Object) stackIn_312_1);
-              stackIn_313_2 = "{...}";
-              break L89;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_312_0 = var2_ref;
+          stackIn_312_1 = new StringBuilder().append("wu.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_313_2 = "null";
+          } else {
+            stackIn_313_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_313_0), stackIn_313_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_312_0), ((StringBuilder) (Object) stackIn_312_1).append(stackIn_313_2).append(')').toString());
         }
     }
 

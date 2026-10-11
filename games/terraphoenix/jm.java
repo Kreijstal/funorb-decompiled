@@ -15,54 +15,52 @@ final class jm extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_g.paint(param0);
+          this.field_g.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "jm.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "jm.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_g.update(param0);
+          this.field_g.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "jm.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "jm.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 6453) {
-          field_h = -9;
-          field_a = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 6453) {
           field_a = null;
           field_e = null;
           field_d = null;
           return;
         }
+        field_h = -9;
+        field_a = null;
+        field_e = null;
+        field_d = null;
     }
 
     jm(java.awt.Component param0) {
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "jm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(File param0, int param1, int param2, byte[] param3) throws IOException {
         DataInputStream var4 = null;
         try {
-            var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param0)))));
-            try {
-                var4.readFully(param3, param2, param1);
-            } catch (EOFException eOFException) {
-            }
-            var4.close();
+          var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param0)))));
+          try {
+            var4.readFully(param3, param2, param1);
+          } catch (EOFException eOFException) {
+          }
+          var4.close();
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "jm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

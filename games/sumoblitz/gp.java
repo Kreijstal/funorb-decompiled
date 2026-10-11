@@ -14,7 +14,7 @@ final class gp extends ns implements java.awt.event.MouseWheelListener {
     final void a(boolean param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param0) {
-            this.field_d = -70;
+          this.field_d = -70;
         }
     }
 
@@ -24,7 +24,7 @@ final class gp extends ns implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 != 76) {
-            return;
+          return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

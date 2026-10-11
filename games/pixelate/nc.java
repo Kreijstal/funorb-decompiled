@@ -10,7 +10,7 @@ abstract class nc {
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_c = null;
         field_e = null;
@@ -20,8 +20,8 @@ abstract class nc {
 
     final static ak b(int param0) {
         if (param0 <= 101) {
-            nc.b(47);
-            return fb.c((byte) 123);
+          nc.b(47);
+          return fb.c((byte) 123);
         }
         return fb.c((byte) 123);
     }
@@ -29,16 +29,13 @@ abstract class nc {
     abstract void a(boolean param0);
 
     final int a(byte param0, long param1) {
-        int var4;
-        long var5;
-        var4 = -125 % ((param0 - -64) / 46);
-        var5 = this.a(-23239);
-        if (var5 > 0L) {
-          vg.a(var5, (byte) 23);
-          return this.a(false, param1);
-        } else {
+        int var4 = -125 % ((param0 + 64) / 46);
+        long var5 = this.a(-23239);
+        if (var5 <= 0L) {
           return this.a(false, param1);
         }
+        vg.a(var5, (byte) 23);
+        return this.a(false, param1);
     }
 
     abstract long a(int param0);

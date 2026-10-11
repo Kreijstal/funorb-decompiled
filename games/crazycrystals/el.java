@@ -7,34 +7,26 @@ class el extends fb {
     static String field_f;
 
     void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
-        L0: {
-          if (param3 <= -59) {
-            break L0;
-          } else {
-            el.b(126);
-            break L0;
-          }
+        if (param3 > -59) {
+          el.b(126);
         }
-        if (param1 == 24) {
-          if ((param2 ^ -1) != -25) {
-            this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
-            return;
-          } else {
-            this.field_a.h(-121).c(param5, -param2 + param6, ek.field_f[this.field_a.field_u]);
-            return;
-          }
-        } else {
+        if (param1 != 24) {
           this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
           return;
         }
+        if (param2 == 24) {
+          this.field_a.h(-121).c(param5, -param2 + param6, ek.field_f[this.field_a.field_u]);
+          return;
+        }
+        this.field_a.h(-80).b(param5, -param2 + param6, param1 * 2, param2 * 3, ek.field_f[this.field_a.field_u]);
     }
 
     el(fq param0, int param1) {
         super(param0);
         try {
-            param0.d(param1, hp.field_m[param1], -9634);
+          param0.d(param1, hp.field_m[param1], -9634);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +34,7 @@ class el extends fb {
         field_h = null;
         field_f = null;
         if (param0 != 2) {
-            return;
+          return;
         }
         field_g = null;
     }

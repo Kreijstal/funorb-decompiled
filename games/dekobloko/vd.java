@@ -11,9 +11,9 @@ final class vd extends bh {
 
     final static int a(int param0) {
         if (param0 != 480) {
-            return 53;
+          return 53;
         }
-        return ri.field_i + -ge.field_e;
+        return ri.field_i - ge.field_e;
     }
 
     public static void c(byte param0) {

@@ -6,8 +6,8 @@ final class kf implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) -121);
-            return (tv[]) ((Object) new whb[param1]);
+          this.a((byte) -121);
+          return (tv[]) ((Object) new whb[param1]);
         }
         return (tv[]) ((Object) new whb[param1]);
     }

@@ -7,9 +7,9 @@ final class gh {
 
     public static void a(int param0) {
         if (param0 >= -123) {
-            gh.a(116);
-            field_a = null;
-            return;
+          gh.a(116);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

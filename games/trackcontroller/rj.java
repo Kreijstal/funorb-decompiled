@@ -12,97 +12,70 @@ final class rj implements Iterable {
     static String field_f;
 
     final gb a(int param0) {
-        gb var2;
-        if (param0 == 65) {
-          var2 = this.field_e.field_k;
-          if (this.field_e == var2) {
-            return null;
-          } else {
-            var2.e(param0 + -65);
-            return var2;
-          }
-        } else {
+        gb var2 = null;
+        gb var2Lifetime1;
+        if (param0 != 65) {
           this.iterator();
           var2 = this.field_e.field_k;
-          if (this.field_e == var2) {
-            return null;
-          } else {
-            var2.e(param0 + -65);
+          if (this.field_e != var2) {
+            var2.e(param0 - 65);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_e.field_k;
+        if (this.field_e != var2Lifetime1) {
+          var2Lifetime1.e(param0 - 65);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          String var3 = null;
+          java.net.URL var4 = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    if (param1 < -52) {
-                      var4 = param0.getCodeBase();
-                      var3 = of.a(param0, var4, false).getFile();
-                      sj.a(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
-                      sj.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
-                      sj.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
-                      sj.a(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
-                      sj.a(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
-                      sj.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = decompiledCaughtException;
-                  return;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  break L0;
-                } else {
-                  return;
-                }
+              if (param1 >= -52) {
+                return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref);
-
-                stackIn_8_1 = new StringBuilder().append("rj.D(");
-
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw sl.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+              var4 = param0.getCodeBase();
+              var3 = of.a(param0, var4, false).getFile();
+              sj.a(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
+              sj.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
+              sj.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
+              sj.a(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
+              sj.a(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
+              sj.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
+              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref;
+            stackIn_8_1 = new StringBuilder().append("rj.D(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -111,92 +84,79 @@ final class rj implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new hh((rj) (this)));
+        return (Iterator) ((Object) new hh(this));
     }
 
     final void a(gb param0, int param1) {
         try {
-            if (null != param0.field_j) {
-                param0.e(0);
-            }
-            param0.field_j = this.field_e.field_j;
-            param0.field_k = this.field_e;
-            param0.field_j.field_k = param0;
-            if (param1 != 8466) {
-                java.applet.Applet var4 = (java.applet.Applet) null;
-                rj.a((java.applet.Applet) null, (byte) -6);
-            }
-            param0.field_k.field_j = param0;
+          if (null != param0.field_j) {
+            param0.e(0);
+          }
+          param0.field_j = this.field_e.field_j;
+          param0.field_k = this.field_e;
+          param0.field_j.field_k = param0;
+          if (param1 != 8466) {
+            java.applet.Applet var4 = (java.applet.Applet) null;
+            rj.a((java.applet.Applet) null, (byte) -6);
+          }
+          param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "rj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_f = null;
         if (param0 != 59) {
-            field_a = -62;
-            field_d = null;
-            return;
+          field_a = -62;
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 == 122) {
-          if (param0 < 65) {
-            if (param0 >= 97) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        if (param1 != 122) {
           rj.a((byte) -18);
-          if (param0 >= 65) {
-            if (param0 > 90) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (param0 >= 97) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
+          if (param0 < 65) {
+            if (param0 < 97) {
               return false;
             }
+            if (param0 <= 122) {
+              return true;
+            }
+            return false;
           }
+          if (param0 <= 90) {
+            return true;
+          }
+          if (param0 < 97) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
         }
+        if (param0 >= 65) {
+          if (param0 <= 90) {
+            return true;
+          }
+          if (param0 < 97) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
+        }
+        if (param0 < 97) {
+          return false;
+        }
+        if (param0 <= 122) {
+          return true;
+        }
+        return false;
     }
 
     static {

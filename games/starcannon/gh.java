@@ -9,9 +9,9 @@ final class gh extends dk {
     private gh(String param0, de param1, qg param2) {
         super(param0, param1, param2);
         try {
-            this.field_o = eh.field_j.field_p;
+          this.field_o = eh.field_j.field_p;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,35 +23,20 @@ final class gh extends dk {
         RuntimeException var2_ref = null;
         var3 = StarCannon.field_A;
         try {
-          L0: {
-            var4 = (hb) ((Object) hi.field_f.c(-3905));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  var2 = sd.field_d.c(-3905);
-                  if (param0 < -27) {
-                    break L2;
-                  } else {
-                    field_A = (String) null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    u.a(param1, 1);
-                    var2 = sd.field_d.a(-16913);
-                    continue L3;
-                  }
-                }
-              } else {
-                hb.a(107, param1, var4);
-                var4 = (hb) ((Object) hi.field_f.a(-16913));
-                continue L1;
-              }
-            }
+          var4 = (hb) (hi.field_f.c(-3905));
+          while (var4 != null) {
+            hb.a(107, param1, var4);
+            var4 = (hb) (hi.field_f.a(-16913));
           }
+          var2 = sd.field_d.c(-3905);
+          if (param0 >= -27) {
+            field_A = (String) null;
+          }
+          while (var2 != null) {
+            u.a(param1, 1);
+            var2 = sd.field_d.a(-16913);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -62,27 +47,27 @@ final class gh extends dk {
     gh(String param0, qg param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_z = param2 ? true : false;
+          this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private gh(String param0, qg param1) {
         this(param0, eh.field_j.field_d, param1);
         try {
-            this.field_o = eh.field_j.field_p;
+          this.field_o = eh.field_j.field_p;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "gh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void e(int param0) {
         if (param0 != 13329) {
-            field_B = -72L;
-            field_C = null;
-            field_A = null;
-            return;
+          field_B = -72L;
+          field_C = null;
+          field_A = null;
+          return;
         }
         field_C = null;
         field_A = null;
@@ -90,34 +75,16 @@ final class gh extends dk {
 
     final static boolean f(int param0) {
         if (param0 != -23093) {
-            gh.f(-117);
-            return m.field_c;
+          gh.f(-117);
+          return m.field_c;
         }
         return m.field_c;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (this.field_z) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((gh) (this)).field_z = stackIn_3_1 != 0;
+        this.field_z = !this.field_z ? true : false;
         super.a(param0, 93, param2, param3);
-        if (param1 > 59) {
-          return;
-        } else {
+        if (param1 <= 59) {
           gh.e(116);
           return;
         }

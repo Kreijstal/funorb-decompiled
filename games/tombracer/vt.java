@@ -8,7 +8,7 @@ final class vt {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 51) {
-            vt.a((byte) -125);
+          vt.a((byte) -125);
         }
     }
 

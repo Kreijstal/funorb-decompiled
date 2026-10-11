@@ -12,14 +12,12 @@ public class el {
     private static boolean field_a;
 
     public static File a(String param0, byte param1) {
-        String var3;
-        if (param1 != -8) {
-          var3 = (String) null;
-          el.a((String) null, (byte) 113);
-          return el.a(field_c, field_b, -58, param0);
-        } else {
+        if (param1 == -8) {
           return el.a(field_c, field_b, -58, param0);
         }
+        String var3 = (String) null;
+        el.a((String) null, (byte) 113);
+        return el.a(field_c, field_b, -58, param0);
     }
 
     private el() throws Throwable {
@@ -36,47 +34,34 @@ public class el {
         field_b = param1;
         field_c = param2;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_e = (String) null;
-                break L1;
-              }
-            }
-            field_e = System.getProperty("user.home");
-            if (null != field_e) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              field_a = true;
-              if (field_e != null) {
-                return;
-              } else {
-                field_e = "~/";
-                return;
-              }
-            }
+          if (param0 != 0) {
+            field_e = (String) null;
           }
+          field_e = System.getProperty("user.home");
+          if (null == field_e) {
+            field_a = true;
+            if (field_e != null) {
+              return;
+            }
+            field_e = "~/";
+            return;
+          }
+          field_e = field_e + "/";
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (Exception) (Object) decompiledCaughtException;
           field_a = true;
-          if (field_e == null) {
-            field_e = "~/";
-            return;
-          } else {
+          if (field_e != null) {
             return;
           }
-        }
-        field_a = true;
-        if (field_e == null) {
           field_e = "~/";
           return;
-        } else {
+        }
+        field_a = true;
+        if (field_e != null) {
           return;
         }
+        field_e = "~/";
     }
 
     static {

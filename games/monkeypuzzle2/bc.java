@@ -14,27 +14,20 @@ final class bc {
         RuntimeException decompiledCaughtException = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = -64 % ((param2 - -8) / 50);
-            var3_int = 0;
-            L1: while (true) {
-              if ((param1 ^ -1) >= -1) {
-                stackIn_5_0 = var3_int;
-                break L0;
-              } else {
-                var3_int = 1 & param0 | var3_int << -191611743;
-                param1--;
-                param0 = param0 >>> 1;
-                continue L1;
-              }
-            }
+          var4 = -64 % ((param2 + 8) / 50);
+          var3_int = 0;
+          while (param1 > 0) {
+            var3_int = 1 & param0 | var3_int << 1;
+            param1--;
+            param0 = param0 >>> 1;
           }
+          stackIn_5_0 = var3_int;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var3), field_z + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_5_0;
     }
 
     static {

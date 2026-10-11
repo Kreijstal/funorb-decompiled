@@ -8,7 +8,7 @@ final class gb extends ef {
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         param2.drawImage(this.field_e, param1, param0, (java.awt.image.ImageObserver) ((Object) this.field_j));
-        int var5 = -89 % ((param3 - -33) / 52);
+        int var5 = -89 % ((param3 + 33) / 52);
     }
 
     final void a(int param0, byte param1, java.awt.Component param2, int param3) {

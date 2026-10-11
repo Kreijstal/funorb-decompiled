@@ -10,72 +10,69 @@ final class nd {
 
     private final long b(int param0) {
         if (this.field_c instanceof Long) {
-            return ((Long) (this.field_c)).longValue();
+          return ((Long) (this.field_c)).longValue();
         }
         if (this.field_c instanceof Integer) {
-            return ((Integer) (this.field_c)).longValue();
+          return ((Integer) (this.field_c)).longValue();
         }
         if (param0 > -59) {
-            this.field_c = (Object) null;
-            if (!(!(this.field_c instanceof Short))) {
-                return ((Short) (this.field_c)).longValue();
-            }
-            if (!(!(this.field_c instanceof Byte))) {
-                return ((Byte) (this.field_c)).longValue();
-            }
-            if (this.field_c instanceof Double) {
-                return ((Double) (this.field_c)).longValue();
-            }
-            if (!(!(this.field_c instanceof Float))) {
-                return ((Float) (this.field_c)).longValue();
-            }
-            throw new ClassCastException();
-        }
-        if (!(!(this.field_c instanceof Short))) {
+          this.field_c = (Object) null;
+          if (this.field_c instanceof Short) {
             return ((Short) (this.field_c)).longValue();
-        }
-        if (!(!(this.field_c instanceof Byte))) {
+          }
+          if (this.field_c instanceof Byte) {
             return ((Byte) (this.field_c)).longValue();
+          }
+          if (this.field_c instanceof Double) {
+            return ((Double) (this.field_c)).longValue();
+          }
+          if (this.field_c instanceof Float) {
+            return ((Float) (this.field_c)).longValue();
+          }
+          throw new ClassCastException();
+        }
+        if (this.field_c instanceof Short) {
+          return ((Short) (this.field_c)).longValue();
+        }
+        if (this.field_c instanceof Byte) {
+          return ((Byte) (this.field_c)).longValue();
         }
         if (this.field_c instanceof Double) {
-            return ((Double) (this.field_c)).longValue();
+          return ((Double) (this.field_c)).longValue();
         }
-        if (!(!(this.field_c instanceof Float))) {
-            return ((Float) (this.field_c)).longValue();
+        if (this.field_c instanceof Float) {
+          return ((Float) (this.field_c)).longValue();
         }
         throw new ClassCastException();
     }
 
     public final String toString() {
-        if (!(!this.field_e)) {
-            return cq.a(this.field_c, (byte) -75) + "{" + this.field_c + "}";
+        if (this.field_e) {
+          return cq.a(this.field_c, (byte) -75) + "{" + this.field_c + "}";
         }
-        if (!(this.field_c != null)) {
-            return "null";
+        if (this.field_c == null) {
+          return "null";
         }
         return this.field_c.toString();
     }
 
     final int a(int param0) {
-        if (param0 == 2) {
-          if (this.field_c instanceof Integer) {
-            return ((Integer) (this.field_c)).intValue();
-          } else {
+        if (param0 != 2) {
+          if (!(this.field_c instanceof Integer)) {
             return (int)this.b(-101);
           }
-        } else {
-          if (this.field_c instanceof Integer) {
-            return ((Integer) (this.field_c)).intValue();
-          } else {
-            return (int)this.b(-101);
-          }
+          return ((Integer) (this.field_c)).intValue();
         }
+        if (!(this.field_c instanceof Integer)) {
+          return (int)this.b(-101);
+        }
+        return ((Integer) (this.field_c)).intValue();
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -114) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;
@@ -113,10 +110,10 @@ final class nd {
 
     nd(Object param0) {
         try {
-            this.field_c = param0;
-            this.field_e = false;
+          this.field_c = param0;
+          this.field_e = false;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

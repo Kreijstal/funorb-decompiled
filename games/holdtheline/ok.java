@@ -12,7 +12,7 @@ final class ok {
     public static void a(boolean param0) {
         field_f = null;
         if (param0) {
-            field_f = (String) null;
+          field_f = (String) null;
         }
     }
 
@@ -23,58 +23,30 @@ final class ok {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == -6126) {
-              L1: {
-                var2 = kk.a(true, ko.a(param0, -13820));
-                if (var2 != null) {
-                  break L1;
-                } else {
-                  var2 = "";
-                  break L1;
-                }
-              }
-              stackIn_6_0 = (String) (var2);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != -6126) {
+            stackIn_2_0 = (String) null;
+            return stackIn_2_0;
           }
+          var2 = kk.a(true, ko.a(param0, -13820));
+          if (var2 == null) {
+            var2 = "";
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2_ref);
-
-            stackIn_9_1 = new StringBuilder().append("ok.E(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("ok.E(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_6_0;
+          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,22 +56,23 @@ final class ok {
         int fieldTemp$0 = 0;
         int var3_int = 0;
         int var6 = HoldTheLine.field_D;
+        int var3_intLifetime1;
         try {
-            if (!(this.field_c >= this.field_d - -1)) {
-                var3_int = 1 + this.field_c;
-                var4 = new hb[var3_int];
-                for (var5 = 0; var5 < this.field_d; var5++) {
-                    var4[var5] = this.field_a[var5];
-                }
-                this.field_c = var3_int;
-                this.field_a = var4;
+          if (this.field_c < this.field_d + 1) {
+            var3_int = 1 + this.field_c;
+            var4 = new hb[var3_int];
+            for (var5 = 0; var5 < this.field_d; var5++) {
+              var4[var5] = this.field_a[var5];
             }
-            fieldTemp$0 = this.field_d;
-            this.field_d = this.field_d + 1;
-            this.field_a[fieldTemp$0] = param0;
-            var3_int = -24 % ((param1 - -5) / 37);
+            this.field_c = var3_int;
+            this.field_a = var4;
+          }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          this.field_a[fieldTemp$0] = param0;
+          var3_intLifetime1 = -24 % ((param1 + 5) / 37);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -120,27 +93,27 @@ final class ok {
         bd.field_V[kf.field_F] = tc.field_c;
         kf.field_F = kf.field_F + 1;
         if (param0 != 32381) {
-            field_e = 50;
+          field_e = 50;
         }
     }
 
     final static boolean a(byte param0) {
         if (param0 != 55) {
-            ok.a((byte) 60);
+          ok.a((byte) 60);
         }
-        if ((ad.field_c ^ -1) == 0) {
-            if (!(hi.b(1, (byte) 40))) {
-                return false;
-            }
-            ad.field_c = rd.field_e.f((byte) -72);
-            rd.field_e.field_l = 0;
+        if (ad.field_c == -1) {
+          if (!hi.b(1, (byte) 40)) {
+            return false;
+          }
+          ad.field_c = rd.field_e.f((byte) -72);
+          rd.field_e.field_l = 0;
         }
-        if (!(ad.field_c != -2)) {
-            if (!(hi.b(2, (byte) 40))) {
-                return false;
-            }
-            ad.field_c = rd.field_e.k(62);
-            rd.field_e.field_l = 0;
+        if (ad.field_c == -2) {
+          if (!hi.b(2, (byte) 40)) {
+            return false;
+          }
+          ad.field_c = rd.field_e.k(62);
+          rd.field_e.field_l = 0;
         }
         return hi.b(ad.field_c, (byte) 40);
     }

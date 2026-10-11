@@ -12,159 +12,87 @@ final class si extends nn {
     final static int c(int param0, int param1) {
         int var2;
         File var3;
-        if (-1 != (param0 ^ -1)) {
-          if (-1 > (param0 ^ -1)) {
-            L0: {
-              var2 = 1;
-              if (65535 >= param0) {
-                break L0;
-              } else {
-                var2 += 16;
-                param0 = param0 >> 16;
-                break L0;
-              }
-            }
-            L1: {
-              if (-256 <= (param0 ^ -1)) {
-                break L1;
-              } else {
-                var2 += 8;
-                param0 = param0 >> 8;
-                break L1;
-              }
-            }
-            L2: {
-              if ((param0 ^ -1) < -16) {
-                var2 += 4;
-                param0 = param0 >> 4;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (-4 > (param0 ^ -1)) {
-                var2 += 2;
-                param0 = param0 >> 2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if ((param0 ^ -1) >= -2) {
-                break L4;
-              } else {
-                var2++;
-                param0 = param0 >> 1;
-                break L4;
-              }
-            }
-            return var2;
-          } else {
-            L5: {
-              var2 = 2;
-              if (65535 < (param0 ^ -1)) {
-                param0 = param0 >> 16;
-                var2 += 16;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            if (param1 == 1) {
-              L6: {
-                if (param0 < -256) {
-                  param0 = param0 >> 8;
-                  var2 += 8;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if (-16 <= param0) {
-                  break L7;
-                } else {
-                  param0 = param0 >> 4;
-                  var2 += 4;
-                  break L7;
-                }
-              }
-              L8: {
-                if (-4 > param0) {
-                  param0 = param0 >> 2;
-                  var2 += 2;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              L9: {
-                if (param0 < -2) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              return var2;
-            } else {
-              L10: {
-                var3 = (File) null;
-                si.a((File) null, (byte) 38);
-                if (param0 < -256) {
-                  param0 = param0 >> 8;
-                  var2 += 8;
-                  break L10;
-                } else {
-                  break L10;
-                }
-              }
-              L11: {
-                if (-16 <= param0) {
-                  break L11;
-                } else {
-                  param0 = param0 >> 4;
-                  var2 += 4;
-                  break L11;
-                }
-              }
-              L12: {
-                if (-4 > param0) {
-                  param0 = param0 >> 2;
-                  var2 += 2;
-                  break L12;
-                } else {
-                  break L12;
-                }
-              }
-              L13: {
-                if (param0 < -2) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L13;
-                } else {
-                  break L13;
-                }
-              }
-              return var2;
-            }
-          }
-        } else {
+        int var2Lifetime1;
+        if (param0 == 0) {
           return 0;
         }
+        if (param0 > 0) {
+          var2 = 1;
+          if (65535 < param0) {
+            var2 += 16;
+            param0 = param0 >> 16;
+          }
+          if (param0 > 255) {
+            var2 += 8;
+            param0 = param0 >> 8;
+          }
+          if (param0 > 15) {
+            var2 += 4;
+            param0 = param0 >> 4;
+          }
+          if (param0 > 3) {
+            var2 += 2;
+            param0 = param0 >> 2;
+          }
+          if (param0 > 1) {
+            var2++;
+            param0 = param0 >> 1;
+          }
+          return var2;
+        }
+        var2Lifetime1 = 2;
+        if (param0 < -65536) {
+          param0 = param0 >> 16;
+          var2Lifetime1 += 16;
+        }
+        if (param1 == 1) {
+          if (param0 < -256) {
+            param0 = param0 >> 8;
+            var2Lifetime1 += 8;
+          }
+          if (-16 > param0) {
+            param0 = param0 >> 4;
+            var2Lifetime1 += 4;
+          }
+          if (-4 > param0) {
+            param0 = param0 >> 2;
+            var2Lifetime1 += 2;
+          }
+          if (param0 < -2) {
+            var2Lifetime1++;
+            param0 = param0 >> 1;
+          }
+          return var2Lifetime1;
+        }
+        var3 = (File) null;
+        si.a((File) null, (byte) 38);
+        if (param0 < -256) {
+          param0 = param0 >> 8;
+          var2Lifetime1 += 8;
+        }
+        if (-16 > param0) {
+          param0 = param0 >> 4;
+          var2Lifetime1 += 4;
+        }
+        if (-4 > param0) {
+          param0 = param0 >> 2;
+          var2Lifetime1 += 2;
+        }
+        if (param0 < -2) {
+          var2Lifetime1++;
+          param0 = param0 >> 1;
+        }
+        return var2Lifetime1;
     }
 
     final void a(byte[] param0, int param1) {
         try {
-            int var3_int = -124 % ((param1 - -47) / 62);
-            this.field_b = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_b.position(0);
-            this.field_b.put(param0);
+          int var3_int = -124 % ((param1 + 47) / 62);
+          this.field_b = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_b.position(0);
+          this.field_b.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "si.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "si.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -174,63 +102,48 @@ final class si extends nn {
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = -1 % ((39 - param1) / 49);
-            stackIn_1_0 = kq.a((int)param0.length(), param0, (byte) 103);
-            break L0;
-          }
+          var2_int = -1 % ((39 - param1) / 49);
+          stackIn_1_0 = kq.a((int)param0.length(), param0, (byte) 103);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
-
-            stackIn_4_1 = new StringBuilder().append("si.N(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("si.N(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     si() {
     }
 
     final byte[] a(int param0, int param1, int param2) {
-        byte[] var4;
-        java.applet.Applet var5;
-        byte[] var6;
-        if (param2 != 15747) {
-          var5 = (java.applet.Applet) null;
-          si.a((java.applet.Applet) null, (byte) 104);
-          var6 = new byte[param1];
-          var4 = var6;
-          this.field_b.position(param0);
-          this.field_b.get(var6, 0, param1);
-          return var6;
-        } else {
+        byte[] var6 = null;
+        byte[] var4 = null;
+        byte[] var6Lifetime1;
+        byte[] var4Lifetime1;
+        if (param2 == 15747) {
           var6 = new byte[param1];
           var4 = var6;
           this.field_b.position(param0);
           this.field_b.get(var6, 0, param1);
           return var6;
         }
+        java.applet.Applet var5 = (java.applet.Applet) null;
+        si.a((java.applet.Applet) null, (byte) 104);
+        var6Lifetime1 = new byte[param1];
+        var4Lifetime1 = var6Lifetime1;
+        this.field_b.position(param0);
+        this.field_b.get(var6Lifetime1, 0, param1);
+        return var6Lifetime1;
     }
 
     public static void b(int param0) {
@@ -242,15 +155,15 @@ final class si extends nn {
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         kd.field_a[param5] = param4;
         if (param3 != 2) {
-            return;
+          return;
         }
         try {
-            za.field_l[param5] = param2;
-            nj.field_d[param5] = param6;
-            pj.field_k[param5] = param0;
-            rh.field_s[param5] = param1;
+          za.field_l[param5] = param2;
+          nj.field_d[param5] = param6;
+          pj.field_k[param5] = param0;
+          rh.field_s[param5] = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "si.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "si.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -260,80 +173,44 @@ final class si extends nn {
         CharSequence var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = param0.getParameter("username");
-              if (var2 == null) {
-                break L1;
-              } else {
-                var3 = (CharSequence) ((Object) var2);
-                if (-1L != (vo.a(var3, 7441) ^ -1L)) {
-                  L2: {
-                    if (param1 <= -42) {
-                      break L2;
-                    } else {
-                      field_c = -99;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  break L1;
-                }
+          var2 = param0.getParameter("username");
+          if (var2 != null) {
+            var3 = (CharSequence) ((Object) var2);
+            if (vo.a(var3, 7441) != 0L) {
+              if (param1 > -42) {
+                field_c = -99;
               }
+              return;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (runtimeException);
-
-            stackIn_9_1 = new StringBuilder().append("si.M(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_9_0 = runtimeException;
+          stackIn_9_1 = new StringBuilder().append("si.M(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final byte[] a(boolean param0) {
-        byte[] var2;
-        byte[] var3;
-        var3 = new byte[this.field_b.capacity()];
-        var2 = var3;
+        byte[] var3 = new byte[this.field_b.capacity()];
+        byte[] var2 = var3;
         this.field_b.position(0);
         this.field_b.get(var3);
-        if (param0) {
-          this.a(false);
-          return var3;
-        } else {
+        if (!param0) {
           return var3;
         }
+        this.a(false);
+        return var3;
     }
 
     static {

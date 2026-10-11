@@ -10,64 +10,46 @@ final class ef extends pl {
         field_G = null;
         field_F = null;
         if (param0 != 19291) {
-            ef.d(61);
-            field_H = null;
-            return;
+          ef.d(61);
+          field_H = null;
+          return;
         }
         field_H = null;
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (this.field_z) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((ef) (this)).field_z = stackIn_3_1 != 0;
+        this.field_z = !this.field_z ? true : false;
         super.b(-108, param1, param2, param3);
-        if (param0 > -45) {
-          this.b(-80, 25, -112, 4);
-          return;
-        } else {
+        if (param0 <= -45) {
           return;
         }
+        this.b(-80, 25, -112, 4);
     }
 
     ef(String param0, ce param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_z = param2 ? true : false;
+          this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private ef(String param0, ce param1) {
         this(param0, kc.field_H.field_c, param1);
         try {
-            this.field_w = kc.field_H.field_a;
+          this.field_w = kc.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private ef(String param0, bf param1, ce param2) {
         super(param0, param1, param2);
         try {
-            this.field_w = kc.field_H.field_a;
+          this.field_w = kc.field_H.field_a;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

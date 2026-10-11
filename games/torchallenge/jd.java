@@ -16,7 +16,7 @@ final class jd extends RuntimeException {
         field_d = null;
         field_g = null;
         if (param0 != 640) {
-            return;
+          return;
         }
         field_f = null;
         field_b = null;
@@ -28,7 +28,7 @@ final class jd extends RuntimeException {
     }
 
     final static void a(byte param0) {
-        int decompiledRegionSelector0 = 0;
+        int var10 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -40,145 +40,78 @@ final class jd extends RuntimeException {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var8Lifetime1Lifetime1;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var1_int = rf.field_ib;
-              var4 = 0;
-              var5 = 0;
-              var6 = 50;
-              if (rf.field_ib != 0) {
-                break L1;
-              } else {
-                if (-101 < (nd.field_e ^ -1)) {
-                  var6 = 100;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (nd.field_e >= var6) {
-                if (nd.field_e > gh.field_n[rf.field_ib] - var6) {
-                  var4 = 1;
-                  var5 = (-nd.field_e + gh.field_n[rf.field_ib]) * 256 / var6;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              } else {
-                var4 = 1;
-                var5 = 256 * nd.field_e / var6;
-                break L2;
-              }
-            }
-            L3: {
-              if (5 != rf.field_ib) {
-                break L3;
-              } else {
-                var4 = 1;
-                var5 = 0;
-                break L3;
-              }
-            }
-            L4: {
-              if (5 > rf.field_ib) {
-                bh.d((byte) -128);
-                break L4;
-              } else {
-                var1_int = 4;
-                break L4;
-              }
-            }
-            L5: {
-              qg.f(0, 0, 640, 60, 1);
-              qg.f(0, 419, 640, 60, 1);
-              qg.a(pf.field_g);
-              qg.a(0, 59, 640, 419);
-              if (param0 == 68) {
-                break L5;
-              } else {
-                field_g = (int[]) null;
-                break L5;
-              }
-            }
-            var8 = 0;
-            L6: while (true) {
-              if (s.field_l[var1_int] <= var8) {
-                L7: {
-                  qg.b(pf.field_g);
-                  if (var4 != 0) {
-                    dg.a(var5, true);
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                L8: {
-                  if ((rf.field_ib ^ -1) > -6) {
-                    var8 = -1;
-                    var9 = -1;
-                    var10 = 0;
-                    L9: while (true) {
-                      if (var10 >= dg.field_bb[rf.field_ib].length) {
-                        break L8;
-                      } else {
-                        L10: {
-                          var8 = v.field_X[0][rf.field_ib][var10][0];
-                          var9 = v.field_X[1][rf.field_ib][var10][1];
-                          if (nd.field_e < var8) {
-                            break L10;
-                          } else {
-                            if (var9 < nd.field_e) {
-                              break L10;
-                            } else {
-                              L11: {
-                                var7 = lc.a(var10, 1);
-                                if (0 > var7) {
-                                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
-                                  break L11;
-                                } else {
-                                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
-                                  break L11;
-                                }
-                              }
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            }
-                          }
-                        }
-                        var10++;
-                        continue L9;
-                      }
-                    }
-                  } else {
-                    break L8;
-                  }
-                }
-                decompiledRegionSelector0 = 0;
-                break L0;
-              } else {
-                var2 = -cg.field_e[0] + (gh.field_k[var1_int][var8][0] << -1558422428);
-                var3 = -cg.field_e[1] + (gh.field_k[var1_int][var8][1] + 59 << 1495987556);
-                ef.field_h[var1_int][var8].b(0, 0, var2, var3, 0, 4096);
-                var8++;
-                continue L6;
-              }
-            }
+          var1_int = rf.field_ib;
+          var4 = 0;
+          var5 = 0;
+          var6 = 50;
+          if (rf.field_ib == 0 &&
+            nd.field_e < 100) {
+            var6 = 100;
           }
+          if (nd.field_e >= var6) {
+            if (nd.field_e > gh.field_n[rf.field_ib] - var6) {
+              var4 = 1;
+              var5 = (-nd.field_e + gh.field_n[rf.field_ib]) * 256 / var6;
+            }
+          } else {
+            var4 = 1;
+            var5 = 256 * nd.field_e / var6;
+          }
+          if (5 == rf.field_ib) {
+            var4 = 1;
+            var5 = 0;
+          }
+          if (5 > rf.field_ib) {
+            bh.d((byte) -128);
+          } else {
+            var1_int = 4;
+          }
+          qg.f(0, 0, 640, 60, 1);
+          qg.f(0, 419, 640, 60, 1);
+          qg.a(pf.field_g);
+          qg.a(0, 59, 640, 419);
+          if (param0 != 68) {
+            field_g = (int[]) null;
+          }
+          for (var8 = 0; s.field_l[var1_int] > var8; var8++) {
+            var2 = -cg.field_e[0] + (gh.field_k[var1_int][var8][0] << 4);
+            var3 = -cg.field_e[1] + (gh.field_k[var1_int][var8][1] + 59 << 4);
+            ef.field_h[var1_int][var8].b(0, 0, var2, var3, 0, 4096);
+          }
+          qg.b(pf.field_g);
+          if (var4 != 0) {
+            dg.a(var5, true);
+          }
+          if (rf.field_ib < 5) {
+            var8Lifetime1 = -1;
+            var9 = -1;
+            for (var10 = 0; var10 < dg.field_bb[rf.field_ib].length; var10++) {
+              var8Lifetime1Lifetime1 = v.field_X[0][rf.field_ib][var10][0];
+              var9Lifetime1 = v.field_X[1][rf.field_ib][var10][1];
+              if (nd.field_e >= var8Lifetime1Lifetime1 &&
+                var9Lifetime1 >= nd.field_e) {
+                var7 = lc.a(var10, 1);
+                if (0 > var7) {
+                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
+                } else {
+                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
+                }
+                return;
+              }
+            }
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var1), field_z + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

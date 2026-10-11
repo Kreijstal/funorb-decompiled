@@ -16,47 +16,46 @@ final class te extends si {
         field_N = null;
         field_K = null;
         if (param0 != 45) {
-            return;
+          return;
         }
         field_J = null;
         field_I = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (-1 != (param1 ^ -1)) {
-            return;
+        if (param1 != 0) {
+          return;
         }
-        if (!(this.field_G != null)) {
-            return;
+        if (this.field_G == null) {
+          return;
         }
         if (this.field_H == 0) {
-            return;
+          return;
         }
-        if (!(this.field_H != 256)) {
-            this.field_G.a(param0 - -this.field_j, param1, param2 - -this.field_m, 0);
-            return;
+        if (this.field_H == 256) {
+          this.field_G.a(param0 + this.field_j, param1, param2 + this.field_m, 0);
+          return;
         }
         o var6 = new o(this.field_G.field_t, this.field_G.field_x);
         cl.a(-119, var6);
         this.field_G.a(0, param1, 0, param3);
         mf.e(4096);
-        var6.c(param2 - -this.field_m, this.field_j + param0, this.field_H);
+        var6.c(param2 + this.field_m, this.field_j + param0, this.field_H);
     }
 
     final static int b(int param0, int param1, int param2) {
-        int var3;
-        if (param0 != 25403) {
-          return -126;
-        } else {
-          var3 = -1 + param1 & param2 >> -170852673;
-          return (param2 - -(param2 >>> -2131518657)) % param1 - -var3;
+        int var3 = 0;
+        if (param0 == 25403) {
+          var3 = -1 + param1 & param2 >> 31;
+          return (param2 + (param2 >>> 31)) % param1 + var3;
         }
+        return -126;
     }
 
     final static String d(byte param0) {
         if (param0 != 18) {
-            te.a((byte) -93);
-            return vc.field_c;
+          te.a((byte) -93);
+          return vc.field_c;
         }
         return vc.field_c;
     }
@@ -69,11 +68,11 @@ final class te extends si {
     te(rc param0) {
         super(param0.field_m, param0.field_j, param0.field_t, param0.field_x, (j) null, (dg) null);
         try {
-            param0.b(this.field_x, this.field_t, 0, 0, 0);
-            this.field_H = 256;
-            this.field_G = param0;
+          param0.b(this.field_x, this.field_t, 0, 0, 0);
+          this.field_H = 256;
+          this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

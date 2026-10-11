@@ -17,32 +17,21 @@ final class la extends ej {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          L0: {
-            var4 = (fb) ((Object) bj.field_O.b((byte) 89));
-            L1: while (true) {
-              if (var4 == null) {
-                var5 = (jg) ((Object) pc.field_e.b((byte) 86));
-                L2: while (true) {
-                  if (var5 == null) {
-                    if (param1 == 0) {
-                      break L0;
-                    } else {
-                      la.a(41, -85);
-                      return;
-                    }
-                  } else {
-                    gd.a(var5, (byte) 86, param0);
-                    var5 = (jg) ((Object) pc.field_e.c((byte) 90));
-                    continue L2;
-                  }
-                }
-              } else {
-                dn.a(var4, param0, 111);
-                var4 = (fb) ((Object) bj.field_O.c((byte) 87));
-                continue L1;
-              }
-            }
+          var4 = (fb) (bj.field_O.b((byte) 89));
+          while (var4 != null) {
+            dn.a(var4, param0, 111);
+            var4 = (fb) (bj.field_O.c((byte) 87));
           }
+          var5 = (jg) (pc.field_e.b((byte) 86));
+          while (var5 != null) {
+            gd.a(var5, (byte) 86, param0);
+            var5 = (jg) (pc.field_e.c((byte) 90));
+          }
+          if (param1 == 0) {
+            return;
+          }
+          la.a(41, -85);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -53,47 +42,42 @@ final class la extends ej {
     public static void b(int param0) {
         field_j = null;
         field_f = null;
-        if (param0 > -52) {
-          field_h = (String) null;
-          field_k = null;
-          field_h = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 <= -52) {
           field_k = null;
           field_h = null;
           field_g = null;
           return;
         }
+        field_h = (String) null;
+        field_k = null;
+        field_h = null;
+        field_g = null;
     }
 
     la() {
     }
 
     final byte[] a(int param0) {
-        byte[] var2;
-        byte[] var3;
-        var3 = new byte[this.field_i.capacity()];
-        var2 = var3;
+        byte[] var3 = new byte[this.field_i.capacity()];
+        byte[] var2 = var3;
         this.field_i.position(0);
-        if (param0 < 14) {
-          return (byte[]) null;
-        } else {
+        if (param0 >= 14) {
           this.field_i.get(var3);
           return var3;
         }
+        return (byte[]) null;
     }
 
     final void a(int param0, byte[] param1) {
         try {
-            this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
-            this.field_i.position(0);
-            this.field_i.put(param1);
-            if (param0 <= 94) {
-                field_f = (String[]) null;
-            }
+          this.field_i = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.field_i.position(0);
+          this.field_i.put(param1);
+          if (param0 <= 94) {
+            field_f = (String[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "la.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

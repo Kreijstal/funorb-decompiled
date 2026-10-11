@@ -17,7 +17,7 @@ public class f {
 
     public static File a(int param0, String param1) {
         if (param0 != -3455) {
-            return (File) null;
+          return (File) null;
         }
         return f.a(-31192, param1, field_d, field_a);
     }
@@ -29,47 +29,25 @@ public class f {
         field_d = param1;
         field_a = param2;
         try {
-          L0: {
-            L1: {
-              if (param0 == 32) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                f.a((byte) -102, (String) null, 46);
-                break L1;
-              }
+          if (param0 != 32) {
+            var4 = (String) null;
+            f.a((byte) -102, (String) null, 46);
+          }
+          field_e = System.getProperty("user.home");
+          if (null != field_e) {
+            field_e = field_e + "/";
+            if (field_e == null) {
+              field_e = "~/";
             }
-            field_e = System.getProperty("user.home");
-            if (null == field_e) {
-              break L0;
-            } else {
-              L2: {
-                field_e = field_e + "/";
-                if (field_e == null) {
-                  field_e = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              field_b = true;
-              return;
-            }
+            field_b = true;
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L3;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
-        L4: {
-          if (field_e == null) {
-            field_e = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        if (field_e == null) {
+          field_e = "~/";
         }
         field_b = true;
     }

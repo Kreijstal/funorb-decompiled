@@ -20,57 +20,40 @@ final class ll {
         field_h = null;
         field_g = null;
         if (param0 <= 78) {
-            ll.a(-66, -115);
-            field_d = null;
-            return;
+          ll.a(-66, -115);
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     final static int a(int param0, int param1) {
+        int var3 = 0;
         g[] var2 = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         g var4 = null;
         int var5 = 0;
         g[] var6 = null;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var6 = qg.field_a;
-            var2 = var6;
-            var3 = param1;
-            L1: while (true) {
-              if (var6.length <= var3) {
-                stackIn_9_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var4 = var6[var3];
-                if (var4.field_f == param0) {
-                  stackIn_6_0 = var4.field_a;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var3++;
-                  continue L1;
-                }
-              }
+          var6 = qg.field_a;
+          var2 = var6;
+          for (var3 = param1; var6.length > var3; var3++) {
+            var4 = var6[var3];
+            if (var4.field_f == param0) {
+              stackIn_6_0 = var4.field_a;
+              return stackIn_6_0;
             }
           }
+          stackIn_9_0 = -1;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw tba.a((Throwable) ((Object) var2_ref), "ll.B(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0;
-        } else {
-          return stackIn_9_0;
         }
     }
 

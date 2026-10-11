@@ -11,29 +11,22 @@ abstract class fe {
     abstract java.net.Socket a(int param0) throws IOException;
 
     final static void a(boolean param0) {
-        L0: {
-          if (jj.field_d != null) {
-            jj.field_d.g((byte) -42);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (jj.field_d != null) {
+          jj.field_d.g((byte) -42);
         }
-        if (!param0) {
-          fe.a((byte) -109);
-          te.field_M = new ij();
-          ke.field_s.b(te.field_M, (byte) 110);
-          return;
-        } else {
+        if (param0) {
           te.field_M = new ij();
           ke.field_s.b(te.field_M, (byte) 110);
           return;
         }
+        fe.a((byte) -109);
+        te.field_M = new ij();
+        ke.field_s.b(te.field_M, (byte) 110);
     }
 
     final java.net.Socket b(int param0) throws IOException {
         if (param0 < 80) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_a, this.field_b);
     }
@@ -41,7 +34,7 @@ abstract class fe {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -112) {
-            fe.a((byte) 80);
+          fe.a((byte) 80);
         }
     }
 

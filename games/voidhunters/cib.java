@@ -8,7 +8,7 @@ final class cib {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -18013) {
-            cib.a(124);
+          cib.a(124);
         }
     }
 

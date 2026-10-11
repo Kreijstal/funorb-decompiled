@@ -15,7 +15,7 @@ final class nf {
         field_d = null;
         field_e = null;
         if (param0 != -107) {
-            field_d = (ak) null;
+          field_d = (ak) null;
         }
     }
 

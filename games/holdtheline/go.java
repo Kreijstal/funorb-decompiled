@@ -18,57 +18,30 @@ final class go {
     static ma field_k;
 
     final static boolean a(int param0) {
-        int stackIn_8_0 = 0;
-        L0: {
-          if (param0 >= 61) {
-            break L0;
-          } else {
-            go.a(91, -85);
-            break L0;
-          }
+        boolean stackIn_8_0 = false;
+        if (param0 < 61) {
+          go.a(91, -85);
         }
-        L1: {
-          L2: {
-            if (pj.b((byte) 114)) {
-              break L2;
-            } else {
-              L3: {
-                if (!ll.field_a) {
-                  break L3;
-                } else {
-                  if (!ik.field_f) {
-                    break L3;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_8_0 = 0;
-              break L1;
-            }
-          }
-          stackIn_8_0 = 1;
-          break L1;
+        boolean decompiledFrameRemainder0 = true;
+        if (!pj.b((byte) 114) && (!ll.field_a ||
+          !ik.field_f)) {
+          stackIn_8_0 = false;
+          decompiledFrameRemainder0 = false;
         }
-        return stackIn_8_0 != 0;
+        else {
+          stackIn_8_0 = true;
+        }
+        return stackIn_8_0;
     }
 
     final boolean b(byte param0) {
         if (param0 != 58) {
-            this.field_h = false;
+          this.field_h = false;
         }
         return this.field_f != null ? true : false;
     }
 
     final static void b(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -78,51 +51,24 @@ final class go {
         RuntimeException var1_ref = null;
         var4 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -69) {
-                break L1;
-              } else {
-                field_g = (int[][]) null;
-                break L1;
-              }
-            }
-            var5 = pk.field_I;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L2: while (true) {
-              if (var3 <= var2) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var5[incrementValue$23] = 0;
-                continue L2;
-              }
-            }
+          if (param0 > -69) {
+            field_g = (int[][]) null;
           }
+          var5 = pk.field_I;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          while (var3 > var2) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -132,126 +78,79 @@ final class go {
 
     final static void a(int param0, int param1) {
         if (param0 != 0) {
-            field_n = false;
+          field_n = false;
         }
         v.field_B = param1;
     }
 
     final static void a(int param0, int param1, String[] param2, java.applet.Applet param3, int param4, int param5) {
+        int var7 = 0;
         String var6 = null;
         int var8 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
-        int var7 = 0;
         var8 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              ec.field_z = param3.getParameter("overxgames");
-              if (ec.field_z == null) {
-                ec.field_z = "0";
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              jk.field_r = param3.getParameter("overxachievements");
-              if (null != jk.field_r) {
-                break L2;
-              } else {
-                jk.field_r = "0";
-                break L2;
-              }
-            }
-            L3: {
-              var6 = param3.getParameter("currency");
-              if (var6 == null) {
-                le.field_r = 2;
-                break L3;
-              } else {
-                if (!ik.a((CharSequence) ((Object) var6), true)) {
-                  le.field_r = 2;
-                  break L3;
-                } else {
-                  le.field_r = mo.a((CharSequence) ((Object) var6), (byte) -116);
-                  break L3;
-                }
-              }
-            }
-            ol.field_g = param0;
-            t.field_n = param1;
-            qe.field_b = param4;
-            lf.field_a = new hj[param2.length];
-            var7 = param5;
-            L4: while (true) {
-              if (var7 >= param2.length) {
-                qh.field_b = param2;
-                break L0;
-              } else {
-                lf.field_a[var7] = new hj(317, 34);
-                var7++;
-                continue L4;
-              }
+          ec.field_z = param3.getParameter("overxgames");
+          if (ec.field_z == null) {
+            ec.field_z = "0";
+          }
+          jk.field_r = param3.getParameter("overxachievements");
+          if (null == jk.field_r) {
+            jk.field_r = "0";
+          }
+          var6 = param3.getParameter("currency");
+          if (var6 == null) {
+            le.field_r = 2;
+          } else {
+            if (!ik.a((CharSequence) ((Object) var6), true)) {
+              le.field_r = 2;
+            } else {
+              le.field_r = mo.a((CharSequence) ((Object) var6), (byte) -116);
             }
           }
+          ol.field_g = param0;
+          t.field_n = param1;
+          qe.field_b = param4;
+          lf.field_a = new hj[param2.length];
+          for (var7 = param5; var7 < param2.length; var7++) {
+            lf.field_a[var7] = new hj(317, 34);
+          }
+          qh.field_b = param2;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var6_ref);
-
-            stackIn_18_1 = new StringBuilder().append("go.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_18_0 = var6_ref;
+          stackIn_18_1 = new StringBuilder().append("go.G(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param3 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param3 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ',' + param4 + ',' + param5 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final mg c(byte param0) {
         if (null != this.field_f) {
-            return this.field_f;
+          return this.field_f;
         }
-        int var3 = 8 / ((param0 - -58) / 47);
+        int var3 = 8 / ((param0 + 58) / 47);
         hj var2 = wd.b(this.field_b, (byte) -63);
         if (var2 != null) {
-            this.field_f = new mg(var2, this.field_c, this.field_h, this.field_m);
+          this.field_f = new mg(var2, this.field_c, this.field_h, this.field_m);
         }
         return this.field_f;
     }
@@ -260,7 +159,7 @@ final class go {
         field_g = (int[][]) null;
         field_l = null;
         if (param0 > -90) {
-            field_e = -50;
+          field_e = -50;
         }
         field_a = null;
         field_k = null;
@@ -271,25 +170,25 @@ final class go {
 
     go(String param0) {
         try {
-            this.field_m = false;
-            this.field_b = param0;
-            this.field_c = 4096;
-            this.field_h = false;
-            this.field_f = null;
+          this.field_m = false;
+          this.field_b = param0;
+          this.field_c = 4096;
+          this.field_h = false;
+          this.field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     go(String param0, int param1, boolean param2, boolean param3) {
         try {
-            this.field_b = param0;
-            this.field_m = param3 ? true : false;
-            this.field_h = param2 ? true : false;
-            this.field_f = null;
-            this.field_c = param1;
+          this.field_b = param0;
+          this.field_m = param3 ? true : false;
+          this.field_h = param2 ? true : false;
+          this.field_f = null;
+          this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "go.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

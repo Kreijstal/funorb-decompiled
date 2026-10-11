@@ -7,94 +7,75 @@ abstract class eca extends sc implements en {
     private uf field_c;
 
     final String d(int param0) {
-        String var3;
-        if (param0 != 16384) {
-          var3 = (String) null;
-          this.a((String) null, -101);
-          return this.b(this.field_c.field_j, -1);
-        } else {
+        if (param0 == 16384) {
           return this.b(this.field_c.field_j, -1);
         }
+        String var3 = (String) null;
+        this.a((String) null, -101);
+        return this.b(this.field_c.field_j, -1);
     }
 
     final qrb b(int param0) {
-        if (param0 != -1) {
-          field_d = (String) null;
-          return this.a(this.field_c.field_j, 16384);
-        } else {
+        if (param0 == -1) {
           return this.a(this.field_c.field_j, 16384);
         }
+        field_d = (String) null;
+        return this.a(this.field_c.field_j, 16384);
     }
 
     public final void a(uf param0, byte param1) {
         if (param1 != 100) {
-            return;
+          return;
         }
         try {
-            this.a(20);
+          this.a(20);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "eca.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "eca.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final boolean b(byte param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 <= -100) {
-          if (this.field_c.field_j != null) {
-            if (this.field_c.field_j.length() == 0) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 > -100) {
           this.field_c = (uf) null;
-          if (this.field_c.field_j == null) {
-            return true;
-          } else {
-            L0: {
-              if (this.field_c.field_j.length() != 0) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (this.field_c.field_j != null) {
+            return this.field_c.field_j.length() == 0 ? true : false;
           }
+          return true;
         }
+        if (this.field_c.field_j == null) {
+          return true;
+        }
+        if (this.field_c.field_j.length() != 0) {
+          return false;
+        }
+        return true;
     }
 
     public static void e(int param0) {
         if (param0 != -27183) {
-            field_d = (String) null;
-            field_d = null;
-            return;
+          field_d = (String) null;
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     public final void a(int param0, uf param1) {
         try {
-            if (param0 != -12409) {
-                uf var4 = (uf) null;
-                this.a((uf) null, (byte) 43);
-            }
+          if (param0 != -12409) {
+            uf var4 = (uf) null;
+            this.a((uf) null, (byte) 43);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "eca.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "eca.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     eca(uf param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "eca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "eca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

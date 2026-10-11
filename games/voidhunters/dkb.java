@@ -6,14 +6,14 @@ final class dkb implements dja {
     static String field_a;
 
     public static void b(byte param0) {
-        int var1 = 94 / ((param0 - -39) / 59);
+        int var1 = 94 / ((param0 + 39) / 59);
         field_a = null;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) 13);
-            return (tv[]) ((Object) new qob[param1]);
+          this.a((byte) 13);
+          return (tv[]) ((Object) new qob[param1]);
         }
         return (tv[]) ((Object) new qob[param1]);
     }

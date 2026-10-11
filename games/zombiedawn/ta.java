@@ -11,42 +11,26 @@ final class ta {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = ZombieDawn.field_J;
         try {
-          L0: {
-            L1: {
-              en.c();
-              jj.field_H = new int[260];
-              f.field_a = 11;
-              if (param0 == 255) {
-                break L1;
-              } else {
-                field_a = (String) null;
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              if (-257 >= (var1_int ^ -1)) {
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (jj.field_H.length <= var5) {
-                    break L0;
-                  } else {
-                    jj.field_H[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                jj.field_H[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L2;
-              }
-            }
+          en.c();
+          jj.field_H = new int[260];
+          f.field_a = 11;
+          if (param0 != 255) {
+            field_a = (String) null;
           }
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            jj.field_H[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (jj.field_H.length > var5) {
+            jj.field_H[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -56,7 +40,7 @@ final class ta {
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
     }

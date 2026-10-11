@@ -21,7 +21,7 @@ final class de extends ug {
         field_f = null;
         field_j = null;
         if (param0 != -6742) {
-            return;
+          return;
         }
         field_n = null;
     }

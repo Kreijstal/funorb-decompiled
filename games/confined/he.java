@@ -15,7 +15,7 @@ final class he {
         field_c = null;
         field_d = null;
         if (param0 <= 70) {
-            he.a((byte) -66);
+          he.a((byte) -66);
         }
     }
 

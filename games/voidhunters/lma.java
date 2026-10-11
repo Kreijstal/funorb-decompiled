@@ -5,19 +5,16 @@ final class lma {
     private static String field_z;
 
     final static int a(int param0, int param1, int param2, byte param3) {
-        if (param1 + param0 - -param2 <= dma.field_j) {
+        if (!(param1 + param0 + param2 > dma.field_j)) {
           return param0 + param1;
-        } else {
-          if (-param2 + param1 >= 0) {
-            return -param2 + param1;
-          } else {
-            if (param3 != -16) {
-              return -11;
-            } else {
-              return dma.field_j - param2;
-            }
-          }
         }
+        if (-param2 + param1 >= 0) {
+          return -param2 + param1;
+        }
+        if (param3 == -16) {
+          return dma.field_j - param2;
+        }
+        return -11;
     }
 
     static {

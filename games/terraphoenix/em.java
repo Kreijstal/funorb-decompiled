@@ -11,84 +11,63 @@ final class em {
     final int a(int param0, int param1) {
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = Terraphoenix.field_V;
-        if (this.field_d != null) {
-          if (-1 != (this.field_d.length ^ -1)) {
-            if (param1 <= -115) {
-              var3 = 1;
-              L0: while (true) {
-                if (this.field_d.length > var3) {
-                  if ((param0 ^ -1) <= (this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287 ^ -1)) {
-                    var3++;
-                    continue L0;
-                  } else {
-                    return var3 + -1;
-                  }
-                } else {
-                  return this.field_d.length + -1;
-                }
-              }
-            } else {
-              this.a(-82, 56);
-              var3 = 1;
-              L1: while (true) {
-                if (this.field_d.length > var3) {
-                  if ((param0 ^ -1) <= (this.field_d[var3] + this.field_d[var3 + -1] >> -1679860287 ^ -1)) {
-                    var3++;
-                    continue L1;
-                  } else {
-                    return var3 + -1;
-                  }
-                } else {
-                  return this.field_d.length + -1;
-                }
-              }
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (this.field_d == null) {
           return 0;
         }
+        if (this.field_d.length == 0) {
+          return 0;
+        }
+        if (param1 <= -115) {
+          for (var3 = 1; this.field_d.length > var3; var3++) {
+            if (param0 < (this.field_d[var3] + this.field_d[var3 - 1] >> 1)) {
+              return var3 - 1;
+            }
+          }
+          return this.field_d.length - 1;
+        }
+        this.a(-82, 56);
+        for (var3Lifetime1 = 1; this.field_d.length > var3Lifetime1; var3Lifetime1++) {
+          if (param0 < (this.field_d[var3Lifetime1] + this.field_d[var3Lifetime1 - 1] >> 1)) {
+            return var3Lifetime1 - 1;
+          }
+        }
+        return this.field_d.length - 1;
     }
 
     final int b(int param0) {
-        if (param0 == -1) {
-          if (null != this.field_d) {
-            if (-1 == (this.field_d.length ^ -1)) {
-              return 0;
-            } else {
-              return this.field_d[this.field_d.length + -1];
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 != -1) {
           field_c = (ci) null;
-          if (null != this.field_d) {
-            if (-1 == (this.field_d.length ^ -1)) {
-              return 0;
-            } else {
-              return this.field_d[this.field_d.length + -1];
-            }
-          } else {
+          if (null == this.field_d) {
             return 0;
           }
+          if (this.field_d.length != 0) {
+            return this.field_d[this.field_d.length - 1];
+          }
+          return 0;
         }
+        if (null == this.field_d) {
+          return 0;
+        }
+        if (this.field_d.length != 0) {
+          return this.field_d[this.field_d.length - 1];
+        }
+        return 0;
     }
 
     public static void a(int param0) {
         field_c = null;
         field_b = null;
         if (param0 >= -118) {
-            field_c = (ci) null;
+          field_c = (ci) null;
         }
     }
 
     em(int param0, int param1, int param2) {
         this.field_a = param1;
         this.field_e = param0;
-        this.field_d = new int[param2 - -1];
+        this.field_d = new int[param2 + 1];
     }
 
     static {

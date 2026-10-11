@@ -9,10 +9,10 @@ final class ej {
 
     public static void a(int param0) {
         if (param0 != -29373) {
-            field_a = (mg) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_a = (mg) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

@@ -11,7 +11,7 @@ final class oa {
 
     final static void a(int param0) {
         if (param0 <= 125) {
-            return;
+          return;
         }
         sg.field_d = null;
         tc.field_Nb = (byte[][]) null;
@@ -23,98 +23,72 @@ final class oa {
 
     final static void a(java.applet.Applet param0, int param1, String param2) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String var5 = null;
+          String var3 = null;
+          String var4 = null;
+          String var5 = null;
+          try {
+            u.field_a = param2;
             try {
-                u.field_a = param2;
-                try {
-                    var3 = param0.getParameter("cookieprefix");
-                    var4 = param0.getParameter("cookiehost");
-                    var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                    if (!(param1 != (param2.length() ^ -1))) {
-                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    nc.a((byte) -51, param0, "document.cookie=\"" + var5 + "\"");
-                } catch (Throwable throwable) {
-                }
-                me.a((byte) 121, param0);
-            } catch (RuntimeException runtimeException) {
-                throw dh.a((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+              var3 = param0.getParameter("cookieprefix");
+              var4 = param0.getParameter("cookiehost");
+              var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+              if (param1 == ~param2.length()) {
+                var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              nc.a((byte) -51, param0, "document.cookie=\"" + var5 + "\"");
+            } catch (Throwable throwable) {
             }
+            me.a((byte) 121, param0);
+          } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static String a(String param0, int param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length();
-            var3 = new char[var2_int];
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var2_int) {
-                L2: {
-                  if (param1 == -1) {
-                    break L2;
-                  } else {
-                    field_f = (String) null;
-                    break L2;
-                  }
-                }
-                stackIn_7_0 = new String(var3);
-                break L0;
-              } else {
-                var3[-var4 + var2_int + -1] = param0.charAt(var4);
-                var4++;
-                continue L1;
-              }
-            }
+          var2_int = param0.length();
+          var3 = new char[var2_int];
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var3[-var4 + var2_int - 1] = param0.charAt(var4);
           }
+          if (param1 != -1) {
+            field_f = (String) null;
+          }
+          stackIn_7_0 = new String(var3);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("oa.D(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("oa.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     public static void b(int param0) {
         if (param0 != -1) {
-            field_e = (int[]) null;
+          field_e = (int[]) null;
         }
         field_f = null;
         field_e = null;

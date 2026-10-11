@@ -10,7 +10,7 @@ final class jh {
 
     public static void a(byte param0) {
         if (param0 != 51) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

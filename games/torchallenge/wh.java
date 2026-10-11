@@ -11,7 +11,7 @@ final class wh {
 
     public static void a(boolean param0) {
         if (param0) {
-            field_b = false;
+          field_b = false;
         }
         field_d = null;
         field_f = null;
@@ -20,7 +20,7 @@ final class wh {
 
     final static void a(int param0, int param1, int param2) {
         if (param2 > -49) {
-            return;
+          return;
         }
         fe var3 = wl.field_c[param1][param0];
         int var4 = wc.field_c[param1][param0];
@@ -28,68 +28,42 @@ final class wh {
     }
 
     final static int a(byte param0, CharSequence param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         CharSequence var6 = null;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var2_int = param1.length();
-            var3 = 0;
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var2_int) {
-                L2: {
-                  if (param0 == 68) {
-                    break L2;
-                  } else {
-                    var6 = (CharSequence) null;
-                    wh.a((byte) -60, (CharSequence) null);
-                    break L2;
-                  }
-                }
-                stackIn_7_0 = var3;
-                break L0;
-              } else {
-                var3 = (var3 << -1680399771) + -var3 + wf.a((byte) -126, param1.charAt(var4));
-                var4++;
-                continue L1;
-              }
-            }
+          var2_int = param1.length();
+          var3 = 0;
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var3 = (var3 << 5) - var3 + wf.a((byte) -126, param1.charAt(var4));
           }
+          if (param0 != 68) {
+            var6 = (CharSequence) null;
+            wh.a((byte) -60, (CharSequence) null);
+          }
+          stackIn_7_0 = var3;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("wh.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     static {

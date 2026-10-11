@@ -8,17 +8,17 @@ final class hk extends il {
 
     final void b(vg param0, int param1) {
         try {
-            int var3_int = 113 / ((51 - param1) / 57);
-            super.b(param0, 125);
+          int var3_int = 113 / ((51 - param1) / 57);
+          super.b(param0, 125);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "hk.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void p(int param0) {
         field_nb = null;
         if (param0 != 20) {
-            return;
+          return;
         }
         field_ob = null;
         field_pb = null;
@@ -30,7 +30,7 @@ final class hk extends il {
 
     final static void a(int param0, byte param1) {
         if (param1 < 33) {
-            return;
+          return;
         }
         vg.field_i = 1000000000L / (long)param0;
     }

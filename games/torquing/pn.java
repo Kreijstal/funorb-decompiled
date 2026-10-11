@@ -8,18 +8,16 @@ final class pn {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 < 57) {
-          pn.a(-85);
-          field_a = null;
-          field_b = (byte[][]) null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 57) {
           field_a = null;
           field_b = (byte[][]) null;
           field_c = null;
           return;
         }
+        pn.a(-85);
+        field_a = null;
+        field_b = (byte[][]) null;
+        field_c = null;
     }
 
     static {

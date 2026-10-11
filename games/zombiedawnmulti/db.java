@@ -11,10 +11,10 @@ final class db {
     public static void a(int param0) {
         field_a = null;
         if (param0 < 8) {
-            field_a = (th) null;
-            field_b = null;
-            field_d = null;
-            return;
+          field_a = (th) null;
+          field_b = null;
+          field_d = null;
+          return;
         }
         field_b = null;
         field_d = null;
@@ -22,9 +22,9 @@ final class db {
 
     final static void a(go param0, int param1, java.awt.Component param2, gd param3, int param4, boolean param5) {
         try {
-            kk.a(param1, param5, param1, (byte) 119, param2, param0, param4, param3);
+          kk.a(param1, param5, param1, (byte) 119, param2, param0, param4, param3);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "db.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "db.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -13,33 +13,13 @@ final class od {
 
     final static boolean b(int param0) {
         dc var2;
-        int stackIn_6_0 = 0;
-        L0: {
-          if (param0 == 255) {
-            break L0;
-          } else {
-            var2 = (dc) null;
-            od.a((dc) null, (byte) -95);
-            break L0;
-          }
+        boolean stackIn_6_0 = false;
+        if (param0 != 255) {
+          var2 = (dc) null;
+          od.a((dc) null, (byte) -95);
         }
-        L1: {
-          L2: {
-            if (ig.field_e == null) {
-              break L2;
-            } else {
-              if (!mh.field_a.a(true)) {
-                break L2;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-          }
-          stackIn_6_0 = 0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        stackIn_6_0 = (ig.field_e != null) && (mh.field_a.a(true));
+        return stackIn_6_0;
     }
 
     final static void a(dc param0, byte param1) {
@@ -48,108 +28,43 @@ final class od {
         int var4 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (param0.field_h == null) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                L2: {
-                  if (param0.field_f != 0) {
-                    break L2;
-                  } else {
-                    if (param0.field_j == 0) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var2_int = 0;
-                L3: while (true) {
-                  if (var2_int >= am.field_J) {
-                    break L1;
-                  } else {
-                    L4: {
-                      var3 = ra.field_i[var2_int];
-                      if ((var3.field_l ^ -1) != -3) {
-                        break L4;
-                      } else {
-                        if (var3.field_f != param0.field_f) {
-                          break L4;
-                        } else {
-                          if (var3.field_j != param0.field_j) {
-                            break L4;
-                          } else {
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          }
-                        }
-                      }
-                    }
-                    var2_int++;
-                    continue L3;
-                  }
-                }
+          if (param0.field_h == null) {
+            return;
+          }
+          if (param0.field_f != 0 ||
+            param0.field_j != 0) {
+            for (var2_int = 0; var2_int < am.field_J; var2_int++) {
+              var3 = ra.field_i[var2_int];
+              if (var3.field_l == 2 &&
+                var3.field_f == param0.field_f &&
+                var3.field_j == param0.field_j) {
+                return;
               }
-              L5: {
-                if (param0.field_i != null) {
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if (param1 <= -92) {
-                  break L6;
-                } else {
-                  field_b = (String) null;
-                  break L6;
-                }
-              }
-              jd.a(param0, (byte) -119);
-              decompiledRegionSelector0 = 2;
-              break L0;
             }
           }
+          if (param0.field_i != null) {
+          }
+          if (param1 > -92) {
+            field_b = (String) null;
+          }
+          jd.a(param0, (byte) -119);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("od.A(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("od.A(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
           } else {
-            return;
+            stackIn_25_2 = "{...}";
           }
+          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,7 +76,7 @@ final class od {
         field_g = null;
         field_h = null;
         if (param0 != 21) {
-            od.b(-64);
+          od.b(-64);
         }
         field_c = null;
     }
@@ -172,7 +87,7 @@ final class od {
         field_b = "Waiting for music";
         field_h = new ba[255];
         for (var0 = 0; field_h.length > var0; var0++) {
-            field_h[var0] = new ba();
+          field_h[var0] = new ba();
         }
         field_f = "Start the mission";
         field_g = new o();

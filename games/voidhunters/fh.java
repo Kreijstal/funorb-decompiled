@@ -12,10 +12,10 @@ class fh extends ksa {
 
     final boolean c(byte param0) {
         if (param0 < 26) {
-            return true;
+          return true;
         }
         if (this.field_d == null) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -23,21 +23,18 @@ class fh extends ksa {
     final void a(long param0, byte param1) {
         if (this.field_d != null) {
           throw new RuntimeException();
-        } else {
-          this.field_i = param0;
-          if (param1 != 83) {
-            field_g = (llb) null;
-            return;
-          } else {
-            return;
-          }
         }
+        this.field_i = param0;
+        if (param1 == 83) {
+          return;
+        }
+        field_g = (llb) null;
     }
 
     final long c(int param0) {
         if (param0 != 26390) {
-            this.field_i = 5L;
-            return this.field_i;
+          this.field_i = 5L;
+          return this.field_i;
         }
         return this.field_i;
     }
@@ -45,22 +42,19 @@ class fh extends ksa {
     final void d(byte param0) {
         if (this.field_d == null) {
           return;
-        } else {
-          if (param0 != -35) {
-            this.field_d = (fh) null;
-            this.field_d.field_e = this.field_e;
-            this.field_e.field_d = this.field_d;
-            this.field_e = null;
-            this.field_d = null;
-            return;
-          } else {
-            this.field_d.field_e = this.field_e;
-            this.field_e.field_d = this.field_d;
-            this.field_e = null;
-            this.field_d = null;
-            return;
-          }
         }
+        if (param0 == -35) {
+          this.field_d.field_e = this.field_e;
+          this.field_e.field_d = this.field_d;
+          this.field_e = null;
+          this.field_d = null;
+          return;
+        }
+        this.field_d = (fh) null;
+        this.field_d.field_e = this.field_e;
+        this.field_e.field_d = this.field_d;
+        this.field_e = null;
+        this.field_d = null;
     }
 
     public static void d(int param0) {
@@ -68,9 +62,9 @@ class fh extends ksa {
         field_g = null;
         field_j = null;
         if (param0 != -31049) {
-            field_j = (String) null;
-            field_h = null;
-            return;
+          field_j = (String) null;
+          field_h = null;
+          return;
         }
         field_h = null;
     }

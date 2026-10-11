@@ -13,12 +13,12 @@ final class r {
     final static void a(int param0, ja param1) {
         m.c(540);
         if (param0 != 0) {
-            return;
+          return;
         }
         try {
-            oo.a(param1.field_B, param1.field_z, param1.field_u);
+          oo.a(param1.field_B, param1.field_z, param1.field_u);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,8 +30,8 @@ final class r {
         field_e = null;
         field_b = null;
         if (!param0) {
-            ja var2 = (ja) null;
-            r.a(3, (ja) null);
+          ja var2 = (ja) null;
+          r.a(3, (ja) null);
         }
     }
 
@@ -44,92 +44,52 @@ final class r {
         po stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var5 = param0.a((byte) -77, param1);
-            var3 = var5;
-            if (var5 != null) {
-              L1: {
-                if (param2 == 15) {
-                  break L1;
-                } else {
-                  var4 = (ja) null;
-                  r.a(-29, (ja) null);
-                  break L1;
-                }
-              }
-              stackIn_6_0 = new po(var5);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5 = param0.a((byte) -77, param1);
+          var3 = var5;
+          if (var5 == null) {
+            stackIn_2_0 = null;
+            return (po) (stackIn_2_0);
           }
+          if (param2 != 15) {
+            var4 = (ja) null;
+            r.a(-29, (ja) null);
+          }
+          stackIn_6_0 = new po(var5);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("r.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("r.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (po) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_6_0;
+          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static ao a(int param0, byte param1) {
+        int var3 = 0;
         ao[] var2;
-        int var3;
         int var4;
         ao[] var5;
-        L0: {
-          var4 = ZombieDawnMulti.field_E ? 1 : 0;
-          var5 = wm.b(true);
-          var2 = var5;
-          if (param1 == 35) {
-            break L0;
-          } else {
-            field_b = (String) null;
-            break L0;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        var5 = wm.b(true);
+        var2 = var5;
+        if (param1 != 35) {
+          field_b = (String) null;
+        }
+        for (var3 = 0; var3 < var5.length; var3++) {
+          if (var5[var3].field_g == param0) {
+            return var5[var3];
           }
         }
-        var3 = 0;
-        L1: while (true) {
-          if (var3 < var5.length) {
-            if (var5[var3].field_g == param0) {
-              return var5[var3];
-            } else {
-              var3++;
-              continue L1;
-            }
-          } else {
-            return null;
-          }
-        }
+        return null;
     }
 
     static {

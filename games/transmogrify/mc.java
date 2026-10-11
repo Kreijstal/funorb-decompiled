@@ -8,7 +8,7 @@ final class mc {
 
     final static long b(boolean param0) {
         if (!param0) {
-            mc.a(true);
+          mc.a(true);
         }
         return -wi.field_q + lk.a(0);
     }
@@ -16,7 +16,7 @@ final class mc {
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -24,10 +24,10 @@ final class mc {
 
     final static String a(byte param0) {
         if (param0 != 102) {
-            field_c = (qj) null;
+          field_c = (qj) null;
         }
-        if (!(rh.field_v != of.field_d)) {
-            return ta.field_h;
+        if (rh.field_v == of.field_d) {
+          return ta.field_h;
         }
         return kk.field_c;
     }

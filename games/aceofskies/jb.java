@@ -11,15 +11,15 @@ final class jb {
     final static void a(String param0, int param1) {
         System.out.println("Error: " + eh.a("%0a", -104, "\n", param0));
         if (param1 != 20164) {
-            field_a = (String[]) null;
+          field_a = (String[]) null;
         }
     }
 
     public static void a(int param0) {
         if (param0 != -27134) {
-            jb.a(-25);
-            field_a = null;
-            return;
+          jb.a(-25);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

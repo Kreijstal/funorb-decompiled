@@ -11,9 +11,9 @@ abstract class si extends ca {
     boolean field_r;
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
+        int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        int var5_int = 0;
         kc var5 = null;
         byte[] var6 = null;
         int var7 = 0;
@@ -21,76 +21,46 @@ abstract class si extends ca {
         byte[] stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (0 < param0) {
-                var8 = new byte[param3];
-                var4 = var8;
-                var5_int = 0;
-                L2: while (true) {
-                  if (var5_int >= param3) {
-                    break L1;
-                  } else {
-                    var8[var5_int] = param1[var5_int + param0];
-                    var5_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var4 = param1;
-                break L1;
-              }
+          if (0 < param0) {
+            var8 = new byte[param3];
+            var4 = var8;
+            for (var5_int = 0; var5_int < param3; var5_int++) {
+              var8[var5_int] = param1[var5_int + param0];
             }
-            L3: {
-              var5 = new kc();
-              var5.a((byte) 119);
-              if (param2 <= -42) {
-                break L3;
-              } else {
-                si.e((byte) -111);
-                break L3;
-              }
-            }
-            var5.a((long)(param3 * 8), var4, -24893);
-            var6 = new byte[64];
-            var5.a(0, false, var6);
-            stackIn_9_0 = (byte[]) (var6);
-            break L0;
+          } else {
+            var4 = param1;
           }
+          var5 = new kc();
+          var5.a((byte) 119);
+          if (param2 > -42) {
+            si.e((byte) -111);
+          }
+          var5.a((long)(param3 * 8), var4, -24893);
+          var6 = new byte[64];
+          var5.a(0, false, var6);
+          stackIn_9_0 = var6;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var4_ref);
-
-            stackIn_12_1 = new StringBuilder().append("si.P(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_12_0 = var4_ref;
+          stackIn_12_1 = new StringBuilder().append("si.P(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ',' + param3 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     final static void e(byte param0) {
         if (param0 < 5) {
-            field_t = (hh) null;
+          field_t = (hh) null;
         }
         kb.field_b.field_p = 0;
         kb.field_b.field_j = 0;
@@ -105,51 +75,31 @@ abstract class si extends ca {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 111) {
-                break L1;
-              } else {
-                field_t = (hh) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = ti.a(10, param1, 113, true);
-            break L0;
+          if (param0 < 111) {
+            field_t = (hh) null;
           }
+          stackIn_3_0 = ti.a(10, param1, 113, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("si.S(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("si.S(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void e(boolean param0) {
         if (param0) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
         field_q = null;
         field_t = null;

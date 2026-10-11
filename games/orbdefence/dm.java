@@ -15,21 +15,21 @@ abstract class dm {
         ed var4 = null;
         int var5 = OrbDefence.field_D ? 1 : 0;
         if (param1 != 107) {
-            dm.a(43, -63, -39);
+          dm.a(43, -63, -39);
         }
         for (var3 = 0; this.field_c.length > var3; var3++) {
-            var4 = this.field_c[var3];
-            if (!(var4.field_g.length <= param0)) {
-                return var3;
-            }
-            param0 = param0 - (var4.field_g.length + -1);
+          var4 = this.field_c[var3];
+          if (!(var4.field_g.length <= param0)) {
+            return var3;
+          }
+          param0 = param0 - (var4.field_g.length - 1);
         }
         return this.field_c.length;
     }
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 1) {
-            dm.a(-96, -106, true, 45, 11, -128, -46);
+          dm.a(-96, -106, true, 45, 11, -128, -46);
         }
         lm.field_a = param2;
         kf.field_e = param1;
@@ -37,29 +37,14 @@ abstract class dm {
 
     final int b(int param0) {
         int stackIn_6_0 = 0;
-        L0: {
-          if (param0 > 105) {
-            break L0;
-          } else {
-            dm.a(-11, -7, false, 50, 72, -55, -61);
-            break L0;
-          }
+        if (param0 <= 105) {
+          dm.a(-11, -7, false, 50, 72, -55, -61);
         }
-        L1: {
-          L2: {
-            if (null == this.field_c) {
-              break L2;
-            } else {
-              if (0 >= this.field_c.length) {
-                break L2;
-              } else {
-                stackIn_6_0 = -this.field_c[0].field_f + this.field_c[-1 + this.field_c.length].field_c;
-                break L1;
-              }
-            }
-          }
+        if (null != this.field_c &&
+          0 < this.field_c.length) {
+          stackIn_6_0 = -this.field_c[0].field_f + this.field_c[-1 + this.field_c.length].field_c;
+        } else {
           stackIn_6_0 = 0;
-          break L1;
         }
         return stackIn_6_0;
     }
@@ -70,235 +55,143 @@ abstract class dm {
         ed[] var3 = this.field_c;
         int var4 = 0;
         if (param0 > -68) {
-            dm.a(-22);
+          dm.a(-22);
         }
         while (var4 < var3.length) {
-            var5 = var3[var4];
-            if (var5.field_g.length > param1) {
-                return var5.field_g[param1];
-            }
-            param1 = param1 - (-1 + var5.field_g.length);
-            var4++;
+          var5 = var3[var4];
+          if (var5.field_g.length > param1) {
+            return var5.field_g[param1];
+          }
+          param1 = param1 - (-1 + var5.field_g.length);
+          var4++;
         }
         return 0;
     }
 
     final int a(int param0, int param1, byte param2) {
+        int var5 = 0;
         int var4;
-        int var5;
         ed var6_ref_ed;
         int var6;
         int var7;
         int var8;
-        L0: {
-          var8 = OrbDefence.field_D ? 1 : 0;
-          if (this.field_c == null) {
-            break L0;
-          } else {
-            if (-1 == (this.field_c.length ^ -1)) {
-              break L0;
-            } else {
-              if (this.field_c[0].field_f > param0) {
-                break L0;
-              } else {
-                if (this.field_c[-1 + this.field_c.length].field_c < param0) {
-                  return -1;
-                } else {
-                  if (this.field_c.length == 1) {
-                    return this.field_c[0].a(param1, -1052047551);
-                  } else {
-                    var4 = 0;
-                    var5 = 0;
-                    L1: while (true) {
-                      if (var5 >= this.field_c.length) {
-                        var6 = -37 % ((73 - param2) / 44);
-                        return -1;
-                      } else {
-                        L2: {
-                          var6_ref_ed = this.field_c[var5];
-                          if ((param0 ^ -1) > (var6_ref_ed.field_f ^ -1)) {
-                            break L2;
-                          } else {
-                            if (var6_ref_ed.field_c >= param0) {
-                              var7 = var6_ref_ed.a(param1, -1052047551);
-                              if (0 != (var7 ^ -1)) {
-                                return var7 + var4;
-                              } else {
-                                return -1;
-                              }
-                            } else {
-                              break L2;
-                            }
-                          }
-                        }
-                        var4 = var4 + (var6_ref_ed.field_g.length - 1);
-                        var5++;
-                        continue L1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
+        var8 = OrbDefence.field_D ? 1 : 0;
+        if (this.field_c != null &&
+          this.field_c.length != 0 &&
+          this.field_c[0].field_f <= param0) {
+          if (this.field_c[-1 + this.field_c.length].field_c < param0) {
+            return -1;
           }
+          if (this.field_c.length == 1) {
+            return this.field_c[0].a(param1, -1052047551);
+          }
+          var4 = 0;
+          for (var5 = 0; var5 < this.field_c.length; var5++) {
+            var6_ref_ed = this.field_c[var5];
+            if (param0 >= var6_ref_ed.field_f &&
+              var6_ref_ed.field_c >= param0) {
+              var7 = var6_ref_ed.a(param1, -1052047551);
+              if (var7 != -1) {
+                return var7 + var4;
+              }
+              return -1;
+            }
+            var4 = var4 + (var6_ref_ed.field_g.length - 1);
+          }
+          var6 = -37 % ((73 - param2) / 44);
+          return -1;
         }
         return -1;
     }
 
     final int a(boolean param0) {
+        int var4 = 0;
         int var2;
         ed[] var3;
-        int var4;
         ed var5;
         int var7;
         int var6;
-        L0: {
-          var7 = OrbDefence.field_D ? 1 : 0;
-          if (!param0) {
-            break L0;
-          } else {
-            field_a = 108;
-            break L0;
-          }
+        var7 = OrbDefence.field_D ? 1 : 0;
+        if (param0) {
+          field_a = 108;
         }
-        L1: {
-          var2 = -1;
-          if (null != this.field_c) {
-            var3 = this.field_c;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var3.length) {
-                break L1;
-              } else {
-                var5 = var3[var4];
-                if (var5 != null) {
-                  var6 = var5.a(param0);
-                  if (var6 > var2) {
-                    var2 = var6;
-                    var4++;
-                    continue L2;
-                  } else {
-                    var4++;
-                    continue L2;
-                  }
-                } else {
-                  var4++;
-                  continue L2;
-                }
+        var2 = -1;
+        if (null != this.field_c) {
+          var3 = this.field_c;
+          for (var4 = 0; var4 < var3.length; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.a(param0);
+              if (var6 > var2) {
+                var2 = var6;
               }
             }
-          } else {
-            break L1;
           }
         }
         return var2;
     }
 
     final int a(String param0, int param1, int param2, byte param3) {
+        int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int stackIn_17_0 = 0;
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5_int = 0;
-              var6 = 0;
-              var7 = param0.length();
-              if (param3 == 74) {
-                break L1;
-              } else {
-                field_b = (hj[]) null;
-                break L1;
-              }
-            }
-            var8 = 0;
-            L2: while (true) {
-              if (var8 >= var7) {
-                if (0 >= var5_int) {
-                  stackIn_19_0 = 0;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_17_0 = (param1 - param2 << 403695336) / var5_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
+          var5_int = 0;
+          var6 = 0;
+          var7 = param0.length();
+          if (param3 != 74) {
+            field_b = (hj[]) null;
+          }
+          for (var8 = 0; var8 < var7; var8++) {
+            var9 = param0.charAt(var8);
+            if (60 != var9) {
+              if (var9 != 62) {
+                if (var6 == 0 &&
+                  var9 == 32) {
+                  var5_int++;
                 }
               } else {
-                L3: {
-                  var9 = param0.charAt(var8);
-                  if (60 != var9) {
-                    if (var9 != 62) {
-                      if (var6 != 0) {
-                        break L3;
-                      } else {
-                        if (var9 != 32) {
-                          break L3;
-                        } else {
-                          var5_int++;
-                          break L3;
-                        }
-                      }
-                    } else {
-                      var6 = 0;
-                      break L3;
-                    }
-                  } else {
-                    var6 = 1;
-                    break L3;
-                  }
-                }
-                var8++;
-                continue L2;
+                var6 = 0;
               }
+            } else {
+              var6 = 1;
             }
           }
+          if (0 >= var5_int) {
+            stackIn_19_0 = 0;
+            return stackIn_19_0;
+          }
+          stackIn_17_0 = (param1 - param2 << 8) / var5_int;
+          return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var5);
-
-            stackIn_22_1 = new StringBuilder().append("dm.A(");
-
-            if (param0 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L4;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L4;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_22_0 = var5;
+          stackIn_22_1 = new StringBuilder().append("dm.A(");
+          if (param0 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_17_0;
-        } else {
-          return stackIn_19_0;
+          throw dd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        int var12 = 0;
         int incrementValue$0 = 0;
         int stackIn_23_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -306,138 +199,75 @@ abstract class dm {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var15 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            if (param0 > param5) {
-              if (param5 + 1 < param4) {
-                L1: {
-                  if (5 + param5 >= param4) {
-                    break L1;
-                  } else {
-                    if (param1 == param3) {
-                      break L1;
-                    } else {
-                      var7_int = (param1 >> -1303985887) - (-(param3 >> 273542273) + -(1 & (param1 & param3)));
-                      var8 = param5;
-                      var9 = param3;
-                      var10 = param1;
-                      var11 = -75 % ((-46 - param6) / 49);
-                      var12 = param5;
-                      L2: while (true) {
-                        if (param4 <= var12) {
-                          dm.a(param0, var9, param2, param3, var8, param5, 28);
-                          dm.a(param0, param1, param2, var10, param4, var8, 126);
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          L3: {
-                            var13 = bc.field_o[var12];
-                            if (!param2) {
-                              stackIn_23_0 = rh.field_c[var13];
-                              break L3;
-                            } else {
-                              stackIn_23_0 = tl.field_d[var13];
-                              break L3;
-                            }
-                          }
-                          L4: {
-                            var14 = stackIn_23_0;
-                            if (var14 > var7_int) {
-                              L5: {
-                                bc.field_o[var12] = bc.field_o[var8];
-                                if (var14 < var9) {
-                                  var9 = var14;
-                                  break L5;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                              incrementValue$0 = var8;
-                              var8++;
-                              bc.field_o[incrementValue$0] = var13;
-                              break L4;
-                            } else {
-                              if (var10 < var14) {
-                                var10 = var14;
-                                break L4;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          var12++;
-                          continue L2;
-                        }
-                      }
-                    }
-                  }
-                }
-                var7_int = -1 + param4;
-                L6: while (true) {
-                  if (param5 >= var7_int) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var8 = param5;
-                    L7: while (true) {
-                      if (var8 >= var7_int) {
-                        var7_int--;
-                        continue L6;
-                      } else {
-                        L8: {
-                          var9 = bc.field_o[var8];
-                          var10 = bc.field_o[1 + var8];
-                          if (hl.a(param2, -122, var10, var9)) {
-                            bc.field_o[var8] = var10;
-                            bc.field_o[1 + var8] = var9;
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        var8++;
-                        continue L7;
-                      }
-                    }
-                  }
-                }
+          if (param0 <= param5) {
+            return;
+          }
+          if (param5 + 1 >= param4) {
+            return;
+          }
+          if (5 + param5 < param4 &&
+            param1 != param3) {
+            var7_int = (param1 >> 1) - (-(param3 >> 1) - (1 & (param1 & param3)));
+            var8 = param5;
+            var9 = param3;
+            var10 = param1;
+            var11 = -75 % ((-46 - param6) / 49);
+            for (var12 = param5; param4 > var12; var12++) {
+              var13 = bc.field_o[var12];
+              if (!param2) {
+                stackIn_23_0 = rh.field_c[var13];
               } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
+                stackIn_23_0 = tl.field_d[var13];
               }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var14 = stackIn_23_0;
+              if (var14 > var7_int) {
+                bc.field_o[var12] = bc.field_o[var8];
+                if (var14 < var9) {
+                  var9 = var14;
+                }
+                incrementValue$0 = var8;
+                var8++;
+                bc.field_o[incrementValue$0] = var13;
+              } else {
+                if (var10 < var14) {
+                  var10 = var14;
+                }
+              }
+            }
+            dm.a(param0, var9, param2, param3, var8, param5, 28);
+            dm.a(param0, param1, param2, var10, param4, var8, 126);
+            return;
+          }
+          for (var7_intLifetime1 = -1 + param4; param5 < var7_intLifetime1; var7_intLifetime1--) {
+            for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
+              var9Lifetime1 = bc.field_o[var8Lifetime1];
+              var10Lifetime1 = bc.field_o[1 + var8Lifetime1];
+              if (hl.a(param2, -122, var10Lifetime1, var9Lifetime1)) {
+                bc.field_o[var8Lifetime1] = var10Lifetime1;
+                bc.field_o[1 + var8Lifetime1] = var9Lifetime1;
+              }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           throw dd.a((Throwable) ((Object) var7), "dm.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
-        }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_g = (int[]) null;
+          field_g = (int[]) null;
         }
         field_b = null;
         field_d = null;

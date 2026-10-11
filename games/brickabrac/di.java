@@ -9,7 +9,7 @@ final class di {
     final static void a(byte param0) {
         fk.a(105, fe.field_kb);
         if (param0 >= -76) {
-            di.a((byte) -90);
+          di.a((byte) -90);
         }
     }
 
@@ -22,9 +22,9 @@ final class di {
         field_c = null;
         field_b = null;
         if (param0 != 8070) {
-            di.a(124);
-            field_a = null;
-            return;
+          di.a(124);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

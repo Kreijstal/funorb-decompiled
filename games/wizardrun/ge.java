@@ -18,100 +18,58 @@ abstract class ge {
     private int field_d;
 
     private final void a(int param0, byte param1) {
-        int var4;
-        var4 = wizardrun.field_H;
-        if (param1 == 81) {
-          if ((vk.field_r ^ -1) != -97) {
-            if (97 != vk.field_r) {
-              if (vk.field_r != 84) {
-                if (vk.field_r == 83) {
-                  this.b(-128, param0);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.b(-128, param0);
-                return;
-              }
-            } else {
-              this.a(param0, false);
-              return;
-            }
-          } else {
-            this.a(param1 + -87, param0);
-            return;
-          }
-        } else {
+        int var4 = wizardrun.field_H;
+        if (param1 != 81) {
           this.b(-42, -78);
-          if ((vk.field_r ^ -1) != -97) {
-            if (97 != vk.field_r) {
-              if (vk.field_r != 84) {
-                if (vk.field_r != 83) {
-                  return;
-                } else {
-                  this.b(-128, param0);
-                  return;
-                }
-              } else {
-                this.b(-128, param0);
-                return;
-              }
-            } else {
-              this.a(param0, false);
-              return;
-            }
-          } else {
-            this.a(param1 + -87, param0);
+          if (vk.field_r == 96) {
+            this.a(param1 - 87, param0);
             return;
           }
+          if (97 == vk.field_r) {
+            this.a(param0, false);
+            return;
+          }
+          if (vk.field_r == 84) {
+            this.b(-128, param0);
+            return;
+          }
+          if (vk.field_r == 83) {
+            this.b(-128, param0);
+            return;
+          }
+          return;
         }
+        if (vk.field_r == 96) {
+          this.a(param1 - 87, param0);
+          return;
+        }
+        if (97 == vk.field_r) {
+          this.a(param0, false);
+          return;
+        }
+        if (vk.field_r == 84) {
+          this.b(-128, param0);
+          return;
+        }
+        if (vk.field_r != 83) {
+          return;
+        }
+        this.b(-128, param0);
     }
 
     void c(int param0) {
-        int var2;
-        int var3;
-        int var4;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        int stackIn_5_2 = 0;
-        var4 = wizardrun.field_H;
-        var2 = 0;
-        var3 = this.field_d;
-        L0: while (true) {
-          if (this.field_e <= var2) {
-            if (param0 <= 12) {
-              field_j = 114;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              stackIn_4_0 = this;
-
-              stackIn_4_1 = var3;
-
-              if (this.field_a != var2) {
-                stackIn_5_0 = this;
-                stackIn_5_1 = stackIn_4_1;
-                stackIn_5_2 = 0;
-                break L1;
-              } else {
-                stackIn_5_0 = this;
-                stackIn_5_1 = stackIn_4_1;
-                stackIn_5_2 = 1;
-                break L1;
-              }
-            }
-            this.a(stackIn_5_1, stackIn_5_2 != 0, var2, (byte) -120);
-            var3 = var3 + this.field_c;
-            var2++;
-            continue L0;
-          }
+        int var4 = wizardrun.field_H;
+        int var2 = 0;
+        int var3 = this.field_d;
+        while (this.field_e > var2) {
+          this.a(var3, this.field_a == var2 ? true : false, var2, (byte) -120);
+          var3 = var3 + this.field_c;
+          var2++;
         }
+        if (param0 > 12) {
+          return;
+        }
+        field_j = 114;
     }
 
     abstract void b(int param0, int param1);
@@ -121,156 +79,96 @@ abstract class ge {
     final void b(int param0) {
         int var3;
         var3 = wizardrun.field_H;
-        if (param0 == 0) {
-          if (!this.field_m) {
-            if (-99 == (vk.field_r ^ -1)) {
-              if ((this.field_a ^ -1) < -1) {
-                this.field_a = this.field_a - 1;
-                this.field_g = true;
-                return;
-              } else {
-                this.field_a = this.field_e;
-                this.field_a = this.field_a - 1;
-                this.field_g = true;
-                return;
-              }
-            } else {
-              if (-100 == (vk.field_r ^ -1)) {
-                this.field_a = this.field_a + 1;
-                if (this.field_a < this.field_e) {
-                  this.field_g = true;
-                  return;
-                } else {
-                  this.field_a = 0;
-                  this.field_g = true;
-                  return;
-                }
-              } else {
-                if (-1 >= (this.field_a ^ -1)) {
-                  this.a(this.field_a, (byte) 81);
-                  return;
-                } else {
-                  return;
-                }
-              }
+        if (param0 != 0) {
+          this.a(123, (byte) -33);
+        }
+        if (this.field_m) {
+          return;
+        }
+        if (vk.field_r == 98) {
+          if (this.field_a <= 0) {
+            this.field_a = this.field_e;
+          }
+          this.field_a = this.field_a - 1;
+        } else {
+          if (vk.field_r != 99) {
+            if (this.field_a < 0) {
+              return;
             }
-          } else {
+            this.a(this.field_a, (byte) 81);
             return;
           }
-        } else {
-          this.a(123, (byte) -33);
-          if (!this.field_m) {
-            if (-99 == (vk.field_r ^ -1)) {
-              if ((this.field_a ^ -1) < -1) {
-                this.field_a = this.field_a - 1;
-                this.field_g = true;
-                return;
-              } else {
-                this.field_a = this.field_e;
-                this.field_a = this.field_a - 1;
-                this.field_g = true;
-                return;
-              }
-            } else {
-              if (-100 == (vk.field_r ^ -1)) {
-                this.field_a = this.field_a + 1;
-                if (this.field_a < this.field_e) {
-                  this.field_g = true;
-                  return;
-                } else {
-                  this.field_a = 0;
-                  this.field_g = true;
-                  return;
-                }
-              } else {
-                if (-1 < (this.field_a ^ -1)) {
-                  return;
-                } else {
-                  this.a(this.field_a, (byte) 81);
-                  return;
-                }
-              }
-            }
-          } else {
-            return;
+          this.field_a = this.field_a + 1;
+          if (this.field_a >= this.field_e) {
+            this.field_a = 0;
           }
         }
+        this.field_g = true;
     }
 
     abstract void a(int param0, int param1);
 
     final void a(int param0) {
-        int var2;
-        int var3;
-        var3 = wizardrun.field_H;
-        if (param0 == -2) {
-          if (w.field_c != 0) {
-            var2 = this.a(tf.field_e, param0 + -57, dh.field_b);
-            this.field_a = var2;
-            if (var2 == -1) {
-              this.field_m = false;
-              return;
-            } else {
-              this.field_m = true;
-              this.a(tf.field_e, var2, -(this.field_c * var2) + dh.field_b + -this.field_d, w.field_c, false, false);
-              return;
-            }
-          } else {
-            if (sh.field_c != 0) {
-              if (this.field_m) {
-                var2 = this.field_a;
-                if (var2 != -1) {
-                  this.a(pg.field_n, var2, -this.field_d + (fi.field_B + -(this.field_c * var2)), sh.field_c, true, false);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                this.field_m = false;
-                if (ih.field_a) {
-                  var2 = this.a(pg.field_n, -77, fi.field_B);
-                  if (-1 == var2) {
-                    if (this.field_g) {
-                      return;
-                    } else {
-                      this.field_g = false;
-                      this.field_a = var2;
-                      return;
-                    }
-                  } else {
-                    this.field_g = false;
-                    this.field_a = var2;
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            } else {
-              this.field_m = false;
-              if (ih.field_a) {
-                var2 = this.a(pg.field_n, -77, fi.field_B);
-                if (-1 == var2) {
-                  if (!this.field_g) {
-                    this.field_g = false;
-                    this.field_a = var2;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  this.field_g = false;
-                  this.field_a = var2;
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          }
-        } else {
+        int var2 = 0;
+        int var3 = wizardrun.field_H;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        if (param0 != -2) {
           return;
         }
+        if (w.field_c == 0) {
+          if (sh.field_c == 0) {
+            this.field_m = false;
+            if (!ih.field_a) {
+              return;
+            }
+            var2 = this.a(pg.field_n, -77, fi.field_B);
+            if (-1 != var2) {
+              this.field_g = false;
+              this.field_a = var2;
+              return;
+            }
+            if (this.field_g) {
+              return;
+            }
+            this.field_g = false;
+            this.field_a = var2;
+            return;
+          }
+          if (!this.field_m) {
+            this.field_m = false;
+            if (!ih.field_a) {
+              return;
+            }
+            var2Lifetime2 = this.a(pg.field_n, -77, fi.field_B);
+            if (-1 != var2Lifetime2) {
+              this.field_g = false;
+              this.field_a = var2Lifetime2;
+              return;
+            }
+            if (!this.field_g) {
+              this.field_g = false;
+              this.field_a = var2Lifetime2;
+              return;
+            }
+            return;
+          }
+          var2Lifetime3 = this.field_a;
+          if (var2Lifetime3 == -1) {
+            return;
+          }
+          this.a(pg.field_n, var2Lifetime3, -this.field_d + (fi.field_B - this.field_c * var2Lifetime3), sh.field_c, true, false);
+          return;
+        }
+        var2Lifetime1 = this.a(tf.field_e, param0 - 57, dh.field_b);
+        this.field_a = var2Lifetime1;
+        if (var2Lifetime1 != -1) {
+          this.field_m = true;
+          this.a(tf.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + dh.field_b - this.field_d, w.field_c, false, false);
+          return;
+        }
+        this.field_m = false;
     }
 
     void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5) {
@@ -279,54 +177,25 @@ abstract class ge {
         if (!param4) {
           if (param3 == 1) {
             this.b(-125, param1);
-            ie.field_j = jl.field_r;
-            if (param5) {
-              this.a(-72, -13, 38, -1, true, true);
-              return;
-            } else {
-              return;
-            }
           } else {
             this.a(-6, param1);
-            ie.field_j = jl.field_r;
-            if (param5) {
-              this.a(-72, -13, 38, -1, true, true);
-              return;
-            } else {
-              return;
-            }
           }
+          ie.field_j = jl.field_r;
         } else {
           ie.field_j = ie.field_j - 1;
           if (0 >= ie.field_j) {
-            if ((param3 ^ -1) == -2) {
+            if (param3 == 1) {
               this.b(-127, param1);
-              ie.field_j = mk.field_b;
-              if (!param5) {
-                return;
-              } else {
-                this.a(-72, -13, 38, -1, true, true);
-                return;
-              }
             } else {
               this.a(-6, param1);
-              ie.field_j = mk.field_b;
-              if (!param5) {
-                return;
-              } else {
-                this.a(-72, -13, 38, -1, true, true);
-                return;
-              }
             }
-          } else {
-            if (param5) {
-              this.a(-72, -13, 38, -1, true, true);
-              return;
-            } else {
-              return;
-            }
+            ie.field_j = mk.field_b;
           }
         }
+        if (!param5) {
+          return;
+        }
+        this.a(-72, -13, 38, -1, true, true);
     }
 
     abstract void a(int param0, boolean param1, int param2, byte param3);
@@ -336,7 +205,7 @@ abstract class ge {
         field_k = null;
         field_n = null;
         if (!param0) {
-            ge.a(false);
+          ge.a(false);
         }
     }
 
@@ -351,30 +220,24 @@ abstract class ge {
     }
 
     private final int a(int param0, int param1, int param2) {
-        int var4;
-        if (param0 >= this.field_l) {
-          if (param0 < this.field_h) {
-            if (this.field_d > param2) {
-              return -1;
-            } else {
-              var4 = (-this.field_d + param2) / this.field_c;
-              if (var4 < this.field_e) {
-                if (param1 > -52) {
-                  field_n = (int[]) null;
-                  return var4;
-                } else {
-                  return var4;
-                }
-              } else {
-                return -1;
-              }
-            }
-          } else {
-            return -1;
-          }
-        } else {
+        if (param0 < this.field_l) {
           return -1;
         }
+        if (param0 >= this.field_h) {
+          return -1;
+        }
+        if (this.field_d > param2) {
+          return -1;
+        }
+        int var4 = (-this.field_d + param2) / this.field_c;
+        if (var4 >= this.field_e) {
+          return -1;
+        }
+        if (param1 <= -52) {
+          return var4;
+        }
+        field_n = (int[]) null;
+        return var4;
     }
 
     static {

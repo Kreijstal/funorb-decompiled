@@ -12,54 +12,38 @@ final class ed {
         field_c = null;
         field_d = null;
         field_e = null;
-        if (param0 != 15000) {
-          field_c = (String) null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 15000) {
           field_a = null;
           field_b = null;
           return;
         }
+        field_c = (String) null;
+        field_a = null;
+        field_b = null;
     }
 
     final static boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        if (param0 > -66) {
-          return true;
-        } else {
-          L0: {
-            st.field_C = true;
-            jl.field_a = vi.b(124) - -15000L;
-            if (11 != p.field_b) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 <= -66) {
+          st.field_C = true;
+          jl.field_a = vi.b(124) + 15000L;
+          return 11 == p.field_b ? true : false;
         }
+        return true;
     }
 
     final static void a(boolean param0) {
-        if (bl.field_b) {
-          it.field_b = true;
-          if (param0) {
-            ed.a(-80);
-            wc.a(true, -49);
-            p.field_b = 0;
-            return;
-          } else {
-            wc.a(true, -49);
-            p.field_b = 0;
-            return;
-          }
-        } else {
+        if (!bl.field_b) {
           throw new IllegalStateException();
         }
+        it.field_b = true;
+        if (!param0) {
+          wc.a(true, -49);
+          p.field_b = 0;
+          return;
+        }
+        ed.a(-80);
+        wc.a(true, -49);
+        p.field_b = 0;
     }
 
     static {

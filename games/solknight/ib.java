@@ -16,7 +16,7 @@ final class ib extends gg {
     public static void a(int param0) {
         field_i = null;
         if (param0 != 0) {
-            field_i = (Random) null;
+          field_i = (Random) null;
         }
     }
 
@@ -25,11 +25,11 @@ final class ib extends gg {
         o var3 = new o(param0, param0);
         int var4 = 0;
         if (!param1) {
-            field_j = -85;
+          field_j = -85;
         }
         while (var4 < var3.field_v.length) {
-            var3.field_v[var4] = param2;
-            var4++;
+          var3.field_v[var4] = param2;
+          var4++;
         }
         return var3;
     }

@@ -21,55 +21,32 @@ final class nb {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 170) {
-              stackIn_4_0 = 170 + -(param0.field_o * 8);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = -67;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == 170) {
+            stackIn_4_0 = 170 - param0.field_o * 8;
+            return stackIn_4_0;
           }
+          stackIn_2_0 = -67;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("nb.G(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("nb.G(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw nb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_h = null;
         field_i = null;
@@ -79,24 +56,22 @@ final class nb {
     }
 
     final boolean b(int param0) {
-        if (sr.field_h.a(false, this.field_a)) {
-          if (param0 != 32) {
-            return true;
-          } else {
-            this.field_l = tg.a(sr.field_h, this.field_a, "").c();
-            this.field_d = true;
-            return true;
-          }
-        } else {
+        if (!sr.field_h.a(false, this.field_a)) {
           return false;
         }
+        if (param0 == 32) {
+          this.field_l = tg.a(sr.field_h, this.field_a, "").c();
+          this.field_d = true;
+          return true;
+        }
+        return true;
     }
 
     final static boolean a(int param0) {
         if (param0 != 64) {
-            return false;
+          return false;
         }
-        return -1 > (da.field_h.a(false) ^ -1) ? true : false;
+        return da.field_h.a(false) > 0 ? true : false;
     }
 
     final static void a(byte param0) {
@@ -107,20 +82,14 @@ final class nb {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          L0: {
-            ue.field_f = new vs[64];
-            var1_int = 0;
-            var2 = 74 % ((-30 - param0) / 62);
-            L1: while (true) {
-              if (ue.field_f.length <= var1_int) {
-                break L0;
-              } else {
-                ue.field_f[var1_int] = new vs();
-                var1_int++;
-                continue L1;
-              }
-            }
+          ue.field_f = new vs[64];
+          var1_int = 0;
+          var2 = 74 % ((-30 - param0) / 62);
+          while (ue.field_f.length > var1_int) {
+            ue.field_f[var1_int] = new vs();
+            var1_int++;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -136,10 +105,10 @@ final class nb {
     final static bs a(Throwable param0, String param1) {
         bs var2 = null;
         if (param0 instanceof bs) {
-            var2 = (bs) ((Object) param0);
-            var2.field_d = var2.field_d + ' ' + param1;
+          var2 = (bs) ((Object) param0);
+          var2.field_d = var2.field_d + ' ' + param1;
         } else {
-            var2 = new bs(param0, param1);
+          var2 = new bs(param0, param1);
         }
         return var2;
     }
@@ -148,10 +117,10 @@ final class nb {
         this.field_l = null;
         this.field_d = false;
         try {
-            this.field_a = param2;
-            this.field_c = param0;
+          this.field_a = param2;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "nb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "nb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -159,10 +128,10 @@ final class nb {
         this.field_l = null;
         this.field_d = false;
         try {
-            this.field_d = true;
-            this.field_l = param0;
+          this.field_d = true;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "nb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

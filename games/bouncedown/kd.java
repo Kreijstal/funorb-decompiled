@@ -13,7 +13,7 @@ public class kd {
 
     public static File a(String param0, int param1) {
         if (param1 != 7900) {
-            return (File) null;
+          return (File) null;
         }
         return kd.a(field_d, param0, false, field_a);
     }
@@ -33,89 +33,47 @@ public class kd {
         field_d = param2;
         field_a = param1;
         try {
-          L0: {
-            field_e = System.getProperty("user.home");
-            if (field_e != null) {
-              field_e = field_e + "/";
-              break L0;
-            } else {
-              field_b = true;
-              if (param0 <= -28) {
-                L1: {
-                  if (null == field_e) {
-                    field_e = "~/";
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                return;
-              } else {
-                L2: {
-                  var4 = (String) null;
-                  kd.a((String) null, (String) null, true, -114);
-                  if (null == field_e) {
-                    field_e = "~/";
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                return;
-              }
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
-          field_b = true;
-          if (param0 > -28) {
-            L3: {
-              var4 = (String) null;
-              kd.a((String) null, (String) null, true, -114);
+          field_e = System.getProperty("user.home");
+          if (field_e == null) {
+            field_b = true;
+            if (param0 <= -28) {
               if (null == field_e) {
                 field_e = "~/";
-                break L3;
-              } else {
-                break L3;
               }
+              return;
             }
-            return;
-          } else {
-            L4: {
-              if (null == field_e) {
-                field_e = "~/";
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return;
-          }
-        }
-        field_b = true;
-        if (param0 > -28) {
-          L5: {
             var4 = (String) null;
             kd.a((String) null, (String) null, true, -114);
             if (null == field_e) {
               field_e = "~/";
-              break L5;
-            } else {
-              break L5;
             }
+            return;
           }
-          return;
-        } else {
-          L6: {
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          field_b = true;
+          if (param0 <= -28) {
             if (null == field_e) {
               field_e = "~/";
-              break L6;
-            } else {
-              break L6;
             }
+            return;
+          }
+          var4 = (String) null;
+          kd.a((String) null, (String) null, true, -114);
+          if (null == field_e) {
+            field_e = "~/";
           }
           return;
+        }
+        field_b = true;
+        if (param0 > -28) {
+          var4 = (String) null;
+          kd.a((String) null, (String) null, true, -114);
+        }
+        if (null == field_e) {
+          field_e = "~/";
         }
     }
 

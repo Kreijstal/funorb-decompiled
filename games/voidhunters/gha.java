@@ -12,21 +12,18 @@ final class gha extends rqa {
     }
 
     final static int a(byte param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        jp var5;
-        var2 = param1 * (param1 * param1 >> -688273780) >> -1965901972;
-        var3 = param1 * 6 + -61440;
-        if (param0 <= 54) {
-          var5 = (jp) null;
-          gha.a((byte[]) null, 119, (byte) -84, (jp) null);
-          var4 = (param1 * var3 >> 18795916) + 40960;
-          return var4 * var2 >> 1722121740;
-        } else {
-          var4 = (param1 * var3 >> 18795916) + 40960;
-          return var4 * var2 >> 1722121740;
+        int var4 = 0;
+        int var2 = param1 * (param1 * param1 >> 12) >> 12;
+        int var3 = param1 * 6 - 61440;
+        int var4Lifetime1;
+        if (param0 > 54) {
+          var4 = (param1 * var3 >> 12) + 40960;
+          return var4 * var2 >> 12;
         }
+        jp var5 = (jp) null;
+        gha.a((byte[]) null, 119, (byte) -84, (jp) null);
+        var4Lifetime1 = (param1 * var3 >> 12) + 40960;
+        return var4Lifetime1 * var2 >> 12;
     }
 
     final static ue a(byte[] param0, int param1, byte param2, jp param3) {
@@ -38,122 +35,60 @@ final class gha extends rqa {
         ue stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         StringBuilder stackIn_24_1 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 != null) {
-              if (param0.length != 0) {
-                L1: {
-                  var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
-                  jaggl.OpenGL.glShaderSourceRawARB(var4_long, param0);
-                  jaggl.OpenGL.glCompileShaderARB(var4_long);
-                  jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, rm.field_f, 0);
-                  if (param2 == -15) {
-                    break L1;
-                  } else {
-                    field_o = 36;
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (rm.field_f[0] != 0) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (rm.field_f[0] == 0) {
-                        System.out.println("Shader compile failed:");
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, rm.field_f, 1);
-                      if (-2 > (rm.field_f[1] ^ -1)) {
-                        var10 = new byte[rm.field_f[1]];
-                        jaggl.OpenGL.glGetInfoLogARB(var4_long, rm.field_f[1], rm.field_f, 0, var10, 0);
-                        System.out.println(new String(var10));
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    if (0 != rm.field_f[0]) {
-                      break L2;
-                    } else {
-                      jaggl.OpenGL.glDeleteObjectARB(var4_long);
-                      stackIn_16_0 = null;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-                stackIn_18_0 = new ue(param3, var4_long, param1);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_4_0 = null;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              return null;
+          if (param0 == null) {
+            return null;
+          }
+          if (param0.length == 0) {
+            stackIn_4_0 = null;
+            return (ue) (stackIn_4_0);
+          }
+          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
+          jaggl.OpenGL.glShaderSourceRawARB(var4_long, param0);
+          jaggl.OpenGL.glCompileShaderARB(var4_long);
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, rm.field_f, 0);
+          if (param2 != -15) {
+            field_o = 36;
+          }
+          if (rm.field_f[0] == 0) {
+            if (rm.field_f[0] == 0) {
+              System.out.println("Shader compile failed:");
+            }
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, rm.field_f, 1);
+            if (rm.field_f[1] > 1) {
+              var10 = new byte[rm.field_f[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, rm.field_f[1], rm.field_f, 0, var10, 0);
+              System.out.println(new String(var10));
+            }
+            if (0 == rm.field_f[0]) {
+              jaggl.OpenGL.glDeleteObjectARB(var4_long);
+              stackIn_16_0 = null;
+              return (ue) (stackIn_16_0);
             }
           }
+          stackIn_18_0 = new ue(param3, var4_long, param1);
+          return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var4);
-
-            stackIn_21_1 = new StringBuilder().append("gha.D(");
-
-            if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
-          }
-          L6: {
-
-
-            stackIn_24_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L6;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_22_0), stackIn_25_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (ue) ((Object) stackIn_4_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (ue) ((Object) stackIn_16_0);
+          var4 = decompiledCaughtException;
+          stackIn_21_0 = var4;
+          stackIn_21_1 = new StringBuilder().append("gha.D(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
           } else {
-            return stackIn_18_0;
+            stackIn_22_2 = "{...}";
           }
+          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw rta.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -161,9 +96,9 @@ final class gha extends rqa {
         field_r = null;
         field_q = null;
         if (param0 != 0) {
-            field_r = (ri) null;
-            field_p = null;
-            return;
+          field_r = (ri) null;
+          field_p = null;
+          return;
         }
         field_p = null;
     }
@@ -173,46 +108,26 @@ final class gha extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                gha.a(-36);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(182, 85));
-            break L0;
+          if (param1 >= -119) {
+            gha.a(-36);
           }
+          stackIn_3_0 = new nc(frb.a(182, 85));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("gha.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("gha.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

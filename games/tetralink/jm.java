@@ -15,18 +15,16 @@ final class jm {
         field_a = null;
         field_e = null;
         field_f = null;
-        if (param0 < 1) {
-          jm.a(-29);
-          field_d = null;
-          field_g = (oh[][]) null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 1) {
           field_d = null;
           field_g = (oh[][]) null;
           field_c = null;
           return;
         }
+        jm.a(-29);
+        field_d = null;
+        field_g = (oh[][]) null;
+        field_c = null;
     }
 
     static {

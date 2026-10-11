@@ -16,9 +16,7 @@ final class iga extends ija implements java.awt.image.ImageProducer {
     }
 
     private final synchronized void b(int param0) {
-        if (this.field_n == null) {
-          return;
-        } else {
+        if (this.field_n != null) {
           this.field_n.setPixels(0, param0, this.field_h, this.field_f, this.field_j, this.field_g, 0, this.field_h);
           this.field_n.imageComplete(2);
           return;
@@ -34,36 +32,33 @@ final class iga extends ija implements java.awt.image.ImageProducer {
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            this.field_n = param0;
-            param0.setDimensions(this.field_h, this.field_f);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_j);
-            param0.setHints(14);
+          this.field_n = param0;
+          param0.setDimensions(this.field_h, this.field_f);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_j);
+          param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iga.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            if (param0 == this.field_n) {
-                this.field_n = null;
-            }
+          if (param0 == this.field_n) {
+            this.field_n = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iga.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iga.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final synchronized void a(int param0, int param1, int param2, int param3, boolean param4) {
-        if (param4) {
-          if (this.field_n == null) {
-            return;
-          } else {
-            this.field_n.setPixels(param3, param0, param2, param1, this.field_j, this.field_g, param0 * this.field_h - -param3, this.field_h);
-            this.field_n.imageComplete(2);
-            return;
-          }
-        } else {
+        if (!param4) {
+          return;
+        }
+        if (this.field_n != null) {
+          this.field_n.setPixels(param3, param0, param2, param1, this.field_j, this.field_g, param0 * this.field_h + param3, this.field_h);
+          this.field_n.imageComplete(2);
           return;
         }
     }
@@ -73,36 +68,36 @@ final class iga extends ija implements java.awt.image.ImageProducer {
 
     final void a(java.awt.Canvas param0, int param1, int param2, int param3) {
         try {
-            this.field_p = param0;
-            this.field_h = param1;
-            this.field_f = param3;
-            this.field_g = new int[this.field_h * this.field_f];
-            this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_l = this.field_p.createImage((java.awt.image.ImageProducer) (this));
-            this.b(0);
-            this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
-            this.b(param2 ^ param2);
-            this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
-            this.b(param2 + -11329);
-            this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
+          this.field_p = param0;
+          this.field_h = param1;
+          this.field_f = param3;
+          this.field_g = new int[this.field_h * this.field_f];
+          this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_l = this.field_p.createImage((java.awt.image.ImageProducer) (this));
+          this.b(0);
+          this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
+          this.b(param2 ^ param2);
+          this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
+          this.b(param2 - 11329);
+          this.field_p.prepareImage(this.field_l, (java.awt.image.ImageObserver) ((Object) this.field_p));
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iga.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, java.awt.Graphics param6, int param7) {
         java.awt.Shape var9 = null;
         try {
-            if (param3 < 61) {
-                iga.a(90);
-            }
-            this.a(param4, param0, param7, param2, true);
-            var9 = param6.getClip();
-            param6.clipRect(param5, param1, param7, param0);
-            param6.drawImage(this.field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_p));
-            param6.setClip(var9);
+          if (param3 < 61) {
+            iga.a(90);
+          }
+          this.a(param4, param0, param7, param2, true);
+          var9 = param6.getClip();
+          param6.clipRect(param5, param1, param7, param0);
+          param6.drawImage(this.field_l, param5 - param2, -param4 + param1, (java.awt.image.ImageObserver) ((Object) this.field_p));
+          param6.setClip(var9);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -112,9 +107,9 @@ final class iga extends ija implements java.awt.image.ImageProducer {
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            this.addConsumer(param0);
+          this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iga.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

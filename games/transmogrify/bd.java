@@ -21,13 +21,13 @@ final class bd extends wj {
         field_u = null;
         field_s = null;
         if (!param0) {
-            bd.b(false);
+          bd.b(false);
         }
     }
 
     final nk a(int param0) {
         if (param0 != -184) {
-            return (nk) null;
+          return (nk) null;
         }
         return be.field_w;
     }

@@ -11,23 +11,15 @@ final class ah {
 
     final static void a(qb[] param0, int param1, int param2, int param3, qb[] param4, dj param5, int param6, int param7, int param8, int param9, int param10) {
         try {
-            int var11_int = -49 % ((13 - param10) / 58);
-            fk.d(-11);
+          int var11_int = -49 % ((13 - param10) / 58);
+          fk.d(-11);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_b = (String) null;
-          field_a = null;
-          field_e = null;
-          field_d = null;
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
+        if (!param0) {
           field_a = null;
           field_e = null;
           field_d = null;
@@ -35,6 +27,12 @@ final class ah {
           field_b = null;
           return;
         }
+        field_b = (String) null;
+        field_a = null;
+        field_e = null;
+        field_d = null;
+        field_f = null;
+        field_b = null;
     }
 
     static {

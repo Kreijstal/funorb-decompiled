@@ -20,14 +20,12 @@ final class bm {
         field_b = null;
         field_i = null;
         field_c = null;
-        if (param0) {
-          bm.a(true);
-          field_g = null;
-          return;
-        } else {
+        if (!param0) {
           field_g = null;
           return;
         }
+        bm.a(true);
+        field_g = null;
     }
 
     static {

@@ -14,74 +14,48 @@ class nt extends ms {
     static tv[] field_m;
 
     boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         this.field_p = this.field_p - 1;
-        if (param0 != -2567) {
-          L0: {
-            this.field_p = -86;
-            if (this.field_p != 0) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_p != 0) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -2567) {
+          return this.field_p == 0 ? true : false;
         }
+        this.field_p = -86;
+        return this.field_p == 0 ? true : false;
     }
 
     void a(ha param0, int param1) {
         if (param1 >= -121) {
-            return;
+          return;
         }
         try {
-            ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
+          ua.field_g[0].a((float)this.field_k, (float)this.field_o, 1848 - (int)((double)this.field_p / 30.0 * 2048.0), 0, 1, 0, 2);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "nt.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 > 82) {
-          if (null != qk.field_O) {
-            if (kw.field_c != ga.field_j) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 <= 82) {
           nt.a((byte) 13);
-          if (null != qk.field_O) {
-            if (kw.field_c != ga.field_j) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == qk.field_O) {
             return false;
           }
+          if (kw.field_c == ga.field_j) {
+            return true;
+          }
+          return false;
         }
+        if (null == qk.field_O) {
+          return false;
+        }
+        if (kw.field_c == ga.field_j) {
+          return true;
+        }
+        return false;
     }
 
     final static void c(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         rd.a(17, -103);
     }
@@ -89,14 +63,14 @@ class nt extends ms {
     final static void a(byte[] param0, int param1, File param2, int param3) throws IOException {
         DataInputStream var4 = null;
         try {
-            var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
-            var4.readFully(param0, 0, param3);
-            if (param1 != 7039) {
-                field_r = true;
-            }
-            var4.close();
+          var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
+          var4.readFully(param0, 0, param3);
+          if (param1 != 7039) {
+            field_r = true;
+          }
+          var4.close();
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "nt.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -112,7 +86,7 @@ class nt extends ms {
         field_n = (qp[][]) null;
         field_l = null;
         if (param0 != 31295) {
-            field_r = true;
+          field_r = true;
         }
     }
 

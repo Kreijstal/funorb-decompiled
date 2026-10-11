@@ -26,94 +26,58 @@ abstract class hd extends nb {
         field_p = null;
         field_s = null;
         if (param0 != -77) {
-            field_p = (String[]) null;
-            field_u = null;
-            return;
+          field_p = (String[]) null;
+          field_u = null;
+          return;
         }
         field_u = null;
     }
 
     final static dj a(boolean param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            om var8 = null;
-            dj stackIn_11_0 = null;
-            dj stackIn_15_0 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  var6 = null;
-                  if (null == lc.field_a.field_e) {
-                    break L1;
-                  } else {
-                    da.field_j = new sf(lc.field_a.field_e, 5200, 0);
-                    lc.field_a.field_e = null;
-                    var6 = new na(255, da.field_j, new sf(lc.field_a.field_i, 12000, 0), 2097152);
-                    break L1;
-                  }
-                }
-                L2: {
-                  var7 = null;
-                  if (da.field_j == null) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (lg.field_v == null) {
-                        lg.field_v = new sf[lc.field_a.field_q.length];
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (null != lg.field_v[param2]) {
-                        break L4;
-                      } else {
-                        lg.field_v[param2] = new sf(lc.field_a.field_q[param2], 12000, 0);
-                        lc.field_a.field_q[param2] = null;
-                        break L4;
-                      }
-                    }
-                    var7 = new na(param2, da.field_j, lg.field_v[param2], 2097152);
-                    break L2;
-                  }
-                }
-                var8 = ep.field_l.a((na) (var7), (byte) -106, param0, param2, (na) (var6));
-                if (param1) {
-                  L5: {
-                    if (!param5) {
-                      break L5;
-                    } else {
-                      var8.a(false);
-                      break L5;
-                    }
-                  }
-                  stackIn_15_0 = new dj(var8, param4, param3);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_11_0 = (dj) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+          Object var6 = null;
+          Object var7 = null;
+          om var8 = null;
+          dj stackIn_11_0 = null;
+          dj stackIn_15_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            var6 = null;
+            if (null != lc.field_a.field_e) {
+              da.field_j = new sf(lc.field_a.field_e, 5200, 0);
+              lc.field_a.field_e = null;
+              var6 = new na(255, da.field_j, new sf(lc.field_a.field_i, 12000, 0), 2097152);
+            }
+            var7 = null;
+            if (da.field_j != null) {
+              if (lg.field_v == null) {
+                lg.field_v = new sf[lc.field_a.field_q.length];
               }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) (var6)).toString());
+              if (null == lg.field_v[param2]) {
+                lg.field_v[param2] = new sf(lc.field_a.field_q[param2], 12000, 0);
+                lc.field_a.field_q[param2] = null;
+              }
+              var7 = new na(param2, da.field_j, lg.field_v[param2], 2097152);
             }
-            if (decompiledRegionSelector0 == 0) {
+            var8 = ep.field_l.a((na) (var7), (byte) -106, param0, param2, (na) (var6));
+            if (!param1) {
+              stackIn_11_0 = (dj) null;
               return stackIn_11_0;
-            } else {
-              return stackIn_15_0;
             }
+            if (param5) {
+              var8.a(false);
+            }
+            stackIn_15_0 = new dj(var8, param4, param3);
+            return stackIn_15_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

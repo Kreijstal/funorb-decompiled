@@ -17,20 +17,20 @@ final class qh implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_a) {
-            field_c = field_c + 4;
+          field_c = field_c + 4;
         } else {
-            fieldTemp$0 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$3] = param0.refreshRate;
         }
     }
 
@@ -47,28 +47,23 @@ final class qh implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Frame param3, int param4, byte param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
-        com.ms.com.IUnknown var9;
         param3.setVisible(true);
-        var7 = (com.ms.awt.WComponentPeer) null;
-        var8 = var7.getHwnd();
+        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
+        int var8 = var7.getHwnd();
         com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
         com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param3), 17);
         this.field_b.setDisplayMode(param4, param1, param0, param2, 0);
         param3.setBounds(0, 0, param4, param1);
-        if (param5 != -70) {
-          var9 = (com.ms.com.IUnknown) null;
-          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
-          param3.toFront();
-          param3.requestFocus();
-          return;
-        } else {
+        if (param5 == -70) {
           param3.toFront();
           param3.requestFocus();
           return;
         }
+        com.ms.com.IUnknown var9 = (com.ms.com.IUnknown) null;
+        this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+        param3.toFront();
+        param3.requestFocus();
     }
 
     public qh() {

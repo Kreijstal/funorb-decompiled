@@ -20,97 +20,45 @@ final class lqa extends ei {
     final boolean a(ei param0, int param1) {
         lqa var3 = null;
         RuntimeException var3_ref = null;
-        int stackIn_2_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
+        boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 55) {
-              L1: {
-                L2: {
-                  var3 = (lqa) ((Object) param0);
-                  if (!super.a(param0, 55)) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (var3.field_j) {
-                        stackIn_7_0 = 0;
-                        break L3;
-                      } else {
-                        stackIn_7_0 = 1;
-                        break L3;
-                      }
-                    }
-                    if (stackIn_7_0 == (this.field_j ? 1 : 0)) {
-                      break L2;
-                    } else {
-                      if (this.field_a != var3.field_a) {
-                        break L2;
-                      } else {
-                        L4: {
-                          if (var3.field_k) {
-                            stackIn_12_0 = 0;
-                            break L4;
-                          } else {
-                            stackIn_12_0 = 1;
-                            break L4;
-                          }
-                        }
-                        if (stackIn_12_0 == (var3.field_k ? 1 : 0)) {
-                          break L2;
-                        } else {
-                          stackIn_15_0 = 1;
-                          break L1;
-                        }
-                      }
-                    }
-                  }
-                }
-                stackIn_15_0 = 0;
-                break L1;
+          if (param1 != 55) {
+            return true;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          var3 = (lqa) (param0);
+          if (super.a(param0, 55)) {
+            stackIn_7_0 = (var3.field_j) ? 0 : 1;
+            if (stackIn_7_0 != (this.field_j ? 1 : 0) &&
+              this.field_a == var3.field_a) {
+              stackIn_12_0 = (var3.field_k) ? 0 : 1;
+              if (stackIn_12_0 != (var3.field_k ? 1 : 0)) {
+                stackIn_15_0 = true;
+                decompiledFrameRemainder0 = false;
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          if (decompiledFrameRemainder0) {
+            stackIn_15_0 = false;
+          }
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
-
-            stackIn_18_1 = new StringBuilder().append("lqa.B(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("lqa.B(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_15_0 != 0;
+          throw tba.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -128,7 +76,7 @@ final class lqa extends ei {
     public static void a(byte param0) {
         field_g = null;
         if (param0 != 102) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
     }
 

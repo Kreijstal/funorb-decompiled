@@ -13,7 +13,7 @@ final class hu {
         field_a = null;
         field_d = null;
         if (param0 != 119) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -24,9 +24,9 @@ final class hu {
         field_b = new float[16384];
         field_c = new float[16384];
         double var0 = 0.0003834951969714103;
-        for (var2 = 0; -16385 < (var2 ^ -1); var2++) {
-            field_b[var2] = (float)Math.sin((double)var2 * var0);
-            field_c[var2] = (float)Math.cos((double)var2 * var0);
+        for (var2 = 0; var2 < 16384; var2++) {
+          field_b[var2] = (float)Math.sin((double)var2 * var0);
+          field_c[var2] = (float)Math.cos((double)var2 * var0);
         }
         field_a = "<%0> ran out of time";
         field_d = "Waiting For Sync";

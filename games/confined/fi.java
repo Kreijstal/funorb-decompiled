@@ -9,17 +9,17 @@ final class fi {
 
     final static void a(mi param0, int param1, boolean param2, mi param3, mi param4) {
         try {
-            fb.field_a = a.a("", -6728);
-            fb.field_a.a(false, param1 + 64187);
-            rk.a(param0, param1 ^ 122, param4, param3);
-            jk.a((byte) -81);
-            na.field_S = ml.field_a;
-            oe.field_Q = ml.field_a;
-            if (param1 != 0) {
-                field_d = (nf[]) null;
-            }
+          fb.field_a = a.a("", -6728);
+          fb.field_a.a(false, param1 + 64187);
+          rk.a(param0, param1 ^ 122, param4, param3);
+          jk.a((byte) -81);
+          na.field_S = ml.field_a;
+          oe.field_Q = ml.field_a;
+          if (param1 != 0) {
+            field_d = (nf[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "fi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class fi {
         field_d = null;
         field_b = null;
         if (param0 > -121) {
-            field_a = -5;
+          field_a = -5;
         }
     }
 

@@ -9,37 +9,32 @@ final class mn {
     int[] field_d;
 
     final static void a(byte param0) {
-        if (param0 != -126) {
-          mn.c((byte) -27);
-          ke.field_s.b(new nb(), (byte) 110);
-          return;
-        } else {
+        if (param0 == -126) {
           ke.field_s.b(new nb(), (byte) 110);
           return;
         }
+        mn.c((byte) -27);
+        ke.field_s.b(new nb(), (byte) 110);
     }
 
     final static void c(byte param0) {
-        if (param0 == 67) {
-          if (!md.field_k) {
-            throw new IllegalStateException();
-          } else {
-            ka.field_r = true;
-            w.b(true, -23960);
-            fa.field_c = 0;
-            return;
-          }
-        } else {
+        if (param0 != 67) {
           field_b = (bd) null;
-          if (!md.field_k) {
-            throw new IllegalStateException();
-          } else {
+          if (md.field_k) {
             ka.field_r = true;
             w.b(true, -23960);
             fa.field_c = 0;
             return;
           }
+          throw new IllegalStateException();
         }
+        if (md.field_k) {
+          ka.field_r = true;
+          w.b(true, -23960);
+          fa.field_c = 0;
+          return;
+        }
+        throw new IllegalStateException();
     }
 
     public static void b(byte param0) {

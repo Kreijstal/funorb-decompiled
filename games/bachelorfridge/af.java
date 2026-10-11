@@ -8,9 +8,9 @@ final class af {
 
     public static void a(int param0) {
         if (param0 != 9680) {
-            af.a(73, 86);
-            field_b = null;
-            return;
+          af.a(73, 86);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -20,63 +20,33 @@ final class af {
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        if (param1 != 26291) {
-          L0: {
-            af.a(-60, 33);
-            var2 = 0;
-            if (param0 != 0) {
-              break L0;
-            } else {
-              var2 = fb.field_p;
-              break L0;
-            }
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param1 == 26291) {
+          var2 = 0;
+          if (param0 == 0) {
+            var2 = fb.field_p;
           }
-          L1: {
-            if ((param0 ^ -1) != -2) {
-              break L1;
-            } else {
-              var2 = ri.field_c;
-              break L1;
-            }
+          if (param0 == 1) {
+            var2 = ri.field_c;
           }
-          L2: {
-            if (2 != param0) {
-              break L2;
-            } else {
-              var2 = fj.field_g;
-              break L2;
-            }
-          }
-          return var2;
-        } else {
-          L3: {
-            var2 = 0;
-            if (param0 != 0) {
-              break L3;
-            } else {
-              var2 = fb.field_p;
-              break L3;
-            }
-          }
-          L4: {
-            if ((param0 ^ -1) != -2) {
-              break L4;
-            } else {
-              var2 = ri.field_c;
-              break L4;
-            }
-          }
-          L5: {
-            if (2 != param0) {
-              break L5;
-            } else {
-              var2 = fj.field_g;
-              break L5;
-            }
+          if (2 == param0) {
+            var2 = fj.field_g;
           }
           return var2;
         }
+        af.a(-60, 33);
+        var2Lifetime1 = 0;
+        if (param0 == 0) {
+          var2Lifetime1 = fb.field_p;
+        }
+        if (param0 == 1) {
+          var2Lifetime1 = ri.field_c;
+        }
+        if (2 == param0) {
+          var2Lifetime1 = fj.field_g;
+        }
+        return var2Lifetime1;
     }
 
     static {

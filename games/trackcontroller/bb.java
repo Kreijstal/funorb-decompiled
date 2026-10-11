@@ -7,38 +7,28 @@ final class bb {
     private static String field_z;
 
     public static void a(boolean param0) {
-        String var2;
-        if (!param0) {
-          var2 = (String) null;
-          bb.a((String) null, (byte) 22, (String) null, (String) null);
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0) {
           field_a = null;
           field_b = null;
           return;
         }
+        String var2 = (String) null;
+        bb.a((String) null, (byte) 22, (String) null, (String) null);
+        field_a = null;
+        field_b = null;
     }
 
     final static String a(String param0, byte param1, String param2, String param3) {
-        int var4;
-        int var5;
-        var5 = TrackController.field_F ? 1 : 0;
-        var4 = param0.indexOf(param3);
-        if (param1 == -82) {
-          L0: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param2 + param0.substring(var4 + param3.length());
-              var4 = param0.indexOf(param3, var4 + param2.length());
-              continue L0;
-            }
-          }
-        } else {
+        int var5 = TrackController.field_F ? 1 : 0;
+        int var4 = param0.indexOf(param3);
+        if (param1 != -82) {
           return (String) null;
         }
+        while (-1 != var4) {
+          param0 = param0.substring(0, var4) + param2 + param0.substring(var4 + param3.length());
+          var4 = param0.indexOf(param3, var4 + param2.length());
+        }
+        return param0;
     }
 
     static {

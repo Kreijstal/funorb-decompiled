@@ -7,18 +7,19 @@ final class taa extends rqa {
         double var3 = 0.0;
         int var5 = VoidHunters.field_G;
         try {
-            int var1_int = 3 / ((param0 - 64) / 44);
-            if (null == qta.field_o || null == jmb.field_q) {
-                jmb.field_q = new int[256];
-                qta.field_o = new int[256];
-                for (var2 = 0; 256 > var2; var2++) {
-                    var3 = (double)var2 / 255.0 * 6.283185307179586;
-                    qta.field_o[var2] = (int)(4096.0 * Math.sin(var3));
-                    jmb.field_q[var2] = (int)(Math.cos(var3) * 4096.0);
-                }
+          int var1_int = 3 / ((param0 - 64) / 44);
+          if (null == qta.field_o ||
+            null == jmb.field_q) {
+            jmb.field_q = new int[256];
+            qta.field_o = new int[256];
+            for (var2 = 0; 256 > var2; var2++) {
+              var3 = (double)var2 / 255.0 * 6.283185307179586;
+              qta.field_o[var2] = (int)(4096.0 * Math.sin(var3));
+              jmb.field_q[var2] = (int)(Math.cos(var3) * 4096.0);
             }
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "taa.B(" + param0 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "taa.B(" + param0 + ')');
         }
     }
 
@@ -27,46 +28,26 @@ final class taa extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                taa.e((byte) 116);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(pcb.field_o);
-            break L0;
+          if (param1 >= -119) {
+            taa.e((byte) 116);
           }
+          stackIn_3_0 = new nc(pcb.field_o);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("taa.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("taa.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     taa(String param0, Class[] param1, String param2) {

@@ -9,54 +9,45 @@ final class in extends ie {
     int field_A;
 
     final static boolean g(int param0) {
-        if (param0 <= -26) {
-          if ((mp.field_a ^ -1) <= -21) {
-            if (we.g(-1)) {
-              if (-1 > (jk.field_c ^ -1)) {
-                if (au.c(1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 > -26) {
           field_B = (String) null;
-          if ((mp.field_a ^ -1) <= -21) {
-            if (we.g(-1)) {
-              if (-1 > (jk.field_c ^ -1)) {
-                if (au.c(1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (mp.field_a < 20) {
             return true;
           }
+          if (!we.g(-1)) {
+            return true;
+          }
+          if (jk.field_c <= 0) {
+            return false;
+          }
+          if (!au.c(1)) {
+            return true;
+          }
+          return false;
         }
+        if (mp.field_a < 20) {
+          return true;
+        }
+        if (!we.g(-1)) {
+          return true;
+        }
+        if (jk.field_c <= 0) {
+          return false;
+        }
+        if (!au.c(1)) {
+          return true;
+        }
+        return false;
     }
 
     in(pk param0) {
         super(param0.field_r, param0.field_v, param0.field_q, param0.field_p, (mh) null, (qm) null);
         try {
-            param0.a(-116, 0, 0, this.field_p, this.field_q);
-            this.field_A = 256;
-            this.field_y = param0;
+          param0.a(-116, 0, 0, this.field_p, this.field_q);
+          this.field_A = 256;
+          this.field_y = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "in.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +58,7 @@ final class in extends ie {
 
     public static void a(byte param0) {
         if (param0 > -9) {
-            return;
+          return;
         }
         field_C = null;
         field_D = null;
@@ -75,38 +66,31 @@ final class in extends ie {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        wb var6;
         if (0 != param3) {
           return;
-        } else {
-          if (null != this.field_y) {
-            if (this.field_A != 0) {
-              if ((this.field_A ^ -1) == -257) {
-                this.field_y.a(this.field_r + param0, this.field_v + param1, (byte) -125, param3);
-                return;
-              } else {
-                var6 = new wb(this.field_y.field_q, this.field_y.field_p);
-                jq.a(7161, var6);
-                if (param2 >= -35) {
-                  field_C = (String) null;
-                  this.field_y.a(0, 0, (byte) -55, param3);
-                  su.a((byte) 108);
-                  var6.a(this.field_r + param0, param1 - -this.field_v, this.field_A);
-                  return;
-                } else {
-                  this.field_y.a(0, 0, (byte) -55, param3);
-                  su.a((byte) 108);
-                  var6.a(this.field_r + param0, param1 - -this.field_v, this.field_A);
-                  return;
-                }
-              }
-            } else {
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (null == this.field_y) {
+          return;
+        }
+        if (this.field_A == 0) {
+          return;
+        }
+        if (this.field_A == 256) {
+          this.field_y.a(this.field_r + param0, this.field_v + param1, (byte) -125, param3);
+          return;
+        }
+        wb var6 = new wb(this.field_y.field_q, this.field_y.field_p);
+        jq.a(7161, var6);
+        if (param2 < -35) {
+          this.field_y.a(0, 0, (byte) -55, param3);
+          su.a((byte) 108);
+          var6.a(this.field_r + param0, param1 + this.field_v, this.field_A);
+          return;
+        }
+        field_C = (String) null;
+        this.field_y.a(0, 0, (byte) -55, param3);
+        su.a((byte) 108);
+        var6.a(this.field_r + param0, param1 + this.field_v, this.field_A);
     }
 
     static {

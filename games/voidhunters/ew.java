@@ -10,62 +10,42 @@ final class ew extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                field_o = true;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(43, 85));
-            break L0;
+          if (param1 >= -119) {
+            field_o = true;
           }
+          stackIn_3_0 = new nc(frb.a(43, 85));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ew.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ew.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0, String param1) {
         try {
-            vla.field_E = param1;
-            if (param0 != 1043) {
-                ew.b(false);
-            }
+          vla.field_E = param1;
+          if (param0 != 1043) {
+            ew.b(false);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "ew.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "ew.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_p = null;
     }
@@ -84,353 +64,159 @@ final class ew extends rqa {
         int var12;
         int var13;
         int var14;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
         var14 = VoidHunters.field_G;
         var6 = -param3 + param1;
-        var7 = param4 + -param0;
-        if (var6 != 0) {
-          if (0 == var7) {
-            kdb.a(param0, param1, (byte) 111, param5, param3);
-            return;
-          } else {
-            if (param2 >= 45) {
-              var12 = (var7 << 1826955916) / var6;
-              var13 = param0 - (var12 * param3 >> 38777740);
-              if (param3 >= ob.field_j) {
-                if (mt.field_o >= param3) {
-                  var8 = param3;
-                  var10 = param0;
-                  if (ob.field_j > param1) {
-                    var11 = (ob.field_j * var12 >> -147830388) + var13;
-                    var9 = ob.field_j;
-                    if (lua.field_c <= var11) {
-                      if (hab.field_i < var11) {
-                        var11 = hab.field_i;
-                        var9 = (hab.field_i + -var13 << -1018694356) / var12;
-                        if (lua.field_c > var10) {
-                          var10 = lua.field_c;
-                          var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          if (hab.field_i < var10) {
-                            var8 = (hab.field_i + -var13 << -971667316) / var12;
-                            var10 = hab.field_i;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          }
-                        }
-                      } else {
-                        if (lua.field_c > var10) {
-                          var10 = lua.field_c;
-                          var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          if (hab.field_i < var10) {
-                            var8 = (hab.field_i + -var13 << -971667316) / var12;
-                            var10 = hab.field_i;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      var11 = lua.field_c;
-                      var9 = (lua.field_c - var13 << 1700536588) / var12;
-                      if (lua.field_c > var10) {
-                        var10 = lua.field_c;
-                        var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                        rsa.a(param5, var9, -1, var10, var11, var8);
-                        return;
-                      } else {
-                        if (hab.field_i < var10) {
-                          var8 = (hab.field_i + -var13 << -971667316) / var12;
-                          var10 = hab.field_i;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    if (mt.field_o < param1) {
-                      var11 = var13 - -(mt.field_o * var12 >> -703305652);
-                      var9 = mt.field_o;
-                      if (lua.field_c <= var11) {
-                        if (hab.field_i < var11) {
-                          var11 = hab.field_i;
-                          var9 = (hab.field_i + -var13 << -1018694356) / var12;
-                          if (lua.field_c > var10) {
-                            var10 = lua.field_c;
-                            var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            if (hab.field_i < var10) {
-                              var8 = (hab.field_i + -var13 << -971667316) / var12;
-                              var10 = hab.field_i;
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            } else {
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            }
-                          }
-                        } else {
-                          if (lua.field_c > var10) {
-                            var10 = lua.field_c;
-                            var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            if (hab.field_i < var10) {
-                              var8 = (hab.field_i + -var13 << -971667316) / var12;
-                              var10 = hab.field_i;
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            } else {
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            }
-                          }
-                        }
-                      } else {
-                        var11 = lua.field_c;
-                        var9 = (lua.field_c - var13 << 1700536588) / var12;
-                        if (lua.field_c > var10) {
-                          var10 = lua.field_c;
-                          var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          if (hab.field_i < var10) {
-                            var8 = (hab.field_i + -var13 << -971667316) / var12;
-                            var10 = hab.field_i;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      var9 = param1;
-                      var11 = param4;
-                      if (lua.field_c <= var11) {
-                        if (hab.field_i < var11) {
-                          var11 = hab.field_i;
-                          var9 = (hab.field_i + -var13 << -1018694356) / var12;
-                          if (lua.field_c > var10) {
-                            var10 = lua.field_c;
-                            var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            if (hab.field_i < var10) {
-                              var8 = (hab.field_i + -var13 << -971667316) / var12;
-                              var10 = hab.field_i;
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            } else {
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            }
-                          }
-                        } else {
-                          if (lua.field_c > var10) {
-                            var10 = lua.field_c;
-                            var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            if (hab.field_i < var10) {
-                              var8 = (hab.field_i + -var13 << -971667316) / var12;
-                              var10 = hab.field_i;
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            } else {
-                              rsa.a(param5, var9, -1, var10, var11, var8);
-                              return;
-                            }
-                          }
-                        }
-                      } else {
-                        var11 = lua.field_c;
-                        var9 = (lua.field_c - var13 << 1700536588) / var12;
-                        if (lua.field_c > var10) {
-                          var10 = lua.field_c;
-                          var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          if (hab.field_i < var10) {
-                            var8 = (hab.field_i + -var13 << -971667316) / var12;
-                            var10 = hab.field_i;
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          } else {
-                            rsa.a(param5, var9, -1, var10, var11, var8);
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  L0: {
-                    var10 = var13 - -(var12 * mt.field_o >> -2130128052);
-                    var8 = mt.field_o;
-                    if (ob.field_j > param1) {
-                      var11 = (ob.field_j * var12 >> -147830388) + var13;
-                      var9 = ob.field_j;
-                      break L0;
-                    } else {
-                      if (mt.field_o < param1) {
-                        var11 = var13 - -(mt.field_o * var12 >> -703305652);
-                        var9 = mt.field_o;
-                        break L0;
-                      } else {
-                        var9 = param1;
-                        var11 = param4;
-                        break L0;
-                      }
-                    }
-                  }
-                  if (lua.field_c <= var11) {
-                    if (hab.field_i < var11) {
-                      var11 = hab.field_i;
-                      var9 = (hab.field_i + -var13 << -1018694356) / var12;
-                      if (lua.field_c > var10) {
-                        var10 = lua.field_c;
-                        var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                        rsa.a(param5, var9, -1, var10, var11, var8);
-                        return;
-                      } else {
-                        if (hab.field_i < var10) {
-                          var8 = (hab.field_i + -var13 << -971667316) / var12;
-                          var10 = hab.field_i;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        }
-                      }
-                    } else {
-                      if (lua.field_c > var10) {
-                        var10 = lua.field_c;
-                        var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                        rsa.a(param5, var9, -1, var10, var11, var8);
-                        return;
-                      } else {
-                        if (hab.field_i < var10) {
-                          var8 = (hab.field_i + -var13 << -971667316) / var12;
-                          var10 = hab.field_i;
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        } else {
-                          rsa.a(param5, var9, -1, var10, var11, var8);
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    var11 = lua.field_c;
-                    var9 = (lua.field_c - var13 << 1700536588) / var12;
-                    if (lua.field_c > var10) {
-                      var10 = lua.field_c;
-                      var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                      rsa.a(param5, var9, -1, var10, var11, var8);
-                      return;
-                    } else {
-                      if (hab.field_i < var10) {
-                        var8 = (hab.field_i + -var13 << -971667316) / var12;
-                        var10 = hab.field_i;
-                        rsa.a(param5, var9, -1, var10, var11, var8);
-                        return;
-                      } else {
-                        rsa.a(param5, var9, -1, var10, var11, var8);
-                        return;
-                      }
-                    }
-                  }
-                }
-              } else {
-                L1: {
-                  var8 = ob.field_j;
-                  var10 = var13 + (ob.field_j * var12 >> -920780948);
-                  if (ob.field_j > param1) {
-                    var11 = (ob.field_j * var12 >> -147830388) + var13;
-                    var9 = ob.field_j;
-                    break L1;
-                  } else {
-                    if (mt.field_o < param1) {
-                      var11 = var13 - -(mt.field_o * var12 >> -703305652);
-                      var9 = mt.field_o;
-                      break L1;
-                    } else {
-                      var9 = param1;
-                      var11 = param4;
-                      break L1;
-                    }
-                  }
-                }
-                L2: {
-                  if (lua.field_c <= var11) {
-                    if (hab.field_i < var11) {
-                      var11 = hab.field_i;
-                      var9 = (hab.field_i + -var13 << -1018694356) / var12;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    var11 = lua.field_c;
-                    var9 = (lua.field_c - var13 << 1700536588) / var12;
-                    break L2;
-                  }
-                }
-                if (lua.field_c > var10) {
-                  var10 = lua.field_c;
-                  var8 = (-var13 + lua.field_c << 1151627820) / var12;
-                  rsa.a(param5, var9, -1, var10, var11, var8);
-                  return;
-                } else {
-                  if (hab.field_i < var10) {
-                    var8 = (hab.field_i + -var13 << -971667316) / var12;
-                    var10 = hab.field_i;
-                    rsa.a(param5, var9, -1, var10, var11, var8);
-                    return;
-                  } else {
-                    rsa.a(param5, var9, -1, var10, var11, var8);
-                    return;
-                  }
-                }
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          L3: {
-            if (-1 != (var7 ^ -1)) {
-              rha.a(-119, param3, param5, param4, param0);
-              break L3;
-            } else {
-              break L3;
-            }
+        var7 = param4 - param0;
+        if (var6 == 0) {
+          if (var7 != 0) {
+            rha.a(-119, param3, param5, param4, param0);
           }
           return;
         }
+        if (0 == var7) {
+          kdb.a(param0, param1, (byte) 111, param5, param3);
+          return;
+        }
+        if (param2 < 45) {
+          return;
+        }
+        var12 = (var7 << 12) / var6;
+        var13 = param0 - (var12 * param3 >> 12);
+        if (param3 < ob.field_j) {
+          var8 = ob.field_j;
+          var10 = var13 + (ob.field_j * var12 >> 12);
+          if (ob.field_j > param1) {
+            var11 = (ob.field_j * var12 >> 12) + var13;
+            var9 = ob.field_j;
+          } else {
+            if (mt.field_o < param1) {
+              var11 = var13 + (mt.field_o * var12 >> 12);
+              var9 = mt.field_o;
+            } else {
+              var9 = param1;
+              var11 = param4;
+            }
+          }
+          if (lua.field_c <= var11) {
+            if (hab.field_i < var11) {
+              var11 = hab.field_i;
+              var9 = (hab.field_i - var13 << 12) / var12;
+            }
+          } else {
+            var11 = lua.field_c;
+            var9 = (lua.field_c - var13 << 12) / var12;
+          }
+          if (lua.field_c > var10) {
+            var10 = lua.field_c;
+            var8 = (-var13 + lua.field_c << 12) / var12;
+          } else {
+            if (hab.field_i < var10) {
+              var8 = (hab.field_i - var13 << 12) / var12;
+              var10 = hab.field_i;
+            }
+          }
+          rsa.a(param5, var9, -1, var10, var11, var8);
+          return;
+        }
+        if (mt.field_o < param3) {
+          var10Lifetime1 = var13 + (var12 * mt.field_o >> 12);
+          var8Lifetime1 = mt.field_o;
+          if (ob.field_j > param1) {
+            var11Lifetime1 = (ob.field_j * var12 >> 12) + var13;
+            var9Lifetime1 = ob.field_j;
+          } else {
+            if (mt.field_o < param1) {
+              var11Lifetime1 = var13 + (mt.field_o * var12 >> 12);
+              var9Lifetime1 = mt.field_o;
+            } else {
+              var9Lifetime1 = param1;
+              var11Lifetime1 = param4;
+            }
+          }
+          if (lua.field_c > var11Lifetime1) {
+            var11Lifetime1 = lua.field_c;
+            var9Lifetime1 = (lua.field_c - var13 << 12) / var12;
+          } else {
+            if (hab.field_i < var11Lifetime1) {
+              var11Lifetime1 = hab.field_i;
+              var9Lifetime1 = (hab.field_i - var13 << 12) / var12;
+            }
+          }
+          if (lua.field_c > var10Lifetime1) {
+            var10Lifetime1 = lua.field_c;
+            var8Lifetime1 = (-var13 + lua.field_c << 12) / var12;
+          } else {
+            if (hab.field_i < var10Lifetime1) {
+              var8Lifetime1 = (hab.field_i - var13 << 12) / var12;
+              var10Lifetime1 = hab.field_i;
+            }
+          }
+          rsa.a(param5, var9Lifetime1, -1, var10Lifetime1, var11Lifetime1, var8Lifetime1);
+          return;
+        }
+        var8Lifetime2 = param3;
+        var10Lifetime2 = param0;
+        if (ob.field_j > param1) {
+          var11Lifetime2 = (ob.field_j * var12 >> 12) + var13;
+          var9Lifetime2 = ob.field_j;
+          if (lua.field_c > var11Lifetime2) {
+            var11Lifetime2 = lua.field_c;
+            var9Lifetime2 = (lua.field_c - var13 << 12) / var12;
+          } else {
+            if (hab.field_i < var11Lifetime2) {
+              var11Lifetime2 = hab.field_i;
+              var9Lifetime2 = (hab.field_i - var13 << 12) / var12;
+            }
+          }
+          if (lua.field_c > var10Lifetime2) {
+            var10Lifetime2 = lua.field_c;
+            var8Lifetime2 = (-var13 + lua.field_c << 12) / var12;
+          } else {
+            if (hab.field_i < var10Lifetime2) {
+              var8Lifetime2 = (hab.field_i - var13 << 12) / var12;
+              var10Lifetime2 = hab.field_i;
+            }
+          }
+          rsa.a(param5, var9Lifetime2, -1, var10Lifetime2, var11Lifetime2, var8Lifetime2);
+          return;
+        }
+        if (mt.field_o < param1) {
+          var11Lifetime3 = var13 + (mt.field_o * var12 >> 12);
+          var9Lifetime3 = mt.field_o;
+        } else {
+          var9Lifetime3 = param1;
+          var11Lifetime3 = param4;
+        }
+        if (lua.field_c > var11Lifetime3) {
+          var11Lifetime3 = lua.field_c;
+          var9Lifetime3 = (lua.field_c - var13 << 12) / var12;
+        } else {
+          if (hab.field_i < var11Lifetime3) {
+            var11Lifetime3 = hab.field_i;
+            var9Lifetime3 = (hab.field_i - var13 << 12) / var12;
+          }
+        }
+        if (lua.field_c > var10Lifetime2) {
+          var10Lifetime2 = lua.field_c;
+          var8Lifetime2 = (-var13 + lua.field_c << 12) / var12;
+        } else {
+          if (hab.field_i < var10Lifetime2) {
+            var8Lifetime2 = (hab.field_i - var13 << 12) / var12;
+            var10Lifetime2 = hab.field_i;
+          }
+        }
+        rsa.a(param5, var9Lifetime3, -1, var10Lifetime2, var11Lifetime3, var8Lifetime2);
+        return;
     }
 
     static {

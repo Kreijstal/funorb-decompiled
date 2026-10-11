@@ -12,22 +12,18 @@ public class OpenGL {
     private Thread b;
 
     public final synchronized boolean a() {
-        Thread var1;
-        jaggl.OpenGL var2;
-        var1 = Thread.currentThread();
-        if (this.attachPeer()) {
-          var2 = (jaggl.OpenGL) (c.put(var1, this));
-          if (var2 != null) {
-            var2.b = null;
-            this.b = var1;
-            return true;
-          } else {
-            this.b = var1;
-            return true;
-          }
-        } else {
+        Thread var1 = Thread.currentThread();
+        if (!this.attachPeer()) {
           return false;
         }
+        jaggl.OpenGL var2 = (jaggl.OpenGL) (c.put(var1, this));
+        if (var2 == null) {
+          this.b = var1;
+          return true;
+        }
+        var2.b = null;
+        this.b = var1;
+        return true;
     }
 
     public final native void setSwapInterval(int param0);
@@ -44,33 +40,28 @@ public class OpenGL {
         int var4_int;
         String var5;
         String var4;
-        if (null == this.a) {
-          this.a = new Hashtable();
-          var2 = jaggl.OpenGL.glGetString(7939);
-          var3 = 0;
-          L0: while (true) {
-            var4_int = var2.indexOf(' ', var3);
-            if ((var4_int ^ -1) == 0) {
-              var4 = var2.substring(var3).trim();
-              if (var4.length() != 0) {
-                this.a.put(var4, var4);
-                return this.a.containsKey(param0);
-              } else {
-                return this.a.containsKey(param0);
-              }
-            } else {
-              var5 = var2.substring(var3, var4_int).trim();
-              var3 = var4_int + 1;
-              if (0 != var5.length()) {
-                this.a.put(var5, var5);
-                continue L0;
-              } else {
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (null != this.a) {
           return this.a.containsKey(param0);
+        }
+        this.a = new Hashtable();
+        var2 = jaggl.OpenGL.glGetString(7939);
+        var3 = 0;
+        while (true) {
+          var4_int = var2.indexOf(' ', var3);
+          if (var4_int == -1) {
+            var4 = var2.substring(var3).trim();
+            if (var4.length() == 0) {
+              return this.a.containsKey(param0);
+            }
+            this.a.put(var4, var4);
+            return this.a.containsKey(param0);
+          }
+          var5 = var2.substring(var3, var4_int).trim();
+          var3 = var4_int + 1;
+          if (0 == var5.length()) {
+            continue;
+          }
+          this.a.put(var5, var5);
         }
     }
 
@@ -291,8 +282,8 @@ public class OpenGL {
     public final native static void glLineWidth(float param0);
 
     public final synchronized boolean b() {
-        if (!(this.b == Thread.currentThread())) {
-            return false;
+        if (this.b != Thread.currentThread()) {
+          return false;
         }
         this.detachPeer();
         c.remove(this.b);

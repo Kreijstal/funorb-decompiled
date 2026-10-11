@@ -8,12 +8,12 @@ final class vl extends vg {
 
     vl(int param0, fsa param1) {
         try {
-            this.field_f = param0;
-            this.field_g = param1.f((byte) -72).c(121);
-            this.field_h = param1.n(31974).field_d;
-            param1.x(15470);
+          this.field_f = param0;
+          this.field_g = param1.f((byte) -72).c(121);
+          this.field_h = param1.n(31974).field_d;
+          param1.x(15470);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "vl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "vl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,10 +28,10 @@ final class vl extends vg {
         iu[] var4 = var7;
         var7[0] = jf.a(param1, 121, param3);
         if (param0 <= 111) {
-            vl.a((byte) 34, 94, 33, 36);
+          vl.a((byte) 34, 94, 33, 36);
         }
-        for (var5 = 1; (var5 ^ -1) > -10; var5++) {
-            var7[var5] = var7[0];
+        for (var5 = 1; var5 < 9; var5++) {
+          var7[var5] = var7[0];
         }
         var4[4] = jf.a(param2, 43, 64);
         return var4;

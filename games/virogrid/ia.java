@@ -11,18 +11,16 @@ final class ia {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 < 2) {
-          ia.a(106);
-          field_b = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 >= 2) {
           field_b = null;
           field_e = null;
           field_a = null;
           return;
         }
+        ia.a(106);
+        field_b = null;
+        field_e = null;
+        field_a = null;
     }
 
     static {

@@ -8,9 +8,9 @@ final class alb {
 
     public static void a(int param0) {
         if (param0 != 6947) {
-            field_a = (String) null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

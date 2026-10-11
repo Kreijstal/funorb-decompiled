@@ -15,22 +15,22 @@ final class aq {
         int var3 = 0;
         int var4 = AceOfSkies.field_G ? 1 : 0;
         try {
-            var1 = new ll(param0, 140);
-            cm.a(var1, param0 + -15032);
-            re.a();
-            vp.a();
-            it.field_c = 0;
-            wj.e((byte) -128);
-            var2 = var1.d();
-            for (var3 = 0; -16 < (var3 ^ -1); var3++) {
-                var2.c(-2, -2, 16777215);
-                vp.a(4, 4, 0, 0, 540, 140);
-            }
-            oo.field_W.b();
-            var1.d(0, 0);
-            sl.c(2765);
+          var1 = new ll(param0, 140);
+          cm.a(var1, param0 - 15032);
+          re.a();
+          vp.a();
+          it.field_c = 0;
+          wj.e((byte) -128);
+          var2 = var1.d();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.c(-2, -2, 16777215);
+            vp.a(4, 4, 0, 0, 540, 140);
+          }
+          oo.field_W.b();
+          var1.d(0, 0);
+          sl.c(2765);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');
         }
     }
 
@@ -41,80 +41,54 @@ final class aq {
 
     public static void a(int param0) {
         if (param0 != 32683) {
-            aq.a(-86);
+          aq.a(-86);
         }
         field_b = null;
         field_d = null;
     }
 
     final static StringBuilder a(char param0, int param1, int param2, StringBuilder param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         StringBuilder var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var4_int = param3.length();
-              param3.setLength(param2);
-              if (param1 == -2) {
-                break L1;
-              } else {
-                var6 = (StringBuilder) null;
-                aq.a('.', 9, -96, (StringBuilder) null);
-                break L1;
-              }
-            }
-            var5 = var4_int;
-            L2: while (true) {
-              if (var5 >= param2) {
-                stackIn_6_0 = (StringBuilder) (param3);
-                break L0;
-              } else {
-                param3.setCharAt(var5, param0);
-                var5++;
-                continue L2;
-              }
-            }
+          var4_int = param3.length();
+          param3.setLength(param2);
+          if (param1 != -2) {
+            var6 = (StringBuilder) null;
+            aq.a('.', 9, -96, (StringBuilder) null);
           }
+          for (var5 = var4_int; var5 < param2; var5++) {
+            param3.setCharAt(var5, param0);
+          }
+          stackIn_6_0 = (StringBuilder) (param3);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("aq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("aq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     aq(wl param0, long param1, int param2) {
         try {
-            this.field_a = param1;
-            this.field_c = param0;
+          this.field_a = param1;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "aq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

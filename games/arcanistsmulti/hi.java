@@ -15,7 +15,7 @@ final class hi {
         field_e = null;
         field_b = (int[][]) null;
         if (param0 < 16) {
-            return;
+          return;
         }
         field_c = null;
         field_f = null;
@@ -23,35 +23,28 @@ final class hi {
     }
 
     final static void a(int param0, boolean param1) {
-        Object var2;
-        if (param0 >= -45) {
-          L0: {
-            hi.a(23, true);
-            var2 = null;
-            if (param1) {
-              var2 = new wd();
-              break L0;
-            } else {
-              var2 = new rd();
-              break L0;
-            }
+        Object var2 = null;
+        Object var2Lifetime1;
+        Object var2Lifetime2;
+        Object var2Lifetime3;
+        if (param0 < -45) {
+          var2 = null;
+          if (!param1) {
+            var2Lifetime3 = new rd();
+          } else {
+            var2Lifetime3 = new wd();
           }
-          jk.a(-113, new v((qi) (var2)));
-          return;
-        } else {
-          L1: {
-            var2 = null;
-            if (param1) {
-              var2 = new wd();
-              break L1;
-            } else {
-              var2 = new rd();
-              break L1;
-            }
-          }
-          jk.a(-113, new v((qi) (var2)));
+          jk.a(-113, new v((qi) (var2Lifetime3)));
           return;
         }
+        hi.a(23, true);
+        var2Lifetime1 = null;
+        if (!param1) {
+          var2Lifetime2 = new rd();
+        } else {
+          var2Lifetime2 = new wd();
+        }
+        jk.a(-113, new v((qi) (var2Lifetime2)));
     }
 
     static {

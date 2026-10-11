@@ -10,15 +10,7 @@ final class sla {
     static String field_e;
 
     public static void a(int param0) {
-        if (param0 != -11536) {
-          field_b = (String[]) null;
-          field_a = null;
-          field_e = null;
-          field_f = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -11536) {
           field_a = null;
           field_e = null;
           field_f = null;
@@ -26,25 +18,17 @@ final class sla {
           field_b = null;
           return;
         }
+        field_b = (String[]) null;
+        field_a = null;
+        field_e = null;
+        field_f = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static void b(int param0) {
         qpa.field_b = null;
-        if (oea.field_i == null) {
-          lra.field_d = null;
-          dh.field_e = null;
-          lra.field_e = null;
-          if (param0 != 29585) {
-            sla.b(-98);
-            wi.field_s = null;
-            ni.field_c = true;
-            return;
-          } else {
-            wi.field_s = null;
-            ni.field_c = true;
-            return;
-          }
-        } else {
+        if (oea.field_i != null) {
           mka.field_b = rma.field_b;
           pq.field_g = oea.field_i;
           rma.field_b = null;
@@ -54,17 +38,27 @@ final class sla {
           lra.field_d = null;
           dh.field_e = null;
           lra.field_e = null;
-          if (param0 == 29585) {
-            wi.field_s = null;
-            ni.field_c = true;
-            return;
-          } else {
+          if (param0 != 29585) {
             sla.b(-98);
             wi.field_s = null;
             ni.field_c = true;
             return;
           }
+          wi.field_s = null;
+          ni.field_c = true;
+          return;
         }
+        lra.field_d = null;
+        dh.field_e = null;
+        lra.field_e = null;
+        if (param0 == 29585) {
+          wi.field_s = null;
+          ni.field_c = true;
+          return;
+        }
+        sla.b(-98);
+        wi.field_s = null;
+        ni.field_c = true;
     }
 
     public final String toString() {

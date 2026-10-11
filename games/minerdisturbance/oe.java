@@ -15,7 +15,7 @@ abstract class oe {
     final static void a(boolean param0) {
         ef.field_a = 0;
         if (!param0) {
-            field_b = true;
+          field_b = true;
         }
     }
 
@@ -23,7 +23,7 @@ abstract class oe {
 
     public static void b(byte param0) {
         if (param0 <= 103) {
-            return;
+          return;
         }
         field_e = (byte[][]) null;
         field_c = null;

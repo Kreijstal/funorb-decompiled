@@ -20,34 +20,30 @@ final class taa extends at {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         fo.field_a.a(param3, 31407, param6, param0, param5);
-        if (param2 >= 87) {
-          if (null != da.field_d) {
-            da.field_d.a((byte) -120, param3, param3, param1 + -uga.field_x, param1, param4);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param2 < 87) {
           field_m = (kv[]) null;
-          if (null == da.field_d) {
-            return;
-          } else {
-            da.field_d.a((byte) -120, param3, param3, param1 + -uga.field_x, param1, param4);
+          if (null != da.field_d) {
+            da.field_d.a((byte) -120, param3, param3, param1 - uga.field_x, param1, param4);
             return;
           }
+          return;
         }
+        if (null == da.field_d) {
+          return;
+        }
+        da.field_d.a((byte) -120, param3, param3, param1 - uga.field_x, param1, param4);
     }
 
     private final void a(int param0, byte param1, int param2, gj param3) {
         try {
-            this.field_k = param0;
-            this.field_n = param3;
-            this.field_j = param2;
-            if (param1 > -82) {
-                this.field_k = 48;
-            }
+          this.field_k = param0;
+          this.field_n = param3;
+          this.field_j = param2;
+          if (param1 > -82) {
+            this.field_k = 48;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "taa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "taa.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -56,52 +52,18 @@ final class taa extends at {
     }
 
     private final void b(boolean param0) {
-        int var2;
-        gj var7;
-        dha var8;
-        dha var9;
-        dha var10;
-        dha var11;
-        dha var12;
-        dha var13;
-        dha var14;
-        dha var15;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
+        dha var12 = null;
+        dha var13 = null;
+        dha var14 = null;
+        dha var15 = null;
+        int var2 = 0;
+        int var2Lifetime1;
         this.field_o = this.field_n.field_s.field_B;
         this.field_t = this.field_n.field_s.field_b;
         this.field_v = this.field_j - this.field_o;
         this.field_r = this.field_k - this.field_t;
-        if (!param0) {
-          L0: {
-            var7 = (gj) null;
-            this.a(34, (byte) 123, -56, (gj) null);
-            if ((kla.a(2, this.field_n.field_h.field_w, -2147483648) ^ -1) != -2) {
-              stackIn_8_0 = 1;
-              break L0;
-            } else {
-              stackIn_8_0 = -1;
-              break L0;
-            }
-          }
-          var2 = stackIn_8_0;
-          var8 = new dha(this.field_t, this.field_o);
-          var9 = new dha((int)((double)var2 * ((double)this.field_v * 0.2) + (double)this.field_t), (int)((double)this.field_o - (double)var2 * (0.2 * (double)this.field_r)));
-          var10 = new dha((int)((double)this.field_k + (double)var2 * ((double)this.field_v * 0.2)), (int)((double)this.field_j - (double)this.field_r * 0.2 * (double)var2));
-          var11 = new dha(this.field_k, this.field_j);
-          this.field_q = new gw(var8, var9, var10, var11, 0);
-          return;
-        } else {
-          L1: {
-            if ((kla.a(2, this.field_n.field_h.field_w, -2147483648) ^ -1) != -2) {
-              stackIn_4_0 = 1;
-              break L1;
-            } else {
-              stackIn_4_0 = -1;
-              break L1;
-            }
-          }
-          var2 = stackIn_4_0;
+        if (param0) {
+          var2 = kla.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
           var12 = new dha(this.field_t, this.field_o);
           var13 = new dha((int)((double)var2 * ((double)this.field_v * 0.2) + (double)this.field_t), (int)((double)this.field_o - (double)var2 * (0.2 * (double)this.field_r)));
           var14 = new dha((int)((double)this.field_k + (double)var2 * ((double)this.field_v * 0.2)), (int)((double)this.field_j - (double)this.field_r * 0.2 * (double)var2));
@@ -109,47 +71,45 @@ final class taa extends at {
           this.field_q = new gw(var12, var13, var14, var15, 0);
           return;
         }
+        gj var7 = (gj) null;
+        this.a(34, (byte) 123, -56, (gj) null);
+        var2Lifetime1 = kla.a(2, this.field_n.field_h.field_w, -2147483648) == 1 ? -1 : 1;
+        dha var8 = new dha(this.field_t, this.field_o);
+        dha var9 = new dha((int)((double)var2Lifetime1 * ((double)this.field_v * 0.2) + (double)this.field_t), (int)((double)this.field_o - (double)var2Lifetime1 * (0.2 * (double)this.field_r)));
+        dha var10 = new dha((int)((double)this.field_k + (double)var2Lifetime1 * ((double)this.field_v * 0.2)), (int)((double)this.field_j - (double)this.field_r * 0.2 * (double)var2Lifetime1));
+        dha var11 = new dha(this.field_k, this.field_j);
+        this.field_q = new gw(var8, var9, var10, var11, 0);
     }
 
     private final void d(int param0) {
         if (param0 != 1998707041) {
-            taa.d((byte) -37);
+          taa.d((byte) -37);
         }
     }
 
     final boolean c(byte param0) {
-        dha var2;
-        int var3;
-        int var4;
-        int var5;
-        L0: {
-          if (null == this.field_q) {
-            this.b(true);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null == this.field_q) {
+          this.b(true);
         }
-        var2 = this.field_q.a((double)this.field_s / 50.0, 91);
-        var3 = var2.field_c;
-        var4 = var2.field_a;
-        var5 = 20 % ((71 - param0) / 47);
+        dha var2 = this.field_q.a((double)this.field_s / 50.0, 91);
+        int var3 = var2.field_c;
+        int var4 = var2.field_a;
+        int var5 = 20 % ((71 - param0) / 47);
         this.field_n.field_s.a(var3, var4, this.field_p, (byte) -71);
-        int fieldTemp$1 = this.field_s + 1;
+        int fieldTemp$0 = this.field_s + 1;
         this.field_s = this.field_s + 1;
-        if ((double)fieldTemp$1 > 50.0) {
-          this.d(1998707041);
-          return true;
-        } else {
+        if (!((double)fieldTemp$0 > 50.0)) {
           return false;
         }
+        this.d(1998707041);
+        return true;
     }
 
     public static void d(byte param0) {
         field_m = null;
         field_u = null;
         if (param0 != -41) {
-            taa.d((byte) -11);
+          taa.d((byte) -11);
         }
     }
 
@@ -158,11 +118,11 @@ final class taa extends at {
         int var5 = 0;
         this.field_p = true;
         try {
-            var4_int = -(128 * (param1 - param2) >> 9564321) + 256;
-            var5 = -(64 * (param2 + param1) >> 1998707041) + 208;
-            this.a(var4_int, (byte) -107, var5, param0);
+          var4_int = -(128 * (param1 - param2) >> 1) + 256;
+          var5 = -(64 * (param2 + param1) >> 1) + 208;
+          this.a(var4_int, (byte) -107, var5, param0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "taa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "taa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

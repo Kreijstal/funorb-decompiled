@@ -18,69 +18,42 @@ final class vk {
         e var2 = null;
         int var3 = 0;
         boolean stackIn_15_0 = false;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
+        e var2Lifetime1;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            sh.field_r = param0;
-            if (param1 >= 66) {
-              var2 = (e) ((Object) tj.field_e.c((byte) 107));
-              L1: while (true) {
-                if (var2 == null) {
-                  if (null != TorChallenge.field_I) {
-                    var2 = (e) ((Object) TorChallenge.field_I.c((byte) 119));
-                    L2: while (true) {
-                      if (var2 == null) {
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      } else {
-                        stackIn_15_0 = var2.field_k.b(11163);
-                        L3: {
-                          if (stackIn_15_0) {
-                            var2.field_n.f(128 + sh.field_r * var2.field_l >> -1351907416);
-                            break L3;
-                          } else {
-                            var2.a(true);
-                            break L3;
-                          }
-                        }
-                        var2 = (e) ((Object) TorChallenge.field_I.c(-270));
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  L4: {
-                    if (var2.field_k.b(11163)) {
-                      var2.field_n.f(128 + sh.field_r * var2.field_l >> 1703182216);
-                      break L4;
-                    } else {
-                      var2.a(true);
-                      break L4;
-                    }
-                  }
-                  var2 = (e) ((Object) tj.field_e.c(-270));
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          sh.field_r = param0;
+          if (param1 < 66) {
+            return;
           }
+          var2 = (e) (tj.field_e.c((byte) 107));
+          while (var2 != null) {
+            if (var2.field_k.b(11163)) {
+              var2.field_n.f(128 + sh.field_r * var2.field_l >> 8);
+            } else {
+              var2.a(true);
+            }
+            var2 = (e) (tj.field_e.c(-270));
+          }
+          if (null == TorChallenge.field_I) {
+            return;
+          }
+          var2Lifetime1 = (e) (TorChallenge.field_I.c((byte) 119));
+          while (var2Lifetime1 != null) {
+            stackIn_15_0 = var2Lifetime1.field_k.b(11163);
+            if (stackIn_15_0) {
+              var2Lifetime1.field_n.f(128 + sh.field_r * var2Lifetime1.field_l >> 8);
+            } else {
+              var2Lifetime1.a(true);
+            }
+            var2Lifetime1 = (e) (TorChallenge.field_I.c(-270));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var2_ref), "vk.A(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

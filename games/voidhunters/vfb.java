@@ -6,7 +6,7 @@ final class vfb implements dja {
 
     public static void a(int param0) {
         if (param0 < 16) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -18,7 +18,7 @@ final class vfb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new tja[param1]);
     }

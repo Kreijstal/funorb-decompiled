@@ -10,7 +10,7 @@ final class me {
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 29) {
-            field_b = 75;
+          field_b = 75;
         }
     }
 

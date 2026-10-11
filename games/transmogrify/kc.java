@@ -29,64 +29,48 @@ final class kc extends wf {
     final static void a(byte param0) {
         l.field_d.b(-56, new jk());
         if (param0 >= -126) {
-            kc.a((byte) -99);
+          kc.a((byte) -99);
         }
     }
 
     final static void a(int param0, int param1) {
         try {
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            try {
-              L0: {
-                if (param0 == -14226) {
-                  kj.a(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var2 = decompiledCaughtException;
-                decompiledRegionSelector0 = 1;
-                break L1;
-              }
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return;
-            } else {
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          try {
+            if (param0 != -14226) {
               return;
             }
+            kj.a(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            if (param0 != 104) {
-                field_D = false;
-            }
-            param1.removeMouseListener(hi.field_e);
-            param1.removeMouseMotionListener(hi.field_e);
-            param1.removeFocusListener(hi.field_e);
-            cg.field_k = 0;
+          if (param0 != 104) {
+            field_D = false;
+          }
+          param1.removeMouseListener(hi.field_e);
+          param1.removeMouseMotionListener(hi.field_e);
+          param1.removeFocusListener(hi.field_e);
+          cg.field_k = 0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(boolean param0) {
         this.field_s = null;
         if (param0) {
-            return;
+          return;
         }
         this.field_t = null;
         this.field_y = null;

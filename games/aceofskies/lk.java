@@ -6,9 +6,9 @@ final class lk extends fu implements fq {
 
     final void a(byte param0) {
         if (param0 <= 32) {
-            this.a((byte) -14);
-            this.field_b.a((byte) -120, (fq) (this));
-            return;
+          this.a((byte) -14);
+          this.field_b.a((byte) -120, (fq) (this));
+          return;
         }
         this.field_b.a((byte) -120, (fq) (this));
     }
@@ -19,8 +19,8 @@ final class lk extends fu implements fq {
 
     public final int a(int param0) {
         if (param0 != 6530) {
-            this.a(60);
-            return this.field_f;
+          this.a(60);
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -28,7 +28,7 @@ final class lk extends fu implements fq {
     public static void c(int param0) {
         field_g = null;
         if (param0 != 34962) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
     }
 

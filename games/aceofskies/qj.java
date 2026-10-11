@@ -10,10 +10,10 @@ final class qj extends he {
     public static void d(byte param0) {
         field_t = null;
         if (param0 > -87) {
-            field_s = (String) null;
-            field_r = null;
-            field_s = null;
-            return;
+          field_s = (String) null;
+          field_r = null;
+          field_s = null;
+          return;
         }
         field_r = null;
         field_s = null;
@@ -21,70 +21,64 @@ final class qj extends he {
 
     final static qg g(int param0) {
         try {
-            Throwable var1 = null;
-            qg stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (param0 == 8192) {
-              try {
-                L0: {
-                  stackIn_3_0 = (qg) (Class.forName("bq").newInstance());
-                  break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = decompiledCaughtException;
-                return null;
-              }
-              return stackIn_3_0;
-            } else {
-              return (qg) null;
-            }
+          Throwable var1 = null;
+          qg stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != 8192) {
+            return (qg) null;
+          }
+          try {
+            stackIn_3_0 = (qg) (Class.forName("bq").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final boolean e(int param0) {
         if (param0 != 0) {
-            field_t = (int[]) null;
-            return false;
+          field_t = (int[]) null;
+          return false;
         }
         return false;
     }
 
     final static void c(byte param0) {
-        int var1;
-        if (!ks.field_b) {
-          throw new IllegalStateException();
-        } else {
-          var1 = 71 % ((param0 - -64) / 57);
+        if (ks.field_b) {
+          int var1 = 71 % ((param0 + 64) / 57);
           nq.field_a = true;
           ep.a(true, 0);
           ob.field_d = 0;
           return;
         }
+        throw new IllegalStateException();
     }
 
     qj(Object param0, int param1) {
         super(param1);
         try {
-            this.field_q = param0;
+          this.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "qj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void h(int param0) {
         if (param0 <= 28) {
-            qj.g(-8);
+          qj.g(-8);
         }
     }
 
     final Object a(byte param0) {
         if (param0 != 74) {
-            return (Object) null;
+          return (Object) null;
         }
         return this.field_q;
     }

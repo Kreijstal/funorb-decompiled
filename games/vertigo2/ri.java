@@ -20,36 +20,27 @@ final class ri extends li {
         field_r = null;
         field_z = null;
         if (param0 != 7139) {
-            return;
+          return;
         }
         field_o = null;
         field_x = null;
     }
 
     final static void b(boolean param0, int param1) {
-        L0: {
-          if (null == nj.field_b) {
-            break L0;
-          } else {
-            if (nj.field_b.a((byte) -51, param0)) {
-              nj.field_b = null;
-              break L0;
-            } else {
-              if (param1 == 30834) {
-                return;
-              } else {
-                field_z = (String) null;
-                return;
-              }
+        if (null != nj.field_b) {
+          if (!nj.field_b.a((byte) -51, param0)) {
+            if (param1 != 30834) {
+              field_z = (String) null;
+              return;
             }
+            return;
           }
+          nj.field_b = null;
         }
-        if (param1 != 30834) {
-          field_z = (String) null;
-          return;
-        } else {
+        if (param1 == 30834) {
           return;
         }
+        field_z = (String) null;
     }
 
     ri() {

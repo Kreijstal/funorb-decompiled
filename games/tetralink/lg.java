@@ -28,20 +28,20 @@ final class lg extends na {
         double var7 = 0.0;
         int var9 = 0;
         int var10 = TetraLink.field_J;
-        int var2 = this.field_u >> 1425297281;
+        int var2 = this.field_u >> 1;
         oh var3 = new oh(var2, this.field_u);
         sk.a((byte) 117, var3);
         int var5 = -120 % ((2 - param0) / 39);
         for (var4 = 0; var4 < this.field_u; var4++) {
-            for (var6 = 0; var2 > var6; var6++) {
-                var7 = (double)var6 * (double)var6 / (double)((this.field_u - var4) * var4);
-                var9 = 1;
-                if (var7 < 1.0) {
-                    var7 = Math.sqrt(-var7 + 1.0);
-                    var9 = 1.0 > var7 ? (int)(var7 * 255.0) : 255;
-                }
-                ra.a(var6, var4, var9 << 300252072 | var9 | var9 << 1832273328);
+          for (var6 = 0; var2 > var6; var6++) {
+            var7 = (double)var6 * (double)var6 / (double)((this.field_u - var4) * var4);
+            var9 = 1;
+            if (var7 < 1.0) {
+              var7 = Math.sqrt(-var7 + 1.0);
+              var9 = !(1.0 <= var7) ? (int)(var7 * 255.0) : 255;
             }
+            ra.a(var6, var4, var9 << 8 | var9 | var9 << 16);
+          }
         }
         dh.a(-581);
         return var3;
@@ -53,14 +53,14 @@ final class lg extends na {
         field_V = null;
         field_I = null;
         if (param0 >= -99) {
-            return;
+          return;
         }
         field_Z = null;
     }
 
     private final oh a(int param0, byte param1, int param2) {
+        int var6 = 0;
         int var5;
-        int var6;
         int var7;
         int var8;
         int var9;
@@ -71,87 +71,75 @@ final class lg extends na {
         oh var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
         var13 = TetraLink.field_J;
         var14 = new oh(this.field_U * 2, this.field_u);
         sk.a((byte) 112, var14);
-        var5 = this.field_u >> 353317665;
-        var6 = 0;
-        L0: while (true) {
-          if (this.field_u <= var6) {
-            if (param1 < -15) {
-              dh.a(-581);
-              return var14;
-            } else {
-              return (oh) null;
-            }
+        var5 = this.field_u >> 1;
+        for (var6 = 0; this.field_u > var6; var6++) {
+          var7 = (var6 >> 1) * (2 * this.field_U - 1) % (this.field_U * 2);
+          var8 = param2 & 16711935;
+          var9 = 65280 & param2;
+          var10 = -var5 + var6;
+          var11 = 128 + (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
+          if (256 > var11) {
+            stackIn_7_0 = (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> 8;
           } else {
-            L1: {
-              var7 = (var6 >> -351823231) * (2 * this.field_U - 1) % (this.field_U * 2);
-              var8 = param2 & 16711935;
-              var9 = 65280 & param2;
-              var10 = -var5 + var6;
-              var11 = 128 - -(int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0);
-              if (256 > var11) {
-                stackIn_7_0 = (var9 * var11 & 16711680 | -16711936 & var11 * var8) >>> -1643299064;
-                break L1;
-              } else {
-                stackIn_7_0 = var8 | var9;
-                break L1;
-              }
-            }
-            L2: {
-              var12 = stackIn_7_0;
-              ra.g(var7, var6, this.field_U, var12);
-              var8 = param0 & 16711935;
-              var9 = 65280 & param0;
-              ra.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
-              if (-257 < (var11 ^ -1)) {
-                stackIn_10_0 = (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> -1423673784;
-                break L2;
-              } else {
-                stackIn_10_0 = var8 | var9;
-                break L2;
-              }
-            }
-            var12 = stackIn_10_0;
-            ra.g(this.field_U + var7, var6, this.field_U, var12);
-            ra.g(var7 + -this.field_U, var6, this.field_U, var12);
-            var6++;
-            continue L0;
+            stackIn_7_0 = var8 | var9;
           }
+          var12 = stackIn_7_0;
+          ra.g(var7, var6, this.field_U, var12);
+          var8Lifetime1 = param0 & 16711935;
+          var9Lifetime1 = 65280 & param0;
+          ra.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
+          if (var11 < 256) {
+            stackIn_10_0 = (-16711936 & var8Lifetime1 * var11 | 16711680 & var9Lifetime1 * var11) >>> 8;
+          } else {
+            stackIn_10_0 = var8Lifetime1 | var9Lifetime1;
+          }
+          var12Lifetime1 = stackIn_10_0;
+          ra.g(this.field_U + var7, var6, this.field_U, var12Lifetime1);
+          ra.g(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
         }
+        if (param1 >= -15) {
+          return (oh) null;
+        }
+        dh.a(-581);
+        return var14;
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (!param2) {
-            ra.a();
+          ra.a();
         } else {
-            ra.d(0, 0, ra.field_f, ra.field_e, 0, 192);
+          ra.d(0, 0, ra.field_f, ra.field_e, 0, 192);
         }
         if (param1 != 1) {
-            field_X = 111;
+          field_X = 111;
         }
         i.b(param2, param1 + 107);
     }
 
     lg(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1409307521 & 8355711, param6 >> -1358817631 & 8355711);
+        this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, param6 >> 1 & 8355711);
     }
 
     private final void g(int param0) {
         oh discarded$0 = null;
         this.field_Q = new oh[]{this.a(this.field_W, (byte) -55, this.field_T), this.a(this.field_N, (byte) -77, this.field_J)};
-        this.field_L = this.a(param0 + -308991302);
+        this.field_L = this.a(param0 - 308991302);
         this.field_P = this.field_L.a();
-        this.field_Y = new oh(this.field_u >> 308991265, this.field_u);
+        this.field_Y = new oh(this.field_u >> 1, this.field_u);
         if (param0 != 308991265) {
-            discarded$0 = this.a(-5);
+          discarded$0 = this.a(-5);
         }
     }
 
     final static String a(boolean param0, char param1) {
         if (param0) {
-            lg.a(false, '￐');
+          lg.a(false, '￐');
         }
         return String.valueOf(param1);
     }
@@ -159,8 +147,6 @@ final class lg extends na {
     private final void a(int param0, oh param1, int param2, byte param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -171,164 +157,101 @@ final class lg extends na {
         int var9 = 0;
         var9 = TetraLink.field_J;
         try {
-          L0: {
-            var5_int = this.field_F + param0;
-            kl.a(-this.field_L.field_u + var5_int, param2 + this.field_u, param2, (byte) -79, this.field_L.field_u + param0);
-            var6 = param0 - this.field_M;
-            var7 = 10 % ((param3 - 44) / 63);
-            L1: while (true) {
-              if (var5_int <= var6) {
-                L2: {
-                  dh.a(-581);
-                  if (param0 + this.field_L.field_u >= ra.field_j) {
-                    sk.a((byte) 118, this.field_Y);
-                    param1.c(-this.field_M, 0);
-                    param1.c(2 * this.field_U + -this.field_M, 0);
-                    this.field_P.e(0, 0);
-                    dh.a(-581);
-                    this.field_Y.c(param0, param2);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (ra.field_l >= -this.field_L.field_u + var5_int) {
-                    sk.a((byte) 116, this.field_Y);
-                    var8 = this.field_M + -this.field_L.field_u + this.field_F;
-                    L4: while (true) {
-                      if (var8 <= 2 * this.field_U) {
-                        param1.c(-var8, 0);
-                        param1.c(this.field_U * 2 + -var8, 0);
-                        this.field_L.e(0, 0);
-                        dh.a(-581);
-                        this.field_Y.c(-this.field_L.field_u + var5_int, param2);
-                        break L3;
-                      } else {
-                        var8 = var8 - 2 * this.field_U;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-                break L0;
-              } else {
-                param1.c(var6, param2);
-                var6 = var6 + param1.field_u;
-                continue L1;
-              }
-            }
+          var5_int = this.field_F + param0;
+          kl.a(-this.field_L.field_u + var5_int, param2 + this.field_u, param2, (byte) -79, this.field_L.field_u + param0);
+          var6 = param0 - this.field_M;
+          var7 = 10 % ((param3 - 44) / 63);
+          while (var5_int > var6) {
+            param1.c(var6, param2);
+            var6 = var6 + param1.field_u;
           }
+          dh.a(-581);
+          if (param0 + this.field_L.field_u >= ra.field_j) {
+            sk.a((byte) 118, this.field_Y);
+            param1.c(-this.field_M, 0);
+            param1.c(2 * this.field_U - this.field_M, 0);
+            this.field_P.e(0, 0);
+            dh.a(-581);
+            this.field_Y.c(param0, param2);
+          }
+          if (ra.field_l >= -this.field_L.field_u + var5_int) {
+            sk.a((byte) 116, this.field_Y);
+            for (var8 = this.field_M - this.field_L.field_u + this.field_F; var8 > 2 * this.field_U; var8 = var8 - 2 * this.field_U) {
+            }
+            param1.c(-var8, 0);
+            param1.c(this.field_U * 2 - var8, 0);
+            this.field_L.e(0, 0);
+            dh.a(-581);
+            this.field_Y.c(-this.field_L.field_u + var5_int, param2);
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var5);
-
-            stackIn_16_1 = new StringBuilder().append("lg.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("lg.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(na param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          L0: {
-            if (param3) {
-              L1: {
-                L2: {
-                  if (!this.field_K) {
-                    break L2;
-                  } else {
-                    this.field_M = this.field_M + 1;
-                    if (this.field_M <= this.field_U * 2) {
-                      break L2;
-                    } else {
-                      this.field_M = this.field_M - this.field_U * 2;
-                      break L1;
-                    }
-                  }
-                }
-                break L1;
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!param3) {
+            return;
+          }
+          if (this.field_K) {
+            this.field_M = this.field_M + 1;
+            if (this.field_M > this.field_U * 2) {
+              this.field_M = this.field_M - this.field_U * 2;
+              return;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("lg.MA(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("lg.MA(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void b(int param0, int param1, int param2) {
-        this.field_N = 8355711 & param2 >> -1369303359;
+        this.field_N = 8355711 & param2 >> 1;
         this.field_T = param1;
         int var4 = 63 / ((66 - param0) / 52);
         this.field_W = param2;
-        this.field_J = 8355711 & param1 >> 967080481;
+        this.field_J = 8355711 & param1 >> 1;
         this.g(308991265);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param0 != param3) {
-            return;
+          return;
         }
         int var5 = this.field_t + param1;
         int var6 = this.field_w + param2;
         this.a(var5, this.field_Q[0], var6, (byte) 124);
         if (65536 > this.field_bb) {
-            kl.a(var5 - -this.field_F, this.field_u + var6, var6, (byte) -79, (this.field_bb * this.field_F >> 707456304) + var5);
-            this.a(var5, this.field_Q[1], var6, (byte) 119);
-            dh.a(-581);
+          kl.a(var5 + this.field_F, this.field_u + var6, var6, (byte) -79, (this.field_bb * this.field_F >> 16) + var5);
+          this.a(var5, this.field_Q[1], var6, (byte) 119);
+          dh.a(-581);
         }
     }
 
@@ -342,7 +265,7 @@ final class lg extends na {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = -19 % ((param2 - -61) / 51);
+        int var6 = -19 % ((param2 + 61) / 51);
         super.a(param0, param1, 90, param3, param4);
         this.g(308991265);
     }

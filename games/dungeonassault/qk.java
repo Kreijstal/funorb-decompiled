@@ -9,19 +9,17 @@ final class qk {
     static String field_d;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 112) {
-          field_e = (boolean[]) null;
-          sn.a(-87, param1, this.field_a, param4, param0, param2);
-          return;
-        } else {
+        if (param3 == 112) {
           sn.a(-87, param1, this.field_a, param4, param0, param2);
           return;
         }
+        field_e = (boolean[]) null;
+        sn.a(-87, param1, this.field_a, param4, param0, param2);
     }
 
     public static void a(byte param0) {
         if (param0 <= 120) {
-            return;
+          return;
         }
         field_e = null;
         field_d = null;
@@ -31,9 +29,9 @@ final class qk {
 
     qk(cn[] param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "qk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

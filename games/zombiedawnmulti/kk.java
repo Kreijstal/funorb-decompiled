@@ -14,18 +14,18 @@ abstract class kk extends qa {
 
     final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, go param5, int param6, gd param7) {
         try {
-            gp.a(param0, param1, 10);
-            rm.field_b = gp.a(param5, param4, 0, param2);
-            ga.field_u = gp.a(param5, param4, 1, param6);
-            bh.field_a = new vp();
-            lq.field_d = param6 * 1000 / param0;
-            ga.field_u.a(bh.field_a);
-            wd.field_L = param7;
-            wd.field_L.a(uk.field_S, (byte) 116);
-            int var8_int = 37 / ((param3 - 49) / 49);
-            rm.field_b.a(wd.field_L);
+          gp.a(param0, param1, 10);
+          rm.field_b = gp.a(param5, param4, 0, param2);
+          ga.field_u = gp.a(param5, param4, 1, param6);
+          bh.field_a = new vp();
+          lq.field_d = param6 * 1000 / param0;
+          ga.field_u.a(bh.field_a);
+          wd.field_L = param7;
+          wd.field_L.a(uk.field_S, (byte) 116);
+          int var8_int = 37 / ((param3 - 49) / 49);
+          rm.field_b.a(wd.field_L);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "kk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "kk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ abstract class kk extends qa {
 
     public static void b(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_v = null;
         field_r = null;

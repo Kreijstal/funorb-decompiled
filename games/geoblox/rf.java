@@ -141,9 +141,9 @@ final class rf extends hf {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        qc stackIn_66_0 = null;
-        int stackIn_67_1 = 0;
-        int stackIn_73_0 = 0;
+        qc stackIn_84_0 = null;
+        int stackIn_85_1 = 0;
+        int stackIn_91_0 = 0;
         int var2;
         int var3;
         int var4;
@@ -300,75 +300,75 @@ final class rf extends hf {
         var28 = 0;
         for (var29 = 0; var29 < var6; var29++) {
           var28 = var28 + param0.c((byte) 34) & 127;
-          if (var28 == 0) {
+          if (var28 != 0) {
+            if (var28 != 32) {
+              if (var28 != 1) {
+                if (var28 != 33) {
+                  if (var28 != 7) {
+                    if (var28 != 39) {
+                      if (var28 != 10) {
+                        if (var28 != 42) {
+                          if (var28 != 99) {
+                            if (var28 != 98) {
+                              if (var28 != 101) {
+                                if (var28 != 100) {
+                                  if (var28 != 64) {
+                                    if (var28 != 65) {
+                                      if (var28 != 120) {
+                                        if (var28 != 121) {
+                                          if (var28 != 123) {
+                                            var27++;
+                                          } else {
+                                            var26++;
+                                          }
+                                        } else {
+                                          var26++;
+                                        }
+                                      } else {
+                                        var26++;
+                                      }
+                                    } else {
+                                      var26++;
+                                    }
+                                  } else {
+                                    var26++;
+                                  }
+                                } else {
+                                  var25++;
+                                }
+                              } else {
+                                var24++;
+                              }
+                            } else {
+                              var23++;
+                            }
+                          } else {
+                            var22++;
+                          }
+                        } else {
+                          var21++;
+                        }
+                      } else {
+                        var20++;
+                      }
+                    } else {
+                      var19++;
+                    }
+                  } else {
+                    var18++;
+                  }
+                } else {
+                  var17++;
+                }
+              } else {
+                var16++;
+              }
+            } else {
+              var12++;
+            }
+          } else {
             var12++;
-            continue;
           }
-          if (var28 == 32) {
-            var12++;
-            continue;
-          }
-          if (var28 == 1) {
-            var16++;
-            continue;
-          }
-          if (var28 == 33) {
-            var17++;
-            continue;
-          }
-          if (var28 == 7) {
-            var18++;
-            continue;
-          }
-          if (var28 == 39) {
-            var19++;
-            continue;
-          }
-          if (var28 == 10) {
-            var20++;
-            continue;
-          }
-          if (var28 == 42) {
-            var21++;
-            continue;
-          }
-          if (var28 == 99) {
-            var22++;
-            continue;
-          }
-          if (var28 == 98) {
-            var23++;
-            continue;
-          }
-          if (var28 == 101) {
-            var24++;
-            continue;
-          }
-          if (var28 == 100) {
-            var25++;
-            continue;
-          }
-          if (var28 == 64) {
-            var26++;
-            continue;
-          }
-          if (var28 == 65) {
-            var26++;
-            continue;
-          }
-          if (var28 == 120) {
-            var26++;
-            continue;
-          }
-          if (var28 == 121) {
-            var26++;
-            continue;
-          }
-          if (var28 != 123) {
-            var27++;
-            continue;
-          }
-          var26++;
         }
         var29Lifetime1 = 0;
         var30 = param0.field_f;
@@ -417,13 +417,13 @@ final class rf extends hf {
         var51 = new qc(this.field_f);
         var51.c((byte) 95, 1297377380);
         var51.c((byte) 95, 6);
-        stackIn_66_0 = var51;
+        stackIn_84_0 = var51;
         if (var2 <= 1) {
-          stackIn_67_1 = 0;
+          stackIn_85_1 = 0;
         } else {
-          stackIn_67_1 = 1;
+          stackIn_85_1 = 1;
         }
-        ((qc) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
+        ((qc) (Object) stackIn_84_0).e(stackIn_85_1, 28695);
         var51.e(var2, 28695);
         var51.e(var3, 28695);
         param0.field_f = var13Lifetime1;
@@ -451,8 +451,8 @@ final class rf extends hf {
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
             var64 = param0.field_j[incrementValue$0] & 255;
-            stackIn_73_0 = (var64 == var62) ? 0 : 1;
-            var65 = stackIn_73_0;
+            stackIn_91_0 = (var64 == var62) ? 0 : 1;
+            var65 = stackIn_91_0;
             var62 = var64 & 15;
             if (var64 == 7) {
               if (var65 != 0) {

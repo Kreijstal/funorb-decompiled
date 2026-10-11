@@ -10,9 +10,9 @@ final class em {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 126) {
-            em.a((byte) 76);
-            field_b = null;
-            return;
+          em.a((byte) 76);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

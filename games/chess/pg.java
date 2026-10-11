@@ -24,25 +24,25 @@ final class pg extends o {
     }
 
     final static void a(byte param0, di param1) {
-        if (!(param1 != null)) {
-            return;
+        if (param1 == null) {
+          return;
         }
         tl.field_Fb = param1;
         rh.field_c.field_I.e(param0 ^ 31039);
         rh.field_c.a((byte) 126, tl.field_Fb);
         if (param0 != -18) {
-            return;
+          return;
         }
         try {
-            an.field_c = true;
+          an.field_c = true;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static vg a(int param0) {
         if (param0 != -12316) {
-            return (vg) null;
+          return (vg) null;
         }
         return new vg(jb.f(param0 ^ -12410), kb.j(param0 + 12205));
     }

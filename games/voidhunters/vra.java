@@ -12,7 +12,7 @@ final class vra {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != -66) {
-            vra.a((byte) -20);
+          vra.a((byte) -20);
         }
     }
 

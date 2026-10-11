@@ -11,31 +11,33 @@ final class ci {
         field_a = null;
         field_b = null;
         if (param0) {
-            ci.a((byte) 31);
+          ci.a((byte) 31);
         }
     }
 
     final static void a(int param0, va param1) {
         int var2_int = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         try {
-            if (param0 != 2026380485) {
-                ci.a(false);
-            }
-            ki.field_M = param1.j(-14477) << 2026380485;
-            var2_int = param1.f(255);
-            ki.field_M = ki.field_M + (var2_int >> 508716803);
-            lj.field_a = 1835008 & var2_int << -1329807918;
-            lj.field_a = lj.field_a + (param1.j(-14477) << -1794847134);
-            var2_int = param1.f(255);
-            lj.field_a = lj.field_a + (var2_int >> 1484079942);
-            bi.field_a = (var2_int & 63) << -367736145;
-            bi.field_a = bi.field_a + (param1.f(255) << -1586968409);
-            var2_int = param1.f(param0 ^ 2026380346);
-            ia.field_j = var2_int << -1915604368 & 65536;
-            bi.field_a = bi.field_a + (var2_int >> 966965537);
-            ia.field_j = ia.field_j + param1.j(-14477);
+          if (param0 != 2026380485) {
+            ci.a(false);
+          }
+          ki.field_M = param1.j(-14477) << 5;
+          var2_int = param1.f(255);
+          ki.field_M = ki.field_M + (var2_int >> 3);
+          lj.field_a = 1835008 & var2_int << 18;
+          lj.field_a = lj.field_a + (param1.j(-14477) << 2);
+          var2_intLifetime1 = param1.f(255);
+          lj.field_a = lj.field_a + (var2_intLifetime1 >> 6);
+          bi.field_a = (var2_intLifetime1 & 63) << 15;
+          bi.field_a = bi.field_a + (param1.f(255) << 7);
+          var2_intLifetime2 = param1.f(param0 ^ 2026380346);
+          ia.field_j = var2_intLifetime2 << 16 & 65536;
+          bi.field_a = bi.field_a + (var2_intLifetime2 >> 1);
+          ia.field_j = ia.field_j + param1.j(-14477);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,37 +45,16 @@ final class ci {
         if (10 == ml.field_t) {
           ik.g(5);
           ml.field_t = 11;
-          if (param0 < -123) {
-            cb.field_c = true;
-            return;
-          } else {
-            field_b = (int[]) null;
-            cb.field_c = true;
-            return;
-          }
         } else {
           if (!hd.g((byte) 100)) {
             ik.g(5);
             ml.field_t = 11;
-            if (param0 >= -123) {
-              field_b = (int[]) null;
-              cb.field_c = true;
-              return;
-            } else {
-              cb.field_c = true;
-              return;
-            }
-          } else {
-            if (param0 < -123) {
-              cb.field_c = true;
-              return;
-            } else {
-              field_b = (int[]) null;
-              cb.field_c = true;
-              return;
-            }
           }
         }
+        if (param0 >= -123) {
+          field_b = (int[]) null;
+        }
+        cb.field_c = true;
     }
 
     static {

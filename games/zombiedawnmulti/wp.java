@@ -14,38 +14,27 @@ final class wp {
     static di field_g;
 
     final static void a(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         ga var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -10995) {
-                break L1;
-              } else {
-                wp.c(117);
-                break L1;
-              }
-            }
-            var1 = ma.field_a;
-            L2: while (true) {
-              if (!so.c(1)) {
-                break L0;
-              } else {
-                var1.b((byte) -35, 8);
-                fieldTemp$2 = var1.field_j + 1;
-                var1.field_j = var1.field_j + 1;
-                var2 = fieldTemp$2;
-                hd.a(var1, param0 + 10995);
-                ma.field_a.e(param0 + 11021, var1.field_j - var2);
-                continue L2;
-              }
-            }
+          if (param0 != -10995) {
+            wp.c(117);
           }
+          var1 = ma.field_a;
+          while (so.c(1)) {
+            var1.b((byte) -35, 8);
+            fieldTemp$0 = var1.field_j + 1;
+            var1.field_j = var1.field_j + 1;
+            var2 = fieldTemp$0;
+            hd.a(var1, param0 + 10995);
+            ma.field_a.e(param0 + 11021, var1.field_j - var2);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -55,7 +44,7 @@ final class wp {
 
     final static void c(int param0) {
         if (param0 != 8192) {
-            wp.a(90);
+          wp.a(90);
         }
     }
 
@@ -63,17 +52,7 @@ final class wp {
         field_j = null;
         field_e = null;
         field_h = null;
-        if (param0 != 26) {
-          field_j = (ja[]) null;
-          field_g = null;
-          field_d = null;
-          field_i = null;
-          field_b = null;
-          field_a = null;
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 26) {
           field_g = null;
           field_d = null;
           field_i = null;
@@ -83,6 +62,14 @@ final class wp {
           field_c = null;
           return;
         }
+        field_j = (ja[]) null;
+        field_g = null;
+        field_d = null;
+        field_i = null;
+        field_b = null;
+        field_a = null;
+        field_f = null;
+        field_c = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -96,71 +83,39 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
+        we var1Lifetime1;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              rm.field_b.a();
-              ga.field_u.a();
-              mn.field_p = mn.field_p - 1;
-              if (mn.field_p != 0) {
-                break L1;
-              } else {
-                mn.field_p = 200;
-                var1 = (we) ((Object) gb.field_e.c(75));
-                L2: while (true) {
-                  if (var1 == null) {
-                    if (wc.field_K == null) {
-                      break L1;
-                    } else {
-                      var1 = (we) ((Object) wc.field_K.c(51));
-                      L3: while (true) {
-                        if (var1 == null) {
-                          break L1;
-                        } else {
-                          L4: {
-                            if (!var1.field_h.b(4)) {
-                              var1.a(true);
-                              break L4;
-                            } else {
-                              break L4;
-                            }
-                          }
-                          var1 = (we) ((Object) wc.field_K.b(6));
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    L5: {
-                      if (var1.field_h.b(4)) {
-                        break L5;
-                      } else {
-                        var1.a(true);
-                        break L5;
-                      }
-                    }
-                    var1 = (we) ((Object) gb.field_e.b(6));
-                    continue L2;
-                  }
+          rm.field_b.a();
+          ga.field_u.a();
+          mn.field_p = mn.field_p - 1;
+          if (mn.field_p == 0) {
+            mn.field_p = 200;
+            var1 = (we) (gb.field_e.c(75));
+            while (var1 != null) {
+              if (!var1.field_h.b(4)) {
+                var1.a(true);
+              }
+              var1 = (we) (gb.field_e.b(6));
+            }
+            if (wc.field_K != null) {
+              var1Lifetime1 = (we) (wc.field_K.c(51));
+              while (var1Lifetime1 != null) {
+                if (!var1Lifetime1.field_h.b(4)) {
+                  var1Lifetime1.a(true);
                 }
+                var1Lifetime1 = (we) (wc.field_K.b(6));
               }
             }
-            L6: {
-              var1_int = 107 / ((param0 - 76) / 39);
-              if (wd.field_L == null) {
-                break L6;
-              } else {
-                if (!wd.field_L.c(-119)) {
-                  bb.field_g = null;
-                  break L6;
-                } else {
-                  return;
-                }
-              }
-            }
-            break L0;
           }
+          var1_int = 107 / ((param0 - 76) / 39);
+          if (wd.field_L != null) {
+            if (wd.field_L.c(-119)) {
+              return;
+            }
+            bb.field_g = null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -175,8 +130,8 @@ final class wp {
         field_a = "Confuse their senses.";
         field_i = new int[8192];
         field_f = new int[256];
-        for (var0 = 0; -256 < (var0 ^ -1); var0++) {
-            field_f[var0] = var0 * 65793;
+        for (var0 = 0; var0 < 255; var0++) {
+          field_f[var0] = var0 * 65793;
         }
         field_c = new int[5];
     }

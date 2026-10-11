@@ -10,16 +10,7 @@ final class rl {
     static String field_d;
 
     public static void a(int param0) {
-        if (param0 != -18657) {
-          rl.b(-43);
-          field_d = null;
-          field_f = null;
-          field_e = null;
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -18657) {
           field_d = null;
           field_f = null;
           field_e = null;
@@ -28,12 +19,19 @@ final class rl {
           field_a = null;
           return;
         }
+        rl.b(-43);
+        field_d = null;
+        field_f = null;
+        field_e = null;
+        field_b = null;
+        field_c = null;
+        field_a = null;
     }
 
     final static void b(int param0) {
         nq.e(40);
         if (param0 != 18) {
-            rl.a(81);
+          rl.a(81);
         }
     }
 

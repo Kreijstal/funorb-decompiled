@@ -151,14 +151,12 @@ final class rh {
         var2 = param0 ? 1 : 0;
         for (var3 = 0; this.field_c.field_i.length > var3; var3++) {
           var4 = this.field_c.field_i[var3];
-          if (this.field_f[var4] != null) {
-            continue;
+          if (this.field_f[var4] == null) {
+            this.a(var4, -119);
+            if (null == this.field_f[var4]) {
+              var2 = 0;
+            }
           }
-          this.a(var4, -119);
-          if (null != this.field_f[var4]) {
-            continue;
-          }
-          var2 = 0;
         }
         return var2 != 0;
     }
@@ -770,11 +768,10 @@ final class rh {
         var2 = 0;
         var3 = 0;
         for (var4 = 0; this.field_f.length > var4; var4++) {
-          if (this.field_c.field_a[var4] <= 0) {
-            continue;
+          if (this.field_c.field_a[var4] > 0) {
+            var3 = var3 + this.b((byte) 59, var4);
+            var2 += 100;
           }
-          var3 = var3 + this.b((byte) 59, var4);
-          var2 += 100;
         }
         if (var2 == 0) {
           return 100;

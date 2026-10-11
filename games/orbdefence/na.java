@@ -8,9 +8,9 @@ final class na {
 
     public static void a(int param0) {
         if (param0 != -20008) {
-            field_b = 55;
-            field_c = null;
-            return;
+          field_b = 55;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

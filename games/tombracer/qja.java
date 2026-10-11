@@ -11,37 +11,31 @@ final class qja extends vg {
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 > -37) {
-          qja.a(true, true, -119);
-          field_j = null;
-          field_i = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 <= -37) {
           field_j = null;
           field_i = null;
           field_k = null;
           return;
         }
+        qja.a(true, true, -119);
+        field_j = null;
+        field_i = null;
+        field_k = null;
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        if (param0) {
-          bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
-          if (param2 > -121) {
-            return;
-          } else {
-            tqa.a(param0, (byte) 106);
-            return;
-          }
-        } else {
+        if (!param0) {
           bea.a();
-          if (param2 > -121) {
-            return;
-          } else {
+          if (param2 <= -121) {
             tqa.a(param0, (byte) 106);
             return;
           }
+          return;
+        }
+        bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
+        if (param2 <= -121) {
+          tqa.a(param0, (byte) 106);
+          return;
         }
     }
 

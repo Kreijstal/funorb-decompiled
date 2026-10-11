@@ -14,16 +14,14 @@ final class rb extends ue {
         field_k = null;
         field_e = null;
         field_j = null;
-        if (param0 != 100) {
-          field_g = (am) null;
-          field_i = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 100) {
           field_i = null;
           field_g = null;
           return;
         }
+        field_g = (am) null;
+        field_i = null;
+        field_g = null;
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
@@ -32,240 +30,92 @@ final class rb extends ue {
         CharSequence var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 126) {
-                break L1;
-              } else {
-                rb.c((byte) -62);
-                break L1;
-              }
-            }
-            L2: {
-              var2 = param0.getParameter("username");
-              if (var2 == null) {
-                break L2;
-              } else {
-                var3 = (CharSequence) ((Object) var2);
-                if (-1L != (ck.a((byte) -29, var3) ^ -1L)) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
+          if (param1 != 126) {
+            rb.c((byte) -62);
           }
+          var2 = param0.getParameter("username");
+          if (var2 != null) {
+            var3 = (CharSequence) ((Object) var2);
+            if (ck.a((byte) -29, var3) != 0L) {
+              return;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2_ref);
-
-            stackIn_8_1 = new StringBuilder().append("rb.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_8_0 = var2_ref;
+          stackIn_8_1 = new StringBuilder().append("rb.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw dn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     rb(re param0, boolean param1) {
         super(0);
         try {
-            this.field_f = param0;
-            ip.a(0, param1);
+          this.field_f = param0;
+          ip.a(0, param1);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void b(int param0) {
         dl var3;
         if (null != ga.field_L) {
-          L0: {
-            if (tf.field_c) {
-              break L0;
-            } else {
-              if (ga.field_L.a(param0 ^ -20410, "benefits")) {
-                wb.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
-                sj.a(wl.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
-                var3 = new dl(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
-                var3.a();
-                ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
-                dk.field_o.a(6945);
-                hb.a(3, var3.field_o, 0, var3.field_n, var3, -126, 1, 0);
-                fo.a(param0 ^ -12, var3);
-                tf.field_c = true;
-                vp.a(107);
-                break L0;
-              } else {
-                if (!ob.field_o) {
-                  L1: {
-                    if (ga.field_L.a(param0 ^ -20410, "screenshots")) {
-                      bm.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
-                      ob.field_o = true;
-                      vp.a(127);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if (!tf.field_c) {
-                      break L2;
-                    } else {
-                      if (ob.field_o) {
-                        ga.field_L = null;
-                        break L2;
-                      } else {
-                        this.field_f.b(param0);
-                        if (-1 != (this.field_f.field_f ^ -1)) {
-                          return;
-                        } else {
-                          la.b(-79);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  this.field_f.b(param0);
-                  if (-1 != (this.field_f.field_f ^ -1)) {
-                    return;
-                  } else {
-                    la.b(-79);
-                    return;
-                  }
-                } else {
-                  L3: {
-                    if (!tf.field_c) {
-                      break L3;
-                    } else {
-                      if (ob.field_o) {
-                        ga.field_L = null;
-                        break L3;
-                      } else {
-                        this.field_f.b(param0);
-                        if (-1 != (this.field_f.field_f ^ -1)) {
-                          return;
-                        } else {
-                          la.b(-79);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                  this.field_f.b(param0);
-                  if (-1 != (this.field_f.field_f ^ -1)) {
-                    return;
-                  } else {
-                    la.b(-79);
-                    return;
-                  }
-                }
-              }
-            }
-          }
-          L4: {
-            if (ob.field_o) {
-              break L4;
-            } else {
-              if (ga.field_L.a(param0 ^ -20410, "screenshots")) {
+          boolean decompiledFrameRemainder0 = true;
+          if (!tf.field_c) {
+            if (!ga.field_L.a(param0 ^ -20410, "benefits")) {
+              if (!ob.field_o &&
+                ga.field_L.a(param0 ^ -20410, "screenshots")) {
                 bm.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
                 ob.field_o = true;
                 vp.a(127);
-                break L4;
-              } else {
-                L5: {
-                  if (!tf.field_c) {
-                    break L5;
-                  } else {
-                    if (ob.field_o) {
-                      ga.field_L = null;
-                      break L5;
-                    } else {
-                      this.field_f.b(param0);
-                      if (-1 != (this.field_f.field_f ^ -1)) {
-                        return;
-                      } else {
-                        la.b(-79);
-                        return;
-                      }
-                    }
-                  }
-                }
-                this.field_f.b(param0);
-                if (-1 != (this.field_f.field_f ^ -1)) {
-                  return;
-                } else {
-                  la.b(-79);
-                  return;
-                }
               }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              wb.a(0, wl.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
+              sj.a(wl.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
+              var3 = new dl(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
+              var3.a();
+              ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
+              dk.field_o.a(6945);
+              hb.a(3, var3.field_o, 0, var3.field_n, var3, -126, 1, 0);
+              fo.a(param0 ^ -12, var3);
+              tf.field_c = true;
+              vp.a(107);
             }
           }
-          L6: {
-            if (!tf.field_c) {
-              break L6;
-            } else {
-              if (ob.field_o) {
-                ga.field_L = null;
-                break L6;
-              } else {
-                this.field_f.b(param0);
-                if (-1 != (this.field_f.field_f ^ -1)) {
-                  return;
-                } else {
-                  la.b(-79);
-                  return;
-                }
-              }
-            }
+          if ((decompiledFrameRemainder0) && (!ob.field_o &&
+            ga.field_L.a(param0 ^ -20410, "screenshots"))) {
+            bm.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
+            ob.field_o = true;
+            vp.a(127);
           }
-          this.field_f.b(param0);
-          if (-1 == (this.field_f.field_f ^ -1)) {
-            la.b(-79);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          this.field_f.b(param0);
-          if (-1 != (this.field_f.field_f ^ -1)) {
-            return;
-          } else {
-            la.b(-79);
-            return;
+          if (tf.field_c &&
+            ob.field_o) {
+            ga.field_L = null;
           }
         }
+        this.field_f.b(param0);
+        if (this.field_f.field_f != 0) {
+          return;
+        }
+        la.b(-79);
     }
 
     final boolean a(int param0) {
         if (param0 < 99) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -273,99 +123,31 @@ final class rb extends ue {
     final void a(boolean param0) {
         int var2;
         this.field_f.c(-1);
-        if (0 == this.field_f.field_f) {
-          var2 = da.a(true, true);
-          if (3 != var2) {
-            if (var2 != 1) {
-              if ((var2 ^ -1) != -3) {
-                if (!param0) {
-                  return;
-                } else {
-                  this.a(96);
-                  return;
-                }
-              } else {
-                a.field_b = (ue) ((Object) this.field_f);
-                this.field_f.a(true, -13880);
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              a.field_b = (ue) ((Object) this.field_f);
-              this.field_f.a(false, -13880);
-              if ((var2 ^ -1) != -3) {
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                a.field_b = (ue) ((Object) this.field_f);
-                this.field_f.a(true, -13880);
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          } else {
-            q.a(param0);
-            on.a(95, le.b((byte) -20));
-            if (var2 == 1) {
-              a.field_b = (ue) ((Object) this.field_f);
-              this.field_f.a(false, -13880);
-              if ((var2 ^ -1) != -3) {
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                a.field_b = (ue) ((Object) this.field_f);
-                this.field_f.a(true, -13880);
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              if ((var2 ^ -1) == -3) {
-                a.field_b = (ue) ((Object) this.field_f);
-                this.field_f.a(true, -13880);
-                if (!param0) {
-                  return;
-                } else {
-                  this.a(96);
-                  return;
-                }
-              } else {
-                if (param0) {
-                  this.a(96);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-        } else {
-          if (param0) {
-            this.a(96);
-            return;
-          } else {
+        if (0 != this.field_f.field_f) {
+          if (!param0) {
             return;
           }
+          this.a(96);
+          return;
         }
+        var2 = da.a(true, true);
+        if (3 == var2) {
+          q.a(param0);
+          on.a(95, le.b((byte) -20));
+        }
+        if (var2 == 1) {
+          a.field_b = (ue) ((Object) this.field_f);
+          this.field_f.a(false, -13880);
+        }
+        if (var2 == 2) {
+          a.field_b = (ue) ((Object) this.field_f);
+          this.field_f.a(true, -13880);
+        }
+        if (!param0) {
+          return;
+        }
+        this.a(96);
+        return;
     }
 
     static {

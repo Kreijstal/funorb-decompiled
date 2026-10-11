@@ -12,45 +12,41 @@ final class gj implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_a) {
-            field_c = field_c + 4;
+          field_c = field_c + 4;
         } else {
-            fieldTemp$0 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$3] = param0.refreshRate;
         }
     }
 
     final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
         param0.setVisible(true);
-        var7 = (com.ms.awt.WComponentPeer) null;
-        var8 = var7.getHwnd();
+        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
+        int var8 = var7.getHwnd();
         com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
         com.ms.win32.User32.SetWindowLong(var8, -20, 8);
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
         this.field_b.setDisplayMode(param4, param1, param5, param2, 0);
-        if (param3 < 107) {
-          field_a = (int[]) null;
-          param0.setBounds(0, 0, param4, param1);
-          param0.toFront();
-          param0.requestFocus();
-          return;
-        } else {
+        if (param3 >= 107) {
           param0.setBounds(0, 0, param4, param1);
           param0.toFront();
           param0.requestFocus();
           return;
         }
+        field_a = (int[]) null;
+        param0.setBounds(0, 0, param4, param1);
+        param0.toFront();
+        param0.requestFocus();
     }
 
     final int[] a(int param0) {
@@ -74,8 +70,8 @@ final class gj implements com.ms.directX.IEnumModesCallback {
         this.field_b.restoreDisplayMode();
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 <= 107) {
-            com.ms.com.IUnknown var4 = (com.ms.com.IUnknown) null;
-            this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+          com.ms.com.IUnknown var4 = (com.ms.com.IUnknown) null;
+          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
         }
     }
 }

@@ -27,7 +27,7 @@ final class dw {
     public static void a(byte param0) {
         field_j = null;
         if (param0 != 101) {
-            return;
+          return;
         }
         field_u = null;
     }
@@ -36,37 +36,16 @@ final class dw {
         if (gda.field_c == 10) {
           et.a(true);
           gda.field_c = 11;
-          if (param0 <= -5) {
-            rca.field_l = true;
-            return;
-          } else {
-            dw.a((byte) -100);
-            rca.field_l = true;
-            return;
-          }
         } else {
           if (!dg.b(-1)) {
             et.a(true);
             gda.field_c = 11;
-            if (param0 > -5) {
-              dw.a((byte) -100);
-              rca.field_l = true;
-              return;
-            } else {
-              rca.field_l = true;
-              return;
-            }
-          } else {
-            if (param0 <= -5) {
-              rca.field_l = true;
-              return;
-            } else {
-              dw.a((byte) -100);
-              rca.field_l = true;
-              return;
-            }
           }
         }
+        if (param0 > -5) {
+          dw.a((byte) -100);
+        }
+        rca.field_l = true;
     }
 
     static {

@@ -16,16 +16,14 @@ final class gta {
         field_e = null;
         field_g = null;
         field_b = null;
-        if (param0) {
-          gta.a(true);
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_a = null;
           return;
         }
+        gta.a(true);
+        field_f = null;
+        field_a = null;
     }
 
     static {

@@ -11,16 +11,16 @@ final class wqb extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
-            return qra.field_o;
+          field_b = (String) null;
+          return qra.field_o;
         }
         return qra.field_o;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_e = (Hashtable) null;
-            return bma.field_n;
+          field_e = (Hashtable) null;
+          return bma.field_n;
         }
         return bma.field_n;
     }
@@ -28,7 +28,7 @@ final class wqb extends mfb {
     public static void i(byte param0) {
         field_d = null;
         if (param0 != 75) {
-            return;
+          return;
         }
         field_e = null;
         field_b = null;
@@ -37,23 +37,23 @@ final class wqb extends mfb {
 
     final int f(byte param0) {
         if (param0 <= 0) {
-            field_b = (String) null;
-            return nca.field_o;
+          field_b = (String) null;
+          return nca.field_o;
         }
         return nca.field_o;
     }
 
     final int k(int param0) {
         if (param0 != 0) {
-            return 98;
+          return 98;
         }
         return 1;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            this.b(23);
-            return klb.field_p;
+          this.b(23);
+          return klb.field_p;
         }
         return klb.field_p;
     }
@@ -65,23 +65,23 @@ final class wqb extends mfb {
 
     final int d(byte param0) {
         if (param0 >= -52) {
-            this.a(true);
-            return cca.field_p;
+          this.a(true);
+          return cca.field_p;
         }
         return cca.field_p;
     }
 
     final int g(int param0) {
         if (param0 != 2769) {
-            return 46;
+          return 46;
         }
         return voa.field_b;
     }
 
     final int a(boolean param0) {
         if (param0) {
-            this.f((byte) -9);
-            return 3;
+          this.f((byte) -9);
+          return 3;
         }
         return 3;
     }
@@ -93,8 +93,8 @@ final class wqb extends mfb {
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_e = (Hashtable) null;
-            return ioa.field_p;
+          field_e = (Hashtable) null;
+          return ioa.field_p;
         }
         return ioa.field_p;
     }

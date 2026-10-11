@@ -16,30 +16,30 @@ final class ao extends km {
     ao(long param0, km param1, km param2, qm param3, km param4, String param5, String param6) {
         super(param0, param1);
         try {
-            this.field_Lb = new km(0L, (km) null);
-            this.field_Ib = new um(0L, this.field_Lb, param2, param3);
-            this.field_Fb = new km(0L, param4);
-            this.field_Mb = new km(0L, param4);
-            this.field_Fb.field_V = param5;
-            this.field_Mb.field_V = param6;
-            this.a(0, this.field_Ib);
-            this.a(0, this.field_Fb);
-            this.a(0, this.field_Mb);
+          this.field_Lb = new km(0L, (km) null);
+          this.field_Ib = new um(0L, this.field_Lb, param2, param3);
+          this.field_Fb = new km(0L, param4);
+          this.field_Mb = new km(0L, param4);
+          this.field_Fb.field_V = param5;
+          this.field_Mb.field_V = param6;
+          this.a(0, this.field_Ib);
+          this.a(0, this.field_Fb);
+          this.a(0, this.field_Mb);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ao.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ao.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static km d(boolean param0) {
         if (!param0) {
-            ao.d(false);
-            return uf.field_j.field_Jb;
+          ao.d(false);
+          return uf.field_j.field_Jb;
         }
         return uf.field_j.field_Jb;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5 = (this.field_K - -param1) / 2;
+        int var5 = (this.field_K + param1) / 2;
         int var6 = -param2 + this.field_ub;
         this.field_Ib.a(0, -103, this.field_K, param1, -param1 + var6, 0, param0);
         this.field_Fb.field_F = var6;
@@ -49,7 +49,7 @@ final class ao extends km {
         this.field_Mb.field_ub = param2;
         this.field_Mb.field_F = var6;
         this.field_Mb.field_tb = var5;
-        this.field_Mb.field_K = this.field_K + -var5;
+        this.field_Mb.field_K = this.field_K - var5;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

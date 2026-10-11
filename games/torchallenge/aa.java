@@ -15,33 +15,25 @@ final class aa {
     static int field_g;
 
     final w a(boolean param0, long param1) {
-        w var4;
-        w var5;
-        int var6;
-        var6 = TorChallenge.field_F ? 1 : 0;
+        w var5 = null;
+        int var6 = TorChallenge.field_F ? 1 : 0;
         this.field_e = param1;
-        var4 = this.field_i[(int)((long)(this.field_d - 1) & param1)];
+        w var4 = this.field_i[(int)((long)(this.field_d - 1) & param1)];
         this.field_j = var4.field_k;
-        L0: while (true) {
-          if (this.field_j == var4) {
-            this.field_j = null;
-            if (param0) {
-              return null;
-            } else {
-              aa.a(-111);
-              return null;
-            }
-          } else {
-            if (param1 != this.field_j.field_l) {
-              this.field_j = this.field_j.field_k;
-              continue L0;
-            } else {
-              var5 = this.field_j;
-              this.field_j = this.field_j.field_k;
-              return var5;
-            }
+        while (this.field_j != var4) {
+          if (param1 == this.field_j.field_l) {
+            var5 = this.field_j;
+            this.field_j = this.field_j.field_k;
+            return var5;
           }
+          this.field_j = this.field_j.field_k;
         }
+        this.field_j = null;
+        if (!param0) {
+          aa.a(-111);
+          return null;
+        }
+        return null;
     }
 
     public static void a(int param0) {
@@ -50,118 +42,103 @@ final class aa {
         field_b = null;
         field_k = null;
         if (param0 != 2432) {
-            aa.a(-83, -115, 30, -114, -9, 120, 10, -28);
+          aa.a(-83, -115, 30, -114, -9, 120, 10, -28);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9;
-        var9 = TorChallenge.field_F ? 1 : 0;
-        if (param5 != 0) {
-          field_a = 117;
-          if (param7 <= param6) {
-            if (param6 >= param4) {
-              if (param4 <= param7) {
-                ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
-                return;
-              } else {
-                ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
-                return;
-              }
-            } else {
-              ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
-              return;
-            }
-          } else {
-            if (param7 >= param4) {
-              if (param6 >= param4) {
-                ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
-                return;
-              } else {
-                ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
-                return;
-              }
-            } else {
+        int var9 = TorChallenge.field_F ? 1 : 0;
+        if (param5 == 0) {
+          if (param7 > param6) {
+            if (param7 < param4) {
               ni.a(param6, (byte) -55, param4, param3, param0, param7, qg.field_i, param1, param2);
               return;
             }
-          }
-        } else {
-          if (param7 <= param6) {
-            if (param6 >= param4) {
-              if (param4 <= param7) {
-                ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
-                return;
-              } else {
-                ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
-                return;
-              }
-            } else {
-              ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
+            if (param6 < param4) {
+              ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
               return;
             }
-          } else {
-            if (param7 >= param4) {
-              if (param6 >= param4) {
-                ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
-                return;
-              } else {
-                ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
-                return;
-              }
-            } else {
-              ni.a(param6, (byte) -55, param4, param3, param0, param7, qg.field_i, param1, param2);
-              return;
-            }
+            ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
+            return;
           }
+          if (param6 < param4) {
+            ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
+            return;
+          }
+          if (param4 > param7) {
+            ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
+            return;
+          }
+          ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
+          return;
         }
+        field_a = 117;
+        if (param7 > param6) {
+          if (param7 < param4) {
+            ni.a(param6, (byte) -55, param4, param3, param0, param7, qg.field_i, param1, param2);
+            return;
+          }
+          if (param6 < param4) {
+            ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
+            return;
+          }
+          ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
+          return;
+        }
+        if (param6 < param4) {
+          ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
+          return;
+        }
+        if (param4 > param7) {
+          ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
+          return;
+        }
+        ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
     }
 
     final w a(byte param0) {
         w var2;
         w var3;
         int var4;
+        w var2Lifetime1;
+        w var3Lifetime1;
         var4 = TorChallenge.field_F ? 1 : 0;
-        if (null != this.field_j) {
-          if (param0 > 122) {
-            var2 = this.field_i[(int)((long)(this.field_d - 1) & this.field_e)];
-            L0: while (true) {
-              if (this.field_j != var2) {
-                if ((this.field_e ^ -1L) != (this.field_j.field_l ^ -1L)) {
-                  this.field_j = this.field_j.field_k;
-                  continue L0;
-                } else {
-                  var3 = this.field_j;
-                  this.field_j = this.field_j.field_k;
-                  return var3;
-                }
-              } else {
-                this.field_j = null;
-                return null;
-              }
-            }
-          } else {
-            this.field_e = 17L;
-            var2 = this.field_i[(int)((long)(this.field_d - 1) & this.field_e)];
-            L1: while (true) {
-              if (this.field_j != var2) {
-                if ((this.field_e ^ -1L) != (this.field_j.field_l ^ -1L)) {
-                  this.field_j = this.field_j.field_k;
-                  continue L1;
-                } else {
-                  var3 = this.field_j;
-                  this.field_j = this.field_j.field_k;
-                  return var3;
-                }
-              } else {
-                this.field_j = null;
-                return null;
-              }
-            }
-          }
-        } else {
+        if (null == this.field_j) {
           return null;
         }
+        if (param0 > 122) {
+          var2 = this.field_i[(int)((long)(this.field_d - 1) & this.field_e)];
+          while (true) {
+            if (this.field_j == var2) {
+              this.field_j = null;
+              return null;
+            }
+            if (~this.field_e != ~this.field_j.field_l) {
+              this.field_j = this.field_j.field_k;
+              continue;
+            }
+            break;
+          }
+          var3 = this.field_j;
+          this.field_j = this.field_j.field_k;
+          return var3;
+        }
+        this.field_e = 17L;
+        var2Lifetime1 = this.field_i[(int)((long)(this.field_d - 1) & this.field_e)];
+        while (true) {
+          if (this.field_j == var2Lifetime1) {
+            this.field_j = null;
+            return null;
+          }
+          if (~this.field_e != ~this.field_j.field_l) {
+            this.field_j = this.field_j.field_k;
+            continue;
+          }
+          break;
+        }
+        var3Lifetime1 = this.field_j;
+        this.field_j = this.field_j.field_k;
+        return var3Lifetime1;
     }
 
     aa(int param0) {
@@ -171,29 +148,29 @@ final class aa {
         this.field_i = new w[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new w();
-            var3 = dupTemp$0;
-            this.field_i[var2] = dupTemp$0;
-            var3.field_i = var3;
-            var3.field_k = var3;
+          dupTemp$0 = new w();
+          var3 = dupTemp$0;
+          this.field_i[var2] = dupTemp$0;
+          var3.field_i = var3;
+          var3.field_k = var3;
         }
     }
 
     final void a(long param0, w param1, int param2) {
         w var5 = null;
         try {
-            if (param1.field_i != null) {
-                param1.a(12695);
-            }
-            var5 = this.field_i[(int)(param0 & (long)(this.field_d + -1))];
-            param1.field_k = var5;
-            param1.field_i = var5.field_i;
-            param1.field_i.field_k = param1;
-            param1.field_l = param0;
-            param1.field_k.field_i = param1;
-            int var6 = 87 / ((35 - param2) / 63);
+          if (param1.field_i != null) {
+            param1.a(12695);
+          }
+          var5 = this.field_i[(int)(param0 & (long)(this.field_d - 1))];
+          param1.field_k = var5;
+          param1.field_i = var5.field_i;
+          param1.field_i.field_k = param1;
+          param1.field_l = param0;
+          param1.field_k.field_i = param1;
+          int var6 = 87 / ((35 - param2) / 63);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

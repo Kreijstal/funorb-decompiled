@@ -13,19 +13,17 @@ final class ob extends pib {
 
     public static void c(byte param0) {
         if (param0 != 42) {
-            ob.c((byte) 67);
-            field_l = null;
-            field_m = null;
-            return;
+          ob.c((byte) 67);
+          field_l = null;
+          field_m = null;
+          return;
         }
         field_l = null;
         field_m = null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
-        if (param5 != 115) {
-          return;
-        } else {
+        if (param5 == 115) {
           this.field_g.a(114, (pib) (this));
           jaggl.OpenGL.glCopyTexSubImage3D(this.field_b, 0, param0, param7, param3, param1, param2, param6, param4);
           jaggl.OpenGL.glFlush();
@@ -38,14 +36,14 @@ final class ob extends pib {
         this.field_n = -1;
         this.field_o = -1;
         try {
-            this.field_h = param4;
-            this.field_i = param2;
-            this.field_k = param3;
-            this.field_g.a(62, (pib) (this));
-            jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
-            this.a(-95, true);
+          this.field_h = param4;
+          this.field_i = param2;
+          this.field_k = param3;
+          this.field_g.a(62, (pib) (this));
+          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, fsb.a(this.field_d, false), 5121, (byte[]) null, 0);
+          this.a(-95, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -54,7 +52,7 @@ final class ob extends pib {
         this.field_o = -1;
         this.field_n = -1;
         if (param0 != 31294) {
-            this.field_h = 45;
+          this.field_h = 45;
         }
     }
 
@@ -63,16 +61,16 @@ final class ob extends pib {
         this.field_n = -1;
         this.field_o = -1;
         try {
-            this.field_h = param4;
-            this.field_i = param2;
-            this.field_k = param3;
-            this.field_g.a(41, (pib) (this));
-            jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, param6, 5121, param5, 0);
-            jaggl.OpenGL.glPixelStorei(3317, 4);
-            this.a(99, true);
+          this.field_h = param4;
+          this.field_i = param2;
+          this.field_k = param3;
+          this.field_g.a(41, (pib) (this));
+          jaggl.OpenGL.glPixelStorei(3317, 1);
+          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, param6, 5121, param5, 0);
+          jaggl.OpenGL.glPixelStorei(3317, 4);
+          this.a(99, true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -85,57 +83,34 @@ final class ob extends pib {
         ufb stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = jqb.a(11168, param4, param1, param3, param0, param2);
-            var6 = var8;
-            if (var8 != null) {
-              var7 = new ufb();
-              var7.field_b = var8;
-              var7.field_b.add((java.awt.Component) ((Object) var7));
-              var7.setBounds(param5, 0, param2, param3);
-              var7.addFocusListener(var7);
-              var7.requestFocus();
-              stackIn_4_0 = (ufb) (var7);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var8 = jqb.a(11168, param4, param1, param3, param0, param2);
+          var6 = var8;
+          if (var8 == null) {
+            stackIn_2_0 = null;
+            return (ufb) (stackIn_2_0);
           }
+          var7 = new ufb();
+          var7.field_b = var8;
+          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(param5, 0, param2, param3);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          stackIn_4_0 = var7;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6_ref);
-
-            stackIn_7_1 = new StringBuilder().append("ob.N(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_7_0 = var6_ref;
+          stackIn_7_1 = new StringBuilder().append("ob.N(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (ufb) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

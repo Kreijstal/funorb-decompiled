@@ -13,7 +13,7 @@ final class sl {
         field_b = null;
         field_c = null;
         if (param0 != 18668) {
-            sl.a(18);
+          sl.a(18);
         }
     }
 

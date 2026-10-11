@@ -17,17 +17,16 @@ final class qa extends RuntimeException {
         field_b = null;
         field_g = null;
         if (!param0) {
-            qa.a(62, -2, 14, -125);
+          qa.a(62, -2, 14, -125);
         }
     }
 
     final static tf[] a(int param0, int param1, int param2, int param3) {
-        if (param3 != 3) {
-          qa.a(-72, -103, -103, -51);
-          return ap.a(param1, param0, 5, param2, 1);
-        } else {
+        if (param3 == 3) {
           return ap.a(param1, param0, 5, param2, 1);
         }
+        qa.a(-72, -103, -103, -51);
+        return ap.a(param1, param0, 5, param2, 1);
     }
 
     qa(Throwable param0, String param1) {

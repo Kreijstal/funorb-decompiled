@@ -13,9 +13,9 @@ final class lm {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            return false;
+          return false;
         }
-        return -251 > (nd.field_r ^ -1) ? true : false;
+        return nd.field_r > 250 ? true : false;
     }
 
     static {

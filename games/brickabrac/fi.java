@@ -10,122 +10,101 @@ final class fi extends ki {
     static String field_v;
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        pb var8;
-        pb var9;
-        if (param1 < -84) {
-          if (this.b((byte) -111)) {
-            var9 = kd.a(this.field_m, param3, (byte) 107);
-            if (!var9.a((byte) -84, param3, this.field_m)) {
-              dk.a(2, param3, var9, -35, 23275, on.field_K);
-              var9.a(this.field_m, param3, (byte) 78);
-              mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
-              return;
-            } else {
-              mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
-              return;
-            }
-          } else {
-            lb.g(param2, param0, 306, 480, pf.field_b[param3], 16777215);
-            return;
-          }
-        } else {
+        pb var8 = null;
+        if (param1 >= -84) {
           this.a(false, 56, -90, -99, 75);
-          if (this.b((byte) -111)) {
-            var8 = kd.a(this.field_m, param3, (byte) 107);
-            if (var8.a((byte) -84, param3, this.field_m)) {
-              mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
-              return;
-            } else {
-              dk.a(2, param3, var8, -35, 23275, on.field_K);
-              var8.a(this.field_m, param3, (byte) 78);
-              mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
-              return;
-            }
-          } else {
+          if (!this.b((byte) -111)) {
             lb.g(param2, param0, 306, 480, pf.field_b[param3], 16777215);
             return;
           }
+          var8 = kd.a(this.field_m, param3, (byte) 107);
+          if (!var8.a((byte) -84, param3, this.field_m)) {
+            dk.a(2, param3, var8, -35, 23275, on.field_K);
+            var8.a(this.field_m, param3, (byte) 78);
+            mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+            return;
+          }
+          mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+          return;
         }
+        if (!this.b((byte) -111)) {
+          lb.g(param2, param0, 306, 480, pf.field_b[param3], 16777215);
+          return;
+        }
+        pb var9 = kd.a(this.field_m, param3, (byte) 107);
+        if (var9.a((byte) -84, param3, this.field_m)) {
+          mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+          return;
+        }
+        dk.a(2, param3, var9, -35, 23275, on.field_K);
+        var9.a(this.field_m, param3, (byte) 78);
+        mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5;
-        var5 = 22 % ((param0 - -28) / 43);
-        if ((param1 ^ -1) >= 0) {
-          lb.g(param2, param3, 153, 240, 16777215, 11184810);
-          if (!this.b((byte) -107)) {
-            return;
-          } else {
-            be.field_d.c(param2, param3);
-            return;
-          }
-        } else {
+        int var5 = 22 % ((param0 + 28) / 43);
+        if (param1 > -1) {
           lb.g(param2, param3, 160, 238, pf.field_b[param1], 16777215);
-          if (!this.b((byte) -107)) {
-            return;
-          } else {
+          if (this.b((byte) -107)) {
             be.field_d.c(param2, param3);
             return;
           }
+          return;
+        }
+        lb.g(param2, param3, 153, 240, 16777215, 11184810);
+        if (this.b((byte) -107)) {
+          be.field_d.c(param2, param3);
+          return;
         }
     }
 
     final boolean b(byte param0) {
-        if (param0 <= -91) {
-          if (null != s.field_d) {
-            if (kc.field_r != null) {
-              if (null != hk.field_I) {
-                if (be.field_d == null) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 > -91) {
           field_v = (String) null;
-          if (null != s.field_d) {
-            if (kc.field_r != null) {
-              if (null != hk.field_I) {
-                if (be.field_d == null) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (null == s.field_d) {
             return false;
           }
+          if (kc.field_r == null) {
+            return false;
+          }
+          if (null == hk.field_I) {
+            return false;
+          }
+          if (be.field_d != null) {
+            return true;
+          }
+          return false;
         }
+        if (null == s.field_d) {
+          return false;
+        }
+        if (kc.field_r == null) {
+          return false;
+        }
+        if (null == hk.field_I) {
+          return false;
+        }
+        if (be.field_d != null) {
+          return true;
+        }
+        return false;
     }
 
     fi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-            ga.field_k = new jp[2];
-            ao.field_o = new jp[2][];
-            ja.field_a = new jp[2][];
+          ga.field_k = new jp[2];
+          ao.field_o = new jp[2][];
+          ja.field_a = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void d(byte param0) {
         field_v = null;
         if (param0 != -31) {
-            return;
+          return;
         }
         field_u = null;
         field_r = null;
@@ -135,8 +114,8 @@ final class fi extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            field_u = (String) null;
-            return ja.field_a[param0 - 1];
+          field_u = (String) null;
+          return ja.field_a[param0 - 1];
         }
         return ja.field_a[param0 - 1];
     }
@@ -147,52 +126,43 @@ final class fi extends ki {
     }
 
     final jp a(boolean param0, int param1) {
-        if (!param0) {
-          this.a(true, -66, 69, -83, 51);
-          return ga.field_k[-1 + param1];
-        } else {
+        if (param0) {
           return ga.field_k[-1 + param1];
         }
+        this.a(true, -66, 69, -83, 51);
+        return ga.field_k[-1 + param1];
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6;
-        if (this.b((byte) -125)) {
-          var6 = ge.a(this.field_m, param3, -20777);
-          if (var6.a((byte) -84, param3, this.field_m)) {
-            mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
-            if (param0) {
-              return;
-            } else {
-              this.a(false);
-              return;
-            }
-          } else {
-            dk.a(1, param3, var6, 0, 23275, hk.field_I);
-            var6.a(this.field_m, param3, (byte) 78);
-            mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
-            if (!param0) {
-              this.a(false);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
+        if (!this.b((byte) -125)) {
           lb.g(param4, param2, 640, 480, pf.field_b[param3], 16777215);
-          if (param0) {
-            return;
-          } else {
+          if (!param0) {
             this.a(false);
             return;
           }
+          return;
         }
+        pb var6 = ge.a(this.field_m, param3, -20777);
+        if (!var6.a((byte) -84, param3, this.field_m)) {
+          dk.a(1, param3, var6, 0, 23275, hk.field_I);
+          var6.a(this.field_m, param3, (byte) 78);
+        } else {
+          mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+          if (!param0) {
+            this.a(false);
+            return;
+          }
+          return;
+        }
+        mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+        if (param0) {
+          return;
+        }
+        this.a(false);
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("arctic", -28138)) {
-          return false;
-        } else {
+        if (i.field_m.a("arctic", -28138)) {
           s.field_d = pl.a("arctic", "arctic_near", (byte) 117, i.field_m);
           kc.field_r = pl.a("arctic", "arctic_mid", (byte) -79, i.field_m);
           hk.field_I = pl.a("arctic", "arctic_far", (byte) 112, i.field_m);
@@ -208,6 +178,7 @@ final class fi extends ki {
           ga.field_k[1] = pl.a(-16371, ga.field_k[0]);
           return true;
         }
+        return false;
     }
 
     static {

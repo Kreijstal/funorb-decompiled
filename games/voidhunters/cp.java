@@ -29,28 +29,28 @@ final class cp extends ev {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = this.field_l * param2 >> -63330516;
-        int var5 = param1 * this.field_r >> -1346969460;
-        int var6 = param2 * this.field_i >> 1345789132;
-        int var7 = param1 * this.field_h >> 1384563692;
-        int var8 = this.field_p * param2 >> -1128074164;
-        int var9 = param1 * this.field_m >> 1291727468;
-        int var12 = -88 / ((param0 - -48) / 40);
-        int var10 = param2 * this.field_k >> -1817053140;
-        int var11 = this.field_o * param1 >> 945022412;
+        int var4 = this.field_l * param2 >> 12;
+        int var5 = param1 * this.field_r >> 12;
+        int var6 = param2 * this.field_i >> 12;
+        int var7 = param1 * this.field_h >> 12;
+        int var8 = this.field_p * param2 >> 12;
+        int var9 = param1 * this.field_m >> 12;
+        int var12 = -88 / ((param0 + 48) / 40);
+        int var10 = param2 * this.field_k >> 12;
+        int var11 = this.field_o * param1 >> 12;
         pqa.a(var9, var5, var4, this.field_d, var6, var7, var8, 88, var11, var10);
     }
 
     final void a(int param0, byte param1, int param2) {
         if (param1 != 110) {
-            this.b((byte) 79, 23, -77);
+          this.b((byte) 79, 23, -77);
         }
     }
 
     public static void a(byte param0) {
         field_g = null;
         if (param0 > -121) {
-            return;
+          return;
         }
         field_j = null;
         field_n = null;
@@ -59,7 +59,7 @@ final class cp extends ev {
 
     final void b(byte param0, int param1, int param2) {
         if (param0 != -112) {
-            this.field_l = -85;
+          this.field_l = -85;
         }
     }
 

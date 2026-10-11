@@ -9,9 +9,9 @@ final class qa {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            qa.a(true);
-            field_b = null;
-            return;
+          qa.a(true);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

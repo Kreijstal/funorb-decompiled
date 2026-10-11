@@ -8,7 +8,7 @@ class ji extends ng {
 
     sb b(byte param0) {
         if (param0 >= -57) {
-            return (sb) null;
+          return (sb) null;
         }
         return pg.field_b;
     }
@@ -20,22 +20,22 @@ class ji extends ng {
 
     final void a(boolean param0, wi param1) {
         try {
-            if (param0) {
-                this.field_c = (String) null;
-            }
-            param1.a(252186072, this.field_e);
-            param1.b(this.field_c, (byte) -118);
+          if (param0) {
+            this.field_c = (String) null;
+          }
+          param1.a(252186072, this.field_e);
+          param1.b(this.field_c, (byte) -118);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "ji.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     ji(long param0, String param1) {
         try {
-            this.field_e = param0;
-            this.field_c = param1;
+          this.field_e = param0;
+          this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,61 +14,42 @@ final class lm {
         field_b = null;
         field_d = null;
         if (param0 != -10) {
-            field_b = (String[]) null;
+          field_b = (String[]) null;
         }
     }
 
     final static void a(byte param0) {
         try {
-            Exception var1 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (bd.field_h == null) {
-                break L0;
-              } else {
-                try {
-                  L1: {
-                    bd.field_h.a(0, 0L);
-                    bd.field_h.a(true, om.field_g.field_m, om.field_g.field_g, 24);
-                    decompiledRegionSelector0 = 0;
-                    break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var1 = (Exception) (Object) decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L2;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  L3: {
-                    om.field_g.field_m = om.field_g.field_m + 24;
-                    if (param0 <= -44) {
-                      break L3;
-                    } else {
-                      lm.a((byte) -105);
-                      break L3;
-                    }
-                  }
-                  return;
-                } else {
-                  break L0;
-                }
+          Exception var1 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          if (bd.field_h != null) {
+            try {
+              bd.field_h.a(0, 0L);
+              bd.field_h.a(true, om.field_g.field_m, om.field_g.field_g, 24);
+              decompiledRegionSelector0 = 0;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
+              decompiledRegionSelector0 = 1;
+            }
+            if (decompiledRegionSelector0 == 0) {
+              om.field_g.field_m = om.field_g.field_m + 24;
+              if (param0 > -44) {
+                lm.a((byte) -105);
               }
-            }
-            om.field_g.field_m = om.field_g.field_m + 24;
-            if (param0 > -44) {
-              lm.a((byte) -105);
-              return;
-            } else {
               return;
             }
+          }
+          om.field_g.field_m = om.field_g.field_m + 24;
+          if (param0 <= -44) {
+            return;
+          }
+          lm.a((byte) -105);
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

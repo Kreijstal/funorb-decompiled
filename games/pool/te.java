@@ -11,7 +11,7 @@ final class te extends ma {
     public static void c(byte param0) {
         field_p = null;
         if (param0 <= 69) {
-            return;
+          return;
         }
         field_o = null;
         field_m = null;
@@ -20,46 +20,42 @@ final class te extends ma {
 
     te(byte[] param0) {
         try {
-            this.field_l = param0;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0, int param1) {
-        oq var2;
-        var2 = ej.field_j;
+        oq var2 = ej.field_j;
         var2.b(false, param0);
         var2.a(1, false);
         var2.a(1, false);
-        if (param1 > -1) {
-          te.a(45, 53);
-          return;
-        } else {
+        if (param1 <= -1) {
           return;
         }
+        te.a(45, 53);
     }
 
     final static void a(byte param0, int param1, int param2) {
         gg.field_g = param1;
         if (param0 > -21) {
-            return;
+          return;
         }
         ci.field_i = param2;
     }
 
     final static int a(int param0, int param1) {
         param1--;
-        if (param0 != -17931) {
-          return -27;
-        } else {
-          param1 = param1 | param1 >>> -1892727199;
-          param1 = param1 | param1 >>> 334583458;
-          param1 = param1 | param1 >>> 2064297252;
-          param1 = param1 | param1 >>> -1729389624;
-          param1 = param1 | param1 >>> -2139255472;
+        if (param0 == -17931) {
+          param1 = param1 | param1 >>> 1;
+          param1 = param1 | param1 >>> 2;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return 1 + param1;
         }
+        return -27;
     }
 
     static {

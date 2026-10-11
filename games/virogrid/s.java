@@ -14,33 +14,28 @@ final class s {
     static km field_f;
 
     final static boolean b(byte param0) {
-        int var1;
-        var1 = -51 / ((param0 - -22) / 47);
-        if (he.field_Xb != null) {
-          if (!he.field_Xb.e((byte) 32)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = -51 / ((param0 + 22) / 47);
+        if (he.field_Xb == null) {
           return false;
         }
+        if (he.field_Xb.e((byte) 32)) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
         field_c = null;
-        if (param0 != -1) {
-          field_g = 64;
-          field_f = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_f = null;
           field_h = null;
           return;
         }
+        field_g = 64;
+        field_f = null;
+        field_h = null;
     }
 
     s() {
@@ -48,48 +43,37 @@ final class s {
 
     s(s param0) {
         try {
-            this.field_j = param0.field_j;
-            this.field_e = param0.field_e;
-            this.field_i = param0.field_i;
-            this.field_d = param0.field_d;
+          this.field_j = param0.field_j;
+          this.field_e = param0.field_e;
+          this.field_i = param0.field_i;
+          this.field_d = param0.field_d;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static cb a(byte param0) {
         try {
-            Throwable var1 = null;
-            cb stackIn_2_0 = null;
-            cb stackIn_4_0 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (param0 == -110) {
-                  stackIn_4_0 = (cb) (Class.forName("hb").newInstance());
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_2_0 = (cb) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return stackIn_2_0;
-            } else {
+          Throwable var1 = null;
+          cb stackIn_2_0 = null;
+          cb stackIn_4_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 == -110) {
+              stackIn_4_0 = (cb) (Class.forName("hb").newInstance());
               return stackIn_4_0;
             }
+            stackIn_2_0 = (cb) null;
+            return stackIn_2_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

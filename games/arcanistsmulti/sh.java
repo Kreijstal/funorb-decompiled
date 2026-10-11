@@ -7,42 +7,34 @@ final class sh extends dk {
     private java.awt.Component field_n;
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
-        java.awt.Graphics var8;
         this.field_e = param3;
         this.field_m = param0;
         this.field_l = new int[1 + param3 * param0];
-        var5 = new java.awt.image.DataBufferInt(this.field_l, this.field_l.length);
-        var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_e, this.field_m), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
-        if (param2 != 0) {
-          var8 = (java.awt.Graphics) null;
-          this.a(117, (java.awt.Graphics) null, 45, -66);
-          this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
-          this.field_n = param1;
-          this.a(true);
-          return;
-        } else {
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_l, this.field_l.length);
+        java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_e, this.field_m), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        if (param2 == 0) {
           this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
           this.field_n = param1;
           this.a(true);
           return;
         }
+        java.awt.Graphics var8 = (java.awt.Graphics) null;
+        this.a(117, (java.awt.Graphics) null, 45, -66);
+        this.field_j = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+        this.field_n = param1;
+        this.a(true);
     }
 
     public sh() {
     }
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
-        if (param2 != 0) {
-          this.field_n = (java.awt.Component) null;
-          param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
-          return;
-        } else {
+        if (param2 == 0) {
           param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         }
+        this.field_n = (java.awt.Component) null;
+        param1.drawImage(this.field_j, param3, param0, (java.awt.image.ImageObserver) ((Object) this.field_n));
     }
 }

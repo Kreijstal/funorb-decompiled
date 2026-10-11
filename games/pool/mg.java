@@ -9,24 +9,21 @@ final class mg {
 
     final static im a(int param0, long param1) {
         if (param0 != 0) {
-            mg.a(-80);
-            return (im) ((Object) ln.field_n.a(param1, false));
+          mg.a(-80);
+          return (im) (ln.field_n.a(param1, false));
         }
-        return (im) ((Object) ln.field_n.a(param1, false));
+        return (im) (ln.field_n.a(param1, false));
     }
 
     final static boolean a(int param0) {
-        int var1;
-        var1 = -30 / ((-4 - param0) / 49);
-        if (jd.field_c != null) {
-          if (ta.field_a != tl.field_J) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = -30 / ((-4 - param0) / 49);
+        if (jd.field_c == null) {
           return false;
         }
+        if (ta.field_a == tl.field_J) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
@@ -34,30 +31,24 @@ final class mg {
         field_c = null;
         field_b = null;
         if (param0 >= -40) {
-            mg.a(true);
+          mg.a(true);
         }
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_7_0 = 0;
-        if (param0) {
-          L0: {
-            if (hk.b(-18)) {
-              stackIn_7_0 = 1;
-              break L0;
-            } else {
-              if (0 < mp.field_V) {
-                stackIn_7_0 = 0;
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          return stackIn_7_0 != 0;
-        } else {
+        boolean stackIn_7_0 = false;
+        if (!param0) {
           return false;
         }
+        if (hk.b(-18)) {
+          stackIn_7_0 = true;
+        } else {
+          if (0 >= mp.field_V) {
+            return true;
+          }
+          stackIn_7_0 = false;
+        }
+        return stackIn_7_0;
     }
 
     static {

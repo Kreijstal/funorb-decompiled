@@ -14,16 +14,16 @@ final class hn extends kl {
     hn(String param0, int param1, int param2, int param3) {
         super(300, 174);
         try {
-            this.field_o = param3;
-            this.field_p = param0;
-            this.field_n = param1;
-            this.field_q = param2;
-            this.field_m = tn.a((-jm.field_i.field_y + this.field_a >> 414679649) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) + -24, ne.field_c, jm.field_i, -39, "Accept");
-            this.field_r = tn.a((this.field_a - jm.field_i.field_y >> 1740701761) + this.field_k, -16 + (this.field_i + (this.field_j + -jm.field_i.field_v)), ne.field_c, jm.field_i, -70, "Cancel");
-            this.field_f.a(this.field_m, false);
-            this.field_f.a(this.field_r, false);
+          this.field_o = param3;
+          this.field_p = param0;
+          this.field_n = param1;
+          this.field_q = param2;
+          this.field_m = tn.a((-jm.field_i.field_y + this.field_a >> 1) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) - 24, ne.field_c, jm.field_i, -39, "Accept");
+          this.field_r = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -16 + (this.field_i + (this.field_j - jm.field_i.field_v)), ne.field_c, jm.field_i, -70, "Cancel");
+          this.field_f.a(this.field_m, false);
+          this.field_f.a(this.field_r, false);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "hn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -33,25 +33,25 @@ final class hn extends kl {
         int var3 = 0;
         int var4 = DungeonAssault.field_K;
         try {
-            var1 = new cn(540, 140);
-            lm.a(var1, (byte) 70);
-            re.b();
-            if (param0 != -117) {
-                field_t = -63;
-            }
-            gf.a();
-            nl.field_d = 0;
-            id.a(param0 ^ -439027613);
-            var2 = var1.d();
-            for (var3 = 0; var3 < 15; var3++) {
-                var2.e(-2, -2, 16777215);
-                gf.d(4, 4, 0, 0, 540, 140);
-            }
-            ie.field_l.e();
-            var1.a(0, 0);
-            ti.c(true);
+          var1 = new cn(540, 140);
+          lm.a(var1, (byte) 70);
+          re.b();
+          if (param0 != -117) {
+            field_t = -63;
+          }
+          gf.a();
+          nl.field_d = 0;
+          id.a(param0 ^ -439027613);
+          var2 = var1.d();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.e(-2, -2, 16777215);
+            gf.d(4, 4, 0, 0, 540, 140);
+          }
+          ie.field_l.e();
+          var1.a(0, 0);
+          ti.c(true);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "hn.C(" + param0 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "hn.C(" + param0 + ')');
         }
     }
 
@@ -61,18 +61,17 @@ final class hn extends kl {
         int var5 = this.field_k + 32;
         param1 = param1 - var5;
         param2 = param2 - var4;
-        int var6 = -47 / ((param0 - -11) / 58);
-        if (9 >= (param2 ^ -1) && (param2 ^ -1) > -15 && param1 >= -10) {
-            if (!(param1 >= 10 + (-64 + this.field_a))) {
-                var7 = ((this.field_a >> 407016801) - (32 - (-2 + this.field_n) * param1)) / (-64 + this.field_a) + 1;
-                if ((var7 ^ -1) > -2) {
-                    var7 = 1;
-                }
-                if (!(-1 + this.field_n >= var7)) {
-                    var7 = this.field_n + -1;
-                }
-                return var7;
-            }
+        int var6 = -47 / ((param0 + 11) / 58);
+        if (param2 >= -10 && param2 < 14 && param1 >= -10 &&
+          !(param1 >= 10 + (-64 + this.field_a))) {
+          var7 = ((this.field_a >> 1) - (32 - (-2 + this.field_n) * param1)) / (-64 + this.field_a) + 1;
+          if (var7 < 1) {
+            var7 = 1;
+          }
+          if (-1 + this.field_n < var7) {
+            var7 = this.field_n - 1;
+          }
+          return var7;
         }
         return -1;
     }
@@ -81,14 +80,14 @@ final class hn extends kl {
         int var2 = 0;
         super.a(param0);
         if (null != hh.field_s) {
-            this.field_s = hh.field_s == this.field_m ? true : false;
-            this.field_d = true;
+          this.field_s = hh.field_s == this.field_m ? true : false;
+          this.field_d = true;
         }
-        if (!(-2 != (no.field_d ^ -1))) {
-            var2 = this.a((byte) 113, lc.field_c, hm.field_k);
-            if (0 != (var2 ^ -1)) {
-                this.field_o = var2;
-            }
+        if (no.field_d == 1) {
+          var2 = this.a((byte) 113, lc.field_c, hm.field_k);
+          if (var2 != -1) {
+            this.field_o = var2;
+          }
         }
     }
 
@@ -97,53 +96,59 @@ final class hn extends kl {
         int var7 = 0;
         int var8 = 0;
         int var9 = DungeonAssault.field_K;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime3;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var7Lifetime3;
+        int var8Lifetime1;
         super.b(117);
-        int var2 = (this.field_a >> -943656159) + this.field_k;
+        int var2 = (this.field_a >> 1) + this.field_k;
         int var3 = 10 + this.field_j;
-        ne.field_c.c(this.field_p, var2, var3 - -ne.field_c.field_H, 16777215, -1);
+        ne.field_c.c(this.field_p, var2, var3 + ne.field_c.field_H, 16777215, -1);
         var3 = var3 + (10 + ne.field_c.field_H);
         int var4 = 50 + this.field_j;
-        qe.b(this.field_k - -32, var4, -64 + this.field_a, 4, 0, 128, 128);
+        qe.b(this.field_k + 32, var4, -64 + this.field_a, 4, 0, 128, 128);
         int var5 = 119 / ((param0 - 41) / 63);
-        for (var6 = 0; this.field_n + -1 > var6; var6++) {
-            var7 = var6 * (this.field_a - 64) / (this.field_n + -2) + (32 + this.field_k);
-            for (var8 = 0; -5 < (var8 ^ -1); var8++) {
-                gf.c(-var8 + var7, var4 - (2 - var8), 8 - var8 * 2, 16711680);
-                gf.c(var7 - (-1 - var8), var8 + -2 + var4, -(2 * var8) + 8, 16744576);
-            }
+        for (var6 = 0; this.field_n - 1 > var6; var6++) {
+          var7 = var6 * (this.field_a - 64) / (this.field_n - 2) + (32 + this.field_k);
+          for (var8 = 0; var8 < 4; var8++) {
+            gf.c(-var8 + var7, var4 - (2 - var8), 8 - var8 * 2, 16711680);
+            gf.c(var7 - (-1 - var8), var8 - 2 + var4, -(2 * var8) + 8, 16744576);
+          }
         }
-        var6 = this.field_k + (32 + (this.field_q - 1) * (this.field_a - 64) / (this.field_n + -2));
-        for (var7 = 0; var7 < 8; var7++) {
-            gf.b(-var7 + var6, var7 + var4 - 6, 2, 8421504);
-            gf.b(var7 + var6, var7 + -6 + var4, 2, 8421504);
-            gf.b(-var7 + var6, var4 + 9 - var7, 2, 8421504);
-            gf.b(var7 + var6, 9 + var4 - var7, 2, 8421504);
+        var6Lifetime1 = this.field_k + (32 + (this.field_q - 1) * (this.field_a - 64) / (this.field_n - 2));
+        for (var7Lifetime1 = 0; var7Lifetime1 < 8; var7Lifetime1++) {
+          gf.b(-var7Lifetime1 + var6Lifetime1, var7Lifetime1 + var4 - 6, 2, 8421504);
+          gf.b(var7Lifetime1 + var6Lifetime1, var7Lifetime1 - 6 + var4, 2, 8421504);
+          gf.b(-var7Lifetime1 + var6Lifetime1, var4 + 9 - var7Lifetime1, 2, 8421504);
+          gf.b(var7Lifetime1 + var6Lifetime1, 9 + var4 - var7Lifetime1, 2, 8421504);
         }
-        var6 = this.field_k + (32 + (-64 + this.field_a) * (this.field_o + -1) / (this.field_n + -2));
-        for (var7 = 0; 8 > var7; var7++) {
-            gf.b(var6 + -var7, var7 + (-6 + var4), 2, 16744576);
-            gf.b(var6 + var7, var7 + (var4 + -6), 2, 16711680);
-            gf.b(var6 + -var7, -var7 + (9 + var4), 2, 16744576);
-            gf.b(var7 + var6, -var7 + var4 - -9, 2, 16711680);
+        var6Lifetime2 = this.field_k + (32 + (-64 + this.field_a) * (this.field_o - 1) / (this.field_n - 2));
+        for (var7Lifetime2 = 0; 8 > var7Lifetime2; var7Lifetime2++) {
+          gf.b(var6Lifetime2 - var7Lifetime2, var7Lifetime2 + (-6 + var4), 2, 16744576);
+          gf.b(var6Lifetime2 + var7Lifetime2, var7Lifetime2 + (var4 - 6), 2, 16711680);
+          gf.b(var6Lifetime2 - var7Lifetime2, -var7Lifetime2 + (9 + var4), 2, 16744576);
+          gf.b(var7Lifetime2 + var6Lifetime2, -var7Lifetime2 + var4 + 9, 2, 16711680);
         }
-        var7 = this.a((byte) 55, hj.field_S, eh.field_h);
-        if (var7 != -1 + this.field_o) {
-            if (!(0 == (var7 ^ -1))) {
-                var6 = 32 + (this.field_k - -((this.field_a + -64) * (var7 - 1) / (-2 + this.field_n)));
-                for (var8 = 0; (var8 ^ -1) > -9; var8++) {
-                    gf.b(-var8 + var6, var4 + (-6 - -var8), 2, 16776960);
-                    gf.b(var8 + var6, var4 - 6 - -var8, 2, 16776960);
-                    gf.b(var6 - var8, 9 + var4 + -var8, 2, 16776960);
-                    gf.b(var8 + var6, -var8 + (var4 - -9), 2, 16776960);
-                }
-            }
+        var7Lifetime3 = this.a((byte) 55, hj.field_S, eh.field_h);
+        if (var7Lifetime3 != -1 + this.field_o &&
+          var7Lifetime3 != -1) {
+          var6Lifetime3 = 32 + (this.field_k + (this.field_a - 64) * (var7Lifetime3 - 1) / (-2 + this.field_n));
+          for (var8Lifetime1 = 0; var8Lifetime1 < 8; var8Lifetime1++) {
+            gf.b(-var8Lifetime1 + var6Lifetime3, var4 + (-6 + var8Lifetime1), 2, 16776960);
+            gf.b(var8Lifetime1 + var6Lifetime3, var4 - 6 + var8Lifetime1, 2, 16776960);
+            gf.b(var6Lifetime3 - var8Lifetime1, 9 + var4 - var8Lifetime1, 2, 16776960);
+            gf.b(var8Lifetime1 + var6Lifetime3, -var8Lifetime1 + (var4 + 9), 2, 16776960);
+          }
         }
-        qe.field_i[0].h(-50 + var2, var4 - -20);
+        qe.field_i[0].h(-50 + var2, var4 + 20);
         ne.field_c.b(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
-        qe.field_i[1].h(var2, var4 - -20);
-        ne.field_c.b(Integer.toString(this.field_n + -this.field_o), 20 + var2, 36 + var4, 65280, -1);
+        qe.field_i[1].h(var2, var4 + 20);
+        ne.field_c.b(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
         ue.field_i[1].h(this.field_k + 20, 24 + this.field_j);
-        ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j - -24);
+        ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j + 24);
     }
 
     static {

@@ -11,7 +11,7 @@ final class lh {
         field_c = null;
         field_a = null;
         if (param0 != 0) {
-            lh.a(8);
+          lh.a(8);
         }
     }
 

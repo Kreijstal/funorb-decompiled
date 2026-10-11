@@ -12,8 +12,8 @@ final class tc {
 
     final static String a(int param0) {
         if (param0 <= 126) {
-            tc.a(19);
-            return id.field_f.f(128);
+          tc.a(19);
+          return id.field_f.f(128);
         }
         return id.field_f.f(128);
     }

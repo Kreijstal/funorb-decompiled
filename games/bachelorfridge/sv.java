@@ -8,18 +8,16 @@ final class sv {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 24173) {
-          sv.a(90);
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 24173) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
+        sv.a(90);
+        field_c = null;
+        field_a = null;
+        field_b = null;
     }
 
     static {

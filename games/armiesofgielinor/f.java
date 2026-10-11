@@ -10,8 +10,8 @@ final class f extends uq {
 
     final boolean a(boolean param0) {
         if (!param0) {
-            field_E = -65;
-            return false;
+          field_E = -65;
+          return false;
         }
         return false;
     }
@@ -21,13 +21,13 @@ final class f extends uq {
         field_D = null;
         field_C = null;
         if (!param0) {
-            f.c(true);
+          f.c(true);
         }
     }
 
     final Object b(boolean param0) {
         if (param0) {
-            return (Object) null;
+          return (Object) null;
         }
         return this.field_B;
     }
@@ -35,9 +35,9 @@ final class f extends uq {
     f(Object param0, int param1) {
         super(param1);
         try {
-            this.field_B = param0;
+          this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

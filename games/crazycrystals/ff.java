@@ -11,7 +11,7 @@ abstract class ff extends te {
 
     final void a(double param0, boolean param1) {
         if (!param1) {
-            this.b((byte) 13);
+          this.b((byte) 13);
         }
         kh.d(0, 0, 480, 480, 0, kb.field_g);
         oj.a(false, kk.field_a, 480, 480, (double)(-jj.field_b) + (double)kk.field_a.length * param0, 0, param0, 0, (byte) -32, param0 * (double)kk.field_a[0].length);
@@ -19,7 +19,7 @@ abstract class ff extends te {
 
     public static void c(int param0) {
         if (param0 != -18692) {
-            ff.c(33);
+          ff.c(33);
         }
         field_e = null;
         field_d = null;
@@ -29,86 +29,56 @@ abstract class ff extends te {
     void a(int param0) {
         this.field_c.c((byte) 125);
         if (param0 != -1) {
-            ff.c(113);
+          ff.c(113);
         }
         kk.field_a = (f[][]) null;
     }
 
     final static f a(int param0, int param1, int param2, int param3, DataInputStream param4) throws IOException {
+        int var8_int = 0;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8_int = 0;
         int var9 = 0;
-        f stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
+        f stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        String stackIn_14_2 = null;
+        String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         f var8 = null;
         f[][] var10 = null;
         var9 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var5_int = param4.readUnsignedByte();
-            var6 = 0;
-            var7 = kf.field_d[0];
-            var8_int = param2;
-            L1: while (true) {
-              if (var8_int >= kf.field_d.length) {
-                var8 = (f) (lm.field_d[var6].clone());
-                var8.a(var5_int + -var7, 89);
-                var8.a(param0, param1, param3, param4, (byte) -35);
-                var10 = (f[][]) null;
-                var8.a(param2 ^ 393988, param3, param1, (f[][]) null);
-                stackIn_10_0 = (f) (var8);
-                break L0;
-              } else {
-                if (kf.field_d[var8_int] <= var5_int) {
-                  L2: {
-                    if (kf.field_d[var8_int] > var7) {
-                      var6 = var8_int;
-                      var7 = kf.field_d[var8_int];
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var8_int++;
-                  continue L1;
-                } else {
-                  var8_int++;
-                  continue L1;
-                }
-              }
+          var5_int = param4.readUnsignedByte();
+          var6 = 0;
+          var7 = kf.field_d[0];
+          for (var8_int = param2; var8_int < kf.field_d.length; var8_int++) {
+            if (kf.field_d[var8_int] <= var5_int &&
+              kf.field_d[var8_int] > var7) {
+              var6 = var8_int;
+              var7 = kf.field_d[var8_int];
             }
           }
+          var8 = (f) (lm.field_d[var6].clone());
+          var8.a(var5_int - var7, 89);
+          var8.a(param0, param1, param3, param4, (byte) -35);
+          var10 = (f[][]) null;
+          var8.a(param2 ^ 393988, param3, param1, (f[][]) null);
+          stackIn_11_0 = var8;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var5);
-
-            stackIn_13_1 = new StringBuilder().append("ff.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("ff.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
-        return stackIn_10_0;
     }
 
     ff() {
@@ -118,17 +88,17 @@ abstract class ff extends te {
 
     te b(byte param0) {
         if (param0 != -39) {
-            return (te) null;
+          return (te) null;
         }
-        if ((kb.field_g ^ -1) > -193) {
-            kb.field_g = kb.field_g + 12;
+        if (kb.field_g < 192) {
+          kb.field_g = kb.field_g + 12;
         }
         nj.field_k = kk.field_a[0].length;
         pa.a(kk.field_a, 0, 0, (byte) -45);
         nj.field_k = 0;
         this.field_c = this.field_c.a(param0 + 37);
         if (null == this.field_c) {
-            return null;
+          return null;
         }
         return (te) (this);
     }
@@ -136,11 +106,11 @@ abstract class ff extends te {
     final void c(byte param0) {
         int var3 = CrazyCrystals.field_B;
         if (param0 != -41) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
         l var2 = this.field_c;
         while (var2 != null) {
-            var2 = var2.b((byte) -90);
+          var2 = var2.b((byte) -90);
         }
     }
 

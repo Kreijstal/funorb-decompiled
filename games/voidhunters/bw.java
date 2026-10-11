@@ -10,7 +10,7 @@ final class bw {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 9502) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

@@ -10,9 +10,9 @@ final class tu {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 88) {
-            field_c = (char[]) null;
-            field_c = null;
-            return;
+          field_c = (char[]) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

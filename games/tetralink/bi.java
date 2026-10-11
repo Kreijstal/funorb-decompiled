@@ -10,24 +10,22 @@ final class bi {
     static int field_a;
 
     public static void a(int param0) {
-        if (param0 != 480) {
-          bi.a((byte) -77);
-          field_c = null;
-          field_d = null;
-          field_e = (int[][]) null;
-          return;
-        } else {
+        if (param0 == 480) {
           field_c = null;
           field_d = null;
           field_e = (int[][]) null;
           return;
         }
+        bi.a((byte) -77);
+        field_c = null;
+        field_d = null;
+        field_e = (int[][]) null;
     }
 
     final static uh a(byte param0) {
         if (param0 < 48) {
-            bi.a(-128);
-            return (uh) ((Object) new ef());
+          bi.a(-128);
+          return (uh) ((Object) new ef());
         }
         return (uh) ((Object) new ef());
     }

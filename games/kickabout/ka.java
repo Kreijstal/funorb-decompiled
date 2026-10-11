@@ -10,33 +10,33 @@ final class ka implements fg {
     final static void a(int param0, int param1, byte param2) {
         et.field_b = true;
         if (vl.a(false)) {
-            return;
+          return;
         }
         si.field_k = param1;
         ag.field_h = param0;
         if (param2 >= -68) {
-            return;
+          return;
         }
         fp.field_e = 2;
     }
 
     final static void a(int param0, String param1) {
         try {
-            vp.field_p = param1;
-            if (param0 != 2) {
-                ka.a(122, 101, (byte) 60);
-            }
+          vp.field_p = param1;
+          if (param0 != 2) {
+            ka.a(122, 101, (byte) 60);
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 19044) {
-            field_c = (hd) null;
-            field_d = null;
-            field_c = null;
-            return;
+          field_c = (hd) null;
+          field_d = null;
+          field_c = null;
+          return;
         }
         field_d = null;
         field_c = null;

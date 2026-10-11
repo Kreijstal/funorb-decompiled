@@ -12,58 +12,51 @@ final class gd extends kd {
     int field_n;
 
     final void c(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        if (param0 <= -17) {
-          fieldTemp$2 = this.field_h - 1;
-          this.field_h = this.field_h - 1;
-          if (tb.field_a.field_E > fieldTemp$2) {
-            this.b((byte) -123);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        int fieldTemp$0 = 0;
+        if (param0 > -17) {
           field_i = (td) null;
-          fieldTemp$3 = this.field_h - 1;
+          fieldTemp$0 = this.field_h - 1;
           this.field_h = this.field_h - 1;
-          if (tb.field_a.field_E <= fieldTemp$3) {
-            return;
-          } else {
+          if (tb.field_a.field_E > fieldTemp$0) {
             this.b((byte) -123);
             return;
           }
+          return;
         }
+        int fieldTemp$1 = this.field_h - 1;
+        this.field_h = this.field_h - 1;
+        if (tb.field_a.field_E <= fieldTemp$1) {
+          return;
+        }
+        this.b((byte) -123);
     }
 
     final void a(byte param0) {
         tb.field_a.a(this.field_k, this.field_n, this.field_h, 0, -1);
         if (param0 != -34) {
-            this.c((byte) -119);
+          this.c((byte) -119);
         }
     }
 
     final static boolean d(byte param0) {
         if (param0 != -53) {
-            gd.d((byte) 85);
-            return nh.field_a.b(-79);
+          gd.d((byte) 85);
+          return nh.field_a.b(-79);
         }
         return nh.field_a.b(-79);
     }
 
     public static void e(byte param0) {
-        if (param0 != -62) {
-          field_m = (wf) null;
-          field_j = null;
-          field_m = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == -62) {
           field_j = null;
           field_m = null;
           field_i = null;
           return;
         }
+        field_m = (wf) null;
+        field_j = null;
+        field_m = null;
+        field_i = null;
     }
 
     gd(int param0, int param1, int param2) {

@@ -9,7 +9,7 @@ final class ub extends RuntimeException {
 
     final static int a(int param0) {
         if (param0 != 255) {
-            return -99;
+          return -99;
         }
         return ri.field_a - bf.field_c;
     }
@@ -18,7 +18,7 @@ final class ub extends RuntimeException {
         field_b = null;
         field_d = null;
         if (!param0) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
@@ -34,30 +34,11 @@ final class ub extends RuntimeException {
         if (tm.field_b != null) {
           var1 = tm.field_b;
           synchronized (var1) {
-            L0: {
-              tm.field_b = null;
-              break L0;
-            }
+            tm.field_b = null;
           }
-          L1: {
-            if (param0 == 0) {
-              break L1;
-            } else {
-              ub.a(-12);
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (param0 == 0) {
-              break L2;
-            } else {
-              ub.a(-12);
-              break L2;
-            }
-          }
-          return;
+        }
+        if (param0 != 0) {
+          ub.a(-12);
         }
     }
 
@@ -65,7 +46,7 @@ final class ub extends RuntimeException {
         int var0 = 0;
         field_d = new tp[255];
         for (var0 = 0; field_d.length > var0; var0++) {
-            field_d[var0] = new tp();
+          field_d[var0] = new tp();
         }
     }
 }

@@ -18,47 +18,28 @@ public class nc {
         field_e = param2;
         field_d = param0;
         try {
-          L0: {
-            field_c = System.getProperty("user.home");
-            if (null != field_c) {
-              field_c = field_c + "/";
-              break L0;
-            } else {
-              L1: {
-                if (null == field_c) {
-                  field_c = "~/";
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var3 = 97 / ((param1 - 69) / 46);
-              field_b = true;
-              return;
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
+          field_c = System.getProperty("user.home");
+          if (null == field_c) {
             if (null == field_c) {
               field_c = "~/";
-              break L2;
-            } else {
-              break L2;
             }
+            var3 = 97 / ((param1 - 69) / 46);
+            field_b = true;
+            return;
+          }
+          field_c = field_c + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref_Exception = (Exception) (Object) decompiledCaughtException;
+          if (null == field_c) {
+            field_c = "~/";
           }
           var3 = 97 / ((param1 - 69) / 46);
           field_b = true;
           return;
         }
-        L3: {
-          if (null == field_c) {
-            field_c = "~/";
-            break L3;
-          } else {
-            break L3;
-          }
+        if (null == field_c) {
+          field_c = "~/";
         }
         var3 = 97 / ((param1 - 69) / 46);
         field_b = true;
@@ -70,7 +51,7 @@ public class nc {
 
     public static File a(int param0, String param1) {
         if (param0 != 0) {
-            return (File) null;
+          return (File) null;
         }
         return nc.a(param1, field_d, field_e, -6665);
     }

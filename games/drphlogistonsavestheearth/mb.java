@@ -10,8 +10,8 @@ final class mb implements com.ms.directX.IEnumModesCallback {
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 != 7537) {
-            java.awt.Frame var4 = (java.awt.Frame) null;
-            this.a(-77, (java.awt.Frame) null);
+          java.awt.Frame var4 = (java.awt.Frame) null;
+          this.a(-77, (java.awt.Frame) null);
         }
     }
 
@@ -46,20 +46,20 @@ final class mb implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_b) {
-            field_c = field_c + 4;
+          field_c = field_c + 4;
         } else {
-            fieldTemp$0 = field_c;
-            field_c = field_c + 1;
-            field_b[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_c;
-            field_c = field_c + 1;
-            field_b[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_c;
-            field_c = field_c + 1;
-            field_b[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_c;
-            field_c = field_c + 1;
-            field_b[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_c;
+          field_c = field_c + 1;
+          field_b[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_c;
+          field_c = field_c + 1;
+          field_b[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_c;
+          field_c = field_c + 1;
+          field_b[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_c;
+          field_c = field_c + 1;
+          field_b[fieldTemp$3] = param0.refreshRate;
         }
     }
 

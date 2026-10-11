@@ -13,7 +13,7 @@ final class ka extends l {
 
     final static void a(int param0) {
         if (!oi.field_d) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         pg.field_h = true;
         j.a(false, -125);
@@ -21,144 +21,84 @@ final class ka extends l {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+        int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var14 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param1 <= param6) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param6 - -1 >= param3) {
-                decompiledRegionSelector0 = 1;
-                break L0;
+          if (param1 <= param6) {
+            return;
+          }
+          if (param6 + 1 >= param3) {
+            return;
+          }
+          if (5 + param6 < param3 &&
+            param4 != param0) {
+            var7_int = (1 & (param4 & param0)) + ((param4 >> 1) + (param0 >> 1));
+            var8 = param6;
+            var9 = param0;
+            var10 = param4;
+            for (var11 = param6; var11 < param3; var11++) {
+              var12 = lk.field_Tb[var11];
+              if (!param2) {
+                stackIn_24_0 = vl.field_i[var12];
               } else {
-                L1: {
-                  if (5 + param6 >= param3) {
-                    break L1;
-                  } else {
-                    if (param4 == param0) {
-                      break L1;
-                    } else {
-                      var7_int = (1 & (param4 & param0)) + ((param4 >> 1074050177) + (param0 >> 1894736513));
-                      var8 = param6;
-                      var9 = param0;
-                      var10 = param4;
-                      var11 = param6;
-                      L2: while (true) {
-                        if (var11 >= param3) {
-                          ka.a(param0, param1, param2, var8, var9, param5 + param5, param6);
-                          ka.a(var10, param1, param2, param3, param4, 0, var8);
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          L3: {
-                            var12 = lk.field_Tb[var11];
-                            if (!param2) {
-                              stackIn_24_0 = vl.field_i[var12];
-                              break L3;
-                            } else {
-                              stackIn_24_0 = wh.field_c[var12];
-                              break L3;
-                            }
-                          }
-                          L4: {
-                            var13 = stackIn_24_0;
-                            if (var7_int < var13) {
-                              lk.field_Tb[var11] = lk.field_Tb[var8];
-                              incrementValue$0 = var8;
-                              var8++;
-                              lk.field_Tb[incrementValue$0] = var12;
-                              if (var13 < var9) {
-                                var9 = var13;
-                                break L4;
-                              } else {
-                                break L4;
-                              }
-                            } else {
-                              if (var13 > var10) {
-                                var10 = var13;
-                                break L4;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          var11++;
-                          continue L2;
-                        }
-                      }
-                    }
-                  }
+                stackIn_24_0 = wh.field_c[var12];
+              }
+              var13 = stackIn_24_0;
+              if (var7_int < var13) {
+                lk.field_Tb[var11] = lk.field_Tb[var8];
+                incrementValue$0 = var8;
+                var8++;
+                lk.field_Tb[incrementValue$0] = var12;
+                if (var13 < var9) {
+                  var9 = var13;
                 }
-                var7_int = -1 + param3;
-                L5: while (true) {
-                  if (param6 >= var7_int) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var8 = param6;
-                    L6: while (true) {
-                      if (var8 >= var7_int) {
-                        var7_int--;
-                        continue L5;
-                      } else {
-                        L7: {
-                          var9 = lk.field_Tb[var8];
-                          var10 = lk.field_Tb[1 + var8];
-                          if (!bd.a(param5 ^ 3005, param2, var9, var10)) {
-                            break L7;
-                          } else {
-                            lk.field_Tb[var8] = var10;
-                            lk.field_Tb[1 + var8] = var9;
-                            break L7;
-                          }
-                        }
-                        var8++;
-                        continue L6;
-                      }
-                    }
-                  }
+              } else {
+                if (var13 > var10) {
+                  var10 = var13;
                 }
               }
             }
+            ka.a(param0, param1, param2, var8, var9, param5 + param5, param6);
+            ka.a(var10, param1, param2, param3, param4, 0, var8);
+            return;
           }
+          for (var7_intLifetime1 = -1 + param3; param6 < var7_intLifetime1; var7_intLifetime1--) {
+            for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
+              var9Lifetime1 = lk.field_Tb[var8Lifetime1];
+              var10Lifetime1 = lk.field_Tb[1 + var8Lifetime1];
+              if (bd.a(param5 ^ 3005, param2, var9Lifetime1, var10Lifetime1)) {
+                lk.field_Tb[var8Lifetime1] = var10Lifetime1;
+                lk.field_Tb[1 + var8Lifetime1] = var9Lifetime1;
+              }
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           throw kg.a((Throwable) ((Object) var7), "ka.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
     final static void a(boolean param0, byte param1) {
         gb.field_H = new jf(bc.field_c);
         if (param1 != 87) {
-            return;
+          return;
         }
         ln.field_g = -1;
         gb.field_H.field_d = gb.field_H.field_d | param0;

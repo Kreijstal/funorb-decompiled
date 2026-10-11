@@ -10,23 +10,24 @@ final class jj {
     final static void b(int param0) {
         int var1_int = 0;
         int var2 = wizardrun.field_H;
+        int var1_intLifetime1;
         try {
-            pe.field_y.a(5);
-            for (var1_int = 0; var1_int < 32; var1_int++) {
-                pc.field_k[var1_int] = 0L;
-            }
-            for (var1_int = 0; (var1_int ^ -1) > -33; var1_int++) {
-                ql.field_b[var1_int] = 0L;
-            }
-            uh.field_c = param0;
+          pe.field_y.a(5);
+          for (var1_int = 0; var1_int < 32; var1_int++) {
+            pc.field_k[var1_int] = 0L;
+          }
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+            ql.field_b[var1_intLifetime1] = 0L;
+          }
+          uh.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ')');
         }
     }
 
     final static String a(boolean param0) {
         if (!param0) {
-            return (String) null;
+          return (String) null;
         }
         return dh.field_c;
     }
@@ -34,7 +35,7 @@ final class jj {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;

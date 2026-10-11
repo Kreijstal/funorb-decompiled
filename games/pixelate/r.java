@@ -10,7 +10,7 @@ final class r {
         int var3 = -76 % ((param0 - 21) / 44);
         int var1 = qh.field_c * qh.field_c;
         int var2 = -(oh.field_b * oh.field_b) + var1;
-        int var4 = var2 * (qo.field_o + -wa.field_i) / var1 + wa.field_i;
+        int var4 = var2 * (qo.field_o - wa.field_i) / var1 + wa.field_i;
         ui.field_i.a(var4, 120, ho.field_c, 256, 640);
         jp.a(-24 + qo.field_o, (byte) 116, 640, hd.field_q, 5, 0, v.field_c);
     }
@@ -18,44 +18,31 @@ final class r {
     final static void a(int param0, int param1, boolean param2, int param3) {
         int var4;
         jh.field_O.b(param1, param0);
-        if (param3 == -40) {
-          if (param2) {
-            L0: {
-              var4 = qk.field_e % jh.field_O.field_F * 2;
-              if (jh.field_O.field_F <= var4) {
-                var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (10 > var4) {
-              var4 = 10;
-              uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-              return;
-            } else {
-              if (-40 + jh.field_O.field_F < var4) {
-                var4 = jh.field_O.field_F - 40;
-                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-                return;
-              } else {
-                uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
-                return;
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param3 != -40) {
           return;
         }
+        if (!param2) {
+          return;
+        }
+        var4 = qk.field_e % jh.field_O.field_F * 2;
+        if (jh.field_O.field_F <= var4) {
+          var4 = jh.field_O.field_F + (-var4 + jh.field_O.field_F);
+        }
+        if (10 > var4) {
+          var4 = 10;
+        } else {
+          if (-40 + jh.field_O.field_F < var4) {
+            var4 = jh.field_O.field_F - 40;
+          }
+        }
+        uf.a(0, 80, 30, jh.field_O, param1, 0, var4, param0, (byte) -113);
     }
 
     public static void a(int param0) {
         if (param0 != -31558) {
-            r.a(48);
-            field_b = null;
-            return;
+          r.a(48);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

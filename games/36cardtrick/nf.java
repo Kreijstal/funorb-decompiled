@@ -10,32 +10,32 @@ final class nf {
     final static void a(boolean param0, byte param1, boolean param2) {
         mb.a((String) null, param1 ^ -1026, param0, param2);
         if (param1 != -2) {
-            field_d = (de) null;
+          field_d = (de) null;
         }
     }
 
     final static void a(pb param0, boolean param1, int param2, int param3, int param4) {
         try {
-            param0.b(-9469, 12);
-            param0.e(17, 26040);
-            if (param1) {
-                field_d = (de) null;
-            }
-            param0.e(param3, 26040);
-            param0.e(param2, 26040);
-            param0.b(-9469, param4);
+          param0.b(-9469, 12);
+          param0.e(17, 26040);
+          if (param1) {
+            field_d = (de) null;
+          }
+          param0.e(param3, 26040);
+          param0.e(param2, 26040);
+          param0.b(-9469, param4);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "nf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "nf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 != 17) {
-            field_c = -8;
-            field_a = null;
-            field_b = null;
-            return;
+          field_c = -8;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

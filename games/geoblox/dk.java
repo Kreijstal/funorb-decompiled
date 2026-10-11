@@ -28,9 +28,9 @@ abstract class dk {
     }
 
     final int a(int param0) {
+        int var4 = 0;
         int var2;
         lk[] var3;
-        int var4;
         lk var5;
         int var7;
         int var6;
@@ -41,20 +41,14 @@ abstract class dk {
         }
         if (null != this.field_a) {
           var3 = this.field_a;
-          var4 = 0;
-          while (var3.length > var4) {
+          for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5 == null) {
-              var4++;
-              continue;
+            if (var5 != null) {
+              var6 = var5.a(0);
+              if (var6 > var2) {
+                var2 = var6;
+              }
             }
-            var6 = var5.a(0);
-            if (var6 <= var2) {
-              var4++;
-              continue;
-            }
-            var2 = var6;
-            var4++;
           }
         }
         return var2;
@@ -149,14 +143,13 @@ abstract class dk {
             }
             if (null != je.field_h) {
               for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
-                if (null == je.field_h[var1_int]) {
-                  continue;
-                }
-                try {
-                  je.field_h[var1_int].b(27034);
-                } catch (java.io.IOException decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  var2 = (IOException) (Object) decompiledCaughtException;
+                if (null != je.field_h[var1_int]) {
+                  try {
+                    je.field_h[var1_int].b(27034);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
                 }
               }
               return;

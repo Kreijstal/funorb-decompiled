@@ -10,13 +10,13 @@ abstract class ib {
     static String field_e;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var8 = 0;
+        int var10 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -29,81 +29,42 @@ abstract class ib {
         int var20 = 0;
         var20 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if ((param3 ^ -1) > -1) {
-                param4 = param4 + param3;
-                param3 = 0;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (0 <= param0) {
-                break L2;
-              } else {
-                param2 = param2 + param0;
-                param0 = 0;
-                break L2;
-              }
-            }
-            L3: {
-              if (param0 - -param2 > gf.field_k) {
-                param2 = gf.field_k - param0;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (param5 == 24074) {
-                break L4;
-              } else {
-                field_d = (String) null;
-                break L4;
-              }
-            }
-            L5: {
-              if (param3 + param4 > gf.field_b) {
-                param4 = -param3 + gf.field_b;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            var6_int = -param1 + 256;
-            var7 = param0 - -param2;
-            var8 = param0;
-            L6: while (true) {
-              if (var8 >= var7) {
-                break L0;
-              } else {
-                var9 = param3 + var8 * gf.field_b;
-                var10 = param4;
-                L7: while (true) {
-                  if (-1 <= (var10 ^ -1)) {
-                    var8++;
-                    continue L6;
-                  } else {
-                    var11 = gf.field_h[var9];
-                    var12 = (var11 & 16711680) >> 1316848656;
-                    var13 = (var11 & 65280) >> -253573112;
-                    var14 = var11 & 255;
-                    var15 = 5 * var12 - (-(var13 * 6) + -(5 * var14));
-                    var16 = (param1 * var12 >> -1920208216) - -(var15 * var6_int >> -1202636692);
-                    var17 = (var6_int * var15 >> -1694004020) + (param1 * var13 >> -1038161432);
-                    var18 = (param1 * var14 >> 1598247144) - -(var15 * var6_int >> -1069223028);
-                    var19 = var16 << -503157520 | var17 << 1165323560 | var18;
-                    gf.field_h[var9] = var19;
-                    var9++;
-                    var10--;
-                    continue L7;
-                  }
-                }
-              }
+          if (param3 < 0) {
+            param4 = param4 + param3;
+            param3 = 0;
+          }
+          if (0 > param0) {
+            param2 = param2 + param0;
+            param0 = 0;
+          }
+          if (param0 + param2 > gf.field_k) {
+            param2 = gf.field_k - param0;
+          }
+          if (param5 != 24074) {
+            field_d = (String) null;
+          }
+          if (param3 + param4 > gf.field_b) {
+            param4 = -param3 + gf.field_b;
+          }
+          var6_int = -param1 + 256;
+          var7 = param0 + param2;
+          for (var8 = param0; var8 < var7; var8++) {
+            var9 = param3 + var8 * gf.field_b;
+            for (var10 = param4; var10 > 0; var10--) {
+              var11 = gf.field_h[var9];
+              var12 = (var11 & 16711680) >> 16;
+              var13 = (var11 & 65280) >> 8;
+              var14 = var11 & 255;
+              var15 = 5 * var12 - (-(var13 * 6) - 5 * var14);
+              var16 = (param1 * var12 >> 8) + (var15 * var6_int >> 12);
+              var17 = (var6_int * var15 >> 12) + (param1 * var13 >> 8);
+              var18 = (param1 * var14 >> 8) + (var15 * var6_int >> 12);
+              var19 = var16 << 16 | var17 << 8 | var18;
+              gf.field_h[var9] = var19;
+              var9++;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

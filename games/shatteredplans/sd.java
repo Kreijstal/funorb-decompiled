@@ -16,55 +16,54 @@ class sd extends df {
 
     void a(int param0, ln param1) {
         if (param0 != -21771) {
-            return;
+          return;
         }
         try {
-            this.field_s.a((byte) -113, param1);
+          this.field_s.a((byte) -113, param1);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     ln h(int param0) {
-        if (param0 != -23410) {
-          this.e(126);
-          return (ln) ((Object) this.field_s.a((byte) -71));
-        } else {
-          return (ln) ((Object) this.field_s.a((byte) -71));
+        if (param0 == -23410) {
+          return (ln) (this.field_s.a((byte) -71));
         }
+        this.e(126);
+        return (ln) (this.field_s.a((byte) -71));
     }
 
     ln i(int param0) {
         if (param0 > -16) {
-            return (ln) null;
+          return (ln) null;
         }
-        return (ln) ((Object) this.field_s.h(43));
+        return (ln) (this.field_s.h(43));
     }
 
     public static void f(int param0) {
         field_y = null;
         if (param0 != -28714) {
-            return;
+          return;
         }
         field_t = null;
     }
 
     boolean e(int param0) {
         if (param0 != 27650) {
-            this.field_u = (int[]) null;
-            return this.field_s.g(27);
+          this.field_u = (int[]) null;
+          return this.field_s.g(27);
         }
         return this.field_s.g(27);
     }
 
     void a(pf param0, int param1) {
         try {
-            this.field_s = param0;
-            if (param1 != -9332) {
-                this.i(-14);
-            }
+          this.field_s = param0;
+          if (param1 != -9332) {
+            this.i(-14);
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -74,21 +73,20 @@ class sd extends df {
     }
 
     ln j(int param0) {
-        if (param0 != 18229) {
-          this.g(-119);
-          return (ln) ((Object) this.field_s.d(0));
-        } else {
-          return (ln) ((Object) this.field_s.d(0));
+        if (param0 == 18229) {
+          return (ln) (this.field_s.d(0));
         }
+        this.g(-119);
+        return (ln) (this.field_s.d(0));
     }
 
     sd(fs param0, ln param1) {
         try {
-            this.field_q = param1;
-            this.field_o = param0;
-            this.field_s = new pf();
+          this.field_q = param1;
+          this.field_o = param0;
+          this.field_s = new pf();
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

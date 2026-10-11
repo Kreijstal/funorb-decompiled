@@ -11,7 +11,7 @@ abstract class ue {
 
     final static dl[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 9) {
-            return (dl[]) null;
+          return (dl[]) null;
         }
         dl[] var6 = new dl[9];
         dl[] var5 = var6;
@@ -25,8 +25,8 @@ abstract class ue {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (!(param3 == 0)) {
-            var6[4] = mc.a(64, -55, param3);
+        if (param3 != 0) {
+          var6[4] = mc.a(64, -55, param3);
         }
         return var5;
     }
@@ -42,26 +42,15 @@ abstract class ue {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              var4 = (sc) ((Object) hd.field_c.g(32073));
-              if (param1 <= -81) {
-                break L1;
-              } else {
-                ue.a(106, 48);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var4 == null) {
-                break L0;
-              } else {
-                ed.a((byte) 105, param0, var4);
-                var4 = (sc) ((Object) hd.field_c.a(false));
-                continue L2;
-              }
-            }
+          var4 = (sc) (hd.field_c.g(32073));
+          if (param1 > -81) {
+            ue.a(106, 48);
           }
+          while (var4 != null) {
+            ed.a((byte) 105, param0, var4);
+            var4 = (sc) (hd.field_c.a(false));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -73,141 +62,92 @@ abstract class ue {
         int var2 = 0;
         int var3 = CrazyCrystals.field_B;
         if (param0 != 8) {
-            return;
+          return;
         }
         for (var2 = 0; var2 < this.field_d.length; var2++) {
-            this.field_d[var2].a(this.field_b.field_c == var2 ? true : false, this.field_b.field_c != var2 ? 12640511 : 16777215, 1);
+          this.field_d[var2].a(this.field_b.field_c == var2 ? true : false, this.field_b.field_c != var2 ? 12640511 : 16777215, 1);
         }
     }
 
     final static void b(byte param0) {
-        int var1 = -92 / ((param0 - -58) / 41);
+        int var1 = -92 / ((param0 + 58) / 41);
         no.e((byte) -23);
         if (null != jd.field_D) {
-            fq.a(-65, jd.field_D);
+          fq.a(-65, jd.field_D);
         }
         vf.a(-1);
         ub.b(0);
         ug.a((byte) -127);
-        if (!(!b.b(0))) {
-            tp.field_f.d(8, 1);
-            ak.a(0, (byte) -48);
+        if (b.b(0)) {
+          tp.field_f.d(8, 1);
+          ak.a(0, (byte) -48);
         }
         jj.a(4);
     }
 
     final void a(boolean param0, int param1) {
+        int var4 = 0;
         int var3;
-        int var4;
         int var5;
-        L0: {
-          var5 = CrazyCrystals.field_B;
-          var3 = -1;
-          if (param1 == -13880) {
-            break L0;
-          } else {
-            ue.a(-19, 34, 105);
-            break L0;
+        var5 = CrazyCrystals.field_B;
+        var3 = -1;
+        if (param1 != -13880) {
+          ue.a(-19, 34, 105);
+        }
+        for (var4 = 0; this.field_d.length > var4; var4++) {
+          if (null != this.field_d[var4] &&
+            this.field_d[var4].b(0)) {
+            var3 = var4;
           }
         }
-        var4 = 0;
-        L1: while (true) {
-          if (this.field_d.length <= var4) {
-            this.field_b.a(param1 ^ 13879, param0, var3);
-            return;
-          } else {
-            if (null != this.field_d[var4]) {
-              if (this.field_d[var4].b(0)) {
-                var3 = var4;
-                var4++;
-                continue L1;
-              } else {
-                var4++;
-                continue L1;
-              }
-            } else {
-              var4++;
-              continue L1;
-            }
-          }
-        }
+        this.field_b.a(param1 ^ 13879, param0, var3);
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = -1 + param0 & param1 >> 94991391;
+        int var3 = -1 + param0 & param1 >> 31;
         int var4 = 54 / ((param2 - 42) / 39);
-        return ((param1 >>> 1256634879) + param1) % param0 + var3;
+        return ((param1 >>> 31) + param1) % param0 + var3;
     }
 
     final void a(byte param0) {
+        int var5 = 0;
         int var2;
         int var3;
         int var4;
-        int var5;
         int var6;
         var6 = CrazyCrystals.field_B;
         var2 = -1;
         var3 = -1;
-        var4 = 55 / ((param0 - -10) / 48);
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= this.field_d.length) {
-            this.field_b.a(0, var3, var2);
-            if (!this.a(121)) {
-              return;
-            } else {
-              return;
+        var4 = 55 / ((param0 + 10) / 48);
+        for (var5 = 0; var5 < this.field_d.length; var5++) {
+          if (null != this.field_d[var5]) {
+            if (this.field_d[var5].b(0)) {
+              var2 = var5;
             }
-          } else {
-            if (null != this.field_d[var5]) {
-              L1: {
-                if (!this.field_d[var5].b(0)) {
-                  break L1;
-                } else {
-                  var2 = var5;
-                  break L1;
-                }
-              }
-              if (this.field_d[var5].a(-94)) {
-                var3 = var5;
-                var5++;
-                continue L0;
-              } else {
-                var5++;
-                continue L0;
-              }
-            } else {
-              var5++;
-              continue L0;
+            if (this.field_d[var5].a(-94)) {
+              var3 = var5;
             }
           }
+        }
+        this.field_b.a(0, var3, var2);
+        if (!this.a(121)) {
         }
     }
 
     void a(boolean param0) {
         int var3;
         var3 = CrazyCrystals.field_B;
-        L0: while (true) {
+        do {
           if (!ge.b(-120)) {
-            L1: {
-              this.a((byte) 62);
-              if (!param0) {
-                break L1;
-              } else {
-                this.field_d = (ik[]) null;
-                break L1;
-              }
+            this.a((byte) 62);
+            if (param0) {
+              this.field_d = (ik[]) null;
             }
             return;
-          } else {
-            this.field_b.f(0);
-            if (!this.a(107)) {
-              continue L0;
-            } else {
-              return;
-            }
           }
-        }
+          this.field_b.f(0);
+        } while (!this.a(107));
+        return;
     }
 
     static {

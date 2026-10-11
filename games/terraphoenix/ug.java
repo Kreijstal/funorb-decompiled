@@ -11,7 +11,7 @@ final class ug {
         field_a = null;
         field_c = (byte[][]) null;
         if (param0 != -11978) {
-            field_a = (String[]) null;
+          field_a = (String[]) null;
         }
     }
 

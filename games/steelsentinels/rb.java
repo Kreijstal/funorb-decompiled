@@ -16,20 +16,17 @@ final class rb {
     static int field_f;
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 == 2048) {
-          if (param0 >= param2) {
-            return df.a(-3720, (param2 << -1458335632) / param0);
-          } else {
-            return 2048 - df.a(-3720, (param0 << -969794512) / param2);
-          }
-        } else {
+        if (param1 != 2048) {
           rb.a(-3, -22, 110);
-          if (param0 >= param2) {
-            return df.a(-3720, (param2 << -1458335632) / param0);
-          } else {
-            return 2048 - df.a(-3720, (param0 << -969794512) / param2);
+          if (param0 < param2) {
+            return 2048 - df.a(-3720, (param0 << 16) / param2);
           }
+          return df.a(-3720, (param2 << 16) / param0);
         }
+        if (param0 < param2) {
+          return 2048 - df.a(-3720, (param0 << 16) / param2);
+        }
+        return df.a(-3720, (param2 << 16) / param0);
     }
 
     public static void a(byte param0) {
@@ -40,7 +37,7 @@ final class rb {
         field_b = null;
         field_g = null;
         if (param0 != -82) {
-            rb.a((byte) -125);
+          rb.a((byte) -125);
         }
     }
 

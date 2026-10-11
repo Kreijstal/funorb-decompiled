@@ -9,42 +9,39 @@ abstract class dj extends qt {
 
     final void h(byte param0) {
         if (param0 > -76) {
-            this.field_C = 32;
+          this.field_C = 32;
         }
         this.field_C = this.field_C - 1;
-        if (!(this.field_C >= 0)) {
-            this.field_C = 0;
+        if (this.field_C < 0) {
+          this.field_C = 0;
         }
         kj.a((byte) -103);
     }
 
     final boolean a(int param0, byte param1) {
-        if (this.field_i[param0].field_m == 21) {
-            if (!this.g((byte) -122)) {
-                return false;
-            }
+        if (this.field_i[param0].field_m == 21 &&
+          !this.g((byte) -122)) {
+          return false;
         }
         if (param1 != -95) {
-            return true;
+          return true;
         }
-        if ((this.field_i[param0].field_m ^ -1) == -23) {
-            if (!this.b(false)) {
-                return false;
-            }
+        if (this.field_i[param0].field_m == 22 &&
+          !this.b(false)) {
+          return false;
         }
         return super.a(param0, (byte) -95);
     }
 
     boolean a(int param0, int param1, char param2) {
         this.field_x.a(1, true);
-        if (this.field_x.field_e >= 0) {
-            if (!(!this.field_x.c(-1))) {
-                this.field_i[this.field_x.field_e].a(-1, false);
-                return true;
-            }
+        if (this.field_x.field_e >= 0 &&
+          this.field_x.c(-1)) {
+          this.field_i[this.field_x.field_e].a(-1, false);
+          return true;
         }
         if (param1 >= -5) {
-            field_D = (hd) null;
+          field_D = (hd) null;
         }
         return super.a(param0, -53, param2);
     }
@@ -54,22 +51,26 @@ abstract class dj extends qt {
         int var4_int = 0;
         int var5_int = 0;
         int var6 = 0;
+        int var3_intLifetime1;
+        int var4_intLifetime1;
+        int var5_intLifetime1;
+        int var6Lifetime1;
         super.a(param0, param1);
-        if (!(this.g((byte) -120))) {
-            var3_int = this.field_i[0].field_d;
-            var4_int = this.field_i[0].field_h;
-            var5_int = this.b(0, -22667) + (this.field_j + -(var3_int >> -1522629823));
-            var6 = this.a(-124, 0) - (var4_int >> 758989121);
-            on.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
-            eo.field_r[0][3].c(var5_int, var6);
+        if (!this.g((byte) -120)) {
+          var3_int = this.field_i[0].field_d;
+          var4_int = this.field_i[0].field_h;
+          var5_int = this.b(0, -22667) + (this.field_j - (var3_int >> 1));
+          var6 = this.a(-124, 0) - (var4_int >> 1);
+          on.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
+          eo.field_r[0][3].c(var5_int, var6);
         }
-        if (!(this.b(false))) {
-            var3_int = this.field_i[2].field_d;
-            var4_int = this.field_i[2].field_h;
-            var5_int = -(var3_int >> 1468389729) + (this.b(2, param0 ^ 22670) - -this.field_j);
-            var6 = -(var4_int >> 1779281729) + this.a(101, 2);
-            on.a(-4 + var5_int, -4 + var6, 8 + var3_int, var4_int - -8, 10, 0, 128);
-            eo.field_c[0][3].c(var5_int, var6);
+        if (!this.b(false)) {
+          var3_intLifetime1 = this.field_i[2].field_d;
+          var4_intLifetime1 = this.field_i[2].field_h;
+          var5_intLifetime1 = -(var3_intLifetime1 >> 1) + (this.b(2, param0 ^ 22670) + this.field_j);
+          var6Lifetime1 = -(var4_intLifetime1 >> 1) + this.a(101, 2);
+          on.a(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
+          eo.field_c[0][3].c(var5_intLifetime1, var6Lifetime1);
         }
         on.a(this.field_j + 15, 60, 610, 355, 10, 0, 128);
         String[] var7 = this.a(true);
@@ -77,102 +78,74 @@ abstract class dj extends qt {
         String var4 = var7[this.field_C].toUpperCase();
         on.a(this.field_j + 40, 76, 560, 36, 10, 65793, 140);
         un.field_d.d(var4, this.field_j + 320, 101, 16777215, -1);
-        String var5 = this.field_C - -1 + " / " + var7.length;
-        un.field_d.c(var5, 580 - -this.field_j, 101, 16777215, -1);
+        String var5 = this.field_C + 1 + " / " + var7.length;
+        un.field_d.c(var5, 580 + this.field_j, 101, 16777215, -1);
     }
 
     final static StringBuilder a(int param0, char param1, int param2, StringBuilder param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              var4_int = param3.length();
-              param3.setLength(param0);
-              if (param2 == -11407) {
-                break L1;
-              } else {
-                field_B = (String) null;
-                break L1;
-              }
-            }
-            var5 = var4_int;
-            L2: while (true) {
-              if (var5 >= param0) {
-                stackIn_7_0 = (StringBuilder) (param3);
-                break L0;
-              } else {
-                param3.setCharAt(var5, param1);
-                var5++;
-                continue L2;
-              }
-            }
+          var4_int = param3.length();
+          param3.setLength(param0);
+          if (param2 != -11407) {
+            field_B = (String) null;
           }
+          for (var5 = var4_int; var5 < param0; var5++) {
+            param3.setCharAt(var5, param1);
+          }
+          stackIn_7_0 = (StringBuilder) (param3);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("dj.GA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("dj.GA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     void a(byte param0, boolean param1) {
         super.a((byte) 98, param1);
         int var3 = -34 / ((param0 - 38) / 60);
-        if (this.field_x.field_e == 0) {
-            if (!this.g((byte) -93)) {
-                this.field_x.a((byte) 68, 1);
-            }
+        if (this.field_x.field_e == 0 &&
+          !this.g((byte) -93)) {
+          this.field_x.a((byte) 68, 1);
         }
-        if ((this.field_x.field_e ^ -1) == -3) {
-            if (!(this.b(false))) {
-                this.field_x.a((byte) 68, 1);
-            }
+        if (this.field_x.field_e == 2 &&
+          !this.b(false)) {
+          this.field_x.a((byte) 68, 1);
         }
     }
 
     private final String[] a(boolean param0) {
         if (this.field_c == 19) {
-            return iq.field_a;
+          return iq.field_a;
         }
-        if (!(20 != this.field_c)) {
-            return uv.field_d;
+        if (20 == this.field_c) {
+          return uv.field_d;
         }
         if (!param0) {
-            return (String[]) null;
+          return (String[]) null;
         }
         if (this.field_c == 21) {
-            return ue.field_g;
+          return ue.field_g;
         }
-        if (!((this.field_c ^ -1) != -23)) {
-            return pt.field_l;
+        if (this.field_c == 22) {
+          return pt.field_l;
         }
         return null;
     }
@@ -180,12 +153,12 @@ abstract class dj extends qt {
     final void f(int param0) {
         this.field_C = this.field_C + 1;
         int var2 = this.a(true).length;
-        if (!(this.field_C < var2)) {
-            this.field_C = var2 + -1;
+        if (this.field_C >= var2) {
+          this.field_C = var2 - 1;
         }
         kj.a((byte) 58);
         if (param0 != 21) {
-            this.field_C = 21;
+          this.field_C = 21;
         }
     }
 
@@ -195,11 +168,11 @@ abstract class dj extends qt {
     }
 
     private final boolean b(boolean param0) {
-        if (!(this.field_C != -1 + this.a(true).length)) {
-            return false;
+        if (this.field_C == -1 + this.a(true).length) {
+          return false;
         }
         if (param0) {
-            this.a((byte) -54, true);
+          this.a((byte) -54, true);
         }
         return true;
     }
@@ -207,26 +180,26 @@ abstract class dj extends qt {
     final int b(int param0, int param1) {
         boolean discarded$0 = false;
         if (param1 != -22667) {
-            discarded$0 = this.g((byte) 91);
+          discarded$0 = this.g((byte) 91);
         }
-        return 320 - -(70 * (-1 + param0));
+        return 320 + 70 * (-1 + param0);
     }
 
     public static void e(int param0) {
         field_B = null;
         field_D = null;
         if (param0 != -29104) {
-            StringBuilder var2 = (StringBuilder) null;
-            dj.a(40, 'ﾄ', 84, (StringBuilder) null);
+          StringBuilder var2 = (StringBuilder) null;
+          dj.a(40, 'ﾄ', 84, (StringBuilder) null);
         }
     }
 
     private final boolean g(byte param0) {
         if (param0 > -70) {
-            this.field_C = -4;
+          this.field_C = -4;
         }
         if (0 == this.field_C) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -235,7 +208,7 @@ abstract class dj extends qt {
     }
 
     final int a(int param0, int param1) {
-        int var3 = -127 / ((param0 - -49) / 52);
+        int var3 = -127 / ((param0 + 49) / 52);
         return 457;
     }
 

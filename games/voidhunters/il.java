@@ -12,69 +12,42 @@ final class il extends le {
         int var5 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var4_int = param0;
-              if (0 != var4_int) {
-                if ((var4_int ^ -1) != -2) {
-                  if (-3 == (var4_int ^ -1)) {
-                    this.field_j = param2.e(1869);
-                    break L1;
-                  } else {
-                    if ((var4_int ^ -1) != -4) {
-                      break L1;
-                    } else {
-                      this.field_i = param2.e(1869);
-                      break L1;
-                    }
-                  }
-                } else {
-                  this.field_k = param2.e(1869);
-                  break L1;
+          var4_int = param0;
+          if (0 != var4_int) {
+            if (var4_int != 1) {
+              if (var4_int == 2) {
+                this.field_j = param2.e(1869);
+              } else {
+                if (var4_int == 3) {
+                  this.field_i = param2.e(1869);
                 }
-              } else {
-                this.field_l = param2.e(1869);
-                break L1;
               }
+            } else {
+              this.field_k = param2.e(1869);
             }
-            L2: {
-              if (param1 <= -60) {
-                break L2;
-              } else {
-                this.a(-126, false);
-                break L2;
-              }
-            }
-            break L0;
+          } else {
+            this.field_l = param2.e(1869);
           }
+          if (param1 > -60) {
+            this.a(-126, false);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4);
-
-            stackIn_17_1 = new StringBuilder().append("il.F(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L3;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("il.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -107,129 +80,99 @@ final class il extends le {
         int stackIn_20_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
+        int var20Lifetime1;
+        int var21Lifetime1;
+        int var22Lifetime1;
+        int var23Lifetime1;
+        int var24Lifetime1;
         var25 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              dda.a(param3, 74);
-              var7_int = 0;
-              var8 = param3 + -param6;
-              if ((var8 ^ -1) > -1) {
-                var8 = 0;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var9 = param3;
-              var10 = -param3;
-              var11 = var8;
-              var12 = -var8;
-              var13 = -1;
-              var14 = -1;
-              var33 = rba.field_b[param5];
-              var26 = var33;
-              var15 = var26;
-              var16 = -var8 + param4;
-              ww.a(param1, var16, var15, (byte) 75, param4 + -param3);
-              var17 = param4 + var8;
-              ww.a(param0, var17, var33, (byte) 75, var16);
-              if (param2 <= 0) {
-                break L2;
-              } else {
-                il.a(-21, -8, (byte) 1, -122, 112, 81, 20);
-                break L2;
-              }
-            }
-            ww.a(param1, param3 + param4, var33, (byte) 75, var17);
-            L3: while (true) {
-              if (var9 <= var7_int) {
-                break L0;
-              } else {
-                L4: {
-                  var14 += 2;
-                  var13 += 2;
-                  var10 = var10 + var13;
-                  var12 = var12 + var14;
-                  if ((var12 ^ -1) > -1) {
-                    break L4;
-                  } else {
-                    if (1 <= var11) {
-                      dw.field_a[var11] = var7_int;
-                      var11--;
-                      var12 = var12 - (var11 << -1622200991);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                L5: {
-                  var7_int++;
-                  if (0 > var10) {
-                    break L5;
-                  } else {
-                    var9--;
-                    var10 = var10 - (var9 << 1438461889);
-                    if (var9 < var8) {
-                      var29 = rba.field_b[var9 + param5];
-                      var30 = rba.field_b[param5 - var9];
-                      var20 = dw.field_a[var9];
-                      var21 = param4 + var7_int;
-                      var22 = -var7_int + param4;
-                      var23 = var20 + param4;
-                      var24 = param4 + -var20;
-                      ww.a(param1, var24, var29, (byte) 75, var22);
-                      ww.a(param0, var23, var29, (byte) 75, var24);
-                      ww.a(param1, var21, var29, (byte) 75, var23);
-                      ww.a(param1, var24, var30, (byte) 75, var22);
-                      ww.a(param0, var23, var30, (byte) 75, var24);
-                      ww.a(param1, var21, var30, (byte) 75, var23);
-                      break L5;
-                    } else {
-                      var27 = rba.field_b[param5 - -var9];
-                      var28 = rba.field_b[param5 - var9];
-                      var20 = param4 - -var7_int;
-                      var21 = -var7_int + param4;
-                      ww.a(param1, var20, var27, (byte) 75, var21);
-                      ww.a(param1, var20, var28, (byte) 75, var21);
-                      break L5;
-                    }
-                  }
-                }
-                var31 = rba.field_b[var7_int + param5];
-                var32 = rba.field_b[-var7_int + param5];
-                var20 = var9 + param4;
-                var21 = -var9 + param4;
-                if (var8 <= var7_int) {
-                  ww.a(param1, var20, var31, (byte) 75, var21);
-                  ww.a(param1, var20, var32, (byte) 75, var21);
-                  continue L3;
-                } else {
-                  L6: {
-                    if (var7_int > var11) {
-                      stackIn_20_0 = dw.field_a[var7_int];
-                      break L6;
-                    } else {
-                      stackIn_20_0 = var11;
-                      break L6;
-                    }
-                  }
-                  var22 = stackIn_20_0;
-                  var23 = var22 + param4;
-                  var24 = -var22 + param4;
-                  ww.a(param1, var24, var31, (byte) 75, var21);
-                  ww.a(param0, var23, var31, (byte) 75, var24);
-                  ww.a(param1, var20, var31, (byte) 75, var23);
-                  ww.a(param1, var24, var32, (byte) 75, var21);
-                  ww.a(param0, var23, var32, (byte) 75, var24);
-                  ww.a(param1, var20, var32, (byte) 75, var23);
-                  continue L3;
-                }
-              }
-            }
+          dda.a(param3, 74);
+          var7_int = 0;
+          var8 = param3 - param6;
+          if (var8 < 0) {
+            var8 = 0;
           }
+          var9 = param3;
+          var10 = -param3;
+          var11 = var8;
+          var12 = -var8;
+          var13 = -1;
+          var14 = -1;
+          var33 = rba.field_b[param5];
+          var26 = var33;
+          var15 = var26;
+          var16 = -var8 + param4;
+          ww.a(param1, var16, var15, (byte) 75, param4 - param3);
+          var17 = param4 + var8;
+          ww.a(param0, var17, var33, (byte) 75, var16);
+          if (param2 > 0) {
+            il.a(-21, -8, (byte) 1, -122, 112, 81, 20);
+          }
+          ww.a(param1, param3 + param4, var33, (byte) 75, var17);
+          while (var9 > var7_int) {
+            var14 += 2;
+            var13 += 2;
+            var10 = var10 + var13;
+            var12 = var12 + var14;
+            if (var12 >= 0 &&
+              1 <= var11) {
+              dw.field_a[var11] = var7_int;
+              var11--;
+              var12 = var12 - (var11 << 1);
+            }
+            var7_int++;
+            if (0 <= var10) {
+              var9--;
+              var10 = var10 - (var9 << 1);
+              if (var9 < var8) {
+                var29 = rba.field_b[var9 + param5];
+                var30 = rba.field_b[param5 - var9];
+                var20 = dw.field_a[var9];
+                var21 = param4 + var7_int;
+                var22 = -var7_int + param4;
+                var23 = var20 + param4;
+                var24 = param4 - var20;
+                ww.a(param1, var24, var29, (byte) 75, var22);
+                ww.a(param0, var23, var29, (byte) 75, var24);
+                ww.a(param1, var21, var29, (byte) 75, var23);
+                ww.a(param1, var24, var30, (byte) 75, var22);
+                ww.a(param0, var23, var30, (byte) 75, var24);
+                ww.a(param1, var21, var30, (byte) 75, var23);
+              } else {
+                var27 = rba.field_b[param5 + var9];
+                var28 = rba.field_b[param5 - var9];
+                var20 = param4 + var7_int;
+                var21 = -var7_int + param4;
+                ww.a(param1, var20, var27, (byte) 75, var21);
+                ww.a(param1, var20, var28, (byte) 75, var21);
+              }
+            }
+            var31 = rba.field_b[var7_int + param5];
+            var32 = rba.field_b[-var7_int + param5];
+            var20Lifetime1 = var9 + param4;
+            var21Lifetime1 = -var9 + param4;
+            if (var8 <= var7_int) {
+              ww.a(param1, var20Lifetime1, var31, (byte) 75, var21Lifetime1);
+              ww.a(param1, var20Lifetime1, var32, (byte) 75, var21Lifetime1);
+              continue;
+            }
+            if (var7_int > var11) {
+              stackIn_20_0 = dw.field_a[var7_int];
+            } else {
+              stackIn_20_0 = var11;
+            }
+            var22Lifetime1 = stackIn_20_0;
+            var23Lifetime1 = var22Lifetime1 + param4;
+            var24Lifetime1 = -var22Lifetime1 + param4;
+            ww.a(param1, var24Lifetime1, var31, (byte) 75, var21Lifetime1);
+            ww.a(param0, var23Lifetime1, var31, (byte) 75, var24Lifetime1);
+            ww.a(param1, var20Lifetime1, var31, (byte) 75, var23Lifetime1);
+            ww.a(param1, var24Lifetime1, var32, (byte) 75, var21Lifetime1);
+            ww.a(param0, var23Lifetime1, var32, (byte) 75, var24Lifetime1);
+            ww.a(param1, var20Lifetime1, var32, (byte) 75, var23Lifetime1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -246,13 +189,11 @@ final class il extends le {
     }
 
     final int[] a(int param0, boolean param1) {
+        int var4 = 0;
         int[] stackIn_11_0 = null;
         int stackIn_11_1 = 0;
-        int[] stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
         int stackIn_12_2 = 0;
         int[] var3;
-        int var4;
         int var5;
         int var6;
         int var7;
@@ -265,73 +206,44 @@ final class il extends le {
         int var14;
         int[] var15;
         var14 = VoidHunters.field_G;
-        if (param1) {
-          L0: {
-            var15 = this.field_f.a((byte) 16, param0);
-            var3 = var15;
-            if (!this.field_f.field_e) {
-              break L0;
-            } else {
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= hob.field_d) {
-                  break L0;
-                } else {
-                  var5 = this.field_j + (grb.field_l[var4] << -2141664500) / this.field_l;
-                  var6 = this.field_i + (sj.field_p[param0] << 909458988) / this.field_l;
-                  var7 = var5;
-                  var8 = var6;
-                  var9 = var5;
-                  var10 = var6;
-                  var11 = var5 * var5 >> -1837378996;
-                  var12 = var6 * var6 >> 224328940;
-                  var13 = 0;
-                  L2: while (true) {
-                    L3: {
-                      if ((var11 - -var12 ^ -1) <= -16385) {
-                        break L3;
-                      } else {
-                        if (this.field_k <= var13) {
-                          break L3;
-                        } else {
-                          var10 = var8 + 2 * (var10 * var9 >> 1550652876);
-                          var9 = var7 + -var12 + var11;
-                          var12 = var10 * var10 >> -1294602324;
-                          var11 = var9 * var9 >> 1068127020;
-                          var13++;
-                          continue L2;
-                        }
-                      }
-                    }
-                    L4: {
-                      stackIn_11_0 = (int[]) (var15);
-
-                      stackIn_11_1 = var4;
-
-                      if (var13 >= -1 + this.field_k) {
-                        stackIn_12_0 = (int[]) ((Object) stackIn_11_0);
-                        stackIn_12_1 = stackIn_11_1;
-                        stackIn_12_2 = 0;
-                        break L4;
-                      } else {
-                        stackIn_12_0 = (int[]) ((Object) stackIn_11_0);
-                        stackIn_12_1 = stackIn_11_1;
-                        stackIn_12_2 = (var13 << 875452364) / this.field_k;
-                        break L4;
-                      }
-                    }
-                    stackIn_12_0[stackIn_12_1] = stackIn_12_2;
-                    var4++;
-                    continue L1;
-                  }
-                }
-              }
-            }
-          }
-          return var15;
-        } else {
+        if (!param1) {
           return (int[]) null;
         }
+        var15 = this.field_f.a((byte) 16, param0);
+        var3 = var15;
+        if (this.field_f.field_e) {
+          for (var4 = 0; var4 < hob.field_d; var4++) {
+            var5 = this.field_j + (grb.field_l[var4] << 12) / this.field_l;
+            var6 = this.field_i + (sj.field_p[param0] << 12) / this.field_l;
+            var7 = var5;
+            var8 = var6;
+            var9 = var5;
+            var10 = var6;
+            var11 = var5 * var5 >> 12;
+            var12 = var6 * var6 >> 12;
+            var13 = 0;
+            while (var11 + var12 < 16384) {
+              if (this.field_k > var13) {
+                var10 = var8 + 2 * (var10 * var9 >> 12);
+                var9 = var7 - var12 + var11;
+                var12 = var10 * var10 >> 12;
+                var11 = var9 * var9 >> 12;
+                var13++;
+                continue;
+              }
+              break;
+            }
+            stackIn_11_0 = var15;
+            stackIn_11_1 = var4;
+            if (var13 >= -1 + this.field_k) {
+              stackIn_12_2 = 0;
+            } else {
+              stackIn_12_2 = (var13 << 12) / this.field_k;
+            }
+            stackIn_11_0[stackIn_11_1] = stackIn_12_2;
+          }
+        }
+        return var15;
     }
 
     static {

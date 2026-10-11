@@ -12,22 +12,22 @@ final class cd {
 
     final static boolean a(boolean param0) {
         if (fq.field_f.a((byte) 91)) {
-            fq.field_f.b(0);
-            return true;
+          fq.field_f.b(0);
+          return true;
         }
         if (param0) {
-            field_c = (ri[]) null;
-            return false;
+          field_c = (ri[]) null;
+          return false;
         }
         return false;
     }
 
     public static void a(byte param0) {
         if (param0 >= -82) {
-            field_d = -61;
-            field_c = null;
-            field_f = null;
-            return;
+          field_d = -61;
+          field_c = null;
+          field_f = null;
+          return;
         }
         field_c = null;
         field_f = null;

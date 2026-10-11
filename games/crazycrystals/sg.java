@@ -7,9 +7,9 @@ final class sg {
 
     public static void a(boolean param0) {
         if (!param0) {
-            sg.a(120);
-            field_b = null;
-            return;
+          sg.a(120);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -18,7 +18,7 @@ final class sg {
         fg.field_i = null;
         ba.field_h = null;
         if (param0 <= 79) {
-            sg.a(true);
+          sg.a(true);
         }
     }
 

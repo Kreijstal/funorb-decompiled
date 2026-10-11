@@ -13,7 +13,7 @@ final class ra {
         field_e = null;
         field_c = null;
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -21,18 +21,17 @@ final class ra {
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> -712028927;
-        param1 = param1 | param1 >>> 1692747906;
-        param1 = param1 | param1 >>> 1691135556;
-        param1 = param1 | param1 >>> 1222173608;
-        if (param0 != 8742) {
-          field_d = (String) null;
-          param1 = param1 | param1 >>> 383713200;
-          return param1 - -1;
-        } else {
-          param1 = param1 | param1 >>> 383713200;
-          return param1 - -1;
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        param1 = param1 | param1 >>> 8;
+        if (param0 == 8742) {
+          param1 = param1 | param1 >>> 16;
+          return param1 + 1;
         }
+        field_d = (String) null;
+        param1 = param1 | param1 >>> 16;
+        return param1 + 1;
     }
 
     public final String toString() {
@@ -46,36 +45,36 @@ final class ra {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         try {
-            var7 = gk.field_g;
-            var8 = var7;
-            var8.g(param0, param1 + 7);
-            var8.field_l = var8.field_l + 1;
-            var4 = var8.field_l;
-            var8.a(param1, -113);
-            var8.a((byte) -111, param2.field_j);
-            var8.a((byte) 122, param2.field_g);
-            var8.a((byte) -119, param2.field_l);
-            var8.a(param2.field_t, (byte) -42);
-            var8.a(param2.field_m, (byte) -42);
-            var8.a(param2.field_r, (byte) -42);
-            var8.a(param2.field_k, (byte) -42);
-            var8.a(param2.field_o.length, -67);
-            for (var5 = 0; param2.field_o.length > var5; var5++) {
-                var7.a(param2.field_o[var5], (byte) -42);
-            }
-            var8.b((byte) -111, var4);
-            var8.b(var8.field_l - var4, -1);
+          var7 = gk.field_g;
+          var8 = var7;
+          var8.g(param0, param1 + 7);
+          var8.field_l = var8.field_l + 1;
+          var4 = var8.field_l;
+          var8.a(param1, -113);
+          var8.a((byte) -111, param2.field_j);
+          var8.a((byte) 122, param2.field_g);
+          var8.a((byte) -119, param2.field_l);
+          var8.a(param2.field_t, (byte) -42);
+          var8.a(param2.field_m, (byte) -42);
+          var8.a(param2.field_r, (byte) -42);
+          var8.a(param2.field_k, (byte) -42);
+          var8.a(param2.field_o.length, -67);
+          for (var5 = 0; param2.field_o.length > var5; var5++) {
+            var7.a(param2.field_o[var5], (byte) -42);
+          }
+          var8.b((byte) -111, var4);
+          var8.b(var8.field_l - var4, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, boolean param1) {
         if (param0 != 3) {
-            return;
+          return;
         }
         if (he.field_Xb != null) {
-            he.field_Xb.a(param1, 24960);
+          he.field_Xb.a(param1, 24960);
         }
     }
 

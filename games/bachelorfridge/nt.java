@@ -13,74 +13,64 @@ final class nt extends ana {
         field_y = null;
         field_z = null;
         if (param0 != 4) {
-            return;
+          return;
         }
         field_w = null;
     }
 
     private final void d(int param0) {
-        iv var3;
-        ad var4;
-        int var5;
-        aga var6;
-        var5 = BachelorFridge.field_y;
-        var6 = this.field_v.field_l.a(99, this.field_q.field_h);
-        if (!var6.i(-118)) {
-          var3 = (iv) ((Object) this.field_v.field_o.b((byte) 90));
-          al.a(-46, this.field_v.field_k);
-          L0: while (true) {
-            if (var3 == null) {
-              if (param0 != 24831) {
-                this.f(3);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              var3.a(var6, this.field_q.field_h, 12);
-              var4 = var3.field_h.a(-27449, this.field_q);
-              this.a(27799, new taa(this.field_q, var4));
-              this.a(27799, new cb(var4, 7));
-              this.a(27799, new wn(var4, kna.field_g[17], 24831));
-              var3 = (iv) ((Object) this.field_v.field_o.c(0));
-              continue L0;
-            }
-          }
-        } else {
+        ad var4 = null;
+        int var5 = BachelorFridge.field_y;
+        aga var6 = this.field_v.field_l.a(99, this.field_q.field_h);
+        if (var6.i(-118)) {
           return;
         }
+        iv var3 = (iv) (this.field_v.field_o.b((byte) 90));
+        al.a(-46, this.field_v.field_k);
+        while (var3 != null) {
+          var3.a(var6, this.field_q.field_h, 12);
+          var4 = var3.field_h.a(-27449, this.field_q);
+          this.a(27799, new taa(this.field_q, var4));
+          this.a(27799, new cb(var4, 7));
+          this.a(27799, new wn(var4, kna.field_g[17], 24831));
+          var3 = (iv) (this.field_v.field_o.c(0));
+        }
+        if (param0 == 24831) {
+          return;
+        }
+        this.f(3);
     }
 
     final boolean c(byte param0) {
         int fieldTemp$0 = 0;
         if (this.field_m.a((byte) -106)) {
-            return false;
+          return false;
         }
         int var2 = 12 % ((param0 - 71) / 47);
         if (this.field_l > 75) {
-            if (this.field_l % 10 != 0) {
-                fieldTemp$0 = this.field_l - 1;
-                this.field_l = this.field_l - 1;
-                if (!(0 > fieldTemp$0)) {
-                    if ((this.field_l ^ -1) == -76) {
-                        this.d(24831);
-                        return false;
-                    }
-                    return false;
-                }
-                this.f(-6020);
-                return true;
+          if (this.field_l % 10 != 0) {
+            fieldTemp$0 = this.field_l - 1;
+            this.field_l = this.field_l - 1;
+            if (0 <= fieldTemp$0) {
+              if (this.field_l == 75) {
+                this.d(24831);
+                return false;
+              }
+              return false;
             }
-            wf.a(3, (byte) 126);
+            this.f(-6020);
+            return true;
+          }
+          wf.a(3, (byte) 126);
         }
         int fieldTemp$1 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if (!(0 > fieldTemp$1)) {
-            if ((this.field_l ^ -1) != -76) {
-                return false;
-            }
-            this.d(24831);
+        if (0 <= fieldTemp$1) {
+          if (this.field_l != 75) {
             return false;
+          }
+          this.d(24831);
+          return false;
         }
         this.f(-6020);
         return true;
@@ -89,21 +79,21 @@ final class nt extends ana {
     nt(gj param0, lk param1) {
         super(param0, param1);
         try {
-            this.field_v = param1;
+          this.field_v = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void f(int param0) {
         if (param0 != -6020) {
-            this.f(92);
+          this.f(92);
         }
     }
 
     final static void e(byte param0) {
         if (param0 <= 77) {
-            return;
+          return;
         }
         bi.o(2);
         ep.a(4, 8192);

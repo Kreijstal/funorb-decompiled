@@ -19,7 +19,7 @@ final class oe {
         field_b = null;
         field_d = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_c = null;
         field_i = null;

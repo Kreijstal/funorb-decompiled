@@ -19,38 +19,36 @@ abstract class rl extends wb {
         ji.field_e.field_l = 0;
         ji.field_e.field_b = 0;
         if (!param0) {
-            field_s = (String) null;
+          field_s = (String) null;
         }
     }
 
     final static void b(byte param0) {
         if (param0 != 29) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
     }
 
     final static km d(boolean param0) {
         if (!param0) {
-            field_y = 78;
-            return lg.field_a.field_Lb;
+          field_y = 78;
+          return lg.field_a.field_Lb;
         }
         return lg.field_a.field_Lb;
     }
 
     public static void d(int param0) {
         field_v = null;
-        if (param0 != 0) {
-          rl.d(87);
-          field_o = null;
-          field_q = null;
-          field_s = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_o = null;
           field_q = null;
           field_s = null;
           return;
         }
+        rl.d(87);
+        field_o = null;
+        field_q = null;
+        field_s = null;
     }
 
     rl() {

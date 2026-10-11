@@ -8,79 +8,33 @@ final class pr extends ht {
     pr(fr param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
-            this.field_l = param2;
-            this.field_d.a(55, (ht) (this));
-            jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage1Dub(this.field_c, 0, this.field_a, this.field_l, 0, param4, 5121, param3, 0);
-            jaggl.OpenGL.glPixelStorei(3317, 4);
-            this.a(true, 0);
+          this.field_l = param2;
+          this.field_d.a(55, (ht) (this));
+          jaggl.OpenGL.glPixelStorei(3317, 1);
+          jaggl.OpenGL.glTexImage1Dub(this.field_c, 0, this.field_a, this.field_l, 0, param4, 5121, param3, 0);
+          jaggl.OpenGL.glPixelStorei(3317, 4);
+          this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "pr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     public static void d(int param0) {
         field_k = null;
         if (param0 != 7064) {
-            pr.d(44);
+          pr.d(44);
         }
     }
 
     final void a(boolean param0, byte param1) {
-        int stackIn_3_0 = 0;
-        int stackIn_3_1 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
-        if (param1 < 119) {
-          L0: {
-            field_k = (hr[]) null;
-            this.field_d.a(69, (ht) (this));
-            stackIn_7_0 = this.field_c;
-
-            stackIn_7_1 = 10242;
-
-            if (!param0) {
-              stackIn_8_0 = stackIn_7_0;
-              stackIn_8_1 = stackIn_7_1;
-              stackIn_8_2 = 33071;
-              break L0;
-            } else {
-              stackIn_8_0 = stackIn_7_0;
-              stackIn_8_1 = stackIn_7_1;
-              stackIn_8_2 = 10497;
-              break L0;
-            }
-          }
-          jaggl.OpenGL.glTexParameteri(stackIn_8_0, stackIn_8_1, stackIn_8_2);
-          return;
-        } else {
-          L1: {
-            this.field_d.a(69, (ht) (this));
-            stackIn_3_0 = this.field_c;
-
-            stackIn_3_1 = 10242;
-
-            if (!param0) {
-              stackIn_4_0 = stackIn_3_0;
-              stackIn_4_1 = stackIn_3_1;
-              stackIn_4_2 = 33071;
-              break L1;
-            } else {
-              stackIn_4_0 = stackIn_3_0;
-              stackIn_4_1 = stackIn_3_1;
-              stackIn_4_2 = 10497;
-              break L1;
-            }
-          }
-          jaggl.OpenGL.glTexParameteri(stackIn_4_0, stackIn_4_1, stackIn_4_2);
+        if (param1 >= 119) {
+          this.field_d.a(69, (ht) (this));
+          jaggl.OpenGL.glTexParameteri(this.field_c, 10242, param0 ? 10497 : 33071);
           return;
         }
+        field_k = (hr[]) null;
+        this.field_d.a(69, (ht) (this));
+        jaggl.OpenGL.glTexParameteri(this.field_c, 10242, param0 ? 10497 : 33071);
     }
 
     public final void a(int param0) {

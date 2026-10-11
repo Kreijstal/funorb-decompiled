@@ -10,10 +10,10 @@ final class le extends java.awt.Canvas {
     public static void a(int param0) {
         field_c = null;
         if (param0 < 43) {
-            le.a(-119);
-            field_b = null;
-            field_d = null;
-            return;
+          le.a(-119);
+          field_b = null;
+          field_d = null;
+          return;
         }
         field_b = null;
         field_d = null;
@@ -22,75 +22,47 @@ final class le extends java.awt.Canvas {
     final static boolean a(byte param0, String param1) {
         RuntimeException var2 = null;
         vh var3 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1.length() > 1) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param0 == -125) {
-                stackIn_7_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var3 = (vh) null;
-                le.a(94, (byte) 20, (vh) null);
-                return false;
-              }
-            }
+          if (param1.length() > 1) {
+            return true;
           }
+          if (param0 == -125) {
+            return false;
+          }
+          var3 = (vh) null;
+          le.a(94, (byte) 20, (vh) null);
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("le.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("le.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          return stackIn_7_0 != 0;
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_a.update(param0);
+          this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "le.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "le.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_a.paint(param0);
+          this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "le.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "le.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,86 +77,48 @@ final class le extends java.awt.Canvas {
         String stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                var3_int = param2.e(-23470);
-                if (param1 == -25) {
-                  L2: {
-                    if (var3_int > param0) {
-                      var3_int = param0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var4 = new byte[var3_int];
-                  param2.field_q = param2.field_q + ds.field_c.a(param2.field_o, param2.field_q, false, var3_int, 0, var4);
-                  var5 = co.a(0, var3_int, -107, var4);
-                  stackIn_7_0 = (String) (var5);
-                  decompiledRegionSelector0 = 1;
-                  break L1;
-                } else {
-                  stackIn_2_0 = (String) null;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              stackIn_9_0 = "Cabbage";
-              return stackIn_9_0;
+          try {
+            var3_int = param2.e(-23470);
+            if (param1 != -25) {
+              stackIn_2_0 = (String) null;
+              return stackIn_2_0;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              decompiledRegionSelector1 = 1;
-              break L0;
+            if (var3_int > param0) {
+              var3_int = param0;
             }
+            var4 = new byte[var3_int];
+            param2.field_q = param2.field_q + ds.field_c.a(param2.field_o, param2.field_q, false, var3_int, 0, var4);
+            var5 = co.a(0, var3_int, -107, var4);
+            stackIn_7_0 = var5;
+            return stackIn_7_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_9_0 = "Cabbage";
+            return stackIn_9_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("le.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("le.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_7_0;
+          throw ig.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     le(java.awt.Component param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "le.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "le.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

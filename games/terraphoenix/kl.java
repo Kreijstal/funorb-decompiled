@@ -11,7 +11,7 @@ final class kl {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_e = null;
         field_b = null;

@@ -23,127 +23,82 @@ final class ii extends nm {
         this.field_p = param3;
         this.field_t = param5;
         if (param4 != -161) {
-            return;
+          return;
         }
         try {
-            this.field_i = param0;
+          this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static boolean a(boolean param0, char param1) {
         if (param1 >= 32) {
-          if (126 < param1) {
-            if (param0) {
-              L0: {
-                if (param1 < 160) {
-                  break L0;
-                } else {
-                  if (255 < param1) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              if (param1 != 8364) {
-                if (param1 != 338) {
-                  if (param1 != 8212) {
-                    if (param1 != 339) {
-                      if (param1 != 376) {
-                        return false;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (126 >= param1) {
+            return true;
+          }
+          if (!param0) {
+            return true;
+          }
+          if (param1 >= 160 &&
+            255 >= param1) {
             return true;
           }
         } else {
-          if (param0) {
-            if (param1 >= 160) {
-              if (255 < param1) {
-                if (param1 != 8364) {
-                  if (param1 != 338) {
-                    if (param1 != 8212) {
-                      if (param1 != 339) {
-                        if (param1 != 376) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              if (param1 != 8364) {
-                if (param1 != 338) {
-                  if (param1 != 8212) {
-                    if (param1 != 339) {
-                      if (param1 == 376) {
-                        return true;
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
+          if (!param0) {
+            return true;
+          }
+          if (param1 < 160) {
+            if (param1 == 8364) {
+              return true;
             }
-          } else {
+            if (param1 == 338) {
+              return true;
+            }
+            if (param1 == 8212) {
+              return true;
+            }
+            if (param1 == 339) {
+              return true;
+            }
+            if (param1 == 376) {
+              return true;
+            }
+            return false;
+          }
+          if (255 >= param1) {
             return true;
           }
         }
+        if (param1 == 8364) {
+          return true;
+        }
+        if (param1 == 338) {
+          return true;
+        }
+        if (param1 == 8212) {
+          return true;
+        }
+        if (param1 == 339) {
+          return true;
+        }
+        if (param1 != 376) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {
-        if (param0 != 20888) {
-          field_l = (String) null;
-          field_l = null;
-          field_r = null;
-          field_s = null;
-          return;
-        } else {
+        if (param0 == 20888) {
           field_l = null;
           field_r = null;
           field_s = null;
           return;
         }
+        field_l = (String) null;
+        field_l = null;
+        field_r = null;
+        field_s = null;
     }
 
     ii() {

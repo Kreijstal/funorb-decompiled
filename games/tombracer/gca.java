@@ -22,38 +22,35 @@ final class gca {
         field_l = null;
         field_i = null;
         field_a = null;
-        if (param0 != 4) {
-          gca.b(23);
-          field_j = null;
-          return;
-        } else {
+        if (param0 == 4) {
           field_j = null;
           return;
         }
+        gca.b(23);
+        field_j = null;
     }
 
     final gca a(int param0) {
-        if (param0 != 6) {
-          field_j = (String[]) null;
-          return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
-        } else {
+        if (param0 == 6) {
           return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
         }
+        field_j = (String[]) null;
+        return new gca(this.field_h, this.field_m, this.field_k, this.field_e, this.field_b, this.field_c);
     }
 
     final void a(byte param0, gca param1) {
         try {
-            this.field_b = param1.field_b;
-            if (param0 >= -58) {
-                this.field_h = 8;
-            }
-            this.field_e = param1.field_e;
-            this.field_h = param1.field_h;
-            this.field_k = param1.field_k;
-            this.field_c = param1.field_c;
-            this.field_m = param1.field_m;
+          this.field_b = param1.field_b;
+          if (param0 >= -58) {
+            this.field_h = 8;
+          }
+          this.field_e = param1.field_e;
+          this.field_h = param1.field_h;
+          this.field_k = param1.field_k;
+          this.field_c = param1.field_c;
+          this.field_m = param1.field_m;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "gca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -67,7 +64,7 @@ final class gca {
         eq.field_r = param1;
         tqa.field_g = param2;
         if (param0 != 2533) {
-            field_i = (String[]) null;
+          field_i = (String[]) null;
         }
     }
 

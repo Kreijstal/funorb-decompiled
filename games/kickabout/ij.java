@@ -21,16 +21,14 @@ abstract class ij extends am {
         field_n = null;
         field_q = null;
         field_r = null;
-        if (param0 != -46) {
-          ij.g((byte) -108);
-          field_p = null;
-          field_s = null;
-          return;
-        } else {
+        if (param0 == -46) {
           field_p = null;
           field_s = null;
           return;
         }
+        ij.g((byte) -108);
+        field_p = null;
+        field_s = null;
     }
 
     static {

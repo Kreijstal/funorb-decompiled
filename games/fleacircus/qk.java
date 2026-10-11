@@ -16,74 +16,69 @@ final class qk {
         pa var5;
         int var6;
         var6 = fleas.field_A ? 1 : 0;
-        if (param1 == 16571) {
-          this.field_e = param0;
-          var4 = this.field_c[(int)((long)(-1 + this.field_g) & param0)];
-          this.field_d = var4.field_p;
-          L0: while (true) {
-            if (var4 != this.field_d) {
-              if (this.field_d.field_j == param0) {
-                var5 = this.field_d;
-                this.field_d = this.field_d.field_p;
-                return var5;
-              } else {
-                this.field_d = this.field_d.field_p;
-                continue L0;
-              }
-            } else {
-              this.field_d = null;
-              return null;
-            }
-          }
-        } else {
+        if (param1 != 16571) {
           return (pa) null;
         }
+        this.field_e = param0;
+        var4 = this.field_c[(int)((long)(-1 + this.field_g) & param0)];
+        this.field_d = var4.field_p;
+        while (true) {
+          if (var4 == this.field_d) {
+            this.field_d = null;
+            return null;
+          }
+          if (this.field_d.field_j != param0) {
+            this.field_d = this.field_d.field_p;
+            continue;
+          }
+          break;
+        }
+        var5 = this.field_d;
+        this.field_d = this.field_d.field_p;
+        return var5;
     }
 
     final pa a(int param0) {
         pa var2;
         pa var3;
         int var4;
+        pa var3Lifetime1;
         var4 = fleas.field_A ? 1 : 0;
-        if (this.field_d != null) {
-          var2 = this.field_c[(int)(this.field_e & (long)(this.field_g - 1))];
-          if (param0 > -60) {
-            field_a = -114;
-            L0: while (true) {
-              if (var2 != this.field_d) {
-                if ((this.field_d.field_j ^ -1L) != (this.field_e ^ -1L)) {
-                  this.field_d = this.field_d.field_p;
-                  continue L0;
-                } else {
-                  var3 = this.field_d;
-                  this.field_d = this.field_d.field_p;
-                  return var3;
-                }
-              } else {
-                this.field_d = null;
-                return null;
-              }
-            }
-          } else {
-            L1: while (true) {
-              if (var2 != this.field_d) {
-                if ((this.field_d.field_j ^ -1L) != (this.field_e ^ -1L)) {
-                  this.field_d = this.field_d.field_p;
-                  continue L1;
-                } else {
-                  var3 = this.field_d;
-                  this.field_d = this.field_d.field_p;
-                  return var3;
-                }
-              } else {
-                this.field_d = null;
-                return null;
-              }
-            }
-          }
-        } else {
+        if (this.field_d == null) {
           return null;
         }
+        var2 = this.field_c[(int)(this.field_e & (long)(this.field_g - 1))];
+        if (param0 <= -60) {
+          while (true) {
+            if (var2 == this.field_d) {
+              this.field_d = null;
+              return null;
+            }
+            if (~this.field_d.field_j != ~this.field_e) {
+              this.field_d = this.field_d.field_p;
+              continue;
+            }
+            break;
+          }
+          var3 = this.field_d;
+          this.field_d = this.field_d.field_p;
+          return var3;
+        }
+        field_a = -114;
+        while (true) {
+          if (var2 == this.field_d) {
+            this.field_d = null;
+            return null;
+          }
+          if (~this.field_d.field_j != ~this.field_e) {
+            this.field_d = this.field_d.field_p;
+            continue;
+          }
+          break;
+        }
+        var3Lifetime1 = this.field_d;
+        this.field_d = this.field_d.field_p;
+        return var3Lifetime1;
     }
 
     public static void b(int param0) {
@@ -91,47 +86,40 @@ final class qk {
         field_h = null;
         field_b = null;
         if (param0 == 0) {
-            return;
+          return;
         }
         field_h = (String) null;
     }
 
     qk(int param0) {
+        int var2 = 0;
         pa dupTemp$1 = null;
-        int var2;
         pa var3;
         this.field_c = new pa[param0];
         this.field_g = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new pa();
-            var3 = dupTemp$1;
-            this.field_c[var2] = dupTemp$1;
-            var3.field_m = var3;
-            var3.field_p = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new pa();
+          var3 = dupTemp$1;
+          this.field_c[var2] = dupTemp$1;
+          var3.field_m = var3;
+          var3.field_p = var3;
         }
     }
 
     final void a(pa param0, int param1, long param2) {
         pa var5 = null;
         try {
-            if (!(null == param0.field_m)) {
-                param0.e(param1 ^ -103);
-            }
-            var5 = this.field_c[(int)((long)(param1 + this.field_g) & param2)];
-            param0.field_m = var5.field_m;
-            param0.field_p = var5;
-            param0.field_m.field_p = param0;
-            param0.field_p.field_m = param0;
-            param0.field_j = param2;
+          if (null != param0.field_m) {
+            param0.e(param1 ^ -103);
+          }
+          var5 = this.field_c[(int)((long)(param1 + this.field_g) & param2)];
+          param0.field_m = var5.field_m;
+          param0.field_p = var5;
+          param0.field_m.field_p = param0;
+          param0.field_p.field_m = param0;
+          param0.field_j = param2;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "qk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "qk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

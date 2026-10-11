@@ -15,15 +15,9 @@ final class se extends hl {
     static char[] field_K;
 
     final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
-        int stackIn_3_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -32,97 +26,49 @@ final class se extends hl {
         int var12 = 0;
         var12 = Main.field_T;
         try {
-          L0: {
-            if (param3 <= -14) {
-              if (!super.a(param0, param1, param2, -39, param4, param5, param6)) {
-                stackIn_18_0 = 0;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                L1: {
-                  var8_int = -this.field_o + -param0 - this.field_E + param2;
-                  var9 = -this.field_i - param1 + -this.field_M + param6;
-                  if (this.field_H * this.field_H <= var9 * var9 + var8_int * var8_int) {
-                    break L1;
-                  } else {
-                    L2: {
-                      var10 = Math.atan2((double)var9, (double)var8_int) - ta.field_Z;
-                      if (0.0 <= var10) {
-                        if (var10 <= 0.0) {
-                          break L2;
-                        } else {
-                          var10 = var10 + 3.141592653589793 / (double)this.field_N;
-                          break L2;
-                        }
-                      } else {
-                        var10 = var10 - 3.141592653589793 / (double)this.field_N;
-                        break L2;
-                      }
-                    }
-                    this.field_L = (int)(var10 * (double)this.field_N / 6.283185307179586);
-                    L3: while (true) {
-                      if (this.field_L < this.field_N) {
-                        L4: while (true) {
-                          if (-1 >= (this.field_L ^ -1)) {
-                            break L1;
-                          } else {
-                            this.field_L = this.field_L + this.field_N;
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        this.field_L = this.field_L - this.field_N;
-                        continue L3;
-                      }
-                    }
-                  }
-                }
-                stackIn_16_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
+          if (param3 > -14) {
+            return false;
+          }
+          if (!super.a(param0, param1, param2, -39, param4, param5, param6)) {
+            return false;
+          }
+          var8_int = -this.field_o - param0 - this.field_E + param2;
+          var9 = -this.field_i - param1 - this.field_M + param6;
+          if (this.field_H * this.field_H > var9 * var9 + var8_int * var8_int) {
+            var10 = Math.atan2((double)var9, (double)var8_int) - ta.field_Z;
+            if (!(0.0 > var10)) {
+              if (var10 > 0.0) {
+                var10 = var10 + 3.141592653589793 / (double)this.field_N;
               }
             } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var10 = var10 - 3.141592653589793 / (double)this.field_N;
+            }
+            this.field_L = (int)(var10 * (double)this.field_N / 6.283185307179586);
+            while (this.field_L >= this.field_N) {
+              this.field_L = this.field_L - this.field_N;
+            }
+            while (this.field_L < 0) {
+              this.field_L = this.field_L + this.field_N;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var8);
-
-            stackIn_21_1 = new StringBuilder().append("se.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
-          }
-          throw ma.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_16_0 != 0;
+          var8 = decompiledCaughtException;
+          stackIn_21_0 = var8;
+          stackIn_21_1 = new StringBuilder().append("se.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_22_2 = "null";
           } else {
-            return stackIn_18_0 != 0;
+            stackIn_22_2 = "{...}";
           }
+          throw ma.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 < 52) {
-            return;
+          return;
         }
         field_O = null;
         field_G = null;
@@ -132,14 +78,6 @@ final class se extends hl {
     }
 
     final static void e(byte param0) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -149,48 +87,25 @@ final class se extends hl {
         RuntimeException decompiledCaughtException = null;
         var4 = Main.field_T;
         try {
-          L0: {
-            var5 = tb.field_h;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L1: while (true) {
-              if (var2 >= var3) {
-                if (param0 >= 55) {
-                  break L0;
-                } else {
-                  field_K = (char[]) null;
-                  return;
-                }
-              } else {
-                incrementValue$8 = var2;
-                var2++;
-                var5[incrementValue$8] = 0;
-                incrementValue$9 = var2;
-                var2++;
-                var5[incrementValue$9] = 0;
-                incrementValue$10 = var2;
-                var2++;
-                var5[incrementValue$10] = 0;
-                incrementValue$11 = var2;
-                var2++;
-                var5[incrementValue$11] = 0;
-                incrementValue$12 = var2;
-                var2++;
-                var5[incrementValue$12] = 0;
-                incrementValue$13 = var2;
-                var2++;
-                var5[incrementValue$13] = 0;
-                incrementValue$14 = var2;
-                var2++;
-                var5[incrementValue$14] = 0;
-                incrementValue$15 = var2;
-                var2++;
-                var5[incrementValue$15] = 0;
-                continue L1;
-              }
-            }
+          var5 = tb.field_h;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          while (var2 < var3) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
           }
+          if (param0 >= 55) {
+            return;
+          }
+          field_K = (char[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

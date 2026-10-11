@@ -12,14 +12,14 @@ final class wk {
 
     final static boolean a(int param0) {
         if (param0 < 74) {
-            field_a = (pf) null;
+          field_a = (pf) null;
         }
         return id.b(-4);
     }
 
     public static void a(byte param0) {
         if (param0 != 31) {
-            return;
+          return;
         }
         field_a = null;
         field_g = null;
@@ -27,94 +27,37 @@ final class wk {
     }
 
     final static boolean b(int param0) {
+        int var2 = 0;
         lb var1 = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
         int var3 = 0;
         lb var4 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = stellarshard.field_B;
         try {
-          L0: {
-            var4 = (lb) ((Object) oc.field_c.b(-124));
-            var1 = var4;
-            if (var1 != null) {
-              if (param0 == 1816) {
-                var2 = 0;
-                L1: while (true) {
-                  if (var2 >= var1.field_s) {
-                    stackIn_21_0 = 1;
-                    decompiledRegionSelector0 = 4;
-                    break L0;
-                  } else {
-                    L2: {
-                      if (null == var4.field_r[var2]) {
-                        break L2;
-                      } else {
-                        if (0 == var4.field_r[var2].field_f) {
-                          stackIn_13_0 = 0;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    L3: {
-                      if (null == var4.field_q[var2]) {
-                        break L3;
-                      } else {
-                        if (-1 == (var4.field_q[var2].field_f ^ -1)) {
-                          stackIn_18_0 = 0;
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    var2++;
-                    continue L1;
-                  }
-                }
-              } else {
-                stackIn_6_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var4 = (lb) (oc.field_c.b(-124));
+          var1 = var4;
+          if (var1 == null) {
+            return false;
+          }
+          if (param0 != 1816) {
+            return false;
+          }
+          for (var2 = 0; var2 < var1.field_s; var2++) {
+            if (null != var4.field_r[var2] &&
+              0 == var4.field_r[var2].field_f) {
+              return false;
+            }
+            if (null != var4.field_q[var2] &&
+              var4.field_q[var2].field_f == 0) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var1_ref), "wk.D(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_18_0 != 0;
-              } else {
-                return stackIn_21_0 != 0;
-              }
-            }
-          }
         }
     }
 
@@ -122,23 +65,23 @@ final class wk {
         byte[] var4 = null;
         od var3 = (od) (this.field_e.b((long)param1, (byte) 58));
         if (var3 != null) {
-            return var3;
+          return var3;
         }
-        if (-32769 < (param1 ^ -1)) {
-            var4 = this.field_f.a(param1, 16, 1);
+        if (param1 < 32768) {
+          var4 = this.field_f.a(param1, 16, 1);
         } else {
-            var4 = this.field_d.a(32767 & param1, 16, 1);
+          var4 = this.field_d.a(32767 & param1, 16, 1);
         }
         var3 = new od();
         if (var4 != null) {
-            var3.a(new ka(var4), 745);
+          var3.a(new ka(var4), 745);
         }
-        if (!((param1 ^ -1) > -32769)) {
-            var3.f(20865);
+        if (param1 >= 32768) {
+          var3.f(20865);
         }
         this.field_e.a(var3, (long)param1, -22424);
         if (param0 != 32767) {
-            field_a = (pf) null;
+          field_a = (pf) null;
         }
         return var3;
     }

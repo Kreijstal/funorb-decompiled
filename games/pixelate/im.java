@@ -19,11 +19,11 @@ final class im extends ak {
 
     public static void j(int param0) {
         if (param0 != -25942) {
-            im.j(-7);
-            field_Hb = null;
-            field_Lb = null;
-            field_Mb = null;
-            return;
+          im.j(-7);
+          field_Hb = null;
+          field_Lb = null;
+          field_Mb = null;
+          return;
         }
         field_Hb = null;
         field_Lb = null;

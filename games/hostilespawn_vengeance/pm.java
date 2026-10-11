@@ -14,36 +14,21 @@ final class pm {
 
     public static void b(byte param0) {
         if (param0 != -12) {
-            return;
+          return;
         }
         field_g = null;
     }
 
     final int a(byte param0) {
         int stackIn_6_0 = 0;
-        L0: {
-          if (param0 >= 111) {
-            break L0;
-          } else {
-            this.field_i = -31;
-            break L0;
-          }
+        if (param0 < 111) {
+          this.field_i = -31;
         }
-        L1: {
-          L2: {
-            if (this.field_b == null) {
-              break L2;
-            } else {
-              if (this.field_b.length == 0) {
-                break L2;
-              } else {
-                stackIn_6_0 = this.field_b[-1 + this.field_b.length];
-                break L1;
-              }
-            }
-          }
+        if (this.field_b != null &&
+          this.field_b.length != 0) {
+          stackIn_6_0 = this.field_b[-1 + this.field_b.length];
+        } else {
           stackIn_6_0 = 0;
-          break L1;
         }
         return stackIn_6_0;
     }
@@ -53,32 +38,32 @@ final class pm {
         db.field_s[fc.field_z] = fc.field_z;
         qa.field_d[fc.field_z] = param1;
         if (!(param1 <= rf.field_c)) {
-            kl.field_a = param1;
+          kl.field_a = param1;
         }
         if (!(i.field_f <= param1)) {
-            bh.field_e = param1;
+          bh.field_e = param1;
         }
         ta.field_mb[fc.field_z] = param5;
         og.field_b[fc.field_z] = param3;
         db.field_t[fc.field_z] = param4;
-        int var6 = param3 + (param5 - -param4);
+        int var6 = param3 + (param5 + param4);
         if (param2 <= 64) {
-            field_h = false;
+          field_h = false;
         }
         int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
         hi.field_n[fc.field_z] = var7;
         if (var7 < bh.field_e) {
-            bh.field_e = var7;
+          bh.field_e = var7;
         }
         if (kl.field_a < var7) {
-            kl.field_a = var7;
+          kl.field_a = var7;
         }
         fc.field_z = fc.field_z + 1;
     }
 
     final static bd[] a(int param0, int param1, byte param2, int param3) {
         if (param2 != -117) {
-            pm.b((byte) -84);
+          pm.b((byte) -84);
         }
         return ei.a(param0, 1, param1, param3, 119);
     }
@@ -90,32 +75,32 @@ final class pm {
         StringBuilder discarded$0 = null;
         int var12 = HostileSpawn.field_I ? 1 : 0;
         if (0L >= param0) {
-            return null;
+          return null;
         }
-        if (-6582952005840035282L >= (param0 ^ -1L)) {
-            return null;
+        if (param0 >= 6582952005840035281L) {
+          return null;
         }
-        if ((param0 % 37L ^ -1L) == -1L) {
-            return null;
+        if (param0 % 37L == 0L) {
+          return null;
         }
         int var4 = -74 / ((41 - param1) / 33);
         int var3 = 0;
         long var5 = param0;
-        while ((var5 ^ -1L) != -1L) {
-            var3++;
-            var5 = var5 / 37L;
+        while (var5 != 0L) {
+          var3++;
+          var5 = var5 / 37L;
         }
         StringBuilder var7 = new StringBuilder(var3);
         while (0L != param0) {
-            var8 = param0;
-            param0 = param0 / 37L;
-            var10 = nf.field_h[(int)(-(37L * param0) + var8)];
-            if (var10 == 95) {
-                var11 = -1 + var7.length();
-                var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
-                var10 = 160;
-            }
-            discarded$0 = var7.append((char) var10);
+          var8 = param0;
+          param0 = param0 / 37L;
+          var10 = nf.field_h[(int)(-(37L * param0) + var8)];
+          if (var10 == 95) {
+            var11 = -1 + var7.length();
+            var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
+            var10 = 160;
+          }
+          discarded$0 = var7.append((char) var10);
         }
         var7.reverse();
         var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
@@ -123,33 +108,19 @@ final class pm {
     }
 
     final int a(int param0, byte param1) {
-        int var3;
+        int var3 = 0;
         int var4;
         int var5;
-        L0: {
-          var5 = HostileSpawn.field_I ? 1 : 0;
-          if (null == this.field_b) {
-            break L0;
-          } else {
-            if (this.field_b.length == 0) {
-              break L0;
-            } else {
-              var3 = 1;
-              L1: while (true) {
-                if (var3 >= this.field_b.length) {
-                  var4 = -108 / ((-45 - param1) / 61);
-                  return this.field_b.length + -1;
-                } else {
-                  if (this.field_b[var3] + this.field_b[var3 - 1] >> 1023397505 > param0) {
-                    return var3 + -1;
-                  } else {
-                    var3++;
-                    continue L1;
-                  }
-                }
-              }
+        var5 = HostileSpawn.field_I ? 1 : 0;
+        if (null != this.field_b &&
+          this.field_b.length != 0) {
+          for (var3 = 1; var3 < this.field_b.length; var3++) {
+            if (this.field_b[var3] + this.field_b[var3 - 1] >> 1 > param0) {
+              return var3 - 1;
             }
           }
+          var4 = -108 / ((-45 - param1) / 61);
+          return this.field_b.length - 1;
         }
         return 0;
     }

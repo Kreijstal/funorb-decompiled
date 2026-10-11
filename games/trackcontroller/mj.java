@@ -12,7 +12,7 @@ final class mj {
     public static void b(int param0) {
         field_b = null;
         if (param0 != -2069072125) {
-            return;
+          return;
         }
         field_a = null;
         field_e = null;
@@ -47,8 +47,11 @@ final class mj {
                         }
                         continue stateLoop;
                     } catch (Throwable stateCaught_1) {
+                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 9 : -1);
+                        if (statePc == -1) {
+                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                        }
                         caughtException = stateCaught_1;
-                        statePc = 9;
                         continue stateLoop;
                     }
                 }
@@ -66,47 +69,40 @@ final class mj {
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
+                        statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 9 : -1);
+                        if (statePc == -1) {
+                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                        }
                         caughtException = stateCaught_4;
-                        statePc = 9;
                         continue stateLoop;
                     }
                 }
                 case 5: {
                     try {
                         if (stackIn_5_0.length <= var3) {
-                            statePc = 7;
+                            /* Inlined CFG state: 7. */
+                            {
+                                ia.field_b.a(-91);
+                                statePc = 10;
+                                continue stateLoop;
+                            }
                         } else {
-                            statePc = 6;
+                            /* Inlined CFG state: 6. */
+                            {
+                                mb.field_d[var3] = new qj(var2, var2);
+                                mb.field_d[var3].a();
+                                var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
+                                var3++;
+                                statePc = 4;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_5) {
+                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 9 : -1);
+                        if (statePc == -1) {
+                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                        }
                         caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        mb.field_d[var3] = new qj(var2, var2);
-                        mb.field_d[var3].a();
-                        var1.a(208, 208, var2 << -673407325, var2 << -2069072125, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
-                        var3++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        ia.field_b.a(-91);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
                         continue stateLoop;
                     }
                 }
@@ -127,5 +123,10 @@ final class mj {
         field_f = "All";
         field_c = false;
         field_e = new aa(1, 2, 2, 0);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

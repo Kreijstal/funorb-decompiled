@@ -8,10 +8,10 @@ final class vd {
 
     public static void a(int param0) {
         if (param0 != 256) {
-            vd.a(-28);
-            field_a = null;
-            field_b = null;
-            return;
+          vd.a(-28);
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

@@ -9,47 +9,41 @@ final class eo {
     static String field_d;
 
     final static int a(int param0, byte param1, int param2, int param3) {
-        if (ra.field_f >= param2 + param0) {
+        if (!(ra.field_f < param2 + param0)) {
           return param2;
-        } else {
-          if (0 <= -param0 + (param3 + param2)) {
-            return -param0 + (param3 + param2);
-          } else {
-            if (param1 <= 88) {
-              eo.a((byte) -127);
-              return ra.field_f - param0;
-            } else {
-              return ra.field_f - param0;
-            }
-          }
         }
+        if (0 <= -param0 + (param3 + param2)) {
+          return -param0 + (param3 + param2);
+        }
+        if (param1 > 88) {
+          return ra.field_f - param0;
+        }
+        eo.a((byte) -127);
+        return ra.field_f - param0;
     }
 
     public static void a(byte param0) {
-        String var2;
         field_c = null;
-        if (param0 >= -100) {
-          var2 = (String) null;
-          eo.a(89, 53, 44, (String) null, 60, (String) null);
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 < -100) {
           field_d = null;
           field_e = null;
           field_b = null;
           field_a = null;
           return;
         }
+        String var2 = (String) null;
+        eo.a(89, 53, 44, (String) null, 60, (String) null);
+        field_d = null;
+        field_e = null;
+        field_b = null;
+        field_a = null;
     }
 
     final static void a(int param0) {
         ka.field_h = ta.a(ti.field_g, new double[]{0.0, 0.0, 0.0}, new double[]{0.0, 1.0, 0.0});
         bd.field_b = ta.a(ka.field_h);
         if (param0 >= -14) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
@@ -57,23 +51,23 @@ final class eo {
         bc var8 = null;
         int var7 = 0;
         try {
-            var8 = nd.field_Lb;
-            bc var6 = var8;
-            var8.f(param2, (byte) -92);
-            var8.field_t = var8.field_t + 1;
-            var7 = var8.field_t;
-            var8.a(param4, false);
-            if (!(param0 != (param4 ^ -1))) {
-                var8.a(param3, 0);
-            }
-            if (param5 == null) {
-                var8.b(param1, false);
-            } else {
-                hn.a(false, param5, var8);
-            }
-            var8.b(var8.field_t + -var7, -2);
+          var8 = nd.field_Lb;
+          bc var6 = var8;
+          var8.f(param2, (byte) -92);
+          var8.field_t = var8.field_t + 1;
+          var7 = var8.field_t;
+          var8.a(param4, false);
+          if (param0 == ~param4) {
+            var8.a(param3, 0);
+          }
+          if (param5 == null) {
+            var8.b(param1, false);
+          } else {
+            hn.a(false, param5, var8);
+          }
+          var8.b(var8.field_t - var7, -2);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

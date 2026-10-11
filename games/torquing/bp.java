@@ -20,46 +20,46 @@ final class bp {
         int var5 = 0;
         int var6 = Torquing.field_u;
         try {
-            var7 = wa.field_d;
-            var8 = var7;
-            var8.f(91, param2);
-            var8.field_n = var8.field_n + 1;
-            var4 = var8.field_n;
-            var8.b(90, param1);
-            var8.a(param0.field_q, 118);
-            var8.a(param0.field_n, param1 ^ 58);
-            var8.a(param0.field_m, 88);
-            var8.b((byte) 60, param0.field_p);
-            var8.b((byte) 60, param0.field_r);
-            var8.b((byte) 60, param0.field_o);
-            var8.b((byte) 60, param0.field_j);
-            var8.b(90, param0.field_k.length);
-            for (var5 = 0; var5 < param0.field_k.length; var5++) {
-                var7.b((byte) 60, param0.field_k[var5]);
-            }
-            var8.a(var4, true);
-            var8.c((byte) 48, var8.field_n - var4);
+          var7 = wa.field_d;
+          var8 = var7;
+          var8.f(91, param2);
+          var8.field_n = var8.field_n + 1;
+          var4 = var8.field_n;
+          var8.b(90, param1);
+          var8.a(param0.field_q, 118);
+          var8.a(param0.field_n, param1 ^ 58);
+          var8.a(param0.field_m, 88);
+          var8.b((byte) 60, param0.field_p);
+          var8.b((byte) 60, param0.field_r);
+          var8.b((byte) 60, param0.field_o);
+          var8.b((byte) 60, param0.field_j);
+          var8.b(90, param0.field_k.length);
+          for (var5 = 0; var5 < param0.field_k.length; var5++) {
+            var7.b((byte) 60, param0.field_k[var5]);
+          }
+          var8.a(var4, true);
+          var8.c((byte) 48, var8.field_n - var4);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "bp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;
     }
 
     final static void a(byte param0) {
-        bg var1 = (bg) ((Object) rf.field_t.b((byte) -77));
+        bg var1 = (bg) (rf.field_t.b((byte) -77));
         if (param0 >= -42) {
-            bp.a(false);
+          bp.a(false);
         }
         if (var1 == null) {
-            var1 = new bg();
+          var1 = new bg();
         }
         var1.a(ph.field_e, ph.field_c, ph.field_h, ph.field_d, ph.field_j, ph.field_a, ph.field_k, 17830);
         bf.field_a.a((byte) 54, var1);

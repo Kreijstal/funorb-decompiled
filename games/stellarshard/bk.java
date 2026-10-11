@@ -16,27 +16,27 @@ final class bk {
 
     final static void a(int param0, String param1, boolean param2, String param3) {
         try {
-            va.field_a = param3;
-            wb.field_c = param1;
-            we.a(param2, 12757, ul.field_H);
-            if (param0 != 12) {
-                String var5 = (String) null;
-                bk.a(20, (String) null, true, (String) null);
-            }
+          va.field_a = param3;
+          wb.field_c = param1;
+          we.a(param2, 12757, ul.field_H);
+          if (param0 != 12) {
+            String var5 = (String) null;
+            bk.a(20, (String) null, true, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "bk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "bk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, boolean param1, int param2, ka param3, int param4) {
         try {
-            param3.a(param1, 12);
-            param3.c(17, -117);
-            param3.c(param0, -123);
-            param3.c(param2, -117);
-            param3.a(false, param4);
+          param3.a(param1, 12);
+          param3.c(17, -117);
+          param3.c(param0, -123);
+          param3.c(param2, -117);
+          param3.a(false, param4);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -47,51 +47,43 @@ final class bk {
 
     final boolean b(int param0) {
         if (param0 != 17) {
-            this.field_c = true;
-            return this.field_d;
+          this.field_c = true;
+          return this.field_d;
         }
         return this.field_d;
     }
 
     final String c(int param0) {
         if (param0 >= -106) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_a;
     }
 
     final static hk a(int param0, int param1, int param2, int param3, int param4) {
-        hk var5;
-        int var6;
-        var6 = stellarshard.field_B;
-        var5 = (hk) ((Object) id.field_g.b(param3 + -133));
-        L0: while (true) {
-          if (var5 == null) {
-            if (param3 != 17) {
-              return (hk) null;
-            } else {
-              var5 = new hk();
-              var5.field_r = param2;
-              var5.field_q = param1;
-              var5.field_t = param4;
-              id.field_g.b(param3 ^ -69, var5);
-              pd.a(param0, var5, 31);
-              return var5;
-            }
-          } else {
-            if ((var5.field_t ^ -1) != (param4 ^ -1)) {
-              var5 = (hk) ((Object) id.field_g.b((byte) 102));
-              continue L0;
-            } else {
-              return var5;
-            }
+        int var6 = stellarshard.field_B;
+        hk var5 = (hk) (id.field_g.b(param3 - 133));
+        while (var5 != null) {
+          if (~var5.field_t == ~param4) {
+            return var5;
           }
+          var5 = (hk) (id.field_g.b((byte) 102));
         }
+        if (param3 == 17) {
+          var5 = new hk();
+          var5.field_r = param2;
+          var5.field_q = param1;
+          var5.field_t = param4;
+          id.field_g.b(param3 ^ -69, var5);
+          pd.a(param0, var5, 31);
+          return var5;
+        }
+        return (hk) null;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-            return false;
+          return false;
         }
         return this.field_c;
     }
@@ -100,9 +92,9 @@ final class bk {
         this.field_d = false;
         this.field_c = false;
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

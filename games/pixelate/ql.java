@@ -8,8 +8,8 @@ final class ql extends jj {
 
     final static int g(int param0) {
         if (param0 != 13428) {
-            field_m = -88;
-            return oi.field_c;
+          field_m = -88;
+          return oi.field_c;
         }
         return oi.field_c;
     }
@@ -19,47 +19,42 @@ final class ql extends jj {
         wa.field_c = new kn();
         rd.a(true, -17130, true);
         if (param0) {
-            ql.d(-24);
+          ql.d(-24);
         }
     }
 
     public static void f(int param0) {
         if (param0 != 0) {
-            field_n = (ak) null;
-            field_n = null;
-            return;
+          field_n = (ak) null;
+          field_n = null;
+          return;
         }
         field_n = null;
     }
 
     final static boolean e(int param0) {
-        if (param0 >= 94) {
-          if (null != lb.field_x) {
-            if (null == lb.field_x.n(640)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 < 94) {
           ql.f(30);
-          if (null != lb.field_x) {
-            if (null == lb.field_x.n(640)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == lb.field_x) {
             return false;
           }
+          if (null != lb.field_x.n(640)) {
+            return true;
+          }
+          return false;
         }
+        if (null == lb.field_x) {
+          return false;
+        }
+        if (null != lb.field_x.n(640)) {
+          return true;
+        }
+        return false;
     }
 
     final void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         jk.field_a.f(0, 0);
     }
@@ -69,16 +64,16 @@ final class ql extends jj {
         String var3 = null;
         long var4 = 0L;
         try {
-            c.field_T = true;
-            var2 = "tuhstatbut";
-            if (param1 != -7624) {
-                field_o = 58;
-            }
-            var3 = "rvnadlm";
-            var4 = -1L;
-            nn.a(param0, 78, var3, var2, var4);
+          c.field_T = true;
+          var2 = "tuhstatbut";
+          if (param1 != -7624) {
+            field_o = 58;
+          }
+          var3 = "rvnadlm";
+          var4 = -1L;
+          nn.a(param0, 78, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ql.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -90,30 +85,20 @@ final class ql extends jj {
         dk.field_c = false;
         wp.field_a = null;
         var1 = 32 / ((-65 - param0) / 51);
-        if (!to.field_s) {
+        if (to.field_s) {
+          to.field_r.o(2121792);
+        } else {
           var2 = ra.field_g;
-          if ((var2 ^ -1) < -1) {
-            if ((var2 ^ -1) == -2) {
+          if (var2 > 0) {
+            if (var2 == 1) {
               wp.field_a = to.field_o;
-              wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tn.field_d)});
-              to.field_r.p(-100);
-              fl.a((byte) 81);
-              return;
             } else {
               wp.field_a = sd.a(cf.field_v, 63, new String[]{Integer.toString(var2)});
-              wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tn.field_d)});
-              to.field_r.p(-100);
-              fl.a((byte) 81);
-              return;
             }
-          } else {
-            to.field_r.p(-100);
-            fl.a((byte) 81);
-            return;
+            wp.field_a = gi.a(0, new CharSequence[]{(CharSequence) ((Object) wp.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tn.field_d)});
           }
-        } else {
-          to.field_r.o(2121792);
-          return;
+          to.field_r.p(-100);
+          fl.a((byte) 81);
         }
     }
 

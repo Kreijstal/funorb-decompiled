@@ -12,7 +12,7 @@ final class uk {
         field_b = null;
         field_c = null;
         if (param0 > -41) {
-            uk.a((byte) 113);
+          uk.a((byte) 113);
         }
     }
 

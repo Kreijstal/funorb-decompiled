@@ -42,20 +42,20 @@ final class gk {
         field_G = null;
         field_e = null;
         if (!param0) {
-            gk.a(-115, true, 120);
+          gk.a(-115, true, 120);
         }
     }
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3;
-        if (!param1) {
-          gk.a(-119, true, -99);
-          var3 = param0 - 1 & param2 >> 1223197663;
-          return (param2 + (param2 >>> -2079428609)) % param0 + var3;
-        } else {
-          var3 = param0 - 1 & param2 >> 1223197663;
-          return (param2 + (param2 >>> -2079428609)) % param0 + var3;
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param1) {
+          var3 = param0 - 1 & param2 >> 31;
+          return (param2 + (param2 >>> 31)) % param0 + var3;
         }
+        gk.a(-119, true, -99);
+        var3Lifetime1 = param0 - 1 & param2 >> 31;
+        return (param2 + (param2 >>> 31)) % param0 + var3Lifetime1;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -66,40 +66,40 @@ final class gk {
         ok.field_s[oe.field_a] = 0;
         oe.field_a = oe.field_a + 1;
         if (param1 <= 122) {
-            field_G = (String) null;
+          field_G = (String) null;
         }
     }
 
     final static String a(int param0) {
         if (ib.field_k < 2) {
-            return cl.field_a;
+          return cl.field_a;
         }
-        if (!(il.field_a == null)) {
-            if (!(il.field_a.b((byte) -98))) {
-                return sg.field_a;
-            }
-            return mk.field_a;
+        if (il.field_a != null) {
+          if (!il.field_a.b((byte) -98)) {
+            return sg.field_a;
+          }
+          return mk.field_a;
         }
-        if (!(rl.field_d.b((byte) -117))) {
-            return bf.field_f;
+        if (!rl.field_d.b((byte) -117)) {
+          return bf.field_f;
         }
         if (!rl.field_d.a("commonui", -114)) {
-            return li.field_e + " - " + rl.field_d.a(param0 + 1851, "commonui") + "%";
+          return li.field_e + " - " + rl.field_d.a(param0 + 1851, "commonui") + "%";
         }
         if (param0 != -1917) {
-            return (String) null;
+          return (String) null;
         }
         if (!oa.field_l.b((byte) -100)) {
-            return de.field_j;
+          return de.field_j;
         }
         if (!oa.field_l.a("commonui", param0 + 1793)) {
-            return rg.field_q + " - " + oa.field_l.a(param0 ^ 1851, "commonui") + "%";
+          return rg.field_q + " - " + oa.field_l.a(param0 ^ 1851, "commonui") + "%";
         }
         if (!kc.field_d.b((byte) -108)) {
-            return li.field_h;
+          return li.field_h;
         }
-        if (!(kc.field_d.a(-75))) {
-            return ob.field_b + " - " + kc.field_d.a((byte) -43) + "%";
+        if (!kc.field_d.a(-75)) {
+          return ob.field_b + " - " + kc.field_d.a((byte) -43) + "%";
         }
         return ja.field_L;
     }

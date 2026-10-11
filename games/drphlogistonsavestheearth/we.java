@@ -18,9 +18,7 @@ final class we {
         field_h = null;
         field_d = null;
         field_c = null;
-        if (param0 != 120) {
-          return;
-        } else {
+        if (param0 == 120) {
           field_a = null;
           return;
         }
@@ -28,27 +26,27 @@ final class we {
 
     final static void a(boolean param0, vk param1) {
         if (param1 == null) {
-            return;
+          return;
         }
         try {
-            if (param0) {
-                field_a = (char[]) null;
-            }
-            od.a(-1630758008, ag.b(param1, 100, 96));
+          if (param0) {
+            field_a = (char[]) null;
+          }
+          od.a(-1630758008, ag.b(param1, 100, 96));
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, int param1, float param2) {
         try {
-            if (param1 >= -75) {
-                field_b = (he[]) null;
-            }
-            oe.field_d = param2;
-            rh.field_d = param0;
+          if (param1 >= -75) {
+            field_b = (he[]) null;
+          }
+          oe.field_d = param2;
+          rh.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "we.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "we.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

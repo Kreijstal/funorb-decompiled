@@ -12,57 +12,29 @@ final class sm {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 32564) {
-                break L1;
-              } else {
-                sm.a(true);
-                break L1;
-              }
-            }
-            if (!param1) {
-              stackIn_6_0 = re.field_g.b(param2);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = wb.field_m.b(param2);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 32564) {
+            sm.a(true);
           }
+          if (!param1) {
+            stackIn_6_0 = re.field_g.b(param2);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = wb.field_m.b(param2);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("sm.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("sm.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return stackIn_6_0;
+          throw sh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -72,10 +44,10 @@ final class sm {
 
     public static void a(boolean param0) {
         if (!param0) {
-            String var2 = (String) null;
-            sm.a(22, false, (String) null);
-            field_b = null;
-            return;
+          String var2 = (String) null;
+          sm.a(22, false, (String) null);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -9,122 +9,48 @@ final class hm {
 
     final static boolean a(String param0, String param1, int param2) {
         String var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_15_0 = 0;
+        boolean stackIn_15_0 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          L0: {
-            if (param2 == -1) {
-              L1: {
-                var3 = pn.a(8671, param1);
-                if ((param0.indexOf(param1) ^ -1) != 0) {
-                  break L1;
-                } else {
-                  if (param0.indexOf(var3) != -1) {
-                    break L1;
-                  } else {
-                    L2: {
-                      L3: {
-                        if (param0.startsWith(param1)) {
-                          break L3;
-                        } else {
-                          if (param0.startsWith(var3)) {
-                            break L3;
-                          } else {
-                            if (param0.endsWith(param1)) {
-                              break L3;
-                            } else {
-                              if (!param0.endsWith(var3)) {
-                                stackIn_15_0 = 0;
-                                break L2;
-                              } else {
-                                break L3;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      stackIn_15_0 = 1;
-                      break L2;
-                    }
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  }
-                }
-              }
-              stackIn_7_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 != -1) {
+            return true;
           }
+          var3 = pn.a(8671, param1);
+          if (param0.indexOf(param1) == -1 &&
+            param0.indexOf(var3) == -1) {
+            stackIn_15_0 = (param0.startsWith(param1)) || (param0.startsWith(var3)) || (param0.endsWith(param1)) || (param0.endsWith(var3));
+            return stackIn_15_0;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3_ref = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3_ref);
-
-            stackIn_18_1 = new StringBuilder().append("hm.C(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L4;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L4;
-            }
-          }
-          L5: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("hm.C(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
           } else {
-            return stackIn_15_0 != 0;
+            stackIn_19_2 = "{...}";
           }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         if (param0 != 0) {
-            hm.a((byte) 69, 72);
+          hm.a((byte) 69, 72);
         }
     }
 
@@ -132,15 +58,16 @@ final class hm {
         int var4 = 0;
         int var2 = -108 / ((-55 - param1) / 44);
         int var3 = param0 & 255;
-        if (!(var3 != 0)) {
-            throw new IllegalArgumentException("" + Integer.toString(var3, 16));
+        if (var3 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var3, 16));
         }
-        if (128 <= var3 && 160 > var3) {
-            var4 = oc.field_a[var3 + -128];
-            if (var4 == 0) {
-                var4 = 63;
-            }
-            var3 = var4;
+        if (128 <= var3 &&
+          160 > var3) {
+          var4 = oc.field_a[var3 - 128];
+          if (var4 == 0) {
+            var4 = 63;
+          }
+          var3 = var4;
         }
         return (char)var3;
     }

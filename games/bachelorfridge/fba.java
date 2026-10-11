@@ -7,7 +7,7 @@ final class fba {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 2) {
-            fba.a(false, (byte) 68);
+          fba.a(false, (byte) 68);
         }
     }
 
@@ -16,16 +16,14 @@ final class fba {
         gp.field_A = ph.field_E;
         pn.field_f = 0;
         wga.field_s = 0;
-        if (param1 >= -41) {
-          field_a = (ee) null;
-          ic.field_i = new jd(2);
-          ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
-          return;
-        } else {
+        if (param1 < -41) {
           ic.field_i = new jd(2);
           ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
           return;
         }
+        field_a = (ee) null;
+        ic.field_i = new jd(2);
+        ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
     }
 
     static {

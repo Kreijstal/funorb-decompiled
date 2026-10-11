@@ -22,18 +22,18 @@ final class np extends je {
 
     final void a(boolean param0, String param1, int param2, wk param3) {
         try {
-            if (param0) {
-                this.d((byte) 111);
-            }
-            this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, param3, param1);
-            this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
-            this.field_Sb[this.field_Lb].field_ub = true;
-            this.field_Sb[this.field_Lb].field_Fb = 1;
-            this.a(this.field_Sb[this.field_Lb], 86);
-            this.field_Mb[this.field_Lb] = param2;
-            this.field_Lb = this.field_Lb + 1;
+          if (param0) {
+            this.d((byte) 111);
+          }
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, param3, param1);
+          this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
+          this.field_Sb[this.field_Lb].field_ub = true;
+          this.field_Sb[this.field_Lb].field_Fb = 1;
+          this.a(this.field_Sb[this.field_Lb], 86);
+          this.field_Mb[this.field_Lb] = param2;
+          this.field_Lb = this.field_Lb + 1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "np.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "np.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,28 +43,28 @@ final class np extends je {
 
     final static void a(boolean param0, byte param1) {
         if (!cd.c(9501)) {
-            return;
+          return;
         }
         if (param0) {
-            qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
+          qn.b(0, 0, qn.field_l, qn.field_g, 0, 192);
         }
         ee.field_v.a(0, -118, 0);
         if (param1 >= -111) {
-            gd var3 = (gd) null;
-            np.a(false, (gd) null);
+          gd var3 = (gd) null;
+          np.a(false, (gd) null);
         }
     }
 
     final boolean d(byte param0) {
         if (param0 < 59) {
-            return false;
+          return false;
         }
-        if (!(1 == (this.field_Kb ^ -1))) {
-            return false;
+        if (this.field_Kb != -2) {
+          return false;
         }
         if (rs.field_q == 13) {
-            this.field_Kb = -1;
-            return true;
+          this.field_Kb = -1;
+          return true;
         }
         return true;
     }
@@ -72,66 +72,47 @@ final class np extends je {
     final static void k(int param0) {
         rs.field_t = 0;
         if (param0 <= 63) {
-            field_Jb = (String) null;
+          field_Jb = (String) null;
         }
         hh.a((byte) 126);
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
+        int var10 = 0;
         int var6;
         int var7;
         int var8;
         int var9;
-        int var10;
         int var11;
-        L0: {
-          var11 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (-1 == (this.field_Lb ^ -1)) {
-            this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (wk) null, va.field_F);
-            this.field_Sb[this.field_Lb].field_Fb = 1;
-            this.a(this.field_Sb[this.field_Lb], 43);
-            this.field_Mb[this.field_Lb] = -1;
-            this.field_Lb = this.field_Lb + 1;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var7Lifetime1;
+        int var8Lifetime1;
+        var11 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (this.field_Lb == 0) {
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Nb, (wk) null, va.field_F);
+          this.field_Sb[this.field_Lb].field_Fb = 1;
+          this.a(this.field_Sb[this.field_Lb], 43);
+          this.field_Mb[this.field_Lb] = -1;
+          this.field_Lb = this.field_Lb + 1;
         }
-        if (param3 == -118) {
-          var6 = 0;
-          var7 = 0;
-          L1: while (true) {
-            if (var7 >= this.field_Lb) {
-              var6 = var6 + 2 * this.field_Rb;
-              var7 = this.field_Xb + this.field_Lb * this.field_Ib + this.field_Xb;
-              var8 = jp.a(param4, param2, var6, -1);
-              var9 = pd.a(var7, 0, param1, param0);
-              this.a(var7, -20500, var6, var9, var8);
-              var10 = 0;
-              L2: while (true) {
-                if (this.field_Lb <= var10) {
-                  return;
-                } else {
-                  this.field_Sb[var10].a(this.field_Ib, this.field_Pb, -30061, -(2 * this.field_Rb) + var6, this.field_Ib * var10 + this.field_Xb, this.field_Rb, this.field_Yb);
-                  var10++;
-                  continue L2;
-                }
-              }
-            } else {
-              var8 = this.field_Sb[var7].a(param3 ^ 35, this.field_Yb, this.field_Pb);
-              if (var6 < var8) {
-                var6 = var8;
-                var7++;
-                continue L1;
-              } else {
-                var7++;
-                continue L1;
-              }
-            }
-          }
-        } else {
+        if (param3 != -118) {
           return;
         }
+        var6 = 0;
+        for (var7 = 0; var7 < this.field_Lb; var7++) {
+          var8 = this.field_Sb[var7].a(param3 ^ 35, this.field_Yb, this.field_Pb);
+          if (var6 < var8) {
+            var6 = var8;
+          }
+        }
+        var6 = var6 + 2 * this.field_Rb;
+        var7Lifetime1 = this.field_Xb + this.field_Lb * this.field_Ib + this.field_Xb;
+        var8Lifetime1 = jp.a(param4, param2, var6, -1);
+        var9 = pd.a(var7Lifetime1, 0, param1, param0);
+        this.a(var7Lifetime1, -20500, var6, var9, var8Lifetime1);
+        for (var10 = 0; this.field_Lb > var10; var10++) {
+          this.field_Sb[var10].a(this.field_Ib, this.field_Pb, -30061, -(2 * this.field_Rb) + var6, this.field_Ib * var10 + this.field_Xb, this.field_Rb, this.field_Yb);
+        }
+        return;
     }
 
     np(je param0, wk[] param1, je param2, je param3, int param4, int param5, int param6, int param7, int param8) {
@@ -140,23 +121,23 @@ final class np extends je {
         this.field_Kb = -2;
         this.field_Mb = new int[256];
         try {
-            this.field_Rb = param4;
-            this.field_Nb = param2;
-            this.field_Pb = param5;
-            this.field_Ub = param1;
-            this.field_Yb = param6;
-            this.field_Ib = param8;
-            this.field_Xb = param7;
-            this.field_Tb = param3;
+          this.field_Rb = param4;
+          this.field_Nb = param2;
+          this.field_Pb = param5;
+          this.field_Ub = param1;
+          this.field_Yb = param6;
+          this.field_Ib = param8;
+          this.field_Xb = param7;
+          this.field_Tb = param3;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "np.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     public static void e(byte param0) {
         field_Qb = null;
         if (param0 != 5) {
-            np.k(-69);
+          np.k(-69);
         }
         field_Jb = null;
         field_Vb = (int[][]) null;
@@ -165,18 +146,18 @@ final class np extends je {
 
     final void a(int param0, String param1, byte param2) {
         try {
-            if (param2 >= -98) {
-                np.k(-112);
-            }
-            this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, (wk) null, param1);
-            this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
-            this.field_Sb[this.field_Lb].field_ub = true;
-            this.field_Sb[this.field_Lb].field_Fb = 1;
-            this.a(this.field_Sb[this.field_Lb], 55);
-            this.field_Mb[this.field_Lb] = param0;
-            this.field_Lb = this.field_Lb + 1;
+          if (param2 >= -98) {
+            np.k(-112);
+          }
+          this.field_Sb[this.field_Lb] = new nf(0L, (je) null, (je) null, this.field_Tb, (wk) null, param1);
+          this.field_Sb[this.field_Lb].field_mb = this.field_Ub;
+          this.field_Sb[this.field_Lb].field_ub = true;
+          this.field_Sb[this.field_Lb].field_Fb = 1;
+          this.a(this.field_Sb[this.field_Lb], 55);
+          this.field_Mb[this.field_Lb] = param0;
+          this.field_Lb = this.field_Lb + 1;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "np.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -184,17 +165,17 @@ final class np extends je {
         int var2_int = 0;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            if (param0) {
-                np.e((byte) 102);
-            }
-            for (var2_int = 0; var2_int < param1.field_I; var2_int++) {
-                param1.field_o[var2_int] = 0;
-            }
-            param1.field_R = ih.field_E;
-            param1.field_Z = ih.field_E;
-            param1.field_t = ih.field_E;
+          if (param0) {
+            np.e((byte) 102);
+          }
+          for (var2_int = 0; var2_int < param1.field_I; var2_int++) {
+            param1.field_o[var2_int] = 0;
+          }
+          param1.field_R = ih.field_E;
+          param1.field_Z = ih.field_E;
+          param1.field_t = ih.field_E;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "np.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "np.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -205,33 +186,21 @@ final class np extends je {
         this.a(true, param1);
         if (!param1) {
           return -2;
-        } else {
-          L0: {
-            var3 = 0;
-            if (param0 > 93) {
-              break L0;
-            } else {
-              this.field_Kb = -92;
-              break L0;
-            }
-          }
-          L1: while (true) {
-            if (var3 >= this.field_Lb) {
-              if (tr.field_A != 0) {
-                return -1;
-              } else {
-                return this.field_Kb;
-              }
-            } else {
-              if ((this.field_Sb[var3].field_yb ^ -1) != -1) {
-                return this.field_Mb[var3];
-              } else {
-                var3++;
-                continue L1;
-              }
-            }
-          }
         }
+        var3 = 0;
+        if (param0 <= 93) {
+          this.field_Kb = -92;
+        }
+        while (var3 < this.field_Lb) {
+          if (this.field_Sb[var3].field_yb != 0) {
+            return this.field_Mb[var3];
+          }
+          var3++;
+        }
+        if (tr.field_A != 0) {
+          return -1;
+        }
+        return this.field_Kb;
     }
 
     static {

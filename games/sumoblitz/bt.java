@@ -8,9 +8,9 @@ abstract class bt extends pt {
 
     public static void c(byte param0) {
         if (param0 != -21) {
-            field_f = 90L;
-            field_e = null;
-            return;
+          field_f = 90L;
+          field_e = null;
+          return;
         }
         field_e = null;
     }
@@ -21,15 +21,15 @@ abstract class bt extends pt {
 
     final static boolean b(int param0) {
         if (param0 <= 64) {
-            return false;
+          return false;
         }
         return !ut.field_o.a(true) ? true : false;
     }
 
     final static uw a(boolean param0) {
         if (param0) {
-            field_e = (hr) null;
-            return (uw) ((Object) new fd());
+          field_e = (hr) null;
+          return (uw) ((Object) new fd());
         }
         return (uw) ((Object) new fd());
     }

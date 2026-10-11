@@ -12,61 +12,32 @@ final class hqa extends kca {
         it stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 14) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                this.a((byte) 77, (String) null);
-                break L1;
-              }
-            }
-            L2: {
-              if (fna.a(param0 ^ -118, param1) != null) {
-                stackIn_5_0 = 0;
-                break L2;
-              } else {
-                stackIn_5_0 = 1;
-                break L2;
-              }
-            }
-            var3_int = stackIn_5_0;
-            if (var3_int == 0) {
-              stackIn_8_0 = fp.field_c;
-              break L0;
-            } else {
-              return uh.field_k;
-            }
+          if (param0 != 14) {
+            var4 = (String) null;
+            this.a((byte) 77, (String) null);
           }
+          stackIn_5_0 = (fna.a(param0 ^ -118, param1) != null) ? 0 : 1;
+          var3_int = stackIn_5_0;
+          if (var3_int != 0) {
+            return uh.field_k;
+          }
+          stackIn_8_0 = fp.field_c;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("hqa.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("hqa.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
-        return stackIn_8_0;
     }
 
     final String a(int param0, String param1) {
@@ -75,65 +46,37 @@ final class hqa extends kca {
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.a((byte) 14, param1) == fp.field_c) {
-              stackIn_3_0 = pla.field_b;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                if (param0 == -1) {
-                  break L1;
-                } else {
-                  field_j = (ura) null;
-                  break L1;
-                }
-              }
-              stackIn_7_0 = dua.field_j;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          if (this.a((byte) 14, param1) == fp.field_c) {
+            stackIn_3_0 = pla.field_b;
+            return stackIn_3_0;
           }
+          if (param0 != -1) {
+            field_j = (ura) null;
+          }
+          stackIn_7_0 = dua.field_j;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("hqa.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("hqa.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_7_0;
+          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public static void f(int param0) {
         if (param0 != -1852) {
-            field_j = (ura) null;
-            field_j = null;
-            return;
+          field_j = (ura) null;
+          field_j = null;
+          return;
         }
         field_j = null;
     }

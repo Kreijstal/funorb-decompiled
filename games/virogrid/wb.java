@@ -12,50 +12,35 @@ class wb extends l {
     wb field_k;
 
     final void c(int param0) {
-        if (this.field_k != null) {
-          if (param0 < 10) {
-            return;
-          } else {
-            this.field_k.field_h = this.field_h;
-            this.field_h.field_k = this.field_k;
-            this.field_k = null;
-            this.field_h = null;
-            return;
-          }
-        } else {
+        if (this.field_k == null) {
+          return;
+        }
+        if (param0 >= 10) {
+          this.field_k.field_h = this.field_h;
+          this.field_h.field_k = this.field_k;
+          this.field_k = null;
+          this.field_h = null;
           return;
         }
     }
 
     final boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        if (param0 != 1) {
-          field_n = (String) null;
-          if (this.field_k != null) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (this.field_k == null) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 1) {
+          return this.field_k != null ? true : false;
         }
+        field_n = (String) null;
+        if (this.field_k == null) {
+          return false;
+        }
+        return true;
     }
 
     final void a(int param0, long param1) {
         if (this.field_k != null) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         if (param0 != 0) {
-            return;
+          return;
         }
         this.field_j = param1;
     }
@@ -68,40 +53,37 @@ class wb extends l {
     }
 
     final static void a(boolean param0, byte param1, boolean param2) {
-        int var3;
-        if (!param0) {
-          df.c();
-          ci.b(param0, -126);
-          var3 = -121 / ((79 - param1) / 35);
-          return;
-        } else {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param0) {
           df.b(0, 0, df.field_e, df.field_f, 0, 192);
           ci.b(param0, -126);
           var3 = -121 / ((79 - param1) / 35);
           return;
         }
+        df.c();
+        ci.b(param0, -126);
+        var3Lifetime1 = -121 / ((79 - param1) / 35);
     }
 
     public static void c(boolean param0) {
         field_n = null;
         field_g = null;
         field_m = null;
-        if (!param0) {
-          field_i = (String) null;
-          field_i = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0) {
           field_i = null;
           field_l = null;
           return;
         }
+        field_i = (String) null;
+        field_i = null;
+        field_l = null;
     }
 
     final long a(byte param0) {
         if (param0 <= 12) {
-            this.field_j = 6L;
-            return this.field_j;
+          this.field_j = 6L;
+          return this.field_j;
         }
         return this.field_j;
     }

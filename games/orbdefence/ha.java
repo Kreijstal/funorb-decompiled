@@ -17,9 +17,9 @@ final class ha extends ca {
         field_j = null;
         field_l = null;
         if (param0 <= 91) {
-            field_l = (String) null;
-            field_g = null;
-            return;
+          field_l = (String) null;
+          field_g = null;
+          return;
         }
         field_g = null;
     }

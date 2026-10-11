@@ -14,92 +14,67 @@ final class kf {
     private int field_a;
 
     final wb b(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         wb var2;
         int var3;
         wb var4;
         var3 = Virogrid.field_F ? 1 : 0;
         if (param0 == -1) {
-          L0: {
-            if (0 >= this.field_b) {
-              break L0;
-            } else {
-              if (this.field_h == this.field_f[this.field_b + -1]) {
-                break L0;
-              } else {
-                var2 = this.field_h;
-                this.field_h = var2.field_h;
-                return var2;
-              }
-            }
+          if (0 < this.field_b &&
+            this.field_h != this.field_f[this.field_b - 1]) {
+            var2 = this.field_h;
+            this.field_h = var2.field_h;
+            return var2;
           }
-          L1: while (true) {
-            if (this.field_b < this.field_a) {
-              fieldTemp$3 = this.field_b;
-              this.field_b = this.field_b + 1;
-              var4 = this.field_f[fieldTemp$3].field_h;
-              var2 = var4;
-              if (var4 != this.field_f[this.field_b + -1]) {
-                this.field_h = var2.field_h;
-                return var2;
-              } else {
-                continue L1;
-              }
-            } else {
+          do {
+            if (this.field_b >= this.field_a) {
               return null;
             }
-          }
-        } else {
-          kf.a(-101, -32);
-          if (0 < this.field_b) {
-            if (this.field_h == this.field_f[this.field_b + -1]) {
-              L2: while (true) {
-                if (this.field_b < this.field_a) {
-                  fieldTemp$4 = this.field_b;
-                  this.field_b = this.field_b + 1;
-                  var4 = this.field_f[fieldTemp$4].field_h;
-                  var2 = var4;
-                  if (var4 != this.field_f[this.field_b + -1]) {
-                    this.field_h = var2.field_h;
-                    return var2;
-                  } else {
-                    continue L2;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              var2 = this.field_h;
-              this.field_h = var2.field_h;
-              return var2;
-            }
-          } else {
-            L3: while (true) {
-              if (this.field_b < this.field_a) {
-                fieldTemp$5 = this.field_b;
-                this.field_b = this.field_b + 1;
-                var4 = this.field_f[fieldTemp$5].field_h;
-                var2 = var4;
-                if (var4 != this.field_f[this.field_b + -1]) {
-                  this.field_h = var2.field_h;
-                  return var2;
-                } else {
-                  continue L3;
-                }
-              } else {
-                return null;
-              }
-            }
-          }
+            fieldTemp$0 = this.field_b;
+            this.field_b = this.field_b + 1;
+            var4 = this.field_f[fieldTemp$0].field_h;
+            var2 = var4;
+          } while (var4 == this.field_f[this.field_b - 1]);
+          this.field_h = var2.field_h;
+          return var2;
         }
+        kf.a(-101, -32);
+        if (0 >= this.field_b) {
+          do {
+            if (this.field_b >= this.field_a) {
+              return null;
+            }
+            fieldTemp$2 = this.field_b;
+            this.field_b = this.field_b + 1;
+            var4 = this.field_f[fieldTemp$2].field_h;
+            var2 = var4;
+          } while (var4 == this.field_f[this.field_b - 1]);
+          this.field_h = var2.field_h;
+          return var2;
+        }
+        if (this.field_h != this.field_f[this.field_b - 1]) {
+          var2 = this.field_h;
+          this.field_h = var2.field_h;
+          return var2;
+        }
+        do {
+          if (this.field_b >= this.field_a) {
+            return null;
+          }
+          fieldTemp$1 = this.field_b;
+          this.field_b = this.field_b + 1;
+          var4 = this.field_f[fieldTemp$1].field_h;
+          var2 = var4;
+        } while (var4 == this.field_f[this.field_b - 1]);
+        this.field_h = var2.field_h;
+        return var2;
     }
 
     final static void a(int param0, int param1) {
         if (param1 != -1) {
-            return;
+          return;
         }
         el.field_r = param0;
     }
@@ -107,24 +82,22 @@ final class kf {
     final wb a(boolean param0) {
         this.field_b = 0;
         if (!param0) {
-            return (wb) null;
+          return (wb) null;
         }
         return this.b(-1);
     }
 
     public static void a(int param0) {
-        if (param0 != -1) {
-          kf.a(12);
-          field_j = null;
-          field_c = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_j = null;
           field_c = null;
           field_g = null;
           return;
         }
+        kf.a(12);
+        field_j = null;
+        field_c = null;
+        field_g = null;
     }
 
     final static void a(int param0, int param1, long param2, int param3, String param4, boolean param5) {
@@ -132,89 +105,75 @@ final class kf {
         gk.field_g.g(param0, 8);
         gk.field_g.field_l = gk.field_g.field_l + 1;
         if (param3 < 4) {
-            return;
+          return;
         }
         try {
-            var7_int = gk.field_g.field_l;
-            gk.field_g.a((byte) -66, param2);
-            gk.field_g.a(param4, (byte) -119);
-            gk.field_g.a(param1, 55);
-            gk.field_g.a(!param5 ? 0 : 1, 125);
-            gk.field_g.b(-var7_int + gk.field_g.field_l, -1);
+          var7_int = gk.field_g.field_l;
+          gk.field_g.a((byte) -66, param2);
+          gk.field_g.a(param4, (byte) -119);
+          gk.field_g.a(param1, 55);
+          gk.field_g.a(!param5 ? 0 : 1, 125);
+          gk.field_g.b(-var7_int + gk.field_g.field_l, -1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "kf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "kf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, wg param4, wg param5) {
         try {
-            ng.field_P = param1;
-            hd.field_e = param3;
-            ma.field_h = param5;
-            tg.field_D = param4;
-            dj.field_e = param2;
-            if (param0 != 0) {
-                kf.a((byte) -53);
-            }
+          ng.field_P = param1;
+          hd.field_e = param3;
+          ma.field_h = param5;
+          tg.field_D = param4;
+          dj.field_e = param2;
+          if (param0 != 0) {
+            kf.a((byte) -53);
+          }
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "kf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "kf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 0) {
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 0) {
           field_e = -105;
-          if (48 <= param1) {
-            if (param1 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (48 > param1) {
             return false;
           }
+          if (param1 <= 57) {
+            return true;
+          }
+          return false;
         }
+        if (48 > param1) {
+          return false;
+        }
+        if (param1 <= 57) {
+          return true;
+        }
+        return false;
     }
 
     final wb c(int param0) {
-        wb var2;
-        wb var3;
-        int var4;
-        var4 = Virogrid.field_F ? 1 : 0;
-        if (this.field_i != null) {
-          var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_a))];
-          L0: while (true) {
-            if (var2 == this.field_i) {
-              if (param0 != 48) {
-                return (wb) null;
-              } else {
-                this.field_i = null;
-                return null;
-              }
-            } else {
-              if ((this.field_d ^ -1L) == (this.field_i.field_j ^ -1L)) {
-                var3 = this.field_i;
-                this.field_i = this.field_i.field_h;
-                return var3;
-              } else {
-                this.field_i = this.field_i.field_h;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        wb var3 = null;
+        int var4 = Virogrid.field_F ? 1 : 0;
+        if (this.field_i == null) {
           return null;
         }
+        wb var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_a))];
+        while (var2 != this.field_i) {
+          if (~this.field_d == ~this.field_i.field_j) {
+            var3 = this.field_i;
+            this.field_i = this.field_i.field_h;
+            return var3;
+          }
+          this.field_i = this.field_i.field_h;
+        }
+        if (param0 == 48) {
+          this.field_i = null;
+          return null;
+        }
+        return (wb) null;
     }
 
     final wb a(long param0, byte param1) {
@@ -224,154 +183,92 @@ final class kf {
         int var6;
         var6 = Virogrid.field_F ? 1 : 0;
         this.field_d = param0;
-        var4 = this.field_f[(int)((long)(this.field_a + -1) & param0)];
+        var4 = this.field_f[(int)((long)(this.field_a - 1) & param0)];
         this.field_i = var4.field_h;
-        L0: while (true) {
-          if (this.field_i != var4) {
-            if (this.field_i.field_j != param0) {
-              this.field_i = this.field_i.field_h;
-              continue L0;
-            } else {
-              var5 = this.field_i;
-              this.field_i = this.field_i.field_h;
-              return var5;
-            }
-          } else {
+        while (true) {
+          if (this.field_i == var4) {
             var5_int = 59 / ((43 - param1) / 33);
             this.field_i = null;
             return null;
           }
+          if (this.field_i.field_j != param0) {
+            this.field_i = this.field_i.field_h;
+            continue;
+          }
+          break;
         }
+        var5 = this.field_i;
+        this.field_i = this.field_i.field_h;
+        return var5;
     }
 
     final void a(long param0, wb param1, int param2) {
-        if (!(null == param1.field_k)) {
-            param1.c(92);
+        if (null != param1.field_k) {
+          param1.c(92);
         }
-        wb var5 = this.field_f[(int)((long)(this.field_a + -1) & param0)];
+        wb var5 = this.field_f[(int)((long)(this.field_a - 1) & param0)];
         param1.field_h = var5;
         param1.field_k = var5.field_k;
         param1.field_k.field_h = param1;
         param1.field_h.field_k = param1;
         if (param2 != 30804) {
-            return;
+          return;
         }
         try {
-            param1.field_j = param0;
+          param1.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "kf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "kf.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static boolean a(byte param0) {
+        int var2 = 0;
         bf var1 = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
         int var3 = 0;
         bf var4 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (bf) ((Object) l.field_c.a((byte) -66));
-            var1 = var4;
-            if (var1 != null) {
-              L1: {
-                if (param0 == -74) {
-                  break L1;
-                } else {
-                  kf.a((byte) -15);
-                  break L1;
-                }
-              }
-              var2 = 0;
-              L2: while (true) {
-                if (var1.field_n <= var2) {
-                  stackIn_19_0 = 1;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  L3: {
-                    if (var4.field_q[var2] == null) {
-                      break L3;
-                    } else {
-                      if (var4.field_q[var2].field_a != 0) {
-                        break L3;
-                      } else {
-                        stackIn_11_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  L4: {
-                    if (var4.field_r[var2] != null) {
-                      if (0 != var4.field_r[var2].field_a) {
-                        break L4;
-                      } else {
-                        stackIn_16_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    } else {
-                      break L4;
-                    }
-                  }
-                  var2++;
-                  continue L2;
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var4 = (bf) (l.field_c.a((byte) -66));
+          var1 = var4;
+          if (var1 == null) {
+            return false;
+          }
+          if (param0 != -74) {
+            kf.a((byte) -15);
+          }
+          for (var2 = 0; var1.field_n > var2; var2++) {
+            if (var4.field_q[var2] != null &&
+              var4.field_q[var2].field_a == 0) {
+              return false;
+            }
+            if (var4.field_r[var2] != null &&
+              0 == var4.field_r[var2].field_a) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw kg.a((Throwable) ((Object) var1_ref), "kf.D(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0 != 0;
-            } else {
-              return stackIn_19_0 != 0;
-            }
-          }
-        }
     }
 
     kf(int param0) {
+        int var2 = 0;
         wb dupTemp$1 = null;
-        int var2;
         wb var3;
         this.field_b = 0;
         this.field_f = new wb[param0];
         this.field_a = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new wb();
-            var3 = dupTemp$1;
-            this.field_f[var2] = dupTemp$1;
-            var3.field_h = var3;
-            var3.field_k = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new wb();
+          var3 = dupTemp$1;
+          this.field_f[var2] = dupTemp$1;
+          var3.field_h = var3;
+          var3.field_k = var3;
         }
     }
 

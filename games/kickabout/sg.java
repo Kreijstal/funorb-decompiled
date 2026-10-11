@@ -14,7 +14,7 @@ final class sg {
         field_d = null;
         field_a = null;
         if (param0) {
-            sg.a(false);
+          sg.a(false);
         }
     }
 

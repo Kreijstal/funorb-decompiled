@@ -11,7 +11,7 @@ final class wf {
         field_c = null;
         field_b = null;
         if (param0 < 35) {
-            wf.a(50);
+          wf.a(50);
         }
     }
 

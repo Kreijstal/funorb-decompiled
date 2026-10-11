@@ -12,20 +12,20 @@ final class gd {
         field_b = null;
         field_d = null;
         if (param0 != -27770) {
-            return;
+          return;
         }
         field_e = null;
     }
 
     final static void a(vj param0, int param1, vj param2) {
         try {
-            if (param1 != 255) {
-                field_b = (he[]) null;
-            }
-            ce.field_a = param2;
-            sb.field_g = param0;
+          if (param1 != 255) {
+            field_b = (he[]) null;
+          }
+          ce.field_a = param2;
+          sb.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "gd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "gd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

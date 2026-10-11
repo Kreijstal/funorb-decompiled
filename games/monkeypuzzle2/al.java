@@ -9,53 +9,28 @@ abstract class al {
 
     final static boolean a(ad param0, byte param1) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 > 19) {
-              stackIn_4_0 = param0.b(0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 > 19) {
+            stackIn_4_0 = param0.b(0);
+            return stackIn_4_0;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("al.G(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("al.G(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
+          throw la.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -67,134 +42,84 @@ abstract class al {
         int var5;
         int var3;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = -50 / ((param1 - -40) / 48);
+        var2 = -50 / ((param1 + 40) / 48);
         var4 = aa.field_a;
-        if (-2 != (var4 ^ -1)) {
-          if ((var4 ^ -1) != -3) {
-            if ((var4 ^ -1) != -4) {
-              return;
-            } else {
-              tj.field_a.c(0, 0);
-              return;
-            }
-          } else {
-            ne.field_a[1].b(0, 0);
-            var3 = 50 - -(int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
-            ne.field_a[0].b(0, 0, var3);
-            ge.h(80, 0, 560, 480);
-            ik.field_p[i.field_n].b(100, 0, 70);
-            cl.field_c[sk.field_G].b(0, 0, 100);
-            ge.b();
-            return;
-          }
-        } else {
+        if (var4 == 1) {
           ib.field_b.a(0, 0);
           var4 = (int)(20.0f * ia.a(true, (float)param0 * 0.009999999776482582f)) + 70;
           m.field_k.b(0, 0, var4);
           return;
         }
+        if (var4 != 2) {
+          if (var4 != 3) {
+            return;
+          }
+          tj.field_a.c(0, 0);
+          return;
+        }
+        ne.field_a[1].b(0, 0);
+        var3 = 50 + (int)(ia.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
+        ne.field_a[0].b(0, 0, var3);
+        ge.h(80, 0, 560, 480);
+        ik.field_p[i.field_n].b(100, 0, 70);
+        cl.field_c[sk.field_G].b(0, 0, 100);
+        ge.b();
+        return;
     }
 
     final static String a(char param0, int param1, int param2) {
-        char[] var3;
-        int var4;
-        int var5;
-        char[] var6;
-        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param2 != 12663) {
-          return (String) null;
-        } else {
+        char[] var6 = null;
+        int var4 = 0;
+        int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+        if (param2 == 12663) {
           var6 = new char[param1];
-          var3 = var6;
-          var4 = 0;
-          L0: while (true) {
-            if (param1 <= var4) {
-              return new String(var6);
-            } else {
-              var6[var4] = param0;
-              var4++;
-              continue L0;
-            }
+          char[] var3 = var6;
+          for (var4 = 0; param1 > var4; var4++) {
+            var6[var4] = param0;
           }
+          return new String(var6);
         }
+        return (String) null;
     }
 
     final static void a(byte param0, int param1) {
         try {
-            IOException iOException = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0 == -71) {
-                break L0;
-              } else {
-                al.a('ﾑ', -120, -100);
-                break L0;
-              }
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != -71) {
+            al.a('ﾑ', -120, -100);
+          }
+          if (null != ol.field_g && (0 > param1 ||
+            dk.field_h == wh.field_b)) {
+            if (gf.field_c.field_h == 0 &&
+              10000L + qg.field_d < pf.a(0)) {
+              gf.field_c.b(true, param1);
             }
-            L1: {
-              if (null == ol.field_g) {
-                break L1;
-              } else {
-                L2: {
-                  if (0 > param1) {
-                    break L2;
-                  } else {
-                    if (dk.field_h == wh.field_b) {
-                      break L2;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                L3: {
-                  if (gf.field_c.field_h != 0) {
-                    break L3;
-                  } else {
-                    if (10000L + qg.field_d < pf.a(0)) {
-                      gf.field_c.b(true, param1);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (0 >= gf.field_c.field_h) {
-                    break L4;
-                  } else {
-                    try {
-                      L5: {
-                        ol.field_g.a(gf.field_c.field_g, 0, (byte) 122, gf.field_c.field_h);
-                        qg.field_d = pf.a(param0 + 71);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        gk.a(-1);
-                        break L6;
-                      }
-                    }
-                    gf.field_c.field_h = 0;
-                    break L4;
-                  }
-                }
-                return;
+            if (0 < gf.field_c.field_h) {
+              try {
+                ol.field_g.a(gf.field_c.field_g, 0, (byte) 122, gf.field_c.field_h);
+                qg.field_d = pf.a(param0 + 71);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+                gk.a(-1);
               }
+              gf.field_c.field_h = 0;
             }
-            gf.field_c.field_h = 0;
+            return;
+          }
+          gf.field_c.field_h = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int a(byte param0) {
         if (param0 != 113) {
-            al.a(-92, (byte) 8);
-            return fd.field_s;
+          al.a(-92, (byte) 8);
+          return fd.field_s;
         }
         return fd.field_s;
     }
@@ -203,17 +128,16 @@ abstract class al {
         int var1 = pf.a((byte) -92, 3);
         cj.a((byte) 108, ke.field_h[25 + var1]);
         if (param0 > -80) {
-            return;
+          return;
         }
     }
 
     final java.net.Socket b(byte param0) throws IOException {
-        if (param0 < 120) {
-          this.field_a = 127;
-          return new java.net.Socket(this.field_b, this.field_a);
-        } else {
+        if (param0 >= 120) {
           return new java.net.Socket(this.field_b, this.field_a);
         }
+        this.field_a = 127;
+        return new java.net.Socket(this.field_b, this.field_a);
     }
 
     final static int a(int param0, int param1, boolean param2) {
@@ -222,58 +146,32 @@ abstract class al {
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param2) {
-              var3_int = 1;
-              L1: while (true) {
-                if ((param1 ^ -1) >= -2) {
-                  if (-2 != (param1 ^ -1)) {
-                    stackIn_15_0 = var3_int;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    stackIn_13_0 = param0 * var3_int;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  L2: {
-                    if (0 != (param1 & 1)) {
-                      var3_int = var3_int * param0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  param1 = param1 >> 1;
-                  param0 = param0 * param0;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = -124;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!param2) {
+            stackIn_3_0 = -124;
+            return stackIn_3_0;
           }
+          var3_int = 1;
+          while (param1 > 1) {
+            if (0 != (param1 & 1)) {
+              var3_int = var3_int * param0;
+            }
+            param1 = param1 >> 1;
+            param0 = param0 * param0;
+          }
+          if (param1 != 1) {
+            stackIn_15_0 = var3_int;
+            return stackIn_15_0;
+          }
+          stackIn_13_0 = param0 * var3_int;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var3), "al.I(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0;
-          } else {
-            return stackIn_15_0;
-          }
         }
     }
 

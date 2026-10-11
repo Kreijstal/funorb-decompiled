@@ -12,7 +12,7 @@ final class jq {
         field_a = null;
         field_c = null;
         if (!param0) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

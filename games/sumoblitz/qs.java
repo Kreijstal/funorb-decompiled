@@ -9,14 +9,15 @@ final class qs extends fj implements nh {
 
     qs(ir param0, iw param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, param1, io.field_g, false, param3 * param2 * param4);
+        int var14 = 0;
         int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         int var13;
-        int var14;
         jagdx.PixelBuffer var15;
+        int var13Lifetime1;
         this.field_f = param4;
         this.field_g = param2;
         this.field_i = param3;
@@ -25,73 +26,52 @@ final class qs extends fj implements nh {
         var8 = this.field_h.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (!jagdx.gv.b(var8, -94)) {
           return;
-        } else {
-          var9 = this.field_d.field_c * this.field_g;
-          var10 = var9 * this.field_i;
-          var11 = var15.getSlicePitch();
-          if (var11 != var10) {
-            var12 = var15.getRowPitch();
-            if (var12 != var9) {
-              var13 = 0;
-              L0: while (true) {
-                if (this.field_f <= var13) {
-                  this.field_h.UnlockBox(0);
-                  return;
-                } else {
-                  var14 = 0;
-                  L1: while (true) {
-                    if (this.field_i <= var14) {
-                      var13++;
-                      continue L0;
-                    } else {
-                      var15.a(param5, var13 * var10 + var9 * var14, var12 * var14 + var11 * var13, var9);
-                      var14++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
-            } else {
-              var13 = 0;
-              L2: while (true) {
-                if (this.field_f <= var13) {
-                  this.field_h.UnlockBox(0);
-                  return;
-                } else {
-                  var15.a(param5, var10 * var13, var13 * var11, var10);
-                  var13++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            var15.a(param5, 0, 0, var9 * this.field_i * this.field_f);
-            this.field_h.UnlockBox(0);
-            return;
+        }
+        var9 = this.field_d.field_c * this.field_g;
+        var10 = var9 * this.field_i;
+        var11 = var15.getSlicePitch();
+        if (var11 == var10) {
+          var15.a(param5, 0, 0, var9 * this.field_i * this.field_f);
+          this.field_h.UnlockBox(0);
+          return;
+        }
+        var12 = var15.getRowPitch();
+        if (var12 == var9) {
+          for (var13 = 0; this.field_f > var13; var13++) {
+            var15.a(param5, var10 * var13, var13 * var11, var10);
+          }
+          this.field_h.UnlockBox(0);
+          return;
+        }
+        for (var13Lifetime1 = 0; this.field_f > var13Lifetime1; var13Lifetime1++) {
+          for (var14 = 0; this.field_i > var14; var14++) {
+            var15.a(param5, var13Lifetime1 * var10 + var9 * var14, var12 * var14 + var11 * var13Lifetime1, var9);
           }
         }
+        this.field_h.UnlockBox(0);
+        return;
     }
 
     public final void a(ji param0, int param1) {
         if (param1 != 15149) {
-            return;
+          return;
         }
         super.a(param0, param1 + 0);
     }
 
     final jagdx.IDirect3DBaseTexture d(int param0) {
         if (param0 != -22689) {
-            this.field_g = -6;
-            return (jagdx.IDirect3DBaseTexture) ((Object) this.field_h);
+          this.field_g = -6;
+          return (jagdx.IDirect3DBaseTexture) ((Object) this.field_h);
         }
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_h);
     }
 
     public final void a(int param0) {
-        this.field_b.a(2, (qs) (this));
+        this.field_b.a(2, this);
         if (param0 != 8905) {
-            ji var3 = (ji) null;
-            this.a((ji) null, 117);
+          ji var3 = (ji) null;
+          this.a((ji) null, 117);
         }
     }
 }

@@ -22,21 +22,21 @@ final class sc {
         ih var5 = null;
         int var4 = 0;
         try {
-            var5 = ud.field_b;
-            var5.e(param2 + 7, param0);
-            var5.field_i = var5.field_i + 1;
-            var4 = var5.field_i;
-            var5.a(param2 ^ -12, param2);
-            var5.a(-11, param1.field_j);
-            var5.a(param2 + -12, param1.field_m);
-            var5.a(param1.field_o, (byte) -46);
-            var5.a(param1.field_i, (byte) -82);
-            var5.a(param1.field_l, (byte) -67);
-            var5.a(param1.field_n, (byte) -42);
-            var5.c(var4, param2 + -30533);
-            var5.c((byte) -81, var5.field_i - var4);
+          var5 = ud.field_b;
+          var5.e(param2 + 7, param0);
+          var5.field_i = var5.field_i + 1;
+          var4 = var5.field_i;
+          var5.a(param2 ^ -12, param2);
+          var5.a(-11, param1.field_j);
+          var5.a(param2 - 12, param1.field_m);
+          var5.a(param1.field_o, (byte) -46);
+          var5.a(param1.field_i, (byte) -82);
+          var5.a(param1.field_l, (byte) -67);
+          var5.a(param1.field_n, (byte) -42);
+          var5.c(var4, param2 - 30533);
+          var5.c((byte) -81, var5.field_i - var4);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "sc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -51,44 +51,28 @@ final class sc {
         try {
           var1 = rh.field_f;
           synchronized (var1) {
-            L0: {
-              L1: {
-                tl.field_o = tc.field_h;
-                lg.field_d = lg.field_d + 1;
-                if ((em.field_f ^ -1) > param0) {
-                  var5 = 0;
-                  var2 = var5;
-                  L2: while (true) {
-                    if (-113 >= (var5 ^ -1)) {
-                      em.field_f = sd.field_a;
-                      break L1;
-                    } else {
-                      ei.field_H[var5] = false;
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  L3: while (true) {
-                    if (em.field_f == sd.field_a) {
-                      break L1;
-                    } else {
-                      var2 = qk.field_b[sd.field_a];
-                      sd.field_a = 127 & 1 + sd.field_a;
-                      if (0 <= var2) {
-                        ei.field_H[var2] = true;
-                        continue L3;
-                      } else {
-                        ei.field_H[var2 ^ -1] = false;
-                        continue L3;
-                      }
-                    }
-                  }
-                }
+            tl.field_o = tc.field_h;
+            lg.field_d = lg.field_d + 1;
+            if (~em.field_f > param0) {
+              var5 = 0;
+              var2 = var5;
+              while (var5 < 112) {
+                ei.field_H[var5] = false;
+                var5++;
               }
-              tc.field_h = ak.field_e;
-              break L0;
+              em.field_f = sd.field_a;
+            } else {
+              while (em.field_f != sd.field_a) {
+                var2 = qk.field_b[sd.field_a];
+                sd.field_a = 127 & 1 + sd.field_a;
+                if (0 <= var2) {
+                  ei.field_H[var2] = true;
+                  continue;
+                }
+                ei.field_H[~var2] = false;
+              }
             }
+            tc.field_h = ak.field_e;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -9,36 +9,30 @@ final class ff extends vd {
     static String[] field_v;
 
     final void a(int param0) {
-        int var2;
-        if (this.field_s) {
-          var2 = 108 % ((67 - param0) / 47);
-          if (null != this.field_w) {
-            if (this.field_m == this.field_w.field_z) {
-              if (this.field_i != this.field_w.field_w) {
-                this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
-                return;
-              } else {
-                this.field_w.f(this.field_k, this.field_t);
-                return;
-              }
-            } else {
-              this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (!this.field_s) {
           return;
         }
+        int var2 = 108 % ((67 - param0) / 47);
+        if (null == this.field_w) {
+          return;
+        }
+        if (this.field_m != this.field_w.field_z) {
+          this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
+          return;
+        }
+        if (this.field_i == this.field_w.field_w) {
+          this.field_w.f(this.field_k, this.field_t);
+          return;
+        }
+        this.field_w.b(this.field_k, this.field_t, this.field_m, this.field_i);
     }
 
     ff(int param0, int param1, int param2, int param3, bi param4) {
         super(param0, param1, param2, param3);
         try {
-            this.field_w = param4;
+          this.field_w = param4;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +40,7 @@ final class ff extends vd {
         field_x = (int[][]) null;
         field_v = null;
         if (param0 >= -17) {
-            field_x = (int[][]) null;
+          field_x = (int[][]) null;
         }
     }
 
@@ -57,49 +51,28 @@ final class ff extends vd {
     ff(int param0, int param1, bi param2) {
         super(param0, param1, param2.field_z, param2.field_w);
         try {
-            this.field_w = param2;
+          this.field_w = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ff.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean d(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 34) {
-          L0: {
-            field_y = 45;
-            if (null != this.field_w) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (null != this.field_w) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 34) {
+          return null == this.field_w ? true : false;
         }
+        field_y = 45;
+        return null == this.field_w ? true : false;
     }
 
     final void a(int param0, bi param1) {
         try {
-            this.field_w = param1;
-            if (param0 != -2948) {
-                this.d((byte) 56);
-            }
+          this.field_w = param1;
+          if (param0 != -2948) {
+            this.d((byte) 56);
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

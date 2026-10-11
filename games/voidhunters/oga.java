@@ -16,216 +16,118 @@ final class oga extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                var4 = (nc[]) null;
-                this.a((nc[]) null, 8);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(32, 118));
-            break L0;
+          if (param1 > -119) {
+            var4 = (nc[]) null;
+            this.a((nc[]) null, 8);
           }
+          stackIn_3_0 = new nc(frb.a(32, 118));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("oga.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("oga.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         if (param0 <= 27) {
-            oga.a(23, 89, -52, 81, -123, -26, false);
+          oga.a(23, 89, -52, 81, -123, -26, false);
         }
-        if (!(!wq.e((byte) 105))) {
-            gaa.a(param2, 11343, param4, param6);
-            if (null != cka.field_o && cka.field_o.a(param6, -11, param1, param4, param3)) {
-                lnb.d(0);
-                param6 = false;
-            }
-            jra.a(param4, param6, 19717);
-            oj.a((byte) -127, param6, param5);
+        if (wq.e((byte) 105)) {
+          gaa.a(param2, 11343, param4, param6);
+          if (null != cka.field_o &&
+            cka.field_o.a(param6, -11, param1, param4, param3)) {
+            lnb.d(0);
             param6 = false;
+          }
+          jra.a(param4, param6, 19717);
+          oj.a((byte) -127, param6, param5);
+          param6 = false;
         }
         return param6;
     }
 
     final static boolean a(char param0, byte param1) {
-        L0: {
-          if (param0 < 32) {
-            break L0;
-          } else {
-            if (param0 <= 126) {
-              return true;
-            } else {
-              break L0;
-            }
-          }
+        if (param0 >= 32 &&
+          param0 <= 126) {
+          return true;
         }
-        L1: {
-          if (160 > param0) {
-            break L1;
-          } else {
-            if (param0 <= 255) {
-              return true;
-            } else {
-              break L1;
-            }
-          }
+        if (160 <= param0 &&
+          param0 <= 255) {
+          return true;
         }
-        L2: {
-          if (param0 == 8364) {
-            break L2;
-          } else {
-            if (param0 == 338) {
-              break L2;
-            } else {
-              if (8212 == param0) {
-                break L2;
-              } else {
-                if (param0 == 339) {
-                  break L2;
-                } else {
-                  if (param0 == 376) {
-                    break L2;
-                  } else {
-                    if (param1 == 32) {
-                      return false;
-                    } else {
-                      return false;
-                    }
-                  }
-                }
-              }
-            }
+        if (param0 != 8364 &&
+          param0 != 338 &&
+          8212 != param0 &&
+          param0 != 339 &&
+          param0 != 376) {
+          if (param1 == 32) {
           }
+          return false;
         }
         return true;
     }
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = VoidHunters.field_G;
-            try {
-              L0: {
-                L1: {
-                  if (param0 == 16928) {
-                    break L1;
-                  } else {
-                    field_o = -75;
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (ff.field_o == null) {
-                    break L2;
-                  } else {
-                    ff.field_o.a(116);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (nj.field_a == null) {
-                    break L3;
-                  } else {
-                    nj.field_a.a(23474);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (cba.field_e != null) {
-                    try {
-                      L5: {
-                        cba.field_e.a(true);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
-                    }
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L7: {
-                  if (null != btb.field_d) {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= btb.field_d.length) {
-                        break L7;
-                      } else {
-                        if (null != btb.field_d[var1_int]) {
-                          try {
-                            L9: {
-                              btb.field_d[var1_int].a(true);
-                              break L9;
-                            }
-                          } catch (java.io.IOException decompiledCaughtParameter1) {
-                            decompiledCaughtException = decompiledCaughtParameter1;
-                            L10: {
-                              var2 = (IOException) (Object) decompiledCaughtException;
-                              break L10;
-                            }
-                          }
-                          var1_int++;
-                          continue L8;
-                        } else {
-                          var1_int++;
-                          continue L8;
-                        }
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw rta.a((Throwable) ((Object) var1), "oga.D(" + param0 + ')');
+          int var1_int = 0;
+          IOException iOException = null;
+          int var3 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          IOException var2 = null;
+          var3 = VoidHunters.field_G;
+          try {
+            if (param0 != 16928) {
+              field_o = -75;
             }
+            if (ff.field_o != null) {
+              ff.field_o.a(116);
+            }
+            if (nj.field_a != null) {
+              nj.field_a.a(23474);
+            }
+            if (cba.field_e != null) {
+              try {
+                cba.field_e.a(true);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (null != btb.field_d) {
+              for (var1_int = 0; var1_int < btb.field_d.length; var1_int++) {
+                if (null != btb.field_d[var1_int]) {
+                  try {
+                    btb.field_d[var1_int].a(true);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
+                }
+              }
+              return;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw rta.a((Throwable) ((Object) var1), "oga.D(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

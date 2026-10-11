@@ -20,56 +20,43 @@ final class mo {
     static String field_j;
 
     final tf a(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var3;
-        Object var4;
-        tf var4_ref;
+        tf var4;
         tf var5;
         tf var9;
         tf var12;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        if (param0 > (this.field_i ^ -1)) {
-          if (this.field_k != this.field_n[this.field_i + -1]) {
-            var12 = this.field_k;
-            this.field_k = var12.field_l;
-            return var12;
-          } else {
-            L0: while (true) {
-              if (this.field_i < this.field_e) {
-                fieldTemp$2 = this.field_i;
-                this.field_i = this.field_i + 1;
-                var4_ref = this.field_n[fieldTemp$2].field_l;
-                var9 = var4_ref;
-                if (var4_ref == this.field_n[-1 + this.field_i]) {
-                  continue L0;
-                } else {
-                  this.field_k = var9.field_l;
-                  return var9;
-                }
-              } else {
-                return null;
-              }
-            }
-          }
-        } else {
-          L1: while (true) {
-            if (this.field_i < this.field_e) {
-              fieldTemp$3 = this.field_i;
-              this.field_i = this.field_i + 1;
-              var4_ref = this.field_n[fieldTemp$3].field_l;
-              var5 = var4_ref;
-              if (var4_ref == this.field_n[-1 + this.field_i]) {
-                continue L1;
-              } else {
-                this.field_k = var5.field_l;
-                return var5;
-              }
-            } else {
+        if (param0 <= ~this.field_i) {
+          do {
+            if (this.field_i >= this.field_e) {
               return null;
             }
-          }
+            fieldTemp$1 = this.field_i;
+            this.field_i = this.field_i + 1;
+            var4 = this.field_n[fieldTemp$1].field_l;
+            var5 = var4;
+          } while (var4 == this.field_n[-1 + this.field_i]);
+          this.field_k = var5.field_l;
+          return var5;
         }
+        if (this.field_k != this.field_n[this.field_i - 1]) {
+          var12 = this.field_k;
+          this.field_k = var12.field_l;
+          return var12;
+        }
+        do {
+          if (this.field_i >= this.field_e) {
+            return null;
+          }
+          fieldTemp$0 = this.field_i;
+          this.field_i = this.field_i + 1;
+          var4 = this.field_n[fieldTemp$0].field_l;
+          var9 = var4;
+        } while (var4 == this.field_n[-1 + this.field_i]);
+        this.field_k = var9.field_l;
+        return var9;
     }
 
     final tf f(int param0) {
@@ -86,59 +73,31 @@ final class mo {
         fg stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -127) {
-                break L1;
-              } else {
-                field_j = (String) null;
-                break L1;
-              }
-            }
-            var4 = param1.d(param2, 31662);
-            var3 = var4;
-            if (var4 != null) {
-              stackIn_6_0 = new fg(var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -127) {
+            field_j = (String) null;
           }
+          var4 = param1.d(param2, 31662);
+          var3 = var4;
+          if (var4 != null) {
+            stackIn_6_0 = new fg(var4);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (fg) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (fg) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -146,19 +105,19 @@ final class mo {
         tf var3 = null;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
         if (null == this.field_c) {
-            return null;
+          return null;
         }
         tf var2 = this.field_n[(int)((long)(-1 + this.field_e) & this.field_m)];
         while (this.field_c != var2) {
-            if (!(this.field_c.field_k != this.field_m)) {
-                var3 = this.field_c;
-                this.field_c = this.field_c.field_l;
-                return var3;
-            }
+          if (this.field_c.field_k == this.field_m) {
+            var3 = this.field_c;
             this.field_c = this.field_c.field_l;
+            return var3;
+          }
+          this.field_c = this.field_c.field_l;
         }
         if (param0 >= -12) {
-            return (tf) null;
+          return (tf) null;
         }
         this.field_c = null;
         return null;
@@ -166,10 +125,10 @@ final class mo {
 
     final static void g(int param0) {
         if (param0 != -1) {
-            field_b = (qb[]) null;
-            ff.a(true, kf.field_a, (byte) -97, on.field_d);
-            di.field_h = true;
-            return;
+          field_b = (qb[]) null;
+          ff.a(true, kf.field_a, (byte) -97, on.field_d);
+          di.field_h = true;
+          return;
         }
         ff.a(true, kf.field_a, (byte) -97, on.field_d);
         di.field_h = true;
@@ -177,7 +136,7 @@ final class mo {
 
     final static int b(int param0) {
         if (param0 != 25117) {
-            return -35;
+          return -35;
         }
         return ih.field_b;
     }
@@ -188,39 +147,46 @@ final class mo {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
+        wa var3Lifetime1;
+        ne var4Lifetime1;
+        String var5_ref_StringLifetime1;
+        ne var4Lifetime2;
+        ne var4Lifetime1Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
         if (param0 != 1) {
-            field_j = (String) null;
-            var3 = bj.a(param1, -3, param2);
-            if (!(var3 == null)) {
-                eo.field_c.a((byte) 72, false);
-                var4 = eo.field_c;
-                var5_ref_String = vk.field_z;
-                var4.field_l.a(5, var5_ref_String, (byte) -26);
-                var4 = eo.field_c;
-                var5 = pb.field_h;
-                var6 = ja.field_s;
-                var4.field_l.a(0, 0, param0 + -29467, var6, var5);
-            }
-            hg.a(param2, param1, false);
-            return;
-        }
-        var3 = bj.a(param1, -3, param2);
-        if (!(var3 == null)) {
+          field_j = (String) null;
+          var3 = bj.a(param1, -3, param2);
+          if (var3 != null) {
             eo.field_c.a((byte) 72, false);
             var4 = eo.field_c;
             var5_ref_String = vk.field_z;
             var4.field_l.a(5, var5_ref_String, (byte) -26);
-            var4 = eo.field_c;
+            var4Lifetime2 = eo.field_c;
             var5 = pb.field_h;
             var6 = ja.field_s;
-            var4.field_l.a(0, 0, param0 + -29467, var6, var5);
+            var4Lifetime2.field_l.a(0, 0, param0 - 29467, var6, var5);
+          }
+          hg.a(param2, param1, false);
+          return;
+        }
+        var3Lifetime1 = bj.a(param1, -3, param2);
+        if (var3Lifetime1 != null) {
+          eo.field_c.a((byte) 72, false);
+          var4Lifetime1 = eo.field_c;
+          var5_ref_StringLifetime1 = vk.field_z;
+          var4Lifetime1.field_l.a(5, var5_ref_StringLifetime1, (byte) -26);
+          var4Lifetime1Lifetime1 = eo.field_c;
+          var5Lifetime1 = pb.field_h;
+          var6Lifetime1 = ja.field_s;
+          var4Lifetime1Lifetime1.field_l.a(0, 0, param0 - 29467, var6Lifetime1, var5Lifetime1);
         }
         hg.a(param2, param1, false);
     }
 
     final static ri a(String param0, int param1) {
-        int var2_int = 0;
         int var3 = 0;
+        int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
         ri stackIn_3_0 = null;
@@ -230,124 +196,66 @@ final class mo {
         ri stackIn_25_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length();
-            if (param1 == 45) {
-              if (var2_int == 0) {
-                stackIn_7_0 = uh.field_i;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if ((var2_int ^ -1) < -64) {
-                  stackIn_11_0 = b.field_e;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  var3 = 0;
-                  L1: while (true) {
-                    if (var2_int > var3) {
-                      L2: {
-                        var4 = param0.charAt(var3);
-                        if (var4 == 45) {
-                          L3: {
-                            if (0 == var3) {
-                              break L3;
-                            } else {
-                              if (var3 == var2_int - 1) {
-                                break L3;
-                              } else {
-                                break L2;
-                              }
-                            }
-                          }
-                          stackIn_21_0 = n.field_b;
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          if (-1 == rj.field_e.indexOf(var4)) {
-                            stackIn_25_0 = n.field_b;
-                            decompiledRegionSelector0 = 4;
-                            break L0;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
-                      var3++;
-                      continue L1;
-                    } else {
-                      return null;
-                    }
-                  }
-                }
+          var2_int = param0.length();
+          if (param1 != 45) {
+            stackIn_3_0 = (ri) null;
+            return stackIn_3_0;
+          }
+          if (var2_int == 0) {
+            stackIn_7_0 = uh.field_i;
+            return stackIn_7_0;
+          }
+          if (var2_int > 63) {
+            stackIn_11_0 = b.field_e;
+            return stackIn_11_0;
+          }
+          for (var3 = 0; var2_int > var3; var3++) {
+            var4 = param0.charAt(var3);
+            if (var4 == 45) {
+              if (0 == var3 ||
+                var3 == var2_int - 1) {
+                stackIn_21_0 = n.field_b;
+                return stackIn_21_0;
               }
             } else {
-              stackIn_3_0 = (ri) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_30_0 = (RuntimeException) (var2);
-
-            stackIn_30_1 = new StringBuilder().append("mo.K(");
-
-            if (param0 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "null";
-              break L4;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "{...}";
-              break L4;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_31_0), stackIn_31_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_11_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_21_0;
-              } else {
+              if (-1 == rj.field_e.indexOf(var4)) {
+                stackIn_25_0 = n.field_b;
                 return stackIn_25_0;
               }
             }
           }
+          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_30_0 = var2;
+          stackIn_30_1 = new StringBuilder().append("mo.K(");
+          if (param0 == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
+          }
+          throw aa.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void c(int param0) {
         field_l = null;
         if (param0 != 0) {
-            mo.b(31);
-            field_d = null;
-            field_j = null;
-            field_a = null;
-            field_f = null;
-            field_b = null;
-            field_g = null;
-            field_o = null;
-            return;
+          mo.b(31);
+          field_d = null;
+          field_j = null;
+          field_a = null;
+          field_f = null;
+          field_b = null;
+          field_g = null;
+          field_o = null;
+          return;
         }
         field_d = null;
         field_j = null;
@@ -361,20 +269,20 @@ final class mo {
     final void a(tf param0, long param1, byte param2) {
         tf var5 = null;
         try {
-            if (!(null == param0.field_i)) {
-                param0.a((byte) 88);
-            }
-            var5 = this.field_n[(int)((long)(this.field_e - 1) & param1)];
-            param0.field_i = var5.field_i;
-            param0.field_l = var5;
-            param0.field_i.field_l = param0;
-            param0.field_l.field_i = param0;
-            if (param2 <= 106) {
-                mo.a(109, true, 64);
-            }
-            param0.field_k = param1;
+          if (null != param0.field_i) {
+            param0.a((byte) 88);
+          }
+          var5 = this.field_n[(int)((long)(this.field_e - 1) & param1)];
+          param0.field_i = var5.field_i;
+          param0.field_l = var5;
+          param0.field_i.field_l = param0;
+          param0.field_l.field_i = param0;
+          if (param2 <= 106) {
+            mo.a(109, true, 64);
+          }
+          param0.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "mo.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "mo.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -382,43 +290,36 @@ final class mo {
         tf var5 = null;
         int var6 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_m = param0;
-        tf var4 = this.field_n[(int)(param0 & (long)(this.field_e + -1))];
+        tf var4 = this.field_n[(int)(param0 & (long)(this.field_e - 1))];
         this.field_c = var4.field_l;
         while (var4 != this.field_c) {
-            if (!(param0 != this.field_c.field_k)) {
-                var5 = this.field_c;
-                this.field_c = this.field_c.field_l;
-                return var5;
-            }
+          if (param0 == this.field_c.field_k) {
+            var5 = this.field_c;
             this.field_c = this.field_c.field_l;
+            return var5;
+          }
+          this.field_c = this.field_c.field_l;
         }
         if (param1 > -61) {
-            return (tf) null;
+          return (tf) null;
         }
         this.field_c = null;
         return null;
     }
 
     mo(int param0) {
+        int var2 = 0;
         tf dupTemp$1 = null;
-        int var2;
         tf var3;
         this.field_i = 0;
         this.field_e = param0;
         this.field_n = new tf[param0];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$1 = new tf();
-            var3 = dupTemp$1;
-            this.field_n[var2] = dupTemp$1;
-            var3.field_l = var3;
-            var3.field_i = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; var2 < param0; var2++) {
+          dupTemp$1 = new tf();
+          var3 = dupTemp$1;
+          this.field_n[var2] = dupTemp$1;
+          var3.field_l = var3;
+          var3.field_i = var3;
         }
     }
 
@@ -428,82 +329,42 @@ final class mo {
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
+        fk var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              oh.field_k.g();
-              lf.field_a.g();
-              if (param0 == 200) {
-                break L1;
-              } else {
-                field_a = (qb[]) null;
-                break L1;
-              }
-            }
-            L2: {
-              ja.field_u = ja.field_u - 1;
-              if (ja.field_u != 0) {
-                break L2;
-              } else {
-                ja.field_u = 200;
-                var1 = (fk) ((Object) qn.field_mb.b(12623));
-                L3: while (true) {
-                  if (var1 == null) {
-                    if (he.field_f == null) {
-                      break L2;
-                    } else {
-                      var1 = (fk) ((Object) he.field_f.b(12623));
-                      L4: while (true) {
-                        if (var1 == null) {
-                          break L2;
-                        } else {
-                          L5: {
-                            if (!var1.field_n.b((byte) -44)) {
-                              var1.a(true);
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          var1 = (fk) ((Object) he.field_f.a(0));
-                          continue L4;
-                        }
-                      }
-                    }
-                  } else {
-                    L6: {
-                      if (!var1.field_n.b((byte) -93)) {
-                        var1.a(true);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var1 = (fk) ((Object) qn.field_mb.a(0));
-                    continue L3;
-                  }
-                }
-              }
-            }
-            L7: {
-              L8: {
-                if (null == jl.field_h) {
-                  break L8;
-                } else {
-                  stackIn_19_0 = jl.field_h.e((byte) -8);
-                  if (stackIn_19_0) {
-                    break L8;
-                  } else {
-                    f.field_g = null;
-                    break L7;
-                  }
-                }
-              }
-              break L7;
-            }
-            break L0;
+          oh.field_k.g();
+          lf.field_a.g();
+          if (param0 != 200) {
+            field_a = (qb[]) null;
           }
+          ja.field_u = ja.field_u - 1;
+          if (ja.field_u == 0) {
+            ja.field_u = 200;
+            var1 = (fk) (qn.field_mb.b(12623));
+            while (var1 != null) {
+              if (!var1.field_n.b((byte) -93)) {
+                var1.a(true);
+              }
+              var1 = (fk) (qn.field_mb.a(0));
+            }
+            if (he.field_f != null) {
+              var1Lifetime1 = (fk) (he.field_f.b(12623));
+              while (var1Lifetime1 != null) {
+                if (!var1Lifetime1.field_n.b((byte) -44)) {
+                  var1Lifetime1.a(true);
+                }
+                var1Lifetime1 = (fk) (he.field_f.a(0));
+              }
+            }
+          }
+          if (null != jl.field_h) {
+            stackIn_19_0 = jl.field_h.e((byte) -8);
+            if (!stackIn_19_0) {
+              f.field_g = null;
+              return;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

@@ -9,7 +9,7 @@ final class gs {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 14) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;
@@ -18,13 +18,13 @@ final class gs {
     final static void a(java.awt.Component param0, boolean param1) {
         param0.addMouseListener(wk.field_h);
         if (!param1) {
-            return;
+          return;
         }
         try {
-            param0.addMouseMotionListener(wk.field_h);
-            param0.addFocusListener(wk.field_h);
+          param0.addMouseMotionListener(wk.field_h);
+          param0.addFocusListener(wk.field_h);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "gs.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

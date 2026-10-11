@@ -12,8 +12,8 @@ final class am {
 
     final static void b(int param0) {
         if (param0 <= 34) {
-            StringBuilder var2 = (StringBuilder) null;
-            am.a((StringBuilder) null, 'ﾍ', -124, false);
+          StringBuilder var2 = (StringBuilder) null;
+          am.a((StringBuilder) null, 'ﾍ', -124, false);
         }
     }
 
@@ -21,77 +21,48 @@ final class am {
         field_a = null;
         field_f = null;
         if (param0 != 30111) {
-            am.b(93);
-            field_b = null;
-            return;
+          am.b(93);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static StringBuilder a(StringBuilder param0, char param1, int param2, boolean param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_3_0 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = DungeonAssault.field_K;
         try {
-          L0: {
-            var4_int = param0.length();
-            param0.setLength(param2);
-            if (!param3) {
-              var5 = var4_int;
-              L1: while (true) {
-                if (param2 <= var5) {
-                  stackIn_8_0 = (StringBuilder) (param0);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  param0.setCharAt(var5, param1);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = (StringBuilder) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4_int = param0.length();
+          param0.setLength(param2);
+          if (param3) {
+            stackIn_3_0 = (StringBuilder) null;
+            return stackIn_3_0;
           }
+          for (var5 = var4_int; param2 > var5; var5++) {
+            param0.setCharAt(var5, param1);
+          }
+          stackIn_8_0 = (StringBuilder) (param0);
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4);
-
-            stackIn_11_1 = new StringBuilder().append("am.B(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_11_0 = var4;
+          stackIn_11_1 = new StringBuilder().append("am.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_8_0;
+          throw vk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

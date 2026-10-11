@@ -9,15 +9,7 @@ final class lt {
     static String field_b;
 
     public static void a(int param0) {
-        if (param0 >= -114) {
-          lt.a(107);
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -114) {
           field_a = null;
           field_c = null;
           field_d = null;
@@ -25,11 +17,17 @@ final class lt {
           field_b = null;
           return;
         }
+        lt.a(107);
+        field_a = null;
+        field_c = null;
+        field_d = null;
+        field_e = null;
+        field_b = null;
     }
 
     final static int a(byte param0) {
         if (param0 != 40) {
-            return -111;
+          return -111;
         }
         return 1;
     }
@@ -39,96 +37,53 @@ final class lt {
         int[] stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         la[] var9 = null;
         try {
-          L0: {
-            ao.field_b[1] = param5;
-            ao.field_b[5] = param7;
-            ao.field_b[3] = param0;
-            ao.field_b[0] = param6;
-            ao.field_b[4] = param1;
-            ao.field_b[2] = param4;
-            if (pe.a(param2, (byte) -124, ao.field_b)) {
-              L1: {
-                ao.field_b[0] = ao.field_b[0] + ao.field_b[3];
-                if (pe.a(param2, (byte) -104, ao.field_b)) {
-                  break L1;
-                } else {
-                  ao.field_b[0] = param6;
-                  ao.field_b[3] = -ao.field_b[3];
-                  break L1;
-                }
-              }
-              L2: {
-                ao.field_b[1] = ao.field_b[1] + ao.field_b[4];
-                if (pe.a(param2, (byte) -61, ao.field_b)) {
-                  break L2;
-                } else {
-                  ao.field_b[1] = param5;
-                  ao.field_b[4] = -ao.field_b[4];
-                  break L2;
-                }
-              }
-              L3: {
-                ao.field_b[2] = ao.field_b[2] + ao.field_b[5];
-                if (param3 < -51) {
-                  break L3;
-                } else {
-                  var9 = (la[]) null;
-                  lt.a(-23, 65, (la[]) null, -116, 62, 0, -89, 61);
-                  break L3;
-                }
-              }
-              L4: {
-                if (!pe.a(param2, (byte) -85, ao.field_b)) {
-                  ao.field_b[5] = -ao.field_b[5];
-                  ao.field_b[2] = param4;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              stackIn_13_0 = ao.field_b;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = ao.field_b;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          ao.field_b[1] = param5;
+          ao.field_b[5] = param7;
+          ao.field_b[3] = param0;
+          ao.field_b[0] = param6;
+          ao.field_b[4] = param1;
+          ao.field_b[2] = param4;
+          if (!pe.a(param2, (byte) -124, ao.field_b)) {
+            stackIn_2_0 = ao.field_b;
+            return stackIn_2_0;
           }
+          ao.field_b[0] = ao.field_b[0] + ao.field_b[3];
+          if (!pe.a(param2, (byte) -104, ao.field_b)) {
+            ao.field_b[0] = param6;
+            ao.field_b[3] = -ao.field_b[3];
+          }
+          ao.field_b[1] = ao.field_b[1] + ao.field_b[4];
+          if (!pe.a(param2, (byte) -61, ao.field_b)) {
+            ao.field_b[1] = param5;
+            ao.field_b[4] = -ao.field_b[4];
+          }
+          ao.field_b[2] = ao.field_b[2] + ao.field_b[5];
+          if (param3 >= -51) {
+            var9 = (la[]) null;
+            lt.a(-23, 65, (la[]) null, -116, 62, 0, -89, 61);
+          }
+          if (!pe.a(param2, (byte) -85, ao.field_b)) {
+            ao.field_b[5] = -ao.field_b[5];
+            ao.field_b[2] = param4;
+          }
+          stackIn_13_0 = ao.field_b;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var8);
-
-            stackIn_16_1 = new StringBuilder().append("lt.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_16_0 = var8;
+          stackIn_16_1 = new StringBuilder().append("lt.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_13_0;
+          throw nb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

@@ -10,59 +10,39 @@ final class fpa {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 75) {
-                break L1;
-              } else {
-                field_c = false;
-                break L1;
-              }
-            }
-            qma.a((java.awt.Component) ((Object) param0), -71);
-            ri.a((java.awt.Component) ((Object) param0), true);
-            if (tja.field_q != null) {
-              tja.field_q.a(param1 ^ -59, (java.awt.Component) ((Object) param0));
-              break L0;
-            } else {
-              return;
-            }
+          if (param1 != 75) {
+            field_c = false;
           }
+          qma.a((java.awt.Component) ((Object) param0), -71);
+          ri.a((java.awt.Component) ((Object) param0), true);
+          if (tja.field_q == null) {
+            return;
+          }
+          tja.field_q.a(param1 ^ -59, (java.awt.Component) ((Object) param0));
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("fpa.A(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("fpa.A(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 1451) {
-            field_b = (String[]) null;
-            field_a = null;
-            return;
+          field_b = (String[]) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

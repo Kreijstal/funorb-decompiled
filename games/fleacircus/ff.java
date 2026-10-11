@@ -10,7 +10,7 @@ final class ff {
         field_a = null;
         field_b = null;
         if (param0 < 49) {
-            ff.a((byte) -78);
+          ff.a((byte) -78);
         }
     }
 

@@ -12,9 +12,9 @@ final class nb {
         field_b = null;
         field_d = null;
         if (param0 != -95) {
-            field_b = (iw) null;
-            field_a = null;
-            return;
+          field_b = (iw) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

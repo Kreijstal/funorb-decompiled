@@ -12,18 +12,16 @@ final class i {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
-        if (param0 != -21307) {
-          i.a(-122);
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -21307) {
           field_b = null;
           field_d = null;
           field_c = null;
           return;
         }
+        i.a(-122);
+        field_b = null;
+        field_d = null;
+        field_c = null;
     }
 
     static {

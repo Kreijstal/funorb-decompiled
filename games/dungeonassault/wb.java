@@ -9,7 +9,7 @@ final class wb {
 
     final en a() {
         if (this.field_d == null) {
-            this.field_d = (en) ((Object) new jf((wb) (this)));
+          this.field_d = (en) ((Object) new jf(this));
         }
         return this.field_d;
     }

@@ -9,9 +9,9 @@ final class cjb {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            cjb.a(28);
-            field_b = null;
-            return;
+          cjb.a(28);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -17,7 +17,7 @@ final class ng {
         field_f = null;
         field_g = (byte[][]) null;
         if (param0 != 0) {
-            ng.a(-31);
+          ng.a(-31);
         }
     }
 

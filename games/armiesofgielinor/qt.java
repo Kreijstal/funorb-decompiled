@@ -15,7 +15,7 @@ final class qt {
         field_c = null;
         field_b = null;
         if (param0 <= 89) {
-            qt.a(70, 71, (byte) -22);
+          qt.a(70, 71, (byte) -22);
         }
     }
 
@@ -27,40 +27,28 @@ final class qt {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            var3_int = 0;
-            L1: while (true) {
-              if ((param1 ^ -1) >= -1) {
-                L2: {
-                  if (param2 <= -49) {
-                    break L2;
-                  } else {
-                    field_b = (String) null;
-                    break L2;
-                  }
-                }
-                stackIn_7_0 = var3_int;
-                break L0;
-              } else {
-                var3_int = var3_int << -683904767 | param0 & 1;
-                param1--;
-                param0 = param0 >>> 1;
-                continue L1;
-              }
-            }
+          var3_int = 0;
+          while (param1 > 0) {
+            var3_int = var3_int << 1 | param0 & 1;
+            param1--;
+            param0 = param0 >>> 1;
           }
+          if (param2 > -49) {
+            field_b = (String) null;
+          }
+          stackIn_7_0 = var3_int;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw ig.a((Throwable) ((Object) var3), "qt.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_7_0;
     }
 
     final static void a(boolean param0) {
         tm.a();
         if (param0) {
-            return;
+          return;
         }
         tm.b(0.75f);
     }

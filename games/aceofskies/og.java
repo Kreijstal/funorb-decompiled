@@ -13,9 +13,9 @@ final class og extends ib implements qi {
     }
 
     public final void a(byte param0) {
-        this.field_c.a((og) (this), 87);
+        this.field_c.a(this, 87);
         if (param0 != -50) {
-            this.b((byte) -21);
+          this.b((byte) -21);
         }
     }
 
@@ -25,169 +25,110 @@ final class og extends ib implements qi {
         kr stackIn_3_1;
         hd stackIn_3_2;
         la stackIn_3_3;
-        Object stackIn_4_0 = null;
-        kr stackIn_4_1 = null;
-        hd stackIn_4_2 = null;
-        la stackIn_4_3 = null;
         int stackIn_4_4 = 0;
         int var10;
         int var11;
         int var12;
         jagdx.PixelBuffer var13;
-        L0: {
-          L1: {
-            stackIn_3_0 = this;
-
-            stackIn_3_1 = (kr) (param0);
-
-            stackIn_3_2 = (hd) (param1);
-
-            stackIn_3_3 = la.field_h;
-
-            if (!param4) {
-              break L1;
-            } else {
-              stackIn_3_0 = this;
-
-              stackIn_3_1 = (kr) ((Object) stackIn_3_1);
-
-              stackIn_3_2 = (hd) ((Object) stackIn_3_2);
-
-              stackIn_3_3 = (la) ((Object) stackIn_3_3);
-
-              if (!param0.field_Gc) {
-                break L1;
-              } else {
-                stackIn_4_0 = this;
-                stackIn_4_1 = (kr) ((Object) stackIn_3_1);
-                stackIn_4_2 = (hd) ((Object) stackIn_3_2);
-                stackIn_4_3 = (la) ((Object) stackIn_3_3);
-                stackIn_4_4 = 1;
-                break L0;
-              }
-            }
-          }
-          stackIn_4_0 = this;
-          stackIn_4_1 = (kr) ((Object) stackIn_3_1);
-          stackIn_4_2 = (hd) ((Object) stackIn_3_2);
-          stackIn_4_3 = (la) ((Object) stackIn_3_3);
-          stackIn_4_4 = 0;
-          break L0;
-        }
-        L2: {
-          if (!this.field_c.field_Dc) {
-            this.field_f = fk.a(param2, 63);
-            this.field_h = fk.a(param3, 69);
-            break L2;
-          } else {
-            this.field_h = param3;
-            this.field_f = param2;
-            break L2;
+        int var12Lifetime1;
+        Object stackIn_3_0Lifetime1;
+        int stackIn_4_4Lifetime1;
+        boolean decompiledFrameRemainder0 = true;
+        stackIn_3_0 = this;
+        stackIn_3_1 = (kr) (param0);
+        stackIn_3_2 = (hd) (param1);
+        stackIn_3_3 = la.field_h;
+        if (param4) {
+          stackIn_3_0Lifetime1 = this;
+          if (param0.field_Gc) {
+            stackIn_4_4 = 1;
+            decompiledFrameRemainder0 = false;
           }
         }
-        L3: {
-          if (!param4) {
-            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, kr.a(this.field_e, la.field_h, false), 1);
-            break L3;
-          } else {
-            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, kr.a(this.field_e, la.field_h, false), 1);
-            break L3;
-          }
+        if (decompiledFrameRemainder0) {
+          stackIn_4_4Lifetime1 = 0;
         }
-        L4: {
-          var13 = this.field_c.field_Ec;
-          var10 = this.field_i.LockRect(0, 0, 0, param2, param3, 0, var13);
-          if (!jagdx.gf.a((byte) 111, var10)) {
-            break L4;
-          } else {
-            L5: {
-              if (param7 != 0) {
-                break L5;
-              } else {
-                param7 = param2;
-                break L5;
-              }
-            }
-            param2 = param2 * this.field_e.field_b;
-            param7 = param7 * this.field_e.field_b;
-            var11 = var13.getRowPitch();
-            if (var11 != param2) {
-              var12 = 0;
-              L6: while (true) {
-                if (param3 <= var12) {
-                  this.field_i.UnlockRect(0);
-                  return;
-                } else {
-                  var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
-                  var12++;
-                  continue L6;
-                }
-              }
-            } else {
-              if (param2 == param7) {
-                var13.a(param5, param6, 0, param2 * param3);
-                this.field_i.UnlockRect(0);
-                break L4;
-              } else {
-                var12 = 0;
-                L7: while (true) {
-                  if (param3 <= var12) {
-                    this.field_i.UnlockRect(0);
-                    return;
-                  } else {
-                    var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
-                    var12++;
-                    continue L7;
-                  }
-                }
-              }
-            }
+        if (!this.field_c.field_Dc) {
+          this.field_f = fk.a(param2, 63);
+          this.field_h = fk.a(param3, 69);
+        } else {
+          this.field_h = param3;
+          this.field_f = param2;
+        }
+        if (!param4) {
+          this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, kr.a(this.field_e, la.field_h, false), 1);
+        } else {
+          this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, kr.a(this.field_e, la.field_h, false), 1);
+        }
+        var13 = this.field_c.field_Ec;
+        var10 = this.field_i.LockRect(0, 0, 0, param2, param3, 0, var13);
+        if (jagdx.gf.a((byte) 111, var10)) {
+          if (param7 == 0) {
+            param7 = param2;
           }
+          param2 = param2 * this.field_e.field_b;
+          param7 = param7 * this.field_e.field_b;
+          var11 = var13.getRowPitch();
+          if (var11 != param2) {
+            for (var12 = 0; param3 > var12; var12++) {
+              var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
+            }
+            this.field_i.UnlockRect(0);
+            return;
+          }
+          if (param2 != param7) {
+            for (var12Lifetime1 = 0; param3 > var12Lifetime1; var12Lifetime1++) {
+              var13.a(param5, param6 + param7 * var12Lifetime1, var11 * var12Lifetime1, param2);
+            }
+            this.field_i.UnlockRect(0);
+            return;
+          }
+          var13.a(param5, param6, 0, param2 * param3);
+          this.field_i.UnlockRect(0);
         }
     }
 
     public final boolean c(byte param0) {
         if (param0 > -104) {
-            return false;
+          return false;
         }
         return true;
     }
 
     public final int a(int param0) {
         if (param0 < 56) {
-            return -84;
+          return -84;
         }
         return this.field_f;
     }
 
     public final int b(byte param0) {
         if (param0 < 2) {
-            return -101;
+          return -101;
         }
         return this.field_h;
     }
 
     final jagdx.IDirect3DBaseTexture b(int param0) {
         if (param0 < 87) {
-            this.field_j = false;
-            return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
+          this.field_j = false;
+          return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
         }
         return (jagdx.IDirect3DBaseTexture) ((Object) this.field_i);
     }
 
     public final float a(float param0, byte param1) {
-        if (param1 != -32) {
-          this.field_i = (jagdx.IDirect3DTexture) null;
-          return param0 / (float)this.field_h;
-        } else {
+        if (param1 == -32) {
           return param0 / (float)this.field_h;
         }
+        this.field_i = (jagdx.IDirect3DTexture) null;
+        return param0 / (float)this.field_h;
     }
 
     public final float a(int param0, float param1) {
         if (param0 < 65) {
-            this.field_g = true;
-            return param1 / (float)this.field_f;
+          this.field_g = true;
+          return param1 / (float)this.field_f;
         }
         return param1 / (float)this.field_f;
     }
@@ -195,11 +136,11 @@ final class og extends ib implements qi {
     og(kr param0, hd param1, la param2, int param3, int param4) {
         super(param0, param1, param2, false, param3 * param4);
         if (!this.field_c.field_Dc) {
-            this.field_f = fk.a(param3, 118);
-            this.field_h = fk.a(param4, 61);
+          this.field_f = fk.a(param3, 118);
+          this.field_h = fk.a(param4, 61);
         } else {
-            this.field_f = param3;
-            this.field_h = param4;
+          this.field_f = param3;
+          this.field_h = param4;
         }
         this.field_i = this.field_c.field_Rc.a(param3, param4, 1, 0, kr.a(this.field_e, this.field_d, false), 1);
     }
@@ -210,180 +151,76 @@ final class og extends ib implements qi {
         kr stackIn_3_1;
         hd stackIn_3_2;
         la stackIn_3_3;
-        Object stackIn_4_0 = null;
-        kr stackIn_4_1 = null;
-        hd stackIn_4_2 = null;
-        la stackIn_4_3 = null;
         int stackIn_4_4 = 0;
         int var9;
         int var10;
         int var11;
         jagdx.PixelBuffer var12;
-        L0: {
-          L1: {
-            stackIn_3_0 = this;
-
-            stackIn_3_1 = (kr) (param0);
-
-            stackIn_3_2 = lc.field_g;
-
-            stackIn_3_3 = la.field_h;
-
-            if (!param3) {
-              break L1;
-            } else {
-              stackIn_3_0 = this;
-
-              stackIn_3_1 = (kr) ((Object) stackIn_3_1);
-
-              stackIn_3_2 = (hd) ((Object) stackIn_3_2);
-
-              stackIn_3_3 = (la) ((Object) stackIn_3_3);
-
-              if (!param0.field_Gc) {
-                break L1;
-              } else {
-                stackIn_4_0 = this;
-                stackIn_4_1 = (kr) ((Object) stackIn_3_1);
-                stackIn_4_2 = (hd) ((Object) stackIn_3_2);
-                stackIn_4_3 = (la) ((Object) stackIn_3_3);
-                stackIn_4_4 = 1;
-                break L0;
-              }
-            }
-          }
-          stackIn_4_0 = this;
-          stackIn_4_1 = (kr) ((Object) stackIn_3_1);
-          stackIn_4_2 = (hd) ((Object) stackIn_3_2);
-          stackIn_4_3 = (la) ((Object) stackIn_3_3);
-          stackIn_4_4 = 0;
-          break L0;
-        }
-        L2: {
-          if (this.field_c.field_Dc) {
-            this.field_f = param1;
-            this.field_h = param2;
-            break L2;
-          } else {
-            this.field_f = fk.a(param1, 91);
-            this.field_h = fk.a(param2, 22);
-            break L2;
+        int var11Lifetime1;
+        Object stackIn_3_0Lifetime1;
+        int stackIn_4_4Lifetime1;
+        boolean decompiledFrameRemainder0 = true;
+        stackIn_3_0 = this;
+        stackIn_3_1 = (kr) (param0);
+        stackIn_3_2 = lc.field_g;
+        stackIn_3_3 = la.field_h;
+        if (param3) {
+          stackIn_3_0Lifetime1 = this;
+          if (param0.field_Gc) {
+            stackIn_4_4 = 1;
+            decompiledFrameRemainder0 = false;
           }
         }
-        L3: {
-          if (!param3) {
-            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, 21, 1);
-            break L3;
-          } else {
-            this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, 21, 1);
-            break L3;
-          }
+        if (decompiledFrameRemainder0) {
+          stackIn_4_4Lifetime1 = 0;
+        }
+        if (this.field_c.field_Dc) {
+          this.field_f = param1;
+          this.field_h = param2;
+        } else {
+          this.field_f = fk.a(param1, 91);
+          this.field_h = fk.a(param2, 22);
+        }
+        if (!param3) {
+          this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 1, 0, 21, 1);
+        } else {
+          this.field_i = this.field_c.field_Rc.a(this.field_f, this.field_h, 0, 1024, 21, 1);
         }
         var12 = this.field_c.field_Ec;
         var9 = this.field_i.LockRect(0, 0, 0, param1, param2, 0, var12);
         if (!jagdx.gf.a((byte) 104, var9)) {
           return;
-        } else {
-          L4: {
-            if (0 != param6) {
-              break L4;
-            } else {
-              param6 = param1;
-              break L4;
-            }
-          }
-          var10 = var12.getRowPitch();
-          if (4 * param1 == var10) {
-            if (param1 == param6) {
-              var12.a(param4, param5, 0, param2 * param1);
-              this.field_i.UnlockRect(0);
-              return;
-            } else {
-              var11 = 0;
-              L5: while (true) {
-                if (param2 <= var11) {
-                  this.field_i.UnlockRect(0);
-                  return;
-                } else {
-                  var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
-                  var11++;
-                  continue L5;
-                }
-              }
-            }
-          } else {
-            var11 = 0;
-            L6: while (true) {
-              if (param2 <= var11) {
-                this.field_i.UnlockRect(0);
-                return;
-              } else {
-                var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
-                var11++;
-                continue L6;
-              }
-            }
-          }
         }
+        if (0 == param6) {
+          param6 = param1;
+        }
+        var10 = var12.getRowPitch();
+        if (4 * param1 != var10) {
+          for (var11 = 0; param2 > var11; var11++) {
+            var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
+          }
+          this.field_i.UnlockRect(0);
+          return;
+        }
+        if (param1 == param6) {
+          var12.a(param4, param5, 0, param2 * param1);
+          this.field_i.UnlockRect(0);
+          return;
+        }
+        for (var11Lifetime1 = 0; param2 > var11Lifetime1; var11Lifetime1++) {
+          var12.a(param4, param6 * var11Lifetime1 + param5, var10 * var11Lifetime1, param1);
+        }
+        this.field_i.UnlockRect(0);
+        return;
     }
 
     public final void a(boolean param0, boolean param1, byte param2) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackIn_6_0 = null;
-        Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        Object stackIn_10_0 = null;
-        Object stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (!param0) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((og) (this)).field_g = stackIn_3_1 != 0;
-        if (param2 != -127) {
-          L1: {
-            this.c((byte) -41);
-            stackIn_10_0 = this;
-
-            if (!param1) {
-              stackIn_11_0 = this;
-              stackIn_11_1 = 0;
-              break L1;
-            } else {
-              stackIn_11_0 = this;
-              stackIn_11_1 = 1;
-              break L1;
-            }
-          }
-          ((og) (this)).field_j = stackIn_11_1 != 0;
-          return;
-        } else {
-          L2: {
-            stackIn_6_0 = this;
-
-            if (!param1) {
-              stackIn_7_0 = this;
-              stackIn_7_1 = 0;
-              break L2;
-            } else {
-              stackIn_7_0 = this;
-              stackIn_7_1 = 1;
-              break L2;
-            }
-          }
-          ((og) (this)).field_j = stackIn_7_1 != 0;
+        this.field_g = param0 ? true : false;
+        if (param2 == -127) {
+          this.field_j = param1 ? true : false;
           return;
         }
+        this.c((byte) -41);
+        this.field_j = param1 ? true : false;
     }
 }

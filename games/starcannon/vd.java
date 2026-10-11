@@ -15,37 +15,37 @@ final class vd extends hh {
         field_e = null;
         field_g = null;
         if (param0 != 32) {
-            return;
+          return;
         }
         field_f = null;
     }
 
     final s b(byte param0) {
         if (param0 != 1) {
-            field_g = (long[]) null;
-            return j.field_d;
+          field_g = (long[]) null;
+          return j.field_d;
         }
         return j.field_d;
     }
 
     vd(String param0, String param1) {
         try {
-            this.field_k = param0;
-            this.field_i = param1;
+          this.field_k = param0;
+          this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, rb param1) {
         try {
-            param1.a(false, this.field_k);
-            param1.a((byte) -86, this.field_i);
-            if (param0 != 69) {
-                field_g = (long[]) null;
-            }
+          param1.a(false, this.field_k);
+          param1.a((byte) -86, this.field_i);
+          if (param0 != 69) {
+            field_g = (long[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,16 +13,16 @@ final class th implements ui {
         field_c = null;
         field_f = null;
         if (param0 != 0) {
-            th.c(-92);
-            field_e = null;
-            return;
+          th.c(-92);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final static void c(int param0) {
         jb.a((byte) -89);
-        int var1 = -107 % ((param0 - -14) / 54);
+        int var1 = -107 % ((param0 + 14) / 54);
         rn.a(sc.field_e, -128, el.field_z[0].field_v, ri.field_g, on.field_e, fe.field_g);
     }
 

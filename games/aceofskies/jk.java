@@ -10,7 +10,7 @@ final class jk {
         field_b = null;
         field_c = null;
         if (param0 != 29770) {
-            jk.a('>', 104);
+          jk.a('>', 104);
         }
     }
 
@@ -22,95 +22,44 @@ final class jk {
         char[] var5 = null;
         char[] var6 = null;
         int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_24_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char[] var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
         try {
-          L0: {
-            if (Character.isISOControl(param0)) {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (!dc.a((byte) -119, param0)) {
-                var5 = wo.field_l;
-                var2 = var5;
-                var3 = 0;
-                L1: while (true) {
-                  if (var5.length <= var3) {
-                    L2: {
-                      var6 = wb.field_b;
-                      var2 = var6;
-                      if (param1 == -26024) {
-                        break L2;
-                      } else {
-                        field_b = (gk) null;
-                        break L2;
-                      }
-                    }
-                    var7 = 0;
-                    var3 = var7;
-                    L3: while (true) {
-                      if (var6.length <= var7) {
-                        stackIn_24_0 = 0;
-                        decompiledRegionSelector0 = 4;
-                        break L0;
-                      } else {
-                        var4 = var6[var7];
-                        if (var4 == param0) {
-                          stackIn_21_0 = 1;
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          var7++;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var4 = var5[var3];
-                    if (param0 == var4) {
-                      stackIn_12_0 = 1;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              } else {
-                stackIn_6_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
+          if (Character.isISOControl(param0)) {
+            return false;
+          }
+          if (dc.a((byte) -119, param0)) {
+            return true;
+          }
+          var5 = wo.field_l;
+          var2 = var5;
+          for (var3 = 0; var5.length > var3; var3++) {
+            var4 = var5[var3];
+            if (param0 == var4) {
+              return true;
             }
           }
+          var6 = wb.field_b;
+          var2Lifetime1 = var6;
+          if (param1 != -26024) {
+            field_b = (gk) null;
+          }
+          var7 = 0;
+          var3Lifetime1 = var7;
+          while (var6.length > var7) {
+            var4Lifetime1 = var6[var7];
+            if (var4Lifetime1 == param0) {
+              return true;
+            }
+            var7++;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2_ref), "jk.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0 != 0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_21_0 != 0;
-              } else {
-                return stackIn_24_0 != 0;
-              }
-            }
-          }
         }
     }
 
@@ -120,12 +69,12 @@ final class jk {
         hl discarded$0 = new hl(this.field_a, 5126, 2, 0);
         hl discarded$3 = new hl(this.field_a, 5126, 3, 8);
         if (param0 < 34) {
-            return;
+          return;
         }
         try {
-            discarded$4 = new hl(this.field_a, 5121, 4, 20);
+          discarded$4 = new hl(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "jk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

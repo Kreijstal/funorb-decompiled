@@ -14,20 +14,17 @@ final class fb {
         Object var1 = null;
         var1 = ho.field_b;
         synchronized (var1) {
-          L0: {
-            oj.field_g = oj.field_g + 1;
-            vu.field_f = mp.field_g;
-            ic.field_b = sj.field_a;
-            cf.field_g = qd.field_m;
-            uu.field_e = si.field_b;
-            si.field_b = false;
-            vj.field_d = me.field_b;
-            ln.field_c = kg.field_a;
-            lq.field_a = jd.field_e;
-            me.field_b = 0;
-            var2 = -26 / ((param0 - 11) / 61);
-            break L0;
-          }
+          oj.field_g = oj.field_g + 1;
+          vu.field_f = mp.field_g;
+          ic.field_b = sj.field_a;
+          cf.field_g = qd.field_m;
+          uu.field_e = si.field_b;
+          si.field_b = false;
+          vj.field_d = me.field_b;
+          ln.field_c = kg.field_a;
+          lq.field_a = jd.field_e;
+          me.field_b = 0;
+          var2 = -26 / ((param0 - 11) / 61);
         }
     }
 
@@ -40,8 +37,8 @@ final class fb {
 
     final static int b(int param0) {
         if (param0 != 0) {
-            fb.b(-21);
-            return he.field_n;
+          fb.b(-21);
+          return he.field_n;
         }
         return he.field_n;
     }

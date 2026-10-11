@@ -12,95 +12,57 @@ final class us extends gn {
 
     final static int a(byte param0) {
         if (param0 >= -69) {
-            field_g = (String) null;
-            return ck.field_d;
+          field_g = (String) null;
+          return ck.field_d;
         }
         return ck.field_d;
     }
 
     final static void g(byte param0) {
-        Object var1;
-        int var2;
-        String var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        String var9;
-        int stackIn_24_0 = 0;
+        String var9 = null;
+        String var3 = null;
+        int var4 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var5 = 0;
         if (null == et.field_d) {
           return;
-        } else {
-          kb.h(-92);
-          if (-1 != (mc.field_a ^ -1)) {
-            L0: {
-              var1 = null;
-              var2 = je.a(false);
-              if ((var2 ^ -1) != 0) {
-                var1 = rr.field_g[var2];
-                break L0;
-              } else {
-                break L0;
-              }
+        }
+        kb.h(-92);
+        if (mc.field_a == 0) {
+          return;
+        }
+        Object var1 = null;
+        int var2 = je.a(false);
+        if (var2 != -1) {
+          var1 = rr.field_g[var2];
+        }
+        if (param0 > -75) {
+          return;
+        }
+        ul.a((byte) -126, (String) (var1));
+        if (-1 == var2) {
+          return;
+        }
+        if (dd.field_f < 60) {
+          var9 = ep.field_c[var2];
+          var3 = var9;
+          var4 = pb.field_C.b(var9, mc.field_a - 44);
+          if (!(dd.field_f <= 0)) {
+            var6 = 60;
+            var7 = dd.field_f;
+            if (!(var9.length() >= 70)) {
+              var6 = 10;
+              var7 = Math.max(0, var6 - (60 - var7));
             }
-            if (param0 <= -75) {
-              ul.a((byte) -126, (String) (var1));
-              if (-1 != var2) {
-                if ((dd.field_f ^ -1) <= -61) {
-                  return;
-                } else {
-                  L1: {
-                    var9 = ep.field_c[var2];
-                    var3 = var9;
-                    var4 = pb.field_C.b(var9, mc.field_a + -44);
-                    if (dd.field_f > 0) {
-                      L2: {
-                        var6 = 60;
-                        var7 = dd.field_f;
-                        if (var9.length() < 70) {
-                          var6 = 10;
-                          var7 = Math.max(0, var6 - (60 - var7));
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      var8 = (-var7 + var6) * var9.length() / var6;
-                      var3 = var9.substring(0, var8);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  L3: {
-                    if (var4 == 1) {
-                      stackIn_24_0 = 16;
-                      break L3;
-                    } else {
-                      if (-3 == (var4 ^ -1)) {
-                        stackIn_24_0 = 6;
-                        break L3;
-                      } else {
-                        stackIn_24_0 = 0;
-                        break L3;
-                      }
-                    }
-                  }
-                  var5 = stackIn_24_0;
-                  var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
-                  pb.field_C.a(var3, (-mc.field_a + 640 >> -1128845375) - -72, -10 + (var5 - -458) + -48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            return;
+            var8 = (-var7 + var6) * var9.length() / var6;
+            var3 = var9.substring(0, var8);
           }
+          var5 = var4 != 1 ? var4 != 2 ? 0 : 6 : 16;
+          var3 = wj.a("</>", "</shad></col>", true, wj.a("<>", "<col=ffff00><shad=010101>", true, var3));
+          pb.field_C.a(var3, (-mc.field_a + 640 >> 1) + 72, -10 + (var5 + 458) - 48, -44 + mc.field_a - 50, 48, 16777215, -1, 0, 0, 16);
+          return;
         }
     }
 

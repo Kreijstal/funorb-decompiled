@@ -15,10 +15,10 @@ class tp extends lm {
     public static void b(boolean param0) {
         field_v = null;
         if (!param0) {
-            tp.b(true);
-            field_u = null;
-            field_t = null;
-            return;
+          tp.b(true);
+          field_u = null;
+          field_t = null;
+          return;
         }
         field_u = null;
         field_t = null;

@@ -26,52 +26,33 @@ public class me {
         field_a = param0;
         field_c = param1;
         try {
-          L0: {
-            field_d = System.getProperty("user.home");
-            var3_int = -102 % ((param2 - 41) / 54);
-            if (field_d == null) {
-              break L0;
-            } else {
-              L1: {
-                field_d = field_d + "/";
-                if (null == field_d) {
-                  field_d = "~/";
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              field_e = true;
-              return;
+          field_d = System.getProperty("user.home");
+          var3_int = -102 % ((param2 - 41) / 54);
+          if (field_d != null) {
+            field_d = field_d + "/";
+            if (null == field_d) {
+              field_d = "~/";
             }
+            field_e = true;
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
-        L3: {
-          if (null == field_d) {
-            field_d = "~/";
-            break L3;
-          } else {
-            break L3;
-          }
+        if (null == field_d) {
+          field_d = "~/";
         }
         field_e = true;
     }
 
     public static File a(String param0, int param1) {
-        String var3;
-        if (param1 <= 10) {
-          var3 = (String) null;
-          me.a((String) null, 25, 85);
-          return me.a(field_c, param0, false, field_a);
-        } else {
+        if (param1 > 10) {
           return me.a(field_c, param0, false, field_a);
         }
+        String var3 = (String) null;
+        me.a((String) null, 25, 85);
+        return me.a(field_c, param0, false, field_a);
     }
 
     static {

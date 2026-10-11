@@ -12,17 +12,17 @@ final class k {
     final void a(int param0, o param1, long param2) {
         o var5 = null;
         try {
-            if (!(param1.field_g == null)) {
-                param1.c(-1);
-            }
-            var5 = this.field_b[(int)((long)(param0 + this.field_d) & param2)];
-            param1.field_f = var5;
-            param1.field_g = var5.field_g;
-            param1.field_g.field_f = param1;
-            param1.field_h = param2;
-            param1.field_f.field_g = param1;
+          if (param1.field_g != null) {
+            param1.c(-1);
+          }
+          var5 = this.field_b[(int)((long)(param0 + this.field_d) & param2)];
+          param1.field_f = var5;
+          param1.field_g = var5.field_g;
+          param1.field_g.field_f = param1;
+          param1.field_h = param2;
+          param1.field_f.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "k.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -34,14 +34,14 @@ final class k {
         nd.field_a[44] = 71;
         nd.field_a[45] = 26;
         if (param0 != 0) {
-            k.b((byte) 21);
-            nd.field_a[520] = 59;
-            nd.field_a[222] = 58;
-            nd.field_a[192] = 28;
-            nd.field_a[59] = 57;
-            nd.field_a[47] = 73;
-            nd.field_a[46] = 72;
-            return;
+          k.b((byte) 21);
+          nd.field_a[520] = 59;
+          nd.field_a[222] = 58;
+          nd.field_a[192] = 28;
+          nd.field_a[59] = 57;
+          nd.field_a[47] = 73;
+          nd.field_a[46] = 72;
+          return;
         }
         nd.field_a[520] = 59;
         nd.field_a[222] = 58;
@@ -62,7 +62,7 @@ final class k {
         field_a = null;
         field_e = null;
         if (param0 <= -77) {
-            return;
+          return;
         }
         k.a((byte) -75);
     }
@@ -71,99 +71,82 @@ final class k {
         o var2 = null;
         o var3 = null;
         int var4 = OrbDefence.field_D ? 1 : 0;
+        o var2Lifetime1;
+        o var3Lifetime1;
         if (null == this.field_c) {
-            return null;
+          return null;
         }
         if (param0 >= -9) {
-            k.a((byte) -31);
-            var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
-            while (this.field_c != var2) {
-                if (this.field_c.field_h == this.field_f) {
-                    var3 = this.field_c;
-                    this.field_c = this.field_c.field_f;
-                    return var3;
-                }
-                this.field_c = this.field_c.field_f;
-            }
-            this.field_c = null;
-            return null;
-        }
-        var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
-        while (this.field_c != var2) {
+          k.a((byte) -31);
+          var2 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
+          while (this.field_c != var2) {
             if (this.field_c.field_h == this.field_f) {
-                var3 = this.field_c;
-                this.field_c = this.field_c.field_f;
-                return var3;
+              var3 = this.field_c;
+              this.field_c = this.field_c.field_f;
+              return var3;
             }
             this.field_c = this.field_c.field_f;
+          }
+          this.field_c = null;
+          return null;
+        }
+        var2Lifetime1 = this.field_b[(int)(this.field_f & (long)(-1 + this.field_d))];
+        while (this.field_c != var2Lifetime1) {
+          if (this.field_c.field_h == this.field_f) {
+            var3Lifetime1 = this.field_c;
+            this.field_c = this.field_c.field_f;
+            return var3Lifetime1;
+          }
+          this.field_c = this.field_c.field_f;
         }
         this.field_c = null;
         return null;
     }
 
     final o a(byte param0, long param1) {
-        o var4;
-        o var5;
-        int var6;
-        var6 = OrbDefence.field_D ? 1 : 0;
+        o var5 = null;
+        int var6 = OrbDefence.field_D ? 1 : 0;
+        o var5Lifetime1;
         this.field_f = param1;
-        var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
+        o var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_d))];
         this.field_c = var4.field_f;
-        if (param0 <= 97) {
-          field_a = (String) null;
-          L0: while (true) {
-            if (this.field_c == var4) {
-              this.field_c = null;
-              return null;
-            } else {
-              if ((this.field_c.field_h ^ -1L) != (param1 ^ -1L)) {
-                this.field_c = this.field_c.field_f;
-                continue L0;
-              } else {
-                var5 = this.field_c;
-                this.field_c = this.field_c.field_f;
-                return var5;
-              }
+        if (param0 > 97) {
+          while (this.field_c != var4) {
+            if (~this.field_c.field_h == ~param1) {
+              var5 = this.field_c;
+              this.field_c = this.field_c.field_f;
+              return var5;
             }
+            this.field_c = this.field_c.field_f;
           }
-        } else {
-          L1: while (true) {
-            if (this.field_c == var4) {
-              this.field_c = null;
-              return null;
-            } else {
-              if ((this.field_c.field_h ^ -1L) != (param1 ^ -1L)) {
-                this.field_c = this.field_c.field_f;
-                continue L1;
-              } else {
-                var5 = this.field_c;
-                this.field_c = this.field_c.field_f;
-                return var5;
-              }
-            }
-          }
+          this.field_c = null;
+          return null;
         }
+        field_a = (String) null;
+        while (this.field_c != var4) {
+          if (~this.field_c.field_h == ~param1) {
+            var5Lifetime1 = this.field_c;
+            this.field_c = this.field_c.field_f;
+            return var5Lifetime1;
+          }
+          this.field_c = this.field_c.field_f;
+        }
+        this.field_c = null;
+        return null;
     }
 
     k(int param0) {
+        int var2 = 0;
         o dupTemp$1 = null;
-        int var2;
         o var3;
         this.field_b = new o[param0];
         this.field_d = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$1 = new o();
-            var3 = dupTemp$1;
-            this.field_b[var2] = dupTemp$1;
-            var3.field_g = var3;
-            var3.field_f = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; var2 < param0; var2++) {
+          dupTemp$1 = new o();
+          var3 = dupTemp$1;
+          this.field_b[var2] = dupTemp$1;
+          var3.field_g = var3;
+          var3.field_f = var3;
         }
     }
 

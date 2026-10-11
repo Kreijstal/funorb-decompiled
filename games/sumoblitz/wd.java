@@ -10,24 +10,23 @@ final class wd extends se {
     static du field_f;
 
     final static ki a(int param0, byte param1) {
-        if (param1 != 125) {
-          field_e = (hb) null;
-          return ng.a(1, -74, true, param0, false, false);
-        } else {
+        if (param1 == 125) {
           return ng.a(1, -74, true, param0, false, false);
         }
+        field_e = (hb) null;
+        return ng.a(1, -74, true, param0, false, false);
     }
 
     final void a(fs param0, byte param1) {
         try {
-            param0.b(this.field_i, (byte) -105);
-            param0.a(this.field_g, 46);
-            if (param1 >= -107) {
-                fs var4 = (fs) null;
-                this.a((fs) null, (byte) 29);
-            }
+          param0.b(this.field_i, (byte) -105);
+          param0.a(this.field_g, 46);
+          if (param1 >= -107) {
+            fs var4 = (fs) null;
+            this.a((fs) null, (byte) 29);
+          }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "wd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -38,68 +37,55 @@ final class wd extends se {
 
     final nb a(byte param0) {
         if (param0 < 80) {
-            this.a((byte) -128);
-            return pb.field_b;
+          this.a((byte) -128);
+          return pb.field_b;
         }
         return pb.field_b;
     }
 
     public static void b(byte param0) {
-        if (param0 != 88) {
-          field_h = (String) null;
-          field_j = null;
-          field_f = null;
-          field_h = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 88) {
           field_j = null;
           field_f = null;
           field_h = null;
           field_e = null;
           return;
         }
+        field_h = (String) null;
+        field_j = null;
+        field_f = null;
+        field_h = null;
+        field_e = null;
     }
 
     final static boolean c(int param0) {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_7_0 = 0;
+        boolean stackIn_7_0 = false;
         Throwable decompiledCaughtException = null;
         var1_ref = field_e;
         synchronized (var1_ref) {
-          L0: {
-            L1: {
-              if (param0 <= -20) {
-                break L1;
-              } else {
-                field_h = (String) null;
-                break L1;
-              }
-            }
-            if (ua.field_a != bj.field_a) {
-              tg.field_a = cp.field_c[bj.field_a];
-              np.field_c = aa.field_c[bj.field_a];
-              bj.field_a = bj.field_a - -1 & 127;
-              stackIn_7_0 = 1;
-              break L0;
-            } else {
-              stackIn_5_0 = 0;
-              return stackIn_5_0 != 0;
-            }
+          if (param0 > -20) {
+            field_h = (String) null;
           }
+          if (ua.field_a == bj.field_a) {
+            return false;
+          }
+          tg.field_a = cp.field_c[bj.field_a];
+          np.field_c = aa.field_c[bj.field_a];
+          bj.field_a = bj.field_a + 1 & 127;
+          stackIn_7_0 = true;
         }
-        return stackIn_7_0 != 0;
+        return stackIn_7_0;
     }
 
     wd(String param0, String param1) {
         try {
-            this.field_i = param0;
-            this.field_g = param1;
+          this.field_i = param0;
+          this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "wd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class ig {
 
     final static String a(int param0, char param1) {
         if (param0 < 123) {
-            return (String) null;
+          return (String) null;
         }
         return String.valueOf(param1);
     }
@@ -22,78 +22,38 @@ final class ig {
         Object stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 200) {
-                break L1;
-              } else {
-                field_b = (fm) null;
-                break L1;
-              }
-            }
-            if (qo.field_n != rj.field_F) {
-              L2: {
-                if (qo.field_n != h.field_N) {
-                  break L2;
-                } else {
-                  if (!param1.equals(uh.field_m)) {
-                    break L2;
-                  } else {
-                    qo.field_n = wm.field_a;
-                    stackIn_8_0 = jc.field_f;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
-              qo.field_n = rj.field_F;
-              uh.field_m = param1;
-              jc.field_f = null;
-              stackIn_10_0 = null;
-              decompiledRegionSelector0 = 2;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 200) {
+            field_b = (fm) null;
           }
+          if (qo.field_n == rj.field_F) {
+            stackIn_4_0 = null;
+            return (id) (stackIn_4_0);
+          }
+          if (qo.field_n == h.field_N &&
+            param1.equals(uh.field_m)) {
+            qo.field_n = wm.field_a;
+            stackIn_8_0 = jc.field_f;
+            return stackIn_8_0;
+          }
+          qo.field_n = rj.field_F;
+          uh.field_m = param1;
+          jc.field_f = null;
+          stackIn_10_0 = null;
+          return (id) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("ig.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (id) ((Object) stackIn_4_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("ig.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return (id) ((Object) stackIn_10_0);
+            stackIn_14_2 = "{...}";
           }
+          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -113,71 +73,36 @@ final class ig {
         boolean stackIn_18_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        cm var2Lifetime1;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              to.field_t.b();
-              ib.field_h.b();
-              var1_int = -121 % ((param0 - 54) / 39);
-              e.field_a = e.field_a - 1;
-              if (e.field_a != 0) {
-                break L1;
-              } else {
-                e.field_a = 200;
-                var2 = (cm) ((Object) bo.field_d.c(1504642273));
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (rg.field_b != null) {
-                      var2 = (cm) ((Object) rg.field_b.c(1504642273));
-                      L3: while (true) {
-                        if (var2 == null) {
-                          break L1;
-                        } else {
-                          L4: {
-                            if (var2.field_k.b(0)) {
-                              break L4;
-                            } else {
-                              var2.c(2779);
-                              break L4;
-                            }
-                          }
-                          var2 = (cm) ((Object) rg.field_b.f(1504642273));
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    L5: {
-                      if (!var2.field_k.b(0)) {
-                        var2.c(2779);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    var2 = (cm) ((Object) bo.field_d.f(1504642273));
-                    continue L2;
-                  }
+          to.field_t.b();
+          ib.field_h.b();
+          var1_int = -121 % ((param0 - 54) / 39);
+          e.field_a = e.field_a - 1;
+          if (e.field_a == 0) {
+            e.field_a = 200;
+            var2 = (cm) (bo.field_d.c(1504642273));
+            while (var2 != null) {
+              if (!var2.field_k.b(0)) {
+                var2.c(2779);
+              }
+              var2 = (cm) (bo.field_d.f(1504642273));
+            }
+            if (rg.field_b != null) {
+              var2Lifetime1 = (cm) (rg.field_b.c(1504642273));
+              while (var2Lifetime1 != null) {
+                if (!var2Lifetime1.field_k.b(0)) {
+                  var2Lifetime1.c(2779);
                 }
+                var2Lifetime1 = (cm) (rg.field_b.f(1504642273));
               }
             }
-            L6: {
-              if (null == to.field_q) {
-                break L6;
-              } else {
-                stackIn_18_0 = to.field_q.a((byte) -123);
-                if (stackIn_18_0) {
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-            }
-            break L0;
           }
+          if ((null != to.field_q) &&
+            (stackIn_18_0 = to.field_q.a((byte) -123))) {
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

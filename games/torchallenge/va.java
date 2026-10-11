@@ -13,8 +13,8 @@ public class va {
 
     public static File a(String param0, byte param1) {
         if (param1 != 40) {
-            field_d = (String) null;
-            return va.a(field_b, -29755, field_e, param0);
+          field_d = (String) null;
+          return va.a(field_b, -29755, field_e, param0);
         }
         return va.a(field_b, -29755, field_e, param0);
     }
@@ -33,45 +33,28 @@ public class va {
         field_b = param1;
         field_e = param2;
         try {
-          L0: {
-            L1: {
-              field_d = System.getProperty("user.home");
-              if (param0 <= -87) {
-                break L1;
-              } else {
-                field_c = (Hashtable) null;
-                break L1;
-              }
+          field_d = System.getProperty("user.home");
+          if (param0 > -87) {
+            field_c = (Hashtable) null;
+          }
+          if (field_d != null) {
+            field_d = field_d + "/";
+            if (null != field_d) {
+              field_a = true;
+              return;
             }
-            if (field_d == null) {
-              break L0;
-            } else {
-              field_d = field_d + "/";
-              if (null != field_d) {
-                field_a = true;
-                return;
-              } else {
-                field_d = "~/";
-                field_a = true;
-                return;
-              }
-            }
+            field_d = "~/";
+            field_a = true;
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
         if (null == field_d) {
           field_d = "~/";
-          field_a = true;
-          return;
-        } else {
-          field_a = true;
-          return;
         }
+        field_a = true;
     }
 
     static {

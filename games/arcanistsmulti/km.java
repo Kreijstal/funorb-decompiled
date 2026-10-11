@@ -12,44 +12,38 @@ final class km {
     static String field_g;
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
-        int var5;
-        int var6;
-        int var7;
-        if (1 < param1) {
-          if (0 != param0) {
-            var5 = param0 * 256 / (param1 + -1);
-            var6 = 255;
-            var7 = var6 & var5 * (var6 & param4) + (-var5 + 256) * (param3 & var6) >> -1221780184;
-            var6 = var6 << 8;
-            var7 = var7 + ((param4 & var6) * var5 - -((var6 & param3) * (256 + -var5)) >> 1866305000 & var6);
-            if (param2 != -1422079448) {
-              field_g = (String) null;
-              var6 = var6 << 8;
-              var7 = var7 + ((param4 & var6) * var5 - -((var6 & param3) * (256 + -var5)) >> -1422079448 & var6);
-              return var7;
-            } else {
-              var6 = var6 << 8;
-              var7 = var7 + ((param4 & var6) * var5 - -((var6 & param3) * (256 + -var5)) >> -1422079448 & var6);
-              return var7;
-            }
-          } else {
-            return param3;
-          }
-        } else {
+        if (1 >= param1) {
           return param3;
         }
+        if (0 == param0) {
+          return param3;
+        }
+        int var5 = param0 * 256 / (param1 - 1);
+        int var6 = 255;
+        int var7 = var6 & var5 * (var6 & param4) + (-var5 + 256) * (param3 & var6) >> 8;
+        var6 = var6 << 8;
+        var7 = var7 + ((param4 & var6) * var5 + (var6 & param3) * (256 - var5) >> 8 & var6);
+        if (param2 == -1422079448) {
+          var6 = var6 << 8;
+          var7 = var7 + ((param4 & var6) * var5 + (var6 & param3) * (256 - var5) >> 8 & var6);
+          return var7;
+        }
+        field_g = (String) null;
+        var6 = var6 << 8;
+        var7 = var7 + ((param4 & var6) * var5 + (var6 & param3) * (256 - var5) >> 8 & var6);
+        return var7;
     }
 
     final boolean a(int param0) {
         if (param0 != -21813) {
-            return false;
+          return false;
         }
         return this.field_f;
     }
 
     final void a(boolean param0, byte param1) {
         if (param1 >= -24) {
-            return;
+          return;
         }
         this.field_d = true;
         this.field_f = param0 ? true : false;
@@ -57,32 +51,32 @@ final class km {
 
     final static void a(int param0, int param1, int param2, int param3, dj param4, int param5, byte param6, int param7, boolean param8, qb[] param9, int param10, qb[] param11) {
         try {
-            wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
-            if (param6 != 40) {
-                km.a(-75, -88, -28, -51, 45);
-            }
+          wj.a(param9, param3, 113, param1, param2, param0, param8, param7, param11, param10, param10, param5, param4, param4, param7);
+          if (param6 != 40) {
+            km.a(-75, -88, -28, -51, 45);
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "km.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(boolean param0) {
         if (!param0) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_h;
     }
 
     final static void a(int param0, int param1) {
-        vf.field_q = (param1 << 526304784) / 150;
+        vf.field_q = (param1 << 16) / 150;
         vf.field_m = 400 * param1 / 150;
         vf.field_o = param0 * param1 / 150;
     }
 
     final boolean a(byte param0) {
         if (param0 >= -70) {
-            field_c = -47;
-            return this.field_d;
+          field_c = -47;
+          return this.field_d;
         }
         return this.field_d;
     }
@@ -93,7 +87,7 @@ final class km {
         field_e = null;
         field_a = null;
         if (param0 != 400) {
-            km.a(16, -52, 108, -102, -114);
+          km.a(16, -52, 108, -102, -114);
         }
     }
 
@@ -101,9 +95,9 @@ final class km {
         this.field_d = false;
         this.field_f = false;
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "km.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

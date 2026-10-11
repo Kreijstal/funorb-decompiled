@@ -9,19 +9,19 @@ final class pg extends bca {
         super(param0);
         int var2_int = 0;
         try {
-            this.field_k = param0.e((byte) 123);
-            this.field_o = new eaa();
-            var2_int = param0.b(16711935);
-            while (true) {
-                var2_int--;
-                if (var2_int < 0) {
-                    break;
-                }
-                this.field_o.a(dca.a((byte) 102, param0), true);
+          this.field_k = param0.e((byte) 123);
+          this.field_o = new eaa();
+          var2_int = param0.b(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              break;
             }
-            this.field_r = qi.a(param0, (byte) 68);
+            this.field_o.a(dca.a((byte) 102, param0), true);
+          }
+          this.field_r = qi.a(param0, (byte) 68);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,92 +31,69 @@ final class pg extends bca {
         nr stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 5) {
-              stackIn_4_0 = new nr(param1, (pg) (this));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (at) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 5) {
+            stackIn_4_0 = new nr(param1, this);
+            return (at) ((Object) stackIn_4_0);
           }
+          stackIn_2_0 = (at) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("pg.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("pg.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return (at) ((Object) stackIn_4_0);
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void e(int param0) {
-        fja.field_a.a(18, 31407, tv.field_o.field_sb - (eaa.field_c ? 2 + (rj.field_j - -2 + 40) : 0), 0, 0);
-        oca.field_n.a(18, param0 ^ 31407, rj.field_j + 42, tv.field_o.field_sb - (rj.field_j - -2 + 40), param0);
-        qba.field_m.a((byte) -58, tv.field_o.field_p + -20, 0, 20, tv.field_o.field_sb, rj.field_j, 2);
+        fja.field_a.a(18, 31407, tv.field_o.field_sb - (eaa.field_c ? 2 + (rj.field_j + 2 + 40) : 0), 0, 0);
+        oca.field_n.a(18, param0 ^ 31407, rj.field_j + 42, tv.field_o.field_sb - (rj.field_j + 2 + 40), param0);
+        qba.field_m.a((byte) -58, tv.field_o.field_p - 20, 0, 20, tv.field_o.field_sb, rj.field_j, 2);
     }
 
     pg(int param0, nq param1, nq param2) {
         super(param0, param1);
         try {
-            this.field_r = param2;
+          this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(op param0, int param1) {
         try {
-            int var3_int = 56 / ((param1 - 12) / 35);
-            this.a(param0, (byte) -2);
+          int var3_int = 56 / ((param1 - 12) / 35);
+          this.a(param0, (byte) -2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void d(int param0) {
         field_q = null;
         if (param0 != 0) {
-            pg.e(1);
+          pg.e(1);
         }
     }
 
     final void a(byte param0, lu param1) {
         try {
-            super.a((byte) -95, param1);
-            er.a(this.field_r, 127, param1);
-            if (param0 >= -12) {
-                this.field_r = (nq) null;
-            }
+          super.a((byte) -95, param1);
+          er.a(this.field_r, 127, param1);
+          if (param0 >= -12) {
+            this.field_r = (nq) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

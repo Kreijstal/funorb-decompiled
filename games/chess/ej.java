@@ -12,7 +12,7 @@ final class ej {
 
     public static void a(byte param0) {
         if (param0 != -30) {
-            return;
+          return;
         }
         field_e = null;
         field_b = null;

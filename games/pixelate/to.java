@@ -13,40 +13,23 @@ final class to extends de {
         if (el.field_b == 10) {
           tj.h(20);
           el.field_b = 11;
-          go.field_f = true;
-          if (param0 > 36) {
-            return;
-          } else {
-            to.g((byte) 72);
-            return;
-          }
         } else {
           if (!ri.a(-88)) {
             tj.h(20);
             el.field_b = 11;
-            go.field_f = true;
-            if (param0 <= 36) {
-              to.g((byte) 72);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            go.field_f = true;
-            if (param0 > 36) {
-              return;
-            } else {
-              to.g((byte) 72);
-              return;
-            }
           }
         }
+        go.field_f = true;
+        if (param0 > 36) {
+          return;
+        }
+        to.g((byte) 72);
     }
 
     final void a(int param0) {
         gj.field_W[0].b(0, 45);
         if (param0 != 11) {
-            return;
+          return;
         }
         this.b((byte) -71);
     }
@@ -66,7 +49,7 @@ final class to extends de {
 
     final void c(byte param0) {
         if (param0 > -13) {
-            field_t = (mm) null;
+          field_t = (mm) null;
         }
     }
 

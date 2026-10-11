@@ -7,600 +7,331 @@ final class c {
     static sb field_a;
 
     final static void a(byte param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$14 = 0;
         int fieldTemp$10 = 0;
         int fieldTemp$11 = 0;
         int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        if (!kj.a(false)) {
-          L0: {
-            if (null == r.field_d) {
-              r.field_d = gk.b(4, 1);
-              break L0;
-            } else {
-              break L0;
-            }
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$6 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        if (kj.a(false)) {
+          if (!hc.field_D &&
+            null != r.field_d &&
+            r.field_d.field_o) {
+            i.field_c = r.field_d.field_p;
+            sj.field_d = new int[i.field_c.length];
+            di.field_x = new int[i.field_c.length];
+            sj.field_d = i.a(-111, i.field_c, sj.field_d);
+            di.field_x = me.a(8, di.field_x, i.field_c);
+            hc.field_D = true;
+            ed.b(4);
           }
-          if (!hc.field_D) {
-            L1: {
-              if (null == r.field_d) {
-                break L1;
-              } else {
-                if (r.field_d.field_o) {
-                  i.field_c = r.field_d.field_p;
-                  sj.field_d = new int[i.field_c.length];
-                  di.field_x = new int[i.field_c.length];
-                  sj.field_d = i.a(-111, i.field_c, sj.field_d);
-                  di.field_x = me.a(8, di.field_x, i.field_c);
-                  hc.field_D = true;
-                  ed.b(4);
-                  break L1;
-                } else {
-                  break L1;
-                }
+          if (param0 > -94) {
+            field_c = (int[]) null;
+            if (null != ce.field_a.b(108)) {
+              fieldTemp$13 = tf.field_a + 1;
+              tf.field_a = tf.field_a + 1;
+              if (fieldTemp$13 == 370) {
+                tf.field_a = 0;
+                ce.field_a.e(63854);
               }
             }
-            if (param0 <= -94) {
-              L2: {
-                if (null == ce.field_a.b(108)) {
-                  break L2;
-                } else {
-                  fieldTemp$0 = tf.field_a + 1;
-                  tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$0 != 370) {
-                    break L2;
-                  } else {
-                    L3: {
-                      tf.field_a = 0;
-                      ce.field_a.e(63854);
-                      fieldTemp$1 = ph.field_c;
-                      ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$1 & 3)) {
-                        break L3;
-                      } else {
-                        L4: {
-                          if (0 > ah.field_e) {
-                            break L4;
-                          } else {
-                            if (0 > qh.field_c) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        qh.field_c = qh.field_c + 1;
-                        if ((ah.field_e ^ -1) > -1) {
-                          if (ah.field_e >= 0) {
-                            break L3;
-                          } else {
-                            if (qh.field_c != 5) {
-                              break L3;
-                            } else {
-                              qh.field_c = 2;
-                              return;
-                            }
-                          }
-                        } else {
-                          if (10 == qh.field_c) {
-                            qh.field_c = -1;
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  }
-                }
-              }
-              L5: {
-                fieldTemp$2 = ph.field_c;
-                ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$2 & 3)) {
-                  break L5;
-                } else {
-                  if (0 > ah.field_e) {
-                    qh.field_c = qh.field_c + 1;
-                    if ((ah.field_e ^ -1) > -1) {
-                      if (ah.field_e >= 0) {
-                        break L5;
-                      } else {
-                        if (qh.field_c != 5) {
-                          break L5;
-                        } else {
-                          qh.field_c = 2;
-                          return;
-                        }
-                      }
-                    } else {
-                      if (10 == qh.field_c) {
-                        qh.field_c = -1;
-                        return;
-                      } else {
-                        return;
-                      }
-                    }
-                  } else {
-                    if (0 > qh.field_c) {
-                      break L5;
-                    } else {
-                      qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
-                        L6: {
-                          if (ah.field_e >= 0) {
-                            break L6;
-                          } else {
-                            if (qh.field_c != 5) {
-                              break L6;
-                            } else {
-                              qh.field_c = 2;
-                              return;
-                            }
-                          }
-                        }
-                        return;
-                      } else {
-                        if (10 == qh.field_c) {
-                          qh.field_c = -1;
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            } else {
-              L7: {
-                field_c = (int[]) null;
-                if (null == ce.field_a.b(108)) {
-                  break L7;
-                } else {
-                  fieldTemp$3 = tf.field_a + 1;
-                  tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$3 != 370) {
-                    break L7;
-                  } else {
-                    tf.field_a = 0;
-                    ce.field_a.e(63854);
-                    break L7;
-                  }
-                }
-              }
-              L8: {
-                fieldTemp$4 = ph.field_c;
-                ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$4 & 3)) {
-                  break L8;
-                } else {
-                  L9: {
-                    if (0 > ah.field_e) {
-                      break L9;
-                    } else {
-                      if (0 > qh.field_c) {
-                        break L8;
-                      } else {
-                        break L9;
-                      }
-                    }
-                  }
-                  qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
-                    if (ah.field_e >= 0) {
-                      break L8;
-                    } else {
-                      if (qh.field_c != 5) {
-                        break L8;
-                      } else {
-                        qh.field_c = 2;
-                        break L8;
-                      }
-                    }
-                  } else {
-                    if (10 == qh.field_c) {
-                      qh.field_c = -1;
-                      break L8;
-                    } else {
-                      break L8;
-                    }
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            if (param0 <= -94) {
-              L10: {
-                if (null == ce.field_a.b(108)) {
-                  break L10;
-                } else {
-                  fieldTemp$5 = tf.field_a + 1;
-                  tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$5 != 370) {
-                    break L10;
-                  } else {
-                    L11: {
-                      tf.field_a = 0;
-                      ce.field_a.e(63854);
-                      fieldTemp$6 = ph.field_c;
-                      ph.field_c = ph.field_c + 1;
-                      if (0 != (fieldTemp$6 & 3)) {
-                        break L11;
-                      } else {
-                        L12: {
-                          if (0 > ah.field_e) {
-                            break L12;
-                          } else {
-                            if (0 > qh.field_c) {
-                              break L11;
-                            } else {
-                              break L12;
-                            }
-                          }
-                        }
-                        qh.field_c = qh.field_c + 1;
-                        if ((ah.field_e ^ -1) > -1) {
-                          if (ah.field_e >= 0) {
-                            break L11;
-                          } else {
-                            if (qh.field_c != 5) {
-                              break L11;
-                            } else {
-                              qh.field_c = 2;
-                              break L11;
-                            }
-                          }
-                        } else {
-                          if (10 == qh.field_c) {
-                            qh.field_c = -1;
-                            break L11;
-                          } else {
-                            break L11;
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  }
-                }
-              }
-              fieldTemp$7 = ph.field_c;
-              ph.field_c = ph.field_c + 1;
-              if (0 == (fieldTemp$7 & 3)) {
-                if (0 > ah.field_e) {
-                  qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
-                    L13: {
-                      if (ah.field_e >= 0) {
-                        break L13;
-                      } else {
-                        if (qh.field_c != 5) {
-                          break L13;
-                        } else {
-                          qh.field_c = 2;
-                          return;
-                        }
-                      }
-                    }
-                    return;
-                  } else {
-                    if (10 == qh.field_c) {
-                      qh.field_c = -1;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (0 <= qh.field_c) {
-                    L14: {
-                      qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
-                        if (ah.field_e >= 0) {
-                          break L14;
-                        } else {
-                          if (qh.field_c != 5) {
-                            break L14;
-                          } else {
-                            qh.field_c = 2;
-                            break L14;
-                          }
-                        }
-                      } else {
-                        if (10 == qh.field_c) {
-                          qh.field_c = -1;
-                          break L14;
-                        } else {
-                          break L14;
-                        }
-                      }
-                    }
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
+            fieldTemp$14 = ph.field_c;
+            ph.field_c = ph.field_c + 1;
+            if (0 == (fieldTemp$14 & 3)) {
+              if (0 <= ah.field_e &&
+                0 > qh.field_c) {
                 return;
               }
-            } else {
-              L15: {
-                field_c = (int[]) null;
-                if (null == ce.field_a.b(108)) {
-                  break L15;
-                } else {
-                  fieldTemp$8 = tf.field_a + 1;
-                  tf.field_a = tf.field_a + 1;
-                  if (fieldTemp$8 != 370) {
-                    break L15;
-                  } else {
-                    tf.field_a = 0;
-                    ce.field_a.e(63854);
-                    break L15;
-                  }
+              qh.field_c = qh.field_c + 1;
+              if (ah.field_e < 0) {
+                if (ah.field_e < 0 &&
+                  qh.field_c == 5) {
+                  qh.field_c = 2;
                 }
-              }
-              L16: {
-                fieldTemp$9 = ph.field_c;
-                ph.field_c = ph.field_c + 1;
-                if (0 != (fieldTemp$9 & 3)) {
-                  break L16;
-                } else {
-                  L17: {
-                    if (0 > ah.field_e) {
-                      break L17;
-                    } else {
-                      if (0 > qh.field_c) {
-                        break L16;
-                      } else {
-                        break L17;
-                      }
-                    }
-                  }
-                  qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
-                    if (ah.field_e >= 0) {
-                      break L16;
-                    } else {
-                      if (qh.field_c != 5) {
-                        break L16;
-                      } else {
-                        qh.field_c = 2;
-                        break L16;
-                      }
-                    }
-                  } else {
-                    if (10 == qh.field_c) {
-                      qh.field_c = -1;
-                      break L16;
-                    } else {
-                      break L16;
-                    }
-                  }
-                }
-              }
-              return;
-            }
-          }
-        } else {
-          L18: {
-            if (hc.field_D) {
-              break L18;
-            } else {
-              if (null == r.field_d) {
-                break L18;
               } else {
-                if (r.field_d.field_o) {
-                  i.field_c = r.field_d.field_p;
-                  sj.field_d = new int[i.field_c.length];
-                  di.field_x = new int[i.field_c.length];
-                  sj.field_d = i.a(-111, i.field_c, sj.field_d);
-                  di.field_x = me.a(8, di.field_x, i.field_c);
-                  hc.field_D = true;
-                  ed.b(4);
-                  break L18;
-                } else {
-                  break L18;
-                }
-              }
-            }
-          }
-          if (param0 <= -94) {
-            L19: {
-              if (null == ce.field_a.b(108)) {
-                break L19;
-              } else {
-                fieldTemp$10 = tf.field_a + 1;
-                tf.field_a = tf.field_a + 1;
-                if (fieldTemp$10 != 370) {
-                  break L19;
-                } else {
-                  L20: {
-                    tf.field_a = 0;
-                    ce.field_a.e(63854);
-                    fieldTemp$11 = ph.field_c;
-                    ph.field_c = ph.field_c + 1;
-                    if (0 != (fieldTemp$11 & 3)) {
-                      break L20;
-                    } else {
-                      L21: {
-                        if (0 > ah.field_e) {
-                          break L21;
-                        } else {
-                          if (0 > qh.field_c) {
-                            break L20;
-                          } else {
-                            break L21;
-                          }
-                        }
-                      }
-                      qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
-                        if (ah.field_e >= 0) {
-                          break L20;
-                        } else {
-                          if (qh.field_c != 5) {
-                            break L20;
-                          } else {
-                            qh.field_c = 2;
-                            break L20;
-                          }
-                        }
-                      } else {
-                        if (10 == qh.field_c) {
-                          qh.field_c = -1;
-                          break L20;
-                        } else {
-                          break L20;
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            }
-            L22: {
-              fieldTemp$12 = ph.field_c;
-              ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$12 & 3)) {
-                break L22;
-              } else {
-                if (0 > ah.field_e) {
-                  qh.field_c = qh.field_c + 1;
-                  if ((ah.field_e ^ -1) > -1) {
-                    if (ah.field_e >= 0) {
-                      break L22;
-                    } else {
-                      if (qh.field_c != 5) {
-                        break L22;
-                      } else {
-                        qh.field_c = 2;
-                        return;
-                      }
-                    }
-                  } else {
-                    if (10 == qh.field_c) {
-                      qh.field_c = -1;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (0 > qh.field_c) {
-                    break L22;
-                  } else {
-                    L23: {
-                      qh.field_c = qh.field_c + 1;
-                      if ((ah.field_e ^ -1) > -1) {
-                        if (ah.field_e >= 0) {
-                          break L23;
-                        } else {
-                          if (qh.field_c != 5) {
-                            break L23;
-                          } else {
-                            qh.field_c = 2;
-                            break L23;
-                          }
-                        }
-                      } else {
-                        if (10 == qh.field_c) {
-                          qh.field_c = -1;
-                          break L23;
-                        } else {
-                          break L23;
-                        }
-                      }
-                    }
-                    return;
-                  }
+                if (10 == qh.field_c) {
+                  qh.field_c = -1;
                 }
               }
             }
             return;
-          } else {
-            L24: {
-              field_c = (int[]) null;
-              if (null == ce.field_a.b(108)) {
-                break L24;
-              } else {
-                fieldTemp$13 = tf.field_a + 1;
-                tf.field_a = tf.field_a + 1;
-                if (fieldTemp$13 != 370) {
-                  break L24;
-                } else {
-                  tf.field_a = 0;
-                  ce.field_a.e(63854);
-                  break L24;
-                }
-              }
-            }
-            L25: {
-              fieldTemp$14 = ph.field_c;
+          }
+          if (null != ce.field_a.b(108)) {
+            fieldTemp$10 = tf.field_a + 1;
+            tf.field_a = tf.field_a + 1;
+            if (fieldTemp$10 == 370) {
+              tf.field_a = 0;
+              ce.field_a.e(63854);
+              fieldTemp$11 = ph.field_c;
               ph.field_c = ph.field_c + 1;
-              if (0 != (fieldTemp$14 & 3)) {
-                break L25;
-              } else {
-                L26: {
-                  if (0 > ah.field_e) {
-                    break L26;
-                  } else {
-                    if (0 > qh.field_c) {
-                      break L25;
-                    } else {
-                      break L26;
-                    }
-                  }
+              if (0 == (fieldTemp$11 & 3)) {
+                if (0 <= ah.field_e &&
+                  0 > qh.field_c) {
+                  return;
                 }
                 qh.field_c = qh.field_c + 1;
-                if ((ah.field_e ^ -1) > -1) {
-                  if (ah.field_e >= 0) {
-                    break L25;
-                  } else {
-                    if (qh.field_c != 5) {
-                      break L25;
-                    } else {
-                      qh.field_c = 2;
-                      break L25;
-                    }
+                if (ah.field_e < 0) {
+                  if (ah.field_e < 0 &&
+                    qh.field_c == 5) {
+                    qh.field_c = 2;
                   }
                 } else {
                   if (10 == qh.field_c) {
                     qh.field_c = -1;
-                    break L25;
-                  } else {
-                    break L25;
                   }
                 }
+              }
+              return;
+            }
+          }
+          fieldTemp$12 = ph.field_c;
+          ph.field_c = ph.field_c + 1;
+          if (0 == (fieldTemp$12 & 3)) {
+            if (0 > ah.field_e) {
+              qh.field_c = qh.field_c + 1;
+              if (ah.field_e >= 0) {
+                if (10 != qh.field_c) {
+                  return;
+                }
+                qh.field_c = -1;
+                return;
+              }
+              if (ah.field_e < 0 &&
+                qh.field_c == 5) {
+                qh.field_c = 2;
+                return;
+              }
+            } else {
+              if (0 <= qh.field_c) {
+                qh.field_c = qh.field_c + 1;
+                if (ah.field_e < 0) {
+                  if (ah.field_e < 0 &&
+                    qh.field_c == 5) {
+                    qh.field_c = 2;
+                  }
+                } else {
+                  if (10 == qh.field_c) {
+                    qh.field_c = -1;
+                  }
+                }
+                return;
+              }
+            }
+          }
+          return;
+        }
+        if (null == r.field_d) {
+          r.field_d = gk.b(4, 1);
+        }
+        if (hc.field_D) {
+          if (param0 > -94) {
+            field_c = (int[]) null;
+            if (null != ce.field_a.b(108)) {
+              fieldTemp$8 = tf.field_a + 1;
+              tf.field_a = tf.field_a + 1;
+              if (fieldTemp$8 == 370) {
+                tf.field_a = 0;
+                ce.field_a.e(63854);
+              }
+            }
+            fieldTemp$9 = ph.field_c;
+            ph.field_c = ph.field_c + 1;
+            if (0 == (fieldTemp$9 & 3)) {
+              if (0 <= ah.field_e &&
+                0 > qh.field_c) {
+                return;
+              }
+              qh.field_c = qh.field_c + 1;
+              if (ah.field_e < 0) {
+                if (ah.field_e < 0 &&
+                  qh.field_c == 5) {
+                  qh.field_c = 2;
+                }
+              } else {
+                if (10 == qh.field_c) {
+                  qh.field_c = -1;
+                }
+              }
+            }
+            return;
+          }
+          if (null != ce.field_a.b(108)) {
+            fieldTemp$5 = tf.field_a + 1;
+            tf.field_a = tf.field_a + 1;
+            if (fieldTemp$5 == 370) {
+              tf.field_a = 0;
+              ce.field_a.e(63854);
+              fieldTemp$6 = ph.field_c;
+              ph.field_c = ph.field_c + 1;
+              if (0 == (fieldTemp$6 & 3)) {
+                if (0 <= ah.field_e &&
+                  0 > qh.field_c) {
+                  return;
+                }
+                qh.field_c = qh.field_c + 1;
+                if (ah.field_e < 0) {
+                  if (ah.field_e < 0 &&
+                    qh.field_c == 5) {
+                    qh.field_c = 2;
+                  }
+                } else {
+                  if (10 == qh.field_c) {
+                    qh.field_c = -1;
+                  }
+                }
+              }
+              return;
+            }
+          }
+          fieldTemp$7 = ph.field_c;
+          ph.field_c = ph.field_c + 1;
+          if (0 != (fieldTemp$7 & 3)) {
+            return;
+          }
+          if (0 > ah.field_e) {
+            qh.field_c = qh.field_c + 1;
+            if (ah.field_e >= 0) {
+              if (10 != qh.field_c) {
+                return;
+              }
+              qh.field_c = -1;
+              return;
+            }
+            if (ah.field_e < 0 &&
+              qh.field_c == 5) {
+              qh.field_c = 2;
+              return;
+            }
+            return;
+          }
+          if (0 > qh.field_c) {
+            return;
+          }
+          qh.field_c = qh.field_c + 1;
+          if (ah.field_e < 0) {
+            if (ah.field_e < 0 &&
+              qh.field_c == 5) {
+              qh.field_c = 2;
+            }
+          } else {
+            if (10 == qh.field_c) {
+              qh.field_c = -1;
+            }
+          }
+          return;
+        }
+        if (null != r.field_d &&
+          r.field_d.field_o) {
+          i.field_c = r.field_d.field_p;
+          sj.field_d = new int[i.field_c.length];
+          di.field_x = new int[i.field_c.length];
+          sj.field_d = i.a(-111, i.field_c, sj.field_d);
+          di.field_x = me.a(8, di.field_x, i.field_c);
+          hc.field_D = true;
+          ed.b(4);
+        }
+        if (param0 > -94) {
+          field_c = (int[]) null;
+          if (null != ce.field_a.b(108)) {
+            fieldTemp$3 = tf.field_a + 1;
+            tf.field_a = tf.field_a + 1;
+            if (fieldTemp$3 == 370) {
+              tf.field_a = 0;
+              ce.field_a.e(63854);
+            }
+          }
+          fieldTemp$4 = ph.field_c;
+          ph.field_c = ph.field_c + 1;
+          if (0 == (fieldTemp$4 & 3)) {
+            if (0 <= ah.field_e &&
+              0 > qh.field_c) {
+              return;
+            }
+            qh.field_c = qh.field_c + 1;
+            if (ah.field_e < 0) {
+              if (ah.field_e < 0 &&
+                qh.field_c == 5) {
+                qh.field_c = 2;
+              }
+            } else {
+              if (10 == qh.field_c) {
+                qh.field_c = -1;
+              }
+            }
+          }
+          return;
+        }
+        if (null != ce.field_a.b(108)) {
+          fieldTemp$0 = tf.field_a + 1;
+          tf.field_a = tf.field_a + 1;
+          if (fieldTemp$0 == 370) {
+            tf.field_a = 0;
+            ce.field_a.e(63854);
+            fieldTemp$1 = ph.field_c;
+            ph.field_c = ph.field_c + 1;
+            if (0 == (fieldTemp$1 & 3)) {
+              if (0 <= ah.field_e &&
+                0 > qh.field_c) {
+                return;
+              }
+              qh.field_c = qh.field_c + 1;
+              if (ah.field_e >= 0) {
+                if (10 != qh.field_c) {
+                  return;
+                }
+                qh.field_c = -1;
+                return;
+              }
+              if (ah.field_e < 0 &&
+                qh.field_c == 5) {
+                qh.field_c = 2;
+                return;
               }
             }
             return;
           }
         }
+        fieldTemp$2 = ph.field_c;
+        ph.field_c = ph.field_c + 1;
+        if (0 != (fieldTemp$2 & 3)) {
+          return;
+        }
+        if (0 <= ah.field_e &&
+          0 > qh.field_c) {
+          return;
+        }
+        qh.field_c = qh.field_c + 1;
+        if (ah.field_e >= 0) {
+          if (10 != qh.field_c) {
+            return;
+          }
+          qh.field_c = -1;
+          return;
+        }
+        if (ah.field_e < 0 &&
+          qh.field_c == 5) {
+          qh.field_c = 2;
+          return;
+        }
+        return;
     }
 
     public static void b(byte param0) {
         field_b = null;
         if (param0 > -1) {
-            field_b = (String) null;
-            field_c = null;
-            field_a = null;
-            return;
+          field_b = (String) null;
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_c = null;
         field_a = null;

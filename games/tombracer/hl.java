@@ -21,10 +21,6 @@ abstract class hl implements mta {
         int stackIn_9_1;
         Object stackIn_9_2;
         int stackIn_9_3;
-        int stackIn_10_0 = 0;
-        int stackIn_10_1 = 0;
-        Object stackIn_10_2 = null;
-        int stackIn_10_3 = 0;
         int stackIn_10_4 = 0;
         jaclib.memory.heap.NativeHeapBuffer stackIn_12_0 = null;
         jaggl.MapBuffer stackIn_18_0 = null;
@@ -32,143 +28,76 @@ abstract class hl implements mta {
         Object stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 == 1) {
-                break L1;
-              } else {
-                var5 = (jaggl.MapBuffer) null;
-                this.a((jaggl.MapBuffer) null, -94);
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_e == 0) {
-                this.d(1);
-                if (0 >= this.field_f) {
-                  this.field_e = 2;
-                  stackIn_20_0 = this.field_b;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L3: {
-                    jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
-                    if (param1) {
-                      L4: {
-                        stackIn_9_0 = this.field_k;
-
-                        stackIn_9_1 = this.field_d;
-
-                        stackIn_9_2 = null;
-
-                        stackIn_9_3 = 0;
-
-                        if (!this.field_j) {
-                          stackIn_10_0 = stackIn_9_0;
-                          stackIn_10_1 = stackIn_9_1;
-                          stackIn_10_2 = stackIn_9_2;
-                          stackIn_10_3 = stackIn_9_3;
-                          stackIn_10_4 = 35044;
-                          break L4;
-                        } else {
-                          stackIn_10_0 = stackIn_9_0;
-                          stackIn_10_1 = stackIn_9_1;
-                          stackIn_10_2 = stackIn_9_2;
-                          stackIn_10_3 = stackIn_9_3;
-                          stackIn_10_4 = 35040;
-                          break L4;
-                        }
-                      }
-                      jaggl.OpenGL.glBufferDataARBub(stackIn_10_0, stackIn_10_1, (byte[]) ((Object) stackIn_10_2), stackIn_10_3, stackIn_10_4);
-                      if (this.field_h.field_o.c < this.field_g) {
-                        break L3;
-                      } else {
-                        this.field_e = 1;
-                        stackIn_12_0 = this.field_h.field_o;
-                        decompiledRegionSelector0 = 0;
-                        break L0;
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                  if (!param0.b()) {
-                    if (param0.a(this.field_k, this.field_g, 35001)) {
-                      this.field_e = 2;
-                      stackIn_18_0 = (jaggl.MapBuffer) (param0);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    return null;
-                  }
-                }
-              } else {
-                break L2;
-              }
-            }
-            stackIn_22_0 = null;
-            decompiledRegionSelector0 = 3;
-            break L0;
+          if (param2 != 1) {
+            var5 = (jaggl.MapBuffer) null;
+            this.a((jaggl.MapBuffer) null, -94);
           }
+          if (this.field_e == 0) {
+            this.d(1);
+            if (0 >= this.field_f) {
+              this.field_e = 2;
+              stackIn_20_0 = this.field_b;
+              return (jaclib.memory.Buffer) ((Object) stackIn_20_0);
+            }
+            jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
+            if (param1) {
+              stackIn_9_0 = this.field_k;
+              stackIn_9_1 = this.field_d;
+              stackIn_9_2 = null;
+              stackIn_9_3 = 0;
+              if (!this.field_j) {
+                stackIn_10_4 = 35044;
+              } else {
+                stackIn_10_4 = 35040;
+              }
+              jaggl.OpenGL.glBufferDataARBub(stackIn_9_0, stackIn_9_1, (byte[]) (stackIn_9_2), stackIn_9_3, stackIn_10_4);
+              if (this.field_h.field_o.c >= this.field_g) {
+                this.field_e = 1;
+                stackIn_12_0 = this.field_h.field_o;
+                return (jaclib.memory.Buffer) ((Object) stackIn_12_0);
+              }
+            }
+            if (param0.b()) {
+              return null;
+            }
+            if (param0.a(this.field_k, this.field_g, 35001)) {
+              this.field_e = 2;
+              stackIn_18_0 = (jaggl.MapBuffer) (param0);
+              return (jaclib.memory.Buffer) ((Object) stackIn_18_0);
+            }
+          }
+          stackIn_22_0 = null;
+          return (jaclib.memory.Buffer) (stackIn_22_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var4);
-
-            stackIn_25_1 = new StringBuilder().append("hl.O(");
-
-            if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L5;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L5;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (jaclib.memory.Buffer) ((Object) stackIn_12_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (jaclib.memory.Buffer) ((Object) stackIn_18_0);
+          var4 = decompiledCaughtException;
+          stackIn_25_0 = var4;
+          stackIn_25_1 = new StringBuilder().append("hl.O(");
+          if (param0 == null) {
+            stackIn_26_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return (jaclib.memory.Buffer) ((Object) stackIn_20_0);
-            } else {
-              return (jaclib.memory.Buffer) ((Object) stackIn_22_0);
-            }
+            stackIn_26_2 = "{...}";
           }
+          throw tba.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     private final void d(int param0) {
-        if (!(0 > this.field_f)) {
-            return;
+        if (0 <= this.field_f) {
+          return;
         }
         if (param0 != 1) {
-            this.d(14);
+          this.d(14);
         }
         if (this.field_h.field_fd) {
-            jaggl.OpenGL.glGenBuffersARB(1, uqa.field_x, 0);
-            this.field_f = uqa.field_x[0];
-            jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
+          jaggl.OpenGL.glGenBuffersARB(1, uqa.field_x, 0);
+          this.field_f = uqa.field_x[0];
+          jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
         } else {
-            this.field_f = 0;
+          this.field_f = 0;
         }
     }
 
@@ -179,10 +108,10 @@ abstract class hl implements mta {
 
     final void c(int param0) {
         if (param0 != -3) {
-            return;
+          return;
         }
         if (this.field_h.field_fd) {
-            jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
+          jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
         }
     }
 
@@ -232,210 +161,141 @@ abstract class hl implements mta {
         int[] var57 = null;
         int[] var58 = null;
         int[] var59 = null;
+        int var40Lifetime1;
+        int var41Lifetime1;
+        int var42Lifetime1;
+        int var43Lifetime1;
         var47 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var8_int = 0;
-              var9 = param7;
-              var10 = 0;
-              var11 = -param6 + param5;
-              var12 = param7 - param6;
-              var13 = param5 * param5;
-              var14 = param7 * param7;
-              var15 = var11 * var11;
-              var16 = var12 * var12;
-              var17 = var14 << -713296351;
-              if (param4) {
-                break L1;
-              } else {
-                hl.a(-80, 16, -30, 69, false, -29, -88, -33);
-                break L1;
-              }
+          var8_int = 0;
+          var9 = param7;
+          var10 = 0;
+          var11 = -param6 + param5;
+          var12 = param7 - param6;
+          var13 = param5 * param5;
+          var14 = param7 * param7;
+          var15 = var11 * var11;
+          var16 = var12 * var12;
+          var17 = var14 << 1;
+          if (!param4) {
+            hl.a(-80, 16, -30, 69, false, -29, -88, -33);
+          }
+          var18 = var13 << 1;
+          var19 = var16 << 1;
+          var20 = var15 << 1;
+          var21 = param7 << 1;
+          var22 = var12 << 1;
+          var23 = var17 + (1 - var21) * var13;
+          var24 = var14 - var18 * (var21 - 1);
+          var25 = (1 - var22) * var15 + var19;
+          var26 = -(var20 * (var22 - 1)) + var16;
+          var27 = var13 << 2;
+          var28 = var14 << 2;
+          var29 = var15 << 2;
+          var30 = var16 << 2;
+          var31 = 3 * var17;
+          var32 = (-3 + var21) * var18;
+          var33 = 3 * var19;
+          var34 = var20 * (-3 + var22);
+          var35 = var28;
+          var36 = var27 * (-1 + param7);
+          var37 = var30;
+          var38 = var29 * (var12 - 1);
+          if (gca.field_d <= param2 &&
+            hc.field_h >= param2) {
+            var57 = vaa.field_a[param2];
+            var40 = rp.a(ss.field_c, -16226, pka.field_b, -param5 + param3);
+            var41 = rp.a(ss.field_c, -16226, pka.field_b, param5 + param3);
+            var42 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var11);
+            var43 = rp.a(ss.field_c, -16226, pka.field_b, param3 + var11);
+            nra.a((byte) -55, param0, var42, var57, var40);
+            nra.a((byte) -55, param1, var43, var57, var42);
+            nra.a((byte) -55, param0, var41, var57, var43);
+          }
+          while (true) {
+            if (var9 <= 0) {
+              return;
             }
-            L2: {
-              var18 = var13 << -146044127;
-              var19 = var16 << 1233342305;
-              var20 = var15 << 1206563009;
-              var21 = param7 << 1140297729;
-              var22 = var12 << 700102785;
-              var23 = var17 + (1 + -var21) * var13;
-              var24 = var14 - var18 * (var21 + -1);
-              var25 = (1 + -var22) * var15 + var19;
-              var26 = -(var20 * (var22 + -1)) + var16;
-              var27 = var13 << 216442178;
-              var28 = var14 << 116045154;
-              var29 = var15 << 343087554;
-              var30 = var16 << -776850750;
-              var31 = 3 * var17;
-              var32 = (-3 + var21) * var18;
-              var33 = 3 * var19;
-              var34 = var20 * (-3 + var22);
-              var35 = var28;
-              var36 = var27 * (-1 + param7);
-              var37 = var30;
-              var38 = var29 * (var12 - 1);
-              if (gca.field_d > param2) {
-                break L2;
-              } else {
-                if (hc.field_h >= param2) {
-                  var57 = vaa.field_a[param2];
-                  var40 = rp.a(ss.field_c, -16226, pka.field_b, -param5 + param3);
-                  var41 = rp.a(ss.field_c, -16226, pka.field_b, param5 + param3);
-                  var42 = rp.a(ss.field_c, -16226, pka.field_b, param3 + -var11);
-                  var43 = rp.a(ss.field_c, -16226, pka.field_b, param3 + var11);
-                  nra.a((byte) -55, param0, var42, var57, var40);
-                  nra.a((byte) -55, param1, var43, var57, var42);
-                  nra.a((byte) -55, param0, var41, var57, var43);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: while (true) {
-              if (-1 <= (var9 ^ -1)) {
-                break L0;
-              } else {
-                L4: {
-                  if (var9 > var12) {
-                    stackIn_11_0 = 0;
-                    break L4;
-                  } else {
-                    stackIn_11_0 = 1;
-                    break L4;
-                  }
-                }
-                L5: {
-                  var39 = stackIn_11_0;
-                  if (var39 != 0) {
-                    L6: {
-                      if (-1 >= (var25 ^ -1)) {
-                        break L6;
-                      } else {
-                        L7: while (true) {
-                          if (-1 >= (var25 ^ -1)) {
-                            break L6;
-                          } else {
-                            var26 = var26 + var37;
-                            var25 = var25 + var33;
-                            var37 = var37 + var30;
-                            var10++;
-                            var33 = var33 + var30;
-                            continue L7;
-                          }
-                        }
-                      }
-                    }
-                    L8: {
-                      if (-1 < (var26 ^ -1)) {
-                        var25 = var25 + var33;
-                        var26 = var26 + var37;
-                        var10++;
-                        var37 = var37 + var30;
-                        var33 = var33 + var30;
-                        break L8;
-                      } else {
-                        break L8;
-                      }
-                    }
-                    var26 = var26 + -var34;
-                    var25 = var25 + -var38;
-                    var38 = var38 - var29;
-                    var34 = var34 - var29;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L9: {
-                  if (-1 < (var23 ^ -1)) {
-                    L10: while (true) {
-                      if (0 <= var23) {
-                        break L9;
-                      } else {
-                        var23 = var23 + var31;
-                        var24 = var24 + var35;
-                        var35 = var35 + var28;
-                        var31 = var31 + var28;
-                        var8_int++;
-                        continue L10;
-                      }
-                    }
-                  } else {
-                    break L9;
-                  }
-                }
-                L11: {
-                  if (0 <= var24) {
-                    break L11;
-                  } else {
-                    var24 = var24 + var35;
-                    var23 = var23 + var31;
-                    var8_int++;
-                    var35 = var35 + var28;
-                    var31 = var31 + var28;
-                    break L11;
-                  }
-                }
-                var24 = var24 + -var32;
-                var23 = var23 + -var36;
-                var32 = var32 - var27;
-                var9--;
-                var36 = var36 - var27;
-                var40 = -var9 + param2;
-                var41 = param2 + var9;
-                if (gca.field_d > var41) {
-                  continue L3;
-                } else {
-                  if (hc.field_h < var40) {
-                    continue L3;
-                  } else {
-                    var42 = rp.a(ss.field_c, -16226, pka.field_b, var8_int + param3);
-                    var43 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var8_int);
-                    if (var39 != 0) {
-                      L12: {
-                        var44 = rp.a(ss.field_c, -16226, pka.field_b, param3 - -var10);
-                        var45 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var10);
-                        if (var40 >= gca.field_d) {
-                          var58 = vaa.field_a[var40];
-                          nra.a((byte) -55, param0, var45, var58, var43);
-                          nra.a((byte) -55, param1, var44, var58, var45);
-                          nra.a((byte) -55, param0, var42, var58, var44);
-                          break L12;
-                        } else {
-                          break L12;
-                        }
-                      }
-                      if (var41 <= hc.field_h) {
-                        var59 = vaa.field_a[var41];
-                        nra.a((byte) -55, param0, var45, var59, var43);
-                        nra.a((byte) -55, param1, var44, var59, var45);
-                        nra.a((byte) -55, param0, var42, var59, var44);
-                        continue L3;
-                      } else {
-                        continue L3;
-                      }
-                    } else {
-                      L13: {
-                        if (var40 < gca.field_d) {
-                          break L13;
-                        } else {
-                          nra.a((byte) -55, param0, var42, vaa.field_a[var40], var43);
-                          break L13;
-                        }
-                      }
-                      if (var41 <= hc.field_h) {
-                        nra.a((byte) -55, param0, var42, vaa.field_a[var41], var43);
-                        continue L3;
-                      } else {
-                        continue L3;
-                      }
-                    }
-                  }
+            stackIn_11_0 = (var9 > var12) ? 0 : 1;
+            var39 = stackIn_11_0;
+            if (var39 != 0) {
+              if (var25 < 0) {
+                while (var25 < 0) {
+                  var26 = var26 + var37;
+                  var25 = var25 + var33;
+                  var37 = var37 + var30;
+                  var10++;
+                  var33 = var33 + var30;
                 }
               }
+              if (var26 < 0) {
+                var25 = var25 + var33;
+                var26 = var26 + var37;
+                var10++;
+                var37 = var37 + var30;
+                var33 = var33 + var30;
+              }
+              var26 = var26 - var34;
+              var25 = var25 - var38;
+              var38 = var38 - var29;
+              var34 = var34 - var29;
             }
+            if (var23 < 0) {
+              while (0 > var23) {
+                var23 = var23 + var31;
+                var24 = var24 + var35;
+                var35 = var35 + var28;
+                var31 = var31 + var28;
+                var8_int++;
+              }
+            }
+            if (0 > var24) {
+              var24 = var24 + var35;
+              var23 = var23 + var31;
+              var8_int++;
+              var35 = var35 + var28;
+              var31 = var31 + var28;
+            }
+            var24 = var24 - var32;
+            var23 = var23 - var36;
+            var32 = var32 - var27;
+            var9--;
+            var36 = var36 - var27;
+            var40Lifetime1 = -var9 + param2;
+            var41Lifetime1 = param2 + var9;
+            if (gca.field_d > var41Lifetime1) {
+              continue;
+            }
+            if (hc.field_h < var40Lifetime1) {
+              continue;
+            }
+            var42Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, var8_int + param3);
+            var43Lifetime1 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var8_int);
+            if (var39 == 0) {
+              if (var40Lifetime1 >= gca.field_d) {
+                nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var40Lifetime1], var43Lifetime1);
+              }
+              if (var41Lifetime1 > hc.field_h) {
+                continue;
+              }
+              nra.a((byte) -55, param0, var42Lifetime1, vaa.field_a[var41Lifetime1], var43Lifetime1);
+              continue;
+            }
+            var44 = rp.a(ss.field_c, -16226, pka.field_b, param3 + var10);
+            var45 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var10);
+            if (var40Lifetime1 >= gca.field_d) {
+              var58 = vaa.field_a[var40Lifetime1];
+              nra.a((byte) -55, param0, var45, var58, var43Lifetime1);
+              nra.a((byte) -55, param1, var44, var58, var45);
+              nra.a((byte) -55, param0, var42Lifetime1, var58, var44);
+            }
+            if (var41Lifetime1 > hc.field_h) {
+              continue;
+            }
+            var59 = vaa.field_a[var41Lifetime1];
+            nra.a((byte) -55, param0, var45, var59, var43Lifetime1);
+            nra.a((byte) -55, param1, var44, var59, var45);
+            nra.a((byte) -55, param0, var42Lifetime1, var59, var44);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -446,35 +306,35 @@ abstract class hl implements mta {
 
     public static void e(int param0) {
         field_i = null;
-        int var1 = -35 / ((param0 - -82) / 44);
+        int var1 = -35 / ((param0 + 82) / 44);
         field_c = null;
         field_a = null;
     }
 
     void a(int param0) {
         if (param0 != 12574) {
-            this.a(72);
+          this.a(72);
         }
-        if (!(0 >= this.field_f)) {
-            this.field_h.a(this.field_g, this.field_f, (byte) 62);
-            this.field_f = -1;
+        if (0 < this.field_f) {
+          this.field_h.a(this.field_g, this.field_f, (byte) 62);
+          this.field_f = -1;
         }
     }
 
     void a(int param0, int param1) {
         if (this.field_d < param1) {
-            this.d(1);
-            if ((this.field_f ^ -1) < -1) {
-                jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
-                jaggl.OpenGL.glBufferDataARBub(this.field_k, param1, (byte[]) null, 0, !this.field_j ? 35044 : 35040);
-                this.field_h.field_X = this.field_h.field_X + (-this.field_d + param1);
-            } else {
-                this.field_b = this.field_h.a(false, param1, false);
-            }
-            this.field_d = param1;
+          this.d(1);
+          if (this.field_f > 0) {
+            jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
+            jaggl.OpenGL.glBufferDataARBub(this.field_k, param1, (byte[]) null, 0, !this.field_j ? 35044 : 35040);
+            this.field_h.field_X = this.field_h.field_X + (-this.field_d + param1);
+          } else {
+            this.field_b = this.field_h.a(false, param1, false);
+          }
+          this.field_d = param1;
         }
         this.field_g = param1;
-        int var3 = -18 % ((param0 - -30) / 36);
+        int var3 = -18 % ((param0 + 30) / 36);
     }
 
     final boolean a(jaggl.MapBuffer param0, int param1) {
@@ -484,96 +344,57 @@ abstract class hl implements mta {
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 >= 91) {
-                break L1;
-              } else {
-                this.field_e = -84;
-                break L1;
-              }
-            }
-            L2: {
-              var3_int = 1;
-              if (-1 != (this.field_e ^ -1)) {
-                L3: {
-                  if (-1 <= (this.field_f ^ -1)) {
-                    break L3;
-                  } else {
-                    jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
-                    if ((this.field_e ^ -1) != -2) {
-                      L4: {
-                        if (!param0.a()) {
-                          stackIn_10_0 = 0;
-                          break L4;
-                        } else {
-                          stackIn_10_0 = 1;
-                          break L4;
-                        }
-                      }
-                      var3_int = stackIn_10_0;
-                      break L3;
-                    } else {
-                      jaggl.OpenGL.glBufferSubDataARBa(this.field_k, 0, this.field_d, this.field_h.field_o.getAddress());
-                      break L3;
-                    }
-                  }
-                }
-                this.field_e = 0;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            stackIn_13_0 = var3_int;
-            break L0;
+          if (param1 < 91) {
+            this.field_e = -84;
           }
+          var3_int = 1;
+          if (this.field_e != 0) {
+            if (this.field_f > 0) {
+              jaggl.OpenGL.glBindBufferARB(this.field_k, this.field_f);
+              if (this.field_e != 1) {
+                stackIn_10_0 = (!param0.a()) ? 0 : 1;
+                var3_int = stackIn_10_0;
+              } else {
+                jaggl.OpenGL.glBufferSubDataARBa(this.field_k, 0, this.field_d, this.field_h.field_o.getAddress());
+              }
+            }
+            this.field_e = 0;
+          }
+          stackIn_13_0 = var3_int;
+          return stackIn_13_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
-
-            stackIn_16_1 = new StringBuilder().append("hl.K(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = var3;
+          stackIn_16_1 = new StringBuilder().append("hl.K(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_13_0 != 0;
     }
 
     final long b(boolean param0) {
         if (!param0) {
-            return -36L;
+          return -36L;
         }
-        return -1 != (this.field_f ^ -1) ? 0L : this.field_b.getAddress();
+        return this.field_f != 0 ? 0L : this.field_b.getAddress();
     }
 
     hl(kda param0, int param1, boolean param2) {
         this.field_f = -1;
         this.field_e = 0;
         try {
-            this.field_k = param1;
-            this.field_j = param2 ? true : false;
-            this.field_h = param0;
+          this.field_k = param1;
+          this.field_j = param2 ? true : false;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

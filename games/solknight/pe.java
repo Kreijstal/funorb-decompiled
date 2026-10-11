@@ -8,13 +8,13 @@ abstract class pe extends ec {
 
     final static boolean a(byte param0) {
         if (param0 > -65) {
-            return false;
+          return false;
         }
         if (null == fc.field_l) {
-            return false;
+          return false;
         }
         if (!fc.field_l.b((byte) -91)) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -22,7 +22,7 @@ abstract class pe extends ec {
     public static void f(int param0) {
         field_m = null;
         if (param0 < 66) {
-            pe.f(-38);
+          pe.f(-38);
         }
     }
 

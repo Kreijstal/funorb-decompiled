@@ -10,9 +10,9 @@ final class om extends ms {
 
     om(wc[] param0) {
         try {
-            this.field_o = param0;
+          this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "om.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "om.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class om extends ms {
     }
 
     final wc[] a(int param0) {
-        int var2 = 45 % ((param0 - -35) / 38);
+        int var2 = 45 % ((param0 + 35) / 38);
         return this.field_o;
     }
 

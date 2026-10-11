@@ -13,35 +13,20 @@ class ko extends ll {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                ko.a(true, -24);
-                break L1;
-              }
-            }
-            var4 = (mm) ((Object) m.field_a.e(-24172));
-            L2: while (true) {
-              if (var4 == null) {
-                var5 = (kj) ((Object) cc.field_i.e(-24172));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    ta.a((byte) 11, param1, var5);
-                    var5 = (kj) ((Object) cc.field_i.a(4));
-                    continue L3;
-                  }
-                }
-              } else {
-                oj.a(param1, var4, true);
-                var4 = (mm) ((Object) m.field_a.a(4));
-                continue L2;
-              }
-            }
+          if (!param0) {
+            ko.a(true, -24);
           }
+          var4 = (mm) (m.field_a.e(-24172));
+          while (var4 != null) {
+            oj.a(param1, var4, true);
+            var4 = (mm) (m.field_a.a(4));
+          }
+          var5 = (kj) (cc.field_i.e(-24172));
+          while (var5 != null) {
+            ta.a((byte) 11, param1, var5);
+            var5 = (kj) (cc.field_i.a(4));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -51,7 +36,7 @@ class ko extends ll {
 
     public static void d(int param0) {
         if (param0 >= -65) {
-            return;
+          return;
         }
         field_v = null;
         field_w = null;

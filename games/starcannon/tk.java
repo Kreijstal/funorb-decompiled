@@ -13,7 +13,7 @@ abstract class tk {
     abstract void a(int param0, int param1, java.awt.Component param2, int param3);
 
     final void b(int param0) {
-        int var2 = -68 % ((param0 - -20) / 46);
+        int var2 = -68 % ((param0 + 20) / 46);
         ki.a(this.field_g, this.field_d, this.field_b);
     }
 

@@ -10,93 +10,46 @@ final class wa {
     private int field_c;
 
     final static boolean a(char param0, byte param1) {
+        int var3 = 0;
         char[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param0 <= 0) {
-                break L1;
-              } else {
-                if (param0 < 128) {
-                  stackIn_8_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (param0 < 160) {
-                break L2;
-              } else {
-                if (255 < param0) {
-                  break L2;
-                } else {
-                  return true;
-                }
-              }
-            }
-            L3: {
-              if (param0 == 0) {
-                break L3;
-              } else {
-                var6 = wf.field_a;
-                var2 = var6;
-                var3 = 0;
-                L4: while (true) {
-                  if (var6.length <= var3) {
-                    break L3;
-                  } else {
-                    var4 = var6[var3];
-                    if (param0 == var4) {
-                      stackIn_15_0 = 1;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var3++;
-                      continue L4;
-                    }
-                  }
-                }
-              }
-            }
-            var2_int = -80 / ((77 - param1) / 45);
-            stackIn_18_0 = 0;
-            decompiledRegionSelector0 = 2;
-            break L0;
+          if (param0 > 0 &&
+            param0 < 128) {
+            return true;
           }
+          if (param0 >= 160 &&
+            255 >= param0) {
+            return true;
+          }
+          if (param0 != 0) {
+            var6 = wf.field_a;
+            var2 = var6;
+            for (var3 = 0; var6.length > var3; var3++) {
+              var4 = var6[var3];
+              if (param0 == var4) {
+                return true;
+              }
+            }
+          }
+          var2_int = -80 / ((77 - param1) / 45);
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var2_ref), "wa.G(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0 != 0;
-          } else {
-            return stackIn_18_0 != 0;
-          }
-        }
     }
 
     final static String a(int param0) {
         if (param0 != -1) {
-            return (String) null;
+          return (String) null;
         }
         return ae.field_N.e((byte) 91);
     }
@@ -105,18 +58,18 @@ final class wa {
         field_e = null;
         field_b = null;
         if (param0 != 0) {
-            wa.a('\n', (byte) 2);
+          wa.a('\n', (byte) 2);
         }
     }
 
     final void a(Object param0, long param1, int param2) {
         try {
-            if (param2 != -22424) {
-                field_b = (String) null;
-            }
-            this.a(-123, 1, param1, param0);
+          if (param2 != -22424) {
+            field_b = (String) null;
+          }
+          this.a(-123, 1, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "wa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "wa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -125,95 +78,85 @@ final class wa {
         ld var6_ref = null;
         int var7 = stellarshard.field_B;
         try {
-            if (param1 > this.field_c) {
-                throw new IllegalStateException();
-            }
-            if (param0 >= -113) {
-                this.a(-81L, (byte) 23);
-            }
-            this.a(param2, (byte) 110);
-            this.field_d = this.field_d - param1;
-            while (0 > this.field_d) {
-                var6 = (gj) ((Object) this.field_f.b((byte) 103));
-                this.a(var6, (byte) 124);
-            }
-            var6_ref = new ld(param3, param1);
-            this.field_a.a((byte) 30, var6_ref, param2);
-            this.field_f.a(true, var6_ref);
-            ((gj) ((Object) var6_ref)).field_o = 0L;
+          if (param1 > this.field_c) {
+            throw new IllegalStateException();
+          }
+          if (param0 >= -113) {
+            this.a(-81L, (byte) 23);
+          }
+          this.a(param2, (byte) 110);
+          this.field_d = this.field_d - param1;
+          while (0 > this.field_d) {
+            var6 = (gj) (this.field_f.b((byte) 103));
+            this.a(var6, (byte) 124);
+          }
+          var6_ref = new ld(param3, param1);
+          this.field_a.a((byte) 30, var6_ref, param2);
+          this.field_f.a(true, var6_ref);
+          ((gj) ((Object) var6_ref)).field_o = 0L;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "wa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "wa.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final Object b(long param0, byte param1) {
-        Object var5;
-        ld var6;
-        gj var7;
-        var7 = (gj) ((Object) this.field_a.a(param0, -1));
-        if (var7 != null) {
-          var5 = var7.e(-118);
-          if (var5 == null) {
-            var7.c(20);
-            var7.c((byte) 36);
-            this.field_d = this.field_d + var7.field_u;
-            return null;
-          } else {
-            if (!var7.f(0)) {
-              this.field_f.a(true, var7);
-              var7.field_o = 0L;
-              if (param1 == 58) {
-                return var5;
-              } else {
-                this.field_a = (ai) null;
-                return var5;
-              }
-            } else {
-              var6 = new ld(var5, var7.field_u);
-              this.field_a.a((byte) 81, var6, var7.field_j);
-              this.field_f.a(true, var6);
-              ((gj) ((Object) var6)).field_o = 0L;
-              var7.c(20);
-              var7.c((byte) 36);
-              if (param1 == 58) {
-                return var5;
-              } else {
-                this.field_a = (ai) null;
-                return var5;
-              }
-            }
-          }
-        } else {
+        ld var6 = null;
+        gj var7 = (gj) (this.field_a.a(param0, -1));
+        if (var7 == null) {
           return null;
         }
+        Object var5 = var7.e(-118);
+        if (var5 == null) {
+          var7.c(20);
+          var7.c((byte) 36);
+          this.field_d = this.field_d + var7.field_u;
+          return null;
+        }
+        if (var7.f(0)) {
+          var6 = new ld(var5, var7.field_u);
+          this.field_a.a((byte) 81, var6, var7.field_j);
+          this.field_f.a(true, var6);
+          ((gj) ((Object) var6)).field_o = 0L;
+          var7.c(20);
+          var7.c((byte) 36);
+          if (param1 != 58) {
+            this.field_a = (ai) null;
+            return var5;
+          }
+          return var5;
+        }
+        this.field_f.a(true, var7);
+        var7.field_o = 0L;
+        if (param1 != 58) {
+          this.field_a = (ai) null;
+          return var5;
+        }
+        return var5;
     }
 
     private final void a(gj param0, byte param1) {
         if (param1 < 116) {
-            return;
+          return;
         }
         try {
-            if (param0 != null) {
-                param0.c(20);
-                param0.c((byte) 36);
-                this.field_d = this.field_d + param0.field_u;
-            }
+          if (param0 != null) {
+            param0.c(20);
+            param0.c((byte) 36);
+            this.field_d = this.field_d + param0.field_u;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "wa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "wa.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void a(long param0, byte param1) {
-        gj var4;
-        var4 = (gj) ((Object) this.field_a.a(param0, -1));
-        if (param1 <= 106) {
-          wa.b(-119);
-          this.a(var4, (byte) 118);
-          return;
-        } else {
+        gj var4 = (gj) (this.field_a.a(param0, -1));
+        if (param1 > 106) {
           this.a(var4, (byte) 118);
           return;
         }
+        wa.b(-119);
+        this.a(var4, (byte) 118);
     }
 
     private wa() throws Throwable {

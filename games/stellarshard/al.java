@@ -11,71 +11,55 @@ final class al {
     static String field_e;
 
     final int b(byte param0) {
-        int var2;
-        ah var3;
-        int var4;
-        var4 = stellarshard.field_B;
-        var2 = 0;
-        var3 = this.field_d.field_m;
-        if (param0 == -7) {
-          L0: while (true) {
-            if (this.field_d == var3) {
-              return var2;
-            } else {
-              var2++;
-              var3 = var3.field_m;
-              continue L0;
-            }
-          }
-        } else {
+        int var4 = stellarshard.field_B;
+        int var2 = 0;
+        ah var3 = this.field_d.field_m;
+        if (param0 != -7) {
           field_c = -85;
-          L1: while (true) {
-            if (this.field_d == var3) {
-              return var2;
-            } else {
-              var2++;
-              var3 = var3.field_m;
-              continue L1;
-            }
+          while (this.field_d != var3) {
+            var2++;
+            var3 = var3.field_m;
           }
+          return var2;
         }
+        while (this.field_d != var3) {
+          var2++;
+          var3 = var3.field_m;
+        }
+        return var2;
     }
 
     final ah a(byte param0) {
-        ah var2;
-        var2 = this.field_d.field_m;
-        if (param0 >= 57) {
-          if (var2 == this.field_d) {
-            return null;
-          } else {
-            var2.c((byte) 36);
-            return var2;
-          }
-        } else {
+        ah var2 = this.field_d.field_m;
+        if (param0 < 57) {
           field_e = (String) null;
-          if (var2 == this.field_d) {
-            return null;
-          } else {
+          if (var2 != this.field_d) {
             var2.c((byte) 36);
             return var2;
           }
+          return null;
         }
+        if (var2 != this.field_d) {
+          var2.c((byte) 36);
+          return var2;
+        }
+        return null;
     }
 
     final void a(byte param0, ah param1) {
         try {
-            if (param1.field_l != null) {
-                param1.c((byte) 36);
-            }
-            param1.field_l = this.field_d.field_l;
-            param1.field_m = this.field_d;
-            if (param0 < 122) {
-                this.a(-109);
-            }
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
+          if (param1.field_l != null) {
+            param1.c((byte) 36);
+          }
+          param1.field_l = this.field_d.field_l;
+          param1.field_m = this.field_d;
+          if (param0 < 122) {
+            this.a(-109);
+          }
+          param1.field_l.field_m = param1;
+          param1.field_m.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "al.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,36 +67,25 @@ final class al {
         field_f = null;
         field_a = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_e = null;
     }
 
     final ah a(int param0) {
-        ah var2;
-        if (param0 <= -94) {
-          var2 = this.field_g;
-          if (var2 == this.field_d) {
-            this.field_g = null;
-            return null;
-          } else {
-            this.field_g = var2.field_m;
-            return var2;
-          }
-        } else {
+        if (param0 > -94) {
           return (ah) null;
         }
+        ah var2 = this.field_g;
+        if (var2 != this.field_d) {
+          this.field_g = var2.field_m;
+          return var2;
+        }
+        this.field_g = null;
+        return null;
     }
 
     final static void b(boolean param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -122,51 +95,24 @@ final class al {
         RuntimeException var1_ref = null;
         var4 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              var5 = gg.field_h;
-              var1 = var5;
-              var2 = 0;
-              if (!param0) {
-                break L1;
-              } else {
-                field_e = (String) null;
-                break L1;
-              }
-            }
-            var3 = var5.length;
-            L2: while (true) {
-              if (var3 <= var2) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var5[incrementValue$23] = 0;
-                continue L2;
-              }
-            }
+          var5 = gg.field_h;
+          var1 = var5;
+          var2 = 0;
+          if (param0) {
+            field_e = (String) null;
           }
+          var3 = var5.length;
+          while (var3 > var2) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -175,19 +121,16 @@ final class al {
     }
 
     final ah a(boolean param0) {
-        ah var2;
-        var2 = this.field_d.field_m;
-        if (var2 != this.field_d) {
-          if (param0) {
-            return (ah) null;
-          } else {
-            this.field_g = var2.field_m;
-            return var2;
-          }
-        } else {
+        ah var2 = this.field_d.field_m;
+        if (var2 == this.field_d) {
           this.field_g = null;
           return null;
         }
+        if (!param0) {
+          this.field_g = var2.field_m;
+          return var2;
+        }
+        return (ah) null;
     }
 
     public al() {

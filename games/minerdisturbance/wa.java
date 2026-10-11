@@ -10,46 +10,39 @@ final class wa {
     private al field_a;
 
     final al d(int param0) {
-        al var2;
-        int var3;
-        var3 = -97 / ((param0 - 73) / 51);
-        var2 = this.field_a;
-        if (this.field_c == var2) {
-          this.field_a = null;
-          return null;
-        } else {
+        int var3 = -97 / ((param0 - 73) / 51);
+        al var2 = this.field_a;
+        if (this.field_c != var2) {
           this.field_a = var2.field_t;
           return var2;
         }
+        this.field_a = null;
+        return null;
     }
 
     final al c(int param0) {
-        al var2;
-        var2 = this.field_c.field_t;
-        if (param0 == 8192) {
-          if (var2 == this.field_c) {
-            return null;
-          } else {
-            var2.a((byte) -119);
-            return var2;
-          }
-        } else {
+        al var2 = this.field_c.field_t;
+        if (param0 != 8192) {
           this.b(-20);
-          if (var2 == this.field_c) {
-            return null;
-          } else {
+          if (var2 != this.field_c) {
             var2.a((byte) -119);
             return var2;
           }
+          return null;
         }
+        if (var2 != this.field_c) {
+          var2.a((byte) -119);
+          return var2;
+        }
+        return null;
     }
 
     final al a(int param0) {
         int var2 = 13 / ((param0 - 24) / 52);
         al var3 = this.field_c.field_t;
-        if (!(var3 != this.field_c)) {
-            this.field_a = null;
-            return null;
+        if (var3 == this.field_c) {
+          this.field_a = null;
+          return null;
         }
         this.field_a = var3.field_t;
         return var3;
@@ -61,26 +54,26 @@ final class wa {
         int var4 = 119 / ((param0 - 25) / 53);
         al var3 = this.field_c.field_t;
         while (var3 != this.field_c) {
-            var3 = var3.field_t;
-            var2++;
+          var3 = var3.field_t;
+          var2++;
         }
         return var2;
     }
 
     final void a(al param0, boolean param1) {
-        if (!(param0.field_q == null)) {
-            param0.a((byte) -112);
+        if (param0.field_q != null) {
+          param0.a((byte) -112);
         }
         if (param1) {
-            return;
+          return;
         }
         try {
-            param0.field_t = this.field_c;
-            param0.field_q = this.field_c.field_q;
-            param0.field_q.field_t = param0;
-            param0.field_t.field_q = param0;
+          param0.field_t = this.field_c;
+          param0.field_q = this.field_c.field_q;
+          param0.field_q.field_t = param0;
+          param0.field_t.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "wa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "wa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -93,9 +86,9 @@ final class wa {
     public static void e(int param0) {
         field_b = null;
         if (param0 < 10) {
-            field_b = (java.util.zip.CRC32) null;
-            field_d = null;
-            return;
+          field_b = (java.util.zip.CRC32) null;
+          field_d = null;
+          return;
         }
         field_d = null;
     }

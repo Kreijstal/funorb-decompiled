@@ -16,95 +16,59 @@ final class ho extends ma {
     static volatile int field_v;
 
     final static int a(byte param0, int param1, int param2) {
-        if (o.field_C != null) {
-          if (param0 <= 0) {
-            if (ir.field_n <= param1) {
-              if (ir.field_n + o.field_C.field_z > param1) {
-                if (oj.field_s > param2) {
-                  if (param1 >= tn.field_o) {
-                    if (o.field_C.field_z + tn.field_o > param1) {
-                      if (param2 >= ln.field_o) {
-                        if (ln.field_o - -o.field_C.field_A > param2) {
-                          return 1;
-                        } else {
-                          return -1;
-                        }
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  if (param2 >= oj.field_s - -o.field_C.field_A) {
-                    if (param1 >= tn.field_o) {
-                      if (o.field_C.field_z + tn.field_o > param1) {
-                        if (param2 >= ln.field_o) {
-                          if (ln.field_o - -o.field_C.field_A > param2) {
-                            return 1;
-                          } else {
-                            return -1;
-                          }
-                        } else {
-                          return -1;
-                        }
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                if (param1 >= tn.field_o) {
-                  if (o.field_C.field_z + tn.field_o > param1) {
-                    if (param2 >= ln.field_o) {
-                      if (ln.field_o - -o.field_C.field_A <= param2) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              if (param1 >= tn.field_o) {
-                if (o.field_C.field_z + tn.field_o > param1) {
-                  if (param2 >= ln.field_o) {
-                    if (ln.field_o - -o.field_C.field_A <= param2) {
-                      return -1;
-                    } else {
-                      return 1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            }
-          } else {
-            return -12;
-          }
-        } else {
+        if (o.field_C == null) {
           return -1;
         }
+        if (param0 > 0) {
+          return -12;
+        }
+        if (ir.field_n > param1) {
+          if (param1 < tn.field_o) {
+            return -1;
+          }
+          if (o.field_C.field_z + tn.field_o <= param1) {
+            return -1;
+          }
+          if (param2 < ln.field_o) {
+            return -1;
+          }
+          if (ln.field_o + o.field_C.field_A <= param2) {
+            return -1;
+          }
+          return 1;
+        }
+        if (ir.field_n + o.field_C.field_z <= param1) {
+          if (param1 < tn.field_o) {
+            return -1;
+          }
+          if (o.field_C.field_z + tn.field_o <= param1) {
+            return -1;
+          }
+          if (param2 < ln.field_o) {
+            return -1;
+          }
+          if (ln.field_o + o.field_C.field_A <= param2) {
+            return -1;
+          }
+          return 1;
+        }
+        if (oj.field_s <= param2 &&
+          param2 < oj.field_s + o.field_C.field_A) {
+          return 0;
+        }
+        if (param1 < tn.field_o) {
+          return -1;
+        }
+        if (o.field_C.field_z + tn.field_o <= param1) {
+          return -1;
+        }
+        if (param2 < ln.field_o) {
+          return -1;
+        }
+        if (ln.field_o + o.field_C.field_A > param2) {
+          return 1;
+        }
+        return -1;
     }
 
     final static void c(byte param0) {
@@ -118,7 +82,7 @@ final class ho extends ma {
         field_u = null;
         field_l = null;
         if (!param0) {
-            field_s = (int[]) null;
+          field_s = (int[]) null;
         }
     }
 

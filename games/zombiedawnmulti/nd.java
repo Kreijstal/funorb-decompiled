@@ -22,51 +22,33 @@ public class nd {
     public static void a(String param0, int param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
-        if (param2 == -7682) {
-          field_e = param1;
-          field_b = param0;
-          try {
-            L0: {
-              L1: {
-                field_a = System.getProperty("user.home");
-                if (field_a == null) {
-                  break L1;
-                } else {
-                  field_a = field_a + "/";
-                  break L1;
-                }
-              }
-              break L0;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L2: {
-              exception = (Exception) (Object) decompiledCaughtException;
-              break L2;
-            }
-          }
-          if (null == field_a) {
-            field_a = "~/";
-            field_c = true;
-            return;
-          } else {
-            field_c = true;
-            return;
-          }
-        } else {
+        if (param2 != -7682) {
           return;
         }
+        field_e = param1;
+        field_b = param0;
+        try {
+          field_a = System.getProperty("user.home");
+          if (field_a != null) {
+            field_a = field_a + "/";
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          exception = (Exception) (Object) decompiledCaughtException;
+        }
+        if (null == field_a) {
+          field_a = "~/";
+        }
+        field_c = true;
     }
 
     public static File a(String param0, int param1) {
-        String var3;
-        if (param1 != 0) {
-          var3 = (String) null;
-          nd.a((String) null, -93);
-          return nd.a(param0, -25157, field_b, field_e);
-        } else {
+        if (param1 == 0) {
           return nd.a(param0, -25157, field_b, field_e);
         }
+        String var3 = (String) null;
+        nd.a((String) null, -93);
+        return nd.a(param0, -25157, field_b, field_e);
     }
 
     static {

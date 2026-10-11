@@ -15,21 +15,21 @@ final class ce extends i {
         String var3 = null;
         String var4 = null;
         try {
-            this.field_H = param0.field_Fb;
-            this.field_J = param0.field_Qb;
-            var5 = param0.field_Sb.d(100);
-            String var2 = var5;
-            var3 = param0.field_Nb;
-            var4 = vo.a((byte) -18, gd.field_e[30], new String[]{var5, var3});
-            this.a(var4, this.field_t, this.field_D, -91, this.field_u);
+          this.field_H = param0.field_Fb;
+          this.field_J = param0.field_Qb;
+          var5 = param0.field_Sb.d(100);
+          String var2 = var5;
+          var3 = param0.field_Nb;
+          var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[30], new String[]{var5, var3});
+          this.a(var4, this.field_t, this.field_D, -91, this.field_u);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ce.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void g(int param0) {
         if (param0 != 30) {
-            ce.g(9);
+          ce.g(9);
         }
         field_G = (String[][]) null;
         field_K = null;
@@ -38,11 +38,11 @@ final class ce extends i {
 
     final void a(int param0, int param1) {
         if (param0 < 60) {
-            field_I = 64;
+          field_I = 64;
         }
         super.a(95, param1);
         if (param1 == 0) {
-            ld.a((byte) -25, this.field_H, this.field_J);
+          ld.a((byte) -25, this.field_H, this.field_J);
         }
     }
 
@@ -52,10 +52,10 @@ final class ce extends i {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (param1 != 48) {
-            return (String) null;
+          return (String) null;
         }
         for (var4 = 0; var4 < param2; var4++) {
-            var6[var4] = param0;
+          var6[var4] = param0;
         }
         return new String(var6);
     }

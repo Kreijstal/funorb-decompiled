@@ -17,7 +17,7 @@ final class sb {
         field_d = null;
         field_c = null;
         if (param0 <= 65) {
-            field_c = (ab) null;
+          field_c = (ab) null;
         }
     }
 

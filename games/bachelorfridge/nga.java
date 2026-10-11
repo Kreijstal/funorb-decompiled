@@ -16,45 +16,40 @@ final class nga extends vo {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 > -70) {
-            field_j = (String) null;
+          field_j = (String) null;
         }
     }
 
     final static int a(int param0, int param1, byte param2, int param3) {
-        if (param1 + (param3 + param0) <= dg.field_c) {
+        if (!(param1 + (param3 + param0) > dg.field_c)) {
           return param3 + param1;
-        } else {
-          if (param2 >= 95) {
-            if (0 <= param1 + -param0) {
-              return param1 + -param0;
-            } else {
-              return -param0 + dg.field_c;
-            }
-          } else {
-            return 24;
-          }
         }
+        if (param2 < 95) {
+          return 24;
+        }
+        if (0 > param1 - param0) {
+          return -param0 + dg.field_c;
+        }
+        return param1 - param0;
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = this.field_k * param0 >> 516311724;
-        int var5 = this.field_l * param0 >> 1787356268;
-        int var6 = param2 * this.field_h >> 2023069004;
-        int var7 = param2 * this.field_m >> -1096410612;
+        int var4 = this.field_k * param0 >> 12;
+        int var5 = this.field_l * param0 >> 12;
+        int var6 = param2 * this.field_h >> 12;
+        int var7 = param2 * this.field_m >> 12;
         pna.a(var7, this.field_f, param1 ^ param1, var5, var4, var6);
     }
 
     public static void a(int param0) {
         field_i = null;
         field_j = null;
-        if (param0 != -20804) {
-          nga.a(56, 107, (byte) -3, 87);
-          field_g = null;
-          return;
-        } else {
+        if (param0 == -20804) {
           field_g = null;
           return;
         }
+        nga.a(56, 107, (byte) -3, 87);
+        field_g = null;
     }
 
     nga(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -68,7 +63,7 @@ final class nga extends vo {
     final static void b(byte param0) {
         fda.field_i = lia.a(5);
         if (param0 != 113) {
-            return;
+          return;
         }
         gja.field_m = new rp();
         nw.a(true, true, (byte) -107);

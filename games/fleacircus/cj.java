@@ -6,23 +6,22 @@ final class cj {
     static String field_a;
 
     final static void a(int param0) {
-        String var2;
-        if (param0 != 0) {
-          cj.a(47);
-          var2 = (String) null;
-          ij.a(-1, oa.field_o, (String) null);
-          return;
-        } else {
+        String var2 = null;
+        String var2Lifetime1;
+        if (param0 == 0) {
           var2 = (String) null;
           ij.a(-1, oa.field_o, (String) null);
           return;
         }
+        cj.a(47);
+        var2Lifetime1 = (String) null;
+        ij.a(-1, oa.field_o, (String) null);
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            field_b = 31;
+          field_b = 31;
         }
     }
 

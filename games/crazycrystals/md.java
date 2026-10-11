@@ -20,78 +20,62 @@ final class md extends ng {
 
     final static boolean l(int param0) {
         if (param0 >= -59) {
-            return false;
+          return false;
         }
         if (null == kf.field_h) {
-            return false;
+          return false;
         }
         if (null == kf.field_h.j(0)) {
-            return false;
+          return false;
         }
         return true;
     }
 
     final int d(byte param0, int param1) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = CrazyCrystals.field_B;
-        var3 = this.field_l >> 1717204771;
-        if (param0 < -47) {
-          var4 = -(7 & this.field_l) + 8;
-          this.field_l = this.field_l + param1;
-          var5 = 0;
-          L0: while (true) {
-            if (param1 <= var4) {
-              L1: {
-                if (param1 != var4) {
-                  var5 = var5 + (this.field_h[var3] >> -param1 + var4 & kd.field_j[param1]);
-                  break L1;
-                } else {
-                  var5 = var5 + (this.field_h[var3] & kd.field_j[var4]);
-                  break L1;
-                }
-              }
-              return var5;
-            } else {
-              incrementValue$2 = var3;
-              var3++;
-              var5 = var5 + ((this.field_h[incrementValue$2] & kd.field_j[var4]) << param1 - var4);
-              param1 = param1 - var4;
-              var4 = 8;
-              continue L0;
-            }
-          }
-        } else {
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = CrazyCrystals.field_B;
+        int var3 = this.field_l >> 3;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        if (param0 >= -47) {
           this.k(-102);
+        } else {
           var4 = -(7 & this.field_l) + 8;
           this.field_l = this.field_l + param1;
           var5 = 0;
-          L2: while (true) {
-            if (param1 <= var4) {
-              L3: {
-                if (param1 != var4) {
-                  var5 = var5 + (this.field_h[var3] >> -param1 + var4 & kd.field_j[param1]);
-                  break L3;
-                } else {
-                  var5 = var5 + (this.field_h[var3] & kd.field_j[var4]);
-                  break L3;
-                }
-              }
-              return var5;
-            } else {
-              incrementValue$3 = var3;
-              var3++;
-              var5 = var5 + ((this.field_h[incrementValue$3] & kd.field_j[var4]) << param1 - var4);
-              param1 = param1 - var4;
-              var4 = 8;
-              continue L2;
-            }
+          while (param1 > var4) {
+            incrementValue$0 = var3;
+            var3++;
+            var5 = var5 + ((this.field_h[incrementValue$0] & kd.field_j[var4]) << param1 - var4);
+            param1 = param1 - var4;
+            var4 = 8;
           }
+          if (param1 == var4) {
+            var5 = var5 + (this.field_h[var3] & kd.field_j[var4]);
+          } else {
+            var5 = var5 + (this.field_h[var3] >> -param1 + var4 & kd.field_j[param1]);
+          }
+          return var5;
         }
+        var4Lifetime1 = -(7 & this.field_l) + 8;
+        this.field_l = this.field_l + param1;
+        var5Lifetime1 = 0;
+        while (param1 > var4Lifetime1) {
+          incrementValue$1 = var3;
+          var3++;
+          var5Lifetime1 = var5Lifetime1 + ((this.field_h[incrementValue$1] & kd.field_j[var4Lifetime1]) << param1 - var4Lifetime1);
+          param1 = param1 - var4Lifetime1;
+          var4Lifetime1 = 8;
+        }
+        if (param1 == var4Lifetime1) {
+          var5Lifetime1 = var5Lifetime1 + (this.field_h[var3] & kd.field_j[var4Lifetime1]);
+        } else {
+          var5Lifetime1 = var5Lifetime1 + (this.field_h[var3] >> -param1 + var4Lifetime1 & kd.field_j[param1]);
+        }
+        return var5Lifetime1;
     }
 
     final void d(int param0, int param1) {
@@ -99,118 +83,76 @@ final class md extends ng {
         this.field_f = this.field_f + 1;
         this.field_h[fieldTemp$0] = (byte)(this.field_r.a(false) + param1);
         if (param0 != 8) {
-            field_q = -127;
+          field_q = -127;
         }
     }
 
     final void a(int[] param0, boolean param1) {
         try {
-            this.field_r = new bm(param0);
-            if (!param1) {
-                this.d(42, 32);
-            }
+          this.field_r = new bm(param0);
+          if (!param1) {
+            this.d(42, 32);
+          }
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "md.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static f[][] a(int param0, boolean param1, int param2, int param3, f[][] param4) {
+        int var6 = 0;
         f[][] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         f[][] var5 = null;
         RuntimeException var5_ref = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         f[][] var9 = null;
+        int var7Lifetime1;
         var8 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var9 = new f[param0 * 2 + param4.length][2 * param2 + param4[0].length];
-            var5 = var9;
-            var6 = 0;
-            L1: while (true) {
-              if (var9.length <= var6) {
-                var7 = 116 % ((param3 - 8) / 32);
-                stackIn_14_0 = (f[][]) (var5);
-                break L0;
+          var9 = new f[param0 * 2 + param4.length][2 * param2 + param4[0].length];
+          var5 = var9;
+          for (var6 = 0; var9.length > var6; var6++) {
+            for (var7 = 0; var9[0].length > var7; var7++) {
+              if (var7 >= param2 &&
+                var7 < param4[0].length + param2 &&
+                var6 >= param0 &&
+                var6 < param4.length + param0) {
+                var9[var6][var7] = (f) (param4[-param0 + var6][-param2 + var7].clone());
               } else {
-                var7 = 0;
-                L2: while (true) {
-                  if (var9[0].length <= var7) {
-                    var6++;
-                    continue L1;
-                  } else {
-                    L3: {
-                      L4: {
-                        if (var7 < param2) {
-                          break L4;
-                        } else {
-                          if (var7 >= param4[0].length + param2) {
-                            break L4;
-                          } else {
-                            if (var6 < param0) {
-                              break L4;
-                            } else {
-                              if (var6 >= param4.length + param0) {
-                                break L4;
-                              } else {
-                                var9[var6][var7] = (f) (param4[-param0 + var6][-param2 + var7].clone());
-                                break L3;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      var9[var6][var7] = (f) (param4[0][0].clone());
-                      break L3;
-                    }
-                    var9[var6][var7].a(393989, var6, var7, var9);
-                    var9[var6][var7].b(true, param1);
-                    var7++;
-                    continue L2;
-                  }
-                }
+                var9[var6][var7] = (f) (param4[0][0].clone());
               }
+              var9[var6][var7].a(393989, var6, var7, var9);
+              var9[var6][var7].b(true, param1);
             }
           }
+          var7Lifetime1 = 116 % ((param3 - 8) / 32);
+          stackIn_14_0 = var5;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5_ref);
-
-            stackIn_17_1 = new StringBuilder().append("md.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_17_0 = var5_ref;
+          stackIn_17_1 = new StringBuilder().append("md.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     final int e(boolean param0) {
         int fieldTemp$0 = 0;
         if (!param0) {
-            this.e(false);
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            return 255 & this.field_h[fieldTemp$0] - this.field_r.a(!param0 ? true : false);
+          this.e(false);
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          return 255 & this.field_h[fieldTemp$0] - this.field_r.a(!param0 ? true : false);
         }
         int fieldTemp$1 = this.field_f;
         this.field_f = this.field_f + 1;
@@ -218,78 +160,53 @@ final class md extends ng {
     }
 
     final void b(int param0, int param1, int param2, byte[] param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (param2 == 29712) {
-                break L1;
-              } else {
-                field_t = (String[]) null;
-                break L1;
-              }
-            }
-            var5_int = 0;
-            L2: while (true) {
-              if (var5_int >= param0) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_f;
-                this.field_f = this.field_f + 1;
-                param3[var5_int + param1] = (byte)(this.field_h[fieldTemp$2] + -this.field_r.a(false));
-                var5_int++;
-                continue L2;
-              }
-            }
+          if (param2 != 29712) {
+            field_t = (String[]) null;
           }
+          for (var5_int = 0; var5_int < param0; var5_int++) {
+            fieldTemp$0 = this.field_f;
+            this.field_f = this.field_f + 1;
+            param3[var5_int + param1] = (byte)(this.field_h[fieldTemp$0] - this.field_r.a(false));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("md.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("md.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void k(int param0) {
         if (param0 != -2321) {
-            db var3 = (db) null;
-            md.a(6, -104, (db) null);
-            this.field_f = (this.field_l - -7) / 8;
-            return;
+          db var3 = (db) null;
+          md.a(6, -104, (db) null);
+          this.field_f = (this.field_l + 7) / 8;
+          return;
         }
-        this.field_f = (this.field_l - -7) / 8;
+        this.field_f = (this.field_l + 7) / 8;
     }
 
     public static void j(int param0) {
         field_o = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_s = null;
         field_u = null;
@@ -311,64 +228,36 @@ final class md extends ng {
         dk stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4 = param2.d(-113, param0);
-            var3 = var4;
-            if (var4 != null) {
-              L1: {
-                if (param1 >= 74) {
-                  break L1;
-                } else {
-                  md.a(-108, true, 93, 119, (f[][]) null);
-                  break L1;
-                }
-              }
-              stackIn_6_0 = new dk(var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4 = param2.d(-113, param0);
+          var3 = var4;
+          if (var4 == null) {
+            stackIn_2_0 = null;
+            return (dk) (stackIn_2_0);
           }
+          if (param1 < 74) {
+            md.a(-108, true, 93, 119, (f[][]) null);
+          }
+          stackIn_6_0 = new dk(var4);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("md.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("md.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (dk) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_6_0;
+          throw dn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void f(byte param0) {
-        int var2 = 121 % ((param0 - -48) / 50);
+        int var2 = 121 % ((param0 + 48) / 50);
         this.field_l = 8 * this.field_f;
     }
 

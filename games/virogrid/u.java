@@ -17,21 +17,22 @@ final class u extends wb {
         int var4 = 0;
         int var2 = 0;
         int var3 = Virogrid.field_F ? 1 : 0;
+        int var2Lifetime1;
         if (null != this.field_w) {
-            for (var2 = 0; this.field_w.length > var2; var2++) {
-                this.field_w[var2] = oh.a(this.field_w[var2], 32768);
-            }
+          for (var2 = 0; this.field_w.length > var2; var2++) {
+            this.field_w[var2] = oh.a(this.field_w[var2], 32768);
+          }
         }
         if (this.field_x != null) {
-            var4 = 0;
-            var2 = var4;
-            while (this.field_x.length > var4) {
-                this.field_x[var4] = oh.a(this.field_x[var4], 32768);
-                var4++;
-            }
+          var4 = 0;
+          var2Lifetime1 = var4;
+          while (this.field_x.length > var4) {
+            this.field_x[var4] = oh.a(this.field_x[var4], 32768);
+            var4++;
+          }
         }
         if (param0 != 3818) {
-            u.b((byte) 57);
+          u.b((byte) 57);
         }
     }
 
@@ -39,7 +40,7 @@ final class u extends wb {
         field_q = null;
         field_u = null;
         if (param0 != -11) {
-            u.b((byte) -54);
+          u.b((byte) -54);
         }
         field_t = null;
     }
@@ -47,20 +48,13 @@ final class u extends wb {
     private final void a(int param0, jc param1, int param2) {
         char[] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
-        char[] stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
         char stackIn_11_2 = 0;
         char[] stackIn_17_0 = null;
         int stackIn_17_1 = 0;
-        char[] stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
         int stackIn_18_2 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -69,127 +63,63 @@ final class u extends wb {
         int var7 = 0;
         var7 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param0 == -4) {
-              L1: {
-                if (param2 != 1) {
-                  L2: {
-                    if (param2 != 2) {
-                      if ((param2 ^ -1) != -4) {
-                        if (param2 != 4) {
-                          break L2;
-                        } else {
-                          this.field_o = true;
-                          break L1;
-                        }
-                      } else {
-                        var4_int = param1.g(11132);
-                        this.field_w = new int[var4_int];
-                        this.field_r = new char[var4_int];
-                        var5 = 0;
-                        L3: while (true) {
-                          if (var4_int <= var5) {
-                            break L2;
-                          } else {
-                            L4: {
-                              this.field_w[var5] = param1.c((byte) -88);
-                              var6 = param1.a((byte) 47);
-                              stackIn_17_0 = this.field_r;
-
-                              stackIn_17_1 = var5;
-
-                              if (0 != var6) {
-                                stackIn_18_0 = (char[]) ((Object) stackIn_17_0);
-                                stackIn_18_1 = stackIn_17_1;
-                                stackIn_18_2 = mm.a(param0 + 97, (byte) var6);
-                                break L4;
-                              } else {
-                                stackIn_18_0 = (char[]) ((Object) stackIn_17_0);
-                                stackIn_18_1 = stackIn_17_1;
-                                stackIn_18_2 = 0;
-                                break L4;
-                              }
-                            }
-                            stackIn_18_0[stackIn_18_1] = (char) stackIn_18_2;
-                            var5++;
-                            continue L3;
-                          }
-                        }
-                      }
-                    } else {
-                      var4_int = param1.g(11132);
-                      this.field_x = new int[var4_int];
-                      this.field_p = new char[var4_int];
-                      var5 = 0;
-                      L5: while (true) {
-                        if (var5 >= var4_int) {
-                          break L2;
-                        } else {
-                          L6: {
-                            this.field_x[var5] = param1.c((byte) 125);
-                            var6 = param1.a((byte) 77);
-                            stackIn_10_0 = this.field_p;
-
-                            stackIn_10_1 = var5;
-
-                            if (var6 == 0) {
-                              stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
-                              stackIn_11_1 = stackIn_10_1;
-                              stackIn_11_2 = (char)0;
-                              break L6;
-                            } else {
-                              stackIn_11_0 = (char[]) ((Object) stackIn_10_0);
-                              stackIn_11_1 = stackIn_10_1;
-                              stackIn_11_2 = mm.a(100, (byte) var6);
-                              break L6;
-                            }
-                          }
-                          stackIn_11_0[stackIn_11_1] = stackIn_11_2;
-                          var5++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                  break L1;
-                } else {
-                  this.field_v = param1.h(param0 + -121);
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -4) {
+            return;
           }
+          if (param2 != 1) {
+            if (param2 == 2) {
+              var4_int = param1.g(11132);
+              this.field_x = new int[var4_int];
+              this.field_p = new char[var4_int];
+              for (var5 = 0; var5 < var4_int; var5++) {
+                this.field_x[var5] = param1.c((byte) 125);
+                var6 = param1.a((byte) 77);
+                stackIn_10_0 = this.field_p;
+                stackIn_10_1 = var5;
+                if (var6 == 0) {
+                  stackIn_11_2 = (char)0;
+                } else {
+                  stackIn_11_2 = mm.a(100, (byte) var6);
+                }
+                stackIn_10_0[stackIn_10_1] = stackIn_11_2;
+              }
+            } else if (param2 == 3) {
+              var4_int = param1.g(11132);
+              this.field_w = new int[var4_int];
+              this.field_r = new char[var4_int];
+              for (var5 = 0; var4_int > var5; var5++) {
+                this.field_w[var5] = param1.c((byte) -88);
+                var6 = param1.a((byte) 47);
+                stackIn_17_0 = this.field_r;
+                stackIn_17_1 = var5;
+                if (0 != var6) {
+                  stackIn_18_2 = mm.a(param0 + 97, (byte) var6);
+                } else {
+                  stackIn_18_2 = 0;
+                }
+                stackIn_17_0[stackIn_17_1] = (char) stackIn_18_2;
+              }
+            } else {
+              if (param2 == 4) {
+                this.field_o = true;
+                return;
+              }
+            }
+          } else {
+            this.field_v = param1.h(param0 - 121);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var4);
-
-            stackIn_24_1 = new StringBuilder().append("u.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_24_0 = var4;
+          stackIn_24_1 = new StringBuilder().append("u.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw kg.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -198,57 +128,32 @@ final class u extends wb {
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param0 == 11693) {
-              L1: while (true) {
-                var3_int = param1.g(param0 + -561);
-                if (var3_int == 0) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  this.a(-4, param1, var3_int);
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param0 != 11693) {
+            return;
+          }
+          while (true) {
+            var3_int = param1.g(param0 - 561);
+            if (var3_int == 0) {
+              return;
             }
+            this.a(-4, param1, var3_int);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("u.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("u.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw kg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

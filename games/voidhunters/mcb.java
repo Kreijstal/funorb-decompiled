@@ -4,15 +4,15 @@
 final class mcb extends uj {
     final boolean a(boolean param0) {
         if (param0) {
-            return true;
+          return true;
         }
         return true;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
-            mcb.a(-124, -42);
-            return oq.field_m;
+          mcb.a(-124, -42);
+          return oq.field_m;
         }
         return oq.field_m;
     }
@@ -22,15 +22,15 @@ final class mcb extends uj {
 
     final int b(byte param0) {
         if (param0 < 79) {
-            this.a(false);
-            return 105;
+          this.a(false);
+          return 105;
         }
         return 105;
     }
 
     final int a(int param0) {
         if (param0 != -1) {
-            return -6;
+          return -6;
         }
         return hta.field_o;
     }

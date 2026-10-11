@@ -12,52 +12,21 @@ final class rp extends vg {
         field_g = null;
         field_f = null;
         if (!param0) {
-            rp.a(-58);
+          rp.a(-58);
         }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        if (param1 != -16226) {
-          L0: {
-            rp.a(false);
-            if (param2 > param3) {
-              stackIn_12_0 = param2;
-              break L0;
-            } else {
-              if (param3 > param0) {
-                stackIn_12_0 = param0;
-                break L0;
-              } else {
-                stackIn_12_0 = param3;
-                break L0;
-              }
-            }
-          }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (param2 > param3) {
-              stackIn_6_0 = param2;
-              break L1;
-            } else {
-              if (param3 > param0) {
-                stackIn_6_0 = param0;
-                break L1;
-              } else {
-                stackIn_6_0 = param3;
-                break L1;
-              }
-            }
-          }
-          return stackIn_6_0;
+        if (param1 == -16226) {
+          return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
         }
+        rp.a(false);
+        return param2 <= param3 ? param3 <= param0 ? param3 : param0 : param2;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (param3 != 73) {
-            return;
+          return;
         }
         hp.a(param1, 0, 0, this.field_j.b((byte) 74), -1918106173, param2, param0);
     }
@@ -70,16 +39,16 @@ final class rp extends vg {
     final static void a(int param0) {
         pra.b(-1);
         if (param0 != 8824) {
-            return;
+          return;
         }
         pqa.i(0);
     }
 
     final void b(int param0) {
         if (param0 > -30) {
-            field_h = 127;
-            this.field_j.a(0);
-            return;
+          field_h = 127;
+          this.field_j.a(0);
+          return;
         }
         this.field_j.a(0);
     }

@@ -9,39 +9,36 @@ class vg {
     static String[] field_c;
 
     final void p(int param0) {
-        if (this.field_e != null) {
-          if (param0 < 0) {
-            return;
-          } else {
-            this.field_e.field_a = this.field_a;
-            this.field_a.field_e = this.field_e;
-            this.field_a = null;
-            this.field_e = null;
-            return;
-          }
-        } else {
+        if (this.field_e == null) {
+          return;
+        }
+        if (param0 >= 0) {
+          this.field_e.field_a = this.field_a;
+          this.field_a.field_e = this.field_e;
+          this.field_a = null;
+          this.field_e = null;
           return;
         }
     }
 
     public static void o(int param0) {
         if (param0 < 67) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;
     }
 
     final static void q(int param0) {
-        pr.a(param0 + -30497, faa.field_g, (String) null);
+        pr.a(param0 - 30497, faa.field_g, (String) null);
         if (param0 != 30497) {
-            field_c = (String[]) null;
+          field_c = (String[]) null;
         }
     }
 
     final boolean l(byte param0) {
         if (this.field_e == null) {
-            return false;
+          return false;
         }
         int var2 = -24 / ((-27 - param0) / 56);
         return true;

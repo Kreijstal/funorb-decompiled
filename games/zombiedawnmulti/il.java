@@ -21,13 +21,13 @@ final class il extends br {
         this.field_o = param4;
         this.field_h = param0;
         if (param3 != -120) {
-            return;
+          return;
         }
         try {
-            this.field_p = param2;
-            this.field_m = param5;
+          this.field_p = param2;
+          this.field_m = param5;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "il.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "il.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -35,9 +35,9 @@ final class il extends br {
         field_j = null;
         field_n = null;
         if (param0 != 27467) {
-            field_k = 4;
-            field_l = null;
-            return;
+          field_k = 4;
+          field_l = null;
+          return;
         }
         field_l = null;
     }

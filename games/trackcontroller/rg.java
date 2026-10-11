@@ -8,28 +8,28 @@ final class rg {
 
     final static void a(boolean param0) {
         if (param0) {
-            field_c = (uf) null;
+          field_c = (uf) null;
         }
     }
 
     final static void a(wb param0, int param1) {
         try {
-            fe.a(true, param0, param1 ^ 15171);
-            if (param1 != 14915) {
-                wb var3 = (wb) null;
-                rg.a((wb) null, 121);
-            }
+          fe.a(true, param0, param1 ^ 15171);
+          if (param1 != 14915) {
+            wb var3 = (wb) null;
+            rg.a((wb) null, 121);
+          }
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "rg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "rg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 17883) {
-            field_a = (String) null;
-            field_c = null;
-            return;
+          field_a = (String) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

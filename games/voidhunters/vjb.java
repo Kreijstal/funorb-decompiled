@@ -7,27 +7,25 @@ abstract class vjb {
     static String field_c;
 
     final static void a(byte param0) {
-        if (param0 <= 75) {
-          vjb.a((byte) 48);
-          lnb.d(0);
-          ebb.a((byte) -74);
-          crb.field_v = null;
-          fea.a(-1);
-          return;
-        } else {
+        if (param0 > 75) {
           lnb.d(0);
           ebb.a((byte) -74);
           crb.field_v = null;
           fea.a(-1);
           return;
         }
+        vjb.a((byte) 48);
+        lnb.d(0);
+        ebb.a((byte) -74);
+        crb.field_v = null;
+        fea.a(-1);
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != 53) {
-            vjb.b((byte) -48);
+          vjb.b((byte) -48);
         }
     }
 

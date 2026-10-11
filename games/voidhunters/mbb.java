@@ -9,10 +9,10 @@ final class mbb implements dja {
 
     public static void a(int param0) {
         if (param0 != 50) {
-            mbb.a(-18);
-            field_d = null;
-            field_a = null;
-            return;
+          mbb.a(-18);
+          field_d = null;
+          field_a = null;
+          return;
         }
         field_d = null;
         field_a = null;
@@ -20,8 +20,8 @@ final class mbb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) -26);
-            return (tv[]) ((Object) new lrb[param1]);
+          this.a((byte) -26);
+          return (tv[]) ((Object) new lrb[param1]);
         }
         return (tv[]) ((Object) new lrb[param1]);
     }

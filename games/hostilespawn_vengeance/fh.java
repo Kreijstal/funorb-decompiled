@@ -17,15 +17,7 @@ final class fh {
     public static void b(int param0) {
         field_h = null;
         field_a = null;
-        if (param0 != 9992) {
-          field_b = 71;
-          field_f = null;
-          field_e = null;
-          field_c = null;
-          field_i = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 9992) {
           field_f = null;
           field_e = null;
           field_c = null;
@@ -33,35 +25,42 @@ final class fh {
           field_d = null;
           return;
         }
+        field_b = 71;
+        field_f = null;
+        field_e = null;
+        field_c = null;
+        field_i = null;
+        field_d = null;
     }
 
     final void a(int param0, byte[] param1, vi param2) {
         try {
-            try {
-                if (-32 != (param2.field_n[param2.field_i] ^ -1) || -117 != param2.field_n[param2.field_i - -1]) {
-                    throw new RuntimeException("");
-                }
-                if (param0 < 82) {
-                    fh.a(62);
-                }
-                if (null == this.field_g) {
-                    this.field_g = new java.util.zip.Inflater(true);
-                }
-                try {
-                    this.field_g.setInput(param2.field_n, 10 + param2.field_i, param2.field_n.length + (-param2.field_i + -10 - 8));
-                    this.field_g.inflate(param1);
-                } catch (Exception exception) {
-                    this.field_g.reset();
-                    throw new RuntimeException("");
-                }
-                this.field_g.reset();
-            } catch (RuntimeException runtimeException) {
-                throw wg.a((Throwable) ((Object) runtimeException), "fh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          try {
+            if (param2.field_n[param2.field_i] != 31 ||
+              -117 != param2.field_n[param2.field_i + 1]) {
+              throw new RuntimeException("");
             }
+            if (param0 < 82) {
+              fh.a(62);
+            }
+            if (null == this.field_g) {
+              this.field_g = new java.util.zip.Inflater(true);
+            }
+            try {
+              this.field_g.setInput(param2.field_n, 10 + param2.field_i, param2.field_n.length + (-param2.field_i - 10 - 8));
+              this.field_g.inflate(param1);
+            } catch (Exception exception) {
+              this.field_g.reset();
+              throw new RuntimeException("");
+            }
+            this.field_g.reset();
+          } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) ((Object) runtimeException), "fh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -76,7 +75,7 @@ final class fh {
         he.field_y = null;
         vh.field_d = null;
         if (param0 != 1) {
-            field_c = (boolean[]) null;
+          field_c = (boolean[]) null;
         }
     }
 

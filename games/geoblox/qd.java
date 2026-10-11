@@ -71,10 +71,9 @@ final class qd extends m {
           var4 = var2[var3Lifetime1];
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
-            if (var6 == 0) {
-              continue;
+            if (var6 != 0) {
+              var4[var5] = (byte)param0[var6];
             }
-            var4[var5] = (byte)param0[var6];
           }
         }
         return param1;
@@ -135,82 +134,60 @@ final class qd extends m {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
-        int var10;
-        int var11;
         int var12;
         int var13;
         int var14;
-        var10 = -param6;
-        while (true) {
-          if (var10 >= 0) {
-            return;
-          }
-          var11 = -param5;
-          while (true) {
-            if (var11 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var10++;
-              break;
-            }
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = -param5; var11 < 0; var11++) {
             incrementValue$11 = param3;
             param3++;
             var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
             if (var12 == 0) {
               param4++;
-              var11++;
-              continue;
+            } else {
+              var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
+              var12 = 256 - var12;
+              var14 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
             }
-            var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
-            var12 = 256 - var12;
-            var14 = param0[param4];
-            incrementValue$12 = param4;
-            param4++;
-            param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
-            var11++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var9 = 0;
+        int var10 = 0;
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
-        int var9;
-        int var10;
         int var11;
         int var12;
         int var13;
-        var9 = -param6;
-        while (true) {
-          if (var9 >= 0) {
-            return;
-          }
-          var10 = -param5;
-          while (true) {
-            if (var10 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var9++;
-              break;
-            }
+        for (var9 = -param6; var9 < 0; var9++) {
+          for (var10 = -param5; var10 < 0; var10++) {
             incrementValue$11 = param3;
             param3++;
             var11 = 255 & param1[incrementValue$11];
             if (var11 == 0) {
               param4++;
-              var10++;
-              continue;
+            } else {
+              var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
+              var11 = 256 - var11;
+              var13 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
             }
-            var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
-            var11 = 256 - var11;
-            var13 = param0[param4];
-            incrementValue$12 = param4;
-            param4++;
-            param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
-            var10++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 }

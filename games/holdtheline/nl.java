@@ -19,7 +19,7 @@ final class nl {
         field_c = null;
         field_h = null;
         if (param0 > -85) {
-            field_h = (hj[]) null;
+          field_h = (hj[]) null;
         }
     }
 

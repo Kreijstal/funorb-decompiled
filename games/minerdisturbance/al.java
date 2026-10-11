@@ -11,27 +11,23 @@ class al extends pi {
     static wh field_s;
 
     final void a(byte param0) {
-        if (param0 <= -90) {
-          if (null == this.field_q) {
-            return;
-          } else {
-            this.field_q.field_t = this.field_t;
-            this.field_t.field_q = this.field_q;
-            this.field_q = null;
-            this.field_t = null;
-            return;
-          }
-        } else {
+        if (param0 > -90) {
           field_s = (wh) null;
-          if (null == this.field_q) {
-            return;
-          } else {
+          if (null != this.field_q) {
             this.field_q.field_t = this.field_t;
             this.field_t.field_q = this.field_q;
             this.field_q = null;
             this.field_t = null;
             return;
           }
+          return;
+        }
+        if (null != this.field_q) {
+          this.field_q.field_t = this.field_t;
+          this.field_t.field_q = this.field_q;
+          this.field_q = null;
+          this.field_t = null;
+          return;
         }
     }
 
@@ -40,55 +36,35 @@ class al extends pi {
         jf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -10218) {
-                break L1;
-              } else {
-                al.e(-101);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new jf(param1);
-            break L0;
+          if (param0 != -10218) {
+            al.e(-101);
           }
+          stackIn_3_0 = new jf(param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("al.HA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("al.HA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_r = null;
         field_s = null;
         if (param0 != -483) {
-            field_r = (ih) null;
-            field_o = null;
-            return;
+          field_r = (ih) null;
+          field_o = null;
+          return;
         }
         field_o = null;
     }
@@ -101,52 +77,27 @@ class al extends pi {
         RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0 > 72) {
-                break L1;
+          if (param0 <= 72) {
+            var3 = (String) null;
+            al.a(-123, (String) null);
+          }
+          for (var1_int = 0; var1_int < 25; var1_int++) {
+            if (dn.field_t[var1_int] != null) {
+              if (dn.field_t[var1_int].k()) {
+                dn.field_t[var1_int] = null;
               } else {
-                var3 = (String) null;
-                al.a(-123, (String) null);
-                break L1;
+                kf.a(dn.field_t[var1_int], (byte) -113);
               }
             }
-            var1_int = 0;
-            L2: while (true) {
-              if (-26 >= (var1_int ^ -1)) {
-                break L0;
+            if (gl.field_u[var1_int] != null) {
+              if (gl.field_u[var1_int].k()) {
+                gl.field_u[var1_int] = null;
               } else {
-                L3: {
-                  if (dn.field_t[var1_int] != null) {
-                    if (dn.field_t[var1_int].k()) {
-                      dn.field_t[var1_int] = null;
-                      break L3;
-                    } else {
-                      kf.a(dn.field_t[var1_int], (byte) -113);
-                      break L3;
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (gl.field_u[var1_int] != null) {
-                    if (gl.field_u[var1_int].k()) {
-                      gl.field_u[var1_int] = null;
-                      break L4;
-                    } else {
-                      kf.a(gl.field_u[var1_int], (byte) -54);
-                      break L4;
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                var1_int++;
-                continue L2;
+                kf.a(gl.field_u[var1_int], (byte) -54);
               }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

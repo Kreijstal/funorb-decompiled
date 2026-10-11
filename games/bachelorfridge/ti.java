@@ -10,11 +10,11 @@ final class ti {
     }
 
     final static String a(byte param0, int param1, long param2, int param3, boolean param4) {
-        StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
+        StringBuilder discarded$0 = null;
         StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
+        StringBuilder discarded$3 = null;
         int var6;
         int var7;
         int var8;
@@ -23,91 +23,58 @@ final class ti {
         int var11;
         int var12;
         int var13;
-        L0: {
-          var13 = BachelorFridge.field_y;
-          var6 = 44;
-          var7 = 46;
-          if (-1 != (param3 ^ -1)) {
-            break L0;
-          } else {
-            var6 = 46;
-            var7 = 44;
-            break L0;
-          }
+        int var11Lifetime1;
+        int var12Lifetime1;
+        var13 = BachelorFridge.field_y;
+        var6 = 44;
+        var7 = 46;
+        if (param3 == 0) {
+          var6 = 46;
+          var7 = 44;
         }
-        L1: {
-          if (-3 == (param3 ^ -1)) {
-            var7 = 160;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (param3 == 2) {
+          var7 = 160;
         }
-        L2: {
-          var9 = 0 / ((param0 - 60) / 39);
-          var8 = 0;
-          if (-1L < (param2 ^ -1L)) {
-            param2 = -param2;
-            var8 = 1;
-            break L2;
-          } else {
-            break L2;
-          }
+        var9 = 0 / ((param0 - 60) / 39);
+        var8 = 0;
+        if (param2 < 0L) {
+          param2 = -param2;
+          var8 = 1;
         }
-        L3: {
-          var10 = new StringBuilder(26);
-          if (0 < param1) {
-            var11 = 0;
-            L4: while (true) {
-              if (var11 >= param1) {
-                discarded$0 = var10.append((char) var6);
-                break L3;
-              } else {
-                var12 = (int)param2;
-                param2 = param2 / 10L;
-                discarded$1 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
-                var11++;
-                continue L4;
-              }
-            }
-          } else {
-            break L3;
+        var10 = new StringBuilder(26);
+        if (0 < param1) {
+          for (var11 = 0; var11 < param1; var11++) {
+            var12 = (int)param2;
+            param2 = param2 / 10L;
+            discarded$1 = var10.append((char)(-(10 * (int)param2) + var12 + 48));
           }
+          discarded$0 = var10.append((char) var6);
         }
-        var11 = 0;
-        L5: while (true) {
-          var12 = (int)param2;
+        var11Lifetime1 = 0;
+        while (true) {
+          var12Lifetime1 = (int)param2;
           param2 = param2 / 10L;
-          discarded$2 = var10.append((char)(48 + (var12 - 10 * (int)param2)));
-          if (0L != param2) {
-            if (!param4) {
-              continue L5;
-            } else {
-              var11++;
-              if (var11 % 3 == 0) {
-                discarded$3 = var10.append((char) var7);
-                continue L5;
-              } else {
-                continue L5;
-              }
-            }
-          } else {
-            L6: {
-              if (var8 != 0) {
-                discarded$4 = var10.append('-');
-                break L6;
-              } else {
-                break L6;
-              }
+          discarded$2 = var10.append((char)(48 + (var12Lifetime1 - 10 * (int)param2)));
+          if (0L == param2) {
+            if (var8 != 0) {
+              discarded$4 = var10.append('-');
             }
             return var10.reverse().toString();
           }
+          if (!param4) {
+            continue;
+          }
+          var11Lifetime1++;
+          if (var11Lifetime1 % 3 != 0) {
+            continue;
+          }
+          discarded$3 = var10.append((char) var7);
         }
     }
 
     public static void b(int param0) {
         if (param0 != 3) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -119,11 +86,11 @@ final class ti {
         int var0 = 0;
         field_a = new byte[32896];
         for (var1 = 0; var1 < 256; var1++) {
-            for (var2 = 0; var2 <= var1; var2++) {
-                incrementValue$0 = var0;
-                var0++;
-                field_a[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + (var2 * var2 + var1 * var1)) / 65535.0f)));
-            }
+          for (var2 = 0; var2 <= var1; var2++) {
+            incrementValue$0 = var0;
+            var0++;
+            field_a[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + (var2 * var2 + var1 * var1)) / 65535.0f)));
+          }
         }
     }
 }

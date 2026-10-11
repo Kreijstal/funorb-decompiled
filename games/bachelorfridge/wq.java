@@ -14,76 +14,50 @@ final class wq extends k {
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var4_int = param2;
-              if (var4_int == 0) {
-                this.field_o = param1.e((byte) 112);
-                break L1;
-              } else {
-                if (-2 != (var4_int ^ -1)) {
-                  if (var4_int == 2) {
-                    this.field_p = param1.e((byte) 120);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  this.field_l = param1.e((byte) 67);
-                  break L1;
-                }
+          var4_int = param2;
+          if (var4_int == 0) {
+            this.field_o = param1.e((byte) 112);
+          } else {
+            if (var4_int != 1) {
+              if (var4_int == 2) {
+                this.field_p = param1.e((byte) 120);
               }
+            } else {
+              this.field_l = param1.e((byte) 67);
             }
-            L2: {
-              if (param0 == -71) {
-                break L2;
-              } else {
-                this.a(true, 44);
-                break L2;
-              }
-            }
-            break L0;
           }
+          if (param0 != -71) {
+            this.a(true, 44);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4);
-
-            stackIn_14_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_14_0 = var4;
+          stackIn_14_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, String param8, int param9, int param10) {
         try {
-            if (!param7) {
-                wq.d(51);
-            }
-            hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
-            jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
+          if (!param7) {
+            wq.d(51);
+          }
+          hfa.field_z.a(param8, param10, param4, param5, param2, param6, -1, param0, param9, param1);
+          jha.field_g.a(param8, param10, 20 + param4, param5, param2, param3, -1, param0, param9, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "wq.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ')');
         }
     }
 
@@ -101,11 +75,11 @@ final class wq extends k {
     }
 
     final int[][] a(boolean param0, int param1) {
+        int var11 = 0;
         int[][] var3;
         int[] var8;
         int[] var9;
         int[] var10;
-        int var11;
         int var12;
         int var13;
         int var14;
@@ -117,61 +91,37 @@ final class wq extends k {
         int[] var32;
         int[] var33;
         int[] var34;
-        L0: {
-          var15 = BachelorFridge.field_y;
-          var23 = this.field_h.a(param1, -858);
-          var18 = var23;
-          var16 = var18;
-          var3 = var16;
-          if (this.field_h.field_b) {
-            var31 = this.a((byte) -93, 0, param1);
-            var32 = var31[0];
-            var34 = var31[1];
-            var33 = var31[2];
-            var8 = var23[0];
-            var9 = var23[1];
-            var10 = var23[2];
-            var11 = 0;
-            L1: while (true) {
-              if (var11 >= hh.field_d) {
-                break L0;
-              } else {
-                L2: {
-                  var12 = var32[var11];
-                  var13 = var33[var11];
-                  var14 = var34[var11];
-                  if (var12 != var13) {
-                    break L2;
-                  } else {
-                    if (var14 == var13) {
-                      var8[var11] = var12 * this.field_o >> -965657780;
-                      var9[var11] = var13 * this.field_l >> -1620535732;
-                      var10[var11] = var14 * this.field_p >> 2093606156;
-                      var11++;
-                      continue L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var8[var11] = this.field_o;
-                var9[var11] = this.field_l;
-                var10[var11] = this.field_p;
-                var11++;
-                continue L1;
-              }
+        var15 = BachelorFridge.field_y;
+        var23 = this.field_h.a(param1, -858);
+        var18 = var23;
+        var16 = var18;
+        var3 = var16;
+        if (this.field_h.field_b) {
+          var31 = this.a((byte) -93, 0, param1);
+          var32 = var31[0];
+          var34 = var31[1];
+          var33 = var31[2];
+          var8 = var23[0];
+          var9 = var23[1];
+          var10 = var23[2];
+          for (var11 = 0; var11 < hh.field_d; var11++) {
+            var12 = var32[var11];
+            var13 = var33[var11];
+            var14 = var34[var11];
+            if (var12 == var13 &&
+              var14 == var13) {
+              var8[var11] = var12 * this.field_o >> 12;
+              var9[var11] = var13 * this.field_l >> 12;
+              var10[var11] = var14 * this.field_p >> 12;
+            } else {
+              var8[var11] = this.field_o;
+              var9[var11] = this.field_l;
+              var10[var11] = this.field_p;
             }
-          } else {
-            break L0;
           }
         }
-        L3: {
-          if (!param0) {
-            break L3;
-          } else {
-            field_m = (String) null;
-            break L3;
-          }
+        if (param0) {
+          field_m = (String) null;
         }
         return var3;
     }

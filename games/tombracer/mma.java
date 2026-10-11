@@ -11,7 +11,7 @@ final class mma {
         field_b = null;
         field_c = null;
         if (param0 != -1901) {
-            return;
+          return;
         }
         field_d = null;
     }
@@ -21,7 +21,7 @@ final class mma {
 
     final void a(int param0, int param1) {
         if (param0 != -978) {
-            field_b = (ka[]) null;
+          field_b = (ka[]) null;
         }
     }
 

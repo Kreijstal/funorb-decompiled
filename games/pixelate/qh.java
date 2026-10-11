@@ -11,30 +11,28 @@ final class qh {
 
     final static void a(byte param0, int param1, ua param2, boolean param3) {
         if (param0 > -50) {
-            return;
+          return;
         }
         try {
-            ri.field_a.a(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
+          ri.field_a.a(1000000, !param3 ? true : false, param1, (byte) 124, param2, 256);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "qh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 256) {
-          qh.a(3);
-          field_a = null;
-          field_f = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 256) {
           field_a = null;
           field_f = null;
           field_e = null;
           field_d = null;
           return;
         }
+        qh.a(3);
+        field_a = null;
+        field_f = null;
+        field_e = null;
+        field_d = null;
     }
 
     static {

@@ -15,12 +15,8 @@ public final class NativeHeap {
     final synchronized native long getBufferAddress(int param0);
 
     protected final synchronized void finalize() throws Throwable {
-        try {
-            super.finalize();
-            this.a();
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        super.finalize();
+        this.a();
     }
 
     final synchronized native int allocateBuffer(int param0, boolean param1);
@@ -33,31 +29,21 @@ public final class NativeHeap {
         RuntimeException var3;
         if (!this.a) {
           throw new IllegalStateException();
-        } else {
-          return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) (this), this.allocateBuffer(param0, param1), param0);
         }
+        return new jaclib.memory.heap.NativeHeapBuffer(this, this.allocateBuffer(param0, param1), param0);
     }
 
     final synchronized native void deallocateBuffer(int param0);
 
     public NativeHeap(int param0) {
-        try {
-            this.b = param0;
-            this.allocateHeap(this.b);
-            this.a = true;
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        this.b = param0;
+        this.allocateHeap(this.b);
+        this.a = true;
     }
 
     public final synchronized void a() {
-        L0: {
-          if (!this.a) {
-            break L0;
-          } else {
-            this.deallocateHeap();
-            break L0;
-          }
+        if (this.a) {
+          this.deallocateHeap();
         }
         this.a = false;
     }

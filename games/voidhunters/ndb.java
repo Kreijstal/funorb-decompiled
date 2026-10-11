@@ -11,9 +11,9 @@ final class ndb extends IOException {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 91) {
-            field_b = (String) null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

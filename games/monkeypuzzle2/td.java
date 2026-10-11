@@ -9,27 +9,20 @@ final class td extends jl {
     byte[] field_j;
 
     final td a(o param0) {
-        int dupTemp$1 = 0;
         this.field_j = param0.a(false, this.field_j);
         this.field_f = param0.a(this.field_f, -98);
-        if (this.field_i == this.field_g) {
-          dupTemp$1 = param0.a(this.field_i, (byte) 44);
-          this.field_g = dupTemp$1;
-          this.field_i = dupTemp$1;
-          return (td) (this);
-        } else {
-          L0: {
-            this.field_i = param0.a(this.field_i, (byte) 80);
-            this.field_g = param0.a(this.field_g, (byte) 94);
-            if (this.field_i != this.field_g) {
-              break L0;
-            } else {
-              this.field_i = this.field_i - 1;
-              break L0;
-            }
+        if (this.field_i != this.field_g) {
+          this.field_i = param0.a(this.field_i, (byte) 80);
+          this.field_g = param0.a(this.field_g, (byte) 94);
+          if (this.field_i == this.field_g) {
+            this.field_i = this.field_i - 1;
           }
-          return (td) (this);
+          return this;
         }
+        int dupTemp$0 = param0.a(this.field_i, (byte) 44);
+        this.field_g = dupTemp$0;
+        this.field_i = dupTemp$0;
+        return this;
     }
 
     td(int param0, byte[] param1, int param2, int param3) {

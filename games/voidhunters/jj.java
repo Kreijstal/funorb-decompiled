@@ -13,50 +13,27 @@ final class jj extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 < -119) {
-              si.a(166, 62, param0[0].a(113));
-              stackIn_4_0 = new nc("void");
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 >= -119) {
+            stackIn_2_0 = (nc) null;
+            return stackIn_2_0;
           }
+          si.a(166, 62, param0[0].a(113));
+          stackIn_4_0 = new nc("void");
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("jj.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("jj.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -65,32 +42,26 @@ final class jj extends rqa {
     }
 
     final static void a(int param0, byte param1, int param2, float param3, int param4, int param5) {
-        if (param1 == 7) {
-          if (li.field_i) {
-            if (lfa.field_j) {
-              og.field_r.a(param0 | param4 << -821705192, Math.max(1, (int)param3), param5, param2, (byte) -113);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            dma.e(param5, param2, (int)param3, param0, param4);
-            return;
-          }
-        } else {
+        if (param1 != 7) {
           jj.a(-51, (byte) -126, 78, -1.8534518480300903f, -88, 102);
-          if (li.field_i) {
-            if (!lfa.field_j) {
-              return;
-            } else {
-              og.field_r.a(param0 | param4 << -821705192, Math.max(1, (int)param3), param5, param2, (byte) -113);
-              return;
-            }
-          } else {
+          if (!li.field_i) {
             dma.e(param5, param2, (int)param3, param0, param4);
             return;
           }
+          if (lfa.field_j) {
+            og.field_r.a(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
+            return;
+          }
+          return;
         }
+        if (!li.field_i) {
+          dma.e(param5, param2, (int)param3, param0, param4);
+          return;
+        }
+        if (!lfa.field_j) {
+          return;
+        }
+        og.field_r.a(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
     }
 
     public static void a(int param0) {

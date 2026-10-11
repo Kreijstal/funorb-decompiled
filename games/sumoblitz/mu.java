@@ -18,14 +18,14 @@ abstract class mu extends pj {
         String var2 = (String) null;
         wv.a((byte) 77, "", (String) null);
         if (param0 != 0) {
-            field_r = (String) null;
+          field_r = (String) null;
         }
     }
 
     public static void a(int param0) {
         field_t = null;
         field_r = null;
-        int var1 = -35 % ((param0 - -7) / 32);
+        int var1 = -35 % ((param0 + 7) / 32);
         field_B = null;
         field_y = null;
     }
@@ -38,7 +38,7 @@ abstract class mu extends pj {
         field_r = "MY HISCORES";
         field_y = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-            field_y[var0] = gf.a(var0, -676121812);
+          field_y[var0] = gf.a(var0, -676121812);
         }
     }
 }

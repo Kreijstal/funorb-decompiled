@@ -12,20 +12,20 @@ final class pb {
     final void a(long param0, jl param1, int param2) {
         jl var5 = null;
         try {
-            if (null != param1.field_q) {
-                param1.b(true);
-            }
-            var5 = this.field_b[(int)(param0 & (long)(-1 + this.field_f))];
-            param1.field_o = var5;
-            param1.field_q = var5.field_q;
-            if (param2 < 115) {
-                this.field_f = -72;
-            }
-            param1.field_q.field_o = param1;
-            param1.field_o.field_q = param1;
-            param1.field_r = param0;
+          if (null != param1.field_q) {
+            param1.b(true);
+          }
+          var5 = this.field_b[(int)(param0 & (long)(-1 + this.field_f))];
+          param1.field_o = var5;
+          param1.field_q = var5.field_q;
+          if (param2 < 115) {
+            this.field_f = -72;
+          }
+          param1.field_q.field_o = param1;
+          param1.field_o.field_q = param1;
+          param1.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "pb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "pb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -36,12 +36,12 @@ final class pb {
         jl var4 = this.field_b[(int)(param0 & (long)(param1 + this.field_f))];
         this.field_d = var4.field_o;
         while (var4 != this.field_d) {
-            if (param0 == this.field_d.field_r) {
-                var5 = this.field_d;
-                this.field_d = this.field_d.field_o;
-                return var5;
-            }
+          if (param0 == this.field_d.field_r) {
+            var5 = this.field_d;
             this.field_d = this.field_d.field_o;
+            return var5;
+          }
+          this.field_d = this.field_d.field_o;
         }
         this.field_d = null;
         return null;
@@ -50,9 +50,9 @@ final class pb {
     public static void a(byte param0) {
         field_e = null;
         if (param0 <= 14) {
-            field_e = (mi) null;
-            field_a = null;
-            return;
+          field_e = (mi) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -64,27 +64,27 @@ final class pb {
         this.field_f = param0;
         this.field_b = new jl[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new jl();
-            var3 = dupTemp$0;
-            this.field_b[var2] = dupTemp$0;
-            var3.field_q = var3;
-            var3.field_o = var3;
+          dupTemp$0 = new jl();
+          var3 = dupTemp$0;
+          this.field_b[var2] = dupTemp$0;
+          var3.field_q = var3;
+          var3.field_o = var3;
         }
     }
 
     final static void a(ji param0, byte param1, ji param2, int param3, int param4, int param5) {
         try {
-            n.field_d = param3;
-            if (param1 >= -63) {
-                ji var7 = (ji) null;
-                pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);
-            }
-            db.field_v = param0;
-            nj.field_T = param2;
-            kb.field_b = param5;
-            jd.field_g = param4;
+          n.field_d = param3;
+          if (param1 >= -63) {
+            ji var7 = (ji) null;
+            pb.a((ji) null, (byte) -101, (ji) null, 96, -46, -6);
+          }
+          db.field_v = param0;
+          nj.field_T = param2;
+          kb.field_b = param5;
+          jd.field_g = param4;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "pb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "pb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -92,17 +92,17 @@ final class pb {
         jl var4 = null;
         int var5 = Confined.field_J ? 1 : 0;
         if (this.field_d == null) {
-            return null;
+          return null;
         }
         int var2 = 86 / ((49 - param0) / 55);
         jl var3 = this.field_b[(int)((long)(-1 + this.field_f) & this.field_c)];
         while (var3 != this.field_d) {
-            if (!((this.field_d.field_r ^ -1L) != (this.field_c ^ -1L))) {
-                var4 = this.field_d;
-                this.field_d = this.field_d.field_o;
-                return var4;
-            }
+          if (~this.field_d.field_r == ~this.field_c) {
+            var4 = this.field_d;
             this.field_d = this.field_d.field_o;
+            return var4;
+          }
+          this.field_d = this.field_d.field_o;
         }
         this.field_d = null;
         return null;
@@ -115,42 +115,26 @@ final class pb {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            ti.b();
-            oj.field_D = new int[260];
-            pc.field_h = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if (256 <= var1_int) {
-                L2: {
-                  if (param0 >= 122) {
-                    break L2;
-                  } else {
-                    field_a = (String) null;
-                    break L2;
-                  }
-                }
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (oj.field_D.length <= var5) {
-                    break L0;
-                  } else {
-                    oj.field_D[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                oj.field_D[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L1;
-              }
-            }
+          ti.b();
+          oj.field_D = new int[260];
+          pc.field_h = 11;
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = 15.0;
+            oj.field_D[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
+          if (param0 < 122) {
+            field_a = (String) null;
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (oj.field_D.length > var5) {
+            oj.field_D[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

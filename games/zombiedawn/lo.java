@@ -20,7 +20,7 @@ final class lo extends le {
         field_r = null;
         field_n = null;
         if (param0 > -31) {
-            return;
+          return;
         }
         field_p = null;
         field_s = null;
@@ -29,7 +29,7 @@ final class lo extends le {
 
     final static int a(boolean param0) {
         if (param0) {
-            return -30;
+          return -30;
         }
         return 1;
     }

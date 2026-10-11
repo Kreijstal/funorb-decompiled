@@ -10,15 +10,14 @@ final class bd {
         field_b = null;
         field_a = null;
         if (param0 == 70) {
-            return;
+          return;
         }
         bd.a((byte) -62, false, -83, 24);
     }
 
     final static void a(byte param0, boolean param1, int param2, int param3) {
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         ak var5 = null;
         int var6 = 0;
@@ -27,204 +26,133 @@ final class bd {
         aa var9 = null;
         var7 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (qo.field_o != qa.field_f.field_i) {
-                wa.field_i = wa.field_i + (qa.field_f.field_i - qo.field_o);
-                qo.field_o = qa.field_f.field_i;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (param0 <= -50) {
-              L2: {
-                if (oh.field_b >= qh.field_c) {
-                  break L2;
-                } else {
-                  oh.field_b = oh.field_b + 1;
-                  break L2;
-                }
-              }
-              if ((oh.field_b ^ -1) < -1) {
-                L3: {
-                  r.b(-96);
-                  ui.field_i.a(-28476, param1);
-                  if (td.field_b == null) {
-                    break L3;
-                  } else {
-                    if (!ln.field_q) {
-                      td.field_b = null;
-                      break L3;
-                    } else {
-                      td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
-                      break L3;
-                    }
-                  }
-                }
-                var4_int = 0;
-                L4: while (true) {
-                  if (5 <= var4_int) {
-                    L5: {
-                      if (0 == gh.field_u.field_P) {
-                        break L5;
-                      } else {
-                        hc.field_M = new oe(gh.field_u.field_tb, gh.field_u.field_gb, gh.field_u.field_K, gh.field_u.field_nb, param3, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, (String) null, 0L);
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      var9 = ah.a((byte) -110, fq.field_q, param2, v.field_c);
-                      if (var9 == null) {
-                        break L6;
-                      } else {
-                        fj.a(var9, (byte) 125);
-                        break L6;
-                      }
-                    }
-                    var8 = pk.a((byte) 88);
-                    if (var8 != null) {
-                      up.field_o = var8;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    L7: {
-                      var5 = fm.field_f[var4_int];
-                      if (var5 != null) {
-                        L8: {
-                          if (-1 == (var5.field_P ^ -1)) {
-                            break L8;
-                          } else {
-                            cg.a((byte) -13, var5, var4_int);
-                            break L8;
-                          }
-                        }
-                        var6 = kl.a(var4_int, 0);
-                        fm.field_h[var4_int].field_H = h.field_V[var6];
-                        hk.field_e[var4_int].field_cb = rg.field_a[var6];
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    var4_int++;
-                    continue L4;
-                  }
-                }
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
+          if (qo.field_o != qa.field_f.field_i) {
+            wa.field_i = wa.field_i + (qa.field_f.field_i - qo.field_o);
+            qo.field_o = qa.field_f.field_i;
+          }
+          if (param0 > -50) {
+            return;
+          }
+          if (oh.field_b < qh.field_c) {
+            oh.field_b = oh.field_b + 1;
+          }
+          if (oh.field_b <= 0) {
+            return;
+          }
+          r.b(-96);
+          ui.field_i.a(-28476, param1);
+          if (td.field_b != null) {
+            if (!ln.field_q) {
+              td.field_b = null;
             } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              td.field_b.a(ui.field_i.field_gb, param1, (byte) 99, ui.field_i.field_tb);
             }
           }
+          for (var4_int = 0; 5 > var4_int; var4_int++) {
+            var5 = fm.field_f[var4_int];
+            if (var5 != null) {
+              if (var5.field_P != 0) {
+                cg.a((byte) -13, var5, var4_int);
+              }
+              var6 = kl.a(var4_int, 0);
+              fm.field_h[var4_int].field_H = h.field_V[var6];
+              hk.field_e[var4_int].field_cb = rg.field_a[var6];
+            }
+          }
+          if (0 != gh.field_u.field_P) {
+            hc.field_M = new oe(gh.field_u.field_tb, gh.field_u.field_gb, gh.field_u.field_K, gh.field_u.field_nb, param3, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, (String) null, 0L);
+          }
+          var9 = ah.a((byte) -110, fq.field_q, param2, v.field_c);
+          if (var9 != null) {
+            fj.a(var9, (byte) 125);
+          }
+          var8 = pk.a((byte) 88);
+          if (var8 == null) {
+            return;
+          }
+          up.field_o = var8;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           throw aa.a((Throwable) ((Object) var4), "bd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
-        }
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-          if ((hf.field_q ^ -1) <= -21) {
-            if (re.a(106)) {
-              if (-1 > (ra.field_g ^ -1)) {
-                if (ri.a(-81)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (!param0) {
           field_a = (tf) null;
-          if ((hf.field_q ^ -1) <= -21) {
-            if (re.a(106)) {
-              if (-1 > (ra.field_g ^ -1)) {
-                if (ri.a(-81)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (hf.field_q < 20) {
             return true;
           }
+          if (!re.a(106)) {
+            return true;
+          }
+          if (ra.field_g <= 0) {
+            return false;
+          }
+          if (!ri.a(-81)) {
+            return true;
+          }
+          return false;
         }
+        if (hf.field_q < 20) {
+          return true;
+        }
+        if (!re.a(106)) {
+          return true;
+        }
+        if (ra.field_g <= 0) {
+          return false;
+        }
+        if (!ri.a(-81)) {
+          return true;
+        }
+        return false;
     }
 
     final boolean b(int param0) {
-        if (param0 == -21) {
-          if (kk.field_b != this) {
-            if (e.field_d != this) {
-              if (Pixelate.field_G == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != -21) {
           return true;
         }
+        if (kk.field_b == this) {
+          return true;
+        }
+        if (e.field_d == this) {
+          return true;
+        }
+        if (Pixelate.field_G != this) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(byte param0) {
         lm var1 = null;
         int var2 = Pixelate.field_H ? 1 : 0;
+        lm var1Lifetime1;
         try {
-            aj.field_t = 0;
-            f.field_q = 0;
-            qp.field_L = null;
-            if (param0 != -1) {
-                field_c = 75;
-            }
-            vp.field_Hb.e(param0 + -110);
-            bq.field_b.e(-127);
-            var1 = vm.field_b.a(-89);
-            while (var1 != null) {
-                var1.e(17);
-                var1 = vm.field_b.a((byte) 50);
-            }
-            var1 = hq.field_q.a(-84);
-            while (var1 != null) {
-                var1.e(17);
-                var1 = hq.field_q.a((byte) 50);
-            }
-            gk.field_db = 0;
+          aj.field_t = 0;
+          f.field_q = 0;
+          qp.field_L = null;
+          if (param0 != -1) {
+            field_c = 75;
+          }
+          vp.field_Hb.e(param0 - 110);
+          bq.field_b.e(-127);
+          var1 = vm.field_b.a(-89);
+          while (var1 != null) {
+            var1.e(17);
+            var1 = vm.field_b.a((byte) 50);
+          }
+          var1Lifetime1 = hq.field_q.a(-84);
+          while (var1Lifetime1 != null) {
+            var1Lifetime1.e(17);
+            var1Lifetime1 = hq.field_q.a((byte) 50);
+          }
+          gk.field_db = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bd.A(" + param0 + ')');
         }
     }
 

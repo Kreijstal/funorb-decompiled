@@ -7,14 +7,14 @@ final class jj {
     static int field_b;
 
     final static void a(int param0) {
-        if (!(eb.field_H)) {
-            throw new IllegalStateException();
+        if (!eb.field_H) {
+          throw new IllegalStateException();
         }
         if (param0 != 0) {
-            return;
+          return;
         }
         if (be.field_b != null) {
-            be.field_b.o(param0 ^ -18861);
+          be.field_b.o(param0 ^ -18861);
         }
         String var1 = mh.b((byte) 105);
         dd.field_d = new h(var1, (String) null, true, false, false);
@@ -26,14 +26,14 @@ final class jj {
     public static void b(int param0) {
         field_a = null;
         if (param0 != 9) {
-            field_b = 96;
+          field_b = 96;
         }
         field_c = null;
     }
 
     final static void a(boolean param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -41,32 +41,19 @@ final class jj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          L0: {
-            var1_int = jb.field_j.length;
-            jb.field_i = new mb[var1_int];
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= var1_int) {
-                L2: {
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    field_b = 97;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                var3 = jb.field_j[var2];
-                var4 = jb.field_y[var2];
-                var5 = jb.field_x[var2];
-                var6 = new mb(var3, var4, var5);
-                jb.field_i[var2] = var6;
-                var2++;
-                continue L1;
-              }
-            }
+          var1_int = jb.field_j.length;
+          jb.field_i = new mb[var1_int];
+          for (var2 = 0; var2 < var1_int; var2++) {
+            var3 = jb.field_j[var2];
+            var4 = jb.field_y[var2];
+            var5 = jb.field_x[var2];
+            var6 = new mb(var3, var4, var5);
+            jb.field_i[var2] = var6;
           }
+          if (param0) {
+            field_b = 97;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -79,7 +66,7 @@ final class jj {
         ed[] var2 = var3;
         var3[4] = of.a(param0, (byte) 104, 64);
         if (param1 <= 33) {
-            return (ed[]) null;
+          return (ed[]) null;
         }
         return var2;
     }

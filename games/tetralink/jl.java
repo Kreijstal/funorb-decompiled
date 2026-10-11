@@ -13,115 +13,53 @@ final class jl {
         field_d = null;
         field_b = null;
         if (param0 != -25534) {
-            jl.a(69);
+          jl.a(69);
         }
         field_c = null;
     }
 
     final static boolean a(boolean param0) {
+        int var2 = 0;
         nm var1 = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
         int var3 = 0;
         nm var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = TetraLink.field_J;
         try {
-          L0: {
-            var4 = (nm) ((Object) bo.field_C.c(param0));
-            var1 = var4;
-            if (var1 == null) {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var2 = 0;
-              L1: while (true) {
-                if (var2 >= var1.field_r) {
-                  stackIn_19_0 = 1;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  L2: {
-                    if (null != var4.field_x[var2]) {
-                      if (-1 != (var4.field_x[var2].field_d ^ -1)) {
-                        break L2;
-                      } else {
-                        stackIn_11_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (null != var4.field_u[var2]) {
-                      if (var4.field_u[var2].field_d != 0) {
-                        break L3;
-                      } else {
-                        stackIn_16_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var2++;
-                  continue L1;
-                }
-              }
+          var4 = (nm) (bo.field_C.c(param0));
+          var1 = var4;
+          if (var1 == null) {
+            return false;
+          }
+          for (var2 = 0; var2 < var1.field_r; var2++) {
+            if (null != var4.field_x[var2] &&
+              var4.field_x[var2].field_d == 0) {
+              return false;
+            }
+            if (null != var4.field_u[var2] &&
+              var4.field_u[var2].field_d == 0) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw oi.a((Throwable) ((Object) var1_ref), "jl.D(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0 != 0;
-            } else {
-              return stackIn_19_0 != 0;
-            }
-          }
         }
     }
 
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        L0: {
-          if (param0 >= 108) {
-            break L0;
-          } else {
-            field_b = (String[]) null;
-            break L0;
-          }
+        if (param0 < 108) {
+          field_b = (String[]) null;
         }
-        L1: {
-          if (kd.field_g != null) {
-            var1 = kd.field_g;
-            synchronized (var1) {
-              L2: {
-                kd.field_g = null;
-                break L2;
-              }
-            }
-            break L1;
-          } else {
-            break L1;
+        if (kd.field_g != null) {
+          var1 = kd.field_g;
+          synchronized (var1) {
+            kd.field_g = null;
           }
         }
     }
@@ -136,28 +74,23 @@ final class jl {
         RuntimeException var3 = null;
         var6 = TetraLink.field_J;
         try {
-          L0: {
-            ra.c(640 + -param1 >> 1484464961, param2 - param0 >> 699148417, param1, param0, 9408511);
-            var3_int = -param0;
-            L1: while (true) {
-              if ((var3_int ^ -1) <= -1) {
-                break L0;
-              } else {
-                var4 = 640 * (var3_int + (480 - -param0 >> -74386943)) + (640 - param1 >> 319873761);
-                var5 = param1;
-                L2: while (true) {
-                  var5--;
-                  if (0 > var5) {
-                    var3_int += 2;
-                    continue L1;
-                  } else {
-                    incrementValue$1 = var4;
-                    var4++;
-                    ra.field_b[incrementValue$1] = 11513855;
-                    continue L2;
-                  }
-                }
+          ra.c(640 - param1 >> 1, param2 - param0 >> 1, param1, param0, 9408511);
+          var3_int = -param0;
+          while (true) {
+            if (var3_int >= 0) {
+              return;
+            }
+            var4 = 640 * (var3_int + (480 + param0 >> 1)) + (640 - param1 >> 1);
+            var5 = param1;
+            while (true) {
+              var5--;
+              if (0 > var5) {
+                var3_int += 2;
+                break;
               }
+              incrementValue$1 = var4;
+              var4++;
+              ra.field_b[incrementValue$1] = 11513855;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,16 +8,16 @@ final class gka extends vg {
 
     public static void a(byte param0) {
         if (param0 > -111) {
-            return;
+          return;
         }
         field_f = null;
     }
 
     gka(String param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "gka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

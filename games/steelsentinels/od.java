@@ -24,9 +24,7 @@ final class od extends RuntimeException {
         field_b = null;
         field_j = null;
         field_d = null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_g = null;
           return;
@@ -34,19 +32,19 @@ final class od extends RuntimeException {
     }
 
     final static c a(int param0, boolean param1) {
-        c var2;
-        if (!param1) {
-          field_m = 46;
-          var2 = new c();
-          fg.field_Ub.a(3, var2);
-          tc.a(87, param0);
-          return var2;
-        } else {
+        c var2 = null;
+        c var2Lifetime1;
+        if (param1) {
           var2 = new c();
           fg.field_Ub.a(3, var2);
           tc.a(87, param0);
           return var2;
         }
+        field_m = 46;
+        var2Lifetime1 = new c();
+        fg.field_Ub.a(3, var2Lifetime1);
+        tc.a(87, param0);
+        return var2Lifetime1;
     }
 
     od(Throwable param0, String param1) {

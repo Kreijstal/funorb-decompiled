@@ -13,40 +13,33 @@ final class mn {
         field_c = null;
         field_d = null;
         if (param0 != 0) {
-            field_a = -13;
+          field_a = -13;
         }
     }
 
     final static void a(boolean param0) {
-        int var2;
-        var2 = Virogrid.field_F ? 1 : 0;
-        if (-1 == (vg.field_I.field_C.field_D & 1 << vg.field_I.field_e ^ -1)) {
-          if (vg.field_I.field_C.field_D == 0) {
-            de.field_pb[10] = cf.field_a;
-            if (param0) {
-              field_c = (String[]) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            de.field_pb[10] = of.field_c;
-            if (!param0) {
-              return;
-            } else {
-              field_c = (String[]) null;
-              return;
-            }
-          }
-        } else {
+        int var2 = Virogrid.field_F ? 1 : 0;
+        if ((vg.field_I.field_C.field_D & 1 << vg.field_I.field_e) != 0) {
           de.field_pb[10] = je.field_E;
-          if (!param0) {
-            return;
-          } else {
+          if (param0) {
             field_c = (String[]) null;
             return;
           }
+          return;
         }
+        if (vg.field_I.field_C.field_D != 0) {
+          de.field_pb[10] = of.field_c;
+          if (param0) {
+            field_c = (String[]) null;
+            return;
+          }
+          return;
+        }
+        de.field_pb[10] = cf.field_a;
+        if (!param0) {
+          return;
+        }
+        field_c = (String[]) null;
     }
 
     static {

@@ -9,7 +9,7 @@ final class nb {
 
     final static java.applet.Applet a(int param0) {
         if (null != wi.field_d) {
-            return wi.field_d;
+          return wi.field_d;
         }
         int var1 = 37 / ((3 - param0) / 62);
         return (java.applet.Applet) ((Object) hh.field_e);
@@ -17,7 +17,7 @@ final class nb {
 
     public static void a(byte param0) {
         if (param0 != 76) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;

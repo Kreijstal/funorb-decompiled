@@ -9,31 +9,29 @@ final class ku extends af {
     static int[] field_e;
 
     public static void c(int param0) {
-        if (param0 <= 42) {
-          ku.c(-67);
-          field_e = null;
-          field_f = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 > 42) {
           field_e = null;
           field_f = null;
           field_g = null;
           return;
         }
+        ku.c(-67);
+        field_e = null;
+        field_f = null;
+        field_g = null;
     }
 
     final void a(byte param0, byte[] param1) {
         try {
-            this.field_d = java.nio.ByteBuffer.allocateDirect(param1.length);
-            this.field_d.position(0);
-            if (param0 != 56) {
-                byte[] var4 = (byte[]) null;
-                this.a((byte) -3, (byte[]) null);
-            }
-            this.field_d.put(param1);
+          this.field_d = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.field_d.position(0);
+          if (param0 != 56) {
+            byte[] var4 = (byte[]) null;
+            this.a((byte) -3, (byte[]) null);
+          }
+          this.field_d.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ku.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,19 +45,16 @@ final class ku extends af {
     }
 
     final byte[] a(int param0, int param1, int param2) {
-        byte[] var4;
-        byte[] var5;
         this.field_d.position(param1);
-        var5 = new byte[param2];
-        var4 = var5;
-        if (param0 != -19920) {
-          field_g = (String) null;
-          this.field_d.get(var5, 0, param2);
-          return var5;
-        } else {
+        byte[] var5 = new byte[param2];
+        byte[] var4 = var5;
+        if (param0 == -19920) {
           this.field_d.get(var5, 0, param2);
           return var5;
         }
+        field_g = (String) null;
+        this.field_d.get(var5, 0, param2);
+        return var5;
     }
 
     ku() {

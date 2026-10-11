@@ -11,129 +11,79 @@ final class tf {
     static String[] field_d;
 
     final static void a(na param0, byte param1) {
-        int dupTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int incrementValue$2 = 0;
         int dupTemp$3 = 0;
+        int dupTemp$0 = 0;
+        int var3 = 0;
+        int incrementValue$2 = 0;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         var5 = SteelSentinels.field_G;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= 3) {
-                var2_int = 0;
-                L2: while (true) {
-                  if (var2_int >= uc.field_a) {
-                    dupTemp$0 = param0.a((byte) 58);
-                    uf.field_a[dupTemp$0] = uf.field_a[dupTemp$0] + 1;
-                    if (param1 < -103) {
-                      var2_int = 0;
-                      var3 = 0;
-                      L3: while (true) {
-                        if (uc.field_a <= var3) {
-                          uc.field_a = var2_int;
-                          fieldTemp$1 = uc.field_a;
-                          uc.field_a = uc.field_a + 1;
-                          ph.field_e[fieldTemp$1] = param0;
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          L4: {
-                            L5: {
-                              if (ph.field_e[var3].field_k == param0.field_k) {
-                                var4 = ph.field_e[var3].a((byte) 58);
-                                if (cj.field_h >= uf.field_a[var4]) {
-                                  break L5;
-                                } else {
-                                  uf.field_a[var4] = uf.field_a[var4] - 1;
-                                  break L4;
-                                }
-                              } else {
-                                break L5;
-                              }
-                            }
-                            incrementValue$2 = var2_int;
-                            var2_int++;
-                            ph.field_e[incrementValue$2] = ph.field_e[var3];
-                            break L4;
-                          }
-                          var3++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  } else {
-                    L6: {
-                      if (param0.field_k == ph.field_e[var2_int].field_k) {
-                        dupTemp$3 = ph.field_e[var2_int].a((byte) 58);
-                        uf.field_a[dupTemp$3] = uf.field_a[dupTemp$3] + 1;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var2_int++;
-                    continue L2;
-                  }
-                }
-              } else {
-                uf.field_a[var2_int] = 0;
-                var2_int++;
-                continue L1;
+          for (var2_int = 0; var2_int < 3; var2_int++) {
+            uf.field_a[var2_int] = 0;
+          }
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < uc.field_a; var2_intLifetime1++) {
+            if (param0.field_k == ph.field_e[var2_intLifetime1].field_k) {
+              dupTemp$3 = ph.field_e[var2_intLifetime1].a((byte) 58);
+              uf.field_a[dupTemp$3] = uf.field_a[dupTemp$3] + 1;
+            }
+          }
+          dupTemp$0 = param0.a((byte) 58);
+          uf.field_a[dupTemp$0] = uf.field_a[dupTemp$0] + 1;
+          if (param1 >= -103) {
+            return;
+          }
+          var2_intLifetime2 = 0;
+          for (var3 = 0; uc.field_a > var3; var3++) {
+            boolean decompiledFrameRemainder0 = true;
+            if (ph.field_e[var3].field_k == param0.field_k) {
+              var4 = ph.field_e[var3].a((byte) 58);
+              if (cj.field_h < uf.field_a[var4]) {
+                uf.field_a[var4] = uf.field_a[var4] - 1;
+                decompiledFrameRemainder0 = false;
               }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
-
-            stackIn_25_1 = new StringBuilder().append("tf.C(");
-
-            if (param0 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L7;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L7;
+            if (decompiledFrameRemainder0) {
+              incrementValue$2 = var2_intLifetime2;
+              var2_intLifetime2++;
+              ph.field_e[incrementValue$2] = ph.field_e[var3];
             }
           }
-          throw ci.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
+          uc.field_a = var2_intLifetime2;
+          fieldTemp$1 = uc.field_a;
+          uc.field_a = uc.field_a + 1;
+          ph.field_e[fieldTemp$1] = param0;
           return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_25_0 = var2;
+          stackIn_25_1 = new StringBuilder().append("tf.C(");
+          if (param0 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw ci.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (null != qf.field_e) {
-            pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
-            qf.field_e.a(param1, (byte) 127);
+          pb.f(pb.field_i, pb.field_l, -pb.field_i + pb.field_b, pb.field_d - pb.field_l);
+          qf.field_e.a(param1, (byte) 127);
         }
         if (param0 != 0) {
-            field_a = (gh) null;
+          field_a = (gh) null;
         }
     }
 
@@ -141,7 +91,7 @@ final class tf {
         field_e = null;
         field_g = null;
         if (param0 != 26) {
-            return;
+          return;
         }
         field_a = null;
         field_f = null;
@@ -149,19 +99,23 @@ final class tf {
     }
 
     final static boolean a(int param0, char param1) {
-        if (param1 >= 32) {
-            if (!(param1 > 126)) {
-                return true;
-            }
+        if (param1 >= 32 &&
+          param1 <= 126) {
+          return true;
         }
         if (param0 != 2459) {
-            return false;
+          return false;
         }
-        if (param1 >= 160 && param1 <= 255) {
-            return true;
+        if (param1 >= 160 &&
+          param1 <= 255) {
+          return true;
         }
-        if (param1 != 8364 && 338 != param1 && 8212 != param1 && param1 != 339 && param1 != 376) {
-            return false;
+        if (param1 != 8364 &&
+          338 != param1 &&
+          8212 != param1 &&
+          param1 != 339 &&
+          param1 != 376) {
+          return false;
         }
         return true;
     }

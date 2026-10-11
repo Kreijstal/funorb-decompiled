@@ -10,15 +10,13 @@ final class dw implements wwa {
         field_a = null;
         field_c = null;
         if (param0 < 113) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -27,55 +25,30 @@ final class dw implements wwa {
         phb var8 = null;
         int var9 = 0;
         try {
-          L0: {
-            L1: {
-              var6_int = param1.field_g + param2;
-              var7 = param3 - -param1.field_r;
-              npa.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
-              var8 = ps.field_a[1];
-              if (!(param1 instanceof htb)) {
-                break L1;
-              } else {
-                if (!((htb) ((Object) param1)).field_u) {
-                  break L1;
-                } else {
-                  var8.c((-var8.field_m + param1.field_h >> 695876833) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> -562634783)), 256);
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (param1.e((byte) -120)) {
-                aha.a(var7 + 2, param1.field_h - 4, var6_int + 2, -4 + param1.field_f, (byte) -62);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var9 = -1 / ((-27 - param0) / 35);
-            break L0;
+          var6_int = param1.field_g + param2;
+          var7 = param3 + param1.field_r;
+          npa.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
+          var8 = ps.field_a[1];
+          if (param1 instanceof htb &&
+            ((htb) (param1)).field_u) {
+            var8.c((-var8.field_m + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> 1)), 256);
           }
+          if (param1.e((byte) -120)) {
+            aha.a(var7 + 2, param1.field_h - 4, var6_int + 2, -4 + param1.field_f, (byte) -62);
+          }
+          var9 = -1 / ((-27 - param0) / 35);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
-
-            stackIn_10_1 = new StringBuilder().append("dw.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_10_0 = var6;
+          stackIn_10_1 = new StringBuilder().append("dw.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

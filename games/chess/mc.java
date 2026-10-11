@@ -10,7 +10,7 @@ final class mc {
         field_a = null;
         field_b = null;
         if (param0 <= 21) {
-            mc.a((byte) -114);
+          mc.a((byte) -114);
         }
     }
 

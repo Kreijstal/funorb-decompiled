@@ -13,25 +13,23 @@ final class sh {
     public static void a(int param0) {
         field_a = null;
         field_e = null;
-        if (param0 != 320) {
-          field_b = (String) null;
-          field_f = null;
-          field_b = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 320) {
           field_f = null;
           field_b = null;
           field_g = null;
           return;
         }
+        field_b = (String) null;
+        field_f = null;
+        field_b = null;
+        field_g = null;
     }
 
     final static int a(int param0, int param1) {
         if (param0 != 70) {
-            return -7;
+          return -7;
         }
-        return 320 - -(70 * param1) << 1839569968;
+        return 320 + 70 * param1 << 16;
     }
 
     static {

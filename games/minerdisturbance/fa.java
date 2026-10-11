@@ -10,31 +10,31 @@ final class fa {
 
     final static void c(int param0) {
         if (null != mb.field_b) {
-            mb.field_b.a(true);
-            if (!(null == bd.field_e)) {
-                bd.field_e.r(4595);
-            }
-            tc.a(param0 ^ -9351);
-            if (param0 == -9) {
-                return;
-            }
-            field_c = (String) null;
-            return;
-        }
-        if (!(null == bd.field_e)) {
+          mb.field_b.a(true);
+          if (null != bd.field_e) {
             bd.field_e.r(4595);
+          }
+          tc.a(param0 ^ -9351);
+          if (param0 == -9) {
+            return;
+          }
+          field_c = (String) null;
+          return;
+        }
+        if (null != bd.field_e) {
+          bd.field_e.r(4595);
         }
         tc.a(param0 ^ -9351);
         if (param0 != -9) {
-            field_c = (String) null;
-            return;
+          field_c = (String) null;
+          return;
         }
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            field_c = (String) null;
-            return g.field_o;
+          field_c = (String) null;
+          return g.field_o;
         }
         return g.field_o;
     }
@@ -42,119 +42,63 @@ final class fa {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 26686) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     final static void b(int param0) {
-        int[] var1 = null;
         int var2 = 0;
+        int[] var1 = null;
         int var3 = 0;
         int[] var4 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            if (null != di.field_x) {
-              var4 = di.field_x;
-              var1 = var4;
-              if (param0 == 15257) {
-                var2 = 0;
-                L1: while (true) {
-                  if ((var2 ^ -1) <= -9) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var4[var2] = 0;
-                    var2++;
-                    continue L1;
-                  }
-                }
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (null == di.field_x) {
+            return;
           }
+          var4 = di.field_x;
+          var1 = var4;
+          if (param0 != 15257) {
+            return;
+          }
+          for (var2 = 0; var2 < 8; var2++) {
+            var4[var2] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var1_ref), "fa.B(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
-        }
     }
 
     final static boolean a(String param0, byte param1) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 >= 44) {
-              L1: {
-                if (nd.a(1, param0) == null) {
-                  stackIn_6_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 >= 44) {
+            stackIn_6_0 = (nd.a(1, param0) != null);
+            return stackIn_6_0;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2);
-
-            stackIn_9_1 = new StringBuilder().append("fa.E(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("fa.E(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_6_0 != 0;
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

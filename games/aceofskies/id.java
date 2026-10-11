@@ -16,17 +16,17 @@ final class id {
     public static void a(byte param0) {
         field_f = null;
         if (param0 != 106) {
-            field_f = (gb) null;
-            field_e = null;
-            return;
+          field_f = (gb) null;
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final boolean a(int param0) {
         if (param0 != -1915) {
-            this.field_c = false;
-            return this.field_a;
+          this.field_c = false;
+          return this.field_a;
         }
         return this.field_a;
     }
@@ -35,22 +35,22 @@ final class id {
         this.field_c = true;
         this.field_a = param1 ? true : false;
         if (param0) {
-            this.field_a = true;
+          this.field_a = true;
         }
     }
 
     final String b(int param0) {
         if (param0 != 2) {
-            field_f = (gb) null;
-            return this.field_b;
+          field_f = (gb) null;
+          return this.field_b;
         }
         return this.field_b;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            this.field_c = true;
-            return this.field_c;
+          this.field_c = true;
+          return this.field_c;
         }
         return this.field_c;
     }
@@ -59,9 +59,9 @@ final class id {
         this.field_a = false;
         this.field_c = false;
         try {
-            this.field_b = param0;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

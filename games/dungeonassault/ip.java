@@ -11,8 +11,8 @@ abstract class ip extends m implements jo {
     abstract od a(String param0, int param1);
 
     final static ab a(int param0, String param1) {
-        int var2_int = 0;
         int var3 = 0;
+        int var2_int = 0;
         int var4 = 0;
         int var5 = 0;
         ab stackIn_3_0 = null;
@@ -21,99 +21,47 @@ abstract class ip extends m implements jo {
         ab stackIn_20_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var5 = DungeonAssault.field_K;
         try {
-          L0: {
-            var2_int = param1.length();
-            if (var2_int != 0) {
-              if (var2_int <= 63) {
-                var3 = param0;
-                L1: while (true) {
-                  if (var2_int > var3) {
-                    L2: {
-                      var4 = param1.charAt(var3);
-                      if (var4 == 45) {
-                        L3: {
-                          if (var3 == 0) {
-                            break L3;
-                          } else {
-                            if (var3 != var2_int - 1) {
-                              break L2;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        stackIn_16_0 = np.field_E;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        if ((qj.field_b.indexOf(var4) ^ -1) == 0) {
-                          stackIn_20_0 = np.field_E;
-                          decompiledRegionSelector0 = 3;
-                          break L0;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    var3++;
-                    continue L1;
-                  } else {
-                    return null;
-                  }
-                }
-              } else {
-                stackIn_6_0 = ta.field_d;
-                decompiledRegionSelector0 = 1;
-                break L0;
+          var2_int = param1.length();
+          if (var2_int == 0) {
+            stackIn_3_0 = ri.field_e;
+            return stackIn_3_0;
+          }
+          if (var2_int > 63) {
+            stackIn_6_0 = ta.field_d;
+            return stackIn_6_0;
+          }
+          for (var3 = param0; var2_int > var3; var3++) {
+            var4 = param1.charAt(var3);
+            if (var4 == 45) {
+              if (var3 == 0 ||
+                var3 == var2_int - 1) {
+                stackIn_16_0 = np.field_E;
+                return stackIn_16_0;
               }
             } else {
-              stackIn_3_0 = ri.field_e;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              if (qj.field_b.indexOf(var4) == -1) {
+                stackIn_20_0 = np.field_E;
+                return stackIn_20_0;
+              }
             }
           }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
-
-            stackIn_25_1 = new StringBuilder().append("ip.M(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L4;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L4;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var2 = decompiledCaughtException;
+          stackIn_25_0 = var2;
+          stackIn_25_1 = new StringBuilder().append("ip.M(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0;
-            } else {
-              return stackIn_20_0;
-            }
+            stackIn_26_2 = "{...}";
           }
+          throw vk.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -123,73 +71,66 @@ abstract class ip extends m implements jo {
         field_j = null;
         field_k = null;
         if (param0 != 19) {
-            String var2 = (String) null;
-            ip.a(-122, (String) null);
+          String var2 = (String) null;
+          ip.a(-122, (String) null);
         }
     }
 
     public final void a(rm param0, byte param1) {
         try {
-            if (param1 >= -117) {
-                field_j = (String) null;
-            }
+          if (param1 >= -117) {
+            field_j = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ip.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ip.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final boolean a(int param0) {
-        int var2;
-        int stackIn_3_0 = 0;
-        var2 = -78 % ((param0 - 8) / 40);
-        if (null != this.field_h.field_w) {
-          if (this.field_h.field_w.length() == 0) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          stackIn_3_0 = 1;
-          return stackIn_3_0 != 0;
+        int var2 = -78 % ((param0 - 8) / 40);
+        if (null == this.field_h.field_w) {
+          return true;
         }
+        if (this.field_h.field_w.length() != 0) {
+          return false;
+        }
+        return true;
     }
 
     abstract String a(byte param0, String param1);
 
     final od b(boolean param0) {
-        if (param0) {
-          this.b(true);
-          return this.a(this.field_h.field_w, -92);
-        } else {
+        if (!param0) {
           return this.a(this.field_h.field_w, -92);
         }
+        this.b(true);
+        return this.a(this.field_h.field_w, -92);
     }
 
     final String c(int param0) {
-        if (param0 != 63) {
-          field_j = (String) null;
-          return this.a((byte) 48, this.field_h.field_w);
-        } else {
+        if (param0 == 63) {
           return this.a((byte) 48, this.field_h.field_w);
         }
+        field_j = (String) null;
+        return this.a((byte) 48, this.field_h.field_w);
     }
 
     ip(rm param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ip.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(rm param0, int param1) {
         try {
-            this.b(2899);
-            if (param1 != 10000536) {
-                field_i = (String) null;
-            }
+          this.b(2899);
+          if (param1 != 10000536) {
+            field_i = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ip.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ip.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

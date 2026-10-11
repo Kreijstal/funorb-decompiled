@@ -8,18 +8,16 @@ final class qe {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 <= 86) {
-          field_c = (ei) null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 > 86) {
           field_a = null;
           field_b = null;
           field_c = null;
           return;
         }
+        field_c = (ei) null;
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

@@ -12,108 +12,73 @@ final class jg extends al {
 
     final static fa a(int param0, int param1, boolean param2, boolean param3, int param4, boolean param5) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            tb var8 = null;
-            fa stackIn_17_0 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (param0 == 30) {
-                    break L1;
-                  } else {
-                    field_kb = (h) null;
-                    break L1;
-                  }
-                }
-                L2: {
-                  var6 = null;
-                  var7 = null;
-                  if (mc.field_b.field_r != null) {
-                    ad.field_x = new ak(mc.field_b.field_r, 5200, 0);
-                    mc.field_b.field_r = null;
-                    var6 = new ua(255, ad.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (ad.field_x == null) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (null == wb.field_b) {
-                        wb.field_b = new ak[mc.field_b.field_s.length];
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (null == wb.field_b[param4]) {
-                        wb.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
-                        mc.field_b.field_s[param4] = null;
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    var7 = new ua(param4, ad.field_x, wb.field_b[param4], 2097152);
-                    break L3;
-                  }
-                }
-                L6: {
-                  var8 = i.field_a.a(param2, param4, (ua) (var6), (ua) (var7), 115);
-                  if (param3) {
-                    var8.c((byte) 2);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackIn_17_0 = new fa(var8, param5, param1);
-                break L0;
-              }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) (var6)).toString());
+          Object var6 = null;
+          Object var7 = null;
+          tb var8 = null;
+          fa stackIn_17_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 != 30) {
+              field_kb = (h) null;
             }
+            var6 = null;
+            var7 = null;
+            if (mc.field_b.field_r != null) {
+              ad.field_x = new ak(mc.field_b.field_r, 5200, 0);
+              mc.field_b.field_r = null;
+              var6 = new ua(255, ad.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
+            }
+            if (ad.field_x != null) {
+              if (null == wb.field_b) {
+                wb.field_b = new ak[mc.field_b.field_s.length];
+              }
+              if (null == wb.field_b[param4]) {
+                wb.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
+                mc.field_b.field_s[param4] = null;
+              }
+              var7 = new ua(param4, ad.field_x, wb.field_b[param4], 2097152);
+            }
+            var8 = i.field_a.a(param2, param4, (ua) (var6), (ua) (var7), 115);
+            if (param3) {
+              var8.c((byte) 2);
+            }
+            stackIn_17_0 = new fa(var8, param5, param1);
             return stackIn_17_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void d(boolean param0) {
-        if (!param0) {
-          field_kb = (h) null;
-          field_kb = null;
-          field_jb = null;
-          field_hb = null;
-          field_ib = null;
-          return;
-        } else {
+        if (param0) {
           field_kb = null;
           field_jb = null;
           field_hb = null;
           field_ib = null;
           return;
         }
+        field_kb = (h) null;
+        field_kb = null;
+        field_jb = null;
+        field_hb = null;
+        field_ib = null;
     }
 
     final void a(gl param0, int param1) {
         try {
-            super.a(param0, -31);
-            if (param1 > -21) {
-                jg.a(46, 78, false, false, -28, false);
-            }
+          super.a(param0, -31);
+          if (param1 > -21) {
+            jg.a(46, 78, false, false, -28, false);
+          }
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "jg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "jg.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

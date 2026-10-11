@@ -8,22 +8,12 @@ final class ef {
     static char[] field_c;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param4 < 88) {
-          return;
-        } else {
-          L0: {
-            if (j.field_q > param2) {
-              break L0;
-            } else {
-              if (param2 > qk.field_p) {
-                break L0;
-              } else {
-                param3 = ln.a(qg.field_z, kn.field_e, param3, 111);
-                param0 = ln.a(qg.field_z, kn.field_e, param0, 96);
-                rh.a((byte) -111, param0, param2, param3, param1);
-                break L0;
-              }
-            }
+        if (param4 >= 88) {
+          if (j.field_q <= param2 &&
+            param2 <= qk.field_p) {
+            param3 = ln.a(qg.field_z, kn.field_e, param3, 111);
+            param0 = ln.a(qg.field_z, kn.field_e, param0, 96);
+            rh.a((byte) -111, param0, param2, param3, param1);
           }
           return;
         }
@@ -33,7 +23,7 @@ final class ef {
         field_c = null;
         field_b = null;
         if (param0 != 3) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;

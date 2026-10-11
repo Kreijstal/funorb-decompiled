@@ -18,84 +18,65 @@ final class wb {
         var4 = this.field_c[(int)((long)(-1 + this.field_b) & param0)];
         var5 = -40 % ((74 - param1) / 47);
         this.field_e = var4.field_h;
-        L0: while (true) {
-          if (this.field_e != var4) {
-            if (this.field_e.field_j == param0) {
-              var6 = this.field_e;
-              this.field_e = this.field_e.field_h;
-              return var6;
-            } else {
-              this.field_e = this.field_e.field_h;
-              continue L0;
-            }
-          } else {
+        while (true) {
+          if (this.field_e == var4) {
             this.field_e = null;
             return null;
           }
+          if (this.field_e.field_j != param0) {
+            this.field_e = this.field_e.field_h;
+            continue;
+          }
+          break;
         }
+        var6 = this.field_e;
+        this.field_e = this.field_e.field_h;
+        return var6;
     }
 
     public static void b(byte param0) {
         if (param0 != 83) {
-            wb.b((byte) -101);
-            field_d = null;
-            return;
+          wb.b((byte) -101);
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     final static void a(byte param0) {
         try {
-            Throwable decompiledCaughtException = null;
-            java.lang.reflect.Method var1 = null;
-            Exception var1_ref = null;
-            Runtime var2 = null;
-            Throwable var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
-            try {
-              L0: {
-                L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1 != null) {
-                    try {
-                      L2: {
-                        var2 = Runtime.getRuntime();
-                        var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                        qa.field_p = 1 + (int)(var3.longValue() / 1048576L);
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var2_ref = decompiledCaughtException;
-                        break L3;
-                      }
-                    }
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (param0 == -124) {
-                  break L0;
-                } else {
-                  field_d = (String) null;
-                  return;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var1_ref = (Exception) (Object) decompiledCaughtException;
-                break L4;
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1 = null;
+          Exception var1_ref = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          try {
+            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (var1 != null) {
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                qa.field_p = 1 + (int)(var3.longValue() / 1048576L);
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
               }
             }
+            if (param0 != -124) {
+              field_d = (String) null;
+              return;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref = (Exception) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -105,27 +86,25 @@ final class wb {
         ri var3;
         int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
-        if (null != this.field_e) {
-          var2 = this.field_c[(int)((long)(-1 + this.field_b) & this.field_a)];
-          L0: while (true) {
-            if (this.field_e != var2) {
-              if ((this.field_e.field_j ^ -1L) != (this.field_a ^ -1L)) {
-                this.field_e = this.field_e.field_h;
-                continue L0;
-              } else {
-                var3 = this.field_e;
-                this.field_e = this.field_e.field_h;
-                return var3;
-              }
-            } else {
-              var3_int = -43 % ((param0 - -19) / 55);
-              this.field_e = null;
-              return null;
-            }
-          }
-        } else {
+        if (null == this.field_e) {
           return null;
         }
+        var2 = this.field_c[(int)((long)(-1 + this.field_b) & this.field_a)];
+        while (true) {
+          if (this.field_e == var2) {
+            var3_int = -43 % ((param0 + 19) / 55);
+            this.field_e = null;
+            return null;
+          }
+          if (~this.field_e.field_j != ~this.field_a) {
+            this.field_e = this.field_e.field_h;
+            continue;
+          }
+          break;
+        }
+        var3 = this.field_e;
+        this.field_e = this.field_e.field_h;
+        return var3;
     }
 
     wb(int param0) {
@@ -135,31 +114,31 @@ final class wb {
         this.field_c = new ri[param0];
         this.field_b = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new ri();
-            var3 = dupTemp$0;
-            this.field_c[var2] = dupTemp$0;
-            var3.field_h = var3;
-            var3.field_g = var3;
+          dupTemp$0 = new ri();
+          var3 = dupTemp$0;
+          this.field_c[var2] = dupTemp$0;
+          var3.field_h = var3;
+          var3.field_g = var3;
         }
     }
 
     final void a(int param0, long param1, ri param2) {
         ri var5 = null;
         try {
-            if (null != param2.field_g) {
-                param2.b((byte) -59);
-            }
-            var5 = this.field_c[(int)((long)(this.field_b + -1) & param1)];
-            param2.field_g = var5.field_g;
-            param2.field_h = var5;
-            param2.field_g.field_h = param2;
-            param2.field_j = param1;
-            if (param0 != 19200) {
-                this.a(117);
-            }
-            param2.field_h.field_g = param2;
+          if (null != param2.field_g) {
+            param2.b((byte) -59);
+          }
+          var5 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
+          param2.field_g = var5.field_g;
+          param2.field_h = var5;
+          param2.field_g.field_h = param2;
+          param2.field_j = param1;
+          if (param0 != 19200) {
+            this.a(117);
+          }
+          param2.field_h.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "wb.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

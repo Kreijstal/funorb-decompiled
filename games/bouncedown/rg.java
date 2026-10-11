@@ -13,9 +13,9 @@ final class rg {
     public static void a(byte param0) {
         field_b = null;
         if (param0 > -31) {
-            rg.b((byte) 118);
-            field_e = null;
-            return;
+          rg.b((byte) 118);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
@@ -23,18 +23,18 @@ final class rg {
     final static void b(byte param0) {
         ta.a((byte) -118, vi.b(0));
         if (param0 >= -60) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
     final static void a(int param0, String param1, String param2) {
         try {
-            d.a(param2, false, param1, 0);
-            if (param0 != -8742) {
-                rg.a((byte) -58);
-            }
+          d.a(param2, false, param1, 0);
+          if (param0 != -8742) {
+            rg.a((byte) -58);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "rg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "rg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

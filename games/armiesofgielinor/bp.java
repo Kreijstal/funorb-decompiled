@@ -23,30 +23,30 @@ abstract class bp {
 
     final boolean a(byte param0) {
         if (param0 != 51) {
-            this.d(100);
+          this.d(100);
         }
-        return -21 >= (this.b(param0 + -179) ^ -1) ? true : false;
+        return this.b(param0 - 179) >= 20 ? true : false;
     }
 
     final jf a(int param0, boolean param1, int param2, byte param3, boolean param4) {
-        long var6 = ((long)param2 << 1222594912) - -(long)param0;
+        long var6 = ((long)param2 << 32) + (long)param0;
         jf var8 = new jf();
         var8.field_q = var6;
         var8.field_B = param3;
         if (param1) {
-            field_c = 46;
+          field_c = 46;
         }
         var8.field_z = param4 ? true : false;
         if (!param4) {
-            if (!(-21 < (this.b(-120) ^ -1))) {
-                throw new RuntimeException();
-            }
-            this.field_f.a(var8, false);
+          if (!(this.b(-120) < 20)) {
+            throw new RuntimeException();
+          }
+          this.field_f.a(var8, false);
         } else {
-            if (this.a(116) >= 20) {
-                throw new RuntimeException();
-            }
-            this.field_b.a(var8, false);
+          if (this.a(116) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_b.a(var8, false);
         }
         return var8;
     }
@@ -55,14 +55,14 @@ abstract class bp {
 
     final boolean d(int param0) {
         if (param0 <= 14) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
         return this.a(88) >= 20 ? true : false;
     }
 
     public static void c(byte param0) {
         if (param0 != 35) {
-            return;
+          return;
         }
         field_d = null;
         field_m = null;
@@ -72,21 +72,21 @@ abstract class bp {
 
     final int b(int param0) {
         if (param0 >= -105) {
-            return -114;
+          return -114;
         }
-        return this.field_f.a(30578) - -this.field_g.a(30578);
+        return this.field_f.a(30578) + this.field_g.a(30578);
     }
 
     final int a(int param0) {
         if (param0 < 84) {
-            return 64;
+          return 64;
         }
-        return this.field_b.a(30578) - -this.field_n.a(30578);
+        return this.field_b.a(30578) + this.field_n.a(30578);
     }
 
     final static void a(int param0, int param1, int param2) {
-        int[] var3 = null;
         int var4 = 0;
+        int[] var3 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -98,45 +98,27 @@ abstract class bp {
         RuntimeException var3_ref = null;
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 <= -96) {
-                break L1;
-              } else {
-                bp.a(-87, 28, 102);
-                break L1;
-              }
-            }
-            var11 = dr.field_v[param0];
-            var10 = var11;
-            var9 = var10;
-            var3 = var9;
-            var4 = 0;
-            L2: while (true) {
-              if (var4 >= var11.length) {
-                break L0;
-              } else {
-                L3: {
-                  var11[var4] = param1;
-                  var5 = gq.a(var11[var4]);
-                  var6 = (524092 & var5) >> 1249207336;
-                  var6 = var6 + 5 * var4 / var11.length;
-                  var7 = 255 & var5;
-                  if ((var7 ^ -1) >= -7) {
-                    break L3;
-                  } else {
-                    var7 = 6;
-                    break L3;
-                  }
-                }
-                var5 = var6 << -594979000 | -524033 & var5;
-                var5 = -256 & var5 | var7;
-                var9[var4] = gq.b(var5);
-                var4++;
-                continue L2;
-              }
-            }
+          if (param2 > -96) {
+            bp.a(-87, 28, 102);
           }
+          var11 = dr.field_v[param0];
+          var10 = var11;
+          var9 = var10;
+          var3 = var9;
+          for (var4 = 0; var4 < var11.length; var4++) {
+            var11[var4] = param1;
+            var5 = gq.a(var11[var4]);
+            var6 = (524092 & var5) >> 8;
+            var6 = var6 + 5 * var4 / var11.length;
+            var7 = 255 & var5;
+            if (var7 > 6) {
+              var7 = 6;
+            }
+            var5 = var6 << 8 | -524033 & var5;
+            var5 = -256 & var5 | var7;
+            var9[var4] = gq.b(var5);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

@@ -9,7 +9,7 @@ final class dh {
 
     final static boolean a(int param0) {
         if (param0 != -12165) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -17,7 +17,7 @@ final class dh {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -74) {
-            return;
+          return;
         }
         field_b = null;
         field_c = null;

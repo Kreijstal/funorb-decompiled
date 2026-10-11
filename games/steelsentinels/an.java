@@ -14,36 +14,27 @@ final class an implements Runnable {
     volatile boolean field_f;
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
-        int var4;
-        int var5;
-        var5 = SteelSentinels.field_G;
-        var4 = 83 % ((param3 - 35) / 50);
-        if (param0 != -1) {
-          if ((param0 ^ -1) != 1) {
-            L0: {
-              if (param1) {
-                qf.a(false, (byte) -117);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            i.field_e[param0].r(0);
-            return;
-          } else {
-            pb.b();
-            return;
-          }
-        } else {
+        int var5 = SteelSentinels.field_G;
+        int var4 = 83 % ((param3 - 35) / 50);
+        if (param0 == -1) {
           qf.a(param2, (byte) -122);
           return;
         }
+        if (param0 == -2) {
+          pb.b();
+          return;
+        }
+        if (param1) {
+          qf.a(false, (byte) -117);
+        }
+        i.field_e[param0].r(0);
     }
 
     public final void run() {
         int var1_int = 0;
         tb var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -51,45 +42,27 @@ final class an implements Runnable {
         var4 = SteelSentinels.field_G;
         this.field_f = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_c) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (2 <= var1_int) {
-                        a.a((byte) 118, 10L);
-                        le.a((Object) null, 50, this.field_j);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_e[var1_int];
-                          if (var2 != null) {
-                            var2.b();
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_c) {
+              for (var1_int = 0; 2 > var1_int; var1_int++) {
+                var2 = this.field_e[var1_int];
+                if (var2 != null) {
+                  var2.b();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var5 = (String) null;
-              sj.a((String) null, -72, (Throwable) ((Object) var1));
-              this.field_f = false;
-              return;
+              a.a((byte) 118, 10L);
+              le.a((Object) null, 50, this.field_j);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var5 = (String) null;
+            sj.a((String) null, -72, (Throwable) ((Object) var1));
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -105,9 +78,9 @@ final class an implements Runnable {
         field_i = null;
         field_g = null;
         if (param0 != -63) {
-            field_h = -29;
-            field_a = null;
-            return;
+          field_h = -29;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

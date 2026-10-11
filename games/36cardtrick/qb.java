@@ -12,31 +12,28 @@ class qb {
     final static void a(byte param0) {
         wf.a((byte) -96, mk.g(param0 ^ -102));
         if (param0 != 18) {
-            field_f = 121L;
+          field_f = 121L;
         }
     }
 
     final void c(int param0) {
-        if (null != this.field_a) {
-          this.field_a.field_d = this.field_d;
-          this.field_d.field_a = this.field_a;
-          if (param0 <= 81) {
-            return;
-          } else {
-            this.field_d = null;
-            this.field_a = null;
-            return;
-          }
-        } else {
+        if (null == this.field_a) {
+          return;
+        }
+        this.field_a.field_d = this.field_d;
+        this.field_d.field_a = this.field_a;
+        if (param0 > 81) {
+          this.field_d = null;
+          this.field_a = null;
           return;
         }
     }
 
     final boolean b(int param0) {
-        if (!(this.field_a != null)) {
-            return false;
+        if (this.field_a == null) {
+          return false;
         }
-        int var2 = 22 / ((param0 - -36) / 56);
+        int var2 = 22 / ((param0 + 36) / 56);
         return true;
     }
 

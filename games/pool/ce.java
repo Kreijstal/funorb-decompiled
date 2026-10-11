@@ -7,47 +7,36 @@ final class ce implements com.ms.directX.IEnumModesCallback {
     private static int[] field_c;
 
     final int[] a(boolean param0) {
-        int[] var2;
-        int[] var3;
+        int[] var3 = null;
+        int[] var2 = null;
+        int[] var3Lifetime1;
+        int[] var2Lifetime1;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        if (!param0) {
-          this.a(false);
-          var3 = field_c;
-          var2 = var3;
-          field_b = 0;
-          field_c = null;
-          return var3;
-        } else {
+        if (param0) {
           var3 = field_c;
           var2 = var3;
           field_b = 0;
           field_c = null;
           return var3;
         }
+        this.a(false);
+        var3Lifetime1 = field_c;
+        var2Lifetime1 = var3Lifetime1;
+        field_b = 0;
+        field_c = null;
+        return var3Lifetime1;
     }
 
     final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
-        com.ms.com.IUnknown var9;
+        com.ms.awt.WComponentPeer var7 = null;
+        int var8 = 0;
+        com.ms.awt.WComponentPeer var7Lifetime1;
+        int var8Lifetime1;
         param0.setVisible(true);
-        if (param2 <= 59) {
-          var9 = (com.ms.com.IUnknown) null;
-          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
-          var7 = (com.ms.awt.WComponentPeer) null;
-          var8 = var7.getHwnd();
-          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
-          this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
-          this.field_a.setDisplayMode(param3, param1, param4, param5, 0);
-          param0.setBounds(0, 0, param3, param1);
-          param0.toFront();
-          param0.requestFocus();
-          return;
-        } else {
+        if (param2 > 59) {
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
           com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
@@ -59,13 +48,24 @@ final class ce implements com.ms.directX.IEnumModesCallback {
           param0.requestFocus();
           return;
         }
+        com.ms.com.IUnknown var9 = (com.ms.com.IUnknown) null;
+        this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+        var7Lifetime1 = (com.ms.awt.WComponentPeer) null;
+        var8Lifetime1 = var7Lifetime1.getHwnd();
+        com.ms.win32.User32.SetWindowLong(var8Lifetime1, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8Lifetime1, -20, 8);
+        this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
+        this.field_a.setDisplayMode(param3, param1, param4, param5, 0);
+        param0.setBounds(0, 0, param3, param1);
+        param0.toFront();
+        param0.requestFocus();
     }
 
     final void a(int param0, java.awt.Frame param1) {
         this.field_a.restoreDisplayMode();
         this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 != 0) {
-            this.a(true);
+          this.a(true);
         }
     }
 
@@ -80,20 +80,20 @@ final class ce implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (field_c == null) {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         } else {
-            fieldTemp$0 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$3] = param0.refreshRate;
         }
     }
 }

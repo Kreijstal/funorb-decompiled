@@ -10,20 +10,20 @@ final class bc {
         field_a = null;
         field_b = null;
         if (param0 != -22113) {
-            bc.a(70);
+          bc.a(70);
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6 = 48 / ((param0 - -8) / 58);
+        int var6 = 48 / ((param0 + 8) / 58);
         abb.a(3, param4, param2, param3, this.field_c, param1);
     }
 
     bc(phb[] param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

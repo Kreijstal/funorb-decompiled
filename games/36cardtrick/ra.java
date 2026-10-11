@@ -10,14 +10,14 @@ final class ra {
 
     final static void a(int param0, vg param1, byte param2, int param3) {
         try {
-            dh.field_k = param0;
-            if (param2 != -106) {
-                field_b = (cc) null;
-            }
-            ij.field_f = param1;
-            eg.field_d = param3;
+          dh.field_k = param0;
+          if (param2 != -106) {
+            field_b = (cc) null;
+          }
+          ij.field_f = param1;
+          eg.field_d = param3;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -25,9 +25,9 @@ final class ra {
         field_b = null;
         field_d = null;
         if (param0 != 250) {
-            field_e = 70;
-            field_a = null;
-            return;
+          field_e = 70;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -11,12 +11,11 @@ final class eb {
     static int field_e;
 
     final static bj a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
-        if (!param4) {
-          field_c = (String) null;
-          return eg.a(-104, param1, false, param2, param0, param3);
-        } else {
+        if (param4) {
           return eg.a(-104, param1, false, param2, param0, param3);
         }
+        field_c = (String) null;
+        return eg.a(-104, param1, false, param2, param0, param3);
     }
 
     public static void b(byte param0) {
@@ -24,51 +23,28 @@ final class eb {
         field_d = null;
         field_a = null;
         field_g = null;
-        if (param0 < 125) {
-          field_d = (ek) null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 125) {
           field_c = null;
           return;
         }
+        field_d = (ek) null;
+        field_c = null;
     }
 
     final static void a(byte param0) {
-        if ((fh.field_b ^ -1) == -11) {
+        if (fh.field_b == 10) {
           dg.a((byte) 117);
           fh.field_b = 11;
-          if (param0 <= -2) {
-            ul.field_a = true;
-            return;
-          } else {
-            field_d = (ek) null;
-            ul.field_a = true;
-            return;
-          }
         } else {
           if (!wc.b(false)) {
             dg.a((byte) 117);
             fh.field_b = 11;
-            if (param0 > -2) {
-              field_d = (ek) null;
-              ul.field_a = true;
-              return;
-            } else {
-              ul.field_a = true;
-              return;
-            }
-          } else {
-            if (param0 <= -2) {
-              ul.field_a = true;
-              return;
-            } else {
-              field_d = (ek) null;
-              ul.field_a = true;
-              return;
-            }
           }
         }
+        if (param0 > -2) {
+          field_d = (ek) null;
+        }
+        ul.field_a = true;
     }
 
     final static boolean a(bj param0, byte param1) {
@@ -76,46 +52,26 @@ final class eb {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 122) {
-                break L1;
-              } else {
-                eb.b((byte) 53);
-                break L1;
-              }
-            }
-            stackIn_3_0 = param0.b(-1);
-            break L0;
+          if (param1 <= 122) {
+            eb.b((byte) 53);
           }
+          stackIn_3_0 = param0.b(-1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("eb.D(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("eb.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

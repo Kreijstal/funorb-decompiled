@@ -16,7 +16,7 @@ final class jb {
         field_f = null;
         field_e = null;
         if (param0 <= 20) {
-            return;
+          return;
         }
         field_h = null;
     }
@@ -24,9 +24,9 @@ final class jb {
     final static void a(boolean param0, byte param1) {
         ta.a(param0, 121);
         if (param1 != -27) {
-            jb.a(11);
-            im.a(true, param0);
-            return;
+          jb.a(11);
+          im.a(true, param0);
+          return;
         }
         im.a(true, param0);
     }
@@ -34,20 +34,16 @@ final class jb {
     final static void a(byte param0, long param1) {
         if (0L >= param1) {
           return;
-        } else {
-          if (param0 <= -89) {
-            if ((param1 % 10L ^ -1L) != -1L) {
-              he.a(true, param1);
-              return;
-            } else {
-              he.a(true, -1L + param1);
-              he.a(true, 1L);
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (param0 > -89) {
+          return;
+        }
+        if (param1 % 10L == 0L) {
+          he.a(true, -1L + param1);
+          he.a(true, 1L);
+          return;
+        }
+        he.a(true, param1);
     }
 
     static {

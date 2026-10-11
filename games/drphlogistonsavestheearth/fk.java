@@ -18,16 +18,7 @@ final class fk extends gi {
 
     public static void a(byte param0) {
         field_m = null;
-        if (param0 != 111) {
-          field_r = (String) null;
-          field_p = null;
-          field_r = null;
-          field_q = null;
-          field_t = null;
-          field_l = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 111) {
           field_p = null;
           field_r = null;
           field_q = null;
@@ -36,6 +27,13 @@ final class fk extends gi {
           field_h = null;
           return;
         }
+        field_r = (String) null;
+        field_p = null;
+        field_r = null;
+        field_q = null;
+        field_t = null;
+        field_l = null;
+        field_h = null;
     }
 
     final static nh a(int param0, vj param1, int param2, int param3) {
@@ -44,55 +42,33 @@ final class fk extends gi {
         nh stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param3 == 16711680) {
-                break L1;
-              } else {
-                var5 = (vj) null;
-                fk.a(-100, (vj) null, -21, -59);
-                break L1;
-              }
-            }
-            if (fl.a(param2, param1, param0, (byte) -98)) {
-              stackIn_6_0 = ta.a(param3 ^ 16732209);
-              break L0;
-            } else {
-              return null;
-            }
+          if (param3 != 16711680) {
+            var5 = (vj) null;
+            fk.a(-100, (vj) null, -21, -59);
           }
+          if (!fl.a(param2, param1, param0, (byte) -98)) {
+            return null;
+          }
+          stackIn_6_0 = ta.a(param3 ^ 16732209);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("fk.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("fk.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ',' + param3 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -105,111 +81,50 @@ final class fk extends gi {
         int var13 = 0;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param5 >= wj.field_g) {
-                break L1;
-              } else {
-                param1 = param1 - (wj.field_g + -param5);
-                param5 = wj.field_g;
-                break L1;
-              }
-            }
-            L2: {
-              if (param2 >= wj.field_e) {
-                break L2;
-              } else {
-                param0 = param0 - (wj.field_e - param2);
-                param2 = wj.field_e;
-                break L2;
-              }
-            }
-            L3: {
-              if (wj.field_b >= param5 - -param1) {
-                break L3;
-              } else {
-                param1 = -param5 + wj.field_b;
-                break L3;
-              }
-            }
-            L4: {
-              if (param0 + param2 <= wj.field_j) {
-                break L4;
-              } else {
-                param0 = -param2 + wj.field_j;
-                break L4;
-              }
-            }
-            L5: {
-              if (param1 <= 0) {
-                break L5;
-              } else {
-                if (-1 > (param0 ^ -1)) {
-                  var6_int = param5 + wj.field_k * param2;
-                  var8 = 9 % ((22 - param4) / 43);
-                  var7 = wj.field_k - param1;
-                  param2 = -param0;
-                  L6: while (true) {
-                    if (-1 >= (param2 ^ -1)) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param5 = -param1;
-                      L7: while (true) {
-                        if (-1 >= (param5 ^ -1)) {
-                          var6_int = var6_int + var7;
-                          param2++;
-                          continue L6;
-                        } else {
-                          L8: {
-                            var9 = wj.field_l[var6_int];
-                            if (param3 >= (255 & var9 >> 946325544)) {
-                              break L8;
-                            } else {
-                              if ((255 & var9 >> -1670962096) > (255 & var9 >> -547912536)) {
-                                break L8;
-                              } else {
-                                L9: {
-                                  var10 = (510 & var9 >> -2084989105) + -60;
-                                  if (-256 > (var10 ^ -1)) {
-                                    var10 = 255;
-                                    break L9;
-                                  } else {
-                                    break L9;
-                                  }
-                                }
-                                var11 = 65280 & var9;
-                                var11 = 65280 & (var11 >> -1217331039) - (var11 >> -2050321339);
-                                var12 = (255 & var9) >> 894859075;
-                                wj.field_l[var6_int] = li.a(li.a(var10 << 1462927920, var11), var12);
-                                break L8;
-                              }
-                            }
-                          }
-                          var6_int++;
-                          param5++;
-                          continue L7;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  break L5;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
+          if (param5 < wj.field_g) {
+            param1 = param1 - (wj.field_g - param5);
+            param5 = wj.field_g;
           }
+          if (param2 < wj.field_e) {
+            param0 = param0 - (wj.field_e - param2);
+            param2 = wj.field_e;
+          }
+          if (wj.field_b < param5 + param1) {
+            param1 = -param5 + wj.field_b;
+          }
+          if (param0 + param2 > wj.field_j) {
+            param0 = -param2 + wj.field_j;
+          }
+          if (param1 > 0 &&
+            param0 > 0) {
+            var6_int = param5 + wj.field_k * param2;
+            var8 = 9 % ((22 - param4) / 43);
+            var7 = wj.field_k - param1;
+            for (param2 = -param0; param2 < 0; param2++) {
+              for (param5 = -param1; param5 < 0; param5++) {
+                var9 = wj.field_l[var6_int];
+                if (param3 < (255 & var9 >> 8) &&
+                  (255 & var9 >> 16) <= (255 & var9 >> 8)) {
+                  var10 = (510 & var9 >> 15) - 60;
+                  if (var10 > 255) {
+                    var10 = 255;
+                  }
+                  var11 = 65280 & var9;
+                  var11 = 65280 & (var11 >> 1) - (var11 >> 5);
+                  var12 = (255 & var9) >> 3;
+                  wj.field_l[var6_int] = li.a(li.a(var10 << 16, var11), var12);
+                }
+                var6_int++;
+              }
+              var6_int = var6_int + var7;
+            }
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           throw ie.a((Throwable) ((Object) var6), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

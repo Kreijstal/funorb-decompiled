@@ -6,28 +6,28 @@ final class av implements dja {
 
     final static String a(char param0, int param1) {
         if (param1 != 6) {
-            field_a = (ml[]) null;
-            return String.valueOf(param0);
+          field_a = (ml[]) null;
+          return String.valueOf(param0);
         }
         return String.valueOf(param0);
     }
 
     public final tv a(byte param0) {
-        int var2 = 13 / ((param0 - -64) / 50);
+        int var2 = 13 / ((param0 + 64) / 50);
         return (tv) ((Object) new rna());
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = (ml[]) null;
-            return (tv[]) ((Object) new rna[param1]);
+          field_a = (ml[]) null;
+          return (tv[]) ((Object) new rna[param1]);
         }
         return (tv[]) ((Object) new rna[param1]);
     }

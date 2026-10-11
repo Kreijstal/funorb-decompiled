@@ -16,166 +16,82 @@ final class ea {
         field_d = null;
         field_h = null;
         if (param0 > -78) {
-            return;
+          return;
         }
         field_g = null;
         field_a = null;
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_23_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_67_0 = 0;
-        if (param1 <= -113) {
-          if (param0 < 48) {
-            if (param0 < 65) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              if (param0 <= 90) {
-                stackIn_67_0 = 1;
-                return stackIn_67_0 != 0;
-              } else {
-                L0: {
-                  L1: {
-                    if (param0 < 97) {
-                      break L1;
-                    } else {
-                      if (param0 > 122) {
-                        break L1;
-                      } else {
-                        stackIn_64_0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  stackIn_64_0 = 0;
-                  break L0;
-                }
-                return stackIn_64_0 != 0;
-              }
-            }
-          } else {
-            if (57 < param0) {
-              if (param0 < 65) {
-                if (param0 >= 97) {
-                  if (param0 > 122) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param0 > 90) {
-                  L2: {
-                    L3: {
-                      if (param0 < 97) {
-                        break L3;
-                      } else {
-                        if (param0 > 122) {
-                          break L3;
-                        } else {
-                          stackIn_50_0 = 1;
-                          break L2;
-                        }
-                      }
-                    }
-                    stackIn_50_0 = 0;
-                    break L2;
-                  }
-                  return stackIn_50_0 != 0;
-                } else {
-                  stackIn_45_0 = 1;
-                  return stackIn_45_0 != 0;
-                }
-              }
-            } else {
-              stackIn_40_0 = 1;
-              return stackIn_40_0 != 0;
-            }
-          }
-        } else {
+        boolean stackIn_28_0 = false;
+        boolean stackIn_50_0 = false;
+        boolean stackIn_64_0 = false;
+        if (param1 > -113) {
           field_c = -89;
-          if (param0 >= 48) {
-            if (57 < param0) {
-              if (param0 < 65) {
-                if (param0 >= 97) {
-                  if (param0 <= 122) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param0 > 90) {
-                  L4: {
-                    L5: {
-                      if (param0 < 97) {
-                        break L5;
-                      } else {
-                        if (param0 > 122) {
-                          break L5;
-                        } else {
-                          stackIn_28_0 = 1;
-                          break L4;
-                        }
-                      }
-                    }
-                    stackIn_28_0 = 0;
-                    break L4;
-                  }
-                  return stackIn_28_0 != 0;
-                } else {
-                  stackIn_23_0 = 1;
-                  return stackIn_23_0 != 0;
-                }
-              }
-            } else {
+          if (param0 < 48) {
+            if (param0 >= 65 &&
+              param0 <= 90) {
               return true;
             }
-          } else {
-            if (param0 < 65) {
-              if (param0 >= 97) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              if (param0 > 90) {
-                if (param0 >= 97) {
-                  if (param0 > 122) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return true;
-              }
+            if (param0 < 97) {
+              return false;
             }
+            if (param0 > 122) {
+              return false;
+            }
+            return true;
           }
+          if (57 >= param0) {
+            return true;
+          }
+          if (param0 < 65) {
+            if (param0 < 97) {
+              return false;
+            }
+            if (param0 <= 122) {
+              return true;
+            }
+            return false;
+          }
+          if (param0 <= 90) {
+            return true;
+          }
+          stackIn_28_0 = (param0 >= 97) && (param0 <= 122);
+          return stackIn_28_0;
         }
+        if (param0 < 48) {
+          if (param0 < 65) {
+            if (param0 < 97) {
+              return false;
+            }
+            if (param0 > 122) {
+              return false;
+            }
+            return true;
+          }
+          if (param0 <= 90) {
+            return true;
+          }
+          stackIn_64_0 = (param0 >= 97) && (param0 <= 122);
+          return stackIn_64_0;
+        }
+        if (57 >= param0) {
+          return true;
+        }
+        if (param0 < 65) {
+          if (param0 < 97) {
+            return false;
+          }
+          if (param0 > 122) {
+            return false;
+          }
+          return true;
+        }
+        if (param0 <= 90) {
+          return true;
+        }
+        stackIn_50_0 = (param0 >= 97) && (param0 <= 122);
+        return stackIn_50_0;
     }
 
     static {

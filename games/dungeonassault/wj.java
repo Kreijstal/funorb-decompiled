@@ -14,47 +14,47 @@ final class wj extends ec {
         this.field_o = this.field_o + 1;
         this.field_m[fieldTemp$0] = (byte)(param1 + this.field_v.a(26979));
         if (param0 > -76) {
-            this.field_t = 30;
+          this.field_t = 30;
         }
     }
 
     final void a(int[] param0, byte param1) {
         try {
-            int var3_int = -58 % ((-42 - param1) / 36);
-            this.field_v = new ff(param0);
+          int var3_int = -58 % ((-42 - param1) / 36);
+          this.field_v = new ff(param0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "wj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "wj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int m(int param0) {
         if (param0 != 255) {
-            return -17;
+          return -17;
         }
         int fieldTemp$0 = this.field_o;
         this.field_o = this.field_o + 1;
-        return 255 & this.field_m[fieldTemp$0] + -this.field_v.a(26979);
+        return 255 & this.field_m[fieldTemp$0] - this.field_v.a(26979);
     }
 
     final int j(int param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = DungeonAssault.field_K;
-        int var3 = this.field_t >> -109196349;
+        int var3 = this.field_t >> 3;
         int var4 = -(7 & this.field_t) + 8;
         int var5 = 0;
         this.field_t = this.field_t + param1;
         int var6 = -50 % ((param0 - 15) / 58);
         while (param1 > var4) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((this.field_m[incrementValue$0] & ba.field_b[var4]) << -var4 + param1);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.field_m[incrementValue$0] & ba.field_b[var4]) << -var4 + param1);
+          param1 = param1 - var4;
+          var4 = 8;
         }
         if (var4 == param1) {
-            var5 = var5 + (this.field_m[var3] & ba.field_b[var4]);
+          var5 = var5 + (this.field_m[var3] & ba.field_b[var4]);
         } else {
-            var5 = var5 + (this.field_m[var3] >> -param1 + var4 & ba.field_b[param1]);
+          var5 = var5 + (this.field_m[var3] >> -param1 + var4 & ba.field_b[param1]);
         }
         return var5;
     }
@@ -62,7 +62,7 @@ final class wj extends ec {
     final void f(byte param0) {
         this.field_o = (this.field_t + 7) / 8;
         if (param0 <= 19) {
-            this.f((byte) -32);
+          this.f((byte) -32);
         }
     }
 
@@ -75,61 +75,36 @@ final class wj extends ec {
     }
 
     final void a(int param0, byte param1, int param2, byte[] param3) {
-        int fieldTemp$1 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = DungeonAssault.field_K;
         try {
-          L0: {
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= param2) {
-                L2: {
-                  if (param1 == 95) {
-                    break L2;
-                  } else {
-                    this.e(true);
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                fieldTemp$1 = this.field_o;
-                this.field_o = this.field_o + 1;
-                param3[var5_int - -param0] = (byte)(this.field_m[fieldTemp$1] + -this.field_v.a(26979));
-                var5_int++;
-                continue L1;
-              }
-            }
+          for (var5_int = 0; var5_int < param2; var5_int++) {
+            fieldTemp$0 = this.field_o;
+            this.field_o = this.field_o + 1;
+            param3[var5_int + param0] = (byte)(this.field_m[fieldTemp$0] - this.field_v.a(26979));
           }
+          if (param1 != 95) {
+            this.e(true);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("wj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("wj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -138,13 +113,13 @@ final class wj extends ec {
         field_w = null;
         field_x = null;
         if (param0 != 7) {
-            field_s = -114;
+          field_s = -114;
         }
     }
 
     final void e(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         this.field_t = 8 * this.field_o;
     }

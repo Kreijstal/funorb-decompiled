@@ -16,8 +16,6 @@ final class oa implements ca {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -29,94 +27,50 @@ final class oa implements ca {
         int var11 = 0;
         var11 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param1.field_u) {
-                  break L2;
-                } else {
-                  if (!param1.a((byte) 127)) {
-                    stackIn_6_0 = 2188450;
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_6_0 = 3249872;
-              break L1;
-            }
-            L3: {
-              var6_int = stackIn_6_0;
-              if (param0 == 34) {
-                break L3;
-              } else {
-                oa.a((byte) -52);
-                break L3;
-              }
-            }
-            L4: {
-              this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
-              if (!param1.a((byte) 20)) {
-                break L4;
-              } else {
-                L5: {
-                  var7 = this.field_b.b(param1.field_w);
-                  var8 = this.field_b.field_E + this.field_b.field_H;
-                  var9 = param2 - -param1.field_q;
-                  var10 = param1.field_v + param3;
-                  if ((this.field_a ^ -1) != -3) {
-                    if (1 != this.field_a) {
-                      break L5;
-                    } else {
-                      var9 = var9 + (param1.field_x - var7 >> 1422585281);
-                      break L5;
-                    }
-                  } else {
-                    var9 = var9 + (-var7 + param1.field_x);
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (2 != this.field_f) {
-                    if (1 != this.field_f) {
-                      break L6;
-                    } else {
-                      var10 = var10 + (-var8 + param1.field_s >> 1077514401);
-                      break L6;
-                    }
-                  } else {
-                    var10 = var10 + (-var8 + param1.field_s);
-                    break L6;
-                  }
-                }
-                in.a(-2 + var9, var8, var7 - -4, 2 + var10, 1);
-                break L4;
-              }
-            }
-            break L0;
+          if (!param1.field_u &&
+            !param1.a((byte) 127)) {
+            stackIn_6_0 = 2188450;
+          } else {
+            stackIn_6_0 = 3249872;
           }
+          var6_int = stackIn_6_0;
+          if (param0 != 34) {
+            oa.a((byte) -52);
+          }
+          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_w + "</u>", param1.field_q + param2, param1.field_v + param3, param1.field_x, param1.field_s, var6_int, -1, this.field_a, this.field_f, this.field_b.field_H + this.field_b.field_E);
+          if (param1.a((byte) 20)) {
+            var7 = this.field_b.b(param1.field_w);
+            var8 = this.field_b.field_E + this.field_b.field_H;
+            var9 = param2 + param1.field_q;
+            var10 = param1.field_v + param3;
+            if (this.field_a != 2) {
+              if (1 == this.field_a) {
+                var9 = var9 + (param1.field_x - var7 >> 1);
+              }
+            } else {
+              var9 = var9 + (-var7 + param1.field_x);
+            }
+            if (2 != this.field_f) {
+              if (1 == this.field_f) {
+                var10 = var10 + (-var8 + param1.field_s >> 1);
+              }
+            } else {
+              var10 = var10 + (-var8 + param1.field_s);
+            }
+            in.a(-2 + var9, var8, var7 + 4, 2 + var10, 1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var6 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var6);
-
-            stackIn_21_1 = new StringBuilder().append("oa.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L7;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L7;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_21_0 = var6;
+          stackIn_21_1 = new StringBuilder().append("oa.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -138,11 +92,11 @@ final class oa implements ca {
 
     oa(se param0, int param1, int param2) {
         try {
-            this.field_b = param0;
-            this.field_f = param2;
-            this.field_a = param1;
+          this.field_b = param0;
+          this.field_f = param2;
+          this.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

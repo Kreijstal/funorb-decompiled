@@ -18,48 +18,36 @@ final class vc {
     }
 
     final static void a(byte param0) {
-        if (dma.field_b == null) {
+        if (dma.field_b != null) {
+          dma.field_b.a((byte) 45);
+          dma.field_b = null;
           if (param0 > -64) {
             field_b = (String) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          dma.field_b.a((byte) 45);
-          dma.field_b = null;
-          if (param0 <= -64) {
-            return;
-          } else {
-            field_b = (String) null;
-            return;
-          }
+          return;
         }
+        if (param0 <= -64) {
+          return;
+        }
+        field_b = (String) null;
     }
 
     final static int a(int param0, int param1, int param2) {
         NumberFormatException var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param2 == -16306) {
-            break L0;
-          } else {
-            vc.a((byte) 16);
-            break L0;
-          }
+        if (param2 != -16306) {
+          vc.a((byte) 16);
         }
         try {
-          L1: {
-            stackIn_3_0 = Integer.parseInt(lka.field_E[param0][param1]);
-            break L1;
-          }
+          stackIn_3_0 = Integer.parseInt(lka.field_E[param0][param1]);
+          return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
         }
-        return stackIn_3_0;
     }
 
     static {

@@ -10,71 +10,43 @@ final class oia implements gs {
 
     public final boolean d(byte param0) {
         if (param0 != 48) {
-            oia.b(true);
-            return this.field_c.d((byte) 48);
+          oia.b(true);
+          return this.field_c.d((byte) 48);
         }
         return this.field_c.d((byte) 48);
     }
 
     public final boolean a(boolean param0, uh param1) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param0) {
-              stackIn_4_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!param0) {
+            return true;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("oia.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("oia.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0 != 0;
+          throw tba.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     public final int c(byte param0) {
-        if (param0 <= 91) {
-          this.field_a = -18;
-          return this.field_c.c((byte) 103) - -this.field_b;
-        } else {
-          return this.field_c.c((byte) 103) - -this.field_b;
+        if (param0 > 91) {
+          return this.field_c.c((byte) 103) + this.field_b;
         }
+        this.field_a = -18;
+        return this.field_c.c((byte) 103) + this.field_b;
     }
 
     public final void a(int param0, iq param1) {
@@ -82,26 +54,25 @@ final class oia implements gs {
         int var6 = 0;
         int var7 = 0;
         gr var3 = this.field_c.c(-100);
-        if (var3 != null) {
-            if (!(var3.a(-101))) {
-                return;
-            }
+        if (var3 != null &&
+          !var3.a(-101)) {
+          return;
         }
         if (param0 < 103) {
-            sda var8 = (sda) null;
-            oia.a(9, (sda) null, 48);
+          sda var8 = (sda) null;
+          oia.a(9, (sda) null, 48);
         }
-        ka var4 = this.field_c.a((byte) 9, (oia) (this));
+        ka var4 = this.field_c.a((byte) 9, this);
         if (var4 == null) {
-            return;
+          return;
         }
         try {
-            var5 = this.b((byte) 69);
-            var6 = this.c((byte) 102);
-            var7 = this.e((byte) -114);
-            gqa.a(0, -83584144, var6, var5, var4, var7);
+          var5 = this.b((byte) 69);
+          var6 = this.c((byte) 102);
+          var7 = this.e((byte) -114);
+          gqa.a(0, -83584144, var6, var5, var4, var7);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "oia.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,13 +80,13 @@ final class oia implements gs {
         field_e = null;
         field_d = null;
         if (param0) {
-            field_d = (String[]) null;
+          field_d = (String[]) null;
         }
     }
 
     public final boolean a(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -124,45 +95,44 @@ final class oia implements gs {
         kh var6 = null;
         int var4 = 0;
         try {
-            var6 = ql.field_k;
-            kh var3 = var6;
-            var6.k(param0, -2988);
-            var6.field_h = var6.field_h + 1;
-            var4 = var6.field_h;
-            var6.i(1, 0);
-            if (null != param1.field_j) {
-                var6.i(param1.field_j.length, 0);
-                var6.a(0, param1.field_j, param1.field_j.length, 105);
-            } else {
-                var6.i(0, 0);
-            }
-            int var5 = 72 / ((30 - param2) / 34);
-            var6.g(var4, 64);
-            var6.field_h = var6.field_h - 4;
-            param1.field_l = var6.e(115);
-            var6.d(-var4 + var6.field_h, (byte) -110);
+          var6 = ql.field_k;
+          kh var3 = var6;
+          var6.k(param0, -2988);
+          var6.field_h = var6.field_h + 1;
+          var4 = var6.field_h;
+          var6.i(1, 0);
+          if (null != param1.field_j) {
+            var6.i(param1.field_j.length, 0);
+            var6.a(0, param1.field_j, param1.field_j.length, 105);
+          } else {
+            var6.i(0, 0);
+          }
+          int var5 = 72 / ((30 - param2) / 34);
+          var6.g(var4, 64);
+          var6.field_h = var6.field_h - 4;
+          param1.field_l = var6.e(115);
+          var6.d(-var4 + var6.field_h, (byte) -110);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "oia.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public final void f(int param0) {
         if (param0 != -4366) {
-            this.b((byte) -5);
+          this.b((byte) -5);
         }
     }
 
     public final int e(byte param0) {
-        if (param0 >= -86) {
-          this.field_a = 113;
-          return this.field_c.e((byte) -119) - 17825792;
-        } else {
+        if (param0 < -86) {
           return this.field_c.e((byte) -119) - 17825792;
         }
+        this.field_a = 113;
+        return this.field_c.e((byte) -119) - 17825792;
     }
 
     public final int b(byte param0) {
-        int var2 = 35 / ((param0 - -23) / 53);
+        int var2 = 35 / ((param0 + 23) / 53);
         return this.field_c.b((byte) 103) + this.field_a;
     }
 

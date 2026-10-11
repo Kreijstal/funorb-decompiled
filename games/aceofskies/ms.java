@@ -8,22 +8,18 @@ final class ms {
     static int field_d;
 
     final void b(byte param0) {
-        if (this.field_b == null) {
+        if (this.field_b != null) {
+          this.field_b.a(4665);
           if (param0 != 29) {
             this.field_b = (ti) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          this.field_b.a(4665);
-          if (param0 == 29) {
-            return;
-          } else {
-            this.field_b = (ti) null;
-            return;
-          }
+          return;
         }
+        if (param0 == 29) {
+          return;
+        }
+        this.field_b = (ti) null;
     }
 
     public static void a(byte param0) {

@@ -14,11 +14,11 @@ final class bd {
         wk var3 = new wk(param1, param1);
         int var4 = 0;
         if (param2 != 248) {
-            bd.a(17, 14, -114);
+          bd.a(17, 14, -114);
         }
         while (var4 < var3.field_E.length) {
-            var3.field_E[var4] = param0;
-            var4++;
+          var3.field_E[var4] = param0;
+          var4++;
         }
         return var3;
     }
@@ -29,7 +29,7 @@ final class bd {
         field_b = null;
         field_a = null;
         if (param0 != -23333) {
-            field_f = (gh) null;
+          field_f = (gh) null;
         }
     }
 

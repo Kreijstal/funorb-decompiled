@@ -13,21 +13,20 @@ final class bo {
 
     final int a(byte param0, int param1) {
         int var3 = -102 / ((param0 - 44) / 42);
-        return this.field_d[param1] + (-640 + so.field_b.field_a >> 453533825);
+        return this.field_d[param1] + (-640 + so.field_b.field_a >> 1);
     }
 
     final int a(int param0, byte param1) {
-        if (param1 > -100) {
-          field_c = (String) null;
-          return this.field_h[param0] + (so.field_b.field_g - 480 >> -622903007);
-        } else {
-          return this.field_h[param0] + (so.field_b.field_g - 480 >> -622903007);
+        if (param1 <= -100) {
+          return this.field_h[param0] + (so.field_b.field_g - 480 >> 1);
         }
+        field_c = (String) null;
+        return this.field_h[param0] + (so.field_b.field_g - 480 >> 1);
     }
 
     final void b(int param0, int param1, int param2) {
-        int var4 = 120 / ((param0 - -93) / 33);
-        this.field_d[param2] = this.field_d[param2] + (param1 + -this.a((byte) -125, param2));
+        int var4 = 120 / ((param0 + 93) / 33);
+        this.field_d[param2] = this.field_d[param2] + (param1 - this.a((byte) -125, param2));
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
@@ -37,25 +36,21 @@ final class bo {
         this.field_f[param6] = param5;
         this.field_e[param6] = param1;
         if (param2 != 18) {
-            this.a(-45, 80, (byte) -101, -37, -18, -104, -117);
+          this.a(-45, 80, (byte) -101, -37, -18, -104, -117);
         }
     }
 
     final int b(int param0, int param1) {
-        vh var4;
-        if (param1 != 29) {
-          var4 = (vh) null;
-          bo.a(-13, (vh) null, 83);
-          return (-640 + so.field_b.field_a >> 328354849) - -this.field_a[param0];
-        } else {
-          return (-640 + so.field_b.field_a >> 328354849) - -this.field_a[param0];
+        if (param1 == 29) {
+          return (-640 + so.field_b.field_a >> 1) + this.field_a[param0];
         }
+        vh var4 = (vh) null;
+        bo.a(-13, (vh) null, 83);
+        return (-640 + so.field_b.field_a >> 1) + this.field_a[param0];
     }
 
     final void a(int param0, int param1, int param2) {
-        if (param0 != -1) {
-          return;
-        } else {
+        if (param0 == -1) {
           this.field_a[param2] = this.field_a[param2] + (-this.b(param2, 29) + param1);
           return;
         }
@@ -68,10 +63,7 @@ final class bo {
         wa stackIn_25_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -80,125 +72,61 @@ final class bo {
         vh var6 = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == 4368051) {
-                break L1;
-              } else {
-                var6 = (vh) null;
-                bo.a(-35, (vh) null, 62);
-                break L1;
-              }
-            }
-            var3_int = param1.e((byte) -104);
-            var4 = uc.field_d[var3_int][3];
-            if (-5 == (var4 ^ -1)) {
-              stackIn_16_0 = new al(var3_int);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L2: {
-                if (-1 == (var4 ^ -1)) {
-                  break L2;
-                } else {
-                  if (-2 != (var4 ^ -1)) {
-                    if (-3 != (var4 ^ -1)) {
-                      if (8 == var4) {
-                        break L2;
-                      } else {
-                        if (3 == var4) {
-                          break L2;
-                        } else {
-                          if ((var4 ^ -1) == -6) {
-                            break L2;
-                          } else {
-                            if (6 == var4) {
-                              break L2;
-                            } else {
-                              if (7 == var4) {
-                                break L2;
-                              } else {
-                                return null;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              if (uc.field_d[var3_int][4] != 5) {
-                stackIn_25_0 = new wa(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
-                decompiledRegionSelector0 = 3;
-                break L0;
-              } else {
-                if (param0 > -1) {
-                  stackIn_21_0 = new ra(var3_int, new am(param1, param0));
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_23_0 = new al(var3_int);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            }
+          if (param2 != 4368051) {
+            var6 = (vh) null;
+            bo.a(-35, (vh) null, 62);
           }
+          var3_int = param1.e((byte) -104);
+          var4 = uc.field_d[var3_int][3];
+          if (var4 == 4) {
+            stackIn_16_0 = new al(var3_int);
+            return (ik) ((Object) stackIn_16_0);
+          }
+          if (var4 != 0 &&
+            var4 != 1 &&
+            var4 != 2 &&
+            8 != var4 &&
+            3 != var4 &&
+            var4 != 5 &&
+            6 != var4 &&
+            7 != var4) {
+            return null;
+          }
+          if (uc.field_d[var3_int][4] != 5) {
+            stackIn_25_0 = new wa(var3_int, param1.k(param2 ^ 4368051), param1.k(0));
+            return (ik) ((Object) stackIn_25_0);
+          }
+          if (param0 > -1) {
+            stackIn_21_0 = new ra(var3_int, new am(param1, param0));
+            return (ik) ((Object) stackIn_21_0);
+          }
+          stackIn_23_0 = new al(var3_int);
+          return (ik) ((Object) stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_29_0 = (RuntimeException) (var3);
-
-            stackIn_29_1 = new StringBuilder().append("bo.J(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "null";
-              break L3;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "{...}";
-              break L3;
-            }
-          }
-          throw ig.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (ik) ((Object) stackIn_16_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (ik) ((Object) stackIn_21_0);
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = var3;
+          stackIn_29_1 = new StringBuilder().append("bo.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_30_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return (ik) ((Object) stackIn_23_0);
-            } else {
-              return (ik) ((Object) stackIn_25_0);
-            }
+            stackIn_30_2 = "{...}";
           }
+          throw ig.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 4368051) {
-          bo.a(false);
-          field_g = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 4368051) {
           field_g = null;
           field_c = null;
           field_b = null;
           return;
         }
+        bo.a(false);
+        field_g = null;
+        field_c = null;
+        field_b = null;
     }
 
     final int b(int param0, byte param1) {
@@ -207,30 +135,27 @@ final class bo {
     }
 
     final void a(int param0, int param1, byte param2) {
-        if (param2 <= 118) {
-          this.field_e = (int[]) null;
-          this.field_h[param1] = this.field_h[param1] + (param0 - this.a(param1, (byte) -108));
-          return;
-        } else {
+        if (param2 > 118) {
           this.field_h[param1] = this.field_h[param1] + (param0 - this.a(param1, (byte) -108));
           return;
         }
+        this.field_e = (int[]) null;
+        this.field_h[param1] = this.field_h[param1] + (param0 - this.a(param1, (byte) -108));
     }
 
     final static void a(boolean param0) {
         tp.field_e = new at();
         if (!param0) {
-            field_b = (wk) null;
+          field_b = (wk) null;
         }
     }
 
     final int a(int param0, int param1) {
-        if (param0 != -6) {
-          this.b(-40, 11, -54);
-          return (so.field_b.field_g - 480 >> 1896245185) - -this.field_e[param1];
-        } else {
-          return (so.field_b.field_g - 480 >> 1896245185) - -this.field_e[param1];
+        if (param0 == -6) {
+          return (so.field_b.field_g - 480 >> 1) + this.field_e[param1];
         }
+        this.b(-40, 11, -54);
+        return (so.field_b.field_g - 480 >> 1) + this.field_e[param1];
     }
 
     bo() {

@@ -21,14 +21,14 @@ final class qe {
         var10.c(-8);
         vv.a(-1203350004, param6, param7);
         for (var11 = 0; var11 < param7; var11++) {
-            var10.a(param4 + -32792, var11, var15[var11]);
+          var10.a(param4 - 32792, var11, var15[var11]);
         }
         return var9;
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_a = (gf) null;
+          field_a = (gf) null;
         }
         field_b = null;
         field_a = null;

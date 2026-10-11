@@ -9,20 +9,17 @@ final class mf {
     static String field_c;
 
     public static void a(byte param0) {
-        wi var2;
         field_a = null;
         field_c = null;
-        if (param0 > -87) {
-          var2 = (wi) null;
-          mf.a(-20, 44, (wi) null);
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 <= -87) {
           field_d = null;
           field_b = null;
           return;
         }
+        wi var2 = (wi) null;
+        mf.a(-20, 44, (wi) null);
+        field_d = null;
+        field_b = null;
     }
 
     final static String a(int param0, int param1, wi param2) {
@@ -35,68 +32,45 @@ final class mf {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  var3_int = param2.f(param1 ^ -2706);
-                  if (param0 < var3_int) {
-                    var3_int = param0;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                var4 = new byte[var3_int];
-                param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
-                var5 = lh.a(0, -3789, var3_int, var4);
-                stackIn_4_0 = (String) (var5);
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              stackIn_6_0 = "Cabbage";
-              return stackIn_6_0;
+          try {
+            var3_int = param2.f(param1 ^ -2706);
+            if (param0 < var3_int) {
+              var3_int = param0;
             }
-            break L0;
+            var4 = new byte[var3_int];
+            param2.field_h = param2.field_h + pa.field_d.a(var4, param2.field_h, 0, param2.field_i, param1 ^ param1, var3_int);
+            var5 = lh.a(0, -3789, var3_int, var4);
+            stackIn_4_0 = var5;
+            return stackIn_4_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_6_0 = "Cabbage";
+            return stackIn_6_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("mf.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("mf.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     final static int a(int param0, int param1, int param2) {
         if (param0 != 0) {
-            return 12;
+          return 12;
         }
-        int var3 = param2 >>> -281766465;
-        return -var3 + (param2 - -var3) / param1;
+        int var3 = param2 >>> 31;
+        return -var3 + (param2 + var3) / param1;
     }
 
     public final String toString() {

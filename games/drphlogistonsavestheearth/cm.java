@@ -18,32 +18,20 @@ final class cm extends lb {
     static double field_G;
 
     final int g(int param0) {
-        if (this.field_K != null) {
-          if (param0 > -38) {
-            return 97;
-          } else {
-            return this.field_K.field_j * 100 / (-this.field_N + this.field_K.field_h.length);
-          }
-        } else {
+        if (this.field_K == null) {
           return 0;
         }
+        if (param0 <= -38) {
+          return this.field_K.field_j * 100 / (-this.field_N + this.field_K.field_h.length);
+        }
+        return 97;
     }
 
     cm() {
     }
 
     public static void a(byte param0) {
-        if (param0 != -113) {
-          cm.a((byte) 56);
-          field_S = null;
-          field_M = null;
-          field_R = null;
-          field_L = null;
-          field_Q = null;
-          field_P = null;
-          field_I = null;
-          return;
-        } else {
+        if (param0 == -113) {
           field_S = null;
           field_M = null;
           field_R = null;
@@ -53,31 +41,34 @@ final class cm extends lb {
           field_I = null;
           return;
         }
+        cm.a((byte) 56);
+        field_S = null;
+        field_M = null;
+        field_R = null;
+        field_L = null;
+        field_Q = null;
+        field_P = null;
+        field_I = null;
     }
 
     final byte[] i(int param0) {
-        if (param0 == 13095) {
-          if (!this.field_u) {
-            if (this.field_K.field_h.length - this.field_N > this.field_K.field_j) {
-              throw new RuntimeException();
-            } else {
-              return this.field_K.field_h;
-            }
-          } else {
-            throw new RuntimeException();
-          }
-        } else {
+        if (param0 != 13095) {
           field_S = (char[]) null;
-          if (!this.field_u) {
-            if (this.field_K.field_h.length - this.field_N > this.field_K.field_j) {
-              throw new RuntimeException();
-            } else {
-              return this.field_K.field_h;
-            }
-          } else {
+          if (this.field_u) {
             throw new RuntimeException();
           }
+          if (this.field_K.field_h.length - this.field_N <= this.field_K.field_j) {
+            return this.field_K.field_h;
+          }
+          throw new RuntimeException();
         }
+        if (this.field_u) {
+          throw new RuntimeException();
+        }
+        if (this.field_K.field_h.length - this.field_N <= this.field_K.field_j) {
+          return this.field_K.field_h;
+        }
+        throw new RuntimeException();
     }
 
     static {

@@ -15,7 +15,7 @@ final class e {
         field_f = null;
         field_a = null;
         if (param0 <= 70) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;
@@ -23,41 +23,32 @@ final class e {
 
     final static void a(int param0, byte param1, int param2, oh[] param3) {
         if (param1 != -92) {
-            return;
+          return;
         }
         try {
-            nm.field_o = new ve(param3);
-            ng.field_D = param0;
-            fl.field_b = param2;
-            ca.b(-69);
+          nm.field_o = new ve(param3);
+          ng.field_D = param0;
+          fl.field_b = param2;
+          ca.b(-69);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "e.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static kh[] a(byte param0) {
-        kh[] var1;
-        int var2;
-        int var3;
-        var3 = TetraLink.field_J;
-        var1 = new kh[vj.field_n];
-        var2 = 0;
-        L0: while (true) {
-          if (vj.field_n <= var2) {
-            if (param0 < 98) {
-              e.a((byte) 60);
-              an.b(-125);
-              return var1;
-            } else {
-              an.b(-125);
-              return var1;
-            }
-          } else {
-            var1[var2] = new kh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], ga.field_a[var2], ti.field_c);
-            var2++;
-            continue L0;
-          }
+        int var2 = 0;
+        int var3 = TetraLink.field_J;
+        kh[] var1 = new kh[vj.field_n];
+        for (var2 = 0; vj.field_n > var2; var2++) {
+          var1[var2] = new kh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], ga.field_a[var2], ti.field_c);
         }
+        if (param0 >= 98) {
+          an.b(-125);
+          return var1;
+        }
+        e.a((byte) 60);
+        an.b(-125);
+        return var1;
     }
 
     static {

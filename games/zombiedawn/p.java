@@ -11,32 +11,21 @@ final class p {
 
     final static void b(int param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            L0: {
-              if (param1 == 27102) {
-                break L0;
-              } else {
-                p.b(-112, 62);
-                break L0;
-              }
-            }
-            try {
-              L1: {
-                qe.a(new Object[]{new Integer(param0)}, "resizing", 29674, hc.a(0));
-                break L1;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var2 = decompiledCaughtException;
-                break L2;
-              }
-            }
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          if (param1 != 27102) {
+            p.b(-112, 62);
+          }
+          try {
+            qe.a(new Object[]{new Integer(param0)}, "resizing", 29674, hc.a(0));
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -51,34 +40,22 @@ final class p {
         field_c = null;
         field_b = null;
         if (param0) {
-            field_b = (Random) null;
+          field_b = (Random) null;
         }
     }
 
     final static void a(int param0) {
-        if (param0 != 1) {
-          L0: {
-            p.a(true);
-            if (sn.field_c != null) {
-              sn.field_c.a(-126);
-              sn.field_c = null;
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == 1) {
+          if (sn.field_c != null) {
+            sn.field_c.a(-126);
+            sn.field_c = null;
           }
           return;
-        } else {
-          L1: {
-            if (sn.field_c != null) {
-              sn.field_c.a(-126);
-              sn.field_c = null;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        p.a(true);
+        if (sn.field_c != null) {
+          sn.field_c.a(-126);
+          sn.field_c = null;
         }
     }
 

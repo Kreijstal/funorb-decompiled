@@ -8,10 +8,10 @@ final class el {
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_a = 21;
-            field_b = (int[][]) null;
-            field_c = null;
-            return;
+          field_a = 21;
+          field_b = (int[][]) null;
+          field_c = null;
+          return;
         }
         field_b = (int[][]) null;
         field_c = null;
@@ -20,7 +20,7 @@ final class el {
     final static void a(boolean param0, int param1) {
         aa.field_a = param1;
         if (!param0) {
-            el.a(false);
+          el.a(false);
         }
     }
 

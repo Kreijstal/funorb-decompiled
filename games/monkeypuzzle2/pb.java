@@ -23,9 +23,9 @@ final class pb implements ml {
     final static void a(boolean param0) {
         ei.field_b = null;
         if (param0) {
-            field_b = (java.security.SecureRandom) null;
-            de.field_o = null;
-            return;
+          field_b = (java.security.SecureRandom) null;
+          de.field_o = null;
+          return;
         }
         de.field_o = null;
     }
@@ -34,7 +34,7 @@ final class pb implements ml {
         field_n = null;
         field_i = null;
         if (param0 <= 43) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -49,94 +49,51 @@ final class pb implements ml {
         we stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!(param1 instanceof em)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (we) (param1);
-                break L1;
-              }
-            }
-            L2: {
-              var11 = (em) ((Object) stackIn_3_0);
-              if (var11 == null) {
-                break L2;
-              } else {
-                param0 = param0 & var11.field_w;
-                break L2;
-              }
-            }
-            L3: {
-              var7 = 5592405;
-              ge.d(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
-              if (!param0) {
-                break L3;
-              } else {
-                var7 = 16777215;
-                break L3;
-              }
-            }
-            L4: {
-              var8 = this.field_k + (param1.field_r + param3);
-              var9 = param2 + (param1.field_e + this.field_m);
-              ge.a(var8, var9, this.field_o, this.field_d, 5592405);
-              ge.d(var8, var9, this.field_o, this.field_d, var7);
-              if (var11.field_u) {
-                ge.e(var8, var9, var8 - -this.field_o, var9 - -this.field_d, 1);
-                ge.e(var8 + this.field_o, var9, var8, var9 + this.field_d, 1);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            if (param4 >= 19) {
-              if (this.field_l != null) {
-                var10 = this.field_k + (this.field_o + this.field_a);
-                this.field_l.a(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 - -this.field_h), param1.field_l + -this.field_a + -var10, param1.field_p + -(this.field_a << 378045761), this.field_j, this.field_f, this.field_c, this.field_e, 0);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!(param1 instanceof em)) {
+            stackIn_3_0 = null;
+          } else {
+            stackIn_3_0 = (we) (param1);
           }
+          var11 = (em) (stackIn_3_0);
+          if (var11 != null) {
+            param0 = param0 & var11.field_w;
+          }
+          var7 = 5592405;
+          ge.d(param3 + param1.field_r, param1.field_e + param2, param1.field_l, param1.field_p, this.field_g);
+          if (param0) {
+            var7 = 16777215;
+          }
+          var8 = this.field_k + (param1.field_r + param3);
+          var9 = param2 + (param1.field_e + this.field_m);
+          ge.a(var8, var9, this.field_o, this.field_d, 5592405);
+          ge.d(var8, var9, this.field_o, this.field_d, var7);
+          if (var11.field_u) {
+            ge.e(var8, var9, var8 + this.field_o, var9 + this.field_d, 1);
+            ge.e(var8 + this.field_o, var9, var8, var9 + this.field_d, 1);
+          }
+          if (param4 < 19) {
+            return;
+          }
+          if (this.field_l == null) {
+            return;
+          }
+          var10 = this.field_k + (this.field_o + this.field_a);
+          this.field_l.a(param1.field_s, var10 + param1.field_r + param3, param1.field_e + (param2 + this.field_h), param1.field_l - this.field_a - var10, param1.field_p - (this.field_a << 1), this.field_j, this.field_f, this.field_c, this.field_e, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var6);
-
-            stackIn_18_1 = new StringBuilder().append("pb.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_18_0 = var6;
+          stackIn_18_1 = new StringBuilder().append("pb.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw la.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -144,18 +101,18 @@ final class pb implements ml {
         this.field_c = 1;
         this.field_e = 1;
         try {
-            this.field_d = param7;
-            this.field_f = param4;
-            this.field_h = param2;
-            this.field_k = param5;
-            this.field_j = param3;
-            this.field_a = param1;
-            this.field_l = param0;
-            this.field_g = param9;
-            this.field_m = param6;
-            this.field_o = param8;
+          this.field_d = param7;
+          this.field_f = param4;
+          this.field_h = param2;
+          this.field_k = param5;
+          this.field_j = param3;
+          this.field_a = param1;
+          this.field_l = param0;
+          this.field_g = param9;
+          this.field_m = param6;
+          this.field_o = param8;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "pb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

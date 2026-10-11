@@ -19,22 +19,22 @@ final class la {
     static ja field_j;
 
     private final void b(int param0, byte param1) {
-        int[] var3;
-        int[] var4;
-        if (param1 <= 21) {
-          field_l = (ri[]) null;
-          var4 = new int[this.a(param0, (byte) 104)];
-          var3 = var4;
-          d.a(this.field_o, 0, var4, 0, this.field_o.length);
-          this.field_o = var4;
-          return;
-        } else {
+        int[] var4 = null;
+        int[] var3 = null;
+        int[] var4Lifetime1;
+        int[] var3Lifetime1;
+        if (param1 > 21) {
           var4 = new int[this.a(param0, (byte) 104)];
           var3 = var4;
           d.a(this.field_o, 0, var4, 0, this.field_o.length);
           this.field_o = var4;
           return;
         }
+        field_l = (ri[]) null;
+        var4Lifetime1 = new int[this.a(param0, (byte) 104)];
+        var3Lifetime1 = var4Lifetime1;
+        d.a(this.field_o, 0, var4Lifetime1, 0, this.field_o.length);
+        this.field_o = var4Lifetime1;
     }
 
     private final int a(int param0, byte param1) {
@@ -42,82 +42,67 @@ final class la {
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         var3 = this.field_o.length;
-        L0: while (true) {
-          if (param0 < var3) {
-            if (param1 <= 101) {
-              return -50;
-            } else {
-              return var3;
-            }
-          } else {
-            if (this.field_i) {
-              if (var3 != 0) {
-                var3 = var3 * this.field_f;
-                continue L0;
-              } else {
-                var3 = 1;
-                continue L0;
-              }
-            } else {
-              var3 = var3 + this.field_f;
-              continue L0;
-            }
+        while (param0 >= var3) {
+          if (!this.field_i) {
+            var3 = var3 + this.field_f;
+            continue;
           }
+          if (var3 != 0) {
+            var3 = var3 * this.field_f;
+            continue;
+          }
+          var3 = 1;
         }
+        if (param1 <= 101) {
+          return -50;
+        }
+        return var3;
     }
 
     private final void a(int param0, int param1, int param2) {
-        if (param0 <= this.field_a) {
-          if (this.field_o.length > param0) {
-            if (param2 != 0) {
-              return;
-            } else {
-              this.field_o[param0] = param1;
-              return;
-            }
-          } else {
-            this.b(param0, (byte) 79);
-            if (param2 != 0) {
-              return;
-            } else {
-              this.field_o[param0] = param1;
-              return;
-            }
-          }
-        } else {
+        if (param0 > this.field_a) {
           this.field_a = param0;
-          if (this.field_o.length <= param0) {
-            this.b(param0, (byte) 79);
-            if (param2 != 0) {
-              return;
-            } else {
+          if (this.field_o.length > param0) {
+            if (param2 == 0) {
               this.field_o[param0] = param1;
               return;
             }
-          } else {
-            if (param2 != 0) {
-              return;
-            } else {
-              this.field_o[param0] = param1;
-              return;
-            }
+            return;
           }
+          this.b(param0, (byte) 79);
+          if (param2 == 0) {
+            this.field_o[param0] = param1;
+            return;
+          }
+          return;
+        }
+        if (this.field_o.length <= param0) {
+          this.b(param0, (byte) 79);
+          if (param2 == 0) {
+            this.field_o[param0] = param1;
+            return;
+          }
+          return;
+        }
+        if (param2 == 0) {
+          this.field_o[param0] = param1;
+          return;
         }
     }
 
     final void b(byte param0, int param1) {
         if (param0 != -7) {
-            return;
+          return;
         }
         this.a(1 + this.field_a, param1, param0 ^ -7);
     }
 
     final int a(byte param0, int param1) {
         if (param0 != 105) {
-            return 57;
+          return 57;
         }
-        if (!(this.field_a >= param1)) {
-            throw new ArrayIndexOutOfBoundsException(param1);
+        if (this.field_a < param1) {
+          throw new ArrayIndexOutOfBoundsException(param1);
         }
         return this.field_o[param1];
     }
@@ -125,18 +110,16 @@ final class la {
     final int b(int param0) {
         int discarded$0 = 0;
         if (param0 != 1) {
-            discarded$0 = this.a(-120, (byte) 109);
-            return this.field_a - -1;
+          discarded$0 = this.a(-120, (byte) 109);
+          return this.field_a + 1;
         }
-        return this.field_a - -1;
+        return this.field_a + 1;
     }
 
     public static void a(int param0) {
         field_c = null;
         field_j = null;
-        if (param0 > -4) {
-          return;
-        } else {
+        if (param0 <= -4) {
           field_b = null;
           field_l = null;
           field_e = null;
@@ -147,25 +130,22 @@ final class la {
     }
 
     final void a(int param0, int param1) {
-        int var3;
-        if (0 <= param1) {
-          if (this.field_a >= param1) {
-            if (this.field_a != param1) {
-              d.a(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
-              var3 = -95 / ((param0 - 37) / 32);
-              this.field_a = this.field_a - 1;
-              return;
-            } else {
-              var3 = -95 / ((param0 - 37) / 32);
-              this.field_a = this.field_a - 1;
-              return;
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          }
-        } else {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (0 > param1) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (this.field_a < param1) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (this.field_a == param1) {
+          var3 = -95 / ((param0 - 37) / 32);
+          this.field_a = this.field_a - 1;
+          return;
+        }
+        d.a(this.field_o, param1 + 1, this.field_o, param1, -param1 + this.field_a);
+        var3Lifetime1 = -95 / ((param0 - 37) / 32);
+        this.field_a = this.field_a - 1;
     }
 
     private la() throws Throwable {

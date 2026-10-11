@@ -8,9 +8,9 @@ final class cd {
 
     public static void a(int param0) {
         if (param0 != 5) {
-            cd.a(true);
-            field_a = null;
-            return;
+          cd.a(true);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -21,8 +21,8 @@ final class cd {
 
     final static int a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
-            return klb.field_r.f(-2147483648);
+          field_a = (String) null;
+          return klb.field_r.f(-2147483648);
         }
         return klb.field_r.f(-2147483648);
     }

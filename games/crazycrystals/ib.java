@@ -9,28 +9,24 @@ abstract class ib extends ij {
     public static void g(int param0) {
         field_l = null;
         if (param0 != 31438) {
-            field_l = (int[]) null;
-            field_m = null;
-            return;
+          field_l = (int[]) null;
+          field_m = null;
+          return;
         }
         field_m = null;
     }
 
     final static void e(int param0) {
-        sc var1;
-        int var2;
-        md var3;
-        var1 = (sc) ((Object) hd.field_c.g(32073));
-        var2 = -21 / ((param0 - 61) / 40);
-        if (var1 == null) {
-          jj.a(4);
-          return;
-        } else {
+        md var3 = null;
+        sc var1 = (sc) (hd.field_c.g(32073));
+        int var2 = -21 / ((param0 - 61) / 40);
+        if (var1 != null) {
           var3 = kd.field_n;
           var1.field_j = new int[]{var3.b((byte) -98), var3.b((byte) 126), var3.b((byte) 126), var3.b((byte) 14)};
           var1.a(false);
           return;
         }
+        jj.a(4);
     }
 
     abstract Object f(int param0);

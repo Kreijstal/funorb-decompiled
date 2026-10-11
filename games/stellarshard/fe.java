@@ -22,92 +22,72 @@ abstract class fe {
         RuntimeException var3 = null;
         var4 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param0 <= -100) {
-                break L1;
-              } else {
-                field_f = (String) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (param2 > param1) {
-                var3_int = param1;
-                param1 = param2;
-                param2 = var3_int;
-                L3: while (true) {
-                  if (0 == param2) {
-                    break L2;
-                  } else {
-                    var3_int = param1 % param2;
-                    param1 = param2;
-                    param2 = var3_int;
-                    continue L3;
-                  }
-                }
-              } else {
-                L4: while (true) {
-                  if (0 == param2) {
-                    break L2;
-                  } else {
-                    var3_int = param1 % param2;
-                    param1 = param2;
-                    param2 = var3_int;
-                    continue L4;
-                  }
-                }
-              }
-            }
-            stackIn_10_0 = param1;
-            break L0;
+          if (param0 > -100) {
+            field_f = (String) null;
           }
+          if (param2 <= param1) {
+            while (0 != param2) {
+              var3_int = param1 % param2;
+              param1 = param2;
+              param2 = var3_int;
+            }
+          } else {
+            var3_int = param1;
+            param1 = param2;
+            param2 = var3_int;
+            while (0 != param2) {
+              var3_int = param1 % param2;
+              param1 = param2;
+              param2 = var3_int;
+            }
+          }
+          stackIn_10_0 = param1;
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var3), "fe.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_10_0;
     }
 
     public static void a(int param0) {
         field_f = null;
         field_g = null;
-        if (param0 != 31147) {
-          field_g = (char[]) null;
-          field_c = null;
-          field_a = null;
-          field_d = (pb[][]) null;
-          return;
-        } else {
+        if (param0 == 31147) {
           field_c = null;
           field_a = null;
           field_d = (pb[][]) null;
           return;
         }
+        field_g = (char[]) null;
+        field_c = null;
+        field_a = null;
+        field_d = (pb[][]) null;
     }
 
     final static void a(ka param0, int param1) {
         int var2_int = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         if (param1 != 12726) {
-            return;
+          return;
         }
         try {
-            ci.field_b = param0.c((byte) 86) << -2100393883;
-            var2_int = param0.f(4);
-            rc.field_h = (var2_int & 7) << -501015630;
-            ci.field_b = ci.field_b + (var2_int >> -363528413);
-            rc.field_h = rc.field_h + (param0.c((byte) 60) << -775967230);
-            var2_int = param0.f(4);
-            rc.field_h = rc.field_h + (var2_int >> -1786230554);
-            b.field_t = var2_int << 1788458575 & 2064384;
-            b.field_t = b.field_t + (param0.f(param1 + -12722) << 1568877031);
-            var2_int = param0.f(4);
-            rb.field_w = 65536 & var2_int << -646771856;
-            b.field_t = b.field_t + (var2_int >> 1008506945);
-            rb.field_w = rb.field_w + param0.c((byte) 25);
+          ci.field_b = param0.c((byte) 86) << 5;
+          var2_int = param0.f(4);
+          rc.field_h = (var2_int & 7) << 18;
+          ci.field_b = ci.field_b + (var2_int >> 3);
+          rc.field_h = rc.field_h + (param0.c((byte) 60) << 2);
+          var2_intLifetime1 = param0.f(4);
+          rc.field_h = rc.field_h + (var2_intLifetime1 >> 6);
+          b.field_t = var2_intLifetime1 << 15 & 2064384;
+          b.field_t = b.field_t + (param0.f(param1 - 12722) << 7);
+          var2_intLifetime2 = param0.f(4);
+          rb.field_w = 65536 & var2_intLifetime2 << 16;
+          b.field_t = b.field_t + (var2_intLifetime2 >> 1);
+          rb.field_w = rb.field_w + param0.c((byte) 25);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "fe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "fe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

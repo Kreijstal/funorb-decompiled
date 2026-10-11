@@ -8,9 +8,9 @@ final class og {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 16) {
-            og.a((byte) 115);
-            field_a = null;
-            return;
+          og.a((byte) 115);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

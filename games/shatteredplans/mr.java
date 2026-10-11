@@ -17,10 +17,10 @@ final class mr implements fo {
     private int field_j;
 
     public final l a(byte param0) throws jn {
+        int var6 = 0;
         l var3;
         ln[] var4;
         int var5;
-        int var6;
         ln var7;
         int var8;
         int var9;
@@ -28,95 +28,60 @@ final class mr implements fo {
         ln var11;
         int var12;
         pc var13;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_e = this.field_e - 1;
         var13 = new pc(this.field_b, this.field_j, this.field_l, this.field_e, this.field_k);
         var3 = var13.a((byte) 77);
         var4 = var3.field_e;
         var5 = -23 % ((-67 - param0) / 44);
-        var6 = 0;
-        L0: while (true) {
-          if (var4.length <= var6) {
-            return var3;
-          } else {
-            var7 = var4[var6];
-            var8 = this.field_m.j(-110);
-            var9 = 0;
-            L1: while (true) {
-              if (var9 >= var8) {
-                var9 = 0;
-                L2: while (true) {
-                  L3: {
-                    if ((var9 ^ -1) <= -5) {
-                      break L3;
-                    } else {
-                      var10 = this.field_m.j(-119);
-                      var7.field_G[var9] = we.a(15, var10);
-                      var9++;
-                      if (-5 >= (var9 ^ -1)) {
-                        break L3;
-                      } else {
-                        var7.field_G[var9] = we.a(var10, 240) >> -815356732;
-                        var9++;
-                        continue L2;
-                      }
-                    }
-                  }
-                  L4: {
-                    if (var7.field_L != 2) {
-                      break L4;
-                    } else {
-                      var9 = 0;
-                      L5: while (true) {
-                        if (var9 >= 4) {
-                          break L4;
-                        } else {
-                          var7.field_G[var9] = -var7.field_G[var9];
-                          var9++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                  L6: {
-                    var7.field_x = this.field_m.f(-20976);
-                    if ((32768 & var7.field_x) == 0) {
-                      break L6;
-                    } else {
-                      var7.field_x = var7.field_x & 32767;
-                      var7.field_u = true;
-                      break L6;
-                    }
-                  }
-                  var7.field_B = this.field_m.j(-128);
-                  var7.field_L = var7.field_B >>> 2033295110;
-                  var7.field_B = var7.field_B & 63;
-                  var6++;
-                  continue L0;
-                }
-              } else {
-                var10 = this.field_m.j(-75);
-                var11 = var3.field_e[var10];
-                if (!var7.b(var11, (byte) 10)) {
-                  var7.a((byte) -76, var11);
-                  var11.a((byte) -89, var7);
-                  var9++;
-                  continue L1;
-                } else {
-                  var9++;
-                  continue L1;
-                }
-              }
+        for (var6 = 0; var4.length > var6; var6++) {
+          var7 = var4[var6];
+          var8 = this.field_m.j(-110);
+          for (var9 = 0; var9 < var8; var9++) {
+            var10 = this.field_m.j(-75);
+            var11 = var3.field_e[var10];
+            if (!var7.b(var11, (byte) 10)) {
+              var7.a((byte) -76, var11);
+              var11.a((byte) -89, var7);
             }
           }
+          var9Lifetime1 = 0;
+          while (var9Lifetime1 < 4) {
+            var10Lifetime1 = this.field_m.j(-119);
+            var7.field_G[var9Lifetime1] = we.a(15, var10Lifetime1);
+            var9Lifetime1++;
+            if (var9Lifetime1 < 4) {
+              var7.field_G[var9Lifetime1] = we.a(var10Lifetime1, 240) >> 4;
+              var9Lifetime1++;
+              continue;
+            }
+            break;
+          }
+          if (var7.field_L == 2) {
+            for (var9Lifetime2 = 0; var9Lifetime2 < 4; var9Lifetime2++) {
+              var7.field_G[var9Lifetime2] = -var7.field_G[var9Lifetime2];
+            }
+          }
+          var7.field_x = this.field_m.f(-20976);
+          if ((32768 & var7.field_x) != 0) {
+            var7.field_x = var7.field_x & 32767;
+            var7.field_u = true;
+          }
+          var7.field_B = this.field_m.j(-128);
+          var7.field_L = var7.field_B >>> 6;
+          var7.field_B = var7.field_B & 63;
         }
+        return var3;
     }
 
     public static void a(boolean param0) {
         field_g = null;
         field_d = null;
         if (param0) {
-            return;
+          return;
         }
         field_h = null;
         field_c = null;
@@ -128,38 +93,38 @@ final class mr implements fo {
         bi var3 = null;
         bi var2 = tr.field_sb[param0];
         if (var2 == null) {
-            dupTemp$0 = new bi(256, 256);
-            var3 = dupTemp$0;
-            var2 = var3;
-            tr.field_sb[param0] = dupTemp$0;
-            bs.a(var3, 100);
-            jd.field_j[param0].f(64, 64);
-            gf.b(12, 12, 0, 0, 256, 256);
-            cg.i(0);
+          dupTemp$0 = new bi(256, 256);
+          var3 = dupTemp$0;
+          var2 = var3;
+          tr.field_sb[param0] = dupTemp$0;
+          bs.a(var3, 100);
+          jd.field_j[param0].f(64, 64);
+          gf.b(12, 12, 0, 0, 256, 256);
+          cg.i(0);
         }
         if (param1 >= -28) {
-            field_a = 123;
+          field_a = 123;
         }
         return var2;
     }
 
     final static int a(int param0) {
         if (param0 != 0) {
-            mr.a(false);
+          mr.a(false);
         }
-        return ul.field_Hb + (sq.field_a << 1602041026) + (vm.field_Bb << 1341801956);
+        return ul.field_Hb + (sq.field_a << 2) + (vm.field_Bb << 4);
     }
 
     mr(ob param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-            this.field_j = param3;
-            this.field_l = param1;
-            this.field_k = param5;
-            this.field_e = param4;
-            this.field_m = param0;
-            this.field_b = param2;
+          this.field_j = param3;
+          this.field_l = param1;
+          this.field_k = param5;
+          this.field_e = param4;
+          this.field_m = param0;
+          this.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "mr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

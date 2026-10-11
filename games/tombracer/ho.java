@@ -8,35 +8,29 @@ final class ho {
 
     final synchronized static void a(int param0) {
         field_c = field_c - 1;
-        if (!((field_c ^ -1) != param0)) {
-            ho.a(true);
+        if (~field_c == param0) {
+          ho.a(true);
         }
     }
 
     final synchronized static void b(boolean param0) {
         if (param0) {
-            ho.a(76);
-            field_c = field_c + 1;
-            return;
+          ho.a(76);
+          field_c = field_c + 1;
+          return;
         }
         field_c = field_c + 1;
     }
 
     final synchronized static void a(int param0, e param1) {
-        rw var2;
-        if (field_b) {
-          return;
-        } else {
-          L0: {
-            if (param0 > (field_c ^ -1)) {
-              var2 = new rw();
-              var2.field_f = param1;
-              field_a.b((byte) -118, var2);
-              break L0;
-            } else {
-              param1.w(false);
-              break L0;
-            }
+        rw var2 = null;
+        if (!field_b) {
+          if (param0 <= ~field_c) {
+            param1.w(false);
+          } else {
+            var2 = new rw();
+            var2.field_f = param1;
+            field_a.b((byte) -118, var2);
           }
           return;
         }
@@ -45,21 +39,20 @@ final class ho {
     final synchronized static void a(boolean param0) {
         rw var1;
         RuntimeException var1_ref;
-        L0: while (true) {
-          var1 = (rw) ((Object) field_a.c(-113));
-          if (var1 == null) {
-            if (param0) {
-              return;
-            } else {
-              ho.a(-115);
-              return;
-            }
-          } else {
+        while (true) {
+          var1 = (rw) (field_a.c(-113));
+          if (var1 != null) {
             var1.field_f.w(true);
             var1.p(120);
-            continue L0;
+            continue;
           }
+          break;
         }
+        if (param0) {
+          return;
+        }
+        ho.a(-115);
+        return;
     }
 
     static {

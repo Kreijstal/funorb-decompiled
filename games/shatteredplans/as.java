@@ -30,115 +30,86 @@ final class as extends oh {
         vd stackIn_10_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            if (param0 != null) {
-              var8 = (vd) ((Object) param0.d(0));
-              var6 = -44 / ((47 - param2) / 57);
-              L1: while (true) {
-                if (var8 != null) {
-                  L2: {
-                    var5 = var8.b((byte) 105, param1, param3);
-                    if (var5 == null) {
-                      break L2;
-                    } else {
-                      if (!var5.field_s) {
-                        break L2;
-                      } else {
-                        stackIn_10_0 = (vd) (var5);
-                        break L0;
-                      }
-                    }
-                  }
-                  var8 = (vd) ((Object) param0.a((byte) -71));
-                  continue L1;
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              return null;
-            }
+          if (param0 == null) {
+            return null;
           }
+          var8 = (vd) (param0.d(0));
+          var6 = -44 / ((47 - param2) / 57);
+          while (var8 != null) {
+            var5 = var8.b((byte) 105, param1, param3);
+            if (var5 != null &&
+              var5.field_s) {
+              stackIn_10_0 = var5;
+              return stackIn_10_0;
+            }
+            var8 = (vd) (param0.a((byte) -71));
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var4);
-
-            stackIn_15_1 = new StringBuilder().append("as.C(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_15_0 = var4;
+          stackIn_15_1 = new StringBuilder().append("as.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_10_0;
     }
 
     final static void a(int param0, int param1, int param2, v param3) {
         try {
-            nr.field_h = param3;
-            dn.field_l = param0;
-            qi.field_j = param2;
-            if (param1 != 20) {
-                field_i = (String) null;
-            }
+          nr.field_h = param3;
+          dn.field_l = param0;
+          qi.field_j = param2;
+          if (param1 != 20) {
+            field_i = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "as.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "as.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_t = null;
-        if (param0 != 20) {
-          field_h = (String) null;
-          field_h = null;
-          field_y = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == 20) {
           field_h = null;
           field_y = null;
           field_i = null;
           return;
         }
+        field_h = (String) null;
+        field_h = null;
+        field_y = null;
+        field_i = null;
     }
 
     as(mg param0) {
         try {
-            this.field_m = param0.field_G;
-            this.field_x = param0.field_z;
-            this.field_s = param0.field_y;
-            this.field_q = param0.field_B;
-            this.field_n = this.field_s.field_S;
-            this.field_k = this.field_q.field_S;
-            this.field_r = this.field_s.field_A;
-            this.field_l = new int[20];
-            this.field_w = this.field_s.field_z;
-            this.field_o = new int[20];
-            this.field_u = new int[20];
-            this.field_p = this.field_q.field_z;
-            this.field_j = this.field_q.field_A;
-            this.field_v = (int)Math.sqrt((double)((-this.field_r + this.field_j) * (this.field_j + -this.field_r) - -((this.field_k + -this.field_n) * (-this.field_n + this.field_k)))) / 2;
-            this.field_z = -1;
+          this.field_m = param0.field_G;
+          this.field_x = param0.field_z;
+          this.field_s = param0.field_y;
+          this.field_q = param0.field_B;
+          this.field_n = this.field_s.field_S;
+          this.field_k = this.field_q.field_S;
+          this.field_r = this.field_s.field_A;
+          this.field_l = new int[20];
+          this.field_w = this.field_s.field_z;
+          this.field_o = new int[20];
+          this.field_u = new int[20];
+          this.field_p = this.field_q.field_z;
+          this.field_j = this.field_q.field_A;
+          this.field_v = (int)Math.sqrt((double)((-this.field_r + this.field_j) * (this.field_j - this.field_r) + (this.field_k - this.field_n) * (-this.field_n + this.field_k))) / 2;
+          this.field_z = -1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "as.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "as.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

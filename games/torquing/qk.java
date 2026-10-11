@@ -17,36 +17,36 @@ final class qk extends q {
         field_l = null;
         field_r = null;
         if (param0 < 79) {
-            return;
+          return;
         }
         field_q = null;
     }
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener(ef.field_b);
-            param1.removeMouseMotionListener(ef.field_b);
-            param1.removeFocusListener(ef.field_b);
-            rn.field_f = 0;
-            if (param0 > -53) {
-                field_r = (k) null;
-            }
+          param1.removeMouseListener(ef.field_b);
+          param1.removeMouseMotionListener(ef.field_b);
+          param1.removeFocusListener(ef.field_b);
+          rn.field_f = 0;
+          if (param0 > -53) {
+            field_r = (k) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "qk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "qk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, t[] param2, byte param3) {
         try {
-            p.field_x = new fn(param2);
-            if (param3 != -4) {
-                field_l = (String[]) null;
-            }
-            dn.field_h = param0;
-            wp.field_y = param1;
-            w.c((byte) 109);
+          p.field_x = new fn(param2);
+          if (param3 != -4) {
+            field_l = (String[]) null;
+          }
+          dn.field_h = param0;
+          wp.field_y = param1;
+          w.c((byte) 109);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "qk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "qk.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

@@ -14,44 +14,44 @@ final class ac {
         field_b = null;
         field_d = null;
         if (param0 != 0) {
-            field_f = 58;
+          field_f = 58;
         }
     }
 
     final boolean b(int param0) {
         if (param0 != 96) {
-            field_e = -42;
-            return this.field_a;
+          field_e = -42;
+          return this.field_a;
         }
         return this.field_a;
     }
 
     final static id a(long param0, int param1) {
         if (param1 != 2) {
-            return (id) null;
+          return (id) null;
         }
-        return (id) ((Object) BrickABrac.field_F.a(param0, -1));
+        return (id) (BrickABrac.field_F.a(param0, -1));
     }
 
     final void a(boolean param0, int param1) {
         this.field_c = param0 ? true : false;
         this.field_a = true;
         if (param1 != 20892) {
-            field_f = -25;
+          field_f = -25;
         }
     }
 
     final String a(int param0) {
         if (param0 != 0) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_g;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            this.a(62);
-            return this.field_c;
+          this.a(62);
+          return this.field_c;
         }
         return this.field_c;
     }
@@ -62,9 +62,7 @@ final class ac {
         param3 = h.a(param11, param0, param1, (byte) -126, param8, param3, param7);
         c.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
         sq.a(param2, param13, -126);
-        if (param9 != -113) {
-          return;
-        } else {
+        if (param9 == -113) {
           wg.a(param13, param7, -1, param3);
           return;
         }
@@ -73,10 +71,7 @@ final class ac {
     final static void a(jp[] param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -87,75 +82,38 @@ final class ac {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (param3 <= 0) {
-                  break L1;
-                } else {
-                  L2: {
-                    var6_int = param0[0].field_x;
-                    var7 = param0[2].field_x;
-                    var8 = param0[1].field_x;
-                    param0[0].e(param2, param1, param4);
-                    param0[2].e(param3 + (param2 - var7), param1, param4);
-                    lb.a(pb.field_n);
-                    lb.d(param2 + var6_int, param1, -var7 + param2 + param3, param1 - -param0[1].field_z);
-                    var9 = param2 - -var6_int;
-                    var10 = -var7 + param3 + param2;
-                    if (param5 > 121) {
-                      break L2;
-                    } else {
-                      field_f = 55;
-                      break L2;
-                    }
-                  }
-                  param2 = var9;
-                  L3: while (true) {
-                    if (param2 >= var10) {
-                      lb.b(pb.field_n);
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param0[1].e(param2, param1, param4);
-                      param2 = param2 + var8;
-                      continue L3;
-                    }
-                  }
-                }
-              }
+          if (param0 != null &&
+            param3 > 0) {
+            var6_int = param0[0].field_x;
+            var7 = param0[2].field_x;
+            var8 = param0[1].field_x;
+            param0[0].e(param2, param1, param4);
+            param0[2].e(param3 + (param2 - var7), param1, param4);
+            lb.a(pb.field_n);
+            lb.d(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].field_z);
+            var9 = param2 + var6_int;
+            var10 = -var7 + param3 + param2;
+            if (param5 <= 121) {
+              field_f = 55;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            for (param2 = var9; param2 < var10; param2 = param2 + var8) {
+              param0[1].e(param2, param1, param4);
+            }
+            lb.b(pb.field_n);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
-
-            stackIn_14_1 = new StringBuilder().append("ac.A(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("ac.A(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw qb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -163,9 +121,9 @@ final class ac {
         this.field_a = false;
         this.field_c = false;
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

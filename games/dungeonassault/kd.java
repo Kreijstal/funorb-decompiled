@@ -16,60 +16,28 @@ final class kd {
         if (param3 >= param7) {
           if (param3 < param6) {
             ue.a(param7, gf.field_b, param5, param6, param1, param3, param0, param2, 16);
-            if (param4 == 29108) {
-              return;
-            } else {
-              kd.c(114);
-              return;
-            }
           } else {
             if (param6 > param7) {
               ue.a(param7, gf.field_b, param5, param3, param2, param6, param0, param1, 16);
-              if (param4 == 29108) {
-                return;
-              } else {
-                kd.c(114);
-                return;
-              }
             } else {
               ue.a(param6, gf.field_b, param5, param3, param0, param7, param2, param1, 16);
-              if (param4 == 29108) {
-                return;
-              } else {
-                kd.c(114);
-                return;
-              }
             }
           }
         } else {
-          if (param7 >= param6) {
+          if (param7 < param6) {
+            ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2, 16);
+          } else {
             if (param3 >= param6) {
               ue.a(param6, gf.field_b, param5, param7, param1, param3, param2, param0, 16);
-              if (param4 != 29108) {
-                kd.c(114);
-                return;
-              } else {
-                return;
-              }
             } else {
               ue.a(param3, gf.field_b, param5, param7, param2, param6, param1, param0, 16);
-              if (param4 != 29108) {
-                kd.c(114);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            ue.a(param3, gf.field_b, param5, param6, param0, param7, param1, param2, 16);
-            if (param4 == 29108) {
-              return;
-            } else {
-              kd.c(114);
-              return;
             }
           }
         }
+        if (param4 == 29108) {
+          return;
+        }
+        kd.c(114);
     }
 
     final static void a(int param0) {
@@ -88,77 +56,49 @@ final class kd {
         wj var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (param0 == 31913) {
-                break L1;
-              } else {
-                field_b = (String) null;
-                break L1;
-              }
-            }
-            var8 = new wj(param1.a("logo.fo3d", "", (byte) -113));
-            var10 = var8;
-            var3 = var10.c(true);
-            var10.e(false);
-            ch.field_n = lo.a(var10, (byte) -128);
-            ih.field_w = new qh[var3];
-            lk.field_R = new int[var3][];
-            var4 = 0;
-            L2: while (true) {
-              if (var3 <= var4) {
-                var10.f((byte) 32);
-                var9 = 0;
-                var4 = var9;
-                L3: while (true) {
-                  if (var9 >= var3) {
-                    break L0;
-                  } else {
-                    var5 = ih.field_w[var9];
-                    var5.a(1, false, 6, 6, 6);
-                    var5.a((byte) -127);
-                    var6 = new int[]{var5.field_H - -var5.field_i >> -1481761759, var5.field_p - -var5.field_M >> -702008991, var5.field_a + var5.field_b >> -622637407};
-                    lk.field_R[var9] = var6;
-                    var5.a(0, -var6[0], -var6[2], -var6[1]);
-                    var9++;
-                    continue L3;
-                  }
-                }
-              } else {
-                ih.field_w[var4] = df.a(false, var8);
-                var4++;
-                continue L2;
-              }
-            }
+          if (param0 != 31913) {
+            field_b = (String) null;
           }
+          var8 = new wj(param1.a("logo.fo3d", "", (byte) -113));
+          var10 = var8;
+          var3 = var10.c(true);
+          var10.e(false);
+          ch.field_n = lo.a(var10, (byte) -128);
+          ih.field_w = new qh[var3];
+          lk.field_R = new int[var3][];
+          for (var4 = 0; var3 > var4; var4++) {
+            ih.field_w[var4] = df.a(false, var8);
+          }
+          var10.f((byte) 32);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          while (var9 < var3) {
+            var5 = ih.field_w[var9];
+            var5.a(1, false, 6, 6, 6);
+            var5.a((byte) -127);
+            var6 = new int[]{var5.field_H + var5.field_i >> 1, var5.field_p + var5.field_M >> 1, var5.field_a + var5.field_b >> 1};
+            lk.field_R[var9] = var6;
+            var5.a(0, -var6[0], -var6[2], -var6[1]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("kd.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("kd.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -211,26 +151,26 @@ final class kd {
         field_a = null;
         field_b = null;
         if (param0 > -43) {
-            field_d = (java.math.BigInteger) null;
+          field_d = (java.math.BigInteger) null;
         }
     }
 
     final synchronized static long c(int param0) {
         long var1 = System.currentTimeMillis();
-        if ((var1 ^ -1L) > (lo.field_f ^ -1L)) {
-            fb.field_c = fb.field_c + (-var1 + lo.field_f);
-            if (param0 == -2456) {
-                lo.field_f = var1;
-                return fb.field_c + var1;
-            }
-            kd.b(-64);
+        if (var1 < lo.field_f) {
+          fb.field_c = fb.field_c + (-var1 + lo.field_f);
+          if (param0 == -2456) {
             lo.field_f = var1;
             return fb.field_c + var1;
+          }
+          kd.b(-64);
+          lo.field_f = var1;
+          return fb.field_c + var1;
         }
         if (param0 != -2456) {
-            kd.b(-64);
-            lo.field_f = var1;
-            return fb.field_c + var1;
+          kd.b(-64);
+          lo.field_f = var1;
+          return fb.field_c + var1;
         }
         lo.field_f = var1;
         return fb.field_c + var1;

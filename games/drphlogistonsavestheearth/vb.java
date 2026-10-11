@@ -18,10 +18,10 @@ final class vb extends gi {
 
     public static void d(int param0) {
         if (param0 != 4) {
-            field_o = 127;
-            field_q = null;
-            field_s = null;
-            return;
+          field_o = 127;
+          field_q = null;
+          field_s = null;
+          return;
         }
         field_q = null;
         field_s = null;
@@ -29,37 +29,26 @@ final class vb extends gi {
 
     final static oi a(byte param0) {
         try {
-            Throwable var1 = null;
-            oi stackIn_2_0 = null;
-            oi stackIn_4_0 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (param0 == 65) {
-                  stackIn_4_0 = (oi) (Class.forName("mc").newInstance());
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_2_0 = (oi) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return stackIn_2_0;
-            } else {
+          Throwable var1 = null;
+          oi stackIn_2_0 = null;
+          oi stackIn_4_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 == 65) {
+              stackIn_4_0 = (oi) (Class.forName("mc").newInstance());
               return stackIn_4_0;
             }
+            stackIn_2_0 = (oi) null;
+            return stackIn_2_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

@@ -17,37 +17,31 @@ final class a {
         field_g = null;
         field_b = null;
         if (param0 != -3323) {
-            a.a(118, 52, -105, -52, 50);
+          a.a(118, 52, -105, -52, 50);
         }
     }
 
     final static pb[] a(int param0, int param1, int param2, int param3, int param4) {
-        pb dupTemp$2 = null;
-        pb dupTemp$3 = null;
-        pb[] var5;
-        pb[] var6;
-        if (param3 <= -106) {
-          var6 = new pb[9];
-          var5 = var6;
-          dupTemp$2 = cl.a(param0, -41, param2);
-          var6[6] = dupTemp$2;
-          var5[3] = dupTemp$2;
-          var5[2] = dupTemp$2;
-          var5[1] = dupTemp$2;
-          var5[0] = dupTemp$2;
-          dupTemp$3 = cl.a(param1, -117, param2);
-          var6[8] = dupTemp$3;
-          var5[7] = dupTemp$3;
-          var5[5] = dupTemp$3;
-          if (param4 != 0) {
-            var6[4] = cl.a(param4, 119, 64);
-            return var5;
-          } else {
-            return var5;
-          }
-        } else {
+        if (param3 > -106) {
           return (pb[]) null;
         }
+        pb[] var6 = new pb[9];
+        pb[] var5 = var6;
+        pb dupTemp$0 = cl.a(param0, -41, param2);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        pb dupTemp$1 = cl.a(param1, -117, param2);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (param4 == 0) {
+          return var5;
+        }
+        var6[4] = cl.a(param4, 119, 64);
+        return var5;
     }
 
     static {

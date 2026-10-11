@@ -43,17 +43,17 @@ final class pi {
         field_b = new int[var0];
         Random var1 = new Random();
         for (var2 = var0 - 1; var2 >= 0; var2--) {
-            field_b[var2] = ga.a(131072, true, var1) - 65536;
+          field_b[var2] = ga.a(131072, true, var1) - 65536;
         }
     }
 
     final static int a(int param0, int param1, int param2, int[] param3, int param4, int param5) {
         int var6 = param4 + ((pi.a(param0, param1, param2) >> 2) + (pi.a(param0 >> 1, param1 >> 1, param2 >> 1) >> 1) + pi.a(param0 >> 2, param1 >> 2, param2 >> 2) >> 16 - param5);
         if (var6 < 0) {
-            return param3[0];
+          return param3[0];
         }
         if (var6 >= param3.length) {
-            return param3[param3.length - 1];
+          return param3[param3.length - 1];
         }
         return param3[var6];
     }
@@ -67,7 +67,7 @@ final class pi {
         int var0 = 0;
         field_a = new int[256];
         for (var0 = 0; var0 < field_a.length; var0++) {
-            field_a[var0] = (int)(256.0 * (1.0 - Math.cos((double)var0 * 3.141592653589793 / (double)field_a.length)) / 2.0);
+          field_a[var0] = (int)(256.0 * (1.0 - Math.cos((double)var0 * 3.141592653589793 / (double)field_a.length)) / 2.0);
         }
     }
 }

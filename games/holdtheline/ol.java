@@ -14,32 +14,32 @@ final class ol {
 
     final void a(int param0, ln param1) {
         try {
-            if (param1.field_l != null) {
-                param1.a((byte) -42);
-            }
-            param1.field_n = this.field_e;
-            param1.field_l = this.field_e.field_l;
-            int var3_int = 36 / ((param0 - 35) / 56);
-            param1.field_l.field_n = param1;
-            param1.field_n.field_l = param1;
+          if (param1.field_l != null) {
+            param1.a((byte) -42);
+          }
+          param1.field_n = this.field_e;
+          param1.field_l = this.field_e.field_l;
+          int var3_int = 36 / ((param0 - 35) / 56);
+          param1.field_l.field_n = param1;
+          param1.field_n.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "ol.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(boolean param0, byte param1) {
         cg.a((byte) -119, false, param0);
-        int var2 = 99 % ((param1 - -21) / 62);
+        int var2 = 99 % ((param1 + 21) / 62);
     }
 
     final int a(int param0) {
         int var5 = HoldTheLine.field_D;
-        int var3 = -20 % ((param0 - -63) / 42);
+        int var3 = -20 % ((param0 + 63) / 42);
         int var2 = 0;
         ln var4 = this.field_e.field_n;
         while (this.field_e != var4) {
-            var4 = var4.field_n;
-            var2++;
+          var4 = var4.field_n;
+          var2++;
         }
         return var2;
     }
@@ -47,109 +47,97 @@ final class ol {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 6985) {
-          field_i = (uf) null;
-          field_i = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 6985) {
           field_i = null;
           field_h = null;
           return;
         }
+        field_i = (uf) null;
+        field_i = null;
+        field_h = null;
     }
 
     final ln a(byte param0) {
-        ln var2;
-        int var3;
-        var3 = -20 / ((32 - param0) / 51);
-        var2 = this.field_e.field_n;
-        if (this.field_e == var2) {
-          return null;
-        } else {
+        int var3 = -20 / ((32 - param0) / 51);
+        ln var2 = this.field_e.field_n;
+        if (this.field_e != var2) {
           var2.a((byte) -42);
           return var2;
         }
+        return null;
     }
 
     final static boolean b(byte param0) {
         if (param0 != 38) {
-            field_i = (uf) null;
-            return ra.field_Z.a(-42);
+          field_i = (uf) null;
+          return ra.field_Z.a(-42);
         }
         return ra.field_Z.a(-42);
     }
 
     final ln e(int param0) {
-        ln var2;
-        int var3;
-        var3 = -90 / ((23 - param0) / 32);
-        var2 = this.field_c;
-        if (this.field_e == var2) {
-          this.field_c = null;
-          return null;
-        } else {
+        int var3 = -90 / ((23 - param0) / 32);
+        ln var2 = this.field_c;
+        if (this.field_e != var2) {
           this.field_c = var2.field_n;
           return var2;
         }
+        this.field_c = null;
+        return null;
     }
 
     final ln c(int param0) {
         ln var2 = null;
+        ln var2Lifetime1;
         if (param0 < 64) {
-            ln var3 = (ln) null;
-            this.a(-122, (ln) null);
-            var2 = this.field_e.field_n;
-            if (!(this.field_e != var2)) {
-                this.field_c = null;
-                return null;
-            }
-            this.field_c = var2.field_n;
-            return var2;
-        }
-        var2 = this.field_e.field_n;
-        if (!(this.field_e != var2)) {
+          ln var3 = (ln) null;
+          this.a(-122, (ln) null);
+          var2 = this.field_e.field_n;
+          if (this.field_e == var2) {
             this.field_c = null;
             return null;
+          }
+          this.field_c = var2.field_n;
+          return var2;
         }
-        this.field_c = var2.field_n;
-        return var2;
+        var2Lifetime1 = this.field_e.field_n;
+        if (this.field_e == var2Lifetime1) {
+          this.field_c = null;
+          return null;
+        }
+        this.field_c = var2Lifetime1.field_n;
+        return var2Lifetime1;
     }
 
     final static void a(int param0, ah param1) {
         try {
-            param1.a(-30510, mm.field_e);
-            if (param0 != 256) {
-                field_d = 120;
-            }
+          param1.a(-30510, mm.field_e);
+          if (param0 != 256) {
+            field_d = 120;
+          }
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "ol.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "ol.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean d(int param0) {
-        if (param0 == 0) {
-          if (!pj.b((byte) 87)) {
-            if (0 < fc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 0) {
           field_f = 110;
-          if (!pj.b((byte) 87)) {
-            if (0 < fc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (pj.b((byte) 87)) {
             return false;
           }
+          if (0 >= fc.field_a) {
+            return true;
+          }
+          return false;
         }
+        if (pj.b((byte) 87)) {
+          return false;
+        }
+        if (0 >= fc.field_a) {
+          return true;
+        }
+        return false;
     }
 
     public ol() {

@@ -13,58 +13,56 @@ class gg {
     final static void a(int param0, int param1) {
         td.field_l = param0;
         if (param1 != 10) {
-            gg.b((byte) -29);
-            ed.a((byte) -120);
-            return;
+          gg.b((byte) -29);
+          ed.a((byte) -120);
+          return;
         }
         ed.a((byte) -120);
     }
 
     public static void b(int param0) {
-        if (param0 != 12516) {
-          field_f = (boolean[]) null;
-          field_e = null;
-          field_b = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 12516) {
           field_e = null;
           field_b = null;
           field_c = null;
           field_f = null;
           return;
         }
+        field_f = (boolean[]) null;
+        field_e = null;
+        field_b = null;
+        field_c = null;
+        field_f = null;
     }
 
     final void c(int param0) {
-        if (!(null != this.field_a)) {
-            return;
+        if (null == this.field_a) {
+          return;
         }
         this.field_a.field_d = this.field_d;
         this.field_d.field_a = this.field_a;
         this.field_a = null;
         this.field_d = null;
         if (param0 != 10) {
-            gg.b(32);
+          gg.b(32);
         }
     }
 
     final boolean a(boolean param0) {
         if (null == this.field_a) {
-            return false;
+          return false;
         }
         if (param0) {
-            field_e = (o) null;
-            return true;
+          field_e = (o) null;
+          return true;
         }
         return true;
     }
 
     final static boolean b(byte param0) {
         if (param0 != 89) {
-            field_f = (boolean[]) null;
-            return lb.g((byte) -94);
+          field_f = (boolean[]) null;
+          return lb.g((byte) -94);
         }
         return lb.g((byte) -94);
     }

@@ -16,22 +16,19 @@ final class re {
 
     final int a(int param0, int param1) {
         if (param0 != 0) {
-            return 37;
+          return 37;
         }
         if (param1 > this.field_h) {
-            throw new ArrayIndexOutOfBoundsException(param1);
+          throw new ArrayIndexOutOfBoundsException(param1);
         }
         return this.field_i[param1];
     }
 
     private final void b(int param0, byte param1) {
-        int[] var3;
-        int[] var4;
-        if (param1 <= 59) {
-          return;
-        } else {
+        int[] var4 = null;
+        if (param1 > 59) {
           var4 = new int[this.a(param0, (byte) 120)];
-          var3 = var4;
+          int[] var3 = var4;
           qq.a(this.field_i, 0, var4, 0, this.field_i.length);
           this.field_i = var4;
           return;
@@ -41,40 +38,29 @@ final class re {
     private final int a(int param0, byte param1) {
         int var3;
         int var4;
-        L0: {
-          var4 = Vertigo2.field_L ? 1 : 0;
-          var3 = this.field_i.length;
-          if (param1 == 120) {
-            break L0;
-          } else {
-            this.a((byte) -28, -51, -53);
-            break L0;
-          }
+        var4 = Vertigo2.field_L ? 1 : 0;
+        var3 = this.field_i.length;
+        if (param1 != 120) {
+          this.a((byte) -28, -51, -53);
         }
-        L1: while (true) {
-          if (var3 > param0) {
-            return var3;
-          } else {
-            if (this.field_e) {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L1;
-              } else {
-                var3 = var3 * this.field_b;
-                continue L1;
-              }
-            } else {
-              var3 = var3 + this.field_b;
-              continue L1;
-            }
+        while (var3 <= param0) {
+          if (!this.field_e) {
+            var3 = var3 + this.field_b;
+            continue;
           }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_b;
         }
+        return var3;
     }
 
     final int b(int param0) {
         if (param0 < 115) {
-            field_j = 104;
-            return this.field_h + 1;
+          field_j = 104;
+          return this.field_h + 1;
         }
         return this.field_h + 1;
     }
@@ -85,88 +71,64 @@ final class re {
         field_f = null;
         field_c = null;
         if (param0 < -41) {
-            return;
+          return;
         }
         field_j = 39;
     }
 
     private final void a(byte param0, int param1, int param2) {
-        int discarded$2 = 0;
-        int discarded$3 = 0;
-        if (this.field_h >= param2) {
-          L0: {
-            if (param2 >= this.field_i.length) {
-              this.b(param2, (byte) 94);
-              break L0;
-            } else {
-              break L0;
-            }
+        int discarded$0 = 0;
+        if (this.field_h < param2) {
+          this.field_h = param2;
+          if (param2 >= this.field_i.length) {
+            this.b(param2, (byte) 94);
           }
           if (param0 >= -20) {
-            discarded$2 = this.a(110, (byte) -93);
-            this.field_i[param2] = param1;
-            return;
-          } else {
+            discarded$0 = this.a(110, (byte) -93);
             this.field_i[param2] = param1;
             return;
           }
-        } else {
-          L1: {
-            this.field_h = param2;
-            if (param2 >= this.field_i.length) {
-              this.b(param2, (byte) 94);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (param0 < -20) {
-            this.field_i[param2] = param1;
-            return;
-          } else {
-            discarded$3 = this.a(110, (byte) -93);
-            this.field_i[param2] = param1;
-            return;
-          }
+          this.field_i[param2] = param1;
+          return;
         }
+        if (param2 >= this.field_i.length) {
+          this.b(param2, (byte) 94);
+        }
+        if (param0 < -20) {
+          this.field_i[param2] = param1;
+          return;
+        }
+        int discarded$1 = this.a(110, (byte) -93);
+        this.field_i[param2] = param1;
     }
 
     final static cr c(int param0) {
         if (param0 != -1087) {
-            return (cr) null;
+          return (cr) null;
         }
         return tf.b((byte) 98);
     }
 
     final void b(int param0, int param1) {
-        if (param0 >= 0) {
-          if (this.field_h >= param0) {
-            L0: {
-              if (this.field_h != param0) {
-                qq.a(this.field_i, 1 + param0, this.field_i, param0, -param0 + this.field_h);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            this.field_h = this.field_h - 1;
-            if (param1 == 7810) {
-              return;
-            } else {
-              this.a((byte) 89, -75);
-              return;
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param0);
-          }
-        } else {
+        if (param0 < 0) {
           throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_h < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_h != param0) {
+          qq.a(this.field_i, 1 + param0, this.field_i, param0, -param0 + this.field_h);
+        }
+        this.field_h = this.field_h - 1;
+        if (param1 != 7810) {
+          this.a((byte) 89, -75);
+          return;
         }
     }
 
     final void a(byte param0, int param1) {
         if (param0 <= 89) {
-            return;
+          return;
         }
         this.a((byte) -87, param1, this.field_h + 1);
     }

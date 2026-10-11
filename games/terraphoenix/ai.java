@@ -17,7 +17,7 @@ final class ai {
         field_i = null;
         field_a = null;
         if (param0 != 134217727) {
-            return;
+          return;
         }
         field_d = null;
         field_f = null;

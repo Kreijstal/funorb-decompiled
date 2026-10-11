@@ -20,12 +20,12 @@ final class ep {
         field_h = param3 - param1;
         ep.b();
         if (field_a.length < field_h) {
-            field_a = new int[cb.b(-74, field_h)];
+          field_a = new int[cb.b(-74, field_h)];
         }
         int var4 = param1 * oo.field_b + param0;
         for (var5 = 0; var5 < field_h; var5++) {
-            field_a[var5] = var4;
-            var4 = var4 + oo.field_b;
+          field_a[var5] = var4;
+          var4 = var4 + oo.field_b;
         }
     }
 
@@ -42,159 +42,120 @@ final class ep {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
+        int incrementValue$12 = 0;
+        int incrementValue$13 = 0;
+        int incrementValue$14 = 0;
+        int incrementValue$15 = 0;
+        int incrementValue$16 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
         int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
         int var6;
         int var7;
         int var8;
-        L0: {
-          if (!field_g) {
-            break L0;
-          } else {
-            L1: {
-              if (param5 <= field_i) {
-                break L1;
-              } else {
-                param5 = field_i;
-                break L1;
-              }
-            }
-            if (param4 >= 0) {
-              break L0;
-            } else {
-              param4 = 0;
-              break L0;
-            }
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var8Lifetime3;
+        int var8Lifetime4;
+        if (field_g) {
+          if (param5 > field_i) {
+            param5 = field_i;
+          }
+          if (param4 < 0) {
+            param4 = 0;
           }
         }
-        if (param4 < param5) {
-          param1 = param1 + param4;
-          param3 = param5 - param4 >> 2;
-          if (field_j != 0) {
-            L2: {
-              if (field_j != 254) {
-                var6 = field_j;
-                var7 = 256 - field_j;
-                param2 = ((param2 & 16711935) * var7 >> 8 & 16711935) + ((param2 & 65280) * var7 >> 8 & 65280);
-                L3: while (true) {
-                  param3--;
-                  if (param3 < 0) {
-                    param3 = param5 - param4 & 3;
-                    L4: while (true) {
-                      param3--;
-                      if (param3 < 0) {
-                        break L2;
-                      } else {
-                        var8 = param0[param1];
-                        incrementValue$0 = param1;
-                        param1++;
-                        param0[incrementValue$0] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var8 = param0[param1];
-                    incrementValue$1 = param1;
-                    param1++;
-                    param0[incrementValue$1] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
-                    var8 = param0[param1];
-                    incrementValue$2 = param1;
-                    param1++;
-                    param0[incrementValue$2] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
-                    var8 = param0[param1];
-                    incrementValue$3 = param1;
-                    param1++;
-                    param0[incrementValue$3] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
-                    var8 = param0[param1];
-                    incrementValue$4 = param1;
-                    param1++;
-                    param0[incrementValue$4] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
-                    continue L3;
-                  }
+        if (param4 >= param5) {
+          return;
+        }
+        param1 = param1 + param4;
+        param3 = param5 - param4 >> 2;
+        if (field_j == 0) {
+          while (true) {
+            param3--;
+            if (param3 < 0) {
+              param3 = param5 - param4 & 3;
+              while (true) {
+                param3--;
+                if (param3 < 0) {
+                  return;
                 }
-              } else {
-                L5: while (true) {
-                  param3--;
-                  if (param3 < 0) {
-                    param3 = param5 - param4 & 3;
-                    L6: while (true) {
-                      param3--;
-                      if (param3 < 0) {
-                        break L2;
-                      } else {
-                        incrementValue$5 = param1;
-                        param1++;
-                        param0[incrementValue$5] = param0[param1];
-                        continue L6;
-                      }
-                    }
-                  } else {
-                    incrementValue$6 = param1;
-                    param1++;
-                    param0[incrementValue$6] = param0[param1];
-                    incrementValue$7 = param1;
-                    param1++;
-                    param0[incrementValue$7] = param0[param1];
-                    incrementValue$8 = param1;
-                    param1++;
-                    param0[incrementValue$8] = param0[param1];
-                    incrementValue$9 = param1;
-                    param1++;
-                    param0[incrementValue$9] = param0[param1];
-                    continue L5;
-                  }
-                }
+                param0[param1++] = param2;
               }
             }
-            return;
-          } else {
-            L7: while (true) {
+            param0[param1++] = param2;
+            param0[param1++] = param2;
+            param0[param1++] = param2;
+            param0[param1++] = param2;
+          }
+        }
+        L2: {
+          if (field_j == 254) {
+            while (true) {
               param3--;
               if (param3 < 0) {
                 param3 = param5 - param4 & 3;
-                L8: while (true) {
+                while (true) {
                   param3--;
                   if (param3 < 0) {
-                    return;
-                  } else {
-                    incrementValue$10 = param1;
-                    param1++;
-                    param0[incrementValue$10] = param2;
-                    continue L8;
+                    break L2;
                   }
+                  incrementValue$12 = param1;
+                  param1++;
+                  param0[incrementValue$12] = param0[param1];
                 }
-              } else {
-                incrementValue$11 = param1;
-                param1++;
-                param0[incrementValue$11] = param2;
-                incrementValue$12 = param1;
-                param1++;
-                param0[incrementValue$12] = param2;
-                incrementValue$13 = param1;
-                param1++;
-                param0[incrementValue$13] = param2;
-                incrementValue$14 = param1;
-                param1++;
-                param0[incrementValue$14] = param2;
-                continue L7;
               }
+              incrementValue$13 = param1;
+              param1++;
+              param0[incrementValue$13] = param0[param1];
+              incrementValue$14 = param1;
+              param1++;
+              param0[incrementValue$14] = param0[param1];
+              incrementValue$15 = param1;
+              param1++;
+              param0[incrementValue$15] = param0[param1];
+              incrementValue$16 = param1;
+              param1++;
+              param0[incrementValue$16] = param0[param1];
             }
           }
-        } else {
-          return;
+          var6 = field_j;
+          var7 = 256 - field_j;
+          param2 = ((param2 & 16711935) * var7 >> 8 & 16711935) + ((param2 & 65280) * var7 >> 8 & 65280);
+          while (true) {
+            param3--;
+            if (param3 < 0) {
+              param3 = param5 - param4 & 3;
+              while (true) {
+                param3--;
+                if (param3 < 0) {
+                  break L2;
+                }
+                var8 = param0[param1];
+                incrementValue$7 = param1;
+                param1++;
+                param0[incrementValue$7] = param2 + ((var8 & 16711935) * var6 >> 8 & 16711935) + ((var8 & 65280) * var6 >> 8 & 65280);
+              }
+            }
+            var8Lifetime1 = param0[param1];
+            incrementValue$8 = param1;
+            param1++;
+            param0[incrementValue$8] = param2 + ((var8Lifetime1 & 16711935) * var6 >> 8 & 16711935) + ((var8Lifetime1 & 65280) * var6 >> 8 & 65280);
+            var8Lifetime2 = param0[param1];
+            incrementValue$9 = param1;
+            param1++;
+            param0[incrementValue$9] = param2 + ((var8Lifetime2 & 16711935) * var6 >> 8 & 16711935) + ((var8Lifetime2 & 65280) * var6 >> 8 & 65280);
+            var8Lifetime3 = param0[param1];
+            incrementValue$10 = param1;
+            param1++;
+            param0[incrementValue$10] = param2 + ((var8Lifetime3 & 16711935) * var6 >> 8 & 16711935) + ((var8Lifetime3 & 65280) * var6 >> 8 & 65280);
+            var8Lifetime4 = param0[param1];
+            incrementValue$11 = param1;
+            param1++;
+            param0[incrementValue$11] = param2 + ((var8Lifetime4 & 16711935) * var6 >> 8 & 16711935) + ((var8Lifetime4 & 65280) * var6 >> 8 & 65280);
+          }
         }
     }
 
@@ -216,695 +177,437 @@ final class ep {
         int var7;
         int var8;
         int var9;
-        L0: {
-          var7 = 0;
-          if (param1 == param0) {
-            break L0;
-          } else {
-            var7 = (param4 - param3 << 16) / (param1 - param0);
-            break L0;
-          }
+        var7 = 0;
+        if (param1 != param0) {
+          var7 = (param4 - param3 << 16) / (param1 - param0);
         }
-        L1: {
-          var8 = 0;
-          if (param2 == param1) {
-            break L1;
-          } else {
-            var8 = (param5 - param4 << 16) / (param2 - param1);
-            break L1;
-          }
+        var8 = 0;
+        if (param2 != param1) {
+          var8 = (param5 - param4 << 16) / (param2 - param1);
         }
-        L2: {
-          var9 = 0;
-          if (param2 == param0) {
-            break L2;
-          } else {
-            var9 = (param3 - param5 << 16) / (param0 - param2);
-            break L2;
-          }
+        var9 = 0;
+        if (param2 != param0) {
+          var9 = (param3 - param5 << 16) / (param0 - param2);
         }
-        L3: {
-          if (param0 > param1) {
-            break L3;
-          } else {
-            if (param0 > param2) {
-              break L3;
-            } else {
-              if (param0 < field_h) {
-                L4: {
-                  if (param1 <= field_h) {
-                    break L4;
-                  } else {
-                    param1 = field_h;
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (param2 <= field_h) {
-                    break L5;
-                  } else {
-                    param2 = field_h;
-                    break L5;
-                  }
-                }
-                if (param1 >= param2) {
-                  L6: {
-                    localTemp$0 = param3 << 16;
-                    param3 = localTemp$0;
-                    param4 = localTemp$0;
-                    if (param0 >= 0) {
-                      break L6;
-                    } else {
-                      param4 = param4 - var9 * param0;
-                      param3 = param3 - var7 * param0;
-                      param0 = 0;
-                      break L6;
-                    }
-                  }
-                  L7: {
-                    param5 = param5 << 16;
-                    if (param2 >= 0) {
-                      break L7;
-                    } else {
-                      param5 = param5 - var8 * param2;
-                      param2 = 0;
-                      break L7;
-                    }
-                  }
-                  L8: {
-                    L9: {
-                      if (param0 == param2) {
-                        break L9;
-                      } else {
-                        if (var9 < var7) {
-                          break L8;
-                        } else {
-                          break L9;
-                        }
-                      }
-                    }
-                    L10: {
-                      if (param0 != param2) {
-                        break L10;
-                      } else {
-                        if (var8 <= var7) {
-                          break L10;
-                        } else {
-                          break L8;
-                        }
-                      }
-                    }
-                    param1 = param1 - param2;
-                    param2 = param2 - param0;
-                    param0 = field_a[param0];
-                    L11: while (true) {
-                      param2--;
-                      if (param2 < 0) {
-                        param1--;
-                        L12: while (true) {
-                          if (param1 < 0) {
-                            return;
-                          } else {
-                            ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
-                            param5 = param5 + var8;
-                            param3 = param3 + var7;
-                            param0 = param0 + oo.field_b;
-                            param1--;
-                            continue L12;
-                          }
-                        }
-                      } else {
-                        ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param4 >> 16);
-                        param4 = param4 + var9;
-                        param3 = param3 + var7;
-                        param0 = param0 + oo.field_b;
-                        continue L11;
-                      }
-                    }
-                  }
-                  param1 = param1 - param2;
-                  param2 = param2 - param0;
-                  param0 = field_a[param0];
-                  L13: while (true) {
-                    param2--;
-                    if (param2 < 0) {
-                      param1--;
-                      L14: while (true) {
-                        if (param1 < 0) {
-                          return;
-                        } else {
-                          ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
-                          param5 = param5 + var8;
-                          param3 = param3 + var7;
-                          param0 = param0 + oo.field_b;
-                          param1--;
-                          continue L14;
-                        }
-                      }
-                    } else {
-                      ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param3 >> 16);
-                      param4 = param4 + var9;
-                      param3 = param3 + var7;
-                      param0 = param0 + oo.field_b;
-                      continue L13;
-                    }
-                  }
-                } else {
-                  L15: {
-                    localTemp$1 = param3 << 16;
-                    param3 = localTemp$1;
-                    param5 = localTemp$1;
-                    if (param0 >= 0) {
-                      break L15;
-                    } else {
-                      param5 = param5 - var9 * param0;
-                      param3 = param3 - var7 * param0;
-                      param0 = 0;
-                      break L15;
-                    }
-                  }
-                  L16: {
-                    param4 = param4 << 16;
-                    if (param1 >= 0) {
-                      break L16;
-                    } else {
-                      param4 = param4 - var8 * param1;
-                      param1 = 0;
-                      break L16;
-                    }
-                  }
-                  L17: {
-                    L18: {
-                      if (param0 == param1) {
-                        break L18;
-                      } else {
-                        if (var9 < var7) {
-                          break L17;
-                        } else {
-                          break L18;
-                        }
-                      }
-                    }
-                    L19: {
-                      if (param0 != param1) {
-                        break L19;
-                      } else {
-                        if (var9 <= var8) {
-                          break L19;
-                        } else {
-                          break L17;
-                        }
-                      }
-                    }
-                    param2 = param2 - param1;
-                    param1 = param1 - param0;
-                    param0 = field_a[param0];
-                    L20: while (true) {
-                      param1--;
-                      if (param1 < 0) {
-                        param2--;
-                        L21: while (true) {
-                          if (param2 < 0) {
-                            return;
-                          } else {
-                            ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param5 >> 16);
-                            param5 = param5 + var9;
-                            param4 = param4 + var8;
-                            param0 = param0 + oo.field_b;
-                            param2--;
-                            continue L21;
-                          }
-                        }
-                      } else {
-                        ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
-                        param5 = param5 + var9;
-                        param3 = param3 + var7;
-                        param0 = param0 + oo.field_b;
-                        continue L20;
-                      }
-                    }
-                  }
-                  param2 = param2 - param1;
-                  param1 = param1 - param0;
-                  param0 = field_a[param0];
-                  L22: while (true) {
-                    param1--;
-                    if (param1 < 0) {
-                      param2--;
-                      L23: while (true) {
-                        if (param2 < 0) {
-                          return;
-                        } else {
-                          ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param4 >> 16);
-                          param5 = param5 + var9;
-                          param4 = param4 + var8;
-                          param0 = param0 + oo.field_b;
-                          param2--;
-                          continue L23;
-                        }
-                      }
-                    } else {
-                      ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
-                      param5 = param5 + var9;
-                      param3 = param3 + var7;
-                      param0 = param0 + oo.field_b;
-                      continue L22;
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
+        if (param0 <= param1 &&
+          param0 <= param2) {
+          if (param0 >= field_h) {
+            return;
+          }
+          if (param1 > field_h) {
+            param1 = field_h;
+          }
+          if (param2 > field_h) {
+            param2 = field_h;
+          }
+          if (param1 >= param2) {
+            localTemp$0 = param3 << 16;
+            param3 = localTemp$0;
+            param4 = localTemp$0;
+            if (param0 < 0) {
+              param4 = param4 - var9 * param0;
+              param3 = param3 - var7 * param0;
+              param0 = 0;
             }
+            param5 = param5 << 16;
+            if (param2 < 0) {
+              param5 = param5 - var8 * param2;
+              param2 = 0;
+            }
+            if ((param0 == param2 ||
+              var9 >= var7) &&
+              (param0 != param2 ||
+              var8 <= var7)) {
+              param1 = param1 - param2;
+              param2 = param2 - param0;
+              param0 = field_a[param0];
+              while (true) {
+                param2--;
+                if (param2 >= 0) {
+                  ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  param4 = param4 + var9;
+                  param3 = param3 + var7;
+                  param0 = param0 + oo.field_b;
+                  continue;
+                }
+                break;
+              }
+              param1--;
+              while (param1 >= 0) {
+                ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                param5 = param5 + var8;
+                param3 = param3 + var7;
+                param0 = param0 + oo.field_b;
+                param1--;
+              }
+              return;
+            }
+            param1 = param1 - param2;
+            param2 = param2 - param0;
+            param0 = field_a[param0];
+            while (true) {
+              param2--;
+              if (param2 >= 0) {
+                ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param3 >> 16);
+                param4 = param4 + var9;
+                param3 = param3 + var7;
+                param0 = param0 + oo.field_b;
+                continue;
+              }
+              break;
+            }
+            param1--;
+            while (param1 >= 0) {
+              ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              param5 = param5 + var8;
+              param3 = param3 + var7;
+              param0 = param0 + oo.field_b;
+              param1--;
+            }
+            return;
           }
+          localTemp$1 = param3 << 16;
+          param3 = localTemp$1;
+          param5 = localTemp$1;
+          if (param0 < 0) {
+            param5 = param5 - var9 * param0;
+            param3 = param3 - var7 * param0;
+            param0 = 0;
+          }
+          param4 = param4 << 16;
+          if (param1 < 0) {
+            param4 = param4 - var8 * param1;
+            param1 = 0;
+          }
+          if ((param0 == param1 ||
+            var9 >= var7) &&
+            (param0 != param1 ||
+            var9 <= var8)) {
+            param2 = param2 - param1;
+            param1 = param1 - param0;
+            param0 = field_a[param0];
+            while (true) {
+              param1--;
+              if (param1 >= 0) {
+                ep.a(oo.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                param5 = param5 + var9;
+                param3 = param3 + var7;
+                param0 = param0 + oo.field_b;
+                continue;
+              }
+              break;
+            }
+            param2--;
+            while (param2 >= 0) {
+              ep.a(oo.field_i, param0, param6, 0, param4 >> 16, param5 >> 16);
+              param5 = param5 + var9;
+              param4 = param4 + var8;
+              param0 = param0 + oo.field_b;
+              param2--;
+            }
+            return;
+          }
+          param2 = param2 - param1;
+          param1 = param1 - param0;
+          param0 = field_a[param0];
+          while (true) {
+            param1--;
+            if (param1 >= 0) {
+              ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              param5 = param5 + var9;
+              param3 = param3 + var7;
+              param0 = param0 + oo.field_b;
+              continue;
+            }
+            break;
+          }
+          param2--;
+          while (param2 >= 0) {
+            ep.a(oo.field_i, param0, param6, 0, param5 >> 16, param4 >> 16);
+            param5 = param5 + var9;
+            param4 = param4 + var8;
+            param0 = param0 + oo.field_b;
+            param2--;
+          }
+          return;
         }
         if (param1 > param2) {
-          if (param2 < field_h) {
-            L24: {
-              if (param0 <= field_h) {
-                break L24;
-              } else {
-                param0 = field_h;
-                break L24;
-              }
-            }
-            L25: {
-              if (param1 <= field_h) {
-                break L25;
-              } else {
-                param1 = field_h;
-                break L25;
-              }
-            }
-            if (param0 >= param1) {
-              L26: {
-                localTemp$2 = param5 << 16;
-                param5 = localTemp$2;
-                param3 = localTemp$2;
-                if (param2 >= 0) {
-                  break L26;
-                } else {
-                  param3 = param3 - var8 * param2;
-                  param5 = param5 - var9 * param2;
-                  param2 = 0;
-                  break L26;
-                }
-              }
-              L27: {
-                param4 = param4 << 16;
-                if (param1 >= 0) {
-                  break L27;
-                } else {
-                  param4 = param4 - var7 * param1;
-                  param1 = 0;
-                  break L27;
-                }
-              }
-              if (var8 >= var9) {
-                param0 = param0 - param1;
-                param1 = param1 - param2;
-                param2 = field_a[param2];
-                L28: while (true) {
-                  param1--;
-                  if (param1 < 0) {
-                    param0--;
-                    L29: while (true) {
-                      if (param0 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
-                        param4 = param4 + var7;
-                        param5 = param5 + var9;
-                        param2 = param2 + oo.field_b;
-                        param0--;
-                        continue L29;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param3 >> 16);
-                    param3 = param3 + var8;
-                    param5 = param5 + var9;
-                    param2 = param2 + oo.field_b;
-                    continue L28;
-                  }
-                }
-              } else {
-                param0 = param0 - param1;
-                param1 = param1 - param2;
-                param2 = field_a[param2];
-                L30: while (true) {
-                  param1--;
-                  if (param1 < 0) {
-                    param0--;
-                    L31: while (true) {
-                      if (param0 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
-                        param4 = param4 + var7;
-                        param5 = param5 + var9;
-                        param2 = param2 + oo.field_b;
-                        param0--;
-                        continue L31;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param5 >> 16);
-                    param3 = param3 + var8;
-                    param5 = param5 + var9;
-                    param2 = param2 + oo.field_b;
-                    continue L30;
-                  }
-                }
-              }
-            } else {
-              L32: {
-                localTemp$3 = param5 << 16;
-                param5 = localTemp$3;
-                param4 = localTemp$3;
-                if (param2 >= 0) {
-                  break L32;
-                } else {
-                  param4 = param4 - var8 * param2;
-                  param5 = param5 - var9 * param2;
-                  param2 = 0;
-                  break L32;
-                }
-              }
-              L33: {
-                param3 = param3 << 16;
-                if (param0 >= 0) {
-                  break L33;
-                } else {
-                  param3 = param3 - var7 * param0;
-                  param0 = 0;
-                  break L33;
-                }
-              }
-              if (var8 >= var9) {
-                param1 = param1 - param0;
-                param0 = param0 - param2;
-                param2 = field_a[param2];
-                L34: while (true) {
-                  param0--;
-                  if (param0 < 0) {
-                    param1--;
-                    L35: while (true) {
-                      if (param1 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param4 >> 16);
-                        param4 = param4 + var8;
-                        param3 = param3 + var7;
-                        param2 = param2 + oo.field_b;
-                        param1--;
-                        continue L35;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
-                    param4 = param4 + var8;
-                    param5 = param5 + var9;
-                    param2 = param2 + oo.field_b;
-                    continue L34;
-                  }
-                }
-              } else {
-                param1 = param1 - param0;
-                param0 = param0 - param2;
-                param2 = field_a[param2];
-                L36: while (true) {
-                  param0--;
-                  if (param0 < 0) {
-                    param1--;
-                    L37: while (true) {
-                      if (param1 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param3 >> 16);
-                        param4 = param4 + var8;
-                        param3 = param3 + var7;
-                        param2 = param2 + oo.field_b;
-                        param1--;
-                        continue L37;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
-                    param4 = param4 + var8;
-                    param5 = param5 + var9;
-                    param2 = param2 + oo.field_b;
-                    continue L36;
-                  }
-                }
-              }
-            }
-          } else {
+          if (param2 >= field_h) {
             return;
           }
-        } else {
-          if (param1 < field_h) {
-            L38: {
-              if (param2 <= field_h) {
-                break L38;
-              } else {
-                param2 = field_h;
-                break L38;
-              }
+          if (param0 > field_h) {
+            param0 = field_h;
+          }
+          if (param1 > field_h) {
+            param1 = field_h;
+          }
+          if (param0 >= param1) {
+            localTemp$2 = param5 << 16;
+            param5 = localTemp$2;
+            param3 = localTemp$2;
+            if (param2 < 0) {
+              param3 = param3 - var8 * param2;
+              param5 = param5 - var9 * param2;
+              param2 = 0;
             }
-            L39: {
-              if (param0 <= field_h) {
-                break L39;
-              } else {
-                param0 = field_h;
-                break L39;
-              }
+            param4 = param4 << 16;
+            if (param1 < 0) {
+              param4 = param4 - var7 * param1;
+              param1 = 0;
             }
-            if (param2 >= param0) {
-              L40: {
-                localTemp$4 = param4 << 16;
-                param4 = localTemp$4;
-                param5 = localTemp$4;
+            if (var8 >= var9) {
+              param0 = param0 - param1;
+              param1 = param1 - param2;
+              param2 = field_a[param2];
+              while (true) {
+                param1--;
                 if (param1 >= 0) {
-                  break L40;
-                } else {
-                  param5 = param5 - var7 * param1;
-                  param4 = param4 - var8 * param1;
-                  param1 = 0;
-                  break L40;
+                  ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  param3 = param3 + var8;
+                  param5 = param5 + var9;
+                  param2 = param2 + oo.field_b;
+                  continue;
                 }
+                break;
               }
-              L41: {
-                param3 = param3 << 16;
-                if (param0 >= 0) {
-                  break L41;
-                } else {
-                  param3 = param3 - var9 * param0;
-                  param0 = 0;
-                  break L41;
-                }
+              param0--;
+              while (param0 >= 0) {
+                ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                param4 = param4 + var7;
+                param5 = param5 + var9;
+                param2 = param2 + oo.field_b;
+                param0--;
               }
-              if (var7 >= var8) {
-                param2 = param2 - param0;
-                param0 = param0 - param1;
-                param1 = field_a[param1];
-                L42: while (true) {
-                  param0--;
-                  if (param0 < 0) {
-                    param2--;
-                    L43: while (true) {
-                      if (param2 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
-                        param3 = param3 + var9;
-                        param4 = param4 + var8;
-                        param1 = param1 + oo.field_b;
-                        param2--;
-                        continue L43;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param5 >> 16);
-                    param5 = param5 + var7;
-                    param4 = param4 + var8;
-                    param1 = param1 + oo.field_b;
-                    continue L42;
-                  }
-                }
-              } else {
-                param2 = param2 - param0;
-                param0 = param0 - param1;
-                param1 = field_a[param1];
-                L44: while (true) {
-                  param0--;
-                  if (param0 < 0) {
-                    param2--;
-                    L45: while (true) {
-                      if (param2 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
-                        param3 = param3 + var9;
-                        param4 = param4 + var8;
-                        param1 = param1 + oo.field_b;
-                        param2--;
-                        continue L45;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param4 >> 16);
-                    param5 = param5 + var7;
-                    param4 = param4 + var8;
-                    param1 = param1 + oo.field_b;
-                    continue L44;
-                  }
-                }
-              }
-            } else {
-              L46: {
-                localTemp$5 = param4 << 16;
-                param4 = localTemp$5;
-                param3 = localTemp$5;
-                if (param1 >= 0) {
-                  break L46;
-                } else {
-                  param3 = param3 - var7 * param1;
-                  param4 = param4 - var8 * param1;
-                  param1 = 0;
-                  break L46;
-                }
-              }
-              L47: {
-                param5 = param5 << 16;
-                if (param2 >= 0) {
-                  break L47;
-                } else {
-                  param5 = param5 - var9 * param2;
-                  param2 = 0;
-                  break L47;
-                }
-              }
-              L48: {
-                L49: {
-                  if (param1 == param2) {
-                    break L49;
-                  } else {
-                    if (var7 < var8) {
-                      break L48;
-                    } else {
-                      break L49;
-                    }
-                  }
-                }
-                L50: {
-                  if (param1 != param2) {
-                    break L50;
-                  } else {
-                    if (var7 <= var9) {
-                      break L50;
-                    } else {
-                      break L48;
-                    }
-                  }
-                }
-                param0 = param0 - param2;
-                param2 = param2 - param1;
-                param1 = field_a[param1];
-                L51: while (true) {
-                  param2--;
-                  if (param2 < 0) {
-                    param0--;
-                    L52: while (true) {
-                      if (param0 < 0) {
-                        return;
-                      } else {
-                        ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param3 >> 16);
-                        param3 = param3 + var7;
-                        param5 = param5 + var9;
-                        param1 = param1 + oo.field_b;
-                        param0--;
-                        continue L52;
-                      }
-                    }
-                  } else {
-                    ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
-                    param3 = param3 + var7;
-                    param4 = param4 + var8;
-                    param1 = param1 + oo.field_b;
-                    continue L51;
-                  }
-                }
-              }
-              param0 = param0 - param2;
-              param2 = param2 - param1;
-              param1 = field_a[param1];
-              L53: while (true) {
-                param2--;
-                if (param2 < 0) {
-                  param0--;
-                  L54: while (true) {
-                    if (param0 < 0) {
-                      return;
-                    } else {
-                      ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param5 >> 16);
-                      param3 = param3 + var7;
-                      param5 = param5 + var9;
-                      param1 = param1 + oo.field_b;
-                      param0--;
-                      continue L54;
-                    }
-                  }
-                } else {
-                  ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
-                  param3 = param3 + var7;
-                  param4 = param4 + var8;
-                  param1 = param1 + oo.field_b;
-                  continue L53;
-                }
-              }
+              return;
             }
-          } else {
+            param0 = param0 - param1;
+            param1 = param1 - param2;
+            param2 = field_a[param2];
+            while (true) {
+              param1--;
+              if (param1 >= 0) {
+                ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param5 >> 16);
+                param3 = param3 + var8;
+                param5 = param5 + var9;
+                param2 = param2 + oo.field_b;
+                continue;
+              }
+              break;
+            }
+            param0--;
+            while (param0 >= 0) {
+              ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              param4 = param4 + var7;
+              param5 = param5 + var9;
+              param2 = param2 + oo.field_b;
+              param0--;
+            }
             return;
           }
+          localTemp$3 = param5 << 16;
+          param5 = localTemp$3;
+          param4 = localTemp$3;
+          if (param2 < 0) {
+            param4 = param4 - var8 * param2;
+            param5 = param5 - var9 * param2;
+            param2 = 0;
+          }
+          param3 = param3 << 16;
+          if (param0 < 0) {
+            param3 = param3 - var7 * param0;
+            param0 = 0;
+          }
+          if (var8 >= var9) {
+            param1 = param1 - param0;
+            param0 = param0 - param2;
+            param2 = field_a[param2];
+            while (true) {
+              param0--;
+              if (param0 >= 0) {
+                ep.a(oo.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                param4 = param4 + var8;
+                param5 = param5 + var9;
+                param2 = param2 + oo.field_b;
+                continue;
+              }
+              break;
+            }
+            param1--;
+            while (param1 >= 0) {
+              ep.a(oo.field_i, param2, param6, 0, param3 >> 16, param4 >> 16);
+              param4 = param4 + var8;
+              param3 = param3 + var7;
+              param2 = param2 + oo.field_b;
+              param1--;
+            }
+            return;
+          }
+          param1 = param1 - param0;
+          param0 = param0 - param2;
+          param2 = field_a[param2];
+          while (true) {
+            param0--;
+            if (param0 >= 0) {
+              ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              param4 = param4 + var8;
+              param5 = param5 + var9;
+              param2 = param2 + oo.field_b;
+              continue;
+            }
+            break;
+          }
+          param1--;
+          while (param1 >= 0) {
+            ep.a(oo.field_i, param2, param6, 0, param4 >> 16, param3 >> 16);
+            param4 = param4 + var8;
+            param3 = param3 + var7;
+            param2 = param2 + oo.field_b;
+            param1--;
+          }
+          return;
         }
+        if (param1 >= field_h) {
+          return;
+        }
+        if (param2 > field_h) {
+          param2 = field_h;
+        }
+        if (param0 > field_h) {
+          param0 = field_h;
+        }
+        if (param2 >= param0) {
+          localTemp$4 = param4 << 16;
+          param4 = localTemp$4;
+          param5 = localTemp$4;
+          if (param1 < 0) {
+            param5 = param5 - var7 * param1;
+            param4 = param4 - var8 * param1;
+            param1 = 0;
+          }
+          param3 = param3 << 16;
+          if (param0 < 0) {
+            param3 = param3 - var9 * param0;
+            param0 = 0;
+          }
+          if (var7 >= var8) {
+            param2 = param2 - param0;
+            param0 = param0 - param1;
+            param1 = field_a[param1];
+            while (true) {
+              param0--;
+              if (param0 >= 0) {
+                ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param5 >> 16);
+                param5 = param5 + var7;
+                param4 = param4 + var8;
+                param1 = param1 + oo.field_b;
+                continue;
+              }
+              break;
+            }
+            param2--;
+            while (param2 >= 0) {
+              ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              param3 = param3 + var9;
+              param4 = param4 + var8;
+              param1 = param1 + oo.field_b;
+              param2--;
+            }
+            return;
+          }
+          param2 = param2 - param0;
+          param0 = param0 - param1;
+          param1 = field_a[param1];
+          while (true) {
+            param0--;
+            if (param0 >= 0) {
+              ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param4 >> 16);
+              param5 = param5 + var7;
+              param4 = param4 + var8;
+              param1 = param1 + oo.field_b;
+              continue;
+            }
+            break;
+          }
+          param2--;
+          while (param2 >= 0) {
+            ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            param3 = param3 + var9;
+            param4 = param4 + var8;
+            param1 = param1 + oo.field_b;
+            param2--;
+          }
+          return;
+        }
+        localTemp$5 = param4 << 16;
+        param4 = localTemp$5;
+        param3 = localTemp$5;
+        if (param1 < 0) {
+          param3 = param3 - var7 * param1;
+          param4 = param4 - var8 * param1;
+          param1 = 0;
+        }
+        param5 = param5 << 16;
+        if (param2 < 0) {
+          param5 = param5 - var9 * param2;
+          param2 = 0;
+        }
+        if ((param1 == param2 ||
+          var7 >= var8) &&
+          (param1 != param2 ||
+          var7 <= var9)) {
+          param0 = param0 - param2;
+          param2 = param2 - param1;
+          param1 = field_a[param1];
+          while (true) {
+            param2--;
+            if (param2 >= 0) {
+              ep.a(oo.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              param3 = param3 + var7;
+              param4 = param4 + var8;
+              param1 = param1 + oo.field_b;
+              continue;
+            }
+            break;
+          }
+          param0--;
+          while (param0 >= 0) {
+            ep.a(oo.field_i, param1, param6, 0, param5 >> 16, param3 >> 16);
+            param3 = param3 + var7;
+            param5 = param5 + var9;
+            param1 = param1 + oo.field_b;
+            param0--;
+          }
+          return;
+        }
+        param0 = param0 - param2;
+        param2 = param2 - param1;
+        param1 = field_a[param1];
+        while (true) {
+          param2--;
+          if (param2 >= 0) {
+            ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            param3 = param3 + var7;
+            param4 = param4 + var8;
+            param1 = param1 + oo.field_b;
+            continue;
+          }
+          break;
+        }
+        param0--;
+        while (param0 >= 0) {
+          ep.a(oo.field_i, param1, param6, 0, param3 >> 16, param5 >> 16);
+          param3 = param3 + var7;
+          param5 = param5 + var9;
+          param1 = param1 + oo.field_b;
+          param0--;
+        }
+        return;
     }
 
     final static void a(int param0, int param1, int param2) {
-        int stackIn_8_0 = 0;
-        L0: {
-          L1: {
-            if (param0 < 0) {
-              break L1;
-            } else {
-              if (param0 > field_i) {
-                break L1;
-              } else {
-                if (param1 < 0) {
-                  break L1;
-                } else {
-                  if (param1 > field_i) {
-                    break L1;
-                  } else {
-                    if (param2 < 0) {
-                      break L1;
-                    } else {
-                      if (param2 <= field_i) {
-                        stackIn_8_0 = 0;
-                        break L0;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          stackIn_8_0 = 1;
-          break L0;
-        }
-        field_g = stackIn_8_0 != 0;
+        boolean stackIn_8_0 = false;
+        stackIn_8_0 = !(param0 >= 0) || !(param0 <= field_i) || !(param1 >= 0) || !(param1 <= field_i) || !(param2 >= 0) || !(param2 <= field_i);
+        field_g = stackIn_8_0;
     }
 
     private final static void b() {
@@ -914,6 +617,8 @@ final class ep {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_k = new int[2048];
         field_g = false;
         field_b = new int[512];
@@ -922,14 +627,14 @@ final class ep {
         field_a = new int[1024];
         field_f = new int[2048];
         for (var0 = 1; var0 < 512; var0++) {
-            field_b[var0] = 32768 / var0;
+          field_b[var0] = 32768 / var0;
         }
-        for (var0 = 1; var0 < 2048; var0++) {
-            field_f[var0] = 65536 / var0;
+        for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
+          field_f[var0Lifetime1] = 65536 / var0Lifetime1;
         }
-        for (var0 = 0; var0 < 2048; var0++) {
-            field_k[var0] = (int)(65536.0 * Math.sin((double)var0 * 0.0030679615));
-            field_e[var0] = (int)(65536.0 * Math.cos((double)var0 * 0.0030679615));
+        for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
+          field_k[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_e[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

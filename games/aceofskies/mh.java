@@ -17,26 +17,26 @@ final class mh extends cq implements bp {
     mh(jc param0, hd param1, int param2, int param3, int param4, byte[] param5) {
         super(param0, 32879, param1, la.field_h, param3 * param2 * param4, false);
         try {
-            this.field_m = param4;
-            this.field_i = param3;
-            this.field_k = param2;
-            this.field_g.a((jj) (this), -9135);
-            jaggl.OpenGL.glPixelStorei(3317, 1);
-            jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.a(false), this.field_k, this.field_i, this.field_m, 0, gq.a(this.field_h, -29824), 5121, param5, 0);
-            jaggl.OpenGL.glPixelStorei(3317, 4);
+          this.field_m = param4;
+          this.field_i = param3;
+          this.field_k = param2;
+          this.field_g.a((jj) (this), -9135);
+          jaggl.OpenGL.glPixelStorei(3317, 1);
+          jaggl.OpenGL.glTexImage3Dub(this.field_e, 0, this.a(false), this.field_k, this.field_i, this.field_m, 0, gq.a(this.field_h, -29824), 5121, param5, 0);
+          jaggl.OpenGL.glPixelStorei(3317, 4);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(ke param0, int param1) {
         try {
-            if (param1 != -31662) {
-                this.field_m = -6;
-            }
-            super.a(param0, param1 ^ 0);
+          if (param1 != -31662) {
+            this.field_m = -6;
+          }
+          super.a(param0, param1 ^ 0);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "mh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

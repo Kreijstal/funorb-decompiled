@@ -15,9 +15,7 @@ final class cg {
     public static void b(byte param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -13) {
-          return;
-        } else {
+        if (param0 == -13) {
           field_b = (ka[][][]) null;
           field_i = (byte[][][]) null;
           field_g = null;
@@ -34,29 +32,18 @@ final class cg {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == hl.field_d) {
-          if (param0 != -102) {
-            field_f = (int[][]) null;
-            return;
-          } else {
+          if (param0 == -102) {
             return;
           }
-        } else {
-          var1 = hl.field_d;
-          synchronized (var1) {
-            L0: {
-              hl.field_d = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 == -102) {
-              break L1;
-            } else {
-              field_f = (int[][]) null;
-              break L1;
-            }
-          }
+          field_f = (int[][]) null;
           return;
+        }
+        var1 = hl.field_d;
+        synchronized (var1) {
+          hl.field_d = null;
+        }
+        if (param0 != -102) {
+          field_f = (int[][]) null;
         }
     }
 

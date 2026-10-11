@@ -11,12 +11,13 @@ final class le {
     public static void b(int param0) {
         field_a = null;
         if (param0 > -90) {
-            le.a(18);
+          le.a(18);
         }
     }
 
     final static rd a(int param0) {
-        if (param0 == -1461) {
+        if (param0 != -1461) {
+          field_a = (String) null;
           if (null == uj.field_c) {
             uj.field_c = new rd();
             uj.field_c.a(13421772, gk.field_c);
@@ -29,27 +30,23 @@ final class le {
             uj.field_c.field_u = 14;
             uj.field_c.field_a = 7697781;
             return uj.field_c;
-          } else {
-            return uj.field_c;
           }
-        } else {
-          field_a = (String) null;
-          if (null != uj.field_c) {
-            return uj.field_c;
-          } else {
-            uj.field_c = new rd();
-            uj.field_c.a(13421772, gk.field_c);
-            uj.field_c.field_m = 0;
-            uj.field_c.field_p = 6;
-            uj.field_c.field_c = fk.field_a;
-            uj.field_c.field_d = 5;
-            uj.field_c.field_t = 2763306;
-            uj.field_c.field_q = 4;
-            uj.field_c.field_u = 14;
-            uj.field_c.field_a = 7697781;
-            return uj.field_c;
-          }
+          return uj.field_c;
         }
+        if (null != uj.field_c) {
+          return uj.field_c;
+        }
+        uj.field_c = new rd();
+        uj.field_c.a(13421772, gk.field_c);
+        uj.field_c.field_m = 0;
+        uj.field_c.field_p = 6;
+        uj.field_c.field_c = fk.field_a;
+        uj.field_c.field_d = 5;
+        uj.field_c.field_t = 2763306;
+        uj.field_c.field_q = 4;
+        uj.field_c.field_u = 14;
+        uj.field_c.field_a = 7697781;
+        return uj.field_c;
     }
 
     static {

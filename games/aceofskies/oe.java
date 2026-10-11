@@ -8,18 +8,15 @@ abstract class oe extends wf {
     int field_g;
 
     final static fr d(int param0) {
-        int var1;
         if (dk.field_h == ht.field_k) {
           throw new IllegalStateException();
-        } else {
-          var1 = 35 % ((23 - param0) / 61);
-          if (uk.field_j != ht.field_k) {
-            return null;
-          } else {
-            ht.field_k = dk.field_h;
-            return ld.field_c;
-          }
         }
+        int var1 = 35 % ((23 - param0) / 61);
+        if (uk.field_j == ht.field_k) {
+          ht.field_k = dk.field_h;
+          return ld.field_c;
+        }
+        return null;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, java.awt.Graphics param5, int param6, int param7);
@@ -28,9 +25,9 @@ abstract class oe extends wf {
 
     public static void a(int param0) {
         if (param0 != 6259) {
-            field_f = (String[]) null;
-            field_f = null;
-            return;
+          field_f = (String[]) null;
+          field_f = null;
+          return;
         }
         field_f = null;
     }

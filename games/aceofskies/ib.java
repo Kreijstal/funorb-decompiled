@@ -12,9 +12,9 @@ abstract class ib {
 
     void a(ke param0, int param1) {
         if (param1 != -31662) {
-            this.field_d = (la) null;
-            this.field_a = param0;
-            return;
+          this.field_d = (la) null;
+          this.field_a = param0;
+          return;
         }
         this.field_a = param0;
     }

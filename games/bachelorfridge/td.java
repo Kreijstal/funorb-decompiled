@@ -14,24 +14,24 @@ class td extends sfa {
         field_l = null;
         field_o = null;
         if (param0) {
-            byte[] var2 = (byte[]) null;
-            td.a(-123, (byte[]) null);
+          byte[] var2 = (byte[]) null;
+          td.a(-123, (byte[]) null);
         }
     }
 
     final void a(int param0, lu param1) {
         try {
-            if (this.a(-4)) {
-                er.a(this.field_j, 111, param1);
-            } else {
-                param1.d(this.field_k, 0);
-                param1.d(this.field_n, 0);
-            }
-            param1.d(this.field_i, 0);
-            param1.d(!this.field_m ? 0 : 1, 0);
-            int var3_int = 71 % ((61 - param0) / 53);
+          if (this.a(-4)) {
+            er.a(this.field_j, 111, param1);
+          } else {
+            param1.d(this.field_k, 0);
+            param1.d(this.field_n, 0);
+          }
+          param1.d(this.field_i, 0);
+          param1.d(!this.field_m ? 0 : 1, 0);
+          int var3_int = 71 % ((61 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "td.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "td.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,10 +45,7 @@ class td extends sfa {
         byte[] stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -63,133 +60,72 @@ class td extends sfa {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          L0: {
-            if (param0 < -46) {
-              L1: {
-                var9 = new lu(param1);
-                var3 = var9.b(16711935);
-                var4 = var9.f(-52);
-                if ((var4 ^ -1) > -1) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (0 == kq.field_k) {
-                      break L2;
-                    } else {
-                      if (var4 > kq.field_k) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  if (var3 != 0) {
-                    L3: {
-                      var5 = var9.f(-128);
-                      if (-1 < (var5 ^ -1)) {
-                        break L3;
-                      } else {
-                        L4: {
-                          if (0 == kq.field_k) {
-                            break L4;
-                          } else {
-                            if (kq.field_k < var5) {
-                              break L3;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        L5: {
-                          var13 = new byte[var5];
-                          var11 = var13;
-                          var6 = var11;
-                          if (1 == var3) {
-                            pca.a(var13, var5, param1, var4, 9);
-                            break L5;
-                          } else {
-                            var7 = kca.field_b;
-                            synchronized (var7) {
-                              L6: {
-                                kca.field_b.a(var9, var13, -10);
-                                break L6;
-                              }
-                            }
-                            break L5;
-                          }
-                        }
-                        stackIn_24_0 = (byte[]) (var6);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    }
-                    throw new RuntimeException();
-                  } else {
-                    var12 = new byte[var4];
-                    var10 = var12;
-                    var5_ref_byte__ = var10;
-                    var9.a(var12, var4, 128, 0);
-                    stackIn_10_0 = (byte[]) (var5_ref_byte__);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
+          if (param0 >= -46) {
+            stackIn_2_0 = (byte[]) null;
+            return stackIn_2_0;
+          }
+          var9 = new lu(param1);
+          var3 = var9.b(16711935);
+          var4 = var9.f(-52);
+          if (var4 >= 0 && (0 == kq.field_k ||
+            !(var4 > kq.field_k))) {
+            if (var3 == 0) {
+              var12 = new byte[var4];
+              var10 = var12;
+              var5_ref_byte__ = var10;
+              var9.a(var12, var4, 128, 0);
+              stackIn_10_0 = var5_ref_byte__;
+              return stackIn_10_0;
+            }
+            var5 = var9.f(-128);
+            if (var5 >= 0 && (0 == kq.field_k ||
+              !(kq.field_k < var5))) {
+              var13 = new byte[var5];
+              var11 = var13;
+              var6 = var11;
+              if (1 == var3) {
+                pca.a(var13, var5, param1, var4, 9);
+              } else {
+                var7 = kca.field_b;
+                synchronized (var7) {
+                  kca.field_b.a(var9, var13, -10);
                 }
               }
-              throw new RuntimeException();
-            } else {
-              stackIn_2_0 = (byte[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              stackIn_24_0 = var6;
+              return stackIn_24_0;
             }
+            throw new RuntimeException();
           }
+          throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var2);
-
-            stackIn_27_1 = new StringBuilder().append("td.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L7;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L7;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_27_0 = var2;
+          stackIn_27_1 = new StringBuilder().append("td.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_28_2 = "null";
           } else {
-            return stackIn_24_0;
+            stackIn_28_2 = "{...}";
           }
+          throw pe.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
     private final boolean a(int param0) {
         if (param0 != -4) {
-            op var3 = (op) null;
-            this.a((op) null, 56);
+          op var3 = (op) null;
+          this.a((op) null, 56);
         }
-        hd var2 = (hd) ((Object) ur.field_e[this.field_g]);
-        return -4 == (var2.c(0) ^ -1) ? true : false;
+        hd var2 = (hd) (ur.field_e[this.field_g]);
+        return var2.c(0) == 3 ? true : false;
     }
 
     td(int param0, aga param1, boolean param2) {
         super(4, param0, new nq(param1));
         try {
-            this.field_m = param2 ? true : false;
+          this.field_m = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -199,10 +135,7 @@ class td extends sfa {
         ii stackIn_132_0 = null;
         Object stackIn_136_0 = null;
         StringBuilder stackIn_136_1 = null;
-        Object stackIn_137_0 = null;
-        StringBuilder stackIn_137_1 = null;
         String stackIn_137_2 = null;
-        Throwable caughtException = null;
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
         int var4_int = 0;
@@ -210,305 +143,232 @@ class td extends sfa {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var3 = null;
-              var4_int = this.field_g;
-              if (88 != var4_int) {
-                if (89 == var4_int) {
-                  var3 = new tg(this.field_g, this.field_h.a(param1 ^ 63, param0));
-                  break L1;
+          var3 = null;
+          var4_int = this.field_g;
+          if (88 != var4_int) {
+            if (89 == var4_int) {
+              var3 = new tg(this.field_g, this.field_h.a(param1 ^ 63, param0));
+            } else {
+              if (90 == var4_int) {
+                var3 = new sw(this.field_g, this.field_h.a(8, param0), this.field_i);
+              } else {
+                if (91 == var4_int) {
+                  var3 = new fla(this.field_g, this.field_h.a(38, param0));
                 } else {
-                  if (90 == var4_int) {
-                    var3 = new sw(this.field_g, this.field_h.a(8, param0), this.field_i);
-                    break L1;
-                  } else {
-                    if (91 == var4_int) {
-                      var3 = new fla(this.field_g, this.field_h.a(38, param0));
-                      break L1;
+                  if (92 != var4_int) {
+                    if (var4_int == 93) {
+                      var3 = new io(this.field_g, this.field_h.a(param1 + 36, param0), this.field_j);
                     } else {
-                      if (92 != var4_int) {
-                        if (-94 == (var4_int ^ -1)) {
-                          var3 = new io(this.field_g, this.field_h.a(param1 + 36, param0), this.field_j);
-                          break L1;
+                      if (var4_int == 94) {
+                        var3 = new ifa(this.field_g, this.field_h.a(62, param0));
+                      } else {
+                        if (var4_int == 95) {
+                          var3 = new s(this.field_g, this.field_h.a(param1 ^ 50, param0));
                         } else {
-                          if (-95 == (var4_int ^ -1)) {
-                            var3 = new ifa(this.field_g, this.field_h.a(62, param0));
-                            break L1;
-                          } else {
-                            if ((var4_int ^ -1) == -96) {
-                              var3 = new s(this.field_g, this.field_h.a(param1 ^ 50, param0));
-                              break L1;
+                          if (var4_int != 96) {
+                            if (var4_int == 97) {
+                              var3 = new h(this.field_g, this.field_h.a(103, param0));
                             } else {
-                              if (var4_int != 96) {
-                                if (var4_int == 97) {
-                                  var3 = new h(this.field_g, this.field_h.a(103, param0));
-                                  break L1;
+                              if (var4_int == 98) {
+                                var3 = new tha(this.field_g, this.field_h.a(20, param0));
+                              } else {
+                                if (var4_int == 99) {
+                                  var3 = new of(this.field_g, this.field_h.a(40, param0));
                                 } else {
-                                  if (var4_int == 98) {
-                                    var3 = new tha(this.field_g, this.field_h.a(20, param0));
-                                    break L1;
+                                  if (var4_int == 100) {
+                                    var3 = new eha(this.field_g, this.field_h.a(85, param0), this.field_k, this.field_n);
                                   } else {
-                                    if (var4_int == 99) {
-                                      var3 = new of(this.field_g, this.field_h.a(40, param0));
-                                      break L1;
+                                    if (var4_int == 101) {
+                                      var3 = new nh(this.field_g, this.field_h.a(27, param0));
                                     } else {
-                                      if (var4_int == 100) {
-                                        var3 = new eha(this.field_g, this.field_h.a(85, param0), this.field_k, this.field_n);
-                                        break L1;
-                                      } else {
-                                        if (var4_int == 101) {
-                                          var3 = new nh(this.field_g, this.field_h.a(27, param0));
-                                          break L1;
-                                        } else {
-                                          if (var4_int != 102) {
-                                            if (var4_int != 103) {
-                                              if ((var4_int ^ -1) != -105) {
-                                                if (-106 == (var4_int ^ -1)) {
-                                                  var3 = new ui(this.field_g, this.field_h.a(param1 + 65, param0));
-                                                  break L1;
+                                      if (var4_int != 102) {
+                                        if (var4_int != 103) {
+                                          if (var4_int != 104) {
+                                            if (var4_int == 105) {
+                                              var3 = new ui(this.field_g, this.field_h.a(param1 + 65, param0));
+                                            } else {
+                                              if (var4_int != 106) {
+                                                if (107 == var4_int) {
+                                                  var3 = new vfa(this.field_g, this.field_h.a(21, param0), this.field_k, this.field_n);
                                                 } else {
-                                                  if (-107 != (var4_int ^ -1)) {
-                                                    if (107 == var4_int) {
-                                                      var3 = new vfa(this.field_g, this.field_h.a(21, param0), this.field_k, this.field_n);
-                                                      break L1;
+                                                  if (var4_int != 108) {
+                                                    if (109 == var4_int) {
+                                                      var3 = new eb(this.field_g, this.field_h.a(112, param0), this.field_k, this.field_n);
                                                     } else {
-                                                      if (-109 != (var4_int ^ -1)) {
-                                                        if (109 == var4_int) {
-                                                          var3 = new eb(this.field_g, this.field_h.a(112, param0), this.field_k, this.field_n);
-                                                          break L1;
-                                                        } else {
-                                                          if (-111 == (var4_int ^ -1)) {
-                                                            var3 = new mp(this.field_g, this.field_h.a(53, param0));
-                                                            break L1;
-                                                          } else {
-                                                            if (-112 != (var4_int ^ -1)) {
-                                                              if ((var4_int ^ -1) != -113) {
-                                                                if (var4_int != 113) {
-                                                                  if ((var4_int ^ -1) != -115) {
-                                                                    if (-116 == (var4_int ^ -1)) {
-                                                                      var3 = new ab(this.field_g, this.field_h.a(112, param0), this.field_j);
-                                                                      break L1;
-                                                                    } else {
-                                                                      if (116 != var4_int) {
-                                                                        if ((var4_int ^ -1) != -118) {
-                                                                          if ((var4_int ^ -1) != -119) {
-                                                                            if (-120 != (var4_int ^ -1)) {
-                                                                              if (var4_int != 120) {
-                                                                                if ((var4_int ^ -1) == -122) {
-                                                                                  var3 = new gh(this.field_g, this.field_h.a(51, param0));
-                                                                                  break L1;
+                                                      if (var4_int == 110) {
+                                                        var3 = new mp(this.field_g, this.field_h.a(53, param0));
+                                                      } else {
+                                                        if (var4_int != 111) {
+                                                          if (var4_int != 112) {
+                                                            if (var4_int != 113) {
+                                                              if (var4_int != 114) {
+                                                                if (var4_int == 115) {
+                                                                  var3 = new ab(this.field_g, this.field_h.a(112, param0), this.field_j);
+                                                                } else {
+                                                                  if (116 != var4_int) {
+                                                                    if (var4_int != 117) {
+                                                                      if (var4_int != 118) {
+                                                                        if (var4_int != 119) {
+                                                                          if (var4_int != 120) {
+                                                                            if (var4_int == 121) {
+                                                                              var3 = new gh(this.field_g, this.field_h.a(51, param0));
+                                                                            } else {
+                                                                              if (122 != var4_int) {
+                                                                                if (var4_int == 123) {
+                                                                                  var3 = new hj(this.field_g, this.field_h.a(param1 + 25, param0));
                                                                                 } else {
-                                                                                  if (122 != var4_int) {
-                                                                                    if (-124 == (var4_int ^ -1)) {
-                                                                                      var3 = new hj(this.field_g, this.field_h.a(param1 + 25, param0));
-                                                                                      break L1;
-                                                                                    } else {
-                                                                                      if (124 != var4_int) {
-                                                                                        if (var4_int != 125) {
-                                                                                          if ((var4_int ^ -1) != -127) {
-                                                                                            if ((var4_int ^ -1) == -128) {
-                                                                                              var3 = new ch(this.field_g, this.field_h.a(param1 ^ 127, param0));
-                                                                                              break L1;
-                                                                                            } else {
-                                                                                              if (-129 == (var4_int ^ -1)) {
-                                                                                                var3 = new ja(this.field_g, this.field_h.a(param1 + 60, param0));
-                                                                                                break L1;
+                                                                                  if (124 != var4_int) {
+                                                                                    if (var4_int != 125) {
+                                                                                      if (var4_int != 126) {
+                                                                                        if (var4_int == 127) {
+                                                                                          var3 = new ch(this.field_g, this.field_h.a(param1 ^ 127, param0));
+                                                                                        } else {
+                                                                                          if (var4_int == 128) {
+                                                                                            var3 = new ja(this.field_g, this.field_h.a(param1 + 60, param0));
+                                                                                          } else {
+                                                                                            if (var4_int != 129) {
+                                                                                              if (var4_int == 130) {
+                                                                                                var3 = new uba(this.field_g, this.field_h.a(107, param0), this.field_k, this.field_n);
                                                                                               } else {
-                                                                                                if ((var4_int ^ -1) != -130) {
-                                                                                                  if (-131 == (var4_int ^ -1)) {
-                                                                                                    var3 = new uba(this.field_g, this.field_h.a(107, param0), this.field_k, this.field_n);
-                                                                                                    break L1;
-                                                                                                  } else {
-                                                                                                    if (var4_int == 131) {
-                                                                                                      var3 = new kea(this.field_g, this.field_h.a(param1 ^ 123, param0), this.field_k, this.field_n);
-                                                                                                      break L1;
-                                                                                                    } else {
-                                                                                                      if (-133 != (var4_int ^ -1)) {
-                                                                                                        if (133 != var4_int) {
-                                                                                                          if (-135 == (var4_int ^ -1)) {
-                                                                                                            var3 = new wh(this.field_g, this.field_h.a(58, param0));
-                                                                                                            break L1;
+                                                                                                if (var4_int == 131) {
+                                                                                                  var3 = new kea(this.field_g, this.field_h.a(param1 ^ 123, param0), this.field_k, this.field_n);
+                                                                                                } else {
+                                                                                                  if (var4_int != 132) {
+                                                                                                    if (133 != var4_int) {
+                                                                                                      if (var4_int == 134) {
+                                                                                                        var3 = new wh(this.field_g, this.field_h.a(58, param0));
+                                                                                                      } else {
+                                                                                                        if (135 != var4_int) {
+                                                                                                          if (var4_int == 136) {
+                                                                                                            var3 = new vka(this.field_g, this.field_h.a(109, param0), this.field_k, this.field_n);
                                                                                                           } else {
-                                                                                                            if (135 != var4_int) {
-                                                                                                              if ((var4_int ^ -1) == -137) {
-                                                                                                                var3 = new vka(this.field_g, this.field_h.a(109, param0), this.field_k, this.field_n);
-                                                                                                                break L1;
-                                                                                                              } else {
-                                                                                                                if (var4_int == 137) {
-                                                                                                                  var3 = new qga(this.field_g, this.field_h.a(52, param0), this.field_j);
-                                                                                                                  break L1;
-                                                                                                                } else {
-                                                                                                                  throw new IllegalArgumentException("Special not found");
-                                                                                                                }
-                                                                                                              }
-                                                                                                            } else {
-                                                                                                              var3 = new bla(this.field_g, this.field_h.a(96, param0), this.field_j);
-                                                                                                              break L1;
+                                                                                                            if (var4_int != 137) {
+                                                                                                              throw new IllegalArgumentException("Special not found");
                                                                                                             }
+                                                                                                            var3 = new qga(this.field_g, this.field_h.a(52, param0), this.field_j);
                                                                                                           }
                                                                                                         } else {
-                                                                                                          var3 = new fc(this.field_g, this.field_h.a(17, param0), this.field_k, this.field_n);
-                                                                                                          break L1;
+                                                                                                          var3 = new bla(this.field_g, this.field_h.a(96, param0), this.field_j);
                                                                                                         }
-                                                                                                      } else {
-                                                                                                        var3 = new ci(this.field_g, this.field_h.a(param1 ^ 78, param0), this.field_k, this.field_n);
-                                                                                                        break L1;
                                                                                                       }
+                                                                                                    } else {
+                                                                                                      var3 = new fc(this.field_g, this.field_h.a(17, param0), this.field_k, this.field_n);
                                                                                                     }
+                                                                                                  } else {
+                                                                                                    var3 = new ci(this.field_g, this.field_h.a(param1 ^ 78, param0), this.field_k, this.field_n);
                                                                                                   }
-                                                                                                } else {
-                                                                                                  var3 = new no(this.field_g, this.field_h.a(94, param0));
-                                                                                                  break L1;
                                                                                                 }
                                                                                               }
+                                                                                            } else {
+                                                                                              var3 = new no(this.field_g, this.field_h.a(94, param0));
                                                                                             }
-                                                                                          } else {
-                                                                                            var3 = new wc(this.field_g, this.field_h.a(24, param0), this.field_k, this.field_n);
-                                                                                            break L1;
                                                                                           }
-                                                                                        } else {
-                                                                                          var3 = new rl(this.field_g, this.field_h.a(param1 + 83, param0), this.field_k, this.field_n);
-                                                                                          break L1;
                                                                                         }
                                                                                       } else {
-                                                                                        var3 = new ija(this.field_g, this.field_h.a(116, param0), this.field_j);
-                                                                                        break L1;
+                                                                                        var3 = new wc(this.field_g, this.field_h.a(24, param0), this.field_k, this.field_n);
                                                                                       }
+                                                                                    } else {
+                                                                                      var3 = new rl(this.field_g, this.field_h.a(param1 + 83, param0), this.field_k, this.field_n);
                                                                                     }
                                                                                   } else {
-                                                                                    var3 = new ud(this.field_g, this.field_h.a(37, param0), this.field_k, this.field_n);
-                                                                                    break L1;
+                                                                                    var3 = new ija(this.field_g, this.field_h.a(116, param0), this.field_j);
                                                                                   }
                                                                                 }
                                                                               } else {
-                                                                                var3 = new mt(this.field_g, this.field_h.a(113, param0));
-                                                                                break L1;
+                                                                                var3 = new ud(this.field_g, this.field_h.a(37, param0), this.field_k, this.field_n);
                                                                               }
-                                                                            } else {
-                                                                              break L1;
                                                                             }
                                                                           } else {
-                                                                            var3 = new mja(this.field_g, this.field_h.a(32, param0), this.field_i);
-                                                                            break L1;
+                                                                            var3 = new mt(this.field_g, this.field_h.a(113, param0));
                                                                           }
-                                                                        } else {
-                                                                          var3 = new hea(this.field_g, this.field_h.a(107, param0), this.field_i);
-                                                                          break L1;
                                                                         }
                                                                       } else {
-                                                                        var3 = new fq(this.field_g, this.field_h.a(param1 + 44, param0), this.field_k, this.field_n);
-                                                                        break L1;
+                                                                        var3 = new mja(this.field_g, this.field_h.a(32, param0), this.field_i);
                                                                       }
+                                                                    } else {
+                                                                      var3 = new hea(this.field_g, this.field_h.a(107, param0), this.field_i);
                                                                     }
                                                                   } else {
-                                                                    var3 = new efa(this.field_g, this.field_h.a(81, param0), this.field_k, this.field_n);
-                                                                    break L1;
+                                                                    var3 = new fq(this.field_g, this.field_h.a(param1 + 44, param0), this.field_k, this.field_n);
                                                                   }
-                                                                } else {
-                                                                  var3 = new kl(this.field_g, this.field_h.a(19, param0), this.field_k, this.field_n);
-                                                                  break L1;
                                                                 }
                                                               } else {
-                                                                var3 = new nw(this.field_g, this.field_h.a(13, param0), this.field_k, this.field_n);
-                                                                break L1;
+                                                                var3 = new efa(this.field_g, this.field_h.a(81, param0), this.field_k, this.field_n);
                                                               }
                                                             } else {
-                                                              var3 = new sg(this.field_g, this.field_h.a(25, param0));
-                                                              break L1;
+                                                              var3 = new kl(this.field_g, this.field_h.a(19, param0), this.field_k, this.field_n);
                                                             }
+                                                          } else {
+                                                            var3 = new nw(this.field_g, this.field_h.a(13, param0), this.field_k, this.field_n);
                                                           }
+                                                        } else {
+                                                          var3 = new sg(this.field_g, this.field_h.a(25, param0));
                                                         }
-                                                      } else {
-                                                        var3 = new ts(this.field_g, this.field_h.a(87, param0), this.field_j);
-                                                        break L1;
                                                       }
                                                     }
                                                   } else {
-                                                    var3 = new dr(this.field_g, this.field_h.a(113, param0));
-                                                    break L1;
+                                                    var3 = new ts(this.field_g, this.field_h.a(87, param0), this.field_j);
                                                   }
                                                 }
                                               } else {
-                                                var3 = new eg(this.field_g, this.field_h.a(param1 ^ 105, param0), this.field_j);
-                                                break L1;
+                                                var3 = new dr(this.field_g, this.field_h.a(113, param0));
                                               }
-                                            } else {
-                                              var3 = new ww(this.field_g, this.field_h.a(param1 + 53, param0));
-                                              break L1;
                                             }
                                           } else {
-                                            var3 = new fb(this.field_g, this.field_h.a(126, param0));
-                                            break L1;
+                                            var3 = new eg(this.field_g, this.field_h.a(param1 ^ 105, param0), this.field_j);
                                           }
+                                        } else {
+                                          var3 = new ww(this.field_g, this.field_h.a(param1 + 53, param0));
                                         }
+                                      } else {
+                                        var3 = new fb(this.field_g, this.field_h.a(126, param0));
                                       }
                                     }
                                   }
                                 }
-                              } else {
-                                var3 = new dk(this.field_g, this.field_h.a(109, param0), this.field_k, this.field_n);
-                                break L1;
                               }
                             }
+                          } else {
+                            var3 = new dk(this.field_g, this.field_h.a(109, param0), this.field_k, this.field_n);
                           }
                         }
-                      } else {
-                        var3 = new ql(this.field_g, this.field_h.a(30, param0), this.field_k, this.field_n);
-                        break L1;
                       }
                     }
+                  } else {
+                    var3 = new ql(this.field_g, this.field_h.a(30, param0), this.field_k, this.field_n);
                   }
                 }
-              } else {
-                var3 = new rd(this.field_g, this.field_h.a(104, param0), this.field_k, this.field_n);
-                break L1;
               }
             }
-            L2: {
-              param0.field_T.field_v[this.field_h.field_g] = param0.field_T.field_v[this.field_h.field_g] + 1;
-              param0.field_T.field_r[this.field_h.field_g] = sr.a(param0.field_T.field_r[this.field_h.field_g], 1L << this.field_g - 88);
-              dupTemp$0 = param0.field_T.field_m[this.field_h.field_g];
-              dupTemp$0[this.field_g + -88] = dupTemp$0[this.field_g + -88] + 1;
-              if (!this.field_m) {
-                break L2;
-              } else {
-                dupTemp$1 = param0.field_T.field_m[this.field_h.field_g];
-                dupTemp$1[31] = dupTemp$1[31] + 1;
-                break L2;
-              }
-            }
-            var4 = ((td) (var3)).a(param0, param1);
-            if (var3 != null) {
-              stackIn_132_0 = (ii) (var4);
-              break L0;
-            } else {
-              throw new IllegalArgumentException("Special not found");
-            }
+          } else {
+            var3 = new rd(this.field_g, this.field_h.a(104, param0), this.field_k, this.field_n);
           }
+          param0.field_T.field_v[this.field_h.field_g] = param0.field_T.field_v[this.field_h.field_g] + 1;
+          param0.field_T.field_r[this.field_h.field_g] = sr.a(param0.field_T.field_r[this.field_h.field_g], 1L << this.field_g - 88);
+          dupTemp$0 = param0.field_T.field_m[this.field_h.field_g];
+          dupTemp$0[this.field_g - 88] = dupTemp$0[this.field_g - 88] + 1;
+          if (this.field_m) {
+            dupTemp$1 = param0.field_T.field_m[this.field_h.field_g];
+            dupTemp$1[31] = dupTemp$1[31] + 1;
+          }
+          var4 = ((td) (var3)).a(param0, param1);
+          if (var3 == null) {
+            throw new IllegalArgumentException("Special not found");
+          }
+          stackIn_132_0 = var4;
+          return stackIn_132_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_136_0 = var3;
-
-            stackIn_136_1 = new StringBuilder().append("td.A(");
-
-            if (param0 == null) {
-              stackIn_137_0 = stackIn_136_0;
-              stackIn_137_1 = (StringBuilder) ((Object) stackIn_136_1);
-              stackIn_137_2 = "null";
-              break L3;
-            } else {
-              stackIn_137_0 = stackIn_136_0;
-              stackIn_137_1 = (StringBuilder) ((Object) stackIn_136_1);
-              stackIn_137_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_136_0 = var3;
+          stackIn_136_1 = new StringBuilder().append("td.A(");
+          if (param0 == null) {
+            stackIn_137_2 = "null";
+          } else {
+            stackIn_137_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_137_0), stackIn_137_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) (stackIn_136_0), ((StringBuilder) (Object) stackIn_136_1).append(stackIn_137_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_132_0;
     }
 
     static {

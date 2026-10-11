@@ -9,17 +9,17 @@ final class ha extends w {
     ha(long param0, ck param1, ck param2, int param3, w param4, String param5) {
         this(param0, (w) null, param4, param5);
         try {
-            this.field_Ob.field_I = param2;
-            this.field_Ob.field_sb = param1;
-            this.field_Ob.field_W = param3;
+          this.field_Ob.field_I = param2;
+          this.field_Ob.field_sb = param1;
+          this.field_Ob.field_W = param3;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void f(int param0) {
         if (param0 != 3) {
-            return;
+          return;
         }
         field_Pb = null;
     }
@@ -27,18 +27,17 @@ final class ha extends w {
     final static void e(int param0) {
         da.field_e = new tf();
         if (param0 != 0) {
-            return;
+          return;
         }
         de.field_W.c(da.field_e, (byte) 62);
     }
 
     final int c(int param0, int param1) {
-        if (param1 != -4168) {
-          ha.f(-106);
-          return param0 + (this.field_Ob.a(true) - -this.field_Nb.a(true));
-        } else {
-          return param0 + (this.field_Ob.a(true) - -this.field_Nb.a(true));
+        if (param1 == -4168) {
+          return param0 + (this.field_Ob.a(true) + this.field_Nb.a(true));
         }
+        ha.f(-106);
+        return param0 + (this.field_Ob.a(true) + this.field_Nb.a(true));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -48,44 +47,38 @@ final class ha extends w {
 
     private final void d(int param0, int param1) {
         this.field_Ob.a(this.field_Ob.a(true), param1, 0, this.field_N, 0);
-        int var3 = this.field_Ob.field_mb - -param0;
-        this.field_Nb.a(this.field_mb + -var3, 0, 0, this.field_N, var3);
+        int var3 = this.field_Ob.field_mb + param0;
+        this.field_Nb.a(this.field_mb - var3, 0, 0, this.field_N, var3);
     }
 
     private ha(long param0, w param1, w param2, String param3) {
         super(param0, (w) null);
         try {
-            this.field_Ob = new w(0L, param1);
-            this.field_Nb = new w(0L, param2);
-            this.field_Nb.field_Y = param3;
-            this.a(this.field_Ob, -16834);
-            this.a(this.field_Nb, -16834);
-            this.d(-126);
+          this.field_Ob = new w(0L, param1);
+          this.field_Nb = new w(0L, param2);
+          this.field_Nb.field_Y = param3;
+          this.a(this.field_Ob, -16834);
+          this.a(this.field_Nb, -16834);
+          this.d(-126);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ha.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, byte param1) {
-        int var2;
-        int var3;
-        L0: {
-          var2 = 0;
-          if (0 != (7 & param0)) {
-            var2 = 8 - (param0 & 7);
-            break L0;
-          } else {
-            break L0;
-          }
+        int var3 = 0;
+        int var2 = 0;
+        int var3Lifetime1;
+        if (0 != (7 & param0)) {
+          var2 = 8 - (param0 & 7);
         }
-        if (param1 != -126) {
-          ha.a(-69, (byte) 62);
-          var3 = param0 - -var2;
-          return var3;
-        } else {
-          var3 = param0 - -var2;
+        if (param1 == -126) {
+          var3 = param0 + var2;
           return var3;
         }
+        ha.a(-69, (byte) 62);
+        var3Lifetime1 = param0 + var2;
+        return var3Lifetime1;
     }
 
     ha(long param0, ha param1, String param2) {

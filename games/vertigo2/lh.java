@@ -14,70 +14,69 @@ final class lh {
         var5.j(param0, 120);
         var5.field_u = var5.field_u + 1;
         if (param2 != 81) {
-            return;
+          return;
         }
         try {
-            var4 = var5.field_u;
-            var5.f(1, param2 ^ 57);
-            if (null != param1.field_p) {
-                var5.f(param1.field_p.length, -47);
-                var5.a(0, -10140, param1.field_p, param1.field_p.length);
-            } else {
-                var5.f(0, param2 ^ 36);
-            }
-            var5.c(var4, -2);
-            var5.field_u = var5.field_u - 4;
-            param1.field_q = var5.b(true);
-            var5.b((byte) 20, var5.field_u - var4);
+          var4 = var5.field_u;
+          var5.f(1, param2 ^ 57);
+          if (null != param1.field_p) {
+            var5.f(param1.field_p.length, -47);
+            var5.a(0, -10140, param1.field_p, param1.field_p.length);
+          } else {
+            var5.f(0, param2 ^ 36);
+          }
+          var5.c(var4, -2);
+          var5.field_u = var5.field_u - 4;
+          param1.field_q = var5.b(true);
+          var5.b((byte) 20, var5.field_u - var4);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "lh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "lh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0) {
         gp var1 = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
+        gp var1Lifetime1;
         try {
-            dg.field_d = null;
-            if (param0 != -22) {
-                field_a = (String) null;
-            }
-            sq.field_b = 0;
-            vd.field_a = 0;
-            tm.field_a.c(0);
-            vj.field_d.c(0);
-            var1 = se.field_A.b(-125);
-            while (var1 != null) {
-                var1.a(-111);
-                var1 = se.field_A.a((byte) -60);
-            }
-            var1 = jn.field_g.b(param0 ^ 106);
-            while (var1 != null) {
-                var1.a(-128);
-                var1 = jn.field_g.a((byte) -60);
-            }
-            ba.field_d = 0;
+          dg.field_d = null;
+          if (param0 != -22) {
+            field_a = (String) null;
+          }
+          sq.field_b = 0;
+          vd.field_a = 0;
+          tm.field_a.c(0);
+          vj.field_d.c(0);
+          var1 = se.field_A.b(-125);
+          while (var1 != null) {
+            var1.a(-111);
+            var1 = se.field_A.a((byte) -60);
+          }
+          var1Lifetime1 = jn.field_g.b(param0 ^ 106);
+          while (var1Lifetime1 != null) {
+            var1Lifetime1.a(-128);
+            var1Lifetime1 = jn.field_g.a((byte) -60);
+          }
+          ba.field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "lh.C(" + param0 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "lh.C(" + param0 + ')');
         }
     }
 
     public static void b(byte param0) {
         field_d = null;
-        if (param0 != 41) {
-          lh.b((byte) 70);
-          field_a = null;
-          field_e = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 41) {
           field_a = null;
           field_e = null;
           field_b = null;
           field_c = null;
           return;
         }
+        lh.b((byte) 70);
+        field_a = null;
+        field_e = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

@@ -17,23 +17,23 @@ final class nc extends sf {
 
     final static void a(int param0, int param1, int param2, String param3, byte param4, int param5, int param6, be param7, int param8) {
         try {
-            tk.field_m = param2;
-            ta.field_z = param5;
-            m.field_b = param6;
-            hc.field_f = param1;
-            lh.field_b = param7;
-            s.field_x = param0;
-            fm.field_c = param3;
-            if (param4 <= 87) {
-                be var10 = (be) null;
-                nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (be) null, -9);
-            }
-            hf.field_k = param8;
-            kg.field_h = (ge) ((Object) new a());
-            wj.field_o = new vl(param7);
-            ed.field_b = new pi(kg.field_h, wj.field_o);
+          tk.field_m = param2;
+          ta.field_z = param5;
+          m.field_b = param6;
+          hc.field_f = param1;
+          lh.field_b = param7;
+          s.field_x = param0;
+          fm.field_c = param3;
+          if (param4 <= 87) {
+            be var10 = (be) null;
+            nc.a(13, 122, -103, (String) null, (byte) 38, 59, -112, (be) null, -9);
+          }
+          hf.field_k = param8;
+          kg.field_h = (ge) ((Object) new a());
+          wj.field_o = new vl(param7);
+          ed.field_b = new pi(kg.field_h, wj.field_o);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }
     }
 
@@ -46,14 +46,12 @@ final class nc extends sf {
         field_ab = null;
         field_Z = null;
         field_cb = null;
-        if (param0 != 8864) {
-          nc.a(109, 73, 59, 19, -97);
-          field_bb = null;
-          return;
-        } else {
+        if (param0 == 8864) {
           field_bb = null;
           return;
         }
+        nc.a(109, 73, 59, 19, -97);
+        field_bb = null;
     }
 
     static {

@@ -15,58 +15,56 @@ final class lm implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new tm((lm) (this)));
+        return (Iterator) ((Object) new tm(this));
     }
 
     final void a(jl param0, int param1) {
-        if (!(null == param0.field_q)) {
-            param0.b(true);
+        if (null != param0.field_q) {
+          param0.b(true);
         }
         if (param1 != 18425) {
-            return;
+          return;
         }
         try {
-            param0.field_o = this.field_b;
-            param0.field_q = this.field_b.field_q;
-            param0.field_q.field_o = param0;
-            param0.field_o.field_q = param0;
+          param0.field_o = this.field_b;
+          param0.field_q = this.field_b.field_q;
+          param0.field_q.field_o = param0;
+          param0.field_o.field_q = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_e = null;
         if (param0 < 94) {
-            lm.a((byte) 44);
-            field_d = null;
-            field_c = null;
-            return;
+          lm.a((byte) 44);
+          field_d = null;
+          field_c = null;
+          return;
         }
         field_d = null;
         field_c = null;
     }
 
     final jl a(int param0) {
-        jl var2;
-        if (param0 == -29870) {
-          var2 = this.field_b.field_o;
-          if (this.field_b == var2) {
-            return null;
-          } else {
-            var2.b(true);
-            return var2;
-          }
-        } else {
+        jl var2 = null;
+        jl var2Lifetime1;
+        if (param0 != -29870) {
           this.a(-12);
           var2 = this.field_b.field_o;
-          if (this.field_b == var2) {
-            return null;
-          } else {
+          if (this.field_b != var2) {
             var2.b(true);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_b.field_o;
+        if (this.field_b != var2Lifetime1) {
+          var2Lifetime1.b(true);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     static {

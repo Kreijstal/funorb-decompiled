@@ -8,199 +8,134 @@ final class ii {
     static int field_b;
 
     final static boolean a(int param0, char param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        if (param0 == 1) {
-          if (param1 < 48) {
-            if (param1 < 65) {
-              L0: {
-                if (param1 < 97) {
-                  break L0;
-                } else {
-                  if (122 < param1) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param1 <= 90) {
-                stackIn_30_0 = 1;
-                return stackIn_30_0 != 0;
-              } else {
-                L1: {
-                  L2: {
-                    if (param1 < 97) {
-                      break L2;
-                    } else {
-                      if (122 < param1) {
-                        break L2;
-                      } else {
-                        stackIn_27_0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackIn_27_0 = 0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (57 < param1) {
-              if (param1 >= 65) {
-                if (param1 > 90) {
-                  if (param1 >= 97) {
-                    if (122 < param1) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                if (param1 >= 97) {
-                  if (122 < param1) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        boolean stackIn_27_0 = false;
+        if (param0 != 1) {
           return false;
         }
+        if (param1 < 48) {
+          if (param1 < 65) {
+            if (param1 >= 97 &&
+              122 >= param1) {
+              return true;
+            }
+            return false;
+          }
+          if (param1 <= 90) {
+            return true;
+          }
+          stackIn_27_0 = (param1 >= 97) && (122 >= param1);
+          return stackIn_27_0;
+        }
+        if (57 >= param1) {
+          return true;
+        }
+        if (param1 >= 65 &&
+          param1 <= 90) {
+          return true;
+        }
+        if (param1 < 97) {
+          return false;
+        }
+        if (122 < param1) {
+          return false;
+        }
+        return true;
     }
 
     final static String a(int param0, Throwable param1) throws IOException {
-        String var2;
-        PrintWriter var4;
-        String var5;
-        BufferedReader var6;
-        String var7;
-        String var8;
-        int var9;
-        int var10;
-        String var11;
-        int var12;
-        int var13;
-        h var14;
-        StringWriter var15;
-        String var16;
-        String var17;
-        String var18;
-        String var19;
-        L0: {
-          var13 = fleas.field_A ? 1 : 0;
-          if (param1 instanceof h) {
-            var14 = (h) ((Object) param1);
-            param1 = var14.field_e;
-            var2 = var14.field_f + " | ";
-            break L0;
-          } else {
-            var2 = "";
-            break L0;
-          }
+        h var14 = null;
+        String var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        String var16 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
+        int var12 = 0;
+        String var2 = null;
+        String var11 = null;
+        int var13 = fleas.field_A ? 1 : 0;
+        String var2Lifetime1;
+        String var2Lifetime2;
+        String var2Lifetime3;
+        String var2Lifetime4;
+        if (!(param1 instanceof h)) {
+          var2 = "";
+        } else {
+          var14 = (h) ((Object) param1);
+          param1 = var14.field_e;
+          var2 = var14.field_f + " | ";
         }
-        var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var15));
+        StringWriter var15 = new StringWriter();
+        PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         param1.printStackTrace(var4);
         var4.close();
-        var5 = var15.toString();
-        var2 = var5;
-        var2 = var5;
-        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-        var7 = var6.readLine();
-        var2 = var7;
-        var2 = var7;
-        L1: while (true) {
+        String var5 = var15.toString();
+        var2Lifetime1 = var5;
+        var2Lifetime2 = var5;
+        BufferedReader var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        String var7 = var6.readLine();
+        var2Lifetime3 = var7;
+        var2Lifetime4 = var7;
+        while (true) {
           var8 = var6.readLine();
-          var2 = var8;
-          var2 = var8;
+          var2Lifetime4 = var8;
+          var2Lifetime4 = var8;
           if (var8 == null) {
-            if (param0 <= 18) {
-              field_b = 46;
-              var2 = var2 + "| " + var7;
-              return var2;
-            } else {
-              var2 = var2 + "| " + var7;
-              return var2;
-            }
-          } else {
-            L2: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', 1 + var9);
-              if (var9 != -1) {
-                var11 = var8.substring(0, var9);
-                var2 = var11;
-                var2 = var11;
-                break L2;
-              } else {
-                var11 = var8;
-                break L2;
-              }
-            }
-            L3: {
-              var16 = var11.trim();
-              var2 = var16;
-              var2 = var16;
-              var17 = var16.substring(var16.lastIndexOf(' ') + 1);
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(var17.lastIndexOf('\t') + 1);
-              var2 = var18;
-              var2 = var18;
-              var19 = var2 + var18;
-              var2 = var19;
-              var2 = var19;
-              var2 = var19;
-              if ((var9 ^ -1) == 0) {
-                break L3;
-              } else {
-                if (var10 == -1) {
-                  break L3;
-                } else {
-                  var12 = var8.indexOf(".java:", var9);
-                  if (var12 < 0) {
-                    break L3;
-                  } else {
-                    var2 = var19 + var8.substring(5 + var12, var10);
-                    break L3;
-                  }
-                }
-              }
-            }
-            var2 = var2 + ' ';
-            continue L1;
+            break;
           }
+          var9 = var8.indexOf('(');
+          var10 = var8.indexOf(')', 1 + var9);
+          if (var9 == -1) {
+            var11 = var8;
+          } else {
+            var11 = var8.substring(0, var9);
+            var2Lifetime4 = var11;
+            var2Lifetime4 = var11;
+          }
+          var16 = var11.trim();
+          var2Lifetime4 = var16;
+          var2Lifetime4 = var16;
+          var17 = var16.substring(var16.lastIndexOf(' ') + 1);
+          var2Lifetime4 = var17;
+          var2Lifetime4 = var17;
+          var18 = var17.substring(var17.lastIndexOf('\t') + 1);
+          var2Lifetime4 = var18;
+          var2Lifetime4 = var18;
+          var19 = var2Lifetime4 + var18;
+          var2Lifetime4 = var19;
+          var2Lifetime4 = var19;
+          var2Lifetime4 = var19;
+          if (var9 != -1 &&
+            var10 != -1) {
+            var12 = var8.indexOf(".java:", var9);
+            if (var12 >= 0) {
+              var2Lifetime4 = var19 + var8.substring(5 + var12, var10);
+            }
+          }
+          var2Lifetime4 = var2Lifetime4 + ' ';
         }
+        if (param0 > 18) {
+          var2Lifetime4 = var2Lifetime4 + "| " + var7;
+          return var2Lifetime4;
+        }
+        field_b = 46;
+        var2Lifetime4 = var2Lifetime4 + "| " + var7;
+        return var2Lifetime4;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 5) {
-            field_b = -53;
+          field_b = -53;
         }
     }
 
     final static void b(int param0) {
         if (param0 <= 111) {
-            ii.a(11, '');
-            bj.a(14, rl.a((byte) -54));
-            return;
+          ii.a(11, '\002');
+          bj.a(14, rl.a((byte) -54));
+          return;
         }
         bj.a(14, rl.a((byte) -54));
     }
@@ -210,97 +145,60 @@ final class ii {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 12969) {
-                break L1;
-              } else {
-                ii.a(77);
-                break L1;
-              }
-            }
-            stackIn_3_0 = gi.a(param1, true, 0, 10);
-            break L0;
+          if (param0 != 12969) {
+            ii.a(77);
           }
+          stackIn_3_0 = gi.a(param1, true, 0, 10);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ii.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ii.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(byte param0) {
         int var1;
         int var2;
-        L0: {
-          var2 = fleas.field_A ? 1 : 0;
-          rh.field_e = null;
-          ah.field_c = false;
-          if (!jg.field_d) {
-            var1 = nb.field_h;
-            if ((var1 ^ -1) >= -1) {
-              ok.field_x.n(-22645);
-              ic.n(-128);
-              break L0;
+        var2 = fleas.field_A ? 1 : 0;
+        rh.field_e = null;
+        ah.field_c = false;
+        if (!jg.field_d) {
+          var1 = nb.field_h;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              rh.field_e = ri.field_q;
             } else {
-              if (var1 == 1) {
-                rh.field_e = ri.field_q;
-                rh.field_e = gj.a(0, new CharSequence[]{(CharSequence) ((Object) rh.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
-                ok.field_x.n(-22645);
-                ic.n(-128);
-                if (param0 == -88) {
-                  return;
-                } else {
-                  ii.a(-2, 'D');
-                  return;
-                }
-              } else {
-                rh.field_e = db.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
-                rh.field_e = gj.a(0, new CharSequence[]{(CharSequence) ((Object) rh.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
-                ok.field_x.n(-22645);
-                ic.n(-128);
-                if (param0 == -88) {
-                  return;
-                } else {
-                  ii.a(-2, 'D');
-                  return;
-                }
-              }
+              rh.field_e = db.a(rg.field_r, new String[]{Integer.toString(var1)}, true);
             }
-          } else {
-            ok.field_x.e(true);
-            break L0;
+            rh.field_e = gj.a(0, new CharSequence[]{(CharSequence) ((Object) rh.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) jk.field_p)});
+            ok.field_x.n(-22645);
+            ic.n(-128);
+            if (param0 == -88) {
+              return;
+            }
+            ii.a(-2, 'D');
+            return;
           }
-        }
-        if (param0 != -88) {
-          ii.a(-2, 'D');
-          return;
+          ok.field_x.n(-22645);
+          ic.n(-128);
         } else {
+          ok.field_x.e(true);
+        }
+        if (param0 == -88) {
           return;
         }
+        ii.a(-2, 'D');
     }
 
     static {

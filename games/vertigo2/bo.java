@@ -11,7 +11,7 @@ final class bo extends li {
 
     private final int a(byte param0, int param1) {
         if (param0 != 117) {
-            this.a((byte) -58);
+          this.a((byte) -58);
         }
         return param1;
     }
@@ -19,39 +19,19 @@ final class bo extends li {
     private final void e(int param0) {
         this.field_r = 0;
         if (param0 > -67) {
-            mi var3 = (mi) null;
-            this.a(13, (mi) null);
+          mi var3 = (mi) null;
+          this.a(13, (mi) null);
         }
     }
 
     final boolean a(byte param0) {
         int discarded$1 = 0;
-        int stackIn_7_0 = 0;
-        L0: {
-          if (param0 == 76) {
-            break L0;
-          } else {
-            discarded$1 = this.a((byte) -101, 83);
-            break L0;
-          }
+        boolean stackIn_7_0 = false;
+        if (param0 != 76) {
+          discarded$1 = this.a((byte) -101, 83);
         }
-        L1: {
-          L2: {
-            if (-11 == (this.field_r ^ -1)) {
-              break L2;
-            } else {
-              if (!this.field_n) {
-                stackIn_7_0 = 0;
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
-          stackIn_7_0 = 1;
-          break L1;
-        }
-        return stackIn_7_0 != 0;
+        stackIn_7_0 = (this.field_r == 10) || (this.field_n);
+        return stackIn_7_0;
     }
 
     final boolean b(int param0, int param1) {
@@ -59,257 +39,157 @@ final class bo extends li {
         this.field_r = this.field_r + 1;
         this.field_o[fieldTemp$0] = param0;
         if (param1 != -11) {
-            this.field_n = false;
+          this.field_n = false;
         }
-        return (this.field_r ^ -1) == -11 ? true : false;
+        return this.field_r == 10 ? true : false;
     }
 
     public static void a(int param0) {
         field_p = null;
         if (param0 <= 65) {
-            CharSequence var2 = (CharSequence) null;
-            bo.a((CharSequence) null, 23);
+          CharSequence var2 = (CharSequence) null;
+          bo.a((CharSequence) null, 23);
         }
     }
 
     final static byte[] a(CharSequence param0, int param1) {
+        int var4 = 0;
         byte[] stackIn_3_0 = null;
         byte[] stackIn_70_0 = null;
         RuntimeException stackIn_73_0 = null;
         StringBuilder stackIn_73_1 = null;
-        RuntimeException stackIn_74_0 = null;
-        StringBuilder stackIn_74_1 = null;
         String stackIn_74_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length();
-            var3 = new byte[var2_int];
-            if (param1 == -711) {
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= var2_int) {
-                  stackIn_70_0 = (byte[]) (var3);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    L3: {
-                      L4: {
-                        var5 = param0.charAt(var4);
-                        if (var5 <= 0) {
-                          break L4;
-                        } else {
-                          if (var5 < 128) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      L5: {
-                        if (var5 < 160) {
-                          break L5;
-                        } else {
-                          if (255 < var5) {
-                            break L5;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      if (8364 != var5) {
-                        if (8218 != var5) {
-                          if (402 == var5) {
-                            var3[var4] = (byte)-125;
-                            break L2;
-                          } else {
-                            if (var5 == 8222) {
-                              var3[var4] = (byte)-124;
-                              break L2;
-                            } else {
-                              if (var5 == 8230) {
-                                var3[var4] = (byte)-123;
-                                break L2;
-                              } else {
-                                if (8224 == var5) {
-                                  var3[var4] = (byte)-122;
-                                  break L2;
-                                } else {
-                                  if (8225 == var5) {
-                                    var3[var4] = (byte)-121;
-                                    break L2;
-                                  } else {
-                                    if (var5 == 710) {
-                                      var3[var4] = (byte)-120;
-                                      break L2;
-                                    } else {
-                                      if (var5 == 8240) {
-                                        var3[var4] = (byte)-119;
-                                        break L2;
-                                      } else {
-                                        if (352 == var5) {
-                                          var3[var4] = (byte)-118;
-                                          break L2;
-                                        } else {
-                                          if (8249 != var5) {
-                                            if (var5 != 338) {
-                                              if (var5 != 381) {
-                                                if (var5 == 8216) {
-                                                  var3[var4] = (byte)-111;
-                                                  break L2;
-                                                } else {
-                                                  if (8217 == var5) {
-                                                    var3[var4] = (byte)-110;
-                                                    break L2;
-                                                  } else {
-                                                    if (var5 != 8220) {
-                                                      if (8221 == var5) {
-                                                        var3[var4] = (byte)-108;
-                                                        break L2;
-                                                      } else {
-                                                        if (var5 == 8226) {
-                                                          var3[var4] = (byte)-107;
-                                                          break L2;
-                                                        } else {
-                                                          if (8211 == var5) {
-                                                            var3[var4] = (byte)-106;
-                                                            break L2;
-                                                          } else {
-                                                            if (var5 == 8212) {
-                                                              var3[var4] = (byte)-105;
-                                                              break L2;
-                                                            } else {
-                                                              if (732 == var5) {
-                                                                var3[var4] = (byte)-104;
-                                                                break L2;
-                                                              } else {
-                                                                if (8482 != var5) {
-                                                                  if (var5 == 353) {
-                                                                    var3[var4] = (byte)-102;
-                                                                    break L2;
-                                                                  } else {
-                                                                    if (var5 == 8250) {
-                                                                      var3[var4] = (byte)-101;
-                                                                      break L2;
-                                                                    } else {
-                                                                      if (339 != var5) {
-                                                                        if (var5 == 382) {
-                                                                          var3[var4] = (byte)-98;
-                                                                          break L2;
-                                                                        } else {
-                                                                          if (var5 != 376) {
-                                                                            var3[var4] = (byte)63;
-                                                                            break L2;
-                                                                          } else {
-                                                                            var3[var4] = (byte)-97;
-                                                                            break L2;
-                                                                          }
-                                                                        }
-                                                                      } else {
-                                                                        var3[var4] = (byte)-100;
-                                                                        break L2;
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                } else {
-                                                                  var3[var4] = (byte)-103;
-                                                                  break L2;
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    } else {
-                                                      var3[var4] = (byte)-109;
-                                                      break L2;
-                                                    }
-                                                  }
-                                                }
-                                              } else {
-                                                var3[var4] = (byte)-114;
-                                                break L2;
-                                              }
-                                            } else {
-                                              var3[var4] = (byte)-116;
-                                              break L2;
-                                            }
-                                          } else {
-                                            var3[var4] = (byte)-117;
-                                            break L2;
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        } else {
-                          var3[var4] = (byte)-126;
-                          break L2;
-                        }
-                      } else {
-                        var3[var4] = (byte)-128;
-                        break L2;
-                      }
-                    }
-                    var3[var4] = (byte)var5;
-                    break L2;
-                  }
-                  var4++;
-                  continue L1;
+          var2_int = param0.length();
+          var3 = new byte[var2_int];
+          if (param1 != -711) {
+            stackIn_3_0 = (byte[]) null;
+            return stackIn_3_0;
+          }
+          for (var4 = 0; var4 < var2_int; var4++) {
+            {
+              var5 = param0.charAt(var4);
+              if ((var5 <= 0 ||
+                var5 >= 128) && (var5 < 160 ||
+                255 < var5)) {
+                switch (var5) {
+                  case 8364:
+                    var3[var4] = (byte)-128;
+                    break;
+                  case 8218:
+                    var3[var4] = (byte)-126;
+                    break;
+                  case 402:
+                    var3[var4] = (byte)-125;
+                    break;
+                  case 8222:
+                    var3[var4] = (byte)-124;
+                    break;
+                  case 8230:
+                    var3[var4] = (byte)-123;
+                    break;
+                  case 8224:
+                    var3[var4] = (byte)-122;
+                    break;
+                  case 8225:
+                    var3[var4] = (byte)-121;
+                    break;
+                  case 710:
+                    var3[var4] = (byte)-120;
+                    break;
+                  case 8240:
+                    var3[var4] = (byte)-119;
+                    break;
+                  case 352:
+                    var3[var4] = (byte)-118;
+                    break;
+                  case 8249:
+                    var3[var4] = (byte)-117;
+                    break;
+                  case 338:
+                    var3[var4] = (byte)-116;
+                    break;
+                  case 381:
+                    var3[var4] = (byte)-114;
+                    break;
+                  case 8216:
+                    var3[var4] = (byte)-111;
+                    break;
+                  case 8217:
+                    var3[var4] = (byte)-110;
+                    break;
+                  case 8220:
+                    var3[var4] = (byte)-109;
+                    break;
+                  case 8221:
+                    var3[var4] = (byte)-108;
+                    break;
+                  case 8226:
+                    var3[var4] = (byte)-107;
+                    break;
+                  case 8211:
+                    var3[var4] = (byte)-106;
+                    break;
+                  case 8212:
+                    var3[var4] = (byte)-105;
+                    break;
+                  case 732:
+                    var3[var4] = (byte)-104;
+                    break;
+                  case 8482:
+                    var3[var4] = (byte)-103;
+                    break;
+                  case 353:
+                    var3[var4] = (byte)-102;
+                    break;
+                  case 8250:
+                    var3[var4] = (byte)-101;
+                    break;
+                  case 339:
+                    var3[var4] = (byte)-100;
+                    break;
+                  case 382:
+                    var3[var4] = (byte)-98;
+                    break;
+                  default:
+                    var3[var4] = (byte)63;
+                    break;
+                  case 376:
+                    var3[var4] = (byte)-97;
+                    break;
                 }
+              } else {
+                var3[var4] = (byte)var5;
               }
-            } else {
-              stackIn_3_0 = (byte[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          stackIn_70_0 = var3;
+          return stackIn_70_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_73_0 = (RuntimeException) (var2);
-
-            stackIn_73_1 = new StringBuilder().append("bo.C(");
-
-            if (param0 == null) {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackIn_74_2 = "null";
-              break L6;
-            } else {
-              stackIn_74_0 = (RuntimeException) ((Object) stackIn_73_0);
-              stackIn_74_1 = (StringBuilder) ((Object) stackIn_73_1);
-              stackIn_74_2 = "{...}";
-              break L6;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_73_0 = var2;
+          stackIn_73_1 = new StringBuilder().append("bo.C(");
+          if (param0 == null) {
+            stackIn_74_2 = "null";
+          } else {
+            stackIn_74_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_74_0), stackIn_74_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_70_0;
+          throw wn.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param1).append(')').toString());
         }
     }
 
     private final void f(int param0) {
         this.field_o = new int[10];
         if (param0 != -7307) {
-            this.field_n = false;
+          this.field_n = false;
         }
     }
 
@@ -317,16 +197,16 @@ final class bo extends li {
         int var3_int = 0;
         int var4 = Vertigo2.field_L ? 1 : 0;
         try {
-            param1.j(63, param0 + 124);
-            param1.d(false);
-            param1.a((byte) 114, 8, this.field_q);
-            for (var3_int = param0; var3_int < 10; var3_int++) {
-                param1.a((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
-            }
-            param1.q(param0 + -9);
-            this.e(-85);
+          param1.j(63, param0 + 124);
+          param1.d(false);
+          param1.a((byte) 114, 8, this.field_q);
+          for (var3_int = param0; var3_int < 10; var3_int++) {
+            param1.a((byte) 118, 6, this.a((byte) 117, this.field_o[var3_int]));
+          }
+          param1.q(param0 - 9);
+          this.e(-85);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "bo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "bo.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

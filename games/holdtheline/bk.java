@@ -9,20 +9,20 @@ final class bk extends ca {
 
     final int g(int param0) {
         if (param0 != 0) {
-            return 79;
+          return 79;
         }
         if (this.field_u) {
-            return 0;
+          return 0;
         }
         return 100;
     }
 
     final byte[] i(int param0) {
-        if (!(!this.field_u)) {
-            throw new RuntimeException();
+        if (this.field_u) {
+          throw new RuntimeException();
         }
         if (param0 != -20324) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         return this.field_v;
     }

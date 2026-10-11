@@ -13,7 +13,7 @@ final class ne {
     public static void a(boolean param0) {
         field_g = null;
         if (param0) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         field_c = null;
         field_e = null;
@@ -30,35 +30,20 @@ final class ne {
         RuntimeException var2_ref = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (fa) ((Object) oi.field_a.a((byte) -115));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  var2 = di.field_v.a((byte) -67);
-                  if (param0 == 19) {
-                    break L2;
-                  } else {
-                    field_f = (String) null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    wb.a(param1, param0 + -19);
-                    var2 = di.field_v.a(16213);
-                    continue L3;
-                  }
-                }
-              } else {
-                bf.a(var4, 4, param1);
-                var4 = (fa) ((Object) oi.field_a.a(16213));
-                continue L1;
-              }
-            }
+          var4 = (fa) (oi.field_a.a((byte) -115));
+          while (var4 != null) {
+            bf.a(var4, 4, param1);
+            var4 = (fa) (oi.field_a.a(16213));
           }
+          var2 = di.field_v.a((byte) -67);
+          if (param0 != 19) {
+            field_f = (String) null;
+          }
+          while (var2 != null) {
+            wb.a(param1, param0 - 19);
+            var2 = di.field_v.a(16213);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -72,144 +57,68 @@ final class ne {
         RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            try {
-              L1: {
-                if (pd.field_x.startsWith("win")) {
-                  L2: {
-                    if (param1.startsWith("http://")) {
-                      break L2;
-                    } else {
-                      if (param1.startsWith("https://")) {
-                        break L2;
-                      } else {
-                        stackIn_7_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  L3: {
-                    var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                    var3 = 0;
-                    if (param0 == 10448) {
-                      break L3;
-                    } else {
-                      ne.a(true);
-                      break L3;
-                    }
-                  }
-                  L4: while (true) {
-                    if (var3 >= param1.length()) {
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
-                      stackIn_16_0 = 1;
-                      decompiledRegionSelector0 = 3;
-                      break L1;
-                    } else {
-                      if ((var2.indexOf((int) param1.charAt(var3)) ^ -1) != 0) {
-                        var3++;
-                        continue L4;
-                      } else {
-                        stackIn_13_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L1;
-                      }
-                    }
-                  }
-                } else {
-                  stackIn_3_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_18_0 = 0;
-              return stackIn_18_0 != 0;
+          try {
+            if (!pd.field_x.startsWith("win")) {
+              return false;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
-              } else {
-                if (decompiledRegionSelector0 == 2) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 3;
-                  break L0;
-                }
-              }
+            if (!param1.startsWith("http://") &&
+              !param1.startsWith("https://")) {
+              return false;
             }
+            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            var3 = 0;
+            if (param0 != 10448) {
+              ne.a(true);
+            }
+            while (true) {
+              if (var3 >= param1.length()) {
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
+                return true;
+              }
+              if (var2.indexOf((int) param1.charAt(var3)) != -1) {
+                var3++;
+                continue;
+              }
+              break;
+            }
+            return false;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var2_ref2);
-
-            stackIn_21_1 = new StringBuilder().append("ne.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
-          }
-          throw kg.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_7_0 != 0;
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = var2_ref2;
+          stackIn_21_1 = new StringBuilder().append("ne.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
           } else {
-            if (decompiledRegionSelector1 == 2) {
-              return stackIn_13_0 != 0;
-            } else {
-              return stackIn_16_0 != 0;
-            }
+            stackIn_22_2 = "{...}";
           }
+          throw kg.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final static String a(byte param0) {
-        if (!(ao.field_Kb != pa.field_l)) {
-            return rh.field_b;
+        if (ao.field_Kb == pa.field_l) {
+          return rh.field_b;
         }
         if (param0 != -52) {
-            return (String) null;
+          return (String) null;
         }
         if (ao.field_Kb == cb.field_c) {
-            return ve.field_u;
+          return ve.field_u;
         }
-        if (!(w.field_I.b(-88))) {
-            return ve.field_u;
+        if (!w.field_I.b(-88)) {
+          return ve.field_u;
         }
         return pm.field_g;
     }
@@ -224,7 +133,7 @@ final class ne {
         int var8 = df.field_f;
         mg var9 = new mg(param1, -(param1 * 2) + param0);
         var9.b();
-        df.a(0, 0, param1, param0 + -(2 * param1), param5, param4);
+        df.a(0, 0, param1, param0 - 2 * param1, param5, param4);
         mg var10 = new mg(param1, param1);
         var10.b();
         df.b(0, 0, param1, param1, param5);
@@ -237,22 +146,22 @@ final class ne {
         mg var13 = new mg(16, param1);
         var13.b();
         if (param3 != 106) {
-            field_c = (um) null;
+          field_c = (um) null;
         }
         df.b(0, 0, 16, param1, param4);
         Object var14 = null;
-        if (!((param2 ^ -1) >= -1)) {
-            var16 = new mg(16, 16);
-            var14 = var16;
-            var16.b();
-            df.b(0, 0, 16, 16, param2);
+        if (param2 > 0) {
+          var16 = new mg(16, 16);
+          var14 = var16;
+          var16.b();
+          df.b(0, 0, 16, 16, param2);
         }
         df.a(var18, var7, var8);
         return new mg[]{var10, var11, var10, var9, (mg) (var14), var9, var12, var13, var12};
     }
 
     final static void a(int param0) {
-        kf.a(param0, param0 + -18);
+        kf.a(param0, param0 - 18);
     }
 
     static {

@@ -9,8 +9,8 @@ abstract class ve extends ms {
 
     final boolean a(int param0) {
         if (param0 < 106) {
-            this.field_m = (fr) null;
-            return this.field_n;
+          this.field_m = (fr) null;
+          return this.field_n;
         }
         return this.field_n;
     }
@@ -24,86 +24,45 @@ abstract class ve extends ms {
         wg stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 != null) {
-              var4_int = jaggl.OpenGL.glGenProgramARB();
-              var5 = 50 / ((param0 - -9) / 58);
-              jaggl.OpenGL.glBindProgramARB(param3, var4_int);
-              jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
-              jaggl.OpenGL.glGetIntegerv(34379, jg.field_e, 0);
-              if (0 == (jg.field_e[0] ^ -1)) {
-                jaggl.OpenGL.glBindProgramARB(param3, 0);
-                stackIn_7_0 = new wg(param1, param3, var4_int);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                jaggl.OpenGL.glBindProgramARB(param3, 0);
-                stackIn_5_0 = null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 == null) {
+            stackIn_2_0 = null;
+            return (wg) (stackIn_2_0);
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("ve.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
-          }
-          L2: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L2;
-            }
-          }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), stackIn_14_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (wg) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (wg) ((Object) stackIn_5_0);
-          } else {
+          var4_int = jaggl.OpenGL.glGenProgramARB();
+          var5 = 50 / ((param0 + 9) / 58);
+          jaggl.OpenGL.glBindProgramARB(param3, var4_int);
+          jaggl.OpenGL.glProgramRawARB(param3, 34933, param2);
+          jaggl.OpenGL.glGetIntegerv(34379, jg.field_e, 0);
+          if (jg.field_e[0] == -1) {
+            jaggl.OpenGL.glBindProgramARB(param3, 0);
+            stackIn_7_0 = new wg(param1, param3, var4_int);
             return stackIn_7_0;
           }
+          jaggl.OpenGL.glBindProgramARB(param3, 0);
+          stackIn_5_0 = null;
+          return (wg) (stackIn_5_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("ve.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -116,19 +75,18 @@ abstract class ve extends ms {
     abstract void c(int param0);
 
     final static ki a(int param0, boolean param1, int param2, int param3, boolean param4) {
-        if (param0 != 11880) {
-          ve.a(87, true, -113, -52, false);
-          return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
-        } else {
+        if (param0 == 11880) {
           return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
         }
+        ve.a(87, true, -113, -52, false);
+        return ng.a(param3, param0 ^ -11778, param1, param2, param4, false);
     }
 
     ve(fr param0) {
         try {
-            this.field_m = param0;
+          this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

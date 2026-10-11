@@ -11,31 +11,29 @@ final class ii implements Iterator {
     private jb field_a;
 
     public final void remove() {
-        if (!(null != this.field_a)) {
-            throw new IllegalStateException();
+        if (null == this.field_a) {
+          throw new IllegalStateException();
         }
         this.field_a.a(false);
         this.field_a = null;
     }
 
     private final void a(byte param0) {
-        if (param0 != -112) {
-          ii.a(-107);
-          this.field_a = null;
-          this.field_b = this.field_c.field_c[0].field_b;
-          this.field_d = 1;
-          return;
-        } else {
+        if (param0 == -112) {
           this.field_a = null;
           this.field_b = this.field_c.field_c[0].field_b;
           this.field_d = 1;
           return;
         }
+        ii.a(-107);
+        this.field_a = null;
+        this.field_b = this.field_c.field_c[0].field_b;
+        this.field_d = 1;
     }
 
     public static void a(int param0) {
         if (param0 > -53) {
-            return;
+          return;
         }
         field_e = null;
     }
@@ -47,173 +45,105 @@ final class ii implements Iterator {
         int var5 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         StringBuilder stackIn_20_1 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3_int = 48 * param1.field_m / param1.field_p;
-              var4 = param1.field_o * var3_int + 48 * param1.field_A + 24;
-              if (vh.field_a) {
-                var4 = tm.field_d[0].length * 24;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var5 = 24 + param1.field_t * 48 - -(var3_int * param1.field_s);
-              if (var4 >= param0[0]) {
-                break L2;
-              } else {
-                param0[0] = var4;
-                break L2;
-              }
-            }
-            if (param2 >= 116) {
-              L3: {
-                if (var5 >= param0[2]) {
-                  break L3;
-                } else {
-                  param0[2] = var5;
-                  break L3;
-                }
-              }
-              L4: {
-                if (param0[1] >= var4) {
-                  break L4;
-                } else {
-                  param0[1] = var4;
-                  break L4;
-                }
-              }
-              if (param0[3] < var5) {
-                param0[3] = var5;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var3_int = 48 * param1.field_m / param1.field_p;
+          var4 = param1.field_o * var3_int + 48 * param1.field_A + 24;
+          if (vh.field_a) {
+            var4 = tm.field_d[0].length * 24;
           }
+          var5 = 24 + param1.field_t * 48 + var3_int * param1.field_s;
+          if (var4 < param0[0]) {
+            param0[0] = var4;
+          }
+          if (param2 < 116) {
+            return;
+          }
+          if (var5 < param0[2]) {
+            param0[2] = var5;
+          }
+          if (param0[1] < var4) {
+            param0[1] = var4;
+          }
+          if (param0[3] >= var5) {
+            return;
+          }
+          param0[3] = var5;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var3);
-
-            stackIn_17_1 = new StringBuilder().append("ii.C(");
-
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_17_0 = var3;
+          stackIn_17_1 = new StringBuilder().append("ii.C(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_20_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L6;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L6;
-            }
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_18_0), stackIn_21_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw dn.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(')').toString());
         }
     }
 
     ii(ug param0) {
         this.field_a = null;
         try {
-            this.field_c = param0;
-            this.a((byte) -112);
+          this.field_c = param0;
+          this.a((byte) -112);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = CrazyCrystals.field_B;
-        if (this.field_b == this.field_c.field_c[this.field_d + -1]) {
-          L0: while (true) {
-            if (this.field_d < this.field_c.field_e) {
-              fieldTemp$1 = this.field_d;
-              this.field_d = this.field_d + 1;
-              if (this.field_c.field_c[fieldTemp$1].field_b != this.field_c.field_c[this.field_d + -1]) {
-                this.field_b = this.field_c.field_c[this.field_d - 1].field_b;
-                return true;
-              } else {
-                this.field_b = this.field_c.field_c[-1 + this.field_d];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_b != this.field_c.field_c[this.field_d - 1]) {
           return true;
         }
+        while (this.field_d < this.field_c.field_e) {
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          if (this.field_c.field_c[fieldTemp$0].field_b != this.field_c.field_c[this.field_d - 1]) {
+            this.field_b = this.field_c.field_c[this.field_d - 1].field_b;
+            return true;
+          }
+          this.field_b = this.field_c.field_c[-1 + this.field_d];
+        }
+        return false;
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         jb var1;
         int var2;
         var2 = CrazyCrystals.field_B;
-        if (this.field_b == this.field_c.field_c[-1 + this.field_d]) {
-          L0: while (true) {
-            if (this.field_d < this.field_c.field_e) {
-              fieldTemp$1 = this.field_d;
-              this.field_d = this.field_d + 1;
-              var1 = this.field_c.field_c[fieldTemp$1].field_b;
-              if (var1 == this.field_c.field_c[-1 + this.field_d]) {
-                continue L0;
-              } else {
-                this.field_b = var1.field_b;
-                this.field_a = var1;
-                return var1;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_b != this.field_c.field_c[-1 + this.field_d]) {
           var1 = this.field_b;
           this.field_a = var1;
           this.field_b = var1.field_b;
           return var1;
         }
+        do {
+          if (this.field_d >= this.field_c.field_e) {
+            return null;
+          }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          var1 = this.field_c.field_c[fieldTemp$0].field_b;
+        } while (var1 == this.field_c.field_c[-1 + this.field_d]);
+        this.field_b = var1.field_b;
+        this.field_a = var1;
+        return var1;
     }
 
     static {

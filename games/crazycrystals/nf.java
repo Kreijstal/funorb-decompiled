@@ -6,41 +6,19 @@ abstract class nf extends oh {
     static dl field_g;
 
     final int a(byte param0, boolean param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 > -53) {
-          L0: {
-            this.a((byte) -2, false);
-            if (param1) {
-              stackIn_8_0 = 16;
-              break L0;
-            } else {
-              stackIn_8_0 = 8;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (param1) {
-              stackIn_4_0 = 16;
-              break L1;
-            } else {
-              stackIn_4_0 = 8;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
+        if (param0 <= -53) {
+          return !param1 ? 8 : 16;
         }
+        this.a((byte) -2, false);
+        return !param1 ? 8 : 16;
     }
 
     final int a(int param0, int param1) {
-        if (param0 != 1843275042) {
-          field_f = false;
-          return q.field_a[ma.field_n[param1]].field_j;
-        } else {
+        if (param0 == 1843275042) {
           return q.field_a[ma.field_n[param1]].field_j;
         }
+        field_f = false;
+        return q.field_a[ma.field_n[param1]].field_j;
     }
 
     nf() {
@@ -48,9 +26,9 @@ abstract class nf extends oh {
 
     public static void c(byte param0) {
         if (param0 != 39) {
-            field_f = true;
-            field_g = null;
-            return;
+          field_f = true;
+          field_g = null;
+          return;
         }
         field_g = null;
     }

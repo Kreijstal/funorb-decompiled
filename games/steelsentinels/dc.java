@@ -12,40 +12,26 @@ final class dc {
     static String field_a;
 
     final static String a(int param0, int param1) {
+        int var4 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         int[] var2;
         StringBuilder var3;
-        int var4;
         int var5;
         int[] var6;
         var5 = SteelSentinels.field_G;
         var6 = new int[]{16, param1, 64, 128, 256, 512};
         var2 = var6;
         var3 = new StringBuilder();
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= var6.length) {
-            return var3.toString();
-          } else {
-            if ((var6[var4] & param0) != 0) {
-              L1: {
-                if (-1 <= (var3.length() ^ -1)) {
-                  break L1;
-                } else {
-                  discarded$0 = var3.append('/');
-                  break L1;
-                }
-              }
-              discarded$1 = var3.append(kk.field_h[var4]);
-              var4++;
-              continue L0;
-            } else {
-              var4++;
-              continue L0;
+        for (var4 = 0; var4 < var6.length; var4++) {
+          if ((var6[var4] & param0) != 0) {
+            if (var3.length() > 0) {
+              discarded$0 = var3.append('/');
             }
+            discarded$1 = var3.append(kk.field_h[var4]);
           }
         }
+        return var3.toString();
     }
 
     public static void a(int param0) {

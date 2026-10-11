@@ -16,7 +16,7 @@ final class cja {
 
     public static void a(int param0) {
         if (param0 != -17719) {
-            return;
+          return;
         }
         field_j = null;
     }

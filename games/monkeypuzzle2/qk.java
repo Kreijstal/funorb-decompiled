@@ -11,7 +11,7 @@ final class qk {
         field_b = null;
         field_c = null;
         if (param0 != 2762) {
-            qk.a(69);
+          qk.a(69);
         }
     }
 

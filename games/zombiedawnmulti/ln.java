@@ -14,10 +14,10 @@ final class ln implements Iterator {
     public final Object next() {
         Object var1 = this.field_e;
         if (this.field_b.field_d != var1) {
-            this.field_e = ((qa) (var1)).field_k;
+          this.field_e = ((qa) (var1)).field_k;
         } else {
-            var1 = null;
-            this.field_e = null;
+          var1 = null;
+          this.field_e = null;
         }
         this.field_a = (qa) (var1);
         return var1;
@@ -28,36 +28,34 @@ final class ln implements Iterator {
     }
 
     public final void remove() {
-        if (!(this.field_a != null)) {
-            throw new IllegalStateException();
+        if (this.field_a == null) {
+          throw new IllegalStateException();
         }
         this.field_a.a(-4564);
         this.field_a = null;
     }
 
     public static void a(int param0) {
-        if (param0 != 18358) {
-          ln.a(-56);
-          field_d = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 18358) {
           field_d = null;
           field_c = null;
           field_f = null;
           return;
         }
+        ln.a(-56);
+        field_d = null;
+        field_c = null;
+        field_f = null;
     }
 
     ln(e param0) {
         this.field_a = null;
         try {
-            this.field_b = param0;
-            this.field_a = null;
-            this.field_e = this.field_b.field_d.field_k;
+          this.field_b = param0;
+          this.field_a = null;
+          this.field_e = this.field_b.field_d.field_k;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "ln.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

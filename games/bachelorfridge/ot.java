@@ -8,94 +8,67 @@ class ot extends iga {
 
     wba a(byte param0) {
         if (param0 != -106) {
-            return (wba) null;
+          return (wba) null;
         }
         return bna.field_x;
     }
 
     final static boolean a(int param0, int param1, boolean param2, int param3, int param4, int param5, byte param6) {
-        if (param6 <= 43) {
-          L0: {
-            ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
-            if (!lb.g((byte) -96)) {
-              break L0;
-            } else {
-              L1: {
-                kja.a(param1, param3, (byte) -66, param2);
-                if (ms.field_u == null) {
-                  break L1;
-                } else {
-                  if (!ms.field_u.a(true, param2, param1, param0, param4)) {
-                    break L1;
-                  } else {
-                    param2 = false;
-                    di.c(55);
-                    break L1;
-                  }
-                }
-              }
-              fd.a(true, param1, param2);
-              vd.a((byte) -35, param2, param5);
+        if (param6 > 43) {
+          if (lb.g((byte) -96)) {
+            kja.a(param1, param3, (byte) -66, param2);
+            if (ms.field_u != null &&
+              ms.field_u.a(true, param2, param1, param0, param4)) {
               param2 = false;
-              break L0;
+              di.c(55);
             }
-          }
-          return param2;
-        } else {
-          L2: {
-            if (!lb.g((byte) -96)) {
-              break L2;
-            } else {
-              L3: {
-                kja.a(param1, param3, (byte) -66, param2);
-                if (ms.field_u == null) {
-                  break L3;
-                } else {
-                  if (!ms.field_u.a(true, param2, param1, param0, param4)) {
-                    break L3;
-                  } else {
-                    param2 = false;
-                    di.c(55);
-                    break L3;
-                  }
-                }
-              }
-              fd.a(true, param1, param2);
-              vd.a((byte) -35, param2, param5);
-              param2 = false;
-              break L2;
-            }
+            fd.a(true, param1, param2);
+            vd.a((byte) -35, param2, param5);
+            param2 = false;
           }
           return param2;
         }
+        ot.a(-115, -104, true, 1, -88, -103, (byte) -27);
+        if (lb.g((byte) -96)) {
+          kja.a(param1, param3, (byte) -66, param2);
+          if (ms.field_u != null &&
+            ms.field_u.a(true, param2, param1, param0, param4)) {
+            param2 = false;
+            di.c(55);
+          }
+          fd.a(true, param1, param2);
+          vd.a((byte) -35, param2, param5);
+          param2 = false;
+        }
+        return param2;
     }
 
     ot(long param0, String param1) {
         try {
-            this.field_f = param0;
-            this.field_g = param1;
+          this.field_f = param0;
+          this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ot.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(lu param0, boolean param1) {
         try {
-            param0.b(1686281208, this.field_f);
-            if (param1) {
-                this.field_f = -1L;
-            }
-            param0.a(26, this.field_g);
+          param0.b(1686281208, this.field_f);
+          if (param1) {
+            this.field_f = -1L;
+          }
+          param0.a(26, this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ot.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(byte param0) {
         if (param0 >= -36) {
-            field_e = (kv) null;
-            field_e = null;
-            return;
+          field_e = (kv) null;
+          field_e = null;
+          return;
         }
         field_e = null;
     }

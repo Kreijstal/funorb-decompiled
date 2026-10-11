@@ -10,14 +10,14 @@ final class ep extends un {
 
     final void a(byte[] param0, int param1) {
         try {
-            if (param1 < 30) {
-                ep.a((byte) -76, 4);
-            }
-            this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_h.position(0);
-            this.field_h.put(param0);
+          if (param1 < 30) {
+            ep.a((byte) -76, 4);
+          }
+          this.field_h = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_h.position(0);
+          this.field_h.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ep.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -46,59 +46,36 @@ final class ep extends un {
         hb stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = param2.c(true);
-            if (param1 == (var3_int ^ -1)) {
-              param2.b((byte) 80);
-              stackIn_3_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var4 = new hb(param0, var3_int);
-              var4.field_e = param2.c(true);
-              var4.field_g = param2.c(true);
-              var4.field_f = param2.c(true);
-              var4.field_k = param2.c(true);
-              var4.field_o = param2.c(true);
-              var4.field_d = param2.c(true);
-              var4.field_p = param2.c(true);
-              stackIn_5_0 = (hb) (var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          var3_int = param2.c(true);
+          if (param1 == ~var3_int) {
+            param2.b((byte) 80);
+            stackIn_3_0 = null;
+            return (hb) (stackIn_3_0);
           }
+          var4 = new hb(param0, var3_int);
+          var4.field_e = param2.c(true);
+          var4.field_g = param2.c(true);
+          var4.field_f = param2.c(true);
+          var4.field_k = param2.c(true);
+          var4.field_o = param2.c(true);
+          var4.field_d = param2.c(true);
+          var4.field_p = param2.c(true);
+          stackIn_5_0 = var4;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("ep.F(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("ep.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (hb) ((Object) stackIn_3_0);
-        } else {
-          return stackIn_5_0;
+          throw vk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -111,28 +88,18 @@ final class ep extends un {
         RuntimeException var2_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          L0: {
-            var5 = (ak) ((Object) oh.field_j.e(-24172));
-            L1: while (true) {
-              if (var5 == null) {
-                var3 = 97 % ((param0 - 67) / 59);
-                var2 = sf.field_c.e(-24172);
-                L2: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    bd.a(param1, (byte) 113);
-                    var2 = sf.field_c.a(4);
-                    continue L2;
-                  }
-                }
-              } else {
-                g.a(param1, var5, (byte) 50);
-                var5 = (ak) ((Object) oh.field_j.a(4));
-                continue L1;
-              }
-            }
+          var5 = (ak) (oh.field_j.e(-24172));
+          while (var5 != null) {
+            g.a(param1, var5, (byte) 50);
+            var5 = (ak) (oh.field_j.a(4));
           }
+          var3 = 97 % ((param0 - 67) / 59);
+          var2 = sf.field_c.e(-24172);
+          while (var2 != null) {
+            bd.a(param1, (byte) 113);
+            var2 = sf.field_c.a(4);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

@@ -12,36 +12,36 @@ class pp extends ic {
         field_o = null;
         field_q = null;
         if (param0) {
-            pp.a(true);
+          pp.a(true);
         }
     }
 
     pi b(int param0) {
         if (param0 != 7) {
-            field_o = (String) null;
-            return pl.field_G;
+          field_o = (String) null;
+          return pl.field_G;
         }
         return pl.field_G;
     }
 
     pp(long param0, String param1) {
         try {
-            this.field_p = param0;
-            this.field_m = param1;
+          this.field_p = param0;
+          this.field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "pp.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(k param0, int param1) {
         try {
-            param0.a(this.field_p, true);
-            if (param1 != -1) {
-                this.b(-111);
-            }
-            param0.a(13066, this.field_m);
+          param0.a(this.field_p, true);
+          if (param1 != -1) {
+            this.b(-111);
+          }
+          param0.a(13066, this.field_m);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "pp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

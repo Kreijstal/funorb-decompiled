@@ -8,38 +8,32 @@ class wf {
     wf field_a;
 
     final void c(int param0) {
-        if (this.field_c != null) {
-          this.field_c.field_a = this.field_a;
-          this.field_a.field_c = this.field_c;
-          this.field_a = null;
-          if (param0 >= -122) {
-            this.field_a = (wf) null;
-            this.field_c = null;
-            return;
-          } else {
-            this.field_c = null;
-            return;
-          }
-        } else {
+        if (this.field_c == null) {
           return;
         }
+        this.field_c.field_a = this.field_a;
+        this.field_a.field_c = this.field_c;
+        this.field_a = null;
+        if (param0 < -122) {
+          this.field_c = null;
+          return;
+        }
+        this.field_a = (wf) null;
+        this.field_c = null;
     }
 
     final boolean b(byte param0) {
-        if (param0 >= 80) {
-          if (this.field_c == null) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 < 80) {
           this.field_a = (wf) null;
-          if (this.field_c == null) {
-            return false;
-          } else {
+          if (this.field_c != null) {
             return true;
           }
+          return false;
         }
+        if (this.field_c != null) {
+          return true;
+        }
+        return false;
     }
 
     public static void b(int param0) {
@@ -50,25 +44,20 @@ class wf {
     final static void a(long param0, boolean param1) {
         if (0L >= param0) {
           return;
-        } else {
-          if (-1L == (param0 % 10L ^ -1L)) {
-            ci.a(param0 - 1L, (byte) 127);
-            ci.a(1L, (byte) 104);
-            if (!param1) {
-              return;
-            } else {
-              field_d = (hd) null;
-              return;
-            }
-          } else {
-            ci.a(param0, (byte) 105);
-            if (!param1) {
-              return;
-            } else {
-              field_d = (hd) null;
-              return;
-            }
+        }
+        if (param0 % 10L != 0L) {
+          ci.a(param0, (byte) 105);
+          if (param1) {
+            field_d = (hd) null;
+            return;
           }
+          return;
+        }
+        ci.a(param0 - 1L, (byte) 127);
+        ci.a(1L, (byte) 104);
+        if (param1) {
+          field_d = (hd) null;
+          return;
         }
     }
 

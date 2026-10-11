@@ -13,121 +13,69 @@ final class ef {
         field_b = null;
         field_d = null;
         field_c = null;
-        if (param0 != 0) {
-          ef.a(-116);
-          field_f = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_f = null;
           field_e = null;
           return;
         }
+        ef.a(-116);
+        field_f = null;
+        field_e = null;
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        if (!param1) {
-          if (param0 < 48) {
-            if (param0 < 65) {
-              L0: {
-                if (param0 < 97) {
-                  break L0;
-                } else {
-                  if (122 < param0) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param0 <= 90) {
-                stackIn_30_0 = 1;
-                return stackIn_30_0 != 0;
-              } else {
-                L1: {
-                  L2: {
-                    if (param0 < 97) {
-                      break L2;
-                    } else {
-                      if (122 < param0) {
-                        break L2;
-                      } else {
-                        stackIn_27_0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackIn_27_0 = 0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (param0 > 57) {
-              if (param0 >= 65) {
-                if (param0 > 90) {
-                  if (param0 >= 97) {
-                    if (122 < param0) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                if (param0 >= 97) {
-                  if (122 < param0) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        boolean stackIn_27_0 = false;
+        if (param1) {
           return true;
         }
+        if (param0 < 48) {
+          if (param0 < 65) {
+            if (param0 >= 97 &&
+              122 >= param0) {
+              return true;
+            }
+            return false;
+          }
+          if (param0 <= 90) {
+            return true;
+          }
+          stackIn_27_0 = (param0 >= 97) && (122 >= param0);
+          return stackIn_27_0;
+        }
+        if (param0 <= 57) {
+          return true;
+        }
+        if (param0 >= 65 &&
+          param0 <= 90) {
+          return true;
+        }
+        if (param0 < 97) {
+          return false;
+        }
+        if (122 < param0) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(boolean param0) {
         kc.field_b = new pf();
         if (!param0) {
-            field_f = (bi) null;
+          field_f = (bi) null;
         }
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        int var3;
-        L0: {
-          var2 = 0;
-          if ((param0 & 7) == 0) {
-            break L0;
-          } else {
-            var2 = -(7 & param0) + 8;
-            break L0;
-          }
+        int var3 = 0;
+        int var2 = 0;
+        if ((param0 & 7) != 0) {
+          var2 = -(7 & param0) + 8;
         }
-        if (param1 != 57) {
-          return 23;
-        } else {
+        if (param1 == 57) {
           var3 = var2 + param0;
           return var3;
         }
+        return 23;
     }
 
     static {

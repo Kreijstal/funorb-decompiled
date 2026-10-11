@@ -12,36 +12,25 @@ final class sc extends qt {
     final void b(int param0) {
         this.field_A = eo.a("", 7126504, un.field_d, -1, false);
         if (param0 != -38) {
-            this.a((byte) -76, false);
+          this.a((byte) -76, false);
         }
     }
 
     final void a(boolean param0, int param1) {
-        String var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = Kickabout.field_G;
+        int var5 = 0;
+        int var6 = Kickabout.field_G;
         super.a(param0, 116);
-        on.a(this.field_A.field_F - 150, this.field_A.field_T + -150, this.field_A.field_q - -300, this.field_A.field_mb - -160, 8, 65793, this.field_C >> -571055071);
+        on.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
         this.field_A.a(50, param0);
-        var3 = ct.field_w.toLowerCase();
-        var4 = (int)Math.abs(-(nj.a(-58) / 1000L % 6L) + 3L);
-        un.field_d.c(hv.field_d.toUpperCase(), (this.field_A.field_q >> -754526783) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> -1152977055) - -6, 16777215, -1, this.field_C);
-        var5 = 0;
-        L0: while (true) {
-          if (var4 <= var5) {
-            if (param1 < 99) {
-              return;
-            } else {
-              un.field_d.a(var3, this.field_A.field_F + -150, -150 + this.field_A.field_T, this.field_A.field_q + 300, 130, 16777215, -1, this.field_C, 1, 1, 0);
-              return;
-            }
-          } else {
-            var3 = var3 + ".";
-            var5++;
-            continue L0;
-          }
+        String var3 = ct.field_w.toLowerCase();
+        int var4 = (int)Math.abs(-(nj.a(-58) / 1000L % 6L) + 3L);
+        un.field_d.c(hv.field_d.toUpperCase(), (this.field_A.field_q >> 1) + this.field_A.field_F, this.field_A.field_T + (this.field_A.field_mb >> 1) + 6, 16777215, -1, this.field_C);
+        for (var5 = 0; var4 > var5; var5++) {
+          var3 = var3 + ".";
+        }
+        if (param1 >= 99) {
+          un.field_d.a(var3, this.field_A.field_F - 150, -150 + this.field_A.field_T, this.field_A.field_q + 300, 130, 16777215, -1, this.field_C, 1, 1, 0);
+          return;
         }
     }
 
@@ -49,87 +38,54 @@ final class sc extends qt {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, param1, -126, param3);
-              this.a(false);
-              if (param1) {
-                this.field_C = param0;
-                break L1;
-              } else {
-                this.field_C = 256 + -(param0 << 866888481);
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_C <= 256) {
-                break L2;
-              } else {
-                this.field_C = 256;
-                break L2;
-              }
-            }
-            L3: {
-              if ((this.field_C ^ -1) <= -1) {
-                break L3;
-              } else {
-                this.field_C = 0;
-                break L3;
-              }
-            }
-            this.field_A.field_P = this.field_C;
-            if (param2 < -28) {
-              break L0;
-            } else {
-              field_F = (wp[]) null;
-              return;
-            }
+          super.a(param0, param1, -126, param3);
+          this.a(false);
+          if (param1) {
+            this.field_C = param0;
+          } else {
+            this.field_C = 256 - (param0 << 1);
           }
+          if (this.field_C > 256) {
+            this.field_C = 256;
+          }
+          if (this.field_C < 0) {
+            this.field_C = 0;
+          }
+          this.field_A.field_P = this.field_C;
+          if (param2 < -28) {
+            return;
+          }
+          field_F = (wp[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var5);
-
-            stackIn_12_1 = new StringBuilder().append("sc.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("sc.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static void g(byte param0) {
-        if (param0 >= -112) {
-          sc.e(70);
-          eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
-          return;
-        } else {
+        if (param0 < -112) {
           eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
           return;
         }
+        sc.e(70);
+        eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {
-        if (param0) {
-          return;
-        } else {
-          this.field_A.a(true, this.field_A.field_q, (f.field_d >> 338756673) - (this.field_A.field_q >> -1697770463), 100 + (vc.field_B >> 1240180097), this.field_A.field_mb);
+        if (!param0) {
+          this.field_A.a(true, this.field_A.field_q, (f.field_d >> 1) - (this.field_A.field_q >> 1), 100 + (vc.field_B >> 1), this.field_A.field_mb);
           return;
         }
     }
@@ -141,23 +97,20 @@ final class sc extends qt {
     public static void e(int param0) {
         field_F = null;
         if (param0 != 130) {
-            return;
+          return;
         }
         field_B = null;
     }
 
     final void a(byte param0, boolean param1) {
-        int var3;
         super.a((byte) 122, param1);
         this.field_A.b(0, param1);
-        var3 = -96 % ((param0 - 38) / 60);
-        if (1 == this.field_A.field_sb) {
-          ii.a((byte) -120);
-          vj.a(-81, true);
-          return;
-        } else {
+        int var3 = -96 % ((param0 - 38) / 60);
+        if (1 != this.field_A.field_sb) {
           return;
         }
+        ii.a((byte) -120);
+        vj.a(-81, true);
     }
 
     final void a(int param0, int param1, boolean param2) {
@@ -169,7 +122,7 @@ final class sc extends qt {
         field_B = new String[255];
         field_F = new wp[255];
         for (var0 = 0; field_F.length > var0; var0++) {
-            field_F[var0] = new wp();
+          field_F[var0] = new wp();
         }
     }
 }

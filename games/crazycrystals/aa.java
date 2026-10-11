@@ -10,7 +10,7 @@ final class aa {
         field_b = null;
         field_a = null;
         if (param0 != 20293) {
-            field_a = (am) null;
+          field_a = (am) null;
         }
     }
 

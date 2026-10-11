@@ -12,9 +12,9 @@ final class mo extends ag implements en {
         field_R = null;
         field_N = null;
         if (param0) {
-            mo.d(false);
-            field_O = null;
-            return;
+          mo.d(false);
+          field_O = null;
+          return;
         }
         field_O = null;
     }
@@ -31,36 +31,36 @@ final class mo extends ag implements en {
 
     final void a(int param0) {
         int var2 = 250;
-        this.field_P.a(25, -var2 + this.field_t >> 1393192865, this.field_s + -5 >> -1619767807, (byte) -119, param0);
-        this.field_Q.a(30, 140 + (-var2 + this.field_t >> 9730241) + 10, (20 + (this.field_s + -30) >> 1451464225) + 2, (byte) -119, 100);
+        this.field_P.a(25, -var2 + this.field_t >> 1, this.field_s - 5 >> 1, (byte) -119, param0);
+        this.field_Q.a(30, 140 + (-var2 + this.field_t >> 1) + 10, (20 + (this.field_s - 30) >> 1) + 2, (byte) -119, 100);
     }
 
     public final void a(int param0, int param1, byte param2, int param3, d param4) {
         if (this.field_P.a(-11011).b((byte) -31) != ae.field_c) {
-            return;
+          return;
         }
         try {
-            df.a(this.field_P.i(5390), (byte) 103, this.field_P.a((byte) -125), this.field_P.i((byte) -117));
-            if (param2 >= -22) {
-                mo.d(true);
-            }
+          df.a(this.field_P.i(5390), (byte) 103, this.field_P.a((byte) -125), this.field_P.i((byte) -117));
+          if (param2 >= -22) {
+            mo.d(true);
+          }
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(oc param0, byte param1, int param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_Q.field_J = this.field_P.a(-11011).b((byte) -31) == ae.field_c ? true : false;
+          super.a(param0, param1, param2, param3);
+          this.field_Q.field_J = this.field_P.a(-11011).b((byte) -31) == ae.field_c ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, param3);
-        og.field_Yb.c(jm.field_i, 4 + (this.field_o + param1), 4 + param0 + (this.field_w - -og.field_Yb.field_F), 16777215, -1);
+        og.field_Yb.c(jm.field_i, 4 + (this.field_o + param1), 4 + param0 + (this.field_w + og.field_Yb.field_F), 16777215, -1);
     }
 
     static {

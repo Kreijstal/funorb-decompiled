@@ -11,81 +11,40 @@ final class af extends java.awt.Canvas {
 
     final static boolean a(String param0, int param1) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_9_0 = 0;
+        boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 0) {
-              if (di.field_q != null) {
-                L1: {
-                  if (-1 < (param0.toLowerCase().indexOf(di.field_q.toLowerCase()) ^ -1)) {
-                    stackIn_9_0 = 0;
-                    break L1;
-                  } else {
-                    stackIn_9_0 = 1;
-                    break L1;
-                  }
-                }
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_5_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 0) {
+            return true;
           }
+          if (di.field_q != null) {
+            stackIn_9_0 = !(param0.toLowerCase().indexOf(di.field_q.toLowerCase()) < 0);
+            return stackIn_9_0;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("af.C(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L2;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L2;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("af.C(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
           } else {
-            return stackIn_9_0 != 0;
+            stackIn_13_2 = "{...}";
           }
+          throw r.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void b(int param0) {
         qh.g(83);
         if (param0 != 0) {
-            field_f = (qr) null;
-            ak.i(-751);
-            return;
+          field_f = (qr) null;
+          ak.i(-751);
+          return;
         }
         ak.i(-751);
     }
@@ -95,157 +54,85 @@ final class af extends java.awt.Canvas {
         field_f = null;
         field_d = null;
         field_e = null;
-        if (param0 != -1) {
-          af.a(-3);
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_c = null;
           return;
         }
+        af.a(-3);
+        field_c = null;
     }
 
     final static boolean b(String param0, int param1) {
+        int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
-        int var3 = 0;
         int var4 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            try {
-              L1: {
-                if (!qb.field_b.startsWith("win")) {
-                  stackIn_4_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
-                } else {
-                  L2: {
-                    if (param0.startsWith("http://")) {
-                      break L2;
-                    } else {
-                      if (param0.startsWith("https://")) {
-                        break L2;
-                      } else {
-                        stackIn_8_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                  var3 = 0;
-                  L3: while (true) {
-                    if (param0.length() <= var3) {
-                      L4: {
-                        if (param1 == -1495) {
-                          break L4;
-                        } else {
-                          field_d = (String) null;
-                          break L4;
-                        }
-                      }
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackIn_19_0 = 1;
-                      decompiledRegionSelector0 = 2;
-                      break L1;
-                    } else {
-                      if (0 != (var2.indexOf((int) param0.charAt(var3)) ^ -1)) {
-                        var3++;
-                        continue L3;
-                      } else {
-                        return false;
-                      }
-                    }
-                  }
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_21_0 = 0;
-              return stackIn_21_0 != 0;
+          try {
+            if (!qb.field_b.startsWith("win")) {
+              return false;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
-              } else {
-                decompiledRegionSelector1 = 2;
-                break L0;
+            if (!param0.startsWith("http://") &&
+              !param0.startsWith("https://")) {
+              return false;
+            }
+            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            for (var3 = 0; param0.length() > var3; var3++) {
+              if (var2.indexOf((int) param0.charAt(var3)) == -1) {
+                return false;
               }
             }
+            if (param1 != -1495) {
+              field_d = (String) null;
+            }
+            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+            return true;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2_ref2);
-
-            stackIn_24_1 = new StringBuilder().append("af.B(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L5;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L5;
-            }
-          }
-          throw r.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_8_0 != 0;
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_24_0 = var2_ref2;
+          stackIn_24_1 = new StringBuilder().append("af.B(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
           } else {
-            return stackIn_19_0 != 0;
+            stackIn_25_2 = "{...}";
           }
+          throw r.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_a.paint(param0);
+          this.field_a.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "af.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "af.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     af(java.awt.Component param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "af.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_a.update(param0);
+          this.field_a.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "af.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "af.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

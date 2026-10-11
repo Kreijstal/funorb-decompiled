@@ -17,7 +17,7 @@ final class ai {
         field_a = null;
         field_c = null;
         if (param0 <= 85) {
-            return;
+          return;
         }
         field_g = null;
         field_i = null;

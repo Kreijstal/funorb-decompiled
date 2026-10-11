@@ -14,89 +14,80 @@ final class jo {
         int var2 = param0;
         gb var3 = this.field_d.field_o;
         while (var3 != this.field_d) {
-            var3 = var3.field_o;
-            var2++;
+          var3 = var3.field_o;
+          var2++;
         }
         return var2;
     }
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         if (hn.field_M == null) {
-            return false;
+          return false;
         }
         if (!hn.field_M.d(0)) {
-            return false;
+          return false;
         }
         return true;
     }
 
     public static void a(int param0) {
         if (param0 != 21332) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;
     }
 
     final gb a(boolean param0) {
-        gb var2;
-        var2 = this.field_c;
+        gb var2 = this.field_c;
         if (this.field_d == var2) {
           this.field_c = null;
           return null;
-        } else {
-          if (param0) {
-            field_a = true;
-            this.field_c = var2.field_o;
-            return var2;
-          } else {
-            this.field_c = var2.field_o;
-            return var2;
-          }
         }
+        if (!param0) {
+          this.field_c = var2.field_o;
+          return var2;
+        }
+        field_a = true;
+        this.field_c = var2.field_o;
+        return var2;
     }
 
     final gb a(byte param0) {
-        int var2;
-        gb var3;
-        var2 = 15 % ((param0 - 20) / 62);
-        var3 = this.field_d.field_o;
-        if (var3 == this.field_d) {
-          this.field_c = null;
-          return null;
-        } else {
+        int var2 = 15 % ((param0 - 20) / 62);
+        gb var3 = this.field_d.field_o;
+        if (var3 != this.field_d) {
           this.field_c = var3.field_o;
           return var3;
         }
+        this.field_c = null;
+        return null;
     }
 
     final gb c(int param0) {
-        gb var2;
-        if (param0 == -15464) {
-          var2 = this.field_d.field_o;
-          if (var2 == this.field_d) {
-            return null;
-          } else {
-            var2.e(0);
-            return var2;
-          }
-        } else {
+        if (param0 != -15464) {
           return (gb) null;
         }
+        gb var2 = this.field_d.field_o;
+        if (var2 != this.field_d) {
+          var2.e(0);
+          return var2;
+        }
+        return null;
     }
 
     final static void a(int[] param0, int param1, int param2) {
         try {
-            hg.field_f[param1] = param0;
-            kk.field_X[param1] = new cl(param1);
-            if (param2 != -13850) {
-                field_a = true;
-            }
+          hg.field_f[param1] = param0;
+          kk.field_X[param1] = new cl(param1);
+          if (param2 != -13850) {
+            field_a = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "jo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "jo.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -110,52 +101,32 @@ final class jo {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null != param0.field_s) {
-                param0.e(param1 + 0);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            param0.field_s = this.field_d.field_s;
-            param0.field_o = this.field_d;
-            param0.field_s.field_o = param0;
-            param0.field_o.field_s = param0;
-            if (param1 == 0) {
-              break L0;
-            } else {
-              field_b = (String) null;
-              return;
-            }
+          if (null != param0.field_s) {
+            param0.e(param1 + 0);
           }
+          param0.field_s = this.field_d.field_s;
+          param0.field_o = this.field_d;
+          param0.field_s.field_o = param0;
+          param0.field_o.field_s = param0;
+          if (param1 == 0) {
+            return;
+          }
+          field_b = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("jo.E(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("jo.E(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

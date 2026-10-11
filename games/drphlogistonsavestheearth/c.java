@@ -6,7 +6,7 @@ final class c {
 
     public static void a(byte param0) {
         if (param0 != -58) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -15,13 +15,13 @@ final class c {
         tk var2 = null;
         tk.b(param1.a("headers.packvorbis", "", 24874));
         if (param0) {
-            return;
+          return;
         }
         try {
-            var2 = tk.a(param1, "jagex logo2.packvorbis", "");
-            var2.c();
+          var2 = tk.a(param1, "jagex logo2.packvorbis", "");
+          var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "c.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

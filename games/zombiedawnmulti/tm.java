@@ -13,53 +13,42 @@ final class tm {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        if (param0 >= -21) {
-          tm.a(97);
-          field_e = null;
-          field_g = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -21) {
           field_e = null;
           field_g = null;
           field_f = null;
           field_d = null;
           return;
         }
+        tm.a(97);
+        field_e = null;
+        field_g = null;
+        field_f = null;
+        field_d = null;
     }
 
     final static void a(boolean param0, boolean param1) {
-        L0: {
-          if (!cr.a((byte) -114)) {
-            break L0;
-          } else {
-            param0 = false;
-            break L0;
-          }
+        if (cr.a((byte) -114)) {
+          param0 = false;
         }
         dk.e(param0, -7579);
-        if (!sa.field_f) {
+        if (sa.field_f) {
+          oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
+          em.field_U.field_c.c(param0, -1);
           if (param1) {
             field_a = (String[]) null;
             an.a(1, param0);
             return;
-          } else {
-            an.a(1, param0);
-            return;
           }
-        } else {
-          oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
-          em.field_U.field_c.c(param0, -1);
-          if (!param1) {
-            an.a(1, param0);
-            return;
-          } else {
-            field_a = (String[]) null;
-            an.a(1, param0);
-            return;
-          }
+          an.a(1, param0);
+          return;
         }
+        if (!param1) {
+          an.a(1, param0);
+          return;
+        }
+        field_a = (String[]) null;
+        an.a(1, param0);
     }
 
     static {

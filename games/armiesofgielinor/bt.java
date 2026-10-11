@@ -11,16 +11,14 @@ final class bt {
     static String field_d;
 
     final static void b(int param0) {
-        if (param0 != 0) {
-          bt.c(83);
-          wb.a(true, (byte) 32, cd.field_e, qk.field_b);
-          se.field_f = true;
-          return;
-        } else {
+        if (param0 == 0) {
           wb.a(true, (byte) 32, cd.field_e, qk.field_b);
           se.field_f = true;
           return;
         }
+        bt.c(83);
+        wb.a(true, (byte) 32, cd.field_e, qk.field_b);
+        se.field_f = true;
     }
 
     public static void c(int param0) {
@@ -30,42 +28,32 @@ final class bt {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-            bt.b(3);
+          bt.b(3);
         }
     }
 
     final static void a(int param0) {
-        ft var1;
-        ft var2;
-        int var3;
-        int var4;
         kr.field_E = new dm();
         kr.field_E.i(1);
-        var1 = kr.field_E.b((byte) -72);
+        ft var1 = kr.field_E.b((byte) -72);
         if (var1 == null) {
           return;
-        } else {
-          var2 = kr.field_E.h((byte) 94);
-          if (var2 != null) {
-            var3 = 9 % ((param0 - -41) / 55);
-            var4 = kr.field_E.h(-10754);
-            if ((var4 ^ -1) > -1) {
-              return;
-            } else {
-              if (null != kr.field_E.field_N) {
-                if (kr.field_E.field_N.length == 0) {
-                  return;
-                } else {
-                  gb.a(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, kr.field_E.field_N, -52);
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            return;
-          }
+        }
+        ft var2 = kr.field_E.h((byte) 94);
+        if (var2 == null) {
+          return;
+        }
+        int var3 = 9 % ((param0 + 41) / 55);
+        int var4 = kr.field_E.h(-10754);
+        if (var4 < 0) {
+          return;
+        }
+        if (null == kr.field_E.field_N) {
+          return;
+        }
+        if (kr.field_E.field_N.length != 0) {
+          gb.a(var4, 5, var1.field_k, var2.field_k, var1.field_n, var2.field_n, kr.field_E.field_N, -52);
+          return;
         }
     }
 

@@ -24,7 +24,7 @@ final class cb extends q {
         int var0 = 0;
         field_m = new qj[255];
         for (var0 = 0; var0 < field_m.length; var0++) {
-            field_m[var0] = new qj();
+          field_m[var0] = new qj();
         }
     }
 }

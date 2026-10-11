@@ -9,47 +9,45 @@ final class dc extends com.ms.dll.Callback {
     private boolean field_a;
 
     final void a(int param0, int param1, int param2) {
-        java.awt.Component var5;
-        if (param0 != -12384) {
-          var5 = (java.awt.Component) null;
-          this.a(-74, true, (java.awt.Component) null);
-          com.ms.win32.User32.SetCursorPos(param2, param1);
-          return;
-        } else {
+        if (param0 == -12384) {
           com.ms.win32.User32.SetCursorPos(param2, param1);
           return;
         }
+        java.awt.Component var5 = (java.awt.Component) null;
+        this.a(-74, true, (java.awt.Component) null);
+        com.ms.win32.User32.SetCursorPos(param2, param1);
     }
 
     final synchronized int callback(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        if (!(this.field_e == param0)) {
-            var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
-            return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
+        int var5Lifetime1;
+        if (this.field_e != param0) {
+          var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
+          return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         }
-        if (-33 != (param1 ^ -1)) {
-            if (!(param1 != 101024)) {
-                com.ms.win32.User32.SetCursor(!this.field_d ? 0 : this.field_c);
-                return 0;
-            }
-            if (!(-2 != (param1 ^ -1))) {
-                this.field_e = 0;
-                this.field_d = true;
-            }
-            return com.ms.win32.User32.CallWindowProc(this.field_b, param0, param1, param2, param3);
-        }
-        var5 = 65535 & param3;
-        if ((var5 ^ -1) == -2) {
+        if (param1 != 32) {
+          if (param1 == 101024) {
             com.ms.win32.User32.SetCursor(!this.field_d ? 0 : this.field_c);
             return 0;
-        }
-        if (!(param1 != 101024)) {
-            com.ms.win32.User32.SetCursor(!this.field_d ? 0 : this.field_c);
-            return 0;
-        }
-        if (!(-2 != (param1 ^ -1))) {
+          }
+          if (param1 == 1) {
             this.field_e = 0;
             this.field_d = true;
+          }
+          return com.ms.win32.User32.CallWindowProc(this.field_b, param0, param1, param2, param3);
+        }
+        var5Lifetime1 = 65535 & param3;
+        if (var5Lifetime1 == 1) {
+          com.ms.win32.User32.SetCursor(!this.field_d ? 0 : this.field_c);
+          return 0;
+        }
+        if (param1 == 101024) {
+          com.ms.win32.User32.SetCursor(!this.field_d ? 0 : this.field_c);
+          return 0;
+        }
+        if (param1 == 1) {
+          this.field_e = 0;
+          this.field_d = true;
         }
         return com.ms.win32.User32.CallWindowProc(this.field_b, param0, param1, param2, param3);
     }
@@ -60,108 +58,46 @@ final class dc extends com.ms.dll.Callback {
         Throwable var8 = null;
         com.ms.awt.WComponentPeer var9 = null;
         int stackIn_4_0 = 0;
-        Object stackIn_14_0 = null;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        Object stackIn_27_0 = null;
-        Object stackIn_28_0 = null;
-        int stackIn_28_1 = 0;
+        boolean stackIn_15_1 = false;
+        boolean stackIn_28_1 = false;
         Throwable decompiledCaughtException = null;
-        L0: {
-          var9 = (com.ms.awt.WComponentPeer) null;
-          var5 = var9.getTopHwnd();
-          if (this.field_e != var5) {
-            break L0;
-          } else {
-            L1: {
-              if (this.field_d) {
-                stackIn_4_0 = 0;
-                break L1;
-              } else {
-                stackIn_4_0 = 1;
-                break L1;
-              }
-            }
-            if (stackIn_4_0 == (param1 ? 1 : 0)) {
-              break L0;
-            } else {
-              return;
-            }
-          }
-        }
-        L2: {
-          if (!this.field_a) {
-            this.field_c = com.ms.win32.User32.LoadCursor(0, 32512);
-            com.ms.dll.Root.alloc(this);
-            this.field_a = true;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        if (param0 == -11888) {
-          if (this.field_e != var5) {
-            L3: {
-              if (this.field_e != 0) {
-                this.field_d = true;
-                com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-                var6 = this;
-                synchronized (var6) {
-                  L4: {
-                    com.ms.win32.User32.SetWindowLong(this.field_e, -4, this.field_b);
-                    break L4;
-                  }
-                }
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            var6 = this;
-            synchronized (var6) {
-              L5: {
-                this.field_e = var5;
-                this.field_b = com.ms.win32.User32.SetWindowLong(this.field_e, -4, this);
-                break L5;
-              }
-            }
-            L6: {
-              stackIn_27_0 = this;
-
-              if (!param1) {
-                stackIn_28_0 = this;
-                stackIn_28_1 = 0;
-                break L6;
-              } else {
-                stackIn_28_0 = this;
-                stackIn_28_1 = 1;
-                break L6;
-              }
-            }
-            ((dc) (this)).field_d = stackIn_28_1 != 0;
-            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-            return;
-          } else {
-            L7: {
-              stackIn_14_0 = this;
-
-              if (!param1) {
-                stackIn_15_0 = this;
-                stackIn_15_1 = 0;
-                break L7;
-              } else {
-                stackIn_15_0 = this;
-                stackIn_15_1 = 1;
-                break L7;
-              }
-            }
-            ((dc) (this)).field_d = stackIn_15_1 != 0;
-            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+        var9 = (com.ms.awt.WComponentPeer) null;
+        var5 = var9.getTopHwnd();
+        if (this.field_e == var5) {
+          stackIn_4_0 = (this.field_d) ? 0 : 1;
+          if (stackIn_4_0 != (param1 ? 1 : 0)) {
             return;
           }
-        } else {
+        }
+        if (!this.field_a) {
+          this.field_c = com.ms.win32.User32.LoadCursor(0, 32512);
+          com.ms.dll.Root.alloc(this);
+          this.field_a = true;
+        }
+        if (param0 != -11888) {
           return;
         }
+        if (this.field_e == var5) {
+          stackIn_15_1 = (param1);
+          this.field_d = stackIn_15_1;
+        } else {
+          if (this.field_e != 0) {
+            this.field_d = true;
+            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+            var6 = this;
+            synchronized (var6) {
+              com.ms.win32.User32.SetWindowLong(this.field_e, -4, this.field_b);
+            }
+          }
+          var6 = this;
+          synchronized (var6) {
+            this.field_e = var5;
+            this.field_b = com.ms.win32.User32.SetWindowLong(this.field_e, -4, this);
+          }
+          stackIn_28_1 = (param1);
+          this.field_d = stackIn_28_1;
+        }
+        com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }
 
     dc() {

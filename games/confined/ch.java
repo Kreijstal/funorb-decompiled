@@ -11,7 +11,7 @@ final class ch {
         field_b = null;
         field_a = null;
         if (param0 <= 35) {
-            field_a = (e) null;
+          field_a = (e) null;
         }
     }
 

@@ -6,7 +6,7 @@ final class pb {
 
     final static int a(int param0) {
         if (param0 != -16733) {
-            return 8;
+          return 8;
         }
         return nl.field_d;
     }

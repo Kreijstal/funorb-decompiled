@@ -40,34 +40,22 @@ final class eb {
     int[][] field_q;
 
     final static void a(byte param0) {
-        L0: {
-          if (vg.field_Z != null) {
-            vg.field_Z.h((byte) -3);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (vg.field_Z != null) {
+          vg.field_Z.h((byte) -3);
         }
-        L1: {
-          if (ui.field_c != null) {
-            ui.field_c.i((byte) 127);
-            break L1;
-          } else {
-            break L1;
-          }
+        if (ui.field_c != null) {
+          ui.field_c.i((byte) 127);
         }
         ei.h((byte) -107);
-        if (param0 >= -99) {
-          eb.a((byte) -85);
-          return;
-        } else {
+        if (param0 < -99) {
           return;
         }
+        eb.a((byte) -85);
     }
 
     public static void a(int param0) {
         if (param0 <= 12) {
-            return;
+          return;
         }
         field_b = null;
         field_o = null;

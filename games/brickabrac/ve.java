@@ -13,7 +13,7 @@ final class ve {
     public static void a(byte param0) {
         field_e = null;
         if (param0 != 47) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
@@ -23,78 +23,46 @@ final class ve {
         RuntimeException var5_ref2 = null;
         int var6 = 0;
         Throwable var7 = null;
-        int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            var5_ref = this.field_d;
-            synchronized (var5_ref) {
-              L1: {
-                L2: {
-                  if (param2 < 0) {
-                    break L2;
-                  } else {
-                    if (this.field_b < param2) {
-                      break L2;
-                    } else {
-                      if (param0 <= -116) {
-                        L3: {
-                          var6 = this.a(param1, param3, true, true, param2) ? 1 : 0;
-                          if (var6 == 0) {
-                            var6 = this.a(param1, param3, false, true, param2) ? 1 : 0;
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                        stackIn_12_0 = var6;
-                        break L1;
-                      } else {
-                        stackIn_7_0 = 1;
-                        return stackIn_7_0 != 0;
-                      }
-                    }
-                  }
-                }
-                throw new IllegalArgumentException();
+          var5_ref = this.field_d;
+          synchronized (var5_ref) {
+            if (param2 >= 0 &&
+              this.field_b >= param2) {
+              if (param0 > -116) {
+                return true;
               }
+              var6 = this.a(param1, param3, true, true, param2) ? 1 : 0;
+              if (var6 == 0) {
+                var6 = this.a(param1, param3, false, true, param2) ? 1 : 0;
+              }
+              stackIn_12_0 = var6;
+            } else {
+              throw new IllegalArgumentException();
             }
-            break L0;
           }
+          return stackIn_12_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5_ref2);
-
-            stackIn_17_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
+          var5_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_17_0 = var5_ref2;
+          stackIn_17_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_12_0 != 0;
     }
 
     final static boolean b(int param0) {
         if (param0 != -21835160) {
-            ve.b(-54);
+          ve.b(-54);
         }
         return ud.a(qn.field_n, kb.field_Qb, 21);
     }
@@ -102,27 +70,14 @@ final class ve {
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        L0: {
-          if (lj.field_j != null) {
-            var1 = lj.field_j;
-            synchronized (var1) {
-              L1: {
-                lj.field_j = null;
-                break L1;
-              }
-            }
-            break L0;
-          } else {
-            break L0;
+        if (lj.field_j != null) {
+          var1 = lj.field_j;
+          synchronized (var1) {
+            lj.field_j = null;
           }
         }
-        L2: {
-          if (param0 == 5) {
-            break L2;
-          } else {
-            field_e = (String) null;
-            break L2;
-          }
+        if (param0 != 5) {
+          field_e = (String) null;
         }
     }
 
@@ -132,515 +87,311 @@ final class ve {
 
     private final boolean a(byte[] param0, int param1, boolean param2, boolean param3, int param4) {
         try {
-            int stackIn_8_0 = 0;
-            int stackIn_14_0 = 0;
-            int stackIn_36_0 = 0;
-            int stackIn_42_0 = 0;
-            int stackIn_63_0 = 0;
-            int stackIn_66_0 = 0;
-            RuntimeException stackIn_71_0 = null;
-            StringBuilder stackIn_71_1 = null;
-            RuntimeException stackIn_72_0 = null;
-            StringBuilder stackIn_72_1 = null;
-            String stackIn_72_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            int decompiledRegionSelector2 = 0;
-            Throwable decompiledCaughtException = null;
-            Object var6 = null;
-            RuntimeException var6_ref = null;
-            int var7_int = 0;
-            IOException var7 = null;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            int var11 = 0;
-            int var12 = 0;
-            int var13 = 0;
-            EOFException var14 = null;
-            int var16 = 0;
-            var16 = BrickABrac.field_J ? 1 : 0;
-            try {
-              var6 = this.field_d;
-              synchronized (var6) {
-                try {
-                  L0: {
-                    L1: {
-                      if (param2) {
-                        if (((long)(6 + param1 * 6) ^ -1L) < (this.field_a.a((byte) 115) ^ -1L)) {
-                          stackIn_8_0 = 0;
-
-                          decompiledRegionSelector2 = 0;
-                          break L0;
-                        } else {
-                          L2: {
-                            this.field_a.a(0, (long)(param1 * 6));
-                            this.field_a.a(6, 0, 120, tf.field_b);
-                            var7_int = (255 & tf.field_b[5]) + ((255 & tf.field_b[3]) << -194951696) + (65280 & tf.field_b[4] << 179144072);
-                            if (0 >= var7_int) {
-                              break L2;
-                            } else {
-                              if ((long)var7_int > this.field_d.a((byte) 71) / 520L) {
-                                break L2;
-                              } else {
-                                break L1;
-                              }
-                            }
-                          }
-                          stackIn_14_0 = 0;
-
-                          decompiledRegionSelector2 = 1;
-                          break L0;
-                        }
-                      } else {
-                        var7_int = (int)((519L + this.field_d.a((byte) 62)) / 520L);
-                        if (0 != var7_int) {
-                          break L1;
-                        } else {
-                          var7_int = 1;
-                          break L1;
-                        }
-                      }
-                    }
-                    L3: {
-                      tf.field_b[0] = (byte)(param4 >> 245010384);
-                      tf.field_b[4] = (byte)(var7_int >> 584112296);
-                      tf.field_b[5] = (byte)var7_int;
-                      tf.field_b[2] = (byte)param4;
-                      if (param3) {
-                        break L3;
-                      } else {
-                        ve.a((byte) 8);
-                        break L3;
-                      }
-                    }
-                    tf.field_b[1] = (byte)(param4 >> 539457352);
-                    tf.field_b[3] = (byte)(var7_int >> -1446601680);
-                    this.field_a.a(0, (long)(param1 * 6));
-                    this.field_a.a(tf.field_b, 0, 6, -1);
-                    var8 = 0;
-                    var9 = 0;
-                    L4: while (true) {
-                      L5: {
-                        if (param4 <= var8) {
-                          break L5;
-                        } else {
-                          L6: {
-                            var10 = 0;
-                            if (param2) {
-                              L7: {
-                                this.field_d.a(0, (long)(520 * var7_int));
-                                if (65535 >= param1) {
-                                  try {
-                                    L8: {
-                                      this.field_d.a(8, 0, 121, tf.field_b);
-                                      decompiledRegionSelector0 = 0;
-                                      break L8;
-                                    }
-                                  } catch (java.io.EOFException decompiledCaughtParameter0) {
-                                    decompiledCaughtException = decompiledCaughtParameter0;
-                                    L9: {
-                                      var14 = (EOFException) (Object) decompiledCaughtException;
-                                      decompiledRegionSelector0 = 1;
-                                      break L9;
-                                    }
-                                  }
-                                  if (decompiledRegionSelector0 == 0) {
-                                    var13 = 255 & tf.field_b[7];
-                                    var12 = (tf.field_b[2] << 108276712 & 65280) + (255 & tf.field_b[3]);
-                                    var10 = ((255 & tf.field_b[5]) << -87802776) + ((tf.field_b[4] & 255) << 1959779568) - -(tf.field_b[6] & 255);
-                                    var11 = ((255 & tf.field_b[0]) << -1391593784) - -(255 & tf.field_b[1]);
-                                    break L7;
-                                  } else {
-                                    break L5;
-                                  }
-                                } else {
-                                  try {
-                                    L10: {
-                                      this.field_d.a(10, 0, 119, tf.field_b);
-                                      decompiledRegionSelector1 = 0;
-                                      break L10;
-                                    }
-                                  } catch (java.io.EOFException decompiledCaughtParameter1) {
-                                    decompiledCaughtException = decompiledCaughtParameter1;
-                                    L11: {
-                                      var14 = (EOFException) (Object) decompiledCaughtException;
-                                      decompiledRegionSelector1 = 1;
-                                      break L11;
-                                    }
-                                  }
-                                  if (decompiledRegionSelector1 == 0) {
-                                    var11 = ((tf.field_b[2] & 255) << 860851560) + ((16711680 & tf.field_b[1] << 135448304) + (-16777216 & tf.field_b[0] << 1462683992)) - -(tf.field_b[3] & 255);
-                                    var10 = (255 & tf.field_b[8]) + ((tf.field_b[6] << -1418699856 & 16711680) + (tf.field_b[7] << -21835160 & 65280));
-                                    var12 = (255 & tf.field_b[5]) + ((255 & tf.field_b[4]) << -559612504);
-                                    var13 = tf.field_b[9] & 255;
-                                    break L7;
-                                  } else {
-                                    break L5;
-                                  }
-                                }
-                              }
-                              L12: {
-                                if (param1 != var11) {
-                                  break L12;
-                                } else {
-                                  if (var12 != var9) {
-                                    break L12;
-                                  } else {
-                                    if (this.field_c == var13) {
-                                      L13: {
-                                        if ((var10 ^ -1) > -1) {
-                                          break L13;
-                                        } else {
-                                          if (((long)var10 ^ -1L) < (this.field_d.a((byte) 29) / 520L ^ -1L)) {
-                                            break L13;
-                                          } else {
-                                            break L6;
-                                          }
-                                        }
-                                      }
-                                      stackIn_42_0 = 0;
-
-                                      decompiledRegionSelector2 = 3;
-                                      break L0;
-                                    } else {
-                                      break L12;
-                                    }
-                                  }
-                                }
-                              }
-                              stackIn_36_0 = 0;
-
-                              decompiledRegionSelector2 = 2;
-                              break L0;
-                            } else {
-                              break L6;
-                            }
-                          }
-                          L14: {
-                            if (0 == var10) {
-                              L15: {
-                                var10 = (int)((519L + this.field_d.a((byte) 85)) / 520L);
-                                param2 = false;
-                                if (var10 != 0) {
-                                  break L15;
-                                } else {
-                                  var10++;
-                                  break L15;
-                                }
-                              }
-                              if (var7_int != var10) {
-                                break L14;
-                              } else {
-                                var10++;
-                                break L14;
-                              }
-                            } else {
-                              break L14;
-                            }
-                          }
-                          L16: {
-                            if ((param4 - var8 ^ -1) >= -513) {
-                              var10 = 0;
-                              break L16;
-                            } else {
-                              break L16;
-                            }
-                          }
-                          L17: {
-                            if (param1 <= 65535) {
-                              L18: {
-                                tf.field_b[6] = (byte)var10;
-                                tf.field_b[1] = (byte)param1;
-                                tf.field_b[5] = (byte)(var10 >> -1511692600);
-                                tf.field_b[0] = (byte)(param1 >> 1254182728);
-                                tf.field_b[3] = (byte)var9;
-                                tf.field_b[2] = (byte)(var9 >> -103482648);
-                                tf.field_b[7] = (byte)this.field_c;
-                                tf.field_b[4] = (byte)(var10 >> 1702799536);
-                                this.field_d.a(0, (long)(520 * var7_int));
-                                this.field_d.a(tf.field_b, 0, 8, -1);
-                                var11 = param4 + -var8;
-                                if ((var11 ^ -1) < -513) {
-                                  var11 = 512;
-                                  break L18;
-                                } else {
-                                  break L18;
-                                }
-                              }
-                              this.field_d.a(param0, var8, var11, -1);
-                              var8 = var8 + var11;
-                              break L17;
-                            } else {
-                              L19: {
-                                tf.field_b[5] = (byte)var9;
-                                tf.field_b[8] = (byte)var10;
-                                tf.field_b[1] = (byte)(param1 >> 125775984);
-                                tf.field_b[6] = (byte)(var10 >> -2068173712);
-                                tf.field_b[0] = (byte)(param1 >> 656754840);
-                                tf.field_b[9] = (byte)this.field_c;
-                                tf.field_b[7] = (byte)(var10 >> 1132440744);
-                                tf.field_b[2] = (byte)(param1 >> 1383185224);
-                                tf.field_b[3] = (byte)param1;
-                                tf.field_b[4] = (byte)(var9 >> 2051039528);
-                                this.field_d.a(0, (long)(520 * var7_int));
-                                this.field_d.a(tf.field_b, 0, 10, -1);
-                                var11 = param4 - var8;
-                                if (510 >= var11) {
-                                  break L19;
-                                } else {
-                                  var11 = 510;
-                                  break L19;
-                                }
-                              }
-                              this.field_d.a(param0, var8, var11, -1);
-                              var8 = var8 + var11;
-                              break L17;
-                            }
-                          }
-                          var9++;
-                          var7_int = var10;
-                          continue L4;
-                        }
-                      }
-                      stackIn_63_0 = 1;
-
-                      decompiledRegionSelector2 = 4;
-                      break L0;
-                    }
+          RuntimeException stackIn_71_0 = null;
+          StringBuilder stackIn_71_1 = null;
+          String stackIn_72_2 = null;
+          int decompiledRegionSelector0 = 0;
+          int decompiledRegionSelector1 = 0;
+          Throwable decompiledCaughtException = null;
+          Object var6 = null;
+          RuntimeException var6_ref = null;
+          int var7_int = 0;
+          IOException var7 = null;
+          int var8 = 0;
+          int var9 = 0;
+          int var10 = 0;
+          int var11 = 0;
+          int var12 = 0;
+          int var13 = 0;
+          EOFException var14 = null;
+          int var16 = 0;
+          var16 = BrickABrac.field_J ? 1 : 0;
+          try {
+            var6 = this.field_d;
+            synchronized (var6) {
+              try {
+                if (param2) {
+                  if ((long)(6 + param1 * 6) > this.field_a.a((byte) 115)) {
+                    return false;
                   }
-                } catch (java.io.IOException decompiledCaughtParameter2) {
-                  decompiledCaughtException = decompiledCaughtParameter2;
-                  var7 = (IOException) (Object) decompiledCaughtException;
-                  stackIn_66_0 = 0;
-                  return stackIn_66_0 != 0;
-                }
-                if (decompiledRegionSelector2 == 0) {
-                  return stackIn_8_0 != 0;
+                  this.field_a.a(0, (long)(param1 * 6));
+                  this.field_a.a(6, 0, 120, tf.field_b);
+                  var7_int = (255 & tf.field_b[5]) + ((255 & tf.field_b[3]) << 16) + (65280 & tf.field_b[4] << 8);
+                  if (0 >= var7_int ||
+                    !((long)var7_int <= this.field_d.a((byte) 71) / 520L)) {
+                    return false;
+                  }
                 } else {
-                  if (decompiledRegionSelector2 == 1) {
-                    return stackIn_14_0 != 0;
-                  } else {
-                    if (decompiledRegionSelector2 == 2) {
-                      return stackIn_36_0 != 0;
+                  var7_int = (int)((519L + this.field_d.a((byte) 62)) / 520L);
+                  if (0 == var7_int) {
+                    var7_int = 1;
+                  }
+                }
+                tf.field_b[0] = (byte)(param4 >> 16);
+                tf.field_b[4] = (byte)(var7_int >> 8);
+                tf.field_b[5] = (byte)var7_int;
+                tf.field_b[2] = (byte)param4;
+                if (!param3) {
+                  ve.a((byte) 8);
+                }
+                tf.field_b[1] = (byte)(param4 >> 8);
+                tf.field_b[3] = (byte)(var7_int >> 16);
+                this.field_a.a(0, (long)(param1 * 6));
+                this.field_a.a(tf.field_b, 0, 6, -1);
+                var8 = 0;
+                var9 = 0;
+                L4: while (true) {
+                  if (param4 > var8) {
+                    boolean decompiledFrameRemainder0 = true;
+                    var10 = 0;
+                    if (param2) {
+                      this.field_d.a(0, (long)(520 * var7_int));
+                      if (65535 >= param1) {
+                        try {
+                          this.field_d.a(8, 0, 121, tf.field_b);
+                          decompiledRegionSelector0 = 0;
+                        } catch (java.io.EOFException decompiledCaughtParameter0) {
+                          decompiledCaughtException = decompiledCaughtParameter0;
+                          var14 = (EOFException) (Object) decompiledCaughtException;
+                          decompiledRegionSelector0 = 1;
+                        }
+                        if (decompiledRegionSelector0 != 0) {
+                          break L4;
+                        }
+                        var13 = 255 & tf.field_b[7];
+                        var12 = (tf.field_b[2] << 8 & 65280) + (255 & tf.field_b[3]);
+                        var10 = ((255 & tf.field_b[5]) << 8) + ((tf.field_b[4] & 255) << 16) + (tf.field_b[6] & 255);
+                        var11 = ((255 & tf.field_b[0]) << 8) + (255 & tf.field_b[1]);
+                      } else {
+                        try {
+                          this.field_d.a(10, 0, 119, tf.field_b);
+                          decompiledRegionSelector1 = 0;
+                        } catch (java.io.EOFException decompiledCaughtParameter1) {
+                          decompiledCaughtException = decompiledCaughtParameter1;
+                          var14 = (EOFException) (Object) decompiledCaughtException;
+                          decompiledRegionSelector1 = 1;
+                        }
+                        if (decompiledRegionSelector1 != 0) {
+                          break L4;
+                        }
+                        var11 = ((tf.field_b[2] & 255) << 8) + ((16711680 & tf.field_b[1] << 16) + (-16777216 & tf.field_b[0] << 24)) + (tf.field_b[3] & 255);
+                        var10 = (255 & tf.field_b[8]) + ((tf.field_b[6] << 16 & 16711680) + (tf.field_b[7] << 8 & 65280));
+                        var12 = (255 & tf.field_b[5]) + ((255 & tf.field_b[4]) << 8);
+                        var13 = tf.field_b[9] & 255;
+                      }
+                      if ((param1 == var11 &&
+                        var12 == var9 &&
+                        this.field_c == var13) &&
+                        (decompiledFrameRemainder0 = (!(var10 >= 0) ||
+                        !((long)var10 <= (this.field_d.a((byte) 29) / 520L))))) {
+                        return false;
+                      }
+                      if (decompiledFrameRemainder0) {
+                        return false;
+                      }
+                    }
+                    if (0 == var10) {
+                      var10 = (int)((519L + this.field_d.a((byte) 85)) / 520L);
+                      param2 = false;
+                      if (var10 == 0) {
+                        var10++;
+                      }
+                      if (var7_int == var10) {
+                        var10++;
+                      }
+                    }
+                    if (param4 - var8 <= 512) {
+                      var10 = 0;
+                    }
+                    if (param1 <= 65535) {
+                      tf.field_b[6] = (byte)var10;
+                      tf.field_b[1] = (byte)param1;
+                      tf.field_b[5] = (byte)(var10 >> 8);
+                      tf.field_b[0] = (byte)(param1 >> 8);
+                      tf.field_b[3] = (byte)var9;
+                      tf.field_b[2] = (byte)(var9 >> 8);
+                      tf.field_b[7] = (byte)this.field_c;
+                      tf.field_b[4] = (byte)(var10 >> 16);
+                      this.field_d.a(0, (long)(520 * var7_int));
+                      this.field_d.a(tf.field_b, 0, 8, -1);
+                      var11 = param4 - var8;
+                      if (var11 > 512) {
+                        var11 = 512;
+                      }
+                      this.field_d.a(param0, var8, var11, -1);
+                      var8 = var8 + var11;
                     } else {
-                      if (decompiledRegionSelector2 == 3) {
-                        return stackIn_42_0 != 0;
-                      } else {
-                        return stackIn_63_0 != 0;
+                      tf.field_b[5] = (byte)var9;
+                      tf.field_b[8] = (byte)var10;
+                      tf.field_b[1] = (byte)(param1 >> 16);
+                      tf.field_b[6] = (byte)(var10 >> 16);
+                      tf.field_b[0] = (byte)(param1 >> 24);
+                      tf.field_b[9] = (byte)this.field_c;
+                      tf.field_b[7] = (byte)(var10 >> 8);
+                      tf.field_b[2] = (byte)(param1 >> 8);
+                      tf.field_b[3] = (byte)param1;
+                      tf.field_b[4] = (byte)(var9 >> 8);
+                      this.field_d.a(0, (long)(520 * var7_int));
+                      this.field_d.a(tf.field_b, 0, 10, -1);
+                      var11 = param4 - var8;
+                      if (510 < var11) {
+                        var11 = 510;
                       }
+                      this.field_d.a(param0, var8, var11, -1);
+                      var8 = var8 + var11;
                     }
+                    var9++;
+                    var7_int = var10;
+                    continue;
                   }
+                  break;
                 }
+                return true;
+              } catch (java.io.IOException decompiledCaughtParameter2) {
+                decompiledCaughtException = decompiledCaughtParameter2;
+                var7 = (IOException) (Object) decompiledCaughtException;
+                return false;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
-              decompiledCaughtException = decompiledCaughtParameter3;
-              L20: {
-                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_71_0 = (RuntimeException) (var6_ref);
-
-                stackIn_71_1 = new StringBuilder().append("ve.D(");
-
-                if (param0 == null) {
-                  stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-                  stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
-                  stackIn_72_2 = "null";
-                  break L20;
-                } else {
-                  stackIn_72_0 = (RuntimeException) ((Object) stackIn_71_0);
-                  stackIn_72_1 = (StringBuilder) ((Object) stackIn_71_1);
-                  stackIn_72_2 = "{...}";
-                  break L20;
-                }
-              }
-              throw qb.a((Throwable) ((Object) stackIn_72_0), stackIn_72_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+            decompiledCaughtException = decompiledCaughtParameter3;
+            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_71_0 = var6_ref;
+            stackIn_71_1 = new StringBuilder().append("ve.D(");
+            if (param0 == null) {
+              stackIn_72_2 = "null";
+            } else {
+              stackIn_72_2 = "{...}";
+            }
+            throw qb.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final byte[] a(int param0, int param1) {
         try {
-            int incrementValue$2 = 0;
-            Object var3 = null;
-            Object var3_ref = null;
-            int var4_int = 0;
-            IOException var4 = null;
-            int var5 = 0;
-            byte[] var6 = null;
-            int var7 = 0;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            int var11 = 0;
-            int var12 = 0;
-            int var13 = 0;
-            int var14 = 0;
-            int var15 = 0;
-            int var16 = 0;
-            Throwable var17 = null;
-            int var18 = 0;
-            Object stackIn_3_0 = null;
-            Object stackIn_37_0 = null;
-            Object stackIn_43_0 = null;
-            byte[] stackIn_50_0 = null;
-            Object stackIn_53_0 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            var18 = BrickABrac.field_J ? 1 : 0;
-            var3_ref = this.field_d;
-            synchronized (var3_ref) {
-              try {
-                L0: {
-                  if (((long)(6 * param1 + 6) ^ -1L) >= (this.field_a.a((byte) 53) ^ -1L)) {
-                    this.field_a.a(0, (long)(param1 * 6));
-                    this.field_a.a(6, 0, 127, tf.field_b);
-                    var4_int = (tf.field_b[2] & 255) + ((tf.field_b[1] & 255) << -1824568504) + (16711680 & tf.field_b[0] << -1518791696);
-                    var5 = (tf.field_b[5] & 255) + (tf.field_b[3] << -1818777296 & 16711680) + ((tf.field_b[4] & 255) << 827368840);
-                    if ((var4_int ^ -1) <= -1) {
-                      if (this.field_b >= var4_int) {
-                        if (var5 > 0) {
-                          if (((long)var5 ^ -1L) >= (this.field_d.a((byte) 66) / 520L ^ -1L)) {
-                            var6 = new byte[var4_int];
-                            var7 = 0;
-                            var8 = param0;
-                            L1: while (true) {
-                              if (var7 >= var4_int) {
-                                stackIn_50_0 = (byte[]) (var6);
-
-                                decompiledRegionSelector0 = 3;
-                                break L0;
-                              } else {
-                                if (var5 != 0) {
-                                  L2: {
-                                    this.field_d.a(0, (long)(520 * var5));
-                                    var9 = var4_int - var7;
-                                    if (param1 <= 65535) {
-                                      L3: {
-                                        if (512 < var9) {
-                                          var9 = 512;
-                                          break L3;
-                                        } else {
-                                          break L3;
-                                        }
-                                      }
-                                      var14 = 8;
-                                      this.field_d.a(var9 + var14, 0, 126, tf.field_b);
-                                      var10 = ((tf.field_b[0] & 255) << -139012856) - -(tf.field_b[1] & 255);
-                                      var13 = tf.field_b[7] & 255;
-                                      var11 = (tf.field_b[3] & 255) + ((tf.field_b[2] & 255) << 1296150312);
-                                      var12 = ((tf.field_b[4] & 255) << 891578160) - (-((255 & tf.field_b[5]) << -1426190168) - (tf.field_b[6] & 255));
-                                      break L2;
-                                    } else {
-                                      L4: {
-                                        var14 = 10;
-                                        if (510 >= var9) {
-                                          break L4;
-                                        } else {
-                                          var9 = 510;
-                                          break L4;
-                                        }
-                                      }
-                                      this.field_d.a(var14 + var9, 0, param0 ^ 117, tf.field_b);
-                                      var11 = ((255 & tf.field_b[4]) << -1491108696) + (255 & tf.field_b[5]);
-                                      var13 = tf.field_b[9] & 255;
-                                      var12 = ((255 & tf.field_b[7]) << 1071106504) + ((tf.field_b[6] & 255) << 457819024) + (tf.field_b[8] & 255);
-                                      var10 = (tf.field_b[3] & 255) + (((tf.field_b[1] & 255) << -343231760) + (tf.field_b[0] << 650564152 & -16777216) - -(tf.field_b[2] << -2128743960 & 65280));
-                                      break L2;
-                                    }
-                                  }
-                                  if (param1 == var10) {
-                                    if (var8 == var11) {
-                                      if (var13 == this.field_c) {
-                                        if (-1 >= (var12 ^ -1)) {
-                                          if ((long)var12 <= this.field_d.a((byte) 70) / 520L) {
-                                            var15 = var14 + var9;
-                                            var8++;
-                                            var16 = var14;
-                                            L5: while (true) {
-                                              if (var16 >= var15) {
-                                                var5 = var12;
-                                                continue L1;
-                                              } else {
-                                                incrementValue$2 = var7;
-                                                var7++;
-                                                var6[incrementValue$2] = tf.field_b[var16];
-                                                var16++;
-                                                continue L5;
-                                              }
-                                            }
-                                          } else {
-                                            stackIn_43_0 = null;
-
-                                            decompiledRegionSelector0 = 2;
-                                            break L0;
-                                          }
-                                        } else {
-                                          return null;
-                                        }
-                                      } else {
-                                        stackIn_37_0 = null;
-
-                                        decompiledRegionSelector0 = 1;
-                                        break L0;
-                                      }
-                                    } else {
-                                      return null;
-                                    }
-                                  } else {
-                                    return null;
-                                  }
-                                } else {
-                                  return null;
-                                }
-                              }
-                            }
-                          } else {
-                            return null;
-                          }
-                        } else {
-                          return null;
-                        }
-                      } else {
-                        return null;
-                      }
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    stackIn_3_0 = null;
-
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4 = (IOException) (Object) decompiledCaughtException;
-                stackIn_53_0 = null;
-                return (byte[]) ((Object) stackIn_53_0);
+          int var16 = 0;
+          int incrementValue$2 = 0;
+          Object var3 = null;
+          Object var3_ref = null;
+          int var4_int = 0;
+          IOException var4 = null;
+          int var5 = 0;
+          byte[] var6 = null;
+          int var7 = 0;
+          int var8 = 0;
+          int var9 = 0;
+          int var10 = 0;
+          int var11 = 0;
+          int var12 = 0;
+          int var13 = 0;
+          int var14 = 0;
+          int var15 = 0;
+          Throwable var17 = null;
+          int var18 = 0;
+          Object stackIn_3_0 = null;
+          Object stackIn_37_0 = null;
+          Object stackIn_43_0 = null;
+          byte[] stackIn_50_0 = null;
+          Object stackIn_53_0 = null;
+          Throwable decompiledCaughtException = null;
+          var18 = BrickABrac.field_J ? 1 : 0;
+          var3_ref = this.field_d;
+          synchronized (var3_ref) {
+            try {
+              if ((long)(6 * param1 + 6) > this.field_a.a((byte) 53)) {
+                stackIn_3_0 = null;
+                return (byte[]) (stackIn_3_0);
               }
-              if (decompiledRegionSelector0 == 0) {
-                return (byte[]) ((Object) stackIn_3_0);
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  return (byte[]) ((Object) stackIn_37_0);
+              this.field_a.a(0, (long)(param1 * 6));
+              this.field_a.a(6, 0, 127, tf.field_b);
+              var4_int = (tf.field_b[2] & 255) + ((tf.field_b[1] & 255) << 8) + (16711680 & tf.field_b[0] << 16);
+              var5 = (tf.field_b[5] & 255) + (tf.field_b[3] << 16 & 16711680) + ((tf.field_b[4] & 255) << 8);
+              if (var4_int < 0) {
+                return null;
+              }
+              if (this.field_b < var4_int) {
+                return null;
+              }
+              if (var5 <= 0) {
+                return null;
+              }
+              if ((long)var5 > (this.field_d.a((byte) 66) / 520L)) {
+                return null;
+              }
+              var6 = new byte[var4_int];
+              var7 = 0;
+              var8 = param0;
+              while (var7 < var4_int) {
+                if (var5 == 0) {
+                  return null;
+                }
+                this.field_d.a(0, (long)(520 * var5));
+                var9 = var4_int - var7;
+                if (param1 <= 65535) {
+                  if (512 < var9) {
+                    var9 = 512;
+                  }
+                  var14 = 8;
+                  this.field_d.a(var9 + var14, 0, 126, tf.field_b);
+                  var10 = ((tf.field_b[0] & 255) << 8) + (tf.field_b[1] & 255);
+                  var13 = tf.field_b[7] & 255;
+                  var11 = (tf.field_b[3] & 255) + ((tf.field_b[2] & 255) << 8);
+                  var12 = ((tf.field_b[4] & 255) << 16) - (-((255 & tf.field_b[5]) << 8) - (tf.field_b[6] & 255));
                 } else {
-                  if (decompiledRegionSelector0 == 2) {
-                    return (byte[]) ((Object) stackIn_43_0);
-                  } else {
-                    return stackIn_50_0;
+                  var14 = 10;
+                  if (510 < var9) {
+                    var9 = 510;
                   }
+                  this.field_d.a(var14 + var9, 0, param0 ^ 117, tf.field_b);
+                  var11 = ((255 & tf.field_b[4]) << 8) + (255 & tf.field_b[5]);
+                  var13 = tf.field_b[9] & 255;
+                  var12 = ((255 & tf.field_b[7]) << 8) + ((tf.field_b[6] & 255) << 16) + (tf.field_b[8] & 255);
+                  var10 = (tf.field_b[3] & 255) + (((tf.field_b[1] & 255) << 16) + (tf.field_b[0] << 24 & -16777216) + (tf.field_b[2] << 8 & 65280));
                 }
+                if (param1 != var10) {
+                  return null;
+                }
+                if (var8 != var11) {
+                  return null;
+                }
+                if (var13 != this.field_c) {
+                  stackIn_37_0 = null;
+                  return (byte[]) (stackIn_37_0);
+                }
+                if (var12 < 0) {
+                  return null;
+                }
+                if ((long)var12 > this.field_d.a((byte) 70) / 520L) {
+                  stackIn_43_0 = null;
+                  return (byte[]) (stackIn_43_0);
+                }
+                var15 = var14 + var9;
+                var8++;
+                for (var16 = var14; var16 < var15; var16++) {
+                  incrementValue$2 = var7;
+                  var7++;
+                  var6[incrementValue$2] = tf.field_b[var16];
+                }
+                var5 = var12;
               }
+              stackIn_50_0 = var6;
+              return stackIn_50_0;
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4 = (IOException) (Object) decompiledCaughtException;
+              stackIn_53_0 = null;
+              return (byte[]) (stackIn_53_0);
             }
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -649,12 +400,12 @@ final class ve {
         this.field_b = 65000;
         this.field_a = null;
         try {
-            this.field_b = param3;
-            this.field_c = param0;
-            this.field_a = param2;
-            this.field_d = param1;
+          this.field_b = param3;
+          this.field_c = param0;
+          this.field_a = param2;
+          this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ve.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ve.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

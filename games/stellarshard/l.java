@@ -17,9 +17,9 @@ final class l {
         field_g = null;
         field_d = null;
         if (param0 != 0) {
-            l.a(23);
-            field_f = null;
-            return;
+          l.a(23);
+          field_f = null;
+          return;
         }
         field_f = null;
     }

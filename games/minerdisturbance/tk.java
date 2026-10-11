@@ -12,91 +12,79 @@ final class tk implements uj {
     static String field_c;
 
     final static void b(boolean param0) {
-        nk var1 = (nk) ((Object) eb.field_f.c(51510));
-        if (!(var1 != null)) {
-            throw new IllegalStateException();
+        nk var1 = (nk) (eb.field_f.c(51510));
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         eh.a(var1.field_y, var1.field_n, var1.field_s);
         eh.a(var1.field_r, var1.field_o, var1.field_t, var1.field_q);
         var1.field_y = null;
         ah.field_g.a((byte) 91, var1);
         if (!param0) {
-            bi var2 = (bi) null;
-            tk.a((bi) null, -86, (byte) -122);
+          bi var2 = (bi) null;
+          tk.a((bi) null, -86, (byte) -122);
         }
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
-            String var3 = null;
-            String var6 = null;
-            String var4 = null;
+          String var3 = null;
+          String var6 = null;
+          String var4 = null;
+          String var6Lifetime1;
+          String var6Lifetime2;
+          String var6Lifetime3;
+          String var6Lifetime4;
+          try {
+            w.field_T = param0;
             try {
-                w.field_T = param0;
-                try {
-                    var3 = param1.getParameter("cookieprefix");
-                    var6 = var3;
-                    var6 = var3;
-                    int var5 = 108 / ((60 - param2) / 59);
-                    var4 = param1.getParameter("cookiehost");
-                    var6 = var4;
-                    var6 = var4;
-                    var6 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    if (param0.length() == 0) {
-                        var6 = var6 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    lk.a(param1, "document.cookie=\"" + var6 + "\"", (byte) -106);
-                } catch (Throwable throwable) {
-                }
-                ie.a(param1, true);
-            } catch (RuntimeException runtimeException) {
-                throw lj.a((Throwable) ((Object) runtimeException), "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+              var3 = param1.getParameter("cookieprefix");
+              var6 = var3;
+              var6Lifetime1 = var3;
+              int var5 = 108 / ((60 - param2) / 59);
+              var4 = param1.getParameter("cookiehost");
+              var6Lifetime2 = var4;
+              var6Lifetime3 = var4;
+              var6Lifetime4 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+              if (param0.length() == 0) {
+                var6Lifetime4 = var6Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              lk.a(param1, "document.cookie=\"" + var6Lifetime4 + "\"", (byte) -106);
+            } catch (Throwable throwable) {
             }
+            ie.a(param1, true);
+          } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) ((Object) runtimeException), "tk.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(bi param0, int param1, byte param2) {
         ld var3 = null;
         try {
-            var3 = sn.field_c;
-            var3.d((byte) -82, param1);
-            var3.c(param0.field_o, 25564);
-            if (param2 != -102) {
-                tk.b(true);
-            }
-            var3.b((byte) 124, param0.field_n);
+          var3 = sn.field_c;
+          var3.d((byte) -82, param1);
+          var3.c(param0.field_o, 25564);
+          if (param2 != -102) {
+            tk.b(true);
+          }
+          var3.b((byte) 124, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "tk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static boolean b(int param0) {
-        int stackIn_6_0 = 0;
-        if (param0 > 126) {
-          L0: {
-            L1: {
-              if (null == ll.field_a) {
-                break L1;
-              } else {
-                if (ll.field_a.e((byte) 83) == null) {
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L0;
-                }
-              }
-            }
-            stackIn_6_0 = 0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
+        boolean stackIn_6_0 = false;
+        if (param0 <= 126) {
           return false;
         }
+        stackIn_6_0 = (null != ll.field_a) && (ll.field_a.e((byte) 83) != null);
+        return stackIn_6_0;
     }
 
     public static void a(int param0) {
@@ -104,16 +92,16 @@ final class tk implements uj {
         field_c = null;
         field_e = null;
         if (param0 != 8225) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;
     }
 
     final static String a(int param0, CharSequence param1) {
+        int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
@@ -122,209 +110,120 @@ final class tk implements uj {
         String stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var6 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var2_int = param1.length();
-            if (param0 == 732) {
-              L1: {
-                if (-21 <= (var2_int ^ -1)) {
-                  break L1;
-                } else {
-                  var2_int = 20;
-                  break L1;
-                }
-              }
-              var8 = new char[var2_int];
-              var7 = var8;
-              var3 = var7;
-              var4 = 0;
-              L2: while (true) {
-                if (var2_int <= var4) {
-                  stackIn_22_0 = new String(var8);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    L4: {
-                      var5 = param1.charAt(var4);
-                      if (var5 < 65) {
-                        break L4;
-                      } else {
-                        if (var5 <= 90) {
-                          var3[var4] = (char)(97 + var5 - 65);
-                          break L3;
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    L5: {
-                      L6: {
-                        if (97 > var5) {
-                          break L6;
-                        } else {
-                          if (var5 <= 122) {
-                            break L5;
-                          } else {
-                            break L6;
-                          }
-                        }
-                      }
-                      L7: {
-                        if (var5 < 48) {
-                          break L7;
-                        } else {
-                          if (var5 > 57) {
-                            break L7;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var3[var4] = (char)95;
-                      break L3;
-                    }
-                    var3[var4] = (char)var5;
-                    break L3;
-                  }
-                  var4++;
-                  continue L2;
-                }
-              }
+          var2_int = param1.length();
+          if (param0 != 732) {
+            stackIn_3_0 = (String) null;
+            return stackIn_3_0;
+          }
+          if (var2_int > 20) {
+            var2_int = 20;
+          }
+          var8 = new char[var2_int];
+          var7 = var8;
+          var3 = var7;
+          for (var4 = 0; var2_int > var4; var4++) {
+            var5 = param1.charAt(var4);
+            if (var5 >= 65 &&
+              var5 <= 90) {
+              var3[var4] = (char)(97 + var5 - 65);
+            } else if ((97 > var5 ||
+              var5 > 122) &&
+              (var5 < 48 ||
+              var5 > 57)) {
+              var3[var4] = (char)95;
             } else {
-              stackIn_3_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var3[var4] = (char)var5;
             }
           }
+          stackIn_22_0 = new String(var8);
+          return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_25_0 = (RuntimeException) (var2);
-
-            stackIn_25_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L8;
-            } else {
-              stackIn_26_0 = (RuntimeException) ((Object) stackIn_25_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L8;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_25_0 = var2;
+          stackIn_25_1 = new StringBuilder().append("tk.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_26_0), stackIn_26_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_22_0;
+          throw lj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     public final void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         tb.field_a = 1;
         gd.field_x = 3;
     }
 
     final static ud[] a(int param0, ld param1) {
+        ud[] stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         ud[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        int var7_int = 0;
         ud var7 = null;
+        int var7_int = 0;
         int var8 = 0;
-        ud[] stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var2_int = param1.c((byte) -104, 8);
-            if (-1 <= (var2_int ^ -1)) {
-              var3 = param1.c((byte) -122, 12);
-              var4 = new ud[var3];
-              var5 = 0;
-              var6 = -77 % ((param0 - 67) / 45);
-              L1: while (true) {
-                if (var5 >= var3) {
-                  stackIn_11_0 = (ud[]) (var4);
-                  break L0;
-                } else {
-                  L2: {
-                    if (ql.a(param1, (byte) 100)) {
-                      var7 = new ud();
-                      param1.c((byte) -95, 24);
-                      param1.c((byte) -81, 24);
-                      var7.field_d = param1.c((byte) -99, 24);
-                      param1.c((byte) -72, 9);
-                      param1.c((byte) -83, 12);
-                      param1.c((byte) -68, 12);
-                      param1.c((byte) -126, 12);
-                      var4[var5] = var7;
-                      break L2;
-                    } else {
-                      var7_int = param1.c((byte) -110, ol.a(var5 - 1, 8));
-                      var4[var5] = var4[var7_int];
-                      break L2;
-                    }
-                  }
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              return null;
-            }
+          var2_int = param1.c((byte) -104, 8);
+          if (var2_int > 0) {
+            return null;
           }
+          var3 = param1.c((byte) -122, 12);
+          var4 = new ud[var3];
+          var5 = 0;
+          var6 = -77 % ((param0 - 67) / 45);
+          while (var5 < var3) {
+            if (ql.a(param1, (byte) 100)) {
+              var7 = new ud();
+              param1.c((byte) -95, 24);
+              param1.c((byte) -81, 24);
+              var7.field_d = param1.c((byte) -99, 24);
+              param1.c((byte) -72, 9);
+              param1.c((byte) -83, 12);
+              param1.c((byte) -68, 12);
+              param1.c((byte) -126, 12);
+              var4[var5] = var7;
+            } else {
+              var7_int = param1.c((byte) -110, ol.a(var5 - 1, 8));
+              var4[var5] = var4[var7_int];
+            }
+            var5++;
+          }
+          stackIn_11_0 = var4;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("tk.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("tk.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
-        return stackIn_11_0;
     }
 
     public final String a(byte param0) {
-        int var2 = 70 % ((param0 - -33) / 62);
+        int var2 = 70 % ((param0 + 33) / 62);
         return "Make Ore Effluvium";
     }
 

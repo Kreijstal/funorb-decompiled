@@ -10,46 +10,26 @@ final class iva extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                field_p = -95;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(135, 116));
-            break L0;
+          if (param1 >= -119) {
+            field_p = -95;
           }
+          stackIn_3_0 = new nc(frb.a(135, 116));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("iva.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("iva.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static String a(byte param0, int param1, sg param2) {
@@ -63,112 +43,48 @@ final class iva extends rqa {
         String stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              var3_int = param2.q((byte) 87);
-              if (param0 <= -3) {
-                break L1;
-              } else {
-                field_o = 21;
-                break L1;
-              }
-            }
-            L2: {
-              var4 = VoidHunters.b(var3_int, -1);
-              var5 = param1;
-              if (-1 != (var5 ^ -1)) {
-                if (-5 == (var5 ^ -1)) {
-                  break L2;
-                } else {
-                  L3: {
-                    if (1 == var5) {
-                      break L3;
-                    } else {
-                      if (-6 == (var5 ^ -1)) {
-                        break L3;
-                      } else {
-                        L4: {
-                          if (var5 == 2) {
-                            break L4;
-                          } else {
-                            if (var5 == 6) {
-                              break L4;
-                            } else {
-                              if ((var5 ^ -1) == -4) {
-                                stackIn_18_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -126);
-                                decompiledRegionSelector0 = 3;
-                                break L0;
-                              } else {
-                                stackIn_20_0 = cma.a(var4, dob.field_o, gu.field_o, (byte) -74);
-                                decompiledRegionSelector0 = 4;
-                                break L0;
-                              }
-                            }
-                          }
-                        }
-                        stackIn_16_0 = cma.a(var4, dob.field_o, kg.field_t, (byte) -91);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      }
-                    }
-                  }
-                  stackIn_14_0 = cma.a(var4, dob.field_o, iua.field_o, (byte) -96);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
+          var3_int = param2.q((byte) 87);
+          if (param0 > -3) {
+            field_o = 21;
+          }
+          var4 = VoidHunters.b(var3_int, -1);
+          var5 = param1;
+          if (var5 != 0 &&
+            var5 != 4) {
+            if (1 != var5 &&
+              var5 != 5) {
+              if (var5 != 2 &&
+                var5 != 6) {
+                if (var5 == 3) {
+                  stackIn_18_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -126);
+                  return stackIn_18_0;
                 }
-              } else {
-                break L2;
-              }
-            }
-            stackIn_12_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -64);
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var3);
-
-            stackIn_23_1 = new StringBuilder().append("iva.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L5;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L5;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_14_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_18_0;
-              } else {
+                stackIn_20_0 = cma.a(var4, dob.field_o, gu.field_o, (byte) -74);
                 return stackIn_20_0;
               }
+              stackIn_16_0 = cma.a(var4, dob.field_o, kg.field_t, (byte) -91);
+              return stackIn_16_0;
             }
+            stackIn_14_0 = cma.a(var4, dob.field_o, iua.field_o, (byte) -96);
+            return stackIn_14_0;
           }
+          stackIn_12_0 = cma.a(var4, dob.field_o, cib.field_a, (byte) -64);
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_23_0 = var3;
+          stackIn_23_1 = new StringBuilder().append("iva.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -177,49 +93,29 @@ final class iva extends rqa {
         String var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -6940) {
-                break L1;
-              } else {
-                var3 = (String) null;
-                iva.a(-26, (String) null);
-                break L1;
-              }
-            }
-            if (!nia.field_o) {
-              break L0;
-            } else {
-              System.out.println(param1);
-              return;
-            }
+          if (param0 != -6940) {
+            var3 = (String) null;
+            iva.a(-26, (String) null);
           }
+          if (!nia.field_o) {
+            return;
+          }
+          System.out.println(param1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("iva.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("iva.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

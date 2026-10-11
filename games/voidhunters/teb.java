@@ -6,8 +6,8 @@ final class teb extends mfb {
 
     final boolean h(byte param0) {
         if (param0 <= 18) {
-            field_b = (int[]) null;
-            return false;
+          field_b = (int[]) null;
+          return false;
         }
         return false;
     }
@@ -24,7 +24,7 @@ final class teb extends mfb {
 
     public static void l(int param0) {
         if (param0 != 8192) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -34,24 +34,24 @@ final class teb extends mfb {
 
     final int f(int param0) {
         if (param0 != 1024) {
-            field_b = (int[]) null;
-            return vha.field_p;
+          field_b = (int[]) null;
+          return vha.field_p;
         }
         return vha.field_p;
     }
 
     final int b(byte param0) {
         if (param0 < 27) {
-            this.f(-17);
-            return op.field_p;
+          this.f(-17);
+          return op.field_p;
         }
         return op.field_p;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_b = (int[]) null;
-            return mp.field_o;
+          field_b = (int[]) null;
+          return mp.field_o;
         }
         return mp.field_o;
     }

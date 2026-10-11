@@ -14,8 +14,8 @@ final class wf extends ug {
 
     final static long a(int param0) {
         if (param0 < 44) {
-            wf.a(-105);
-            return pf.a(0) - d.field_k;
+          wf.a(-105);
+          return pf.a(0) - d.field_k;
         }
         return pf.a(0) - d.field_k;
     }
@@ -24,27 +24,25 @@ final class wf extends ug {
         field_h = null;
         field_i = null;
         if (param0 != -47) {
-            wf.a(14);
-            field_m = null;
-            return;
+          wf.a(14);
+          field_m = null;
+          return;
         }
         field_m = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         da.field_a = param2;
-        if (param3 != 8192) {
-          wf.a((byte) 47);
-          nf.field_M = param1;
-          hb.field_n = param0;
-          gi.field_a = param4;
-          return;
-        } else {
+        if (param3 == 8192) {
           nf.field_M = param1;
           hb.field_n = param0;
           gi.field_a = param4;
           return;
         }
+        wf.a((byte) 47);
+        nf.field_M = param1;
+        hb.field_n = param0;
+        gi.field_a = param4;
     }
 
     private wf() throws Throwable {

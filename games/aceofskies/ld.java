@@ -9,7 +9,7 @@ final class ld {
 
     public static void a(byte param0) {
         if (param0 != 62) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -19,14 +19,12 @@ final class ld {
         cn.field_z = null;
         cc.field_b = null;
         gp.field_v = null;
-        if (param0 != 14183) {
-          field_d = false;
-          es.field_a = null;
-          return;
-        } else {
+        if (param0 == 14183) {
           es.field_a = null;
           return;
         }
+        field_d = false;
+        es.field_a = null;
     }
 
     static {

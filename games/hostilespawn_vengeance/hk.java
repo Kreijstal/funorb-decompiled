@@ -16,18 +16,18 @@ final class hk extends am {
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_n = param2;
-            this.field_p = param7;
-            if (param3 != -12131) {
-                hk.c(39);
-            }
-            this.field_o = param4;
-            this.field_r = param5;
-            this.field_j = param0;
-            this.field_i = param1;
-            this.field_m = param6;
+          this.field_n = param2;
+          this.field_p = param7;
+          if (param3 != -12131) {
+            hk.c(39);
+          }
+          this.field_o = param4;
+          this.field_r = param5;
+          this.field_j = param0;
+          this.field_i = param1;
+          this.field_m = param6;
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "hk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "hk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -35,18 +35,16 @@ final class hk extends am {
     }
 
     public static void c(int param0) {
-        if (param0 != -20150) {
-          hk.c(76);
-          field_l = null;
-          field_k = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -20150) {
           field_l = null;
           field_k = null;
           field_h = null;
           return;
         }
+        hk.c(76);
+        field_l = null;
+        field_k = null;
+        field_h = null;
     }
 
     static {

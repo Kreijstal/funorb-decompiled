@@ -16,16 +16,14 @@ final class ao {
     private long field_e;
 
     final void a(int param0, long param1) throws IOException {
-        if (param0 != 15557) {
-          field_h = (ew) null;
-          this.field_j.seek(param1);
-          this.field_e = param1;
-          return;
-        } else {
+        if (param0 == 15557) {
           this.field_j.seek(param1);
           this.field_e = param1;
           return;
         }
+        field_h = (ew) null;
+        this.field_j.seek(param1);
+        this.field_e = param1;
     }
 
     public static void b(int param0) {
@@ -36,31 +34,31 @@ final class ao {
         field_h = null;
         field_f = null;
         if (param0 <= 111) {
-            field_i = (int[][][]) null;
+          field_i = (int[][][]) null;
         }
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
         if (param0 != 1) {
-            return;
+          return;
         }
         try {
-            if (this.field_g < (long)param3 - -this.field_e) {
-                this.field_j.seek(this.field_g);
-                this.field_j.write(1);
-                throw new EOFException();
-            }
-            this.field_j.write(param1, param2, param3);
-            this.field_e = this.field_e + (long)param3;
+          if (this.field_g < (long)param3 + this.field_e) {
+            this.field_j.seek(this.field_g);
+            this.field_j.write(1);
+            throw new EOFException();
+          }
+          this.field_j.write(param1, param2, param3);
+          this.field_e = this.field_e + (long)param3;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ao.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ao.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
-        if (!(null == this.field_j)) {
-            System.out.println("");
-            this.a(-98);
+        if (null != this.field_j) {
+          System.out.println("");
+          this.a(-98);
         }
     }
 
@@ -70,83 +68,58 @@ final class ao {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5_int = this.field_j.read(param2, param3, param1);
-              if (param0 == 33) {
-                break L1;
-              } else {
-                ao.b(58);
-                break L1;
-              }
-            }
-            L2: {
-              if (0 >= var5_int) {
-                break L2;
-              } else {
-                this.field_e = this.field_e + (long)var5_int;
-                break L2;
-              }
-            }
-            stackIn_5_0 = var5_int;
-            break L0;
+          var5_int = this.field_j.read(param2, param3, param1);
+          if (param0 != 33) {
+            ao.b(58);
           }
+          if (0 < var5_int) {
+            this.field_e = this.field_e + (long)var5_int;
+          }
+          stackIn_5_0 = var5_int;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("ao.F(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("ao.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_5_0;
     }
 
     final void a(int param0) throws IOException {
-        int var2 = -76 / ((param0 - -38) / 60);
-        if (!(null == this.field_j)) {
-            this.field_j.close();
-            this.field_j = null;
+        int var2 = -76 / ((param0 + 38) / 60);
+        if (null != this.field_j) {
+          this.field_j.close();
+          this.field_j = null;
         }
     }
 
     final static void a(boolean param0, java.awt.Component param1) {
         if (param0) {
-            return;
+          return;
         }
         try {
-            param1.removeMouseListener(lw.field_e);
-            param1.removeMouseMotionListener(lw.field_e);
-            param1.removeFocusListener(lw.field_e);
-            field_d = 0;
+          param1.removeMouseListener(lw.field_e);
+          param1.removeMouseMotionListener(lw.field_e);
+          param1.removeFocusListener(lw.field_e);
+          field_d = 0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ao.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ao.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final long c(int param0) throws IOException {
         if (param0 != 31114) {
-            field_i = (int[][][]) null;
-            return this.field_j.length();
+          field_i = (int[][][]) null;
+          return this.field_j.length();
         }
         return this.field_j.length();
     }
@@ -154,23 +127,24 @@ final class ao {
     ao(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
-            if ((param2 ^ -1L) == 0L) {
-                param2 = 9223372036854775807L;
-            }
-            if (param2 < param0.length()) {
-                param0.delete();
-            }
-            this.field_j = new RandomAccessFile(param0, param1);
-            this.field_g = param2;
-            this.field_e = 0L;
-            var5_int = this.field_j.read();
-            if (var5_int != -1 && !param1.equals("r")) {
-                this.field_j.seek(0L);
-                this.field_j.write(var5_int);
-            }
+          if (param2 == -1L) {
+            param2 = 9223372036854775807L;
+          }
+          if (param2 < param0.length()) {
+            param0.delete();
+          }
+          this.field_j = new RandomAccessFile(param0, param1);
+          this.field_g = param2;
+          this.field_e = 0L;
+          var5_int = this.field_j.read();
+          if (var5_int != -1 &&
+            !param1.equals("r")) {
             this.field_j.seek(0L);
+            this.field_j.write(var5_int);
+          }
+          this.field_j.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ao.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ao.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

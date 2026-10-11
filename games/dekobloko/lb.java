@@ -15,16 +15,14 @@ final class lb {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        if (param0 != -19893) {
-          lb.a(101);
-          field_h = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == -19893) {
           field_h = null;
           field_i = null;
           return;
         }
+        lb.a(101);
+        field_h = null;
+        field_i = null;
     }
 
     static int a(int param0, int param1) {

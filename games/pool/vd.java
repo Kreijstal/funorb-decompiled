@@ -18,41 +18,27 @@ final class vd implements fp {
     static String field_f;
 
     final static void a(byte param0, int param1) {
-        L0: {
-          ec.field_i = param1 >> 1414412772 & 3;
-          if (2 < ec.field_i) {
-            ec.field_i = 2;
-            break L0;
-          } else {
-            break L0;
-          }
+        ec.field_i = param1 >> 4 & 3;
+        if (!(2 >= ec.field_i)) {
+          ec.field_i = 2;
         }
-        L1: {
-          ol.field_e = param1 >> 1169451010 & 3;
-          di.field_e = param1 & 3;
-          if ((ol.field_e ^ -1) < -3) {
-            ol.field_e = 2;
-            break L1;
-          } else {
-            break L1;
-          }
+        ol.field_e = param1 >> 2 & 3;
+        di.field_e = param1 & 3;
+        if (!(ol.field_e <= 2)) {
+          ol.field_e = 2;
         }
-        if (2 >= di.field_e) {
+        if (2 < di.field_e) {
+          di.field_e = 2;
           if (param0 != 78) {
             vd.a(111, (byte) -79, -26);
             return;
-          } else {
-            return;
           }
-        } else {
-          di.field_e = 2;
-          if (param0 == 78) {
-            return;
-          } else {
-            vd.a(111, (byte) -79, -26);
-            return;
-          }
+          return;
         }
+        if (param0 == 78) {
+          return;
+        }
+        vd.a(111, (byte) -79, -26);
     }
 
     public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
@@ -63,42 +49,44 @@ final class vd implements fp {
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
+        double var9Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
         try {
-            var15 = !(param4 instanceof er) ? null : (er) ((Object) param4);
-            if (var15 != null) {
-            }
-            qh.f(param1 - -param4.field_C, param4.field_D + param3, param4.field_l, param4.field_y, this.field_k);
-            var7 = var15.field_U + (param4.field_C + param1);
-            var8 = var15.field_P + param3 + param4.field_D;
-            qh.a(var7, var8, var15.field_O, this.field_i);
-            if (-1 != var15.field_V) {
-                var9 = 2.0 * (3.141592653589793 * (double)var15.field_V) / (double)var15.field_Z;
-                var11 = (int)(-Math.sin(var9) * (double)var15.field_O);
-                var12 = (int)(Math.cos(var9) * (double)var15.field_O);
-                qh.a(var11 + var7, var8 + var12, 1, this.field_a);
-            }
-            qh.a(var7, var8, 2, 1);
-            var9 = 2.0 * ((double)var15.field_Y * 3.141592653589793) / (double)var15.field_Z;
-            int var13 = 63 % ((param2 - 2) / 41);
+          var15 = !(param4 instanceof er) ? null : (er) (param4);
+          if (var15 != null) {
+          }
+          qh.f(param1 + param4.field_C, param4.field_D + param3, param4.field_l, param4.field_y, this.field_k);
+          var7 = var15.field_U + (param4.field_C + param1);
+          var8 = var15.field_P + param3 + param4.field_D;
+          qh.a(var7, var8, var15.field_O, this.field_i);
+          if (-1 != var15.field_V) {
+            var9 = 2.0 * (3.141592653589793 * (double)var15.field_V) / (double)var15.field_Z;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_O);
             var12 = (int)(Math.cos(var9) * (double)var15.field_O);
-            qh.d(var7, var8, var11 + var7, var8 - -var12, 1);
-            if (this.field_h != null) {
-                var14 = this.field_b + var15.field_O + var15.field_U;
-                this.field_h.a(param4.field_m, var14 + (param1 + param4.field_C), this.field_j + (param3 + param4.field_D), -var14 + (-this.field_b + param4.field_l), param4.field_y + -(this.field_b << -1859973279), this.field_e, this.field_d, 1, 1, 0);
-            }
+            qh.a(var11 + var7, var8 + var12, 1, this.field_a);
+          }
+          qh.a(var7, var8, 2, 1);
+          var9Lifetime1 = 2.0 * ((double)var15.field_Y * 3.141592653589793) / (double)var15.field_Z;
+          int var13 = 63 % ((param2 - 2) / 41);
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_O);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_O);
+          qh.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          if (this.field_h != null) {
+            var14 = this.field_b + var15.field_O + var15.field_U;
+            this.field_h.a(param4.field_m, var14 + (param1 + param4.field_C), this.field_j + (param3 + param4.field_D), -var14 + (-this.field_b + param4.field_l), param4.field_y - (this.field_b << 1), this.field_e, this.field_d, 1, 1, 0);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, byte param1, int param2) {
-        if (param1 <= 65) {
-          field_f = (String) null;
-          return (fb.field_d + qh.field_c << -1086022558) - -((param2 << 455323275) / param0);
-        } else {
-          return (fb.field_d + qh.field_c << -1086022558) - -((param2 << 455323275) / param0);
+        if (param1 > 65) {
+          return (fb.field_d + qh.field_c << 2) + (param2 << 11) / param0;
         }
+        field_f = (String) null;
+        return (fb.field_d + qh.field_c << 2) + (param2 << 11) / param0;
     }
 
     public static void a(int param0) {
@@ -106,22 +94,22 @@ final class vd implements fp {
         field_f = null;
         field_m = null;
         if (param0 != -1) {
-            field_g = 72;
+          field_g = 72;
         }
     }
 
     vd(lr param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_d = param4;
-            this.field_k = param7;
-            this.field_a = param6;
-            this.field_e = param3;
-            this.field_i = param5;
-            this.field_j = param2;
-            this.field_h = param0;
-            this.field_b = param1;
+          this.field_d = param4;
+          this.field_k = param7;
+          this.field_a = param6;
+          this.field_e = param3;
+          this.field_i = param5;
+          this.field_j = param2;
+          this.field_h = param0;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "vd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

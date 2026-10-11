@@ -7,7 +7,7 @@ final class hn extends kb implements fk {
 
     public final int a(int param0) {
         if (param0 != 2721) {
-            return 47;
+          return 47;
         }
         return this.field_f;
     }
@@ -15,26 +15,26 @@ final class hn extends kb implements fk {
     final void b(int param0) {
         this.field_g.a((fk) (this), -127);
         if (param0 != 1735490466) {
-            this.b(52);
+          this.b(52);
         }
     }
 
     final static void a(byte param0, String param1) {
         try {
-            rb.field_c = param1;
-            rd.a(12, -78);
-            if (param0 < 62) {
-                field_k = (String) null;
-            }
+          rb.field_c = param1;
+          rd.a(12, -78);
+          if (param0 < 62) {
+            field_k = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "hn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(boolean param0) {
         field_k = null;
         if (!param0) {
-            field_j = -101;
+          field_j = -101;
         }
     }
 
@@ -44,16 +44,15 @@ final class hn extends kb implements fk {
 
     final static int a(boolean param0, int param1) {
         param1--;
-        if (param0) {
-          return -71;
-        } else {
-          param1 = param1 | param1 >>> 1689604353;
-          param1 = param1 | param1 >>> 1735490466;
-          param1 = param1 | param1 >>> -222746364;
-          param1 = param1 | param1 >>> 705284488;
-          param1 = param1 | param1 >>> 1678969168;
-          return param1 - -1;
+        if (!param0) {
+          param1 = param1 | param1 >>> 1;
+          param1 = param1 | param1 >>> 2;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
+          return param1 + 1;
         }
+        return -71;
     }
 
     static {

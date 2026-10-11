@@ -13,248 +13,110 @@ final class eo extends tl {
 
     final static boolean a(boolean param0, pi param1) {
         RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                eo.c(-28);
-                break L1;
-              }
-            }
-            L2: {
-              if (1 != param1.c(1, (byte) 127)) {
-                stackIn_5_0 = 0;
-                break L2;
-              } else {
-                stackIn_5_0 = 1;
-                break L2;
-              }
-            }
-            break L0;
+          if (param0) {
+            eo.c(-28);
           }
+          stackIn_5_0 = (1 == param1.c(1, (byte) 127));
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("eo.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("eo.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        L0: {
-          if (param3 != param0) {
-            break L0;
-          } else {
-            if (md.field_r != param2) {
-              oi.field_d = true;
-              md.field_r = param2;
-              eh.a(true, param1);
-              break L0;
-            } else {
-              if (param3 == 1) {
-                if (md.field_v != param2) {
-                  md.field_v = param2;
-                  oi.field_d = true;
-                  eh.a(true, param1);
-                  if (2 == param3) {
-                    if (param2 == to.field_a) {
-                      return;
-                    } else {
-                      oi.field_d = true;
-                      to.field_a = param2;
-                      eh.a(true, param1);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  if (2 == param3) {
-                    if (param2 == to.field_a) {
-                      return;
-                    } else {
-                      oi.field_d = true;
-                      to.field_a = param2;
-                      eh.a(true, param1);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (2 == param3) {
-                  if (param2 == to.field_a) {
-                    return;
-                  } else {
-                    oi.field_d = true;
-                    to.field_a = param2;
-                    eh.a(true, param1);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
-          }
+        if (param3 == param0 &&
+          md.field_r != param2) {
+          oi.field_d = true;
+          md.field_r = param2;
+          eh.a(true, param1);
         }
-        L1: {
-          if (param3 != 1) {
-            break L1;
-          } else {
-            if (md.field_v == param2) {
-              break L1;
-            } else {
-              md.field_v = param2;
-              oi.field_d = true;
-              eh.a(true, param1);
-              if (2 == param3) {
-                if (param2 == to.field_a) {
-                  return;
-                } else {
-                  oi.field_d = true;
-                  to.field_a = param2;
-                  eh.a(true, param1);
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          }
+        if (param3 == 1 &&
+          md.field_v != param2) {
+          md.field_v = param2;
+          oi.field_d = true;
+          eh.a(true, param1);
         }
-        if (2 == param3) {
-          if (param2 == to.field_a) {
-            return;
-          } else {
-            oi.field_d = true;
-            to.field_a = param2;
-            eh.a(true, param1);
-            return;
-          }
-        } else {
+        if (2 != param3) {
           return;
         }
+        if (param2 == to.field_a) {
+          return;
+        }
+        oi.field_d = true;
+        to.field_a = param2;
+        eh.a(true, param1);
     }
 
     final void a(int param0, byte[] param1) {
         try {
-            this.field_j = java.nio.ByteBuffer.allocateDirect(param1.length);
-            if (param0 < 63) {
-                field_g = (java.awt.Font) null;
-            }
-            this.field_j.position(0);
-            this.field_j.put(param1);
+          this.field_j = java.nio.ByteBuffer.allocateDirect(param1.length);
+          if (param0 < 63) {
+            field_g = (java.awt.Font) null;
+          }
+          this.field_j.position(0);
+          this.field_j.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final byte[] b(int param0) {
-        byte[] var2;
-        byte[] var3;
-        var3 = new byte[this.field_j.capacity()];
-        var2 = var3;
+        byte[] var3 = new byte[this.field_j.capacity()];
+        byte[] var2 = var3;
         this.field_j.position(0);
-        if (param0 != 16616) {
-          return (byte[]) null;
-        } else {
+        if (param0 == 16616) {
           this.field_j.get(var3);
           return var3;
         }
+        return (byte[]) null;
     }
 
     final static boolean a(int[] param0, int param1, byte param2) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == -75) {
-              L1: {
-                if (-1 == (param0[param1 >> -2053133531] & 1 << (param1 & 31) ^ -1)) {
-                  stackIn_6_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 == -75) {
+            stackIn_6_0 = ((param0[param1 >> 5] & 1 << (param1 & 31)) != 0);
+            return stackIn_6_0;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("eo.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("eo.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_6_0 != 0;
+          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void c(int param0) {
         field_l = null;
         if (param0 != 7301) {
-            return;
+          return;
         }
         field_g = null;
         field_f = null;

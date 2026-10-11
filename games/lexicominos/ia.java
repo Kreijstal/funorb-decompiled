@@ -12,72 +12,50 @@ final class ia extends mg {
         if (ta.field_g == 10) {
           sb.a(-128);
           ta.field_g = 11;
-          fh.field_i = true;
-          if (param0 > 33) {
-            return;
-          } else {
-            ia.h(-116);
-            return;
-          }
         } else {
           if (!ca.d(true)) {
             sb.a(-128);
             ta.field_g = 11;
-            fh.field_i = true;
-            if (param0 <= 33) {
-              ia.h(-116);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            fh.field_i = true;
-            if (param0 > 33) {
-              return;
-            } else {
-              ia.h(-116);
-              return;
-            }
           }
         }
+        fh.field_i = true;
+        if (param0 > 33) {
+          return;
+        }
+        ia.h(-116);
     }
 
     ia(w param0) {
         super(param0.field_t, param0.field_o, param0.field_j, param0.field_v, (rd) null, (vd) null);
         try {
-            param0.a(this.field_v, this.field_j, true, 0, 0);
-            this.field_A = param0;
-            this.field_E = 256;
+          param0.a(this.field_v, this.field_j, true, 0, 0);
+          this.field_A = param0;
+          this.field_E = 256;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "ia.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        db var6;
-        if (param3 == 0) {
-          if (this.field_A == null) {
-            return;
-          } else {
-            if (this.field_E == 0) {
-              return;
-            } else {
-              if ((this.field_E ^ -1) == -257) {
-                this.field_A.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);
-                return;
-              } else {
-                var6 = new db(this.field_A.field_j, this.field_A.field_v);
-                de.a(var6, 6);
-                this.field_A.a(param0, 0, 0, param3);
-                pd.a(-22949);
-                var6.b(this.field_t + param2, param1 + this.field_o, this.field_E);
-                return;
-              }
-            }
-          }
-        } else {
+        db var6 = null;
+        if (param3 != 0) {
           return;
         }
+        if (this.field_A == null) {
+          return;
+        }
+        if (this.field_E == 0) {
+          return;
+        }
+        if (this.field_E != 256) {
+          var6 = new db(this.field_A.field_j, this.field_A.field_v);
+          de.a(var6, 6);
+          this.field_A.a(param0, 0, 0, param3);
+          pd.a(-22949);
+          var6.b(this.field_t + param2, param1 + this.field_o, this.field_E);
+          return;
+        }
+        this.field_A.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);
     }
 
     public static void h(int param0) {
@@ -85,7 +63,7 @@ final class ia extends mg {
         field_G = null;
         field_F = null;
         if (param0 != 0) {
-            ia.h(126);
+          ia.h(126);
         }
     }
 

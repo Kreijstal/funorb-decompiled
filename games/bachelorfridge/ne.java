@@ -22,7 +22,7 @@ final class ne extends bw {
         field_m = null;
         field_n = null;
         if (param0 != 18072) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
     }
 

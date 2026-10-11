@@ -13,10 +13,10 @@ final class lb extends eg implements dm {
 
     final void a(na param0, int param1, int param2, boolean param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_T.field_K = this.field_W.a(-104).c(-68) == pf.field_a ? true : false;
+          super.a(param0, param1, param2, param3);
+          this.field_T.field_K = this.field_W.a(-104).c(-68) == pf.field_a ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "lb.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "lb.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -31,60 +31,59 @@ final class lb extends eg implements dm {
     }
 
     final void d(byte param0) {
-        int var2;
-        if (param0 > -109) {
-          field_P = (int[]) null;
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param0 <= -109) {
           var2 = 250;
-          this.field_W.a(25, -25 + (this.field_u + 20) >> -1384589791, -125, -var2 + this.field_F >> -849760735, 140);
-          this.field_T.a(30, (this.field_u - 10 >> 573509761) - -2, -124, 10 + ((-var2 + this.field_F >> -970469375) - -140), 100);
-          return;
-        } else {
-          var2 = 250;
-          this.field_W.a(25, -25 + (this.field_u + 20) >> -1384589791, -125, -var2 + this.field_F >> -849760735, 140);
-          this.field_T.a(30, (this.field_u - 10 >> 573509761) - -2, -124, 10 + ((-var2 + this.field_F >> -970469375) - -140), 100);
+          this.field_W.a(25, -25 + (this.field_u + 20) >> 1, -125, -var2 + this.field_F >> 1, 140);
+          this.field_T.a(30, (this.field_u - 10 >> 1) + 2, -124, 10 + ((-var2 + this.field_F >> 1) + 140), 100);
           return;
         }
+        field_P = (int[]) null;
+        var2Lifetime1 = 250;
+        this.field_W.a(25, -25 + (this.field_u + 20) >> 1, -125, -var2Lifetime1 + this.field_F >> 1, 140);
+        this.field_T.a(30, (this.field_u - 10 >> 1) + 2, -124, 10 + ((-var2Lifetime1 + this.field_F >> 1) + 140), 100);
     }
 
     final static void a(bh param0, boolean param1) {
         int var2_int = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         try {
-            tl.field_X = param0.e(127) << 755866149;
-            var2_int = param0.d((byte) -99);
-            l.field_j = (7 & var2_int) << -1785448910;
-            tl.field_X = tl.field_X + (var2_int >> -144765597);
-            l.field_j = l.field_j + (param0.e(127) << 416081154);
-            var2_int = param0.d((byte) -99);
-            fd.field_F = var2_int << -862214065 & 2064384;
-            l.field_j = l.field_j + (var2_int >> 1196540134);
-            fd.field_F = fd.field_F + (param0.d((byte) -99) << -1463169945);
-            if (param1) {
-                wf var3 = (wf) null;
-                lb.a((wf) null, 38);
-            }
-            var2_int = param0.d((byte) -99);
-            om.field_Nb = (var2_int & 1) << 1037637808;
-            fd.field_F = fd.field_F + (var2_int >> -1557831615);
-            om.field_Nb = om.field_Nb + param0.e(127);
+          tl.field_X = param0.e(127) << 5;
+          var2_int = param0.d((byte) -99);
+          l.field_j = (7 & var2_int) << 18;
+          tl.field_X = tl.field_X + (var2_int >> 3);
+          l.field_j = l.field_j + (param0.e(127) << 2);
+          var2_intLifetime1 = param0.d((byte) -99);
+          fd.field_F = var2_intLifetime1 << 15 & 2064384;
+          l.field_j = l.field_j + (var2_intLifetime1 >> 6);
+          fd.field_F = fd.field_F + (param0.d((byte) -99) << 7);
+          if (param1) {
+            wf var3 = (wf) null;
+            lb.a((wf) null, 38);
+          }
+          var2_intLifetime2 = param0.d((byte) -99);
+          om.field_Nb = (var2_intLifetime2 & 1) << 16;
+          fd.field_F = fd.field_F + (var2_intLifetime2 >> 1);
+          om.field_Nb = om.field_Nb + param0.e(127);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "lb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "lb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void h(int param0) {
         field_S = null;
-        if (param0 != 0) {
-          field_V = 73;
-          field_Q = null;
-          field_U = null;
-          field_P = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_Q = null;
           field_U = null;
           field_P = null;
           return;
         }
+        field_V = 73;
+        field_Q = null;
+        field_U = null;
+        field_P = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -94,15 +93,15 @@ final class lb extends eg implements dm {
 
     public final void a(byte param0, ae param1, int param2, int param3, int param4) {
         if (param0 >= 0) {
-            return;
+          return;
         }
-        if (!(this.field_W.a(-109).c(-77) == pf.field_a)) {
-            return;
+        if (this.field_W.a(-109).c(-77) != pf.field_a) {
+          return;
         }
         try {
-            qe.a(this.field_W.a(false), 0, this.field_W.f((byte) 90), this.field_W.g((byte) 12));
+          qe.a(this.field_W.a(false), 0, this.field_W.f((byte) 90), this.field_W.g((byte) 12));
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "lb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "lb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -111,46 +110,26 @@ final class lb extends eg implements dm {
         bf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 573509761) {
-                break L1;
-              } else {
-                field_U = (String) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = we.a(-11040, ee.a(param0, 100, 96));
-            break L0;
+          if (param1 != 573509761) {
+            field_U = (String) null;
           }
+          stackIn_3_0 = we.a(-11040, ee.a(param0, 100, 96));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("lb.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("lb.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

@@ -13,7 +13,7 @@ final class hl extends kg {
 
     final static int a(int param0, int param1) {
         if (param0 >= -21) {
-            return 83;
+          return 83;
         }
         return (param1 - 100) / 200;
     }
@@ -27,104 +27,68 @@ final class hl extends kg {
         pf var7 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1) {
-                break L1;
-              } else {
-                hl.a((byte) -92);
-                break L1;
+          if (!param1) {
+            hl.a((byte) -92);
+          }
+          var7 = new pf();
+          var3 = (nc) (param0.h(72));
+          var4 = var3;
+          var7.a((byte) -113, var4);
+          while (!param0.g(-87)) {
+            boolean decompiledFrameRemainder0 = true;
+            if (null == var4.field_k) {
+              var5 = (nc) (param0.d(0));
+              while (var5 != null) {
+                if (var5.field_r != null) {
+                  var5 = (nc) (param0.a((byte) -71));
+                  continue;
+                }
+                break;
               }
-            }
-            var7 = new pf();
-            var3 = (nc) ((Object) param0.h(72));
-            var4 = var3;
-            var7.a((byte) -113, var4);
-            L2: while (true) {
-              L3: {
-                if (param0.g(-87)) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (null == var4.field_k) {
-                      var5 = (nc) ((Object) param0.d(0));
-                      L5: while (true) {
-                        L6: {
-                          if (var5 == null) {
-                            break L6;
-                          } else {
-                            if (var5.field_r == null) {
-                              break L6;
-                            } else {
-                              var5 = (nc) ((Object) param0.a((byte) -71));
-                              continue L5;
-                            }
-                          }
-                        }
-                        if (var5 != null) {
-                          var4 = var5;
-                          break L4;
-                        } else {
-                          if (null != var3.field_r) {
-                            if (var4.field_r == null) {
-                              break L4;
-                            } else {
-                              throw new jn("Border linkage incorrect: Can't find an unclipped edge.");
-                            }
-                          } else {
-                            var4 = var3;
-                            break L4;
-                          }
-                        }
-                      }
-                    } else {
-                      if (var4.field_k.field_r != var4) {
-                        throw new jn("Border linkage incorrect: v2.v1 != v");
-                      } else {
-                        var4 = var4.field_k;
-                        break L4;
-                      }
-                    }
-                  }
-                  if (var3 != var4) {
-                    var7.a((byte) -113, var4);
-                    continue L2;
-                  } else {
-                    break L3;
-                  }
+              if (var5 != null) {
+                var4 = var5;
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                if (null == var3.field_r) {
+                  var4 = var3;
+                  decompiledFrameRemainder0 = false;
+                }
+                if ((decompiledFrameRemainder0) &&
+                  (decompiledFrameRemainder0 = (var4.field_r != null))) {
+                  throw new jn("Border linkage incorrect: Can't find an unclipped edge.");
                 }
               }
-              param0.field_h = var7.field_h;
-              break L0;
             }
+            if (decompiledFrameRemainder0) {
+              if (var4.field_k.field_r != var4) {
+                throw new jn("Border linkage incorrect: v2.v1 != v");
+              }
+              var4 = var4.field_k;
+            }
+            if (var3 != var4) {
+              var7.a((byte) -113, var4);
+              continue;
+            }
+            break;
           }
+          param0.field_h = var7.field_h;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            runtimeException = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (runtimeException);
-
-            stackIn_27_1 = new StringBuilder().append("hl.C(");
-
-            if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L7;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L7;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_27_0 = runtimeException;
+          stackIn_27_1 = new StringBuilder().append("hl.C(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -134,7 +98,7 @@ final class hl extends kg {
         field_E = null;
         field_K = null;
         if (param0 <= 17) {
-            field_H = (String) null;
+          field_H = (String) null;
         }
         field_H = null;
         field_J = null;
@@ -142,10 +106,10 @@ final class hl extends kg {
 
     final String c(boolean param0) {
         if (this.field_k) {
-            return this.field_G.a((byte) -63);
+          return this.field_G.a((byte) -63);
         }
         if (param0) {
-            return null;
+          return null;
         }
         return (String) null;
     }
@@ -153,50 +117,33 @@ final class hl extends kg {
     final boolean a(byte param0, vg param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3_int = 86 % ((61 - param0) / 59);
-            stackIn_1_0 = 0;
-            break L0;
-          }
+          var3_int = 86 % ((61 - param0) / 59);
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var3);
-
-            stackIn_4_1 = new StringBuilder().append("hl.CA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("hl.CA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0 != 0;
     }
 
     final void a(int param0, int param1, vg param2, byte param3) {
         try {
-            this.field_F = this.field_F + 1;
-            super.a(param0, param1, param2, param3);
+          this.field_F = this.field_F + 1;
+          super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "hl.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "hl.PA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -215,24 +162,24 @@ final class hl extends kg {
         bi var3 = new bi(240, 120);
         int var4 = 0;
         if (param0 != 111) {
-            hl.a((byte) 53);
+          hl.a((byte) 53);
         }
         while (var4 < param1) {
-            var3.e();
-            gf.b();
-            for (var5 = 0; -5 < (var5 ^ -1); var5++) {
-                var6 = (double)(param1 * (3 + var5) + var4) * 6.283185307179586;
-                var8 = Math.sin(var6 / (double)(param1 * 4));
-                var10 = Math.cos(var6 / (double)(param1 * 4));
-                var12 = (int)(12288.0 / (var10 + 3.0));
-                var13 = 1920 + (int)(var8 * 2400.0 / (3.0 + var10));
-                var14 = (int)(1920.0 / (3.0 + var10));
-                e.field_e.b(e.field_e.field_o << -201372573, e.field_e.field_p << 1482706371, var13, var14, 0, var12);
-            }
-            var2[var4] = new bi(60, 30);
-            var16[var4].e();
-            var3.g(0, 0);
-            var4++;
+          var3.e();
+          gf.b();
+          for (var5 = 0; var5 < 4; var5++) {
+            var6 = (double)(param1 * (3 + var5) + var4) * 6.283185307179586;
+            var8 = Math.sin(var6 / (double)(param1 * 4));
+            var10 = Math.cos(var6 / (double)(param1 * 4));
+            var12 = (int)(12288.0 / (var10 + 3.0));
+            var13 = 1920 + (int)(var8 * 2400.0 / (3.0 + var10));
+            var14 = (int)(1920.0 / (3.0 + var10));
+            e.field_e.b(e.field_e.field_o << 3, e.field_e.field_p << 3, var13, var14, 0, var12);
+          }
+          var2[var4] = new bi(60, 30);
+          var16[var4].e();
+          var3.g(0, 0);
+          var4++;
         }
         cg.i(0);
         return var2;
@@ -250,79 +197,52 @@ final class hl extends kg {
         bi var14;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         super.a(param0, param1 + 0, param2, param3);
-        if (-1 == (param0 ^ -1)) {
-          var5 = (this.field_x >> 352021153) + (param3 - -this.field_m);
-          var6 = (this.field_n >> 1330105825) + param2 - -this.field_q;
-          if (param1 == -11857) {
-            L0: {
-              L1: {
-                var8 = this.field_G.c(param1 + 11730);
-                if (pd.field_h == var8) {
-                  break L1;
-                } else {
-                  if (lm.field_d == var8) {
-                    break L1;
-                  } else {
-                    if (tj.field_b == var8) {
-                      var13 = lp.field_w[2];
-                      var13.c(-(var13.field_z >> -1508432063) + var5, var6 + -(var13.field_w >> -187589631), 256);
-                      break L0;
-                    } else {
-                      if (p.field_g == var8) {
-                        var12 = lp.field_w[1];
-                        var12.c(-(var12.field_z >> 1459417409) + var5, -(var12.field_w >> -1746091743) + var6, 256);
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    }
-                  }
-                }
-              }
-              L2: {
-                L3: {
-                  var14 = lp.field_w[0];
-                  var9 = var14.field_o << -1487344095;
-                  var10 = var14.field_p << 120650913;
-                  if (null == gg.field_e) {
-                    break L3;
-                  } else {
-                    if (var9 > gg.field_e.field_z) {
-                      break L3;
-                    } else {
-                      if (gg.field_e.field_w < var10) {
-                        break L3;
-                      } else {
-                        aq.a((byte) 90, gg.field_e);
-                        gf.b();
-                        break L2;
-                      }
-                    }
-                  }
-                }
-                gg.field_e = new bi(var9, var10);
-                aq.a((byte) -107, gg.field_e);
-                break L2;
-              }
-              var14.b(112, 144, var14.field_o << -1574392124, var14.field_p << -1809550460, -this.field_F << 616613738, 4096);
-              ln.f((byte) -94);
-              gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
-              break L0;
-            }
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param0 != 0) {
           return;
         }
+        var5 = (this.field_x >> 1) + (param3 + this.field_m);
+        var6 = (this.field_n >> 1) + param2 + this.field_q;
+        if (param1 != -11857) {
+          return;
+        }
+        var8 = this.field_G.c(param1 + 11730);
+        if (pd.field_h != var8 &&
+          lm.field_d != var8) {
+          if (tj.field_b == var8) {
+            var13 = lp.field_w[2];
+            var13.c(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);
+            return;
+          }
+          if (p.field_g != var8) {
+            return;
+          }
+          var12 = lp.field_w[1];
+          var12.c(-(var12.field_z >> 1) + var5, -(var12.field_w >> 1) + var6, 256);
+          return;
+        }
+        var14 = lp.field_w[0];
+        var9 = var14.field_o << 1;
+        var10 = var14.field_p << 1;
+        if (null != gg.field_e &&
+          var9 <= gg.field_e.field_z &&
+          gg.field_e.field_w >= var10) {
+          aq.a((byte) 90, gg.field_e);
+          gf.b();
+        } else {
+          gg.field_e = new bi(var9, var10);
+          aq.a((byte) -107, gg.field_e);
+        }
+        var14.b(112, 144, var14.field_o << 4, var14.field_p << 4, -this.field_F << 10, 4096);
+        ln.f((byte) -94);
+        gg.field_e.c(var5 - var14.field_o, -var14.field_p + var6, 256);
+        return;
     }
 
     hl(gk param0) {
         try {
-            this.field_G = param0;
+          this.field_G = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

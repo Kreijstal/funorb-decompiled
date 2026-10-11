@@ -12,34 +12,34 @@ final class uc {
         field_b = null;
         field_d = (int[][]) null;
         if (param0 != -39) {
-            field_b = (je) null;
+          field_b = (je) null;
         }
     }
 
     final static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         bc.a(2858);
     }
 
     final static void a(dq param0, int param1) {
         try {
-            if (param1 != 4) {
-                field_b = (je) null;
-            }
-            ds.field_c = param0;
+          if (param1 != 4) {
+            field_b = (je) null;
+          }
+          ds.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "uc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
         fh.field_e = param0;
         if (param3) {
-            uc.a(29);
-            q.field_B = param4;
-            return;
+          uc.a(29);
+          q.field_B = param4;
+          return;
         }
         q.field_B = param4;
     }

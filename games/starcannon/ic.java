@@ -10,9 +10,9 @@ final class ic {
     public static void a(byte param0) {
         field_d = null;
         if (param0 > -71) {
-            field_d = (java.awt.Frame) null;
-            field_c = null;
-            return;
+          field_d = (java.awt.Frame) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -20,7 +20,7 @@ final class ic {
     final static void a(byte param0, String param1) {
         System.out.println("Error: " + ed.a(-1, param1, "\n", "%0a"));
         if (param0 >= -95) {
-            field_a = false;
+          field_a = false;
         }
     }
 

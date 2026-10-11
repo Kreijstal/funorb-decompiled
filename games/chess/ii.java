@@ -15,107 +15,68 @@ final class ii extends ma implements mj {
     static String field_T;
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        if (param2 > -80) {
-          this.field_M = (fb) null;
+        int var5 = 0;
+        int var6 = 0;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        if (param2 <= -80) {
           var5 = param3 + this.field_u;
-          var6 = this.field_r - -param0;
-          rb.field_b.a(pe.field_e, 20 + var5, 20 + var6, this.field_y + -40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
-          super.a(param0, param1, -90, param3);
-          return;
-        } else {
-          var5 = param3 + this.field_u;
-          var6 = this.field_r - -param0;
-          rb.field_b.a(pe.field_e, 20 + var5, 20 + var6, this.field_y + -40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
+          var6 = this.field_r + param0;
+          rb.field_b.a(pe.field_e, 20 + var5, 20 + var6, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
           super.a(param0, param1, -90, param3);
           return;
         }
+        this.field_M = (fb) null;
+        var5Lifetime1 = param3 + this.field_u;
+        var6Lifetime1 = this.field_r + param0;
+        rb.field_b.a(pe.field_e, 20 + var5Lifetime1, 20 + var6Lifetime1, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
+        super.a(param0, param1, -90, param3);
     }
 
     final boolean a(char param0, int param1, int param2, mf param3) {
         RuntimeException var5 = null;
         fb var6 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (super.a(param0, param1, param2 + 0, param3)) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if ((param1 ^ -1) == -99) {
-                stackIn_7_0 = this.a(param3, param2 ^ -27965);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L1: {
-                  if (param2 == -1) {
-                    break L1;
-                  } else {
-                    var6 = (fb) null;
-                    this.a((fb) null, -72, -53, -40, -75);
-                    break L1;
-                  }
-                }
-                if (99 == param1) {
-                  stackIn_13_0 = this.a(param3, (byte) -73);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  return false;
-                }
-              }
-            }
+          if (super.a(param0, param1, param2 + 0, param3)) {
+            return true;
           }
+          if (param1 == 98) {
+            stackIn_7_0 = this.a(param3, param2 ^ -27965);
+            return stackIn_7_0;
+          }
+          if (param2 != -1) {
+            var6 = (fb) null;
+            this.a((fb) null, -72, -53, -40, -75);
+          }
+          if (99 != param1) {
+            return false;
+          }
+          stackIn_13_0 = this.a(param3, (byte) -73);
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var5);
-
-            stackIn_16_1 = new StringBuilder().append("ii.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L2;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L2;
-            }
-          }
-          throw fk.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var5 = decompiledCaughtException;
+          stackIn_16_0 = var5;
+          stackIn_16_1 = new StringBuilder().append("ii.KA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_17_2 = "null";
           } else {
-            return stackIn_13_0;
+            stackIn_17_2 = "{...}";
           }
+          throw fk.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_P = null;
         field_T = null;
-        if (param0 < 40) {
-          return;
-        } else {
+        if (param0 >= 40) {
           field_K = null;
           field_N = null;
           field_S = null;
@@ -136,10 +97,10 @@ final class ii extends ma implements mj {
         this.field_U.field_n = (jm) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 - var2 >> 732279617;
-        this.field_M.a(-var2 + -48 + this.field_C, 34, 30, var4, this.field_y - var3 >> -760035647);
-        this.field_U.a(-var2 + this.field_C + -48, 34, 30, var4, (-var3 + this.field_y >> -1898409343) + (var4 + var2));
-        this.field_R.a(this.field_C - (78 - -(2 * var2)), 34, 30, var3, this.field_y + -var3 >> -826185311);
+        int var4 = var3 - var2 >> 1;
+        this.field_M.a(-var2 - 48 + this.field_C, 34, 30, var4, this.field_y - var3 >> 1);
+        this.field_U.a(-var2 + this.field_C - 48, 34, 30, var4, (-var3 + this.field_y >> 1) + (var4 + var2));
+        this.field_R.a(this.field_C - (78 + 2 * var2), 34, 30, var3, this.field_y - var3 >> 1);
         this.field_M.field_p = (rg) (this);
         this.field_R.field_p = (rg) (this);
         this.field_R.field_j = sl.field_d;
@@ -155,63 +116,37 @@ final class ii extends ma implements mj {
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = Chess.field_G;
         try {
-          L0: {
-            if (param4 == -24221) {
-              if (this.field_M != param0) {
-                if (this.field_R == param0) {
-                  dc.c((byte) 126);
-                  return;
-                } else {
-                  if (param0 != this.field_U) {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    jg.b(true);
-                    return;
-                  }
-                }
-              } else {
-                mf.e(param4 ^ -24297);
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param4 != -24221) {
+            return;
           }
+          if (this.field_M == param0) {
+            mf.e(param4 ^ -24297);
+            return;
+          }
+          if (this.field_R == param0) {
+            dc.c((byte) 126);
+            return;
+          }
+          if (param0 != this.field_U) {
+            return;
+          }
+          jg.b(true);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var6);
-
-            stackIn_12_1 = new StringBuilder().append("ii.DA(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L1;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L1;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_12_0 = var6;
+          stackIn_12_1 = new StringBuilder().append("ii.DA(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw fk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

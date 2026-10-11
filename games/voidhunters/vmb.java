@@ -7,7 +7,7 @@ abstract class vmb {
 
     public static void a(int param0) {
         if (param0 != 8192) {
-            return;
+          return;
         }
         field_a = null;
     }

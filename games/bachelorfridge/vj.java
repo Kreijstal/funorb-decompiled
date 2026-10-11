@@ -13,18 +13,17 @@ final class vj extends pu {
     static kv field_m;
 
     final static int a(int param0, int param1, byte param2) {
-        int var3;
-        if ((param0 ^ -1) == -2) {
-          if (!ad.a(30, param1)) {
-            var3 = -80 / ((param2 - 82) / 44);
-            return tj.field_e[param0];
-          } else {
-            return 29;
-          }
-        } else {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param0 != 1) {
           var3 = -80 / ((param2 - 82) / 44);
           return tj.field_e[param0];
         }
+        if (ad.a(30, param1)) {
+          return 29;
+        }
+        var3Lifetime1 = -80 / ((param2 - 82) / 44);
+        return tj.field_e[param0];
     }
 
     public static void b(int param0) {

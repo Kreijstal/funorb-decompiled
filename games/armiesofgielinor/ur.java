@@ -40,7 +40,7 @@ final class ur extends bd {
         var5.field_o = new String[]{"runewars_atmospheric_desert_wind", "runewars_atmospheric_desert_vulture", "runewars_atmospheric_desert_vulture_2"};
         var5.field_l = "Tzhaar";
         if (param0 != -10128) {
-            return (co[]) null;
+          return (co[]) null;
         }
         var5.field_i = new int[]{13408580, 8943462, 7820612, 5609779, 7829503, 5596740, 5592541, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
         aw.a(var5, var4, -5841);
@@ -85,12 +85,12 @@ final class ur extends bd {
 
     final void a(int param0, ha param1) {
         try {
-            param1.field_l.a((byte) -119, (tc) (new ec(this.field_y.field_J, this.field_y.field_w, this.field_s, this.field_t, this.field_A)));
-            if (param0 != 64) {
-                field_z = 2;
-            }
+          param1.field_l.a((byte) -119, (tc) (new ec(this.field_y.field_J, this.field_y.field_w, this.field_s, this.field_t, this.field_A)));
+          if (param0 != 64) {
+            field_z = 2;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "ur.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ur.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class ur extends bd {
         field_u = null;
         field_B = null;
         if (param0) {
-            return;
+          return;
         }
         field_v = null;
         field_w = null;
@@ -108,13 +108,13 @@ final class ur extends bd {
 
     ur(int param0, int param1, int param2, int param3, int param4, jd param5, boolean param6) {
         try {
-            this.field_A = param6 ? true : false;
-            this.field_t = param3;
-            this.field_y = param5;
-            this.field_m = param4;
-            this.field_s = param2;
+          this.field_A = param6 ? true : false;
+          this.field_t = param3;
+          this.field_y = param5;
+          this.field_m = param4;
+          this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ur.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 

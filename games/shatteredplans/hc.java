@@ -28,24 +28,21 @@ final class hc {
                         var1_int = 0;
                         if (!param0) {
                             statePc = 4;
+                            continue stateLoop;
                         } else {
-                            statePc = 2;
+                            /* Inlined CFG state: 2. */
+                            {
+                                stackIn_3_0 = (si) null;
+                                statePc = 3;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_1) {
+                        statePc = ((Object) stateCaught_1 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                        }
                         caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackIn_3_0 = (si) null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -63,8 +60,11 @@ final class hc {
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
+                        statePc = ((Object) stateCaught_5 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                        }
                         caughtException = stateCaught_5;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -78,8 +78,11 @@ final class hc {
                         }
                         continue stateLoop;
                     } catch (Throwable stateCaught_6) {
+                        statePc = ((Object) stateCaught_6 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                        }
                         caughtException = stateCaught_6;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -89,8 +92,11 @@ final class hc {
                         statePc = 8;
                         continue stateLoop;
                     } catch (Throwable stateCaught_7) {
+                        statePc = ((Object) stateCaught_7 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
+                        }
                         caughtException = stateCaught_7;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -103,8 +109,11 @@ final class hc {
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_9) {
+                        statePc = ((Object) stateCaught_9 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
+                        }
                         caughtException = stateCaught_9;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -119,7 +128,7 @@ final class hc {
 
     final static lp a(int param0, int param1, int param2) {
         lp var9 = new lp(param0, param2, 209, rs.field_Cb.field_J);
-        int var4 = (-rs.field_Cb.c(ho.field_g) + 209 + -20) / 2;
+        int var4 = (-rs.field_Cb.c(ho.field_g) + 209 - 20) / 2;
         vc.field_b = new bi(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
         ra.a(-107);
@@ -138,9 +147,9 @@ final class hc {
     public static void a(byte param0) {
         field_c = null;
         if (param0 < 41) {
-            hc.a(-92, -95, -94);
-            field_b = null;
-            return;
+          hc.a(-92, -95, -94);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -148,5 +157,10 @@ final class hc {
     static {
         field_b = "Loading music";
         field_c = "Lost";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

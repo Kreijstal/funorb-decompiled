@@ -13,26 +13,26 @@ final class mi extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_e.paint(param0);
+          this.field_e.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "mi.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "mi.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, byte param1, String param2) {
         try {
-            if (param1 > -19) {
-                field_d = 24;
-            }
-            dj.a(false, param0, -106, param2);
+          if (param1 > -19) {
+            field_d = 24;
+          }
+          dj.a(false, param0, -106, param2);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "mi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "mi.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 >= -56) {
-            return;
+          return;
         }
         field_h = null;
         field_g = null;
@@ -41,17 +41,17 @@ final class mi extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_e.update(param0);
+          this.field_e.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "mi.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "mi.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     mi(java.awt.Component param0) {
         try {
-            this.field_e = param0;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "mi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

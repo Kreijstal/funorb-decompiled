@@ -10,61 +10,41 @@ final class gg {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 56) {
-                break L1;
-              } else {
-                gg.a((byte) -92);
-                break L1;
-              }
-            }
-            stackIn_3_0 = fa.a(param0, param0.length, 0, -73);
-            break L0;
+          if (param1 != 56) {
+            gg.a((byte) -92);
           }
+          stackIn_3_0 = fa.a(param0, param0.length, 0, -73);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("gg.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("gg.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0) {
         vg.field_a = dj.field_e.field_H.field_A.field_p;
         pm.d((byte) 36);
         if (param0 != 128) {
-            byte[] var2 = (byte[]) null;
-            gg.a((byte[]) null, (byte) 70);
+          byte[] var2 = (byte[]) null;
+          gg.a((byte[]) null, (byte) 70);
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -85) {
-            field_a = (char[]) null;
+          field_a = (char[]) null;
         }
     }
 

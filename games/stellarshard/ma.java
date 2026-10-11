@@ -23,116 +23,74 @@ final class ma extends gg {
         int var7 = stellarshard.field_B;
         pb[] var1 = new pb[sb.field_b];
         if (param0) {
-            return (pb[]) null;
+          return (pb[]) null;
         }
         for (var2 = 0; sb.field_b > var2; var2++) {
-            var3 = vc.field_b[var2] * ih.field_d[var2];
-            var4 = ih.field_b[var2];
-            var5 = new int[var3];
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = gj.field_w[sa.a((int) var4[var6], 255)];
-            }
-            var1[var2] = new pb(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], var5);
+          var3 = vc.field_b[var2] * ih.field_d[var2];
+          var4 = ih.field_b[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = gj.field_w[sa.a((int) var4[var6], 255)];
+          }
+          var1[var2] = new pb(nc.field_G, wd.field_b, ak.field_c[var2], vi.field_c[var2], vc.field_b[var2], ih.field_d[var2], var5);
         }
         tb.f((byte) -45);
         return var1;
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        int stackIn_8_0 = 0;
-        if (param3 < -68) {
-          L0: {
-            L1: {
-              if (param5 < param1) {
-                break L1;
-              } else {
-                if (param6 + param1 <= param5) {
-                  break L1;
-                } else {
-                  if (param0 < param2) {
-                    break L1;
-                  } else {
-                    if (param2 - -param4 <= param0) {
-                      break L1;
-                    } else {
-                      stackIn_8_0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-              }
-            }
-            stackIn_8_0 = 0;
-            break L0;
-          }
-          return stackIn_8_0 != 0;
-        } else {
+        boolean stackIn_8_0 = false;
+        if (param3 >= -68) {
           return false;
         }
+        stackIn_8_0 = (param5 >= param1) && (param6 + param1 > param5) && (param0 >= param2) && (param2 + param4 > param0);
+        return stackIn_8_0;
     }
 
     final static int a(byte param0, int param1) {
         if (65536L > (long)param1) {
           if (256L > (long)param1) {
-            if ((param1 ^ -1) <= -1) {
-              return ih.field_c[param1] >> 2024515852;
-            } else {
-              L0: {
-                if (param0 <= -109) {
-                  break L0;
-                } else {
-                  ma.a(-41, 68, -104, (byte) 100, -86, 92, 34);
-                  break L0;
-                }
-              }
-              return -1;
+            if (param1 >= 0) {
+              return ih.field_c[param1] >> 12;
             }
-          } else {
-            if (((long)param1 ^ -1L) <= -4097L) {
-              if (-16385L >= ((long)param1 ^ -1L)) {
-                return ih.field_c[param1 >> 2133465032] >> 173214440;
-              } else {
-                return ih.field_c[param1 >> -733483610] >> -1601561207;
-              }
-            } else {
-              if (((long)param1 ^ -1L) > -1025L) {
-                return ih.field_c[param1 >> 1121515362] >> 1294266955;
-              } else {
-                return ih.field_c[param1 >> 252121668] >> 1055807338;
-              }
+            if (param0 > -109) {
+              ma.a(-41, 68, -104, (byte) 100, -86, 92, 34);
             }
+            return -1;
           }
-        } else {
-          if (16777216L <= (long)param1) {
-            if (268435456L <= (long)param1) {
-              if (((long)param1 ^ -1L) <= -1073741825L) {
-                return ih.field_c[param1 >> 403567960];
-              } else {
-                return ih.field_c[param1 >> 1241439638] >> -1469302271;
-              }
-            } else {
-              if (-67108865L >= ((long)param1 ^ -1L)) {
-                return ih.field_c[param1 >> -1104637324] >> -2087127678;
-              } else {
-                return ih.field_c[param1 >> 1024122514] >> 543992579;
-              }
+          if ((long)param1 >= 4096L) {
+            if ((long)param1 >= 16384L) {
+              return ih.field_c[param1 >> 8] >> 8;
             }
-          } else {
-            if ((long)param1 < 1048576L) {
-              if ((long)param1 >= 262144L) {
-                return ih.field_c[param1 >> -768523860] >> -1362527130;
-              } else {
-                return ih.field_c[param1 >> 809090442] >> 1750770951;
-              }
-            } else {
-              if (4194304L > (long)param1) {
-                return ih.field_c[param1 >> 178982094] >> 137622405;
-              } else {
-                return ih.field_c[param1 >> -85720080] >> -1367985372;
-              }
-            }
+            return ih.field_c[param1 >> 6] >> 9;
           }
+          if ((long)param1 < 1024L) {
+            return ih.field_c[param1 >> 2] >> 11;
+          }
+          return ih.field_c[param1 >> 4] >> 10;
         }
+        if (16777216L <= (long)param1) {
+          if (268435456L <= (long)param1) {
+            if ((long)param1 >= 1073741824L) {
+              return ih.field_c[param1 >> 24];
+            }
+            return ih.field_c[param1 >> 22] >> 1;
+          }
+          if ((long)param1 >= 67108864L) {
+            return ih.field_c[param1 >> 20] >> 2;
+          }
+          return ih.field_c[param1 >> 18] >> 3;
+        }
+        if ((long)param1 < 1048576L) {
+          if ((long)param1 >= 262144L) {
+            return ih.field_c[param1 >> 12] >> 6;
+          }
+          return ih.field_c[param1 >> 10] >> 7;
+        }
+        if (4194304L > (long)param1) {
+          return ih.field_c[param1 >> 14] >> 5;
+        }
+        return ih.field_c[param1 >> 16] >> 4;
     }
 
     final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7) {
@@ -143,12 +101,12 @@ final class ma extends gg {
         this.field_p = param4;
         this.field_n = param5;
         if (param0 != 543992579) {
-            return;
+          return;
         }
         try {
-            this.field_t = param3;
+          this.field_t = param3;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ma.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ma.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -166,10 +124,10 @@ final class ma extends gg {
     final static wg a(Throwable param0, String param1) {
         wg var2 = null;
         if (param0 instanceof wg) {
-            var2 = (wg) ((Object) param0);
-            var2.field_f = var2.field_f + ' ' + param1;
+          var2 = (wg) ((Object) param0);
+          var2.field_f = var2.field_f + ' ' + param1;
         } else {
-            var2 = new wg(param0, param1);
+          var2 = new wg(param0, param1);
         }
         return var2;
     }

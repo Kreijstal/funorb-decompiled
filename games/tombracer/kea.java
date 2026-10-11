@@ -7,25 +7,23 @@ final class kea {
     static String field_a;
 
     final static void b(int param0) {
-        if (param0 > -17) {
-          field_a = (String) null;
-          wu.field_a.e(true);
-          wu.field_a.c(new at(wu.field_a), 89);
-          return;
-        } else {
+        if (param0 <= -17) {
           wu.field_a.e(true);
           wu.field_a.c(new at(wu.field_a), 89);
           return;
         }
+        field_a = (String) null;
+        wu.field_a.e(true);
+        wu.field_a.c(new at(wu.field_a), 89);
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != -7646) {
-            kea.a(104);
-            field_c = null;
-            field_a = null;
-            return;
+          kea.a(104);
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_c = null;
         field_a = null;

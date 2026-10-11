@@ -11,45 +11,40 @@ final class tc extends ab {
     byte[] field_v;
 
     public static void i(int param0) {
-        if (param0 != -7588) {
-          tc.i(32);
-          field_z = null;
-          field_y = null;
-          field_w = null;
-          field_A = null;
-          return;
-        } else {
+        if (param0 == -7588) {
           field_z = null;
           field_y = null;
           field_w = null;
           field_A = null;
           return;
         }
+        tc.i(32);
+        field_z = null;
+        field_y = null;
+        field_w = null;
+        field_A = null;
     }
 
     final int f(int param0) {
-        if (param0 >= 51) {
-          if (this.field_s) {
-            return 0;
-          } else {
-            return 100;
-          }
-        } else {
+        if (param0 < 51) {
           field_A = (String) null;
-          if (this.field_s) {
-            return 0;
-          } else {
+          if (!this.field_s) {
             return 100;
           }
+          return 0;
         }
+        if (!this.field_s) {
+          return 100;
+        }
+        return 0;
     }
 
     final byte[] a(boolean param0) {
-        if (!(!this.field_s)) {
-            throw new RuntimeException();
+        if (this.field_s) {
+          throw new RuntimeException();
         }
         if (param0) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         return this.field_v;
     }

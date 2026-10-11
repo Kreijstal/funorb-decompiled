@@ -16,18 +16,16 @@ final class vi {
         field_b = null;
         field_h = (ck[][]) null;
         field_f = null;
-        if (param0 != 2823) {
-          vi.a(-117);
-          field_c = null;
-          field_a = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 2823) {
           field_c = null;
           field_a = null;
           field_g = null;
           return;
         }
+        vi.a(-117);
+        field_c = null;
+        field_a = null;
+        field_g = null;
     }
 
     public final String toString() {

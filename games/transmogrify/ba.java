@@ -15,18 +15,17 @@ final class ba extends wf {
     int field_i;
 
     final static hg e(int param0) {
-        if (param0 > 0) {
-          field_n = -53;
-          return new hg(le.h(23), uf.a((byte) -76));
-        } else {
+        if (param0 <= 0) {
           return new hg(le.h(23), uf.a((byte) -76));
         }
+        field_n = -53;
+        return new hg(le.h(23), uf.a((byte) -76));
     }
 
     public static void d(int param0) {
         field_q = null;
         if (param0 != 2) {
-            return;
+          return;
         }
         field_l = null;
     }
@@ -34,14 +33,14 @@ final class ba extends wf {
     final static void a(int param0, int param1) {
         sg.field_e = param1;
         if (param0 < 104) {
-            ba.a((byte) -122);
+          ba.a((byte) -122);
         }
     }
 
     final static int a(byte param0) {
         if (param0 != 101) {
-            field_l = (String[]) null;
-            return mf.field_d;
+          field_l = (String[]) null;
+          return mf.field_d;
         }
         return mf.field_d;
     }

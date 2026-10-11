@@ -14,11 +14,8 @@ final class ff {
         String stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_31_2 = null;
         StringBuilder stackIn_33_1 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -33,138 +30,90 @@ final class ff {
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
+        int var5Lifetime1;
+        int var8Lifetime1;
         var11 = Torquing.field_u;
         try {
-          L0: {
-            var3_int = param2.length();
-            var4 = var3_int;
-            var5 = 0;
-            L1: while (true) {
-              var6_int = param2.indexOf("<%", var5);
-              if ((var6_int ^ -1) <= -1) {
-                stackIn_6_0 = 2 + var6_int;
-                var5 = stackIn_6_0;
-                L2: while (true) {
-                  L3: {
-                    if (var3_int <= var5) {
-                      break L3;
-                    } else {
-                      if (!ui.a(-112, param2.charAt(var5))) {
-                        break L3;
-                      } else {
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  }
-                  var7_ref_String = param2.substring(2 + var6_int, var5);
-                  if (!ip.a((byte) -109, (CharSequence) ((Object) var7_ref_String))) {
-                    continue L1;
-                  } else {
-                    if (var3_int <= var5) {
-                      continue L1;
-                    } else {
-                      if (param2.charAt(var5) == 62) {
-                        var5++;
-                        var8 = kc.a((byte) -94, (CharSequence) ((Object) var7_ref_String));
-                        var4 = var4 + (-var5 - -var6_int + args[var8].length());
-                        continue L1;
-                      } else {
-                        continue L1;
-                      }
-                    }
-                  }
+          var3_int = param2.length();
+          var4 = var3_int;
+          var5 = 0;
+          while (true) {
+            var6_int = param2.indexOf("<%", var5);
+            if (var6_int >= 0) {
+              stackIn_6_0 = 2 + var6_int;
+              for (var5 = stackIn_6_0; var3_int > var5; var5++) {
+                if (ui.a(-112, param2.charAt(var5))) {
+                  continue;
                 }
-              } else {
-                var6 = new StringBuilder(var4);
-                var7 = param1;
-                var5 = 0;
-                L4: while (true) {
-                  var8 = param2.indexOf("<%", var5);
-                  if ((var8 ^ -1) > -1) {
-                    discarded$0 = var6.append(param2.substring(var7));
-                    stackIn_27_0 = var6.toString();
-                    break L0;
-                  } else {
-                    var5 = 2 + var8;
-                    L5: while (true) {
-                      L6: {
-                        if (var5 >= var3_int) {
-                          break L6;
-                        } else {
-                          if (!ui.a(57, param2.charAt(var5))) {
-                            break L6;
-                          } else {
-                            var5++;
-                            continue L5;
-                          }
-                        }
-                      }
-                      var9 = param2.substring(2 + var8, var5);
-                      if (ip.a((byte) -101, (CharSequence) ((Object) var9))) {
-                        if (var3_int <= var5) {
-                          continue L4;
-                        } else {
-                          if (param2.charAt(var5) != 62) {
-                            continue L4;
-                          } else {
-                            var5++;
-                            var10 = kc.a((byte) -67, (CharSequence) ((Object) var9));
-                            discarded$1 = var6.append(param2.substring(var7, var8));
-                            discarded$2 = var6.append(args[var10]);
-                            var7 = var5;
-                            continue L4;
-                          }
-                        }
-                      } else {
-                        continue L4;
-                      }
-                    }
-                  }
-                }
+                break;
               }
+              var7_ref_String = param2.substring(2 + var6_int, var5);
+              if (!ip.a((byte) -109, (CharSequence) ((Object) var7_ref_String))) {
+                continue;
+              }
+              if (var3_int <= var5) {
+                continue;
+              }
+              if (param2.charAt(var5) != 62) {
+                continue;
+              }
+              var5++;
+              var8 = kc.a((byte) -94, (CharSequence) ((Object) var7_ref_String));
+              var4 = var4 + (-var5 + var6_int + args[var8].length());
+              continue;
             }
+            break;
+          }
+          var6 = new StringBuilder(var4);
+          var7 = param1;
+          var5Lifetime1 = 0;
+          while (true) {
+            var8Lifetime1 = param2.indexOf("<%", var5Lifetime1);
+            if (var8Lifetime1 < 0) {
+              discarded$0 = var6.append(param2.substring(var7));
+              stackIn_27_0 = var6.toString();
+              return stackIn_27_0;
+            }
+            for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
+              if (ui.a(57, param2.charAt(var5Lifetime1))) {
+                continue;
+              }
+              break;
+            }
+            var9 = param2.substring(2 + var8Lifetime1, var5Lifetime1);
+            if (!ip.a((byte) -101, (CharSequence) ((Object) var9))) {
+              continue;
+            }
+            if (var3_int <= var5Lifetime1) {
+              continue;
+            }
+            if (param2.charAt(var5Lifetime1) != 62) {
+              continue;
+            }
+            var5Lifetime1++;
+            var10 = kc.a((byte) -67, (CharSequence) ((Object) var9));
+            discarded$1 = var6.append(param2.substring(var7, var8Lifetime1));
+            discarded$2 = var6.append(args[var10]);
+            var7 = var5Lifetime1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_30_0 = (RuntimeException) (var3);
-
-            stackIn_30_1 = new StringBuilder().append("ff.C(");
-
-            if (args == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "null";
-              break L7;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_30_0);
-              stackIn_31_1 = (StringBuilder) ((Object) stackIn_30_1);
-              stackIn_31_2 = "{...}";
-              break L7;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_30_0 = var3;
+          stackIn_30_1 = new StringBuilder().append("ff.C(");
+          if (args == null) {
+            stackIn_31_2 = "null";
+          } else {
+            stackIn_31_2 = "{...}";
           }
-          L8: {
-
-
-            stackIn_33_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L8;
-            } else {
-              stackIn_31_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L8;
-            }
+          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_34_2 = "null";
+          } else {
+            stackIn_34_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_31_0), stackIn_34_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
-        return stackIn_27_0;
     }
 
     final static String a(int param0, char param1, boolean param2) {
@@ -173,10 +122,10 @@ final class ff {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         if (!param2) {
-            return (String) null;
+          return (String) null;
         }
         for (var4 = 0; param0 > var4; var4++) {
-            var6[var4] = param1;
+          var6[var4] = param1;
         }
         return new String(var6);
     }
@@ -184,7 +133,7 @@ final class ff {
     public static void a(int param0) {
         field_c = null;
         if (param0 > -44) {
-            field_c = (t) null;
+          field_c = (t) null;
         }
     }
 

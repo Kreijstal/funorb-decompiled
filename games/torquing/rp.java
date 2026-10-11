@@ -12,18 +12,16 @@ final class rp {
     String field_e;
 
     public static void a(int param0) {
-        if (param0 != -28607) {
-          rp.a(-86);
-          field_h = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -28607) {
           field_h = null;
           field_d = null;
           field_b = null;
           return;
         }
+        rp.a(-86);
+        field_h = null;
+        field_d = null;
+        field_b = null;
     }
 
     private rp() throws Throwable {

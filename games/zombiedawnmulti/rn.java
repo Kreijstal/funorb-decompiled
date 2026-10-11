@@ -22,40 +22,35 @@ final class rn {
     }
 
     final static void a(int param0) {
-        if (field_f != null) {
-          nq.a(95, field_f);
-          if (param0 <= -26) {
-            field_f.a(8192, pl.field_J);
-            field_f = null;
-            if (null != ng.field_g) {
-              ng.field_g.d(-33);
-              dk.field_Ib.requestFocus();
-              return;
-            } else {
-              dk.field_Ib.requestFocus();
-              return;
-            }
-          } else {
-            field_a = (ja[]) null;
-            field_f.a(8192, pl.field_J);
-            field_f = null;
-            if (null == ng.field_g) {
-              dk.field_Ib.requestFocus();
-              return;
-            } else {
-              ng.field_g.d(-33);
-              dk.field_Ib.requestFocus();
-              return;
-            }
-          }
-        } else {
+        if (field_f == null) {
           return;
         }
+        nq.a(95, field_f);
+        if (param0 > -26) {
+          field_a = (ja[]) null;
+          field_f.a(8192, pl.field_J);
+          field_f = null;
+          if (null != ng.field_g) {
+            ng.field_g.d(-33);
+            dk.field_Ib.requestFocus();
+            return;
+          }
+          dk.field_Ib.requestFocus();
+          return;
+        }
+        field_f.a(8192, pl.field_J);
+        field_f = null;
+        if (null == ng.field_g) {
+          dk.field_Ib.requestFocus();
+          return;
+        }
+        ng.field_g.d(-33);
+        dk.field_Ib.requestFocus();
     }
 
     final static cj b(int param0) {
         if (param0 != 28579) {
-            return (cj) null;
+          return (cj) null;
         }
         return gl.field_L.field_Ib;
     }

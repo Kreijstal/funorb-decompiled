@@ -20,107 +20,68 @@ final class ph implements j {
 
     final static boolean a(byte param0) {
         if (param0 != -40) {
-            return false;
+          return false;
         }
         return gi.field_d != null ? true : m.field_d;
     }
 
     public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+        int var10 = 0;
         ee stackIn_6_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         ee var12 = null;
         bl var13 = null;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param3 == 97) {
-                break L1;
-              } else {
-                var12 = (ee) null;
-                this.a((ee) null, 19, 73, (byte) 52, true);
-                break L1;
-              }
-            }
-            L2: {
-              if (param0 instanceof bl) {
-                stackIn_6_0 = (ee) (param0);
-                break L2;
-              } else {
-                stackIn_6_0 = null;
-                break L2;
-              }
-            }
-            L3: {
-              var13 = (bl) ((Object) stackIn_6_0);
-              qg.f(param2 - -param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
-              if (var13 == null) {
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            var7 = param0.field_p + -(2 * var13.field_W);
-            var8 = param0.field_m + (param2 + var13.field_W);
-            var9 = var13.field_Y + (param1 + param0.field_i);
-            qg.d(var8, var9, var7 + var8, var9, this.field_n);
-            var10 = -1 + var13.d(true);
-            L4: while (true) {
-              if (-1 < (var10 ^ -1)) {
-                L5: {
-                  if (this.field_l != null) {
-                    this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                break L0;
-              } else {
-                qg.e(var8 - -(var7 * var13.a(-20, var10) / var13.a(-1)), var9, this.field_k, this.field_c);
-                var10--;
-                continue L4;
-              }
-            }
+          if (param3 != 97) {
+            var12 = (ee) null;
+            this.a((ee) null, 19, 73, (byte) 52, true);
           }
+          if (param0 instanceof bl) {
+            stackIn_6_0 = (ee) (param0);
+          } else {
+            stackIn_6_0 = null;
+          }
+          var13 = (bl) (stackIn_6_0);
+          qg.f(param2 + param0.field_m, param1 + param0.field_i, param0.field_p, param0.field_l, this.field_j);
+          if (var13 == null) {
+          }
+          var7 = param0.field_p - 2 * var13.field_W;
+          var8 = param0.field_m + (param2 + var13.field_W);
+          var9 = var13.field_Y + (param1 + param0.field_i);
+          qg.d(var8, var9, var7 + var8, var9, this.field_n);
+          for (var10 = -1 + var13.d(true); var10 >= 0; var10--) {
+            qg.e(var8 + var7 * var13.a(-20, var10) / var13.a(-1), var9, this.field_k, this.field_c);
+          }
+          if (this.field_l != null) {
+            this.field_l.a(var13.field_v, var7 / 2 + var8, this.field_l.field_G + (var9 + var13.field_Y), this.field_g, this.field_i);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var6);
-
-            stackIn_16_1 = new StringBuilder().append("ph.A(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_16_0 = var6;
+          stackIn_16_1 = new StringBuilder().append("ph.A(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 2) {
-            ph.a(115);
+          ph.a(115);
         }
         field_b = null;
         field_h = null;
@@ -132,15 +93,15 @@ final class ph implements j {
 
     ph(eg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_n = param3;
-            this.field_k = param5;
-            this.field_i = param2;
-            this.field_c = param6;
-            this.field_l = param0;
-            this.field_g = param1;
-            this.field_j = param4;
+          this.field_n = param3;
+          this.field_k = param5;
+          this.field_i = param2;
+          this.field_c = param6;
+          this.field_l = param0;
+          this.field_g = param1;
+          this.field_j = param4;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "ph.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -151,7 +112,7 @@ final class ph implements j {
         field_b = new vk[255];
         field_f = "Quit to website";
         for (var0 = 0; var0 < field_b.length; var0++) {
-            field_b[var0] = new vk();
+          field_b[var0] = new vk();
         }
     }
 }

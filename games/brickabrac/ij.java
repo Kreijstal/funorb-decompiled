@@ -11,20 +11,21 @@ final class ij implements wb {
 
     private final boolean d(boolean param0) {
         if (rf.field_g == null) {
-            rf.field_g = cp.b(-2, 0, 2, 10, 3);
+          rf.field_g = cp.b(-2, 0, 2, 10, 3);
         }
         if (!param0) {
-            return false;
+          return false;
         }
         if (rf.field_g.field_o) {
-            be.field_a = true;
-            r.field_A = true;
-            if (null != rf.field_g.field_i && null != rf.field_g.field_i[1][0]) {
-                r.field_A = false;
-                be.field_a = false;
-                return true;
-            }
+          be.field_a = true;
+          r.field_A = true;
+          if (null != rf.field_g.field_i &&
+            null != rf.field_g.field_i[1][0]) {
+            r.field_A = false;
+            be.field_a = false;
             return true;
+          }
+          return true;
         }
         return false;
     }
@@ -37,7 +38,7 @@ final class ij implements wb {
         ie.a(1, (jp[]) null, vn.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (param0) {
-            discarded$0 = this.b((byte) -1);
+          discarded$0 = this.b((byte) -1);
         }
         jp[] var4 = (jp[]) null;
         nh.a((jp[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, vn.field_G, 2, (byte) -110, 8);
@@ -58,14 +59,14 @@ final class ij implements wb {
     }
 
     final static gf a(int param0, byte param1) {
-        if (!(-1 != param0)) {
-            return (gf) ((Object) pe.field_o);
+        if (-1 == param0) {
+          return (gf) ((Object) pe.field_o);
         }
-        if (1 == (param0 ^ -1)) {
-            return (gf) ((Object) ki.field_p);
+        if (param0 == -2) {
+          return (gf) ((Object) ki.field_p);
         }
         if (param1 > -5) {
-            field_e = (mh) null;
+          field_e = (mh) null;
         }
         return (gf) ((Object) bq.a(param0, 28472));
     }
@@ -74,7 +75,7 @@ final class ij implements wb {
         field_f = null;
         field_e = null;
         if (param0) {
-            ij.c(true);
+          ij.c(true);
         }
         field_c = null;
         field_b = null;
@@ -82,140 +83,69 @@ final class ij implements wb {
     }
 
     public final boolean a(int param0) {
-        int stackIn_15_0 = 0;
-        L0: {
-          if (hb.field_y) {
-            break L0;
-          } else {
-            hb.field_y = gq.d((byte) -126);
-            break L0;
-          }
+        boolean stackIn_15_0 = false;
+        if (!hb.field_y) {
+          hb.field_y = gq.d((byte) -126);
         }
-        L1: {
-          if (!jc.field_H) {
-            jc.field_H = this.b((byte) 127);
-            break L1;
-          } else {
-            break L1;
-          }
+        if (!jc.field_H) {
+          jc.field_H = this.b((byte) 127);
         }
-        L2: {
-          if (param0 == 23570) {
-            break L2;
-          } else {
-            this.a(true);
-            break L2;
-          }
+        if (param0 != 23570) {
+          this.a(true);
         }
-        L3: {
-          if (!th.field_b) {
-            th.field_b = this.d(true);
-            break L3;
-          } else {
-            break L3;
-          }
+        if (!th.field_b) {
+          th.field_b = this.d(true);
         }
-        L4: {
-          L5: {
-            if (!hb.field_y) {
-              break L5;
-            } else {
-              if (!jc.field_H) {
-                break L5;
-              } else {
-                if (!th.field_b) {
-                  break L5;
-                } else {
-                  stackIn_15_0 = 1;
-                  break L4;
-                }
-              }
-            }
-          }
-          stackIn_15_0 = 0;
-          break L4;
-        }
-        return stackIn_15_0 != 0;
+        stackIn_15_0 = (hb.field_y) && (jc.field_H) && (th.field_b);
+        return stackIn_15_0;
     }
 
     private final boolean b(byte param0) {
         int var2;
         int var3;
         int var4;
-        L0: {
-          var4 = BrickABrac.field_J ? 1 : 0;
-          if (null != fp.field_y) {
-            break L0;
-          } else {
-            fp.field_y = new pe[2];
-            var2 = 0;
-            L1: while (true) {
-              if (-3 >= (var2 ^ -1)) {
-                break L0;
-              } else {
-                fp.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
-                var2++;
-                continue L1;
-              }
-            }
+        int var2Lifetime1;
+        var4 = BrickABrac.field_J ? 1 : 0;
+        if (null == fp.field_y) {
+          fp.field_y = new pe[2];
+          for (var2 = 0; var2 < 2; var2++) {
+            fp.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
           }
         }
-        var2 = 1;
+        var2Lifetime1 = 1;
         var3 = 0;
-        if (param0 == 127) {
-          L2: while (true) {
-            if ((var3 ^ -1) <= -3) {
-              L3: {
-                if (var2 != 0) {
-                  fp.field_y = null;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return var2 != 0;
-            } else {
-              if (fp.field_y[var3] != null) {
-                if (!fp.field_y[var3].field_v) {
-                  var2 = 0;
-                  var3++;
-                  continue L2;
-                } else {
-                  L4: {
-                    if (fp.field_y[var3].field_m[0] > hh.field_b[var3]) {
-                      hh.field_b[var3] = fp.field_y[var3].field_m[0];
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.field_b[var3]);
-                  if (!pg.c(param0 ^ 27)) {
-                    hh.field_b[var3] = 0;
-                    var3++;
-                    continue L2;
-                  } else {
-                    hh.field_b[var3] = 0;
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var3++;
-                continue L2;
-              }
-            }
-          }
-        } else {
+        if (param0 != 127) {
           return true;
         }
+        while (var3 < 2) {
+          if (fp.field_y[var3] != null) {
+            if (!fp.field_y[var3].field_v) {
+              var2Lifetime1 = 0;
+            } else {
+              if (fp.field_y[var3].field_m[0] > hh.field_b[var3]) {
+                hh.field_b[var3] = fp.field_y[var3].field_m[0];
+              }
+              jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.field_b[var3]);
+              if (!pg.c(param0 ^ 27)) {
+                hh.field_b[var3] = 0;
+              } else {
+                hh.field_b[var3] = 0;
+              }
+            }
+          }
+          var3++;
+        }
+        if (var2Lifetime1 != 0) {
+          fp.field_y = null;
+        }
+        return var2Lifetime1 != 0;
     }
 
     public final void b(boolean param0) {
-        if (!(null == qc.field_k)) {
-            og.a(!param0 ? true : false, qc.field_k);
-            qc.field_k = null;
-            hc.b(2);
+        if (null != qc.field_k) {
+          og.a(!param0 ? true : false, qc.field_k);
+          qc.field_k = null;
+          hc.b(2);
         }
         uf.field_a = aj.a(3, true);
         ki.field_f = bq.a(-6, 0, false, 5, true);
@@ -250,68 +180,53 @@ final class ij implements wb {
         int var2;
         int var3;
         int var4;
-        L0: {
-          var4 = BrickABrac.field_J ? 1 : 0;
-          var2 = 1;
-          var3 = be.field_c;
-          if (0 != var3) {
-            if (var3 != 1) {
-              if (-3 != (var3 ^ -1)) {
-                if (3 != var3) {
-                  if (4 == var3) {
-                    ai.a((byte) 24, 92.0f, vn.field_x);
-                    sl.field_C.g(121);
-                    sb.a(nl.field_a, hp.field_i, 2);
-                    break L0;
-                  } else {
-                    if (var3 != 5) {
-                      return true;
-                    } else {
-                      rj.a(new fk(uf.field_a.a(121, "", "huffman")), false);
-                      uf.field_a = null;
-                      break L0;
-                    }
-                  }
+        var4 = BrickABrac.field_J ? 1 : 0;
+        var2 = 1;
+        var3 = be.field_c;
+        if (0 != var3) {
+          if (var3 != 1) {
+            if (var3 != 2) {
+              if (3 != var3) {
+                if (4 == var3) {
+                  ai.a((byte) 24, 92.0f, vn.field_x);
+                  sl.field_C.g(121);
+                  sb.a(nl.field_a, hp.field_i, 2);
                 } else {
-                  ai.a((byte) 24, 90.0f, uk.field_u);
-                  sl.field_C.g(106);
-                  so.a(ki.field_f, gq.field_Rb, ul.field_l, 29137, wn.field_c);
-                  break L0;
+                  if (var3 != 5) {
+                    return true;
+                  }
+                  rj.a(new fk(uf.field_a.a(121, "", "huffman")), false);
+                  uf.field_a = null;
                 }
               } else {
-                ai.a((byte) 24, 88.0f, sf.field_bb);
-                sl.field_C.g(124);
-                var2 = var2 != 0 & wo.a(2) ? 1 : 0;
-                break L0;
+                ai.a((byte) 24, 90.0f, uk.field_u);
+                sl.field_C.g(106);
+                so.a(ki.field_f, gq.field_Rb, ul.field_l, 29137, wn.field_c);
               }
             } else {
-              ai.a((byte) 24, 82.0f, pi.field_s);
-              sl.field_C.g(123);
-              o.c(123);
-              break L0;
+              ai.a((byte) 24, 88.0f, sf.field_bb);
+              sl.field_C.g(124);
+              var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }
           } else {
-            mc.a((byte) 115);
-            uj.a(-1);
-            lq.a(uj.field_o, kh.field_i, (byte) -38, i.field_s, qb.field_r);
-            break L0;
+            ai.a((byte) 24, 82.0f, pi.field_s);
+            sl.field_C.g(123);
+            o.c(123);
           }
+        } else {
+          mc.a((byte) 115);
+          uj.a(-1);
+          lq.a(uj.field_o, kh.field_i, (byte) -38, i.field_s, qb.field_r);
         }
-        L1: {
-          if (var2 != 0) {
-            be.field_c = be.field_c + 1;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (var2 != 0) {
+          be.field_c = be.field_c + 1;
         }
         hc.b(2);
         if (param0 < -41) {
           return false;
-        } else {
-          field_a = (mh) null;
-          return false;
         }
+        field_a = (mh) null;
+        return false;
     }
 
     static {

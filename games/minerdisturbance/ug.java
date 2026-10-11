@@ -7,10 +7,10 @@ final class ug implements uj {
 
     public static void b(byte param0) {
         if (param0 <= 41) {
-            ug.b((byte) 64);
-            field_b = null;
-            field_a = null;
-            return;
+          ug.b((byte) 64);
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -25,7 +25,7 @@ final class ug implements uj {
         tb.field_a = 1;
         gd.field_x = 5;
         if (param0) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

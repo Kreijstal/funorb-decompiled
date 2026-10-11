@@ -10,60 +10,26 @@ final class vj {
 
     final String a(int param0) {
         if (param0 <= 44) {
-            this.a(true, 14);
-            return this.field_d;
+          this.a(true, 14);
+          return this.field_d;
         }
         return this.field_d;
     }
 
     final void a(boolean param0, int param1) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        if (param1 != 64187) {
-          L0: {
-            vj.a((byte) 88);
-            this.field_a = true;
-            stackIn_7_0 = this;
-
-            if (!param0) {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 1;
-              break L0;
-            }
-          }
-          ((vj) (this)).field_c = stackIn_8_1 != 0;
-          return;
-        } else {
-          L1: {
-            this.field_a = true;
-            stackIn_3_0 = this;
-
-            if (!param0) {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 1;
-              break L1;
-            }
-          }
-          ((vj) (this)).field_c = stackIn_4_1 != 0;
+        if (param1 == 64187) {
+          this.field_a = true;
+          this.field_c = param0 ? true : false;
           return;
         }
+        vj.a((byte) 88);
+        this.field_a = true;
+        this.field_c = param0 ? true : false;
     }
 
     final boolean b(int param0) {
         if (param0 != 8909) {
-            return true;
+          return true;
         }
         return this.field_c;
     }
@@ -76,7 +42,7 @@ final class vj {
 
     final boolean c(int param0) {
         if (param0 != 17237) {
-            return false;
+          return false;
         }
         return this.field_a;
     }
@@ -85,9 +51,9 @@ final class vj {
         this.field_a = false;
         this.field_c = false;
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

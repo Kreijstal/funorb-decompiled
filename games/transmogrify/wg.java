@@ -12,7 +12,6 @@ final class wg implements Iterator {
     private ri field_b;
 
     final static void b(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -26,102 +25,63 @@ final class wg implements Iterator {
         byte[] var12 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var8 = nf.field_l;
-              var2 = var8.d((byte) 59);
-              if (-1 != (var2 ^ -1)) {
-                if (1 == var2) {
-                  var3 = var8.c((byte) -122);
-                  var4 = (gh) ((Object) mf.field_b.a((byte) -95));
-                  L2: while (true) {
-                    L3: {
-                      if (var4 == null) {
-                        break L3;
-                      } else {
-                        if (var4.field_j != var3) {
-                          var4 = (gh) ((Object) mf.field_b.a(true));
-                          continue L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    if (var4 == null) {
-                      pc.a(param0 + -3);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      var4.c(5);
-                      break L1;
-                    }
-                  }
-                } else {
-                  d.a((Throwable) null, 13, "A1: " + ik.q(48));
-                  pc.a(1);
-                  break L1;
+          var8 = nf.field_l;
+          var2 = var8.d((byte) 59);
+          if (var2 != 0) {
+            if (1 == var2) {
+              var3 = var8.c((byte) -122);
+              var4 = (gh) (mf.field_b.a((byte) -95));
+              while (var4 != null) {
+                if (var4.field_j != var3) {
+                  var4 = (gh) (mf.field_b.a(true));
+                  continue;
                 }
-              } else {
-                var3_ref_he = (he) ((Object) pj.field_A.a((byte) -95));
-                if (var3_ref_he != null) {
-                  L4: {
-                    var4_int = var8.d((byte) 85);
-                    if (0 != var4_int) {
-                      var12 = new byte[var4_int];
-                      var8.a(var4_int, 2, var12, 0);
-                      break L4;
-                    } else {
-                      var5 = null;
-                      break L4;
-                    }
-                  }
-                  var8.field_h = var8.field_h + 4;
-                  if (!var8.d(5432)) {
-                    pc.a(param0 + -3);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var3_ref_he.c(param0 ^ 1);
-                    break L1;
-                  }
-                } else {
-                  pc.a(param0 ^ 5);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
+                break;
               }
-            }
-            if (param0 == 4) {
-              decompiledRegionSelector0 = 3;
-              break L0;
+              if (var4 == null) {
+                pc.a(param0 - 3);
+                return;
+              }
+              var4.c(5);
             } else {
-              field_e = (String) null;
+              d.a((Throwable) null, 13, "A1: " + ik.q(48));
+              pc.a(1);
+            }
+          } else {
+            var3_ref_he = (he) (pj.field_A.a((byte) -95));
+            if (var3_ref_he == null) {
+              pc.a(param0 ^ 5);
               return;
             }
+            var4_int = var8.d((byte) 85);
+            if (0 != var4_int) {
+              var12 = new byte[var4_int];
+              var8.a(var4_int, 2, var12, 0);
+            } else {
+              var5 = null;
+            }
+            var8.field_h = var8.field_h + 4;
+            if (!var8.d(5432)) {
+              pc.a(param0 - 3);
+              return;
+            }
+            var3_ref_he.c(param0 ^ 1);
           }
+          if (param0 == 4) {
+            return;
+          }
+          field_e = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ch.a((Throwable) ((Object) var1), "wg.B(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
-        }
     }
 
     public final void remove() {
         if (this.field_a == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_a.b((byte) -81);
         this.field_a = null;
@@ -130,10 +90,10 @@ final class wg implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (var1 != this.field_c.field_e) {
-            this.field_b = ((ri) (var1)).field_h;
+          this.field_b = ((ri) (var1)).field_h;
         } else {
-            this.field_b = null;
-            var1 = null;
+          this.field_b = null;
+          var1 = null;
         }
         this.field_a = (ri) (var1);
         return var1;
@@ -144,18 +104,18 @@ final class wg implements Iterator {
         field_e = null;
         field_f = null;
         if (param0 != 20738) {
-            field_d = (ik) null;
+          field_d = (ik) null;
         }
     }
 
     wg(pf param0) {
         this.field_a = null;
         try {
-            this.field_c = param0;
-            this.field_a = null;
-            this.field_b = this.field_c.field_e.field_h;
+          this.field_c = param0;
+          this.field_a = null;
+          this.field_b = this.field_c.field_e.field_h;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

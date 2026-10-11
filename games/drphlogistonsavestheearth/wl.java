@@ -10,7 +10,7 @@ final class wl {
         ul.field_a = 1;
         tf.field_jb = param1;
         if (param2 <= 46) {
-            wl.a(91, 40, -7);
+          wl.a(91, 40, -7);
         }
     }
 

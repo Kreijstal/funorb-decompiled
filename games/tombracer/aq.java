@@ -6,13 +6,13 @@ final class aq {
 
     public static void b(int param0) {
         field_a = null;
-        int var1 = 75 % ((param0 - -32) / 34);
+        int var1 = 75 % ((param0 + 32) / 34);
     }
 
     final static int a(int param0) {
         if (param0 != -5640) {
-            aq.a(-88);
-            return qg.field_a.length;
+          aq.a(-88);
+          return qg.field_a.length;
         }
         return qg.field_a.length;
     }

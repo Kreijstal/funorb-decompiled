@@ -13,9 +13,7 @@ final class rg {
         d.field_d[59] = 57;
         d.field_d[92] = 74;
         d.field_d[45] = 26;
-        if (param0 != -12747) {
-          return;
-        } else {
+        if (param0 == -12747) {
           d.field_d[47] = 73;
           d.field_d[222] = 58;
           d.field_d[520] = 59;
@@ -31,7 +29,7 @@ final class rg {
         field_c = null;
         field_b = null;
         if (param0 != -20) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

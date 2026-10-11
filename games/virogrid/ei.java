@@ -11,13 +11,13 @@ final class ei {
 
     final static void a(int param0, sc param1) {
         try {
-            if (param0 != 0) {
-                sc var3 = (sc) null;
-                ei.a(-102, (sc) null);
-            }
-            di.a(param1, param0 ^ 109, true);
+          if (param0 != 0) {
+            sc var3 = (sc) null;
+            ei.a(-102, (sc) null);
+          }
+          di.a(param1, param0 ^ 109, true);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class ei {
         field_e = null;
         field_d = null;
         if (param0 > -54) {
-            field_a = false;
+          field_a = false;
         }
     }
 

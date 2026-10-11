@@ -6,14 +6,14 @@ final class hv {
 
     final static boolean a(int param0) {
         if (param0 != -19229) {
-            return false;
+          return false;
         }
         return eea.a(df.field_s, eaa.field_a, 12);
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
     }

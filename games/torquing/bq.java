@@ -10,7 +10,7 @@ final class bq {
         field_a = null;
         field_b = null;
         if (param0 != 74) {
-            bq.a((byte) 90);
+          bq.a((byte) 90);
         }
     }
 

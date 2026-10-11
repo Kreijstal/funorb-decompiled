@@ -20,25 +20,23 @@ final class lc {
         field_b = null;
         field_g = (String[][]) null;
         field_c = null;
-        if (param0 != 120) {
-          field_c = (String) null;
-          field_d = null;
-          field_i = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 120) {
           field_d = null;
           field_i = null;
           field_e = null;
           return;
         }
+        field_c = (String) null;
+        field_d = null;
+        field_i = null;
+        field_e = null;
     }
 
     final static void a(byte param0) {
         int var1 = -13 % ((3 - param0) / 44);
         int var2 = ma.field_f * ma.field_f;
         int var3 = -(th.field_g * th.field_g) + var2;
-        int var4 = ja.field_f - -(var3 * (te.field_P - ja.field_f) / var2);
+        int var4 = ja.field_f + var3 * (te.field_P - ja.field_f) / var2;
         oj.field_a.a((byte) -116, 640, var4, 120, vi.field_d);
         qh.a(5, eh.field_w, 640, te.field_P - 24, 1000000, fn.field_Q, 0);
     }

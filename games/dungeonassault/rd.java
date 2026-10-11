@@ -18,10 +18,10 @@ abstract class rd extends ll {
     public static void b(boolean param0) {
         field_z = null;
         if (!param0) {
-            rd.b(false);
-            field_F = null;
-            field_x = null;
-            return;
+          rd.b(false);
+          field_F = null;
+          field_x = null;
+          return;
         }
         field_F = null;
         field_x = null;

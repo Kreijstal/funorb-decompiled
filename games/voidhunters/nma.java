@@ -7,8 +7,8 @@ final class nma implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) -57);
-            return (tv[]) ((Object) new gtb[param1]);
+          this.a((byte) -57);
+          return (tv[]) ((Object) new gtb[param1]);
         }
         return (tv[]) ((Object) new gtb[param1]);
     }
@@ -21,7 +21,7 @@ final class nma implements dja {
     public static void b(byte param0) {
         field_b = null;
         if (param0 != -4) {
-            field_a = 33;
+          field_a = 33;
         }
     }
 

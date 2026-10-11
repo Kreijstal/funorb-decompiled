@@ -10,7 +10,7 @@ final class jb {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 33) {
-            return;
+          return;
         }
         field_c = null;
     }

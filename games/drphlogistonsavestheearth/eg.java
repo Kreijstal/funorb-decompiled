@@ -13,33 +13,24 @@ final class eg {
     static he[] field_f;
 
     final static int a(int param0, int param1) {
-        int var2;
-        int var3;
-        L0: {
-          var2 = 0;
-          if ((param1 & 7) == 0) {
-            break L0;
-          } else {
-            var2 = -(param1 & 7) + 8;
-            break L0;
-          }
+        int var2 = 0;
+        if ((param1 & 7) != 0) {
+          var2 = -(param1 & 7) + 8;
         }
-        var3 = param1 - -var2;
-        if (param0 != -17077) {
-          field_f = (he[]) null;
-          return var3;
-        } else {
+        int var3 = param1 + var2;
+        if (param0 == -17077) {
           return var3;
         }
+        field_f = (he[]) null;
+        return var3;
     }
 
     final static sd[] b(byte param0) {
-        if (param0 >= -103) {
-          eg.a(99, 71);
-          return new sd[]{p.field_d, ka.field_q, mf.field_A};
-        } else {
+        if (param0 < -103) {
           return new sd[]{p.field_d, ka.field_q, mf.field_A};
         }
+        eg.a(99, 71);
+        return new sd[]{p.field_d, ka.field_q, mf.field_A};
     }
 
     final static int a(int param0, int param1, CharSequence param2) {
@@ -48,56 +39,31 @@ final class eg {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 >= 69) {
-              stackIn_4_0 = fj.a(param0, param2, 84, true);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 87;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 >= 69) {
+            stackIn_4_0 = fj.a(param0, param2, 84, true);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = 87;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("eg.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -1) {
-          return;
-        } else {
+        if (param0 == -1) {
           field_f = null;
           field_b = null;
           field_h = null;
@@ -110,23 +76,22 @@ final class eg {
     }
 
     final static void a(byte param0) {
-        if (!(uj.field_j == null)) {
-            uj.field_j.b(50);
-            uj.field_j = null;
+        if (uj.field_j != null) {
+          uj.field_j.b(50);
+          uj.field_j = null;
         }
         if (param0 != 126) {
-            eg.b((byte) 72);
-            return;
+          eg.b((byte) 72);
+          return;
         }
     }
 
     final static nh[] a(byte param0, int param1, int param2, int param3) {
-        if (param0 < 66) {
-          eg.b((byte) 0);
-          return af.a(param1, 1, param2, (byte) 32, param3);
-        } else {
+        if (param0 >= 66) {
           return af.a(param1, 1, param2, (byte) 32, param3);
         }
+        eg.b((byte) 0);
+        return af.a(param1, 1, param2, (byte) 32, param3);
     }
 
     static {

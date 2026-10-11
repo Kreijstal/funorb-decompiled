@@ -6,8 +6,8 @@ final class upa implements dja {
 
     final static String a(int param0) {
         if (param0 != -8225) {
-            upa.a(59);
-            return "Lo!";
+          upa.a(59);
+          return "Lo!";
         }
         return "Lo!";
     }
@@ -19,7 +19,7 @@ final class upa implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new ml[param1]);
     }

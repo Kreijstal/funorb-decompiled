@@ -7,9 +7,9 @@ final class hc {
     static String field_c;
 
     final static void a(boolean param0, boolean param1) {
-        if (!(null == ab.field_D)) {
-            ab.field_D.a(-1);
-            ab.field_D = null;
+        if (null != ab.field_D) {
+          ab.field_D.a(-1);
+          ab.field_D = null;
         }
         fn.field_j = bh.field_c;
         wd.field_j = df.field_c;
@@ -26,7 +26,7 @@ final class hc {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -21017) {
-            return;
+          return;
         }
         field_b = null;
         field_c = null;

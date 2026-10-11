@@ -16,20 +16,18 @@ final class af {
         field_b = null;
         field_c = null;
         field_g = null;
-        if (param0 >= -123) {
-          af.a(-39);
-          field_a = null;
-          field_h = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 < -123) {
           field_a = null;
           field_h = null;
           field_d = null;
           field_e = null;
           return;
         }
+        af.a(-39);
+        field_a = null;
+        field_h = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

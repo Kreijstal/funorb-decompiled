@@ -15,9 +15,7 @@ final class bb {
     public static void a(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 > -50) {
-          return;
-        } else {
+        if (param0 <= -50) {
           field_e = null;
           field_b = null;
           field_a = null;

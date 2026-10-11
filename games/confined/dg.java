@@ -14,43 +14,33 @@ final class dg extends rk {
     static ad field_n;
 
     final static char a(boolean param0, byte param1) {
-        int var2;
-        int var3;
-        if (!param0) {
-          var2 = 255 & param1;
-          if (0 != var2) {
-            if (var2 >= 128) {
-              if ((var2 ^ -1) <= -161) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = cd.field_m[var2 + -128];
-                  if (var3 != 0) {
-                    break L0;
-                  } else {
-                    var3 = 63;
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          }
-        } else {
-          return '';
+        int var3 = 0;
+        if (param0) {
+          return '\b';
         }
+        int var2 = 255 & param1;
+        if (0 == var2) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+        }
+        if (var2 < 128) {
+          return (char)var2;
+        }
+        if (var2 < 160) {
+          var3 = cd.field_m[var2 - 128];
+          if (var3 == 0) {
+            var3 = 63;
+          }
+          var2 = var3;
+          return (char)var2;
+        }
+        return (char)var2;
     }
 
     public static void b(boolean param0) {
         field_n = null;
         field_p = null;
         if (param0) {
-            dg.b(false);
+          dg.b(false);
         }
     }
 
@@ -62,48 +52,28 @@ final class dg extends rk {
         int var4 = 0;
         int stackIn_10_0 = 0;
         int stackIn_12_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            var3_int = param0;
-            L1: while (true) {
-              if (-2 <= (param1 ^ -1)) {
-                if (-2 != (param1 ^ -1)) {
-                  stackIn_12_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_10_0 = var3_int * param2;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  if (0 != (param1 & 1)) {
-                    var3_int = var3_int * param2;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                param1 = param1 >> 1;
-                param2 = param2 * param2;
-                continue L1;
-              }
+          var3_int = param0;
+          while (param1 > 1) {
+            if (0 != (param1 & 1)) {
+              var3_int = var3_int * param2;
             }
+            param1 = param1 >> 1;
+            param2 = param2 * param2;
           }
+          if (param1 != 1) {
+            stackIn_12_0 = var3_int;
+            return stackIn_12_0;
+          }
+          stackIn_10_0 = var3_int * param2;
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw sd.a((Throwable) ((Object) var3), "dg.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          return stackIn_12_0;
         }
     }
 

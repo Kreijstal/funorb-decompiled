@@ -7,33 +7,28 @@ final class da {
     static int[] field_c;
 
     final static boolean a(int param0) {
-        if (param0 == 352) {
-          if (ci.field_a != null) {
-            if (!ci.field_a.c(-1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 352) {
           field_b = (float[][]) null;
-          if (ci.field_a != null) {
-            if (!ci.field_a.c(-1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (ci.field_a == null) {
             return false;
           }
+          if (ci.field_a.c(-1)) {
+            return true;
+          }
+          return false;
         }
+        if (ci.field_a == null) {
+          return false;
+        }
+        if (ci.field_a.c(-1)) {
+          return true;
+        }
+        return false;
     }
 
     public static void b(int param0) {
         if (param0 >= -32) {
-            return;
+          return;
         }
         field_c = null;
         field_b = (float[][]) null;

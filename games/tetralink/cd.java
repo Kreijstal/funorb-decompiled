@@ -10,18 +10,16 @@ final class cd {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 <= 9) {
-          cd.a((byte) 81);
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 > 9) {
           field_c = null;
           field_b = null;
           field_d = null;
           return;
         }
+        cd.a((byte) 81);
+        field_c = null;
+        field_b = null;
+        field_d = null;
     }
 
     static {

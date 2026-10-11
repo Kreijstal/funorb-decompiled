@@ -9,10 +9,10 @@ final class qo {
 
     public static void a(int param0) {
         if (param0 != 3) {
-            field_b = (String) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

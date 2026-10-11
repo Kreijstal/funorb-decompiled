@@ -15,34 +15,34 @@ final class vf implements jm {
         pd.field_Rb = null;
         ib.field_d = null;
         if (!param0) {
-            return;
+          return;
         }
         try {
-            if (!(null == bb.field_d)) {
-                bb.field_d.e(-31023);
-                bb.field_d = null;
+          if (null != bb.field_d) {
+            bb.field_d.e(-31023);
+            bb.field_d = null;
+          }
+          d.field_Mb = null;
+          if (null != nk.field_t) {
+            nk.field_t.e(-31023);
+            nk.field_t = null;
+          }
+          ae.field_f = null;
+          if (null != pd.field_Sb) {
+            pd.field_Sb.e(-31023);
+            pd.field_Sb = null;
+          }
+          cm.field_v = null;
+          if (null != d.field_Mb) {
+            var3 = (r) (d.field_Mb.a(false));
+            while (var3 != null) {
+              var3.d(-1);
+              var3 = (r) (d.field_Mb.a(0));
             }
             d.field_Mb = null;
-            if (!(null == nk.field_t)) {
-                nk.field_t.e(-31023);
-                nk.field_t = null;
-            }
-            ae.field_f = null;
-            if (null != pd.field_Sb) {
-                pd.field_Sb.e(-31023);
-                pd.field_Sb = null;
-            }
-            cm.field_v = null;
-            if (null != d.field_Mb) {
-                var3 = (r) ((Object) d.field_Mb.a(false));
-                while (var3 != null) {
-                    var3.d(-1);
-                    var3 = (r) ((Object) d.field_Mb.a(0));
-                }
-                d.field_Mb = null;
-            }
+          }
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ')');
         }
     }
 
@@ -53,68 +53,36 @@ final class vf implements jm {
         km var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 >= 58) {
-              L1: {
-                var6_int = param1 + param4.field_u;
-                var7 = param4.field_r + param2;
-                vj.a(var7, param4.field_C, param4.field_y, (byte) 119, var6_int);
-                var8 = uh.field_p[1];
-                if (!(param4 instanceof fb)) {
-                  break L1;
-                } else {
-                  if (!((fb) ((Object) param4)).field_I) {
-                    break L1;
-                  } else {
-                    var8.d((param4.field_y - var8.field_v >> 1488190753) + (var6_int - -1), (-var8.field_u + param4.field_C >> 492452417) + 1 + var7, 256);
-                    break L1;
-                  }
-                }
-              }
-              if (param4.d((byte) -67)) {
-                rc.a(param4.field_C - 4, false, var6_int - -2, param4.field_y - 4, 2 + var7);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 < 58) {
+            return;
           }
+          var6_int = param1 + param4.field_u;
+          var7 = param4.field_r + param2;
+          vj.a(var7, param4.field_C, param4.field_y, (byte) 119, var6_int);
+          var8 = uh.field_p[1];
+          if (param4 instanceof fb &&
+            ((fb) (param4)).field_I) {
+            var8.d((param4.field_y - var8.field_v >> 1) + (var6_int + 1), (-var8.field_u + param4.field_C >> 1) + 1 + var7, 256);
+          }
+          if (!param4.d((byte) -67)) {
+            return;
+          }
+          rc.a(param4.field_C - 4, false, var6_int + 2, param4.field_y - 4, 2 + var7);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
-
-            stackIn_11_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw fk.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -122,22 +90,20 @@ final class vf implements jm {
         field_c = null;
         field_d = null;
         field_b = null;
-        if (param0) {
-          field_e = (String) null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (!param0) {
           field_a = null;
           field_e = null;
           return;
         }
+        field_e = (String) null;
+        field_a = null;
+        field_e = null;
     }
 
     final static void a(boolean param0, int param1) {
         in.a((byte) 123, param0, false);
         if (param1 > -121) {
-            field_b = (String[]) null;
+          field_b = (String[]) null;
         }
     }
 

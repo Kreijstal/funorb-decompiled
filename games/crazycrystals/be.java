@@ -28,82 +28,58 @@ final class be implements Iterable {
         int var8 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              if (param0 == -1013410975) {
-                break L1;
-              } else {
-                field_a = (String) null;
-                break L1;
-              }
-            }
-            var3_int = 0;
-            var4 = pf.field_n;
-            L2: while (true) {
-              if (je.field_i.length <= var3_int) {
-                stackIn_15_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = ub.field_b[var3_int];
-                  if ((var5 ^ -1) <= -1) {
-                    var6 = vm.a((byte) 96, true, je.field_i[var3_int]);
-                    var4 = var4 + a.field_a;
-                    var7 = -(var6 >> 394322305) + oa.field_b;
-                    if (wn.a(var6 - -(to.field_d << -1013410975), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (bn.field_c << 833702561), var4)) {
-                      stackIn_10_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var4 = var4 + (gh.field_w + ((bn.field_c << 1452656289) - -a.field_a));
-                      break L3;
-                    }
-                  } else {
-                    var4 = var4 + io.field_O;
-                    break L3;
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          if (param0 != -1013410975) {
+            field_a = (String) null;
           }
+          var3_int = 0;
+          var4 = pf.field_n;
+          while (je.field_i.length > var3_int) {
+            var5 = ub.field_b[var3_int];
+            if (var5 >= 0) {
+              var6 = vm.$cfr$intArgs$a$62abead39cee(96, true, je.field_i[var3_int]);
+              var4 = var4 + a.field_a;
+              var7 = -(var6 >> 1) + oa.field_b;
+              if (wn.a(var6 + (to.field_d << 1), param1, param2, var7 - to.field_d, (byte) -30, gh.field_w + (bn.field_c << 1), var4)) {
+                stackIn_10_0 = var5;
+                return stackIn_10_0;
+              }
+              var4 = var4 + (gh.field_w + ((bn.field_c << 1) + a.field_a));
+            } else {
+              var4 = var4 + io.field_O;
+            }
+            var3_int++;
+          }
+          stackIn_15_0 = -1;
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw dn.a((Throwable) ((Object) var3), "be.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          return stackIn_15_0;
-        }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wk((be) (this)));
+        return (Iterator) ((Object) new wk(this));
     }
 
     final void a(byte param0, ij param1) {
         if (param1.field_g != null) {
-            param1.a(1);
+          param1.a(1);
         }
         param1.field_g = this.field_f.field_g;
         param1.field_j = this.field_f;
         if (param0 < 7) {
-            return;
+          return;
         }
         try {
-            param1.field_g.field_j = param1;
-            param1.field_j.field_g = param1;
+          param1.field_g.field_j = param1;
+          param1.field_j.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "be.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "be.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,22 +88,18 @@ final class be implements Iterable {
     }
 
     final ij a(int param0) {
-        ij var2;
-        ij var3;
-        var2 = this.field_f.field_j;
-        if (var2 != this.field_f) {
-          if (param0 != 30244) {
-            var3 = (ij) null;
-            this.a((byte) 94, (ij) null);
-            var2.a(1);
-            return var2;
-          } else {
-            var2.a(1);
-            return var2;
-          }
-        } else {
+        ij var2 = this.field_f.field_j;
+        if (var2 == this.field_f) {
           return null;
         }
+        if (param0 == 30244) {
+          var2.a(1);
+          return var2;
+        }
+        ij var3 = (ij) null;
+        this.a((byte) 94, (ij) null);
+        var2.a(1);
+        return var2;
     }
 
     static {

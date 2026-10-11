@@ -18,60 +18,35 @@ final class nh extends br {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = h.a(kj.field_q, 19313, am.field_b);
-              if (var2_int != 1) {
-                break L1;
-              } else {
-                param1 = "<img=0>" + param1;
-                break L1;
-              }
-            }
-            L2: {
-              if (var2_int == param0) {
-                param1 = "<img=1>" + param1;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            stackIn_6_0 = (String) (param1);
-            break L0;
+          var2_int = h.a(kj.field_q, 19313, am.field_b);
+          if (var2_int == 1) {
+            param1 = "<img=0>" + param1;
           }
+          if (var2_int == param0) {
+            param1 = "<img=1>" + param1;
+          }
+          stackIn_6_0 = (String) (param1);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2);
-
-            stackIn_9_1 = new StringBuilder().append("nh.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("nh.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final static boolean c(byte param0) {
         if (param0 >= -25) {
-            return true;
+          return true;
         }
         return ab.field_k;
     }
@@ -79,7 +54,7 @@ final class nh extends br {
     public static void a(byte param0) {
         field_j = null;
         if (param0 != 48) {
-            return;
+          return;
         }
         field_i = null;
         field_g = null;

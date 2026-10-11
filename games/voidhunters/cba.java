@@ -8,7 +8,7 @@ final class cba extends za {
     final void a(boolean param0) {
         this.field_f.a();
         if (!param0) {
-            cba.b(false);
+          cba.b(false);
         }
     }
 
@@ -19,7 +19,7 @@ final class cba extends za {
     public static void b(boolean param0) {
         field_e = null;
         if (!param0) {
-            cba.b(false);
+          cba.b(false);
         }
     }
 

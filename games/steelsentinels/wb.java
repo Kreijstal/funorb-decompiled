@@ -16,95 +16,70 @@ final class wb {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
+        int var2Lifetime1;
         var3 = SteelSentinels.field_G;
         if (param0 == 500) {
-          if (-1 < (param1 ^ -1)) {
+          if (param1 < 0) {
             return 0;
-          } else {
-            if (dn.field_Sb.length > param1) {
-              return dn.field_Sb[param1] / 4;
-            } else {
-              var2 = param1;
-              if (42 != var2) {
-                if (var2 != 39) {
-                  if (-41 != (var2 ^ -1)) {
-                    if ((var2 ^ -1) != -36) {
-                      if ((var2 ^ -1) != -38) {
-                        if (var2 != 41) {
-                          return 0;
-                        } else {
-                          return 2000;
-                        }
-                      } else {
-                        return 1000;
-                      }
-                    } else {
-                      return 1000;
-                    }
-                  } else {
-                    return 500;
-                  }
-                } else {
-                  return 500;
-                }
-              } else {
-                return 500;
-              }
-            }
           }
-        } else {
-          wb.a(-117, 80);
-          if (-1 < (param1 ^ -1)) {
+          if (dn.field_Sb.length > param1) {
+            return dn.field_Sb[param1] / 4;
+          }
+          var2 = param1;
+          if (42 == var2) {
+            return 500;
+          }
+          if (var2 == 39) {
+            return 500;
+          }
+          if (var2 == 40) {
+            return 500;
+          }
+          if (var2 == 35) {
+            return 1000;
+          }
+          if (var2 == 37) {
+            return 1000;
+          }
+          if (var2 != 41) {
             return 0;
-          } else {
-            if (dn.field_Sb.length > param1) {
-              return dn.field_Sb[param1] / 4;
-            } else {
-              var2 = param1;
-              if (42 != var2) {
-                if (var2 != 39) {
-                  if (-41 != (var2 ^ -1)) {
-                    if ((var2 ^ -1) != -36) {
-                      if ((var2 ^ -1) != -38) {
-                        if (var2 == 41) {
-                          return 2000;
-                        } else {
-                          return 0;
-                        }
-                      } else {
-                        return 1000;
-                      }
-                    } else {
-                      return 1000;
-                    }
-                  } else {
-                    return 500;
-                  }
-                } else {
-                  return 500;
-                }
-              } else {
-                return 500;
-              }
-            }
           }
+          return 2000;
         }
+        wb.a(-117, 80);
+        if (param1 < 0) {
+          return 0;
+        }
+        if (dn.field_Sb.length > param1) {
+          return dn.field_Sb[param1] / 4;
+        }
+        var2Lifetime1 = param1;
+        if (42 == var2Lifetime1) {
+          return 500;
+        }
+        if (var2Lifetime1 == 39) {
+          return 500;
+        }
+        if (var2Lifetime1 == 40) {
+          return 500;
+        }
+        if (var2Lifetime1 == 35) {
+          return 1000;
+        }
+        if (var2Lifetime1 == 37) {
+          return 1000;
+        }
+        if (var2Lifetime1 == 41) {
+          return 2000;
+        }
+        return 0;
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
         field_h = null;
-        if (param0 <= 77) {
-          field_h = (int[]) null;
-          field_c = null;
-          field_d = null;
-          field_f = null;
-          field_j = null;
-          field_a = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 > 77) {
           field_c = null;
           field_d = null;
           field_f = null;
@@ -113,6 +88,13 @@ final class wb {
           field_i = null;
           return;
         }
+        field_h = (int[]) null;
+        field_c = null;
+        field_d = null;
+        field_f = null;
+        field_j = null;
+        field_a = null;
+        field_i = null;
     }
 
     static {

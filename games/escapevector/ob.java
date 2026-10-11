@@ -34,8 +34,8 @@ abstract class ob {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (!(param4 == 0)) {
-            var6[4] = of.a(param4, (byte) 97, 64);
+        if (param4 != 0) {
+          var6[4] = of.a(param4, (byte) 97, 64);
         }
         return var5;
     }

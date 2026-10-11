@@ -8,23 +8,23 @@ final class ok {
 
     public static void a(int param0) {
         if (param0 != 93) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void b(int param0) {
-        int var1 = 106 % ((param0 - -19) / 61);
+        int var1 = 106 % ((param0 + 19) / 61);
         rd.b((byte) -88);
     }
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != 564) {
-                field_a = (char[]) null;
-            }
+          if (param0 != 564) {
+            field_a = (char[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ok.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

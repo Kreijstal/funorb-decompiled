@@ -13,7 +13,7 @@ abstract class iw extends bl {
 
     void d(int param0) {
         if (param0 != 15435) {
-            iw.k((byte) -22);
+          iw.k((byte) -22);
         }
     }
 
@@ -31,147 +31,104 @@ abstract class iw extends bl {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = VoidHunters.field_G;
-        dma.c(6 + param2, param0 - -35, this.field_h + -12, -40 + this.field_f, 2105376, 0);
+        dma.c(6 + param2, param0 + 35, this.field_h - 12, -40 + this.field_f, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
-        L0: while (true) {
-          if (var7 >= var4) {
-            var5 = 194;
-            var4 = 22;
-            var6 = 169;
-            var7 = 0;
-            var8 = param0 + 35;
-            L1: while (true) {
-              if (var7 >= var4) {
-                L2: {
-                  wf.field_a.a(-90 + this.field_h + param2, 10 + param0);
-                  eg.a(param1 ^ 1630174240, 35 + param0, vsa.field_p, 5 + param2, this.field_h - 10);
-                  if (param1 == 1630174241) {
-                    break L2;
-                  } else {
-                    this.a(59);
-                    break L2;
+        while (var7 < var4) {
+          if (dma.field_c <= var8 &&
+            var8 < dma.field_f) {
+            var9 = var5 + (-var5 + var6) * var7 / var4;
+            var10 = 0;
+            var11 = this.field_h;
+            if (20 >= var7) {
+              while (var10 <= 20) {
+                var12 = (20 - var10) * (-var10 + 20) + (20 - var7) * (20 - var7);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
                   }
+                  var13 = (462 - var12) * var9 / 42;
+                  var13 = var13 | (var13 << 16 | var13 << 8);
+                  dma.field_i[var10 + (var8 * dma.field_g + param2)] = var13;
                 }
-                eg.a(1, this.field_f + param0 - 22, oqa.field_q, param2, this.field_h);
-                var5 = 169;
-                var6 = 127;
-                var4 = -79 + this.field_f;
-                var7 = 0;
-                var8 = param0 + 57;
-                L3: while (true) {
-                  if (var7 >= var4) {
-                    return;
-                  } else {
-                    var9 = var7 * (-var5 + var6) / var4 + var5;
-                    var9 = var9 | (var9 << -1461741040 | var9 << -231343000);
-                    dma.h(param2, var8, 6, var9);
-                    dma.h(-6 + this.field_h + param2, var8, 6, var9);
-                    var7++;
-                    var8++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var9 = var5 - -((var6 - var5) * var7 / var4);
-                var9 = var9 | (var9 << -1514548400 | var9 << 2111197064);
-                dma.h(param2, var8, 6, var9);
-                dma.h(-6 + (param2 + this.field_h), var8, 6, var9);
-                var8++;
-                var7++;
-                continue L1;
+                var10++;
               }
             }
-          } else {
-            if ((dma.field_c ^ -1) >= (var8 ^ -1)) {
-              if (var8 < dma.field_f) {
-                L4: {
-                  var9 = var5 - -((-var5 + var6) * var7 / var4);
-                  var10 = 0;
-                  var11 = this.field_h;
-                  if (20 < var7) {
-                    break L4;
+            if (var7 <= 20) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = (20 - var7) * (20 - var7) + var13Lifetime1 * var13Lifetime1;
+                if (var14 <= 462) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = var11 + 1;
                   } else {
-                    L5: while (true) {
-                      if ((var10 ^ -1) < -21) {
-                        break L4;
-                      } else {
-                        var12 = (20 - var10) * (-var10 + 20) + (20 + -var7) * (20 - var7);
-                        if (-463 <= (var12 ^ -1)) {
-                          if ((var12 ^ -1) <= -421) {
-                            var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << 695816144 | var13 << 866407368);
-                            dma.field_i[var10 + (var8 * dma.field_g + param2)] = var13;
-                            var10++;
-                            continue L5;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          var10++;
-                          continue L5;
-                        }
-                      }
-                    }
+                    var15 = var9 * (462 - var14) / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    dma.field_i[dma.field_g * var8 + param2 + var11] = var15;
                   }
+                  var11++;
+                  continue;
                 }
-                L6: {
-                  if (-21 <= (var7 ^ -1)) {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L7: while (true) {
-                      L8: {
-                        if ((var13 ^ -1) < -21) {
-                          break L8;
-                        } else {
-                          var14 = (20 - var7) * (20 + -var7) - -(var13 * var13);
-                          if (-463 > (var14 ^ -1)) {
-                            break L8;
-                          } else {
-                            if ((var14 ^ -1) > -421) {
-                              var12 = var11 - -1;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            } else {
-                              var15 = var9 * (462 - var14) / 42;
-                              var15 = var15 | (var15 << -908103000 | var15 << 1134350352);
-                              dma.field_i[dma.field_g * var8 + param2 + var11] = var15;
-                              var11++;
-                              var13++;
-                              continue L7;
-                            }
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L6;
-                    }
-                  } else {
-                    break L6;
-                  }
-                }
-                var9 = var9 | (var9 << 1003975624 | var9 << -2093440944);
-                dma.h(var10 - -param2, var8, var11 - var10, var9);
-                var8++;
-                var7++;
-                continue L0;
-              } else {
-                var8++;
-                var7++;
-                continue L0;
+                break;
               }
-            } else {
-              var8++;
-              var7++;
-              continue L0;
+              var11 = var12Lifetime1;
             }
+            var9 = var9 | (var9 << 8 | var9 << 16);
+            dma.h(var10 + param2, var8, var11 - var10, var9);
           }
+          var8++;
+          var7++;
+        }
+        var5Lifetime1 = 194;
+        var4Lifetime1 = 22;
+        var6Lifetime1 = 169;
+        var7Lifetime1 = 0;
+        var8Lifetime1 = param0 + 35;
+        while (var7Lifetime1 < var4Lifetime1) {
+          var9Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1;
+          var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
+          dma.h(param2, var8Lifetime1, 6, var9Lifetime1);
+          dma.h(-6 + (param2 + this.field_h), var8Lifetime1, 6, var9Lifetime1);
+          var8Lifetime1++;
+          var7Lifetime1++;
+        }
+        wf.field_a.a(-90 + this.field_h + param2, 10 + param0);
+        eg.a(param1 ^ 1630174240, 35 + param0, vsa.field_p, 5 + param2, this.field_h - 10);
+        if (param1 != 1630174241) {
+          this.a(59);
+        }
+        eg.a(1, this.field_f + param0 - 22, oqa.field_q, param2, this.field_h);
+        var5Lifetime2 = 169;
+        var6Lifetime2 = 127;
+        var4Lifetime2 = -79 + this.field_f;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param0 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
+          dma.h(param2, var8Lifetime2, 6, var9Lifetime2);
+          dma.h(-6 + this.field_h + param2, var8Lifetime2, 6, var9Lifetime2);
+          var7Lifetime2++;
+          var8Lifetime2++;
         }
     }
 
@@ -185,7 +142,7 @@ abstract class iw extends bl {
         field_F = null;
         field_D = null;
         if (param0 != -27545) {
-            iw.f(28);
+          iw.f(28);
         }
     }
 
@@ -196,30 +153,29 @@ abstract class iw extends bl {
         int var4 = 0;
         int var5 = 0;
         if (param0 != 248) {
-            return false;
+          return false;
         }
         if (this.field_G <= 0) {
         } else {
-            var2 = this.field_I;
-            var3 = this.field_C;
-            fieldTemp$0 = this.field_H + 1;
-            this.field_H = this.field_H + 1;
-            if (this.field_G <= fieldTemp$0) {
-                this.field_G = 0;
-                this.d(param0 + 15187);
-            } else {
-                var4 = (-this.field_H + this.field_G * 2) * this.field_H;
-                var5 = this.field_G * this.field_G;
-                var3 = this.field_B - -((this.field_C + -this.field_B) * var4 / var5);
-                var2 = this.field_E + (-this.field_E + this.field_I) * var4 / var5;
-            }
-            this.c(var2, -1860440319, var3);
+          var2 = this.field_I;
+          var3 = this.field_C;
+          fieldTemp$0 = this.field_H + 1;
+          this.field_H = this.field_H + 1;
+          if (this.field_G <= fieldTemp$0) {
+            this.field_G = 0;
+            this.d(param0 + 15187);
+          } else {
+            var4 = (-this.field_H + this.field_G * 2) * this.field_H;
+            var5 = this.field_G * this.field_G;
+            var3 = this.field_B + (this.field_C - this.field_B) * var4 / var5;
+            var2 = this.field_E + (-this.field_E + this.field_I) * var4 / var5;
+          }
+          this.c(var2, -1860440319, var3);
         }
         return super.a(248);
     }
 
     final static void k(byte param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -236,170 +192,106 @@ abstract class iw extends bl {
         int var13 = 0;
         faa var14 = null;
         int[][] var18 = null;
+        int var6_intLifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
         var12 = VoidHunters.field_G;
         try {
-          L0: {
-            var14 = qga.field_b;
-            var2 = var14.e((byte) -87);
-            var3 = (fa) ((Object) gm.field_H.d(param0 + 38));
-            L1: while (true) {
-              L2: {
-                if (var3 == null) {
-                  break L2;
-                } else {
-                  if ((var3.field_f ^ -1) != (var2 ^ -1)) {
-                    var3 = (fa) ((Object) gm.field_H.a((byte) 95));
-                    continue L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              if (var3 == null) {
-                ifb.l(-117);
-                decompiledRegionSelector0 = 0;
-                break L0;
+          var14 = qga.field_b;
+          var2 = var14.e((byte) -87);
+          var3 = (fa) (gm.field_H.d(param0 + 38));
+          while (var3 != null) {
+            if (~var3.field_f != ~var2) {
+              var3 = (fa) (gm.field_H.a((byte) 95));
+              continue;
+            }
+            break;
+          }
+          if (var3 == null) {
+            ifb.l(-117);
+            return;
+          }
+          if (param0 != -38) {
+            field_D = (String) null;
+          }
+          var4 = var14.e((byte) -118);
+          if (var4 != 0) {
+            tsb.field_o[0] = kca.field_a;
+            var5 = var3.field_g;
+            for (var6_int = 1; var4 > var6_int; var6_int++) {
+              tsb.field_o[var6_int] = var14.a(param0 + 37);
+            }
+            eja.a(var5, var4, 0);
+            for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
+              bb.a(var14, true);
+              if (var6_intLifetime1 != 0) {
+                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
               } else {
-                L3: {
-                  if (param0 == -38) {
-                    break L3;
-                  } else {
-                    field_D = (String) null;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var4 = var14.e((byte) -118);
-                  if (-1 != (var4 ^ -1)) {
-                    tsb.field_o[0] = kca.field_a;
-                    var5 = var3.field_g;
-                    var6_int = 1;
-                    L5: while (true) {
-                      if (var4 <= var6_int) {
-                        eja.a(var5, var4, 0);
-                        var6_int = 0;
-                        L6: while (true) {
-                          if (var4 <= var6_int) {
-                            qea.a((byte) -29, var5);
-                            var6 = new String[2][var5];
-                            var18 = new int[2][var5 * 4];
-                            var8 = bea.field_e;
-                            var9 = 0;
-                            var10 = 0;
-                            L7: while (true) {
-                              if (var9 >= var8) {
-                                var9 = 0;
-                                var13 = 0;
-                                var10 = var13;
-                                L8: while (true) {
-                                  if (var9 < var8) {
-                                    var11 = sv.field_f[var5 + var9];
-                                    var6[1][var13] = tsb.field_o[var11];
-                                    var18[1][var13 * 4] = fmb.field_o[var11];
-                                    var18[1][1 + var13 * 4] = emb.field_o[var11];
-                                    var18[1][var13 * 4 + 2] = hma.field_d[var11];
-                                    var18[1][3 + var13 * 4] = fv.field_o[var11];
-                                    if (qja.a((byte) -75, tsb.field_o[var11])) {
-                                      L9: {
-                                        if (0 == fv.field_o[var11] + (hma.field_d[var11] + emb.field_o[var11])) {
-                                          var6[1][var13] = null;
-                                          var13--;
-                                          break L9;
-                                        } else {
-                                          break L9;
-                                        }
-                                      }
-                                      var13++;
-                                      var9++;
-                                      continue L8;
-                                    } else {
-                                      var13++;
-                                      var9++;
-                                      continue L8;
-                                    }
-                                  } else {
-                                    var3.b(-3846);
-                                    break L4;
-                                  }
-                                }
-                              } else {
-                                L10: {
-                                  var11 = sv.field_f[var9];
-                                  var6[0][var10] = tsb.field_o[var11];
-                                  var18[0][var10 * 4] = fmb.field_o[var11];
-                                  var18[0][var10 * 4 - -1] = emb.field_o[var11];
-                                  var18[0][2 + var10 * 4] = hma.field_d[var11];
-                                  var18[0][3 + 4 * var10] = fv.field_o[var11];
-                                  if (qja.a((byte) -75, tsb.field_o[var11])) {
-                                    if (0 == emb.field_o[var11] - -hma.field_d[var11] + fv.field_o[var11]) {
-                                      var6[0][var10] = null;
-                                      var10--;
-                                      break L10;
-                                    } else {
-                                      break L10;
-                                    }
-                                  } else {
-                                    break L10;
-                                  }
-                                }
-                                var10++;
-                                var9++;
-                                continue L7;
-                              }
-                            }
-                          } else {
-                            L11: {
-                              bb.a(var14, true);
-                              if ((var6_int ^ -1) != -1) {
-                                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_int, jv.field_b);
-                                break L11;
-                              } else {
-                                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_int, jv.field_b);
-                                break L11;
-                              }
-                            }
-                            var6_int++;
-                            continue L6;
-                          }
-                        }
-                      } else {
-                        tsb.field_o[var6_int] = var14.a(param0 + 37);
-                        var6_int++;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    var3.b(-3846);
-                    break L4;
-                  }
-                }
-                decompiledRegionSelector0 = 1;
-                break L0;
+                ujb.a(wl.field_q, qfb.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
               }
             }
+            qea.a((byte) -29, var5);
+            var6 = new String[2][var5];
+            var18 = new int[2][var5 * 4];
+            var8 = bea.field_e;
+            var9 = 0;
+            var10 = 0;
+            while (var9 < var8) {
+              var11 = sv.field_f[var9];
+              var6[0][var10] = tsb.field_o[var11];
+              var18[0][var10 * 4] = fmb.field_o[var11];
+              var18[0][var10 * 4 + 1] = emb.field_o[var11];
+              var18[0][2 + var10 * 4] = hma.field_d[var11];
+              var18[0][3 + 4 * var10] = fv.field_o[var11];
+              if (qja.a((byte) -75, tsb.field_o[var11]) &&
+                0 == emb.field_o[var11] + hma.field_d[var11] + fv.field_o[var11]) {
+                var6[0][var10] = null;
+                var10--;
+              }
+              var10++;
+              var9++;
+            }
+            var9Lifetime1 = 0;
+            var13 = 0;
+            var10Lifetime1 = var13;
+            while (var9Lifetime1 < var8) {
+              var11Lifetime1 = sv.field_f[var5 + var9Lifetime1];
+              var6[1][var13] = tsb.field_o[var11Lifetime1];
+              var18[1][var13 * 4] = fmb.field_o[var11Lifetime1];
+              var18[1][1 + var13 * 4] = emb.field_o[var11Lifetime1];
+              var18[1][var13 * 4 + 2] = hma.field_d[var11Lifetime1];
+              var18[1][3 + var13 * 4] = fv.field_o[var11Lifetime1];
+              if (qja.a((byte) -75, tsb.field_o[var11Lifetime1]) &&
+                0 == fv.field_o[var11Lifetime1] + (hma.field_d[var11Lifetime1] + emb.field_o[var11Lifetime1])) {
+                var6[1][var13] = null;
+                var13--;
+              }
+              var13++;
+              var9Lifetime1++;
+            }
+            var3.b(-3846);
+            return;
           }
+          var3.b(-3846);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1), "iw.MA(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final void c(int param0, int param1, int param2, int param3) {
-        if (!((param3 ^ -1) < -1)) {
-            this.c(param1, -1860440319, param2);
-            return;
+        if (param3 <= 0) {
+          this.c(param1, -1860440319, param2);
+          return;
         }
         this.field_I = param1;
         this.field_C = param2;
         this.field_H = 0;
         if (param0 <= 71) {
-            this.c(-109, 54, 31, -22);
+          this.c(-109, 54, 31, -22);
         }
         this.field_G = param3;
         this.field_E = this.field_h;
@@ -408,21 +300,21 @@ abstract class iw extends bl {
 
     boolean j(byte param0) {
         if (param0 != 55) {
-            this.field_C = -52;
+          this.field_C = -52;
         }
         this.e(-10331);
         return super.j((byte) 55);
     }
 
     void e(int param0) {
-        if (-1 <= (this.field_G ^ -1)) {
-            return;
+        if (this.field_G <= 0) {
+          return;
         }
         this.c(this.field_I, param0 ^ 1860450468, this.field_C);
         this.field_G = 0;
         this.d(param0 + 25766);
         if (param0 != -10331) {
-            iw.k((byte) 34);
+          iw.k((byte) 34);
         }
     }
 

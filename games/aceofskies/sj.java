@@ -7,28 +7,23 @@ final class sj {
     private static String field_z;
 
     final static boolean a(int param0, byte param1) {
-        if (param1 <= -71) {
-          if (param0 != 1) {
-            if (param0 == 7) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param1 > -71) {
           sj.a(-17, (byte) 116);
-          if (param0 != 1) {
-            if (param0 == 7) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 == 1) {
             return false;
           }
+          if (param0 != 7) {
+            return true;
+          }
+          return false;
         }
+        if (param0 == 1) {
+          return false;
+        }
+        if (param0 != 7) {
+          return true;
+        }
+        return false;
     }
 
     static {

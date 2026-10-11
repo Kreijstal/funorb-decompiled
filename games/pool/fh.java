@@ -8,20 +8,19 @@ final class fh {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 62) {
-            fh.a(-19, (byte) -76);
-            field_a = null;
-            return;
+          fh.a(-19, (byte) -76);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final static di a(int param0, byte param1) {
-        if (param1 != 103) {
-          fh.a((byte) 116);
-          return ji.a(1, true, (byte) -56, param0, false, false);
-        } else {
+        if (param1 == 103) {
           return ji.a(1, true, (byte) -56, param0, false, false);
         }
+        fh.a((byte) 116);
+        return ji.a(1, true, (byte) -56, param0, false, false);
     }
 
     static {

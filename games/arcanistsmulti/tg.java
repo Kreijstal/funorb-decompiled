@@ -13,18 +13,18 @@ final class tg {
 
     final void a(tf param0, int param1) {
         try {
-            if (!(param0.field_i == null)) {
-                param0.a((byte) 88);
-            }
-            param0.field_l = this.field_h;
-            param0.field_i = this.field_h.field_i;
-            param0.field_i.field_l = param0;
-            if (param1 != 15893) {
-                this.a((byte) -116);
-            }
-            param0.field_l.field_i = param0;
+          if (param0.field_i != null) {
+            param0.a((byte) 88);
+          }
+          param0.field_l = this.field_h;
+          param0.field_i = this.field_h.field_i;
+          param0.field_i.field_l = param0;
+          if (param1 != 15893) {
+            this.a((byte) -116);
+          }
+          param0.field_l.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "tg.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -34,93 +34,78 @@ final class tg {
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param1 < 22) {
-          tg.a(101, false, -57, -39);
-          return rg.a(param0, param2, 13, param3);
-        } else {
+        if (param1 >= 22) {
           return rg.a(param0, param2, 13, param3);
         }
+        tg.a(101, false, -57, -39);
+        return rg.a(param0, param2, 13, param3);
     }
 
     final tf e(int param0) {
-        tf var2;
-        int var3;
-        var2 = this.field_c;
-        if (this.field_h == var2) {
-          this.field_c = null;
-          return null;
-        } else {
+        tf var2 = this.field_c;
+        if (this.field_h != var2) {
           this.field_c = var2.field_l;
-          var3 = -86 % ((65 - param0) / 55);
+          int var3 = -86 % ((65 - param0) / 55);
           return var2;
         }
+        this.field_c = null;
+        return null;
     }
 
     final tf a(byte param0) {
-        tf var2;
-        if (param0 >= 115) {
-          var2 = this.field_h.field_l;
-          if (var2 == this.field_h) {
-            return null;
-          } else {
-            var2.a((byte) 88);
-            return var2;
-          }
-        } else {
+        tf var2 = null;
+        tf var2Lifetime1;
+        if (param0 < 115) {
           this.a(-116);
           var2 = this.field_h.field_l;
-          if (var2 == this.field_h) {
-            return null;
-          } else {
+          if (var2 != this.field_h) {
             var2.a((byte) 88);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_h.field_l;
+        if (var2Lifetime1 != this.field_h) {
+          var2Lifetime1.a((byte) 88);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     final int b(byte param0) {
-        int var2;
-        tf var3;
-        int var4;
-        var4 = ArcanistsMulti.field_G ? 1 : 0;
-        var2 = 0;
-        var3 = this.field_h.field_l;
-        L0: while (true) {
-          if (this.field_h == var3) {
-            if (param0 >= -64) {
-              this.a((byte) 126);
-              return var2;
-            } else {
-              return var2;
-            }
-          } else {
-            var2++;
-            var3 = var3.field_l;
-            continue L0;
-          }
+        int var4 = ArcanistsMulti.field_G ? 1 : 0;
+        int var2 = 0;
+        tf var3 = this.field_h.field_l;
+        while (this.field_h != var3) {
+          var2++;
+          var3 = var3.field_l;
         }
+        if (param0 < -64) {
+          return var2;
+        }
+        this.a((byte) 126);
+        return var2;
     }
 
     final void a(int param0) {
         tf var2;
         int var3;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        L0: while (true) {
+        while (true) {
           var2 = this.field_h.field_l;
           if (var2 != this.field_h) {
             var2.a((byte) 88);
-            continue L0;
-          } else {
-            if (param0 != 17) {
-              this.b(100);
-              this.field_c = null;
-              return;
-            } else {
-              this.field_c = null;
-              return;
-            }
+            continue;
           }
+          break;
         }
+        if (param0 == 17) {
+          this.field_c = null;
+          return;
+        }
+        this.b(100);
+        this.field_c = null;
+        return;
     }
 
     public static void c(int param0) {
@@ -129,19 +114,19 @@ final class tg {
         field_b = null;
         field_a = null;
         if (param0 >= -44) {
-            return;
+          return;
         }
         field_g = null;
     }
 
     final tf b(int param0) {
         if (param0 < 23) {
-            return (tf) null;
+          return (tf) null;
         }
         tf var2 = this.field_h.field_l;
-        if (!(this.field_h != var2)) {
-            this.field_c = null;
-            return null;
+        if (this.field_h == var2) {
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_l;
         return var2;
@@ -155,7 +140,7 @@ final class tg {
 
     final static int a(int param0, boolean param1, int param2, int param3) {
         if (param3 != 17) {
-            return -27;
+          return -27;
         }
         return le.h(-1993);
     }

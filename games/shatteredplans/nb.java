@@ -11,140 +11,83 @@ final class nb {
         int var2;
         var2 = 101 / ((param1 - 30) / 59);
         if (param0 < 32) {
-          L0: {
-            if (param0 < 160) {
-              break L0;
-            } else {
-              if (param0 > 255) {
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          L1: {
-            if (param0 == 8364) {
-              break L1;
-            } else {
-              if (param0 == 338) {
-                break L1;
-              } else {
-                if (param0 == 8212) {
-                  break L1;
-                } else {
-                  if (param0 == 339) {
-                    break L1;
-                  } else {
-                    if (376 == param0) {
-                      break L1;
-                    } else {
-                      return false;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          return true;
-        } else {
-          if (param0 > 126) {
-            if (param0 >= 160) {
-              if (param0 > 255) {
-                L2: {
-                  if (param0 == 8364) {
-                    break L2;
-                  } else {
-                    if (param0 == 338) {
-                      break L2;
-                    } else {
-                      if (param0 == 8212) {
-                        break L2;
-                      } else {
-                        if (param0 == 339) {
-                          break L2;
-                        } else {
-                          if (376 == param0) {
-                            break L2;
-                          } else {
-                            return false;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                return true;
-              } else {
-                return true;
-              }
-            } else {
-              if (param0 != 8364) {
-                if (param0 != 338) {
-                  if (param0 != 8212) {
-                    L3: {
-                      if (param0 == 339) {
-                        break L3;
-                      } else {
-                        if (376 == param0) {
-                          break L3;
-                        } else {
-                          return false;
-                        }
-                      }
-                    }
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            }
-          } else {
+          if (param0 >= 160 &&
+            param0 <= 255) {
             return true;
           }
+          if (param0 != 8364 &&
+            param0 != 338 &&
+            param0 != 8212 &&
+            param0 != 339 &&
+            376 != param0) {
+            return false;
+          }
+          return true;
         }
+        if (param0 <= 126) {
+          return true;
+        }
+        if (param0 >= 160) {
+          if (param0 <= 255) {
+            return true;
+          }
+          if (param0 != 8364 &&
+            param0 != 338 &&
+            param0 != 8212 &&
+            param0 != 339 &&
+            376 != param0) {
+            return false;
+          }
+          return true;
+        }
+        if (param0 == 8364) {
+          return true;
+        }
+        if (param0 == 338) {
+          return true;
+        }
+        if (param0 == 8212) {
+          return true;
+        }
+        if (param0 != 339 &&
+          376 != param0) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(byte param0) {
         field_d = (bi[][]) null;
-        if (param0 <= 99) {
-          nb.a('￿', 111);
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 > 99) {
           field_b = null;
           field_c = null;
           return;
         }
+        nb.a('￿', 111);
+        field_b = null;
+        field_c = null;
     }
 
     final static void a(int param0) {
-        String var1;
+        String var1 = null;
+        String var1Lifetime1;
         if (!el.field_b) {
           throw new IllegalStateException();
-        } else {
-          if (null != ji.field_G) {
-            ji.field_G.i((byte) -104);
-            var1 = w.l(param0 ^ param0);
-            no.field_e = new ri(var1, (String) null, true, false, false);
-            le.field_e.a(true, ae.field_f);
-            ae.field_f.b(no.field_e, param0 + -18);
-            ae.field_f.n(param0 + 7363);
-            return;
-          } else {
-            var1 = w.l(param0 ^ param0);
-            no.field_e = new ri(var1, (String) null, true, false, false);
-            le.field_e.a(true, ae.field_f);
-            ae.field_f.b(no.field_e, param0 + -18);
-            ae.field_f.n(param0 + 7363);
-            return;
-          }
         }
+        if (null == ji.field_G) {
+          var1 = w.l(param0 ^ param0);
+          no.field_e = new ri(var1, (String) null, true, false, false);
+          le.field_e.a(true, ae.field_f);
+          ae.field_f.b(no.field_e, param0 - 18);
+          ae.field_f.n(param0 + 7363);
+          return;
+        }
+        ji.field_G.i((byte) -104);
+        var1Lifetime1 = w.l(param0 ^ param0);
+        no.field_e = new ri(var1Lifetime1, (String) null, true, false, false);
+        le.field_e.a(true, ae.field_f);
+        ae.field_f.b(no.field_e, param0 - 18);
+        ae.field_f.n(param0 + 7363);
     }
 
     final static byte[] a(String param0, int param1) {
@@ -152,46 +95,26 @@ final class nb {
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 94) {
-                break L1;
-              } else {
-                nb.a((byte) -57);
-                break L1;
-              }
-            }
-            stackIn_3_0 = ek.field_D.a(true, param0, "");
-            break L0;
+          if (param1 <= 94) {
+            nb.a((byte) -57);
           }
+          stackIn_3_0 = ek.field_D.a(true, param0, "");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("nb.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("nb.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

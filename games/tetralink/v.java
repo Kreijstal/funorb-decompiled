@@ -19,29 +19,20 @@ final class v extends mc {
     int field_n;
 
     final static void a(int param0) {
-        int var1;
-        int var2;
-        var1 = -74 / ((param0 - -57) / 45);
-        if (32 < wb.field_c) {
-          L0: {
-            var2 = wb.field_c % 32;
-            if (var2 != 0) {
-              break L0;
-            } else {
-              var2 = 32;
-              break L0;
-            }
-          }
-          qn.a(wb.field_c - var2, 128);
-          return;
-        } else {
+        int var1 = -74 / ((param0 + 57) / 45);
+        if (32 >= wb.field_c) {
           qn.a(0, 128);
           return;
         }
+        int var2 = wb.field_c % 32;
+        if (var2 == 0) {
+          var2 = 32;
+        }
+        qn.a(wb.field_c - var2, 128);
     }
 
     public static void b(byte param0) {
-        int var1 = 8 % ((param0 - -24) / 61);
+        int var1 = 8 % ((param0 + 24) / 61);
         field_A = null;
         field_x = null;
         field_w = null;

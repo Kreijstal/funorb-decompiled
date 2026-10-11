@@ -15,72 +15,58 @@ final class pl implements Iterator {
     static String field_f;
 
     public final boolean hasNext() {
-        ca[] fieldTemp$2 = null;
-        int fieldTemp$3 = 0;
+        ca[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         int var2;
         var2 = OrbDefence.field_D ? 1 : 0;
-        if (this.field_c == this.field_e.field_b[-1 + this.field_b]) {
-          L0: while (true) {
-            if (this.field_e.field_d > this.field_b) {
-              fieldTemp$2 = this.field_e.field_b;
-              fieldTemp$3 = this.field_b;
-              this.field_b = this.field_b + 1;
-              if (fieldTemp$2[fieldTemp$3].field_e != this.field_e.field_b[-1 + this.field_b]) {
-                this.field_c = this.field_e.field_b[this.field_b + -1].field_e;
-                return true;
-              } else {
-                this.field_c = this.field_e.field_b[-1 + this.field_b];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_c != this.field_e.field_b[-1 + this.field_b]) {
           return true;
         }
+        while (this.field_e.field_d > this.field_b) {
+          fieldTemp$0 = this.field_e.field_b;
+          fieldTemp$1 = this.field_b;
+          this.field_b = this.field_b + 1;
+          if (fieldTemp$0[fieldTemp$1].field_e != this.field_e.field_b[-1 + this.field_b]) {
+            this.field_c = this.field_e.field_b[this.field_b - 1].field_e;
+            return true;
+          }
+          this.field_c = this.field_e.field_b[-1 + this.field_b];
+        }
+        return false;
     }
 
     public final Object next() {
-        ca[] fieldTemp$2 = null;
-        int fieldTemp$3 = 0;
+        ca[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         int var2;
         ca var3;
         ca var4;
         var2 = OrbDefence.field_D ? 1 : 0;
-        if (this.field_e.field_b[this.field_b - 1] == this.field_c) {
-          L0: while (true) {
-            if (this.field_b < this.field_e.field_d) {
-              fieldTemp$2 = this.field_e.field_b;
-              fieldTemp$3 = this.field_b;
-              this.field_b = this.field_b + 1;
-              var3 = fieldTemp$2[fieldTemp$3].field_e;
-              if (this.field_e.field_b[-1 + this.field_b] != var3) {
-                this.field_c = var3.field_e;
-                this.field_g = var3;
-                return var3;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_e.field_b[this.field_b - 1] != this.field_c) {
           var4 = this.field_c;
           this.field_c = var4.field_e;
           this.field_g = var4;
           return var4;
         }
+        do {
+          if (this.field_b >= this.field_e.field_d) {
+            return null;
+          }
+          fieldTemp$0 = this.field_e.field_b;
+          fieldTemp$1 = this.field_b;
+          this.field_b = this.field_b + 1;
+          var3 = fieldTemp$0[fieldTemp$1].field_e;
+        } while (this.field_e.field_b[-1 + this.field_b] == var3);
+        this.field_c = var3.field_e;
+        this.field_g = var3;
+        return var3;
     }
 
     private final void a(byte param0) {
         this.field_b = 1;
         this.field_c = this.field_e.field_b[0].field_e;
         this.field_g = null;
-        if (param0 == 103) {
-          return;
-        } else {
+        if (param0 != 103) {
           this.field_e = (ek) null;
           return;
         }
@@ -89,31 +75,29 @@ final class pl implements Iterator {
     public static void a(int param0) {
         field_f = null;
         field_i = null;
-        if (param0 != -1) {
-          pl.a(-5);
-          field_a = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_a = null;
           field_h = null;
           return;
         }
+        pl.a(-5);
+        field_a = null;
+        field_h = null;
     }
 
     pl(ek param0) {
         this.field_g = null;
         try {
-            this.field_e = param0;
-            this.a((byte) 103);
+          this.field_e = param0;
+          this.a((byte) 103);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "pl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void remove() {
-        if (!(this.field_g != null)) {
-            throw new IllegalStateException();
+        if (this.field_g == null) {
+          throw new IllegalStateException();
         }
         this.field_g.b(57);
         this.field_g = null;

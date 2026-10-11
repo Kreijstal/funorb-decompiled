@@ -12,20 +12,18 @@ final class l {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 19545) {
-          field_b = (String) null;
-          field_d = null;
-          field_f = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 19545) {
           field_d = null;
           field_f = null;
           field_c = null;
           field_b = null;
           return;
         }
+        field_b = (String) null;
+        field_d = null;
+        field_f = null;
+        field_c = null;
+        field_b = null;
     }
 
     static {

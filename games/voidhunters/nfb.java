@@ -11,14 +11,14 @@ final class nfb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a(114, 88);
-            return (tv[]) ((Object) new lja[param1]);
+          this.a(114, 88);
+          return (tv[]) ((Object) new lja[param1]);
         }
         return (tv[]) ((Object) new lja[param1]);
     }
 
     public static void b(byte param0) {
-        int var1 = 76 / ((param0 - -65) / 53);
+        int var1 = 76 / ((param0 + 65) / 53);
         field_a = null;
     }
 

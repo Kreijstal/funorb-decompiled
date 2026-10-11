@@ -13,53 +13,47 @@ final class me {
 
     final boolean a(byte param0) {
         if (param0 <= 36) {
-            me.a(-118);
-            return this.field_b;
+          me.a(-118);
+          return this.field_b;
         }
         return this.field_b;
     }
 
     public static void a(int param0) {
-        if (param0 != 36) {
-          me.a(95);
-          field_e = null;
-          field_g = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 36) {
           field_e = null;
           field_g = null;
           field_a = null;
           field_c = null;
           return;
         }
+        me.a(95);
+        field_e = null;
+        field_g = null;
+        field_a = null;
+        field_c = null;
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
-        if (a.field_o.a(param3, (byte) 99)) {
-          if (!al.field_o.a(param1, (byte) 118)) {
-            jb.field_Sb[param1] = param0;
-            al.field_o.a(param1, -128);
-            if (param2 <= 65) {
-              field_a = (String) null;
-              hf.field_ob.a(new a(param1), false);
-              return;
-            } else {
-              hf.field_ob.a(new a(param1), false);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (!a.field_o.a(param3, (byte) 99)) {
           return;
         }
+        if (al.field_o.a(param1, (byte) 118)) {
+          return;
+        }
+        jb.field_Sb[param1] = param0;
+        al.field_o.a(param1, -128);
+        if (param2 > 65) {
+          hf.field_ob.a(new a(param1), false);
+          return;
+        }
+        field_a = (String) null;
+        hf.field_ob.a(new a(param1), false);
     }
 
     final boolean b(int param0) {
         if (param0 != 36) {
-            return false;
+          return false;
         }
         return this.field_h;
     }
@@ -68,7 +62,7 @@ final class me {
         this.field_h = true;
         this.field_b = param0 ? true : false;
         if (param1) {
-            me.a(118, -45, (byte) -83, -85);
+          me.a(118, -45, (byte) -83, -85);
         }
     }
 
@@ -76,40 +70,28 @@ final class me {
         this.field_h = false;
         this.field_b = false;
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static cn a(int param0, int param1, int param2, int param3, int param4) {
-        int var5;
-        cn var6;
-        int stackIn_3_0 = 0;
-        L0: {
-          if (gl.field_Lb) {
-            stackIn_3_0 = 36;
-            break L0;
-          } else {
-            stackIn_3_0 = 32;
-            break L0;
-          }
-        }
-        var5 = stackIn_3_0;
-        if (param0 != 32) {
-          return (cn) null;
-        } else {
+        cn var6 = null;
+        int var5 = !gl.field_Lb ? 32 : 36;
+        if (param0 == 32) {
           var6 = new cn(var5, var5);
           jh.a(var6);
           gf.b(param3, param2, -param3 - (param1 - var5), -param2 + (-param4 + var5), 16777215);
           jh.b();
           return var6;
         }
+        return (cn) null;
     }
 
     final String c(int param0) {
         if (param0 != -2085) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_d;
     }

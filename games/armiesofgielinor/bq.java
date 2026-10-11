@@ -14,7 +14,7 @@ final class bq {
         field_a = null;
         field_d = null;
         if (param0 != 30156) {
-            bq.a(-73);
+          bq.a(-73);
         }
     }
 

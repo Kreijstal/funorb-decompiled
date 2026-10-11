@@ -20,8 +20,8 @@ final class wa extends kc {
 
     public static void f(byte param0) {
         if (param0 >= -62) {
-            CharSequence var2 = (CharSequence) null;
-            wa.a(';', (CharSequence) null, (byte) -35);
+          CharSequence var2 = (CharSequence) null;
+          wa.a(';', (CharSequence) null, (byte) -35);
         }
         field_Db = null;
         field_Eb = null;
@@ -34,77 +34,43 @@ final class wa extends kc {
     }
 
     final static int a(char param0, CharSequence param1, byte param2) {
+        int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var3_int = 0;
-            if (param2 == -16) {
-              var4 = param1.length();
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= var4) {
-                  stackIn_10_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    if (param0 != param1.charAt(var5)) {
-                      break L2;
-                    } else {
-                      var3_int++;
-                      break L2;
-                    }
-                  }
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = -10;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var3_int = 0;
+          if (param2 != -16) {
+            stackIn_3_0 = -10;
+            return stackIn_3_0;
+          }
+          var4 = param1.length();
+          for (var5 = 0; var5 < var4; var5++) {
+            if (param0 == param1.charAt(var5)) {
+              var3_int++;
             }
           }
+          stackIn_10_0 = var3_int;
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var3);
-
-            stackIn_13_1 = new StringBuilder().append("wa.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("wa.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_10_0;
+          throw aa.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -19,30 +19,30 @@ final class aa extends kj {
         int var5 = 0;
         int var6 = Main.field_T;
         try {
-            var7 = na.field_r;
-            var8 = var7;
-            var8.h(param2, 0);
-            var8.field_i = var8.field_i + 1;
-            var4 = var8.field_i;
-            var8.b(-9469, 1);
-            var8.e(param0.field_p, param1 + 22742);
-            var8.e(param0.field_r, 26040);
-            var8.e(param0.field_m, 26040);
-            var8.a(-246, param0.field_k);
-            var8.a(-246, param0.field_l);
-            var8.a(param1 ^ -3096, param0.field_n);
-            var8.a(param1 + -3544, param0.field_s);
-            var8.b(-9469, param0.field_o.length);
-            for (var5 = 0; param0.field_o.length > var5; var5++) {
-                var7.a(-246, param0.field_o[var5]);
-            }
-            if (param1 != 3298) {
-                field_fb = (String) null;
-            }
-            var8.b(var4, (byte) 5);
-            var8.f(var8.field_i + -var4, 8049);
+          var7 = na.field_r;
+          var8 = var7;
+          var8.h(param2, 0);
+          var8.field_i = var8.field_i + 1;
+          var4 = var8.field_i;
+          var8.b(-9469, 1);
+          var8.e(param0.field_p, param1 + 22742);
+          var8.e(param0.field_r, 26040);
+          var8.e(param0.field_m, 26040);
+          var8.a(-246, param0.field_k);
+          var8.a(-246, param0.field_l);
+          var8.a(param1 ^ -3096, param0.field_n);
+          var8.a(param1 - 3544, param0.field_s);
+          var8.b(-9469, param0.field_o.length);
+          for (var5 = 0; param0.field_o.length > var5; var5++) {
+            var7.a(-246, param0.field_o[var5]);
+          }
+          if (param1 != 3298) {
+            field_fb = (String) null;
+          }
+          var8.b(var4, (byte) 5);
+          var8.f(var8.field_i - var4, 8049);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "aa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -50,8 +50,8 @@ final class aa extends kj {
         field_fb = null;
         field_db = null;
         if (param0 != -49) {
-            ad var2 = (ad) null;
-            aa.a((ad) null, 19, 27);
+          ad var2 = (ad) null;
+          aa.a((ad) null, 19, 27);
         }
     }
 

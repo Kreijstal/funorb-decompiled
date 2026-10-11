@@ -10,10 +10,10 @@ final class hua extends ksa {
 
     final static void a(aib param0, byte param1) {
         try {
-            hg.field_b = param0;
-            int var2_int = -25 % ((param1 - -15) / 51);
+          hg.field_b = param0;
+          int var2_int = -25 % ((param1 + 15) / 51);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "hua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "hua.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

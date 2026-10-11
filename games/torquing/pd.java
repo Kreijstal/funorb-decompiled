@@ -9,16 +9,16 @@ final class pd {
     final static void a(cb param0, boolean param1, int param2) {
         df var3 = null;
         try {
-            var3 = wa.field_d;
-            var3.f(96, param2);
-            if (!param1) {
-                cb var4 = (cb) null;
-                pd.a((cb) null, false, -95);
-            }
-            var3.b(90, param0.field_k);
-            var3.a(param0.field_l, 61);
+          var3 = wa.field_d;
+          var3.f(96, param2);
+          if (!param1) {
+            cb var4 = (cb) null;
+            pd.a((cb) null, false, -95);
+          }
+          var3.b(90, param0.field_k);
+          var3.a(param0.field_l, 61);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "pd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -26,8 +26,8 @@ final class pd {
         field_a = null;
         field_b = (byte[][]) null;
         if (param0) {
-            cb var2 = (cb) null;
-            pd.a((cb) null, false, -84);
+          cb var2 = (cb) null;
+          pd.a((cb) null, false, -84);
         }
     }
 

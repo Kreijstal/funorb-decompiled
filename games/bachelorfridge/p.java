@@ -9,10 +9,10 @@ final class p extends pu {
 
     final static void c(int param0) {
         int var2 = -3 / ((param0 - 19) / 61);
-        gb var1 = (gb) ((Object) ja.field_s.b((byte) 90));
+        gb var1 = (gb) (ja.field_s.b((byte) 90));
         if (var1 == null) {
-            vc.a((byte) -72);
-            return;
+          vc.a((byte) -72);
+          return;
         }
         pf var3 = ig.field_m;
         var3.f(-64);
@@ -31,69 +31,46 @@ final class p extends pu {
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
+        int var5Lifetime1;
         var6 = BachelorFridge.field_y;
         try {
-          L0: {
-            var3_int = param2;
-            var4 = new int[256];
-            var5 = 0;
-            L1: while (true) {
-              if ((var5 ^ -1) <= -257) {
-                var3_int += 256;
-                var7 = 0;
-                var5 = var7;
-                L2: while (true) {
-                  if (-257 >= (var7 ^ -1)) {
-                    break L0;
-                  } else {
-                    param1[var3_int] = (byte)(param1[var3_int] + -param0);
-                    var3_int = var3_int + var4[var7];
-                    var7++;
-                    continue L2;
-                  }
-                }
-              } else {
-                incrementValue$1 = var3_int;
-                var3_int++;
-                var4[var5] = dda.a(255, (int) param1[incrementValue$1]);
-                var5++;
-                continue L1;
-              }
-            }
+          var3_int = param2;
+          var4 = new int[256];
+          for (var5 = 0; var5 < 256; var5++) {
+            incrementValue$1 = var3_int;
+            var3_int++;
+            var4[var5] = dda.a(255, (int) param1[incrementValue$1]);
           }
+          var3_int += 256;
+          var7 = 0;
+          var5Lifetime1 = var7;
+          while (var7 < 256) {
+            param1[var3_int] = (byte)(param1[var3_int] - param0);
+            var3_int = var3_int + var4[var7];
+            var7++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var3);
-
-            stackIn_10_1 = new StringBuilder().append("p.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("p.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         field_m = null;
         if (param0 != 0) {
-            p.b(111);
+          p.b(111);
         }
         field_l = null;
         field_n = null;

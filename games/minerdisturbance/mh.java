@@ -14,71 +14,39 @@ final class mh implements uj {
         RuntimeException var2 = null;
         int var3 = 0;
         int[] var4 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              var2_int = 0;
-              if (param1 == -1) {
-                break L1;
-              } else {
-                var4 = (int[]) null;
-                mh.a((int[]) null, -37);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var2_int >= 8) {
-                stackIn_9_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (-1 == (param0[var2_int] ^ -1)) {
-                  var2_int++;
-                  continue L2;
-                } else {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
+          var2_int = 0;
+          if (param1 != -1) {
+            var4 = (int[]) null;
+            mh.a((int[]) null, -37);
           }
+          while (true) {
+            if (var2_int >= 8) {
+              return false;
+            }
+            if (param0[var2_int] == 0) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("mh.D(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("mh.D(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw lj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -86,7 +54,7 @@ final class mh implements uj {
         tb.field_a = 1;
         gd.field_x = 1;
         if (param0) {
-            field_c = -35;
+          field_c = -35;
         }
     }
 
@@ -96,52 +64,33 @@ final class mh implements uj {
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1_ref = null;
+        int var2Lifetime1;
         var4 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var1 = di.field_O;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  dn.field_w = ll.field_d;
-                  hb.field_b = hb.field_b + 1;
-                  if (cg.field_H >= 0) {
-                    L3: while (true) {
-                      if (dm.field_b == cg.field_H) {
-                        break L2;
-                      } else {
-                        var2 = ib.field_b[dm.field_b];
-                        dm.field_b = dm.field_b - -1 & 127;
-                        if (var2 < 0) {
-                          qd.field_O[var2 ^ -1] = false;
-                          continue L3;
-                        } else {
-                          qd.field_O[var2] = true;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if ((var2 ^ -1) <= -113) {
-                        cg.field_H = dm.field_b;
-                        break L2;
-                      } else {
-                        qd.field_O[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = di.field_O;
+          synchronized (var1) {
+            dn.field_w = ll.field_d;
+            hb.field_b = hb.field_b + 1;
+            if (cg.field_H < 0) {
+              for (var2 = 0; var2 < 112; var2++) {
+                qd.field_O[var2] = false;
+              }
+              cg.field_H = dm.field_b;
+            } else {
+              while (dm.field_b != cg.field_H) {
+                var2 = ib.field_b[dm.field_b];
+                dm.field_b = dm.field_b + 1 & 127;
+                if (var2 < 0) {
+                  qd.field_O[~var2] = false;
+                  continue;
                 }
-                var2 = -126 % ((param0 - -3) / 32);
-                ll.field_d = qf.field_n;
-                break L1;
+                qd.field_O[var2] = true;
               }
             }
-            break L0;
+            var2Lifetime1 = -126 % ((param0 + 3) / 32);
+            ll.field_d = qf.field_n;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -150,7 +99,7 @@ final class mh implements uj {
     }
 
     public final String a(byte param0) {
-        int var2 = -104 / ((param0 - -33) / 62);
+        int var2 = -104 / ((param0 + 33) / 62);
         return "Make Ore Silver";
     }
 

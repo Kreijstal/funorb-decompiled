@@ -23,67 +23,44 @@ final class co extends mc {
         vb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = new vb();
-              ((ca) ((Object) var3)).field_a = param1;
-              ((ca) ((Object) var3)).field_e = param0;
-              if (param2 == 118) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                co.a(101, (String) null, (byte) -45);
-                break L1;
-              }
-            }
-            stackIn_3_0 = (vb) (var3);
-            break L0;
+          var3 = new vb();
+          ((ca) ((Object) var3)).field_a = param1;
+          ((ca) ((Object) var3)).field_e = param0;
+          if (param2 != 118) {
+            var4 = (String) null;
+            co.a(101, (String) null, (byte) -45);
           }
+          stackIn_3_0 = var3;
+          return (ca) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("co.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("co.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
-        return (ca) ((Object) stackIn_3_0);
     }
 
     public static void a(int param0) {
-        String var2;
         field_r = null;
         field_o = null;
         field_p = null;
         field_s = null;
-        if (param0 != 22) {
-          var2 = (String) null;
-          co.a(-20, (String) null, (byte) 61);
-          field_t = null;
-          return;
-        } else {
+        if (param0 == 22) {
           field_t = null;
           return;
         }
+        String var2 = (String) null;
+        co.a(-20, (String) null, (byte) 61);
+        field_t = null;
     }
 
     static {

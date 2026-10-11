@@ -7,8 +7,8 @@ abstract class pd extends oh {
 
     final int a(byte param0, boolean param1) {
         if (param0 >= -53) {
-            field_g = (int[]) null;
-            return 16;
+          field_g = (int[]) null;
+          return 16;
         }
         return 16;
     }
@@ -16,7 +16,7 @@ abstract class pd extends oh {
     public static void a(boolean param0) {
         field_f = null;
         if (!param0) {
-            return;
+          return;
         }
         field_g = null;
     }
@@ -26,7 +26,7 @@ abstract class pd extends oh {
 
     final int a(int param0, int param1) {
         if (param0 != 1843275042) {
-            return 68;
+          return 68;
         }
         return q.field_a[ma.field_n[param1]].field_m;
     }

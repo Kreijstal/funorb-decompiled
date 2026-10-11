@@ -12,10 +12,10 @@ abstract class vb {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -7672) {
-            vb.a(119);
-            field_d = null;
-            field_c = null;
-            return;
+          vb.a(119);
+          field_d = null;
+          field_c = null;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -27,13 +27,13 @@ abstract class vb {
 
     final static void a(ea param0, int param1) {
         try {
-            ti.a((byte) 126);
-            eh.a(param0.field_D, param0.field_x, param0.field_A);
-            if (param1 < 124) {
-                vb.a(-15);
-            }
+          ti.a((byte) 126);
+          eh.a(param0.field_D, param0.field_x, param0.field_A);
+          if (param1 < 124) {
+            vb.a(-15);
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "vb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "vb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

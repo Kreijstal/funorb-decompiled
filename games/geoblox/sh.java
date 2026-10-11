@@ -86,10 +86,9 @@ abstract class sh extends el implements ql {
                   var9 = var13;
                 }
               } else {
-                if (var10 >= var13) {
-                  continue;
+                if (var10 < var13) {
+                  var10 = var13;
                 }
-                var10 = var13;
               }
             }
             sh.a(param0, param1, var9, param3, (byte) 118, var8, param6);

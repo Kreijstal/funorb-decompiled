@@ -18,25 +18,25 @@ final class uk extends qc {
         int var1_int = 0;
         int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            if (param0 != 22963) {
-                uk.d(-122);
-            }
-            for (var1_int = 0; var1_int < lk.field_h; var1_int++) {
-                an.field_F[var1_int] = null;
-            }
-            lk.field_h = 0;
+          if (param0 != 22963) {
+            uk.d(-122);
+          }
+          for (var1_int = 0; var1_int < lk.field_h; var1_int++) {
+            an.field_F[var1_int] = null;
+          }
+          lk.field_h = 0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "uk.B(" + param0 + ')');
         }
     }
 
     final long b(byte param0) {
         this.field_r = this.field_r + this.c(param0 ^ 28722);
-        if (!(this.field_r >= this.field_u)) {
-            return (-this.field_r + this.field_u) / 1000000L;
+        if (this.field_r < this.field_u) {
+          return (-this.field_r + this.field_u) / 1000000L;
         }
         if (param0 != -103) {
-            return 42L;
+          return 42L;
         }
         return 0L;
     }
@@ -45,21 +45,22 @@ final class uk extends qc {
         int var8 = 0;
         int var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 != -28757) {
-            this.a(122);
+          this.a(122);
         }
         long var2 = System.nanoTime();
         long var4 = var2 - this.field_t;
         this.field_t = var2;
-        if (var4 > -5000000000L && 5000000000L > var4) {
-            this.field_p[this.field_o] = var4;
-            this.field_o = (1 + this.field_o) % 10;
-            if (!(1 <= this.field_m)) {
-                this.field_m = this.field_m + 1;
-            }
+        if (var4 > -5000000000L &&
+          5000000000L > var4) {
+          this.field_p[this.field_o] = var4;
+          this.field_o = (1 + this.field_o) % 10;
+          if (1 > this.field_m) {
+            this.field_m = this.field_m + 1;
+          }
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= this.field_m; var8++) {
-            var6 = var6 + this.field_p[(10 + (this.field_o - var8)) % 10];
+          var6 = var6 + this.field_p[(10 + (this.field_o - var8)) % 10];
         }
         return var6 / (long)this.field_m;
     }
@@ -67,52 +68,31 @@ final class uk extends qc {
     final int a(long param0, int param1) {
         int var4;
         int var5;
-        L0: {
-          var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            uk.d(98);
-            break L0;
-          }
+        var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (param1 != 0) {
+          uk.d(98);
         }
-        if (this.field_r >= this.field_u) {
-          var4 = 0;
-          L1: while (true) {
-            L2: {
-              this.field_u = this.field_u + param0;
-              var4++;
-              if (var4 >= 10) {
-                break L2;
-              } else {
-                if ((this.field_u ^ -1L) > (this.field_r ^ -1L)) {
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if (this.field_u < this.field_r) {
-                this.field_u = this.field_r;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return var4;
-          }
-        } else {
+        if (this.field_r < this.field_u) {
           this.field_t = this.field_t + (this.field_u - this.field_r);
           this.field_r = this.field_r + (-this.field_r + this.field_u);
           this.field_u = this.field_u + param0;
           return 1;
         }
+        var4 = 0;
+        do {
+          this.field_u = this.field_u + param0;
+          var4++;
+        } while (var4 < 10 &&
+          this.field_u < this.field_r);
+        if (this.field_u < this.field_r) {
+          this.field_u = this.field_r;
+        }
+        return var4;
     }
 
     final void a(int param0) {
         if (this.field_u > this.field_r) {
-            this.field_r = this.field_r + (this.field_u - this.field_r);
+          this.field_r = this.field_r + (this.field_u - this.field_r);
         }
         this.field_t = (long)param0;
     }
@@ -120,7 +100,7 @@ final class uk extends qc {
     public static void d(int param0) {
         field_s = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_l = null;
         field_k = null;

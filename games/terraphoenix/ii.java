@@ -5,18 +5,15 @@ final class ii extends jb implements java.awt.event.MouseWheelListener {
     private int field_f;
 
     final synchronized int a(int param0) {
-        int var2;
-        java.awt.Component var3;
-        var2 = this.field_f;
-        if (param0 <= 90) {
-          var3 = (java.awt.Component) null;
-          this.a((java.awt.Component) null, (byte) 53);
-          this.field_f = 0;
-          return var2;
-        } else {
+        int var2 = this.field_f;
+        if (param0 > 90) {
           this.field_f = 0;
           return var2;
         }
+        java.awt.Component var3 = (java.awt.Component) null;
+        this.a((java.awt.Component) null, (byte) 53);
+        this.field_f = 0;
+        return var2;
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
@@ -36,7 +33,7 @@ final class ii extends jb implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 0) {
-            this.field_f = -57;
+          this.field_f = -57;
         }
     }
 }

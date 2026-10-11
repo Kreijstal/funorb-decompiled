@@ -9,8 +9,8 @@ final class gi {
 
     final static boolean a(boolean param0) {
         if (param0) {
-            gi.a(11);
-            return du.field_d == mh.field_b ? true : false;
+          gi.a(11);
+          return du.field_d == mh.field_b ? true : false;
         }
         return du.field_d == mh.field_b ? true : false;
     }
@@ -19,9 +19,9 @@ final class gi {
         field_a = null;
         field_c = null;
         if (param0 != 180) {
-            gi.a(-55);
-            field_d = null;
-            return;
+          gi.a(-55);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

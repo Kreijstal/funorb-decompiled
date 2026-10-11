@@ -15,15 +15,7 @@ final class od extends hl {
     int field_j;
 
     public static void a(int param0) {
-        if (param0 <= 22) {
-          od.a(true);
-          field_q = null;
-          field_o = null;
-          field_i = null;
-          field_m = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 > 22) {
           field_q = null;
           field_o = null;
           field_i = null;
@@ -31,12 +23,18 @@ final class od extends hl {
           field_r = null;
           return;
         }
+        od.a(true);
+        field_q = null;
+        field_o = null;
+        field_i = null;
+        field_m = null;
+        field_r = null;
     }
 
     final static w a(boolean param0) {
         if (param0) {
-            od.a(-87);
-            return (w) ((Object) new mk());
+          od.a(-87);
+          return (w) ((Object) new mk());
         }
         return (w) ((Object) new mk());
     }

@@ -9,48 +9,26 @@ abstract class rb {
     String field_a;
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != -6070) {
-          L0: {
-            rb.a(-47, -38, 120);
-            if (0 == (2048 & param2)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (0 == (2048 & param2)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -6070) {
+          return 0 != (2048 & param2) ? true : false;
         }
+        rb.a(-47, -38, 120);
+        return 0 != (2048 & param2) ? true : false;
     }
 
     final java.net.Socket a(boolean param0) throws IOException {
-        if (param0) {
-          this.field_b = 48;
-          return new java.net.Socket(this.field_a, this.field_b);
-        } else {
+        if (!param0) {
           return new java.net.Socket(this.field_a, this.field_b);
         }
+        this.field_b = 48;
+        return new java.net.Socket(this.field_a, this.field_b);
     }
 
     public static void a(byte param0) {
         if (param0 >= -71) {
-            rb.a(-112, -32, -122);
-            field_c = null;
-            return;
+          rb.a(-112, -32, -122);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

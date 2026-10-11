@@ -15,20 +15,20 @@ final class up implements Iterator {
 
     public final void remove() {
         if (null == this.field_b) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_b.a(true);
         this.field_b = null;
     }
 
     final static void b(int param0) {
-        int stackIn_11_0 = 0;
+        int var3 = 0;
+        boolean stackIn_11_0 = false;
         pd stackIn_16_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
@@ -36,90 +36,52 @@ final class up implements Iterator {
         int var8 = 0;
         pd var9 = null;
         int var10 = 0;
+        int var4Lifetime1;
         var10 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            var1_int = mc.field_e - ch.field_i;
-            ch.field_i = aq.field_x - (var1_int >> -1147096319);
-            mc.field_e = ch.field_i - -var1_int;
-            eb.field_M = pm.field_Q + -(pl.field_F >> -1997436479);
-            var2 = eb.field_M;
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= eo.field_e.length) {
-                var4 = -17 / ((param0 - -59) / 46);
-                break L0;
+          var1_int = mc.field_e - ch.field_i;
+          ch.field_i = aq.field_x - (var1_int >> 1);
+          mc.field_e = ch.field_i + var1_int;
+          eb.field_M = pm.field_Q - (pl.field_F >> 1);
+          var2 = eb.field_M;
+          for (var3 = 0; var3 < eo.field_e.length; var3++) {
+            var4 = dn.field_a[var3];
+            if (var4 < 0) {
+              var5 = kk.field_x;
+            } else {
+              if (var4 == mo.field_Jb.field_d) {
+                var5 = ua.field_N;
               } else {
-                L2: {
-                  var4 = dn.field_a[var3];
-                  if (-1 < (var4 ^ -1)) {
-                    var5 = kk.field_x;
-                    break L2;
-                  } else {
-                    if (var4 == mo.field_Jb.field_d) {
-                      var5 = ua.field_N;
-                      break L2;
-                    } else {
-                      var5 = sb.field_c;
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  var6 = eo.field_e[var3];
-                  if ((var4 ^ -1) > -1) {
-                    stackIn_11_0 = 0;
-                    break L3;
-                  } else {
-                    stackIn_11_0 = 1;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var7 = vh.a(stackIn_11_0 != 0, -76, var6);
-                  var8 = -(var7 >> 518455937) + aq.field_x;
-                  if (-1 >= (var4 ^ -1)) {
-                    L5: {
-                      var2 = var2 + pb.field_b;
-                      if (var4 == mo.field_Jb.field_d) {
-                        stackIn_16_0 = vk.field_I;
-                        break L5;
-                      } else {
-                        stackIn_16_0 = li.field_E;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      var9 = stackIn_16_0;
-                      if (var9 != null) {
-                        var9.a(var2, -wb.field_db + var8, (wb.field_db << -1309194655) + var7, (ne.field_tb << 1954103137) + po.field_n, 12018);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var2 = var2 + ne.field_tb;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L7: {
-                  if (-1 < (var4 ^ -1)) {
-                    e.field_c.c(var6, var8, mg.field_H + var2, var5, -1);
-                    var2 = var2 + dq.field_l;
-                    break L7;
-                  } else {
-                    wn.field_u.c(var6, var8, var2 - -tk.field_n, var5, -1);
-                    var2 = var2 + (po.field_n + (pb.field_b + ne.field_tb));
-                    break L7;
-                  }
-                }
-                var3++;
-                continue L1;
+                var5 = sb.field_c;
               }
             }
+            var6 = eo.field_e[var3];
+            stackIn_11_0 = !(var4 < 0);
+            var7 = vh.a(stackIn_11_0, -76, var6);
+            var8 = -(var7 >> 1) + aq.field_x;
+            if (var4 >= 0) {
+              var2 = var2 + pb.field_b;
+              if (var4 == mo.field_Jb.field_d) {
+                stackIn_16_0 = vk.field_I;
+              } else {
+                stackIn_16_0 = li.field_E;
+              }
+              var9 = stackIn_16_0;
+              if (var9 != null) {
+                var9.a(var2, -wb.field_db + var8, (wb.field_db << 1) + var7, (ne.field_tb << 1) + po.field_n, 12018);
+              }
+              var2 = var2 + ne.field_tb;
+            }
+            if (var4 < 0) {
+              e.field_c.c(var6, var8, mg.field_H + var2, var5, -1);
+              var2 = var2 + dq.field_l;
+            } else {
+              wn.field_u.c(var6, var8, var2 + tk.field_n, var5, -1);
+              var2 = var2 + (po.field_n + (pb.field_b + ne.field_tb));
+            }
           }
+          var4Lifetime1 = -17 / ((param0 + 59) / 46);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -130,22 +92,23 @@ final class up implements Iterator {
     public final Object next() {
         br[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
-        br var1 = null;
-        int var2 = ZombieDawnMulti.field_E ? 1 : 0;
+        br var1;
+        int var2;
+        var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_h.field_a[-1 + this.field_a] != this.field_e) {
-            var1 = this.field_e;
-            this.field_e = var1.field_d;
-            this.field_b = var1;
-            return var1;
+          var1 = this.field_e;
+          this.field_e = var1.field_d;
+          this.field_b = var1;
+          return var1;
         }
         do {
-            if (this.field_a >= this.field_h.field_d) {
-                return null;
-            }
-            fieldTemp$0 = this.field_h.field_a;
-            fieldTemp$1 = this.field_a;
-            this.field_a = this.field_a + 1;
-            var1 = fieldTemp$0[fieldTemp$1].field_d;
+          if (this.field_a >= this.field_h.field_d) {
+            return null;
+          }
+          fieldTemp$0 = this.field_h.field_a;
+          fieldTemp$1 = this.field_a;
+          this.field_a = this.field_a + 1;
+          var1 = fieldTemp$0[fieldTemp$1].field_d;
         } while (this.field_h.field_a[this.field_a - 1] == var1);
         this.field_e = var1.field_d;
         this.field_b = var1;
@@ -153,51 +116,45 @@ final class up implements Iterator {
     }
 
     final static void a(boolean param0) {
-        dm.field_ac.a(18, 0, -(tb.field_u ? 40 + (2 + (qa.field_o - -2)) : 0) + pd.field_b.field_zb, 0, -3344);
+        dm.field_ac.a(18, 0, -(tb.field_u ? 40 + (2 + (qa.field_o + 2)) : 0) + pd.field_b.field_zb, 0, -3344);
         mo.field_Hb.a(18, 0, 42 + qa.field_o, -2 + (pd.field_b.field_zb + (-qa.field_o - 40)), -3344);
         if (param0) {
-            field_g = (cj) null;
+          field_g = (cj) null;
         }
-        hf.field_e.a(qa.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z + -20, -31465, 20);
+        hf.field_e.a(qa.field_o, 2, pd.field_b.field_zb, 0, pd.field_b.field_z - 20, -31465, 20);
     }
 
     public final boolean hasNext() {
-        br[] fieldTemp$4 = null;
-        int fieldTemp$5 = 0;
+        br[] fieldTemp$0 = null;
+        int fieldTemp$1 = 0;
         int var2;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (this.field_h.field_a[-1 + this.field_a] != this.field_e) {
           return true;
-        } else {
-          L0: while (true) {
-            if (this.field_a >= this.field_h.field_d) {
-              return false;
-            } else {
-              fieldTemp$4 = this.field_h.field_a;
-              fieldTemp$5 = this.field_a;
-              this.field_a = this.field_a + 1;
-              if (fieldTemp$4[fieldTemp$5].field_d != this.field_h.field_a[-1 + this.field_a]) {
-                this.field_e = this.field_h.field_a[this.field_a - 1].field_d;
-                return true;
-              } else {
-                this.field_e = this.field_h.field_a[-1 + this.field_a];
-                continue L0;
-              }
-            }
-          }
         }
+        while (this.field_a < this.field_h.field_d) {
+          fieldTemp$0 = this.field_h.field_a;
+          fieldTemp$1 = this.field_a;
+          this.field_a = this.field_a + 1;
+          if (fieldTemp$0[fieldTemp$1].field_d != this.field_h.field_a[-1 + this.field_a]) {
+            this.field_e = this.field_h.field_a[this.field_a - 1].field_d;
+            return true;
+          }
+          this.field_e = this.field_h.field_a[-1 + this.field_a];
+        }
+        return false;
     }
 
     final static String a(int param0) {
         int var1 = 57 % ((param0 - 77) / 49);
         if (cb.field_l) {
-            return null;
+          return null;
         }
         if (l.field_a < um.field_h) {
-            return null;
+          return null;
         }
         if (!(br.field_a + um.field_h <= l.field_a)) {
-            return kg.field_k;
+          return kg.field_k;
         }
         return null;
     }
@@ -213,17 +170,17 @@ final class up implements Iterator {
         field_f = null;
         field_c = null;
         if (param0 >= -8) {
-            field_d = -60;
+          field_d = -60;
         }
     }
 
     up(wh param0) {
         this.field_b = null;
         try {
-            this.field_h = param0;
-            this.c(1);
+          this.field_h = param0;
+          this.c(1);
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,33 +13,31 @@ final class ee implements Iterator {
     static int field_e;
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = TrackController.field_F ? 1 : 0;
-        if (this.field_g == this.field_a.field_c[this.field_b - 1]) {
-          L0: while (true) {
-            if (this.field_a.field_a > this.field_b) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              if (this.field_a.field_c[fieldTemp$1].field_h == this.field_a.field_c[-1 + this.field_b]) {
-                this.field_g = this.field_a.field_c[this.field_b + -1];
-                continue L0;
-              } else {
-                this.field_g = this.field_a.field_c[-1 + this.field_b].field_h;
-                return true;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_g != this.field_a.field_c[this.field_b - 1]) {
           return true;
         }
+        while (true) {
+          if (this.field_a.field_a <= this.field_b) {
+            return false;
+          }
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          if (this.field_a.field_c[fieldTemp$0].field_h == this.field_a.field_c[-1 + this.field_b]) {
+            this.field_g = this.field_a.field_c[this.field_b - 1];
+            continue;
+          }
+          break;
+        }
+        this.field_g = this.field_a.field_c[-1 + this.field_b].field_h;
+        return true;
     }
 
     public final void remove() {
-        if (!(null != this.field_d)) {
-            throw new IllegalStateException();
+        if (null == this.field_d) {
+          throw new IllegalStateException();
         }
         this.field_d.a(-98);
         this.field_d = null;
@@ -47,9 +45,9 @@ final class ee implements Iterator {
 
     final static void a(java.math.BigInteger param0, be param1, java.math.BigInteger param2, int param3, be param4) {
         try {
-            ha.a(param2, param0, param4.field_k, param4.field_j, param3, (byte) 77, param1);
+          ha.a(param2, param0, param4.field_k, param4.field_j, param3, (byte) 77, param1);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "ee.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,35 +59,28 @@ final class ee implements Iterator {
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
-        Object var3;
-        fc var3_ref;
+        fc var3;
         fc var4;
         var2 = TrackController.field_F ? 1 : 0;
-        if (this.field_g == this.field_a.field_c[-1 + this.field_b]) {
-          L0: while (true) {
-            if (this.field_b < this.field_a.field_a) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              var3_ref = this.field_a.field_c[fieldTemp$1].field_h;
-              if (var3_ref == this.field_a.field_c[-1 + this.field_b]) {
-                continue L0;
-              } else {
-                this.field_g = var3_ref.field_h;
-                this.field_d = var3_ref;
-                return var3_ref;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_g != this.field_a.field_c[-1 + this.field_b]) {
           var4 = this.field_g;
           this.field_g = var4.field_h;
           this.field_d = var4;
           return var4;
         }
+        do {
+          if (this.field_b >= this.field_a.field_a) {
+            return null;
+          }
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          var3 = this.field_a.field_c[fieldTemp$0].field_h;
+        } while (var3 == this.field_a.field_c[-1 + this.field_b]);
+        this.field_g = var3.field_h;
+        this.field_d = var3;
+        return var3;
     }
 
     final static qj a(int param0, int param1, byte param2) {
@@ -99,8 +90,8 @@ final class ee implements Iterator {
         int var4 = 0;
         int var5 = -14 / ((param2 - 55) / 41);
         while (var3.field_z.length > var4) {
-            var7.field_z[var4] = param0;
-            var4++;
+          var7.field_z[var4] = param0;
+          var4++;
         }
         return var3;
     }
@@ -108,24 +99,21 @@ final class ee implements Iterator {
     ee(ga param0) {
         this.field_d = null;
         try {
-            this.field_a = param0;
-            this.a((byte) 73);
+          this.field_a = param0;
+          this.a((byte) 73);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "ee.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
-        be var2;
-        if (param0 != 31399) {
-          var2 = (be) null;
-          ee.a((java.math.BigInteger) null, (be) null, (java.math.BigInteger) null, -9, (be) null);
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 31399) {
           field_f = null;
           return;
         }
+        be var2 = (be) null;
+        ee.a((java.math.BigInteger) null, (be) null, (java.math.BigInteger) null, -9, (be) null);
+        field_f = null;
     }
 
     static {

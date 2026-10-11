@@ -46,9 +46,7 @@ final class re {
     public static void a(byte param0) {
         field_y = null;
         field_m = null;
-        if (param0 != -37) {
-          return;
-        } else {
+        if (param0 == -37) {
           field_a = null;
           field_i = null;
           field_K = (byte[][]) null;

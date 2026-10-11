@@ -9,24 +9,20 @@ final class hn {
     static int field_b;
 
     final synchronized static long a(byte param0) {
-        long var1;
-        var1 = System.currentTimeMillis();
-        if ((gb.field_e ^ -1L) >= (var1 ^ -1L)) {
-          gb.field_e = var1;
-          if (param0 != 80) {
-            return 95L;
-          } else {
-            return var1 + td.field_c;
-          }
-        } else {
+        long var1 = System.currentTimeMillis();
+        if (gb.field_e > var1) {
           td.field_c = td.field_c + (-var1 + gb.field_e);
           gb.field_e = var1;
-          if (param0 != 80) {
-            return 95L;
-          } else {
+          if (param0 == 80) {
             return var1 + td.field_c;
           }
+          return 95L;
         }
+        gb.field_e = var1;
+        if (param0 == 80) {
+          return var1 + td.field_c;
+        }
+        return 95L;
     }
 
     public static void a(boolean param0) {
@@ -34,7 +30,7 @@ final class hn {
         field_d = null;
         field_e = null;
         if (param0) {
-            hn.a((byte) 43);
+          hn.a((byte) 43);
         }
     }
 

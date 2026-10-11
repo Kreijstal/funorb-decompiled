@@ -11,9 +11,9 @@ final class ud {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -94) {
-            ud.a((byte) -8);
-            field_d = null;
-            return;
+          ud.a((byte) -8);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

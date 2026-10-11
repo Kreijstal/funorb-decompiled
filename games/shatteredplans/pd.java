@@ -13,92 +13,74 @@ final class pd extends hb {
 
     final oh a(byte param0) {
         if (param0 <= 99) {
-            pd.b(11);
-            return (oh) ((Object) this.field_i.a(true));
+          pd.b(11);
+          return (oh) ((Object) this.field_i.a(true));
         }
         return (oh) ((Object) this.field_i.a(true));
     }
 
     final static String a(byte param0, long param1) {
-        StringBuilder discarded$1 = null;
-        int var3;
-        long var4;
-        StringBuilder var6;
-        int var7;
-        long var8;
-        int var10;
-        int var11;
-        int var12;
-        var12 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1 > 0L) {
-          if (6582952005840035281L > param1) {
-            if (0L == param1 % 37L) {
-              return null;
-            } else {
-              var3 = 0;
-              var4 = param1;
-              L0: while (true) {
-                if (var4 == 0L) {
-                  var7 = -67 / ((param0 - 32) / 63);
-                  var6 = new StringBuilder(var3);
-                  L1: while (true) {
-                    if ((param1 ^ -1L) == -1L) {
-                      var6.reverse();
-                      var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                      return var6.toString();
-                    } else {
-                      L2: {
-                        var8 = param1;
-                        param1 = param1 / 37L;
-                        var10 = k.field_f[(int)(var8 + -(param1 * 37L))];
-                        if (var10 != 95) {
-                          break L2;
-                        } else {
-                          var11 = -1 + var6.length();
-                          var6.setCharAt(var11, Character.toUpperCase(var6.charAt(var11)));
-                          var10 = 160;
-                          break L2;
-                        }
-                      }
-                      discarded$1 = var6.append((char) var10);
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var3++;
-                  var4 = var4 / 37L;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return null;
-          }
-        } else {
+        int var3 = 0;
+        long var4 = 0L;
+        StringBuilder var6 = null;
+        long var8 = 0L;
+        int var10 = 0;
+        int var11 = 0;
+        StringBuilder discarded$0 = null;
+        int var12 = ShatteredPlansClient.field_F ? 1 : 0;
+        if (param1 <= 0L) {
           return null;
         }
+        if (6582952005840035281L <= param1) {
+          return null;
+        }
+        if (0L != param1 % 37L) {
+          var3 = 0;
+          var4 = param1;
+          while (var4 != 0L) {
+            var3++;
+            var4 = var4 / 37L;
+          }
+          int var7 = -67 / ((param0 - 32) / 63);
+          var6 = new StringBuilder(var3);
+          while (param1 != 0L) {
+            var8 = param1;
+            param1 = param1 / 37L;
+            var10 = k.field_f[(int)(var8 - param1 * 37L)];
+            if (var10 == 95) {
+              var11 = -1 + var6.length();
+              var6.setCharAt(var11, Character.toUpperCase(var6.charAt(var11)));
+              var10 = 160;
+            }
+            discarded$0 = var6.append((char) var10);
+          }
+          var6.reverse();
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+          return var6.toString();
+        }
+        return null;
     }
 
     final int b(byte param0) {
         if (param0 != -61) {
-            this.b((byte) 6);
-            return this.field_i.b(0);
+          this.b((byte) 6);
+          return this.field_i.b(0);
         }
         return this.field_i.b(0);
     }
 
     pd(el param0) {
         try {
-            this.field_i = param0;
+          this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final oh a(boolean param0) {
         if (param0) {
-            field_l = -98L;
-            return (oh) ((Object) this.field_i.a((byte) -68));
+          field_l = -98L;
+          return (oh) ((Object) this.field_i.a((byte) -68));
         }
         return (oh) ((Object) this.field_i.a((byte) -68));
     }
@@ -106,20 +88,18 @@ final class pd extends hb {
     final static void a(int param0) {
         hd.field_q = (byte[][]) null;
         cm.field_g = null;
-        if (param0 != 0) {
-          pd.b(-53);
-          cf.field_H = null;
-          mc.field_s = null;
-          sj.field_a = null;
-          eo.field_fb = null;
-          return;
-        } else {
+        if (param0 == 0) {
           cf.field_H = null;
           mc.field_s = null;
           sj.field_a = null;
           eo.field_fb = null;
           return;
         }
+        pd.b(-53);
+        cf.field_H = null;
+        mc.field_s = null;
+        sj.field_a = null;
+        eo.field_fb = null;
     }
 
     public static void b(int param0) {
@@ -129,7 +109,7 @@ final class pd extends hb {
         field_m = null;
         field_h = null;
         if (param0 != 0) {
-            field_m = (qf) null;
+          field_m = (qf) null;
         }
     }
 

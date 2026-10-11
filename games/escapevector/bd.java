@@ -14,7 +14,7 @@ final class bd extends hg {
         field_m = null;
         field_h = null;
         if (param0 >= -45) {
-            return;
+          return;
         }
         field_g = null;
         field_l = null;
@@ -22,9 +22,9 @@ final class bd extends hg {
 
     bd(byte[] param0) {
         try {
-            this.field_j = param0;
+          this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -17,7 +17,7 @@ final class ga extends RuntimeException {
         field_f = null;
         field_c = null;
         if (param0 != 72) {
-            ga.a((byte) 101);
+          ga.a((byte) 101);
         }
     }
 

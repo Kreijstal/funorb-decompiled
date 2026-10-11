@@ -9,21 +9,21 @@ final class sm {
 
     final static void a(float param0, boolean param1, boolean param2, String param3) {
         try {
-            if (!(null != md.field_i)) {
-                md.field_i = new vc(tm.field_l, vd.field_X);
-                tm.field_l.a(0, md.field_i);
-            }
-            md.field_i.a(param0, false, param2, param3);
-            df.c();
-            ci.b(param1, -127);
+          if (null == md.field_i) {
+            md.field_i = new vc(tm.field_l, vd.field_X);
+            tm.field_l.a(0, md.field_i);
+          }
+          md.field_i.a(param0, false, param2, param3);
+          df.c();
+          ci.b(param1, -127);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -1) {
-            return;
+          return;
         }
         field_d = null;
         field_b = (byte[][]) null;

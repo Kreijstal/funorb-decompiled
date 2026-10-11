@@ -17,84 +17,48 @@ final class tk {
     final static void b(int param0, int param1) {
         qf.field_c = 0;
         pj.field_f = new int[3];
-        int var2 = -114 / ((param1 - -25) / 36);
+        int var2 = -114 / ((param1 + 25) / 36);
         ik.field_i = new ld[param0 * 15];
         fh.field_b = param0;
     }
 
     final boolean a(byte param0) {
-        if (param0 <= -63) {
-          if (dl.field_j != this) {
-            if (this != gi.field_d) {
-              if (ik.field_e == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 > -63) {
           return false;
         }
+        if (dl.field_j == this) {
+          return true;
+        }
+        if (this == gi.field_d) {
+          return true;
+        }
+        if (ik.field_e != this) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(int param0) {
-        if (param0 != -2919) {
-          L0: {
-            field_e = 41;
-            if (null != mh.field_d) {
-              mh.field_d.c();
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == -2919) {
+          if (null != mh.field_d) {
+            mh.field_d.c();
           }
-          L1: {
-            if (null != kn.field_F) {
-              kn.field_F.c();
-              break L1;
-            } else {
-              break L1;
-            }
+          if (null != kn.field_F) {
+            kn.field_F.c();
           }
           return;
-        } else {
-          L2: {
-            if (null != mh.field_d) {
-              mh.field_d.c();
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (null != kn.field_F) {
-              kn.field_F.c();
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+        }
+        field_e = 41;
+        if (null != mh.field_d) {
+          mh.field_d.c();
+        }
+        if (null != kn.field_F) {
+          kn.field_F.c();
         }
     }
 
     public static void b(byte param0) {
-        if (param0 != 77) {
-          tk.a(-49);
-          field_h = null;
-          field_f = null;
-          field_c = null;
-          field_g = null;
-          field_a = null;
-          field_i = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 77) {
           field_h = null;
           field_f = null;
           field_c = null;
@@ -104,45 +68,54 @@ final class tk {
           field_d = null;
           return;
         }
+        tk.a(-49);
+        field_h = null;
+        field_f = null;
+        field_c = null;
+        field_g = null;
+        field_a = null;
+        field_i = null;
+        field_d = null;
     }
 
     final static boolean a(int param0, int param1) {
         try {
-            if (!(param1 > field_h.field_l)) {
-                return true;
-            }
-            if (null == lj.field_a) {
-                return false;
-            }
-            int var3 = 64 / ((param0 - -77) / 42);
-            int var2_int = lj.field_a.c(0);
-            if (0 < var2_int) {
-                if (!(param1 - field_h.field_l >= var2_int)) {
-                    var2_int = param1 - field_h.field_l;
-                }
-                lj.field_a.a(field_h.field_o, var2_int, (byte) -87, field_h.field_l);
-                ml.field_d = ud.a(2);
-                field_h.field_l = field_h.field_l + var2_int;
-                if (param1 > field_h.field_l) {
-                    return false;
-                }
-                field_h.field_l = 0;
-                return true;
-            }
-            try {
-                if (false) throw (IOException) null;
-                if (0 <= var2_int && -30001L <= (ea.i((byte) -128) ^ -1L)) {
-                    return false;
-                }
-                si.d(65280);
-            } catch (IOException iOException) {
-                si.d(65280);
-            }
+          if (!(param1 > field_h.field_l)) {
+            return true;
+          }
+          if (null == lj.field_a) {
             return false;
+          }
+          int var3 = 64 / ((param0 + 77) / 42);
+          int var2_int = lj.field_a.c(0);
+          if (0 < var2_int) {
+            if (!(param1 - field_h.field_l >= var2_int)) {
+              var2_int = param1 - field_h.field_l;
+            }
+            lj.field_a.a(field_h.field_o, var2_int, (byte) -87, field_h.field_l);
+            ml.field_d = ud.a(2);
+            field_h.field_l = field_h.field_l + var2_int;
+            if (param1 > field_h.field_l) {
+              return false;
+            }
+            field_h.field_l = 0;
+            return true;
+          }
+          try {
+            if (false) throw (IOException) null;
+            if (0 <= var2_int &&
+              ea.i((byte) -128) <= 30000L) {
+              return false;
+            }
+            si.d(65280);
+          } catch (IOException iOException) {
+            si.d(65280);
+          }
+          return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

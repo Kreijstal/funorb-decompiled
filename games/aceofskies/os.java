@@ -9,28 +9,28 @@ final class os extends ag {
 
     final byte[] a(boolean param0) {
         if (!param0) {
-            field_w = 67;
-            if (!(!this.field_p)) {
-                throw new RuntimeException();
-            }
-            return this.field_u;
-        }
-        if (!(!this.field_p)) {
+          field_w = 67;
+          if (this.field_p) {
             throw new RuntimeException();
+          }
+          return this.field_u;
+        }
+        if (this.field_p) {
+          throw new RuntimeException();
         }
         return this.field_u;
     }
 
     final int e(int param0) {
         if (param0 != 21513) {
-            this.a(true);
-            if (!(!this.field_p)) {
-                return 0;
-            }
-            return 100;
-        }
-        if (!(!this.field_p)) {
+          this.a(true);
+          if (this.field_p) {
             return 0;
+          }
+          return 100;
+        }
+        if (this.field_p) {
+          return 0;
         }
         return 100;
     }

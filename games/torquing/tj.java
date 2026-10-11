@@ -9,18 +9,16 @@ final class tj extends q {
     static int field_l;
 
     public static void a(int param0) {
-        if (param0 != -36) {
-          tj.a(-48);
-          field_j = null;
-          field_n = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 == -36) {
           field_j = null;
           field_n = null;
           field_m = null;
           return;
         }
+        tj.a(-48);
+        field_j = null;
+        field_n = null;
+        field_m = null;
     }
 
     tj(int param0) {
@@ -32,171 +30,130 @@ final class tj extends q {
         int var3;
         var3 = Torquing.field_u;
         var2 = param0;
-        if (0 != var2) {
-          if (1 != var2) {
-            if ((var2 ^ -1) != -3) {
-              if ((var2 ^ -1) != -4) {
-                if ((var2 ^ -1) != -5) {
-                  if (var2 != 5) {
-                    if (var2 != 6) {
-                      if (7 != var2) {
-                        if (var2 != 8) {
-                          if (9 != var2) {
-                            if ((var2 ^ -1) != -11) {
-                              if (11 != var2) {
-                                if (12 != var2) {
-                                  if (-14 != (var2 ^ -1)) {
-                                    if ((var2 ^ -1) != -15) {
-                                      if ((var2 ^ -1) != -16) {
-                                        if (-17 != (var2 ^ -1)) {
-                                          if ((var2 ^ -1) != -18) {
-                                            if (var2 != 18) {
-                                              if (var2 != 19) {
-                                                if ((var2 ^ -1) != -21) {
-                                                  if (var2 != 21) {
-                                                    if (-23 != (var2 ^ -1)) {
-                                                      if (var2 != 23) {
-                                                        if (-25 != (var2 ^ -1)) {
-                                                          if (25 != var2) {
-                                                            if ((var2 ^ -1) != -27) {
-                                                              if (var2 != 27) {
-                                                                if (28 != var2) {
-                                                                  if (29 != var2) {
-                                                                    if ((var2 ^ -1) != -31) {
-                                                                      if (-32 != (var2 ^ -1)) {
-                                                                        if (-33 != (var2 ^ -1)) {
-                                                                          if ((var2 ^ -1) != -34) {
-                                                                            if (-35 != (var2 ^ -1)) {
-                                                                              if ((var2 ^ -1) != -36) {
-                                                                                if (36 != var2) {
-                                                                                  if (37 != var2) {
-                                                                                    if ((var2 ^ -1) != -39) {
-                                                                                      if (-40 != (var2 ^ -1)) {
-                                                                                        if (param1 == 37) {
-                                                                                          return null;
-                                                                                        } else {
-                                                                                          return (am) null;
-                                                                                        }
-                                                                                      } else {
-                                                                                        return (am) ((Object) new ro());
-                                                                                      }
-                                                                                    } else {
-                                                                                      return (am) ((Object) new rd());
-                                                                                    }
-                                                                                  } else {
-                                                                                    return (am) ((Object) new vk());
-                                                                                  }
-                                                                                } else {
-                                                                                  return (am) ((Object) new od());
-                                                                                }
-                                                                              } else {
-                                                                                return (am) ((Object) new wb());
-                                                                              }
-                                                                            } else {
-                                                                              return (am) ((Object) new rj());
-                                                                            }
-                                                                          } else {
-                                                                            return (am) ((Object) new wh());
-                                                                          }
-                                                                        } else {
-                                                                          return (am) ((Object) new nl());
-                                                                        }
-                                                                      } else {
-                                                                        return (am) ((Object) new hb());
-                                                                      }
-                                                                    } else {
-                                                                      return (am) ((Object) new mf());
-                                                                    }
-                                                                  } else {
-                                                                    return (am) ((Object) new s());
-                                                                  }
-                                                                } else {
-                                                                  return (am) ((Object) new rg());
-                                                                }
-                                                              } else {
-                                                                return (am) ((Object) new wp());
-                                                              }
-                                                            } else {
-                                                              return (am) ((Object) new jg());
-                                                            }
-                                                          } else {
-                                                            return (am) ((Object) new cq());
-                                                          }
-                                                        } else {
-                                                          return (am) ((Object) new pl());
-                                                        }
-                                                      } else {
-                                                        return (am) ((Object) new ch());
-                                                      }
-                                                    } else {
-                                                      return (am) ((Object) new ea());
-                                                    }
-                                                  } else {
-                                                    return (am) ((Object) new ql());
-                                                  }
-                                                } else {
-                                                  return (am) ((Object) new go());
-                                                }
-                                              } else {
-                                                return (am) ((Object) new mi());
-                                              }
-                                            } else {
-                                              return (am) ((Object) new lc());
-                                            }
-                                          } else {
-                                            return (am) ((Object) new mo());
-                                          }
-                                        } else {
-                                          return (am) ((Object) new bd());
-                                        }
-                                      } else {
-                                        return (am) ((Object) new qg());
-                                      }
-                                    } else {
-                                      return (am) ((Object) new eg());
-                                    }
-                                  } else {
-                                    return (am) ((Object) new b());
-                                  }
-                                } else {
-                                  return (am) ((Object) new sd());
-                                }
-                              } else {
-                                return (am) ((Object) new lk());
-                              }
-                            } else {
-                              return (am) ((Object) new hm());
-                            }
-                          } else {
-                            return (am) ((Object) new nb());
-                          }
-                        } else {
-                          return (am) ((Object) new kc());
-                        }
-                      } else {
-                        return (am) ((Object) new ee());
-                      }
-                    } else {
-                      return (am) ((Object) new qo());
-                    }
-                  } else {
-                    return (am) ((Object) new te());
-                  }
-                } else {
-                  return (am) ((Object) new qn());
-                }
-              } else {
-                return (am) ((Object) new so());
-              }
-            } else {
-              return (am) ((Object) new wn());
-            }
-          } else {
-            return (am) ((Object) new po());
-          }
-        } else {
+        if (0 == var2) {
           return (am) ((Object) new u());
         }
+        if (1 == var2) {
+          return (am) ((Object) new po());
+        }
+        if (var2 == 2) {
+          return (am) ((Object) new wn());
+        }
+        if (var2 == 3) {
+          return (am) ((Object) new so());
+        }
+        if (var2 == 4) {
+          return (am) ((Object) new qn());
+        }
+        if (var2 == 5) {
+          return (am) ((Object) new te());
+        }
+        if (var2 == 6) {
+          return (am) ((Object) new qo());
+        }
+        if (7 == var2) {
+          return (am) ((Object) new ee());
+        }
+        if (var2 == 8) {
+          return (am) ((Object) new kc());
+        }
+        if (9 == var2) {
+          return (am) ((Object) new nb());
+        }
+        if (var2 == 10) {
+          return (am) ((Object) new hm());
+        }
+        if (11 == var2) {
+          return (am) ((Object) new lk());
+        }
+        if (12 == var2) {
+          return (am) ((Object) new sd());
+        }
+        if (var2 == 13) {
+          return (am) ((Object) new b());
+        }
+        if (var2 == 14) {
+          return (am) ((Object) new eg());
+        }
+        if (var2 == 15) {
+          return (am) ((Object) new qg());
+        }
+        if (var2 == 16) {
+          return (am) ((Object) new bd());
+        }
+        if (var2 == 17) {
+          return (am) ((Object) new mo());
+        }
+        if (var2 == 18) {
+          return (am) ((Object) new lc());
+        }
+        if (var2 == 19) {
+          return (am) ((Object) new mi());
+        }
+        if (var2 == 20) {
+          return (am) ((Object) new go());
+        }
+        if (var2 == 21) {
+          return (am) ((Object) new ql());
+        }
+        if (var2 == 22) {
+          return (am) ((Object) new ea());
+        }
+        if (var2 == 23) {
+          return (am) ((Object) new ch());
+        }
+        if (var2 == 24) {
+          return (am) ((Object) new pl());
+        }
+        if (25 == var2) {
+          return (am) ((Object) new cq());
+        }
+        if (var2 == 26) {
+          return (am) ((Object) new jg());
+        }
+        if (var2 == 27) {
+          return (am) ((Object) new wp());
+        }
+        if (28 == var2) {
+          return (am) ((Object) new rg());
+        }
+        if (29 == var2) {
+          return (am) ((Object) new s());
+        }
+        if (var2 == 30) {
+          return (am) ((Object) new mf());
+        }
+        if (var2 == 31) {
+          return (am) ((Object) new hb());
+        }
+        if (var2 == 32) {
+          return (am) ((Object) new nl());
+        }
+        if (var2 == 33) {
+          return (am) ((Object) new wh());
+        }
+        if (var2 == 34) {
+          return (am) ((Object) new rj());
+        }
+        if (var2 == 35) {
+          return (am) ((Object) new wb());
+        }
+        if (36 == var2) {
+          return (am) ((Object) new od());
+        }
+        if (37 == var2) {
+          return (am) ((Object) new vk());
+        }
+        if (var2 == 38) {
+          return (am) ((Object) new rd());
+        }
+        if (var2 == 39) {
+          return (am) ((Object) new ro());
+        }
+        if (param1 == 37) {
+          return null;
+        }
+        return (am) null;
     }
 
     static {

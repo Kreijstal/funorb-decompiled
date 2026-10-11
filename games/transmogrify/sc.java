@@ -8,7 +8,7 @@ final class sc {
     final static void a(boolean param0, int param1) {
         dl.field_l.a(param0, false);
         if (param1 != -24522) {
-            field_a = 118;
+          field_a = 118;
         }
     }
 

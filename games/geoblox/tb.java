@@ -107,23 +107,21 @@ final class tb {
             var1 = tb.b(param0);
             if (var1 != 1) {
               param0.field_b[var4] = false;
-              continue;
+            } else {
+              param0.field_b[var4] = true;
             }
-            param0.field_b[var4] = true;
           }
           for (var4 = 0; var4 < 256; var4++) {
             param0.field_n[var4] = false;
           }
           for (var4 = 0; var4 < 16; var4++) {
-            if (!param0.field_b[var4]) {
-              continue;
-            }
-            for (var5 = 0; var5 < 16; var5++) {
-              var1 = tb.b(param0);
-              if (var1 != 1) {
-                continue;
+            if (param0.field_b[var4]) {
+              for (var5 = 0; var5 < 16; var5++) {
+                var1 = tb.b(param0);
+                if (var1 == 1) {
+                  param0.field_n[var4 * 16 + var5] = true;
+                }
               }
-              param0.field_n[var4 * 16 + var5] = true;
             }
           }
           tb.c(param0);
@@ -194,10 +192,9 @@ final class tb {
               if (param0.field_v[var6][var4] > var3) {
                 var3 = param0.field_v[var6][var4];
               }
-              if (param0.field_v[var6][var4] >= var2) {
-                continue;
+              if (param0.field_v[var6][var4] < var2) {
+                var2 = param0.field_v[var6][var4];
               }
-              var2 = param0.field_v[var6][var4];
             }
             tb.a(param0.field_E[var6], param0.field_f[var6], param0.field_l[var6], param0.field_v[var6], var2, var3, var7);
             param0.field_w[var6] = var2;
@@ -398,11 +395,10 @@ final class tb {
         var7 = 0;
         for (var8 = param4; var8 <= param5; var8++) {
           for (var9 = 0; var9 < param6; var9++) {
-            if (param3[var9] != var8) {
-              continue;
+            if (param3[var9] == var8) {
+              param2[var7] = var9;
+              var7++;
             }
-            param2[var7] = var9;
-            var7++;
           }
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < 23; var8Lifetime1++) {
@@ -457,11 +453,10 @@ final class tb {
         int var1 = 0;
         param0.field_a = 0;
         for (var1 = 0; var1 < 256; var1++) {
-          if (!param0.field_n[var1]) {
-            continue;
+          if (param0.field_n[var1]) {
+            param0.field_x[param0.field_a] = (byte)var1;
+            param0.field_a = param0.field_a + 1;
           }
-          param0.field_x[param0.field_a] = (byte)var1;
-          param0.field_a = param0.field_a + 1;
         }
     }
 

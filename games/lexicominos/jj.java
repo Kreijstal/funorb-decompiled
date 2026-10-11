@@ -14,7 +14,7 @@ final class jj {
         field_d = null;
         field_a = null;
         if (param0 != 100) {
-            return;
+          return;
         }
         field_e = null;
         field_f = null;

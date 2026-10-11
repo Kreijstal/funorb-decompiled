@@ -20,24 +20,20 @@ final class io implements com.ms.directX.IEnumModesCallback {
     }
 
     final int[] a(byte param0) {
-        int[] var2;
-        com.ms.com.IUnknown var3;
-        int[] var4;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_b];
         field_b = 0;
         this.field_a.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        var4 = field_c;
-        var2 = var4;
+        int[] var4 = field_c;
+        int[] var2 = var4;
         field_b = 0;
         field_c = null;
-        if (param0 != -48) {
-          var3 = (com.ms.com.IUnknown) null;
-          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
-          return var4;
-        } else {
+        if (param0 == -48) {
           return var4;
         }
+        com.ms.com.IUnknown var3 = (com.ms.com.IUnknown) null;
+        this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+        return var4;
     }
 
     public io() {
@@ -51,33 +47,31 @@ final class io implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_c != null) {
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         }
     }
 
     final void a(int param0, java.awt.Frame param1) {
-        if (param0 != -3887) {
-          field_c = (int[]) null;
-          this.field_a.restoreDisplayMode();
-          this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
-          return;
-        } else {
+        if (param0 == -3887) {
           this.field_a.restoreDisplayMode();
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
           return;
         }
+        field_c = (int[]) null;
+        this.field_a.restoreDisplayMode();
+        this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
     }
 }

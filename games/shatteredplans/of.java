@@ -11,15 +11,7 @@ final class of {
     static String field_d;
 
     public static void b(int param0) {
-        if (param0 != 64) {
-          field_f = 72;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 64) {
           field_g = null;
           field_d = null;
           field_a = null;
@@ -27,57 +19,47 @@ final class of {
           field_b = null;
           return;
         }
+        field_f = 72;
+        field_g = null;
+        field_d = null;
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static String a(byte param0) {
-        if (ee.field_l != ue.field_a) {
-          if (param0 == 42) {
-            if (wh.field_a.b(14)) {
-              if (ue.field_a == fj.field_s) {
-                return wh.field_a.a(-45);
-              } else {
-                return qh.field_B;
-              }
-            } else {
-              return wh.field_a.a(98);
-            }
-          } else {
-            of.a((byte) 108);
-            if (wh.field_a.b(14)) {
-              if (ue.field_a == fj.field_s) {
-                return wh.field_a.a(-45);
-              } else {
-                return qh.field_B;
-              }
-            } else {
-              return wh.field_a.a(98);
-            }
-          }
-        } else {
+        if (ee.field_l == ue.field_a) {
           return ae.field_g;
         }
+        if (param0 != 42) {
+          of.a((byte) 108);
+          if (!wh.field_a.b(14)) {
+            return wh.field_a.a(98);
+          }
+          if (ue.field_a != fj.field_s) {
+            return qh.field_B;
+          }
+          return wh.field_a.a(-45);
+        }
+        if (!wh.field_a.b(14)) {
+          return wh.field_a.a(98);
+        }
+        if (ue.field_a != fj.field_s) {
+          return qh.field_B;
+        }
+        return wh.field_a.a(-45);
     }
 
     final static e a(int param0) {
-        String var1;
-        var1 = bh.d(-77);
-        if (param0 != 64) {
-          return (e) null;
-        } else {
-          L0: {
-            if (var1 == null) {
-              break L0;
-            } else {
-              if (-1 < (var1.indexOf('@') ^ -1)) {
-                break L0;
-              } else {
-                var1 = "";
-                break L0;
-              }
-            }
+        String var1 = bh.d(-77);
+        if (param0 == 64) {
+          if (var1 != null &&
+            var1.indexOf('@') >= 0) {
+            var1 = "";
           }
           return new e(bh.d(-98), ta.a(33));
         }
+        return (e) null;
     }
 
     static {

@@ -19,32 +19,19 @@ public class ug {
         var3 = 82 / ((-5 - param2) / 57);
         field_c = param1;
         try {
-          L0: {
-            L1: {
-              field_b = System.getProperty("user.home");
-              if (field_b == null) {
-                break L1;
-              } else {
-                field_b = field_b + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_b = System.getProperty("user.home");
+          if (field_b != null) {
+            field_b = field_b + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_d = true;
-        if (field_b == null) {
-          field_b = "~/";
-          return;
-        } else {
+        if (field_b != null) {
           return;
         }
+        field_b = "~/";
     }
 
     private ug() throws Throwable {
@@ -57,7 +44,7 @@ public class ug {
 
     public static File a(String param0, boolean param1) {
         if (param1) {
-            return (File) null;
+          return (File) null;
         }
         return ug.a(param0, field_e, -18261, field_c);
     }

@@ -13,16 +13,14 @@ final class ab {
         field_c = null;
         field_a = null;
         field_e = null;
-        if (param0 >= -38) {
-          field_b = (String) null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -38) {
           field_d = null;
           field_b = null;
           return;
         }
+        field_b = (String) null;
+        field_d = null;
+        field_b = null;
     }
 
     static {

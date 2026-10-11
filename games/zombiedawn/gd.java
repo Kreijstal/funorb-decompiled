@@ -48,22 +48,20 @@ final class gd {
         kj.field_c = param2;
         id.field_D = param2;
         rl.field_f = true;
-        if (param1 != 32767) {
-          gd.a((byte) -51);
-          te.field_eb = param0;
-          ul.field_d = param0;
-          return;
-        } else {
+        if (param1 == 32767) {
           te.field_eb = param0;
           ul.field_d = param0;
           return;
         }
+        gd.a((byte) -51);
+        te.field_eb = param0;
+        ul.field_d = param0;
     }
 
     final static long a(int param0) {
         if (param0 > -99) {
-            gd.a((byte) -69);
-            return pd.a(-22826) - pi.field_i;
+          gd.a((byte) -69);
+          return pd.a(-22826) - pi.field_i;
         }
         return pd.a(-22826) - pi.field_i;
     }
@@ -71,13 +69,13 @@ final class gd {
     private final void a(boolean param0) {
         this.field_J = false;
         if (!param0) {
-            this.a(58, 89, 34, 48);
+          this.a(58, 89, 34, 48);
         }
     }
 
     public static void a(byte param0) {
         if (param0 > -25) {
-            return;
+          return;
         }
         field_u = null;
         field_C = null;
@@ -88,21 +86,21 @@ final class gd {
         int var7 = ZombieDawn.field_J;
         int var5 = 79 / ((-43 - param1) / 41);
         for (var6 = 0; this.field_k > var6; var6++) {
-            this.field_G[var6] = (short)(this.field_G[var6] + param3);
-            this.field_B[var6] = (short)(this.field_B[var6] + param2);
-            this.field_m[var6] = (short)(this.field_m[var6] + param0);
+          this.field_G[var6] = (short)(this.field_G[var6] + param3);
+          this.field_B[var6] = (short)(this.field_B[var6] + param2);
+          this.field_m[var6] = (short)(this.field_m[var6] + param0);
         }
         this.a(true);
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -110,101 +108,56 @@ final class gd {
         var12 = ZombieDawn.field_J;
         if (this.field_J) {
           return;
-        } else {
-          this.field_J = true;
-          var2 = 32767;
-          var3 = param0;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (this.field_k <= var8) {
-              this.field_s = var5;
-              this.field_a = var4;
-              this.field_E = var3;
-              this.field_o = var2;
-              this.field_b = var7;
-              this.field_L = var6;
-              return;
-            } else {
-              L1: {
-                var9 = this.field_G[var8];
-                var10 = this.field_B[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if (var10 > var6) {
-                  var6 = var10;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                var11 = this.field_m[var8];
-                if (var5 >= var9) {
-                  break L3;
-                } else {
-                  var5 = var9;
-                  break L3;
-                }
-              }
-              L4: {
-                if (var3 <= var10) {
-                  break L4;
-                } else {
-                  var3 = var10;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var4 > var11) {
-                  var4 = var11;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (var7 < var11) {
-                var7 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
+        }
+        this.field_J = true;
+        var2 = 32767;
+        var3 = param0;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; this.field_k > var8; var8++) {
+          var9 = this.field_G[var8];
+          var10 = this.field_B[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          var11 = this.field_m[var8];
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          if (var4 > var11) {
+            var4 = var11;
+          }
+          if (var7 < var11) {
+            var7 = var11;
           }
         }
+        this.field_s = var5;
+        this.field_a = var4;
+        this.field_E = var3;
+        this.field_o = var2;
+        this.field_b = var7;
+        this.field_L = var6;
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        var7 = ZombieDawn.field_J;
-        var6 = 0;
-        L0: while (true) {
-          if (this.field_k <= var6) {
-            if (param0 != 0) {
-              return;
-            } else {
-              this.a(true);
-              return;
-            }
-          } else {
-            this.field_G[var6] = (short)(this.field_G[var6] * param1 / param3);
-            this.field_B[var6] = (short)(param4 * this.field_B[var6] / param3);
-            this.field_m[var6] = (short)(this.field_m[var6] * param2 / param3);
-            var6++;
-            continue L0;
-          }
+        int var6 = 0;
+        int var7 = ZombieDawn.field_J;
+        for (var6 = 0; this.field_k > var6; var6++) {
+          this.field_G[var6] = (short)(this.field_G[var6] * param1 / param3);
+          this.field_B[var6] = (short)(param4 * this.field_B[var6] / param3);
+          this.field_m[var6] = (short)(this.field_m[var6] * param2 / param3);
+        }
+        if (param0 == 0) {
+          this.a(true);
+          return;
         }
     }
 

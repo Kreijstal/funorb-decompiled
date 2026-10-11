@@ -10,98 +10,55 @@ final class ng {
     static String field_c;
 
     final static void a(boolean param0, int param1, int param2) {
-        if (hd.field_d == null) {
-          if (lp.field_rb.field_a != param2) {
-            L0: {
-              hd.field_d = ij.a(param2, (byte) -128);
-              if (hd.field_d instanceof km) {
-                ((km) ((Object) hd.field_d)).a(param0, 0, 125);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (param1 < 52) {
-              ng.a(true, 107, -22);
-              kh.field_a = 0;
-              wp.a(8, ta.field_e[8]);
-              return;
-            } else {
-              kh.field_a = 0;
-              wp.a(8, ta.field_e[8]);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (hd.field_d != null) {
           sk.i((byte) -127);
-          if (lp.field_rb.field_a != param2) {
-            L1: {
-              hd.field_d = ij.a(param2, (byte) -128);
-              if (hd.field_d instanceof km) {
-                ((km) ((Object) hd.field_d)).a(param0, 0, 125);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (param1 >= 52) {
-              kh.field_a = 0;
-              wp.a(8, ta.field_e[8]);
-              return;
-            } else {
-              ng.a(true, 107, -22);
-              kh.field_a = 0;
-              wp.a(8, ta.field_e[8]);
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (lp.field_rb.field_a == param2) {
+          return;
+        }
+        hd.field_d = ij.a(param2, (byte) -128);
+        if (hd.field_d instanceof km) {
+          ((km) (hd.field_d)).a(param0, 0, 125);
+        }
+        if (param1 < 52) {
+          ng.a(true, 107, -22);
+        }
+        kh.field_a = 0;
+        wp.a(8, ta.field_e[8]);
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
         field_e = null;
-        if (param0 != -49) {
-          ng.a((byte) 114, true);
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -49) {
           field_f = null;
           field_c = null;
           return;
         }
+        ng.a((byte) 114, true);
+        field_f = null;
+        field_c = null;
     }
 
     final static void a(byte param0, boolean param1) {
-        if (param0 <= -64) {
-          if (null != sq.field_c) {
-            if (!sq.field_c.a((byte) 79, param1)) {
-              return;
-            } else {
-              sq.field_c = null;
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param0 > -64) {
           ng.a((byte) -25);
-          if (null != sq.field_c) {
-            if (!sq.field_c.a((byte) 79, param1)) {
-              return;
-            } else {
-              sq.field_c = null;
-              return;
-            }
-          } else {
+          if (null == sq.field_c) {
             return;
           }
+          if (sq.field_c.a((byte) 79, param1)) {
+            sq.field_c = null;
+            return;
+          }
+          return;
+        }
+        if (null == sq.field_c) {
+          return;
+        }
+        if (sq.field_c.a((byte) 79, param1)) {
+          sq.field_c = null;
+          return;
         }
     }
 

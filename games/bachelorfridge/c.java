@@ -10,18 +10,13 @@ final class c extends gca {
     private eaa field_l;
 
     private final void e(byte param0) {
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        cia var6;
-        var2 = baa.field_v.nextInt() & 8191;
-        var3 = (255 & baa.field_v.nextInt()) + 128;
-        var4 = var3 * via.a(var2, (byte) 72) >> -1366520336;
-        if (param0 != 99) {
-          return;
-        } else {
-          var5 = var3 * ft.a(var2, (byte) -128) >> 2096387248;
+        int var5 = 0;
+        cia var6 = null;
+        int var2 = baa.field_v.nextInt() & 8191;
+        int var3 = (255 & baa.field_v.nextInt()) + 128;
+        int var4 = var3 * via.a(var2, (byte) 72) >> 16;
+        if (param0 == 99) {
+          var5 = var3 * ft.a(var2, (byte) -128) >> 16;
           var6 = new cia(var4, 0, var5, 0, 0, 0, 128, -2);
           this.field_l.a(var6, true);
           return;
@@ -30,99 +25,75 @@ final class c extends gca {
 
     final static void f(byte param0) {
         if (param0 != 48) {
-            field_i = (String) null;
-            wh.field_p = null;
-            return;
+          field_i = (String) null;
+          wh.field_p = null;
+          return;
         }
         wh.field_p = null;
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        if (param2) {
-          return -114;
-        } else {
-          var3 = param1 >> -919215056;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        if (!param2) {
+          var3 = param1 >> 16;
           var4 = param1 & 65535;
-          var5 = param0 >> 10966544;
+          var5 = param0 >> 16;
           var6 = param0 & 65535;
-          return (var6 * var4 >> -355858576) + param0 * var3 - -(var5 * var4);
+          return (var6 * var4 >> 16) + param0 * var3 + var5 * var4;
         }
+        return -114;
     }
 
     final void a(int param0, int param1, byte param2) {
-        Object var4;
-        cia var4_ref;
-        int var5;
-        var4 = null;
-        var5 = BachelorFridge.field_y;
-        if (param2 == -34) {
-          var4_ref = (cia) ((Object) this.field_l.b((byte) 90));
-          L0: while (true) {
-            if (var4_ref == null) {
-              return;
-            } else {
-              dg.f((var4_ref.field_i >> 1364491844) + param1, (var4_ref.field_q >> 1599571013) + param0 + (var4_ref.field_h >> 1220394217), 2, 12632256, var4_ref.field_o);
-              var4_ref = (cia) ((Object) this.field_l.c(0));
-              continue L0;
-            }
-          }
-        } else {
+        cia var4_ref = null;
+        Object var4 = null;
+        int var5 = BachelorFridge.field_y;
+        cia var4_refLifetime1;
+        if (param2 != -34) {
           this.field_j = -1.2825418710708618f;
-          var4_ref = (cia) ((Object) this.field_l.b((byte) 90));
-          L1: while (true) {
-            if (var4_ref == null) {
-              return;
-            } else {
-              dg.f((var4_ref.field_i >> 1364491844) + param1, (var4_ref.field_q >> 1599571013) + param0 + (var4_ref.field_h >> 1220394217), 2, 12632256, var4_ref.field_o);
-              var4_ref = (cia) ((Object) this.field_l.c(0));
-              continue L1;
-            }
+        } else {
+          var4_ref = (cia) (this.field_l.b((byte) 90));
+          while (var4_ref != null) {
+            dg.f((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
+            var4_ref = (cia) (this.field_l.c(0));
           }
+          return;
+        }
+        var4_refLifetime1 = (cia) (this.field_l.b((byte) 90));
+        while (var4_refLifetime1 != null) {
+          dg.f((var4_refLifetime1.field_i >> 4) + param1, (var4_refLifetime1.field_q >> 5) + param0 + (var4_refLifetime1.field_h >> 9), 2, 12632256, var4_refLifetime1.field_o);
+          var4_refLifetime1 = (cia) (this.field_l.c(0));
         }
     }
 
     public static void a(int param0) {
         if (param0 != -20330) {
-            c.f((byte) -87);
-            field_k = null;
-            field_i = null;
-            return;
+          c.f((byte) -87);
+          field_k = null;
+          field_i = null;
+          return;
         }
         field_k = null;
         field_i = null;
     }
 
     final static void a(int param0, int param1) {
-        int var2;
-        var2 = 3;
-        if (param0 != 1220394217) {
-          L0: {
-            c.a(88, 16);
-            if (-7 != (param1 ^ -1)) {
-              break L0;
-            } else {
-              var2 = 2;
-              break L0;
-            }
-          }
-          ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
-          return;
-        } else {
-          L1: {
-            if (-7 != (param1 ^ -1)) {
-              break L1;
-            } else {
-              var2 = 2;
-              break L1;
-            }
+        int var2 = 3;
+        if (param0 == 1220394217) {
+          if (param1 == 6) {
+            var2 = 2;
           }
           ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
           return;
         }
+        c.a(88, 16);
+        if (param1 == 6) {
+          var2 = 2;
+        }
+        ol.a(pja.field_a[param1][6 + kla.a(var2, m.field_a, -2147483648)], true);
     }
 
     public c() {
@@ -132,70 +103,32 @@ final class c extends gca {
 
     final boolean a(boolean param0, boolean param1) {
         cia stackIn_9_0 = null;
-        cia stackIn_10_0 = null;
-        int stackIn_10_1 = 0;
-        int stackIn_16_0 = 0;
+        boolean stackIn_10_1 = false;
+        boolean stackIn_16_0 = false;
         cia var3;
         float var4;
         int var5;
-        L0: {
-          var5 = BachelorFridge.field_y;
-          this.field_j = this.field_j * 0.9800000190734863f;
-          if (!param0) {
-            break L0;
-          } else {
-            c.a(-87, -87);
-            break L0;
-          }
+        var5 = BachelorFridge.field_y;
+        this.field_j = this.field_j * 0.9800000190734863f;
+        if (param0) {
+          c.a(-87, -87);
         }
-        L1: {
-          if (param1) {
-            this.field_j = this.field_j + 0.019999980926513672f;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (param1) {
+          this.field_j = this.field_j + 0.019999980926513672f;
         }
-        var3 = (cia) ((Object) this.field_l.b((byte) 90));
-        L2: while (true) {
-          if (var3 == null) {
-            var4 = this.field_j * 3.0f;
-            L3: while (true) {
-              if (baa.field_v.nextFloat() * (var4 + 1.0f) < var4) {
-                this.e((byte) 99);
-                continue L3;
-              } else {
-                L4: {
-                  if (this.field_l.e(12917)) {
-                    stackIn_16_0 = 0;
-                    break L4;
-                  } else {
-                    stackIn_16_0 = 1;
-                    break L4;
-                  }
-                }
-                return stackIn_16_0 != 0;
-              }
-            }
-          } else {
-            L5: {
-              stackIn_9_0 = (cia) (var3);
-
-              if (param0) {
-                stackIn_10_0 = (cia) ((Object) stackIn_9_0);
-                stackIn_10_1 = 0;
-                break L5;
-              } else {
-                stackIn_10_0 = (cia) ((Object) stackIn_9_0);
-                stackIn_10_1 = 1;
-                break L5;
-              }
-            }
-            ((cia) (Object) stackIn_10_0).b(stackIn_10_1 != 0);
-            var3 = (cia) ((Object) this.field_l.c(0));
-            continue L2;
-          }
+        var3 = (cia) (this.field_l.b((byte) 90));
+        while (var3 != null) {
+          stackIn_9_0 = var3;
+          stackIn_10_1 = !(param0);
+          ((cia) (Object) stackIn_9_0).b(stackIn_10_1);
+          var3 = (cia) (this.field_l.c(0));
         }
+        var4 = this.field_j * 3.0f;
+        while (baa.field_v.nextFloat() * (var4 + 1.0f) < var4) {
+          this.e((byte) 99);
+        }
+        stackIn_16_0 = !(this.field_l.e(12917));
+        return stackIn_16_0;
     }
 
     static {

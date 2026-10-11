@@ -10,18 +10,18 @@ final class du extends rb {
 
     final static void a(int param0, int param1, tp param2, gk param3) {
         try {
-            la.field_k = bl.a(113) * param0 / 1000;
-            op.a(20786, param3);
-            hn.a(param3, true);
-            tr.a(param3, (byte) -88);
-            lp.a(false);
-            if (param1 <= 17) {
-                field_l = (as) null;
-            }
-            aq.b(540);
-            it.field_c = 0 - la.field_k;
+          la.field_k = bl.a(113) * param0 / 1000;
+          op.a(20786, param3);
+          hn.a(param3, true);
+          tr.a(param3, (byte) -88);
+          lp.a(false);
+          if (param1 <= 17) {
+            field_l = (as) null;
+          }
+          aq.b(540);
+          it.field_c = 0 - la.field_k;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "du.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "du.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,52 +39,47 @@ final class du extends rb {
         so.field_d[93] = 43;
         so.field_d[45] = 26;
         if (param0 >= -119) {
-            field_p = (String[]) null;
+          field_p = (String[]) null;
         }
     }
 
     final void b(byte param0, float param1) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int var3;
-        if (param0 != -90) {
-          du.k(67);
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param0 == -90) {
           var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-          fieldTemp$8 = this.field_g;
+          fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$8] = (byte)var3;
-          fieldTemp$9 = this.field_g;
+          this.field_f[fieldTemp$0] = (byte)var3;
+          fieldTemp$1 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$9] = (byte)(var3 >> 1870127112);
-          fieldTemp$10 = this.field_g;
+          this.field_f[fieldTemp$1] = (byte)(var3 >> 8);
+          fieldTemp$2 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$10] = (byte)(var3 >> -1474262288);
-          fieldTemp$11 = this.field_g;
+          this.field_f[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$11] = (byte)(var3 >> 1363638904);
-          return;
-        } else {
-          var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-          fieldTemp$12 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$12] = (byte)var3;
-          fieldTemp$13 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$13] = (byte)(var3 >> 1870127112);
-          fieldTemp$14 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$14] = (byte)(var3 >> -1474262288);
-          fieldTemp$15 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$15] = (byte)(var3 >> 1363638904);
+          this.field_f[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
+        du.k(67);
+        var3Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param1);
+        int fieldTemp$4 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$4] = (byte)var3Lifetime1;
+        int fieldTemp$5 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$5] = (byte)(var3Lifetime1 >> 8);
+        int fieldTemp$6 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$6] = (byte)(var3Lifetime1 >> 16);
+        int fieldTemp$7 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$7] = (byte)(var3Lifetime1 >> 24);
     }
 
     du(int param0) {
@@ -101,41 +96,35 @@ final class du extends rb {
     }
 
     final void a(byte param0, float param1) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int var3;
-        var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$7 = this.field_g;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
+        int fieldTemp$0 = this.field_g;
         this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$7] = (byte)(var3 >> -717565960);
-        if (param0 < 59) {
-          du.k(97);
-          fieldTemp$8 = this.field_g;
+        this.field_f[fieldTemp$0] = (byte)(var3 >> 24);
+        if (param0 >= 59) {
+          fieldTemp$1 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$8] = (byte)(var3 >> -1869843472);
-          fieldTemp$9 = this.field_g;
+          this.field_f[fieldTemp$1] = (byte)(var3 >> 16);
+          fieldTemp$2 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$9] = (byte)(var3 >> 784202600);
-          fieldTemp$10 = this.field_g;
+          this.field_f[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.field_g;
           this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$10] = (byte)var3;
-          return;
-        } else {
-          fieldTemp$11 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$11] = (byte)(var3 >> -1869843472);
-          fieldTemp$12 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$12] = (byte)(var3 >> 784202600);
-          fieldTemp$13 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$13] = (byte)var3;
+          this.field_f[fieldTemp$3] = (byte)var3;
           return;
         }
+        du.k(97);
+        int fieldTemp$4 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$5] = (byte)(var3 >> 8);
+        int fieldTemp$6 = this.field_g;
+        this.field_g = this.field_g + 1;
+        this.field_f[fieldTemp$6] = (byte)var3;
     }
 
     static {

@@ -11,10 +11,10 @@ class vhb extends tb {
 
     public static void b(int param0) {
         if (param0 != 21053) {
-            vhb.b(-96);
-            field_d = null;
-            field_c = null;
-            return;
+          vhb.b(-96);
+          field_d = null;
+          field_c = null;
+          return;
         }
         field_d = null;
         field_c = null;

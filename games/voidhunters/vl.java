@@ -11,46 +11,26 @@ final class vl extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                vl.a(-21);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(98, 125));
-            break L0;
+          if (param1 >= -119) {
+            vl.a(-21);
           }
+          stackIn_3_0 = new nc(frb.a(98, 125));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("vl.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("vl.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void e(byte param0) {
@@ -63,47 +43,28 @@ final class vl extends rqa {
         try {
           var1 = gha.field_q;
           synchronized (var1) {
-            L0: {
-              if (param0 == -101) {
-                L1: {
-                  baa.field_q = baa.field_q + 1;
-                  bva.field_c = nwa.field_a;
-                  if (-1 >= (dh.field_p ^ -1)) {
-                    L2: while (true) {
-                      if (dh.field_p == wlb.field_p) {
-                        break L1;
-                      } else {
-                        var2 = kq.field_o[wlb.field_p];
-                        wlb.field_p = 127 & 1 + wlb.field_p;
-                        if ((var2 ^ -1) <= -1) {
-                          si.field_o[var2] = true;
-                          continue L2;
-                        } else {
-                          si.field_o[var2 ^ -1] = false;
-                          continue L2;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L3: while (true) {
-                      if (112 <= var2) {
-                        dh.field_p = wlb.field_p;
-                        break L1;
-                      } else {
-                        si.field_o[var2] = false;
-                        var2++;
-                        continue L3;
-                      }
-                    }
-                  }
+            if (param0 != -101) {
+              return;
+            }
+            baa.field_q = baa.field_q + 1;
+            bva.field_c = nwa.field_a;
+            if (dh.field_p < 0) {
+              for (var2 = 0; 112 > var2; var2++) {
+                si.field_o[var2] = false;
+              }
+              dh.field_p = wlb.field_p;
+            } else {
+              while (dh.field_p != wlb.field_p) {
+                var2 = kq.field_o[wlb.field_p];
+                wlb.field_p = 127 & 1 + wlb.field_p;
+                if (var2 >= 0) {
+                  si.field_o[var2] = true;
+                  continue;
                 }
-                nwa.field_a = tna.field_o;
-                break L0;
-              } else {
-                return;
+                si.field_o[~var2] = false;
               }
             }
+            nwa.field_a = tna.field_o;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,10 +80,10 @@ final class vl extends rqa {
 
     public static void a(int param0) {
         if (param0 != 127) {
-            field_p = (mma) null;
-            field_p = null;
-            field_q = null;
-            return;
+          field_p = (mma) null;
+          field_p = null;
+          field_q = null;
+          return;
         }
         field_p = null;
         field_q = null;

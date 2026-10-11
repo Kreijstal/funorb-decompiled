@@ -25,16 +25,16 @@ final class vj {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_j >= this.field_h) {
-            fieldTemp$0 = this.field_f;
-            this.field_f = this.field_f + 1;
-            this.field_i = this.field_g[fieldTemp$0] << 15;
-            if (this.field_f >= this.field_c) {
-                this.field_f = this.field_c - 1;
-            }
-            this.field_h = (int)((double)this.field_e[this.field_f] / 65536.0 * (double)param0);
-            if (this.field_h > this.field_j) {
-                this.field_k = ((this.field_g[this.field_f] << 15) - this.field_i) / (this.field_h - this.field_j);
-            }
+          fieldTemp$0 = this.field_f;
+          this.field_f = this.field_f + 1;
+          this.field_i = this.field_g[fieldTemp$0] << 15;
+          if (this.field_f >= this.field_c) {
+            this.field_f = this.field_c - 1;
+          }
+          this.field_h = (int)((double)this.field_e[this.field_f] / 65536.0 * (double)param0);
+          if (this.field_h > this.field_j) {
+            this.field_k = ((this.field_g[this.field_f] << 15) - this.field_i) / (this.field_h - this.field_j);
+          }
         }
         this.field_i = this.field_i + this.field_k;
         this.field_j = this.field_j + 1;
@@ -47,8 +47,8 @@ final class vj {
         this.field_e = new int[this.field_c];
         this.field_g = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
-            this.field_e[var2] = param0.a(255);
-            this.field_g[var2] = param0.a(255);
+          this.field_e[var2] = param0.a(255);
+          this.field_g[var2] = param0.a(255);
         }
     }
 

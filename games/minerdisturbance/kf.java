@@ -22,9 +22,9 @@ final class kf {
         oj.field_J = 4;
         int[] var3 = new int[]{24, 23, 22, 1, 2, 3, 4};
         int[] var2 = var3;
-        nb.field_i[4] = new ml(4, var2, 10, 200, -3 != (kb.field_c ^ -1) ? 320 : 350, 270, 270 / var3.length, true, 1);
+        nb.field_i[4] = new ml(4, var2, 10, 200, kb.field_c != 2 ? 320 : 350, 270, 270 / var3.length, true, 1);
         var2 = new int[]{11, 0, 10, 18};
-        nb.field_i[1] = new ml(1, var2, 320, 430, 640, 320, -3 == (kb.field_c ^ -1) ? 210 : 160, false, 1);
+        nb.field_i[1] = new ml(1, var2, 320, 430, 640, 320, kb.field_c == 2 ? 210 : 160, false, 1);
         int[] var4 = new int[]{0};
         nb.field_i[3] = new ml(3, var4, 320, 430, 640, 320, 320, false, 1);
         int[] var5 = new int[]{7, 8, 9, 0};
@@ -32,55 +32,53 @@ final class kf {
         nb.field_i[2] = new ml(2, var2, 320, 372, 640, 320, 600 / (var5.length - 1), false, 1);
         int[] var6 = new int[]{13, 1, 19, 5, 6, 3, 17};
         var2 = var6;
-        nb.field_i[0] = new ml(0, var2, 10, 240, (kb.field_c ^ -1) == -3 ? 350 : 320, 240, 240 / var6.length, true, 1);
+        nb.field_i[0] = new ml(0, var2, 10, 240, kb.field_c == 2 ? 350 : 320, 240, 240 / var6.length, true, 1);
         int[] var7 = new int[]{2, 0};
         nb.field_i[5] = new ml(5, var7, 320, 430, 640, 320, 320, false, 1);
         int[] var8 = new int[]{16, 15};
         nb.field_i[6] = new ml(6, var8, 320, 220, 640, 320, 159, true, 1);
         if (param1 != 45977) {
-            return;
+          return;
         }
         try {
-            var9 = new int[]{16, 0};
-            nb.field_i[7] = new ml(7, var9, 320, 365, 640, 320, 320, false, 1);
-            var10 = new int[]{16, 0};
-            nb.field_i[8] = new ml(8, var10, 320, 430, 640, 320, 307, false, 1);
-            var11 = new int[]{0, 4};
-            nb.field_i[11] = new ml(11, var11, -1, -1, -1, -1, -1, false, -1);
-            var12 = new int[]{12, 5, 6, 0};
-            var2 = var12;
-            nb.field_i[10] = new ml(10, var2, 10, 326, 310, 320, 140 / var12.length, true, 1);
+          var9 = new int[]{16, 0};
+          nb.field_i[7] = new ml(7, var9, 320, 365, 640, 320, 320, false, 1);
+          var10 = new int[]{16, 0};
+          nb.field_i[8] = new ml(8, var10, 320, 430, 640, 320, 307, false, 1);
+          var11 = new int[]{0, 4};
+          nb.field_i[11] = new ml(11, var11, -1, -1, -1, -1, -1, false, -1);
+          var12 = new int[]{12, 5, 6, 0};
+          var2 = var12;
+          nb.field_i[10] = new ml(10, var2, 10, 326, 310, 320, 140 / var12.length, true, 1);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "kf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "kf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(rc param0, byte param1) {
         try {
-            hj.field_f.a(param0);
-            if (param1 >= -36) {
-                kf.a(96);
-            }
+          hj.field_f.a(param0);
+          if (param1 >= -36) {
+            kf.a(96);
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "kf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "kf.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_c = null;
-        if (param0 != 42959) {
-          field_d = (l) null;
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 42959) {
           field_b = null;
           field_d = null;
           field_a = null;
           return;
         }
+        field_d = (l) null;
+        field_b = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

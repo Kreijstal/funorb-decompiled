@@ -11,13 +11,13 @@ class ii extends sh {
 
     final void a(mg param0, int param1) {
         try {
-            param0.a(this.field_b, -16943);
-            if (param1 != 27557) {
-                field_d = (String) null;
-            }
-            param0.a((byte) 113, this.field_f);
+          param0.a(this.field_b, -16943);
+          if (param1 != 27557) {
+            field_d = (String) null;
+          }
+          param0.a((byte) 113, this.field_f);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "ii.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -26,27 +26,27 @@ class ii extends sh {
         field_d = null;
         field_e = null;
         if (param0 != -26268) {
-            ii.b(-100);
-            field_a = null;
-            return;
+          ii.b(-100);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     fk a(int param0) {
         if (param0 != 10277) {
-            ii.b(77);
-            return oj.field_j;
+          ii.b(77);
+          return oj.field_j;
         }
         return oj.field_j;
     }
 
     ii(long param0, String param1) {
         try {
-            this.field_b = param0;
-            this.field_f = param1;
+          this.field_b = param0;
+          this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "ii.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

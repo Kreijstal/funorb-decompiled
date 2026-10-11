@@ -13,9 +13,9 @@ class le {
     public static void b(byte param0) {
         field_e = null;
         if (param0 != 61) {
-            field_c = -123;
-            field_a = null;
-            return;
+          field_c = -123;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -23,40 +23,25 @@ class le {
     final void b(int param0) {
         if (this.field_d == null) {
           return;
-        } else {
-          this.field_d.field_b = this.field_b;
-          this.field_b.field_d = this.field_d;
-          if (param0 != -27598) {
-            return;
-          } else {
-            this.field_b = null;
-            this.field_d = null;
-            return;
-          }
+        }
+        this.field_d.field_b = this.field_b;
+        this.field_b.field_d = this.field_d;
+        if (param0 == -27598) {
+          this.field_b = null;
+          this.field_d = null;
+          return;
         }
     }
 
     final boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        if (param0 != 73) {
-          field_c = 68;
-          if (this.field_d != null) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (this.field_d == null) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 73) {
+          return this.field_d != null ? true : false;
         }
+        field_c = 68;
+        if (this.field_d == null) {
+          return false;
+        }
+        return true;
     }
 
     static {

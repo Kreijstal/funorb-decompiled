@@ -23,35 +23,17 @@ final class vd {
         RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (vj.field_d == null) {
-                break L1;
-              } else {
-                var1_int = 0;
-                L2: while (true) {
-                  if (vj.field_d.length <= var1_int) {
-                    break L1;
-                  } else {
-                    vj.field_d[var1_int] = null;
-                    var1_int++;
-                    continue L2;
-                  }
-                }
-              }
+          if (vj.field_d != null) {
+            for (var1_int = 0; vj.field_d.length > var1_int; var1_int++) {
+              vj.field_d[var1_int] = null;
             }
-            L3: {
-              if (param0 == 0) {
-                break L3;
-              } else {
-                vd.c(-60);
-                break L3;
-              }
-            }
-            vj.field_d = null;
-            cg.field_g = null;
-            break L0;
           }
+          if (param0 != 0) {
+            vd.c(-60);
+          }
+          vj.field_d = null;
+          cg.field_g = null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -61,8 +43,8 @@ final class vd {
 
     final static int c(int param0) {
         if (param0 != 0) {
-            field_e = (int[]) null;
-            return cf.field_f;
+          field_e = (int[]) null;
+          return cf.field_f;
         }
         return cf.field_f;
     }

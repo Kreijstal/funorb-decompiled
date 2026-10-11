@@ -14,75 +14,62 @@ abstract class bj implements bg {
     static boolean field_a;
 
     final static boolean c(byte param0) {
-        if (param0 < -23) {
-          if (null != ag.field_t) {
-            if (!rc.field_a.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 >= -23) {
           bj.c(44);
-          if (null != ag.field_t) {
-            if (!rc.field_a.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == ag.field_t) {
             return false;
           }
+          if (rc.field_a.a(true)) {
+            return true;
+          }
+          return false;
         }
+        if (null == ag.field_t) {
+          return false;
+        }
+        if (rc.field_a.a(true)) {
+          return true;
+        }
+        return false;
     }
 
     public final bm b(int param0) {
-        if (param0 < -58) {
-          if (!this.a((byte) 73)) {
-            if ((hn.a((byte) 80) ^ -1L) > (350L + this.field_c ^ -1L)) {
-              return wl.field_c;
-            } else {
-              return this.d(11269);
-            }
-          } else {
-            return bm.field_g;
-          }
-        } else {
+        if (param0 >= -58) {
           return (bm) null;
         }
+        if (this.a((byte) 73)) {
+          return bm.field_g;
+        }
+        if (hn.a((byte) 80) >= (350L + this.field_c)) {
+          return this.d(11269);
+        }
+        return wl.field_c;
     }
 
     public final String a(int param0) {
-        if (param0 < -22) {
-          if (!this.a((byte) -70)) {
-            if ((350L + this.field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
-              return null;
-            } else {
-              return this.b((byte) 18);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 >= -22) {
           this.a(false);
-          if (!this.a((byte) -70)) {
-            if ((350L + this.field_c ^ -1L) < (hn.a((byte) 80) ^ -1L)) {
-              return null;
-            } else {
-              return this.b((byte) 18);
-            }
-          } else {
+          if (this.a((byte) -70)) {
             return null;
           }
+          if ((350L + this.field_c) <= hn.a((byte) 80)) {
+            return this.b((byte) 18);
+          }
+          return null;
         }
+        if (this.a((byte) -70)) {
+          return null;
+        }
+        if ((350L + this.field_c) <= hn.a((byte) 80)) {
+          return this.b((byte) 18);
+        }
+        return null;
     }
 
     public final void a(boolean param0) {
         this.field_c = hn.a((byte) 80);
         if (!param0) {
-            bj.c((byte) -120);
+          bj.c((byte) -120);
         }
     }
 

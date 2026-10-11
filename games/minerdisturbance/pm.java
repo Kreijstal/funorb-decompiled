@@ -16,12 +16,11 @@ final class pm extends IOException {
     }
 
     final static bg[] b(int param0) {
-        if (param0 != -5596) {
-          field_c = -6;
-          return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
-        } else {
+        if (param0 == -5596) {
           return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
         }
+        field_c = -6;
+        return new bg[]{gk.field_s, kb.field_e, ff.field_a, ab.field_b, tl.field_l, jk.field_jb, qc.field_a, oc.field_i, sj.field_a, qm.field_h, dl.field_e, hd.field_i, dg.field_a, jg.field_l};
     }
 
     pm(String param0) {
@@ -35,25 +34,26 @@ final class pm extends IOException {
         int var8 = 0;
         int var9 = 0;
         int var10 = MinerDisturbance.field_ab;
-        if (param4 == null || -1 <= (param3 ^ -1)) {
-            return;
+        if (param4 == null ||
+          param3 <= 0) {
+          return;
         }
         try {
-            var5_int = param4[0].field_x;
-            var6 = param4[2].field_x;
-            var7 = param4[param1].field_x;
-            param4[0].f(param2, param0);
-            param4[2].f(param3 + param2 + -var6, param0);
-            eh.b(en.field_b);
-            eh.f(param2 - -var5_int, param0, param2 - (-param3 + var6), param0 - -param4[1].field_A);
-            var8 = param2 + var5_int;
-            var9 = param3 + param2 - var6;
-            for (param2 = var8; var9 > param2; param2 = param2 + var7) {
-                param4[1].f(param2, param0);
-            }
-            eh.a(en.field_b);
+          var5_int = param4[0].field_x;
+          var6 = param4[2].field_x;
+          var7 = param4[param1].field_x;
+          param4[0].f(param2, param0);
+          param4[2].f(param3 + param2 - var6, param0);
+          eh.b(en.field_b);
+          eh.f(param2 + var5_int, param0, param2 - (-param3 + var6), param0 + param4[1].field_A);
+          var8 = param2 + var5_int;
+          var9 = param3 + param2 - var6;
+          for (param2 = var8; var9 > param2; param2 = param2 + var7) {
+            param4[1].f(param2, param0);
+          }
+          eh.a(en.field_b);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "pm.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

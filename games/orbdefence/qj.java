@@ -13,7 +13,7 @@ final class qj {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -28342) {
-            return;
+          return;
         }
         field_g = null;
     }
@@ -26,32 +26,21 @@ final class qj {
         RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var4 = (vg) ((Object) kk.field_X.b((byte) -45));
-            L1: while (true) {
-              if (var4 == null) {
-                var5 = (gj) ((Object) cb.field_b.b((byte) 123));
-                L2: while (true) {
-                  if (var5 == null) {
-                    if (param1 == 7287) {
-                      break L0;
-                    } else {
-                      field_a = (String) null;
-                      return;
-                    }
-                  } else {
-                    se.a(var5, param0, -49);
-                    var5 = (gj) ((Object) cb.field_b.d(param1 ^ 7970));
-                    continue L2;
-                  }
-                }
-              } else {
-                bk.a(true, param0, var4);
-                var4 = (vg) ((Object) kk.field_X.d(param1 ^ 7970));
-                continue L1;
-              }
-            }
+          var4 = (vg) (kk.field_X.b((byte) -45));
+          while (var4 != null) {
+            bk.a(true, param0, var4);
+            var4 = (vg) (kk.field_X.d(param1 ^ 7970));
           }
+          var5 = (gj) (cb.field_b.b((byte) 123));
+          while (var5 != null) {
+            se.a(var5, param0, -49);
+            var5 = (gj) (cb.field_b.d(param1 ^ 7970));
+          }
+          if (param1 == 7287) {
+            return;
+          }
+          field_a = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

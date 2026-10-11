@@ -7,29 +7,18 @@ final class dl {
 
     public static void b(byte param0) {
         if (param0 < 10) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
         wb.field_b = true;
-        if (param0 != -75) {
-          return false;
-        } else {
-          L0: {
-            nj.field_n = fa.a(110) - -15000L;
-            if (-12 != (mh.field_U ^ -1)) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -75) {
+          nj.field_n = fa.a(110) + 15000L;
+          return mh.field_U == 11 ? true : false;
         }
+        return false;
     }
 
     static {

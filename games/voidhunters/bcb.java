@@ -4,7 +4,7 @@
 final class bcb implements dja {
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new una[param1]);
     }

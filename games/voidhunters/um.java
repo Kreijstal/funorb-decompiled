@@ -8,28 +8,23 @@ final class um {
     private int field_b;
 
     final byte[] b(int param0) {
-        byte[] var2;
-        byte[] var3;
-        if (!this.field_d) {
-          if (param0 == -30223) {
-            return null;
-          } else {
-            this.field_a = (byte[]) null;
-            return null;
-          }
-        } else {
+        byte[] var3 = null;
+        if (this.field_d) {
           var3 = this.field_a;
-          var2 = var3;
+          byte[] var2 = var3;
           this.field_a = null;
           return var3;
         }
+        if (param0 != -30223) {
+          this.field_a = (byte[]) null;
+          return null;
+        }
+        return null;
     }
 
     final void a(ds param0, int param1, boolean param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -37,148 +32,78 @@ final class um {
         int var5 = 0;
         int var6 = 0;
         try {
-          L0: {
-            L1: {
-              var4_int = param0.h(90);
-              if (!param2) {
-                break L1;
-              } else {
-                System.out.println("data_len received: " + var4_int + " (hex " + Integer.toHexString(var4_int) + ")");
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (this.field_d) {
-                  break L3;
-                } else {
-                  if (null == this.field_a) {
-                    break L3;
-                  } else {
-                    if (this.field_a.length == var4_int) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-              }
-              L4: {
-                if (!param2) {
-                  break L4;
-                } else {
-                  System.out.println("allocating new buffer");
-                  break L4;
-                }
-              }
-              this.field_b = 0;
-              this.field_d = false;
-              this.field_a = new byte[var4_int];
-              break L2;
-            }
-            L5: {
-              var5 = param0.h(90);
-              if (param2) {
-                System.out.println("offset received: " + var5 + " (hex " + Integer.toHexString(var5) + ")");
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              if (!param2) {
-                break L6;
-              } else {
-                if (this.field_b == var5) {
-                  break L6;
-                } else {
-                  throw new IllegalStateException("had received " + this.field_b + ", got offset " + var5 + " total len: " + var4_int);
-                }
-              }
-            }
-            L7: {
-              var6 = param0.e(1869);
-              if (!param2) {
-                break L7;
-              } else {
-                System.out.println("Receiving: " + var6);
-                break L7;
-              }
-            }
-            L8: {
-              param0.a(var5, this.field_a, (byte) -59, var6);
-              this.field_b = this.field_b + var6;
-              if (this.field_a.length > this.field_b) {
-                break L8;
-              } else {
-                this.field_d = true;
-                break L8;
-              }
-            }
-            L9: {
-              if (!param2) {
-                break L9;
-              } else {
-                if (this.field_d) {
-                  System.out.println("Ready!");
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-            }
-            if (param1 > 68) {
-              break L0;
-            } else {
-              field_c = (int[]) null;
-              return;
-            }
+          var4_int = param0.h(90);
+          if (param2) {
+            System.out.println("data_len received: " + var4_int + " (hex " + Integer.toHexString(var4_int) + ")");
           }
+          if (this.field_d ||
+            null == this.field_a ||
+            this.field_a.length != var4_int) {
+            if (param2) {
+              System.out.println("allocating new buffer");
+            }
+            this.field_b = 0;
+            this.field_d = false;
+            this.field_a = new byte[var4_int];
+          }
+          var5 = param0.h(90);
+          if (param2) {
+            System.out.println("offset received: " + var5 + " (hex " + Integer.toHexString(var5) + ")");
+          }
+          if (param2 &&
+            this.field_b != var5) {
+            throw new IllegalStateException("had received " + this.field_b + ", got offset " + var5 + " total len: " + var4_int);
+          }
+          var6 = param0.e(1869);
+          if (param2) {
+            System.out.println("Receiving: " + var6);
+          }
+          param0.a(var5, this.field_a, (byte) -59, var6);
+          this.field_b = this.field_b + var6;
+          if (this.field_a.length <= this.field_b) {
+            this.field_d = true;
+          }
+          if (param2 &&
+            this.field_d) {
+            System.out.println("Ready!");
+          }
+          if (param1 > 68) {
+            return;
+          }
+          field_c = (int[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L10: {
-            var4 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var4);
-
-            stackIn_28_1 = new StringBuilder().append("um.C(");
-
-            if (param0 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L10;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L10;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_28_0 = var4;
+          stackIn_28_1 = new StringBuilder().append("um.C(");
+          if (param0 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 100) {
-            return;
+          return;
         }
         field_c = null;
     }
 
     final int c(int param0) {
-        if (param0 == 0) {
-          if (!this.field_d) {
-            if (null == this.field_a) {
-              return 0;
-            } else {
-              return this.field_b * 100 / this.field_a.length;
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (param0 != 0) {
           return -31;
         }
+        if (this.field_d) {
+          return 0;
+        }
+        if (null != this.field_a) {
+          return this.field_b * 100 / this.field_a.length;
+        }
+        return 0;
     }
 
     static {

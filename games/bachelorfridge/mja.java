@@ -12,8 +12,6 @@ final class mja extends td {
         oo stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -23,111 +21,57 @@ final class mja extends td {
         aga var7 = null;
         var6 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              if (param1 == 3) {
-                break L1;
-              } else {
-                field_t = (sna) null;
-                break L1;
-              }
-            }
-            L2: {
-              var7 = this.field_h.a(69, param0);
-              var4 = new oo(this.field_g, new nq(var7), this.field_i);
-              if (2 == this.field_i) {
-                var5 = 0;
-                L3: while (true) {
-                  if (var7.field_x <= var5) {
-                    break L2;
-                  } else {
-                    ar.a(var7.field_J, 31546, var5, false, param0, var4);
-                    ar.a(var7.field_J + -1, 31546, var5, false, param0, var4);
-                    ar.a(var7.field_J + 1, param1 + 31543, var5, false, param0, var4);
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                if ((this.field_i ^ -1) != -5) {
-                  if (1 == this.field_i) {
-                    var5 = 0;
-                    L4: while (true) {
-                      if (var5 >= var7.field_J) {
-                        break L2;
-                      } else {
-                        ar.a(var5, 31546, var7.field_x, false, param0, var4);
-                        ar.a(var5, 31546, -1 + var7.field_x, false, param0, var4);
-                        ar.a(var5, 31546, var7.field_x + 1, false, param0, var4);
-                        var5++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    if (this.field_i == 3) {
-                      var5 = 1 + var7.field_J;
-                      L5: while (true) {
-                        if (var5 >= param0.field_B) {
-                          break L2;
-                        } else {
-                          ar.a(var5, 31546, var7.field_x, false, param0, var4);
-                          ar.a(var5, 31546, var7.field_x - 1, false, param0, var4);
-                          ar.a(var5, 31546, 1 + var7.field_x, false, param0, var4);
-                          var5++;
-                          continue L5;
-                        }
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
-                } else {
-                  var5 = 1 + var7.field_x;
-                  L6: while (true) {
-                    if (param0.field_z <= var5) {
-                      break L2;
-                    } else {
-                      ar.a(var7.field_J, 31546, var5, false, param0, var4);
-                      ar.a(-1 + var7.field_J, 31546, var5, false, param0, var4);
-                      ar.a(var7.field_J + 1, 31546, var5, false, param0, var4);
-                      var5++;
-                      continue L6;
-                    }
-                  }
-                }
-              }
-            }
-            stackIn_21_0 = (oo) (var4);
-            break L0;
+          if (param1 != 3) {
+            field_t = (sna) null;
           }
+          var7 = this.field_h.a(69, param0);
+          var4 = new oo(this.field_g, new nq(var7), this.field_i);
+          if (2 == this.field_i) {
+            for (var5 = 0; var7.field_x > var5; var5++) {
+              ar.a(var7.field_J, 31546, var5, false, param0, var4);
+              ar.a(var7.field_J - 1, 31546, var5, false, param0, var4);
+              ar.a(var7.field_J + 1, param1 + 31543, var5, false, param0, var4);
+            }
+          } else if (this.field_i == 4) {
+            for (var5 = 1 + var7.field_x; param0.field_z > var5; var5++) {
+              ar.a(var7.field_J, 31546, var5, false, param0, var4);
+              ar.a(-1 + var7.field_J, 31546, var5, false, param0, var4);
+              ar.a(var7.field_J + 1, 31546, var5, false, param0, var4);
+            }
+          } else if (1 == this.field_i) {
+            for (var5 = 0; var5 < var7.field_J; var5++) {
+              ar.a(var5, 31546, var7.field_x, false, param0, var4);
+              ar.a(var5, 31546, -1 + var7.field_x, false, param0, var4);
+              ar.a(var5, 31546, var7.field_x + 1, false, param0, var4);
+            }
+          } else {
+            if (this.field_i == 3) {
+              for (var5 = 1 + var7.field_J; var5 < param0.field_B; var5++) {
+                ar.a(var5, 31546, var7.field_x, false, param0, var4);
+                ar.a(var5, 31546, var7.field_x - 1, false, param0, var4);
+                ar.a(var5, 31546, 1 + var7.field_x, false, param0, var4);
+              }
+            }
+          }
+          stackIn_21_0 = var4;
+          return (ii) ((Object) stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var3);
-
-            stackIn_24_1 = new StringBuilder().append("mja.A(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_24_0 = var3;
+          stackIn_24_1 = new StringBuilder().append("mja.A(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
-        return (ii) ((Object) stackIn_21_0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != 3) {
-            field_r = (String) null;
+          field_r = (String) null;
         }
         tca.field_f = param1;
         gaa.field_k = param0;
@@ -138,9 +82,9 @@ final class mja extends td {
     mja(int param0, aga param1, int param2) {
         super(param0, param1);
         try {
-            this.field_i = param2;
+          this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "mja.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

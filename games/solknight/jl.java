@@ -19,13 +19,13 @@ final class jl implements Iterator {
         field_g = null;
         field_h = null;
         if (param0 != 0) {
-            jl.a(true, 59, false, true);
+          jl.a(true, 59, false, true);
         }
     }
 
     public final void remove() {
-        if (!(null != this.field_a)) {
-            throw new IllegalStateException();
+        if (null == this.field_a) {
+          throw new IllegalStateException();
         }
         this.field_a.a(97);
         this.field_a = null;
@@ -38,80 +38,55 @@ final class jl implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (var1 == this.field_i.field_f) {
-            var1 = null;
-            this.field_b = null;
+          var1 = null;
+          this.field_b = null;
         } else {
-            this.field_b = ((ec) (var1)).field_i;
+          this.field_b = ((ec) (var1)).field_i;
         }
         this.field_a = (ec) (var1);
         return var1;
     }
 
     final static String a(boolean param0, int param1, boolean param2, boolean param3) {
-        int var4;
-        var4 = 0;
-        if (param1 <= -69) {
-          if (!param3) {
-            if (param0) {
-              L0: {
-                var4 += 2;
-                if (param2) {
-                  var4++;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return dd.field_d[var4];
-            } else {
-              L1: {
-                if (param2) {
-                  var4++;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return dd.field_d[var4];
-            }
-          } else {
-            var4 += 4;
-            if (!param0) {
-              L2: {
-                if (param2) {
-                  var4++;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return dd.field_d[var4];
-            } else {
-              L3: {
-                var4 += 2;
-                if (param2) {
-                  var4++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return dd.field_d[var4];
-            }
-          }
-        } else {
+        int var4 = 0;
+        if (param1 > -69) {
           return (String) null;
         }
+        if (param3) {
+          var4 += 4;
+          if (param0) {
+            var4 += 2;
+            if (param2) {
+              var4++;
+            }
+            return dd.field_d[var4];
+          }
+          if (param2) {
+            var4++;
+          }
+          return dd.field_d[var4];
+        }
+        if (!param0) {
+          if (param2) {
+            var4++;
+          }
+          return dd.field_d[var4];
+        }
+        var4 += 2;
+        if (param2) {
+          var4++;
+        }
+        return dd.field_d[var4];
     }
 
     jl(ik param0) {
         this.field_a = null;
         try {
-            this.field_i = param0;
-            this.field_b = this.field_i.field_f.field_i;
-            this.field_a = null;
+          this.field_i = param0;
+          this.field_b = this.field_i.field_f.field_i;
+          this.field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "jl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,64 +11,41 @@ final class oe {
 
     public static void b(int param0) {
         field_d = null;
-        if (param0 != 0) {
-          field_b = (hk[][]) null;
-          field_b = (hk[][]) null;
-          field_a = null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_b = (hk[][]) null;
           field_a = null;
           field_e = null;
           field_c = null;
           return;
         }
+        field_b = (hk[][]) null;
+        field_b = (hk[][]) null;
+        field_a = null;
+        field_e = null;
+        field_c = null;
     }
 
     final static void a(int param0) {
         try {
-            Exception var1 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            if (param0 == 0) {
-              L0: {
-                if (null == gh.field_Ib) {
-                  break L0;
-                } else {
-                  try {
-                    L1: {
-                      gh.field_Ib.a(0L, 0);
-                      gh.field_Ib.a(sh.field_qb.field_l, sh.field_qb.field_g, 24, param0 ^ 0);
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L2: {
-                      var1 = (Exception) (Object) decompiledCaughtException;
-                      decompiledRegionSelector0 = 1;
-                      break L2;
-                    }
-                  }
-                  if (decompiledRegionSelector0 == 0) {
-                    sh.field_qb.field_l = sh.field_qb.field_l + 24;
-                    return;
-                  } else {
-                    break L0;
-                  }
-                }
-              }
-              sh.field_qb.field_l = sh.field_qb.field_l + 24;
-              return;
-            } else {
-              return;
+          Exception var1 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 != 0) {
+            return;
+          }
+          if (null != gh.field_Ib) {
+            try {
+              gh.field_Ib.a(0L, 0);
+              gh.field_Ib.a(sh.field_qb.field_l, sh.field_qb.field_g, 24, param0 ^ 0);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
             }
+          }
+          sh.field_qb.field_l = sh.field_qb.field_l + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -78,47 +55,27 @@ final class oe {
         kg stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param1) {
-                break L1;
-              } else {
-                var3 = (String) null;
-                oe.a((String) null, false);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new kg(param0);
-            break L0;
+          if (param1) {
+            var3 = (String) null;
+            oe.a((String) null, false);
           }
+          stackIn_3_0 = new kg(param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("oe.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("oe.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

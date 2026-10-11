@@ -16,7 +16,7 @@ final class gj extends ta {
 
     final l b(boolean param0) {
         if (param0) {
-            return (l) null;
+          return (l) null;
         }
         return (l) ((Object) new o(60, this.field_p));
     }
@@ -25,36 +25,33 @@ final class gj extends ta {
         field_k = null;
         field_o = null;
         if (param0 != 19) {
-            gj.d(-48);
-            field_m = null;
-            return;
+          gj.d(-48);
+          field_m = null;
+          return;
         }
         field_m = null;
     }
 
     final int c(int param0) {
-        if (param0 == -1) {
-          if (19 != this.field_p.field_g) {
-            lc.a(-1);
-            this.field_g = this.field_g - 1;
-            this.field_p.field_g = this.field_p.field_g - 1;
-            return 4;
-          } else {
-            this.field_p = this.field_p.d((byte) -120);
-            return this.field_p.field_e.a((byte) -102, false);
-          }
-        } else {
+        if (param0 != -1) {
           field_o = (String[]) null;
-          if (19 != this.field_p.field_g) {
-            lc.a(-1);
-            this.field_g = this.field_g - 1;
-            this.field_p.field_g = this.field_p.field_g - 1;
-            return 4;
-          } else {
+          if (19 == this.field_p.field_g) {
             this.field_p = this.field_p.d((byte) -120);
             return this.field_p.field_e.a((byte) -102, false);
           }
+          lc.a(-1);
+          this.field_g = this.field_g - 1;
+          this.field_p.field_g = this.field_p.field_g - 1;
+          return 4;
         }
+        if (19 == this.field_p.field_g) {
+          this.field_p = this.field_p.d((byte) -120);
+          return this.field_p.field_e.a((byte) -102, false);
+        }
+        lc.a(-1);
+        this.field_g = this.field_g - 1;
+        this.field_p.field_g = this.field_p.field_g - 1;
+        return 4;
     }
 
     static {

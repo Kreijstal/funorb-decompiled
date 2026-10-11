@@ -17,74 +17,37 @@ final class cg {
         ah var2;
         int var3;
         ah var4;
-        L0: {
-          var3 = StarCannon.field_A;
-          if (param0 == 15) {
-            break L0;
-          } else {
-            this.a((byte) -63);
-            break L0;
-          }
+        var3 = StarCannon.field_A;
+        if (param0 != 15) {
+          this.a((byte) -63);
         }
-        L1: while (true) {
-          if (this.field_c < this.field_f) {
-            var4 = this.field_d[this.field_c];
-            var2 = var4;
-            if (var4.field_b.b((byte) 99)) {
-              L2: {
-                if ((var4.field_j ^ -1) > -1) {
-                  break L2;
-                } else {
-                  if (!var4.field_b.c(var4.field_j, -31)) {
-                    this.a((byte) 75, var2, var4.field_b.a(100, var4.field_j));
-                    return false;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if (null == var4.field_g) {
-                  break L3;
-                } else {
-                  if (var4.field_b.a(var4.field_g, -9883)) {
-                    break L3;
-                  } else {
-                    this.a((byte) -121, var2, var4.field_b.a(var4.field_g, (byte) 96));
-                    return false;
-                  }
-                }
-              }
-              L4: {
-                if (0 <= var4.field_j) {
-                  break L4;
-                } else {
-                  if (null != var4.field_g) {
-                    break L4;
-                  } else {
-                    if (null == var4.field_k) {
-                      break L4;
-                    } else {
-                      if (var4.field_b.a(29741)) {
-                        break L4;
-                      } else {
-                        this.a((byte) 27, var2, var4.field_b.a((byte) 62));
-                        return false;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_c = this.field_c + 1;
-              continue L1;
-            } else {
-              this.a((byte) 49, var4, 0);
-              return false;
-            }
-          } else {
-            return true;
+        while (this.field_c < this.field_f) {
+          var4 = this.field_d[this.field_c];
+          var2 = var4;
+          if (!var4.field_b.b((byte) 99)) {
+            this.a((byte) 49, var4, 0);
+            return false;
           }
+          if (var4.field_j >= 0 &&
+            !var4.field_b.c(var4.field_j, -31)) {
+            this.a((byte) 75, var2, var4.field_b.a(100, var4.field_j));
+            return false;
+          }
+          if (null != var4.field_g &&
+            !var4.field_b.a(var4.field_g, -9883)) {
+            this.a((byte) -121, var2, var4.field_b.a(var4.field_g, (byte) 96));
+            return false;
+          }
+          if (0 > var4.field_j &&
+            null == var4.field_g &&
+            null != var4.field_k &&
+            !var4.field_b.a(29741)) {
+            this.a((byte) 27, var2, var4.field_b.a((byte) 62));
+            return false;
+          }
+          this.field_c = this.field_c + 1;
         }
+        return true;
     }
 
     public static void a(int param0) {
@@ -99,8 +62,6 @@ final class cg {
         int var5 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -110,31 +71,20 @@ final class cg {
           if (param2 != 0) {
             this.field_h = param1.field_k + " - " + param2 + "%";
             return;
-          } else {
-            this.field_h = param1.field_h;
-            return;
           }
+          this.field_h = param1.field_h;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var4 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var4);
-
-            stackIn_6_1 = new StringBuilder().append("cg.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L0;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L0;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("cg.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

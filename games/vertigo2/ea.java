@@ -16,55 +16,40 @@ final class ea {
         field_h = null;
         field_d = null;
         field_b = null;
-        if (param0 != -28) {
-          ea.b((byte) 1);
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -28) {
           field_c = null;
           field_a = null;
           return;
         }
+        ea.b((byte) 1);
+        field_c = null;
+        field_a = null;
     }
 
     final static void a(int param0, boolean param1) {
-        mi var2;
-        var2 = uh.field_Wb;
+        mi var2 = uh.field_Wb;
         var2.j(param0, 122);
         var2.f(1, -99);
         var2.f(3, 98);
-        if (!param1) {
-          field_a = (String) null;
-          return;
-        } else {
+        if (param1) {
           return;
         }
+        field_a = (String) null;
     }
 
     final static void b(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 > 102) {
-            break L0;
-          } else {
-            ea.b((byte) 112);
-            break L0;
-          }
+        if (param0 <= 102) {
+          ea.b((byte) 112);
         }
         if (as.field_b == null) {
           return;
-        } else {
-          var1 = as.field_b;
-          synchronized (var1) {
-            L1: {
-              as.field_b = null;
-              break L1;
-            }
-          }
-          return;
+        }
+        var1 = as.field_b;
+        synchronized (var1) {
+          as.field_b = null;
         }
     }
 

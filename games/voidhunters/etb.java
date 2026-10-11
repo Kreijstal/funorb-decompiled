@@ -12,18 +12,18 @@ final class etb implements dja {
 
     final static java.awt.Container b(int param0) {
         if (null != ira.field_c) {
-            return (java.awt.Container) ((Object) ira.field_c);
+          return (java.awt.Container) ((Object) ira.field_c);
         }
         if (param0 != -28941) {
-            field_a = (String) null;
-            return (java.awt.Container) ((Object) vpa.b((byte) -122));
+          field_a = (String) null;
+          return (java.awt.Container) ((Object) vpa.b((byte) -122));
         }
         return (java.awt.Container) ((Object) vpa.b((byte) -122));
     }
 
     final static boolean a(int param0) {
         if (param0 != 31065) {
-            return true;
+          return true;
         }
         return jpa.field_a;
     }
@@ -36,7 +36,7 @@ final class etb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new aqa[param1]);
     }

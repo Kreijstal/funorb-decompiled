@@ -7,31 +7,29 @@ final class vb {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 >= -28) {
-          field_a = (int[]) null;
-          dk.field_a = param3;
-          ai.field_h = param0;
-          pc.field_m = param1;
-          dh.field_l = param4;
-          return;
-        } else {
+        if (param2 < -28) {
           dk.field_a = param3;
           ai.field_h = param0;
           pc.field_m = param1;
           dh.field_l = param4;
           return;
         }
+        field_a = (int[]) null;
+        dk.field_a = param3;
+        ai.field_h = param0;
+        pc.field_m = param1;
+        dh.field_l = param4;
     }
 
     final static void a(int param0) {
         si.field_a = new ja();
         if (param0 > -47) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 

@@ -13,10 +13,10 @@ final class ql extends da {
 
     public static void a(int param0) {
         if (param0 != 4707) {
-            field_l = (int[]) null;
-            field_k = null;
-            field_l = null;
-            return;
+          field_l = (int[]) null;
+          field_k = null;
+          field_l = null;
+          return;
         }
         field_k = null;
         field_l = null;

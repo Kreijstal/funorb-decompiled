@@ -13,7 +13,7 @@ final class rc {
         field_d = null;
         field_a = null;
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
         field_e = null;

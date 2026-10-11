@@ -8,9 +8,9 @@ abstract class ua {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -6) {
-            ua.a(false);
-            field_b = null;
-            return;
+          ua.a(false);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -27,101 +27,53 @@ abstract class ua {
         int var7 = 0;
         var7 = Torquing.field_u;
         try {
-          L0: {
-            var1_int = param0 ? 1 : 0;
-            var2 = 0;
-            L1: while (true) {
-              if (!np.a((byte) -13)) {
-                L2: {
-                  kb.field_g.a(true, qd.a(16452, n.field_t, k.field_e), qd.a(16452, wh.field_s, re.field_c));
-                  if (!kb.field_g.f((byte) -60)) {
-                    break L2;
-                  } else {
-                    var1_int = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  L4: {
-                    var3 = 0;
-                    if (var1_int == 0) {
-                      break L4;
-                    } else {
-                      if (0 > kb.field_g.field_g) {
-                        break L4;
-                      } else {
-                        var3 = di.field_e[kb.field_g.field_g];
-                        if (var3 == 2) {
-                          qo.g((byte) -68);
-                          break L3;
-                        } else {
-                          if (-6 == (var3 ^ -1)) {
-                            qo.g((byte) -68);
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  if (var2 == 0) {
-                    break L3;
-                  } else {
-                    if (-3 == (go.field_x ^ -1)) {
-                      break L3;
-                    } else {
-                      qo.g((byte) -68);
-                      break L3;
-                    }
-                  }
-                }
-                L5: {
-                  if (0 != var3) {
-                    break L5;
-                  } else {
-                    if (-3 != (go.field_x ^ -1)) {
-                      break L5;
-                    } else {
-                      var4 = km.b(-1) + -dc.field_c;
-                      var6 = (int)((10999L - var4) / 1000L);
-                      if ((var6 ^ -1) >= -1) {
-                        ka.a(5, true, (byte) -115);
-                        var3 = 2;
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                }
-                stackIn_25_0 = var3;
-                break L0;
-              } else {
-                L6: {
-                  kb.field_g.a(0);
-                  if (!kb.field_g.f((byte) -60)) {
-                    break L6;
-                  } else {
-                    var1_int = 1;
-                    break L6;
-                  }
-                }
-                if (-14 != (e.field_f ^ -1)) {
-                  continue L1;
-                } else {
-                  var2 = 1;
-                  continue L1;
-                }
-              }
+          var1_int = param0 ? 1 : 0;
+          var2 = 0;
+          while (np.a((byte) -13)) {
+            kb.field_g.a(0);
+            if (kb.field_g.f((byte) -60)) {
+              var1_int = 1;
+            }
+            if (e.field_f != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          kb.field_g.a(true, qd.a(16452, n.field_t, k.field_e), qd.a(16452, wh.field_s, re.field_c));
+          if (kb.field_g.f((byte) -60)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            0 <= kb.field_g.field_g) {
+            var3 = di.field_e[kb.field_g.field_g];
+            if (var3 == 2) {
+              qo.g((byte) -68);
+            } else if (var3 == 5) {
+              qo.g((byte) -68);
+            }
+          } else {
+            if (var2 != 0 &&
+              go.field_x != 2) {
+              qo.g((byte) -68);
             }
           }
+          if (0 == var3 &&
+            go.field_x == 2) {
+            var4 = km.b(-1) - dc.field_c;
+            var6 = (int)((10999L - var4) / 1000L);
+            if (var6 <= 0) {
+              ka.a(5, true, (byte) -115);
+              var3 = 2;
+            }
+          }
+          stackIn_25_0 = var3;
+          return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw rb.a((Throwable) ((Object) var1), "ua.B(" + param0 + ')');
         }
-        return stackIn_25_0;
     }
 
     static {

@@ -12,57 +12,48 @@ final class hl extends ck {
     boolean field_t;
 
     final static String d(int param0) {
-        if (cb.field_j != nj.field_ab) {
-          if (gf.field_a.a((byte) -72)) {
-            if (nj.field_ab != jn.field_b) {
-              if (param0 < 80) {
-                hl.d(-61);
-                return cc.field_Xb;
-              } else {
-                return cc.field_Xb;
-              }
-            } else {
-              return gf.field_a.a(true);
-            }
-          } else {
-            return gf.field_a.a(true);
-          }
-        } else {
+        if (cb.field_j == nj.field_ab) {
           return kf.field_o;
         }
+        if (!gf.field_a.a((byte) -72)) {
+          return gf.field_a.a(true);
+        }
+        if (nj.field_ab == jn.field_b) {
+          return gf.field_a.a(true);
+        }
+        if (param0 >= 80) {
+          return cc.field_Xb;
+        }
+        hl.d(-61);
+        return cc.field_Xb;
     }
 
     public static void e(int param0) {
         field_r = null;
-        if (param0 != 0) {
-          field_o = 50;
-          field_p = null;
-          field_v = null;
-          field_u = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_p = null;
           field_v = null;
           field_u = null;
           return;
         }
+        field_o = 50;
+        field_p = null;
+        field_v = null;
+        field_u = null;
     }
 
     final static gh a(byte param0) {
-        if (-1 <= (fj.field_f ^ -1)) {
-          if (bd.field_c <= 0) {
-            if (param0 == -66) {
-              return null;
-            } else {
-              hl.a((byte) 61);
-              return null;
-            }
-          } else {
-            return qa.field_L;
-          }
-        } else {
+        if (fj.field_f > 0) {
           return qa.field_L;
         }
+        if (bd.field_c > 0) {
+          return qa.field_L;
+        }
+        if (param0 != -66) {
+          hl.a((byte) 61);
+          return null;
+        }
+        return null;
     }
 
     hl() {

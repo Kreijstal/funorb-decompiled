@@ -15,7 +15,7 @@ final class bo {
         g.field_a = ji.field_T;
         vl.field_A = ji.field_T;
         if (param0 <= 30) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
@@ -23,7 +23,7 @@ final class bo {
         field_e = null;
         field_a = null;
         if (param0 >= -29) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;
@@ -34,16 +34,16 @@ final class bo {
         String var3 = null;
         long var4 = 0L;
         if (param1 != -12) {
-            return;
+          return;
         }
         try {
-            ih.field_U = true;
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            var4 = -1L;
-            vm.a(var3, 11440, param0, var4, var2);
+          ih.field_U = true;
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          var4 = -1L;
+          vm.a(var3, 11440, param0, var4, var2);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

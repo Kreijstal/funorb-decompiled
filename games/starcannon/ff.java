@@ -12,14 +12,14 @@ final class ff extends uh {
 
     final static String g(int param0) {
         int var1 = 31 % ((param0 - 57) / 43);
-        if (!(jl.field_a != uh.field_k)) {
-            return jl.field_c;
+        if (jl.field_a == uh.field_k) {
+          return jl.field_c;
         }
-        if (!(jl.field_a != ie.field_x)) {
-            return te.field_a;
+        if (jl.field_a == ie.field_x) {
+          return te.field_a;
         }
         if (!qa.field_a.b(false)) {
-            return te.field_a;
+          return te.field_a;
         }
         return lc.field_hb;
     }
@@ -28,118 +28,58 @@ final class ff extends uh {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_15_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         StringBuilder stackIn_21_1 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            L1: {
-              var3_int = -param2.field_hb + param1.field_hb;
-              if (param1.field_gb != wg.field_a) {
-                if (param1.field_gb != null) {
-                  break L1;
-                } else {
-                  var3_int += 200;
-                  break L1;
-                }
-              } else {
-                var3_int -= 200;
-                break L1;
-              }
+          var3_int = -param2.field_hb + param1.field_hb;
+          if (param1.field_gb != wg.field_a) {
+            if (param1.field_gb == null) {
+              var3_int += 200;
             }
-            if (param0 == 80) {
-              L2: {
-                if (wg.field_a == param2.field_gb) {
-                  var3_int += 200;
-                  break L2;
-                } else {
-                  if (null != param2.field_gb) {
-                    break L2;
-                  } else {
-                    var3_int -= 200;
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if (var3_int <= 0) {
-                  stackIn_15_0 = 0;
-                  break L3;
-                } else {
-                  stackIn_15_0 = 1;
-                  break L3;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_7_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          } else {
+            var3_int -= 200;
+          }
+          if (param0 != 80) {
+            return false;
+          }
+          if (wg.field_a == param2.field_gb) {
+            var3_int += 200;
+          } else {
+            if (null == param2.field_gb) {
+              var3_int -= 200;
             }
           }
+          return !(var3_int <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var3);
-
-            stackIn_18_1 = new StringBuilder().append("ff.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L4;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_18_0 = var3;
+          stackIn_18_1 = new StringBuilder().append("ff.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          L5: {
-
-
-            stackIn_21_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(',');
-
-            if (param2 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L5;
-            }
+          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          if (param2 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_19_0), stackIn_22_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          return stackIn_15_0 != 0;
+          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     private final void a(rb param0, int param1, byte param2) {
         int[] array$0 = null;
+        int var9 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -148,101 +88,53 @@ final class ff extends uh {
         int var6 = 0;
         int var7 = 0;
         o var8 = null;
-        int var9 = 0;
         int var10 = 0;
         var10 = StarCannon.field_A;
         try {
-          L0: {
-            L1: {
-              var4_int = -121 % ((1 - param2) / 57);
-              if (param1 != 1) {
-                L2: {
-                  if (param1 != 2) {
-                    if ((param1 ^ -1) == -4) {
-                      var5 = param0.j(7909);
-                      this.field_n = new int[var5][];
-                      this.field_r = new int[var5];
-                      var6 = 0;
-                      L3: while (true) {
-                        if (var6 >= var5) {
-                          break L2;
-                        } else {
-                          L4: {
-                            var7 = param0.i(-1174051992);
-                            var8 = qf.a(var7, 0);
-                            if (var8 == null) {
-                              break L4;
-                            } else {
-                              this.field_r[var6] = var7;
-                              array$0 = new int[var8.field_a];
-                              this.field_n[var6] = array$0;
-                              var9 = 0;
-                              L5: while (true) {
-                                if (var8.field_a <= var9) {
-                                  break L4;
-                                } else {
-                                  this.field_n[var6][var9] = param0.i(-1174051992);
-                                  var9++;
-                                  continue L5;
-                                }
-                              }
-                            }
-                          }
-                          var6++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      if (-5 != (param1 ^ -1)) {
-                        break L2;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  } else {
-                    var5 = param0.j(7909);
-                    this.field_s = new int[var5];
-                    var6 = 0;
-                    L6: while (true) {
-                      if (var6 >= var5) {
-                        break L2;
-                      } else {
-                        this.field_s[var6] = param0.i(-1174051992);
-                        var6++;
-                        continue L6;
-                      }
-                    }
+          var4_int = -121 % ((1 - param2) / 57);
+          if (param1 != 1) {
+            if (param1 == 2) {
+              var5 = param0.j(7909);
+              this.field_s = new int[var5];
+              for (var6 = 0; var6 < var5; var6++) {
+                this.field_s[var6] = param0.i(-1174051992);
+              }
+            } else if (param1 == 3) {
+              var5 = param0.j(7909);
+              this.field_n = new int[var5][];
+              this.field_r = new int[var5];
+              for (var6 = 0; var6 < var5; var6++) {
+                var7 = param0.i(-1174051992);
+                var8 = qf.a(var7, 0);
+                if (var8 != null) {
+                  this.field_r[var6] = var7;
+                  array$0 = new int[var8.field_a];
+                  this.field_n[var6] = array$0;
+                  for (var9 = 0; var8.field_a > var9; var9++) {
+                    this.field_n[var6][var9] = param0.i(-1174051992);
                   }
                 }
-                break L1;
-              } else {
-                this.field_t = uj.a(-46, '<', param0.a(-50));
-                break L1;
+              }
+            } else {
+              if (param1 == 4) {
+                return;
               }
             }
-            break L0;
+          } else {
+            this.field_t = uj.a(-46, '<', param0.a(-50));
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var4);
-
-            stackIn_20_1 = new StringBuilder().append("ff.F(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L7;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_20_0 = var4;
+          stackIn_20_1 = new StringBuilder().append("ff.F(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -251,66 +143,47 @@ final class ff extends uh {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            L1: while (true) {
-              var3_int = param0.j(7909);
-              if (-1 != (var3_int ^ -1)) {
-                this.a(param0, var3_int, (byte) 99);
-                continue L1;
-              } else {
-                L2: {
-                  if (param1 >= 24) {
-                    break L2;
-                  } else {
-                    this.field_s = (int[]) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              }
+          while (true) {
+            var3_int = param0.j(7909);
+            if (var3_int != 0) {
+              this.a(param0, var3_int, (byte) 99);
+              continue;
             }
+            break;
           }
+          if (param1 < 24) {
+            this.field_s = (int[]) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("ff.G(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("ff.G(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void d(int param0) {
         int var2 = 0;
         int var3 = StarCannon.field_A;
-        if (!(null == this.field_s)) {
-            for (var2 = 0; var2 < this.field_s.length; var2++) {
-                this.field_s[var2] = cl.a(this.field_s[var2], 32768);
-            }
+        if (null != this.field_s) {
+          for (var2 = 0; var2 < this.field_s.length; var2++) {
+            this.field_s[var2] = cl.a(this.field_s[var2], 32768);
+          }
         }
         if (param0 > -33) {
-            this.e(-31);
+          this.e(-31);
         }
     }
 
@@ -320,19 +193,19 @@ final class ff extends uh {
         int var4 = StarCannon.field_A;
         StringBuilder var7 = new StringBuilder(80);
         var7 = var7;
-        if (!(this.field_t != null)) {
-            return "";
+        if (this.field_t == null) {
+          return "";
         }
         StringBuilder discarded$0 = var7.append(this.field_t[0]);
         int var3 = 1;
         if (param0 > -5) {
-            ld var5 = (ld) null;
-            ff.a(-127, (ld) null, (ld) null);
+          ld var5 = (ld) null;
+          ff.a(-127, (ld) null, (ld) null);
         }
         while (this.field_t.length > var3) {
-            discarded$1 = var7.append("...");
-            discarded$2 = var7.append(this.field_t[var3]);
-            var3++;
+          discarded$1 = var7.append("...");
+          discarded$2 = var7.append(this.field_t[var3]);
+          var3++;
         }
         return var7.toString();
     }
@@ -341,7 +214,7 @@ final class ff extends uh {
         field_q = null;
         field_p = null;
         if (param0 > -32) {
-            ff.g(-95);
+          ff.g(-95);
         }
     }
 

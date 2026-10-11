@@ -22,8 +22,8 @@ final class kl implements com.ms.directX.IEnumModesCallback {
         this.field_b.restoreDisplayMode();
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
         if (param1 != 34) {
-            java.awt.Frame var4 = (java.awt.Frame) null;
-            this.a(19, -30, 102, 81, -108, (java.awt.Frame) null);
+          java.awt.Frame var4 = (java.awt.Frame) null;
+          this.a(19, -30, 102, 81, -108, (java.awt.Frame) null);
         }
     }
 
@@ -33,20 +33,20 @@ final class kl implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_c != null) {
-            fieldTemp$1 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_a = field_a + 4;
+          field_a = field_a + 4;
         }
     }
 

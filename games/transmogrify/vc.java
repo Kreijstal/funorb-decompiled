@@ -10,10 +10,10 @@ final class vc extends rg implements ie {
 
     public static void p(int param0) {
         if (param0 < 78) {
-            vc.p(67);
-            field_G = null;
-            field_N = null;
-            return;
+          vc.p(67);
+          field_G = null;
+          field_N = null;
+          return;
         }
         field_G = null;
         field_N = null;
@@ -21,10 +21,10 @@ final class vc extends rg implements ie {
 
     final void a(int param0, wa param1) {
         try {
-            int var3_int = 32 / ((-1 - param0) / 56);
-            this.field_Q = param1;
+          int var3_int = 32 / ((-1 - param0) / 56);
+          this.field_Q = param1;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "vc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "vc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,21 +34,14 @@ final class vc extends rg implements ie {
     }
 
     final void e(byte param0) {
-        L0: {
-          super.e((byte) 117);
-          if (this.field_Q != null) {
-            this.field_Q.a(true);
-            break L0;
-          } else {
-            break L0;
-          }
+        super.e((byte) 117);
+        if (this.field_Q != null) {
+          this.field_Q.a(true);
         }
-        if (param0 <= 43) {
-          this.field_Q = (wa) null;
-          return;
-        } else {
+        if (param0 > 43) {
           return;
         }
+        this.field_Q = (wa) null;
     }
 
     vc(String param0, ma param1, int param2) {
@@ -56,56 +49,40 @@ final class vc extends rg implements ie {
     }
 
     final static boolean e(boolean param0) {
-        int stackIn_8_0 = 0;
-        if (!param0) {
-          if (-11 >= (gl.field_y ^ -1)) {
-            if (ge.field_x) {
-              return false;
-            } else {
-              L0: {
-                if (i.b(true)) {
-                  stackIn_8_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_8_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_8_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           return false;
         }
+        if (gl.field_y < 10) {
+          return false;
+        }
+        if (!ge.field_x) {
+          return !i.b(true) ? true : false;
+        }
+        return false;
     }
 
     final String f(int param0) {
-        if (this.field_g) {
-          if (this.field_j != null) {
-            if (param0 != 4) {
-              this.field_Q = (wa) null;
-              sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
-              return this.field_j;
-            } else {
-              sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
-              return this.field_j;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (!this.field_g) {
           return null;
         }
+        if (this.field_j == null) {
+          return null;
+        }
+        if (param0 == 4) {
+          sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
+          return this.field_j;
+        }
+        this.field_Q = (wa) null;
+        sh.a((byte) 123, this.field_l + (-this.field_P + oa.field_j), bk.field_a);
+        return this.field_j;
     }
 
     final void a(int param0, byte param1, qg param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_P = -param3 + (oa.field_j - this.field_p);
+          super.a(param0, param1, param2, param3);
+          this.field_P = -param3 + (oa.field_j - this.field_p);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "vc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "vc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

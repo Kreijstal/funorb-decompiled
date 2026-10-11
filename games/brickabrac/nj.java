@@ -38,143 +38,95 @@ final class nj extends nm {
 
     final void c(int param0) {
         int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int var2;
+        int var2 = 0;
         int var3;
-        L0: {
-          var3 = BrickABrac.field_J ? 1 : 0;
-          if (this.field_K <= 0) {
-            break L0;
+        var3 = BrickABrac.field_J ? 1 : 0;
+        if (this.field_K > 0) {
+          fieldTemp$0 = this.field_K - 1;
+          this.field_K = this.field_K - 1;
+          if (fieldTemp$0 > 0) {
+            return;
+          }
+        }
+        for (var2 = param0; var2 < this.field_w; var2++) {
+          if (this.field_k > this.field_I) {
+            this.field_D[var2][this.field_J] = this.field_A[var2];
+            this.field_m[var2][this.field_J] = this.field_C[var2];
+          }
+          boolean decompiledFrameRemainder0 = true;
+          if (this.field_B > this.field_k) {
+            this.field_r[var2] = this.field_r[var2] * 91 / 100;
+            this.field_y[var2] = this.field_y[var2] * 91 / 100;
           } else {
-            fieldTemp$0 = this.field_K - 1;
-            this.field_K = this.field_K - 1;
-            if (fieldTemp$0 <= 0) {
-              break L0;
-            } else {
-              return;
+            if (this.field_k > this.field_q) {
+              this.field_y[var2] = this.field_y[var2] + this.field_O;
+              this.field_r[var2] = this.field_r[var2] + this.field_p;
+              if (this.field_o >= this.field_k) {
+                this.field_A[var2] = this.field_A[var2] + this.field_r[var2];
+                this.field_C[var2] = this.field_C[var2] + this.field_y[var2];
+                decompiledFrameRemainder0 = false;
+              }
+              else {
+                if (this.field_p == 0) {
+                  this.field_p = ip.field_r.a(-37880252, 3) - 1;
+                } else {
+                  this.field_p = -this.field_p;
+                }
+                this.field_o = this.field_u + 1;
+              }
+            }
+          }
+          if (decompiledFrameRemainder0) {
+            this.field_A[var2] = this.field_A[var2] + this.field_r[var2];
+            this.field_C[var2] = this.field_C[var2] + this.field_y[var2];
+          }
+        }
+        if (this.field_k > this.field_t) {
+          this.field_j = this.field_j + 1;
+        }
+        if (this.field_I < this.field_k) {
+          if (this.field_O != 0 &&
+            2 * this.field_q <= this.field_k) {
+            this.field_J = this.field_J + 1;
+          } else {
+            if (this.field_k % 3 == 0) {
+              this.field_J = this.field_J + 1;
             }
           }
         }
-        var2 = param0;
-        L1: while (true) {
-          if (var2 >= this.field_w) {
-            L2: {
-              if (this.field_k <= this.field_t) {
-                break L2;
-              } else {
-                this.field_j = this.field_j + 1;
-                break L2;
-              }
-            }
-            L3: {
-              if (this.field_I >= this.field_k) {
-                break L3;
-              } else {
-                L4: {
-                  if (this.field_O == 0) {
-                    break L4;
-                  } else {
-                    if (2 * this.field_q > this.field_k) {
-                      break L4;
-                    } else {
-                      this.field_J = this.field_J + 1;
-                      break L3;
-                    }
-                  }
-                }
-                if (this.field_k % 3 != 0) {
-                  break L3;
-                } else {
-                  this.field_J = this.field_J + 1;
-                  break L3;
-                }
-              }
-            }
-            L5: {
-              fieldTemp$1 = this.field_k + 1;
-              this.field_k = this.field_k + 1;
-              if (this.field_u != fieldTemp$1) {
-                break L5;
-              } else {
-                this.b((byte) 111);
-                dl.field_f = dl.field_f - 1;
-                break L5;
-              }
-            }
-            return;
-          } else {
-            L6: {
-              if ((this.field_k ^ -1) < (this.field_I ^ -1)) {
-                this.field_D[var2][this.field_J] = this.field_A[var2];
-                this.field_m[var2][this.field_J] = this.field_C[var2];
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              if (this.field_B > this.field_k) {
-                this.field_r[var2] = this.field_r[var2] * 91 / 100;
-                this.field_y[var2] = this.field_y[var2] * 91 / 100;
-                break L7;
-              } else {
-                if (this.field_k > this.field_q) {
-                  this.field_y[var2] = this.field_y[var2] + this.field_O;
-                  this.field_r[var2] = this.field_r[var2] + this.field_p;
-                  if (this.field_o < this.field_k) {
-                    L8: {
-                      if (-1 == (this.field_p ^ -1)) {
-                        this.field_p = ip.field_r.a(-37880252, 3) + -1;
-                        break L8;
-                      } else {
-                        this.field_p = -this.field_p;
-                        break L8;
-                      }
-                    }
-                    this.field_o = this.field_u + 1;
-                    break L7;
-                  } else {
-                    this.field_A[var2] = this.field_A[var2] + this.field_r[var2];
-                    this.field_C[var2] = this.field_C[var2] + this.field_y[var2];
-                    var2++;
-                    continue L1;
-                  }
-                } else {
-                  break L7;
-                }
-              }
-            }
-            this.field_A[var2] = this.field_A[var2] + this.field_r[var2];
-            this.field_C[var2] = this.field_C[var2] + this.field_y[var2];
-            var2++;
-            continue L1;
-          }
+        int fieldTemp$1 = this.field_k + 1;
+        this.field_k = this.field_k + 1;
+        if (this.field_u == fieldTemp$1) {
+          this.b((byte) 111);
+          dl.field_f = dl.field_f - 1;
         }
     }
 
     final void a(int param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        int var5 = BrickABrac.field_J ? 1 : 0;
+        int var5;
+        var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 != -1196049244) {
-            nj.a(76);
+          nj.a(76);
         }
         if (0 < this.field_K) {
-            return;
+          return;
         }
         for (var3 = 0; this.field_w > var3; var3++) {
-            for (var4 = 0; var4 < this.field_J; var4++) {
-                lb.a((this.field_D[var3][var4] >> -1196049244) + param1, this.field_m[var3][var4] >> -593133180, 48, -(this.field_i * this.field_j) + 64, eb.field_r[this.field_P[var3]]);
-            }
-            lb.a(param1 - -(this.field_A[var3] >> -2090539484), this.field_C[var3] >> -637335740, 224, -(this.field_j * this.field_E) + 165, eb.field_r[this.field_n[var3]]);
-            lb.a((this.field_A[var3] >> 1009824580) + param1, this.field_C[var3] >> -744014204, 64, -(this.field_x * this.field_j) + 250, eb.field_r[this.field_n[var3]]);
+          for (var4 = 0; var4 < this.field_J; var4++) {
+            lb.a((this.field_D[var3][var4] >> 4) + param1, this.field_m[var3][var4] >> 4, 48, -(this.field_i * this.field_j) + 64, eb.field_r[this.field_P[var3]]);
+          }
+          lb.a(param1 + (this.field_A[var3] >> 4), this.field_C[var3] >> 4, 224, -(this.field_j * this.field_E) + 165, eb.field_r[this.field_n[var3]]);
+          lb.a((this.field_A[var3] >> 4) + param1, this.field_C[var3] >> 4, 64, -(this.field_x * this.field_j) + 250, eb.field_r[this.field_n[var3]]);
         }
+        return;
     }
 
     public static void a(int param0) {
         field_F = null;
         if (param0 != 0) {
-            field_F = (String) null;
+          field_F = (String) null;
         }
         field_z = null;
         field_G = null;
@@ -190,17 +142,17 @@ final class nj extends nm {
         this.field_H = param1;
         this.field_L = param0;
         this.field_w = this.field_H * this.field_L;
-        this.field_s = param2 << -901864408;
-        this.field_N = param3 << -60158744;
+        this.field_s = param2 << 8;
+        this.field_N = param3 << 8;
         this.field_K = 30 + ip.field_r.a(-37880252, 30);
-        this.field_u = 100 - -ip.field_r.a(-37880252, 30);
+        this.field_u = 100 + ip.field_r.a(-37880252, 30);
         this.field_I = ip.field_r.a(-37880252, 5) + 12;
-        this.field_B = 19 - -ip.field_r.a(-37880252, 3);
+        this.field_B = 19 + ip.field_r.a(-37880252, 3);
         this.field_q = ip.field_r.a(-37880252, 10) + 25;
         this.field_t = ip.field_r.a(-37880252, 15) + 80;
         this.field_o = 2 * ip.field_r.a(-37880252, this.field_u);
-        this.field_O = ip.field_r.a(-37880252, 2) << 220150625;
-        this.field_p = ip.field_r.a(-37880252, 3) + -1;
+        this.field_O = ip.field_r.a(-37880252, 2) << 1;
+        this.field_p = ip.field_r.a(-37880252, 3) - 1;
         this.field_D = new int[this.field_w][this.field_u];
         this.field_y = new int[this.field_w];
         this.field_n = new int[this.field_w];
@@ -214,22 +166,22 @@ final class nj extends nm {
         int var7 = 8192 / this.field_H;
         int var8 = 0;
         for (var11 = 0; this.field_L > var11; var11++) {
-            var9 = ip.field_r.a(-37880252, eb.field_q.length);
-            var10 = ip.field_r.a(-37880252, eb.field_q.length);
-            for (var12 = 0; this.field_H > var12; var12++) {
-                var8 = ip.field_r.a(-37880252, 800);
-                this.field_A[var5] = this.field_s - -(ip.field_r.a(-37880252, 4) - 2 << 311394888);
-                this.field_C[var5] = this.field_N + (-2 + ip.field_r.a(-37880252, 4) << 873818952);
-                this.field_r[var5] = (sa.a(var12 * var7 - -var8, -4097) >> 2098116680) * var6 >> 1885634184;
-                this.field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> -1599398456) >> 1424474376;
-                this.field_n[var5] = var9;
-                this.field_P[var5] = var10;
-                var5++;
-            }
-            var6 = var6 + (128 - -ip.field_r.a(-37880252, 64));
+          var9 = ip.field_r.a(-37880252, eb.field_q.length);
+          var10 = ip.field_r.a(-37880252, eb.field_q.length);
+          for (var12 = 0; this.field_H > var12; var12++) {
+            var8 = ip.field_r.a(-37880252, 800);
+            this.field_A[var5] = this.field_s + (ip.field_r.a(-37880252, 4) - 2 << 8);
+            this.field_C[var5] = this.field_N + (-2 + ip.field_r.a(-37880252, 4) << 8);
+            this.field_r[var5] = (sa.a(var12 * var7 + var8, -4097) >> 8) * var6 >> 8;
+            this.field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> 8) >> 8;
+            this.field_n[var5] = var9;
+            this.field_P[var5] = var10;
+            var5++;
+          }
+          var6 = var6 + (128 + ip.field_r.a(-37880252, 64));
         }
         this.field_E = 165 / (this.field_u - this.field_t);
-        this.field_i = 64 / (this.field_u + -this.field_t);
+        this.field_i = 64 / (this.field_u - this.field_t);
         this.field_x = 250 / (-this.field_t + this.field_u);
     }
 

@@ -17,7 +17,7 @@ final class kf {
         field_a = null;
         field_b = null;
         if (param0 != -1) {
-            field_c = 102;
+          field_c = 102;
         }
         field_d = null;
         field_f = null;
@@ -25,25 +25,10 @@ final class kf {
 
     final static boolean b(int param0) {
         int var1;
-        int stackIn_4_0 = 0;
-        L0: {
-          L1: {
-            var1 = -84 / ((-37 - param0) / 38);
-            if (hp.field_s < 10) {
-              break L1;
-            } else {
-              if ((eq.field_j ^ -1) > -14) {
-                break L1;
-              } else {
-                stackIn_4_0 = 1;
-                break L0;
-              }
-            }
-          }
-          stackIn_4_0 = 0;
-          break L0;
-        }
-        return stackIn_4_0 != 0;
+        boolean stackIn_4_0 = false;
+        var1 = -84 / ((-37 - param0) / 38);
+        stackIn_4_0 = (hp.field_s >= 10) && (eq.field_j >= 13);
+        return stackIn_4_0;
     }
 
     static {
@@ -51,8 +36,8 @@ final class kf {
         field_b = new mk();
         field_g = false;
         field_e = new int[17];
-        for (var0 = 0; (var0 ^ -1) > -18; var0++) {
-            field_e[var0] = -1;
+        for (var0 = 0; var0 < 17; var0++) {
+          field_e[var0] = -1;
         }
         field_e[16] = 0;
         field_f = null;

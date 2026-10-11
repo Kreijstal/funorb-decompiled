@@ -8,7 +8,7 @@ final class uja {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -121) {
-            uja.a((byte) 103);
+          uja.a((byte) 103);
         }
     }
 
@@ -21,17 +21,17 @@ final class uja {
         int var7 = VoidHunters.field_G;
         phb[] var1 = new phb[mma.field_a];
         for (var2 = 0; var2 < mma.field_a; var2++) {
-            var3 = hla.field_a[var2] * nhb.field_o[var2];
-            var4 = sh.field_a[var2];
-            var5 = new int[var3];
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = rlb.field_d[dla.a(255, (int) var4[var6])];
-            }
-            var1[var2] = new phb(fbb.field_i, sg.field_H, iib.field_e[var2], so.field_f[var2], nhb.field_o[var2], hla.field_a[var2], var5);
+          var3 = hla.field_a[var2] * nhb.field_o[var2];
+          var4 = sh.field_a[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = rlb.field_d[dla.a(255, (int) var4[var6])];
+          }
+          var1[var2] = new phb(fbb.field_i, sg.field_H, iib.field_e[var2], so.field_f[var2], nhb.field_o[var2], hla.field_a[var2], var5);
         }
         qqb.a(84);
         if (param0) {
-            uja.a(false);
+          uja.a(false);
         }
         return var1;
     }

@@ -10,8 +10,8 @@ final class oh extends bl {
 
     final boolean h(int param0) {
         if (param0 != 0) {
-            oh.c((byte) 92);
-            return false;
+          oh.c((byte) 92);
+          return false;
         }
         return false;
     }
@@ -19,72 +19,54 @@ final class oh extends bl {
     oh(Object param0, int param1) {
         super(param1);
         try {
-            this.field_B = param0;
+          this.field_B = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static String a(long param0, int param1) {
-        StringBuilder discarded$1 = null;
-        int var3;
-        long var4;
-        StringBuilder var6;
-        long var7;
-        int var9;
-        int var10;
-        int var11;
-        var11 = MinerDisturbance.field_ab;
-        if (param1 == 95) {
-          if (-1L > (param0 ^ -1L)) {
-            if (-6582952005840035282L < (param0 ^ -1L)) {
-              if ((param0 % 37L ^ -1L) == -1L) {
-                return null;
-              } else {
-                var3 = 0;
-                var4 = param0;
-                L0: while (true) {
-                  if (0L == var4) {
-                    var6 = new StringBuilder(var3);
-                    L1: while (true) {
-                      if (param0 == 0L) {
-                        var6.reverse();
-                        var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-                        return var6.toString();
-                      } else {
-                        L2: {
-                          var7 = param0;
-                          param0 = param0 / 37L;
-                          var9 = bh.field_db[(int)(-(param0 * 37L) + var7)];
-                          if (var9 == 95) {
-                            var10 = var6.length() - 1;
-                            var9 = 160;
-                            var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                            break L2;
-                          } else {
-                            break L2;
-                          }
-                        }
-                        discarded$1 = var6.append((char) var9);
-                        continue L1;
-                      }
-                    }
-                  } else {
-                    var3++;
-                    var4 = var4 / 37L;
-                    continue L0;
-                  }
-                }
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        int var3 = 0;
+        long var4 = 0L;
+        StringBuilder var6 = null;
+        long var7 = 0L;
+        int var9 = 0;
+        int var10 = 0;
+        StringBuilder discarded$0 = null;
+        int var11 = MinerDisturbance.field_ab;
+        if (param1 != 95) {
           return (String) null;
         }
+        if (param0 <= 0L) {
+          return null;
+        }
+        if (param0 >= 6582952005840035281L) {
+          return null;
+        }
+        if (param0 % 37L != 0L) {
+          var3 = 0;
+          var4 = param0;
+          while (0L != var4) {
+            var3++;
+            var4 = var4 / 37L;
+          }
+          var6 = new StringBuilder(var3);
+          while (param0 != 0L) {
+            var7 = param0;
+            param0 = param0 / 37L;
+            var9 = bh.field_db[(int)(-(param0 * 37L) + var7)];
+            if (var9 == 95) {
+              var10 = var6.length() - 1;
+              var9 = 160;
+              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
+            }
+            discarded$0 = var6.append((char) var9);
+          }
+          var6.reverse();
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+          return var6.toString();
+        }
+        return null;
     }
 
     public static void i(int param0) {
@@ -106,79 +88,54 @@ final class oh extends bl {
         vc stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -86) {
-                break L1;
-              } else {
-                var4 = (bj) null;
-                oh.a(-87, 94, (bj) null);
-                break L1;
-              }
-            }
-            var5 = param2.e(param1, 1);
-            var3 = var5;
-            if (var5 != null) {
-              stackIn_6_0 = new vc(var5);
-              break L0;
-            } else {
-              return null;
-            }
+          if (param0 >= -86) {
+            var4 = (bj) null;
+            oh.a(-87, 94, (bj) null);
           }
+          var5 = param2.e(param1, 1);
+          var3 = var5;
+          if (var5 == null) {
+            return null;
+          }
+          stackIn_6_0 = new vc(var5);
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("oh.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("oh.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     final static oe c(byte param0) {
         try {
-            Throwable var1 = null;
-            oe stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (param0 > 53) {
-              try {
-                L0: {
-                  stackIn_3_0 = (oe) (Class.forName("na").newInstance());
-                  break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = decompiledCaughtException;
-                return null;
-              }
-              return stackIn_3_0;
-            } else {
-              return (oe) null;
-            }
+          Throwable var1 = null;
+          oe stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 <= 53) {
+            return (oe) null;
+          }
+          try {
+            stackIn_3_0 = (oe) (Class.forName("na").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

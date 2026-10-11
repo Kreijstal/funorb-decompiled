@@ -11,14 +11,14 @@ abstract class ka {
 
     final static String c(int param0) {
         if (param0 != 10367) {
-            field_a = -49;
-            if (!(null != cl.field_e)) {
-                return "";
-            }
-            return cl.field_e;
-        }
-        if (!(null != cl.field_e)) {
+          field_a = -49;
+          if (null == cl.field_e) {
             return "";
+          }
+          return cl.field_e;
+        }
+        if (null == cl.field_e) {
+          return "";
         }
         return cl.field_e;
     }

@@ -16,18 +16,18 @@ final class vl implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (this.field_e.field_i != var1) {
-            this.field_b = ((ln) (var1)).field_n;
+          this.field_b = ((ln) (var1)).field_n;
         } else {
-            this.field_b = null;
-            var1 = null;
+          this.field_b = null;
+          var1 = null;
         }
         this.field_f = (ln) (var1);
         return var1;
     }
 
     public final void remove() {
-        if (!(this.field_f != null)) {
-            throw new IllegalStateException();
+        if (this.field_f == null) {
+          throw new IllegalStateException();
         }
         this.field_f.a((byte) -42);
         this.field_f = null;
@@ -39,7 +39,7 @@ final class vl implements Iterator {
         field_d = null;
         field_g = null;
         if (param0 != 68) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -56,36 +56,22 @@ final class vl implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_h = (int[]) null;
-                break L1;
-              }
-            }
-            if (bl.field_r == null) {
-              tc.c();
-              ra.field_hb.a(224, 112, 192, 256);
-              var1_int = 0;
-              L2: while (true) {
-                if (32 <= var1_int) {
-                  nm.field_c.b(ek.field_q, 320, 392, 0, -1);
-                  break L0;
-                } else {
-                  var2 = ce.a(-14646, nm.field_b);
-                  tc.b(var1_int / 2 + 184, 398 - var1_int, var2, 12517567);
-                  tc.b(var2 + (var1_int / 2 + 184), 398 + -var1_int, -var2 + 256, 7274607);
-                  var1_int++;
-                  continue L2;
-                }
-              }
-            } else {
-              bl.field_r.a();
-              return;
-            }
+          if (param0 != 0) {
+            field_h = (int[]) null;
           }
+          if (bl.field_r != null) {
+            bl.field_r.a();
+            return;
+          }
+          tc.c();
+          ra.field_hb.a(224, 112, 192, 256);
+          for (var1_int = 0; 32 > var1_int; var1_int++) {
+            var2 = ce.a(-14646, nm.field_b);
+            tc.b(var1_int / 2 + 184, 398 - var1_int, var2, 12517567);
+            tc.b(var2 + (var1_int / 2 + 184), 398 - var1_int, -var2 + 256, 7274607);
+          }
+          nm.field_c.b(ek.field_q, 320, 392, 0, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -96,11 +82,11 @@ final class vl implements Iterator {
     vl(lk param0) {
         this.field_f = null;
         try {
-            this.field_e = param0;
-            this.field_b = this.field_e.field_i.field_n;
-            this.field_f = null;
+          this.field_e = param0;
+          this.field_b = this.field_e.field_i.field_n;
+          this.field_f = null;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "vl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

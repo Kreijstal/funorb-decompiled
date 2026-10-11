@@ -15,101 +15,54 @@ final class sc {
 
     final static void b(int param0) {
         try {
-            IOException iOException = null;
-            int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = MonkeyPuzzle2.field_F ? 1 : 0;
-            try {
-              L0: {
-                L1: {
-                  if (lg.field_n == null) {
-                    break L1;
-                  } else {
-                    lg.field_n.b((byte) 7);
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (null == jc.field_c) {
-                    break L2;
-                  } else {
-                    jc.field_c.a(true);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (null == ah.field_f) {
-                    break L3;
-                  } else {
-                    try {
-                      L4: {
-                        ah.field_f.a(true);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L5;
-                      }
-                    }
-                    break L3;
-                  }
-                }
-                L6: {
-                  if (param0 == 0) {
-                    break L6;
-                  } else {
-                    sc.a(40);
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (null == bl.field_o) {
-                    break L7;
-                  } else {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (bl.field_o.length <= var1_int) {
-                        break L7;
-                      } else {
-                        if (bl.field_o[var1_int] != null) {
-                          try {
-                            L9: {
-                              bl.field_o[var1_int].a(true);
-                              break L9;
-                            }
-                          } catch (java.io.IOException decompiledCaughtParameter1) {
-                            decompiledCaughtException = decompiledCaughtParameter1;
-                            L10: {
-                              var2 = (IOException) (Object) decompiledCaughtException;
-                              break L10;
-                            }
-                          }
-                          var1_int++;
-                          continue L8;
-                        } else {
-                          var1_int++;
-                          continue L8;
-                        }
-                      }
-                    }
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw la.a((Throwable) ((Object) var1), "sc.A(" + param0 + ')');
+          int var1_int = 0;
+          IOException iOException = null;
+          int var3 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          IOException var2 = null;
+          var3 = MonkeyPuzzle2.field_F ? 1 : 0;
+          try {
+            if (lg.field_n != null) {
+              lg.field_n.b((byte) 7);
             }
+            if (null != jc.field_c) {
+              jc.field_c.a(true);
+            }
+            if (null != ah.field_f) {
+              try {
+                ah.field_f.a(true);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (param0 != 0) {
+              sc.a(40);
+            }
+            if (null != bl.field_o) {
+              for (var1_int = 0; bl.field_o.length > var1_int; var1_int++) {
+                if (bl.field_o[var1_int] != null) {
+                  try {
+                    bl.field_o[var1_int].a(true);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
+                }
+              }
+              return;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw la.a((Throwable) ((Object) var1), "sc.A(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -123,104 +76,60 @@ final class sc {
         int var6 = 0;
         hb var9 = null;
         byte[] var13 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                field_b = (String) null;
-                break L1;
-              }
-            }
-            L2: {
-              var9 = MonkeyPuzzle2.field_D;
-              var2 = var9.a((byte) 114);
-              if (var2 != 0) {
-                if (1 != var2) {
-                  kk.a("A1: " + bh.a((byte) -21), (byte) 126, (Throwable) null);
-                  gk.a(-1);
-                  break L2;
-                } else {
-                  var3 = var9.e(126);
-                  var4 = (mk) ((Object) eb.field_C.a((byte) -117));
-                  L3: while (true) {
-                    L4: {
-                      if (var4 == null) {
-                        break L4;
-                      } else {
-                        if (var3 == var4.field_e) {
-                          break L4;
-                        } else {
-                          var4 = (mk) ((Object) eb.field_C.d((byte) 63));
-                          continue L3;
-                        }
-                      }
-                    }
-                    if (var4 != null) {
-                      var4.c(-19822);
-                      break L2;
-                    } else {
-                      gk.a(-1);
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
-                var3_ref_uh = (uh) ((Object) t.field_v.a((byte) -117));
-                if (var3_ref_uh != null) {
-                  L5: {
-                    var4_int = var9.a((byte) 114);
-                    if (var4_int != 0) {
-                      var13 = new byte[var4_int];
-                      var9.a(var13, var4_int, -122, 0);
-                      break L5;
-                    } else {
-                      var5 = null;
-                      break L5;
-                    }
-                  }
-                  var9.field_h = var9.field_h + 4;
-                  if (!var9.l(-24685)) {
-                    gk.a(-1);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var3_ref_uh.c(-19822);
-                    break L2;
-                  }
-                } else {
-                  gk.a(-1);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
-            decompiledRegionSelector0 = 2;
-            break L0;
+          if (param0) {
+            field_b = (String) null;
           }
+          var9 = MonkeyPuzzle2.field_D;
+          var2 = var9.a((byte) 114);
+          if (var2 != 0) {
+            if (1 == var2) {
+              var3 = var9.e(126);
+              var4 = (mk) (eb.field_C.a((byte) -117));
+              while (var4 != null) {
+                if (var3 != var4.field_e) {
+                  var4 = (mk) (eb.field_C.d((byte) 63));
+                  continue;
+                }
+                break;
+              }
+              if (var4 != null) {
+                var4.c(-19822);
+                return;
+              }
+              gk.a(-1);
+              return;
+            }
+            kk.a("A1: " + bh.a((byte) -21), (byte) 126, (Throwable) null);
+            gk.a(-1);
+          } else {
+            var3_ref_uh = (uh) (t.field_v.a((byte) -117));
+            if (var3_ref_uh == null) {
+              gk.a(-1);
+              return;
+            }
+            var4_int = var9.a((byte) 114);
+            if (var4_int != 0) {
+              var13 = new byte[var4_int];
+              var9.a(var13, var4_int, -122, 0);
+            } else {
+              var5 = null;
+            }
+            var9.field_h = var9.field_h + 4;
+            if (!var9.l(-24685)) {
+              gk.a(-1);
+              return;
+            }
+            var3_ref_uh.c(-19822);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var1), "sc.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -230,10 +139,10 @@ final class sc {
         int var4 = r.a((byte) 71, param2);
         int var6 = sb.a((byte) 79, param1);
         int var7 = r.a((byte) 71, param1);
-        int var8 = (int)((long)var3 * (long)var6 >> -237110320);
-        int var9 = (int)((long)var7 * (long)var3 >> -1575055664);
-        int var10 = (int)((long)var6 * (long)var4 >> -768349552);
-        int var11 = (int)((long)var7 * (long)var4 >> -1192020016);
+        int var8 = (int)((long)var3 * (long)var6 >> 16);
+        int var9 = (int)((long)var7 * (long)var3 >> 16);
+        int var10 = (int)((long)var6 * (long)var4 >> 16);
+        int var11 = (int)((long)var7 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var7, 0, var6, var8, var4, -var9, -var10, var3, var11};
     }
 
@@ -244,18 +153,18 @@ final class sc {
         field_a = null;
         field_d = null;
         if (param0 != -21718) {
-            byte[] var2 = (byte[]) null;
-            sc.a((byte[]) null, -77, 2, 45);
+          byte[] var2 = (byte[]) null;
+          sc.a((byte[]) null, -77, 2, 45);
         }
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
+        int var7 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -264,84 +173,45 @@ final class sc {
         String stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var5 = -95 % ((param2 - 0) / 52);
-            var12 = new char[param1];
-            var11 = var12;
-            var4 = var11;
-            var6 = 0;
-            var7 = 0;
-            L1: while (true) {
-              if (var7 >= param1) {
-                stackIn_14_0 = new String(var12, 0, var6);
-                break L0;
-              } else {
-                L2: {
-                  var8 = param0[param3 - -var7] & 255;
-                  if (-1 != (var8 ^ -1)) {
-                    L3: {
-                      if ((var8 ^ -1) > -129) {
-                        break L3;
-                      } else {
-                        if (var8 >= 160) {
-                          break L3;
-                        } else {
-                          L4: {
-                            var9 = sb.field_n[-128 + var8];
-                            if (var9 == 0) {
-                              var9 = 63;
-                              break L4;
-                            } else {
-                              break L4;
-                            }
-                          }
-                          var8 = var9;
-                          break L3;
-                        }
-                      }
-                    }
-                    incrementValue$1 = var6;
-                    var6++;
-                    var4[incrementValue$1] = (char)var8;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
+          var5 = -95 % ((param2 - 0) / 52);
+          var12 = new char[param1];
+          var11 = var12;
+          var4 = var11;
+          var6 = 0;
+          for (var7 = 0; var7 < param1; var7++) {
+            var8 = param0[param3 + var7] & 255;
+            if (var8 != 0) {
+              if (var8 >= 128 &&
+                var8 < 160) {
+                var9 = sb.field_n[-128 + var8];
+                if (var9 == 0) {
+                  var9 = 63;
                 }
-                var7++;
-                continue L1;
+                var8 = var9;
               }
+              incrementValue$1 = var6;
+              var6++;
+              var4[incrementValue$1] = (char)var8;
             }
           }
+          stackIn_14_0 = new String(var12, 0, var6);
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4_ref);
-
-            stackIn_17_1 = new StringBuilder().append("sc.D(");
-
-            if (param0 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_17_0 = var4_ref;
+          stackIn_17_1 = new StringBuilder().append("sc.D(");
+          if (param0 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw la.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_14_0;
     }
 
     static {

@@ -28,10 +28,7 @@ final class mj {
         String stackIn_42_0 = null;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         char[] var4 = null;
         RuntimeException var4_ref = null;
@@ -46,179 +43,108 @@ final class mj {
         char[] var13 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            var13 = new char[param1];
-            var12 = var13;
-            var11 = var12;
-            var4 = var11;
-            var5 = 0;
-            if (param0 < -89) {
-              var6 = param2;
-              var7 = param1 + param2;
-              L1: while (true) {
-                if (var6 >= var7) {
-                  stackIn_42_0 = new String(var13, 0, var5);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    incrementValue$0 = var6;
+          var13 = new char[param1];
+          var12 = var13;
+          var11 = var12;
+          var4 = var11;
+          var5 = 0;
+          if (param0 >= -89) {
+            stackIn_3_0 = (String) null;
+            return stackIn_3_0;
+          }
+          var6 = param2;
+          var7 = param1 + param2;
+          while (var6 < var7) {
+            boolean decompiledFrameRemainder0 = true;
+            incrementValue$0 = var6;
+            var6++;
+            var8 = 255 & param3[incrementValue$0];
+            if (var8 >= 128) {
+              if (var8 >= 192) {
+                if (224 > var8) {
+                  if (var6 < var7 &&
+                    (param3[var6] & 192) == 128) {
+                    incrementValue$1 = var6;
                     var6++;
-                    var8 = 255 & param3[incrementValue$0];
-                    if (-129 >= (var8 ^ -1)) {
-                      if (var8 >= 192) {
-                        if (224 > var8) {
-                          L3: {
-                            if (var6 >= var7) {
-                              break L3;
-                            } else {
-                              if (-129 != (param3[var6] & 192 ^ -1)) {
-                                break L3;
-                              } else {
-                                incrementValue$1 = var6;
-                                var6++;
-                                var9 = 63 & param3[incrementValue$1] | 1984 & var8 << 882579238;
-                                if (var9 >= 128) {
-                                  break L2;
-                                } else {
-                                  var9 = 65533;
-                                  break L2;
-                                }
-                              }
-                            }
-                          }
+                    var9 = 63 & param3[incrementValue$1] | 1984 & var8 << 6;
+                    if (!(var9 >= 128)) {
+                      var9 = 65533;
+                    }
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    var9 = 65533;
+                  }
+                } else {
+                  if (240 <= var8) {
+                    if (var8 < 248) {
+                      if (var7 > var6 + 2 &&
+                        (param3[var6] & 192) == 128 &&
+                        (param3[var6 + 1] & 192) == 128 &&
+                        (192 & param3[2 + var6]) == 128) {
+                        incrementValue$2 = var6;
+                        var6++;
+                        incrementValue$3 = var6;
+                        var6++;
+                        incrementValue$4 = var6;
+                        var6++;
+                        var9 = param3[incrementValue$2] << 12 & 258048 | 1835008 & var8 << 18 | 4032 & param3[incrementValue$3] << 6 | param3[incrementValue$4] & 63;
+                        if (var9 >= 65536 &&
+                          var9 <= 1114111) {
                           var9 = 65533;
-                          break L2;
                         } else {
-                          if (240 <= var8) {
-                            if ((var8 ^ -1) > -249) {
-                              L4: {
-                                if (var7 <= var6 + 2) {
-                                  break L4;
-                                } else {
-                                  if ((param3[var6] & 192 ^ -1) != -129) {
-                                    break L4;
-                                  } else {
-                                    if ((param3[var6 + 1] & 192) != 128) {
-                                      break L4;
-                                    } else {
-                                      if (-129 == (192 & param3[2 + var6] ^ -1)) {
-                                        L5: {
-                                          incrementValue$2 = var6;
-                                          var6++;
-                                          incrementValue$3 = var6;
-                                          var6++;
-                                          incrementValue$4 = var6;
-                                          var6++;
-                                          var9 = param3[incrementValue$2] << -396318388 & 258048 | 1835008 & var8 << -110907822 | 4032 & param3[incrementValue$3] << -1285759514 | param3[incrementValue$4] & 63;
-                                          if (-65537 < (var9 ^ -1)) {
-                                            break L5;
-                                          } else {
-                                            if ((var9 ^ -1) >= -1114112) {
-                                              var9 = 65533;
-                                              break L2;
-                                            } else {
-                                              break L5;
-                                            }
-                                          }
-                                        }
-                                        var9 = 65533;
-                                        break L2;
-                                      } else {
-                                        break L4;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                              var9 = 65533;
-                              break L2;
-                            } else {
-                              var9 = 65533;
-                              break L2;
-                            }
-                          } else {
-                            L6: {
-                              if (var6 - -1 >= var7) {
-                                break L6;
-                              } else {
-                                if ((param3[var6] & 192 ^ -1) != -129) {
-                                  break L6;
-                                } else {
-                                  if ((192 & param3[var6 - -1] ^ -1) == -129) {
-                                    incrementValue$5 = var6;
-                                    var6++;
-                                    incrementValue$6 = var6;
-                                    var6++;
-                                    var9 = (param3[incrementValue$5] & 63) << -1842956154 | (15 & var8) << -1611718740 | param3[incrementValue$6] & 63;
-                                    if (-2049 < (var9 ^ -1)) {
-                                      var9 = 65533;
-                                      break L2;
-                                    } else {
-                                      break L2;
-                                    }
-                                  } else {
-                                    break L6;
-                                  }
-                                }
-                              }
-                            }
-                            var9 = 65533;
-                            break L2;
-                          }
+                          var9 = 65533;
                         }
-                      } else {
+                        decompiledFrameRemainder0 = false;
+                      }
+                      else {
                         var9 = 65533;
-                        break L2;
                       }
                     } else {
-                      if (var8 == 0) {
+                      var9 = 65533;
+                    }
+                  } else {
+                    if (var6 + 1 < var7 &&
+                      (param3[var6] & 192) == 128 &&
+                      (192 & param3[var6 + 1]) == 128) {
+                      incrementValue$5 = var6;
+                      var6++;
+                      incrementValue$6 = var6;
+                      var6++;
+                      var9 = (param3[incrementValue$5] & 63) << 6 | (15 & var8) << 12 | param3[incrementValue$6] & 63;
+                      if (!(var9 >= 2048)) {
                         var9 = 65533;
-                        break L2;
-                      } else {
-                        var9 = var8;
-                        break L2;
                       }
+                      decompiledFrameRemainder0 = false;
+                    }
+                    else {
+                      var9 = 65533;
                     }
                   }
-                  incrementValue$7 = var5;
-                  var5++;
-                  var11[incrementValue$7] = (char)var9;
-                  continue L1;
                 }
+              } else {
+                var9 = 65533;
               }
             } else {
-              stackIn_3_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var9 = (var8 == 0) ? 65533 : var8;
             }
+            incrementValue$7 = var5;
+            var5++;
+            var11[incrementValue$7] = (char)var9;
           }
+          stackIn_42_0 = new String(var13, 0, var5);
+          return stackIn_42_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4_ref = decompiledCaughtException;
-            stackIn_45_0 = (RuntimeException) (var4_ref);
-
-            stackIn_45_1 = new StringBuilder().append("mj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "null";
-              break L7;
-            } else {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "{...}";
-              break L7;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_45_0 = var4_ref;
+          stackIn_45_1 = new StringBuilder().append("mj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_46_2 = "null";
+          } else {
+            stackIn_46_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_42_0;
+          throw qb.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
@@ -232,8 +158,8 @@ final class mj {
         vq.field_A = param1;
         cc.field_H = param3;
         if (param2) {
-            byte[] var5 = (byte[]) null;
-            mj.a((byte) 117, 3, -87, (byte[]) null);
+          byte[] var5 = (byte[]) null;
+          mj.a((byte) 117, 3, -87, (byte[]) null);
         }
     }
 

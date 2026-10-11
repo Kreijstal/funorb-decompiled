@@ -8,7 +8,7 @@ final class dq {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -19100) {
-            field_a = (String[]) null;
+          field_a = (String[]) null;
         }
     }
 

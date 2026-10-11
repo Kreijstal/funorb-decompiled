@@ -323,11 +323,11 @@ final class d implements Runnable {
 
     private final static pa a(byte param0, int param1, String param2, String param3) {
         try {
+          int var6 = 0;
           pa stackIn_13_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
-          int var6 = 0;
           int var7 = 0;
           String var8 = null;
           pa var9 = null;
@@ -343,22 +343,18 @@ final class d implements Runnable {
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_x, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           var7 = -95 % ((-46 - param0) / 35);
-          var6 = 0;
-          while (var6 < var5.length) {
+          for (var6 = 0; var6 < var5.length; var6++) {
             var8 = var5[var6];
-            if (0 < var8.length() &&
-              !new File(var8).exists()) {
-              var6++;
-              continue;
-            }
-            try {
-              var9 = new pa(new File(var8, var4), "rw", 10000L);
-              stackIn_13_0 = var9;
-              return stackIn_13_0;
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var9_ref = (Exception) (Object) decompiledCaughtException;
-              var6++;
+            if (!(0 < var8.length()) ||
+              new File(var8).exists()) {
+              try {
+                var9 = new pa(new File(var8, var4), "rw", 10000L);
+                stackIn_13_0 = var9;
+                return stackIn_13_0;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var9_ref = (Exception) (Object) decompiledCaughtException;
+              }
             }
           }
           return null;
@@ -372,11 +368,11 @@ final class d implements Runnable {
     final void a(byte param0) {
         try {
           cb discarded$0 = null;
+          int var2_int = 0;
           Throwable decompiledCaughtException = null;
           Object var2 = null;
           InterruptedException var2_ref = null;
           IOException var2_ref2 = null;
-          int var2_int = 0;
           IOException var3 = null;
           String var4 = null;
           var2 = this;
@@ -411,19 +407,14 @@ final class d implements Runnable {
             }
           }
           if (null != this.field_r) {
-            var2_int = 0;
-            while (var2_int < this.field_r.length) {
-              if (this.field_r[var2_int] == null) {
-                var2_int++;
-                continue;
-              }
-              try {
-                this.field_r[var2_int].a((byte) -5);
-                var2_int++;
-              } catch (java.io.IOException decompiledCaughtParameter3) {
-                decompiledCaughtException = decompiledCaughtParameter3;
-                var3 = (IOException) (Object) decompiledCaughtException;
-                var2_int++;
+            for (var2_int = 0; var2_int < this.field_r.length; var2_int++) {
+              if (this.field_r[var2_int] != null) {
+                try {
+                  this.field_r[var2_int].a((byte) -5);
+                } catch (java.io.IOException decompiledCaughtParameter3) {
+                  decompiledCaughtException = decompiledCaughtParameter3;
+                  var3 = (IOException) (Object) decompiledCaughtException;
+                }
               }
             }
           }

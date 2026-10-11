@@ -11,9 +11,9 @@ final class uf {
         field_d = null;
         field_b = null;
         if (param0 != 0) {
-            field_c = (String) null;
-            field_c = null;
-            return;
+          field_c = (String) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -34,76 +34,37 @@ final class uf {
     }
 
     final static void c(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = DungeonAssault.field_K;
         try {
-          L0: {
-            var5 = hk.field_b;
-            var1 = var5;
-            var2 = 0;
-            if (param0 == 28) {
-              var3 = var5.length;
-              L1: while (true) {
-                if (var3 <= var2) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  incrementValue$16 = var2;
-                  var2++;
-                  var5[incrementValue$16] = 0;
-                  incrementValue$17 = var2;
-                  var2++;
-                  var5[incrementValue$17] = 0;
-                  incrementValue$18 = var2;
-                  var2++;
-                  var5[incrementValue$18] = 0;
-                  incrementValue$19 = var2;
-                  var2++;
-                  var5[incrementValue$19] = 0;
-                  incrementValue$20 = var2;
-                  var2++;
-                  var5[incrementValue$20] = 0;
-                  incrementValue$21 = var2;
-                  var2++;
-                  var5[incrementValue$21] = 0;
-                  incrementValue$22 = var2;
-                  var2++;
-                  var5[incrementValue$22] = 0;
-                  incrementValue$23 = var2;
-                  var2++;
-                  var5[incrementValue$23] = 0;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5 = hk.field_b;
+          var1 = var5;
+          var2 = 0;
+          if (param0 != 28) {
+            return;
           }
+          var3 = var5.length;
+          while (var3 > var2) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw vk.a((Throwable) ((Object) var1_ref), "uf.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

@@ -11,42 +11,35 @@ final class e {
     static int field_e;
 
     final static String b(int param0) {
-        if (param0 == -1) {
-          if (!wk.field_c) {
-            if (pc.field_g <= ki.field_v) {
-              if (pc.field_g + ul.field_D <= ki.field_v) {
-                return null;
-              } else {
-                return hk.field_m;
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 != -1) {
           e.b(31);
-          if (!wk.field_c) {
-            if (pc.field_g <= ki.field_v) {
-              if (pc.field_g + ul.field_D <= ki.field_v) {
-                return null;
-              } else {
-                return hk.field_m;
-              }
-            } else {
-              return null;
-            }
-          } else {
+          if (wk.field_c) {
             return null;
           }
+          if (pc.field_g > ki.field_v) {
+            return null;
+          }
+          if (pc.field_g + ul.field_D > ki.field_v) {
+            return hk.field_m;
+          }
+          return null;
         }
+        if (wk.field_c) {
+          return null;
+        }
+        if (pc.field_g > ki.field_v) {
+          return null;
+        }
+        if (pc.field_g + ul.field_D > ki.field_v) {
+          return hk.field_m;
+        }
+        return null;
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 186) {
-            return;
+          return;
         }
         field_g = null;
         field_a = null;

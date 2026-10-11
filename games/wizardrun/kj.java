@@ -10,7 +10,7 @@ final class kj {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 1048576) {
-            return;
+          return;
         }
         id.field_c = param2;
         ii.field_a = param1;
@@ -18,79 +18,59 @@ final class kj {
 
     final static void a(int param0) {
         try {
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
-            int var1 = 0;
-            Exception var1_ref_Exception = null;
-            Runtime var2 = null;
-            Throwable var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
-            try {
-              L0: {
-                L1: {
-                  var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1_ref_java_lang_reflect_Method == null) {
-                    break L1;
-                  } else {
-                    try {
-                      L2: {
-                        var2 = Runtime.getRuntime();
-                        var4 = (Object[]) null;
-                        var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                        jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
-                        decompiledRegionSelector0 = 0;
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var2_ref = decompiledCaughtException;
-                        decompiledRegionSelector0 = 1;
-                        break L3;
-                      }
-                    }
-                    if (decompiledRegionSelector0 == 0) {
-                      var1 = -100 / ((param0 - -31) / 50);
-                      return;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                break L0;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1_ref_java_lang_reflect_Method = null;
+          int var1 = 0;
+          Exception var1_ref_Exception = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          try {
+            var1_ref_java_lang_reflect_Method = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (var1_ref_java_lang_reflect_Method != null) {
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
+                jd.field_b = (int)(var3.longValue() / 1048576L) + 1;
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                break L4;
+              if (decompiledRegionSelector0 == 0) {
+                var1 = -100 / ((param0 + 31) / 50);
+                return;
               }
             }
-            var1 = -100 / ((param0 - -31) / 50);
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref_Exception = (Exception) (Object) decompiledCaughtException;
+          }
+          var1 = -100 / ((param0 + 31) / 50);
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(byte param0) {
-        if (param0 <= 63) {
-          field_b = (wi) null;
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 > 63) {
           field_b = null;
           field_c = null;
           field_e = null;
           field_d = null;
           return;
         }
+        field_b = (wi) null;
+        field_b = null;
+        field_c = null;
+        field_e = null;
+        field_d = null;
     }
 
     static {

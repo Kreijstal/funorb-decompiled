@@ -10,29 +10,13 @@ final class ws {
     static int field_e;
 
     final static void a(byte param0) {
-        L0: {
-          if (param0 <= -10) {
-            break L0;
-          } else {
-            field_b = (int[][]) null;
-            break L0;
-          }
+        if (param0 > -10) {
+          field_b = (int[][]) null;
         }
-        L1: {
-          L2: {
-            if ((vj.field_c ^ -1) == -11) {
-              break L2;
-            } else {
-              if (!vr.d(1)) {
-                break L2;
-              } else {
-                break L1;
-              }
-            }
-          }
+        if (vj.field_c == 10 ||
+          !vr.d(1)) {
           uc.g((byte) -54);
           vj.field_c = 11;
-          break L1;
         }
         m.field_h = true;
     }
@@ -46,95 +30,49 @@ final class ws {
         char[] var6 = null;
         char[] var7 = null;
         char[] var8 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_26_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char[] var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
         var5 = Kickabout.field_G;
         try {
-          L0: {
-            if (Character.isISOControl(param0)) {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (vt.a(param0, true)) {
-                stackIn_8_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L1: {
-                  var8 = ij.field_p;
-                  var7 = var8;
-                  var6 = var7;
-                  var2 = var6;
-                  if (param1 == 121) {
-                    break L1;
-                  } else {
-                    ws.a(54);
-                    break L1;
-                  }
-                }
-                var3 = 0;
-                L2: while (true) {
-                  if (var8.length <= var3) {
-                    var2 = tq.field_B;
-                    var3 = 0;
-                    L3: while (true) {
-                      if (var3 >= var2.length) {
-                        stackIn_26_0 = 0;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        var4 = var2[var3];
-                        if (var4 == param0) {
-                          stackIn_23_0 = 1;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          var3++;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var4 = var8[var3];
-                    if ((param0 ^ -1) != (var4 ^ -1)) {
-                      var3++;
-                      continue L2;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
+          if (Character.isISOControl(param0)) {
+            return false;
+          }
+          if (vt.a(param0, true)) {
+            return true;
+          }
+          var8 = ij.field_p;
+          var7 = var8;
+          var6 = var7;
+          var2 = var6;
+          if (param1 != 121) {
+            ws.a(54);
+          }
+          for (var3 = 0; var8.length > var3; var3++) {
+            var4 = var8[var3];
+            if (~param0 == ~var4) {
+              return true;
             }
           }
+          var2Lifetime1 = tq.field_B;
+          for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
+            var4Lifetime1 = var2Lifetime1[var3Lifetime1];
+            if (var4Lifetime1 == param0) {
+              return true;
+            }
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw nb.a((Throwable) ((Object) var2_ref), "ws.C(" + param0 + ',' + param1 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_23_0 != 0;
-            } else {
-              return stackIn_26_0 != 0;
-            }
-          }
-        }
     }
 
     public static void a(int param0) {
         if (param0 != -25514) {
-            field_d = (int[][]) null;
+          field_d = (int[][]) null;
         }
         field_d = (int[][]) null;
         field_b = (int[][]) null;

@@ -12,100 +12,79 @@ final class ld extends wl {
     static int field_y;
 
     public static void f(int param0) {
-        if (param0 != 100) {
-          field_x = (String[]) null;
-          field_r = null;
-          field_v = null;
-          field_x = null;
-          field_w = null;
-          return;
-        } else {
+        if (param0 == 100) {
           field_r = null;
           field_v = null;
           field_x = null;
           field_w = null;
           return;
         }
+        field_x = (String[]) null;
+        field_r = null;
+        field_v = null;
+        field_x = null;
+        field_w = null;
     }
 
     final static char a(int param0, byte param1) {
-        int var2;
-        int var3;
-        if (param0 <= -15) {
-          var2 = 255 & param1;
-          if (var2 != 0) {
-            if (-129 >= (var2 ^ -1)) {
-              if (-161 >= (var2 ^ -1)) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = tg.field_d[-128 + var2];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          } else {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          }
-        } else {
+        int var3 = 0;
+        if (param0 > -15) {
           return '￸';
         }
+        int var2 = 255 & param1;
+        if (var2 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+        }
+        if (var2 < 128) {
+          return (char)var2;
+        }
+        if (var2 < 160) {
+          var3 = tg.field_d[-128 + var2];
+          if (var3 == 0) {
+            var3 = 63;
+          }
+          var2 = var3;
+          return (char)var2;
+        }
+        return (char)var2;
     }
 
     final int b(byte param0) {
-        if (param0 >= 18) {
-          if (null == this.field_s) {
-            return 0;
-          } else {
-            return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
-          }
-        } else {
+        if (param0 < 18) {
           this.b((byte) -98);
-          if (null == this.field_s) {
-            return 0;
-          } else {
+          if (null != this.field_s) {
             return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
           }
+          return 0;
         }
+        if (null != this.field_s) {
+          return this.field_s.field_f * 100 / (this.field_s.field_h.length - this.field_u);
+        }
+        return 0;
     }
 
     final static void g(int param0) {
-        CharSequence var2;
-        CharSequence var3;
+        CharSequence var3 = null;
         je.field_g = kd.field_n.i(111);
-        if (param0 != -1266) {
-          field_r = (String) null;
-          var2 = (CharSequence) ((Object) je.field_g);
-          lk.field_b = fe.a(60136, var2);
-          return;
-        } else {
+        if (param0 == -1266) {
           var3 = (CharSequence) ((Object) je.field_g);
           lk.field_b = fe.a(60136, var3);
           return;
         }
+        field_r = (String) null;
+        CharSequence var2 = (CharSequence) ((Object) je.field_g);
+        lk.field_b = fe.a(60136, var2);
     }
 
     final byte[] e(int param0) {
-        int var2;
-        var2 = 8 % ((55 - param0) / 55);
-        if (!this.field_n) {
-          if (this.field_s.field_f < this.field_s.field_h.length - this.field_u) {
-            throw new RuntimeException();
-          } else {
-            return this.field_s.field_h;
-          }
-        } else {
+        int var2 = 8 % ((55 - param0) / 55);
+        if (this.field_n) {
           throw new RuntimeException();
         }
+        if (this.field_s.field_f >= this.field_s.field_h.length - this.field_u) {
+          return this.field_s.field_h;
+        }
+        throw new RuntimeException();
     }
 
     ld() {

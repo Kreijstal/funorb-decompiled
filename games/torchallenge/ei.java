@@ -40,87 +40,45 @@ final class ei {
     final static void a(byte param0, int param1, int param2) {
         int var3;
         int var4;
-        L0: {
-          if (param1 < 0) {
-            break L0;
-          } else {
-            if (14 > param1) {
-              if (param0 == 66) {
-                var3 = rb.field_c[param1];
-                if ((var3 ^ -1) <= -1) {
-                  if ((var3 ^ -1) > -7) {
-                    var4 = kc.field_p[var3];
-                    if (var4 < wa.field_sb[var3]) {
-                      L1: {
-                        wa.field_sb[var3] = var4;
-                        if (-1 < (wa.field_sb[var3] ^ -1)) {
-                          wh.a(param2, param1, -112);
-                          wa.field_sb[var3] = var4;
-                          break L1;
-                        } else {
-                          break L1;
-                        }
-                      }
-                      return;
-                    } else {
-                      L2: {
-                        if (-1 < (wa.field_sb[var3] ^ -1)) {
-                          wh.a(param2, param1, -112);
-                          wa.field_sb[var3] = var4;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                field_y = (String) null;
-                var3 = rb.field_c[param1];
-                if ((var3 ^ -1) <= -1) {
-                  if ((var3 ^ -1) > -7) {
-                    var4 = kc.field_p[var3];
-                    if (var4 < wa.field_sb[var3]) {
-                      L3: {
-                        wa.field_sb[var3] = var4;
-                        if (-1 < (wa.field_sb[var3] ^ -1)) {
-                          wh.a(param2, param1, -112);
-                          wa.field_sb[var3] = var4;
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      return;
-                    } else {
-                      L4: {
-                        if (-1 < (wa.field_sb[var3] ^ -1)) {
-                          wh.a(param2, param1, -112);
-                          wa.field_sb[var3] = var4;
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            } else {
-              break L0;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (param1 >= 0 &&
+          14 > param1) {
+          if (param0 == 66) {
+            var3 = rb.field_c[param1];
+            if (var3 < 0) {
+              return;
             }
+            if (var3 >= 6) {
+              return;
+            }
+            var4 = kc.field_p[var3];
+            if (var4 < wa.field_sb[var3]) {
+              wa.field_sb[var3] = var4;
+            }
+            if (wa.field_sb[var3] < 0) {
+              wh.a(param2, param1, -112);
+              wa.field_sb[var3] = var4;
+            }
+            return;
           }
+          field_y = (String) null;
+          var3Lifetime1 = rb.field_c[param1];
+          if (var3Lifetime1 < 0) {
+            return;
+          }
+          if (var3Lifetime1 >= 6) {
+            return;
+          }
+          var4Lifetime1 = kc.field_p[var3Lifetime1];
+          if (var4Lifetime1 < wa.field_sb[var3Lifetime1]) {
+            wa.field_sb[var3Lifetime1] = var4Lifetime1;
+          }
+          if (wa.field_sb[var3Lifetime1] < 0) {
+            wh.a(param2, param1, -112);
+            wa.field_sb[var3Lifetime1] = var4Lifetime1;
+          }
+          return;
         }
     }
 
@@ -129,52 +87,32 @@ final class ei {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -117) {
-                break L1;
-              } else {
-                ei.a(68);
-                break L1;
-              }
-            }
-            stackIn_3_0 = ci.a(10, param1, -18, true);
-            break L0;
+          if (param0 != -117) {
+            ei.a(68);
           }
+          stackIn_3_0 = ci.a(10, param1, -18, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ei.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ei.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_w = null;
         if (param0 >= -35) {
-            return;
+          return;
         }
         field_y = null;
     }

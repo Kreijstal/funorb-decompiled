@@ -7,7 +7,7 @@ final class mp {
 
     final static void a(int param0, int param1) {
         if (param1 <= 114) {
-            return;
+          return;
         }
         mf var2 = fh.field_n[param0];
         io.a(125, var2);
@@ -16,7 +16,7 @@ final class mp {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -37) {
-            field_a = 52;
+          field_a = 52;
         }
     }
 

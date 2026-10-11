@@ -11,17 +11,18 @@ final class cm {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-            cm.a(61);
+          cm.a(61);
         }
     }
 
     final static ji a(byte param0) {
         String var1 = we.p((byte) 115);
         if (param0 != -8) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
-        if (var1 != null && -1 >= (var1.indexOf('@') ^ -1)) {
-            var1 = "";
+        if (var1 != null &&
+          var1.indexOf('@') >= 0) {
+          var1 = "";
         }
         return new ji(we.p((byte) -21), nb.c(0));
     }
@@ -30,7 +31,7 @@ final class cm {
         int var0 = 0;
         field_b = new km[255];
         for (var0 = 0; var0 < field_b.length; var0++) {
-            field_b[var0] = new km();
+          field_b[var0] = new km();
         }
         field_a = "Warning: if you quit, you will lose any game you are in the middle of!";
     }

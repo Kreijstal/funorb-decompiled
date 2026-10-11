@@ -8,10 +8,10 @@ final class nn {
 
     public static void a(int param0) {
         if (param0 >= -121) {
-            nn.a(125);
-            field_a = null;
-            field_b = null;
-            return;
+          nn.a(125);
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;

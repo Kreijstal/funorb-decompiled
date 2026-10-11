@@ -14,7 +14,7 @@ abstract class wi {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-            wi.a(false);
+          wi.a(false);
         }
     }
 

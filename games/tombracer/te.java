@@ -7,7 +7,7 @@ final class te {
 
     final void a(int param0) {
         if (param0 != -10430) {
-            return;
+          return;
         }
         this.field_a.d(8);
     }
@@ -17,54 +17,31 @@ final class te {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 == -28255) {
-                break L1;
-              } else {
-                field_b = 19;
-                break L1;
-              }
-            }
-            var3 = (kua) ((Object) this.field_a.f(-80));
-            L2: while (true) {
-              if (var3 == null) {
-                break L0;
-              } else {
-                param0.a((byte) 25, var3.f((byte) 103), var3);
-                var3 = (kua) ((Object) this.field_a.e(111));
-                continue L2;
-              }
-            }
+          if (param1 != -28255) {
+            field_b = 19;
           }
+          var3 = (kua) (this.field_a.f(-80));
+          while (var3 != null) {
+            param0.a((byte) 25, var3.f((byte) 103), var3);
+            var3 = (kua) (this.field_a.e(111));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("te.D(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("te.D(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -74,55 +51,32 @@ final class te {
         kua var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 23436) {
-                break L1;
-              } else {
-                var5 = (vna) null;
-                this.a(71, (vna) null);
-                break L1;
-              }
-            }
-            var6 = (kua) ((Object) param1.f(-80));
-            L2: while (true) {
-              if (var6 == null) {
-                break L0;
-              } else {
-                this.field_a.b((byte) -97, new kua(var6));
-                var6 = (kua) ((Object) param1.e(121));
-                continue L2;
-              }
-            }
+          if (param0 != 23436) {
+            var5 = (vna) null;
+            this.a(71, (vna) null);
           }
+          var6 = (kua) (param1.f(-80));
+          while (var6 != null) {
+            this.field_a.b((byte) -97, new kua(var6));
+            var6 = (kua) (param1.e(121));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("te.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("te.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -131,54 +85,31 @@ final class te {
         kua var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -59) {
-                break L1;
-              } else {
-                this.a(-81);
-                break L1;
-              }
-            }
-            var5 = (kua) ((Object) this.field_a.f(-80));
-            L2: while (true) {
-              if (var5 == null) {
-                break L0;
-              } else {
-                var5.a(param0, (byte) -72);
-                var5 = (kua) ((Object) this.field_a.e(107));
-                continue L2;
-              }
-            }
+          if (param1 > -59) {
+            this.a(-81);
           }
+          var5 = (kua) (this.field_a.f(-80));
+          while (var5 != null) {
+            var5.a(param0, (byte) -72);
+            var5 = (kua) (this.field_a.e(107));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("te.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("te.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -9,7 +9,7 @@ final class vb {
         lb.field_i = 1;
         vl.field_y = param1;
         if (param2 < 81) {
-            return;
+          return;
         }
         hf.field_i = param0;
     }

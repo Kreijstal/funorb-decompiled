@@ -9,7 +9,7 @@ final class ii {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -1) {
-            return;
+          return;
         }
         field_a = null;
     }

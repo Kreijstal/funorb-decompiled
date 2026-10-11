@@ -12,9 +12,9 @@ final class uq {
     final static void a(byte param0) {
         vg.field_Wb = true;
         if (param0 != -122) {
-            uq.a(-68);
-            ov.field_b = 0;
-            return;
+          uq.a(-68);
+          ov.field_b = 0;
+          return;
         }
         ov.field_b = 0;
     }
@@ -24,7 +24,7 @@ final class uq {
         field_b = null;
         field_d = null;
         if (param0 > -80) {
-            return;
+          return;
         }
         field_a = null;
         field_f = null;

@@ -11,91 +11,76 @@ abstract class kma implements nua {
     public final void c(int param0) {
         this.field_b = bva.b((byte) -107);
         if (param0 > -63) {
-            this.a(109);
+          this.a(109);
         }
     }
 
     abstract String e(int param0);
 
     public final String a(int param0) {
-        if (!this.a(true)) {
-          if (bva.b((byte) -107) >= this.field_b + 350L) {
-            if (param0 < 34) {
-              kma.a((byte) -83);
-              return this.e(1890);
-            } else {
-              return this.e(1890);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (this.a(true)) {
           return null;
         }
+        if (bva.b((byte) -107) < this.field_b + 350L) {
+          return null;
+        }
+        if (param0 >= 34) {
+          return this.e(1890);
+        }
+        kma.a((byte) -83);
+        return this.e(1890);
     }
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 != -91) {
-          field_e = (String[]) null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == -91) {
           field_a = null;
           field_c = null;
           field_d = null;
           return;
         }
+        field_e = (String[]) null;
+        field_a = null;
+        field_c = null;
+        field_d = null;
     }
 
     abstract it d(int param0);
 
     final static void a(boolean param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        var3 = 32 % ((43 - param1) / 57);
-        if (null != fj.field_c) {
-          var4 = fj.field_c.d(-1, param0);
-          if ((var4 ^ -1) == 1) {
-            return;
-          } else {
-            L0: {
-              if (0 != (var4 ^ -1)) {
-                var5 = fj.field_c.c(false) ? 1 : 0;
-                ok.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            fj.field_c = null;
-            wp.a(-1);
-            return;
+        int var5 = 0;
+        int var3 = 32 % ((43 - param1) / 57);
+        if (null == fj.field_c) {
+          return;
+        }
+        int var4 = fj.field_c.d(-1, param0);
+        if (var4 != -2) {
+          if (var4 != -1) {
+            var5 = fj.field_c.c(false) ? 1 : 0;
+            ok.a(var4, param2, (byte) 87, var5 != 0, fj.field_c.field_Db, fj.field_c.f(80));
           }
-        } else {
+          fj.field_c = null;
+          wp.a(-1);
           return;
         }
     }
 
     public final it b(int param0) {
         if (param0 != -4666) {
-            this.a(82);
-            if (this.a(true)) {
-                return fk.field_d;
-            }
-            if (!(bva.b((byte) -107) >= this.field_b - -350L)) {
-                return gla.field_p;
-            }
-            return this.d(-1891);
+          this.a(82);
+          if (this.a(true)) {
+            return fk.field_d;
+          }
+          if (!(bva.b((byte) -107) >= this.field_b + 350L)) {
+            return gla.field_p;
+          }
+          return this.d(-1891);
         }
         if (this.a(true)) {
-            return fk.field_d;
+          return fk.field_d;
         }
-        if (!(bva.b((byte) -107) >= this.field_b - -350L)) {
-            return gla.field_p;
+        if (!(bva.b((byte) -107) >= this.field_b + 350L)) {
+          return gla.field_p;
         }
         return this.d(-1891);
     }

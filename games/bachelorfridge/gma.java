@@ -12,10 +12,10 @@ final class gma {
 
     public static void a(int param0) {
         if (param0 != -5377) {
-            gma.b(117);
-            field_e = null;
-            field_c = (int[][]) null;
-            return;
+          gma.b(117);
+          field_e = null;
+          field_c = (int[][]) null;
+          return;
         }
         field_e = null;
         field_c = (int[][]) null;
@@ -31,105 +31,72 @@ final class gma {
 
     final static void b(int param0) {
         try {
-            Exception var1 = null;
-            Throwable decompiledCaughtException = null;
-            if (null != vg.field_n) {
-              try {
-                L0: {
-                  vg.field_n.a(0L, (byte) -108);
-                  vg.field_n.a(-96, ig.field_m.field_g, ig.field_m.field_h, 24);
-                  break L0;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = (Exception) (Object) decompiledCaughtException;
-                if (param0 <= 44) {
-                  return;
-                } else {
-                  ig.field_m.field_g = ig.field_m.field_g + 24;
-                  return;
-                }
-              }
+          Exception var1 = null;
+          Throwable decompiledCaughtException = null;
+          if (null != vg.field_n) {
+            try {
+              vg.field_n.a(0L, (byte) -108);
+              vg.field_n.a(-96, ig.field_m.field_g, ig.field_m.field_h, 24);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 <= 44) {
                 return;
-              } else {
-                ig.field_m.field_g = ig.field_m.field_g + 24;
-                return;
               }
-            } else {
-              if (param0 <= 44) {
-                return;
-              } else {
-                ig.field_m.field_g = ig.field_m.field_g + 24;
-                return;
-              }
+              ig.field_m.field_g = ig.field_m.field_g + 24;
+              return;
             }
+          }
+          if (param0 <= 44) {
+            return;
+          }
+          ig.field_m.field_g = ig.field_m.field_g + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (!param1) {
-                  break L0;
-                } else {
-                  field_c = (int[][]) null;
-                  break L0;
-                }
-              }
-              try {
-                L1: {
-                  var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
-                  param0.getAppletContext().showDocument(ow.a(var2, (byte) -125, param0), "_top");
-                  break L1;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                return;
-              }
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_8_1 = new StringBuilder().append("gma.A(");
-
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw pe.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param1) {
+              field_c = (int[][]) null;
             }
+            try {
+              var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+              param0.getAppletContext().showDocument(ow.a(var2, (byte) -125, param0), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("gma.A(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw pe.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

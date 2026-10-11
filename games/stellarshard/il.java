@@ -9,12 +9,12 @@ final class il extends vg {
 
     final static void a(int param0, String param1) {
         try {
-            if (param0 != 7110) {
-                String var3 = (String) null;
-                il.a(-21, (String) null);
-            }
+          if (param0 != 7110) {
+            String var3 = (String) null;
+            il.a(-21, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "il.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "il.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,49 +28,26 @@ final class il extends vg {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 0) {
-              stackIn_4_0 = la.a(124, '*', param0.field_m.length());
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == 0) {
+            stackIn_4_0 = la.a(124, '*', param0.field_m.length());
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("il.JA(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("il.JA(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -79,63 +56,36 @@ final class il extends vg {
     }
 
     final static boolean e(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == 32525) {
-          if ((eg.field_d ^ -1) <= -11) {
-            if (cg.field_a) {
-              return false;
-            } else {
-              L0: {
-                if (ih.b(12871)) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 32525) {
           field_x = (String) null;
-          if ((eg.field_d ^ -1) <= -11) {
-            if (cg.field_a) {
-              return false;
-            } else {
-              L1: {
-                if (ih.b(12871)) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (eg.field_d < 10) {
             return false;
           }
+          if (!cg.field_a) {
+            return !ih.b(12871) ? true : false;
+          }
+          return false;
         }
+        if (eg.field_d < 10) {
+          return false;
+        }
+        if (!cg.field_a) {
+          return !ih.b(12871) ? true : false;
+        }
+        return false;
     }
 
     public static void d(int param0) {
-        if (param0 != -5758) {
-          field_w = -104;
-          field_x = null;
-          field_u = null;
-          field_v = null;
-          return;
-        } else {
+        if (param0 == -5758) {
           field_x = null;
           field_u = null;
           field_v = null;
           return;
         }
+        field_w = -104;
+        field_x = null;
+        field_u = null;
+        field_v = null;
     }
 
     static {

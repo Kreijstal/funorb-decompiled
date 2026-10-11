@@ -13,9 +13,9 @@ final class me {
         field_c = null;
         field_b = null;
         if (param0 != 6457) {
-            me.a(-87);
-            field_d = null;
-            return;
+          me.a(-87);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

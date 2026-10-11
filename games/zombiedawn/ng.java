@@ -11,40 +11,35 @@ final class ng {
     final static void a(int param0) {
         ag.field_c = bj.field_p + " <b>" + ap.field_s + "</b> " + oo.field_S + " <b>" + ki.field_bb + "</b> " + ub.field_j + "<br>" + "<br>" + id.field_L;
         if (param0 < 74) {
-            field_b = (h) null;
+          field_b = (h) null;
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 == -64) {
-          if (null != sn.field_c) {
-            if (df.field_j != ic.field_T) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -64) {
           ng.a((byte) -16);
-          if (null != sn.field_c) {
-            if (df.field_j != ic.field_T) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == sn.field_c) {
             return false;
           }
+          if (df.field_j == ic.field_T) {
+            return true;
+          }
+          return false;
         }
+        if (null == sn.field_c) {
+          return false;
+        }
+        if (df.field_j == ic.field_T) {
+          return true;
+        }
+        return false;
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_d = null;
         if (param0 > -125) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

@@ -21,51 +21,34 @@ final class dn extends ie {
         int var4;
         int var5;
         var5 = client.field_A ? 1 : 0;
-        if (param0 == 109) {
-          if (this.field_g >= this.field_m) {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                var4++;
-                this.field_m = this.field_m + param1;
-                if (var4 >= 10) {
-                  break L1;
-                } else {
-                  if (this.field_m < this.field_g) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (this.field_m < this.field_g) {
-                  this.field_m = this.field_g;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return var4;
-            }
-          } else {
-            this.field_h = this.field_h + (-this.field_g + this.field_m);
-            this.field_g = this.field_g + (this.field_m - this.field_g);
-            this.field_m = this.field_m + param1;
-            return 1;
-          }
-        } else {
+        if (param0 != 109) {
           return -6;
         }
+        if (this.field_g < this.field_m) {
+          this.field_h = this.field_h + (-this.field_g + this.field_m);
+          this.field_g = this.field_g + (this.field_m - this.field_g);
+          this.field_m = this.field_m + param1;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          var4++;
+          this.field_m = this.field_m + param1;
+        } while (var4 < 10 &&
+          this.field_m < this.field_g);
+        if (this.field_m < this.field_g) {
+          this.field_m = this.field_g;
+        }
+        return var4;
     }
 
     final void b(int param0) {
         if (param0 != -30693) {
-            return;
+          return;
         }
         this.field_h = 0L;
-        if (!(this.field_g >= this.field_m)) {
-            this.field_g = this.field_g + (-this.field_g + this.field_m);
+        if (this.field_g < this.field_m) {
+          this.field_g = this.field_g + (-this.field_g + this.field_m);
         }
     }
 
@@ -76,17 +59,17 @@ final class dn extends ie {
         field_s = null;
         field_p = null;
         if (param0 <= 65) {
-            dn.b((byte) 101);
+          dn.b((byte) 101);
         }
     }
 
     final long a(int param0) {
         this.field_g = this.field_g + this.c(-8325);
         if (param0 != -22962) {
-            this.field_o = 53;
+          this.field_o = 53;
         }
-        if (!(this.field_g >= this.field_m)) {
-            return (-this.field_g + this.field_m) / 1000000L;
+        if (this.field_g < this.field_m) {
+          return (-this.field_g + this.field_m) / 1000000L;
         }
         return 0L;
     }
@@ -100,33 +83,25 @@ final class dn extends ie {
         IllegalArgumentException var1 = null;
         var3 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 25) {
-                break L1;
-              } else {
-                field_j = (String) null;
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              var2 = oi.field_a.a(-39, var1_int);
-              if (!var2.field_D) {
-                var1_int++;
-                continue L2;
-              } else {
-                stackIn_6_0 = (ac) (var2);
-                break L0;
-              }
-            }
+          if (param0 < 25) {
+            field_j = (String) null;
           }
+          var1_int = 0;
+          while (true) {
+            var2 = oi.field_a.a(-39, var1_int);
+            if (!var2.field_D) {
+              var1_int++;
+              continue;
+            }
+            break;
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        return stackIn_6_0;
     }
 
     private final long c(int param0) {
@@ -135,21 +110,20 @@ final class dn extends ie {
         long var2 = System.nanoTime();
         long var4 = var2 - this.field_h;
         if (param0 != -8325) {
-            this.a(110);
+          this.a(110);
         }
         this.field_h = var2;
-        if (var4 > -5000000000L) {
-            if (!((var4 ^ -1L) <= -5000000001L)) {
-                this.field_f[this.field_o] = var4;
-                if (!(-2 >= (this.field_n ^ -1))) {
-                    this.field_n = this.field_n + 1;
-                }
-                this.field_o = (1 + this.field_o) % 10;
-            }
+        if (var4 > -5000000000L &&
+          var4 < 5000000000L) {
+          this.field_f[this.field_o] = var4;
+          if (this.field_n < 1) {
+            this.field_n = this.field_n + 1;
+          }
+          this.field_o = (1 + this.field_o) % 10;
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= this.field_n; var8++) {
-            var6 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
+          var6 = var6 + this.field_f[(10 + (this.field_o - var8)) % 10];
         }
         return var6 / (long)this.field_n;
     }

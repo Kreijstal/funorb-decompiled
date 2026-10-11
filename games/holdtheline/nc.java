@@ -23,9 +23,7 @@ final class nc implements Iterator {
         field_b = null;
         field_h = null;
         field_j = null;
-        if (param0 == 86) {
-          return;
-        } else {
+        if (param0 != 86) {
           field_e = (byte[]) null;
           return;
         }
@@ -33,64 +31,52 @@ final class nc implements Iterator {
 
     final static int a(int param0) {
         if (param0 != 855) {
-            return -27;
+          return -27;
         }
         return (int)(1000000000L / tm.field_c);
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         hl var1;
         int var2;
         var2 = HoldTheLine.field_D;
-        if (this.field_f.field_j[this.field_i - 1] == this.field_k) {
-          L0: while (true) {
-            if (this.field_f.field_g > this.field_i) {
-              fieldTemp$1 = this.field_i;
-              this.field_i = this.field_i + 1;
-              var1 = this.field_f.field_j[fieldTemp$1].field_h;
-              if (this.field_f.field_j[this.field_i - 1] != var1) {
-                this.field_d = var1;
-                this.field_k = var1.field_h;
-                return var1;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_f.field_j[this.field_i - 1] != this.field_k) {
           var1 = this.field_k;
           this.field_k = var1.field_h;
           this.field_d = var1;
           return var1;
         }
+        do {
+          if (this.field_f.field_g <= this.field_i) {
+            return null;
+          }
+          fieldTemp$0 = this.field_i;
+          this.field_i = this.field_i + 1;
+          var1 = this.field_f.field_j[fieldTemp$0].field_h;
+        } while (this.field_f.field_j[this.field_i - 1] == var1);
+        this.field_d = var1;
+        this.field_k = var1.field_h;
+        return var1;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = HoldTheLine.field_D;
-        if (this.field_k == this.field_f.field_j[-1 + this.field_i]) {
-          L0: while (true) {
-            if (this.field_f.field_g > this.field_i) {
-              fieldTemp$1 = this.field_i;
-              this.field_i = this.field_i + 1;
-              if (this.field_f.field_j[fieldTemp$1].field_h != this.field_f.field_j[-1 + this.field_i]) {
-                this.field_k = this.field_f.field_j[this.field_i + -1].field_h;
-                return true;
-              } else {
-                this.field_k = this.field_f.field_j[this.field_i + -1];
-                continue L0;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_k != this.field_f.field_j[-1 + this.field_i]) {
           return true;
         }
+        while (this.field_f.field_g > this.field_i) {
+          fieldTemp$0 = this.field_i;
+          this.field_i = this.field_i + 1;
+          if (this.field_f.field_j[fieldTemp$0].field_h != this.field_f.field_j[-1 + this.field_i]) {
+            this.field_k = this.field_f.field_j[this.field_i - 1].field_h;
+            return true;
+          }
+          this.field_k = this.field_f.field_j[this.field_i - 1];
+        }
+        return false;
     }
 
     private final void a(byte param0) {
@@ -102,7 +88,7 @@ final class nc implements Iterator {
 
     public final void remove() {
         if (null == this.field_d) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_d.d(0);
         this.field_d = null;
@@ -111,10 +97,10 @@ final class nc implements Iterator {
     nc(im param0) {
         this.field_d = null;
         try {
-            this.field_f = param0;
-            this.a((byte) 127);
+          this.field_f = param0;
+          this.a((byte) 127);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

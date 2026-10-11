@@ -14,7 +14,7 @@ final class kh {
         field_b = null;
         field_a = null;
         if (!param0) {
-            field_d = 20;
+          field_d = 20;
         }
     }
 
@@ -25,7 +25,7 @@ final class kh {
         ak.field_b = null;
         i.field_I = null;
         if (param0 >= -29) {
-            kh.a(false);
+          kh.a(false);
         }
     }
 

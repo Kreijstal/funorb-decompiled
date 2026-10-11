@@ -8,17 +8,17 @@ final class qk {
 
     final static int a(byte param0) {
         if (param0 != -58) {
-            qk.a(9);
-            return ka.field_L;
+          qk.a(9);
+          return ka.field_L;
         }
         return ka.field_L;
     }
 
     public static void a(int param0) {
         if (param0 < 31) {
-            field_b = (String) null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

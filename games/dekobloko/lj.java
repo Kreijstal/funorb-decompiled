@@ -7,7 +7,7 @@ final class lj {
     static java.awt.Image field_a;
 
     public static void a(int param0) {
-        int var1 = 67 % ((param0 - -1) / 55);
+        int var1 = 67 % ((param0 + 1) / 55);
         field_b = null;
         field_a = null;
         field_c = null;
@@ -18,7 +18,7 @@ final class lj {
         ob.b(param2, -299374302, param0, param1);
         fh.a(param1, param0, param3, param2);
         if (kf.field_G != null) {
-            pb.a(true);
+          pb.a(true);
         }
     }
 

@@ -9,16 +9,16 @@ final class kf extends ma {
 
     public static void a(int param0) {
         if (param0 != -1) {
-            field_l = (String) null;
-            field_l = null;
-            return;
+          field_l = (String) null;
+          field_l = null;
+          return;
         }
         field_l = null;
     }
 
     final void a(int param0, int param1, int param2) {
         this.field_n = param0;
-        this.field_o.c(param1, param2 + ec.field_b * param0 >> -1568572856);
+        this.field_o.c(param1, param2 + ec.field_b * param0 >> 8);
     }
 
     final static void a(int param0, byte param1, int[] param2, int[] param3, int param4) {
@@ -59,8 +59,11 @@ final class kf extends ma {
                         }
                         continue stateLoop;
                     } catch (Throwable stateCaught_1) {
+                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                        }
                         caughtException = stateCaught_1;
-                        statePc = 24;
                         continue stateLoop;
                     }
                 }
@@ -78,8 +81,11 @@ final class kf extends ma {
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
+                        statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                        }
                         caughtException = stateCaught_4;
-                        statePc = 24;
                         continue stateLoop;
                     }
                 }
@@ -91,63 +97,62 @@ final class kf extends ma {
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
+                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                        }
                         caughtException = stateCaught_5;
-                        statePc = 24;
                         continue stateLoop;
                     }
                 }
                 case 6: {
                     try {
                         if (param0 < var5_int) {
-                            statePc = 13;
+                            /* Inlined CFG state: 13. */
+                            {
+                                if (var7 == 0) {
+                                    /* Inlined CFG state: 15. */
+                                    {
+                                        var5_int = param0;
+                                        statePc = 16;
+                                        continue stateLoop;
+                                    }
+                                } else {
+                                    statePc = 14;
+                                    continue stateLoop;
+                                }
+                            }
                         } else {
-                            statePc = 7;
+                            /* Inlined CFG state: 7. */
+                            {
+                                if (param2[var5_int - 1] > param2[var5_int]) {
+                                    /* Inlined CFG state: 10. */
+                                    {
+                                        var6 = param2[-1 + var5_int];
+                                        param2[var5_int - 1] = param2[var5_int];
+                                        param2[var5_int] = var6;
+                                        var6 = param3[-1 + var5_int];
+                                        param3[var5_int - 1] = param3[var5_int];
+                                        var7 = 0;
+                                        param3[var5_int] = var6;
+                                        statePc = 11;
+                                        continue stateLoop;
+                                    }
+                                } else {
+                                    /* Inlined CFG state: 8. */
+                                    {
+                                        statePc = 11;
+                                        continue stateLoop;
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        if (param2[var5_int - 1] > param2[var5_int]) {
-                            statePc = 10;
-                        } else {
-                            statePc = 8;
+                        statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var6 = param2[-1 + var5_int];
-                        param2[var5_int + -1] = param2[var5_int];
-                        param2[var5_int] = var6;
-                        var6 = param3[-1 + var5_int];
-                        param3[var5_int + -1] = param3[var5_int];
-                        var7 = 0;
-                        param3[var5_int] = var6;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 24;
+                        caughtException = stateCaught_6;
                         continue stateLoop;
                     }
                 }
@@ -157,91 +162,60 @@ final class kf extends ma {
                         statePc = 6;
                         continue stateLoop;
                     } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (var7 == 0) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
+                        statePc = ((Object) stateCaught_11 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_11);
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 24;
+                        caughtException = stateCaught_11;
                         continue stateLoop;
                     }
                 }
                 case 14: {
                     return;
                 }
-                case 15: {
-                    try {
-                        var5_int = param0;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
                 case 16: {
                     try {
                         if (param4 > var5_int) {
-                            statePc = 22;
+                            /* Inlined CFG state: 22. */
+                            {
+                                if (var7 == 0) {
+                                    statePc = 4;
+                                } else {
+                                    statePc = 31;
+                                }
+                                continue stateLoop;
+                            }
                         } else {
-                            statePc = 17;
+                            /* Inlined CFG state: 17. */
+                            {
+                                if (~param2[var5_int - 1] < ~param2[var5_int]) {
+                                    /* Inlined CFG state: 19. */
+                                    {
+                                        var6 = param2[var5_int - 1];
+                                        param2[var5_int - 1] = param2[var5_int];
+                                        param2[var5_int] = var6;
+                                        var6 = param3[-1 + var5_int];
+                                        param3[var5_int - 1] = param3[var5_int];
+                                        param3[var5_int] = var6;
+                                        var7 = 0;
+                                        statePc = 20;
+                                        continue stateLoop;
+                                    }
+                                } else {
+                                    /* Inlined CFG state: 18. */
+                                    {
+                                        statePc = 20;
+                                        continue stateLoop;
+                                    }
+                                }
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        if ((param2[var5_int - 1] ^ -1) < (param2[var5_int] ^ -1)) {
-                            statePc = 19;
-                        } else {
-                            statePc = 18;
+                        statePc = ((Object) stateCaught_16 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_16);
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        var6 = param2[var5_int + -1];
-                        param2[var5_int - 1] = param2[var5_int];
-                        param2[var5_int] = var6;
-                        var6 = param3[-1 + var5_int];
-                        param3[var5_int + -1] = param3[var5_int];
-                        param3[var5_int] = var6;
-                        var7 = 0;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 24;
+                        caughtException = stateCaught_16;
                         continue stateLoop;
                     }
                 }
@@ -251,22 +225,11 @@ final class kf extends ma {
                         statePc = 16;
                         continue stateLoop;
                     } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (var7 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 31;
+                        statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 24 : -1);
+                        if (statePc == -1) {
+                            throw kf.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 24;
+                        caughtException = stateCaught_20;
                         continue stateLoop;
                     }
                 }
@@ -284,47 +247,46 @@ final class kf extends ma {
                     continue stateLoop;
                 }
                 case 25: {
-                    stackIn_27_0 = (RuntimeException) ((Object) stackIn_25_0);
-                    stackIn_27_1 = (StringBuilder) ((Object) stackIn_25_1);
+                    stackIn_27_0 = stackIn_25_0;
+                    stackIn_27_1 = stackIn_25_1;
                     stackIn_27_2 = "{...}";
                     statePc = 27;
                     continue stateLoop;
                 }
                 case 26: {
-                    stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-                    stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
+                    stackIn_27_0 = stackIn_26_0;
+                    stackIn_27_1 = stackIn_26_1;
                     stackIn_27_2 = "null";
                     statePc = 27;
                     continue stateLoop;
                 }
                 case 27: {
-                    stackIn_29_0 = (RuntimeException) ((Object) stackIn_27_0);
+                    stackIn_29_0 = stackIn_27_0;
                     stackIn_28_0 = stackIn_29_0;
                     stackIn_29_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(',');
                     stackIn_28_1 = stackIn_29_1;
                     if (param3 == null) {
-                        statePc = 29;
+                        /* Inlined CFG state: 29. */
+                        {
+                            stackIn_30_0 = stackIn_29_0;
+                            stackIn_30_1 = stackIn_29_1;
+                            stackIn_30_2 = "null";
+                            statePc = 30;
+                            continue stateLoop;
+                        }
                     } else {
-                        statePc = 28;
+                        /* Inlined CFG state: 28. */
+                        {
+                            stackIn_30_0 = stackIn_28_0;
+                            stackIn_30_1 = stackIn_28_1;
+                            stackIn_30_2 = "{...}";
+                            statePc = 30;
+                            continue stateLoop;
+                        }
                     }
-                    continue stateLoop;
-                }
-                case 28: {
-                    stackIn_30_0 = (RuntimeException) ((Object) stackIn_28_0);
-                    stackIn_30_1 = (StringBuilder) ((Object) stackIn_28_1);
-                    stackIn_30_2 = "{...}";
-                    statePc = 30;
-                    continue stateLoop;
-                }
-                case 29: {
-                    stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-                    stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-                    stackIn_30_2 = "null";
-                    statePc = 30;
-                    continue stateLoop;
                 }
                 case 30: {
-                    throw wm.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param4 + ')');
+                    throw wm.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_30_2).append(',').append(param4).append(')').toString());
                 }
                 case 31: {
                     return;
@@ -336,16 +298,21 @@ final class kf extends ma {
 
     kf(nb param0, ma param1) {
         try {
-            this.field_o = param0;
-            this.field_n = param0.j();
-            this.field_m = param1;
-            this.field_o.d(ec.field_b * this.field_n + 128 >> 308605768);
+          this.field_o = param0;
+          this.field_n = param0.j();
+          this.field_m = param1;
+          this.field_o.d(ec.field_b * this.field_n + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "kf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_l = "Exploiting a bug";
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

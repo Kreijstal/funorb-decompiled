@@ -7,7 +7,7 @@ final class ug {
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -15,27 +15,19 @@ final class ug {
     final static void a(int param0) {
         if (dg.field_i == null) {
           return;
-        } else {
-          L0: {
-            tf.a(-120, dg.field_i);
-            dg.field_i.a(nk.field_u, 159);
-            dg.field_i = null;
-            if (ki.field_D != null) {
-              ki.field_D.b(false);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param0 >= -93) {
-            field_b = -39;
-            k.field_d.requestFocus();
-            return;
-          } else {
-            k.field_d.requestFocus();
-            return;
-          }
         }
+        tf.a(-120, dg.field_i);
+        dg.field_i.a(nk.field_u, 159);
+        dg.field_i = null;
+        if (ki.field_D != null) {
+          ki.field_D.b(false);
+        }
+        if (param0 < -93) {
+          k.field_d.requestFocus();
+          return;
+        }
+        field_b = -39;
+        k.field_d.requestFocus();
     }
 
     static {

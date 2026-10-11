@@ -15,18 +15,18 @@ final class dg implements Iterator {
     public final Object next() {
         Object var1 = this.field_f;
         if (this.field_a.field_a != var1) {
-            this.field_f = ((be) (var1)).field_p;
+          this.field_f = ((be) (var1)).field_p;
         } else {
-            var1 = null;
-            this.field_f = null;
+          var1 = null;
+          this.field_f = null;
         }
         this.field_g = (be) (var1);
         return var1;
     }
 
     public final void remove() {
-        if (!(this.field_g != null)) {
-            throw new IllegalStateException();
+        if (this.field_g == null) {
+          throw new IllegalStateException();
         }
         this.field_g.e((byte) 81);
         this.field_g = null;
@@ -36,35 +36,35 @@ final class dg implements Iterator {
         field_e = null;
         field_d = (ck[][]) null;
         if (param0 != 8) {
-            field_d = (ck[][]) null;
-            field_c = null;
-            return;
+          field_d = (ck[][]) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final static void a(int param0, w param1, w param2) {
         try {
-            if (param2.field_M == null) {
-                param2.field_M = new vj();
-            }
-            if (null == param1.field_M) {
-                param1.field_M = new vj();
-            }
-            if (null == mc.field_a) {
-                mc.field_a = new nk(64);
-            }
-            if (null == hg.field_e) {
-                hg.field_e = new nk(64);
-            }
-            uf.field_z = param1.field_M;
-            if (param0 != 21014) {
-                field_c = (mi) null;
-            }
-            qi.field_S = param2.field_M;
-            d.a(true);
+          if (param2.field_M == null) {
+            param2.field_M = new vj();
+          }
+          if (null == param1.field_M) {
+            param1.field_M = new vj();
+          }
+          if (null == mc.field_a) {
+            mc.field_a = new nk(64);
+          }
+          if (null == hg.field_e) {
+            hg.field_e = new nk(64);
+          }
+          uf.field_z = param1.field_M;
+          if (param0 != 21014) {
+            field_c = (mi) null;
+          }
+          qi.field_S = param2.field_M;
+          d.a(true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,35 +76,20 @@ final class dg implements Iterator {
         RuntimeException var2 = null;
         var3 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            var4 = (kn) ((Object) pb.field_c.c((byte) -80));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param0 <= -47) {
-                    break L2;
-                  } else {
-                    field_b = 100;
-                    break L2;
-                  }
-                }
-                var5 = (kc) ((Object) field_e.c((byte) -121));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    wb.a(var5, param1, 60);
-                    var5 = (kc) ((Object) field_e.d(true));
-                    continue L3;
-                  }
-                }
-              } else {
-                fm.a((byte) -125, param1, var4);
-                var4 = (kn) ((Object) pb.field_c.d(true));
-                continue L1;
-              }
-            }
+          var4 = (kn) (pb.field_c.c((byte) -80));
+          while (var4 != null) {
+            fm.a((byte) -125, param1, var4);
+            var4 = (kn) (pb.field_c.d(true));
           }
+          if (param0 > -47) {
+            field_b = 100;
+          }
+          var5 = (kc) (field_e.c((byte) -121));
+          while (var5 != null) {
+            wb.a(var5, param1, 60);
+            var5 = (kc) (field_e.d(true));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -118,7 +103,7 @@ final class dg implements Iterator {
 
     final static boolean b(int param0) {
         if (param0 >= -34) {
-            return false;
+          return false;
         }
         return rg.a(se.h(25144), (byte) -78);
     }
@@ -126,11 +111,11 @@ final class dg implements Iterator {
     dg(uh param0) {
         this.field_g = null;
         try {
-            this.field_a = param0;
-            this.field_f = this.field_a.field_a.field_p;
-            this.field_g = null;
+          this.field_a = param0;
+          this.field_f = this.field_a.field_a.field_p;
+          this.field_g = null;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

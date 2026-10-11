@@ -7,9 +7,9 @@ final class sb {
 
     public static void a(boolean param0) {
         if (param0) {
-            sb.a(true);
-            field_a = null;
-            return;
+          sb.a(true);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

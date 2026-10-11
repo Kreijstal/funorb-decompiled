@@ -12,14 +12,12 @@ public class lh {
     private static Hashtable field_b;
 
     public static File a(String param0, int param1) {
-        String var3;
-        if (param1 > -77) {
-          var3 = (String) null;
-          lh.a(-79, (String) null, -22);
-          return lh.a(field_c, 6234, param0, field_a);
-        } else {
+        if (param1 <= -77) {
           return lh.a(field_c, 6234, param0, field_a);
         }
+        String var3 = (String) null;
+        lh.a(-79, (String) null, -22);
+        return lh.a(field_c, 6234, param0, field_a);
     }
 
     public static File a(String param0, int param1, String param2, int param3) {
@@ -37,46 +35,29 @@ public class lh {
         field_a = param2;
         field_c = param1;
         try {
-          L0: {
-            L1: {
-              field_e = System.getProperty("user.home");
-              if (field_e != null) {
-                field_e = field_e + "/";
-                break L1;
-              } else {
-                break L1;
-              }
+          field_e = System.getProperty("user.home");
+          if (field_e != null) {
+            field_e = field_e + "/";
+          }
+          if (param0 >= -87) {
+            var4 = (String) null;
+            lh.a(-52, (String) null, -39);
+            if (null != field_e) {
+              field_d = true;
+              return;
             }
-            if (param0 < -87) {
-              break L0;
-            } else {
-              var4 = (String) null;
-              lh.a(-52, (String) null, -39);
-              if (null != field_e) {
-                field_d = true;
-                return;
-              } else {
-                field_e = "~/";
-                field_d = true;
-                return;
-              }
-            }
+            field_e = "~/";
+            field_d = true;
+            return;
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          var3 = (Exception) (Object) decompiledCaughtException;
         }
         if (null == field_e) {
           field_e = "~/";
-          field_d = true;
-          return;
-        } else {
-          field_d = true;
-          return;
         }
+        field_d = true;
     }
 
     static {

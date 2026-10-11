@@ -14,8 +14,8 @@ final class eh extends wf {
         int var6 = AceOfSkies.field_G ? 1 : 0;
         int var4 = param3.indexOf(param0);
         while (var4 != -1) {
-            param3 = param3.substring(0, var4) + param2 + param3.substring(param0.length() + var4);
-            var4 = param3.indexOf(param0, var4 + param2.length());
+          param3 = param3.substring(0, var4) + param2 + param3.substring(param0.length() + var4);
+          var4 = param3.indexOf(param0, var4 + param2.length());
         }
         int var5 = -105 % ((param1 - 60) / 43);
         return param3;

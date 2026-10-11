@@ -22,47 +22,27 @@ final class ej extends mc {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 4) {
-                break L1;
-              } else {
-                field_v = (oh) null;
-                break L1;
-              }
-            }
-            var3 = (CharSequence) ((Object) param0);
-            stackIn_3_0 = ik.field_f.equals(cc.a(var3, (byte) 103));
-            break L0;
+          if (param1 != 4) {
+            field_v = (oh) null;
           }
+          var3 = (CharSequence) ((Object) param0);
+          stackIn_3_0 = ik.field_f.equals(cc.a(var3, (byte) 103));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ej.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ej.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(boolean param0, int param1, byte param2) {
@@ -73,87 +53,57 @@ final class ej extends mc {
         String var7;
         CharSequence var8;
         var3 = -22 / ((-38 - param2) / 57);
-        if (lf.field_b != null) {
-          var4 = lf.field_b.a(param0, (byte) 58);
-          if (-1 != (var4 ^ -1)) {
-            if ((var4 ^ -1) == -3) {
-              if (null != lf.field_b.field_jb) {
-                if (!lf.field_b.field_jb.equals("")) {
-                  L0: {
-                    if (lf.field_b.field_jb.charAt(0) == 91) {
-                      var5 = lf.field_b.field_jb;
-                      break L0;
-                    } else {
-                      var8 = (CharSequence) ((Object) lf.field_b.field_jb);
-                      var5 = cc.a(var8, (byte) 124);
-                      break L0;
-                    }
-                  }
-                  L1: {
-                    var6 = null;
-                    if (ke.field_c != 0) {
-                      break L1;
-                    } else {
-                      var6 = qf.a((byte) 122, var5, param1);
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if (-2 != (ke.field_c ^ -1)) {
-                      break L2;
-                    } else {
-                      var6 = ma.a(false, var5, param1);
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if ((ke.field_c ^ -1) == -3) {
-                      var6 = li.a(param1, var5, 2);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if ((ke.field_c ^ -1) == -4) {
-                      var6 = aa.a(var5, param1, 2, var5);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  if (var6 != null) {
-                    var7 = (String) null;
-                    fi.a(0, 0, var5, 2, (String) (var6), (String) null);
-                    ke.field_c = -1;
-                    lf.field_b = null;
-                    return;
-                  } else {
-                    ke.field_c = -1;
-                    lf.field_b = null;
-                    return;
-                  }
-                } else {
-                  ke.field_c = -1;
-                  lf.field_b = null;
-                  return;
-                }
-              } else {
-                ke.field_c = -1;
-                lf.field_b = null;
-                return;
-              }
-            } else {
-              ke.field_c = -1;
-              lf.field_b = null;
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (lf.field_b == null) {
           return;
         }
+        var4 = lf.field_b.a(param0, (byte) 58);
+        if (var4 == 0) {
+          return;
+        }
+        if (var4 != 2) {
+          ke.field_c = -1;
+          lf.field_b = null;
+          return;
+        }
+        if (null == lf.field_b.field_jb) {
+          ke.field_c = -1;
+          lf.field_b = null;
+          return;
+        }
+        if (lf.field_b.field_jb.equals("")) {
+          ke.field_c = -1;
+          lf.field_b = null;
+          return;
+        }
+        if (lf.field_b.field_jb.charAt(0) == 91) {
+          var5 = lf.field_b.field_jb;
+        } else {
+          var8 = (CharSequence) ((Object) lf.field_b.field_jb);
+          var5 = cc.a(var8, (byte) 124);
+        }
+        var6 = null;
+        if (ke.field_c == 0) {
+          var6 = qf.a((byte) 122, var5, param1);
+        }
+        if (ke.field_c == 1) {
+          var6 = ma.a(false, var5, param1);
+        }
+        if (ke.field_c == 2) {
+          var6 = li.a(param1, var5, 2);
+        }
+        if (ke.field_c == 3) {
+          var6 = aa.a(var5, param1, 2, var5);
+        }
+        if (var6 == null) {
+          ke.field_c = -1;
+          lf.field_b = null;
+          return;
+        }
+        var7 = (String) null;
+        fi.a(0, 0, var5, 2, (String) (var6), (String) null);
+        ke.field_c = -1;
+        lf.field_b = null;
+        return;
     }
 
     public static void a(int param0) {
@@ -162,14 +112,12 @@ final class ej extends mc {
         field_o = null;
         field_p = null;
         field_w = null;
-        if (param0 != -1) {
-          field_z = -123;
-          field_t = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_t = null;
           return;
         }
+        field_z = -123;
+        field_t = null;
     }
 
     ej(int param0, int param1, boolean param2) {
@@ -182,14 +130,14 @@ final class ej extends mc {
 
     ej(bi param0, boolean param1) {
         try {
-            this.field_x = param1 ? true : false;
-            this.field_s = 0;
-            this.field_q = 0;
-            this.field_y = 0;
-            this.field_u = param0.field_f;
-            this.field_n = param0.field_b;
+          this.field_x = param1 ? true : false;
+          this.field_s = 0;
+          this.field_q = 0;
+          this.field_y = 0;
+          this.field_u = param0.field_f;
+          this.field_n = param0.field_b;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

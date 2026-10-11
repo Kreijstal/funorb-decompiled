@@ -8,7 +8,7 @@ final class ka implements uj {
     static int field_a;
 
     public final String a(byte param0) {
-        int var2 = 19 / ((param0 - -33) / 62);
+        int var2 = 19 / ((param0 + 33) / 62);
         return "Fill Cell Water";
     }
 
@@ -17,7 +17,7 @@ final class ka implements uj {
         field_c = null;
         field_b = null;
         if (param0 != 3) {
-            ka.a(-55);
+          ka.a(-55);
         }
     }
 
@@ -25,7 +25,7 @@ final class ka implements uj {
         ha.field_e = 2;
         tb.field_a = 3;
         if (param0) {
-            this.a(false);
+          this.a(false);
         }
     }
 

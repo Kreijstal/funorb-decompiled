@@ -18,41 +18,33 @@ final class n extends le {
         field_k = null;
         field_p = null;
         if (param0 != 128) {
-            field_k = (int[]) null;
-            field_r = null;
-            return;
+          field_k = (int[]) null;
+          field_r = null;
+          return;
         }
         field_r = null;
     }
 
     final static uc c(byte param0) {
         try {
-            Throwable var1 = null;
-            uc stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (param0 >= 81) {
-                    break L1;
-                  } else {
-                    n.a(8);
-                    break L1;
-                  }
-                }
-                stackIn_3_0 = (uc) (Class.forName("ol").newInstance());
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
+          Throwable var1 = null;
+          uc stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 < 81) {
+              n.a(8);
             }
+            stackIn_3_0 = (uc) (Class.forName("ol").newInstance());
             return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

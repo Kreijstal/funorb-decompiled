@@ -10,27 +10,22 @@ final class nd {
     static String[][] field_c;
 
     final static boolean a(int param0, int param1) {
-        if (param1 == 1) {
-          if (sn.field_b[param0] != null) {
-            if (sn.field_b[param0].field_t) {
-              if (null != sn.field_b[param0].field_p) {
-                if (null == sn.field_b[param0].field_p[1][0]) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param1 != 1) {
           return false;
         }
+        if (sn.field_b[param0] == null) {
+          return false;
+        }
+        if (!sn.field_b[param0].field_t) {
+          return false;
+        }
+        if (null == sn.field_b[param0].field_p) {
+          return false;
+        }
+        if (null != sn.field_b[param0].field_p[1][0]) {
+          return true;
+        }
+        return false;
     }
 
     final static pe a(int param0, String param1) {
@@ -44,93 +39,57 @@ final class nd {
         pe stackIn_19_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var5 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            if (ae.field_a != null) {
-              if (param1 != null) {
-                if (param1.length() != 0) {
-                  var6 = (CharSequence) ((Object) param1);
-                  var2 = cl.a(-95, var6);
-                  if (var2 != null) {
-                    L1: {
-                      if (param0 == 1) {
-                        break L1;
-                      } else {
-                        field_a = (String) null;
-                        break L1;
-                      }
-                    }
-                    var3 = (pe) ((Object) ae.field_a.a(-7895, (long)var2.hashCode()));
-                    L2: while (true) {
-                      if (var3 != null) {
-                        var7 = (CharSequence) ((Object) var3.field_ob);
-                        var4 = cl.a(-95, var7);
-                        if (var4.equals(var2)) {
-                          stackIn_19_0 = (pe) (var3);
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          var3 = (pe) ((Object) ae.field_a.c(1));
-                          continue L2;
-                        }
-                      } else {
-                        return null;
-                      }
-                    }
-                  } else {
-                    return null;
-                  }
-                } else {
-                  stackIn_7_0 = null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                return null;
-              }
-            } else {
-              return null;
-            }
+          if (ae.field_a == null) {
+            return null;
           }
+          if (param1 == null) {
+            return null;
+          }
+          if (param1.length() == 0) {
+            stackIn_7_0 = null;
+            return (pe) (stackIn_7_0);
+          }
+          var6 = (CharSequence) ((Object) param1);
+          var2 = cl.a(-95, var6);
+          if (var2 == null) {
+            return null;
+          }
+          if (param0 != 1) {
+            field_a = (String) null;
+          }
+          var3 = (pe) (ae.field_a.a(-7895, (long)var2.hashCode()));
+          while (var3 != null) {
+            var7 = (CharSequence) ((Object) var3.field_ob);
+            var4 = cl.a(-95, var7);
+            if (var4.equals(var2)) {
+              stackIn_19_0 = var3;
+              return stackIn_19_0;
+            }
+            var3 = (pe) (ae.field_a.c(1));
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2_ref);
-
-            stackIn_24_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L3;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L3;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_24_0 = var2_ref;
+          stackIn_24_1 = new StringBuilder().append("nd.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (pe) ((Object) stackIn_7_0);
-        } else {
-          return stackIn_19_0;
+          throw lj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 < 17) {
-            return;
+          return;
         }
         field_c = (String[][]) null;
         field_f = null;

@@ -11,12 +11,12 @@ abstract class uq implements fo {
 
     final void a(int param0, pca param1) {
         try {
-            this.field_e = param1;
-            if (param0 != 30711) {
-                uq.b(-92);
-            }
+          this.field_e = param1;
+          if (param0 != 30711) {
+            uq.b(-92);
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "uq.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ abstract class uq implements fo {
         field_f = null;
         field_b = null;
         if (param0 <= 53) {
-            uq.b(22);
+          uq.b(22);
         }
     }
 
@@ -35,7 +35,7 @@ abstract class uq implements fo {
 
     final la a(int param0) {
         if (param0 != 10685) {
-            return (la) null;
+          return (la) null;
         }
         return this.field_e.d(0);
     }

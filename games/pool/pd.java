@@ -13,56 +13,43 @@ final class pd implements fp {
     static String field_e;
 
     final static void a(int param0) {
-        int var1;
-        if (nk.field_h <= 32) {
-          ap.a(0, param0 + 3815994);
-          if (param0 == 0) {
-            return;
-          } else {
+        int var1 = 0;
+        if (nk.field_h > 32) {
+          var1 = nk.field_h % 32;
+          if (0 == var1) {
+            var1 = 32;
+          }
+          ap.a(nk.field_h - var1, 3815994);
+          if (param0 != 0) {
             pd.a(false);
             return;
           }
-        } else {
-          L0: {
-            var1 = nk.field_h % 32;
-            if (0 == var1) {
-              var1 = 32;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          ap.a(nk.field_h + -var1, 3815994);
-          if (param0 == 0) {
-            return;
-          } else {
-            pd.a(false);
-            return;
-          }
+          return;
+        }
+        ap.a(0, param0 + 3815994);
+        if (param0 != 0) {
+          pd.a(false);
+          return;
         }
     }
 
     public static void a(boolean param0) {
         field_f = null;
         field_d = null;
-        if (!param0) {
-          field_g = false;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0) {
           field_e = null;
           field_a = null;
           return;
         }
+        field_g = false;
+        field_e = null;
+        field_a = null;
     }
 
     public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -72,89 +59,51 @@ final class pd implements fp {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int var7Lifetime1;
         var11 = Pool.field_O;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param4.field_s) {
-                  break L2;
-                } else {
-                  if (!param4.d(-60)) {
-                    stackIn_6_0 = 2188450;
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_6_0 = 3249872;
-              break L1;
-            }
-            L3: {
-              var6_int = stackIn_6_0;
-              this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 - -param4.field_C, param3 - -param4.field_D, param4.field_l, param4.field_y, var6_int, -1, this.field_h, this.field_c, this.field_b.field_w + this.field_b.field_C);
-              if (param4.d(-52)) {
-                L4: {
-                  var7 = this.field_b.b(param4.field_m);
-                  var8 = this.field_b.field_C + this.field_b.field_w;
-                  var9 = param4.field_C + param1;
-                  var10 = param3 + param4.field_D;
-                  if (this.field_h == 2) {
-                    var9 = var9 + (-var7 + param4.field_l);
-                    break L4;
-                  } else {
-                    if (1 == this.field_h) {
-                      var9 = var9 + (param4.field_l + -var7 >> 177227489);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                L5: {
-                  if (2 != this.field_c) {
-                    if ((this.field_c ^ -1) == -2) {
-                      var10 = var10 + (param4.field_y - var8 >> 314356097);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  } else {
-                    var10 = var10 + (-var8 + param4.field_y);
-                    break L5;
-                  }
-                }
-                bj.a(var10 - -2, var8, var7 + 4, -2 + var9, 2187);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            var7 = 88 / ((param2 - 2) / 41);
-            break L0;
+          if (!param4.field_s &&
+            !param4.d(-60)) {
+            stackIn_6_0 = 2188450;
+          } else {
+            stackIn_6_0 = 3249872;
           }
+          var6_int = stackIn_6_0;
+          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, var6_int, -1, this.field_h, this.field_c, this.field_b.field_w + this.field_b.field_C);
+          if (param4.d(-52)) {
+            var7 = this.field_b.b(param4.field_m);
+            var8 = this.field_b.field_C + this.field_b.field_w;
+            var9 = param4.field_C + param1;
+            var10 = param3 + param4.field_D;
+            if (this.field_h == 2) {
+              var9 = var9 + (-var7 + param4.field_l);
+            } else {
+              if (1 == this.field_h) {
+                var9 = var9 + (param4.field_l - var7 >> 1);
+              }
+            }
+            if (2 != this.field_c) {
+              if (this.field_c == 1) {
+                var10 = var10 + (param4.field_y - var8 >> 1);
+              }
+            } else {
+              var10 = var10 + (-var8 + param4.field_y);
+            }
+            bj.a(var10 + 2, var8, var7 + 4, -2 + var9, 2187);
+          }
+          var7Lifetime1 = 88 / ((param2 - 2) / 41);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var6);
-
-            stackIn_23_1 = new StringBuilder().append("pd.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L6;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_23_0 = var6;
+          stackIn_23_1 = new StringBuilder().append("pd.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -166,11 +115,11 @@ final class pd implements fp {
 
     pd(lr param0, int param1, int param2) {
         try {
-            this.field_h = param1;
-            this.field_b = param0;
-            this.field_c = param2;
+          this.field_h = param1;
+          this.field_b = param0;
+          this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "pd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -17,66 +17,50 @@ final class up implements noa {
     final void a(gma param0, int param1) {
         this.field_g = param0;
         if (param1 != 2348) {
-            return;
+          return;
         }
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "up.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "up.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_7_0 = 0;
-        if (param1) {
-          if (param0 != 32) {
-            if (40 != param0) {
-              if (41 == param0) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (!param1) {
           field_d = (String[]) null;
-          if (param0 != 32) {
-            if (40 == param0) {
-              return true;
-            } else {
-              L0: {
-                if (41 != param0) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (param0 == 32) {
             return true;
           }
+          if (40 != param0) {
+            return 41 == param0 ? true : false;
+          }
+          return true;
         }
+        if (param0 == 32) {
+          return true;
+        }
+        if (40 == param0) {
+          return true;
+        }
+        if (41 != param0) {
+          return false;
+        }
+        return true;
     }
 
     final int e(int param0) {
         if (param0 > -78) {
-            this.field_j = 23;
-            return this.field_k;
+          this.field_j = 23;
+          return this.field_k;
         }
         return this.field_k;
     }
 
     final int b(int param0) {
         if (param0 != -344) {
-            this.a(9);
-            return this.field_f;
+          this.a(9);
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -86,7 +70,7 @@ final class up implements noa {
         field_h = (String[][]) null;
         field_i = null;
         if (param0 != 2) {
-            return;
+          return;
         }
         field_e = null;
         field_d = null;
@@ -94,20 +78,20 @@ final class up implements noa {
 
     final void a(kh param0, byte param1) {
         try {
-            param0.a((byte) -125, this.field_f, 4);
-            if (param1 != 125) {
-                this.field_f = 36;
-            }
-            param0.a((byte) 116, this.field_b, 10);
+          param0.a((byte) -125, this.field_f, 4);
+          if (param1 != 125) {
+            this.field_f = 36;
+          }
+          param0.a((byte) 116, this.field_b, 10);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "up.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "up.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void a(int param0) {
         this.field_j = this.a(true);
         if (param0 > -37) {
-            this.b(-40, 82);
+          this.b(-40, 82);
         }
     }
 
@@ -115,133 +99,97 @@ final class up implements noa {
         this.field_f = param1;
         this.a(-80);
         if (param0 != 29525) {
-            field_i = (String[]) null;
+          field_i = (String[]) null;
         }
     }
 
     final int c(int param0) {
-        int var2;
-        int var3;
-        var2 = 77 % ((-68 - param0) / 55);
-        var3 = this.field_f;
-        if (0 != var3) {
-          if (var3 != 2) {
-            if (1 != var3) {
-              if ((var3 ^ -1) != -6) {
-                return 0;
-              } else {
-                return 2;
-              }
-            } else {
-              return 1;
-            }
-          } else {
-            return 1;
-          }
-        } else {
+        int var2 = 77 % ((-68 - param0) / 55);
+        int var3 = this.field_f;
+        if (0 == var3) {
           return 2;
         }
+        if (var3 == 2) {
+          return 1;
+        }
+        if (1 == var3) {
+          return 1;
+        }
+        if (var3 == 5) {
+          return 2;
+        }
+        return 0;
     }
 
     private final int a(boolean param0) {
         int var2;
+        int var2Lifetime1;
         if (param0) {
           var2 = this.field_f;
-          if (var2 != 0) {
-            if ((var2 ^ -1) != -3) {
-              if (var2 != 1) {
-                if ((var2 ^ -1) != -4) {
-                  if (4 != var2) {
-                    if (5 != var2) {
-                      if (6 != var2) {
-                        throw new IllegalStateException("Unknown effect preset: " + this.field_f);
-                      } else {
-                        return 2;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 4;
-                }
-              } else {
-                return 3;
-              }
-            } else {
-              return 3;
-            }
-          } else {
+          if (var2 == 0) {
             return 0;
           }
-        } else {
-          field_i = (String[]) null;
-          var2 = this.field_f;
-          if (var2 != 0) {
-            if ((var2 ^ -1) != -3) {
-              if (var2 != 1) {
-                if ((var2 ^ -1) != -4) {
-                  if (4 != var2) {
-                    if (5 != var2) {
-                      if (6 != var2) {
-                        throw new IllegalStateException("Unknown effect preset: " + this.field_f);
-                      } else {
-                        return 2;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 4;
-                }
-              } else {
-                return 3;
-              }
-            } else {
-              return 3;
-            }
-          } else {
-            return 0;
+          if (var2 == 2) {
+            return 3;
           }
+          if (var2 == 1) {
+            return 3;
+          }
+          if (var2 == 3) {
+            return 4;
+          }
+          if (4 == var2) {
+            return 1;
+          }
+          if (5 == var2) {
+            return 5;
+          }
+          if (6 != var2) {
+            throw new IllegalStateException("Unknown effect preset: " + this.field_f);
+          }
+          return 2;
         }
+        field_i = (String[]) null;
+        var2Lifetime1 = this.field_f;
+        if (var2Lifetime1 == 0) {
+          return 0;
+        }
+        if (var2Lifetime1 == 2) {
+          return 3;
+        }
+        if (var2Lifetime1 == 1) {
+          return 3;
+        }
+        if (var2Lifetime1 == 3) {
+          return 4;
+        }
+        if (4 == var2Lifetime1) {
+          return 1;
+        }
+        if (5 == var2Lifetime1) {
+          return 5;
+        }
+        if (6 != var2Lifetime1) {
+          throw new IllegalStateException("Unknown effect preset: " + this.field_f);
+        }
+        return 2;
     }
 
     final boolean d(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 6734) {
-          if (this.field_j != 1) {
-            if (this.field_j == 2) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 != 6734) {
           this.b(94, -61);
-          if (this.field_j == 1) {
-            return true;
-          } else {
-            L0: {
-              if (this.field_j != 2) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (this.field_j != 1) {
+            return this.field_j == 2 ? true : false;
           }
+          return true;
         }
+        if (this.field_j == 1) {
+          return true;
+        }
+        if (this.field_j != 2) {
+          return false;
+        }
+        return true;
     }
 
     up(int param0, int param1) {
@@ -251,27 +199,27 @@ final class up implements noa {
     final void b(int param0, int param1) {
         this.field_k = param1;
         if (param0 != 1) {
-            field_e = (jpa[]) null;
+          field_e = (jpa[]) null;
         }
     }
 
     up(gma param0, up param1) {
         this(param0, param1.field_f, param1.field_b);
         try {
-            this.field_k = param1.field_k;
+          this.field_k = param1.field_k;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     up(gma param0, int param1, int param2) {
         try {
-            this.field_f = param1;
-            this.field_b = param2;
-            this.a(param0, 2348);
-            this.a(-70);
+          this.field_f = param1;
+          this.field_b = param2;
+          this.a(param0, 2348);
+          this.a(-70);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

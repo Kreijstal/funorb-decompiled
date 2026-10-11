@@ -13,7 +13,7 @@ final class pk {
         field_a = null;
         field_e = null;
         if (param0 != 4) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -21,16 +21,16 @@ final class pk {
     final static void a(byte param0) {
         ea.a(-123);
         if (param0 != -64) {
-            pk.a((byte) 86);
-            fd.a(4, 0);
-            return;
+          pk.a((byte) 86);
+          fd.a(4, 0);
+          return;
         }
         fd.a(4, 0);
     }
 
     final static void b(int param0) {
         if (!ai.field_c) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         sh.field_t = true;
         ma.a(true, 0);

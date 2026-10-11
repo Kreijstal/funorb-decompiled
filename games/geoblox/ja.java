@@ -202,11 +202,9 @@ final class ja extends rc {
             return;
           }
           for (var9 = -var4; var9 < 0; var9++) {
-            if (~var14[var6] != ~(this.field_H + 1)) {
-              var6++;
-              continue;
+            if (~var14[var6] == ~(this.field_H + 1)) {
+              var14[var6] = 0;
             }
-            var14[var6] = 0;
             var6++;
           }
           var6 = var6 + var7;
@@ -518,11 +516,9 @@ final class ja extends rc {
             return;
           }
           for (var13 = -var8; 0 > var13; var13++) {
-            if (~(this.field_H + 1) != ~var18[var10]) {
-              var10++;
-              continue;
+            if (~(this.field_H + 1) == ~var18[var10]) {
+              var18[var10] = 0;
             }
-            var18[var10] = 0;
             var10++;
           }
           var10 = var10 + var11;

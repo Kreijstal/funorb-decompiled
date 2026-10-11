@@ -12,15 +12,7 @@ final class mh {
     static dd field_f;
 
     final static void b(int param0) {
-        if (param0 != 13) {
-          mh.b(22);
-          tj.field_p = null;
-          em.field_m = null;
-          ik.field_a = null;
-          hj.field_l = null;
-          kb.field_S = false;
-          return;
-        } else {
+        if (param0 == 13) {
           tj.field_p = null;
           em.field_m = null;
           ik.field_a = null;
@@ -28,41 +20,30 @@ final class mh {
           kb.field_S = false;
           return;
         }
+        mh.b(22);
+        tj.field_p = null;
+        em.field_m = null;
+        ik.field_a = null;
+        hj.field_l = null;
+        kb.field_S = false;
     }
 
     final static void a(int param0, int param1) {
-        L0: {
-          sg.field_d = 3 & param1 >> -1442461980;
-          ii.field_Q = (param1 & 13) >> -1730123902;
-          if (-3 > (sg.field_d ^ -1)) {
-            sg.field_d = 2;
-            break L0;
-          } else {
-            break L0;
-          }
+        sg.field_d = 3 & param1 >> 4;
+        ii.field_Q = (param1 & 13) >> 2;
+        if (!(sg.field_d <= 2)) {
+          sg.field_d = 2;
         }
         v.field_d = 3 & param1;
-        if (2 < ii.field_Q) {
-          L1: {
-            ii.field_Q = 2;
-            if (v.field_d > param0) {
-              v.field_d = 2;
-              break L1;
-            } else {
-              break L1;
-            }
+        if (2 >= ii.field_Q) {
+          if (!(v.field_d <= param0)) {
+            v.field_d = 2;
           }
           return;
-        } else {
-          L2: {
-            if (v.field_d > param0) {
-              v.field_d = 2;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return;
+        }
+        ii.field_Q = 2;
+        if (!(v.field_d <= param0)) {
+          v.field_d = 2;
         }
     }
 
@@ -70,81 +51,45 @@ final class mh {
         field_d = null;
         field_a = null;
         field_e = null;
-        if (param0 != 3) {
-          mh.a(-32);
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 3) {
           field_g = null;
           field_f = null;
           return;
         }
+        mh.a(-32);
+        field_g = null;
+        field_f = null;
     }
 
     final void a(boolean param0, int param1) {
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        if (param1 != -1730123902) {
-          L0: {
-            mh.b(-93);
-            stackIn_7_0 = this;
-
-            if (!param0) {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = this;
-              stackIn_8_1 = 1;
-              break L0;
-            }
-          }
-          ((mh) (this)).field_h = stackIn_8_1 != 0;
-          this.field_c = true;
-          return;
-        } else {
-          L1: {
-            stackIn_3_0 = this;
-
-            if (!param0) {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = this;
-              stackIn_4_1 = 1;
-              break L1;
-            }
-          }
-          ((mh) (this)).field_h = stackIn_4_1 != 0;
+        if (param1 == -1730123902) {
+          this.field_h = param0 ? true : false;
           this.field_c = true;
           return;
         }
+        mh.b(-93);
+        this.field_h = param0 ? true : false;
+        this.field_c = true;
     }
 
     final boolean b(byte param0) {
         if (param0 < 94) {
-            mh.a(35);
-            return this.field_c;
+          mh.a(35);
+          return this.field_c;
         }
         return this.field_c;
     }
 
     final boolean c(int param0) {
         if (param0 > -14) {
-            this.field_b = (String) null;
-            return this.field_h;
+          this.field_b = (String) null;
+          return this.field_h;
         }
         return this.field_h;
     }
 
     final String a(byte param0) {
-        int var2 = 34 % ((param0 - -10) / 60);
+        int var2 = 34 % ((param0 + 10) / 60);
         return this.field_b;
     }
 
@@ -152,9 +97,9 @@ final class mh {
         this.field_h = false;
         this.field_c = false;
         try {
-            this.field_b = param0;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

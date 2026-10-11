@@ -10,7 +10,7 @@ final class ua {
 
     public static void a(int param0) {
         if (param0 != -24750) {
-            return;
+          return;
         }
         field_c = null;
     }

@@ -13,14 +13,14 @@ final class jq extends ob {
     final void a(byte param0, float param1) {
         this.field_j = param1;
         if (param0 <= 77) {
-            field_o = (jea) null;
+          field_o = (jea) null;
         }
     }
 
     final void a(byte param0, int param1) {
         this.field_h = param1;
         if (param0 != 62) {
-            field_o = (jea) null;
+          field_o = (jea) null;
         }
     }
 
@@ -46,109 +46,50 @@ final class jq extends ob {
         qk stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 > 52) {
-                break L1;
-              } else {
-                var9 = (cka) null;
-                jq.a((byte[]) null, 99, (byte) 8, -3, (cka) null, -12, false, 23);
-                break L1;
-              }
-            }
-            L2: {
-              if (param4.field_Gb) {
-                break L2;
-              } else {
-                L3: {
-                  if (!cla.a(9181, param5)) {
-                    break L3;
-                  } else {
-                    if (cla.a(9181, param7)) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                if (param4.field_Cc) {
-                  stackIn_10_0 = new qk(param4, 34037, param3, param5, param7, param6, param0, param1);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_8_0 = new qk(param4, param3, param5, param7, lla.a(false, param5), lla.a(false, param7), param0, param1);
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
-            stackIn_12_0 = new qk(param4, 3553, param3, param5, param7, param6, param0, param1);
-            decompiledRegionSelector0 = 2;
-            break L0;
+          if (param2 <= 52) {
+            var9 = (cka) null;
+            jq.a((byte[]) null, 99, (byte) 8, -3, (cka) null, -12, false, 23);
           }
+          if (!param4.field_Gb && (!cla.a(9181, param5) ||
+            !cla.a(9181, param7))) {
+            if (param4.field_Cc) {
+              stackIn_10_0 = new qk(param4, 34037, param3, param5, param7, param6, param0, param1);
+              return stackIn_10_0;
+            }
+            stackIn_8_0 = new qk(param4, param3, param5, param7, lla.a(false, param5), lla.a(false, param7), param0, param1);
+            return stackIn_8_0;
+          }
+          stackIn_12_0 = new qk(param4, 3553, param3, param5, param7, param6, param0, param1);
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var8 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var8);
-
-            stackIn_15_1 = new StringBuilder().append("jq.F(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
-          }
-          L5: {
-
-
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
-          }
-          throw tba.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
+          var8 = decompiledCaughtException;
+          stackIn_15_0 = var8;
+          stackIn_15_1 = new StringBuilder().append("jq.F(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
           } else {
-            return stackIn_12_0;
+            stackIn_16_2 = "{...}";
           }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw tba.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final void a(int param0, int param1) {
         this.field_g = param1;
         if (param0 != 255) {
-            field_o = (jea) null;
+          field_o = (jea) null;
         }
     }
 
@@ -158,14 +99,14 @@ final class jq extends ob {
 
     public static void d(byte param0) {
         if (param0 != -112) {
-            return;
+          return;
         }
         field_o = null;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
         this.field_k = param1;
-        int var5 = 97 % ((param2 - -55) / 58);
+        int var5 = 97 % ((param2 + 55) / 58);
         this.field_m = param0;
         this.field_l = param3;
     }

@@ -15,9 +15,9 @@ final class bi {
         field_d = null;
         field_a = (int[][]) null;
         if (param0 != 84) {
-            bi.a((byte) 127);
-            field_b = null;
-            return;
+          bi.a((byte) 127);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -13,7 +13,7 @@ final class nb {
     final static void a(boolean param0) {
         vi.field_y.b((byte) -107, new fo());
         if (!param0) {
-            nb.a(false);
+          nb.a(false);
         }
     }
 

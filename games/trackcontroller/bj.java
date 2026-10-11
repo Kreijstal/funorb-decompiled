@@ -10,7 +10,7 @@ final class bj {
 
     final static long b(int param0) {
         if (param0 != -21676) {
-            bj.b(-19);
+          bj.b(-19);
         }
         return -he.field_a + qg.a(false);
     }
@@ -22,28 +22,15 @@ final class bj {
         RuntimeException var2 = null;
         var3 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
-            var2_int = param0;
-            L1: while (true) {
-              if (var2_int >= oe.field_c) {
-                L2: {
-                  ij.a((byte) 119, mj.field_d, param1 + param1, sd.field_b, param1 + oe.field_c, false, param1);
-                  if (oe.field_c > param1) {
-                    oe.field_c = param1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                lf.field_Y[param1 + var2_int] = var2_int;
-                var2_int++;
-                continue L1;
-              }
-            }
+          ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
+          for (var2_int = param0; var2_int < oe.field_c; var2_int++) {
+            lf.field_Y[param1 + var2_int] = var2_int;
           }
+          ij.a((byte) 119, mj.field_d, param1 + param1, sd.field_b, param1 + oe.field_c, false, param1);
+          if (oe.field_c > param1) {
+            oe.field_c = param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -54,7 +41,7 @@ final class bj {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-            bj.a(84, -97);
+          bj.a(84, -97);
         }
     }
 
@@ -62,16 +49,16 @@ final class bj {
         gb var3 = null;
         int var4 = TrackController.field_F ? 1 : 0;
         if (null == this.field_b) {
-            return null;
+          return null;
         }
         gb var2 = this.field_d[(int)(this.field_e & (long)(param0 + this.field_a))];
         while (this.field_b != var2) {
-            if (!(this.field_b.field_m != this.field_e)) {
-                var3 = this.field_b;
-                this.field_b = this.field_b.field_k;
-                return var3;
-            }
+          if (this.field_b.field_m == this.field_e) {
+            var3 = this.field_b;
             this.field_b = this.field_b.field_k;
+            return var3;
+          }
+          this.field_b = this.field_b.field_k;
         }
         this.field_b = null;
         return null;
@@ -80,18 +67,18 @@ final class bj {
     final void a(gb param0, long param1, int param2) {
         gb var5 = null;
         try {
-            if (null != param0.field_j) {
-                param0.e(0);
-            }
-            var5 = this.field_d[(int)(param1 & (long)(this.field_a + -1))];
-            param0.field_j = var5.field_j;
-            param0.field_k = var5;
-            param0.field_j.field_k = param0;
-            param0.field_m = param1;
-            int var6 = -35 / ((param2 - 52) / 58);
-            param0.field_k.field_j = param0;
+          if (null != param0.field_j) {
+            param0.e(0);
+          }
+          var5 = this.field_d[(int)(param1 & (long)(this.field_a - 1))];
+          param0.field_j = var5.field_j;
+          param0.field_k = var5;
+          param0.field_j.field_k = param0;
+          param0.field_m = param1;
+          int var6 = -35 / ((param2 - 52) / 58);
+          param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "bj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "bj.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -102,12 +89,12 @@ final class bj {
         gb var4 = this.field_d[(int)(param1 & (long)(param0 + this.field_a))];
         this.field_b = var4.field_k;
         while (this.field_b != var4) {
-            if (!(param1 != this.field_b.field_m)) {
-                var5 = this.field_b;
-                this.field_b = this.field_b.field_k;
-                return var5;
-            }
+          if (param1 == this.field_b.field_m) {
+            var5 = this.field_b;
             this.field_b = this.field_b.field_k;
+            return var5;
+          }
+          this.field_b = this.field_b.field_k;
         }
         this.field_b = null;
         return null;
@@ -120,11 +107,11 @@ final class bj {
         this.field_d = new gb[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new gb();
-            var3 = dupTemp$0;
-            this.field_d[var2] = dupTemp$0;
-            var3.field_j = var3;
-            var3.field_k = var3;
+          dupTemp$0 = new gb();
+          var3 = dupTemp$0;
+          this.field_d[var2] = dupTemp$0;
+          var3.field_j = var3;
+          var3.field_k = var3;
         }
     }
 

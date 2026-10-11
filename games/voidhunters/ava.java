@@ -7,7 +7,7 @@ final class ava {
 
     final static boolean a(int param0, int param1, boolean param2) {
         if (param2) {
-            return true;
+          return true;
         }
         return (52 & param1) != 0 ? true : false;
     }

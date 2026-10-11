@@ -16,91 +16,44 @@ final class wna implements ntb {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var7 = new dj(param4);
-            if (param3 > 71) {
-              var8 = new dj(param1);
-              stackIn_4_0 = cnb.a(param0, var7, var8, param2, 0, param6, param5);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 100;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var7 = new dj(param4);
+          if (param3 <= 71) {
+            stackIn_2_0 = 100;
+            return stackIn_2_0;
           }
+          var8 = new dj(param1);
+          stackIn_4_0 = cnb.a(param0, var7, var8, param2, 0, param6, param5);
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var7_ref);
-
-            stackIn_7_1 = new StringBuilder().append("wna.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var7_ref = decompiledCaughtException;
+          stackIn_7_0 = var7_ref;
+          stackIn_7_1 = new StringBuilder().append("wna.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param5).append(',');
-
-            if (param6 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -108,74 +61,44 @@ final class wna implements ntb {
         wna var5 = null;
         wna var6 = null;
         try {
-            if (param0 < 54) {
-                wna.a((byte) -62);
-            }
-            var5 = (wna) ((Object) param1);
-            var6 = var5;
-            var6.field_d = this.field_d;
-            var6.field_b = this.field_b;
+          if (param0 < 54) {
+            wna.a((byte) -62);
+          }
+          var5 = (wna) (param1);
+          var6 = var5;
+          var6.field_d = this.field_d;
+          var6.field_b = this.field_b;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wna.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wna.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean a(byte param0, tv param1) {
         int var3_int = 0;
         wna var4 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var3_int = 15 / ((22 - param0) / 59);
-                var4 = (wna) ((Object) param1);
-                if (var4.field_d != this.field_d) {
-                  break L2;
-                } else {
-                  if (this.field_b == var4.field_b) {
-                    stackIn_5_0 = 0;
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_5_0 = 1;
-              break L1;
-            }
-            break L0;
-          }
+          var3_int = 15 / ((22 - param0) / 59);
+          var4 = (wna) (param1);
+          stackIn_5_0 = (var4.field_d != this.field_d) || (this.field_b != var4.field_b);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("wna.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("wna.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     public final void a(tv param0, int param1) {
@@ -184,99 +107,69 @@ final class wna implements ntb {
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = (wna) ((Object) param0);
-              var4 = 0;
-              if (var3.field_d != this.field_d) {
-                var4 = 1;
-                System.out.println("int winner has changed. before=" + var3.field_d + ", now=" + this.field_d);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_b == var3.field_b) {
-                break L2;
-              } else {
-                System.out.println("int winning_time has changed. before=" + var3.field_b + ", now=" + this.field_b);
-                var4 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              if (param1 <= -19) {
-                break L3;
-              } else {
-                this.field_d = 97;
-                break L3;
-              }
-            }
-            if (var4 == 0) {
-              break L0;
-            } else {
-              System.out.println("This instance of RoundResult has changed");
-              return;
-            }
+          var3 = (wna) (param0);
+          var4 = 0;
+          if (var3.field_d != this.field_d) {
+            var4 = 1;
+            System.out.println("int winner has changed. before=" + var3.field_d + ", now=" + this.field_d);
           }
+          if (this.field_b != var3.field_b) {
+            System.out.println("int winning_time has changed. before=" + var3.field_b + ", now=" + this.field_b);
+            var4 = 1;
+          }
+          if (param1 > -19) {
+            this.field_d = 97;
+          }
+          if (var4 == 0) {
+            return;
+          }
+          System.out.println("This instance of RoundResult has changed");
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("wna.F(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("wna.F(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void a(faa param0, boolean param1) {
         this.field_d = param0.i(0, 32);
         if (param1) {
-            return;
+          return;
         }
         try {
-            this.field_b = param0.i(0, 32);
+          this.field_b = param0.i(0, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wna.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wna.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
-            if (param1 > -109) {
-                this.field_b = 87;
-            }
-            param0.a(-632, this.field_d, 32);
-            param0.a(-632, this.field_b, 32);
+          if (param1 > -109) {
+            this.field_b = 87;
+          }
+          param0.a(-632, this.field_d, 32);
+          param0.a(-632, this.field_b, 32);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -27) {
-            return;
+          return;
         }
         field_c = null;
     }

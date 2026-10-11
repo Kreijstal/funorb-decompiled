@@ -14,7 +14,7 @@ final class gk {
     public static void b(int param0) {
         field_a = null;
         if (param0 != 11) {
-            return;
+          return;
         }
         field_f = (int[][]) null;
         field_c = null;
@@ -22,117 +22,71 @@ final class gk {
 
     final void a(int param0, byte[] param1, wf param2) {
         try {
-            Exception exception = null;
-            RuntimeException runtimeException = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (param0 == 8) {
-                    break L1;
-                  } else {
-                    gk.a(-58);
-                    break L1;
-                  }
-                }
-                L2: {
-                  if ((param2.field_j[param2.field_h] ^ -1) != -32) {
-                    break L2;
-                  } else {
-                    if (-117 != param2.field_j[param2.field_h - -1]) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (this.field_d != null) {
-                          break L3;
-                        } else {
-                          this.field_d = new java.util.zip.Inflater(true);
-                          break L3;
-                        }
-                      }
-                      try {
-                        L4: {
-                          this.field_d.setInput(param2.field_j, param2.field_h + 10, param2.field_j.length + -param2.field_h + -10 + -8);
-                          this.field_d.inflate(param1);
-                          break L4;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        exception = (Exception) (Object) decompiledCaughtException;
-                        this.field_d.reset();
-                        throw new RuntimeException("");
-                      }
-                      this.field_d.reset();
-                      break L0;
-                    }
-                  }
-                }
+          Exception exception = null;
+          RuntimeException runtimeException = null;
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 != 8) {
+              gk.a(-58);
+            }
+            if (param2.field_j[param2.field_h] == 31 &&
+              -117 == param2.field_j[param2.field_h + 1]) {
+              if (this.field_d == null) {
+                this.field_d = new java.util.zip.Inflater(true);
+              }
+              try {
+                this.field_d.setInput(param2.field_j, param2.field_h + 10, param2.field_j.length - param2.field_h - 10 - 8);
+                this.field_d.inflate(param1);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                exception = (Exception) (Object) decompiledCaughtException;
+                this.field_d.reset();
                 throw new RuntimeException("");
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_15_0 = (RuntimeException) (runtimeException);
-
-                stackIn_15_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "{...}";
-                  break L5;
-                }
-              }
-              L6: {
-
-
-                stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
-                if (param2 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw ld.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
+              this.field_d.reset();
+              return;
             }
+            throw new RuntimeException("");
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = runtimeException;
+            stackIn_15_1 = new StringBuilder().append("gk.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+            if (param2 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int a(int param0, int param1, byte param2) {
-        int var3;
-        if (param2 != 71) {
-          field_c = (String) null;
-          var3 = -1 + param1 & param0 >> 887128191;
-          return ((param0 >>> 1852482975) + param0) % param1 + var3;
-        } else {
-          var3 = -1 + param1 & param0 >> 887128191;
-          return ((param0 >>> 1852482975) + param0) % param1 + var3;
+        int var3 = 0;
+        int var3Lifetime1;
+        if (param2 == 71) {
+          var3 = -1 + param1 & param0 >> 31;
+          return ((param0 >>> 31) + param0) % param1 + var3;
         }
+        field_c = (String) null;
+        var3Lifetime1 = -1 + param1 & param0 >> 31;
+        return ((param0 >>> 31) + param0) % param1 + var3Lifetime1;
     }
 
     public gk() {
@@ -145,14 +99,12 @@ final class gk {
         ci.field_b = null;
         be.field_f = (byte[][]) null;
         bd.field_m = null;
-        if (param0 != 12428) {
-          gk.b(-80);
-          pb.field_h = null;
-          return;
-        } else {
+        if (param0 == 12428) {
           pb.field_h = null;
           return;
         }
+        gk.b(-80);
+        pb.field_h = null;
     }
 
     private gk(int param0, int param1, int param2) {

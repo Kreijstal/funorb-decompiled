@@ -29,38 +29,26 @@ final class fa extends li {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        mi var4;
-        uh var6;
-        uh var7;
-        L0: {
-          if (param1 == br.field_Q) {
-            break L0;
-          } else {
-            L1: {
-              var6 = (uh) ((Object) lh.field_b.a(3661, (long)br.field_Q));
-              var7 = var6;
-              if (var7 != null) {
-                var7.field_Hb = null;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            br.field_Q = param1;
-            var4 = uh.field_Wb;
-            var4.j(param0, 125);
-            var4.f(3, -86);
-            var4.f(11, -112);
-            var4.d(param1, -1783);
-            break L0;
+        uh var6 = null;
+        uh var7 = null;
+        mi var4 = null;
+        if (param1 != br.field_Q) {
+          var6 = (uh) (lh.field_b.a(3661, (long)br.field_Q));
+          var7 = var6;
+          if (var7 != null) {
+            var7.field_Hb = null;
           }
+          br.field_Q = param1;
+          var4 = uh.field_Wb;
+          var4.j(param0, 125);
+          var4.f(3, -86);
+          var4.f(11, -112);
+          var4.d(param1, -1783);
         }
-        if (!param2) {
-          fa.a(-112, 53, true);
-          return;
-        } else {
+        if (param2) {
           return;
         }
+        fa.a(-112, 53, true);
     }
 
     static {

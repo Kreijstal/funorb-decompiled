@@ -7,20 +7,18 @@ final class rv {
 
     final static void a(byte param0) {
         ce.field_o = new js();
-        if (param0 < 35) {
-          field_a = (String) null;
-          vi.field_y.b((byte) -119, ce.field_o);
-          return;
-        } else {
+        if (param0 >= 35) {
           vi.field_y.b((byte) -119, ce.field_o);
           return;
         }
+        field_a = (String) null;
+        vi.field_y.b((byte) -119, ce.field_o);
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
     }

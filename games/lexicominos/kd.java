@@ -12,10 +12,10 @@ class kd {
 
     final boolean a(boolean param0) {
         if (null == this.field_c) {
-            return false;
+          return false;
         }
         if (param0) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -23,32 +23,27 @@ class kd {
     final void b(byte param0) {
         if (this.field_c == null) {
           return;
-        } else {
-          this.field_c.field_f = this.field_f;
-          this.field_f.field_c = this.field_c;
-          this.field_c = null;
-          if (param0 >= -115) {
-            return;
-          } else {
-            this.field_f = null;
-            return;
-          }
+        }
+        this.field_c.field_f = this.field_f;
+        this.field_f.field_c = this.field_c;
+        this.field_c = null;
+        if (param0 < -115) {
+          this.field_f = null;
+          return;
         }
     }
 
     public static void b(boolean param0) {
-        if (!param0) {
-          kd.b(false);
-          field_g = null;
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0) {
           field_g = null;
           field_b = null;
           field_e = null;
           return;
         }
+        kd.b(false);
+        field_g = null;
+        field_b = null;
+        field_e = null;
     }
 
     static {

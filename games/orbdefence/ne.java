@@ -9,9 +9,9 @@ final class ne {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -1459) {
-            field_a = (int[][]) null;
-            field_a = (int[][]) null;
-            return;
+          field_a = (int[][]) null;
+          field_a = (int[][]) null;
+          return;
         }
         field_a = (int[][]) null;
     }

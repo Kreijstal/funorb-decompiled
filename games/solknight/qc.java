@@ -24,77 +24,52 @@ final class qc extends gg {
         field_i = null;
         field_o = null;
         if (param0) {
-            field_h = (String[]) null;
+          field_h = (String[]) null;
         }
     }
 
     final static void a(boolean param0, int param1) {
         td.field_h.a(param0, (byte) -75);
         if (param1 > -104) {
-            qc.b(false);
+          qc.b(false);
         }
     }
 
     final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == 34) {
-          if (10 <= fj.field_i) {
-            if (lh.field_l) {
-              return false;
-            } else {
-              L0: {
-                if (wf.c((byte) -79)) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 34) {
           qc.a(true, 85);
-          if (10 <= fj.field_i) {
-            if (lh.field_l) {
-              return false;
-            } else {
-              L1: {
-                if (wf.c((byte) -79)) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (10 > fj.field_i) {
             return false;
           }
+          if (!lh.field_l) {
+            return !wf.c((byte) -79) ? true : false;
+          }
+          return false;
         }
+        if (10 > fj.field_i) {
+          return false;
+        }
+        if (!lh.field_l) {
+          return !wf.c((byte) -79) ? true : false;
+        }
+        return false;
     }
 
     qc(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-            this.field_r = param6;
-            this.field_q = param5;
-            this.field_p = param1;
-            this.field_j = param3;
-            this.field_k = param2;
-            fieldTemp$0 = l.field_c;
-            l.field_c = l.field_c + 1;
-            this.field_u = fieldTemp$0 & 65535;
-            this.field_m = param0;
-            this.field_t = param4;
+          this.field_r = param6;
+          this.field_q = param5;
+          this.field_p = param1;
+          this.field_j = param3;
+          this.field_k = param2;
+          fieldTemp$0 = l.field_c;
+          l.field_c = l.field_c + 1;
+          this.field_u = fieldTemp$0 & 65535;
+          this.field_m = param0;
+          this.field_t = param4;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "qc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

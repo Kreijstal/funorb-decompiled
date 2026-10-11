@@ -15,14 +15,14 @@ final class rs extends qr {
     private rs(long param0, qr param1, qr param2, String param3) {
         super(param0, (qr) null);
         try {
-            this.field_xb = new qr(0L, param1);
-            this.field_Ab = new qr(0L, param2);
-            this.field_Ab.field_z = param3;
-            this.a(4, this.field_xb);
-            this.a(4, this.field_Ab);
-            this.e((byte) -123);
+          this.field_xb = new qr(0L, param1);
+          this.field_Ab = new qr(0L, param2);
+          this.field_Ab.field_z = param3;
+          this.a(4, this.field_xb);
+          this.a(4, this.field_Ab);
+          this.e((byte) -123);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,28 +41,26 @@ final class rs extends qr {
         field_yb = null;
         field_zb = null;
         field_Eb = null;
-        if (param0 != 2616) {
-          field_yb = (String) null;
-          field_Bb = null;
-          field_Cb = null;
-          field_Db = null;
-          return;
-        } else {
+        if (param0 == 2616) {
           field_Bb = null;
           field_Cb = null;
           field_Db = null;
           return;
         }
+        field_yb = (String) null;
+        field_Bb = null;
+        field_Cb = null;
+        field_Db = null;
     }
 
     rs(long param0, bi param1, bi param2, int param3, qr param4, String param5) {
         this(param0, (qr) null, param4, param5);
         try {
-            this.field_xb.field_pb = param2;
-            this.field_xb.field_G = param3;
-            this.field_xb.field_Z = param1;
+          this.field_xb.field_pb = param2;
+          this.field_xb.field_G = param3;
+          this.field_xb.field_Z = param1;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "rs.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,39 +69,27 @@ final class rs extends qr {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (im.field_c == null) {
-          if (param0 >= -70) {
-            field_Db = (vd) null;
-            return;
-          } else {
+          if (param0 < -70) {
             return;
           }
-        } else {
-          var1 = im.field_c;
-          synchronized (var1) {
-            L0: {
-              im.field_c = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 < -70) {
-              break L1;
-            } else {
-              field_Db = (vd) null;
-              break L1;
-            }
-          }
+          field_Db = (vd) null;
           return;
+        }
+        var1 = im.field_c;
+        synchronized (var1) {
+          im.field_c = null;
+        }
+        if (param0 >= -70) {
+          field_Db = (vd) null;
         }
     }
 
     final int c(int param0, int param1) {
-        if (param1 != 0) {
-          field_Fb = 86;
-          return this.field_xb.e(false) + (param0 + this.field_Ab.e(false));
-        } else {
+        if (param1 == 0) {
           return this.field_xb.e(false) + (param0 + this.field_Ab.e(false));
         }
+        field_Fb = 86;
+        return this.field_xb.e(false) + (param0 + this.field_Ab.e(false));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

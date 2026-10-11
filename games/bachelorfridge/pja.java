@@ -12,7 +12,7 @@ final class pja {
 
     public static void a(byte param0) {
         field_f = null;
-        int var1 = -126 / ((param0 - -54) / 35);
+        int var1 = -126 / ((param0 + 54) / 35);
         field_e = null;
         field_a = (be[][]) null;
         field_b = null;
@@ -23,7 +23,7 @@ final class pja {
 
     final static void a(int param0, boolean param1) {
         if (param0 != -11204) {
-            return;
+          return;
         }
         bi.field_h.a(param1, 7802);
     }
@@ -31,17 +31,15 @@ final class pja {
     final static void a(byte param0, boolean param1) {
         gja.field_m.a(0, 0, 20077);
         if (param0 < 49) {
-            pja.a((byte) 94, true);
+          pja.a((byte) 94, true);
         }
     }
 
     final static void a(boolean param0, int param1) {
         ph.field_E = param1 * 100 / 150;
         ph.field_G = 400 * param1 / 150;
-        if (param0) {
-          return;
-        } else {
-          ph.field_D = (param1 << -306306736) / 150;
+        if (!param0) {
+          ph.field_D = (param1 << 16) / 150;
           return;
         }
     }
@@ -52,7 +50,7 @@ final class pja {
         field_a = new be[10][9];
         field_g = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-            field_g[var0] = rn.c(40960, var0);
+          field_g[var0] = rn.c(40960, var0);
         }
         field_f = "Return to Main Menu";
     }

@@ -14,29 +14,29 @@ class dg {
     void a(int param0, int param1, int param2, int param3, int param4) {
         ea.a(param2, param1, param0, (byte) 22, this.field_d, param3);
         if (param4 != 3) {
-            up var7 = (up) null;
-            dg.a((byte) -66, -25, -85, (up) null);
+          up var7 = (up) null;
+          dg.a((byte) -66, -25, -85, (up) null);
         }
     }
 
     final static void a(byte param0, int param1, int param2, up param3) {
         try {
-            np.field_Jb.a(new rt(param2, param1, param3), 3);
-            if (param0 != -120) {
-                up var5 = (up) null;
-                dg.a((byte) 119, -53, 107, (up) null);
-            }
+          np.field_Jb.a(new rt(param2, param1, param3), 3);
+          if (param0 != -120) {
+            up var5 = (up) null;
+            dg.a((byte) 119, -53, 107, (up) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "dg.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String a(byte param0, int param1, long param2, boolean param3, int param4) {
         StringBuilder discarded$0 = null;
+        StringBuilder discarded$4 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
-        StringBuilder discarded$4 = null;
         String var7;
         String var8;
         String var9;
@@ -46,116 +46,71 @@ class dg {
         StringBuilder var12;
         int var13;
         StringBuilder var14;
-        L0: {
-          var13 = Kickabout.field_G;
-          var14 = new StringBuilder(0);
-          if (0L <= param2) {
-            break L0;
-          } else {
-            discarded$0 = var14.append("-");
-            param2 = -param2;
-            break L0;
-          }
+        int var11Lifetime1;
+        String var9Lifetime1;
+        String var9Lifetime2;
+        String var9Lifetime1Lifetime1;
+        String var9Lifetime1Lifetime2;
+        String var9Lifetime1Lifetime3;
+        var13 = Kickabout.field_G;
+        var14 = new StringBuilder(0);
+        if (0L > param2) {
+          discarded$0 = var14.append("-");
+          param2 = -param2;
         }
-        L1: {
-          var7 = ".";
-          var8 = ",";
-          if (-2 == (param4 ^ -1)) {
-            var8 = ".";
-            var7 = ",";
-            break L1;
-          } else {
-            break L1;
-          }
+        var7 = ".";
+        var8 = ",";
+        if (param4 == 1) {
+          var8 = ".";
+          var7 = ",";
         }
-        L2: {
-          if (2 != param4) {
-            break L2;
-          } else {
-            var8 = hp.field_a;
-            var7 = ",";
-            break L2;
-          }
+        if (2 == param4) {
+          var8 = hp.field_a;
+          var7 = ",";
         }
-        L3: {
-          if (3 != param4) {
-            break L3;
-          } else {
-            var8 = ".";
-            var7 = var8;
-            var9 = var7;
-            var7 = var8;
-            var7 = ",";
-            break L3;
-          }
+        if (3 == param4) {
+          var8 = ".";
+          var7 = var8;
+          var9 = var7;
+          var7 = var8;
+          var7 = ",";
         }
-        L4: {
-          if (param4 != 4) {
-            break L4;
-          } else {
-            var7 = ",";
-            var9 = var7;
-            var9 = var7;
-            var8 = ".";
-            var9 = var8;
-            var9 = var8;
-            break L4;
-          }
+        if (param4 == 4) {
+          var7 = ",";
+          var9Lifetime1 = var7;
+          var9Lifetime1Lifetime1 = var7;
+          var8 = ".";
+          var9Lifetime1Lifetime2 = var8;
+          var9Lifetime1Lifetime3 = var8;
         }
         var10 = new StringBuilder(0);
-        var11 = 0;
-        L5: while (true) {
-          if (param1 <= var11) {
-            L6: {
-              var12_int = 40 / ((param0 - -70) / 34);
-              var11 = 0;
-              if ((param2 ^ -1L) == -1L) {
-                var9 = "0";
-                break L6;
-              } else {
-                var12 = new StringBuilder(0);
-                L7: while (true) {
-                  if (-1L <= (param2 ^ -1L)) {
-                    var9 = var12.toString();
-                    break L6;
-                  } else {
-                    L8: {
-                      if (!param3) {
-                        break L8;
-                      } else {
-                        if (0 == var11) {
-                          break L8;
-                        } else {
-                          if (var11 % 3 != 0) {
-                            break L8;
-                          } else {
-                            discarded$1 = var12.append(var8);
-                            break L8;
-                          }
-                        }
-                      }
-                    }
-                    discarded$2 = var12.append(Integer.toString((int)(param2 % 10L)));
-                    param2 = param2 / 10L;
-                    var11++;
-                    continue L7;
-                  }
-                }
-              }
-            }
-            if (0 < var10.length()) {
-              discarded$3 = var10.append(var7);
-              return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
-            } else {
-              return var14.toString() + bo.a(-1, var9) + bo.a(-1, var10.toString());
-            }
-          } else {
-            discarded$4 = var10.append(Integer.toString((int)(param2 % 10L)));
-            param2 = param2 / 10L;
-            var11++;
-            continue L5;
-          }
+        for (var11 = 0; param1 > var11; var11++) {
+          discarded$4 = var10.append(Integer.toString((int)(param2 % 10L)));
+          param2 = param2 / 10L;
         }
+        var12_int = 40 / ((param0 + 70) / 34);
+        var11Lifetime1 = 0;
+        if (param2 != 0L) {
+          var12 = new StringBuilder(0);
+          while (param2 > 0L) {
+            if (param3 &&
+              0 != var11Lifetime1 &&
+              var11Lifetime1 % 3 == 0) {
+              discarded$1 = var12.append(var8);
+            }
+            discarded$2 = var12.append(Integer.toString((int)(param2 % 10L)));
+            param2 = param2 / 10L;
+            var11Lifetime1++;
+          }
+          var9Lifetime2 = var12.toString();
+        } else {
+          var9Lifetime2 = "0";
+        }
+        if (0 >= var10.length()) {
+          return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
+        }
+        discarded$3 = var10.append(var7);
+        return var14.toString() + bo.a(-1, var9Lifetime2) + bo.a(-1, var10.toString());
     }
 
     public static void a(byte param0) {

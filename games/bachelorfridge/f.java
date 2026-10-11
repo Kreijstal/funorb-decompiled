@@ -7,38 +7,28 @@ final class f {
     static v field_a;
 
     final synchronized static long b(byte param0) {
-        long var1;
-        if (param0 != 73) {
-          L0: {
-            f.b((byte) 126);
-            var1 = System.currentTimeMillis();
-            if ((var1 ^ -1L) > (fw.field_l ^ -1L)) {
-              oia.field_f = oia.field_f + (fw.field_l - var1);
-              break L0;
-            } else {
-              break L0;
-            }
+        long var1 = 0L;
+        long var1Lifetime1;
+        if (param0 == 73) {
+          var1 = System.currentTimeMillis();
+          if (!(var1 >= fw.field_l)) {
+            oia.field_f = oia.field_f + (fw.field_l - var1);
           }
           fw.field_l = var1;
-          return var1 - -oia.field_f;
-        } else {
-          L1: {
-            var1 = System.currentTimeMillis();
-            if ((var1 ^ -1L) > (fw.field_l ^ -1L)) {
-              oia.field_f = oia.field_f + (fw.field_l - var1);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          fw.field_l = var1;
-          return var1 - -oia.field_f;
+          return var1 + oia.field_f;
         }
+        f.b((byte) 126);
+        var1Lifetime1 = System.currentTimeMillis();
+        if (!(var1Lifetime1 >= fw.field_l)) {
+          oia.field_f = oia.field_f + (fw.field_l - var1Lifetime1);
+        }
+        fw.field_l = var1Lifetime1;
+        return var1Lifetime1 + oia.field_f;
     }
 
     final static void a(byte param0) {
         if (param0 < 88) {
-            return;
+          return;
         }
         ep.a(4, 8192);
     }
@@ -46,9 +36,9 @@ final class f {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            f.b((byte) -90);
-            field_c = null;
-            return;
+          f.b((byte) -90);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

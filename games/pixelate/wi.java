@@ -19,9 +19,7 @@ final class wi {
     static int[] field_f;
 
     public static void c(byte param0) {
-        if (param0 <= 52) {
-          return;
-        } else {
+        if (param0 > 52) {
           field_e = null;
           field_f = null;
           field_n = null;
@@ -36,12 +34,12 @@ final class wi {
     private final String a(byte param0) {
         String var2 = null;
         if (this.field_i != null) {
-            var2 = this.field_i;
+          var2 = this.field_i;
         } else {
-            var2 = this.field_h;
+          var2 = this.field_h;
         }
         if (param0 <= 7) {
-            return (String) null;
+          return (String) null;
         }
         return var2;
     }
@@ -49,10 +47,7 @@ final class wi {
     final void a(int param0, int[] param1, int param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
@@ -60,143 +55,73 @@ final class wi {
         int var6 = 0;
         String var7 = null;
         try {
-          L0: {
-            if (param2 == -3) {
-              L1: {
-                if (this.field_h == null) {
-                  break L1;
-                } else {
-                  L2: {
-                    if (hn.field_f != this.field_l) {
-                      break L2;
-                    } else {
-                      if (2 != param0) {
-                        break L1;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  if (2 == gk.field_db) {
-                    L3: {
-                      var7 = this.a((byte) 114);
-                      var4 = var7;
-                      var5 = re.a(this.field_h, -1);
-                      var6 = i.a(-640, this.field_h) ? 1 : 0;
-                      if (var5 != null) {
-                        break L3;
-                      } else {
-                        if (var6 != 0) {
-                          break L3;
-                        } else {
-                          this.field_b.a(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
-                          this.field_b.a(sd.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
-                          if (param1 == null) {
-                            break L3;
-                          } else {
-                            if ((param0 ^ -1) == -3) {
-                              break L3;
-                            } else {
-                              if (!ln.field_q) {
-                                this.field_j = param1;
-                                this.field_b.a(sd.a(nl.field_d, 61, new String[]{var7}), (byte) -80, 19);
-                                break L3;
-                              } else {
-                                break L3;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    L4: {
-                      if (var5 == null) {
-                        break L4;
-                      } else {
-                        L5: {
-                          if (ul.a(57, this.field_h)) {
-                            break L5;
-                          } else {
-                            if (ln.field_q) {
-                              break L5;
-                            } else {
-                              L6: {
-                                if (lh.field_g) {
-                                  break L6;
-                                } else {
-                                  this.field_b.a(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
-                                  break L6;
-                                }
-                              }
-                              this.field_b.a(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
-                              if (param1 == null) {
-                                break L5;
-                              } else {
-                                this.field_j = param1;
-                                this.field_b.a(sd.a(nl.field_d, 22, new String[]{var7}), (byte) -95, 19);
-                                break L5;
-                              }
-                            }
-                          }
-                        }
-                        this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
-                        break L4;
-                      }
-                    }
-                    if (var6 == 0) {
-                      break L1;
-                    } else {
-                      this.field_b.a(sd.a(hk.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
+          if (param2 != -3) {
+            return;
+          }
+          if (this.field_h != null) {
+            if (hn.field_f == this.field_l &&
+              2 != param0) {
+              return;
+            }
+            if (2 != gk.field_db) {
+              return;
+            }
+            var7 = this.a((byte) 114);
+            var4 = var7;
+            var5 = re.a(this.field_h, -1);
+            var6 = i.a(-640, this.field_h) ? 1 : 0;
+            if (var5 == null &&
+              var6 == 0) {
+              this.field_b.a(sd.a(ji.field_d, 52, new String[]{var7}), (byte) -106, 4);
+              this.field_b.a(sd.a(ff.field_e, 18, new String[]{var7}), (byte) -53, 6);
+              if (param1 != null &&
+                param0 != 2 &&
+                !ln.field_q) {
+                this.field_j = param1;
+                this.field_b.a(sd.a(nl.field_d, 61, new String[]{var7}), (byte) -80, 19);
+              }
+            }
+            if (var5 != null) {
+              if (!ul.a(57, this.field_h) &&
+                !ln.field_q) {
+                if (!lh.field_g) {
+                  this.field_b.a(sd.a(nf.field_e, 105, new String[]{var7}), (byte) -119, 8);
+                }
+                this.field_b.a(sd.a(ho.field_f, 83, new String[]{var7}), (byte) -33, 18);
+                if (param1 != null) {
+                  this.field_j = param1;
+                  this.field_b.a(sd.a(nl.field_d, 22, new String[]{var7}), (byte) -95, 19);
                 }
               }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              this.field_b.a(sd.a(ni.field_p, 18, new String[]{var7}), (byte) -33, 5);
+            }
+            if (var6 != 0) {
+              this.field_b.a(sd.a(hk.field_a, param2 + 72, new String[]{var7}), (byte) -77, 7);
+              return;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4_ref = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var4_ref);
-
-            stackIn_28_1 = new StringBuilder().append("wi.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L7;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L7;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_28_0 = var4_ref;
+          stackIn_28_1 = new StringBuilder().append("wi.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw aa.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void b(byte param0) {
         if (!hf.b((byte) 100)) {
-            return;
+          return;
         }
         bq.a(false, (byte) -110, 4);
         if (param0 != -53) {
-            field_d = (vj) null;
+          field_d = (vj) null;
         }
     }
 
@@ -212,252 +137,204 @@ final class wi {
         var5 = Pixelate.field_H ? 1 : 0;
         if (param0 == 0) {
           bg.a(this.field_l, param1, param2 ^ -31541);
-          if (param2 != 7490) {
-            discarded$0 = this.a(67, true, 49);
-            return true;
-          } else {
+          if (param2 == 7490) {
             return true;
           }
-        } else {
-          if (-2 == (param0 ^ -1)) {
-            pe.a(7, param1, this.field_l);
-            if (param2 != 7490) {
-              discarded$1 = this.a(67, true, 49);
-              return true;
-            } else {
-              return true;
-            }
-          } else {
-            if (-3 == (param0 ^ -1)) {
-              wi.b(param1, param2 ^ -7903, this.field_m);
-              if (param2 != 7490) {
-                discarded$2 = this.a(67, true, 49);
-                return true;
-              } else {
-                return true;
-              }
-            } else {
-              if ((param0 ^ -1) == -4) {
-                qg.a(this.field_m, param1, false);
-                if (param2 == 7490) {
-                  return true;
-                } else {
-                  discarded$3 = this.a(67, true, 49);
-                  return true;
-                }
-              } else {
-                if ((param0 ^ -1) == -11) {
-                  qj.a(false, this.field_m, param1);
-                  if (param2 == 7490) {
-                    return true;
-                  } else {
-                    discarded$4 = this.a(67, true, 49);
-                    return true;
-                  }
-                } else {
-                  if ((param0 ^ -1) == -16) {
-                    df.a(param2 ^ 7489, this.field_m, param1);
-                    if (param2 != 7490) {
-                      discarded$5 = this.a(67, true, 49);
-                      return true;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    if ((param0 ^ -1) == -17) {
-                      df.a(3, 0, param1);
-                      if (param2 != 7490) {
-                        discarded$6 = this.a(67, true, 49);
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return false;
-                    }
-                  }
-                }
-              }
-            }
-          }
+          discarded$0 = this.a(67, true, 49);
+          return true;
         }
+        if (param0 == 1) {
+          pe.a(7, param1, this.field_l);
+          if (param2 == 7490) {
+            return true;
+          }
+          discarded$1 = this.a(67, true, 49);
+          return true;
+        }
+        if (param0 == 2) {
+          wi.b(param1, param2 ^ -7903, this.field_m);
+          if (param2 == 7490) {
+            return true;
+          }
+          discarded$2 = this.a(67, true, 49);
+          return true;
+        }
+        if (param0 == 3) {
+          qg.a(this.field_m, param1, false);
+          if (param2 == 7490) {
+            return true;
+          }
+          discarded$3 = this.a(67, true, 49);
+          return true;
+        }
+        if (param0 == 10) {
+          qj.a(false, this.field_m, param1);
+          if (param2 == 7490) {
+            return true;
+          }
+          discarded$4 = this.a(67, true, 49);
+          return true;
+        }
+        if (param0 == 15) {
+          df.a(param2 ^ 7489, this.field_m, param1);
+          if (param2 == 7490) {
+            return true;
+          }
+          discarded$5 = this.a(67, true, 49);
+          return true;
+        }
+        if (param0 != 16) {
+          return false;
+        }
+        df.a(3, 0, param1);
+        if (param2 == 7490) {
+          return true;
+        }
+        discarded$6 = this.a(67, true, 49);
+        return true;
     }
 
     final void a(boolean param0, byte param1) {
         if (param1 != 20) {
-            field_n = (String) null;
-            this.field_b.a(param0, 0);
-            return;
+          field_n = (String) null;
+          this.field_b.a(param0, 0);
+          return;
         }
         this.field_b.a(param0, 0);
     }
 
     final void b(boolean param0, byte param1) {
+        boolean discarded$13 = false;
+        boolean discarded$12 = false;
+        boolean discarded$11 = false;
+        boolean discarded$10 = false;
         boolean discarded$0 = false;
         boolean discarded$1 = false;
         boolean discarded$2 = false;
+        boolean discarded$9 = false;
+        boolean discarded$8 = false;
+        boolean discarded$7 = false;
         boolean discarded$3 = false;
         boolean discarded$4 = false;
-        boolean discarded$5 = false;
         boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        boolean discarded$8 = false;
-        boolean discarded$9 = false;
-        boolean discarded$10 = false;
-        boolean discarded$11 = false;
-        boolean discarded$12 = false;
-        boolean discarded$13 = false;
+        boolean discarded$5 = false;
         uj var4;
         String var5;
         int var6;
         uj var7;
         var6 = Pixelate.field_H ? 1 : 0;
-        if (this.field_h != null) {
-          if (this.field_l != hn.field_f) {
-            if (null != io.field_c) {
-              if (pl.m(param1 + 197)) {
-                var7 = gp.a(param1 + 100, this.field_l);
-                var4 = ll.a(this.field_l, param1 + 14526);
-                var5 = this.a((byte) 27);
-                if (var4 != null) {
-                  if (!io.field_c.field_dc) {
-                    this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
-                    if (param1 == -98) {
-                      return;
-                    } else {
-                      discarded$0 = this.a(48, 58, -125);
-                      return;
-                    }
-                  } else {
-                    if ((io.field_c.field_nc ^ -1) > -1) {
-                      if (param1 == -98) {
-                        return;
-                      } else {
-                        discarded$1 = this.a(48, 58, -125);
-                        return;
-                      }
-                    } else {
-                      this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
-                      if (param1 == -98) {
-                        return;
-                      } else {
-                        discarded$2 = this.a(48, 58, -125);
-                        return;
-                      }
-                    }
-                  }
-                } else {
-                  if (var7 != null) {
-                    if (io.field_c.field_Mb) {
-                      if (io.field_c.field_mc < io.field_c.field_ec) {
-                        if (var7.field_Vb) {
-                          this.field_b.a(sd.a(fm.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
-                          if (param1 == -98) {
-                            return;
-                          } else {
-                            discarded$3 = this.a(48, 58, -125);
-                            return;
-                          }
-                        } else {
-                          if (!param0) {
-                            this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
-                            if (param1 == -98) {
-                              return;
-                            } else {
-                              discarded$4 = this.a(48, 58, -125);
-                              return;
-                            }
-                          } else {
-                            if (var7.field_Jb) {
-                              this.field_b.a(sd.a(md.field_V, 59, new String[]{var5}), (byte) -70, 0);
-                              this.field_b.a(sd.a(po.field_f, 101, new String[]{var5}), (byte) -41, 1);
-                              if (param1 == -98) {
-                                return;
-                              } else {
-                                discarded$5 = this.a(48, 58, -125);
-                                return;
-                              }
-                            } else {
-                              this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
-                              if (param1 != -98) {
-                                discarded$6 = this.a(48, 58, -125);
-                                return;
-                              } else {
-                                return;
-                              }
-                            }
-                          }
-                        }
-                      } else {
-                        if (param1 != -98) {
-                          discarded$7 = this.a(48, 58, -125);
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    } else {
-                      if (param1 != -98) {
-                        discarded$8 = this.a(48, 58, -125);
-                        return;
-                      } else {
-                        return;
-                      }
-                    }
-                  } else {
-                    if (param1 != -98) {
-                      discarded$9 = this.a(48, 58, -125);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              } else {
-                if (param1 != -98) {
-                  discarded$10 = this.a(48, 58, -125);
-                  return;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              if (param1 != -98) {
-                discarded$11 = this.a(48, 58, -125);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (param1 != -98) {
-              discarded$12 = this.a(48, 58, -125);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param1 != -98) {
-            discarded$13 = this.a(48, 58, -125);
-            return;
-          } else {
+        if (this.field_h == null) {
+          if (param1 == -98) {
             return;
           }
+          discarded$13 = this.a(48, 58, -125);
+          return;
         }
+        if (this.field_l == hn.field_f) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$12 = this.a(48, 58, -125);
+          return;
+        }
+        if (null == io.field_c) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$11 = this.a(48, 58, -125);
+          return;
+        }
+        if (!pl.m(param1 + 197)) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$10 = this.a(48, 58, -125);
+          return;
+        }
+        var7 = gp.a(param1 + 100, this.field_l);
+        var4 = ll.a(this.field_l, param1 + 14526);
+        var5 = this.a((byte) 27);
+        if (var4 != null) {
+          if (!io.field_c.field_dc) {
+            this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+            if (param1 == -98) {
+              return;
+            }
+            discarded$0 = this.a(48, 58, -125);
+            return;
+          }
+          if (io.field_c.field_nc < 0) {
+            if (param1 == -98) {
+              return;
+            }
+            discarded$1 = this.a(48, 58, -125);
+            return;
+          }
+          this.field_b.a(sd.a(vf.field_b, 123, new String[]{var5}), (byte) -112, 1);
+          if (param1 == -98) {
+            return;
+          }
+          discarded$2 = this.a(48, 58, -125);
+          return;
+        }
+        if (var7 == null) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$9 = this.a(48, 58, -125);
+          return;
+        }
+        if (!io.field_c.field_Mb) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$8 = this.a(48, 58, -125);
+          return;
+        }
+        if (io.field_c.field_mc >= io.field_c.field_ec) {
+          if (param1 == -98) {
+            return;
+          }
+          discarded$7 = this.a(48, 58, -125);
+          return;
+        }
+        if (var7.field_Vb) {
+          this.field_b.a(sd.a(fm.field_j, param1 + 180, new String[]{var5}), (byte) -111, 1);
+          if (param1 == -98) {
+            return;
+          }
+          discarded$3 = this.a(48, 58, -125);
+          return;
+        }
+        if (!param0) {
+          this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          if (param1 == -98) {
+            return;
+          }
+          discarded$4 = this.a(48, 58, -125);
+          return;
+        }
+        if (!var7.field_Jb) {
+          this.field_b.a(sd.a(i.field_m, 67, new String[]{var5}), (byte) -83, 0);
+          if (param1 == -98) {
+            return;
+          }
+          discarded$6 = this.a(48, 58, -125);
+          return;
+        }
+        this.field_b.a(sd.a(md.field_V, 59, new String[]{var5}), (byte) -70, 0);
+        this.field_b.a(sd.a(po.field_f, 101, new String[]{var5}), (byte) -41, 1);
+        if (param1 == -98) {
+          return;
+        }
+        discarded$5 = this.a(48, 58, -125);
+        return;
     }
 
     final static void b(int param0, int param1, int param2) {
-        pc var3;
-        if (param1 != -925) {
-          field_e = (String) null;
-          var3 = aa.field_f;
-          var3.g(param0, 15514);
-          var3.e(160, 3);
-          var3.e(160, 8);
-          var3.b(1276387944, param2);
-          return;
-        } else {
+        pc var3 = null;
+        pc var3Lifetime1;
+        if (param1 == -925) {
           var3 = aa.field_f;
           var3.g(param0, 15514);
           var3.e(160, 3);
@@ -465,6 +342,12 @@ final class wi {
           var3.b(1276387944, param2);
           return;
         }
+        field_e = (String) null;
+        var3Lifetime1 = aa.field_f;
+        var3Lifetime1.g(param0, 15514);
+        var3Lifetime1.e(160, 3);
+        var3Lifetime1.e(160, 8);
+        var3Lifetime1.b(1276387944, param2);
     }
 
     private final boolean a(int param0, byte param1, int param2) {
@@ -474,136 +357,100 @@ final class wi {
         String var7;
         String var8;
         var4 = null;
-        if (param2 != 4) {
-          if (param2 != 5) {
-            if (param2 != 6) {
-              if (7 == param2) {
-                var8 = aq.a(this.field_h, param0, this.field_i, -20867);
-                if (var8 == null) {
-                  if (param1 < -123) {
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  ti.a(0, (String) null, this.field_h, (byte) -50, 2, var8);
-                  if (param1 >= -123) {
-                    return true;
-                  } else {
-                    return true;
-                  }
-                }
-              } else {
-                return false;
-              }
-            } else {
-              var7 = mj.a(85, this.field_h, param0);
-              if (var7 == null) {
-                if (param1 >= -123) {
-                  return true;
-                } else {
-                  return true;
-                }
-              } else {
-                ti.a(0, (String) null, this.field_h, (byte) -50, 2, var7);
-                if (param1 >= -123) {
-                  return true;
-                } else {
-                  return true;
-                }
-              }
-            }
-          } else {
-            var6 = ff.a(param0, this.field_h, (byte) -106);
-            if (var6 != null) {
-              ti.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
-              if (param1 >= -123) {
-                return true;
-              } else {
-                return true;
-              }
-            } else {
-              if (param1 >= -123) {
-                return true;
-              } else {
-                return true;
-              }
-            }
-          }
-        } else {
+        if (param2 == 4) {
           var5 = jf.a(this.field_h, param0, (byte) 79);
           if (var5 != null) {
             ti.a(0, (String) null, this.field_h, (byte) -50, 2, var5);
-            if (param1 >= -123) {
-              return true;
-            } else {
-              return true;
-            }
-          } else {
-            if (param1 >= -123) {
-              return true;
-            } else {
-              return true;
-            }
+          }
+          if (param1 >= -123) {
+          }
+          return true;
+        }
+        if (param2 == 5) {
+          var6 = ff.a(param0, this.field_h, (byte) -106);
+          if (var6 != null) {
+            ti.a(0, (String) null, this.field_h, (byte) -50, 2, var6);
+          }
+          if (param1 >= -123) {
+          }
+          return true;
+        }
+        if (param2 == 6) {
+          var7 = mj.a(85, this.field_h, param0);
+          if (var7 != null) {
+            ti.a(0, (String) null, this.field_h, (byte) -50, 2, var7);
+          }
+          if (param1 >= -123) {
+          }
+          return true;
+        }
+        if (7 != param2) {
+          return false;
+        }
+        var8 = aq.a(this.field_h, param0, this.field_i, -20867);
+        if (var8 == null) {
+          if (param1 < -123) {
+          }
+        } else {
+          ti.a(0, (String) null, this.field_h, (byte) -50, 2, var8);
+          if (param1 >= -123) {
           }
         }
+        return true;
     }
 
     final boolean a(int param0) {
-        if (param0 < -94) {
-          if (null != this.field_b) {
-            if (!this.field_b.j(-52)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 >= -94) {
           return true;
         }
+        if (null == this.field_b) {
+          return false;
+        }
+        if (this.field_b.j(-52)) {
+          return true;
+        }
+        return false;
     }
 
     final void a(byte param0, aa param1) {
         if (param0 <= 66) {
-            this.field_l = 31L;
+          this.field_l = 31L;
         }
-        if (!(!param1.field_a)) {
-            return;
+        if (param1.field_a) {
+          return;
         }
         try {
-            this.field_k = param1.field_j;
-            if (-1 == (param1.field_j ^ -1)) {
-                if (!(-1 != (io.field_e ^ -1))) {
-                    this.field_b.a(gd.field_j, (byte) -31, 12);
-                }
-                this.field_b.a(uo.field_d, (byte) -127, 13);
+          this.field_k = param1.field_j;
+          if (param1.field_j == 0) {
+            if (io.field_e == 0) {
+              this.field_b.a(gd.field_j, (byte) -31, 12);
             }
-            if (!(1 != param1.field_j)) {
-                if (0 == gh.field_v) {
-                    this.field_b.a(m.field_l, (byte) -97, 12);
-                }
-                this.field_b.a(ec.field_n, (byte) -106, 13);
+            this.field_b.a(uo.field_d, (byte) -127, 13);
+          }
+          if (1 == param1.field_j) {
+            if (0 == gh.field_v) {
+              this.field_b.a(m.field_l, (byte) -97, 12);
             }
-            if (2 == param1.field_j) {
-                if (0 == ib.field_e) {
-                    this.field_b.a(gf.field_d, (byte) -78, 12);
-                }
-                this.field_b.a(sf.field_a, (byte) -62, 13);
+            this.field_b.a(ec.field_n, (byte) -106, 13);
+          }
+          if (2 == param1.field_j) {
+            if (0 == ib.field_e) {
+              this.field_b.a(gf.field_d, (byte) -78, 12);
             }
+            this.field_b.a(sf.field_a, (byte) -62, 13);
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(int param0, int param1, boolean param2, int param3, boolean param4) {
         int var6 = this.field_b.b(-12487, param4);
         if (param2) {
-            return true;
+          return true;
         }
-        if (!(-2 != var6)) {
-            return false;
+        if (-2 == var6) {
+          return false;
         }
         boolean discarded$0 = this.a(var6, param1, 7490);
         boolean discarded$1 = this.a(param0, (byte) -128, var6);
@@ -615,102 +462,55 @@ final class wi {
     private final boolean b(int param0, byte param1, int param2) {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
-        if ((param0 ^ -1) == -9) {
+        if (param0 == 8) {
           pm.a((byte) 85, this.field_h, this.field_l);
-          if (param1 != 10) {
-            wi.b((byte) -113);
-            return true;
-          } else {
-            return true;
-          }
         } else {
           if (param0 == 18) {
             qj.a(this.field_h, this.field_l, (byte) 8);
-            if (param1 != 10) {
-              wi.b((byte) -113);
-              return true;
-            } else {
-              return true;
-            }
           } else {
-            if (param0 != 11) {
+            if (param0 == 11) {
+              am.a(0, -26931, this.field_k, param2);
+            } else {
               if (param0 == 12) {
                 am.a(1, -26931, this.field_k, param2);
-                if (param1 != 10) {
-                  wi.b((byte) -113);
-                  return true;
-                } else {
-                  return true;
-                }
               } else {
-                if ((param0 ^ -1) == -14) {
+                if (param0 == 13) {
                   am.a(2, -26931, this.field_k, param2);
-                  if (param1 == 10) {
-                    return true;
-                  } else {
-                    wi.b((byte) -113);
-                    return true;
-                  }
                 } else {
-                  if ((param0 ^ -1) != -15) {
-                    if (20 != param0) {
-                      if (-20 == (param0 ^ -1)) {
-                        tg.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
-                        if (param1 == 10) {
-                          return true;
-                        } else {
-                          wi.b((byte) -113);
-                          return true;
-                        }
-                      } else {
+                  if (param0 == 14) {
+                    kl.a(7500);
+                  } else {
+                    if (20 == param0) {
+                      ak.c(true);
+                    } else {
+                      if (param0 != 19) {
                         return false;
                       }
-                    } else {
-                      ak.c(true);
-                      if (param1 != 10) {
-                        wi.b((byte) -113);
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    }
-                  } else {
-                    kl.a(7500);
-                    if (param1 != 10) {
-                      wi.b((byte) -113);
-                      return true;
-                    } else {
-                      return true;
+                      tg.a(this.field_h, this.field_l, this.field_k, -2, this.field_j);
                     }
                   }
                 }
-              }
-            } else {
-              am.a(0, -26931, this.field_k, param2);
-              if (param1 != 10) {
-                wi.b((byte) -113);
-                return true;
-              } else {
-                return true;
               }
             }
           }
         }
+        if (param1 == 10) {
+          return true;
+        }
+        wi.b((byte) -113);
+        return true;
     }
 
     private final boolean a(int param0, boolean param1, int param2) {
-        boolean discarded$1 = false;
         if (param0 == 17) {
           hc.field_M = new oe(this.field_o.field_tb, this.field_o.field_gb, this.field_o.field_K, this.field_o.field_nb, param2, cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c, this.field_h, this.field_l);
           return true;
-        } else {
-          if (param1) {
-            discarded$1 = this.a(-50, false, 11);
-            return false;
-          } else {
-            return false;
-          }
         }
+        if (!param1) {
+          return false;
+        }
+        boolean discarded$0 = this.a(-50, false, 11);
+        return false;
     }
 
     final void c(int param0) {
@@ -720,124 +520,74 @@ final class wi {
         int var5;
         var5 = Pixelate.field_H ? 1 : 0;
         var2 = -90 % ((42 - param0) / 62);
-        if (io.field_c == null) {
-          var3 = vm.a(this.field_m, (byte) -107);
-          if (var3 != null) {
-            var4 = var3.field_pc;
-            if (!var3.field_cc) {
-              if (!var3.field_hc) {
-                if (!var3.field_Ob) {
-                  if (var3.field_Mb) {
-                    if (!var3.field_dc) {
-                      this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
-                      if (var3.field_Ob) {
-                        this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      if (var3.field_hc) {
-                        this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
-                        if (var3.field_Ob) {
-                          this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        if (var3.field_Ob) {
-                          this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    }
-                  } else {
-                    if (var3.field_Ob) {
-                      this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                } else {
-                  if (var3.field_Ob) {
-                    this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                    return;
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                this.field_b.a(sd.a(vg.field_f, 53, new String[]{var4}), (byte) -106, 2);
-                if (!var3.field_Ob) {
-                  return;
-                } else {
-                  this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
-                  return;
-                }
-              }
-            } else {
-              this.field_b.a(sd.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
-              this.field_b.a(sd.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (io.field_c != null) {
           return;
         }
+        var3 = vm.a(this.field_m, (byte) -107);
+        if (var3 == null) {
+          return;
+        }
+        var4 = var3.field_pc;
+        if (var3.field_cc) {
+          this.field_b.a(sd.a(fp.field_b, 97, new String[]{var4}), (byte) -105, 2);
+          this.field_b.a(sd.a(oi.field_a, 52, new String[]{var4}), (byte) -118, 3);
+          return;
+        }
+        if (var3.field_hc) {
+          this.field_b.a(sd.a(vg.field_f, 53, new String[]{var4}), (byte) -106, 2);
+        } else {
+          if (!var3.field_Ob &&
+            var3.field_Mb) {
+            if (!var3.field_dc) {
+              this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
+            } else {
+              if (var3.field_hc) {
+                this.field_b.a(sd.a(hd.field_o, 87, new String[]{var4}), (byte) -32, 2);
+              }
+            }
+          }
+        }
+        if (!var3.field_Ob) {
+          return;
+        }
+        this.field_b.a(sd.a(ve.field_Jb, 46, new String[]{var4}), (byte) -96, 3);
     }
 
     wi(ak param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-            this.field_b = new pi(a.field_O);
-            param0.field_U = true;
-            this.field_o = param0;
-            this.field_k = param5;
-            this.field_h = param2;
-            this.field_l = param1;
-            this.field_j = param6;
-            this.field_i = param3;
-            this.field_m = param4;
+          this.field_b = new pi(a.field_O);
+          param0.field_U = true;
+          this.field_o = param0;
+          this.field_k = param5;
+          this.field_h = param2;
+          this.field_l = param1;
+          this.field_j = param6;
+          this.field_i = param3;
+          this.field_m = param4;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "wi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0) {
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
-        String var2;
-        String var3;
-        L0: {
-          if (null == this.field_h) {
-            break L0;
-          } else {
-            if ((this.field_l ^ -1L) != (hn.field_f ^ -1L)) {
-              var3 = this.a((byte) 43);
-              var2 = var3;
-              this.field_b.a(sd.a(sl.field_j, param0 + -8830, new String[]{var3}), (byte) -72, 17);
-              break L0;
-            } else {
-              if (param0 == 8893) {
-                return;
-              } else {
-                discarded$2 = this.a(-105, 67, -5);
-                return;
-              }
+        boolean discarded$0 = false;
+        String var3 = null;
+        if (null != this.field_h) {
+          if (~this.field_l == ~hn.field_f) {
+            if (param0 != 8893) {
+              discarded$0 = this.a(-105, 67, -5);
+              return;
             }
+            return;
           }
+          var3 = this.a((byte) 43);
+          String var2 = var3;
+          this.field_b.a(sd.a(sl.field_j, param0 - 8830, new String[]{var3}), (byte) -72, 17);
         }
-        if (param0 != 8893) {
-          discarded$3 = this.a(-105, 67, -5);
-          return;
-        } else {
+        if (param0 == 8893) {
           return;
         }
+        boolean discarded$1 = this.a(-105, 67, -5);
     }
 
     static {

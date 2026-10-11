@@ -5,95 +5,88 @@ final class jc extends rqa {
     static String field_o;
 
     final static void a(int param0) {
-        int var2;
-        qkb var8;
-        java.awt.Dimension var9;
-        String var12;
-        String var13;
-        String var14;
-        String var15;
-        String var17;
-        String var18;
-        String var19;
-        String var20;
-        String var22;
-        String var23;
-        String var24;
-        String var25;
-        int[] var27;
-        int[] var28;
-        int[] var29;
+        String var12 = null;
+        String var13 = null;
+        String var14 = null;
+        String var15 = null;
+        int[] var27 = null;
+        String var17 = null;
+        String var18 = null;
+        String var19 = null;
+        String var20 = null;
+        int[] var28 = null;
+        int var2 = 0;
+        int var2Lifetime1;
         og.field_r = vq.field_x.field_e.field_g;
         cw.field_o = feb.a(og.field_r, true);
-        var9 = vq.field_x.field_e.field_a.getSize();
+        java.awt.Dimension var9 = vq.field_x.field_e.field_a.getSize();
         og.field_r.KA(0, 0, var9.width, var9.height);
         ocb.f(-10150);
-        if (param0 == -9934) {
-          L0: {
-            ad.a(-126);
-            var2 = eaa.field_q;
-            eaa.field_q = vq.field_x.field_e.field_b.field_a;
-            if (var2 == eaa.field_q) {
-              break L0;
-            } else {
-              if (ef.field_E) {
-                bea.a((byte) 44, "graphics_mode", eaa.field_q);
-                qra.a(-123);
-                break L0;
-              } else {
-                if ((eaa.field_q ^ -1) == -2) {
-                  var17 = jaggl.OpenGL.glGetString(7936);
-                  var18 = jaggl.OpenGL.glGetString(7938);
-                  var19 = jaggl.OpenGL.glGetString(7937);
-                  var20 = jaggl.OpenGL.glGetString(7939);
-                  System.out.println("GL_VENDOR " + var17);
-                  System.out.println("GL_VERSION " + var18);
-                  System.out.println("GL_RENDERER " + var19);
-                  System.out.println("GL_EXTENSIONS " + var20);
-                  var28 = new int[1];
-                  jaggl.OpenGL.glGetIntegerv(3379, var28, 0);
-                  System.out.println("GL_MAX_TEXTURE_SIZE: " + var28[0]);
-                  if (!ssa.b(param0 ^ -9936)) {
-                    return;
-                  } else {
-                    System.out.println("has_memorypools: " + og.field_r.a());
-                    System.out.println("has_volatile_backbuffer: " + og.field_r.w());
-                    System.out.println("has_resizable_backbuffer: " + og.field_r.n());
-                    System.out.println("has_offscreen_rendering: " + og.field_r.x());
-                    System.out.println("has_slow_offscreen_rendering: " + og.field_r.r());
-                    System.out.println("has_shadows: " + og.field_r.q());
-                    System.out.println("has_bloom: " + og.field_r.c());
-                    System.out.println("has_envmap: " + og.field_r.k());
-                    System.out.println("has_antialiasing: " + og.field_r.f());
-                    System.out.println("has_multiplethreads: " + og.field_r.h());
-                    System.out.println("has_fasttexturedparticles: " + og.field_r.l());
-                    System.out.println("has_underwater: " + og.field_r.e());
-                    System.out.println("has_farzclipplane: " + og.field_r.p());
-                    System.out.println("has_multiple_canvases: " + og.field_r.m());
-                    System.out.println("has_pointlights: " + og.field_r.a(-76));
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            }
+        if (param0 != -9934) {
+          qkb var8 = (qkb) null;
+          jc.a((byte) 16, (asb) null, -27, (qkb) null);
+          ad.a(-126);
+          var2 = eaa.field_q;
+          eaa.field_q = vq.field_x.field_e.field_b.field_a;
+          if (var2 != eaa.field_q &&
+            ef.field_E) {
+            bea.a((byte) 44, "graphics_mode", eaa.field_q);
+            qra.a(-123);
           }
-          if ((eaa.field_q ^ -1) == -2) {
-            var22 = jaggl.OpenGL.glGetString(7936);
-            var23 = jaggl.OpenGL.glGetString(7938);
-            var24 = jaggl.OpenGL.glGetString(7937);
-            var25 = jaggl.OpenGL.glGetString(7939);
-            System.out.println("GL_VENDOR " + var22);
-            System.out.println("GL_VERSION " + var23);
-            System.out.println("GL_RENDERER " + var24);
-            System.out.println("GL_EXTENSIONS " + var25);
-            var29 = new int[1];
-            jaggl.OpenGL.glGetIntegerv(3379, var29, 0);
-            System.out.println("GL_MAX_TEXTURE_SIZE: " + var29[0]);
-            if (!ssa.b(param0 ^ -9936)) {
+          if (eaa.field_q != 1) {
+            return;
+          }
+          var12 = jaggl.OpenGL.glGetString(7936);
+          var13 = jaggl.OpenGL.glGetString(7938);
+          var14 = jaggl.OpenGL.glGetString(7937);
+          var15 = jaggl.OpenGL.glGetString(7939);
+          System.out.println("GL_VENDOR " + var12);
+          System.out.println("GL_VERSION " + var13);
+          System.out.println("GL_RENDERER " + var14);
+          System.out.println("GL_EXTENSIONS " + var15);
+          var27 = new int[1];
+          jaggl.OpenGL.glGetIntegerv(3379, var27, 0);
+          System.out.println("GL_MAX_TEXTURE_SIZE: " + var27[0]);
+          if (ssa.b(param0 ^ -9936)) {
+            System.out.println("has_memorypools: " + og.field_r.a());
+            System.out.println("has_volatile_backbuffer: " + og.field_r.w());
+            System.out.println("has_resizable_backbuffer: " + og.field_r.n());
+            System.out.println("has_offscreen_rendering: " + og.field_r.x());
+            System.out.println("has_slow_offscreen_rendering: " + og.field_r.r());
+            System.out.println("has_shadows: " + og.field_r.q());
+            System.out.println("has_bloom: " + og.field_r.c());
+            System.out.println("has_envmap: " + og.field_r.k());
+            System.out.println("has_antialiasing: " + og.field_r.f());
+            System.out.println("has_multiplethreads: " + og.field_r.h());
+            System.out.println("has_fasttexturedparticles: " + og.field_r.l());
+            System.out.println("has_underwater: " + og.field_r.e());
+            System.out.println("has_farzclipplane: " + og.field_r.p());
+            System.out.println("has_multiple_canvases: " + og.field_r.m());
+            System.out.println("has_pointlights: " + og.field_r.a(-76));
+            return;
+          }
+          return;
+        }
+        ad.a(-126);
+        var2Lifetime1 = eaa.field_q;
+        eaa.field_q = vq.field_x.field_e.field_b.field_a;
+        if (var2Lifetime1 != eaa.field_q) {
+          if (!ef.field_E) {
+            if (eaa.field_q != 1) {
               return;
-            } else {
+            }
+            var17 = jaggl.OpenGL.glGetString(7936);
+            var18 = jaggl.OpenGL.glGetString(7938);
+            var19 = jaggl.OpenGL.glGetString(7937);
+            var20 = jaggl.OpenGL.glGetString(7939);
+            System.out.println("GL_VENDOR " + var17);
+            System.out.println("GL_VERSION " + var18);
+            System.out.println("GL_RENDERER " + var19);
+            System.out.println("GL_EXTENSIONS " + var20);
+            var28 = new int[1];
+            jaggl.OpenGL.glGetIntegerv(3379, var28, 0);
+            System.out.println("GL_MAX_TEXTURE_SIZE: " + var28[0]);
+            if (ssa.b(param0 ^ -9936)) {
               System.out.println("has_memorypools: " + og.field_r.a());
               System.out.println("has_volatile_backbuffer: " + og.field_r.w());
               System.out.println("has_resizable_backbuffer: " + og.field_r.n());
@@ -111,63 +104,42 @@ final class jc extends rqa {
               System.out.println("has_pointlights: " + og.field_r.a(-76));
               return;
             }
-          } else {
             return;
           }
-        } else {
-          L1: {
-            var8 = (qkb) null;
-            jc.a((byte) 16, (asb) null, -27, (qkb) null);
-            ad.a(-126);
-            var2 = eaa.field_q;
-            eaa.field_q = vq.field_x.field_e.field_b.field_a;
-            if (var2 == eaa.field_q) {
-              break L1;
-            } else {
-              if (ef.field_E) {
-                bea.a((byte) 44, "graphics_mode", eaa.field_q);
-                qra.a(-123);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-          }
-          if ((eaa.field_q ^ -1) == -2) {
-            var12 = jaggl.OpenGL.glGetString(7936);
-            var13 = jaggl.OpenGL.glGetString(7938);
-            var14 = jaggl.OpenGL.glGetString(7937);
-            var15 = jaggl.OpenGL.glGetString(7939);
-            System.out.println("GL_VENDOR " + var12);
-            System.out.println("GL_VERSION " + var13);
-            System.out.println("GL_RENDERER " + var14);
-            System.out.println("GL_EXTENSIONS " + var15);
-            var27 = new int[1];
-            jaggl.OpenGL.glGetIntegerv(3379, var27, 0);
-            System.out.println("GL_MAX_TEXTURE_SIZE: " + var27[0]);
-            if (!ssa.b(param0 ^ -9936)) {
-              return;
-            } else {
-              System.out.println("has_memorypools: " + og.field_r.a());
-              System.out.println("has_volatile_backbuffer: " + og.field_r.w());
-              System.out.println("has_resizable_backbuffer: " + og.field_r.n());
-              System.out.println("has_offscreen_rendering: " + og.field_r.x());
-              System.out.println("has_slow_offscreen_rendering: " + og.field_r.r());
-              System.out.println("has_shadows: " + og.field_r.q());
-              System.out.println("has_bloom: " + og.field_r.c());
-              System.out.println("has_envmap: " + og.field_r.k());
-              System.out.println("has_antialiasing: " + og.field_r.f());
-              System.out.println("has_multiplethreads: " + og.field_r.h());
-              System.out.println("has_fasttexturedparticles: " + og.field_r.l());
-              System.out.println("has_underwater: " + og.field_r.e());
-              System.out.println("has_farzclipplane: " + og.field_r.p());
-              System.out.println("has_multiple_canvases: " + og.field_r.m());
-              System.out.println("has_pointlights: " + og.field_r.a(-76));
-              return;
-            }
-          } else {
-            return;
-          }
+          bea.a((byte) 44, "graphics_mode", eaa.field_q);
+          qra.a(-123);
+        }
+        if (eaa.field_q != 1) {
+          return;
+        }
+        String var22 = jaggl.OpenGL.glGetString(7936);
+        String var23 = jaggl.OpenGL.glGetString(7938);
+        String var24 = jaggl.OpenGL.glGetString(7937);
+        String var25 = jaggl.OpenGL.glGetString(7939);
+        System.out.println("GL_VENDOR " + var22);
+        System.out.println("GL_VERSION " + var23);
+        System.out.println("GL_RENDERER " + var24);
+        System.out.println("GL_EXTENSIONS " + var25);
+        int[] var29 = new int[1];
+        jaggl.OpenGL.glGetIntegerv(3379, var29, 0);
+        System.out.println("GL_MAX_TEXTURE_SIZE: " + var29[0]);
+        if (ssa.b(param0 ^ -9936)) {
+          System.out.println("has_memorypools: " + og.field_r.a());
+          System.out.println("has_volatile_backbuffer: " + og.field_r.w());
+          System.out.println("has_resizable_backbuffer: " + og.field_r.n());
+          System.out.println("has_offscreen_rendering: " + og.field_r.x());
+          System.out.println("has_slow_offscreen_rendering: " + og.field_r.r());
+          System.out.println("has_shadows: " + og.field_r.q());
+          System.out.println("has_bloom: " + og.field_r.c());
+          System.out.println("has_envmap: " + og.field_r.k());
+          System.out.println("has_antialiasing: " + og.field_r.f());
+          System.out.println("has_multiplethreads: " + og.field_r.h());
+          System.out.println("has_fasttexturedparticles: " + og.field_r.l());
+          System.out.println("has_underwater: " + og.field_r.e());
+          System.out.println("has_farzclipplane: " + og.field_r.p());
+          System.out.println("has_multiple_canvases: " + og.field_r.m());
+          System.out.println("has_pointlights: " + og.field_r.a(-76));
+          return;
         }
     }
 
@@ -177,49 +149,26 @@ final class jc extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc(frb.a(185, 109));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc(frb.a(185, 109));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("jc.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("jc.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -230,13 +179,13 @@ final class jc extends rqa {
         hob.a(param0 ^ 107, param1);
         pm.e((byte) -39);
         if (param0 != 55) {
-            return;
+          return;
         }
         try {
-            ls.a(121);
-            nd.field_r = 0 - tha.field_p;
+          ls.a(121);
+          nd.field_r = 0 - tha.field_p;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -247,7 +196,7 @@ final class jc extends rqa {
     public static void b(boolean param0) {
         field_o = null;
         if (param0) {
-            jc.b(false);
+          jc.b(false);
         }
     }
 

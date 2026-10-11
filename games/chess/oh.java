@@ -10,26 +10,24 @@ final class oh {
 
     final static boolean a(int param0) {
         if (param0 != 25331) {
-            return false;
+          return false;
         }
         return ge.field_fb.a(false);
     }
 
     public static void b(int param0) {
-        if (param0 != -16534) {
-          field_d = (String) null;
-          field_e = null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == -16534) {
           field_e = null;
           field_c = null;
           field_a = null;
           field_d = null;
           return;
         }
+        field_d = (String) null;
+        field_e = null;
+        field_c = null;
+        field_a = null;
+        field_d = null;
     }
 
     static {

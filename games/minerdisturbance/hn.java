@@ -8,54 +8,27 @@ abstract class hn {
     static boolean field_c;
 
     final static String c(int param0) {
-        String var1;
-        L0: {
-          var1 = "";
-          if (di.field_D == null) {
-            break L0;
-          } else {
-            var1 = di.field_D.a((byte) 117);
-            break L0;
-          }
+        String var1 = "";
+        if (di.field_D != null) {
+          var1 = di.field_D.a((byte) 117);
         }
-        if (param0 <= 74) {
-          L1: {
-            hn.a(true, (byte) 38);
-            if (var1.length() == 0) {
-              var1 = cb.a((byte) -98);
-              break L1;
-            } else {
-              break L1;
-            }
+        if (param0 > 74) {
+          if (var1.length() == 0) {
+            var1 = cb.a((byte) -98);
           }
-          L2: {
-            if (var1.length() != 0) {
-              break L2;
-            } else {
-              var1 = bm.field_r;
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (var1.length() == 0) {
-              var1 = cb.a((byte) -98);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() != 0) {
-              break L4;
-            } else {
-              var1 = bm.field_r;
-              break L4;
-            }
+          if (var1.length() == 0) {
+            var1 = bm.field_r;
           }
           return var1;
         }
+        hn.a(true, (byte) 38);
+        if (var1.length() == 0) {
+          var1 = cb.a((byte) -98);
+        }
+        if (var1.length() == 0) {
+          var1 = bm.field_r;
+        }
+        return var1;
     }
 
     abstract ec b(int param0);
@@ -64,37 +37,20 @@ abstract class hn {
         field_a = null;
         field_d = null;
         if (param0 != 0) {
-            field_c = false;
+          field_c = false;
         }
     }
 
     abstract void a(sb param0, byte param1);
 
     final static ed a(boolean param0, byte param1) {
-        ed var2;
-        ed stackIn_3_0 = null;
-        ed stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        if (param1 != 105) {
-          return (ed) null;
-        } else {
-          L0: {
-            var2 = new ed(true);
-            stackIn_3_0 = (ed) (var2);
-
-            if (!param0) {
-              stackIn_4_0 = (ed) ((Object) stackIn_3_0);
-              stackIn_4_1 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = (ed) ((Object) stackIn_3_0);
-              stackIn_4_1 = 1;
-              break L0;
-            }
-          }
-          stackIn_4_0.field_i = stackIn_4_1 != 0;
+        ed var2 = null;
+        if (param1 == 105) {
+          var2 = new ed(true);
+          var2.field_i = param0 ? true : false;
           return var2;
         }
+        return (ed) null;
     }
 
     final static void a(byte param0) {
@@ -102,7 +58,7 @@ abstract class hn {
         CharSequence var2 = (CharSequence) ((Object) ti.field_J);
         in.field_b = cl.a(-95, var2);
         if (param0 > -22) {
-            hn.a(true, (byte) 100);
+          hn.a(true, (byte) 100);
         }
     }
 

@@ -12,20 +12,20 @@ final class gp {
         field_a = null;
         field_e = null;
         if (param0 != 63) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     final static void a(byte param0, sf param1) {
         try {
-            param1.field_A = new char[]{(char)63};
-            if (param0 < 9) {
-                field_d = (na) null;
-            }
-            param1.field_D = new int[]{-1};
+          param1.field_A = new char[]{(char)63};
+          if (param0 < 9) {
+            field_d = (na) null;
+          }
+          param1.field_D = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "gp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,25 +33,25 @@ final class gp {
         oq var6 = null;
         int var4 = 0;
         try {
-            var6 = ej.field_j;
-            var6.b(false, param0);
-            var6.field_v = var6.field_v + 1;
-            if (param2 != -6725) {
-                i var5 = (i) null;
-                gp.a(80, (i) null, -101);
-            }
-            var4 = var6.field_v;
-            var6.a(1, false);
-            var6.a(param1.field_r, false);
-            var6.a(param1.field_n, false);
-            var6.a(true, param1.field_p);
-            var6.a(true, param1.field_s);
-            var6.a(true, param1.field_t);
-            var6.a(true, param1.field_q);
-            var6.d(-1, var4);
-            var6.b(-var4 + var6.field_v, true);
+          var6 = ej.field_j;
+          var6.b(false, param0);
+          var6.field_v = var6.field_v + 1;
+          if (param2 != -6725) {
+            i var5 = (i) null;
+            gp.a(80, (i) null, -101);
+          }
+          var4 = var6.field_v;
+          var6.a(1, false);
+          var6.a(param1.field_r, false);
+          var6.a(param1.field_n, false);
+          var6.a(true, param1.field_p);
+          var6.a(true, param1.field_s);
+          var6.a(true, param1.field_t);
+          var6.a(true, param1.field_q);
+          var6.d(-1, var4);
+          var6.b(-var4 + var6.field_v, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "gp.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

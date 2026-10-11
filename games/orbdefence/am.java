@@ -15,75 +15,61 @@ final class am {
         field_g = null;
         field_b = null;
         field_h = null;
-        if (param0 != 29) {
-          am.b(-56);
-          field_f = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 29) {
           field_f = null;
           field_c = null;
           field_d = null;
           return;
         }
+        am.b(-56);
+        field_f = null;
+        field_c = null;
+        field_d = null;
     }
 
     final static void a(int param0) {
-        if (param0 == -4062) {
-          if (null == cd.field_w) {
-            if (null != wf.field_b) {
-              wf.field_b.c();
-              return;
-            } else {
-              return;
-            }
-          } else {
-            cd.field_w.c();
-            if (null != wf.field_b) {
-              wf.field_b.c();
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
+        if (param0 != -4062) {
           am.a(-120);
-          if (null != cd.field_w) {
-            cd.field_w.c();
+          if (null == cd.field_w) {
             if (null == wf.field_b) {
               return;
-            } else {
-              wf.field_b.c();
-              return;
             }
-          } else {
-            if (null != wf.field_b) {
-              wf.field_b.c();
-              return;
-            } else {
-              return;
-            }
+            wf.field_b.c();
+            return;
           }
+          cd.field_w.c();
+          if (null != wf.field_b) {
+            wf.field_b.c();
+            return;
+          }
+          return;
         }
+        if (null != cd.field_w) {
+          cd.field_w.c();
+          if (null == wf.field_b) {
+            return;
+          }
+          wf.field_b.c();
+          return;
+        }
+        if (null == wf.field_b) {
+          return;
+        }
+        wf.field_b.c();
     }
 
     final static String b(int param0) {
-        int var1;
-        if (qc.field_g != mg.field_m) {
-          if (tg.field_c == mg.field_m) {
-            return pg.field_a;
-          } else {
-            if (!bd.field_u.a(false)) {
-              return pg.field_a;
-            } else {
-              var1 = 8 % ((55 - param0) / 40);
-              return vh.field_k;
-            }
-          }
-        } else {
+        if (qc.field_g == mg.field_m) {
           return bh.field_e;
         }
+        if (tg.field_c == mg.field_m) {
+          return pg.field_a;
+        }
+        if (bd.field_u.a(false)) {
+          int var1 = 8 % ((55 - param0) / 40);
+          return vh.field_k;
+        }
+        return pg.field_a;
     }
 
     final static void a(int param0, int param1) {
@@ -95,28 +81,18 @@ final class am {
         RuntimeException var2_ref = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var2_int = 6 % ((param1 - 15) / 33);
-            var3 = (ha) ((Object) oa.field_d.b((byte) -111));
-            L1: while (true) {
-              if (var3 == null) {
-                var2 = mj.field_m.b((byte) -123);
-                L2: while (true) {
-                  if (var2 == null) {
-                    break L0;
-                  } else {
-                    tg.a(-126, param0);
-                    var2 = mj.field_m.d(853);
-                    continue L2;
-                  }
-                }
-              } else {
-                tl.a(-128, var3, param0);
-                var3 = (ha) ((Object) oa.field_d.d(853));
-                continue L1;
-              }
-            }
+          var2_int = 6 % ((param1 - 15) / 33);
+          var3 = (ha) (oa.field_d.b((byte) -111));
+          while (var3 != null) {
+            tl.a(-128, var3, param0);
+            var3 = (ha) (oa.field_d.d(853));
           }
+          var2 = mj.field_m.b((byte) -123);
+          while (var2 != null) {
+            tg.a(-126, param0);
+            var2 = mj.field_m.d(853);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

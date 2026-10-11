@@ -9,27 +9,20 @@ final class ud extends gb {
     int field_p;
 
     final ud a(qh param0) {
-        int dupTemp$1 = 0;
         this.field_n = param0.a(85, this.field_n);
         this.field_m = param0.a(this.field_m, 15);
-        if (this.field_l == this.field_p) {
-          dupTemp$1 = param0.b(this.field_l, -10689);
-          this.field_p = dupTemp$1;
-          this.field_l = dupTemp$1;
-          return (ud) (this);
-        } else {
-          L0: {
-            this.field_l = param0.b(this.field_l, -10689);
-            this.field_p = param0.b(this.field_p, -10689);
-            if (this.field_l != this.field_p) {
-              break L0;
-            } else {
-              this.field_l = this.field_l - 1;
-              break L0;
-            }
+        if (this.field_l != this.field_p) {
+          this.field_l = param0.b(this.field_l, -10689);
+          this.field_p = param0.b(this.field_p, -10689);
+          if (this.field_l == this.field_p) {
+            this.field_l = this.field_l - 1;
           }
-          return (ud) (this);
+          return this;
         }
+        int dupTemp$0 = param0.b(this.field_l, -10689);
+        this.field_p = dupTemp$0;
+        this.field_l = dupTemp$0;
+        return this;
     }
 
     ud(int param0, byte[] param1, int param2, int param3) {

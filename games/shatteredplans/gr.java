@@ -17,8 +17,6 @@ final class gr extends oh {
     final static void a(int param0, int param1, int[] param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -32,125 +30,82 @@ final class gr extends oh {
         int var11 = 0;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            var4_int = -param0 + 256;
-            var5 = 16711935 & param3;
-            c.c();
-            var6 = 65280 & param3;
-            c.a(param2, 0, param2.length);
-            c.d();
-            L1: while (true) {
-              if (!c.a()) {
-                if (param1 <= -58) {
-                  break L0;
-                } else {
-                  gr.a(false, true, 50);
-                  return;
-                }
-              } else {
-                L2: {
-                  var7 = c.field_e;
-                  if ((gf.field_i ^ -1) < (var7 ^ -1)) {
-                    var7 = gf.field_i;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  var8 = c.field_a;
-                  if (gf.field_l >= var8) {
-                    break L3;
-                  } else {
-                    var8 = gf.field_l;
-                    break L3;
-                  }
-                }
-                var9 = (var7 & -8) - (7 & c.field_h);
-                var9 = var9 + (8 + (-8 & -var9 + var7));
-                var10 = var9 + c.field_h * gf.field_b;
-                L4: while (true) {
-                  if (var8 <= var9) {
-                    continue L1;
-                  } else {
-                    gf.field_h[var10] = we.a(16711935, we.a(16711935, gf.field_h[var10]) * var4_int + var5 * param0 >>> 900751112) - -(we.a(we.a(65280, gf.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> -724347832);
-                    var10 += 8;
-                    var9 += 8;
-                    continue L4;
-                  }
-                }
-              }
+          var4_int = -param0 + 256;
+          var5 = 16711935 & param3;
+          c.c();
+          var6 = 65280 & param3;
+          c.a(param2, 0, param2.length);
+          c.d();
+          while (c.a()) {
+            var7 = c.field_e;
+            if (gf.field_i > var7) {
+              var7 = gf.field_i;
+            }
+            var8 = c.field_a;
+            if (gf.field_l < var8) {
+              var8 = gf.field_l;
+            }
+            var9 = (var7 & -8) - (7 & c.field_h);
+            var9 = var9 + (8 + (-8 & -var9 + var7));
+            var10 = var9 + c.field_h * gf.field_b;
+            while (var8 > var9) {
+              gf.field_h[var10] = we.a(16711935, we.a(16711935, gf.field_h[var10]) * var4_int + var5 * param0 >>> 8) + (we.a(we.a(65280, gf.field_h[var10]) * var4_int + var6 * param0, 16711680) >>> 8);
+              var10 += 8;
+              var9 += 8;
             }
           }
+          if (param1 <= -58) {
+            return;
+          }
+          gr.a(false, true, 50);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4);
-
-            stackIn_17_1 = new StringBuilder().append("gr.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L5;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L5;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("gr.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
+          throw r.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 >= -25) {
-            gr.a((byte) -99, 47, -15);
-            field_p = null;
-            return;
+          gr.a((byte) -99, 47, -15);
+          field_p = null;
+          return;
         }
         field_p = null;
     }
 
     final static bi a(byte param0, int param1, int param2) {
-        bi var3;
-        int var4;
-        int var5;
-        var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        var3 = new bi(param2, param2);
-        var4 = 0;
-        if (param0 <= -38) {
-          L0: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
-              var4++;
-              continue L0;
-            }
-          }
-        } else {
+        int var5 = ShatteredPlansClient.field_F ? 1 : 0;
+        bi var3 = new bi(param2, param2);
+        int var4 = 0;
+        if (param0 > -38) {
           field_p = (pf) null;
-          L1: while (true) {
-            if (var3.field_B.length <= var4) {
-              return var3;
-            } else {
-              var3.field_B[var4] = param1;
-              var4++;
-              continue L1;
-            }
+          while (var3.field_B.length > var4) {
+            var3.field_B[var4] = param1;
+            var4++;
           }
+          return var3;
         }
+        while (var3.field_B.length > var4) {
+          var3.field_B[var4] = param1;
+          var4++;
+        }
+        return var3;
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param0) {
-            gf.b();
-            og.a(param2, param0);
-            return;
+          gf.b();
+          og.a(param2, param0);
+          return;
         }
         gf.c(0, 0, gf.field_b, gf.field_k, 0, 192);
         og.a(param2, param0);

@@ -18,18 +18,16 @@ final class ld {
     public static void a(boolean param0) {
         field_f = null;
         field_h = null;
-        if (param0) {
-          field_f = (Random) null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_a = null;
           field_e = null;
           return;
         }
+        field_f = (Random) null;
+        field_d = null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

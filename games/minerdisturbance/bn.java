@@ -15,7 +15,7 @@ final class bn implements uj {
     public final void a(boolean param0) {
         tb.field_a = 0;
         if (param0) {
-            bn.a(126, 'ﾂ');
+          bn.a(126, 'ﾂ');
         }
     }
 
@@ -24,7 +24,7 @@ final class bn implements uj {
         field_b = null;
         field_a = null;
         if (param0 != 160) {
-            bn.a(-15, '￬');
+          bn.a(-15, '￬');
         }
     }
 
@@ -35,79 +35,37 @@ final class bn implements uj {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param1 <= 0) {
-                  break L2;
-                } else {
-                  if (128 > param1) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if (param1 < 160) {
-                  break L3;
-                } else {
-                  if (param1 <= 255) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              var2_int = -111 / ((param0 - 28) / 63);
-              if (param1 != 0) {
-                var3 = tk.field_e;
-                var4 = 0;
-                L4: while (true) {
-                  if (var4 >= var3.length) {
-                    stackIn_18_0 = 0;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var5 = var3[var4];
-                    if (var5 != param1) {
-                      var4++;
-                      continue L4;
-                    } else {
-                      stackIn_15_0 = 1;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
+          if ((param1 <= 0 ||
+            128 <= param1) &&
+            (param1 < 160 ||
+            param1 > 255)) {
+            var2_int = -111 / ((param0 - 28) / 63);
+            if (param1 == 0) {
+              return false;
+            }
+            var3 = tk.field_e;
+            var4 = 0;
+            while (true) {
+              if (var4 >= var3.length) {
                 return false;
               }
+              var5 = var3[var4];
+              if (var5 != param1) {
+                var4++;
+                continue;
+              }
+              break;
             }
-            stackIn_8_0 = 1;
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return true;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var2), "bn.D(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_15_0 != 0;
-          } else {
-            return stackIn_18_0 != 0;
-          }
         }
     }
 

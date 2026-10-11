@@ -22,104 +22,74 @@ final class qj {
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var4_int = param1.length();
-            param1.setLength(param0);
-            var5 = var4_int;
-            if (!param3) {
-              L1: while (true) {
-                if (var5 >= param0) {
-                  stackIn_7_0 = (StringBuilder) (param1);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  param1.setCharAt(var5, param2);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = (StringBuilder) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var4_int = param1.length();
+          param1.setLength(param0);
+          var5 = var4_int;
+          if (param3) {
+            stackIn_3_0 = (StringBuilder) null;
+            return stackIn_3_0;
           }
+          while (var5 < param0) {
+            param1.setCharAt(var5, param2);
+            var5++;
+          }
+          stackIn_7_0 = (StringBuilder) (param1);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_7_0;
+          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static hh a(byte param0) {
         try {
-            hh stackIn_1_0 = null;
-            Throwable decompiledCaughtException = null;
-            int var1_int = 0;
-            Throwable var1 = null;
-            try {
-              L0: {
-                var1_int = -52 % ((param0 - 15) / 60);
-                stackIn_1_0 = (hh) (Class.forName("po").newInstance());
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
-            }
+          hh stackIn_1_0 = null;
+          Throwable decompiledCaughtException = null;
+          int var1_int = 0;
+          Throwable var1 = null;
+          try {
+            var1_int = -52 % ((param0 - 15) / 60);
+            stackIn_1_0 = (hh) (Class.forName("po").newInstance());
             return stackIn_1_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final synchronized static long b(int param0) {
         if (param0 != -26572) {
-            return -111L;
+          return -111L;
         }
         long var1 = System.currentTimeMillis();
         if (!(sk.field_h <= var1)) {
-            wl.field_O = wl.field_O + (-var1 + sk.field_h);
+          wl.field_O = wl.field_O + (-var1 + sk.field_h);
         }
         sk.field_h = var1;
-        return var1 - -wl.field_O;
+        return var1 + wl.field_O;
     }
 
     final static String a(int param0) {
         if (param0 != 10040319) {
-            qj.b(-91);
+          qj.b(-91);
         }
         return df.field_z.l(-1);
     }
@@ -131,7 +101,7 @@ final class qj {
         field_j = null;
         field_f = null;
         if (param0 != -13019) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

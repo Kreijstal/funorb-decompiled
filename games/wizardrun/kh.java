@@ -10,27 +10,27 @@ final class kh extends dj {
 
     final void a(byte[] param0, int param1) {
         try {
-            this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_i.position(0);
-            int var3_int = -117 % ((param1 - 75) / 38);
-            this.field_i.put(param0);
+          this.field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_i.position(0);
+          int var3_int = -117 % ((param1 - 75) / 38);
+          this.field_i.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "kh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void c(int param0) {
         field_j = null;
         if (param0 != 0) {
-            field_j = (ji) null;
-            field_f = null;
-            return;
+          field_j = (ji) null;
+          field_f = null;
+          return;
         }
         field_f = null;
     }
 
     final byte[] a(int param0) {
-        int var2 = -11 / ((param0 - -78) / 47);
+        int var2 = -11 / ((param0 + 78) / 47);
         byte[] var3 = new byte[this.field_i.capacity()];
         this.field_i.position(0);
         this.field_i.get(var3);

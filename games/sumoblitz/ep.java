@@ -44,20 +44,20 @@ final class ep implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_c != null) {
-            fieldTemp$1 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_a = field_a + 4;
+          field_a = field_a + 4;
         }
     }
 

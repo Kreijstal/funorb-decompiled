@@ -14,8 +14,6 @@ final class ng {
         byte[] stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -32,113 +30,72 @@ final class ng {
         int[] var15 = null;
         int[] var17 = null;
         int[] var19 = null;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var10Lifetime1;
         var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 == -128) {
-                break L1;
-              } else {
-                var12 = (String) null;
-                ng.a((String) null, 126);
-                break L1;
+          if (param1 != -128) {
+            var12 = (String) null;
+            ng.a((String) null, 126);
+          }
+          if (this.field_a != null) {
+            var3_int = 14 + (int)((long)param0.length * (long)this.field_e / (long)this.field_g);
+            var17 = new int[var3_int];
+            var15 = var17;
+            var4 = var15;
+            var5 = 0;
+            var6 = 0;
+            for (var7 = 0; param0.length > var7; var7++) {
+              var8 = param0[var7];
+              var19 = this.field_a[var6];
+              for (var10 = 0; var10 < 14; var10++) {
+                var4[var5 + var10] = var4[var5 + var10] + var19[var10] * var8;
               }
+              var6 = var6 + this.field_e;
+              var10Lifetime1 = var6 / this.field_g;
+              var6 = var6 - var10Lifetime1 * this.field_g;
+              var5 = var5 + var10Lifetime1;
             }
-            L2: {
-              if (this.field_a == null) {
-                break L2;
+            param0 = new byte[var3_int];
+            var13 = 0;
+            var7Lifetime1 = var13;
+            while (var13 < var3_int) {
+              var8Lifetime1 = var17[var13] + 32768 >> 16;
+              if (var8Lifetime1 < -128) {
+                param0[var13] = (byte)-128;
               } else {
-                var3_int = 14 + (int)((long)param0.length * (long)this.field_e / (long)this.field_g);
-                var17 = new int[var3_int];
-                var15 = var17;
-                var4 = var15;
-                var5 = 0;
-                var6 = 0;
-                var7 = 0;
-                L3: while (true) {
-                  if (param0.length <= var7) {
-                    param0 = new byte[var3_int];
-                    var13 = 0;
-                    var7 = var13;
-                    L4: while (true) {
-                      if (var13 >= var3_int) {
-                        break L2;
-                      } else {
-                        L5: {
-                          var8 = var17[var13] - -32768 >> -2114772624;
-                          if ((var8 ^ -1) > 127) {
-                            param0[var13] = (byte)-128;
-                            break L5;
-                          } else {
-                            if (127 >= var8) {
-                              param0[var13] = (byte)var8;
-                              break L5;
-                            } else {
-                              param0[var13] = (byte)127;
-                              break L5;
-                            }
-                          }
-                        }
-                        var13++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var8 = param0[var7];
-                    var19 = this.field_a[var6];
-                    var10 = 0;
-                    L6: while (true) {
-                      if (var10 >= 14) {
-                        var6 = var6 + this.field_e;
-                        var10 = var6 / this.field_g;
-                        var6 = var6 - var10 * this.field_g;
-                        var5 = var5 + var10;
-                        var7++;
-                        continue L3;
-                      } else {
-                        var4[var5 - -var10] = var4[var5 - -var10] + var19[var10] * var8;
-                        var10++;
-                        continue L6;
-                      }
-                    }
-                  }
+                if (127 >= var8Lifetime1) {
+                  param0[var13] = (byte)var8Lifetime1;
+                } else {
+                  param0[var13] = (byte)127;
                 }
               }
+              var13++;
             }
-            stackIn_19_0 = (byte[]) (param0);
-            break L0;
           }
+          stackIn_19_0 = (byte[]) (param0);
+          return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var3);
-
-            stackIn_22_1 = new StringBuilder().append("ng.A(");
-
-            if (param0 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L7;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L7;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_22_0 = var3;
+          stackIn_22_1 = new StringBuilder().append("ng.A(");
+          if (param0 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_19_0;
     }
 
     final int a(int param0, byte param1) {
         if (this.field_a != null) {
-            param0 = (int)((long)param0 * (long)this.field_e / (long)this.field_g) + 6;
+          param0 = (int)((long)param0 * (long)this.field_e / (long)this.field_g) + 6;
         }
         if (param1 != 101) {
-            field_c = (k) null;
+          field_c = (k) null;
         }
         return param0;
     }
@@ -151,96 +108,55 @@ final class ng {
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (hg.field_ub != lc.field_h) {
-              if (param1 == 3582) {
-                L1: {
-                  if (wg.field_u != lc.field_h) {
-                    break L1;
-                  } else {
-                    if (!param0.equals(cm.field_I)) {
-                      break L1;
-                    } else {
-                      lc.field_h = pj.field_D;
-                      stackIn_9_0 = kf.field_a;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  }
-                }
-                kf.field_a = null;
-                cm.field_I = param0;
-                lc.field_h = hg.field_ub;
-                stackIn_11_0 = null;
-                decompiledRegionSelector0 = 3;
-                break L0;
-              } else {
-                stackIn_5_0 = (og) null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (hg.field_ub == lc.field_h) {
+            stackIn_2_0 = null;
+            return (og) (stackIn_2_0);
           }
+          if (param1 != 3582) {
+            stackIn_5_0 = (og) null;
+            return stackIn_5_0;
+          }
+          if (wg.field_u == lc.field_h &&
+            param0.equals(cm.field_I)) {
+            lc.field_h = pj.field_D;
+            stackIn_9_0 = kf.field_a;
+            return stackIn_9_0;
+          }
+          kf.field_a = null;
+          cm.field_I = param0;
+          lc.field_h = hg.field_ub;
+          stackIn_11_0 = null;
+          return (og) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("ng.D(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L2;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (og) ((Object) stackIn_2_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_5_0;
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("ng.D(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_9_0;
-            } else {
-              return (og) ((Object) stackIn_11_0);
-            }
+            stackIn_15_2 = "{...}";
           }
+          throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final int a(byte param0, int param1) {
-        if (!(this.field_a == null)) {
-            param1 = (int)((long)param1 * (long)this.field_e / (long)this.field_g);
+        if (this.field_a != null) {
+          param1 = (int)((long)param1 * (long)this.field_e / (long)this.field_g);
         }
         if (param0 != -128) {
-            return 107;
+          return 107;
         }
         return param1;
     }
 
     ng(int param0, int param1) {
+        int var4 = 0;
         int var3;
-        int var4;
         int[] var5;
         double var6;
         int var8;
@@ -248,78 +164,46 @@ final class ng {
         double var10;
         double var12;
         double var14;
-        if (param0 != param1) {
-          var3 = qe.a((byte) 26, param0, param1);
-          param1 = param1 / var3;
-          param0 = param0 / var3;
-          this.field_a = new int[param0][14];
-          this.field_g = param0;
-          this.field_e = param1;
-          var4 = 0;
-          L0: while (true) {
-            if (param0 <= var4) {
-              return;
-            } else {
-              L1: {
-                var5 = this.field_a[var4];
-                var6 = 6.0 + (double)var4 / (double)param0;
-                var8 = (int)Math.floor(var6 - 7.0 + 1.0);
-                if (var8 >= 0) {
-                  break L1;
-                } else {
-                  var8 = 0;
-                  break L1;
-                }
-              }
-              L2: {
-                var9 = (int)Math.ceil(7.0 + var6);
-                if (14 >= var9) {
-                  break L2;
-                } else {
-                  var9 = 14;
-                  break L2;
-                }
-              }
-              var10 = (double)param1 / (double)param0;
-              L3: while (true) {
-                if (var9 <= var8) {
-                  var4++;
-                  continue L0;
-                } else {
-                  L4: {
-                    L5: {
-                      var12 = ((double)var8 - var6) * 3.141592653589793;
-                      var14 = var10;
-                      if (var12 < -0.0001) {
-                        break L5;
-                      } else {
-                        if (0.0001 >= var12) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var14 = var14 * (Math.sin(var12) / var12);
-                    break L4;
-                  }
-                  var14 = var14 * (0.46 * Math.cos(0.2243994752564138 * ((double)var8 - var6)) + 0.54);
-                  var5[var8] = (int)Math.floor(var14 * 65536.0 + 0.5);
-                  var8++;
-                  continue L3;
-                }
-              }
-            }
-          }
-        } else {
+        if (param0 == param1) {
           return;
         }
+        var3 = qe.a((byte) 26, param0, param1);
+        param1 = param1 / var3;
+        param0 = param0 / var3;
+        this.field_a = new int[param0][14];
+        this.field_g = param0;
+        this.field_e = param1;
+        for (var4 = 0; param0 > var4; var4++) {
+          var5 = this.field_a[var4];
+          var6 = 6.0 + (double)var4 / (double)param0;
+          var8 = (int)Math.floor(var6 - 7.0 + 1.0);
+          if (var8 < 0) {
+            var8 = 0;
+          }
+          var9 = (int)Math.ceil(7.0 + var6);
+          if (14 < var9) {
+            var9 = 14;
+          }
+          var10 = (double)param1 / (double)param0;
+          while (var9 > var8) {
+            var12 = ((double)var8 - var6) * 3.141592653589793;
+            var14 = var10;
+            if (var12 < -0.0001 ||
+              0.0001 < var12) {
+              var14 = var14 * (Math.sin(var12) / var12);
+            }
+            var14 = var14 * (0.46 * Math.cos(0.2243994752564138 * ((double)var8 - var6)) + 0.54);
+            var5[var8] = (int)Math.floor(var14 * 65536.0 + 0.5);
+            var8++;
+          }
+        }
+        return;
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            field_c = (k) null;
+          field_c = (k) null;
         }
         field_d = null;
         field_c = null;

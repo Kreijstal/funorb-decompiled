@@ -5,21 +5,19 @@ final class qk extends gk implements java.awt.event.MouseWheelListener {
     private int field_e;
 
     final synchronized int b(int param0) {
-        int var2;
-        var2 = this.field_e;
-        if (param0 != 500) {
-          this.b(-58);
-          this.field_e = 0;
-          return var2;
-        } else {
+        int var2 = this.field_e;
+        if (param0 == 500) {
           this.field_e = 0;
           return var2;
         }
+        this.b(-58);
+        this.field_e = 0;
+        return var2;
     }
 
     final void a(byte param0, java.awt.Component param1) {
         if (param0 <= 37) {
-            return;
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

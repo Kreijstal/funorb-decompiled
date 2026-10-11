@@ -105,12 +105,12 @@ final class qa {
         int dupTemp$14 = 0;
         int incrementValue$15 = 0;
         int stackIn_4_0 = 0;
-        int stackIn_66_0 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
-        String stackIn_70_2 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
+        int stackIn_67_0 = 0;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        String stackIn_71_2 = null;
+        StringBuilder stackIn_73_1 = null;
+        String stackIn_74_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
@@ -257,39 +257,38 @@ final class qa {
             }
             dupTemp$14 = this.field_c[var7_int];
             var11Lifetime7 = dupTemp$14;
-            if (dupTemp$14 >= 0) {
-              var9++;
-              continue;
-            }
-            incrementValue$15 = param3;
-            param3++;
-            param0[incrementValue$15] = (byte)(~var11Lifetime7);
-            if (param3 < param5) {
+            if (dupTemp$14 < 0) {
+              incrementValue$15 = param3;
+              param3++;
+              param0[incrementValue$15] = (byte)(~var11Lifetime7);
+              if (param3 >= param5) {
+                break L2;
+              }
               var7_int = 0;
-              var9++;
-              continue;
             }
-            break;
+            var9++;
+            continue;
+
           }
-          stackIn_66_0 = var9 + 1 - param1;
-          return stackIn_66_0;
+          stackIn_67_0 = var9 + 1 - param1;
+          return stackIn_67_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          stackIn_69_0 = var7;
-          stackIn_69_1 = new StringBuilder().append("qa.E(");
+          stackIn_70_0 = var7;
+          stackIn_70_1 = new StringBuilder().append("qa.E(");
           if (param0 == null) {
-            stackIn_70_2 = "null";
+            stackIn_71_2 = "null";
           } else {
-            stackIn_70_2 = "{...}";
+            stackIn_71_2 = "{...}";
           }
-          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',');
+          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',');
           if (param2 == null) {
-            stackIn_73_2 = "null";
+            stackIn_74_2 = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            stackIn_74_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

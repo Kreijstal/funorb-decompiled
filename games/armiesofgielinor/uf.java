@@ -16,83 +16,45 @@ final class uf {
     private String field_h;
 
     final static void a(ls[] param0, int param1) {
-        int var2_int = 0;
         int var3 = 0;
+        int var2_int = 0;
         ls var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            var2_int = param0.length;
-            if (param1 == 1680474497) {
-              var3 = 1;
-              L1: while (true) {
-                if (var3 >= var2_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var4 = param0[var3];
-                  var5 = var3 + -1;
-                  L2: while (true) {
-                    L3: {
-                      if (-1 < (var5 ^ -1)) {
-                        break L3;
-                      } else {
-                        if (!nf.a(var4, param0[var5], 30549)) {
-                          break L3;
-                        } else {
-                          param0[1 + var5] = param0[var5];
-                          var5--;
-                          continue L2;
-                        }
-                      }
-                    }
-                    param0[1 + var5] = var4;
-                    var3++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_int = param0.length;
+          if (param1 != 1680474497) {
+            return;
           }
+          for (var3 = 1; var3 < var2_int; var3++) {
+            var4 = param0[var3];
+            for (var5 = var3 - 1; var5 >= 0; var5--) {
+              if (nf.a(var4, param0[var5], 30549)) {
+                param0[1 + var5] = param0[var5];
+                continue;
+              }
+              break;
+            }
+            param0[1 + var5] = var4;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("uf.C(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("uf.C(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,14 +62,14 @@ final class uf {
         int var4 = so.field_b.field_a;
         int var5 = so.field_b.field_g;
         int var6 = 30 + (rs.field_n.a(this.field_h, 200, 0) + 5);
-        if (!(!wg.a(-33, var4 / 2 - 100, -2 + var4 / 2, var5 / 2 + ((var6 >> -1234288511) - 30), (var6 >> 1291737441) + var5 / 2))) {
-            return param2;
+        if (wg.a(-33, var4 / 2 - 100, -2 + var4 / 2, var5 / 2 + ((var6 >> 1) - 30), (var6 >> 1) + var5 / 2)) {
+          return param2;
         }
-        if (!(!wg.a(-33, var4 / 2 + 2, var4 / 2 - -100, -30 + ((var6 >> -1581992159) + var5 / 2), var5 / 2 - -(var6 >> -926290399)))) {
-            return param0;
+        if (wg.a(-33, var4 / 2 + 2, var4 / 2 + 100, -30 + ((var6 >> 1) + var5 / 2), var5 / 2 + (var6 >> 1))) {
+          return param0;
         }
         if (param1 < 41) {
-            field_i = (je) null;
+          field_i = (je) null;
         }
         return -1;
     }
@@ -115,7 +77,7 @@ final class uf {
     public static void a(int param0) {
         field_g = null;
         if (param0 <= 18) {
-            return;
+          return;
         }
         field_l = null;
         field_f = null;
@@ -127,35 +89,35 @@ final class uf {
         int var2 = so.field_b.field_a;
         int var3 = so.field_b.field_g;
         if (param0 != 1619620993) {
-            return;
+          return;
         }
         qn.b(0, 0, var2, var3, 0, 128);
         int var4 = 5 + (rs.field_n.a(this.field_h, 200, 0) + 30);
-        fe.b(212, -(var4 >> 452382465) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
-        rs.field_n.a(this.field_h, var2 / 2 - 100, -(var4 >> -381734687) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
-        int[] var10 = wg.a(param0 + -1619621026, var2 / 2 + -100, 318, -30 + var3 / 2 - -(var4 >> -843015263), (var4 >> 1345456481) + var3 / 2) ? ci.field_e : nd.field_b;
+        fe.b(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, io.field_m, nd.field_b, 0, 128);
+        rs.field_n.a(this.field_h, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
+        int[] var10 = wg.a(param0 - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? ci.field_e : nd.field_b;
         int[] var8 = var10;
         int[] var6 = var8;
         int[] var5 = var6;
-        fe.a(-100 + var2 / 2, (var4 >> -1007423103) + (var3 / 2 - 30), 98, 30, il.field_s, var10, 0, 128, true);
-        int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1680474497) - -30), var3 / 2 - -(var4 >> 426639201)) ? ci.field_e : nd.field_b;
+        fe.a(-100 + var2 / 2, (var4 >> 1) + (var3 / 2 - 30), 98, 30, il.field_s, var10, 0, 128, true);
+        int[] var11 = wg.a(-33, 2 + var2 / 2, var2 / 2 + 100, var3 / 2 - (-(var4 >> 1) + 30), var3 / 2 + (var4 >> 1)) ? ci.field_e : nd.field_b;
         int[] var9 = var11;
         int[] var7 = var9;
         var5 = var7;
-        fe.a(var2 / 2 + 2, -30 + (var3 / 2 - -(var4 >> 1619620993)), 98, 30, il.field_s, var11, 0, 128, true);
-        fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 296021185) + var3 / 2 - 15, 0, true);
-        fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 288365281)), 0, true);
+        fe.a(var2 / 2 + 2, -30 + (var3 / 2 + (var4 >> 1)), 98, 30, il.field_s, var11, 0, 128, true);
+        fe.c(nt.field_p, 50 + (-100 + var2 / 2), 17 + (var4 >> 1) + var3 / 2 - 15, 0, true);
+        fe.c(oa.field_G, -50 + var2 / 2 + 100, 2 + (var3 / 2 + (var4 >> 1)), 0, true);
     }
 
     uf(int param0, int param1, int param2, int param3, String param4, ic param5) {
         try {
-            this.field_c = param3;
-            this.field_k = param1;
-            this.field_b = param2;
-            this.field_h = param4;
-            this.field_d = param0;
+          this.field_c = param3;
+          this.field_k = param1;
+          this.field_b = param2;
+          this.field_h = param4;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "uf.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class s {
         field_b = null;
         field_a = null;
         if (!param0) {
-            s.a(false);
+          s.a(false);
         }
     }
 

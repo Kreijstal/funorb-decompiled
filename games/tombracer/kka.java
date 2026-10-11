@@ -11,7 +11,7 @@ final class kka extends ob {
         field_r = null;
         field_o = null;
         if (param0 >= -68) {
-            return;
+          return;
         }
         field_p = null;
     }
@@ -29,25 +29,25 @@ final class kka extends ob {
 
     final void a(byte param0, int param1) {
         if (param0 != 62) {
-            this.a((byte) 4, 0.1830597221851349f);
-            this.field_h = param1;
-            return;
+          this.a((byte) 4, 0.1830597221851349f);
+          this.field_h = param1;
+          return;
         }
         this.field_h = param1;
     }
 
     final void a(byte param0, float param1) {
         if (param0 < 77) {
-            this.a((byte) 113, -0.27641594409942627f);
-            this.field_j = param1;
-            return;
+          this.a((byte) 113, -0.27641594409942627f);
+          this.field_j = param1;
+          return;
         }
         this.field_j = param1;
     }
 
     final void a(int param0, int param1) {
         if (param0 != 255) {
-            return;
+          return;
         }
         this.field_g = param1;
     }

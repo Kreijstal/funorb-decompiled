@@ -16,18 +16,18 @@ final class ki {
         field_c = null;
         field_e = null;
         if (param0 != -35) {
-            ki.a((byte) 80);
+          ki.a((byte) 80);
         }
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4) {
         try {
-            sj.a(param2, param1, param0, 32, param3 + "_reveal", param3 + "_defeat");
-            if (param4 != -1) {
-                field_f = 66;
-            }
+          sj.a(param2, param1, param0, 32, param3 + "_reveal", param3 + "_defeat");
+          if (param4 != -1) {
+            field_f = 66;
+          }
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ki.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

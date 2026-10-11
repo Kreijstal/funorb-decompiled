@@ -11,93 +11,50 @@ final class mga implements mkb {
     private int field_a;
 
     public final boolean a(int param0, int param1, int param2) {
-        int stackIn_12_0 = 0;
-        int stackIn_24_0 = 0;
+        boolean stackIn_12_0 = false;
+        boolean stackIn_24_0 = false;
         int var4;
         int var5;
+        int var4Lifetime1;
+        int var5Lifetime1;
         this.field_c = param1;
-        if (param2 <= 81) {
-          L0: {
-            this.field_g = (nla) null;
-            this.field_b = (byte)param0;
-            if (this.field_a >= this.field_c) {
-              break L0;
+        if (param2 > 81) {
+          this.field_b = (byte)param0;
+          if (this.field_a < this.field_c) {
+            var5 = 8;
+            if (this.field_e) {
+              var4 = 0;
+              var5 = var5 | 512;
             } else {
-              L1: {
-                var5 = 8;
-                if (this.field_e) {
-                  var4 = 0;
-                  var5 = var5 | 512;
-                  break L1;
-                } else {
-                  var4 = 1;
-                  break L1;
-                }
-              }
-              L2: {
-                if (this.field_f != null) {
-                  this.field_f.a(false);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              this.field_f = this.field_g.field_Mc.a(this.field_c, var5, 0, var4, this.field_f);
-              this.field_a = this.field_c;
-              break L0;
+              var4 = 1;
             }
-          }
-          L3: {
-            if (this.field_f == null) {
-              stackIn_24_0 = 0;
-              break L3;
-            } else {
-              stackIn_24_0 = 1;
-              break L3;
+            if (this.field_f != null) {
+              this.field_f.a(false);
             }
+            this.field_f = this.field_g.field_Mc.a(this.field_c, var5, 0, var4, this.field_f);
+            this.field_a = this.field_c;
           }
-          return stackIn_24_0 != 0;
-        } else {
-          L4: {
-            this.field_b = (byte)param0;
-            if (this.field_a >= this.field_c) {
-              break L4;
-            } else {
-              L5: {
-                var5 = 8;
-                if (this.field_e) {
-                  var4 = 0;
-                  var5 = var5 | 512;
-                  break L5;
-                } else {
-                  var4 = 1;
-                  break L5;
-                }
-              }
-              L6: {
-                if (this.field_f != null) {
-                  this.field_f.a(false);
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              this.field_f = this.field_g.field_Mc.a(this.field_c, var5, 0, var4, this.field_f);
-              this.field_a = this.field_c;
-              break L4;
-            }
-          }
-          L7: {
-            if (this.field_f == null) {
-              stackIn_12_0 = 0;
-              break L7;
-            } else {
-              stackIn_12_0 = 1;
-              break L7;
-            }
-          }
-          return stackIn_12_0 != 0;
+          stackIn_12_0 = (this.field_f != null);
+          return stackIn_12_0;
         }
+        this.field_g = (nla) null;
+        this.field_b = (byte)param0;
+        if (this.field_a < this.field_c) {
+          var5Lifetime1 = 8;
+          if (this.field_e) {
+            var4Lifetime1 = 0;
+            var5Lifetime1 = var5Lifetime1 | 512;
+          } else {
+            var4Lifetime1 = 1;
+          }
+          if (this.field_f != null) {
+            this.field_f.a(false);
+          }
+          this.field_f = this.field_g.field_Mc.a(this.field_c, var5Lifetime1, 0, var4Lifetime1, this.field_f);
+          this.field_a = this.field_c;
+        }
+        stackIn_24_0 = (this.field_f != null);
+        return stackIn_24_0;
     }
 
     final int a(byte param0) {
@@ -106,85 +63,68 @@ final class mga implements mkb {
     }
 
     public final void a(int param0) {
-        if (param0 > -84) {
-          L0: {
-            this.field_d = false;
-            if (this.field_f != null) {
-              this.field_f.a(false);
-              this.field_f = null;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          this.field_c = 0;
-          this.field_a = 0;
-          return;
-        } else {
-          L1: {
-            if (this.field_f != null) {
-              this.field_f.a(false);
-              this.field_f = null;
-              break L1;
-            } else {
-              break L1;
-            }
+        if (param0 <= -84) {
+          if (this.field_f != null) {
+            this.field_f.a(false);
+            this.field_f = null;
           }
           this.field_c = 0;
           this.field_a = 0;
           return;
         }
+        this.field_d = false;
+        if (this.field_f != null) {
+          this.field_f.a(false);
+          this.field_f = null;
+        }
+        this.field_c = 0;
+        this.field_a = 0;
     }
 
     public final boolean b(int param0) {
-        if (param0 == -20836) {
-          if (this.field_d) {
-            if (!jagdx.hea.b(this.field_f.Unlock(), (byte) 53)) {
-              return false;
-            } else {
-              this.field_d = false;
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -20836) {
           this.field_c = 48;
-          if (this.field_d) {
-            if (!jagdx.hea.b(this.field_f.Unlock(), (byte) 53)) {
-              return false;
-            } else {
-              this.field_d = false;
-              return true;
-            }
-          } else {
+          if (!this.field_d) {
             return false;
           }
+          if (jagdx.hea.b(this.field_f.Unlock(), (byte) 53)) {
+            this.field_d = false;
+            return true;
+          }
+          return false;
         }
+        if (!this.field_d) {
+          return false;
+        }
+        if (jagdx.hea.b(this.field_f.Unlock(), (byte) 53)) {
+          this.field_d = false;
+          return true;
+        }
+        return false;
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
         if (null == this.field_f) {
-            return null;
+          return null;
         }
         param0 = param0 & this.field_e;
         if (param1 <= 16) {
-            this.field_e = false;
-            if (this.field_d) {
-                return null;
-            }
-            if (!(!jagdx.hea.b(this.field_f.Lock(0, this.field_a, !param0 ? 0 : 8192, this.field_g.field_Kc), (byte) 93))) {
-                this.field_d = true;
-                return (jaclib.memory.Buffer) ((Object) this.field_g.field_Kc);
-            }
+          this.field_e = false;
+          if (this.field_d) {
             return null;
-        }
-        if (this.field_d) {
-            return null;
-        }
-        if (!(!jagdx.hea.b(this.field_f.Lock(0, this.field_a, !param0 ? 0 : 8192, this.field_g.field_Kc), (byte) 93))) {
+          }
+          if (jagdx.hea.b(this.field_f.Lock(0, this.field_a, !param0 ? 0 : 8192, this.field_g.field_Kc), (byte) 93)) {
             this.field_d = true;
             return (jaclib.memory.Buffer) ((Object) this.field_g.field_Kc);
+          }
+          return null;
+        }
+        if (this.field_d) {
+          return null;
+        }
+        if (jagdx.hea.b(this.field_f.Lock(0, this.field_a, !param0 ? 0 : 8192, this.field_g.field_Kc), (byte) 93)) {
+          this.field_d = true;
+          return (jaclib.memory.Buffer) ((Object) this.field_g.field_Kc);
         }
         return null;
     }

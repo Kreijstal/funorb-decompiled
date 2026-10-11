@@ -11,15 +11,11 @@ final class h {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_36_0 = 0;
-        int stackIn_37_0 = 0;
         int stackIn_37_1 = 0;
         int stackIn_48_0 = 0;
-        int stackIn_49_0 = 0;
         int stackIn_49_1 = 0;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
-        RuntimeException stackIn_55_0 = null;
-        StringBuilder stackIn_55_1 = null;
         String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -42,239 +38,128 @@ final class h {
         byte[] var19 = null;
         byte[] var20 = null;
         byte[] var21 = null;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var4Lifetime4;
+        int var4Lifetime5;
         var15 = CrazyCrystals.field_B;
         try {
-          L0: {
-            L1: {
-              var16 = new ng(param0);
-              var17 = var16;
-              var17.field_f = -2 + param0.length;
-              mg.field_a = var17.c((byte) -7);
-              jm.field_a = new int[mg.field_a];
-              uo.field_k = new int[mg.field_a];
-              ng.field_g = new byte[mg.field_a][];
-              rh.field_a = new boolean[mg.field_a];
-              je.field_c = new int[mg.field_a];
-              ui.field_c = new byte[mg.field_a][];
-              uo.field_l = new int[mg.field_a];
-              var17.field_f = param0.length - (7 - -(mg.field_a * 8));
-              km.field_c = var17.c((byte) -7);
-              if (param1) {
-                break L1;
-              } else {
-                h.a((byte) 24, 15);
-                break L1;
-              }
+          var16 = new ng(param0);
+          var17 = var16;
+          var17.field_f = -2 + param0.length;
+          mg.field_a = var17.c((byte) -7);
+          jm.field_a = new int[mg.field_a];
+          uo.field_k = new int[mg.field_a];
+          ng.field_g = new byte[mg.field_a][];
+          rh.field_a = new boolean[mg.field_a];
+          je.field_c = new int[mg.field_a];
+          ui.field_c = new byte[mg.field_a][];
+          uo.field_l = new int[mg.field_a];
+          var17.field_f = param0.length - (7 + mg.field_a * 8);
+          km.field_c = var17.c((byte) -7);
+          if (!param1) {
+            h.a((byte) 24, 15);
+          }
+          bo.field_o = var17.c((byte) -7);
+          var3 = (255 & var17.h(255)) + 1;
+          for (var4 = 0; mg.field_a > var4; var4++) {
+            uo.field_k[var4] = var16.c((byte) -7);
+          }
+          for (var4Lifetime1 = 0; mg.field_a > var4Lifetime1; var4Lifetime1++) {
+            jm.field_a[var4Lifetime1] = var17.c((byte) -7);
+          }
+          for (var4Lifetime2 = 0; mg.field_a > var4Lifetime2; var4Lifetime2++) {
+            uo.field_l[var4Lifetime2] = var17.c((byte) -7);
+          }
+          for (var4Lifetime3 = 0; var4Lifetime3 < mg.field_a; var4Lifetime3++) {
+            je.field_c[var4Lifetime3] = var17.c((byte) -7);
+          }
+          var17.field_f = -(mg.field_a * 8) - 7 + (param0.length - var3 * 3 + 3);
+          gh.field_z = new int[var3];
+          for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
+            gh.field_z[var4Lifetime4] = var17.b(false);
+            if (gh.field_z[var4Lifetime4] == 0) {
+              gh.field_z[var4Lifetime4] = 1;
             }
-            bo.field_o = var17.c((byte) -7);
-            var3 = (255 & var17.h(255)) - -1;
-            var4 = 0;
-            L2: while (true) {
-              if (mg.field_a <= var4) {
-                var4 = 0;
-                L3: while (true) {
-                  if (mg.field_a <= var4) {
-                    var4 = 0;
-                    L4: while (true) {
-                      if (mg.field_a <= var4) {
-                        var4 = 0;
-                        L5: while (true) {
-                          if (var4 >= mg.field_a) {
-                            var17.field_f = -(mg.field_a * 8) + -7 + (param0.length + -(var3 * 3) - -3);
-                            gh.field_z = new int[var3];
-                            var4 = 1;
-                            L6: while (true) {
-                              if (var3 <= var4) {
-                                var17.field_f = 0;
-                                var4 = 0;
-                                L7: while (true) {
-                                  if (mg.field_a <= var4) {
-                                    break L0;
-                                  } else {
-                                    L8: {
-                                      var5 = uo.field_l[var4];
-                                      var6 = je.field_c[var4];
-                                      var7 = var5 * var6;
-                                      var20 = new byte[var7];
-                                      var18 = var20;
-                                      var8 = var18;
-                                      ui.field_c[var4] = var20;
-                                      var21 = new byte[var7];
-                                      var19 = var21;
-                                      var9 = var19;
-                                      ng.field_g[var4] = var21;
-                                      var10 = 0;
-                                      var11 = var17.h(255);
-                                      if (0 == (1 & var11)) {
-                                        var12 = 0;
-                                        L9: while (true) {
-                                          if (var12 >= var7) {
-                                            if (-1 != (2 & var11 ^ -1)) {
-                                              var12 = 0;
-                                              L10: while (true) {
-                                                if (var7 <= var12) {
-                                                  break L8;
-                                                } else {
-                                                  L11: {
-                                                    dupTemp$0 = var17.d((byte) -113);
-                                                    var9[var12] = dupTemp$0;
-                                                    var13 = dupTemp$0;
-                                                    stackIn_48_0 = var10;
-
-                                                    if (0 == (var13 ^ -1)) {
-                                                      stackIn_49_0 = stackIn_48_0;
-                                                      stackIn_49_1 = 0;
-                                                      break L11;
-                                                    } else {
-                                                      stackIn_49_0 = stackIn_48_0;
-                                                      stackIn_49_1 = 1;
-                                                      break L11;
-                                                    }
-                                                  }
-                                                  var10 = stackIn_49_0 | stackIn_49_1;
-                                                  var12++;
-                                                  continue L10;
-                                                }
-                                              }
-                                            } else {
-                                              break L8;
-                                            }
-                                          } else {
-                                            var8[var12] = var17.d((byte) 124);
-                                            var12++;
-                                            continue L9;
-                                          }
-                                        }
-                                      } else {
-                                        var12 = 0;
-                                        L12: while (true) {
-                                          if (var5 <= var12) {
-                                            if (0 == (2 & var11)) {
-                                              break L8;
-                                            } else {
-                                              var12 = 0;
-                                              L13: while (true) {
-                                                if (var5 <= var12) {
-                                                  break L8;
-                                                } else {
-                                                  var13 = 0;
-                                                  L14: while (true) {
-                                                    if (var6 <= var13) {
-                                                      var12++;
-                                                      continue L13;
-                                                    } else {
-                                                      L15: {
-                                                        dupTemp$1 = var17.d((byte) 119);
-                                                        var9[var13 * var5 + var12] = dupTemp$1;
-                                                        var14 = dupTemp$1;
-                                                        stackIn_36_0 = var10;
-
-                                                        if (var14 == -1) {
-                                                          stackIn_37_0 = stackIn_36_0;
-                                                          stackIn_37_1 = 0;
-                                                          break L15;
-                                                        } else {
-                                                          stackIn_37_0 = stackIn_36_0;
-                                                          stackIn_37_1 = 1;
-                                                          break L15;
-                                                        }
-                                                      }
-                                                      var10 = stackIn_37_0 | stackIn_37_1;
-                                                      var13++;
-                                                      continue L14;
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          } else {
-                                            var13 = 0;
-                                            L16: while (true) {
-                                              if (var13 >= var6) {
-                                                var12++;
-                                                continue L12;
-                                              } else {
-                                                var8[var12 - -(var13 * var5)] = var17.d((byte) -33);
-                                                var13++;
-                                                continue L16;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                    rh.field_a[var4] = var10 != 0;
-                                    var4++;
-                                    continue L7;
-                                  }
-                                }
-                              } else {
-                                L17: {
-                                  gh.field_z[var4] = var17.b(false);
-                                  if ((gh.field_z[var4] ^ -1) != -1) {
-                                    break L17;
-                                  } else {
-                                    gh.field_z[var4] = 1;
-                                    break L17;
-                                  }
-                                }
-                                var4++;
-                                continue L6;
-                              }
-                            }
-                          } else {
-                            je.field_c[var4] = var17.c((byte) -7);
-                            var4++;
-                            continue L5;
-                          }
-                        }
-                      } else {
-                        uo.field_l[var4] = var17.c((byte) -7);
-                        var4++;
-                        continue L4;
-                      }
-                    }
+          }
+          var17.field_f = 0;
+          for (var4Lifetime5 = 0; mg.field_a > var4Lifetime5; var4Lifetime5++) {
+            var5 = uo.field_l[var4Lifetime5];
+            var6 = je.field_c[var4Lifetime5];
+            var7 = var5 * var6;
+            var20 = new byte[var7];
+            var18 = var20;
+            var8 = var18;
+            ui.field_c[var4Lifetime5] = var20;
+            var21 = new byte[var7];
+            var19 = var21;
+            var9 = var19;
+            ng.field_g[var4Lifetime5] = var21;
+            var10 = 0;
+            var11 = var17.h(255);
+            if (0 == (1 & var11)) {
+              for (var12 = 0; var12 < var7; var12++) {
+                var8[var12] = var17.d((byte) 124);
+              }
+              if ((2 & var11) != 0) {
+                for (var12 = 0; var7 > var12; var12++) {
+                  dupTemp$0 = var17.d((byte) -113);
+                  var9[var12] = dupTemp$0;
+                  var13 = dupTemp$0;
+                  stackIn_48_0 = var10;
+                  if (var13 == -1) {
+                    stackIn_49_1 = 0;
                   } else {
-                    jm.field_a[var4] = var17.c((byte) -7);
-                    var4++;
-                    continue L3;
+                    stackIn_49_1 = 1;
+                  }
+                  var10 = stackIn_48_0 | stackIn_49_1;
+                }
+              }
+            } else {
+              for (var12 = 0; var5 > var12; var12++) {
+                for (var13 = 0; var13 < var6; var13++) {
+                  var8[var12 + var13 * var5] = var17.d((byte) -33);
+                }
+              }
+              if (0 != (2 & var11)) {
+                for (var12 = 0; var5 > var12; var12++) {
+                  for (var13 = 0; var6 > var13; var13++) {
+                    dupTemp$1 = var17.d((byte) 119);
+                    var9[var13 * var5 + var12] = dupTemp$1;
+                    var14 = dupTemp$1;
+                    stackIn_36_0 = var10;
+                    if (var14 == -1) {
+                      stackIn_37_1 = 0;
+                    } else {
+                      stackIn_37_1 = 1;
+                    }
+                    var10 = stackIn_36_0 | stackIn_37_1;
                   }
                 }
-              } else {
-                uo.field_k[var4] = var16.c((byte) -7);
-                var4++;
-                continue L2;
               }
             }
+            rh.field_a[var4Lifetime5] = var10 != 0;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L18: {
-            var2 = decompiledCaughtException;
-            stackIn_54_0 = (RuntimeException) (var2);
-
-            stackIn_54_1 = new StringBuilder().append("h.C(");
-
-            if (param0 == null) {
-              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackIn_55_2 = "null";
-              break L18;
-            } else {
-              stackIn_55_0 = (RuntimeException) ((Object) stackIn_54_0);
-              stackIn_55_1 = (StringBuilder) ((Object) stackIn_54_1);
-              stackIn_55_2 = "{...}";
-              break L18;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_54_0 = var2;
+          stackIn_54_1 = new StringBuilder().append("h.C(");
+          if (param0 == null) {
+            stackIn_55_2 = "null";
+          } else {
+            stackIn_55_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_55_0), stackIn_55_2 + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 != 0) {
-            h.a(-16);
+          h.a(-16);
         }
     }
 
@@ -283,91 +168,51 @@ final class h {
         byte[][] fieldTemp$1 = null;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
+        int var2 = 0;
         int dupTemp$4 = 0;
         byte[][] arrayValue$5 = null;
         byte[] var2_ref_byte__;
-        int var2;
         byte[] var3;
-        L0: {
-          if (-101 != (param1 ^ -1)) {
-            break L0;
-          } else {
-            if (-1 <= (so.field_e ^ -1)) {
-              break L0;
-            } else {
-              fieldTemp$0 = so.field_e - 1;
-              so.field_e = so.field_e - 1;
-              var2_ref_byte__ = mn.field_i[fieldTemp$0];
-              mn.field_i[so.field_e] = null;
-              return var2_ref_byte__;
-            }
-          }
+        byte[] var2_ref_byte__Lifetime1;
+        byte[] var2_ref_byte__Lifetime2;
+        if (param1 == 100 &&
+          so.field_e > 0) {
+          fieldTemp$0 = so.field_e - 1;
+          so.field_e = so.field_e - 1;
+          var2_ref_byte__ = mn.field_i[fieldTemp$0];
+          mn.field_i[so.field_e] = null;
+          return var2_ref_byte__;
         }
-        L1: {
-          if (param1 != 5000) {
-            break L1;
-          } else {
-            if ((je.field_e ^ -1) >= -1) {
-              break L1;
-            } else {
-              fieldTemp$1 = tg.field_e;
-              fieldTemp$2 = je.field_e - 1;
-              je.field_e = je.field_e - 1;
-              var2_ref_byte__ = fieldTemp$1[fieldTemp$2];
-              tg.field_e[je.field_e] = null;
-              return var2_ref_byte__;
-            }
-          }
+        if (param1 == 5000 &&
+          je.field_e > 0) {
+          fieldTemp$1 = tg.field_e;
+          fieldTemp$2 = je.field_e - 1;
+          je.field_e = je.field_e - 1;
+          var2_ref_byte__Lifetime1 = fieldTemp$1[fieldTemp$2];
+          tg.field_e[je.field_e] = null;
+          return var2_ref_byte__Lifetime1;
         }
-        L2: {
-          if (param0 == 26) {
-            break L2;
-          } else {
-            field_d = (dl[]) null;
-            break L2;
-          }
+        if (param0 != 26) {
+          field_d = (dl[]) null;
         }
-        L3: {
-          if ((param1 ^ -1) != -30001) {
-            break L3;
-          } else {
-            if (-1 > (ed.field_z ^ -1)) {
-              fieldTemp$3 = ed.field_z - 1;
-              ed.field_z = ed.field_z - 1;
-              var2_ref_byte__ = oc.field_a[fieldTemp$3];
-              oc.field_a[ed.field_z] = null;
-              return var2_ref_byte__;
-            } else {
-              break L3;
-            }
-          }
+        if (param1 == 30000 &&
+          ed.field_z > 0) {
+          fieldTemp$3 = ed.field_z - 1;
+          ed.field_z = ed.field_z - 1;
+          var2_ref_byte__Lifetime2 = oc.field_a[fieldTemp$3];
+          oc.field_a[ed.field_z] = null;
+          return var2_ref_byte__Lifetime2;
         }
-        L4: {
-          if (null == lp.field_a) {
-            break L4;
-          } else {
-            var2 = 0;
-            L5: while (true) {
-              if (kk.field_e.length <= var2) {
-                break L4;
-              } else {
-                if (kk.field_e[var2] == param1) {
-                  if ((jd.field_K[var2] ^ -1) < -1) {
-                    dupTemp$4 = jd.field_K[var2] - 1;
-                    arrayValue$5 = lp.field_a[var2];
-                    jd.field_K[var2] = dupTemp$4;
-                    var3 = arrayValue$5[dupTemp$4];
-                    lp.field_a[var2][jd.field_K[var2]] = null;
-                    return var3;
-                  } else {
-                    var2++;
-                    continue L5;
-                  }
-                } else {
-                  var2++;
-                  continue L5;
-                }
-              }
+        if (null != lp.field_a) {
+          for (var2 = 0; kk.field_e.length > var2; var2++) {
+            if (kk.field_e[var2] == param1 &&
+              jd.field_K[var2] > 0) {
+              dupTemp$4 = jd.field_K[var2] - 1;
+              arrayValue$5 = lp.field_a[var2];
+              jd.field_K[var2] = dupTemp$4;
+              var3 = arrayValue$5[dupTemp$4];
+              lp.field_a[var2][jd.field_K[var2]] = null;
+              return var3;
             }
           }
         }

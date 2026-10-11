@@ -11,82 +11,62 @@ final class md {
 
     final static boolean a(byte param0) {
         if (param0 > -6) {
-            md.a(122, false);
-            return qe.a(mk.g(-122), (byte) -98);
+          md.a(122, false);
+          return qe.a(mk.g(-122), (byte) -98);
         }
         return qe.a(mk.g(-122), (byte) -98);
     }
 
     final static boolean a(int param0, boolean param1) {
         try {
-            long dupTemp$1 = 0L;
-            IOException var2 = null;
-            w var4 = null;
-            w var5 = null;
-            int stackIn_13_0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (null == fe.field_c) {
-                fe.field_c = td.field_b.a(mk.field_k, (byte) -108, ag.field_e);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (param0 > 47) {
-              if (0 == fe.field_c.field_a) {
-                return false;
-              } else {
-                dupTemp$1 = id.a(94);
-                ua.field_E = dupTemp$1;
-                uk.field_a = dupTemp$1;
-                if (-2 == (fe.field_c.field_a ^ -1)) {
-                  try {
-                    L1: {
-                      L2: {
-                        cb.field_j = new jd((java.net.Socket) (fe.field_c.field_e), td.field_b);
-                        var4 = rd.field_j;
-                        var5 = var4;
-                        na.field_r.field_i = 0;
-                        var5.field_i = 0;
-                        if (param1) {
-                          stackIn_13_0 = -2;
-                          break L2;
-                        } else {
-                          stackIn_13_0 = -1;
-                          break L2;
-                        }
-                      }
-                      ni.field_d = stackIn_13_0;
-                      hc.field_f = stackIn_13_0;
-                      sb.field_a = stackIn_13_0;
-                      ra.field_b = vf.field_a;
-                      nf.a(na.field_r, false, ag.field_d, kh.field_g, kj.field_t);
-                      fe.a((byte) -36, -1);
-                      break L1;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var2 = (IOException) (Object) decompiledCaughtException;
-                    ra.field_b = rk.field_fb;
-                    fe.field_c = null;
-                    return true;
-                  }
-                  fe.field_c = null;
-                  return true;
-                } else {
-                  ra.field_b = rk.field_fb;
-                  fe.field_c = null;
-                  return true;
-                }
-              }
-            } else {
+          long dupTemp$1 = 0L;
+          IOException var2 = null;
+          w var4 = null;
+          w var5 = null;
+          int stackIn_13_0 = 0;
+          Throwable decompiledCaughtException = null;
+          if (null == fe.field_c) {
+            fe.field_c = td.field_b.a(mk.field_k, (byte) -108, ag.field_e);
+          }
+          if (param0 <= 47) {
+            return true;
+          }
+          if (0 == fe.field_c.field_a) {
+            return false;
+          }
+          dupTemp$1 = id.a(94);
+          ua.field_E = dupTemp$1;
+          uk.field_a = dupTemp$1;
+          if (fe.field_c.field_a != 1) {
+            ra.field_b = rk.field_fb;
+          } else {
+            try {
+              cb.field_j = new jd((java.net.Socket) (fe.field_c.field_e), td.field_b);
+              var4 = rd.field_j;
+              var5 = var4;
+              na.field_r.field_i = 0;
+              var5.field_i = 0;
+              stackIn_13_0 = (param1) ? -2 : -1;
+              ni.field_d = stackIn_13_0;
+              hc.field_f = stackIn_13_0;
+              sb.field_a = stackIn_13_0;
+              ra.field_b = vf.field_a;
+              nf.a(na.field_r, false, ag.field_d, kh.field_g, kj.field_t);
+              fe.a((byte) -36, -1);
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (IOException) (Object) decompiledCaughtException;
+              ra.field_b = rk.field_fb;
+              fe.field_c = null;
               return true;
             }
+          }
+          fe.field_c = null;
+          return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

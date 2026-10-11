@@ -8,46 +8,32 @@ final class p {
     static long field_a;
 
     public static void a(int param0) {
-        if (param0 < 104) {
-          field_b = (w) null;
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 104) {
           field_b = null;
           field_d = null;
           field_c = null;
           return;
         }
+        field_b = (w) null;
+        field_b = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static void a(int param0, byte param1) {
         try {
-            Throwable throwable = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                nc.a("resizing", param1 + -14511, se.h(param1 ^ -25126), new Object[]{new Integer(param0)});
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                throwable = decompiledCaughtException;
-                break L1;
-              }
-            }
-            if (param1 != -30) {
-              p.a(72, (byte) -105);
-              return;
-            } else {
-              return;
-            }
+          try {
+            nc.a("resizing", param1 - 14511, se.h(param1 ^ -25126), new Object[]{new Integer(param0)});
+          } catch (Throwable throwable) {
+          }
+          if (param1 == -30) {
+            return;
+          }
+          p.a(72, (byte) -105);
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

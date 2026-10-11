@@ -18,39 +18,27 @@ final class nl {
     }
 
     final int c() {
+        int var4 = 0;
         int var1;
         int var2;
         int var3;
-        int var4;
         var1 = this.field_a.length;
         var2 = -1;
         var3 = 2147483647;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= var1) {
-            return var2;
-          } else {
-            if (this.field_a[var4] >= 0) {
-              if (this.field_b[var4] < var3) {
-                var2 = var4;
-                var3 = this.field_b[var4];
-                var4++;
-                continue L0;
-              } else {
-                var4++;
-                continue L0;
-              }
-            } else {
-              var4++;
-              continue L0;
-            }
+        for (var4 = 0; var4 < var1; var4++) {
+          if (this.field_a[var4] >= 0 &&
+            this.field_b[var4] < var3) {
+            var2 = var4;
+            var3 = this.field_b[var4];
           }
         }
+        return var2;
     }
 
     final void a(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
+        int var3Lifetime1;
         this.field_h.field_u = param0;
         this.field_h.field_o = 10;
         int var2 = this.field_h.e(-110);
@@ -59,21 +47,21 @@ final class nl {
         this.field_e = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-            var4 = this.field_h.b((byte) 28);
-            var5 = this.field_h.b((byte) 15);
-            if (var4 == 1297379947) {
-                this.field_e[var3] = this.field_h.field_o;
-                var3++;
-            }
-            this.field_h.field_o = this.field_h.field_o + var5;
+          var4 = this.field_h.b((byte) 28);
+          var5 = this.field_h.b((byte) 15);
+          if (var4 == 1297379947) {
+            this.field_e[var3] = this.field_h.field_o;
+            var3++;
+          }
+          this.field_h.field_o = this.field_h.field_o + var5;
         }
         this.field_f = 0L;
         this.field_a = new int[var2];
         int var6 = 0;
-        var3 = var6;
+        var3Lifetime1 = var6;
         while (var6 < var2) {
-            this.field_a[var6] = this.field_e[var6];
-            var6++;
+          this.field_a[var6] = this.field_e[var6];
+          var6++;
         }
         this.field_b = new int[var2];
         this.field_c = new int[var2];
@@ -87,9 +75,9 @@ final class nl {
         int var2 = 0;
         int var1 = this.field_a.length;
         for (var2 = 0; var2 < var1; var2++) {
-            if (this.field_a[var2] >= 0) {
-                return false;
-            }
+          if (this.field_a[var2] >= 0) {
+            return false;
+          }
         }
         return true;
     }
@@ -104,34 +92,36 @@ final class nl {
         int var6 = 0;
         int var3 = 0;
         int var4 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
         if (param1 == 255) {
-            var3 = this.field_h.d((byte) -54);
-            var4 = this.field_h.k(8);
-            if (var3 == 47) {
-                this.field_h.field_o = this.field_h.field_o + var4;
-                return 1;
-            }
-            if (var3 == 81) {
-                var5 = this.field_h.i(71);
-                var4 -= 3;
-                var6 = this.field_b[param0];
-                this.field_f = this.field_f + (long)var6 * (long)(this.field_d - var5);
-                this.field_d = var5;
-                this.field_h.field_o = this.field_h.field_o + var4;
-                return 2;
-            }
+          var3 = this.field_h.d((byte) -54);
+          var4 = this.field_h.k(8);
+          if (var3 == 47) {
             this.field_h.field_o = this.field_h.field_o + var4;
-            return 3;
+            return 1;
+          }
+          if (var3 == 81) {
+            var5 = this.field_h.i(71);
+            var4 -= 3;
+            var6 = this.field_b[param0];
+            this.field_f = this.field_f + (long)var6 * (long)(this.field_d - var5);
+            this.field_d = var5;
+            this.field_h.field_o = this.field_h.field_o + var4;
+            return 2;
+          }
+          this.field_h.field_o = this.field_h.field_o + var4;
+          return 3;
         }
-        var3 = field_i[param1 - 128];
-        var4 = param1;
-        if (var3 >= 1) {
-            var4 = var4 | this.field_h.d((byte) -54) << 8;
+        var3Lifetime1 = field_i[param1 - 128];
+        var4Lifetime1 = param1;
+        if (var3Lifetime1 >= 1) {
+          var4Lifetime1 = var4Lifetime1 | this.field_h.d((byte) -54) << 8;
         }
-        if (var3 >= 2) {
-            var4 = var4 | this.field_h.d((byte) -54) << 16;
+        if (var3Lifetime1 >= 2) {
+          var4Lifetime1 = var4Lifetime1 | this.field_h.d((byte) -54) << 16;
         }
-        return var4;
+        return var4Lifetime1;
     }
 
     final void b(long param0) {
@@ -139,11 +129,11 @@ final class nl {
         this.field_f = param0;
         int var3 = this.field_a.length;
         for (var4 = 0; var4 < var3; var4++) {
-            this.field_b[var4] = 0;
-            this.field_c[var4] = 0;
-            this.field_h.field_o = this.field_e[var4];
-            this.e(var4);
-            this.field_a[var4] = this.field_h.field_o;
+          this.field_b[var4] = 0;
+          this.field_c[var4] = 0;
+          this.field_h.field_o = this.field_e[var4];
+          this.e(var4);
+          this.field_a[var4] = this.field_h.field_o;
         }
     }
 
@@ -160,79 +150,29 @@ final class nl {
         int var2;
         int var3;
         int var4;
-        L0: {
-          var2 = this.field_h.field_u[this.field_h.field_o];
-          if (var2 >= 0) {
-            var2 = this.field_c[param0];
-            break L0;
-          } else {
-            var2 = var2 & 255;
-            this.field_c[param0] = var2;
+        var2 = this.field_h.field_u[this.field_h.field_o];
+        if (var2 >= 0) {
+          var2 = this.field_c[param0];
+        } else {
+          var2 = var2 & 255;
+          this.field_c[param0] = var2;
+          this.field_h.field_o = this.field_h.field_o + 1;
+        }
+        if (var2 != 240 &&
+          var2 != 247) {
+          return this.a(param0, var2);
+        }
+        var3 = this.field_h.k(8);
+        if (var2 == 247 &&
+          var3 > 0) {
+          var4 = this.field_h.field_u[this.field_h.field_o] & 255;
+          if (!(var4 < 241) &&
+            !(var4 > 243) || (var4 == 246 ||
+            var4 == 248) || !(var4 < 250) &&
+            !(var4 > 252) || var4 == 254) {
             this.field_h.field_o = this.field_h.field_o + 1;
-            break L0;
-          }
-        }
-        L1: {
-          if (var2 == 240) {
-            break L1;
-          } else {
-            if (var2 != 247) {
-              return this.a(param0, var2);
-            } else {
-              break L1;
-            }
-          }
-        }
-        L2: {
-          var3 = this.field_h.k(8);
-          if (var2 != 247) {
-            break L2;
-          } else {
-            if (var3 <= 0) {
-              break L2;
-            } else {
-              L3: {
-                L4: {
-                  var4 = this.field_h.field_u[this.field_h.field_o] & 255;
-                  if (var4 < 241) {
-                    break L4;
-                  } else {
-                    if (var4 <= 243) {
-                      break L3;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                if (var4 == 246) {
-                  break L3;
-                } else {
-                  if (var4 == 248) {
-                    break L3;
-                  } else {
-                    L5: {
-                      if (var4 < 250) {
-                        break L5;
-                      } else {
-                        if (var4 <= 252) {
-                          break L3;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    if (var4 != 254) {
-                      break L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-              }
-              this.field_h.field_o = this.field_h.field_o + 1;
-              this.field_c[param0] = var4;
-              return this.a(param0, var4);
-            }
+            this.field_c[param0] = var4;
+            return this.a(param0, var4);
           }
         }
         this.field_h.field_o = this.field_h.field_o + var3;

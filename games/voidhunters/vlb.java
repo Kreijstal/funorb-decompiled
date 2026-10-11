@@ -6,8 +6,8 @@ final class vlb implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a(-6, 97);
-            return (tv[]) ((Object) new odb[param1]);
+          this.a(-6, 97);
+          return (tv[]) ((Object) new odb[param1]);
         }
         return (tv[]) ((Object) new odb[param1]);
     }
@@ -20,7 +20,7 @@ final class vlb implements dja {
     public static void a(int param0) {
         field_a = null;
         if (param0 >= -48) {
-            field_a = (llb) null;
+          field_a = (llb) null;
         }
     }
 

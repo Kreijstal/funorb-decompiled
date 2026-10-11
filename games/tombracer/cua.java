@@ -8,37 +8,38 @@ final class cua {
 
     public static void a(int param0) {
         if (param0 != 3) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     final static void a(int param0, int param1, int param2) {
         kh var4 = null;
+        kh var4Lifetime1;
         if (param1 != 3) {
-            return;
+          return;
         }
         if (rda.field_o == param0) {
-            return;
+          return;
         }
-        ht var6 = (ht) ((Object) jb.field_K.a(-115, (long)rda.field_o));
+        ht var6 = (ht) (jb.field_K.a(-115, (long)rda.field_o));
         ht var7 = var6;
         rda.field_o = param0;
         if (var7 != null) {
-            var7.field_Cb = null;
+          var7.field_Cb = null;
         } else {
-            var4 = ql.field_k;
-            var4.k(param2, param1 ^ -2985);
-            var4.i(3, param1 + -3);
-            var4.i(11, 0);
-            var4.f(-1477662136, param0);
-            return;
+          var4 = ql.field_k;
+          var4.k(param2, param1 ^ -2985);
+          var4.i(3, param1 - 3);
+          var4.i(11, 0);
+          var4.f(-1477662136, param0);
+          return;
         }
-        var4 = ql.field_k;
-        var4.k(param2, param1 ^ -2985);
-        var4.i(3, param1 + -3);
-        var4.i(11, 0);
-        var4.f(-1477662136, param0);
+        var4Lifetime1 = ql.field_k;
+        var4Lifetime1.k(param2, param1 ^ -2985);
+        var4Lifetime1.i(3, param1 - 3);
+        var4Lifetime1.i(11, 0);
+        var4Lifetime1.f(-1477662136, param0);
     }
 
     final static void a(ht param0, byte param1) {
@@ -48,74 +49,49 @@ final class cua {
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            param0.p(17);
-            var2 = (ht) ((Object) asa.field_j.f(-80));
-            L1: while (true) {
-              L2: {
-                if (var2 == null) {
-                  break L2;
-                } else {
-                  if (!var2.a(param0, 71)) {
-                    break L2;
-                  } else {
-                    var2 = (ht) ((Object) asa.field_j.e(113));
-                    continue L1;
-                  }
-                }
-              }
-              L3: {
-                if (var2 == null) {
-                  asa.field_j.b((byte) -59, param0);
-                  break L3;
-                } else {
-                  ln.a(var2, param0, (byte) -120);
-                  break L3;
-                }
-              }
-              var3 = 27 % ((-29 - param1) / 55);
-              break L0;
+          param0.p(17);
+          var2 = (ht) (asa.field_j.f(-80));
+          while (var2 != null) {
+            if (var2.a(param0, 71)) {
+              var2 = (ht) (asa.field_j.e(113));
+              continue;
             }
+            break;
           }
+          if (var2 == null) {
+            asa.field_j.b((byte) -59, param0);
+          } else {
+            ln.a(var2, param0, (byte) -120);
+          }
+          var3 = 27 % ((-29 - param1) / 55);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            runtimeException = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (runtimeException);
-
-            stackIn_12_1 = new StringBuilder().append("cua.D(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          runtimeException = decompiledCaughtException;
+          stackIn_12_0 = runtimeException;
+          stackIn_12_1 = new StringBuilder().append("cua.D(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         cc.a(37, param1, "");
         if (param0 > -16) {
-            return;
+          return;
         }
         try {
-            nt.a(param1, -1978);
+          nt.a(param1, -1978);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "cua.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,10 +102,10 @@ final class cua {
 
     cua(cka param0, long param1, fca[] param2) {
         try {
-            this.field_c = param1;
-            this.field_a = param0;
+          this.field_c = param1;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "cua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "cua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

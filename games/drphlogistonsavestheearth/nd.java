@@ -17,29 +17,22 @@ final class nd extends hf {
 
     public static void b(boolean param0) {
         field_L = null;
-        if (!param0) {
-          field_Q = true;
-          field_R = null;
-          field_P = null;
-          field_K = null;
-          return;
-        } else {
+        if (param0) {
           field_R = null;
           field_P = null;
           field_K = null;
           return;
         }
+        field_Q = true;
+        field_R = null;
+        field_P = null;
+        field_K = null;
     }
 
     final boolean a(int param0, vg param1, int param2, byte param3, int param4, int param5, int param6) {
-        int stackIn_15_0 = 0;
-        int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -48,99 +41,57 @@ final class nd extends hf {
         int var12 = 0;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            if (super.a(param0, param1, param2, (byte) 117, param4, param5, param6)) {
-              L1: {
-                var8_int = param4 + -param5 + (-this.field_o + -this.field_O);
-                var9 = param0 - param6 + -this.field_m - this.field_S;
-                if (this.field_J * this.field_J <= var9 * var9 + var8_int * var8_int) {
-                  break L1;
-                } else {
-                  L2: {
-                    var10 = Math.atan2((double)var9, (double)var8_int) - pd.field_a;
-                    if (var10 < 0.0) {
-                      var10 = var10 - 3.141592653589793 / (double)this.field_T;
-                      break L2;
-                    } else {
-                      if (0.0 < var10) {
-                        var10 = var10 + 3.141592653589793 / (double)this.field_T;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                  }
-                  this.field_N = (int)(var10 * (double)this.field_T / 6.283185307179586);
-                  L3: while (true) {
-                    if (this.field_N < this.field_T) {
-                      L4: while (true) {
-                        if ((this.field_N ^ -1) <= -1) {
-                          break L1;
-                        } else {
-                          this.field_N = this.field_N + this.field_T;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      this.field_N = this.field_N - this.field_T;
-                      continue L3;
-                    }
-                  }
-                }
-              }
-              stackIn_15_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!super.a(param0, param1, param2, (byte) 117, param4, param5, param6)) {
+            if (param3 >= 113) {
+              return false;
+            }
+            this.field_J = 25;
+            return false;
+          }
+          var8_int = param4 - param5 + (-this.field_o - this.field_O);
+          var9 = param0 - param6 - this.field_m - this.field_S;
+          if (this.field_J * this.field_J > var9 * var9 + var8_int * var8_int) {
+            var10 = Math.atan2((double)var9, (double)var8_int) - pd.field_a;
+            if (var10 < 0.0) {
+              var10 = var10 - 3.141592653589793 / (double)this.field_T;
             } else {
-              if (param3 >= 113) {
-                stackIn_19_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                this.field_J = 25;
-                return false;
+              if (0.0 < var10) {
+                var10 = var10 + 3.141592653589793 / (double)this.field_T;
               }
             }
+            this.field_N = (int)(var10 * (double)this.field_T / 6.283185307179586);
+            while (this.field_N >= this.field_T) {
+              this.field_N = this.field_N - this.field_T;
+            }
+            while (this.field_N < 0) {
+              this.field_N = this.field_N + this.field_T;
+            }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var8);
-
-            stackIn_22_1 = new StringBuilder().append("nd.JA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L5;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L5;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_22_0 = var8;
+          stackIn_22_1 = new StringBuilder().append("nd.JA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_15_0 != 0;
-        } else {
-          return stackIn_19_0 != 0;
+          throw ie.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     final static void a(int param0, String param1) {
         try {
-            pi.field_J = param1;
-            if (param0 != -1) {
-                String var3 = (String) null;
-                nd.a(100, (String) null);
-            }
-            sf.a(12, 11649);
+          pi.field_J = param1;
+          if (param0 != -1) {
+            String var3 = (String) null;
+            nd.a(100, (String) null);
+          }
+          sf.a(12, 11649);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "nd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

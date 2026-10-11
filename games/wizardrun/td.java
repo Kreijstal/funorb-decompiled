@@ -12,20 +12,18 @@ final class td {
     public static void a(int param0) {
         field_c = null;
         field_f = null;
-        if (param0 != 4) {
-          field_c = (int[]) null;
-          field_b = null;
-          field_e = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 4) {
           field_b = null;
           field_e = null;
           field_d = null;
           field_a = null;
           return;
         }
+        field_c = (int[]) null;
+        field_b = null;
+        field_e = null;
+        field_d = null;
+        field_a = null;
     }
 
     final static void b(int param0) {
@@ -33,29 +31,18 @@ final class td {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (ff.field_H == null) {
-          if (param0 != 4) {
-            td.b(-24);
-            return;
-          } else {
+          if (param0 == 4) {
             return;
           }
-        } else {
-          var1 = ff.field_H;
-          synchronized (var1) {
-            L0: {
-              ff.field_H = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 == 4) {
-              break L1;
-            } else {
-              td.b(-24);
-              break L1;
-            }
-          }
+          td.b(-24);
           return;
+        }
+        var1 = ff.field_H;
+        synchronized (var1) {
+          ff.field_H = null;
+        }
+        if (param0 != 4) {
+          td.b(-24);
         }
     }
 

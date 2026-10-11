@@ -13,14 +13,14 @@ final class qj {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.setFocusTraversalKeysEnabled(false);
-            param1.addKeyListener(ji.field_c);
-            param1.addFocusListener(ji.field_c);
-            if (param0 >= -18) {
-                field_f = (he) null;
-            }
+          param1.setFocusTraversalKeysEnabled(false);
+          param1.addKeyListener(ji.field_c);
+          param1.addFocusListener(ji.field_c);
+          if (param0 >= -18) {
+            field_f = (he) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "qj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "qj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class qj {
         Boolean var1 = oe.field_a;
         oe.field_a = null;
         if (param0 != -11) {
-            return (Boolean) null;
+          return (Boolean) null;
         }
         return var1;
     }
@@ -38,93 +38,55 @@ final class qj {
         uh.field_r.d(param2, param1);
         if (!param0) {
         } else {
-            var4 = k.field_L % uh.field_r.field_y * 2;
-            if (!(var4 < uh.field_r.field_y)) {
-                var4 = uh.field_r.field_y + -var4 - -uh.field_r.field_y;
+          var4 = k.field_L % uh.field_r.field_y * 2;
+          if (!(var4 < uh.field_r.field_y)) {
+            var4 = uh.field_r.field_y - var4 + uh.field_r.field_y;
+          }
+          if (var4 < 10) {
+            var4 = 10;
+          } else {
+            if (var4 > -40 + uh.field_r.field_y) {
+              var4 = uh.field_r.field_y - 40;
             }
-            if ((var4 ^ -1) > -11) {
-                var4 = 10;
-            } else {
-                if (var4 > -40 + uh.field_r.field_y) {
-                    var4 = uh.field_r.field_y + -40;
-                }
-            }
-            ee.a(80, 0, param1, param2, -99, 0, 30, var4, uh.field_r);
+          }
+          ee.a(80, 0, param1, param2, -99, 0, 30, var4, uh.field_r);
         }
         if (!param3) {
-            qj.a(-67, -81);
+          qj.a(-67, -81);
         }
     }
 
     final static void a(int param0, int param1) {
         try {
-            IOException iOException = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (null == uj.field_j) {
-                break L0;
-              } else {
-                L1: {
-                  if ((param0 ^ -1) > -1) {
-                    break L1;
-                  } else {
-                    if (tl.field_O == ik.field_d) {
-                      break L1;
-                    } else {
-                      break L0;
-                    }
-                  }
-                }
-                L2: {
-                  if (param1 == 14656) {
-                    break L2;
-                  } else {
-                    field_b = (sa) null;
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (nj.field_p.field_j != 0) {
-                    break L3;
-                  } else {
-                    if (la.a(false) > 10000L + ck.field_e) {
-                      nj.field_p.d(param0, param1 ^ -32408);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (-1 > (nj.field_p.field_j ^ -1)) {
-                    try {
-                      L5: {
-                        uj.field_j.a(nj.field_p.field_j, -30537, nj.field_p.field_h, 0);
-                        ck.field_e = la.a(false);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        eg.a((byte) 126);
-                        break L6;
-                      }
-                    }
-                    nj.field_p.field_j = 0;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                return;
-              }
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          if (null != uj.field_j && (param0 < 0 ||
+            tl.field_O == ik.field_d)) {
+            if (param1 != 14656) {
+              field_b = (sa) null;
             }
-            nj.field_p.field_j = 0;
+            if (nj.field_p.field_j == 0 &&
+              la.a(false) > 10000L + ck.field_e) {
+              nj.field_p.d(param0, param1 ^ -32408);
+            }
+            if (nj.field_p.field_j > 0) {
+              try {
+                uj.field_j.a(nj.field_p.field_j, -30537, nj.field_p.field_h, 0);
+                ck.field_e = la.a(false);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+                eg.a((byte) 126);
+              }
+              nj.field_p.field_j = 0;
+            }
+            return;
+          }
+          nj.field_p.field_j = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -134,7 +96,7 @@ final class qj {
         field_f = null;
         field_e = null;
         field_a = null;
-        int var1 = 105 % ((param0 - -20) / 48);
+        int var1 = 105 % ((param0 + 20) / 48);
     }
 
     final static String a(int param0, char param1, int param2) {
@@ -143,10 +105,10 @@ final class qj {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         if (param2 >= -29) {
-            return (String) null;
+          return (String) null;
         }
         for (var4 = 0; var4 < param0; var4++) {
-            var6[var4] = param1;
+          var6[var4] = param1;
         }
         return new String(var6);
     }

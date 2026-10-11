@@ -6,7 +6,7 @@ final class xa implements gd, e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            vk.a((e) (this), -111);
+          vk.a((e) (this), -111);
         }
     }
 

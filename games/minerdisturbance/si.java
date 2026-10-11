@@ -10,37 +10,33 @@ final class si {
     static boolean field_a;
 
     final static void a(int param0) {
-        if (null == ci.field_i) {
+        if (null != ci.field_i) {
+          ci.field_i.b(127);
+          ci.field_i = null;
           if (param0 >= -23) {
             si.a((byte) -22);
             return;
-          } else {
-            return;
           }
-        } else {
-          ci.field_i.b(127);
-          ci.field_i = null;
-          if (param0 < -23) {
-            return;
-          } else {
-            si.a((byte) -22);
-            return;
-          }
+          return;
         }
+        if (param0 < -23) {
+          return;
+        }
+        si.a((byte) -22);
     }
 
     final static int a(byte param0) {
         if (param0 >= -28) {
-            field_d = 17;
-            ke.field_U.a(0);
-            if (!aj.field_c.a((byte) -53)) {
-                return fn.b(true);
-            }
-            return 0;
+          field_d = 17;
+          ke.field_U.a(0);
+          if (!aj.field_c.a((byte) -53)) {
+            return fn.b(true);
+          }
+          return 0;
         }
         ke.field_U.a(0);
-        if (!(aj.field_c.a((byte) -53))) {
-            return fn.b(true);
+        if (!aj.field_c.a((byte) -53)) {
+          return fn.b(true);
         }
         return 0;
     }
@@ -51,7 +47,7 @@ final class si {
         field_f = null;
         field_e = null;
         if (param0 >= -126) {
-            field_f = (long[]) null;
+          field_f = (long[]) null;
         }
     }
 
@@ -62,33 +58,19 @@ final class si {
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
-              if (param1 == -14391) {
-                break L1;
-              } else {
-                si.a(-79);
-                break L1;
-              }
-            }
-            var2_int = 0;
-            L2: while (true) {
-              if (fb.field_c <= var2_int) {
-                jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 - -param0);
-                if (fb.field_c <= param0) {
-                  break L0;
-                } else {
-                  fb.field_c = param0;
-                  return;
-                }
-              } else {
-                an.field_a[param0 + var2_int] = var2_int;
-                var2_int++;
-                continue L2;
-              }
-            }
+          jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
+          if (param1 != -14391) {
+            si.a(-79);
           }
+          for (var2_int = 0; fb.field_c > var2_int; var2_int++) {
+            an.field_a[param0 + var2_int] = var2_int;
+          }
+          jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 + param0);
+          if (fb.field_c <= param0) {
+            return;
+          }
+          fb.field_c = param0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -47,107 +47,71 @@ final class of {
     static int field_o;
 
     final void a(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = Torquing.field_u;
-        if (!this.field_y) {
-          this.field_y = true;
-          var2 = 32767;
-          var3 = param0;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= this.field_f) {
-              this.field_x = var3;
-              this.field_e = var7;
-              this.field_H = var6;
-              this.field_g = var5;
-              this.field_A = var2;
-              this.field_p = var4;
-              return;
-            } else {
-              L1: {
-                var9 = this.field_B[var8];
-                var10 = this.field_j[var8];
-                if (var5 >= var9) {
-                  break L1;
-                } else {
-                  var5 = var9;
-                  break L1;
-                }
-              }
-              L2: {
-                if (var10 >= var3) {
-                  break L2;
-                } else {
-                  var3 = var10;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var10 > var6) {
-                  var6 = var10;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                var11 = this.field_d[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (var7 < var11) {
-                  var7 = var11;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (var11 < var4) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_y) {
           return;
         }
+        this.field_y = true;
+        var2 = 32767;
+        var3 = param0;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_f; var8++) {
+          var9 = this.field_B[var8];
+          var10 = this.field_j[var8];
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          var11 = this.field_d[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var7 < var11) {
+            var7 = var11;
+          }
+          if (var11 < var4) {
+            var4 = var11;
+          }
+        }
+        this.field_x = var3;
+        this.field_e = var7;
+        this.field_H = var6;
+        this.field_g = var5;
+        this.field_A = var2;
+        this.field_p = var4;
     }
 
     final static String d(byte param0) {
         if (bh.field_a == mg.field_b) {
-            return ol.field_a;
+          return ol.field_a;
         }
         if (!qk.field_q.c(484)) {
-            return qk.field_q.a((byte) -96);
+          return qk.field_q.a((byte) -96);
         }
         if (mg.field_b == kh.field_o) {
-            return qk.field_q.a((byte) -97);
+          return qk.field_q.a((byte) -97);
         }
         if (param0 >= -58) {
-            return (String) null;
+          return (String) null;
         }
         return eo.field_a;
     }
@@ -156,12 +120,12 @@ final class of {
         int var5 = 0;
         int var6 = Torquing.field_u;
         for (var5 = 0; this.field_f > var5; var5++) {
-            this.field_B[var5] = (short)(this.field_B[var5] + param2);
-            this.field_j[var5] = (short)(this.field_j[var5] + param3);
-            this.field_d[var5] = (short)(this.field_d[var5] + param0);
+          this.field_B[var5] = (short)(this.field_B[var5] + param2);
+          this.field_j[var5] = (short)(this.field_j[var5] + param3);
+          this.field_d[var5] = (short)(this.field_d[var5] + param0);
         }
         if (param1 != -6) {
-            this.field_N = (int[]) null;
+          this.field_N = (int[]) null;
         }
         this.c((byte) 32);
     }
@@ -169,32 +133,32 @@ final class of {
     private final void c(byte param0) {
         this.field_y = false;
         if (param0 != 32) {
-            of.a((byte) -15);
+          of.a((byte) -15);
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         int var8 = Torquing.field_u;
-        int var6 = 85 % ((param4 - -41) / 63);
+        int var6 = 85 % ((param4 + 41) / 63);
         for (var7 = 0; var7 < this.field_f; var7++) {
-            this.field_B[var7] = (short)(param3 * this.field_B[var7] / param0);
-            this.field_j[var7] = (short)(this.field_j[var7] * param2 / param0);
-            this.field_d[var7] = (short)(this.field_d[var7] * param1 / param0);
+          this.field_B[var7] = (short)(param3 * this.field_B[var7] / param0);
+          this.field_j[var7] = (short)(this.field_j[var7] * param2 / param0);
+          this.field_d[var7] = (short)(this.field_d[var7] * param1 / param0);
         }
         this.c((byte) 32);
     }
 
     final static void b(byte param0) {
-        hb.field_x.c(new fm(), param0 + -72);
+        hb.field_x.c(new fm(), param0 - 72);
         if (param0 != 105) {
-            field_m = 65;
+          field_m = 65;
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -81) {
-            of.a((byte) -107);
+          of.a((byte) -107);
         }
         field_u = null;
         field_l = null;

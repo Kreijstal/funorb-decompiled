@@ -14,52 +14,31 @@ final class ra extends at {
     static String field_p;
 
     final boolean c(byte param0) {
-        int fieldTemp$1 = 0;
-        int var2;
-        int stackIn_4_0 = 0;
-        if (this.field_q.a((byte) -106)) {
-          return false;
-        } else {
-          L0: {
-            var2 = -46 / ((param0 - 71) / 47);
-            fieldTemp$1 = this.field_m - 1;
-            this.field_m = this.field_m - 1;
-            if (-1 > (fieldTemp$1 ^ -1)) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        int fieldTemp$0 = 0;
+        if (!this.field_q.a((byte) -106)) {
+          int var2 = -46 / ((param0 - 71) / 47);
+          fieldTemp$0 = this.field_m - 1;
+          this.field_m = this.field_m - 1;
+          return fieldTemp$0 <= 0 ? true : false;
         }
+        return false;
     }
 
     ra(gj param0, ew param1) {
         try {
-            this.field_o = param0;
-            this.field_n = param1.field_l.a(-27449, this.field_o);
-            this.field_q = new taa(this.field_o, this.field_n);
-            this.a(27799, this.field_q);
-            this.field_n.a(16761024, 65, fb.field_q);
-            this.field_m = 100;
+          this.field_o = param0;
+          this.field_n = param1.field_l.a(-27449, this.field_o);
+          this.field_q = new taa(this.field_o, this.field_n);
+          this.a(27799, this.field_q);
+          this.field_n.a(16761024, 65, fb.field_q);
+          this.field_m = 100;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void d(int param0) {
-        if (param0 != 11919) {
-          field_p = (String) null;
-          field_k = null;
-          field_j = null;
-          field_r = null;
-          field_s = null;
-          field_l = null;
-          field_p = null;
-          return;
-        } else {
+        if (param0 == 11919) {
           field_k = null;
           field_j = null;
           field_r = null;
@@ -68,6 +47,13 @@ final class ra extends at {
           field_p = null;
           return;
         }
+        field_p = (String) null;
+        field_k = null;
+        field_j = null;
+        field_r = null;
+        field_s = null;
+        field_l = null;
+        field_p = null;
     }
 
     static {

@@ -23,7 +23,7 @@ final class ha extends br {
         field_k = null;
         field_j = null;
         if (param0 != 21342) {
-            ha.a(-3);
+          ha.a(-3);
         }
     }
 
@@ -43,24 +43,21 @@ final class ha extends br {
                         var1_int = 0;
                         if (!param0) {
                             statePc = 3;
+                            continue stateLoop;
                         } else {
-                            statePc = 1;
+                            /* Inlined CFG state: 1. */
+                            {
+                                stackIn_2_0 = (ob) null;
+                                statePc = 2;
+                                continue stateLoop;
+                            }
                         }
-                        continue stateLoop;
                     } catch (Throwable stateCaught_0) {
+                        statePc = ((Object) stateCaught_0 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw ha.<RuntimeException>$cfr$sneakyThrow(stateCaught_0);
+                        }
                         caughtException = stateCaught_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        stackIn_2_0 = (ob) null;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -78,8 +75,11 @@ final class ha extends br {
                         statePc = 5;
                         continue stateLoop;
                     } catch (Throwable stateCaught_4) {
+                        statePc = ((Object) stateCaught_4 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw ha.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
+                        }
                         caughtException = stateCaught_4;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -93,18 +93,30 @@ final class ha extends br {
                         }
                         continue stateLoop;
                     } catch (Throwable stateCaught_5) {
+                        statePc = ((Object) stateCaught_5 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw ha.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
+                        }
                         caughtException = stateCaught_5;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
                 case 6: {
                     try {
-                        statePc = 9;
-                        continue stateLoop;
+                        /* Sequential CFG blocks: 6, 9. */
+                        {
+                        }
+                        {
+                            var1_int++;
+                            statePc = 4;
+                            continue stateLoop;
+                        }
                     } catch (Throwable stateCaught_6) {
+                        statePc = ((Object) stateCaught_6 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw ha.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
+                        }
                         caughtException = stateCaught_6;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
@@ -114,24 +126,16 @@ final class ha extends br {
                         statePc = 8;
                         continue stateLoop;
                     } catch (Throwable stateCaught_7) {
+                        statePc = ((Object) stateCaught_7 instanceof IllegalArgumentException ? 10 : -1);
+                        if (statePc == -1) {
+                            throw ha.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
+                        }
                         caughtException = stateCaught_7;
-                        statePc = 10;
                         continue stateLoop;
                     }
                 }
                 case 8: {
                     return stackIn_8_0;
-                }
-                case 9: {
-                    try {
-                        var1_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
                 }
                 case 10: {
                     var1 = (IllegalArgumentException) ((Object) caughtException);
@@ -144,10 +148,10 @@ final class ha extends br {
 
     ha(ek param0, int param1) {
         try {
-            this.field_m = param0;
-            this.field_f = param1;
+          this.field_m = param0;
+          this.field_f = param1;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "ha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -158,9 +162,14 @@ final class ha extends br {
         field_n = "Detonate a zombie to stun anything close to it.";
         field_k = "Only show lobby chat from my friends";
         for (var0 = 0; var0 < field_j.length; var0++) {
-            field_j[var0] = new oi();
+          field_j[var0] = new oi();
         }
         field_i = new ao(11, 0, 1, 2);
         Random discarded$0 = new Random();
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

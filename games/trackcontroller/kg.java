@@ -13,9 +13,9 @@ final class kg {
         field_a = null;
         field_e = null;
         if (param0 != -1) {
-            field_c = -1;
-            field_b = null;
-            return;
+          field_c = -1;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -27,70 +27,41 @@ final class kg {
         Throwable var6 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var4_int = -101 % ((param1 - 11) / 46);
-              if (null == da.field_n) {
-                break L1;
-              } else {
-                ia.a(param0, param2, 1048576, 1000000, param3);
-                break L1;
-              }
-            }
-            if (fj.field_P == null) {
-              break L0;
-            } else {
-              var5 = sb.field_b;
-              synchronized (var5) {
-                L2: {
-                  fj.field_P.a(param2, (byte) -113, -1);
-                  if (param3 == ch.field_n) {
-                    return;
-                  } else {
-                    L3: {
-                      fj.field_P.f(11795);
-                      sb.field_b.c();
-                      ch.field_n = param3;
-                      if (ch.field_n != null) {
-                        fj.field_P.a(ch.field_n, 14526, param0);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    break L2;
-                  }
-                }
-              }
+          var4_int = -101 % ((param1 - 11) / 46);
+          if (null != da.field_n) {
+            ia.a(param0, param2, 1048576, 1000000, param3);
+          }
+          if (fj.field_P == null) {
+            return;
+          }
+          var5 = sb.field_b;
+          synchronized (var5) {
+            fj.field_P.a(param2, (byte) -113, -1);
+            if (param3 == ch.field_n) {
               return;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var4);
-
-            stackIn_18_1 = new StringBuilder().append("kg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L4;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L4;
+            fj.field_P.f(11795);
+            sb.field_b.c();
+            ch.field_n = param3;
+            if (ch.field_n != null) {
+              fj.field_P.a(ch.field_n, 14526, param0);
             }
           }
-          throw sl.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ')');
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_18_0 = var4;
+          stackIn_18_1 = new StringBuilder().append("kg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw sl.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

@@ -12,10 +12,10 @@ final class he {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -118) {
-            he.a((byte) -126);
-            field_c = null;
-            field_d = null;
-            return;
+          he.a((byte) -126);
+          field_c = null;
+          field_d = null;
+          return;
         }
         field_c = null;
         field_d = null;

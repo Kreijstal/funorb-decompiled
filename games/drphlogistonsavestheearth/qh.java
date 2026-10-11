@@ -8,9 +8,9 @@ final class qh {
 
     public static void a(int param0) {
         if (param0 != 1) {
-            qh.a(13);
-            field_a = null;
-            return;
+          qh.a(13);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

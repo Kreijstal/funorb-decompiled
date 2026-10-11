@@ -12,20 +12,13 @@ class da {
     da field_f;
 
     final void a(boolean param0) {
-        if (null == this.field_h) {
-          return;
-        } else {
-          L0: {
-            this.field_h.field_f = this.field_f;
-            this.field_f.field_h = this.field_h;
-            this.field_h = null;
-            this.field_f = null;
-            if (param0) {
-              break L0;
-            } else {
-              this.field_h = (da) null;
-              break L0;
-            }
+        if (null != this.field_h) {
+          this.field_h.field_f = this.field_f;
+          this.field_f.field_h = this.field_h;
+          this.field_h = null;
+          this.field_f = null;
+          if (!param0) {
+            this.field_h = (da) null;
           }
           return;
         }
@@ -33,38 +26,26 @@ class da {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         try {
-            ia.field_p[param5] = param6;
-            ne.field_b[param5] = param0;
-            bd.field_m[param5] = param1;
-            il.field_q[param5] = param4;
-            int var7_int = -98 / ((9 - param3) / 48);
-            ea.field_d[param5] = param2;
+          ia.field_p[param5] = param6;
+          ne.field_b[param5] = param0;
+          bd.field_m[param5] = param1;
+          il.field_q[param5] = param4;
+          int var7_int = -98 / ((9 - param3) / 48);
+          ea.field_d[param5] = param2;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "da.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "da.SB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean b(int param0) {
-        int stackIn_4_0 = 0;
-        if (param0 != 11163) {
-          this.b(-32);
-          if (null != this.field_h) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (null == this.field_h) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 11163) {
+          return null != this.field_h ? true : false;
         }
+        this.b(-32);
+        if (null == this.field_h) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(byte param0) {
@@ -72,9 +53,9 @@ class da {
         field_g = null;
         field_b = null;
         if (param0 > -87) {
-            field_b = (ka) null;
-            field_c = null;
-            return;
+          field_b = (ka) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

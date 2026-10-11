@@ -25,127 +25,62 @@ abstract class rk extends gp {
         String stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_34_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (-4 == (param2 ^ -1)) {
-              stackIn_3_0 = j.field_s;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                if (param0 == -27) {
-                  break L1;
-                } else {
-                  field_A = (String[]) null;
-                  break L1;
-                }
-              }
-              if ((param2 ^ -1) == -7) {
-                stackIn_9_0 = sk.field_d;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (7 != param2) {
-                  if (param2 != 8) {
-                    if (param2 == 9) {
-                      stackIn_19_0 = ad.field_d;
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      if (10 != param2) {
-                        if ((param2 ^ -1) == -12) {
-                          stackIn_26_0 = fg.field_cb;
-                          decompiledRegionSelector0 = 6;
-                          break L0;
-                        } else {
-                          if (-15 == (param2 ^ -1)) {
-                            stackIn_30_0 = Vertigo2.a(new String[]{param1}, bk.field_b, -115);
-                            decompiledRegionSelector0 = 7;
-                            break L0;
-                          } else {
-                            return null;
-                          }
-                        }
-                      } else {
-                        stackIn_22_0 = cf.field_b;
-                        decompiledRegionSelector0 = 5;
-                        break L0;
-                      }
-                    }
-                  } else {
-                    stackIn_15_0 = re.field_c;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                } else {
-                  stackIn_12_0 = sp.field_K;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            }
+          if (param2 == 3) {
+            stackIn_3_0 = j.field_s;
+            return stackIn_3_0;
           }
+          if (param0 != -27) {
+            field_A = (String[]) null;
+          }
+          if (param2 == 6) {
+            stackIn_9_0 = sk.field_d;
+            return stackIn_9_0;
+          }
+          if (7 == param2) {
+            stackIn_12_0 = sp.field_K;
+            return stackIn_12_0;
+          }
+          if (param2 == 8) {
+            stackIn_15_0 = re.field_c;
+            return stackIn_15_0;
+          }
+          if (param2 == 9) {
+            stackIn_19_0 = ad.field_d;
+            return stackIn_19_0;
+          }
+          if (10 == param2) {
+            stackIn_22_0 = cf.field_b;
+            return stackIn_22_0;
+          }
+          if (param2 == 11) {
+            stackIn_26_0 = fg.field_cb;
+            return stackIn_26_0;
+          }
+          if (param2 != 14) {
+            return null;
+          }
+          stackIn_30_0 = Vertigo2.a(new String[]{param1}, bk.field_b, -115);
+          return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_33_0 = (RuntimeException) (var3);
-
-            stackIn_33_1 = new StringBuilder().append("rk.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "null";
-              break L2;
-            } else {
-              stackIn_34_0 = (RuntimeException) ((Object) stackIn_33_0);
-              stackIn_34_1 = (StringBuilder) ((Object) stackIn_33_1);
-              stackIn_34_2 = "{...}";
-              break L2;
-            }
-          }
-          throw wn.a((Throwable) ((Object) stackIn_34_0), stackIn_34_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
+          var3 = decompiledCaughtException;
+          stackIn_33_0 = var3;
+          stackIn_33_1 = new StringBuilder().append("rk.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_34_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_12_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_15_0;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return stackIn_19_0;
-                } else {
-                  if (decompiledRegionSelector0 == 5) {
-                    return stackIn_22_0;
-                  } else {
-                    if (decompiledRegionSelector0 == 6) {
-                      return stackIn_26_0;
-                    } else {
-                      return stackIn_30_0;
-                    }
-                  }
-                }
-              }
-            }
+            stackIn_34_2 = "{...}";
           }
+          throw wn.a((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void h(int param0) {
         if (param0 > -96) {
-            return;
+          return;
         }
         rh.b(-14, 17);
     }
@@ -156,7 +91,7 @@ abstract class rk extends gp {
         field_x = null;
         field_A = null;
         if (param0) {
-            field_y = 77;
+          field_y = 77;
         }
     }
 
@@ -170,7 +105,7 @@ abstract class rk extends gp {
         int var0 = 0;
         field_w = new vl[255];
         for (var0 = 0; field_w.length > var0; var0++) {
-            field_w[var0] = new vl();
+          field_w[var0] = new vl();
         }
         field_x = "Main Menu";
     }

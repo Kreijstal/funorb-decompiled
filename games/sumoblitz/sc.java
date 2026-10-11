@@ -8,8 +8,8 @@ final class sc extends ua implements pv {
 
     final int g(int param0) {
         if (param0 != 34962) {
-            this.field_p = (byte) -127;
-            return this.field_p;
+          this.field_p = (byte) -127;
+          return this.field_p;
         }
         return this.field_p;
     }
@@ -19,41 +19,38 @@ final class sc extends ua implements pv {
     }
 
     public final jaclib.memory.Buffer a(int param0, boolean param1) {
-        if (param0 != 7454) {
-          this.g(127);
-          return super.a(param1, 2, this.field_f.field_Bc);
-        } else {
+        if (param0 == 7454) {
           return super.a(param1, 2, this.field_f.field_Bc);
         }
+        this.g(127);
+        return super.a(param1, 2, this.field_f.field_Bc);
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_o = null;
         field_q = null;
     }
 
     public final boolean a(int param0) {
-        if (param0 != 22957) {
-          field_q = (qr) null;
-          return super.a(this.field_f.field_Bc, (byte) 92);
-        } else {
+        if (param0 == 22957) {
           return super.a(this.field_f.field_Bc, (byte) 92);
         }
+        field_q = (qr) null;
+        return super.a(this.field_f.field_Bc, (byte) 92);
     }
 
     public final boolean a(int param0, byte param1, int param2) {
         this.field_p = (byte)param0;
-        if (param1 != -35) {
-          this.field_p = (byte) -114;
-          super.a((byte) -103, param2);
-          return true;
-        } else {
+        if (param1 == -35) {
           super.a((byte) -103, param2);
           return true;
         }
+        this.field_p = (byte) -114;
+        super.a((byte) -103, param2);
+        return true;
     }
 
     sc(on param0, boolean param1) {

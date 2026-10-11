@@ -10,9 +10,9 @@ final class bc {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 24740) {
-            bc.a(32);
-            field_b = null;
-            return;
+          bc.a(32);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -5,12 +5,11 @@ final class pl extends bia {
     static String field_e;
 
     final static khb[] c(byte param0) {
-        if (param0 <= 73) {
-          field_e = (String) null;
-          return new khb[]{up.field_o, hha.field_p, dua.field_p};
-        } else {
+        if (param0 > 73) {
           return new khb[]{up.field_o, hha.field_p, dua.field_p};
         }
+        field_e = (String) null;
+        return new khb[]{up.field_o, hha.field_p, dua.field_p};
     }
 
     public static void b(byte param0) {

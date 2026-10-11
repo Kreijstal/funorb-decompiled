@@ -8,7 +8,7 @@ final class ub implements uj {
 
     public static void b(int param0) {
         if (param0 < 16) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -18,164 +18,96 @@ final class ub implements uj {
     public final void a(boolean param0) {
         wm.field_e = true;
         if (param0) {
-            field_a = (String[]) null;
-            vi.field_h = true;
-            return;
+          field_a = (String[]) null;
+          vi.field_h = true;
+          return;
         }
         vi.field_h = true;
     }
 
     final static boolean a(int param0) {
+        int var2 = 0;
         gl var1 = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
         int var3 = 0;
         gl var4 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var4 = (gl) ((Object) on.field_t.b(123));
-            var1 = var4;
-            if (var1 != null) {
-              L1: {
-                if (param0 == 14921) {
-                  break L1;
-                } else {
-                  ub.b(20);
-                  break L1;
-                }
-              }
-              var2 = 0;
-              L2: while (true) {
-                if (var1.field_y <= var2) {
-                  stackIn_21_0 = 1;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  L3: {
-                    if (var4.field_r[var2] != null) {
-                      if (var4.field_r[var2].field_c == 0) {
-                        stackIn_13_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      } else {
-                        break L3;
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (null == var4.field_q[var2]) {
-                      break L4;
-                    } else {
-                      if (var4.field_q[var2].field_c == 0) {
-                        stackIn_18_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  var2++;
-                  continue L2;
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var4 = (gl) (on.field_t.b(123));
+          var1 = var4;
+          if (var1 == null) {
+            return false;
+          }
+          if (param0 != 14921) {
+            ub.b(20);
+          }
+          for (var2 = 0; var1.field_y > var2; var2++) {
+            if (var4.field_r[var2] != null &&
+              var4.field_r[var2].field_c == 0) {
+              return false;
+            }
+            if (null != var4.field_q[var2] &&
+              var4.field_q[var2].field_c == 0) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var1_ref), "ub.E(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_18_0 != 0;
-            } else {
-              return stackIn_21_0 != 0;
-            }
-          }
-        }
     }
 
     final static int a(int param0, int param1) {
-        if (-65537L < ((long)param1 ^ -1L)) {
-          if (-257L < ((long)param1 ^ -1L)) {
-            if (-1 >= (param1 ^ -1)) {
-              return kf.field_e[param1] >> -361594260;
-            } else {
-              if (param0 != -1237818874) {
-                return -44;
-              } else {
-                return -1;
+        if ((long)param1 >= 65536L) {
+          if ((long)param1 >= 16777216L) {
+            if (268435456L <= (long)param1) {
+              if ((long)param1 >= 1073741824L) {
+                return kf.field_e[param1 >> 24];
               }
+              return kf.field_e[param1 >> 22] >> 1;
             }
-          } else {
-            if (4096L <= (long)param1) {
-              if ((long)param1 < 16384L) {
-                return kf.field_e[param1 >> 322530438] >> 1292354889;
-              } else {
-                return kf.field_e[param1 >> -863587544] >> 981058664;
-              }
-            } else {
-              if (((long)param1 ^ -1L) > -1025L) {
-                return kf.field_e[param1 >> -206365630] >> -827018549;
-              } else {
-                return kf.field_e[param1 >> 2051455268] >> 650198538;
-              }
+            if ((long)param1 < 67108864L) {
+              return kf.field_e[param1 >> 18] >> 3;
             }
+            return kf.field_e[param1 >> 20] >> 2;
           }
-        } else {
-          if (((long)param1 ^ -1L) > -16777217L) {
-            if ((long)param1 < 1048576L) {
-              if ((long)param1 >= 262144L) {
-                return kf.field_e[param1 >> 84699372] >> -1237818874;
-              } else {
-                return kf.field_e[param1 >> 1195618794] >> -1819869721;
-              }
-            } else {
-              if (4194304L <= (long)param1) {
-                return kf.field_e[param1 >> 1917331472] >> 1243186116;
-              } else {
-                return kf.field_e[param1 >> -46653010] >> -409953499;
-              }
+          if ((long)param1 >= 1048576L) {
+            if (4194304L > (long)param1) {
+              return kf.field_e[param1 >> 14] >> 5;
             }
-          } else {
-            if (268435456L > (long)param1) {
-              if ((long)param1 >= 67108864L) {
-                return kf.field_e[param1 >> -1969152204] >> -1453080126;
-              } else {
-                return kf.field_e[param1 >> -958800846] >> -603744541;
-              }
-            } else {
-              if (-1073741825L < ((long)param1 ^ -1L)) {
-                return kf.field_e[param1 >> 686868886] >> -417431263;
-              } else {
-                return kf.field_e[param1 >> 474927544];
-              }
-            }
+            return kf.field_e[param1 >> 16] >> 4;
           }
+          if ((long)param1 < 262144L) {
+            return kf.field_e[param1 >> 10] >> 7;
+          }
+          return kf.field_e[param1 >> 12] >> 6;
         }
+        if ((long)param1 >= 256L) {
+          if (4096L > (long)param1) {
+            if ((long)param1 >= 1024L) {
+              return kf.field_e[param1 >> 4] >> 10;
+            }
+            return kf.field_e[param1 >> 2] >> 11;
+          }
+          if ((long)param1 >= 16384L) {
+            return kf.field_e[param1 >> 8] >> 8;
+          }
+          return kf.field_e[param1 >> 6] >> 9;
+        }
+        if (param1 >= 0) {
+          return kf.field_e[param1] >> 12;
+        }
+        if (param0 == -1237818874) {
+          return -1;
+        }
+        return -44;
     }
 
     public final String a(byte param0) {
-        int var2 = -85 / ((param0 - -33) / 62);
+        int var2 = -85 / ((param0 + 33) / 62);
         return "Just render player and light";
     }
 

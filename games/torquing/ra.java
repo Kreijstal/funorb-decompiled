@@ -9,148 +9,100 @@ final class ra {
     static boolean field_a;
 
     final static boolean a(char param0, byte param1) {
-        if (param1 == -55) {
-          if (param0 < 65) {
-            if (param0 >= 97) {
-              if (122 >= param0) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            if (90 < param0) {
-              if (param0 >= 97) {
-                if (122 < param0) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        if (param1 != -55) {
           return false;
         }
+        if (param0 >= 65) {
+          if (90 >= param0) {
+            return true;
+          }
+          if (param0 < 97) {
+            return false;
+          }
+          if (122 >= param0) {
+            return true;
+          }
+          return false;
+        }
+        if (param0 < 97) {
+          return false;
+        }
+        if (122 < param0) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 != 376) {
-            field_c = -1;
-            field_b = null;
-            return;
+          field_c = -1;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static void a(byte param0) {
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              if (param0 >= 0) {
-                break L1;
-              } else {
-                ra.a((byte) 101);
-                break L1;
-              }
-            }
-            if (im.l(169)) {
-              w.field_G.a(true, ha.field_e, oe.field_a, false);
-              w.field_G.g((byte) -107);
-              L2: while (true) {
-                if (!np.a((byte) -13)) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  w.field_G.a(e.field_f, 24454, m.field_t);
-                  continue L2;
-                }
-              }
-            } else {
-              L3: {
-                if (dg.field_i == null) {
-                  break L3;
-                } else {
-                  if (!dg.field_i.field_b) {
-                    break L3;
-                  } else {
-                    ug.a(-116);
-                    w.field_G.a(new i(w.field_G, bl.field_b), (byte) 100);
-                    break L3;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 < 0) {
+            ra.a((byte) 101);
           }
+          if (im.l(169)) {
+            w.field_G.a(true, ha.field_e, oe.field_a, false);
+            w.field_G.g((byte) -107);
+            while (np.a((byte) -13)) {
+              w.field_G.a(e.field_f, 24454, m.field_t);
+            }
+            return;
+          }
+          if (dg.field_i != null &&
+            dg.field_i.field_b) {
+            ug.a(-116);
+            w.field_G.a(new i(w.field_G, bl.field_b), (byte) 100);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw rb.a((Throwable) ((Object) var1), "ra.D(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        if (param1 == 252) {
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (45 == param0) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_20_0 = 1;
-                return stackIn_20_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param1 != 252) {
           ra.a('ﾷ', -121);
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (45 == param0) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 == 160) {
             return true;
           }
+          if (32 == param0) {
+            return true;
+          }
+          if (param0 == 95) {
+            return true;
+          }
+          if (45 != param0) {
+            return false;
+          }
+          return true;
         }
+        if (param0 == 160) {
+          return true;
+        }
+        if (32 == param0) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (45 != param0) {
+          return false;
+        }
+        return true;
     }
 
     static {

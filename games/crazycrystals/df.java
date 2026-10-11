@@ -10,9 +10,9 @@ final class df {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -20012) {
-            df.a(-77);
-            field_b = null;
-            return;
+          df.a(-77);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

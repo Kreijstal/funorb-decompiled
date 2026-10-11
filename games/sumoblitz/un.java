@@ -12,7 +12,7 @@ final class un {
         field_a = null;
         field_b = null;
         if (!param0) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 

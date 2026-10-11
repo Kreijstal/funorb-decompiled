@@ -14,7 +14,7 @@ final class is {
         field_b = null;
         field_d = null;
         if (param0 != 12836) {
-            field_c = (kv) null;
+          field_c = (kv) null;
         }
     }
 

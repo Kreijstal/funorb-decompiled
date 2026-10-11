@@ -14,19 +14,19 @@ final class pn extends nr {
     final void a(byte param0, int param1, int param2, int param3, int param4) {
         fe.a(param2, param4, param3, param1, this.field_b, this.field_g, this.field_i, this.field_l, this.field_j);
         if (param0 != -111) {
-            this.field_l = -40;
+          this.field_l = -40;
         }
     }
 
     pn(wk[] param0, int[] param1, int param2, int param3, boolean param4) {
         super(param0);
         try {
-            this.field_j = param4 ? true : false;
-            this.field_g = param1;
-            this.field_l = param3;
-            this.field_i = param2;
+          this.field_j = param4 ? true : false;
+          this.field_g = param1;
+          this.field_l = param3;
+          this.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class pn extends nr {
         field_k = null;
         field_n = null;
         if (param0 != -90) {
-            field_n = (boolean[]) null;
+          field_n = (boolean[]) null;
         }
     }
 

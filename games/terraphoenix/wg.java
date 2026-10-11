@@ -18,18 +18,18 @@ final class wg {
     private final void a(int param0, bb param1, int param2) {
         float var4_float = 0.0f;
         try {
-            if (param2 < 105) {
-                field_k = (String) null;
-            }
-            var4_float = (float)param0 / 100.0f + (float)(this.field_a - -1);
-            if (param0 != 0) {
-                this.field_e = param1.field_b + " - " + param0 + "%";
-            } else {
-                this.field_e = param1.field_c;
-            }
-            this.field_c = (float)this.field_j * var4_float / (float)(1 + this.field_i);
+          if (param2 < 105) {
+            field_k = (String) null;
+          }
+          var4_float = (float)param0 / 100.0f + (float)(this.field_a + 1);
+          if (param0 != 0) {
+            this.field_e = param1.field_b + " - " + param0 + "%";
+          } else {
+            this.field_e = param1.field_c;
+          }
+          this.field_c = (float)this.field_j * var4_float / (float)(1 + this.field_i);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "wg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -37,68 +37,35 @@ final class wg {
         int var3;
         bb var4;
         var3 = Terraphoenix.field_V;
-        L0: while (true) {
-          if (this.field_a >= this.field_i) {
-            if (param0 != 0) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            var4 = this.field_d[this.field_a];
-            if (!var4.field_a.a(0)) {
-              this.a(0, var4, param0 ^ 111);
-              return false;
-            } else {
-              L1: {
-                if (-1 < (var4.field_e ^ -1)) {
-                  break L1;
-                } else {
-                  if (var4.field_a.e(var4.field_e, 4)) {
-                    break L1;
-                  } else {
-                    this.a(var4.field_a.a((byte) 107, var4.field_e), var4, param0 ^ 127);
-                    return false;
-                  }
-                }
-              }
-              L2: {
-                if (var4.field_g == null) {
-                  break L2;
-                } else {
-                  if (!var4.field_a.a(-3, var4.field_g)) {
-                    this.a(var4.field_a.b(99, var4.field_g), var4, param0 + 107);
-                    return false;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if (0 <= var4.field_e) {
-                  break L3;
-                } else {
-                  if (null != var4.field_g) {
-                    break L3;
-                  } else {
-                    if (null == var4.field_b) {
-                      break L3;
-                    } else {
-                      if (!var4.field_a.b((byte) -128)) {
-                        this.a(var4.field_a.a((byte) 127), var4, param0 ^ 124);
-                        return false;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_a = this.field_a + 1;
-              continue L0;
-            }
+        while (this.field_a < this.field_i) {
+          var4 = this.field_d[this.field_a];
+          if (!var4.field_a.a(0)) {
+            this.a(0, var4, param0 ^ 111);
+            return false;
           }
+          if (var4.field_e >= 0 &&
+            !var4.field_a.e(var4.field_e, 4)) {
+            this.a(var4.field_a.a((byte) 107, var4.field_e), var4, param0 ^ 127);
+            return false;
+          }
+          if (var4.field_g != null &&
+            !var4.field_a.a(-3, var4.field_g)) {
+            this.a(var4.field_a.b(99, var4.field_g), var4, param0 + 107);
+            return false;
+          }
+          if (0 > var4.field_e &&
+            null == var4.field_g &&
+            null != var4.field_b &&
+            !var4.field_a.b((byte) -128)) {
+            this.a(var4.field_a.a((byte) 127), var4, param0 ^ 124);
+            return false;
+          }
+          this.field_a = this.field_a + 1;
         }
+        if (param0 != 0) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(byte param0) {
@@ -106,7 +73,7 @@ final class wg {
         field_g = null;
         field_l = null;
         if (param0 != 113) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;

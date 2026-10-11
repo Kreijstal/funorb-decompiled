@@ -31,33 +31,19 @@ final class pd {
         RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
-            var2_int = 0;
-            L1: while (true) {
-              if (og.field_eb <= var2_int) {
-                L2: {
-                  if (param1 == 6) {
-                    break L2;
-                  } else {
-                    field_e = (byte[][]) null;
-                    break L2;
-                  }
-                }
-                j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
-                if (og.field_eb > param0) {
-                  og.field_eb = param0;
-                  break L0;
-                } else {
-                  return;
-                }
-              } else {
-                ch.field_a[var2_int + param0] = var2_int;
-                var2_int++;
-                continue L1;
-              }
-            }
+          j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
+          for (var2_int = 0; og.field_eb > var2_int; var2_int++) {
+            ch.field_a[var2_int + param0] = var2_int;
           }
+          if (param1 != 6) {
+            field_e = (byte[][]) null;
+          }
+          j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 + param0, mf.field_Q, param0);
+          if (og.field_eb <= param0) {
+            return;
+          }
+          og.field_eb = param0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

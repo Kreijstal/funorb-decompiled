@@ -14,19 +14,19 @@ final class jb extends aa {
 
     final void a(int param0, gb param1) {
         try {
-            param1.b(-1955895016, this.field_b);
-            param1.a(64, this.field_c);
-            if (param0 != -12518) {
-                jb.b(57);
-            }
+          param1.b(-1955895016, this.field_b);
+          param1.a(64, this.field_c);
+          if (param0 != -12518) {
+            jb.b(57);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "jb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "jb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final wb a(int param0) {
         if (param0 < 30) {
-            return (wb) null;
+          return (wb) null;
         }
         return dc.field_k;
     }
@@ -36,16 +36,16 @@ final class jb extends aa {
         field_g = null;
         field_d = null;
         if (param0 != 22174) {
-            field_d = (o[]) null;
+          field_d = (o[]) null;
         }
     }
 
     jb(String param0, String param1) {
         try {
-            this.field_c = param1;
-            this.field_b = param0;
+          this.field_c = param1;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

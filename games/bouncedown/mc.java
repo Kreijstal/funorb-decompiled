@@ -8,41 +8,33 @@ final class mc {
     static tg[] field_b;
 
     public static void a(byte param0) {
-        if (param0 != 47) {
-          field_b = (tg[]) null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 47) {
           field_c = null;
           field_a = null;
           field_d = null;
           field_b = null;
           return;
         }
+        field_b = (tg[]) null;
+        field_c = null;
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -660) {
-          if (null != nj.field_o) {
-            var1 = nj.field_o;
-            synchronized (var1) {
-              L0: {
-                nj.field_o = null;
-                break L0;
-              }
-            }
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param0 != -660) {
           return;
+        }
+        if (null == nj.field_o) {
+          return;
+        }
+        var1 = nj.field_o;
+        synchronized (var1) {
+          nj.field_o = null;
         }
     }
 

@@ -12,43 +12,38 @@ final class dj extends ms {
     static Object field_m;
 
     final static boolean a(int param0, int param1) {
-        int var2;
-        var2 = 90 / ((30 - param0) / 44);
-        if (-2 != (param1 ^ -1)) {
-          if (param1 == 7) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var2 = 90 / ((30 - param0) / 44);
+        if (param1 == 1) {
           return false;
         }
+        if (param1 != 7) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_l = null;
-        if (param0 != 1022768328) {
-          dj.a(-56, -102);
-          field_o = null;
-          field_m = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 == 1022768328) {
           field_o = null;
           field_m = null;
           field_r = null;
           return;
         }
+        dj.a(-56, -102);
+        field_o = null;
+        field_m = null;
+        field_r = null;
     }
 
     dj(mf param0, ms param1) {
         try {
-            this.field_q = param0;
-            this.field_p = param0.g();
-            this.field_k = param1;
-            this.field_q.f(128 + this.field_p * kr.field_c >> 1022768328);
+          this.field_q = param0;
+          this.field_p = param0.g();
+          this.field_k = param1;
+          this.field_q.f(128 + this.field_p * kr.field_c >> 8);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

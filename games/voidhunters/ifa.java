@@ -15,7 +15,7 @@ final class ifa extends ksa {
         field_e = null;
         field_g = null;
         if (param0 <= 20) {
-            field_g = (String[]) null;
+          field_g = (String[]) null;
         }
     }
 
@@ -25,18 +25,20 @@ final class ifa extends ksa {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_e = "Add condition (Body destroyed)";
         field_d = 9;
         field_h = "Improves energy recharge, but explosive";
         field_f = new char[64];
-        for (var0 = 0; -27 < (var0 ^ -1); var0++) {
-            field_f[var0] = (char)(65 + var0);
+        for (var0 = 0; var0 < 26; var0++) {
+          field_f[var0] = (char)(65 + var0);
         }
-        for (var0 = 26; 52 > var0; var0++) {
-            field_f[var0] = (char)(-26 + (97 + var0));
+        for (var0Lifetime1 = 26; 52 > var0Lifetime1; var0Lifetime1++) {
+          field_f[var0Lifetime1] = (char)(-26 + (97 + var0Lifetime1));
         }
-        for (var0 = 52; 62 > var0; var0++) {
-            field_f[var0] = (char)(var0 + -4);
+        for (var0Lifetime2 = 52; 62 > var0Lifetime2; var0Lifetime2++) {
+          field_f[var0Lifetime2] = (char)(var0Lifetime2 - 4);
         }
         field_f[62] = (char)43;
         field_f[63] = (char)47;

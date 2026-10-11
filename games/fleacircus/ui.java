@@ -17,23 +17,23 @@ final class ui extends oh {
         field_pb = null;
         field_nb = null;
         if (param0) {
-            java.awt.Component var2 = (java.awt.Component) null;
-            ui.a((java.awt.Component) null, 22);
+          java.awt.Component var2 = (java.awt.Component) null;
+          ui.a((java.awt.Component) null, 22);
         }
     }
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.removeMouseListener(sg.field_i);
-            if (param1 < 106) {
-                java.awt.Component var3 = (java.awt.Component) null;
-                ui.a((java.awt.Component) null, -120);
-            }
-            param0.removeMouseMotionListener(sg.field_i);
-            param0.removeFocusListener(sg.field_i);
-            lk.field_J = 0;
+          param0.removeMouseListener(sg.field_i);
+          if (param1 < 106) {
+            java.awt.Component var3 = (java.awt.Component) null;
+            ui.a((java.awt.Component) null, -120);
+          }
+          param0.removeMouseMotionListener(sg.field_i);
+          param0.removeFocusListener(sg.field_i);
+          lk.field_J = 0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "ui.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -43,9 +43,9 @@ final class ui extends oh {
 
     final void d(qa param0, int param1) {
         try {
-            super.d(param0, param1);
+          super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "ui.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "ui.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

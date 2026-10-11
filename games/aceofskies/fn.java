@@ -9,9 +9,9 @@ abstract class fn {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -5) {
-            fn.a((byte) -34);
-            field_b = null;
-            return;
+          fn.a((byte) -34);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

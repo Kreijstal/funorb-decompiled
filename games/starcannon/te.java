@@ -11,29 +11,18 @@ final class te {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == hj.field_c) {
-          if (param0 != 98) {
-            field_c = (String) null;
-            return;
-          } else {
+          if (param0 == 98) {
             return;
           }
-        } else {
-          var1 = hj.field_c;
-          synchronized (var1) {
-            L0: {
-              hj.field_c = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 == 98) {
-              break L1;
-            } else {
-              field_c = (String) null;
-              break L1;
-            }
-          }
+          field_c = (String) null;
           return;
+        }
+        var1 = hj.field_c;
+        synchronized (var1) {
+          hj.field_c = null;
+        }
+        if (param0 != 98) {
+          field_c = (String) null;
         }
     }
 
@@ -41,8 +30,8 @@ final class te {
         field_c = null;
         field_a = null;
         if (param0 != -1) {
-            hl[] var2 = (hl[]) null;
-            te.a(-118, (hl[]) null);
+          hl[] var2 = (hl[]) null;
+          te.a(-118, (hl[]) null);
         }
     }
 
@@ -51,53 +40,31 @@ final class te {
         hl[] var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              og.field_d = param1;
-              if (null == og.field_d) {
-                break L1;
-              } else {
-                if (-4 >= (param1.length ^ -1)) {
-                  break L1;
-                } else {
-                  throw new IllegalArgumentException("");
-                }
-              }
-            }
-            if (param0 >= 123) {
-              break L0;
-            } else {
-              var3 = (hl[]) null;
-              te.a(117, (hl[]) null);
-              return;
-            }
+          og.field_d = param1;
+          if (null != og.field_d &&
+            param1.length < 3) {
+            throw new IllegalArgumentException("");
           }
+          if (param0 >= 123) {
+            return;
+          }
+          var3 = (hl[]) null;
+          te.a(117, (hl[]) null);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("te.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("te.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -107,47 +74,27 @@ final class te {
         int var4 = 0;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            var3_int = param2;
-            L1: while (true) {
-              if ((param0 ^ -1) >= -2) {
-                if (param0 == 1) {
-                  stackIn_11_0 = var3_int * param1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  stackIn_13_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  if ((param0 & 1 ^ -1) == -1) {
-                    break L2;
-                  } else {
-                    var3_int = var3_int * param1;
-                    break L2;
-                  }
-                }
-                param1 = param1 * param1;
-                param0 = param0 >> 1;
-                continue L1;
-              }
+          var3_int = param2;
+          while (param0 > 1) {
+            if ((param0 & 1) != 0) {
+              var3_int = var3_int * param1;
             }
+            param1 = param1 * param1;
+            param0 = param0 >> 1;
           }
+          if (param0 == 1) {
+            stackIn_11_0 = var3_int * param1;
+            return stackIn_11_0;
+          }
+          stackIn_13_0 = var3_int;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw sd.a((Throwable) ((Object) var3), "te.A(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_11_0;
-        } else {
-          return stackIn_13_0;
         }
     }
 

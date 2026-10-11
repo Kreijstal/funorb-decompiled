@@ -9,38 +9,27 @@ final class vk extends uh {
     }
 
     final static void c(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         en var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 8) {
-                break L1;
-              } else {
-                field_p = (bd) null;
-                break L1;
-              }
-            }
-            var1 = s.field_b;
-            L2: while (true) {
-              if (!ac.a(24501)) {
-                break L0;
-              } else {
-                var1.i(19319, 8);
-                fieldTemp$2 = var1.field_i + 1;
-                var1.field_i = var1.field_i + 1;
-                var2 = fieldTemp$2;
-                ln.a(var1, (byte) -111);
-                s.field_b.a(-var2 + var1.field_i, -19720);
-                continue L2;
-              }
-            }
+          if (param0 != 8) {
+            field_p = (bd) null;
           }
+          var1 = s.field_b;
+          while (ac.a(24501)) {
+            var1.i(19319, 8);
+            fieldTemp$0 = var1.field_i + 1;
+            var1.field_i = var1.field_i + 1;
+            var2 = fieldTemp$0;
+            ln.a(var1, (byte) -111);
+            s.field_b.a(-var2 + var1.field_i, -19720);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -50,8 +39,8 @@ final class vk extends uh {
 
     final bl a(boolean param0) {
         if (param0) {
-            this.a(false);
-            return re.field_i;
+          this.a(false);
+          return re.field_i;
         }
         return re.field_i;
     }

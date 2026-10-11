@@ -14,7 +14,7 @@ final class hc extends rra {
 
     final void a(byte param0, int param1, int param2) {
         if (param0 >= -117) {
-            field_h = -1;
+          field_h = -1;
         }
     }
 
@@ -27,21 +27,15 @@ final class hc extends rra {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var4 = this.field_i * param0 >> -432891284;
-        var5 = this.field_f * param0 >> 2107257548;
-        var6 = param1 * this.field_g >> -1386539956;
-        var7 = param1 * this.field_j >> 1315183084;
+        int var4 = this.field_i * param0 >> 12;
+        int var5 = this.field_f * param0 >> 12;
+        int var6 = param1 * this.field_g >> 12;
+        int var7 = param1 * this.field_j >> 12;
         ik.a(var5, var4, -49, this.field_b, var7, var6);
-        if (!param2) {
-          field_h = 68;
-          return;
-        } else {
+        if (param2) {
           return;
         }
+        field_h = 68;
     }
 
     static {

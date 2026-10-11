@@ -8,7 +8,7 @@ final class sla {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 52) {
-            sla.a((byte) 101);
+          sla.a((byte) 101);
         }
     }
 

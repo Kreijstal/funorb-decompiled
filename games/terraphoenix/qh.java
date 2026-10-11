@@ -10,43 +10,31 @@ final class qh implements cj {
     private pk field_e;
 
     final static gd a(boolean param0) {
-        String var1;
-        var1 = pb.a((byte) -47);
-        if (param0) {
-          if (var1 != null) {
-            if (-1 < (var1.indexOf('@') ^ -1)) {
-              return new gd(pb.a((byte) -47), dd.f((byte) 105));
-            } else {
-              var1 = "";
-              return new gd(pb.a((byte) -47), dd.f((byte) 105));
-            }
-          } else {
-            return new gd(pb.a((byte) -47), dd.f((byte) 105));
-          }
-        } else {
+        String var1 = pb.a((byte) -47);
+        if (!param0) {
           qh.a(false);
-          if (var1 == null) {
-            return new gd(pb.a((byte) -47), dd.f((byte) 105));
-          } else {
-            L0: {
-              if (-1 >= (var1.indexOf('@') ^ -1)) {
-                var1 = "";
-                break L0;
-              } else {
-                break L0;
-              }
+          if (var1 != null) {
+            if (!(var1.indexOf('@') < 0)) {
+              var1 = "";
             }
             return new gd(pb.a((byte) -47), dd.f((byte) 105));
           }
+          return new gd(pb.a((byte) -47), dd.f((byte) 105));
         }
+        if (var1 == null) {
+          return new gd(pb.a((byte) -47), dd.f((byte) 105));
+        }
+        if (var1.indexOf('@') >= 0) {
+          var1 = "";
+          return new gd(pb.a((byte) -47), dd.f((byte) 105));
+        }
+        return new gd(pb.a((byte) -47), dd.f((byte) 105));
     }
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -58,91 +46,51 @@ final class qh implements cj {
         int var11 = 0;
         var11 = Terraphoenix.field_V;
         try {
-          L0: {
-            L1: {
-              if (param3 == -24381) {
-                break L1;
-              } else {
-                this.field_a = -110;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                if (param1.field_s) {
-                  break L3;
-                } else {
-                  if (!param1.d(-110)) {
-                    stackIn_8_0 = 2188450;
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              stackIn_8_0 = 3249872;
-              break L2;
-            }
-            var6_int = stackIn_8_0;
-            this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 - -param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
-            if (param1.d(param3 ^ 24395)) {
-              L4: {
-                var7 = this.field_e.b(param1.field_o);
-                var8 = this.field_e.field_p + this.field_e.field_s;
-                var9 = param2 - -param1.field_w;
-                if (2 == this.field_a) {
-                  var9 = var9 + (param1.field_p - var7);
-                  break L4;
-                } else {
-                  if ((this.field_a ^ -1) == -2) {
-                    var9 = var9 + (param1.field_p - var7 >> 2004225281);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              L5: {
-                var10 = param0 - -param1.field_u;
-                if (-3 == (this.field_f ^ -1)) {
-                  var10 = var10 + (param1.field_n - var8);
-                  break L5;
-                } else {
-                  if (1 == this.field_f) {
-                    var10 = var10 + (param1.field_n - var8 >> -431592895);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-              ed.a(4 + var7, var8, 2 + var10, 52, -2 + var9);
-              break L0;
-            } else {
-              return;
+          if (param3 != -24381) {
+            this.field_a = -110;
+          }
+          if (!param1.field_s &&
+            !param1.d(-110)) {
+            stackIn_8_0 = 2188450;
+          } else {
+            stackIn_8_0 = 3249872;
+          }
+          var6_int = stackIn_8_0;
+          this.field_e.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_o + "</u>", param2 + param1.field_w, param1.field_u + param0, param1.field_p, param1.field_n, var6_int, -1, this.field_a, this.field_f, this.field_e.field_p + this.field_e.field_s);
+          if (!param1.d(param3 ^ 24395)) {
+            return;
+          }
+          var7 = this.field_e.b(param1.field_o);
+          var8 = this.field_e.field_p + this.field_e.field_s;
+          var9 = param2 + param1.field_w;
+          if (2 == this.field_a) {
+            var9 = var9 + (param1.field_p - var7);
+          } else {
+            if (this.field_a == 1) {
+              var9 = var9 + (param1.field_p - var7 >> 1);
             }
           }
+          var10 = param0 + param1.field_u;
+          if (this.field_f == 2) {
+            var10 = var10 + (param1.field_n - var8);
+          } else {
+            if (1 == this.field_f) {
+              var10 = var10 + (param1.field_n - var8 >> 1);
+            }
+          }
+          ed.a(4 + var7, var8, 2 + var10, 52, -2 + var9);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var6);
-
-            stackIn_24_1 = new StringBuilder().append("qh.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L6;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_24_0 = var6;
+          stackIn_24_1 = new StringBuilder().append("qh.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -156,17 +104,17 @@ final class qh implements cj {
         field_b = null;
         field_c = null;
         if (param0 != -25) {
-            qh.a(true);
+          qh.a(true);
         }
     }
 
     qh(pk param0, int param1, int param2) {
         try {
-            this.field_a = param1;
-            this.field_f = param2;
-            this.field_e = param0;
+          this.field_a = param1;
+          this.field_f = param2;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

@@ -14,35 +14,33 @@ final class lj {
     static int[] field_c;
 
     final synchronized static long a(byte param0) {
-        long var1;
-        if (param0 < -17) {
-          var1 = System.currentTimeMillis();
-          if (var1 < tg.field_k) {
-            ml.field_P = ml.field_P + (tg.field_k + -var1);
-            tg.field_k = var1;
-            return var1 + ml.field_P;
-          } else {
-            tg.field_k = var1;
-            return var1 + ml.field_P;
-          }
-        } else {
+        long var1 = 0L;
+        long var1Lifetime1;
+        if (param0 >= -17) {
           lj.a((byte) 69);
           var1 = System.currentTimeMillis();
-          if (var1 >= tg.field_k) {
-            tg.field_k = var1;
-            return var1 + ml.field_P;
-          } else {
-            ml.field_P = ml.field_P + (tg.field_k + -var1);
+          if (var1 < tg.field_k) {
+            ml.field_P = ml.field_P + (tg.field_k - var1);
             tg.field_k = var1;
             return var1 + ml.field_P;
           }
+          tg.field_k = var1;
+          return var1 + ml.field_P;
         }
+        var1Lifetime1 = System.currentTimeMillis();
+        if (var1Lifetime1 >= tg.field_k) {
+          tg.field_k = var1Lifetime1;
+          return var1Lifetime1 + ml.field_P;
+        }
+        ml.field_P = ml.field_P + (tg.field_k - var1Lifetime1);
+        tg.field_k = var1Lifetime1;
+        return var1Lifetime1 + ml.field_P;
     }
 
     public static void a(int param0) {
         field_i = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_j = null;
         field_f = null;

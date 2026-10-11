@@ -12,22 +12,7 @@ abstract class bf extends ma implements ee {
     abstract int c(boolean param0);
 
     final static void g(byte param0) {
-        if (param0 < 38) {
-          field_N = (String) null;
-          o.field_a[520] = 59;
-          o.field_a[222] = 58;
-          o.field_a[192] = 28;
-          o.field_a[91] = 42;
-          o.field_a[45] = 26;
-          o.field_a[47] = 73;
-          o.field_a[59] = 57;
-          o.field_a[93] = 43;
-          o.field_a[44] = 71;
-          o.field_a[61] = 27;
-          o.field_a[92] = 74;
-          o.field_a[46] = 72;
-          return;
-        } else {
+        if (param0 >= 38) {
           o.field_a[520] = 59;
           o.field_a[222] = 58;
           o.field_a[192] = 28;
@@ -42,6 +27,19 @@ abstract class bf extends ma implements ee {
           o.field_a[46] = 72;
           return;
         }
+        field_N = (String) null;
+        o.field_a[520] = 59;
+        o.field_a[222] = 58;
+        o.field_a[192] = 28;
+        o.field_a[91] = 42;
+        o.field_a[45] = 26;
+        o.field_a[47] = 73;
+        o.field_a[59] = 57;
+        o.field_a[93] = 43;
+        o.field_a[44] = 71;
+        o.field_a[61] = 27;
+        o.field_a[92] = 74;
+        o.field_a[46] = 72;
     }
 
     abstract boolean h(byte param0);
@@ -53,14 +51,14 @@ abstract class bf extends ma implements ee {
     final static void a(boolean param0, int param1) {
         ji.field_U = 1000000000L / (long)param1;
         if (!param0) {
-            bf.d(true);
+          bf.d(true);
         }
     }
 
     public static void d(boolean param0) {
         field_M = null;
         if (param0) {
-            return;
+          return;
         }
         field_N = null;
         field_K = null;
@@ -68,21 +66,21 @@ abstract class bf extends ma implements ee {
 
     public final vb a(int param0) {
         if (param0 > -80) {
-            field_K = (ci) null;
-            return (vb) ((Object) this.field_L);
+          field_K = (ci) null;
+          return (vb) ((Object) this.field_L);
         }
         return (vb) ((Object) this.field_L);
     }
 
     void a(boolean param0, ri param1) {
         try {
-            this.field_L = param1;
-            this.field_L.field_j = (bf) (this);
-            if (param0) {
-                bf.d(true);
-            }
+          this.field_L = param1;
+          this.field_L.field_j = this;
+          if (param0) {
+            bf.d(true);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "bf.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

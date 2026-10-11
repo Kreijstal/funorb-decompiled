@@ -7,7 +7,7 @@ final class wb {
 
     public static void a(byte param0) {
         if (param0 >= -8) {
-            return;
+          return;
         }
         field_a = null;
     }

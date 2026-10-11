@@ -9,77 +9,41 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              if (qj.field_c == null) {
-                break L1;
-              } else {
-                L2: {
-                  L3: {
-                    ak.field_y = 0;
-                    var2_int = param0.getKeyCode();
-                    if (-1 < (var2_int ^ -1)) {
-                      break L3;
-                    } else {
-                      if (mb.field_o.length > var2_int) {
-                        var2_int = -129 & mb.field_o[var2_int];
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2_int = -1;
-                  break L2;
-                }
-                if (db.field_R < 0) {
-                  break L1;
-                } else {
-                  if (-1 >= (var2_int ^ -1)) {
-                    di.field_b[db.field_R] = var2_int ^ -1;
-                    db.field_R = 127 & 1 + db.field_R;
-                    if (db.field_R == rj.field_g) {
-                      db.field_R = -1;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    break L1;
-                  }
-                }
+          if (qj.field_c != null) {
+            ak.field_y = 0;
+            var2_int = param0.getKeyCode();
+            if (var2_int >= 0 &&
+              mb.field_o.length > var2_int) {
+              var2_int = -129 & mb.field_o[var2_int];
+            } else {
+              var2_int = -1;
+            }
+            if (db.field_R >= 0 &&
+              var2_int >= 0) {
+              di.field_b[db.field_R] = ~var2_int;
+              db.field_R = 127 & 1 + db.field_R;
+              if (db.field_R == rj.field_g) {
+                db.field_R = -1;
               }
             }
-            param0.consume();
-            break L0;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("nf.keyReleased(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("nf.keyReleased(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -90,22 +54,21 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-            if (!(null == qj.field_c)) {
-                var2_int = param0.getKeyChar();
-                if (var2_int != 0 && var2_int != 65535) {
-                    if (!(!vf.a(-13891, (char) var2_int))) {
-                        var3 = Bounce.field_F + 1 & 127;
-                        if (!(oh.field_a == var3)) {
-                            pf.field_A[Bounce.field_F] = -1;
-                            fk.field_b[Bounce.field_F] = (char)var2_int;
-                            Bounce.field_F = var3;
-                        }
-                    }
-                }
+          if (null != qj.field_c) {
+            var2_int = param0.getKeyChar();
+            if (var2_int != 0 && var2_int != 65535 &&
+              vf.a(-13891, (char) var2_int)) {
+              var3 = Bounce.field_F + 1 & 127;
+              if (oh.field_a != var3) {
+                pf.field_A[Bounce.field_F] = -1;
+                fk.field_b[Bounce.field_F] = (char)var2_int;
+                Bounce.field_F = var3;
+              }
             }
-            param0.consume();
+          }
+          param0.consume();
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "nf.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,123 +76,70 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
+        int var3Lifetime1;
         try {
-          L0: {
-            if (qj.field_c != null) {
-              L1: {
-                L2: {
-                  ak.field_y = 0;
-                  var2_int = param0.getKeyCode();
-                  if (0 > var2_int) {
-                    break L2;
-                  } else {
-                    if (mb.field_o.length > var2_int) {
-                      var2_int = mb.field_o[var2_int];
-                      if (-1 != (var2_int & 128 ^ -1)) {
-                        var2_int = -1;
-                        break L1;
-                      } else {
-                        break L1;
-                      }
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var2_int = -1;
-                break L1;
-              }
-              L3: {
-                if (db.field_R < 0) {
-                  break L3;
-                } else {
-                  if ((var2_int ^ -1) > -1) {
-                    break L3;
-                  } else {
-                    di.field_b[db.field_R] = var2_int;
-                    db.field_R = 127 & db.field_R - -1;
-                    if (rj.field_g == db.field_R) {
-                      db.field_R = -1;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-              }
-              L4: {
-                if (0 <= var2_int) {
-                  var3 = Bounce.field_F - -1 & 127;
-                  if (var3 == oh.field_a) {
-                    break L4;
-                  } else {
-                    pf.field_A[Bounce.field_F] = var2_int;
-                    fk.field_b[Bounce.field_F] = (char)0;
-                    Bounce.field_F = var3;
-                    break L4;
-                  }
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                var3 = param0.getModifiers();
-                if (-1 != (10 & var3 ^ -1)) {
-                  break L5;
-                } else {
-                  if (85 == var2_int) {
-                    break L5;
-                  } else {
-                    if (var2_int == 10) {
-                      break L5;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              param0.consume();
-              break L0;
-            } else {
-              return;
+          if (qj.field_c == null) {
+            return;
+          }
+          ak.field_y = 0;
+          var2_int = param0.getKeyCode();
+          if (0 <= var2_int &&
+            mb.field_o.length > var2_int) {
+            var2_int = mb.field_o[var2_int];
+            if ((var2_int & 128) != 0) {
+              var2_int = -1;
+            }
+          } else {
+            var2_int = -1;
+          }
+          if (db.field_R >= 0 &&
+            var2_int >= 0) {
+            di.field_b[db.field_R] = var2_int;
+            db.field_R = 127 & db.field_R + 1;
+            if (rj.field_g == db.field_R) {
+              db.field_R = -1;
             }
           }
+          if (0 <= var2_int) {
+            var3 = Bounce.field_F + 1 & 127;
+            if (var3 != oh.field_a) {
+              pf.field_A[Bounce.field_F] = var2_int;
+              fk.field_b[Bounce.field_F] = (char)0;
+              Bounce.field_F = var3;
+            }
+          }
+          var3Lifetime1 = param0.getModifiers();
+          if ((10 & var3Lifetime1) == 0 &&
+            85 != var2_int &&
+            var2_int != 10) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var2);
-
-            stackIn_26_1 = new StringBuilder().append("nf.keyPressed(");
-
-            if (param0 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L6;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L6;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_26_0 = var2;
+          stackIn_26_1 = new StringBuilder().append("nf.keyPressed(");
+          if (param0 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 > -58) {
-            field_b = (String) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -237,11 +147,11 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            if (qj.field_c != null) {
-                db.field_R = -1;
-            }
+          if (qj.field_c != null) {
+            db.field_R = -1;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "nf.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

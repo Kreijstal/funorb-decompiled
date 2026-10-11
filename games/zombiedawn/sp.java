@@ -9,9 +9,9 @@ abstract class sp extends le {
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_k) {
-            this.a(param0, param1, param2);
+          this.a(param0, param1, param2);
         } else {
-            this.a(param2);
+          this.a(param2);
         }
     }
 

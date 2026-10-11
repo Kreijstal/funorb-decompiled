@@ -11,7 +11,7 @@ final class fj {
         field_c = null;
         field_a = null;
         if (param0 > -126) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

@@ -13,20 +13,20 @@ class fk extends kb {
 
     final void a(wf param0, int param1) {
         try {
-            if (param1 != 7895) {
-                this.a((byte) 17);
-            }
-            param0.a(this.field_g, (byte) 37);
-            param0.a(param1 + -7895, this.field_f);
+          if (param1 != 7895) {
+            this.a((byte) 17);
+          }
+          param0.a(this.field_g, (byte) 37);
+          param0.a(param1 - 7895, this.field_f);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "fk.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "fk.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(boolean param0) {
         field_c = null;
         if (param0) {
-            return;
+          return;
         }
         field_d = null;
         field_i = null;
@@ -35,25 +35,25 @@ class fk extends kb {
 
     bj a(byte param0) {
         if (param0 != 45) {
-            field_j = (String) null;
-            return ej.field_a;
+          field_j = (String) null;
+          return ej.field_a;
         }
         return ej.field_a;
     }
 
     final static void a(boolean param0, sh param1, byte param2, sh param3, sh param4) {
         try {
-            qa.field_c = mb.a((byte) -63, "");
-            qa.field_c.a((byte) 121, false);
-            ul.a(param1, param4, param3, (byte) 109);
-            if (param2 != 40) {
-                fk.b(false);
-            }
-            kf.f(1);
-            bk.field_c = c.field_m;
-            ee.field_c = c.field_m;
+          qa.field_c = mb.a((byte) -63, "");
+          qa.field_c.a((byte) 121, false);
+          ul.a(param1, param4, param3, (byte) 109);
+          if (param2 != 40) {
+            fk.b(false);
+          }
+          kf.f(1);
+          bk.field_c = c.field_m;
+          ee.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "fk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "fk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,10 +64,10 @@ class fk extends kb {
 
     fk(long param0, String param1) {
         try {
-            this.field_f = param1;
-            this.field_g = param0;
+          this.field_f = param1;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

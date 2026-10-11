@@ -19,83 +19,83 @@ final class ina {
         ka dupTemp$3 = null;
         ka dupTemp$4 = null;
         try {
-            jma.field_a = tc.a(dd.field_b, -8829, param0);
-            ola.field_Ib = tc.a(hl.field_c, -8829, param0);
-            mma.field_b = tc.a(mh.field_K, -8829, param0);
-            df.field_J = tc.a(ea.field_l, param1 + -8829, param0);
-            ta.field_ub = tc.a(vk.field_e, -8829, param0);
-            rl.field_t = tc.a(dq.field_h, -8829, param0);
-            jna.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
-            gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
-            mh.field_F = tc.a(an.field_g, -8829, param0);
-            koa.field_b = tc.a(nj.field_p, -8829, param0);
-            dupTemp$0 = df.field_J[9].a((byte) 0, 654255, false);
-            df.field_J[9] = dupTemp$0;
-            dupTemp$0.O(224, 224, 224);
-            dupTemp$1 = df.field_J[10].a((byte) 0, 654255, false);
-            df.field_J[10] = dupTemp$1;
-            dupTemp$1.O(224, 224, 224);
-            if (param1 != 0) {
-                CharSequence var3 = (CharSequence) null;
-                ina.a((byte) -94, (CharSequence) null);
-            }
-            dupTemp$2 = df.field_J[77].a((byte) 0, 654255, false);
-            df.field_J[77] = dupTemp$2;
-            dupTemp$2.O(256, 256, 256);
-            dupTemp$3 = df.field_J[78].a((byte) 0, 654255, false);
-            df.field_J[78] = dupTemp$3;
-            dupTemp$3.O(256, 256, 256);
-            dupTemp$4 = df.field_J[79].a((byte) 0, 654255, false);
-            df.field_J[79] = dupTemp$4;
-            dupTemp$4.O(256, 256, 256);
-            if (!(ve.field_F)) {
-                ta.field_ub[20].O(128, 128, 64);
-                ta.field_ub[21].O(128, 128, 64);
-                ta.field_ub[23].O(128, 128, 64);
-                ta.field_ub[24].O(128, 128, 64);
-                df.field_J[4].O(96, 96, 96);
-                df.field_J[70].O(96, 96, 96);
-                df.field_J[5].O(96, 96, 96);
-                df.field_J[17].H(0, 64, 0);
-                df.field_J[17].O(256, 256, 256);
-                df.field_J[24].O(256, 256, 256);
-                df.field_J[25].O(256, 256, 256);
-                rl.field_t[0].O(256, 256, 256);
-                rl.field_t[1].O(192, 192, 192);
-                rl.field_t[6].O(384, 384, 384);
-                jna.field_j[1].O(512, 512, 512);
-                jna.field_j[0].O(512, 512, 512);
-                df.field_J[27].O(192, 156, 192);
-                df.field_J[76].O(256, 256, 256);
-                df.field_J[62].O(96, 96, 96);
-                df.field_J[63].O(96, 96, 96);
-                koa.field_b[1].H(0, 64, 0);
-                koa.field_b[1].O(192, 192, 192);
-                koa.field_b[1].FA(4096);
-                koa.field_b[2].H(0, 64, 0);
-                koa.field_b[2].O(192, 192, 192);
-                koa.field_b[2].FA(4096);
-                koa.field_b[10].O(256, 256, 256);
-                koa.field_b[11].O(256, 256, 256);
-                koa.field_b[12].O(256, 256, 256);
-                koa.field_b[13].O(256, 256, 256);
-                koa.field_b[8].O(256, 256, 256);
-                ve.field_F = true;
-            }
-            qi.field_O = df.field_J[4];
+          jma.field_a = tc.a(dd.field_b, -8829, param0);
+          ola.field_Ib = tc.a(hl.field_c, -8829, param0);
+          mma.field_b = tc.a(mh.field_K, -8829, param0);
+          df.field_J = tc.a(ea.field_l, param1 - 8829, param0);
+          ta.field_ub = tc.a(vk.field_e, -8829, param0);
+          rl.field_t = tc.a(dq.field_h, -8829, param0);
+          jna.field_j = tc.a(gta.field_f, param1 ^ -8829, param0);
+          gca.field_g = tc.a(cba.field_b, param1 ^ -8829, param0);
+          mh.field_F = tc.a(an.field_g, -8829, param0);
+          koa.field_b = tc.a(nj.field_p, -8829, param0);
+          dupTemp$0 = df.field_J[9].a((byte) 0, 654255, false);
+          df.field_J[9] = dupTemp$0;
+          dupTemp$0.O(224, 224, 224);
+          dupTemp$1 = df.field_J[10].a((byte) 0, 654255, false);
+          df.field_J[10] = dupTemp$1;
+          dupTemp$1.O(224, 224, 224);
+          if (param1 != 0) {
+            CharSequence var3 = (CharSequence) null;
+            ina.a((byte) -94, (CharSequence) null);
+          }
+          dupTemp$2 = df.field_J[77].a((byte) 0, 654255, false);
+          df.field_J[77] = dupTemp$2;
+          dupTemp$2.O(256, 256, 256);
+          dupTemp$3 = df.field_J[78].a((byte) 0, 654255, false);
+          df.field_J[78] = dupTemp$3;
+          dupTemp$3.O(256, 256, 256);
+          dupTemp$4 = df.field_J[79].a((byte) 0, 654255, false);
+          df.field_J[79] = dupTemp$4;
+          dupTemp$4.O(256, 256, 256);
+          if (!ve.field_F) {
+            ta.field_ub[20].O(128, 128, 64);
+            ta.field_ub[21].O(128, 128, 64);
+            ta.field_ub[23].O(128, 128, 64);
+            ta.field_ub[24].O(128, 128, 64);
+            df.field_J[4].O(96, 96, 96);
+            df.field_J[70].O(96, 96, 96);
+            df.field_J[5].O(96, 96, 96);
+            df.field_J[17].H(0, 64, 0);
+            df.field_J[17].O(256, 256, 256);
+            df.field_J[24].O(256, 256, 256);
+            df.field_J[25].O(256, 256, 256);
+            rl.field_t[0].O(256, 256, 256);
+            rl.field_t[1].O(192, 192, 192);
+            rl.field_t[6].O(384, 384, 384);
+            jna.field_j[1].O(512, 512, 512);
+            jna.field_j[0].O(512, 512, 512);
+            df.field_J[27].O(192, 156, 192);
+            df.field_J[76].O(256, 256, 256);
+            df.field_J[62].O(96, 96, 96);
+            df.field_J[63].O(96, 96, 96);
+            koa.field_b[1].H(0, 64, 0);
+            koa.field_b[1].O(192, 192, 192);
+            koa.field_b[1].FA(4096);
+            koa.field_b[2].H(0, 64, 0);
+            koa.field_b[2].O(192, 192, 192);
+            koa.field_b[2].FA(4096);
+            koa.field_b[10].O(256, 256, 256);
+            koa.field_b[11].O(256, 256, 256);
+            koa.field_b[12].O(256, 256, 256);
+            koa.field_b[13].O(256, 256, 256);
+            koa.field_b[8].O(256, 256, 256);
+            ve.field_F = true;
+          }
+          qi.field_O = df.field_J[4];
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ina.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ina.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(String param0, byte param1, String param2, cn param3, String param4) {
         try {
-            this.a(param0, -1, param4, param2, param3, (byte) -108);
-            if (param1 != -36) {
-                this.a((byte) 90);
-            }
+          this.a(param0, -1, param4, param2, param3, (byte) -108);
+          if (param1 != -36) {
+            this.a((byte) 90);
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ina.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ina.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,35 +103,35 @@ final class ina {
         lt[] var9 = null;
         int fieldTemp$0 = 0;
         if (this.field_h.length <= this.field_e) {
-            var9 = new lt[this.field_e * 2];
-            lt[] var7 = var9;
-            lua.a(this.field_h, 0, var9, 0, this.field_e);
-            this.field_h = var9;
+          var9 = new lt[this.field_e * 2];
+          lt[] var7 = var9;
+          lua.a(this.field_h, 0, var9, 0, this.field_e);
+          this.field_h = var9;
         }
         lt var8 = new lt();
         lt var10 = var8;
         lt var7_ref = var10;
         if (param5 >= -51) {
-            return;
+          return;
         }
         try {
-            var10.field_h = param4;
-            var10.field_e = param2;
-            var10.field_d = param1;
-            var10.field_g = param3;
-            var10.field_c = param0;
-            fieldTemp$0 = this.field_e;
-            this.field_e = this.field_e + 1;
-            this.field_h[fieldTemp$0] = var8;
+          var10.field_h = param4;
+          var10.field_e = param2;
+          var10.field_d = param1;
+          var10.field_g = param3;
+          var10.field_c = param0;
+          fieldTemp$0 = this.field_e;
+          this.field_e = this.field_e + 1;
+          this.field_h[fieldTemp$0] = var8;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ina.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ina.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 <= 20) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -141,46 +141,26 @@ final class ina {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -16) {
-                break L1;
-              } else {
-                ina.a(46);
-                break L1;
-              }
-            }
-            stackIn_3_0 = on.a(param1, (byte) -91, false);
-            break L0;
+          if (param0 != -16) {
+            ina.a(46);
           }
+          stackIn_3_0 = on.a(param1, (byte) -91, false);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ina.H(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ina.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     private final void a(lt param0, int param1, int param2) {
@@ -188,58 +168,42 @@ final class ina {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 22774) {
-              var4_float = (float)param2 / 100.0f + (float)(this.field_g + 1);
-              this.field_i = (float)this.field_f * var4_float / (float)(1 + this.field_e);
-              if (0 != param2) {
-                this.field_b = param0.field_c + " - " + param2 + "%";
-                return;
-              } else {
-                this.field_b = param0.field_e;
-                return;
-              }
-            } else {
-              break L0;
-            }
+          if (param1 != 22774) {
+            return;
           }
+          var4_float = (float)param2 / 100.0f + (float)(this.field_g + 1);
+          this.field_i = (float)this.field_f * var4_float / (float)(1 + this.field_e);
+          if (0 != param2) {
+            this.field_b = param0.field_c + " - " + param2 + "%";
+            return;
+          }
+          this.field_b = param0.field_e;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4);
-
-            stackIn_8_1 = new StringBuilder().append("ina.A(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_8_0 = var4;
+          stackIn_8_1 = new StringBuilder().append("ina.A(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final void a(int param0, cn param1, String param2, String param3) {
         try {
-            this.a(param3, -1, param2, (String) null, param1, (byte) -108);
-            if (param0 != 256) {
-                this.field_g = 68;
-            }
+          this.a(param3, -1, param2, (String) null, param1, (byte) -108);
+          if (param0 != 256) {
+            this.field_g = 68;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ina.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ina.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -248,69 +212,36 @@ final class ina {
         int var3;
         lt var4;
         var3 = TombRacer.field_G ? 1 : 0;
-        L0: while (true) {
-          if (this.field_g >= this.field_e) {
-            if (param0 != 37) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            var4 = this.field_h[this.field_g];
-            var2 = var4;
-            if (var4.field_h.b(-100)) {
-              L1: {
-                if (-1 < (var4.field_d ^ -1)) {
-                  break L1;
-                } else {
-                  if (!var4.field_h.e(var4.field_d, -2)) {
-                    this.a(var2, param0 ^ 22739, var4.field_h.a(var4.field_d, (byte) 114));
-                    return false;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (var4.field_g == null) {
-                  break L2;
-                } else {
-                  if (var4.field_h.c(var4.field_g, -125)) {
-                    break L2;
-                  } else {
-                    this.a(var2, 22774, var4.field_h.a(var4.field_g, true));
-                    return false;
-                  }
-                }
-              }
-              L3: {
-                if (0 <= var4.field_d) {
-                  break L3;
-                } else {
-                  if (null != var4.field_g) {
-                    break L3;
-                  } else {
-                    if (var4.field_c == null) {
-                      break L3;
-                    } else {
-                      if (!var4.field_h.a(0)) {
-                        this.a(var2, 22774, var4.field_h.a(true));
-                        return false;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
-              }
-              this.field_g = this.field_g + 1;
-              continue L0;
-            } else {
-              this.a(var4, 22774, 0);
-              return false;
-            }
+        while (this.field_g < this.field_e) {
+          var4 = this.field_h[this.field_g];
+          var2 = var4;
+          if (!var4.field_h.b(-100)) {
+            this.a(var4, 22774, 0);
+            return false;
           }
+          if (var4.field_d >= 0 &&
+            !var4.field_h.e(var4.field_d, -2)) {
+            this.a(var2, param0 ^ 22739, var4.field_h.a(var4.field_d, (byte) 114));
+            return false;
+          }
+          if (var4.field_g != null &&
+            !var4.field_h.c(var4.field_g, -125)) {
+            this.a(var2, 22774, var4.field_h.a(var4.field_g, true));
+            return false;
+          }
+          if (0 > var4.field_d &&
+            null == var4.field_g &&
+            var4.field_c != null &&
+            !var4.field_h.a(0)) {
+            this.a(var2, 22774, var4.field_h.a(true));
+            return false;
+          }
+          this.field_g = this.field_g + 1;
         }
+        if (param0 != 37) {
+          return false;
+        }
+        return true;
     }
 
     ina(int param0) {

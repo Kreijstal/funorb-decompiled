@@ -6,9 +6,9 @@ final class kba {
 
     public static void a(int param0) {
         if (param0 != 17121) {
-            field_a = (lta) null;
-            field_a = null;
-            return;
+          field_a = (lta) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

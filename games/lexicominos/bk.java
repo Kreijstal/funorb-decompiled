@@ -11,7 +11,7 @@ final class bk {
     public static void a(byte param0) {
         field_c = null;
         if (param0 < 27) {
-            field_d = -70;
+          field_d = -70;
         }
     }
 

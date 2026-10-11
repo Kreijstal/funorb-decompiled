@@ -13,47 +13,36 @@ final class qa extends wk {
 
     final static w d(int param0) {
         if (param0 != 5) {
-            return (w) null;
+          return (w) null;
         }
         return tb.field_b.field_Ob;
     }
 
     final static void a(int param0, int param1) {
-        uf var2;
-        int var3;
-        int var4;
-        var2 = we.field_b;
+        int var4 = 0;
+        uf var2 = we.field_b;
+        int var4Lifetime1;
         var2.f(param0, -4);
         var2.field_n = var2.field_n + 1;
-        var3 = var2.field_n;
+        int var3 = var2.field_n;
         var2.a(true, 5);
         var2.a(true, cd.field_m.field_mc);
-        if (param1 != 1850462342) {
-          qa.e(-25);
-          var4 = (cd.field_m.field_qc << 1850462342) + cd.field_m.field_Wb;
+        if (param1 == 1850462342) {
+          var4 = (cd.field_m.field_qc << 6) + cd.field_m.field_Wb;
           var2.a(true, var4);
           var2.a(false, cd.field_m.field_kc.length, cd.field_m.field_kc, 0);
-          var2.b(var2.field_n + -var3, true);
-          return;
-        } else {
-          var4 = (cd.field_m.field_qc << 1850462342) + cd.field_m.field_Wb;
-          var2.a(true, var4);
-          var2.a(false, cd.field_m.field_kc.length, cd.field_m.field_kc, 0);
-          var2.b(var2.field_n + -var3, true);
+          var2.b(var2.field_n - var3, true);
           return;
         }
+        qa.e(-25);
+        var4Lifetime1 = (cd.field_m.field_qc << 6) + cd.field_m.field_Wb;
+        var2.a(true, var4Lifetime1);
+        var2.a(false, cd.field_m.field_kc.length, cd.field_m.field_kc, 0);
+        var2.b(var2.field_n - var3, true);
     }
 
     public static void e(int param0) {
-        if (param0 != -30349) {
-          qa.a(99, -109);
-          field_u = null;
-          field_s = null;
-          field_r = null;
-          field_w = null;
-          field_v = (qd[][]) null;
-          return;
-        } else {
+        if (param0 == -30349) {
           field_u = null;
           field_s = null;
           field_r = null;
@@ -61,6 +50,12 @@ final class qa extends wk {
           field_v = (qd[][]) null;
           return;
         }
+        qa.a(99, -109);
+        field_u = null;
+        field_s = null;
+        field_r = null;
+        field_w = null;
+        field_v = (qd[][]) null;
     }
 
     qa(long param0, String param1) {
@@ -69,7 +64,7 @@ final class qa extends wk {
 
     final gh a(int param0) {
         if (param0 != 18) {
-            return (gh) null;
+          return (gh) null;
         }
         return gf.field_j;
     }

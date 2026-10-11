@@ -6,14 +6,12 @@ final class sv extends uda {
     static int field_e;
 
     final void a(int param0, boolean param1) {
-        if (param0 != 5) {
-          this.a(91, false);
-          this.field_d.c(true, 44);
-          return;
-        } else {
+        if (param0 == 5) {
           this.field_d.c(true, 44);
           return;
         }
+        this.a(91, false);
+        this.field_d.c(true, 44);
     }
 
     final boolean a(byte param0) {
@@ -27,40 +25,40 @@ final class sv extends uda {
 
     final void a(int param0, int param1, int param2) {
         if (param2 != 5) {
-            sv.e(80);
+          sv.e(80);
         }
     }
 
     final void a(int param0) {
         this.field_d.c(false, 75);
         if (param0 != 2543) {
-            field_e = 30;
+          field_e = 30;
         }
     }
 
     final void b(int param0, boolean param1) {
         if (param0 != 5) {
-            ura var4 = (ura) null;
-            this.a((byte) 1, -18, (ura) null);
+          ura var4 = (ura) null;
+          this.a((byte) 1, -18, (ura) null);
         }
     }
 
     final void a(byte param0, int param1, ura param2) {
         if (param0 < 42) {
-            return;
+          return;
         }
         try {
-            this.field_d.a(param2, -119);
-            this.field_d.h(-127, param1);
+          this.field_d.a(param2, -119);
+          this.field_d.h(-127, param1);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "sv.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "sv.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void e(int param0) {
         field_f = null;
         if (param0 != 0) {
-            field_e = -79;
+          field_e = -79;
         }
     }
 

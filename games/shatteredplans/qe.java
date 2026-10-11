@@ -12,7 +12,7 @@ class qe extends oh {
         field_l = null;
         field_j = null;
         if (param0 != 93) {
-            return;
+          return;
         }
         field_k = null;
     }
@@ -21,62 +21,36 @@ class qe extends oh {
     }
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == -65) {
-          if (param1 >= 0) {
-            if (param1 >= 1582) {
-              if (0 == param1 % 4) {
-                if (param1 % 100 == 0) {
-                  if (0 == param1 % 400) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              L0: {
-                if (0 != param1 % 4) {
-                  stackIn_11_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_11_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_11_0 != 0;
-            }
-          } else {
-            L1: {
-              if ((1 + param1) % 4 != 0) {
-                stackIn_6_0 = 0;
-                break L1;
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-            return stackIn_6_0 != 0;
-          }
-        } else {
+        if (param0 != -65) {
           return true;
         }
+        if (param1 < 0) {
+          return (1 + param1) % 4 == 0 ? true : false;
+        }
+        if (param1 < 1582) {
+          return 0 == param1 % 4 ? true : false;
+        }
+        if (0 != param1 % 4) {
+          return false;
+        }
+        if (param1 % 100 != 0) {
+          return true;
+        }
+        if (0 != param1 % 400) {
+          return false;
+        }
+        return true;
     }
 
     final static boolean a(int param0) {
         if (param0 < 89) {
-            return true;
+          return true;
         }
         if (rp.field_I == null) {
-            return false;
+          return false;
         }
         if (rp.field_I.g((byte) 105) == null) {
-            return false;
+          return false;
         }
         return true;
     }

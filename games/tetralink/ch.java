@@ -13,7 +13,7 @@ final class ch extends mc {
         lc.a((byte) 103);
         mn.a(-7, ha.field_e, fn.field_Q, qe.field_d, ec.field_n[0].field_t, wc.field_J);
         if (param0) {
-            field_o = (String) null;
+          field_o = (String) null;
         }
     }
 
@@ -28,9 +28,9 @@ final class ch extends mc {
 
     ch(byte[] param0) {
         try {
-            this.field_p = param0;
+          this.field_p = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ch.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

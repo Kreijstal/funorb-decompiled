@@ -11,7 +11,7 @@ final class jh {
     public static void a(boolean param0) {
         field_d = null;
         if (param0) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -20,7 +20,7 @@ final class jh {
     final static void a(int param0, int param1) {
         ui.field_w = e.field_p[param1];
         if (param0 != 14221) {
-            return;
+          return;
         }
         oh.field_a = bb.field_F[param1];
         we.field_c = bc.field_E[param1];

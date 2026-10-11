@@ -11,7 +11,7 @@ final class wu extends uda {
 
     final void b(int param0, boolean param1) {
         if (param0 != 5) {
-            return;
+          return;
         }
         this.field_d.a(et.field_c, true, asa.field_a);
     }
@@ -20,71 +20,58 @@ final class wu extends uda {
         int var4;
         int var5;
         ura var6;
+        int var4Lifetime1;
         var5 = VoidHunters.field_G;
         this.field_d.g(1, -124);
         if (param2 == 5) {
-          if (-1 == (128 & param1 ^ -1)) {
-            if ((1 & param0) == 1) {
-              if (this.field_g.field_b) {
-                this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
-                this.field_d.a(this.field_g.field_d, -118);
-                this.field_d.g(0, -64);
-                return;
-              } else {
-                var4 = this.field_d.field_pc % 4000 * 16 / 4000;
-                this.field_d.a(this.field_g.field_a[var4], param2 + -126);
-                this.field_d.g(0, -64);
-                return;
-              }
-            } else {
-              if (!this.field_g.field_b) {
-                this.field_d.a(this.field_g.field_a[0], -128);
-                this.field_d.g(0, -64);
-                return;
-              } else {
-                this.field_d.a(this.field_g.field_d, -122);
-                this.field_d.g(0, -64);
-                return;
-              }
-            }
-          } else {
+          if ((128 & param1) != 0) {
             this.field_d.a((ura) null, -123);
             this.field_d.g(0, -64);
             return;
           }
-        } else {
-          var6 = (ura) null;
-          this.a((byte) -1, -12, (ura) null);
-          if (-1 == (128 & param1 ^ -1)) {
-            if ((1 & param0) == 1) {
-              if (this.field_g.field_b) {
-                this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
-                this.field_d.a(this.field_g.field_d, -118);
-                this.field_d.g(0, -64);
-                return;
-              } else {
-                var4 = this.field_d.field_pc % 4000 * 16 / 4000;
-                this.field_d.a(this.field_g.field_a[var4], param2 + -126);
-                this.field_d.g(0, -64);
-                return;
-              }
+          if ((1 & param0) != 1) {
+            if (!this.field_g.field_b) {
+              this.field_d.a(this.field_g.field_a[0], -128);
             } else {
-              if (!this.field_g.field_b) {
-                this.field_d.a(this.field_g.field_a[0], -128);
-                this.field_d.g(0, -64);
-                return;
-              } else {
-                this.field_d.a(this.field_g.field_d, -122);
-                this.field_d.g(0, -64);
-                return;
-              }
+              this.field_d.a(this.field_g.field_d, -122);
             }
-          } else {
-            this.field_d.a((ura) null, -123);
             this.field_d.g(0, -64);
             return;
+          }
+          if (this.field_g.field_b) {
+            this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
+            this.field_d.a(this.field_g.field_d, -118);
+            this.field_d.g(0, -64);
+            return;
+          }
+          var4 = this.field_d.field_pc % 4000 * 16 / 4000;
+          this.field_d.a(this.field_g.field_a[var4], param2 - 126);
+          this.field_d.g(0, -64);
+          return;
+        }
+        var6 = (ura) null;
+        this.a((byte) -1, -12, (ura) null);
+        if ((128 & param1) != 0) {
+          this.field_d.a((ura) null, -123);
+        } else {
+          if ((1 & param0) != 1) {
+            if (!this.field_g.field_b) {
+              this.field_d.a(this.field_g.field_a[0], -128);
+            } else {
+              this.field_d.a(this.field_g.field_d, -122);
+            }
+          } else {
+            if (this.field_g.field_b) {
+              this.field_f = (float)(this.field_d.field_pc % 4000) / 4000.0f;
+              this.field_d.a(this.field_g.field_d, -118);
+            } else {
+              var4Lifetime1 = this.field_d.field_pc % 4000 * 16 / 4000;
+              this.field_d.a(this.field_g.field_a[var4Lifetime1], param2 - 126);
+            }
           }
         }
+        this.field_d.g(0, -64);
+        return;
     }
 
     public static void d(byte param0) {
@@ -97,9 +84,9 @@ final class wu extends uda {
         super(param0);
         this.field_f = 0.0f;
         try {
-            this.field_g = param1;
+          this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,14 +99,12 @@ final class wu extends uda {
         this.field_d.g(0, -79);
         this.field_d.e(-128, -16777216);
         this.field_d.a(0, (byte) -111, pea.field_d);
-        if (param0 != 5) {
-          this.d(-88);
-          this.d(param0 + 3);
-          return;
-        } else {
+        if (param0 == 5) {
           this.d(param0 + 3);
           return;
         }
+        this.d(-88);
+        this.d(param0 + 3);
     }
 
     final boolean a(byte param0) {
@@ -137,221 +122,52 @@ final class wu extends uda {
         this.field_d.g(0, -62);
         this.field_d.a(0, (byte) -76, qcb.field_q);
         if (param0 != 2543) {
-            field_h = (phb) null;
+          field_h = (phb) null;
         }
     }
 
     final static void a(boolean param0, boolean param1) {
-        int stackIn_19_0 = 0;
         int stackIn_22_0 = 0;
-        int stackIn_31_0 = 0;
         int stackIn_34_0 = 0;
-        int stackIn_49_0 = 0;
         int stackIn_52_0 = 0;
-        int stackIn_62_0 = 0;
         int stackIn_65_0 = 0;
-        int stackIn_74_0 = 0;
         int stackIn_77_0 = 0;
         String var2;
         String[] var3;
         int var4;
         int var5;
         int var6;
-        L0: {
-          var2 = kca.field_a;
-          if (var2 != null) {
-            break L0;
-          } else {
-            var2 = "You";
-            break L0;
-          }
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime2;
+        var2 = kca.field_a;
+        if (var2 == null) {
+          var2 = "You";
         }
-        L1: {
-          var3 = new String[]{var2};
-          if ((foa.field_p ^ -1) == -2) {
-            var3 = new String[]{var2, null, null, null, null, null};
-            break L1;
-          } else {
-            break L1;
-          }
+        var3 = new String[]{var2};
+        if (foa.field_p == 1) {
+          var3 = new String[]{var2, null, null, null, null, null};
         }
-        L2: {
-          var4 = 2;
-          if (!ssa.b(2)) {
-            break L2;
-          } else {
-            if (si.field_o[81]) {
-              var4 = 0;
-              break L2;
-            } else {
-              L3: {
-                if (!ssa.b(2)) {
-                  break L3;
-                } else {
-                  if (!si.field_o[82]) {
-                    break L3;
-                  } else {
-                    var4 = 1;
-                    break L3;
-                  }
-                }
-              }
-              if (!ssa.b(2)) {
-                L4: {
-                  var5 = hob.a(new Random(), 2147483647, 117);
-                  if (!param0) {
-                    break L4;
-                  } else {
-                    var4 = 3;
-                    qqa.a(true, (byte) -41);
-                    break L4;
-                  }
-                }
-                L5: {
-                  vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-                  if (!param1) {
-                    stackIn_31_0 = 0;
-                    break L5;
-                  } else {
-                    stackIn_31_0 = 1;
-                    break L5;
-                  }
-                }
-                L6: {
-                  mjb.field_e = stackIn_31_0 != 0;
-                  di.field_l.a(false, -13027);
-                  var6 = mnb.field_d ? 1 : 0;
-                  if (bqa.a(false)) {
-                    stackIn_34_0 = 7;
-                    break L6;
-                  } else {
-                    stackIn_34_0 = 0;
-                    break L6;
-                  }
-                }
-                L7: {
-                  lha.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
-                  dua.field_o = false;
-                  aka.field_p = false;
-                  bg.field_o = true;
-                  idb.field_o = true;
-                  if (wh.g(-120)) {
-                    dpa.field_p.h(24335, 71);
-                    vga.field_b = ldb.field_o;
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                return;
-              } else {
-                L8: {
-                  if (si.field_o[86]) {
-                    param0 = true;
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                L9: {
-                  var5 = hob.a(new Random(), 2147483647, 117);
-                  if (!param0) {
-                    break L9;
-                  } else {
-                    var4 = 3;
-                    qqa.a(true, (byte) -41);
-                    break L9;
-                  }
-                }
-                L10: {
-                  vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-                  if (!param1) {
-                    stackIn_19_0 = 0;
-                    break L10;
-                  } else {
-                    stackIn_19_0 = 1;
-                    break L10;
-                  }
-                }
-                L11: {
-                  mjb.field_e = stackIn_19_0 != 0;
-                  di.field_l.a(false, -13027);
-                  var6 = mnb.field_d ? 1 : 0;
-                  if (bqa.a(false)) {
-                    stackIn_22_0 = 7;
-                    break L11;
-                  } else {
-                    stackIn_22_0 = 0;
-                    break L11;
-                  }
-                }
-                L12: {
-                  lha.a(stackIn_22_0, var6 != 0, (byte) -85, -1);
-                  dua.field_o = false;
-                  aka.field_p = false;
-                  bg.field_o = true;
-                  idb.field_o = true;
-                  if (wh.g(-120)) {
-                    dpa.field_p.h(24335, 71);
-                    vga.field_b = ldb.field_o;
-                    break L12;
-                  } else {
-                    break L12;
-                  }
-                }
-                return;
-              }
-            }
-          }
-        }
-        L13: {
-          if (!ssa.b(2)) {
-            break L13;
-          } else {
-            if (!si.field_o[82]) {
-              break L13;
-            } else {
-              var4 = 1;
-              break L13;
-            }
-          }
-        }
+        var4 = 2;
         if (ssa.b(2)) {
-          if (!si.field_o[86]) {
-            L14: {
+          if (!si.field_o[81]) {
+            if (ssa.b(2) &&
+              si.field_o[82]) {
+              var4 = 1;
+            }
+            if (!ssa.b(2)) {
               var5 = hob.a(new Random(), 2147483647, 117);
-              if (!param0) {
-                break L14;
-              } else {
+              if (param0) {
                 var4 = 3;
                 qqa.a(true, (byte) -41);
-                break L14;
               }
-            }
-            L15: {
               vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-              if (!param1) {
-                stackIn_74_0 = 0;
-                break L15;
-              } else {
-                stackIn_74_0 = 1;
-                break L15;
-              }
-            }
-            L16: {
-              mjb.field_e = stackIn_74_0 != 0;
+              mjb.field_e = param1;
               di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
-              if (bqa.a(false)) {
-                stackIn_77_0 = 7;
-                break L16;
-              } else {
-                stackIn_77_0 = 0;
-                break L16;
-              }
-            }
-            L17: {
-              lha.a(stackIn_77_0, var6 != 0, (byte) -85, -1);
+              stackIn_34_0 = (bqa.a(false)) ? 7 : 0;
+              lha.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
               dua.field_o = false;
               aka.field_p = false;
               bg.field_o = true;
@@ -359,97 +175,23 @@ final class wu extends uda {
               if (wh.g(-120)) {
                 dpa.field_p.h(24335, 71);
                 vga.field_b = ldb.field_o;
-                break L17;
-              } else {
-                break L17;
               }
+              return;
             }
-            return;
-          } else {
-            L18: {
+            if (si.field_o[86]) {
               param0 = true;
-              var5 = hob.a(new Random(), 2147483647, 117);
-              if (!param0) {
-                break L18;
-              } else {
-                var4 = 3;
-                qqa.a(true, (byte) -41);
-                break L18;
-              }
             }
-            L19: {
-              vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-              if (!param1) {
-                stackIn_62_0 = 0;
-                break L19;
-              } else {
-                stackIn_62_0 = 1;
-                break L19;
-              }
-            }
-            L20: {
-              mjb.field_e = stackIn_62_0 != 0;
-              di.field_l.a(false, -13027);
-              var6 = mnb.field_d ? 1 : 0;
-              if (bqa.a(false)) {
-                stackIn_65_0 = 7;
-                break L20;
-              } else {
-                stackIn_65_0 = 0;
-                break L20;
-              }
-            }
-            L21: {
-              lha.a(stackIn_65_0, var6 != 0, (byte) -85, -1);
-              dua.field_o = false;
-              aka.field_p = false;
-              bg.field_o = true;
-              idb.field_o = true;
-              if (wh.g(-120)) {
-                dpa.field_p.h(24335, 71);
-                vga.field_b = ldb.field_o;
-                break L21;
-              } else {
-                break L21;
-              }
-            }
-            return;
-          }
-        } else {
-          L22: {
-            var5 = hob.a(new Random(), 2147483647, 117);
-            if (!param0) {
-              break L22;
-            } else {
+            var5Lifetime2 = hob.a(new Random(), 2147483647, 117);
+            if (param0) {
               var4 = 3;
               qqa.a(true, (byte) -41);
-              break L22;
             }
-          }
-          L23: {
-            vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-            if (!param1) {
-              stackIn_49_0 = 0;
-              break L23;
-            } else {
-              stackIn_49_0 = 1;
-              break L23;
-            }
-          }
-          L24: {
-            mjb.field_e = stackIn_49_0 != 0;
+            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime2, param0);
+            mjb.field_e = param1;
             di.field_l.a(false, -13027);
-            var6 = mnb.field_d ? 1 : 0;
-            if (bqa.a(false)) {
-              stackIn_52_0 = 7;
-              break L24;
-            } else {
-              stackIn_52_0 = 0;
-              break L24;
-            }
-          }
-          L25: {
-            lha.a(stackIn_52_0, var6 != 0, (byte) -85, -1);
+            var6Lifetime2 = mnb.field_d ? 1 : 0;
+            stackIn_22_0 = (bqa.a(false)) ? 7 : 0;
+            lha.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
             dua.field_o = false;
             aka.field_p = false;
             bg.field_o = true;
@@ -457,51 +199,93 @@ final class wu extends uda {
             if (wh.g(-120)) {
               dpa.field_p.h(24335, 71);
               vga.field_b = ldb.field_o;
-              break L25;
-            } else {
-              break L25;
             }
+            return;
           }
-          return;
+          var4 = 0;
+        }
+        if (ssa.b(2) &&
+          si.field_o[82]) {
+          var4 = 1;
+        }
+        if (!ssa.b(2)) {
+          var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+          if (param0) {
+            var4 = 3;
+            qqa.a(true, (byte) -41);
+          }
+          vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+          mjb.field_e = param1;
+          di.field_l.a(false, -13027);
+          var6Lifetime1 = mnb.field_d ? 1 : 0;
+          stackIn_52_0 = (bqa.a(false)) ? 7 : 0;
+          lha.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
+        } else {
+          if (!si.field_o[86]) {
+            var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+            if (param0) {
+              var4 = 3;
+              qqa.a(true, (byte) -41);
+            }
+            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+            mjb.field_e = param1;
+            di.field_l.a(false, -13027);
+            var6Lifetime1 = mnb.field_d ? 1 : 0;
+            stackIn_77_0 = (bqa.a(false)) ? 7 : 0;
+            lha.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
+          } else {
+            param0 = true;
+            var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+            if (param0) {
+              var4 = 3;
+              qqa.a(true, (byte) -41);
+            }
+            vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
+            mjb.field_e = param1;
+            di.field_l.a(false, -13027);
+            var6Lifetime1 = mnb.field_d ? 1 : 0;
+            stackIn_65_0 = (bqa.a(false)) ? 7 : 0;
+            lha.a(stackIn_65_0, var6Lifetime1 != 0, (byte) -85, -1);
+          }
+        }
+        dua.field_o = false;
+        aka.field_p = false;
+        bg.field_o = true;
+        idb.field_o = true;
+        if (wh.g(-120)) {
+          dpa.field_p.h(24335, 71);
+          vga.field_b = ldb.field_o;
         }
     }
 
     final void d(int param0) {
-        oj var2;
-        oj var3;
-        ura var4;
-        L0: {
-          if (0 == this.field_d.t((byte) 9)) {
-            var2 = this.field_d.p(0);
-            this.field_d.g(1, -90);
-            var3 = this.field_d.H((byte) 82);
-            var3.a(var2, 16383);
-            var3.b(-3286, 0.125f, 0.125f, 1.0f);
-            var3.a(this.field_f, 0.0f, 0.0f, (byte) 13);
-            this.field_d.a(wda.field_o, true);
-            this.field_d.g(0, -52);
-            break L0;
-          } else {
-            break L0;
-          }
+        oj var2 = null;
+        oj var3 = null;
+        if (0 == this.field_d.t((byte) 9)) {
+          var2 = this.field_d.p(0);
+          this.field_d.g(1, -90);
+          var3 = this.field_d.H((byte) 82);
+          var3.a(var2, 16383);
+          var3.b(-3286, 0.125f, 0.125f, 1.0f);
+          var3.a(this.field_f, 0.0f, 0.0f, (byte) 13);
+          this.field_d.a(wda.field_o, true);
+          this.field_d.g(0, -52);
         }
-        if (param0 != 8) {
-          var4 = (ura) null;
-          this.a((byte) -37, 101, (ura) null);
-          return;
-        } else {
+        if (param0 == 8) {
           return;
         }
+        ura var4 = (ura) null;
+        this.a((byte) -37, 101, (ura) null);
     }
 
     final void a(byte param0, int param1, ura param2) {
         try {
-            this.field_d.a(param2, -124);
-            if (param0 <= 42) {
-                field_h = (phb) null;
-            }
+          this.field_d.a(param2, -124);
+          if (param0 <= 42) {
+            field_h = (phb) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wu.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wu.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

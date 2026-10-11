@@ -18,13 +18,13 @@ final class gd {
     final static void a(byte param0) {
         vd.field_c = new ak(0L, (ak) null);
         if (f.field_n) {
-            vd.field_c.a(gk.field_lb, (byte) 26);
+          vd.field_c.a(gk.field_lb, (byte) 26);
         }
         vd.field_c.a(oc.field_O, (byte) 26);
         cl.field_g = new wo(ul.field_m, vd.field_c);
         ql.field_n = new ak(0L, (ak) null);
         if (param0 != -7) {
-            gd.a(-71);
+          gd.a(-71);
         }
         ql.field_n.a(cl.field_g.field_g, (byte) 26);
         ql.field_n.a(gk.field_cb, (byte) 26);
@@ -36,7 +36,7 @@ final class gd {
         field_j = null;
         field_h = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_b = null;
         field_i = null;
@@ -50,6 +50,14 @@ final class gd {
     static {
         int var2 = 0;
         int var3 = 0;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var2Lifetime4;
+        int var2Lifetime5;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var1Lifetime1;
         field_d = "To server list";
         field_l = 20;
         field_b = new int[8];
@@ -57,31 +65,31 @@ final class gd {
         field_h = new int[615];
         int var0 = 307;
         for (var2 = 0; var0 > var2; var2++) {
-            var3 = 255 & 255 * var2 / var0;
-            field_h[var2] = bq.a(var3 << 563357840, 65280);
+          var3 = 255 & 255 * var2 / var0;
+          field_h[var2] = bq.a(var3 << 16, 65280);
         }
         int var1 = 153;
-        for (var2 = var0; var1 + var0 > var2; var2++) {
-            var3 = 255 * (-var0 + var2) / var1;
-            field_h[var2] = bq.a(-cm.a(255, var3) + 255 << 1039657096, 16711680);
+        for (var2Lifetime1 = var0; var1 + var0 > var2Lifetime1; var2Lifetime1++) {
+          var3Lifetime1 = 255 * (-var0 + var2Lifetime1) / var1;
+          field_h[var2Lifetime1] = bq.a(-cm.a(255, var3Lifetime1) + 255 << 8, 16711680);
         }
-        for (var2 = var1 + var0; (var2 ^ -1) > -616; var2++) {
-            var3 = 255 * (-var1 + var2 + -var0) / var1;
-            if (-256 > (var3 ^ -1)) {
-                var3 = 255;
-            }
-            field_h[var2] = -(cm.a(255, var3) / 2) + 255 << -1053882384;
+        for (var2Lifetime2 = var1 + var0; var2Lifetime2 < 615; var2Lifetime2++) {
+          var3Lifetime2 = 255 * (-var1 + var2Lifetime2 - var0) / var1;
+          if (var3Lifetime2 > 255) {
+            var3Lifetime2 = 255;
+          }
+          field_h[var2Lifetime2] = -(cm.a(255, var3Lifetime2) / 2) + 255 << 16;
         }
-        for (var2 = 0; (var2 ^ -1) > -9; var2++) {
-            field_b[var2] = 65793 * (var2 << -619879772);
+        for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
+          field_b[var2Lifetime3] = 65793 * (var2Lifetime3 << 4);
         }
-        for (var2 = 0; field_c.length > var2; var2++) {
-            field_c[var2] = (var2 << 979140168) / field_c.length * 65793;
+        for (var2Lifetime4 = 0; field_c.length > var2Lifetime4; var2Lifetime4++) {
+          field_c[var2Lifetime4] = (var2Lifetime4 << 8) / field_c.length * 65793;
         }
         field_j = "Only show lobby chat from my friends";
         field_e = new so[50];
         int[] var7 = new int[50];
-        var1 = 30;
+        var1Lifetime1 = 30;
         var7[12] = 30;
         var7[7] = 22;
         var7[14] = 10;
@@ -89,8 +97,8 @@ final class gd {
         var7[10] = 22;
         var7[5] = 30;
         var7[1] = 26;
-        for (var2 = 18; -51 < (var2 ^ -1); var2++) {
-            var7[var2] = var1;
+        for (var2Lifetime5 = 18; var2Lifetime5 < 50; var2Lifetime5++) {
+          var7[var2Lifetime5] = var1Lifetime1;
         }
         var7[29] = 0;
         var7[26] = 20;

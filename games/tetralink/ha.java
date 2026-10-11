@@ -14,97 +14,65 @@ final class ha implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
         try {
-            java.net.URL var3 = null;
-            Exception var3_ref = null;
-            RuntimeException var3_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            StringBuilder stackIn_11_1 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (param0 < -85) {
-                  break L0;
-                } else {
-                  field_b = (je) null;
-                  break L0;
-                }
-              }
-              try {
-                L1: {
-                  var3 = new java.net.URL(param2.getCodeBase(), param1);
-                  var3 = ai.a(var3, (byte) -112, param2);
-                  oi.a((byte) -54, var3.toString(), true, param2);
-                  break L1;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var3_ref = (Exception) (Object) decompiledCaughtException;
-                var3_ref.printStackTrace();
-                return;
-              }
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var3_ref2);
-
-                stackIn_8_1 = new StringBuilder().append("ha.A(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              L3: {
-
-
-                stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',');
-
-                if (param2 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L3;
-                }
-              }
-              throw oi.a((Throwable) ((Object) stackIn_9_0), stackIn_12_2 + ')');
+          java.net.URL var3 = null;
+          Exception var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 >= -85) {
+              field_b = (je) null;
             }
+            try {
+              var3 = new java.net.URL(param2.getCodeBase(), param1);
+              var3 = ai.a(var3, (byte) -112, param2);
+              oi.a((byte) -54, var3.toString(), true, param2);
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = (Exception) (Object) decompiledCaughtException;
+              var3_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var3_ref2;
+            stackIn_8_1 = new StringBuilder().append("ha.A(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+            if (param2 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            throw oi.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-            if (null != kd.field_g) {
-                ea.field_a = 0;
-                nl.field_d = -1;
-                va.field_y = -1;
-                tl.field_M = true;
-            }
+          if (null != kd.field_g) {
+            ea.field_a = 0;
+            nl.field_d = -1;
+            va.field_y = -1;
+            tl.field_M = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,66 +80,51 @@ final class ha implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0.isPopupTrigger()) {
-              param0.consume();
-              break L0;
-            } else {
-              return;
-            }
+          if (!param0.isPopupTrigger()) {
+            return;
           }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ha.mouseClicked(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ha.mouseClicked(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-            if (null != kd.field_g) {
-                ea.field_a = 0;
-                nl.field_d = param0.getX();
-                va.field_y = param0.getY();
-                tl.field_M = true;
-            }
+          if (null != kd.field_g) {
+            ea.field_a = 0;
+            nl.field_d = param0.getX();
+            va.field_y = param0.getY();
+            tl.field_M = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-            if (kd.field_g != null) {
-                ea.field_a = 0;
-                nl.field_d = param0.getX();
-                va.field_y = param0.getY();
-                tl.field_M = true;
-            }
+          if (kd.field_g != null) {
+            ea.field_a = 0;
+            nl.field_d = param0.getX();
+            va.field_y = param0.getY();
+            tl.field_M = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ha.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -180,82 +133,46 @@ final class ha implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == kd.field_g) {
-                break L1;
-              } else {
-                L2: {
-                  ea.field_a = 0;
-                  qc.field_Z = param0.getX();
-                  qm.field_c = param0.getY();
-                  k.a(0);
-                  if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-                    tg.field_f = 2;
-                    kf.field_c = 2;
-                    break L2;
-                  } else {
-                    tg.field_f = 1;
-                    kf.field_c = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2_int = param0.getModifiers();
-                  tl.field_M = true;
-                  if (0 == (16 & var2_int)) {
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if ((4 & var2_int) != 0) {
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if (0 == (var2_int & 8)) {
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (param0.isPopupTrigger()) {
-              param0.consume();
-              break L0;
+          if (null != kd.field_g) {
+            ea.field_a = 0;
+            qc.field_Z = param0.getX();
+            qm.field_c = param0.getY();
+            k.a(0);
+            if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
+              tg.field_f = 2;
+              kf.field_c = 2;
             } else {
-              return;
+              tg.field_f = 1;
+              kf.field_c = 1;
+            }
+            var2_int = param0.getModifiers();
+            tl.field_M = true;
+            if (0 == (16 & var2_int)) {
+            }
+            if ((4 & var2_int) != 0) {
+            }
+            if (0 == (var2_int & 8)) {
             }
           }
+          if (!param0.isPopupTrigger()) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("ha.mousePressed(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("ha.mousePressed(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -264,69 +181,37 @@ final class ha implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == kd.field_g) {
-                break L1;
-              } else {
-                L2: {
-                  ea.field_a = 0;
-                  kf.field_c = 0;
-                  tl.field_M = true;
-                  var2_int = param0.getModifiers();
-                  if ((16 & var2_int) == 0) {
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (-1 != (var2_int & 8 ^ -1)) {
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if ((4 & var2_int) == 0) {
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
+          if (null != kd.field_g) {
+            ea.field_a = 0;
+            kf.field_c = 0;
+            tl.field_M = true;
+            var2_int = param0.getModifiers();
+            if ((16 & var2_int) == 0) {
             }
-            if (param0.isPopupTrigger()) {
-              param0.consume();
-              break L0;
-            } else {
-              return;
+            if ((var2_int & 8) != 0) {
+            }
+            if ((4 & var2_int) == 0) {
             }
           }
+          if (!param0.isPopupTrigger()) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("ha.mouseReleased(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("ha.mouseReleased(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -336,142 +221,87 @@ final class ha implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_a = null;
         field_f = null;
         field_d = null;
-        if (param0 != 0) {
-          field_f = (String) null;
-          field_g = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_g = null;
           field_b = null;
           return;
         }
+        field_f = (String) null;
+        field_g = null;
+        field_b = null;
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (null != kd.field_g) {
-              ea.field_a = 0;
-              nl.field_d = param0.getX();
-              va.field_y = param0.getY();
-              tl.field_M = true;
-              break L0;
-            } else {
-              return;
-            }
+          if (null == kd.field_g) {
+            return;
           }
+          ea.field_a = 0;
+          nl.field_d = param0.getX();
+          va.field_y = param0.getY();
+          tl.field_M = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ha.mouseEntered(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ha.mouseEntered(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static boolean a(String param0, int param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = TetraLink.field_J;
         try {
-          L0: {
-            L1: {
-              if (param1 < -33) {
-                break L1;
-              } else {
-                field_g = (String) null;
-                break L1;
-              }
-            }
-            var2_int = param0.charAt(0);
-            var3 = 1;
-            L2: while (true) {
-              if (param0.length() <= var3) {
-                stackIn_11_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (param0.charAt(var3) != var2_int) {
-                  stackIn_8_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var3++;
-                  continue L2;
-                }
-              }
+          if (param1 >= -33) {
+            field_g = (String) null;
+          }
+          var2_int = param0.charAt(0);
+          for (var3 = 1; param0.length() > var3; var3++) {
+            if (param0.charAt(var3) != var2_int) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("ha.B(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("ha.B(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          return stackIn_11_0 != 0;
+          throw oi.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            if (null != kd.field_g) {
-                kf.field_c = 0;
-            }
+          if (null != kd.field_g) {
+            kf.field_c = 0;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ha.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ha.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

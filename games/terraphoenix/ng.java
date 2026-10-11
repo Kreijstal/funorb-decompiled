@@ -16,12 +16,12 @@ class ng extends fd {
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
         try {
-            if (!(!param4)) {
-                ah.a(param1.field_n, 128, param1.field_p, param2 - -param1.field_w, param1.field_u + param0);
-            }
-            super.a(param0, param1, param2, param3, param4);
+          if (param4) {
+            ah.a(param1.field_n, 128, param1.field_p, param2 + param1.field_w, param1.field_u + param0);
+          }
+          super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -29,7 +29,7 @@ class ng extends fd {
         field_w = null;
         field_u = null;
         if (param0 < 26) {
-            ng.e(-69);
+          ng.e(-69);
         }
     }
 

@@ -32,7 +32,7 @@ final class ul {
         int stackIn_64_3;
         int stackIn_65_4 = 0;
         int stackIn_68_5;
-        int stackIn_82_0 = 0;
+        int stackIn_83_0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -146,10 +146,8 @@ final class ul {
                       stackIn_64_0[stackIn_64_1] = lb.a(stackIn_64_2, lb.a(stackIn_64_3, lb.a(lb.a(lb.a(stackIn_65_4, stackIn_68_5), var12 << 20), var13 << 10)));
                       h.field_a = h.field_a + 1;
                     }
-                    if (var10 == 0) {
-                      continue;
-                    }
-                    if (var11 != 0) {
+                    if (var10 != 0 &&
+                      var11 != 0) {
                       var2 = 1;
                     }
                   }
@@ -160,8 +158,8 @@ final class ul {
           }
           if (var1_int != 0) {
             if (var2 == 0) {
-              stackIn_82_0 = 4;
-              jc.a(stackIn_82_0, false);
+              stackIn_83_0 = 4;
+              jc.a(stackIn_83_0, false);
             } else {
               jc.a(5, false);
             }

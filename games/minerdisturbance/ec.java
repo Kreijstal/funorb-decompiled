@@ -38,44 +38,32 @@ final class ec {
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            int var1;
-            int var2;
-            int var3;
-            int var4;
-            int var5;
-            int var6;
-            double var7;
-            field_b = new int[36864];
-            var0 = 96;
-            var1 = 96;
-            var2 = 0;
-            L0: while (true) {
-              if (var2 >= field_b.length) {
-                field_g = new String[][]{new String[]{"Oh dear, the seismograph had a little spike there. Too many of those and this volcano might just blow. Of course, that won't matter if you can get out in time! Keep an eye on your seismograph: it will give you a good idea of how stable the volcano is."}};
-                field_f = "Loading extra data";
-                field_e = 64;
-                field_d = new gj();
-                field_c = new ta();
-                break $cfr$clinit;
-              } else {
-                var3 = var2 / 192;
-                var4 = -(192 * var3) + var2;
-                var5 = var4 - var0;
-                var6 = var3 - var1;
-                var7 = 255.0 - 255.0 * Math.sqrt((double)(var6 * var6 + var5 * var5)) / (double)var0;
-                field_b[var2] = (int)(0.5 + var7);
-                if (field_b[var2] < 0) {
-                  field_b[var2] = 0;
-                  var2++;
-                  continue L0;
-                } else {
-                  var2++;
-                  continue L0;
-                }
-              }
-            }
+        int var2 = 0;
+        int var0;
+        int var1;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        double var7;
+        field_b = new int[36864];
+        var0 = 96;
+        var1 = 96;
+        for (var2 = 0; var2 < field_b.length; var2++) {
+          var3 = var2 / 192;
+          var4 = -(192 * var3) + var2;
+          var5 = var4 - var0;
+          var6 = var3 - var1;
+          var7 = 255.0 - 255.0 * Math.sqrt((double)(var6 * var6 + var5 * var5)) / (double)var0;
+          field_b[var2] = (int)(0.5 + var7);
+          if (field_b[var2] < 0) {
+            field_b[var2] = 0;
+          }
         }
+        field_g = new String[][]{new String[]{"Oh dear, the seismograph had a little spike there. Too many of those and this volcano might just blow. Of course, that won't matter if you can get out in time! Keep an eye on your seismograph: it will give you a good idea of how stable the volcano is."}};
+        field_f = "Loading extra data";
+        field_e = 64;
+        field_d = new gj();
+        field_c = new ta();
     }
 }

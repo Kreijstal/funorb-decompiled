@@ -11,16 +11,7 @@ final class c {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          c.a(true);
-          field_d = null;
-          field_f = null;
-          field_b = null;
-          field_c = (byte[][][]) null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0) {
           field_d = null;
           field_f = null;
           field_b = null;
@@ -29,6 +20,13 @@ final class c {
           field_e = null;
           return;
         }
+        c.a(true);
+        field_d = null;
+        field_f = null;
+        field_b = null;
+        field_c = (byte[][][]) null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

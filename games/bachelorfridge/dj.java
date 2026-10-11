@@ -9,7 +9,7 @@ final class dj {
 
     public static void a(byte param0) {
         if (param0 != -75) {
-            dj.a((byte) 111);
+          dj.a((byte) 111);
         }
         field_a = null;
         field_c = null;
@@ -21,11 +21,11 @@ final class dj {
         pf.field_n = !param1 ? new lm(hfa.field_B, nu.field_f) : new lm(dea.field_l, sr.field_b);
         ela.field_i = new sna(0L, (sna) null);
         ela.field_i.a(-1, pf.field_n.field_a);
-        ela.field_i.a(param0 + -1, jj.field_wb);
+        ela.field_i.a(param0 - 1, jj.field_wb);
         qw.field_b = new sna(0L, qaa.field_d);
         rf.field_q = new sna((long)param0, (sna) null);
         qw.field_b.a(-1, saa.field_f);
-        qw.field_b.a(param0 + -1, rf.field_q);
+        qw.field_b.a(param0 - 1, rf.field_q);
         rf.field_q.a(-1, tv.field_o);
         rf.field_q.a(-1, vca.field_h);
         pv.a(param1, true);
@@ -35,78 +35,36 @@ final class dj {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
         try {
-          L0: {
-            if (sl.a(param0, (byte) 125, param2)) {
-              var3_int = 0;
-              L1: while (true) {
-                if (var3_int >= param2.length()) {
-                  if (param1 == -15437) {
-                    stackIn_14_0 = 1;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    field_c = (gj) null;
-                    return true;
-                  }
-                } else {
-                  if (!vu.a((byte) 117, param2.charAt(var3_int))) {
-                    stackIn_9_0 = 0;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var3_int++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!sl.a(param0, (byte) 125, param2)) {
+            return false;
+          }
+          for (var3_int = 0; var3_int < param2.length(); var3_int++) {
+            if (!vu.a((byte) 117, param2.charAt(var3_int))) {
+              return false;
             }
           }
+          if (param1 == -15437) {
+            return true;
+          }
+          field_c = (gj) null;
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var3);
-
-            stackIn_17_1 = new StringBuilder().append("dj.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
-          }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0 != 0;
+          var3 = decompiledCaughtException;
+          stackIn_17_0 = var3;
+          stackIn_17_1 = new StringBuilder().append("dj.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
           } else {
-            return stackIn_14_0 != 0;
+            stackIn_18_2 = "{...}";
           }
+          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

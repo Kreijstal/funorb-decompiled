@@ -12,59 +12,38 @@ final class fg {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
-        if (param0 != 24) {
-          field_a = (String) null;
-          field_f = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 24) {
           field_f = null;
           field_d = null;
           field_c = null;
           return;
         }
+        field_a = (String) null;
+        field_f = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static void a(byte param0) {
         try {
-            int var1 = 0;
-            Exception var2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              var1 = 4 % ((41 - param0) / 63);
-              if (kf.field_y == null) {
-                break L0;
-              } else {
-                try {
-                  L1: {
-                    kf.field_y.a((byte) 40, 0L);
-                    kf.field_y.b(ig.field_a.field_h, ig.field_a.field_j, 24, -31593);
-                    decompiledRegionSelector0 = 0;
-                    break L1;
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var2 = (Exception) (Object) decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L2;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  ig.field_a.field_h = ig.field_a.field_h + 24;
-                  return;
-                } else {
-                  break L0;
-                }
-              }
+          int var1 = 0;
+          Exception var2 = null;
+          Throwable decompiledCaughtException = null;
+          var1 = 4 % ((41 - param0) / 63);
+          if (kf.field_y != null) {
+            try {
+              kf.field_y.a((byte) 40, 0L);
+              kf.field_y.b(ig.field_a.field_h, ig.field_a.field_j, 24, -31593);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (Exception) (Object) decompiledCaughtException;
             }
-            ig.field_a.field_h = ig.field_a.field_h + 24;
+          }
+          ig.field_a.field_h = ig.field_a.field_h + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

@@ -14,42 +14,40 @@ final class lw extends IOException {
     static int[] field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        int var8;
-        int var9;
-        var9 = Kickabout.field_G;
-        if (param2 <= param0) {
-          if (param1 <= param0) {
-            if (param2 >= param1) {
-              qe.a(param2, param4, -2178, param0, param7, on.field_a, param1, param6, param5);
-              var8 = 91 / ((-2 - param3) / 51);
-              return;
-            } else {
-              qe.a(param1, param4, -2178, param0, param7, on.field_a, param2, param5, param6);
-              var8 = 91 / ((-2 - param3) / 51);
-              return;
-            }
-          } else {
-            qe.a(param0, param6, -2178, param1, param7, on.field_a, param2, param5, param4);
-            var8 = 91 / ((-2 - param3) / 51);
-            return;
-          }
-        } else {
-          if (param1 <= param2) {
-            if (param1 <= param0) {
-              qe.a(param0, param5, -2178, param2, param7, on.field_a, param1, param6, param4);
-              var8 = 91 / ((-2 - param3) / 51);
-              return;
-            } else {
-              qe.a(param1, param5, -2178, param2, param7, on.field_a, param0, param4, param6);
-              var8 = 91 / ((-2 - param3) / 51);
-              return;
-            }
-          } else {
+        int var8 = 0;
+        int var9 = Kickabout.field_G;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var8Lifetime3;
+        int var8Lifetime4;
+        int var8Lifetime5;
+        if (param2 > param0) {
+          if (param1 > param2) {
             qe.a(param2, param6, -2178, param1, param7, on.field_a, param0, param4, param5);
             var8 = 91 / ((-2 - param3) / 51);
             return;
           }
+          if (param1 > param0) {
+            qe.a(param1, param5, -2178, param2, param7, on.field_a, param0, param4, param6);
+            var8Lifetime4 = 91 / ((-2 - param3) / 51);
+            return;
+          }
+          qe.a(param0, param5, -2178, param2, param7, on.field_a, param1, param6, param4);
+          var8Lifetime5 = 91 / ((-2 - param3) / 51);
+          return;
         }
+        if (param1 > param0) {
+          qe.a(param0, param6, -2178, param1, param7, on.field_a, param2, param5, param4);
+          var8Lifetime1 = 91 / ((-2 - param3) / 51);
+          return;
+        }
+        if (param2 < param1) {
+          qe.a(param1, param4, -2178, param0, param7, on.field_a, param2, param5, param6);
+          var8Lifetime2 = 91 / ((-2 - param3) / 51);
+          return;
+        }
+        qe.a(param2, param4, -2178, param0, param7, on.field_a, param1, param6, param5);
+        var8Lifetime3 = 91 / ((-2 - param3) / 51);
     }
 
     public static void a(byte param0) {

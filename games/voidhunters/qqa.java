@@ -13,22 +13,22 @@ final class qqa extends le {
         int var2_int = 0;
         int var3 = VoidHunters.field_G;
         try {
-            for (var2_int = 0; -12 < (var2_int ^ -1); var2_int++) {
-                lu.field_f[var2_int] = 0;
-                qd.field_a[var2_int] = !param0 ? true : false;
-            }
-            if (param1 > -5) {
-                qqa.e((byte) 81);
-            }
-            nqa.field_c = !param0 ? true : false;
-            mfb.field_a = !param0 ? true : false;
-            mja.field_o = !param0 ? true : false;
-            eka.field_b = !param0 ? true : false;
-            bva.field_d = !param0 ? true : false;
-            gk.field_p = !param0 ? true : false;
-            m.a(37);
+          for (var2_int = 0; var2_int < 11; var2_int++) {
+            lu.field_f[var2_int] = 0;
+            qd.field_a[var2_int] = !param0 ? true : false;
+          }
+          if (param1 > -5) {
+            qqa.e((byte) 81);
+          }
+          nqa.field_c = !param0 ? true : false;
+          mfb.field_a = !param0 ? true : false;
+          mja.field_o = !param0 ? true : false;
+          eka.field_b = !param0 ? true : false;
+          bva.field_d = !param0 ? true : false;
+          gk.field_p = !param0 ? true : false;
+          m.a(37);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -37,12 +37,12 @@ final class qqa extends le {
     }
 
     final int[] a(int param0, boolean param1) {
+        int var8 = 0;
         int[] var3;
         int[][] var4;
         int[] var5;
         int[] var6;
         int[] var7;
-        int var8;
         int var9;
         int[] var10;
         var9 = VoidHunters.field_G;
@@ -53,29 +53,15 @@ final class qqa extends le {
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];
-          var8 = 0;
-          L0: while (true) {
-            if (hob.field_d > var8) {
-              var10[var8] = (var6[var8] + var5[var8] + var7[var8]) / 3;
-              var8++;
-              continue L0;
-            } else {
-              if (!param1) {
-                field_i = (String[]) null;
-                return var3;
-              } else {
-                return var3;
-              }
-            }
-          }
-        } else {
-          if (!param1) {
-            field_i = (String[]) null;
-            return var3;
-          } else {
-            return var3;
+          for (var8 = 0; hob.field_d > var8; var8++) {
+            var10[var8] = (var6[var8] + var5[var8] + var7[var8]) / 3;
           }
         }
+        if (param1) {
+          return var3;
+        }
+        field_i = (String[]) null;
+        return var3;
     }
 
     static {

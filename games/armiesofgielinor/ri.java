@@ -11,108 +11,76 @@ final class ri {
     static ll field_b;
 
     final Object a(long param0, byte param1) {
-        Object var5;
-        f var6;
-        uq var7;
-        var7 = (uq) ((Object) this.field_g.a(13497, param0));
-        if (var7 != null) {
-          var5 = var7.b(false);
-          if (var5 != null) {
-            if (param1 <= 121) {
-              L0: {
-                this.a(-102L, 20);
-                if (var7.a(true)) {
-                  var6 = new f(var5, var7.field_z);
-                  this.field_g.a(var6, false, var7.field_i);
-                  this.field_e.a(-96, var6);
-                  ((uq) ((Object) var6)).field_q = 0L;
-                  var7.d(97);
-                  var7.c((byte) -76);
-                  break L0;
-                } else {
-                  this.field_e.a(-96, var7);
-                  var7.field_q = 0L;
-                  break L0;
-                }
-              }
-              return var5;
-            } else {
-              L1: {
-                if (var7.a(true)) {
-                  var6 = new f(var5, var7.field_z);
-                  this.field_g.a(var6, false, var7.field_i);
-                  this.field_e.a(-96, var6);
-                  ((uq) ((Object) var6)).field_q = 0L;
-                  var7.d(97);
-                  var7.c((byte) -76);
-                  break L1;
-                } else {
-                  this.field_e.a(-96, var7);
-                  var7.field_q = 0L;
-                  break L1;
-                }
-              }
-              return var5;
-            }
-          } else {
-            var7.d(123);
-            var7.c((byte) -76);
-            this.field_a = this.field_a + var7.field_z;
-            return null;
-          }
-        } else {
+        f var6 = null;
+        uq var7 = (uq) (this.field_g.a(13497, param0));
+        f var6Lifetime1;
+        if (var7 == null) {
           return null;
         }
+        Object var5 = var7.b(false);
+        if (var5 == null) {
+          var7.d(123);
+          var7.c((byte) -76);
+          this.field_a = this.field_a + var7.field_z;
+          return null;
+        }
+        if (param1 > 121) {
+          if (!var7.a(true)) {
+            this.field_e.a(-96, var7);
+            var7.field_q = 0L;
+          } else {
+            var6 = new f(var5, var7.field_z);
+            this.field_g.a(var6, false, var7.field_i);
+            this.field_e.a(-96, var6);
+            ((uq) ((Object) var6)).field_q = 0L;
+            var7.d(97);
+            var7.c((byte) -76);
+          }
+          return var5;
+        }
+        this.a(-102L, 20);
+        if (!var7.a(true)) {
+          this.field_e.a(-96, var7);
+          var7.field_q = 0L;
+        } else {
+          var6Lifetime1 = new f(var5, var7.field_z);
+          this.field_g.a(var6Lifetime1, false, var7.field_i);
+          this.field_e.a(-96, var6Lifetime1);
+          ((uq) ((Object) var6Lifetime1)).field_q = 0L;
+          var7.d(97);
+          var7.c((byte) -76);
+        }
+        return var5;
     }
 
     private final void a(uq param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                param0.d(param1 ^ -115);
-                param0.c((byte) -76);
-                this.field_a = this.field_a + param0.field_z;
-                break L1;
-              }
-            }
-            if (param1 == 0) {
-              break L0;
-            } else {
-              this.field_g = (m) null;
-              return;
-            }
+          if (param0 != null) {
+            param0.d(param1 ^ -115);
+            param0.c((byte) -76);
+            this.field_a = this.field_a + param0.field_z;
           }
+          if (param1 == 0) {
+            return;
+          }
+          this.field_g = (m) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("ri.F(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ri.F(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -121,41 +89,41 @@ final class ri {
         f var7 = null;
         int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-            if (!(this.field_f >= param2)) {
-                throw new IllegalStateException();
-            }
-            this.a(param3, -75);
-            this.field_a = this.field_a - param2;
-            while (0 > this.field_a) {
-                var9 = (uq) ((Object) this.field_e.a(false));
-                this.a(var9, 0);
-            }
-            int var6_int = 105 % ((4 - param1) / 34);
-            var7 = new f(param0, param2);
-            this.field_g.a(var7, false, param3);
-            this.field_e.a(-96, var7);
-            ((uq) ((Object) var7)).field_q = 0L;
+          if (this.field_f < param2) {
+            throw new IllegalStateException();
+          }
+          this.a(param3, -75);
+          this.field_a = this.field_a - param2;
+          while (0 > this.field_a) {
+            var9 = (uq) (this.field_e.a(false));
+            this.a(var9, 0);
+          }
+          int var6_int = 105 % ((4 - param1) / 34);
+          var7 = new f(param0, param2);
+          this.field_g.a(var7, false, param3);
+          this.field_e.a(-96, var7);
+          ((uq) ((Object) var7)).field_q = 0L;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ri.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final void a(long param0, int param1) {
         if (param1 > -64) {
-            return;
+          return;
         }
-        uq var4 = (uq) ((Object) this.field_g.a(13497, param0));
+        uq var4 = (uq) (this.field_g.a(13497, param0));
         this.a(var4, 0);
     }
 
     final void a(Object param0, int param1, long param2) {
         try {
-            this.a(param0, (byte) -46, 1, param2);
-            if (param1 != 100) {
-                this.a(64L, (byte) 125);
-            }
+          this.a(param0, (byte) -46, 1, param2);
+          if (param1 != 100) {
+            this.a(64L, (byte) 125);
+          }
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "ri.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "ri.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -175,20 +143,19 @@ final class ri {
         this.field_a = param0;
         this.field_f = param0;
         var3 = 1;
-        L0: while (true) {
-          if (param0 > var3 + var3) {
-            if (param1 > var3) {
-              var3 = var3 + var3;
-              continue L0;
-            } else {
-              this.field_g = new m(var3);
-              return;
-            }
-          } else {
+        while (true) {
+          if (param0 <= var3 + var3) {
             this.field_g = new m(var3);
             return;
           }
+          if (param1 > var3) {
+            var3 = var3 + var3;
+            continue;
+          }
+          break;
         }
+        this.field_g = new m(var3);
+        return;
     }
 
     static {

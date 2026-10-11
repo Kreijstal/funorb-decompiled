@@ -20,16 +20,14 @@ final class h {
         field_b = null;
         field_g = null;
         field_e = null;
-        if (param0 != -25764) {
-          field_h = (String) null;
-          field_d = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -25764) {
           field_d = null;
           field_h = null;
           return;
         }
+        field_h = (String) null;
+        field_d = null;
+        field_h = null;
     }
 
     h(int param0) {

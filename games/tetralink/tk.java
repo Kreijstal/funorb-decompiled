@@ -10,29 +10,22 @@ final class tk {
     static boolean field_b;
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_9_0 = 0;
-        if (param0 == 81) {
-          if (param1 != 160) {
-            if (param1 != 32) {
-              if (param1 != 95) {
-                if (param1 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_9_0 = 1;
-                return stackIn_9_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != 81) {
           return false;
         }
+        if (param1 == 160) {
+          return true;
+        }
+        if (param1 == 32) {
+          return true;
+        }
+        if (param1 == 95) {
+          return true;
+        }
+        if (param1 != 45) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {
@@ -41,7 +34,7 @@ final class tk {
         field_d = null;
         field_f = null;
         if (param0 != -161) {
-            tk.a(-94);
+          tk.a(-94);
         }
     }
 

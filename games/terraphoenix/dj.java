@@ -11,7 +11,7 @@ final class dj {
 
     final static void b(int param0) {
         if (param0 != -28186) {
-            dj.a(86);
+          dj.a(86);
         }
         rf.field_B[bk.d(23196)].a(0, 0, 102);
     }
@@ -25,16 +25,16 @@ final class dj {
         int var7 = Terraphoenix.field_V;
         ci[] var1 = new ci[kf.field_b];
         for (var2 = 0; kf.field_b > var2; var2++) {
-            var3 = sb.field_m[var2] * rf.field_p[var2];
-            var4 = qc.field_b[var2];
-            var5 = new int[var3];
-            for (var6 = 0; var6 < var3; var6++) {
-                var5[var6] = wb.field_a[dg.a((int) var4[var6], 255)];
-            }
-            var1[var2] = new ci(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var5);
+          var3 = sb.field_m[var2] * rf.field_p[var2];
+          var4 = qc.field_b[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = wb.field_a[dg.a((int) var4[var6], 255)];
+          }
+          var1[var2] = new ci(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], var5);
         }
         if (param0 > -7) {
-            field_a = 7;
+          field_a = 7;
         }
         mj.a((byte) 82);
         return var1;
@@ -44,7 +44,7 @@ final class dj {
         field_f = null;
         field_c = null;
         if (param0 > -47) {
-            field_e = 55;
+          field_e = 55;
         }
     }
 

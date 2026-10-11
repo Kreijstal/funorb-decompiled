@@ -21,71 +21,37 @@ final class uj {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (-1 <= (param1 ^ -1)) {
-              throw new IllegalArgumentException();
-            } else {
-              if (!uj.a(-2147483648, param1)) {
-                var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
-                if (param2 <= -22) {
-                  L1: while (true) {
-                    var4 = param0.c((byte) -46);
-                    if (var4 < var3_int) {
-                      stackIn_12_0 = dh.a(var4, true, param1);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    } else {
-                      continue L1;
-                    }
-                  }
-                } else {
-                  stackIn_8_0 = -99;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                stackIn_5_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 1264703648);
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            }
+          if (param1 <= 0) {
+            throw new IllegalArgumentException();
           }
+          if (uj.a(-2147483648, param1)) {
+            stackIn_5_0 = (int)((long)param1 * ((long)param0.c((byte) -46) & 4294967295L) >> 32);
+            return stackIn_5_0;
+          }
+          var3_int = -(int)(4294967296L % (long)param1) + -2147483648;
+          if (param2 > -22) {
+            stackIn_8_0 = -99;
+            return stackIn_8_0;
+          }
+          do {
+            var4 = param0.c((byte) -46);
+          } while (var4 >= var3_int);
+          stackIn_12_0 = dh.a(var4, true, param1);
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
-
-            stackIn_15_1 = new StringBuilder().append("uj.D(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
-          }
-          throw aa.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("uj.D(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
           } else {
-            return stackIn_12_0;
+            stackIn_16_2 = "{...}";
           }
+          throw aa.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -96,55 +62,30 @@ final class uj {
         field_b = null;
         field_i = null;
         if (param0) {
-            return;
+          return;
         }
         field_f = (qb) null;
     }
 
     final static void a(int param0, byte param1, int param2) {
-        ab var3;
-        jd var4;
-        var3 = he.field_e;
+        ab var3 = he.field_e;
         var3.b((byte) -32, param2);
         var3.f(3, (byte) -54);
         var3.f(8, (byte) -85);
         var3.c(param0, (byte) -93);
-        if (param1 < -92) {
-          return;
-        } else {
-          var4 = (jd) null;
+        if (param1 >= -92) {
+          jd var4 = (jd) null;
           uj.a((jd) null, 16, (byte) 39);
           return;
         }
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != -2147483648) {
-          L0: {
-            field_f = (qb) null;
-            if (param1 != (param1 & -param1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (param1 != (param1 & -param1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -2147483648) {
+          return param1 == (param1 & -param1) ? true : false;
         }
+        field_f = (qb) null;
+        return param1 == (param1 & -param1) ? true : false;
     }
 
     static {

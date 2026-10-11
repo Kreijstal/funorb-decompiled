@@ -18,48 +18,23 @@ final class rj {
     }
 
     final static boolean b(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == 28404) {
-          if (-11 >= (rk.field_e ^ -1)) {
-            if (fd.field_j) {
-              return false;
-            } else {
-              L0: {
-                if (kk.a(param0 ^ -28329)) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 28404) {
           rj.a(58);
-          if (-11 >= (rk.field_e ^ -1)) {
-            if (fd.field_j) {
-              return false;
-            } else {
-              L1: {
-                if (kk.a(param0 ^ -28329)) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (rk.field_e < 10) {
             return false;
           }
+          if (!fd.field_j) {
+            return !kk.a(param0 ^ -28329) ? true : false;
+          }
+          return false;
         }
+        if (rk.field_e < 10) {
+          return false;
+        }
+        if (!fd.field_j) {
+          return !kk.a(param0 ^ -28329) ? true : false;
+        }
+        return false;
     }
 
     static {

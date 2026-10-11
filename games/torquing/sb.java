@@ -12,26 +12,19 @@ final class sb extends q {
 
     public static void a(int param0) {
         if (param0 != 31238) {
-            sb.b(-114);
-            field_n = null;
-            return;
+          sb.b(-114);
+          field_n = null;
+          return;
         }
         field_n = null;
     }
 
     final void a(byte param0) {
-        if (param0 > -77) {
-          return;
-        } else {
-          L0: {
-            this.field_j = this.field_j - 2;
-            this.field_m = this.field_m - this.field_l;
-            if (-17 >= (this.field_j ^ -1)) {
-              break L0;
-            } else {
-              this.f(0);
-              break L0;
-            }
+        if (param0 <= -77) {
+          this.field_j = this.field_j - 2;
+          this.field_m = this.field_m - this.field_l;
+          if (this.field_j < 16) {
+            this.f(0);
           }
           return;
         }
@@ -39,25 +32,25 @@ final class sb extends q {
 
     final static boolean b(int param0) {
         if (param0 != -80) {
-            return true;
+          return true;
         }
         return no.field_n.a((byte) -74);
     }
 
     final void c(int param0) {
-        int var2 = 60 % ((param0 - -38) / 54);
+        int var2 = 60 % ((param0 + 38) / 54);
         dd.field_c.a(this.field_o, -80 + this.field_k, this.field_m, 160, 1000, 16776960, -1, this.field_j, 1, 0, dd.field_c.field_t + dd.field_c.field_x);
     }
 
     sb(String param0, int param1, int param2, int param3) {
         try {
-            this.field_m = param2;
-            this.field_j = 255;
-            this.field_k = param1;
-            this.field_o = param0;
-            this.field_l = param3;
+          this.field_m = param2;
+          this.field_j = 255;
+          this.field_k = param1;
+          this.field_o = param0;
+          this.field_l = param3;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

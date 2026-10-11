@@ -12,20 +12,19 @@ final class lo {
         field_b = null;
         field_c = null;
         if (!param0) {
-            lta var2 = (lta) null;
-            lo.a(20, 74, (aja) null, (lta) null);
+          lta var2 = (lta) null;
+          lo.a(20, 74, (aja) null, (lta) null);
         }
         field_a = null;
     }
 
     final static void a(int param0, int param1, aja param2, lta param3) {
+        int var16 = 0;
+        int var17 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         StringBuilder stackIn_18_1 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -41,8 +40,6 @@ final class lo {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -52,101 +49,56 @@ final class lo {
         int var24 = 0;
         var24 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var4_int = param3.a(true, 0);
-              if (-1 < (var4_int ^ -1)) {
-                var4_int = var4_int - param1;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              var5 = param3.a(param0 + 0, 0);
-              if (-1 >= (var5 ^ -1)) {
-                break L2;
-              } else {
-                var5 = var5 - param1;
-                break L2;
-              }
-            }
-            var6 = param3.a(true, ip.field_p.width);
-            var7 = param3.a(0, ip.field_p.height);
-            var8 = -var4_int + var6;
-            var9 = var7 + -var5;
-            var10 = var4_int / param1 * param1;
-            var11 = param1 * (var5 / param1);
-            var12 = var8 / param1;
-            var13 = var9 / param1;
-            var14 = var10;
-            var15 = var11;
-            var16 = param0;
-            L3: while (true) {
-              if (var16 > var12) {
-                break L0;
-              } else {
-                var17 = 0;
-                L4: while (true) {
-                  if (var13 < var17) {
-                    var14 = var14 + param1;
-                    var15 = var11;
-                    var16++;
-                    continue L3;
-                  } else {
-                    var18 = var14 + param1;
-                    var19 = var15 - -param1;
-                    var20 = param3.a(var14, (byte) 127);
-                    var21 = param3.b(true, var15);
-                    var22 = param3.a(var18, (byte) 127);
-                    var23 = param3.b(true, var19);
-                    param2.b(var20, var21, var22 - var20, -var21 + var23);
-                    var15 = var15 + param1;
-                    var17++;
-                    continue L4;
-                  }
-                }
-              }
-            }
+          var4_int = param3.a(true, 0);
+          if (var4_int < 0) {
+            var4_int = var4_int - param1;
           }
+          var5 = param3.a(param0 + 0, 0);
+          if (var5 < 0) {
+            var5 = var5 - param1;
+          }
+          var6 = param3.a(true, ip.field_p.width);
+          var7 = param3.a(0, ip.field_p.height);
+          var8 = -var4_int + var6;
+          var9 = var7 - var5;
+          var10 = var4_int / param1 * param1;
+          var11 = param1 * (var5 / param1);
+          var12 = var8 / param1;
+          var13 = var9 / param1;
+          var14 = var10;
+          var15 = var11;
+          for (var16 = param0; var16 <= var12; var16++) {
+            for (var17 = 0; var13 >= var17; var17++) {
+              var18 = var14 + param1;
+              var19 = var15 + param1;
+              var20 = param3.a(var14, (byte) 127);
+              var21 = param3.b(true, var15);
+              var22 = param3.a(var18, (byte) 127);
+              var23 = param3.b(true, var19);
+              param2.b(var20, var21, var22 - var20, -var21 + var23);
+              var15 = var15 + param1;
+            }
+            var14 = var14 + param1;
+            var15 = var11;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var4);
-
-            stackIn_15_1 = new StringBuilder().append("lo.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_15_0 = var4;
+          stackIn_15_1 = new StringBuilder().append("lo.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',');
-
-            if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L6;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L6;
-            }
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

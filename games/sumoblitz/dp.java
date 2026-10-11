@@ -6,104 +6,58 @@ class dp extends pj {
     }
 
     final static String b(int param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        String var5;
-        int var6;
-        String var7;
-        L0: {
-          var6 = Sumoblitz.field_L ? 1 : 0;
-          var2 = param0 * 20;
-          var3 = var2 / 1000;
-          var4 = var3 / 60;
-          var3 = var3 % 60;
-          if ((var4 ^ -1) > -11) {
-            var5 = "0" + var4;
-            break L0;
-          } else {
-            var5 = "" + var4;
-            break L0;
-          }
-        }
-        L1: {
-          var7 = var5 + ":";
-          if (10 <= var3) {
-            var5 = var7 + var3;
-            break L1;
-          } else {
-            var5 = var7 + "0" + var3;
-            break L1;
-          }
-        }
-        if (param1 != -23620) {
-          dp.a(-100, 64);
-          return var5;
+        String var5 = null;
+        int var6 = Sumoblitz.field_L ? 1 : 0;
+        int var2 = param0 * 20;
+        int var3 = var2 / 1000;
+        int var4 = var3 / 60;
+        String var5Lifetime1;
+        var3 = var3 % 60;
+        if (var4 >= 10) {
+          var5 = "" + var4;
         } else {
-          return var5;
+          var5 = "0" + var4;
         }
+        String var7 = var5 + ":";
+        if (10 > var3) {
+          var5Lifetime1 = var7 + "0" + var3;
+        } else {
+          var5Lifetime1 = var7 + var3;
+        }
+        if (param1 == -23620) {
+          return var5Lifetime1;
+        }
+        dp.a(-100, 64);
+        return var5Lifetime1;
     }
 
     final static int a(int param0, int param1) {
         int var2;
         int var3;
         var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 == -26346) {
-          var2 = param1;
-          if (0 != var2) {
-            if ((var2 ^ -1) != -2) {
-              if (-3 != (var2 ^ -1)) {
-                if ((var2 ^ -1) != -4) {
-                  if (-5 != (var2 ^ -1)) {
-                    if (var2 != 5) {
-                      return 6710886;
-                    } else {
-                      return 3394764;
-                    }
-                  } else {
-                    return 13382604;
-                  }
-                } else {
-                  return 13421619;
-                }
-              } else {
-                return 3355596;
-              }
-            } else {
-              return 13382451;
-            }
-          } else {
-            return 3394611;
-          }
-        } else {
+        if (param0 != -26346) {
           dp.a(47, 26);
-          var2 = param1;
-          if (0 != var2) {
-            if ((var2 ^ -1) != -2) {
-              if (-3 != (var2 ^ -1)) {
-                if ((var2 ^ -1) != -4) {
-                  if (-5 != (var2 ^ -1)) {
-                    if (var2 != 5) {
-                      return 6710886;
-                    } else {
-                      return 3394764;
-                    }
-                  } else {
-                    return 13382604;
-                  }
-                } else {
-                  return 13421619;
-                }
-              } else {
-                return 3355596;
-              }
-            } else {
-              return 13382451;
-            }
-          } else {
-            return 3394611;
-          }
         }
+        var2 = param1;
+        if (0 == var2) {
+          return 3394611;
+        }
+        if (var2 == 1) {
+          return 13382451;
+        }
+        if (var2 == 2) {
+          return 3355596;
+        }
+        if (var2 == 3) {
+          return 13421619;
+        }
+        if (var2 == 4) {
+          return 13382604;
+        }
+        if (var2 != 5) {
+          return 6710886;
+        }
+        return 3394764;
     }
 
     static {

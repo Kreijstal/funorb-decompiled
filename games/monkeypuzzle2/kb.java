@@ -12,7 +12,7 @@ final class kb {
         field_a = null;
         field_d = null;
         if (param0 != 2872) {
-            kb.a(-82);
+          kb.a(-82);
         }
     }
 

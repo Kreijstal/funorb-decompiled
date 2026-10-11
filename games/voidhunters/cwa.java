@@ -9,7 +9,7 @@ final class cwa {
 
     public static void a(byte param0) {
         if (param0 != 74) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

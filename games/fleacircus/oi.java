@@ -7,7 +7,7 @@ final class oi extends jg implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 0) {
-            this.field_g = 13;
+          this.field_g = 13;
         }
     }
 
@@ -19,7 +19,7 @@ final class oi extends jg implements java.awt.event.MouseWheelListener {
 
     final void a(byte param0, java.awt.Component param1) {
         if (param0 <= 101) {
-            return;
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

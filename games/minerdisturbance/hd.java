@@ -20,7 +20,7 @@ abstract class hd {
     final static void a(int param0) {
         on.field_t = new ta();
         if (param0 >= -35) {
-            field_l = -104;
+          field_l = -104;
         }
     }
 
@@ -28,16 +28,14 @@ abstract class hd {
         field_c = null;
         field_i = null;
         field_h = null;
-        if (param0 <= 7) {
-          field_h = (java.awt.Frame) null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 > 7) {
           field_d = null;
           field_g = null;
           return;
         }
+        field_h = (java.awt.Frame) null;
+        field_d = null;
+        field_g = null;
     }
 
     abstract void a(int param0, int param1, int param2);

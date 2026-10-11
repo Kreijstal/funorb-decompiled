@@ -9,11 +9,11 @@ final class qe {
     final static java.awt.Frame a(int param0, int param1, int param2, int param3, d param4, int param5) {
         int var8 = 0;
         Object stackIn_7_0 = null;
-        Object stackIn_35_0 = null;
-        java.awt.Frame stackIn_37_0 = null;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_41_2 = null;
+        Object stackIn_36_0 = null;
+        java.awt.Frame stackIn_38_0 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
         rj[] var6 = null;
         RuntimeException var6_ref = null;
@@ -36,18 +36,11 @@ final class qe {
             }
             var7_int = 0;
             for (var8 = 0; var8 < var10.length; var8++) {
-              if (param3 != var10[var8].field_d) {
-                continue;
-              }
-              if (var10[var8].field_f == param2) {
-                if (param5 != 0 &&
-                  param5 != var10[var8].field_a) {
-                  continue;
-                }
-                if (var7_int != 0 &&
-                  param0 >= var10[var8].field_h) {
-                  continue;
-                }
+              if (param3 == var10[var8].field_d &&
+                var10[var8].field_f == param2 && ((param5 == 0 ||
+                param5 == var10[var8].field_a) &&
+                (var7_int == 0 ||
+                !(param0 >= var10[var8].field_h)))) {
                 var7_int = 1;
                 param0 = var10[var8].field_h;
               }
@@ -65,23 +58,23 @@ final class qe {
             return null;
           }
           if (var11.field_a != 2) {
-            stackIn_37_0 = var7;
-            return stackIn_37_0;
+            stackIn_38_0 = var7;
+            return stackIn_38_0;
           }
           jk.a(var7, 10, param4);
-          stackIn_35_0 = null;
-          return (java.awt.Frame) (stackIn_35_0);
+          stackIn_36_0 = null;
+          return (java.awt.Frame) (stackIn_36_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          stackIn_40_0 = var6_ref;
-          stackIn_40_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          stackIn_41_0 = var6_ref;
+          stackIn_41_1 = new StringBuilder().append("qe.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
-            stackIn_41_2 = "null";
+            stackIn_42_2 = "null";
           } else {
-            stackIn_41_2 = "{...}";
+            stackIn_42_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param5).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param5).append(')').toString());
         }
     }
 

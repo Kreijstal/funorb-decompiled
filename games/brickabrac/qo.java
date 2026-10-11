@@ -20,89 +20,42 @@ final class qo extends ib implements vf, en {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 < -10) {
-              stackIn_4_0 = this.a(param1, param5, param4, param2, 35, param3, false);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 82;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 < -10) {
+            stackIn_4_0 = this.a(param1, param5, param4, param2, 35, param3, false);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = 82;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var7 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var7);
-
-            stackIn_7_1 = new StringBuilder().append("qo.L(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("qo.L(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), stackIn_14_2 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -115,128 +68,72 @@ final class qo extends ib implements vf, en {
         int var8 = 0;
         int stackIn_7_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3_int = 0;
-              var4 = jq.field_r;
-              if (param0 == 120) {
-                break L1;
-              } else {
-                field_O = -69;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (qh.field_i.length <= var3_int) {
-                stackIn_13_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = BrickABrac.field_K[var3_int];
-                  if (var5 < 0) {
-                    var4 = var4 + pe.field_s;
-                    break L3;
-                  } else {
-                    var6 = hm.a(true, qh.field_i[var3_int], 0);
-                    var4 = var4 + kn.field_y;
-                    var7 = wi.field_k + -(var6 >> 240271041);
-                    if (!bg.a(var7 + -cn.field_c, (jb.field_H << -1684686015) + b.field_c, var6 - -(cn.field_c << -297184703), (byte) 65, param1, param2, var4)) {
-                      var4 = var4 + (kn.field_y + ((jb.field_H << -1252785983) - -b.field_c));
-                      break L3;
-                    } else {
-                      stackIn_7_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          var3_int = 0;
+          var4 = jq.field_r;
+          if (param0 != 120) {
+            field_O = -69;
           }
+          while (qh.field_i.length > var3_int) {
+            var5 = BrickABrac.field_K[var3_int];
+            if (var5 < 0) {
+              var4 = var4 + pe.field_s;
+            } else {
+              var6 = hm.a(true, qh.field_i[var3_int], 0);
+              var4 = var4 + kn.field_y;
+              var7 = wi.field_k - (var6 >> 1);
+              if (bg.a(var7 - cn.field_c, (jb.field_H << 1) + b.field_c, var6 + (cn.field_c << 1), (byte) 65, param1, param2, var4)) {
+                stackIn_7_0 = var5;
+                return stackIn_7_0;
+              }
+              var4 = var4 + (kn.field_y + ((jb.field_H << 1) + b.field_c));
+            }
+            var3_int++;
+          }
+          stackIn_13_0 = -1;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw qb.a((Throwable) ((Object) var3), "qo.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0;
-        } else {
-          return stackIn_13_0;
-        }
     }
 
     final boolean a(int param0, byte param1, oc param2, char param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (super.a(param0, param1, param2, param3)) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param0 != 98) {
-                if (-100 == (param0 ^ -1)) {
-                  stackIn_10_0 = this.a(param2, (byte) -127);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_6_0 = this.b(param2, (byte) 87);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (super.a(param0, param1, param2, param3)) {
+            return true;
           }
+          if (param0 == 98) {
+            stackIn_6_0 = this.b(param2, (byte) 87);
+            return stackIn_6_0;
+          }
+          if (param0 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.a(param2, (byte) -127);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var5);
-
-            stackIn_13_1 = new StringBuilder().append("qo.T(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L1;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L1;
-            }
-          }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("qo.T(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return stackIn_10_0;
+            stackIn_14_2 = "{...}";
           }
+          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -244,113 +141,56 @@ final class qo extends ib implements vf, en {
         RuntimeException var8 = null;
         nf var9 = null;
         ma var10 = null;
-        Object stackIn_2_0 = null;
         ma stackIn_2_1 = null;
-        Object stackIn_3_0 = null;
-        ma stackIn_3_1 = null;
-        int stackIn_3_2 = 0;
+        boolean stackIn_3_2 = false;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, a.field_u, 16777215, param0);
-              stackIn_2_0 = this;
-
-              stackIn_2_1 = (ma) (var10);
-
-              if (param6) {
-                stackIn_3_0 = this;
-                stackIn_3_1 = (ma) ((Object) stackIn_2_1);
-                stackIn_3_2 = 0;
-                break L1;
-              } else {
-                stackIn_3_0 = this;
-                stackIn_3_1 = (ma) ((Object) stackIn_2_1);
-                stackIn_3_2 = 1;
-                break L1;
-              }
-            }
-            this.a(stackIn_3_1, stackIn_3_2 != 0);
-            var9 = new nf(((je) ((Object) param3)).a(-11011), param5, 126, param2 - -var10.field_s, 25 + param1, param4);
-            var9.field_i = (uh) (this);
-            this.a(var9, true);
-            stackIn_4_0 = var9.field_s + var10.field_s;
-            break L0;
-          }
+          var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, a.field_u, 16777215, param0);
+          stackIn_2_1 = var10;
+          stackIn_3_2 = !(param6);
+          this.a(stackIn_2_1, stackIn_3_2);
+          var9 = new nf(((je) ((Object) param3)).a(-11011), param5, 126, param2 + var10.field_s, 25 + param1, param4);
+          var9.field_i = (uh) (this);
+          this.a(var9, true);
+          stackIn_4_0 = var9.field_s + var10.field_s;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var8 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var8);
-
-            stackIn_7_1 = new StringBuilder().append("qo.F(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_7_0 = var8;
+          stackIn_7_1 = new StringBuilder().append("qo.F(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), stackIn_14_2 + ',' + param6 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     final static void a(int param0, int param1) {
         fo.field_f = 400 * param1 / param0;
-        fo.field_c = (param1 << -450123184) / 150;
+        fo.field_c = (param1 << 16) / 150;
         fo.field_n = param1 * 100 / 150;
     }
 
@@ -365,63 +205,42 @@ final class qo extends ib implements vf, en {
     public final void a(int param0, int param1, byte param2, int param3, d param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          L0: {
-            L1: {
-              if (param4 == this.field_K) {
-                ee.d(-101);
-                break L1;
-              } else {
-                if (param4 == this.field_Q) {
-                  this.a(28462);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (param2 <= -22) {
-              break L0;
-            } else {
-              field_P = (String) null;
-              return;
+          if (param4 == this.field_K) {
+            ee.d(-101);
+          } else {
+            if (param4 == this.field_Q) {
+              this.a(28462);
             }
           }
+          if (param2 <= -22) {
+            return;
+          }
+          field_P = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
-
-            stackIn_10_1 = new StringBuilder().append("qo.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_10_0 = var6;
+          stackIn_10_1 = new StringBuilder().append("qo.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final void a(oc param0, byte param1, int param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_Q.field_J = this.h((byte) 92);
+          super.a(param0, param1, param2, param3);
+          this.field_Q.field_J = this.h((byte) 92);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "qo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "qo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -429,85 +248,44 @@ final class qo extends ib implements vf, en {
         ia var3 = null;
         RuntimeException var3_ref = null;
         qh var4 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
+        boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = param1.a(-11011);
-            if (var3 == null) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                var4 = var3.b((byte) -31);
-                if (param0 <= -64) {
-                  break L1;
-                } else {
-                  field_J = (byte[]) null;
-                  break L1;
-                }
-              }
-              L2: {
-                if (var4 != ae.field_c) {
-                  stackIn_9_0 = 0;
-                  break L2;
-                } else {
-                  stackIn_9_0 = 1;
-                  break L2;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          var3 = param1.a(-11011);
+          if (var3 == null) {
+            return true;
           }
+          var4 = var3.b((byte) -31);
+          if (param0 > -64) {
+            field_J = (byte[]) null;
+          }
+          stackIn_9_0 = (var4 == ae.field_c);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("qo.I(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("qo.I(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw qb.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     private final void a(int param0) {
         if (!this.h((byte) 92)) {
           return;
-        } else {
-          kb.a(this.field_L.field_A, -96);
-          if (param0 == 28462) {
-            return;
-          } else {
-            this.field_Q = (d) null;
-            return;
-          }
+        }
+        kb.a(this.field_L.field_A, -96);
+        if (param0 != 28462) {
+          this.field_Q = (d) null;
+          return;
         }
     }
 
@@ -531,33 +309,30 @@ final class qo extends ib implements vf, en {
         var3 += 50;
         this.a(var2, true);
         var3 = var3 + (this.a(-14, of.field_j, this.field_L, dj.field_h, var3, 170) + 5);
-        this.field_Q.a(40, 496 + -var5 >> 1395692737, var3, (byte) -119, var5);
-        this.field_K.a(40, var4 - -3, var3 - -15, (byte) -119, 60);
+        this.field_Q.a(40, 496 - var5 >> 1, var3, (byte) -119, var5);
+        this.field_K.a(40, var4 + 3, var3 + 15, (byte) -119, 60);
         this.field_K.field_i = (uh) (this);
         this.field_Q.field_i = (uh) (this);
         this.a(this.field_Q, true);
         this.a(this.field_K, true);
         this.field_R = new ri((vf) (this));
-        this.field_R.a(150, this.field_L.field_t + this.field_L.field_o - -60, 20, (byte) -119, -60 + (-this.field_L.field_t + -this.field_L.field_o + this.field_t));
+        this.field_R.a(150, this.field_L.field_t + this.field_L.field_o + 60, 20, (byte) -119, -60 + (-this.field_L.field_t - this.field_L.field_o + this.field_t));
         this.a(this.field_R, true);
         this.a(var4 + (55 + var3), 0, 0, (byte) -119, 496);
     }
 
     private final boolean h(byte param0) {
-        if (param0 == 92) {
-          if (!this.a(-68, this.field_L)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != 92) {
           field_P = (String) null;
-          if (!this.a(-68, this.field_L)) {
-            return false;
-          } else {
+          if (this.a(-68, this.field_L)) {
             return true;
           }
+          return false;
         }
+        if (this.a(-68, this.field_L)) {
+          return true;
+        }
+        return false;
     }
 
     public final void a(String param0, byte param1) {
@@ -566,51 +341,36 @@ final class qo extends ib implements vf, en {
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = this.field_L;
-            var4 = param0;
-            ((vb) ((Object) var3)).a(var4, param1 + -12648, false);
-            if (param1 == 56) {
-              break L0;
-            } else {
-              field_P = (String) null;
-              return;
-            }
+          var3 = this.field_L;
+          var4 = param0;
+          ((vb) ((Object) var3)).a(var4, param1 - 12648, false);
+          if (param1 == 56) {
+            return;
           }
+          field_P = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (var3_ref);
-
-            stackIn_5_1 = new StringBuilder().append("qo.C(");
-
-            if (param0 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L1;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_5_0 = var3_ref;
+          stackIn_5_1 = new StringBuilder().append("qo.C(");
+          if (param0 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final void a(byte param0) {
         if (param0 < 96) {
-            return;
+          return;
         }
-        ((fl) ((Object) this.field_L.a(-11011))).e((byte) -22);
+        ((fl) (this.field_L.a(-11011))).e((byte) -22);
     }
 
     static {

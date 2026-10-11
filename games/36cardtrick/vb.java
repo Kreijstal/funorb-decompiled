@@ -16,7 +16,7 @@ final class vb {
 
     final qb b(int param0) {
         if (param0 >= -31) {
-            return (qb) null;
+          return (qb) null;
         }
         this.field_j = 0;
         return this.a(true);
@@ -24,7 +24,7 @@ final class vb {
 
     public static void a(int param0) {
         if (param0 != -1) {
-            return;
+          return;
         }
         field_k = null;
         field_a = null;
@@ -34,13 +34,12 @@ final class vb {
     }
 
     final qb a(boolean param0) {
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$2 = 0;
         int var3;
-        Object var4;
-        qb var4_ref;
+        qb var4;
         qb var5;
         qb var36;
         qb var37;
@@ -49,155 +48,106 @@ final class vb {
         qb var42;
         var3 = Main.field_T;
         if (param0) {
-          if ((this.field_j ^ -1) < -1) {
-            if (this.field_f[this.field_j + -1] != this.field_i) {
-              var42 = this.field_i;
-              this.field_i = var42.field_d;
-              return var42;
-            } else {
-              L0: while (true) {
-                if (this.field_j < this.field_d) {
-                  fieldTemp$4 = this.field_j;
-                  this.field_j = this.field_j + 1;
-                  var4_ref = this.field_f[fieldTemp$4].field_d;
-                  var39 = var4_ref;
-                  if (var4_ref == this.field_f[this.field_j - 1]) {
-                    continue L0;
-                  } else {
-                    this.field_i = var39.field_d;
-                    return var39;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            }
-          } else {
-            L1: while (true) {
-              if (this.field_j < this.field_d) {
-                fieldTemp$5 = this.field_j;
-                this.field_j = this.field_j + 1;
-                var4_ref = this.field_f[fieldTemp$5].field_d;
-                var38 = var4_ref;
-                if (var4_ref == this.field_f[this.field_j - 1]) {
-                  continue L1;
-                } else {
-                  this.field_i = var38.field_d;
-                  return var38;
-                }
-              } else {
+          if (this.field_j <= 0) {
+            do {
+              if (this.field_j >= this.field_d) {
                 return null;
               }
-            }
+              fieldTemp$1 = this.field_j;
+              this.field_j = this.field_j + 1;
+              var4 = this.field_f[fieldTemp$1].field_d;
+              var38 = var4;
+            } while (var4 == this.field_f[this.field_j - 1]);
+            this.field_i = var38.field_d;
+            return var38;
           }
-        } else {
-          this.field_g = (qb) null;
-          if ((this.field_j ^ -1) < -1) {
-            if (this.field_f[this.field_j + -1] != this.field_i) {
-              var36 = this.field_i;
-              this.field_i = var36.field_d;
-              return var36;
-            } else {
-              L2: while (true) {
-                if (this.field_j < this.field_d) {
-                  fieldTemp$6 = this.field_j;
-                  this.field_j = this.field_j + 1;
-                  var4_ref = this.field_f[fieldTemp$6].field_d;
-                  var37 = var4_ref;
-                  if (var4_ref == this.field_f[this.field_j - 1]) {
-                    continue L2;
-                  } else {
-                    this.field_i = var37.field_d;
-                    return var37;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            }
-          } else {
-            L3: while (true) {
-              if (this.field_j < this.field_d) {
-                fieldTemp$7 = this.field_j;
-                this.field_j = this.field_j + 1;
-                var4_ref = this.field_f[fieldTemp$7].field_d;
-                var5 = var4_ref;
-                if (var4_ref == this.field_f[this.field_j - 1]) {
-                  continue L3;
-                } else {
-                  this.field_i = var5.field_d;
-                  return var5;
-                }
-              } else {
-                return null;
-              }
-            }
+          if (this.field_f[this.field_j - 1] != this.field_i) {
+            var42 = this.field_i;
+            this.field_i = var42.field_d;
+            return var42;
           }
+          do {
+            if (this.field_j >= this.field_d) {
+              return null;
+            }
+            fieldTemp$0 = this.field_j;
+            this.field_j = this.field_j + 1;
+            var4 = this.field_f[fieldTemp$0].field_d;
+            var39 = var4;
+          } while (var4 == this.field_f[this.field_j - 1]);
+          this.field_i = var39.field_d;
+          return var39;
         }
+        this.field_g = (qb) null;
+        if (this.field_j <= 0) {
+          do {
+            if (this.field_j >= this.field_d) {
+              return null;
+            }
+            fieldTemp$3 = this.field_j;
+            this.field_j = this.field_j + 1;
+            var4 = this.field_f[fieldTemp$3].field_d;
+            var5 = var4;
+          } while (var4 == this.field_f[this.field_j - 1]);
+          this.field_i = var5.field_d;
+          return var5;
+        }
+        if (this.field_f[this.field_j - 1] != this.field_i) {
+          var36 = this.field_i;
+          this.field_i = var36.field_d;
+          return var36;
+        }
+        do {
+          if (this.field_j >= this.field_d) {
+            return null;
+          }
+          fieldTemp$2 = this.field_j;
+          this.field_j = this.field_j + 1;
+          var4 = this.field_f[fieldTemp$2].field_d;
+          var37 = var4;
+        } while (var4 == this.field_f[this.field_j - 1]);
+        this.field_i = var37.field_d;
+        return var37;
     }
 
     final void a(long param0, byte param1, qb param2) {
         qb var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         try {
-          L0: {
-            L1: {
-              if (param2.field_a == null) {
-                break L1;
-              } else {
-                param2.c(106);
-                break L1;
-              }
-            }
-            L2: {
-              var5 = this.field_f[(int)((long)(-1 + this.field_d) & param0)];
-              param2.field_d = var5;
-              param2.field_a = var5.field_a;
-              param2.field_a.field_d = param2;
-              param2.field_d.field_a = param2;
-              param2.field_e = param0;
-              if (param1 >= 24) {
-                break L2;
-              } else {
-                this.a(true);
-                break L2;
-              }
-            }
-            break L0;
+          if (param2.field_a != null) {
+            param2.c(106);
           }
+          var5 = this.field_f[(int)((long)(-1 + this.field_d) & param0)];
+          param2.field_d = var5;
+          param2.field_a = var5.field_a;
+          param2.field_a.field_d = param2;
+          param2.field_d.field_a = param2;
+          param2.field_e = param0;
+          if (param1 < 24) {
+            this.a(true);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var5_ref);
-
-            stackIn_7_1 = new StringBuilder().append("vb.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L3;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_7_0 = var5_ref;
+          stackIn_7_1 = new StringBuilder().append("vb.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (param0 < 1) {
-            return;
+          return;
         }
         Main.field_G = 0;
         ti.field_a = -1;
@@ -211,68 +161,60 @@ final class vb {
         qb var5;
         int var6;
         qb var7;
+        qb var4Lifetime1;
+        qb var5Lifetime1;
         var6 = Main.field_T;
         if (!param0) {
           var4 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
           this.field_g = var4.field_d;
-          L0: while (true) {
+          while (true) {
             if (var4 == this.field_g) {
               this.field_g = null;
               return null;
-            } else {
-              if ((this.field_g.field_e ^ -1L) == (param1 ^ -1L)) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_d;
-                return var5;
-              } else {
-                this.field_g = this.field_g.field_d;
-                continue L0;
-              }
             }
-          }
-        } else {
-          var7 = (qb) null;
-          this.a(47L, (byte) 72, (qb) null);
-          var4 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
-          this.field_g = var4.field_d;
-          L1: while (true) {
-            if (var4 == this.field_g) {
-              this.field_g = null;
-              return null;
-            } else {
-              if ((this.field_g.field_e ^ -1L) == (param1 ^ -1L)) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_d;
-                return var5;
-              } else {
-                this.field_g = this.field_g.field_d;
-                continue L1;
-              }
+            if (~this.field_g.field_e != ~param1) {
+              this.field_g = this.field_g.field_d;
+              continue;
             }
+            break;
           }
+          var5 = this.field_g;
+          this.field_g = this.field_g.field_d;
+          return var5;
         }
+        var7 = (qb) null;
+        this.a(47L, (byte) 72, (qb) null);
+        var4Lifetime1 = this.field_f[(int)(param1 & (long)(this.field_d - 1))];
+        this.field_g = var4Lifetime1.field_d;
+        while (true) {
+          if (var4Lifetime1 == this.field_g) {
+            this.field_g = null;
+            return null;
+          }
+          if (~this.field_g.field_e != ~param1) {
+            this.field_g = this.field_g.field_d;
+            continue;
+          }
+          break;
+        }
+        var5Lifetime1 = this.field_g;
+        this.field_g = this.field_g.field_d;
+        return var5Lifetime1;
     }
 
     vb(int param0) {
+        int var2 = 0;
         qb dupTemp$1 = null;
-        int var2;
         qb var3;
         this.field_j = 0;
         this.field_f = new qb[param0];
         this.field_d = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 < param0) {
-            dupTemp$1 = new qb();
-            var3 = dupTemp$1;
-            this.field_f[var2] = dupTemp$1;
-            var3.field_d = var3;
-            var3.field_a = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; var2 < param0; var2++) {
+          dupTemp$1 = new qb();
+          var3 = dupTemp$1;
+          this.field_f[var2] = dupTemp$1;
+          var3.field_d = var3;
+          var3.field_a = var3;
         }
     }
 

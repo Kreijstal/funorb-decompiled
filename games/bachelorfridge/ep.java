@@ -10,7 +10,7 @@ final class ep extends pu {
         int var8 = 0;
         int var9 = BachelorFridge.field_y;
         if (bp.e(-29919)) {
-            return;
+          return;
         }
         sja.field_fb.c(88, (byte) 114);
         sja.field_fb.field_g = sja.field_fb.field_g + 2;
@@ -20,42 +20,39 @@ final class ep extends pu {
         sja.field_fb.d(param3, 0);
         int[] var6 = param4;
         if (param0 != 42) {
-            return;
+          return;
         }
         try {
-            for (var7 = 0; var6.length > var7; var7++) {
-                var8 = var6[var7];
-                sja.field_fb.d(var8, 0);
-            }
-            sja.field_fb.a((byte) -88, sja.field_fb.field_g + -var5_int);
+          for (var7 = 0; var6.length > var7; var7++) {
+            var8 = var6[var7];
+            sja.field_fb.d(var8, 0);
+          }
+          sja.field_fb.a((byte) -88, sja.field_fb.field_g - var5_int);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ep.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ep.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1) {
         la.field_r = param0;
         if (param1 != 8192) {
-            ep.a(true, 42, 63);
+          ep.a(true, 42, 63);
         }
     }
 
     public static void b(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_l = null;
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pf var3;
-        var3 = sja.field_fb;
+        pf var3 = sja.field_fb;
         var3.c(param1, (byte) 107);
         var3.d(3, 0);
         var3.d(8, 0);
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           var3.b(param2, -123);
           return;
         }

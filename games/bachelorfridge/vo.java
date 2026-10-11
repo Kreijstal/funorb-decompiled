@@ -14,18 +14,15 @@ abstract class vo {
     abstract void a(byte param0, int param1, int param2);
 
     public static void a(byte param0) {
-        lu var2;
         field_d = null;
         field_b = null;
-        if (param0 > -121) {
-          var2 = (lu) null;
-          vo.a(-98, (lu) null);
-          field_c = null;
-          return;
-        } else {
+        if (param0 <= -121) {
           field_c = null;
           return;
         }
+        lu var2 = (lu) null;
+        vo.a(-98, (lu) null);
+        field_c = null;
     }
 
     final static pp a(int param0, lu param1) {
@@ -36,49 +33,29 @@ abstract class vo {
         lia stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = qi.a(param1, (byte) 96);
-              var3 = param1.c((byte) -85);
-              if (param0 <= -37) {
-                break L1;
-              } else {
-                vo.a((byte) 104);
-                break L1;
-              }
-            }
-            var4 = param1.b(true);
-            stackIn_3_0 = new lia(var2, var3, var4);
-            break L0;
+          var2 = qi.a(param1, (byte) 96);
+          var3 = param1.c((byte) -85);
+          if (param0 > -37) {
+            vo.a((byte) 104);
           }
+          var4 = param1.b(true);
+          stackIn_3_0 = new lia(var2, var3, var4);
+          return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2_ref);
-
-            stackIn_6_1 = new StringBuilder().append("vo.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("vo.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (pp) ((Object) stackIn_3_0);
     }
 
     vo(int param0, int param1, int param2) {

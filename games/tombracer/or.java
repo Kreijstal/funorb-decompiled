@@ -10,22 +10,20 @@ class or extends fi {
     private int field_n;
 
     final void a(int param0, byte param1, int param2) {
-        if (param1 > -37) {
-          this.c(-100);
-          this.field_n = this.field_n + (param0 * this.field_i[param2] >> -526253108);
-          return;
-        } else {
-          this.field_n = this.field_n + (param0 * this.field_i[param2] >> -526253108);
+        if (param1 <= -37) {
+          this.field_n = this.field_n + (param0 * this.field_i[param2] >> 12);
           return;
         }
+        this.c(-100);
+        this.field_n = this.field_n + (param0 * this.field_i[param2] >> 12);
     }
 
     void a(int param0, boolean param1, byte param2) {
         int fieldTemp$0 = this.field_k;
         this.field_k = this.field_k + 1;
-        this.field_l[fieldTemp$0] = (byte)(127 + sea.c(127, param2 >> -332397343));
+        this.field_l[fieldTemp$0] = (byte)(127 + sea.c(127, param2 >> 1));
         if (param1) {
-            field_m = (String[]) null;
+          field_m = (String[]) null;
         }
     }
 
@@ -34,81 +32,62 @@ class or extends fi {
         int var7 = 0;
         this.field_i = new int[this.field_a];
         for (var7 = 0; this.field_a > var7; var7++) {
-            this.field_i[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
+          this.field_i[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
         }
     }
 
     final void c(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$0 = 0;
         this.field_n = Math.abs(this.field_n);
-        if (param0 != 32164) {
-          L0: {
-            this.field_n = 78;
-            if (-4097 >= (this.field_n ^ -1)) {
-              this.field_n = 4095;
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == 32164) {
+          if (this.field_n >= 4096) {
+            this.field_n = 4095;
           }
-          fieldTemp$2 = this.field_k;
+          fieldTemp$0 = this.field_k;
           this.field_k = this.field_k + 1;
-          this.a(fieldTemp$2, false, (byte)(this.field_n >> -128544348));
-          this.field_n = 0;
-          return;
-        } else {
-          L1: {
-            if (-4097 >= (this.field_n ^ -1)) {
-              this.field_n = 4095;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          fieldTemp$3 = this.field_k;
-          this.field_k = this.field_k + 1;
-          this.a(fieldTemp$3, false, (byte)(this.field_n >> -128544348));
+          this.a(fieldTemp$0, false, (byte)(this.field_n >> 4));
           this.field_n = 0;
           return;
         }
+        this.field_n = 78;
+        if (this.field_n >= 4096) {
+          this.field_n = 4095;
+        }
+        int fieldTemp$1 = this.field_k;
+        this.field_k = this.field_k + 1;
+        this.a(fieldTemp$1, false, (byte)(this.field_n >> 4));
+        this.field_n = 0;
     }
 
     final static void d(int param0) {
-        int var1;
-        int var2;
-        var1 = qd.a((byte) 82);
-        var2 = mg.a(-62);
-        qqa.field_t.a((byte) 57, var1 - -(ro.field_p << 1553777153), -lsa.field_b + jua.field_d, am.field_o + -ro.field_p, (lsa.field_b << -1226152383) + var2);
-        if (param0 != -1226152383) {
-          or.d(-112);
-          fp.a((byte) -83);
-          return;
-        } else {
+        int var1 = qd.a((byte) 82);
+        int var2 = mg.a(-62);
+        qqa.field_t.a((byte) 57, var1 + (ro.field_p << 1), -lsa.field_b + jua.field_d, am.field_o - ro.field_p, (lsa.field_b << 1) + var2);
+        if (param0 == -1226152383) {
           fp.a((byte) -83);
           return;
         }
+        or.d(-112);
+        fp.a((byte) -83);
     }
 
     public static void e(int param0) {
         field_j = null;
         if (param0 != 24451) {
-            return;
+          return;
         }
         field_m = null;
     }
 
     final void a(byte param0) {
-        if (param0 != 50) {
-          this.field_l = (byte[]) null;
-          this.field_n = 0;
-          this.field_k = 0;
-          return;
-        } else {
+        if (param0 == 50) {
           this.field_n = 0;
           this.field_k = 0;
           return;
         }
+        this.field_l = (byte[]) null;
+        this.field_n = 0;
+        this.field_k = 0;
     }
 
     static {

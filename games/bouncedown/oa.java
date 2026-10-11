@@ -12,10 +12,10 @@ abstract class oa {
 
     public static void a(int param0) {
         if (param0 != 22085) {
-            oa.a(-72);
-            field_b = null;
-            field_c = null;
-            return;
+          oa.a(-72);
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;
@@ -23,15 +23,15 @@ abstract class oa {
 
     final java.net.Socket a(boolean param0) throws IOException {
         if (param0) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_d, this.field_e);
     }
 
     final static java.awt.Container a(byte param0) {
         int var1 = -65 % ((69 - param0) / 53);
-        if (!(null == i.field_h)) {
-            return (java.awt.Container) ((Object) i.field_h);
+        if (null != i.field_h) {
+          return (java.awt.Container) ((Object) i.field_h);
         }
         return (java.awt.Container) ((Object) vi.b(0));
     }

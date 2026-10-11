@@ -12,9 +12,9 @@ final class nb {
         field_a = null;
         field_b = null;
         if (param0 != 19161) {
-            nb.a(-100);
-            field_d = null;
-            return;
+          nb.a(-100);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

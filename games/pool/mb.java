@@ -12,27 +12,25 @@ abstract class mb {
 
     public static void c(int param0) {
         field_c = null;
-        if (param0 != 4) {
-          field_f = (vh) null;
-          field_d = null;
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 4) {
           field_d = null;
           field_g = null;
           field_b = null;
           field_f = null;
           return;
         }
+        field_f = (vh) null;
+        field_d = null;
+        field_g = null;
+        field_b = null;
+        field_f = null;
     }
 
     final static void b(int param0) {
         String var2 = (String) null;
         rf.a((String) null, -125, "");
         if (param0 != 3) {
-            field_f = (vh) null;
+          field_f = (vh) null;
         }
     }
 
@@ -41,22 +39,18 @@ abstract class mb {
     abstract byte[] a(int param0);
 
     final static void d(int param0) {
-        if (-1 == (un.field_e ^ -1)) {
-          dp.field_c.field_hb = dq.a(3, 0, jc.field_f);
-          if (param0 <= -97) {
-            return;
-          } else {
-            mb.b(111);
-            return;
-          }
-        } else {
+        if (un.field_e != 0) {
           dp.field_c.field_hb = dq.a(2, 0, il.field_e);
-          if (param0 <= -97) {
-            return;
-          } else {
+          if (param0 > -97) {
             mb.b(111);
             return;
           }
+          return;
+        }
+        dp.field_c.field_hb = dq.a(3, 0, jc.field_f);
+        if (param0 > -97) {
+          mb.b(111);
+          return;
         }
     }
 

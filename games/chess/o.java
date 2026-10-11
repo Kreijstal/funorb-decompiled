@@ -15,32 +15,30 @@ class o {
     public static void a(byte param0) {
         field_g = null;
         field_d = null;
-        if (param0 > -85) {
-          o.b((byte) 36);
-          field_i = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 <= -85) {
           field_i = null;
           field_a = null;
           return;
         }
+        o.b((byte) 36);
+        field_i = null;
+        field_a = null;
     }
 
     final static ci b(byte param0) {
         if (param0 != 19) {
-            field_a = (int[]) null;
-            return db.j(param0 ^ -20);
+          field_a = (int[]) null;
+          return db.j(param0 ^ -20);
         }
         return db.j(param0 ^ -20);
     }
 
     final boolean b(int param0) {
         if (param0 != 20478) {
-            return false;
+          return false;
         }
         if (null != this.field_c) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -48,16 +46,13 @@ class o {
     final void c(int param0) {
         if (this.field_c == null) {
           return;
-        } else {
-          if (param0 != -2193) {
-            return;
-          } else {
-            this.field_c.field_h = this.field_h;
-            this.field_h.field_c = this.field_c;
-            this.field_c = null;
-            this.field_h = null;
-            return;
-          }
+        }
+        if (param0 == -2193) {
+          this.field_c.field_h = this.field_h;
+          this.field_h.field_c = this.field_c;
+          this.field_c = null;
+          this.field_h = null;
+          return;
         }
     }
 

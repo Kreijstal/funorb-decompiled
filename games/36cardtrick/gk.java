@@ -12,9 +12,9 @@ abstract class gk {
         field_e = null;
         field_d = null;
         if (param0 != 0) {
-            field_a = -93;
-            field_c = null;
-            return;
+          field_a = -93;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -22,31 +22,21 @@ abstract class gk {
     abstract long a(int param0);
 
     final int a(long param0, int param1) {
-        long var4;
-        if (param1 > -124) {
-          L0: {
-            gk.c(25);
-            var4 = this.a(0);
-            if (var4 > 0L) {
-              wk.a((byte) -104, var4);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return this.a(param0, false);
-        } else {
-          L1: {
-            var4 = this.a(0);
-            if (var4 > 0L) {
-              wk.a((byte) -104, var4);
-              break L1;
-            } else {
-              break L1;
-            }
+        long var4 = 0L;
+        long var4Lifetime1;
+        if (param1 <= -124) {
+          var4 = this.a(0);
+          if (var4 > 0L) {
+            wk.a((byte) -104, var4);
           }
           return this.a(param0, false);
         }
+        gk.c(25);
+        var4Lifetime1 = this.a(0);
+        if (var4Lifetime1 > 0L) {
+          wk.a((byte) -104, var4Lifetime1);
+        }
+        return this.a(param0, false);
     }
 
     abstract int a(long param0, boolean param1);

@@ -15,9 +15,9 @@ final class ua extends hl {
     private ua(String param0, pl param1) {
         this(param0, pj.field_a.field_i, param1);
         try {
-            this.field_v = pj.field_a.field_m;
+          this.field_v = pj.field_a.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,18 +29,18 @@ final class ua extends hl {
     private ua(String param0, ci param1, pl param2) {
         super(param0, param1, param2);
         try {
-            this.field_v = pj.field_a.field_m;
+          this.field_v = pj.field_a.field_m;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     ua(String param0, pl param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_D = param2 ? true : false;
+          this.field_D = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

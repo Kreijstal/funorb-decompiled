@@ -13,7 +13,7 @@ final class pd extends ak {
     public static void b(byte param0) {
         field_Kb = null;
         if (param0 >= -79) {
-            pd.b((byte) -19);
+          pd.b((byte) -19);
         }
     }
 
@@ -24,19 +24,15 @@ final class pd extends ak {
         this.field_K = param1;
         this.a(param2, true, param6, param5);
         if (param4) {
-            pd.j(74);
+          pd.j(74);
         }
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var5 = (param2 + this.field_K) / 2;
-        var6 = -param0 + this.field_nb;
-        if (!param1) {
-          return;
-        } else {
-          this.field_Gb.a(0, param2, (byte) 97, this.field_K, 0, var6 + -param2, param3);
+        int var5 = (param2 + this.field_K) / 2;
+        int var6 = -param0 + this.field_nb;
+        if (param1) {
+          this.field_Gb.a(0, param2, (byte) 97, this.field_K, 0, var6 - param2, param3);
           this.field_Ib.field_S = var6;
           this.field_Ib.field_nb = param0;
           this.field_Ib.field_K = -param2 + var5;
@@ -51,30 +47,30 @@ final class pd extends ak {
 
     final static void j(int param0) {
         ri.field_f = new hp(cm.field_o, pj.field_i, ae.field_f, mg.field_h, um.field_q, dn.field_c);
-        int var1 = 40 / ((param0 - -90) / 35);
+        int var1 = 40 / ((param0 + 90) / 35);
     }
 
     pd(long param0, ak param1, ak param2, vp param3, ak param4, String param5, String param6) {
         super(param0, param1);
         try {
-            this.field_Fb = new ak(0L, (ak) null);
-            this.field_Gb = new gp(0L, this.field_Fb, param2, param3);
-            this.field_Ib = new ak(0L, param4);
-            this.field_Hb = new ak(0L, param4);
-            this.field_Ib.field_cb = param5;
-            this.field_Hb.field_cb = param6;
-            this.a(this.field_Gb, (byte) 26);
-            this.a(this.field_Ib, (byte) 26);
-            this.a(this.field_Hb, (byte) 26);
+          this.field_Fb = new ak(0L, (ak) null);
+          this.field_Gb = new gp(0L, this.field_Fb, param2, param3);
+          this.field_Ib = new ak(0L, param4);
+          this.field_Hb = new ak(0L, param4);
+          this.field_Ib.field_cb = param5;
+          this.field_Hb.field_cb = param6;
+          this.a(this.field_Gb, (byte) 26);
+          this.a(this.field_Ib, (byte) 26);
+          this.a(this.field_Hb, (byte) 26);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "pd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean k(int param0) {
         if (param0 != 0) {
-            pd.k(-125);
-            return oc.field_J;
+          pd.k(-125);
+          return oc.field_J;
         }
         return oc.field_J;
     }

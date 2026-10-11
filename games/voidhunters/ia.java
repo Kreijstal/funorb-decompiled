@@ -9,14 +9,14 @@ final class ia {
 
     final static Object a(java.applet.Applet param0, String param1, int param2) throws Throwable {
         if (param2 != 12348) {
-            return (Object) null;
+          return (Object) null;
         }
         return netscape.javascript.JSObject.getWindow(param0).call(param1, (Object[]) null);
     }
 
     final static void a(byte param0, java.applet.Applet param1, String param2) throws Throwable {
         if (param0 > -110) {
-            return;
+          return;
         }
         netscape.javascript.JSObject.getWindow(param1).eval(param2);
     }

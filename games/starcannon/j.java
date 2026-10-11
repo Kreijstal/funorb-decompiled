@@ -14,57 +14,42 @@ final class j {
         field_c = null;
         field_d = null;
         if (param0 != -3) {
-            j.b(-90);
+          j.b(-90);
         }
     }
 
     final static String b(int param0) {
-        if (-3 >= (rk.field_d ^ -1)) {
-          if (null == kl.field_b) {
-            if (!bf.field_y.b((byte) 110)) {
-              return n.field_f;
-            } else {
-              if (bf.field_y.a("commonui", -9883)) {
-                if (!fk.field_k.b((byte) 106)) {
-                  return s.field_g;
-                } else {
-                  if (fk.field_k.a("commonui", -9883)) {
-                    if (!li.field_b.b((byte) 105)) {
-                      return q.field_i;
-                    } else {
-                      if (param0 <= -125) {
-                        if (!li.field_b.a(29741)) {
-                          return gj.field_b + " - " + li.field_b.a((byte) 116) + "%";
-                        } else {
-                          return ba.field_a;
-                        }
-                      } else {
-                        j.b(69);
-                        if (!li.field_b.a(29741)) {
-                          return gj.field_b + " - " + li.field_b.a((byte) 116) + "%";
-                        } else {
-                          return ba.field_a;
-                        }
-                      }
-                    }
-                  } else {
-                    return sj.field_D + " - " + fk.field_k.a("commonui", (byte) 116) + "%";
-                  }
-                }
-              } else {
-                return ae.field_a + " - " + bf.field_y.a("commonui", (byte) 98) + "%";
-              }
-            }
-          } else {
-            if (!kl.field_b.b((byte) 125)) {
-              return lb.field_L;
-            } else {
-              return b.field_e;
-            }
-          }
-        } else {
+        if (rk.field_d < 2) {
           return pf.field_c;
         }
+        if (null != kl.field_b) {
+          if (!kl.field_b.b((byte) 125)) {
+            return lb.field_L;
+          }
+          return b.field_e;
+        }
+        if (!bf.field_y.b((byte) 110)) {
+          return n.field_f;
+        }
+        if (!bf.field_y.a("commonui", -9883)) {
+          return ae.field_a + " - " + bf.field_y.a("commonui", (byte) 98) + "%";
+        }
+        if (!fk.field_k.b((byte) 106)) {
+          return s.field_g;
+        }
+        if (!fk.field_k.a("commonui", -9883)) {
+          return sj.field_D + " - " + fk.field_k.a("commonui", (byte) 116) + "%";
+        }
+        if (!li.field_b.b((byte) 105)) {
+          return q.field_i;
+        }
+        if (param0 > -125) {
+          j.b(69);
+        }
+        if (!li.field_b.a(29741)) {
+          return gj.field_b + " - " + li.field_b.a((byte) 116) + "%";
+        }
+        return ba.field_a;
     }
 
     static {

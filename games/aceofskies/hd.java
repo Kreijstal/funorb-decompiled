@@ -14,7 +14,7 @@ final class hd {
         field_a = null;
         field_c = null;
         if (param0 != 30714) {
-            hd.a(6);
+          hd.a(6);
         }
     }
 

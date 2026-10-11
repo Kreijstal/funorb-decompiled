@@ -11,13 +11,11 @@ class uk extends gb {
     final static boolean b(int param0, int param1) {
         if (0 != (param0 << param1 & hj.field_a)) {
           return true;
-        } else {
-          if (cf.a(qc.field_gb[param1], (byte) 118)) {
-            return true;
-          } else {
-            return false;
-          }
         }
+        if (!cf.a(qc.field_gb[param1], (byte) 118)) {
+          return false;
+        }
+        return true;
     }
 
     uk() {
@@ -25,18 +23,16 @@ class uk extends gb {
 
     public static void b(byte param0) {
         field_w = null;
-        if (param0 != -96) {
-          uk.b((byte) 88);
-          field_t = null;
-          field_u = null;
-          field_v = null;
-          return;
-        } else {
+        if (param0 == -96) {
           field_t = null;
           field_u = null;
           field_v = null;
           return;
         }
+        uk.b((byte) 88);
+        field_t = null;
+        field_u = null;
+        field_v = null;
     }
 
     static {

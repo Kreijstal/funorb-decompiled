@@ -7,24 +7,24 @@ final class te extends kf {
     private te(String param0, rd param1, vd param2) {
         super(param0, param1, param2);
         try {
-            this.field_i = nb.field_z.field_b;
+          this.field_i = nb.field_z.field_b;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     private te(String param0, vd param1) {
         this(param0, nb.field_z.field_f, param1);
         try {
-            this.field_i = nb.field_z.field_b;
+          this.field_i = nb.field_z.field_b;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -122) {
-            return;
+          return;
         }
         field_E = null;
     }
@@ -32,9 +32,9 @@ final class te extends kf {
     te(String param0, vd param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_C = param2 ? true : false;
+          this.field_C = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "te.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -45,120 +45,76 @@ final class te extends kf {
 
     final static void a(String param0, long param1, java.applet.Applet param2, String param3, int param4) {
         try {
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
-            StringBuilder stackIn_14_1 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_15_2 = null;
-            StringBuilder stackIn_17_1 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_18_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var6 = null;
-            RuntimeException var6_ref = null;
-            String var7 = null;
-            String var8 = null;
-            String var9 = null;
-            String var10 = null;
-            try {
-              L0: {
-                if (param4 == 1000) {
-                  break L0;
-                } else {
-                  var8 = (String) null;
-                  te.a((String) null, 24L, (java.applet.Applet) null, (String) null, -63);
-                  break L0;
-                }
-              }
-              try {
-                L1: {
-                  L2: {
-                    var9 = param2.getParameter("cookiehost");
-                    var7 = var9;
-                    var7 = var9;
-                    var10 = param0 + "=" + param3 + "; version=1; path=/; domain=" + var9;
-                    var7 = var10;
-                    var7 = var10;
-                    if (0L > param1) {
-                      var7 = var10 + "; Discard;";
-                      break L2;
-                    } else {
-                      var7 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
-                      break L2;
-                    }
-                  }
-                  oa.a("document.cookie=\"" + var7 + "\"", param2, param4 + -31196);
-                  break L1;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var6 = decompiledCaughtException;
-                return;
-              }
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_11_0 = (RuntimeException) (var6_ref);
-
-                stackIn_11_1 = new StringBuilder().append("te.A(");
-
-                if (param0 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L3;
-                }
-              }
-              L4: {
-
-
-                stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',').append(param1).append(',');
-
-                if (param2 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "{...}";
-                  break L4;
-                }
-              }
-              L5: {
-
-
-                stackIn_17_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(',');
-
-                if (param3 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                  stackIn_18_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-                  stackIn_18_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw ld.a((Throwable) ((Object) stackIn_12_0), stackIn_18_2 + ',' + param4 + ')');
+          RuntimeException stackIn_11_0 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          StringBuilder stackIn_14_1 = null;
+          String stackIn_15_2 = null;
+          StringBuilder stackIn_17_1 = null;
+          String stackIn_18_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var6 = null;
+          RuntimeException var6_ref = null;
+          String var7 = null;
+          String var8 = null;
+          String var9 = null;
+          String var10 = null;
+          String var7Lifetime1;
+          String var7Lifetime2;
+          String var7Lifetime3;
+          String var7Lifetime4;
+          try {
+            if (param4 != 1000) {
+              var8 = (String) null;
+              te.a((String) null, 24L, (java.applet.Applet) null, (String) null, -63);
             }
+            try {
+              var9 = param2.getParameter("cookiehost");
+              var7 = var9;
+              var7Lifetime1 = var9;
+              var10 = param0 + "=" + param3 + "; version=1; path=/; domain=" + var9;
+              var7Lifetime2 = var10;
+              var7Lifetime3 = var10;
+              if (0L > param1) {
+                var7Lifetime4 = var10 + "; Discard;";
+              } else {
+                var7Lifetime4 = var10 + "; Expires=" + q.a(1000L * param1 + rf.c(0), (byte) 28) + "; Max-Age=" + param1;
+              }
+              oa.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, param4 - 31196);
+              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = decompiledCaughtException;
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_11_0 = var6_ref;
+            stackIn_11_1 = new StringBuilder().append("te.A(");
+            if (param0 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_15_2 = "null";
+            } else {
+              stackIn_15_2 = "{...}";
+            }
+            stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+            if (param3 == null) {
+              stackIn_18_2 = "null";
+            } else {
+              stackIn_18_2 = "{...}";
+            }
+            throw ld.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

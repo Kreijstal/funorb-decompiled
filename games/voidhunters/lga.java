@@ -8,49 +8,42 @@ final class lga {
     final static void a(boolean param0, int param1) {
         crb.a(3, param0);
         if (param1 != -24055) {
-            lga.a((byte) 71, -57);
-            ao.a((byte) 91, param0);
-            return;
+          lga.a((byte) 71, -57);
+          ao.a((byte) 91, param0);
+          return;
         }
         ao.a((byte) 91, param0);
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (param0 != 14216) {
-          lga.a(-124, 11, -116);
-          return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
-        } else {
+        if (param0 == 14216) {
           return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
         }
+        lga.a(-124, 11, -116);
+        return (uoa.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & rfb.a((byte) -49, param2, param1);
     }
 
     final static int a(byte param0, int param1) {
-        if (-14 != (param1 ^ -1)) {
-          if ((param1 ^ -1) != -10) {
-            if (11 != param1) {
-              if (-4 != (param1 ^ -1)) {
-                if ((param1 ^ -1) != -13) {
-                  if (param0 != -2) {
-                    lga.a((byte) 36, 1);
-                    return aea.field_b * oq.field_l;
-                  } else {
-                    return aea.field_b * oq.field_l;
-                  }
-                } else {
-                  return oq.field_l * 120;
-                }
-              } else {
-                return 120 * oq.field_l;
-              }
-            } else {
-              return 1 + oq.field_l * (wha.field_a + 300);
-            }
-          } else {
-            return aea.field_b * oq.field_l * 2;
-          }
-        } else {
+        if (param1 == 13) {
           return 2147483647;
         }
+        if (param1 == 9) {
+          return aea.field_b * oq.field_l * 2;
+        }
+        if (11 == param1) {
+          return 1 + oq.field_l * (wha.field_a + 300);
+        }
+        if (param1 == 3) {
+          return 120 * oq.field_l;
+        }
+        if (param1 == 12) {
+          return oq.field_l * 120;
+        }
+        if (param0 == -2) {
+          return aea.field_b * oq.field_l;
+        }
+        lga.a((byte) 36, 1);
+        return aea.field_b * oq.field_l;
     }
 
     static {

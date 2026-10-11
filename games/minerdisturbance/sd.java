@@ -18,65 +18,55 @@ final class sd implements Iterable {
         field_d = null;
         field_g = null;
         field_c = null;
-        if (param0 != -1) {
-          field_a = (ta) null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -1) {
           field_a = null;
           return;
         }
+        field_a = (ta) null;
+        field_a = null;
     }
 
     final void a(long param0, boolean param1, pi param2) {
-        if (!(null == param2.field_c)) {
-            param2.b(34);
+        if (null != param2.field_c) {
+          param2.b(34);
         }
-        pi var5 = this.field_b[(int)(param0 & (long)(this.field_f + -1))];
+        pi var5 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
         if (!param1) {
-            return;
+          return;
         }
         try {
-            param2.field_c = var5.field_c;
-            param2.field_f = var5;
-            param2.field_c.field_f = param2;
-            param2.field_d = param0;
-            param2.field_f.field_c = param2;
+          param2.field_c = var5.field_c;
+          param2.field_f = var5;
+          param2.field_c.field_f = param2;
+          param2.field_d = param0;
+          param2.field_f.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final pi a(int param0, long param1) {
-        pi var4;
-        pi var5;
-        int var6;
-        var6 = MinerDisturbance.field_ab;
-        var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
+        pi var5 = null;
+        int var6 = MinerDisturbance.field_ab;
+        pi var4 = this.field_b[(int)((long)(-1 + this.field_f) & param1)];
         this.field_h = var4.field_f;
-        L0: while (true) {
-          if (this.field_h == var4) {
-            this.field_h = null;
-            if (param0 < -53) {
-              return null;
-            } else {
-              return (pi) null;
-            }
-          } else {
-            if ((param1 ^ -1L) != (this.field_h.field_d ^ -1L)) {
-              this.field_h = this.field_h.field_f;
-              continue L0;
-            } else {
-              var5 = this.field_h;
-              this.field_h = this.field_h.field_f;
-              return var5;
-            }
+        while (this.field_h != var4) {
+          if (~param1 == ~this.field_h.field_d) {
+            var5 = this.field_h;
+            this.field_h = this.field_h.field_f;
+            return var5;
           }
+          this.field_h = this.field_h.field_f;
         }
+        this.field_h = null;
+        if (param0 >= -53) {
+          return (pi) null;
+        }
+        return null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new gb((sd) (this)));
+        return (Iterator) ((Object) new gb(this));
     }
 
     private sd() throws Throwable {

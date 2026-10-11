@@ -14,9 +14,9 @@ final class p extends ksa implements e {
     final void a(int param0, int param1) {
         java.awt.Dimension var4 = null;
         synchronized (this.field_f.getTreeLock()) {
-            var4 = this.field_f.getSize();
-            this.H(param0, param1, var4.width, var4.height);
-            field_d = false;
+          var4 = this.field_f.getSize();
+          this.H(param0, param1, var4.width, var4.height);
+          field_d = false;
         }
     }
 
@@ -27,18 +27,15 @@ final class p extends ksa implements e {
     private final native void H(int param0, int param1, int param2, int param3);
 
     private final void a(Exception param0) {
-        if (field_d) {
-          if (wt.a(false) - field_h < 30000L) {
-            this.field_f.repaint();
-            return;
-          } else {
-            throw new RuntimeException(param0.getMessage());
-          }
-        } else {
+        if (!field_d) {
           field_h = wt.a(false);
           field_d = true;
           return;
         }
+        if (wt.a(false) - field_h >= 30000L) {
+          throw new RuntimeException(param0.getMessage());
+        }
+        this.field_f.repaint();
     }
 
     p(oa param0, java.awt.Canvas param1, int param2, int param3) {
@@ -56,8 +53,8 @@ final class p extends ksa implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pq.a(0, (e) (this));
-            return;
+          pq.a(0, (e) (this));
+          return;
         }
     }
 

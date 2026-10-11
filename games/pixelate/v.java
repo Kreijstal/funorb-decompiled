@@ -17,11 +17,11 @@ abstract class v {
 
     public static void a(boolean param0) {
         if (param0) {
-            v.a(true);
-            field_b = null;
-            field_a = null;
-            field_e = null;
-            return;
+          v.a(true);
+          field_b = null;
+          field_a = null;
+          field_e = null;
+          return;
         }
         field_b = null;
         field_a = null;

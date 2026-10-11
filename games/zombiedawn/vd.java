@@ -15,7 +15,7 @@ final class vd {
         field_e = null;
         field_b = null;
         if (param0 != 128) {
-            vd.a(-116);
+          vd.a(-116);
         }
     }
 

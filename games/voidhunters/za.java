@@ -9,70 +9,37 @@ abstract class za extends ksa {
     }
 
     final static int c(byte param0) {
+        int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
-        int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int stackIn_11_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          L0: {
-            if (null != fwa.field_g) {
-              var1_int = 0;
-              var2 = 0;
-              L1: while (true) {
-                if (var2 >= 12) {
-                  stackIn_11_0 = var1_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  L2: {
-                    L3: {
-                      var3 = fwa.field_g.field_c[var2];
-                      if (fwa.field_g.a(var3, true, false)) {
-                        break L3;
-                      } else {
-                        if (!fwa.field_g.c(var3, -40)) {
-                          break L2;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    var1_int++;
-                    break L2;
-                  }
-                  var2++;
-                  continue L1;
-                }
-              }
-            } else {
-              L4: {
-                if (param0 == -93) {
-                  break L4;
-                } else {
-                  za.c((byte) 43);
-                  break L4;
-                }
-              }
-              stackIn_15_0 = 12;
-              decompiledRegionSelector0 = 1;
-              break L0;
+          if (null == fwa.field_g) {
+            if (param0 != -93) {
+              za.c((byte) 43);
+            }
+            stackIn_15_0 = 12;
+            return stackIn_15_0;
+          }
+          var1_int = 0;
+          for (var2 = 0; var2 < 12; var2++) {
+            var3 = fwa.field_g.field_c[var2];
+            if (fwa.field_g.a(var3, true, false) ||
+              fwa.field_g.c(var3, -40)) {
+              var1_int++;
             }
           }
+          stackIn_11_0 = var1_int;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1), field_z + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_11_0;
-        } else {
-          return stackIn_15_0;
         }
     }
 

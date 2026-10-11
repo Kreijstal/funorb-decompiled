@@ -12,14 +12,14 @@ final class tk {
     final static void a(boolean param0, gb param1) {
         qf var2 = null;
         try {
-            qf.a(param1.a("", "headers.packvorbis", 0));
-            var2 = qf.a(param1, "jagex logo2.packvorbis", "");
-            if (!param0) {
-                field_a = (gb) null;
-            }
-            var2.c();
+          qf.a(param1.a("", "headers.packvorbis", 0));
+          var2 = qf.a(param1, "jagex logo2.packvorbis", "");
+          if (!param0) {
+            field_a = (gb) null;
+          }
+          var2.c();
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "tk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,62 +31,42 @@ final class tk {
         RuntimeException var3 = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 > param2) {
-                var3_int = param2;
-                param2 = param0;
-                param0 = var3_int;
-                L2: while (true) {
-                  if (param0 == 0) {
-                    break L1;
-                  } else {
-                    var3_int = param2 % param0;
-                    param2 = param0;
-                    param0 = var3_int;
-                    continue L2;
-                  }
-                }
-              } else {
-                L3: while (true) {
-                  if (param0 == 0) {
-                    break L1;
-                  } else {
-                    var3_int = param2 % param0;
-                    param2 = param0;
-                    param0 = var3_int;
-                    continue L3;
-                  }
-                }
-              }
+          if (param0 <= param2) {
+            while (param0 != 0) {
+              var3_int = param2 % param0;
+              param2 = param0;
+              param0 = var3_int;
             }
-            L4: {
-              if (param1 == 44) {
-                break L4;
-              } else {
-                field_f = (String) null;
-                break L4;
-              }
+          } else {
+            var3_int = param2;
+            param2 = param0;
+            param0 = var3_int;
+            while (param0 != 0) {
+              var3_int = param2 % param0;
+              param2 = param0;
+              param0 = var3_int;
             }
-            stackIn_10_0 = param2;
-            break L0;
           }
+          if (param1 != 44) {
+            field_f = (String) null;
+          }
+          stackIn_10_0 = param2;
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var3), "tk.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_10_0;
     }
 
     final static void a(int param0, jb[] param1, int param2, boolean param3) {
         try {
-            if (!param3) {
-                field_d = 29;
-            }
-            jh.a(uh.field_i, (byte) 51, param2, param1, param0);
+          if (!param3) {
+            field_d = 29;
+          }
+          jh.a(uh.field_i, (byte) 51, param2, param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -94,7 +74,7 @@ final class tk {
         field_c = null;
         field_b = null;
         field_a = null;
-        int var1 = 124 / ((param0 - -61) / 61);
+        int var1 = 124 / ((param0 + 61) / 61);
         field_f = null;
     }
 

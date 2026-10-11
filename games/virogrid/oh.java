@@ -12,7 +12,7 @@ final class oh {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
         field_c = null;

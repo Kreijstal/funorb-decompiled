@@ -6,14 +6,14 @@ final class ip {
 
     final static void a(byte param0, String param1, int param2) {
         try {
-            if (param0 > -64) {
-                String var4 = (String) null;
-                ip.a((byte) 87, (String) null, -2);
-            }
-            t.field_f = no.field_c;
-            lp.field_C = param2;
+          if (param0 > -64) {
+            String var4 = (String) null;
+            ip.a((byte) 87, (String) null, -2);
+          }
+          t.field_f = no.field_c;
+          lp.field_C = param2;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "ip.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ip.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -63,161 +63,110 @@ final class ip {
         int var46 = 0;
         var47 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var8_int = 0;
-              var9 = param7;
-              var10 = 0;
-              var11 = -param2 + param5;
-              var12 = param7 + -param2;
-              var13 = param5 * param5;
-              var14 = param7 * param7;
-              var15 = var11 * var11;
-              var16 = var12 * var12;
-              var17 = var14 << 147562049;
-              var18 = var13 << -1423419167;
-              var19 = var16 << 1114816961;
-              var20 = var15 << -1802343487;
-              var21 = param7 << 2077945729;
-              var22 = var12 << -405059487;
-              var23 = var17 + (-var21 + 1) * var13;
-              var24 = -((var21 + -1) * var18) + var14;
-              var25 = var19 + var15 * (-var22 + 1);
-              var26 = var16 - var20 * (-1 + var22);
-              var27 = var13 << -1074955454;
-              if (param3 == -45) {
-                break L1;
-              } else {
-                field_a = (cr) null;
-                break L1;
+          var8_int = 0;
+          var9 = param7;
+          var10 = 0;
+          var11 = -param2 + param5;
+          var12 = param7 - param2;
+          var13 = param5 * param5;
+          var14 = param7 * param7;
+          var15 = var11 * var11;
+          var16 = var12 * var12;
+          var17 = var14 << 1;
+          var18 = var13 << 1;
+          var19 = var16 << 1;
+          var20 = var15 << 1;
+          var21 = param7 << 1;
+          var22 = var12 << 1;
+          var23 = var17 + (-var21 + 1) * var13;
+          var24 = -((var21 - 1) * var18) + var14;
+          var25 = var19 + var15 * (-var22 + 1);
+          var26 = var16 - var20 * (-1 + var22);
+          var27 = var13 << 2;
+          if (param3 != -45) {
+            field_a = (cr) null;
+          }
+          var28 = var14 << 2;
+          var29 = var15 << 2;
+          var30 = var16 << 2;
+          var31 = 3 * var17;
+          var32 = var18 * (-3 + var21);
+          var33 = 3 * var19;
+          var34 = (-3 + var22) * var20;
+          var35 = var28;
+          var36 = var27 * (param7 - 1);
+          var37 = var30;
+          var38 = var29 * (var12 - 1);
+          var39 = vl.field_e[param6];
+          ki.a(param3 - 41, -param5 + param1, var39, param1 - var11, param0);
+          ki.a(-103, -var11 + param1, var39, param1 + var11, param4);
+          ki.a(-103, param1 + var11, var39, param1 + param5, param0);
+          while (true) {
+            if (var9 <= 0) {
+              return;
+            }
+            stackIn_8_0 = (var9 > var12) ? 0 : 1;
+            var40 = stackIn_8_0;
+            if (var23 < 0) {
+              while (var23 < 0) {
+                var24 = var24 + var35;
+                var23 = var23 + var31;
+                var8_int++;
+                var31 = var31 + var28;
+                var35 = var35 + var28;
               }
             }
-            var28 = var14 << 1218266338;
-            var29 = var15 << 1644484354;
-            var30 = var16 << -435138142;
-            var31 = 3 * var17;
-            var32 = var18 * (-3 + var21);
-            var33 = 3 * var19;
-            var34 = (-3 + var22) * var20;
-            var35 = var28;
-            var36 = var27 * (param7 + -1);
-            var37 = var30;
-            var38 = var29 * (var12 + -1);
-            var39 = vl.field_e[param6];
-            ki.a(param3 + -41, -param5 + param1, var39, param1 + -var11, param0);
-            ki.a(-103, -var11 + param1, var39, param1 - -var11, param4);
-            ki.a(-103, param1 + var11, var39, param1 - -param5, param0);
-            L2: while (true) {
-              if ((var9 ^ -1) >= -1) {
-                break L0;
-              } else {
-                L3: {
-                  if (var9 > var12) {
-                    stackIn_8_0 = 0;
-                    break L3;
-                  } else {
-                    stackIn_8_0 = 1;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var40 = stackIn_8_0;
-                  if ((var23 ^ -1) > -1) {
-                    L5: while (true) {
-                      if (var23 >= 0) {
-                        break L4;
-                      } else {
-                        var24 = var24 + var35;
-                        var23 = var23 + var31;
-                        var8_int++;
-                        var31 = var31 + var28;
-                        var35 = var35 + var28;
-                        continue L5;
-                      }
-                    }
-                  } else {
-                    break L4;
-                  }
-                }
-                L6: {
-                  if (var40 != 0) {
-                    L7: {
-                      if (var25 < 0) {
-                        L8: while (true) {
-                          if (var25 >= 0) {
-                            break L7;
-                          } else {
-                            var26 = var26 + var37;
-                            var25 = var25 + var33;
-                            var33 = var33 + var30;
-                            var10++;
-                            var37 = var37 + var30;
-                            continue L8;
-                          }
-                        }
-                      } else {
-                        break L7;
-                      }
-                    }
-                    L9: {
-                      if ((var26 ^ -1) > -1) {
-                        var25 = var25 + var33;
-                        var26 = var26 + var37;
-                        var33 = var33 + var30;
-                        var37 = var37 + var30;
-                        var10++;
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    var25 = var25 + -var38;
-                    var26 = var26 + -var34;
-                    var34 = var34 - var29;
-                    var38 = var38 - var29;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L10: {
-                  if (-1 >= (var24 ^ -1)) {
-                    break L10;
-                  } else {
-                    var23 = var23 + var31;
-                    var24 = var24 + var35;
-                    var35 = var35 + var28;
-                    var8_int++;
-                    var31 = var31 + var28;
-                    break L10;
-                  }
-                }
-                var23 = var23 + -var36;
-                var24 = var24 + -var32;
-                var36 = var36 - var27;
-                var32 = var32 - var27;
-                var9--;
-                var41 = -var9 + param6;
-                var42 = var9 + param6;
-                var43 = param1 + var8_int;
-                var44 = param1 - var8_int;
-                if (var40 != 0) {
-                  var45 = param1 - -var10;
-                  var46 = -var10 + param1;
-                  ki.a(-95, var44, vl.field_e[var41], var46, param0);
-                  ki.a(-118, var46, vl.field_e[var41], var45, param4);
-                  ki.a(param3 + -60, var45, vl.field_e[var41], var43, param0);
-                  ki.a(-103, var44, vl.field_e[var42], var46, param0);
-                  ki.a(-77, var46, vl.field_e[var42], var45, param4);
-                  ki.a(-79, var45, vl.field_e[var42], var43, param0);
-                  continue L2;
-                } else {
-                  ki.a(param3 ^ 88, var44, vl.field_e[var41], var43, param0);
-                  ki.a(-103, var44, vl.field_e[var42], var43, param0);
-                  continue L2;
+            if (var40 != 0) {
+              if (var25 < 0) {
+                while (var25 < 0) {
+                  var26 = var26 + var37;
+                  var25 = var25 + var33;
+                  var33 = var33 + var30;
+                  var10++;
+                  var37 = var37 + var30;
                 }
               }
+              if (var26 < 0) {
+                var25 = var25 + var33;
+                var26 = var26 + var37;
+                var33 = var33 + var30;
+                var37 = var37 + var30;
+                var10++;
+              }
+              var25 = var25 - var38;
+              var26 = var26 - var34;
+              var34 = var34 - var29;
+              var38 = var38 - var29;
             }
+            if (var24 < 0) {
+              var23 = var23 + var31;
+              var24 = var24 + var35;
+              var35 = var35 + var28;
+              var8_int++;
+              var31 = var31 + var28;
+            }
+            var23 = var23 - var36;
+            var24 = var24 - var32;
+            var36 = var36 - var27;
+            var32 = var32 - var27;
+            var9--;
+            var41 = -var9 + param6;
+            var42 = var9 + param6;
+            var43 = param1 + var8_int;
+            var44 = param1 - var8_int;
+            if (var40 == 0) {
+              ki.a(param3 ^ 88, var44, vl.field_e[var41], var43, param0);
+              ki.a(-103, var44, vl.field_e[var42], var43, param0);
+              continue;
+            }
+            var45 = param1 + var10;
+            var46 = -var10 + param1;
+            ki.a(-95, var44, vl.field_e[var41], var46, param0);
+            ki.a(-118, var46, vl.field_e[var41], var45, param4);
+            ki.a(param3 - 60, var45, vl.field_e[var41], var43, param0);
+            ki.a(-103, var44, vl.field_e[var42], var46, param0);
+            ki.a(-77, var46, vl.field_e[var42], var45, param4);
+            ki.a(-79, var45, vl.field_e[var42], var43, param0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,9 +177,9 @@ final class ip {
 
     public static void a(int param0) {
         if (param0 != -1423419167) {
-            ip.a(-81);
-            field_a = null;
-            return;
+          ip.a(-81);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

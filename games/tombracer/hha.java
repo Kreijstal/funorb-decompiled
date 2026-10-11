@@ -7,95 +7,70 @@ abstract class hha extends od {
     boolean field_k;
 
     final static String a(boolean param0) {
-        if (!param0) {
-          if (kl.field_a != gsa.field_y) {
-            if (gva.field_b.b(88)) {
-              if (gsa.field_y == wt.field_d) {
-                return gva.field_b.a((byte) 100);
-              } else {
-                return jo.field_E;
-              }
-            } else {
-              return gva.field_b.a((byte) 119);
-            }
-          } else {
-            return faa.field_g;
-          }
-        } else {
+        if (param0) {
           hha.a(-49, 62, -28);
-          if (kl.field_a != gsa.field_y) {
-            if (gva.field_b.b(88)) {
-              if (gsa.field_y == wt.field_d) {
-                return gva.field_b.a((byte) 100);
-              } else {
-                return jo.field_E;
-              }
-            } else {
-              return gva.field_b.a((byte) 119);
-            }
-          } else {
+          if (kl.field_a == gsa.field_y) {
             return faa.field_g;
           }
+          if (!gva.field_b.b(88)) {
+            return gva.field_b.a((byte) 119);
+          }
+          if (gsa.field_y != wt.field_d) {
+            return jo.field_E;
+          }
+          return gva.field_b.a((byte) 100);
         }
+        if (kl.field_a == gsa.field_y) {
+          return faa.field_g;
+        }
+        if (!gva.field_b.b(88)) {
+          return gva.field_b.a((byte) 119);
+        }
+        if (gsa.field_y != wt.field_d) {
+          return jo.field_E;
+        }
+        return gva.field_b.a((byte) 100);
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-            java.net.URL var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (param1 <= -77) {
-                  try {
-                    L1: {
-                      var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                      param0.getAppletContext().showDocument(sda.a(param0, -1, var2), "_top");
-                      break L1;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var2_ref = (Exception) (Object) decompiledCaughtException;
-                    var2_ref.printStackTrace();
-                    return;
-                  }
-                  return;
-                } else {
-                  break L0;
-                }
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_8_1 = new StringBuilder().append("hha.B(");
-
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw tba.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param1 > -77) {
+              return;
             }
+            try {
+              var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+              param0.getAppletContext().showDocument(sda.a(param0, -1, var2), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("hha.B(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw tba.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -103,7 +78,7 @@ abstract class hha extends od {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 != 0) {
-            return true;
+          return true;
         }
         return (param2 & 2048) != 0 ? true : false;
     }

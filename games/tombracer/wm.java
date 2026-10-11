@@ -7,21 +7,21 @@ final class wm {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 19 / ((param2 - 70) / 33);
-        if (!(-1 >= (param1 ^ -1))) {
-            return 0;
+        if (param1 < 0) {
+          return 0;
         }
-        if (!(param1 <= param0)) {
-            return 0;
+        if (param1 > param0) {
+          return 0;
         }
         return bs.a(param0, -28970, param1);
     }
 
     public static void a(byte param0) {
         if (param0 <= 10) {
-            wm.a((byte) -21);
-            field_b = null;
-            field_a = null;
-            return;
+          wm.a((byte) -21);
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

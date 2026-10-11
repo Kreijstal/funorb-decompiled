@@ -10,18 +10,17 @@ final class jk {
     static String field_f;
 
     final static int a(int param0, int param1) {
-        param0 = ((-1431655766 & param0) >>> 317486369) + (1431655765 & param0);
-        param0 = (param0 & 858993459) + ((-858993460 & param0) >>> -258336638);
-        param0 = 252645135 & (param0 >>> 578831364) + param0;
-        param0 = param0 + (param0 >>> 522894888);
-        if (param1 != 522894888) {
-          jk.a(-59, -15);
-          param0 = param0 + (param0 >>> -1048541392);
-          return 255 & param0;
-        } else {
-          param0 = param0 + (param0 >>> -1048541392);
+        param0 = ((-1431655766 & param0) >>> 1) + (1431655765 & param0);
+        param0 = (param0 & 858993459) + ((-858993460 & param0) >>> 2);
+        param0 = 252645135 & (param0 >>> 4) + param0;
+        param0 = param0 + (param0 >>> 8);
+        if (param1 == 522894888) {
+          param0 = param0 + (param0 >>> 16);
           return 255 & param0;
         }
+        jk.a(-59, -15);
+        param0 = param0 + (param0 >>> 16);
+        return 255 & param0;
     }
 
     public static void a(byte param0) {
@@ -37,7 +36,7 @@ final class jk {
         dk.f(param0 + 27089);
         kf.a(4, -1);
         if (param0 != -26700) {
-            field_a = (p) null;
+          field_a = (p) null;
         }
     }
 

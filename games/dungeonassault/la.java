@@ -19,82 +19,44 @@ final class la {
     int field_m;
 
     final static int a(byte param0) {
-        int var1 = 66 / ((param0 - -40) / 60);
+        int var1 = 66 / ((param0 + 40) / 60);
         return -bf.field_b + d.field_e;
     }
 
     final static int a(int param0, byte param1) {
         if (param1 != 86) {
-            field_f = false;
-            return re.field_f[param0 & 2047];
+          field_f = false;
+          return re.field_f[param0 & 2047];
         }
         return re.field_f[param0 & 2047];
     }
 
     final int b(byte param0) {
-        if (!this.field_k) {
-          if (this.field_n != 2) {
-            if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
-              if (ke.field_d != 2) {
-                if (param0 < 94) {
-                  this.b((byte) -110);
-                  return 0;
-                } else {
-                  return 0;
-                }
-              } else {
-                if (!mj.a(this.field_e, (byte) -17)) {
-                  if (param0 < 94) {
-                    this.b((byte) -110);
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  return 1;
-                }
-              }
-            } else {
-              return 1;
-            }
-          } else {
-            if (0 >= this.field_h) {
-              if ((this.field_a ^ -1L) != (rk.field_l ^ -1L)) {
-                if (ke.field_d != 2) {
-                  if (param0 < 94) {
-                    this.b((byte) -110);
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  if (!mj.a(this.field_e, (byte) -17)) {
-                    if (param0 < 94) {
-                      this.b((byte) -110);
-                      return 0;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 1;
-                  }
-                }
-              } else {
-                return 1;
-              }
-            } else {
-              return 2;
-            }
-          }
-        } else {
+        if (this.field_k) {
           return 2;
         }
+        if (this.field_n == 2 &&
+          0 < this.field_h) {
+          return 2;
+        }
+        if (~this.field_a == ~rk.field_l) {
+          return 1;
+        }
+        if (ke.field_d == 2 &&
+          mj.a(this.field_e, (byte) -17)) {
+          return 1;
+        }
+        if (param0 >= 94) {
+          return 0;
+        }
+        this.b((byte) -110);
+        return 0;
     }
 
     final static int a(int param0) {
         if (param0 != 23940) {
-            field_l = (int[]) null;
-            return 1;
+          field_l = (int[]) null;
+          return 1;
         }
         return 1;
     }
@@ -112,9 +74,9 @@ final class la {
         this.field_o = di.field_d;
         this.field_h = wd.field_j;
         if (param0) {
-            this.field_i = kp.field_a;
+          this.field_i = kp.field_a;
         } else {
-            this.field_i = null;
+          this.field_i = null;
         }
         this.field_a = gg.field_d;
         this.field_d = sa.field_t;

@@ -17,34 +17,31 @@ final class qj extends br {
 
     final static void a(String param0, boolean param1, int param2) {
         try {
-            bl.field_h = param1;
-            nj.field_f = true;
-            h.field_L = new ne(nb.field_a, ci.field_d, param0, ch.field_e, bl.field_h);
-            nb.field_a.b(3016, h.field_L);
-            if (param2 <= 89) {
-                field_j = (String) null;
-            }
+          bl.field_h = param1;
+          nj.field_f = true;
+          h.field_L = new ne(nb.field_a, ci.field_d, param0, ch.field_e, bl.field_h);
+          nb.field_a.b(3016, h.field_L);
+          if (param2 <= 89) {
+            field_j = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "qj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "qj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void b(boolean param0) {
-        String var2;
         field_j = null;
-        if (param0) {
-          var2 = (String) null;
-          qj.a((String) null, false, 17);
-          field_m = null;
-          field_o = null;
-          field_l = null;
-          return;
-        } else {
+        if (!param0) {
           field_m = null;
           field_o = null;
           field_l = null;
           return;
         }
+        String var2 = (String) null;
+        qj.a((String) null, false, 17);
+        field_m = null;
+        field_o = null;
+        field_l = null;
     }
 
     qj(int param0, int param1, int param2, int param3, int param4, int param5) {

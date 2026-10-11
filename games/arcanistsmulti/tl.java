@@ -12,15 +12,7 @@ abstract class tl {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 >= -17) {
-          field_e = (String) null;
-          field_a = null;
-          field_b = null;
-          field_e = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 < -17) {
           field_a = null;
           field_b = null;
           field_e = null;
@@ -28,17 +20,15 @@ abstract class tl {
           field_f = null;
           return;
         }
+        field_e = (String) null;
+        field_a = null;
+        field_b = null;
+        field_e = null;
+        field_g = null;
+        field_f = null;
     }
 
     final static void e(byte param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -48,51 +38,24 @@ abstract class tl {
         RuntimeException var1_ref = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 < -52) {
-                break L1;
-              } else {
-                tl.c((byte) -27);
-                break L1;
-              }
-            }
-            var5 = kl.field_B;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L2: while (true) {
-              if (var3 <= var2) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var5[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var5[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var5[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var5[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var5[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var5[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var5[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var5[incrementValue$23] = 0;
-                continue L2;
-              }
-            }
+          if (param0 >= -52) {
+            tl.c((byte) -27);
           }
+          var5 = kl.field_B;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          while (var3 > var2) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -101,117 +64,69 @@ abstract class tl {
     }
 
     final static int c(byte param0) {
-        if (-3 < (ih.field_f ^ -1)) {
+        if (ih.field_f < 2) {
           return 0;
-        } else {
-          L0: {
-            if (param0 == -77) {
-              break L0;
-            } else {
-              tl.e((byte) -108);
-              break L0;
-            }
+        }
+        if (param0 != -77) {
+          tl.e((byte) -108);
+        }
+        if (gm.field_f == 0) {
+          if (!da.field_b.c(-10923)) {
+            return 20;
           }
-          if (-1 != (gm.field_f ^ -1)) {
-            if (null != lh.field_g) {
-              if (!lh.field_g.c(-10923)) {
-                return 14;
-              } else {
-                if (!lh.field_g.a(true, "")) {
-                  return 29;
-                } else {
-                  if (lh.field_g.a("", -24417)) {
-                    if (da.field_b.c(param0 ^ 10982)) {
-                      if (da.field_b.a("commonui", -24417)) {
-                        if (ea.field_C.c(-10923)) {
-                          if (ea.field_C.a("commonui", param0 ^ 24364)) {
-                            if (ho.field_g.c(-10923)) {
-                              if (!ho.field_g.a(param0 ^ 35)) {
-                                return 86;
-                              } else {
-                                return 100;
-                              }
-                            } else {
-                              return 82;
-                            }
-                          } else {
-                            return 80;
-                          }
-                        } else {
-                          return 71;
-                        }
-                      } else {
-                        return 57;
-                      }
-                    } else {
-                      return 43;
-                    }
-                  } else {
-                    return 29;
-                  }
-                }
-              }
-            } else {
-              if (da.field_b.c(param0 ^ 10982)) {
-                if (da.field_b.a("commonui", -24417)) {
-                  if (ea.field_C.c(-10923)) {
-                    if (ea.field_C.a("commonui", param0 ^ 24364)) {
-                      if (ho.field_g.c(-10923)) {
-                        if (!ho.field_g.a(param0 ^ 35)) {
-                          return 86;
-                        } else {
-                          return 100;
-                        }
-                      } else {
-                        return 82;
-                      }
-                    } else {
-                      return 80;
-                    }
-                  } else {
-                    return 71;
-                  }
-                } else {
-                  return 57;
-                }
-              } else {
-                return 43;
-              }
-            }
-          } else {
-            if (!da.field_b.c(-10923)) {
-              return 20;
-            } else {
-              if (!da.field_b.a("commonui", -24417)) {
-                return 40;
-              } else {
-                if (ea.field_C.c(-10923)) {
-                  if (!ea.field_C.a("commonui", -24417)) {
-                    return 60;
-                  } else {
-                    if (!ho.field_g.c(-10923)) {
-                      return 70;
-                    } else {
-                      if (ho.field_g.a(-86)) {
-                        return 100;
-                      } else {
-                        return 80;
-                      }
-                    }
-                  }
-                } else {
-                  return 50;
-                }
-              }
-            }
+          if (!da.field_b.a("commonui", -24417)) {
+            return 40;
+          }
+          if (!ea.field_C.c(-10923)) {
+            return 50;
+          }
+          if (!ea.field_C.a("commonui", -24417)) {
+            return 60;
+          }
+          if (!ho.field_g.c(-10923)) {
+            return 70;
+          }
+          if (ho.field_g.a(-86)) {
+            return 100;
+          }
+          return 80;
+        }
+        if (null != lh.field_g) {
+          if (!lh.field_g.c(-10923)) {
+            return 14;
+          }
+          if (!lh.field_g.a(true, "")) {
+            return 29;
+          }
+          if (!lh.field_g.a("", -24417)) {
+            return 29;
           }
         }
+        if (!da.field_b.c(param0 ^ 10982)) {
+          return 43;
+        }
+        if (!da.field_b.a("commonui", -24417)) {
+          return 57;
+        }
+        if (!ea.field_C.c(-10923)) {
+          return 71;
+        }
+        if (!ea.field_C.a("commonui", param0 ^ 24364)) {
+          return 80;
+        }
+        if (!ho.field_g.c(-10923)) {
+          return 82;
+        }
+        if (!ho.field_g.a(param0 ^ 35)) {
+          return 86;
+        }
+        return 100;
     }
 
     final static String b(byte param0) {
         if (param0 < 95) {
-            tl.a((byte) 55);
-            return vi.field_F;
+          tl.a((byte) 55);
+          return vi.field_F;
         }
         return vi.field_F;
     }
@@ -223,24 +138,20 @@ abstract class tl {
     abstract byte[] a(int param0, boolean param1);
 
     final static void a(int param0) {
-        if (ob.field_Y == null) {
+        if (ob.field_Y != null) {
+          ob.field_Y.field_l = false;
           li.a(0, param0 + 30267);
           if (param0 != -30267) {
             field_e = (String) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          ob.field_Y.field_l = false;
-          li.a(0, param0 + 30267);
-          if (param0 == -30267) {
-            return;
-          } else {
-            field_e = (String) null;
-            return;
-          }
+          return;
         }
+        li.a(0, param0 + 30267);
+        if (param0 == -30267) {
+          return;
+        }
+        field_e = (String) null;
     }
 
     static {

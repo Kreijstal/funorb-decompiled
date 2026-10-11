@@ -17,14 +17,12 @@ final class b {
         field_a = null;
         field_b = null;
         field_f = null;
-        if (param0 <= 53) {
-          field_a = (vn) null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 > 53) {
           field_e = null;
           return;
         }
+        field_a = (vn) null;
+        field_e = null;
     }
 
     final static String a(byte param0, Throwable param1) throws IOException {
@@ -46,18 +44,33 @@ final class b {
         String var19;
         String var20;
         int var13;
-        L0: {
-          var14 = ArcanistsMulti.field_G ? 1 : 0;
-          if (param1 instanceof p) {
-            var15 = (p) ((Object) param1);
-            param1 = var15.field_g;
-            var2 = var15.field_i + " | ";
-            var12 = var2;
-            break L0;
-          } else {
-            var2 = "";
-            break L0;
-          }
+        String var2Lifetime1;
+        String var2Lifetime2;
+        String var2Lifetime3;
+        String var12Lifetime1;
+        String var12Lifetime2;
+        String var12Lifetime3;
+        String var2Lifetime3Lifetime1;
+        String var2Lifetime3Lifetime2;
+        String var2Lifetime3Lifetime3;
+        String var2Lifetime3Lifetime4;
+        String var2Lifetime3Lifetime5;
+        String var2Lifetime3Lifetime6;
+        String var2Lifetime3Lifetime7;
+        String var2Lifetime3Lifetime8;
+        String var2Lifetime3Lifetime9;
+        String var2Lifetime3Lifetime10;
+        String var2Lifetime3Lifetime11;
+        String var2Lifetime3Lifetime12;
+        String var12Lifetime3Lifetime1;
+        var14 = ArcanistsMulti.field_G ? 1 : 0;
+        if (param1 instanceof p) {
+          var15 = (p) ((Object) param1);
+          param1 = var15.field_g;
+          var2 = var15.field_i + " | ";
+          var12 = var2;
+        } else {
+          var2 = "";
         }
         var16 = new StringWriter();
         var4 = new PrintWriter((Writer) ((Object) var16));
@@ -65,71 +78,57 @@ final class b {
         var5 = -66 % ((32 - param0) / 52);
         var4.close();
         var6 = var16.toString();
-        var2 = var6;
-        var12 = var6;
+        var2Lifetime1 = var6;
+        var12Lifetime1 = var6;
         var7 = new BufferedReader((Reader) ((Object) new StringReader(var6)));
         var8 = var7.readLine();
-        var2 = var8;
-        var12 = var8;
-        L1: while (true) {
+        var2Lifetime2 = var8;
+        var12Lifetime2 = var8;
+        while (true) {
           var9 = var7.readLine();
-          var2 = var9;
-          var12 = var9;
-          var2 = var12;
-          if (var9 != null) {
-            L2: {
-              var10 = var9.indexOf('(');
-              var11 = var9.indexOf(')', 1 + var10);
-              if (-1 == var10) {
-                var12 = var9;
-                var2 = var12;
-                var2 = var12;
-                break L2;
-              } else {
-                var12 = var9.substring(0, var10);
-                break L2;
-              }
-            }
-            L3: {
-              var17 = var12.trim();
-              var2 = var17;
-              var2 = var17;
-              var18 = var17.substring(1 + var17.lastIndexOf(' '));
-              var2 = var18;
-              var2 = var18;
-              var19 = var18.substring(var18.lastIndexOf('\t') - -1);
-              var2 = var19;
-              var2 = var19;
-              var20 = var2 + var19;
-              var2 = var20;
-              var2 = var20;
-              var2 = var20;
-              if (var10 == -1) {
-                break L3;
-              } else {
-                if ((var11 ^ -1) != 0) {
-                  var13 = var9.indexOf(".java:", var10);
-                  if ((var13 ^ -1) > -1) {
-                    break L3;
-                  } else {
-                    var2 = var20 + var9.substring(var13 - -5, var11);
-                    break L3;
-                  }
-                } else {
-                  var2 = var2 + ' ';
-                  continue L1;
-                }
-              }
-            }
-            var2 = var2 + ' ';
-            continue L1;
-          } else {
-            var2 = var12;
-            var12 = var2;
-            var2 = var12;
-            var2 = var2 + "| " + var8;
-            return var2;
+          var2Lifetime3 = var9;
+          var12Lifetime3 = var9;
+          var2Lifetime3Lifetime1 = var12Lifetime3;
+          if (var9 == null) {
+            var2Lifetime3Lifetime2 = var12Lifetime3;
+            var12Lifetime3 = var2Lifetime3Lifetime2;
+            var2Lifetime3Lifetime2 = var12Lifetime3;
+            var2Lifetime3Lifetime2 = var2Lifetime3Lifetime2 + "| " + var8;
+            return var2Lifetime3Lifetime2;
           }
+          var10 = var9.indexOf('(');
+          var11 = var9.indexOf(')', 1 + var10);
+          if (-1 == var10) {
+            var12Lifetime3Lifetime1 = var9;
+            var2Lifetime3Lifetime3 = var12Lifetime3Lifetime1;
+            var2Lifetime3Lifetime3 = var12Lifetime3Lifetime1;
+          } else {
+            var12Lifetime3Lifetime1 = var9.substring(0, var10);
+          }
+          var17 = var12Lifetime3Lifetime1.trim();
+          var2Lifetime3Lifetime4 = var17;
+          var2Lifetime3Lifetime5 = var17;
+          var18 = var17.substring(1 + var17.lastIndexOf(' '));
+          var2Lifetime3Lifetime6 = var18;
+          var2Lifetime3Lifetime7 = var18;
+          var19 = var18.substring(var18.lastIndexOf('\t') + 1);
+          var2Lifetime3Lifetime8 = var19;
+          var2Lifetime3Lifetime9 = var19;
+          var20 = var2Lifetime3Lifetime9 + var19;
+          var2Lifetime3Lifetime10 = var20;
+          var2Lifetime3Lifetime11 = var20;
+          var2Lifetime3Lifetime12 = var20;
+          if (var10 != -1) {
+            if (var11 == -1) {
+              var2Lifetime3Lifetime12 = var2Lifetime3Lifetime12 + ' ';
+              continue;
+            }
+            var13 = var9.indexOf(".java:", var10);
+            if (var13 >= 0) {
+              var2Lifetime3Lifetime12 = var20 + var9.substring(var13 + 5, var11);
+            }
+          }
+          var2Lifetime3Lifetime12 = var2Lifetime3Lifetime12 + ' ';
         }
     }
 

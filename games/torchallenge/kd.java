@@ -18,27 +18,27 @@ final class kd extends da {
         field_o = null;
         field_m = null;
         if (param0 != 8192) {
-            field_r = 82;
-            field_k = null;
-            return;
+          field_r = 82;
+          field_k = null;
+          return;
         }
         field_k = null;
     }
 
     final void a(int param0, int param1, int[] param2, int param3, byte param4, int param5, int param6, int param7) {
         if (param4 != -8) {
-            return;
+          return;
         }
         try {
-            this.field_p = param0;
-            this.field_j = param2;
-            this.field_s = param3;
-            this.field_n = param6;
-            this.field_q = param5;
-            this.field_i = param7;
-            this.field_l = param1;
+          this.field_p = param0;
+          this.field_j = param2;
+          this.field_s = param3;
+          this.field_n = param6;
+          this.field_q = param5;
+          this.field_i = param7;
+          this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "kd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "kd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

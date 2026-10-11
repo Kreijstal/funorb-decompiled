@@ -8,9 +8,9 @@ final class ej {
 
     public static void a(int param0) {
         if (param0 > -53) {
-            ej.a(-49);
-            field_b = null;
-            return;
+          ej.a(-49);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

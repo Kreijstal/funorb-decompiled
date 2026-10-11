@@ -15,109 +15,32 @@ final class bl {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
+        boolean stackIn_13_2 = false;
         int stackIn_15_3;
-        int stackIn_16_3 = 0;
-        int stackIn_16_4 = 0;
-        L0: {
-          if (param0 < -22) {
-            break L0;
-          } else {
-            bl.b(-59);
-            break L0;
-          }
+        boolean stackIn_16_4 = false;
+        if (param0 >= -22) {
+          bl.b(-59);
         }
-        L1: {
-          nm.c(-1);
-          if (null != io.field_c) {
-            if (kn.a(true, io.field_c.field_mc)) {
-              stackIn_8_0 = 1;
-              break L1;
-            } else {
-              stackIn_8_0 = 0;
-              break L1;
-            }
-          } else {
-            stackIn_8_0 = 0;
-            break L1;
-          }
+        nm.c(-1);
+        if (null != io.field_c) {
+          stackIn_8_0 = (kn.a(true, io.field_c.field_mc)) ? 1 : 0;
+        } else {
+          stackIn_8_0 = 0;
         }
-        L2: {
-          L3: {
-            var2 = stackIn_8_0;
-            stackIn_11_0 = 15;
-
-            stackIn_11_1 = 14;
-
-            if (md.field_Y) {
-              break L3;
-            } else {
-
-
-
-
-              if (!oa.field_i) {
-                stackIn_13_0 = stackIn_11_0;
-                stackIn_13_1 = stackIn_11_1;
-                stackIn_13_2 = 0;
-                break L2;
-              } else {
-
-
-                break L3;
-              }
-            }
-          }
-          stackIn_13_0 = stackIn_11_0;
-          stackIn_13_1 = stackIn_11_1;
-          stackIn_13_2 = 1;
-          break L2;
+        var2 = stackIn_8_0;
+        stackIn_11_0 = 15;
+        stackIn_11_1 = 14;
+        stackIn_13_2 = (md.field_Y) || (oa.field_i);
+        stackIn_15_3 = var2;
+        stackIn_16_4 = (50 >= ce.field_g) ? false : true;
+        wk.a(stackIn_11_0, stackIn_11_1, stackIn_13_2, stackIn_15_3 != 0, stackIn_16_4, param1, (byte) 116, true, 0, 13, 11, lp.field_i);
+        if (of.field_c) {
+          aa.field_f.g(57, 15514);
+          of.field_c = false;
         }
-        L4: {
-
-
-
-
-
-
-          stackIn_15_3 = var2;
-
-          if (50 >= ce.field_g) {
-
-
-
-            stackIn_16_3 = stackIn_15_3;
-            stackIn_16_4 = 0;
-            break L4;
-          } else {
-
-
-
-            stackIn_16_3 = stackIn_15_3;
-            stackIn_16_4 = 1;
-            break L4;
-          }
-        }
-        L5: {
-          wk.a(stackIn_13_0, stackIn_13_1, stackIn_13_2 != 0, stackIn_16_3 != 0, stackIn_16_4 != 0, param1, (byte) 116, true, 0, 13, 11, lp.field_i);
-          if (of.field_c) {
-            aa.field_f.g(57, 15514);
-            of.field_c = false;
-            break L5;
-          } else {
-            break L5;
-          }
-        }
-        L6: {
-          if (fc.field_a) {
-            aa.field_f.g(10, 15514);
-            fc.field_a = false;
-            break L6;
-          } else {
-            break L6;
-          }
+        if (fc.field_a) {
+          aa.field_f.g(10, 15514);
+          fc.field_a = false;
         }
     }
 
@@ -125,7 +48,7 @@ final class bl {
         field_f = null;
         field_d = null;
         if (param0 != -46342) {
-            return;
+          return;
         }
         field_a = null;
         field_e = null;
@@ -134,56 +57,45 @@ final class bl {
 
     final static int a(boolean param0) {
         if (!param0) {
-            bl.b(-26);
+          bl.b(-26);
         }
         return wb.field_b;
     }
 
     final static v a(int param0) {
         try {
-            Throwable var1 = null;
-            v stackIn_2_0 = null;
-            v stackIn_4_0 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                if (param0 >= 27) {
-                  stackIn_4_0 = (v) (Class.forName("wj").newInstance());
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_2_0 = (v) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
-            }
-            if (decompiledRegionSelector0 == 0) {
-              return stackIn_2_0;
-            } else {
+          Throwable var1 = null;
+          v stackIn_2_0 = null;
+          v stackIn_4_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 >= 27) {
+              stackIn_4_0 = (v) (Class.forName("wj").newInstance());
               return stackIn_4_0;
             }
+            stackIn_2_0 = (v) null;
+            return stackIn_2_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(int param0, tf param1, String param2) {
         try {
-            if (param0 != 11833) {
-                field_g = (String) null;
-            }
-            qf.field_c = param1;
-            fa.field_i = param2;
+          if (param0 != 11833) {
+            field_g = (String) null;
+          }
+          qf.field_c = param1;
+          fa.field_i = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,17 +107,17 @@ final class bl {
         int var3 = 0;
         int var1 = 0;
         field_a = new int[98304];
-        for (var0 = 92682; (var0 ^ -1) <= -46342; var0--) {
-            var4 = (long)(-1 + (var0 << 1400346465));
-            var6 = (long)(1 + (var0 << 1777501953));
-            var2 = (int)((var4 * var4 >> -427546094) + -32768L);
-            var3 = (int)(-32768L + (var6 * var6 >> -1929501102));
-            if (!(var3 < field_a.length)) {
-                var3 = field_a.length - 1;
-            }
-            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var1 <= var3; var1++) {
-                field_a[var1] = var0;
-            }
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)(1 + (var0 << 1));
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          var3 = (int)(-32768L + (var6 * var6 >> 18));
+          if (!(var3 < field_a.length)) {
+            var3 = field_a.length - 1;
+          }
+          for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            field_a[var1] = var0;
+          }
         }
         field_f = "Unnamed Skin";
     }

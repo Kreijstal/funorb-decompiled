@@ -16,22 +16,22 @@ abstract class mn extends tc {
 
     final static void a(boolean param0, int param1, int param2, byte param3, int param4, int param5) {
         if (param3 <= 64) {
-            return;
+          return;
         }
         if (param0) {
-            return;
+          return;
         }
         if (0 > param1) {
-            return;
+          return;
         }
         if (param4 < 0) {
-            return;
+          return;
         }
         if (param1 >= ks.field_y) {
-            return;
+          return;
         }
         if (!(param4 < ef.field_c)) {
-            return;
+          return;
         }
         int var6 = param4 * ks.field_y + param1;
         rv.a(false, param5, param2, var6);
@@ -45,70 +45,39 @@ abstract class mn extends tc {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5 = 115 % ((param0 - 77) / 34);
-              if (1 == param1.length) {
-                stackIn_3_0 = param1[0];
-                break L1;
-              } else {
-                stackIn_3_0 = pj.a(593277313, (CharSequence[]) ((Object) param1));
-                break L1;
-              }
-            }
-            var4 = stackIn_3_0;
-            var4 = "Illegal move (" + param2 + "); player " + this.field_p + ": " + var4 + ".";
-            stackIn_4_0 = (String) (var4);
-            break L0;
+          var5 = 115 % ((param0 - 77) / 34);
+          if (1 == param1.length) {
+            stackIn_3_0 = param1[0];
+          } else {
+            stackIn_3_0 = pj.a(593277313, (CharSequence[]) ((Object) param1));
           }
+          var4 = stackIn_3_0;
+          var4 = "Illegal move (" + param2 + "); player " + this.field_p + ": " + var4 + ".";
+          stackIn_4_0 = var4;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4_ref);
-
-            stackIn_7_1 = new StringBuilder().append("mn.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_7_0 = var4_ref;
+          stackIn_7_1 = new StringBuilder().append("mn.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     abstract bd a(int param0, ha param1);
@@ -117,18 +86,16 @@ abstract class mn extends tc {
         field_q = null;
         field_k = (kk[][]) null;
         field_l = null;
-        if (param0 < 9) {
-          field_s = -121L;
-          field_r = null;
-          field_t = null;
-          field_m = (String[][]) null;
-          return;
-        } else {
+        if (param0 >= 9) {
           field_r = null;
           field_t = null;
           field_m = (String[][]) null;
           return;
         }
+        field_s = -121L;
+        field_r = null;
+        field_t = null;
+        field_m = (String[][]) null;
     }
 
     protected mn() {

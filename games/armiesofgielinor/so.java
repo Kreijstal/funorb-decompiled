@@ -9,15 +9,7 @@ final class so {
     static bi field_b;
 
     public static void b(int param0) {
-        if (param0 != 256) {
-          field_d = (je) null;
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 256) {
           field_c = null;
           field_b = null;
           field_d = null;
@@ -25,11 +17,17 @@ final class so {
           field_e = null;
           return;
         }
+        field_d = (je) null;
+        field_c = null;
+        field_b = null;
+        field_d = null;
+        field_a = null;
+        field_e = null;
     }
 
     final static int a(int param0) {
         if (param0 != 25213) {
-            return -16;
+          return -16;
         }
         return ms.field_r;
     }
@@ -37,109 +35,56 @@ final class so {
     final static int a(int param0, int param1) {
         int var2;
         int var3;
+        int var2Lifetime1;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 != 0) {
-          if (0 > param0) {
-            throw new IllegalArgumentException("");
-          } else {
-            if (32768 > param0) {
-              if ((param0 ^ -1) > -129) {
-                if (-9 >= (param0 ^ -1)) {
-                  if (param0 >= 32) {
-                    var2 = 5;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 6;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  }
-                } else {
-                  if (-3 < (param0 ^ -1)) {
-                    return 256;
-                  } else {
-                    var2 = 7;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  }
-                }
-              } else {
-                if (param0 >= 2048) {
-                  if (8192 > param0) {
-                    var2 = 2;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 1;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  }
-                } else {
-                  if (512 <= param0) {
-                    var2 = 3;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  } else {
-                    var2 = 4;
-                    param0 = param0 << (var2 << -1951374751);
-                    return jn.field_f[param0 - 32768] >> var2;
-                  }
-                }
-              }
-            } else {
-              if ((param0 ^ -1) > -131073) {
-                if (param1 != -129) {
-                  so.a(105);
-                  return jn.field_f[-32768 + param0];
-                } else {
-                  return jn.field_f[-32768 + param0];
-                }
-              } else {
-                if (33554432 <= param0) {
-                  if ((param0 ^ -1) > -536870913) {
-                    if (-134217729 < (param0 ^ -1)) {
-                      var2 = 5;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    } else {
-                      var2 = 6;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    }
-                  } else {
-                    var2 = 7;
-                    param0 = param0 >> (var2 << 2392993);
-                    return jn.field_f[param0 - 32768] << var2;
-                  }
-                } else {
-                  if (param0 >= 2097152) {
-                    if ((param0 ^ -1) <= -8388609) {
-                      var2 = 4;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    } else {
-                      var2 = 3;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    }
-                  } else {
-                    if ((param0 ^ -1) > -524289) {
-                      var2 = 1;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    } else {
-                      var2 = 2;
-                      param0 = param0 >> (var2 << 2392993);
-                      return jn.field_f[param0 - 32768] << var2;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        } else {
+        if (param0 == 0) {
           return 0;
         }
+        if (0 > param0) {
+          throw new IllegalArgumentException("");
+        }
+        if (32768 > param0) {
+          if (param0 < 128) {
+            if (param0 < 8) {
+              if (param0 < 2) {
+                return 256;
+              }
+              var2 = 7;
+            } else {
+              var2 = (param0 >= 32) ? 5 : 6;
+            }
+          } else {
+            if (param0 >= 2048) {
+              var2 = (8192 > param0) ? 2 : 1;
+            } else {
+              var2 = (512 <= param0) ? 3 : 4;
+            }
+          }
+          param0 = param0 << (var2 << 1);
+          return jn.field_f[param0 - 32768] >> var2;
+        }
+        if (param0 < 131072) {
+          if (param1 == -129) {
+            return jn.field_f[-32768 + param0];
+          }
+          so.a(105);
+          return jn.field_f[-32768 + param0];
+        }
+        if (33554432 <= param0) {
+          if (param0 >= 536870912) {
+            var2Lifetime1 = 7;
+          } else {
+            var2Lifetime1 = (param0 < 134217728) ? 5 : 6;
+          }
+        } else {
+          if (param0 >= 2097152) {
+            var2Lifetime1 = (param0 >= 8388608) ? 4 : 3;
+          } else {
+            var2Lifetime1 = (param0 < 524288) ? 1 : 2;
+          }
+        }
+        param0 = param0 >> (var2Lifetime1 << 1);
+        return jn.field_f[param0 - 32768] << var2Lifetime1;
     }
 
     static {

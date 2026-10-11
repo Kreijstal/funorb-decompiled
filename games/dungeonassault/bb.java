@@ -30,21 +30,19 @@ abstract class bb {
         field_t = null;
         field_e = null;
         field_f = null;
-        if (param0 != 127) {
-          field_k = (String[]) null;
-          field_r = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0 == 127) {
           field_r = null;
           field_l = null;
           return;
         }
+        field_k = (String[]) null;
+        field_r = null;
+        field_l = null;
     }
 
     final static cn[] a(int param0, boolean param1, int param2, int param3) {
         if (param1) {
-            return (cn[]) null;
+          return (cn[]) null;
         }
         return pe.a(param3, param0, 25, param2, 1);
     }
@@ -52,32 +50,11 @@ abstract class bb {
     abstract void a(int param0);
 
     final boolean d(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 20) {
-          L0: {
-            this.field_d = (up) null;
-            if (20 > this.e(param0 + 0)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (20 > this.e(param0 + 0)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 20) {
+          return 20 <= this.e(param0 + 0) ? true : false;
         }
+        this.field_d = (up) null;
+        return 20 <= this.e(param0 + 0) ? true : false;
     }
 
     abstract void a(Object param0, boolean param1, byte param2);
@@ -87,77 +64,50 @@ abstract class bb {
     abstract boolean b(byte param0);
 
     final int c(int param0) {
-        if (param0 != 20) {
-          this.field_a = 69;
-          return this.field_g.b((byte) 53) - -this.field_p.b((byte) 53);
-        } else {
-          return this.field_g.b((byte) 53) - -this.field_p.b((byte) 53);
+        if (param0 == 20) {
+          return this.field_g.b((byte) 53) + this.field_p.b((byte) 53);
         }
+        this.field_a = 69;
+        return this.field_g.b((byte) 53) + this.field_p.b((byte) 53);
     }
 
     final boolean b(int param0) {
         if (param0 != -21431) {
-            return true;
+          return true;
         }
         return 20 <= this.c(param0 ^ -21411) ? true : false;
     }
 
     final int e(int param0) {
-        if (param0 != 20) {
-          this.d(38);
-          return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
-        } else {
+        if (param0 == 20) {
           return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
         }
+        this.d(38);
+        return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
     }
 
     final em a(boolean param0, int param1, byte param2, int param3, byte param4) {
-        long var6;
-        em var8;
-        em stackIn_2_0 = null;
-        em stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          var6 = (long)param3 + ((long)param1 << -1369774112);
-          var8 = new em();
-          var8.field_E = param2;
-          var8.field_o = var6;
-          stackIn_2_0 = (em) (var8);
-
-          if (!param0) {
-            stackIn_3_0 = (em) ((Object) stackIn_2_0);
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = (em) ((Object) stackIn_2_0);
-            stackIn_3_1 = 1;
-            break L0;
+        long var6 = (long)param3 + ((long)param1 << 32);
+        em var8 = new em();
+        var8.field_E = param2;
+        var8.field_o = var6;
+        var8.field_B = param0 ? true : false;
+        if (!param0) {
+          if (!(this.e(20) < 20)) {
+            throw new RuntimeException();
           }
-        }
-        L1: {
-          stackIn_3_0.field_B = stackIn_3_1 != 0;
-          if (param0) {
-            if ((this.c(20) ^ -1) > -21) {
-              this.field_g.a(var8, -32711);
-              break L1;
-            } else {
-              throw new RuntimeException();
-            }
-          } else {
-            if (-21 >= (this.e(20) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_d.a(var8, -32711);
-              break L1;
-            }
-          }
-        }
-        if (param4 <= 65) {
-          field_t = (String[]) null;
-          return var8;
+          this.field_d.a(var8, -32711);
         } else {
+          if (this.c(20) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_g.a(var8, -32711);
+        }
+        if (param4 > 65) {
           return var8;
         }
+        field_t = (String[]) null;
+        return var8;
     }
 
     bb() {

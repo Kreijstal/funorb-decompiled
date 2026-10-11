@@ -6,24 +6,20 @@ abstract class fg {
     static int field_a;
 
     final int a(long param0, int param1) {
-        long var4;
-        var4 = this.a(-43);
-        if ((var4 ^ -1L) >= -1L) {
+        long var4 = this.a(-43);
+        if (var4 > 0L) {
+          em.a(var4, false);
           if (param1 != -128) {
             this.a(31L, -83);
             return this.a(param0, (byte) 37);
-          } else {
-            return this.a(param0, (byte) 37);
           }
-        } else {
-          em.a(var4, false);
-          if (param1 == -128) {
-            return this.a(param0, (byte) 37);
-          } else {
-            this.a(31L, -83);
-            return this.a(param0, (byte) 37);
-          }
+          return this.a(param0, (byte) 37);
         }
+        if (param1 == -128) {
+          return this.a(param0, (byte) 37);
+        }
+        this.a(31L, -83);
+        return this.a(param0, (byte) 37);
     }
 
     abstract int a(long param0, byte param1);
@@ -35,60 +31,41 @@ abstract class fg {
     final static char a(int param0, byte param1) {
         int var2;
         int var3;
+        int var2Lifetime1;
+        int var3Lifetime1;
         var2 = param1 & 255;
-        if (param0 == 16) {
-          if (-1 == (var2 ^ -1)) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (128 <= var2) {
-              if (var2 >= 160) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = sb.field_n[-128 + var2];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          }
-        } else {
+        if (param0 != 16) {
           fg.a(-100, (byte) -72);
-          if (-1 == (var2 ^ -1)) {
+          if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (128 > var2) {
-              return (char)var2;
-            } else {
-              L1: {
-                if (var2 < 160) {
-                  L2: {
-                    var3 = sb.field_n[-128 + var2];
-                    if (var3 == 0) {
-                      var3 = 63;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var2 = var3;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return (char)var2;
-            }
           }
+          if (128 > var2) {
+            return (char)var2;
+          }
+          if (var2 < 160) {
+            var3 = sb.field_n[-128 + var2];
+            if (var3 == 0) {
+              var3 = 63;
+            }
+            var2 = var3;
+          }
+          return (char)var2;
         }
+        if (var2 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+        }
+        if (128 > var2) {
+          return (char)var2;
+        }
+        if (var2 >= 160) {
+          return (char)var2;
+        }
+        var3Lifetime1 = sb.field_n[-128 + var2];
+        if (var3Lifetime1 == 0) {
+          var3Lifetime1 = 63;
+        }
+        var2Lifetime1 = var3Lifetime1;
+        return (char)var2Lifetime1;
     }
 
     static {

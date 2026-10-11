@@ -20,7 +20,7 @@ final class nd implements jm {
 
     public static void a(int param0) {
         field_b = null;
-        int var1 = 44 % ((param0 - -28) / 59);
+        int var1 = 44 % ((param0 + 28) / 59);
         field_h = null;
     }
 
@@ -28,10 +28,7 @@ final class nd implements jm {
         mf stackIn_3_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -40,88 +37,48 @@ final class nd implements jm {
         int var10 = 0;
         ki var11 = null;
         try {
-          L0: {
-            L1: {
-              if (!(param4 instanceof ki)) {
-                stackIn_3_0 = null;
-                break L1;
-              } else {
-                stackIn_3_0 = (mf) (param4);
-                break L1;
-              }
-            }
-            L2: {
-              var11 = (ki) ((Object) stackIn_3_0);
-              if (var11 != null) {
-                param3 = param3 & var11.field_H;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var7 = 5592405;
-              if (param3) {
-                var7 = 16777215;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (param0 >= 58) {
-              L4: {
-                wb.f(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, this.field_k);
-                var8 = this.field_c + param4.field_u + param1;
-                var9 = param2 + (param4.field_r - -this.field_d);
-                wb.c(var8, var9, this.field_f, this.field_a, 5592405);
-                wb.f(var8, var9, this.field_f, this.field_a, var7);
-                if (var11.field_I) {
-                  wb.b(var8, var9, this.field_f + var8, var9 - -this.field_a, 1);
-                  wb.b(this.field_f + var8, var9, var8, this.field_a + var9, 1);
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              if (this.field_m != null) {
-                var10 = this.field_o + (this.field_c + this.field_f);
-                this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 134573473) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (!(param4 instanceof ki)) {
+            stackIn_3_0 = null;
+          } else {
+            stackIn_3_0 = (mf) (param4);
           }
+          var11 = (ki) (stackIn_3_0);
+          if (var11 != null) {
+            param3 = param3 & var11.field_H;
+          }
+          var7 = 5592405;
+          if (param3) {
+            var7 = 16777215;
+          }
+          if (param0 < 58) {
+            return;
+          }
+          wb.f(param4.field_u + param1, param4.field_r + param2, param4.field_y, param4.field_C, this.field_k);
+          var8 = this.field_c + param4.field_u + param1;
+          var9 = param2 + (param4.field_r + this.field_d);
+          wb.c(var8, var9, this.field_f, this.field_a, 5592405);
+          wb.f(var8, var9, this.field_f, this.field_a, var7);
+          if (var11.field_I) {
+            wb.b(var8, var9, this.field_f + var8, var9 + this.field_a, 1);
+            wb.b(this.field_f + var8, var9, var8, this.field_a + var9, 1);
+          }
+          if (this.field_m == null) {
+            return;
+          }
+          var10 = this.field_o + (this.field_c + this.field_f);
+          this.field_m.a(param4.field_v, var10 + (param4.field_u + param1), this.field_e + param4.field_r + param2, param4.field_y + (-var10 - this.field_o), -(this.field_o << 1) + param4.field_C, this.field_g, this.field_i, this.field_j, this.field_n, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var6);
-
-            stackIn_20_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L5;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_20_0 = var6;
+          stackIn_20_1 = new StringBuilder().append("nd.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw fk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -129,18 +86,18 @@ final class nd implements jm {
         this.field_j = 1;
         this.field_n = 1;
         try {
-            this.field_f = param8;
-            this.field_o = param1;
-            this.field_m = param0;
-            this.field_g = param3;
-            this.field_e = param2;
-            this.field_a = param7;
-            this.field_c = param5;
-            this.field_i = param4;
-            this.field_d = param6;
-            this.field_k = param9;
+          this.field_f = param8;
+          this.field_o = param1;
+          this.field_m = param0;
+          this.field_g = param3;
+          this.field_e = param2;
+          this.field_a = param7;
+          this.field_c = param5;
+          this.field_i = param4;
+          this.field_d = param6;
+          this.field_k = param9;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "nd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

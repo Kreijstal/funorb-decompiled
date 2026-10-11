@@ -12,55 +12,49 @@ final class pf implements hd {
 
     final static void a(boolean param0) {
         ij.c(4);
-        if (!(null == kd.field_b)) {
-            om.a(-46342, kd.field_b);
+        if (null != kd.field_b) {
+          om.a(-46342, kd.field_b);
         }
         co.a(param0);
         lg.b(true);
         jk.a(27370);
-        if (!(!cm.a(-2043140287))) {
-            da.field_p.c((byte) 33, 1);
-            qn.a(0, 0);
+        if (cm.a(-2043140287)) {
+          da.field_p.c((byte) 33, 1);
+          qn.a(0, 0);
         }
         r.a(-28036);
     }
 
     final static hj a(byte param0) {
         if (param0 >= -117) {
-            field_c = (int[]) null;
-            return ai.field_c;
+          field_c = (int[]) null;
+          return ai.field_c;
         }
         return ai.field_c;
     }
 
     final static int a(byte param0, int param1) {
-        if (-1 != (param1 ^ -1)) {
-          if (of.a(-969)) {
-            if (param1 > ao.field_b) {
-              return 1;
-            } else {
-              if (param0 <= 0) {
-                pf.a((byte) -18);
-                return 0;
-              } else {
-                return 0;
-              }
-            }
-          } else {
-            return 2;
-          }
-        } else {
-          if (param1 > ao.field_b) {
+        if (param1 == 0) {
+          if (!(param1 <= ao.field_b)) {
             return 1;
-          } else {
-            if (param0 <= 0) {
-              pf.a((byte) -18);
-              return 0;
-            } else {
-              return 0;
-            }
           }
+          if (param0 > 0) {
+            return 0;
+          }
+          pf.a((byte) -18);
+          return 0;
         }
+        if (!of.a(-969)) {
+          return 2;
+        }
+        if (!(param1 <= ao.field_b)) {
+          return 1;
+        }
+        if (param0 > 0) {
+          return 0;
+        }
+        pf.a((byte) -18);
+        return 0;
     }
 
     public final int a(byte param0, hd param1) {
@@ -70,56 +64,31 @@ final class pf implements hd {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = (pf) ((Object) param1);
-              var4 = -(var3.field_e * this.field_a) + this.field_e * var3.field_a;
-              if (param0 == -101) {
-                break L1;
-              } else {
-                pf.a((byte) 83, 126);
-                break L1;
-              }
-            }
-            L2: {
-              if (var4 != 0) {
-                break L2;
-              } else {
-                var4 = var3.field_a * var3.field_a + (-(this.field_a * this.field_a) + var3.field_e * var3.field_e) - this.field_e * this.field_e;
-                break L2;
-              }
-            }
-            stackIn_5_0 = var4;
-            break L0;
+          var3 = (pf) (param1);
+          var4 = -(var3.field_e * this.field_a) + this.field_e * var3.field_a;
+          if (param0 != -101) {
+            pf.a((byte) 83, 126);
           }
+          if (var4 == 0) {
+            var4 = var3.field_a * var3.field_a + (-(this.field_a * this.field_a) + var3.field_e * var3.field_e) - this.field_e * this.field_e;
+          }
+          stackIn_5_0 = var4;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3_ref);
-
-            stackIn_8_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_8_0 = var3_ref;
+          stackIn_8_1 = new StringBuilder().append("pf.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw kk.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0;
     }
 
     public static void b(byte param0) {
@@ -127,9 +96,9 @@ final class pf implements hd {
         field_g = null;
         field_f = null;
         if (param0 <= 8) {
-            pf.b((byte) -9);
-            field_c = null;
-            return;
+          pf.b((byte) -9);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

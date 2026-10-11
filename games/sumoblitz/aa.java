@@ -17,18 +17,18 @@ abstract class aa {
         field_c = null;
         field_d = null;
         if (param0) {
-            aa.a(true);
+          aa.a(true);
         }
     }
 
     final static void a(wi param0, boolean param1, ud param2, byte param3, int param4, java.awt.Component param5) {
         if (param3 > -104) {
-            return;
+          return;
         }
         try {
-            hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
+          hw.a(param5, param4, param4, (byte) 123, param1, param2, param0, 1024);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "aa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "aa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

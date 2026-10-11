@@ -6,8 +6,8 @@ final class ff extends nh {
 
     final ua a(int param0) {
         if (param0 != 160) {
-            field_k = -55;
-            return rg.field_J;
+          field_k = -55;
+          return rg.field_J;
         }
         return rg.field_J;
     }
@@ -24,7 +24,7 @@ final class ff extends nh {
     }
 
     final static nj a(boolean param0, byte param1) {
-        int stackIn_3_0 = 0;
+        boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_23_0 = null;
         Throwable decompiledCaughtException = null;
@@ -36,101 +36,63 @@ final class ff extends nh {
         int var8 = 0;
         ha var9 = null;
         od var10 = null;
-        L0: {
-          var8 = stellarshard.field_B;
-          var9 = ae.field_N;
-          var3 = var9.f(4);
-          ii.field_J = var3 & 127;
-          if ((var3 & 128) == 0) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
+        var8 = stellarshard.field_B;
+        var9 = ae.field_N;
+        var3 = var9.f(4);
+        ii.field_J = var3 & 127;
+        stackIn_3_0 = ((var3 & 128) != 0);
+        eh.field_d = stackIn_3_0;
+        ha.field_t = var9.f(4);
+        k.field_d = var9.d(0);
+        if (ii.field_J != 2) {
+          il.field_w = 0;
+          mg.field_y = 0;
+        } else {
+          mg.field_y = var9.c((byte) 79);
+          il.field_w = var9.c(true);
         }
-        L1: {
-          eh.field_d = stackIn_3_0 != 0;
-          ha.field_t = var9.f(4);
-          k.field_d = var9.d(0);
-          if (-3 != (ii.field_J ^ -1)) {
-            il.field_w = 0;
-            mg.field_y = 0;
-            break L1;
-          } else {
-            mg.field_y = var9.c((byte) 79);
-            il.field_w = var9.c(true);
-            break L1;
-          }
+        stackIn_9_0 = (var9.f(4) != 1) ? 0 : 1;
+        var4 = stackIn_9_0;
+        ld.field_z = var9.e((byte) 122);
+        var5 = -101 % ((param1 - 46) / 36);
+        if (var4 == 0) {
+          oe.field_d = ld.field_z;
+        } else {
+          oe.field_d = var9.e((byte) 110);
         }
-        L2: {
-          if (-2 != (var9.f(4) ^ -1)) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = 1;
-            break L2;
-          }
-        }
-        L3: {
-          var4 = stackIn_9_0;
-          ld.field_z = var9.e((byte) 122);
-          var5 = -101 % ((param1 - 46) / 36);
-          if (var4 == 0) {
-            oe.field_d = ld.field_z;
-            break L3;
-          } else {
-            oe.field_d = var9.e((byte) 110);
-            break L3;
-          }
-        }
-        L4: {
-          if (-2 == (ii.field_J ^ -1)) {
+        if (ii.field_J == 1) {
+          var9.c((byte) 105);
+          var9.e((byte) 106);
+        } else {
+          if (ii.field_J == 4) {
             var9.c((byte) 105);
             var9.e((byte) 106);
-            break L4;
-          } else {
-            if (ii.field_J != 4) {
-              break L4;
-            } else {
-              var9.c((byte) 105);
-              var9.e((byte) 106);
-              break L4;
-            }
           }
         }
-        if (param0) {
-          var6 = var9.c((byte) 62);
-          try {
-            L5: {
-              L6: {
-                var10 = qh.field_e.a(32767, var6);
-                ug.field_b = var10.e(0);
-                if (!oe.field_d.equals(wf.field_b)) {
-                  stackIn_23_0 = var10.field_y;
-                  break L6;
-                } else {
-                  stackIn_23_0 = null;
-                  break L6;
-                }
-              }
-              rc.field_k = stackIn_23_0;
-              break L5;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var7 = (Exception) (Object) decompiledCaughtException;
-            qe.a(-105, "CC1", (Throwable) ((Object) var7));
-            rc.field_k = null;
-            ug.field_b = null;
-            return new nj(param0);
-          }
-          return new nj(param0);
-        } else {
+        if (!param0) {
           ug.field_b = ni.a(false, 80, var9);
           rc.field_k = null;
           return new nj(param0);
         }
+        var6 = var9.c((byte) 62);
+        try {
+          var10 = qh.field_e.a(32767, var6);
+          ug.field_b = var10.e(0);
+          if (!oe.field_d.equals(wf.field_b)) {
+            stackIn_23_0 = var10.field_y;
+          } else {
+            stackIn_23_0 = null;
+          }
+          rc.field_k = stackIn_23_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = (Exception) (Object) decompiledCaughtException;
+          qe.a(-105, "CC1", (Throwable) ((Object) var7));
+          rc.field_k = null;
+          ug.field_b = null;
+          return new nj(param0);
+        }
+        return new nj(param0);
     }
 
     static {

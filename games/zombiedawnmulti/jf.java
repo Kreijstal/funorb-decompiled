@@ -11,7 +11,7 @@ final class jf {
 
     public static void a(byte param0) {
         if (param0 > -7) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

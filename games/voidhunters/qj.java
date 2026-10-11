@@ -3,83 +3,52 @@
  */
 final class qj {
     final static lkb a(byte param0, String param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         lkb stackIn_3_0 = null;
         lkb stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = VoidHunters.field_G;
         try {
-          L0: {
-            var2_int = param1.length();
-            if (param0 == -74) {
-              var3 = 0;
-              L1: while (true) {
-                if (var3 >= var2_int) {
-                  stackIn_13_0 = ira.field_b;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var4 = param1.charAt(var3);
-                  if (var4 >= 48) {
-                    if (var4 <= 57) {
-                      var3++;
-                      continue L1;
-                    } else {
-                      return null;
-                    }
-                  } else {
-                    return null;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = (lkb) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var2_int = param1.length();
+          if (param0 != -74) {
+            stackIn_3_0 = (lkb) null;
+            return stackIn_3_0;
+          }
+          for (var3 = 0; var3 < var2_int; var3++) {
+            var4 = param1.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
             }
           }
+          stackIn_13_0 = ira.field_b;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("qj.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L2;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("qj.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_13_0;
+          throw rta.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (param0 < 126) {
-            return;
+          return;
         }
         cea.a(-88, 17);
     }

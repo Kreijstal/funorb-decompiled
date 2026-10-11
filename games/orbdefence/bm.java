@@ -14,98 +14,66 @@ final class bm {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 63) {
-          bm.a(122);
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 63) {
           field_a = null;
           field_d = null;
           field_c = null;
           return;
         }
+        bm.a(122);
+        field_a = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            int var3 = 0;
-            String var4 = null;
-            java.net.URL var5 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
+          String var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          int var3 = 0;
+          String var4 = null;
+          java.net.URL var5 = null;
+          RuntimeException stackIn_11_0 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      var2 = param1.getDocumentBase().getFile();
-                      var3 = var2.indexOf('?');
-                      var4 = "reload.ws";
-                      if ((var3 ^ -1) <= -1) {
-                        var4 = var4 + var2.substring(var3);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    var5 = new java.net.URL(param1.getCodeBase(), var4);
-                    if (param0 == 12979) {
-                      param1.getAppletContext().showDocument(f.a(param1, var5, -21), "_self");
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  break L0;
-                } else {
-                  return;
-                }
+              var2 = param1.getDocumentBase().getFile();
+              var3 = var2.indexOf('?');
+              var4 = "reload.ws";
+              if (var3 >= 0) {
+                var4 = var4 + var2.substring(var3);
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_11_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_11_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L3;
-                }
+              var5 = new java.net.URL(param1.getCodeBase(), var4);
+              if (param0 != 12979) {
+                return;
               }
-              throw dd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+              param1.getAppletContext().showDocument(f.a(param1, var5, -21), "_self");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_11_0 = var2_ref2;
+            stackIn_11_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            throw dd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

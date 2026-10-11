@@ -17,7 +17,7 @@ public class nk {
 
     public static File a(String param0, int param1) {
         if (param1 != -2) {
-            return (File) null;
+          return (File) null;
         }
         return nk.a(-1, param0, field_d, field_c);
     }
@@ -30,57 +30,33 @@ public class nk {
         Exception var3 = null;
         String var4 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          field_d = param2;
-          field_c = param0;
-          if (param1 == 0) {
-            break L0;
-          } else {
-            var4 = (String) null;
-            nk.a(25, (String) null, (String) null, -32);
-            break L0;
-          }
+        field_d = param2;
+        field_c = param0;
+        if (param1 != 0) {
+          var4 = (String) null;
+          nk.a(25, (String) null, (String) null, -32);
         }
         try {
-          L1: {
-            field_e = System.getProperty("user.home");
-            if (null != field_e) {
-              field_e = field_e + "/";
-              break L1;
-            } else {
-              L2: {
-                if (null == field_e) {
-                  field_e = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              field_b = true;
-              return;
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_e = System.getProperty("user.home");
+          if (null == field_e) {
             if (null == field_e) {
               field_e = "~/";
-              break L3;
-            } else {
-              break L3;
             }
+            field_b = true;
+            return;
+          }
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (null == field_e) {
+            field_e = "~/";
           }
           field_b = true;
           return;
         }
-        L4: {
-          if (null == field_e) {
-            field_e = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        if (null == field_e) {
+          field_e = "~/";
         }
         field_b = true;
     }

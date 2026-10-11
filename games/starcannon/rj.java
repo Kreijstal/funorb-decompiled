@@ -13,69 +13,43 @@ final class rj extends rf {
     int field_k;
 
     final static int a(int param0, int param1, byte param2, byte[] param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2 > 79) {
-                break L1;
-              } else {
-                field_l = (String[]) null;
-                break L1;
-              }
-            }
-            var4_int = -1;
-            var5 = param0;
-            L2: while (true) {
-              if (var5 >= param1) {
-                var4_int = var4_int ^ -1;
-                stackIn_6_0 = var4_int;
-                break L0;
-              } else {
-                var4_int = var4_int >>> 212596296 ^ fb.field_n[(param3[var5] ^ var4_int) & 255];
-                var5++;
-                continue L2;
-              }
-            }
+          if (param2 <= 79) {
+            field_l = (String[]) null;
           }
+          var4_int = -1;
+          for (var5 = param0; var5 < param1; var5++) {
+            var4_int = var4_int >>> 8 ^ fb.field_n[(param3[var5] ^ var4_int) & 255];
+          }
+          var4_int = ~var4_int;
+          stackIn_6_0 = var4_int;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("rj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("rj.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void a(int param0) {
         field_f = null;
         if (param0 != -1) {
-            rj.a(118);
+          rj.a(118);
         }
         field_l = null;
         field_m = null;

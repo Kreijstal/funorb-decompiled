@@ -14,77 +14,64 @@ final class qn extends kj {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         try {
-            var7 = sja.field_fb;
-            var8 = var7;
-            var8.c(param0, (byte) 109);
-            var8.field_g = var8.field_g + 1;
-            var4 = var8.field_g;
-            var8.d(1, 0);
-            var8.b(param1.field_j, -116);
-            var8.b(param1.field_k, param2 ^ 8591);
-            var8.b(param1.field_f, -113);
-            var8.e(param1.field_h, -1615464796);
-            var8.e(param1.field_l, param2 + -1615456104);
-            var8.e(param1.field_i, -1615464796);
-            var8.e(param1.field_g, -1615464796);
-            var8.d(param1.field_m.length, param2 + 8692);
-            for (var5 = 0; param1.field_m.length > var5; var5++) {
-                var7.e(param1.field_m[var5], -1615464796);
-            }
-            if (param2 != -8692) {
-                field_i = (cf) null;
-            }
-            var8.a(var4, 19);
-            var8.b((byte) -108, -var4 + var8.field_g);
+          var7 = sja.field_fb;
+          var8 = var7;
+          var8.c(param0, (byte) 109);
+          var8.field_g = var8.field_g + 1;
+          var4 = var8.field_g;
+          var8.d(1, 0);
+          var8.b(param1.field_j, -116);
+          var8.b(param1.field_k, param2 ^ 8591);
+          var8.b(param1.field_f, -113);
+          var8.e(param1.field_h, -1615464796);
+          var8.e(param1.field_l, param2 - 1615456104);
+          var8.e(param1.field_i, -1615464796);
+          var8.e(param1.field_g, -1615464796);
+          var8.d(param1.field_m.length, param2 + 8692);
+          for (var5 = 0; param1.field_m.length > var5; var5++) {
+            var7.e(param1.field_m[var5], -1615464796);
+          }
+          if (param2 != -8692) {
+            field_i = (cf) null;
+          }
+          var8.a(var4, 19);
+          var8.b((byte) -108, -var4 + var8.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "qn.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void c(int param0) {
         if (param0 != -26450) {
-            qn.a(-121, -48, 112, 111, 108, 25);
-            this.field_f = true;
-            return;
+          qn.a(-121, -48, 112, 111, 108, 25);
+          this.field_f = true;
+          return;
         }
         this.field_f = true;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var10 = 0;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var11 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var6_int = cr.a(an.field_q, param2, ha.field_n, 0);
-              var7 = cr.a(an.field_q, param5, ha.field_n, 0);
-              if (param4 > 28) {
-                break L1;
-              } else {
-                qn.c((byte) -62);
-                break L1;
-              }
-            }
-            var8 = cr.a(eo.field_l, param0, pw.field_x, 0);
-            var9 = cr.a(eo.field_l, param1, pw.field_x, 0);
-            var10 = var6_int;
-            L2: while (true) {
-              if (var10 > var7) {
-                break L0;
-              } else {
-                hba.a(param3, var8, tj.field_b[var10], 7, var9);
-                var10++;
-                continue L2;
-              }
-            }
+          var6_int = cr.a(an.field_q, param2, ha.field_n, 0);
+          var7 = cr.a(an.field_q, param5, ha.field_n, 0);
+          if (param4 <= 28) {
+            qn.c((byte) -62);
           }
+          var8 = cr.a(eo.field_l, param0, pw.field_x, 0);
+          var9 = cr.a(eo.field_l, param1, pw.field_x, 0);
+          for (var10 = var6_int; var10 <= var7; var10++) {
+            hba.a(param3, var8, tj.field_b[var10], 7, var9);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -95,7 +82,7 @@ final class qn extends kj {
     final void a(int param0, int param1, int param2) {
         rla.field_k.e(param2 + 25, 10 + param0);
         if (param1 != 0) {
-            this.field_f = true;
+          this.field_f = true;
         }
     }
 
@@ -105,8 +92,8 @@ final class qn extends kj {
 
     final boolean b(int param0) {
         if (param0 <= 21) {
-            field_i = (cf) null;
-            return this.field_f;
+          field_i = (cf) null;
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -116,13 +103,13 @@ final class qn extends kj {
         field_h = null;
         field_g = null;
         if (param0 < 105) {
-            qn.a(61, -31, 58, -104, 0, -124);
+          qn.a(61, -31, 58, -104, 0, -124);
         }
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            field_g = (kv) null;
+          field_g = (kv) null;
         }
     }
 

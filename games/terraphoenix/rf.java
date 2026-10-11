@@ -21,16 +21,7 @@ abstract class rf extends vh {
         field_t = null;
         field_s = null;
         field_z = null;
-        if (!param0) {
-          rf.d((byte) -6);
-          field_w = null;
-          field_u = null;
-          field_B = null;
-          field_p = null;
-          field_y = null;
-          field_q = null;
-          return;
-        } else {
+        if (param0) {
           field_w = null;
           field_u = null;
           field_B = null;
@@ -39,6 +30,13 @@ abstract class rf extends vh {
           field_q = null;
           return;
         }
+        rf.d((byte) -6);
+        field_w = null;
+        field_u = null;
+        field_B = null;
+        field_p = null;
+        field_y = null;
+        field_q = null;
     }
 
     abstract byte[] b(boolean param0);
@@ -50,29 +48,18 @@ abstract class rf extends vh {
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
         if (null == a.field_d) {
-          if (param0 < 81) {
-            field_y = (String) null;
-            return;
-          } else {
+          if (param0 >= 81) {
             return;
           }
-        } else {
-          var1 = a.field_d;
-          synchronized (var1) {
-            L0: {
-              a.field_d = null;
-              break L0;
-            }
-          }
-          L1: {
-            if (param0 >= 81) {
-              break L1;
-            } else {
-              field_y = (String) null;
-              break L1;
-            }
-          }
+          field_y = (String) null;
           return;
+        }
+        var1 = a.field_d;
+        synchronized (var1) {
+          a.field_d = null;
+        }
+        if (param0 < 81) {
+          field_y = (String) null;
         }
     }
 

@@ -13,69 +13,49 @@ final class tp extends ge {
         la stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param4 <= -120) {
-                break L1;
-              } else {
-                tp.a(106, (byte) 37, 71);
-                break L1;
-              }
-            }
-            var5 = null;
-            var5_ref = kq.a(95, param0);
-            stackIn_3_0 = gba.a(param3, param1, var5_ref, 21789, param2);
-            break L0;
+          if (param4 > -120) {
+            tp.a(106, (byte) 37, 71);
           }
+          var5 = null;
+          var5_ref = kq.a(95, param0);
+          stackIn_3_0 = gba.a(param3, param1, var5_ref, 21789, param2);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5_ref2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var5_ref2);
-
-            stackIn_6_1 = new StringBuilder().append("tp.WB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var5_ref2 = decompiledCaughtException;
+          stackIn_6_0 = var5_ref2;
+          stackIn_6_1 = new StringBuilder().append("tp.WB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            field_K = (nh) null;
-            return false;
+          field_K = (nh) null;
+          return false;
         }
         return false;
     }
 
     final boolean C(int param0) {
         if (param0 != 128) {
-            this.B(18);
-            return true;
+          this.B(18);
+          return true;
         }
         return true;
     }
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            this.q((byte) -23);
+          this.q((byte) -23);
         }
         return false;
     }
@@ -85,43 +65,19 @@ final class tp extends ge {
     }
 
     final static boolean a(int param0, byte param1, int param2) {
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        if (param1 == 3) {
-          L0: {
-            if ((458752 & param2) == 0) {
-              stackIn_5_0 = 0;
-              break L0;
-            } else {
-              stackIn_5_0 = 1;
-              break L0;
-            }
-          }
-          L1: {
-            L2: {
-              if (stackIn_5_0 != 0 | ir.a(param2, param0, (byte) -94)) {
-                break L2;
-              } else {
-                if (!uu.a(true, param2, param0)) {
-                  stackIn_10_0 = 0;
-                  break L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            stackIn_10_0 = 1;
-            break L1;
-          }
-          return stackIn_10_0 != 0;
-        } else {
+        boolean stackIn_5_0 = false;
+        boolean stackIn_10_0 = false;
+        if (param1 != 3) {
           return true;
         }
+        stackIn_5_0 = ((458752 & param2) != 0);
+        stackIn_10_0 = !(!stackIn_5_0 | ir.a(param2, param0, (byte) -94)) || (uu.a(true, param2, param0));
+        return stackIn_10_0;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -133,26 +89,13 @@ final class tp extends ge {
         RuntimeException var7 = null;
         var8 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var7_int = 0;
-            L1: while (true) {
-              if (var7_int >= param4) {
-                L2: {
-                  if (param1 == -85) {
-                    break L2;
-                  } else {
-                    field_L = (String) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                ra.a(param6 + -(2 * var7_int), param3, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
-                var7_int++;
-                continue L1;
-              }
-            }
+          for (var7_int = 0; var7_int < param4; var7_int++) {
+            ra.a(param6 - 2 * var7_int, param3, param2 + var7_int, -(var7_int * 2) + param5, false, var7_int + param0);
           }
+          if (param1 != -85) {
+            field_L = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -162,7 +105,7 @@ final class tp extends ge {
 
     final int t(int param0) {
         if (param0 != 8) {
-            return -57;
+          return -57;
         }
         return 7;
     }
@@ -174,30 +117,30 @@ final class tp extends ge {
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
+          super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "tp.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "tp.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void t(byte param0) {
         field_J = null;
-        int var1 = 95 % ((param0 - -24) / 54);
+        int var1 = 95 % ((param0 + 24) / 54);
         field_K = null;
         field_L = null;
     }
 
     final boolean A(int param0) {
         if (param0 != -1) {
-            field_L = (String) null;
-            return true;
+          field_L = (String) null;
+          return true;
         }
         return true;
     }
 
     final boolean B(int param0) {
         if (param0 != -23309) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -211,50 +154,35 @@ final class tp extends ge {
         fsa stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4 = new fsa(param2, param0);
-            var4.b((byte) -11, this.field_k, this.field_l);
-            var4.h(param1, 0);
-            var4.a((byte) 83, (nv) (new eq(param2, param0)));
-            var5 = new ov(param2, param0);
-            var5.a(new up(6, 10), true);
-            this.a((byte) 43, var5, param2);
-            var4.a((byte) 83, (nv) (var5));
-            var6 = rm.field_a;
-            var7 = (boa) ((Object) var6.a(7, param1 ^ 77));
-            var7.b(113, 15);
-            var4.a(var5, (byte) 124, var7);
-            stackIn_1_0 = (fsa) (var4);
-            break L0;
-          }
+          var4 = new fsa(param2, param0);
+          var4.b((byte) -11, this.field_k, this.field_l);
+          var4.h(param1, 0);
+          var4.a((byte) 83, (nv) (new eq(param2, param0)));
+          var5 = new ov(param2, param0);
+          var5.a(new up(6, 10), true);
+          this.a((byte) 43, var5, param2);
+          var4.a((byte) 83, (nv) (var5));
+          var6 = rm.field_a;
+          var7 = (boa) (var6.a(7, param1 ^ 77));
+          var7.b(113, 15);
+          var4.a(var5, (byte) 124, var7);
+          stackIn_1_0 = var4;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4_ref);
-
-            stackIn_4_1 = new StringBuilder().append("tp.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_4_0 = var4_ref;
+          stackIn_4_1 = new StringBuilder().append("tp.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     tp(la param0, int param1, kh param2, csa param3) {

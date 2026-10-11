@@ -13,18 +13,18 @@ final class ec {
 
     final static void a(kl param0, byte param1, int param2, vi param3) {
         try {
-            pe.field_B = ih.a((byte) -109) * param2 / 1000;
-            hd.a(param0, -125);
-            if (param1 > -61) {
-                ec.a(-127);
-            }
-            uk.a(125, param0);
-            ab.a(param0, (byte) 1);
-            vf.a(256);
-            r.c(350);
-            jd.field_f = 0 - pe.field_B;
+          pe.field_B = ih.a((byte) -109) * param2 / 1000;
+          hd.a(param0, -125);
+          if (param1 > -61) {
+            ec.a(-127);
+          }
+          uk.a(125, param0);
+          ab.a(param0, (byte) 1);
+          vf.a(256);
+          r.c(350);
+          jd.field_f = 0 - pe.field_B;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ec.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,16 +34,14 @@ final class ec {
         field_f = (byte[][]) null;
         field_b = null;
         field_h = null;
-        if (param0 > -13) {
-          field_e = (String) null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 <= -13) {
           field_a = null;
           field_e = null;
           return;
         }
+        field_e = (String) null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

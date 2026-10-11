@@ -11,7 +11,7 @@ final class fp {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 329408528) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -27,23 +27,24 @@ final class fp {
     }
 
     final static int a(boolean param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var3 = param2 >> 329408528;
-        if (!param0) {
-          fp.a(false, 87, -10);
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var3 = param2 >> 16;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        if (param0) {
           var4 = param2 & 65535;
-          var5 = param1 >> 2100110576;
+          var5 = param1 >> 16;
           var6 = 65535 & param1;
-          return (var4 * var6 >> -1270529072) + var3 * param1 - -(var5 * var4);
-        } else {
-          var4 = param2 & 65535;
-          var5 = param1 >> 2100110576;
-          var6 = 65535 & param1;
-          return (var4 * var6 >> -1270529072) + var3 * param1 - -(var5 * var4);
+          return (var4 * var6 >> 16) + var3 * param1 + var5 * var4;
         }
+        fp.a(false, 87, -10);
+        var4Lifetime1 = param2 & 65535;
+        var5Lifetime1 = param1 >> 16;
+        var6Lifetime1 = 65535 & param1;
+        return (var4Lifetime1 * var6Lifetime1 >> 16) + var3 * param1 + var5Lifetime1 * var4Lifetime1;
     }
 
     static {

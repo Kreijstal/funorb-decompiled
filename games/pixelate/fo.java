@@ -30,13 +30,13 @@ final class fo {
     final void a(int param0) {
         int fieldTemp$0 = this.field_e + 1;
         this.field_e = this.field_e + 1;
-        if (!((fieldTemp$0 ^ -1) > -401)) {
-            this.field_e = 0;
+        if (fieldTemp$0 >= 400) {
+          this.field_e = 0;
         }
         int fieldTemp$1 = this.field_n + 1;
         this.field_n = this.field_n + 1;
-        if (!(param0 < (fieldTemp$1 ^ -1))) {
-            this.field_n = 0;
+        if (param0 >= ~fieldTemp$1) {
+          this.field_n = 0;
         }
         this.field_p = this.field_b[this.field_n] + (this.field_v + this.field_h[this.field_e]);
         this.field_i = this.field_s[this.field_n] + (this.field_f + this.field_c[this.field_e]);
@@ -44,8 +44,8 @@ final class fo {
         double var4 = (double)(-this.field_i + this.field_q);
         double var6 = Math.atan(var2 / var4);
         this.field_k = (int)(var6 * 32768.0 / 3.141592653589793);
-        int var8 = this.field_l * 158 >> 1285262988;
-        this.field_r = this.field_p - -(int)(Math.sin(var6) * (double)var8);
+        int var8 = this.field_l * 158 >> 12;
+        this.field_r = this.field_p + (int)(Math.sin(var6) * (double)var8);
         this.field_o = this.field_i + (int)(Math.cos(var6) * (double)var8);
         this.field_j[0].a(this.field_o, (byte) 48, this.field_r);
         this.field_j[1].a(this.field_j[0].field_h, (byte) 48, this.field_j[0].field_g);
@@ -57,30 +57,31 @@ final class fo {
         ki var10 = null;
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
-        nm.field_f.b(1600, 2272, this.field_p << 992240004, this.field_i << -511045788, this.field_k, this.field_l);
+        int var3Lifetime1;
+        nm.field_f.b(1600, 2272, this.field_p << 4, this.field_i << 4, this.field_k, this.field_l);
         ki[] var6 = this.field_j;
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
-            var9 = var6[var3];
-            var9.a(false);
+          var9 = var6[var3];
+          var9.a(false);
         }
         ki[] var7 = this.field_j;
         var2 = var7;
         int var8 = 0;
-        var3 = var8;
+        var3Lifetime1 = var8;
         while (var8 < var7.length) {
-            var10 = var7[var8];
-            var10.b(3887);
-            var8++;
+          var10 = var7[var8];
+          var10.b(3887);
+          var8++;
         }
-        t.b(this.field_p + -3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
-        t.b(-2 + this.field_p, this.field_i + -5, this.field_d + 0 - -300, this.field_q, 6710784);
+        t.b(this.field_p - 3, this.field_i - 5, 299 + this.field_d, this.field_q, 3355392);
+        t.b(-2 + this.field_p, this.field_i - 5, this.field_d + 0 + 300, this.field_q, 6710784);
         t.b(-1 + this.field_p, -5 + this.field_i, 300 + this.field_d + param0, this.field_q, 3355392);
     }
 
     final static boolean a(byte param0) {
         if (param0 < 12) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
         return ek.field_c;
     }
@@ -97,6 +98,8 @@ final class fo {
         double var10_double = 0.0;
         int var8 = 0;
         int var9 = 0;
+        int var8Lifetime1;
+        int var9Lifetime1;
         this.field_l = param0;
         this.field_v = param1;
         this.field_f = param2;
@@ -106,28 +109,28 @@ final class fo {
         this.field_n = ok.a(ea.field_b, -120, 172);
         this.field_c = new int[400];
         this.field_h = new int[400];
-        int var6 = 200 * this.field_l >> 62553644;
-        int var7 = this.field_l * 50 >> 1790494828;
-        for (var8 = 0; -401 < (var8 ^ -1); var8++) {
-            this.field_h[var8] = 200 >= var8 ? var8 : 400 + -var8;
-            var9_double = (double)var8 * 3.141592653589793 / 400.0;
-            this.field_h[var8] = (int)(Math.cos(var9_double * 2.0) * (double)var6);
-            this.field_c[var8] = (int)((double)var7 * Math.sin(4.0 * var9_double));
+        int var6 = 200 * this.field_l >> 12;
+        int var7 = this.field_l * 50 >> 12;
+        for (var8 = 0; var8 < 400; var8++) {
+          this.field_h[var8] = 200 >= var8 ? var8 : 400 - var8;
+          var9_double = (double)var8 * 3.141592653589793 / 400.0;
+          this.field_h[var8] = (int)(Math.cos(var9_double * 2.0) * (double)var6);
+          this.field_c[var8] = (int)((double)var7 * Math.sin(4.0 * var9_double));
         }
         this.field_b = new int[172];
         this.field_s = new int[172];
-        var8 = 50 * this.field_l >> 943383948;
+        var8Lifetime1 = 50 * this.field_l >> 12;
         for (var9 = 0; var9 < 172; var9++) {
-            var10_double = (double)var9 * 3.141592653589793 / 172.0;
-            this.field_b[var9] = (int)((double)var8 * Math.sin(2.0 * var10_double));
-            this.field_s[var9] = (int)(Math.cos(var10_double * 2.0) * (double)var8);
+          var10_double = (double)var9 * 3.141592653589793 / 172.0;
+          this.field_b[var9] = (int)((double)var8Lifetime1 * Math.sin(2.0 * var10_double));
+          this.field_s[var9] = (int)(Math.cos(var10_double * 2.0) * (double)var8Lifetime1);
         }
         this.field_j = new ki[3];
-        var9 = this.field_l * 40 >> -2090671124;
-        int var10 = 3000 * this.field_l >> -1831705172;
-        this.field_j[0] = new ki(this.field_r, this.field_o, var9, var10);
-        this.field_j[1] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.9));
-        this.field_j[2] = new ki(this.field_r, this.field_o, var9, (int)((double)var10 * 0.8));
+        var9Lifetime1 = this.field_l * 40 >> 12;
+        int var10 = 3000 * this.field_l >> 12;
+        this.field_j[0] = new ki(this.field_r, this.field_o, var9Lifetime1, var10);
+        this.field_j[1] = new ki(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.9));
+        this.field_j[2] = new ki(this.field_r, this.field_o, var9Lifetime1, (int)((double)var10 * 0.8));
     }
 
     static {

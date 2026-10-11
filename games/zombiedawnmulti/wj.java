@@ -18,62 +18,33 @@ final class wj extends br {
         kf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 3) {
-                break L1;
-              } else {
-                field_f = (String) null;
-                break L1;
-              }
-            }
-            var3 = new kf();
-            ((dl) ((Object) var3)).field_f = param1;
-            ((dl) ((Object) var3)).field_b = param2;
-            stackIn_3_0 = (kf) (var3);
-            break L0;
+          if (param0 != 3) {
+            field_f = (String) null;
           }
+          var3 = new kf();
+          ((dl) ((Object) var3)).field_f = param1;
+          ((dl) ((Object) var3)).field_b = param2;
+          stackIn_3_0 = var3;
+          return (dl) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("wj.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("wj.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (dl) ((Object) stackIn_3_0);
     }
 
     public static void a(int param0) {
-        if (param0 != -6298) {
-          field_i = (ub) null;
-          field_h = null;
-          field_k = null;
-          field_l = null;
-          field_j = null;
-          field_f = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == -6298) {
           field_h = null;
           field_k = null;
           field_l = null;
@@ -82,20 +53,27 @@ final class wj extends br {
           field_i = null;
           return;
         }
+        field_i = (ub) null;
+        field_h = null;
+        field_k = null;
+        field_l = null;
+        field_j = null;
+        field_f = null;
+        field_i = null;
     }
 
     final static void b(boolean param0, int param1) {
         nb.field_a.a(39, 0, 0);
         if (param1 >= -109) {
-            String var3 = (String) null;
-            wj.a((byte) 68, -37, (String) null);
+          String var3 = (String) null;
+          wj.a((byte) 68, -37, (String) null);
         }
     }
 
     wj(int param0) {
         if (df.field_H) {
-            this.field_m = uj.a(ei.field_a[param0], 100, 256);
-            tf.a(this.field_m, (byte) -93);
+          this.field_m = uj.a(ei.field_a[param0], 100, 256);
+          tf.a(this.field_m, (byte) -93);
         }
         if (93 == param0) {
         }

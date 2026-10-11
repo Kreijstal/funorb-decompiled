@@ -12,17 +12,17 @@ final class sc extends jb {
     public static void b(byte param0) {
         field_i = null;
         if (param0 != -34) {
-            sc.a((byte) -64);
+          sc.a((byte) -64);
         }
     }
 
     final static int a(byte param0) {
         ch.field_d.a(true);
         if (!oi.field_d.b((byte) 94)) {
-            return co.i(1);
+          return co.i(1);
         }
         if (param0 > -56) {
-            return 98;
+          return 98;
         }
         return 0;
     }

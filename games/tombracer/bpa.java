@@ -8,7 +8,7 @@ final class bpa {
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -29) {
-            bpa.a((byte) 76);
+          bpa.a((byte) 76);
         }
     }
 

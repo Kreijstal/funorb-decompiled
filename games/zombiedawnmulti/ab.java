@@ -19,7 +19,7 @@ final class ab extends br {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_h = null;
     }

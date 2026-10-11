@@ -5,38 +5,17 @@ final class hsb implements dja {
     static cbb[] field_a;
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param1 != 65536) {
-          L0: {
-            field_a = (cbb[]) null;
-            if (-1 == (65536 & param2 ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-1 == (65536 & param2 ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param1 == 65536) {
+          return (65536 & param2) != 0 ? true : false;
         }
+        field_a = (cbb[]) null;
+        return (65536 & param2) != 0 ? true : false;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a((byte) -6);
-            return (tv[]) ((Object) new nwa[param1]);
+          this.a((byte) -6);
+          return (tv[]) ((Object) new nwa[param1]);
         }
         return (tv[]) ((Object) new nwa[param1]);
     }
@@ -44,12 +23,12 @@ final class hsb implements dja {
     public static void b(byte param0) {
         field_a = null;
         if (param0 != 27) {
-            hsb.b((byte) 66);
+          hsb.b((byte) 66);
         }
     }
 
     public final tv a(byte param0) {
-        int var2 = -99 / ((param0 - -64) / 50);
+        int var2 = -99 / ((param0 + 64) / 50);
         return (tv) ((Object) new nwa());
     }
 

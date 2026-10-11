@@ -18,56 +18,49 @@ final class tq {
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1 == 231) {
-          var3 = this.field_d.length;
-          L0: while (true) {
-            if (var3 > param0) {
-              return var3;
-            } else {
-              if (this.field_c) {
-                if (var3 != 0) {
-                  var3 = var3 * this.field_h;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_h;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (param1 != 231) {
           return -32;
         }
+        var3 = this.field_d.length;
+        while (var3 <= param0) {
+          if (!this.field_c) {
+            var3 = var3 + this.field_h;
+            continue;
+          }
+          if (var3 != 0) {
+            var3 = var3 * this.field_h;
+            continue;
+          }
+          var3 = 1;
+        }
+        return var3;
     }
 
     final void a(String param0, int param1) {
         try {
-            if (param1 >= -122) {
-                this.field_c = false;
-            }
-            this.a(95, this.field_e - -1, param0);
+          if (param1 >= -122) {
+            this.field_c = false;
+          }
+          this.a(95, this.field_e + 1, param0);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "tq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final void a(int param0, int param1, String param2) {
-        if (!(param1 <= this.field_e)) {
-            this.field_e = param1;
+        if (param1 > this.field_e) {
+          this.field_e = param1;
         }
-        if (!(param1 < this.field_d.length)) {
-            this.a((byte) -45, param1);
+        if (param1 >= this.field_d.length) {
+          this.a((byte) -45, param1);
         }
         if (param0 != 95) {
-            return;
+          return;
         }
         try {
-            this.field_d[param1] = param2;
+          this.field_d[param1] = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "tq.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,10 +73,10 @@ final class tq {
         StringBuilder var1 = var4;
         StringBuilder discarded$0 = var1.append("[");
         for (var2 = 0; var2 < this.field_e; var2++) {
-            if (0 != var2) {
-                discarded$1 = var1.append(", ");
-            }
-            discarded$2 = var4.append(this.field_d[var2]);
+          if (0 != var2) {
+            discarded$1 = var1.append(", ");
+          }
+          discarded$2 = var4.append(this.field_d[var2]);
         }
         StringBuilder discarded$3 = var1.append("]");
         return var1.toString();
@@ -91,7 +84,7 @@ final class tq {
 
     private final void a(byte param0, int param1) {
         if (param0 != -45) {
-            return;
+          return;
         }
         String[] var3 = new String[this.a(param1, 231)];
         ps.a(this.field_d, 0, var3, 0, this.field_d.length);
@@ -99,9 +92,9 @@ final class tq {
     }
 
     final String[] a(int param0) {
-        String[] var2 = new String[this.field_e - -1];
+        String[] var2 = new String[this.field_e + 1];
         if (param0 != 220) {
-            this.field_e = 1;
+          this.field_e = 1;
         }
         ps.a(this.field_d, 0, var2, 0, this.field_e + 1);
         return var2;
@@ -111,7 +104,7 @@ final class tq {
         field_k = null;
         field_f = null;
         if (param0 != -31203) {
-            return;
+          return;
         }
         field_g = null;
         field_a = null;

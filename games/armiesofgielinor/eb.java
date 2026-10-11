@@ -11,83 +11,38 @@ final class eb {
     final static void a(boolean param0, int param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            if (76 != param1) {
-              L1: {
-                if (!param0) {
-                  L2: {
-                    if (16 == param1) {
-                      param1 = 78;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (25 != param1) {
-                      break L3;
-                    } else {
-                      param1 = 79;
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if ((param1 ^ -1) != -49) {
-                      break L4;
-                    } else {
-                      param1 = 80;
-                      break L4;
-                    }
-                  }
-                  if (param1 == 85) {
-                    param1 = 89;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  break L1;
-                }
-              }
-              if (param2) {
-                var3_int = 1;
-                L5: while (true) {
-                  if (var3_int >= mn.field_m[param1].length) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    mn.field_k[param1][var3_int] = null;
-                    var3_int++;
-                    continue L5;
-                  }
-                }
-              } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (76 == param1) {
+            return;
+          }
+          if (!param0) {
+            if (16 == param1) {
+              param1 = 78;
+            }
+            if (25 == param1) {
+              param1 = 79;
+            }
+            if (param1 == 48) {
+              param1 = 80;
+            }
+            if (param1 == 85) {
+              param1 = 89;
             }
           }
+          if (!param2) {
+            return;
+          }
+          for (var3_int = 1; var3_int < mn.field_m[param1].length; var3_int++) {
+            mn.field_k[param1][var3_int] = null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw ig.a((Throwable) ((Object) var3), "eb.A(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 
@@ -95,27 +50,27 @@ final class eb {
         field_c = null;
         field_e = null;
         if (param0 != 1) {
-            field_c = (je) null;
-            field_a = null;
-            field_d = null;
-            return;
+          field_c = (je) null;
+          field_a = null;
+          field_d = null;
+          return;
         }
         field_a = null;
         field_d = null;
     }
 
     final static int a(byte param0, int param1) {
-        param1 = ((-1431655766 & param1) >>> 716488737) + (1431655765 & param1);
-        param1 = (param1 & 858993459) - -((param1 & -858993458) >>> -799002878);
-        param1 = 252645135 & (param1 >>> 539582692) + param1;
+        param1 = ((-1431655766 & param1) >>> 1) + (1431655765 & param1);
+        param1 = (param1 & 858993459) + ((param1 & -858993458) >>> 2);
+        param1 = 252645135 & (param1 >>> 4) + param1;
         if (param0 >= -70) {
-            field_e = (String) null;
-            param1 = param1 + (param1 >>> 1897789992);
-            param1 = param1 + (param1 >>> 261794928);
-            return param1 & 255;
+          field_e = (String) null;
+          param1 = param1 + (param1 >>> 8);
+          param1 = param1 + (param1 >>> 16);
+          return param1 & 255;
         }
-        param1 = param1 + (param1 >>> 1897789992);
-        param1 = param1 + (param1 >>> 261794928);
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
         return param1 & 255;
     }
 

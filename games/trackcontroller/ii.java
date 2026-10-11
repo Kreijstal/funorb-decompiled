@@ -10,8 +10,8 @@ class ii extends gb {
 
     final static int b(boolean param0) {
         if (param0) {
-            ii.a((byte) 79);
-            return oi.field_b;
+          ii.a((byte) 79);
+          return oi.field_b;
         }
         return oi.field_b;
     }
@@ -22,79 +22,42 @@ class ii extends gb {
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
+        li var1Lifetime1;
         var2 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              sb.field_b.b();
-              if (param0 <= -57) {
-                break L1;
-              } else {
-                field_o = 87;
-                break L1;
-              }
-            }
-            L2: {
-              g.field_x.b();
-              id.field_e = id.field_e - 1;
-              if (0 == id.field_e) {
-                id.field_e = 200;
-                var1 = (li) ((Object) kd.field_a.b(2));
-                L3: while (true) {
-                  if (var1 == null) {
-                    if (jk.field_c == null) {
-                      break L2;
-                    } else {
-                      var1 = (li) ((Object) jk.field_c.b(2));
-                      L4: while (true) {
-                        if (var1 == null) {
-                          break L2;
-                        } else {
-                          L5: {
-                            if (var1.field_k.b(10000536)) {
-                              break L5;
-                            } else {
-                              var1.a(-29);
-                              break L5;
-                            }
-                          }
-                          var1 = (li) ((Object) jk.field_c.a(10));
-                          continue L4;
-                        }
-                      }
-                    }
-                  } else {
-                    L6: {
-                      if (!var1.field_k.b(10000536)) {
-                        var1.a(-40);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var1 = (li) ((Object) kd.field_a.a(10));
-                    continue L3;
-                  }
-                }
-              } else {
-                break L2;
-              }
-            }
-            L7: {
-              if (null == fj.field_P) {
-                break L7;
-              } else {
-                stackIn_20_0 = fj.field_P.c((byte) -64);
-                if (!stackIn_20_0) {
-                  ch.field_n = null;
-                  break L7;
-                } else {
-                  return;
-                }
-              }
-            }
-            break L0;
+          sb.field_b.b();
+          if (param0 > -57) {
+            field_o = 87;
           }
+          g.field_x.b();
+          id.field_e = id.field_e - 1;
+          if (0 == id.field_e) {
+            id.field_e = 200;
+            var1 = (li) (kd.field_a.b(2));
+            while (var1 != null) {
+              if (!var1.field_k.b(10000536)) {
+                var1.a(-40);
+              }
+              var1 = (li) (kd.field_a.a(10));
+            }
+            if (jk.field_c != null) {
+              var1Lifetime1 = (li) (jk.field_c.b(2));
+              while (var1Lifetime1 != null) {
+                if (!var1Lifetime1.field_k.b(10000536)) {
+                  var1Lifetime1.a(-29);
+                }
+                var1Lifetime1 = (li) (jk.field_c.a(10));
+              }
+            }
+          }
+          if (null != fj.field_P) {
+            stackIn_20_0 = fj.field_P.c((byte) -64);
+            if (stackIn_20_0) {
+              return;
+            }
+            ch.field_n = null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -105,16 +68,14 @@ class ii extends gb {
     public static void f(int param0) {
         field_s = null;
         field_p = null;
-        if (param0 != -5146) {
-          field_s = (java.awt.Frame) null;
-          field_q = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 == -5146) {
           field_q = null;
           field_r = null;
           return;
         }
+        field_s = (java.awt.Frame) null;
+        field_q = null;
+        field_r = null;
     }
 
     ii() {

@@ -15,29 +15,27 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         ph.b(5 + param0, 7 + param3, 157, param4);
         ph.b(162 + param0, 8 + param3, 2, param4);
-        ph.a(param0 - -163, 9 + param3, 2, param4);
-        ph.b(4 + param0, param3 - -11, 159, param4);
+        ph.a(param0 + 163, 9 + param3, 2, param4);
+        ph.b(4 + param0, param3 + 11, 159, param4);
         ph.a(3 + param0, 9 + param3, 2, param4);
         ph.b(param0 + 4, 8 + param3, 1, param4);
-        if (param1 > -124) {
-          field_f = (vh) null;
+        if (param1 <= -124) {
           ph.b(param0 + 5, param3 + 8, 157, param2);
-          ph.b(param0 - -4, 9 + param3, 159, param2);
-          ph.b(4 + param0, 10 + param3, 159, param2);
-          return;
-        } else {
-          ph.b(param0 + 5, param3 + 8, 157, param2);
-          ph.b(param0 - -4, 9 + param3, 159, param2);
+          ph.b(param0 + 4, 9 + param3, 159, param2);
           ph.b(4 + param0, 10 + param3, 159, param2);
           return;
         }
+        field_f = (vh) null;
+        ph.b(param0 + 5, param3 + 8, 157, param2);
+        ph.b(param0 + 4, 9 + param3, 159, param2);
+        ph.b(4 + param0, 10 + param3, 159, param2);
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_b = true;
+          this.field_b = true;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "pp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "pp.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,63 +44,33 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(vh param0, int param1) {
         try {
-            ka.a(-119, this.field_d, param0);
-            if (param1 != 159) {
-                java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
-                this.focusGained((java.awt.event.FocusEvent) null);
-            }
+          ka.a(-119, this.field_d, param0);
+          if (param1 != 159) {
+            java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
+            this.focusGained((java.awt.event.FocusEvent) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "pp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "pp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static String a(boolean param0, boolean param1, int param2, boolean param3) {
         int var4;
-        L0: {
-          var4 = 0;
-          if (param1) {
-            var4 += 4;
-            break L0;
-          } else {
-            break L0;
-          }
+        var4 = 0;
+        if (param1) {
+          var4 += 4;
         }
-        if (param2 == 2) {
-          if (!param0) {
-            if (param3) {
-              var4++;
-              return qa.field_m[var4];
-            } else {
-              return qa.field_m[var4];
-            }
-          } else {
-            var4 += 2;
-            if (param3) {
-              var4++;
-              return qa.field_m[var4];
-            } else {
-              return qa.field_m[var4];
-            }
-          }
-        } else {
+        if (param2 != 2) {
           field_a = -28;
-          if (param0) {
-            var4 += 2;
-            if (!param3) {
-              return qa.field_m[var4];
-            } else {
-              var4++;
-              return qa.field_m[var4];
-            }
-          } else {
-            if (param3) {
-              var4++;
-              return qa.field_m[var4];
-            } else {
-              return qa.field_m[var4];
-            }
-          }
         }
+        if (param0) {
+          var4 += 2;
+        }
+        if (!param3) {
+          return qa.field_m[var4];
+        }
+        var4++;
+        return qa.field_m[var4];
     }
 
     public final void update(java.awt.Graphics param0) {
@@ -112,7 +80,7 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_f = null;
         field_e = null;
         if (param0 != 4) {
-            field_c = false;
+          field_c = false;
         }
     }
 
@@ -121,7 +89,7 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(boolean param0) {
         if (param0) {
-            pp.a(false);
+          pp.a(false);
         }
     }
 

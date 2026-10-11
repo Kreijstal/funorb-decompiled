@@ -20,12 +20,12 @@ final class tb {
         ll var4 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
         this.field_e = var4.field_n;
         while (var4 != this.field_e) {
-            if (this.field_e.field_o == param1) {
-                var6 = this.field_e;
-                this.field_e = this.field_e.field_n;
-                return var6;
-            }
+          if (this.field_e.field_o == param1) {
+            var6 = this.field_e;
             this.field_e = this.field_e.field_n;
+            return var6;
+          }
+          this.field_e = this.field_e.field_n;
         }
         this.field_e = null;
         return null;
@@ -42,20 +42,20 @@ final class tb {
 
     final void a(ll param0, long param1, int param2) {
         if (param0.field_l != null) {
-            param0.b((byte) -2);
+          param0.b((byte) -2);
         }
         ll var5 = this.field_d[(int)(param1 & (long)(this.field_f - 1))];
         if (param2 >= -60) {
-            return;
+          return;
         }
         try {
-            param0.field_l = var5.field_l;
-            param0.field_n = var5;
-            param0.field_l.field_n = param0;
-            param0.field_o = param1;
-            param0.field_n.field_l = param0;
+          param0.field_l = var5.field_l;
+          param0.field_n = var5;
+          param0.field_l.field_n = param0;
+          param0.field_o = param1;
+          param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "tb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -63,19 +63,19 @@ final class tb {
         ll var3 = null;
         int var4 = DungeonAssault.field_K;
         if (null == this.field_e) {
-            return null;
+          return null;
         }
         ll var2 = this.field_d[(int)(this.field_b & (long)(this.field_f - 1))];
         while (var2 != this.field_e) {
-            if (!((this.field_e.field_o ^ -1L) != (this.field_b ^ -1L))) {
-                var3 = this.field_e;
-                this.field_e = this.field_e.field_n;
-                return var3;
-            }
+          if (~this.field_e.field_o == ~this.field_b) {
+            var3 = this.field_e;
             this.field_e = this.field_e.field_n;
+            return var3;
+          }
+          this.field_e = this.field_e.field_n;
         }
         if (param0 < 0) {
-            return (ll) null;
+          return (ll) null;
         }
         this.field_e = null;
         return null;
@@ -89,12 +89,12 @@ final class tb {
     }
 
     final static void a(boolean param0, int param1) {
-        if (!(null == ik.field_e)) {
-            ik.field_e.a(param0);
+        if (null != ik.field_e) {
+          ik.field_e.a(param0);
         }
         if (param1 != 1) {
-            tb.a((byte) 113);
-            return;
+          tb.a((byte) 113);
+          return;
         }
     }
 
@@ -105,11 +105,11 @@ final class tb {
         this.field_f = param0;
         this.field_d = new ll[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new ll();
-            var3 = dupTemp$0;
-            this.field_d[var2] = dupTemp$0;
-            var3.field_l = var3;
-            var3.field_n = var3;
+          dupTemp$0 = new ll();
+          var3 = dupTemp$0;
+          this.field_d[var2] = dupTemp$0;
+          var3.field_l = var3;
+          var3.field_n = var3;
         }
     }
 

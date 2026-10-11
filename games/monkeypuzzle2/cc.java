@@ -14,42 +14,26 @@ abstract class cc {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            ig.b();
-            r.field_a = new int[260];
-            uc.field_b = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if (256 <= var1_int) {
-                L2: {
-                  if (param0) {
-                    break L2;
-                  } else {
-                    field_a = (le[][]) null;
-                    break L2;
-                  }
-                }
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= r.field_a.length) {
-                    break L0;
-                  } else {
-                    r.field_a[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
-              }
-            }
+          ig.b();
+          r.field_a = new int[260];
+          uc.field_b = 11;
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = 15.0;
+            r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
+          if (!param0) {
+            field_a = (le[][]) null;
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < r.field_a.length) {
+            r.field_a[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -61,25 +45,25 @@ abstract class cc {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
-            ge.c(0, 0, ge.field_h, ge.field_g, 0, 192);
-            vj.a(1, param1);
-            if (param0 == 192) {
-                return;
-            }
-            cc.a(-77);
+          ge.c(0, 0, ge.field_h, ge.field_g, 0, 192);
+          vj.a(1, param1);
+          if (param0 == 192) {
             return;
+          }
+          cc.a(-77);
+          return;
         }
         ge.d();
         vj.a(1, param1);
         if (param0 == 192) {
-            return;
+          return;
         }
         cc.a(-77);
     }
 
     public static void a(int param0) {
         if (param0 != 256) {
-            return;
+          return;
         }
         field_a = (le[][]) null;
     }

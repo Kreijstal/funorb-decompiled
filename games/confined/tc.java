@@ -6,36 +6,35 @@ final class tc extends ck implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 != -30) {
-            this.field_c = 66;
-            param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_c = 66;
+          param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(java.awt.Component param0, int param1) {
         if (param1 != 4) {
-            this.field_c = 97;
-            param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_c = 97;
+          param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final synchronized int a(int param0) {
-        int var2;
-        java.awt.Component var3;
-        if (param0 != 8) {
-          var3 = (java.awt.Component) null;
-          this.a((java.awt.Component) null, (byte) 25);
-          var2 = this.field_c;
-          this.field_c = 0;
-          return var2;
-        } else {
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param0 == 8) {
           var2 = this.field_c;
           this.field_c = 0;
           return var2;
         }
+        java.awt.Component var3 = (java.awt.Component) null;
+        this.a((java.awt.Component) null, (byte) 25);
+        var2Lifetime1 = this.field_c;
+        this.field_c = 0;
+        return var2Lifetime1;
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {

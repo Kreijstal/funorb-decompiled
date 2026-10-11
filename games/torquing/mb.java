@@ -8,18 +8,16 @@ final class mb {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != -83) {
-          mb.a((byte) 97);
-          field_c = null;
-          field_a = null;
-          field_b = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == -83) {
           field_c = null;
           field_a = null;
           field_b = (byte[][]) null;
           return;
         }
+        mb.a((byte) 97);
+        field_c = null;
+        field_a = null;
+        field_b = (byte[][]) null;
     }
 
     static {

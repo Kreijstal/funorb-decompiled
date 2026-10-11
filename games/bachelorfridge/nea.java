@@ -21,25 +21,25 @@ final class nea extends sna {
         field_Bb = null;
         field_yb = null;
         if (param0 != 18178) {
-            field_yb = (sna) null;
+          field_yb = (sna) null;
         }
     }
 
     final static eq f(byte param0) {
         if (tn.field_a == ola.field_p) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         if (param0 != 94) {
-            nea.f(67);
-            if (!(ola.field_p != ki.field_w)) {
-                ola.field_p = tn.field_a;
-                return sg.field_p;
-            }
-            return null;
-        }
-        if (!(ola.field_p != ki.field_w)) {
+          nea.f(67);
+          if (ola.field_p == ki.field_w) {
             ola.field_p = tn.field_a;
             return sg.field_p;
+          }
+          return null;
+        }
+        if (ola.field_p == ki.field_w) {
+          ola.field_p = tn.field_a;
+          return sg.field_p;
         }
         return null;
     }

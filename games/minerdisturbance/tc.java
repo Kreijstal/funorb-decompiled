@@ -25,16 +25,14 @@ final class tc extends pi {
         fa.field_c = null;
         pe.field_pb = 0;
         ng.field_l = -1;
-        if (param0 != 9358) {
-          field_s = -106;
-          il.field_n = false;
-          lj.field_q = -1;
-          return;
-        } else {
+        if (param0 == 9358) {
           il.field_n = false;
           lj.field_q = -1;
           return;
         }
+        field_s = -106;
+        il.field_n = false;
+        lj.field_q = -1;
     }
 
     final static void a(int param0, int param1) {
@@ -46,12 +44,12 @@ final class tc extends pi {
 
     tc(uj param0, int param1, int param2) {
         try {
-            this.field_u = param0;
-            this.field_n = param0.a((byte) -115);
-            this.field_q = param1;
-            this.field_w = param2;
+          this.field_u = param0;
+          this.field_n = param0.a((byte) -115);
+          this.field_q = param1;
+          this.field_w = param2;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "tc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

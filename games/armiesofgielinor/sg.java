@@ -9,7 +9,7 @@ final class sg {
 
     public static void a(byte param0) {
         if (param0 < 83) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

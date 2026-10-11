@@ -40,8 +40,8 @@ final class gh implements com.ms.directX.IEnumModesCallback {
         this.field_c.restoreDisplayMode();
         this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
         if (param0 != 0) {
-            com.ms.com.IUnknown var4 = (com.ms.com.IUnknown) null;
-            this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+          com.ms.com.IUnknown var4 = (com.ms.com.IUnknown) null;
+          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
         }
     }
 
@@ -51,20 +51,20 @@ final class gh implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (field_a == null) {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         } else {
-            fieldTemp$0 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$3] = param0.refreshRate;
         }
     }
 }

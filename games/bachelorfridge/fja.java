@@ -11,16 +11,14 @@ final class fja {
     public static void a(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 != 6220) {
-          field_d = (kv[]) null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 6220) {
           field_c = null;
           field_b = null;
           return;
         }
+        field_d = (kv[]) null;
+        field_c = null;
+        field_b = null;
     }
 
     static {

@@ -19,8 +19,8 @@ final class b {
 
     final static int a(boolean param0) {
         if (!param0) {
-            field_a = (mj) null;
-            return gi.field_m;
+          field_a = (mj) null;
+          return gi.field_m;
         }
         return gi.field_m;
     }

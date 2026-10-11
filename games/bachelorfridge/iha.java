@@ -11,131 +11,66 @@ abstract class iha extends at {
     final boolean b(int param0) {
         int var3;
         at var4;
-        int stackIn_34_0 = 0;
-        int stackIn_50_0 = 0;
+        boolean stackIn_34_0 = false;
+        boolean stackIn_50_0 = false;
+        at var4Lifetime1;
+        at var4Lifetime2;
         var3 = BachelorFridge.field_y;
-        if (!this.field_f) {
-          if (this.c((byte) 122)) {
-            this.field_f = true;
-            if (param0 == 21807) {
-              if (null != this.field_h) {
-                var4 = (at) ((Object) this.field_h.b((byte) 90));
-                L0: while (true) {
-                  if (var4 == null) {
-                    L1: {
-                      L2: {
-                        if (!this.field_f) {
-                          break L2;
-                        } else {
-                          if (!this.field_h.e(12917)) {
-                            break L2;
-                          } else {
-                            stackIn_50_0 = 1;
-                            break L1;
-                          }
-                        }
-                      }
-                      stackIn_50_0 = 0;
-                      break L1;
-                    }
-                    return stackIn_50_0 != 0;
-                  } else {
-                    L3: {
-                      if (var4.b(param0 + 0)) {
-                        var4.a(false);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    var4 = (at) ((Object) this.field_h.c(0));
-                    continue L0;
-                  }
-                }
-              } else {
-                return this.field_f;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (param0 == 21807) {
-              if (null != this.field_h) {
-                var4 = (at) ((Object) this.field_h.b((byte) 90));
-                L4: while (true) {
-                  if (var4 == null) {
-                    L5: {
-                      L6: {
-                        if (!this.field_f) {
-                          break L6;
-                        } else {
-                          if (!this.field_h.e(12917)) {
-                            break L6;
-                          } else {
-                            stackIn_34_0 = 1;
-                            break L5;
-                          }
-                        }
-                      }
-                      stackIn_34_0 = 0;
-                      break L5;
-                    }
-                    return stackIn_34_0 != 0;
-                  } else {
-                    L7: {
-                      if (var4.b(param0 + 0)) {
-                        var4.a(false);
-                        break L7;
-                      } else {
-                        break L7;
-                      }
-                    }
-                    var4 = (at) ((Object) this.field_h.c(0));
-                    continue L4;
-                  }
-                }
-              } else {
-                return this.field_f;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
-          if (param0 == 21807) {
-            if (null != this.field_h) {
-              var4 = (at) ((Object) this.field_h.b((byte) 90));
-              L8: while (true) {
-                if (var4 == null) {
-                  if (this.field_f) {
-                    if (!this.field_h.e(12917)) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  L9: {
-                    if (var4.b(param0 + 0)) {
-                      var4.a(false);
-                      break L9;
-                    } else {
-                      break L9;
-                    }
-                  }
-                  var4 = (at) ((Object) this.field_h.c(0));
-                  continue L8;
-                }
-              }
-            } else {
-              return this.field_f;
-            }
-          } else {
+        if (this.field_f) {
+          if (param0 != 21807) {
             return true;
           }
+          if (null == this.field_h) {
+            return this.field_f;
+          }
+          var4 = (at) (this.field_h.b((byte) 90));
+          while (var4 != null) {
+            if (var4.b(param0 + 0)) {
+              var4.a(false);
+            }
+            var4 = (at) (this.field_h.c(0));
+          }
+          if (!this.field_f) {
+            return false;
+          }
+          if (!this.field_h.e(12917)) {
+            return false;
+          }
+          return true;
         }
+        if (!this.c((byte) 122)) {
+          if (param0 != 21807) {
+            return true;
+          }
+          if (null == this.field_h) {
+            return this.field_f;
+          }
+          var4Lifetime1 = (at) (this.field_h.b((byte) 90));
+          while (var4Lifetime1 != null) {
+            if (var4Lifetime1.b(param0 + 0)) {
+              var4Lifetime1.a(false);
+            }
+            var4Lifetime1 = (at) (this.field_h.c(0));
+          }
+          stackIn_34_0 = (this.field_f) && (this.field_h.e(12917));
+          return stackIn_34_0;
+        }
+        this.field_f = true;
+        if (param0 != 21807) {
+          return true;
+        }
+        if (null == this.field_h) {
+          return this.field_f;
+        }
+        var4Lifetime2 = (at) (this.field_h.b((byte) 90));
+        while (var4Lifetime2 != null) {
+          if (var4Lifetime2.b(param0 + 0)) {
+            var4Lifetime2.a(false);
+          }
+          var4Lifetime2 = (at) (this.field_h.c(0));
+        }
+        stackIn_50_0 = (this.field_f) && (this.field_h.e(12917));
+        return stackIn_50_0;
     }
 
     public static void d(int param0) {
@@ -145,7 +80,7 @@ abstract class iha extends at {
 
     final static void e(int param0) {
         if (param0 != 5) {
-            field_k = (String) null;
+          field_k = (String) null;
         }
     }
 

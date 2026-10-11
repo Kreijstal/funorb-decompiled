@@ -12,10 +12,10 @@ final class sn extends gg implements pe, ha {
 
     public final void a(sl param0, int param1) {
         try {
-            int var3_int = -25 % ((-43 - param1) / 35);
-            this.b(11755);
+          int var3_int = -25 % ((-43 - param1) / 35);
+          this.b(11755);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "sn.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -24,16 +24,14 @@ final class sn extends gg implements pe, ha {
         field_m = null;
         field_l = null;
         field_h = null;
-        if (param0 != -119) {
-          sn.a((byte) -90);
-          field_k = null;
-          field_j = null;
-          return;
-        } else {
+        if (param0 == -119) {
           field_k = null;
           field_j = null;
           return;
         }
+        sn.a((byte) -90);
+        field_k = null;
+        field_j = null;
     }
 
     final String f(int param0) {
@@ -44,59 +42,38 @@ final class sn extends gg implements pe, ha {
         int var5 = 0;
         int var6 = 0;
         String stackIn_4_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_i.h((byte) -119);
-              var3 = this.field_i.j(25);
-              var5 = -15 / ((-30 - param0) / 45);
-              var4 = this.field_i.h(119);
-              var6 = em.h(36);
-              if (-1891 < (var4 ^ -1)) {
-                break L1;
-              } else {
-                if (var6 + -3 < var4) {
-                  break L1;
-                } else {
-                  if (!qp.a((byte) 123, var4, var3, var2_int)) {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    return null;
-                  }
-                }
-              }
+          var2_int = this.field_i.h((byte) -119);
+          var3 = this.field_i.j(25);
+          var5 = -15 / ((-30 - param0) / 45);
+          var4 = this.field_i.h(119);
+          var6 = em.h(36);
+          if (var4 >= 1890 &&
+            var6 - 3 >= var4) {
+            if (qp.a((byte) 123, var4, var3, var2_int)) {
+              return null;
             }
+          } else {
             stackIn_4_0 = nr.a(new String[]{"1890", Integer.toString(-3 + var6)}, -1, ej.field_c);
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return stackIn_4_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            decompiledRegionSelector0 = 1;
-            break L2;
-          }
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return ij.field_n;
-        }
+        return ij.field_n;
     }
 
     final static boolean h(int param0) {
         if (param0 != -3) {
-            return true;
+          return true;
         }
         if (null == sm.field_C) {
-            return false;
+          return false;
         }
         if (!sm.field_C.f(20628)) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -110,71 +87,43 @@ final class sn extends gg implements pe, ha {
         na stackIn_4_0 = null;
         na stackIn_8_0 = null;
         na stackIn_11_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -14836) {
-                break L1;
-              } else {
-                field_k = (String) null;
-                break L1;
-              }
-            }
-            var2_int = this.field_i.h((byte) -119);
-            var3 = this.field_i.j(param0 ^ -14827);
-            var4 = this.field_i.h(49);
-            var5 = em.h(param0 + 14872);
-            if (1890 <= var4) {
-              if (-3 + var5 < var4) {
-                stackIn_8_0 = gp.field_d;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (qp.a((byte) 122, var4, var3, var2_int)) {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  stackIn_11_0 = gp.field_d;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_4_0 = gp.field_d;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -14836) {
+            field_k = (String) null;
+          }
+          var2_int = this.field_i.h((byte) -119);
+          var3 = this.field_i.j(param0 ^ -14827);
+          var4 = this.field_i.h(49);
+          var5 = em.h(param0 + 14872);
+          if (1890 > var4) {
+            stackIn_4_0 = gp.field_d;
+            return stackIn_4_0;
+          }
+          if (-3 + var5 < var4) {
+            stackIn_8_0 = gp.field_d;
+            return stackIn_8_0;
+          }
+          if (!qp.a((byte) 122, var4, var3, var2_int)) {
+            stackIn_11_0 = gp.field_d;
+            return stackIn_11_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return gp.field_d;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return kr.field_e;
-            } else {
-              return stackIn_11_0;
-            }
-          }
-        }
+        return kr.field_e;
     }
 
     public final void a(sl param0, boolean param1) {
         try {
-            if (param1) {
-                sl var4 = (sl) null;
-                this.a((sl) null, -31);
-            }
+          if (param1) {
+            sl var4 = (sl) null;
+            this.a((sl) null, -31);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "sn.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "sn.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -183,8 +132,8 @@ final class sn extends gg implements pe, ha {
 
     public final boolean d(int param0) {
         if (param0 != -3) {
-            sn.h(41);
-            return this.field_i.g((byte) 114);
+          sn.h(41);
+          return this.field_i.g((byte) 114);
         }
         return this.field_i.g((byte) 114);
     }

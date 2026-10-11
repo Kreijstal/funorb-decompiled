@@ -13,18 +13,16 @@ final class oq extends wv {
 
     public static void a(int param0) {
         field_k = null;
-        if (param0 < 66) {
-          oq.a(-38);
-          field_m = null;
-          field_j = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0 >= 66) {
           field_m = null;
           field_j = null;
           field_l = null;
           return;
         }
+        oq.a(-38);
+        field_m = null;
+        field_j = null;
+        field_l = null;
     }
 
     final h a(byte param0) {
@@ -34,7 +32,7 @@ final class oq extends wv {
 
     final static int a(boolean param0) {
         if (param0) {
-            return -112;
+          return -112;
         }
         return ii.field_b;
     }
@@ -42,13 +40,13 @@ final class oq extends wv {
     final static void a(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
         if (param0 != 27080) {
-            return;
+          return;
         }
         try {
-            param1.addKeyListener(va.field_w);
-            param1.addFocusListener(va.field_w);
+          param1.addKeyListener(va.field_w);
+          param1.addFocusListener(va.field_w);
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "oq.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

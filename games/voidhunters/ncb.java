@@ -9,7 +9,7 @@ final class ncb {
     public static void a(int param0) {
         field_a = (int[][]) null;
         if (param0 != 500) {
-            ncb.a(-91);
+          ncb.a(-91);
         }
     }
 

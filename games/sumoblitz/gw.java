@@ -20,53 +20,32 @@ final class gw extends nt {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (0 != this.field_t) {
-                if ((this.field_t ^ -1) != -2) {
-                  break L1;
-                } else {
-                  tc.field_j[this.field_z].a((float)(this.field_k >> -570162872), (float)(this.field_o >> 1173840904), this.field_y << 1536750849, 0, 3, this.field_D << -1883450728, 1);
-                  break L1;
-                }
-              } else {
-                wo.field_b[this.field_z].a((float)(this.field_k >> -372206456), (float)(this.field_o >> -1654651128), this.field_y, (int)(65535.0 * this.field_x), 3, 570425344, 1);
-                break L1;
-              }
+          if (0 != this.field_t) {
+            if (this.field_t == 1) {
+              tc.field_j[this.field_z].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), this.field_y << 1, 0, 3, this.field_D << 24, 1);
             }
-            if (param1 < -121) {
-              break L0;
-            } else {
-              this.field_y = -125;
-              return;
-            }
+          } else {
+            wo.field_b[this.field_z].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), this.field_y, (int)(65535.0 * this.field_x), 3, 570425344, 1);
           }
+          if (param1 < -121) {
+            return;
+          }
+          this.field_y = -125;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("gw.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("gw.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,21 +63,20 @@ final class gw extends nt {
 
     final boolean a(int param0) {
         this.field_o = this.field_o + this.field_s;
-        if (param0 != -2567) {
-          return false;
-        } else {
+        if (param0 == -2567) {
           this.field_x = this.field_x + this.field_u;
           this.field_k = this.field_k + this.field_w;
           return super.a(param0 + 0);
         }
+        return false;
     }
 
     public static void c(boolean param0) {
         if (param0) {
-            field_A = (int[]) null;
-            field_C = null;
-            field_A = null;
-            return;
+          field_A = (int[]) null;
+          field_C = null;
+          field_A = null;
+          return;
         }
         field_C = null;
         field_A = null;

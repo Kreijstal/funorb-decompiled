@@ -8,27 +8,26 @@ final class of {
     static int field_c;
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        int var3;
-        if (param0) {
-          na.a(0, 0, na.field_e, na.field_k, 0, 192);
-          pj.a(param0, 1);
-          var3 = -128 / ((param2 - 41) / 34);
-          return;
-        } else {
+        int var3 = 0;
+        int var3Lifetime1;
+        if (!param0) {
           na.a();
           pj.a(param0, 1);
           var3 = -128 / ((param2 - 41) / 34);
           return;
         }
+        na.a(0, 0, na.field_e, na.field_k, 0, 192);
+        pj.a(param0, 1);
+        var3Lifetime1 = -128 / ((param2 - 41) / 34);
     }
 
     public static void a(boolean param0) {
         field_d = null;
         if (!param0) {
-            field_b = (bc) null;
-            field_b = null;
-            field_a = null;
-            return;
+          field_b = (bc) null;
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

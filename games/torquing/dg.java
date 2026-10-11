@@ -15,91 +15,59 @@ final class dg extends af {
     static double[][] field_f;
 
     final void a(boolean param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        L0: {
-          param1 = param1 + (this.field_k.field_a - -this.field_c);
-          param2 = param2 + (this.field_d + this.field_k.field_g);
-          var4 = param2 * ph.field_j + param1;
-          if (!param0) {
-            break L0;
-          } else {
-            this.b(97);
-            break L0;
-          }
+        int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        param1 = param1 + (this.field_k.field_a + this.field_c);
+        param2 = param2 + (this.field_d + this.field_k.field_g);
+        int var4 = param2 * ph.field_j + param1;
+        if (param0) {
+          this.b(97);
         }
-        L1: {
-          var5 = 0;
-          var6 = this.field_k.field_d;
-          var7 = this.field_k.field_c;
-          var8 = -var7 + ph.field_j;
-          if (param2 < ph.field_c) {
-            var10 = -param2 + ph.field_c;
-            var4 = var4 + ph.field_j * var10;
-            var6 = var6 - var10;
-            param2 = ph.field_c;
-            var5 = var5 + var10 * var7;
-            break L1;
-          } else {
-            break L1;
-          }
+        int var5 = 0;
+        int var6 = this.field_k.field_d;
+        int var7 = this.field_k.field_c;
+        int var8 = -var7 + ph.field_j;
+        if (!(param2 >= ph.field_c)) {
+          var10 = -param2 + ph.field_c;
+          var4 = var4 + ph.field_j * var10;
+          var6 = var6 - var10;
+          param2 = ph.field_c;
+          var5 = var5 + var10 * var7;
         }
-        L2: {
-          var9 = 0;
-          if (ph.field_k <= param1) {
-            break L2;
-          } else {
-            var10 = ph.field_k + -param1;
-            var5 = var5 + var10;
-            var9 = var9 + var10;
-            var4 = var4 + var10;
-            var8 = var8 + var10;
-            param1 = ph.field_k;
-            var7 = var7 - var10;
-            break L2;
-          }
+        int var9 = 0;
+        if (ph.field_k > param1) {
+          var10Lifetime1 = ph.field_k - param1;
+          var5 = var5 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
+          param1 = ph.field_k;
+          var7 = var7 - var10Lifetime1;
         }
-        L3: {
-          if (ph.field_h >= var6 + param2) {
-            break L3;
-          } else {
-            var6 = var6 - (-ph.field_h + (var6 + param2));
-            break L3;
-          }
+        if (ph.field_h < var6 + param2) {
+          var6 = var6 - (-ph.field_h + (var6 + param2));
         }
-        L4: {
-          if (ph.field_a < var7 + param1) {
-            var10 = -ph.field_a + param1 - -var7;
-            var7 = var7 - var10;
-            var8 = var8 + var10;
-            var9 = var9 + var10;
-            break L4;
-          } else {
-            break L4;
-          }
+        if (!(ph.field_a >= var7 + param1)) {
+          var10Lifetime2 = -ph.field_a + param1 + var7;
+          var7 = var7 - var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
         }
-        if (0 < var7) {
-          if (-1 <= (var6 ^ -1)) {
-            return;
-          } else {
-            wh.a(0, var5, this.field_k.field_l, var6, this.field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, this.field_k.field_k);
-            return;
-          }
-        } else {
+        if (0 >= var7) {
+          return;
+        }
+        if (var6 > 0) {
+          wh.a(0, var5, this.field_k.field_l, var6, this.field_l, var8, ph.field_e, (byte) 29, var9, var4, var7, this.field_k.field_k);
           return;
         }
     }
 
     final void b(int param0) {
         if (param0 != 6) {
-            field_j = (String) null;
-            this.a(false, 0, 0);
-            return;
+          field_j = (String) null;
+          this.a(false, 0, 0);
+          return;
         }
         this.a(false, 0, 0);
     }
@@ -110,7 +78,7 @@ final class dg extends af {
         field_i = null;
         field_j = null;
         if (param0 != 12949) {
-            return;
+          return;
         }
         field_m = null;
         field_f = (double[][]) null;
@@ -118,12 +86,12 @@ final class dg extends af {
 
     dg(sm param0, int param1, int param2, int param3) {
         try {
-            this.field_l = param3;
-            this.field_k = param0;
-            this.field_c = param1;
-            this.field_d = param2;
+          this.field_l = param3;
+          this.field_k = param0;
+          this.field_c = param1;
+          this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

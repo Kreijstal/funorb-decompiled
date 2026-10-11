@@ -14,7 +14,7 @@ final class mc {
         field_b = null;
         field_a = null;
         if (param0 != 8123) {
-            field_d = (ed[]) null;
+          field_d = (ed[]) null;
         }
     }
 

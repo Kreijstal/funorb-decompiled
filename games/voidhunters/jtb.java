@@ -17,17 +17,17 @@ abstract class jtb extends fh {
 
     final static void a(int param0, int param1, long param2, boolean param3, String param4) {
         try {
-            kkb.field_p = param1;
-            hb.field_b = param2;
-            cwa.field_b = param4;
-            cha.field_o = true;
-            gi.field_a = param0;
-            if (param3) {
-                String var7 = (String) null;
-                jtb.a(50, -52, 121L, false, (String) null);
-            }
+          kkb.field_p = param1;
+          hb.field_b = param2;
+          cwa.field_b = param4;
+          cha.field_o = true;
+          gi.field_a = param0;
+          if (param3) {
+            String var7 = (String) null;
+            jtb.a(50, -52, 121L, false, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "jtb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "jtb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

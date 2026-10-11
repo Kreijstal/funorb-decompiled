@@ -18,268 +18,193 @@ final class pq extends i {
         int fieldTemp$0 = 0;
         int var3_int = 0;
         if (la.a(100)) {
-            return;
+          return;
         }
         if (uv.field_f) {
-            return;
+          return;
         }
         try {
-            bg.field_r = param1;
-            or.field_d.b(54, (byte) 89);
-            fieldTemp$0 = or.field_d.field_n + 1;
-            or.field_d.field_n = or.field_d.field_n + 1;
-            var3_int = fieldTemp$0;
-            or.field_d.a(param1, (byte) -127);
-            or.field_d.a(102, param0);
-            or.field_d.c(62, -var3_int + or.field_d.field_n);
-            ri.field_t = 500;
-            uv.field_f = param2 ? true : false;
+          bg.field_r = param1;
+          or.field_d.b(54, (byte) 89);
+          fieldTemp$0 = or.field_d.field_n + 1;
+          or.field_d.field_n = or.field_d.field_n + 1;
+          var3_int = fieldTemp$0;
+          or.field_d.a(param1, (byte) -127);
+          or.field_d.a(102, param0);
+          or.field_d.c(62, -var3_int + or.field_d.field_n);
+          ri.field_t = 500;
+          uv.field_f = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "pq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1) {
         super.a(70, param1);
-        if (param0 >= 60) {
-          if (param1 == 0) {
-            if (this.field_H.field_Fb != -1) {
-              if (!tu.field_E.a((byte) 95, tu.field_E.field_q[this.field_H.field_Fb])) {
-                oj.b(-121, tu.field_E.field_q[this.field_H.field_Fb]);
-                this.field_H.c(true);
-                return;
-              } else {
-                this.field_H.c(true);
-                return;
-              }
-            } else {
-              this.field_H.c(true);
-              return;
-            }
-          } else {
-            this.field_H.c(true);
-            return;
-          }
-        } else {
+        if (param0 < 60) {
           field_M = (String) null;
-          if (param1 == 0) {
-            if (this.field_H.field_Fb != -1) {
-              if (!tu.field_E.a((byte) 95, tu.field_E.field_q[this.field_H.field_Fb])) {
-                oj.b(-121, tu.field_E.field_q[this.field_H.field_Fb]);
-                this.field_H.c(true);
-                return;
-              } else {
-                this.field_H.c(true);
-                return;
-              }
-            } else {
-              this.field_H.c(true);
-              return;
-            }
-          } else {
+          if (param1 != 0) {
             this.field_H.c(true);
             return;
           }
+          if (this.field_H.field_Fb == -1) {
+            this.field_H.c(true);
+            return;
+          }
+          if (tu.field_E.a((byte) 95, tu.field_E.field_q[this.field_H.field_Fb])) {
+            this.field_H.c(true);
+            return;
+          }
+          oj.b(-121, tu.field_E.field_q[this.field_H.field_Fb]);
+          this.field_H.c(true);
+          return;
         }
+        if (param1 != 0) {
+          this.field_H.c(true);
+          return;
+        }
+        if (this.field_H.field_Fb == -1) {
+          this.field_H.c(true);
+          return;
+        }
+        if (tu.field_E.a((byte) 95, tu.field_E.field_q[this.field_H.field_Fb])) {
+          this.field_H.c(true);
+          return;
+        }
+        oj.b(-121, tu.field_E.field_q[this.field_H.field_Fb]);
+        this.field_H.c(true);
     }
 
     final int a(byte param0) {
         if (param0 < 75) {
-            pq.g(1);
-            return 346;
+          pq.g(1);
+          return 346;
         }
         return 346;
     }
 
     final static int b(int param0, int param1) {
-        String var3;
-        param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> -1075143327);
-        param1 = (858993459 & param1) - -(1932735283 & param1 >>> 352650434);
-        param1 = 252645135 & (param1 >>> 860211492) + param1;
-        param1 = param1 + (param1 >>> 650577256);
-        param1 = param1 + (param1 >>> -359469744);
-        if (param0 != 170) {
-          var3 = (String) null;
-          pq.a(12, (String) null, false);
-          return 255 & param1;
-        } else {
+        param1 = (1431655765 & param1) + ((-1431655765 & param1) >>> 1);
+        param1 = (858993459 & param1) + (1932735283 & param1 >>> 2);
+        param1 = 252645135 & (param1 >>> 4) + param1;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
+        if (param0 == 170) {
           return 255 & param1;
         }
+        String var3 = (String) null;
+        pq.a(12, (String) null, false);
+        return 255 & param1;
     }
 
     final void a(byte param0, int param1, int param2) {
         int var5;
         var5 = Kickabout.field_G;
-        if (param0 >= -11) {
-          L0: {
-            field_J = -68;
-            super.a((byte) -119, param1, param2);
-            this.field_H.field_J = 35 + param2 + 20;
-            this.field_H.field_s = 20 + param1;
-            this.field_H.a(101, false);
-            this.field_H.k((byte) 84);
-            if (-1 == this.field_H.field_Fb) {
-              break L0;
-            } else {
-              tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 - -105, 23, param1 - -320);
-              if (tu.field_E.a((byte) -102, tu.field_E.field_q[this.field_H.field_Fb])) {
-                pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
-                break L0;
-              } else {
-                if (cq.e(15137)) {
-                  if (np.h((byte) 5)) {
-                    if (this.field_H.field_Fb != -1) {
-                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                        pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                        return;
-                      } else {
-                        pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                        return;
-                      }
-                    } else {
-                      pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                      return;
-                    }
-                  } else {
-                    pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
-                    return;
-                  }
-                } else {
-                  L1: {
-                    L2: {
-                      if (this.field_H.field_Fb == -1) {
-                        break L2;
-                      } else {
-                        if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                          pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                          break L1;
-                        } else {
-                          break L2;
-                        }
-                      }
-                    }
-                    pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                    break L1;
-                  }
-                  return;
-                }
+        if (param0 < -11) {
+          super.a((byte) -119, param1, param2);
+          this.field_H.field_J = 35 + param2 + 20;
+          this.field_H.field_s = 20 + param1;
+          this.field_H.a(101, false);
+          this.field_H.k((byte) 84);
+          if (-1 != this.field_H.field_Fb) {
+            tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+            if (!tu.field_E.a((byte) -102, tu.field_E.field_q[this.field_H.field_Fb])) {
+              if (cq.e(15137) &&
+                !np.h((byte) 5)) {
+                pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+                return;
               }
+              if (this.field_H.field_Fb != -1 &&
+                gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                return;
+              }
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              return;
             }
+            pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
           }
           if (!cq.e(15137)) {
-            if (this.field_H.field_Fb != -1) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                return;
+            if (this.field_H.field_Fb == -1) {
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+            } else {
+              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               } else {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+              }
+            }
+            return;
+          }
+          if (!np.h((byte) 5)) {
+            pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
+            return;
+          }
+          if (this.field_H.field_Fb != -1 &&
+            gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+            pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+            return;
+          }
+          pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+          return;
+        }
+        field_J = -68;
+        super.a((byte) -119, param1, param2);
+        this.field_H.field_J = 35 + param2 + 20;
+        this.field_H.field_s = 20 + param1;
+        this.field_H.a(101, false);
+        this.field_H.k((byte) 84);
+        if (-1 != this.field_H.field_Fb) {
+          tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 + 105, 23, param1 + 320);
+          if (!tu.field_E.a((byte) -102, tu.field_E.field_q[this.field_H.field_Fb])) {
+            if (!cq.e(15137)) {
+              if (this.field_H.field_Fb != -1 &&
+                gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
                 return;
               }
-            } else {
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
               return;
             }
-          } else {
-            if (np.h((byte) 5)) {
-              if (this.field_H.field_Fb != -1) {
-                if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                  return;
-                } else {
-                  pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                  return;
-                }
-              } else {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                return;
-              }
-            } else {
+            if (!np.h((byte) 5)) {
               pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
-              return;
+            } else {
+              if (this.field_H.field_Fb == -1) {
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              } else {
+                if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+                } else {
+                  pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+                }
+              }
+            }
+            return;
+          }
+          pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
+        }
+        if (!cq.e(15137)) {
+          if (this.field_H.field_Fb == -1) {
+            pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+          } else {
+            if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
+              pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+            } else {
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             }
           }
         } else {
-          L3: {
-            super.a((byte) -119, param1, param2);
-            this.field_H.field_J = 35 + param2 + 20;
-            this.field_H.field_s = 20 + param1;
-            this.field_H.a(101, false);
-            this.field_H.k((byte) 84);
-            if (-1 == this.field_H.field_Fb) {
-              break L3;
-            } else {
-              tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]].a(param2 + 35 - -105, 23, param1 - -320);
-              if (tu.field_E.a((byte) -102, tu.field_E.field_q[this.field_H.field_Fb])) {
-                pb.field_C.d(iw.field_j, 315 + param1, 245 + param2, 16777215, -1);
-                break L3;
-              } else {
-                L4: {
-                  L5: {
-                    if (!cq.e(15137)) {
-                      break L5;
-                    } else {
-                      if (!np.h((byte) 5)) {
-                        pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
-                        break L4;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  L6: {
-                    if (this.field_H.field_Fb == -1) {
-                      break L6;
-                    } else {
-                      if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                        pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                        break L4;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                  pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                  break L4;
-                }
-                return;
-              }
-            }
-          }
-          if (!cq.e(15137)) {
-            if (this.field_H.field_Fb != -1) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                return;
-              } else {
-                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                return;
-              }
-            } else {
-              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-              return;
-            }
+          if (!np.h((byte) 5)) {
+            pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
           } else {
-            if (np.h((byte) 5)) {
-              L7: {
-                L8: {
-                  if (this.field_H.field_Fb == -1) {
-                    break L8;
-                  } else {
-                    if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) == 0) {
-                      pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 - -35), 300, 40, 16777215, -1, 1, 1, 0);
-                      break L7;
-                    } else {
-                      break L8;
-                    }
-                  }
-                }
-                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 - -35, 300, 40, 16729156, -1, 1, 1, 0);
-                break L7;
-              }
-              return;
+            if (this.field_H.field_Fb == -1) {
+              pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
             } else {
-              pb.field_C.a("Sorry, Moderators can't auction people...", param1 + 170, 210 + param2 + 35, 300, 40, 16777215, -1, 1, 1, 0);
-              return;
+              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+                pb.field_C.a(qa.field_G, 170 + param1, 210 + param2 + 35, 300, 40, 16729156, -1, 1, 1, 0);
+              } else {
+                pb.field_C.a(la.field_f, param1 + 170, 210 + (param2 + 35), 300, 40, 16777215, -1, 1, 1, 0);
+              }
             }
           }
         }
@@ -293,105 +218,66 @@ final class pq extends i {
     final static void g(byte param0) {
         if (!nb.field_f) {
           throw new IllegalStateException();
-        } else {
-          aw.field_H = true;
-          hm.a(false, -112);
-          vj.field_c = 0;
-          if (param0 != 66) {
-            field_N = (em) null;
-            return;
-          } else {
-            return;
-          }
         }
+        aw.field_H = true;
+        hm.a(false, -112);
+        vj.field_c = 0;
+        if (param0 == 66) {
+          return;
+        }
+        field_N = (em) null;
     }
 
     public static void g(int param0) {
         field_N = null;
         field_L = null;
         field_O = (byte[][]) null;
-        if (param0 != -14948) {
-          pq.b(19, 71);
-          field_P = null;
-          field_M = null;
-          field_G = null;
-          field_Q = null;
-          return;
-        } else {
+        if (param0 == -14948) {
           field_P = null;
           field_M = null;
           field_G = null;
           field_Q = null;
           return;
         }
+        pq.b(19, 71);
+        field_P = null;
+        field_M = null;
+        field_G = null;
+        field_Q = null;
     }
 
     final void a(int param0, boolean param1) {
-        if (1 == this.field_n) {
-          this.field_H.b(param0 ^ param0, param1);
-          this.field_H.a(param0 + 45);
-          if ((this.field_H.field_Fb ^ -1) != 0) {
-            if (!tu.field_E.a((byte) 90, tu.field_E.field_q[this.field_H.field_Fb])) {
-              if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
-                this.field_i[0].field_lb = true;
-                if (cq.e(15137)) {
-                  if (!np.h((byte) -128)) {
-                    this.field_i[0].field_lb = false;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                this.field_i[0].field_lb = false;
-                if (cq.e(15137)) {
-                  if (!np.h((byte) -128)) {
-                    this.field_i[0].field_lb = false;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              }
-            } else {
-              this.field_i[0].field_lb = false;
-              if (cq.e(15137)) {
-                if (!np.h((byte) -128)) {
-                  this.field_i[0].field_lb = false;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            this.field_i[0].field_lb = false;
-            if (cq.e(15137)) {
-              if (np.h((byte) -128)) {
-                return;
-              } else {
-                this.field_i[0].field_lb = false;
-                return;
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
+        if (1 != this.field_n) {
           return;
         }
+        this.field_H.b(param0 ^ param0, param1);
+        this.field_H.a(param0 + 45);
+        if (this.field_H.field_Fb == -1) {
+          this.field_i[0].field_lb = false;
+        } else {
+          if (tu.field_E.a((byte) 90, tu.field_E.field_q[this.field_H.field_Fb])) {
+            this.field_i[0].field_lb = false;
+          } else {
+            if (gp.a(tu.field_E.field_i[tu.field_E.field_q[this.field_H.field_Fb]], -576054046) != 0) {
+              this.field_i[0].field_lb = true;
+            } else {
+              this.field_i[0].field_lb = false;
+            }
+          }
+        }
+        if (!cq.e(15137)) {
+          return;
+        }
+        if (np.h((byte) -128)) {
+          return;
+        }
+        this.field_i[0].field_lb = false;
     }
 
     final int b(int param0) {
         if (param0 != -1379118556) {
-            this.a((byte) 85);
-            return 470;
+          this.a((byte) 85);
+          return 470;
         }
         return 470;
     }

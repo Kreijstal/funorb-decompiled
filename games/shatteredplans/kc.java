@@ -23,45 +23,32 @@ final class kc {
         field_b = null;
         field_m = null;
         if (param0) {
-            field_i = 19;
-            field_g = null;
-            return;
+          field_i = 19;
+          field_g = null;
+          return;
         }
         field_g = null;
     }
 
     final static void a(byte param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -97) {
-                break L1;
-              } else {
-                kc.a((byte) 75);
-                break L1;
-              }
-            }
-            var1_int = gd.field_b[0];
-            var2 = 1;
-            L2: while (true) {
-              if (var2 >= gd.field_b.length) {
-                break L0;
-              } else {
-                var3 = gd.field_b[var2];
-                ps.a(jl.field_M, var2 << 740786052, jl.field_M, var1_int, var3);
-                var1_int = var1_int + var3;
-                var2++;
-                continue L2;
-              }
-            }
+          if (param0 != -97) {
+            kc.a((byte) 75);
           }
+          var1_int = gd.field_b[0];
+          for (var2 = 1; var2 < gd.field_b.length; var2++) {
+            var3 = gd.field_b[var2];
+            ps.a(jl.field_M, var2 << 4, jl.field_M, var1_int, var3);
+            var1_int = var1_int + var3;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

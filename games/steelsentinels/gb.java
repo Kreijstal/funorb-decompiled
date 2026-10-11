@@ -14,29 +14,26 @@ abstract class gb {
     abstract byte[] a(int param0);
 
     final static fm[] b(boolean param0) {
-        if (param0) {
-          return (fm[]) null;
-        } else {
+        if (!param0) {
           return new fm[]{bk.field_M, ck.field_g, ig.field_n, gf.field_b, jb.field_D, wc.field_c, pc.field_p, nk.field_O, qb.field_H, li.field_x, wn.field_b, ml.field_b, sh.field_b, pe.field_A};
         }
+        return (fm[]) null;
     }
 
     public static void a(boolean param0) {
         field_c = null;
-        if (param0) {
-          field_f = (gh[]) null;
-          field_d = null;
-          field_e = null;
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_e = null;
           field_f = null;
           field_b = null;
           return;
         }
+        field_f = (gh[]) null;
+        field_d = null;
+        field_e = null;
+        field_f = null;
+        field_b = null;
     }
 
     static {

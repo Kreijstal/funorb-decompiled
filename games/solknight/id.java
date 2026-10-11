@@ -10,13 +10,13 @@ final class id {
         field_b = null;
         field_c = null;
         if (param0 <= 94) {
-            field_c = (jd) null;
+          field_c = (jd) null;
         }
     }
 
     final static void a(int param0) {
         if (param0 >= -81) {
-            id.a(-62);
+          id.a(-62);
         }
     }
 

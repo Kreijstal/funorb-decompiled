@@ -11,10 +11,10 @@ final class mb {
 
     public static void a(int param0) {
         if (param0 >= -125) {
-            mb.a(16);
-            field_e = null;
-            field_b = null;
-            return;
+          mb.a(16);
+          field_e = null;
+          field_b = null;
+          return;
         }
         field_e = null;
         field_b = null;

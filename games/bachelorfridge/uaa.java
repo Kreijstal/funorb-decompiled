@@ -11,40 +11,32 @@ final class uaa extends kj {
     private sl field_g;
 
     final void a(int param0, boolean param1, int param2) {
-        Object var4;
-        bma var4_ref;
-        int var5;
-        int var6;
-        int var7;
-        var4 = null;
-        var7 = BachelorFridge.field_y;
-        if (param1) {
-          var4_ref = (bma) ((Object) this.field_h.b((byte) 90));
-          L0: while (true) {
-            if (var4_ref == null) {
-              return;
-            } else {
-              var5 = (var4_ref.field_i >> 1145143940) + param2;
-              var6 = -(var4_ref.field_h >> -1326635548) + (param0 - -(var4_ref.field_q >> 2101345925));
-              mla.field_b[var4_ref.field_v].e(var5, var6);
-              var4_ref = (bma) ((Object) this.field_h.c(0));
-              continue L0;
-            }
-          }
-        } else {
+        bma var4_ref = null;
+        int var5 = 0;
+        int var6 = 0;
+        Object var4 = null;
+        int var7 = BachelorFridge.field_y;
+        bma var4_refLifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        if (!param1) {
           uaa.d((byte) -65);
-          var4_ref = (bma) ((Object) this.field_h.b((byte) 90));
-          L1: while (true) {
-            if (var4_ref == null) {
-              return;
-            } else {
-              var5 = (var4_ref.field_i >> 1145143940) + param2;
-              var6 = -(var4_ref.field_h >> -1326635548) + (param0 - -(var4_ref.field_q >> 2101345925));
-              mla.field_b[var4_ref.field_v].e(var5, var6);
-              var4_ref = (bma) ((Object) this.field_h.c(0));
-              continue L1;
-            }
+        } else {
+          var4_ref = (bma) (this.field_h.b((byte) 90));
+          while (var4_ref != null) {
+            var5 = (var4_ref.field_i >> 4) + param2;
+            var6 = -(var4_ref.field_h >> 4) + (param0 + (var4_ref.field_q >> 5));
+            mla.field_b[var4_ref.field_v].e(var5, var6);
+            var4_ref = (bma) (this.field_h.c(0));
           }
+          return;
+        }
+        var4_refLifetime1 = (bma) (this.field_h.b((byte) 90));
+        while (var4_refLifetime1 != null) {
+          var5Lifetime1 = (var4_refLifetime1.field_i >> 4) + param2;
+          var6Lifetime1 = -(var4_refLifetime1.field_h >> 4) + (param0 + (var4_refLifetime1.field_q >> 5));
+          mla.field_b[var4_refLifetime1.field_v].e(var5Lifetime1, var6Lifetime1);
+          var4_refLifetime1 = (bma) (this.field_h.c(0));
         }
     }
 
@@ -53,88 +45,44 @@ final class uaa extends kj {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         StringBuilder stackIn_13_1 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          L0: {
-            this.field_h = new eaa();
-            this.field_g = param1;
-            this.field_j = param2;
-            var4_int = 0;
-            L1: while (true) {
-              if (var4_int >= 500) {
-                break L0;
-              } else {
-                this.c(-22786);
-                var4_int++;
-                continue L1;
-              }
-            }
+          this.field_h = new eaa();
+          this.field_g = param1;
+          this.field_j = param2;
+          for (var4_int = 0; var4_int < 500; var4_int++) {
+            this.c(-22786);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var4);
-
-            stackIn_7_1 = new StringBuilder().append("uaa.<init>(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("uaa.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_13_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param2 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_14_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -142,40 +90,40 @@ final class uaa extends kj {
         int var2 = kla.a(1024, sma.field_I, -2147483648);
         int var3 = kla.a(1024, sma.field_I, -2147483648);
         if (param0 != -22786) {
-            return;
+          return;
         }
         int var4 = var3 + var2;
-        int var5 = var2 + -var3;
+        int var5 = var2 - var3;
         int var6 = kla.a(1024, sma.field_I, -2147483648);
-        bma var7 = new bma(var4, var6, var5, kla.a(mla.field_b.length, sma.field_I, param0 + -2147460862), 50 + kla.a(50, sma.field_I, param0 ^ 2147460862));
-        var7.field_p = -64 + (var7.field_i >> 924775524);
-        var7.field_g = (var7.field_q >> -1727847548) + -32;
-        var7.field_k = var7.field_h >> -466803612;
+        bma var7 = new bma(var4, var6, var5, kla.a(mla.field_b.length, sma.field_I, param0 - 2147460862), 50 + kla.a(50, sma.field_I, param0 ^ 2147460862));
+        var7.field_p = -64 + (var7.field_i >> 4);
+        var7.field_g = (var7.field_q >> 4) - 32;
+        var7.field_k = var7.field_h >> 4;
         var7.field_l = -8;
         this.field_h.a(var7, true);
     }
 
     final static String d(byte param0) {
-        if (!(cha.field_l != null)) {
-            return "";
+        if (cha.field_l == null) {
+          return "";
         }
         if (param0 >= -24) {
-            uaa.a(false);
-            return cha.field_l;
+          uaa.a(false);
+          return cha.field_l;
         }
         return cha.field_l;
     }
 
     final void a(int param0, int param1, int param2) {
         if (param1 != 0) {
-            field_f = (iga) null;
+          field_f = (iga) null;
         }
     }
 
     public static void c(byte param0) {
         field_i = null;
         if (param0 != -126) {
-            return;
+          return;
         }
         field_f = null;
     }
@@ -184,50 +132,44 @@ final class uaa extends kj {
         bma var2_ref = null;
         Object var2 = null;
         int var3 = BachelorFridge.field_y;
+        bma var2_refLifetime1;
         if (null != this.field_g) {
-            this.field_g.a(this.field_j, this.field_e.field_h, 12);
-            if (param0 <= 21) {
-                return true;
-            }
-            var2_ref = (bma) ((Object) this.field_h.b((byte) 90));
-            while (var2_ref != null) {
-                var2_ref.b(true);
-                if (!(var2_ref.field_h >= 0)) {
-                    var2_ref.a(false);
-                }
-                var2_ref = (bma) ((Object) this.field_h.c(0));
-            }
-            return this.field_h.e(12917);
-        }
-        if (param0 <= 21) {
+          this.field_g.a(this.field_j, this.field_e.field_h, 12);
+          if (param0 <= 21) {
             return true;
-        }
-        var2_ref = (bma) ((Object) this.field_h.b((byte) 90));
-        while (var2_ref != null) {
+          }
+          var2_ref = (bma) (this.field_h.b((byte) 90));
+          while (var2_ref != null) {
             var2_ref.b(true);
             if (!(var2_ref.field_h >= 0)) {
-                var2_ref.a(false);
+              var2_ref.a(false);
             }
-            var2_ref = (bma) ((Object) this.field_h.c(0));
+            var2_ref = (bma) (this.field_h.c(0));
+          }
+          return this.field_h.e(12917);
+        }
+        if (param0 <= 21) {
+          return true;
+        }
+        var2_refLifetime1 = (bma) (this.field_h.b((byte) 90));
+        while (var2_refLifetime1 != null) {
+          var2_refLifetime1.b(true);
+          if (!(var2_refLifetime1.field_h >= 0)) {
+            var2_refLifetime1.a(false);
+          }
+          var2_refLifetime1 = (bma) (this.field_h.c(0));
         }
         return this.field_h.e(12917);
     }
 
     final static void a(boolean param0) {
-        sna var3;
-        sna var4;
-        L0: {
-          var3 = mka.a(5222712, 9883516, 5222712, (byte) -121, jha.field_g, 9883516, 16777215, 9883516);
-          var4 = var3;
-          var4.field_Y = 1;
-          var4.field_N = 1;
-          var4.field_eb = bga.field_j;
-          if (!param0) {
-            break L0;
-          } else {
-            uaa.d((byte) -72);
-            break L0;
-          }
+        sna var3 = mka.a(5222712, 9883516, 5222712, (byte) -121, jha.field_g, 9883516, 16777215, 9883516);
+        sna var4 = var3;
+        var4.field_Y = 1;
+        var4.field_N = 1;
+        var4.field_eb = bga.field_j;
+        if (param0) {
+          uaa.d((byte) -72);
         }
         vu.field_p.field_Y = 1;
         bw.field_a = new sna("checkout", vu.field_p, 444, 324, 167, 38, "");

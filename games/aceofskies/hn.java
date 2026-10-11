@@ -16,69 +16,46 @@ final class hn {
         dl var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            var8 = new dl(param0.a("logo.fo3d", (byte) -71, ""));
-            var10 = var8;
-            var3 = var10.g(-63);
-            var10.j(91);
-            gj.field_a = st.a(param1, var10);
-            ia.field_a = new int[var3][];
-            gp.field_y = new wu[var3];
-            var4 = 0;
-            L1: while (true) {
-              if (var3 <= var4) {
-                var10.m((byte) 112);
-                var9 = 0;
-                var4 = var9;
-                L2: while (true) {
-                  if (var3 <= var9) {
-                    break L0;
-                  } else {
-                    var5 = gp.field_y[var9];
-                    var5.a(6, 1, 6, 6, false);
-                    var5.b(32767);
-                    var6 = new int[]{var5.field_b + var5.field_N >> -2029023903, var5.field_h + var5.field_J >> 1433628513, var5.field_A + var5.field_s >> -279739423};
-                    ia.field_a[var9] = var6;
-                    var5.a(-var6[0], 95, -var6[1], -var6[2]);
-                    var9++;
-                    continue L2;
-                  }
-                }
-              } else {
-                gp.field_y[var4] = sh.a(var8, (byte) -14);
-                var4++;
-                continue L1;
-              }
-            }
+          var8 = new dl(param0.a("logo.fo3d", (byte) -71, ""));
+          var10 = var8;
+          var3 = var10.g(-63);
+          var10.j(91);
+          gj.field_a = st.a(param1, var10);
+          ia.field_a = new int[var3][];
+          gp.field_y = new wu[var3];
+          for (var4 = 0; var3 > var4; var4++) {
+            gp.field_y[var4] = sh.a(var8, (byte) -14);
           }
+          var10.m((byte) 112);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          while (var3 > var9) {
+            var5 = gp.field_y[var9];
+            var5.a(6, 1, 6, 6, false);
+            var5.b(32767);
+            var6 = new int[]{var5.field_b + var5.field_N >> 1, var5.field_h + var5.field_J >> 1, var5.field_A + var5.field_s >> 1};
+            ia.field_a[var9] = var6;
+            var5.a(-var6[0], 95, -var6[1], -var6[2]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("hn.B(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("hn.B(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -92,7 +69,7 @@ final class hn {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            field_b = (String[]) null;
+          field_b = (String[]) null;
         }
     }
 

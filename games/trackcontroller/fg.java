@@ -9,7 +9,7 @@ final class fg {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -14138) {
-            fg.a(89);
+          fg.a(89);
         }
     }
 

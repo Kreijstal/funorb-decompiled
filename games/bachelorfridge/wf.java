@@ -8,7 +8,7 @@ final class wf extends ana {
 
     private final void d(int param0) {
         if (param0 < -60) {
-            return;
+          return;
         }
         jfa var3 = (jfa) null;
         wf.a(-28, -56, 3, (jfa) null, 27);
@@ -17,7 +17,7 @@ final class wf extends ana {
     public static void e(int param0) {
         field_v = null;
         if (param0 == 2) {
-            return;
+          return;
         }
         field_x = false;
     }
@@ -29,58 +29,51 @@ final class wf extends ana {
         ad var6;
         var5 = BachelorFridge.field_y;
         var2 = this.field_w.field_l.a(40, this.field_q.field_h);
-        if (!var2.i(-99)) {
-          var3 = (iv) ((Object) this.field_w.field_o.b((byte) 90));
-          al.a(-48, this.field_w.field_k);
-          if (param0 > 60) {
-            L0: while (true) {
-              if (var3 != null) {
-                var3.a(var2, this.field_q.field_h, 12);
-                var6 = var3.field_h.a(-27449, this.field_q);
-                var6.b(-1, 7);
-                var6.a(24831, 41, kna.field_g[31]);
-                var3 = (iv) ((Object) this.field_w.field_o.c(0));
-                continue L0;
-              } else {
-                return;
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (var2.i(-99)) {
           return;
+        }
+        var3 = (iv) (this.field_w.field_o.b((byte) 90));
+        al.a(-48, this.field_w.field_k);
+        if (param0 <= 60) {
+          return;
+        }
+        while (var3 != null) {
+          var3.a(var2, this.field_q.field_h, 12);
+          var6 = var3.field_h.a(-27449, this.field_q);
+          var6.b(-1, 7);
+          var6.a(24831, 41, kna.field_g[31]);
+          var3 = (iv) (this.field_w.field_o.c(0));
         }
     }
 
     wf(gj param0, vk param1) {
         super(param0, param1);
         try {
-            this.field_w = param1;
+          this.field_w = param1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, jfa param3, int param4) {
         int var5_int = 0;
-        if (bp.e(param0 + -33828)) {
-            return;
+        if (bp.e(param0 - 33828)) {
+          return;
         }
         try {
-            sja.field_fb.c(90, (byte) 126);
-            sja.field_fb.field_g = sja.field_fb.field_g + 2;
-            var5_int = sja.field_fb.field_g;
-            rha.a(param3.field_g, sja.field_fb, (byte) -93);
-            if (param0 != 3909) {
-                field_x = true;
-            }
-            sja.field_fb.d(param2, 0);
-            sja.field_fb.d(param1, 0);
-            sja.field_fb.d(param4, 0);
-            sja.field_fb.a((byte) -88, -var5_int + sja.field_fb.field_g);
+          sja.field_fb.c(90, (byte) 126);
+          sja.field_fb.field_g = sja.field_fb.field_g + 2;
+          var5_int = sja.field_fb.field_g;
+          rha.a(param3.field_g, sja.field_fb, (byte) -93);
+          if (param0 != 3909) {
+            field_x = true;
+          }
+          sja.field_fb.d(param2, 0);
+          sja.field_fb.d(param1, 0);
+          sja.field_fb.d(param4, 0);
+          sja.field_fb.a((byte) -88, -var5_int + sja.field_fb.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "wf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -90,22 +83,19 @@ final class wf extends ana {
     }
 
     final boolean c(byte param0) {
-        int var2;
-        var2 = -56 % ((71 - param0) / 47);
-        int fieldTemp$1 = this.field_l - 1;
+        int var2 = -56 % ((71 - param0) / 47);
+        int fieldTemp$0 = this.field_l - 1;
         this.field_l = this.field_l - 1;
-        if ((fieldTemp$1 ^ -1) <= -1) {
-          if (this.field_l == 25) {
-            wf.a(34, (byte) -101);
-            this.e((byte) 120);
-            return false;
-          } else {
-            return false;
-          }
-        } else {
+        if (fieldTemp$0 < 0) {
           this.d(-108);
           return true;
         }
+        if (this.field_l != 25) {
+          return false;
+        }
+        wf.a(34, (byte) -101);
+        this.e((byte) 120);
+        return false;
     }
 
     static {

@@ -10,7 +10,7 @@ final class ii {
         field_a = null;
         field_b = null;
         if (param0 < 76) {
-            ii.a(-86);
+          ii.a(-86);
         }
     }
 

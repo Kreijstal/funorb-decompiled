@@ -11,68 +11,35 @@ final class wi extends bg {
 
     final static boolean a(int param0, int[] param1, int param2) {
         RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
+        boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 == 0) {
-              L1: {
-                if ((param1[param0 >> 445210789] & 1 << (param0 & 31)) == 0) {
-                  stackIn_6_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L1;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 == 0) {
+            stackIn_6_0 = ((param1[param0 >> 5] & 1 << (param0 & 31)) != 0);
+            return stackIn_6_0;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("wi.H(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("wi.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_6_0 != 0;
+          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_i = null;
         if (param0 <= 86) {
-            return;
+          return;
         }
         field_g = null;
         field_j = null;
@@ -81,32 +48,28 @@ final class wi extends bg {
 
     final void a(int param0, byte[] param1) {
         try {
-            this.field_k = java.nio.ByteBuffer.allocateDirect(param1.length);
-            int var3_int = -111 / ((param0 - 25) / 44);
-            this.field_k.position(0);
-            this.field_k.put(param1);
+          this.field_k = java.nio.ByteBuffer.allocateDirect(param1.length);
+          int var3_int = -111 / ((param0 - 25) / 44);
+          this.field_k.position(0);
+          this.field_k.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "wi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final byte[] b(byte param0) {
-        byte[] var2;
-        int[] var3;
-        byte[] var4;
-        var4 = new byte[this.field_k.capacity()];
-        var2 = var4;
-        if (param0 >= 0) {
-          var3 = (int[]) null;
-          wi.a(20, (int[]) null, -59);
-          this.field_k.position(0);
-          this.field_k.get(var4);
-          return var4;
-        } else {
+        byte[] var4 = new byte[this.field_k.capacity()];
+        byte[] var2 = var4;
+        if (param0 < 0) {
           this.field_k.position(0);
           this.field_k.get(var4);
           return var4;
         }
+        int[] var3 = (int[]) null;
+        wi.a(20, (int[]) null, -59);
+        this.field_k.position(0);
+        this.field_k.get(var4);
+        return var4;
     }
 
     wi() {

@@ -14,59 +14,58 @@ final class rh extends nv implements ut {
         field_q = null;
         field_r = null;
         if (param0 != 15) {
-            field_s = true;
+          field_s = true;
         }
     }
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
-            this.field_p.a(this.h((byte) 113), (byte) 82, param1);
+          super.a(param0, param1);
+          this.field_p.a(this.h((byte) 113), (byte) 82, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     rh(la param0, boolean param1) {
         super(param0, param1);
         try {
-            this.field_p = new jma(15);
+          this.field_p = new jma(15);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final int g(byte param0) {
         if (param0 != -108) {
-            return 85;
+          return 85;
         }
         return 16776960;
     }
 
     final int a(boolean param0) {
         if (param0) {
-            field_o = (String) null;
-            return 19;
+          field_o = (String) null;
+          return 19;
         }
         return 19;
     }
 
     final static void b(int param0, int param1) {
-        kh var2;
-        if (param1 > -98) {
-          field_r = (String) null;
-          var2 = ql.field_k;
-          var2.k(param0, -2988);
-          var2.i(1, 0);
-          var2.i(2, 0);
-          return;
-        } else {
+        kh var2 = null;
+        kh var2Lifetime1;
+        if (param1 <= -98) {
           var2 = ql.field_k;
           var2.k(param0, -2988);
           var2.i(1, 0);
           var2.i(2, 0);
           return;
         }
+        field_r = (String) null;
+        var2Lifetime1 = ql.field_k;
+        var2Lifetime1.k(param0, -2988);
+        var2Lifetime1.i(1, 0);
+        var2Lifetime1.i(2, 0);
     }
 
     final void g(int param0) {
@@ -81,8 +80,8 @@ final class rh extends nv implements ut {
 
     final int a(int param0, int param1) {
         if (param1 >= -48) {
-            field_s = true;
-            return this.field_p.a(122, param0);
+          field_s = true;
+          return this.field_p.a(122, param0);
         }
         return this.field_p.a(122, param0);
     }
@@ -90,51 +89,47 @@ final class rh extends nv implements ut {
     rh(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         try {
-            this.field_p = new jma(15, param0, param1);
+          this.field_p = new jma(15, param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void k(int param0) {
-        if (!this.field_p.f((byte) -56)) {
+        if (this.field_p.f((byte) -56)) {
+          this.c(false);
           this.field_p.a((byte) -14, this.d(8031));
           if (param0 != 5418) {
             this.k((byte) 120);
             return;
-          } else {
-            return;
           }
-        } else {
-          this.c(false);
-          this.field_p.a((byte) -14, this.d(8031));
-          if (param0 == 5418) {
-            return;
-          } else {
-            this.k((byte) 120);
-            return;
-          }
+          return;
         }
+        this.field_p.a((byte) -14, this.d(8031));
+        if (param0 == 5418) {
+          return;
+        }
+        this.k((byte) 120);
     }
 
     public final int c(int param0) {
         if (param0 != 17832) {
-            field_s = true;
-            return 5592320;
+          field_s = true;
+          return 5592320;
         }
         return 5592320;
     }
 
     public final int j(byte param0) {
         if (param0 != -108) {
-            return -60;
+          return -60;
         }
         return 0;
     }
 
     public final jma k(byte param0) {
         if (param0 >= -67) {
-            return (jma) null;
+          return (jma) null;
         }
         return this.field_p;
     }

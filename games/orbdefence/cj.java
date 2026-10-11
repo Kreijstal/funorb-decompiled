@@ -12,61 +12,30 @@ final class cj {
         mi stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 <= -75) {
-              L1: {
-                if (!bd.field_u.a(false)) {
-                  break L1;
-                } else {
-                  if (param1.equals(bd.field_u.a(-80))) {
-                    break L1;
-                  } else {
-                    bd.field_u = hg.a(param1, (byte) 113);
-                    break L1;
-                  }
-                }
-              }
-              stackIn_7_0 = bd.field_u;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (mi) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 > -75) {
+            stackIn_2_0 = (mi) null;
+            return stackIn_2_0;
           }
+          if (bd.field_u.a(false) &&
+            !param1.equals(bd.field_u.a(-80))) {
+            bd.field_u = hg.a(param1, (byte) 113);
+          }
+          stackIn_7_0 = bd.field_u;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("cj.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("cj.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_7_0;
+          throw dd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -136,7 +105,7 @@ final class cj {
         hg.field_ab.d(100, 60);
         cb.field_a.a(-40);
         if (param0 <= 51) {
-            field_b = (vd) null;
+          field_b = (vd) null;
         }
     }
 
@@ -145,7 +114,7 @@ final class cj {
         field_a = null;
         field_c = null;
         if (param0 != 1280) {
-            field_a = (ba) null;
+          field_a = (ba) null;
         }
     }
 

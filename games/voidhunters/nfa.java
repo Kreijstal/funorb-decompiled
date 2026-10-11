@@ -7,24 +7,24 @@ final class nfa extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-            nfa.d(-108);
-            return true;
+          nfa.d(-108);
+          return true;
         }
         return true;
     }
 
     public static void d(int param0) {
         if (param0 != -3408) {
-            nfa.d(-105);
-            field_e = null;
-            return;
+          nfa.d(-105);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final boolean c(int param0) {
         if (param0 < 63) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -34,24 +34,24 @@ final class nfa extends uj {
 
     final int b(byte param0) {
         if (param0 <= 79) {
-            field_d = 5;
-            return 103;
+          field_d = 5;
+          return 103;
         }
         return 103;
     }
 
     final int a(int param0) {
         if (param0 != -1) {
-            this.b((byte) 92);
-            return tnb.field_o;
+          this.b((byte) 92);
+          return tnb.field_o;
         }
         return tnb.field_o;
     }
 
     final int d(byte param0) {
         if (param0 != 64) {
-            nfa.d(64);
-            return oq.field_t;
+          nfa.d(64);
+          return oq.field_t;
         }
         return oq.field_t;
     }

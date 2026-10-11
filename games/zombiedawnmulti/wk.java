@@ -28,24 +28,24 @@ abstract class wk extends se implements kh {
 
     void a(int param0, dj param1) {
         try {
-            if (param0 != 3) {
-                this.j(-11);
-            }
-            this.field_H = param1;
-            this.field_H.field_n = (wk) (this);
+          if (param0 != 3) {
+            this.j(-11);
+          }
+          this.field_H = param1;
+          this.field_H.field_n = this;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "wk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(String param0, byte param1) {
         try {
-            if (param1 <= 27) {
-                wk.h(-110);
-            }
-            oe.field_f = param0;
+          if (param1 <= 27) {
+            wk.h(-110);
+          }
+          oe.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw fa.a((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fa.a((Throwable) ((Object) runtimeException), "wk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

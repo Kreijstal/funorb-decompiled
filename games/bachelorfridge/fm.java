@@ -13,7 +13,7 @@ final class fm extends bw {
         field_f = null;
         field_g = null;
         if (param0 < 78) {
-            field_g = (int[]) null;
+          field_g = (int[]) null;
         }
     }
 

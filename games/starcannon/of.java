@@ -12,7 +12,7 @@ final class of extends rf {
         field_j = null;
         field_g = null;
         if (!param0) {
-            field_j = (String) null;
+          field_j = (String) null;
         }
     }
 

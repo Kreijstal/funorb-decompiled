@@ -10,155 +10,103 @@ final class k {
 
     final static void a(int param0) {
         try {
-            Throwable decompiledCaughtException = null;
-            java.lang.reflect.Method var1 = null;
-            Exception var1_ref = null;
-            Runtime var2 = null;
-            Throwable var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
-            int[] var5 = null;
-            try {
-              L0: {
-                L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1 != null) {
-                    try {
-                      L2: {
-                        var2 = Runtime.getRuntime();
-                        var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                        fh.field_m = 1 + (int)(var3.longValue() / 1048576L);
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var2_ref = decompiledCaughtException;
-                        break L3;
-                      }
-                    }
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (param0 == 3) {
-                  break L0;
-                } else {
-                  var5 = (int[]) null;
-                  k.a((byte[]) null, 110, (int[]) null, false, 122);
-                  return;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var1_ref = (Exception) (Object) decompiledCaughtException;
-                break L4;
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1 = null;
+          Exception var1_ref = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          int[] var5 = null;
+          try {
+            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (var1 != null) {
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                fh.field_m = 1 + (int)(var3.longValue() / 1048576L);
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
               }
             }
+            if (param0 != 3) {
+              var5 = (int[]) null;
+              k.a((byte[]) null, 110, (int[]) null, false, 122);
+              return;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref = (Exception) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(byte[] param0, int param1, int[] param2, boolean param3, int param4) {
-        int incrementValue$5 = 0;
-        int incrementValue$6 = 0;
-        byte dupTemp$7 = 0;
-        int dupTemp$8 = 0;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
+        byte dupTemp$2 = 0;
+        int dupTemp$3 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
         var7 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (!param3) {
-                break L1;
-              } else {
-                field_a = (String) null;
-                break L1;
-              }
+          if (param3) {
+            field_a = (String) null;
+          }
+          var5_int = 0;
+          while (true) {
+            if (gg.field_h.length <= var5_int) {
+              return;
             }
-            var5_int = 0;
-            L2: while (true) {
-              if (gg.field_h.length <= var5_int) {
-                break L0;
-              } else {
-                param1 = gg.field_h[var5_int];
-                var6 = var5_int << 880533700;
-                L3: while (true) {
-                  incrementValue$5 = param1;
-                  param1--;
-                  if (incrementValue$5 == 0) {
-                    var5_int++;
-                    continue L2;
-                  } else {
-                    incrementValue$6 = var6;
-                    var6++;
-                    param4 = ki.field_z[incrementValue$6];
-                    dupTemp$7 = param0[param4];
-                    dupTemp$8 = param2[dupTemp$7];
-                    param2[dupTemp$7] = dupTemp$8 + 1;
-                    ki.field_z[dupTemp$8] = param4;
-                    continue L3;
-                  }
-                }
+            param1 = gg.field_h[var5_int];
+            var6 = var5_int << 4;
+            while (true) {
+              incrementValue$0 = param1;
+              param1--;
+              if (incrementValue$0 == 0) {
+                var5_int++;
+                break;
               }
+              incrementValue$1 = var6;
+              var6++;
+              param4 = ki.field_z[incrementValue$1];
+              dupTemp$2 = param0[param4];
+              dupTemp$3 = param2[dupTemp$2];
+              param2[dupTemp$2] = dupTemp$3 + 1;
+              ki.field_z[dupTemp$3] = param4;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var5 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var5);
-
-            stackIn_12_1 = new StringBuilder().append("k.A(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_12_0 = var5;
+          stackIn_12_1 = new StringBuilder().append("k.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L5: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -175,20 +123,20 @@ final class k {
         int var3 = 0;
         int var4 = 0;
         try {
-            var2 = new pb(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
-            var3 = var2.field_v;
-            var4 = var2.field_y;
-            kg.d(false);
-            wh.field_a = new pb(var3, param1 * var4 / 4);
-            wh.field_a.e();
-            var2.d(0, 0);
-            fb.field_h = new pb(var3, var4 + -wh.field_a.field_y);
-            fb.field_h.e();
-            var2.d(0, -wh.field_a.field_y);
-            fb.field_h.field_s = wh.field_a.field_y;
-            id.b((byte) -58);
+          var2 = new pb(param0.a("final_frame.jpg", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
+          var3 = var2.field_v;
+          var4 = var2.field_y;
+          kg.d(false);
+          wh.field_a = new pb(var3, param1 * var4 / 4);
+          wh.field_a.e();
+          var2.d(0, 0);
+          fb.field_h = new pb(var3, var4 - wh.field_a.field_y);
+          fb.field_h.e();
+          var2.d(0, -wh.field_a.field_y);
+          fb.field_h.field_s = wh.field_a.field_y;
+          id.b((byte) -58);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -15,9 +15,9 @@ final class aj extends vg {
 
     public static void a(int param0) {
         if (param0 != -11061) {
-            field_l = (iu) null;
-            field_l = null;
-            return;
+          field_l = (iu) null;
+          field_l = null;
+          return;
         }
         field_l = null;
     }

@@ -9,57 +9,28 @@ final class am {
     static jc field_e;
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != -56) {
-          L0: {
-            field_d = (String) null;
-            if (param1 != (-param1 & param1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (param1 != (-param1 & param1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -56) {
+          return param1 == (-param1 & param1) ? true : false;
         }
+        field_d = (String) null;
+        return param1 == (-param1 & param1) ? true : false;
     }
 
     final static void a(byte param0) {
         if (ih.field_b == null) {
           return;
-        } else {
-          L0: {
-            af.a((byte) -67, ih.field_b);
-            ih.field_b.a(109, ei.field_c);
-            ih.field_b = null;
-            if (null != kk.field_q) {
-              kk.field_q.a((byte) -122);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          fi.field_v.requestFocus();
-          if (param0 != -16) {
-            am.a((byte) -28, 121);
-            return;
-          } else {
-            return;
-          }
         }
+        af.a((byte) -67, ih.field_b);
+        ih.field_b.a(109, ei.field_c);
+        ih.field_b = null;
+        if (null != kk.field_q) {
+          kk.field_q.a((byte) -122);
+        }
+        fi.field_v.requestFocus();
+        if (param0 == -16) {
+          return;
+        }
+        am.a((byte) -28, 121);
     }
 
     public static void b(byte param0) {

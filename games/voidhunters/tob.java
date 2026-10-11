@@ -10,8 +10,8 @@ final class tob extends fh {
 
     final static boolean g(int param0) {
         if (param0 != 0) {
-            field_l = (String) null;
-            return lsa.field_e != null ? true : false;
+          field_l = (String) null;
+          return lsa.field_e != null ? true : false;
         }
         return lsa.field_e != null ? true : false;
     }
@@ -28,27 +28,27 @@ final class tob extends fh {
     }
 
     private final void e(int param0) {
-        if (!(this.field_n <= (long)param0)) {
-            this.field_k.field_c.releasePbuffer(this.field_n);
-            this.field_n = 0L;
+        if (this.field_n > (long)param0) {
+          this.field_k.field_c.releasePbuffer(this.field_n);
+          this.field_n = 0L;
         }
     }
 
     final long f(int param0) {
         if (param0 >= -122) {
-            field_l = (String) null;
-            return this.field_n;
+          field_l = (String) null;
+          return this.field_n;
         }
         return this.field_n;
     }
 
     tob(qfa param0, int param1, int param2) {
         try {
-            this.field_m = param1 * param2;
-            this.field_k = param0;
-            this.field_n = this.field_k.field_c.createPbuffer(param1, param2);
+          this.field_m = param1 * param2;
+          this.field_k = param0;
+          this.field_n = this.field_k.field_c.createPbuffer(param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "tob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

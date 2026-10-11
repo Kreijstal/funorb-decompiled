@@ -7,13 +7,13 @@ final class gd {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            g.a(param1, "", -3603);
-            di.a(param1, 63);
-            if (param0 != -1) {
-                field_b = (String) null;
-            }
+          g.a(param1, "", -3603);
+          di.a(param1, 63);
+          if (param0 != -1) {
+            field_b = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "gd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,33 +24,33 @@ final class gd {
     }
 
     final static void a(int param0, o param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9_int = param0 + (param1.field_s + param6 + -param4);
-        int var10 = param1.field_s - -param0 - -param6 + param2;
-        int var11 = param1.field_n - -param5 - -(param1.field_t >> 59643873);
+        int var9_int = param0 + (param1.field_s + param6 - param4);
+        int var10 = param1.field_s + param0 + param6 + param2;
+        int var11 = param1.field_n + param5 + (param1.field_t >> 1);
         mi.d(var9_int, 0, var10, param7 + var11);
-        param1.a(param0 + -1, -1 + param5, param8);
+        param1.a(param0 - 1, -1 + param5, param8);
         param1.a(-1 + param0, 1 + param5, param8);
         mi.a(lj.field_D);
         mi.d(1 + var9_int, 0, 1 + var10, param7 + var11);
         param1.a(param0 + 1, param5 - 1, param8);
-        param1.a(param0 + 1, param5 - -1, param8);
+        param1.a(param0 + 1, param5 + 1, param8);
         if (param3 != 118) {
-            return;
+          return;
         }
         try {
-            mi.a(lj.field_D);
-            var10 = param0 + (param1.field_s + (param1.field_p - param6)) + -param4;
-            var9_int = -param2 + (-param6 + param0) + param1.field_s - -param1.field_p;
-            mi.d(var9_int, var11 + -param7, var10, 480);
-            param1.a(param0 + -1, -1 + param5, param8);
-            param1.a(param0 + -1, param5 + 1, param8);
-            mi.a(lj.field_D);
-            mi.d(var9_int - -1, var11 - param7, var10 + 1, 480);
-            param1.a(param0 + 1, param5 + -1, param8);
-            param1.a(1 + param0, param5 - -1, param8);
-            mi.a(lj.field_D);
+          mi.a(lj.field_D);
+          var10 = param0 + (param1.field_s + (param1.field_p - param6)) - param4;
+          var9_int = -param2 + (-param6 + param0) + param1.field_s + param1.field_p;
+          mi.d(var9_int, var11 - param7, var10, 480);
+          param1.a(param0 - 1, -1 + param5, param8);
+          param1.a(param0 - 1, param5 + 1, param8);
+          mi.a(lj.field_D);
+          mi.d(var9_int + 1, var11 - param7, var10 + 1, 480);
+          param1.a(param0 + 1, param5 - 1, param8);
+          param1.a(1 + param0, param5 + 1, param8);
+          mi.a(lj.field_D);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "gd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

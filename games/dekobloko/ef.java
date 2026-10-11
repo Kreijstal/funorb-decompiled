@@ -18,7 +18,7 @@ final class ef extends ma {
         field_T = null;
         field_S = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_O = null;
         field_R = null;
@@ -28,65 +28,56 @@ final class ef extends ma {
         ck var7;
         ck var8;
         if (param1 <= -103) {
-          if (0 == param2) {
-            if (null == this.field_L) {
-              return;
-            } else {
-              if (this.field_Q == 0) {
-                return;
-              } else {
-                if (-257 == (this.field_Q ^ -1)) {
-                  this.field_L.a(param0 + this.field_u, -128, param2, this.field_D + param3);
-                  return;
-                } else {
-                  var8 = new ck(this.field_L.field_t, this.field_L.field_y);
-                  tb.a(true, var8);
-                  this.field_L.a(0, -107, param2, 0);
-                  mk.a((byte) -5);
-                  var8.c(param0 - -this.field_u, param3 - -this.field_D, this.field_Q);
-                  return;
-                }
-              }
-            }
-          } else {
+          if (0 != param2) {
             return;
           }
-        } else {
-          ef.f((byte) -51);
-          if (0 == param2) {
-            if (null == this.field_L) {
-              return;
-            } else {
-              if (this.field_Q == 0) {
-                return;
-              } else {
-                if (-257 == (this.field_Q ^ -1)) {
-                  this.field_L.a(param0 + this.field_u, -128, param2, this.field_D + param3);
-                  return;
-                } else {
-                  var7 = new ck(this.field_L.field_t, this.field_L.field_y);
-                  tb.a(true, var7);
-                  this.field_L.a(0, -107, param2, 0);
-                  mk.a((byte) -5);
-                  var7.c(param0 - -this.field_u, param3 - -this.field_D, this.field_Q);
-                  return;
-                }
-              }
-            }
-          } else {
+          if (null == this.field_L) {
             return;
           }
+          if (this.field_Q == 0) {
+            return;
+          }
+          if (this.field_Q == 256) {
+            this.field_L.a(param0 + this.field_u, -128, param2, this.field_D + param3);
+            return;
+          }
+          var8 = new ck(this.field_L.field_t, this.field_L.field_y);
+          tb.a(true, var8);
+          this.field_L.a(0, -107, param2, 0);
+          mk.a((byte) -5);
+          var8.c(param0 + this.field_u, param3 + this.field_D, this.field_Q);
+          return;
         }
+        ef.f((byte) -51);
+        if (0 != param2) {
+          return;
+        }
+        if (null == this.field_L) {
+          return;
+        }
+        if (this.field_Q == 0) {
+          return;
+        }
+        if (this.field_Q == 256) {
+          this.field_L.a(param0 + this.field_u, -128, param2, this.field_D + param3);
+          return;
+        }
+        var7 = new ck(this.field_L.field_t, this.field_L.field_y);
+        tb.a(true, var7);
+        this.field_L.a(0, -107, param2, 0);
+        mk.a((byte) -5);
+        var7.c(param0 + this.field_u, param3 + this.field_D, this.field_Q);
+        return;
     }
 
     ef(ce param0) {
         super(param0.field_u, param0.field_D, param0.field_t, param0.field_y, (gl) null, (kg) null);
         try {
-            param0.b(this.field_y, this.field_t, 0, 0, -16555);
-            this.field_Q = 256;
-            this.field_L = param0;
+          param0.b(this.field_y, this.field_t, 0, 0, -16555);
+          this.field_Q = 256;
+          this.field_L = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -96,55 +87,31 @@ final class ef extends ma {
     }
 
     final static void f(byte param0) {
-        if (ac.field_B == le.field_m.field_i) {
-          L0: {
-            if (0 < bl.field_T) {
-              bl.field_T = bl.field_T - 1;
-              break L0;
-            } else {
-              break L0;
-            }
+        if (ac.field_B != le.field_m.field_i) {
+          qc.field_Y = qc.field_Y + (le.field_m.field_i - ac.field_B);
+          ac.field_B = le.field_m.field_i;
+          if (!(0 >= bl.field_T)) {
+            bl.field_T = bl.field_T - 1;
           }
-          L1: {
-            if (-1 > (bl.field_T ^ -1)) {
-              on.b((byte) -100);
-              break L1;
-            } else {
-              break L1;
-            }
+          if (!(bl.field_T <= 0)) {
+            on.b((byte) -100);
           }
           if (param0 < 51) {
             ef.g(-58);
             return;
-          } else {
-            return;
           }
-        } else {
-          L2: {
-            qc.field_Y = qc.field_Y + (le.field_m.field_i + -ac.field_B);
-            ac.field_B = le.field_m.field_i;
-            if (0 < bl.field_T) {
-              bl.field_T = bl.field_T - 1;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (-1 > (bl.field_T ^ -1)) {
-              on.b((byte) -100);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          if (param0 >= 51) {
-            return;
-          } else {
-            ef.g(-58);
-            return;
-          }
+          return;
         }
+        if (!(0 >= bl.field_T)) {
+          bl.field_T = bl.field_T - 1;
+        }
+        if (!(bl.field_T <= 0)) {
+          on.b((byte) -100);
+        }
+        if (param0 >= 51) {
+          return;
+        }
+        ef.g(-58);
     }
 
     static {

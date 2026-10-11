@@ -12,27 +12,27 @@ final class ob extends fm {
     static nk field_i;
 
     final static jg b(byte param0) {
-        int var1 = 82 % ((param0 - -59) / 56);
+        int var1 = 82 % ((param0 + 59) / 56);
         return new jg(f.a(116), em.b((byte) -126));
     }
 
     final void a(wl param0, byte param1) {
         try {
-            param0.b(8, this.field_m);
-            if (param1 < 34) {
-                ob.a(-10, 21);
-            }
-            param0.a(this.field_h, true);
+          param0.b(8, this.field_m);
+          if (param1 < 34) {
+            ob.a(-10, 21);
+          }
+          param0.a(this.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ob.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ob.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static ve a(int param0, int param1) {
         if (param1 != 8) {
-            field_l = (String) null;
+          field_l = (String) null;
         }
-        return tg.field_b != null ? (ve) ((Object) tg.field_b.a(param1 ^ 24718, (long)param0)) : null;
+        return tg.field_b != null ? (ve) (tg.field_b.a(param1 ^ 24718, (long)param0)) : null;
     }
 
     final static ck[] a(int param0, int param1, int param2, int param3) {
@@ -42,10 +42,10 @@ final class ob extends fm {
         ck[] var4 = var7;
         var7[0] = sm.a((byte) -99, param3, param0);
         for (var5 = 1; var5 < 9; var5++) {
-            var7[var5] = var7[0];
+          var7[var5] = var7[0];
         }
         if (param2 != -3932) {
-            ob.a((byte) 72);
+          ob.a((byte) 72);
         }
         var4[4] = sm.a((byte) -122, 64, param1);
         return var4;
@@ -53,7 +53,7 @@ final class ob extends fm {
 
     final gh a(int param0) {
         if (param0 != 18) {
-            return (gh) null;
+          return (gh) null;
         }
         return pb.field_i;
     }
@@ -62,68 +62,38 @@ final class ob extends fm {
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (rc.field_d != param1) {
-                L2: {
-                  if (rc.field_d == null) {
-                    break L2;
-                  } else {
-                    if (param1 == null) {
-                      break L2;
-                    } else {
-                      wj.field_Ob.a(param1, 0, 0, 16);
-                      rc.field_d = param1;
-                      wj.field_Ob.c(param0);
-                      break L1;
-                    }
-                  }
-                }
-                nn.a(param0, param1, true);
-                break L1;
-              } else {
-                wj.field_Ob.c(param0);
-                break L1;
-              }
+          if (rc.field_d != param1) {
+            if (rc.field_d != null &&
+              param1 != null) {
+              wj.field_Ob.a(param1, 0, 0, 16);
+              rc.field_d = param1;
+              wj.field_Ob.c(param0);
+            } else {
+              nn.a(param0, param1, true);
             }
-            L3: {
-              if (param2 >= 45) {
-                break L3;
-              } else {
-                field_g = 64;
-                break L3;
-              }
-            }
-            break L0;
+          } else {
+            wj.field_Ob.c(param0);
           }
+          if (param2 < 45) {
+            field_g = 64;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3);
-
-            stackIn_12_1 = new StringBuilder().append("ob.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("ob.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -132,28 +102,28 @@ final class ob extends fm {
         field_j = (ck[][][]) null;
         field_l = null;
         if (param0 < 86) {
-            ob.a(-105, -21, 61, -11);
+          ob.a(-105, -21, 61, -11);
         }
         field_n = null;
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
         if (256 == param2) {
-            pg.field_e.f(param0, param3, 64);
+          pg.field_e.f(param0, param3, 64);
         } else {
-            pg.field_e.f(param0, param3, param2 >> -299374302);
+          pg.field_e.f(param0, param3, param2 >> 2);
         }
         if (param1 != -299374302) {
-            ob.a((byte) 0);
+          ob.a((byte) 0);
         }
     }
 
     ob(String param0, String param1) {
         try {
-            this.field_m = param0;
-            this.field_h = param1;
+          this.field_m = param0;
+          this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

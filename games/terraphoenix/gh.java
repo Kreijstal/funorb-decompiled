@@ -12,14 +12,9 @@ final class gh extends eb {
     int field_N;
 
     final boolean a(boolean param0, int param1, int param2, int param3, int param4, gl param5, int param6) {
-        int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -28,140 +23,77 @@ final class gh extends eb {
         int var12 = 0;
         var12 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
-              stackIn_16_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              L1: {
-                var8_int = param1 + (-this.field_R + (-this.field_w + -param3));
-                var9 = param6 - (this.field_M + this.field_u + param2);
-                if (var9 * var9 + var8_int * var8_int >= this.field_Q * this.field_Q) {
-                  break L1;
-                } else {
-                  L2: {
-                    var10 = Math.atan2((double)var9, (double)var8_int) - kd.field_b;
-                    if (var10 >= 0.0) {
-                      if (0.0 < var10) {
-                        var10 = var10 + 3.141592653589793 / (double)this.field_K;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    } else {
-                      var10 = var10 - 3.141592653589793 / (double)this.field_K;
-                      break L2;
-                    }
-                  }
-                  this.field_N = (int)(var10 * (double)this.field_K / 6.283185307179586);
-                  L3: while (true) {
-                    if (this.field_K > this.field_N) {
-                      L4: while (true) {
-                        if (-1 >= (this.field_N ^ -1)) {
-                          break L1;
-                        } else {
-                          this.field_N = this.field_N + this.field_K;
-                          continue L4;
-                        }
-                      }
-                    } else {
-                      this.field_N = this.field_N - this.field_K;
-                      continue L3;
-                    }
-                  }
-                }
+          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+            return false;
+          }
+          var8_int = param1 + (-this.field_R + (-this.field_w - param3));
+          var9 = param6 - (this.field_M + this.field_u + param2);
+          if (var9 * var9 + var8_int * var8_int < this.field_Q * this.field_Q) {
+            var10 = Math.atan2((double)var9, (double)var8_int) - kd.field_b;
+            if (!(var10 < 0.0)) {
+              if (0.0 < var10) {
+                var10 = var10 + 3.141592653589793 / (double)this.field_K;
               }
-              stackIn_14_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+            } else {
+              var10 = var10 - 3.141592653589793 / (double)this.field_K;
+            }
+            this.field_N = (int)(var10 * (double)this.field_K / 6.283185307179586);
+            while (this.field_K <= this.field_N) {
+              this.field_N = this.field_N - this.field_K;
+            }
+            while (this.field_N < 0) {
+              this.field_N = this.field_N + this.field_K;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var8);
-
-            stackIn_19_1 = new StringBuilder().append("gh.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L5;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L5;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_19_0 = var8;
+          stackIn_19_1 = new StringBuilder().append("gh.U(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_14_0 != 0;
-        } else {
-          return stackIn_16_0 != 0;
+          throw qk.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_O = null;
         if (param0 >= -46) {
-            gh.g(-50);
+          gh.g(-50);
         }
         field_L = null;
     }
 
     final static int g(int param0) {
+        int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
-        int var2 = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_11_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (param0 < -114) {
-              var1_int = 0;
-              var2 = 0;
-              L1: while (true) {
-                if ((var2 ^ -1) <= -10) {
-                  stackIn_11_0 = var1_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    if (rf.field_B[var2].field_c) {
-                      var1_int++;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var2++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = -82;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param0 >= -114) {
+            stackIn_3_0 = -82;
+            return stackIn_3_0;
+          }
+          var1_int = 0;
+          for (var2 = 0; var2 < 9; var2++) {
+            if (rf.field_B[var2].field_c) {
+              var1_int++;
             }
           }
+          stackIn_11_0 = var1_int;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw qk.a((Throwable) ((Object) var1), "gh.V(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_11_0;
         }
     }
 

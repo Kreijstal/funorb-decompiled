@@ -12,7 +12,7 @@ final class vj {
         field_c = null;
         field_a = (dl[][]) null;
         if (param0 != 26988) {
-            vj.a(-88);
+          vj.a(-88);
         }
     }
 

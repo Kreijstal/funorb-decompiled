@@ -10,10 +10,10 @@ final class uf {
 
     public static void a(int param0) {
         if (param0 != 32578) {
-            uf.a((byte) -121);
-            field_c = null;
-            field_b = null;
-            return;
+          uf.a((byte) -121);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;
@@ -24,65 +24,49 @@ final class uf {
     }
 
     final static String a(byte param0) {
-        if (!(fh.field_B != qg.field_g)) {
-            return je.field_a;
+        if (fh.field_B == qg.field_g) {
+          return je.field_a;
         }
         if (param0 > -107) {
-            uf.a(-94);
-            if (!(qg.field_g != vc.field_F)) {
-                return t.field_t;
-            }
-            if (!(pb.field_k.a(1000))) {
-                return t.field_t;
-            }
-            return gi.field_b;
-        }
-        if (!(qg.field_g != vc.field_F)) {
+          uf.a(-94);
+          if (qg.field_g == vc.field_F) {
             return t.field_t;
-        }
-        if (!(pb.field_k.a(1000))) {
+          }
+          if (!pb.field_k.a(1000)) {
             return t.field_t;
+          }
+          return gi.field_b;
+        }
+        if (qg.field_g == vc.field_F) {
+          return t.field_t;
+        }
+        if (!pb.field_k.a(1000)) {
+          return t.field_t;
         }
         return gi.field_b;
     }
 
     final boolean b(int param0) {
-        int stackIn_7_0 = 0;
-        if (param0 <= -15) {
-          if (ae.field_g != this) {
-            if (dg.field_e != this) {
-              if (b.field_b == this) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 > -15) {
           field_a = 89;
-          if (ae.field_g != this) {
-            if (dg.field_e == this) {
-              return true;
-            } else {
-              L0: {
-                if (b.field_b != this) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (ae.field_g == this) {
             return true;
           }
+          if (dg.field_e != this) {
+            return b.field_b == this ? true : false;
+          }
+          return true;
         }
+        if (ae.field_g == this) {
+          return true;
+        }
+        if (dg.field_e == this) {
+          return true;
+        }
+        if (b.field_b != this) {
+          return false;
+        }
+        return true;
     }
 
     static {

@@ -11,42 +11,40 @@ final class da {
 
     final static void a(ha param0, boolean param1, byte param2) {
         try {
-            if (param2 != -119) {
-                field_a = (String) null;
-            }
-            sb.a(param1, (byte) -33, param0, 256);
+          if (param2 != -119) {
+            field_a = (String) null;
+          }
+          sb.a(param1, (byte) -33, param0, 256);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "da.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "da.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 < 115) {
-          field_d = (ln) null;
-          ec.a(65280);
-          de.a(param3, param4, param0, param1);
-          return;
-        } else {
+        if (param2 >= 115) {
           ec.a(65280);
           de.a(param3, param4, param0, param1);
           return;
         }
+        field_d = (ln) null;
+        ec.a(65280);
+        de.a(param3, param4, param0, param1);
     }
 
     final static void a(pg param0, int param1, pg param2) {
         if (param1 != 20) {
-            return;
+          return;
         }
         try {
-            if (param2.field_a != null) {
-                param2.a(true);
-            }
-            param2.field_a = param0.field_a;
-            param2.field_b = param0;
-            param2.field_a.field_b = param2;
-            param2.field_b.field_a = param2;
+          if (param2.field_a != null) {
+            param2.a(true);
+          }
+          param2.field_a = param0.field_a;
+          param2.field_b = param0;
+          param2.field_a.field_b = param2;
+          param2.field_b.field_a = param2;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "da.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,25 +58,20 @@ final class da {
     }
 
     final static void a(byte param0) {
-        int var1;
         ff.field_c = tj.field_t.b(ce.field_g[20]);
-        var1 = tj.field_t.b(ce.field_g[21]);
-        if (param0 == -101) {
+        int var1 = tj.field_t.b(ce.field_g[21]);
+        if (param0 != -101) {
+          da.a(6);
           if (ff.field_c < var1) {
             ff.field_c = var1;
             return;
-          } else {
-            return;
           }
-        } else {
-          da.a(6);
-          if (ff.field_c >= var1) {
-            return;
-          } else {
-            ff.field_c = var1;
-            return;
-          }
+          return;
         }
+        if (ff.field_c >= var1) {
+          return;
+        }
+        ff.field_c = var1;
     }
 
     static {

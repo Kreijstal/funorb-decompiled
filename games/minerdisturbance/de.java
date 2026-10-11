@@ -10,7 +10,7 @@ final class de {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 34) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;

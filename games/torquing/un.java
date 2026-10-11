@@ -17,10 +17,10 @@ final class un {
     final static int a(int param0) {
         no.field_n.a(false);
         if (param0 != 0) {
-            return -2;
+          return -2;
         }
         if (!nn.field_c.b(20)) {
-            return hm.c(3);
+          return hm.c(3);
         }
         return 0;
     }
@@ -32,7 +32,7 @@ final class un {
         field_b = null;
         field_c = null;
         if (param0 != -13524) {
-            un.b(40);
+          un.b(40);
         }
     }
 

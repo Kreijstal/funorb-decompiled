@@ -51,7 +51,7 @@ final class pu {
         field_h = null;
         field_G = null;
         if (param0 > -63) {
-            pu.a((byte) -1);
+          pu.a((byte) -1);
         }
         field_B = null;
     }
@@ -59,86 +59,52 @@ final class pu {
     private final void c(int param0) {
         this.field_C = false;
         if (param0 != 8) {
-            field_B = (int[]) null;
+          field_B = (int[]) null;
         }
     }
 
     final static void d(int param0) {
         int var2 = 0;
         of var3 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              vu.field_M = null;
-              no.field_K = null;
-              ua.field_s = false;
-              if (null == be.field_u) {
-                break L1;
-              } else {
-                be.field_u.b(76);
-                be.field_u = null;
-                break L1;
-              }
+          vu.field_M = null;
+          no.field_K = null;
+          ua.field_s = false;
+          if (null != be.field_u) {
+            be.field_u.b(76);
+            be.field_u = null;
+          }
+          oi.field_d = null;
+          if (param0 > -86) {
+            return;
+          }
+          if (null != qc.field_g) {
+            qc.field_g.b(94);
+            qc.field_g = null;
+          }
+          qm.field_J = null;
+          if (wl.field_F != null) {
+            wl.field_F.b(87);
+            wl.field_F = null;
+          }
+          eu.field_e = null;
+          if (null != oi.field_d) {
+            var3 = (of) (oi.field_d.a((byte) 66));
+            while (var3 != null) {
+              var3.c((byte) -76);
+              var3 = (of) (oi.field_d.c(1));
             }
             oi.field_d = null;
-            if (param0 <= -86) {
-              L2: {
-                if (null == qc.field_g) {
-                  break L2;
-                } else {
-                  qc.field_g.b(94);
-                  qc.field_g = null;
-                  break L2;
-                }
-              }
-              L3: {
-                qm.field_J = null;
-                if (wl.field_F != null) {
-                  wl.field_F.b(87);
-                  wl.field_F = null;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                eu.field_e = null;
-                if (null != oi.field_d) {
-                  var3 = (of) ((Object) oi.field_d.a((byte) 66));
-                  L5: while (true) {
-                    if (var3 == null) {
-                      oi.field_d = null;
-                      break L4;
-                    } else {
-                      var3.c((byte) -76);
-                      var3 = (of) ((Object) oi.field_d.c(1));
-                      continue L5;
-                    }
-                  }
-                } else {
-                  break L4;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ig.a((Throwable) ((Object) var1), "pu.E(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -146,21 +112,21 @@ final class pu {
         int var5 = 0;
         int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
         for (var5 = param1; var5 < this.field_O; var5++) {
-            this.field_z[var5] = (short)(this.field_z[var5] + param3);
-            this.field_y[var5] = (short)(this.field_y[var5] + param2);
-            this.field_o[var5] = (short)(this.field_o[var5] + param0);
+          this.field_z[var5] = (short)(this.field_z[var5] + param3);
+          this.field_y[var5] = (short)(this.field_y[var5] + param2);
+          this.field_o[var5] = (short)(this.field_o[var5] + param0);
         }
         this.c(8);
     }
 
     final void a(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -168,87 +134,46 @@ final class pu {
         var12 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (this.field_C) {
           return;
-        } else {
-          L0: {
-            this.field_C = true;
-            var2 = 32767;
-            var3 = 32767;
-            var4 = 32767;
-            var5 = -32768;
-            if (param0 == -3831) {
-              break L0;
-            } else {
-              this.c(16);
-              break L0;
-            }
+        }
+        this.field_C = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        if (param0 != -3831) {
+          this.c(16);
+        }
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; this.field_O > var8; var8++) {
+          var9 = this.field_z[var8];
+          var10 = this.field_y[var8];
+          if (var9 < var2) {
+            var2 = var9;
           }
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L1: while (true) {
-            if (this.field_O <= var8) {
-              this.field_p = var2;
-              this.field_P = var6;
-              this.field_L = var5;
-              this.field_D = var4;
-              this.field_H = var3;
-              this.field_J = var7;
-              return;
-            } else {
-              L2: {
-                var9 = this.field_z[var8];
-                var10 = this.field_y[var8];
-                if (var9 < var2) {
-                  var2 = var9;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (var10 > var6) {
-                  var6 = var10;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                var11 = this.field_o[var8];
-                if (var3 <= var10) {
-                  break L4;
-                } else {
-                  var3 = var10;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var5 >= var9) {
-                  break L5;
-                } else {
-                  var5 = var9;
-                  break L5;
-                }
-              }
-              L6: {
-                if (var11 <= var7) {
-                  break L6;
-                } else {
-                  var7 = var11;
-                  break L6;
-                }
-              }
-              if (var4 > var11) {
-                var4 = var11;
-                var8++;
-                continue L1;
-              } else {
-                var8++;
-                continue L1;
-              }
-            }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          var11 = this.field_o[var8];
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+          if (var4 > var11) {
+            var4 = var11;
           }
         }
+        this.field_p = var2;
+        this.field_P = var6;
+        this.field_L = var5;
+        this.field_D = var4;
+        this.field_H = var3;
+        this.field_J = var7;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -256,46 +181,35 @@ final class pu {
         int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
         int var7 = -96 / ((param4 - 36) / 55);
         for (var6 = 0; var6 < this.field_O; var6++) {
-            this.field_z[var6] = (short)(param3 * this.field_z[var6] / param0);
-            this.field_y[var6] = (short)(this.field_y[var6] * param2 / param0);
-            this.field_o[var6] = (short)(param1 * this.field_o[var6] / param0);
+          this.field_z[var6] = (short)(param3 * this.field_z[var6] / param0);
+          this.field_y[var6] = (short)(this.field_y[var6] * param2 / param0);
+          this.field_o[var6] = (short)(param1 * this.field_o[var6] / param0);
         }
         this.c(8);
     }
 
     final static void b(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         bv var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 28704) {
-                break L1;
-              } else {
-                field_h = (String) null;
-                break L1;
-              }
-            }
-            var1 = vl.field_n;
-            L2: while (true) {
-              if (!g.a(param0 ^ -13083)) {
-                break L0;
-              } else {
-                var1.h(32161, 8);
-                fieldTemp$2 = var1.field_q + 1;
-                var1.field_q = var1.field_q + 1;
-                var2 = fieldTemp$2;
-                fg.a(param0 ^ 28704, var1);
-                vl.field_n.e(-var2 + var1.field_q, param0 + -22774);
-                continue L2;
-              }
-            }
+          if (param0 != 28704) {
+            field_h = (String) null;
           }
+          var1 = vl.field_n;
+          while (g.a(param0 ^ -13083)) {
+            var1.h(32161, 8);
+            fieldTemp$0 = var1.field_q + 1;
+            var1.field_q = var1.field_q + 1;
+            var2 = fieldTemp$0;
+            fg.a(param0 ^ 28704, var1);
+            vl.field_n.e(-var2 + var1.field_q, param0 - 22774);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;

@@ -9,26 +9,26 @@ final class sj {
 
     final static void a(byte param0, qr param1, qr param2) {
         try {
-            if (null == param1.field_M) {
-                param1.field_M = new pf();
-            }
-            if (null == param2.field_M) {
-                param2.field_M = new pf();
-            }
-            if (eg.field_q == null) {
-                eg.field_q = new in(64);
-            }
-            if (!(sl.field_m != null)) {
-                sl.field_m = new in(64);
-            }
-            vd.field_j = param1.field_M;
-            fp.field_b = param2.field_M;
-            if (param0 <= 42) {
-                field_a = (int[]) null;
-            }
-            an.a(true);
+          if (null == param1.field_M) {
+            param1.field_M = new pf();
+          }
+          if (null == param2.field_M) {
+            param2.field_M = new pf();
+          }
+          if (eg.field_q == null) {
+            eg.field_q = new in(64);
+          }
+          if (sl.field_m == null) {
+            sl.field_m = new in(64);
+          }
+          vd.field_j = param1.field_M;
+          fp.field_b = param2.field_M;
+          if (param0 <= 42) {
+            field_a = (int[]) null;
+          }
+          an.a(true);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class sj {
         field_d = null;
         field_c = null;
         if (param0 > -80) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -62,168 +62,98 @@ final class sj {
         int var10 = 0;
         int var11 = 0;
         fs var12 = null;
+        Object var5Lifetime1;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5_intLifetime1;
+        int var6Lifetime1;
+        int var5_intLifetime2;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var12 = ho.field_d;
-              var2 = var12.field_m;
-              if (param0 == -31560) {
-                break L1;
-              } else {
-                sj.a(60);
-                break L1;
+          var12 = ho.field_d;
+          var2 = var12.field_m;
+          if (param0 != -31560) {
+            sj.a(60);
+          }
+          boolean decompiledFrameRemainder0 = true;
+          var3 = new boolean[4];
+          if (var2 != null) {
+            var4 = ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[3]];
+            if (var4 != 0) {
+              var5_int = 0;
+              for (var6 = 0; var6 < 4; var6++) {
+                if (0 == ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[var6]]) {
+                  var5_int++;
+                }
               }
-            }
-            L2: {
-              var3 = new boolean[4];
-              if (var2 == null) {
-                break L2;
-              } else {
-                var4 = ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[3]];
-                if (-1 != (var4 ^ -1)) {
-                  var5_int = 0;
-                  var6 = 0;
-                  L3: while (true) {
-                    if (-5 >= (var6 ^ -1)) {
-                      var6_ref = null;
-                      var5_int = 0;
-                      var7_int = 0;
-                      L4: while (true) {
-                        L5: {
-                          L6: {
-                            L7: {
-                              if (var7_int >= 4) {
-                                var6_ref = re.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
-                                if (1 == var5_int) {
-                                  break L6;
-                                } else {
-                                  break L7;
-                                }
-                              } else {
-                                var8 = ((sd) ((Object) var2)).field_w[var7_int];
-                                stackIn_18_0 = -1;
-
-                                stackIn_18_1 = ((sd) ((Object) var2)).field_u[var8] ^ -1;
-
-                                L8: {
-                                  if (stackIn_18_0 == stackIn_18_1) {
-                                    L9: {
-                                      var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
-                                      var6_ref = var9;
-                                      if (var5_int != 0) {
-                                        if (var5_int == 1) {
-                                          var6_ref = var9 + qn.field_d + (String) (var6_ref);
-                                          break L9;
-                                        } else {
-                                          var6_ref = var9 + ef.field_d + (String) (var6_ref);
-                                          break L9;
-                                        }
-                                      } else {
-                                        var6_ref = var9;
-                                        break L9;
-                                      }
-                                    }
-                                    var5_int++;
-                                    break L8;
-                                  } else {
-                                    break L8;
-                                  }
-                                }
-                                var7_int++;
-                                continue L4;
-                              }
-                            }
-                            var6_ref = (String) (var6_ref) + oo.field_f;
-                            break L5;
-                          }
-                          var6_ref = (String) (var6_ref) + aq.field_n;
-                          var7 = var6_ref;
-                          var5 = var7;
-                          break L5;
-                        }
-                        uq.field_m.a((String) (var6_ref), param0 + 58835, "generateshortfall");
-                        break L2;
-                      }
+              var6_ref = null;
+              var5_intLifetime2 = 0;
+              var7_int = 0;
+              while (var7_int < 4) {
+                var8 = ((sd) ((Object) var2)).field_w[var7_int];
+                stackIn_18_0 = -1;
+                stackIn_18_1 = ~((sd) ((Object) var2)).field_u[var8];
+                if (stackIn_18_0 == stackIn_18_1) {
+                  var9 = re.a("<col=<%0>><%1></col>", 4371, new String[]{Integer.toString(gm.field_k[var8], 16), h.field_x[var8]});
+                  var6_ref = var9;
+                  if (var5_intLifetime2 != 0) {
+                    if (var5_intLifetime2 == 1) {
+                      var6_ref = var9 + qn.field_d + (String) (var6_ref);
                     } else {
-                      L10: {
-                        if (0 == ((sd) ((Object) var2)).field_u[((sd) ((Object) var2)).field_w[var6]]) {
-                          var5_int++;
-                          break L10;
-                        } else {
-                          break L10;
-                        }
-                      }
-                      var6++;
-                      continue L3;
+                      var6_ref = var9 + ef.field_d + (String) (var6_ref);
                     }
-                  }
-                } else {
-                  uq.field_m.a(cb.field_m, 27275, "generateshortfall");
-                  break L2;
-                }
-              }
-            }
-            var4 = 0;
-            var5_int = 0;
-            L11: while (true) {
-              if ((var5_int ^ -1) <= -5) {
-                var5 = null;
-                var4 = 0;
-                var11 = 0;
-                var6 = var11;
-                L12: while (true) {
-                  if ((var11 ^ -1) <= -5) {
-                    uq.field_m.a((String) (var5), 27275, "generateprojectprogress");
-                    break L0;
                   } else {
-                    if (var12.field_u[var11] > 0) {
-                      L13: {
-                        if (var3[var11]) {
-                          L14: {
-                            var7_ref = re.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
-                            var5 = var7_ref;
-                            if (var4 == 0) {
-                              var5 = var7_ref;
-                              break L14;
-                            } else {
-                              if (-2 != (var4 ^ -1)) {
-                                var5 = var7_ref + ef.field_d + (String) (var5);
-                                break L14;
-                              } else {
-                                var5 = var7_ref + qn.field_d + (String) (var5);
-                                break L14;
-                              }
-                            }
-                          }
-                          var4++;
-                          break L13;
-                        } else {
-                          break L13;
-                        }
-                      }
-                      var11++;
-                      continue L12;
-                    } else {
-                      var11++;
-                      continue L12;
-                    }
+                    var6_ref = var9;
                   }
+                  var5_intLifetime2++;
                 }
+                var7_int++;
+              }
+              var6_ref = re.a(qj.field_d, 4371, new String[]{(String) (var6_ref)});
+              if (1 != var5_intLifetime2) {
+                var6_ref = (String) (var6_ref) + oo.field_f;
               } else {
-                L15: {
-                  if (var12.field_u[var5_int] <= 0) {
-                    break L15;
-                  } else {
-                    var4++;
-                    break L15;
-                  }
-                }
-                var5_int++;
-                continue L11;
+                var6_ref = (String) (var6_ref) + aq.field_n;
+                var7 = var6_ref;
+                var5 = var7;
               }
+              uq.field_m.a((String) (var6_ref), param0 + 58835, "generateshortfall");
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              uq.field_m.a(cb.field_m, 27275, "generateshortfall");
             }
           }
+          var4Lifetime1 = 0;
+          for (var5_intLifetime1 = 0; var5_intLifetime1 < 4; var5_intLifetime1++) {
+            if (var12.field_u[var5_intLifetime1] > 0) {
+              var4Lifetime1++;
+            }
+          }
+          var5Lifetime1 = null;
+          var4Lifetime2 = 0;
+          var11 = 0;
+          var6Lifetime1 = var11;
+          while (var11 < 4) {
+            if (var12.field_u[var11] > 0 &&
+              var3[var11]) {
+              var7_ref = re.a("<col=<%0>><%1></col>", param0 ^ -27221, new String[]{Integer.toString(bg.field_e[var11], 16), or.field_d[var11]});
+              var5Lifetime1 = var7_ref;
+              if (var4Lifetime2 == 0) {
+                var5Lifetime1 = var7_ref;
+              } else {
+                if (var4Lifetime2 != 1) {
+                  var5Lifetime1 = var7_ref + ef.field_d + (String) (var5Lifetime1);
+                } else {
+                  var5Lifetime1 = var7_ref + qn.field_d + (String) (var5Lifetime1);
+                }
+              }
+              var4Lifetime2++;
+            }
+            var11++;
+          }
+          uq.field_m.a((String) (var5Lifetime1), 27275, "generateprojectprogress");
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

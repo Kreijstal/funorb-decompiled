@@ -39,141 +39,75 @@ final class uj {
 
     final static String a(boolean param0, java.applet.Applet param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            int var8 = 0;
-            String var9 = null;
-            String stackIn_3_0 = null;
-            String stackIn_9_0 = null;
-            String stackIn_15_0 = null;
-            String stackIn_17_0 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            RuntimeException stackIn_21_0 = null;
-            StringBuilder stackIn_21_1 = null;
-            String stackIn_21_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            var8 = Bounce.field_N;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          int var8 = 0;
+          String var9 = null;
+          String stackIn_3_0 = null;
+          String stackIn_9_0 = null;
+          String stackIn_15_0 = null;
+          String stackIn_17_0 = null;
+          RuntimeException stackIn_20_0 = null;
+          StringBuilder stackIn_20_1 = null;
+          String stackIn_21_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          var8 = Bounce.field_N;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    var9 = param1.getParameter("cookieprefix");
-                    if (param0) {
-                      var3 = var9 + "settings";
-                      var4 = (String) (ac.a(param1, "getcookies", -31185));
-                      var5 = di.a(-116, ';', var4);
-                      var6 = 0;
-                      L2: while (true) {
-                        if (var6 >= var5.length) {
-                          decompiledRegionSelector0 = 1;
-                          break L1;
-                        } else {
-                          L3: {
-                            var7 = var5[var6].indexOf('=');
-                            if ((var7 ^ -1) > -1) {
-                              break L3;
-                            } else {
-                              if (!var5[var6].substring(0, var7).trim().equals(var3)) {
-                                break L3;
-                              } else {
-                                stackIn_9_0 = var5[var6].substring(var7 + 1).trim();
-                                decompiledRegionSelector0 = 2;
-                                break L1;
-                              }
-                            }
-                          }
-                          var6++;
-                          continue L2;
-                        }
-                      }
-                    } else {
-                      stackIn_3_0 = (String) null;
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L4: {
-                    var2 = decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L4;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  if (decompiledRegionSelector0 == 1) {
-                    if (jg.field_B == null) {
-                      stackIn_17_0 = param1.getParameter("settings");
-                      decompiledRegionSelector1 = 1;
-                      break L0;
-                    } else {
-                      stackIn_15_0 = jg.field_B;
-                      decompiledRegionSelector1 = 0;
-                      break L0;
-                    }
-                  } else {
-                    decompiledRegionSelector1 = 3;
-                    break L0;
-                  }
-                }
+              var9 = param1.getParameter("cookieprefix");
+              if (!param0) {
+                stackIn_3_0 = (String) null;
+                return stackIn_3_0;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_20_0 = (RuntimeException) (var2_ref);
-
-                stackIn_20_1 = new StringBuilder().append("uj.A(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-                  stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-                  stackIn_21_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw ii.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
-            }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_15_0;
-            } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_17_0;
-              } else {
-                if (decompiledRegionSelector1 == 2) {
-                  return stackIn_3_0;
-                } else {
+              var3 = var9 + "settings";
+              var4 = (String) (ac.a(param1, "getcookies", -31185));
+              var5 = di.a(-116, ';', var4);
+              for (var6 = 0; var6 < var5.length; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (var7 >= 0 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_9_0 = var5[var6].substring(var7 + 1).trim();
                   return stackIn_9_0;
                 }
               }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
+            if (jg.field_B == null) {
+              stackIn_17_0 = param1.getParameter("settings");
+              return stackIn_17_0;
+            }
+            stackIn_15_0 = jg.field_B;
+            return stackIn_15_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_20_0 = var2_ref;
+            stackIn_20_1 = new StringBuilder().append("uj.A(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_21_2 = "null";
+            } else {
+              stackIn_21_2 = "{...}";
+            }
+            throw ii.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(byte param0) {
         field_v = null;
         if (param0 <= 36) {
-            field_s = -35;
+          field_s = -35;
         }
     }
 

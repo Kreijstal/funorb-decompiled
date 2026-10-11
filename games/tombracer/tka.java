@@ -9,19 +9,19 @@ final class tka extends vpa {
 
     tka(hja[] param0) {
         try {
-            this.field_e = mj.field_J;
-            this.field_o = param0;
+          this.field_e = mj.field_J;
+          this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "tka.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(byte param0) {
         if (param0 > -52) {
-            field_q = (jea) null;
-            field_p = null;
-            field_q = null;
-            return;
+          field_q = (jea) null;
+          field_p = null;
+          field_q = null;
+          return;
         }
         field_p = null;
         field_q = null;
@@ -35,41 +35,21 @@ final class tka extends vpa {
         RuntimeException var1 = null;
         var4 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 > 46) {
-                break L1;
-              } else {
-                field_p = (nh) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (ou.field_e == null) {
-                break L2;
-              } else {
-                if (lm.field_r == null) {
-                  break L2;
-                } else {
-                  return;
-                }
-              }
-            }
-            lm.field_r = new int[256];
-            ou.field_e = new int[256];
-            var1_int = 0;
-            L3: while (true) {
-              if (256 <= var1_int) {
-                break L0;
-              } else {
-                var2 = (double)var1_int / 255.0 * 6.283185307179586;
-                ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
-                lm.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
-                var1_int++;
-                continue L3;
-              }
-            }
+          if (param0 <= 46) {
+            field_p = (nh) null;
           }
+          if (ou.field_e != null &&
+            lm.field_r != null) {
+            return;
+          }
+          lm.field_r = new int[256];
+          ou.field_e = new int[256];
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = (double)var1_int / 255.0 * 6.283185307179586;
+            ou.field_e[var1_int] = (int)(Math.sin(var2) * 4096.0);
+            lm.field_r[var1_int] = (int)(4096.0 * Math.cos(var2));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -83,8 +63,6 @@ final class tka extends vpa {
         int stackIn_15_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -97,99 +75,50 @@ final class tka extends vpa {
         int var12 = 0;
         int var13 = 0;
         try {
-          L0: {
-            L1: {
-              bea.f(param1 - -param0.field_i, param3 - -param0.field_n, param0.field_m, param0.field_p, 10197915);
-              if (param4) {
-                if (((rj) ((Object) param0)).field_w) {
-                  stackIn_6_0 = 1;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 0;
-                  break L1;
-                }
-              } else {
-                stackIn_6_0 = 0;
-                break L1;
-              }
-            }
-            L2: {
-              var6_int = stackIn_6_0;
-              if (param4) {
-                if (param0.b((byte) -34)) {
-                  stackIn_12_0 = 1;
-                  break L2;
-                } else {
-                  stackIn_12_0 = 0;
-                  break L2;
-                }
-              } else {
-                stackIn_12_0 = 0;
-                break L2;
-              }
-            }
-            L3: {
-              var7 = stackIn_12_0;
-              var8 = 0;
-              if (var6_int == 0) {
-                stackIn_15_0 = 16777215;
-                break L3;
-              } else {
-                stackIn_15_0 = 2394342;
-                break L3;
-              }
-            }
-            L4: {
-              var9 = stackIn_15_0;
-              if (var7 == 0) {
-                break L4;
-              } else {
-                var8 = var8 | 2;
-                break L4;
-              }
-            }
-            L5: {
-              if (var6_int == 0) {
-                break L5;
-              } else {
-                var8 = var8 | 1;
-                break L5;
-              }
-            }
-            var10 = this.field_o[var8];
-            var11 = param0.field_i + param1 - -((-var10.field_a + param0.field_m) / 2);
-            var12 = (param0.field_p + -var10.field_b) / 2 + (param0.field_n + param3);
-            var13 = param1 + (param0.field_i + param0.field_m / 2);
-            var10.b(var11, var12);
-            this.field_e.a(this.d(-4, param0), var13, param3, var9, -1);
-            if (param2 == 16777215) {
-              break L0;
-            } else {
-              tka.b((byte) 56);
-              return;
-            }
+          bea.f(param1 + param0.field_i, param3 + param0.field_n, param0.field_m, param0.field_p, 10197915);
+          if (param4) {
+            stackIn_6_0 = (((rj) (param0)).field_w) ? 1 : 0;
+          } else {
+            stackIn_6_0 = 0;
           }
+          var6_int = stackIn_6_0;
+          if (param4) {
+            stackIn_12_0 = (param0.b((byte) -34)) ? 1 : 0;
+          } else {
+            stackIn_12_0 = 0;
+          }
+          var7 = stackIn_12_0;
+          var8 = 0;
+          stackIn_15_0 = (var6_int == 0) ? 16777215 : 2394342;
+          var9 = stackIn_15_0;
+          if (var7 != 0) {
+            var8 = var8 | 2;
+          }
+          if (var6_int != 0) {
+            var8 = var8 | 1;
+          }
+          var10 = this.field_o[var8];
+          var11 = param0.field_i + param1 + (-var10.field_a + param0.field_m) / 2;
+          var12 = (param0.field_p - var10.field_b) / 2 + (param0.field_n + param3);
+          var13 = param1 + (param0.field_i + param0.field_m / 2);
+          var10.b(var11, var12);
+          this.field_e.a(this.d(-4, param0), var13, param3, var9, -1);
+          if (param2 == 16777215) {
+            return;
+          }
+          tka.b((byte) 56);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var6);
-
-            stackIn_24_1 = new StringBuilder().append("tka.B(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L6;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_24_0 = var6;
+          stackIn_24_1 = new StringBuilder().append("tka.B(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

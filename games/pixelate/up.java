@@ -27,7 +27,7 @@ final class up {
         field_d = null;
         field_c = null;
         if (param0 < 59) {
-            up.a((byte) 127);
+          up.a((byte) 127);
         }
         field_e = null;
         field_i = null;
@@ -41,47 +41,46 @@ final class up {
 
     final void a(boolean param0, int param1) {
         if (!param0) {
-            this.field_b = this.field_b - 20;
+          this.field_b = this.field_b - 20;
         } else {
-            this.field_b = this.field_b + 20;
+          this.field_b = this.field_b + 20;
         }
-        if ((this.field_b ^ -1) > -1) {
-            this.field_b = 0;
+        if (this.field_b < 0) {
+          this.field_b = 0;
         }
         if (param1 != 20) {
-            this.c(-100);
+          this.c(-100);
         }
-        if (!((this.field_b ^ -1) >= -256)) {
-            this.field_b = 255;
+        if (this.field_b > 255) {
+          this.field_b = 255;
         }
     }
 
     final void c(int param0) {
         this.field_b = 0;
         if (param0 > -90) {
-            field_k = (int[]) null;
+          field_k = (int[]) null;
         }
     }
 
     final void a(int param0) {
         int var3 = 0;
-        if (!(this.field_b != 0)) {
-            return;
+        if (this.field_b == 0) {
+          return;
         }
         if (param0 != -25330) {
-            this.a(false, 110);
+          this.a(false, 110);
         }
         if (null == this.field_l) {
-            this.b(16);
+          this.b(16);
         }
         int var2 = (-this.field_b + 255) / 10;
         this.field_l.a(-var2 + 80, 180, this.field_b);
-        if (uo.field_j <= 0) {
-            if (!(10 > this.field_m)) {
-                var3 = 3 * this.field_b >> -2035067678;
-                hd.field_w.a(-var2 + 96, 196, var3);
-                hd.field_w.b(-var2 + 96, 196, var3);
-            }
+        if (uo.field_j <= 0 &&
+          10 <= this.field_m) {
+          var3 = 3 * this.field_b >> 2;
+          hd.field_w.a(-var2 + 96, 196, var3);
+          hd.field_w.b(-var2 + 96, 196, var3);
         }
     }
 
@@ -98,9 +97,9 @@ final class up {
         int var5 = (-var11.field_a + 5) * 16;
         boolean[] var6 = ad.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
-            for (var8 = 0; var8 < var11.field_f; var8++) {
-                var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
-            }
+          for (var8 = 0; var8 < var11.field_f; var8++) {
+            var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
+          }
         }
         qa.field_f.a(param0 + 19676);
     }
@@ -182,7 +181,7 @@ final class up {
         field_i[9] = 50;
         field_n = new pj[25];
         for (var0 = 0; var0 < field_n.length; var0++) {
-            field_n[var0] = new pj();
+          field_n[var0] = new pj();
         }
         field_j = 0;
         field_a = new String[]{"It's a falling block game - with a twist! Each coloured piece falls onto the grid, <col=FF9900>changing the colour</col> of four cells where it lands.", "Fill the whole grid with coloured tiles and try to create the <col=FF9900>target picture</col> as fast as you can."};

@@ -11,15 +11,7 @@ final class am {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          am.a(false);
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0) {
           field_d = null;
           field_e = null;
           field_a = null;
@@ -27,6 +19,12 @@ final class am {
           field_c = null;
           return;
         }
+        am.a(false);
+        field_d = null;
+        field_e = null;
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

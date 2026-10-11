@@ -8,8 +8,8 @@ final class uf {
 
     final static boolean a(int param0) {
         if (param0 <= 89) {
-            uf.a(-98);
-            return ga.field_c.a((byte) 11);
+          uf.a(-98);
+          return ga.field_c.a((byte) 11);
         }
         return ga.field_c.a((byte) 11);
     }
@@ -19,7 +19,7 @@ final class uf {
         field_a = null;
         field_b = null;
         if (param0 != 24) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

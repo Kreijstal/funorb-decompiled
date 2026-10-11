@@ -20,81 +20,51 @@ final class cj {
         String var3 = null;
         long var4 = 0L;
         try {
-            ed.field_d = true;
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            if (param0 <= 114) {
-                field_g = 35;
-            }
-            var4 = -1L;
-            oh.a(var4, var3, param1, var2, 0);
+          ed.field_d = true;
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          if (param0 <= 114) {
+            field_g = 35;
+          }
+          var4 = -1L;
+          oh.a(var4, var3, param1, var2, 0);
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int stackIn_3_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var1_int = 0;
-            if (param0 > 79) {
-              var2 = 1;
-              L1: while (true) {
-                if (6 <= var2) {
-                  L2: {
-                    if (!bh.field_p) {
-                      break L2;
-                    } else {
-                      if (!aj.field_h) {
-                        break L2;
-                      } else {
-                        pi.field_f = pi.field_f + 128;
-                        var1_int = 5;
-                        ae.field_z = ae.field_z + 64;
-                        break L2;
-                      }
-                    }
-                  }
-                  stackIn_15_0 = var1_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    if (pa.field_s[ok.field_b][var2]) {
-                      var1_int = var2;
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  var2++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = -73;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var1_int = 0;
+          if (param0 <= 79) {
+            stackIn_3_0 = -73;
+            return stackIn_3_0;
+          }
+          for (var2 = 1; 6 > var2; var2++) {
+            if (pa.field_s[ok.field_b][var2]) {
+              var1_int = var2;
             }
           }
+          if (bh.field_p &&
+            aj.field_h) {
+            pi.field_f = pi.field_f + 128;
+            var1_int = 5;
+            ae.field_z = ae.field_z + 64;
+          }
+          stackIn_15_0 = var1_int;
+          return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_15_0;
         }
     }
 
@@ -106,7 +76,7 @@ final class cj {
         field_h = null;
         field_f = null;
         if (param0 != 0) {
-            field_j = -32;
+          field_j = -32;
         }
     }
 

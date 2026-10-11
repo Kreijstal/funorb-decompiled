@@ -8,13 +8,13 @@ final class rma {
     final static void a(boolean param0, String param1, String param2, byte param3) {
         rsa.field_u = param2;
         if (param3 < 66) {
-            return;
+          return;
         }
         try {
-            jo.field_E = param1;
-            vn.a(108, gja.field_bb, param0);
+          jo.field_E = param1;
+          vn.a(108, gja.field_bb, param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class rma {
         field_b = null;
         field_a = null;
         if (param0 != 13902) {
-            field_b = (jea) null;
+          field_b = (jea) null;
         }
     }
 

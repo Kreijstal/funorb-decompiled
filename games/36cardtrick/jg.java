@@ -6,9 +6,9 @@ final class jg extends je {
     private je field_k;
 
     final void a(int param0) {
-        if (!(this.field_l <= param0)) {
-            this.field_l = this.field_l - param0;
-            return;
+        if (this.field_l > param0) {
+          this.field_l = this.field_l - param0;
+          return;
         }
         param0 = param0 - this.field_l;
         this.field_k.field_d = this.field_d;
@@ -18,8 +18,8 @@ final class jg extends je {
         this.field_d.field_a = (qb) ((Object) this.field_k);
         this.field_a = null;
         this.field_d = null;
-        if (!(0 >= param0)) {
-            this.field_k.a(param0);
+        if (0 < param0) {
+          this.field_k.a(param0);
         }
     }
 
@@ -43,72 +43,48 @@ final class jg extends je {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (this.field_l > param2) {
-              this.field_l = this.field_l - param2;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              param1 = param1 + this.field_l;
-              param2 = param2 - this.field_l;
-              this.field_k.field_a = this.field_a;
-              this.field_k.field_d = this.field_d;
-              this.field_l = 0;
-              this.field_a.field_d = (qb) ((Object) this.field_k);
-              this.field_d.field_a = (qb) ((Object) this.field_k);
-              this.field_a = null;
-              this.field_d = null;
-              if (param2 > 0) {
-                this.field_k.a(param0, param1, param2);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            }
+          if (this.field_l > param2) {
+            this.field_l = this.field_l - param2;
+            return;
           }
+          param1 = param1 + this.field_l;
+          param2 = param2 - this.field_l;
+          this.field_k.field_a = this.field_a;
+          this.field_k.field_d = this.field_d;
+          this.field_l = 0;
+          this.field_a.field_d = (qb) ((Object) this.field_k);
+          this.field_d.field_a = (qb) ((Object) this.field_k);
+          this.field_a = null;
+          this.field_d = null;
+          if (param2 <= 0) {
+            return;
+          }
+          this.field_k.a(param0, param1, param2);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("jg.D(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("jg.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ma.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     jg(je param0, int param1) {
         try {
-            this.field_k = param0;
-            this.field_i = this.field_k.field_i;
-            this.field_l = param1;
+          this.field_k = param0;
+          this.field_i = this.field_k.field_i;
+          this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

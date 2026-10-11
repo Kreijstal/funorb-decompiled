@@ -9,8 +9,8 @@ final class sd extends ga implements lf {
 
     public final n a(int param0) {
         if (param0 >= -40) {
-            this.a(-19);
-            return this.field_S;
+          this.a(-19);
+          return this.field_S;
         }
         return this.field_S;
     }
@@ -23,85 +23,67 @@ final class sd extends ga implements lf {
         field_R = null;
         field_T = null;
         if (param0 != 54) {
-            field_T = (String) null;
+          field_T = (String) null;
         }
     }
 
     final void h(int param0) {
-        qm var3;
-        if (param0 <= 125) {
-          L0: {
-            var3 = (qm) null;
-            this.a((qm) null, 84, -107, 114);
-            super.h(127);
-            if (null != this.field_S) {
-              this.field_S.b((byte) 78);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 > 125) {
+          super.h(127);
+          if (null != this.field_S) {
+            this.field_S.b((byte) 78);
           }
           return;
-        } else {
-          L1: {
-            super.h(127);
-            if (null != this.field_S) {
-              this.field_S.b((byte) 78);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        qm var3 = (qm) null;
+        this.a((qm) null, 84, -107, 114);
+        super.h(127);
+        if (null != this.field_S) {
+          this.field_S.b((byte) 78);
         }
     }
 
     final void a(qm param0, int param1, int param2, int param3) {
         try {
-            int var5_int = -123 / ((param1 - -50) / 59);
-            super.a(param0, -115, param2, param3);
-            this.field_P = -param3 + -this.field_r + qh.field_i;
+          int var5_int = -123 / ((param1 + 50) / 59);
+          super.a(param0, -115, param2, param3);
+          this.field_P = -param3 - this.field_r + qh.field_i;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "sd.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(boolean param0, n param1) {
         if (!param0) {
-            return;
+          return;
         }
         try {
-            this.field_S = param1;
+          this.field_S = param1;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "sd.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String a(byte param0) {
-        if (param0 < -23) {
-          if (this.field_m) {
-            if (null == this.field_t) {
-              return null;
-            } else {
-              sc.a(qh.field_i - -this.field_g + -this.field_P, 125, bm.field_h);
-              return this.field_t;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (param0 >= -23) {
           field_R = (dl[]) null;
-          if (this.field_m) {
-            if (null == this.field_t) {
-              return null;
-            } else {
-              sc.a(qh.field_i - -this.field_g + -this.field_P, 125, bm.field_h);
-              return this.field_t;
-            }
-          } else {
+          if (!this.field_m) {
             return null;
           }
+          if (null != this.field_t) {
+            sc.a(qh.field_i + this.field_g - this.field_P, 125, bm.field_h);
+            return this.field_t;
+          }
+          return null;
         }
+        if (!this.field_m) {
+          return null;
+        }
+        if (null != this.field_t) {
+          sc.a(qh.field_i + this.field_g - this.field_P, 125, bm.field_h);
+          return this.field_t;
+        }
+        return null;
     }
 
     static {

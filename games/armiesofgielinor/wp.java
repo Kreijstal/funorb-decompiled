@@ -34,105 +34,66 @@ final class wp extends ms {
         byte[] var28;
         int[] var29;
         byte[] var30;
-        L0: {
-          var12 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param0 == -65) {
-            break L0;
-          } else {
-            field_v = (String[]) null;
-            break L0;
-          }
+        int var3_intLifetime1;
+        int var6Lifetime1;
+        var12 = ArmiesOfGielinor.field_M ? 1 : 0;
+        if (param0 != -65) {
+          field_v = (String[]) null;
         }
-        if (null == this.field_A) {
-          L1: {
-            if (this.field_x != null) {
-              break L1;
-            } else {
-              if (!jj.field_c.a(11894, this.field_C)) {
-                return false;
-              } else {
-                var27 = jj.field_c.b(-26, this.field_C);
-                this.field_x = new byte[var27.length][];
-                var3_int = 0;
-                L2: while (true) {
-                  if (var27.length <= var3_int) {
-                    break L1;
-                  } else {
-                    this.field_x[var3_int] = jj.field_c.a((byte) 114, var27[var3_int], this.field_C);
-                    var3_int++;
-                    continue L2;
-                  }
-                }
-              }
-            }
-          }
-          var2 = 1;
-          var13 = 0;
-          var3_int = var13;
-          L3: while (true) {
-            if (var13 >= this.field_x.length) {
-              if (var2 != 0) {
-                var3 = new at();
-                var4 = jj.field_c.d(this.field_C, param0 ^ 65);
-                this.field_A = new ht[var4];
-                var29 = jj.field_c.b(-92, this.field_C);
-                var6 = 0;
-                L4: while (true) {
-                  if (var6 >= var29.length) {
-                    this.field_x = (byte[][]) null;
-                    return true;
-                  } else {
-                    var30 = this.field_x[var6];
-                    var8 = new vh(var30);
-                    var8.field_q = 1;
-                    var9 = var8.e((byte) -104);
-                    var10 = null;
-                    var11 = (ig) ((Object) var3.e((byte) 124));
-                    L5: while (true) {
-                      L6: {
-                        if (var11 == null) {
-                          break L6;
-                        } else {
-                          if ((var11.field_k ^ -1) != (var9 ^ -1)) {
-                            var11 = (ig) ((Object) var3.a((byte) 123));
-                            continue L5;
-                          } else {
-                            var10 = var11;
-                            break L6;
-                          }
-                        }
-                      }
-                      L7: {
-                        if (var10 == null) {
-                          var10 = new ig(var9, up.field_e.c(var9, (byte) 81));
-                          var3.a((byte) -119, (tc) (var10));
-                          break L7;
-                        } else {
-                          break L7;
-                        }
-                      }
-                      this.field_A[var29[var6]] = new ht(var30, (ig) (var10));
-                      var6++;
-                      continue L4;
-                    }
-                  }
-                }
-              } else {
-                return false;
-              }
-            } else {
-              var28 = this.field_x[var13];
-              var16 = new vh(var28);
-              var16.field_q = 1;
-              var6 = var16.e((byte) -104);
-              var2 = var2 != 0 & up.field_e.a(var6, (byte) -56) ? 1 : 0;
-              var13++;
-              continue L3;
-            }
-          }
-        } else {
+        if (null != this.field_A) {
           return true;
         }
+        if (this.field_x == null) {
+          if (!jj.field_c.a(11894, this.field_C)) {
+            return false;
+          }
+          var27 = jj.field_c.b(-26, this.field_C);
+          this.field_x = new byte[var27.length][];
+          for (var3_int = 0; var27.length > var3_int; var3_int++) {
+            this.field_x[var3_int] = jj.field_c.a((byte) 114, var27[var3_int], this.field_C);
+          }
+        }
+        var2 = 1;
+        var13 = 0;
+        var3_intLifetime1 = var13;
+        while (var13 < this.field_x.length) {
+          var28 = this.field_x[var13];
+          var16 = new vh(var28);
+          var16.field_q = 1;
+          var6 = var16.e((byte) -104);
+          var2 = var2 != 0 & up.field_e.a(var6, (byte) -56) ? 1 : 0;
+          var13++;
+        }
+        if (var2 == 0) {
+          return false;
+        }
+        var3 = new at();
+        var4 = jj.field_c.d(this.field_C, param0 ^ 65);
+        this.field_A = new ht[var4];
+        var29 = jj.field_c.b(-92, this.field_C);
+        for (var6Lifetime1 = 0; var6Lifetime1 < var29.length; var6Lifetime1++) {
+          var30 = this.field_x[var6Lifetime1];
+          var8 = new vh(var30);
+          var8.field_q = 1;
+          var9 = var8.e((byte) -104);
+          var10 = null;
+          var11 = (ig) (var3.e((byte) 124));
+          while (var11 != null) {
+            if (~var11.field_k != ~var9) {
+              var11 = (ig) (var3.a((byte) 123));
+              continue;
+            }
+            var10 = var11;
+            break;
+          }
+          if (var10 == null) {
+            var10 = new ig(var9, up.field_e.c(var9, (byte) 81));
+            var3.a((byte) -119, (tc) (var10));
+          }
+          this.field_A[var29[var6Lifetime1]] = new ht(var30, (ig) (var10));
+        }
+        this.field_x = (byte[][]) null;
+        return true;
     }
 
     wp(int param0) {
@@ -141,7 +102,7 @@ final class wp extends ms {
 
     final static void d(byte param0) {
         if (param0 != -13) {
-            wp.d((byte) 11);
+          wp.d((byte) 11);
         }
     }
 
@@ -149,7 +110,7 @@ final class wp extends ms {
         field_z = null;
         field_H = (int[][]) null;
         if (param0 >= -54) {
-            field_B = (String) null;
+          field_B = (String) null;
         }
         field_F = null;
         field_y = null;

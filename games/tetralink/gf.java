@@ -13,7 +13,7 @@ final class gf extends mc {
 
     private final static int a(int param0, double param1) {
         if (param1 == 1.0) {
-            return param0;
+          return param0;
         }
         int var3 = param0 >> 16;
         int var4 = param0 >> 8 & 255;
@@ -29,10 +29,10 @@ final class gf extends mc {
     }
 
     final boolean a(float param0, int param1, ah param2) {
+        int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
-        int var5;
         kh var6;
         byte[] var7;
         int[] var8;
@@ -45,262 +45,125 @@ final class gf extends mc {
         byte[] var15;
         int[] var16;
         byte[] var17;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= this.field_s.length) {
-            var4 = param1 * param1;
-            this.field_u = new int[var4];
-            var5 = 0;
-            L1: while (true) {
-              if (var5 >= this.field_s.length) {
-                this.field_n = param0;
-                return true;
-              } else {
-                L2: {
-                  var6 = hd.a(1, this.field_s[var5], param2);
-                  var6.a();
-                  var17 = var6.field_o;
-                  var15 = var17;
-                  var7 = var15;
-                  var16 = var6.field_p;
-                  var14 = var16;
-                  var8 = var14;
-                  var9 = this.field_t[var5];
-                  if ((var9 & -16777216) != 50331648) {
-                    break L2;
-                  } else {
-                    var10 = var9 & 16711935;
-                    var11 = var9 >> 8 & 255;
-                    var12 = 0;
-                    L3: while (true) {
-                      if (var12 >= var16.length) {
-                        break L2;
-                      } else {
-                        var13 = var16[var12];
-                        if ((var13 & 65535) == var13 >> 8) {
-                          var13 = var13 & 255;
-                          var8[var12] = var10 * var13 >> 8 & 16711935 | var11 * var13 & 65280;
-                          var12++;
-                          continue L3;
-                        } else {
-                          var12++;
-                          continue L3;
-                        }
-                      }
-                    }
-                  }
-                }
-                var10 = 0;
-                L4: while (true) {
-                  if (var10 >= var16.length) {
-                    L5: {
-                      if (var5 != 0) {
-                        var10 = this.field_r[var5 - 1];
-                        break L5;
-                      } else {
-                        var10 = 0;
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      if (var5 != 0) {
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    if (var10 == 0) {
-                      if (var6.field_b != param1) {
-                        L7: {
-                          if (var6.field_b != 64) {
-                            break L7;
-                          } else {
-                            if (param1 != 128) {
-                              break L7;
-                            } else {
-                              var11 = 0;
-                              var12 = 0;
-                              L8: while (true) {
-                                if (var12 < param1) {
-                                  var13 = 0;
-                                  L9: while (true) {
-                                    if (var13 >= param1) {
-                                      var12++;
-                                      continue L8;
-                                    } else {
-                                      incrementValue$0 = var11;
-                                      var11++;
-                                      this.field_u[incrementValue$0] = var8[var7[(var13 >> 1) + (var12 >> 1 << 6)] & 255];
-                                      var13++;
-                                      continue L9;
-                                    }
-                                  }
-                                } else {
-                                  var5++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        L10: {
-                          if (var6.field_b != 128) {
-                            break L10;
-                          } else {
-                            if (param1 != 64) {
-                              break L10;
-                            } else {
-                              var11 = 0;
-                              var12 = 0;
-                              L11: while (true) {
-                                if (var12 < param1) {
-                                  var13 = 0;
-                                  L12: while (true) {
-                                    if (var13 >= param1) {
-                                      var12++;
-                                      continue L11;
-                                    } else {
-                                      incrementValue$1 = var11;
-                                      var11++;
-                                      this.field_u[incrementValue$1] = var8[var7[(var13 << 1) + (var12 << 1 << 7)] & 255];
-                                      var13++;
-                                      continue L12;
-                                    }
-                                  }
-                                } else {
-                                  var5++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        throw new RuntimeException();
-                      } else {
-                        var11 = 0;
-                        L13: while (true) {
-                          if (var11 < var4) {
-                            this.field_u[var11] = var8[var17[var11] & 255];
-                            var11++;
-                            continue L13;
-                          } else {
-                            var5++;
-                            continue L1;
-                          }
-                        }
-                      }
-                    } else {
-                      var5++;
-                      continue L1;
-                    }
-                  } else {
-                    var8[var10] = gf.a(var16[var10], (double)param0);
-                    var10++;
-                    continue L4;
-                  }
-                }
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var4Lifetime1;
+        for (var4 = 0; var4 < this.field_s.length; var4++) {
+          if (!param2.f(this.field_s[var4], 88)) {
+            return false;
+          }
+        }
+        var4Lifetime1 = param1 * param1;
+        this.field_u = new int[var4Lifetime1];
+        for (var5 = 0; var5 < this.field_s.length; var5++) {
+          var6 = hd.a(1, this.field_s[var5], param2);
+          var6.a();
+          var17 = var6.field_o;
+          var15 = var17;
+          var7 = var15;
+          var16 = var6.field_p;
+          var14 = var16;
+          var8 = var14;
+          var9 = this.field_t[var5];
+          if ((var9 & -16777216) == 50331648) {
+            var10 = var9 & 16711935;
+            var11 = var9 >> 8 & 255;
+            for (var12 = 0; var12 < var16.length; var12++) {
+              var13 = var16[var12];
+              if ((var13 & 65535) == var13 >> 8) {
+                var13 = var13 & 255;
+                var8[var12] = var10 * var13 >> 8 & 16711935 | var11 * var13 & 65280;
               }
             }
+          }
+          for (var10Lifetime1 = 0; var10Lifetime1 < var16.length; var10Lifetime1++) {
+            var8[var10Lifetime1] = gf.a(var16[var10Lifetime1], (double)param0);
+          }
+          if (var5 != 0) {
+            var10Lifetime2 = this.field_r[var5 - 1];
           } else {
-            if (param2.f(this.field_s[var4], 88)) {
-              var4++;
-              continue L0;
+            var10Lifetime2 = 0;
+          }
+          if (var5 != 0) {
+          }
+          if (var10Lifetime2 == 0) {
+            if (var6.field_b == param1) {
+              for (var11Lifetime1 = 0; var11Lifetime1 < var4Lifetime1; var11Lifetime1++) {
+                this.field_u[var11Lifetime1] = var8[var17[var11Lifetime1] & 255];
+              }
             } else {
-              return false;
-            }
-          }
-        }
-    }
-
-    gf(bh param0) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        int var2;
-        int var3;
-        L0: {
-          this.field_o = param0.e(127);
-          stackIn_2_0 = this;
-
-          if (param0.d((byte) -99) != 1) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        L1: {
-          ((gf) (this)).field_p = stackIn_3_1 != 0;
-          var2 = param0.d((byte) -99);
-          if (var2 < 1) {
-            break L1;
-          } else {
-            if (var2 <= 4) {
-              this.field_s = new int[var2];
-              var3 = 0;
-              L2: while (true) {
-                if (var3 >= var2) {
-                  L3: {
-                    if (var2 <= 1) {
-                      break L3;
-                    } else {
-                      this.field_r = new int[var2 - 1];
-                      var3 = 0;
-                      L4: while (true) {
-                        if (var3 >= var2 - 1) {
-                          break L3;
-                        } else {
-                          this.field_r[var3] = param0.d((byte) -99);
-                          var3++;
-                          continue L4;
-                        }
-                      }
-                    }
+              if (var6.field_b == 64 &&
+                param1 == 128) {
+                var11Lifetime1 = 0;
+                for (var12Lifetime1 = 0; var12Lifetime1 < param1; var12Lifetime1++) {
+                  for (var13Lifetime1 = 0; var13Lifetime1 < param1; var13Lifetime1++) {
+                    incrementValue$0 = var11Lifetime1;
+                    var11Lifetime1++;
+                    this.field_u[incrementValue$0] = var8[var7[(var13Lifetime1 >> 1) + (var12Lifetime1 >> 1 << 6)] & 255];
                   }
-                  L5: {
-                    if (var2 <= 1) {
-                      break L5;
-                    } else {
-                      this.field_q = new int[var2 - 1];
-                      var3 = 0;
-                      L6: while (true) {
-                        if (var3 >= var2 - 1) {
-                          break L5;
-                        } else {
-                          this.field_q[var3] = param0.d((byte) -99);
-                          var3++;
-                          continue L6;
-                        }
-                      }
-                    }
-                  }
-                  this.field_t = new int[var2];
-                  var3 = 0;
-                  L7: while (true) {
-                    if (var3 >= var2) {
-                      param0.d((byte) -99);
-                      param0.d((byte) -99);
-                      this.field_u = null;
-                      return;
-                    } else {
-                      this.field_t[var3] = param0.f(119);
-                      var3++;
-                      continue L7;
+                }
+              } else {
+                if (var6.field_b == 128 &&
+                  param1 == 64) {
+                  var11Lifetime1 = 0;
+                  for (var12Lifetime1 = 0; var12Lifetime1 < param1; var12Lifetime1++) {
+                    for (var13Lifetime1 = 0; var13Lifetime1 < param1; var13Lifetime1++) {
+                      incrementValue$1 = var11Lifetime1;
+                      var11Lifetime1++;
+                      this.field_u[incrementValue$1] = var8[var7[(var13Lifetime1 << 1) + (var12Lifetime1 << 1 << 7)] & 255];
                     }
                   }
                 } else {
-                  this.field_s[var3] = param0.e(127);
-                  var3++;
-                  continue L2;
+                  throw new RuntimeException();
                 }
               }
-            } else {
-              break L1;
             }
           }
+        }
+        this.field_n = param0;
+        return true;
+    }
+
+    gf(bh param0) {
+        boolean stackIn_3_1 = false;
+        int var2;
+        int var3;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime3;
+        this.field_o = param0.e(127);
+        stackIn_3_1 = (param0.d((byte) -99) == 1);
+        this.field_p = stackIn_3_1;
+        var2 = param0.d((byte) -99);
+        if (var2 >= 1 &&
+          var2 <= 4) {
+          this.field_s = new int[var2];
+          for (var3 = 0; var3 < var2; var3++) {
+            this.field_s[var3] = param0.e(127);
+          }
+          if (var2 > 1) {
+            this.field_r = new int[var2 - 1];
+            for (var3Lifetime1 = 0; var3Lifetime1 < var2 - 1; var3Lifetime1++) {
+              this.field_r[var3Lifetime1] = param0.d((byte) -99);
+            }
+          }
+          if (var2 > 1) {
+            this.field_q = new int[var2 - 1];
+            for (var3Lifetime2 = 0; var3Lifetime2 < var2 - 1; var3Lifetime2++) {
+              this.field_q[var3Lifetime2] = param0.d((byte) -99);
+            }
+          }
+          this.field_t = new int[var2];
+          for (var3Lifetime3 = 0; var3Lifetime3 < var2; var3Lifetime3++) {
+            this.field_t[var3Lifetime3] = param0.f(119);
+          }
+          param0.d((byte) -99);
+          param0.d((byte) -99);
+          this.field_u = null;
+          return;
         }
         throw new RuntimeException();
     }

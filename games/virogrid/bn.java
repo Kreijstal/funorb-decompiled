@@ -8,9 +8,9 @@ final class bn {
     static String field_a;
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param0 >>> 1346386079;
+        int var3 = param0 >>> 31;
         if (param1 <= 118) {
-            return 121;
+          return 121;
         }
         return -var3 + (var3 + param0) / param2;
     }
@@ -19,7 +19,7 @@ final class bn {
         field_c = null;
         field_a = null;
         if (param0 > -108) {
-            bn.a(-84, (byte) 74, -123);
+          bn.a(-84, (byte) 74, -123);
         }
     }
 
@@ -31,80 +31,45 @@ final class bn {
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char[] var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
         var6 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            if (!Character.isISOControl(param1)) {
-              var2_int = 70 / ((0 - param0) / 60);
-              if (!kn.a(param1, (byte) -69)) {
-                var7 = va.field_e;
-                var3 = var7;
-                var4 = 0;
-                L1: while (true) {
-                  if (var7.length <= var4) {
-                    var3 = li.field_f;
-                    var4 = 0;
-                    L2: while (true) {
-                      if (var4 >= var3.length) {
-                        stackIn_21_0 = 0;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        var5 = var3[var4];
-                        if (var5 != param1) {
-                          var4++;
-                          continue L2;
-                        } else {
-                          stackIn_18_0 = 1;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    var5 = var7[var4];
-                    if ((param1 ^ -1) != (var5 ^ -1)) {
-                      var4++;
-                      continue L1;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              } else {
-                stackIn_6_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (Character.isISOControl(param1)) {
+            return false;
+          }
+          var2_int = 70 / ((0 - param0) / 60);
+          if (kn.a(param1, (byte) -69)) {
+            return true;
+          }
+          var7 = va.field_e;
+          var3 = var7;
+          for (var4 = 0; var7.length > var4; var4++) {
+            var5 = var7[var4];
+            if (~param1 == ~var5) {
+              return true;
             }
           }
+          var3Lifetime1 = li.field_f;
+          var4Lifetime1 = 0;
+          while (true) {
+            if (var4Lifetime1 >= var3Lifetime1.length) {
+              return false;
+            }
+            var5Lifetime1 = var3Lifetime1[var4Lifetime1];
+            if (var5Lifetime1 != param1) {
+              var4Lifetime1++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw kg.a((Throwable) ((Object) var2), "bn.B(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_18_0 != 0;
-            } else {
-              return stackIn_21_0 != 0;
-            }
-          }
         }
     }
 

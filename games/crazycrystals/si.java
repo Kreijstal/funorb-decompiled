@@ -16,7 +16,7 @@ final class si {
         field_e = null;
         field_c = null;
         if (param0 == 14403) {
-            return;
+          return;
         }
         si.a(-109, true);
     }
@@ -29,32 +29,21 @@ final class si {
         RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var4 = (ca) ((Object) gn.field_Q.g(32073));
-            L1: while (true) {
-              if (var4 == null) {
-                var2 = pm.field_c.g(32073);
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (!param1) {
-                      break L0;
-                    } else {
-                      si.a(98, true);
-                      return;
-                    }
-                  } else {
-                    eq.b(2, param0);
-                    var2 = pm.field_c.a(param1);
-                    continue L2;
-                  }
-                }
-              } else {
-                nh.a(param0, (byte) -99, var4);
-                var4 = (ca) ((Object) gn.field_Q.a(false));
-                continue L1;
-              }
-            }
+          var4 = (ca) (gn.field_Q.g(32073));
+          while (var4 != null) {
+            nh.a(param0, (byte) -99, var4);
+            var4 = (ca) (gn.field_Q.a(false));
           }
+          var2 = pm.field_c.g(32073);
+          while (var2 != null) {
+            eq.b(2, param0);
+            var2 = pm.field_c.a(param1);
+          }
+          if (!param1) {
+            return;
+          }
+          si.a(98, true);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

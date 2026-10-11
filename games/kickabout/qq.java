@@ -12,8 +12,8 @@ final class qq extends i {
 
     final static hd h(byte param0) {
         if (param0 >= -39) {
-            qq.g(-104);
-            return ei.field_d.field_yb;
+          qq.g(-104);
+          return ei.field_d.field_yb;
         }
         return ei.field_d.field_yb;
     }
@@ -21,24 +21,24 @@ final class qq extends i {
     final static void a(int param0, byte param1, int param2, String param3, int param4, int param5, int param6) {
         int var7_int = 15 + un.field_d.a(param3);
         pt.a(640, -22914, 630, 480, 0);
-        on.a(-20 + (param5 - -160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
+        on.a(-20 + (param5 + 160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
         if (param1 != -101) {
-            return;
+          return;
         }
         try {
-            ta.e(117);
-            pt.a(640, -22914, param5 + 160, 480, 0);
-            on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, param6, param0);
-            ta.e(119);
-            un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
+          ta.e(117);
+          pt.a(640, -22914, param5 + 160, 480, 0);
+          on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, param6, param0);
+          ta.e(119);
+          un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "qq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "qq.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
     public static void g(int param0) {
         if (param0 != 2356) {
-            return;
+          return;
         }
         field_K = null;
         field_F = null;
@@ -51,10 +51,10 @@ final class qq extends i {
     final void a(int param0, int param1) {
         super.a(108, param1);
         if (param0 <= 60) {
-            return;
+          return;
         }
-        if (!(0 != param1)) {
-            ql.a((byte) 58, true, dg.field_f);
+        if (0 == param1) {
+          ql.a((byte) 58, true, dg.field_f);
         }
     }
 

@@ -5,7 +5,7 @@ final class sf extends hl implements eja {
     private una field_l;
 
     public final void a(int param0, int param1) {
-        int var3 = -28 / ((param0 - -30) / 36);
+        int var3 = -28 / ((param0 + 30) / 36);
         super.a(69, this.field_l.field_e * param1);
     }
 
@@ -20,27 +20,26 @@ final class sf extends hl implements eja {
 
     public final una b(int param0) {
         if (param0 != -32491) {
-            this.a((byte) -127);
-            return this.field_l;
+          this.a((byte) -127);
+          return this.field_l;
         }
         return this.field_l;
     }
 
     public final jaclib.memory.Buffer a(boolean param0, byte param1) {
-        if (param1 >= -9) {
-          this.a((byte) 69);
-          return super.a(this.field_h.field_Qc, param0, 1);
-        } else {
+        if (param1 < -9) {
           return super.a(this.field_h.field_Qc, param0, 1);
         }
+        this.a((byte) 69);
+        return super.a(this.field_h.field_Qc, param0, 1);
     }
 
     sf(kda param0, una param1, boolean param2) {
         super(param0, 34963, param2);
         try {
-            this.field_l = param1;
+          this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "sf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

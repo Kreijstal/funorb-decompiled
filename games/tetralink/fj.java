@@ -24,46 +24,19 @@ final class fj {
     int field_s;
 
     final int a(byte param0) {
-        L0: {
-          if (this.field_l) {
-            break L0;
-          } else {
-            L1: {
-              if (-3 != (this.field_i ^ -1)) {
-                break L1;
-              } else {
-                if (0 < this.field_k) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (oj.field_c != this.field_r) {
-              L2: {
-                if (param0 == -63) {
-                  break L2;
-                } else {
-                  this.a((byte) -16);
-                  break L2;
-                }
-              }
-              L3: {
-                if ((ji.field_Tb ^ -1) != -3) {
-                  break L3;
-                } else {
-                  if (!oj.a(1, this.field_n)) {
-                    break L3;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-              return 0;
-            } else {
-              return 1;
-            }
+        if (!this.field_l && (this.field_i != 2 ||
+          0 >= this.field_k)) {
+          if (oj.field_c == this.field_r) {
+            return 1;
           }
+          if (param0 != -63) {
+            this.a((byte) -16);
+          }
+          if (ji.field_Tb == 2 &&
+            oj.a(1, this.field_n)) {
+            return 1;
+          }
+          return 0;
         }
         return 2;
     }
@@ -88,9 +61,9 @@ final class fj {
         this.field_h = ml.field_fb;
         this.field_c = ab.field_U;
         if (param0) {
-            this.field_a = ha.field_i;
+          this.field_a = ha.field_i;
         } else {
-            this.field_a = null;
+          this.field_a = null;
         }
         this.field_r = el.field_tc;
         this.field_l = bo.field_s;
@@ -99,20 +72,20 @@ final class fj {
 
     fj(int param0, String param1, int param2, String param3, String param4) {
         try {
-            this.field_j = param2;
-            this.field_r = 0L;
-            this.field_l = true;
-            this.field_n = param1;
-            this.field_a = null;
-            this.field_k = 0;
-            this.field_s = 0;
-            this.field_g = 0;
-            this.field_e = param1;
-            this.field_c = param3;
-            this.field_i = param0;
-            this.field_h = param4;
+          this.field_j = param2;
+          this.field_r = 0L;
+          this.field_l = true;
+          this.field_n = param1;
+          this.field_a = null;
+          this.field_k = 0;
+          this.field_s = 0;
+          this.field_g = 0;
+          this.field_e = param1;
+          this.field_c = param3;
+          this.field_i = param0;
+          this.field_h = param4;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

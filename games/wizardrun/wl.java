@@ -14,163 +14,104 @@ class wl {
     final boolean c(byte param0) {
         int var2 = 124 % ((18 - param0) / 36);
         if (null != this.field_c) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final static md b(int param0) {
         if (param0 != 250) {
-            wl.b(58);
-            return (md) ((Object) new ia());
+          wl.b(58);
+          return (md) ((Object) new ia());
         }
         return (md) ((Object) new ia());
     }
 
     final static void a(String param0, java.applet.Applet param1, byte param2) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String var5 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
-            RuntimeException stackIn_14_0 = null;
-            StringBuilder stackIn_14_1 = null;
-            String stackIn_14_2 = null;
-            StringBuilder stackIn_16_1 = null;
-            StringBuilder stackIn_17_1 = null;
-            String stackIn_17_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var3_ref = null;
-            RuntimeException var3_ref2 = null;
+          String var3 = null;
+          String var4 = null;
+          String var5 = null;
+          RuntimeException stackIn_13_0 = null;
+          StringBuilder stackIn_13_1 = null;
+          String stackIn_14_2 = null;
+          StringBuilder stackIn_16_1 = null;
+          String stackIn_17_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          try {
+            nk.field_M = param0;
             try {
-              L0: {
-                nk.field_M = param0;
-                try {
-                  L1: {
-                    L2: {
-                      var3 = param1.getParameter("cookieprefix");
-                      var4 = param1.getParameter("cookiehost");
-                      var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                      if (0 == param0.length()) {
-                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    if (param2 < -89) {
-                      cl.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -102);
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var3_ref = decompiledCaughtException;
-                    decompiledRegionSelector0 = 1;
-                    break L3;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  decompiledRegionSelector1 = 0;
-                  break L0;
-                } else {
-                  jf.a((byte) 121, param1);
-                  decompiledRegionSelector1 = 1;
-                  break L0;
-                }
+              var3 = param1.getParameter("cookieprefix");
+              var4 = param1.getParameter("cookiehost");
+              var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+              if (0 == param0.length()) {
+                var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_13_0 = (RuntimeException) (var3_ref2);
-
-                stackIn_13_1 = new StringBuilder().append("wl.MB(");
-
-                if (param0 == null) {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-                  stackIn_14_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-                  stackIn_14_2 = "{...}";
-                  break L4;
-                }
+              if (param2 >= -89) {
+                return;
               }
-              L5: {
-
-
-                stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-
-                if (param1 == null) {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-                  stackIn_17_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-                  stackIn_17_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw bd.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ',' + param2 + ')');
+              cl.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -102);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return;
+            jf.a((byte) 121, param1);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_13_0 = var3_ref2;
+            stackIn_13_1 = new StringBuilder().append("wl.MB(");
+            if (param0 == null) {
+              stackIn_14_2 = "null";
             } else {
-              return;
+              stackIn_14_2 = "{...}";
             }
+            stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+            if (param1 == null) {
+              stackIn_17_2 = "null";
+            } else {
+              stackIn_17_2 = "{...}";
+            }
+            throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final void a(boolean param0) {
         if (this.field_c == null) {
           return;
-        } else {
-          this.field_c.field_b = this.field_b;
-          this.field_b.field_c = this.field_c;
-          this.field_b = null;
-          if (param0) {
-            field_a = (String) null;
-            this.field_c = null;
-            return;
-          } else {
-            this.field_c = null;
-            return;
-          }
         }
+        this.field_c.field_b = this.field_b;
+        this.field_b.field_c = this.field_c;
+        this.field_b = null;
+        if (!param0) {
+          this.field_c = null;
+          return;
+        }
+        field_a = (String) null;
+        this.field_c = null;
     }
 
     public static void b(byte param0) {
         field_f = null;
         field_h = null;
-        if (param0 != 81) {
-          wl.b(-85);
-          field_a = null;
-          field_d = null;
-          field_g = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == 81) {
           field_a = null;
           field_d = null;
           field_g = (byte[][]) null;
           return;
         }
+        wl.b(-85);
+        field_a = null;
+        field_d = null;
+        field_g = (byte[][]) null;
     }
 
     static {

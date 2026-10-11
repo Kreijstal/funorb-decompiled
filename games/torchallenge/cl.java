@@ -33,72 +33,40 @@ final class cl extends bc {
         boolean stackIn_17_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        e var2Lifetime1;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              bh.field_o.h();
-              re.field_B.h();
-              qb.field_b = qb.field_b - 1;
-              var1_int = 120 % ((param0 - -61) / 54);
-              if (qb.field_b != 0) {
-                break L1;
-              } else {
-                qb.field_b = 200;
-                var2 = (e) ((Object) tj.field_e.c((byte) 112));
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (TorChallenge.field_I == null) {
-                      break L1;
-                    } else {
-                      var2 = (e) ((Object) TorChallenge.field_I.c((byte) -118));
-                      L3: while (true) {
-                        if (var2 == null) {
-                          break L1;
-                        } else {
-                          L4: {
-                            if (!var2.field_k.b(11163)) {
-                              var2.a(true);
-                              break L4;
-                            } else {
-                              break L4;
-                            }
-                          }
-                          var2 = (e) ((Object) TorChallenge.field_I.c(-270));
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    L5: {
-                      if (var2.field_k.b(11163)) {
-                        break L5;
-                      } else {
-                        var2.a(true);
-                        break L5;
-                      }
-                    }
-                    var2 = (e) ((Object) tj.field_e.c(-270));
-                    continue L2;
-                  }
+          bh.field_o.h();
+          re.field_B.h();
+          qb.field_b = qb.field_b - 1;
+          var1_int = 120 % ((param0 + 61) / 54);
+          if (qb.field_b == 0) {
+            qb.field_b = 200;
+            var2 = (e) (tj.field_e.c((byte) 112));
+            while (var2 != null) {
+              if (!var2.field_k.b(11163)) {
+                var2.a(true);
+              }
+              var2 = (e) (tj.field_e.c(-270));
+            }
+            if (TorChallenge.field_I != null) {
+              var2Lifetime1 = (e) (TorChallenge.field_I.c((byte) -118));
+              while (var2Lifetime1 != null) {
+                if (!var2Lifetime1.field_k.b(11163)) {
+                  var2Lifetime1.a(true);
                 }
+                var2Lifetime1 = (e) (TorChallenge.field_I.c(-270));
               }
             }
-            L6: {
-              if (la.field_a == null) {
-                break L6;
-              } else {
-                stackIn_17_0 = la.field_a.d(0);
-                if (stackIn_17_0) {
-                  break L6;
-                } else {
-                  tg.field_t = null;
-                  return;
-                }
-              }
-            }
-            break L0;
           }
+          if (la.field_a != null) {
+            stackIn_17_0 = la.field_a.d(0);
+            if (!stackIn_17_0) {
+              tg.field_t = null;
+              return;
+            }
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -112,8 +80,6 @@ final class cl extends bc {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -121,88 +87,44 @@ final class cl extends bc {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
-            L1: {
-              if (!param0.field_w) {
-                if (param0.c(param3 ^ 1)) {
-                  stackIn_6_0 = 1;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 0;
-                  break L1;
-                }
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              var6_int = stackIn_6_0;
-              if (param0 instanceof ng) {
-                param4 = param4 & ((ng) ((Object) param0)).field_F;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (!param4) {
-                stackIn_14_0 = this.field_B;
-                break L3;
-              } else {
-                if (var6_int == 0) {
-                  stackIn_14_0 = this.field_v;
-                  break L3;
-                } else {
-                  stackIn_14_0 = this.field_x;
-                  break L3;
-                }
-              }
-            }
-            L4: {
-              var7 = stackIn_14_0;
-              uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l + -this.field_t[0].field_v >> -200551743) + param0.field_i + param1, param0.field_p, this.field_t);
-              if (param3 == 97) {
-                break L4;
-              } else {
-                cl.c((byte) 98);
-                break L4;
-              }
-            }
-            L5: {
-              if (!param4) {
-                stackIn_19_0 = 7105644;
-                break L5;
-              } else {
-                stackIn_19_0 = 16777215;
-                break L5;
-              }
-            }
-            var8 = stackIn_19_0;
-            this.field_g.a(param0.field_v, param2 - -param0.field_m, param1 + (param0.field_i - 2), param0.field_p, param0.field_l, var8, -1, 1, 1, this.field_g.field_x);
-            break L0;
+          if (!param0.field_w) {
+            stackIn_6_0 = (param0.c(param3 ^ 1)) ? 1 : 0;
+          } else {
+            stackIn_6_0 = 1;
           }
+          var6_int = stackIn_6_0;
+          if (param0 instanceof ng) {
+            param4 = param4 & ((ng) (param0)).field_F;
+          }
+          if (!param4) {
+            stackIn_14_0 = this.field_B;
+          } else {
+            if (var6_int == 0) {
+              stackIn_14_0 = this.field_v;
+            } else {
+              stackIn_14_0 = this.field_x;
+            }
+          }
+          var7 = stackIn_14_0;
+          uk.a(var7, param3 ^ 96, param0.field_m + param2, (param0.field_l - this.field_t[0].field_v >> 1) + param0.field_i + param1, param0.field_p, this.field_t);
+          if (param3 != 97) {
+            cl.c((byte) 98);
+          }
+          stackIn_19_0 = (!param4) ? 7105644 : 16777215;
+          var8 = stackIn_19_0;
+          this.field_g.a(param0.field_v, param2 + param0.field_m, param1 + (param0.field_i - 2), param0.field_p, param0.field_l, var8, -1, 1, 1, this.field_g.field_x);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var6);
-
-            stackIn_23_1 = new StringBuilder().append("cl.A(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L6;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_23_0 = var6;
+          stackIn_23_1 = new StringBuilder().append("cl.A(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

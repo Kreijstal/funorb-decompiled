@@ -10,13 +10,13 @@ final class jr extends oh {
 
     final static void a(String param0, int param1, String param2) {
         try {
-            uq.field_m.a(param2, 27275, param0);
-            if (param1 != 1904) {
-                String var4 = (String) null;
-                jr.a((String) null, 27, (String) null);
-            }
+          uq.field_m.a(param2, 27275, param0);
+          if (param1 != 1904) {
+            String var4 = (String) null;
+            jr.a((String) null, 27, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "jr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "jr.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class jr extends oh {
         field_l = null;
         field_h = null;
         if (param0 != 1885) {
-            jr.a(97);
+          jr.a(97);
         }
     }
 

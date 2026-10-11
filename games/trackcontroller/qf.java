@@ -8,7 +8,7 @@ final class qf {
 
     public static void a(byte param0) {
         if (param0 <= 55) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

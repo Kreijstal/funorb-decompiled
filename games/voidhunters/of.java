@@ -14,16 +14,16 @@ final class of {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 8345) {
-            field_a = (gj) null;
+          field_a = (gj) null;
         }
     }
 
     of(qfa param0, long param1, ts[] param2) {
         try {
-            this.field_c = param1;
-            this.field_b = param0;
+          this.field_c = param1;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "of.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

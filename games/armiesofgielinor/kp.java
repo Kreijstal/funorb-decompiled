@@ -15,203 +15,130 @@ final class kp implements kh {
     private int field_h;
 
     final static int a(int param0, int param1) {
-        int var2 = -125 / ((param1 - -11) / 51);
+        int var2 = -125 / ((param1 + 11) / 51);
         int var3 = 0;
         if (0 == param0) {
-            var3 = ol.field_B;
+          var3 = ol.field_B;
         }
-        if ((param0 ^ -1) == -2) {
-            var3 = va.field_D;
+        if (param0 == 1) {
+          var3 = va.field_D;
         }
-        if (!((param0 ^ -1) != -3)) {
-            var3 = cd.field_c;
+        if (param0 == 2) {
+          var3 = cd.field_c;
         }
         return var3;
     }
 
     public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
+        int var10 = 0;
         kb stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         pi var12 = null;
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 instanceof pi) {
-                stackIn_4_0 = (kb) (param0);
-                break L1;
-              } else {
-                stackIn_4_0 = null;
-                break L1;
-              }
-            }
-            L2: {
-              var12 = (pi) ((Object) stackIn_4_0);
-              qn.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
-              if (var12 != null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var7 = param0.field_l - 2 * var12.field_R;
-            var8 = param0.field_B + param1 - -var12.field_R;
-            if (param2 <= -79) {
-              var9 = param4 - (-param0.field_p + -var12.field_S);
-              qn.h(var8, var9, var7 + var8, var9, this.field_b);
-              var10 = var12.d((byte) -39) + -1;
-              L3: while (true) {
-                if (var10 < 0) {
-                  if (null != this.field_a) {
-                    this.field_a.c(var12.field_v, var8 - -(var7 / 2), this.field_a.field_v + var9 + var12.field_S, this.field_g, this.field_i);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    return;
-                  }
-                } else {
-                  qn.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
-                  var10--;
-                  continue L3;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 instanceof pi) {
+            stackIn_4_0 = (kb) (param0);
+          } else {
+            stackIn_4_0 = null;
           }
+          var12 = (pi) (stackIn_4_0);
+          qn.f(param0.field_B + param1, param4 + param0.field_p, param0.field_l, param0.field_w, this.field_d);
+          if (var12 != null) {
+          }
+          var7 = param0.field_l - 2 * var12.field_R;
+          var8 = param0.field_B + param1 + var12.field_R;
+          if (param2 > -79) {
+            return;
+          }
+          var9 = param4 - (-param0.field_p - var12.field_S);
+          qn.h(var8, var9, var7 + var8, var9, this.field_b);
+          for (var10 = var12.d((byte) -39) - 1; var10 >= 0; var10--) {
+            qn.a(var7 * var12.a(var10, (byte) -47) / var12.a(-1) + var8, var9, this.field_h, this.field_f);
+          }
+          if (null == this.field_a) {
+            return;
+          }
+          this.field_a.c(var12.field_v, var8 + var7 / 2, this.field_a.field_v + var9 + var12.field_S, this.field_g, this.field_i);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var6);
-
-            stackIn_16_1 = new StringBuilder().append("kp.C(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_16_0 = var6;
+          stackIn_16_1 = new StringBuilder().append("kp.C(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw ig.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_k = null;
         field_e = null;
-        if (param0 != 2) {
-          field_c = (String) null;
-          field_j = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 2) {
           field_j = null;
           field_c = null;
           return;
         }
+        field_c = (String) null;
+        field_j = null;
+        field_c = null;
     }
 
     final static boolean a(boolean param0, int param1, kl param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                kp.a(81);
-                break L1;
-              }
-            }
-            var5 = param2.a((byte) 72, param3, param1);
-            var4 = var5;
-            if (var5 == null) {
-              stackIn_5_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              b.a(var5, -1);
-              stackIn_7_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          if (param0) {
+            kp.a(81);
           }
+          var5 = param2.a((byte) 72, param3, param1);
+          var4 = var5;
+          if (var5 == null) {
+            return false;
+          }
+          b.a(var5, -1);
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4_ref);
-
-            stackIn_10_1 = new StringBuilder().append("kp.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_10_0 = var4_ref;
+          stackIn_10_1 = new StringBuilder().append("kp.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_7_0 != 0;
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
     kp(ka param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_b = param3;
-            this.field_a = param0;
-            this.field_f = param6;
-            this.field_g = param1;
-            this.field_d = param4;
-            this.field_i = param2;
-            this.field_h = param5;
+          this.field_b = param3;
+          this.field_a = param0;
+          this.field_f = param6;
+          this.field_g = param1;
+          this.field_d = param4;
+          this.field_i = param2;
+          this.field_h = param5;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "kp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "kp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

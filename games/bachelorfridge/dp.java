@@ -12,219 +12,96 @@ final class dp extends lw {
     final void a(int param0, byte param1) {
         int var4;
         var4 = BachelorFridge.field_y;
-        if (this.field_e == 0) {
-          if (10 == param0) {
-            this.b(1);
-            this.c(85);
-            if (param1 == 73) {
-              return;
-            } else {
+        if (this.field_e != 0) {
+          if (this.field_e != 1) {
+            if (34 != param0) {
+              if (param1 == 73) {
+                return;
+              }
               field_m = (String) null;
               return;
             }
           } else {
-            L0: {
-              if ((this.field_e ^ -1) != -2) {
-                if (34 != param0) {
-                  break L0;
-                } else {
-                  if (-1 != (this.field_e ^ -1)) {
-                    if ((this.field_e ^ -1) != -2) {
-                      this.b(1);
-                      if (this.c((byte) 95)) {
-                        fla.b(23621);
-                        if (param1 != 73) {
-                          field_m = (String) null;
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        if (param1 != 73) {
-                          field_m = (String) null;
-                          return;
-                        } else {
-                          return;
-                        }
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param0 == 12) {
-                  this.b(1);
-                  this.c(param1 + 24);
-                  if (this.c((byte) 95)) {
-                    fla.b(23621);
-                    break L0;
-                  } else {
-                    if (param1 == 73) {
-                      return;
-                    } else {
-                      field_m = (String) null;
-                      return;
-                    }
-                  }
-                } else {
-                  if (34 == param0) {
-                    if (-1 != (this.field_e ^ -1)) {
-                      if ((this.field_e ^ -1) == -2) {
-                        return;
-                      } else {
-                        this.b(1);
-                        if (this.c((byte) 95)) {
-                          fla.b(23621);
-                          if (param1 != 73) {
-                            field_m = (String) null;
-                            return;
-                          } else {
-                            return;
-                          }
-                        } else {
-                          if (param1 != 73) {
-                            field_m = (String) null;
-                            return;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    } else {
-                      return;
-                    }
-                  } else {
-                    if (param1 != 73) {
-                      field_m = (String) null;
-                      return;
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-            }
-            if (param1 == 73) {
-              return;
-            } else {
-              field_m = (String) null;
-              return;
-            }
-          }
-        } else {
-          L1: {
-            if ((this.field_e ^ -1) != -2) {
-              if (34 != param0) {
-                break L1;
-              } else {
-                L2: {
-                  if (-1 == (this.field_e ^ -1)) {
-                    break L2;
-                  } else {
-                    if ((this.field_e ^ -1) == -2) {
-                      break L2;
-                    } else {
-                      this.b(1);
-                      if (!this.c((byte) 95)) {
-                        L3: {
-                          if (param1 == 73) {
-                            break L3;
-                          } else {
-                            field_m = (String) null;
-                            break L3;
-                          }
-                        }
-                        return;
-                      } else {
-                        L4: {
-                          fla.b(23621);
-                          if (param1 == 73) {
-                            break L4;
-                          } else {
-                            field_m = (String) null;
-                            break L4;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
+            if (param0 == 12) {
+              this.b(1);
+              this.c(param1 + 24);
+              if (!this.c((byte) 95)) {
+                if (param1 != 73) {
+                  field_m = (String) null;
                 }
                 return;
               }
-            } else {
-              if (param0 == 12) {
+              fla.b(23621);
+              if (param1 == 73) {
+                return;
+              }
+              field_m = (String) null;
+              return;
+            }
+            if (34 != param0) {
+              if (param1 != 73) {
+                field_m = (String) null;
+              }
+              return;
+            }
+          }
+          if (this.field_e != 0 &&
+            this.field_e != 1) {
+            this.b(1);
+            if (this.c((byte) 95)) {
+              fla.b(23621);
+            }
+            if (param1 != 73) {
+              field_m = (String) null;
+            }
+            return;
+          }
+          return;
+        }
+        if (10 == param0) {
+          this.b(1);
+          this.c(85);
+        } else {
+          if (this.field_e != 1) {
+            if (34 == param0) {
+              if (this.field_e == 0) {
+                return;
+              }
+              if (this.field_e == 1) {
+                return;
+              }
+              this.b(1);
+              if (this.c((byte) 95)) {
+                fla.b(23621);
+              }
+            }
+          } else {
+            if (param0 != 12) {
+              if (34 == param0) {
+                if (this.field_e == 0) {
+                  return;
+                }
+                if (this.field_e == 1) {
+                  return;
+                }
                 this.b(1);
-                this.c(param1 + 24);
                 if (this.c((byte) 95)) {
                   fla.b(23621);
-                  break L1;
-                } else {
-                  L5: {
-                    if (param1 == 73) {
-                      break L5;
-                    } else {
-                      field_m = (String) null;
-                      break L5;
-                    }
-                  }
-                  return;
                 }
-              } else {
-                if (34 == param0) {
-                  L6: {
-                    if (-1 == (this.field_e ^ -1)) {
-                      break L6;
-                    } else {
-                      if ((this.field_e ^ -1) == -2) {
-                        break L6;
-                      } else {
-                        L7: {
-                          this.b(1);
-                          if (this.c((byte) 95)) {
-                            fla.b(23621);
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        L8: {
-                          if (param1 == 73) {
-                            break L8;
-                          } else {
-                            field_m = (String) null;
-                            break L8;
-                          }
-                        }
-                        return;
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  L9: {
-                    if (param1 == 73) {
-                      break L9;
-                    } else {
-                      field_m = (String) null;
-                      break L9;
-                    }
-                  }
-                  return;
-                }
+              }
+            } else {
+              this.b(1);
+              this.c(param1 + 24);
+              if (this.c((byte) 95)) {
+                fla.b(23621);
               }
             }
           }
-          if (param1 != 73) {
-            field_m = (String) null;
-            return;
-          } else {
-            return;
-          }
         }
+        if (param1 == 73) {
+          return;
+        }
+        field_m = (String) null;
     }
 
     final void a(int param0) {
@@ -240,14 +117,14 @@ final class dp extends lw {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            jia.a("", -76, param0);
-            qfa.a(param0, -118);
-            if (param1 >= -78) {
-                java.applet.Applet var3 = (java.applet.Applet) null;
-                dp.a((java.applet.Applet) null, 36);
-            }
+          jia.a("", -76, param0);
+          qfa.a(param0, -118);
+          if (param1 >= -78) {
+            java.applet.Applet var3 = (java.applet.Applet) null;
+            dp.a((java.applet.Applet) null, 36);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "dp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "dp.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -255,25 +132,21 @@ final class dp extends lw {
         field_m = null;
         field_o = null;
         field_l = null;
-        int var1 = 35 / ((param0 - -62) / 42);
+        int var1 = 35 / ((param0 + 62) / 42);
         field_p = null;
         field_n = null;
     }
 
     final void a(byte param0) {
-        int var2;
-        if (param0 > 103) {
-          var2 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
-          if (-1 == (this.field_e ^ -1)) {
-            vg.a(sia.field_j, 8880, 22997, 17000, var2 + 4096, 3200, 4096 + var2, sia.field_j.field_o << 1327134307, sia.field_j.field_n << -190419261);
-            return;
-          } else {
-            vg.a(sia.field_j, 8160, 22997, 32000, var2 + 4096, 1280, var2 + 4096, sia.field_j.field_o << -1181546909, sia.field_j.field_n << 805324707);
-            return;
-          }
-        } else {
+        if (param0 <= 103) {
           return;
         }
+        int var2 = (int)((-Math.cos((double)(4 * vr.field_b) * 3.141592653589793 / 100.0) + 1.0) * 256.0);
+        if (this.field_e != 0) {
+          vg.a(sia.field_j, 8160, 22997, 32000, var2 + 4096, 1280, var2 + 4096, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
+          return;
+        }
+        vg.a(sia.field_j, 8880, 22997, 17000, var2 + 4096, 3200, 4096 + var2, sia.field_j.field_o << 3, sia.field_j.field_n << 3);
     }
 
     static {

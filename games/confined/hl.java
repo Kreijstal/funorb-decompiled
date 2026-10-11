@@ -13,30 +13,30 @@ final class hl implements de {
 
     public final int[] a(float param0, int param1, int param2) {
         ma var8 = null;
-        int var4 = -107 / ((param1 - -35) / 50);
+        int var4 = -107 / ((param1 + 35) / 50);
         ma var5 = this.field_e[param2];
         ma var7 = var5;
         var7 = var5;
         if (var5 == null) {
-            return null;
+          return null;
         }
         if (var5.field_t != null) {
-            if (!(param0 != var5.field_o)) {
-                this.field_f.a(var5, -1);
-                return var5.field_t;
-            }
-            var5.a(true);
-            var5.a();
-            this.field_c = this.field_c + 1;
-        }
-        if (!var5.a(param0, this.field_g, this.field_a)) {
-            return null;
-        }
-        if (this.field_c == 0) {
-            var8 = (ma) ((Object) this.field_f.b((byte) 101));
-            var8.a();
+          if (param0 == var5.field_o) {
             this.field_f.a(var5, -1);
             return var5.field_t;
+          }
+          var5.a(true);
+          var5.a();
+          this.field_c = this.field_c + 1;
+        }
+        if (!var5.a(param0, this.field_g, this.field_a)) {
+          return null;
+        }
+        if (this.field_c == 0) {
+          var8 = (ma) (this.field_f.b((byte) 101));
+          var8.a();
+          this.field_f.a(var5, -1);
+          return var5.field_t;
         }
         this.field_c = this.field_c - 1;
         this.field_f.a(var5, -1);
@@ -44,10 +44,10 @@ final class hl implements de {
     }
 
     final static void a(int param0) {
-        g var1 = (g) ((Object) fc.field_a.a(-115));
-        if (!(var1 != null)) {
-            dc.d(120);
-            return;
+        g var1 = (g) (fc.field_a.a(-115));
+        if (var1 == null) {
+          dc.d(120);
+          return;
         }
         hb var2 = e.field_c;
         var2.f((byte) 72);
@@ -56,15 +56,15 @@ final class hl implements de {
         var2.f((byte) 80);
         var1.a(true);
         if (param0 != -251) {
-            hl.b(-118);
-            return;
+          hl.b(-118);
+          return;
         }
     }
 
     public final boolean a(int param0, int param1) {
         if (param1 != 1) {
-            this.field_d = -103;
-            return true;
+          this.field_d = -103;
+          return true;
         }
         return true;
     }
@@ -73,94 +73,81 @@ final class hl implements de {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 == -58) {
-            break L0;
-          } else {
-            hl.a((byte) -7);
-            break L0;
-          }
+        if (param0 != -58) {
+          hl.a((byte) -7);
         }
         if (null == tf.field_p) {
           return;
-        } else {
-          var1 = tf.field_p;
-          synchronized (var1) {
-            L1: {
-              tf.field_p = null;
-              break L1;
-            }
-          }
-          return;
+        }
+        var1 = tf.field_p;
+        synchronized (var1) {
+          tf.field_p = null;
         }
     }
 
     final static boolean a(byte param0) {
         if (param0 != 27) {
-            field_b = (String) null;
-            return (tg.field_H ^ -1) < -251 ? true : false;
+          field_b = (String) null;
+          return tg.field_H > 250 ? true : false;
         }
-        return (tg.field_H ^ -1) < -251 ? true : false;
+        return tg.field_H > 250 ? true : false;
     }
 
     public final boolean a(boolean param0, int param1) {
         if (param0) {
-            this.a(51, -31);
-            return -65 == (this.field_g ^ -1) ? true : false;
+          this.a(51, -31);
+          return this.field_g == 64 ? true : false;
         }
-        return -65 == (this.field_g ^ -1) ? true : false;
+        return this.field_g == 64 ? true : false;
     }
 
     public final int b(int param0, int param1) {
         if (param0 != 0) {
-            this.field_a = (mi) null;
-            if (this.field_e[param1] != null) {
-                return this.field_e[param1].field_s;
-            }
-            return 0;
+          this.field_a = (mi) null;
+          if (this.field_e[param1] != null) {
+            return this.field_e[param1].field_s;
+          }
+          return 0;
         }
         if (this.field_e[param1] != null) {
-            return this.field_e[param1].field_s;
+          return this.field_e[param1].field_s;
         }
         return 0;
     }
 
     public final int a(int param0, byte param1) {
         if (param1 != -85) {
-            return 80;
+          return 80;
         }
         if (this.field_e[param0].field_r) {
-            return 0;
+          return 0;
         }
         return 1;
     }
 
     public static void b(int param0) {
         if (param0 != 0) {
-            field_b = (String) null;
-            field_h = null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_h = null;
+          field_b = null;
+          return;
         }
         field_h = null;
         field_b = null;
     }
 
     hl(mi param0, mi param1, int param2, int param3) {
+        int var7 = 0;
         int[] var5 = null;
         int var6 = 0;
-        int var7 = 0;
         kg var8 = null;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
@@ -168,67 +155,38 @@ final class hl implements de {
         this.field_g = 128;
         this.field_c = 0;
         try {
-          L0: {
-            this.field_a = param1;
-            this.field_d = param2;
-            this.field_c = this.field_d;
-            this.field_g = param3;
-            var12 = param0.a((byte) -65, 0);
-            var11 = var12;
-            var10 = var11;
-            var5 = var10;
-            var6 = var12.length;
-            this.field_e = new ma[param0.d(0, (byte) -73)];
-            var7 = 0;
-            L1: while (true) {
-              if (var7 >= var6) {
-                break L0;
-              } else {
-                var8 = new kg(param0.a((byte) -2, 0, var12[var7]));
-                this.field_e[var12[var7]] = new ma(var8);
-                var7++;
-                continue L1;
-              }
-            }
+          this.field_a = param1;
+          this.field_d = param2;
+          this.field_c = this.field_d;
+          this.field_g = param3;
+          var12 = param0.a((byte) -65, 0);
+          var11 = var12;
+          var10 = var11;
+          var5 = var10;
+          var6 = var12.length;
+          this.field_e = new ma[param0.d(0, (byte) -73)];
+          for (var7 = 0; var7 < var6; var7++) {
+            var8 = new kg(param0.a((byte) -2, 0, var12[var7]));
+            this.field_e[var12[var7]] = new ma(var8);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var5_ref);
-
-            stackIn_7_1 = new StringBuilder().append("hl.<init>(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_7_0 = var5_ref;
+          stackIn_7_1 = new StringBuilder().append("hl.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -12,46 +12,26 @@ final class eib extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                eib.a(-97, 123, -112);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(2, 124));
-            break L0;
+          if (param1 >= -119) {
+            eib.a(-97, 123, -112);
           }
+          stackIn_3_0 = new nc(frb.a(2, 124));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("eib.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("eib.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -60,142 +40,86 @@ final class eib extends rqa {
         ana var4 = null;
         qw var5 = null;
         int var6 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (ms.field_y == null) {
-                break L1;
-              } else {
-                if (null == kba.field_a) {
-                  break L1;
-                } else {
-                  var3 = (qw) ((Object) ms.field_y.d(0));
-                  L2: while (true) {
-                    if (var3 == null) {
-                      L3: {
-                        var3_int = param1;
-                        if ((fbb.field_j[param1] ^ -1) < -2) {
-                          var3_int = hob.a(jp.field_Jc, fbb.field_j[param1], 117) + param1;
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      var4 = lha.a(param0 ^ -6902, fa.field_d[var3_int]);
-                      var5 = new qw();
-                      var5.field_k = var4;
-                      var5.field_m = false;
-                      var5.field_i = jia.field_o;
-                      var5.field_f = param1;
-                      ms.field_y.b(-10258, var5);
-                      break L1;
-                    } else {
-                      L4: {
-                        if (param1 != var3.field_f) {
-                          break L4;
-                        } else {
-                          if (var3.field_m) {
-                            break L4;
-                          } else {
-                            if (Math.abs(var3.field_i - jia.field_o) < param2) {
-                              decompiledRegionSelector0 = 0;
-                              break L0;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                      }
-                      var3 = (qw) ((Object) ms.field_y.a((byte) 92));
-                      continue L2;
-                    }
-                  }
-                }
+          if (ms.field_y != null &&
+            null != kba.field_a) {
+            var3 = (qw) (ms.field_y.d(0));
+            while (var3 != null) {
+              if (param1 == var3.field_f &&
+                !var3.field_m &&
+                Math.abs(var3.field_i - jia.field_o) < param2) {
+                return;
               }
+              var3 = (qw) (ms.field_y.a((byte) 92));
             }
-            if (param0 == 6811) {
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              field_o = 48;
-              return;
+            var3_int = param1;
+            if (fbb.field_j[param1] > 1) {
+              var3_int = hob.a(jp.field_Jc, fbb.field_j[param1], 117) + param1;
             }
+            var4 = lha.a(param0 ^ -6902, fa.field_d[var3_int]);
+            var5 = new qw();
+            var5.field_k = var4;
+            var5.field_m = false;
+            var5.field_i = jia.field_o;
+            var5.field_f = param1;
+            ms.field_y.b(-10258, var5);
           }
+          if (param0 == 6811) {
+            return;
+          }
+          field_o = 48;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var3_ref), "eib.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
-        }
     }
 
     final static phb[] a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
-        int[] var6;
-        int var7;
-        int var8;
-        phb var9;
-        Object var10;
-        Object var11;
-        int[] var12;
-        phb var13;
-        phb var14;
-        int[] var15;
-        int[] var16;
-        var16 = dma.field_i;
-        var15 = var16;
-        var12 = var15;
-        var6 = var12;
-        var7 = dma.field_g;
-        var8 = dma.field_j;
-        var9 = new phb(16, param5);
+        Object var10 = null;
+        Object var11 = null;
+        phb var13 = null;
+        phb var14 = null;
+        int[] var16 = dma.field_i;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = dma.field_g;
+        int var8 = dma.field_j;
+        phb var9 = new phb(16, param5);
         var9.b();
         dma.c(0, 0, 16, param5, param4, param2);
-        if (param3 != 24436) {
-          return (phb[]) null;
-        } else {
-          L0: {
-            var10 = null;
-            var11 = null;
-            if (!param0) {
-              break L0;
-            } else {
-              var13 = var9.d();
-              var10 = var13;
-              var13.b();
-              dma.h(0, 0, 5, 0);
-              dma.h(0, 1, 3, 0);
-              dma.h(0, 2, 2, 0);
-              dma.h(0, 3, 1, 0);
-              dma.h(0, 4, 1, 0);
-              break L0;
-            }
+        if (param3 == 24436) {
+          var10 = null;
+          var11 = null;
+          if (param0) {
+            var13 = var9.d();
+            var10 = var13;
+            var13.b();
+            dma.h(0, 0, 5, 0);
+            dma.h(0, 1, 3, 0);
+            dma.h(0, 2, 2, 0);
+            dma.h(0, 3, 1, 0);
+            dma.h(0, 4, 1, 0);
           }
-          L1: {
-            if (!param1) {
-              break L1;
-            } else {
-              var14 = var9.d();
-              var11 = var14;
-              var14.b();
-              dma.h(11, 0, 5, 0);
-              dma.h(13, 1, 3, 0);
-              dma.h(14, 2, 2, 0);
-              dma.h(15, 3, 1, 0);
-              dma.h(15, 4, 1, 0);
-              break L1;
-            }
+          if (param1) {
+            var14 = var9.d();
+            var11 = var14;
+            var14.b();
+            dma.h(11, 0, 5, 0);
+            dma.h(13, 1, 3, 0);
+            dma.h(14, 2, 2, 0);
+            dma.h(15, 3, 1, 0);
+            dma.h(15, 4, 1, 0);
           }
           dma.a(var16, var7, var8);
           return new phb[]{null, null, null, (phb) (var10), var9, (phb) (var11), null, null, null};
         }
+        return (phb[]) null;
     }
 
     eib(String param0, Class[] param1, String param2) {

@@ -6,31 +6,32 @@ final class lkb {
 
     public static void a(int param0) {
         if (param0 != 199) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0, byte param1) {
-        int var2;
-        int var3;
-        int var4;
-        if (param1 >= -100) {
-          lkb.a(92);
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (param1 < -100) {
           var2 = (-640 + gp.field_p) / 2;
           var3 = ldb.field_o * ldb.field_o;
-          var4 = var3 + -(param0 * param0);
-          rga.field_g.a(var2 + -(199 * var4 / var3), 122, 199, 90, -94 + (-120 + dma.field_j));
-          vva.field_r.a(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + dma.field_j);
-          return;
-        } else {
-          var2 = (-640 + gp.field_p) / 2;
-          var3 = ldb.field_o * ldb.field_o;
-          var4 = var3 + -(param0 * param0);
-          rga.field_g.a(var2 + -(199 * var4 / var3), 122, 199, 90, -94 + (-120 + dma.field_j));
+          var4 = var3 - param0 * param0;
+          rga.field_g.a(var2 - 199 * var4 / var3, 122, 199, 90, -94 + (-120 + dma.field_j));
           vva.field_r.a(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + dma.field_j);
           return;
         }
+        lkb.a(92);
+        var2Lifetime1 = (-640 + gp.field_p) / 2;
+        var3Lifetime1 = ldb.field_o * ldb.field_o;
+        var4Lifetime1 = var3Lifetime1 - param0 * param0;
+        rga.field_g.a(var2Lifetime1 - 199 * var4Lifetime1 / var3Lifetime1, 122, 199, 90, -94 + (-120 + dma.field_j));
+        vva.field_r.a(var2Lifetime1 + 202 + 438 * var4Lifetime1 / var3Lifetime1, 26, 438, 0, -124 + dma.field_j);
     }
 
     public final String toString() {
@@ -49,88 +50,42 @@ final class lkb {
         lkb stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -68) {
-                break L1;
-              } else {
-                field_a = (int[]) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (param0 == null) {
-                break L2;
-              } else {
-                if (-1 == (param0.length() ^ -1)) {
-                  break L2;
-                } else {
-                  var2_int = param0.indexOf('@');
-                  if (-1 == var2_int) {
-                    stackIn_10_0 = br.field_f;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var3 = param0.substring(0, var2_int);
-                    var4 = param0.substring(var2_int + 1);
-                    var5 = hca.a((byte) 108, var3);
-                    if (var5 == null) {
-                      stackIn_15_0 = ofb.a(0, var4);
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    } else {
-                      stackIn_13_0 = (lkb) (var5);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  }
-                }
-              }
-            }
-            stackIn_6_0 = gca.field_r;
-            decompiledRegionSelector0 = 0;
-            break L0;
+          if (param1 > -68) {
+            field_a = (int[]) null;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var2);
-
-            stackIn_18_1 = new StringBuilder().append("lkb.C(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L3;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L3;
+          if (param0 != null &&
+            param0.length() != 0) {
+            var2_int = param0.indexOf('@');
+            if (-1 == var2_int) {
+              stackIn_10_0 = br.field_f;
+              return stackIn_10_0;
             }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_10_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_13_0;
-            } else {
+            var3 = param0.substring(0, var2_int);
+            var4 = param0.substring(var2_int + 1);
+            var5 = hca.a((byte) 108, var3);
+            if (var5 == null) {
+              stackIn_15_0 = ofb.a(0, var4);
               return stackIn_15_0;
             }
+            stackIn_13_0 = var5;
+            return stackIn_13_0;
           }
+          stackIn_6_0 = gca.field_r;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_18_0 = var2;
+          stackIn_18_1 = new StringBuilder().append("lkb.C(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw rta.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

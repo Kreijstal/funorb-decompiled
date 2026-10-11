@@ -18,11 +18,11 @@ final class aw extends llb {
     static String field_Db;
 
     final boolean e(byte param0) {
-        if (!(this.field_Ab == -2)) {
-            return false;
+        if (this.field_Ab != -2) {
+          return false;
         }
-        if (-14 == (pma.field_o ^ -1)) {
-            this.field_Ab = -1;
+        if (pma.field_o == 13) {
+          this.field_Ab = -1;
         }
         int var2 = 108 % ((-69 - param0) / 48);
         return true;
@@ -32,94 +32,75 @@ final class aw extends llb {
         int var3 = 0;
         int var5 = VoidHunters.field_G;
         this.a(param1, 1332);
-        if (!(param1)) {
-            return -2;
+        if (!param1) {
+          return -2;
         }
         for (var3 = 0; var3 < this.field_Ib; var3++) {
-            if (-1 != (this.field_Gb[var3].field_o ^ -1)) {
-                return this.field_Eb[var3];
-            }
+          if (this.field_Gb[var3].field_o != 0) {
+            return this.field_Eb[var3];
+          }
         }
-        int var4 = -115 / ((param0 - -87) / 37);
+        int var4 = -115 / ((param0 + 87) / 37);
         if (0 != pba.field_o) {
-            return -1;
+          return -1;
         }
         return this.field_Ab;
     }
 
     final void a(String param0, byte param1, int param2) {
         try {
-            this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, (phb) null, param0);
-            this.field_Gb[this.field_Ib].field_mb = this.field_xb;
-            this.field_Gb[this.field_Ib].field_S = true;
-            this.field_Gb[this.field_Ib].field_B = 1;
-            this.b(-561, this.field_Gb[this.field_Ib]);
-            this.field_Eb[this.field_Ib] = param2;
-            this.field_Ib = this.field_Ib + 1;
-            if (param1 != -53) {
-                String var5 = (String) null;
-                this.a((String) null, (byte) -31, -41);
-            }
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, (phb) null, param0);
+          this.field_Gb[this.field_Ib].field_mb = this.field_xb;
+          this.field_Gb[this.field_Ib].field_S = true;
+          this.field_Gb[this.field_Ib].field_B = 1;
+          this.b(-561, this.field_Gb[this.field_Ib]);
+          this.field_Eb[this.field_Ib] = param2;
+          this.field_Ib = this.field_Ib + 1;
+          if (param1 != -53) {
+            String var5 = (String) null;
+            this.a((String) null, (byte) -31, -41);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "aw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "aw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
+        int var10 = 0;
         int var6;
         int var7;
         int var8;
         int var9;
-        int var10;
         int var11;
-        L0: {
-          var11 = VoidHunters.field_G;
-          if (0 != this.field_Ib) {
-            break L0;
-          } else {
-            this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (phb) null, fc.field_o);
-            this.field_Gb[this.field_Ib].field_B = 1;
-            this.b(-561, this.field_Gb[this.field_Ib]);
-            this.field_Eb[this.field_Ib] = -1;
-            this.field_Ib = this.field_Ib + 1;
-            break L0;
-          }
+        int var7Lifetime1;
+        int var8Lifetime1;
+        var11 = VoidHunters.field_G;
+        if (0 == this.field_Ib) {
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (phb) null, fc.field_o);
+          this.field_Gb[this.field_Ib].field_B = 1;
+          this.b(-561, this.field_Gb[this.field_Ib]);
+          this.field_Eb[this.field_Ib] = -1;
+          this.field_Ib = this.field_Ib + 1;
         }
         var6 = 0;
-        var7 = 0;
-        L1: while (true) {
-          if (var7 >= this.field_Ib) {
-            var6 = var6 + this.field_zb * 2;
-            if (param1 == -29060) {
-              var7 = this.field_yb + (this.field_yb - -(this.field_wb * this.field_Ib));
-              var8 = jv.a((byte) -109, param0, param3, var6);
-              var9 = lma.a(param4, param2, var7, (byte) -16);
-              this.a(var8, 32, var6, var9, var7);
-              var10 = 0;
-              L2: while (true) {
-                if (this.field_Ib <= var10) {
-                  return;
-                } else {
-                  this.field_Gb[var10].a(this.field_yb - -(this.field_wb * var10), this.field_zb, -124, this.field_vb, this.field_Hb, -(2 * this.field_zb) + var6, this.field_wb);
-                  var10++;
-                  continue L2;
-                }
-              }
-            } else {
-              return;
-            }
-          } else {
-            var8 = this.field_Gb[var7].a(this.field_Hb, this.field_vb, -66);
-            if ((var8 ^ -1) < (var6 ^ -1)) {
-              var6 = var8;
-              var7++;
-              continue L1;
-            } else {
-              var7++;
-              continue L1;
-            }
+        for (var7 = 0; var7 < this.field_Ib; var7++) {
+          var8 = this.field_Gb[var7].a(this.field_Hb, this.field_vb, -66);
+          if (var8 > var6) {
+            var6 = var8;
           }
         }
+        var6 = var6 + this.field_zb * 2;
+        if (param1 != -29060) {
+          return;
+        }
+        var7Lifetime1 = this.field_yb + (this.field_yb + this.field_wb * this.field_Ib);
+        var8Lifetime1 = jv.a((byte) -109, param0, param3, var6);
+        var9 = lma.a(param4, param2, var7Lifetime1, (byte) -16);
+        this.a(var8Lifetime1, 32, var6, var9, var7Lifetime1);
+        for (var10 = 0; this.field_Ib > var10; var10++) {
+          this.field_Gb[var10].a(this.field_yb + this.field_wb * var10, this.field_zb, -124, this.field_vb, this.field_Hb, -(2 * this.field_zb) + var6, this.field_wb);
+        }
+        return;
     }
 
     final static void a(boolean param0) {
@@ -129,49 +110,41 @@ final class aw extends llb {
         ki.field_o = 1;
         via.field_b = 1;
         wkb.field_c = 1;
-        if (!param0) {
-          L0: {
-            jnb.field_o = 1;
-            if ((jha.field_p ^ -1) == -3) {
-              ki.field_o = 0;
-              bta.field_q = 0;
-              jnb.field_o = 0;
-              via.field_b = 0;
-              wkb.field_c = 0;
-              tkb.field_p = 0;
-              break L0;
-            } else {
-              if (1 != jha.field_p) {
-                break L0;
-              } else {
-                tkb.field_p = 0;
-                ki.field_o = 0;
-                jnb.field_o = 0;
-                bta.field_q = 0;
-                break L0;
-              }
-            }
-          }
+        if (param0) {
           return;
+        }
+        jnb.field_o = 1;
+        if (jha.field_p == 2) {
+          ki.field_o = 0;
+          bta.field_q = 0;
+          jnb.field_o = 0;
+          via.field_b = 0;
+          wkb.field_c = 0;
+          tkb.field_p = 0;
         } else {
-          return;
+          if (1 == jha.field_p) {
+            tkb.field_p = 0;
+            ki.field_o = 0;
+            jnb.field_o = 0;
+            bta.field_q = 0;
+          }
         }
     }
 
     final void a(int param0, int param1, phb param2, String param3) {
         if (param0 != -1) {
-            return;
+          return;
         }
         try {
-            this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, param2, param3);
-            this.field_Gb[this.field_Ib].field_mb = this.field_xb;
-            this.field_Gb[this.field_Ib].field_S = true;
-            this.field_Gb[this.field_Ib].field_B = 1;
-            this.b(param0 ^ 560, this.field_Gb[this.field_Ib]);
-            this.field_Eb[this.field_Ib] = param1;
-            this.field_Ib = this.field_Ib + 1;
+          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, param2, param3);
+          this.field_Gb[this.field_Ib].field_mb = this.field_xb;
+          this.field_Gb[this.field_Ib].field_S = true;
+          this.field_Gb[this.field_Ib].field_B = 1;
+          this.b(param0 ^ 560, this.field_Gb[this.field_Ib]);
+          this.field_Eb[this.field_Ib] = param1;
+          this.field_Ib = this.field_Ib + 1;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "aw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "aw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +152,7 @@ final class aw extends llb {
         field_Db = null;
         field_Bb = null;
         if (param0 != 0) {
-            field_Bb = (gl) null;
+          field_Bb = (gl) null;
         }
     }
 
@@ -193,16 +166,16 @@ final class aw extends llb {
         this.field_Ab = -2;
         this.field_Gb = new cna[256];
         try {
-            this.field_wb = param8;
-            this.field_Cb = param3;
-            this.field_Fb = param2;
-            this.field_xb = param1;
-            this.field_zb = param4;
-            this.field_vb = param5;
-            this.field_Hb = param6;
-            this.field_yb = param7;
+          this.field_wb = param8;
+          this.field_Cb = param3;
+          this.field_Fb = param2;
+          this.field_xb = param1;
+          this.field_zb = param4;
+          this.field_vb = param5;
+          this.field_Hb = param6;
+          this.field_yb = param7;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "aw.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

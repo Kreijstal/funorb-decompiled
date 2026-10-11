@@ -15,55 +15,36 @@ final class ai {
         if (param0) {
           param1 = param1 & 8191;
           if (4096 <= param1) {
-            L0: {
-              if (-6145 < (param1 ^ -1)) {
-                stackIn_19_0 = -k.field_d[-4096 + param1];
-                break L0;
-              } else {
-                stackIn_19_0 = -k.field_d[-param1 + 8192];
-                break L0;
-              }
+            if (param1 < 6144) {
+              stackIn_19_0 = -k.field_d[-4096 + param1];
+            } else {
+              stackIn_19_0 = -k.field_d[-param1 + 8192];
             }
             return stackIn_19_0;
-          } else {
-            L1: {
-              if (2048 > param1) {
-                stackIn_15_0 = k.field_d[param1];
-                break L1;
-              } else {
-                stackIn_15_0 = k.field_d[4096 + -param1];
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
-        } else {
-          ai.a(38);
-          param1 = param1 & 8191;
-          if (4096 <= param1) {
-            L2: {
-              if (-6145 < (param1 ^ -1)) {
-                stackIn_9_0 = -k.field_d[-4096 + param1];
-                break L2;
-              } else {
-                stackIn_9_0 = -k.field_d[-param1 + 8192];
-                break L2;
-              }
-            }
-            return stackIn_9_0;
+          if (2048 > param1) {
+            stackIn_15_0 = k.field_d[param1];
           } else {
-            L3: {
-              if (2048 > param1) {
-                stackIn_5_0 = k.field_d[param1];
-                break L3;
-              } else {
-                stackIn_5_0 = k.field_d[4096 + -param1];
-                break L3;
-              }
-            }
-            return stackIn_5_0;
+            stackIn_15_0 = k.field_d[4096 - param1];
           }
+          return stackIn_15_0;
         }
+        ai.a(38);
+        param1 = param1 & 8191;
+        if (4096 <= param1) {
+          if (param1 < 6144) {
+            stackIn_9_0 = -k.field_d[-4096 + param1];
+          } else {
+            stackIn_9_0 = -k.field_d[-param1 + 8192];
+          }
+          return stackIn_9_0;
+        }
+        if (2048 > param1) {
+          stackIn_5_0 = k.field_d[param1];
+        } else {
+          stackIn_5_0 = k.field_d[4096 - param1];
+        }
+        return stackIn_5_0;
     }
 
     final static void b(int param0) {
@@ -74,58 +55,24 @@ final class ai {
         RuntimeException var1 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (null == ef.field_h) {
-                break L1;
-              } else {
-                var1_int = 0;
-                L2: while (true) {
-                  if (ef.field_h.length <= var1_int) {
-                    break L1;
-                  } else {
-                    L3: {
-                      if (ef.field_h[var1_int] == null) {
-                        break L3;
-                      } else {
-                        var2 = 0;
-                        L4: while (true) {
-                          if (ef.field_h[var1_int].length <= var2) {
-                            ef.field_h[var1_int] = null;
-                            break L3;
-                          } else {
-                            L5: {
-                              if (ef.field_h[var1_int][var2] != null) {
-                                ef.field_h[var1_int][var2].field_y = null;
-                                break L5;
-                              } else {
-                                break L5;
-                              }
-                            }
-                            ef.field_h[var1_int][var2] = null;
-                            var2++;
-                            continue L4;
-                          }
-                        }
-                      }
-                    }
-                    var1_int++;
-                    continue L2;
+          if (null != ef.field_h) {
+            for (var1_int = 0; ef.field_h.length > var1_int; var1_int++) {
+              if (ef.field_h[var1_int] != null) {
+                for (var2 = 0; ef.field_h[var1_int].length > var2; var2++) {
+                  if (ef.field_h[var1_int][var2] != null) {
+                    ef.field_h[var1_int][var2].field_y = null;
                   }
+                  ef.field_h[var1_int][var2] = null;
                 }
+                ef.field_h[var1_int] = null;
               }
             }
-            L6: {
-              if (param0 == 0) {
-                break L6;
-              } else {
-                ai.a(68);
-                break L6;
-              }
-            }
-            ef.field_h = (ka[][]) null;
-            break L0;
           }
+          if (param0 != 0) {
+            ai.a(68);
+          }
+          ef.field_h = (ka[][]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -136,7 +83,7 @@ final class ai {
     public static void a(int param0) {
         field_b = null;
         if (param0 == 2048) {
-            return;
+          return;
         }
         field_c = 60;
     }

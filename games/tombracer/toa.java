@@ -13,16 +13,16 @@ final class toa extends vg {
 
     final static int a(boolean param0) {
         if (param0) {
-            return -128;
+          return -128;
         }
         return wua.field_n;
     }
 
     public static void a(int param0) {
         if (param0 != 3402) {
-            toa.a(false);
-            field_f = null;
-            return;
+          toa.a(false);
+          field_f = null;
+          return;
         }
         field_f = null;
     }

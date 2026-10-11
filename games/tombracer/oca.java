@@ -9,9 +9,9 @@ final class oca {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            oca.a(false);
-            field_b = null;
-            return;
+          oca.a(false);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

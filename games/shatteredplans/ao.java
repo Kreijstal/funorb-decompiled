@@ -17,8 +17,8 @@ final class ao {
         var6[8] = dupTemp$1;
         var6[7] = dupTemp$1;
         var6[5] = dupTemp$1;
-        if (!(param1 == 0)) {
-            var6[4] = gr.a((byte) -105, param1, 64);
+        if (param1 != 0) {
+          var6[4] = gr.a((byte) -105, param1, 64);
         }
         return var6;
     }

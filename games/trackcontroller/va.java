@@ -16,119 +16,85 @@ final class va {
         int stackIn_19_0 = 0;
         if (param1 == -47) {
           param0 = param0 & 8191;
-          if (-4097 >= (param0 ^ -1)) {
-            L0: {
-              if (-6145 < (param0 ^ -1)) {
-                stackIn_19_0 = -ta.field_b[param0 - 4096];
-                break L0;
-              } else {
-                stackIn_19_0 = -ta.field_b[-param0 + 8192];
-                break L0;
-              }
+          if (param0 >= 4096) {
+            if (param0 < 6144) {
+              stackIn_19_0 = -ta.field_b[param0 - 4096];
+            } else {
+              stackIn_19_0 = -ta.field_b[-param0 + 8192];
             }
             return stackIn_19_0;
-          } else {
-            L1: {
-              if ((param0 ^ -1) > -2049) {
-                stackIn_15_0 = ta.field_b[param0];
-                break L1;
-              } else {
-                stackIn_15_0 = ta.field_b[4096 - param0];
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
-        } else {
-          field_d = (ik[]) null;
-          param0 = param0 & 8191;
-          if (-4097 >= (param0 ^ -1)) {
-            L2: {
-              if (-6145 < (param0 ^ -1)) {
-                stackIn_9_0 = -ta.field_b[param0 - 4096];
-                break L2;
-              } else {
-                stackIn_9_0 = -ta.field_b[-param0 + 8192];
-                break L2;
-              }
-            }
-            return stackIn_9_0;
+          if (param0 < 2048) {
+            stackIn_15_0 = ta.field_b[param0];
           } else {
-            L3: {
-              if ((param0 ^ -1) > -2049) {
-                stackIn_5_0 = ta.field_b[param0];
-                break L3;
-              } else {
-                stackIn_5_0 = ta.field_b[4096 - param0];
-                break L3;
-              }
-            }
-            return stackIn_5_0;
+            stackIn_15_0 = ta.field_b[4096 - param0];
           }
+          return stackIn_15_0;
         }
+        field_d = (ik[]) null;
+        param0 = param0 & 8191;
+        if (param0 >= 4096) {
+          if (param0 < 6144) {
+            stackIn_9_0 = -ta.field_b[param0 - 4096];
+          } else {
+            stackIn_9_0 = -ta.field_b[-param0 + 8192];
+          }
+          return stackIn_9_0;
+        }
+        if (param0 < 2048) {
+          stackIn_5_0 = ta.field_b[param0];
+        } else {
+          stackIn_5_0 = ta.field_b[4096 - param0];
+        }
+        return stackIn_5_0;
     }
 
     final int b(int param0) {
-        int stackIn_5_0 = 0;
-        if (param0 == 0) {
-          if (null != this.field_b) {
-            if (this.field_b.length == 0) {
-              return 0;
-            } else {
-              return this.field_b[this.field_b.length - 1];
-            }
-          } else {
-            stackIn_5_0 = 0;
-            return stackIn_5_0;
-          }
-        } else {
+        if (param0 != 0) {
           return -61;
         }
+        if (null == this.field_b) {
+          return 0;
+        }
+        if (this.field_b.length != 0) {
+          return this.field_b[this.field_b.length - 1];
+        }
+        return 0;
     }
 
     final int b(int param0, byte param1) {
         int var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        if (null != this.field_b) {
-          if (0 != this.field_b.length) {
-            var3 = 1;
-            if (param1 == -85) {
-              L0: while (true) {
-                if (this.field_b.length > var3) {
-                  if (param0 < this.field_b[var3 - 1] + this.field_b[var3] >> -1111895295) {
-                    return -1 + var3;
-                  } else {
-                    var3++;
-                    continue L0;
-                  }
-                } else {
-                  return this.field_b.length + -1;
-                }
-              }
-            } else {
-              return -105;
-            }
-          } else {
-            return 0;
-          }
-        } else {
+        if (null == this.field_b) {
           return 0;
         }
+        if (0 == this.field_b.length) {
+          return 0;
+        }
+        var3 = 1;
+        if (param1 != -85) {
+          return -105;
+        }
+        while (this.field_b.length > var3) {
+          if (param0 < this.field_b[var3 - 1] + this.field_b[var3] >> 1) {
+            return -1 + var3;
+          }
+          var3++;
+        }
+        return this.field_b.length - 1;
     }
 
     public static void c(int param0) {
         field_d = null;
-        if (param0 != 20300) {
-          va.a(92, (byte) -42);
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 20300) {
           field_a = null;
           field_e = null;
           return;
         }
+        va.a(92, (byte) -42);
+        field_a = null;
+        field_e = null;
     }
 
     va(int param0, int param1, int param2) {
@@ -143,56 +109,33 @@ final class va {
         byte[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 0) {
-              stackIn_4_0 = fk.field_e.a("", -1, param1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (byte[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 0) {
+            stackIn_4_0 = fk.field_e.a("", -1, param1);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (byte[]) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("va.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("va.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw sl.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final static int a(int param0) {
         if (param0 < 70) {
-            field_a = (String) null;
-            return 1;
+          field_a = (String) null;
+          return 1;
         }
         return 1;
     }

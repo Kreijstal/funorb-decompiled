@@ -17,72 +17,65 @@ final class ek implements Iterable {
         var6 = StarCannon.field_A;
         var4 = this.field_a[(int)(param0 & (long)(this.field_c - param1))];
         this.field_e = var4.field_a;
-        L0: while (true) {
-          if (var4 != this.field_e) {
-            if ((param0 ^ -1L) != (this.field_e.field_b ^ -1L)) {
-              this.field_e = this.field_e.field_a;
-              continue L0;
-            } else {
-              var5 = this.field_e;
-              this.field_e = this.field_e.field_a;
-              return var5;
-            }
-          } else {
+        while (true) {
+          if (var4 == this.field_e) {
             this.field_e = null;
             return null;
           }
+          if (~param0 != ~this.field_e.field_b) {
+            this.field_e = this.field_e.field_a;
+            continue;
+          }
+          break;
         }
+        var5 = this.field_e;
+        this.field_e = this.field_e.field_a;
+        return var5;
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-            ek.a(44);
+          ek.a(44);
         }
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        int var3;
-        L0: {
-          var2 = 0;
-          if ((param1 & 7) != 0) {
-            var2 = 8 + -(7 & param1);
-            break L0;
-          } else {
-            break L0;
-          }
+        int var3 = 0;
+        int var2 = 0;
+        int var3Lifetime1;
+        if ((param1 & 7) != 0) {
+          var2 = 8 - (7 & param1);
         }
-        if (param0 != 23201) {
-          ek.a(-51, -124);
-          var3 = var2 + param1;
-          return var3;
-        } else {
+        if (param0 == 23201) {
           var3 = var2 + param1;
           return var3;
         }
+        ek.a(-51, -124);
+        var3Lifetime1 = var2 + param1;
+        return var3Lifetime1;
     }
 
     final void a(long param0, int param1, rf param2) {
         rf var5 = null;
         try {
-            if (null != param2.field_d) {
-                param2.b(4);
-            }
-            var5 = this.field_a[(int)(param0 & (long)(param1 + this.field_c))];
-            param2.field_a = var5;
-            param2.field_d = var5.field_d;
-            param2.field_d.field_a = param2;
-            param2.field_a.field_d = param2;
-            param2.field_b = param0;
+          if (null != param2.field_d) {
+            param2.b(4);
+          }
+          var5 = this.field_a[(int)(param0 & (long)(param1 + this.field_c))];
+          param2.field_a = var5;
+          param2.field_d = var5.field_d;
+          param2.field_d.field_a = param2;
+          param2.field_a.field_d = param2;
+          param2.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "ek.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean a(int param0) {
         if (param0 >= -44) {
-            return true;
+          return true;
         }
         return !qa.field_a.b(false) ? true : false;
     }
@@ -92,7 +85,7 @@ final class ek implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wh((ek) (this)));
+        return (Iterator) ((Object) new wh(this));
     }
 
     static {

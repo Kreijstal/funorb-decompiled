@@ -12,39 +12,37 @@ final class aa {
     public static void a(boolean param0) {
         field_f = null;
         field_a = null;
-        if (!param0) {
-          aa.a(73);
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0) {
           field_c = null;
           field_d = null;
           field_e = null;
           return;
         }
+        aa.a(73);
+        field_c = null;
+        field_d = null;
+        field_e = null;
     }
 
     final static String a(int param0) {
-        if (!(pa.field_V != sh.field_d)) {
-            return qb.field_t;
+        if (pa.field_V == sh.field_d) {
+          return qb.field_t;
         }
         if (param0 >= -25) {
-            field_c = (pi[]) null;
-            if (ka.field_P == pa.field_V) {
-                return pn.field_fb;
-            }
-            if (!(jj.field_f.a(92))) {
-                return pn.field_fb;
-            }
-            return hb.field_Ob;
+          field_c = (pi[]) null;
+          if (ka.field_P == pa.field_V) {
+            return pn.field_fb;
+          }
+          if (!jj.field_f.a(92)) {
+            return pn.field_fb;
+          }
+          return hb.field_Ob;
         }
         if (ka.field_P == pa.field_V) {
-            return pn.field_fb;
+          return pn.field_fb;
         }
-        if (!(jj.field_f.a(92))) {
-            return pn.field_fb;
+        if (!jj.field_f.a(92)) {
+          return pn.field_fb;
         }
         return hb.field_Ob;
     }

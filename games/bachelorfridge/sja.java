@@ -10,16 +10,16 @@ final class sja extends uda {
         pf var3 = field_fb;
         var3.c(param0, (byte) 122);
         if (!param2) {
-            return;
+          return;
         }
         try {
-            var3.d(5, 0);
-            var3.d(0, 0);
-            var3.b(param1.field_f, -115);
-            var3.d(param1.field_h, 0);
-            var3.d(param1.field_i, 0);
+          var3.d(5, 0);
+          var3.d(0, 0);
+          var3.b(param1.field_f, -115);
+          var3.d(param1.field_h, 0);
+          var3.d(param1.field_i, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "sja.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "sja.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class sja extends uda {
         field_gb = null;
         field_fb = null;
         if (param0 != 33) {
-            sja.o(-59);
+          sja.o(-59);
         }
     }
 
@@ -37,9 +37,9 @@ final class sja extends uda {
 
     final void e(wj param0, int param1) {
         try {
-            super.e(param0, param1);
+          super.e(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "sja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "sja.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

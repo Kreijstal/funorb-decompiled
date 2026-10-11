@@ -221,11 +221,11 @@ final class ua extends hf {
     }
 
     final gd c() {
+        int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
         byte[] var1;
         int var2;
-        int var3;
         float[] var4;
         int var5;
         int var7;
@@ -233,32 +233,26 @@ final class ua extends hf {
         this.field_C = new float[field_t];
         var1 = new byte[this.field_H];
         var2 = 0;
-        var3 = 0;
-        while (true) {
-          if (var3 >= this.field_p.length) {
-            this.field_C = null;
-            return new gd(this.field_q, var1, this.field_I, this.field_n, this.field_A);
-          }
+        for (var3 = 0; var3 < this.field_p.length; var3++) {
           var4 = this.c(var3);
-          if (var4 == null) {
-            var3++;
-            continue;
-          }
-          var5 = var4.length;
-          if (var5 > this.field_H - var2) {
-            var5 = this.field_H - var2;
-          }
-          for (var6 = 0; var6 < var5; var6++) {
-            var7 = (int)(128.0f + var4[var6] * 128.0f);
-            if ((var7 & -256) != 0) {
-              var7 = ~var7 >> 31;
+          if (var4 != null) {
+            var5 = var4.length;
+            if (var5 > this.field_H - var2) {
+              var5 = this.field_H - var2;
             }
-            incrementValue$0 = var2;
-            var2++;
-            var1[incrementValue$0] = (byte)(var7 - 128);
+            for (var6 = 0; var6 < var5; var6++) {
+              var7 = (int)(128.0f + var4[var6] * 128.0f);
+              if ((var7 & -256) != 0) {
+                var7 = ~var7 >> 31;
+              }
+              incrementValue$0 = var2;
+              var2++;
+              var1[incrementValue$0] = (byte)(var7 - 128);
+            }
           }
-          var3++;
         }
+        this.field_C = null;
+        return new gd(this.field_q, var1, this.field_I, this.field_n, this.field_A);
     }
 
     final static void a(byte[] param0) {
@@ -268,9 +262,9 @@ final class ua extends hf {
         int var11 = 0;
         int var6 = 0;
         int stackIn_5_0 = 0;
-        boolean[] stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        boolean stackIn_40_2 = false;
+        boolean[] stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        boolean stackIn_42_2 = false;
         int var1;
         int var2;
         int var3;
@@ -331,12 +325,12 @@ final class ua extends hf {
             field_K = var7;
             field_r = var8;
             field_f = var9;
-            continue;
+          } else {
+            field_w = var6_ref_float__;
+            field_g = var7;
+            field_h = var8;
+            field_l = var9;
           }
-          field_w = var6_ref_float__;
-          field_g = var7;
-          field_h = var8;
-          field_l = var9;
         }
         var1Lifetime1 = ua.b(8) + 1;
         field_u = new ae[var1Lifetime1];
@@ -366,10 +360,10 @@ final class ua extends hf {
         field_o = new boolean[var5Lifetime2];
         field_D = new int[var5Lifetime2];
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
-          stackIn_39_0 = (boolean[]) (field_o);
-          stackIn_39_1 = var6;
-          stackIn_40_2 = (ua.b() != 0);
-          stackIn_39_0[stackIn_39_1] = stackIn_40_2;
+          stackIn_41_0 = (boolean[]) (field_o);
+          stackIn_41_1 = var6;
+          stackIn_42_2 = (ua.b() != 0);
+          stackIn_41_0[stackIn_41_1] = stackIn_42_2;
           ua.b(16);
           ua.b(16);
           field_D[var6] = ua.b(8);
@@ -406,7 +400,7 @@ final class ua extends hf {
         float[] stackIn_43_0 = null;
         float[] stackIn_46_0 = null;
         int[] stackIn_49_0 = null;
-        boolean stackIn_111_1 = false;
+        boolean stackIn_113_1 = false;
         int var2;
         int var3;
         int var4;
@@ -651,14 +645,9 @@ final class ua extends hf {
               }
             }
           }
-          var26Lifetime1 = 1;
-          while (true) {
-            if (var26Lifetime1 < var19 - 1) {
-              var27_intLifetime1 = var48[var26Lifetime1];
-              if (var26Lifetime1 >= var27_intLifetime1) {
-                var26Lifetime1++;
-                continue;
-              }
+          for (var26Lifetime1 = 1; var26Lifetime1 < var19 - 1; var26Lifetime1++) {
+            var27_intLifetime1 = var48[var26Lifetime1];
+            if (var26Lifetime1 < var27_intLifetime1) {
               var28_intLifetime1 = 8 * var26Lifetime1;
               var29_intLifetime1 = 8 * var27_intLifetime1;
               var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 1];
@@ -673,10 +662,7 @@ final class ua extends hf {
               var30Lifetime1Lifetime3 = var20_ref_float__[var28_intLifetime1 + 7];
               var20_ref_float__[var28_intLifetime1 + 7] = var20_ref_float__[var29_intLifetime1 + 7];
               var20_ref_float__[var29_intLifetime1 + 7] = var30Lifetime1Lifetime3;
-              var26Lifetime1++;
-              continue;
             }
-            break;
           }
           for (var26Lifetime2 = 0; var26Lifetime2 < var17_intLifetime3; var26Lifetime2++) {
             var20_ref_float__[var26Lifetime2] = var20_ref_float__[2 * var26Lifetime2 + 1];
@@ -751,8 +737,8 @@ final class ua extends hf {
         field_B = var18;
         this.field_M = var4;
         this.field_m = var12 - (var4 >> 1);
-        stackIn_111_1 = (var15 != 0);
-        this.field_i = stackIn_111_1;
+        stackIn_113_1 = (var15 != 0);
+        this.field_i = stackIn_113_1;
         return (float[]) (var17);
     }
 

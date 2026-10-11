@@ -6,28 +6,23 @@ final class je {
     private static String field_z;
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          if (null != ft.field_l) {
-            if (!ca.field_f.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           je.a(false);
-          if (null != ft.field_l) {
-            if (!ca.field_f.a(true)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == ft.field_l) {
             return false;
           }
+          if (ca.field_f.a(true)) {
+            return true;
+          }
+          return false;
         }
+        if (null == ft.field_l) {
+          return false;
+        }
+        if (ca.field_f.a(true)) {
+          return true;
+        }
+        return false;
     }
 
     static {

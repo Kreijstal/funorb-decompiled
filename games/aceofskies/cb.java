@@ -8,39 +8,26 @@ final class cb {
 
     final boolean a(boolean param0) {
         if (param0) {
-            return false;
+          return false;
         }
         return this.field_b != null ? true : false;
     }
 
     final void a(byte param0) {
-        int var2;
-        L0: {
-          var2 = 96 / ((param0 - -21) / 54);
-          if (null != this.field_a) {
-            this.field_a.a(1618);
-            this.field_a = null;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var2 = 96 / ((param0 + 21) / 54);
+        if (null != this.field_a) {
+          this.field_a.a(1618);
+          this.field_a = null;
         }
-        L1: {
-          if (this.field_c != null) {
-            this.field_c.a(1618);
-            this.field_c = null;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (this.field_c != null) {
+          this.field_c.a(1618);
+          this.field_c = null;
         }
-        if (this.field_b != null) {
-          this.field_b.a(1618);
-          this.field_b = null;
-          return;
-        } else {
+        if (this.field_b == null) {
           return;
         }
+        this.field_b.a(1618);
+        this.field_b = null;
     }
 
     final void a(jagdx.IDirect3DSurface param0, jagdx.IDirect3DSwapChain param1, int param2) {
@@ -51,7 +38,7 @@ final class cb {
 
     final int a(int param0, int param1) {
         if (param1 > -77) {
-            return -97;
+          return -97;
         }
         return this.field_b.Present(param0);
     }

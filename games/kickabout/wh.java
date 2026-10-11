@@ -36,50 +36,50 @@ final class wh extends gn {
         cq var5 = null;
         int var6 = Kickabout.field_G;
         if (param0 <= 66) {
-            return;
+          return;
         }
         try {
-            for (var2_int = 0; var2_int < param1.length; var2_int++) {
-                var3 = param1[var2_int].field_a;
-                var5 = (cq) ((Object) ic.field_h.field_O.g(24009));
-                while (var5 != null) {
-                    if (!((var5.field_i ^ -1L) != (var3 ^ -1L))) {
-                        i.field_A[var5.field_l] = param1[var2_int];
-                        break;
-                    }
-                    var5 = (cq) ((Object) ic.field_h.field_O.c(33));
-                }
+          for (var2_int = 0; var2_int < param1.length; var2_int++) {
+            var3 = param1[var2_int].field_a;
+            var5 = (cq) (ic.field_h.field_O.g(24009));
+            while (var5 != null) {
+              if (~var5.field_i == ~var3) {
+                i.field_A[var5.field_l] = param1[var2_int];
+                break;
+              }
+              var5 = (cq) (ic.field_h.field_O.c(33));
             }
-            gb.field_F = true;
+          }
+          gb.field_F = true;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "wh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "wh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0) {
         if (this.field_r) {
-            he.a(this.field_m, true);
+          he.a(this.field_m, true);
         } else {
-            mj.a(true, this.field_m);
+          mj.a(true, this.field_m);
         }
         if (param0 <= 67) {
-            this.f((byte) 6);
+          this.f((byte) 6);
         }
     }
 
     private final void a(byte param0) {
-        int var2 = this.field_i * mn.field_a >> -341429720;
+        int var2 = this.field_i * mn.field_a >> 8;
         if (param0 != 99) {
-            this.e(81);
+          this.e(81);
         }
         this.field_m = vm.a(vg.field_Db[this.field_n].field_l, 100, var2, this.field_f);
-        if (!(!this.field_j)) {
-            this.field_m.i();
+        if (this.field_j) {
+          this.field_m.i();
         }
         if (!this.field_r) {
-            ga.a(this.field_m, 114);
+          ga.a(this.field_m, 114);
         } else {
-            w.a(this.field_m, param0 ^ 14);
+          w.a(this.field_m, param0 ^ 14);
         }
         this.field_k = this.field_k - 1;
         this.field_o = false;
@@ -88,35 +88,35 @@ final class wh extends gn {
     private final void g(byte param0) {
         int var2 = 0;
         if (param0 >= -73) {
-            this.e(84);
+          this.e(84);
         }
-        if (!(this.field_t >= this.field_u)) {
-            var2 = this.field_t * (this.field_x / this.field_u);
-            var2 = var2 * mn.field_a >> -485024728;
-            this.field_m.f(var2 >> 1684914600);
+        if (this.field_t < this.field_u) {
+          var2 = this.field_t * (this.field_x / this.field_u);
+          var2 = var2 * mn.field_a >> 8;
+          this.field_m.f(var2 >> 8);
         }
         this.field_t = this.field_t + 1;
     }
 
     private final void e(int param0) {
         int var3 = 0;
-        int var2 = ((to) ((Object) this.field_m.field_h)).field_i.length;
-        if (!(this.field_m.g() < -(this.field_s << -1445971351) + var2)) {
-            if (this.field_l < this.field_s) {
-                var3 = -(this.field_l * (this.field_x / this.field_s)) + this.field_x;
-                var3 = var3 * mn.field_a >> 1863914568;
-                this.field_m.f(var3 >> -929222904);
-            }
-            this.field_l = this.field_l + 1;
+        int var2 = ((to) (this.field_m.field_h)).field_i.length;
+        if (!(this.field_m.g() < -(this.field_s << 9) + var2)) {
+          if (this.field_l < this.field_s) {
+            var3 = -(this.field_l * (this.field_x / this.field_s)) + this.field_x;
+            var3 = var3 * mn.field_a >> 8;
+            this.field_m.f(var3 >> 8);
+          }
+          this.field_l = this.field_l + 1;
         }
         if (param0 != 1681431816) {
-            this.field_k = -78;
+          this.field_k = -78;
         }
     }
 
     final void a(int param0, byte param1) {
         if (param1 != -4) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
         this.field_l = 0;
         this.field_s = param0;
@@ -125,7 +125,7 @@ final class wh extends gn {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            wh.a(11);
+          wh.a(11);
         }
         field_h = null;
         field_p = null;
@@ -135,35 +135,34 @@ final class wh extends gn {
 
     final void f(byte param0) {
         if (this.field_m.f()) {
-            if (0 == this.field_k) {
-                this.c((byte) -109);
-            } else {
-                this.a((byte) 99);
-            }
+          if (0 == this.field_k) {
+            this.c((byte) -109);
+          } else {
+            this.a((byte) 99);
+          }
         }
         if (param0 >= -124) {
-            return;
+          return;
         }
         if (this.field_o) {
-            this.g((byte) -101);
+          this.g((byte) -101);
         }
-        if (this.field_g) {
-            if (!(this.field_k != 0)) {
-                this.e(1681431816);
-            }
+        if (this.field_g &&
+          this.field_k == 0) {
+          this.e(1681431816);
         }
     }
 
     final void a(int param0, int param1) {
         this.field_k = param0;
         if (param1 != 0) {
-            this.e(9);
+          this.e(9);
         }
     }
 
     final int a(boolean param0) {
         if (param0) {
-            field_h = (String) null;
+          field_h = (String) null;
         }
         return this.field_n;
     }
@@ -172,7 +171,7 @@ final class wh extends gn {
         this.field_n = param0;
         this.field_i = param1;
         this.field_j = param3 ? true : false;
-        this.field_x = this.field_i << 1681431816;
+        this.field_x = this.field_i << 8;
         this.field_r = param4 ? true : false;
         this.field_k = 1;
         this.field_f = param2;

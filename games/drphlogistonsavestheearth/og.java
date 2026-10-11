@@ -15,7 +15,7 @@ final class og {
         field_f = null;
         field_e = null;
         if (param0 < 20) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -26,136 +26,62 @@ final class og {
         RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            try {
-              L1: {
-                if (bl.field_r.startsWith("win")) {
-                  L2: {
-                    if (param0.startsWith("http://")) {
-                      break L2;
-                    } else {
-                      if (param0.startsWith("https://")) {
-                        break L2;
-                      } else {
-                        stackIn_7_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                  var3 = param1;
-                  L3: while (true) {
-                    if (param0.length() <= var3) {
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackIn_15_0 = 1;
-                      decompiledRegionSelector0 = 3;
-                      break L1;
-                    } else {
-                      if (0 != (var2.indexOf((int) param0.charAt(var3)) ^ -1)) {
-                        var3++;
-                        continue L3;
-                      } else {
-                        stackIn_12_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L1;
-                      }
-                    }
-                  }
-                } else {
-                  stackIn_3_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L1;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_17_0 = 0;
-              return stackIn_17_0 != 0;
+          try {
+            if (!bl.field_r.startsWith("win")) {
+              return false;
             }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
-              } else {
-                if (decompiledRegionSelector0 == 2) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 3;
-                  break L0;
-                }
-              }
+            if (!param0.startsWith("http://") &&
+              !param0.startsWith("https://")) {
+              return false;
             }
+            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            var3 = param1;
+            while (true) {
+              if (param0.length() <= var3) {
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                return true;
+              }
+              if (var2.indexOf((int) param0.charAt(var3)) != -1) {
+                var3++;
+                continue;
+              }
+              break;
+            }
+            return false;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L4: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var2_ref2);
-
-            stackIn_20_1 = new StringBuilder().append("og.B(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L4;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L4;
-            }
-          }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_7_0 != 0;
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_20_0 = var2_ref2;
+          stackIn_20_1 = new StringBuilder().append("og.B(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
           } else {
-            if (decompiledRegionSelector1 == 2) {
-              return stackIn_12_0 != 0;
-            } else {
-              return stackIn_15_0 != 0;
-            }
+            stackIn_21_2 = "{...}";
           }
+          throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(byte param0) {
         if (!gf.field_G) {
           throw new IllegalStateException();
-        } else {
-          gm.field_M = true;
-          qb.a(-127, false);
-          if (param0 < 55) {
-            return;
-          } else {
-            af.field_b = 0;
-            return;
-          }
+        }
+        gm.field_M = true;
+        qb.a(-127, false);
+        if (param0 >= 55) {
+          af.field_b = 0;
+          return;
         }
     }
 

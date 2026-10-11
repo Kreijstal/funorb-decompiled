@@ -28,8 +28,6 @@ final class wm {
         int var8 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         int[] var5 = null;
@@ -39,52 +37,31 @@ final class wm {
         int[] var9 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_a = (hr) null;
-                break L1;
-              }
-            }
-            param3--;
-            L2: while (true) {
-              if ((param3 ^ -1) > -1) {
-                break L0;
-              } else {
-                var9 = param4;
-                var5 = var9;
-                var6 = param1;
-                var7 = param2;
-                var9[var6] = eb.a(8355711, var9[var6] >> -816598271) + var7;
-                param1++;
-                param3--;
-                continue L2;
-              }
-            }
+          if (param0 != -1) {
+            field_a = (hr) null;
           }
+          param3--;
+          while (param3 >= 0) {
+            var9 = param4;
+            var5 = var9;
+            var6 = param1;
+            var7 = param2;
+            var9[var6] = eb.a(8355711, var9[var6] >> 1) + var7;
+            param1++;
+            param3--;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5_ref);
-
-            stackIn_10_1 = new StringBuilder().append("wm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_10_0 = var5_ref;
+          stackIn_10_1 = new StringBuilder().append("wm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw qo.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -97,33 +74,22 @@ final class wm {
         RuntimeException decompiledCaughtException = null;
         var3 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            var5 = (db) ((Object) jj.field_a.b(72));
-            L1: while (true) {
-              if (var5 == null) {
-                var2 = no.field_d.b(-87);
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (!param0) {
-                      break L0;
-                    } else {
-                      var4 = (int[]) null;
-                      wm.a(-1, 109, 92, -119, (int[]) null);
-                      return;
-                    }
-                  } else {
-                    jg.b(11044, param1);
-                    var2 = no.field_d.d((byte) 18);
-                    continue L2;
-                  }
-                }
-              } else {
-                mn.a(var5, -112, param1);
-                var5 = (db) ((Object) jj.field_a.d((byte) 18));
-                continue L1;
-              }
-            }
+          var5 = (db) (jj.field_a.b(72));
+          while (var5 != null) {
+            mn.a(var5, -112, param1);
+            var5 = (db) (jj.field_a.d((byte) 18));
           }
+          var2 = no.field_d.b(-87);
+          while (var2 != null) {
+            jg.b(11044, param1);
+            var2 = no.field_d.d((byte) 18);
+          }
+          if (!param0) {
+            return;
+          }
+          var4 = (int[]) null;
+          wm.a(-1, 109, 92, -119, (int[]) null);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -135,7 +101,7 @@ final class wm {
         field_f = null;
         field_a = null;
         if (param0) {
-            return;
+          return;
         }
         field_f = (boolean[]) null;
     }

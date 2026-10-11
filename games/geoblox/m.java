@@ -49,10 +49,9 @@ abstract class m extends rc {
         var4 = 0;
         for (var5 = 0; var5 < var3; var5++) {
           var6 = this.a(field_E[var5]);
-          if (var6 <= var4) {
-            continue;
+          if (var6 > var4) {
+            var4 = var6;
           }
-          var4 = var6;
         }
         return var4;
     }
@@ -147,31 +146,18 @@ abstract class m extends rc {
             }
           }
           this.field_x = new byte[65536];
-          var7Lifetime2 = 0;
-          while (true) {
-            if (var7Lifetime2 >= 256) {
-              this.field_p = var17[32] + var14[32];
-              break;
-            }
-            if (var7Lifetime2 == 32) {
-              var7Lifetime2++;
-              continue;
-            }
-            if (var7Lifetime2 == 160) {
-              var7Lifetime2++;
-              continue;
-            }
-            for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
-              if (var8Lifetime2 == 32) {
-                continue;
+          for (var7Lifetime2 = 0; var7Lifetime2 < 256; var7Lifetime2++) {
+            if (var7Lifetime2 != 32 &&
+              var7Lifetime2 != 160) {
+              for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
+                if (var8Lifetime2 != 32 &&
+                  var8Lifetime2 != 160) {
+                  this.field_x[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)m.a(var15, var16, var17, this.field_v, var14, var7Lifetime2, var8Lifetime2);
+                }
               }
-              if (var8Lifetime2 == 160) {
-                continue;
-              }
-              this.field_x[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)m.a(var15, var16, var17, this.field_v, var14, var7Lifetime2, var8Lifetime2);
             }
-            var7Lifetime2++;
           }
+          this.field_p = var17[32] + var14[32];
         }
     }
 
@@ -186,9 +172,9 @@ abstract class m extends rc {
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
-        int stackIn_67_0 = 0;
-        int[] stackIn_67_1 = null;
-        int stackIn_68_2 = 0;
+        int stackIn_69_0 = 0;
+        int[] stackIn_69_1 = null;
+        int stackIn_70_2 = 0;
         Throwable decompiledCaughtException = null;
         int var4 = 0;
         int var5 = 0;
@@ -221,153 +207,151 @@ abstract class m extends rc {
         var12 = param0.length();
         for (var13 = 0; var13 < var12; var13++) {
           var14 = param0.charAt(var13);
-          if (var14 == 60) {
-            var9 = var13;
-            continue;
-          }
-          if (var14 == 62 &&
-            var9 != -1) {
-            var15 = param0.substring(var9 + 1, var13).toLowerCase();
-            var9 = -1;
-            discarded$0 = field_r.append('<');
-            discarded$1 = field_r.append(var15);
-            discarded$2 = field_r.append('>');
-            if (!var15.equals("br")) {
-              if (!var15.equals("lt")) {
-                if (!var15.equals("gt")) {
-                  if (!var15.equals("nbsp")) {
-                    if (!var15.equals("shy")) {
-                      if (!var15.equals("times")) {
-                        if (!var15.equals("euro")) {
-                          if (!var15.equals("copy")) {
-                            if (!var15.equals("reg")) {
-                              if (var15.startsWith("img=")) {
-                                try {
-                                  var18 = (CharSequence) ((Object) var15.substring(4));
-                                  var16_int = ol.a(false, var18);
-                                  var4 = var4 + this.field_s[var16_int].field_e;
-                                  var10 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  var16 = (Exception) (Object) decompiledCaughtException;
+          if (var14 != 60) {
+            if (var14 == 62 &&
+              var9 != -1) {
+              var15 = param0.substring(var9 + 1, var13).toLowerCase();
+              var9 = -1;
+              discarded$0 = field_r.append('<');
+              discarded$1 = field_r.append(var15);
+              discarded$2 = field_r.append('>');
+              if (!var15.equals("br")) {
+                if (!var15.equals("lt")) {
+                  if (!var15.equals("gt")) {
+                    if (!var15.equals("nbsp")) {
+                      if (!var15.equals("shy")) {
+                        if (!var15.equals("times")) {
+                          if (!var15.equals("euro")) {
+                            if (!var15.equals("copy")) {
+                              if (!var15.equals("reg")) {
+                                if (var15.startsWith("img=")) {
+                                  try {
+                                    var18 = (CharSequence) ((Object) var15.substring(4));
+                                    var16_int = ol.a(false, var18);
+                                    var4 = var4 + this.field_s[var16_int].field_e;
+                                    var10 = 0;
+                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                    decompiledCaughtException = decompiledCaughtParameter0;
+                                    var16 = (Exception) (Object) decompiledCaughtException;
+                                  }
                                 }
+                              } else {
+                                var4 = var4 + this.a('®');
+                                if (this.field_x != null &&
+                                  var10 != 0) {
+                                  var4 = var4 + this.field_x[(var10 << 8) + 174];
+                                }
+                                var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('®');
+                              var4 = var4 + this.a('©');
                               if (this.field_x != null &&
                                 var10 != 0) {
-                                var4 = var4 + this.field_x[(var10 << 8) + 174];
+                                var4 = var4 + this.field_x[(var10 << 8) + 169];
                               }
-                              var10 = 174;
+                              var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('©');
+                            var4 = var4 + this.a('€');
                             if (this.field_x != null &&
                               var10 != 0) {
-                              var4 = var4 + this.field_x[(var10 << 8) + 169];
+                              var4 = var4 + this.field_x[(var10 << 8) + 128];
                             }
-                            var10 = 169;
+                            var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('€');
+                          var4 = var4 + this.a('×');
                           if (this.field_x != null &&
                             var10 != 0) {
-                            var4 = var4 + this.field_x[(var10 << 8) + 128];
+                            var4 = var4 + this.field_x[(var10 << 8) + 215];
                           }
-                          var10 = 8364;
+                          var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('×');
+                        var4 = var4 + this.a('­');
                         if (this.field_x != null &&
                           var10 != 0) {
-                          var4 = var4 + this.field_x[(var10 << 8) + 215];
+                          var4 = var4 + this.field_x[(var10 << 8) + 173];
                         }
-                        var10 = 215;
+                        var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a('­');
+                      var4 = var4 + this.a(' ');
                       if (this.field_x != null &&
                         var10 != 0) {
-                        var4 = var4 + this.field_x[(var10 << 8) + 173];
+                        var4 = var4 + this.field_x[(var10 << 8) + 160];
                       }
-                      var10 = 173;
+                      var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a(' ');
+                    var4 = var4 + this.a('>');
                     if (this.field_x != null &&
                       var10 != 0) {
-                      var4 = var4 + this.field_x[(var10 << 8) + 160];
+                      var4 = var4 + this.field_x[(var10 << 8) + 62];
                     }
-                    var10 = 160;
+                    var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('>');
+                  var4 = var4 + this.a('<');
                   if (this.field_x != null &&
                     var10 != 0) {
-                    var4 = var4 + this.field_x[(var10 << 8) + 62];
+                    var4 = var4 + this.field_x[(var10 << 8) + 60];
                   }
-                  var10 = 62;
+                  var10 = 60;
                 }
               } else {
-                var4 = var4 + this.a('<');
+                param2[var11] = field_r.toString().substring(var5, field_r.length());
+                var11++;
+                var5 = field_r.length();
+                var4 = 0;
+                var6 = -1;
+                var10 = 0;
+              }
+              var14 = 0;
+            }
+            if (var9 == -1) {
+              if (var14 != 0) {
+                discarded$3 = field_r.append((char) var14);
+                var14 = (char)(qc.a((char) var14, true) & 255);
+                var4 = var4 + this.field_v[var14];
                 if (this.field_x != null &&
                   var10 != 0) {
-                  var4 = var4 + this.field_x[(var10 << 8) + 60];
+                  var4 = var4 + this.field_x[(var10 << 8) + var14];
                 }
-                var10 = 60;
+                var10 = var14;
               }
-            } else {
-              param2[var11] = field_r.toString().substring(var5, field_r.length());
-              var11++;
-              var5 = field_r.length();
-              var4 = 0;
-              var6 = -1;
-              var10 = 0;
+              if (var14 == 32) {
+                var6 = field_r.length();
+                var7 = var4;
+                var8 = 1;
+              }
+              if (param1 != null) {
+                stackIn_69_0 = var4;
+                stackIn_69_1 = (int[]) (param1);
+                if (var11 >= param1.length) {
+                  stackIn_70_2 = param1.length - 1;
+                } else {
+                  stackIn_70_2 = var11;
+                }
+                if (stackIn_69_0 > stackIn_69_1[stackIn_70_2] &&
+                  var6 >= 0) {
+                  param2[var11] = field_r.toString().substring(var5, var6 - var8);
+                  var11++;
+                  var5 = var6;
+                  var6 = -1;
+                  var4 = var4 - var7;
+                  var10 = 0;
+                }
+              }
+              if (var14 == 45) {
+                var6 = field_r.length();
+                var7 = var4;
+                var8 = 0;
+              }
             }
-            var14 = 0;
+          } else {
+            var9 = var13;
           }
-          if (var9 != -1) {
-            continue;
-          }
-          if (var14 != 0) {
-            discarded$3 = field_r.append((char) var14);
-            var14 = (char)(qc.a((char) var14, true) & 255);
-            var4 = var4 + this.field_v[var14];
-            if (this.field_x != null &&
-              var10 != 0) {
-              var4 = var4 + this.field_x[(var10 << 8) + var14];
-            }
-            var10 = var14;
-          }
-          if (var14 == 32) {
-            var6 = field_r.length();
-            var7 = var4;
-            var8 = 1;
-          }
-          if (param1 != null) {
-            stackIn_67_0 = var4;
-            stackIn_67_1 = (int[]) (param1);
-            if (var11 >= param1.length) {
-              stackIn_68_2 = param1.length - 1;
-            } else {
-              stackIn_68_2 = var11;
-            }
-            if (stackIn_67_0 > stackIn_67_1[stackIn_68_2] &&
-              var6 >= 0) {
-              param2[var11] = field_r.toString().substring(var5, var6 - var8);
-              var11++;
-              var5 = var6;
-              var6 = -1;
-              var4 = var4 - var7;
-              var10 = 0;
-            }
-          }
-          if (var14 != 45) {
-            continue;
-          }
-          var6 = field_r.length();
-          var7 = var4;
-          var8 = 0;
         }
         if (field_r.length() > var5) {
           param2[var11] = field_r.toString().substring(var5, field_r.length());
@@ -387,21 +371,18 @@ abstract class m extends rc {
         var5 = param0.length();
         for (var6 = 0; var6 < var5; var6++) {
           var7 = param0.charAt(var6);
-          if (var7 == 60) {
+          if (var7 != 60) {
+            if (var7 != 62) {
+              if (var4 == 0 &&
+                var7 == 32) {
+                var3++;
+              }
+            } else {
+              var4 = 0;
+            }
+          } else {
             var4 = 1;
-            continue;
           }
-          if (var7 == 62) {
-            var4 = 0;
-            continue;
-          }
-          if (var4 != 0) {
-            continue;
-          }
-          if (var7 != 32) {
-            continue;
-          }
-          var3++;
         }
         if (var3 > 0) {
           field_t = (param1 - this.a(param0) << 8) / var3;
@@ -529,29 +510,29 @@ abstract class m extends rc {
           var14 = param2 + this.field_o;
         }
         for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
-          if (param8 == 0) {
-            this.a(field_E[var15Lifetime1], param1, var14);
-            var14 = var14 + param10;
-            continue;
-          }
-          if (param8 == 1) {
-            this.a(field_E[var15Lifetime1], param1 + (param3 - this.a(field_E[var15Lifetime1])) / 2, var14);
-            var14 = var14 + param10;
-            continue;
-          }
-          if (param8 == 2) {
-            this.a(field_E[var15Lifetime1], param1 + param3 - this.a(field_E[var15Lifetime1]), var14);
-            var14 = var14 + param10;
-            continue;
-          }
-          if (var15Lifetime1 != var13 - 1) {
-            this.a(field_E[var15Lifetime1], param3);
-            this.a(field_E[var15Lifetime1], param1, var14);
-            field_t = 0;
+          if (param8 != 0) {
+            if (param8 != 1) {
+              if (param8 != 2) {
+                if (var15Lifetime1 != var13 - 1) {
+                  this.a(field_E[var15Lifetime1], param3);
+                  this.a(field_E[var15Lifetime1], param1, var14);
+                  field_t = 0;
+                } else {
+                  this.a(field_E[var15Lifetime1], param1, var14);
+                }
+                var14 = var14 + param10;
+              } else {
+                this.a(field_E[var15Lifetime1], param1 + param3 - this.a(field_E[var15Lifetime1]), var14);
+                var14 = var14 + param10;
+              }
+            } else {
+              this.a(field_E[var15Lifetime1], param1 + (param3 - this.a(field_E[var15Lifetime1])) / 2, var14);
+              var14 = var14 + param10;
+            }
           } else {
             this.a(field_E[var15Lifetime1], param1, var14);
+            var14 = var14 + param10;
           }
-          var14 = var14 + param10;
         }
         return var13;
     }
@@ -606,12 +587,12 @@ abstract class m extends rc {
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6);
 
     final int a(String param0) {
+        int var6 = 0;
         Throwable decompiledCaughtException = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         String var8 = null;
         int var9_int = 0;
@@ -624,78 +605,73 @@ abstract class m extends rc {
         var3 = 0;
         var4 = 0;
         var5 = param0.length();
-        var6 = 0;
-        while (var6 < var5) {
+        for (var6 = 0; var6 < var5; var6++) {
+          boolean decompiledFrameRemainder0 = true;
           var7 = param0.charAt(var6);
-          if (var7 == 60) {
-            var2 = var6;
-            var6++;
-            continue;
-          }
-          if (var7 == 62 &&
-            var2 != -1) {
-            var8 = param0.substring(var2 + 1, var6).toLowerCase();
-            var2 = -1;
-            if (!var8.equals("lt")) {
-              if (!var8.equals("gt")) {
-                if (!var8.equals("nbsp")) {
-                  if (!var8.equals("shy")) {
-                    if (!var8.equals("times")) {
-                      if (!var8.equals("euro")) {
-                        if (!var8.equals("copy")) {
-                          if (!var8.equals("reg")) {
-                            if (!var8.startsWith("img=")) {
-                              var6++;
-                              continue;
+          if (var7 != 60) {
+            if (var7 == 62 &&
+              var2 != -1) {
+              var8 = param0.substring(var2 + 1, var6).toLowerCase();
+              var2 = -1;
+              if (!var8.equals("lt")) {
+                if (!var8.equals("gt")) {
+                  if (!var8.equals("nbsp")) {
+                    if (!var8.equals("shy")) {
+                      if (!var8.equals("times")) {
+                        if (!var8.equals("euro")) {
+                          if (!var8.equals("copy")) {
+                            if (!var8.equals("reg")) {
+                              if (!(!var8.startsWith("img="))) {
+                                try {
+                                  var10 = (CharSequence) ((Object) var8.substring(4));
+                                  var9_int = ol.a(false, var10);
+                                  var4 = var4 + this.field_s[var9_int].field_e;
+                                  var3 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  var9 = (Exception) (Object) decompiledCaughtException;
+                                }
+                              }
+                              decompiledFrameRemainder0 = false;
                             }
-                            try {
-                              var10 = (CharSequence) ((Object) var8.substring(4));
-                              var9_int = ol.a(false, var10);
-                              var4 = var4 + this.field_s[var9_int].field_e;
-                              var3 = 0;
-                              var6++;
-                            } catch (java.lang.Exception decompiledCaughtParameter0) {
-                              decompiledCaughtException = decompiledCaughtParameter0;
-                              var9 = (Exception) (Object) decompiledCaughtException;
-                              var6++;
+                            else {
+                              var7 = 174;
                             }
-                            continue;
+                          } else {
+                            var7 = 169;
                           }
-                          var7 = 174;
                         } else {
-                          var7 = 169;
+                          var7 = 8364;
                         }
                       } else {
-                        var7 = 8364;
+                        var7 = 215;
                       }
                     } else {
-                      var7 = 215;
+                      var7 = 173;
                     }
                   } else {
-                    var7 = 173;
+                    var7 = 160;
                   }
                 } else {
-                  var7 = 160;
+                  var7 = 62;
                 }
               } else {
-                var7 = 62;
+                var7 = 60;
               }
-            } else {
-              var7 = 60;
             }
+            if ((decompiledFrameRemainder0) &&
+              (var2 == -1)) {
+              var7 = (char)(qc.a((char) var7, true) & 255);
+              var4 = var4 + this.field_v[var7];
+              if (this.field_x != null &&
+                var3 != 0) {
+                var4 = var4 + this.field_x[(var3 << 8) + var7];
+              }
+              var3 = var7;
+            }
+          } else {
+            var2 = var6;
           }
-          if (var2 != -1) {
-            var6++;
-            continue;
-          }
-          var7 = (char)(qc.a((char) var7, true) & 255);
-          var4 = var4 + this.field_v[var7];
-          if (this.field_x != null &&
-            var3 != 0) {
-            var4 = var4 + this.field_x[(var3 << 8) + var7];
-          }
-          var3 = var7;
-          var6++;
         }
         return var4;
     }
@@ -751,10 +727,9 @@ abstract class m extends rc {
           incrementValue$7 = var17;
           var17++;
           var19 = var14[incrementValue$6] + var15[incrementValue$7];
-          if (var19 >= var13) {
-            continue;
+          if (var19 < var13) {
+            var13 = var19;
           }
-          var13 = var19;
         }
         return -var13;
     }
@@ -769,12 +744,12 @@ abstract class m extends rc {
     }
 
     private final void a(String param0, int param1, int param2) {
-        int stackIn_26_0 = 0;
+        int var7 = 0;
+        int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         String var9_ref_String = null;
         int var9 = 0;
@@ -788,122 +763,115 @@ abstract class m extends rc {
         var4 = -1;
         var5 = 0;
         var6 = param0.length();
-        var7 = 0;
-        while (true) {
-          if (var7 >= var6) {
-            return;
-          }
+        for (var7 = 0; var7 < var6; var7++) {
+          boolean decompiledFrameRemainder0 = true;
           var8 = param0.charAt(var7);
-          if (var8 == 60) {
-            var4 = var7;
-            var7++;
-            continue;
-          }
-          if (var8 == 62 &&
-            var4 != -1) {
-            var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
-            var4 = -1;
-            if (!var9_ref_String.equals("lt")) {
-              if (!var9_ref_String.equals("gt")) {
-                if (!var9_ref_String.equals("nbsp")) {
-                  if (!var9_ref_String.equals("shy")) {
-                    if (!var9_ref_String.equals("times")) {
-                      if (!var9_ref_String.equals("euro")) {
-                        if (!var9_ref_String.equals("copy")) {
-                          if (!var9_ref_String.equals("reg")) {
-                            if (!var9_ref_String.startsWith("img=")) {
-                              this.b(var9_ref_String);
-                              var7++;
-                              continue;
-                            }
-                            try {
-                              var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                              var10 = ol.a(false, var13);
-                              var11_ref_ha = this.field_s[var10];
-                              if (this.field_w == null) {
-                                stackIn_26_0 = var11_ref_ha.field_c;
+          if (var8 != 60) {
+            if (var8 == 62 &&
+              var4 != -1) {
+              var9_ref_String = param0.substring(var4 + 1, var7).toLowerCase();
+              var4 = -1;
+              if (!var9_ref_String.equals("lt")) {
+                if (!var9_ref_String.equals("gt")) {
+                  if (!var9_ref_String.equals("nbsp")) {
+                    if (!var9_ref_String.equals("shy")) {
+                      if (!var9_ref_String.equals("times")) {
+                        if (!var9_ref_String.equals("euro")) {
+                          if (!var9_ref_String.equals("copy")) {
+                            if (!var9_ref_String.equals("reg")) {
+                              if (!var9_ref_String.startsWith("img=")) {
+                                this.b(var9_ref_String);
                               } else {
-                                stackIn_26_0 = this.field_w[var10];
+                                try {
+                                  var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
+                                  var10 = ol.a(false, var13);
+                                  var11_ref_ha = this.field_s[var10];
+                                  if (this.field_w == null) {
+                                    stackIn_27_0 = var11_ref_ha.field_c;
+                                  } else {
+                                    stackIn_27_0 = this.field_w[var10];
+                                  }
+                                  var12 = stackIn_27_0;
+                                  if (field_m != 256) {
+                                    var11_ref_ha.a(param1, param2 + this.field_p - var12, field_m);
+                                  } else {
+                                    var11_ref_ha.a(param1, param2 + this.field_p - var12);
+                                  }
+                                  param1 = param1 + var11_ref_ha.field_e;
+                                  var5 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                }
                               }
-                              var12 = stackIn_26_0;
-                              if (field_m != 256) {
-                                var11_ref_ha.a(param1, param2 + this.field_p - var12, field_m);
-                              } else {
-                                var11_ref_ha.a(param1, param2 + this.field_p - var12);
-                              }
-                              param1 = param1 + var11_ref_ha.field_e;
-                              var5 = 0;
-                              var7++;
-                            } catch (java.lang.Exception decompiledCaughtParameter0) {
-                              decompiledCaughtException = decompiledCaughtParameter0;
-                              var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                              var7++;
+                              decompiledFrameRemainder0 = false;
                             }
-                            continue;
+                            else {
+                              var8 = 174;
+                            }
+                          } else {
+                            var8 = 169;
                           }
-                          var8 = 174;
                         } else {
-                          var8 = 169;
+                          var8 = 8364;
                         }
                       } else {
-                        var8 = 8364;
+                        var8 = 215;
                       }
                     } else {
-                      var8 = 215;
+                      var8 = 173;
                     }
                   } else {
-                    var8 = 173;
+                    var8 = 160;
                   }
                 } else {
-                  var8 = 160;
+                  var8 = 62;
                 }
               } else {
-                var8 = 62;
+                var8 = 60;
               }
-            } else {
-              var8 = 60;
             }
-          }
-          if (var4 != -1) {
-            var7++;
-            continue;
-          }
-          var8 = (char)(qc.a((char) var8, true) & 255);
-          if (this.field_x != null &&
-            var5 != 0) {
-            param1 = param1 + this.field_x[(var5 << 8) + var8];
-          }
-          var9 = this.field_J[var8];
-          var10 = this.field_I[var8];
-          var11 = param1;
-          if (var8 == 32) {
-            if (field_t > 0) {
-              field_u = field_u + field_t;
-              param1 = param1 + (field_u >> 8);
-              field_u = field_u & 255;
+            if ((decompiledFrameRemainder0) &&
+              (var4 == -1)) {
+              var8 = (char)(qc.a((char) var8, true) & 255);
+              if (this.field_x != null &&
+                var5 != 0) {
+                param1 = param1 + this.field_x[(var5 << 8) + var8];
+              }
+              var9 = this.field_J[var8];
+              var10 = this.field_I[var8];
+              var11 = param1;
+              if (var8 == 32) {
+                if (field_t > 0) {
+                  field_u = field_u + field_t;
+                  param1 = param1 + (field_u >> 8);
+                  field_u = field_u & 255;
+                }
+              } else {
+                if (field_m != 256) {
+                  if (field_D != -1) {
+                    this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_C[var8] + 1, var9, var10, field_D, field_m, true);
+                  }
+                  this.a(var8, param1 + this.field_A[var8], param2 + this.field_C[var8], var9, var10, field_F, field_m, false);
+                } else {
+                  if (field_D != -1) {
+                    this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_C[var8] + 1, var9, var10, field_D, true);
+                  }
+                  this.a(var8, param1 + this.field_A[var8], param2 + this.field_C[var8], var9, var10, field_F, false);
+                }
+              }
+              param1 = param1 + this.field_v[var8];
+              if (field_H != -1) {
+                vb.c(var11, param2 + (int)((double)this.field_p * 0.7), param1 - var11, field_H);
+              }
+              if (field_z != -1) {
+                vb.c(var11, param2 + this.field_p + 1, param1 - var11, field_z);
+              }
+              var5 = var8;
             }
           } else {
-            if (field_m != 256) {
-              if (field_D != -1) {
-                this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_C[var8] + 1, var9, var10, field_D, field_m, true);
-              }
-              this.a(var8, param1 + this.field_A[var8], param2 + this.field_C[var8], var9, var10, field_F, field_m, false);
-            } else {
-              if (field_D != -1) {
-                this.a(var8, param1 + this.field_A[var8] + 1, param2 + this.field_C[var8] + 1, var9, var10, field_D, true);
-              }
-              this.a(var8, param1 + this.field_A[var8], param2 + this.field_C[var8], var9, var10, field_F, false);
-            }
+            var4 = var7;
           }
-          param1 = param1 + this.field_v[var8];
-          if (field_H != -1) {
-            vb.c(var11, param2 + (int)((double)this.field_p * 0.7), param1 - var11, field_H);
-          }
-          if (field_z != -1) {
-            vb.c(var11, param2 + this.field_p + 1, param1 - var11, field_z);
-          }
-          var5 = var8;
-          var7++;
         }
     }
 
@@ -924,10 +892,9 @@ abstract class m extends rc {
             this.field_I[var8] != 0) {
             var6 = this.field_C[var8];
           }
-          if (this.field_C[var8] + this.field_I[var8] <= var7) {
-            continue;
+          if (this.field_C[var8] + this.field_I[var8] > var7) {
+            var7 = this.field_C[var8] + this.field_I[var8];
           }
-          var7 = this.field_C[var8] + this.field_I[var8];
         }
         this.field_o = this.field_p - var6;
         this.field_q = var7 - this.field_p;

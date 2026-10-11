@@ -13,87 +13,41 @@ final class hs {
 
     final static boolean a(byte param0, Class param1) {
         int var2_int = 0;
-        int stackIn_9_0 = 0;
+        boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var2_int = -35 / ((param0 - 32) / 47);
-                if (param1 == Integer.TYPE) {
-                  break L2;
-                } else {
-                  if (param1 == Short.TYPE) {
-                    break L2;
-                  } else {
-                    if (Long.TYPE == param1) {
-                      break L2;
-                    } else {
-                      if (Byte.TYPE == param1) {
-                        break L2;
-                      } else {
-                        if (Float.TYPE == param1) {
-                          break L2;
-                        } else {
-                          if (Double.TYPE != param1) {
-                            stackIn_9_0 = 0;
-                            break L1;
-                          } else {
-                            break L2;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              stackIn_9_0 = 1;
-              break L1;
-            }
-            break L0;
-          }
+          var2_int = -35 / ((param0 - 32) / 47);
+          stackIn_9_0 = (param1 == Integer.TYPE) || (param1 == Short.TYPE) || (Long.TYPE == param1) || (Byte.TYPE == param1) || (Float.TYPE == param1) || (Double.TYPE == param1);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("hs.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("hs.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
-        return stackIn_9_0 != 0;
     }
 
     final static void a(boolean param0, byte param1) {
         int var2 = 109 / ((-1 - param1) / 54);
-        if (!(era.field_d == null)) {
-            bea.d(bea.field_b, bea.field_h, -bea.field_b + bea.field_d, -bea.field_h + bea.field_k);
-            era.field_d.b(64, param0);
+        if (era.field_d != null) {
+          bea.d(bea.field_b, bea.field_h, -bea.field_b + bea.field_d, -bea.field_h + bea.field_k);
+          era.field_d.b(64, param0);
         }
     }
 
     public static void a(int param0) {
         if (param0 != 32768) {
-            hs.a(false, (byte) -65);
+          hs.a(false, (byte) -65);
         }
         field_b = null;
         field_d = null;
@@ -108,17 +62,17 @@ final class hs {
         int var3 = 0;
         int var1 = 0;
         field_a = new int[98304];
-        for (var0 = 92682; (var0 ^ -1) <= -46342; var0--) {
-            var6 = (long)(1 + (var0 << 275828993));
-            var4 = (long)(-1 + (var0 << 1684793089));
-            var2 = (int)((var4 * var4 >> -212534126) + -32768L);
-            var3 = (int)((var6 * var6 >> -99973230) + -32768L);
-            if (!(var3 < field_a.length)) {
-                var3 = -1 + field_a.length;
-            }
-            for (var1 = (var2 ^ -1) > -1 ? 0 : var2; var1 <= var3; var1++) {
-                field_a[var1] = var0;
-            }
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var6 = (long)(1 + (var0 << 1));
+          var4 = (long)(-1 + (var0 << 1));
+          var2 = (int)((var4 * var4 >> 18) - 32768L);
+          var3 = (int)((var6 * var6 >> 18) - 32768L);
+          if (!(var3 < field_a.length)) {
+            var3 = -1 + field_a.length;
+          }
+          for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
+            field_a[var1] = var0;
+          }
         }
         field_b = "Inviting <%0>";
         field_d = "Quick Chat lobby";

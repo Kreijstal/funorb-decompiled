@@ -11,18 +11,16 @@ final class vh extends lh {
     static int[] field_i;
 
     public static void d(int param0) {
-        if (param0 != -889323520) {
-          vh.a(-16L, -34);
-          field_j = (int[][]) null;
-          field_k = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == -889323520) {
           field_j = (int[][]) null;
           field_k = null;
           field_i = null;
           return;
         }
+        vh.a(-16L, -34);
+        field_j = (int[][]) null;
+        field_k = null;
+        field_i = null;
     }
 
     private vh() throws Throwable {
@@ -35,20 +33,16 @@ final class vh extends lh {
     }
 
     final static void a(long param0, int param1) {
-        int var3;
-        var3 = 9 % ((param1 - -45) / 39);
+        int var3 = 9 % ((param1 + 45) / 39);
         if (param0 <= 0L) {
           return;
-        } else {
-          if (param0 % 10L == 0L) {
-            df.a(-122, -1L + param0);
-            df.a(71, 1L);
-            return;
-          } else {
-            df.a(-119, param0);
-            return;
-          }
         }
+        if (param0 % 10L != 0L) {
+          df.a(-119, param0);
+          return;
+        }
+        df.a(-122, -1L + param0);
+        df.a(71, 1L);
     }
 
     static {

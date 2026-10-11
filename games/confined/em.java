@@ -10,29 +10,26 @@ abstract class em {
     static String[] field_f;
 
     final static nf[] a(int param0, int param1, int param2, byte param3, int param4) {
-        if (param3 != 2) {
-          field_b = (int[]) null;
-          return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
-        } else {
+        if (param3 == 2) {
           return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
         }
+        field_b = (int[]) null;
+        return fa.a(3, 1, param0, param1, param2, 1, param4, 1, (byte) -97);
     }
 
     public static void a(byte param0) {
-        if (param0 != -64) {
-          field_b = (int[]) null;
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == -64) {
           field_d = null;
           field_c = null;
           field_b = null;
           field_f = null;
           return;
         }
+        field_b = (int[]) null;
+        field_d = null;
+        field_c = null;
+        field_b = null;
+        field_f = null;
     }
 
     abstract si b(byte param0);

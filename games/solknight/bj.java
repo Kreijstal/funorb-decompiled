@@ -6,19 +6,19 @@ final class bj {
 
     final static void a(int param0, int param1) {
         if (param0 != 50) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         if (param1 > -116) {
-            bj.a(-36);
-            return;
+          bj.a(-36);
+          return;
         }
     }
 
     public static void a(int param0) {
         if (param0 != 50) {
-            field_a = (kb) null;
-            field_a = null;
-            return;
+          field_a = (kb) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

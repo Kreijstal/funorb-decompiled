@@ -11,96 +11,41 @@ abstract class cga extends eo {
     abstract byte[] d(byte param0);
 
     final static boolean a(int param0, char param1) {
+        int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              if (param1 <= 0) {
-                break L1;
-              } else {
-                if (param1 < 128) {
-                  stackIn_8_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  break L1;
-                }
+          if (param1 > 0 &&
+            param1 < 128) {
+            return true;
+          }
+          if (param1 >= 160 &&
+            param1 <= 255) {
+            return true;
+          }
+          if (param0 != 255) {
+            return true;
+          }
+          if (param1 != 0) {
+            var6 = on.field_s;
+            var2 = var6;
+            for (var3 = 0; var6.length > var3; var3++) {
+              var4 = var6[var3];
+              if (param1 == var4) {
+                return true;
               }
-            }
-            L2: {
-              if (param1 < 160) {
-                break L2;
-              } else {
-                if (param1 > 255) {
-                  break L2;
-                } else {
-                  return true;
-                }
-              }
-            }
-            if (param0 == 255) {
-              L3: {
-                if (param1 == 0) {
-                  break L3;
-                } else {
-                  var6 = on.field_s;
-                  var2 = var6;
-                  var3 = 0;
-                  L4: while (true) {
-                    if (var6.length <= var3) {
-                      break L3;
-                    } else {
-                      var4 = var6[var3];
-                      if (param1 == var4) {
-                        stackIn_18_0 = 1;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
-                    }
-                  }
-                }
-              }
-              stackIn_21_0 = 0;
-              decompiledRegionSelector0 = 3;
-              break L0;
-            } else {
-              stackIn_11_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
             }
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw pe.a((Throwable) ((Object) var2_ref), "cga.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_18_0 != 0;
-            } else {
-              return stackIn_21_0 != 0;
-            }
-          }
         }
     }
 
@@ -108,9 +53,9 @@ abstract class cga extends eo {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_r = (ee) null;
-            field_r = null;
-            return;
+          field_r = (ee) null;
+          field_r = null;
+          return;
         }
         field_r = null;
     }

@@ -9,32 +9,30 @@ final class fq extends hq {
 
     final static void a(int param0, int param1) {
         if (param0 != 16440) {
-            return;
+          return;
         }
         lf.a(param1, (byte) -58);
     }
 
     fq(hu[] param0) {
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "fq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
-        if (param0 < 96) {
-          field_f = (qc) null;
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 >= 96) {
           field_f = null;
           field_d = null;
           field_e = null;
           return;
         }
+        field_f = (qc) null;
+        field_f = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

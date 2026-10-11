@@ -11,25 +11,25 @@ abstract class af {
         int var3 = 0;
         int var4 = Torquing.field_u;
         try {
-            var1 = new t(540, 140);
-            tm.a((byte) -121, var1);
-            be.a();
-            ph.b();
-            jh.field_z = 0;
-            so.b(119);
-            var2 = var1.c();
-            for (var3 = 0; -16 < (var3 ^ -1); var3++) {
-                var2.b(-2, -2, 16777215);
-                ph.d(4, 4, 0, 0, 540, 140);
-            }
-            if (!param0) {
-                af.a(-61);
-            }
-            ff.field_c.e();
-            var1.c(0, 0);
-            r.a(126);
+          var1 = new t(540, 140);
+          tm.a((byte) -121, var1);
+          be.a();
+          ph.b();
+          jh.field_z = 0;
+          so.b(119);
+          var2 = var1.c();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.b(-2, -2, 16777215);
+            ph.d(4, 4, 0, 0, 540, 140);
+          }
+          if (!param0) {
+            af.a(-61);
+          }
+          ff.field_c.e();
+          var1.c(0, 0);
+          r.a(126);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ abstract class af {
         field_b = null;
         field_a = null;
         if (param0 != 23394) {
-            af.a(-25);
+          af.a(-25);
         }
     }
 

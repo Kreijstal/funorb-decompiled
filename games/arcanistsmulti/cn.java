@@ -16,29 +16,29 @@ final class cn extends kl implements vb {
 
     public final void a(boolean param0, int param1, int param2, int param3, ag param4) {
         if (this.field_P.a(0).a(-114) != nn.field_s) {
-            return;
+          return;
         }
         try {
-            qo.a(this.field_P.h(32), this.field_P.g(72), this.field_P.e(param0), (byte) -126);
+          qo.a(this.field_P.h(32), this.field_P.g(72), this.field_P.e(param0), (byte) -126);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "cn.U(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(qm param0, int param1, int param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_L.field_B = this.field_P.a(0).a(param2 + -287) == nn.field_s ? true : false;
+          super.a(param0, param1, param2, param3);
+          this.field_L.field_B = this.field_P.a(0).a(param2 - 287) == nn.field_s ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "cn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a((byte) -94, param1, param2, param3);
-        vc.field_e.a(sm.field_b, 4 + param1 - -this.field_n, vc.field_e.field_C + (param3 + (this.field_j - -4)), 16777215, -1);
+        vc.field_e.a(sm.field_b, 4 + param1 + this.field_n, vc.field_e.field_C + (param3 + (this.field_j + 4)), 16777215, -1);
         if (param0 > -52) {
-            field_J = (String) null;
+          field_J = (String) null;
         }
     }
 
@@ -53,21 +53,19 @@ final class cn extends kl implements vb {
     }
 
     final void e(int param0) {
-        int var2;
-        ag var3;
-        if (param0 <= 17) {
-          var3 = (ag) null;
-          this.a(true, -29, 36, -108, (ag) null);
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param0 > 17) {
           var2 = 250;
-          this.field_P.a(25, this.field_k - 5 >> -532994239, 140, this.field_v - var2 >> 847550433, -126);
-          this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1542274945), 100, (-var2 + this.field_v >> 798899233) + 150, -118);
-          return;
-        } else {
-          var2 = 250;
-          this.field_P.a(25, this.field_k - 5 >> -532994239, 140, this.field_v - var2 >> 847550433, -126);
-          this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1542274945), 100, (-var2 + this.field_v >> 798899233) + 150, -118);
+          this.field_P.a(25, this.field_k - 5 >> 1, 140, this.field_v - var2 >> 1, -126);
+          this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2 + this.field_v >> 1) + 150, -118);
           return;
         }
+        ag var3 = (ag) null;
+        this.a(true, -29, 36, -108, (ag) null);
+        var2Lifetime1 = 250;
+        this.field_P.a(25, this.field_k - 5 >> 1, 140, this.field_v - var2Lifetime1 >> 1, -126);
+        this.field_L.a(30, 2 + (-30 + (20 + this.field_k) >> 1), 100, (-var2Lifetime1 + this.field_v >> 1) + 150, -118);
     }
 
     public static void g(byte param0) {
@@ -75,15 +73,7 @@ final class cn extends kl implements vb {
         field_M = null;
         field_J = null;
         field_S = null;
-        if (param0 < 95) {
-          cn.c(true);
-          field_H = null;
-          field_I = null;
-          field_O = null;
-          field_K = null;
-          field_Q = null;
-          return;
-        } else {
+        if (param0 >= 95) {
           field_H = null;
           field_I = null;
           field_O = null;
@@ -91,69 +81,49 @@ final class cn extends kl implements vb {
           field_Q = null;
           return;
         }
+        cn.c(true);
+        field_H = null;
+        field_I = null;
+        field_O = null;
+        field_K = null;
+        field_Q = null;
     }
 
     final static boolean a(int param0, int param1) {
-        int stackIn_7_0 = 0;
-        int stackIn_13_0 = 0;
-        if (param0 > 103) {
-          if ((param1 ^ -1) > -1) {
-            L0: {
-              if ((1 + param1) % 4 != 0) {
-                stackIn_7_0 = 0;
-                break L0;
-              } else {
-                stackIn_7_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_7_0 != 0;
-          } else {
-            if (-1583 < (param1 ^ -1)) {
-              L1: {
-                if (0 != param1 % 4) {
-                  stackIn_13_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_13_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_13_0 != 0;
-            } else {
-              if (-1 == (param1 % 4 ^ -1)) {
-                if (0 != param1 % 100) {
-                  return true;
-                } else {
-                  if (0 == param1 % 400) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                }
-              } else {
-                return false;
-              }
-            }
-          }
-        } else {
+        if (param0 <= 103) {
           return true;
         }
+        if (param1 < 0) {
+          return (1 + param1) % 4 == 0 ? true : false;
+        }
+        if (param1 < 1582) {
+          return 0 == param1 % 4 ? true : false;
+        }
+        if (param1 % 4 != 0) {
+          return false;
+        }
+        if (0 != param1 % 100) {
+          return true;
+        }
+        if (0 != param1 % 400) {
+          return false;
+        }
+        return true;
     }
 
     final static void c(boolean param0) {
         int var1_int = 0;
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-            if (!param0) {
-                field_O = (byte[]) null;
-            }
-            for (var1_int = 0; gb.field_f > var1_int; var1_int++) {
-                g.field_d[var1_int] = null;
-            }
-            gb.field_f = 0;
+          if (!param0) {
+            field_O = (byte[]) null;
+          }
+          for (var1_int = 0; gb.field_f > var1_int; var1_int++) {
+            g.field_d[var1_int] = null;
+          }
+          gb.field_f = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "cn.F(" + param0 + ')');
         }
     }
 

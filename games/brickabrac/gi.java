@@ -8,66 +8,55 @@ final class gi extends ki {
     static String field_t;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        pb var6;
-        if (!this.b((byte) -127)) {
-          lb.g(param4, param2, 640, 480, kg.field_i[param3], 16777215);
-          if (!param0) {
-            field_u = (String) null;
-            return;
-          } else {
-            return;
-          }
-        } else {
+        pb var6 = null;
+        if (this.b((byte) -127)) {
           var6 = ge.a(this.field_m, param3, -20777);
-          if (var6.a((byte) -84, param3, this.field_m)) {
-            sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
-            if (param0) {
-              return;
-            } else {
-              field_u = (String) null;
-              return;
-            }
-          } else {
+          if (!var6.a((byte) -84, param3, this.field_m)) {
             lf.a(var6, 1, 0, fp.field_B, param3, 100);
             var6.a(this.field_m, param3, (byte) 78);
             sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
-            if (param0) {
-              return;
-            } else {
+            if (!param0) {
               field_u = (String) null;
               return;
             }
+            return;
           }
+          sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.field_p, param1, 640, 0, param4);
+          if (!param0) {
+            field_u = (String) null;
+            return;
+          }
+          return;
         }
+        lb.g(param4, param2, 640, 480, kg.field_i[param3], 16777215);
+        if (param0) {
+          return;
+        }
+        field_u = (String) null;
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5;
-        if (-1 < param1) {
-          lb.g(param2, param3, 153, 238, kg.field_i[param1], 16777215);
-          var5 = 52 % ((param0 - -28) / 43);
-          if (!this.b((byte) -106)) {
-            return;
-          } else {
-            ce.field_c.c(param2, param3);
-            return;
-          }
-        } else {
+        int var5 = 0;
+        int var5Lifetime1;
+        if (-1 >= param1) {
           lb.g(param2, param3, 153, 238, 16777215, 11184810);
-          var5 = 52 % ((param0 - -28) / 43);
-          if (!this.b((byte) -106)) {
-            return;
-          } else {
+          var5 = 52 % ((param0 + 28) / 43);
+          if (this.b((byte) -106)) {
             ce.field_c.c(param2, param3);
             return;
           }
+          return;
+        }
+        lb.g(param2, param3, 153, 238, kg.field_i[param1], 16777215);
+        var5Lifetime1 = 52 % ((param0 + 28) / 43);
+        if (this.b((byte) -106)) {
+          ce.field_c.c(param2, param3);
+          return;
         }
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("desert", -28138)) {
-          return false;
-        } else {
+        if (i.field_m.a("desert", -28138)) {
           wn.field_b = pl.a("desert", "desert_near", (byte) 107, i.field_m);
           lj.field_q = pl.a("desert", "desert_mid", (byte) -121, i.field_m);
           fp.field_B = pl.a("desert", "desert_far", (byte) 122, i.field_m);
@@ -83,15 +72,15 @@ final class gi extends ki {
           um.field_l[1] = pl.a(-16371, um.field_l[0]);
           return true;
         }
+        return false;
     }
 
     final jp a(boolean param0, int param1) {
-        if (!param0) {
-          this.a((byte) 65, 25, -62, -115);
-          return um.field_l[-1 + param1];
-        } else {
+        if (param0) {
           return um.field_l[-1 + param1];
         }
+        this.a((byte) 65, 25, -62, -115);
+        return um.field_l[-1 + param1];
     }
 
     final jp[] a(byte param0, int param1) {
@@ -101,8 +90,8 @@ final class gi extends ki {
 
     final jp[] a(int param0, boolean param1) {
         if (!param1) {
-            field_u = (String) null;
-            return pk.field_e[param0 - 1];
+          field_u = (String) null;
+          return pk.field_e[param0 - 1];
         }
         return pk.field_e[param0 - 1];
     }
@@ -113,40 +102,40 @@ final class gi extends ki {
         field_r = null;
         field_s = null;
         if (param0 != -417029247) {
-            gi.g(-5);
+          gi.g(-5);
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         pb var7 = null;
         if (param1 >= -84) {
-            field_u = (String) null;
-            if (!this.b((byte) -123)) {
-                lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
-                return;
-            }
-            var7 = kd.a(this.field_m, param3, (byte) -74);
-            if (!var7.a((byte) -84, param3, this.field_m)) {
-                lf.a(var7, 2, -13, pp.field_b, param3, 102);
-                var7.a(this.field_m, param3, (byte) 78);
-            } else {
-                sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
-                return;
-            }
-            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
-            return;
-        }
-        if (!this.b((byte) -123)) {
+          field_u = (String) null;
+          if (!this.b((byte) -123)) {
             lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
             return;
+          }
+          var7 = kd.a(this.field_m, param3, (byte) -74);
+          if (!var7.a((byte) -84, param3, this.field_m)) {
+            lf.a(var7, 2, -13, pp.field_b, param3, 102);
+            var7.a(this.field_m, param3, (byte) 78);
+          } else {
+            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+            return;
+          }
+          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.field_p, param4, 306, -13, param2);
+          return;
+        }
+        if (!this.b((byte) -123)) {
+          lb.g(param2, param0, 306, 480, kg.field_i[param3], 16777215);
+          return;
         }
         pb var8 = kd.a(this.field_m, param3, (byte) -74);
         if (!var8.a((byte) -84, param3, this.field_m)) {
-            lf.a(var8, 2, -13, pp.field_b, param3, 102);
-            var8.a(this.field_m, param3, (byte) 78);
+          lf.a(var8, 2, -13, pp.field_b, param3, 102);
+          var8.a(this.field_m, param3, (byte) 78);
         } else {
-            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
-            return;
+          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
+          return;
         }
         sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.field_p, param4, 306, -13, param2);
     }
@@ -154,104 +143,67 @@ final class gi extends ki {
     gi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-            im.field_f = new jp[2][];
-            um.field_l = new jp[2];
-            pk.field_e = new jp[2][];
+          im.field_f = new jp[2][];
+          um.field_l = new jp[2];
+          pk.field_e = new jp[2][];
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "gi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final boolean b(byte param0) {
-        int stackIn_15_0 = 0;
-        int stackIn_32_0 = 0;
-        if (param0 < -91) {
-          if (wn.field_b != null) {
-            if (null != lj.field_q) {
-              if (null != fp.field_B) {
-                if (ce.field_c != null) {
-                  if (im.field_f != null) {
-                    if (pk.field_e == null) {
-                      return false;
-                    } else {
-                      L0: {
-                        if (um.field_l == null) {
-                          stackIn_32_0 = 0;
-                          break L0;
-                        } else {
-                          stackIn_32_0 = 1;
-                          break L0;
-                        }
-                      }
-                      return stackIn_32_0 != 0;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 >= -91) {
           field_s = (String) null;
-          if (wn.field_b != null) {
-            if (null != lj.field_q) {
-              if (null != fp.field_B) {
-                if (ce.field_c != null) {
-                  if (im.field_f != null) {
-                    if (pk.field_e == null) {
-                      return false;
-                    } else {
-                      L1: {
-                        if (um.field_l == null) {
-                          stackIn_15_0 = 0;
-                          break L1;
-                        } else {
-                          stackIn_15_0 = 1;
-                          break L1;
-                        }
-                      }
-                      return stackIn_15_0 != 0;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (wn.field_b == null) {
             return false;
           }
+          if (null == lj.field_q) {
+            return false;
+          }
+          if (null == fp.field_B) {
+            return false;
+          }
+          if (ce.field_c == null) {
+            return false;
+          }
+          if (im.field_f == null) {
+            return false;
+          }
+          if (pk.field_e != null) {
+            return um.field_l != null ? true : false;
+          }
+          return false;
         }
+        if (wn.field_b == null) {
+          return false;
+        }
+        if (null == lj.field_q) {
+          return false;
+        }
+        if (null == fp.field_B) {
+          return false;
+        }
+        if (ce.field_c == null) {
+          return false;
+        }
+        if (im.field_f == null) {
+          return false;
+        }
+        if (pk.field_e != null) {
+          return um.field_l != null ? true : false;
+        }
+        return false;
     }
 
     final static void g(int param0) {
-        int var1;
-        int var2;
-        var1 = co.a((byte) -53);
-        var2 = ba.b(true);
-        vg.field_c.a(var1 - -(un.field_a << 753437185), var2 - -(vo.field_A << -417029247), nc.field_k + -un.field_a, false, mi.field_d + -vo.field_A);
+        int var1 = co.a((byte) -53);
+        int var2 = ba.b(true);
+        vg.field_c.a(var1 + (un.field_a << 1), var2 + (vo.field_A << 1), nc.field_k - un.field_a, false, mi.field_d - vo.field_A);
         jq.d(-16085);
-        if (param0 != 11184810) {
-          field_t = (String) null;
-          return;
-        } else {
+        if (param0 == 11184810) {
           return;
         }
+        field_t = (String) null;
     }
 
     static {

@@ -6,7 +6,7 @@ final class nka {
 
     final static int a(byte param0) {
         if (param0 != -74) {
-            return -19;
+          return -19;
         }
         return ula.field_f;
     }

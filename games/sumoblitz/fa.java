@@ -10,9 +10,9 @@ final class fa {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-            fa.a(true);
-            field_a = null;
-            return;
+          fa.a(true);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

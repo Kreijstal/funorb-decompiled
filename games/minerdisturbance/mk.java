@@ -23,24 +23,20 @@ final class mk implements ad {
     }
 
     final static ln a(int param0) {
-        ln var1;
-        if (param0 <= 76) {
-          return (ln) null;
-        } else {
+        ln var1 = null;
+        if (param0 > 76) {
           var1 = new ln(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], db.field_b[0], af.field_p);
           ec.a((byte) 24);
           return var1;
         }
+        return (ln) null;
     }
 
     public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
         fe stackIn_5_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -49,109 +45,65 @@ final class mk implements ad {
         int var10 = 0;
         ti var11 = null;
         try {
-          L0: {
-            if (param0 == 12088) {
-              L1: {
-                if (!(param2 instanceof ti)) {
-                  stackIn_5_0 = null;
-                  break L1;
-                } else {
-                  stackIn_5_0 = (fe) (param2);
-                  break L1;
-                }
-              }
-              L2: {
-                var11 = (ti) ((Object) stackIn_5_0);
-                if (var11 == null) {
-                  break L2;
-                } else {
-                  param4 = param4 & var11.field_E;
-                  break L2;
-                }
-              }
-              L3: {
-                var7 = 5592405;
-                eh.e(param2.field_u + param1, param3 - -param2.field_t, param2.field_v, param2.field_q, this.field_d);
-                if (!param4) {
-                  break L3;
-                } else {
-                  var7 = 16777215;
-                  break L3;
-                }
-              }
-              L4: {
-                var8 = this.field_c + (param1 + param2.field_u);
-                var9 = param2.field_t + param3 + this.field_f;
-                eh.b(var8, var9, this.field_i, this.field_j, 5592405);
-                eh.e(var8, var9, this.field_i, this.field_j, var7);
-                if (!var11.field_H) {
-                  break L4;
-                } else {
-                  eh.d(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
-                  eh.d(this.field_i + var8, var9, var8, var9 - -this.field_j, 1);
-                  break L4;
-                }
-              }
-              L5: {
-                if (null == this.field_n) {
-                  break L5;
-                } else {
-                  var10 = this.field_l + this.field_i + this.field_c;
-                  this.field_n.a(param2.field_s, param1 + param2.field_u + var10, this.field_k + param2.field_t + param3, -this.field_l + -var10 + param2.field_v, param2.field_q - (this.field_l << -1568029823), this.field_e, this.field_h, this.field_g, this.field_m, 0);
-                  break L5;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 12088) {
+            return;
           }
+          if (!(param2 instanceof ti)) {
+            stackIn_5_0 = null;
+          } else {
+            stackIn_5_0 = (fe) (param2);
+          }
+          var11 = (ti) (stackIn_5_0);
+          if (var11 != null) {
+            param4 = param4 & var11.field_E;
+          }
+          var7 = 5592405;
+          eh.e(param2.field_u + param1, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_d);
+          if (param4) {
+            var7 = 16777215;
+          }
+          var8 = this.field_c + (param1 + param2.field_u);
+          var9 = param2.field_t + param3 + this.field_f;
+          eh.b(var8, var9, this.field_i, this.field_j, 5592405);
+          eh.e(var8, var9, this.field_i, this.field_j, var7);
+          if (var11.field_H) {
+            eh.d(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
+            eh.d(this.field_i + var8, var9, var8, var9 + this.field_j, 1);
+          }
+          if (null != this.field_n) {
+            var10 = this.field_l + this.field_i + this.field_c;
+            this.field_n.a(param2.field_s, param1 + param2.field_u + var10, this.field_k + param2.field_t + param3, -this.field_l - var10 + param2.field_v, param2.field_q - (this.field_l << 1), this.field_e, this.field_h, this.field_g, this.field_m, 0);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var6);
-
-            stackIn_16_1 = new StringBuilder().append("mk.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L6;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_16_0 = var6;
+          stackIn_16_1 = new StringBuilder().append("mk.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw lj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static int b(int param0) {
         if (param0 <= 2) {
-            return 108;
+          return 108;
         }
         return hb.field_b;
     }
 
     final static void a(boolean param0, wh param1, int param2) {
         try {
-            ke.a(param1, param0, 256, false);
-            if (param2 != 0) {
-                field_b = (boolean[]) null;
-            }
+          ke.a(param1, param0, 256, false);
+          if (param2 != 0) {
+            field_b = (boolean[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "mk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "mk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -159,18 +111,18 @@ final class mk implements ad {
         this.field_m = 1;
         this.field_g = 1;
         try {
-            this.field_c = param5;
-            this.field_f = param6;
-            this.field_i = param8;
-            this.field_h = param4;
-            this.field_e = param3;
-            this.field_j = param7;
-            this.field_n = param0;
-            this.field_d = param9;
-            this.field_k = param2;
-            this.field_l = param1;
+          this.field_c = param5;
+          this.field_f = param6;
+          this.field_i = param8;
+          this.field_h = param4;
+          this.field_e = param3;
+          this.field_j = param7;
+          this.field_n = param0;
+          this.field_d = param9;
+          this.field_k = param2;
+          this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

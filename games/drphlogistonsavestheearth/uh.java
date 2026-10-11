@@ -18,7 +18,7 @@ class uh extends gi {
 
     final static nh[] a(byte param0, int param1) {
         if (param0 != 121) {
-            field_s = (int[]) null;
+          field_s = (int[]) null;
         }
         nh[] var3 = new nh[9];
         nh[] var2 = var3;
@@ -30,20 +30,20 @@ class uh extends gi {
         he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], aj.field_a);
         oc.a((byte) -21);
         if (param0 != 7786) {
-            return (he) null;
+          return (he) null;
         }
         return var1;
     }
 
     final void f(int param0) {
-        if (!(this.field_n != null)) {
-            return;
+        if (this.field_n == null) {
+          return;
         }
         this.field_n.field_p = this.field_p;
         this.field_p.field_n = this.field_n;
         this.field_p = null;
         if (param0 != 64) {
-            field_o = (int[]) null;
+          field_o = (int[]) null;
         }
         this.field_n = null;
     }
@@ -52,7 +52,7 @@ class uh extends gi {
         field_s = null;
         field_o = null;
         if (param0 != -24338) {
-            uh.a((byte) -37, -122);
+          uh.a((byte) -37, -122);
         }
         field_l = null;
         field_q = null;
@@ -68,21 +68,23 @@ class uh extends gi {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
+        int var0Lifetime2;
         field_o = new int[256];
         field_j = new int[256];
         field_s = new int[]{24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 12, 12, 24, 1, 24, 124, 12, 12, 24, 24, 99, 24};
         field_k = new int[256];
         field_l = new int[256];
         for (var0 = 0; var0 < 256; var0++) {
-            field_j[var0] = 65793 * var0;
-            field_k[var0] = 1 * var0;
-            field_l[var0] = var0 * 65537;
+          field_j[var0] = 65793 * var0;
+          field_k[var0] = 1 * var0;
+          field_l[var0] = var0 * 65537;
         }
-        for (var0 = 0; -129 < (var0 ^ -1); var0++) {
-            field_o[var0] = 131072 * var0;
+        for (var0Lifetime1 = 0; var0Lifetime1 < 128; var0Lifetime1++) {
+          field_o[var0Lifetime1] = 131072 * var0Lifetime1;
         }
-        for (var0 = 128; -257 < (var0 ^ -1); var0++) {
-            field_o[var0] = li.a(512 * (-128 + var0), 16711680);
+        for (var0Lifetime2 = 128; var0Lifetime2 < 256; var0Lifetime2++) {
+          field_o[var0Lifetime2] = li.a(512 * (-128 + var0Lifetime2), 16711680);
         }
         field_m = 0;
         field_q = "Skip";

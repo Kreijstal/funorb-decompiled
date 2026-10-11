@@ -11,110 +11,77 @@ final class aj {
 
     final int a(byte param0) {
         if (param0 > -108) {
-            return 89;
+          return 89;
         }
         return 1 + this.field_b;
     }
 
     final void b(int param0, int param1) {
-        this.a(param0 + -2, param1, this.field_b + param0);
+        this.a(param0 - 2, param1, this.field_b + param0);
     }
 
     private final int a(int param0, int param1) {
         int var3;
         int var4;
-        L0: {
-          var4 = Bounce.field_N;
-          var3 = this.field_d.length;
-          if (param1 >= 66) {
-            break L0;
-          } else {
-            this.field_b = -94;
-            break L0;
-          }
+        var4 = Bounce.field_N;
+        var3 = this.field_d.length;
+        if (param1 < 66) {
+          this.field_b = -94;
         }
-        L1: while (true) {
-          if (param0 < var3) {
-            return var3;
-          } else {
-            if (this.field_c) {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L1;
-              } else {
-                var3 = var3 * this.field_a;
-                continue L1;
-              }
-            } else {
-              var3 = var3 + this.field_a;
-              continue L1;
-            }
+        while (param0 >= var3) {
+          if (!this.field_c) {
+            var3 = var3 + this.field_a;
+            continue;
           }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_a;
         }
+        return var3;
     }
 
     final int a(byte param0, int param1) {
-        int var3;
-        if (param1 > this.field_b) {
-          throw new ArrayIndexOutOfBoundsException(param1);
-        } else {
-          var3 = 66 % ((param0 - 60) / 41);
+        if (param1 <= this.field_b) {
+          int var3 = 66 % ((param0 - 60) / 41);
           return this.field_d[param1];
         }
+        throw new ArrayIndexOutOfBoundsException(param1);
     }
 
     private final void a(int param0, int param1, int param2) {
-        L0: {
-          if (param2 > this.field_b) {
-            this.field_b = param2;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (param2 > this.field_b) {
+          this.field_b = param2;
         }
-        if (param0 != -1) {
-          L1: {
-            this.field_b = -4;
-            if (this.field_d.length <= param2) {
-              this.b(param2, true);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          this.field_d[param2] = param1;
-          return;
-        } else {
-          L2: {
-            if (this.field_d.length <= param2) {
-              this.b(param2, true);
-              break L2;
-            } else {
-              break L2;
-            }
+        if (param0 == -1) {
+          if (this.field_d.length <= param2) {
+            this.b(param2, true);
           }
           this.field_d[param2] = param1;
           return;
         }
+        this.field_b = -4;
+        if (this.field_d.length <= param2) {
+          this.b(param2, true);
+        }
+        this.field_d[param2] = param1;
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            aj.a(true);
-            field_e = null;
-            return;
+          aj.a(true);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     private final void b(int param0, boolean param1) {
-        int[] var3;
-        int[] var4;
-        if (!param1) {
-          return;
-        } else {
+        int[] var4 = null;
+        if (param1) {
           var4 = new int[this.a(param0, 88)];
-          var3 = var4;
+          int[] var3 = var4;
           cb.a(this.field_d, 0, var4, 0, this.field_d.length);
           this.field_d = var4;
           return;
@@ -122,31 +89,25 @@ final class aj {
     }
 
     final void a(int param0, boolean param1) {
-        if ((param0 ^ -1) <= -1) {
-          if (param0 <= this.field_b) {
-            if (param0 == this.field_b) {
-              this.field_b = this.field_b - 1;
-              if (param1) {
-                return;
-              } else {
-                field_e = (String[]) null;
-                return;
-              }
-            } else {
-              cb.a(this.field_d, param0 + 1, this.field_d, param0, this.field_b - param0);
-              this.field_b = this.field_b - 1;
-              if (param1) {
-                return;
-              } else {
-                field_e = (String[]) null;
-                return;
-              }
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param0);
-          }
-        } else {
+        if (param0 < 0) {
           throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 > this.field_b) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 != this.field_b) {
+          cb.a(this.field_d, param0 + 1, this.field_d, param0, this.field_b - param0);
+          this.field_b = this.field_b - 1;
+          if (!param1) {
+            field_e = (String[]) null;
+            return;
+          }
+          return;
+        }
+        this.field_b = this.field_b - 1;
+        if (!param1) {
+          field_e = (String[]) null;
+          return;
         }
     }
 

@@ -16,51 +16,42 @@ final class vk {
     private boolean field_f;
 
     final int b(int param0) {
-        if (!this.field_f) {
-          if ((this.field_k ^ -1) != -3) {
-            if ((this.field_d ^ -1L) == (uh.field_p ^ -1L)) {
-              return 1;
-            } else {
-              if (ii.field_c == param0) {
-                if (wh.a(this.field_g, false)) {
-                  return 1;
-                } else {
-                  return 0;
-                }
-              } else {
-                return 0;
-              }
-            }
-          } else {
-            if (this.field_l <= 0) {
-              if ((this.field_d ^ -1L) == (uh.field_p ^ -1L)) {
-                return 1;
-              } else {
-                if (ii.field_c == param0) {
-                  if (!wh.a(this.field_g, false)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            } else {
-              return 2;
-            }
-          }
-        } else {
+        if (this.field_f) {
           return 2;
         }
+        if (this.field_k != 2) {
+          if (~this.field_d == ~uh.field_p) {
+            return 1;
+          }
+          if (ii.field_c != param0) {
+            return 0;
+          }
+          if (wh.a(this.field_g, false)) {
+            return 1;
+          }
+          return 0;
+        }
+        if (this.field_l > 0) {
+          return 2;
+        }
+        if (~this.field_d == ~uh.field_p) {
+          return 1;
+        }
+        if (ii.field_c != param0) {
+          return 0;
+        }
+        if (!wh.a(this.field_g, false)) {
+          return 0;
+        }
+        return 1;
     }
 
     public static void a(int param0) {
         if (param0 != 1) {
-            field_b = -122;
-            field_j = null;
-            field_e = null;
-            return;
+          field_b = -122;
+          field_j = null;
+          field_e = null;
+          return;
         }
         field_j = null;
         field_e = null;
@@ -71,9 +62,9 @@ final class vk {
         this.field_l = be.field_a;
         this.field_f = gg.field_a;
         if (!param0) {
-            this.field_a = null;
+          this.field_a = null;
         } else {
-            this.field_a = bl.field_c;
+          this.field_a = bl.field_c;
         }
         this.field_k = hg.field_b;
         this.field_g = fj.field_c;

@@ -11,48 +11,46 @@ abstract class jb implements vb {
 
     final static int a(byte param0, int param1, boolean param2, int param3) {
         if (param0 <= 51) {
-            return 108;
+          return 108;
         }
         return ve.f((byte) -76);
     }
 
     final static void a(byte param0) {
-        int var1;
-        int var2;
-        int var3;
-        if (param0 != -89) {
-          field_c = (String) null;
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var1Lifetime1;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        if (param0 == -89) {
           var1 = ug.field_b * ug.field_b;
           var2 = var1 - da.field_F * da.field_F;
-          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
-          uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
-          ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
-          return;
-        } else {
-          var1 = ug.field_b * ug.field_b;
-          var2 = var1 - da.field_F * da.field_F;
-          var3 = cb.field_a - -(var2 * (-cb.field_a + Chess.field_E) / var1);
+          var3 = cb.field_a + var2 * (-cb.field_a + Chess.field_E) / var1;
           uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3);
           ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
           return;
         }
+        field_c = (String) null;
+        var1Lifetime1 = ug.field_b * ug.field_b;
+        var2Lifetime1 = var1Lifetime1 - da.field_F * da.field_F;
+        var3Lifetime1 = cb.field_a + var2Lifetime1 * (-cb.field_a + Chess.field_E) / var1Lifetime1;
+        uh.field_m.a(fl.field_x, 640, -2147483648, 120, var3Lifetime1);
+        ga.a(5, 640, 0, 22478, ri.field_g, -24 + Chess.field_E, qc.field_e);
     }
 
     public final String a(boolean param0) {
-        if (!this.b(14496)) {
-          if (350L + this.field_a <= ud.a(2)) {
-            if (param0) {
-              jb.a(-51, false);
-              return this.d(47);
-            } else {
-              return this.d(47);
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (this.b(14496)) {
           return null;
         }
+        if (350L + this.field_a > ud.a(2)) {
+          return null;
+        }
+        if (!param0) {
+          return this.d(47);
+        }
+        jb.a(-51, false);
+        return this.d(47);
     }
 
     abstract String d(int param0);
@@ -60,7 +58,7 @@ abstract class jb implements vb {
     public final void b(boolean param0) {
         this.field_a = ud.a(2);
         if (!param0) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 
@@ -68,7 +66,7 @@ abstract class jb implements vb {
 
     final static void a(int param0, boolean param1) {
         if (param0 != -7093) {
-            return;
+          return;
         }
         ol.a((byte) -23, param1);
         de.a(0, param1);
@@ -76,7 +74,7 @@ abstract class jb implements vb {
 
     public static void c(int param0) {
         if (param0 != 350) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -85,54 +83,51 @@ abstract class jb implements vb {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, jk param5, int param6, int param7, int param8) {
         try {
-            of.field_g = param4;
-            ml.field_h = param1;
-            lg.field_f = param8;
-            ln.field_oc = param6;
-            uj.field_n = param7;
-            tg.field_t = param2;
-            ue.field_e = param3;
-            ol.field_N = param5;
-            qh.field_c = (wm) ((Object) new ob());
-            if (param0 != 350) {
-                field_c = (String) null;
-            }
-            ba.field_O = new on(param5);
-            ge.field_fb = new hj(qh.field_c, ba.field_O);
+          of.field_g = param4;
+          ml.field_h = param1;
+          lg.field_f = param8;
+          ln.field_oc = param6;
+          uj.field_n = param7;
+          tg.field_t = param2;
+          ue.field_e = param3;
+          ol.field_N = param5;
+          qh.field_c = (wm) ((Object) new ob());
+          if (param0 != 350) {
+            field_c = (String) null;
+          }
+          ba.field_O = new on(param5);
+          ge.field_fb = new hj(qh.field_c, ba.field_O);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "jb.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
     final static String f(int param0) {
-        int var1 = -127 / ((param0 - -31) / 56);
-        if (!(g.field_a != ci.field_ub)) {
-            return oc.field_o;
+        int var1 = -127 / ((param0 + 31) / 56);
+        if (g.field_a == ci.field_ub) {
+          return oc.field_o;
         }
         if (!pi.field_c.b((byte) 107)) {
-            return pi.field_c.a((byte) -98);
+          return pi.field_c.a((byte) -98);
         }
-        if (!(vl.field_A != ci.field_ub)) {
-            return pi.field_c.a((byte) -83);
+        if (vl.field_A == ci.field_ub) {
+          return pi.field_c.a((byte) -83);
         }
         return pi.field_a;
     }
 
     public final mk a(int param0) {
-        if (!this.b(14496)) {
-          if ((ud.a(2) ^ -1L) > (350L + this.field_a ^ -1L)) {
-            return in.field_g;
-          } else {
-            if (param0 != 21314) {
-              field_e = (dd) null;
-              return this.e(param0 + -21310);
-            } else {
-              return this.e(param0 + -21310);
-            }
-          }
-        } else {
+        if (this.b(14496)) {
           return qf.field_d;
         }
+        if (!(ud.a(2) >= (350L + this.field_a))) {
+          return in.field_g;
+        }
+        if (param0 == 21314) {
+          return this.e(param0 - 21310);
+        }
+        field_e = (dd) null;
+        return this.e(param0 - 21310);
     }
 
     static {

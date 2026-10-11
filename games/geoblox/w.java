@@ -16,52 +16,48 @@ final class w {
         param7--;
         while (param7 >= 0) {
           for (var9 = param6 - 1; var9 >= 0; var9--) {
-            if (param0[param1] <= 1) {
-              param1++;
-              continue;
+            if (param0[param1] > 1) {
+              param2 = param1 - 1;
+              param3 = param1 + 1;
+              param4 = param1 - vb.field_f;
+              param5 = param1 + vb.field_f;
+              if (param0[param4 + 1] == 0) {
+                param0[param4 + 1] = 1;
+              }
+              if (param0[param5 + 1] == 0) {
+                param0[param5 + 1] = 1;
+              }
+              if (param0[param4 - 1] == 0) {
+                param0[param4 - 1] = 1;
+              }
+              if (param0[param5 - 1] == 0) {
+                param0[param5 - 1] = 1;
+              }
+              if (param0[param2] == 0) {
+                param0[param2] = 1;
+              }
+              if (param0[param3] == 0) {
+                param0[param3] = 1;
+              }
+              if (param0[param4] == 0) {
+                param0[param4] = 1;
+              }
+              if (param0[param5] == 0) {
+                param0[param5] = 1;
+              }
+              if (param0[param2 - 1] == 0) {
+                param0[param2 - 1] = 1;
+              }
+              if (param0[param3 + 1] == 0) {
+                param0[param3 + 1] = 1;
+              }
+              if (param0[param4 - vb.field_f] == 0) {
+                param0[param4 - vb.field_f] = 1;
+              }
+              if (param0[param5 + vb.field_f] == 0) {
+                param0[param5 + vb.field_f] = 1;
+              }
             }
-            param2 = param1 - 1;
-            param3 = param1 + 1;
-            param4 = param1 - vb.field_f;
-            param5 = param1 + vb.field_f;
-            if (param0[param4 + 1] == 0) {
-              param0[param4 + 1] = 1;
-            }
-            if (param0[param5 + 1] == 0) {
-              param0[param5 + 1] = 1;
-            }
-            if (param0[param4 - 1] == 0) {
-              param0[param4 - 1] = 1;
-            }
-            if (param0[param5 - 1] == 0) {
-              param0[param5 - 1] = 1;
-            }
-            if (param0[param2] == 0) {
-              param0[param2] = 1;
-            }
-            if (param0[param3] == 0) {
-              param0[param3] = 1;
-            }
-            if (param0[param4] == 0) {
-              param0[param4] = 1;
-            }
-            if (param0[param5] == 0) {
-              param0[param5] = 1;
-            }
-            if (param0[param2 - 1] == 0) {
-              param0[param2 - 1] = 1;
-            }
-            if (param0[param3 + 1] == 0) {
-              param0[param3 + 1] = 1;
-            }
-            if (param0[param4 - vb.field_f] == 0) {
-              param0[param4 - vb.field_f] = 1;
-            }
-            if (param0[param5 + vb.field_f] != 0) {
-              param1++;
-              continue;
-            }
-            param0[param5 + vb.field_f] = 1;
             param1++;
           }
           param1 = param1 + param8;
@@ -200,23 +196,17 @@ final class w {
             }
             param3++;
             param2++;
-            if (param0[param3] != 0) {
-              param3++;
-              param2++;
-              continue;
+            if (param0[param3] == 0) {
+              param0[param3] = param1[param2];
             }
-            param0[param3] = param1[param2];
             param3++;
             param2++;
           }
           var9 += 3;
           while (param3 < var9) {
-            if (param0[param3] != 0) {
-              param3++;
-              param2++;
-              continue;
+            if (param0[param3] == 0) {
+              param0[param3] = param1[param2];
             }
-            param0[param3] = param1[param2];
             param3++;
             param2++;
           }

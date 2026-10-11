@@ -12,157 +12,100 @@ final class ui extends vv {
     final static void a(String param0, byte param1, String param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         StringBuilder stackIn_11_1 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (null != rk.field_f) {
-                rk.field_f.q(-123);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              pb.field_E = new pd(param0, param2, false, true, true);
-              we.field_a.a((byte) -122, (fd) (pb.field_E));
-              if (param1 == 111) {
-                break L2;
-              } else {
-                field_y = true;
-                break L2;
-              }
-            }
-            break L0;
+          if (null != rk.field_f) {
+            rk.field_f.q(-123);
           }
+          pb.field_E = new pd(param0, param2, false, true, true);
+          we.field_a.a((byte) -122, (fd) (pb.field_E));
+          if (param1 != 111) {
+            field_y = true;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("ui.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("ui.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_11_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L4;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L4;
-            }
+          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw nb.a((Throwable) ((Object) stackIn_9_0), stackIn_12_2 + ')');
+          throw nb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
     final static v g(int param0) {
+        int var3 = 0;
         int var1;
         int var2;
-        int var3;
         int var4;
         int var5;
         var5 = Kickabout.field_G;
         var1 = 2147483647;
         var2 = 0;
-        var3 = param0;
-        L0: while (true) {
-          if (var3 >= e.field_n.length) {
-            return e.field_n[var2];
-          } else {
-            var4 = e.field_n[var3].field_a;
-            if (var1 > var4) {
-              var1 = var4;
-              var2 = var3;
-              var3++;
-              continue L0;
-            } else {
-              var3++;
-              continue L0;
-            }
+        for (var3 = param0; var3 < e.field_n.length; var3++) {
+          var4 = e.field_n[var3].field_a;
+          if (var1 > var4) {
+            var1 = var4;
+            var2 = var3;
           }
         }
+        return e.field_n[var2];
     }
 
     public static void a(boolean param0) {
         field_w = null;
         if (!param0) {
-            String var2 = (String) null;
-            ui.a((String) null, (byte) 7, (String) null);
+          String var2 = (String) null;
+          ui.a((String) null, (byte) 7, (String) null);
         }
     }
 
     final static void h(int param0) {
         ol.field_R = true;
         if (param0 != -15396) {
-            field_w = (vc[]) null;
+          field_w = (vc[]) null;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         if (param3 != 2147483647) {
-            String var5 = (String) null;
-            ui.a((String) null, (byte) 63, (String) null);
+          String var5 = (String) null;
+          ui.a((String) null, (byte) 63, (String) null);
         }
         mu.a(bw.field_a[param1], true, param0, ad.field_d[param1], param2, true);
     }
 
     final int a(int param0) {
         if (param0 != 0) {
-            return 103;
+          return 103;
         }
-        if (!(this.field_v != null)) {
-            return 0;
+        if (this.field_v == null) {
+          return 0;
         }
         return this.field_v.field_n * 100 / (-this.field_x + this.field_v.field_f.length);
     }
 
     final byte[] b(int param0) {
-        L0: {
-          if (this.field_p) {
-            break L0;
-          } else {
-            if (this.field_v.field_n < -this.field_x + this.field_v.field_f.length) {
-              break L0;
-            } else {
-              L1: {
-                if (param0 == 12802) {
-                  break L1;
-                } else {
-                  ui.g(64);
-                  break L1;
-                }
-              }
-              return this.field_v.field_f;
-            }
+        if (!this.field_p &&
+          this.field_v.field_n >= -this.field_x + this.field_v.field_f.length) {
+          if (param0 != 12802) {
+            ui.g(64);
           }
+          return this.field_v.field_f;
         }
         throw new RuntimeException();
     }

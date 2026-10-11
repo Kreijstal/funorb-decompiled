@@ -11,92 +11,67 @@ abstract class on {
 
     final static rb a(java.awt.Component param0, int param1, int param2, int param3) {
         try {
-            Class var4 = null;
-            Throwable var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            rb var5 = null;
-            cd var5_ref = null;
-            rb stackIn_3_0 = null;
-            cd stackIn_5_0 = null;
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
+          Class var4 = null;
+          Throwable var4_ref = null;
+          RuntimeException var4_ref2 = null;
+          rb var5 = null;
+          cd var5_ref = null;
+          rb stackIn_3_0 = null;
+          cd stackIn_5_0 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      var4 = Class.forName("gn");
-                      if (param3 == 1359) {
-                        break L2;
-                      } else {
-                        field_d = (java.security.SecureRandom) null;
-                        break L2;
-                      }
-                    }
-                    var5 = (rb) (var4.newInstance());
-                    var5.a(param0, param2, param3 + -1477, param1);
-                    stackIn_3_0 = (rb) (var5);
-                    break L1;
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var4_ref = decompiledCaughtException;
-                  var5_ref = new cd();
-                  ((rb) ((Object) var5_ref)).a(param0, param2, -68, param1);
-                  stackIn_5_0 = (cd) (var5_ref);
-                  return (rb) ((Object) stackIn_5_0);
-                }
-                break L0;
+              var4 = Class.forName("gn");
+              if (param3 != 1359) {
+                field_d = (java.security.SecureRandom) null;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var4_ref2);
-
-                stackIn_8_1 = new StringBuilder().append("on.N(");
-
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L3;
-                }
-              }
-              throw sd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+              var5 = (rb) (var4.newInstance());
+              var5.a(param0, param2, param3 - 1477, param1);
+              stackIn_3_0 = var5;
+              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new cd();
+              ((rb) ((Object) var5_ref)).a(param0, param2, -68, param1);
+              stackIn_5_0 = var5_ref;
+              return (rb) ((Object) stackIn_5_0);
             }
-            return stackIn_3_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var4_ref2;
+            stackIn_8_1 = new StringBuilder().append("on.N(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -14330) {
-          on.a(-91);
-          field_f = null;
-          field_d = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -14330) {
           field_f = null;
           field_d = null;
           field_b = null;
           field_c = null;
           return;
         }
+        on.a(-91);
+        field_f = null;
+        field_d = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

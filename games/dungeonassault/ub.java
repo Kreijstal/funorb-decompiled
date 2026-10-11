@@ -29,31 +29,10 @@ final class ub extends ne {
     }
 
     final static int a(byte param0, int param1) {
-        int stackIn_8_0 = 0;
-        if (param0 != 15) {
-          return 34;
-        } else {
-          L0: {
-            if (param1 != 0) {
-              if (param1 == 1) {
-                stackIn_8_0 = 3;
-                break L0;
-              } else {
-                if ((param1 ^ -1) != -3) {
-                  stackIn_8_0 = 9;
-                  break L0;
-                } else {
-                  stackIn_8_0 = 6;
-                  break L0;
-                }
-              }
-            } else {
-              stackIn_8_0 = 0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
+        if (param0 == 15) {
+          return param1 == 0 ? 0 : param1 != 1 ? param1 == 2 ? 6 : 9 : 3;
         }
+        return 34;
     }
 
     private ub() throws Throwable {

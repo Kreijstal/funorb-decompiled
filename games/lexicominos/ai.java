@@ -24,54 +24,39 @@ final class ai implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_b) {
-            field_a = field_a + 4;
+          field_a = field_a + 4;
         } else {
-            fieldTemp$0 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$3] = param0.refreshRate;
         }
     }
 
     final void a(java.awt.Frame param0, int param1) {
-        java.awt.Frame var4;
         this.field_c.restoreDisplayMode();
-        if (param1 != -20) {
-          var4 = (java.awt.Frame) null;
-          this.a((java.awt.Frame) null, -107, -37, 23, 78, 45);
-          this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
-          return;
-        } else {
+        if (param1 == -20) {
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
           return;
         }
+        java.awt.Frame var4 = (java.awt.Frame) null;
+        this.a((java.awt.Frame) null, -107, -37, 23, 78, 45);
+        this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
 
     final void a(java.awt.Frame param0, int param1, int param2, int param3, int param4, int param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
         param0.setVisible(true);
-        var7 = (com.ms.awt.WComponentPeer) null;
-        var8 = var7.getHwnd();
-        if (param2 != 13486) {
-          field_b = (int[]) null;
-          com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
-          com.ms.win32.User32.SetWindowLong(var8, -20, 8);
-          this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
-          this.field_c.setDisplayMode(param3, param4, param1, param5, 0);
-          param0.setBounds(0, 0, param3, param4);
-          param0.toFront();
-          param0.requestFocus();
-          return;
-        } else {
+        com.ms.awt.WComponentPeer var7 = (com.ms.awt.WComponentPeer) null;
+        int var8 = var7.getHwnd();
+        if (param2 == 13486) {
           com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
           com.ms.win32.User32.SetWindowLong(var8, -20, 8);
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
@@ -81,6 +66,14 @@ final class ai implements com.ms.directX.IEnumModesCallback {
           param0.requestFocus();
           return;
         }
+        field_b = (int[]) null;
+        com.ms.win32.User32.SetWindowLong(var8, -16, -2147483648);
+        com.ms.win32.User32.SetWindowLong(var8, -20, 8);
+        this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 17);
+        this.field_c.setDisplayMode(param3, param4, param1, param5, 0);
+        param0.setBounds(0, 0, param3, param4);
+        param0.toFront();
+        param0.requestFocus();
     }
 
     public ai() {

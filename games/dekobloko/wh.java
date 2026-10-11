@@ -14,7 +14,7 @@ final class wh {
         field_f = null;
         field_e = null;
         if (!param0) {
-            wh.a(true);
+          wh.a(true);
         }
     }
 

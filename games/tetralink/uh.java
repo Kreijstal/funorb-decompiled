@@ -15,86 +15,48 @@ abstract class uh {
         oh[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_e = (hl) null;
-                break L1;
-              }
-            }
-            if (ia.a(param0, param2, param3, -60)) {
-              stackIn_6_0 = gd.e((byte) 76);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != 0) {
+            field_e = (hl) null;
           }
+          if (ia.a(param0, param2, param3, -60)) {
+            stackIn_6_0 = gd.e((byte) 76);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (oh[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("uh.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("uh.G(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (oh[]) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw oi.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final int a(byte param0, long param1) {
-        long var4;
-        if (param0 != -70) {
-          L0: {
-            field_c = (long[]) null;
-            var4 = this.b((byte) -58);
-            if (0L < var4) {
-              tb.a(false, var4);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return this.a(param1, (byte) 52);
-        } else {
-          L1: {
-            var4 = this.b((byte) -58);
-            if (0L < var4) {
-              tb.a(false, var4);
-              break L1;
-            } else {
-              break L1;
-            }
+        long var4 = 0L;
+        long var4Lifetime1;
+        if (param0 == -70) {
+          var4 = this.b((byte) -58);
+          if (0L < var4) {
+            tb.a(false, var4);
           }
           return this.a(param1, (byte) 52);
         }
+        field_c = (long[]) null;
+        var4Lifetime1 = this.b((byte) -58);
+        if (0L < var4Lifetime1) {
+          tb.a(false, var4Lifetime1);
+        }
+        return this.a(param1, (byte) 52);
     }
 
     abstract void a(int param0);
@@ -103,8 +65,8 @@ abstract class uh {
 
     final static hl b(int param0) {
         if (param0 != 32) {
-            field_e = (hl) null;
-            return wa.a(57);
+          field_e = (hl) null;
+          return wa.a(57);
         }
         return wa.a(57);
     }
@@ -112,16 +74,7 @@ abstract class uh {
     abstract int a(long param0, byte param1);
 
     public static void a(byte param0) {
-        if (param0 != 41) {
-          uh.b(-116);
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 41) {
           field_b = null;
           field_c = null;
           field_e = null;
@@ -130,6 +83,13 @@ abstract class uh {
           field_a = null;
           return;
         }
+        uh.b(-116);
+        field_b = null;
+        field_c = null;
+        field_e = null;
+        field_f = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

@@ -10,36 +10,29 @@ final class ki {
     static String[][] field_d;
 
     final static wd a(int param0) {
-        if (nb.field_i != oh.field_L) {
-          if (lm.field_d != oh.field_L) {
-            if (param0 == -61440) {
-              return null;
-            } else {
-              field_e = (tv) null;
-              return null;
-            }
-          } else {
-            oh.field_L = nb.field_i;
-            return p.field_a;
-          }
-        } else {
+        if (nb.field_i == oh.field_L) {
           throw new IllegalStateException();
         }
+        if (lm.field_d == oh.field_L) {
+          oh.field_L = nb.field_i;
+          return p.field_a;
+        }
+        if (param0 != -61440) {
+          field_e = (tv) null;
+          return null;
+        }
+        return null;
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        var2 = (param0 * param0 >> 62406156) * param0 >> -1072900884;
-        var3 = param0 * 6 + -61440;
-        var4 = (var3 * param0 >> -1249041204) + 40960;
-        if (param1 >= -26) {
-          ki.a(85, -2);
-          return var4 * var2 >> 1795605868;
-        } else {
-          return var4 * var2 >> 1795605868;
+        int var2 = (param0 * param0 >> 12) * param0 >> 12;
+        int var3 = param0 * 6 - 61440;
+        int var4 = (var3 * param0 >> 12) + 40960;
+        if (param1 < -26) {
+          return var4 * var2 >> 12;
         }
+        ki.a(85, -2);
+        return var4 * var2 >> 12;
     }
 
     public static void a(byte param0) {
@@ -47,16 +40,14 @@ final class ki {
         field_f = null;
         field_a = null;
         field_d = (String[][]) null;
-        if (param0 <= 87) {
-          ki.a((byte) 12);
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 > 87) {
           field_b = null;
           field_c = null;
           return;
         }
+        ki.a((byte) 12);
+        field_b = null;
+        field_c = null;
     }
 
     static {

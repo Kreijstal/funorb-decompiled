@@ -7,13 +7,13 @@ final class na extends oe implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, int param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != 0) {
-            this.a((byte) -100);
+          this.a((byte) -100);
         }
     }
 
     final synchronized int a(byte param0) {
         if (param0 != -124) {
-            return 105;
+          return 105;
         }
         int var2 = this.field_h;
         this.field_h = 0;
@@ -23,7 +23,7 @@ final class na extends oe implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 1000) {
-            this.field_h = -107;
+          this.field_h = -107;
         }
     }
 

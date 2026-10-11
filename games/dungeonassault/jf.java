@@ -12,8 +12,8 @@ final class jf extends en {
         field_e = null;
         field_g = null;
         if (!param0) {
-            nh var2 = (nh) null;
-            jf.a(18, (nh) null, -123, (byte) -39);
+          nh var2 = (nh) null;
+          jf.a(18, (nh) null, -123, (byte) -39);
         }
     }
 
@@ -21,31 +21,33 @@ final class jf extends en {
         cn var5 = null;
         int var2 = 0;
         int var3 = 0;
+        int var2Lifetime1;
+        int var3Lifetime1;
         if (param0 < 18) {
-            this.field_d = (wb) null;
+          this.field_d = (wb) null;
         } else {
-            jh.c();
-            var2 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
-            var3 = la.field_b.field_H - -la.field_b.field_E;
-            if (this.field_d.field_c.field_v > var3) {
-                var3 = this.field_d.field_c.field_v;
-            }
-            var5 = new cn(var2, var3);
-            var5.e();
-            this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> -185047103, this.field_d.field_a);
-            la.field_b.b(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
-            jh.b();
-            return var5;
+          jh.c();
+          var2 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
+          var3 = la.field_b.field_H + la.field_b.field_E;
+          if (this.field_d.field_c.field_v > var3) {
+            var3 = this.field_d.field_c.field_v;
+          }
+          var5 = new cn(var2, var3);
+          var5.e();
+          this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
+          la.field_b.b(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
+          jh.b();
+          return var5;
         }
         jh.c();
-        var2 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
-        var3 = la.field_b.field_H - -la.field_b.field_E;
-        if (this.field_d.field_c.field_v > var3) {
-            var3 = this.field_d.field_c.field_v;
+        var2Lifetime1 = 4 + this.field_d.field_c.field_y + la.field_b.b(this.field_d.field_b);
+        var3Lifetime1 = la.field_b.field_H + la.field_b.field_E;
+        if (this.field_d.field_c.field_v > var3Lifetime1) {
+          var3Lifetime1 = this.field_d.field_c.field_v;
         }
-        cn var6 = new cn(var2, var3);
+        cn var6 = new cn(var2Lifetime1, var3Lifetime1);
         var6.e();
-        this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> -185047103, this.field_d.field_a);
+        this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
         la.field_b.b(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
         jh.b();
         return var6;
@@ -58,69 +60,40 @@ final class jf extends en {
         cn stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param3 == 41) {
-              if (kk.a(param1, 1, param2, param0)) {
-                stackIn_7_0 = ff.a((byte) 86);
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_5_0 = null;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_2_0 = (cn) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param3 != 41) {
+            stackIn_2_0 = (cn) null;
+            return stackIn_2_0;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("jf.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (cn) ((Object) stackIn_5_0);
-          } else {
+          if (kk.a(param1, 1, param2, param0)) {
+            stackIn_7_0 = ff.a((byte) 86);
             return stackIn_7_0;
           }
+          stackIn_5_0 = null;
+          return (cn) (stackIn_5_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("jf.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw vk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(int param0, sa param1) {
         cn var3 = null;
         try {
-            var3 = this.c((byte) 44);
-            param1.a(var3, param0, false, -5, param1.field_y - var3.field_v >> -465314207);
+          var3 = this.c((byte) 44);
+          param1.a(var3, param0, false, -5, param1.field_y - var3.field_v >> 1);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "jf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,9 +104,9 @@ final class jf extends en {
 
     jf(wb param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

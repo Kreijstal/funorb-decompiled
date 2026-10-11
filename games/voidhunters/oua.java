@@ -9,7 +9,7 @@ final class oua {
     public static void a(boolean param0) {
         field_b = null;
         if (!param0) {
-            oua.a(false);
+          oua.a(false);
         }
     }
 

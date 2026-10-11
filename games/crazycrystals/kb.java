@@ -15,17 +15,17 @@ final class kb {
         field_c = null;
         field_f = null;
         if (param0 >= -71) {
-            kb.a(37);
+          kb.a(37);
         }
     }
 
     kb(f[][] param0, String param1, int param2) {
         try {
-            this.field_b = param0;
-            this.field_e = param1;
-            this.field_d = param2;
+          this.field_b = param0;
+          this.field_e = param1;
+          this.field_d = param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

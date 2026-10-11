@@ -9,14 +9,14 @@ final class jca {
         field_a = null;
         field_b = null;
         if (param0 != -8270) {
-            jca.a(-125);
+          jca.a(-125);
         }
     }
 
     final static void a(int param0, int param1) {
         fe.field_h = 1000000000L / (long)param0;
         if (param1 != -14350) {
-            field_a = (po) null;
+          field_a = (po) null;
         }
     }
 

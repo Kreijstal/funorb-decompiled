@@ -15,7 +15,7 @@ final class fka extends bw {
 
     public static void a(int param0) {
         if (param0 != -2779) {
-            return;
+          return;
         }
         field_h = null;
     }

@@ -20,29 +20,22 @@ final class sb {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        gg var3;
-        uv var4;
-        String var5_ref_String;
-        int var5;
-        int var6;
-        var3 = se.a(param0, 2, param2);
-        if (param1) {
-          return;
-        } else {
-          L0: {
-            if (var3 != null) {
-              wi.field_v.a(false, 0);
-              var4 = wi.field_v;
-              var5_ref_String = qt.field_k;
-              var4.field_j.a(0, 5, var5_ref_String);
-              var4 = wi.field_v;
-              var5 = sm.field_q;
-              var6 = vc.field_y;
-              var4.field_j.a(0, 0, var5, var6, 0);
-              break L0;
-            } else {
-              break L0;
-            }
+        uv var4 = null;
+        String var5_ref_String = null;
+        int var5 = 0;
+        int var6 = 0;
+        gg var3 = se.a(param0, 2, param2);
+        uv var4Lifetime1;
+        if (!param1) {
+          if (var3 != null) {
+            wi.field_v.a(false, 0);
+            var4 = wi.field_v;
+            var5_ref_String = qt.field_k;
+            var4.field_j.a(0, 5, var5_ref_String);
+            var4Lifetime1 = wi.field_v;
+            var5 = sm.field_q;
+            var6 = vc.field_y;
+            var4Lifetime1.field_j.a(0, 0, var5, var6, 0);
           }
           ug.a(param2, 2, param0);
           return;
@@ -50,20 +43,18 @@ final class sb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
-        if (param4 != 5) {
-          field_h = (int[]) null;
-          nr.field_j = param1;
-          jl.field_d = param2;
-          lk.field_g = param0;
-          la.field_c = param3;
-          return;
-        } else {
+        if (param4 == 5) {
           nr.field_j = param1;
           jl.field_d = param2;
           lk.field_g = param0;
           la.field_c = param3;
           return;
         }
+        field_h = (int[]) null;
+        nr.field_j = param1;
+        jl.field_d = param2;
+        lk.field_g = param0;
+        la.field_c = param3;
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
@@ -75,7 +66,7 @@ final class sb {
         ga.field_R = 0.0f;
         jm.a(18, false, -2);
         if (param1 > -85) {
-            sb.b((byte) -66);
+          sb.b((byte) -66);
         }
     }
 
@@ -85,8 +76,8 @@ final class sb {
 
     final static int a(int param0, int param1) {
         if (param1 > -121) {
-            field_g = (String) null;
-            return t.field_o[2047 & param0];
+          field_g = (String) null;
+          return t.field_o[2047 & param0];
         }
         return t.field_o[2047 & param0];
     }
@@ -99,18 +90,7 @@ final class sb {
         bh.field_i[18] = aj.field_b;
         bh.field_i[11] = aw.field_F;
         bh.field_i[19] = vl.field_f;
-        if (param0 >= -121) {
-          field_e = (String) null;
-          bh.field_i[9] = we.field_e;
-          bh.field_i[20] = vr.field_a;
-          bh.field_i[4] = fp.field_n;
-          bh.field_i[13] = gt.field_o;
-          bh.field_i[7] = ca.field_b;
-          bh.field_i[21] = mp.field_e;
-          bh.field_i[5] = fs.field_c;
-          bh.field_i[17] = dh.field_k;
-          return;
-        } else {
+        if (param0 < -121) {
           bh.field_i[9] = we.field_e;
           bh.field_i[20] = vr.field_a;
           bh.field_i[4] = fp.field_n;
@@ -121,60 +101,46 @@ final class sb {
           bh.field_i[17] = dh.field_k;
           return;
         }
+        field_e = (String) null;
+        bh.field_i[9] = we.field_e;
+        bh.field_i[20] = vr.field_a;
+        bh.field_i[4] = fp.field_n;
+        bh.field_i[13] = gt.field_o;
+        bh.field_i[7] = ca.field_b;
+        bh.field_i[21] = mp.field_e;
+        bh.field_i[5] = fs.field_c;
+        bh.field_i[17] = dh.field_k;
     }
 
     final char b(int param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        if (param0 >= -50) {
-          this.field_c = -38;
-          fieldTemp$2 = this.field_c;
+        int fieldTemp$0 = 0;
+        if (param0 < -50) {
+          fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          return this.field_f.charAt(fieldTemp$2);
-        } else {
-          fieldTemp$3 = this.field_c;
-          this.field_c = this.field_c + 1;
-          return this.field_f.charAt(fieldTemp$3);
+          return this.field_f.charAt(fieldTemp$0);
         }
+        this.field_c = -38;
+        int fieldTemp$1 = this.field_c;
+        this.field_c = this.field_c + 1;
+        return this.field_f.charAt(fieldTemp$1);
     }
 
     sb(String param0) {
         this.field_c = 0;
         try {
-            this.field_f = param0;
-            this.field_d = this.field_f.length();
+          this.field_f = param0;
+          this.field_d = this.field_f.length();
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "sb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 <= 55) {
-          L0: {
-            field_a = 77;
-            if (this.field_d > this.field_c) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_d > this.field_c) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 > 55) {
+          return this.field_d <= this.field_c ? true : false;
         }
+        field_a = 77;
+        return this.field_d <= this.field_c ? true : false;
     }
 
     static {

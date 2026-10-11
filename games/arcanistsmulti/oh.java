@@ -19,50 +19,31 @@ final class oh extends pg {
     public static void a(int param0) {
         field_k = null;
         field_q = null;
-        if (param0 != -791) {
-          field_r = (hb) null;
-          field_h = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 == -791) {
           field_h = null;
           field_r = null;
           return;
         }
+        field_r = (hb) null;
+        field_h = null;
+        field_r = null;
     }
 
     final static int a(byte param0, int param1) {
-        int var2;
-        var2 = 0;
-        if (param0 < 114) {
-          return 99;
-        } else {
-          L0: {
-            if (param1 == 0) {
-              var2 = on.field_h;
-              break L0;
-            } else {
-              break L0;
-            }
+        int var2 = 0;
+        if (param0 >= 114) {
+          if (param1 == 0) {
+            var2 = on.field_h;
           }
-          L1: {
-            if (param1 == 1) {
-              var2 = ra.field_m;
-              break L1;
-            } else {
-              break L1;
-            }
+          if (param1 == 1) {
+            var2 = ra.field_m;
           }
-          L2: {
-            if ((param1 ^ -1) != -3) {
-              break L2;
-            } else {
-              var2 = hd.field_b;
-              break L2;
-            }
+          if (param1 == 2) {
+            var2 = hd.field_b;
           }
           return var2;
         }
+        return 99;
     }
 
     oh() {

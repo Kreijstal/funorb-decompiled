@@ -18,91 +18,41 @@ final class ob extends ck {
     final static boolean a(byte param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -38) {
-                break L1;
-              } else {
-                ob.d(118);
-                break L1;
-              }
-            }
-            if (!jn.field_g) {
-              stackIn_5_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L2: {
-                if ((ib.field_b ^ -1) != -3) {
-                  break L2;
-                } else {
-                  if (bk.field_U == null) {
-                    break L2;
-                  } else {
-                    var3 = (CharSequence) ((Object) param1);
-                    if (!bk.field_U.equals(ui.a(1, var3))) {
-                      break L2;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-              stackIn_11_0 = 0;
-              decompiledRegionSelector0 = 1;
-              break L0;
+          if (param0 != -38) {
+            ob.d(118);
+          }
+          if (!jn.field_g) {
+            return false;
+          }
+          if (ib.field_b == 2 &&
+            bk.field_U != null) {
+            var3 = (CharSequence) ((Object) param1);
+            if (bk.field_U.equals(ui.a(1, var3))) {
+              return true;
             }
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("ob.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          return stackIn_11_0 != 0;
+          throw ci.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     public static void d(int param0) {
-        if (param0 != 18601) {
-          ob.d(118);
-          field_w = null;
-          field_z = null;
-          field_t = null;
-          field_r = null;
-          field_s = null;
-          field_x = null;
-          return;
-        } else {
+        if (param0 == 18601) {
           field_w = null;
           field_z = null;
           field_t = null;
@@ -111,6 +61,13 @@ final class ob extends ck {
           field_x = null;
           return;
         }
+        ob.d(118);
+        field_w = null;
+        field_z = null;
+        field_t = null;
+        field_r = null;
+        field_s = null;
+        field_x = null;
     }
 
     private ob() throws Throwable {

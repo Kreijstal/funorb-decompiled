@@ -16,27 +16,25 @@ final class wk extends gi {
     }
 
     public static void d(int param0) {
-        if (param0 != 80) {
-          field_m = (he[]) null;
-          field_m = null;
-          field_h = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0 == 80) {
           field_m = null;
           field_h = null;
           field_l = null;
           return;
         }
+        field_m = (he[]) null;
+        field_m = null;
+        field_h = null;
+        field_l = null;
     }
 
     wk(long param0, int param1, byte[] param2) {
         try {
-            this.field_k = param0;
-            this.field_j = param2;
-            this.field_n = param1;
+          this.field_k = param0;
+          this.field_j = param2;
+          this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "wk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

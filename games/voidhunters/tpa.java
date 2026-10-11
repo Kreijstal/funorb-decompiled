@@ -12,9 +12,9 @@ final class tpa {
 
     public static void a(int param0) {
         if (param0 != 2) {
-            tpa.a(-52);
-            field_a = null;
-            return;
+          tpa.a(-52);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

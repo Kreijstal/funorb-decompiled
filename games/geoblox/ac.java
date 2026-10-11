@@ -94,8 +94,8 @@ class ac extends ff {
         int incrementValue$0 = 0;
         int var13 = 0;
         int stackIn_7_0 = 0;
-        int stackIn_59_0 = 0;
-        int stackIn_60_1 = 0;
+        int stackIn_61_0 = 0;
+        int stackIn_62_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -142,60 +142,60 @@ class ac extends ff {
             var3_int = var3_int + (-160 + var8);
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < pg.field_a.length; var10Lifetime1++) {
-            if (!da.a(0, -119) &&
-              var10Lifetime1 == 16 &&
-              !qi.d(105)) {
-              continue;
-            }
-            if ((0 != (1 << var10Lifetime1 & var5) ||
-              !param1) &&
-              (qa.field_a >= var3_int &&
-              32 + var3_int >= qa.field_a &&
-              var4 <= ue.field_e &&
-              32 + var4 >= ue.field_e)) {
-              vb.c(var3_int, var4, 32, 32, 2, 16689938);
-              if (var7 < 0) {
-                var7 = var10Lifetime1;
+            boolean decompiledFrameRemainder0 = true;
+            if (da.a(0, -119) ||
+              var10Lifetime1 != 16 ||
+              qi.d(105)) {
+              if ((0 != (1 << var10Lifetime1 & var5) ||
+                !param1) &&
+                (qa.field_a >= var3_int &&
+                32 + var3_int >= qa.field_a &&
+                var4 <= ue.field_e &&
+                32 + var4 >= ue.field_e)) {
+                vb.c(var3_int, var4, 32, 32, 2, 16689938);
+                if (var7 < 0) {
+                  var7 = var10Lifetime1;
+                }
+                vb.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
               }
-              vb.a(2 + var3_int, var4 + 2, 28, 28, 2, 16777215);
-            }
-            if (var10Lifetime1 == a.field_e) {
-              vb.c(var3_int, var4, 32, 32, 2, 15488514);
-              vb.a(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
-            }
-            if ((var5 & 1 << var10Lifetime1) == 0) {
-              if (param1) {
-                continue;
+              if (var10Lifetime1 == a.field_e) {
+                vb.c(var3_int, var4, 32, 32, 2, 15488514);
+                vb.a(var3_int + 2, var4 + 2, 28, 28, 2, 16777215);
               }
-              am.field_b.f(var3_int, var4);
-            } else {
-              sl.field_f[var10Lifetime1].f(var3_int, var4);
-            }
-            incrementValue$0 = var6;
-            var6++;
-            if (incrementValue$0 == 7) {
-              var4 += 40;
-              var3_int = 160;
-              if (!param0) {
-                var4 += 5;
+              if ((var5 & 1 << var10Lifetime1) == 0) {
+                decompiledFrameRemainder0 = !(param1);
+                if (decompiledFrameRemainder0) {
+                  am.field_b.f(var3_int, var4);
+                }
+              } else {
+                sl.field_f[var10Lifetime1].f(var3_int, var4);
               }
-              if (!param1) {
-                continue;
+              if (decompiledFrameRemainder0) {
+                incrementValue$0 = var6;
+                var6++;
+                if (incrementValue$0 == 7) {
+                  var4 += 40;
+                  var3_int = 160;
+                  if (!param0) {
+                    var4 += 5;
+                  }
+                  if (param1 &&
+                    var9 < 8) {
+                    var3_int = var3_int + var8;
+                  }
+                } else {
+                  var3_int += 40;
+                }
               }
-              if (var9 < 8) {
-                var3_int = var3_int + var8;
-              }
-            } else {
-              var3_int += 40;
             }
           }
-          stackIn_59_0 = 190;
+          stackIn_61_0 = 190;
           if (!param0) {
-            stackIn_60_1 = -20;
+            stackIn_62_1 = -20;
           } else {
-            stackIn_60_1 = -2;
+            stackIn_62_1 = -2;
           }
-          var10Lifetime2 = stackIn_59_0 + stackIn_60_1;
+          var10Lifetime2 = stackIn_61_0 + stackIn_62_1;
           if (var7 != -1) {
             fi.field_d.b(pg.field_a[var7], 315, var10Lifetime2, 0, -1);
             var11 = -fi.field_d.field_q + fi.field_d.field_o;

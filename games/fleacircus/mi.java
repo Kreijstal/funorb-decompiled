@@ -14,10 +14,10 @@ final class mi extends lh {
     static dd field_o;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        we.a(param0 + -7);
+        we.a(param0 - 7);
         gb.g(param2, param4, param1, param3);
         if (param0 != -52) {
-            mi.a((byte) -106);
+          mi.a((byte) -106);
         }
     }
 
@@ -25,14 +25,12 @@ final class mi extends lh {
         field_p = null;
         field_o = null;
         field_k = null;
-        if (param0 != 27) {
-          mi.a((byte) -97, -115, -108, -36, -108);
-          field_r = null;
-          return;
-        } else {
+        if (param0 == 27) {
           field_r = null;
           return;
         }
+        mi.a((byte) -97, -115, -108, -36, -108);
+        field_r = null;
     }
 
     mi(int param0, int param1, int param2, int param3, int param4) {
@@ -44,29 +42,23 @@ final class mi extends lh {
     }
 
     final static jd c(byte param0) {
-        L0: {
-          if (null == ll.field_n) {
-            ll.field_n = new jd();
-            ll.field_n.a(ug.field_e, true);
-            ll.field_n.field_a = nb.field_c;
-            ll.field_n.field_b = 7697781;
-            ll.field_n.field_k = 14;
-            ll.field_n.field_e = 0;
-            ll.field_n.field_j = 4;
-            ll.field_n.field_f = 2763306;
-            ll.field_n.field_r = 5;
-            ll.field_n.field_c = 6;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null == ll.field_n) {
+          ll.field_n = new jd();
+          ll.field_n.a(ug.field_e, true);
+          ll.field_n.field_a = nb.field_c;
+          ll.field_n.field_b = 7697781;
+          ll.field_n.field_k = 14;
+          ll.field_n.field_e = 0;
+          ll.field_n.field_j = 4;
+          ll.field_n.field_f = 2763306;
+          ll.field_n.field_r = 5;
+          ll.field_n.field_c = 6;
         }
-        if (param0 != 105) {
-          mi.a((byte) 126, -126, -98, 103, -72);
-          return ll.field_n;
-        } else {
+        if (param0 == 105) {
           return ll.field_n;
         }
+        mi.a((byte) 126, -126, -98, 103, -72);
+        return ll.field_n;
     }
 
     final static void a(byte param0, int param1, boolean param2, wk param3) {
@@ -75,77 +67,43 @@ final class mi extends lh {
         Throwable var5 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 12) {
-                break L1;
-              } else {
-                mi.a((byte) 55, -95, -74, 14, 24);
-                break L1;
-              }
-            }
-            L2: {
-              if (null != hh.field_b) {
-                jd.a(param2, 1048576, (byte) 102, param3, param1);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (gg.field_h == null) {
-              break L0;
-            } else {
-              var4 = db.field_J;
-              synchronized (var4) {
-                L3: {
-                  gg.field_h.a(param1, true, -1);
-                  if (param3 == ae.field_b) {
-                    return;
-                  } else {
-                    L4: {
-                      gg.field_h.e(-398);
-                      db.field_J.g();
-                      ae.field_b = param3;
-                      if (ae.field_b == null) {
-                        break L4;
-                      } else {
-                        gg.field_h.a(param2, 68, ae.field_b);
-                        break L4;
-                      }
-                    }
-                    break L3;
-                  }
-                }
-              }
+          if (param0 != 12) {
+            mi.a((byte) 55, -95, -74, 14, 24);
+          }
+          if (null != hh.field_b) {
+            jd.a(param2, 1048576, (byte) 102, param3, param1);
+          }
+          if (gg.field_h == null) {
+            return;
+          }
+          var4 = db.field_J;
+          synchronized (var4) {
+            gg.field_h.a(param1, true, -1);
+            if (param3 == ae.field_b) {
               return;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var4_ref);
-
-            stackIn_20_1 = new StringBuilder().append("mi.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L5;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L5;
+            gg.field_h.e(-398);
+            db.field_J.g();
+            ae.field_b = param3;
+            if (ae.field_b != null) {
+              gg.field_h.a(param2, 68, ae.field_b);
             }
           }
-          throw pf.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_20_0 = var4_ref;
+          stackIn_20_1 = new StringBuilder().append("mi.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw pf.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

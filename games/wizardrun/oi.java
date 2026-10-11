@@ -13,101 +13,69 @@ final class oi {
 
     final void a(wl param0, int param1) {
         try {
-            if (!(param0.field_c == null)) {
-                param0.a(false);
-            }
-            if (param1 != -5441) {
-                field_d = (String) null;
-            }
-            param0.field_b = this.field_a.field_b;
-            param0.field_c = this.field_a;
-            param0.field_c.field_b = param0;
-            param0.field_b.field_c = param0;
+          if (param0.field_c != null) {
+            param0.a(false);
+          }
+          if (param1 != -5441) {
+            field_d = (String) null;
+          }
+          param0.field_b = this.field_a.field_b;
+          param0.field_c = this.field_a;
+          param0.field_c.field_b = param0;
+          param0.field_b.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final wl b(int param0) {
-        wl var2;
-        int var3;
-        var2 = this.field_a.field_b;
-        if (var2 == this.field_a) {
-          return null;
-        } else {
-          var3 = -45 % ((param0 - 32) / 56);
+        wl var2 = this.field_a.field_b;
+        if (var2 != this.field_a) {
+          int var3 = -45 % ((param0 - 32) / 56);
           var2.a(false);
           return var2;
         }
+        return null;
     }
 
     final wl c(int param0) {
-        wl var2;
-        var2 = this.field_a.field_c;
-        if (param0 == 8192) {
-          if (this.field_a == var2) {
-            return null;
-          } else {
-            var2.a(false);
-            return var2;
-          }
-        } else {
+        wl var2 = this.field_a.field_c;
+        if (param0 != 8192) {
           field_f = (int[]) null;
-          if (this.field_a == var2) {
-            return null;
-          } else {
+          if (this.field_a != var2) {
             var2.a(false);
             return var2;
           }
+          return null;
         }
+        if (this.field_a != var2) {
+          var2.a(false);
+          return var2;
+        }
+        return null;
     }
 
     final boolean f(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 8192) {
-          L0: {
-            this.field_b = (wl) null;
-            if (this.field_a.field_b != this.field_a) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_a.field_b != this.field_a) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 8192) {
+          return this.field_a.field_b == this.field_a ? true : false;
         }
+        this.field_b = (wl) null;
+        return this.field_a.field_b == this.field_a ? true : false;
     }
 
     final void a(boolean param0) {
-        wl var2;
-        int var3;
-        var3 = wizardrun.field_H;
-        L0: while (true) {
+        wl var2 = null;
+        int var3 = wizardrun.field_H;
+        while (true) {
           var2 = this.field_a.field_b;
           if (var2 == this.field_a) {
-            if (param0) {
-              return;
-            } else {
-              this.field_b = null;
-              return;
-            }
-          } else {
-            var2.a(false);
-            continue L0;
+            break;
           }
+          var2.a(false);
+        }
+        if (!param0) {
+          this.field_b = null;
+          return;
         }
     }
 
@@ -115,96 +83,74 @@ final class oi {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null == param0.field_c) {
-                break L1;
-              } else {
-                param0.a(param1);
-                break L1;
-              }
-            }
-            param0.field_b = this.field_a;
-            param0.field_c = this.field_a.field_c;
-            param0.field_c.field_b = param0;
-            param0.field_b.field_c = param0;
-            if (!param1) {
-              break L0;
-            } else {
-              field_e = (String[]) null;
-              return;
-            }
+          if (null != param0.field_c) {
+            param0.a(param1);
           }
+          param0.field_b = this.field_a;
+          param0.field_c = this.field_a.field_c;
+          param0.field_c.field_b = param0;
+          param0.field_b.field_c = param0;
+          if (!param1) {
+            return;
+          }
+          field_e = (String[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("oi.E(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("oi.E(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final wl d(int param0) {
-        wl var2;
-        var2 = this.field_b;
+        wl var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
-        } else {
-          this.field_b = var2.field_b;
-          if (param0 != 8192) {
-            return (wl) null;
-          } else {
-            return var2;
-          }
         }
+        this.field_b = var2.field_b;
+        if (param0 == 8192) {
+          return var2;
+        }
+        return (wl) null;
     }
 
     final wl a(byte param0) {
         wl var2 = null;
+        wl var2Lifetime1;
         if (param0 != 11) {
-            this.field_a = (wl) null;
-            var2 = this.field_a.field_c;
-            if (!(this.field_a != var2)) {
-                this.field_b = null;
-                return null;
-            }
-            this.field_b = var2.field_c;
-            return var2;
-        }
-        var2 = this.field_a.field_c;
-        if (!(this.field_a != var2)) {
+          this.field_a = (wl) null;
+          var2 = this.field_a.field_c;
+          if (this.field_a == var2) {
             this.field_b = null;
             return null;
+          }
+          this.field_b = var2.field_c;
+          return var2;
         }
-        this.field_b = var2.field_c;
-        return var2;
+        var2Lifetime1 = this.field_a.field_c;
+        if (this.field_a == var2Lifetime1) {
+          this.field_b = null;
+          return null;
+        }
+        this.field_b = var2Lifetime1.field_c;
+        return var2Lifetime1;
     }
 
     public static void e(int param0) {
         field_d = null;
         if (param0 <= 9) {
-            return;
+          return;
         }
         field_e = null;
         field_c = null;
@@ -213,9 +159,9 @@ final class oi {
 
     final wl a(int param0) {
         wl var2 = this.field_b;
-        if (!(this.field_a != var2)) {
-            this.field_b = null;
-            return null;
+        if (this.field_a == var2) {
+          this.field_b = null;
+          return null;
         }
         this.field_b = var2.field_c;
         int var3 = -110 % ((param0 - 17) / 47);
@@ -229,27 +175,25 @@ final class oi {
     }
 
     final wl b(byte param0) {
-        wl var2;
-        if (param0 >= 45) {
-          var2 = this.field_a.field_b;
-          if (var2 == this.field_a) {
-            this.field_b = null;
-            return null;
-          } else {
-            this.field_b = var2.field_b;
-            return var2;
-          }
-        } else {
+        wl var2 = null;
+        wl var2Lifetime1;
+        if (param0 < 45) {
           field_f = (int[]) null;
           var2 = this.field_a.field_b;
-          if (var2 == this.field_a) {
-            this.field_b = null;
-            return null;
-          } else {
+          if (var2 != this.field_a) {
             this.field_b = var2.field_b;
             return var2;
           }
+          this.field_b = null;
+          return null;
         }
+        var2Lifetime1 = this.field_a.field_b;
+        if (var2Lifetime1 != this.field_a) {
+          this.field_b = var2Lifetime1.field_b;
+          return var2Lifetime1;
+        }
+        this.field_b = null;
+        return null;
     }
 
     static {

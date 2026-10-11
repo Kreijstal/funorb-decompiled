@@ -19,7 +19,7 @@ final class gl {
 
     final long a(int param0) throws IOException {
         if (param0 != 48) {
-            return 29L;
+          return 29L;
         }
         return this.field_b.length();
     }
@@ -31,48 +31,23 @@ final class gl {
     }
 
     final static boolean c(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == -11) {
-          if (-11 >= (hp.field_s ^ -1)) {
-            if (field_c) {
-              return false;
-            } else {
-              L0: {
-                if (of.a(param0 + 11)) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -11) {
           gl.b(-7);
-          if (-11 >= (hp.field_s ^ -1)) {
-            if (field_c) {
-              return false;
-            } else {
-              L1: {
-                if (of.a(param0 + 11)) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (hp.field_s < 10) {
             return false;
           }
+          if (!field_c) {
+            return !of.a(param0 + 11) ? true : false;
+          }
+          return false;
         }
+        if (hp.field_s < 10) {
+          return false;
+        }
+        if (!field_c) {
+          return !of.a(param0 + 11) ? true : false;
+        }
+        return false;
     }
 
     final int a(byte[] param0, int param1, int param2, byte param3) throws IOException {
@@ -81,114 +56,88 @@ final class gl {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5_int = this.field_b.read(param0, param1, param2);
-              if (param3 <= -57) {
-                break L1;
-              } else {
-                field_e = -58;
-                break L1;
-              }
-            }
-            L2: {
-              if (-1 > (var5_int ^ -1)) {
-                this.field_k = this.field_k + (long)var5_int;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            stackIn_6_0 = var5_int;
-            break L0;
+          var5_int = this.field_b.read(param0, param1, param2);
+          if (param3 > -57) {
+            field_e = -58;
           }
+          if (var5_int > 0) {
+            this.field_k = this.field_k + (long)var5_int;
+          }
+          stackIn_6_0 = var5_int;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("gl.H(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("gl.H(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw dn.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dn.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     gl(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
-            if ((param2 ^ -1L) == 0L) {
-                param2 = 9223372036854775807L;
-            }
-            if (param0.length() > param2) {
-                param0.delete();
-            }
-            this.field_b = new RandomAccessFile(param0, param1);
-            this.field_g = param2;
-            this.field_k = 0L;
-            var5_int = this.field_b.read();
-            if (-1 != var5_int && !param1.equals("r")) {
-                this.field_b.seek(0L);
-                this.field_b.write(var5_int);
-            }
+          if (param2 == -1L) {
+            param2 = 9223372036854775807L;
+          }
+          if (param0.length() > param2) {
+            param0.delete();
+          }
+          this.field_b = new RandomAccessFile(param0, param1);
+          this.field_g = param2;
+          this.field_k = 0L;
+          var5_int = this.field_b.read();
+          if (-1 != var5_int &&
+            !param1.equals("r")) {
             this.field_b.seek(0L);
+            this.field_b.write(var5_int);
+          }
+          this.field_b.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(long param0, int param1) throws IOException {
-        if (param1 >= -86) {
-          field_l = (String) null;
-          this.field_b.seek(param0);
-          this.field_k = param0;
-          return;
-        } else {
+        if (param1 < -86) {
           this.field_b.seek(param0);
           this.field_k = param0;
           return;
         }
+        field_l = (String) null;
+        this.field_b.seek(param0);
+        this.field_k = param0;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
         try {
-            if (!((this.field_g ^ -1L) <= (this.field_k + (long)param2 ^ -1L))) {
-                this.field_b.seek(this.field_g);
-                this.field_b.write(1);
-                throw new EOFException();
-            }
-            if (param0 != 120) {
-                field_c = true;
-            }
-            this.field_b.write(param3, param1, param2);
-            this.field_k = this.field_k + (long)param2;
+          if (this.field_g < (this.field_k + (long)param2)) {
+            this.field_b.seek(this.field_g);
+            this.field_b.write(1);
+            throw new EOFException();
+          }
+          if (param0 != 120) {
+            field_c = true;
+          }
+          this.field_b.write(param3, param1, param2);
+          this.field_k = this.field_k + (long)param2;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "gl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "gl.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     protected final void finalize() throws Throwable {
         if (this.field_b != null) {
-            System.out.println("");
-            this.d(89);
+          System.out.println("");
+          this.d(89);
         }
     }
 
@@ -198,18 +147,18 @@ final class gl {
         field_d = null;
         field_l = null;
         if (param0 != -117) {
-            field_j = -58;
+          field_j = -58;
         }
     }
 
     final void d(int param0) throws IOException {
-        if (!(null == this.field_b)) {
-            this.field_b.close();
-            this.field_b = null;
+        if (null != this.field_b) {
+          this.field_b.close();
+          this.field_b = null;
         }
         if (param0 < 85) {
-            gl.b(-69);
-            return;
+          gl.b(-69);
+          return;
         }
     }
 

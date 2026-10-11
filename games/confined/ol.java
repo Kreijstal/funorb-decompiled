@@ -7,79 +7,53 @@ final class ol {
     static bc field_a;
 
     final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            var4_int = param0.length();
-            param0.setLength(param1);
-            var5 = var4_int;
-            L1: while (true) {
-              if (var5 >= param1) {
-                L2: {
-                  if (param2 == -1046) {
-                    break L2;
-                  } else {
-                    ol.a(81, 67, -16, -58, 110);
-                    break L2;
-                  }
-                }
-                stackIn_7_0 = (StringBuilder) (param0);
-                break L0;
-              } else {
-                param0.setCharAt(var5, param3);
-                var5++;
-                continue L1;
-              }
-            }
+          var4_int = param0.length();
+          param0.setLength(param1);
+          for (var5 = var4_int; var5 < param1; var5++) {
+            param0.setCharAt(var5, param3);
           }
+          if (param2 != -1046) {
+            ol.a(81, 67, -16, -58, 110);
+          }
+          stackIn_7_0 = (StringBuilder) (param0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("ol.E(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("ol.E(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != 30613) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         nn.field_t[param3].d(param0, param4);
         pn.field_a.a(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
     }
 
     final static void a(byte param0) {
-        int var1 = -89 / ((param0 - -59) / 35);
-        if (!(fd.field_j)) {
-            throw new IllegalStateException();
+        int var1 = -89 / ((param0 + 59) / 35);
+        if (!fd.field_j) {
+          throw new IllegalStateException();
         }
         qf.field_g = true;
         aa.a((byte) -113, true);
@@ -90,7 +64,7 @@ final class ol {
         field_b = null;
         field_c = null;
         if (param0 != 0) {
-            field_c = (bi) null;
+          field_c = (bi) null;
         }
         field_a = null;
     }
@@ -99,7 +73,7 @@ final class ol {
         fi.field_a = param0;
         li.field_l = param2 ? true : false;
         if (param1 < 84) {
-            field_a = (bc) null;
+          field_a = (bc) null;
         }
         cj.field_d = true;
     }

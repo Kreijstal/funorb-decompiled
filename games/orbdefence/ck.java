@@ -19,90 +19,55 @@ final class ck implements td {
     private kc field_m;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+        int var10 = 0;
         pj stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         ue var12 = null;
         var11 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (!(param2 instanceof ue)) {
-                stackIn_4_0 = null;
-                break L1;
-              } else {
-                stackIn_4_0 = (pj) (param2);
-                break L1;
-              }
-            }
-            L2: {
-              var12 = (ue) ((Object) stackIn_4_0);
-              if (var12 != null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              ul.h(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, this.field_o);
-              var7 = -(var12.field_I * 2) + param2.field_m;
-              var8 = param2.field_s + param1 + var12.field_I;
-              if (param3 == -4394) {
-                break L3;
-              } else {
-                field_j = (rf) null;
-                break L3;
-              }
-            }
-            var9 = param2.field_n + (param0 - -var12.field_L);
-            ul.b(var8, var9, var7 + var8, var9, this.field_d);
-            var10 = -1 + var12.a((byte) -90);
-            L4: while (true) {
-              if ((var10 ^ -1) > -1) {
-                if (null == this.field_m) {
-                  break L0;
-                } else {
-                  this.field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + this.field_m.field_z + var9, this.field_l, this.field_i);
-                  return;
-                }
-              } else {
-                ul.f(var8 - -(var7 * var12.a(-1, var10) / var12.j(1)), var9, this.field_b, this.field_a);
-                var10--;
-                continue L4;
-              }
-            }
+          if (!(param2 instanceof ue)) {
+            stackIn_4_0 = null;
+          } else {
+            stackIn_4_0 = (pj) (param2);
           }
+          var12 = (ue) (stackIn_4_0);
+          if (var12 != null) {
+          }
+          ul.h(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, this.field_o);
+          var7 = -(var12.field_I * 2) + param2.field_m;
+          var8 = param2.field_s + param1 + var12.field_I;
+          if (param3 != -4394) {
+            field_j = (rf) null;
+          }
+          var9 = param2.field_n + (param0 + var12.field_L);
+          ul.b(var8, var9, var7 + var8, var9, this.field_d);
+          for (var10 = -1 + var12.a((byte) -90); var10 >= 0; var10--) {
+            ul.f(var8 + var7 * var12.a(-1, var10) / var12.j(1), var9, this.field_b, this.field_a);
+          }
+          if (null == this.field_m) {
+            return;
+          }
+          this.field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + this.field_m.field_z + var9, this.field_l, this.field_i);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var6);
-
-            stackIn_15_1 = new StringBuilder().append("ck.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_15_0 = var6;
+          stackIn_15_1 = new StringBuilder().append("ck.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -110,31 +75,29 @@ final class ck implements td {
         field_g = null;
         field_j = null;
         field_n = null;
-        if (param0 != 22499) {
-          field_j = (rf) null;
-          field_k = null;
-          field_h = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 22499) {
           field_k = null;
           field_h = null;
           field_c = null;
           return;
         }
+        field_j = (rf) null;
+        field_k = null;
+        field_h = null;
+        field_c = null;
     }
 
     ck(kc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_i = param2;
-            this.field_o = param4;
-            this.field_l = param1;
-            this.field_d = param3;
-            this.field_a = param6;
-            this.field_m = param0;
-            this.field_b = param5;
+          this.field_i = param2;
+          this.field_o = param4;
+          this.field_l = param1;
+          this.field_d = param3;
+          this.field_a = param6;
+          this.field_m = param0;
+          this.field_b = param5;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

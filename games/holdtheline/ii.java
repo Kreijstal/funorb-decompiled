@@ -10,53 +10,43 @@ final class ii extends RuntimeException {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        if (param0 < -112) {
-          if (null != r.field_a) {
-            if (null == r.field_a.i((byte) -127)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 >= -112) {
           field_b = (String[]) null;
-          if (null != r.field_a) {
-            if (null == r.field_a.i((byte) -127)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == r.field_a) {
             return false;
           }
+          if (null != r.field_a.i((byte) -127)) {
+            return true;
+          }
+          return false;
         }
+        if (null == r.field_a) {
+          return false;
+        }
+        if (null != r.field_a.i((byte) -127)) {
+          return true;
+        }
+        return false;
     }
 
     final static boolean a(int param0, char param1) {
-        if (param0 == 48) {
-          if (48 <= param1) {
-            if (57 < param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 48) {
           field_e = (int[]) null;
-          if (48 <= param1) {
-            if (57 < param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (48 > param1) {
             return false;
           }
+          if (57 >= param1) {
+            return true;
+          }
+          return false;
         }
+        if (48 > param1) {
+          return false;
+        }
+        if (57 >= param1) {
+          return true;
+        }
+        return false;
     }
 
     ii(Throwable param0, String param1) {
@@ -69,7 +59,7 @@ final class ii extends RuntimeException {
         field_b = null;
         field_d = null;
         if (param0 != 8388479) {
-            field_c = 23;
+          field_c = 23;
         }
     }
 

@@ -15,8 +15,8 @@ abstract class du {
 
     final static boolean c(int param0) {
         if (param0 != 10) {
-            field_h = true;
-            return true;
+          field_h = true;
+          return true;
         }
         return true;
     }
@@ -25,7 +25,7 @@ abstract class du {
         field_d = null;
         field_e = null;
         if (param0 != 16) {
-            return;
+          return;
         }
         field_b = null;
         field_g = null;
@@ -36,7 +36,7 @@ abstract class du {
 
     final java.net.Socket a(byte param0) throws IOException {
         if (param0 != 15) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_a, this.field_c);
     }

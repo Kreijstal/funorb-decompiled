@@ -27,105 +27,59 @@ final class tg implements Serializable {
         ae stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == null) {
-                break L1;
-              } else {
-                if (-1 == (param1.length() ^ -1)) {
-                  break L1;
-                } else {
-                  var2_int = param1.indexOf('@');
-                  if (-1 != var2_int) {
-                    var3 = param1.substring(0, var2_int);
-                    var4 = param1.substring(1 + var2_int);
-                    var5 = fc.a(var3, param0);
-                    if (var5 == null) {
-                      stackIn_12_0 = dh.a(-27602, var4);
-                      decompiledRegionSelector0 = 3;
-                      break L0;
-                    } else {
-                      stackIn_10_0 = (ae) (var5);
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  } else {
-                    stackIn_7_0 = ok.field_f;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
+          if (param1 != null &&
+            param1.length() != 0) {
+            var2_int = param1.indexOf('@');
+            if (-1 == var2_int) {
+              stackIn_7_0 = ok.field_f;
+              return stackIn_7_0;
             }
-            stackIn_4_0 = ga.field_c;
-            decompiledRegionSelector0 = 0;
-            break L0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
-          }
-          throw bd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0;
-            } else {
+            var3 = param1.substring(0, var2_int);
+            var4 = param1.substring(1 + var2_int);
+            var5 = fc.a(var3, param0);
+            if (var5 == null) {
+              stackIn_12_0 = dh.a(-27602, var4);
               return stackIn_12_0;
             }
+            stackIn_10_0 = var5;
+            return stackIn_10_0;
           }
+          stackIn_4_0 = ga.field_c;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("tg.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw bd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final static void a(long param0, boolean param1) {
-        if (-1L <= (param0 ^ -1L)) {
+        if (param0 <= 0L) {
           return;
-        } else {
-          if (-1L == (param0 % 10L ^ -1L)) {
-            pg.a(-1L + param0, 2);
-            pg.a(1L, 2);
-            if (!param1) {
-              return;
-            } else {
-              tg.a(true);
-              return;
-            }
-          } else {
-            pg.a(param0, 2);
-            if (!param1) {
-              return;
-            } else {
-              tg.a(true);
-              return;
-            }
+        }
+        if (param0 % 10L != 0L) {
+          pg.a(param0, 2);
+          if (param1) {
+            tg.a(true);
+            return;
           }
+          return;
+        }
+        pg.a(-1L + param0, 2);
+        pg.a(1L, 2);
+        if (param1) {
+          tg.a(true);
+          return;
         }
     }
 
@@ -134,7 +88,7 @@ final class tg implements Serializable {
         field_b = null;
         field_h = null;
         if (!param0) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

@@ -9,7 +9,7 @@ final class tua {
     public static void a(int param0) {
         field_b = null;
         if (param0 < 68) {
-            field_a = 120;
+          field_a = 120;
         }
     }
 

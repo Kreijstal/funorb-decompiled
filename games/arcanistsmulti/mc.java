@@ -10,13 +10,13 @@ final class mc {
         ib.a(param3, 2);
         kb.a(param3, param0, -32507, param1);
         if (param2 > -79) {
-            mc.a(55);
+          mc.a(55);
         }
     }
 
     final static kc a(byte param0) {
         if (param0 != 21) {
-            return (kc) null;
+          return (kc) null;
         }
         return ee.field_g.field_Cb;
     }
@@ -27,84 +27,56 @@ final class mc {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            int var3 = 0;
-            String var4 = null;
-            java.net.URL var5 = null;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            String stackIn_11_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
+          String var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          int var3 = 0;
+          String var4 = null;
+          java.net.URL var5 = null;
+          RuntimeException stackIn_10_0 = null;
+          StringBuilder stackIn_10_1 = null;
+          String stackIn_11_2 = null;
+          Throwable decompiledCaughtException = null;
+          String var4Lifetime1;
+          String var4Lifetime2;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    var2 = param1.getDocumentBase().getFile();
-                    var4 = var2;
-                    var4 = var2;
-                    var3 = var2.indexOf('?');
-                    var4 = "reload.ws";
-                    if (param0 == 30449) {
-                      L2: {
-                        if ((var3 ^ -1) > -1) {
-                          break L2;
-                        } else {
-                          var4 = var4 + var2.substring(var3);
-                          break L2;
-                        }
-                      }
-                      var5 = new java.net.URL(param1.getCodeBase(), var4);
-                      param1.getAppletContext().showDocument(nm.a(param1, var5, param0 + -62292), "_self");
-                      decompiledRegionSelector0 = 1;
-                      break L1;
-                    } else {
-                      decompiledRegionSelector0 = 0;
-                      break L1;
-                    }
-                  }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2_ref = (Exception) (Object) decompiledCaughtException;
-                  var2_ref.printStackTrace();
-                  return;
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  break L0;
-                } else {
-                  return;
-                }
+              var2 = param1.getDocumentBase().getFile();
+              var4 = var2;
+              var4Lifetime1 = var2;
+              var3 = var2.indexOf('?');
+              var4Lifetime2 = "reload.ws";
+              if (param0 != 30449) {
+                return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L3: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_10_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_10_1 = new StringBuilder().append("mc.D(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "null";
-                  break L3;
-                } else {
-                  stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-                  stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-                  stackIn_11_2 = "{...}";
-                  break L3;
-                }
+              if (var3 >= 0) {
+                var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
-              throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+              var5 = new java.net.URL(param1.getCodeBase(), var4Lifetime2);
+              param1.getAppletContext().showDocument(nm.a(param1, var5, param0 - 62292), "_self");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_10_0 = var2_ref2;
+            stackIn_10_1 = new StringBuilder().append("mc.D(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_11_2 = "null";
+            } else {
+              stackIn_11_2 = "{...}";
+            }
+            throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -112,7 +84,7 @@ final class mc {
         field_b = null;
         field_a = null;
         if (param0 < 70) {
-            mc.a(113);
+          mc.a(113);
         }
     }
 

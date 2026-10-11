@@ -15,42 +15,35 @@ final class he extends oh {
 
     final static void a(int param0, String param1) {
         try {
-            oo.a(param1, (byte) -70);
-            fk.a(rg.field_c, 72, false);
-            if (param0 != 8192) {
-                String var3 = (String) null;
-                he.a(62, (String) null);
-            }
+          oo.a(param1, (byte) -70);
+          fk.a(rg.field_c, 72, false);
+          if (param0 != 8192) {
+            String var3 = (String) null;
+            he.a(62, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "he.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(boolean param0, long param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
-            try {
-              L0: {
-                Thread.sleep(param1);
-                if (param0) {
-                  break L0;
-                } else {
-                  field_i = (int[]) null;
-                  return;
-                }
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L1;
-              }
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          try {
+            Thread.sleep(param1);
+            if (!param0) {
+              field_i = (int[]) null;
+              return;
             }
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -58,9 +51,7 @@ final class he extends oh {
         field_q = null;
         field_m = null;
         field_p = null;
-        if (param0 != 23811) {
-          return;
-        } else {
+        if (param0 == 23811) {
           field_n = null;
           field_l = null;
           field_j = null;

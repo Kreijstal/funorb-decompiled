@@ -6,63 +6,39 @@ final class g {
     static String[] field_b;
 
     final static void a(int param0) {
-        if (null == ti.field_b) {
+        if (null != ti.field_b) {
+          ti.field_b.i(param0 - 21975);
           if (param0 != 21975) {
-            L0: {
-              g.a(99);
-              if (null != ve.field_f) {
-                ve.field_f.l(260);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            dg.a(11199);
-            return;
-          } else {
-            L1: {
-              if (null != ve.field_f) {
-                ve.field_f.l(260);
-                break L1;
-              } else {
-                break L1;
-              }
+            g.a(99);
+            if (null != ve.field_f) {
+              ve.field_f.l(260);
             }
             dg.a(11199);
             return;
           }
-        } else {
-          ti.field_b.i(param0 + -21975);
-          if (param0 == 21975) {
-            L2: {
-              if (null != ve.field_f) {
-                ve.field_f.l(260);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            dg.a(11199);
-            return;
-          } else {
-            L3: {
-              g.a(99);
-              if (null != ve.field_f) {
-                ve.field_f.l(260);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            dg.a(11199);
-            return;
+          if (null != ve.field_f) {
+            ve.field_f.l(260);
           }
+          dg.a(11199);
+          return;
         }
+        if (param0 == 21975) {
+          if (null != ve.field_f) {
+            ve.field_f.l(260);
+          }
+          dg.a(11199);
+          return;
+        }
+        g.a(99);
+        if (null != ve.field_f) {
+          ve.field_f.l(260);
+        }
+        dg.a(11199);
     }
 
     public static void b(int param0) {
         if (param0 != -12837) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;

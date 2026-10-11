@@ -14,41 +14,25 @@ final class vg extends tc {
     boolean field_n;
 
     final static boolean a(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 10) {
-          if (ik.field_d == null) {
-            if (iu.field_h) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 != 10) {
           vg.a((byte) 89);
-          if (ik.field_d != null) {
-            return true;
-          } else {
-            L0: {
-              if (!iu.field_h) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (ik.field_d == null) {
+            return iu.field_h ? true : false;
           }
+          return true;
         }
+        if (ik.field_d != null) {
+          return true;
+        }
+        if (!iu.field_h) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(byte param0) {
         if (param0 < 31) {
-            return;
+          return;
         }
         field_t = null;
         field_o = null;

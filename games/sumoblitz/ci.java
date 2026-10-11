@@ -14,9 +14,9 @@ final class ci {
         field_b = null;
         field_g = null;
         if (param0 != 8192) {
-            ci.b(-5);
-            field_e = null;
-            return;
+          ci.b(-5);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
@@ -25,65 +25,63 @@ final class ci {
         pj var2;
         pj var3;
         int var4;
+        pj var2Lifetime1;
+        pj var3Lifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        if (this.field_c != null) {
-          if (param0 <= -102) {
-            var2 = this.field_a[(int)((long)(-1 + this.field_f) & this.field_d)];
-            L0: while (true) {
-              if (this.field_c != var2) {
-                if (this.field_d != this.field_c.field_l) {
-                  this.field_c = this.field_c.field_m;
-                  continue L0;
-                } else {
-                  var3 = this.field_c;
-                  this.field_c = this.field_c.field_m;
-                  return var3;
-                }
-              } else {
-                this.field_c = null;
-                return null;
-              }
-            }
-          } else {
-            this.field_c = (pj) null;
-            var2 = this.field_a[(int)((long)(-1 + this.field_f) & this.field_d)];
-            L1: while (true) {
-              if (this.field_c != var2) {
-                if (this.field_d != this.field_c.field_l) {
-                  this.field_c = this.field_c.field_m;
-                  continue L1;
-                } else {
-                  var3 = this.field_c;
-                  this.field_c = this.field_c.field_m;
-                  return var3;
-                }
-              } else {
-                this.field_c = null;
-                return null;
-              }
-            }
-          }
-        } else {
+        if (this.field_c == null) {
           return null;
         }
+        if (param0 <= -102) {
+          var2 = this.field_a[(int)((long)(-1 + this.field_f) & this.field_d)];
+          while (true) {
+            if (this.field_c == var2) {
+              this.field_c = null;
+              return null;
+            }
+            if (this.field_d != this.field_c.field_l) {
+              this.field_c = this.field_c.field_m;
+              continue;
+            }
+            break;
+          }
+          var3 = this.field_c;
+          this.field_c = this.field_c.field_m;
+          return var3;
+        }
+        this.field_c = (pj) null;
+        var2Lifetime1 = this.field_a[(int)((long)(-1 + this.field_f) & this.field_d)];
+        while (true) {
+          if (this.field_c == var2Lifetime1) {
+            this.field_c = null;
+            return null;
+          }
+          if (this.field_d != this.field_c.field_l) {
+            this.field_c = this.field_c.field_m;
+            continue;
+          }
+          break;
+        }
+        var3Lifetime1 = this.field_c;
+        this.field_c = this.field_c.field_m;
+        return var3Lifetime1;
     }
 
     final void a(long param0, int param1, pj param2) {
-        if (!(null == param2.field_o)) {
-            param2.c(-5106);
+        if (null != param2.field_o) {
+          param2.c(-5106);
         }
         pj var5 = this.field_a[(int)((long)(this.field_f - 1) & param0)];
         param2.field_o = var5.field_o;
         if (param1 != -8156) {
-            return;
+          return;
         }
         try {
-            param2.field_m = var5;
-            param2.field_o.field_m = param2;
-            param2.field_m.field_o = param2;
-            param2.field_l = param0;
+          param2.field_m = var5;
+          param2.field_o.field_m = param2;
+          param2.field_m.field_o = param2;
+          param2.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "ci.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,21 +95,20 @@ final class ci {
         var5 = 121 % ((17 - param1) / 56);
         var4 = this.field_a[(int)((long)(-1 + this.field_f) & param0)];
         this.field_c = var4.field_m;
-        L0: while (true) {
-          if (var4 != this.field_c) {
-            if (this.field_c.field_l != param0) {
-              this.field_c = this.field_c.field_m;
-              continue L0;
-            } else {
-              var6 = this.field_c;
-              this.field_c = this.field_c.field_m;
-              return var6;
-            }
-          } else {
+        while (true) {
+          if (var4 == this.field_c) {
             this.field_c = null;
             return null;
           }
+          if (this.field_c.field_l != param0) {
+            this.field_c = this.field_c.field_m;
+            continue;
+          }
+          break;
         }
+        var6 = this.field_c;
+        this.field_c = this.field_c.field_m;
+        return var6;
     }
 
     ci(int param0) {
@@ -121,11 +118,11 @@ final class ci {
         this.field_a = new pj[param0];
         this.field_f = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new pj();
-            var3 = dupTemp$0;
-            this.field_a[var2] = dupTemp$0;
-            var3.field_o = var3;
-            var3.field_m = var3;
+          dupTemp$0 = new pj();
+          var3 = dupTemp$0;
+          this.field_a[var2] = dupTemp$0;
+          var3.field_o = var3;
+          var3.field_m = var3;
         }
     }
 

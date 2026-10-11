@@ -10,30 +10,30 @@ final class ma extends pe implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2;
-        if (param0 != 1) {
-          this.a(-92);
-          var2 = this.field_d;
-          this.field_d = 0;
-          return var2;
-        } else {
+        int var2 = 0;
+        int var2Lifetime1;
+        if (param0 == 1) {
           var2 = this.field_d;
           this.field_d = 0;
           return var2;
         }
+        this.a(-92);
+        var2Lifetime1 = this.field_d;
+        this.field_d = 0;
+        return var2Lifetime1;
     }
 
     final void a(java.awt.Component param0, int param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != 23678) {
-            this.a(-114);
+          this.a(-114);
         }
     }
 
     final void a(int param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 <= 91) {
-            this.field_d = -35;
+          this.field_d = -35;
         }
     }
 

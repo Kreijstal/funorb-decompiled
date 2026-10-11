@@ -12,20 +12,20 @@ final class pc implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_a != null) {
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         }
     }
 
@@ -43,36 +43,30 @@ final class pc implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(java.awt.Frame param0, int param1) {
-        java.awt.Frame var4;
-        if (param1 > -51) {
-          var4 = (java.awt.Frame) null;
-          this.a(57, -53, (java.awt.Frame) null, -3, -105, -9);
-          this.field_c.restoreDisplayMode();
-          this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
-          return;
-        } else {
+        if (param1 <= -51) {
           this.field_c.restoreDisplayMode();
           this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
           return;
         }
+        java.awt.Frame var4 = (java.awt.Frame) null;
+        this.a(57, -53, (java.awt.Frame) null, -3, -105, -9);
+        this.field_c.restoreDisplayMode();
+        this.field_c.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
 
     final int[] a(int param0) {
-        int[] var2;
-        int[] var3;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_a = new int[field_b];
         field_b = 0;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        var3 = field_a;
-        var2 = var3;
+        int[] var3 = field_a;
+        int[] var2 = var3;
         field_b = 0;
-        if (param0 > -111) {
-          return (int[]) null;
-        } else {
+        if (param0 <= -111) {
           field_a = null;
           return var3;
         }
+        return (int[]) null;
     }
 
     public pc() {

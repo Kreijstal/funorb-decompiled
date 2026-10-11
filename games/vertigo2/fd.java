@@ -19,16 +19,14 @@ final class fd extends li {
         field_t = null;
         field_o = null;
         field_s = null;
-        if (param0 != -16836) {
-          field_t = (int[]) null;
-          field_q = null;
-          field_p = null;
-          return;
-        } else {
+        if (param0 == -16836) {
           field_q = null;
           field_p = null;
           return;
         }
+        field_t = (int[]) null;
+        field_q = null;
+        field_p = null;
     }
 
     static {

@@ -17,7 +17,7 @@ final class sa {
     public static void a(byte param0) {
         field_c = null;
         if (param0 >= -24) {
-            return;
+          return;
         }
         field_a = null;
         field_e = null;
@@ -28,148 +28,61 @@ final class sa {
     final static int a(byte param0, int param1) {
         int stackIn_21_0 = 0;
         int stackIn_37_0 = 0;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         int var2_int = 0;
         Exception var2 = null;
         try {
-          L0: {
-            L1: {
-              var2_int = ln.field_a.field_u[param1];
-              if (!ln.field_a.field_r[param1]) {
-                break L1;
-              } else {
-                if (!pa.field_d) {
-                  break L1;
-                } else {
-                  if (-3 != (ln.field_a.field_c[param1] ^ -1)) {
-                    break L1;
-                  } else {
-                    var2_int = 0;
-                    break L1;
-                  }
-                }
-              }
-            }
-            L2: {
-              if (ln.field_a.field_i[param1] >= var2_int) {
-                break L2;
-              } else {
-                if (r.field_a > 0) {
-                  var2_int = ln.field_a.field_i[param1];
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if (25 >= var2_int) {
-                break L3;
-              } else {
-                var2_int = 25;
-                break L3;
-              }
-            }
-            L4: {
-              if (-1 == (ln.field_a.field_f[param1] ^ -1)) {
-                var2_int = 0;
-                break L4;
-              } else {
-                if (-1 != (bm.field_c ^ -1)) {
-                  break L4;
-                } else {
-                  if ((rl.field_c ^ -1) != -3) {
-                    break L4;
-                  } else {
-                    if (ha.field_t == 14) {
-                      break L4;
-                    } else {
-                      L5: {
-                        if ((ln.field_a.field_y[param1] ^ -1) <= -481) {
-                          break L5;
-                        } else {
-                          if ((ln.field_a.field_o[param1] >> 1285574216 ^ -1) != -5) {
-                            break L4;
-                          } else {
-                            break L5;
-                          }
-                        }
-                      }
-                      var2_int = 0;
-                      break L4;
-                    }
-                  }
-                }
-              }
-            }
-            if (param0 <= -103) {
-              L6: {
-                if (-1 > (ln.field_a.field_o[param1] ^ -1)) {
-                  if (0 != ak.field_b[ln.field_a.field_o[param1]].field_a) {
-                    break L6;
-                  } else {
-                    var2_int = 25;
-                    break L6;
-                  }
-                } else {
-                  break L6;
-                }
-              }
-              if ((cj.field_I & 2) != 0) {
-                L7: {
-                  if (0 == (ln.field_a.field_o[param1] ^ -1)) {
-                    break L7;
-                  } else {
-                    if ((ln.field_a.field_o[param1] & 255) == 0) {
-                      break L7;
-                    } else {
-                      if (0 >= ak.field_b[ln.field_a.field_o[param1]].field_a) {
-                        break L7;
-                      } else {
-                        var2_int = 25;
-                        break L7;
-                      }
-                    }
-                  }
-                }
-                L8: {
-                  if (0 <= var2_int) {
-                    break L8;
-                  } else {
-                    var2_int = 0;
-                    break L8;
-                  }
-                }
-                stackIn_37_0 = var2_int;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L9: {
-                  if (0 <= var2_int) {
-                    break L9;
-                  } else {
-                    var2_int = 0;
-                    break L9;
-                  }
-                }
-                return var2_int;
-              }
-            } else {
-              stackIn_21_0 = 34;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var2_int = ln.field_a.field_u[param1];
+          if (ln.field_a.field_r[param1] &&
+            pa.field_d &&
+            ln.field_a.field_c[param1] == 2) {
+            var2_int = 0;
+          }
+          if (ln.field_a.field_i[param1] < var2_int &&
+            r.field_a > 0) {
+            var2_int = ln.field_a.field_i[param1];
+          }
+          if (25 < var2_int) {
+            var2_int = 25;
+          }
+          if (ln.field_a.field_f[param1] == 0) {
+            var2_int = 0;
+          } else {
+            if (bm.field_c == 0 &&
+              rl.field_c == 2 &&
+              ha.field_t != 14 && (!(ln.field_a.field_y[param1] < 480) ||
+              ln.field_a.field_o[param1] >> 8 == 4)) {
+              var2_int = 0;
             }
           }
+          if (param0 > -103) {
+            stackIn_21_0 = 34;
+            return stackIn_21_0;
+          }
+          if (ln.field_a.field_o[param1] > 0 &&
+            0 == ak.field_b[ln.field_a.field_o[param1]].field_a) {
+            var2_int = 25;
+          }
+          if ((cj.field_I & 2) == 0) {
+            if (0 > var2_int) {
+              var2_int = 0;
+            }
+            return var2_int;
+          }
+          if (ln.field_a.field_o[param1] != -1 &&
+            (ln.field_a.field_o[param1] & 255) != 0 &&
+            0 < ak.field_b[ln.field_a.field_o[param1]].field_a) {
+            var2_int = 25;
+          }
+          if (0 > var2_int) {
+            var2_int = 0;
+          }
+          stackIn_37_0 = var2_int;
+          return stackIn_37_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (Exception) (Object) decompiledCaughtException;
           return 0;
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_21_0;
-        } else {
-          return stackIn_37_0;
         }
     }
 

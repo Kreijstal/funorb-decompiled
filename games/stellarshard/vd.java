@@ -20,244 +20,141 @@ final class vd {
         int var7 = 0;
         var7 = stellarshard.field_B;
         try {
-          L0: {
-            var1_int = 0;
-            var2 = 0;
-            L1: while (true) {
-              if (!qh.c(55)) {
-                L2: {
-                  ua.field_i.a(eb.a(eb.field_a, ni.field_e, -94), eb.a(oc.field_e, di.field_b, -119), -1);
-                  if (ua.field_i.c(-62)) {
-                    var1_int = 1;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  L4: {
-                    var3 = 0;
-                    if (var1_int == 0) {
-                      break L4;
-                    } else {
-                      if (-1 >= (ua.field_i.field_f ^ -1)) {
-                        L5: {
-                          var3 = pk.field_j[ua.field_i.field_f];
-                          if ((var3 ^ -1) == -3) {
-                            break L5;
-                          } else {
-                            if ((var3 ^ -1) == -6) {
-                              break L5;
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        wl.l(-12128);
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  if (var2 == 0) {
-                    break L3;
-                  } else {
-                    if (2 == rb.field_s) {
-                      break L3;
-                    } else {
-                      wl.l(-12128);
-                      break L3;
-                    }
-                  }
-                }
-                L6: {
-                  if (-1 != (var3 ^ -1)) {
-                    break L6;
-                  } else {
-                    if (-3 != (rb.field_s ^ -1)) {
-                      break L6;
-                    } else {
-                      var4 = ih.a((byte) -98) - jj.field_p;
-                      var6 = (int)((-var4 + 10999L) / 1000L);
-                      if (0 >= var6) {
-                        qc.a(5, true, 0);
-                        var3 = 2;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                  }
-                }
-                L7: {
-                  if (param0 < -59) {
-                    break L7;
-                  } else {
-                    field_b = -43;
-                    break L7;
-                  }
-                }
-                stackIn_29_0 = var3;
-                break L0;
-              } else {
-                L8: {
-                  ua.field_i.a(0);
-                  if (ua.field_i.c(-107)) {
-                    var1_int = 1;
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                if (gi.field_f != 13) {
-                  continue L1;
-                } else {
-                  var2 = 1;
-                  continue L1;
-                }
-              }
+          var1_int = 0;
+          var2 = 0;
+          while (qh.c(55)) {
+            ua.field_i.a(0);
+            if (ua.field_i.c(-107)) {
+              var1_int = 1;
+            }
+            if (gi.field_f != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          ua.field_i.a(eb.a(eb.field_a, ni.field_e, -94), eb.a(oc.field_e, di.field_b, -119), -1);
+          if (ua.field_i.c(-62)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            ua.field_i.field_f >= 0) {
+            var3 = pk.field_j[ua.field_i.field_f];
+            if (var3 == 2 ||
+              var3 == 5) {
+              wl.l(-12128);
+            }
+          } else {
+            if (var2 != 0 &&
+              2 != rb.field_s) {
+              wl.l(-12128);
             }
           }
+          if (var3 == 0 &&
+            rb.field_s == 2) {
+            var4 = ih.a((byte) -98) - jj.field_p;
+            var6 = (int)((-var4 + 10999L) / 1000L);
+            if (0 >= var6) {
+              qc.a(5, true, 0);
+              var3 = 2;
+            }
+          }
+          if (param0 >= -59) {
+            field_b = -43;
+          }
+          stackIn_29_0 = var3;
+          return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var1), "vd.A(" + param0 + ')');
         }
-        return stackIn_29_0;
     }
 
     final static char a(int param0, byte param1) {
         int var3 = 0;
         if (param0 != -128) {
-            vd.a((byte) 99);
+          vd.a((byte) 99);
         }
         int var2 = param1 & 255;
-        if (!(var2 != 0)) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+        if (var2 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (-129 >= (var2 ^ -1)) {
-            if (!((var2 ^ -1) <= -161)) {
-                var3 = wf.field_a[var2 + -128];
-                if (!(var3 != 0)) {
-                    var3 = 63;
-                }
-                var2 = var3;
-            }
+        if (var2 >= 128 &&
+          var2 < 160) {
+          var3 = wf.field_a[var2 - 128];
+          if (var3 == 0) {
+            var3 = 63;
+          }
+          var2 = var3;
         }
         return (char)var2;
     }
 
     final static void a(nj param0, int param1) {
-        int dupTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int incrementValue$2 = 0;
         int dupTemp$3 = 0;
+        int dupTemp$0 = 0;
+        int var3 = 0;
+        int incrementValue$2 = 0;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         var5 = stellarshard.field_B;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (var2_int >= 3) {
-                L2: {
-                  if (param1 == -128) {
-                    break L2;
-                  } else {
-                    field_c = (String) null;
-                    break L2;
-                  }
-                }
-                var2_int = 0;
-                L3: while (true) {
-                  if (gi.field_g <= var2_int) {
-                    dupTemp$0 = param0.a((byte) 90);
-                    cg.field_d[dupTemp$0] = cg.field_d[dupTemp$0] + 1;
-                    var2_int = 0;
-                    var3 = 0;
-                    L4: while (true) {
-                      if (var3 >= gi.field_g) {
-                        gi.field_g = var2_int;
-                        fieldTemp$1 = gi.field_g;
-                        gi.field_g = gi.field_g + 1;
-                        ai.field_d[fieldTemp$1] = param0;
-                        break L0;
-                      } else {
-                        L5: {
-                          L6: {
-                            if (param0.field_p == ai.field_d[var3].field_p) {
-                              var4 = ai.field_d[var3].a((byte) 105);
-                              if (pd.field_q >= cg.field_d[var4]) {
-                                break L6;
-                              } else {
-                                cg.field_d[var4] = cg.field_d[var4] - 1;
-                                break L5;
-                              }
-                            } else {
-                              break L6;
-                            }
-                          }
-                          incrementValue$2 = var2_int;
-                          var2_int++;
-                          ai.field_d[incrementValue$2] = ai.field_d[var3];
-                          break L5;
-                        }
-                        var3++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    L7: {
-                      if (ai.field_d[var2_int].field_p != param0.field_p) {
-                        break L7;
-                      } else {
-                        dupTemp$3 = ai.field_d[var2_int].a((byte) 95);
-                        cg.field_d[dupTemp$3] = cg.field_d[dupTemp$3] + 1;
-                        break L7;
-                      }
-                    }
-                    var2_int++;
-                    continue L3;
-                  }
-                }
-              } else {
-                cg.field_d[var2_int] = 0;
-                var2_int++;
-                continue L1;
+          for (var2_int = 0; var2_int < 3; var2_int++) {
+            cg.field_d[var2_int] = 0;
+          }
+          if (param1 != -128) {
+            field_c = (String) null;
+          }
+          for (var2_intLifetime1 = 0; gi.field_g > var2_intLifetime1; var2_intLifetime1++) {
+            if (ai.field_d[var2_intLifetime1].field_p == param0.field_p) {
+              dupTemp$3 = ai.field_d[var2_intLifetime1].a((byte) 95);
+              cg.field_d[dupTemp$3] = cg.field_d[dupTemp$3] + 1;
+            }
+          }
+          dupTemp$0 = param0.a((byte) 90);
+          cg.field_d[dupTemp$0] = cg.field_d[dupTemp$0] + 1;
+          var2_intLifetime2 = 0;
+          for (var3 = 0; var3 < gi.field_g; var3++) {
+            boolean decompiledFrameRemainder0 = true;
+            if (param0.field_p == ai.field_d[var3].field_p) {
+              var4 = ai.field_d[var3].a((byte) 105);
+              if (pd.field_q < cg.field_d[var4]) {
+                cg.field_d[var4] = cg.field_d[var4] - 1;
+                decompiledFrameRemainder0 = false;
               }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
-
-            stackIn_23_1 = new StringBuilder().append("vd.D(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L8;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L8;
+            if (decompiledFrameRemainder0) {
+              incrementValue$2 = var2_intLifetime2;
+              var2_intLifetime2++;
+              ai.field_d[incrementValue$2] = ai.field_d[var3];
             }
           }
-          throw ma.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
+          gi.field_g = var2_intLifetime2;
+          fieldTemp$1 = gi.field_g;
+          gi.field_g = gi.field_g + 1;
+          ai.field_d[fieldTemp$1] = param0;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = var2;
+          stackIn_23_1 = new StringBuilder().append("vd.D(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw ma.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -265,7 +162,7 @@ final class vd {
         field_a = null;
         field_d = null;
         if (param0 <= 73) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
         field_c = null;
     }

@@ -9,30 +9,30 @@ final class ca {
 
     final static void a(String param0, boolean param1, int param2) {
         try {
-            ij.field_g = param1;
-            r.field_p = true;
-            if (param2 != 16777215) {
-                qj var4 = (qj) null;
-                ca.a((qk) null, (qj) null, -27, -28);
-            }
-            pc.field_a = new af(sd.field_c, vd.field_p, param0, ei.field_e, ij.field_g);
-            sd.field_c.b(pc.field_a, (byte) -98);
+          ij.field_g = param1;
+          r.field_p = true;
+          if (param2 != 16777215) {
+            qj var4 = (qj) null;
+            ca.a((qk) null, (qj) null, -27, -28);
+          }
+          pc.field_a = new af(sd.field_c, vd.field_p, param0, ei.field_e, ij.field_g);
+          sd.field_c.b(pc.field_a, (byte) -98);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(qk param0, qj param1, int param2, int param3) {
         try {
-            vb.field_b = va.a(22018) * param2 / 1000;
-            ch.a(-114, param0);
-            kk.a(-16998, param0);
-            ab.a(param0, 0);
-            pf.d(260);
-            ri.a((byte) -124);
-            h.field_F = param3 + -vb.field_b;
+          vb.field_b = va.a(22018) * param2 / 1000;
+          ch.a(-114, param0);
+          kk.a(-16998, param0);
+          ab.a(param0, 0);
+          pf.d(260);
+          ri.a((byte) -124);
+          h.field_F = param3 - vb.field_b;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ca.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -52,74 +52,76 @@ final class ca {
         int var8 = 0;
         int var9 = 0;
         int var13 = Main.field_T;
+        int var8Lifetime1;
+        int var9Lifetime1;
         try {
-            se.field_G = gl.a("frame_top", param1, "commonui", -13244);
-            rc.field_k = gl.a("frame_bottom", param1, "commonui", param3 + 11944);
-            pb.field_k = ce.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
-            eg.field_c = gl.a("button", param1, "commonui", -13244);
-            gh.field_n = vc.a("validation", "commonui", 0, param1);
-            me.field_c = (ee) ((Object) ec.a("commonui", param2, false, "arezzo12", param1));
-            j.field_C = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14", param1));
-            vd.field_p = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14bold", param1));
-            var17 = new kc(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
-            lh.a("dropdown", param1, "commonui", 105);
-            var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
-            ri.field_d = new wb[4];
-            fb.field_b = new wb[4];
-            nb.field_d = new wb[4];
-            var6 = new wb[][]{nb.field_d, fb.field_b, ri.field_d};
-            var19 = new int[4][];
-            var16 = var19;
-            var7 = var16;
-            var7[0] = var5[0].field_j;
-            for (var8 = 1; var8 < var19.length; var8++) {
-                var7[var8] = (int[]) ((Object) var19[0].clone());
+          se.field_G = gl.a("frame_top", param1, "commonui", -13244);
+          rc.field_k = gl.a("frame_bottom", param1, "commonui", param3 + 11944);
+          pb.field_k = ce.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
+          eg.field_c = gl.a("button", param1, "commonui", -13244);
+          gh.field_n = vc.a("validation", "commonui", 0, param1);
+          me.field_c = (ee) ((Object) ec.a("commonui", param2, false, "arezzo12", param1));
+          j.field_C = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14", param1));
+          vd.field_p = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14bold", param1));
+          var17 = new kc(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
+          lh.a("dropdown", param1, "commonui", 105);
+          var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
+          ri.field_d = new wb[4];
+          fb.field_b = new wb[4];
+          nb.field_d = new wb[4];
+          var6 = new wb[][]{nb.field_d, fb.field_b, ri.field_d};
+          var19 = new int[4][];
+          var16 = var19;
+          var7 = var16;
+          var7[0] = var5[0].field_j;
+          for (var8 = 1; var8 < var19.length; var8++) {
+            var7[var8] = (int[]) ((Object) var19[0].clone());
+          }
+          if (param3 != -25188) {
+            field_c = (int[]) null;
+          }
+          var8Lifetime1 = var5[0].field_i[0];
+          var19[2][var8Lifetime1] = 16777215;
+          var19[1][var8Lifetime1] = 2394342;
+          var19[3][var8Lifetime1] = 4767999;
+          for (var9 = 0; var9 < 3; var9++) {
+            var14 = var6[var9];
+            wb[] var10 = var14;
+            for (var11_int = 0; var14.length > var11_int; var11_int++) {
+              var14[var11_int] = a.a(var5[var9], var19[var11_int], -88);
             }
-            if (param3 != -25188) {
-                field_c = (int[]) null;
-            }
-            var8 = var5[0].field_i[0];
-            var19[2][var8] = 16777215;
-            var19[1][var8] = 2394342;
-            var19[3][var8] = 4767999;
-            for (var9 = 0; -4 < (var9 ^ -1); var9++) {
-                var14 = var6[var9];
-                wb[] var10 = var14;
-                for (var11_int = 0; var14.length > var11_int; var11_int++) {
-                    var14[var11_int] = a.a(var5[var9], var19[var11_int], -88);
-                }
-            }
-            var9 = var17.field_o;
-            ji.a(true);
-            var17.c();
-            vj.e(0, 0, vj.field_l, vj.field_g);
-            var15 = new kc(var9, var9);
-            var18 = var15;
-            var18.c();
-            var17.b(0, 0);
-            var11 = new kc(var9, var9);
-            var11.c();
-            var17.b(var9 - var17.field_p, 0);
-            var12 = new kc(-(2 * var9) + var17.field_p, var9);
-            var12.c();
-            var17.b(-var9, 0);
-            gg.a(14756);
-            eg.field_c = new kc[]{var15, var12, var11};
+          }
+          var9Lifetime1 = var17.field_o;
+          ji.a(true);
+          var17.c();
+          vj.e(0, 0, vj.field_l, vj.field_g);
+          var15 = new kc(var9Lifetime1, var9Lifetime1);
+          var18 = var15;
+          var18.c();
+          var17.b(0, 0);
+          var11 = new kc(var9Lifetime1, var9Lifetime1);
+          var11.c();
+          var17.b(var9Lifetime1 - var17.field_p, 0);
+          var12 = new kc(-(2 * var9Lifetime1) + var17.field_p, var9Lifetime1);
+          var12.c();
+          var17.b(-var9Lifetime1, 0);
+          gg.a(14756);
+          eg.field_c = new kc[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ca.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ca.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     final static gk a(boolean param0) {
         if (param0) {
-            return (gk) null;
+          return (gk) null;
         }
         return (gk) ((Object) new ec());
     }
 
     public static void a(byte param0) {
         if (param0 <= 126) {
-            return;
+          return;
         }
         field_c = null;
     }

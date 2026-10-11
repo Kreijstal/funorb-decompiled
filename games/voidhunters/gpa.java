@@ -8,14 +8,14 @@ final class gpa extends za {
     public static void a(int param0) {
         field_f = null;
         if (param0 > -89) {
-            field_f = (String) null;
+          field_f = (String) null;
         }
     }
 
     final void a(boolean param0) {
         this.field_e.a();
         if (param0) {
-            this.a(true);
+          this.a(true);
         }
     }
 

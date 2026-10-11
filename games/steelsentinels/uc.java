@@ -24,7 +24,7 @@ final class uc {
         field_b = null;
         field_c = null;
         if (param0) {
-            return;
+          return;
         }
         field_e = (int[][]) null;
         field_f = null;
@@ -38,35 +38,20 @@ final class uc {
         RuntimeException var2 = null;
         var3 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                uc.a(-115, 79);
-                break L1;
-              }
-            }
-            var4 = (tc) ((Object) ic.field_B.e(13058));
-            L2: while (true) {
-              if (var4 == null) {
-                var5 = (kf) ((Object) je.field_w.e(13058));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    ma.a(param1, var5, -2864);
-                    var5 = (kf) ((Object) je.field_w.a((byte) -40));
-                    continue L3;
-                  }
-                }
-              } else {
-                vh.a(param1, var4, (byte) 107);
-                var4 = (tc) ((Object) ic.field_B.a((byte) -53));
-                continue L2;
-              }
-            }
+          if (!param0) {
+            uc.a(-115, 79);
           }
+          var4 = (tc) (ic.field_B.e(13058));
+          while (var4 != null) {
+            vh.a(param1, var4, (byte) 107);
+            var4 = (tc) (ic.field_B.a((byte) -53));
+          }
+          var5 = (kf) (je.field_w.e(13058));
+          while (var5 != null) {
+            ma.a(param1, var5, -2864);
+            var5 = (kf) (je.field_w.a((byte) -40));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -84,169 +69,82 @@ final class uc {
         int var10 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var10 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (param0 == null) {
-                break L1;
-              } else {
-                if (param1 <= 0) {
-                  break L1;
-                } else {
-                  var5_int = param0[0].field_z;
-                  var6 = param0[2].field_z;
-                  var7 = param0[1].field_z;
-                  param0[0].a(param4, param2);
-                  param0[2].a(param1 + (param4 - var6), param2);
-                  pb.b(aj.field_v);
-                  pb.h(param4 + var5_int, param2, param4 + param1 + -var6, param0[1].field_B + param2);
-                  var8 = var5_int + param4;
-                  var9 = param4 + param1 + -var6;
-                  param4 = var8;
-                  if (param3 == -39) {
-                    L2: while (true) {
-                      if (param4 >= var9) {
-                        pb.a(aj.field_v);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        param0[1].a(param4, param2);
-                        param4 = param4 + var7;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
+          if (param0 != null &&
+            param1 > 0) {
+            var5_int = param0[0].field_z;
+            var6 = param0[2].field_z;
+            var7 = param0[1].field_z;
+            param0[0].a(param4, param2);
+            param0[2].a(param1 + (param4 - var6), param2);
+            pb.b(aj.field_v);
+            pb.h(param4 + var5_int, param2, param4 + param1 - var6, param0[1].field_B + param2);
+            var8 = var5_int + param4;
+            var9 = param4 + param1 - var6;
+            param4 = var8;
+            if (param3 != -39) {
+              return;
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            while (param4 < var9) {
+              param0[1].a(param4, param2);
+              param4 = param4 + var7;
+            }
+            pb.a(aj.field_v);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            runtimeException = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (runtimeException);
-
-            stackIn_13_1 = new StringBuilder().append("uc.D(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
-          }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          runtimeException = decompiledCaughtException;
+          stackIn_13_0 = runtimeException;
+          stackIn_13_1 = new StringBuilder().append("uc.D(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return;
+            stackIn_14_2 = "{...}";
           }
+          throw ci.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static boolean a(int param0, int param1) {
+        int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         wk[] var6 = null;
         int[] var7 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (nk.f((byte) -125)) {
-                break L1;
-              } else {
-                if (!oc.a(param0, -105, true)) {
-                  break L1;
-                } else {
-                  stackIn_4_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
-            if (t.a(fe.field_D, param0, -20370)) {
-              stackIn_8_0 = 1;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              L2: {
-                var7 = dn.field_bc;
-                var2 = var7;
-                if (param1 == -3958) {
-                  break L2;
-                } else {
-                  var6 = (wk[]) null;
-                  uc.a((wk[]) null, 91, -31, (byte) -121, -77);
-                  break L2;
-                }
-              }
-              var3 = 0;
-              L3: while (true) {
-                if (var3 >= var7.length) {
-                  stackIn_19_0 = 0;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  var4 = var7[var3];
-                  if (var4 == param0) {
-                    stackIn_16_0 = 1;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var3++;
-                    continue L3;
-                  }
-                }
-              }
+          if (!nk.f((byte) -125) &&
+            oc.a(param0, -105, true)) {
+            return false;
+          }
+          if (t.a(fe.field_D, param0, -20370)) {
+            return true;
+          }
+          var7 = dn.field_bc;
+          var2 = var7;
+          if (param1 != -3958) {
+            var6 = (wk[]) null;
+            uc.a((wk[]) null, 91, -31, (byte) -121, -77);
+          }
+          for (var3 = 0; var3 < var7.length; var3++) {
+            var4 = var7[var3];
+            if (var4 == param0) {
+              return true;
             }
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw ci.a((Throwable) ((Object) var2_ref), "uc.A(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_16_0 != 0;
-            } else {
-              return stackIn_19_0 != 0;
-            }
-          }
         }
     }
 

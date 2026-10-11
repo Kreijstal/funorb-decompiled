@@ -10,19 +10,16 @@ final class af {
     static int[] field_f;
 
     final static void b(int param0, int param1) {
-        pa var2;
-        var2 = dk.field_s;
+        pa var2 = dk.field_s;
         var2.d(25, param1);
-        if (param0 != 9245) {
-          af.b(-81, -34);
-          var2.d(1, (byte) 122);
-          var2.d(2, (byte) 122);
-          return;
-        } else {
+        if (param0 == 9245) {
           var2.d(1, (byte) 122);
           var2.d(2, (byte) 122);
           return;
         }
+        af.b(-81, -34);
+        var2.d(1, (byte) 122);
+        var2.d(2, (byte) 122);
     }
 
     public static void a(int param0) {
@@ -33,32 +30,27 @@ final class af {
         field_e = (int[][][]) null;
         field_d = null;
         if (param0 != -7604) {
-            af.a(1, -16);
+          af.a(1, -16);
         }
     }
 
     final static boolean a(int param0, int param1) {
-        if ((param1 ^ -1) == -4) {
+        if (param1 == 3) {
           return true;
-        } else {
-          if (4 == param1) {
-            return true;
-          } else {
-            if ((param1 ^ -1) != -6) {
-              if (param0 == -4275) {
-                if (-9 != (param1 ^ -1)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
         }
+        if (4 == param1) {
+          return true;
+        }
+        if (param1 == 5) {
+          return true;
+        }
+        if (param0 != -4275) {
+          return false;
+        }
+        if (param1 == 8) {
+          return true;
+        }
+        return false;
     }
 
     static {

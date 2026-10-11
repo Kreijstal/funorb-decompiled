@@ -13,7 +13,7 @@ final class ac {
 
     public static void a(byte param0) {
         if (param0 != -77) {
-            return;
+          return;
         }
         field_a = null;
         field_d = (byte[][]) null;

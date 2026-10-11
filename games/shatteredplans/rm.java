@@ -21,24 +21,24 @@ final class rm implements Iterable {
         field_g = null;
         field_i = null;
         if (param0 != -1215) {
-            rm.b(57);
-            field_c = null;
-            return;
+          rm.b(57);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new fl((rm) (this)));
+        return (Iterator) ((Object) new fl(this));
     }
 
     final static void b(int param0) {
         ai.a(true, -1, ae.field_g, aa.field_G);
         if (param0 > -28) {
-            byte[] var2 = (byte[]) null;
-            rm.a((byte[]) null, -113);
-            jh.field_D = true;
-            return;
+          byte[] var2 = (byte[]) null;
+          rm.a((byte[]) null, -113);
+          jh.field_D = true;
+          return;
         }
         jh.field_D = true;
     }
@@ -48,110 +48,89 @@ final class rm implements Iterable {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 17746) {
-                break L1;
-              } else {
-                field_a = (java.awt.Image) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = qi.a(param0, param0.length, 0, param1 + -17864);
-            break L0;
+          if (param1 != 17746) {
+            field_a = (java.awt.Image) null;
           }
+          stackIn_3_0 = qi.a(param0, param0.length, 0, param1 - 17864);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("rm.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("rm.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final oh a(int param0, long param1) {
         oh var4;
         oh var5;
         int var6;
+        oh var4Lifetime1;
+        oh var5Lifetime1;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 < -72) {
           var4 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
           this.field_j = var4.field_f;
-          L0: while (true) {
+          while (true) {
             if (this.field_j == var4) {
               this.field_j = null;
               return null;
-            } else {
-              if ((this.field_j.field_b ^ -1L) != (param1 ^ -1L)) {
-                this.field_j = this.field_j.field_f;
-                continue L0;
-              } else {
-                var5 = this.field_j;
-                this.field_j = this.field_j.field_f;
-                return var5;
-              }
             }
-          }
-        } else {
-          this.a((oh) null, true, 61L);
-          var4 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
-          this.field_j = var4.field_f;
-          L1: while (true) {
-            if (this.field_j == var4) {
-              this.field_j = null;
-              return null;
-            } else {
-              if ((this.field_j.field_b ^ -1L) != (param1 ^ -1L)) {
-                this.field_j = this.field_j.field_f;
-                continue L1;
-              } else {
-                var5 = this.field_j;
-                this.field_j = this.field_j.field_f;
-                return var5;
-              }
+            if (~this.field_j.field_b != ~param1) {
+              this.field_j = this.field_j.field_f;
+              continue;
             }
+            break;
           }
+          var5 = this.field_j;
+          this.field_j = this.field_j.field_f;
+          return var5;
         }
+        this.a((oh) null, true, 61L);
+        var4Lifetime1 = this.field_f[(int)((long)(this.field_d - 1) & param1)];
+        this.field_j = var4Lifetime1.field_f;
+        while (true) {
+          if (this.field_j == var4Lifetime1) {
+            this.field_j = null;
+            return null;
+          }
+          if (~this.field_j.field_b != ~param1) {
+            this.field_j = this.field_j.field_f;
+            continue;
+          }
+          break;
+        }
+        var5Lifetime1 = this.field_j;
+        this.field_j = this.field_j.field_f;
+        return var5Lifetime1;
     }
 
     final void a(oh param0, boolean param1, long param2) {
         oh var5 = null;
         try {
-            if (!(param0.field_e == null)) {
-                param0.b((byte) -58);
-            }
-            if (!param1) {
-                this.field_f = (oh[]) null;
-            }
-            var5 = this.field_f[(int)((long)(-1 + this.field_d) & param2)];
-            param0.field_f = var5;
-            param0.field_e = var5.field_e;
-            param0.field_e.field_f = param0;
-            param0.field_f.field_e = param0;
-            param0.field_b = param2;
+          if (param0.field_e != null) {
+            param0.b((byte) -58);
+          }
+          if (!param1) {
+            this.field_f = (oh[]) null;
+          }
+          var5 = this.field_f[(int)((long)(-1 + this.field_d) & param2)];
+          param0.field_f = var5;
+          param0.field_e = var5.field_e;
+          param0.field_e.field_f = param0;
+          param0.field_f.field_e = param0;
+          param0.field_b = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "rm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -162,18 +141,18 @@ final class rm implements Iterable {
         this.field_d = param0;
         this.field_f = new oh[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new oh();
-            var3 = dupTemp$0;
-            this.field_f[var2] = dupTemp$0;
-            var3.field_f = var3;
-            var3.field_e = var3;
+          dupTemp$0 = new oh();
+          var3 = dupTemp$0;
+          this.field_f[var2] = dupTemp$0;
+          var3.field_f = var3;
+          var3.field_e = var3;
         }
     }
 
     final static bc a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
-            field_c = (String) null;
-            return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
+          field_c = (String) null;
+          return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
         }
         return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);
     }

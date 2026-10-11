@@ -16,51 +16,41 @@ final class rm {
     final static void a(int param0) {
         lf.field_b = null;
         if (param0 != 1731) {
-            field_a = (ho) null;
+          field_a = (ho) null;
         }
     }
 
     final static boolean a(boolean param0) {
-        hl var2;
-        if (!param0) {
-          if (vd.field_a >= 20) {
-            if (ac.a(-19403)) {
-              if ((pg.field_a ^ -1) < -1) {
-                if (wm.b(0)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
-          var2 = (hl) null;
+        if (param0) {
+          hl var2 = (hl) null;
           rm.a(48, (hl) null, 6);
-          if (vd.field_a >= 20) {
-            if (ac.a(-19403)) {
-              if ((pg.field_a ^ -1) < -1) {
-                if (wm.b(0)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (vd.field_a < 20) {
             return true;
           }
+          if (!ac.a(-19403)) {
+            return true;
+          }
+          if (pg.field_a <= 0) {
+            return false;
+          }
+          if (!wm.b(0)) {
+            return true;
+          }
+          return false;
         }
+        if (vd.field_a < 20) {
+          return true;
+        }
+        if (!ac.a(-19403)) {
+          return true;
+        }
+        if (pg.field_a <= 0) {
+          return false;
+        }
+        if (!wm.b(0)) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
@@ -108,70 +98,82 @@ final class rm {
         int var6 = 0;
         int var7 = 0;
         oh var27 = null;
+        oh var27Lifetime1;
+        oh var27Lifetime2;
+        oh var27Lifetime3;
+        oh var27Lifetime4;
+        oh var27Lifetime5;
+        oh var27Lifetime6;
+        oh var27Lifetime7;
+        oh var27Lifetime1Lifetime1;
+        oh var27Lifetime1Lifetime2;
+        oh var27Lifetime1Lifetime3;
+        oh var27Lifetime1Lifetime4;
+        oh var27Lifetime1Lifetime5;
         try {
-            gd.a((String) null, 255, (String) null, param0, (rb) null, (int[]) null, (long)param2, param1, -1);
-            if (param0 == 0) {
-                var8 = hd.field_s;
-                var9 = ec.field_n[0];
-                var27 = var9;
-                var27 = var9;
-                var10 = nd.field_Qb;
-                var8.field_j.a(11, var9, 0, var10);
-                var11 = hd.field_s;
-                var12 = ec.field_n[1];
-                var27 = var12;
-                var27 = var12;
-                var13 = uh.field_d;
-                var11.field_j.a(12, var12, param2 ^ 0, var13);
-                var14 = hd.field_s;
-                var15 = ec.field_n[2];
-                var27 = var15;
-                var27 = var15;
-                var16 = df.field_b;
-                var14.field_j.a(13, var15, 0, var16);
-            }
-            if ((param0 ^ -1) == -2) {
-                var17 = hd.field_s;
-                var18 = ec.field_n[0];
-                var27 = var18;
-                var27 = var18;
-                var19 = ji.field_Ob;
-                var17.field_j.a(11, var18, param2 + 0, var19);
-                var20 = hd.field_s;
-                var21 = ec.field_n[1];
-                var27 = var21;
-                var27 = var21;
-                var22 = fj.field_t;
-                var20.field_j.a(12, var21, param2 ^ 0, var22);
-                var23 = hd.field_s;
-                var24 = ec.field_n[2];
-                var27 = var24;
-                var27 = var24;
-                var25 = md.field_H;
-                var23.field_j.a(13, var24, 0, var25);
-            }
-            if (!((param0 ^ -1) != -3)) {
-                var26 = hd.field_s;
-                var27 = ec.field_n[0];
-                var28 = mb.field_A;
-                var26.field_j.a(11, var27, 0, var28);
-                var29 = hd.field_s;
-                var30 = ec.field_n[1];
-                var31 = dk.field_a;
-                var29.field_j.a(12, var30, param2 ^ 0, var31);
-                var32 = hd.field_s;
-                var33 = ec.field_n[2];
-                var34 = mc.field_a;
-                var32.field_j.a(13, var33, param2 + 0, var34);
-            }
-            var35 = hd.field_s;
-            var4 = param1.field_eb;
-            var5 = param1.field_z;
-            var6 = param1.field_Hb;
-            var7 = param1.field_R;
-            var35.field_j.a(var6, var5, -127, var7, var4);
+          gd.a((String) null, 255, (String) null, param0, (rb) null, (int[]) null, (long)param2, param1, -1);
+          if (param0 == 0) {
+            var8 = hd.field_s;
+            var9 = ec.field_n[0];
+            var27 = var9;
+            var27Lifetime3 = var9;
+            var10 = nd.field_Qb;
+            var8.field_j.a(11, var9, 0, var10);
+            var11 = hd.field_s;
+            var12 = ec.field_n[1];
+            var27Lifetime4 = var12;
+            var27Lifetime5 = var12;
+            var13 = uh.field_d;
+            var11.field_j.a(12, var12, param2 ^ 0, var13);
+            var14 = hd.field_s;
+            var15 = ec.field_n[2];
+            var27Lifetime6 = var15;
+            var27Lifetime7 = var15;
+            var16 = df.field_b;
+            var14.field_j.a(13, var15, 0, var16);
+          }
+          if (param0 == 1) {
+            var17 = hd.field_s;
+            var18 = ec.field_n[0];
+            var27Lifetime1 = var18;
+            var27Lifetime1Lifetime1 = var18;
+            var19 = ji.field_Ob;
+            var17.field_j.a(11, var18, param2 + 0, var19);
+            var20 = hd.field_s;
+            var21 = ec.field_n[1];
+            var27Lifetime1Lifetime2 = var21;
+            var27Lifetime1Lifetime3 = var21;
+            var22 = fj.field_t;
+            var20.field_j.a(12, var21, param2 ^ 0, var22);
+            var23 = hd.field_s;
+            var24 = ec.field_n[2];
+            var27Lifetime1Lifetime4 = var24;
+            var27Lifetime1Lifetime5 = var24;
+            var25 = md.field_H;
+            var23.field_j.a(13, var24, 0, var25);
+          }
+          if (param0 == 2) {
+            var26 = hd.field_s;
+            var27Lifetime2 = ec.field_n[0];
+            var28 = mb.field_A;
+            var26.field_j.a(11, var27Lifetime2, 0, var28);
+            var29 = hd.field_s;
+            var30 = ec.field_n[1];
+            var31 = dk.field_a;
+            var29.field_j.a(12, var30, param2 ^ 0, var31);
+            var32 = hd.field_s;
+            var33 = ec.field_n[2];
+            var34 = mc.field_a;
+            var32.field_j.a(13, var33, param2 + 0, var34);
+          }
+          var35 = hd.field_s;
+          var4 = param1.field_eb;
+          var5 = param1.field_z;
+          var6 = param1.field_Hb;
+          var7 = param1.field_R;
+          var35.field_j.a(var6, var5, -127, var7, var4);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "rm.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

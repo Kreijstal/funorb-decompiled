@@ -47,57 +47,31 @@ final class cm {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_15_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = TetraLink.field_J;
         try {
-          L0: {
-            var3_int = 1;
-            L1: while (true) {
-              if (1 >= param2) {
-                if (1 != param2) {
-                  if (param1 >= 80) {
-                    stackIn_15_0 = var3_int;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    stackIn_13_0 = -51;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  stackIn_10_0 = param0 * var3_int;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  if (-1 == (1 & param2 ^ -1)) {
-                    break L2;
-                  } else {
-                    var3_int = var3_int * param0;
-                    break L2;
-                  }
-                }
-                param0 = param0 * param0;
-                param2 = param2 >> 1;
-                continue L1;
-              }
+          var3_int = 1;
+          while (1 < param2) {
+            if ((1 & param2) != 0) {
+              var3_int = var3_int * param0;
             }
+            param0 = param0 * param0;
+            param2 = param2 >> 1;
           }
+          if (1 == param2) {
+            stackIn_10_0 = param0 * var3_int;
+            return stackIn_10_0;
+          }
+          if (param1 >= 80) {
+            stackIn_15_0 = var3_int;
+            return stackIn_15_0;
+          }
+          stackIn_13_0 = -51;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw oi.a((Throwable) ((Object) var3), "cm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_13_0;
-          } else {
-            return stackIn_15_0;
-          }
         }
     }
 
@@ -105,7 +79,7 @@ final class cm {
         field_F = null;
         field_q = null;
         if (param0 <= 8) {
-            return;
+          return;
         }
         field_b = null;
         field_x = null;
@@ -113,7 +87,7 @@ final class cm {
 
     final static void a(byte param0) {
         if (param0 > -111) {
-            return;
+          return;
         }
         sj.field_g = new nd(sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n);
     }

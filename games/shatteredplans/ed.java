@@ -15,43 +15,28 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (null != pd.field_j) {
-              ql.field_q = 0;
-              aj.field_f = param0.getX();
-              rf.field_i = param0.getY();
-              kh.field_Lb = true;
-              break L0;
-            } else {
-              return;
-            }
+          if (null == pd.field_j) {
+            return;
           }
+          ql.field_q = 0;
+          aj.field_f = param0.getX();
+          rf.field_i = param0.getY();
+          kh.field_Lb = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ed.mouseEntered(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ed.mouseEntered(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -60,11 +45,11 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final void mouseClicked(java.awt.event.MouseEvent param0) {
         try {
-            if (param0.isPopupTrigger()) {
-                param0.consume();
-            }
+          if (param0.isPopupTrigger()) {
+            param0.consume();
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ed.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ed.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,233 +57,193 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (null != pd.field_j) {
-              ql.field_q = 0;
-              aj.field_f = param0.getX();
-              rf.field_i = param0.getY();
-              kh.field_Lb = true;
-              break L0;
-            } else {
-              return;
-            }
+          if (null == pd.field_j) {
+            return;
           }
+          ql.field_q = 0;
+          aj.field_f = param0.getX();
+          rf.field_i = param0.getY();
+          kh.field_Lb = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ed.mouseMoved(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ed.mouseMoved(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-            if (pd.field_j != null) {
-                ql.field_q = 0;
-                aj.field_f = param0.getX();
-                rf.field_i = param0.getY();
-                kh.field_Lb = true;
-            }
+          if (pd.field_j != null) {
+            ql.field_q = 0;
+            aj.field_f = param0.getX();
+            rf.field_i = param0.getY();
+            kh.field_Lb = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ed.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ed.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static bi a(boolean param0) {
-        int var1;
-        Object var3;
-        int[] var5_ref_int__;
-        int var5;
-        int var6;
-        int var7;
-        int[] var9;
-        int[] var11;
-        int[] var13;
-        byte[] var18;
-        byte[] var19;
-        byte[] var20;
-        byte[] var21;
-        var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        var1 = cm.field_g[0] * mc.field_s[0];
-        if (!param0) {
-          L0: {
-            ed.a(79);
-            var18 = hd.field_q[0];
-            if (!ua.field_h[0]) {
-              var9 = new int[var1];
-              var5 = 0;
-              L1: while (true) {
-                if (var1 <= var5) {
-                  var3 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
-                  break L0;
-                } else {
-                  var9[var5] = eo.field_fb[we.a(255, (int) var18[var5])];
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              var19 = kc.field_l[0];
-              var13 = new int[var1];
-              var11 = var13;
-              var5_ref_int__ = var11;
-              var6 = 0;
-              L2: while (true) {
-                if (var1 <= var6) {
-                  var3 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
-                  break L0;
-                } else {
-                  var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var18[var6], 255)], we.a(-16777216, var19[var6] << -404545352));
-                  var6++;
-                  continue L2;
-                }
-              }
+        byte[] var20 = null;
+        byte[] var21 = null;
+        byte[] var19 = null;
+        int[] var13 = null;
+        int[] var11 = null;
+        int[] var5_ref_int__ = null;
+        int var6 = 0;
+        Object var3 = null;
+        int[] var9 = null;
+        int var5 = 0;
+        int var7 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var1 = cm.field_g[0] * mc.field_s[0];
+        int[] var13Lifetime1;
+        int[] var11Lifetime1;
+        int[] var5_ref_int__Lifetime1;
+        Object var3Lifetime1;
+        int[] var9Lifetime1;
+        int var6Lifetime1;
+        int var5Lifetime1;
+        if (param0) {
+          var20 = hd.field_q[0];
+          if (ua.field_h[0]) {
+            var21 = kc.field_l[0];
+            var13 = new int[var1];
+            var11 = var13;
+            var5_ref_int__ = var11;
+            for (var6 = 0; var1 > var6; var6++) {
+              var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << 24));
             }
-          }
-          pd.a(0);
-          return (bi) (var3);
-        } else {
-          L3: {
-            var20 = hd.field_q[0];
-            if (!ua.field_h[0]) {
-              var9 = new int[var1];
-              var5 = 0;
-              L4: while (true) {
-                if (var1 <= var5) {
-                  var3 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
-                  break L3;
-                } else {
-                  var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
-                  var5++;
-                  continue L4;
-                }
-              }
-            } else {
-              var21 = kc.field_l[0];
-              var13 = new int[var1];
-              var11 = var13;
-              var5_ref_int__ = var11;
-              var6 = 0;
-              L5: while (true) {
-                if (var1 <= var6) {
-                  var3 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
-                  break L3;
-                } else {
-                  var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << -404545352));
-                  var6++;
-                  continue L5;
-                }
-              }
+            var3 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
+          } else {
+            var9 = new int[var1];
+            for (var5 = 0; var1 > var5; var5++) {
+              var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
             }
+            var3 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
           }
           pd.a(0);
           return (bi) (var3);
         }
+        ed.a(79);
+        byte[] var18 = hd.field_q[0];
+        if (ua.field_h[0]) {
+          var19 = kc.field_l[0];
+          var13Lifetime1 = new int[var1];
+          var11Lifetime1 = var13Lifetime1;
+          var5_ref_int__Lifetime1 = var11Lifetime1;
+          for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
+            var5_ref_int__Lifetime1[var6Lifetime1] = ee.a(eo.field_fb[we.a((int) var18[var6Lifetime1], 255)], we.a(-16777216, var19[var6Lifetime1] << 24));
+          }
+          var3Lifetime1 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13Lifetime1);
+        } else {
+          var9Lifetime1 = new int[var1];
+          for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
+            var9Lifetime1[var5Lifetime1] = eo.field_fb[we.a(255, (int) var18[var5Lifetime1])];
+          }
+          var3Lifetime1 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9Lifetime1);
+        }
+        pd.a(0);
+        return (bi) (var3Lifetime1);
     }
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = he.field_p != null ? 1 : 0;
         if (param0 != 1) {
-            return true;
+          return true;
         }
-        if ((oq.field_j ^ -1) != -10) {
-            if (!((oq.field_j ^ -1) != -11)) {
-                if (!(var3 == 0)) {
-                    return false;
-                }
-                rg.a(true);
+        if (oq.field_j != 9) {
+          if (oq.field_j == 10) {
+            if (var3 != 0) {
+              return false;
+            }
+            rg.a(true);
+            return true;
+          }
+          if (11 != oq.field_j) {
+            return false;
+          }
+          if (!jj.field_n) {
+            return false;
+          }
+          if (vp.field_r == 2) {
+            if (!ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
+              return false;
+            }
+            if (vp.field_r == 2) {
+              if (!sh.b(57)) {
                 return true;
+              }
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+              return true;
             }
-            if (11 != oq.field_j) {
-                return false;
+            if (var3 != 0) {
+              return false;
             }
-            if (!jj.field_n) {
-                return false;
-            }
-            if (-3 == (vp.field_r ^ -1)) {
-                if (!ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
-                    return false;
-                }
-                if ((vp.field_r ^ -1) == -3) {
-                    if (!sh.b(57)) {
-                        return true;
-                    }
-                    ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
-                    return true;
-                }
-                if (var3 != 0) {
-                    return false;
-                }
-                if (!(!sh.b(57))) {
-                    ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
-                }
-                return true;
-            }
-            if ((vp.field_r ^ -1) != -3 && var3 != 0) {
-                return false;
-            }
-            if (!(!sh.b(57))) {
-                ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+            if (sh.b(57)) {
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
             }
             return true;
+          }
+          if (vp.field_r != 2 &&
+            var3 != 0) {
+            return false;
+          }
+          if (sh.b(57)) {
+            ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+          }
+          return true;
         }
         if (!j.a(2, uo.field_f, jj.field_o, tl.field_D, bq.field_e)) {
-            if (!((oq.field_j ^ -1) != -11)) {
-                if (!(var3 == 0)) {
-                    return false;
-                }
-                rg.a(true);
-                return true;
+          if (oq.field_j == 10) {
+            if (var3 != 0) {
+              return false;
             }
-            if (11 == oq.field_j) {
-                if (!jj.field_n) {
-                    return false;
+            rg.a(true);
+            return true;
+          }
+          if (11 == oq.field_j) {
+            if (!jj.field_n) {
+              return false;
+            }
+            if (vp.field_r == 2) {
+              if (ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
+                if (vp.field_r != 2 &&
+                  var3 != 0) {
+                  return false;
                 }
-                if (-3 == (vp.field_r ^ -1)) {
-                    if (ShatteredPlansClient.a(16, ac.field_o, ah.field_S)) {
-                        if ((vp.field_r ^ -1) != -3 && var3 != 0) {
-                            return false;
-                        }
-                        if (!(!sh.b(57))) {
-                            ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
-                        }
-                        return true;
-                    }
-                    return false;
-                }
-                if ((vp.field_r ^ -1) != -3 && var3 != 0) {
-                    return false;
-                }
-                if (!(!sh.b(57))) {
-                    ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+                if (sh.b(57)) {
+                  ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
                 }
                 return true;
+              }
+              return false;
             }
-            return false;
+            if (vp.field_r != 2 &&
+              var3 != 0) {
+              return false;
+            }
+            if (sh.b(57)) {
+              ih.a(ah.field_S, param0 ^ 3, vs.field_d, vp.field_r, (String) null, param1);
+            }
+            return true;
+          }
+          return false;
         }
-        if (tl.field_D != 2 && var3 != 0) {
-            return false;
+        if (tl.field_D != 2 &&
+          var3 != 0) {
+          return false;
         }
         return tk.a(bq.field_e, jj.field_o, false, uo.field_f, tl.field_D);
     }
@@ -307,43 +252,28 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (null != pd.field_j) {
-              ql.field_q = 0;
-              aj.field_f = -1;
-              rf.field_i = -1;
-              kh.field_Lb = true;
-              break L0;
-            } else {
-              return;
-            }
+          if (null == pd.field_j) {
+            return;
           }
+          ql.field_q = 0;
+          aj.field_f = -1;
+          rf.field_i = -1;
+          kh.field_Lb = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ed.mouseExited(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ed.mouseExited(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -352,69 +282,37 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null != pd.field_j) {
-                L2: {
-                  ql.field_q = 0;
-                  v.field_d = 0;
-                  kh.field_Lb = true;
-                  var2_int = param0.getModifiers();
-                  if ((var2_int & 4) == 0) {
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (0 != (16 & var2_int)) {
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if ((8 & var2_int) != 0) {
-                  break L1;
-                } else {
-                  break L1;
-                }
-              } else {
-                break L1;
-              }
+          if (null != pd.field_j) {
+            ql.field_q = 0;
+            v.field_d = 0;
+            kh.field_Lb = true;
+            var2_int = param0.getModifiers();
+            if ((var2_int & 4) == 0) {
             }
-            if (!param0.isPopupTrigger()) {
-              break L0;
-            } else {
-              param0.consume();
-              return;
+            if (0 != (16 & var2_int)) {
+            }
+            if ((8 & var2_int) != 0) {
             }
           }
+          if (!param0.isPopupTrigger()) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("ed.mouseReleased(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L4;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L4;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("ed.mouseReleased(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -423,82 +321,46 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (null != pd.field_j) {
-                L2: {
-                  ql.field_q = 0;
-                  lc.field_c = param0.getX();
-                  el.field_e = param0.getY();
-                  pr.a(14274);
-                  if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-                    vh.field_c = 2;
-                    v.field_d = 2;
-                    break L2;
-                  } else {
-                    vh.field_c = 1;
-                    v.field_d = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2_int = param0.getModifiers();
-                  kh.field_Lb = true;
-                  if ((var2_int & 16) == 0) {
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (-1 == (var2_int & 4 ^ -1)) {
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if (0 != (var2_int & 8)) {
-                  break L1;
-                } else {
-                  break L1;
-                }
-              } else {
-                break L1;
-              }
-            }
-            if (!param0.isPopupTrigger()) {
-              break L0;
+          if (null != pd.field_j) {
+            ql.field_q = 0;
+            lc.field_c = param0.getX();
+            el.field_e = param0.getY();
+            pr.a(14274);
+            if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
+              vh.field_c = 2;
+              v.field_d = 2;
             } else {
-              param0.consume();
-              return;
+              vh.field_c = 1;
+              v.field_d = 1;
+            }
+            var2_int = param0.getModifiers();
+            kh.field_Lb = true;
+            if ((var2_int & 16) == 0) {
+            }
+            if ((var2_int & 4) == 0) {
+            }
+            if (0 != (var2_int & 8)) {
             }
           }
+          if (!param0.isPopupTrigger()) {
+            return;
+          }
+          param0.consume();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("ed.mousePressed(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("ed.mousePressed(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -506,40 +368,25 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException var2 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (null != pd.field_j) {
-              v.field_d = 0;
-              break L0;
-            } else {
-              return;
-            }
+          if (null == pd.field_j) {
+            return;
           }
+          v.field_d = 0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("ed.focusLost(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L1;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("ed.focusLost(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw r.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw r.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -549,16 +396,14 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_g = null;
         field_e = null;
         field_b = null;
-        if (param0 <= 54) {
-          ed.a(7, -49, -44);
-          field_c = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 > 54) {
           field_c = null;
           field_h = null;
           return;
         }
+        ed.a(7, -49, -44);
+        field_c = null;
+        field_h = null;
     }
 
     static {

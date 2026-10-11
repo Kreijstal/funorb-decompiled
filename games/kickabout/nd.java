@@ -10,7 +10,7 @@ final class nd {
 
     public static void a(byte param0) {
         if (param0 != 115) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

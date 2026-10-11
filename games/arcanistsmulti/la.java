@@ -17,24 +17,21 @@ final class la implements ok {
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        if (param2 < -22) {
-          if (param1) {
-            de.e(0, 0, de.field_e, de.field_j, 0, 192);
-            lm.a((byte) -29, param1);
-            return;
-          } else {
-            de.b();
-            lm.a((byte) -29, param1);
-            return;
-          }
-        } else {
+        if (param2 >= -22) {
           return;
         }
+        if (!param1) {
+          de.b();
+          lm.a((byte) -29, param1);
+          return;
+        }
+        de.e(0, 0, de.field_e, de.field_j, 0, 192);
+        lm.a((byte) -29, param1);
     }
 
     final static int[] b(byte param0) {
         if (param0 != 12) {
-            return (int[]) null;
+          return (int[]) null;
         }
         return new int[8];
     }

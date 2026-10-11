@@ -16,41 +16,29 @@ final class ia extends lh {
     static int[] field_q;
 
     final static sf a(int param0, int param1, int param2) {
-        sf var3;
-        byte[] var4;
-        double var5;
-        int var7;
-        int var8;
-        var8 = fleas.field_A ? 1 : 0;
-        var3 = new sf(22050, param0);
-        if (param2 != 1) {
-          ia.a(-45);
+        byte[] var4 = null;
+        double var5 = 0.0;
+        int var7 = 0;
+        int var8 = fleas.field_A ? 1 : 0;
+        sf var3 = new sf(22050, param0);
+        byte[] var4Lifetime1;
+        double var5Lifetime1;
+        int var7Lifetime1;
+        if (param2 == 1) {
           var4 = var3.field_l;
           var5 = 6.283185307179586 * (double)param1 / 22050.0;
-          var7 = param0 + -1;
-          L0: while (true) {
-            if (0 > var7) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
-              var7--;
-              continue L0;
-            }
+          for (var7 = param0 - 1; 0 <= var7; var7--) {
+            var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
           }
-        } else {
-          var4 = var3.field_l;
-          var5 = 6.283185307179586 * (double)param1 / 22050.0;
-          var7 = param0 + -1;
-          L1: while (true) {
-            if (0 > var7) {
-              return var3;
-            } else {
-              var4[var7] = (byte)(int)(ma.a(var5 * (double)var7, 97) * 127.0);
-              var7--;
-              continue L1;
-            }
-          }
+          return var3;
         }
+        ia.a(-45);
+        var4Lifetime1 = var3.field_l;
+        var5Lifetime1 = 6.283185307179586 * (double)param1 / 22050.0;
+        for (var7Lifetime1 = param0 - 1; 0 <= var7Lifetime1; var7Lifetime1--) {
+          var4Lifetime1[var7Lifetime1] = (byte)(int)(ma.a(var5Lifetime1 * (double)var7Lifetime1, 97) * 127.0);
+        }
+        return var3;
     }
 
     final static int a(boolean param0, byte[] param1, int param2) {
@@ -59,49 +47,26 @@ final class ia extends lh {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0) {
-              stackIn_4_0 = uj.a(false, 0, param2, param1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 40;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0) {
+            stackIn_4_0 = uj.a(false, 0, param2, param1);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = 40;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("ia.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ia.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -113,16 +78,14 @@ final class ia extends lh {
         field_j = null;
         field_p = (int[][]) null;
         field_t = null;
-        if (!param0) {
-          ia.b(true);
-          field_r = null;
-          field_q = null;
-          return;
-        } else {
+        if (param0) {
           field_r = null;
           field_q = null;
           return;
         }
+        ia.b(true);
+        field_r = null;
+        field_q = null;
     }
 
     final static void a(boolean param0, int param1) {
@@ -131,59 +94,36 @@ final class ia extends lh {
         boolean stackIn_15_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
+        pd var2Lifetime1;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              gf.field_d = param1;
-              if (param0) {
-                break L1;
-              } else {
-                ia.a(17, 35, -72);
-                break L1;
-              }
-            }
-            var2 = (pd) ((Object) bk.field_d.c((byte) 47));
-            L2: while (true) {
-              if (var2 == null) {
-                if (jc.field_c != null) {
-                  var2 = (pd) ((Object) jc.field_c.c((byte) 47));
-                  L3: while (true) {
-                    if (var2 == null) {
-                      break L0;
-                    } else {
-                      stackIn_15_0 = var2.field_n.b((byte) -54);
-                      L4: {
-                        if (stackIn_15_0) {
-                          var2.field_m.h(128 + gf.field_d * var2.field_j >> -1160573624);
-                          break L4;
-                        } else {
-                          var2.c(-1);
-                          break L4;
-                        }
-                      }
-                      var2 = (pd) ((Object) jc.field_c.b((byte) -105));
-                      continue L3;
-                    }
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                L5: {
-                  if (!var2.field_n.b((byte) -54)) {
-                    var2.c(-1);
-                    break L5;
-                  } else {
-                    var2.field_m.h(gf.field_d * var2.field_j - -128 >> 1641415368);
-                    break L5;
-                  }
-                }
-                var2 = (pd) ((Object) bk.field_d.b((byte) -105));
-                continue L2;
-              }
-            }
+          gf.field_d = param1;
+          if (!param0) {
+            ia.a(17, 35, -72);
           }
+          var2 = (pd) (bk.field_d.c((byte) 47));
+          while (var2 != null) {
+            if (!var2.field_n.b((byte) -54)) {
+              var2.c(-1);
+            } else {
+              var2.field_m.h(gf.field_d * var2.field_j + 128 >> 8);
+            }
+            var2 = (pd) (bk.field_d.b((byte) -105));
+          }
+          if (jc.field_c == null) {
+            return;
+          }
+          var2Lifetime1 = (pd) (jc.field_c.c((byte) 47));
+          while (var2Lifetime1 != null) {
+            stackIn_15_0 = var2Lifetime1.field_n.b((byte) -54);
+            if (stackIn_15_0) {
+              var2Lifetime1.field_m.h(128 + gf.field_d * var2Lifetime1.field_j >> 8);
+            } else {
+              var2Lifetime1.c(-1);
+            }
+            var2Lifetime1 = (pd) (jc.field_c.b((byte) -105));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -193,35 +133,31 @@ final class ia extends lh {
 
     final static void b(boolean param0) {
         if (!param0) {
-            field_s = (String[]) null;
+          field_s = (String[]) null;
         }
     }
 
     final static void a(int param0) {
-        uh var1;
-        var1 = (uh) ((Object) fg.field_t.a((byte) 100));
-        if (param0 <= -52) {
-          if (var1 == null) {
-            throw new IllegalStateException();
-          } else {
-            gb.a(var1.field_r, var1.field_i, var1.field_p);
-            gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
-            var1.field_r = null;
-            fk.field_z.a(false, var1);
-            return;
-          }
-        } else {
+        uh var1 = (uh) (fg.field_t.a((byte) 100));
+        if (param0 > -52) {
           field_q = (int[]) null;
-          if (var1 == null) {
-            throw new IllegalStateException();
-          } else {
+          if (var1 != null) {
             gb.a(var1.field_r, var1.field_i, var1.field_p);
             gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
             var1.field_r = null;
             fk.field_z.a(false, var1);
             return;
           }
+          throw new IllegalStateException();
         }
+        if (var1 != null) {
+          gb.a(var1.field_r, var1.field_i, var1.field_p);
+          gb.a(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
+          var1.field_r = null;
+          fk.field_z.a(false, var1);
+          return;
+        }
+        throw new IllegalStateException();
     }
 
     ia() {

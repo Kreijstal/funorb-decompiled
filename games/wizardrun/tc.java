@@ -18,7 +18,7 @@ final class tc extends wl {
         field_n = null;
         field_m = null;
         if (param0 >= -90) {
-            tc.a((byte) 125);
+          tc.a((byte) 125);
         }
     }
 

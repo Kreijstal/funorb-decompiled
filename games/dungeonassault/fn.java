@@ -17,16 +17,17 @@ final class fn extends ne {
     final static cn a(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
+        int var2Lifetime1;
         if (param0 != 2) {
-            return (cn) null;
+          return (cn) null;
         }
         cn var1 = new cn(11, 11);
         jh.a(var1);
-        for (var2 = 0; -7 < (var2 ^ -1); var2++) {
-            gf.c(var2, -var2 + 5, 2 * var2 + 1, 65793);
+        for (var2 = 0; var2 < 6; var2++) {
+          gf.c(var2, -var2 + 5, 2 * var2 + 1, 65793);
         }
-        for (var2 = 6; var2 < 11; var2++) {
-            gf.c(var2, 4, 3, 65793);
+        for (var2Lifetime1 = 6; var2Lifetime1 < 11; var2Lifetime1++) {
+          gf.c(var2Lifetime1, 4, 3, 65793);
         }
         jh.b();
         return var1;
@@ -36,7 +37,7 @@ final class fn extends ne {
         field_q = null;
         field_j = null;
         if (param0 != 1) {
-            fn.d(-32);
+          fn.d(-32);
         }
         field_o = null;
     }

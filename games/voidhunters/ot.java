@@ -10,22 +10,21 @@ final class ot {
         field_a = null;
         field_c = null;
         if (param0) {
-            ot.a(86);
+          ot.a(86);
         }
     }
 
     final static void a(int param0) {
-        String var2;
-        if (param0 > -94) {
-          field_c = (String) null;
-          var2 = (String) null;
-          uhb.a((String) null, "", 0);
-          return;
-        } else {
+        String var2 = null;
+        String var2Lifetime1;
+        if (param0 <= -94) {
           var2 = (String) null;
           uhb.a((String) null, "", 0);
           return;
         }
+        field_c = (String) null;
+        var2Lifetime1 = (String) null;
+        uhb.a((String) null, "", 0);
     }
 
     static {

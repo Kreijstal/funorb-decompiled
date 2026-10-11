@@ -10,18 +10,16 @@ final class ho {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 >= -25) {
-          ho.a((byte) -66);
-          field_c = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 < -25) {
           field_c = null;
           field_d = null;
           field_a = null;
           return;
         }
+        ho.a((byte) -66);
+        field_c = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

@@ -20,7 +20,7 @@ final class lq extends oh {
         field_r = null;
         field_o = null;
         if (param0 != 67) {
-            field_q = true;
+          field_q = true;
         }
     }
 

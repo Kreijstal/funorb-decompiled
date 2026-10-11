@@ -10,7 +10,7 @@ final class sh {
         el.field_d = param2;
         rd.field_f = param1;
         if (param0 < 106) {
-            sh.a((byte) 102, -98, 95);
+          sh.a((byte) 102, -98, 95);
         }
     }
 
@@ -18,7 +18,7 @@ final class sh {
         field_a = null;
         field_c = null;
         if (param0) {
-            sh.a(false);
+          sh.a(false);
         }
     }
 

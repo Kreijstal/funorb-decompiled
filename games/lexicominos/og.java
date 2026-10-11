@@ -23,111 +23,76 @@ final class og implements rd {
     }
 
     public final void a(int param0, int param1, boolean param2, w param3, int param4) {
+        int var10 = 0;
         w stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         wi var12 = null;
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (!(param3 instanceof wi)) {
-                stackIn_4_0 = null;
-                break L1;
-              } else {
-                stackIn_4_0 = (w) (param3);
-                break L1;
-              }
-            }
-            L2: {
-              var12 = (wi) ((Object) stackIn_4_0);
-              if (var12 != null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              lf.a(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
-              var7 = -(var12.field_G * 2) + param3.field_j;
-              var8 = var12.field_G + param3.field_t + param1;
-              var9 = param0 - (-param3.field_o - var12.field_H);
-              if (param4 == -3284) {
-                break L3;
-              } else {
-                this.field_g = 108;
-                break L3;
-              }
-            }
-            lf.b(var8, var9, var7 + var8, var9, this.field_h);
-            var10 = -1 + var12.e(false);
-            L4: while (true) {
-              if (-1 < (var10 ^ -1)) {
-                if (this.field_i == null) {
-                  break L0;
-                } else {
-                  this.field_i.a(var12.field_u, var7 / 2 + var8, var12.field_H + var9 - -this.field_i.field_C, this.field_e, this.field_g);
-                  return;
-                }
-              } else {
-                lf.c(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
-                var10--;
-                continue L4;
-              }
-            }
+          if (!(param3 instanceof wi)) {
+            stackIn_4_0 = null;
+          } else {
+            stackIn_4_0 = (w) (param3);
           }
+          var12 = (wi) (stackIn_4_0);
+          if (var12 != null) {
+          }
+          lf.a(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
+          var7 = -(var12.field_G * 2) + param3.field_j;
+          var8 = var12.field_G + param3.field_t + param1;
+          var9 = param0 - (-param3.field_o - var12.field_H);
+          if (param4 != -3284) {
+            this.field_g = 108;
+          }
+          lf.b(var8, var9, var7 + var8, var9, this.field_h);
+          for (var10 = -1 + var12.e(false); var10 >= 0; var10--) {
+            lf.c(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
+          }
+          if (this.field_i == null) {
+            return;
+          }
+          this.field_i.a(var12.field_u, var7 / 2 + var8, var12.field_H + var9 + this.field_i.field_C, this.field_e, this.field_g);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var6);
-
-            stackIn_15_1 = new StringBuilder().append("og.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_15_0 = var6;
+          stackIn_15_1 = new StringBuilder().append("og.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param4 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
         if (param0 != 23440) {
-            return false;
+          return false;
         }
         return 250 < mc.field_k ? true : false;
     }
 
     og(le param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_d = param4;
-            this.field_e = param1;
-            this.field_i = param0;
-            this.field_h = param3;
-            this.field_g = param2;
-            this.field_a = param5;
-            this.field_k = param6;
+          this.field_d = param4;
+          this.field_e = param1;
+          this.field_i = param0;
+          this.field_h = param3;
+          this.field_g = param2;
+          this.field_a = param5;
+          this.field_k = param6;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

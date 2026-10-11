@@ -6,10 +6,10 @@ final class me extends gj implements java.awt.event.MouseWheelListener {
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 != 205) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, false);
-            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, false);
+          param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -17,7 +17,7 @@ final class me extends gj implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, boolean param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
-            this.field_g = 32;
+          this.field_g = 32;
         }
     }
 
@@ -28,7 +28,7 @@ final class me extends gj implements java.awt.event.MouseWheelListener {
 
     final synchronized int a(byte param0) {
         if (param0 != -107) {
-            return -120;
+          return -120;
         }
         int var2 = this.field_g;
         this.field_g = 0;

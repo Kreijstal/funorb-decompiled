@@ -23,18 +23,18 @@ final class vf {
         int var4 = 0;
         int var5 = 0;
         try {
-            sj.field_z.field_S = param1;
-            im.field_b = true;
-            var2_int = sb.field_bb.field_c;
-            var3 = sb.field_bb.field_i;
-            var4 = sj.field_z.field_L.a(param1, 272, sj.field_z.field_Ib);
-            var5 = -110 + (var3 / 2 + 7 + -(var4 / 2));
-            fl.field_b.a(0, var5, -(var5 * 2) + -120 + var3, (var2_int - 320) / 2, param0);
-            fl.field_b.field_I = se.a(3, 2105376, 11579568, fl.field_b.field_Lb, 8421504, param0 ^ 13382);
-            sj.field_z.a(param0 + -320, 16, -24 + (fl.field_b.field_Lb + -20), 24, -24 + (fl.field_b.field_zb - 24));
-            pm.field_gb.a(0, -20 + (fl.field_b.field_Lb + -24), 24, 120, 80);
+          sj.field_z.field_S = param1;
+          im.field_b = true;
+          var2_int = sb.field_bb.field_c;
+          var3 = sb.field_bb.field_i;
+          var4 = sj.field_z.field_L.a(param1, 272, sj.field_z.field_Ib);
+          var5 = -110 + (var3 / 2 + 7 - var4 / 2);
+          fl.field_b.a(0, var5, -(var5 * 2) - 120 + var3, (var2_int - 320) / 2, param0);
+          fl.field_b.field_I = se.a(3, 2105376, 11579568, fl.field_b.field_Lb, 8421504, param0 ^ 13382);
+          sj.field_z.a(param0 - 320, 16, -24 + (fl.field_b.field_Lb - 20), 24, -24 + (fl.field_b.field_zb - 24));
+          pm.field_gb.a(0, -20 + (fl.field_b.field_Lb - 24), 24, 120, 80);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "vf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,33 +47,22 @@ final class vf {
         RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.field_G;
         try {
-          L0: {
-            var5 = (rh) ((Object) ol.field_Vb.e(13058));
-            L1: while (true) {
-              if (var5 == null) {
-                var2 = fg.field_Ub.e(13058);
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (!param0) {
-                      break L0;
-                    } else {
-                      var4 = (String) null;
-                      vf.a(4, (String) null);
-                      return;
-                    }
-                  } else {
-                    tc.a(87, param1);
-                    var2 = fg.field_Ub.a((byte) -111);
-                    continue L2;
-                  }
-                }
-              } else {
-                vm.a(param1, -103, var5);
-                var5 = (rh) ((Object) ol.field_Vb.a((byte) -92));
-                continue L1;
-              }
-            }
+          var5 = (rh) (ol.field_Vb.e(13058));
+          while (var5 != null) {
+            vm.a(param1, -103, var5);
+            var5 = (rh) (ol.field_Vb.a((byte) -92));
           }
+          var2 = fg.field_Ub.e(13058);
+          while (var2 != null) {
+            tc.a(87, param1);
+            var2 = fg.field_Ub.a((byte) -111);
+          }
+          if (!param0) {
+            return;
+          }
+          var4 = (String) null;
+          vf.a(4, (String) null);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

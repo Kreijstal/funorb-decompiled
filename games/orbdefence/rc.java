@@ -17,26 +17,23 @@ final class rc {
     static String field_i;
 
     final static boolean b(int param0) {
-        int var1;
-        var1 = 51 % ((-1 - param0) / 32);
-        if (ne.field_b != null) {
-          if (!ne.field_b.b(95)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = 51 % ((-1 - param0) / 32);
+        if (ne.field_b == null) {
           return false;
         }
+        if (ne.field_b.b(95)) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 >= -116) {
-            rc.b(7);
-            field_m = null;
-            field_i = null;
-            return;
+          rc.b(7);
+          field_m = null;
+          field_i = null;
+          return;
         }
         field_m = null;
         field_i = null;

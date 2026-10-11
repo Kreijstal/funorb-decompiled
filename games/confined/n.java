@@ -12,15 +12,15 @@ abstract class n {
 
     final static be a(int param0) {
         if (param0 != 21146) {
-            n.a(124);
-            return hb.field_r;
+          n.a(124);
+          return hb.field_r;
         }
         return hb.field_r;
     }
 
     final java.net.Socket c(int param0) throws IOException {
         if (param0 != -8463) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.field_b, this.field_c);
     }
@@ -31,7 +31,7 @@ abstract class n {
         field_e = null;
         field_a = null;
         if (param0 < 112) {
-            field_a = (bi) null;
+          field_a = (bi) null;
         }
     }
 

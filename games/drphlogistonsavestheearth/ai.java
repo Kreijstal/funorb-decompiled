@@ -18,26 +18,26 @@ final class ai extends uh {
         bj.field_a[gg.field_b] = gg.field_b;
         rc.field_i[gg.field_b] = param2;
         if (!(param2 >= cc.field_B)) {
-            ha.field_c = param2;
+          ha.field_c = param2;
         }
         if (param2 > pf.field_f) {
-            mh.field_b = param2;
+          mh.field_b = param2;
         }
         fi.field_h[gg.field_b] = param0;
         kk.field_a[gg.field_b] = param4;
         qj.field_d[gg.field_b] = param5;
-        int var6 = param4 + param0 - -param5;
+        int var6 = param4 + param0 + param5;
         if (param1 > -60) {
-            ai.g(-61);
+          ai.g(-61);
         }
         int var7 = 0 == var6 ? 0 : 1000 * param0 / var6;
         kf.field_c[gg.field_b] = var7;
         if (!(var7 <= mh.field_b)) {
-            mh.field_b = var7;
+          mh.field_b = var7;
         }
         gg.field_b = gg.field_b + 1;
         if (var7 < ha.field_c) {
-            ha.field_c = var7;
+          ha.field_c = var7;
         }
     }
 
@@ -49,25 +49,24 @@ final class ai extends uh {
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (this.field_z == null) {
-            return "";
+          return "";
         }
         StringBuilder discarded$0 = var5.append(this.field_z[0]);
         for (var3 = 1; this.field_z.length > var3; var3++) {
-            discarded$1 = var2.append("...");
-            discarded$2 = var5.append(this.field_z[var3]);
+          discarded$1 = var2.append("...");
+          discarded$2 = var5.append(this.field_z[var3]);
         }
         if (param0 < 120) {
-            this.a((byte) 20);
+          this.a((byte) 20);
         }
         return var2.toString();
     }
 
     private final void a(od param0, int param1, int param2) {
         int[] array$0 = null;
+        int var8 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -75,113 +74,64 @@ final class ai extends uh {
         int var5 = 0;
         int var6 = 0;
         sa var7 = null;
-        int var8 = 0;
         int var9 = 0;
         od var10 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 != 1) {
-                if ((param2 ^ -1) == -3) {
-                  var4_int = param0.l(31760);
-                  this.field_D = new int[var4_int];
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var5 >= var4_int) {
-                      break L1;
-                    } else {
-                      this.field_D[var5] = param0.j(-788751192);
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  if ((param2 ^ -1) != -4) {
-                    if (4 == param2) {
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    var4_int = param0.l(31760);
-                    this.field_u = new int[var4_int][];
-                    this.field_E = new int[var4_int];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var4_int <= var5) {
-                        break L1;
-                      } else {
-                        L4: {
-                          var6 = param0.j(-788751192);
-                          var7 = m.a(var6, (byte) 46);
-                          if (var7 != null) {
-                            this.field_E[var5] = var6;
-                            array$0 = new int[var7.field_a];
-                            this.field_u[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var7.field_a <= var8) {
-                                break L4;
-                              } else {
-                                this.field_u[var5][var8] = param0.j(-788751192);
-                                var8++;
-                                continue L5;
-                              }
-                            }
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var5++;
-                        continue L3;
-                      }
+          if (param2 != 1) {
+            if (param2 == 2) {
+              var4_int = param0.l(31760);
+              this.field_D = new int[var4_int];
+              for (var5 = 0; var5 < var4_int; var5++) {
+                this.field_D[var5] = param0.j(-788751192);
+              }
+            } else {
+              if (param2 == 3) {
+                var4_int = param0.l(31760);
+                this.field_u = new int[var4_int][];
+                this.field_E = new int[var4_int];
+                for (var5 = 0; var4_int > var5; var5++) {
+                  var6 = param0.j(-788751192);
+                  var7 = m.a(var6, (byte) 46);
+                  if (var7 != null) {
+                    this.field_E[var5] = var6;
+                    array$0 = new int[var7.field_a];
+                    this.field_u[var5] = array$0;
+                    for (var8 = 0; var7.field_a > var8; var8++) {
+                      this.field_u[var5][var8] = param0.j(-788751192);
                     }
                   }
                 }
               } else {
-                this.field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
-                break L1;
+                if (4 == param2) {
+                }
               }
             }
-            L6: {
-              if (param1 < -6) {
-                break L6;
-              } else {
-                var10 = (od) null;
-                this.a((od) null, 90);
-                break L6;
-              }
-            }
-            break L0;
+          } else {
+            this.field_z = ki.a((byte) -123, '<', param0.b((byte) -56));
           }
+          if (param1 >= -6) {
+            var10 = (od) null;
+            this.a((od) null, 90);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var4);
-
-            stackIn_23_1 = new StringBuilder().append("ai.B(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_23_0 = var4;
+          stackIn_23_1 = new StringBuilder().append("ai.B(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     final static ec g(int param0) {
         if (param0 != -29132) {
-            ai.g(-85);
+          ai.g(-85);
         }
         return ie.field_v;
     }
@@ -191,9 +141,9 @@ final class ai extends uh {
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var2 = 83 % ((-66 - param0) / 46);
         if (this.field_D != null) {
-            for (var3 = 0; this.field_D.length > var3; var3++) {
-                this.field_D[var3] = li.a(this.field_D[var3], 32768);
-            }
+          for (var3 = 0; this.field_D.length > var3; var3++) {
+            this.field_D[var3] = li.a(this.field_D[var3], 32768);
+          }
         }
     }
 
@@ -201,7 +151,7 @@ final class ai extends uh {
         field_x = null;
         field_A = null;
         if (param0 != -30463) {
-            ai.a(0, (byte) -77, 16, -100, 52, 101);
+          ai.a(0, (byte) -77, 16, -100, 52, 101);
         }
         field_w = null;
         field_v = null;
@@ -216,53 +166,34 @@ final class ai extends uh {
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: while (true) {
-              var3_int = param0.l(31760);
-              if (0 == var3_int) {
-                L2: {
-                  if (param1 == 0) {
-                    break L2;
-                  } else {
-                    this.a((byte) 112);
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                this.a(param0, param1 ^ -61, var3_int);
-                continue L1;
-              }
+          while (true) {
+            var3_int = param0.l(31760);
+            if (0 != var3_int) {
+              this.a(param0, param1 ^ -61, var3_int);
+              continue;
             }
+            break;
           }
+          if (param1 != 0) {
+            this.a((byte) 112);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("ai.D(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("ai.D(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 

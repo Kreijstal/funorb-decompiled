@@ -8,18 +8,16 @@ final class fm {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 <= 100) {
-          fm.a(-112);
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 > 100) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
+        fm.a(-112);
+        field_c = null;
+        field_a = null;
+        field_b = null;
     }
 
     static {

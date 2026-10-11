@@ -10,35 +10,28 @@ final class n extends wf {
     }
 
     final void a(int param0, int param1, byte param2, java.awt.Component param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
         this.field_c = param1;
-        this.field_l = new int[param0 * param1 - -1];
+        this.field_l = new int[param0 * param1 + 1];
         this.field_b = param0;
-        var5 = new java.awt.image.DataBufferInt(this.field_l, this.field_l.length);
-        var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_b), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_l, this.field_l.length);
+        java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_c, this.field_b), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
         this.field_h = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
         this.field_n = param3;
-        if (param2 >= -24) {
-          this.field_n = (java.awt.Component) null;
-          this.a((byte) 29);
-          return;
-        } else {
+        if (param2 < -24) {
           this.a((byte) 29);
           return;
         }
+        this.field_n = (java.awt.Component) null;
+        this.a((byte) 29);
     }
 
     final void a(byte param0, int param1, java.awt.Graphics param2, int param3) {
-        if (param0 < 6) {
-          this.field_n = (java.awt.Component) null;
-          param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
-          return;
-        } else {
+        if (param0 >= 6) {
           param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
           return;
         }
+        this.field_n = (java.awt.Component) null;
+        param2.drawImage(this.field_h, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_n));
     }
 }

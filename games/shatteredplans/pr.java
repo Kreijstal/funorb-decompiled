@@ -12,60 +12,56 @@ final class pr {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            if (param1 != -9194) {
-                field_c = (qr) null;
-            }
-            param0.setFocusTraversalKeysEnabled(false);
-            param0.addKeyListener(im.field_c);
-            param0.addFocusListener(im.field_c);
+          if (param1 != -9194) {
+            field_c = (qr) null;
+          }
+          param0.setFocusTraversalKeysEnabled(false);
+          param0.addKeyListener(im.field_c);
+          param0.addFocusListener(im.field_c);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "pr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void b(int param0) {
         field_e = null;
         field_a = null;
-        if (param0 != 21455) {
-          field_g = -51;
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 21455) {
           field_c = null;
           field_b = null;
           field_d = null;
           field_f = null;
           return;
         }
+        field_g = -51;
+        field_c = null;
+        field_b = null;
+        field_d = null;
+        field_f = null;
     }
 
     final synchronized static long a(int param0) {
-        long var1;
-        if (param0 == 14274) {
+        long var1 = 0L;
+        long var1Lifetime1;
+        if (param0 != 14274) {
+          pr.a(81);
           var1 = System.currentTimeMillis();
           if (lh.field_z > var1) {
             wd.field_N = wd.field_N + (-var1 + lh.field_z);
             lh.field_z = var1;
             return var1 + wd.field_N;
-          } else {
-            lh.field_z = var1;
-            return var1 + wd.field_N;
           }
-        } else {
-          pr.a(81);
-          var1 = System.currentTimeMillis();
-          if (lh.field_z <= var1) {
-            lh.field_z = var1;
-            return var1 + wd.field_N;
-          } else {
-            wd.field_N = wd.field_N + (-var1 + lh.field_z);
-            lh.field_z = var1;
-            return var1 + wd.field_N;
-          }
+          lh.field_z = var1;
+          return var1 + wd.field_N;
         }
+        var1Lifetime1 = System.currentTimeMillis();
+        if (lh.field_z <= var1Lifetime1) {
+          lh.field_z = var1Lifetime1;
+          return var1Lifetime1 + wd.field_N;
+        }
+        wd.field_N = wd.field_N + (-var1Lifetime1 + lh.field_z);
+        lh.field_z = var1Lifetime1;
+        return var1Lifetime1 + wd.field_N;
     }
 
     static {

@@ -21,8 +21,6 @@ final class ei implements ub {
         oc stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
@@ -32,85 +30,48 @@ final class ei implements ub {
         int var10 = 0;
         bf var11 = null;
         try {
-          L0: {
-            L1: {
-              if (param3 instanceof bf) {
-                stackIn_3_0 = (oc) (param3);
-                break L1;
-              } else {
-                stackIn_3_0 = null;
-                break L1;
-              }
-            }
-            L2: {
-              var11 = (bf) ((Object) stackIn_3_0);
-              if (var11 != null) {
-                param0 = param0 & var11.field_J;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              var7 = 5592405;
-              if (!param0) {
-                break L3;
-              } else {
-                var7 = 16777215;
-                break L3;
-              }
-            }
-            L4: {
-              lb.g(param3.field_o + param2, param4 - -param3.field_w, param3.field_t, param3.field_s, this.field_b);
-              var8 = this.field_m + param2 - -param3.field_o;
-              var9 = this.field_h + param4 - -param3.field_w;
-              lb.a(var8, var9, this.field_l, this.field_d, 5592405);
-              if (param1 == -20618) {
-                break L4;
-              } else {
-                this.field_h = 116;
-                break L4;
-              }
-            }
-            L5: {
-              lb.g(var8, var9, this.field_l, this.field_d, var7);
-              if (!var11.field_F) {
-                break L5;
-              } else {
-                lb.d(var8, var9, this.field_l + var8, var9 - -this.field_d, 1);
-                lb.d(var8 + this.field_l, var9, var8, var9 - -this.field_d, 1);
-                break L5;
-              }
-            }
-            if (null != this.field_n) {
-              var10 = this.field_l - -this.field_m - -this.field_f;
-              this.field_n.a(param3.field_A, param2 + (param3.field_o + var10), this.field_c + (param3.field_w + param4), param3.field_t - (this.field_f + var10), param3.field_s - (this.field_f << 516393857), this.field_e, this.field_j, this.field_i, this.field_k, 0);
-              break L0;
-            } else {
-              return;
-            }
+          if (param3 instanceof bf) {
+            stackIn_3_0 = (oc) (param3);
+          } else {
+            stackIn_3_0 = null;
           }
+          var11 = (bf) (stackIn_3_0);
+          if (var11 != null) {
+            param0 = param0 & var11.field_J;
+          }
+          var7 = 5592405;
+          if (param0) {
+            var7 = 16777215;
+          }
+          lb.g(param3.field_o + param2, param4 + param3.field_w, param3.field_t, param3.field_s, this.field_b);
+          var8 = this.field_m + param2 + param3.field_o;
+          var9 = this.field_h + param4 + param3.field_w;
+          lb.a(var8, var9, this.field_l, this.field_d, 5592405);
+          if (param1 != -20618) {
+            this.field_h = 116;
+          }
+          lb.g(var8, var9, this.field_l, this.field_d, var7);
+          if (var11.field_F) {
+            lb.d(var8, var9, this.field_l + var8, var9 + this.field_d, 1);
+            lb.d(var8 + this.field_l, var9, var8, var9 + this.field_d, 1);
+          }
+          if (null == this.field_n) {
+            return;
+          }
+          var10 = this.field_l + this.field_m + this.field_f;
+          this.field_n.a(param3.field_A, param2 + (param3.field_o + var10), this.field_c + (param3.field_w + param4), param3.field_t - (this.field_f + var10), param3.field_s - (this.field_f << 1), this.field_e, this.field_j, this.field_i, this.field_k, 0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var6);
-
-            stackIn_18_1 = new StringBuilder().append("ei.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L6;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_18_0 = var6;
+          stackIn_18_1 = new StringBuilder().append("ei.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param4 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -118,43 +79,32 @@ final class ei implements ub {
         int var1;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == 0) {
-          ke.field_b = null;
-          t.field_g = false;
-          if (!cg.field_l) {
-            var1 = fp.field_x;
-            if (var1 > 0) {
-              if (var1 != 1) {
-                ke.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
-                ke.field_b = nm.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
-                ej.field_I.m(param0 + 17);
-                qa.e((byte) -117);
-                return;
-              } else {
-                ke.field_b = ib.field_C;
-                ke.field_b = nm.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
-                ej.field_I.m(param0 + 17);
-                qa.e((byte) -117);
-                return;
-              }
-            } else {
-              ej.field_I.m(param0 + 17);
-              qa.e((byte) -117);
-              return;
-            }
-          } else {
-            ej.field_I.i((byte) -104);
-            return;
-          }
-        } else {
+        if (param0 != 0) {
           return;
+        }
+        ke.field_b = null;
+        t.field_g = false;
+        if (cg.field_l) {
+          ej.field_I.i((byte) -104);
+        } else {
+          var1 = fp.field_x;
+          if (var1 > 0) {
+            if (var1 != 1) {
+              ke.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
+            } else {
+              ke.field_b = ib.field_C;
+            }
+            ke.field_b = nm.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
+          }
+          ej.field_I.m(param0 + 17);
+          qa.e((byte) -117);
         }
     }
 
     public static void a(int param0) {
         field_g = null;
         if (param0 != 1) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -163,18 +113,18 @@ final class ei implements ub {
         this.field_i = 1;
         this.field_k = 1;
         try {
-            this.field_n = param0;
-            this.field_l = param8;
-            this.field_f = param1;
-            this.field_d = param7;
-            this.field_m = param5;
-            this.field_h = param6;
-            this.field_b = param9;
-            this.field_e = param3;
-            this.field_j = param4;
-            this.field_c = param2;
+          this.field_n = param0;
+          this.field_l = param8;
+          this.field_f = param1;
+          this.field_d = param7;
+          this.field_m = param5;
+          this.field_h = param6;
+          this.field_b = param9;
+          this.field_e = param3;
+          this.field_j = param4;
+          this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

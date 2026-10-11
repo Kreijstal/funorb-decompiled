@@ -20,56 +20,33 @@ final class cg {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            var1_int = 0;
-            L1: while (true) {
-              if (!on.b(-93)) {
-                L2: {
-                  kk.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
-                  if (!kk.field_m.d(-120)) {
-                    break L2;
-                  } else {
-                    var1_int = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = param0;
-                  if (var1_int == 0) {
-                    break L3;
-                  } else {
-                    if ((kk.field_m.field_d ^ -1) > -1) {
-                      break L3;
-                    } else {
-                      var2 = gn.field_a[kk.field_m.field_d];
-                      if (var2 == 2) {
-                        sl.a((byte) 85);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                }
-                stackIn_13_0 = var2;
-                break L0;
-              } else {
-                kk.field_m.a(21657);
-                if (!kk.field_m.d(-122)) {
-                  continue L1;
-                } else {
-                  var1_int = 1;
-                  continue L1;
-                }
-              }
+          var1_int = 0;
+          while (on.b(-93)) {
+            kk.field_m.a(21657);
+            if (!kk.field_m.d(-122)) {
+              continue;
+            }
+            var1_int = 1;
+          }
+          kk.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
+          if (kk.field_m.d(-120)) {
+            var1_int = 1;
+          }
+          var2 = param0;
+          if (var1_int != 0 &&
+            kk.field_m.field_d >= 0) {
+            var2 = gn.field_a[kk.field_m.field_d];
+            if (var2 == 2) {
+              sl.a((byte) 85);
             }
           }
+          stackIn_13_0 = var2;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw sh.a((Throwable) ((Object) var1), "cg.B(" + param0 + ')');
         }
-        return stackIn_13_0;
     }
 
     public static void a(boolean param0) {
@@ -79,7 +56,7 @@ final class cg {
         field_g = null;
         field_c = null;
         if (!param0) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
@@ -94,19 +71,18 @@ final class cg {
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> -1025215327;
-        param1 = param1 | param1 >>> -922314526;
-        param1 = param1 | param1 >>> -66557724;
-        if (param0 != -922314526) {
-          field_c = (byte[]) null;
-          param1 = param1 | param1 >>> 1701553032;
-          param1 = param1 | param1 >>> 1377342992;
-          return param1 - -1;
-        } else {
-          param1 = param1 | param1 >>> 1701553032;
-          param1 = param1 | param1 >>> 1377342992;
-          return param1 - -1;
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
+        if (param0 == -922314526) {
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
+          return param1 + 1;
         }
+        field_c = (byte[]) null;
+        param1 = param1 | param1 >>> 8;
+        param1 = param1 | param1 >>> 16;
+        return param1 + 1;
     }
 
     static {

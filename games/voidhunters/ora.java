@@ -13,7 +13,7 @@ abstract class ora {
     void a(tu param0, int param1) {
         this.field_e = param0;
         if (param1 != -28798) {
-            this.field_c = (kb) null;
+          this.field_c = (kb) null;
         }
     }
 

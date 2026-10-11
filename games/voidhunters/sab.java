@@ -52,160 +52,113 @@ final class sab extends rqa {
         int var46 = 0;
         var47 = VoidHunters.field_G;
         try {
-          L0: {
-            var8_int = 0;
-            var9 = param1;
-            var10 = 0;
-            var11 = param2 + -param5;
-            var12 = param1 + -param5;
-            var13 = param2 * param2;
-            var14 = param1 * param1;
-            var15 = var11 * var11;
-            var16 = var12 * var12;
-            var17 = var14 << 921547905;
-            var18 = var13 << 2037485057;
-            var19 = var16 << -779836255;
-            var20 = var15 << -483815647;
-            var21 = param1 << 404474721;
-            var22 = var12 << 996034113;
-            var23 = var17 + var13 * (1 - var21);
-            var24 = -((-1 + var21) * var18) + var14;
-            var25 = var19 + var15 * (1 - var22);
-            var26 = -(var20 * (var22 + -1)) + var16;
-            var27 = var13 << -125148606;
-            var28 = var14 << 340418562;
-            var29 = var15 << -706511262;
-            var30 = var16 << 2109724354;
-            var31 = 3 * var17;
-            var32 = var18 * (var21 + -3);
-            var33 = 3 * var19;
-            var34 = (var22 + -3) * var20;
-            var35 = var28;
-            var36 = var27 * (-1 + param1);
-            var37 = var30;
-            var38 = (var12 - 1) * var29;
-            var49 = rba.field_b[param3];
-            var48 = var49;
-            var39 = var48;
-            ww.a(param6, -var11 + param4, var39, (byte) 75, param4 + -param2);
-            ww.a(param0, param4 + var11, var49, (byte) 75, param4 - var11);
-            ww.a(param6, param4 + param2, var49, (byte) 75, param4 + var11);
-            L1: while (true) {
-              if (-1 <= (var9 ^ -1)) {
-                if (param7 == 21601) {
-                  break L0;
-                } else {
-                  field_o = -43;
-                  return;
-                }
-              } else {
-                L2: {
-                  if (var12 < var9) {
-                    stackIn_6_0 = 0;
-                    break L2;
-                  } else {
-                    stackIn_6_0 = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var40 = stackIn_6_0;
-                  if (-1 < (var23 ^ -1)) {
-                    L4: while (true) {
-                      if (-1 >= (var23 ^ -1)) {
-                        break L3;
-                      } else {
-                        var23 = var23 + var31;
-                        var24 = var24 + var35;
-                        var35 = var35 + var28;
-                        var31 = var31 + var28;
-                        var8_int++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-                L5: {
-                  if (var40 == 0) {
-                    break L5;
-                  } else {
-                    L6: {
-                      if (0 > var25) {
-                        L7: while (true) {
-                          if (0 <= var25) {
-                            break L6;
-                          } else {
-                            var25 = var25 + var33;
-                            var26 = var26 + var37;
-                            var37 = var37 + var30;
-                            var10++;
-                            var33 = var33 + var30;
-                            continue L7;
-                          }
-                        }
-                      } else {
-                        break L6;
-                      }
-                    }
-                    L8: {
-                      if (var26 >= 0) {
-                        break L8;
-                      } else {
-                        var26 = var26 + var37;
-                        var25 = var25 + var33;
-                        var10++;
-                        var33 = var33 + var30;
-                        var37 = var37 + var30;
-                        break L8;
-                      }
-                    }
-                    var25 = var25 + -var38;
-                    var26 = var26 + -var34;
-                    var38 = var38 - var29;
-                    var34 = var34 - var29;
-                    break L5;
-                  }
-                }
-                L9: {
-                  if (var24 >= 0) {
-                    break L9;
-                  } else {
-                    var23 = var23 + var31;
-                    var24 = var24 + var35;
-                    var31 = var31 + var28;
-                    var35 = var35 + var28;
-                    var8_int++;
-                    break L9;
-                  }
-                }
-                var23 = var23 + -var36;
-                var24 = var24 + -var32;
-                var36 = var36 - var27;
-                var9--;
-                var32 = var32 - var27;
-                var41 = -var9 + param3;
-                var42 = param3 + var9;
-                var43 = param4 - -var8_int;
-                var44 = param4 - var8_int;
-                if (var40 != 0) {
-                  var45 = var10 + param4;
-                  var46 = -var10 + param4;
-                  ww.a(param6, var46, rba.field_b[var41], (byte) 75, var44);
-                  ww.a(param0, var45, rba.field_b[var41], (byte) 75, var46);
-                  ww.a(param6, var43, rba.field_b[var41], (byte) 75, var45);
-                  ww.a(param6, var46, rba.field_b[var42], (byte) 75, var44);
-                  ww.a(param0, var45, rba.field_b[var42], (byte) 75, var46);
-                  ww.a(param6, var43, rba.field_b[var42], (byte) 75, var45);
-                  continue L1;
-                } else {
-                  ww.a(param6, var43, rba.field_b[var41], (byte) 75, var44);
-                  ww.a(param6, var43, rba.field_b[var42], (byte) 75, var44);
-                  continue L1;
-                }
+          var8_int = 0;
+          var9 = param1;
+          var10 = 0;
+          var11 = param2 - param5;
+          var12 = param1 - param5;
+          var13 = param2 * param2;
+          var14 = param1 * param1;
+          var15 = var11 * var11;
+          var16 = var12 * var12;
+          var17 = var14 << 1;
+          var18 = var13 << 1;
+          var19 = var16 << 1;
+          var20 = var15 << 1;
+          var21 = param1 << 1;
+          var22 = var12 << 1;
+          var23 = var17 + var13 * (1 - var21);
+          var24 = -((-1 + var21) * var18) + var14;
+          var25 = var19 + var15 * (1 - var22);
+          var26 = -(var20 * (var22 - 1)) + var16;
+          var27 = var13 << 2;
+          var28 = var14 << 2;
+          var29 = var15 << 2;
+          var30 = var16 << 2;
+          var31 = 3 * var17;
+          var32 = var18 * (var21 - 3);
+          var33 = 3 * var19;
+          var34 = (var22 - 3) * var20;
+          var35 = var28;
+          var36 = var27 * (-1 + param1);
+          var37 = var30;
+          var38 = (var12 - 1) * var29;
+          var49 = rba.field_b[param3];
+          var48 = var49;
+          var39 = var48;
+          ww.a(param6, -var11 + param4, var39, (byte) 75, param4 - param2);
+          ww.a(param0, param4 + var11, var49, (byte) 75, param4 - var11);
+          ww.a(param6, param4 + param2, var49, (byte) 75, param4 + var11);
+          while (true) {
+            if (var9 <= 0) {
+              if (param7 == 21601) {
+                return;
+              }
+              field_o = -43;
+              return;
+            }
+            stackIn_6_0 = (var12 < var9) ? 0 : 1;
+            var40 = stackIn_6_0;
+            if (var23 < 0) {
+              while (var23 < 0) {
+                var23 = var23 + var31;
+                var24 = var24 + var35;
+                var35 = var35 + var28;
+                var31 = var31 + var28;
+                var8_int++;
               }
             }
+            if (var40 != 0) {
+              if (0 > var25) {
+                while (0 > var25) {
+                  var25 = var25 + var33;
+                  var26 = var26 + var37;
+                  var37 = var37 + var30;
+                  var10++;
+                  var33 = var33 + var30;
+                }
+              }
+              if (var26 < 0) {
+                var26 = var26 + var37;
+                var25 = var25 + var33;
+                var10++;
+                var33 = var33 + var30;
+                var37 = var37 + var30;
+              }
+              var25 = var25 - var38;
+              var26 = var26 - var34;
+              var38 = var38 - var29;
+              var34 = var34 - var29;
+            }
+            if (var24 < 0) {
+              var23 = var23 + var31;
+              var24 = var24 + var35;
+              var31 = var31 + var28;
+              var35 = var35 + var28;
+              var8_int++;
+            }
+            var23 = var23 - var36;
+            var24 = var24 - var32;
+            var36 = var36 - var27;
+            var9--;
+            var32 = var32 - var27;
+            var41 = -var9 + param3;
+            var42 = param3 + var9;
+            var43 = param4 + var8_int;
+            var44 = param4 - var8_int;
+            if (var40 == 0) {
+              ww.a(param6, var43, rba.field_b[var41], (byte) 75, var44);
+              ww.a(param6, var43, rba.field_b[var42], (byte) 75, var44);
+              continue;
+            }
+            var45 = var10 + param4;
+            var46 = -var10 + param4;
+            ww.a(param6, var46, rba.field_b[var41], (byte) 75, var44);
+            ww.a(param0, var45, rba.field_b[var41], (byte) 75, var46);
+            ww.a(param6, var43, rba.field_b[var41], (byte) 75, var45);
+            ww.a(param6, var46, rba.field_b[var42], (byte) 75, var44);
+            ww.a(param0, var45, rba.field_b[var42], (byte) 75, var46);
+            ww.a(param6, var43, rba.field_b[var42], (byte) 75, var45);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,8 +169,8 @@ final class sab extends rqa {
 
     final static boolean e(byte param0) {
         int var1 = 26 % ((-51 - param0) / 45);
-        if (!(gpb.a("jaclib", (byte) 114))) {
-            return false;
+        if (!gpb.a("jaclib", (byte) 114)) {
+          return false;
         }
         return gpb.a("hw3d", (byte) 114);
     }
@@ -227,86 +180,42 @@ final class sab extends rqa {
         boolean[] stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         StringBuilder stackIn_16_1 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -31567) {
-                break L1;
-              } else {
-                field_o = 43;
-                break L1;
-              }
-            }
-            if (param2 != null) {
-              L2: {
-                L3: {
-                  if (param0 == null) {
-                    break L3;
-                  } else {
-                    if (param2.length != param0.length) {
-                      break L3;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                param0 = new boolean[param2.length];
-                break L2;
-              }
-              cua.a(param2, 0, param0, 0, param2.length);
-              stackIn_9_0 = (boolean[]) (param0);
-              break L0;
-            } else {
-              return null;
-            }
+          if (param1 != -31567) {
+            field_o = 43;
           }
+          if (param2 == null) {
+            return null;
+          }
+          if (param0 == null ||
+            param2.length != param0.length) {
+            param0 = new boolean[param2.length];
+          }
+          cua.a(param2, 0, param0, 0, param2.length);
+          stackIn_9_0 = (boolean[]) (param0);
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var3);
-
-            stackIn_13_1 = new StringBuilder().append("sab.C(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("sab.C(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          L5: {
-
-
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
-        return stackIn_9_0;
     }
 
     final nc a(nc[] param0, int param1) {
@@ -314,46 +223,26 @@ final class sab extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_o = -92;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(23, 118));
-            break L0;
+          if (param1 > -119) {
+            field_o = -92;
           }
+          stackIn_3_0 = new nc(frb.a(23, 118));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("sab.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("sab.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     sab(String param0, Class[] param1, String param2) {

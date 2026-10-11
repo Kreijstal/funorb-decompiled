@@ -13,127 +13,113 @@ final class li {
 
     final static void a(int param0, byte param1) {
         if (param1 < 8) {
-            li.a((byte) -49);
-            ms.a(0, param0);
-            return;
+          li.a((byte) -49);
+          ms.a(0, param0);
+          return;
         }
         ms.a(0, param0);
     }
 
     public final String toString() {
         if (this.field_b) {
-            return rm.a(this.field_d, (byte) 117) + "{" + this.field_d + "}";
+          return rm.a(this.field_d, (byte) 117) + "{" + this.field_d + "}";
         }
-        if (!(null != this.field_d)) {
-            return "null";
+        if (null == this.field_d) {
+          return "null";
         }
         return this.field_d.toString();
     }
 
     final static void a(int param0, String param1) {
         try {
-            np.field_Jb.a(new nq(param1), 3);
-            if (param0 != 2009) {
-                String var3 = (String) null;
-                li.a(79, (String) null);
-            }
+          np.field_Jb.a(new nq(param1), 3);
+          if (param0 != 2009) {
+            String var3 = (String) null;
+            li.a(79, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final long a(boolean param0) {
         if (this.field_d instanceof Long) {
           return ((Long) (this.field_d)).longValue();
-        } else {
-          if (!(this.field_d instanceof Integer)) {
-            if (!(this.field_d instanceof Short)) {
-              if (this.field_d instanceof Byte) {
-                return ((Byte) (this.field_d)).longValue();
-              } else {
-                if (this.field_d instanceof Double) {
-                  return ((Double) (this.field_d)).longValue();
-                } else {
-                  if (param0) {
-                    if (this.field_d instanceof Float) {
-                      return ((Float) (this.field_d)).longValue();
-                    } else {
-                      throw new ClassCastException();
-                    }
-                  } else {
-                    field_a = (hd) null;
-                    if (this.field_d instanceof Float) {
-                      return ((Float) (this.field_d)).longValue();
-                    } else {
-                      throw new ClassCastException();
-                    }
-                  }
-                }
-              }
-            } else {
-              return ((Short) (this.field_d)).longValue();
-            }
-          } else {
-            return ((Integer) (this.field_d)).longValue();
-          }
         }
+        if (this.field_d instanceof Integer) {
+          return ((Integer) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Short) {
+          return ((Short) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Byte) {
+          return ((Byte) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Double) {
+          return ((Double) (this.field_d)).longValue();
+        }
+        if (!param0) {
+          field_a = (hd) null;
+          if (!(this.field_d instanceof Float)) {
+            throw new ClassCastException();
+          }
+          return ((Float) (this.field_d)).longValue();
+        }
+        if (!(this.field_d instanceof Float)) {
+          throw new ClassCastException();
+        }
+        return ((Float) (this.field_d)).longValue();
     }
 
     final int b(int param0) {
-        if (param0 == -30368) {
-          if (this.field_d instanceof Integer) {
-            return ((Integer) (this.field_d)).intValue();
-          } else {
-            return (int)this.a(true);
-          }
-        } else {
+        if (param0 != -30368) {
           field_h = -65;
-          if (this.field_d instanceof Integer) {
-            return ((Integer) (this.field_d)).intValue();
-          } else {
+          if (!(this.field_d instanceof Integer)) {
             return (int)this.a(true);
           }
+          return ((Integer) (this.field_d)).intValue();
         }
+        if (!(this.field_d instanceof Integer)) {
+          return (int)this.a(true);
+        }
+        return ((Integer) (this.field_d)).intValue();
     }
 
     final boolean c(int param0) {
         if (param0 != 0) {
-            return true;
+          return true;
         }
         return ((Boolean) (this.field_d)).booleanValue();
     }
 
     final byte a(int param0) {
         if (param0 != 0) {
-            this.field_d = (Object) null;
-            if (!(!(this.field_d instanceof Byte))) {
-                return ((Byte) (this.field_d)).byteValue();
-            }
-            return (byte)(int)this.a(true);
-        }
-        if (!(!(this.field_d instanceof Byte))) {
+          this.field_d = (Object) null;
+          if (this.field_d instanceof Byte) {
             return ((Byte) (this.field_d)).byteValue();
+          }
+          return (byte)(int)this.a(true);
+        }
+        if (this.field_d instanceof Byte) {
+          return ((Byte) (this.field_d)).byteValue();
         }
         return (byte)(int)this.a(true);
     }
 
     public static void a(byte param0) {
-        String var2;
         field_c = null;
         field_f = null;
-        if (param0 > -101) {
-          var2 = (String) null;
-          li.a(121, (String) null);
-          field_g = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 <= -101) {
           field_g = null;
           field_e = null;
           field_a = null;
           return;
         }
+        String var2 = (String) null;
+        li.a(121, (String) null);
+        field_g = null;
+        field_e = null;
+        field_a = null;
     }
 
     li(int param0) {
@@ -173,10 +159,10 @@ final class li {
 
     li(Object param0) {
         try {
-            this.field_b = false;
-            this.field_d = param0;
+          this.field_b = false;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

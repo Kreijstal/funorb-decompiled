@@ -8,7 +8,7 @@ final class jd {
     public static void a(int param0) {
         field_a = null;
         if (param0 > -122) {
-            field_a = (pb) null;
+          field_a = (pb) null;
         }
     }
 

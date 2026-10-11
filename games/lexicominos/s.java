@@ -17,38 +17,20 @@ public class s {
         field_a = param1;
         field_e = param0;
         try {
-          L0: {
-            L1: {
-              field_c = System.getProperty("user.home");
-              if (field_c == null) {
-                break L1;
-              } else {
-                field_c = field_c + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_c = System.getProperty("user.home");
+          if (field_c != null) {
+            field_c = field_c + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_d = true;
         if (param2) {
           return;
-        } else {
-          L3: {
-            if (field_c != null) {
-              break L3;
-            } else {
-              field_c = "~/";
-              break L3;
-            }
-          }
-          return;
+        }
+        if (field_c == null) {
+          field_c = "~/";
         }
     }
 
@@ -58,8 +40,8 @@ public class s {
 
     public static File a(boolean param0, String param1) {
         if (!param0) {
-            field_e = 92;
-            return s.a(param1, field_a, field_e, (byte) -45);
+          field_e = 92;
+          return s.a(param1, field_a, field_e, (byte) -45);
         }
         return s.a(param1, field_a, field_e, (byte) -45);
     }

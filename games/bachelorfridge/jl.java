@@ -8,10 +8,10 @@ final class jl extends bca {
 
     final void a(op param0, int param1) {
         try {
-            this.a(param0, (byte) -2);
-            int var3_int = -128 % ((12 - param1) / 35);
+          this.a(param0, (byte) -2);
+          int var3_int = -128 % ((12 - param1) / 35);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "jl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "jl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -25,53 +25,30 @@ final class jl extends bca {
         int var12 = 0;
         int var14 = 0;
         int[] var18 = null;
+        int var12Lifetime1;
+        int var12Lifetime2;
         var14 = BachelorFridge.field_y;
         try {
-          L0: {
-            var9 = param3 - param0;
-            var8_int = param5 + param0;
-            var12 = param5;
-            L1: while (true) {
-              if (var8_int <= var12) {
-                L2: {
-                  if (param4 == -1) {
-                    break L2;
-                  } else {
-                    jl.d(62);
-                    break L2;
-                  }
-                }
-                var10 = param1 + param0;
-                var12 = param3;
-                L3: while (true) {
-                  if (var12 <= var9) {
-                    var11 = param6 + -param0;
-                    var12 = var8_int;
-                    L4: while (true) {
-                      if (var9 < var12) {
-                        break L0;
-                      } else {
-                        var18 = tj.field_b[var12];
-                        hba.a(param7, param1, var18, param4 + 8, var10);
-                        hba.a(param2, var10, var18, 7, var11);
-                        hba.a(param7, var11, var18, param4 ^ -8, param6);
-                        var12++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    hba.a(param7, param1, tj.field_b[var12], 7, param6);
-                    var12--;
-                    continue L3;
-                  }
-                }
-              } else {
-                hba.a(param7, param1, tj.field_b[var12], 7, param6);
-                var12++;
-                continue L1;
-              }
-            }
+          var9 = param3 - param0;
+          var8_int = param5 + param0;
+          for (var12 = param5; var8_int > var12; var12++) {
+            hba.a(param7, param1, tj.field_b[var12], 7, param6);
           }
+          if (param4 != -1) {
+            jl.d(62);
+          }
+          var10 = param1 + param0;
+          for (var12Lifetime1 = param3; var12Lifetime1 > var9; var12Lifetime1--) {
+            hba.a(param7, param1, tj.field_b[var12Lifetime1], 7, param6);
+          }
+          var11 = param6 - param0;
+          for (var12Lifetime2 = var8_int; var9 >= var12Lifetime2; var12Lifetime2++) {
+            var18 = tj.field_b[var12Lifetime2];
+            hba.a(param7, param1, var18, param4 + 8, var10);
+            hba.a(param2, var10, var18, 7, var11);
+            hba.a(param7, var11, var18, param4 ^ -8, param6);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
@@ -85,47 +62,27 @@ final class jl extends bca {
         maa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 5) {
-                break L1;
-              } else {
-                var4 = (op) null;
-                this.a((op) null, -117);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new maa(param1, (jl) (this));
-            break L0;
+          if (param0 != 5) {
+            var4 = (op) null;
+            this.a((op) null, -117);
           }
+          stackIn_3_0 = new maa(param1, this);
+          return (at) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("jl.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("jl.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (at) ((Object) stackIn_3_0);
     }
 
     jl(lu param0) {
@@ -133,47 +90,31 @@ final class jl extends bca {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            this.field_k = param0.e((byte) 78);
-            this.field_o = new eaa();
-            var2_int = param0.b(16711935);
-            L1: while (true) {
-              var2_int--;
-              if (var2_int < 0) {
-                break L0;
-              } else {
-                this.field_o.a(dca.a((byte) 102, param0), true);
-                continue L1;
-              }
+          this.field_k = param0.e((byte) 78);
+          this.field_o = new eaa();
+          var2_int = param0.b(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              return;
             }
+            this.field_o.a(dca.a((byte) 102, param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("jl.<init>(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("jl.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -183,9 +124,9 @@ final class jl extends bca {
 
     public static void d(int param0) {
         if (param0 != -17509) {
-            field_r = false;
-            field_q = null;
-            return;
+          field_r = false;
+          field_q = null;
+          return;
         }
         field_q = null;
     }

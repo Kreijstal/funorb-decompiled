@@ -15,47 +15,26 @@ final class lh {
         if (null != pm.field_l) {
           var1 = pm.field_l;
           synchronized (var1) {
-            L0: {
-              pm.field_l = null;
-              break L0;
-            }
+            pm.field_l = null;
           }
-          L1: {
-            if (param0) {
-              break L1;
-            } else {
-              lh.b(false);
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            if (param0) {
-              break L2;
-            } else {
-              lh.b(false);
-              break L2;
-            }
-          }
-          return;
+        }
+        if (!param0) {
+          lh.b(false);
         }
     }
 
     public static void b(boolean param0) {
         field_b = null;
-        if (param0) {
-          lh.a(true);
-          field_d = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_c = null;
           field_a = null;
           return;
         }
+        lh.a(true);
+        field_d = null;
+        field_c = null;
+        field_a = null;
     }
 
     static {

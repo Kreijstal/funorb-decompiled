@@ -14,36 +14,40 @@ final class h extends hl {
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
         try {
-            String var3 = null;
-            String var5 = null;
-            String var4 = null;
+          String var3 = null;
+          String var5 = null;
+          String var4 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          try {
+            jf.field_l = param2;
             try {
-                jf.field_l = param2;
-                try {
-                    if (param1 <= 34) {
-                        h.a(81, 58);
-                    }
-                    var3 = param0.getParameter("cookieprefix");
-                    var5 = var3;
-                    var5 = var3;
-                    var4 = param0.getParameter("cookiehost");
-                    var5 = var4;
-                    var5 = var4;
-                    var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                    if (-1 == (param2.length() ^ -1)) {
-                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    vh.a(param0, "document.cookie=\"" + var5 + "\"", -12300);
-                } catch (Throwable throwable) {
-                }
-                tj.a(true, param0);
-            } catch (RuntimeException runtimeException) {
-                throw ma.a((Throwable) ((Object) runtimeException), "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+              if (param1 <= 34) {
+                h.a(81, 58);
+              }
+              var3 = param0.getParameter("cookieprefix");
+              var5 = var3;
+              var5Lifetime1 = var3;
+              var4 = param0.getParameter("cookiehost");
+              var5Lifetime2 = var4;
+              var5Lifetime3 = var4;
+              var5Lifetime4 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+              if (param2.length() == 0) {
+                var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              vh.a(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -12300);
+            } catch (Throwable throwable) {
             }
+            tj.a(true, param0);
+          } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) ((Object) runtimeException), "h.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -53,7 +57,7 @@ final class h extends hl {
         int var4 = sj.field_b.get(5);
         int var5 = sj.field_b.get(2);
         if (param0 > -8) {
-            return (String) null;
+          return (String) null;
         }
         int var6 = sj.field_b.get(1);
         int var7 = sj.field_b.get(11);
@@ -66,40 +70,41 @@ final class h extends hl {
         gi var1 = null;
         int var2 = Main.field_T;
         try {
-            wd.field_e.f();
-            if (param0 != -84) {
-                field_F = -57;
+          wd.field_e.f();
+          if (param0 != -84) {
+            field_F = -57;
+          }
+          cb.field_g.f();
+          bi.field_d = bi.field_d - 1;
+          if (bi.field_d == 0) {
+            bi.field_d = 200;
+            var1 = (gi) (aj.field_s.a((byte) 74));
+            while (var1 != null) {
+              if (!var1.field_i.b(125)) {
+                var1.c(84);
+              }
+              var1 = (gi) (aj.field_s.b((byte) -92));
             }
-            cb.field_g.f();
-            bi.field_d = bi.field_d - 1;
-            if (bi.field_d == 0) {
-                bi.field_d = 200;
-                var1 = (gi) ((Object) aj.field_s.a((byte) 74));
-                while (var1 != null) {
-                    if (!var1.field_i.b(125)) {
-                        var1.c(84);
-                    }
-                    var1 = (gi) ((Object) aj.field_s.b((byte) -92));
-                }
-            }
+          }
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "h.HA(" + param0 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "h.HA(" + param0 + ')');
         }
     }
 
     final int a(byte param0, int param1) {
-        if ((param1 ^ -1) > -1 || this.field_H.a((byte) 109) <= param1) {
-            return -1;
+        if (param1 < 0 ||
+          this.field_H.a((byte) 109) <= param1) {
+          return -1;
         }
         if (param0 != -63) {
-            field_F = 122;
+          field_F = 122;
         }
         return this.field_H.c(param1, 102);
     }
 
     final int a(boolean param0) {
         if (!param0) {
-            field_F = -122;
+          field_F = -122;
         }
         return this.field_H.a((byte) 123);
     }
@@ -117,145 +122,84 @@ final class h extends hl {
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
-        if (-1 != (param3 ^ -1)) {
-            var6[4] = te.a(64, -126, param3);
+        if (param3 != 0) {
+          var6[4] = te.a(64, -126, param3);
         }
         if (param2 != 15762) {
-            return (kc[]) null;
+          return (kc[]) null;
         }
         return var5;
     }
 
     final boolean a(int param0, int param1, int param2, int param3, lk param4, int param5, int param6) {
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_24_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
+        int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        int decompiledRegionSelector0 = 0;
+        String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         var14 = Main.field_T;
         try {
-          L0: {
-            if (!super.a(param0, param1, param2, -96, param4, param5, param6)) {
-              if (param3 <= -14) {
-                stackIn_24_0 = 0;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_22_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              L1: {
-                var8_int = -this.field_K + -param0 + param2;
-                var9 = this.field_h + -(2 * this.field_K);
-                if (var8_int <= var9) {
-                  break L1;
-                } else {
-                  var8_int = var9;
-                  break L1;
-                }
-              }
-              L2: {
-                if ((var8_int ^ -1) <= -1) {
-                  break L2;
-                } else {
-                  var8_int = 0;
-                  break L2;
-                }
-              }
-              L3: {
-                var8_int = this.field_G * var8_int / var9;
-                if (param5 != 1) {
-                  if ((param5 ^ -1) == -3) {
-                    var10 = 2147483647;
-                    var11 = -1;
-                    var12 = 0;
-                    L4: while (true) {
-                      if (var12 >= this.field_H.a((byte) 99)) {
-                        if ((var11 ^ -1) > -1) {
-                          break L3;
-                        } else {
-                          this.field_H.e(0, var11);
-                          break L3;
-                        }
-                      } else {
-                        var13 = this.field_H.c(var12, -94) + -var8_int;
-                        var13 = var13 * var13;
-                        if (var10 > var13) {
-                          var10 = var13;
-                          var11 = var12;
-                          var12++;
-                          continue L4;
-                        } else {
-                          var12++;
-                          continue L4;
-                        }
-                      }
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  this.field_H.a(var8_int, 1);
-                  break L3;
-                }
-              }
-              stackIn_19_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (!super.a(param0, param1, param2, -96, param4, param5, param6)) {
+            if (param3 <= -14) {
+              return false;
             }
+            return true;
           }
+          var8_int = -this.field_K - param0 + param2;
+          var9 = this.field_h - 2 * this.field_K;
+          if (var8_int > var9) {
+            var8_int = var9;
+          }
+          if (var8_int < 0) {
+            var8_int = 0;
+          }
+          var8_int = this.field_G * var8_int / var9;
+          if (param5 != 1) {
+            if (param5 != 2) {
+              return true;
+            }
+            var10 = 2147483647;
+            var11 = -1;
+            for (var12 = 0; var12 < this.field_H.a((byte) 99); var12++) {
+              var13 = this.field_H.c(var12, -94) - var8_int;
+              var13 = var13 * var13;
+              if (var10 > var13) {
+                var10 = var13;
+                var11 = var12;
+              }
+            }
+            if (var11 >= 0) {
+              this.field_H.e(0, var11);
+            }
+          } else {
+            this.field_H.a(var8_int, 1);
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var8 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var8);
-
-            stackIn_27_1 = new StringBuilder().append("h.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L5;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L5;
-            }
-          }
-          throw ma.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param5 + ',' + param6 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_19_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_22_0 != 0;
+          var8 = decompiledCaughtException;
+          stackIn_28_0 = var8;
+          stackIn_28_1 = new StringBuilder().append("h.K(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_29_2 = "null";
           } else {
-            return stackIn_24_0 != 0;
+            stackIn_29_2 = "{...}";
           }
+          throw ma.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_E = null;
         if (param0 != -26526) {
-            field_I = (fe) null;
+          field_I = (fe) null;
         }
         field_I = null;
     }
@@ -266,7 +210,7 @@ final class h extends hl {
 
     final int f(byte param0) {
         if (param0 >= -31) {
-            h.a(53, -35);
+          h.a(53, -35);
         }
         return this.field_G;
     }
@@ -274,7 +218,7 @@ final class h extends hl {
     final static void a(int param0, int param1) {
         qb.field_f = 1000000000L / (long)param1;
         if (param0 != -17685) {
-            h.a(-3, 103);
+          h.a(-3, 103);
         }
     }
 

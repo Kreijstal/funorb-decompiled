@@ -22,35 +22,20 @@ final class ck extends k {
         RuntimeException var2 = null;
         var3 = EscapeVector.field_A;
         try {
-          L0: {
-            var4 = (ik) ((Object) vj.field_d.a(false));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param1 == 105) {
-                    break L2;
-                  } else {
-                    field_q = -25L;
-                    break L2;
-                  }
-                }
-                var5 = (ij) ((Object) qd.field_n.a(false));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    aj.a(42, param0, var5);
-                    var5 = (ij) ((Object) qd.field_n.b((byte) 70));
-                    continue L3;
-                  }
-                }
-              } else {
-                ig.a(param1 + -209, param0, var4);
-                var4 = (ik) ((Object) vj.field_d.b((byte) 70));
-                continue L1;
-              }
-            }
+          var4 = (ik) (vj.field_d.a(false));
+          while (var4 != null) {
+            ig.a(param1 - 209, param0, var4);
+            var4 = (ik) (vj.field_d.b((byte) 70));
           }
+          if (param1 != 105) {
+            field_q = -25L;
+          }
+          var5 = (ij) (qd.field_n.a(false));
+          while (var5 != null) {
+            aj.a(42, param0, var5);
+            var5 = (ij) (qd.field_n.b((byte) 70));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -66,7 +51,7 @@ final class ck extends k {
         field_A = null;
         field_t = null;
         if (param0 != -31) {
-            ck.a((byte) 116);
+          ck.a((byte) 116);
         }
     }
 
@@ -76,8 +61,6 @@ final class ck extends k {
         int stackIn_16_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -85,88 +68,44 @@ final class ck extends k {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
-            L1: {
-              if (!param3.field_u) {
-                if (param3.h(0)) {
-                  stackIn_6_0 = 1;
-                  break L1;
-                } else {
-                  stackIn_6_0 = 0;
-                  break L1;
-                }
-              } else {
-                stackIn_6_0 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              var6_int = stackIn_6_0;
-              if (!(param3 instanceof hc)) {
-                break L2;
-              } else {
-                param4 = param4 & ((hc) ((Object) param3)).field_y;
-                break L2;
-              }
-            }
-            L3: {
-              if (!param4) {
-                stackIn_13_0 = this.field_z;
-                break L3;
-              } else {
-                if (var6_int != 0) {
-                  stackIn_13_0 = this.field_w;
-                  break L3;
-                } else {
-                  stackIn_13_0 = this.field_y;
-                  break L3;
-                }
-              }
-            }
-            L4: {
-              var7 = stackIn_13_0;
-              if (!param4) {
-                stackIn_16_0 = 7105644;
-                break L4;
-              } else {
-                stackIn_16_0 = 16777215;
-                break L4;
-              }
-            }
-            L5: {
-              var8 = stackIn_16_0;
-              if (param2 < -14) {
-                break L5;
-              } else {
-                this.field_w = -93;
-                break L5;
-              }
-            }
-            qe.a(-100, param3.field_j + (param1 + (-this.field_s[0].field_z + param3.field_x >> -1157166431)), param3.field_g, this.field_s, var7, param0 + param3.field_k);
-            this.field_l.a(param3.field_l, param0 + param3.field_k, param3.field_j + param1 + -2, param3.field_g, param3.field_x, var8, -1, 1, 1, this.field_l.field_r);
-            break L0;
+          if (!param3.field_u) {
+            stackIn_6_0 = (param3.h(0)) ? 1 : 0;
+          } else {
+            stackIn_6_0 = 1;
           }
+          var6_int = stackIn_6_0;
+          if (param3 instanceof hc) {
+            param4 = param4 & ((hc) (param3)).field_y;
+          }
+          if (!param4) {
+            stackIn_13_0 = this.field_z;
+          } else {
+            if (var6_int != 0) {
+              stackIn_13_0 = this.field_w;
+            } else {
+              stackIn_13_0 = this.field_y;
+            }
+          }
+          var7 = stackIn_13_0;
+          stackIn_16_0 = (!param4) ? 7105644 : 16777215;
+          var8 = stackIn_16_0;
+          if (param2 >= -14) {
+            this.field_w = -93;
+          }
+          qe.a(-100, param3.field_j + (param1 + (-this.field_s[0].field_z + param3.field_x >> 1)), param3.field_g, this.field_s, var7, param0 + param3.field_k);
+          this.field_l.a(param3.field_l, param0 + param3.field_k, param3.field_j + param1 - 2, param3.field_g, param3.field_x, var8, -1, 1, 1, this.field_l.field_r);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("ck.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -183,12 +122,12 @@ final class ck extends k {
     }
 
     final static void a(int param0, int param1) {
-        if (!(bk.field_r == null)) {
-            bk.field_r.b(-1, param1);
+        if (bk.field_r != null) {
+          bk.field_r.b(-1, param1);
         }
         if (param0 < 42) {
-            field_q = -72L;
-            return;
+          field_q = -72L;
+          return;
         }
     }
 

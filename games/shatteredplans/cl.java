@@ -16,18 +16,18 @@ final class cl extends oh {
 
     final void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_r = param6;
-            this.field_i = param2;
-            this.field_j = param7;
-            this.field_h = param4;
-            this.field_k = param3;
-            this.field_o = param0;
-            this.field_l = param1;
-            if (param5 != 5) {
-                field_q = (String[]) null;
-            }
+          this.field_r = param6;
+          this.field_i = param2;
+          this.field_j = param7;
+          this.field_h = param4;
+          this.field_k = param3;
+          this.field_o = param0;
+          this.field_l = param1;
+          if (param5 != 5) {
+            field_q = (String[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -43,97 +43,59 @@ final class cl extends oh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int var9_intLifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L0: {
-            var9_int = 0;
-            L1: while (true) {
-              if (var9_int >= param4) {
-                L2: {
-                  gf.f(param8 + param0, param7, -param8 + param3, 16777215);
-                  gf.f(param0, param4 + (param7 + -1), 1 + -param8 + param3, 16777215);
-                  if (param2 == -22466) {
-                    break L2;
-                  } else {
-                    cl.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
-                    break L2;
-                  }
-                }
-                var9_int = 1;
-                L3: while (true) {
-                  if (var9_int >= -1 + param4) {
-                    break L0;
-                  } else {
-                    L4: {
-                      var10 = param7 - -var9_int;
-                      var11 = (var9_int + -1) * 256 / (param4 + -2);
-                      if (var9_int >= 2) {
-                        stackIn_18_0 = ui.a(param6, param1, param2 + 22363, var11);
-                        break L4;
-                      } else {
-                        stackIn_18_0 = param5;
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      var12 = stackIn_18_0;
-                      var13 = param8 + -var9_int;
-                      if (var13 < 0) {
-                        var13 = 0;
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    L6: {
-                      var14 = -param8 + (param4 + param3 - var9_int);
-                      if (var14 > param3) {
-                        var14 = param3;
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    }
-                    var15 = var14 + -var13;
-                    var13 = var13 + param0;
-                    var14 = var14 + param0;
-                    gf.a(var13, var10, 16777215);
-                    gf.f(1 + var13, var10, var15 + -4, var12);
-                    gf.f(-4 + var14, var10, 3, param5);
-                    gf.a(var14 + -1, var10, 16777215);
-                    var9_int++;
-                    continue L3;
-                  }
-                }
-              } else {
-                L7: {
-                  var10 = var9_int + param7;
-                  var11 = param8 + -var9_int;
-                  if (-1 < (var11 ^ -1)) {
-                    var11 = 0;
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                L8: {
-                  var12 = -var9_int + (param3 + param4) - param8;
-                  if (param3 < var12) {
-                    var12 = param3;
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                var13 = var12 + -var11;
-                var11 = var11 + param0;
-                var12 = var12 + param0;
-                gf.f(5 + var11, 5 + var10, var13, 0, 128);
-                var9_int++;
-                continue L1;
-              }
+          for (var9_int = 0; var9_int < param4; var9_int++) {
+            var10 = var9_int + param7;
+            var11 = param8 - var9_int;
+            if (var11 < 0) {
+              var11 = 0;
             }
+            var12 = -var9_int + (param3 + param4) - param8;
+            if (param3 < var12) {
+              var12 = param3;
+            }
+            var13 = var12 - var11;
+            var11 = var11 + param0;
+            var12 = var12 + param0;
+            gf.f(5 + var11, 5 + var10, var13, 0, 128);
           }
+          gf.f(param8 + param0, param7, -param8 + param3, 16777215);
+          gf.f(param0, param4 + (param7 - 1), 1 - param8 + param3, 16777215);
+          if (param2 != -22466) {
+            cl.a(73, -126, -112, 94, -98, 98, 92, 119, -99);
+          }
+          for (var9_intLifetime1 = 1; var9_intLifetime1 < -1 + param4; var9_intLifetime1++) {
+            var10Lifetime1 = param7 + var9_intLifetime1;
+            var11Lifetime1 = (var9_intLifetime1 - 1) * 256 / (param4 - 2);
+            if (var9_intLifetime1 >= 2) {
+              stackIn_18_0 = ui.a(param6, param1, param2 + 22363, var11Lifetime1);
+            } else {
+              stackIn_18_0 = param5;
+            }
+            var12Lifetime1 = stackIn_18_0;
+            var13Lifetime1 = param8 - var9_intLifetime1;
+            if (var13Lifetime1 < 0) {
+              var13Lifetime1 = 0;
+            }
+            var14 = -param8 + (param4 + param3 - var9_intLifetime1);
+            if (var14 > param3) {
+              var14 = param3;
+            }
+            var15 = var14 - var13Lifetime1;
+            var13Lifetime1 = var13Lifetime1 + param0;
+            var14 = var14 + param0;
+            gf.a(var13Lifetime1, var10Lifetime1, 16777215);
+            gf.f(1 + var13Lifetime1, var10Lifetime1, var15 - 4, var12Lifetime1);
+            gf.f(-4 + var14, var10Lifetime1, 3, param5);
+            gf.a(var14 - 1, var10Lifetime1, 16777215);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
@@ -145,7 +107,7 @@ final class cl extends oh {
         field_p = null;
         field_q = null;
         if (param0 != 16777215) {
-            cl.a(-104);
+          cl.a(-104);
         }
         field_m = null;
     }

@@ -6,23 +6,23 @@ final class gl {
         int var19 = 0;
         int var18 = 0;
         while (param17 < 0) {
-            param3 = param14;
-            param4 = param12;
-            for (var19 = param13; var19 < 0; var19++) {
-                if (param3 < param6) {
-                    param0 = param10[(param6 - param3) * param9 / param6];
-                    param1 = param8[param7];
-                    var18 = 256 - (param0 & 255);
-                    param8[param7] = (param1 & 16711935) * var18 >> 8 & 16711935 | (param1 & 65280) * var18 >> 8 & 65280;
-                }
-                param7++;
-                param3 = param3 + param4;
-                param4 = param4 + param5;
+          param3 = param14;
+          param4 = param12;
+          for (var19 = param13; var19 < 0; var19++) {
+            if (param3 < param6) {
+              param0 = param10[(param6 - param3) * param9 / param6];
+              param1 = param8[param7];
+              var18 = 256 - (param0 & 255);
+              param8[param7] = (param1 & 16711935) * var18 >> 8 & 16711935 | (param1 & 65280) * var18 >> 8 & 65280;
             }
-            param7 = param7 + param11;
-            param14 = param14 + param15;
-            param15 = param15 + param16;
-            param17++;
+            param7++;
+            param3 = param3 + param4;
+            param4 = param4 + param5;
+          }
+          param7 = param7 + param11;
+          param14 = param14 + param15;
+          param15 = param15 + param16;
+          param17++;
         }
     }
 
@@ -36,15 +36,15 @@ final class gl {
         int var8 = 0;
         int var9 = var4.length;
         for (var10 = 0; var10 < var9; var10++) {
-            var3[var10] = new bd(var5, var6);
-            sb.a(var3[var10], -122);
-            param0.c(-var7, -var8);
-            var7 = var7 + var5;
-            if (var7 >= param0.field_z) {
-                var7 = 0;
-                var8 = var8 + var6;
-            }
-            eh.b(false);
+          var3[var10] = new bd(var5, var6);
+          sb.a(var3[var10], -122);
+          param0.c(-var7, -var8);
+          var7 = var7 + var5;
+          if (var7 >= param0.field_z) {
+            var7 = 0;
+            var8 = var8 + var6;
+          }
+          eh.b(false);
         }
         return var3;
     }
@@ -56,16 +56,16 @@ final class gl {
         int var8 = param1 - param2 >> 4;
         int var9 = param1 + param2 + 15 >> 4;
         if (var6 < si.field_b) {
-            var6 = si.field_b;
+          var6 = si.field_b;
         }
         if (var7 > si.field_l) {
-            var7 = si.field_l;
+          var7 = si.field_l;
         }
         if (var8 < si.field_j) {
-            var8 = si.field_j;
+          var8 = si.field_j;
         }
         if (var9 > si.field_a) {
-            var9 = si.field_a;
+          var9 = si.field_a;
         }
         int var10 = (var6 << 4) - param0;
         var10 = var10 * var10;

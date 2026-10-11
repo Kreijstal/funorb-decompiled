@@ -6,7 +6,7 @@ final class sc extends og implements java.awt.event.MouseWheelListener {
 
     final synchronized int a(byte param0) {
         if (param0 != 29) {
-            return -35;
+          return -35;
         }
         int var2 = this.field_c;
         this.field_c = 0;
@@ -25,7 +25,7 @@ final class sc extends og implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, byte param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-        int var3 = 63 / ((param1 - -57) / 63);
+        int var3 = 63 / ((param1 + 57) / 63);
     }
 
     sc() {

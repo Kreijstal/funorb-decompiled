@@ -7,9 +7,9 @@ final class dva {
 
     public static void a(byte param0) {
         if (param0 < 27) {
-            field_a = (String) null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -9,7 +9,7 @@ class dg {
         this.field_b = param0;
         this.field_a = (jaclib.memory.Buffer) ((Object) this.field_b.field_Kb.a(param2, false));
         if (param1 != null) {
-            this.field_a.a(param1, 0, 0, param2);
+          this.field_a.a(param1, 0, 0, param2);
         }
     }
 }

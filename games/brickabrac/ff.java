@@ -24,65 +24,37 @@ abstract class ff {
         wg stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = eh.a(param0, param5, param3, 119, param1, param2);
-            var6 = var8;
-            if (var8 != null) {
-              L1: {
-                var7 = new wg();
-                var7.field_a = var8;
-                var7.field_a.add((java.awt.Component) ((Object) var7));
-                var7.setBounds(0, 0, param2, param3);
-                var7.addFocusListener(var7);
-                if (param4) {
-                  break L1;
-                } else {
-                  ff.a((byte) 7, -111);
-                  break L1;
-                }
-              }
-              var7.requestFocus();
-              stackIn_6_0 = (wg) (var7);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var8 = eh.a(param0, param5, param3, 119, param1, param2);
+          var6 = var8;
+          if (var8 == null) {
+            stackIn_2_0 = null;
+            return (wg) (stackIn_2_0);
           }
+          var7 = new wg();
+          var7.field_a = var8;
+          var7.field_a.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(0, 0, param2, param3);
+          var7.addFocusListener(var7);
+          if (!param4) {
+            ff.a((byte) 7, -111);
+          }
+          var7.requestFocus();
+          stackIn_6_0 = var7;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var6_ref);
-
-            stackIn_9_1 = new StringBuilder().append("ff.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_9_0 = var6_ref;
+          stackIn_9_1 = new StringBuilder().append("ff.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (wg) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_6_0;
+          throw qb.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -105,47 +77,28 @@ abstract class ff {
         int var3 = 0;
         sp var4 = null;
         eg var5 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            var4 = (sp) ((Object) tm.field_f.d(-84));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param0 <= -34) {
-                  var5 = (eg) ((Object) qc.field_n.d(-71));
-                  L2: while (true) {
-                    if (var5 == null) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      uo.a(var5, param1, (byte) 68);
-                      var5 = (eg) ((Object) qc.field_n.a((byte) 116));
-                      continue L2;
-                    }
-                  }
-                } else {
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                ke.a(param1, var4, 14989);
-                var4 = (sp) ((Object) tm.field_f.a((byte) 116));
-                continue L1;
-              }
-            }
+          var4 = (sp) (tm.field_f.d(-84));
+          while (var4 != null) {
+            ke.a(param1, var4, 14989);
+            var4 = (sp) (tm.field_f.a((byte) 116));
           }
+          if (param0 > -34) {
+            return;
+          }
+          var5 = (eg) (qc.field_n.d(-71));
+          while (var5 != null) {
+            uo.a(var5, param1, (byte) 68);
+            var5 = (eg) (qc.field_n.a((byte) 116));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           throw qb.a((Throwable) ((Object) var2), "ff.G(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

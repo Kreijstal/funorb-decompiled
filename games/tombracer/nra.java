@@ -29,12 +29,12 @@ final class nra implements bo {
         param1.a(1736565456, this.field_n);
         param1.a(param0 ^ 1736565272, this.field_b);
         if (param0 != 200) {
-            return;
+          return;
         }
         try {
-            param1.a(param0 ^ 1736565272, this.field_l);
+          param1.a(param0 ^ 1736565272, this.field_l);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nra.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -43,138 +43,104 @@ final class nra implements bo {
         this.field_m = param0.d(122);
         this.field_f = param0.h(param1 + 274);
         if (param1 != -19) {
-            return;
+          return;
         }
         try {
-            this.field_h = param0.e(-126);
-            this.field_d = param0.e(-51);
-            this.field_i = param0.e(-25);
-            this.field_k = param0.e(100);
-            this.field_e = param0.b(290646880);
-            this.field_n = param0.b(param1 + 290646899);
-            this.field_b = param0.b(param1 ^ -290646899);
-            this.field_l = param0.b(290646880);
+          this.field_h = param0.e(-126);
+          this.field_d = param0.e(-51);
+          this.field_i = param0.e(-25);
+          this.field_k = param0.e(100);
+          this.field_e = param0.b(290646880);
+          this.field_n = param0.b(param1 + 290646899);
+          this.field_b = param0.b(param1 ^ -290646899);
+          this.field_l = param0.b(290646880);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nra.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 27) {
-            return;
+          return;
         }
         field_g = (int[][]) null;
         field_c = null;
     }
 
     final static void a(byte param0, int param1, int param2, int[] param3, int param4) {
-        int var5_int = 0;
-        int var6 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            param4--;
-            param2--;
-            var5_int = param2 + -7;
-            if (param0 == -55) {
-              L1: while (true) {
-                if (param4 >= var5_int) {
-                  L2: while (true) {
-                    if (param4 >= param2) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param4++;
-                      param3[param4] = param1;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  param4++;
-                  param3[param4] = param1;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          param4--;
+          param2--;
+          var5_int = param2 - 7;
+          if (param0 != -55) {
+            return;
           }
+          while (param4 < var5_int) {
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+            param4++;
+            param3[param4] = param1;
+          }
+          while (param4 < param2) {
+            param4++;
+            param3[param4] = param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var5);
-
-            stackIn_10_1 = new StringBuilder().append("nra.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_10_0 = var5;
+          stackIn_10_1 = new StringBuilder().append("nra.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(int param0, long param1) {
         this.field_j = param1;
         if (param0 == -7) {
-            return;
+          return;
         }
         this.field_k = -64;
     }
 
     final void a(long param0, long param1, boolean param2, long param3, long param4) {
-        kh var11;
         this.field_e = param3;
         this.field_l = param0;
-        if (param2) {
-          var11 = (kh) null;
-          this.a((kh) null, (byte) -83);
-          this.field_n = param1;
-          this.field_b = param4;
-          return;
-        } else {
+        if (!param2) {
           this.field_n = param1;
           this.field_b = param4;
           return;
         }
+        kh var11 = (kh) null;
+        this.a((kh) null, (byte) -83);
+        this.field_n = param1;
+        this.field_b = param4;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -192,9 +158,9 @@ final class nra implements bo {
 
     final void a(int param0, int param1) {
         if (param1 > -69) {
-            this.field_e = 126L;
-            this.field_m = param0;
-            return;
+          this.field_e = 126L;
+          this.field_m = param0;
+          return;
         }
         this.field_m = param0;
     }

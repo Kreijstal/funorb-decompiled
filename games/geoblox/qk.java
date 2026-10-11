@@ -119,10 +119,9 @@ class qk {
             if (field_r.field_g[var2] == this) {
               field_r.field_g[var2] = null;
             }
-            if (field_r.field_g[var2] == null) {
-              continue;
+            if (field_r.field_g[var2] != null) {
+              var1 = 0;
             }
-            var1 = 0;
           }
           if (var1 != 0) {
             field_r.field_f = true;

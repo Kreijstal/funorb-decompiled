@@ -18,7 +18,7 @@ abstract class am extends vf {
         field_Q = null;
         field_R = null;
         if (!param0) {
-            field_K = -59L;
+          field_K = -59L;
         }
         field_M = null;
     }
@@ -37,152 +37,115 @@ abstract class am extends vf {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = BachelorFridge.field_y;
-        dg.b(param2 - -6, param0 - -35, -12 + this.field_p, -40 + this.field_q, 2105376, 0);
+        dg.b(param2 + 6, param0 + 35, -12 + this.field_p, -40 + this.field_q, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
-        L0: while (true) {
-          if (var4 <= var7) {
-            var5 = 194;
-            var4 = 22;
-            var6 = 169;
-            var9 = 83 / ((-16 - param1) / 56);
-            var7 = 0;
-            var8 = 35 + param0;
-            L1: while (true) {
-              if (var4 <= var7) {
-                gt.field_s.e(-90 + (param2 + this.field_p), 10 + param0);
-                ao.a(param2 - -5, oea.field_s, this.field_p - 10, (byte) -128, param0 - -35);
-                ao.a(param2, jw.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
-                var5 = 169;
-                var4 = this.field_q + -79;
-                var6 = 127;
-                var7 = 0;
-                var8 = param0 + 57;
-                L2: while (true) {
-                  if (var7 >= var4) {
-                    return;
-                  } else {
-                    var9 = var5 - -(var7 * (-var5 + var6) / var4);
-                    var9 = var9 | (var9 << -1782247728 | var9 << 1865506504);
-                    dg.e(param2, var8, 6, var9);
-                    dg.e(this.field_p + (param2 + -6), var8, 6, var9);
-                    var8++;
-                    var7++;
-                    continue L2;
+        while (var4 > var7) {
+          if (dg.field_j <= var8 &&
+            var8 < dg.field_k) {
+            var9 = var7 * (-var5 + var6) / var4 + var5;
+            var10 = 0;
+            var11 = this.field_p;
+            if (20 >= var7) {
+              while (var10 <= 20) {
+                var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
                   }
+                  var13 = (462 - var12) * var9 / 42;
+                  var13 = var13 | (var13 << 8 | var13 << 16);
+                  dg.field_e[var8 * dg.field_i + param2 + var10] = var13;
                 }
-              } else {
-                var10 = var7 * (var6 + -var5) / var4 + var5;
-                var10 = var10 | (var10 << 1550929328 | var10 << -986468216);
-                dg.e(param2, var8, 6, var10);
-                dg.e(-6 + param2 - -this.field_p, var8, 6, var10);
-                var8++;
-                var7++;
-                continue L1;
+                var10++;
               }
             }
-          } else {
-            if (dg.field_j <= var8) {
-              if (var8 < dg.field_k) {
-                L3: {
-                  var9 = var7 * (-var5 + var6) / var4 + var5;
-                  var10 = 0;
-                  var11 = this.field_p;
-                  if (20 < var7) {
-                    break L3;
+            if (20 >= var7) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = var13Lifetime1 * var13Lifetime1 + (-var7 + 20) * (20 - var7);
+                if (var14 <= 462) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = var11 + 1;
                   } else {
-                    L4: while (true) {
-                      if (-21 > (var10 ^ -1)) {
-                        break L3;
-                      } else {
-                        var12 = (20 - var10) * (-var10 + 20) + (-var7 + 20) * (-var7 + 20);
-                        if (var12 <= 462) {
-                          if ((var12 ^ -1) > -421) {
-                            break L3;
-                          } else {
-                            var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << 92650024 | var13 << -1556301872);
-                            dg.field_e[var8 * dg.field_i + param2 + var10] = var13;
-                            var10++;
-                            continue L4;
-                          }
-                        } else {
-                          var10++;
-                          continue L4;
-                        }
-                      }
-                    }
+                    var15 = (-var14 + 462) * var9 / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    dg.field_e[param2 + (dg.field_i * var8 + var11)] = var15;
                   }
+                  var11++;
+                  continue;
                 }
-                L5: {
-                  if (20 < var7) {
-                    break L5;
-                  } else {
-                    var12 = var11;
-                    var11 -= 21;
-                    var13 = 0;
-                    L6: while (true) {
-                      L7: {
-                        if ((var13 ^ -1) < -21) {
-                          break L7;
-                        } else {
-                          var14 = var13 * var13 + (-var7 + 20) * (20 - var7);
-                          if (-463 > (var14 ^ -1)) {
-                            break L7;
-                          } else {
-                            if ((var14 ^ -1) > -421) {
-                              var12 = var11 + 1;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            } else {
-                              var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << 861244264 | var15 << -804212464);
-                              dg.field_e[param2 + (dg.field_i * var8 + var11)] = var15;
-                              var11++;
-                              var13++;
-                              continue L6;
-                            }
-                          }
-                        }
-                      }
-                      var11 = var12;
-                      break L5;
-                    }
-                  }
-                }
-                var9 = var9 | (var9 << -757341144 | var9 << -1958998640);
-                dg.e(param2 + var10, var8, var11 - var10, var9);
-                var8++;
-                var7++;
-                continue L0;
-              } else {
-                var8++;
-                var7++;
-                continue L0;
+                break;
               }
-            } else {
-              var8++;
-              var7++;
-              continue L0;
+              var11 = var12Lifetime1;
             }
+            var9 = var9 | (var9 << 8 | var9 << 16);
+            dg.e(param2 + var10, var8, var11 - var10, var9);
           }
+          var8++;
+          var7++;
+        }
+        var5Lifetime1 = 194;
+        var4Lifetime1 = 22;
+        var6Lifetime1 = 169;
+        var9Lifetime1 = 83 / ((-16 - param1) / 56);
+        var7Lifetime1 = 0;
+        var8Lifetime1 = 35 + param0;
+        while (var4Lifetime1 > var7Lifetime1) {
+          var10Lifetime1 = var7Lifetime1 * (var6Lifetime1 - var5Lifetime1) / var4Lifetime1 + var5Lifetime1;
+          var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
+          dg.e(param2, var8Lifetime1, 6, var10Lifetime1);
+          dg.e(-6 + param2 + this.field_p, var8Lifetime1, 6, var10Lifetime1);
+          var8Lifetime1++;
+          var7Lifetime1++;
+        }
+        gt.field_s.e(-90 + (param2 + this.field_p), 10 + param0);
+        ao.a(param2 + 5, oea.field_s, this.field_p - 10, (byte) -128, param0 + 35);
+        ao.a(param2, jw.field_v, this.field_p, (byte) -128, this.field_q + (param0 - 22));
+        var5Lifetime2 = 169;
+        var4Lifetime2 = this.field_q - 79;
+        var6Lifetime2 = 127;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param0 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
+          dg.e(param2, var8Lifetime2, 6, var9Lifetime2);
+          dg.e(this.field_p + (param2 - 6), var8Lifetime2, 6, var9Lifetime2);
+          var8Lifetime2++;
+          var7Lifetime2++;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(-1 > (param0 ^ -1))) {
-            this.b(-79, param2, param3);
-            return;
+        if (param0 <= 0) {
+          this.b(-79, param2, param3);
+          return;
         }
         this.field_H = param2;
         this.field_J = param0;
         if (param1 != 26012) {
-            return;
+          return;
         }
         this.field_I = this.field_p;
         this.field_N = this.field_q;
@@ -192,7 +155,7 @@ abstract class am extends vf {
 
     void b(boolean param0) {
         if (param0) {
-            this.m(-15);
+          this.m(-15);
         }
     }
 
@@ -209,23 +172,23 @@ abstract class am extends vf {
         int var5 = 0;
         int var4 = 0;
         if (this.field_J > 0) {
-            var2 = this.field_P;
-            var3 = this.field_H;
-            fieldTemp$0 = this.field_L + 1;
-            this.field_L = this.field_L + 1;
-            if (this.field_J > fieldTemp$0) {
-                var4 = (2 * this.field_J + -this.field_L) * this.field_L;
-                var5 = this.field_J * this.field_J;
-                var2 = (this.field_P + -this.field_I) * var4 / var5 + this.field_I;
-                var3 = this.field_N + (-this.field_N + this.field_H) * var4 / var5;
-            } else {
-                this.field_J = 0;
-                this.b(false);
-            }
-            this.b(-123, var3, var2);
+          var2 = this.field_P;
+          var3 = this.field_H;
+          fieldTemp$0 = this.field_L + 1;
+          this.field_L = this.field_L + 1;
+          if (this.field_J > fieldTemp$0) {
+            var4 = (2 * this.field_J - this.field_L) * this.field_L;
+            var5 = this.field_J * this.field_J;
+            var2 = (this.field_P - this.field_I) * var4 / var5 + this.field_I;
+            var3 = this.field_N + (-this.field_N + this.field_H) * var4 / var5;
+          } else {
+            this.field_J = 0;
+            this.b(false);
+          }
+          this.b(-123, var3, var2);
         }
         if (param0 > -32) {
-            return false;
+          return false;
         }
         return super.a(-116);
     }
@@ -233,18 +196,18 @@ abstract class am extends vf {
     boolean k(int param0) {
         this.m(17310);
         if (param0 >= -59) {
-            am.c(false);
+          am.c(false);
         }
         return super.k(-81);
     }
 
     void m(int param0) {
-        if (-1 <= (this.field_J ^ -1)) {
-            return;
+        if (this.field_J <= 0) {
+          return;
         }
         this.b(-35, this.field_H, this.field_P);
         if (param0 != 17310) {
-            return;
+          return;
         }
         this.field_J = 0;
         this.b(false);

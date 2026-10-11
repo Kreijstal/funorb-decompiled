@@ -10,45 +10,37 @@ final class tn extends rl {
     static String field_C;
 
     final int f(byte param0) {
-        if (param0 == 100) {
-          if (null == this.field_A) {
-            return 0;
-          } else {
-            return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
-          }
-        } else {
+        if (param0 != 100) {
           this.e((byte) -16);
-          if (null == this.field_A) {
-            return 0;
-          } else {
+          if (null != this.field_A) {
             return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
           }
+          return 0;
         }
+        if (null != this.field_A) {
+          return this.field_A.field_n * 100 / (-this.field_z + this.field_A.field_m.length);
+        }
+        return 0;
     }
 
     final byte[] e(byte param0) {
-        if (param0 >= 82) {
-          if (!this.field_v) {
-            if (this.field_A.field_m.length - this.field_z > this.field_A.field_n) {
-              throw new RuntimeException();
-            } else {
-              return this.field_A.field_m;
-            }
-          } else {
-            throw new RuntimeException();
-          }
-        } else {
+        if (param0 < 82) {
           this.field_A = (kg) null;
-          if (!this.field_v) {
-            if (this.field_A.field_m.length - this.field_z > this.field_A.field_n) {
-              throw new RuntimeException();
-            } else {
-              return this.field_A.field_m;
-            }
-          } else {
+          if (this.field_v) {
             throw new RuntimeException();
           }
+          if (this.field_A.field_m.length - this.field_z <= this.field_A.field_n) {
+            return this.field_A.field_m;
+          }
+          throw new RuntimeException();
         }
+        if (this.field_v) {
+          throw new RuntimeException();
+        }
+        if (this.field_A.field_m.length - this.field_z <= this.field_A.field_n) {
+          return this.field_A.field_m;
+        }
+        throw new RuntimeException();
     }
 
     public static void c(boolean param0) {
@@ -56,7 +48,7 @@ final class tn extends rl {
         field_D = null;
         field_y = null;
         if (param0) {
-            field_D = (String) null;
+          field_D = (String) null;
         }
     }
 

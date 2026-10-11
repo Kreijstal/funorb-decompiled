@@ -10,27 +10,9 @@ final class bk extends ag {
     static nf field_J;
 
     final void a(int param0, int param1, int param2, int param3) {
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = this;
-
-          if (this.field_z) {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = this;
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ((bk) (this)).field_z = stackIn_3_1 != 0;
+        this.field_z = !this.field_z ? true : false;
         super.a(-121, param1, param2, param3);
-        if (param0 <= -99) {
-          return;
-        } else {
+        if (param0 > -99) {
           bk.a(-47);
           return;
         }
@@ -39,9 +21,9 @@ final class bk extends ag {
     bk(String param0, wc param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_z = param2 ? true : false;
+          this.field_z = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -51,44 +33,39 @@ final class bk extends ag {
         field_K = null;
         field_L = null;
         if (param0 != 0) {
-            bk.a(126);
-            field_M = null;
-            return;
+          bk.a(126);
+          field_M = null;
+          return;
         }
         field_M = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 == 1021) {
-          if (2 > param0) {
-            if ((param2 ^ -1) <= -6) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
-            return 2;
-          }
-        } else {
+        if (param1 != 1021) {
           bk.f(44);
-          if (2 > param0) {
-            if ((param2 ^ -1) <= -6) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
+          if (2 <= param0) {
             return 2;
           }
+          if (param2 < 5) {
+            return 0;
+          }
+          return 1;
         }
+        if (2 <= param0) {
+          return 2;
+        }
+        if (param2 < 5) {
+          return 0;
+        }
+        return 1;
     }
 
     private bk(String param0, wc param1) {
         this(param0, io.field_n.field_u, param1);
         try {
-            this.field_r = io.field_n.field_b;
+          this.field_r = io.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,29 +74,29 @@ final class bk extends ag {
         int var2 = ArcanistsMulti.field_G ? 1 : 0;
         tg.field_e.a(-12619);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
-            rl.field_l[var1_int] = 0L;
+          rl.field_l[var1_int] = 0L;
         }
         var1_int = 0;
         if (param0 != 2) {
-            return;
+          return;
         }
         try {
-            while (32 > var1_int) {
-                kn.field_tb[var1_int] = 0L;
-                var1_int++;
-            }
-            e.field_Q = 0;
+          while (32 > var1_int) {
+            kn.field_tb[var1_int] = 0L;
+            var1_int++;
+          }
+          e.field_Q = 0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bk.C(" + param0 + ')');
         }
     }
 
     private bk(String param0, pf param1, wc param2) {
         super(param0, param1, param2);
         try {
-            this.field_r = io.field_n.field_b;
+          this.field_r = io.field_n.field_b;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,38 +14,32 @@ final class ta {
     static boolean field_d;
 
     final static int a(boolean param0, int param1) {
-        int var2;
-        var2 = 7 & 6 + param1;
-        if (param0) {
-          if (0 != var2) {
-            if (var2 > 5) {
-              return 3;
-            } else {
-              return 2;
-            }
-          } else {
-            return 5;
-          }
-        } else {
+        int var2 = 7 & 6 + param1;
+        if (!param0) {
           field_b = true;
-          if (0 != var2) {
-            if (var2 > 5) {
-              return 3;
-            } else {
-              return 2;
-            }
-          } else {
+          if (0 == var2) {
             return 5;
           }
+          if (var2 <= 5) {
+            return 2;
+          }
+          return 3;
         }
+        if (0 == var2) {
+          return 5;
+        }
+        if (var2 <= 5) {
+          return 2;
+        }
+        return 3;
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 5) {
-            field_e = -50;
-            field_i = null;
-            return;
+          field_e = -50;
+          field_i = null;
+          return;
         }
         field_i = null;
     }

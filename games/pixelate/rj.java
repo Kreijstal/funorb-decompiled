@@ -11,96 +11,72 @@ final class rj extends gn {
     static jj[] field_C;
 
     final int g(int param0) {
-        if (param0 < -92) {
-          if (this.field_D == null) {
-            return 0;
-          } else {
-            return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
-          }
-        } else {
+        if (param0 >= -92) {
           rj.i(15);
-          if (this.field_D == null) {
-            return 0;
-          } else {
+          if (this.field_D != null) {
             return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
           }
+          return 0;
         }
+        if (this.field_D != null) {
+          return this.field_D.field_m * 100 / (-this.field_B + this.field_D.field_k.length);
+        }
+        return 0;
     }
 
     final static void a(int param0, boolean param1) {
         wa.field_c.a(0, 0, 120);
         if (param0 <= 73) {
-            rj.c((byte) 4);
+          rj.c((byte) 4);
         }
     }
 
     final static nc j(int param0) {
         if (param0 != -30272) {
-            field_G = (uo) null;
-            return (nc) ((Object) new k());
+          field_G = (uo) null;
+          return (nc) ((Object) new k());
         }
         return (nc) ((Object) new k());
     }
 
     final byte[] h(int param0) {
-        if (!this.field_v) {
-          if (this.field_D.field_m >= -this.field_B + this.field_D.field_k.length) {
-            if (param0 != 0) {
-              this.field_H = 39;
-              return this.field_D.field_k;
-            } else {
-              return this.field_D.field_k;
-            }
-          } else {
-            throw new RuntimeException();
-          }
-        } else {
+        if (this.field_v) {
           throw new RuntimeException();
         }
+        if (this.field_D.field_m < -this.field_B + this.field_D.field_k.length) {
+          throw new RuntimeException();
+        }
+        if (param0 == 0) {
+          return this.field_D.field_k;
+        }
+        this.field_H = 39;
+        return this.field_D.field_k;
     }
 
     rj() {
     }
 
     final static void i(int param0) {
-        int var1;
-        int var2;
-        var1 = 16777215;
+        int var1 = 16777215;
         gb.field_b = new tf(108, 100);
-        var2 = 65793;
+        int var2 = 65793;
         gb.field_b.c();
         t.d(4, 0, t.field_j - 8, t.field_d, var1);
         t.c(4, 0, 4, var2);
-        t.c(-4 + t.field_j + -1, 0, 4, var2);
+        t.c(-4 + t.field_j - 1, 0, 4, var2);
         t.c(4, t.field_d, 4, var2);
         t.c(-4 + (t.field_j - 1), t.field_d, 4, var2);
         t.g(4, 0, t.field_d, var2);
         t.g(5, 0, t.field_d, var2);
-        if (param0 != 7902) {
-          field_C = (jj[]) null;
+        if (param0 == 7902) {
           t.g(-5 + t.field_j, 0, t.field_d, var2);
-          t.g(-2 + t.field_j + -4, 0, t.field_d, var2);
+          t.g(-2 + t.field_j - 4, 0, t.field_d, var2);
           t.b(4, 0, -8 + t.field_j, var2);
-          t.b(4, -1 + t.field_d, t.field_j + -8, var2);
+          t.b(4, -1 + t.field_d, t.field_j - 8, var2);
           wh.field_q = new tf(gb.field_b.field_A, 4);
           wh.field_q.c();
           t.c(4, t.field_d, 4, var2);
-          t.c(t.field_j + -5, t.field_d, 4, var2);
-          t.b(4, -1 + t.field_d, -8 + t.field_j, var2);
-          of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
-          of.field_h.c();
-          wh.field_q.c(0, 0);
-          qa.field_f.a(19692);
-          return;
-        } else {
-          t.g(-5 + t.field_j, 0, t.field_d, var2);
-          t.g(-2 + t.field_j + -4, 0, t.field_d, var2);
-          t.b(4, 0, -8 + t.field_j, var2);
-          t.b(4, -1 + t.field_d, t.field_j + -8, var2);
-          wh.field_q = new tf(gb.field_b.field_A, 4);
-          wh.field_q.c();
-          t.c(4, t.field_d, 4, var2);
-          t.c(t.field_j + -5, t.field_d, 4, var2);
+          t.c(t.field_j - 5, t.field_d, 4, var2);
           t.b(4, -1 + t.field_d, -8 + t.field_j, var2);
           of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
           of.field_h.c();
@@ -108,6 +84,20 @@ final class rj extends gn {
           qa.field_f.a(19692);
           return;
         }
+        field_C = (jj[]) null;
+        t.g(-5 + t.field_j, 0, t.field_d, var2);
+        t.g(-2 + t.field_j - 4, 0, t.field_d, var2);
+        t.b(4, 0, -8 + t.field_j, var2);
+        t.b(4, -1 + t.field_d, t.field_j - 8, var2);
+        wh.field_q = new tf(gb.field_b.field_A, 4);
+        wh.field_q.c();
+        t.c(4, t.field_d, 4, var2);
+        t.c(t.field_j - 5, t.field_d, 4, var2);
+        t.b(4, -1 + t.field_d, -8 + t.field_j, var2);
+        of.field_h = new tf(wh.field_q.field_A, wh.field_q.field_B);
+        of.field_h.c();
+        wh.field_q.c(0, 0);
+        qa.field_f.a(19692);
     }
 
     public static void c(byte param0) {
@@ -115,7 +105,7 @@ final class rj extends gn {
         field_F = null;
         field_C = null;
         if (param0 > -44) {
-            rj.c((byte) -123);
+          rj.c((byte) -123);
         }
     }
 

@@ -15,6 +15,7 @@ final class sa implements Runnable {
         int var1_int = 0;
         pi var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -23,46 +24,28 @@ final class sa implements Runnable {
         var4 = Torquing.field_u;
         this.field_e = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_f) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (2 <= var1_int) {
-                        ub.a(1976, 10L);
-                        var5 = (Object) null;
-                        oe.a(this.field_b, 0, (Object) null);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_c[var1_int];
-                          if (var2 == null) {
-                            break L4;
-                          } else {
-                            var2.b();
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_f) {
+              for (var1_int = 0; 2 > var1_int; var1_int++) {
+                var2 = this.field_c[var1_int];
+                if (var2 != null) {
+                  var2.b();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              nn.a((String) null, (Throwable) ((Object) var1), -9958);
-              this.field_e = false;
-              return;
+              ub.a(1976, 10L);
+              var5 = (Object) null;
+              oe.a(this.field_b, 0, (Object) null);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var6 = (String) null;
+            nn.a((String) null, (Throwable) ((Object) var1), -9958);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -74,52 +57,46 @@ final class sa implements Runnable {
     }
 
     final static dq a(byte param0) {
-        L0: {
-          if (null == lk.field_v) {
-            lk.field_v = new dq();
-            lk.field_v.a(dg.field_e, (byte) -124);
-            lk.field_v.field_p = 5;
-            lk.field_v.field_h = 0;
-            lk.field_v.field_e = 7697781;
-            lk.field_v.field_c = 2763306;
-            lk.field_v.field_d = 6;
-            lk.field_v.field_b = 14;
-            lk.field_v.field_j = sp.field_R;
-            lk.field_v.field_f = 4;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null == lk.field_v) {
+          lk.field_v = new dq();
+          lk.field_v.a(dg.field_e, (byte) -124);
+          lk.field_v.field_p = 5;
+          lk.field_v.field_h = 0;
+          lk.field_v.field_e = 7697781;
+          lk.field_v.field_c = 2763306;
+          lk.field_v.field_d = 6;
+          lk.field_v.field_b = 14;
+          lk.field_v.field_j = sp.field_R;
+          lk.field_v.field_f = 4;
         }
-        if (param0 != 35) {
-          sa.a(true);
-          return lk.field_v;
-        } else {
+        if (param0 == 35) {
           return lk.field_v;
         }
+        sa.a(true);
+        return lk.field_v;
     }
 
     final static void a(java.awt.Component param0, boolean param1) {
         param0.addMouseListener(ef.field_b);
         param0.addMouseMotionListener(ef.field_b);
         if (!param1) {
-            return;
+          return;
         }
         try {
-            param0.addFocusListener(ef.field_b);
+          param0.addFocusListener(ef.field_b);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(String param0, int param1, String param2) {
         try {
-            fm.a(false, -78, param2, param0);
-            if (param1 < 121) {
-                field_d = (Random) null;
-            }
+          fm.a(false, -78, param2, param0);
+          if (param1 < 121) {
+            field_d = (Random) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +108,7 @@ final class sa implements Runnable {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;

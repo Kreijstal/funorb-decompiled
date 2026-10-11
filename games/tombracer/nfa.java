@@ -25,247 +25,247 @@ final class nfa extends ci {
         String var15 = null;
         int var10 = TombRacer.field_G ? 1 : 0;
         try {
-            var11 = (sra) ((Object) dma.field_l);
-            var11.a(param3, (byte) 47, param1);
-            woa.a(-122, param4, param0, 0);
-            bb.field_f = new ena(0);
-            while (!bb.field_f.a((byte) 107)) {
+          var11 = (sra) (dma.field_l);
+          var11.a(param3, (byte) 47, param1);
+          woa.a(-122, param4, param0, 0);
+          bb.field_f = new ena(0);
+          while (!bb.field_f.a((byte) 107)) {
+          }
+          ola.a(13, bb.field_f);
+          wl.field_f = new dk[13][38];
+          var12 = "tr_character_01";
+          wl.field_f[0][0] = m.a("henryj_idle", -124, param5, var12);
+          wl.field_f[0][1] = m.a("henryj_run", -124, param5, var12);
+          wl.field_f[0][2] = m.a("henryj_pull_small", -126, param5, var12);
+          wl.field_f[0][3] = m.a("henryj_push_large", -125, param5, var12);
+          wl.field_f[0][4] = m.a("henryj_skid", -127, param5, var12);
+          wl.field_f[0][5] = m.a("henryj_trait", -124, param5, var12);
+          wl.field_f[0][6] = m.a("henryj_wobble", -127, param5, var12);
+          wl.field_f[0][7] = m.a("henryj_shooting", -126, param5, var12);
+          wl.field_f[0][8] = m.a("henryj_unsheath", -124, param5, var12);
+          wl.field_f[0][9] = m.a("henryj_death", -127, param5, var12);
+          wl.field_f[0][10] = m.a("henryj_ashes", -126, param5, var12);
+          wl.field_f[0][11] = m.a("henryj_idol_idle", -124, param5, var12);
+          wl.field_f[0][12] = m.a("henryj_carry", -125, param5, var12);
+          wl.field_f[0][13] = m.a("henryj_idol_skid", -125, param5, var12);
+          wl.field_f[0][14] = m.a("henryj_key_idle", -126, param5, var12);
+          wl.field_f[0][15] = m.a("henryj_key_run", -125, param5, var12);
+          wl.field_f[0][16] = m.a("henryj_key_skid", -127, param5, var12);
+          wl.field_f[0][18] = m.a("henryj_fall_two", -127, param5, var12);
+          wl.field_f[0][17] = m.a("henryj_gun_idle", -125, param5, var12);
+          wl.field_f[0][19] = m.a("henryj_idle_to_run", -127, param5, var12);
+          wl.field_f[0][20] = m.a("henryj_run_to_idle", -126, param5, var12);
+          wl.field_f[0][21] = m.a("henryj_death_two", -126, param5, var12);
+          wl.field_f[0][22] = m.a("henryj_death_three", -127, param5, var12);
+          wl.field_f[0][23] = m.a("henryj_trait_two", -124, param5, var12);
+          wl.field_f[0][24] = m.a("henryj_creep", -125, param5, var12);
+          wl.field_f[0][25] = m.a("henryj_boulder_death", -124, param5, var12);
+          wl.field_f[0][26] = m.a("henryj_idle_to_push", -124, param5, var12);
+          wl.field_f[0][27] = m.a("henryj_shoot_to_gun_idle", -128, param5, var12);
+          wl.field_f[0][28] = m.a("henryj_resheath", -127, param5, var12);
+          wl.field_f[0][29] = m.a("henryj_gun_run", -127, param5, var12);
+          wl.field_f[0][30] = m.a("henryj_gun_idle_to_run", -128, param5, var12);
+          wl.field_f[0][31] = m.a("henryj_gun_run_to_idle", -125, param5, var12);
+          wl.field_f[0][32] = m.a("henryj_push_small_left", -124, param5, var12);
+          wl.field_f[0][33] = m.a("henryj_push_small_right", -127, param5, var12);
+          wl.field_f[0][34] = m.a("henryj_cut_in_half", -127, param5, var12);
+          wl.field_f[0][35] = wl.field_f[0][22];
+          wl.field_f[0][36] = m.a("henryj_large_pull", -125, param5, var12);
+          wl.field_f[0][37] = m.a("henryj_cheer", -124, param5, var12);
+          incrementValue$0 = param3;
+          param3++;
+          var11.a(incrementValue$0, (byte) 47, param1);
+          for (var8 = 0; 13 > var8; var8++) {
+            if (var8 != 0) {
+              for (var9 = 0; var9 < 38; var9++) {
+                wl.field_f[var8][var9] = wl.field_f[0][var9];
+              }
             }
-            ola.a(13, bb.field_f);
-            wl.field_f = new dk[13][38];
-            var12 = "tr_character_01";
-            wl.field_f[0][0] = m.a("henryj_idle", -124, param5, var12);
-            wl.field_f[0][1] = m.a("henryj_run", -124, param5, var12);
-            wl.field_f[0][2] = m.a("henryj_pull_small", -126, param5, var12);
-            wl.field_f[0][3] = m.a("henryj_push_large", -125, param5, var12);
-            wl.field_f[0][4] = m.a("henryj_skid", -127, param5, var12);
-            wl.field_f[0][5] = m.a("henryj_trait", -124, param5, var12);
-            wl.field_f[0][6] = m.a("henryj_wobble", -127, param5, var12);
-            wl.field_f[0][7] = m.a("henryj_shooting", -126, param5, var12);
-            wl.field_f[0][8] = m.a("henryj_unsheath", -124, param5, var12);
-            wl.field_f[0][9] = m.a("henryj_death", -127, param5, var12);
-            wl.field_f[0][10] = m.a("henryj_ashes", -126, param5, var12);
-            wl.field_f[0][11] = m.a("henryj_idol_idle", -124, param5, var12);
-            wl.field_f[0][12] = m.a("henryj_carry", -125, param5, var12);
-            wl.field_f[0][13] = m.a("henryj_idol_skid", -125, param5, var12);
-            wl.field_f[0][14] = m.a("henryj_key_idle", -126, param5, var12);
-            wl.field_f[0][15] = m.a("henryj_key_run", -125, param5, var12);
-            wl.field_f[0][16] = m.a("henryj_key_skid", -127, param5, var12);
-            wl.field_f[0][18] = m.a("henryj_fall_two", -127, param5, var12);
-            wl.field_f[0][17] = m.a("henryj_gun_idle", -125, param5, var12);
-            wl.field_f[0][19] = m.a("henryj_idle_to_run", -127, param5, var12);
-            wl.field_f[0][20] = m.a("henryj_run_to_idle", -126, param5, var12);
-            wl.field_f[0][21] = m.a("henryj_death_two", -126, param5, var12);
-            wl.field_f[0][22] = m.a("henryj_death_three", -127, param5, var12);
-            wl.field_f[0][23] = m.a("henryj_trait_two", -124, param5, var12);
-            wl.field_f[0][24] = m.a("henryj_creep", -125, param5, var12);
-            wl.field_f[0][25] = m.a("henryj_boulder_death", -124, param5, var12);
-            wl.field_f[0][26] = m.a("henryj_idle_to_push", -124, param5, var12);
-            wl.field_f[0][27] = m.a("henryj_shoot_to_gun_idle", -128, param5, var12);
-            wl.field_f[0][28] = m.a("henryj_resheath", -127, param5, var12);
-            wl.field_f[0][29] = m.a("henryj_gun_run", -127, param5, var12);
-            wl.field_f[0][30] = m.a("henryj_gun_idle_to_run", -128, param5, var12);
-            wl.field_f[0][31] = m.a("henryj_gun_run_to_idle", -125, param5, var12);
-            wl.field_f[0][32] = m.a("henryj_push_small_left", -124, param5, var12);
-            wl.field_f[0][33] = m.a("henryj_push_small_right", -127, param5, var12);
-            wl.field_f[0][34] = m.a("henryj_cut_in_half", -127, param5, var12);
-            wl.field_f[0][35] = wl.field_f[0][22];
-            wl.field_f[0][36] = m.a("henryj_large_pull", -125, param5, var12);
-            wl.field_f[0][37] = m.a("henryj_cheer", -124, param5, var12);
-            incrementValue$0 = param3;
-            param3++;
-            var11.a(incrementValue$0, (byte) 47, param1);
-            for (var8 = 0; 13 > var8; var8++) {
-                if (-1 != (var8 ^ -1)) {
-                    for (var9 = 0; -39 < (var9 ^ -1); var9++) {
-                        wl.field_f[var8][var9] = wl.field_f[0][var9];
-                    }
-                }
-            }
-            wl.field_f[11][1] = m.a("scarlett_run", -126, param5, var12);
-            wl.field_f[11][5] = m.a("scarlett_trait", -127, param5, var12);
-            wl.field_f[11][3] = m.a("scarlett_push_large", -125, param5, var12);
-            wl.field_f[11][2] = m.a("scarlett_pull_small", -127, param5, var12);
-            wl.field_f[11][15] = m.a("scarlett_key_run", -126, param5, var12);
-            wl.field_f[11][24] = m.a("scarlett_creep", -128, param5, var12);
-            wl.field_f[11][29] = m.a("scarlett_gun_run", -124, param5, var12);
-            wl.field_f[11][34] = m.a("scarlett_cut_in_half", -125, param5, var12);
-            wl.field_f[11][37] = m.a("scarlett_cheer", -127, param5, var12);
-            wl.field_f[11][0] = m.a("scarlett_idle", -124, param5, var12);
-            wl.field_f[1][5] = m.a("ace_trait", -128, param5, var12);
-            wl.field_f[1][7] = m.a("ace_shooting", -127, param5, var12);
-            wl.field_f[1][15] = m.a("ace_key_run", -128, param5, var12);
-            wl.field_f[1][14] = m.a("ace_key_idle", -126, param5, var12);
-            wl.field_f[1][17] = m.a("ace_gun_idle", -125, param5, var12);
-            wl.field_f[1][34] = m.a("ace_cut_in_half", -127, param5, var12);
-            incrementValue$1 = param3;
-            param3++;
-            var11.a(incrementValue$1, (byte) 47, param1);
-            wl.field_f[3][5] = m.a("baroness_trait", -124, param5, var12);
-            wl.field_f[3][15] = m.a("baroness_key_run", -125, param5, var12);
-            wl.field_f[3][14] = m.a("baroness_key_idle", -128, param5, var12);
-            wl.field_f[3][34] = m.a("baroness_cut_in_half", -125, param5, var12);
-            wl.field_f[3][37] = m.a("baroness_cheer", -126, param5, var12);
-            wl.field_f[3][0] = wl.field_f[11][0];
-            wl.field_f[9][1] = m.a("johnsson_run", -125, param5, var12);
-            wl.field_f[9][15] = m.a("johnsson_key_run", -124, param5, var12);
-            wl.field_f[9][14] = m.a("johnsson_key_idle", -126, param5, var12);
-            wl.field_f[9][23] = m.a("johnsson_trait_two", -125, param5, var12);
-            wl.field_f[9][25] = m.a("johnsson_boulder_death", -127, param5, var12);
-            wl.field_f[9][29] = m.a("johnsson_gun_run", -124, param5, var12);
-            wl.field_f[9][34] = m.a("johnsson_cut_in_half", -126, param5, var12);
-            wl.field_f[9][37] = m.a("johnsson_cheer", -126, param5, var12);
-            wl.field_f[4][5] = wl.field_f[11][5];
-            wl.field_f[4][34] = m.a("borees_cut_in_half", -128, param5, var12);
-            wl.field_f[4][37] = m.a("borees_cheer", -124, param5, var12);
-            incrementValue$2 = param3;
-            param3++;
-            var11.a(incrementValue$2, (byte) 47, param1);
-            wl.field_f[5][1] = m.a("bruce_run", -128, param5, var12);
-            wl.field_f[5][0] = m.a("bruce_idle", -125, param5, var12);
-            wl.field_f[5][5] = m.a("bruce_trait", -128, param5, var12);
-            wl.field_f[5][3] = m.a("bruce_push_large", -126, param5, var12);
-            wl.field_f[5][11] = m.a("bruce_carry", -125, param5, var12);
-            wl.field_f[5][8] = m.a("bruce_unsheath", -127, param5, var12);
-            wl.field_f[5][14] = m.a("bruce_key_idle", -128, param5, var12);
-            wl.field_f[5][15] = m.a("bruce_key_run", -125, param5, var12);
-            wl.field_f[5][19] = m.a("bruce_idle_to_run", -128, param5, var12);
-            wl.field_f[5][20] = m.a("bruce_run_to_idle", -128, param5, var12);
-            wl.field_f[5][23] = m.a("bruce_trait_two", -126, param5, var12);
-            wl.field_f[5][28] = m.a("bruce_resheath", -126, param5, var12);
-            wl.field_f[5][29] = m.a("bruce_gun_run", -128, param5, var12);
-            wl.field_f[5][31] = m.a("bruce_gun_run_to_idle", -124, param5, var12);
-            wl.field_f[5][30] = m.a("bruce_gun_idle_to_run", -127, param5, var12);
-            wl.field_f[5][32] = m.a("bruce_push_small_left", -127, param5, var12);
-            wl.field_f[5][33] = m.a("bruce_push_small_right", -124, param5, var12);
-            wl.field_f[5][34] = m.a("bruce_cut_in_half", -125, param5, var12);
-            wl.field_f[5][36] = m.a("bruce_large_pull", -127, param5, var12);
-            wl.field_f[5][37] = m.a("bruce_cheer", -124, param5, var12);
-            wl.field_f[5][2] = m.a("bruce_pull_small", -127, param5, var12);
-            incrementValue$3 = param3;
-            param3++;
-            var11.a(incrementValue$3, (byte) 47, param1);
-            wl.field_f[7][1] = m.a("hans_run", -125, param5, var12);
-            wl.field_f[7][14] = m.a("hans_key_idle", -124, param5, var12);
-            wl.field_f[7][15] = m.a("hans_key_run", -126, param5, var12);
-            wl.field_f[7][29] = m.a("hans_gun_run", -126, param5, var12);
-            wl.field_f[7][34] = m.a("hans_cut_in_half", -125, param5, var12);
-            wl.field_f[7][37] = m.a("hans_cheer", -127, param5, var12);
-            wl.field_f[2][1] = m.a("angelio_run", -128, param5, var12);
-            wl.field_f[2][5] = wl.field_f[11][5];
-            wl.field_f[2][14] = m.a("angelio_key_idle", -128, param5, var12);
-            wl.field_f[2][29] = m.a("angelio_gun_run", -127, param5, var12);
-            wl.field_f[2][34] = m.a("angelio_cut_in_half", -124, param5, var12);
-            wl.field_f[2][37] = m.a("angelio_cheer", -125, param5, var12);
-            wl.field_f[2][15] = m.a("angelio_key_run", -125, param5, var12);
-            wl.field_f[6][0] = m.a("feng_idle", -124, param5, var12);
-            wl.field_f[6][5] = m.a("feng_trait", -127, param5, var12);
-            wl.field_f[6][8] = m.a("feng_unsheath", -128, param5, var12);
-            wl.field_f[6][1] = m.a("feng_run", -125, param5, var12);
-            wl.field_f[6][15] = m.a("feng_key_run", -127, param5, var12);
-            wl.field_f[6][14] = m.a("feng_key_idle", -128, param5, var12);
-            wl.field_f[6][11] = m.a("feng_idol_idle", -128, param5, var12);
-            wl.field_f[6][17] = m.a("feng_gun_idle", -126, param5, var12);
-            wl.field_f[6][21] = m.a("feng_death_two", -128, param5, var12);
-            wl.field_f[6][23] = m.a("feng_trait_two", -127, param5, var12);
-            wl.field_f[6][28] = m.a("feng_resheath", -127, param5, var12);
-            wl.field_f[6][34] = m.a("feng_cut_in_half", -128, param5, var12);
-            wl.field_f[6][37] = m.a("feng_cheer", -124, param5, var12);
-            wl.field_f[6][36] = m.a("feng_large_pull", -124, param5, var12);
-            incrementValue$4 = param3;
-            param3++;
-            var11.a(incrementValue$4, (byte) 47, param1);
-            wl.field_f[8][5] = wl.field_f[1][5];
-            wl.field_f[8][15] = m.a("jamille_key_run", -128, param5, var12);
-            wl.field_f[8][14] = m.a("jamille_key_idle", -125, param5, var12);
-            wl.field_f[8][34] = m.a("jamille_cut_in_half", -127, param5, var12);
-            wl.field_f[8][37] = m.a("jamille_cheer", -128, param5, var12);
-            wl.field_f[8][0] = wl.field_f[11][0];
-            wl.field_f[10][0] = m.a("piles_idle", -125, param5, var12);
-            wl.field_f[10][1] = m.a("piles_run", -124, param5, var12);
-            wl.field_f[10][2] = m.a("piles_pull_small", -126, param5, var12);
-            wl.field_f[10][3] = m.a("piles_push_large", -126, param5, var12);
-            wl.field_f[10][4] = m.a("piles_skid", -128, param5, var12);
-            wl.field_f[10][5] = m.a("piles_trait", -127, param5, var12);
-            wl.field_f[10][6] = m.a("piles_wobble", -128, param5, var12);
-            wl.field_f[10][7] = m.a("piles_shooting", -125, param5, var12);
-            wl.field_f[10][8] = m.a("piles_unsheath", -128, param5, var12);
-            wl.field_f[10][9] = m.a("piles_death", -127, param5, var12);
-            wl.field_f[10][10] = m.a("piles_ashes", -128, param5, var12);
-            wl.field_f[10][11] = m.a("piles_idol_idle", -127, param5, var12);
-            wl.field_f[10][12] = m.a("piles_carry", -127, param5, var12);
-            wl.field_f[10][13] = m.a("piles_idol_skid", -124, param5, var12);
-            wl.field_f[10][14] = m.a("piles_key_idle", -124, param5, var12);
-            wl.field_f[10][15] = m.a("piles_key_run", -127, param5, var12);
-            wl.field_f[10][21] = m.a("piles_death_two", -125, param5, var12);
-            wl.field_f[10][22] = m.a("piles_death_three", -128, param5, var12);
-            wl.field_f[10][36] = m.a("piles_large_pull", -124, param5, var12);
-            incrementValue$5 = param3;
-            param3++;
-            var11.a(incrementValue$5, (byte) 47, param1);
-            wl.field_f[10][18] = m.a("piles_fall_two", -124, param5, var12);
-            wl.field_f[10][17] = m.a("piles_gun_idle", -125, param5, var12);
-            wl.field_f[10][19] = m.a("piles_idle_to_run", -128, param5, var12);
-            wl.field_f[10][20] = m.a("piles_run_to_idle", -128, param5, var12);
-            wl.field_f[10][23] = m.a("piles_trait_two", -128, param5, var12);
-            wl.field_f[10][24] = m.a("piles_creep", -128, param5, var12);
-            wl.field_f[10][25] = m.a("piles_boulder_death", -124, param5, var12);
-            wl.field_f[10][26] = m.a("piles_idle_to_push", -126, param5, var12);
-            wl.field_f[10][28] = m.a("piles_resheath", -127, param5, var12);
-            wl.field_f[10][29] = m.a("piles_gun_run", -125, param5, var12);
-            wl.field_f[10][31] = m.a("piles_gun_run_to_idle", -126, param5, var12);
-            wl.field_f[10][30] = m.a("piles_gun_idle_to_run", -127, param5, var12);
-            wl.field_f[10][32] = m.a("piles_push_small_left", -126, param5, var12);
-            wl.field_f[10][33] = m.a("piles_push_small_right", -127, param5, var12);
-            wl.field_f[10][34] = m.a("piles_cut_in_half", -126, param5, var12);
-            wl.field_f[10][35] = wl.field_f[10][22];
-            wl.field_f[10][37] = m.a("piles_cheer", -128, param5, var12);
-            wl.field_f[12][5] = wl.field_f[10][5];
-            wl.field_f[12][14] = m.a("wilbur_key_idle", -126, param5, var12);
-            wl.field_f[12][34] = m.a("wilbur_cut_in_half", -125, param5, var12);
-            wl.field_f[12][37] = m.a("wilbur_cheer", -125, param5, var12);
-            wl.field_f[12][1] = m.a("wilbur_run", -128, param5, var12);
-            var13 = "new_skeleton";
-            qja.field_f = new dk[10];
-            qja.field_f[0] = m.a("new_skeleton_idle", -124, param5, var13);
-            qja.field_f[1] = m.a("new_skeleton_walk", -126, param5, var13);
-            qja.field_f[2] = m.a("new_skeleton_walk_2", -127, param5, var13);
-            qja.field_f[3] = m.a("new_skeleton_death", -128, param5, var13);
-            qja.field_f[4] = m.a("new_skeleton_head_pull", -124, param5, var13);
-            qja.field_f[5] = m.a("new_skeleton_fire_death", -124, param5, var13);
-            var14 = "snake";
-            qja.field_f[6] = m.a("snake_idle", -128, param5, var14);
-            qja.field_f[7] = m.a("snake_walk", -124, param5, var14);
-            qja.field_f[8] = m.a("snake_idle_to_walk", -126, param5, var14);
-            qja.field_f[9] = m.a("snake_walk_to_idle", -125, param5, var14);
-            incrementValue$6 = param3;
-            param3++;
-            var11.a(incrementValue$6, (byte) 47, param1);
-            var15 = "rope_bridge";
-            cva.field_c = new dk[4];
-            cva.field_c[0] = m.a("start", -127, param5, var15);
-            cva.field_c[1] = m.a("end", -127, param5, var15);
-            cva.field_c[2] = m.a("loop_start", -127, param5, var15);
-            cva.field_c[3] = m.a("loop_section", -126, param5, var15);
-            jf.field_p = new dk[13];
-            if (param2) {
-                field_p = false;
-            }
-            jf.field_p[0] = m.a("fire", -128, param5, "brazier");
-            jf.field_p[1] = m.a("fire", -126, param5, "torch");
-            jf.field_p[2] = m.a("fire", -126, param5, "spitting_torch");
-            jf.field_p[3] = m.a("platform1_crumble", -124, param5, "platform");
-            jf.field_p[4] = m.a("platform2_crumble", -124, param5, "platform");
-            jf.field_p[5] = m.a("platform3_crumble", -126, param5, "platform");
-            jf.field_p[6] = m.a("key_turn", -128, param5, "keyblock");
-            jf.field_p[7] = m.a("cauldron_bubbles", -124, param5, "bubbles");
-            jf.field_p[8] = m.a("lava_bubbles", -127, param5, "bubbles");
-            jf.field_p[9] = m.a("coin_collect", -128, param5, "coin");
-            jf.field_p[10] = m.a("platform1_crumble_grey", -125, param5, "platform_grey");
-            jf.field_p[11] = m.a("platform2_crumble_grey", -128, param5, "platform_grey");
-            jf.field_p[12] = m.a("platform3_crumble_grey", -124, param5, "platform_grey");
+          }
+          wl.field_f[11][1] = m.a("scarlett_run", -126, param5, var12);
+          wl.field_f[11][5] = m.a("scarlett_trait", -127, param5, var12);
+          wl.field_f[11][3] = m.a("scarlett_push_large", -125, param5, var12);
+          wl.field_f[11][2] = m.a("scarlett_pull_small", -127, param5, var12);
+          wl.field_f[11][15] = m.a("scarlett_key_run", -126, param5, var12);
+          wl.field_f[11][24] = m.a("scarlett_creep", -128, param5, var12);
+          wl.field_f[11][29] = m.a("scarlett_gun_run", -124, param5, var12);
+          wl.field_f[11][34] = m.a("scarlett_cut_in_half", -125, param5, var12);
+          wl.field_f[11][37] = m.a("scarlett_cheer", -127, param5, var12);
+          wl.field_f[11][0] = m.a("scarlett_idle", -124, param5, var12);
+          wl.field_f[1][5] = m.a("ace_trait", -128, param5, var12);
+          wl.field_f[1][7] = m.a("ace_shooting", -127, param5, var12);
+          wl.field_f[1][15] = m.a("ace_key_run", -128, param5, var12);
+          wl.field_f[1][14] = m.a("ace_key_idle", -126, param5, var12);
+          wl.field_f[1][17] = m.a("ace_gun_idle", -125, param5, var12);
+          wl.field_f[1][34] = m.a("ace_cut_in_half", -127, param5, var12);
+          incrementValue$1 = param3;
+          param3++;
+          var11.a(incrementValue$1, (byte) 47, param1);
+          wl.field_f[3][5] = m.a("baroness_trait", -124, param5, var12);
+          wl.field_f[3][15] = m.a("baroness_key_run", -125, param5, var12);
+          wl.field_f[3][14] = m.a("baroness_key_idle", -128, param5, var12);
+          wl.field_f[3][34] = m.a("baroness_cut_in_half", -125, param5, var12);
+          wl.field_f[3][37] = m.a("baroness_cheer", -126, param5, var12);
+          wl.field_f[3][0] = wl.field_f[11][0];
+          wl.field_f[9][1] = m.a("johnsson_run", -125, param5, var12);
+          wl.field_f[9][15] = m.a("johnsson_key_run", -124, param5, var12);
+          wl.field_f[9][14] = m.a("johnsson_key_idle", -126, param5, var12);
+          wl.field_f[9][23] = m.a("johnsson_trait_two", -125, param5, var12);
+          wl.field_f[9][25] = m.a("johnsson_boulder_death", -127, param5, var12);
+          wl.field_f[9][29] = m.a("johnsson_gun_run", -124, param5, var12);
+          wl.field_f[9][34] = m.a("johnsson_cut_in_half", -126, param5, var12);
+          wl.field_f[9][37] = m.a("johnsson_cheer", -126, param5, var12);
+          wl.field_f[4][5] = wl.field_f[11][5];
+          wl.field_f[4][34] = m.a("borees_cut_in_half", -128, param5, var12);
+          wl.field_f[4][37] = m.a("borees_cheer", -124, param5, var12);
+          incrementValue$2 = param3;
+          param3++;
+          var11.a(incrementValue$2, (byte) 47, param1);
+          wl.field_f[5][1] = m.a("bruce_run", -128, param5, var12);
+          wl.field_f[5][0] = m.a("bruce_idle", -125, param5, var12);
+          wl.field_f[5][5] = m.a("bruce_trait", -128, param5, var12);
+          wl.field_f[5][3] = m.a("bruce_push_large", -126, param5, var12);
+          wl.field_f[5][11] = m.a("bruce_carry", -125, param5, var12);
+          wl.field_f[5][8] = m.a("bruce_unsheath", -127, param5, var12);
+          wl.field_f[5][14] = m.a("bruce_key_idle", -128, param5, var12);
+          wl.field_f[5][15] = m.a("bruce_key_run", -125, param5, var12);
+          wl.field_f[5][19] = m.a("bruce_idle_to_run", -128, param5, var12);
+          wl.field_f[5][20] = m.a("bruce_run_to_idle", -128, param5, var12);
+          wl.field_f[5][23] = m.a("bruce_trait_two", -126, param5, var12);
+          wl.field_f[5][28] = m.a("bruce_resheath", -126, param5, var12);
+          wl.field_f[5][29] = m.a("bruce_gun_run", -128, param5, var12);
+          wl.field_f[5][31] = m.a("bruce_gun_run_to_idle", -124, param5, var12);
+          wl.field_f[5][30] = m.a("bruce_gun_idle_to_run", -127, param5, var12);
+          wl.field_f[5][32] = m.a("bruce_push_small_left", -127, param5, var12);
+          wl.field_f[5][33] = m.a("bruce_push_small_right", -124, param5, var12);
+          wl.field_f[5][34] = m.a("bruce_cut_in_half", -125, param5, var12);
+          wl.field_f[5][36] = m.a("bruce_large_pull", -127, param5, var12);
+          wl.field_f[5][37] = m.a("bruce_cheer", -124, param5, var12);
+          wl.field_f[5][2] = m.a("bruce_pull_small", -127, param5, var12);
+          incrementValue$3 = param3;
+          param3++;
+          var11.a(incrementValue$3, (byte) 47, param1);
+          wl.field_f[7][1] = m.a("hans_run", -125, param5, var12);
+          wl.field_f[7][14] = m.a("hans_key_idle", -124, param5, var12);
+          wl.field_f[7][15] = m.a("hans_key_run", -126, param5, var12);
+          wl.field_f[7][29] = m.a("hans_gun_run", -126, param5, var12);
+          wl.field_f[7][34] = m.a("hans_cut_in_half", -125, param5, var12);
+          wl.field_f[7][37] = m.a("hans_cheer", -127, param5, var12);
+          wl.field_f[2][1] = m.a("angelio_run", -128, param5, var12);
+          wl.field_f[2][5] = wl.field_f[11][5];
+          wl.field_f[2][14] = m.a("angelio_key_idle", -128, param5, var12);
+          wl.field_f[2][29] = m.a("angelio_gun_run", -127, param5, var12);
+          wl.field_f[2][34] = m.a("angelio_cut_in_half", -124, param5, var12);
+          wl.field_f[2][37] = m.a("angelio_cheer", -125, param5, var12);
+          wl.field_f[2][15] = m.a("angelio_key_run", -125, param5, var12);
+          wl.field_f[6][0] = m.a("feng_idle", -124, param5, var12);
+          wl.field_f[6][5] = m.a("feng_trait", -127, param5, var12);
+          wl.field_f[6][8] = m.a("feng_unsheath", -128, param5, var12);
+          wl.field_f[6][1] = m.a("feng_run", -125, param5, var12);
+          wl.field_f[6][15] = m.a("feng_key_run", -127, param5, var12);
+          wl.field_f[6][14] = m.a("feng_key_idle", -128, param5, var12);
+          wl.field_f[6][11] = m.a("feng_idol_idle", -128, param5, var12);
+          wl.field_f[6][17] = m.a("feng_gun_idle", -126, param5, var12);
+          wl.field_f[6][21] = m.a("feng_death_two", -128, param5, var12);
+          wl.field_f[6][23] = m.a("feng_trait_two", -127, param5, var12);
+          wl.field_f[6][28] = m.a("feng_resheath", -127, param5, var12);
+          wl.field_f[6][34] = m.a("feng_cut_in_half", -128, param5, var12);
+          wl.field_f[6][37] = m.a("feng_cheer", -124, param5, var12);
+          wl.field_f[6][36] = m.a("feng_large_pull", -124, param5, var12);
+          incrementValue$4 = param3;
+          param3++;
+          var11.a(incrementValue$4, (byte) 47, param1);
+          wl.field_f[8][5] = wl.field_f[1][5];
+          wl.field_f[8][15] = m.a("jamille_key_run", -128, param5, var12);
+          wl.field_f[8][14] = m.a("jamille_key_idle", -125, param5, var12);
+          wl.field_f[8][34] = m.a("jamille_cut_in_half", -127, param5, var12);
+          wl.field_f[8][37] = m.a("jamille_cheer", -128, param5, var12);
+          wl.field_f[8][0] = wl.field_f[11][0];
+          wl.field_f[10][0] = m.a("piles_idle", -125, param5, var12);
+          wl.field_f[10][1] = m.a("piles_run", -124, param5, var12);
+          wl.field_f[10][2] = m.a("piles_pull_small", -126, param5, var12);
+          wl.field_f[10][3] = m.a("piles_push_large", -126, param5, var12);
+          wl.field_f[10][4] = m.a("piles_skid", -128, param5, var12);
+          wl.field_f[10][5] = m.a("piles_trait", -127, param5, var12);
+          wl.field_f[10][6] = m.a("piles_wobble", -128, param5, var12);
+          wl.field_f[10][7] = m.a("piles_shooting", -125, param5, var12);
+          wl.field_f[10][8] = m.a("piles_unsheath", -128, param5, var12);
+          wl.field_f[10][9] = m.a("piles_death", -127, param5, var12);
+          wl.field_f[10][10] = m.a("piles_ashes", -128, param5, var12);
+          wl.field_f[10][11] = m.a("piles_idol_idle", -127, param5, var12);
+          wl.field_f[10][12] = m.a("piles_carry", -127, param5, var12);
+          wl.field_f[10][13] = m.a("piles_idol_skid", -124, param5, var12);
+          wl.field_f[10][14] = m.a("piles_key_idle", -124, param5, var12);
+          wl.field_f[10][15] = m.a("piles_key_run", -127, param5, var12);
+          wl.field_f[10][21] = m.a("piles_death_two", -125, param5, var12);
+          wl.field_f[10][22] = m.a("piles_death_three", -128, param5, var12);
+          wl.field_f[10][36] = m.a("piles_large_pull", -124, param5, var12);
+          incrementValue$5 = param3;
+          param3++;
+          var11.a(incrementValue$5, (byte) 47, param1);
+          wl.field_f[10][18] = m.a("piles_fall_two", -124, param5, var12);
+          wl.field_f[10][17] = m.a("piles_gun_idle", -125, param5, var12);
+          wl.field_f[10][19] = m.a("piles_idle_to_run", -128, param5, var12);
+          wl.field_f[10][20] = m.a("piles_run_to_idle", -128, param5, var12);
+          wl.field_f[10][23] = m.a("piles_trait_two", -128, param5, var12);
+          wl.field_f[10][24] = m.a("piles_creep", -128, param5, var12);
+          wl.field_f[10][25] = m.a("piles_boulder_death", -124, param5, var12);
+          wl.field_f[10][26] = m.a("piles_idle_to_push", -126, param5, var12);
+          wl.field_f[10][28] = m.a("piles_resheath", -127, param5, var12);
+          wl.field_f[10][29] = m.a("piles_gun_run", -125, param5, var12);
+          wl.field_f[10][31] = m.a("piles_gun_run_to_idle", -126, param5, var12);
+          wl.field_f[10][30] = m.a("piles_gun_idle_to_run", -127, param5, var12);
+          wl.field_f[10][32] = m.a("piles_push_small_left", -126, param5, var12);
+          wl.field_f[10][33] = m.a("piles_push_small_right", -127, param5, var12);
+          wl.field_f[10][34] = m.a("piles_cut_in_half", -126, param5, var12);
+          wl.field_f[10][35] = wl.field_f[10][22];
+          wl.field_f[10][37] = m.a("piles_cheer", -128, param5, var12);
+          wl.field_f[12][5] = wl.field_f[10][5];
+          wl.field_f[12][14] = m.a("wilbur_key_idle", -126, param5, var12);
+          wl.field_f[12][34] = m.a("wilbur_cut_in_half", -125, param5, var12);
+          wl.field_f[12][37] = m.a("wilbur_cheer", -125, param5, var12);
+          wl.field_f[12][1] = m.a("wilbur_run", -128, param5, var12);
+          var13 = "new_skeleton";
+          qja.field_f = new dk[10];
+          qja.field_f[0] = m.a("new_skeleton_idle", -124, param5, var13);
+          qja.field_f[1] = m.a("new_skeleton_walk", -126, param5, var13);
+          qja.field_f[2] = m.a("new_skeleton_walk_2", -127, param5, var13);
+          qja.field_f[3] = m.a("new_skeleton_death", -128, param5, var13);
+          qja.field_f[4] = m.a("new_skeleton_head_pull", -124, param5, var13);
+          qja.field_f[5] = m.a("new_skeleton_fire_death", -124, param5, var13);
+          var14 = "snake";
+          qja.field_f[6] = m.a("snake_idle", -128, param5, var14);
+          qja.field_f[7] = m.a("snake_walk", -124, param5, var14);
+          qja.field_f[8] = m.a("snake_idle_to_walk", -126, param5, var14);
+          qja.field_f[9] = m.a("snake_walk_to_idle", -125, param5, var14);
+          incrementValue$6 = param3;
+          param3++;
+          var11.a(incrementValue$6, (byte) 47, param1);
+          var15 = "rope_bridge";
+          cva.field_c = new dk[4];
+          cva.field_c[0] = m.a("start", -127, param5, var15);
+          cva.field_c[1] = m.a("end", -127, param5, var15);
+          cva.field_c[2] = m.a("loop_start", -127, param5, var15);
+          cva.field_c[3] = m.a("loop_section", -126, param5, var15);
+          jf.field_p = new dk[13];
+          if (param2) {
+            field_p = false;
+          }
+          jf.field_p[0] = m.a("fire", -128, param5, "brazier");
+          jf.field_p[1] = m.a("fire", -126, param5, "torch");
+          jf.field_p[2] = m.a("fire", -126, param5, "spitting_torch");
+          jf.field_p[3] = m.a("platform1_crumble", -124, param5, "platform");
+          jf.field_p[4] = m.a("platform2_crumble", -124, param5, "platform");
+          jf.field_p[5] = m.a("platform3_crumble", -126, param5, "platform");
+          jf.field_p[6] = m.a("key_turn", -128, param5, "keyblock");
+          jf.field_p[7] = m.a("cauldron_bubbles", -124, param5, "bubbles");
+          jf.field_p[8] = m.a("lava_bubbles", -127, param5, "bubbles");
+          jf.field_p[9] = m.a("coin_collect", -128, param5, "coin");
+          jf.field_p[10] = m.a("platform1_crumble_grey", -125, param5, "platform_grey");
+          jf.field_p[11] = m.a("platform2_crumble_grey", -128, param5, "platform_grey");
+          jf.field_p[12] = m.a("platform3_crumble_grey", -124, param5, "platform_grey");
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nfa.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -283,86 +283,59 @@ final class nfa extends ci {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
         var15 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            var5_int = param0;
-            var6 = param1;
-            var7 = -param1;
-            var8 = -1;
-            var9 = rp.a(ss.field_c, -16226, pka.field_b, param3 + param1);
-            var10 = rp.a(ss.field_c, -16226, pka.field_b, param3 + -param1);
-            nra.a((byte) -55, param2, var9, vaa.field_a[param4], var10);
-            L1: while (true) {
-              if (var6 <= var5_int) {
-                break L0;
-              } else {
-                L2: {
-                  var8 += 2;
-                  var7 = var7 + var8;
-                  if ((var7 ^ -1) < -1) {
-                    var6--;
-                    var7 = var7 - (var6 << 24737825);
-                    var11 = param4 + -var6;
-                    var12 = var6 + param4;
-                    if (var12 < gca.field_d) {
-                      break L2;
-                    } else {
-                      if (var11 > hc.field_h) {
-                        break L2;
-                      } else {
-                        L3: {
-                          var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
-                          var14 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var5_int);
-                          if (var12 > hc.field_h) {
-                            break L3;
-                          } else {
-                            nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
-                            break L3;
-                          }
-                        }
-                        if (var11 < gca.field_d) {
-                          break L2;
-                        } else {
-                          nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
-                          break L2;
-                        }
-                      }
-                    }
-                  } else {
-                    break L2;
-                  }
+          var5_int = param0;
+          var6 = param1;
+          var7 = -param1;
+          var8 = -1;
+          var9 = rp.a(ss.field_c, -16226, pka.field_b, param3 + param1);
+          var10 = rp.a(ss.field_c, -16226, pka.field_b, param3 - param1);
+          nra.a((byte) -55, param2, var9, vaa.field_a[param4], var10);
+          while (var6 > var5_int) {
+            var8 += 2;
+            var7 = var7 + var8;
+            if (var7 > 0) {
+              var6--;
+              var7 = var7 - (var6 << 1);
+              var11 = param4 - var6;
+              var12 = var6 + param4;
+              if (var12 >= gca.field_d &&
+                var11 <= hc.field_h) {
+                var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
+                var14 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var5_int);
+                if (var12 <= hc.field_h) {
+                  nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
                 }
-                var5_int++;
-                var11 = param4 - var5_int;
-                var12 = param4 + var5_int;
-                if (gca.field_d > var12) {
-                  continue L1;
-                } else {
-                  if (var11 > hc.field_h) {
-                    continue L1;
-                  } else {
-                    L4: {
-                      var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
-                      var14 = rp.a(ss.field_c, param0 + -16226, pka.field_b, param3 - var6);
-                      if (hc.field_h < var12) {
-                        break L4;
-                      } else {
-                        nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
-                        break L4;
-                      }
-                    }
-                    if (gca.field_d > var11) {
-                      continue L1;
-                    } else {
-                      nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
-                      continue L1;
-                    }
-                  }
+                if (var11 >= gca.field_d) {
+                  nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
                 }
               }
             }
+            var5_int++;
+            var11Lifetime1 = param4 - var5_int;
+            var12Lifetime1 = param4 + var5_int;
+            if (gca.field_d > var12Lifetime1) {
+              continue;
+            }
+            if (var11Lifetime1 > hc.field_h) {
+              continue;
+            }
+            var13Lifetime1 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
+            var14Lifetime1 = rp.a(ss.field_c, param0 - 16226, pka.field_b, param3 - var6);
+            if (hc.field_h >= var12Lifetime1) {
+              nra.a((byte) -55, param2, var13Lifetime1, vaa.field_a[var12Lifetime1], var14Lifetime1);
+            }
+            if (gca.field_d > var11Lifetime1) {
+              continue;
+            }
+            nra.a((byte) -55, param2, var13Lifetime1, vaa.field_a[var11Lifetime1], var14Lifetime1);
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -371,6 +344,7 @@ final class nfa extends ci {
     }
 
     final int[][] b(int param0, int param1) {
+        int var13 = 0;
         int[][] var3;
         int[][] var4;
         int var5;
@@ -382,71 +356,46 @@ final class nfa extends ci {
         int[] var10;
         int[] var11;
         int[] var12;
-        int var13;
         int var14;
         int var15;
         int var16;
         int[][] var17;
         int[][] var18;
         int[][] var19;
-        L0: {
-          var16 = TombRacer.field_G ? 1 : 0;
-          var19 = this.field_h.a(param0, (byte) 125);
-          var18 = var19;
-          var17 = var18;
-          var3 = var17;
-          if (this.field_h.field_f) {
-            L1: {
-              var5 = ns.field_g / this.field_m;
-              var6 = qda.field_i / this.field_o;
-              if (var6 <= 0) {
-                var4 = this.a(0, 0, -1);
-                break L1;
-              } else {
-                var7_int = param0 % var6;
-                var4 = this.a(var7_int * qda.field_i / var6, 0, param1 + 0);
-                break L1;
-              }
-            }
-            var7 = var4[0];
-            var8 = var4[1];
-            var9 = var4[2];
-            var10 = var19[0];
-            var11 = var19[1];
-            var12 = var19[2];
-            var13 = 0;
-            L2: while (true) {
-              if (ns.field_g <= var13) {
-                break L0;
-              } else {
-                L3: {
-                  if ((var5 ^ -1) >= -1) {
-                    var14 = 0;
-                    break L3;
-                  } else {
-                    var15 = var13 % var5;
-                    var14 = var15 * ns.field_g / var5;
-                    break L3;
-                  }
-                }
-                var10[var13] = var7[var14];
-                var11[var13] = var8[var14];
-                var12[var13] = var9[var14];
-                var13++;
-                continue L2;
-              }
-            }
+        var16 = TombRacer.field_G ? 1 : 0;
+        var19 = this.field_h.a(param0, (byte) 125);
+        var18 = var19;
+        var17 = var18;
+        var3 = var17;
+        if (this.field_h.field_f) {
+          var5 = ns.field_g / this.field_m;
+          var6 = qda.field_i / this.field_o;
+          if (var6 <= 0) {
+            var4 = this.a(0, 0, -1);
           } else {
-            break L0;
+            var7_int = param0 % var6;
+            var4 = this.a(var7_int * qda.field_i / var6, 0, param1 + 0);
+          }
+          var7 = var4[0];
+          var8 = var4[1];
+          var9 = var4[2];
+          var10 = var19[0];
+          var11 = var19[1];
+          var12 = var19[2];
+          for (var13 = 0; ns.field_g > var13; var13++) {
+            if (var5 <= 0) {
+              var14 = 0;
+            } else {
+              var15 = var13 % var5;
+              var14 = var15 * ns.field_g / var5;
+            }
+            var10[var13] = var7[var14];
+            var11[var13] = var8[var14];
+            var12[var13] = var9[var14];
           }
         }
-        L4: {
-          if (param1 == -1) {
-            break L4;
-          } else {
-            field_n = (gt) null;
-            break L4;
-          }
+        if (param1 != -1) {
+          field_n = (gt) null;
         }
         return var17;
     }
@@ -460,50 +409,31 @@ final class nfa extends ci {
         int var9;
         int var10;
         int var8;
-        L0: {
-          var9 = TombRacer.field_G ? 1 : 0;
-          if (param0 == 1) {
-            break L0;
-          } else {
-            nfa.d((byte) -85);
-            break L0;
-          }
+        int var7Lifetime1;
+        var9 = TombRacer.field_G ? 1 : 0;
+        if (param0 != 1) {
+          nfa.d((byte) -85);
         }
-        L1: {
-          var3 = this.field_i.a((byte) 78, param1);
-          if (!this.field_i.field_d) {
-            break L1;
+        var3 = this.field_i.a((byte) 78, param1);
+        if (this.field_i.field_d) {
+          var5 = ns.field_g / this.field_m;
+          var6 = qda.field_i / this.field_o;
+          if (var6 <= 0) {
+            var4 = this.c(0, -84, 0);
           } else {
-            L2: {
-              var5 = ns.field_g / this.field_m;
-              var6 = qda.field_i / this.field_o;
-              if ((var6 ^ -1) >= -1) {
-                var4 = this.c(0, -84, 0);
-                break L2;
-              } else {
-                var7 = param1 % var6;
-                var4 = this.c(0, -116, var7 * qda.field_i / var6);
-                break L2;
-              }
+            var7 = param1 % var6;
+            var4 = this.c(0, -116, var7 * qda.field_i / var6);
+          }
+          var10 = 0;
+          var7Lifetime1 = var10;
+          while (var10 < ns.field_g) {
+            if (var5 > 0) {
+              var8 = var10 % var5;
+              var3[var10] = var4[var8 * ns.field_g / var5];
+            } else {
+              var3[var10] = var4[0];
             }
-            var10 = 0;
-            var7 = var10;
-            L3: while (true) {
-              if (var10 >= ns.field_g) {
-                break L1;
-              } else {
-                if ((var5 ^ -1) < -1) {
-                  var8 = var10 % var5;
-                  var3[var10] = var4[var8 * ns.field_g / var5];
-                  var10++;
-                  continue L3;
-                } else {
-                  var3[var10] = var4[0];
-                  var10++;
-                  continue L3;
-                }
-              }
-            }
+            var10++;
           }
         }
         return var3;
@@ -517,10 +447,10 @@ final class nfa extends ci {
 
     final static void a(int[][] param0, int param1) {
         try {
-            vaa.field_a = param0;
-            int var2_int = -93 % ((param1 - 57) / 49);
+          vaa.field_a = param0;
+          int var2_int = -93 % ((param1 - 57) / 49);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nfa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nfa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -535,59 +465,34 @@ final class nfa extends ci {
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var4_int = param2;
-              if (0 == var4_int) {
-                this.field_m = param1.h(param0 + 148);
-                break L1;
-              } else {
-                if (-2 != (var4_int ^ -1)) {
-                  break L1;
-                } else {
-                  this.field_o = param1.h(255);
-                  break L1;
-                }
-              }
+          var4_int = param2;
+          if (0 == var4_int) {
+            this.field_m = param1.h(param0 + 148);
+          } else {
+            if (var4_int == 1) {
+              this.field_o = param1.h(255);
             }
-            L2: {
-              if (param0 == 107) {
-                break L2;
-              } else {
-                nfa.a((int[][]) null, 80);
-                break L2;
-              }
-            }
-            break L0;
           }
+          if (param0 != 107) {
+            nfa.a((int[][]) null, 80);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4);
-
-            stackIn_11_1 = new StringBuilder().append("nfa.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_11_0 = var4;
+          stackIn_11_1 = new StringBuilder().append("nfa.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 

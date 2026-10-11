@@ -16,7 +16,7 @@ final class ah {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            ah.a(-83);
+          ah.a(-83);
         }
         field_a = null;
         field_g = null;
@@ -38,7 +38,7 @@ final class ah {
         field_e = 0L;
         field_i = new int[8192];
         for (var0 = 0; var0 < field_a.length; var0++) {
-            field_a[var0] = new ih();
+          field_a[var0] = new ih();
         }
     }
 }

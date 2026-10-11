@@ -20,17 +20,16 @@ abstract class ta extends pa {
     }
 
     final static dd[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param2 != -2843) {
-          field_y = -101;
-          return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
-        } else {
+        if (param2 == -2843) {
           return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
         }
+        field_y = -101;
+        return ud.a(param3, 3, param2 + 7558, 1, 1, param4, param1, 1, param0);
     }
 
     final static String f(int param0) {
         if (param0 != -15040) {
-            return (String) null;
+          return (String) null;
         }
         return ae.field_a.h(param0 + 15040);
     }
@@ -38,7 +37,7 @@ abstract class ta extends pa {
     final static void a(boolean param0, int param1) {
         uc.field_c.a(param0, 10518);
         if (param1 <= 43) {
-            ta.a(19, 19, 119, 12, 2);
+          ta.a(19, 19, 119, 12, 2);
         }
     }
 

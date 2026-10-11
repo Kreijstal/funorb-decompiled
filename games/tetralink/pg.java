@@ -20,6 +20,7 @@ final class pg implements Runnable {
         int var1_int = 0;
         nk var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -28,46 +29,28 @@ final class pg implements Runnable {
         var4 = TetraLink.field_J;
         this.field_k = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_g) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (-3 >= (var1_int ^ -1)) {
-                        tb.a(false, 10L);
-                        var5 = (Object) null;
-                        li.a(this.field_j, (Object) null, (byte) -98);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_l[var1_int];
-                          if (var2 != null) {
-                            var2.f();
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_g) {
+              for (var1_int = 0; var1_int < 2; var1_int++) {
+                var2 = this.field_l[var1_int];
+                if (var2 != null) {
+                  var2.f();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              fk.a(-127, (Throwable) ((Object) var1), (String) null);
-              this.field_k = false;
-              return;
+              tb.a(false, 10L);
+              var5 = (Object) null;
+              li.a(this.field_j, (Object) null, (byte) -98);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var6 = (String) null;
+            fk.a(-127, (Throwable) ((Object) var1), (String) null);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -83,16 +66,14 @@ final class pg implements Runnable {
         field_e = null;
         field_d = null;
         field_f = null;
-        if (param0) {
-          pg.a(true);
-          field_i = null;
-          field_b = null;
-          return;
-        } else {
+        if (!param0) {
           field_i = null;
           field_b = null;
           return;
         }
+        pg.a(true);
+        field_i = null;
+        field_b = null;
     }
 
     pg() {

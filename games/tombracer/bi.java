@@ -11,10 +11,10 @@ final class bi {
         field_a = null;
         field_b = null;
         if (param0) {
-            ha var2 = (ha) null;
-            bi.a((ha) null, 112);
-            field_d = null;
-            return;
+          ha var2 = (ha) null;
+          bi.a((ha) null, 112);
+          field_d = null;
+          return;
         }
         field_d = null;
     }
@@ -23,13 +23,13 @@ final class bi {
         ssa var2 = null;
         jea var3 = null;
         try {
-            var2 = uja.a((byte) 65, param0);
-            var3 = wi.field_s;
-            var2.a(var3.field_q + var3.field_G, var3.field_A, (byte) -12, var3.field_t + var3.field_A, var3.field_q);
-            param0.SA(param1, var3.field_A, bea.field_g, var3.field_t, bea.field_l, bea.field_g * var3.field_A, bea.field_g);
-            var2.a(param1 ^ -64);
+          var2 = uja.a((byte) 65, param0);
+          var3 = wi.field_s;
+          var2.a(var3.field_q + var3.field_G, var3.field_A, (byte) -12, var3.field_t + var3.field_A, var3.field_q);
+          param0.SA(param1, var3.field_A, bea.field_g, var3.field_t, bea.field_l, bea.field_g * var3.field_A, bea.field_g);
+          var2.a(param1 ^ -64);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "bi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

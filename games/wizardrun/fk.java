@@ -7,7 +7,7 @@ final class fk extends df {
     private java.awt.Component field_j;
 
     final void a(byte param0, int param1, java.awt.Component param2, int param3) {
-        this.field_f = new int[param1 * param3 - -1];
+        this.field_f = new int[param1 * param3 + 1];
         this.field_h = param1;
         this.field_d = param3;
         java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_f, this.field_f.length);
@@ -21,7 +21,7 @@ final class fk extends df {
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3) {
         if (param1 != -29402) {
-            return;
+          return;
         }
         param0.drawImage(this.field_g, param2, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
     }

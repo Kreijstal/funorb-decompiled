@@ -14,28 +14,19 @@ final class rg extends IOException {
     static int field_f;
 
     final static int a(int param0, int param1, int param2) {
-        int var3;
-        var3 = param1 >> 2028909343 & -1 + param2;
-        if (param0 < 32) {
-          field_a = true;
-          return var3 + (param1 - -(param1 >>> 19910335)) % param2;
-        } else {
-          return var3 + (param1 - -(param1 >>> 19910335)) % param2;
+        int var3 = param1 >> 31 & -1 + param2;
+        if (param0 >= 32) {
+          return var3 + (param1 + (param1 >>> 31)) % param2;
         }
+        field_a = true;
+        return var3 + (param1 + (param1 >>> 31)) % param2;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         ql.field_L.a(88, param0, param3, param2, param6);
-        if (param4 != -4803) {
-          return;
-        } else {
-          L0: {
-            if (ji.field_n != null) {
-              ji.field_n.a(param3, param3, param1, param5, -gr.field_Y + param5, -126);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param4 == -4803) {
+          if (ji.field_n != null) {
+            ji.field_n.a(param3, param3, param1, param5, -gr.field_Y + param5, -126);
           }
           return;
         }
@@ -46,56 +37,43 @@ final class rg extends IOException {
     }
 
     final static void a(byte param0, boolean param1) {
-        L0: {
-          if (ko.field_S != null) {
-            oh.a(ko.field_S, false);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (ko.field_S != null) {
+          oh.a(ko.field_S, false);
         }
-        if (null == un.field_Lb) {
+        if (null != un.field_Lb) {
+          un.field_Lb.a(param1, -64);
           gd.a(3206, param1);
           if (up.field_z == null) {
             dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = (im[]) null;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            up.field_z.b(param1, 0);
-            dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = (im[]) null;
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          un.field_Lb.a(param1, -64);
-          gd.a(3206, param1);
-          if (up.field_z != null) {
-            up.field_z.b(param1, 0);
-            dc.a(param1, (byte) -110);
             if (param0 == 53) {
               return;
-            } else {
-              field_g = (im[]) null;
-              return;
             }
-          } else {
-            dc.a(param1, (byte) -110);
-            if (param0 != 53) {
-              field_g = (im[]) null;
-              return;
-            } else {
-              return;
-            }
+            field_g = (im[]) null;
+            return;
           }
+          up.field_z.b(param1, 0);
+          dc.a(param1, (byte) -110);
+          if (param0 != 53) {
+            field_g = (im[]) null;
+            return;
+          }
+          return;
         }
+        gd.a(3206, param1);
+        if (up.field_z != null) {
+          up.field_z.b(param1, 0);
+          dc.a(param1, (byte) -110);
+          if (param0 == 53) {
+            return;
+          }
+          field_g = (im[]) null;
+          return;
+        }
+        dc.a(param1, (byte) -110);
+        if (param0 == 53) {
+          return;
+        }
+        field_g = (im[]) null;
     }
 
     public static void a(byte param0) {

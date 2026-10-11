@@ -15,9 +15,9 @@ final class sm {
         field_f = null;
         field_b = null;
         if (param0 != -12970) {
-            sm.a(-117);
-            field_g = null;
-            return;
+          sm.a(-117);
+          field_g = null;
+          return;
         }
         field_g = null;
     }

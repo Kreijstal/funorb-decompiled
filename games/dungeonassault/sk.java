@@ -13,7 +13,7 @@ final class sk extends nl implements java.awt.event.MouseWheelListener {
         int var2 = this.field_h;
         this.field_h = 0;
         if (param0 != 6) {
-            return -79;
+          return -79;
         }
         return var2;
     }
@@ -25,10 +25,10 @@ final class sk extends nl implements java.awt.event.MouseWheelListener {
 
     final void a(boolean param0, java.awt.Component param1) {
         if (param0) {
-            java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
-            this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-            param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          java.awt.event.MouseWheelEvent var4 = (java.awt.event.MouseWheelEvent) null;
+          this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+          param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

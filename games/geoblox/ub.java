@@ -103,11 +103,10 @@ final class ub {
               if ((var4 & 1 << var5Lifetime1 * 4 << var7) == 0) {
                 this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
                 this.field_h[var5Lifetime1][1][var7] = this.field_h[var5Lifetime1][0][var7];
-                var7++;
-                continue;
+              } else {
+                this.field_c[var5Lifetime1][1][var7] = param0.b(true);
+                this.field_h[var5Lifetime1][1][var7] = param0.b(true);
               }
-              this.field_c[var5Lifetime1][1][var7] = param0.b(true);
-              this.field_h[var5Lifetime1][1][var7] = param0.b(true);
               var7++;
             }
           }

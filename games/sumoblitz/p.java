@@ -10,26 +10,23 @@ final class p extends ms implements e {
     long field_nativeid;
 
     private final void a(Exception param0) {
-        if (field_k) {
-          if (wq.a(-120) - field_n < 30000L) {
-            this.field_o.repaint();
-            return;
-          } else {
-            throw new RuntimeException(param0.getMessage());
-          }
-        } else {
+        if (!field_k) {
           field_n = wq.a(-119);
           field_k = true;
           return;
         }
+        if (wq.a(-120) - field_n >= 30000L) {
+          throw new RuntimeException(param0.getMessage());
+        }
+        this.field_o.repaint();
     }
 
     final void a(int param0, int param1) {
         java.awt.Dimension var4 = null;
         synchronized (this.field_o.getTreeLock()) {
-            var4 = this.field_o.getSize();
-            this.H(param0, param1, var4.width, var4.height);
-            field_k = false;
+          var4 = this.field_o.getSize();
+          this.H(param0, param1, var4.width, var4.height);
+          field_k = false;
         }
     }
 
@@ -49,8 +46,8 @@ final class p extends ms implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pa.a((e) (this), (byte) -37);
-            return;
+          pa.a((e) (this), (byte) -37);
+          return;
         }
     }
 

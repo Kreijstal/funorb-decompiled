@@ -9,7 +9,7 @@ final class qba {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 != 480) {
-            return false;
+          return false;
         }
         return (param2 & 50560) != 0 ? true : false;
     }
@@ -17,9 +17,9 @@ final class qba {
     public static void a(boolean param0) {
         field_d = null;
         if (param0) {
-            field_c = 45;
-            field_b = null;
-            return;
+          field_c = 45;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

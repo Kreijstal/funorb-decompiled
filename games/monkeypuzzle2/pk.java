@@ -7,22 +7,14 @@ final class pk implements com.ms.directX.IEnumModesCallback {
     private static int[] field_c;
 
     final int[] a(byte param0) {
-        int[] var2;
-        com.ms.com.IUnknown var3;
-        int[] var4;
+        int[] var4 = null;
+        int[] var2 = null;
+        int[] var4Lifetime1;
+        int[] var2Lifetime1;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         field_c = new int[field_a];
         field_a = 0;
-        if (param0 != 88) {
-          var3 = (com.ms.com.IUnknown) null;
-          this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
-          this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-          var4 = field_c;
-          var2 = var4;
-          field_c = null;
-          field_a = 0;
-          return var4;
-        } else {
+        if (param0 == 88) {
           this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
           var4 = field_c;
           var2 = var4;
@@ -30,6 +22,14 @@ final class pk implements com.ms.directX.IEnumModesCallback {
           field_a = 0;
           return var4;
         }
+        com.ms.com.IUnknown var3 = (com.ms.com.IUnknown) null;
+        this.callbackEnumModes((com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null);
+        this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+        var4Lifetime1 = field_c;
+        var2Lifetime1 = var4Lifetime1;
+        field_c = null;
+        field_a = 0;
+        return var4Lifetime1;
     }
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
@@ -38,33 +38,31 @@ final class pk implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (null != field_c) {
-            fieldTemp$1 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_a;
-            field_a = field_a + 1;
-            field_c[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_a;
+          field_a = field_a + 1;
+          field_c[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_a = field_a + 4;
+          field_a = field_a + 4;
         }
     }
 
     final void a(int param0, java.awt.Frame param1) {
         this.field_b.restoreDisplayMode();
-        if (param0 < 101) {
-          this.field_b = (com.ms.directX.DirectDraw) null;
-          this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
-          return;
-        } else {
+        if (param0 >= 101) {
           this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
           return;
         }
+        this.field_b = (com.ms.directX.DirectDraw) null;
+        this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param1), 8);
     }
 
     public pk() {

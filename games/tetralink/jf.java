@@ -12,18 +12,18 @@ final class jf {
         ag.d(16);
         this.field_d = ag.c() != 0 ? ag.d(4) + 1 : 1;
         if (ag.c() != 0) {
-            ag.d(8);
+          ag.d(8);
         }
         ag.d(2);
         if (this.field_d > 1) {
-            this.field_c = ag.d(4);
+          this.field_c = ag.d(4);
         }
         this.field_b = new int[this.field_d];
         this.field_a = new int[this.field_d];
         for (var1 = 0; var1 < this.field_d; var1++) {
-            ag.d(8);
-            this.field_b[var1] = ag.d(8);
-            this.field_a[var1] = ag.d(8);
+          ag.d(8);
+          this.field_b[var1] = ag.d(8);
+          this.field_a[var1] = ag.d(8);
         }
     }
 }

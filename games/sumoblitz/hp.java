@@ -12,7 +12,7 @@ final class hp extends ht {
         field_o = null;
         field_n = null;
         if (param0 != 1) {
-            return;
+          return;
         }
         field_l = null;
     }
@@ -30,13 +30,13 @@ final class hp extends ht {
         this.field_k = -1;
         this.field_m = -1;
         try {
-            this.field_d.a(112, (ht) (this));
-            for (var7_int = 0; 6 > var7_int; var7_int++) {
-                jaggl.OpenGL.glTexImage2Dub(34069 - -var7_int, 0, this.field_a, param2, param2, 0, param5, 5121, param4[var7_int], 0);
-            }
-            this.a(true, 0);
+          this.field_d.a(112, (ht) (this));
+          for (var7_int = 0; 6 > var7_int; var7_int++) {
+            jaggl.OpenGL.glTexImage2Dub(34069 + var7_int, 0, this.field_a, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+          }
+          this.a(true, 0);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -45,71 +45,39 @@ final class hp extends ht {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var2_int = param0.charAt(0);
-              var3 = 1;
-              if (param1) {
-                break L1;
-              } else {
-                field_o = (int[]) null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (param0.length() <= var3) {
-                stackIn_9_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (param0.charAt(var3) == var2_int) {
-                  var3++;
-                  continue L2;
-                } else {
-                  stackIn_6_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
+          var2_int = param0.charAt(0);
+          var3 = 1;
+          if (!param1) {
+            field_o = (int[]) null;
           }
+          while (true) {
+            if (param0.length() <= var3) {
+              return true;
+            }
+            if (param0.charAt(var3) == var2_int) {
+              var3++;
+              continue;
+            }
+            break;
+          }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("hp.A(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("hp.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw qo.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

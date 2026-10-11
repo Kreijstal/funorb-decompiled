@@ -19,7 +19,7 @@ final class vm {
         field_a = (byte[][][]) null;
         field_d = null;
         if (param0 != -75) {
-            field_c = (String[]) null;
+          field_c = (String[]) null;
         }
     }
 
@@ -28,19 +28,16 @@ final class vm {
         Object var1 = null;
         var1 = ob.field_hb;
         synchronized (var1) {
-          L0: {
-            wk.field_m = rk.field_K;
-            rf.field_o = rf.field_o + 1;
-            an.field_g = j.field_g;
-            me.field_I = dd.field_i;
-            tl.field_d = qa.field_g;
-            qa.field_g = false;
-            re.field_r = eh.field_c;
-            pb.field_h = bo.field_e;
-            ja.field_s = wd.field_j;
-            eh.field_c = param0;
-            break L0;
-          }
+          wk.field_m = rk.field_K;
+          rf.field_o = rf.field_o + 1;
+          an.field_g = j.field_g;
+          me.field_I = dd.field_i;
+          tl.field_d = qa.field_g;
+          qa.field_g = false;
+          re.field_r = eh.field_c;
+          pb.field_h = bo.field_e;
+          ja.field_s = wd.field_j;
+          eh.field_c = param0;
         }
     }
 

@@ -43,28 +43,26 @@ final class ba {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 18002) {
-            ba.a(38, 82, 80);
-            im.field_d = param2;
-            sc.field_b = param1;
-            return;
+          ba.a(38, 82, 80);
+          im.field_d = param2;
+          sc.field_b = param1;
+          return;
         }
         im.field_d = param2;
         sc.field_b = param1;
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_w = (int[]) null;
-          field_w = null;
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
+        if (!param0) {
           field_w = null;
           field_g = null;
           field_e = null;
           return;
         }
+        field_w = (int[]) null;
+        field_w = null;
+        field_g = null;
+        field_e = null;
     }
 
     ba() {

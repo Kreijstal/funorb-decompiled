@@ -22,288 +22,220 @@ final class uo extends el {
         int var15;
         int var16;
         int var17;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime3;
+        int var12Lifetime4;
+        int var13Lifetime1;
+        int var13Lifetime2;
+        int var13Lifetime3;
+        int var13Lifetime4;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var14Lifetime3;
+        int var14Lifetime4;
+        int var15Lifetime1;
+        int var15Lifetime2;
+        int var15Lifetime3;
+        int var16Lifetime1;
+        int var16Lifetime2;
+        int var16Lifetime3;
+        int var12Lifetime5;
+        int var13Lifetime5;
+        int var14Lifetime5;
+        int var12Lifetime1Lifetime1;
+        int var12Lifetime2Lifetime1;
+        int var13Lifetime1Lifetime1;
+        int var13Lifetime2Lifetime1;
+        int var13Lifetime3Lifetime1;
+        int var14Lifetime1Lifetime1;
+        int var14Lifetime2Lifetime1;
+        int var14Lifetime3Lifetime1;
+        int var13Lifetime2Lifetime2;
+        int var14Lifetime2Lifetime2;
         var17 = CrazyCrystals.field_B;
         var8 = kh.field_c;
         var9 = kh.field_b;
         var10 = kh.field_g;
         var11 = kh.field_j;
-        if (param4) {
-          if (param4) {
-            if (param3 <= -59) {
-              var12 = 0;
-              L0: while (true) {
-                if (-9 >= (var12 ^ -1)) {
-                  var12 = param1 * (16 - -this.field_j) >> -461073084;
-                  var13 = -var12 + (param1 + param5);
-                  var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-                  if (0 < 3 * var12 + var14) {
-                    if (param4) {
-                      this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                      kh.d(var8, var9, var10, var11);
-                      return;
-                    } else {
-                      this.field_p = false;
-                      this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                      kh.d(var8, var9, var10, var11);
-                      return;
-                    }
-                  } else {
-                    kh.d(var8, var9, var10, var11);
-                    return;
-                  }
-                } else {
-                  var13 = -var12 + (-1 + (this.field_j >> 1196954369)) << 308704545;
-                  if (-1 >= (var13 ^ -1)) {
-                    var14 = (var13 + 16) * param1 >> 521682852;
-                    var15 = param1 + (param5 - (var14 >> -1530299902));
-                    var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                    if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
-                      L1: {
-                        if (param4) {
-                          break L1;
-                        } else {
-                          this.field_p = false;
-                          break L1;
-                        }
-                      }
-                      bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
-                      var12++;
-                      continue L0;
-                    } else {
-                      var12++;
-                      continue L0;
-                    }
-                  } else {
-                    L2: {
-                      var12 = param1 * (16 - -this.field_j) >> -461073084;
-                      var13 = -var12 + (param1 + param5);
-                      var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-                      if (0 >= 3 * var12 + var14) {
-                        break L2;
-                      } else {
-                        if (param4) {
-                          this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                          break L2;
-                        } else {
-                          this.field_p = false;
-                          this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                          break L2;
-                        }
-                      }
-                    }
-                    kh.d(var8, var9, var10, var11);
-                    return;
-                  }
+        if (!param4) {
+          kh.d(0, 0, 480, 480);
+          this.field_p = true;
+          if (param3 > -59) {
+            this.a(true, -118, 73, (byte) -80, true, 50, -86);
+          }
+          for (var12 = 0; var12 < 8; var12++) {
+            var13 = -var12 + (-1 + (this.field_j >> 1)) << 1;
+            if (var13 >= 0) {
+              var14 = (var13 + 16) * param1 >> 4;
+              var15 = param1 + (param5 - (var14 >> 2));
+              var16 = -(var14 * (-2 + var13 + 16) >> 3) + (param2 + param6);
+              if (var16 + (var14 * 3 >> 2) > 0) {
+                if (!param4) {
+                  this.field_p = false;
                 }
+                bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
               }
-            } else {
-              this.a(true, -118, 73, (byte) -80, true, 50, -86);
-              var12 = 0;
-              L3: while (true) {
-                if (-9 < (var12 ^ -1)) {
-                  var13 = -var12 + (-1 + (this.field_j >> 1196954369)) << 308704545;
-                  if (-1 >= (var13 ^ -1)) {
-                    var14 = (var13 + 16) * param1 >> 521682852;
-                    var15 = param1 + (param5 - (var14 >> -1530299902));
-                    var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                    if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
-                      L4: {
-                        if (param4) {
-                          break L4;
-                        } else {
-                          this.field_p = false;
-                          break L4;
-                        }
-                      }
-                      bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
-                      var12++;
-                      continue L3;
-                    } else {
-                      var12++;
-                      continue L3;
-                    }
-                  } else {
-                    var12 = param1 * (16 - -this.field_j) >> -461073084;
-                    var13 = -var12 + (param1 + param5);
-                    var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-                    if (0 < 3 * var12 + var14) {
-                      if (param4) {
-                        this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                        kh.d(var8, var9, var10, var11);
-                        return;
-                      } else {
-                        this.field_p = false;
-                        this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                        kh.d(var8, var9, var10, var11);
-                        return;
-                      }
-                    } else {
-                      kh.d(var8, var9, var10, var11);
-                      return;
-                    }
-                  }
-                } else {
-                  L5: {
-                    var12 = param1 * (16 - -this.field_j) >> -461073084;
-                    var13 = -var12 + (param1 + param5);
-                    var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-                    if (0 >= 3 * var12 + var14) {
-                      break L5;
-                    } else {
-                      if (param4) {
-                        this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                        break L5;
-                      } else {
-                        this.field_p = false;
-                        this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                        break L5;
-                      }
-                    }
-                  }
-                  kh.d(var8, var9, var10, var11);
-                  return;
-                }
-              }
+              continue;
             }
-          } else {
-            L6: {
-              this.field_p = true;
-              if (param3 <= -59) {
-                break L6;
-              } else {
-                this.a(true, -118, 73, (byte) -80, true, 50, -86);
-                break L6;
-              }
+            break;
+          }
+          var12Lifetime5 = param1 * (16 + this.field_j) >> 4;
+          var13Lifetime5 = -var12Lifetime5 + (param1 + param5);
+          var14Lifetime5 = param2 + param6 - (var12Lifetime5 * (this.field_j + 16) >> 3);
+          if (0 < 3 * var12Lifetime5 + var14Lifetime5) {
+            if (!param4) {
+              this.field_p = false;
             }
-            var12 = 0;
-            L7: while (true) {
-              L8: {
-                if (-9 >= (var12 ^ -1)) {
-                  break L8;
-                } else {
-                  var13 = -var12 + (-1 + (this.field_j >> 1196954369)) << 308704545;
-                  if (-1 >= (var13 ^ -1)) {
-                    var14 = (var13 + 16) * param1 >> 521682852;
-                    var15 = param1 + (param5 - (var14 >> -1530299902));
-                    var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                    if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
-                      L9: {
-                        if (param4) {
-                          break L9;
-                        } else {
-                          this.field_p = false;
-                          break L9;
-                        }
-                      }
-                      bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
-                      var12++;
-                      continue L7;
-                    } else {
-                      var12++;
-                      continue L7;
-                    }
-                  } else {
-                    break L8;
-                  }
+            this.field_a.h(-30).b(var13Lifetime5, var14Lifetime5, var12Lifetime5 * 2, var12Lifetime5 * 3, ek.field_f[this.field_a.field_u]);
+          }
+          kh.d(var8, var9, var10, var11);
+          return;
+        }
+        if (!param4) {
+          this.field_p = true;
+          if (param3 > -59) {
+            this.a(true, -118, 73, (byte) -80, true, 50, -86);
+          }
+          for (var12Lifetime1 = 0; var12Lifetime1 < 8; var12Lifetime1++) {
+            var13Lifetime1 = -var12Lifetime1 + (-1 + (this.field_j >> 1)) << 1;
+            if (var13Lifetime1 >= 0) {
+              var14Lifetime1 = (var13Lifetime1 + 16) * param1 >> 4;
+              var15Lifetime1 = param1 + (param5 - (var14Lifetime1 >> 2));
+              var16Lifetime1 = -(var14Lifetime1 * (-2 + var13Lifetime1 + 16) >> 3) + (param2 + param6);
+              if (var16Lifetime1 + (var14Lifetime1 * 3 >> 2) > 0) {
+                if (!param4) {
+                  this.field_p = false;
                 }
+                bd.field_n[var12Lifetime1].a(var15Lifetime1, var16Lifetime1, var14Lifetime1 >> 1, var14Lifetime1 * 3 >> 2, 256);
               }
-              L10: {
-                var12 = param1 * (16 - -this.field_j) >> -461073084;
-                var13 = -var12 + (param1 + param5);
-                var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-                if (0 >= 3 * var12 + var14) {
-                  break L10;
-                } else {
-                  if (param4) {
-                    this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                    break L10;
-                  } else {
-                    this.field_p = false;
-                    this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                    break L10;
-                  }
-                }
+              continue;
+            }
+            break;
+          }
+          var12Lifetime1Lifetime1 = param1 * (16 + this.field_j) >> 4;
+          var13Lifetime1Lifetime1 = -var12Lifetime1Lifetime1 + (param1 + param5);
+          var14Lifetime1Lifetime1 = param2 + param6 - (var12Lifetime1Lifetime1 * (this.field_j + 16) >> 3);
+          if (0 < 3 * var12Lifetime1Lifetime1 + var14Lifetime1Lifetime1) {
+            if (!param4) {
+              this.field_p = false;
+            }
+            this.field_a.h(-30).b(var13Lifetime1Lifetime1, var14Lifetime1Lifetime1, var12Lifetime1Lifetime1 * 2, var12Lifetime1Lifetime1 * 3, ek.field_f[this.field_a.field_u]);
+          }
+          kh.d(var8, var9, var10, var11);
+          return;
+        }
+        if (param3 <= -59) {
+          var12Lifetime2 = 0;
+          while (true) {
+            if (var12Lifetime2 >= 8) {
+              var12Lifetime2 = param1 * (16 + this.field_j) >> 4;
+              var13Lifetime2 = -var12Lifetime2 + (param1 + param5);
+              var14Lifetime2 = param2 + param6 - (var12Lifetime2 * (this.field_j + 16) >> 3);
+              if (0 >= 3 * var12Lifetime2 + var14Lifetime2) {
+                kh.d(var8, var9, var10, var11);
+                return;
               }
+              if (param4) {
+                this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, ek.field_f[this.field_a.field_u]);
+                kh.d(var8, var9, var10, var11);
+                return;
+              }
+              this.field_p = false;
+              this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, ek.field_f[this.field_a.field_u]);
               kh.d(var8, var9, var10, var11);
               return;
             }
-          }
-        } else {
-          kh.d(0, 0, 480, 480);
-          this.field_p = true;
-          L11: {
-            if (param3 <= -59) {
-              break L11;
-            } else {
-              this.a(true, -118, 73, (byte) -80, true, 50, -86);
-              break L11;
-            }
-          }
-          var12 = 0;
-          L12: while (true) {
-            L13: {
-              if (-9 >= (var12 ^ -1)) {
-                break L13;
-              } else {
-                var13 = -var12 + (-1 + (this.field_j >> 1196954369)) << 308704545;
-                if (-1 >= (var13 ^ -1)) {
-                  var14 = (var13 + 16) * param1 >> 521682852;
-                  var15 = param1 + (param5 - (var14 >> -1530299902));
-                  var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                  if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
-                    L14: {
-                      if (param4) {
-                        break L14;
-                      } else {
-                        this.field_p = false;
-                        break L14;
-                      }
-                    }
-                    bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
-                    var12++;
-                    continue L12;
-                  } else {
-                    var12++;
-                    continue L12;
-                  }
-                } else {
-                  break L13;
-                }
-              }
-            }
-            L15: {
-              var12 = param1 * (16 - -this.field_j) >> -461073084;
-              var13 = -var12 + (param1 + param5);
-              var14 = param2 + param6 - (var12 * (this.field_j - -16) >> 1489868387);
-              if (0 >= 3 * var12 + var14) {
-                break L15;
-              } else {
-                if (param4) {
-                  this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                  break L15;
-                } else {
+            var13Lifetime2Lifetime2 = -var12Lifetime2 + (-1 + (this.field_j >> 1)) << 1;
+            if (var13Lifetime2Lifetime2 >= 0) {
+              var14Lifetime2Lifetime2 = (var13Lifetime2Lifetime2 + 16) * param1 >> 4;
+              var15Lifetime2 = param1 + (param5 - (var14Lifetime2Lifetime2 >> 2));
+              var16Lifetime2 = -(var14Lifetime2Lifetime2 * (-2 + var13Lifetime2Lifetime2 + 16) >> 3) + (param2 + param6);
+              if (var16Lifetime2 + (var14Lifetime2Lifetime2 * 3 >> 2) > 0) {
+                if (!param4) {
                   this.field_p = false;
-                  this.field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[this.field_a.field_u]);
-                  break L15;
                 }
+                bd.field_n[var12Lifetime2].a(var15Lifetime2, var16Lifetime2, var14Lifetime2Lifetime2 >> 1, var14Lifetime2Lifetime2 * 3 >> 2, 256);
+              }
+              var12Lifetime2++;
+              continue;
+            }
+            break;
+          }
+          var12Lifetime2Lifetime1 = param1 * (16 + this.field_j) >> 4;
+          var13Lifetime2Lifetime1 = -var12Lifetime2Lifetime1 + (param1 + param5);
+          var14Lifetime2Lifetime1 = param2 + param6 - (var12Lifetime2Lifetime1 * (this.field_j + 16) >> 3);
+          if (0 < 3 * var12Lifetime2Lifetime1 + var14Lifetime2Lifetime1) {
+            if (param4) {
+              this.field_a.h(-30).b(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, ek.field_f[this.field_a.field_u]);
+            } else {
+              this.field_p = false;
+              this.field_a.h(-30).b(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, ek.field_f[this.field_a.field_u]);
+            }
+          }
+          kh.d(var8, var9, var10, var11);
+          return;
+        }
+        this.a(true, -118, 73, (byte) -80, true, 50, -86);
+        var12Lifetime3 = 0;
+        while (true) {
+          if (var12Lifetime3 >= 8) {
+            var12Lifetime3 = param1 * (16 + this.field_j) >> 4;
+            var13Lifetime3 = -var12Lifetime3 + (param1 + param5);
+            var14Lifetime3 = param2 + param6 - (var12Lifetime3 * (this.field_j + 16) >> 3);
+            if (0 < 3 * var12Lifetime3 + var14Lifetime3) {
+              if (param4) {
+                this.field_a.h(-30).b(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, ek.field_f[this.field_a.field_u]);
+              } else {
+                this.field_p = false;
+                this.field_a.h(-30).b(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, ek.field_f[this.field_a.field_u]);
               }
             }
             kh.d(var8, var9, var10, var11);
             return;
           }
+          var13Lifetime3Lifetime1 = -var12Lifetime3 + (-1 + (this.field_j >> 1)) << 1;
+          if (var13Lifetime3Lifetime1 >= 0) {
+            var14Lifetime3Lifetime1 = (var13Lifetime3Lifetime1 + 16) * param1 >> 4;
+            var15Lifetime3 = param1 + (param5 - (var14Lifetime3Lifetime1 >> 2));
+            var16Lifetime3 = -(var14Lifetime3Lifetime1 * (-2 + var13Lifetime3Lifetime1 + 16) >> 3) + (param2 + param6);
+            if (var16Lifetime3 + (var14Lifetime3Lifetime1 * 3 >> 2) > 0) {
+              if (!param4) {
+                this.field_p = false;
+              }
+              bd.field_n[var12Lifetime3].a(var15Lifetime3, var16Lifetime3, var14Lifetime3Lifetime1 >> 1, var14Lifetime3Lifetime1 * 3 >> 2, 256);
+            }
+            var12Lifetime3++;
+            continue;
+          }
+          break;
         }
+        var12Lifetime4 = param1 * (16 + this.field_j) >> 4;
+        var13Lifetime4 = -var12Lifetime4 + (param1 + param5);
+        var14Lifetime4 = param2 + param6 - (var12Lifetime4 * (this.field_j + 16) >> 3);
+        if (0 >= 3 * var12Lifetime4 + var14Lifetime4) {
+          kh.d(var8, var9, var10, var11);
+          return;
+        }
+        if (param4) {
+          this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, ek.field_f[this.field_a.field_u]);
+          kh.d(var8, var9, var10, var11);
+          return;
+        }
+        this.field_p = false;
+        this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, ek.field_f[this.field_a.field_u]);
+        kh.d(var8, var9, var10, var11);
+        return;
     }
 
     final fb a(int param0) {
-        int var2;
-        var2 = -48 / ((36 - param0) / 62);
-        fb discarded$1 = super.a(99);
+        int var2 = -48 / ((36 - param0) / 62);
+        fb discarded$0 = super.a(99);
         this.field_j = this.field_j + 1;
-        if (this.field_p) {
-          return null;
-        } else {
+        if (!this.field_p) {
           return (fb) (this);
         }
+        return null;
     }
 
     uo(fq param0) {

@@ -9,7 +9,7 @@ final class jt {
 
     final jt a(int param0, int param1) {
         if (param0 != 9677) {
-            return (jt) null;
+          return (jt) null;
         }
         return new jt(this.field_d, param1, this.field_b, this.field_c);
     }

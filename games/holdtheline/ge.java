@@ -12,41 +12,20 @@ final class ge {
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (!param0) {
-          L0: {
-            ge.a(79);
-            if (250 >= cf.field_q) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (250 >= cf.field_q) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0) {
+          return 250 < cf.field_q ? true : false;
         }
+        ge.a(79);
+        return 250 < cf.field_q ? true : false;
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != -31819) {
-            field_a = (String) null;
-            field_a = null;
-            field_d = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          field_d = null;
+          return;
         }
         field_a = null;
         field_d = null;

@@ -8,16 +8,16 @@ final class kj extends ai {
 
     public static void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_g = null;
     }
 
     kj(byte[] param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "kj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -10,29 +10,26 @@ final class qo {
     final static su a(Throwable param0, String param1) {
         su var2 = null;
         if (param0 instanceof su) {
-            var2 = (su) ((Object) param0);
-            var2.field_a = var2.field_a + ' ' + param1;
+          var2 = (su) ((Object) param0);
+          var2.field_a = var2.field_a + ' ' + param1;
         } else {
-            var2 = new su(param0, param1);
+          var2 = new su(param0, param1);
         }
         return var2;
     }
 
     public static void a(boolean param0) {
-        String var2;
-        if (param0) {
-          var2 = (String) null;
-          qo.a((Throwable) null, (String) null);
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (!param0) {
           field_a = null;
           field_b = null;
           field_c = null;
           return;
         }
+        String var2 = (String) null;
+        qo.a((Throwable) null, (String) null);
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

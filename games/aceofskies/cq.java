@@ -18,7 +18,7 @@ abstract class cq implements jj {
 
     private final int c(int param0) {
         if (param0 > -1) {
-            this.field_d = 80;
+          this.field_d = 80;
         }
         int var2 = this.field_b * (this.field_h.field_b * this.field_c.field_c);
         return this.field_f ? 4 * var2 / 3 : var2;
@@ -28,35 +28,35 @@ abstract class cq implements jj {
         this.field_g.field_jc = this.field_g.field_jc - param0;
         this.field_g.field_jc = this.field_g.field_jc + this.c(-19);
         if (param1 != 4) {
-            this.a(false);
+          this.a(false);
         }
     }
 
     public void a(byte param0) {
         if (param0 != -50) {
-            this.field_c = (la) null;
+          this.field_c = (la) null;
         }
         int var2 = this.field_g.M(7693);
         int var3 = this.field_g.field_Hc[var2];
-        if (!(var3 == this.field_e)) {
-            if (!(var3 == 0)) {
-                jaggl.OpenGL.glBindTexture(var3, 0);
-                jaggl.OpenGL.glDisable(var3);
-            }
-            jaggl.OpenGL.glEnable(this.field_e);
-            this.field_g.field_Hc[var2] = this.field_e;
+        if (var3 != this.field_e) {
+          if (var3 != 0) {
+            jaggl.OpenGL.glBindTexture(var3, 0);
+            jaggl.OpenGL.glDisable(var3);
+          }
+          jaggl.OpenGL.glEnable(this.field_e);
+          this.field_g.field_Hc[var2] = this.field_e;
         }
         jaggl.OpenGL.glBindTexture(this.field_e, this.field_d);
     }
 
     final void a(float[] param0, boolean param1, int param2, int param3, int param4) {
+        int var16 = 0;
+        int var20 = 0;
+        int var21 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -69,144 +69,79 @@ abstract class cq implements jj {
         float[] var13 = null;
         float var14 = 0.0f;
         int var15 = 0;
-        int var16 = 0;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int var22 = 0;
         var22 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (-1 <= (param2 ^ -1)) {
-                break L1;
-              } else {
-                if (!mg.a(param2, (byte) 0)) {
-                  throw new IllegalArgumentException("");
-                } else {
-                  break L1;
+          if (param2 > 0 &&
+            !mg.a(param2, (byte) 0)) {
+            throw new IllegalArgumentException("");
+          }
+          if (param3 > 0 &&
+            !mg.a(param3, (byte) 103)) {
+            throw new IllegalArgumentException("");
+          }
+          if (!param1) {
+            return;
+          }
+          var6_int = this.field_h.field_b;
+          var7 = 0;
+          stackIn_13_0 = (param3 <= param2) ? param3 : param2;
+          var8 = stackIn_13_0;
+          var9 = param2 >> 1;
+          var10 = param3 >> 1;
+          var11 = param0;
+          var12 = new float[var6_int * var9 * var10];
+          while (true) {
+            jaggl.OpenGL.glTexImage2Df(param4, var7, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, var11, 0);
+            if (1 >= var8) {
+              return;
+            }
+            var15 = var6_int * param2;
+            var13 = var12;
+            for (var16 = 0; var16 < var6_int; var16++) {
+              var17 = var16;
+              var18 = var16;
+              var19 = var18 + var15;
+              for (var20 = 0; var20 < var10; var20++) {
+                for (var21 = 0; var21 < var9; var21++) {
+                  var14 = var11[var18];
+                  var18 = var18 + var6_int;
+                  var14 = var14 + var11[var18];
+                  var14 = var14 + var11[var19];
+                  var18 = var18 + var6_int;
+                  var19 = var19 + var6_int;
+                  var14 = var14 + var11[var19];
+                  var19 = var19 + var6_int;
+                  var12[var17] = var14 * 0.25f;
+                  var17 = var17 + var6_int;
                 }
+                var19 = var19 + var15;
+                var18 = var18 + var15;
               }
             }
-            L2: {
-              if (param3 <= 0) {
-                break L2;
-              } else {
-                if (mg.a(param3, (byte) 103)) {
-                  break L2;
-                } else {
-                  throw new IllegalArgumentException("");
-                }
-              }
-            }
-            if (param1) {
-              L3: {
-                var6_int = this.field_h.field_b;
-                var7 = 0;
-                if (param3 <= param2) {
-                  stackIn_13_0 = param3;
-                  break L3;
-                } else {
-                  stackIn_13_0 = param2;
-                  break L3;
-                }
-              }
-              var8 = stackIn_13_0;
-              var9 = param2 >> 2104898433;
-              var10 = param3 >> -1557392031;
-              var11 = param0;
-              var12 = new float[var6_int * var9 * var10];
-              L4: while (true) {
-                jaggl.OpenGL.glTexImage2Df(param4, var7, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, var11, 0);
-                if (1 >= var8) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var15 = var6_int * param2;
-                  var13 = var12;
-                  var16 = 0;
-                  L5: while (true) {
-                    if (var16 >= var6_int) {
-                      var12 = var11;
-                      param2 = var9;
-                      param3 = var10;
-                      var11 = var13;
-                      var10 = var10 >> 1;
-                      var8 = var8 >> 1;
-                      var7++;
-                      var9 = var9 >> 1;
-                      continue L4;
-                    } else {
-                      var17 = var16;
-                      var18 = var16;
-                      var19 = var18 + var15;
-                      var20 = 0;
-                      L6: while (true) {
-                        if (var20 >= var10) {
-                          var16++;
-                          continue L5;
-                        } else {
-                          var21 = 0;
-                          L7: while (true) {
-                            if (var21 >= var9) {
-                              var19 = var19 + var15;
-                              var18 = var18 + var15;
-                              var20++;
-                              continue L6;
-                            } else {
-                              var14 = var11[var18];
-                              var18 = var18 + var6_int;
-                              var14 = var14 + var11[var18];
-                              var14 = var14 + var11[var19];
-                              var18 = var18 + var6_int;
-                              var19 = var19 + var6_int;
-                              var14 = var14 + var11[var19];
-                              var19 = var19 + var6_int;
-                              var12[var17] = var14 * 0.25f;
-                              var17 = var17 + var6_int;
-                              var21++;
-                              continue L7;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+            var12 = var11;
+            param2 = var9;
+            param3 = var10;
+            var11 = var13;
+            var10 = var10 >> 1;
+            var8 = var8 >> 1;
+            var7++;
+            var9 = var9 >> 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var6 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var6);
-
-            stackIn_28_1 = new StringBuilder().append("cq.H(");
-
-            if (param0 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L8;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L8;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_28_0 = var6;
+          stackIn_28_1 = new StringBuilder().append("cq.H(");
+          if (param0 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pn.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -214,29 +149,29 @@ abstract class cq implements jj {
         this.field_g.a((jj) (this), -9135);
         int var2 = 122 / ((param0 - 86) / 39);
         if (fg.field_A == this.field_a) {
-            jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9987 : 9729);
-            jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9729);
+          jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9987 : 9729);
+          jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9729);
         } else {
-            jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9984 : 9728);
-            jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9728);
+          jaggl.OpenGL.glTexParameteri(this.field_e, 10241, this.field_f ? 9984 : 9728);
+          jaggl.OpenGL.glTexParameteri(this.field_e, 10240, 9728);
         }
     }
 
     private final void b(int param0) {
-        if (!(param0 <= (this.field_d ^ -1))) {
-            this.field_g.b(param0 + 4, this.c(-88), this.field_d);
-            this.field_d = 0;
+        if (param0 > ~this.field_d) {
+          this.field_g.b(param0 + 4, this.c(-88), this.field_d);
+          this.field_d = 0;
         }
     }
 
     final void a(int param0, int param1, byte[] param2, int param3, byte param4) {
+        int var16 = 0;
+        int var20 = 0;
+        int var21 = 0;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -249,160 +184,90 @@ abstract class cq implements jj {
         byte[] var13 = null;
         int var14 = 0;
         int var15 = 0;
-        int var16 = 0;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
         int var22 = 0;
         var22 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (0 >= param3) {
-                break L1;
-              } else {
-                if (mg.a(param3, (byte) 114)) {
-                  break L1;
-                } else {
-                  throw new IllegalArgumentException("");
+          if (0 < param3 &&
+            !mg.a(param3, (byte) 114)) {
+            throw new IllegalArgumentException("");
+          }
+          if (param1 > 0 &&
+            !mg.a(param1, (byte) -117)) {
+            throw new IllegalArgumentException("");
+          }
+          var6_int = this.field_h.field_b;
+          var7 = 0;
+          if (param4 != 107) {
+            return;
+          }
+          stackIn_13_0 = (param3 < param1) ? param3 : param1;
+          var8 = stackIn_13_0;
+          var9 = param3 >> 1;
+          var10 = param1 >> 1;
+          var11 = param2;
+          var12 = new byte[var10 * (var9 * var6_int)];
+          while (true) {
+            jaggl.OpenGL.glTexImage2Dub(param0, var7, this.a(false), param3, param1, 0, gq.a(this.field_h, -29824), 5121, var11, 0);
+            if (var8 <= 1) {
+              return;
+            }
+            var15 = param3 * var6_int;
+            for (var16 = 0; var6_int > var16; var16++) {
+              var17 = var16;
+              var18 = var16;
+              var19 = var15 + var18;
+              for (var20 = 0; var10 > var20; var20++) {
+                for (var21 = 0; var21 < var9; var21++) {
+                  var14 = var11[var18];
+                  var18 = var18 + var6_int;
+                  var14 = var14 + var11[var18];
+                  var18 = var18 + var6_int;
+                  var14 = var14 + var11[var19];
+                  var19 = var19 + var6_int;
+                  var14 = var14 + var11[var19];
+                  var19 = var19 + var6_int;
+                  var12[var17] = (byte)(var14 >> 2);
+                  var17 = var17 + var6_int;
                 }
+                var18 = var18 + var15;
+                var19 = var19 + var15;
               }
             }
-            L2: {
-              if ((param1 ^ -1) >= -1) {
-                break L2;
-              } else {
-                if (!mg.a(param1, (byte) -117)) {
-                  throw new IllegalArgumentException("");
-                } else {
-                  break L2;
-                }
-              }
-            }
-            var6_int = this.field_h.field_b;
-            var7 = 0;
-            if (param4 == 107) {
-              L3: {
-                if (param3 < param1) {
-                  stackIn_13_0 = param3;
-                  break L3;
-                } else {
-                  stackIn_13_0 = param1;
-                  break L3;
-                }
-              }
-              var8 = stackIn_13_0;
-              var9 = param3 >> -1238162815;
-              var10 = param1 >> -86365791;
-              var11 = param2;
-              var12 = new byte[var10 * (var9 * var6_int)];
-              L4: while (true) {
-                jaggl.OpenGL.glTexImage2Dub(param0, var7, this.a(false), param3, param1, 0, gq.a(this.field_h, -29824), 5121, var11, 0);
-                if ((var8 ^ -1) < -2) {
-                  var15 = param3 * var6_int;
-                  var16 = 0;
-                  L5: while (true) {
-                    if (var6_int <= var16) {
-                      var13 = var12;
-                      var12 = var11;
-                      param3 = var9;
-                      param1 = var10;
-                      var11 = var13;
-                      var9 = var9 >> 1;
-                      var10 = var10 >> 1;
-                      var8 = var8 >> 1;
-                      var7++;
-                      continue L4;
-                    } else {
-                      var17 = var16;
-                      var18 = var16;
-                      var19 = var15 + var18;
-                      var20 = 0;
-                      L6: while (true) {
-                        if (var10 <= var20) {
-                          var16++;
-                          continue L5;
-                        } else {
-                          var21 = 0;
-                          L7: while (true) {
-                            if (var21 >= var9) {
-                              var18 = var18 + var15;
-                              var19 = var19 + var15;
-                              var20++;
-                              continue L6;
-                            } else {
-                              var14 = var11[var18];
-                              var18 = var18 + var6_int;
-                              var14 = var14 + var11[var18];
-                              var18 = var18 + var6_int;
-                              var14 = var14 + var11[var19];
-                              var19 = var19 + var6_int;
-                              var14 = var14 + var11[var19];
-                              var19 = var19 + var6_int;
-                              var12[var17] = (byte)(var14 >> -2027735838);
-                              var17 = var17 + var6_int;
-                              var21++;
-                              continue L7;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+            var13 = var12;
+            var12 = var11;
+            param3 = var9;
+            param1 = var10;
+            var11 = var13;
+            var9 = var9 >> 1;
+            var10 = var10 >> 1;
+            var8 = var8 >> 1;
+            var7++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var6 = decompiledCaughtException;
-            stackIn_29_0 = (RuntimeException) (var6);
-
-            stackIn_29_1 = new StringBuilder().append("cq.D(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "null";
-              break L8;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "{...}";
-              break L8;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_29_0 = var6;
+          stackIn_29_1 = new StringBuilder().append("cq.D(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pn.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final void a(byte param0, int param1, int param2, int[] param3, int param4) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int var24 = 0;
+        int var25 = 0;
         int incrementValue$4 = 0;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_29_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -423,252 +288,155 @@ abstract class cq implements jj {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
         int var26 = 0;
         var26 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (-1 <= (param2 ^ -1)) {
-                break L1;
-              } else {
-                if (!mg.a(param2, (byte) -12)) {
-                  throw new IllegalArgumentException("");
-                } else {
-                  break L1;
-                }
-              }
+          if (param2 > 0 &&
+            !mg.a(param2, (byte) -12)) {
+            throw new IllegalArgumentException("");
+          }
+          if (param1 > 0 &&
+            !mg.a(param1, (byte) 118)) {
+            throw new IllegalArgumentException("");
+          }
+          if (lc.field_g != this.field_h) {
+            throw new IllegalArgumentException("");
+          }
+          var6_int = 0;
+          stackIn_14_0 = (param1 > param2) ? param2 : param1;
+          var7 = stackIn_14_0;
+          var8 = param2 >> 1;
+          var9 = param1 >> 1;
+          var10 = param3;
+          var11 = new int[var8 * var9];
+          if (param0 != -110) {
+            return;
+          }
+          while (true) {
+            jaggl.OpenGL.glTexImage2Di(param4, var6_int, this.a(false), param2, param1, 0, 32993, this.field_g.field_Bc, var10, 0);
+            if (var7 <= 1) {
+              return;
             }
-            L2: {
-              if ((param1 ^ -1) >= -1) {
-                break L2;
-              } else {
-                if (!mg.a(param1, (byte) 118)) {
-                  throw new IllegalArgumentException("");
-                } else {
-                  break L2;
-                }
+            var13 = 0;
+            var22 = 0;
+            var23 = param2 + var22;
+            for (var24 = 0; var24 < var9; var24++) {
+              for (var25 = 0; var8 > var25; var25++) {
+                var14 = var10[var22++];
+                var16 = var10[var23++];
+                var15 = var10[var22++];
+                var20 = var14 & 255;
+                var19 = 255 & var14 >> 8;
+                var21 = var14 >> 24 & 255;
+                var18 = 255 & var14 >> 16;
+                var17 = var10[var23++];
+                var18 = var18 + (var15 >> 16 & 255);
+                var19 = var19 + (255 & var15 >> 8);
+                var21 = var21 + (var15 >> 24 & 255);
+                var20 = var20 + (var15 & 255);
+                var18 = var18 + ((16731470 & var16) >> 16);
+                var19 = var19 + ((65356 & var16) >> 8);
+                var20 = var20 + (var16 & 255);
+                var21 = var21 + (var16 >> 24 & 255);
+                var21 = var21 + (255 & var17 >> 24);
+                var20 = var20 + (255 & var17);
+                var19 = var19 + (var17 >> 8 & 255);
+                var18 = var18 + (255 & var17 >> 16);
+                incrementValue$4 = var13;
+                var13++;
+                var11[incrementValue$4] = vo.a(pg.a(255, var20 >> 2), vo.a(vo.a(pg.a(1020, var18) << 14, pg.a(var21, 1020) << 22), pg.a(var19 << 6, 65280)));
               }
+              var23 = var23 + param2;
+              var22 = var22 + param2;
             }
-            if (lc.field_g == this.field_h) {
-              L3: {
-                var6_int = 0;
-                if (param1 > param2) {
-                  stackIn_14_0 = param2;
-                  break L3;
-                } else {
-                  stackIn_14_0 = param1;
-                  break L3;
-                }
-              }
-              var7 = stackIn_14_0;
-              var8 = param2 >> -1296413247;
-              var9 = param1 >> -1433903551;
-              var10 = param3;
-              var11 = new int[var8 * var9];
-              if (param0 == -110) {
-                L4: while (true) {
-                  jaggl.OpenGL.glTexImage2Di(param4, var6_int, this.a(false), param2, param1, 0, 32993, this.field_g.field_Bc, var10, 0);
-                  if (-2 > (var7 ^ -1)) {
-                    var13 = 0;
-                    var22 = 0;
-                    var23 = param2 + var22;
-                    var24 = 0;
-                    L5: while (true) {
-                      if (var24 >= var9) {
-                        var12 = var11;
-                        var11 = var10;
-                        var10 = var12;
-                        param1 = var9;
-                        param2 = var8;
-                        var9 = var9 >> 1;
-                        var6_int++;
-                        var8 = var8 >> 1;
-                        var7 = var7 >> 1;
-                        continue L4;
-                      } else {
-                        var25 = 0;
-                        L6: while (true) {
-                          if (var8 <= var25) {
-                            var23 = var23 + param2;
-                            var22 = var22 + param2;
-                            var24++;
-                            continue L5;
-                          } else {
-                            incrementValue$0 = var22;
-                            var22++;
-                            var14 = var10[incrementValue$0];
-                            incrementValue$1 = var23;
-                            var23++;
-                            var16 = var10[incrementValue$1];
-                            incrementValue$2 = var22;
-                            var22++;
-                            var15 = var10[incrementValue$2];
-                            var20 = var14 & 255;
-                            var19 = 255 & var14 >> -1008674104;
-                            var21 = var14 >> -825216584 & 255;
-                            var18 = 255 & var14 >> -1205755408;
-                            incrementValue$3 = var23;
-                            var23++;
-                            var17 = var10[incrementValue$3];
-                            var18 = var18 + (var15 >> 263809488 & 255);
-                            var19 = var19 + (255 & var15 >> -1170739256);
-                            var21 = var21 + (var15 >> 1561325624 & 255);
-                            var20 = var20 + (var15 & 255);
-                            var18 = var18 + ((16731470 & var16) >> -959158672);
-                            var19 = var19 + ((65356 & var16) >> 1467464712);
-                            var20 = var20 + (var16 & 255);
-                            var21 = var21 + (var16 >> -317689480 & 255);
-                            var21 = var21 + (255 & var17 >> -1690508456);
-                            var20 = var20 + (255 & var17);
-                            var19 = var19 + (var17 >> 2031080136 & 255);
-                            var18 = var18 + (255 & var17 >> -1944694064);
-                            incrementValue$4 = var13;
-                            var13++;
-                            var11[incrementValue$4] = vo.a(pg.a(255, var20 >> -1923393182), vo.a(vo.a(pg.a(1020, var18) << -51469618, pg.a(var21, 1020) << 2002769718), pg.a(var19 << -841166074, 65280)));
-                            var25++;
-                            continue L6;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              } else {
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              throw new IllegalArgumentException("");
-            }
+            var12 = var11;
+            var11 = var10;
+            var10 = var12;
+            param1 = var9;
+            param2 = var8;
+            var9 = var9 >> 1;
+            var6_int++;
+            var8 = var8 >> 1;
+            var7 = var7 >> 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var6 = decompiledCaughtException;
-            stackIn_28_0 = (RuntimeException) (var6);
-
-            stackIn_28_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "null";
-              break L7;
-            } else {
-              stackIn_29_0 = (RuntimeException) ((Object) stackIn_28_0);
-              stackIn_29_1 = (StringBuilder) ((Object) stackIn_28_1);
-              stackIn_29_2 = "{...}";
-              break L7;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_28_0 = var6;
+          stackIn_28_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_29_2 = "null";
+          } else {
+            stackIn_29_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_29_0), stackIn_29_2 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pn.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final int a(boolean param0) {
-        L0: {
-          if (!param0) {
-            break L0;
-          } else {
-            this.a(true);
-            break L0;
-          }
+        if (param0) {
+          this.a(true);
         }
-        L1: {
-          if (this.field_c != la.field_h) {
-            if (this.field_c == la.field_d) {
-              if (this.field_h == wo.field_n) {
-                return 34843;
-              } else {
-                if (this.field_h == lc.field_g) {
-                  return 34842;
-                } else {
-                  if (this.field_h != ro.field_o) {
-                    if (this.field_h == wf.field_d) {
-                      return 34846;
-                    } else {
-                      if (hh.field_c == this.field_h) {
-                        return 34847;
-                      } else {
-                        if (this.field_h == aj.field_r) {
-                          return 6145;
-                        } else {
-                          break L1;
-                        }
-                      }
-                    }
-                  } else {
-                    return 34844;
-                  }
-                }
-              }
-            } else {
-              if (this.field_c != la.field_i) {
-                break L1;
-              } else {
-                if (this.field_h != wo.field_n) {
-                  if (lc.field_g == this.field_h) {
-                    return 34836;
-                  } else {
-                    if (ro.field_o == this.field_h) {
-                      return 34838;
-                    } else {
-                      if (wf.field_d == this.field_h) {
-                        return 34840;
-                      } else {
-                        if (hh.field_c != this.field_h) {
-                          if (this.field_h == aj.field_r) {
-                            return 6145;
-                          } else {
-                            break L1;
-                          }
-                        } else {
-                          return 34841;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  return 34837;
-                }
-              }
+        if (this.field_c != la.field_h) {
+          if (this.field_c == la.field_d) {
+            if (this.field_h == wo.field_n) {
+              return 34843;
+            }
+            if (this.field_h == lc.field_g) {
+              return 34842;
+            }
+            if (this.field_h == ro.field_o) {
+              return 34844;
+            }
+            if (this.field_h == wf.field_d) {
+              return 34846;
+            }
+            if (hh.field_c == this.field_h) {
+              return 34847;
+            }
+            if (this.field_h == aj.field_r) {
+              return 6145;
             }
           } else {
-            if (wo.field_n != this.field_h) {
-              if (lc.field_g != this.field_h) {
-                if (this.field_h != ro.field_o) {
-                  if (this.field_h != wf.field_d) {
-                    if (this.field_h == hh.field_c) {
-                      return 6410;
-                    } else {
-                      if (this.field_h != aj.field_r) {
-                        break L1;
-                      } else {
-                        return 6145;
-                      }
-                    }
-                  } else {
-                    return 6409;
-                  }
-                } else {
-                  return 6406;
-                }
-              } else {
-                return 6408;
+            if (this.field_c == la.field_i) {
+              if (this.field_h == wo.field_n) {
+                return 34837;
               }
-            } else {
-              return 6407;
+              if (lc.field_g == this.field_h) {
+                return 34836;
+              }
+              if (ro.field_o == this.field_h) {
+                return 34838;
+              }
+              if (wf.field_d == this.field_h) {
+                return 34840;
+              }
+              if (hh.field_c == this.field_h) {
+                return 34841;
+              }
+              if (this.field_h == aj.field_r) {
+                return 6145;
+              }
             }
+          }
+        } else {
+          if (wo.field_n == this.field_h) {
+            return 6407;
+          }
+          if (lc.field_g == this.field_h) {
+            return 6408;
+          }
+          if (this.field_h == ro.field_o) {
+            return 6406;
+          }
+          if (this.field_h == wf.field_d) {
+            return 6409;
+          }
+          if (this.field_h == hh.field_c) {
+            return 6410;
+          }
+          if (this.field_h == aj.field_r) {
+            return 6145;
           }
         }
         throw new IllegalStateException();
@@ -677,18 +445,18 @@ abstract class cq implements jj {
     cq(jc param0, int param1, hd param2, la param3, int param4, boolean param5) {
         this.field_a = fg.field_A;
         try {
-            this.field_e = param1;
-            this.field_h = param2;
-            this.field_g = param0;
-            this.field_f = param5 ? true : false;
-            this.field_b = param4;
-            this.field_c = param3;
-            jaggl.OpenGL.glGenTextures(1, tn.field_w, 0);
-            this.field_d = tn.field_w[0];
-            this.d((byte) 127);
-            this.a(0, 4);
+          this.field_e = param1;
+          this.field_h = param2;
+          this.field_g = param0;
+          this.field_f = param5 ? true : false;
+          this.field_b = param4;
+          this.field_c = param3;
+          jaggl.OpenGL.glGenTextures(1, tn.field_w, 0);
+          this.field_d = tn.field_w[0];
+          this.d((byte) 127);
+          this.a(0, 4);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "cq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -696,54 +464,30 @@ abstract class cq implements jj {
         ke var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              if (this.field_a == param0) {
-                break L1;
-              } else {
-                this.field_a = param0;
-                this.d((byte) 127);
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 == -31662) {
-                break L2;
-              } else {
-                var4 = (ke) null;
-                this.a((ke) null, 89);
-                break L2;
-              }
-            }
-            break L0;
+          if (this.field_a != param0) {
+            this.field_a = param0;
+            this.d((byte) 127);
           }
+          if (param1 != -31662) {
+            var4 = (ke) null;
+            this.a((ke) null, 89);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("cq.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L3;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("cq.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

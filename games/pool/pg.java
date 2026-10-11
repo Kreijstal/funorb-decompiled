@@ -14,8 +14,8 @@ final class pg extends bp {
 
     final void a() {
         if (this.field_v != null) {
-            this.field_v.close();
-            this.field_v = null;
+          this.field_v.close();
+          this.field_v = null;
         }
     }
 
@@ -24,15 +24,15 @@ final class pg extends bp {
         int var3 = 0;
         int var1 = 256;
         if (field_r) {
-            var1 = var1 << 1;
+          var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
-            var3 = this.field_l[var2];
-            if ((var3 + 8388608 & -16777216) != 0) {
-                var3 = 8388607 ^ var3 >> 31;
-            }
-            this.field_w[var2 * 2] = (byte)(var3 >> 8);
-            this.field_w[var2 * 2 + 1] = (byte)(var3 >> 16);
+          var3 = this.field_l[var2];
+          if ((var3 + 8388608 & -16777216) != 0) {
+            var3 = 8388607 ^ var3 >> 31;
+          }
+          this.field_w[var2 * 2] = (byte)(var3 >> 8);
+          this.field_w[var2 * 2 + 1] = (byte)(var3 >> 16);
         }
         this.field_v.write(this.field_w, 0, var1 << 1);
     }
@@ -43,125 +43,72 @@ final class pg extends bp {
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-            var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (field_r ? 2 : 1));
-            this.field_v = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
-            this.field_v.open();
-            this.field_v.start();
-            this.field_y = param0;
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_x, param0 << (field_r ? 2 : 1));
+          this.field_v = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
+          this.field_v.open();
+          this.field_v.start();
+          this.field_y = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (se.a(false, param0) != 1) {
-                this.a(te.a(-17931, param0));
-                return;
-            }
-            this.field_v = null;
-            throw lineUnavailableException;
+          if (se.a(false, param0) != 1) {
+            this.a(te.a(-17931, param0));
+            return;
+          }
+          this.field_v = null;
+          throw lineUnavailableException;
         }
     }
 
     final void a(java.awt.Component param0) {
+        int var4 = 0;
         javax.sound.sampled.Mixer.Info[] var2;
         javax.sound.sampled.Mixer.Info[] var3;
-        int var4;
         javax.sound.sampled.Mixer.Info var5;
-        Object stackIn_12_0;
-        javax.sound.sampled.AudioFormat stackIn_12_1;
-        javax.sound.sampled.AudioFormat stackIn_12_2;
-        float stackIn_12_3;
-        int stackIn_12_4;
-        Object stackIn_13_0 = null;
-        javax.sound.sampled.AudioFormat stackIn_13_1 = null;
-        javax.sound.sampled.AudioFormat stackIn_13_2 = null;
-        float stackIn_13_3 = 0.0f;
-        int stackIn_13_4 = 0;
-        int stackIn_13_5 = 0;
-        Object stackIn_15_0 = null;
-        int stackIn_15_1 = 0;
-        Object stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
-        int stackIn_16_2 = 0;
+        Object stackIn_15_0;
+        javax.sound.sampled.AudioFormat stackIn_15_1;
+        javax.sound.sampled.AudioFormat stackIn_15_2;
+        float stackIn_15_3;
+        int stackIn_15_4;
+        javax.sound.sampled.AudioFormat stackIn_16_1 = null;
+        javax.sound.sampled.AudioFormat stackIn_16_2 = null;
+        int stackIn_16_5 = 0;
+        int stackIn_18_1 = 0;
+        int stackIn_19_2 = 0;
         String var6;
-        L0: {
-          var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
-          if (var2 == null) {
-            break L0;
-          } else {
-            var3 = var2;
-            var4 = 0;
-            L1: while (true) {
-              if (var4 >= var3.length) {
-                break L0;
-              } else {
-                var5 = var3[var4];
-                if (var5 != null) {
-                  var6 = var5.getName();
-                  if (var6 != null) {
-                    if (var6.toLowerCase().indexOf(field_z) >= 0) {
-                      var4++;
-                      continue L1;
-                    } else {
-                      var4++;
-                      continue L1;
-                    }
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
-                } else {
-                  var4++;
-                  continue L1;
-                }
+        var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
+        if (var2 != null) {
+          var3 = var2;
+          for (var4 = 0; var4 < var3.length; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.getName();
+              if (var6 != null &&
+                var6.toLowerCase().indexOf(field_z) >= 0) {
               }
             }
           }
         }
-        L2: {
-          stackIn_12_0 = this;
-
-          stackIn_12_1 = null;
-
-          stackIn_12_2 = null;
-
-          stackIn_12_3 = (float)field_h;
-
-          stackIn_12_4 = 16;
-
-          if (!field_r) {
-            stackIn_13_0 = this;
-            stackIn_13_1 = null;
-            stackIn_13_2 = null;
-            stackIn_13_3 = stackIn_12_3;
-            stackIn_13_4 = stackIn_12_4;
-            stackIn_13_5 = 1;
-            break L2;
-          } else {
-            stackIn_13_0 = this;
-            stackIn_13_1 = null;
-            stackIn_13_2 = null;
-            stackIn_13_3 = stackIn_12_3;
-            stackIn_13_4 = stackIn_12_4;
-            stackIn_13_5 = 2;
-            break L2;
-          }
+        stackIn_15_0 = this;
+        stackIn_15_1 = null;
+        stackIn_15_2 = null;
+        stackIn_15_3 = (float)field_h;
+        stackIn_15_4 = 16;
+        if (!field_r) {
+          stackIn_16_1 = null;
+          stackIn_16_2 = null;
+          stackIn_16_5 = 1;
+        } else {
+          stackIn_16_1 = null;
+          stackIn_16_2 = null;
+          stackIn_16_5 = 2;
         }
-        L3: {
-          ((pg) (this)).field_x = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          stackIn_15_0 = this;
-
-          stackIn_15_1 = 256;
-
-          if (!field_r) {
-            stackIn_16_0 = this;
-            stackIn_16_1 = stackIn_15_1;
-            stackIn_16_2 = 1;
-            break L3;
-          } else {
-            stackIn_16_0 = this;
-            stackIn_16_1 = stackIn_15_1;
-            stackIn_16_2 = 2;
-            break L3;
-          }
+        this.field_x = new javax.sound.sampled.AudioFormat(stackIn_15_3, stackIn_15_4, stackIn_16_5, true, false);
+        stackIn_18_1 = 256;
+        if (!field_r) {
+          stackIn_19_2 = 1;
+        } else {
+          stackIn_19_2 = 2;
         }
-        ((pg) (this)).field_w = new byte[stackIn_16_1 << stackIn_16_2];
+        this.field_w = new byte[stackIn_18_1 << stackIn_19_2];
     }
 
     static {

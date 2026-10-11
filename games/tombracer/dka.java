@@ -9,28 +9,24 @@ final class dka {
 
     final static qaa a(byte param0) {
         try {
-            Throwable var1 = null;
-            qaa stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (param0 <= -61) {
-              try {
-                L0: {
-                  stackIn_3_0 = (qaa) (Class.forName("hfa").newInstance());
-                  break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = decompiledCaughtException;
-                return null;
-              }
-              return stackIn_3_0;
-            } else {
-              return (qaa) null;
-            }
+          Throwable var1 = null;
+          qaa stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 > -61) {
+            return (qaa) null;
+          }
+          try {
+            stackIn_3_0 = (qaa) (Class.forName("hfa").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -38,7 +34,7 @@ final class dka {
         field_a = null;
         field_c = null;
         if (param0 != 7) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;

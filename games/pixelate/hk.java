@@ -13,17 +13,17 @@ final class hk extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_c.paint(param0);
+          this.field_c.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "hk.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "hk.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_c.update(param0);
+          this.field_c.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "hk.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "hk.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,26 +33,25 @@ final class hk extends java.awt.Canvas {
         field_d = null;
         field_h = null;
         if (param0 >= -4) {
-            return;
+          return;
         }
         field_e = null;
         field_a = null;
     }
 
     final static int a(byte param0) {
-        if (param0 >= -61) {
-          hk.a(54);
-          return ib.field_e + ((gh.field_v << -1010620414) + (io.field_e << -363848348));
-        } else {
-          return ib.field_e + ((gh.field_v << -1010620414) + (io.field_e << -363848348));
+        if (param0 < -61) {
+          return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
         }
+        hk.a(54);
+        return ib.field_e + ((gh.field_v << 2) + (io.field_e << 4));
     }
 
     hk(java.awt.Component param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

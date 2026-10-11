@@ -6,7 +6,7 @@ final class ol extends kb implements java.awt.event.MouseWheelListener {
 
     final synchronized int a(byte param0) {
         if (param0 != 60) {
-            return 57;
+          return 57;
         }
         int var2 = this.field_e;
         this.field_e = 0;
@@ -16,15 +16,15 @@ final class ol extends kb implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 0) {
-            this.field_e = -128;
+          this.field_e = -128;
         }
     }
 
     final void a(java.awt.Component param0, byte param1) {
         if (param1 < 30) {
-            this.field_e = -65;
-            param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_e = -65;
+          param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

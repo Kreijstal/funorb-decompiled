@@ -14,14 +14,12 @@ final class of {
         field_b = null;
         field_e = null;
         field_a = null;
-        if (param0 != -21068) {
-          field_e = (StringBuilder) null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == -21068) {
           field_f = null;
           return;
         }
+        field_e = (StringBuilder) null;
+        field_f = null;
     }
 
     final static void b(int param0) {

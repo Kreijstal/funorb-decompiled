@@ -18,7 +18,7 @@ final class lp extends Exception {
         field_f = null;
         field_a = null;
         field_b = null;
-        int var1 = 115 / ((param0 - -7) / 44);
+        int var1 = 115 / ((param0 + 7) / 44);
         field_c = null;
     }
 
@@ -29,42 +29,26 @@ final class lp extends Exception {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            re.a();
-            em.field_b = new int[260];
-            im.field_f = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if (256 <= var1_int) {
-                L2: {
-                  var5 = 256;
-                  var1_int = var5;
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    field_g = (al[]) null;
-                    break L2;
-                  }
-                }
-                L3: while (true) {
-                  if (var5 >= em.field_b.length) {
-                    break L0;
-                  } else {
-                    em.field_b[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                em.field_b[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L1;
-              }
-            }
+          re.a();
+          em.field_b = new int[260];
+          im.field_f = 11;
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = 15.0;
+            em.field_b[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          if (param0) {
+            field_g = (al[]) null;
+          }
+          while (var5 < em.field_b.length) {
+            em.field_b[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

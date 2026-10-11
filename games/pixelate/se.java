@@ -7,28 +7,12 @@ final class se extends jj {
     private jm[] field_n;
 
     final static boolean b(boolean param0) {
-        int stackIn_6_0 = 0;
-        if (param0) {
-          L0: {
-            L1: {
-              if (null == sh.field_e) {
-                break L1;
-              } else {
-                if (!uk.field_s.b(-21)) {
-                  break L1;
-                } else {
-                  stackIn_6_0 = 1;
-                  break L0;
-                }
-              }
-            }
-            stackIn_6_0 = 0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
+        boolean stackIn_6_0 = false;
+        if (!param0) {
           return false;
         }
+        stackIn_6_0 = (null != sh.field_e) && (uk.field_s.b(-21));
+        return stackIn_6_0;
     }
 
     final void c(int param0) {
@@ -41,59 +25,41 @@ final class se extends jj {
         fo[] var7;
         int var8;
         fo var10;
+        int var3Lifetime1;
         var5 = Pixelate.field_H ? 1 : 0;
         super.c(param0);
         var6 = this.field_n;
         var2 = var6;
-        var3 = 0;
-        L0: while (true) {
-          if (var6.length <= var3) {
-            var7 = this.field_m;
-            var2_array = var7;
-            var8 = 0;
-            var3 = var8;
-            L1: while (true) {
-              if (var7.length <= var8) {
-                return;
-              } else {
-                var10 = var7[var8];
-                var10.a(-173);
-                var8++;
-                continue L1;
-              }
-            }
-          } else {
-            L2: {
-              var9 = var6[var3];
-              var9.field_m = var9.field_m + var9.field_e;
-              if (-200.0 > var9.field_m) {
-                break L2;
-              } else {
-                if (640.0 < var9.field_m) {
-                  break L2;
-                } else {
-                  var3++;
-                  continue L0;
-                }
-              }
-            }
+        for (var3 = 0; var6.length > var3; var3++) {
+          var9 = var6[var3];
+          var9.field_m = var9.field_m + var9.field_e;
+          if (-200.0 > var9.field_m ||
+            640.0 < var9.field_m) {
             var9.a((byte) -114);
             this.e(-1);
-            var3++;
-            continue L0;
           }
+        }
+        var7 = this.field_m;
+        var2_array = var7;
+        var8 = 0;
+        var3Lifetime1 = var8;
+        while (var7.length > var8) {
+          var10 = var7[var8];
+          var10.a(-173);
+          var8++;
         }
     }
 
     private final boolean b(byte param0) {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
+        int var2Lifetime1;
         for (var2 = 0; this.field_n.length - 1 > var2; var2++) {
-            if (!((this.field_n[var2].field_l ^ -1) >= (this.field_n[1 + var2].field_l ^ -1))) {
-                return false;
-            }
+          if (!(this.field_n[var2].field_l <= this.field_n[1 + var2].field_l)) {
+            return false;
+          }
         }
-        var2 = -99 / ((-7 - param0) / 43);
+        var2Lifetime1 = -99 / ((-7 - param0) / 43);
         return true;
     }
 
@@ -103,53 +69,29 @@ final class se extends jj {
         tf[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (rk.a(param0, false, param3, param1)) {
-              if (param2 == 1000) {
-                stackIn_7_0 = wa.c(param2 + -1119);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                stackIn_5_0 = (tf[]) null;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              return null;
-            }
+          if (!rk.a(param0, false, param3, param1)) {
+            return null;
           }
+          if (param2 == 1000) {
+            stackIn_7_0 = wa.c(param2 - 1119);
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (tf[]) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("se.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("se.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw aa.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -161,35 +103,20 @@ final class se extends jj {
         RuntimeException var2 = null;
         var3 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            var4 = (rh) ((Object) de.field_b.c(1504642273));
-            L1: while (true) {
-              if (var4 == null) {
-                var5 = (ue) ((Object) f.field_c.c(1504642273));
-                L2: while (true) {
-                  if (var5 == null) {
-                    L3: {
-                      if (param0 > 3) {
-                        break L3;
-                      } else {
-                        se.b(true);
-                        break L3;
-                      }
-                    }
-                    break L0;
-                  } else {
-                    uj.a(param1, var5, 65536);
-                    var5 = (ue) ((Object) f.field_c.f(1504642273));
-                    continue L2;
-                  }
-                }
-              } else {
-                sd.a((byte) -76, var4, param1);
-                var4 = (rh) ((Object) de.field_b.f(1504642273));
-                continue L1;
-              }
-            }
+          var4 = (rh) (de.field_b.c(1504642273));
+          while (var4 != null) {
+            sd.a((byte) -76, var4, param1);
+            var4 = (rh) (de.field_b.f(1504642273));
           }
+          var5 = (ue) (f.field_c.c(1504642273));
+          while (var5 != null) {
+            uj.a(param1, var5, 65536);
+            var5 = (ue) (f.field_c.f(1504642273));
+          }
+          if (param0 <= 3) {
+            se.b(true);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -202,22 +129,23 @@ final class se extends jj {
         fo var4_ref = null;
         int var3 = 0;
         int var5 = Pixelate.field_H ? 1 : 0;
+        int var3Lifetime1;
         t.g(0, 0, 640, 480, 8874, 3368703);
         if (param0) {
-            return;
+          return;
         }
         jm[] var2 = this.field_n;
         for (var3 = 0; var3 < var2.length; var3++) {
-            var4 = var2[var3];
-            eh.field_c[var4.field_n].b((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
+          var4 = var2[var3];
+          eh.field_c[var4.field_n].b((int)var4.field_m, var4.field_c, var4.field_a, var4.field_f, var4.field_t);
         }
         fo[] var2_array = this.field_m;
         int var6 = 0;
-        var3 = var6;
+        var3Lifetime1 = var6;
         while (var6 < var2_array.length) {
-            var4_ref = var2_array[var6];
-            var4_ref.b(1);
-            var6++;
+          var4_ref = var2_array[var6];
+          var4_ref.b(1);
+          var6++;
         }
     }
 
@@ -230,13 +158,13 @@ final class se extends jj {
 
     final static boolean d(int param0) {
         if (null != ip.field_y) {
-            return true;
+          return true;
         }
         if (param0 != 3782) {
-            se.b(true);
+          se.b(true);
         }
-        if (!(pf.field_d.a("benefits", -1))) {
-            return false;
+        if (!pf.field_d.a("benefits", -1)) {
+          return false;
         }
         ip.field_y = bi.a("benefits", "members_benefits_borders", pf.field_d, (byte) -89);
         km.field_p = bi.a("benefits", "members_benefits_price", pf.field_d, (byte) -70);
@@ -252,42 +180,23 @@ final class se extends jj {
     public static void f(int param0) {
         field_o = null;
         if (param0 != 21476) {
-            field_o = (ei) null;
+          field_o = (ei) null;
         }
     }
 
     private final void e(int param0) {
-        int var2;
+        int var2 = 0;
         int var3;
         var3 = Pixelate.field_H ? 1 : 0;
-        L0: while (true) {
-          if (this.b((byte) 89)) {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_o = (ei) null;
-                break L1;
-              }
-            }
-            return;
-          } else {
-            var2 = 0;
-            L2: while (true) {
-              if (-1 + this.field_n.length <= var2) {
-                continue L0;
-              } else {
-                if ((this.field_n[var2 - -1].field_l ^ -1) > (this.field_n[var2].field_l ^ -1)) {
-                  this.a((byte) 108, 1 + var2, var2);
-                  var2++;
-                  continue L2;
-                } else {
-                  var2++;
-                  continue L2;
-                }
-              }
+        while (!this.b((byte) 89)) {
+          for (var2 = 0; -1 + this.field_n.length > var2; var2++) {
+            if (this.field_n[var2 + 1].field_l < this.field_n[var2].field_l) {
+              this.a((byte) 108, 1 + var2, var2);
             }
           }
+        }
+        if (param0 != -1) {
+          field_o = (ei) null;
         }
     }
 
@@ -295,18 +204,18 @@ final class se extends jj {
         super(param0, param1);
         int var3_int = 0;
         try {
-            this.field_n = new jm[10];
-            for (var3_int = 0; (var3_int ^ -1) > -11; var3_int++) {
-                this.field_n[var3_int] = new jm();
-            }
-            this.e(-1);
-            this.field_m = new fo[4];
-            this.field_m[0] = new fo(1400, 150, 400, 500, 1000);
-            this.field_m[1] = new fo(1800, 430, 320, 800, 1000);
-            this.field_m[2] = new fo(2200, 500, 140, 900, 1000);
-            this.field_m[3] = new fo(2600, 230, 220, 700, 1000);
+          this.field_n = new jm[10];
+          for (var3_int = 0; var3_int < 10; var3_int++) {
+            this.field_n[var3_int] = new jm();
+          }
+          this.e(-1);
+          this.field_m = new fo[4];
+          this.field_m[0] = new fo(1400, 150, 400, 500, 1000);
+          this.field_m[1] = new fo(1800, 430, 320, 800, 1000);
+          this.field_m[2] = new fo(2200, 500, 140, 900, 1000);
+          this.field_m[3] = new fo(2600, 230, 220, 700, 1000);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

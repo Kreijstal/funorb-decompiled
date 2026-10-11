@@ -6,7 +6,7 @@ final class tu {
 
     final static void a(byte param0) {
         if (param0 > -124) {
-            return;
+          return;
         }
     }
 

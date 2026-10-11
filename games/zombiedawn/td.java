@@ -15,23 +15,16 @@ final class td {
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            var4 = (nn) ((Object) ro.field_a.b((byte) 26));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param1 <= -62) {
-                  break L0;
-                } else {
-                  field_b = (af) null;
-                  return;
-                }
-              } else {
-                pi.a((byte) 25, param0, var4);
-                var4 = (nn) ((Object) ro.field_a.a(false));
-                continue L1;
-              }
-            }
+          var4 = (nn) (ro.field_a.b((byte) 26));
+          while (var4 != null) {
+            pi.a((byte) 25, param0, var4);
+            var4 = (nn) (ro.field_a.a(false));
           }
+          if (param1 <= -62) {
+            return;
+          }
+          field_b = (af) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -42,24 +35,22 @@ final class td {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 94) {
-            td.a((byte) -16);
-            field_c = null;
-            return;
+          td.a((byte) -16);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final static void a(int param0) {
-        int var1;
-        if (!i.field_Y) {
-          throw new IllegalStateException();
-        } else {
+        if (i.field_Y) {
           de.field_i = true;
-          var1 = -64 / ((param0 - 77) / 35);
+          int var1 = -64 / ((param0 - 77) / 35);
           lk.a(true, 116);
           fl.field_a = 0;
           return;
         }
+        throw new IllegalStateException();
     }
 
     static {

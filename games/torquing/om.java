@@ -14,184 +14,115 @@ final class om {
     boolean field_b;
 
     final int[][] a(int param0, int param1) {
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
-        Object stackIn_17_0 = null;
-        Object stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
+        boolean stackIn_6_1 = false;
+        boolean stackIn_18_1 = false;
         ka var3;
         ka var4;
         int var5;
         var5 = Torquing.field_u;
-        if (param0 == 15142) {
-          if (this.field_g != this.field_c) {
-            if ((this.field_g ^ -1) == -2) {
-              L0: {
-                stackIn_17_0 = this;
-
-                if (param1 == this.field_f) {
-                  stackIn_18_0 = this;
-                  stackIn_18_1 = 0;
-                  break L0;
-                } else {
-                  stackIn_18_0 = this;
-                  stackIn_18_1 = 1;
-                  break L0;
-                }
-              }
-              ((om) (this)).field_b = stackIn_18_1 != 0;
-              this.field_f = param1;
-              return this.field_d[0];
-            } else {
-              L1: {
-                var3 = this.field_j[param1];
-                if (var3 != null) {
-                  this.field_b = false;
-                  break L1;
-                } else {
-                  L2: {
-                    this.field_b = true;
-                    if (this.field_i < this.field_g) {
-                      var3 = new ka(param1, this.field_i);
-                      this.field_i = this.field_i + 1;
-                      break L2;
-                    } else {
-                      var4 = (ka) ((Object) this.field_a.c(-6938));
-                      var3 = new ka(param1, var4.field_k);
-                      this.field_j[var4.field_m] = null;
-                      var4.f(param0 + -15142);
-                      break L2;
-                    }
-                  }
-                  this.field_j[param1] = var3;
-                  break L1;
-                }
-              }
-              this.field_a.b((byte) 68, var3);
-              return this.field_d[var3.field_k];
-            }
-          } else {
-            L3: {
-              stackIn_5_0 = this;
-
-              if (null != this.field_j[param1]) {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 0;
-                break L3;
-              } else {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 1;
-                break L3;
-              }
-            }
-            ((om) (this)).field_b = stackIn_6_1 != 0;
-            this.field_j[param1] = da.field_b;
-            return this.field_d[param1];
-          }
-        } else {
+        if (param0 != 15142) {
           return (int[][]) null;
         }
+        if (this.field_g == this.field_c) {
+          stackIn_6_1 = (null == this.field_j[param1]);
+          this.field_b = stackIn_6_1;
+          this.field_j[param1] = da.field_b;
+          return this.field_d[param1];
+        }
+        if (this.field_g == 1) {
+          stackIn_18_1 = (param1 != this.field_f);
+          this.field_b = stackIn_18_1;
+          this.field_f = param1;
+          return this.field_d[0];
+        }
+        var3 = this.field_j[param1];
+        if (var3 != null) {
+          this.field_b = false;
+        } else {
+          this.field_b = true;
+          if (this.field_i < this.field_g) {
+            var3 = new ka(param1, this.field_i);
+            this.field_i = this.field_i + 1;
+          } else {
+            var4 = (ka) (this.field_a.c(-6938));
+            var3 = new ka(param1, var4.field_k);
+            this.field_j[var4.field_m] = null;
+            var4.f(param0 - 15142);
+          }
+          this.field_j[param1] = var3;
+        }
+        this.field_a.b((byte) 68, var3);
+        return this.field_d[var3.field_k];
     }
 
     final static void a(byte param0, String param1, java.applet.Applet param2) {
         try {
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_12_2 = null;
-            StringBuilder stackIn_14_1 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_15_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var3 = null;
-            RuntimeException var3_ref = null;
-            String var4 = null;
-            String var5 = null;
-            int var6 = 0;
-            String var7 = null;
-            String var8 = null;
+          RuntimeException stackIn_11_0 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          StringBuilder stackIn_14_1 = null;
+          String stackIn_15_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var3 = null;
+          RuntimeException var3_ref = null;
+          String var4 = null;
+          String var5 = null;
+          int var6 = 0;
+          String var7 = null;
+          String var8 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          String var5Lifetime5;
+          String var5Lifetime6;
+          try {
+            rd.field_t = param1;
             try {
-              L0: {
-                rd.field_t = param1;
-                try {
-                  L1: {
-                    L2: {
-                      var7 = param2.getParameter("cookieprefix");
-                      var5 = var7;
-                      var5 = var7;
-                      var6 = -25 / ((-12 - param0) / 45);
-                      var4 = param2.getParameter("cookiehost");
-                      var5 = var4;
-                      var5 = var4;
-                      var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                      var5 = var8;
-                      var5 = var8;
-                      if (0 != param1.length()) {
-                        var5 = var8 + "; Expires=" + ka.a(94608000000L + km.b(-1), -2) + "; Max-Age=" + 94608000L;
-                        break L2;
-                      } else {
-                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                        break L2;
-                      }
-                    }
-                    hp.a("document.cookie=\"" + var5 + "\"", 27476, param2);
-                    break L1;
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var3 = decompiledCaughtException;
-                    break L3;
-                  }
-                }
-                j.a(true, param2);
-                break L0;
+              var7 = param2.getParameter("cookieprefix");
+              var5 = var7;
+              var5Lifetime1 = var7;
+              var6 = -25 / ((-12 - param0) / 45);
+              var4 = param2.getParameter("cookiehost");
+              var5Lifetime2 = var4;
+              var5Lifetime3 = var4;
+              var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+              var5Lifetime4 = var8;
+              var5Lifetime5 = var8;
+              if (0 != param1.length()) {
+                var5Lifetime6 = var8 + "; Expires=" + ka.a(94608000000L + km.b(-1), -2) + "; Max-Age=" + 94608000L;
+              } else {
+                var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_11_0 = (RuntimeException) (var3_ref);
-
-                stackIn_11_1 = new StringBuilder().append("om.F(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-                  stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-                  stackIn_12_2 = "{...}";
-                  break L4;
-                }
-              }
-              L5: {
-
-
-                stackIn_14_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(',');
-
-                if (param2 == null) {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_12_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-                  stackIn_15_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw rb.a((Throwable) ((Object) stackIn_12_0), stackIn_15_2 + ')');
+              hp.a("document.cookie=\"" + var5Lifetime6 + "\"", 27476, param2);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = decompiledCaughtException;
             }
+            j.a(true, param2);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_11_0 = var3_ref;
+            stackIn_11_1 = new StringBuilder().append("om.F(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+            if (param2 == null) {
+              stackIn_15_2 = "null";
+            } else {
+              stackIn_15_2 = "{...}";
+            }
+            throw rb.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -199,21 +130,21 @@ final class om {
         int var2 = 0;
         int var3 = Torquing.field_u;
         if (this.field_g != this.field_c) {
-            throw new RuntimeException("Can only retrieve a full image cache");
+          throw new RuntimeException("Can only retrieve a full image cache");
         }
         for (var2 = 0; this.field_g > var2; var2++) {
-            this.field_j[var2] = da.field_b;
+          this.field_j[var2] = da.field_b;
         }
         if (param0) {
-            this.a(-76, 126);
+          this.a(-76, 126);
         }
         return this.field_d;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 0) {
-            java.applet.Applet var6 = (java.applet.Applet) null;
-            om.a((byte) 127, (String) null, (java.applet.Applet) null);
+          java.applet.Applet var6 = (java.applet.Applet) null;
+          om.a((byte) 127, (String) null, (java.applet.Applet) null);
         }
         qg.field_z = param2;
         j.field_q = param0;
@@ -225,14 +156,14 @@ final class om {
         int var2 = 0;
         int var3 = Torquing.field_u;
         for (var2 = 0; var2 < this.field_g; var2++) {
-            this.field_d[var2][0] = null;
-            this.field_d[var2][1] = null;
-            this.field_d[var2][2] = null;
-            this.field_d[var2] = (int[][]) null;
+          this.field_d[var2][0] = null;
+          this.field_d[var2][1] = null;
+          this.field_d[var2][2] = null;
+          this.field_d[var2] = (int[][]) null;
         }
         this.field_j = null;
         if (param0 > -17) {
-            return;
+          return;
         }
         this.field_d = (int[][][]) null;
         this.field_a.a(0);
@@ -242,7 +173,7 @@ final class om {
     public static void a(int param0) {
         field_e = null;
         if (param0 != 0) {
-            om.a(33, -105, -127, 51, -91);
+          om.a(33, -105, -127, 51, -91);
         }
     }
 

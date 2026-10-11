@@ -18,41 +18,33 @@ final class ln {
         field_e = null;
         field_d = null;
         if (param0 >= -33) {
-            field_b = (er[]) null;
+          field_b = (er[]) null;
         }
     }
 
     final static boolean c(int param0) {
         if (param0 != 132199140) {
-            return true;
+          return true;
         }
         return !cl.field_c.a((byte) -105) ? true : false;
     }
 
     final static void b(int param0) {
-        int var1_int = 0;
         int var2 = 0;
+        int var1_int = 0;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            var1_int = eb.field_g[param0];
-            var2 = 1;
-            L1: while (true) {
-              if (eb.field_g.length <= var2) {
-                break L0;
-              } else {
-                var3 = eb.field_g[var2];
-                qq.a(ac.field_K, var2 << 132199140, ac.field_K, var1_int, var3);
-                var1_int = var1_int + var3;
-                var2++;
-                continue L1;
-              }
-            }
+          var1_int = eb.field_g[param0];
+          for (var2 = 1; eb.field_g.length > var2; var2++) {
+            var3 = eb.field_g[var2];
+            qq.a(ac.field_K, var2 << 4, ac.field_K, var1_int, var3);
+            var1_int = var1_int + var3;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -61,49 +53,28 @@ final class ln {
     }
 
     final static uh a(int param0, int param1) {
-        gp stackIn_4_0 = null;
-        gp stackIn_8_0 = null;
-        if (param0 != 0) {
-          L0: {
-            ln.d(29);
-            if (null == lh.field_b) {
-              stackIn_8_0 = null;
-              break L0;
-            } else {
-              stackIn_8_0 = lh.field_b.a(param0 + 3661, (long)param1);
-              break L0;
-            }
-          }
-          return (uh) ((Object) stackIn_8_0);
-        } else {
-          L1: {
-            if (null == lh.field_b) {
-              stackIn_4_0 = null;
-              break L1;
-            } else {
-              stackIn_4_0 = lh.field_b.a(param0 + 3661, (long)param1);
-              break L1;
-            }
-          }
-          return (uh) ((Object) stackIn_4_0);
+        if (param0 == 0) {
+          return null != lh.field_b ? (uh) (lh.field_b.a(param0 + 3661, (long)param1)) : null;
         }
+        ln.d(29);
+        return null != lh.field_b ? (uh) (lh.field_b.a(param0 + 3661, (long)param1)) : null;
     }
 
     final static void d(int param0) {
-        nn var1 = (nn) ((Object) gi.field_v.d((byte) 92));
+        nn var1 = (nn) (gi.field_v.d((byte) 92));
         if (param0 != -28558) {
-            ln.a(101, 106);
-            if (!(var1 != null)) {
-                throw new IllegalStateException();
-            }
-            bi.a(var1.field_n, var1.field_r, var1.field_o);
-            bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
-            var1.field_n = null;
-            ag.field_b.a(var1, false);
-            return;
-        }
-        if (!(var1 != null)) {
+          ln.a(101, 106);
+          if (var1 == null) {
             throw new IllegalStateException();
+          }
+          bi.a(var1.field_n, var1.field_r, var1.field_o);
+          bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);
+          var1.field_n = null;
+          ag.field_b.a(var1, false);
+          return;
+        }
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         bi.a(var1.field_n, var1.field_r, var1.field_o);
         bi.g(var1.field_q, var1.field_x, var1.field_u, var1.field_v);

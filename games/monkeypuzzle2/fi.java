@@ -8,33 +8,26 @@ final class fi {
     static le[] field_a;
 
     final static void b(int param0) {
-        L0: {
-          wl.e((byte) 102);
-          if (ie.field_e != null) {
-            vh.a(ie.field_e, (byte) -118);
-            break L0;
-          } else {
-            break L0;
-          }
+        wl.e((byte) 102);
+        if (ie.field_e != null) {
+          vh.a(ie.field_e, (byte) -118);
         }
         cb.b(true);
         rd.c(false);
         sc.b(param0);
-        if (bd.a(param0 + 25951)) {
-          gf.field_c.b(true, 1);
-          al.a((byte) -71, 0);
-          gk.a(-1);
-          return;
-        } else {
+        if (!bd.a(param0 + 25951)) {
           gk.a(-1);
           return;
         }
+        gf.field_c.b(true, 1);
+        al.a((byte) -71, 0);
+        gk.a(-1);
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 > -125) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;

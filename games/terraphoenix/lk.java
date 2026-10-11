@@ -11,92 +11,60 @@ final class lk {
     public static void a(int param0) {
         field_c = null;
         field_e = null;
-        if (param0 != 5540) {
-          lk.b(23);
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 5540) {
           field_b = null;
           field_a = null;
           field_d = null;
           return;
         }
+        lk.b(23);
+        field_b = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static void b(int param0) {
         if (param0 != 9407) {
-            field_c = (String) null;
-            ia.e((byte) 113);
-            return;
+          field_c = (String) null;
+          ia.e((byte) 113);
+          return;
         }
         ia.e((byte) 113);
     }
 
     final static String c(int param0) {
-        String var1;
-        if (param0 > -30) {
-          L0: {
-            lk.b(-99);
-            var1 = "";
-            if (mb.field_s == null) {
-              break L0;
-            } else {
-              var1 = mb.field_s.d(false);
-              break L0;
-            }
+        String var1 = null;
+        String var1Lifetime1;
+        if (param0 <= -30) {
+          var1 = "";
+          if (mb.field_s != null) {
+            var1 = mb.field_s.d(false);
           }
-          L1: {
-            if (var1.length() != 0) {
-              break L1;
-            } else {
-              var1 = ej.g((byte) 123);
-              break L1;
-            }
+          if (var1.length() == 0) {
+            var1 = ej.g((byte) 123);
           }
-          L2: {
-            if (var1.length() == 0) {
-              var1 = hd.field_k;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            var1 = "";
-            if (mb.field_s == null) {
-              break L3;
-            } else {
-              var1 = mb.field_s.d(false);
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() != 0) {
-              break L4;
-            } else {
-              var1 = ej.g((byte) 123);
-              break L4;
-            }
-          }
-          L5: {
-            if (var1.length() == 0) {
-              var1 = hd.field_k;
-              break L5;
-            } else {
-              break L5;
-            }
+          if (var1.length() == 0) {
+            var1 = hd.field_k;
           }
           return var1;
         }
+        lk.b(-99);
+        var1Lifetime1 = "";
+        if (mb.field_s != null) {
+          var1Lifetime1 = mb.field_s.d(false);
+        }
+        if (var1Lifetime1.length() == 0) {
+          var1Lifetime1 = ej.g((byte) 123);
+        }
+        if (var1Lifetime1.length() == 0) {
+          var1Lifetime1 = hd.field_k;
+        }
+        return var1Lifetime1;
     }
 
     final static void d(int param0) {
         if (param0 < 79) {
-            lk.c(-88);
+          lk.c(-88);
         }
     }
 

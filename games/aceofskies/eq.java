@@ -14,35 +14,20 @@ abstract class eq extends wf {
         RuntimeException var2 = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            var4 = (uk) ((Object) v.field_b.d(268435455));
-            L1: while (true) {
-              if (var4 == null) {
-                L2: {
-                  if (param0 >= 107) {
-                    break L2;
-                  } else {
-                    eq.a((byte) 89, -36);
-                    break L2;
-                  }
-                }
-                var5 = (oh) ((Object) fg.field_r.d(268435455));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    ae.a(var5, param1, (byte) -15);
-                    var5 = (oh) ((Object) fg.field_r.b((byte) 103));
-                    continue L3;
-                  }
-                }
-              } else {
-                od.a(param1, (byte) -76, var4);
-                var4 = (uk) ((Object) v.field_b.b((byte) 103));
-                continue L1;
-              }
-            }
+          var4 = (uk) (v.field_b.d(268435455));
+          while (var4 != null) {
+            od.a(param1, (byte) -76, var4);
+            var4 = (uk) (v.field_b.b((byte) 103));
           }
+          if (param0 < 107) {
+            eq.a((byte) 89, -36);
+          }
+          var5 = (oh) (fg.field_r.d(268435455));
+          while (var5 != null) {
+            ae.a(var5, param1, (byte) -15);
+            var5 = (oh) (fg.field_r.b((byte) 103));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -52,16 +37,16 @@ abstract class eq extends wf {
 
     final boolean a(int param0) {
         if (param0 >= -109) {
-            return false;
+          return false;
         }
         return this.field_f;
     }
 
     eq(wl param0) {
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "eq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +55,7 @@ abstract class eq extends wf {
     public static void d(int param0) {
         field_e = null;
         if (param0 >= -36) {
-            field_e = (gh) null;
+          field_e = (gh) null;
         }
     }
 

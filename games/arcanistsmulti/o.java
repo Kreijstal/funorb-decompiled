@@ -32,53 +32,49 @@ final class o extends pg {
 
     final static void a(ll param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
         try {
-            if (param1 != -47) {
-                field_o = (String) null;
-            }
-            sn.a(param5, param0, param2, -19, param6, true, param4, param3);
+          if (param1 != -47) {
+            field_o = (String) null;
+          }
+          sn.a(param5, param0, param2, -19, param6, true, param4, param3);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "o.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "o.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(boolean param0) {
-        if (!param0) {
-          this.b(false);
-          this.field_x = null;
-          this.field_n = null;
-          this.field_m = null;
-          this.field_D = null;
-          return;
-        } else {
+        if (param0) {
           this.field_x = null;
           this.field_n = null;
           this.field_m = null;
           this.field_D = null;
           return;
         }
+        this.b(false);
+        this.field_x = null;
+        this.field_n = null;
+        this.field_m = null;
+        this.field_D = null;
     }
 
     final static void a(byte param0) {
         jl.field_c.field_i = 0;
         jl.field_c.field_o = 0;
         if (param0 != -34) {
-            o.c(false);
+          o.c(false);
         }
     }
 
     public static void c(boolean param0) {
-        if (!param0) {
-          field_g = 98;
-          field_o = null;
-          field_E = null;
-          field_F = null;
-          return;
-        } else {
+        if (param0) {
           field_o = null;
           field_E = null;
           field_F = null;
           return;
         }
+        field_g = 98;
+        field_o = null;
+        field_E = null;
+        field_F = null;
     }
 
     o() {

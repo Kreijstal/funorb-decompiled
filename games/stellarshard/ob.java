@@ -10,14 +10,13 @@ final class ob {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 30063) {
-            field_a = 73L;
+          field_a = 73L;
         }
         field_b = null;
         field_d = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -29,120 +28,52 @@ final class ob {
         int var12 = 0;
         var12 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param1 < ti.field_e) {
-                param3 = param3 - (ti.field_e + -param1);
-                param1 = ti.field_e;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param5 >= ti.field_f) {
-                break L2;
-              } else {
-                param4 = param4 - (-param5 + ti.field_f);
-                param5 = ti.field_f;
-                break L2;
-              }
-            }
-            L3: {
-              if (param1 + param3 <= ti.field_c) {
-                break L3;
-              } else {
-                param3 = -param1 + ti.field_c;
-                break L3;
-              }
-            }
-            L4: {
-              if (param5 - -param4 > ti.field_l) {
-                param4 = -param5 + ti.field_l;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            L5: {
-              if (param0 >= 93) {
-                break L5;
-              } else {
-                field_b = (fh) null;
-                break L5;
-              }
-            }
-            L6: {
-              if ((param3 ^ -1) >= -1) {
-                break L6;
-              } else {
-                if (0 >= param4) {
-                  break L6;
-                } else {
-                  var6_int = param1 - -(param5 * ti.field_i);
-                  var7 = -param3 + ti.field_i;
-                  param5 = -param4;
-                  L7: while (true) {
-                    if (param5 >= 0) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      param1 = -param3;
-                      L8: while (true) {
-                        if (param1 >= 0) {
-                          var6_int = var6_int + var7;
-                          param5++;
-                          continue L7;
-                        } else {
-                          var8 = ti.field_a[var6_int];
-                          if ((param2 ^ -1) > (255 & var8 >> -980601784 ^ -1)) {
-                            L9: {
-                              if ((var8 >> -635973080 & 255) >= (var8 & 16711680) >> -311196592) {
-                                L10: {
-                                  var9 = (510 & var8 >> -741485937) - 60;
-                                  if (255 >= var9) {
-                                    break L10;
-                                  } else {
-                                    var9 = 255;
-                                    break L10;
-                                  }
-                                }
-                                var10 = var8 & 65280;
-                                var10 = 65280 & (var10 >> 2075161249) + -(var10 >> -798840315);
-                                var11 = (var8 & 255) >> -2050604381;
-                                ti.field_a[var6_int] = vf.b(var11, vf.b(var10, var9 << -1230962832));
-                                break L9;
-                              } else {
-                                break L9;
-                              }
-                            }
-                            var6_int++;
-                            param1++;
-                            continue L8;
-                          } else {
-                            var6_int++;
-                            param1++;
-                            continue L8;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            decompiledRegionSelector0 = 0;
-            break L0;
+          if (param1 < ti.field_e) {
+            param3 = param3 - (ti.field_e - param1);
+            param1 = ti.field_e;
           }
+          if (param5 < ti.field_f) {
+            param4 = param4 - (-param5 + ti.field_f);
+            param5 = ti.field_f;
+          }
+          if (param1 + param3 > ti.field_c) {
+            param3 = -param1 + ti.field_c;
+          }
+          if (param5 + param4 > ti.field_l) {
+            param4 = -param5 + ti.field_l;
+          }
+          if (param0 < 93) {
+            field_b = (fh) null;
+          }
+          if (param3 > 0 &&
+            0 < param4) {
+            var6_int = param1 + param5 * ti.field_i;
+            var7 = -param3 + ti.field_i;
+            for (param5 = -param4; param5 < 0; param5++) {
+              for (param1 = -param3; param1 < 0; param1++) {
+                var8 = ti.field_a[var6_int];
+                if (param2 < (255 & var8 >> 8) &&
+                  (var8 >> 8 & 255) >= (var8 & 16711680) >> 16) {
+                  var9 = (510 & var8 >> 15) - 60;
+                  if (255 < var9) {
+                    var9 = 255;
+                  }
+                  var10 = var8 & 65280;
+                  var10 = 65280 & (var10 >> 1) - (var10 >> 5);
+                  var11 = (var8 & 255) >> 3;
+                  ti.field_a[var6_int] = vf.b(var11, vf.b(var10, var9 << 16));
+                }
+                var6_int++;
+              }
+              var6_int = var6_int + var7;
+            }
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var6), "ob.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

@@ -11,9 +11,9 @@ final class wc {
         field_a = null;
         field_c = null;
         if (param0 > -68) {
-            wc.a((byte) 74);
-            field_b = null;
-            return;
+          wc.a((byte) 74);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

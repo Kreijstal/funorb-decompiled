@@ -9,7 +9,7 @@ final class o {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -23641) {
-            return;
+          return;
         }
         field_a = null;
     }

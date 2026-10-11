@@ -20,17 +20,17 @@ final class md implements hc {
         boolean[][][] var11 = null;
         vn var6 = null;
         int var7 = Kickabout.field_G;
-        int var3 = -1 != (param1 ^ -1) ? 0 : 1;
+        int var3 = param1 != 0 ? 0 : 1;
         for (var4 = 0; 4 > var4; var4++) {
-            var11 = ih.a(21656, rp.field_z[param1][var4]);
-            var6 = hs.a(false, var4 % 3, var3, ev.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, ev.field_B[31]);
-            this.field_i[var4] = new gm(var6, var3, true);
-            this.field_i[var4].field_G = 1;
-            this.field_i[var4].g((byte) 127);
-            this.field_i[var4].field_mb.a(dq.a((byte) 85, this.field_i[var4].field_mb.a(true), new Random()), 123);
+          var11 = ih.a(21656, rp.field_z[param1][var4]);
+          var6 = hs.a(false, var4 % 3, var3, ev.field_B[-(2 * param1) + 12], var11[0], var4 % 3, var11[1], (byte) -89, -var4 + 3, false, ev.field_B[31]);
+          this.field_i[var4] = new gm(var6, var3, true);
+          this.field_i[var4].field_G = 1;
+          this.field_i[var4].g((byte) 127);
+          this.field_i[var4].field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
         }
         if (param0 >= -10) {
-            this.field_i = (gm[]) null;
+          this.field_i = (gm[]) null;
         }
     }
 
@@ -38,80 +38,45 @@ final class md implements hc {
         int var1;
         int var3;
         int stackIn_12_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_13_1 = 0;
+        boolean stackIn_13_1 = false;
         int var2;
-        L0: {
-          var3 = Kickabout.field_G;
-          var1 = 0;
-          if (n.a(false)) {
+        var3 = Kickabout.field_G;
+        var1 = 0;
+        if (n.a(false)) {
+          var1 = 1;
+          gg.a(-32053);
+        } else {
+          if (!ng.a(param0 ^ 27302)) {
+            if (vi.c(2915)) {
+              on.g(0, 0, on.field_g, on.field_f);
+              var1 = 1;
+              ph.b(true);
+            }
+          } else {
             var1 = 1;
-            gg.a(-32053);
-            break L0;
-          } else {
-            if (!ng.a(param0 ^ 27302)) {
-              if (vi.c(2915)) {
-                on.g(0, 0, on.field_g, on.field_f);
-                var1 = 1;
-                ph.b(true);
-                break L0;
-              } else {
-                break L0;
-              }
-            } else {
-              var1 = 1;
-              ci.a(false);
-              break L0;
-            }
+            ci.a(false);
           }
         }
-        L1: {
-          if (!up.a((byte) -3)) {
-            break L1;
+        if (up.a((byte) -3) &&
+          !ng.a(param0 ^ 27302)) {
+          stackIn_12_0 = 100;
+          if (e.field_m == null) {
+            stackIn_13_1 = vb.field_k;
           } else {
-            if (!ng.a(param0 ^ 27302)) {
-              L2: {
-                stackIn_12_0 = 100;
-
-                if (e.field_m == null) {
-                  stackIn_13_0 = stackIn_12_0;
-                  stackIn_13_1 = vb.field_k ? 1 : 0;
-                  break L2;
-                } else {
-                  stackIn_13_0 = stackIn_12_0;
-                  stackIn_13_1 = 1;
-                  break L2;
-                }
-              }
-              ha.c(stackIn_13_0, stackIn_13_1 != 0);
-              var1 = 1;
-              break L1;
-            } else {
-              break L1;
-            }
+            stackIn_13_1 = true;
+          }
+          ha.c(stackIn_12_0, stackIn_13_1);
+          var1 = 1;
+        }
+        if (nv.i(0)) {
+          var2 = (-1 + vo.field_bb << 8) / 16;
+          if (0 < var2) {
+            var1 = 1;
+            on.a(0, 0, on.field_g, on.field_f, 0, var2);
           }
         }
-        L3: {
-          if (nv.i(0)) {
-            var2 = (-1 + vo.field_bb << 1245486152) / 16;
-            if (0 < var2) {
-              var1 = 1;
-              on.a(0, 0, on.field_g, on.field_f, 0, var2);
-              break L3;
-            } else {
-              break L3;
-            }
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          if (param0 == -27302) {
-            break L4;
-          } else {
-            md.d(14);
-            break L4;
-          }
+        if (param0 != -27302) {
+          md.d(14);
         }
         return var1 != 0;
     }
@@ -119,30 +84,33 @@ final class md implements hc {
     public final boolean a(int param0, int param1, char param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
+        int var4Lifetime1;
         for (var4 = 0; var4 < 3; var4++) {
-            this.field_e[var4] = this.field_e[1 + var4];
+          this.field_e[var4] = this.field_e[1 + var4];
         }
         this.field_e[3] = Character.toUpperCase(param2);
-        var4 = -1;
-        if (this.field_e[0] == 90 && this.field_e[1] == 69 && this.field_e[2] == 80 && this.field_e[3] == 72) {
-            var4 = 0;
+        var4Lifetime1 = -1;
+        if (this.field_e[0] == 90 &&
+          this.field_e[1] == 69 &&
+          this.field_e[2] == 80 &&
+          this.field_e[3] == 72) {
+          var4Lifetime1 = 0;
         }
-        if (this.field_e[0] == 73 && this.field_e[1] == 65 && 73 == this.field_e[2]) {
-            if (!(78 != this.field_e[3])) {
-                var4 = 1;
-            }
+        if (this.field_e[0] == 73 && this.field_e[1] == 65 && 73 == this.field_e[2] &&
+          78 == this.field_e[3]) {
+          var4Lifetime1 = 1;
         }
-        if (-1 != var4) {
-            if (!this.field_a) {
-                this.b(-98);
-            }
-            if (var4 != this.field_c) {
-                this.a(-18, var4);
-            }
-            this.field_f = 1;
+        if (-1 != var4Lifetime1) {
+          if (!this.field_a) {
+            this.b(-98);
+          }
+          if (var4Lifetime1 != this.field_c) {
+            this.a(-18, var4Lifetime1);
+          }
+          this.field_f = 1;
         }
         if (param0 != 11516) {
-            return false;
+          return false;
         }
         return false;
     }
@@ -160,74 +128,41 @@ final class md implements hc {
         int var8;
         int var9;
         int var10;
+        int var4Lifetime1;
         var10 = Kickabout.field_G;
         if (this.field_f == 0) {
           return;
-        } else {
-          L0: {
-            var2 = 1.0f + (float)this.field_f * 9.0f / 200.0f;
-            if (0 == this.field_c) {
-              stackIn_6_0 = 7000;
-              break L0;
-            } else {
-              stackIn_6_0 = 9000;
-              break L0;
-            }
+        }
+        var2 = 1.0f + (float)this.field_f * 9.0f / 200.0f;
+        stackIn_6_0 = (0 == this.field_c) ? 7000 : 9000;
+        var3 = (int)((float)stackIn_6_0 / var2);
+        for (var4 = 0; 4 > var4; var4++) {
+          var5 = var4;
+          if (1 < var5) {
+            var5 = -var4 + 3;
           }
-          var3 = (int)((float)stackIn_6_0 / var2);
-          var4 = 0;
-          L1: while (true) {
-            if (4 <= var4) {
-              var4 = -36 / ((50 - param0) / 45);
-              return;
-            } else {
-              L2: {
-                var5 = var4;
-                if (1 >= var5) {
-                  break L2;
-                } else {
-                  var5 = -var4 + 3;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var5 != 0) {
-                  stackIn_13_0 = 0.30000001192092896f;
-                  break L3;
-                } else {
-                  stackIn_13_0 = 0.8999999761581421f;
-                  break L3;
-                }
-              }
-              L4: {
-                var6 = stackIn_13_0 * (float)this.field_f;
-                var7 = 1.2000000476837158f * (float)this.field_f;
-                if (-2 <= (var4 ^ -1)) {
-                  stackIn_16_0 = -var6;
-                  break L4;
-                } else {
-                  stackIn_16_0 = var6;
-                  break L4;
-                }
-              }
-              var8 = (int)stackIn_16_0 + 320;
-              var9 = (int)var7 + 140;
-              iw.a(-102, this.field_b);
-              on.b();
-              this.field_i[var4].a(var3, 0, on.field_g >> 725710465, on.field_f, (byte) -105);
-              ta.e(120);
-              if (-137 > (this.field_f ^ -1)) {
-                this.field_b.b(-(this.field_b.field_o >> -570644511) + var8, -(this.field_b.field_v >> 159796321) + var9, 200 - this.field_f << 561976578);
-                var4++;
-                continue L1;
-              } else {
-                this.field_b.c(-(this.field_b.field_o >> -268201759) + var8, var9 + -(this.field_b.field_v >> 1055105665));
-                var4++;
-                continue L1;
-              }
-            }
+          stackIn_13_0 = (var5 != 0) ? 0.30000001192092896f : 0.8999999761581421f;
+          var6 = stackIn_13_0 * (float)this.field_f;
+          var7 = 1.2000000476837158f * (float)this.field_f;
+          if (var4 <= 1) {
+            stackIn_16_0 = -var6;
+          } else {
+            stackIn_16_0 = var6;
+          }
+          var8 = (int)stackIn_16_0 + 320;
+          var9 = (int)var7 + 140;
+          iw.a(-102, this.field_b);
+          on.b();
+          this.field_i[var4].a(var3, 0, on.field_g >> 1, on.field_f, (byte) -105);
+          ta.e(120);
+          if (this.field_f > 136) {
+            this.field_b.b(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
+          } else {
+            this.field_b.c(-(this.field_b.field_o >> 1) + var8, var9 - (this.field_b.field_v >> 1));
           }
         }
+        var4Lifetime1 = -36 / ((50 - param0) / 45);
+        return;
     }
 
     public static void c(int param0) {
@@ -235,15 +170,15 @@ final class md implements hc {
         field_g = null;
         field_j = null;
         if (param0 != 32318) {
-            return;
+          return;
         }
         field_d = null;
     }
 
     public final boolean a(byte param0) {
         if (param0 <= 63) {
-            this.a(121, -18, '�');
-            return false;
+          this.a(121, -18, '�');
+          return false;
         }
         return false;
     }
@@ -251,21 +186,21 @@ final class md implements hc {
     public final void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = Kickabout.field_G;
-        if (!(-1 != (this.field_f ^ -1))) {
-            return;
+        if (this.field_f == 0) {
+          return;
         }
         int fieldTemp$0 = this.field_f + 1;
         this.field_f = this.field_f + 1;
-        if ((fieldTemp$0 ^ -1) <= -201) {
-            this.field_f = 0;
-            return;
+        if (fieldTemp$0 >= 200) {
+          this.field_f = 0;
+          return;
         }
         if (param0 != -25) {
-            return;
+          return;
         }
-        for (var3 = 0; (var3 ^ -1) > -5; var3++) {
-            this.field_i[var3].a(param0 ^ -27, (la[]) null, false, false);
-            this.field_i[var3].g((byte) 126);
+        for (var3 = 0; var3 < 4; var3++) {
+          this.field_i[var3].a(param0 ^ -27, (la[]) null, false, false);
+          this.field_i[var3].g((byte) 126);
         }
     }
 

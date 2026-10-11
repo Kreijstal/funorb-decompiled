@@ -11,26 +11,19 @@ final class li {
     static java.awt.Font field_f;
 
     final static hg a(int param0, int param1) {
+        int var3 = 0;
         hg[] var2;
-        int var3;
         int var4;
         hg[] var5;
         var4 = Chess.field_G;
         var5 = ln.l(2);
         var2 = var5;
-        var3 = param1;
-        L0: while (true) {
-          if (var5.length > var3) {
-            if (var5[var3].field_e != param0) {
-              var3++;
-              continue L0;
-            } else {
-              return var5[var3];
-            }
-          } else {
-            return null;
+        for (var3 = param1; var5.length > var3; var3++) {
+          if (var5[var3].field_e == param0) {
+            return var5[var3];
           }
         }
+        return null;
     }
 
     public static void a(int param0) {
@@ -42,7 +35,7 @@ final class li {
         field_g = null;
         field_c = null;
         if (param0 > -30) {
-            li.a(86);
+          li.a(86);
         }
     }
 
@@ -52,53 +45,29 @@ final class li {
         km stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (tj.a(param3, param0, param2, (byte) 83)) {
-              if (param1 == -2) {
-                stackIn_7_0 = hl.a(param1 + 2);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                stackIn_5_0 = (km) null;
-                decompiledRegionSelector0 = 0;
-                break L0;
-              }
-            } else {
-              return null;
-            }
+          if (!tj.a(param3, param0, param2, (byte) 83)) {
+            return null;
           }
+          if (param1 == -2) {
+            stackIn_7_0 = hl.a(param1 + 2);
+            return stackIn_7_0;
+          }
+          stackIn_5_0 = (km) null;
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("li.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L1;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("li.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          return stackIn_7_0;
+          throw fk.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -108,8 +77,8 @@ final class li {
         field_d = new double[65536];
         field_e = new double[65536];
         for (var0 = 0; 65536 > var0; var0++) {
-            field_d[var0] = Math.sin(3.141592653589793 * (double)var0 / 32768.0);
-            field_e[var0] = Math.cos((double)var0 * 3.141592653589793 / 32768.0);
+          field_d[var0] = Math.sin(3.141592653589793 * (double)var0 / 32768.0);
+          field_e[var0] = Math.cos((double)var0 * 3.141592653589793 / 32768.0);
         }
         field_c = "You cannot join this game - it is in progress";
         field_b = "Error connecting to server. Please try using a different server.";

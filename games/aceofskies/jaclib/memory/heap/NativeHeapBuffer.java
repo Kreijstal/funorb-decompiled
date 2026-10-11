@@ -15,18 +15,18 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
     }
 
     public final synchronized void a(byte[] param0, int param1, int param2, int param3) {
-        if (!(((!this.b() ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param3 + param1 > param0.length ? 1 : 0) | (0 > param2 ? 1 : 0) | (this.c < param3 + param2 ? 1 : 0)) == 0)) {
-            throw new RuntimeException();
+        if (((!this.b() ? 1 : 0) | (param0 == null ? 1 : 0) | (param1 < 0 ? 1 : 0) | (param3 + param1 > param0.length ? 1 : 0) | (0 > param2 ? 1 : 0) | (this.c < param3 + param2 ? 1 : 0)) != 0) {
+          throw new RuntimeException();
         }
         this.d.put(this.a, param0, param1, param2, param3);
     }
 
     private final synchronized boolean b() {
         if (!this.d.b()) {
-            return false;
+          return false;
         }
         if (!this.b) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -41,9 +41,9 @@ public final class NativeHeapBuffer implements jaclib.memory.Buffer, jaclib.memo
 
     private final synchronized void c() {
         if (this.b()) {
-            this.d.deallocateBuffer(this.a);
-            this.b = false;
-            return;
+          this.d.deallocateBuffer(this.a);
+          this.b = false;
+          return;
         }
         this.b = false;
     }

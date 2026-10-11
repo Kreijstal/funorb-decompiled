@@ -20,33 +20,30 @@ final class p extends wf implements e {
     }
 
     private final void a(Exception param0) {
-        if (field_e) {
-          if (kh.a(-65) - field_f < 30000L) {
-            this.field_i.repaint();
-            return;
-          } else {
-            throw new RuntimeException(param0.getMessage());
-          }
-        } else {
+        if (!field_e) {
           field_f = kh.a(-115);
           field_e = true;
           return;
         }
+        if (kh.a(-65) - field_f >= 30000L) {
+          throw new RuntimeException(param0.getMessage());
+        }
+        this.field_i.repaint();
     }
 
     final void a(int param0, int param1) {
         java.awt.Dimension var4 = null;
         synchronized (this.field_i.getTreeLock()) {
-            var4 = this.field_i.getSize();
-            this.H(param0, param1, var4.width, var4.height);
-            field_e = false;
+          var4 = this.field_i.getSize();
+          this.H(param0, param1, var4.width, var4.height);
+          field_e = false;
         }
     }
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            vk.a((e) (this), -112);
-            return;
+          vk.a((e) (this), -112);
+          return;
         }
     }
 

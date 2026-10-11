@@ -8,7 +8,7 @@ final class mj {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 71) {
-            field_a = (bd) null;
+          field_a = (bd) null;
         }
     }
 

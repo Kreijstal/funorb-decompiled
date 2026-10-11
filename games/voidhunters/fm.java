@@ -12,7 +12,7 @@ final class fm {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -87) {
-            fm.a((byte) 2);
+          fm.a((byte) 2);
         }
     }
 

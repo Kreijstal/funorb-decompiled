@@ -25,7 +25,7 @@ abstract class vb {
 
     final boolean a(boolean param0) {
         if (!param0) {
-            return false;
+          return false;
         }
         return 20 <= this.c((byte) 99) ? true : false;
     }
@@ -33,155 +33,106 @@ abstract class vb {
     abstract void c(int param0);
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4;
-        var4 = 0;
-        if (!param2) {
-          L0: {
-            if (param1) {
-              var4 += 2;
-              break L0;
-            } else {
-              break L0;
-            }
+        int var4 = 0;
+        if (param2) {
+          var4 += 4;
+          if (param1) {
+            var4 += 2;
           }
           if (!param3) {
-            if (param0) {
-              return (String) null;
-            } else {
+            if (!param0) {
               return rc.field_s[var4];
             }
-          } else {
-            var4++;
-            if (param0) {
-              return (String) null;
-            } else {
-              return rc.field_s[var4];
-            }
+            return (String) null;
           }
-        } else {
-          L1: {
-            var4 += 4;
-            if (param1) {
-              var4 += 2;
-              break L1;
-            } else {
-              break L1;
-            }
+          var4++;
+          if (!param0) {
+            return rc.field_s[var4];
           }
-          if (param3) {
-            var4++;
-            if (param0) {
-              return (String) null;
-            } else {
-              return rc.field_s[var4];
-            }
-          } else {
-            if (param0) {
-              return (String) null;
-            } else {
-              return rc.field_s[var4];
-            }
-          }
+          return (String) null;
         }
+        if (param1) {
+          var4 += 2;
+        }
+        if (param3) {
+          var4++;
+          if (!param0) {
+            return rc.field_s[var4];
+          }
+          return (String) null;
+        }
+        if (!param0) {
+          return rc.field_s[var4];
+        }
+        return (String) null;
     }
 
     final int c(byte param0) {
-        if (param0 != 99) {
-          vb.d(50);
-          return this.field_k.a(true) - -this.field_i.a(true);
-        } else {
-          return this.field_k.a(true) - -this.field_i.a(true);
+        if (param0 == 99) {
+          return this.field_k.a(true) + this.field_i.a(true);
         }
+        vb.d(50);
+        return this.field_k.a(true) + this.field_i.a(true);
     }
 
     final int a(byte param0) {
-        if (param0 <= 74) {
-          vb.d(93);
-          return this.field_c.a(true) + this.field_l.a(true);
-        } else {
+        if (param0 > 74) {
           return this.field_c.a(true) + this.field_l.a(true);
         }
+        vb.d(93);
+        return this.field_c.a(true) + this.field_l.a(true);
     }
 
     final db a(boolean param0, int param1, int param2, byte param3, int param4) {
         db stackIn_3_0 = null;
-        db stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         db stackIn_15_0 = null;
-        db stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
+        boolean stackIn_16_1 = false;
         long var6;
         db var8;
+        long var6Lifetime1;
+        db var8Lifetime1;
         if (param4 > 30) {
-          L0: {
-            var6 = ((long)param1 << 200776032) - -(long)param2;
-            var8 = new db();
-            stackIn_15_0 = (db) (var8);
-
-            if (!param0) {
-              stackIn_16_0 = (db) ((Object) stackIn_15_0);
-              stackIn_16_1 = 0;
-              break L0;
-            } else {
-              stackIn_16_0 = (db) ((Object) stackIn_15_0);
-              stackIn_16_1 = 1;
-              break L0;
-            }
-          }
-          stackIn_16_0.field_s = stackIn_16_1 != 0;
+          var6 = ((long)param1 << 32) + (long)param2;
+          var8 = new db();
+          stackIn_15_0 = var8;
+          stackIn_16_1 = (!param0) ? false : true;
+          stackIn_15_0.field_s = stackIn_16_1;
           var8.field_F = param3;
           var8.field_l = var6;
           if (param0) {
-            if (-21 >= (this.a((byte) 114) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_c.a(var8, 3329);
-              return var8;
-            }
-          } else {
-            if (-21 < (this.c((byte) 99) ^ -1)) {
-              this.field_k.a(var8, 3329);
-              return var8;
-            } else {
+            if (this.a((byte) 114) >= 20) {
               throw new RuntimeException();
             }
+            this.field_c.a(var8, 3329);
+            return var8;
           }
-        } else {
-          L1: {
-            field_r = -38;
-            var6 = ((long)param1 << 200776032) - -(long)param2;
-            var8 = new db();
-            stackIn_3_0 = (db) (var8);
-
-            if (!param0) {
-              stackIn_4_0 = (db) ((Object) stackIn_3_0);
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = (db) ((Object) stackIn_3_0);
-              stackIn_4_1 = 1;
-              break L1;
-            }
+          if (this.c((byte) 99) >= 20) {
+            throw new RuntimeException();
           }
-          stackIn_4_0.field_s = stackIn_4_1 != 0;
-          var8.field_F = param3;
-          var8.field_l = var6;
-          if (param0) {
-            if (-21 >= (this.a((byte) 114) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_c.a(var8, 3329);
-              return var8;
-            }
-          } else {
-            if (-21 < (this.c((byte) 99) ^ -1)) {
-              this.field_k.a(var8, 3329);
-              return var8;
-            } else {
-              throw new RuntimeException();
-            }
-          }
+          this.field_k.a(var8, 3329);
+          return var8;
         }
+        field_r = -38;
+        var6Lifetime1 = ((long)param1 << 32) + (long)param2;
+        var8Lifetime1 = new db();
+        stackIn_3_0 = var8Lifetime1;
+        stackIn_4_1 = (!param0) ? false : true;
+        stackIn_3_0.field_s = stackIn_4_1;
+        var8Lifetime1.field_F = param3;
+        var8Lifetime1.field_l = var6Lifetime1;
+        if (param0) {
+          if (this.a((byte) 114) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_c.a(var8Lifetime1, 3329);
+          return var8Lifetime1;
+        }
+        if (this.c((byte) 99) >= 20) {
+          throw new RuntimeException();
+        }
+        this.field_k.a(var8Lifetime1, 3329);
+        return var8Lifetime1;
     }
 
     public static void d(int param0) {
@@ -189,60 +140,34 @@ abstract class vb {
         field_e = null;
         field_a = (int[][]) null;
         if (param0 != 0) {
-            field_n = -48;
+          field_n = -48;
         }
     }
 
     abstract void a(int param0);
 
     final boolean b(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 100) {
-          L0: {
-            this.b(41);
-            if (-21 < (this.a((byte) 116) ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-21 < (this.a((byte) 116) ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 100) {
+          return this.a((byte) 116) >= 20 ? true : false;
         }
+        this.b(41);
+        return this.a((byte) 116) >= 20 ? true : false;
     }
 
     final static String a(int param0, byte param1, int param2) {
-        String var3;
-        String[] var4;
-        L0: {
-          if (null != aa.field_h[param0][param2]) {
-            var3 = aa.field_h[param0][param2];
-            break L0;
-          } else {
-            var4 = new String[]{wj.field_d, Integer.toString(param2)};
-            var3 = qa.a(122, (CharSequence[]) ((Object) var4));
-            break L0;
-          }
-        }
-        if (param1 != 109) {
-          field_a = (int[][]) null;
-          return var3;
+        String[] var4 = null;
+        String var3 = null;
+        if (null == aa.field_h[param0][param2]) {
+          var4 = new String[]{wj.field_d, Integer.toString(param2)};
+          var3 = qa.a(122, (CharSequence[]) ((Object) var4));
         } else {
+          var3 = aa.field_h[param0][param2];
+        }
+        if (param1 == 109) {
           return var3;
         }
+        field_a = (int[][]) null;
+        return var3;
     }
 
     abstract boolean b(int param0);

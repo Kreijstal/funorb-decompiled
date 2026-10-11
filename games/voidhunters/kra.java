@@ -8,47 +8,28 @@ final class kra {
     public static void a(byte param0) {
         field_b = null;
         if (param0 <= 32) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int stackIn_9_0 = 0;
-        if (!li.field_i) {
-          L0: {
-            if (-2 <= (param4 ^ -1)) {
-              break L0;
-            } else {
-              L1: {
-                if (param4 < 255) {
-                  stackIn_9_0 = -param4 + 255;
-                  break L1;
-                } else {
-                  stackIn_9_0 = 0;
-                  break L1;
-                }
-              }
-              bfb.field_b = stackIn_9_0;
-              dma.f(param5, param3, param6, param7, param0, param1);
-              break L0;
-            }
-          }
+        if (li.field_i) {
+          og.field_r.a(param7, param5, param3, param4 << 24 | param0, false, param6, param1);
           if (param2 != 16994) {
             field_a = (int[]) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          og.field_r.a(param7, param5, param3, param4 << 1031681688 | param0, false, param6, param1);
-          if (param2 == 16994) {
-            return;
-          } else {
-            field_a = (int[]) null;
-            return;
-          }
+          return;
         }
+        if (param4 > 1) {
+          bfb.field_b = param4 >= 255 ? 0 : -param4 + 255;
+          dma.f(param5, param3, param6, param7, param0, param1);
+        }
+        if (param2 == 16994) {
+          return;
+        }
+        field_a = (int[]) null;
     }
 
     static {

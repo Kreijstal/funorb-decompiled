@@ -15,16 +15,16 @@ final class kg {
         field_b = null;
         field_f = null;
         if (param0) {
-            field_f = (ff) null;
-            field_a = null;
-            return;
+          field_f = (ff) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0) {
         if (param0 != -15617) {
-            field_c = 24;
+          field_c = 24;
         }
     }
 
@@ -37,32 +37,33 @@ final class kg {
 
     final void a(byte param0, gb param1, byte[] param2) {
         try {
-            try {
-                if (param1.field_l[param1.field_m] != 31 || -117 != param1.field_l[param1.field_m + 1]) {
-                    throw new RuntimeException("");
-                }
-                if (null == this.field_d) {
-                    this.field_d = new java.util.zip.Inflater(true);
-                }
-                if (param0 != 97) {
-                    byte[] var5 = (byte[]) null;
-                    this.a((byte) 118, (gb) null, (byte[]) null);
-                }
-                try {
-                    this.field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
-                    this.field_d.inflate(param2);
-                } catch (Exception exception) {
-                    this.field_d.reset();
-                    throw new RuntimeException("");
-                }
-                this.field_d.reset();
-            } catch (RuntimeException runtimeException) {
-                throw fc.a((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          try {
+            if (param1.field_l[param1.field_m] != 31 ||
+              -117 != param1.field_l[param1.field_m + 1]) {
+              throw new RuntimeException("");
             }
+            if (null == this.field_d) {
+              this.field_d = new java.util.zip.Inflater(true);
+            }
+            if (param0 != 97) {
+              byte[] var5 = (byte[]) null;
+              this.a((byte) 118, (gb) null, (byte[]) null);
+            }
+            try {
+              this.field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
+              this.field_d.inflate(param2);
+            } catch (Exception exception) {
+              this.field_d.reset();
+              throw new RuntimeException("");
+            }
+            this.field_d.reset();
+          } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

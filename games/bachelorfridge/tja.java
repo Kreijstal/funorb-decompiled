@@ -13,7 +13,7 @@ abstract class tja {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 8192) {
-            return;
+          return;
         }
         field_a = null;
     }

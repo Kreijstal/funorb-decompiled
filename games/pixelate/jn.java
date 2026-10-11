@@ -22,17 +22,16 @@ final class jn extends fa {
         field_p = null;
         field_m = null;
         if (param0 != 29353) {
-            jn.a(-63);
+          jn.a(-63);
         }
     }
 
     final static double a(double param0, int param1) {
-        if (param1 != 6802) {
-          jn.a(-0.09855271478809768, -30);
-          return rl.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
-        } else {
+        if (param1 == 6802) {
           return rl.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
         }
+        jn.a(-0.09855271478809768, -30);
+        return rl.field_G[65535 & (int)(param0 * 32768.0 / 3.141592653589793)];
     }
 
     jn(int param0, int param1) {

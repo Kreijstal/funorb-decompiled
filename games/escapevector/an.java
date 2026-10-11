@@ -11,7 +11,7 @@ final class an {
         field_c = null;
         field_b = null;
         if (param0 <= 17) {
-            field_a = false;
+          field_a = false;
         }
     }
 

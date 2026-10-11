@@ -13,22 +13,21 @@ final class li extends gg {
 
     public static void a(int param0) {
         try {
-            field_h = null;
-            field_j = null;
-            if (param0 != 26333) {
-                li.a(-110);
-            }
+          field_h = null;
+          field_j = null;
+          if (param0 != 26333) {
+            li.a(-110);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "li.A(" + param0 + ')');
         }
     }
 
     final static void d(int param0) {
-        int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int stackIn_11_0 = 0;
         ia stackIn_56_0 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         jd var1 = null;
         RuntimeException var1_ref = null;
@@ -44,276 +43,144 @@ final class li extends gg {
         ia var7 = null;
         String var7_ref = null;
         int var8 = 0;
+        Object var3Lifetime1;
+        String var4_ref_StringLifetime1;
         var8 = SolKnight.field_L ? 1 : 0;
         try {
-          L0: {
-            var1 = te.field_N;
-            var2 = var1.j(255);
-            if ((var2 ^ -1) != -1) {
-              if ((var2 ^ -1) == -2) {
-                L1: {
-                  if (ok.field_a != null) {
-                    break L1;
-                  } else {
-                    ok.field_a = new jh(128);
-                    ng.field_c = 0;
-                    break L1;
-                  }
-                }
-                L2: {
-                  var3 = var1.h(55);
-                  if (((String) (var3)).equals("")) {
-                    var3 = null;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  var4_ref_String = var1.h(75);
-                  var5 = var1.h(56);
-                  var6 = mc.a(var4_ref_String, (byte) 105);
-                  if (var6 != null) {
-                    break L3;
-                  } else {
-                    var6 = mc.a(var5, (byte) 105);
-                    if (var6 == null) {
-                      break L3;
-                    } else {
-                      ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_String), -2).hashCode(), (byte) -109, var6);
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (null != var6) {
-                    break L4;
-                  } else {
-                    var6 = new ia();
-                    ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_String), -2).hashCode(), (byte) -109, var6);
-                    fieldTemp$0 = ng.field_c;
-                    ng.field_c = ng.field_c + 1;
-                    var6.field_jb = fieldTemp$0;
-                    va.field_f.a(var6, -7044);
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (null == var3) {
-                    break L5;
-                  } else {
-                    var3 = ((String) (var3)).intern();
-                    break L5;
-                  }
-                }
-                var6.field_gb = (String) (var3);
-                var6.field_ib = var4_ref_String;
-                var6.c(10);
-                var7 = (ia) ((Object) va.field_f.a((byte) 51));
-                L6: while (true) {
-                  L7: {
-                    L8: {
-                      if (var7 == null) {
-                        break L8;
-                      } else {
-                        stackIn_56_0 = (ia) (var6);
-
-                        if (var8 != 0) {
-                          break L7;
-                        } else {
-                          if (!je.a(stackIn_56_0, var7, true)) {
-                            break L8;
-                          } else {
-                            var7 = (ia) ((Object) va.field_f.b(-40));
-                            if (var8 == 0) {
-                              continue L6;
-                            } else {
-                              break L8;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    stackIn_56_0 = (ia) (var7);
-                    break L7;
-                  }
-                  L9: {
-                    L10: {
-                      if (stackIn_56_0 != null) {
-                        break L10;
-                      } else {
-                        va.field_f.a(var6, -7044);
-                        if (var8 == 0) {
-                          break L9;
-                        } else {
-                          break L10;
-                        }
-                      }
-                    }
-                    ha.a(var6, (byte) 51, var7);
-                    break L9;
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                if ((var2 ^ -1) == -3) {
-                  L11: {
-                    if (1 == lh.field_p) {
-                      lh.field_p = 2;
-                      break L11;
-                    } else {
-                      break L11;
-                    }
-                  }
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  L12: {
-                    if (param0 >= 116) {
-                      break L12;
-                    } else {
-                      li.a(-55);
-                      break L12;
-                    }
-                  }
-                  if (3 == var2) {
-                    L13: {
-                      if (-3 != (lh.field_p ^ -1)) {
-                        break L13;
-                      } else {
-                        lh.field_p = 1;
-                        break L13;
-                      }
-                    }
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    if ((var2 ^ -1) != -5) {
-                      hi.a((Throwable) null, "F1: " + oc.a(false), 1);
-                      je.a(false);
-                      decompiledRegionSelector0 = 5;
-                      break L0;
-                    } else {
-                      lh.field_p = 1;
-                      var3 = var1.h(37);
-                      qa.field_r = ((String) (var3)).intern();
-                      var4 = var1.j(255);
-                      pk.a((byte) -48, var4);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    }
-                  }
-                }
+          var1 = te.field_N;
+          var2 = var1.j(255);
+          if (var2 == 0) {
+            if (null == lc.field_m) {
+              lc.field_m = new jh(128);
+              kj.field_O = 0;
+            }
+            stackIn_11_0 = (var1.j(255) != 1) ? 0 : 1;
+            var3_int = stackIn_11_0;
+            var4_ref_String = var1.h(20);
+            if (var3_int != 0) {
+              var1.h(31);
+            }
+            var5_ref = ug.a(var4_ref_String, 113);
+            var6_ref = var1.h(105);
+            var7_ref = jg.a((CharSequence) ((Object) var4_ref_String), -2);
+            if (null == var7_ref) {
+              var7_ref = var4_ref_String;
+            }
+            if (var5_ref == null) {
+              var5_ref = ug.a(var6_ref, 115);
+              if (var5_ref != null) {
+                lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
               }
-            } else {
-              L14: {
-                if (null != lc.field_m) {
-                  break L14;
-                } else {
-                  lc.field_m = new jh(128);
-                  kj.field_O = 0;
-                  break L14;
-                }
+            }
+            if (var5_ref == null) {
+              var5_ref = new ia();
+              lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
+              fieldTemp$1 = kj.field_O;
+              kj.field_O = kj.field_O + 1;
+              var5_ref.field_jb = fieldTemp$1;
+              vb.field_h.a(var5_ref, -7044);
+            }
+            var5_ref.field_ib = var4_ref_String;
+            return;
+          }
+          if (var2 != 1) {
+            if (var2 == 2) {
+              if (1 == lh.field_p) {
+                lh.field_p = 2;
               }
-              L15: {
-                if ((var1.j(255) ^ -1) != -2) {
-                  stackIn_11_0 = 0;
-                  break L15;
-                } else {
-                  stackIn_11_0 = 1;
-                  break L15;
-                }
+              return;
+            }
+            if (param0 < 116) {
+              li.a(-55);
+            }
+            if (3 == var2) {
+              if (lh.field_p == 2) {
+                lh.field_p = 1;
               }
-              L16: {
-                var3_int = stackIn_11_0;
-                var4_ref_String = var1.h(20);
-                if (var3_int != 0) {
-                  var1.h(31);
-                  break L16;
-                } else {
-                  break L16;
-                }
-              }
-              L17: {
-                var5_ref = ug.a(var4_ref_String, 113);
-                var6_ref = var1.h(105);
-                var7_ref = jg.a((CharSequence) ((Object) var4_ref_String), -2);
-                if (null == var7_ref) {
-                  var7_ref = var4_ref_String;
-                  break L17;
-                } else {
-                  break L17;
-                }
-              }
-              L18: {
-                if (var5_ref == null) {
-                  var5_ref = ug.a(var6_ref, 115);
-                  if (var5_ref != null) {
-                    lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
-                    break L18;
-                  } else {
-                    break L18;
-                  }
-                } else {
-                  break L18;
-                }
-              }
-              L19: {
-                if (var5_ref != null) {
-                  break L19;
-                } else {
-                  var5_ref = new ia();
-                  lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
-                  fieldTemp$1 = kj.field_O;
-                  kj.field_O = kj.field_O + 1;
-                  var5_ref.field_jb = fieldTemp$1;
-                  vb.field_h.a(var5_ref, -7044);
-                  break L19;
-                }
-              }
-              var5_ref.field_ib = var4_ref_String;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              return;
+            }
+            if (var2 != 4) {
+              hi.a((Throwable) null, "F1: " + oc.a(false), 1);
+              je.a(false);
+              return;
+            }
+            lh.field_p = 1;
+            var3 = var1.h(37);
+            qa.field_r = ((String) (var3)).intern();
+            var4 = var1.j(255);
+            pk.a((byte) -48, var4);
+            return;
+          }
+          if (ok.field_a == null) {
+            ok.field_a = new jh(128);
+            ng.field_c = 0;
+          }
+          var3Lifetime1 = var1.h(55);
+          if (((String) (var3Lifetime1)).equals("")) {
+            var3Lifetime1 = null;
+          }
+          var4_ref_StringLifetime1 = var1.h(75);
+          var5 = var1.h(56);
+          var6 = mc.a(var4_ref_StringLifetime1, (byte) 105);
+          if (var6 == null) {
+            var6 = mc.a(var5, (byte) 105);
+            if (var6 != null) {
+              ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
             }
           }
+          if (null == var6) {
+            var6 = new ia();
+            ok.field_a.a((long)jg.a((CharSequence) ((Object) var4_ref_StringLifetime1), -2).hashCode(), (byte) -109, var6);
+            fieldTemp$0 = ng.field_c;
+            ng.field_c = ng.field_c + 1;
+            var6.field_jb = fieldTemp$0;
+            va.field_f.a(var6, -7044);
+          }
+          if (null != var3Lifetime1) {
+            var3Lifetime1 = ((String) (var3Lifetime1)).intern();
+          }
+          var6.field_gb = (String) (var3Lifetime1);
+          var6.field_ib = var4_ref_StringLifetime1;
+          var6.c(10);
+          var7 = (ia) (va.field_f.a((byte) 51));
+          L6: while (true) {
+            if (var7 != null) {
+              stackIn_56_0 = var6;
+              if (var8 != 0) {
+                break L6;
+              }
+              if (je.a(stackIn_56_0, var7, true)) {
+                var7 = (ia) (va.field_f.b(-40));
+                continue;
+              }
+            }
+            stackIn_56_0 = var7;
+            break;
+          }
+          if (stackIn_56_0 == null) {
+            va.field_f.a(var6, -7044);
+            if (var8 == 0) {
+              return;
+            }
+          }
+          ha.a(var6, (byte) 51, var7);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw fc.a((Throwable) ((Object) var1_ref), "li.B(" + param0 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return;
-              } else {
-                if (decompiledRegionSelector0 == 4) {
-                  return;
-                } else {
-                  return;
-                }
-              }
-            }
-          }
-        }
     }
 
     li(int param0, int param1, int param2, int param3, int param4) {
         try {
-            this.field_i = param4;
-            this.field_m = param3;
-            this.field_o = param1;
-            this.field_l = param0;
-            this.field_n = param2;
+          this.field_i = param4;
+          this.field_m = param3;
+          this.field_o = param1;
+          this.field_l = param0;
+          this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "li.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

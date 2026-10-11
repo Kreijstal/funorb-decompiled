@@ -6,10 +6,10 @@ final class mc extends oi implements java.awt.event.MouseWheelListener {
 
     final void a(byte param0, java.awt.Component param1) {
         if (param0 > -46) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, (byte) 80);
-            param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, (byte) 80);
+          param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

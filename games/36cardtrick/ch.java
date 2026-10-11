@@ -20,53 +20,31 @@ abstract class ch {
     final static void a(int param0, qk param1) {
         ig var2 = null;
         try {
-            ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
-            var2 = ig.a(param1, "jagex logo2.packvorbis", "");
-            int var3 = -108 / ((param0 - -29) / 58);
-            var2.c();
+          ig.a(param1.a((byte) 7, "", "headers.packvorbis"));
+          var2 = ig.a(param1, "jagex logo2.packvorbis", "");
+          int var3 = -108 / ((param0 + 29) / 58);
+          var2.c();
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract void a(Object param0, boolean param1, boolean param2);
 
     final int b(int param0) {
-        if (param0 != -21040) {
-          this.a(85);
-          return this.field_a.b(1) + this.field_e.b(1);
-        } else {
+        if (param0 == -21040) {
           return this.field_a.b(1) + this.field_e.b(1);
         }
+        this.a(85);
+        return this.field_a.b(1) + this.field_e.b(1);
     }
 
     final boolean a(boolean param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0) {
-          L0: {
-            this.a(true, -13, 58, (byte) 80, 74);
-            if ((this.a((byte) 72) ^ -1) > -21) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((this.a((byte) 72) ^ -1) > -21) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (!param0) {
+          return this.a((byte) 72) >= 20 ? true : false;
         }
+        this.a(true, -13, 58, (byte) 80, 74);
+        return this.a((byte) 72) >= 20 ? true : false;
     }
 
     abstract void a(int param0);
@@ -74,25 +52,25 @@ abstract class ch {
     abstract boolean b(byte param0);
 
     final na a(boolean param0, int param1, int param2, byte param3, int param4) {
-        long var6 = ((long)param4 << -1640279264) + (long)param2;
+        long var6 = ((long)param4 << 32) + (long)param2;
         if (param1 != -1640279264) {
-            return (na) null;
+          return (na) null;
         }
         na var8 = new na();
         var8.field_o = param0 ? true : false;
         var8.field_j = var6;
         var8.field_u = param3;
         if (!param0) {
-            if (!((this.b(param1 ^ 1640300272) ^ -1) > -21)) {
-                throw new RuntimeException();
-            }
-            this.field_a.a((byte) -78, var8);
-        } else {
-            if (this.a((byte) 107) < 20) {
-                this.field_g.a((byte) -75, var8);
-                return var8;
-            }
+          if (!(this.b(param1 ^ 1640300272) < 20)) {
             throw new RuntimeException();
+          }
+          this.field_a.a((byte) -78, var8);
+        } else {
+          if (this.a((byte) 107) < 20) {
+            this.field_g.a((byte) -75, var8);
+            return var8;
+          }
+          throw new RuntimeException();
         }
         return var8;
     }

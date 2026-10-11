@@ -25,20 +25,18 @@ final class sk extends ph {
         field_r = null;
         field_q = null;
         field_s = null;
-        if (param0 != 10) {
-          field_u = (String) null;
-          field_o = null;
-          return;
-        } else {
+        if (param0 == 10) {
           field_o = null;
           return;
         }
+        field_u = (String) null;
+        field_o = null;
     }
 
     final ug b(byte param0) {
         if (param0 <= 27) {
-            field_s = (String) null;
-            return ei.field_t;
+          field_s = (String) null;
+          return ei.field_t;
         }
         return ei.field_t;
     }

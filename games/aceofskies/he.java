@@ -8,9 +8,9 @@ abstract class he extends wt {
 
     public static void f(int param0) {
         if (param0 != 0) {
-            field_n = 38;
-            field_o = null;
-            return;
+          field_n = 38;
+          field_o = null;
+          return;
         }
         field_o = null;
     }

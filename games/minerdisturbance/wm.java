@@ -16,7 +16,7 @@ final class wm {
         field_g = null;
         field_f = null;
         if (param0 != -7) {
-            wm.a(false);
+          wm.a(false);
         }
         field_d = null;
     }
@@ -25,8 +25,6 @@ final class wm {
         byte[] stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -42,112 +40,71 @@ final class wm {
         int[] var14 = null;
         int[] var16 = null;
         int[] var18 = null;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var10Lifetime1;
         var11 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                this.field_h = -34;
-                break L1;
-              }
-            }
-            L2: {
-              if (this.field_a != null) {
-                var3_int = 14 + (int)((long)this.field_h * (long)param1.length / (long)this.field_b);
-                var16 = new int[var3_int];
-                var14 = var16;
-                var4 = var14;
-                var5 = 0;
-                var6 = 0;
-                var7 = 0;
-                L3: while (true) {
-                  if (param1.length <= var7) {
-                    param1 = new byte[var3_int];
-                    var12 = 0;
-                    var7 = var12;
-                    L4: while (true) {
-                      if ((var12 ^ -1) <= (var3_int ^ -1)) {
-                        break L2;
-                      } else {
-                        L5: {
-                          var8 = 32768 + var16[var12] >> 1456988656;
-                          if (-128 > var8) {
-                            param1[var12] = (byte)-128;
-                            break L5;
-                          } else {
-                            if (-128 > (var8 ^ -1)) {
-                              param1[var12] = (byte)127;
-                              break L5;
-                            } else {
-                              param1[var12] = (byte)var8;
-                              break L5;
-                            }
-                          }
-                        }
-                        var12++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var8 = param1[var7];
-                    var18 = this.field_a[var6];
-                    var10 = 0;
-                    L6: while (true) {
-                      if (-15 >= (var10 ^ -1)) {
-                        var6 = var6 + this.field_h;
-                        var10 = var6 / this.field_b;
-                        var6 = var6 - this.field_b * var10;
-                        var5 = var5 + var10;
-                        var7++;
-                        continue L3;
-                      } else {
-                        var4[var5 + var10] = var4[var5 + var10] + var8 * var18[var10];
-                        var10++;
-                        continue L6;
-                      }
-                    }
-                  }
-                }
-              } else {
-                break L2;
-              }
-            }
-            stackIn_20_0 = (byte[]) (param1);
-            break L0;
+          if (!param0) {
+            this.field_h = -34;
           }
+          if (this.field_a != null) {
+            var3_int = 14 + (int)((long)this.field_h * (long)param1.length / (long)this.field_b);
+            var16 = new int[var3_int];
+            var14 = var16;
+            var4 = var14;
+            var5 = 0;
+            var6 = 0;
+            for (var7 = 0; param1.length > var7; var7++) {
+              var8 = param1[var7];
+              var18 = this.field_a[var6];
+              for (var10 = 0; var10 < 14; var10++) {
+                var4[var5 + var10] = var4[var5 + var10] + var8 * var18[var10];
+              }
+              var6 = var6 + this.field_h;
+              var10Lifetime1 = var6 / this.field_b;
+              var6 = var6 - this.field_b * var10Lifetime1;
+              var5 = var5 + var10Lifetime1;
+            }
+            param1 = new byte[var3_int];
+            var12 = 0;
+            var7Lifetime1 = var12;
+            while (var12 < var3_int) {
+              var8Lifetime1 = 32768 + var16[var12] >> 16;
+              if (-128 > var8Lifetime1) {
+                param1[var12] = (byte)-128;
+              } else {
+                if (var8Lifetime1 > 127) {
+                  param1[var12] = (byte)127;
+                } else {
+                  param1[var12] = (byte)var8Lifetime1;
+                }
+              }
+              var12++;
+            }
+          }
+          stackIn_20_0 = (byte[]) (param1);
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var3 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var3);
-
-            stackIn_23_1 = new StringBuilder().append("wm.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_23_0 = var3;
+          stackIn_23_1 = new StringBuilder().append("wm.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
-        return stackIn_20_0;
     }
 
     final int b(int param0, byte param1) {
         if (this.field_a != null) {
-            param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_b);
+          param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_b);
         }
         if (param1 < 4) {
-            return -99;
+          return -99;
         }
         return param0;
     }
@@ -159,26 +116,13 @@ final class wm {
         RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var1_int = -1 + ke.field_X.length;
-            L1: while (true) {
-              if (var1_int < 0) {
-                L2: {
-                  if (!param0) {
-                    break L2;
-                  } else {
-                    wm.a(false);
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                ke.field_X[var1_int] = false;
-                var1_int--;
-                continue L1;
-              }
-            }
+          for (var1_int = -1 + ke.field_X.length; var1_int >= 0; var1_int--) {
+            ke.field_X[var1_int] = false;
           }
+          if (param0) {
+            wm.a(false);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -188,17 +132,17 @@ final class wm {
 
     final int a(int param0, byte param1) {
         if (null != this.field_a) {
-            param0 = 6 + (int)((long)param0 * (long)this.field_h / (long)this.field_b);
+          param0 = 6 + (int)((long)param0 * (long)this.field_h / (long)this.field_b);
         }
         if (param1 > -98) {
-            this.b(96, (byte) -119);
+          this.b(96, (byte) -119);
         }
         return param0;
     }
 
     wm(int param0, int param1) {
+        int var4 = 0;
         int var3;
-        int var4;
         int[] var5;
         double var6;
         int var8;
@@ -206,72 +150,40 @@ final class wm {
         double var10;
         double var12;
         double var14;
-        if (param0 != param1) {
-          var3 = sa.a(param1, param0, 0);
-          param0 = param0 / var3;
-          param1 = param1 / var3;
-          this.field_b = param0;
-          this.field_h = param1;
-          this.field_a = new int[param0][14];
-          var4 = 0;
-          L0: while (true) {
-            if (var4 >= param0) {
-              return;
-            } else {
-              L1: {
-                var5 = this.field_a[var4];
-                var6 = (double)var4 / (double)param0 + 6.0;
-                var8 = (int)Math.floor(-7.0 + var6 + 1.0);
-                if (-1 >= (var8 ^ -1)) {
-                  break L1;
-                } else {
-                  var8 = 0;
-                  break L1;
-                }
-              }
-              L2: {
-                var9 = (int)Math.ceil(7.0 + var6);
-                if (var9 <= 14) {
-                  break L2;
-                } else {
-                  var9 = 14;
-                  break L2;
-                }
-              }
-              var10 = (double)param1 / (double)param0;
-              L3: while (true) {
-                if (var9 <= var8) {
-                  var4++;
-                  continue L0;
-                } else {
-                  L4: {
-                    L5: {
-                      var12 = 3.141592653589793 * (-var6 + (double)var8);
-                      var14 = var10;
-                      if (-0.0001 > var12) {
-                        break L5;
-                      } else {
-                        if (0.0001 >= var12) {
-                          break L4;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    var14 = var14 * (Math.sin(var12) / var12);
-                    break L4;
-                  }
-                  var14 = var14 * (0.54 + Math.cos((-var6 + (double)var8) * 0.2243994752564138) * 0.46);
-                  var5[var8] = (int)Math.floor(0.5 + var14 * 65536.0);
-                  var8++;
-                  continue L3;
-                }
-              }
-            }
-          }
-        } else {
+        if (param0 == param1) {
           return;
         }
+        var3 = sa.a(param1, param0, 0);
+        param0 = param0 / var3;
+        param1 = param1 / var3;
+        this.field_b = param0;
+        this.field_h = param1;
+        this.field_a = new int[param0][14];
+        for (var4 = 0; var4 < param0; var4++) {
+          var5 = this.field_a[var4];
+          var6 = (double)var4 / (double)param0 + 6.0;
+          var8 = (int)Math.floor(-7.0 + var6 + 1.0);
+          if (var8 < 0) {
+            var8 = 0;
+          }
+          var9 = (int)Math.ceil(7.0 + var6);
+          if (var9 > 14) {
+            var9 = 14;
+          }
+          var10 = (double)param1 / (double)param0;
+          while (var9 > var8) {
+            var12 = 3.141592653589793 * (-var6 + (double)var8);
+            var14 = var10;
+            if (-0.0001 > var12 ||
+              0.0001 < var12) {
+              var14 = var14 * (Math.sin(var12) / var12);
+            }
+            var14 = var14 * (0.54 + Math.cos((-var6 + (double)var8) * 0.2243994752564138) * 0.46);
+            var5[var8] = (int)Math.floor(0.5 + var14 * 65536.0);
+            var8++;
+          }
+        }
+        return;
     }
 
     static {

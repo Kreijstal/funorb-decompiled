@@ -11,9 +11,9 @@ final class jl {
         field_d = null;
         field_b = null;
         if (param0 > -124) {
-            jl.a(27);
-            field_c = (String[][]) null;
-            return;
+          jl.a(27);
+          field_c = (String[][]) null;
+          return;
         }
         field_c = (String[][]) null;
     }

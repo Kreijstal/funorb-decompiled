@@ -17,13 +17,13 @@ final class od extends ah {
     final void f(int param0) {
         int var2 = 0;
         int var3 = stellarshard.field_B;
-        if (!(this.field_y == null)) {
-            for (var2 = 0; var2 < this.field_y.length; var2++) {
-                this.field_y[var2] = vf.b(this.field_y[var2], 32768);
-            }
+        if (this.field_y != null) {
+          for (var2 = 0; var2 < this.field_y.length; var2++) {
+            this.field_y[var2] = vf.b(this.field_y[var2], 32768);
+          }
         }
         if (param0 != 20865) {
-            od.d((byte) -65);
+          od.d((byte) -65);
         }
     }
 
@@ -35,7 +35,7 @@ final class od extends ah {
         int var6 = fj.field_k.get(1);
         int var7 = fj.field_k.get(11);
         if (param0 != 10) {
-            od.d((byte) 71);
+          od.d((byte) 71);
         }
         int var8 = fj.field_k.get(12);
         int var9 = fj.field_k.get(13);
@@ -43,53 +43,17 @@ final class od extends ah {
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_13_0 = 0;
-        if (!param1) {
-          L0: {
-            L1: {
-              L2: {
-                if (param0 < 48) {
-                  break L2;
-                } else {
-                  if (param0 <= 57) {
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              L3: {
-                if (param0 < 65) {
-                  break L3;
-                } else {
-                  if (param0 <= 90) {
-                    break L1;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (param0 < 97) {
-                  break L4;
-                } else {
-                  if (param0 > 122) {
-                    break L4;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              stackIn_13_0 = 0;
-              break L0;
-            }
-            stackIn_13_0 = 1;
-            break L0;
-          }
-          return stackIn_13_0 != 0;
-        } else {
+        boolean stackIn_13_0 = false;
+        if (param1) {
           return false;
         }
+        stackIn_13_0 = ((!(param0 < 48) &&
+          !(param0 > 57)) ||
+          (!(param0 < 65) &&
+          !(param0 > 90)) ||
+          (!(param0 < 97) &&
+          !(param0 > 122)));
+        return stackIn_13_0;
     }
 
     final void a(ka param0, int param1) {
@@ -97,59 +61,40 @@ final class od extends ah {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = stellarshard.field_B;
         try {
-          L0: {
-            L1: while (true) {
-              var3_int = param0.f(4);
-              if (-1 != (var3_int ^ -1)) {
-                this.a(param0, -11682, var3_int);
-                continue L1;
-              } else {
-                L2: {
-                  if (param1 == 745) {
-                    break L2;
-                  } else {
-                    field_s = (int[]) null;
-                    break L2;
-                  }
-                }
-                break L0;
-              }
+          while (true) {
+            var3_int = param0.f(4);
+            if (var3_int != 0) {
+              this.a(param0, -11682, var3_int);
+              continue;
             }
+            break;
           }
+          if (param1 != 745) {
+            field_s = (int[]) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("od.B(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("od.B(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void d(byte param0) {
         if (param0 != 11) {
-            return;
+          return;
         }
         field_w = null;
         field_v = null;
@@ -163,23 +108,22 @@ final class od extends ah {
         int var4 = stellarshard.field_B;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (!(this.field_u != null)) {
-            return "";
+        if (this.field_u == null) {
+          return "";
         }
         StringBuilder discarded$0 = var5.append(this.field_u[param0]);
         for (var3 = 1; var3 < this.field_u.length; var3++) {
-            discarded$1 = var2.append("...");
-            discarded$2 = var5.append(this.field_u[var3]);
+          discarded$1 = var2.append("...");
+          discarded$2 = var5.append(this.field_u[var3]);
         }
         return var2.toString();
     }
 
     private final void a(ka param0, int param1, int param2) {
         int[] array$0 = null;
+        int var8 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -187,107 +131,58 @@ final class od extends ah {
         int var5 = 0;
         int var6 = 0;
         li var7 = null;
-        int var8 = 0;
         int var9 = 0;
         ka var10 = null;
         var9 = stellarshard.field_B;
         try {
-          L0: {
-            L1: {
-              if (param2 != 1) {
-                if (2 != param2) {
-                  if (3 != param2) {
-                    if (-5 == (param2 ^ -1)) {
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    var4_int = param0.f(param1 + 11686);
-                    this.field_t = new int[var4_int];
-                    this.field_x = new int[var4_int][];
-                    var5 = 0;
-                    L2: while (true) {
-                      if (var5 >= var4_int) {
-                        break L1;
-                      } else {
-                        L3: {
-                          var6 = param0.c((byte) 54);
-                          var7 = ee.a(var6, (byte) 8);
-                          if (var7 != null) {
-                            this.field_t[var5] = var6;
-                            array$0 = new int[var7.field_c];
-                            this.field_x[var5] = array$0;
-                            var8 = 0;
-                            L4: while (true) {
-                              if (var8 >= var7.field_c) {
-                                break L3;
-                              } else {
-                                this.field_x[var5][var8] = param0.c((byte) 96);
-                                var8++;
-                                continue L4;
-                              }
-                            }
-                          } else {
-                            break L3;
-                          }
-                        }
-                        var5++;
-                        continue L2;
-                      }
-                    }
-                  }
-                } else {
-                  var4_int = param0.f(param1 ^ -11686);
-                  this.field_y = new int[var4_int];
-                  var5 = 0;
-                  L5: while (true) {
-                    if (var4_int <= var5) {
-                      break L1;
-                    } else {
-                      this.field_y[var5] = param0.c((byte) 107);
-                      var5++;
-                      continue L5;
+          if (param2 != 1) {
+            if (2 == param2) {
+              var4_int = param0.f(param1 ^ -11686);
+              this.field_y = new int[var4_int];
+              for (var5 = 0; var4_int > var5; var5++) {
+                this.field_y[var5] = param0.c((byte) 107);
+              }
+            } else {
+              if (3 == param2) {
+                var4_int = param0.f(param1 + 11686);
+                this.field_t = new int[var4_int];
+                this.field_x = new int[var4_int][];
+                for (var5 = 0; var5 < var4_int; var5++) {
+                  var6 = param0.c((byte) 54);
+                  var7 = ee.a(var6, (byte) 8);
+                  if (var7 != null) {
+                    this.field_t[var5] = var6;
+                    array$0 = new int[var7.field_c];
+                    this.field_x[var5] = array$0;
+                    for (var8 = 0; var8 < var7.field_c; var8++) {
+                      this.field_x[var5][var8] = param0.c((byte) 96);
                     }
                   }
                 }
               } else {
-                this.field_u = qj.a('<', param0.e((byte) 106), 10287);
-                break L1;
+                if (param2 == 4) {
+                }
               }
             }
-            L6: {
-              if (param1 == -11682) {
-                break L6;
-              } else {
-                var10 = (ka) null;
-                this.a((ka) null, 76, -96);
-                break L6;
-              }
-            }
-            break L0;
+          } else {
+            this.field_u = qj.a('<', param0.e((byte) 106), 10287);
           }
+          if (param1 != -11682) {
+            var10 = (ka) null;
+            this.a((ka) null, 76, -96);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var4 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var4);
-
-            stackIn_23_1 = new StringBuilder().append("od.D(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_23_0 = var4;
+          stackIn_23_1 = new StringBuilder().append("od.D(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -12,7 +12,7 @@ final class mp {
     public static void a(int param0) {
         field_f = null;
         if (param0 != -7909) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -23,8 +23,8 @@ final class mp {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            mp.a(104);
-            return lg.field_c.b(107);
+          mp.a(104);
+          return lg.field_c.b(107);
         }
         return lg.field_c.b(107);
     }

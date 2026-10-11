@@ -7,7 +7,7 @@ final class ce {
 
     public static void a(byte param0) {
         if (param0 != -55) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -17,23 +17,19 @@ final class ce {
     }
 
     final boolean a(int param0) {
-        if (param0 > 98) {
-          if (qi.field_a != this) {
-            if (p.field_t != this) {
-              if (this == w.field_cb) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 <= 98) {
           return true;
         }
+        if (qi.field_a == this) {
+          return true;
+        }
+        if (p.field_t == this) {
+          return true;
+        }
+        if (this != w.field_cb) {
+          return false;
+        }
+        return true;
     }
 
     static {

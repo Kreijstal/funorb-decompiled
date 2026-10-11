@@ -10,17 +10,17 @@ abstract class dj {
 
     final static void a(int param0, kl param1, kl param2, kl param3, boolean param4) {
         try {
-            we.field_c = ql.a("", false);
-            we.field_c.a(false, 104);
-            eg.a(param3, param0 + -2109, param1, param2);
-            bd.a(-126);
-            fi.field_y = ej.field_b;
-            if (param0 != 2202) {
-                field_a = (String) null;
-            }
-            wc.field_j = ej.field_b;
+          we.field_c = ql.a("", false);
+          we.field_c.a(false, 104);
+          eg.a(param3, param0 - 2109, param1, param2);
+          bd.a(-126);
+          fi.field_y = ej.field_b;
+          if (param0 != 2202) {
+            field_a = (String) null;
+          }
+          wc.field_j = ej.field_b;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "dj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ abstract class dj {
 
     public static void b(int param0) {
         if (param0 != 16) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;
@@ -37,222 +37,65 @@ abstract class dj {
     final static int a(boolean param0, int param1) {
         int var2;
         kl var3;
-        if (!param0) {
-          var2 = 0;
-          if (-1 >= (param1 ^ -1)) {
-            if (-65537 >= (param1 ^ -1)) {
-              L0: {
-                var2 += 16;
-                param1 = param1 >>> 16;
-                if (param1 >= 256) {
-                  var2 += 8;
-                  param1 = param1 >>> 8;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              L1: {
-                if (16 <= param1) {
-                  param1 = param1 >>> 4;
-                  var2 += 4;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if ((param1 ^ -1) > -5) {
-                  break L2;
-                } else {
-                  param1 = param1 >>> 2;
-                  var2 += 2;
-                  break L2;
-                }
-              }
-              L3: {
-                if (param1 < 1) {
-                  break L3;
-                } else {
-                  var2++;
-                  param1 = param1 >>> 1;
-                  break L3;
-                }
-              }
-              return param1 + var2;
-            } else {
-              L4: {
-                if (param1 >= 256) {
-                  var2 += 8;
-                  param1 = param1 >>> 8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (16 <= param1) {
-                  param1 = param1 >>> 4;
-                  var2 += 4;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if ((param1 ^ -1) > -5) {
-                  break L6;
-                } else {
-                  param1 = param1 >>> 2;
-                  var2 += 2;
-                  break L6;
-                }
-              }
-              L7: {
-                if (param1 < 1) {
-                  break L7;
-                } else {
-                  var2++;
-                  param1 = param1 >>> 1;
-                  break L7;
-                }
-              }
-              return param1 + var2;
-            }
-          } else {
-            L8: {
-              var2 += 16;
-              param1 = param1 >>> 16;
-              if (param1 >= 256) {
-                var2 += 8;
-                param1 = param1 >>> 8;
-                break L8;
-              } else {
-                break L8;
-              }
-            }
-            L9: {
-              if (16 <= param1) {
-                param1 = param1 >>> 4;
-                var2 += 4;
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            L10: {
-              if ((param1 ^ -1) > -5) {
-                break L10;
-              } else {
-                param1 = param1 >>> 2;
-                var2 += 2;
-                break L10;
-              }
-            }
-            L11: {
-              if (param1 < 1) {
-                break L11;
-              } else {
-                var2++;
-                param1 = param1 >>> 1;
-                break L11;
-              }
-            }
-            return param1 + var2;
-          }
-        } else {
+        int var2Lifetime1;
+        if (param0) {
           var3 = (kl) null;
           dj.a(-74, (kl) null, (kl) null, (kl) null, true);
           var2 = 0;
-          if (-1 < (param1 ^ -1)) {
-            L12: {
+          if (param1 < 0) {
+            var2 += 16;
+            param1 = param1 >>> 16;
+          } else {
+            if (param1 >= 65536) {
               var2 += 16;
               param1 = param1 >>> 16;
-              if (param1 >= 256) {
-                var2 += 8;
-                param1 = param1 >>> 8;
-                break L12;
-              } else {
-                break L12;
-              }
             }
-            L13: {
-              if (16 <= param1) {
-                param1 = param1 >>> 4;
-                var2 += 4;
-                break L13;
-              } else {
-                break L13;
-              }
-            }
-            L14: {
-              if ((param1 ^ -1) > -5) {
-                break L14;
-              } else {
-                param1 = param1 >>> 2;
-                var2 += 2;
-                break L14;
-              }
-            }
-            L15: {
-              if (param1 < 1) {
-                break L15;
-              } else {
-                var2++;
-                param1 = param1 >>> 1;
-                break L15;
-              }
-            }
-            return param1 + var2;
-          } else {
-            L16: {
-              if (-65537 < (param1 ^ -1)) {
-                break L16;
-              } else {
-                var2 += 16;
-                param1 = param1 >>> 16;
-                break L16;
-              }
-            }
-            L17: {
-              if (param1 >= 256) {
-                var2 += 8;
-                param1 = param1 >>> 8;
-                break L17;
-              } else {
-                break L17;
-              }
-            }
-            L18: {
-              if (16 <= param1) {
-                param1 = param1 >>> 4;
-                var2 += 4;
-                break L18;
-              } else {
-                break L18;
-              }
-            }
-            L19: {
-              if ((param1 ^ -1) > -5) {
-                break L19;
-              } else {
-                param1 = param1 >>> 2;
-                var2 += 2;
-                break L19;
-              }
-            }
-            L20: {
-              if (param1 < 1) {
-                break L20;
-              } else {
-                var2++;
-                param1 = param1 >>> 1;
-                break L20;
-              }
-            }
-            return param1 + var2;
+          }
+          if (param1 >= 256) {
+            var2 += 8;
+            param1 = param1 >>> 8;
+          }
+          if (16 <= param1) {
+            param1 = param1 >>> 4;
+            var2 += 4;
+          }
+          if (param1 >= 4) {
+            param1 = param1 >>> 2;
+            var2 += 2;
+          }
+          if (param1 >= 1) {
+            var2++;
+            param1 = param1 >>> 1;
+          }
+          return param1 + var2;
+        }
+        var2Lifetime1 = 0;
+        if (param1 < 0) {
+          var2Lifetime1 += 16;
+          param1 = param1 >>> 16;
+        } else {
+          if (param1 >= 65536) {
+            var2Lifetime1 += 16;
+            param1 = param1 >>> 16;
           }
         }
+        if (param1 >= 256) {
+          var2Lifetime1 += 8;
+          param1 = param1 >>> 8;
+        }
+        if (16 <= param1) {
+          param1 = param1 >>> 4;
+          var2Lifetime1 += 4;
+        }
+        if (param1 >= 4) {
+          param1 = param1 >>> 2;
+          var2Lifetime1 += 2;
+        }
+        if (param1 >= 1) {
+          var2Lifetime1++;
+          param1 = param1 >>> 1;
+        }
+        return param1 + var2Lifetime1;
     }
 
     abstract byte[] a(int param0);

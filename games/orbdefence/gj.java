@@ -15,46 +15,43 @@ final class gj extends ca {
     int[][] field_l;
 
     public static void c(boolean param0) {
-        ki var2;
         field_g = null;
         field_j = null;
-        if (param0) {
-          var2 = (ki) null;
-          gj.a((ki) null, (byte) -123, (ki) null, true, (ki) null);
-          field_f = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           return;
         }
+        ki var2 = (ki) null;
+        gj.a((ki) null, (byte) -123, (ki) null, true, (ki) null);
+        field_f = null;
     }
 
     final static boolean c(int param0) {
         if (param0 != 1024) {
-            return false;
+          return false;
         }
         return null != od.field_f ? true : false;
     }
 
     final static void a(ki param0, byte param1, ki param2, boolean param3, ki param4) {
         try {
-            bd.field_u = hg.a("", (byte) 113);
-            bd.field_u.a(false, (byte) -114);
-            int var5_int = -57 / ((-43 - param1) / 60);
-            dj.a(param2, (byte) 122, param4, param0);
-            sd.a(125);
-            tg.field_c = tl.field_h;
-            qc.field_g = tl.field_h;
+          bd.field_u = hg.a("", (byte) 113);
+          bd.field_u.a(false, (byte) -114);
+          int var5_int = -57 / ((-43 - param1) / 60);
+          dj.a(param2, (byte) 122, param4, param0);
+          sd.a(125);
+          tg.field_c = tl.field_h;
+          qc.field_g = tl.field_h;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "gj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "gj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, lj param1, boolean param2, int param3, java.awt.Component param4, be param5) {
         try {
-            fg.a(param0, param3, param0, param4, param5, true, param1, param2);
+          fg.a(param0, param3, param0, param4, param5, true, param1, param2);
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

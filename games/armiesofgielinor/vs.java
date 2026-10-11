@@ -15,18 +15,18 @@ final class vs {
 
     final static void a(int param0, mq param1) {
         if (param1 == null) {
-            return;
+          return;
         }
         try {
-            qd.field_I = param1;
-            as.field_E.field_fb.b(75);
-            as.field_E.a(qd.field_I, 105);
-            if (param0 != 256) {
-                field_j = true;
-            }
-            iu.field_h = true;
+          qd.field_I = param1;
+          as.field_E.field_fb.b(75);
+          as.field_E.a(qd.field_I, 105);
+          if (param0 != 256) {
+            field_j = true;
+          }
+          iu.field_h = true;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "vs.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,9 +34,7 @@ final class vs {
         field_b = null;
         field_d = null;
         field_e = null;
-        if (param0 >= -50) {
-          return;
-        } else {
+        if (param0 < -50) {
           field_g = null;
           field_h = null;
           field_c = null;

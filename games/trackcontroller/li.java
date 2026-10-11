@@ -10,11 +10,11 @@ final class li extends fc {
 
     final static String d(int param0) {
         if (ue.field_a == null) {
-            return "";
+          return "";
         }
         if (param0 != -579139480) {
-            field_l = (String) null;
-            return ue.field_a;
+          field_l = (String) null;
+          return ue.field_a;
         }
         return ue.field_a;
     }
@@ -26,12 +26,12 @@ final class li extends fc {
 
     li(bh param0, fc param1) {
         try {
-            this.field_j = param0;
-            this.field_m = param0.e();
-            this.field_k = param1;
-            this.field_j.g(qd.field_d * this.field_m + 128 >> -579139480);
+          this.field_j = param0;
+          this.field_m = param0.e();
+          this.field_k = param1;
+          this.field_j.g(qd.field_d * this.field_m + 128 >> 8);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

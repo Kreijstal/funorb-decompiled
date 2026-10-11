@@ -13,7 +13,7 @@ final class wa extends lw {
         field_m = null;
         field_n = null;
         if (param0 >= -54) {
-            wa.e((byte) -49);
+          wa.e((byte) -49);
         }
     }
 
@@ -25,97 +25,56 @@ final class wa extends lw {
         sba stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -21231) {
-                break L1;
-              } else {
-                var3 = (byte[]) null;
-                wa.a(-91, (byte[]) null);
-                break L1;
-              }
-            }
-            if (param1 != null) {
-              var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-              al.b(-18073);
-              stackIn_6_0 = (sba) (var2);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -21231) {
+            var3 = (byte[]) null;
+            wa.a(-91, (byte[]) null);
           }
+          if (param1 == null) {
+            stackIn_4_0 = null;
+            return (sba) (stackIn_4_0);
+          }
+          var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
+          al.b(-18073);
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2_ref);
-
-            stackIn_9_1 = new StringBuilder().append("wa.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("wa.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (sba) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     final void a(byte param0) {
         if (param0 <= 103) {
-            wa.e((byte) -22);
+          wa.e((byte) -22);
         }
     }
 
     final void a(int param0, byte param1) {
-        if ((param0 ^ -1) == -35) {
-          this.b(1);
-          if (!this.c((byte) 95)) {
-            L0: {
-              if (param1 == 73) {
-                break L0;
-              } else {
-                field_o = (String) null;
-                break L0;
-              }
-            }
-            return;
-          } else {
-            this.b((byte) 112);
-            fla.b(23621);
-            return;
-          }
-        } else {
-          L1: {
-            if (param1 == 73) {
-              break L1;
-            } else {
-              field_o = (String) null;
-              break L1;
-            }
+        if (param0 != 34) {
+          if (param1 != 73) {
+            field_o = (String) null;
           }
           return;
+        }
+        this.b(1);
+        if (this.c((byte) 95)) {
+          this.b((byte) 112);
+          fla.b(23621);
+          return;
+        }
+        if (param1 != 73) {
+          field_o = (String) null;
         }
     }
 
@@ -128,28 +87,28 @@ final class wa extends lw {
         kr var1 = null;
         int var2 = BachelorFridge.field_y;
         try {
-            if (param0 > -85) {
-                wa.d((byte) -63);
-            }
-            if (qg.field_b.field_z != null) {
-                var1 = (kr) ((Object) qg.field_b.field_z.b((byte) 90));
-                while (var1 != null) {
-                    if (var1.field_R == 1) {
-                        qm.a(7, 7758);
-                        var1.field_yb.c((byte) -80);
-                        if (-1 == (var1.field_yb.field_g ^ -1)) {
-                            var1.field_yb.a(false);
-                            var1.a(false);
-                        }
-                        gu.field_d = gu.field_d - 1;
-                    }
-                    var1 = (kr) ((Object) qg.field_b.field_z.c(0));
+          if (param0 > -85) {
+            wa.d((byte) -63);
+          }
+          if (qg.field_b.field_z != null) {
+            var1 = (kr) (qg.field_b.field_z.b((byte) 90));
+            while (var1 != null) {
+              if (var1.field_R == 1) {
+                qm.a(7, 7758);
+                var1.field_yb.c((byte) -80);
+                if (var1.field_yb.field_g == 0) {
+                  var1.field_yb.a(false);
+                  var1.a(false);
                 }
+                gu.field_d = gu.field_d - 1;
+              }
+              var1 = (kr) (qg.field_b.field_z.c(0));
             }
-            qf.e(20434);
-            iaa.a(-119);
+          }
+          qf.e(20434);
+          iaa.a(-119);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "wa.F(" + param0 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "wa.F(" + param0 + ')');
         }
     }
 

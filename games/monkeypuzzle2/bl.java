@@ -17,7 +17,7 @@ final class bl extends ug {
     public static void a(int param0) {
         field_k = (byte[][]) null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_o = null;
         field_g = null;
@@ -25,12 +25,12 @@ final class bl extends ug {
 
     final static void a(int param0, lg param1) {
         try {
-            if (param0 != 50) {
-                bl.a(87);
-            }
-            ve.a(82, 0, 0, param1);
+          if (param0 != 50) {
+            bl.a(87);
+          }
+          ve.a(82, 0, 0, param1);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "bl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

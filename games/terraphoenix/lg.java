@@ -19,7 +19,7 @@ final class lg {
     public static void a(int param0) {
         field_j = null;
         if (param0 != -2) {
-            field_h = 12;
+          field_h = 12;
         }
     }
 
@@ -38,40 +38,31 @@ final class lg {
         this.field_k = bd.field_f[param0];
         this.field_a = jg.field_jb[param0];
         var2 = param0;
-        if (-1 == (var2 ^ -1)) {
+        if (var2 == 0) {
           this.field_l = true;
           this.field_i = ah.field_C;
           this.field_g = 5;
-          return;
         } else {
-          if ((var2 ^ -1) == -2) {
+          if (var2 == 1) {
             this.field_l = true;
             this.field_g = 50;
             this.field_e = true;
             this.field_i = qe.field_j;
             this.field_f = 15;
-            return;
           } else {
-            if ((var2 ^ -1) == -3) {
+            if (var2 == 2) {
               this.field_f = 20;
               this.field_i = th.field_e;
               this.field_g = 100;
               this.field_e = true;
-              return;
             } else {
-              L0: {
-                if (var2 != 3) {
-                  break L0;
-                } else {
-                  this.field_i = uj.field_e;
-                  this.field_g = 100;
-                  this.field_e = true;
-                  this.field_d = 50;
-                  this.field_f = 25;
-                  break L0;
-                }
+              if (var2 == 3) {
+                this.field_i = uj.field_e;
+                this.field_g = 100;
+                this.field_e = true;
+                this.field_d = 50;
+                this.field_f = 25;
               }
-              return;
             }
           }
         }

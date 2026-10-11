@@ -13,68 +13,36 @@ final class k extends lc implements rc {
 
     final boolean a(lk param0, char param1, int param2, int param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (super.a(param0, param1, param2, param3)) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param2 != 98) {
-                if (-100 == (param2 ^ -1)) {
-                  stackIn_10_0 = this.a(param0, 19755);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_6_0 = this.a((byte) -71, param0);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (super.a(param0, param1, param2, param3)) {
+            return true;
           }
+          if (param2 == 98) {
+            stackIn_6_0 = this.a((byte) -71, param0);
+            return stackIn_6_0;
+          }
+          if (param2 != 99) {
+            return false;
+          }
+          stackIn_10_0 = this.a(param0, 19755);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var5);
-
-            stackIn_13_1 = new StringBuilder().append("k.E(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L1;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L1;
-            }
-          }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("k.E(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return stackIn_10_0;
+            stackIn_14_2 = "{...}";
           }
+          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -83,55 +51,37 @@ final class k extends lc implements rc {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var7 = Bounce.field_N;
         try {
-          L0: {
-            if (param0 >= 6) {
-              if (this.field_A == param4) {
-                hc.a(0);
-                return;
-              } else {
-                if (this.field_z != param4) {
-                  if (this.field_F == param4) {
-                    u.a((byte) -10);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  ii.n(8);
-                  return;
-                }
-              }
-            } else {
-              break L0;
-            }
+          if (param0 < 6) {
+            return;
           }
+          if (this.field_A == param4) {
+            hc.a(0);
+            return;
+          }
+          if (this.field_z == param4) {
+            ii.n(8);
+            return;
+          }
+          if (this.field_F != param4) {
+            return;
+          }
+          u.a((byte) -10);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var6);
-
-            stackIn_13_1 = new StringBuilder().append("k.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L1;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L1;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("k.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw ii.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw ii.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -146,10 +96,10 @@ final class k extends lc implements rc {
         this.field_F.field_j = (fc) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 - var2 >> 1780193409;
-        this.field_A.b(30, 80, var4, -var3 + this.field_k >> -731097023, this.field_m - (48 + var2));
-        this.field_F.b(30, 80, var4, var4 + (this.field_k + -var3 >> -531429759) - -var2, -var2 + -48 + this.field_m);
-        this.field_z.b(30, 80, var3, this.field_k - var3 >> 388466433, -(2 * var2) + (-78 + this.field_m));
+        int var4 = var3 - var2 >> 1;
+        this.field_A.b(30, 80, var4, -var3 + this.field_k >> 1, this.field_m - (48 + var2));
+        this.field_F.b(30, 80, var4, var4 + (this.field_k - var3 >> 1) + var2, -var2 - 48 + this.field_m);
+        this.field_z.b(30, 80, var3, this.field_k - var3 >> 1, -(2 * var2) + (-78 + this.field_m));
         this.field_A.field_n = (sk) (this);
         this.field_z.field_n = (sk) (this);
         this.field_z.field_q = ge.field_a;
@@ -161,14 +111,10 @@ final class k extends lc implements rc {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var5 = param3 + this.field_r;
-        var6 = param1 + this.field_i;
-        if (param2 < 33) {
-          return;
-        } else {
-          sg.field_a.a(r.field_d, 20 + var5, var6 + 20, this.field_k + -40, this.field_m - 50, 16777215, -1, 1, 0, sg.field_a.field_s);
+        int var5 = param3 + this.field_r;
+        int var6 = param1 + this.field_i;
+        if (param2 >= 33) {
+          sg.field_a.a(r.field_d, 20 + var5, var6 + 20, this.field_k - 40, this.field_m - 50, 16777215, -1, 1, 0, sg.field_a.field_s);
           super.a(param0, param1, 50, param3);
           return;
         }
@@ -176,10 +122,10 @@ final class k extends lc implements rc {
 
     public static void e(byte param0) {
         if (param0 != -81) {
-            k.e((byte) 88);
-            field_B = null;
-            field_E = null;
-            return;
+          k.e((byte) 88);
+          field_B = null;
+          field_E = null;
+          return;
         }
         field_B = null;
         field_E = null;

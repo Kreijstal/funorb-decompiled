@@ -8,7 +8,7 @@ final class eua {
     public static void a(int param0) {
         field_a = null;
         if (param0 > -123) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

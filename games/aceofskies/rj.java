@@ -8,18 +8,16 @@ final class rj {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          rj.a(true);
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0) {
           field_c = null;
           field_a = null;
           field_b = null;
           return;
         }
+        rj.a(true);
+        field_c = null;
+        field_a = null;
+        field_b = null;
     }
 
     static {

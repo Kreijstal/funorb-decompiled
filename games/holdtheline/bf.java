@@ -12,7 +12,7 @@ final class bf implements Runnable {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != -48) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -21,6 +21,7 @@ final class bf implements Runnable {
         int var1_int = 0;
         lo var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -28,45 +29,27 @@ final class bf implements Runnable {
         var4 = HoldTheLine.field_D;
         this.field_e = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_f) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (-3 >= (var1_int ^ -1)) {
-                        qe.a(10L, (byte) 45);
-                        vn.a(0, (Object) null, this.field_c);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_d[var1_int];
-                          if (var2 == null) {
-                            break L4;
-                          } else {
-                            var2.d();
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_f) {
+              for (var1_int = 0; var1_int < 2; var1_int++) {
+                var2 = this.field_d[var1_int];
+                if (var2 != null) {
+                  var2.d();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var5 = (String) null;
-              bl.a((Throwable) ((Object) var1), (byte) 57, (String) null);
-              this.field_e = false;
-              return;
+              qe.a(10L, (byte) 45);
+              vn.a(0, (Object) null, this.field_c);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var5 = (String) null;
+            bl.a((Throwable) ((Object) var1), (byte) 57, (String) null);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

@@ -17,9 +17,9 @@ final class nk extends pi {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_x = -23;
-            field_v = (String[][]) null;
-            return;
+          field_x = -23;
+          field_v = (String[][]) null;
+          return;
         }
         field_v = (String[][]) null;
     }
@@ -30,14 +30,14 @@ final class nk extends pi {
         this.field_o = param6;
         this.field_r = param1;
         if (param3 != 0) {
-            return;
+          return;
         }
         try {
-            this.field_y = param7;
-            this.field_t = param2;
-            this.field_n = param4;
+          this.field_y = param7;
+          this.field_t = param2;
+          this.field_n = param4;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
         }
     }
 

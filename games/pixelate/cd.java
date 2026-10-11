@@ -15,16 +15,14 @@ final class cd {
         field_d = null;
         field_f = null;
         field_a = null;
-        if (param0) {
-          field_c = (io) null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (!param0) {
           field_e = null;
           field_c = null;
           return;
         }
+        field_c = (io) null;
+        field_e = null;
+        field_c = null;
     }
 
     static {

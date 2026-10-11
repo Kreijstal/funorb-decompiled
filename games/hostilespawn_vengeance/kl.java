@@ -7,36 +7,31 @@ final class kl {
     static bd[][] field_b;
 
     final static boolean b(int param0) {
-        if (param0 == 50) {
-          if (ag.field_t != null) {
-            if (ci.field_d != rc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 50) {
           kl.b(-84);
-          if (ag.field_t != null) {
-            if (ci.field_d != rc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (ag.field_t == null) {
             return false;
           }
+          if (ci.field_d == rc.field_a) {
+            return true;
+          }
+          return false;
         }
+        if (ag.field_t == null) {
+          return false;
+        }
+        if (ci.field_d == rc.field_a) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         if (param0 < 90) {
-            kl.a(92);
-            field_c = null;
-            field_b = (bd[][]) null;
-            return;
+          kl.a(92);
+          field_c = null;
+          field_b = (bd[][]) null;
+          return;
         }
         field_c = null;
         field_b = (bd[][]) null;

@@ -15,9 +15,9 @@ final class cg {
         field_f = null;
         field_e = null;
         if (param0 < 55) {
-            field_e = (String) null;
-            field_b = null;
-            return;
+          field_e = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

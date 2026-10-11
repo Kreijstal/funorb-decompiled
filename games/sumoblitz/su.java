@@ -12,161 +12,87 @@ final class su extends RuntimeException {
         qj stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         StringBuilder stackIn_25_1 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_26_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;
         try {
-          L0: {
-            if (param2 != null) {
-              if (0 != param2.length) {
-                L1: {
-                  var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
-                  jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
-                  jaggl.OpenGL.glCompileShaderARB(var4_long);
-                  jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, dh.field_H, 0);
-                  if (-1 != (dh.field_H[0] ^ -1)) {
-                    break L1;
-                  } else {
-                    L2: {
-                      if (-1 == (dh.field_H[0] ^ -1)) {
-                        System.out.println("Shader compile failed:");
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, dh.field_H, 1);
-                      if (dh.field_H[1] > 1) {
-                        var10 = new byte[dh.field_H[1]];
-                        jaggl.OpenGL.glGetInfoLogARB(var4_long, dh.field_H[1], dh.field_H, 0, var10, 0);
-                        System.out.println(new String(var10));
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    if (dh.field_H[0] == 0) {
-                      jaggl.OpenGL.glDeleteObjectARB(var4_long);
-                      stackIn_15_0 = null;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                L4: {
-                  if (param3 <= -113) {
-                    break L4;
-                  } else {
-                    su.b((byte) -11);
-                    break L4;
-                  }
-                }
-                stackIn_19_0 = new qj(param1, var4_long, param0);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return null;
-              }
-            } else {
-              return null;
+          if (param2 == null) {
+            return null;
+          }
+          if (0 == param2.length) {
+            return null;
+          }
+          var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param0);
+          jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
+          jaggl.OpenGL.glCompileShaderARB(var4_long);
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, dh.field_H, 0);
+          if (dh.field_H[0] == 0) {
+            if (dh.field_H[0] == 0) {
+              System.out.println("Shader compile failed:");
+            }
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, dh.field_H, 1);
+            if (dh.field_H[1] > 1) {
+              var10 = new byte[dh.field_H[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, dh.field_H[1], dh.field_H, 0, var10, 0);
+              System.out.println(new String(var10));
+            }
+            if (dh.field_H[0] == 0) {
+              jaggl.OpenGL.glDeleteObjectARB(var4_long);
+              stackIn_15_0 = null;
+              return (qj) (stackIn_15_0);
             }
           }
+          if (param3 > -113) {
+            su.b((byte) -11);
+          }
+          stackIn_19_0 = new qj(param1, var4_long, param0);
+          return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var4);
-
-            stackIn_22_1 = new StringBuilder().append("su.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L5;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L5;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_22_0 = var4;
+          stackIn_22_1 = new StringBuilder().append("su.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          L6: {
-
-
-            stackIn_25_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(',');
-
-            if (param2 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_26_1 = (StringBuilder) ((Object) stackIn_25_1);
-              stackIn_26_2 = "{...}";
-              break L6;
-            }
+          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          if (param2 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
           }
-          throw qo.a((Throwable) ((Object) stackIn_23_0), stackIn_26_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (qj) ((Object) stackIn_15_0);
-        } else {
-          return stackIn_19_0;
+          throw qo.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static boolean a(int param0) {
-        byte[] var2;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 0) {
-          if (!nt.field_r) {
-            if (vs.b((byte) 9)) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          var2 = (byte[]) null;
+        if (param0 != 0) {
+          byte[] var2 = (byte[]) null;
           su.a(6, (on) null, (byte[]) null, -63);
-          if (nt.field_r) {
-            return true;
-          } else {
-            L0: {
-              if (!vs.b((byte) 9)) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (!nt.field_r) {
+            return vs.b((byte) 9) ? true : false;
           }
+          return true;
         }
+        if (nt.field_r) {
+          return true;
+        }
+        if (!vs.b((byte) 9)) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(byte param0) {
-        rl var1 = (rl) ((Object) te.field_g.b((byte) -124));
-        if (!(var1 != null)) {
-            throw new IllegalStateException();
+        rl var1 = (rl) (te.field_g.b((byte) -124));
+        if (var1 == null) {
+          throw new IllegalStateException();
         }
         lk.a(var1.field_v, var1.field_t, var1.field_m);
         lk.d(var1.field_s, var1.field_r, var1.field_u, var1.field_p);
@@ -177,7 +103,7 @@ final class su extends RuntimeException {
 
     public static void b(byte param0) {
         if (param0 != -18) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;

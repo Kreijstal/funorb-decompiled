@@ -10,49 +10,26 @@ final class ih extends lw {
         df stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 290) {
-              stackIn_4_0 = new df(param0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (cj) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == 290) {
+            stackIn_4_0 = new df(param0);
+            return (cj) ((Object) stackIn_4_0);
           }
+          stackIn_2_0 = (cj) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("ih.F(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("ih.F(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return (cj) ((Object) stackIn_4_0);
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -62,57 +39,50 @@ final class ih extends lw {
     }
 
     final static void e(int param0) {
-        if (param0 != jv.field_j) {
-          if (uga.e(37)) {
-            wk.field_b = true;
-            return;
-          } else {
-            gma.a(true);
-            jv.field_j = 11;
-            wk.field_b = true;
-            return;
-          }
-        } else {
+        if (param0 == jv.field_j) {
           gma.a(true);
           jv.field_j = 11;
           wk.field_b = true;
           return;
         }
+        if (!uga.e(37)) {
+          gma.a(true);
+          jv.field_j = 11;
+          wk.field_b = true;
+          return;
+        }
+        wk.field_b = true;
     }
 
     final void a(int param0, byte param1) {
-        lu var4;
-        if (34 == param0) {
-          this.b((byte) 112);
+        lu var4 = null;
+        lu var4Lifetime1;
+        lu var4Lifetime2;
+        if (34 != param0) {
+          if (param0 != 29) {
+            if (param1 != 73) {
+              var4 = (lu) null;
+              ih.a((lu) null, 104);
+              return;
+            }
+            return;
+          }
+          fla.b(param1 + 23548);
+          dj.field_c.field_h.a(true, 0);
+          dj.field_c.e(-60);
           if (param1 != 73) {
-            var4 = (lu) null;
+            var4Lifetime2 = (lu) null;
             ih.a((lu) null, 104);
             return;
-          } else {
-            return;
           }
-        } else {
-          if (-30 == (param0 ^ -1)) {
-            fla.b(param1 + 23548);
-            dj.field_c.field_h.a(true, 0);
-            dj.field_c.e(-60);
-            if (param1 == 73) {
-              return;
-            } else {
-              var4 = (lu) null;
-              ih.a((lu) null, 104);
-              return;
-            }
-          } else {
-            if (param1 == 73) {
-              return;
-            } else {
-              var4 = (lu) null;
-              ih.a((lu) null, 104);
-              return;
-            }
-          }
+          return;
         }
+        this.b((byte) 112);
+        if (param1 == 73) {
+          return;
+        }
+        var4Lifetime1 = (lu) null;
+        ih.a((lu) null, 104);
     }
 
     ih() {
@@ -130,13 +100,13 @@ final class ih extends lw {
 
     final static void d(int param0) {
         if (param0 != 15366) {
-            field_l = 45;
+          field_l = 45;
         }
     }
 
     final void a(byte param0) {
         if (param0 <= 103) {
-            field_l = 125;
+          field_l = 125;
         }
     }
 

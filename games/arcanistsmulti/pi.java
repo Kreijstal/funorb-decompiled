@@ -11,7 +11,7 @@ final class pi {
     final static void a(boolean param0) {
         la.field_b = new vn();
         if (!param0) {
-            pi.a((byte) 83);
+          pi.a((byte) 83);
         }
     }
 
@@ -19,9 +19,9 @@ final class pi {
         field_e = null;
         field_d = null;
         if (param0 > -19) {
-            pi.a(true);
-            field_b = null;
-            return;
+          pi.a(true);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

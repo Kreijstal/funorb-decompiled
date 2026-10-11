@@ -16,24 +16,24 @@ final class nk {
 
     final static void a(dj param0, int param1, dj param2, dj param3, boolean param4) {
         try {
-            gl.field_E = co.a("", param1 + -118);
-            gl.field_E.a(false, -54);
-            ll.a(param2, param3, param0, -19041);
-            if (param1 != -1) {
-                dj var6 = (dj) null;
-                nk.a((dj) null, 101, (dj) null, (dj) null, false);
-            }
-            mm.c((byte) -70);
-            fk.field_F = ic.field_S;
-            tk.field_a = ic.field_S;
+          gl.field_E = co.a("", param1 - 118);
+          gl.field_E.a(false, -54);
+          ll.a(param2, param3, param0, -19041);
+          if (param1 != -1) {
+            dj var6 = (dj) null;
+            nk.a((dj) null, 101, (dj) null, (dj) null, false);
+          }
+          mm.c((byte) -70);
+          fk.field_F = ic.field_S;
+          tk.field_a = ic.field_S;
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "nk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != -11486) {
-            return;
+          return;
         }
         field_f = null;
         field_a = null;
@@ -49,80 +49,45 @@ final class nk {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            var2_int = 0;
-            if (param0 == 8) {
-              L1: while (true) {
-                if (8 <= var2_int) {
-                  stackIn_10_0 = 0;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  if (param1[var2_int] == 0) {
-                    var2_int++;
-                    continue L1;
-                  } else {
-                    stackIn_7_0 = 1;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_int = 0;
+          if (param0 != 8) {
+            return false;
           }
+          while (true) {
+            if (8 <= var2_int) {
+              return false;
+            }
+            if (param1[var2_int] == 0) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("nk.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L2;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L2;
-            }
-          }
-          throw sh.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("nk.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return stackIn_10_0 != 0;
+            stackIn_14_2 = "{...}";
           }
+          throw sh.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static int a(byte param0) {
         if (param0 <= 50) {
-            field_g = 56;
-            return (int)(1000000000L / ea.field_a);
+          field_g = 56;
+          return (int)(1000000000L / ea.field_a);
         }
         return (int)(1000000000L / ea.field_a);
     }

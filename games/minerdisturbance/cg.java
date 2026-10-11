@@ -30,7 +30,7 @@ final class cg extends pi {
     ng field_z;
 
     final void a(byte param0) {
-        int var2 = 106 / ((param0 - -1) / 54);
+        int var2 = 106 / ((param0 + 1) / 54);
         this.field_I = null;
         this.field_z = null;
         this.field_w = null;
@@ -41,7 +41,7 @@ final class cg extends pi {
         field_r = null;
         field_K = (String[][]) null;
         if (param0 != 0) {
-            cg.a(-85);
+          cg.a(-85);
         }
     }
 

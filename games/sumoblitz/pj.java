@@ -11,31 +11,28 @@ class pj extends ms {
     long field_l;
 
     final void c(int param0) {
-        if (this.field_o != null) {
-          if (param0 != -5106) {
-            field_q = (int[]) null;
-            this.field_o.field_m = this.field_m;
-            this.field_m.field_o = this.field_o;
-            this.field_m = null;
-            this.field_o = null;
-            return;
-          } else {
-            this.field_o.field_m = this.field_m;
-            this.field_m.field_o = this.field_o;
-            this.field_m = null;
-            this.field_o = null;
-            return;
-          }
-        } else {
+        if (this.field_o == null) {
           return;
         }
+        if (param0 == -5106) {
+          this.field_o.field_m = this.field_m;
+          this.field_m.field_o = this.field_o;
+          this.field_m = null;
+          this.field_o = null;
+          return;
+        }
+        field_q = (int[]) null;
+        this.field_o.field_m = this.field_m;
+        this.field_m.field_o = this.field_o;
+        this.field_m = null;
+        this.field_o = null;
     }
 
     public static void d(int param0) {
         field_n = null;
         field_k = null;
         if (param0 <= 27) {
-            return;
+          return;
         }
         field_q = null;
     }

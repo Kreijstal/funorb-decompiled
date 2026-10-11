@@ -9,22 +9,22 @@ final class cd {
     public static void a(int param0) {
         field_b = null;
         if (param0 <= 63) {
-            cd.b(44);
-            field_c = null;
-            return;
+          cd.b(44);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final static boolean b(int param0) {
         if (param0 != -27440) {
-            return true;
+          return true;
         }
         if (null == lo.field_k) {
-            return false;
+          return false;
         }
         if (!rg.field_d.a((byte) 125)) {
-            return false;
+          return false;
         }
         return true;
     }

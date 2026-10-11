@@ -8,25 +8,23 @@ abstract class wj {
     static sf[] field_b;
 
     final int b(int param0, long param1) {
-        long var4;
-        if (param0 == 0) {
-          var4 = this.b(-31887);
-          if ((var4 ^ -1L) < -1L) {
-            vh.a(var4, param0 + 87);
-            return this.a(-23124, param1);
-          } else {
-            return this.a(-23124, param1);
-          }
-        } else {
+        long var4 = 0L;
+        long var4Lifetime1;
+        if (param0 != 0) {
           field_b = (sf[]) null;
           var4 = this.b(-31887);
-          if ((var4 ^ -1L) >= -1L) {
-            return this.a(-23124, param1);
-          } else {
+          if (var4 > 0L) {
             vh.a(var4, param0 + 87);
             return this.a(-23124, param1);
           }
+          return this.a(-23124, param1);
         }
+        var4Lifetime1 = this.b(-31887);
+        if (var4Lifetime1 <= 0L) {
+          return this.a(-23124, param1);
+        }
+        vh.a(var4Lifetime1, param0 + 87);
+        return this.a(-23124, param1);
     }
 
     public static void a(int param0) {
@@ -34,7 +32,7 @@ abstract class wj {
         field_a = null;
         field_c = (String[][]) null;
         if (param0 >= -13) {
-            wj.a(52);
+          wj.a(52);
         }
     }
 

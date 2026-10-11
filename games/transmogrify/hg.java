@@ -12,7 +12,7 @@ final class hg {
         ta.field_f = new wl();
         l.field_d.b(96, ta.field_f);
         if (param0 != 0) {
-            hg.b(3);
+          hg.b(3);
         }
     }
 
@@ -29,15 +29,15 @@ final class hg {
 
     final static int b(int param0) {
         if (param0 != 0) {
-            return 124;
+          return 124;
         }
         return pc.field_b;
     }
 
     final String a(boolean param0) {
         if (param0) {
-            hg.a(60);
-            return this.field_e;
+          hg.a(60);
+          return this.field_e;
         }
         return this.field_e;
     }
@@ -49,23 +49,16 @@ final class hg {
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            var3 = (sj) ((Object) ch.field_e.a((byte) -95));
-            L1: while (true) {
-              if (var3 == null) {
-                if (param0 > 40) {
-                  break L0;
-                } else {
-                  field_a = (ci) null;
-                  return;
-                }
-              } else {
-                var3.a((byte) 75);
-                var3 = (sj) ((Object) ch.field_e.a(true));
-                continue L1;
-              }
-            }
+          var3 = (sj) (ch.field_e.a((byte) -95));
+          while (var3 != null) {
+            var3.a((byte) 75);
+            var3 = (sj) (ch.field_e.a(true));
           }
+          if (param0 > 40) {
+            return;
+          }
+          field_a = (ci) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -75,74 +68,40 @@ final class hg {
 
     hg(String param0, boolean param1) {
         RuntimeException var3 = null;
-        Object stackIn_5_0 = null;
-        Object stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
+        boolean stackIn_6_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_e = param0;
-              if (this.field_e != null) {
-                break L1;
-              } else {
-                this.field_e = "";
-                break L1;
-              }
-            }
-            L2: {
-              stackIn_5_0 = this;
-
-              if (!param1) {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 0;
-                break L2;
-              } else {
-                stackIn_6_0 = this;
-                stackIn_6_1 = 1;
-                break L2;
-              }
-            }
-            ((hg) (this)).field_c = stackIn_6_1 != 0;
-            if (0 != this.field_e.length()) {
-              break L0;
-            } else {
-              this.field_c = false;
-              return;
-            }
+          this.field_e = param0;
+          if (this.field_e == null) {
+            this.field_e = "";
           }
+          stackIn_6_1 = (param1);
+          this.field_c = stackIn_6_1;
+          if (0 != this.field_e.length()) {
+            return;
+          }
+          this.field_c = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("hg.<init>(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("hg.<init>(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final boolean a(byte param0) {
         if (param0 != -121) {
-            return true;
+          return true;
         }
         return this.field_c;
     }

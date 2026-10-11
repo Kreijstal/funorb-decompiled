@@ -7,8 +7,6 @@ final class fi implements td {
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -16,146 +14,84 @@ final class fi implements td {
         int var7 = 0;
         hj var8 = null;
         try {
-          L0: {
-            L1: {
-              var6_int = param1 + param2.field_s;
-              var7 = param0 + param2.field_n;
-              if (param3 == -4394) {
-                break L1;
-              } else {
-                fi.a(-11);
-                break L1;
-              }
-            }
-            L2: {
-              tl.a(param2.field_r, var7, var6_int, param2.field_m, 127);
-              var8 = wd.field_C[1];
-              if (!(param2 instanceof s)) {
-                break L2;
-              } else {
-                if (!((s) ((Object) param2)).field_D) {
-                  break L2;
-                } else {
-                  var8.e((-var8.field_s + param2.field_m >> 149414625) + 1 + var6_int, (-var8.field_t + param2.field_r >> -249748127) + var7 + 1, 256);
-                  break L2;
-                }
-              }
-            }
-            if (param2.d(-81)) {
-              wh.a(-4 + param2.field_m, false, var6_int + 2, param2.field_r - 4, var7 + 2);
-              break L0;
-            } else {
-              return;
-            }
+          var6_int = param1 + param2.field_s;
+          var7 = param0 + param2.field_n;
+          if (param3 != -4394) {
+            fi.a(-11);
           }
+          tl.a(param2.field_r, var7, var6_int, param2.field_m, 127);
+          var8 = wd.field_C[1];
+          if (param2 instanceof s &&
+            ((s) (param2)).field_D) {
+            var8.e((-var8.field_s + param2.field_m >> 1) + 1 + var6_int, (-var8.field_t + param2.field_r >> 1) + var7 + 1, 256);
+          }
+          if (!param2.d(-81)) {
+            return;
+          }
+          wh.a(-4 + param2.field_m, false, var6_int + 2, param2.field_r - 4, var7 + 2);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
-
-            stackIn_11_1 = new StringBuilder().append("fi.A(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("fi.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     final static String a(int param0, CharSequence param1, boolean param2) {
+        int var4 = 0;
         String var3 = null;
         RuntimeException var3_ref = null;
-        int var4 = 0;
         int var5 = 0;
         String stackIn_3_0 = null;
         String stackIn_9_0 = null;
         Object stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var3 = rg.a(param2, param1, 0);
-            if (var3 == null) {
-              var4 = 0;
-              L1: while (true) {
-                if (param1.length() <= var4) {
-                  if (param0 != 1) {
-                    field_a = (String) null;
-                    stackIn_14_0 = null;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  if (!vg.a(param1.charAt(var4), -22118)) {
-                    stackIn_9_0 = pl.field_i;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = (String) (var3);
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var3 = rg.a(param2, param1, 0);
+          if (var3 != null) {
+            stackIn_3_0 = var3;
+            return stackIn_3_0;
+          }
+          for (var4 = 0; param1.length() > var4; var4++) {
+            if (!vg.a(param1.charAt(var4), -22118)) {
+              stackIn_9_0 = pl.field_i;
+              return stackIn_9_0;
             }
           }
+          if (param0 == 1) {
+            return null;
+          }
+          field_a = (String) null;
+          stackIn_14_0 = null;
+          return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var3_ref);
-
-            stackIn_17_1 = new StringBuilder().append("fi.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
+          var3_ref = decompiledCaughtException;
+          stackIn_17_0 = var3_ref;
+          stackIn_17_1 = new StringBuilder().append("fi.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
           } else {
-            return (String) ((Object) stackIn_14_0);
+            stackIn_18_2 = "{...}";
           }
+          throw dd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != -8601) {
-            return;
+          return;
         }
         field_a = null;
     }

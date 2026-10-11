@@ -10,31 +10,21 @@ final class wj {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 > 52) {
-            break L0;
-          } else {
-            wj.b(94);
-            break L0;
-          }
+        if (param0 <= 52) {
+          wj.b(94);
         }
-        if (kb.field_a != null) {
-          var1 = kb.field_a;
-          synchronized (var1) {
-            L1: {
-              kb.field_a = null;
-              break L1;
-            }
-          }
+        if (kb.field_a == null) {
           return;
-        } else {
-          return;
+        }
+        var1 = kb.field_a;
+        synchronized (var1) {
+          kb.field_a = null;
         }
     }
 
     public static void a(int param0) {
         if (param0 >= -78) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;

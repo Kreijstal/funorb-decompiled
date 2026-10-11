@@ -12,9 +12,9 @@ final class ai {
     public static void a(int param0) {
         field_d = null;
         if (param0 != 22309) {
-            ai.a(67);
-            field_a = null;
-            return;
+          ai.a(67);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

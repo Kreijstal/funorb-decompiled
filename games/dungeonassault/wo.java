@@ -16,18 +16,19 @@ final class wo {
         int var8 = 0;
         int var10 = DungeonAssault.field_K;
         int var5 = -1 + 2 * param3;
-        int var6 = param3 - -param2;
+        int var6 = param3 + param2;
         cn var7 = new cn(var5, var6);
+        int var8Lifetime1;
         jh.a(var7);
         for (var8 = 0; var8 < param3; var8++) {
-            gf.b(-1 + (param3 + -var8), var8, 1 + 2 * var8, param4);
+          gf.b(-1 + (param3 - var8), var8, 1 + 2 * var8, param4);
         }
-        var8 = -param0 + var5 >> 1081006369;
+        var8Lifetime1 = -param0 + var5 >> 1;
         if (param1 != 1) {
-            return (cn) null;
+          return (cn) null;
         }
         for (var9 = 0; param2 > var9; var9++) {
-            gf.b(var8, param3 + var9, param0, param4);
+          gf.b(var8Lifetime1, param3 + var9, param0, param4);
         }
         jh.b();
         return var7;
@@ -36,7 +37,7 @@ final class wo {
     public static void a(byte param0) {
         field_h = null;
         if (param0 < 95) {
-            field_e = (dn) null;
+          field_e = (dn) null;
         }
         field_f = null;
         field_d = null;

@@ -14,7 +14,7 @@ final class rm {
         field_c = null;
         field_e = null;
         if (param0 != 8547) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;

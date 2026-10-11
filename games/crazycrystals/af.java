@@ -7,9 +7,9 @@ final class af extends qb {
 
     public static void c(int param0) {
         if (param0 != 0) {
-            field_c = (dl[]) null;
-            field_c = null;
-            return;
+          field_c = (dl[]) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -24,12 +24,12 @@ final class af extends qb {
 
     final void a(byte[] param0, int param1) {
         try {
-            this.field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_d.position(0);
-            int var3_int = 81 / ((-54 - param1) / 37);
-            this.field_d.put(param0);
+          this.field_d = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_d.position(0);
+          int var3_int = 81 / ((-54 - param1) / 37);
+          this.field_d.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "af.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "af.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

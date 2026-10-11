@@ -15,56 +15,36 @@ final class sl {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == null) {
-                break L1;
-              } else {
-                param1.a(false);
-                param1.c(82);
-                this.field_e = this.field_e + param1.field_p;
-                break L1;
-              }
-            }
-            if (param0 >= 25) {
-              break L0;
-            } else {
-              field_g = (String) null;
-              return;
-            }
+          if (param1 != null) {
+            param1.a(false);
+            param1.c(82);
+            this.field_e = this.field_e + param1.field_p;
           }
+          if (param0 >= 25) {
+            return;
+          }
+          field_g = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("sl.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("sl.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     private final void a(long param0, int param1) {
         int var5 = 83 / ((param1 - 25) / 59);
-        dm var4 = (dm) ((Object) this.field_d.a(param0, -18348));
+        dm var4 = (dm) (this.field_d.a(param0, -18348));
         this.a(106, var4);
     }
 
@@ -75,72 +55,59 @@ final class sl {
     final static void a(int param0, int param1) {
         jm.a(param1, (byte) -102);
         if (param0 > -101) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
     }
 
     final Object b(long param0, int param1) {
-        mj var6;
-        dm var7;
-        Object var8;
-        Object var9;
-        var7 = (dm) ((Object) this.field_d.a(param0, -18348));
-        if (var7 != null) {
-          if (param1 == 0) {
-            var9 = var7.b((byte) -109);
-            if (var9 == null) {
-              var7.a(false);
-              var7.c(75);
-              this.field_e = this.field_e + var7.field_p;
-              return null;
-            } else {
-              L0: {
-                if (var7.d(107)) {
-                  var6 = new mj(var9, var7.field_p);
-                  this.field_d.a(var6, param1 ^ -112, var7.field_d);
-                  this.field_b.a(true, var6);
-                  ((dm) ((Object) var6)).field_j = 0L;
-                  var7.a(false);
-                  var7.c(param1 + 69);
-                  break L0;
-                } else {
-                  this.field_b.a(true, var7);
-                  var7.field_j = 0L;
-                  break L0;
-                }
-              }
-              return var9;
-            }
-          } else {
-            this.field_e = -36;
-            var8 = var7.b((byte) -109);
-            if (var8 == null) {
-              var7.a(false);
-              var7.c(75);
-              this.field_e = this.field_e + var7.field_p;
-              return null;
-            } else {
-              L1: {
-                if (var7.d(107)) {
-                  var6 = new mj(var8, var7.field_p);
-                  this.field_d.a(var6, param1 ^ -112, var7.field_d);
-                  this.field_b.a(true, var6);
-                  ((dm) ((Object) var6)).field_j = 0L;
-                  var7.a(false);
-                  var7.c(param1 + 69);
-                  break L1;
-                } else {
-                  this.field_b.a(true, var7);
-                  var7.field_j = 0L;
-                  break L1;
-                }
-              }
-              return var8;
-            }
-          }
-        } else {
+        Object var8 = null;
+        mj var6 = null;
+        dm var7 = (dm) (this.field_d.a(param0, -18348));
+        mj var6Lifetime1;
+        if (var7 == null) {
           return null;
         }
+        if (param1 != 0) {
+          this.field_e = -36;
+          var8 = var7.b((byte) -109);
+          if (var8 != null) {
+            if (!var7.d(107)) {
+              this.field_b.a(true, var7);
+              var7.field_j = 0L;
+            } else {
+              var6 = new mj(var8, var7.field_p);
+              this.field_d.a(var6, param1 ^ -112, var7.field_d);
+              this.field_b.a(true, var6);
+              ((dm) ((Object) var6)).field_j = 0L;
+              var7.a(false);
+              var7.c(param1 + 69);
+            }
+            return var8;
+          }
+          var7.a(false);
+          var7.c(75);
+          this.field_e = this.field_e + var7.field_p;
+          return null;
+        }
+        Object var9 = var7.b((byte) -109);
+        if (var9 != null) {
+          if (!var7.d(107)) {
+            this.field_b.a(true, var7);
+            var7.field_j = 0L;
+          } else {
+            var6Lifetime1 = new mj(var9, var7.field_p);
+            this.field_d.a(var6Lifetime1, param1 ^ -112, var7.field_d);
+            this.field_b.a(true, var6Lifetime1);
+            ((dm) ((Object) var6Lifetime1)).field_j = 0L;
+            var7.a(false);
+            var7.c(param1 + 69);
+          }
+          return var9;
+        }
+        var7.a(false);
+        var7.c(75);
+        this.field_e = this.field_e + var7.field_p;
+        return null;
     }
 
     private final void a(int param0, Object param1, long param2, int param3) {
@@ -148,38 +115,36 @@ final class sl {
         mj var6 = null;
         int var8 = Virogrid.field_F ? 1 : 0;
         try {
-            if (!(this.field_f >= param0)) {
-                throw new IllegalStateException();
-            }
-            this.a(param2, -48);
-            this.field_e = this.field_e - param0;
-            while (this.field_e < 0) {
-                var9 = (dm) ((Object) this.field_b.a(-32314));
-                this.a(103, var9);
-            }
-            var6 = new mj(param1, param0);
-            this.field_d.a(var6, -121, param2);
-            int var7 = 103 % ((-40 - param3) / 60);
-            this.field_b.a(true, var6);
-            ((dm) ((Object) var6)).field_j = 0L;
+          if (this.field_f < param0) {
+            throw new IllegalStateException();
+          }
+          this.a(param2, -48);
+          this.field_e = this.field_e - param0;
+          while (this.field_e < 0) {
+            var9 = (dm) (this.field_b.a(-32314));
+            this.a(103, var9);
+          }
+          var6 = new mj(param1, param0);
+          this.field_d.a(var6, -121, param2);
+          int var7 = 103 % ((-40 - param3) / 60);
+          this.field_b.a(true, var6);
+          ((dm) ((Object) var6)).field_j = 0L;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != 1) {
-          sl.a(-112);
-          field_h = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_h = null;
           field_g = null;
           return;
         }
+        sl.a(-112);
+        field_h = null;
+        field_g = null;
     }
 
     private sl(int param0, int param1) {
@@ -188,30 +153,29 @@ final class sl {
         this.field_f = param0;
         this.field_e = param0;
         var3 = 1;
-        L0: while (true) {
-          if (var3 - -var3 < param0) {
-            if (param1 > var3) {
-              var3 = var3 + var3;
-              continue L0;
-            } else {
-              this.field_d = new gk(var3);
-              return;
-            }
-          } else {
+        while (true) {
+          if (var3 + var3 >= param0) {
             this.field_d = new gk(var3);
             return;
           }
+          if (param1 > var3) {
+            var3 = var3 + var3;
+            continue;
+          }
+          break;
         }
+        this.field_d = new gk(var3);
+        return;
     }
 
     final void a(Object param0, long param1, int param2) {
         try {
-            if (param2 != -14696) {
-                this.field_f = -85;
-            }
-            this.a(1, param0, param1, -106);
+          if (param2 != -14696) {
+            this.field_f = -85;
+          }
+          this.a(1, param0, param1, -106);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sl.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

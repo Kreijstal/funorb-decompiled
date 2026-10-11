@@ -11,100 +11,70 @@ abstract class b extends kj {
     private int field_P;
 
     final void a(int param0, int param1, boolean param2, int param3) {
-        if (this.field_P != 0) {
-          if (-257 < (this.field_P ^ -1)) {
-            L0: {
-              if (!param2) {
-                break L0;
-              } else {
-                this.b(-50, 9, 119);
-                break L0;
-              }
-            }
-            if (null != nb.field_a) {
-              if (this.field_p <= nb.field_a.field_u) {
-                if (nb.field_a.field_x < this.field_l) {
-                  nb.field_a = new ka(this.field_p, this.field_l);
-                  ad.a(-15, nb.field_a);
-                  qg.b();
-                  this.c(103, 0, 0);
-                  super.a(-param0 + -this.field_i, -this.field_m + -param1, param2, param3);
-                  ie.b((byte) -9);
-                  nb.field_a.d(param1 - -this.field_m, this.field_i + param0, this.field_P);
-                  return;
-                } else {
-                  ad.a(-15, nb.field_a);
-                  qg.b();
-                  this.c(103, 0, 0);
-                  super.a(-param0 + -this.field_i, -this.field_m + -param1, param2, param3);
-                  ie.b((byte) -9);
-                  nb.field_a.d(param1 - -this.field_m, this.field_i + param0, this.field_P);
-                  return;
-                }
-              } else {
-                nb.field_a = new ka(this.field_p, this.field_l);
-                ad.a(-15, nb.field_a);
-                qg.b();
-                this.c(103, 0, 0);
-                super.a(-param0 + -this.field_i, -this.field_m + -param1, param2, param3);
-                ie.b((byte) -9);
-                nb.field_a.d(param1 - -this.field_m, this.field_i + param0, this.field_P);
-                return;
-              }
-            } else {
-              nb.field_a = new ka(this.field_p, this.field_l);
-              ad.a(-15, nb.field_a);
-              qg.b();
-              this.c(103, 0, 0);
-              super.a(-param0 + -this.field_i, -this.field_m + -param1, param2, param3);
-              ie.b((byte) -9);
-              nb.field_a.d(param1 - -this.field_m, this.field_i + param0, this.field_P);
-              return;
-            }
-          } else {
-            if (-1 != (param3 ^ -1)) {
-              return;
-            } else {
-              this.c(103, this.field_i + param0, param1 + this.field_m);
-              super.a(param0, param1, false, param3);
-              return;
-            }
-          }
-        } else {
+        if (this.field_P == 0) {
           return;
         }
+        if (this.field_P >= 256) {
+          if (param3 != 0) {
+            return;
+          }
+          this.c(103, this.field_i + param0, param1 + this.field_m);
+          super.a(param0, param1, false, param3);
+          return;
+        }
+        if (param2) {
+          this.b(-50, 9, 119);
+        }
+        if (null == nb.field_a) {
+          nb.field_a = new ka(this.field_p, this.field_l);
+          ad.a(-15, nb.field_a);
+          qg.b();
+          this.c(103, 0, 0);
+          super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
+          ie.b((byte) -9);
+          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          return;
+        }
+        if (this.field_p > nb.field_a.field_u) {
+          nb.field_a = new ka(this.field_p, this.field_l);
+          ad.a(-15, nb.field_a);
+          qg.b();
+          this.c(103, 0, 0);
+          super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
+          ie.b((byte) -9);
+          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          return;
+        }
+        if (nb.field_a.field_x >= this.field_l) {
+          ad.a(-15, nb.field_a);
+          qg.b();
+          this.c(103, 0, 0);
+          super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
+          ie.b((byte) -9);
+          nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
+          return;
+        }
+        nb.field_a = new ka(this.field_p, this.field_l);
+        ad.a(-15, nb.field_a);
+        qg.b();
+        this.c(103, 0, 0);
+        super.a(-param0 - this.field_i, -this.field_m - param1, param2, param3);
+        ie.b((byte) -9);
+        nb.field_a.d(param1 + this.field_m, this.field_i + param0, this.field_P);
     }
 
     final void b(int param0, int param1, int param2) {
-        if (param0 != 0) {
-          return;
-        } else {
-          this.a((byte) 113, -param2 + TorChallenge.field_G >> 1133512833, param1, param2, -param1 + md.field_h >> -2040608863);
+        if (param0 == 0) {
+          this.a((byte) 113, -param2 + TorChallenge.field_G >> 1, param1, param2, -param1 + md.field_h >> 1);
           return;
         }
     }
 
     private final int i(int param0) {
-        int stackIn_6_0 = 0;
-        if (param0 != 0) {
-          return 92;
-        } else {
-          L0: {
-            if (this.field_K) {
-              if (this != this.field_L.f((byte) 123)) {
-                stackIn_6_0 = 0;
-                break L0;
-              } else {
-                stackIn_6_0 = 256;
-                break L0;
-              }
-            } else {
-              stackIn_6_0 = 0;
-              break L0;
-            }
-          }
-          return stackIn_6_0;
+        if (param0 == 0) {
+          return !this.field_K ? 0 : this == this.field_L.f((byte) 123) ? 256 : 0;
         }
+        return 92;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -114,10 +84,10 @@ abstract class b extends kj {
         qg.a(var7, param6, var8, param4);
         we.field_e[param1][param2].a(var7, param6);
         if (param0 < 105) {
-            b.a(-8);
+          b.a(-8);
         } else {
-            qg.b(ae.field_y);
-            return;
+          qg.b(ae.field_y);
+          return;
         }
         qg.b(ae.field_y);
     }
@@ -128,173 +98,94 @@ abstract class b extends kj {
         field_N = null;
         field_R = null;
         if (param0 != 0) {
-            field_R = (String) null;
+          field_R = (String) null;
         }
     }
 
     final ee d(byte param0) {
         ee var2 = super.d(param0);
         if (var2 != null) {
-            return var2;
+          return var2;
         }
         return (ee) (this);
     }
 
     boolean h(int param0) {
-        if (param0 >= 83) {
-          this.field_P = this.i(0);
-          if (this.field_P == 0) {
-            if (this.field_K) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 < 83) {
           this.j(-66);
           this.field_P = this.i(0);
-          if (this.field_P == 0) {
-            if (this.field_K) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (this.field_P != 0) {
             return false;
           }
+          if (!this.field_K) {
+            return true;
+          }
+          return false;
         }
+        this.field_P = this.i(0);
+        if (this.field_P != 0) {
+          return false;
+        }
+        if (!this.field_K) {
+          return true;
+        }
+        return false;
     }
 
     boolean j(int param0) {
-        int stackIn_10_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_38_0 = 0;
+        boolean stackIn_10_0 = false;
+        boolean stackIn_19_0 = false;
+        boolean stackIn_29_0 = false;
+        boolean stackIn_38_0 = false;
         int var2;
         int var3;
         var2 = this.i(0);
         var3 = var2 - this.field_P;
-        if (var3 <= 0) {
+        if (var3 > 0) {
+          this.field_P = this.field_P + (-1 + (var3 + 8)) / 8;
           if (var3 >= 0) {
             if (param0 != 1) {
               return false;
-            } else {
-              L0: {
-                L1: {
-                  if (0 != this.field_P) {
-                    break L1;
-                  } else {
-                    if (var2 != 0) {
-                      break L1;
-                    } else {
-                      if (this.field_K) {
-                        break L1;
-                      } else {
-                        stackIn_38_0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                }
-                stackIn_38_0 = 0;
-                break L0;
-              }
-              return stackIn_38_0 != 0;
             }
-          } else {
-            this.field_P = this.field_P + (-16 + var3 - -1) / 16;
-            if (param0 != 1) {
+            if (0 != this.field_P) {
               return false;
-            } else {
-              L2: {
-                L3: {
-                  if (0 != this.field_P) {
-                    break L3;
-                  } else {
-                    if (var2 != 0) {
-                      break L3;
-                    } else {
-                      if (this.field_K) {
-                        break L3;
-                      } else {
-                        stackIn_29_0 = 1;
-                        break L2;
-                      }
-                    }
-                  }
-                }
-                stackIn_29_0 = 0;
-                break L2;
-              }
-              return stackIn_29_0 != 0;
             }
+            if (var2 != 0) {
+              return false;
+            }
+            stackIn_10_0 = !(this.field_K);
+            return stackIn_10_0;
           }
-        } else {
-          this.field_P = this.field_P + (-1 + (var3 - -8)) / 8;
-          if (var3 < 0) {
-            this.field_P = this.field_P + (-16 + var3 - -1) / 16;
-            if (param0 != 1) {
-              return false;
-            } else {
-              L4: {
-                L5: {
-                  if (0 != this.field_P) {
-                    break L5;
-                  } else {
-                    if (var2 != 0) {
-                      break L5;
-                    } else {
-                      if (this.field_K) {
-                        break L5;
-                      } else {
-                        stackIn_19_0 = 1;
-                        break L4;
-                      }
-                    }
-                  }
-                }
-                stackIn_19_0 = 0;
-                break L4;
-              }
-              return stackIn_19_0 != 0;
-            }
-          } else {
-            if (param0 == 1) {
-              if (0 == this.field_P) {
-                if (var2 != 0) {
-                  return false;
-                } else {
-                  L6: {
-                    if (this.field_K) {
-                      stackIn_10_0 = 0;
-                      break L6;
-                    } else {
-                      stackIn_10_0 = 1;
-                      break L6;
-                    }
-                  }
-                  return stackIn_10_0 != 0;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
+          this.field_P = this.field_P + (-16 + var3 + 1) / 16;
+          if (param0 != 1) {
+            return false;
           }
+          stackIn_19_0 = (0 == this.field_P) && (var2 == 0) && (!this.field_K);
+          return stackIn_19_0;
         }
+        if (var3 >= 0) {
+          if (param0 != 1) {
+            return false;
+          }
+          stackIn_38_0 = (0 == this.field_P) && (var2 == 0) && (!this.field_K);
+          return stackIn_38_0;
+        }
+        this.field_P = this.field_P + (-16 + var3 + 1) / 16;
+        if (param0 != 1) {
+          return false;
+        }
+        stackIn_29_0 = (0 == this.field_P) && (var2 == 0) && (!this.field_K);
+        return stackIn_29_0;
     }
 
     b(si param0, int param1, int param2) {
-        super(TorChallenge.field_G - param1 >> -715858175, md.field_h - param2 >> -60164767, param1, param2, (j) null);
+        super(TorChallenge.field_G - param1 >> 1, md.field_h - param2 >> 1, param1, param2, (j) null);
         try {
-            this.field_P = 0;
-            this.field_L = param0;
-            this.field_K = false;
+          this.field_P = 0;
+          this.field_L = param0;
+          this.field_K = false;
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "b.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

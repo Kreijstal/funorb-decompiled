@@ -11,91 +11,66 @@ abstract class fm {
 
     final static void a(byte param0, bh param1, bh param2) {
         try {
-            int var3_int = 32 % ((param0 - 60) / 49);
-            if (!(null == param1.field_a)) {
-                param1.b((byte) 113);
-            }
-            param1.field_b = param2;
-            param1.field_a = param2.field_a;
-            param1.field_a.field_b = param1;
-            param1.field_b.field_a = param1;
+          int var3_int = 32 % ((param0 - 60) / 49);
+          if (null != param1.field_a) {
+            param1.b((byte) 113);
+          }
+          param1.field_b = param2;
+          param1.field_a = param2.field_a;
+          param1.field_a.field_b = param1;
+          param1.field_b.field_a = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "fm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "fm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(byte param0, int param1, kn param2) {
-        int var4 = 0;
         int var5 = 0;
+        int var4 = 0;
         int var6 = 0;
         uf var7 = null;
         uf var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var6 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            var7 = we.field_b;
-            var8 = var7;
-            var8.f(param1, -4);
-            var8.field_n = var8.field_n + 1;
-            var4 = var8.field_n;
-            var8.a(true, 1);
-            var8.d(-1, param2.field_u);
-            var8.d(-1, param2.field_x);
-            var8.d(-1, param2.field_q);
-            var8.a(param2.field_t, false);
-            var8.a(param2.field_v, false);
-            var8.a(param2.field_w, false);
-            var8.a(param2.field_y, false);
-            var8.a(true, param2.field_s.length);
-            var5 = 0;
-            L1: while (true) {
-              if (var5 >= param2.field_s.length) {
-                L2: {
-                  var8.a((byte) -15, var4);
-                  var8.b(var8.field_n - var4, true);
-                  if (param0 <= -90) {
-                    break L2;
-                  } else {
-                    field_b = true;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                var7.a(param2.field_s[var5], false);
-                var5++;
-                continue L1;
-              }
-            }
+          var7 = we.field_b;
+          var8 = var7;
+          var8.f(param1, -4);
+          var8.field_n = var8.field_n + 1;
+          var4 = var8.field_n;
+          var8.a(true, 1);
+          var8.d(-1, param2.field_u);
+          var8.d(-1, param2.field_x);
+          var8.d(-1, param2.field_q);
+          var8.a(param2.field_t, false);
+          var8.a(param2.field_v, false);
+          var8.a(param2.field_w, false);
+          var8.a(param2.field_y, false);
+          var8.a(true, param2.field_s.length);
+          for (var5 = 0; var5 < param2.field_s.length; var5++) {
+            var7.a(param2.field_s[var5], false);
           }
+          var8.a((byte) -15, var4);
+          var8.b(var8.field_n - var4, true);
+          if (param0 > -90) {
+            field_b = true;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("fm.I(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("fm.I(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -105,8 +80,8 @@ abstract class fm {
         field_a = null;
         field_c = null;
         if (!param0) {
-            kn var2 = (kn) null;
-            fm.a((byte) 8, -15, (kn) null);
+          kn var2 = (kn) null;
+          fm.a((byte) 8, -15, (kn) null);
         }
     }
 
@@ -118,50 +93,56 @@ abstract class fm {
         int var10;
         int stackIn_3_0 = 0;
         int var9;
-        L0: {
-          var10 = client.field_A ? 1 : 0;
-          if (80 > param4) {
-            stackIn_3_0 = param4 / 20 * 18;
-            break L0;
-          } else {
-            stackIn_3_0 = 54;
-            break L0;
-          }
+        var10 = client.field_A ? 1 : 0;
+        if (80 > param4) {
+          stackIn_3_0 = param4 / 20 * 18;
+        } else {
+          stackIn_3_0 = 54;
         }
-        L1: {
-          var7 = stackIn_3_0;
-          var8 = 0;
-          if (60 <= param4) {
-            if ((param4 ^ -1) > -81) {
-              var7 = var7 + vl.a(23841, 80, param6 * 18 - -40);
-              break L1;
+        var7 = stackIn_3_0;
+        var8 = 0;
+        if (60 <= param4) {
+          if (param4 < 80) {
+            var7 = var7 + vl.a(23841, 80, param6 * 18 + 40);
+          } else {
+            if (param4 < 93) {
+              var8 = vl.a(23841, 80, 18 * ve.field_ic[1 + param4 - 80] + 40);
             } else {
-              if (param4 < 93) {
-                var8 = vl.a(23841, 80, 18 * ve.field_ic[1 + param4 - 80] - -40);
-                break L1;
-              } else {
-                hk.a(param1 + -36 + -3, param2 + 36 - 3, 78, 60, 4, 65280, 100);
-                break L1;
-              }
+              hk.a(param1 - 36 - 3, param2 + 36 - 3, 78, 60, 4, 65280, 100);
             }
-          } else {
-            var7 = var7 + vl.a(23841, 80, param3 * 18 - -40);
-            break L1;
           }
+        } else {
+          var7 = var7 + vl.a(23841, 80, param3 * 18 + 40);
         }
-        cg.a(param0, 2, 5, param1 - -18, param2 + 73, -2, -2);
-        cg.a(param0, 2, 12, 18 + param1, param2 - -55, -2, -1);
-        cg.a(param0, 2, 8, 18 + param1, 36 + (param2 - -1), -2, -1);
+        cg.a(param0, 2, 5, param1 + 18, param2 + 73, -2, -2);
+        cg.a(param0, 2, 12, 18 + param1, param2 + 55, -2, -1);
+        cg.a(param0, 2, 8, 18 + param1, 36 + (param2 + 1), -2, -1);
         cg.a(param0, 2, 2, param1, 1 + param2 + 72, -1, -2);
-        fb.field_c[param0][2].c(param1 + -18, 72 + param2, 18, 18);
+        fb.field_c[param0][2].c(param1 - 18, 72 + param2, 18, 18);
         fb.field_c[param0][2].c(-36 + param1, param2 + 72, 18, 18);
         var9 = 16 / ((59 - param5) / 43);
-        fb.field_c[param0][2].c(param1, param2 - -54, 18, 18);
-        fb.field_c[param0][2].c(param1 + -18, param2 - -var7 + var8, 18, 18 + -var8);
+        fb.field_c[param0][2].c(param1, param2 + 54, 18, 18);
+        fb.field_c[param0][2].c(param1 - 18, param2 + var7 + var8, 18, 18 - var8);
     }
 
     static {
         field_c = "In Single-player";
         field_a = "Connection restored.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$a7487eb591c0(int param0, bh param1, bh param2) {
+        try {
+          int var3_int = 32 % ((param0 - 60) / 49);
+          if (null != param1.field_a) {
+            param1.b((byte) 113);
+          }
+          param1.field_b = param2;
+          param1.field_a = param2.field_a;
+          param1.field_a.field_b = param1;
+          param1.field_b.field_a = param1;
+        } catch (RuntimeException runtimeException) {
+          throw dh.a((Throwable) ((Object) runtimeException), "fm.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
     }
 }

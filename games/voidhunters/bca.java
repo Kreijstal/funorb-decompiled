@@ -11,16 +11,16 @@ final class bca implements dja {
 
     public static void a(int param0) {
         if (param0 > -73) {
-            field_a = (dpb) null;
-            field_a = null;
-            return;
+          field_a = (dpb) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new be[param1]);
     }

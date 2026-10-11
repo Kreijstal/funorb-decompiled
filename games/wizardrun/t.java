@@ -14,49 +14,29 @@ final class t {
         RuntimeException var1_ref = null;
         var4 = wizardrun.field_H;
         try {
-          L0: {
-            var1 = ff.field_H;
-            synchronized (var1) {
-              L1: {
-                L2: {
-                  h.field_p = h.field_p + 1;
-                  tg.field_i = ph.field_r;
-                  if (param0 >= (wk.field_b ^ -1)) {
-                    L3: while (true) {
-                      if (wk.field_b == lk.field_a) {
-                        break L2;
-                      } else {
-                        var2 = wd.field_a[lk.field_a];
-                        lk.field_a = 127 & lk.field_a - -1;
-                        if (-1 >= (var2 ^ -1)) {
-                          hi.field_p[var2] = true;
-                          continue L3;
-                        } else {
-                          hi.field_p[var2 ^ -1] = false;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } else {
-                    var2 = 0;
-                    L4: while (true) {
-                      if ((var2 ^ -1) <= -113) {
-                        wk.field_b = lk.field_a;
-                        break L2;
-                      } else {
-                        hi.field_p[var2] = false;
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  }
+          var1 = ff.field_H;
+          synchronized (var1) {
+            h.field_p = h.field_p + 1;
+            tg.field_i = ph.field_r;
+            if (param0 < ~wk.field_b) {
+              for (var2 = 0; var2 < 112; var2++) {
+                hi.field_p[var2] = false;
+              }
+              wk.field_b = lk.field_a;
+            } else {
+              while (wk.field_b != lk.field_a) {
+                var2 = wd.field_a[lk.field_a];
+                lk.field_a = 127 & lk.field_a + 1;
+                if (var2 >= 0) {
+                  hi.field_p[var2] = true;
+                  continue;
                 }
-                ph.field_r = qh.field_b;
-                break L1;
+                hi.field_p[~var2] = false;
               }
             }
-            break L0;
+            ph.field_r = qh.field_b;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -67,7 +47,7 @@ final class t {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 10) {
-            return;
+          return;
         }
         field_b = null;
     }

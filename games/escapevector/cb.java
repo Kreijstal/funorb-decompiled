@@ -12,7 +12,7 @@ final class cb {
         field_a = null;
         field_c = null;
         if (param0 != -13379) {
-            cb.a(-126);
+          cb.a(-126);
         }
     }
 

@@ -16,7 +16,7 @@ final class dq extends vg {
         field_h = null;
         field_f = null;
         if (param0 != 8148) {
-            field_f = (via) null;
+          field_f = (via) null;
         }
     }
 

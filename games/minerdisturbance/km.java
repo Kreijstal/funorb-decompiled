@@ -8,9 +8,7 @@ final class km {
 
     final static void b(byte param0) {
         d.field_d[93] = 43;
-        if (param0 <= 103) {
-          return;
-        } else {
+        if (param0 > 103) {
           d.field_d[91] = 42;
           d.field_d[44] = 71;
           d.field_d[47] = 73;
@@ -31,16 +29,16 @@ final class km {
         field_c = null;
         field_b = null;
         if (!param0) {
-            km.a(true);
+          km.a(true);
         }
     }
 
     final static void a(byte param0) {
         pb.a(69);
         if (param0 > -44) {
-            field_b = (String) null;
-            oj.a(4, 3);
-            return;
+          field_b = (String) null;
+          oj.a(4, 3);
+          return;
         }
         oj.a(4, 3);
     }

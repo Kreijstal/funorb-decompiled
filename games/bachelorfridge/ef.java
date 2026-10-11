@@ -24,21 +24,21 @@ final class ef extends k {
         int[][] var13 = var15;
         int[][] var3 = var13;
         if (param0) {
-            field_k = -38;
+          field_k = -38;
         }
         if (this.field_h.field_b) {
-            var28 = this.a((byte) -101, 0, param1);
-            var29 = var28[0];
-            var30 = var28[1];
-            var31 = var28[2];
-            var8 = var20[0];
-            var9 = var20[1];
-            var10 = var20[2];
-            for (var11 = 0; hh.field_d > var11; var11++) {
-                var8[var11] = (this.field_n * var29[var11] >> 423023660) + this.field_o;
-                var9[var11] = this.field_o - -(this.field_n * var30[var11] >> -1615748148);
-                var10[var11] = this.field_o - -(var31[var11] * this.field_n >> 101794540);
-            }
+          var28 = this.a((byte) -101, 0, param1);
+          var29 = var28[0];
+          var30 = var28[1];
+          var31 = var28[2];
+          var8 = var20[0];
+          var9 = var20[1];
+          var10 = var20[2];
+          for (var11 = 0; hh.field_d > var11; var11++) {
+            var8[var11] = (this.field_n * var29[var11] >> 12) + this.field_o;
+            var9[var11] = this.field_o + (this.field_n * var30[var11] >> 12);
+            var10[var11] = this.field_o + (var31[var11] * this.field_n >> 12);
+          }
         }
         return var13;
     }
@@ -46,14 +46,14 @@ final class ef extends k {
     public static void b(boolean param0) {
         field_m = null;
         if (param0) {
-            ef.b(true);
+          ef.b(true);
         }
     }
 
     final void d(byte param0) {
         this.field_n = this.field_p - this.field_o;
         if (param0 != -68) {
-            field_k = 76;
+          field_k = 76;
         }
     }
 
@@ -67,82 +67,42 @@ final class ef extends k {
     final void a(byte param0, lu param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
-        Object stackIn_10_0 = null;
-        Object stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
+        boolean stackIn_11_1 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var4_int = param2;
-              if (0 == var4_int) {
-                this.field_o = param1.e((byte) 98);
-                break L1;
-              } else {
-                if (-2 != (var4_int ^ -1)) {
-                  if (2 != var4_int) {
-                    break L1;
-                  } else {
-                    L2: {
-                      stackIn_10_0 = this;
-
-                      if (param1.b(16711935) != 1) {
-                        stackIn_11_0 = this;
-                        stackIn_11_1 = 0;
-                        break L2;
-                      } else {
-                        stackIn_11_0 = this;
-                        stackIn_11_1 = 1;
-                        break L2;
-                      }
-                    }
-                    ((ef) (this)).field_f = stackIn_11_1 != 0;
-                    break L1;
-                  }
-                } else {
-                  this.field_p = param1.e((byte) 45);
-                  break L1;
-                }
+          var4_int = param2;
+          if (0 == var4_int) {
+            this.field_o = param1.e((byte) 98);
+          } else {
+            if (var4_int != 1) {
+              if (2 == var4_int) {
+                stackIn_11_1 = (param1.b(16711935) == 1);
+                this.field_f = stackIn_11_1;
               }
+            } else {
+              this.field_p = param1.e((byte) 45);
             }
-            L3: {
-              if (param0 == -71) {
-                break L3;
-              } else {
-                field_l = -88;
-                break L3;
-              }
-            }
-            break L0;
           }
+          if (param0 != -71) {
+            field_l = -88;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var4);
-
-            stackIn_17_1 = new StringBuilder().append("ef.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L4;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L4;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_17_0 = var4;
+          stackIn_17_1 = new StringBuilder().append("ef.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -151,15 +111,15 @@ final class ef extends k {
         int var5 = 0;
         int var6 = BachelorFridge.field_y;
         if (param1 != 0) {
-            this.field_o = 69;
+          this.field_o = 69;
         }
         int[] var7 = this.field_j.a(param0, -1);
         int[] var3 = var7;
-        if (!(!this.field_j.field_m)) {
-            var4 = this.a(0, param0, (byte) 122);
-            for (var5 = 0; var5 < hh.field_d; var5++) {
-                var7[var5] = (var4[var5] * this.field_n >> 912441388) + this.field_o;
-            }
+        if (this.field_j.field_m) {
+          var4 = this.a(0, param0, (byte) 122);
+          for (var5 = 0; var5 < hh.field_d; var5++) {
+            var7[var5] = (var4[var5] * this.field_n >> 12) + this.field_o;
+          }
         }
         return var3;
     }

@@ -9,9 +9,9 @@ final class hp {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            field_b = true;
-            field_c = null;
-            return;
+          field_b = true;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

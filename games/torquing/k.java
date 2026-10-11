@@ -24,31 +24,31 @@ final class k {
         int var2 = 0;
         int var3 = 0;
         if (param1 != 1) {
-            return;
+          return;
         }
         if (ia.a(-22426, 0)) {
-            param0 = 6;
+          param0 = 6;
         }
         if (param0 == 7) {
-            ph.a(1, 1, 638, 239, 723726, 2303291);
-            ph.a(1, 240, 638, 70, 2303291, 3487838);
-            ph.a(1, 310, 638, 50, 3487838, 4739447);
-            ph.a(1, 360, 638, 40, 4739447, 6712964);
-            ph.a(1, 400, 638, 35, 6712964, 10063235);
-            ph.a(1, 435, 638, 25, 10063235, 14721899);
-            ph.a(1, 460, 638, 19, 14721899, 16359760);
+          ph.a(1, 1, 638, 239, 723726, 2303291);
+          ph.a(1, 240, 638, 70, 2303291, 3487838);
+          ph.a(1, 310, 638, 50, 3487838, 4739447);
+          ph.a(1, 360, 638, 40, 4739447, 6712964);
+          ph.a(1, 400, 638, 35, 6712964, 10063235);
+          ph.a(1, 435, 638, 25, 10063235, 14721899);
+          ph.a(1, 460, 638, 19, 14721899, 16359760);
         } else {
-            var2 = 1208736;
-            var3 = 13426923;
-            if (4 == param0) {
-                var2 = 1207964;
-                var3 = 402741;
-            }
-            if (!((param0 ^ -1) != -7)) {
-                var3 = 1207964;
-                var2 = 402741;
-            }
-            ph.a(1, 1, 638, 478, var2, var3);
+          var2 = 1208736;
+          var3 = 13426923;
+          if (4 == param0) {
+            var2 = 1207964;
+            var3 = 402741;
+          }
+          if (param0 == 6) {
+            var3 = 1207964;
+            var2 = 402741;
+          }
+          ph.a(1, 1, 638, 478, var2, var3);
         }
     }
 
@@ -73,57 +73,31 @@ final class k {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Torquing.field_u;
         try {
-          L0: {
-            var3_int = 1;
-            L1: while (true) {
-              if (param2 <= 1) {
-                if (param0 == 25518) {
-                  if (param2 != 1) {
-                    stackIn_13_0 = var3_int;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    stackIn_11_0 = param1 * var3_int;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                } else {
-                  stackIn_8_0 = 43;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L2: {
-                  if (0 == (param2 & 1)) {
-                    break L2;
-                  } else {
-                    var3_int = var3_int * param1;
-                    break L2;
-                  }
-                }
-                param2 = param2 >> 1;
-                param1 = param1 * param1;
-                continue L1;
-              }
+          var3_int = 1;
+          while (param2 > 1) {
+            if (0 != (param2 & 1)) {
+              var3_int = var3_int * param1;
             }
+            param2 = param2 >> 1;
+            param1 = param1 * param1;
           }
+          if (param0 != 25518) {
+            stackIn_8_0 = 43;
+            return stackIn_8_0;
+          }
+          if (param2 != 1) {
+            stackIn_13_0 = var3_int;
+            return stackIn_13_0;
+          }
+          stackIn_11_0 = param1 * var3_int;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw rb.a((Throwable) ((Object) var3), "k.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_11_0;
-          } else {
-            return stackIn_13_0;
-          }
         }
     }
 
@@ -136,12 +110,12 @@ final class k {
         field_b = new String[]{"Junior Explorer", "Expert Explorer", "Master Explorer", "Extreme Explorer", "Survivor", "Master Survivor", "Junior Torquester", "Torquester", "Hoarder", "Expert Hoarder", "Master Hoarder", "Virtuoso Hoarder", "Diviner of Secrets", "Order of the Golden Torque", "Knife-edge Skillster", "Skin Artist", "Ghostlit"};
         int var0 = 0;
         field_c = new byte[32896];
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
-            for (var2 = 0; var2 <= var1; var2++) {
-                incrementValue$0 = var0;
-                var0++;
-                field_c[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(var2 * var2 + var1 * var1 + 65535) / 65535.0f)));
-            }
+        for (var1 = 0; var1 < 256; var1++) {
+          for (var2 = 0; var2 <= var1; var2++) {
+            incrementValue$0 = var0;
+            var0++;
+            field_c[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(var2 * var2 + var1 * var1 + 65535) / 65535.0f)));
+          }
         }
         field_f = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

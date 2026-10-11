@@ -7,8 +7,8 @@ final class qv extends sca implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, byte param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 > -118) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, (byte) 29);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, (byte) 29);
         }
     }
 
@@ -20,7 +20,7 @@ final class qv extends sca implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, boolean param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (!param1) {
-            this.field_e = 116;
+          this.field_e = 116;
         }
     }
 
@@ -28,7 +28,7 @@ final class qv extends sca implements java.awt.event.MouseWheelListener {
         int var2 = this.field_e;
         this.field_e = 0;
         if (param0 >= -93) {
-            return 15;
+          return 15;
         }
         return var2;
     }

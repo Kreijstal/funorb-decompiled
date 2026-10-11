@@ -12,37 +12,31 @@ final class wl {
     public static void a(byte param0) {
         field_d = null;
         field_e = null;
-        int var1 = -54 / ((param0 - -12) / 57);
+        int var1 = -54 / ((param0 + 12) / 57);
         field_f = null;
         field_c = null;
         field_a = null;
     }
 
     final static boolean b(byte param0) {
-        java.awt.Component var2;
-        if (param0 < -60) {
-          if (null != oj.field_Ub) {
-            if (kh.field_c != ug.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          var2 = (java.awt.Component) null;
+        if (param0 >= -60) {
+          java.awt.Component var2 = (java.awt.Component) null;
           wl.a((pd) null, (i) null, 10, 112, false, (java.awt.Component) null, -74, 75);
-          if (null != oj.field_Ub) {
-            if (kh.field_c != ug.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == oj.field_Ub) {
             return false;
           }
+          if (kh.field_c == ug.field_a) {
+            return true;
+          }
+          return false;
         }
+        if (null == oj.field_Ub) {
+          return false;
+        }
+        if (kh.field_c == ug.field_a) {
+          return true;
+        }
+        return false;
     }
 
     public final String toString() {
@@ -55,92 +49,53 @@ final class wl {
         sc stackIn_2_1;
         int stackIn_2_2;
         int stackIn_2_3;
-        eg stackIn_3_0 = null;
-        sc stackIn_3_1 = null;
-        int stackIn_3_2 = 0;
-        int stackIn_3_3 = 0;
-        int stackIn_3_4 = 0;
+        boolean stackIn_3_4 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              stackIn_2_0 = wc.field_f;
-
-              stackIn_2_1 = (sc) (param3);
-
-              stackIn_2_2 = param2;
-
-              stackIn_2_3 = param0;
-
-              if (param4) {
-                stackIn_3_0 = (eg) ((Object) stackIn_2_0);
-                stackIn_3_1 = (sc) ((Object) stackIn_2_1);
-                stackIn_3_2 = stackIn_2_2;
-                stackIn_3_3 = stackIn_2_3;
-                stackIn_3_4 = 0;
-                break L1;
-              } else {
-                stackIn_3_0 = (eg) ((Object) stackIn_2_0);
-                stackIn_3_1 = (sc) ((Object) stackIn_2_1);
-                stackIn_3_2 = stackIn_2_2;
-                stackIn_3_3 = stackIn_2_3;
-                stackIn_3_4 = 1;
-                break L1;
-              }
-            }
-            ((eg) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4 != 0, 1000000, 120);
-            if (param1 == -10510) {
-              break L0;
-            } else {
-              field_b = -121;
-              return;
-            }
+          stackIn_2_0 = wc.field_f;
+          stackIn_2_1 = (sc) (param3);
+          stackIn_2_2 = param2;
+          stackIn_2_3 = param0;
+          stackIn_3_4 = !(param4);
+          ((eg) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4, 1000000, 120);
+          if (param1 == -10510) {
+            return;
           }
+          field_b = -121;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("wl.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("wl.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw kg.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param4 + ')');
+          throw kg.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(pd param0, i param1, int param2, int param3, boolean param4, java.awt.Component param5, int param6, int param7) {
         try {
-            ua.a(param6, param4, 10);
-            ae.field_g = ua.a(param0, param5, 0, param7);
-            ac.field_c = ua.a(param0, param5, 1, param2);
-            hd.field_g = new r();
-            nf.field_e = 1000 * param2 / param6;
-            ac.field_c.a(hd.field_g);
-            vg.field_B = param1;
-            vg.field_B.e(2, c.field_a);
-            ae.field_g.a(vg.field_B);
-            if (param3 <= 104) {
-                field_b = -11;
-            }
+          ua.a(param6, param4, 10);
+          ae.field_g = ua.a(param0, param5, 0, param7);
+          ac.field_c = ua.a(param0, param5, 1, param2);
+          hd.field_g = new r();
+          nf.field_e = 1000 * param2 / param6;
+          ac.field_c.a(hd.field_g);
+          vg.field_B = param1;
+          vg.field_B.e(2, c.field_a);
+          ae.field_g.a(vg.field_B);
+          if (param3 <= 104) {
+            field_b = -11;
+          }
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "wl.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 

@@ -13,23 +13,23 @@ final class nl {
         field_a = null;
         field_e = null;
         if (param0 > -39) {
-            field_d = -54;
+          field_d = -54;
         }
     }
 
     final static void a(int param0, int param1, int param2, mg param3, int param4) {
         try {
-            param3.a(12, -44);
-            param3.b((byte) -60, 17);
-            param3.b((byte) -60, param2);
-            param3.b((byte) -60, param1);
-            param3.a(param4, param0 ^ -21022);
-            if (param0 != 20994) {
-                mg var6 = (mg) null;
-                nl.a(20, -5, -65, (mg) null, -69);
-            }
+          param3.a(12, -44);
+          param3.b((byte) -60, 17);
+          param3.b((byte) -60, param2);
+          param3.b((byte) -60, param1);
+          param3.a(param4, param0 ^ -21022);
+          if (param0 != 20994) {
+            mg var6 = (mg) null;
+            nl.a(20, -5, -65, (mg) null, -69);
+          }
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "nl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

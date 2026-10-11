@@ -15,247 +15,133 @@ abstract class uk {
     abstract byte[] a(byte param0, int param1);
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param4 > 47) {
-          if (param5 >= param0) {
-            if (param0 + param2 > param5) {
-              if (param1 >= param3) {
-                if (param1 >= param3 - -param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param4 <= 47) {
           field_b = (String) null;
-          if (param5 >= param0) {
-            if (param0 + param2 > param5) {
-              if (param1 >= param3) {
-                if (param1 >= param3 - -param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (param5 < param0) {
             return false;
           }
+          if (param0 + param2 <= param5) {
+            return false;
+          }
+          if (param1 < param3) {
+            return false;
+          }
+          if (param1 < param3 + param6) {
+            return true;
+          }
+          return false;
         }
+        if (param5 < param0) {
+          return false;
+        }
+        if (param0 + param2 <= param5) {
+          return false;
+        }
+        if (param1 < param3) {
+          return false;
+        }
+        if (param1 < param3 + param6) {
+          return true;
+        }
+        return false;
     }
 
     public static void b(int param0) {
-        if (param0 >= -12) {
-          field_c = (int[]) null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -12) {
           field_b = null;
           field_a = null;
           field_c = null;
           field_d = null;
           return;
         }
+        field_c = (int[]) null;
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_d = null;
     }
 
     final static boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 27301) {
-          L0: {
-            field_a = (bl) null;
-            if ((tk.field_e ^ -1) >= -251) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((tk.field_e ^ -1) >= -251) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 27301) {
+          return tk.field_e > 250 ? true : false;
         }
+        field_a = (bl) null;
+        return tk.field_e > 250 ? true : false;
     }
 
     final static bd[] a(int param0, int param1, byte param2, int param3, int param4) {
-        if (param2 < 126) {
-          uk.a(-106);
-          return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
-        } else {
+        if (param2 >= 126) {
           return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
         }
+        uk.a(-106);
+        return od.a(3, 105, 1, param0, 1, param4, param3, 1, param1);
     }
 
     final static boolean a(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            var2_int = param1;
-            L1: while (true) {
-              if (8 <= var2_int) {
-                stackIn_9_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (param0[var2_int] != 0) {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var2_int++;
-                  continue L1;
-                }
-              }
+          for (var2_int = param1; 8 > var2_int; var2_int++) {
+            if (param0[var2_int] != 0) {
+              return true;
             }
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("uk.A(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L2;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("uk.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_9_0 != 0;
+          throw wg.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static String a(int param0, int param1) {
-        if (param1 != 9) {
-          if (param0 == 9394) {
-            if ((param1 ^ -1) == -11) {
-              return "levelf2.dat";
-            } else {
-              if (11 == param1) {
-                return "levelf3.dat";
-              } else {
-                if (param1 == 1) {
-                  return "level01.dat";
-                } else {
-                  if (-3 == (param1 ^ -1)) {
-                    return "level02.dat";
-                  } else {
-                    if (param1 != 3) {
-                      if ((param1 ^ -1) == -5) {
-                        return "level04.dat";
-                      } else {
-                        if ((param1 ^ -1) == -6) {
-                          return "level05.dat";
-                        } else {
-                          if (6 == param1) {
-                            return "level06.dat";
-                          } else {
-                            if ((param1 ^ -1) == -8) {
-                              return "level07.dat";
-                            } else {
-                              return "level00.dat";
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      return "level03.dat";
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            uk.a(43, -82, (byte) -21, -101, 0);
-            if ((param1 ^ -1) == -11) {
-              return "levelf2.dat";
-            } else {
-              if (11 == param1) {
-                return "levelf3.dat";
-              } else {
-                if (param1 == 1) {
-                  return "level01.dat";
-                } else {
-                  if (-3 == (param1 ^ -1)) {
-                    return "level02.dat";
-                  } else {
-                    if (param1 != 3) {
-                      if ((param1 ^ -1) == -5) {
-                        return "level04.dat";
-                      } else {
-                        if ((param1 ^ -1) == -6) {
-                          return "level05.dat";
-                        } else {
-                          if (6 == param1) {
-                            return "level06.dat";
-                          } else {
-                            if ((param1 ^ -1) == -8) {
-                              return "level07.dat";
-                            } else {
-                              return "level00.dat";
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      return "level03.dat";
-                    }
-                  }
-                }
-              }
-            }
-          }
-        } else {
+        if (param1 == 9) {
           return "levelf1.dat";
         }
+        if (param0 != 9394) {
+          uk.a(43, -82, (byte) -21, -101, 0);
+        }
+        if (param1 == 10) {
+          return "levelf2.dat";
+        }
+        if (11 == param1) {
+          return "levelf3.dat";
+        }
+        if (param1 == 1) {
+          return "level01.dat";
+        }
+        if (param1 == 2) {
+          return "level02.dat";
+        }
+        if (param1 == 3) {
+          return "level03.dat";
+        }
+        if (param1 == 4) {
+          return "level04.dat";
+        }
+        if (param1 == 5) {
+          return "level05.dat";
+        }
+        if (6 == param1) {
+          return "level06.dat";
+        }
+        if (param1 == 7) {
+          return "level07.dat";
+        }
+        return "level00.dat";
     }
 
     static {

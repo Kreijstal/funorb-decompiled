@@ -17,7 +17,7 @@ final class sb {
         dl.field_g = true;
         ug.field_A.h(0);
         if (param0 >= -121) {
-            return;
+          return;
         }
         m.a(eh.field_c, -121, false);
     }
@@ -27,168 +27,92 @@ final class sb {
         field_e = (int[][]) null;
         field_b = null;
         if (param0 != 16478) {
-            field_f = -83;
+          field_f = -83;
         }
         field_c = null;
     }
 
     final static void a(long param0, ab param1, int param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, String param10, int param11, int param12, boolean param13) {
         try {
-            int stackIn_3_0 = 0;
-            int stackIn_6_0 = 0;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            IOException var15 = null;
-            RuntimeException var15_ref = null;
-            try {
-              L0: {
-                L1: {
-                  ig.field_a = new th(param8);
-                  ed.field_q = new th(param11);
-                  bk.field_a = param12;
-                  if (!param4) {
-                    stackIn_3_0 = 0;
-                    break L1;
-                  } else {
-                    stackIn_3_0 = 1;
-                    break L1;
-                  }
-                }
-                L2: {
-                  qb.field_c = stackIn_3_0 != 0;
-                  ua.field_a = param5;
-                  vl.field_a = param1;
-                  fa.field_a = param0;
-                  ol.field_n = param10;
-                  bl.field_b = param6;
-                  ig.field_b = param7;
-                  mg.field_y = param2;
-                  if (!param13) {
-                    stackIn_6_0 = 0;
-                    break L2;
-                  } else {
-                    stackIn_6_0 = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  hl.field_F = stackIn_6_0 != 0;
-                  nj.field_a = param9;
-                  if (vl.field_a.field_w == null) {
-                    break L3;
-                  } else {
-                    try {
-                      L4: {
-                        kf.field_y = new be(vl.field_a.field_w, 64, 0);
-                        break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var15 = (IOException) (Object) decompiledCaughtException;
-                      throw new RuntimeException(var15.toString());
-                    }
-                    break L3;
-                  }
-                }
-                L5: {
-                  if (param3 == 0) {
-                    break L5;
-                  } else {
-                    sb.b(-85);
-                    break L5;
-                  }
-                }
-                break L0;
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          IOException var15 = null;
+          RuntimeException var15_ref = null;
+          try {
+            ig.field_a = new th(param8);
+            ed.field_q = new th(param11);
+            bk.field_a = param12;
+            qb.field_c = param4;
+            ua.field_a = param5;
+            vl.field_a = param1;
+            fa.field_a = param0;
+            ol.field_n = param10;
+            bl.field_b = param6;
+            ig.field_b = param7;
+            mg.field_y = param2;
+            hl.field_F = param13;
+            nj.field_a = param9;
+            if (vl.field_a.field_w != null) {
+              try {
+                kf.field_y = new be(vl.field_a.field_w, 64, 0);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var15 = (IOException) (Object) decompiledCaughtException;
+                throw new RuntimeException(var15.toString());
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_15_0 = (RuntimeException) (var15_ref);
-
-                stackIn_15_1 = new StringBuilder().append("sb.B(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "{...}";
-                  break L6;
-                }
-              }
-              L7: {
-
-
-                stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',');
-
-                if (param10 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "null";
-                  break L7;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "{...}";
-                  break L7;
-                }
-              }
-              throw ld.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
             }
+            if (param3 != 0) {
+              sb.b(-85);
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = var15_ref;
+            stackIn_15_1 = new StringBuilder().append("sb.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',');
+            if (param10 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw ld.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     static {
-        $cfr$clinit: {
-            long var0;
-            int var2;
-            int var3;
-            field_a = new long[256];
-            field_c = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
-            field_b = "to return to the normal view.";
-            var2 = 0;
-            L0: while (true) {
-              if (var2 >= 256) {
-                field_d = 9;
-                field_e = new int[][]{new int[]{13}, new int[]{11, 12}, new int[]{11, 12, 13}, new int[]{8, 11, 12, 5}, new int[]{9, 13, 6, 7, 10}, new int[]{9, 13, 6, 7, 10, 15}, new int[]{11, 12, 6, 13, 9, 10, 7}, new int[]{2, 11, 12, 6, 9, 10, 7, 15}, new int[]{2, 12, 11, 9, 13, 6, 7, 10, 15}, new int[]{8, 11, 12, 5, 6, 13, 9, 10, 7, 15}, new int[]{0, 1, 2, 3, 4, 5, 12, 11, 8, 9, 6}, new int[]{1, 2, 3, 5, 12, 11, 8, 9, 13, 6, 7, 10}, new int[]{1, 2, 3, 5, 12, 11, 8, 9, 13, 6, 7, 10, 15}, new int[]{0, 1, 2, 3, 4, 5, 12, 11, 8, 9, 13, 6, 7, 10}, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15}};
-                break $cfr$clinit;
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L1: while (true) {
-                  if (8 <= var3) {
-                    field_a[var2] = var0;
-                    var2++;
-                    continue L0;
-                  } else {
-                    if ((1L & var0) == 1L) {
-                      var0 = -3932672073523589310L ^ var0 >>> -647699583;
-                      var3++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var2 = 0;
+        int var3 = 0;
+        long var0;
+        field_a = new long[256];
+        field_c = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
+        field_b = "to return to the normal view.";
+        for (var2 = 0; var2 < 256; var2++) {
+          var0 = (long)var2;
+          for (var3 = 0; 8 > var3; var3++) {
+            if ((1L & var0) == 1L) {
+              var0 = -3932672073523589310L ^ var0 >>> 1;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_a[var2] = var0;
         }
+        field_d = 9;
+        field_e = new int[][]{new int[]{13}, new int[]{11, 12}, new int[]{11, 12, 13}, new int[]{8, 11, 12, 5}, new int[]{9, 13, 6, 7, 10}, new int[]{9, 13, 6, 7, 10, 15}, new int[]{11, 12, 6, 13, 9, 10, 7}, new int[]{2, 11, 12, 6, 9, 10, 7, 15}, new int[]{2, 12, 11, 9, 13, 6, 7, 10, 15}, new int[]{8, 11, 12, 5, 6, 13, 9, 10, 7, 15}, new int[]{0, 1, 2, 3, 4, 5, 12, 11, 8, 9, 6}, new int[]{1, 2, 3, 5, 12, 11, 8, 9, 13, 6, 7, 10}, new int[]{1, 2, 3, 5, 12, 11, 8, 9, 13, 6, 7, 10, 15}, new int[]{0, 1, 2, 3, 4, 5, 12, 11, 8, 9, 13, 6, 7, 10}, new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15}};
     }
 }

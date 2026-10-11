@@ -13,8 +13,8 @@ final class ld extends im {
 
     final static m a(boolean param0) {
         if (param0) {
-            ld.c((byte) -35);
-            return pc.field_e;
+          ld.c((byte) -35);
+          return pc.field_e;
         }
         return pc.field_e;
     }
@@ -24,30 +24,28 @@ final class ld extends im {
     }
 
     final static pb a(int param0, boolean param1) {
-        pb var2;
-        var2 = new pb();
+        pb var2 = new pb();
         hn.field_q.b(var2, -1);
         ik.a(param0, 0);
-        if (param1) {
-          ld.a(15, true);
-          return var2;
-        } else {
+        if (!param1) {
           return var2;
         }
+        ld.a(15, true);
+        return var2;
     }
 
     final ch a(int param0) {
         if (param0 != 0) {
-            return (ch) null;
+          return (ch) null;
         }
         return fe.field_n;
     }
 
     final static void c(byte param0) {
         if (param0 != 13) {
-            field_m = 5;
-            tc.field_A = null;
-            return;
+          field_m = 5;
+          tc.field_A = null;
+          return;
         }
         tc.field_A = null;
     }
@@ -59,18 +57,18 @@ final class ld extends im {
         field_k = null;
         field_l = null;
         field_q = null;
-        int var1 = -71 / ((param0 - -50) / 40);
+        int var1 = -71 / ((param0 + 50) / 40);
     }
 
     final static void a(cm param0, int param1, int param2) {
         try {
-            cc.field_e.b(param0, -1);
-            hb.a(param0, param2, (byte) 92);
-            if (param1 < 89) {
-                field_o = (String) null;
-            }
+          cc.field_e.b(param0, -1);
+          hb.a(param0, param2, (byte) 92);
+          if (param1 < 89) {
+            field_o = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ld.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

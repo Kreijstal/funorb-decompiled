@@ -16,8 +16,8 @@ final class dl {
 
     final static boolean a(boolean param0) {
         if (param0) {
-            dl.a(-127, -88, 106);
-            return ic.field_U;
+          dl.a(-127, -88, 106);
+          return ic.field_U;
         }
         return ic.field_U;
     }
@@ -26,14 +26,12 @@ final class dl {
         field_e = null;
         field_b = null;
         field_a = null;
-        if (param0 != -974314864) {
-          dl.a(-16, -82, 52);
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -974314864) {
           field_h = null;
           return;
         }
+        dl.a(-16, -82, 52);
+        field_h = null;
     }
 
     final void a(int param0, long param1, le param2) {
@@ -41,133 +39,96 @@ final class dl {
         RuntimeException var5_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param2.field_d != null) {
-                param2.b(-27598);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            var5 = this.field_d[(int)((long)(-1 + this.field_i) & param1)];
-            param2.field_d = var5.field_d;
-            param2.field_b = var5;
-            param2.field_d.field_b = param2;
-            param2.field_f = param1;
-            param2.field_b.field_d = param2;
-            if (param0 <= -95) {
-              break L0;
-            } else {
-              field_c = -96;
-              return;
-            }
+          if (param2.field_d != null) {
+            param2.b(-27598);
           }
+          var5 = this.field_d[(int)((long)(-1 + this.field_i) & param1)];
+          param2.field_d = var5.field_d;
+          param2.field_b = var5;
+          param2.field_d.field_b = param2;
+          param2.field_f = param1;
+          param2.field_b.field_d = param2;
+          if (param0 <= -95) {
+            return;
+          }
+          field_c = -96;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
-
-            stackIn_8_1 = new StringBuilder().append("dl.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_8_0 = var5_ref;
+          stackIn_8_1 = new StringBuilder().append("dl.G(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final le b(byte param0) {
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         int var3;
-        Object var4;
-        le var4_ref;
-        Object var8;
-        le var8_ref;
+        le var4;
+        le var8;
         le var11;
         var3 = ZombieDawn.field_J;
-        if (0 < this.field_k) {
-          if (this.field_d[this.field_k + -1] == this.field_j) {
-            L0: while (true) {
-              if (this.field_k < this.field_i) {
-                fieldTemp$2 = this.field_k;
-                this.field_k = this.field_k + 1;
-                var8_ref = this.field_d[fieldTemp$2].field_b;
-                if (this.field_d[this.field_k + -1] == var8_ref) {
-                  continue L0;
-                } else {
-                  this.field_j = var8_ref.field_b;
-                  return var8_ref;
-                }
-              } else {
-                var2 = -85 % ((param0 - 65) / 34);
-                return null;
-              }
-            }
-          } else {
-            var11 = this.field_j;
-            this.field_j = var11.field_b;
-            return var11;
-          }
-        } else {
-          L1: while (true) {
-            if (this.field_k < this.field_i) {
-              fieldTemp$3 = this.field_k;
-              this.field_k = this.field_k + 1;
-              var4_ref = this.field_d[fieldTemp$3].field_b;
-              if (this.field_d[this.field_k + -1] == var4_ref) {
-                continue L1;
-              } else {
-                this.field_j = var4_ref.field_b;
-                return var4_ref;
-              }
-            } else {
+        if (0 >= this.field_k) {
+          do {
+            if (this.field_k >= this.field_i) {
               var2 = -85 % ((param0 - 65) / 34);
               return null;
             }
-          }
+            fieldTemp$1 = this.field_k;
+            this.field_k = this.field_k + 1;
+            var4 = this.field_d[fieldTemp$1].field_b;
+          } while (this.field_d[this.field_k - 1] == var4);
+          this.field_j = var4.field_b;
+          return var4;
         }
+        if (this.field_d[this.field_k - 1] != this.field_j) {
+          var11 = this.field_j;
+          this.field_j = var11.field_b;
+          return var11;
+        }
+        do {
+          if (this.field_k >= this.field_i) {
+            var2 = -85 % ((param0 - 65) / 34);
+            return null;
+          }
+          fieldTemp$0 = this.field_k;
+          this.field_k = this.field_k + 1;
+          var8 = this.field_d[fieldTemp$0].field_b;
+        } while (this.field_d[this.field_k - 1] == var8);
+        this.field_j = var8.field_b;
+        return var8;
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        var3 = rd.a(true, param2);
-        var4 = fb.a(1311979239, param2);
-        if (param0 != 0) {
-          return (int[]) null;
-        } else {
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var3 = rd.a(true, param2);
+        int var4 = fb.a(1311979239, param2);
+        if (param0 == 0) {
           var5 = rd.a(true, param1);
           var6 = fb.a(1311979239, param1);
-          var7 = (int)((long)var5 * (long)var3 >> -974314864);
-          var8 = (int)((long)var3 * (long)var6 >> -292699824);
-          var9 = (int)((long)var4 * (long)var5 >> 1947186064);
-          var10 = (int)((long)var4 * (long)var6 >> -962322544);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
+        return (int[]) null;
     }
 
     final le a(long param0, int param1) {
@@ -176,59 +137,49 @@ final class dl {
         int var6;
         var6 = ZombieDawn.field_J;
         var4 = this.field_d[(int)((long)(this.field_i - 1) & param0)];
-        if (param1 >= 41) {
-          this.field_g = var4.field_b;
-          L0: while (true) {
-            if (var4 != this.field_g) {
-              if ((param0 ^ -1L) != (this.field_g.field_f ^ -1L)) {
-                this.field_g = this.field_g.field_b;
-                continue L0;
-              } else {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_b;
-                return var5;
-              }
-            } else {
-              this.field_g = null;
-              return null;
-            }
-          }
-        } else {
+        if (param1 < 41) {
           return (le) null;
         }
+        this.field_g = var4.field_b;
+        while (true) {
+          if (var4 == this.field_g) {
+            this.field_g = null;
+            return null;
+          }
+          if (~param0 != ~this.field_g.field_f) {
+            this.field_g = this.field_g.field_b;
+            continue;
+          }
+          break;
+        }
+        var5 = this.field_g;
+        this.field_g = this.field_g.field_b;
+        return var5;
     }
 
     final le a(byte param0) {
-        if (param0 != -113) {
-          this.field_i = 55;
-          this.field_k = 0;
-          return this.b((byte) -56);
-        } else {
+        if (param0 == -113) {
           this.field_k = 0;
           return this.b((byte) -56);
         }
+        this.field_i = 55;
+        this.field_k = 0;
+        return this.b((byte) -56);
     }
 
     dl(int param0) {
+        int var2 = 0;
         le dupTemp$1 = null;
-        int var2;
         le var3;
         this.field_k = 0;
         this.field_i = param0;
         this.field_d = new le[param0];
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new le();
-            var3 = dupTemp$1;
-            this.field_d[var2] = dupTemp$1;
-            var3.field_b = var3;
-            var3.field_d = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new le();
+          var3 = dupTemp$1;
+          this.field_d[var2] = dupTemp$1;
+          var3.field_b = var3;
+          var3.field_d = var3;
         }
     }
 

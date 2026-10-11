@@ -11,21 +11,13 @@ class wf extends oh {
     int field_i;
 
     final static void a(int param0) {
-        String var1;
-        String var2;
-        if (param0 != -15887) {
-          return;
-        } else {
-          L0: {
-            if (la.field_h != null) {
-              var2 = la.field_h;
-              var1 = var2;
-              bf.a(113, re.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
-              la.field_h = null;
-              break L0;
-            } else {
-              break L0;
-            }
+        String var2 = null;
+        if (param0 == -15887) {
+          if (la.field_h != null) {
+            var2 = la.field_h;
+            String var1 = var2;
+            bf.a(113, re.a(ei.field_b, param0 ^ -12062, new String[]{var2}));
+            la.field_h = null;
           }
           return;
         }
@@ -35,18 +27,18 @@ class wf extends oh {
         field_m = null;
         field_h = null;
         if (param0 != -122) {
-            wf.a((byte) 113);
-            field_k = null;
-            return;
+          wf.a((byte) 113);
+          field_k = null;
+          return;
         }
         field_k = null;
     }
 
     wf(ln param0) {
         try {
-            this.field_n = param0;
+          this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "wf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

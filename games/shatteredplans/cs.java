@@ -41,11 +41,11 @@ final class cs extends oh {
         var13.e();
         gf.d(0, 0, 16, param1, param4);
         Object var14 = null;
-        if (!(0 >= param5)) {
-            var16 = new bi(16, 16);
-            var14 = var16;
-            var16.e();
-            gf.d(0, 0, 16, 16, param5);
+        if (0 < param5) {
+          var16 = new bi(16, 16);
+          var14 = var16;
+          var16.e();
+          gf.d(0, 0, 16, 16, param5);
         }
         gf.a(var18, var7, var8);
         return new bi[]{var10, var11, var10, var9, (bi) (var14), var9, var12, var13, var12};
@@ -53,24 +53,22 @@ final class cs extends oh {
 
     cs(ln param0, ln param1, int param2) {
         try {
-            this.field_k = param1;
-            this.field_m = param2;
-            this.field_n = param0;
+          this.field_k = param1;
+          this.field_m = param2;
+          this.field_n = param0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0) {
         an.field_b = new aa();
-        if (param0 <= 64) {
-          cs.a(14);
-          ae.field_f.b(an.field_b, -88);
-          return;
-        } else {
+        if (param0 > 64) {
           ae.field_f.b(an.field_b, -88);
           return;
         }
+        cs.a(14);
+        ae.field_f.b(an.field_b, -88);
     }
 
     static {

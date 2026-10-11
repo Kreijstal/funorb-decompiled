@@ -8,27 +8,23 @@ final class bc {
     static boolean field_d;
 
     final static void a(long param0, byte param1) {
-        int var3;
         if (param0 <= 0L) {
           return;
-        } else {
-          var3 = 19 % ((-39 - param1) / 53);
-          if (param0 % 10L == 0L) {
-            fe.a(-1L + param0, -95);
-            fe.a(1L, -120);
-            return;
-          } else {
-            fe.a(param0, -74);
-            return;
-          }
         }
+        int var3 = 19 % ((-39 - param1) / 53);
+        if (param0 % 10L != 0L) {
+          fe.a(param0, -74);
+          return;
+        }
+        fe.a(-1L + param0, -95);
+        fe.a(1L, -120);
     }
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
         if (param0 != 10) {
-            bc.a(-47L, (byte) -116);
+          bc.a(-47L, (byte) -116);
         }
     }
 

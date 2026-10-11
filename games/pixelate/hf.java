@@ -23,8 +23,8 @@ final class hf extends fa {
 
     final static boolean b(byte param0) {
         if (param0 != 100) {
-            field_q = -107;
-            return sm.field_l;
+          field_q = -107;
+          return sm.field_l;
         }
         return sm.field_l;
     }

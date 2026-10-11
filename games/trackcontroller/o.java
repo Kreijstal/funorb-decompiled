@@ -22,26 +22,7 @@ final class o {
         ja.field_c[22] = af.field_n;
         ja.field_c[7] = rh.field_H;
         ja.field_c[6] = rh.field_H;
-        if (param0 != -46) {
-          o.a((byte) -99);
-          ja.field_c[21] = af.field_n;
-          ja.field_c[14] = nh.field_d;
-          ja.field_c[13] = ua.field_K;
-          ja.field_c[4] = fj.field_R;
-          ja.field_c[19] = fc.field_a;
-          ja.field_c[3] = c.field_b;
-          ja.field_c[27] = dj.field_a;
-          ja.field_c[10] = nh.field_d;
-          ja.field_c[0] = jd.field_h;
-          ja.field_c[24] = og.field_qb;
-          ja.field_c[23] = mj.field_f;
-          ja.field_c[16] = oi.field_c;
-          id.field_i = ka.field_e;
-          vi.field_a = nf.field_h + ad.field_s + ".";
-          ja.field_c[5] = q.field_j;
-          ud.field_b = ag.field_g + ad.field_s + ".";
-          return;
-        } else {
+        if (param0 == -46) {
           ja.field_c[21] = af.field_n;
           ja.field_c[14] = nh.field_d;
           ja.field_c[13] = ua.field_K;
@@ -60,12 +41,29 @@ final class o {
           ud.field_b = ag.field_g + ad.field_s + ".";
           return;
         }
+        o.a((byte) -99);
+        ja.field_c[21] = af.field_n;
+        ja.field_c[14] = nh.field_d;
+        ja.field_c[13] = ua.field_K;
+        ja.field_c[4] = fj.field_R;
+        ja.field_c[19] = fc.field_a;
+        ja.field_c[3] = c.field_b;
+        ja.field_c[27] = dj.field_a;
+        ja.field_c[10] = nh.field_d;
+        ja.field_c[0] = jd.field_h;
+        ja.field_c[24] = og.field_qb;
+        ja.field_c[23] = mj.field_f;
+        ja.field_c[16] = oi.field_c;
+        id.field_i = ka.field_e;
+        vi.field_a = nf.field_h + ad.field_s + ".";
+        ja.field_c[5] = q.field_j;
+        ud.field_b = ag.field_g + ad.field_s + ".";
     }
 
     public static void b(byte param0) {
         field_b = null;
         if (param0 <= 13) {
-            o.a((byte) 109);
+          o.a((byte) 109);
         }
     }
 

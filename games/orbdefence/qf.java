@@ -14,18 +14,16 @@ final class qf extends ca {
     int field_i;
 
     public static void c(int param0) {
-        if (param0 != 32) {
-          qf.c(72);
-          field_o = null;
-          field_h = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == 32) {
           field_o = null;
           field_h = null;
           field_k = null;
           return;
         }
+        qf.c(72);
+        field_o = null;
+        field_h = null;
+        field_k = null;
     }
 
     private qf() throws Throwable {

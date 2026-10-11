@@ -19,149 +19,57 @@ final class ll extends hg {
     }
 
     final static void b(boolean param0) {
-        ll var1;
-        c var2;
-        var1 = (ll) ((Object) jl.field_n.a(param0));
-        if (var1 == null) {
-          nm.a(16);
-          return;
-        } else {
+        c var2 = null;
+        ll var1 = (ll) (jl.field_n.a(param0));
+        if (var1 != null) {
           var2 = om.field_g;
           var1.field_j = new int[]{var2.g(-5053), var2.g(-5053), var2.g(-5053), var2.g(-5053)};
           var1.c((byte) -66);
           return;
         }
+        nm.a(16);
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         int var5;
-        L0: {
-          var5 = EscapeVector.field_A;
-          if (param3 > 0) {
-            if (30 <= param3) {
-              if ((param3 ^ -1) >= -81) {
-                L1: {
-                  ea.field_f.e(8, param1);
-                  if (param2 == 8) {
-                    break L1;
-                  } else {
-                    ll.a(114, -28, -15, 125);
-                    break L1;
-                  }
-                }
-                if (param3 > 50) {
-                  if (80 <= param3) {
-                    if ((param3 ^ -1) < -81) {
-                      if (95 > param3) {
-                        mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      f.field_o.e(632 + -f.field_o.field_A, param0);
-                      return;
-                    }
-                  } else {
-                    mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
-                    return;
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                if (-96 < (param3 ^ -1)) {
-                  L2: {
-                    mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 + -115);
-                    if (param2 == 8) {
-                      break L2;
-                    } else {
-                      ll.a(114, -28, -15, 125);
-                      break L2;
-                    }
-                  }
-                  if (param3 > 50) {
-                    if (80 <= param3) {
-                      if ((param3 ^ -1) < -81) {
-                        if (95 <= param3) {
-                          return;
-                        } else {
-                          mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                          return;
-                        }
-                      } else {
-                        f.field_o.e(632 + -f.field_o.field_A, param0);
-                        return;
-                      }
-                    } else {
-                      mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  break L0;
-                }
-              }
+        var5 = EscapeVector.field_A;
+        if (param3 > 0) {
+          if (30 <= param3) {
+            if (param3 <= 80) {
+              ea.field_f.e(8, param1);
             } else {
-              mf.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
-              break L0;
+              if (param3 < 95) {
+                mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 - 115);
+              }
             }
           } else {
-            break L0;
+            mf.a(param1, 8, 60 - param3 * 2, ea.field_f, param2 ^ -97);
           }
         }
-        if (param2 == 8) {
-          if (param3 > 50) {
-            if (80 <= param3) {
-              if ((param3 ^ -1) < -81) {
-                if (95 <= param3) {
-                  return;
-                } else {
-                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                  return;
-                }
-              } else {
-                f.field_o.e(632 + -f.field_o.field_A, param0);
-                return;
-              }
-            } else {
-              mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param2 != 8) {
           ll.a(114, -28, -15, 125);
-          if (param3 > 50) {
-            if (80 <= param3) {
-              if ((param3 ^ -1) < -81) {
-                if (95 <= param3) {
-                  return;
-                } else {
-                  mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
-                  return;
-                }
-              } else {
-                f.field_o.e(632 + -f.field_o.field_A, param0);
-                return;
-              }
-            } else {
-              mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
-              return;
-            }
-          } else {
-            return;
-          }
         }
+        if (param3 <= 50) {
+          return;
+        }
+        if (80 > param3) {
+          mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
+          return;
+        }
+        if (param3 <= 80) {
+          f.field_o.e(632 - f.field_o.field_A, param0);
+          return;
+        }
+        if (95 <= param3) {
+          return;
+        }
+        mf.a(param0, -f.field_o.field_A + 632, (param3 - 80) * 4, f.field_o, param2 ^ -108);
     }
 
     public static void a(byte param0) {
         field_h = null;
         if (param0 != -77) {
-            field_h = (String) null;
+          field_h = (String) null;
         }
     }
 
@@ -169,70 +77,38 @@ final class ll extends hg {
     }
 
     final static void a(boolean param0) {
-        CharSequence var2;
-        CharSequence var3;
-        c stackIn_2_0 = null;
-        c stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        L0: {
-          stackIn_2_0 = om.field_g;
-
-          if (param0) {
-            stackIn_3_0 = (c) ((Object) stackIn_2_0);
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = (c) ((Object) stackIn_2_0);
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        ck.field_r = ((c) (Object) stackIn_3_0).c(stackIn_3_1 != 0);
-        if (!param0) {
-          field_h = (String) null;
-          var2 = (CharSequence) ((Object) ck.field_r);
-          cc.field_k = sf.a(-101, var2);
-          return;
-        } else {
+        CharSequence var3 = null;
+        ck.field_r = om.field_g.c(!param0 ? true : false);
+        if (param0) {
           var3 = (CharSequence) ((Object) ck.field_r);
           cc.field_k = sf.a(-101, var3);
           return;
         }
+        field_h = (String) null;
+        CharSequence var2 = (CharSequence) ((Object) ck.field_r);
+        cc.field_k = sf.a(-101, var2);
     }
 
     final static boolean d(int param0) {
-        L0: {
-          if (0 == (hi.field_r ^ -1)) {
-            if (bo.a(30000, 1)) {
-              hi.field_r = om.field_g.e(param0 ^ 10550);
-              om.field_g.field_m = 0;
-              break L0;
-            } else {
-              return false;
-            }
-          } else {
-            break L0;
+        if (hi.field_r == -1) {
+          if (!bo.a(30000, 1)) {
+            return false;
           }
+          hi.field_r = om.field_g.e(param0 ^ 10550);
+          om.field_g.field_m = 0;
         }
-        L1: {
-          if (1 == (hi.field_r ^ -1)) {
-            if (!bo.a(30000, 2)) {
-              return false;
-            } else {
-              hi.field_r = om.field_g.f(1952);
-              om.field_g.field_m = 0;
-              break L1;
-            }
-          } else {
-            break L1;
+        if (hi.field_r == -2) {
+          if (!bo.a(30000, 2)) {
+            return false;
           }
+          hi.field_r = om.field_g.f(1952);
+          om.field_g.field_m = 0;
         }
-        if (param0 != 10550) {
-          field_h = (String) null;
-          return bo.a(30000, hi.field_r);
-        } else {
+        if (param0 == 10550) {
           return bo.a(30000, hi.field_r);
         }
+        field_h = (String) null;
+        return bo.a(30000, hi.field_r);
     }
 
     static {

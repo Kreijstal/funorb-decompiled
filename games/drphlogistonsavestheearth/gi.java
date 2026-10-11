@@ -11,37 +11,25 @@ class gi {
     gi field_b;
 
     final boolean c(int param0) {
-        int stackIn_4_0 = 0;
-        if (param0 != -1387) {
-          field_f = 76;
-          if (this.field_b != null) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (this.field_b == null) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -1387) {
+          return this.field_b != null ? true : false;
         }
+        field_f = 76;
+        if (this.field_b == null) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(ag param0, int param1) {
         try {
-            if (param1 != 3408) {
-                ag var3 = (ag) null;
-                gi.a((ag) null, -47);
-            }
-            ej.field_a.b(param0);
+          if (param1 != 3408) {
+            ag var3 = (ag) null;
+            gi.a((ag) null, -47);
+          }
+          ej.field_a.b(param0);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "gi.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -49,27 +37,24 @@ class gi {
         field_a = (byte[][][]) null;
         field_d = null;
         if (param0 != 10589) {
-            field_d = (he[]) null;
+          field_d = (he[]) null;
         }
     }
 
     final void a(int param0) {
         if (null == this.field_b) {
           return;
-        } else {
-          this.field_b.field_e = this.field_e;
-          this.field_e.field_b = this.field_b;
-          if (param0 != -16175) {
-            gi.b(21);
-            this.field_b = null;
-            this.field_e = null;
-            return;
-          } else {
-            this.field_b = null;
-            this.field_e = null;
-            return;
-          }
         }
+        this.field_b.field_e = this.field_e;
+        this.field_e.field_b = this.field_b;
+        if (param0 == -16175) {
+          this.field_b = null;
+          this.field_e = null;
+          return;
+        }
+        gi.b(21);
+        this.field_b = null;
+        this.field_e = null;
     }
 
     static {

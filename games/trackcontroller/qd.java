@@ -8,34 +8,26 @@ final class qd {
     static String field_a;
 
     final static void a(boolean param0, int param1) {
-        byte[] var3;
-        L0: {
-          kc.field_b = param1;
-          if (null != fj.field_P) {
-            fj.field_P.d(16384, param1);
-            break L0;
-          } else {
-            break L0;
-          }
+        byte[] var3 = null;
+        byte[] var3Lifetime1;
+        kc.field_b = param1;
+        if (null != fj.field_P) {
+          fj.field_P.d(16384, param1);
         }
-        if (da.field_n == null) {
+        if (da.field_n != null) {
+          da.field_n.a(param1, -65);
           if (param0) {
             var3 = (byte[]) null;
             qd.a((byte[]) null, (byte) 113);
             return;
-          } else {
-            return;
           }
-        } else {
-          da.field_n.a(param1, -65);
-          if (!param0) {
-            return;
-          } else {
-            var3 = (byte[]) null;
-            qd.a((byte[]) null, (byte) 113);
-            return;
-          }
+          return;
         }
+        if (!param0) {
+          return;
+        }
+        var3Lifetime1 = (byte[]) null;
+        qd.a((byte[]) null, (byte) 113);
     }
 
     final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
@@ -43,56 +35,35 @@ final class qd {
         RuntimeException var4_ref = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         Exception var4_ref2 = null;
         try {
-          L0: {
-            try {
-              L1: {
-                var4 = param0.getGraphics();
-                ia.field_b.a(-11, var4, param1, param2);
-                var4.dispose();
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var4_ref2 = (Exception) (Object) decompiledCaughtException;
-                param0.repaint();
-                break L2;
-              }
-            }
-            if (param3 == 2901) {
-              break L0;
-            } else {
-              field_a = (String) null;
-              return;
-            }
+          try {
+            var4 = param0.getGraphics();
+            ia.field_b.a(-11, var4, param1, param2);
+            var4.dispose();
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var4_ref2 = (Exception) (Object) decompiledCaughtException;
+            param0.repaint();
           }
+          if (param3 == 2901) {
+            return;
+          }
+          field_a = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4_ref);
-
-            stackIn_8_1 = new StringBuilder().append("qd.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_8_0 = var4_ref;
+          stackIn_8_1 = new StringBuilder().append("qd.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -104,42 +75,27 @@ final class qd {
         byte[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = param0.length;
-            var3 = new byte[var2_int];
-            pd.a(param0, 0, var3, 0, var2_int);
-            var4 = -115 % ((param1 - 2) / 52);
-            stackIn_1_0 = (byte[]) (var3);
-            break L0;
-          }
+          var2_int = param0.length;
+          var3 = new byte[var2_int];
+          pd.a(param0, 0, var3, 0, var2_int);
+          var4 = -115 % ((param1 - 2) / 52);
+          stackIn_1_0 = var3;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
-
-            stackIn_4_1 = new StringBuilder().append("qd.A(");
-
-            if (param0 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("qd.A(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ',' + param1 + ')');
+          throw sl.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     public static void a(int param0) {
@@ -147,8 +103,8 @@ final class qd {
         field_a = null;
         field_c = null;
         if (param0 <= 98) {
-            byte[] var2 = (byte[]) null;
-            qd.a((byte[]) null, (byte) 37);
+          byte[] var2 = (byte[]) null;
+          qd.a((byte[]) null, (byte) 37);
         }
     }
 

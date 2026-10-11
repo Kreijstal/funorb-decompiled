@@ -12,9 +12,9 @@ final class cb {
     public static void a(byte param0) {
         field_d = null;
         if (param0 <= 19) {
-            cb.a((byte) 112);
-            field_c = null;
-            return;
+          cb.a((byte) 112);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -26,59 +26,37 @@ final class cb {
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            param0.a(true);
-            var3 = 19 % ((-78 - param1) / 48);
-            var2 = (na) ((Object) vh.field_a.b(12623));
-            L1: while (true) {
-              L2: {
-                if (var2 == null) {
-                  break L2;
-                } else {
-                  if (!var2.a(param0, 2)) {
-                    break L2;
-                  } else {
-                    var2 = (na) ((Object) vh.field_a.a(0));
-                    continue L1;
-                  }
-                }
-              }
-              if (var2 != null) {
-                da.a(var2, 20, param0);
-                break L0;
-              } else {
-                vh.field_a.b(param0, -1);
-                return;
-              }
+          param0.a(true);
+          var3 = 19 % ((-78 - param1) / 48);
+          var2 = (na) (vh.field_a.b(12623));
+          while (var2 != null) {
+            if (var2.a(param0, 2)) {
+              var2 = (na) (vh.field_a.a(0));
+              continue;
             }
+            break;
           }
+          if (var2 != null) {
+            da.a(var2, 20, param0);
+            return;
+          }
+          vh.field_a.b(param0, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var2_ref);
-
-            stackIn_11_1 = new StringBuilder().append("cb.A(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_11_0 = var2_ref;
+          stackIn_11_1 = new StringBuilder().append("cb.A(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

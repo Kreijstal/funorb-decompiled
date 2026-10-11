@@ -27,7 +27,7 @@ class wka extends eta {
     public static void c(int param0) {
         field_c = null;
         if (param0 != -31068) {
-            field_b = 0.14074614644050598f;
+          field_b = 0.14074614644050598f;
         }
     }
 

@@ -14,7 +14,7 @@ final class vc extends nb implements jk {
 
     final void a(byte param0, int param1, int param2, int param3) {
         super.a(param0, param1, param2, param3);
-        this.field_E.a(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j + -28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
+        this.field_E.a(this.field_L, this.field_t + param2 + 14, 10 + param1 + this.field_o, this.field_j - 28, this.field_v, 16777215, -1, 0, 0, this.field_E.field_E);
     }
 
     vc(uc param0, le param1, String param2) {
@@ -22,13 +22,13 @@ final class vc extends nb implements jk {
         int var4_int = 0;
         this.field_J = 0;
         try {
-            this.field_E = param1;
-            this.field_L = param2;
-            this.field_F = param0;
-            var4_int = null == this.field_L ? 0 : this.field_E.a(this.field_L, 260, this.field_E.field_E);
-            this.a(var4_int + 22, 288, true, 0, 0);
+          this.field_E = param1;
+          this.field_L = param2;
+          this.field_F = param0;
+          var4_int = null == this.field_L ? 0 : this.field_E.a(this.field_L, 260, this.field_E.field_E);
+          this.a(var4_int + 22, 288, true, 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class vc extends nb implements jk {
         hc.field_fb = param4;
         sb.field_f = param3;
         if (param0 != -5094) {
-            field_D = (vi) null;
+          field_D = (vi) null;
         }
     }
 
@@ -49,84 +49,52 @@ final class vc extends nb implements jk {
         kf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var4 = new kf(param1, param2);
-              var4.field_i = (rd) ((Object) new v());
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_G = (String) null;
-                break L1;
-              }
-            }
-            var5 = -2 + this.field_v;
-            this.a(34 + this.field_v, this.field_j, true, 0, 0);
-            var4.a(30, this.field_j - 14, true, var5, 7);
-            this.b((byte) -106, var4);
-            stackIn_3_0 = (kf) (var4);
-            break L0;
+          var4 = new kf(param1, param2);
+          var4.field_i = (rd) ((Object) new v());
+          if (param0 != -1) {
+            field_G = (String) null;
           }
+          var5 = -2 + this.field_v;
+          this.a(34 + this.field_v, this.field_j, true, 0, 0);
+          var4.a(30, this.field_j - 14, true, var5, 7);
+          this.b((byte) -106, var4);
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var4_ref);
-
-            stackIn_6_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("vc.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_7_0), stackIn_10_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(String param0, int param1, int param2) {
         int var4_int = 0;
         try {
-            var4_int = this.field_J;
-            this.b(102, var4_int - -1);
-            int var5 = 61 / ((param2 - 47) / 58);
-            this.field_H[var4_int] = this.a(-1, param0, (vd) (this));
-            this.field_B[var4_int] = param1;
+          var4_int = this.field_J;
+          this.b(102, var4_int + 1);
+          int var5 = 61 / ((param2 - 47) / 58);
+          this.field_H[var4_int] = this.a(-1, param0, (vd) (this));
+          this.field_B[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -137,68 +105,39 @@ final class vc extends nb implements jk {
         vd var9 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == 215535458) {
-                break L1;
-              } else {
-                var9 = (vd) null;
-                this.a(-94, (String) null, (vd) null);
-                break L1;
-              }
-            }
-            var6_int = 0;
-            L2: while (true) {
-              L3: {
-                if (this.field_J <= var6_int) {
-                  break L3;
-                } else {
-                  if (this.field_H[var6_int] == param4) {
-                    var7 = this.field_B[var6_int];
-                    if (0 == (var7 ^ -1)) {
-                      this.field_F.g(true);
-                      break L3;
-                    } else {
-                      ni.a(82, this.field_B[var6_int]);
-                      break L3;
-                    }
-                  } else {
-                    var6_int++;
-                    continue L2;
-                  }
-                }
-              }
-              break L0;
-            }
+          if (param2 != 215535458) {
+            var9 = (vd) null;
+            this.a(-94, (String) null, (vd) null);
           }
+          for (var6_int = 0; this.field_J > var6_int; var6_int++) {
+            if (this.field_H[var6_int] != param4) {
+              continue;
+            }
+            var7 = this.field_B[var6_int];
+            if (var7 == -1) {
+              this.field_F.g(true);
+            } else {
+              ni.a(82, this.field_B[var6_int]);
+            }
+            break;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
-
-            stackIn_14_1 = new StringBuilder().append("vc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L4;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("vc.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -206,19 +145,19 @@ final class vc extends nb implements jk {
         int var5 = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
         if (this.field_J >= param1) {
-            return;
+          return;
         }
         kf[] var7 = new kf[param1];
         kf[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_J; var5++) {
-            var7[var5] = this.field_H[var5];
-            var4[var5] = this.field_B[var5];
+          var7[var5] = this.field_H[var5];
+          var4[var5] = this.field_B[var5];
         }
         this.field_H = var3;
         this.field_J = param1;
         if (param0 < 69) {
-            return;
+          return;
         }
         this.field_B = var4;
     }
@@ -226,7 +165,7 @@ final class vc extends nb implements jk {
     public static void g(int param0) {
         field_G = null;
         if (param0 != -16531) {
-            return;
+          return;
         }
         field_D = null;
         field_K = null;

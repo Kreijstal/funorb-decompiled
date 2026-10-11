@@ -17,62 +17,40 @@ final class kp extends lm {
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == -5) {
-                break L1;
-              } else {
-                kp.b((byte) -35);
-                break L1;
-              }
+          if (param0 != -5) {
+            kp.b((byte) -35);
+          }
+          while (true) {
+            var3_int = param1.f(255);
+            if (var3_int == 0) {
+              return;
             }
-            L2: while (true) {
-              var3_int = param1.f(255);
-              if (-1 == (var3_int ^ -1)) {
-                break L0;
-              } else {
-                this.a(var3_int, 83, param1);
-                continue L2;
-              }
-            }
+            this.a(var3_int, 83, param1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("kp.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("kp.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     private final void a(int param0, int param1, we param2) {
         int[] array$0 = null;
+        int var8 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -80,112 +58,69 @@ final class kp extends lm {
         int var5 = 0;
         int var6 = 0;
         wm var7 = null;
-        int var8 = 0;
         int var9 = 0;
+        int var4_intLifetime1;
         var9 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (1 != param0) {
-                if (2 == param0) {
-                  var4_int = param2.f(255);
-                  this.field_u = new int[var4_int];
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var4_int <= var5) {
-                      break L1;
-                    } else {
-                      this.field_u[var5] = param2.a((byte) -115);
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  if ((param0 ^ -1) == -4) {
-                    var4_int = param2.f(255);
-                    this.field_B = new int[var4_int][];
-                    this.field_x = new int[var4_int];
-                    var5 = 0;
-                    L3: while (true) {
-                      if (var5 >= var4_int) {
-                        break L1;
-                      } else {
-                        L4: {
-                          var6 = param2.a((byte) 52);
-                          var7 = go.a(var6, -52);
-                          if (var7 == null) {
-                            break L4;
-                          } else {
-                            this.field_x[var5] = var6;
-                            array$0 = new int[var7.field_e];
-                            this.field_B[var5] = array$0;
-                            var8 = 0;
-                            L5: while (true) {
-                              if (var7.field_e <= var8) {
-                                break L4;
-                              } else {
-                                this.field_B[var5][var8] = param2.a((byte) -118);
-                                var8++;
-                                continue L5;
-                              }
-                            }
-                          }
-                        }
-                        var5++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    if (-5 != (param0 ^ -1)) {
-                      break L1;
-                    } else {
-                      break L1;
+          if (1 != param0) {
+            if (2 == param0) {
+              var4_int = param2.f(255);
+              this.field_u = new int[var4_int];
+              for (var5 = 0; var4_int > var5; var5++) {
+                this.field_u[var5] = param2.a((byte) -115);
+              }
+            } else {
+              if (param0 == 3) {
+                var4_int = param2.f(255);
+                this.field_B = new int[var4_int][];
+                this.field_x = new int[var4_int];
+                for (var5 = 0; var5 < var4_int; var5++) {
+                  var6 = param2.a((byte) 52);
+                  var7 = go.a(var6, -52);
+                  if (var7 != null) {
+                    this.field_x[var5] = var6;
+                    array$0 = new int[var7.field_e];
+                    this.field_B[var5] = array$0;
+                    for (var8 = 0; var7.field_e > var8; var8++) {
+                      this.field_B[var5][var8] = param2.a((byte) -118);
                     }
                   }
                 }
               } else {
-                this.field_y = dd.a(param2.h(5), (byte) -117, '<');
-                break L1;
+                if (param0 != 4) {
+                }
               }
             }
-            var4_int = -125 / ((param1 - -17) / 39);
-            break L0;
+          } else {
+            this.field_y = dd.a(param2.h(5), (byte) -117, '<');
           }
+          var4_intLifetime1 = -125 / ((param1 + 17) / 39);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var4);
-
-            stackIn_21_1 = new StringBuilder().append("kp.G(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_21_0 = var4;
+          stackIn_21_1 = new StringBuilder().append("kp.G(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
     final static void b(byte param0) {
         byte[] var2 = null;
         if (param0 != 74) {
-            kp.d((byte) -64);
+          kp.d((byte) -64);
         }
         if (jg.a((byte) 83)) {
-            ef.field_a = true;
+          ef.field_a = true;
         } else {
-            var2 = bo.a(param0 ^ 181);
-            byte[] var1 = var2;
-            hm.a(param0 + 41, var2, 6);
+          var2 = bo.a(param0 ^ 181);
+          byte[] var1 = var2;
+          hm.a(param0 + 41, var2, 6);
         }
     }
 
@@ -195,7 +130,7 @@ final class kp extends lm {
         field_t = null;
         field_z = null;
         if (param0 != -58) {
-            kp.b((byte) -3);
+          kp.b((byte) -3);
         }
         field_w = null;
     }
@@ -204,22 +139,22 @@ final class kp extends lm {
         int var2 = 0;
         int var3 = Pixelate.field_H ? 1 : 0;
         if (param0 <= 123) {
-            this.field_B = (int[][]) null;
+          this.field_B = (int[][]) null;
         }
-        if (!(null == this.field_u)) {
-            for (var2 = 0; this.field_u.length > var2; var2++) {
-                this.field_u[var2] = bq.a(this.field_u[var2], 32768);
-            }
+        if (null != this.field_u) {
+          for (var2 = 0; this.field_u.length > var2; var2++) {
+            this.field_u[var2] = bq.a(this.field_u[var2], 32768);
+          }
         }
     }
 
     final static void c(byte param0) {
         int var1 = 75 / ((20 - param0) / 48);
-        if (!(to.field_t == null)) {
-            to.field_t.f();
+        if (to.field_t != null) {
+          to.field_t.f();
         }
-        if (!(ib.field_h == null)) {
-            ib.field_h.f();
+        if (ib.field_h != null) {
+          ib.field_h.f();
         }
     }
 
@@ -230,16 +165,16 @@ final class kp extends lm {
         int var4 = Pixelate.field_H ? 1 : 0;
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
-        if (!(null != this.field_y)) {
-            return "";
+        if (null == this.field_y) {
+          return "";
         }
         StringBuilder discarded$15 = var5.append(this.field_y[0]);
         if (param0 != -54) {
-            this.field_B = (int[][]) null;
+          this.field_B = (int[][]) null;
         }
         for (var3 = 1; this.field_y.length > var3; var3++) {
-            discarded$16 = var2.append("...");
-            discarded$17 = var5.append(this.field_y[var3]);
+          discarded$16 = var2.append("...");
+          discarded$17 = var5.append(this.field_y[var3]);
         }
         return var2.toString();
     }
@@ -249,13 +184,14 @@ final class kp extends lm {
 
     static {
         int var0 = 0;
+        int var0Lifetime1;
         field_w = new int[32];
         field_z = new int[32];
         for (var0 = 0; field_z.length > var0; var0++) {
-            field_z[var0] = 66561 * ((var0 << -78131386) / field_z.length);
+          field_z[var0] = 66561 * ((var0 << 6) / field_z.length);
         }
-        for (var0 = 0; var0 < field_w.length; var0++) {
-            field_w[var0] = (var0 << 1402089382) / field_w.length * 262401;
+        for (var0Lifetime1 = 0; var0Lifetime1 < field_w.length; var0Lifetime1++) {
+          field_w[var0Lifetime1] = (var0Lifetime1 << 6) / field_w.length * 262401;
         }
         field_A = "Please check if address is correct";
     }

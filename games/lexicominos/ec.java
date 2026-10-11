@@ -14,10 +14,10 @@ final class ec implements Iterator {
     public final Object next() {
         Object var1 = this.field_a;
         if (var1 != this.field_d.field_e) {
-            this.field_a = ((ca) (var1)).field_l;
+          this.field_a = ((ca) (var1)).field_l;
         } else {
-            this.field_a = null;
-            var1 = null;
+          this.field_a = null;
+          var1 = null;
         }
         this.field_f = (ca) (var1);
         return var1;
@@ -26,11 +26,11 @@ final class ec implements Iterator {
     ec(bg param0) {
         this.field_f = null;
         try {
-            this.field_d = param0;
-            this.field_f = null;
-            this.field_a = this.field_d.field_e.field_l;
+          this.field_d = param0;
+          this.field_f = null;
+          this.field_a = this.field_d.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,13 +38,13 @@ final class ec implements Iterator {
         field_b = null;
         field_e = null;
         if (!param0) {
-            field_b = (sh) null;
+          field_b = (sh) null;
         }
     }
 
     public final void remove() {
-        if (!(this.field_f != null)) {
-            throw new IllegalStateException();
+        if (this.field_f == null) {
+          throw new IllegalStateException();
         }
         this.field_f.b(12);
         this.field_f = null;
@@ -52,7 +52,7 @@ final class ec implements Iterator {
 
     final static int a(int param0) {
         if (param0 != -28617) {
-            return -26;
+          return -26;
         }
         return tb.field_b;
     }

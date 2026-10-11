@@ -14,7 +14,7 @@ final class al extends nm {
         field_n = null;
         field_l = null;
         if (param0 != 28391) {
-            return;
+          return;
         }
         field_m = null;
     }
@@ -25,7 +25,7 @@ final class al extends nm {
     }
 
     final static void a(int param0, int param1) {
-        gj.field_c[param0].c((640 + -gj.field_c[param0].field_x) / 2, param1);
+        gj.field_c[param0].c((640 - gj.field_c[param0].field_x) / 2, param1);
     }
 
     al() {

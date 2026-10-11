@@ -9,23 +9,21 @@ final class bp {
     static Vector field_b;
 
     public static void a(byte param0) {
-        if (param0 <= 75) {
-          field_a = (ko) null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 > 75) {
           field_a = null;
           field_c = null;
           field_b = null;
           return;
         }
+        field_a = (ko) null;
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static int a(int param0) {
         if (param0 != 6) {
-            return -98;
+          return -98;
         }
         return ro.field_n;
     }

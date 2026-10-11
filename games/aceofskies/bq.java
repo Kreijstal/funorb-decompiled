@@ -5,18 +5,15 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
     private int field_f;
 
     final synchronized int b(int param0) {
-        int var2;
-        java.awt.event.MouseWheelEvent var3;
-        var2 = this.field_f;
-        if (param0 != 12) {
-          var3 = (java.awt.event.MouseWheelEvent) null;
-          this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-          this.field_f = 0;
-          return var2;
-        } else {
+        int var2 = this.field_f;
+        if (param0 == 12) {
           this.field_f = 0;
           return var2;
         }
+        java.awt.event.MouseWheelEvent var3 = (java.awt.event.MouseWheelEvent) null;
+        this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
+        this.field_f = 0;
+        return var2;
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
@@ -26,9 +23,9 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, boolean param1) {
         if (param1) {
-            this.b(-92);
-            param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.b(-92);
+          param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -40,7 +37,7 @@ final class bq extends qg implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, int param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 > -44) {
-            this.field_f = 100;
+          this.field_f = 100;
         }
     }
 }

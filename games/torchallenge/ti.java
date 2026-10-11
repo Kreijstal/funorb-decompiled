@@ -10,27 +10,24 @@ final class ti {
 
     final static void a(String param0, int param1) {
         try {
-            if (param1 > -90) {
-                field_d = 111;
-            }
+          if (param1 > -90) {
+            field_d = 111;
+          }
         } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "ti.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.a((Throwable) ((Object) runtimeException), "ti.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
-        String var2;
-        if (!param0) {
-          var2 = (String) null;
-          ti.a((String) null, 103);
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0) {
           field_c = null;
           field_a = null;
           return;
         }
+        String var2 = (String) null;
+        ti.a((String) null, 103);
+        field_c = null;
+        field_a = null;
     }
 
     static {

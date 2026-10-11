@@ -22,21 +22,21 @@ final class de extends ah {
 
     final void a(byte param0, byte[] param1) {
         try {
-            this.field_a = java.nio.ByteBuffer.allocateDirect(param1.length);
-            if (param0 != 68) {
-                this.field_a = (java.nio.ByteBuffer) null;
-            }
-            this.field_a.position(0);
-            this.field_a.put(param1);
+          this.field_a = java.nio.ByteBuffer.allocateDirect(param1.length);
+          if (param0 != 68) {
+            this.field_a = (java.nio.ByteBuffer) null;
+          }
+          this.field_a.position(0);
+          this.field_a.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void b(int param0) {
         field_d = null;
         if (param0 != 11041) {
-            return;
+          return;
         }
         field_e = null;
     }

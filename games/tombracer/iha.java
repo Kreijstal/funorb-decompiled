@@ -19,80 +19,49 @@ final class iha {
         int var15;
         int var16;
         int var17;
-        L0: while (true) {
-          if (param11 >= 0) {
-            return;
-          } else {
-            field_a = field_g;
-            field_f = field_c;
-            var14 = param12;
-            L1: while (true) {
-              if (var14 >= 0) {
-                param7 = param7 + param13;
-                param11++;
-                field_h = field_h + param9;
-                field_i = field_i + param10;
-                continue L0;
-              } else {
-                L2: {
-                  param1 = field_f - field_h >> 16;
-                  if (param1 >= -param2) {
-                    if (param1 <= param2) {
-                      param0 = field_a + field_i >> 16;
-                      if (param0 >= -param2) {
-                        if (param0 <= param5 + param2) {
-                          L3: {
-                            if (param0 >= param2) {
-                              if (param0 <= param5 - param2) {
-                                stackIn_16_0 = param8;
-                                break L3;
-                              } else {
-                                stackIn_16_0 = (param5 + param2 - param0) * field_d >> 8;
-                                break L3;
-                              }
-                            } else {
-                              stackIn_16_0 = (param0 + param2) * field_d >> 8;
-                              break L3;
-                            }
-                          }
-                          L4: {
-                            param3 = stackIn_16_0;
-                            param4 = param1 * param3 * field_e >> 8;
-                            if (param4 < 0) {
-                              stackIn_19_0 = field_b[param3 + param4];
-                              break L4;
-                            } else {
-                              stackIn_19_0 = field_b[param3 - param4];
-                              break L4;
-                            }
-                          }
-                          param1 = stackIn_19_0;
-                          var15 = param1;
-                          var16 = param6[param7];
-                          var17 = 256 - (var15 & 255);
-                          param6[param7] = (var16 & 16711935) * var17 >> 8 & 16711935 | (var16 & 65280) * var17 >> 8 & 65280;
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      } else {
-                        break L2;
-                      }
-                    } else {
-                      break L2;
-                    }
+        while (param11 < 0) {
+          field_a = field_g;
+          field_f = field_c;
+          var14 = param12;
+          while (var14 < 0) {
+            param1 = field_f - field_h >> 16;
+            if (param1 >= -param2 &&
+              param1 <= param2) {
+              param0 = field_a + field_i >> 16;
+              if (param0 >= -param2 &&
+                param0 <= param5 + param2) {
+                if (param0 >= param2) {
+                  if (param0 <= param5 - param2) {
+                    stackIn_16_0 = param8;
                   } else {
-                    break L2;
+                    stackIn_16_0 = (param5 + param2 - param0) * field_d >> 8;
                   }
+                } else {
+                  stackIn_16_0 = (param0 + param2) * field_d >> 8;
                 }
-                var14++;
-                param7++;
-                field_a = field_a + param9;
-                field_f = field_f + param10;
-                continue L1;
+                param3 = stackIn_16_0;
+                param4 = param1 * param3 * field_e >> 8;
+                if (param4 < 0) {
+                  stackIn_19_0 = field_b[param3 + param4];
+                } else {
+                  stackIn_19_0 = field_b[param3 - param4];
+                }
+                param1 = stackIn_19_0;
+                var15 = param1;
+                var16 = param6[param7];
+                var17 = 256 - (var15 & 255);
+                param6[param7] = (var16 & 16711935) * var17 >> 8 & 16711935 | (var16 & 65280) * var17 >> 8 & 65280;
               }
             }
+            var14++;
+            param7++;
+            field_a = field_a + param9;
+            field_f = field_f + param10;
           }
+          param7 = param7 + param13;
+          param11++;
+          field_h = field_h + param9;
+          field_i = field_i + param10;
         }
     }
 
@@ -102,6 +71,7 @@ final class iha {
         int var8 = param3 - param1;
         int var9 = (int)Math.sqrt((double)(var7 * var7 + var8 * var8));
         int var10 = (int)(65536.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
+        int var15Lifetime1;
         var7 = var7 * var10;
         var8 = var8 * var10;
         int var11 = param0;
@@ -109,30 +79,30 @@ final class iha {
         int var13 = param2;
         int var14 = param3;
         if (var11 > var13) {
-            var15 = var11;
-            var11 = var13;
-            var13 = var15;
+          var15 = var11;
+          var11 = var13;
+          var13 = var15;
         }
         if (var12 > var14) {
-            var15 = var12;
-            var12 = var14;
-            var14 = var15;
+          var15Lifetime1 = var12;
+          var12 = var14;
+          var14 = var15Lifetime1;
         }
         var11 = var11 - param4;
         var12 = var12 - param4;
         var13 = var13 + param4;
         var14 = var14 + param4;
         if (var11 < bea.field_b) {
-            var11 = bea.field_b;
+          var11 = bea.field_b;
         }
         if (var12 < bea.field_h) {
-            var12 = bea.field_h;
+          var12 = bea.field_h;
         }
         if (var13 > bea.field_d) {
-            var13 = bea.field_d;
+          var13 = bea.field_d;
         }
         if (var14 > bea.field_k) {
-            var14 = bea.field_k;
+          var14 = bea.field_k;
         }
         field_e = 256 / param4;
         field_d = param5 * 128 / param4;

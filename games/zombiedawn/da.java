@@ -13,59 +13,42 @@ final class da extends le {
     public static void c(byte param0) {
         field_j = null;
         field_l = null;
-        if (param0 <= 55) {
-          field_h = -12;
-          field_m = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 > 55) {
           field_m = null;
           field_i = null;
           return;
         }
+        field_h = -12;
+        field_m = null;
+        field_i = null;
     }
 
     final static void d(byte param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         am var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        int decompiledRegionSelector0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = ZombieDawn.field_J;
         try {
-          L0: {
-            if (param0 == -48) {
-              var1 = dp.field_e;
-              L1: while (true) {
-                if (!jh.a((byte) 103)) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var1.j(11, 8);
-                  fieldTemp$2 = var1.field_j + 1;
-                  var1.field_j = var1.field_j + 1;
-                  var2 = fieldTemp$2;
-                  dn.a(var1, 84);
-                  dp.field_e.d(-128, var1.field_j + -var2);
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -48) {
+            return;
           }
+          var1 = dp.field_e;
+          while (jh.a((byte) 103)) {
+            var1.j(11, 8);
+            fieldTemp$0 = var1.field_j + 1;
+            var1.field_j = var1.field_j + 1;
+            var2 = fieldTemp$0;
+            dn.a(var1, 84);
+            dp.field_e.d(-128, var1.field_j - var2);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw sh.a((Throwable) ((Object) var1_ref), "da.A(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

@@ -17,170 +17,152 @@ final class bf {
 
     final static long d(byte param0) {
         if (param0 < 117) {
-            bf.c((byte) 7);
-            return rl.a((byte) -104) + -ob.field_v;
+          bf.c((byte) 7);
+          return rl.a((byte) -104) - ob.field_v;
         }
-        return rl.a((byte) -104) + -ob.field_v;
+        return rl.a((byte) -104) - ob.field_v;
     }
 
     final static void b(byte param0) {
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var1 = 256;
-        uh.field_t[0] = (var1 >> -1787850847) - ml.field_l[0];
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var1 = 256;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        uh.field_t[0] = (var1 >> 1) - ml.field_l[0];
         uh.field_t[1] = -ml.field_l[1];
         uh.field_t[2] = -ml.field_l[2] + var1;
-        var2 = uh.field_t[1] * ml.field_l[4] + ml.field_l[3] * uh.field_t[0] - -(ml.field_l[5] * uh.field_t[2]) >> 1879067847;
-        var3 = uh.field_t[2] * ml.field_l[8] + (ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6]) >> -1426670841;
-        uh.field_t[2] = ml.field_l[10] * uh.field_t[1] + uh.field_t[0] * ml.field_l[9] + ml.field_l[11] * uh.field_t[2] >> -945182032;
-        if (uh.field_t[2] != 0) {
+        int var2 = uh.field_t[1] * ml.field_l[4] + ml.field_l[3] * uh.field_t[0] + ml.field_l[5] * uh.field_t[2] >> 7;
+        int var3 = uh.field_t[2] * ml.field_l[8] + (ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6]) >> 7;
+        uh.field_t[2] = ml.field_l[10] * uh.field_t[1] + uh.field_t[0] * ml.field_l[9] + ml.field_l[11] * uh.field_t[2] >> 16;
+        if (uh.field_t[2] == 0) {
+          uh.field_t[2] = -1;
           uh.field_t[1] = var3 / uh.field_t[2] + 240;
-          if (param0 >= 75) {
-            uh.field_t[0] = var2 / uh.field_t[2] + 320;
-            if (0 >= uh.field_t[2]) {
-              return;
-            } else {
-              var4 = uh.field_t[0];
-              uh.field_t[0] = -ml.field_l[0];
-              var5 = uh.field_t[1];
-              uh.field_t[2] = var1 + -ml.field_l[2];
-              uh.field_t[1] = -ml.field_l[1];
-              var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-              var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-              uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-              if (-1 != (uh.field_t[2] ^ -1)) {
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              } else {
-                uh.field_t[2] = -1;
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              }
-            }
-          } else {
+          if (param0 < 75) {
             field_c = (vh) null;
-            uh.field_t[0] = var2 / uh.field_t[2] + 320;
-            if (0 >= uh.field_t[2]) {
-              return;
-            } else {
-              var4 = uh.field_t[0];
-              uh.field_t[0] = -ml.field_l[0];
-              var5 = uh.field_t[1];
-              uh.field_t[2] = var1 + -ml.field_l[2];
-              uh.field_t[1] = -ml.field_l[1];
-              var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-              var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-              uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-              if (-1 == (uh.field_t[2] ^ -1)) {
-                uh.field_t[2] = -1;
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              } else {
-                uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-                uh.field_t[1] = var7 / uh.field_t[2] + 240;
-                if (uh.field_t[2] <= 0) {
-                  return;
-                } else {
-                  qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                  return;
-                }
-              }
-            }
-          }
-        } else {
-          L0: {
-            uh.field_t[2] = -1;
-            uh.field_t[1] = var3 / uh.field_t[2] + 240;
-            if (param0 >= 75) {
-              break L0;
-            } else {
-              field_c = (vh) null;
-              break L0;
-            }
           }
           uh.field_t[0] = var2 / uh.field_t[2] + 320;
-          if (0 >= uh.field_t[2]) {
+          if (!(0 < uh.field_t[2])) {
             return;
-          } else {
-            var4 = uh.field_t[0];
-            uh.field_t[0] = -ml.field_l[0];
-            var5 = uh.field_t[1];
-            uh.field_t[2] = var1 + -ml.field_l[2];
-            uh.field_t[1] = -ml.field_l[1];
-            var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> -299591705;
-            var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> -629509593;
-            uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] - -(uh.field_t[1] * ml.field_l[10])) >> -478222608;
-            if (-1 == (uh.field_t[2] ^ -1)) {
-              uh.field_t[2] = -1;
-              uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-              uh.field_t[1] = var7 / uh.field_t[2] + 240;
-              if (uh.field_t[2] <= 0) {
-                return;
-              } else {
-                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                return;
-              }
-            } else {
-              uh.field_t[0] = 320 - -(var6 / uh.field_t[2]);
-              uh.field_t[1] = var7 / uh.field_t[2] + 240;
-              if (uh.field_t[2] <= 0) {
-                return;
-              } else {
-                qk.field_d = tj.c(uh.field_t[0] + -var4, var5 + -uh.field_t[1], 4096) << 643325251;
-                return;
-              }
-            }
           }
+          var4 = uh.field_t[0];
+          uh.field_t[0] = -ml.field_l[0];
+          var5 = uh.field_t[1];
+          uh.field_t[2] = var1 - ml.field_l[2];
+          uh.field_t[1] = -ml.field_l[1];
+          var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
+          var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
+          uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
+          if (uh.field_t[2] != 0) {
+            uh.field_t[0] = 320 + var6 / uh.field_t[2];
+            uh.field_t[1] = var7 / uh.field_t[2] + 240;
+            if (uh.field_t[2] > 0) {
+              qk.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+              return;
+            }
+            return;
+          }
+          uh.field_t[2] = -1;
+          uh.field_t[0] = 320 + var6 / uh.field_t[2];
+          uh.field_t[1] = var7 / uh.field_t[2] + 240;
+          if (uh.field_t[2] > 0) {
+            qk.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+            return;
+          }
+          return;
+        }
+        uh.field_t[1] = var3 / uh.field_t[2] + 240;
+        if (param0 < 75) {
+          field_c = (vh) null;
+          uh.field_t[0] = var2 / uh.field_t[2] + 320;
+          if (!(0 < uh.field_t[2])) {
+            return;
+          }
+          var4Lifetime1 = uh.field_t[0];
+          uh.field_t[0] = -ml.field_l[0];
+          var5Lifetime1 = uh.field_t[1];
+          uh.field_t[2] = var1 - ml.field_l[2];
+          uh.field_t[1] = -ml.field_l[1];
+          var6Lifetime1 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
+          var7Lifetime1 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
+          uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
+          if (uh.field_t[2] != 0) {
+            uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
+            uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
+            if (uh.field_t[2] > 0) {
+              qk.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+              return;
+            }
+            return;
+          }
+          uh.field_t[2] = -1;
+          uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
+          uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
+          if (uh.field_t[2] > 0) {
+            qk.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+            return;
+          }
+          return;
+        }
+        uh.field_t[0] = var2 / uh.field_t[2] + 320;
+        if (!(0 < uh.field_t[2])) {
+          return;
+        }
+        var4Lifetime2 = uh.field_t[0];
+        uh.field_t[0] = -ml.field_l[0];
+        var5Lifetime2 = uh.field_t[1];
+        uh.field_t[2] = var1 - ml.field_l[2];
+        uh.field_t[1] = -ml.field_l[1];
+        var6Lifetime2 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
+        var7Lifetime2 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
+        uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
+        if (uh.field_t[2] == 0) {
+          uh.field_t[2] = -1;
+          uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
+          uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
+          if (uh.field_t[2] > 0) {
+            qk.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+            return;
+          }
+          return;
+        }
+        uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
+        uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
+        if (uh.field_t[2] > 0) {
+          qk.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+          return;
         }
     }
 
     final int a(int param0) {
-        if (param0 <= 82) {
-          this.a((byte) -110);
-          return (this.field_f + this.field_a) / 2;
-        } else {
+        if (param0 > 82) {
           return (this.field_f + this.field_a) / 2;
         }
+        this.a((byte) -110);
+        return (this.field_f + this.field_a) / 2;
     }
 
     public static void c(byte param0) {
-        if (param0 < 28) {
-          field_k = -55;
-          field_e = null;
-          field_c = null;
-          field_i = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 >= 28) {
           field_e = null;
           field_c = null;
           field_i = null;
           field_h = null;
           return;
         }
+        field_k = -55;
+        field_e = null;
+        field_c = null;
+        field_i = null;
+        field_h = null;
     }
 
     bf(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -193,12 +175,11 @@ final class bf {
     }
 
     final int a(byte param0) {
-        if (param0 != -127) {
-          this.field_j = 107;
-          return (this.field_l + this.field_j) / 2;
-        } else {
+        if (param0 == -127) {
           return (this.field_l + this.field_j) / 2;
         }
+        this.field_j = 107;
+        return (this.field_l + this.field_j) / 2;
     }
 
     static {

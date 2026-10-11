@@ -20,131 +20,137 @@ final class ea extends ve {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         if (!param2) {
-            ea.f((byte) 111);
-            if (0 == param3) {
-                if (param1 == on.field_h) {
-                    if ((param3 ^ -1) != -2) {
-                        if (2 != param3) {
-                            return;
-                        }
-                        if (param1 == hd.field_b) {
-                            return;
-                        }
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                    }
-                    if (ra.field_m == param1) {
-                        if (2 != param3) {
-                            return;
-                        }
-                        if (param1 == hd.field_b) {
-                            return;
-                        }
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                    }
-                    ui.field_s = true;
-                    ra.field_m = param1;
-                    ub.a(param0, false);
-                    if (2 != param3) {
-                        return;
-                    }
-                    if (param1 != hd.field_b) {
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                    }
-                    return;
-                }
-                ui.field_s = true;
-                on.field_h = param1;
-                ub.a(param0, !param2 ? true : false);
-            }
-            if ((param3 ^ -1) == -2 && ra.field_m != param1) {
-                ui.field_s = true;
-                ra.field_m = param1;
-                ub.a(param0, false);
-                if (2 == param3 && param1 != hd.field_b) {
-                    hd.field_b = param1;
-                    ui.field_s = true;
-                    ub.a(param0, false);
-                    return;
-                }
-                return;
-            }
-            if (2 != param3) {
-                return;
-            }
-            if (param1 == hd.field_b) {
-                return;
-            }
-            hd.field_b = param1;
-            ui.field_s = true;
-            ub.a(param0, false);
-            return;
-        }
-        if (0 == param3) {
+          ea.f((byte) 111);
+          if (0 == param3) {
             if (param1 == on.field_h) {
-                if ((param3 ^ -1) == -2 && ra.field_m != param1) {
-                    ui.field_s = true;
-                    ra.field_m = param1;
-                    ub.a(param0, false);
-                    if (2 == param3 && param1 != hd.field_b) {
-                        hd.field_b = param1;
-                        ui.field_s = true;
-                        ub.a(param0, false);
-                        return;
-                    }
-                    return;
+              if (param3 != 1) {
+                if (2 != param3) {
+                  return;
                 }
-                if (2 == param3 && param1 != hd.field_b) {
-                    hd.field_b = param1;
-                    ui.field_s = true;
-                    ub.a(param0, false);
-                    return;
+                if (param1 == hd.field_b) {
+                  return;
                 }
-                return;
-            }
-            ui.field_s = true;
-            on.field_h = param1;
-            ub.a(param0, !param2 ? true : false);
-        }
-        if ((param3 ^ -1) == -2 && ra.field_m != param1) {
-            ui.field_s = true;
-            ra.field_m = param1;
-            ub.a(param0, false);
-            if (2 == param3 && param1 != hd.field_b) {
                 hd.field_b = param1;
                 ui.field_s = true;
                 ub.a(param0, false);
                 return;
+              }
+              if (ra.field_m == param1) {
+                if (2 != param3) {
+                  return;
+                }
+                if (param1 == hd.field_b) {
+                  return;
+                }
+                hd.field_b = param1;
+                ui.field_s = true;
+                ub.a(param0, false);
+                return;
+              }
+              ui.field_s = true;
+              ra.field_m = param1;
+              ub.a(param0, false);
+              if (2 != param3) {
+                return;
+              }
+              if (param1 != hd.field_b) {
+                hd.field_b = param1;
+                ui.field_s = true;
+                ub.a(param0, false);
+                return;
+              }
+              return;
+            }
+            ui.field_s = true;
+            on.field_h = param1;
+            ub.a(param0, !param2 ? true : false);
+          }
+          if (param3 == 1 &&
+            ra.field_m != param1) {
+            ui.field_s = true;
+            ra.field_m = param1;
+            ub.a(param0, false);
+            if (2 == param3 &&
+              param1 != hd.field_b) {
+              hd.field_b = param1;
+              ui.field_s = true;
+              ub.a(param0, false);
+              return;
             }
             return;
+          }
+          if (2 != param3) {
+            return;
+          }
+          if (param1 == hd.field_b) {
+            return;
+          }
+          hd.field_b = param1;
+          ui.field_s = true;
+          ub.a(param0, false);
+          return;
         }
-        if (2 == param3 && param1 != hd.field_b) {
+        if (0 == param3) {
+          if (param1 == on.field_h) {
+            if (param3 == 1 &&
+              ra.field_m != param1) {
+              ui.field_s = true;
+              ra.field_m = param1;
+              ub.a(param0, false);
+              if (2 == param3 &&
+                param1 != hd.field_b) {
+                hd.field_b = param1;
+                ui.field_s = true;
+                ub.a(param0, false);
+                return;
+              }
+              return;
+            }
+            if (2 == param3 &&
+              param1 != hd.field_b) {
+              hd.field_b = param1;
+              ui.field_s = true;
+              ub.a(param0, false);
+              return;
+            }
+            return;
+          }
+          ui.field_s = true;
+          on.field_h = param1;
+          ub.a(param0, !param2 ? true : false);
+        }
+        if (param3 == 1 &&
+          ra.field_m != param1) {
+          ui.field_s = true;
+          ra.field_m = param1;
+          ub.a(param0, false);
+          if (2 == param3 &&
+            param1 != hd.field_b) {
             hd.field_b = param1;
             ui.field_s = true;
             ub.a(param0, false);
             return;
+          }
+          return;
+        }
+        if (2 == param3 &&
+          param1 != hd.field_b) {
+          hd.field_b = param1;
+          ui.field_s = true;
+          ub.a(param0, false);
+          return;
         }
     }
 
     final byte[] c(int param0) {
-        if (!this.field_p) {
-          if (param0 > -11) {
-            this.c(-122);
-            return this.field_z;
-          } else {
-            return this.field_z;
-          }
-        } else {
+        if (this.field_p) {
           throw new RuntimeException();
         }
+        if (param0 <= -11) {
+          return this.field_z;
+        }
+        this.c(-122);
+        return this.field_z;
     }
 
     public static void f(byte param0) {
@@ -164,14 +170,14 @@ final class ea extends ve {
 
     final int e(byte param0) {
         if (param0 > -71) {
-            field_B = (String) null;
-            if (!(!this.field_p)) {
-                return 0;
-            }
-            return 100;
-        }
-        if (!(!this.field_p)) {
+          field_B = (String) null;
+          if (this.field_p) {
             return 0;
+          }
+          return 100;
+        }
+        if (this.field_p) {
+          return 0;
         }
         return 100;
     }

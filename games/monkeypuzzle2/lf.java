@@ -9,177 +9,119 @@ final class lf {
     static volatile int field_a;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 == -19864) {
-          if (param5 <= param1) {
-            if (param5 + param4 > param1) {
-              if (param6 <= param2) {
-                if (param6 - -param3 <= param2) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -19864) {
           return false;
         }
+        if (param5 > param1) {
+          return false;
+        }
+        if (param5 + param4 <= param1) {
+          return false;
+        }
+        if (param6 > param2) {
+          return false;
+        }
+        if (param6 + param3 > param2) {
+          return true;
+        }
+        return false;
     }
 
     final static int a(int param0) {
         try {
-            int stackIn_14_0 = 0;
-            int stackIn_26_0 = 0;
-            int stackIn_31_0 = 0;
-            int stackIn_35_0 = 0;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var1_int = 0;
-            IOException var1 = null;
-            gk var2 = null;
-            if (4 <= lg.field_n.field_b) {
-              if (-1 != lg.field_n.field_a) {
-                if (1 == (lg.field_n.field_a ^ -1)) {
-                  return 4;
-                } else {
-                  return 1;
-                }
-              } else {
-                return 3;
-              }
-            } else {
-              try {
-                L0: {
-                  L1: {
-                    if (ii.field_T != 0) {
-                      break L1;
-                    } else {
-                      kd.field_a = rk.field_g.a(fi.field_d, 0, oh.field_c);
-                      ii.field_T = ii.field_T + 1;
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if (ii.field_T != 1) {
-                      break L2;
-                    } else {
-                      if (2 == kd.field_a.field_g) {
-                        stackIn_14_0 = dh.a(true, -1);
-                        decompiledRegionSelector0 = 0;
-                        break L0;
-                      } else {
-                        if ((kd.field_a.field_g ^ -1) != -2) {
-                          break L2;
-                        } else {
-                          ii.field_T = ii.field_T + 1;
-                          break L2;
-                        }
-                      }
-                    }
-                  }
-                  L3: {
-                    if (ii.field_T == 2) {
-                      pg.field_a = new id((java.net.Socket) (kd.field_a.field_b), rk.field_g);
-                      var2 = new gk(13);
-                      qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
-                      var2.b(15, -49152);
-                      var2.a(param0 + -803539347, mk.field_f);
-                      pg.field_a.a(var2.field_g, 0, (byte) 93, 13);
-                      ii.field_T = ii.field_T + 1;
-                      wi.field_f = 30000L + pf.a(0);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (ii.field_T == param0) {
-                      if ((pg.field_a.c(72) ^ -1) >= -1) {
-                        if (wi.field_f < pf.a(param0 ^ 3)) {
-                          stackIn_31_0 = dh.a(true, -2);
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        } else {
-                          break L4;
-                        }
-                      } else {
-                        var1_int = pg.field_a.a(-16840);
-                        if (0 != var1_int) {
-                          stackIn_26_0 = dh.a(true, var1_int);
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          ii.field_T = ii.field_T + 1;
-                          break L4;
-                        }
-                      }
-                    } else {
-                      break L4;
-                    }
-                  }
-                  if ((ii.field_T ^ -1) == -5) {
-                    lg.field_n.a(-105, jf.field_i, pg.field_a);
-                    kd.field_a = null;
-                    pg.field_a = null;
-                    ii.field_T = 0;
-                    stackIn_35_0 = 0;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    return -1;
-                  }
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var1 = (IOException) (Object) decompiledCaughtException;
-                return dh.a(true, -3);
-              }
-              if (decompiledRegionSelector0 == 0) {
+          int stackIn_14_0 = 0;
+          int stackIn_26_0 = 0;
+          int stackIn_31_0 = 0;
+          int stackIn_35_0 = 0;
+          Throwable decompiledCaughtException = null;
+          int var1_int = 0;
+          IOException var1 = null;
+          gk var2 = null;
+          if (4 <= lg.field_n.field_b) {
+            if (-1 == lg.field_n.field_a) {
+              return 3;
+            }
+            if (lg.field_n.field_a == -2) {
+              return 4;
+            }
+            return 1;
+          }
+          try {
+            if (ii.field_T == 0) {
+              kd.field_a = rk.field_g.a(fi.field_d, 0, oh.field_c);
+              ii.field_T = ii.field_T + 1;
+            }
+            if (ii.field_T == 1) {
+              if (2 == kd.field_a.field_g) {
+                stackIn_14_0 = dh.a(true, -1);
                 return stackIn_14_0;
-              } else {
-                if (decompiledRegionSelector0 == 1) {
-                  return stackIn_26_0;
-                } else {
-                  if (decompiledRegionSelector0 == 2) {
-                    return stackIn_31_0;
-                  } else {
-                    return stackIn_35_0;
-                  }
-                }
+              }
+              if (kd.field_a.field_g == 1) {
+                ii.field_T = ii.field_T + 1;
               }
             }
+            if (ii.field_T == 2) {
+              pg.field_a = new id((java.net.Socket) (kd.field_a.field_b), rk.field_g);
+              var2 = new gk(13);
+              qi.a(fl.field_d, var2, fa.field_q, false, rb.field_eb);
+              var2.b(15, -49152);
+              var2.a(param0 - 803539347, mk.field_f);
+              pg.field_a.a(var2.field_g, 0, (byte) 93, 13);
+              ii.field_T = ii.field_T + 1;
+              wi.field_f = 30000L + pf.a(0);
+            }
+            if (ii.field_T == param0) {
+              if (pg.field_a.c(72) <= 0) {
+                if (wi.field_f < pf.a(param0 ^ 3)) {
+                  stackIn_31_0 = dh.a(true, -2);
+                  return stackIn_31_0;
+                }
+              } else {
+                var1_int = pg.field_a.a(-16840);
+                if (0 != var1_int) {
+                  stackIn_26_0 = dh.a(true, var1_int);
+                  return stackIn_26_0;
+                }
+                ii.field_T = ii.field_T + 1;
+              }
+            }
+            if (ii.field_T != 4) {
+              return -1;
+            }
+            lg.field_n.a(-105, jf.field_i, pg.field_a);
+            kd.field_a = null;
+            pg.field_a = null;
+            ii.field_T = 0;
+            stackIn_35_0 = 0;
+            return stackIn_35_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (IOException) (Object) decompiledCaughtException;
+            return dh.a(true, -3);
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static void a(int param0, int param1) {
-        hb var2;
-        var2 = gf.field_c;
+        hb var2 = gf.field_c;
         var2.b(true, param1);
         var2.b(1, -49152);
-        var2.b(0, param0 + -74349);
-        if (param0 != 25197) {
-          field_a = -114;
-          return;
-        } else {
+        var2.b(0, param0 - 74349);
+        if (param0 == 25197) {
           return;
         }
+        field_a = -114;
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            field_b = (String) null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

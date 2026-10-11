@@ -23,9 +23,9 @@ abstract class ic extends gi {
 
     final void a(int[] param0, int param1, int param2) {
         if (this.field_h) {
-            this.b(param0, param1, param2);
+          this.b(param0, param1, param2);
         } else {
-            this.d(param2);
+          this.d(param2);
         }
     }
 

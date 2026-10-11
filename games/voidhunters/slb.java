@@ -7,7 +7,7 @@ final class slb {
 
     public static void a(byte param0) {
         if (param0 != 13) {
-            return;
+          return;
         }
         field_b = null;
     }

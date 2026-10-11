@@ -20,14 +20,12 @@ abstract class kc {
         field_a = null;
         field_d = null;
         field_e = null;
-        if (param0 != 1) {
-          kc.a(-52);
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 1) {
           field_g = null;
           return;
         }
+        kc.a(-52);
+        field_g = null;
     }
 
     static {

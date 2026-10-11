@@ -11,7 +11,7 @@ final class ak {
         field_b = null;
         field_c = null;
         if (param0) {
-            field_a = (ea[]) null;
+          field_a = (ea[]) null;
         }
     }
 

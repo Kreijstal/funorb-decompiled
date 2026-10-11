@@ -14,7 +14,7 @@ final class vc {
 
     public static void a(boolean param0) {
         if (param0) {
-            vc.a(true);
+          vc.a(true);
         }
         field_b = (int[][]) null;
         field_f = null;
@@ -25,47 +25,30 @@ final class vc {
 
     final static boolean a(int param0) {
         if (param0 != 0) {
-            return true;
+          return true;
         }
         return gi.field_c;
     }
 
     static {
-        $cfr$clinit: {
-            long var0;
-            int var2;
-            int var3;
-            field_g = new long[256];
-            var2 = 0;
-            L0: while (true) {
-              if (-257 >= (var2 ^ -1)) {
-                field_c = new java.util.zip.CRC32();
-                field_a = 0;
-                field_b = new int[][]{new int[]{16, 48}, new int[]{16, 27}};
-                field_d = new boolean[][][]{new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, true}, new boolean[]{true, true, true, true, true, true}, new boolean[]{false, true}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}, new boolean[][]{new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, true, true, false, true, false}, new boolean[]{false, false, false, false, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, true, true, true, true, true}, new boolean[]{false, false, true}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}};
-                break $cfr$clinit;
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L1: while (true) {
-                  if (var3 >= 8) {
-                    field_g[var2] = var0;
-                    var2++;
-                    continue L0;
-                  } else {
-                    if (1L == (var0 & 1L)) {
-                      var0 = -3932672073523589310L ^ var0 >>> -1530602751;
-                      var3++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var2 = 0;
+        int var3 = 0;
+        long var0;
+        field_g = new long[256];
+        for (var2 = 0; var2 < 256; var2++) {
+          var0 = (long)var2;
+          for (var3 = 0; var3 < 8; var3++) {
+            if (1L == (var0 & 1L)) {
+              var0 = -3932672073523589310L ^ var0 >>> 1;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_g[var2] = var0;
         }
+        field_c = new java.util.zip.CRC32();
+        field_a = 0;
+        field_b = new int[][]{new int[]{16, 48}, new int[]{16, 27}};
+        field_d = new boolean[][][]{new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, true}, new boolean[]{true, true, true, true, true, true}, new boolean[]{false, true}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}, new boolean[][]{new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false, true, true, false, true, false}, new boolean[]{false, false, false, false, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, true}, new boolean[]{false, true}, new boolean[]{false, false, false, true}, new boolean[]{false, true, true, true, true, true}, new boolean[]{false, false, true}, new boolean[]{false}, new boolean[]{true, true, true, true, true, true}}};
     }
 }

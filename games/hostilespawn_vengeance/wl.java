@@ -12,72 +12,52 @@ final class wl {
         field_d = null;
         field_a = null;
         if (param0 < 109) {
-            wl.a(58);
+          wl.a(58);
         }
     }
 
     final static int b(int param0) {
+        int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
-        int var2 = 0;
         int var3 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            var1_int = 0;
-            var2 = 0;
-            L1: while (true) {
-              if (-7 >= (var2 ^ -1)) {
-                L2: {
-                  if (param0 == 25685) {
-                    break L2;
-                  } else {
-                    wl.c(-10);
-                    break L2;
-                  }
-                }
-                stackIn_7_0 = var1_int;
-                break L0;
-              } else {
-                var1_int = var1_int + al.field_U[var2];
-                var2++;
-                continue L1;
-              }
-            }
+          var1_int = 0;
+          for (var2 = 0; var2 < 6; var2++) {
+            var1_int = var1_int + al.field_U[var2];
           }
+          if (param0 != 25685) {
+            wl.c(-10);
+          }
+          stackIn_7_0 = var1_int;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw wg.a((Throwable) ((Object) var1), "wl.B(" + param0 + ')');
         }
-        return stackIn_7_0;
     }
 
     final static na c(int param0) {
-        if (param0 != 11) {
-          return (na) null;
-        } else {
-          L0: {
-            if (q.field_j == null) {
-              q.field_j = new na();
-              q.field_j.a(jd.field_s, (byte) 99);
-              q.field_j.field_a = 2763306;
-              q.field_j.field_f = 7697781;
-              q.field_j.field_i = jn.field_G;
-              q.field_j.field_l = 4;
-              q.field_j.field_g = 5;
-              q.field_j.field_o = 14;
-              q.field_j.field_p = 6;
-              q.field_j.field_r = 0;
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 == 11) {
+          if (q.field_j == null) {
+            q.field_j = new na();
+            q.field_j.a(jd.field_s, (byte) 99);
+            q.field_j.field_a = 2763306;
+            q.field_j.field_f = 7697781;
+            q.field_j.field_i = jn.field_G;
+            q.field_j.field_l = 4;
+            q.field_j.field_g = 5;
+            q.field_j.field_o = 14;
+            q.field_j.field_p = 6;
+            q.field_j.field_r = 0;
           }
           return q.field_j;
         }
+        return (na) null;
     }
 
     static {

@@ -15,10 +15,10 @@ final class wm {
         int var3 = CrazyCrystals.field_B;
         wj[] var1 = new wj[mg.field_a];
         for (var2 = 0; var2 < mg.field_a; var2++) {
-            var1[var2] = new wj(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
+          var1[var2] = new wj(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
         }
         if (param0 >= -44) {
-            wm.b(97);
+          wm.b(97);
         }
         ok.a(2188450);
         return var1;
@@ -26,16 +26,16 @@ final class wm {
 
     final static void b(byte param0) {
         if (!ne.field_d) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
-        if (!(null == sp.field_a)) {
-            sp.field_a.i((byte) -99);
+        if (null != sp.field_a) {
+          sp.field_a.i((byte) -99);
         }
         String var1 = vg.c((byte) 104);
         mk.field_b = new vk(var1, (String) null, true, false, false);
         qe.field_g.b(-3264, jm.field_d);
         if (param0 != -12) {
-            field_d = -98L;
+          field_d = -98L;
         }
         jm.field_d.a((qm) (mk.field_b), (byte) -50);
         jm.field_d.j(param0 + 11);
@@ -44,7 +44,7 @@ final class wm {
     final void a(byte param0) {
         kh.d(this.field_c, this.field_g, this.field_f, this.field_b);
         if (param0 >= -2) {
-            wm.b((byte) -27);
+          wm.b((byte) -27);
         }
     }
 
@@ -52,30 +52,32 @@ final class wm {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
+        int var9_intLifetime1;
+        int var10Lifetime1;
         try {
-            var9_int = param3 + param2.field_v + (param0 - param8);
-            var10 = param2.field_v + (param3 + param0) + param6;
-            var11 = (param2.field_u >> -1009963071) + (param1 + param2.field_t);
-            kh.a(var9_int, 0, var10, var11 + param5);
-            param2.d(param3 - 1, -1 + param1, param7);
-            param2.d(-1 + param3, 1 + param1, param7);
-            kh.a(mc.field_m);
-            kh.a(1 + var9_int, 0, var10 - -1, param5 + var11);
-            param2.d(param3 - -1, -1 + param1, param7);
-            param2.d(param3 + 1, 1 + param1, param7);
-            kh.a(mc.field_m);
-            var10 = param3 + param2.field_l + param2.field_v - (param0 + param8);
-            var9_int = -param0 + param2.field_l + (param2.field_v + param3 - param6);
-            kh.a(var9_int, -param5 + var11, var10, 480);
-            param2.d(param3 - 1, -1 + param1, param7);
-            param2.d(param3 - 1, param1 - -1, param7);
-            kh.a(mc.field_m);
-            kh.a(1 + var9_int, var11 + -param5, 1 + var10, param4);
-            param2.d(param3 - -1, param1 + -1, param7);
-            param2.d(param3 - -1, param1 - -1, param7);
-            kh.a(mc.field_m);
+          var9_int = param3 + param2.field_v + (param0 - param8);
+          var10 = param2.field_v + (param3 + param0) + param6;
+          var11 = (param2.field_u >> 1) + (param1 + param2.field_t);
+          kh.a(var9_int, 0, var10, var11 + param5);
+          param2.d(param3 - 1, -1 + param1, param7);
+          param2.d(-1 + param3, 1 + param1, param7);
+          kh.a(mc.field_m);
+          kh.a(1 + var9_int, 0, var10 + 1, param5 + var11);
+          param2.d(param3 + 1, -1 + param1, param7);
+          param2.d(param3 + 1, 1 + param1, param7);
+          kh.a(mc.field_m);
+          var10Lifetime1 = param3 + param2.field_l + param2.field_v - (param0 + param8);
+          var9_intLifetime1 = -param0 + param2.field_l + (param2.field_v + param3 - param6);
+          kh.a(var9_intLifetime1, -param5 + var11, var10Lifetime1, 480);
+          param2.d(param3 - 1, -1 + param1, param7);
+          param2.d(param3 - 1, param1 + 1, param7);
+          kh.a(mc.field_m);
+          kh.a(1 + var9_intLifetime1, var11 - param5, 1 + var10Lifetime1, param4);
+          param2.d(param3 + 1, param1 - 1, param7);
+          param2.d(param3 + 1, param1 + 1, param7);
+          kh.a(mc.field_m);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "wm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "wm.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -89,7 +91,7 @@ final class wm {
     public static void b(int param0) {
         field_a = null;
         if (param0 != -1) {
-            wm.b(-12);
+          wm.b(-12);
         }
     }
 

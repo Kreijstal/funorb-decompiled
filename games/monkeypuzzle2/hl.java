@@ -16,84 +16,37 @@ final class hl {
     int field_i;
 
     final int a(int param0) {
-        if (param0 == 2147483647) {
-          if (!this.field_b) {
-            if (this.field_i != 2) {
-              if ((this.field_j ^ -1L) == (sb.field_e ^ -1L)) {
-                return 1;
-              } else {
-                if (2 == ci.field_b) {
-                  if (!em.a((byte) 119, this.field_h)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            } else {
-              if (-1 <= (this.field_e ^ -1)) {
-                if ((this.field_j ^ -1L) == (sb.field_e ^ -1L)) {
-                  return 1;
-                } else {
-                  if (2 == ci.field_b) {
-                    if (em.a((byte) 119, this.field_h)) {
-                      return 1;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              } else {
-                return 2;
-              }
-            }
-          } else {
-            return 2;
-          }
-        } else {
+        if (param0 != 2147483647) {
           this.field_k = 45;
-          if (!this.field_b) {
-            if (this.field_i == 2) {
-              if (-1 > (this.field_e ^ -1)) {
-                return 2;
-              } else {
-                if ((this.field_j ^ -1L) == (sb.field_e ^ -1L)) {
-                  return 1;
-                } else {
-                  if (2 == ci.field_b) {
-                    if (em.a((byte) 119, this.field_h)) {
-                      return 1;
-                    } else {
-                      return 0;
-                    }
-                  } else {
-                    return 0;
-                  }
-                }
-              }
-            } else {
-              if ((this.field_j ^ -1L) == (sb.field_e ^ -1L)) {
-                return 1;
-              } else {
-                if (2 == ci.field_b) {
-                  if (!em.a((byte) 119, this.field_h)) {
-                    return 0;
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 0;
-                }
-              }
-            }
-          } else {
-            return 2;
-          }
         }
+        if (this.field_b) {
+          return 2;
+        }
+        if (this.field_i != 2) {
+          if (~this.field_j == ~sb.field_e) {
+            return 1;
+          }
+          if (2 != ci.field_b) {
+            return 0;
+          }
+          if (!em.a((byte) 119, this.field_h)) {
+            return 0;
+          }
+          return 1;
+        }
+        if (this.field_e > 0) {
+          return 2;
+        }
+        if (~this.field_j == ~sb.field_e) {
+          return 1;
+        }
+        if (2 != ci.field_b) {
+          return 0;
+        }
+        if (em.a((byte) 119, this.field_h)) {
+          return 1;
+        }
+        return 0;
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -105,56 +58,36 @@ final class hl {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int stackIn_10_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var3_int = 2147483647;
-            var4 = 0;
-            if (param0 == 1) {
-              L1: while (true) {
-                if (17 <= var4) {
-                  stackIn_10_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    var5 = -param2 + (int)pe.field_d[var4].field_e[0];
-                    var6 = (int)pe.field_d[var4].field_e[1] + -param1;
-                    if (var5 * var5 + var6 * var6 < var3_int) {
-                      var3_int = var6 * var6 + var5 * var5;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var4++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = -108;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var3_int = 2147483647;
+          var4 = 0;
+          if (param0 != 1) {
+            stackIn_3_0 = -108;
+            return stackIn_3_0;
           }
+          while (17 > var4) {
+            var5 = -param2 + (int)pe.field_d[var4].field_e[0];
+            var6 = (int)pe.field_d[var4].field_e[1] - param1;
+            if (var5 * var5 + var6 * var6 < var3_int) {
+              var3_int = var6 * var6 + var5 * var5;
+            }
+            var4++;
+          }
+          stackIn_10_0 = var3_int;
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var3), "hl.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_10_0;
         }
     }
 
     final static void a(byte param0, boolean param1) {
         ll.a((byte) 91, false, param1);
         if (param0 == -60) {
-            return;
+          return;
         }
         hl.a(34, -93, -26);
     }
@@ -163,16 +96,16 @@ final class hl {
         field_d = null;
         field_f = null;
         if (param0 == 2) {
-            return;
+          return;
         }
         hl.c(-3);
     }
 
     final static void b(int param0) {
-        int var1 = -60 / ((param0 - -76) / 35);
+        int var1 = -60 / ((param0 + 76) / 35);
         wg.field_j.k(121);
-        if (!(vl.field_f != null)) {
-            vl.field_f = new ul(wg.field_j, rc.field_i);
+        if (vl.field_f == null) {
+          vl.field_f = new ul(wg.field_j, rc.field_i);
         }
         wg.field_j.b((byte) -97, vl.field_f);
     }
@@ -182,9 +115,9 @@ final class hl {
         this.field_k = c.field_b;
         this.field_g = sd.field_b;
         if (!param0) {
-            this.field_l = null;
+          this.field_l = null;
         } else {
-            this.field_l = wh.field_e;
+          this.field_l = wh.field_e;
         }
         this.field_h = i.field_h;
         this.field_i = lf.field_c;

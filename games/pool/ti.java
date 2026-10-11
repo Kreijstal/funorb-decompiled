@@ -14,9 +14,9 @@ final class ti {
         field_c = null;
         field_a = null;
         if (param0 != -20973) {
-            field_g = 51;
-            field_d = null;
-            return;
+          field_g = 51;
+          field_d = null;
+          return;
         }
         field_d = null;
     }
@@ -26,53 +26,30 @@ final class ti {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = Pool.field_O;
         try {
-          L0: {
-            if (0L == (pd.field_i & 1L)) {
-              stackIn_4_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              de.a(-105);
-              var1_int = 0;
-              var2 = -112 / ((-54 - param0) / 32);
-              L1: while (true) {
-                if (aq.field_a.length <= var1_int) {
-                  stackIn_12_0 = 0;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  if (!aq.field_a[var1_int].b(59)) {
-                    var1_int++;
-                    continue L1;
-                  } else {
-                    stackIn_9_0 = 1;
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
-            }
+          if (0L == (pd.field_i & 1L)) {
+            return false;
           }
+          de.a(-105);
+          var1_int = 0;
+          var2 = -112 / ((-54 - param0) / 32);
+          while (true) {
+            if (aq.field_a.length <= var1_int) {
+              return false;
+            }
+            if (!aq.field_a[var1_int].b(59)) {
+              var1_int++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw wm.a((Throwable) ((Object) var1), "ti.A(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0 != 0;
-          } else {
-            return stackIn_12_0 != 0;
-          }
         }
     }
 

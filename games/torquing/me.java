@@ -17,33 +17,33 @@ abstract class me {
         int var5 = Torquing.field_u;
         String var6 = "(" + mm.field_d + " " + eb.field_f + " " + wk.field_h + ") " + fa.field_e;
         String var1 = var6;
-        if (param0 > (oo.field_a ^ -1)) {
-            var1 = var6 + ":";
-            for (var2 = 0; var2 < oo.field_a; var2++) {
-                var7 = var1 + ' ';
-                var3 = kj.field_d.field_j[var2] & 255;
-                var4 = var3 >> -12710428;
-                var3 = var3 & 15;
-                if ((var4 ^ -1) > -11) {
-                    var4 += 48;
-                } else {
-                    var4 += 55;
-                }
-                if (var3 >= 10) {
-                    var3 += 55;
-                } else {
-                    var3 += 48;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
+        if (param0 > ~oo.field_a) {
+          var1 = var6 + ":";
+          for (var2 = 0; var2 < oo.field_a; var2++) {
+            var7 = var1 + ' ';
+            var3 = kj.field_d.field_j[var2] & 255;
+            var4 = var3 >> 4;
+            var3 = var3 & 15;
+            if (var4 < 10) {
+              var4 += 48;
+            } else {
+              var4 += 55;
             }
+            if (var3 >= 10) {
+              var3 += 55;
+            } else {
+              var3 += 48;
+            }
+            var8 = var7 + (char)var4;
+            var1 = var8 + (char)var3;
+          }
         }
         return var1;
     }
 
     public static void a(byte param0) {
         if (param0 < 1) {
-            me.a(-64);
+          me.a(-64);
         }
         field_a = null;
     }

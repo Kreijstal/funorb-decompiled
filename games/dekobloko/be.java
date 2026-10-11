@@ -26,148 +26,108 @@ class be extends bh {
 
     final static boolean a(byte param0, CharSequence param1) {
         RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 98) {
-              stackIn_4_0 = sk.a(true, param1, true, 10);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 98) {
+            stackIn_4_0 = sk.a(true, param1, true, 10);
+            return stackIn_4_0;
           }
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("be.U(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("be.U(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0 != 0;
-        } else {
-          return stackIn_4_0;
+          throw dh.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final void a(long param0, byte param1) {
         if (this.field_v != null) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         this.field_r = param0;
         if (param1 < 107) {
-            field_n = 116;
-            return;
+          field_n = 116;
+          return;
         }
     }
 
     final static void a(java.applet.Applet param0, byte param1) {
         if (param1 != -57) {
-            return;
+          return;
         }
         try {
-            oa.a(param0, -1, "");
-            wb.a(param0, 30307);
+          oa.a(param0, -1, "");
+          wb.a(param0, 30307);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "be.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "be.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final long c(byte param0) {
         if (param0 != 57) {
-            this.c((byte) 121);
-            return this.field_r;
+          this.c((byte) 121);
+          return this.field_r;
         }
         return this.field_r;
     }
 
     final static void a(byte param0, ig param1) {
         if (param1 == null) {
-            return;
+          return;
         }
         try {
-            if (param0 <= 117) {
-                ig var3 = (ig) null;
-                be.a((byte) 85, (ig) null);
-            }
-            mg.field_bc = param1;
-            ie.field_c.field_M.c(110);
-            ie.field_c.a(mg.field_bc, -16834);
-            jh.field_h = true;
+          if (param0 <= 117) {
+            ig var3 = (ig) null;
+            be.a((byte) 85, (ig) null);
+          }
+          mg.field_bc = param1;
+          ie.field_c.field_M.c(110);
+          ie.field_c.a(mg.field_bc, -16834);
+          jh.field_h = true;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "be.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "be.O(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void e(byte param0) {
         if (null == this.field_v) {
           return;
-        } else {
-          this.field_v.field_p = this.field_p;
-          this.field_p.field_v = this.field_v;
-          if (param0 < 68) {
-            field_u = (ck[][]) null;
-            this.field_v = null;
-            this.field_p = null;
-            return;
-          } else {
-            this.field_v = null;
-            this.field_p = null;
-            return;
-          }
         }
+        this.field_v.field_p = this.field_p;
+        this.field_p.field_v = this.field_v;
+        if (param0 >= 68) {
+          this.field_v = null;
+          this.field_p = null;
+          return;
+        }
+        field_u = (ck[][]) null;
+        this.field_v = null;
+        this.field_p = null;
     }
 
     protected be() {
     }
 
     final boolean d(byte param0) {
-        int stackIn_4_0 = 0;
-        if (param0 != -68) {
-          this.field_r = 35L;
-          if (this.field_v != null) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          L0: {
-            if (this.field_v == null) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -68) {
+          return this.field_v != null ? true : false;
         }
+        this.field_r = 35L;
+        if (this.field_v == null) {
+          return false;
+        }
+        return true;
     }
 
     static {

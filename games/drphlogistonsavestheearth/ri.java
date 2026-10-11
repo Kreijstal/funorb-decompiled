@@ -24,15 +24,7 @@ final class ri {
 
     public static void a(boolean param0) {
         field_r = null;
-        if (param0) {
-          ri.a(true);
-          field_o = null;
-          field_f = null;
-          field_b = null;
-          field_c = null;
-          field_h = null;
-          return;
-        } else {
+        if (!param0) {
           field_o = null;
           field_f = null;
           field_b = null;
@@ -40,6 +32,12 @@ final class ri {
           field_h = null;
           return;
         }
+        ri.a(true);
+        field_o = null;
+        field_f = null;
+        field_b = null;
+        field_c = null;
+        field_h = null;
     }
 
     static {

@@ -8,9 +8,9 @@ final class jc {
 
     public static void a(int param0) {
         if (param0 != 33469985) {
-            field_b = true;
-            field_a = null;
-            return;
+          field_b = true;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

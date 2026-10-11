@@ -32,7 +32,7 @@ final class cb extends kd {
         field_A = null;
         field_D = null;
         if (param0 != 29152) {
-            return;
+          return;
         }
         field_t = null;
         field_n = null;
@@ -45,42 +45,26 @@ final class cb extends kd {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            k.b();
-            gl.field_e = new int[260];
-            sb.field_d = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if (var1_int >= 256) {
-                L2: {
-                  if (param0 <= -51) {
-                    break L2;
-                  } else {
-                    field_n = (db) null;
-                    break L2;
-                  }
-                }
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= gl.field_e.length) {
-                    break L0;
-                  } else {
-                    gl.field_e[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                gl.field_e[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L1;
-              }
-            }
+          k.b();
+          gl.field_e = new int[260];
+          sb.field_d = 11;
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            gl.field_e[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
+          if (param0 > -51) {
+            field_n = (db) null;
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < gl.field_e.length) {
+            gl.field_e[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -94,7 +78,7 @@ final class cb extends kd {
         af.field_b = false;
         vf.field_r = -1;
         if (param0 != -52) {
-            field_n = (db) null;
+          field_n = (db) null;
         }
         bf.field_g = -1;
     }
@@ -102,79 +86,50 @@ final class cb extends kd {
     final static boolean a(byte param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
-        int stackIn_32_0 = 0;
-        L0: {
-          if (!param1) {
-            if (oj.field_j[param3] >= oj.field_j[param2]) {
-              if (oj.field_j[param3] > oj.field_j[param2]) {
-                return false;
-              } else {
-                if (we.field_g[param3] < we.field_g[param2]) {
-                  return true;
-                } else {
-                  if (we.field_g[param2] < we.field_g[param3]) {
-                    return false;
-                  } else {
-                    break L0;
-                  }
-                }
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (we.field_g[param2] <= we.field_g[param3]) {
-              if (we.field_g[param3] > we.field_g[param2]) {
-                return false;
-              } else {
-                if (oj.field_j[param2] > oj.field_j[param3]) {
-                  return true;
-                } else {
-                  if (oj.field_j[param3] > oj.field_j[param2]) {
-                    return false;
-                  } else {
-                    break L0;
-                  }
-                }
-              }
-            } else {
-              return true;
-            }
+        if (!param1) {
+          if (oj.field_j[param3] < oj.field_j[param2]) {
+            return true;
           }
-        }
-        L1: {
-          if (param0 >= 13) {
-            break L1;
-          } else {
-            cb.b(73);
-            break L1;
+          if (oj.field_j[param3] > oj.field_j[param2]) {
+            return false;
           }
-        }
-        var4 = hl.field_N[param3] + oc.field_a[param3] + l.field_D[param3];
-        var5 = hl.field_N[param2] + oc.field_a[param2] + l.field_D[param2];
-        if (var4 >= var5) {
-          if (var5 >= var4) {
-            L2: {
-              if (param3 >= param2) {
-                stackIn_32_0 = 0;
-                break L2;
-              } else {
-                stackIn_32_0 = 1;
-                break L2;
-              }
-            }
-            return stackIn_32_0 != 0;
-          } else {
+          if (we.field_g[param3] < we.field_g[param2]) {
+            return true;
+          }
+          if (we.field_g[param2] < we.field_g[param3]) {
             return false;
           }
         } else {
+          if (we.field_g[param2] > we.field_g[param3]) {
+            return true;
+          }
+          if (we.field_g[param3] > we.field_g[param2]) {
+            return false;
+          }
+          if (oj.field_j[param2] > oj.field_j[param3]) {
+            return true;
+          }
+          if (oj.field_j[param3] > oj.field_j[param2]) {
+            return false;
+          }
+        }
+        if (param0 < 13) {
+          cb.b(73);
+        }
+        var4 = hl.field_N[param3] + oc.field_a[param3] + l.field_D[param3];
+        var5 = hl.field_N[param2] + oc.field_a[param2] + l.field_D[param2];
+        if (var4 < var5) {
           return true;
         }
+        if (var5 < var4) {
+          return false;
+        }
+        return !(param3 >= param2);
     }
 
     final void c(int param0) {
         if (param0 != 0) {
-            cb.a(-98);
+          cb.a(-98);
         }
         this.field_r = null;
         this.field_C = null;

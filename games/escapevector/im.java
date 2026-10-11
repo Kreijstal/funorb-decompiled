@@ -12,38 +12,28 @@ final class im extends IOException {
         int var4 = 0;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var3_intLifetime1;
+        int var3_intLifetime2;
         var4 = EscapeVector.field_A;
         try {
-          L0: {
-            L1: {
-              if (param1 >= param0) {
-                break L1;
-              } else {
-                var3_int = param1;
-                param1 = param0;
-                param0 = var3_int;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (param0 == 0) {
-                var3_int = 59 % ((-4 - param2) / 49);
-                stackIn_6_0 = param1;
-                break L0;
-              } else {
-                var3_int = param1 % param0;
-                param1 = param0;
-                param0 = var3_int;
-                continue L2;
-              }
-            }
+          if (param1 < param0) {
+            var3_int = param1;
+            param1 = param0;
+            param0 = var3_int;
           }
+          while (param0 != 0) {
+            var3_intLifetime1 = param1 % param0;
+            param1 = param0;
+            param0 = var3_intLifetime1;
+          }
+          var3_intLifetime2 = 59 % ((-4 - param2) / 49);
+          stackIn_6_0 = param1;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var3), "im.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_6_0;
     }
 
     final static void a(byte param0, int param1) {
@@ -54,35 +44,20 @@ final class im extends IOException {
         RuntimeException var2 = null;
         var3 = EscapeVector.field_A;
         try {
-          L0: {
-            L1: {
-              if (param0 > 48) {
-                break L1;
-              } else {
-                field_a = 28;
-                break L1;
-              }
-            }
-            var4 = (cc) ((Object) vn.field_e.a(false));
-            L2: while (true) {
-              if (var4 == null) {
-                var5 = (dc) ((Object) en.field_i.a(false));
-                L3: while (true) {
-                  if (var5 == null) {
-                    break L0;
-                  } else {
-                    oa.a(param1, var5, -755);
-                    var5 = (dc) ((Object) en.field_i.b((byte) 70));
-                    continue L3;
-                  }
-                }
-              } else {
-                hg.a(-121, param1, var4);
-                var4 = (cc) ((Object) vn.field_e.b((byte) 70));
-                continue L2;
-              }
-            }
+          if (param0 <= 48) {
+            field_a = 28;
           }
+          var4 = (cc) (vn.field_e.a(false));
+          while (var4 != null) {
+            hg.a(-121, param1, var4);
+            var4 = (cc) (vn.field_e.b((byte) 70));
+          }
+          var5 = (dc) (en.field_i.a(false));
+          while (var5 != null) {
+            oa.a(param1, var5, -755);
+            var5 = (dc) (en.field_i.b((byte) 70));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

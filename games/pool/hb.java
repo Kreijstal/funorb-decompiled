@@ -31,55 +31,35 @@ final class hb implements Iterator {
         dd[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = new dd[9];
-              var2 = var3;
-              var3[4] = param1;
-              if (param0 == -32344) {
-                break L1;
-              } else {
-                field_l = -30;
-                break L1;
-              }
-            }
-            stackIn_3_0 = (dd[]) (var2);
-            break L0;
+          var3 = new dd[9];
+          var2 = var3;
+          var3[4] = param1;
+          if (param0 != -32344) {
+            field_l = -30;
           }
+          stackIn_3_0 = var2;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2_ref);
-
-            stackIn_6_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("hb.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
         field_p = null;
         field_n = null;
@@ -95,21 +75,22 @@ final class hb implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        ma var1 = null;
-        int var2 = Pool.field_O;
+        ma var1;
+        int var2;
+        var2 = Pool.field_O;
         if (this.field_h.field_k[-1 + this.field_o] != this.field_m) {
-            var1 = this.field_m;
-            this.field_i = var1;
-            this.field_m = var1.field_d;
-            return var1;
+          var1 = this.field_m;
+          this.field_i = var1;
+          this.field_m = var1.field_d;
+          return var1;
         }
         do {
-            if (this.field_h.field_h <= this.field_o) {
-                return null;
-            }
-            fieldTemp$0 = this.field_o;
-            this.field_o = this.field_o + 1;
-            var1 = this.field_h.field_k[fieldTemp$0].field_d;
+          if (this.field_h.field_h <= this.field_o) {
+            return null;
+          }
+          fieldTemp$0 = this.field_o;
+          this.field_o = this.field_o + 1;
+          var1 = this.field_h.field_k[fieldTemp$0].field_d;
         } while (this.field_h.field_k[this.field_o - 1] == var1);
         this.field_m = var1.field_d;
         this.field_i = var1;
@@ -151,126 +132,104 @@ final class hb implements Iterator {
         kn var38 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
+        dd var30Lifetime1;
+        dd var30Lifetime2;
+        dd var30Lifetime3;
+        dd var30Lifetime4;
+        dd var30Lifetime5;
+        dd var30Lifetime6;
+        dd var30Lifetime7;
+        dd var30Lifetime1Lifetime1;
+        dd var30Lifetime1Lifetime2;
+        dd var30Lifetime1Lifetime3;
+        dd var30Lifetime1Lifetime4;
+        dd var30Lifetime1Lifetime5;
         try {
-          L0: {
-            L1: {
-              dr.a((String) null, param2, 0L, -1, (of) null, (String) null, 32540, param1, (int[]) null);
-              if (0 == param2) {
-                var11 = vl.field_m;
-                var12 = sg.field_M[0];
-                var30 = var12;
-                var30 = var12;
-                var13 = ko.field_d;
-                var11.field_n.a(11, (byte) 108, var12, var13);
-                var14 = vl.field_m;
-                var15 = sg.field_M[1];
-                var30 = var15;
-                var30 = var15;
-                var16 = sa.field_j;
-                var14.field_n.a(12, (byte) -77, var15, var16);
-                var17 = vl.field_m;
-                var18 = sg.field_M[2];
-                var30 = var18;
-                var30 = var18;
-                var19 = Pool.field_K;
-                var17.field_n.a(13, (byte) -75, var18, var19);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (-2 != (param2 ^ -1)) {
-                break L2;
-              } else {
-                var20 = vl.field_m;
-                var21 = sg.field_M[0];
-                var30 = var21;
-                var30 = var21;
-                var22 = ra.field_c;
-                var20.field_n.a(11, (byte) -87, var21, var22);
-                var23 = vl.field_m;
-                var24 = sg.field_M[1];
-                var30 = var24;
-                var30 = var24;
-                var25 = md.field_e;
-                var23.field_n.a(12, (byte) -119, var24, var25);
-                var26 = vl.field_m;
-                var27 = sg.field_M[2];
-                var30 = var27;
-                var30 = var27;
-                var28 = op.field_c;
-                var26.field_n.a(13, (byte) 82, var27, var28);
-                break L2;
-              }
-            }
-            L3: {
-              if (param2 == 2) {
-                var29 = vl.field_m;
-                var30 = sg.field_M[0];
-                var31 = kp.field_c;
-                var29.field_n.a(11, (byte) -122, var30, var31);
-                var32 = vl.field_m;
-                var33 = sg.field_M[1];
-                var34 = rm.field_a;
-                var32.field_n.a(12, (byte) 122, var33, var34);
-                var35 = vl.field_m;
-                var36 = sg.field_M[2];
-                var37 = me.field_v;
-                var35.field_n.a(13, (byte) 90, var36, var37);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              var38 = vl.field_m;
-              var4 = param1.field_sb;
-              var5 = param1.field_ib;
-              var6 = param1.field_gb;
-              var7 = param1.field_Db;
-              var38.field_n.c(var6, var7, var4, 0, var5);
-              if (param0 == 27937) {
-                break L4;
-              } else {
-                field_n = (String) null;
-                break L4;
-              }
-            }
-            break L0;
+          dr.a((String) null, param2, 0L, -1, (of) null, (String) null, 32540, param1, (int[]) null);
+          if (0 == param2) {
+            var11 = vl.field_m;
+            var12 = sg.field_M[0];
+            var30 = var12;
+            var30Lifetime3 = var12;
+            var13 = ko.field_d;
+            var11.field_n.a(11, (byte) 108, var12, var13);
+            var14 = vl.field_m;
+            var15 = sg.field_M[1];
+            var30Lifetime4 = var15;
+            var30Lifetime5 = var15;
+            var16 = sa.field_j;
+            var14.field_n.a(12, (byte) -77, var15, var16);
+            var17 = vl.field_m;
+            var18 = sg.field_M[2];
+            var30Lifetime6 = var18;
+            var30Lifetime7 = var18;
+            var19 = Pool.field_K;
+            var17.field_n.a(13, (byte) -75, var18, var19);
           }
+          if (param2 == 1) {
+            var20 = vl.field_m;
+            var21 = sg.field_M[0];
+            var30Lifetime1 = var21;
+            var30Lifetime1Lifetime1 = var21;
+            var22 = ra.field_c;
+            var20.field_n.a(11, (byte) -87, var21, var22);
+            var23 = vl.field_m;
+            var24 = sg.field_M[1];
+            var30Lifetime1Lifetime2 = var24;
+            var30Lifetime1Lifetime3 = var24;
+            var25 = md.field_e;
+            var23.field_n.a(12, (byte) -119, var24, var25);
+            var26 = vl.field_m;
+            var27 = sg.field_M[2];
+            var30Lifetime1Lifetime4 = var27;
+            var30Lifetime1Lifetime5 = var27;
+            var28 = op.field_c;
+            var26.field_n.a(13, (byte) 82, var27, var28);
+          }
+          if (param2 == 2) {
+            var29 = vl.field_m;
+            var30Lifetime2 = sg.field_M[0];
+            var31 = kp.field_c;
+            var29.field_n.a(11, (byte) -122, var30Lifetime2, var31);
+            var32 = vl.field_m;
+            var33 = sg.field_M[1];
+            var34 = rm.field_a;
+            var32.field_n.a(12, (byte) 122, var33, var34);
+            var35 = vl.field_m;
+            var36 = sg.field_M[2];
+            var37 = me.field_v;
+            var35.field_n.a(13, (byte) 90, var36, var37);
+          }
+          var38 = vl.field_m;
+          var4 = param1.field_sb;
+          var5 = param1.field_ib;
+          var6 = param1.field_gb;
+          var7 = param1.field_Db;
+          var38.field_n.c(var6, var7, var4, 0, var5);
+          if (param0 != 27937) {
+            field_n = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var3);
-
-            stackIn_13_1 = new StringBuilder().append("hb.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L5;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L5;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("hb.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public final void remove() {
         if (null == this.field_i) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_i.a((byte) -117);
         this.field_i = null;
@@ -279,90 +238,67 @@ final class hb implements Iterator {
     private final void a(byte param0) {
         this.field_i = null;
         if (param0 != 43) {
-            return;
+          return;
         }
         this.field_m = this.field_h.field_k[0].field_d;
         this.field_o = 1;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = Pool.field_O;
-        if (this.field_h.field_k[-1 + this.field_o] == this.field_m) {
-          L0: while (true) {
-            if (this.field_o >= this.field_h.field_h) {
-              return false;
-            } else {
-              fieldTemp$2 = this.field_o;
-              this.field_o = this.field_o + 1;
-              if (this.field_h.field_k[fieldTemp$2].field_d != this.field_h.field_k[this.field_o - 1]) {
-                this.field_m = this.field_h.field_k[-1 + this.field_o].field_d;
-                return true;
-              } else {
-                this.field_m = this.field_h.field_k[this.field_o - 1];
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_h.field_k[-1 + this.field_o] != this.field_m) {
           return true;
         }
+        while (this.field_o < this.field_h.field_h) {
+          fieldTemp$0 = this.field_o;
+          this.field_o = this.field_o + 1;
+          if (this.field_h.field_k[fieldTemp$0].field_d != this.field_h.field_k[this.field_o - 1]) {
+            this.field_m = this.field_h.field_k[-1 + this.field_o].field_d;
+            return true;
+          }
+          this.field_m = this.field_h.field_k[this.field_o - 1];
+        }
+        return false;
     }
 
     hb(uk param0) {
         this.field_i = null;
         try {
-            this.field_h = param0;
-            this.a((byte) 43);
+          this.field_h = param0;
+          this.a((byte) 43);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        $cfr$clinit: {
-            long var0;
-            int var2;
-            int var3;
-            field_f = new long[256];
-            var2 = 0;
-            L0: while (true) {
-              if (var2 >= 256) {
-                field_n = "Accept unrated rematch";
-                field_q = "Mouse Y-axis: Inverted";
-                field_b = "Unfortunately you are not eligible to create an account.";
-                field_g = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-                field_c = "Reload game";
-                field_j = new ko();
-                field_d = "Email is valid";
-                field_r = "Password is valid";
-                field_s = -1;
-                field_p = "Instructions";
-                field_e = -1;
-                break $cfr$clinit;
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L1: while (true) {
-                  if (-9 >= (var3 ^ -1)) {
-                    field_f[var2] = var0;
-                    var2++;
-                    continue L0;
-                  } else {
-                    if ((1L & var0) == 1L) {
-                      var0 = -3932672073523589310L ^ var0 >>> -2002318591;
-                      var3++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var2 = 0;
+        int var3 = 0;
+        long var0;
+        field_f = new long[256];
+        for (var2 = 0; var2 < 256; var2++) {
+          var0 = (long)var2;
+          for (var3 = 0; var3 < 8; var3++) {
+            if ((1L & var0) == 1L) {
+              var0 = -3932672073523589310L ^ var0 >>> 1;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_f[var2] = var0;
         }
+        field_n = "Accept unrated rematch";
+        field_q = "Mouse Y-axis: Inverted";
+        field_b = "Unfortunately you are not eligible to create an account.";
+        field_g = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        field_c = "Reload game";
+        field_j = new ko();
+        field_d = "Email is valid";
+        field_r = "Password is valid";
+        field_s = -1;
+        field_p = "Instructions";
+        field_e = -1;
     }
 }

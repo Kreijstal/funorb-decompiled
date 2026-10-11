@@ -9,31 +9,29 @@ final class gs implements dja {
     static int field_c;
 
     public static void b(byte param0) {
-        if (param0 <= 66) {
-          gs.b((byte) -38);
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 > 66) {
           field_d = null;
           field_e = null;
           field_b = null;
           field_a = null;
           return;
         }
+        gs.b((byte) -38);
+        field_d = null;
+        field_e = null;
+        field_b = null;
+        field_a = null;
     }
 
     public final tv a(byte param0) {
-        int var2 = -113 % ((param0 - -64) / 50);
+        int var2 = -113 % ((param0 + 64) / 50);
         return (tv) ((Object) new so());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            gs.b((byte) 40);
-            return (tv[]) ((Object) new so[param1]);
+          gs.b((byte) 40);
+          return (tv[]) ((Object) new so[param1]);
         }
         return (tv[]) ((Object) new so[param1]);
     }

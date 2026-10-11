@@ -10,50 +10,42 @@ final class kb {
     static String field_c;
 
     final static void a(boolean param0, int param1, int param2) {
-        if (!param0) {
-          if (uh.field_b[param2] != null) {
-            if (!uh.field_b[param2].b(10000536)) {
-              return;
-            } else {
-              fe.a(uh.field_b[param2], 2);
-              da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param0) {
           kb.a(true, -128, -84);
-          if (uh.field_b[param2] != null) {
-            if (!uh.field_b[param2].b(10000536)) {
-              return;
-            } else {
-              fe.a(uh.field_b[param2], 2);
-              da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
-              return;
-            }
-          } else {
+          if (uh.field_b[param2] == null) {
             return;
           }
+          if (uh.field_b[param2].b(10000536)) {
+            fe.a(uh.field_b[param2], 2);
+            da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+            return;
+          }
+          return;
+        }
+        if (uh.field_b[param2] == null) {
+          return;
+        }
+        if (uh.field_b[param2].b(10000536)) {
+          fe.a(uh.field_b[param2], 2);
+          da.a(va.field_d[param1], nd.field_G[param1], (byte) -116);
+          return;
         }
     }
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 != 14) {
-          kb.a(false, 103, -81);
-          field_e = null;
-          field_a = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 14) {
           field_e = null;
           field_a = null;
           field_d = null;
           field_c = null;
           return;
         }
+        kb.a(false, 103, -81);
+        field_e = null;
+        field_a = null;
+        field_d = null;
+        field_c = null;
     }
 
     static {

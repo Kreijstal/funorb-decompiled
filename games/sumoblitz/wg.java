@@ -14,125 +14,70 @@ final class wg {
         int var8 = 0;
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var8 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3_int = 0;
-              var4 = hh.field_f;
-              if (param1 == 1882601153) {
-                break L1;
-              } else {
-                wg.a(78, -126, 77);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (bf.field_c.length <= var3_int) {
-                stackIn_14_0 = -1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                L3: {
-                  var5 = eb.field_a[var3_int];
-                  if (var5 < 0) {
-                    var4 = var4 + fn.field_t;
-                    break L3;
-                  } else {
-                    var6 = gt.a((byte) -59, bf.field_c[var3_int], true);
-                    var7 = oj.field_a - (var6 >> 1882601153);
-                    var4 = var4 + qc.field_a;
-                    if (oc.a(var4, (byte) 122, param2, var7 + -dw.field_b, ga.field_h + (ag.field_b << 1607587585), param0, (dw.field_b << 597440705) + var6)) {
-                      stackIn_8_0 = var5;
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      var4 = var4 + (qc.field_a + (ag.field_b << -1942197855) - -ga.field_h);
-                      break L3;
-                    }
-                  }
-                }
-                var3_int++;
-                continue L2;
-              }
-            }
+          var3_int = 0;
+          var4 = hh.field_f;
+          if (param1 != 1882601153) {
+            wg.a(78, -126, 77);
           }
+          while (bf.field_c.length > var3_int) {
+            var5 = eb.field_a[var3_int];
+            if (var5 < 0) {
+              var4 = var4 + fn.field_t;
+            } else {
+              var6 = gt.$cfr$intArgs$a$590e95718a07(-59, bf.field_c[var3_int], true);
+              var7 = oj.field_a - (var6 >> 1);
+              var4 = var4 + qc.field_a;
+              if (oc.a(var4, (byte) 122, param2, var7 - dw.field_b, ga.field_h + (ag.field_b << 1), param0, (dw.field_b << 1) + var6)) {
+                stackIn_8_0 = var5;
+                return stackIn_8_0;
+              }
+              var4 = var4 + (qc.field_a + (ag.field_b << 1) + ga.field_h);
+            }
+            var3_int++;
+          }
+          stackIn_14_0 = -1;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw qo.a((Throwable) ((Object) var3), "wg.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_8_0;
-        } else {
-          return stackIn_14_0;
-        }
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        if (param0 >= -113) {
-          return 84;
-        } else {
-          L0: {
-            if ((param1 ^ -1) <= -1) {
-              break L0;
-            } else {
-              param1 = -param1;
-              break L0;
-            }
+        int var2 = 0;
+        if (param0 < -113) {
+          if (param1 < 0) {
+            param1 = -param1;
           }
-          L1: {
-            var2 = 0;
-            if (-65536 <= (param1 ^ -1)) {
-              break L1;
-            } else {
-              var2 = var2 | 16;
-              param1 = param1 >>> 16;
-              break L1;
-            }
+          var2 = 0;
+          if (param1 > 65535) {
+            var2 = var2 | 16;
+            param1 = param1 >>> 16;
           }
-          L2: {
-            if ((param1 ^ -1) >= -256) {
-              break L2;
-            } else {
-              var2 = var2 | 8;
-              param1 = param1 >>> 8;
-              break L2;
-            }
+          if (param1 > 255) {
+            var2 = var2 | 8;
+            param1 = param1 >>> 8;
           }
-          L3: {
-            if (-16 > (param1 ^ -1)) {
-              var2 = var2 | 4;
-              param1 = param1 >>> 4;
-              break L3;
-            } else {
-              break L3;
-            }
+          if (param1 > 15) {
+            var2 = var2 | 4;
+            param1 = param1 >>> 4;
           }
-          L4: {
-            if (3 < param1) {
-              param1 = param1 >>> 2;
-              var2 = var2 | 2;
-              break L4;
-            } else {
-              break L4;
-            }
+          if (3 < param1) {
+            param1 = param1 >>> 2;
+            var2 = var2 | 2;
           }
-          L5: {
-            if (param1 <= 1) {
-              break L5;
-            } else {
-              param1 = param1 >>> 1;
-              var2 = var2 | 1;
-              break L5;
-            }
+          if (param1 > 1) {
+            param1 = param1 >>> 1;
+            var2 = var2 | 1;
           }
           return var2;
         }
+        return 84;
     }
 
     protected final void finalize() throws Throwable {
@@ -142,35 +87,25 @@ final class wg {
 
     wg(on param0, int param1, int param2) {
         try {
-            this.field_b = param2;
-            this.field_a = param0;
+          this.field_b = param2;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static wb a(int param0, int param1, int param2) {
-        wb var3;
-        int var4;
-        int var5;
-        wb var6;
-        var5 = Sumoblitz.field_L ? 1 : 0;
-        var6 = new wb(param0, param0);
-        var3 = var6;
-        var4 = 0;
-        L0: while (true) {
-          if (var3.field_C.length <= var4) {
-            if (param2 != 3) {
-              return (wb) null;
-            } else {
-              return var3;
-            }
-          } else {
-            var6.field_C[var4] = param1;
-            var4++;
-            continue L0;
-          }
+        int var4 = 0;
+        int var5 = Sumoblitz.field_L ? 1 : 0;
+        wb var6 = new wb(param0, param0);
+        wb var3 = var6;
+        for (var4 = 0; var3.field_C.length > var4; var4++) {
+          var6.field_C[var4] = param1;
         }
+        if (param2 == 3) {
+          return var3;
+        }
+        return (wb) null;
     }
 
     static {

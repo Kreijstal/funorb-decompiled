@@ -7,54 +7,48 @@ final class vg {
     static String field_c;
 
     final static void a(byte param0) {
-        if (0 - lc.field_a != sn.field_c) {
-          if (250 + -lc.field_a == sn.field_c) {
-            if (param0 != -82) {
-              return;
-            } else {
-              sn.field_c = sn.field_c + 1;
-              return;
-            }
-          } else {
-            if (param0 != -82) {
-              return;
-            } else {
-              sn.field_c = sn.field_c + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0 != -82) {
-            return;
-          } else {
+        if (0 - lc.field_a == sn.field_c) {
+          if (param0 == -82) {
             sn.field_c = sn.field_c + 1;
             return;
           }
+          return;
+        }
+        if (250 - lc.field_a != sn.field_c) {
+          if (param0 == -82) {
+            sn.field_c = sn.field_c + 1;
+            return;
+          }
+          return;
+        }
+        if (param0 == -82) {
+          sn.field_c = sn.field_c + 1;
+          return;
         }
     }
 
     final static String b(byte param0) {
         if (param0 != -29) {
-            vg.b((byte) 15);
-            if (lc.field_c == l.field_b) {
-                return ji.field_x;
-            }
-            if (l.field_b == sg.field_b) {
-                return ne.field_h;
-            }
-            if (!(gk.field_e.b(-82))) {
-                return ne.field_h;
-            }
-            return jd.field_G;
+          vg.b((byte) 15);
+          if (lc.field_c == l.field_b) {
+            return ji.field_x;
+          }
+          if (l.field_b == sg.field_b) {
+            return ne.field_h;
+          }
+          if (!gk.field_e.b(-82)) {
+            return ne.field_h;
+          }
+          return jd.field_G;
         }
         if (lc.field_c == l.field_b) {
-            return ji.field_x;
+          return ji.field_x;
         }
         if (l.field_b == sg.field_b) {
-            return ne.field_h;
+          return ne.field_h;
         }
-        if (!(gk.field_e.b(-82))) {
-            return ne.field_h;
+        if (!gk.field_e.b(-82)) {
+          return ne.field_h;
         }
         return jd.field_G;
     }
@@ -62,14 +56,14 @@ final class vg {
     final static String c(byte param0) {
         int var2 = -3 / ((param0 - 52) / 52);
         String var1 = "";
-        if (!(null == mk.field_b)) {
-            var1 = mk.field_b.i(-1);
+        if (null != mk.field_b) {
+          var1 = mk.field_b.i(-1);
         }
-        if (!(0 != var1.length())) {
-            var1 = bm.b((byte) 89);
+        if (0 == var1.length()) {
+          var1 = bm.b((byte) 89);
         }
-        if (!(var1.length() != 0)) {
-            var1 = ck.field_eb;
+        if (var1.length() == 0) {
+          var1 = ck.field_eb;
         }
         return var1;
     }
@@ -77,10 +71,10 @@ final class vg {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 8877) {
-            field_a = (sj) null;
-            field_b = null;
-            field_c = null;
-            return;
+          field_a = (sj) null;
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;

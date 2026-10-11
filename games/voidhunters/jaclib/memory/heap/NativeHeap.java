@@ -15,20 +15,14 @@ public final class NativeHeap {
     public final jaclib.memory.heap.NativeHeapBuffer a(int param0, boolean param1) {
         RuntimeException var3;
         if (this.a) {
-          return new jaclib.memory.heap.NativeHeapBuffer((jaclib.memory.heap.NativeHeap) (this), this.allocateBuffer(param0, param1), param0);
-        } else {
-          throw new IllegalStateException();
+          return new jaclib.memory.heap.NativeHeapBuffer(this, this.allocateBuffer(param0, param1), param0);
         }
+        throw new IllegalStateException();
     }
 
     public final synchronized void a() {
-        L0: {
-          if (this.a) {
-            this.deallocateHeap();
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.a) {
+          this.deallocateHeap();
         }
         this.a = false;
     }
@@ -44,12 +38,8 @@ public final class NativeHeap {
     }
 
     protected final synchronized void finalize() throws Throwable {
-        try {
-            super.finalize();
-            this.a();
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        super.finalize();
+        this.a();
     }
 
     final synchronized native void put(int param0, byte[] param1, int param2, int param3, int param4);
@@ -57,12 +47,8 @@ public final class NativeHeap {
     final synchronized native void deallocateBuffer(int param0);
 
     public NativeHeap(int param0) {
-        try {
-            this.b = param0;
-            this.allocateHeap(this.b);
-            this.a = true;
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        this.b = param0;
+        this.allocateHeap(this.b);
+        this.a = true;
     }
 }

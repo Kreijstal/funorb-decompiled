@@ -7,9 +7,9 @@ final class mm {
 
     public static void a(byte param0) {
         if (param0 != 104) {
-            mm.a((byte) 55);
-            field_a = null;
-            return;
+          mm.a((byte) 55);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

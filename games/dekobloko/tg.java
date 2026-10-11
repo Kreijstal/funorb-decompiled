@@ -18,9 +18,7 @@ final class tg implements gl {
         field_i = null;
         field_a = null;
         field_f = null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           field_b = null;
           field_h = null;
           return;
@@ -30,8 +28,6 @@ final class tg implements gl {
     public final void a(boolean param0, int param1, int param2, byte param3, ce param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -39,59 +35,33 @@ final class tg implements gl {
         int var7 = 0;
         ck var8 = null;
         try {
-          L0: {
-            L1: {
-              var6_int = param1 + param4.field_u;
-              var7 = param4.field_D + param2;
-              ke.a(var6_int, var7, param4.field_t, param4.field_y, (byte) 101);
-              var8 = tl.field_u[1];
-              if (!(param4 instanceof ek)) {
-                break L1;
-              } else {
-                if (!((ek) ((Object) param4)).field_H) {
-                  break L1;
-                } else {
-                  var8.f((param4.field_t + -var8.field_K >> -1290148639) + var6_int - -1, 1 + var7 + (param4.field_y + -var8.field_C >> -1784257663), 256);
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (param4.a(true)) {
-                kd.a(-4 + param4.field_t, 2 + var6_int, (byte) 124, 2 + var7, param4.field_y + -4);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (param3 < -60) {
-              break L0;
-            } else {
-              tg.a(false);
-              return;
-            }
+          var6_int = param1 + param4.field_u;
+          var7 = param4.field_D + param2;
+          ke.a(var6_int, var7, param4.field_t, param4.field_y, (byte) 101);
+          var8 = tl.field_u[1];
+          if (param4 instanceof ek &&
+            ((ek) (param4)).field_H) {
+            var8.f((param4.field_t - var8.field_K >> 1) + var6_int + 1, 1 + var7 + (param4.field_y - var8.field_C >> 1), 256);
           }
+          if (param4.a(true)) {
+            kd.a(-4 + param4.field_t, 2 + var6_int, (byte) 124, 2 + var7, param4.field_y - 4);
+          }
+          if (param3 < -60) {
+            return;
+          }
+          tg.a(false);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var6);
-
-            stackIn_11_1 = new StringBuilder().append("tg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("tg.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -99,15 +69,15 @@ final class tg implements gl {
         md.a(9, 11, cd.field_m.e(102));
         wk.field_i = true;
         if (param0 >= -2) {
-            field_i = (w) null;
+          field_i = (w) null;
         }
     }
 
     final static ck a(boolean param0, int param1) {
         if (!param0) {
-            return (ck) null;
+          return (ck) null;
         }
-        return ik.field_b[param1][(12 & uf.field_A) >> -2019195358];
+        return ik.field_b[param1][(12 & uf.field_A) >> 2];
     }
 
     static {

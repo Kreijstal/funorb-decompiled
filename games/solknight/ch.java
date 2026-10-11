@@ -7,12 +7,12 @@ final class ch {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(ee.field_j);
-            param0.addMouseMotionListener(ee.field_j);
-            int var2_int = -95 % ((param1 - -25) / 37);
-            param0.addFocusListener(ee.field_j);
+          param0.addMouseListener(ee.field_j);
+          param0.addMouseMotionListener(ee.field_j);
+          int var2_int = -95 % ((param1 + 25) / 37);
+          param0.addFocusListener(ee.field_j);
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

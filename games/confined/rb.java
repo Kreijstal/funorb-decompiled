@@ -20,21 +20,19 @@ abstract class rb {
         field_i = null;
         field_d = null;
         field_g = null;
-        if (param0 != -90) {
-          field_g = (String) null;
-          field_h = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -90) {
           field_h = null;
           field_a = null;
           return;
         }
+        field_g = (String) null;
+        field_h = null;
+        field_a = null;
     }
 
     final void a(byte param0) {
         if (param0 <= 100) {
-            return;
+          return;
         }
         fn.a(this.field_f, this.field_b, this.field_c);
     }

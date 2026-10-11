@@ -17,7 +17,7 @@ abstract class fb extends bf {
     public static void a(byte param0) {
         field_i = null;
         if (param0 != -61) {
-            fb.a((byte) 7);
+          fb.a((byte) 7);
         }
     }
 

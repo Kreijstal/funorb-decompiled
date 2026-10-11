@@ -8,7 +8,7 @@ final class ju {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 63) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

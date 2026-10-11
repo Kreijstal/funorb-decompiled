@@ -13,16 +13,14 @@ final class aa {
         field_a = null;
         field_b = null;
         field_d = null;
-        if (param0) {
-          aa.a((byte) 74);
-          field_f = null;
-          field_c = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_c = null;
           return;
         }
+        aa.a((byte) 74);
+        field_f = null;
+        field_c = null;
     }
 
     final static void a(byte param0) {

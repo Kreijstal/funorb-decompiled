@@ -18,7 +18,7 @@ final class nh {
         field_f = null;
         field_c = null;
         if (param0 > -68) {
-            field_a = 92;
+          field_a = 92;
         }
     }
 

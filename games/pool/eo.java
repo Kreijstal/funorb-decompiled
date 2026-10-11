@@ -21,9 +21,9 @@ final class eo extends vh {
     public static void f(byte param0) {
         field_Rb = null;
         if (param0 != -105) {
-            field_Vb = 60;
-            field_Xb = null;
-            return;
+          field_Vb = 60;
+          field_Xb = null;
+          return;
         }
         field_Xb = null;
     }
@@ -33,47 +33,43 @@ final class eo extends vh {
     }
 
     final static void a(int param0, int param1, int param2) {
-        oq var4;
-        kh var6;
-        kh var7;
-        if (param1 == ka.field_r) {
+        kh var6 = null;
+        kh var7 = null;
+        oq var4 = null;
+        oq var4Lifetime1;
+        if (param1 != ka.field_r) {
+          var6 = (kh) (lf.field_a.a((long)ka.field_r, false));
+          var7 = var6;
+          ka.field_r = param1;
+          if (var7 != null) {
+            var7.field_bc = null;
+          } else {
+            var4 = ej.field_j;
+            var4.b(false, param0);
+            var4.a(3, false);
+            var4.a(11, false);
+            var4.a((byte) -81, param1);
+            if (param2 != 11) {
+              field_Rb = (String) null;
+              return;
+            }
+            return;
+          }
+          var4Lifetime1 = ej.field_j;
+          var4Lifetime1.b(false, param0);
+          var4Lifetime1.a(3, false);
+          var4Lifetime1.a(11, false);
+          var4Lifetime1.a((byte) -81, param1);
           if (param2 != 11) {
             field_Rb = (String) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          var6 = (kh) ((Object) lf.field_a.a((long)ka.field_r, false));
-          var7 = var6;
-          ka.field_r = param1;
-          if (var7 == null) {
-            var4 = ej.field_j;
-            var4.b(false, param0);
-            var4.a(3, false);
-            var4.a(11, false);
-            var4.a((byte) -81, param1);
-            if (param2 == 11) {
-              return;
-            } else {
-              field_Rb = (String) null;
-              return;
-            }
-          } else {
-            var7.field_bc = null;
-            var4 = ej.field_j;
-            var4.b(false, param0);
-            var4.a(3, false);
-            var4.a(11, false);
-            var4.a((byte) -81, param1);
-            if (param2 == 11) {
-              return;
-            } else {
-              field_Rb = (String) null;
-              return;
-            }
-          }
+          return;
         }
+        if (param2 == 11) {
+          return;
+        }
+        field_Rb = (String) null;
     }
 
     static {

@@ -16,79 +16,48 @@ final class ri extends jb implements ha, we {
         int var5 = 0;
         String stackIn_6_0 = null;
         Object stackIn_9_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        if (param0 > 40) {
-          try {
-            L0: {
-              L1: {
-                var2_int = this.field_j.c(false);
-                var3 = this.field_j.h(-1);
-                var4 = this.field_j.i(93);
-                var5 = ca.a(13421568);
-                if (1890 > var4) {
-                  break L1;
-                } else {
-                  if (var4 > -3 + var5) {
-                    break L1;
-                  } else {
-                    if (!tn.a(var2_int, var3, -25042, var4)) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      stackIn_9_0 = null;
-                      decompiledRegionSelector0 = 2;
-                      break L0;
-                    }
-                  }
-                }
-              }
-              stackIn_6_0 = oc.a(od.field_X, new String[]{"1890", Integer.toString(-3 + var5)}, (byte) -59);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
-          } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L2: {
-              var2 = (NumberFormatException) (Object) decompiledCaughtException;
-              decompiledRegionSelector0 = 1;
-              break L2;
-            }
-          }
-          if (decompiledRegionSelector0 == 0) {
-            return stackIn_6_0;
-          } else {
-            if (decompiledRegionSelector0 == 1) {
-              return oj.field_g;
-            } else {
-              return (String) ((Object) stackIn_9_0);
-            }
-          }
-        } else {
+        if (param0 <= 40) {
           return (String) null;
         }
+        try {
+          var2_int = this.field_j.c(false);
+          var3 = this.field_j.h(-1);
+          var4 = this.field_j.i(93);
+          var5 = ca.a(13421568);
+          if (1890 <= var4 &&
+            var4 <= -3 + var5) {
+            if (tn.a(var2_int, var3, -25042, var4)) {
+              stackIn_9_0 = null;
+              return (String) (stackIn_9_0);
+            }
+          } else {
+            stackIn_6_0 = oc.a(od.field_X, new String[]{"1890", Integer.toString(-3 + var5)}, (byte) -59);
+            return stackIn_6_0;
+          }
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+        }
+        return oj.field_g;
     }
 
     final static void g(int param0) {
         jh.field_e.i(0);
-        if (mk.field_e != null) {
+        if (mk.field_e == null) {
+          mk.field_e = new ch(jh.field_e, qf.field_g);
           jh.field_e.b(mk.field_e, (byte) -65);
           if (param0 <= 119) {
             field_h = (String) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          mk.field_e = new ch(jh.field_e, qf.field_g);
-          jh.field_e.b(mk.field_e, (byte) -65);
-          if (param0 > 119) {
-            return;
-          } else {
-            field_h = (String) null;
-            return;
-          }
+          return;
         }
+        jh.field_e.b(mk.field_e, (byte) -65);
+        if (param0 > 119) {
+          return;
+        }
+        field_h = (String) null;
     }
 
     final mk e(int param0) {
@@ -101,70 +70,42 @@ final class ri extends jb implements ha, we {
         mk stackIn_5_0 = null;
         mk stackIn_8_0 = null;
         mk stackIn_11_0 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = this.field_j.c(false);
-              var3 = this.field_j.h(-1);
-              var4 = this.field_j.i(110);
-              var5 = ca.a(13421568);
-              if (param0 == 4) {
-                break L1;
-              } else {
-                var6 = (qn) null;
-                this.a((qn) null, -75);
-                break L1;
-              }
-            }
-            if (-1891 < (var4 ^ -1)) {
-              stackIn_5_0 = qk.field_b;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (var4 <= var5 + -3) {
-                if (tn.a(var2_int, var3, param0 + -25046, var4)) {
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  stackIn_11_0 = qk.field_b;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                }
-              } else {
-                stackIn_8_0 = qk.field_b;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          var2_int = this.field_j.c(false);
+          var3 = this.field_j.h(-1);
+          var4 = this.field_j.i(110);
+          var5 = ca.a(13421568);
+          if (param0 != 4) {
+            var6 = (qn) null;
+            this.a((qn) null, -75);
+          }
+          if (var4 < 1890) {
+            stackIn_5_0 = qk.field_b;
+            return stackIn_5_0;
+          }
+          if (var4 > var5 - 3) {
+            stackIn_8_0 = qk.field_b;
+            return stackIn_8_0;
+          }
+          if (!tn.a(var2_int, var3, param0 - 25046, var4)) {
+            stackIn_11_0 = qk.field_b;
+            return stackIn_11_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return qk.field_b;
         }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_5_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return oa.field_a;
-            } else {
-              return stackIn_11_0;
-            }
-          }
-        }
+        return oa.field_a;
     }
 
     public static void h(int param0) {
         if (param0 != 1) {
-            ri.a(94, (byte) 26);
-            field_k = null;
-            field_h = null;
-            return;
+          ri.a(94, (byte) 26);
+          field_k = null;
+          field_h = null;
+          return;
         }
         field_k = null;
         field_h = null;
@@ -172,7 +113,7 @@ final class ri extends jb implements ha, we {
 
     public final boolean b(int param0) {
         if (param0 != 14496) {
-            return false;
+          return false;
         }
         return this.field_j.h((byte) -123);
     }
@@ -180,26 +121,26 @@ final class ri extends jb implements ha, we {
     final static void a(int param0, pa param1, int param2) {
         nk var3 = null;
         try {
-            var3 = qn.field_U;
-            var3.f(param2, -106);
-            var3.c(2, (byte) -56);
-            var3.c(0, (byte) -112);
-            if (param0 != -1281) {
-                field_g = 45;
-            }
-            var3.c(param1.field_p, (byte) 78);
+          var3 = qn.field_U;
+          var3.f(param2, -106);
+          var3.c(2, (byte) -56);
+          var3.c(0, (byte) -112);
+          if (param0 != -1281) {
+            field_g = 45;
+          }
+          var3.c(param1.field_p, (byte) 78);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ri.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public final void b(qn param0, int param1) {
         try {
-            if (param1 != 3) {
-                field_i = -5;
-            }
+          if (param1 != 3) {
+            field_i = -5;
+          }
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ri.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -208,18 +149,18 @@ final class ri extends jb implements ha, we {
 
     public final void a(qn param0, int param1) {
         if (param1 != 10999) {
-            return;
+          return;
         }
         try {
-            this.b(true);
+          this.b(true);
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "ri.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "ri.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static um a(int param0, byte param1) {
         if (param1 < 126) {
-            return (um) null;
+          return (um) null;
         }
         return ci.a(-17288, param0, 1, false, false, true);
     }

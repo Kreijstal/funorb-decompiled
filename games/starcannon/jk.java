@@ -18,13 +18,13 @@ final class jk {
     final static void a(boolean param0, java.awt.Component param1) {
         param1.removeKeyListener(hj.field_c);
         if (param0) {
-            return;
+          return;
         }
         try {
-            param1.removeFocusListener(hj.field_c);
-            ah.field_c = -1;
+          param1.removeFocusListener(hj.field_c);
+          ah.field_c = -1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "jk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "jk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class jk {
         field_k = null;
         field_f = null;
         field_b = null;
-        int var1 = -40 % ((param0 - -67) / 47);
+        int var1 = -40 % ((param0 + 67) / 47);
     }
 
     static {

@@ -12,18 +12,18 @@ final class a {
         field_b = null;
         field_e = null;
         if (param0 != 106) {
-            return;
+          return;
         }
         field_d = (int[][][][]) null;
     }
 
     final static String a(byte param0) {
         if (gj.field_a == qc.field_i) {
-            return uf.field_j;
+          return uf.field_j;
         }
         if (param0 < 124) {
-            a.a((byte) -113);
-            return ja.field_b;
+          a.a((byte) -113);
+          return ja.field_b;
         }
         return ja.field_b;
     }

@@ -21,54 +21,35 @@ final class ao {
         int var5 = 0;
         var4 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var1 = uf.field_c;
-            synchronized (var1) {
-              L1: {
-                td.field_d = ah.field_g;
-                jf.field_a = jf.field_a + 1;
-                if (param0 < -32) {
-                  L2: {
-                    if (-1 < (bo.field_n ^ -1)) {
-                      var5 = 0;
-                      var2 = var5;
-                      L3: while (true) {
-                        if ((var5 ^ -1) <= -113) {
-                          bo.field_n = ud.field_Z;
-                          break L2;
-                        } else {
-                          cp.field_k[var5] = false;
-                          var5++;
-                          continue L3;
-                        }
-                      }
-                    } else {
-                      L4: while (true) {
-                        if (bo.field_n == ud.field_Z) {
-                          break L2;
-                        } else {
-                          var2 = pl.field_n[ud.field_Z];
-                          ud.field_Z = 127 & ud.field_Z - -1;
-                          if (-1 < (var2 ^ -1)) {
-                            cp.field_k[var2 ^ -1] = false;
-                            continue L4;
-                          } else {
-                            cp.field_k[var2] = true;
-                            continue L4;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  ah.field_g = ei.field_A;
-                  break L1;
-                } else {
-                  return;
+          var1 = uf.field_c;
+          synchronized (var1) {
+            td.field_d = ah.field_g;
+            jf.field_a = jf.field_a + 1;
+            if (param0 >= -32) {
+              return;
+            }
+            if (bo.field_n < 0) {
+              var5 = 0;
+              var2 = var5;
+              while (var5 < 112) {
+                cp.field_k[var5] = false;
+                var5++;
+              }
+              bo.field_n = ud.field_Z;
+            } else {
+              while (bo.field_n != ud.field_Z) {
+                var2 = pl.field_n[ud.field_Z];
+                ud.field_Z = 127 & ud.field_Z + 1;
+                if (var2 < 0) {
+                  cp.field_k[~var2] = false;
+                  continue;
                 }
+                cp.field_k[var2] = true;
               }
             }
-            break L0;
+            ah.field_g = ei.field_A;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;

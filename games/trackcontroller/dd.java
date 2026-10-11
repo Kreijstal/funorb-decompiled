@@ -7,12 +7,12 @@ class dd extends ic {
 
     public final void a(int param0, al param1, int param2, boolean param3, int param4) {
         try {
-            if (!(!param3)) {
-                fc.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
-            }
-            super.a(param0, param1, param2, param3, param4);
+          if (param3) {
+            fc.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
+          }
+          super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "dd.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -22,8 +22,8 @@ class dd extends ic {
 
     final static boolean c(byte param0) {
         if (param0 < 6) {
-            dd.b(30);
-            return ij.field_d.a(-119);
+          dd.b(30);
+          return ij.field_d.a(-119);
         }
         return ij.field_d.a(-119);
     }
@@ -31,25 +31,22 @@ class dd extends ic {
     final static nj d(byte param0) {
         if (hf.field_f == fd.field_h) {
           throw new IllegalStateException();
-        } else {
-          if (param0 > 82) {
-            if (fd.field_h != cj.field_e) {
-              return null;
-            } else {
-              fd.field_h = hf.field_f;
-              return h.field_c;
-            }
-          } else {
-            return (nj) null;
-          }
         }
+        if (param0 <= 82) {
+          return (nj) null;
+        }
+        if (fd.field_h == cj.field_e) {
+          fd.field_h = hf.field_f;
+          return h.field_c;
+        }
+        return null;
     }
 
     public static void b(int param0) {
         if (param0 != -3674) {
-            field_p = (String) null;
-            field_p = null;
-            return;
+          field_p = (String) null;
+          field_p = null;
+          return;
         }
         field_p = null;
     }

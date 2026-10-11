@@ -16,6 +16,7 @@ final class rj implements Runnable {
         int var1_int = 0;
         lb var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -23,45 +24,27 @@ final class rj implements Runnable {
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         this.field_a = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_g) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (2 <= var1_int) {
-                        ao.a(10L, 1);
-                        mb.a(-75, (Object) null, this.field_f);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_b[var1_int];
-                          if (var2 != null) {
-                            var2.g();
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_g) {
+              for (var1_int = 0; 2 > var1_int; var1_int++) {
+                var2 = this.field_b[var1_int];
+                if (var2 != null) {
+                  var2.g();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var5 = (String) null;
-              jh.a((Throwable) ((Object) var1), (String) null, (byte) 20);
-              this.field_a = false;
-              return;
+              ao.a(10L, 1);
+              mb.a(-75, (Object) null, this.field_f);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var5 = (String) null;
+            jh.a((Throwable) ((Object) var1), (String) null, (byte) 20);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -79,7 +62,7 @@ final class rj implements Runnable {
         field_c = null;
         field_d = null;
         if (param0 >= -80) {
-            rj.a((byte) 26);
+          rj.a((byte) 26);
         }
     }
 

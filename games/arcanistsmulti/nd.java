@@ -17,7 +17,7 @@ public class nd {
 
     public static File a(byte param0, String param1) {
         if (param0 != 67) {
-            return (File) null;
+          return (File) null;
         }
         return nd.a(param1, -3, field_a, field_b);
     }
@@ -28,32 +28,19 @@ public class nd {
         field_a = param1;
         field_b = param0;
         try {
-          L0: {
-            L1: {
-              field_d = System.getProperty("user.home");
-              if (field_d == null) {
-                break L1;
-              } else {
-                field_d = field_d + "/";
-                break L1;
-              }
-            }
-            break L0;
+          field_d = System.getProperty("user.home");
+          if (field_d != null) {
+            field_d = field_d + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L2;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
         field_c = param2;
-        if (null == field_d) {
-          field_d = "~/";
-          return;
-        } else {
+        if (null != field_d) {
           return;
         }
+        field_d = "~/";
     }
 
     public static File a(String param0, int param1, int param2, String param3) {

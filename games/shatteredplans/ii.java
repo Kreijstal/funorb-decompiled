@@ -26,37 +26,27 @@ abstract class ii extends df {
         u.field_b.field_u.a(param1, wp.field_a, 41, 0, mj.field_Sb);
         u.field_b.field_u.a(param1, js.field_i, 111, 0, mj.field_Sb);
         if (param2 < 26) {
-            return;
+          return;
         }
         try {
-            u.field_b.field_u.f(256);
-            mj.field_Sb = null;
+          u.field_b.field_u.f(256);
+          mj.field_Sb = null;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_o << 997342595;
-        int var7 = this.field_p << -1363101597;
-        param3 = (param3 << 1147197732) - -(var6 & 15);
-        param1 = (param1 << -1904765116) - -(param0 & var7);
+        int var6 = this.field_o << 3;
+        int var7 = this.field_p << 3;
+        param3 = (param3 << 4) + (var6 & 15);
+        param1 = (param1 << 4) + (param0 & var7);
         this.a(var6, var7, param3, param1, param4, param2);
     }
 
     public static void e(int param0) {
-        bc var2;
         field_s = null;
-        if (param0 != 997342595) {
-          var2 = (bc) null;
-          ii.a((bc) null, (bc) null, 124);
-          field_y = null;
-          field_r = null;
-          field_q = null;
-          field_v = null;
-          field_u = null;
-          return;
-        } else {
+        if (param0 == 997342595) {
           field_y = null;
           field_r = null;
           field_q = null;
@@ -64,6 +54,13 @@ abstract class ii extends df {
           field_u = null;
           return;
         }
+        bc var2 = (bc) null;
+        ii.a((bc) null, (bc) null, 124);
+        field_y = null;
+        field_r = null;
+        field_q = null;
+        field_v = null;
+        field_u = null;
     }
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);

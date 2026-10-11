@@ -41,14 +41,6 @@ final class vq {
     byte[] field_j;
 
     final static void a(int param0) {
-        int incrementValue$16 = 0;
-        int incrementValue$17 = 0;
-        int incrementValue$18 = 0;
-        int incrementValue$19 = 0;
-        int incrementValue$20 = 0;
-        int incrementValue$21 = 0;
-        int incrementValue$22 = 0;
-        int incrementValue$23 = 0;
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -59,52 +51,25 @@ final class vq {
         RuntimeException var1_ref = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 256) {
-                break L1;
-              } else {
-                var5 = (java.applet.Applet) null;
-                vq.a((java.applet.Applet) null, (byte) 54);
-                break L1;
-              }
-            }
-            var6 = eb.field_g;
-            var1 = var6;
-            var2 = 0;
-            var3 = var6.length;
-            L2: while (true) {
-              if (var2 >= var3) {
-                break L0;
-              } else {
-                incrementValue$16 = var2;
-                var2++;
-                var6[incrementValue$16] = 0;
-                incrementValue$17 = var2;
-                var2++;
-                var6[incrementValue$17] = 0;
-                incrementValue$18 = var2;
-                var2++;
-                var6[incrementValue$18] = 0;
-                incrementValue$19 = var2;
-                var2++;
-                var6[incrementValue$19] = 0;
-                incrementValue$20 = var2;
-                var2++;
-                var6[incrementValue$20] = 0;
-                incrementValue$21 = var2;
-                var2++;
-                var6[incrementValue$21] = 0;
-                incrementValue$22 = var2;
-                var2++;
-                var6[incrementValue$22] = 0;
-                incrementValue$23 = var2;
-                var2++;
-                var6[incrementValue$23] = 0;
-                continue L2;
-              }
-            }
+          if (param0 != 256) {
+            var5 = (java.applet.Applet) null;
+            vq.a((java.applet.Applet) null, (byte) 54);
           }
+          var6 = eb.field_g;
+          var1 = var6;
+          var2 = 0;
+          var3 = var6.length;
+          while (var2 < var3) {
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+            var6[var2++] = 0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -114,119 +79,64 @@ final class vq {
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var6 = 0;
-            int var7 = 0;
-            int var8 = 0;
-            String var9 = null;
-            String stackIn_9_0 = null;
-            String stackIn_16_0 = null;
-            RuntimeException stackIn_19_0 = null;
-            StringBuilder stackIn_19_1 = null;
-            RuntimeException stackIn_20_0 = null;
-            StringBuilder stackIn_20_1 = null;
-            String stackIn_20_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            var8 = Vertigo2.field_L ? 1 : 0;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          int var8 = 0;
+          String var9 = null;
+          String stackIn_9_0 = null;
+          String stackIn_16_0 = null;
+          RuntimeException stackIn_19_0 = null;
+          StringBuilder stackIn_19_1 = null;
+          String stackIn_20_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          var8 = Vertigo2.field_L ? 1 : 0;
+          try {
             try {
-              L0: {
-                try {
-                  L1: {
-                    L2: {
-                      if (param1 > 84) {
-                        break L2;
-                      } else {
-                        field_r = 66;
-                        break L2;
-                      }
-                    }
-                    var9 = param0.getParameter("cookieprefix");
-                    var3 = var9 + "settings";
-                    var4 = (String) (je.a(param0, false, "getcookies"));
-                    var5 = jr.a((byte) -9, ';', var4);
-                    var6 = 0;
-                    L3: while (true) {
-                      if (var5.length <= var6) {
-                        decompiledRegionSelector0 = 0;
-                        break L1;
-                      } else {
-                        L4: {
-                          var7 = var5[var6].indexOf('=');
-                          if ((var7 ^ -1) > -1) {
-                            break L4;
-                          } else {
-                            if (var5[var6].substring(0, var7).trim().equals(var3)) {
-                              stackIn_9_0 = var5[var6].substring(1 + var7).trim();
-                              decompiledRegionSelector0 = 1;
-                              break L1;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        var6++;
-                        continue L3;
-                      }
-                    }
-                  }
-                } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L5: {
-                    var2 = decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
-                    break L5;
-                  }
-                }
-                if (decompiledRegionSelector0 == 0) {
-                  if (null != v.field_b) {
-                    stackIn_16_0 = v.field_b;
-                    decompiledRegionSelector1 = 0;
-                    break L0;
-                  } else {
-                    return param0.getParameter("settings");
-                  }
-                } else {
-                  decompiledRegionSelector1 = 1;
-                  break L0;
+              if (param1 <= 84) {
+                field_r = 66;
+              }
+              var9 = param0.getParameter("cookieprefix");
+              var3 = var9 + "settings";
+              var4 = (String) (je.a(param0, false, "getcookies"));
+              var5 = jr.a((byte) -9, ';', var4);
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (var7 >= 0 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_9_0 = var5[var6].substring(1 + var7).trim();
+                  return stackIn_9_0;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L6: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_19_0 = (RuntimeException) (var2_ref);
-
-                stackIn_19_1 = new StringBuilder().append("vq.A(");
-
-                if (param0 == null) {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-                  stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-                  stackIn_20_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw wn.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ',' + param1 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_16_0;
+            if (null == v.field_b) {
+              return param0.getParameter("settings");
+            }
+            stackIn_16_0 = v.field_b;
+            return stackIn_16_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_19_0 = var2_ref;
+            stackIn_19_1 = new StringBuilder().append("vq.A(");
+            if (param0 == null) {
+              stackIn_20_2 = "null";
             } else {
-              return stackIn_9_0;
+              stackIn_20_2 = "{...}";
             }
+            throw wn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

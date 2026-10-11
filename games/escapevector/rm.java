@@ -14,14 +14,14 @@ final class rm implements Iterator {
 
     final static void a(java.awt.Component param0, byte param1) {
         if (param1 != 38) {
-            return;
+          return;
         }
         try {
-            param0.addMouseListener(om.field_b);
-            param0.addMouseMotionListener(om.field_b);
-            param0.addFocusListener(om.field_b);
+          param0.addMouseListener(om.field_b);
+          param0.addMouseMotionListener(om.field_b);
+          param0.addFocusListener(om.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -32,18 +32,18 @@ final class rm implements Iterator {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            field_c = false;
-            field_e = null;
-            field_g = null;
-            return;
+          field_c = false;
+          field_e = null;
+          field_g = null;
+          return;
         }
         field_e = null;
         field_g = null;
     }
 
     public final void remove() {
-        if (!(null != this.field_d)) {
-            throw new IllegalStateException();
+        if (null == this.field_d) {
+          throw new IllegalStateException();
         }
         this.field_d.d(103);
         this.field_d = null;
@@ -52,21 +52,21 @@ final class rm implements Iterator {
     rm(vb param0) {
         this.field_d = null;
         try {
-            this.field_f = param0;
-            this.field_b = this.field_f.field_c.field_j;
-            this.field_d = null;
+          this.field_f = param0;
+          this.field_b = this.field_f.field_c.field_j;
+          this.field_d = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Object next() {
         Object var1 = this.field_b;
         if (this.field_f.field_c != var1) {
-            this.field_b = ((fl) (var1)).field_j;
+          this.field_b = ((fl) (var1)).field_j;
         } else {
-            this.field_b = null;
-            var1 = null;
+          this.field_b = null;
+          var1 = null;
         }
         this.field_d = (fl) (var1);
         return var1;

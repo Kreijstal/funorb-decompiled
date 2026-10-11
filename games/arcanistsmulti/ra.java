@@ -21,11 +21,10 @@ final class ra {
 
     final static int a(int param0) {
         int var1 = -69 / ((53 - param0) / 62);
-        return new Date().getYear() - -1900;
+        return new Date().getYear() + 1900;
     }
 
     public static void b(int param0) {
-        kc var2;
         field_k = null;
         field_a = null;
         field_f = null;
@@ -36,41 +35,39 @@ final class ra {
         field_g = null;
         field_c = null;
         field_i = null;
-        if (param0 != 64) {
-          var2 = (kc) null;
-          ra.a((kc) null, 47, (kc) null);
-          field_e = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0 == 64) {
           field_e = null;
           field_l = null;
           return;
         }
+        kc var2 = (kc) null;
+        ra.a((kc) null, 47, (kc) null);
+        field_e = null;
+        field_l = null;
     }
 
     final static void a(kc param0, int param1, kc param2) {
         try {
-            if (!(null != param0.field_G)) {
-                param0.field_G = new vn();
-            }
-            if (param2.field_G == null) {
-                param2.field_G = new vn();
-            }
-            if (ie.field_Qb == null) {
-                ie.field_Qb = new mo(64);
-            }
-            if (!(null != uc.field_c)) {
-                uc.field_c = new mo(64);
-            }
-            vd.field_d = param0.field_G;
-            if (param1 != 64) {
-                field_e = (String) null;
-            }
-            oo.field_B = param2.field_G;
-            qn.i(65);
+          if (null == param0.field_G) {
+            param0.field_G = new vn();
+          }
+          if (param2.field_G == null) {
+            param2.field_G = new vn();
+          }
+          if (ie.field_Qb == null) {
+            ie.field_Qb = new mo(64);
+          }
+          if (null == uc.field_c) {
+            uc.field_c = new mo(64);
+          }
+          vd.field_d = param0.field_G;
+          if (param1 != 64) {
+            field_e = (String) null;
+          }
+          oo.field_B = param2.field_G;
+          qn.i(65);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -12,94 +12,47 @@ final class mr {
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_20_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 == 2004352972) {
-                break L1;
-              } else {
-                mr.a(23);
-                break L1;
-              }
+          if (param1 != 2004352972) {
+            mr.a(23);
+          }
+          if ((0 >= param0 ||
+            128 <= param0) &&
+            (160 > param0 ||
+            param0 > 255)) {
+            if (param0 == 0) {
+              return false;
             }
-            L2: {
-              L3: {
-                if (0 >= param0) {
-                  break L3;
-                } else {
-                  if (128 > param0) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              L4: {
-                if (160 > param0) {
-                  break L4;
-                } else {
-                  if (param0 <= 255) {
-                    break L2;
-                  } else {
-                    break L4;
-                  }
-                }
-              }
-              if (param0 != 0) {
-                var6 = te.field_e;
-                var2 = var6;
-                var3 = 0;
-                L5: while (true) {
-                  if (var3 >= var6.length) {
-                    stackIn_20_0 = 0;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var4 = var6[var3];
-                    if (param0 != var4) {
-                      var3++;
-                      continue L5;
-                    } else {
-                      stackIn_17_0 = 1;
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    }
-                  }
-                }
-              } else {
+            var6 = te.field_e;
+            var2 = var6;
+            var3 = 0;
+            while (true) {
+              if (var3 >= var6.length) {
                 return false;
               }
+              var4 = var6[var3];
+              if (param0 != var4) {
+                var3++;
+                continue;
+              }
+              break;
             }
-            stackIn_10_0 = 1;
-            decompiledRegionSelector0 = 0;
-            break L0;
+            return true;
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2_ref), "mr.B(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_17_0 != 0;
-          } else {
-            return stackIn_20_0 != 0;
-          }
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_b = null;
     }

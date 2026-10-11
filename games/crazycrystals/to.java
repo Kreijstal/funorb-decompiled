@@ -11,20 +11,20 @@ final class to {
 
     final static void a(int param0, java.awt.Canvas param1) {
         try {
-            if (!(11 != hp.field_s)) {
-                fg.c((byte) 95);
-            }
-            tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
-            bq.a(param1, param0, 0, 4);
+          if (11 == hp.field_s) {
+            fg.c((byte) 95);
+          }
+          tg.a(pj.field_p, ta.field_i, (byte) -41, nf.field_f);
+          bq.a(param1, param0, 0, 4);
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "to.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -51) {
-            return;
+          return;
         }
         field_f = null;
         field_e = null;

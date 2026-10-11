@@ -12,7 +12,7 @@ final class mg extends at {
 
     final static String d(int param0) {
         if (param0 != 320) {
-            return (String) null;
+          return (String) null;
         }
         return re.field_D;
     }
@@ -20,9 +20,9 @@ final class mg extends at {
     final boolean c(byte param0) {
         int fieldTemp$0 = this.field_n - 1;
         this.field_n = this.field_n - 1;
-        if (!((fieldTemp$0 ^ -1) < -1)) {
-            this.d((byte) -56);
-            return true;
+        if (fieldTemp$0 <= 0) {
+          this.d((byte) -56);
+          return true;
         }
         int var2 = this.field_n * (320 * (50 - this.field_n)) / 2500;
         int var3 = -17 % ((param0 - 71) / 47);
@@ -32,25 +32,23 @@ final class mg extends at {
 
     private final void d(byte param0) {
         if (param0 != -56) {
-            field_o = (String) null;
-            this.field_j.field_k = 0;
-            return;
+          field_o = (String) null;
+          this.field_j.field_k = 0;
+          return;
         }
         this.field_j.field_k = 0;
     }
 
     final static be a(byte param0, int param1) {
-        be var2;
-        if (param0 <= -114) {
-          if (0 == (param1 ^ -1)) {
-            return null;
-          } else {
-            var2 = jga.field_y[param1];
-            return var2;
-          }
-        } else {
+        be var2 = null;
+        if (param0 > -114) {
           return (be) null;
         }
+        if (param1 != -1) {
+          var2 = jga.field_y[param1];
+          return var2;
+        }
+        return null;
     }
 
     public static void e(int param0) {
@@ -63,10 +61,10 @@ final class mg extends at {
 
     mg(ad param0) {
         try {
-            this.field_n = 50;
-            this.field_j = param0;
+          this.field_n = 50;
+          this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "mg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

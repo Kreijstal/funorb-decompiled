@@ -8,7 +8,7 @@ final class dh {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -100) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -17,12 +17,12 @@ final class dh {
         nj.b(param1.a("headers.packvorbis", (byte) 45, ""));
         nj var2 = nj.a(param1, "jagex logo2.packvorbis", "");
         if (param0 != 115) {
-            return;
+          return;
         }
         try {
-            var2.c();
+          var2.c();
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

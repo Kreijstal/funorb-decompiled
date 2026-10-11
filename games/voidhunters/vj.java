@@ -11,54 +11,30 @@ final class vj extends rqa {
     }
 
     final static void e(int param0) {
-        if (uh.field_p == jl.field_q.field_b) {
-          if (param0 > (tb.field_b ^ -1)) {
-            L0: {
-              tb.field_b = tb.field_b - 1;
-              if (tb.field_b > 0) {
-                cs.b((byte) -31);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            return;
-          } else {
-            L1: {
-              if (tb.field_b > 0) {
-                cs.b((byte) -31);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return;
-          }
-        } else {
+        if (uh.field_p != jl.field_q.field_b) {
           kga.field_o = kga.field_o + (jl.field_q.field_b - uh.field_p);
           uh.field_p = jl.field_q.field_b;
-          if (param0 <= (tb.field_b ^ -1)) {
-            L2: {
-              if (tb.field_b > 0) {
-                cs.b((byte) -31);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            return;
-          } else {
-            L3: {
-              tb.field_b = tb.field_b - 1;
-              if (tb.field_b > 0) {
-                cs.b((byte) -31);
-                break L3;
-              } else {
-                break L3;
-              }
+          if (param0 > ~tb.field_b) {
+            tb.field_b = tb.field_b - 1;
+            if (!(tb.field_b <= 0)) {
+              cs.b((byte) -31);
             }
             return;
           }
+          if (!(tb.field_b <= 0)) {
+            cs.b((byte) -31);
+          }
+          return;
+        }
+        if (param0 <= ~tb.field_b) {
+          if (!(tb.field_b <= 0)) {
+            cs.b((byte) -31);
+          }
+          return;
+        }
+        tb.field_b = tb.field_b - 1;
+        if (!(tb.field_b <= 0)) {
+          cs.b((byte) -31);
         }
     }
 
@@ -67,53 +43,33 @@ final class vj extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                vj.e(-68);
-                break L1;
-              }
-            }
-            si.a(227, 62, param0[0].a(12));
-            stackIn_3_0 = new nc("void");
-            break L0;
+          if (param1 > -119) {
+            vj.e(-68);
           }
+          si.a(227, 62, param0[0].a(12));
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("vj.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("vj.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_o = null;
         field_q = null;
-        int var1 = -29 / ((param0 - -16) / 58);
+        int var1 = -29 / ((param0 + 16) / 58);
         field_p = null;
     }
 

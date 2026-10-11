@@ -14,16 +14,16 @@ final class gla {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -5709) {
-            gla.a(-15);
+          gla.a(-15);
         }
     }
 
     gla(jp param0, int param1, int param2) {
         try {
-            this.field_a = param0;
-            this.field_c = param2;
+          this.field_a = param0;
+          this.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "gla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "gla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

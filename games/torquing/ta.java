@@ -13,36 +13,30 @@ class ta extends q {
     final void h(int param0) {
         if (null == this.field_j) {
           return;
-        } else {
-          this.field_j.field_p = this.field_p;
-          this.field_p.field_j = this.field_j;
-          this.field_p = null;
-          if (param0 != 0) {
-            this.h(3);
-            this.field_j = null;
-            return;
-          } else {
-            this.field_j = null;
-            return;
-          }
         }
+        this.field_j.field_p = this.field_p;
+        this.field_p.field_j = this.field_j;
+        this.field_p = null;
+        if (param0 == 0) {
+          this.field_j = null;
+          return;
+        }
+        this.h(3);
+        this.field_j = null;
     }
 
     final boolean a(byte param0) {
-        if (param0 > 71) {
-          if (this.field_j == null) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 <= 71) {
           field_n = 110;
-          if (this.field_j == null) {
-            return false;
-          } else {
+          if (this.field_j != null) {
             return true;
           }
+          return false;
         }
+        if (this.field_j != null) {
+          return true;
+        }
+        return false;
     }
 
     public static void g(int param0) {
@@ -60,26 +54,15 @@ class ta extends q {
         RuntimeException var6 = null;
         var7 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              var6_int = param2;
-              if (param0 == 0) {
-                break L1;
-              } else {
-                ta.g(-46);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (param1 < var6_int) {
-                break L0;
-              } else {
-                di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
-                var6_int++;
-                continue L2;
-              }
-            }
+          var6_int = param2;
+          if (param0 != 0) {
+            ta.g(-46);
           }
+          while (param1 >= var6_int) {
+            di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
+            var6_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;

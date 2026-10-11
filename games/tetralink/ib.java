@@ -9,7 +9,7 @@ final class ib {
 
     final static long a(byte param0) {
         if (param0 < 126) {
-            return 28L;
+          return 28L;
         }
         return -sj.field_k + k.a(0);
     }
@@ -19,7 +19,7 @@ final class ib {
         field_a = null;
         field_d = null;
         if (param0 != 27204) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

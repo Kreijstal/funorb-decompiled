@@ -10,38 +10,35 @@ final class ou implements Iterable {
     static String field_c;
 
     final eo a(int param0) {
-        eo var2;
-        eo var3;
-        if (param0 == 24383) {
-          var2 = this.field_a.field_m;
-          if (this.field_a == var2) {
-            return null;
-          } else {
-            var2.b(param0 + -24383);
-            return var2;
-          }
-        } else {
-          var3 = (eo) null;
+        eo var2 = null;
+        eo var2Lifetime1;
+        if (param0 != 24383) {
+          eo var3 = (eo) null;
           this.a((eo) null, (byte) -80);
           var2 = this.field_a.field_m;
-          if (this.field_a == var2) {
-            return null;
-          } else {
-            var2.b(param0 + -24383);
+          if (this.field_a != var2) {
+            var2.b(param0 - 24383);
             return var2;
           }
+          return null;
         }
+        var2Lifetime1 = this.field_a.field_m;
+        if (this.field_a != var2Lifetime1) {
+          var2Lifetime1.b(param0 - 24383);
+          return var2Lifetime1;
+        }
+        return null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ev((ou) (this)));
+        return (Iterator) ((Object) new ev(this));
     }
 
     public static void b(int param0) {
         field_c = null;
         field_d = null;
         if (param0 > -101) {
-            ou.b(24);
+          ou.b(24);
         }
     }
 
@@ -53,18 +50,18 @@ final class ou implements Iterable {
 
     final void a(eo param0, byte param1) {
         try {
-            if (!(null == param0.field_i)) {
-                param0.b(0);
-            }
-            param0.field_m = this.field_a;
-            param0.field_i = this.field_a.field_i;
-            param0.field_i.field_m = param0;
-            if (param1 != -118) {
-                this.a(42);
-            }
-            param0.field_m.field_i = param0;
+          if (null != param0.field_i) {
+            param0.b(0);
+          }
+          param0.field_m = this.field_a;
+          param0.field_i = this.field_a.field_i;
+          param0.field_i.field_m = param0;
+          if (param1 != -118) {
+            this.a(42);
+          }
+          param0.field_m.field_i = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ou.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ou.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

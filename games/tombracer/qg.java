@@ -8,24 +8,24 @@ final class qg {
 
     public static void a(int param0) {
         if (param0 != -1485) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final boolean a(byte param0) {
         if (param0 > -22) {
-            return true;
+          return true;
         }
         return this.field_b;
     }
 
     qg(g[] param0, boolean param1) {
         try {
-            this.field_c = param0;
-            this.field_b = param1 ? true : false;
+          this.field_c = param0;
+          this.field_b = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

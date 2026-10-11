@@ -12,9 +12,9 @@ final class pr {
         field_c = null;
         field_b = null;
         if (param0 != 0) {
-            field_c = (String) null;
-            field_a = null;
-            return;
+          field_c = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

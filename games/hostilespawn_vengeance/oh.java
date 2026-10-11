@@ -10,7 +10,7 @@ final class oh {
         field_b = null;
         field_a = null;
         if (param0 != -32278) {
-            oh.a(-61);
+          oh.a(-61);
         }
     }
 

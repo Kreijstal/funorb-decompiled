@@ -8,7 +8,7 @@ abstract class pj {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -18178) {
-            pj.a(68);
+          pj.a(68);
         }
     }
 

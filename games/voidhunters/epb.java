@@ -23,16 +23,7 @@ final class epb extends pw {
         tra.field_p[13] = 0.0f;
         tra.field_p[14] = 0.0f;
         tra.field_p[10] = this.field_c;
-        if (param0 <= 27) {
-          this.a(false);
-          tra.field_p[5] = this.field_j;
-          tra.field_p[4] = this.field_i;
-          tra.field_p[12] = 0.0f;
-          tra.field_p[2] = this.field_b;
-          tra.field_p[9] = this.field_g;
-          tra.field_p[1] = this.field_h;
-          return tra.field_p;
-        } else {
+        if (param0 > 27) {
           tra.field_p[5] = this.field_j;
           tra.field_p[4] = this.field_i;
           tra.field_p[12] = 0.0f;
@@ -41,13 +32,19 @@ final class epb extends pw {
           tra.field_p[1] = this.field_h;
           return tra.field_p;
         }
+        this.a(false);
+        tra.field_p[5] = this.field_j;
+        tra.field_p[4] = this.field_i;
+        tra.field_p[12] = 0.0f;
+        tra.field_p[2] = this.field_b;
+        tra.field_p[9] = this.field_g;
+        tra.field_p[1] = this.field_h;
+        return tra.field_p;
     }
 
     final void a(float[] param0, float param1, float param2, float param3, int param4, float param5) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         float var7_float = 0.0f;
@@ -58,79 +55,45 @@ final class epb extends pw {
         int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (param4 == 13) {
-                break L1;
-              } else {
-                this.field_l = -0.19119702279567719f;
-                break L1;
-              }
-            }
-            L2: {
-              L3: {
-                param0[0] = param5 * this.field_i + param1 * this.field_k + this.field_f * param3;
-                param0[2] = param3 * this.field_c + (this.field_b * param1 + this.field_d * param5);
-                if (0.00390625f < param1) {
-                  break L3;
-                } else {
-                  if (-0.00390625f <= param1) {
-                    L4: {
-                      if (param5 > 0.00390625f) {
-                        break L4;
-                      } else {
-                        if (-0.00390625f > param5) {
-                          break L4;
-                        } else {
-                          var10 = -param2 / param3;
-                          var9 = this.field_l + this.field_c * var10;
-                          var8 = this.field_e + var10 * this.field_g;
-                          var7_float = var10 * this.field_f + this.field_n;
-                          break L2;
-                        }
-                      }
-                    }
-                    var10 = -param2 / param5;
-                    var9 = this.field_l + this.field_d * var10;
-                    var7_float = var10 * this.field_i + this.field_n;
-                    var8 = var10 * this.field_j + this.field_e;
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              var10 = -param2 / param1;
-              var8 = this.field_h * var10 + this.field_e;
-              var7_float = var10 * this.field_k + this.field_n;
-              var9 = this.field_l + this.field_b * var10;
-              break L2;
-            }
-            param0[1] = param3 * this.field_g + (param1 * this.field_h + this.field_j * param5);
-            param0[3] = -(param0[0] * var7_float + var8 * param0[1] + var9 * param0[2]);
-            break L0;
+          if (param4 != 13) {
+            this.field_l = -0.19119702279567719f;
           }
+          param0[0] = param5 * this.field_i + param1 * this.field_k + this.field_f * param3;
+          param0[2] = param3 * this.field_c + (this.field_b * param1 + this.field_d * param5);
+          if (!(0.00390625f < param1) &&
+            !(-0.00390625f > param1)) {
+            if (!(param5 > 0.00390625f) &&
+              !(-0.00390625f > param5)) {
+              var10 = -param2 / param3;
+              var9 = this.field_l + this.field_c * var10;
+              var8 = this.field_e + var10 * this.field_g;
+              var7_float = var10 * this.field_f + this.field_n;
+            } else {
+              var10 = -param2 / param5;
+              var9 = this.field_l + this.field_d * var10;
+              var7_float = var10 * this.field_i + this.field_n;
+              var8 = var10 * this.field_j + this.field_e;
+            }
+          } else {
+            var10 = -param2 / param1;
+            var8 = this.field_h * var10 + this.field_e;
+            var7_float = var10 * this.field_k + this.field_n;
+            var9 = this.field_l + this.field_b * var10;
+          }
+          param0[1] = param3 * this.field_g + (param1 * this.field_h + this.field_j * param5);
+          param0[3] = -(param0[0] * var7_float + var8 * param0[1] + var9 * param0[2]);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var7 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var7);
-
-            stackIn_15_1 = new StringBuilder().append("epb.C(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          var7 = decompiledCaughtException;
+          stackIn_15_0 = var7;
+          stackIn_15_1 = new StringBuilder().append("epb.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -139,77 +102,62 @@ final class epb extends pw {
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = (epb) ((Object) param1);
-            this.field_l = var3.field_l;
-            this.field_i = var3.field_i;
-            this.field_n = var3.field_n;
-            this.field_j = var3.field_j;
-            this.field_e = var3.field_e;
-            this.field_g = var3.field_g;
-            this.field_k = var3.field_k;
-            this.field_b = var3.field_b;
-            this.field_f = var3.field_f;
-            this.field_c = var3.field_c;
-            this.field_h = var3.field_h;
-            this.field_d = var3.field_d;
-            if (!param0) {
-              break L0;
-            } else {
-              epb.c(30);
-              return;
-            }
+          var3 = (epb) (param1);
+          this.field_l = var3.field_l;
+          this.field_i = var3.field_i;
+          this.field_n = var3.field_n;
+          this.field_j = var3.field_j;
+          this.field_e = var3.field_e;
+          this.field_g = var3.field_g;
+          this.field_k = var3.field_k;
+          this.field_b = var3.field_b;
+          this.field_f = var3.field_f;
+          this.field_c = var3.field_c;
+          this.field_h = var3.field_h;
+          this.field_d = var3.field_d;
+          if (!param0) {
+            return;
           }
+          epb.c(30);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (var3_ref);
-
-            stackIn_5_1 = new StringBuilder().append("epb.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L1;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_5_0 = var3_ref;
+          stackIn_5_1 = new StringBuilder().append("epb.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     final void a(pw param0, int param1) {
         epb var4 = null;
         try {
-            var4 = (epb) ((Object) param0);
-            this.field_f = var4.field_b;
-            this.field_k = var4.field_k;
-            this.field_i = var4.field_h;
-            this.field_g = var4.field_d;
-            this.field_h = var4.field_i;
-            this.field_j = var4.field_j;
-            if (param1 != 14) {
-                this.a(-58, -73, -57, 3, -107, -43);
-            }
-            this.field_b = var4.field_f;
-            this.field_n = -(this.field_f * var4.field_l + (this.field_k * var4.field_n + this.field_i * var4.field_e));
-            this.field_d = var4.field_g;
-            this.field_c = var4.field_c;
-            this.field_e = -(this.field_g * var4.field_l + (this.field_j * var4.field_e + var4.field_n * this.field_h));
-            this.field_l = -(this.field_c * var4.field_l + (var4.field_n * this.field_b + var4.field_e * this.field_d));
+          var4 = (epb) (param0);
+          this.field_f = var4.field_b;
+          this.field_k = var4.field_k;
+          this.field_i = var4.field_h;
+          this.field_g = var4.field_d;
+          this.field_h = var4.field_i;
+          this.field_j = var4.field_j;
+          if (param1 != 14) {
+            this.a(-58, -73, -57, 3, -107, -43);
+          }
+          this.field_b = var4.field_f;
+          this.field_n = -(this.field_f * var4.field_l + (this.field_k * var4.field_n + this.field_i * var4.field_e));
+          this.field_d = var4.field_g;
+          this.field_c = var4.field_c;
+          this.field_e = -(this.field_g * var4.field_l + (this.field_j * var4.field_e + var4.field_n * this.field_h));
+          this.field_l = -(this.field_c * var4.field_l + (var4.field_n * this.field_b + var4.field_e * this.field_d));
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "epb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "epb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -230,9 +178,9 @@ final class epb extends pw {
 
     public static void c(int param0) {
         if (param0 != 13) {
-            field_m = (phb) null;
-            field_m = null;
-            return;
+          field_m = (phb) null;
+          field_m = null;
+          return;
         }
         field_m = null;
     }
@@ -241,15 +189,7 @@ final class epb extends pw {
         this.field_j = -this.field_j;
         this.field_c = -this.field_c;
         this.field_b = -this.field_b;
-        if (param0 != 5) {
-          this.a(true);
-          this.field_e = -this.field_e;
-          this.field_l = -this.field_l;
-          this.field_d = -this.field_d;
-          this.field_g = -this.field_g;
-          this.field_h = -this.field_h;
-          return;
-        } else {
+        if (param0 == 5) {
           this.field_e = -this.field_e;
           this.field_l = -this.field_l;
           this.field_d = -this.field_d;
@@ -257,6 +197,12 @@ final class epb extends pw {
           this.field_h = -this.field_h;
           return;
         }
+        this.a(true);
+        this.field_e = -this.field_e;
+        this.field_l = -this.field_l;
+        this.field_d = -this.field_d;
+        this.field_g = -this.field_g;
+        this.field_h = -this.field_h;
     }
 
     final float[] a(boolean param0) {
@@ -272,12 +218,11 @@ final class epb extends pw {
         tra.field_p[9] = this.field_g;
         tra.field_p[10] = this.field_c;
         tra.field_p[8] = this.field_f;
-        if (!param0) {
-          this.field_n = 1.1959586143493652f;
-          return tra.field_p;
-        } else {
+        if (param0) {
           return tra.field_p;
         }
+        this.field_n = 1.1959586143493652f;
+        return tra.field_p;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

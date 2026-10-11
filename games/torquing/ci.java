@@ -11,15 +11,15 @@ final class ci {
 
     final static void a(int param0, String[] param1) {
         try {
-            if (!(ib.field_b == null)) {
-                ib.field_b.field_M.a(param1, -121);
-            }
-            if (!(je.field_g == null)) {
-                je.field_g.field_I.a(param1, -123);
-            }
-            int var2_int = -62 % ((param0 - -12) / 62);
+          if (ib.field_b != null) {
+            ib.field_b.field_M.a(param1, -121);
+          }
+          if (je.field_g != null) {
+            je.field_g.field_I.a(param1, -123);
+          }
+          int var2_int = -62 % ((param0 + 12) / 62);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class ci {
         field_d = null;
         field_b = null;
         if (param0 != 2) {
-            ci.b(-22);
+          ci.b(-22);
         }
         field_a = null;
     }
@@ -38,228 +38,150 @@ final class ci {
         up stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var2_int = 98 / ((param0 - -18) / 60);
-            stackIn_1_0 = new up(param1);
-            break L0;
-          }
+          var2_int = 98 / ((param0 + 18) / 60);
+          stackIn_1_0 = new up(param1);
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var2);
-
-            stackIn_4_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_4_0 = var2;
+          stackIn_4_1 = new StringBuilder().append("ci.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            int var1_int = 0;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = Torquing.field_u;
-            try {
-              L0: {
-                L1: {
-                  if (param0 == 0) {
-                    break L1;
-                  } else {
-                    field_b = (String) null;
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (null != nn.field_c) {
-                    nn.field_c.b((byte) -101);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (null == gh.field_a) {
-                    break L3;
-                  } else {
-                    gh.field_a.a((byte) -95);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (null == jd.field_F) {
-                    break L4;
-                  } else {
-                    try {
-                      L5: {
-                        jd.field_F.a(false);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
-                    }
-                    break L4;
-                  }
-                }
-                L7: {
-                  if (uj.field_b == null) {
-                    break L7;
-                  } else {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (uj.field_b.length <= var1_int) {
-                        break L7;
-                      } else {
-                        if (uj.field_b[var1_int] != null) {
-                          try {
-                            L9: {
-                              uj.field_b[var1_int].a(false);
-                              break L9;
-                            }
-                          } catch (java.io.IOException decompiledCaughtParameter1) {
-                            decompiledCaughtException = decompiledCaughtParameter1;
-                            L10: {
-                              var2 = (IOException) (Object) decompiledCaughtException;
-                              break L10;
-                            }
-                          }
-                          var1_int++;
-                          continue L8;
-                        } else {
-                          var1_int++;
-                          continue L8;
-                        }
-                      }
-                    }
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw rb.a((Throwable) ((Object) var1), "ci.E(" + param0 + ')');
+          int var1_int = 0;
+          IOException iOException = null;
+          int var3 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          IOException var2 = null;
+          var3 = Torquing.field_u;
+          try {
+            if (param0 != 0) {
+              field_b = (String) null;
             }
+            if (null != nn.field_c) {
+              nn.field_c.b((byte) -101);
+            }
+            if (null != gh.field_a) {
+              gh.field_a.a((byte) -95);
+            }
+            if (null != jd.field_F) {
+              try {
+                jd.field_F.a(false);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (uj.field_b != null) {
+              for (var1_int = 0; uj.field_b.length > var1_int; var1_int++) {
+                if (uj.field_b[var1_int] != null) {
+                  try {
+                    uj.field_b[var1_int].a(false);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
+                }
+              }
+              return;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw rb.a((Throwable) ((Object) var1), "ci.E(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
+        int var2;
+        int var2Lifetime1;
         if (param0 == 0) {
-            return 0;
+          return 0;
         }
-        if (!((param0 ^ -1) >= -1)) {
-            var2 = 1;
-            if (65535 < param0) {
-                var2 += 16;
-                param0 = param0 >> 16;
-            }
-            if (!((param0 ^ -1) >= -256)) {
-                param0 = param0 >> 8;
-                var2 += 8;
-            }
-            if (param0 > 15) {
-                var2 += 4;
-                param0 = param0 >> 4;
-            }
-            if (!(3 >= param0)) {
-                param0 = param0 >> 2;
-                var2 += 2;
-            }
-            if (!(param0 <= 1)) {
-                param0 = param0 >> 1;
-                var2++;
-            }
-            return var2;
-        }
-        var2 = param1;
-        if (65535 < (param0 ^ -1)) {
-            param0 = param0 >> 16;
+        if (param0 > 0) {
+          var2 = 1;
+          if (65535 < param0) {
             var2 += 16;
-        }
-        if (param0 < -256) {
-            var2 += 8;
+            param0 = param0 >> 16;
+          }
+          if (param0 > 255) {
             param0 = param0 >> 8;
-        }
-        if (param0 < -16) {
-            param0 = param0 >> 4;
+            var2 += 8;
+          }
+          if (param0 > 15) {
             var2 += 4;
-        }
-        if ((param0 ^ -1) > 3) {
+            param0 = param0 >> 4;
+          }
+          if (3 < param0) {
             param0 = param0 >> 2;
             var2 += 2;
-        }
-        if ((param0 ^ -1) > 1) {
+          }
+          if (param0 > 1) {
             param0 = param0 >> 1;
             var2++;
+          }
+          return var2;
         }
-        return var2;
+        var2Lifetime1 = param1;
+        if (param0 < -65536) {
+          param0 = param0 >> 16;
+          var2Lifetime1 += 16;
+        }
+        if (param0 < -256) {
+          var2Lifetime1 += 8;
+          param0 = param0 >> 8;
+        }
+        if (param0 < -16) {
+          param0 = param0 >> 4;
+          var2Lifetime1 += 4;
+        }
+        if (param0 < -4) {
+          param0 = param0 >> 2;
+          var2Lifetime1 += 2;
+        }
+        if (param0 < -2) {
+          param0 = param0 >> 1;
+          var2Lifetime1++;
+        }
+        return var2Lifetime1;
     }
 
     static {
-        $cfr$clinit: {
-            long var0;
-            int var2;
-            int var3;
-            field_a = new long[256];
-            field_b = "Password is valid";
-            var2 = 0;
-            L0: while (true) {
-              if (var2 >= 256) {
-                field_d = "Waiting for extra data";
-                break $cfr$clinit;
-              } else {
-                var0 = (long)var2;
-                var3 = 0;
-                L1: while (true) {
-                  if (8 <= var3) {
-                    field_a[var2] = var0;
-                    var2++;
-                    continue L0;
-                  } else {
-                    if (1L == (var0 & 1L)) {
-                      var0 = var0 >>> -1512199487 ^ -3932672073523589310L;
-                      var3++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var3++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var2 = 0;
+        int var3 = 0;
+        long var0;
+        field_a = new long[256];
+        field_b = "Password is valid";
+        for (var2 = 0; var2 < 256; var2++) {
+          var0 = (long)var2;
+          for (var3 = 0; 8 > var3; var3++) {
+            if (1L == (var0 & 1L)) {
+              var0 = var0 >>> 1 ^ -3932672073523589310L;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_a[var2] = var0;
         }
+        field_d = "Waiting for extra data";
     }
 }

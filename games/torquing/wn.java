@@ -7,7 +7,7 @@ final class wn extends am {
     public static void b(int param0) {
         field_s = null;
         if (param0 != 0) {
-            field_s = (bp) null;
+          field_s = (bp) null;
         }
     }
 
@@ -17,8 +17,8 @@ final class wn extends am {
 
     final int[] a(byte param0, int param1) {
         if (param0 <= 86) {
-            this.a((byte) 88, -87);
-            return q.field_b;
+          this.a((byte) 88, -87);
+          return q.field_b;
         }
         return q.field_b;
     }

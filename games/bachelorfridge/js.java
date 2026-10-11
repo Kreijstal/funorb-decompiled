@@ -9,100 +9,75 @@ final class js {
     private bw field_d;
 
     final bw c(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         bw var2;
         int var3;
         var3 = BachelorFridge.field_y;
         if (param0 == -21446) {
-          L0: {
-            if (this.field_a <= 0) {
-              break L0;
-            } else {
-              if (this.field_d == this.field_b[-1 + this.field_a]) {
-                break L0;
-              } else {
-                var2 = this.field_d;
-                this.field_d = var2.field_b;
-                return var2;
-              }
-            }
+          if (this.field_a > 0 &&
+            this.field_d != this.field_b[-1 + this.field_a]) {
+            var2 = this.field_d;
+            this.field_d = var2.field_b;
+            return var2;
           }
-          L1: while (true) {
-            if (this.field_a < this.field_e) {
-              fieldTemp$3 = this.field_a;
-              this.field_a = this.field_a + 1;
-              var2 = this.field_b[fieldTemp$3].field_b;
-              if (this.field_b[this.field_a - 1] != var2) {
-                this.field_d = var2.field_b;
-                return var2;
-              } else {
-                continue L1;
-              }
-            } else {
+          do {
+            if (this.field_a >= this.field_e) {
               return null;
             }
-          }
-        } else {
-          this.a(false, -79L);
-          if (this.field_a > 0) {
-            if (this.field_d == this.field_b[-1 + this.field_a]) {
-              L2: while (true) {
-                if (this.field_a < this.field_e) {
-                  fieldTemp$4 = this.field_a;
-                  this.field_a = this.field_a + 1;
-                  var2 = this.field_b[fieldTemp$4].field_b;
-                  if (this.field_b[this.field_a - 1] != var2) {
-                    this.field_d = var2.field_b;
-                    return var2;
-                  } else {
-                    continue L2;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              var2 = this.field_d;
-              this.field_d = var2.field_b;
-              return var2;
-            }
-          } else {
-            L3: while (true) {
-              if (this.field_a < this.field_e) {
-                fieldTemp$5 = this.field_a;
-                this.field_a = this.field_a + 1;
-                var2 = this.field_b[fieldTemp$5].field_b;
-                if (this.field_b[this.field_a - 1] != var2) {
-                  this.field_d = var2.field_b;
-                  return var2;
-                } else {
-                  continue L3;
-                }
-              } else {
-                return null;
-              }
-            }
-          }
+            fieldTemp$0 = this.field_a;
+            this.field_a = this.field_a + 1;
+            var2 = this.field_b[fieldTemp$0].field_b;
+          } while (this.field_b[this.field_a - 1] == var2);
+          this.field_d = var2.field_b;
+          return var2;
         }
+        this.a(false, -79L);
+        if (this.field_a <= 0) {
+          do {
+            if (this.field_a >= this.field_e) {
+              return null;
+            }
+            fieldTemp$2 = this.field_a;
+            this.field_a = this.field_a + 1;
+            var2 = this.field_b[fieldTemp$2].field_b;
+          } while (this.field_b[this.field_a - 1] == var2);
+          this.field_d = var2.field_b;
+          return var2;
+        }
+        if (this.field_d != this.field_b[-1 + this.field_a]) {
+          var2 = this.field_d;
+          this.field_d = var2.field_b;
+          return var2;
+        }
+        do {
+          if (this.field_a >= this.field_e) {
+            return null;
+          }
+          fieldTemp$1 = this.field_a;
+          this.field_a = this.field_a + 1;
+          var2 = this.field_b[fieldTemp$1].field_b;
+        } while (this.field_b[this.field_a - 1] == var2);
+        this.field_d = var2.field_b;
+        return var2;
     }
 
     final void a(long param0, byte param1, bw param2) {
         bw var5 = null;
         try {
-            if (!(null == param2.field_e)) {
-                param2.a(false);
-            }
-            var5 = this.field_b[(int)((long)(-1 + this.field_e) & param0)];
-            param2.field_b = var5;
-            param2.field_e = var5.field_e;
-            param2.field_e.field_b = param2;
-            param2.field_b.field_e = param2;
-            param2.field_c = param0;
-            int var6 = 41 / ((param1 - 13) / 45);
+          if (null != param2.field_e) {
+            param2.a(false);
+          }
+          var5 = this.field_b[(int)((long)(-1 + this.field_e) & param0)];
+          param2.field_b = var5;
+          param2.field_e = var5.field_e;
+          param2.field_e.field_b = param2;
+          param2.field_b.field_e = param2;
+          param2.field_c = param0;
+          int var6 = 41 / ((param1 - 13) / 45);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "js.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "js.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,52 +85,51 @@ final class js {
         bw var4;
         bw var5;
         int var6;
+        bw var4Lifetime1;
+        bw var5Lifetime1;
         var6 = BachelorFridge.field_y;
         if (param0) {
-          var4 = this.field_b[(int)(param1 & (long)(this.field_e + -1))];
+          var4 = this.field_b[(int)(param1 & (long)(this.field_e - 1))];
           this.field_c = var4.field_b;
-          L0: while (true) {
-            if (var4 != this.field_c) {
-              if (this.field_c.field_c != param1) {
-                this.field_c = this.field_c.field_b;
-                continue L0;
-              } else {
-                var5 = this.field_c;
-                this.field_c = this.field_c.field_b;
-                return var5;
-              }
-            } else {
+          while (true) {
+            if (var4 == this.field_c) {
               this.field_c = null;
               return null;
             }
-          }
-        } else {
-          js.a(93);
-          var4 = this.field_b[(int)(param1 & (long)(this.field_e + -1))];
-          this.field_c = var4.field_b;
-          L1: while (true) {
-            if (var4 != this.field_c) {
-              if (this.field_c.field_c != param1) {
-                this.field_c = this.field_c.field_b;
-                continue L1;
-              } else {
-                var5 = this.field_c;
-                this.field_c = this.field_c.field_b;
-                return var5;
-              }
-            } else {
-              this.field_c = null;
-              return null;
+            if (this.field_c.field_c != param1) {
+              this.field_c = this.field_c.field_b;
+              continue;
             }
+            break;
           }
+          var5 = this.field_c;
+          this.field_c = this.field_c.field_b;
+          return var5;
         }
+        js.a(93);
+        var4Lifetime1 = this.field_b[(int)(param1 & (long)(this.field_e - 1))];
+        this.field_c = var4Lifetime1.field_b;
+        while (true) {
+          if (var4Lifetime1 == this.field_c) {
+            this.field_c = null;
+            return null;
+          }
+          if (this.field_c.field_c != param1) {
+            this.field_c = this.field_c.field_b;
+            continue;
+          }
+          break;
+        }
+        var5Lifetime1 = this.field_c;
+        this.field_c = this.field_c.field_b;
+        return var5Lifetime1;
     }
 
     final bw b(int param0) {
         this.field_a = 0;
         if (param0 != -13023) {
-            this.b(45);
-            return this.c(-21446);
+          this.b(45);
+          return this.c(-21446);
         }
         return this.c(-21446);
     }
@@ -173,11 +147,11 @@ final class js {
         this.field_b = new bw[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            dupTemp$0 = new bw();
-            var3 = dupTemp$0;
-            this.field_b[var2] = dupTemp$0;
-            var3.field_e = var3;
-            var3.field_b = var3;
+          dupTemp$0 = new bw();
+          var3 = dupTemp$0;
+          this.field_b[var2] = dupTemp$0;
+          var3.field_e = var3;
+          var3.field_b = var3;
         }
     }
 

@@ -29,7 +29,7 @@ final class rta extends vg {
     public static void b(int param0) {
         field_j = null;
         if (param0 >= -64) {
-            rta.b(36);
+          rta.b(36);
         }
     }
 
@@ -38,7 +38,7 @@ final class rta extends vg {
         this.field_n = null;
         this.field_y = null;
         if (param0 != 5806) {
-            return;
+          return;
         }
         this.field_v = null;
     }

@@ -10,19 +10,19 @@ final class sn {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -30) {
-            field_a = (wb) null;
-            field_d = null;
-            return;
+          field_a = (wb) null;
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     sn(fr param0, long param1, mk[] param2) {
         try {
-            this.field_c = param1;
-            this.field_b = param0;
+          this.field_c = param1;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

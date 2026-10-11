@@ -15,9 +15,9 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static double a(int param0, byte param1, int param2, int param3) {
         double var4 = -((double)param3 / (double)param2) + 0.75;
-        int var6 = 81 / ((param1 - -86) / 40);
-        if (!(0.0 <= var4)) {
-            var4 = 0.0;
+        int var6 = 81 / ((param1 + 86) / 40);
+        if (0.0 > var4) {
+          var4 = 0.0;
         }
         var4 = var4 + (double)(25 * param0) / 100.0;
         return var4;
@@ -42,9 +42,9 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_g = true;
+          this.field_g = true;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ek.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,13 +60,13 @@ final class ek extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(qg param0, int param1) {
         try {
-            ng.a(param0, 99, this.field_e);
-            if (param1 != 0) {
-                java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
-                this.focusGained((java.awt.event.FocusEvent) null);
-            }
+          ng.a(param0, 99, this.field_e);
+          if (param1 != 0) {
+            java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
+            this.focusGained((java.awt.event.FocusEvent) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ek.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

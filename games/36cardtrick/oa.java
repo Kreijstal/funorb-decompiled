@@ -9,129 +9,74 @@ final class oa {
     static int[] field_e;
 
     final static boolean a(int param0, int param1, boolean param2, int param3) {
-        int stackIn_25_0 = 0;
-        int stackIn_43_0 = 0;
-        int stackIn_52_0 = 0;
         int var4;
         int var5;
-        if (!param2) {
-          if (db.field_l[param1] >= db.field_l[param3]) {
-            if (db.field_l[param1] <= db.field_l[param3]) {
-              if (p.field_n[param3] > p.field_n[param1]) {
-                return true;
-              } else {
-                if (p.field_n[param3] >= p.field_n[param1]) {
-                  if (param0 != -29680) {
-                    field_a = (int[]) null;
-                    var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
-                    var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
-                    if (var4 >= var5) {
-                      if (var5 >= var4) {
-                        if (param3 <= param1) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      } else {
-                        return false;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
-                    var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
-                    if (var4 >= var5) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param3 <= param1) {
-                            stackIn_25_0 = 0;
-                            break L0;
-                          } else {
-                            stackIn_25_0 = 1;
-                            break L0;
-                          }
-                        }
-                        return stackIn_25_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
-                  }
-                } else {
-                  return false;
-                }
-              }
-            } else {
-              return false;
-            }
-          } else {
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        if (param2) {
+          if (p.field_n[param1] < p.field_n[param3]) {
             return true;
           }
-        } else {
-          if (p.field_n[param1] >= p.field_n[param3]) {
-            if (p.field_n[param1] <= p.field_n[param3]) {
-              if (db.field_l[param1] >= db.field_l[param3]) {
-                if (db.field_l[param1] <= db.field_l[param3]) {
-                  if (param0 == -29680) {
-                    var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
-                    var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
-                    if (var4 >= var5) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param3 <= param1) {
-                            stackIn_52_0 = 0;
-                            break L1;
-                          } else {
-                            stackIn_52_0 = 1;
-                            break L1;
-                          }
-                        }
-                        return stackIn_52_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    field_a = (int[]) null;
-                    var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
-                    var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
-                    if (var4 >= var5) {
-                      if (var5 < var4) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param3 <= param1) {
-                            stackIn_43_0 = 0;
-                            break L2;
-                          } else {
-                            stackIn_43_0 = 1;
-                            break L2;
-                          }
-                        }
-                        return stackIn_43_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (p.field_n[param1] > p.field_n[param3]) {
+            return false;
+          }
+          if (db.field_l[param1] < db.field_l[param3]) {
             return true;
           }
+          if (db.field_l[param1] > db.field_l[param3]) {
+            return false;
+          }
+          if (param0 != -29680) {
+            field_a = (int[]) null;
+          }
+          var4 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
+          var5 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
+          if (var4 < var5) {
+            return true;
+          }
+          if (var5 < var4) {
+            return false;
+          }
+          return !(param3 <= param1);
         }
+        if (db.field_l[param1] < db.field_l[param3]) {
+          return true;
+        }
+        if (db.field_l[param1] > db.field_l[param3]) {
+          return false;
+        }
+        if (p.field_n[param3] > p.field_n[param1]) {
+          return true;
+        }
+        if (p.field_n[param3] < p.field_n[param1]) {
+          return false;
+        }
+        if (param0 == -29680) {
+          var4Lifetime1 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
+          var5Lifetime1 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
+          if (var4Lifetime1 < var5Lifetime1) {
+            return true;
+          }
+          if (var5Lifetime1 < var4Lifetime1) {
+            return false;
+          }
+          return !(param3 <= param1);
+        }
+        field_a = (int[]) null;
+        var4Lifetime2 = ij.field_c[param1] + (q.field_h[param1] + mj.field_b[param1]);
+        var5Lifetime2 = ij.field_c[param3] + mj.field_b[param3] + q.field_h[param3];
+        if (var4Lifetime2 < var5Lifetime2) {
+          return true;
+        }
+        if (var5Lifetime2 < var4Lifetime2) {
+          return false;
+        }
+        if (param3 <= param1) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(java.awt.Component param0, int param1, byte param2, le param3, boolean param4) {
@@ -140,14 +85,14 @@ final class oa {
         cb.field_g = gd.a(param3, param0, 1, 1024);
         bg.field_tb = new qj();
         if (param2 <= 66) {
-            return;
+          return;
         }
         try {
-            cb.field_g.b(bg.field_tb);
-            sh.field_e = new qj();
-            wd.field_e.b(sh.field_e);
+          cb.field_g.b(bg.field_tb);
+          sh.field_e = new qj();
+          wd.field_e.b(sh.field_e);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "oa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -156,7 +101,7 @@ final class oa {
         field_c = null;
         field_a = null;
         if (param0 != 109) {
-            return;
+          return;
         }
         field_e = null;
     }

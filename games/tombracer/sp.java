@@ -7,18 +7,15 @@ final class sp implements com.ms.directX.IEnumModesCallback {
     private static int[] field_c;
 
     final void a(java.awt.Frame param0, byte param1) {
-        java.awt.Frame var4;
-        if (param1 != -108) {
-          var4 = (java.awt.Frame) null;
-          this.a((java.awt.Frame) null, (byte) -47);
-          this.field_a.restoreDisplayMode();
-          this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
-          return;
-        } else {
+        if (param1 == -108) {
           this.field_a.restoreDisplayMode();
           this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
           return;
         }
+        java.awt.Frame var4 = (java.awt.Frame) null;
+        this.a((java.awt.Frame) null, (byte) -47);
+        this.field_a.restoreDisplayMode();
+        this.field_a.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
@@ -27,20 +24,20 @@ final class sp implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_c) {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         } else {
-            fieldTemp$0 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_c[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_c[fieldTemp$3] = param0.refreshRate;
         }
     }
 

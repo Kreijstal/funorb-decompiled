@@ -23,9 +23,7 @@ final class un {
         field_f = null;
         field_m = null;
         field_c = null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           field_e = null;
           field_j = null;
           field_o = null;
@@ -48,27 +46,24 @@ final class un {
     }
 
     final static void a(byte param0) {
-        int var1;
-        if (param0 >= 34) {
-          if (224 > ll.field_q) {
-            var1 = ll.field_q % 32;
-            ef.a(1, -var1 + (ll.field_q + 32));
-            return;
-          } else {
-            ef.a(1, 256);
-            return;
-          }
-        } else {
+        int var1 = 0;
+        int var1Lifetime1;
+        if (param0 < 34) {
           field_g = (String) null;
-          if (224 > ll.field_q) {
-            var1 = ll.field_q % 32;
-            ef.a(1, -var1 + (ll.field_q + 32));
-            return;
-          } else {
+          if (224 <= ll.field_q) {
             ef.a(1, 256);
             return;
           }
+          var1 = ll.field_q % 32;
+          ef.a(1, -var1 + (ll.field_q + 32));
+          return;
         }
+        if (224 <= ll.field_q) {
+          ef.a(1, 256);
+          return;
+        }
+        var1Lifetime1 = ll.field_q % 32;
+        ef.a(1, -var1Lifetime1 + (ll.field_q + 32));
     }
 
     static {

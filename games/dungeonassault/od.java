@@ -7,677 +7,434 @@ final class od {
     static String[] field_b;
 
     final static boolean a(byte param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
         int fieldTemp$14 = 0;
         int fieldTemp$15 = 0;
-        int fieldTemp$16 = 0;
-        int fieldTemp$17 = 0;
         int fieldTemp$18 = 0;
         int fieldTemp$19 = 0;
+        int fieldTemp$17 = 0;
+        int fieldTemp$16 = 0;
+        int fieldTemp$8 = 0;
+        int fieldTemp$9 = 0;
+        int fieldTemp$12 = 0;
+        int fieldTemp$13 = 0;
+        int fieldTemp$11 = 0;
+        int fieldTemp$10 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$5 = 0;
+        int fieldTemp$4 = 0;
+        int fieldTemp$7 = 0;
+        int fieldTemp$6 = 0;
         int var1;
         int var2;
         int var3;
         gn var4;
+        int var1Lifetime1;
+        int var1Lifetime2;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        gn var4Lifetime1;
+        gn var4Lifetime2;
+        gn var4Lifetime3;
+        gn var4Lifetime4;
+        gn var4Lifetime5;
+        gn var4Lifetime6;
+        gn var4Lifetime1Lifetime1;
+        gn var4Lifetime1Lifetime2;
+        gn var4Lifetime2Lifetime1;
         var3 = DungeonAssault.field_K;
-        if (null == gk.field_L) {
-          if (null == jn.field_l) {
-            if (no.field_d == 0) {
-              L0: {
-                if (la.field_g == 0) {
-                  ii.field_G = -1;
-                  a.field_i = -1;
-                  break L0;
-                } else {
-                  if (ii.field_G != -1) {
-                    L1: {
-                      var1 = -ii.field_G + hj.field_S;
-                      var2 = eh.field_h - a.field_i;
-                      hh.field_p = hh.field_p + var1;
-                      ed.field_P = ed.field_P + var2;
-                      if (hh.field_p >= 0) {
-                        break L1;
-                      } else {
-                        hh.field_p = 0;
-                        break L1;
-                      }
-                    }
-                    L2: {
-                      if (-641 > (hh.field_p ^ -1)) {
-                        hh.field_p = 640;
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    L3: {
-                      if ((ed.field_P ^ -1) > -1) {
-                        ed.field_P = 0;
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      ii.field_G = hj.field_S;
-                      if (480 < ed.field_P) {
-                        ed.field_P = 480;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    a.field_i = eh.field_h;
-                    break L0;
-                  } else {
-                    ii.field_G = -1;
-                    a.field_i = -1;
-                    break L0;
-                  }
-                }
-              }
-              if (!pd.c(eh.field_h, hj.field_S, (byte) 120)) {
-                return false;
-              } else {
-                L5: {
-                  if (no.field_d == 0) {
-                    break L5;
-                  } else {
-                    if (-1 != ii.field_G) {
-                      break L5;
-                    } else {
-                      ii.field_G = lc.field_c;
-                      a.field_i = hm.field_k;
-                      if (param0 <= -50) {
-                        eg.a(pp.field_K, true);
-                        if (ec.field_n != hh.field_s) {
-                          if (tk.field_k != hh.field_s) {
-                            if (ti.field_A != hh.field_s) {
-                              return true;
-                            } else {
-                              var4 = (gn) null;
-                              og.a(false, 0, (gn) null);
-                              return true;
-                            }
-                          } else {
-                            L6: {
-                              fieldTemp$0 = fc.field_d - 1;
-                              fc.field_d = fc.field_d - 1;
-                              if (0 > fieldTemp$0) {
-                                fc.field_d = -1 + uo.field_f.length;
-                                break L6;
-                              } else {
-                                break L6;
-                              }
-                            }
-                            og.a(true, 0, uo.field_f[fc.field_d]);
-                            return true;
-                          }
-                        } else {
-                          fieldTemp$1 = fc.field_d + 1;
-                          fc.field_d = fc.field_d + 1;
-                          if (fieldTemp$1 >= uo.field_f.length) {
-                            fc.field_d = 0;
-                            og.a(false, 0, uo.field_f[fc.field_d]);
-                            return true;
-                          } else {
-                            og.a(false, 0, uo.field_f[fc.field_d]);
-                            return true;
-                          }
-                        }
-                      } else {
-                        L7: {
-                          field_b = (String[]) null;
-                          eg.a(pp.field_K, true);
-                          if (ec.field_n != hh.field_s) {
-                            if (tk.field_k != hh.field_s) {
-                              if (ti.field_A == hh.field_s) {
-                                var4 = (gn) null;
-                                og.a(false, 0, (gn) null);
-                                break L7;
-                              } else {
-                                break L7;
-                              }
-                            } else {
-                              L8: {
-                                fieldTemp$2 = fc.field_d - 1;
-                                fc.field_d = fc.field_d - 1;
-                                if (0 > fieldTemp$2) {
-                                  fc.field_d = -1 + uo.field_f.length;
-                                  break L8;
-                                } else {
-                                  break L8;
-                                }
-                              }
-                              og.a(true, 0, uo.field_f[fc.field_d]);
-                              break L7;
-                            }
-                          } else {
-                            L9: {
-                              fieldTemp$3 = fc.field_d + 1;
-                              fc.field_d = fc.field_d + 1;
-                              if (fieldTemp$3 < uo.field_f.length) {
-                                break L9;
-                              } else {
-                                fc.field_d = 0;
-                                break L9;
-                              }
-                            }
-                            og.a(false, 0, uo.field_f[fc.field_d]);
-                            break L7;
-                          }
-                        }
-                        return true;
-                      }
-                    }
-                  }
-                }
-                if (param0 <= -50) {
-                  eg.a(pp.field_K, true);
-                  if (ec.field_n != hh.field_s) {
-                    if (tk.field_k != hh.field_s) {
-                      if (ti.field_A == hh.field_s) {
-                        var4 = (gn) null;
-                        og.a(false, 0, (gn) null);
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      L10: {
-                        fieldTemp$4 = fc.field_d - 1;
-                        fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$4) {
-                          fc.field_d = -1 + uo.field_f.length;
-                          break L10;
-                        } else {
-                          break L10;
-                        }
-                      }
-                      og.a(true, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    }
-                  } else {
-                    fieldTemp$5 = fc.field_d + 1;
-                    fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$5 < uo.field_f.length) {
-                      og.a(false, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    } else {
-                      fc.field_d = 0;
-                      og.a(false, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    }
-                  }
-                } else {
-                  field_b = (String[]) null;
-                  eg.a(pp.field_K, true);
-                  if (ec.field_n != hh.field_s) {
-                    if (tk.field_k != hh.field_s) {
-                      if (ti.field_A == hh.field_s) {
-                        var4 = (gn) null;
-                        og.a(false, 0, (gn) null);
-                        return true;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      L11: {
-                        fieldTemp$6 = fc.field_d - 1;
-                        fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$6) {
-                          fc.field_d = -1 + uo.field_f.length;
-                          break L11;
-                        } else {
-                          break L11;
-                        }
-                      }
-                      og.a(true, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    }
-                  } else {
-                    fieldTemp$7 = fc.field_d + 1;
-                    fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$7 >= uo.field_f.length) {
-                      fc.field_d = 0;
-                      og.a(false, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    } else {
-                      og.a(false, 0, uo.field_f[fc.field_d]);
-                      return true;
-                    }
-                  }
-                }
-              }
-            } else {
-              if (!pd.c(hm.field_k, lc.field_c, (byte) 67)) {
-                return false;
-              } else {
-                og.a(false, 0, uo.field_f[fc.field_d]);
-                return true;
-              }
-            }
+        if (null != gk.field_L) {
+          if (la.field_g == 0) {
+            ii.field_G = -1;
+            a.field_i = -1;
           } else {
-            L12: {
-              if (la.field_g == 0) {
-                ii.field_G = -1;
-                a.field_i = -1;
-                break L12;
-              } else {
-                if (ii.field_G != -1) {
-                  L13: {
-                    var1 = -ii.field_G + hj.field_S;
-                    var2 = eh.field_h - a.field_i;
-                    hh.field_p = hh.field_p + var1;
-                    ed.field_P = ed.field_P + var2;
-                    if (hh.field_p >= 0) {
-                      break L13;
-                    } else {
-                      hh.field_p = 0;
-                      break L13;
-                    }
-                  }
-                  L14: {
-                    if (-641 > (hh.field_p ^ -1)) {
-                      hh.field_p = 640;
-                      break L14;
-                    } else {
-                      break L14;
-                    }
-                  }
-                  L15: {
-                    if ((ed.field_P ^ -1) > -1) {
-                      ed.field_P = 0;
-                      break L15;
-                    } else {
-                      break L15;
-                    }
-                  }
-                  L16: {
-                    ii.field_G = hj.field_S;
-                    if (480 < ed.field_P) {
-                      ed.field_P = 480;
-                      break L16;
-                    } else {
-                      break L16;
-                    }
-                  }
-                  a.field_i = eh.field_h;
-                  break L12;
-                } else {
-                  ii.field_G = -1;
-                  a.field_i = -1;
-                  break L12;
-                }
+            if (ii.field_G != -1) {
+              var1 = -ii.field_G + hj.field_S;
+              var2 = eh.field_h - a.field_i;
+              hh.field_p = hh.field_p + var1;
+              ed.field_P = ed.field_P + var2;
+              if (hh.field_p < 0) {
+                hh.field_p = 0;
               }
-            }
-            if (!pd.c(eh.field_h, hj.field_S, (byte) 120)) {
-              return false;
+              if (hh.field_p > 640) {
+                hh.field_p = 640;
+              }
+              if (ed.field_P < 0) {
+                ed.field_P = 0;
+              }
+              ii.field_G = hj.field_S;
+              if (480 < ed.field_P) {
+                ed.field_P = 480;
+              }
+              a.field_i = eh.field_h;
             } else {
-              L17: {
-                if (no.field_d == 0) {
-                  break L17;
-                } else {
-                  if (-1 != ii.field_G) {
-                    break L17;
-                  } else {
-                    L18: {
-                      ii.field_G = lc.field_c;
-                      a.field_i = hm.field_k;
-                      if (param0 <= -50) {
-                        break L18;
-                      } else {
-                        field_b = (String[]) null;
-                        break L18;
-                      }
-                    }
-                    L19: {
-                      eg.a(pp.field_K, true);
-                      if (ec.field_n != hh.field_s) {
-                        if (tk.field_k != hh.field_s) {
-                          if (ti.field_A == hh.field_s) {
-                            var4 = (gn) null;
-                            og.a(false, 0, (gn) null);
-                            break L19;
-                          } else {
-                            break L19;
-                          }
-                        } else {
-                          L20: {
-                            fieldTemp$8 = fc.field_d - 1;
-                            fc.field_d = fc.field_d - 1;
-                            if (0 > fieldTemp$8) {
-                              fc.field_d = -1 + uo.field_f.length;
-                              break L20;
-                            } else {
-                              break L20;
-                            }
-                          }
-                          og.a(true, 0, uo.field_f[fc.field_d]);
-                          break L19;
-                        }
-                      } else {
-                        L21: {
-                          fieldTemp$9 = fc.field_d + 1;
-                          fc.field_d = fc.field_d + 1;
-                          if (fieldTemp$9 < uo.field_f.length) {
-                            break L21;
-                          } else {
-                            fc.field_d = 0;
-                            break L21;
-                          }
-                        }
-                        og.a(false, 0, uo.field_f[fc.field_d]);
-                        break L19;
-                      }
-                    }
-                    return true;
-                  }
-                }
-              }
-              if (param0 <= -50) {
-                eg.a(pp.field_K, true);
-                if (ec.field_n != hh.field_s) {
-                  if (tk.field_k != hh.field_s) {
-                    if (ti.field_A != hh.field_s) {
-                      return true;
-                    } else {
-                      var4 = (gn) null;
-                      og.a(false, 0, (gn) null);
-                      return true;
-                    }
-                  } else {
-                    L22: {
-                      fieldTemp$10 = fc.field_d - 1;
-                      fc.field_d = fc.field_d - 1;
-                      if (0 > fieldTemp$10) {
-                        fc.field_d = -1 + uo.field_f.length;
-                        break L22;
-                      } else {
-                        break L22;
-                      }
-                    }
-                    og.a(true, 0, uo.field_f[fc.field_d]);
-                    return true;
-                  }
-                } else {
-                  fieldTemp$11 = fc.field_d + 1;
-                  fc.field_d = fc.field_d + 1;
-                  if (fieldTemp$11 >= uo.field_f.length) {
-                    fc.field_d = 0;
-                    og.a(false, 0, uo.field_f[fc.field_d]);
-                    return true;
-                  } else {
-                    og.a(false, 0, uo.field_f[fc.field_d]);
-                    return true;
-                  }
-                }
-              } else {
-                L23: {
-                  field_b = (String[]) null;
-                  eg.a(pp.field_K, true);
-                  if (ec.field_n != hh.field_s) {
-                    if (tk.field_k != hh.field_s) {
-                      if (ti.field_A == hh.field_s) {
-                        var4 = (gn) null;
-                        og.a(false, 0, (gn) null);
-                        break L23;
-                      } else {
-                        break L23;
-                      }
-                    } else {
-                      L24: {
-                        fieldTemp$12 = fc.field_d - 1;
-                        fc.field_d = fc.field_d - 1;
-                        if (0 > fieldTemp$12) {
-                          fc.field_d = -1 + uo.field_f.length;
-                          break L24;
-                        } else {
-                          break L24;
-                        }
-                      }
-                      og.a(true, 0, uo.field_f[fc.field_d]);
-                      break L23;
-                    }
-                  } else {
-                    L25: {
-                      fieldTemp$13 = fc.field_d + 1;
-                      fc.field_d = fc.field_d + 1;
-                      if (fieldTemp$13 < uo.field_f.length) {
-                        break L25;
-                      } else {
-                        fc.field_d = 0;
-                        break L25;
-                      }
-                    }
-                    og.a(false, 0, uo.field_f[fc.field_d]);
-                    break L23;
-                  }
-                }
-                return true;
-              }
-            }
-          }
-        } else {
-          L26: {
-            if (la.field_g == 0) {
               ii.field_G = -1;
               a.field_i = -1;
-              break L26;
-            } else {
-              if (ii.field_G != -1) {
-                L27: {
-                  var1 = -ii.field_G + hj.field_S;
-                  var2 = eh.field_h - a.field_i;
-                  hh.field_p = hh.field_p + var1;
-                  ed.field_P = ed.field_P + var2;
-                  if (hh.field_p >= 0) {
-                    break L27;
-                  } else {
-                    hh.field_p = 0;
-                    break L27;
-                  }
-                }
-                L28: {
-                  if (-641 > (hh.field_p ^ -1)) {
-                    hh.field_p = 640;
-                    break L28;
-                  } else {
-                    break L28;
-                  }
-                }
-                L29: {
-                  if ((ed.field_P ^ -1) > -1) {
-                    ed.field_P = 0;
-                    break L29;
-                  } else {
-                    break L29;
-                  }
-                }
-                L30: {
-                  ii.field_G = hj.field_S;
-                  if (480 < ed.field_P) {
-                    ed.field_P = 480;
-                    break L30;
-                  } else {
-                    break L30;
-                  }
-                }
-                a.field_i = eh.field_h;
-                break L26;
-              } else {
-                ii.field_G = -1;
-                a.field_i = -1;
-                break L26;
-              }
             }
           }
           if (!pd.c(eh.field_h, hj.field_S, (byte) 120)) {
             return false;
-          } else {
-            L31: {
-              if (no.field_d == 0) {
-                break L31;
-              } else {
-                if (-1 != ii.field_G) {
-                  break L31;
-                } else {
-                  L32: {
-                    ii.field_G = lc.field_c;
-                    a.field_i = hm.field_k;
-                    if (param0 <= -50) {
-                      break L32;
-                    } else {
-                      field_b = (String[]) null;
-                      break L32;
-                    }
-                  }
-                  L33: {
-                    eg.a(pp.field_K, true);
-                    if (ec.field_n != hh.field_s) {
-                      if (tk.field_k != hh.field_s) {
-                        if (ti.field_A != hh.field_s) {
-                          return true;
-                        } else {
-                          var4 = (gn) null;
-                          og.a(false, 0, (gn) null);
-                          return true;
-                        }
-                      } else {
-                        L34: {
-                          fieldTemp$14 = fc.field_d - 1;
-                          fc.field_d = fc.field_d - 1;
-                          if (0 > fieldTemp$14) {
-                            fc.field_d = -1 + uo.field_f.length;
-                            break L34;
-                          } else {
-                            break L34;
-                          }
-                        }
-                        og.a(true, 0, uo.field_f[fc.field_d]);
-                        break L33;
-                      }
-                    } else {
-                      L35: {
-                        fieldTemp$15 = fc.field_d + 1;
-                        fc.field_d = fc.field_d + 1;
-                        if (fieldTemp$15 < uo.field_f.length) {
-                          break L35;
-                        } else {
-                          fc.field_d = 0;
-                          break L35;
-                        }
-                      }
-                      og.a(false, 0, uo.field_f[fc.field_d]);
-                      break L33;
-                    }
-                  }
-                  return true;
-                }
-              }
+          }
+          if (no.field_d != 0 &&
+            -1 == ii.field_G) {
+            ii.field_G = lc.field_c;
+            a.field_i = hm.field_k;
+            if (param0 > -50) {
+              field_b = (String[]) null;
             }
-            if (param0 <= -50) {
-              eg.a(pp.field_K, true);
-              if (ec.field_n != hh.field_s) {
-                if (tk.field_k != hh.field_s) {
-                  if (ti.field_A != hh.field_s) {
-                    return true;
-                  } else {
-                    var4 = (gn) null;
-                    og.a(false, 0, (gn) null);
-                    return true;
-                  }
-                } else {
-                  L36: {
-                    fieldTemp$16 = fc.field_d - 1;
-                    fc.field_d = fc.field_d - 1;
-                    if (0 > fieldTemp$16) {
-                      fc.field_d = -1 + uo.field_f.length;
-                      break L36;
-                    } else {
-                      break L36;
-                    }
-                  }
-                  og.a(true, 0, uo.field_f[fc.field_d]);
+            eg.a(pp.field_K, true);
+            if (ec.field_n != hh.field_s) {
+              if (tk.field_k != hh.field_s) {
+                if (ti.field_A != hh.field_s) {
                   return true;
+                }
+                var4 = (gn) null;
+                og.a(false, 0, (gn) null);
+                return true;
+              }
+              fieldTemp$14 = fc.field_d - 1;
+              fc.field_d = fc.field_d - 1;
+              if (0 > fieldTemp$14) {
+                fc.field_d = -1 + uo.field_f.length;
+              }
+              og.a(true, 0, uo.field_f[fc.field_d]);
+            } else {
+              fieldTemp$15 = fc.field_d + 1;
+              fc.field_d = fc.field_d + 1;
+              if (fieldTemp$15 >= uo.field_f.length) {
+                fc.field_d = 0;
+              }
+              og.a(false, 0, uo.field_f[fc.field_d]);
+            }
+            return true;
+          }
+          if (param0 > -50) {
+            field_b = (String[]) null;
+            eg.a(pp.field_K, true);
+            if (ec.field_n != hh.field_s) {
+              if (tk.field_k != hh.field_s) {
+                if (ti.field_A == hh.field_s) {
+                  var4Lifetime5 = (gn) null;
+                  og.a(false, 0, (gn) null);
                 }
               } else {
-                fieldTemp$17 = fc.field_d + 1;
-                fc.field_d = fc.field_d + 1;
-                if (fieldTemp$17 >= uo.field_f.length) {
-                  fc.field_d = 0;
-                  og.a(false, 0, uo.field_f[fc.field_d]);
-                  return true;
-                } else {
-                  og.a(false, 0, uo.field_f[fc.field_d]);
-                  return true;
+                fieldTemp$18 = fc.field_d - 1;
+                fc.field_d = fc.field_d - 1;
+                if (0 > fieldTemp$18) {
+                  fc.field_d = -1 + uo.field_f.length;
                 }
+                og.a(true, 0, uo.field_f[fc.field_d]);
               }
             } else {
-              L37: {
-                field_b = (String[]) null;
-                eg.a(pp.field_K, true);
-                if (ec.field_n != hh.field_s) {
-                  if (tk.field_k != hh.field_s) {
-                    if (ti.field_A == hh.field_s) {
-                      var4 = (gn) null;
-                      og.a(false, 0, (gn) null);
-                      break L37;
-                    } else {
-                      break L37;
-                    }
-                  } else {
-                    L38: {
-                      fieldTemp$18 = fc.field_d - 1;
-                      fc.field_d = fc.field_d - 1;
-                      if (0 > fieldTemp$18) {
-                        fc.field_d = -1 + uo.field_f.length;
-                        break L38;
-                      } else {
-                        break L38;
-                      }
-                    }
-                    og.a(true, 0, uo.field_f[fc.field_d]);
-                    break L37;
-                  }
-                } else {
-                  L39: {
-                    fieldTemp$19 = fc.field_d + 1;
-                    fc.field_d = fc.field_d + 1;
-                    if (fieldTemp$19 < uo.field_f.length) {
-                      break L39;
-                    } else {
-                      fc.field_d = 0;
-                      break L39;
-                    }
-                  }
-                  og.a(false, 0, uo.field_f[fc.field_d]);
-                  break L37;
-                }
+              fieldTemp$19 = fc.field_d + 1;
+              fc.field_d = fc.field_d + 1;
+              if (fieldTemp$19 >= uo.field_f.length) {
+                fc.field_d = 0;
               }
+              og.a(false, 0, uo.field_f[fc.field_d]);
+            }
+            return true;
+          }
+          eg.a(pp.field_K, true);
+          if (ec.field_n == hh.field_s) {
+            fieldTemp$17 = fc.field_d + 1;
+            fc.field_d = fc.field_d + 1;
+            if (fieldTemp$17 >= uo.field_f.length) {
+              fc.field_d = 0;
+            }
+            og.a(false, 0, uo.field_f[fc.field_d]);
+            return true;
+          }
+          if (tk.field_k != hh.field_s) {
+            if (ti.field_A != hh.field_s) {
               return true;
             }
+            var4Lifetime6 = (gn) null;
+            og.a(false, 0, (gn) null);
+            return true;
+          }
+          fieldTemp$16 = fc.field_d - 1;
+          fc.field_d = fc.field_d - 1;
+          if (0 > fieldTemp$16) {
+            fc.field_d = -1 + uo.field_f.length;
+          }
+          og.a(true, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        if (null != jn.field_l) {
+          if (la.field_g == 0) {
+            ii.field_G = -1;
+            a.field_i = -1;
+          } else {
+            if (ii.field_G != -1) {
+              var1Lifetime1 = -ii.field_G + hj.field_S;
+              var2Lifetime1 = eh.field_h - a.field_i;
+              hh.field_p = hh.field_p + var1Lifetime1;
+              ed.field_P = ed.field_P + var2Lifetime1;
+              if (hh.field_p < 0) {
+                hh.field_p = 0;
+              }
+              if (hh.field_p > 640) {
+                hh.field_p = 640;
+              }
+              if (ed.field_P < 0) {
+                ed.field_P = 0;
+              }
+              ii.field_G = hj.field_S;
+              if (480 < ed.field_P) {
+                ed.field_P = 480;
+              }
+              a.field_i = eh.field_h;
+            } else {
+              ii.field_G = -1;
+              a.field_i = -1;
+            }
+          }
+          if (!pd.c(eh.field_h, hj.field_S, (byte) 120)) {
+            return false;
+          }
+          if (no.field_d != 0 &&
+            -1 == ii.field_G) {
+            ii.field_G = lc.field_c;
+            a.field_i = hm.field_k;
+            if (param0 > -50) {
+              field_b = (String[]) null;
+            }
+            eg.a(pp.field_K, true);
+            if (ec.field_n != hh.field_s) {
+              if (tk.field_k != hh.field_s) {
+                if (ti.field_A == hh.field_s) {
+                  var4Lifetime1 = (gn) null;
+                  og.a(false, 0, (gn) null);
+                }
+              } else {
+                fieldTemp$8 = fc.field_d - 1;
+                fc.field_d = fc.field_d - 1;
+                if (0 > fieldTemp$8) {
+                  fc.field_d = -1 + uo.field_f.length;
+                }
+                og.a(true, 0, uo.field_f[fc.field_d]);
+              }
+            } else {
+              fieldTemp$9 = fc.field_d + 1;
+              fc.field_d = fc.field_d + 1;
+              if (fieldTemp$9 >= uo.field_f.length) {
+                fc.field_d = 0;
+              }
+              og.a(false, 0, uo.field_f[fc.field_d]);
+            }
+            return true;
+          }
+          if (param0 > -50) {
+            field_b = (String[]) null;
+            eg.a(pp.field_K, true);
+            if (ec.field_n != hh.field_s) {
+              if (tk.field_k != hh.field_s) {
+                if (ti.field_A == hh.field_s) {
+                  var4Lifetime1Lifetime1 = (gn) null;
+                  og.a(false, 0, (gn) null);
+                }
+              } else {
+                fieldTemp$12 = fc.field_d - 1;
+                fc.field_d = fc.field_d - 1;
+                if (0 > fieldTemp$12) {
+                  fc.field_d = -1 + uo.field_f.length;
+                }
+                og.a(true, 0, uo.field_f[fc.field_d]);
+              }
+            } else {
+              fieldTemp$13 = fc.field_d + 1;
+              fc.field_d = fc.field_d + 1;
+              if (fieldTemp$13 >= uo.field_f.length) {
+                fc.field_d = 0;
+              }
+              og.a(false, 0, uo.field_f[fc.field_d]);
+            }
+            return true;
+          }
+          eg.a(pp.field_K, true);
+          if (ec.field_n == hh.field_s) {
+            fieldTemp$11 = fc.field_d + 1;
+            fc.field_d = fc.field_d + 1;
+            if (fieldTemp$11 >= uo.field_f.length) {
+              fc.field_d = 0;
+            }
+            og.a(false, 0, uo.field_f[fc.field_d]);
+            return true;
+          }
+          if (tk.field_k != hh.field_s) {
+            if (ti.field_A != hh.field_s) {
+              return true;
+            }
+            var4Lifetime1Lifetime2 = (gn) null;
+            og.a(false, 0, (gn) null);
+            return true;
+          }
+          fieldTemp$10 = fc.field_d - 1;
+          fc.field_d = fc.field_d - 1;
+          if (0 > fieldTemp$10) {
+            fc.field_d = -1 + uo.field_f.length;
+          }
+          og.a(true, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        if (no.field_d != 0) {
+          if (!pd.c(hm.field_k, lc.field_c, (byte) 67)) {
+            return false;
+          }
+          og.a(false, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        if (la.field_g == 0) {
+          ii.field_G = -1;
+          a.field_i = -1;
+        } else {
+          if (ii.field_G != -1) {
+            var1Lifetime2 = -ii.field_G + hj.field_S;
+            var2Lifetime2 = eh.field_h - a.field_i;
+            hh.field_p = hh.field_p + var1Lifetime2;
+            ed.field_P = ed.field_P + var2Lifetime2;
+            if (hh.field_p < 0) {
+              hh.field_p = 0;
+            }
+            if (hh.field_p > 640) {
+              hh.field_p = 640;
+            }
+            if (ed.field_P < 0) {
+              ed.field_P = 0;
+            }
+            ii.field_G = hj.field_S;
+            if (480 < ed.field_P) {
+              ed.field_P = 480;
+            }
+            a.field_i = eh.field_h;
+          } else {
+            ii.field_G = -1;
+            a.field_i = -1;
           }
         }
+        if (!pd.c(eh.field_h, hj.field_S, (byte) 120)) {
+          return false;
+        }
+        if (no.field_d != 0 &&
+          -1 == ii.field_G) {
+          ii.field_G = lc.field_c;
+          a.field_i = hm.field_k;
+          if (param0 > -50) {
+            field_b = (String[]) null;
+            eg.a(pp.field_K, true);
+            if (ec.field_n != hh.field_s) {
+              if (tk.field_k != hh.field_s) {
+                if (ti.field_A == hh.field_s) {
+                  var4Lifetime2 = (gn) null;
+                  og.a(false, 0, (gn) null);
+                }
+              } else {
+                fieldTemp$2 = fc.field_d - 1;
+                fc.field_d = fc.field_d - 1;
+                if (0 > fieldTemp$2) {
+                  fc.field_d = -1 + uo.field_f.length;
+                }
+                og.a(true, 0, uo.field_f[fc.field_d]);
+              }
+            } else {
+              fieldTemp$3 = fc.field_d + 1;
+              fc.field_d = fc.field_d + 1;
+              if (fieldTemp$3 >= uo.field_f.length) {
+                fc.field_d = 0;
+              }
+              og.a(false, 0, uo.field_f[fc.field_d]);
+            }
+            return true;
+          }
+          eg.a(pp.field_K, true);
+          if (ec.field_n == hh.field_s) {
+            fieldTemp$1 = fc.field_d + 1;
+            fc.field_d = fc.field_d + 1;
+            if (fieldTemp$1 >= uo.field_f.length) {
+              fc.field_d = 0;
+            }
+            og.a(false, 0, uo.field_f[fc.field_d]);
+            return true;
+          }
+          if (tk.field_k != hh.field_s) {
+            if (ti.field_A != hh.field_s) {
+              return true;
+            }
+            var4Lifetime2Lifetime1 = (gn) null;
+            og.a(false, 0, (gn) null);
+            return true;
+          }
+          fieldTemp$0 = fc.field_d - 1;
+          fc.field_d = fc.field_d - 1;
+          if (0 > fieldTemp$0) {
+            fc.field_d = -1 + uo.field_f.length;
+          }
+          og.a(true, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        if (param0 <= -50) {
+          eg.a(pp.field_K, true);
+          if (ec.field_n == hh.field_s) {
+            fieldTemp$5 = fc.field_d + 1;
+            fc.field_d = fc.field_d + 1;
+            if (fieldTemp$5 >= uo.field_f.length) {
+              fc.field_d = 0;
+            }
+            og.a(false, 0, uo.field_f[fc.field_d]);
+            return true;
+          }
+          if (tk.field_k != hh.field_s) {
+            if (ti.field_A != hh.field_s) {
+              return true;
+            }
+            var4Lifetime3 = (gn) null;
+            og.a(false, 0, (gn) null);
+            return true;
+          }
+          fieldTemp$4 = fc.field_d - 1;
+          fc.field_d = fc.field_d - 1;
+          if (0 > fieldTemp$4) {
+            fc.field_d = -1 + uo.field_f.length;
+          }
+          og.a(true, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        field_b = (String[]) null;
+        eg.a(pp.field_K, true);
+        if (ec.field_n == hh.field_s) {
+          fieldTemp$7 = fc.field_d + 1;
+          fc.field_d = fc.field_d + 1;
+          if (fieldTemp$7 >= uo.field_f.length) {
+            fc.field_d = 0;
+          }
+          og.a(false, 0, uo.field_f[fc.field_d]);
+          return true;
+        }
+        if (tk.field_k != hh.field_s) {
+          if (ti.field_A != hh.field_s) {
+            return true;
+          }
+          var4Lifetime4 = (gn) null;
+          og.a(false, 0, (gn) null);
+          return true;
+        }
+        fieldTemp$6 = fc.field_d - 1;
+        fc.field_d = fc.field_d - 1;
+        if (0 > fieldTemp$6) {
+          fc.field_d = -1 + uo.field_f.length;
+        }
+        og.a(true, 0, uo.field_f[fc.field_d]);
+        return true;
     }
 
     public static void b(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 < 81) {
-            return;
+          return;
         }
         field_a = null;
     }

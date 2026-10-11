@@ -15,8 +15,8 @@ final class vi extends bk {
 
     final ul a(boolean param0) {
         if (!param0) {
-            vi.b((byte) 48);
-            return qg.field_r;
+          vi.b((byte) 48);
+          return qg.field_r;
         }
         return qg.field_r;
     }
@@ -24,55 +24,51 @@ final class vi extends bk {
     final static void b(byte param0) {
         kb.field_c = false;
         fe.field_Fb = false;
-        if (param0 >= -113) {
-          vi.b((byte) -39);
-          kf.a(-1, -1);
-          cb.field_c = kh.field_e;
-          pa.field_l = kh.field_e;
-          return;
-        } else {
+        if (param0 < -113) {
           kf.a(-1, -1);
           cb.field_c = kh.field_e;
           pa.field_l = kh.field_e;
           return;
         }
+        vi.b((byte) -39);
+        kf.a(-1, -1);
+        cb.field_c = kh.field_e;
+        pa.field_l = kh.field_e;
     }
 
     public static void b(int param0) {
         field_g = null;
         field_m = null;
-        if (param0 != 31856) {
-          vi.b((byte) -109);
-          field_h = null;
-          field_j = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 31856) {
           field_h = null;
           field_j = null;
           field_f = null;
           return;
         }
+        vi.b((byte) -109);
+        field_h = null;
+        field_j = null;
+        field_f = null;
     }
 
     vi(String param0, String param1) {
         try {
-            this.field_i = param1;
-            this.field_e = param0;
+          this.field_i = param1;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(boolean param0, jc param1) {
         if (param0) {
-            return;
+          return;
         }
         try {
-            param1.b(this.field_e, (byte) 112);
-            param1.c(this.field_i, (byte) 82);
+          param1.b(this.field_e, (byte) 112);
+          param1.c(this.field_i, (byte) 82);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

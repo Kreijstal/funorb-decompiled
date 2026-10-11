@@ -13,75 +13,51 @@ final class olb extends le {
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
         var6 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var5 = param0;
-              if (0 != var5) {
-                if ((var5 ^ -1) == -2) {
-                  this.field_j = param2.e(1869);
-                  break L1;
+          var5 = param0;
+          if (0 != var5) {
+            if (var5 == 1) {
+              this.field_j = param2.e(1869);
+            } else {
+              if (var5 != 2) {
+                if (var5 == 3) {
+                  this.field_m = param2.e(1869);
                 } else {
-                  if (-3 != (var5 ^ -1)) {
-                    if ((var5 ^ -1) == -4) {
-                      this.field_m = param2.e(1869);
-                      break L1;
-                    } else {
-                      if (-5 != (var5 ^ -1)) {
-                        break L1;
-                      } else {
-                        var4_int = param2.c((byte) -57);
-                        this.field_i[1] = dla.a(var4_int >> 1538608676, 4080);
-                        this.field_i[2] = dla.a(255, var4_int) >> 1551975820;
-                        this.field_i[0] = dla.a(var4_int, 16711680) << 2154340;
-                        break L1;
-                      }
-                    }
-                  } else {
-                    this.field_l = param2.e(1869);
-                    break L1;
+                  if (var5 == 4) {
+                    var4_int = param2.c((byte) -57);
+                    this.field_i[1] = dla.a(var4_int >> 4, 4080);
+                    this.field_i[2] = dla.a(255, var4_int) >> 12;
+                    this.field_i[0] = dla.a(var4_int, 16711680) << 4;
                   }
                 }
               } else {
-                this.field_k = param2.e(1869);
-                break L1;
+                this.field_l = param2.e(1869);
               }
             }
-            if (param1 < -60) {
-              break L0;
-            } else {
-              this.field_i = (int[]) null;
-              return;
-            }
+          } else {
+            this.field_k = param2.e(1869);
           }
+          if (param1 < -60) {
+            return;
+          }
+          this.field_i = (int[]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_19_0 = (RuntimeException) (var4);
-
-            stackIn_19_1 = new StringBuilder().append("olb.F(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "null";
-              break L2;
-            } else {
-              stackIn_20_0 = (RuntimeException) ((Object) stackIn_19_0);
-              stackIn_20_1 = (StringBuilder) ((Object) stackIn_19_1);
-              stackIn_20_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_19_0 = var4;
+          stackIn_19_1 = new StringBuilder().append("olb.F(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_20_2 = "null";
+          } else {
+            stackIn_20_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_20_0), stackIn_20_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -95,11 +71,11 @@ final class olb extends le {
     }
 
     final int[][] a(int param0, int param1) {
+        int var11 = 0;
         int[][] var3;
         int[] var8;
         int[] var9;
         int[] var10;
-        int var11;
         int var12;
         int var13;
         int var14;
@@ -119,97 +95,68 @@ final class olb extends le {
         int[] var40;
         int[] var41;
         var16 = VoidHunters.field_G;
-        if (param0 == 255) {
-          var27 = this.field_d.a(param1, (byte) -115);
-          var19 = var27;
-          var17 = var19;
-          var3 = var17;
-          if (this.field_d.field_g) {
-            var38 = this.a((byte) 42, 0, param1);
-            var39 = var38[0];
-            var40 = var38[1];
-            var41 = var38[2];
-            var29 = var27[0];
-            var21 = var29;
-            var8 = var21;
-            var32 = var27[1];
-            var24 = var32;
-            var9 = var24;
-            var33 = var27[2];
-            var25 = var33;
-            var10 = var25;
-            var11 = 0;
-            L0: while (true) {
-              if (hob.field_d > var11) {
-                L1: {
-                  var13 = var39[var11];
-                  var12 = -this.field_i[0] + var13;
-                  if (0 > var12) {
-                    var12 = -var12;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                if (this.field_k >= var12) {
-                  L2: {
-                    var14 = var40[var11];
-                    var12 = -this.field_i[1] + var14;
-                    if (0 <= var12) {
-                      break L2;
-                    } else {
-                      var12 = -var12;
-                      break L2;
-                    }
-                  }
-                  if (var12 <= this.field_k) {
-                    L3: {
-                      var15 = var41[var11];
-                      var12 = var15 + -this.field_i[2];
-                      if ((var12 ^ -1) <= -1) {
-                        break L3;
-                      } else {
-                        var12 = -var12;
-                        break L3;
-                      }
-                    }
-                    if (var12 <= this.field_k) {
-                      var8[var11] = this.field_m * var13 >> 991426348;
-                      var9[var11] = this.field_l * var14 >> -807764916;
-                      var10[var11] = var15 * this.field_j >> 2072267884;
-                      var11++;
-                      continue L0;
-                    } else {
-                      var29[var11] = var13;
-                      var32[var11] = var14;
-                      var33[var11] = var15;
-                      var11++;
-                      continue L0;
-                    }
-                  } else {
-                    var29[var11] = var13;
-                    var32[var11] = var14;
-                    var10[var11] = var41[var11];
-                    var11++;
-                    continue L0;
-                  }
-                } else {
-                  var29[var11] = var13;
-                  var9[var11] = var40[var11];
-                  var10[var11] = var41[var11];
-                  var11++;
-                  continue L0;
-                }
-              } else {
-                return var3;
-              }
-            }
-          } else {
-            return var3;
-          }
-        } else {
+        if (param0 != 255) {
           return (int[][]) null;
         }
+        var27 = this.field_d.a(param1, (byte) -115);
+        var19 = var27;
+        var17 = var19;
+        var3 = var17;
+        if (!this.field_d.field_g) {
+          return var3;
+        }
+        var38 = this.a((byte) 42, 0, param1);
+        var39 = var38[0];
+        var40 = var38[1];
+        var41 = var38[2];
+        var29 = var27[0];
+        var21 = var29;
+        var8 = var21;
+        var32 = var27[1];
+        var24 = var32;
+        var9 = var24;
+        var33 = var27[2];
+        var25 = var33;
+        var10 = var25;
+        for (var11 = 0; hob.field_d > var11; var11++) {
+          var13 = var39[var11];
+          var12 = -this.field_i[0] + var13;
+          if (0 > var12) {
+            var12 = -var12;
+          }
+          if (this.field_k >= var12) {
+            var14 = var40[var11];
+            var12 = -this.field_i[1] + var14;
+            if (0 > var12) {
+              var12 = -var12;
+            }
+            if (var12 <= this.field_k) {
+              var15 = var41[var11];
+              var12 = var15 - this.field_i[2];
+              if (var12 < 0) {
+                var12 = -var12;
+              }
+              if (var12 <= this.field_k) {
+                var8[var11] = this.field_m * var13 >> 12;
+                var9[var11] = this.field_l * var14 >> 12;
+                var10[var11] = var15 * this.field_j >> 12;
+              } else {
+                var29[var11] = var13;
+                var32[var11] = var14;
+                var33[var11] = var15;
+              }
+            } else {
+              var29[var11] = var13;
+              var32[var11] = var14;
+              var10[var11] = var41[var11];
+            }
+          } else {
+            var29[var11] = var13;
+            var9[var11] = var40[var11];
+            var10[var11] = var41[var11];
+          }
+        }
+        return var3;
     }
 
     final static void d(int param0) {
@@ -224,102 +171,62 @@ final class olb extends le {
         int[] var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int[] var1Lifetime1;
+        int var2Lifetime1;
         var3 = VoidHunters.field_G;
         try {
-          L0: {
-            if (oab.field_o != wgb.field_f) {
-              L1: {
-                if (wqa.a(false, oab.field_o)) {
-                  lo.field_a[oab.field_o].b((byte) 49);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                lrb.field_f = bg.field_o;
-                oab.field_o = wgb.field_f;
-                if (param0 == 991426348) {
-                  break L2;
-                } else {
-                  olb.d(25);
-                  break L2;
-                }
-              }
-              L3: {
-                pob.field_b = 0;
-                if (aeb.field_a) {
-                  nkb.a(false, "Destroying game");
-                  vqa.field_g = null;
-                  aeb.field_a = false;
-                  ndb.field_a = null;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (fhb.field_p) {
-                  qa.field_o = new ij();
-                  var9 = bv.field_a;
-                  var7 = var9;
-                  var4 = var7;
-                  var1 = var4;
-                  var2 = 0;
-                  L5: while (true) {
-                    if (-9 >= (var2 ^ -1)) {
-                      var10 = ska.field_m;
-                      var8 = var10;
-                      var5 = var8;
-                      var1 = var5;
-                      var6 = 0;
-                      var2 = var6;
-                      L6: while (true) {
-                        if (8 <= var6) {
-                          fhb.field_p = false;
-                          break L4;
-                        } else {
-                          var10[var6] = 0;
-                          var6++;
-                          continue L6;
-                        }
-                      }
-                    } else {
-                      var9[var2] = 0;
-                      var2++;
-                      continue L5;
-                    }
-                  }
-                } else {
-                  break L4;
-                }
-              }
-              if (enb.field_b) {
-                vjb.a((byte) 95);
-                qo.a(15);
-                ija.a(114);
-                enb.field_b = false;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (oab.field_o == wgb.field_f) {
+            return;
           }
+          if (wqa.a(false, oab.field_o)) {
+            lo.field_a[oab.field_o].b((byte) 49);
+          }
+          lrb.field_f = bg.field_o;
+          oab.field_o = wgb.field_f;
+          if (param0 != 991426348) {
+            olb.d(25);
+          }
+          pob.field_b = 0;
+          if (aeb.field_a) {
+            nkb.a(false, "Destroying game");
+            vqa.field_g = null;
+            aeb.field_a = false;
+            ndb.field_a = null;
+          }
+          if (fhb.field_p) {
+            qa.field_o = new ij();
+            var9 = bv.field_a;
+            var7 = var9;
+            var4 = var7;
+            var1 = var4;
+            for (var2 = 0; var2 < 8; var2++) {
+              var9[var2] = 0;
+            }
+            var10 = ska.field_m;
+            var8 = var10;
+            var5 = var8;
+            var1Lifetime1 = var5;
+            var6 = 0;
+            var2Lifetime1 = var6;
+            while (8 > var6) {
+              var10[var6] = 0;
+              var6++;
+            }
+            fhb.field_p = false;
+          }
+          if (!enb.field_b) {
+            return;
+          }
+          vjb.a((byte) 95);
+          qo.a(15);
+          ija.a(114);
+          enb.field_b = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw rta.a((Throwable) ((Object) var1_ref), "olb.C(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

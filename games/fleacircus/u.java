@@ -8,9 +8,9 @@ final class u {
 
     public static void a(int param0) {
         if (param0 != -2355) {
-            field_a = 71;
-            field_b = null;
-            return;
+          field_a = 71;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

@@ -16,7 +16,7 @@ final class fg {
         field_c = null;
         field_e = null;
         if (param0 != 9882) {
-            fg.a(-12);
+          fg.a(-12);
         }
     }
 

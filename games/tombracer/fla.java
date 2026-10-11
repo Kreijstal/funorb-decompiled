@@ -14,16 +14,16 @@ final class fla extends vg {
 
     final void a(w param0, byte param1) {
         try {
-            if (param1 > -32) {
-                this.field_l = 53;
-            }
-            if (!(0 >= param0.field_i[this.field_l])) {
-                param0.field_i[this.field_l] = param0.field_i[this.field_l] - 1;
-            }
-            this.p(25);
-            rs.a((fla) (this), -110);
+          if (param1 > -32) {
+            this.field_l = 53;
+          }
+          if (!(0 >= param0.field_i[this.field_l])) {
+            param0.field_i[this.field_l] = param0.field_i[this.field_l] - 1;
+          }
+          this.p(25);
+          rs.a(this, -110);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fla.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,185 +31,133 @@ final class fla extends vg {
         RuntimeException var4 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 564550600) {
-                break L1;
-              } else {
-                this.a(0, -104, 21, 61, -117);
-                break L1;
-              }
-            }
-            L2: {
-              if (!param2) {
-                break L2;
-              } else {
-                if (this.field_h > 0) {
-                  this.c(-90);
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if (param2) {
-                break L3;
-              } else {
-                if (this.field_j >> 564550600 == this.field_h) {
-                  break L3;
-                } else {
-                  this.b(4216);
-                  break L3;
-                }
-              }
-            }
-            if (this.field_i == null) {
-              this.a(-91, param1);
-              return;
-            } else {
-              if (this.field_i.field_f == null) {
-                this.a(-91, param1);
-                return;
-              } else {
-                if (this.field_i.field_f.e()) {
-                  this.a(-91, param1);
-                  return;
-                } else {
-                  if (this.field_i.l((byte) 103)) {
-                    break L0;
-                  } else {
-                    this.a(-91, param1);
-                    return;
-                  }
-                }
-              }
-            }
+          if (param0 != 564550600) {
+            this.a(0, -104, 21, 61, -117);
           }
+          if (param2 &&
+            this.field_h > 0) {
+            this.c(-90);
+          }
+          if (!param2 &&
+            this.field_j >> 8 != this.field_h) {
+            this.b(4216);
+          }
+          if (this.field_i == null) {
+            this.a(-91, param1);
+            return;
+          }
+          if (this.field_i.field_f == null) {
+            this.a(-91, param1);
+            return;
+          }
+          if (this.field_i.field_f.e()) {
+            this.a(-91, param1);
+            return;
+          }
+          if (this.field_i.l((byte) 103)) {
+            return;
+          }
+          this.a(-91, param1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var4 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var4);
-
-            stackIn_21_1 = new StringBuilder().append("fla.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L4;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L4;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_21_0 = var4;
+          stackIn_21_1 = new StringBuilder().append("fla.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-            field_f = (vna) null;
+          field_f = (vna) null;
         }
     }
 
     final void c(int param0) {
-        int var2;
         this.field_g = this.field_g - this.field_n;
-        var2 = -91 % ((param0 - -18) / 36);
-        if (0 > this.field_g) {
-          this.field_g = 0;
-          this.field_h = this.field_g >> 707099336;
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
-          return;
-        } else {
-          this.field_h = this.field_g >> 707099336;
+        int var2 = -91 % ((param0 + 18) / 36);
+        if (0 <= this.field_g) {
+          this.field_h = this.field_g >> 8;
           this.field_i.a(this.field_m, this.field_h, (byte) -21);
           return;
         }
+        this.field_g = 0;
+        this.field_h = this.field_g >> 8;
+        this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        w var7;
         this.field_h = ol.a(param0, this.field_l, (byte) -91, param3, param4, param1);
-        if (param2 > -127) {
-          var7 = (w) null;
-          this.a(-1, (w) null, false);
-          this.field_m = jba.a(param3, true, param0);
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
-          return;
-        } else {
+        if (param2 <= -127) {
           this.field_m = jba.a(param3, true, param0);
           this.field_i.a(this.field_m, this.field_h, (byte) -21);
           return;
         }
+        w var7 = (w) null;
+        this.a(-1, (w) null, false);
+        this.field_m = jba.a(param3, true, param0);
+        this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
     final void a(int param0, w param1) {
         try {
-            int var3_int = 54 % ((-44 - param0) / 44);
-            if (!(0 >= param1.field_i[this.field_l])) {
-                param1.field_i[this.field_l] = param1.field_i[this.field_l] - 1;
-            }
-            this.p(18);
-            rs.a((fla) (this), -77);
+          int var3_int = 54 % ((-44 - param0) / 44);
+          if (!(0 >= param1.field_i[this.field_l])) {
+            param1.field_i[this.field_l] = param1.field_i[this.field_l] - 1;
+          }
+          this.p(18);
+          rs.a(this, -77);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fla.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     fla(vb param0, int param1, boolean param2, int param3, int param4, int param5) {
         this(param0, param4, param5);
         try {
-            this.field_l = param1;
+          this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     fla(vb param0, int param1, int param2) {
         try {
-            this.field_i = param0;
-            this.field_h = param1;
-            this.field_m = param2;
-            this.field_g = this.field_h << -476091736;
-            this.field_j = this.field_g;
-            this.field_k = 50;
-            this.field_n = this.field_g / this.field_k;
+          this.field_i = param0;
+          this.field_h = param1;
+          this.field_m = param2;
+          this.field_g = this.field_h << 8;
+          this.field_j = this.field_g;
+          this.field_k = 50;
+          this.field_n = this.field_g / this.field_k;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void b(int param0) {
-        L0: {
-          this.field_g = this.field_g + this.field_n;
-          if (this.field_g >= this.field_j) {
-            this.field_g = this.field_j;
-            break L0;
-          } else {
-            break L0;
-          }
+        this.field_g = this.field_g + this.field_n;
+        if (this.field_g >= this.field_j) {
+          this.field_g = this.field_j;
         }
-        if (param0 != 4216) {
-          this.b(22);
-          this.field_h = this.field_g >> 425758888;
-          this.field_i.a(this.field_m, this.field_h, (byte) -21);
-          return;
-        } else {
-          this.field_h = this.field_g >> 425758888;
+        if (param0 == 4216) {
+          this.field_h = this.field_g >> 8;
           this.field_i.a(this.field_m, this.field_h, (byte) -21);
           return;
         }
+        this.b(22);
+        this.field_h = this.field_g >> 8;
+        this.field_i.a(this.field_m, this.field_h, (byte) -21);
     }
 
     static {

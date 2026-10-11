@@ -8,28 +8,28 @@ final class wta extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            field_F = 126;
-            return false;
+          field_F = 126;
+          return false;
         }
         return false;
     }
 
     final int t(int param0) {
         if (param0 != 8) {
-            field_H = (String) null;
-            return 7;
+          field_H = (String) null;
+          return 7;
         }
         return 7;
     }
 
     final static void a(String param0, byte param1) {
         if (param1 > -23) {
-            return;
+          return;
         }
         try {
-            ji.field_d = param0;
+          ji.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wta.TB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,25 +50,23 @@ final class wta extends kna {
         aca.field_h[4] = sma.field_d;
         aca.field_h[6] = nt.field_c;
         aca.field_h[7] = gn.field_A;
-        if (param0 != 12) {
-          field_G = true;
-          aca.field_h[15] = oda.field_h;
-          aca.field_h[16] = eka.field_n;
-          aca.field_h[18] = se.field_q;
-          aca.field_h[13] = wea.field_c;
-          return;
-        } else {
+        if (param0 == 12) {
           aca.field_h[15] = oda.field_h;
           aca.field_h[16] = eka.field_n;
           aca.field_h[18] = se.field_q;
           aca.field_h[13] = wea.field_c;
           return;
         }
+        field_G = true;
+        aca.field_h[15] = oda.field_h;
+        aca.field_h[16] = eka.field_n;
+        aca.field_h[18] = se.field_q;
+        aca.field_h[13] = wea.field_c;
     }
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            return true;
+          return true;
         }
         return true;
     }
@@ -87,75 +85,60 @@ final class wta extends kna {
         fsa stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var9 = new fsa(param2, param0);
-            var9.b((byte) -11, this.field_k, this.field_l);
-            var9.a((byte) -3, 20);
-            var9.h(param1, 0);
-            var9.b((byte) 17, true);
-            var9.a(4, (byte) -12, true);
-            var5 = new bg(param2, param0);
-            var5.c(66, 0);
-            var5.a(false, 262144);
-            var9.a(var5, param1 ^ 3);
-            var6 = new rea(param2, param0);
-            var6.a(25, 12, 1, 25, 12);
-            var6.b((byte) 127, true);
-            var9.a((byte) 83, (nv) (var6));
-            var7 = rm.field_a;
-            var8 = (dc) ((Object) var7.a(11, param1 ^ 116));
-            var9.a(var6, (byte) 124, var8);
-            stackIn_1_0 = (fsa) (var9);
-            break L0;
-          }
+          var9 = new fsa(param2, param0);
+          var9.b((byte) -11, this.field_k, this.field_l);
+          var9.a((byte) -3, 20);
+          var9.h(param1, 0);
+          var9.b((byte) 17, true);
+          var9.a(4, (byte) -12, true);
+          var5 = new bg(param2, param0);
+          var5.c(66, 0);
+          var5.a(false, 262144);
+          var9.a(var5, param1 ^ 3);
+          var6 = new rea(param2, param0);
+          var6.a(25, 12, 1, 25, 12);
+          var6.b((byte) 127, true);
+          var9.a((byte) 83, (nv) (var6));
+          var7 = rm.field_a;
+          var8 = (dc) (var7.a(11, param1 ^ 116));
+          var9.a(var6, (byte) 124, var8);
+          stackIn_1_0 = var9;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4);
-
-            stackIn_4_1 = new StringBuilder().append("wta.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("wta.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_5_0), stackIn_5_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            field_H = (String) null;
-            return false;
+          field_H = (String) null;
+          return false;
         }
         return false;
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            return false;
+          return false;
         }
         return false;
     }
 
     public static void r(byte param0) {
         if (param0 != 15) {
-            return;
+          return;
         }
         field_H = null;
     }
@@ -166,12 +149,12 @@ final class wta extends kna {
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
-            if (param0) {
-                field_F = 80;
-            }
+          super.a(param0, param1);
+          if (param0) {
+            field_F = 80;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "wta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "wta.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,61 +13,48 @@ abstract class jq {
     public static void a(int param0) {
         field_d = null;
         if (param0 > -87) {
-            return;
+          return;
         }
         field_c = (er[][]) null;
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        if (param1 == -96) {
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_20_0 = 1;
-                return stackIn_20_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param1 != -96) {
           field_e = -12;
-          if (param0 != 160) {
-            if (32 != param0) {
-              if (param0 != 95) {
-                if (param0 == 45) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 == 160) {
             return true;
           }
+          if (32 == param0) {
+            return true;
+          }
+          if (param0 == 95) {
+            return true;
+          }
+          if (param0 != 45) {
+            return false;
+          }
+          return true;
         }
+        if (param0 == 160) {
+          return true;
+        }
+        if (32 == param0) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (param0 != 45) {
+          return false;
+        }
+        return true;
     }
 
     abstract void a(int param0, int param1, int param2);
 
     final static int a(byte param0) {
         if (param0 != 29) {
-            return -36;
+          return -36;
         }
         return mm.field_a;
     }
@@ -75,25 +62,13 @@ abstract class jq {
     abstract void b(int param0, byte param1, int param2);
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        er var6;
-        var6 = new er(param3, param4);
+        er var6 = new er(param3, param4);
         var6.d();
         bi.f(0, 0, param3, param4, 12, 5921370);
-        if (param0 <= 57) {
-          jq.a(1, 91, 33, -110, -47);
+        if (param0 > 57) {
           bi.f(4, 4, -8 + param3, param4 - 8, 8, 0);
           ro.field_g.a(-127);
-          bi.g(param1, param2, param1 - -param3, param2 + 40);
-          bi.b(param1, param2, param3, param4, 12, 2048068, 150);
-          bi.g(param1, 40 + param2, param3 + param1, param2 + param4);
-          bi.b(param1, param2, param3, param4, 12, 0, 150);
-          bi.g(0, 0, 640, 480);
-          var6.e(param1, param2);
-          return;
-        } else {
-          bi.f(4, 4, -8 + param3, param4 - 8, 8, 0);
-          ro.field_g.a(-127);
-          bi.g(param1, param2, param1 - -param3, param2 + 40);
+          bi.g(param1, param2, param1 + param3, param2 + 40);
           bi.b(param1, param2, param3, param4, 12, 2048068, 150);
           bi.g(param1, 40 + param2, param3 + param1, param2 + param4);
           bi.b(param1, param2, param3, param4, 12, 0, 150);
@@ -101,6 +76,15 @@ abstract class jq {
           var6.e(param1, param2);
           return;
         }
+        jq.a(1, 91, 33, -110, -47);
+        bi.f(4, 4, -8 + param3, param4 - 8, 8, 0);
+        ro.field_g.a(-127);
+        bi.g(param1, param2, param1 + param3, param2 + 40);
+        bi.b(param1, param2, param3, param4, 12, 2048068, 150);
+        bi.g(param1, 40 + param2, param3 + param1, param2 + param4);
+        bi.b(param1, param2, param3, param4, 12, 0, 150);
+        bi.g(0, 0, 640, 480);
+        var6.e(param1, param2);
     }
 
     jq(int param0, int param1, int param2) {

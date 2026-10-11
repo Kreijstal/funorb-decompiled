@@ -18,8 +18,6 @@ final class me implements ch {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -31,184 +29,103 @@ final class me implements ch {
         int var11 = 0;
         var11 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 < -36) {
-                break L1;
-              } else {
-                field_g = (dd) null;
-                break L1;
-              }
+          if (param0 >= -36) {
+            field_g = (dd) null;
+          }
+          if (!param3.field_x &&
+            !param3.e(1)) {
+            stackIn_7_0 = 2188450;
+          } else {
+            stackIn_7_0 = 3249872;
+          }
+          var6_int = stackIn_7_0;
+          this.field_j.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
+          if (!param3.e(1)) {
+            return;
+          }
+          var7 = this.field_j.b(param3.field_i);
+          var8 = this.field_j.field_H + this.field_j.field_K;
+          var9 = param3.field_y + param1;
+          var10 = param4 + param3.field_z;
+          if (this.field_h != 2) {
+            if (this.field_h == 1) {
+              var9 = var9 + (-var7 + param3.field_u >> 1);
             }
-            L2: {
-              L3: {
-                if (param3.field_x) {
-                  break L3;
-                } else {
-                  if (param3.e(1)) {
-                    break L3;
-                  } else {
-                    stackIn_7_0 = 2188450;
-                    break L2;
-                  }
-                }
-              }
-              stackIn_7_0 = 3249872;
-              break L2;
-            }
-            var6_int = stackIn_7_0;
-            this.field_j.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_i + "</u>", param1 + param3.field_y, param4 + param3.field_z, param3.field_u, param3.field_j, var6_int, -1, this.field_h, this.field_d, this.field_j.field_H + this.field_j.field_K);
-            if (param3.e(1)) {
-              L4: {
-                var7 = this.field_j.b(param3.field_i);
-                var8 = this.field_j.field_H + this.field_j.field_K;
-                var9 = param3.field_y + param1;
-                var10 = param4 + param3.field_z;
-                if (-3 != (this.field_h ^ -1)) {
-                  if ((this.field_h ^ -1) != -2) {
-                    break L4;
-                  } else {
-                    var9 = var9 + (-var7 + param3.field_u >> -1626499839);
-                    break L4;
-                  }
-                } else {
-                  var9 = var9 + (param3.field_u - var7);
-                  break L4;
-                }
-              }
-              L5: {
-                if (2 == this.field_d) {
-                  var10 = var10 + (-var8 + param3.field_j);
-                  break L5;
-                } else {
-                  if ((this.field_d ^ -1) != -2) {
-                    break L5;
-                  } else {
-                    var10 = var10 + (param3.field_j + -var8 >> 229519201);
-                    break L5;
-                  }
-                }
-              }
-              ek.a(var8, var9 - 2, 2 + var10, 1, var7 - -4);
-              break L0;
-            } else {
-              return;
+          } else {
+            var9 = var9 + (param3.field_u - var7);
+          }
+          if (2 == this.field_d) {
+            var10 = var10 + (-var8 + param3.field_j);
+          } else {
+            if (this.field_d == 1) {
+              var10 = var10 + (param3.field_j - var8 >> 1);
             }
           }
+          ek.a(var8, var9 - 2, 2 + var10, 1, var7 + 4);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var6);
-
-            stackIn_21_1 = new StringBuilder().append("me.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_21_0 = var6;
+          stackIn_21_1 = new StringBuilder().append("me.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param4 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param4).append(')').toString());
         }
     }
 
     final static void a(java.applet.Applet param0, int param1, String param2, boolean param3) {
         try {
-            java.net.MalformedURLException var4 = null;
-            RuntimeException var4_ref = null;
-            RuntimeException stackIn_12_0 = null;
-            StringBuilder stackIn_12_1 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
-            String stackIn_13_2 = null;
-            StringBuilder stackIn_15_1 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (!ce.field_d.startsWith("win")) {
-                    break L1;
-                  } else {
-                    if (ld.a(122, param2)) {
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                L2: {
-                  if (param1 < -39) {
-                    break L2;
-                  } else {
-                    field_g = (dd) null;
-                    break L2;
-                  }
-                }
-                try {
-                  L3: {
-                    param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
-                    break L3;
-                  }
-                } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                  ud.a("MGR1: " + param2, (Throwable) null, 0);
-                  return;
-                }
-                return;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_12_0 = (RuntimeException) (var4_ref);
-
-                stackIn_12_1 = new StringBuilder().append("me.E(");
-
-                if (param0 == null) {
-                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-                  stackIn_13_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-                  stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-                  stackIn_13_2 = "{...}";
-                  break L4;
-                }
-              }
-              L5: {
-
-
-                stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param1).append(',');
-
-                if (param2 == null) {
-                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_13_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw pf.a((Throwable) ((Object) stackIn_13_0), stackIn_16_2 + ',' + param3 + ')');
+          java.net.MalformedURLException var4 = null;
+          RuntimeException var4_ref = null;
+          RuntimeException stackIn_12_0 = null;
+          StringBuilder stackIn_12_1 = null;
+          String stackIn_13_2 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (ce.field_d.startsWith("win") &&
+              ld.a(122, param2)) {
+              return;
             }
+            if (param1 >= -39) {
+              field_g = (dd) null;
+            }
+            try {
+              param0.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
+              return;
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              ud.a("MGR1: " + param2, (Throwable) null, 0);
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_12_0 = var4_ref;
+            stackIn_12_1 = new StringBuilder().append("me.E(");
+            if (param0 == null) {
+              stackIn_13_2 = "null";
+            } else {
+              stackIn_13_2 = "{...}";
+            }
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            throw pf.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -219,16 +136,16 @@ final class me implements ch {
         int[] var6 = null;
         int var7 = 0;
         int var8 = fleas.field_A ? 1 : 0;
-        int var1 = -93 / ((param0 - -66) / 37);
+        int var1 = -93 / ((param0 + 66) / 37);
         dd[] var2 = new dd[ef.field_l];
         for (var3 = 0; ef.field_l > var3; var3++) {
-            var4 = ij.field_H[var3] * ob.field_a[var3];
-            var5 = of.field_d[var3];
-            var6 = new int[var4];
-            for (var7 = 0; var4 > var7; var7++) {
-                var6[var7] = rd.field_d[sc.a((int) var5[var7], 255)];
-            }
-            var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
+          var4 = ij.field_H[var3] * ob.field_a[var3];
+          var5 = of.field_d[var3];
+          var6 = new int[var4];
+          for (var7 = 0; var4 > var7; var7++) {
+            var6[var7] = rd.field_d[sc.a((int) var5[var7], 255)];
+          }
+          var2[var3] = new dd(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
         }
         c.o(-28210);
         return var2;
@@ -239,7 +156,7 @@ final class me implements ch {
         mf.field_c = param1;
         vk.field_L = 1;
         if (param2) {
-            field_g = (dd) null;
+          field_g = (dd) null;
         }
     }
 
@@ -257,9 +174,7 @@ final class me implements ch {
         field_c = null;
         field_k = null;
         field_g = null;
-        if (param0 != 4283) {
-          return;
-        } else {
+        if (param0 == 4283) {
           field_a = null;
           return;
         }
@@ -267,11 +182,11 @@ final class me implements ch {
 
     me(fa param0, int param1, int param2) {
         try {
-            this.field_h = param1;
-            this.field_d = param2;
-            this.field_j = param0;
+          this.field_h = param1;
+          this.field_d = param2;
+          this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

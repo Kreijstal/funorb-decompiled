@@ -10,13 +10,13 @@ class pca extends uqb implements ntb {
 
     public void b(faa param0, int param1) {
         try {
-            super.b(param0, -121);
-            if (param1 >= -109) {
-                field_m = -29;
-            }
-            this.a((byte) -121, param0);
+          super.b(param0, -121);
+          if (param1 >= -109) {
+            field_m = -29;
+          }
+          this.a((byte) -121, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "pca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "pca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -25,49 +25,29 @@ class pca extends uqb implements ntb {
         faa var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                var4 = (faa) null;
-                this.b((faa) null, -21);
-                break L1;
-              }
-            }
-            if (!em.field_o) {
-              break L0;
-            } else {
-              this.field_k = param0.i(param1 + 0, hab.field_h);
-              return;
-            }
+          if (param1 != 0) {
+            var4 = (faa) null;
+            this.b((faa) null, -21);
           }
+          if (!em.field_o) {
+            return;
+          }
+          this.field_k = param0.i(param1 + 0, hab.field_h);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("pca.J(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("pca.J(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,15 +55,15 @@ class pca extends uqb implements ntb {
         pca var5 = null;
         pca var6 = null;
         if (param0 < 54) {
-            return;
+          return;
         }
         try {
-            var5 = (pca) ((Object) param1);
-            var6 = var5;
-            super.b((byte) 126, param1);
-            var6.field_k = this.field_k;
+          var5 = (pca) (param1);
+          var6 = var5;
+          super.b((byte) 126, param1);
+          var6.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,48 +71,28 @@ class pca extends uqb implements ntb {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -116) {
-                break L1;
-              } else {
-                pca.a(-90, -61, 89);
-                break L1;
-              }
-            }
-            if (em.field_o) {
-              param1.a(-632, this.field_k, hab.field_h);
-              break L0;
-            } else {
-              return;
-            }
+          if (param0 >= -116) {
+            pca.a(-90, -61, 89);
           }
+          if (!em.field_o) {
+            return;
+          }
+          param1.a(-632, this.field_k, hab.field_h);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("pca.I(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("pca.I(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -145,165 +105,85 @@ class pca extends uqb implements ntb {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            super.a(param0, -22);
-            var3 = (pca) ((Object) param0);
-            var4 = 0;
-            if (param1 <= -19) {
-              L1: {
-                if (this.field_k == var3.field_k) {
-                  break L1;
-                } else {
-                  iva.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + this.field_k);
-                  var4 = 1;
-                  break L1;
-                }
-              }
-              if (var4 == 0) {
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                iva.a(-6940, "This instance of CarouselPlayerEvent has changed");
-                return;
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          super.a(param0, -22);
+          var3 = (pca) (param0);
+          var4 = 0;
+          if (param1 > -19) {
+            return;
           }
+          if (this.field_k != var3.field_k) {
+            iva.a(-6940, "int playerid has changed. before=" + var3.field_k + ", now=" + this.field_k);
+            var4 = 1;
+          }
+          if (var4 == 0) {
+            return;
+          }
+          iva.a(-6940, "This instance of CarouselPlayerEvent has changed");
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("pca.F(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("pca.F(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public boolean a(byte param0, tv param1) {
         int var3_int = 0;
         pca var4 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var3_int = -110 / ((param0 - 22) / 59);
-                var4 = (pca) ((Object) param1);
-                if (super.a((byte) -50, param1)) {
-                  break L2;
-                } else {
-                  if (this.field_k == var4.field_k) {
-                    stackIn_5_0 = 0;
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_5_0 = 1;
-              break L1;
-            }
-            break L0;
-          }
+          var3_int = -110 / ((param0 - 22) / 59);
+          var4 = (pca) (param1);
+          stackIn_5_0 = (super.a((byte) -50, param1)) || (this.field_k != var4.field_k);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("pca.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("pca.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     public void a(faa param0, boolean param1) {
         try {
-            if (param1) {
-                tv var4 = (tv) null;
-                this.a((tv) null, -35);
-            }
-            super.a(param0, param1);
-            this.a(param0, 0);
+          if (param1) {
+            tv var4 = (tv) null;
+            this.a((tv) null, -35);
+          }
+          super.a(param0, param1);
+          this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 < 1) {
-          L0: {
-            pca.d(40);
-            if (0 == (param1 & 34)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (0 == (param1 & 34)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 >= 1) {
+          return 0 != (param1 & 34) ? true : false;
         }
+        pca.d(40);
+        return 0 != (param1 & 34) ? true : false;
     }
 
     public static void d(int param0) {

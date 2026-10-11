@@ -7,14 +7,14 @@ final class mna extends mfb {
 
     final int a(boolean param0) {
         if (param0) {
-            return -106;
+          return -106;
         }
         return 27;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            return -34;
+          return -34;
         }
         return dfa.field_a;
     }
@@ -24,54 +24,54 @@ final class mna extends mfb {
         otb.field_q = si.field_p;
         ao.field_o = 0;
         nna.field_z = new ae(2);
-        nna.field_z.a(param0, param1 + -91, -1, pmb.a(param1 + -91, uia.field_b, kc.field_b));
+        nna.field_z.a(param0, param1 - 91, -1, pmb.a(param1 - 91, uia.field_b, kc.field_b));
         if (param1 != 90) {
-            mna.i((byte) 38);
+          mna.i((byte) 38);
         }
     }
 
     final int f(byte param0) {
         if (param0 < 0) {
-            this.b(true);
-            return tta.field_p;
+          this.b(true);
+          return tta.field_p;
         }
         return tta.field_p;
     }
 
     final int g(byte param0) {
         if (param0 > -12) {
-            this.b(true);
-            return ww.field_o;
+          this.b(true);
+          return ww.field_o;
         }
         return ww.field_o;
     }
 
     final int a(byte param0) {
-        int var2 = 65 % ((param0 - -48) / 43);
+        int var2 = 65 % ((param0 + 48) / 43);
         return gu.field_p;
     }
 
     final int k(int param0) {
         if (param0 != 0) {
-            this.g(34);
-            return 2;
+          this.g(34);
+          return 2;
         }
         return 2;
     }
 
     public static void i(byte param0) {
         if (param0 != 9) {
-            field_c = (String) null;
-            field_c = null;
-            return;
+          field_c = (String) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
 
     final int d(byte param0) {
         if (param0 > -52) {
-            mna.i((byte) 119);
-            return lr.field_p;
+          mna.i((byte) 119);
+          return lr.field_p;
         }
         return lr.field_p;
     }
@@ -83,16 +83,16 @@ final class mna extends mfb {
 
     final int g(int param0) {
         if (param0 != 2769) {
-            this.a(71);
-            return mtb.field_o;
+          this.a(71);
+          return mtb.field_o;
         }
         return mtb.field_o;
     }
 
     final int a(int param0) {
         if (param0 != 0) {
-            mna.i((byte) 50);
-            return rn.field_o;
+          mna.i((byte) 50);
+          return rn.field_o;
         }
         return rn.field_o;
     }
@@ -102,7 +102,7 @@ final class mna extends mfb {
 
     final int b(boolean param0) {
         if (param0) {
-            return -32;
+          return -32;
         }
         return la.field_m;
     }

@@ -16,47 +16,39 @@ final class hl implements Iterator {
 
     public final void remove() {
         if (this.field_c == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_c.b(-27598);
         this.field_c = null;
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         le var1;
         int var2;
         var2 = ZombieDawn.field_J;
-        if (this.field_a.field_c[-1 + this.field_i] == this.field_e) {
-          L0: while (true) {
-            if (this.field_i < this.field_a.field_f) {
-              fieldTemp$1 = this.field_i;
-              this.field_i = this.field_i + 1;
-              var1 = this.field_a.field_c[fieldTemp$1].field_b;
-              if (this.field_a.field_c[-1 + this.field_i] != var1) {
-                this.field_e = var1.field_b;
-                this.field_c = var1;
-                return var1;
-              } else {
-                continue L0;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_a.field_c[-1 + this.field_i] != this.field_e) {
           var1 = this.field_e;
           this.field_e = var1.field_b;
           this.field_c = var1;
           return var1;
         }
+        do {
+          if (this.field_i >= this.field_a.field_f) {
+            return null;
+          }
+          fieldTemp$0 = this.field_i;
+          this.field_i = this.field_i + 1;
+          var1 = this.field_a.field_c[fieldTemp$0].field_b;
+        } while (this.field_a.field_c[-1 + this.field_i] == var1);
+        this.field_e = var1.field_b;
+        this.field_c = var1;
+        return var1;
     }
 
     private final void a(int param0) {
         this.field_c = null;
-        if (param0 != 11936) {
-          return;
-        } else {
+        if (param0 == 11936) {
           this.field_e = this.field_a.field_c[0].field_b;
           this.field_i = 1;
           return;
@@ -65,226 +57,132 @@ final class hl implements Iterator {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          String var3 = null;
+          java.net.URL var4 = null;
+          try {
             try {
-              try {
-                L0: {
-                  L1: {
-                    var4 = param0.getCodeBase();
-                    var3 = rc.a(-1, param0, var4).getFile();
-                    qe.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
-                    qe.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
-                    qe.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
-                    qe.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
-                    if (param1 == 1) {
-                      break L1;
-                    } else {
-                      field_h = (String) null;
-                      break L1;
-                    }
-                  }
-                  qe.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
-                  qe.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
-                  break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = decompiledCaughtException;
-                return;
+              var4 = param0.getCodeBase();
+              var3 = rc.a(-1, param0, var4).getFile();
+              qe.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", 29674, param0);
+              qe.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param1 ^ 29675, param0);
+              qe.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", 29674, param0);
+              qe.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", 29674, param0);
+              if (param1 != 1) {
+                field_h = (String) null;
               }
+              qe.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", 29674, param0);
+              qe.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", 29674, param0);
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L2: {
-                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_8_0 = (RuntimeException) (var2_ref);
-
-                stackIn_8_1 = new StringBuilder().append("hl.D(");
-
-                if (param0 == null) {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "null";
-                  break L2;
-                } else {
-                  stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-                  stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-                  stackIn_9_2 = "{...}";
-                  break L2;
-                }
-              }
-              throw sh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref;
+            stackIn_8_1 = new StringBuilder().append("hl.D(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw sh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static boolean a(int param0, java.applet.Applet param1) {
         try {
-            String var2 = null;
-            String var3 = null;
-            String[] var4 = null;
-            int var5 = 0;
-            int var6 = 0;
-            int var7 = 0;
-            int stackIn_3_0 = 0;
-            int stackIn_12_0 = 0;
-            int stackIn_19_0 = 0;
-            RuntimeException stackIn_22_0 = null;
-            StringBuilder stackIn_22_1 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_23_2 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Throwable var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            var7 = ZombieDawn.field_J;
+          int var5 = 0;
+          String var2 = null;
+          String var3 = null;
+          String[] var4 = null;
+          int var6 = 0;
+          int var7 = 0;
+          boolean stackIn_19_0 = false;
+          RuntimeException stackIn_22_0 = null;
+          StringBuilder stackIn_22_1 = null;
+          String stackIn_23_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          var7 = ZombieDawn.field_J;
+          try {
+            if (nm.field_a) {
+              return true;
+            }
             try {
-              L0: {
-                if (!nm.field_a) {
-                  try {
-                    L1: {
-                      L2: {
-                        var2 = "tuhstatbut";
-                        var3 = (String) (qe.a(param1, "getcookies", -109));
-                        if (param0 < -111) {
-                          break L2;
-                        } else {
-                          field_g = (cg) null;
-                          break L2;
-                        }
-                      }
-                      var4 = de.a(';', var3, -125);
-                      var5 = 0;
-                      L3: while (true) {
-                        if (var4.length <= var5) {
-                          decompiledRegionSelector0 = 0;
-                          break L1;
-                        } else {
-                          L4: {
-                            var6 = var4[var5].indexOf('=');
-                            if ((var6 ^ -1) > -1) {
-                              break L4;
-                            } else {
-                              if (var4[var5].substring(0, var6).trim().equals(var2)) {
-                                stackIn_12_0 = 1;
-                                decompiledRegionSelector0 = 1;
-                                break L1;
-                              } else {
-                                break L4;
-                              }
-                            }
-                          }
-                          var5++;
-                          continue L3;
-                        }
-                      }
-                    }
-                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L5: {
-                      var2_ref = decompiledCaughtException;
-                      decompiledRegionSelector0 = 0;
-                      break L5;
-                    }
-                  }
-                  if (decompiledRegionSelector0 == 0) {
-                    L6: {
-                      if (null == param1.getParameter("tuhstatbut")) {
-                        stackIn_19_0 = 0;
-                        break L6;
-                      } else {
-                        stackIn_19_0 = 1;
-                        break L6;
-                      }
-                    }
-                    decompiledRegionSelector1 = 1;
-                    break L0;
-                  } else {
-                    decompiledRegionSelector1 = 2;
-                    break L0;
-                  }
-                } else {
-                  stackIn_3_0 = 1;
-                  decompiledRegionSelector1 = 0;
-                  break L0;
+              var2 = "tuhstatbut";
+              var3 = (String) (qe.a(param1, "getcookies", -109));
+              if (param0 >= -111) {
+                field_g = (cg) null;
+              }
+              var4 = de.a(';', var3, -125);
+              for (var5 = 0; var4.length > var5; var5++) {
+                var6 = var4[var5].indexOf('=');
+                if (var6 >= 0 &&
+                  var4[var5].substring(0, var6).trim().equals(var2)) {
+                  return true;
                 }
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L7: {
-                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_22_0 = (RuntimeException) (var2_ref2);
-
-                stackIn_22_1 = new StringBuilder().append("hl.B(").append(param0).append(',');
-
-                if (param1 == null) {
-                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackIn_23_2 = "null";
-                  break L7;
-                } else {
-                  stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-                  stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-                  stackIn_23_2 = "{...}";
-                  break L7;
-                }
-              }
-              throw sh.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = decompiledCaughtException;
             }
-            if (decompiledRegionSelector1 == 0) {
-              return stackIn_3_0 != 0;
+            stackIn_19_0 = (null != param1.getParameter("tuhstatbut"));
+            return stackIn_19_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_22_0 = var2_ref2;
+            stackIn_22_1 = new StringBuilder().append("hl.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_23_2 = "null";
             } else {
-              if (decompiledRegionSelector1 == 1) {
-                return stackIn_19_0 != 0;
-              } else {
-                return stackIn_12_0 != 0;
-              }
+              stackIn_23_2 = "{...}";
             }
+            throw sh.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = ZombieDawn.field_J;
-        if (this.field_e == this.field_a.field_c[this.field_i - 1]) {
-          L0: while (true) {
-            if (this.field_a.field_f > this.field_i) {
-              fieldTemp$1 = this.field_i;
-              this.field_i = this.field_i + 1;
-              if (this.field_a.field_c[fieldTemp$1].field_b == this.field_a.field_c[-1 + this.field_i]) {
-                this.field_e = this.field_a.field_c[this.field_i + -1];
-                continue L0;
-              } else {
-                this.field_e = this.field_a.field_c[-1 + this.field_i].field_b;
-                return true;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_e != this.field_a.field_c[this.field_i - 1]) {
           return true;
         }
+        while (true) {
+          if (this.field_a.field_f <= this.field_i) {
+            return false;
+          }
+          fieldTemp$0 = this.field_i;
+          this.field_i = this.field_i + 1;
+          if (this.field_a.field_c[fieldTemp$0].field_b == this.field_a.field_c[-1 + this.field_i]) {
+            this.field_e = this.field_a.field_c[this.field_i - 1];
+            continue;
+          }
+          break;
+        }
+        this.field_e = this.field_a.field_c[-1 + this.field_i].field_b;
+        return true;
     }
 
     public static void a(byte param0) {
@@ -293,7 +191,7 @@ final class hl implements Iterator {
         field_f = null;
         field_h = null;
         if (param0 <= 105) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -301,10 +199,10 @@ final class hl implements Iterator {
     hl(wm param0) {
         this.field_c = null;
         try {
-            this.field_a = param0;
-            this.a(11936);
+          this.field_a = param0;
+          this.a(11936);
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "hl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

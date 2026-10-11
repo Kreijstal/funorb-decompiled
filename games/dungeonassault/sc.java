@@ -9,12 +9,12 @@ final class sc extends ch {
         field_q = null;
         field_p = null;
         if (param0 != -94) {
-            sc.b((byte) -6);
+          sc.b((byte) -6);
         }
     }
 
     final fd b(int param0) {
-        int var2 = -126 % ((param0 - -56) / 41);
+        int var2 = -126 % ((param0 + 56) / 41);
         return of.field_p;
     }
 
@@ -29,61 +29,38 @@ final class sc extends ch {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  var3_int = param1.d((byte) 58);
-                  if (var3_int > param0) {
-                    var3_int = param0;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                var4 = new byte[var3_int];
-                param1.field_o = param1.field_o + qh.field_G.a(param1.field_m, var4, (byte) -88, param1.field_o, 0, var3_int);
-                var5 = mk.a((byte) -24, var4, var3_int, 0);
-                var6 = 114 / ((param2 - 54) / 47);
-                stackIn_4_0 = (String) (var5);
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              stackIn_6_0 = "Cabbage";
-              return stackIn_6_0;
+          try {
+            var3_int = param1.d((byte) 58);
+            if (var3_int > param0) {
+              var3_int = param0;
             }
-            break L0;
+            var4 = new byte[var3_int];
+            param1.field_o = param1.field_o + qh.field_G.a(param1.field_m, var4, (byte) -88, param1.field_o, 0, var3_int);
+            var5 = mk.a((byte) -24, var4, var3_int, 0);
+            var6 = 114 / ((param2 - 54) / 47);
+            stackIn_4_0 = var5;
+            return stackIn_4_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_6_0 = "Cabbage";
+            return stackIn_6_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("sc.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("sc.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     sc(long param0, String param1) {

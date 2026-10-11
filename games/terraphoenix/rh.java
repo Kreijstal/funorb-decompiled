@@ -11,7 +11,7 @@ final class rh {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 33) {
-            field_b = (ci[]) null;
+          field_b = (ci[]) null;
         }
     }
 

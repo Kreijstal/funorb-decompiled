@@ -16,23 +16,16 @@ final class wi implements ml {
         RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var4 = (me) ((Object) af.field_a.a((byte) -117));
-            L1: while (true) {
-              if (var4 == null) {
-                if (param1 == 1197) {
-                  break L0;
-                } else {
-                  field_d = (ad) null;
-                  return;
-                }
-              } else {
-                qc.a(var4, (byte) 117, param0);
-                var4 = (me) ((Object) af.field_a.d((byte) 63));
-                continue L1;
-              }
-            }
+          var4 = (me) (af.field_a.a((byte) -117));
+          while (var4 != null) {
+            qc.a(var4, (byte) 117, param0);
+            var4 = (me) (af.field_a.d((byte) 63));
           }
+          if (param1 == 1197) {
+            return;
+          }
+          field_d = (ad) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -42,25 +35,21 @@ final class wi implements ml {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 256) {
-          wi.a(127, 91);
-          field_a = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 256) {
           field_a = null;
           field_b = null;
           field_d = null;
           return;
         }
+        wi.a(127, 91);
+        field_a = null;
+        field_b = null;
+        field_d = null;
     }
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -68,59 +57,33 @@ final class wi implements ml {
         int var7 = 0;
         le var8 = null;
         try {
-          L0: {
-            L1: {
-              if (param4 > 19) {
-                break L1;
-              } else {
-                wi.a(-113);
-                break L1;
-              }
-            }
-            L2: {
-              var6_int = param3 + param1.field_r;
-              var7 = param1.field_e + param2;
-              eb.b(var6_int, 0, param1.field_p, param1.field_l, var7);
-              var8 = hk.field_i[1];
-              if (!(param1 instanceof t)) {
-                break L2;
-              } else {
-                if (!((t) ((Object) param1)).field_u) {
-                  break L2;
-                } else {
-                  var8.c((-var8.field_m + param1.field_l >> 1687994465) + var6_int + 1, (param1.field_p - var8.field_n >> 1839470177) + (1 + var7), 256);
-                  break L2;
-                }
-              }
-            }
-            if (!param1.b((byte) 64)) {
-              break L0;
-            } else {
-              hk.a(2 + var6_int, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-              return;
-            }
+          if (param4 <= 19) {
+            wi.a(-113);
           }
+          var6_int = param3 + param1.field_r;
+          var7 = param1.field_e + param2;
+          eb.b(var6_int, 0, param1.field_p, param1.field_l, var7);
+          var8 = hk.field_i[1];
+          if (param1 instanceof t &&
+            ((t) (param1)).field_u) {
+            var8.c((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
+          }
+          if (!param1.b((byte) 64)) {
+            return;
+          }
+          hk.a(2 + var6_int, var7 + 2, 2, param1.field_l - 4, param1.field_p - 4);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var6);
-
-            stackIn_10_1 = new StringBuilder().append("wi.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_10_0 = var6;
+          stackIn_10_1 = new StringBuilder().append("wi.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw la.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -12,17 +12,17 @@ final class bn extends pd {
 
     public static void c(byte param0) {
         if (param0 != -93) {
-            bn.c((byte) -69);
-            field_l = null;
-            return;
+          bn.c((byte) -69);
+          field_l = null;
+          return;
         }
         field_l = null;
     }
 
     final kb a(boolean param0) {
         if (!param0) {
-            bn.a(107, 64);
-            return ba.field_b;
+          bn.a(107, 64);
+          return ba.field_b;
         }
         return ba.field_b;
     }
@@ -30,7 +30,7 @@ final class bn extends pd {
     final static void a(int param0, int param1) {
         pg.a(param0, (byte) 92, false);
         if (param1 > -106) {
-            field_k = -61L;
+          field_k = -61L;
         }
     }
 

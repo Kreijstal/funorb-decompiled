@@ -12,16 +12,14 @@ final class ea extends Random {
     static qr field_c;
 
     final static void a(int param0) {
-        if (param0 <= 111) {
-          field_c = (qr) null;
-          vp.field_o.field_a = 0;
-          vp.field_o.field_p = 0;
-          return;
-        } else {
+        if (param0 > 111) {
           vp.field_o.field_a = 0;
           vp.field_o.field_p = 0;
           return;
         }
+        field_c = (qr) null;
+        vp.field_o.field_a = 0;
+        vp.field_o.field_p = 0;
     }
 
     final static bi[] a(int param0, byte param1, int param2, int param3) {
@@ -39,20 +37,20 @@ final class ea extends Random {
         var5[0].e();
         ch.a(20, 3974311, var4, 10 + param3 * 2, 0, 0, 3974311, 10 + 2 * param3);
         var5[1].e();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3, 0, 3974311, 2 * param3 - -10);
+        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3, 0, 3974311, 2 * param3 + 10);
         var5[2].e();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, 0, 3974311, 2 * param3 - -10);
+        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, 0, 3974311, 2 * param3 + 10);
         var5[3].e();
-        ch.a(20, 3974311, var4, param3 * 2 - -10, 0, -param3, 3974311, 2 * param3 - -10);
+        ch.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3, 3974311, 2 * param3 + 10);
         var5[5].e();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 + -10, -param3, 3974311, 10 + 2 * param3);
+        ch.a(20, 3974311, var4, 10 + param3 * 2, -param3 - 10, -param3, 3974311, 10 + 2 * param3);
         int var6 = -123 % ((-36 - param1) / 62);
         var5[6].e();
-        ch.a(20, 3974311, var4, param3 * 2 - -10, 0, -param3 - 10 - 1, 3974311, 10 + param3 * 2);
+        ch.a(20, 3974311, var4, param3 * 2 + 10, 0, -param3 - 10 - 1, 3974311, 10 + param3 * 2);
         var5[7].e();
-        ch.a(20, 3974311, var4, param3 * 2 - -10, -param3, -10 + -param3 - 2, 3974311, 10 + 2 * param3);
+        ch.a(20, 3974311, var4, param3 * 2 + 10, -param3, -10 - param3 - 2, 3974311, 10 + 2 * param3);
         var5[8].e();
-        ch.a(20, 3974311, var4, 10 + param3 * 2, -10 + -param3, -11 + -param3, 3974311, 10 + 2 * param3);
+        ch.a(20, 3974311, var4, 10 + param3 * 2, -10 - param3, -11 - param3, 3974311, 10 + 2 * param3);
         cg.i(0);
         return var5;
     }
@@ -65,32 +63,26 @@ final class ea extends Random {
         int[] var4 = new int[2];
         int[] var3 = var4;
         var4[0] = (int)co.a(65535L, param0);
-        var4[1] = (int)co.a(param0 >> 795997472, 65535L);
+        var4[1] = (int)co.a(param0 >> 32, 65535L);
         this.field_f = new mh(var4);
     }
 
     final static o b(int param0) {
-        L0: {
-          if (qq.field_o == null) {
-            qq.field_o = new o(mf.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, mf.field_x.field_J, -1, 2147483647, true);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (qq.field_o == null) {
+          qq.field_o = new o(mf.field_x, 20, 0, 0, 0, 11579568, -1, 0, 0, mf.field_x.field_J, -1, 2147483647, true);
         }
-        if (param0 <= 12) {
-          ea.a(23);
-          return qq.field_o;
-        } else {
+        if (param0 > 12) {
           return qq.field_o;
         }
+        ea.a(23);
+        return qq.field_o;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != -109) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

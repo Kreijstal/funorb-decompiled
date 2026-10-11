@@ -9,86 +9,43 @@ final class dc extends aa {
     public static void c(int param0) {
         field_g = null;
         if (param0 != -58) {
-            dc.c(33);
+          dc.c(33);
         }
     }
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        if (param0 < -67) {
-          if (param1 < 48) {
-            if (param1 < 65) {
-              L0: {
-                if (97 > param1) {
-                  break L0;
-                } else {
-                  if (122 < param1) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param1 <= 90) {
-                stackIn_30_0 = 1;
-                return stackIn_30_0 != 0;
-              } else {
-                L1: {
-                  L2: {
-                    if (97 > param1) {
-                      break L2;
-                    } else {
-                      if (122 < param1) {
-                        break L2;
-                      } else {
-                        stackIn_27_0 = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackIn_27_0 = 0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (param1 > 57) {
-              if (param1 >= 65) {
-                if (param1 > 90) {
-                  if (97 <= param1) {
-                    if (122 < param1) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                if (97 <= param1) {
-                  if (122 < param1) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        boolean stackIn_27_0 = false;
+        if (param0 >= -67) {
           return false;
         }
+        if (param1 < 48) {
+          if (param1 < 65) {
+            if (97 <= param1 &&
+              122 >= param1) {
+              return true;
+            }
+            return false;
+          }
+          if (param1 <= 90) {
+            return true;
+          }
+          stackIn_27_0 = (97 <= param1) && (122 >= param1);
+          return stackIn_27_0;
+        }
+        if (param1 <= 57) {
+          return true;
+        }
+        if (param1 >= 65 &&
+          param1 <= 90) {
+          return true;
+        }
+        if (97 > param1) {
+          return false;
+        }
+        if (122 < param1) {
+          return false;
+        }
+        return true;
     }
 
     private dc() throws Throwable {

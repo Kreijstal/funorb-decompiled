@@ -12,8 +12,8 @@ final class ih {
 
     final static uc a(byte param0) {
         int var1 = 116 % ((3 - param0) / 36);
-        if (!(rf.field_d != null)) {
-            rf.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.field_w, -1, 2147483647, true);
+        if (rf.field_d == null) {
+          rf.field_d = new uc(ep.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, ep.field_b.field_w, -1, 2147483647, true);
         }
         return rf.field_d;
     }
@@ -25,7 +25,7 @@ final class ih {
         field_e = null;
         field_b = null;
         if (param0 != -1) {
-            return;
+          return;
         }
         field_g = null;
     }
@@ -34,65 +34,67 @@ final class ih {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         if (param0) {
-            field_c = (int[]) null;
-            if (fq.field_o == null) {
-                return;
-            }
-            fq.field_o.c(-1);
-            fieldTemp$0 = hn.field_d + 1;
-            hn.field_d = hn.field_d + 1;
-            if (fieldTemp$0 < ce.field_f) {
-                fo.field_t = hn.field_d + -128;
-                fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-                fo.field_t = (fo.field_t ^ -1) < -257 ? 256 : fo.field_t;
-                if (jc.field_d) {
-                    return;
-                }
-                if (hn.field_d >= ce.field_f - 2) {
-                    return;
-                }
-                hn.field_d = -2 + ce.field_f;
-                return;
-            }
-            rg.field_e = fq.field_o;
-            hn.field_d = 0;
-            fq.field_o = null;
-            fo.field_t = hn.field_d + -128;
+          field_c = (int[]) null;
+          if (fq.field_o == null) {
+            return;
+          }
+          fq.field_o.c(-1);
+          fieldTemp$0 = hn.field_d + 1;
+          hn.field_d = hn.field_d + 1;
+          if (fieldTemp$0 < ce.field_f) {
+            fo.field_t = hn.field_d - 128;
             fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-            fo.field_t = (fo.field_t ^ -1) < -257 ? 256 : fo.field_t;
+            fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
             if (jc.field_d) {
-                return;
+              return;
             }
             if (hn.field_d >= ce.field_f - 2) {
-                return;
+              return;
             }
             hn.field_d = -2 + ce.field_f;
             return;
+          }
+          rg.field_e = fq.field_o;
+          hn.field_d = 0;
+          fq.field_o = null;
+          fo.field_t = hn.field_d - 128;
+          fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
+          fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+          if (jc.field_d) {
+            return;
+          }
+          if (hn.field_d >= ce.field_f - 2) {
+            return;
+          }
+          hn.field_d = -2 + ce.field_f;
+          return;
         }
         if (fq.field_o != null) {
-            fq.field_o.c(-1);
-            fieldTemp$1 = hn.field_d + 1;
-            hn.field_d = hn.field_d + 1;
-            if (fieldTemp$1 >= ce.field_f) {
-                rg.field_e = fq.field_o;
-                hn.field_d = 0;
-                fq.field_o = null;
-                fo.field_t = hn.field_d + -128;
-                fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-                fo.field_t = (fo.field_t ^ -1) < -257 ? 256 : fo.field_t;
-                if (!jc.field_d && hn.field_d < ce.field_f - 2) {
-                    hn.field_d = -2 + ce.field_f;
-                    return;
-                }
-                return;
-            }
-            fo.field_t = hn.field_d + -128;
+          fq.field_o.c(-1);
+          fieldTemp$1 = hn.field_d + 1;
+          hn.field_d = hn.field_d + 1;
+          if (fieldTemp$1 >= ce.field_f) {
+            rg.field_e = fq.field_o;
+            hn.field_d = 0;
+            fq.field_o = null;
+            fo.field_t = hn.field_d - 128;
             fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
-            fo.field_t = (fo.field_t ^ -1) < -257 ? 256 : fo.field_t;
-            if (!jc.field_d && hn.field_d < ce.field_f - 2) {
-                hn.field_d = -2 + ce.field_f;
-                return;
+            fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+            if (!jc.field_d &&
+              hn.field_d < ce.field_f - 2) {
+              hn.field_d = -2 + ce.field_f;
+              return;
             }
+            return;
+          }
+          fo.field_t = hn.field_d - 128;
+          fo.field_t = fo.field_t < 0 ? 0 : 6 * fo.field_t;
+          fo.field_t = fo.field_t > 256 ? 256 : fo.field_t;
+          if (!jc.field_d &&
+            hn.field_d < ce.field_f - 2) {
+            hn.field_d = -2 + ce.field_f;
+            return;
+          }
         }
     }
 

@@ -9,21 +9,21 @@ final class no extends qk {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(ob.field_hb);
-            param0.addMouseMotionListener(ob.field_hb);
-            if (param1 != 0) {
-                no.b(-101, (byte) -112, -11);
-            }
-            param0.addFocusListener(ob.field_hb);
+          param0.addMouseListener(ob.field_hb);
+          param0.addMouseMotionListener(ob.field_hb);
+          if (param1 != 0) {
+            no.b(-101, (byte) -112, -11);
+          }
+          param0.addFocusListener(ob.field_hb);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "no.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "no.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void l(byte param0) {
         field_ub = null;
         if (param0 != -11) {
-            no.b(-63, (byte) 100, -16);
+          no.b(-63, (byte) 100, -16);
         }
         field_wb = null;
         field_vb = null;
@@ -31,26 +31,19 @@ final class no extends qk {
     }
 
     final static aj a(int param0, int param1) {
+        int var3 = 0;
         aj[] var2;
-        int var3;
         int var4;
         aj[] var5;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         var5 = so.c(96);
         var2 = var5;
-        var3 = param1;
-        L0: while (true) {
-          if (var3 < var5.length) {
-            if (var5[var3].field_c != param0) {
-              var3++;
-              continue L0;
-            } else {
-              return var5[var3];
-            }
-          } else {
-            return null;
+        for (var3 = param1; var3 < var5.length; var3++) {
+          if (var5[var3].field_c == param0) {
+            return var5[var3];
           }
         }
+        return null;
     }
 
     no(h param0, qm param1) {
@@ -65,105 +58,57 @@ final class no extends qk {
         na var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
+        cg var1Lifetime1;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var1 = (cg) ((Object) gm.field_j.b(param0 + 12624));
-            L1: while (true) {
-              if (var1 == null) {
-                var1_ref = (na) ((Object) vh.field_a.b(param0 + 12624));
-                L2: while (true) {
-                  if (var1_ref == null) {
-                    var1 = (cg) ((Object) ph.field_a.b(param0 ^ -12624));
-                    L3: while (true) {
-                      L4: {
-                        L5: {
-                          if (var1 == null) {
-                            if (param0 == -1) {
-                              break L5;
-                            } else {
-                              no.l((byte) 65);
-                              break L4;
-                            }
-                          } else {
-                            stackIn_25_0 = var1.field_Eb ^ -1;
-
-                            stackIn_25_1 = -1;
-
-                            L6: {
-                              if (stackIn_25_0 >= stackIn_25_1) {
-                                break L6;
-                              } else {
-                                var1.field_Eb = var1.field_Eb - 1;
-                                if (0 == var1.field_Eb) {
-                                  var1.field_Sb = 0;
-                                  if (var1.e(183874081)) {
-                                    var1.a(true);
-                                    break L6;
-                                  } else {
-                                    break L6;
-                                  }
-                                } else {
-                                  var1 = (cg) ((Object) ph.field_a.a(0));
-                                  continue L3;
-                                }
-                              }
-                            }
-                            var1 = (cg) ((Object) ph.field_a.a(0));
-                            continue L3;
-                          }
-                        }
-                        break L4;
-                      }
-                      break L0;
-                    }
-                  } else {
-                    L7: {
-                      if (-1 <= (var1_ref.field_bc ^ -1)) {
-                        break L7;
-                      } else {
-                        var1_ref.field_bc = var1_ref.field_bc - 1;
-                        if (var1_ref.field_bc == 0) {
-                          var1_ref.field_ac = 0;
-                          if (!var1_ref.e(-100)) {
-                            break L7;
-                          } else {
-                            var1_ref.a(true);
-                            break L7;
-                          }
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    var1_ref = (na) ((Object) vh.field_a.a(0));
-                    continue L2;
-                  }
+          var1 = (cg) (gm.field_j.b(param0 + 12624));
+          while (var1 != null) {
+            if (var1.field_Eb > 0) {
+              var1.field_Eb = var1.field_Eb - 1;
+              if (var1.field_Eb == 0) {
+                var1.field_Sb = 0;
+                if (var1.e(183874081)) {
+                  var1.a(true);
                 }
-              } else {
-                L8: {
-                  if ((var1.field_Eb ^ -1) < -1) {
-                    var1.field_Eb = var1.field_Eb - 1;
-                    if (-1 == (var1.field_Eb ^ -1)) {
-                      var1.field_Sb = 0;
-                      if (var1.e(183874081)) {
-                        var1.a(true);
-                        break L8;
-                      } else {
-                        break L8;
-                      }
-                    } else {
-                      break L8;
-                    }
-                  } else {
-                    break L8;
-                  }
-                }
-                var1 = (cg) ((Object) gm.field_j.a(0));
-                continue L1;
               }
             }
+            var1 = (cg) (gm.field_j.a(0));
           }
+          var1_ref = (na) (vh.field_a.b(param0 + 12624));
+          while (var1_ref != null) {
+            if (var1_ref.field_bc > 0) {
+              var1_ref.field_bc = var1_ref.field_bc - 1;
+              if (var1_ref.field_bc == 0) {
+                var1_ref.field_ac = 0;
+                if (var1_ref.e(-100)) {
+                  var1_ref.a(true);
+                }
+              }
+            }
+            var1_ref = (na) (vh.field_a.a(0));
+          }
+          var1Lifetime1 = (cg) (ph.field_a.b(param0 ^ -12624));
+          while (var1Lifetime1 != null) {
+            stackIn_25_0 = ~var1Lifetime1.field_Eb;
+            stackIn_25_1 = -1;
+            if (stackIn_25_0 < stackIn_25_1) {
+              var1Lifetime1.field_Eb = var1Lifetime1.field_Eb - 1;
+              if (0 != var1Lifetime1.field_Eb) {
+                var1Lifetime1 = (cg) (ph.field_a.a(0));
+                continue;
+              }
+              var1Lifetime1.field_Sb = 0;
+              if (var1Lifetime1.e(183874081)) {
+                var1Lifetime1.a(true);
+              }
+            }
+            var1Lifetime1 = (cg) (ph.field_a.a(0));
+          }
+          if (param0 != -1) {
+            no.l((byte) 65);
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
@@ -177,16 +122,16 @@ final class no extends qk {
         co.field_c = param0;
         wh.field_c = param0;
         if (param1 != -61) {
-            field_ub = (String[]) null;
+          field_ub = (String[]) null;
         }
         jm.field_j = true;
     }
 
     final void a(byte param0, qm param1) {
         try {
-            super.a(param0, param1);
+          super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "no.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "no.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

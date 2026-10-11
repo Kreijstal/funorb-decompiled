@@ -20,7 +20,7 @@ final class bd {
         field_h = null;
         field_f = null;
         if (param0 <= 125) {
-            bd.a((byte) 110);
+          bd.a((byte) 110);
         }
         field_c = null;
         field_e = null;
@@ -32,17 +32,17 @@ final class bd {
         int var5 = 0;
         int var6 = MinerDisturbance.field_ab;
         try {
-            sb.field_n.field_T[0][bi.field_p] = 0;
-            sb.field_n.field_T[0][re.field_b] = 14540253;
-            for (var4_int = param2; var4_int < sb.field_n.field_G; var4_int++) {
-                var5 = 169 - -(-76 * var4_int / sb.field_n.field_G);
-                sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << -435920024, var5 << 1729126672), var5);
-                eh.a(0, param3 + -sb.field_n.field_G + var4_int, 640, -sb.field_n.field_G + param3 - -var4_int - -1);
-                sb.field_n.b(param0, param1, param3, 0, -1);
-            }
-            eh.a();
+          sb.field_n.field_T[0][bi.field_p] = 0;
+          sb.field_n.field_T[0][re.field_b] = 14540253;
+          for (var4_int = param2; var4_int < sb.field_n.field_G; var4_int++) {
+            var5 = 169 + -76 * var4_int / sb.field_n.field_G;
+            sb.field_n.field_T[0][wd.field_e] = hi.a(hi.a(var5 << 8, var5 << 16), var5);
+            eh.a(0, param3 - sb.field_n.field_G + var4_int, 640, -sb.field_n.field_G + param3 + var4_int + 1);
+            sb.field_n.b(param0, param1, param3, 0, -1);
+          }
+          eh.a();
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "bd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "bd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

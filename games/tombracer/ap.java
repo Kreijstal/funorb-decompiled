@@ -10,33 +10,33 @@ final class ap implements bo {
     final void a(int param0, byte param1) {
         this.field_b = param0;
         if (param1 != -119) {
-            this.a(-18, (byte) -105);
+          this.a(-18, (byte) -105);
         }
     }
 
     public final void a(kh param0, byte param1) {
         try {
-            param0.h((byte) 124);
-            this.field_b = param0.b((byte) 44, 4);
-            param0.i((byte) 98);
-            if (param1 != -19) {
-                this.field_b = -114;
-            }
+          param0.h((byte) 124);
+          this.field_b = param0.b((byte) 44, 4);
+          param0.i((byte) 98);
+          if (param1 != -19) {
+            this.field_b = -114;
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ap.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void a(int param0, kh param1) {
         try {
-            param1.i(8);
-            if (param0 != 200) {
-                field_c = (String) null;
-            }
-            param1.a((byte) -125, this.field_b, 4);
-            param1.k(-1826190686);
+          param1.i(8);
+          if (param0 != 200) {
+            field_c = (String) null;
+          }
+          param1.a((byte) -125, this.field_b, 4);
+          param1.k(-1826190686);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ap.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ap.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

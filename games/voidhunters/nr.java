@@ -11,47 +11,27 @@ final class nr extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                var4 = (kla) null;
-                nr.a((kla) null, -72, 98, -34, -112, -87);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(57, 92));
-            break L0;
+          if (param1 > -119) {
+            var4 = (kla) null;
+            nr.a((kla) null, -72, 98, -34, -112, -87);
           }
+          stackIn_3_0 = new nc(frb.a(57, 92));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("nr.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("nr.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     nr(String param0, Class[] param1, String param2) {
@@ -66,24 +46,24 @@ final class nr extends rqa {
         int var10 = 0;
         int var11 = 0;
         try {
-            var6_int = (-dma.field_g + ip.field_p.width) / param3;
-            var7 = ip.field_p.height + -dma.field_j;
-            var8 = param5 + var6_int;
-            var9 = var7 + param4;
-            var10 = param1 - -var6_int;
-            var11 = var7 + param2;
-            param0.a(var8, var10, var9, var11, (byte) -85);
-            og.field_r.SA(var6_int, param4 + var7, dma.field_g, param2 + -param4, dma.field_i, param4 * dma.field_g, dma.field_g);
-            param0.a(true);
+          var6_int = (-dma.field_g + ip.field_p.width) / param3;
+          var7 = ip.field_p.height - dma.field_j;
+          var8 = param5 + var6_int;
+          var9 = var7 + param4;
+          var10 = param1 + var6_int;
+          var11 = var7 + param2;
+          param0.a(var8, var10, var9, var11, (byte) -85);
+          og.field_r.SA(var6_int, param4 + var7, dma.field_g, param2 - param4, dma.field_i, param4 * dma.field_g, dma.field_g);
+          param0.a(true);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     public static void e(byte param0) {
         field_o = null;
         if (param0 >= -124) {
-            field_o = (String) null;
+          field_o = (String) null;
         }
     }
 

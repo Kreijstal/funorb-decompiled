@@ -8,10 +8,10 @@ final class s {
 
     public static void a(int param0) {
         if (param0 >= -19) {
-            s.a(60);
-            field_b = null;
-            field_c = null;
-            return;
+          s.a(60);
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;
@@ -19,7 +19,7 @@ final class s {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 != 72) {
-            return;
+          return;
         }
         ob.field_cc[param1] = param2;
     }

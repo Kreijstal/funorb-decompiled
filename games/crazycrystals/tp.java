@@ -21,7 +21,7 @@ final class tp {
         field_f = null;
         field_c = null;
         if (param0 != 7566) {
-            tp.a(-88);
+          tp.a(-88);
         }
     }
 

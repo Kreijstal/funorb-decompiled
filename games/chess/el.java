@@ -10,26 +10,23 @@ final class el extends cm {
     el(Object param0, int param1) {
         super(param1);
         try {
-            this.field_A = param0;
+          this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1) {
-        nk var2;
-        var2 = qn.field_U;
+        nk var2 = qn.field_U;
         var2.f(param1, -60);
-        if (param0 != 4) {
-          field_y = (pf[]) null;
-          var2.c(1, (byte) -95);
-          var2.c(2, (byte) -56);
-          return;
-        } else {
+        if (param0 == 4) {
           var2.c(1, (byte) -95);
           var2.c(2, (byte) -56);
           return;
         }
+        field_y = (pf[]) null;
+        var2.c(1, (byte) -95);
+        var2.c(2, (byte) -56);
     }
 
     public static void e(byte param0) {
@@ -41,16 +38,16 @@ final class el extends cm {
 
     final boolean g(int param0) {
         if (param0 > -87) {
-            this.field_A = (Object) null;
-            return false;
+          this.field_A = (Object) null;
+          return false;
         }
         return false;
     }
 
     final Object f(int param0) {
         if (param0 != -10) {
-            el.e((byte) 45);
-            return this.field_A;
+          el.e((byte) 45);
+          return this.field_A;
         }
         return this.field_A;
     }

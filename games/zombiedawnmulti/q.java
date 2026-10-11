@@ -15,54 +15,54 @@ final class q {
 
     final static void a(int param0) {
         if (param0 != 13151) {
-            return;
+          return;
         }
         va.field_a = 0;
         lp.a((byte) 48);
     }
 
     final static void b(int param0) {
-        if (pk.field_b != null) {
-          if (pk.field_b.field_e != null) {
-            pk.field_b.field_e.field_Ab = false;
-            vc.field_d = null;
-            if (param0 < 25) {
-              return;
-            } else {
-              pk.field_b = null;
-              return;
-            }
-          } else {
-            vc.field_d = null;
-            if (param0 < 25) {
-              return;
-            } else {
-              pk.field_b = null;
-              return;
-            }
-          }
-        } else {
+        if (pk.field_b == null) {
           vc.field_d = null;
-          if (param0 < 25) {
-            return;
-          } else {
+          if (param0 >= 25) {
             pk.field_b = null;
             return;
           }
+          return;
+        }
+        if (pk.field_b.field_e == null) {
+          vc.field_d = null;
+          if (param0 >= 25) {
+            pk.field_b = null;
+            return;
+          }
+          return;
+        }
+        pk.field_b.field_e.field_Ab = false;
+        vc.field_d = null;
+        if (param0 >= 25) {
+          pk.field_b = null;
+          return;
         }
     }
 
     public static void a(byte param0) {
         if (param0 != -109) {
-            field_b = true;
-            field_a = null;
-            field_c = null;
-            return;
+          field_b = true;
+          field_a = null;
+          field_c = null;
+          return;
         }
         field_a = null;
         field_c = null;
     }
 
     static {
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static int $cfr$intArgs$a$f0c91481eb80(int param0, int param1) {
+        int var2 = 106 / ((param0 - 18) / 56);
+        return ep.field_k[param1 & 2047];
     }
 }

@@ -13,9 +13,9 @@ final class fh {
         field_c = null;
         field_a = null;
         if (param0 != -12661) {
-            fh.a(62);
-            field_e = null;
-            return;
+          fh.a(62);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

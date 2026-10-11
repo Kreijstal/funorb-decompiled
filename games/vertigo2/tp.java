@@ -15,7 +15,7 @@ final class tp extends cr {
 
     public static void k(int param0) {
         if (param0 != -10045) {
-            return;
+          return;
         }
         field_Nb = null;
     }

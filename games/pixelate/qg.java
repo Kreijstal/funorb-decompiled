@@ -13,21 +13,14 @@ final class qg {
         field_b = null;
         field_c = null;
         if (param0 != 124) {
-            field_d = (String[]) null;
+          field_d = (String[]) null;
         }
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        pc var3;
-        if (param2) {
-          field_c = (String) null;
-          var3 = aa.field_f;
-          var3.g(param1, 15514);
-          var3.e(160, 3);
-          var3.e(160, 9);
-          var3.b(1276387944, param0);
-          return;
-        } else {
+        pc var3 = null;
+        pc var3Lifetime1;
+        if (!param2) {
           var3 = aa.field_f;
           var3.g(param1, 15514);
           var3.e(160, 3);
@@ -35,6 +28,12 @@ final class qg {
           var3.b(1276387944, param0);
           return;
         }
+        field_c = (String) null;
+        var3Lifetime1 = aa.field_f;
+        var3Lifetime1.g(param1, 15514);
+        var3Lifetime1.e(160, 3);
+        var3Lifetime1.e(160, 9);
+        var3Lifetime1.b(1276387944, param0);
     }
 
     static {

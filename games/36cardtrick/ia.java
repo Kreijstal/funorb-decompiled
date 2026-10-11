@@ -10,182 +10,79 @@ final class ia {
     static int field_e;
 
     final static boolean a(byte param0) {
-        if (param0 == -79) {
-          if (s.field_d != null) {
-            if (null == s.field_d.d((byte) 94)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -79) {
           ia.a(-122, 113);
-          if (s.field_d != null) {
-            if (null == s.field_d.d((byte) 94)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (s.field_d == null) {
             return false;
           }
+          if (null != s.field_d.d((byte) 94)) {
+            return true;
+          }
+          return false;
         }
+        if (s.field_d == null) {
+          return false;
+        }
+        if (null != s.field_d.d((byte) 94)) {
+          return true;
+        }
+        return false;
     }
 
     final static int b(int param0) {
         if (param0 != -5) {
-            return 0;
+          return 0;
         }
         return 1;
     }
 
     public static void a(int param0) {
-        if (param0 != -12765) {
-          field_f = (int[]) null;
-          field_c = null;
-          field_f = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == -12765) {
           field_c = null;
           field_f = null;
           field_d = null;
           field_b = null;
           return;
         }
+        field_f = (int[]) null;
+        field_c = null;
+        field_f = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static int a(int param0, int param1) {
         int var2;
-        if (param1 == 2) {
-          var2 = 0;
-          if (-1 >= (param0 ^ -1)) {
-            if (-65537 >= (param0 ^ -1)) {
-              L0: {
-                param0 = param0 >>> 16;
-                var2 += 16;
-                if (-257 < (param0 ^ -1)) {
-                  break L0;
-                } else {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L0;
-                }
-              }
-              L1: {
-                if (param0 >= 16) {
-                  var2 += 4;
-                  param0 = param0 >>> 4;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                if ((param0 ^ -1) > -5) {
-                  break L2;
-                } else {
-                  var2 += 2;
-                  param0 = param0 >>> 2;
-                  break L2;
-                }
-              }
-              L3: {
-                if (1 <= param0) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return var2 - -param0;
-            } else {
-              L4: {
-                if (-257 < (param0 ^ -1)) {
-                  break L4;
-                } else {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L4;
-                }
-              }
-              L5: {
-                if (param0 >= 16) {
-                  var2 += 4;
-                  param0 = param0 >>> 4;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                if ((param0 ^ -1) > -5) {
-                  break L6;
-                } else {
-                  var2 += 2;
-                  param0 = param0 >>> 2;
-                  break L6;
-                }
-              }
-              L7: {
-                if (1 <= param0) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return var2 - -param0;
-            }
-          } else {
-            L8: {
-              param0 = param0 >>> 16;
-              var2 += 16;
-              if (-257 < (param0 ^ -1)) {
-                break L8;
-              } else {
-                param0 = param0 >>> 8;
-                var2 += 8;
-                break L8;
-              }
-            }
-            L9: {
-              if (param0 >= 16) {
-                var2 += 4;
-                param0 = param0 >>> 4;
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            L10: {
-              if ((param0 ^ -1) > -5) {
-                break L10;
-              } else {
-                var2 += 2;
-                param0 = param0 >>> 2;
-                break L10;
-              }
-            }
-            L11: {
-              if (1 <= param0) {
-                param0 = param0 >>> 1;
-                var2++;
-                break L11;
-              } else {
-                break L11;
-              }
-            }
-            return var2 - -param0;
-          }
-        } else {
+        if (param1 != 2) {
           return 126;
         }
+        var2 = 0;
+        if (param0 < 0) {
+          param0 = param0 >>> 16;
+          var2 += 16;
+        } else {
+          if (param0 >= 65536) {
+            param0 = param0 >>> 16;
+            var2 += 16;
+          }
+        }
+        if (param0 >= 256) {
+          param0 = param0 >>> 8;
+          var2 += 8;
+        }
+        if (param0 >= 16) {
+          var2 += 4;
+          param0 = param0 >>> 4;
+        }
+        if (param0 >= 4) {
+          var2 += 2;
+          param0 = param0 >>> 2;
+        }
+        if (1 <= param0) {
+          param0 = param0 >>> 1;
+          var2++;
+        }
+        return var2 + param0;
     }
 
     static {

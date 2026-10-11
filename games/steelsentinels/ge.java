@@ -12,29 +12,26 @@ final class ge extends gb {
     static String field_i;
 
     final byte[] a(int param0) {
-        byte[] var2;
-        byte[] var3;
-        var3 = new byte[this.field_n.capacity()];
-        var2 = var3;
+        byte[] var3 = new byte[this.field_n.capacity()];
+        byte[] var2 = var3;
         this.field_n.position(0);
         this.field_n.get(var3);
-        if (param0 != -21109) {
-          return (byte[]) null;
-        } else {
+        if (param0 == -21109) {
           return var3;
         }
+        return (byte[]) null;
     }
 
     final void a(byte param0, byte[] param1) {
         this.field_n = java.nio.ByteBuffer.allocateDirect(param1.length);
         this.field_n.position(0);
         if (param0 > -30) {
-            return;
+          return;
         }
         try {
-            this.field_n.put(param1);
+          this.field_n.put(param1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ge.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -45,103 +42,54 @@ final class ge extends gb {
         java.net.URL stackIn_10_0 = null;
         Object stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        Object stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         StringBuilder stackIn_16_1 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        Object var4Lifetime1;
+        Object var4Lifetime2;
         try {
-          L0: {
-            var3 = null;
-            if (param0 == 0) {
-              L1: {
-                if (dn.field_Ub == null) {
-                  break L1;
-                } else {
-                  if (dn.field_Ub.equals(param2.getParameter("settings"))) {
-                    break L1;
-                  } else {
-                    var3 = dn.field_Ub;
-                    var4 = var3;
-                    var4 = var3;
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                var4 = null;
-                if (null == ja.field_h) {
-                  break L2;
-                } else {
-                  if (ja.field_h.equals(param2.getParameter("session"))) {
-                    break L2;
-                  } else {
-                    var4 = ja.field_h;
-                    break L2;
-                  }
-                }
-              }
-              stackIn_10_0 = fc.a(-19571, param1, (String) (var3), (String) (var4), -1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (java.net.URL) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var3 = null;
+          if (param0 != 0) {
+            stackIn_2_0 = (java.net.URL) null;
+            return stackIn_2_0;
           }
+          if (dn.field_Ub != null &&
+            !dn.field_Ub.equals(param2.getParameter("settings"))) {
+            var3 = dn.field_Ub;
+            var4 = var3;
+            var4Lifetime2 = var3;
+          }
+          var4Lifetime1 = null;
+          if (null != ja.field_h &&
+            !ja.field_h.equals(param2.getParameter("session"))) {
+            var4Lifetime1 = ja.field_h;
+          }
+          stackIn_10_0 = fc.a(-19571, param1, (String) (var3), (String) (var4Lifetime1), -1);
+          return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_13_0 = var3;
-
-            stackIn_13_1 = new StringBuilder().append("ge.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = stackIn_13_0;
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = stackIn_13_0;
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("ge.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-
-            if (param2 == null) {
-
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L4;
-            } else {
-
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L4;
-            }
+          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          if (param2 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_10_0;
+          throw ci.a((Throwable) (stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         if (param0 <= 3) {
-            return;
+          return;
         }
         field_i = null;
         field_h = null;
@@ -151,17 +99,16 @@ final class ge extends gb {
     }
 
     final static int a(int param0, byte param1) {
-        if (param1 != -32) {
-          return -20;
-        } else {
+        if (param1 == -32) {
           param0--;
-          param0 = param0 | param0 >>> -1882720287;
-          param0 = param0 | param0 >>> 296757634;
-          param0 = param0 | param0 >>> -1076979676;
-          param0 = param0 | param0 >>> -44437880;
-          param0 = param0 | param0 >>> 1392010064;
+          param0 = param0 | param0 >>> 1;
+          param0 = param0 | param0 >>> 2;
+          param0 = param0 | param0 >>> 4;
+          param0 = param0 | param0 >>> 8;
+          param0 = param0 | param0 >>> 16;
           return param0 + 1;
         }
+        return -20;
     }
 
     ge() {

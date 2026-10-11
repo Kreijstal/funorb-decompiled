@@ -11,15 +11,7 @@ final class uj {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 > -6) {
-          uj.a((byte) 111);
-          field_f = null;
-          field_b = null;
-          field_e = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 <= -6) {
           field_f = null;
           field_b = null;
           field_e = null;
@@ -27,6 +19,12 @@ final class uj {
           field_a = null;
           return;
         }
+        uj.a((byte) 111);
+        field_f = null;
+        field_b = null;
+        field_e = null;
+        field_c = null;
+        field_a = null;
     }
 
     static {

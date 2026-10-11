@@ -15,18 +15,16 @@ final class sl {
     public static void a(byte param0) {
         field_b = null;
         field_d = null;
-        if (param0 != 59) {
-          sl.a((byte) -67);
-          field_g = null;
-          field_f = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 59) {
           field_g = null;
           field_f = null;
           field_h = null;
           return;
         }
+        sl.a((byte) -67);
+        field_g = null;
+        field_f = null;
+        field_h = null;
     }
 
     static {

@@ -10,8 +10,8 @@ final class md {
 
     final static boolean a(byte param0) {
         if (param0 >= -11) {
-            field_d = (vh) null;
-            return re.field_b;
+          field_d = (vh) null;
+          return re.field_b;
         }
         return re.field_b;
     }
@@ -32,16 +32,14 @@ final class md {
     public static void a(boolean param0) {
         field_a = null;
         field_d = null;
-        if (!param0) {
-          md.a((byte) -8);
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0) {
           field_e = null;
           field_c = null;
           return;
         }
+        md.a((byte) -8);
+        field_e = null;
+        field_c = null;
     }
 
     static {

@@ -19,38 +19,24 @@ final class gm {
         RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0 == 100) {
-                break L1;
-              } else {
-                gm.b(26);
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              if (-4 >= (var1_int ^ -1)) {
-                break L0;
-              } else {
-                L3: {
-                  if (null == pa.field_a[var1_int]) {
-                    break L3;
-                  } else {
-                    if (!pa.field_a[var1_int].k()) {
-                      var1_int++;
-                      continue L2;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                pa.field_a[var1_int] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
-                mg.a(1963987425, pa.field_a[var1_int]);
-                return;
-              }
-            }
+          if (param0 != 100) {
+            gm.b(26);
           }
+          var1_int = 0;
+          while (true) {
+            if (var1_int >= 3) {
+              return;
+            }
+            if (null != pa.field_a[var1_int] &&
+              !pa.field_a[var1_int].k()) {
+              var1_int++;
+              continue;
+            }
+            break;
+          }
+          pa.field_a[var1_int] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
+          mg.a(1963987425, pa.field_a[var1_int]);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

@@ -15,12 +15,11 @@ abstract class wm extends ba implements qh {
     abstract tb b(String param0, byte param1);
 
     final String e(byte param0) {
-        if (param0 <= 2) {
-          field_n = (ck) null;
-          return this.a(this.field_j.field_E, (byte) -11);
-        } else {
+        if (param0 > 2) {
           return this.a(this.field_j.field_E, (byte) -11);
         }
+        field_n = (ck) null;
+        return this.a(this.field_j.field_E, (byte) -11);
     }
 
     final static void d(int param0) {
@@ -28,74 +27,68 @@ abstract class wm extends ba implements qh {
         CharSequence var2 = (CharSequence) ((Object) oa.field_f);
         h.field_c = kf.a(var2, (byte) 2);
         if (param0 != 140) {
-            wm.f((byte) 98);
+          wm.f((byte) 98);
         }
     }
 
     final tb b(int param0) {
-        if (param0 != -5520) {
-          this.field_j = (rk) null;
-          return this.b(this.field_j.field_E, (byte) -40);
-        } else {
+        if (param0 == -5520) {
           return this.b(this.field_j.field_E, (byte) -40);
         }
+        this.field_j = (rk) null;
+        return this.b(this.field_j.field_E, (byte) -40);
     }
 
     abstract String a(String param0, byte param1);
 
     public final void a(int param0, rk param1) {
         if (param0 != 16737894) {
-            return;
+          return;
         }
         try {
-            this.c((byte) -51);
+          this.c((byte) -51);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "wm.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "wm.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static java.awt.Container f(byte param0) {
-        if (!(hg.field_c == null)) {
-            return (java.awt.Container) ((Object) hg.field_c);
+        if (hg.field_c != null) {
+          return (java.awt.Container) ((Object) hg.field_c);
         }
         if (param0 <= 123) {
-            wm.d(74);
-            return (java.awt.Container) ((Object) se.h(25144));
+          wm.d(74);
+          return (java.awt.Container) ((Object) se.h(25144));
         }
         return (java.awt.Container) ((Object) se.h(25144));
     }
 
     public final void b(int param0, rk param1) {
         try {
-            if (param0 != -2569) {
-                field_n = (ck) null;
-            }
+          if (param0 != -2569) {
+            field_n = (ck) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "wm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "wm.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean a(byte param0) {
-        int var2;
-        int stackIn_3_0 = 0;
-        var2 = 112 / ((param0 - 72) / 40);
-        if (null != this.field_j.field_E) {
-          if (0 == this.field_j.field_E.length()) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          stackIn_3_0 = 1;
-          return stackIn_3_0 != 0;
+        int var2 = 112 / ((param0 - 72) / 40);
+        if (null == this.field_j.field_E) {
+          return true;
         }
+        if (0 != this.field_j.field_E.length()) {
+          return false;
+        }
+        return true;
     }
 
     wm(rk param0) {
         try {
-            this.field_j = param0;
+          this.field_j = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "wm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,20 +96,18 @@ abstract class wm extends ba implements qh {
         field_k = null;
         field_h = null;
         field_i = null;
-        if (param0 != 18966) {
-          wm.f((byte) 42);
-          field_n = null;
-          field_o = null;
-          field_m = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 == 18966) {
           field_n = null;
           field_o = null;
           field_m = null;
           field_g = null;
           return;
         }
+        wm.f((byte) 42);
+        field_n = null;
+        field_o = null;
+        field_m = null;
+        field_g = null;
     }
 
     static {

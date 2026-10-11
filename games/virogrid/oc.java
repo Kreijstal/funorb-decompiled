@@ -13,10 +13,10 @@ final class oc extends l {
 
     public static void c(boolean param0) {
         if (param0) {
-            oc.c(false);
-            field_h = null;
-            field_i = null;
-            return;
+          oc.c(false);
+          field_h = null;
+          field_i = null;
+          return;
         }
         field_h = null;
         field_i = null;

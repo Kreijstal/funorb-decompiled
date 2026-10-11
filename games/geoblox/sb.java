@@ -47,9 +47,9 @@ final class sb {
           for (var2 = 0; 8 > var2; var2++) {
             if (1 != (var0 & 1)) {
               var0 = var0 >>> 1;
-              continue;
+            } else {
+              var0 = -306674912 ^ var0 >>> 1;
             }
-            var0 = -306674912 ^ var0 >>> 1;
           }
           field_b[var1] = var0;
         }

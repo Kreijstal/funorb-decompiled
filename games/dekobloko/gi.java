@@ -9,80 +9,67 @@ final class gi {
     static String field_d;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 == 17) {
-          if (param6 <= param2) {
-            if (param3 + param6 > param2) {
-              if (param1 >= param4) {
-                if (param4 - -param5 <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 17) {
           field_c = -63;
-          if (param6 <= param2) {
-            if (param3 + param6 > param2) {
-              if (param1 >= param4) {
-                if (param4 - -param5 <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (param6 > param2) {
             return false;
           }
+          if (param3 + param6 <= param2) {
+            return false;
+          }
+          if (param1 < param4) {
+            return false;
+          }
+          if (param4 + param5 > param1) {
+            return true;
+          }
+          return false;
         }
+        if (param6 > param2) {
+          return false;
+        }
+        if (param3 + param6 <= param2) {
+          return false;
+        }
+        if (param1 < param4) {
+          return false;
+        }
+        if (param4 + param5 > param1) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
-        int var1 = -114 % ((param0 - -21) / 55);
+        int var1 = -114 % ((param0 + 21) / 55);
         field_d = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         ie.field_c.a(param2, 0, param4, param0, param5);
-        if (null == mg.field_bc) {
+        if (null != mg.field_bc) {
+          mg.field_bc.a(param3, -l.field_f + param3, param0, param1, (byte) -18, param0);
           if (param6 >= -83) {
             field_e = -12;
             return;
-          } else {
-            return;
           }
-        } else {
-          mg.field_bc.a(param3, -l.field_f + param3, param0, param1, (byte) -18, param0);
-          if (param6 < -83) {
-            return;
-          } else {
-            field_e = -12;
-            return;
-          }
+          return;
         }
+        if (param6 < -83) {
+          return;
+        }
+        field_e = -12;
     }
 
     final static void a(int param0, int param1, int param2, wl param3, int param4) {
         try {
-            param3.a(true, 12);
-            param3.d(-1, param2);
-            param3.d(-1, param4);
-            param3.d(-1, param0);
-            param3.a(true, param1);
+          param3.a(true, 12);
+          param3.d(-1, param2);
+          param3.d(-1, param4);
+          param3.d(-1, param0);
+          param3.a(true, param1);
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "gi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "gi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

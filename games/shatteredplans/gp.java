@@ -11,7 +11,7 @@ final class gp {
         field_b = null;
         field_a = null;
         if (param0 < 97) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

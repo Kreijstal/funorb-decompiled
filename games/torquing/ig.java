@@ -11,22 +11,22 @@ class ig extends pc {
 
     public static void b(int param0) {
         field_q = null;
-        int var1 = 69 % ((param0 - -28) / 63);
+        int var1 = 69 % ((param0 + 28) / 63);
         field_r = null;
     }
 
     public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
         try {
-            if (param3) {
-                tk.a(param4.field_k + param1, param4.field_w + param2, param4.field_o, param4.field_p, false);
-            }
-            if (param0 < 89) {
-                gm var7 = (gm) null;
-                this.a(-112, 5, -61, true, (gm) null);
-            }
-            super.a(117, param1, param2, param3, param4);
+          if (param3) {
+            tk.a(param4.field_k + param1, param4.field_w + param2, param4.field_o, param4.field_p, false);
+          }
+          if (param0 < 89) {
+            gm var7 = (gm) null;
+            this.a(-112, 5, -61, true, (gm) null);
+          }
+          super.a(117, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "ig.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

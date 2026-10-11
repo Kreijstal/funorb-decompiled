@@ -20,8 +20,8 @@ final class nk {
         this.field_b = new int[this.field_a];
         this.field_e = new int[this.field_a];
         for (var2 = 0; var2 < this.field_a; var2++) {
-            this.field_b[var2] = param0.a((byte) 25);
-            this.field_e[var2] = param0.a((byte) 25);
+          this.field_b[var2] = param0.a((byte) 25);
+          this.field_e[var2] = param0.a((byte) 25);
         }
     }
 
@@ -53,16 +53,16 @@ final class nk {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_f >= this.field_h) {
-            fieldTemp$0 = this.field_g;
-            this.field_g = this.field_g + 1;
-            this.field_k = this.field_e[fieldTemp$0] << 15;
-            if (this.field_g >= this.field_a) {
-                this.field_g = this.field_a - 1;
-            }
-            this.field_h = (int)((double)this.field_b[this.field_g] / 65536.0 * (double)param0);
-            if (this.field_h > this.field_f) {
-                this.field_c = ((this.field_e[this.field_g] << 15) - this.field_k) / (this.field_h - this.field_f);
-            }
+          fieldTemp$0 = this.field_g;
+          this.field_g = this.field_g + 1;
+          this.field_k = this.field_e[fieldTemp$0] << 15;
+          if (this.field_g >= this.field_a) {
+            this.field_g = this.field_a - 1;
+          }
+          this.field_h = (int)((double)this.field_b[this.field_g] / 65536.0 * (double)param0);
+          if (this.field_h > this.field_f) {
+            this.field_c = ((this.field_e[this.field_g] << 15) - this.field_k) / (this.field_h - this.field_f);
+          }
         }
         this.field_k = this.field_k + this.field_c;
         this.field_f = this.field_f + 1;

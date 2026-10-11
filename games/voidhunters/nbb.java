@@ -10,45 +10,45 @@ final class nbb extends anb implements ntb, ofa, utb {
 
     private final void a(boolean param0, nbb param1) {
         try {
-            param1.field_o = this.field_o;
-            param1.field_p = this.field_p;
-            param1.field_t = this.field_t;
-            this.field_p = 0;
-            if (!param0) {
-                this.field_x = true;
-            }
-            this.field_o = 0;
-            this.field_t = 0;
+          param1.field_o = this.field_o;
+          param1.field_p = this.field_p;
+          param1.field_t = this.field_t;
+          this.field_p = 0;
+          if (!param0) {
+            this.field_x = true;
+          }
+          this.field_o = 0;
+          this.field_t = 0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final int d(int param0) {
         if (param0 < 42) {
-            return -85;
+          return -85;
         }
         return 2;
     }
 
     public final void a(faa param0, int param1) {
         try {
-            super.a(param0, param1);
-            this.field_v = kv.a(false, param0);
+          super.a(param0, param1);
+          this.field_v = kv.a(false, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public final void b(faa param0, int param1) {
         try {
-            super.b(param0, -110);
-            vq.a(param0, 118, this.field_v);
-            if (param1 > -109) {
-                this.d(-99);
-            }
+          super.b(param0, -110);
+          vq.a(param0, 118, this.field_v);
+          if (param1 > -109) {
+            this.d(-99);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -58,60 +58,35 @@ final class nbb extends anb implements ntb, ofa, utb {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              super.a(param0, -52);
-              var3 = (nbb) ((Object) param0);
-              var4 = 0;
-              if (var3.field_v == this.field_v) {
-                break L1;
-              } else {
-                System.out.println("boolean phantom has changed. before=" + var3.field_v + ", now=" + this.field_v);
-                var4 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              if (var4 == 0) {
-                break L2;
-              } else {
-                System.out.println("This instance of Debris has changed");
-                break L2;
-              }
-            }
-            if (param1 <= -19) {
-              break L0;
-            } else {
-              this.field_v = true;
-              return;
-            }
+          super.a(param0, -52);
+          var3 = (nbb) (param0);
+          var4 = 0;
+          if (var3.field_v != this.field_v) {
+            System.out.println("boolean phantom has changed. before=" + var3.field_v + ", now=" + this.field_v);
+            var4 = 1;
           }
+          if (var4 != 0) {
+            System.out.println("This instance of Debris has changed");
+          }
+          if (param1 <= -19) {
+            return;
+          }
+          this.field_v = true;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("nbb.F(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("nbb.F(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,55 +94,36 @@ final class nbb extends anb implements ntb, ofa, utb {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         this.field_w = 0;
         this.d((byte) -52);
         try {
-          L0: {
-            this.field_k = param0;
-            this.a(this.field_k.field_b, -56);
-            this.a(this.field_k.field_r, this.field_k.field_n, (byte) 31);
-            this.field_k.c(0, this.field_k.b(52), 56, this.field_k.c((byte) 100));
-            this.field_k.h((byte) 42);
-            this.field_k.a((byte) -125, (anb) (this));
-            this.e((byte) 119);
-            if (vc.field_p == 0) {
-              break L0;
-            } else {
-              if (!param1) {
-                this.field_k.d(false);
-                return;
-              } else {
-                break L0;
-              }
-            }
+          this.field_k = param0;
+          this.a(this.field_k.field_b, -56);
+          this.a(this.field_k.field_r, this.field_k.field_n, (byte) 31);
+          this.field_k.c(0, this.field_k.b(52), 56, this.field_k.c((byte) 100));
+          this.field_k.h((byte) 42);
+          this.field_k.a((byte) -125, (anb) (this));
+          this.e((byte) 119);
+          if (vc.field_p != 0 &&
+            !param1) {
+            this.field_k.d(false);
+            return;
           }
           this.field_u = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3);
-
-            stackIn_8_1 = new StringBuilder().append("nbb.<init>(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("nbb.<init>(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,18 +131,18 @@ final class nbb extends anb implements ntb, ofa, utb {
         int fieldTemp$0 = gha.field_o;
         gha.field_o = gha.field_o + 1;
         this.field_w = fieldTemp$0;
-        int var2 = 102 / ((param0 - -4) / 38);
+        int var2 = 102 / ((param0 + 4) / 38);
     }
 
     public final void a(faa param0, byte param1) {
         try {
-            super.a(param0, (byte) -103);
-            vq.a(param0, 95, this.field_v);
-            if (param1 >= -91) {
-                this.field_w = 55;
-            }
+          super.a(param0, (byte) -103);
+          vq.a(param0, 95, this.field_v);
+          if (param1 >= -91) {
+            this.field_w = 55;
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -196,96 +152,66 @@ final class nbb extends anb implements ntb, ofa, utb {
     }
 
     public final void b(byte param0, tv param1) {
-        nbb var3 = (nbb) ((Object) param1);
+        nbb var3 = (nbb) (param1);
         if (this.field_w == var3.field_w) {
-            return;
+          return;
         }
         try {
-            var3.field_w = this.field_w;
-            this.a(true, var3);
-            super.b((byte) 60, param1);
-            var3.field_v = this.field_v;
-            if (param0 < 54) {
-                tv var4 = (tv) null;
-                this.b((byte) -95, (tv) null);
-            }
+          var3.field_w = this.field_w;
+          this.a(true, var3);
+          super.b((byte) 60, param1);
+          var3.field_v = this.field_v;
+          if (param0 < 54) {
+            tv var4 = (tv) null;
+            this.b((byte) -95, (tv) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void a(faa param0, boolean param1) {
         try {
-            super.a(param0, false);
-            this.field_v = kv.a(param1, param0);
+          super.a(param0, false);
+          this.field_v = kv.a(param1, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nbb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nbb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void j(byte param0) {
         field_y = null;
         if (param0 >= -125) {
-            nbb.j((byte) 120);
+          nbb.j((byte) 120);
         }
     }
 
     public final boolean a(byte param0, tv param1) {
         nbb var3 = null;
         int var4 = 0;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          L0: {
-            L1: {
-              L2: {
-                var4 = 114 / ((param0 - 22) / 59);
-                var3 = (nbb) ((Object) param1);
-                if (super.a((byte) 93, param1)) {
-                  break L2;
-                } else {
-                  if (var3.field_v == this.field_v) {
-                    stackIn_5_0 = 0;
-                    break L1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              stackIn_5_0 = 1;
-              break L1;
-            }
-            break L0;
-          }
+          var4 = 114 / ((param0 - 22) / 59);
+          var3 = (nbb) (param1);
+          stackIn_5_0 = (super.a((byte) 93, param1)) || (var3.field_v != this.field_v);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3_ref);
-
-            stackIn_8_1 = new StringBuilder().append("nbb.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_8_0 = var3_ref;
+          stackIn_8_1 = new StringBuilder().append("nbb.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     static {

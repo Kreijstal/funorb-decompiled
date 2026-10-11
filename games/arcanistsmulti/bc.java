@@ -7,23 +7,20 @@ final class bc {
     static mo field_c;
 
     final static void a(int param0, int param1) {
-        ab var2;
-        var2 = he.field_e;
+        ab var2 = he.field_e;
         var2.b((byte) -106, param0);
         var2.f(1, (byte) -74);
-        if (param1 != -14431) {
-          field_c = (mo) null;
-          var2.f(1, (byte) -118);
-          return;
-        } else {
+        if (param1 == -14431) {
           var2.f(1, (byte) -118);
           return;
         }
+        field_c = (mo) null;
+        var2.f(1, (byte) -118);
     }
 
     public static void a(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -32,18 +29,18 @@ final class bc {
     final static void a(byte param0) {
         cd.d(param0 + 16777265);
         if (param0 != -50) {
-            String var2 = (String) null;
-            bc.a((String) null, true);
+          String var2 = (String) null;
+          bc.a((String) null, true);
         }
     }
 
     final static void a(String param0, boolean param1) {
         try {
-            if (!param1) {
-                bc.a(4, -83);
-            }
+          if (!param1) {
+            bc.a(4, -83);
+          }
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "bc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

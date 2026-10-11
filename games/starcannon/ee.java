@@ -8,7 +8,7 @@ final class ee {
     static String field_d;
 
     public static void a(byte param0) {
-        int var1 = 95 % ((param0 - -65) / 53);
+        int var1 = 95 % ((param0 + 65) / 53);
         field_c = null;
         field_d = null;
         field_a = null;
@@ -18,75 +18,49 @@ final class ee {
         int var4 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            L1: {
-              if (-11 < (rk.field_d ^ -1)) {
-                L2: {
-                  var3_int = 0;
-                  if (!v.field_b) {
-                    break L2;
-                  } else {
-                    v.field_b = false;
-                    var3_int = 1;
-                    break L2;
-                  }
-                }
-                ci.a(ec.b((byte) -128), nb.field_d, j.b(-127), var3_int != 0, param0 + -28066);
-                break L1;
-              } else {
-                if (m.a(param0 + -436)) {
-                  if (bl.field_a != 0) {
-                    oi.a(param1, (byte) 67);
-                    break L1;
-                  } else {
-                    ai.a(param2, false, (byte) 114);
-                    dd.a(param1, 0, 0, -23466);
-                    break L1;
-                  }
-                } else {
-                  ki.b();
-                  lh.a(240, (byte) -95, 320);
-                  dd.a(param1, 0, 0, param0 + -23786);
-                  break L1;
-                }
-              }
+          if (rk.field_d < 10) {
+            var3_int = 0;
+            if (v.field_b) {
+              v.field_b = false;
+              var3_int = 1;
             }
-            if (param0 == 320) {
-              break L0;
+            ci.a(ec.b((byte) -128), nb.field_d, j.b(-127), var3_int != 0, param0 - 28066);
+          } else {
+            if (m.a(param0 - 436)) {
+              if (bl.field_a != 0) {
+                oi.a(param1, (byte) 67);
+              } else {
+                ai.a(param2, false, (byte) 114);
+                dd.a(param1, 0, 0, -23466);
+              }
             } else {
-              ee.a((byte) 1);
-              return;
+              ki.b();
+              lh.a(240, (byte) -95, 320);
+              dd.a(param1, 0, 0, param0 - 23786);
             }
           }
+          if (param0 == 320) {
+            return;
+          }
+          ee.a((byte) 1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
-
-            stackIn_15_1 = new StringBuilder().append("ee.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("ee.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

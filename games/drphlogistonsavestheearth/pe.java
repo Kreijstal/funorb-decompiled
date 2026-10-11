@@ -16,30 +16,24 @@ abstract class pe {
 
     public static void b(int param0) {
         if (param0 != 0) {
-            pe.b(96);
-            field_i = null;
-            field_e = null;
-            return;
+          pe.b(96);
+          field_i = null;
+          field_e = null;
+          return;
         }
         field_i = null;
         field_e = null;
     }
 
     final static l a(int param0) {
-        L0: {
-          if (null == qc.field_b) {
-            qc.field_b = new l(u.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, u.field_d.field_x, -1, 2147483647, true);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (null == qc.field_b) {
+          qc.field_b = new l(u.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, u.field_d.field_x, -1, 2147483647, true);
         }
-        if (param0 != 2147483647) {
-          field_i = (String) null;
-          return qc.field_b;
-        } else {
+        if (param0 == 2147483647) {
           return qc.field_b;
         }
+        field_i = (String) null;
+        return qc.field_b;
     }
 
     abstract void a(int param0, int param1);
@@ -53,28 +47,29 @@ abstract class pe {
         int var8 = 0;
         int var9 = 0;
         int var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (param0 == null || param3 <= 0) {
-            return;
+        if (param0 == null ||
+          param3 <= 0) {
+          return;
         }
         if (param1 < 25) {
-            return;
+          return;
         }
         try {
-            var5_int = param0[0].field_z;
-            var6 = param0[2].field_z;
-            var7 = param0[1].field_z;
-            param0[0].d(param2, param4);
-            param0[2].d(param3 + (param2 - var6), param4);
-            wj.b(rb.field_e);
-            wj.d(var5_int + param2, param4, -var6 + param2 + param3, param4 - -param0[1].field_C);
-            var8 = var5_int + param2;
-            var9 = param2 + (param3 - var6);
-            for (param2 = var8; var9 > param2; param2 = param2 + var7) {
-                param0[1].d(param2, param4);
-            }
-            wj.a(rb.field_e);
+          var5_int = param0[0].field_z;
+          var6 = param0[2].field_z;
+          var7 = param0[1].field_z;
+          param0[0].d(param2, param4);
+          param0[2].d(param3 + (param2 - var6), param4);
+          wj.b(rb.field_e);
+          wj.d(var5_int + param2, param4, -var6 + param2 + param3, param4 + param0[1].field_C);
+          var8 = var5_int + param2;
+          var9 = param2 + (param3 - var6);
+          for (param2 = var8; var9 > param2; param2 = param2 + var7) {
+            param0[1].d(param2, param4);
+          }
+          wj.a(rb.field_e);
         } catch (RuntimeException runtimeException) {
-            throw ie.a((Throwable) ((Object) runtimeException), "pe.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.a((Throwable) ((Object) runtimeException), "pe.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

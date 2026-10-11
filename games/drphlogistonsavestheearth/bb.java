@@ -12,73 +12,36 @@ final class bb {
     static java.awt.Frame field_a;
 
     final boolean a(boolean param0) {
-        int stackIn_7_0 = 0;
-        if (!param0) {
-          if (this != uf.field_c) {
-            if (this != sg.field_d) {
-              if (this == ik.field_d) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        if (param0) {
           bb.a((byte) 20);
-          if (this != uf.field_c) {
-            if (this == sg.field_d) {
-              return true;
-            } else {
-              L0: {
-                if (this != ik.field_d) {
-                  stackIn_7_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (this == uf.field_c) {
             return true;
           }
+          if (this != sg.field_d) {
+            return this == ik.field_d ? true : false;
+          }
+          return true;
         }
+        if (this == uf.field_c) {
+          return true;
+        }
+        if (this == sg.field_d) {
+          return true;
+        }
+        if (this != ik.field_d) {
+          return false;
+        }
+        return true;
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         oh.field_a = true;
         ab.field_a = 15000L + la.a(false);
-        if (param0 != -103) {
-          L0: {
-            field_g = -116;
-            if (af.field_b != 11) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (af.field_b != 11) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -103) {
+          return af.field_b == 11 ? true : false;
         }
+        field_g = -116;
+        return af.field_b == 11 ? true : false;
     }
 
     public final String toString() {
@@ -87,7 +50,7 @@ final class bb {
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_f = null;
         field_b = null;

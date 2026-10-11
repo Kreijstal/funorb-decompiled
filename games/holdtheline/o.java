@@ -8,49 +8,43 @@ final class o {
     static String field_a;
 
     public static void b(byte param0) {
-        if (param0 != 39) {
-          field_a = (String) null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 39) {
           field_a = null;
           field_d = null;
           field_b = null;
           return;
         }
+        field_a = (String) null;
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static hj a(int param0, int param1) {
-        if (param0 != param1) {
-          if (param0 != 3) {
-            if (param0 >= 4) {
-              if (-9 >= (param0 ^ -1)) {
-                throw new RuntimeException();
-              } else {
-                return nj.field_c[param0 - 4].a(param1 + 8190);
-              }
-            } else {
-              throw new RuntimeException();
-            }
-          } else {
-            return sm.field_a.a(8192);
-          }
-        } else {
+        if (param0 == param1) {
           return ol.field_i.a(param1 + 8190);
         }
+        if (param0 == 3) {
+          return sm.field_a.a(8192);
+        }
+        if (param0 < 4) {
+          throw new RuntimeException();
+        }
+        if (param0 < 8) {
+          return nj.field_c[param0 - 4].a(param1 + 8190);
+        }
+        throw new RuntimeException();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        int var10 = 0;
+        int var12 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
-        int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -63,82 +57,43 @@ final class o {
         int var22 = 0;
         var22 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (0 <= param2) {
-                break L1;
-              } else {
-                param1 = param1 + param2;
-                param2 = 0;
-                break L1;
-              }
-            }
-            L2: {
-              if (param6 < 0) {
-                param4 = param4 + param6;
-                param6 = 0;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            L3: {
-              if (tc.field_c < param1 + param2) {
-                param1 = tc.field_c + -param2;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (param5 == -4441) {
-                break L4;
-              } else {
-                o.a((byte) -27);
-                break L4;
-              }
-            }
-            L5: {
-              if (param6 + param4 <= tc.field_j) {
-                break L5;
-              } else {
-                param4 = -param6 + tc.field_j;
-                break L5;
-              }
-            }
-            var7_int = param0 * param3 >> 1712370216;
-            var8 = param3 - var7_int;
-            var9 = param2 + param1;
-            var10 = param2;
-            L6: while (true) {
-              if (var9 <= var10) {
-                break L0;
-              } else {
-                var11 = param6 + var10 * tc.field_j;
-                var12 = param4;
-                L7: while (true) {
-                  if (0 >= var12) {
-                    var10++;
-                    continue L6;
-                  } else {
-                    var13 = tc.field_b[var11];
-                    var14 = var13 >> -302811504 & 255;
-                    var15 = 255 & var13 >> -1158230552;
-                    var16 = 255 & var13;
-                    var17 = var15 * 6 + 5 * var14 + 5 * var16;
-                    var18 = (var17 * var8 >> 109695180) + (var7_int * var14 >> 2015807656);
-                    var19 = (var7_int * var15 >> 61450760) + (var8 * var17 >> 1345674220);
-                    var20 = (var8 * var17 >> 1688780652) + (var16 * var7_int >> -1279341944);
-                    var21 = var19 << 1853515560 | var18 << 107424528 | var20;
-                    tc.field_b[var11] = var21;
-                    var11++;
-                    var12--;
-                    continue L7;
-                  }
-                }
-              }
+          if (0 > param2) {
+            param1 = param1 + param2;
+            param2 = 0;
+          }
+          if (param6 < 0) {
+            param4 = param4 + param6;
+            param6 = 0;
+          }
+          if (tc.field_c < param1 + param2) {
+            param1 = tc.field_c - param2;
+          }
+          if (param5 != -4441) {
+            o.a((byte) -27);
+          }
+          if (param6 + param4 > tc.field_j) {
+            param4 = -param6 + tc.field_j;
+          }
+          var7_int = param0 * param3 >> 8;
+          var8 = param3 - var7_int;
+          var9 = param2 + param1;
+          for (var10 = param2; var9 > var10; var10++) {
+            var11 = param6 + var10 * tc.field_j;
+            for (var12 = param4; 0 < var12; var12--) {
+              var13 = tc.field_b[var11];
+              var14 = var13 >> 16 & 255;
+              var15 = 255 & var13 >> 8;
+              var16 = 255 & var13;
+              var17 = var15 * 6 + 5 * var14 + 5 * var16;
+              var18 = (var17 * var8 >> 12) + (var7_int * var14 >> 8);
+              var19 = (var7_int * var15 >> 8) + (var8 * var17 >> 12);
+              var20 = (var8 * var17 >> 12) + (var16 * var7_int >> 8);
+              var21 = var19 << 8 | var18 << 16 | var20;
+              tc.field_b[var11] = var21;
+              var11++;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -147,7 +102,7 @@ final class o {
     }
 
     final static uh a(byte param0) {
-        int var1 = 48 / ((param0 - -52) / 57);
+        int var1 = 48 / ((param0 + 52) / 57);
         return ub.a(1, 111);
     }
 

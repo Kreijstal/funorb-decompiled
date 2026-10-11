@@ -13,7 +13,7 @@ final class bo {
         field_a = null;
         field_d = null;
         if (param0) {
-            bo.a(true);
+          bo.a(true);
         }
     }
 

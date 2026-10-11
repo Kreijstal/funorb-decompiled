@@ -10,36 +10,33 @@ final class td {
         field_c = null;
         field_b = null;
         if (param0 != 128) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0, int param1) {
-        if (!(null == bk.field_r)) {
-            bk.field_r.b(param1 ^ -129, param0);
+        if (null != bk.field_r) {
+          bk.field_r.b(param1 ^ -129, param0);
         }
         if (param1 != 128) {
-            td.a(112, 55);
-            return;
+          td.a(112, 55);
+          return;
         }
     }
 
     final synchronized static long b(int param0) {
-        long var1;
-        var1 = System.currentTimeMillis();
-        if (param0 == 128) {
-          if (cd.field_t > var1) {
-            al.field_e = al.field_e + (cd.field_t - var1);
-            cd.field_t = var1;
-            return var1 + al.field_e;
-          } else {
-            cd.field_t = var1;
-            return var1 + al.field_e;
-          }
-        } else {
+        long var1 = System.currentTimeMillis();
+        if (param0 != 128) {
           return 9L;
         }
+        if (cd.field_t <= var1) {
+          cd.field_t = var1;
+          return var1 + al.field_e;
+        }
+        al.field_e = al.field_e + (cd.field_t - var1);
+        cd.field_t = var1;
+        return var1 + al.field_e;
     }
 
     static {

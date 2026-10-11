@@ -9,28 +9,24 @@ final class er {
     static String field_a;
 
     final static int a(int param0, int param1, int param2) {
-        int var3;
-        var3 = param2 >> 342261439 & -1 + param1;
-        if (param0 != -1560508993) {
-          field_e = (String) null;
-          return var3 + ((param2 >>> -1560508993) + param2) % param1;
-        } else {
-          return var3 + ((param2 >>> -1560508993) + param2) % param1;
+        int var3 = param2 >> 31 & -1 + param1;
+        if (param0 == -1560508993) {
+          return var3 + ((param2 >>> 31) + param2) % param1;
         }
+        field_e = (String) null;
+        return var3 + ((param2 >>> 31) + param2) % param1;
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
         field_d = null;
-        if (param0 != -121) {
-          er.a(-124, 122, -66);
-          field_e = null;
-          return;
-        } else {
+        if (param0 == -121) {
           field_e = null;
           return;
         }
+        er.a(-124, 122, -66);
+        field_e = null;
     }
 
     static {

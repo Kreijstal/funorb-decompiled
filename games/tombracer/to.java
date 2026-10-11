@@ -12,18 +12,18 @@ final class to extends za {
 
     final void b(byte param0) {
         if (param0 != 30) {
-            to.c(53);
+          to.c(53);
         }
         this.field_h.a();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         rua.field_gb.a(param0, param5, param3 ^ -23751, param6, param1);
-        if (!(kga.field_n == null)) {
-            kga.field_n.a(param4, -wv.field_j + param2, -3269, param5, param5, param2);
+        if (kga.field_n != null) {
+          kga.field_n.a(param4, -wv.field_j + param2, -3269, param5, param5, param2);
         }
         if (param3 != 25) {
-            to.a(-20, 16, -95, -68, -87, 79, 16);
+          to.a(-20, 16, -95, -68, -87, 79, 16);
         }
     }
 
@@ -39,7 +39,7 @@ final class to extends za {
 
     final static void b(int param0) {
         if (param0 != 11) {
-            return;
+          return;
         }
         qga.c(param0 ^ -10787);
     }
@@ -56,12 +56,12 @@ final class to extends za {
         field_j = new int[98];
         field_i = new int[98];
         field_m = new boolean[98];
-        for (var0 = 0; (var0 ^ -1) > -99; var0++) {
-            field_k[var0] = false;
-            field_n[var0] = 96;
-            field_m[var0] = false;
-            field_i[var0] = 0;
-            field_j[var0] = -1;
+        for (var0 = 0; var0 < 98; var0++) {
+          field_k[var0] = false;
+          field_n[var0] = 96;
+          field_m[var0] = false;
+          field_i[var0] = 0;
+          field_j[var0] = -1;
         }
         field_k[94] = true;
         field_m[1] = true;

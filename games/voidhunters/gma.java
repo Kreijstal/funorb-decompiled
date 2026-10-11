@@ -12,50 +12,31 @@ final class gma {
     }
 
     final void a(int param0) {
-        L0: {
-          if (this.field_c != null) {
-            this.field_c.a(false);
-            this.field_c = null;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_c != null) {
+          this.field_c.a(false);
+          this.field_c = null;
         }
-        L1: {
-          if (null != this.field_b) {
-            this.field_b.a(false);
-            this.field_b = null;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (null != this.field_b) {
+          this.field_b.a(false);
+          this.field_b = null;
         }
-        L2: {
-          if (this.field_a != null) {
-            this.field_a.a(false);
-            this.field_a = null;
-            break L2;
-          } else {
-            break L2;
-          }
+        if (this.field_a != null) {
+          this.field_a.a(false);
+          this.field_a = null;
         }
-        if (param0 > -36) {
-          this.field_b = (jagdx.IDirect3DSurface) null;
-          return;
-        } else {
+        if (param0 <= -36) {
           return;
         }
+        this.field_b = (jagdx.IDirect3DSurface) null;
     }
 
     final int a(boolean param0, int param1) {
-        jagdx.IDirect3DSurface var4;
-        if (param0) {
-          var4 = (jagdx.IDirect3DSurface) null;
-          this.a(-87, (jagdx.IDirect3DSwapChain) null, (jagdx.IDirect3DSurface) null);
-          return this.field_a.Present(param1);
-        } else {
+        if (!param0) {
           return this.field_a.Present(param1);
         }
+        jagdx.IDirect3DSurface var4 = (jagdx.IDirect3DSurface) null;
+        this.a(-87, (jagdx.IDirect3DSwapChain) null, (jagdx.IDirect3DSurface) null);
+        return this.field_a.Present(param1);
     }
 
     final void a(int param0, jagdx.IDirect3DSwapChain param1, jagdx.IDirect3DSurface param2) {

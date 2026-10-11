@@ -14,46 +14,26 @@ final class qc extends aa {
         kl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -112) {
-                break L1;
-              } else {
-                qc.n(52);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new kl(param2, pi.field_c * param0 / 1000);
-            break L0;
+          if (param1 != -112) {
+            qc.n(52);
           }
+          stackIn_3_0 = new kl(param2, pi.field_c * param0 / 1000);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("qc.OA(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("qc.OA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     qc(ln param0, gm param1) {
@@ -62,12 +42,12 @@ final class qc extends aa {
 
     final void c(gm param0, int param1) {
         try {
-            if (param1 != 33) {
-                field_db = (t) null;
-            }
-            super.c(param0, param1 + 0);
+          if (param1 != 33) {
+            field_db = (t) null;
+          }
+          super.c(param0, param1 + 0);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "qc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "qc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -77,7 +57,7 @@ final class qc extends aa {
         field_db = null;
         field_Y = null;
         if (param0 != 1269) {
-            field_bb = -19;
+          field_bb = -19;
         }
     }
 

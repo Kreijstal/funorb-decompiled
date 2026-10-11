@@ -42,7 +42,7 @@ final class bd {
         field_I = null;
         field_C = null;
         if (param0 != 16) {
-            field_I = (String) null;
+          field_I = (String) null;
         }
     }
 

@@ -20,18 +20,16 @@ final class ae extends RuntimeException {
         field_c = null;
         field_j = null;
         field_i = null;
-        if (param0 < 108) {
-          ae.a(83);
-          field_b = (km[][]) null;
-          field_d = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 >= 108) {
           field_b = (km[][]) null;
           field_d = null;
           field_f = null;
           return;
         }
+        ae.a(83);
+        field_b = (km[][]) null;
+        field_d = null;
+        field_f = null;
     }
 
     ae(Throwable param0, String param1) {

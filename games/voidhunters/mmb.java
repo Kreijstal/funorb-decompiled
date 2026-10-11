@@ -14,18 +14,16 @@ final class mmb {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 2) {
-          mmb.a(-124);
-          field_e = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 2) {
           field_e = null;
           field_b = null;
           field_d = null;
           return;
         }
+        mmb.a(-124);
+        field_e = null;
+        field_b = null;
+        field_d = null;
     }
 
     static {

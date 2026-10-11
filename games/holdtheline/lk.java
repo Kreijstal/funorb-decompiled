@@ -15,22 +15,19 @@ final class lk implements Iterable {
     static uf field_a;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new vl((lk) (this)));
+        return (Iterator) ((Object) new vl(this));
     }
 
     final ln b(byte param0) {
-        ln var2;
-        if (param0 == 121) {
-          var2 = this.field_i.field_n;
-          if (this.field_i == var2) {
-            return null;
-          } else {
-            var2.a((byte) -42);
-            return var2;
-          }
-        } else {
+        if (param0 != 121) {
           return (ln) null;
         }
+        ln var2 = this.field_i.field_n;
+        if (this.field_i != var2) {
+          var2.a((byte) -42);
+          return var2;
+        }
+        return null;
     }
 
     public static void a(byte param0) {
@@ -41,53 +38,53 @@ final class lk implements Iterable {
         field_h = null;
         field_d = null;
         if (param0 <= 75) {
-            field_f = 94;
+          field_f = 94;
         }
     }
 
     final void a(ln param0, int param1) {
-        if (!(param0.field_l == null)) {
-            param0.a((byte) -42);
+        if (param0.field_l != null) {
+          param0.a((byte) -42);
         }
         param0.field_n = this.field_i;
         param0.field_l = this.field_i.field_l;
         param0.field_l.field_n = param0;
         if (param1 != -29460) {
-            return;
+          return;
         }
         try {
-            param0.field_n.field_l = param0;
+          param0.field_n.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "lk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "lk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static int a(float param0, int param1, int param2) {
-        int var3 = param2 >> 1054317104 & 255;
-        int var4 = (param2 & 65280) >> 1259048072;
+        int var3 = param2 >> 16 & 255;
+        int var4 = (param2 & 65280) >> 8;
         var3 = (int)((float)var3 * param0);
         int var5 = param2 & 255;
         var4 = (int)((float)var4 * param0);
-        if (!(-1 >= (var3 ^ -1))) {
-            var3 = 0;
+        if (var3 < 0) {
+          var3 = 0;
         }
         var5 = (int)((float)var5 * param0);
-        if (!(0 <= var4)) {
-            var4 = 0;
+        if (0 > var4) {
+          var4 = 0;
         }
-        if (!(var3 <= 255)) {
-            var3 = 255;
+        if (var3 > 255) {
+          var3 = 255;
         }
         if (255 < var4) {
-            var4 = 255;
+          var4 = 255;
         }
-        if (!((var5 ^ -1) <= param1)) {
-            var5 = 0;
+        if (~var5 > param1) {
+          var5 = 0;
         }
         if (var5 > 255) {
-            var5 = 255;
+          var5 = 255;
         }
-        return var5 | (var4 << -6811640 | var3 << -1935224816);
+        return var5 | (var4 << 8 | var3 << 16);
     }
 
     private lk() throws Throwable {
@@ -100,57 +97,29 @@ final class lk implements Iterable {
         float stackIn_6_0 = 0.0f;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param3 == -1) {
-                break L1;
-              } else {
-                field_d = (qb) null;
-                break L1;
-              }
-            }
-            if (param2 != 0) {
-              stackIn_6_0 = (1.0f - param4) * lk.a(param0, param1, -1 + param2, -1, param4) + param4 * lk.a(param0, 1 + param1, param2 + -1, -1, param4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = param0[param1];
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param3 != -1) {
+            field_d = (qb) null;
           }
+          if (param2 != 0) {
+            stackIn_6_0 = (1.0f - param4) * lk.a(param0, param1, -1 + param2, -1, param4) + param4 * lk.a(param0, 1 + param1, param2 - 1, -1, param4);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = param0[param1];
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("lk.B(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("lk.B(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          return stackIn_6_0;
+          throw kk.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -10,9 +10,9 @@ final class r {
     public static void a(int param0) {
         field_b = null;
         if (param0 > -43) {
-            field_d = -40;
-            field_c = null;
-            return;
+          field_d = -40;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -23,18 +23,18 @@ final class r {
 
     final static void a(int param0, long param1) {
         try {
-            try {
-                Thread.sleep(param1);
-            } catch (InterruptedException interruptedException) {
-            }
-            if (param0 != 18780) {
-                r.a(82);
-                return;
-            }
+          try {
+            Thread.sleep(param1);
+          } catch (InterruptedException interruptedException) {
+          }
+          if (param0 != 18780) {
+            r.a(82);
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

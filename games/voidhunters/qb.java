@@ -6,20 +6,20 @@ final class qb implements dja {
 
     public static void a(int param0) {
         if (param0 <= 109) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     public final tv a(byte param0) {
-        int var2 = 50 / ((param0 - -64) / 50);
+        int var2 = 50 / ((param0 + 64) / 50);
         return (tv) ((Object) new mib());
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            qb.a(-6);
-            return (tv[]) ((Object) new mib[param1]);
+          qb.a(-6);
+          return (tv[]) ((Object) new mib[param1]);
         }
         return (tv[]) ((Object) new mib[param1]);
     }

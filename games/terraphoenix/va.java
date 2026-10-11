@@ -25,42 +25,41 @@ final class va {
         field_j = null;
         field_a = null;
         if (param0 >= -33) {
-            va.a(-7);
+          va.a(-7);
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != 41108) {
-            field_g = (String) null;
-            return ql.a(dg.a(false), -15);
+          field_g = (String) null;
+          return ql.a(dg.a(false), -15);
         }
         return ql.a(dg.a(false), -15);
     }
 
     final static fa a(int param0, int param1) {
-        if (param1 >= -114) {
-          va.a(32, 78);
-          return jg.a(30, 1, false, false, param0, true);
-        } else {
+        if (param1 < -114) {
           return jg.a(30, 1, false, false, param0, true);
         }
+        va.a(32, 78);
+        return jg.a(30, 1, false, false, param0, true);
     }
 
     final static void a(int param0, int param1, int param2, ci param3, pk param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
         nl.field_a = param9;
         lm.field_b = param7;
         if (param8) {
-            return;
+          return;
         }
         try {
-            ha.field_p = param10;
-            fi.field_q = param0;
-            ee.field_h = param1;
-            fg.field_a = param5;
-            ad.field_h = param6;
-            p.field_e = param3;
+          ha.field_p = param10;
+          fi.field_q = param0;
+          ee.field_h = param1;
+          fg.field_a = param5;
+          ad.field_h = param6;
+          p.field_e = param3;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "va.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "va.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ')');
         }
     }
 

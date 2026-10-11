@@ -16,52 +16,41 @@ final class re extends ae {
     re(String param0, dn param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_N = param2 ? true : false;
+          this.field_N = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void d(boolean param0) {
         qa.b((byte) 53);
-        if (!(uh.field_b == null)) {
-            oa.a((byte) -128, uh.field_b);
+        if (uh.field_b != null) {
+          oa.a((byte) -128, uh.field_b);
         }
         rl.b(-9648);
         jl.a(109);
         bm.a(-25676);
         if (!param0) {
-            re.e((byte) -39);
-            if (!(!wm.c(-14688))) {
-                nd.field_Lb.f(1, (byte) -92);
-                ak.a((byte) -86, 0);
-            }
-            mk.a(false);
-            return;
-        }
-        if (!(!wm.c(-14688))) {
+          re.e((byte) -39);
+          if (wm.c(-14688)) {
             nd.field_Lb.f(1, (byte) -92);
             ak.a((byte) -86, 0);
+          }
+          mk.a(false);
+          return;
+        }
+        if (wm.c(-14688)) {
+          nd.field_Lb.f(1, (byte) -92);
+          ak.a((byte) -86, 0);
         }
         mk.a(false);
     }
 
     final static boolean a(byte param0, int param1) {
-        int stackIn_4_0 = 0;
-        if (param0 >= -84) {
-          return true;
-        } else {
-          L0: {
-            if ((-param1 & param1) != param1) {
-              stackIn_4_0 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 < -84) {
+          return (-param1 & param1) == param1 ? true : false;
         }
+        return true;
     }
 
     public static void a(int param0) {
@@ -70,7 +59,7 @@ final class re extends ae {
         field_Q = null;
         field_T = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_P = null;
     }
@@ -78,9 +67,9 @@ final class re extends ae {
     private re(String param0, dn param1) {
         this(param0, dh.field_q.field_n, param1);
         try {
-            this.field_H = dh.field_q.field_x;
+          this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,44 +77,44 @@ final class re extends ae {
         gd var2 = null;
         int var3 = TetraLink.field_J;
         try {
-            kl.field_a = false;
-            qe.field_a = null;
-            qb.field_N = null;
-            if (!(gl.field_p == null)) {
-                gl.field_p.b(1);
-                gl.field_p = null;
+          kl.field_a = false;
+          qe.field_a = null;
+          qb.field_N = null;
+          if (gl.field_p != null) {
+            gl.field_p.b(1);
+            gl.field_p = null;
+          }
+          db.field_a = null;
+          if (null != jl.field_a) {
+            jl.field_a.b(1);
+            jl.field_a = null;
+          }
+          db.field_e = null;
+          int var1_int = 39 / ((param0 - 14) / 42);
+          if (ui.field_d != null) {
+            ui.field_d.b(1);
+            ui.field_d = null;
+          }
+          dg.field_g = null;
+          if (null != db.field_a) {
+            var2 = (gd) (db.field_a.b(-104));
+            while (var2 != null) {
+              var2.e(0);
+              var2 = (gd) (db.field_a.d(-1));
             }
             db.field_a = null;
-            if (null != jl.field_a) {
-                jl.field_a.b(1);
-                jl.field_a = null;
-            }
-            db.field_e = null;
-            int var1_int = 39 / ((param0 - 14) / 42);
-            if (!(ui.field_d == null)) {
-                ui.field_d.b(1);
-                ui.field_d = null;
-            }
-            dg.field_g = null;
-            if (null != db.field_a) {
-                var2 = (gd) ((Object) db.field_a.b(-104));
-                while (var2 != null) {
-                    var2.e(0);
-                    var2 = (gd) ((Object) db.field_a.d(-1));
-                }
-                db.field_a = null;
-            }
+          }
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ')');
         }
     }
 
     private re(String param0, kg param1, dn param2) {
         super(param0, param1, param2);
         try {
-            this.field_H = dh.field_q.field_x;
+          this.field_H = dh.field_q.field_x;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

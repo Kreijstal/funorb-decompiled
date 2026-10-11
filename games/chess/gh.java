@@ -15,28 +15,28 @@ final class gh {
         field_e = null;
         field_a = null;
         if (param0 != -1) {
-            byte[] var2 = (byte[]) null;
-            gh.a((byte[]) null, 100, 123, -101);
+          byte[] var2 = (byte[]) null;
+          gh.a((byte[]) null, 100, 123, -101);
         }
     }
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            qa.a((byte) 122, "", param0);
-            jd.a((byte) -117, param0);
-            if (param1 != -161) {
-                field_a = (int[]) null;
-            }
+          qa.a((byte) 122, "", param0);
+          jd.a((byte) -117, param0);
+          if (param1 != -161) {
+            field_a = (int[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw fk.a((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw fk.a((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static String a(byte[] param0, int param1, int param2, int param3) {
+        int var6 = 0;
         int incrementValue$1 = 0;
         char[] var4 = null;
         int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -47,96 +47,49 @@ final class gh {
         String stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         var9 = Chess.field_G;
         try {
-          L0: {
-            if (param2 == -161) {
-              var12 = new char[param3];
-              var11 = var12;
-              var10 = var11;
-              var4 = var10;
-              var5 = 0;
-              var6 = 0;
-              L1: while (true) {
-                if (param3 <= var6) {
-                  stackIn_17_0 = new String(var12, 0, var5);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L2: {
-                    var7 = param0[param1 + var6] & 255;
-                    if (-1 == (var7 ^ -1)) {
-                      break L2;
-                    } else {
-                      L3: {
-                        if (-129 < (var7 ^ -1)) {
-                          break L3;
-                        } else {
-                          if (-161 < (var7 ^ -1)) {
-                            L4: {
-                              var8 = jn.field_M[var7 + -128];
-                              if (var8 != 0) {
-                                break L4;
-                              } else {
-                                var8 = 63;
-                                break L4;
-                              }
-                            }
-                            var7 = var8;
-                            break L3;
-                          } else {
-                            break L3;
-                          }
-                        }
-                      }
-                      incrementValue$1 = var5;
-                      var5++;
-                      var10[incrementValue$1] = (char)var7;
-                      break L2;
-                    }
-                  }
-                  var6++;
-                  continue L1;
+          if (param2 != -161) {
+            stackIn_3_0 = (String) null;
+            return stackIn_3_0;
+          }
+          var12 = new char[param3];
+          var11 = var12;
+          var10 = var11;
+          var4 = var10;
+          var5 = 0;
+          for (var6 = 0; param3 > var6; var6++) {
+            var7 = param0[param1 + var6] & 255;
+            if (var7 != 0) {
+              if (var7 >= 128 &&
+                var7 < 160) {
+                var8 = jn.field_M[var7 - 128];
+                if (var8 == 0) {
+                  var8 = 63;
                 }
+                var7 = var8;
               }
-            } else {
-              stackIn_3_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
+              incrementValue$1 = var5;
+              var5++;
+              var10[incrementValue$1] = (char)var7;
             }
           }
+          stackIn_17_0 = new String(var12, 0, var5);
+          return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var4_ref);
-
-            stackIn_20_1 = new StringBuilder().append("gh.C(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L5;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_20_0 = var4_ref;
+          stackIn_20_1 = new StringBuilder().append("gh.C(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_17_0;
+          throw fk.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

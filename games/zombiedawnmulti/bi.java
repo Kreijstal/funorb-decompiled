@@ -13,16 +13,14 @@ final class bi {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
-        if (param0 != 4302) {
-          bi.a(-50);
-          field_d = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == 4302) {
           field_d = null;
           field_f = null;
           return;
         }
+        bi.a(-50);
+        field_d = null;
+        field_f = null;
     }
 
     static {

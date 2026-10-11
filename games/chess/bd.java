@@ -14,9 +14,9 @@ final class bd {
         field_e = null;
         field_c = null;
         if (param0 >= -2) {
-            field_b = (dd) null;
-            field_b = null;
-            return;
+          field_b = (dd) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

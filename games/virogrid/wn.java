@@ -31,20 +31,18 @@ final class wn extends l {
     static int[] field_j;
 
     final void c(int param0) {
-        if (param0 != -11382) {
-          field_n = (String) null;
-          this.field_E = null;
-          this.field_p = null;
-          this.field_q = null;
-          this.field_t = null;
-          return;
-        } else {
+        if (param0 == -11382) {
           this.field_E = null;
           this.field_p = null;
           this.field_q = null;
           this.field_t = null;
           return;
         }
+        field_n = (String) null;
+        this.field_E = null;
+        this.field_p = null;
+        this.field_q = null;
+        this.field_t = null;
     }
 
     final static void c(boolean param0) {
@@ -52,12 +50,11 @@ final class wn extends l {
     }
 
     final static co[] a(int param0) {
-        if (param0 != 5) {
-          wn.a(56);
-          return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};
-        } else {
+        if (param0 == 5) {
           return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};
         }
+        wn.a(56);
+        return new co[]{aa.field_b, Virogrid.field_O, nd.field_j};
     }
 
     public static void d(int param0) {
@@ -65,19 +62,18 @@ final class wn extends l {
         field_n = null;
         field_i = null;
         field_z = null;
-        if (param0 < 71) {
-          field_z = (String) null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 >= 71) {
           field_m = null;
           return;
         }
+        field_z = (String) null;
+        field_m = null;
     }
 
     final static void a(byte param0) {
         ji.a((byte) -51, af.field_a, 6);
-        if (param0 > 95) {
+        if (param0 <= 95) {
+          field_n = (String) null;
           ji.a((byte) -82, el.field_h, 8);
           if (!pg.a((byte) -126)) {
             ji.a((byte) -87, kb.field_d, 2);
@@ -86,25 +82,20 @@ final class wn extends l {
             ji.a((byte) -124, ak.field_f, 5);
             ag.field_f[8] = ag.field_f[8] + 32;
             return;
-          } else {
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
           }
-        } else {
-          field_n = (String) null;
-          ji.a((byte) -82, el.field_h, 8);
-          if (pg.a((byte) -126)) {
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          } else {
-            ji.a((byte) -87, kb.field_d, 2);
-            ji.a((byte) -74, sb.field_c, 3);
-            ji.a((byte) -53, nb.field_u, 4);
-            ji.a((byte) -124, ak.field_f, 5);
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          }
+          ag.field_f[8] = ag.field_f[8] + 32;
+          return;
         }
+        ji.a((byte) -82, el.field_h, 8);
+        if (pg.a((byte) -126)) {
+          ag.field_f[8] = ag.field_f[8] + 32;
+          return;
+        }
+        ji.a((byte) -87, kb.field_d, 2);
+        ji.a((byte) -74, sb.field_c, 3);
+        ji.a((byte) -53, nb.field_u, 4);
+        ji.a((byte) -124, ak.field_f, 5);
+        ag.field_f[8] = ag.field_f[8] + 32;
     }
 
     wn() {

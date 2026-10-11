@@ -14,24 +14,24 @@ final class nga implements Iterable {
     ksa[] field_h;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new pnb((nga) (this)));
+        return (Iterator) ((Object) new pnb(this));
     }
 
     final ksa a(byte param0, long param1) {
         ksa var5 = null;
         int var6 = VoidHunters.field_G;
-        ksa var4 = this.field_h[(int)(param1 & (long)(this.field_f + -1))];
+        ksa var4 = this.field_h[(int)(param1 & (long)(this.field_f - 1))];
         this.field_b = var4.field_c;
         if (param0 > -103) {
-            return (ksa) null;
+          return (ksa) null;
         }
         while (var4 != this.field_b) {
-            if (!((param1 ^ -1L) != (this.field_b.field_b ^ -1L))) {
-                var5 = this.field_b;
-                this.field_b = this.field_b.field_c;
-                return var5;
-            }
+          if (~param1 == ~this.field_b.field_b) {
+            var5 = this.field_b;
             this.field_b = this.field_b.field_c;
+            return var5;
+          }
+          this.field_b = this.field_b.field_c;
         }
         this.field_b = null;
         return null;
@@ -40,64 +40,50 @@ final class nga implements Iterable {
     final void a(ksa param0, int param1, long param2) {
         ksa var5 = null;
         try {
-            if (!(null == param0.field_a)) {
-                param0.b(-3846);
-            }
-            var5 = this.field_h[(int)(param2 & (long)(this.field_f + -1))];
-            if (param1 != 0) {
-                field_a = (String) null;
-            }
-            param0.field_c = var5;
-            param0.field_a = var5.field_a;
-            param0.field_a.field_c = param0;
-            param0.field_b = param2;
-            param0.field_c.field_a = param0;
+          if (null != param0.field_a) {
+            param0.b(-3846);
+          }
+          var5 = this.field_h[(int)(param2 & (long)(this.field_f - 1))];
+          if (param1 != 0) {
+            field_a = (String) null;
+          }
+          param0.field_c = var5;
+          param0.field_a = var5.field_a;
+          param0.field_a.field_c = param0;
+          param0.field_b = param2;
+          param0.field_c.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nga.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final ksa a(byte param0) {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         ksa var2;
         int var3;
-        Object var4;
-        ksa var4_ref;
-        L0: {
-          var3 = VoidHunters.field_G;
-          if (0 >= this.field_d) {
-            break L0;
-          } else {
-            if (this.field_h[-1 + this.field_d] == this.field_g) {
-              break L0;
-            } else {
-              var2 = this.field_g;
-              this.field_g = var2.field_c;
-              return var2;
-            }
-          }
+        ksa var4;
+        var3 = VoidHunters.field_G;
+        if (0 < this.field_d &&
+          this.field_h[-1 + this.field_d] != this.field_g) {
+          var2 = this.field_g;
+          this.field_g = var2.field_c;
+          return var2;
         }
-        L1: while (true) {
+        do {
           if (this.field_f <= this.field_d) {
-            if (param0 != 44) {
-              this.a((ksa) null, 116, -5L);
-              return null;
-            } else {
+            if (param0 == 44) {
               return null;
             }
-          } else {
-            fieldTemp$1 = this.field_d;
-            this.field_d = this.field_d + 1;
-            var4_ref = this.field_h[fieldTemp$1].field_c;
-            var2 = var4_ref;
-            if (var4_ref == this.field_h[this.field_d - 1]) {
-              continue L1;
-            } else {
-              this.field_g = var2.field_c;
-              return var2;
-            }
+            this.a((ksa) null, 116, -5L);
+            return null;
           }
-        }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          var4 = this.field_h[fieldTemp$0].field_c;
+          var2 = var4;
+        } while (var4 == this.field_h[this.field_d - 1]);
+        this.field_g = var2.field_c;
+        return var2;
     }
 
     final ksa a(int param0) {
@@ -112,14 +98,14 @@ final class nga implements Iterable {
         ksa var4 = null;
         int var5 = VoidHunters.field_G;
         for (var2 = param0; var2 < this.field_f; var2++) {
-            var3 = this.field_h[var2];
-            while (true) {
-                var4 = var3.field_c;
-                if (var3 == var4) {
-                    break;
-                }
-                var4.b(-3846);
+          var3 = this.field_h[var2];
+          while (true) {
+            var4 = var3.field_c;
+            if (var3 == var4) {
+              break;
             }
+            var4.b(-3846);
+          }
         }
         this.field_b = null;
         this.field_g = null;
@@ -129,7 +115,7 @@ final class nga implements Iterable {
         field_e = null;
         field_c = null;
         if (param0 != -126) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -142,11 +128,11 @@ final class nga implements Iterable {
         this.field_f = param0;
         this.field_h = new ksa[param0];
         for (var2 = 0; var2 < param0; var2++) {
-            dupTemp$0 = new ksa();
-            var3 = dupTemp$0;
-            this.field_h[var2] = dupTemp$0;
-            var3.field_a = var3;
-            var3.field_c = var3;
+          dupTemp$0 = new ksa();
+          var3 = dupTemp$0;
+          this.field_h[var2] = dupTemp$0;
+          var3.field_a = var3;
+          var3.field_c = var3;
         }
     }
 

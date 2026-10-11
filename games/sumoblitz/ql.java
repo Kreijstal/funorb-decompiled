@@ -11,38 +11,35 @@ final class ql extends rw {
     static int field_v;
 
     final byte[] d(boolean param0) {
-        if (!param0) {
-          if (this.field_u) {
-            throw new RuntimeException();
-          } else {
-            return this.field_x;
-          }
-        } else {
+        if (param0) {
           this.d(false);
-          if (this.field_u) {
-            throw new RuntimeException();
-          } else {
+          if (!this.field_u) {
             return this.field_x;
           }
+          throw new RuntimeException();
         }
+        if (!this.field_u) {
+          return this.field_x;
+        }
+        throw new RuntimeException();
     }
 
     final int a(int param0) {
         if (param0 != -1) {
-            return -28;
+          return -28;
         }
         if (this.field_u) {
-            return 0;
+          return 0;
         }
         return 100;
     }
 
     public static void d(byte param0) {
         if (param0 < 32) {
-            field_B = 49;
-            field_z = null;
-            field_A = null;
-            return;
+          field_B = 49;
+          field_z = null;
+          field_A = null;
+          return;
         }
         field_z = null;
         field_A = null;

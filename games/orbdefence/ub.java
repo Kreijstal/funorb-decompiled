@@ -9,7 +9,8 @@ final class ub {
     }
 
     final static void a(int param0, int param1, int[] param2) {
-        int incrementValue$6 = 0;
+        int var13 = 0;
+        int var14 = 0;
         int var3;
         int[] var4;
         int var5;
@@ -20,56 +21,35 @@ final class ub {
         int var10;
         int var11;
         int var12;
-        int var13;
-        int var14;
         int var15;
-        if (param0 < param2.length) {
-          var3 = param2[param0];
-          if (var3 != 0) {
-            var4 = ul.field_b;
-            var5 = ul.field_i;
-            var6 = ul.field_d;
-            var7 = ul.field_e - var5;
-            var8 = ul.field_a - var6;
-            var9 = ul.field_f - var7;
-            var10 = var5 + var6 * ul.field_f;
-            var11 = var6 - 1 << 2;
-            var12 = ul.field_e;
-            var13 = -var8;
-            L0: while (true) {
-              if (var13 >= 0) {
-                return;
-              } else {
-                var11 = var11 + 4 & 12;
-                var14 = -var7;
-                L1: while (true) {
-                  if (var14 >= 0) {
-                    var10 = var10 + var9;
-                    var13++;
-                    continue L0;
-                  } else {
-                    var15 = 1 << var11 + (var12 + var14 & 3);
-                    if ((var3 & var15) == 0) {
-                      var10++;
-                      var14++;
-                      continue L1;
-                    } else {
-                      incrementValue$6 = var10;
-                      var10++;
-                      var4[incrementValue$6] = param1;
-                      var14++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (param0 >= param2.length) {
           ul.h(0, 0, ul.field_f, ul.field_l, param1);
           return;
+        }
+        var3 = param2[param0];
+        if (var3 == 0) {
+          return;
+        }
+        var4 = ul.field_b;
+        var5 = ul.field_i;
+        var6 = ul.field_d;
+        var7 = ul.field_e - var5;
+        var8 = ul.field_a - var6;
+        var9 = ul.field_f - var7;
+        var10 = var5 + var6 * ul.field_f;
+        var11 = var6 - 1 << 2;
+        var12 = ul.field_e;
+        for (var13 = -var8; var13 < 0; var13++) {
+          var11 = var11 + 4 & 12;
+          for (var14 = -var7; var14 < 0; var14++) {
+            var15 = 1 << var11 + (var12 + var14 & 3);
+            if ((var3 & var15) == 0) {
+              var10++;
+            } else {
+              var4[var10++] = param1;
+            }
+          }
+          var10 = var10 + var9;
         }
     }
 

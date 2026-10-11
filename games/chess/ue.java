@@ -13,65 +13,46 @@ final class ue {
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = qn.field_U;
-            var3.f(param0, -94);
-            var3.c(param1.field_l, (byte) -88);
-            var3.b(param1.field_n, 109);
-            if (param2 >= 9) {
-              break L0;
-            } else {
-              field_e = -102;
-              return;
-            }
+          var3 = qn.field_U;
+          var3.f(param0, -94);
+          var3.c(param1.field_l, (byte) -88);
+          var3.b(param1.field_n, 109);
+          if (param2 >= 9) {
+            return;
           }
+          field_e = -102;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (var3_ref);
-
-            stackIn_5_1 = new StringBuilder().append("ue.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L1;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_5_0 = var3_ref;
+          stackIn_5_1 = new StringBuilder().append("ue.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
           }
-          throw fk.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ',' + param2 + ')');
+          throw fk.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final static void a(long param0, int param1, int param2) {
-        nk var4;
-        int var5;
-        var4 = qn.field_U;
+        nk var4 = qn.field_U;
         var4.f(param2, -75);
         var4.field_l = var4.field_l + 1;
-        var5 = var4.field_l;
+        int var5 = var4.field_l;
         var4.c(6, (byte) 92);
-        if (param1 != 16581) {
-          field_c = true;
-          var4.a(-99, param0);
-          var4.a(var4.field_l - var5, -1);
-          return;
-        } else {
+        if (param1 == 16581) {
           var4.a(-99, param0);
           var4.a(var4.field_l - var5, -1);
           return;
         }
+        field_c = true;
+        var4.a(-99, param0);
+        var4.a(var4.field_l - var5, -1);
     }
 
     public static void a(int param0) {
@@ -79,7 +60,7 @@ final class ue {
         field_a = null;
         field_d = null;
         if (param0 != 6) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

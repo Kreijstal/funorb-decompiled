@@ -13,19 +13,19 @@ final class oo {
         field_a = null;
         field_c = null;
         if (!param0) {
-            field_d = false;
-            field_e = (int[][]) null;
-            return;
+          field_d = false;
+          field_e = (int[][]) null;
+          return;
         }
         field_e = (int[][]) null;
     }
 
     final static void a(int param0, qe param1) {
         try {
-            param1.field_t = new char[]{(char)63};
-            param1.field_D = new int[]{param0};
+          param1.field_t = new char[]{(char)63};
+          param1.field_D = new int[]{param0};
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "oo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "oo.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

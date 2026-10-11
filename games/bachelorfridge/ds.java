@@ -8,9 +8,9 @@ final class ds extends pu {
 
     public static void b(int param0) {
         if (param0 != -1182) {
-            field_l = (fea) null;
-            field_l = null;
-            return;
+          field_l = (fea) null;
+          field_l = null;
+          return;
         }
         field_l = null;
     }

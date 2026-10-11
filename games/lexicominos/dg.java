@@ -6,16 +6,16 @@ import java.io.*;
 final class dg {
     final static String a(boolean param0) {
         if (param0) {
-            dg.a(false);
+          dg.a(false);
         }
         if (bk.field_c == ca.field_i) {
-            return ce.field_d;
+          return ce.field_d;
         }
-        if (!(ee.field_c != ca.field_i)) {
-            return ef.field_b;
+        if (ee.field_c == ca.field_i) {
+          return ef.field_b;
         }
-        if (!(qa.field_c.b(12))) {
-            return ef.field_b;
+        if (!qa.field_c.b(12)) {
+          return ef.field_b;
         }
         return dd.field_d;
     }
@@ -30,35 +30,23 @@ final class dg {
 
     final static boolean a(boolean param0, boolean param1) {
         long dupTemp$2 = 0L;
-        if (param1) {
-          L0: {
-            if (null != al.field_H) {
-              break L0;
-            } else {
-              al.field_H = vl.field_a.a(nj.field_a, (byte) -58, ol.field_n);
-              break L0;
-            }
-          }
-          if (0 == al.field_H.field_b) {
-            return false;
-          } else {
-            L1: {
-              dupTemp$2 = rf.c(0);
-              p.field_c = dupTemp$2;
-              ta.field_e = dupTemp$2;
-              if ((al.field_H.field_b ^ -1) != -2) {
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            uf.field_m = rh.field_r;
-            al.field_H = null;
-            return true;
-          }
-        } else {
+        if (!param1) {
           return true;
         }
+        if (null == al.field_H) {
+          al.field_H = vl.field_a.a(nj.field_a, (byte) -58, ol.field_n);
+        }
+        if (0 == al.field_H.field_b) {
+          return false;
+        }
+        dupTemp$2 = rf.c(0);
+        p.field_c = dupTemp$2;
+        ta.field_e = dupTemp$2;
+        if (al.field_H.field_b != 1) {
+        }
+        uf.field_m = rh.field_r;
+        al.field_H = null;
+        return true;
     }
 
     final static void a(int param0) {
@@ -72,48 +60,28 @@ final class dg {
         rg.b(0);
         db var2 = var1.c();
         for (var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
-            lf.d(4, 4, 0, 0, 540, 140);
+          var2.c(-2, -2, 16777215);
+          lf.d(4, 4, 0, 0, 540, 140);
         }
         t.field_a.b();
         var1.f(0, 0);
         if (param0 != 19681) {
-            return;
+          return;
         }
         try {
-            pd.a(-22949);
+          pd.a(-22949);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
         }
     }
 
     final boolean b(int param0) {
-        int stackIn_8_0 = 0;
-        if (param0 == -2) {
-          L0: {
-            L1: {
-              if (he.field_h == this) {
-                break L1;
-              } else {
-                if (this == ug.field_q) {
-                  break L1;
-                } else {
-                  if (gg.field_b != this) {
-                    stackIn_8_0 = 0;
-                    break L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-            }
-            stackIn_8_0 = 1;
-            break L0;
-          }
-          return stackIn_8_0 != 0;
-        } else {
+        boolean stackIn_8_0 = false;
+        if (param0 != -2) {
           return false;
         }
+        stackIn_8_0 = (he.field_h == this) || (this == ug.field_q) || (gg.field_b == this);
+        return stackIn_8_0;
     }
 
     static {

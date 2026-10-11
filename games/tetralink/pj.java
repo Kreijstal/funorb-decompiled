@@ -14,35 +14,25 @@ final class pj {
 
     final static boolean b(byte param0) {
         if (param0 < 28) {
-            field_e = 38;
-            return me.field_d;
+          field_e = 38;
+          return me.field_d;
         }
         return me.field_d;
     }
 
     final static java.awt.Container a(byte param0) {
         if (param0 > -15) {
-            return (java.awt.Container) null;
+          return (java.awt.Container) null;
         }
         if (null != ea.field_h) {
-            return (java.awt.Container) ((Object) ea.field_h);
+          return (java.awt.Container) ((Object) ea.field_h);
         }
         return (java.awt.Container) ((Object) lk.q(13));
     }
 
     public static void a(int param0) {
         field_h = null;
-        if (param0 <= 25) {
-          field_c = (String) null;
-          field_d = null;
-          field_f = null;
-          field_c = null;
-          field_b = null;
-          field_i = null;
-          field_a = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0 > 25) {
           field_d = null;
           field_f = null;
           field_c = null;
@@ -52,6 +42,14 @@ final class pj {
           field_g = null;
           return;
         }
+        field_c = (String) null;
+        field_d = null;
+        field_f = null;
+        field_c = null;
+        field_b = null;
+        field_i = null;
+        field_a = null;
+        field_g = null;
     }
 
     static {

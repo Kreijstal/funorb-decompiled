@@ -15,112 +15,77 @@ final class hh {
         pi stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!param0) {
-                break L1;
-              } else {
-                this.a(true);
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 == null) {
-                var3 = this.field_e.field_c.field_c;
-                break L2;
-              } else {
-                var3 = param1;
-                break L2;
-              }
-            }
-            if (var3 != this.field_e.field_c) {
-              this.field_b = var3.field_c;
-              stackIn_9_0 = (pi) (var3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              this.field_b = null;
-              stackIn_7_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0) {
+            this.a(true);
           }
+          if (param1 == null) {
+            var3 = this.field_e.field_c.field_c;
+          } else {
+            var3 = param1;
+          }
+          if (var3 != this.field_e.field_c) {
+            this.field_b = var3.field_c;
+            stackIn_9_0 = var3;
+            return stackIn_9_0;
+          }
+          this.field_b = null;
+          stackIn_7_0 = null;
+          return (pi) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3_ref = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3_ref);
-
-            stackIn_12_1 = new StringBuilder().append("hh.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_12_0 = var3_ref;
+          stackIn_12_1 = new StringBuilder().append("hh.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (pi) ((Object) stackIn_7_0);
-        } else {
-          return stackIn_9_0;
+          throw lj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final pi c(int param0) {
         pi var2 = this.field_b;
         if (param0 > -116) {
-            field_a = (String[]) null;
-            if (!(var2 != this.field_e.field_c)) {
-                this.field_b = null;
-                return null;
-            }
-            this.field_b = var2.field_c;
-            return var2;
-        }
-        if (!(var2 != this.field_e.field_c)) {
+          field_a = (String[]) null;
+          if (var2 == this.field_e.field_c) {
             this.field_b = null;
             return null;
+          }
+          this.field_b = var2.field_c;
+          return var2;
+        }
+        if (var2 == this.field_e.field_c) {
+          this.field_b = null;
+          return null;
         }
         this.field_b = var2.field_c;
         return var2;
     }
 
     final pi d(int param0) {
-        pi var2;
-        var2 = this.field_e.field_c.field_f;
+        pi var2 = this.field_e.field_c.field_f;
         if (this.field_e.field_c == var2) {
           this.field_b = null;
           return null;
-        } else {
-          this.field_b = var2.field_f;
-          if (param0 != -19864) {
-            field_d = (String) null;
-            return var2;
-          } else {
-            return var2;
-          }
         }
+        this.field_b = var2.field_f;
+        if (param0 == -19864) {
+          return var2;
+        }
+        field_d = (String) null;
+        return var2;
     }
 
     hh(ta param0) {
         try {
-            this.field_e = param0;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "hh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "hh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,29 +97,26 @@ final class hh {
     }
 
     final pi a(int param0) {
-        pi var2;
-        pi var3;
-        if (param0 == 12537) {
-          var2 = this.field_b;
-          if (this.field_e.field_c == var2) {
-            this.field_b = null;
-            return null;
-          } else {
-            this.field_b = var2.field_f;
-            return var2;
-          }
-        } else {
-          var3 = (pi) null;
+        pi var2 = null;
+        pi var2Lifetime1;
+        if (param0 != 12537) {
+          pi var3 = (pi) null;
           this.a(true, (pi) null);
           var2 = this.field_b;
-          if (this.field_e.field_c == var2) {
-            this.field_b = null;
-            return null;
-          } else {
+          if (this.field_e.field_c != var2) {
             this.field_b = var2.field_f;
             return var2;
           }
+          this.field_b = null;
+          return null;
         }
+        var2Lifetime1 = this.field_b;
+        if (this.field_e.field_c != var2Lifetime1) {
+          this.field_b = var2Lifetime1.field_f;
+          return var2Lifetime1;
+        }
+        this.field_b = null;
+        return null;
     }
 
     final pi a(pi param0, byte param1) {
@@ -165,79 +127,52 @@ final class hh {
         pi stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3_int = -127 / ((param1 - -18) / 40);
-              if (param0 == null) {
-                var4 = this.field_e.field_c.field_f;
-                break L1;
-              } else {
-                var4 = param0;
-                break L1;
-              }
-            }
-            if (var4 == this.field_e.field_c) {
-              this.field_b = null;
-              stackIn_6_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              this.field_b = var4.field_f;
-              stackIn_8_0 = (pi) (var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            }
+          var3_int = -127 / ((param1 + 18) / 40);
+          if (param0 == null) {
+            var4 = this.field_e.field_c.field_f;
+          } else {
+            var4 = param0;
           }
+          if (var4 == this.field_e.field_c) {
+            this.field_b = null;
+            stackIn_6_0 = null;
+            return (pi) (stackIn_6_0);
+          }
+          this.field_b = var4.field_f;
+          stackIn_8_0 = var4;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("hh.B(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("hh.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (pi) ((Object) stackIn_6_0);
-        } else {
-          return stackIn_8_0;
+          throw lj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final pi a(boolean param0) {
         pi var2 = this.field_e.field_c.field_c;
         if (!param0) {
-            pi var3 = (pi) null;
-            this.a(true, (pi) null);
-            if (!(var2 != this.field_e.field_c)) {
-                this.field_b = null;
-                return null;
-            }
-            this.field_b = var2.field_c;
-            return var2;
-        }
-        if (!(var2 != this.field_e.field_c)) {
+          pi var3 = (pi) null;
+          this.a(true, (pi) null);
+          if (var2 == this.field_e.field_c) {
             this.field_b = null;
             return null;
+          }
+          this.field_b = var2.field_c;
+          return var2;
+        }
+        if (var2 == this.field_e.field_c) {
+          this.field_b = null;
+          return null;
         }
         this.field_b = var2.field_c;
         return var2;

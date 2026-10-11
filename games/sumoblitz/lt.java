@@ -12,36 +12,36 @@ final class lt extends ms {
 
     final static boolean a(byte param0) {
         if (param0 != 119) {
-            lt.c((byte) -70);
-            if (!(-1 != gu.field_d)) {
-                if (!(ju.b(-1, 1))) {
-                    return false;
-                }
-                gu.field_d = ig.field_a.e(-31302);
-                ig.field_a.field_p = 0;
-            }
-            if (!((gu.field_d ^ -1) != 1)) {
-                if (!(ju.b(-1, 2))) {
-                    return false;
-                }
-                gu.field_d = ig.field_a.a(255);
-                ig.field_a.field_p = 0;
-            }
-            return ju.b(-1, gu.field_d);
-        }
-        if (!(-1 != gu.field_d)) {
-            if (!(ju.b(-1, 1))) {
-                return false;
+          lt.c((byte) -70);
+          if (-1 == gu.field_d) {
+            if (!ju.b(-1, 1)) {
+              return false;
             }
             gu.field_d = ig.field_a.e(-31302);
             ig.field_a.field_p = 0;
-        }
-        if (!((gu.field_d ^ -1) != 1)) {
-            if (!(ju.b(-1, 2))) {
-                return false;
+          }
+          if (gu.field_d == -2) {
+            if (!ju.b(-1, 2)) {
+              return false;
             }
             gu.field_d = ig.field_a.a(255);
             ig.field_a.field_p = 0;
+          }
+          return ju.b(-1, gu.field_d);
+        }
+        if (-1 == gu.field_d) {
+          if (!ju.b(-1, 1)) {
+            return false;
+          }
+          gu.field_d = ig.field_a.e(-31302);
+          ig.field_a.field_p = 0;
+        }
+        if (gu.field_d == -2) {
+          if (!ju.b(-1, 2)) {
+            return false;
+          }
+          gu.field_d = ig.field_a.a(255);
+          ig.field_a.field_p = 0;
         }
         return ju.b(-1, gu.field_d);
     }
@@ -49,14 +49,14 @@ final class lt extends ms {
     final static void c(byte param0) {
         lf.a(0, (byte) -58);
         if (param0 != 53) {
-            field_m = (wi) null;
+          field_m = (wi) null;
         }
     }
 
     public static void a(int param0) {
         field_m = null;
         if (param0 != 1) {
-            field_m = (wi) null;
+          field_m = (wi) null;
         }
     }
 

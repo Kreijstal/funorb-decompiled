@@ -21,7 +21,7 @@ final class kj extends gi {
         this.field_p = this.field_p + 1;
         this.field_t[fieldTemp$0] = (byte)(param0 + this.field_A.c(-96));
         if (param1 != -117) {
-            field_y = (String) null;
+          field_y = (String) null;
         }
     }
 
@@ -32,7 +32,7 @@ final class kj extends gi {
         field_z = null;
         field_H = null;
         if (!param0) {
-            return;
+          return;
         }
         field_x = null;
         field_E = null;
@@ -40,122 +40,97 @@ final class kj extends gi {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int fieldTemp$2 = 0;
         int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (param3 >= 49) {
-                break L1;
-              } else {
-                field_E = (String) null;
-                break L1;
-              }
-            }
-            var5_int = 0;
-            L2: while (true) {
-              if (var5_int >= param1) {
-                break L0;
-              } else {
-                fieldTemp$2 = this.field_p;
-                this.field_p = this.field_p + 1;
-                param2[param0 + var5_int] = (byte)(this.field_t[fieldTemp$2] + -this.field_A.c(-93));
-                var5_int++;
-                continue L2;
-              }
-            }
+          if (param3 < 49) {
+            field_E = (String) null;
           }
+          for (var5_int = 0; var5_int < param1; var5_int++) {
+            fieldTemp$0 = this.field_p;
+            this.field_p = this.field_p + 1;
+            param2[param0 + var5_int] = (byte)(this.field_t[fieldTemp$0] - this.field_A.c(-93));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("kj.EB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     final static int j(int param0) {
         gb.field_c.a(false);
         if (!ne.field_N.d((byte) 125)) {
-            return qh.d((byte) -107);
+          return qh.d((byte) -107);
         }
         if (param0 <= 9) {
-            kj.j(-98);
-            return 0;
+          kj.j(-98);
+          return 0;
         }
         return 0;
     }
 
     final void i(byte param0) {
         if (param0 != -3) {
-            kj.j(53);
-            this.field_p = (7 + this.field_F) / 8;
-            return;
+          kj.j(53);
+          this.field_p = (7 + this.field_F) / 8;
+          return;
         }
         this.field_p = (7 + this.field_F) / 8;
     }
 
     final void a(int param0, int[] param1) {
         try {
-            if (param0 != -1833430685) {
-                field_B = true;
-            }
-            this.field_A = new ie(param1);
+          if (param0 != -1833430685) {
+            field_B = true;
+          }
+          this.field_A = new ie(param1);
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "kj.WA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void d(boolean param0) {
         this.field_F = this.field_p * 8;
         if (param0) {
-            kj.j(-27);
+          kj.j(-27);
         }
     }
 
     final int g(int param0, int param1) {
         int incrementValue$0 = 0;
         int var7 = SteelSentinels.field_G;
-        int var3 = this.field_F >> -1833430685;
+        int var3 = this.field_F >> 3;
         int var4 = -(this.field_F & 7) + 8;
         this.field_F = this.field_F + param1;
         int var5 = 0;
         while (param1 > var4) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((this.field_t[incrementValue$0] & kd.field_r[var4]) << param1 + -var4);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.field_t[incrementValue$0] & kd.field_r[var4]) << param1 - var4);
+          param1 = param1 - var4;
+          var4 = 8;
         }
-        int var6 = 64 % ((param0 - -27) / 36);
+        int var6 = 64 % ((param0 + 27) / 36);
         if (param1 != var4) {
-            var5 = var5 + (this.field_t[var3] >> var4 + -param1 & kd.field_r[param1]);
+          var5 = var5 + (this.field_t[var3] >> var4 - param1 & kd.field_r[param1]);
         } else {
-            var5 = var5 + (this.field_t[var3] & kd.field_r[var4]);
+          var5 = var5 + (this.field_t[var3] & kd.field_r[var4]);
         }
         return var5;
     }
@@ -170,7 +145,7 @@ final class kj extends gi {
 
     final int f(boolean param0) {
         if (param0) {
-            return -93;
+          return -93;
         }
         int fieldTemp$0 = this.field_p;
         this.field_p = this.field_p + 1;

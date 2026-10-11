@@ -18,20 +18,17 @@ final class j {
         field_e = null;
         field_f = null;
         field_g = null;
-        if (param0 != 5) {
-          j.a(-51);
-          field_h = null;
-          return;
-        } else {
+        if (param0 == 5) {
           field_h = null;
           return;
         }
+        j.a(-51);
+        field_h = null;
     }
 
     final static int a(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_29_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -42,111 +39,56 @@ final class j {
         int var7 = 0;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var1_int = 0;
-            var2 = 0;
-            L1: while (true) {
-              if (!ba.a(-1)) {
-                if (param0 == 5) {
-                  L2: {
-                    sj.field_f.a(q.a(p.field_a, (byte) -36, ei.field_a), q.a(ab.field_e, (byte) -36, qg.field_c), true);
-                    if (sj.field_f.c((byte) -99)) {
-                      var1_int = 1;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    L4: {
-                      var3 = 0;
-                      if (var1_int == 0) {
-                        break L4;
-                      } else {
-                        if (-1 < (sj.field_f.field_a ^ -1)) {
-                          break L4;
-                        } else {
-                          var3 = bi.field_B[sj.field_f.field_a];
-                          if (var3 == 2) {
-                            tj.a((byte) -123);
-                            break L3;
-                          } else {
-                            if (-6 != (var3 ^ -1)) {
-                              break L3;
-                            } else {
-                              tj.a((byte) -123);
-                              break L3;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    if (var2 == 0) {
-                      break L3;
-                    } else {
-                      if ((ud.field_b ^ -1) == -3) {
-                        break L3;
-                      } else {
-                        tj.a((byte) -96);
-                        break L3;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (var3 != 0) {
-                      break L5;
-                    } else {
-                      if ((ud.field_b ^ -1) != -3) {
-                        break L5;
-                      } else {
-                        var4 = pf.a(0) + -fb.field_n;
-                        var6 = (int)((-var4 + 10999L) / 1000L);
-                        if (0 < var6) {
-                          break L5;
-                        } else {
-                          var3 = 2;
-                          jk.a(-125, true, 5);
-                          break L5;
-                        }
-                      }
-                    }
-                  }
-                  stackIn_29_0 = var3;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_10_0 = 127;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L6: {
-                  sj.field_f.e(0);
-                  if (sj.field_f.c((byte) -84)) {
-                    var1_int = 1;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                if (-14 != (oa.field_H ^ -1)) {
-                  continue L1;
-                } else {
-                  var2 = 1;
-                  continue L1;
-                }
-              }
+          var1_int = 0;
+          var2 = 0;
+          while (ba.a(-1)) {
+            sj.field_f.e(0);
+            if (sj.field_f.c((byte) -84)) {
+              var1_int = 1;
+            }
+            if (oa.field_H != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          if (param0 != 5) {
+            stackIn_10_0 = 127;
+            return stackIn_10_0;
+          }
+          sj.field_f.a(q.a(p.field_a, (byte) -36, ei.field_a), q.a(ab.field_e, (byte) -36, qg.field_c), true);
+          if (sj.field_f.c((byte) -99)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            sj.field_f.field_a >= 0) {
+            var3 = bi.field_B[sj.field_f.field_a];
+            if (var3 == 2) {
+              tj.a((byte) -123);
+            } else if (var3 == 5) {
+              tj.a((byte) -123);
+            }
+          } else {
+            if (var2 != 0 &&
+              ud.field_b != 2) {
+              tj.a((byte) -96);
             }
           }
+          if (var3 == 0 &&
+            ud.field_b == 2) {
+            var4 = pf.a(0) - fb.field_n;
+            var6 = (int)((-var4 + 10999L) / 1000L);
+            if (0 >= var6) {
+              var3 = 2;
+              jk.a(-125, true, 5);
+            }
+          }
+          stackIn_29_0 = var3;
+          return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var1), "j.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_10_0;
-        } else {
-          return stackIn_29_0;
         }
     }
 

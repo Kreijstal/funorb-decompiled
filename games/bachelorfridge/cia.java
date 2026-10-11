@@ -16,28 +16,23 @@ class cia extends bw {
     int field_q;
 
     final static boolean a(int param0) {
-        if (param0 == 0) {
-          if (dma.field_b != null) {
-            if (uca.field_a != eia.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 0) {
           field_f = (String[]) null;
-          if (dma.field_b != null) {
-            if (uca.field_a != eia.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (dma.field_b == null) {
             return false;
           }
+          if (uca.field_a == eia.field_a) {
+            return true;
+          }
+          return false;
         }
+        if (dma.field_b == null) {
+          return false;
+        }
+        if (uca.field_a == eia.field_a) {
+          return true;
+        }
+        return false;
     }
 
     private cia(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -45,24 +40,22 @@ class cia extends bw {
     }
 
     final boolean b(boolean param0) {
-        int fieldTemp$1 = this.field_o + this.field_m;
+        int fieldTemp$0 = this.field_o + this.field_m;
         this.field_o = this.field_o + this.field_m;
-        if (fieldTemp$1 >= 0) {
-          this.field_q = this.field_q + this.field_g;
-          this.field_h = this.field_h + this.field_k;
-          this.field_i = this.field_i + this.field_p;
-          if (!param0) {
-            this.field_k = 57;
-            this.field_k = this.field_k + this.field_l;
-            return true;
-          } else {
-            this.field_k = this.field_k + this.field_l;
-            return true;
-          }
-        } else {
+        if (fieldTemp$0 < 0) {
           this.a(false);
           return false;
         }
+        this.field_q = this.field_q + this.field_g;
+        this.field_h = this.field_h + this.field_k;
+        this.field_i = this.field_i + this.field_p;
+        if (param0) {
+          this.field_k = this.field_k + this.field_l;
+          return true;
+        }
+        this.field_k = 57;
+        this.field_k = this.field_k + this.field_l;
+        return true;
     }
 
     cia(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -71,21 +64,19 @@ class cia extends bw {
 
     final void a(int param0, int param1, int param2, int param3) {
         this.field_k = param2;
-        if (param0 != 0) {
-          this.b(false);
-          this.field_p = param3;
-          this.field_g = param1;
-          return;
-        } else {
+        if (param0 == 0) {
           this.field_p = param3;
           this.field_g = param1;
           return;
         }
+        this.b(false);
+        this.field_p = param3;
+        this.field_g = param1;
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
         if (param2 != 15704) {
-            return;
+          return;
         }
         this.field_h = param3;
         this.field_i = param1;
@@ -95,22 +86,22 @@ class cia extends bw {
     public static void c(byte param0) {
         field_n = null;
         if (param0 >= -70) {
-            return;
+          return;
         }
         field_f = null;
     }
 
     final void a(int param0, int param1) {
-        int var3 = 25 / ((param0 - -17) / 57);
+        int var3 = 25 / ((param0 + 17) / 57);
         this.field_l = param1;
     }
 
     final void a(int param0, int param1, int param2) {
         this.field_o = param1;
         if (param0 < 33) {
-            this.field_o = 117;
-            this.field_m = param2;
-            return;
+          this.field_o = 117;
+          this.field_m = param2;
+          return;
         }
         this.field_m = param2;
     }

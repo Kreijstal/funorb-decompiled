@@ -10,7 +10,7 @@ final class qk {
         field_b = null;
         field_a = null;
         if (param0 != -1003) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 

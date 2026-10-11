@@ -20,12 +20,12 @@ final class vi implements Iterable {
         wf var4 = this.field_d[(int)((long)(param0 + this.field_c) & param1)];
         this.field_f = var4.field_b;
         while (var4 != this.field_f) {
-            if (!(this.field_f.field_c != param1)) {
-                var5 = this.field_f;
-                this.field_f = this.field_f.field_b;
-                return var5;
-            }
+          if (this.field_f.field_c == param1) {
+            var5 = this.field_f;
             this.field_f = this.field_f.field_b;
+            return var5;
+          }
+          this.field_f = this.field_f.field_b;
         }
         this.field_f = null;
         return null;
@@ -34,101 +34,74 @@ final class vi implements Iterable {
     final void a(wf param0, byte param1, long param2) {
         wf var5 = null;
         try {
-            if (param0.field_f != null) {
-                param0.c(5);
-            }
-            var5 = this.field_d[(int)((long)(-1 + this.field_c) & param2)];
-            param0.field_f = var5.field_f;
-            param0.field_b = var5;
-            param0.field_f.field_b = param0;
-            if (param1 < 60) {
-                String var6 = (String) null;
-                vi.a('X', (String) null, -67);
-            }
-            param0.field_b.field_f = param0;
-            param0.field_c = param2;
+          if (param0.field_f != null) {
+            param0.c(5);
+          }
+          var5 = this.field_d[(int)((long)(-1 + this.field_c) & param2)];
+          param0.field_f = var5.field_f;
+          param0.field_b = var5;
+          param0.field_f.field_b = param0;
+          if (param1 < 60) {
+            String var6 = (String) null;
+            vi.a('X', (String) null, -67);
+          }
+          param0.field_b.field_f = param0;
+          param0.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static String[] a(char param0, String param1, int param2) {
+        int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
         String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         CharSequence var10 = null;
         String[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
-          L0: {
-            var10 = (CharSequence) ((Object) param1);
-            var3_int = lj.a(param2 ^ 126, param0, var10);
-            var4 = new String[1 + var3_int];
-            var5 = param2;
-            var6 = 0;
-            var7 = 0;
-            L1: while (true) {
-              if (var7 >= var3_int) {
-                var4[var3_int] = param1.substring(var6);
-                stackIn_8_0 = (String[]) (var4);
-                break L0;
-              } else {
-                var8 = var6;
-                L2: while (true) {
-                  if (param0 == param1.charAt(var8)) {
-                    incrementValue$1 = var5;
-                    var5++;
-                    var4[incrementValue$1] = param1.substring(var6, var8);
-                    var6 = var8 + 1;
-                    var7++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L2;
-                  }
-                }
-              }
+          var10 = (CharSequence) ((Object) param1);
+          var3_int = lj.a(param2 ^ 126, param0, var10);
+          var4 = new String[1 + var3_int];
+          var5 = param2;
+          var6 = 0;
+          for (var7 = 0; var7 < var3_int; var7++) {
+            for (var8 = var6; param0 != param1.charAt(var8); var8++) {
             }
+            incrementValue$1 = var5;
+            var5++;
+            var4[incrementValue$1] = param1.substring(var6, var8);
+            var6 = var8 + 1;
           }
+          var4[var3_int] = param1.substring(var6);
+          stackIn_8_0 = var4;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var3);
-
-            stackIn_11_1 = new StringBuilder().append("vi.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("vi.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw ch.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param2 + ')');
+          throw ch.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
-        return stackIn_8_0;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new w((vi) (this)));
+        return (Iterator) ((Object) new w(this));
     }
 
     private vi() throws Throwable {
@@ -142,19 +115,16 @@ final class vi implements Iterable {
         var1 = 102 / ((param0 - 31) / 59);
         var2 = hi.field_e;
         synchronized (var2) {
-          L0: {
-            b.field_k = cg.field_k;
-            gj.field_l = gj.field_l + 1;
-            oa.field_j = fc.field_g;
-            bk.field_a = uj.field_i;
-            tl.field_a = li.field_j;
-            li.field_j = false;
-            tg.field_d = ad.field_b;
-            ol.field_b = dh.field_w;
-            nk.field_c = ga.field_b;
-            ad.field_b = 0;
-            break L0;
-          }
+          b.field_k = cg.field_k;
+          gj.field_l = gj.field_l + 1;
+          oa.field_j = fc.field_g;
+          bk.field_a = uj.field_i;
+          tl.field_a = li.field_j;
+          li.field_j = false;
+          tg.field_d = ad.field_b;
+          ol.field_b = dh.field_w;
+          nk.field_c = ga.field_b;
+          ad.field_b = 0;
         }
     }
 
@@ -164,7 +134,7 @@ final class vi implements Iterable {
         field_i = null;
         field_a = null;
         if (param0 < 33) {
-            vi.a(103);
+          vi.a(103);
         }
         field_e = null;
     }
@@ -173,7 +143,7 @@ final class vi implements Iterable {
         int var0 = 0;
         field_g = new StringBuilder[10];
         for (var0 = 0; field_g.length > var0; var0++) {
-            field_g[var0] = new StringBuilder(12);
+          field_g[var0] = new StringBuilder(12);
         }
         field_a = new int[field_g.length];
         field_i = "Creating your account";

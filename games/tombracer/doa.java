@@ -10,81 +10,54 @@ final class doa {
         jua stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var3 = new jua(false);
-              var3.field_b = param0;
-              var3.field_f = param1;
-              if (param2 == 114) {
-                break L1;
-              } else {
-                doa.a(-6, 122, 25);
-                break L1;
-              }
-            }
-            stackIn_3_0 = (jua) (var3);
-            break L0;
+          var3 = new jua(false);
+          var3.field_b = param0;
+          var3.field_f = param1;
+          if (param2 != 114) {
+            doa.a(-6, 122, 25);
           }
+          stackIn_3_0 = var3;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3_ref);
-
-            stackIn_6_1 = new StringBuilder().append("doa.D(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_6_0 = var3_ref;
+          stackIn_6_1 = new StringBuilder().append("doa.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static int a(int param0, int param1, int param2) {
         if (param0 != 2) {
-            return -126;
+          return -126;
         }
-        return gqa.a(param2, (byte) 24, param1 >> 434451208) << 1759462184;
+        return gqa.a(param2, (byte) 24, param1 >> 8) << 8;
     }
 
     final static g b(int param0, int param1, int param2) {
+        int var4 = 0;
         g[] var3;
-        int var4;
         g var5;
         int var6;
         g[] var7;
         var6 = TombRacer.field_G ? 1 : 0;
         var7 = cm.field_a[param2].field_c;
         var3 = var7;
-        var4 = param1;
-        L0: while (true) {
-          if (var7.length > var4) {
-            var5 = var7[var4];
-            if (var5.field_f != param0) {
-              var4++;
-              continue L0;
-            } else {
-              return var5;
-            }
-          } else {
-            return null;
+        for (var4 = param1; var7.length > var4; var4++) {
+          var5 = var7[var4];
+          if (var5.field_f == param0) {
+            return var5;
           }
         }
+        return null;
     }
 
     doa() {
@@ -97,16 +70,16 @@ final class doa {
         tj discarded$3 = null;
         tj discarded$4 = null;
         try {
-            this.field_a = param1.a(196584, (byte[]) null, 24, true, (byte) 88);
-            discarded$0 = new tj(this.field_a, 5126, 2, 0);
-            discarded$3 = new tj(this.field_a, 5126, 3, 8);
-            if (param0 != 22091) {
-                cka var4 = (cka) null;
-                this.a(19, (cka) null);
-            }
-            discarded$4 = new tj(this.field_a, 5121, 4, 20);
+          this.field_a = param1.a(196584, (byte[]) null, 24, true, (byte) 88);
+          discarded$0 = new tj(this.field_a, 5126, 2, 0);
+          discarded$3 = new tj(this.field_a, 5126, 3, 8);
+          if (param0 != 22091) {
+            cka var4 = (cka) null;
+            this.a(19, (cka) null);
+          }
+          discarded$4 = new tj(this.field_a, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "doa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "doa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

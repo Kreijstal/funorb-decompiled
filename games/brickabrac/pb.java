@@ -13,28 +13,23 @@ final class pb extends nm {
     static int[] field_n;
 
     final boolean a(byte param0, int param1, int param2) {
-        if (param0 == -84) {
-          if (param2 == this.field_m) {
-            if (this.field_k != param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -84) {
           field_j = (jp) null;
-          if (param2 == this.field_m) {
-            if (this.field_k != param1) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (param2 != this.field_m) {
             return false;
           }
+          if (this.field_k == param1) {
+            return true;
+          }
+          return false;
         }
+        if (param2 != this.field_m) {
+          return false;
+        }
+        if (this.field_k == param1) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
@@ -42,32 +37,29 @@ final class pb extends nm {
         field_n = null;
         field_l = null;
         if (param0 < 22) {
-            field_l = (String) null;
-            field_j = null;
-            return;
+          field_l = (String) null;
+          field_j = null;
+          return;
         }
         field_j = null;
     }
 
     final void a(int param0, int param1, byte param2) {
-        if (param2 != 78) {
-          pb.a(13, -48);
-          this.field_k = param1;
-          this.field_m = param0;
-          return;
-        } else {
+        if (param2 == 78) {
           this.field_k = param1;
           this.field_m = param0;
           return;
         }
+        pb.a(13, -48);
+        this.field_k = param1;
+        this.field_m = param0;
     }
 
     final static String a(int param0, int param1) {
-        if (param1 != 4) {
-          return (String) null;
-        } else {
+        if (param1 == 4) {
           return 1 + param0 + "/" + gh.field_b.length;
         }
+        return (String) null;
     }
 
     pb(int param0, int param1) {

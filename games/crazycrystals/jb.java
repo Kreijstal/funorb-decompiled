@@ -9,27 +9,23 @@ class jb {
     static String field_a;
 
     final void a(boolean param0) {
-        if (!param0) {
-          if (null == this.field_d) {
-            return;
-          } else {
-            this.field_d.field_b = this.field_b;
-            this.field_b.field_d = this.field_d;
-            this.field_b = null;
-            this.field_d = null;
-            return;
-          }
-        } else {
+        if (param0) {
           this.b(-25);
-          if (null == this.field_d) {
-            return;
-          } else {
+          if (null != this.field_d) {
             this.field_d.field_b = this.field_b;
             this.field_b.field_d = this.field_d;
             this.field_b = null;
             this.field_d = null;
             return;
           }
+          return;
+        }
+        if (null != this.field_d) {
+          this.field_d.field_b = this.field_b;
+          this.field_b.field_d = this.field_d;
+          this.field_b = null;
+          this.field_d = null;
+          return;
         }
     }
 
@@ -40,16 +36,16 @@ class jb {
     public static void c(int param0) {
         field_c = null;
         if (param0 != -24894) {
-            field_a = (String) null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final boolean b(int param0) {
-        if (!(this.field_d != null)) {
-            return false;
+        if (this.field_d == null) {
+          return false;
         }
         int var2 = -44 % ((param0 - 53) / 57);
         return true;

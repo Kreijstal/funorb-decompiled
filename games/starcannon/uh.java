@@ -17,7 +17,7 @@ class uh extends rf {
         char[] var6 = new char[param0];
         char[] var3 = var6;
         for (var4 = param1; param0 > var4; var4++) {
-            var6[var4] = param2;
+          var6[var4] = param2;
         }
         return new String(var6);
     }
@@ -27,46 +27,26 @@ class uh extends rf {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 > 111) {
-                break L1;
-              } else {
-                field_h = (String[]) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = va.a(0, 83, param1, param1.length);
-            break L0;
+          if (param0 <= 111) {
+            field_h = (String[]) null;
           }
+          stackIn_3_0 = va.a(0, 83, param1, param1.length);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("uh.RB(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("uh.RB(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void b(byte param0) {
@@ -78,49 +58,37 @@ class uh extends rf {
     }
 
     final static hl c(byte param0) {
-        int var1;
-        byte[] var2;
-        int[] var3;
-        int var4_int;
-        hl var4;
-        int var5;
-        var5 = StarCannon.field_A;
-        var1 = gg.field_d[0] * gh.field_C[0];
-        var2 = og.field_c[0];
-        var3 = new int[var1];
-        var4_int = 0;
-        L0: while (true) {
-          if (var1 <= var4_int) {
-            var4 = new hl(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], var3);
-            if (param0 < 2) {
-              field_i = 55;
-              rc.b((byte) -121);
-              return var4;
-            } else {
-              rc.b((byte) -121);
-              return var4;
-            }
-          } else {
-            var3[var4_int] = of.field_g[w.a(255, (int) var2[var4_int])];
-            var4_int++;
-            continue L0;
-          }
+        int var4_int = 0;
+        int var5 = StarCannon.field_A;
+        int var1 = gg.field_d[0] * gh.field_C[0];
+        byte[] var2 = og.field_c[0];
+        int[] var3 = new int[var1];
+        for (var4_int = 0; var1 > var4_int; var4_int++) {
+          var3[var4_int] = of.field_g[w.a(255, (int) var2[var4_int])];
         }
+        hl var4 = new hl(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], var3);
+        if (param0 >= 2) {
+          rc.b((byte) -121);
+          return var4;
+        }
+        field_i = 55;
+        rc.b((byte) -121);
+        return var4;
     }
 
     protected uh() {
     }
 
     final void a(int param0) {
-        if (!(this.field_f != null)) {
-            return;
+        if (this.field_f == null) {
+          return;
         }
         this.field_f.field_m = this.field_m;
         this.field_m.field_f = this.field_f;
         this.field_f = null;
         this.field_m = null;
         if (param0 != -6242) {
-            field_h = (String[]) null;
+          field_h = (String[]) null;
         }
     }
 

@@ -39,63 +39,57 @@ final class fk {
     int field_h;
 
     final static int a(int param0, int param1, byte param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        if (param2 > -38) {
-          fk.a(-8);
-          var3 = param0 >> 1121386704;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        if (param2 <= -38) {
+          var3 = param0 >> 16;
           var4 = param0 & 65535;
-          var5 = param1 >> -1059976816;
+          var5 = param1 >> 16;
           var6 = 65535 & param1;
-          return (var4 * var6 >> 558731376) + (var4 * var5 + param1 * var3);
-        } else {
-          var3 = param0 >> 1121386704;
-          var4 = param0 & 65535;
-          var5 = param1 >> -1059976816;
-          var6 = 65535 & param1;
-          return (var4 * var6 >> 558731376) + (var4 * var5 + param1 * var3);
+          return (var4 * var6 >> 16) + (var4 * var5 + param1 * var3);
         }
+        fk.a(-8);
+        var3Lifetime1 = param0 >> 16;
+        var4Lifetime1 = param0 & 65535;
+        var5Lifetime1 = param1 >> 16;
+        var6Lifetime1 = 65535 & param1;
+        return (var4Lifetime1 * var6Lifetime1 >> 16) + (var4Lifetime1 * var5Lifetime1 + param1 * var3Lifetime1);
     }
 
     public static void a(int param0) {
         field_k = null;
         field_v = null;
         if (param0 != -4918) {
-            field_v = (String) null;
+          field_v = (String) null;
         }
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          L0: {
-            if (il.field_g != -1) {
-              break L0;
-            } else {
-              if (!ag.a(126, 1)) {
-                return false;
-              } else {
-                il.field_g = se.field_p.j(7909);
-                se.field_p.field_g = 0;
-                break L0;
-              }
-            }
-          }
-          if (-2 == il.field_g) {
-            if (!ag.a(125, 2)) {
-              return false;
-            } else {
-              il.field_g = se.field_p.i(-1174051992);
-              se.field_p.field_g = 0;
-              return ag.a(125, il.field_g);
-            }
-          } else {
-            return ag.a(125, il.field_g);
-          }
-        } else {
+        if (param0) {
           return true;
         }
+        if (il.field_g == -1) {
+          if (!ag.a(126, 1)) {
+            return false;
+          }
+          il.field_g = se.field_p.j(7909);
+          se.field_p.field_g = 0;
+        }
+        if (-2 != il.field_g) {
+          return ag.a(125, il.field_g);
+        }
+        if (ag.a(125, 2)) {
+          il.field_g = se.field_p.i(-1174051992);
+          se.field_p.field_g = 0;
+          return ag.a(125, il.field_g);
+        }
+        return false;
     }
 
     fk() {

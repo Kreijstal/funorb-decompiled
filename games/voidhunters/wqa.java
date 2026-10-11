@@ -6,21 +6,21 @@ final class wqa implements dja {
     static int field_b;
 
     public final tv a(byte param0) {
-        int var2 = -10 / ((param0 - -64) / 50);
+        int var2 = -10 / ((param0 + 64) / 50);
         return (tv) ((Object) new iia());
     }
 
     final static boolean a(boolean param0, int param1) {
         if (param0) {
-            return true;
+          return true;
         }
         return param1 >= 0 ? true : false;
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            this.a(-39, -108);
-            return (tv[]) ((Object) new iia[param1]);
+          this.a(-39, -108);
+          return (tv[]) ((Object) new iia[param1]);
         }
         return (tv[]) ((Object) new iia[param1]);
     }
@@ -29,14 +29,14 @@ final class wqa implements dja {
         ih.field_e = param5;
         pva.field_g = param0;
         if (param2 <= 112) {
-            return;
+          return;
         }
         try {
-            vhb.field_d = param1;
-            hwa.field_q = param3;
-            ska.field_o = param4;
+          vhb.field_d = param1;
+          hwa.field_q = param3;
+          ska.field_o = param4;
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

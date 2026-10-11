@@ -8,7 +8,7 @@ final class xa implements nr, e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            pa.a((e) (this), (byte) -37);
+          pa.a((e) (this), (byte) -37);
         }
     }
 

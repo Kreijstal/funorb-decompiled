@@ -11,46 +11,26 @@ final class od extends lg {
         id stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 >= 55) {
-                break L1;
-              } else {
-                od.d((byte) 64);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new id(param0);
-            break L0;
+          if (param1 < 55) {
+            od.d((byte) 64);
           }
+          stackIn_3_0 = new id(param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("od.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("od.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(int param0, byte param1, uk param2) {
@@ -59,54 +39,51 @@ final class od extends lg {
         var5.g(71, param0);
         var5.field_g = var5.field_g + 1;
         if (param1 >= -43) {
-            return;
+          return;
         }
         try {
-            var4 = var5.field_g;
-            var5.b(-1336879960, 1);
-            var5.b(-1336879960, param2.field_i);
-            var5.b(true, param2.field_m);
-            var5.a((byte) 71, param2.field_l);
-            var5.a((byte) 59, param2.field_h);
-            var5.a((byte) 104, param2.field_k);
-            var5.a((byte) 24, param2.field_n);
-            var5.e(var4, 89);
-            var5.b(-var4 + var5.field_g, (byte) 117);
+          var4 = var5.field_g;
+          var5.b(-1336879960, 1);
+          var5.b(-1336879960, param2.field_i);
+          var5.b(true, param2.field_m);
+          var5.a((byte) 71, param2.field_l);
+          var5.a((byte) 59, param2.field_h);
+          var5.a((byte) 104, param2.field_k);
+          var5.a((byte) 24, param2.field_n);
+          var5.e(var4, 89);
+          var5.b(-var4 + var5.field_g, (byte) 117);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "od.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "od.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void b(int param0, int param1, byte param2) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int var4;
-        int var5;
-        var4 = 2 * param0;
-        if (param1 != -1) {
-          field_v = (String) null;
+        int incrementValue$0 = 0;
+        int var5 = 0;
+        int var4 = 2 * param0;
+        int var5Lifetime1;
+        if (param1 == -1) {
           var5 = param2 & 255;
-          incrementValue$2 = var4;
+          incrementValue$0 = var4;
           var4++;
-          this.field_w[incrementValue$2] = (byte)(var5 * 3 >> -959081435);
-          this.field_w[var4] = (byte)(3 * var5 >> -1897066011);
-          return;
-        } else {
-          var5 = param2 & 255;
-          incrementValue$3 = var4;
-          var4++;
-          this.field_w[incrementValue$3] = (byte)(var5 * 3 >> -959081435);
-          this.field_w[var4] = (byte)(3 * var5 >> -1897066011);
+          this.field_w[incrementValue$0] = (byte)(var5 * 3 >> 5);
+          this.field_w[var4] = (byte)(3 * var5 >> 5);
           return;
         }
+        field_v = (String) null;
+        var5Lifetime1 = param2 & 255;
+        int incrementValue$1 = var4;
+        var4++;
+        this.field_w[incrementValue$1] = (byte)(var5Lifetime1 * 3 >> 5);
+        this.field_w[var4] = (byte)(3 * var5Lifetime1 >> 5);
     }
 
     public static void d(byte param0) {
         field_v = null;
         field_x = null;
         if (param0 != -96) {
-            String var2 = (String) null;
-            od.a((String) null, -124);
+          String var2 = (String) null;
+          od.a((String) null, -124);
         }
     }
 
@@ -120,60 +97,36 @@ final class od extends lg {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == 3) {
-              stackIn_4_0 = gq.a(param0.length, param0, 21530, 0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 == 3) {
+            stackIn_4_0 = gq.a(param0.length, param0, 21530, 0);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("od.O(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("od.O(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw pn.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final byte[] a(int param0, int param1, int param2, int param3) {
         this.field_w = new byte[param2 * (param1 * param3 * 2)];
         this.a(true, param3, param1, param2);
-        if (param0 != -959081435) {
-          return (byte[]) null;
-        } else {
+        if (param0 == -959081435) {
           return this.field_w;
         }
+        return (byte[]) null;
     }
 
     static {

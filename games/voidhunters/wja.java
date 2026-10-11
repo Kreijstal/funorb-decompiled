@@ -9,9 +9,9 @@ final class wja {
 
     public static void a(boolean param0) {
         if (param0) {
-            wja.a(false);
-            field_c = null;
-            return;
+          wja.a(false);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

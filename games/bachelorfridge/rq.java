@@ -11,52 +11,45 @@ final class rq extends kj {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var5;
-        var5 = BachelorFridge.field_y;
-        if (15 <= this.field_h) {
-          if (this.field_h >= 30) {
-            ena.field_l.a(param2, param0 + -32);
-            if (param1 != 0) {
-              this.a(120, 124, -85);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            it.field_i.a(param2, param0 + -32);
-            if (param1 == 0) {
-              return;
-            } else {
-              this.a(120, 124, -85);
-              return;
-            }
-          }
-        } else {
+        int var5 = BachelorFridge.field_y;
+        if (15 > this.field_h) {
           rw.field_a.a(param2, -32 + param0);
-          if (param1 == 0) {
-            return;
-          } else {
+          if (param1 != 0) {
             this.a(120, 124, -85);
             return;
           }
+          return;
         }
+        if (this.field_h < 30) {
+          it.field_i.a(param2, param0 - 32);
+          if (param1 != 0) {
+            this.a(120, 124, -85);
+            return;
+          }
+          return;
+        }
+        ena.field_l.a(param2, param0 - 32);
+        if (param1 == 0) {
+          return;
+        }
+        this.a(120, 124, -85);
     }
 
     final boolean b(int param0) {
         if (param0 <= 21) {
-            return true;
+          return true;
         }
         int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
         if (fieldTemp$0 >= 75) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final void a(int param0, boolean param1, int param2) {
         if (!param1) {
-            field_f = -101;
+          field_f = -101;
         }
     }
 

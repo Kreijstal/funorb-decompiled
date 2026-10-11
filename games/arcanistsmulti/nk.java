@@ -22,16 +22,14 @@ final class nk extends pg {
         field_j = null;
         field_q = null;
         field_n = null;
-        if (param0 != 30025) {
-          nk.a(68);
-          field_m = (qb[][]) null;
-          field_o = null;
-          return;
-        } else {
+        if (param0 == 30025) {
           field_m = (qb[][]) null;
           field_o = null;
           return;
         }
+        nk.a(68);
+        field_m = (qb[][]) null;
+        field_o = null;
     }
 
     nk() {

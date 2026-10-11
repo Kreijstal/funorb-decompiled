@@ -10,7 +10,7 @@ final class hk {
         field_a = null;
         field_c = null;
         if (param0 < 107) {
-            hk.a((byte) 65, -66, -69);
+          hk.$cfr$intArgs$a$7ad285df57e9(65, -66, -69);
         }
     }
 
@@ -18,8 +18,6 @@ final class hk {
         ha[] stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -33,78 +31,65 @@ final class hk {
         int var8 = 0;
         var8 = Main.field_T;
         try {
-          L0: {
-            var2_int = param1.g(8, -1);
-            if (-1 <= (var2_int ^ -1)) {
-              var3 = param1.g(12, -1);
-              var4 = new ha[var3];
-              var5 = 0;
-              var6 = -40 % ((12 - param0) / 38);
-              L1: while (true) {
-                if (var3 <= var5) {
-                  stackIn_12_0 = (ha[]) (var4);
-                  break L0;
-                } else {
-                  L2: {
-                    if (!di.a((byte) -78, param1)) {
-                      var7 = param1.g(hj.b(-27571, -1 + var5), -1);
-                      var4[var5] = var4[var7];
-                      break L2;
-                    } else {
-                      var7_ref_ha = new ha();
-                      param1.g(24, -1);
-                      param1.g(24, -1);
-                      var7_ref_ha.field_b = param1.g(24, -1);
-                      param1.g(9, -1);
-                      param1.g(12, -1);
-                      param1.g(12, -1);
-                      param1.g(12, -1);
-                      var4[var5] = var7_ref_ha;
-                      break L2;
-                    }
-                  }
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              return null;
-            }
+          var2_int = param1.g(8, -1);
+          if (var2_int > 0) {
+            return null;
           }
+          var3 = param1.g(12, -1);
+          var4 = new ha[var3];
+          var5 = 0;
+          var6 = -40 % ((12 - param0) / 38);
+          while (var3 > var5) {
+            if (!di.a((byte) -78, param1)) {
+              var7 = param1.g(hj.b(-27571, -1 + var5), -1);
+              var4[var5] = var4[var7];
+            } else {
+              var7_ref_ha = new ha();
+              param1.g(24, -1);
+              param1.g(24, -1);
+              var7_ref_ha.field_b = param1.g(24, -1);
+              param1.g(9, -1);
+              param1.g(12, -1);
+              param1.g(12, -1);
+              param1.g(12, -1);
+              var4[var5] = var7_ref_ha;
+            }
+            var5++;
+          }
+          stackIn_12_0 = var4;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("hk.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("hk.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_12_0;
     }
 
     final static void a(byte param0, int param1, int param2) {
         gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
         if (param0 <= 121) {
-            w var4 = (w) null;
-            hk.a(-7, (w) null);
+          w var4 = (w) null;
+          hk.a(-7, (w) null);
         }
     }
 
     static {
         field_c = "Confirm Password: ";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$7ad285df57e9(int param0, int param1, int param2) {
+        gl.a(param2, jd.field_c[param1], ca.field_c[param1], 804);
+        if (param0 <= 121) {
+          w var4 = (w) null;
+          hk.a(-7, (w) null);
+        }
     }
 }

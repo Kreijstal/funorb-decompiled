@@ -14,25 +14,22 @@ final class jc extends ai {
     public static void a(boolean param0) {
         field_m = null;
         field_h = null;
-        if (!param0) {
-          field_k = 68L;
-          field_n = null;
-          field_g = null;
-          return;
-        } else {
+        if (param0) {
           field_n = null;
           field_g = null;
           return;
         }
+        field_k = 68L;
+        field_n = null;
+        field_g = null;
     }
 
     final static gk a(int param0, boolean param1, int param2, int param3, boolean param4) {
-        if (param3 != 0) {
-          field_i = 4;
-          return j.a(param1, (byte) -104, false, param0, param4, param2);
-        } else {
+        if (param3 == 0) {
           return j.a(param1, (byte) -104, false, param0, param4, param2);
         }
+        field_i = 4;
+        return j.a(param1, (byte) -104, false, param0, param4, param2);
     }
 
     private jc() throws Throwable {

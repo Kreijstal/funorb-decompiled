@@ -7,7 +7,7 @@ final class an {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -15651) {
-            an.a(-103);
+          an.a(-103);
         }
     }
 
@@ -15,18 +15,16 @@ final class an {
         ga.field_a = (byte[][]) null;
         je.field_h = null;
         sn.field_e = null;
-        if (param0 >= -77) {
-          an.a(32);
-          qa.field_x = null;
-          i.field_t = null;
-          ti.field_c = null;
-          return;
-        } else {
+        if (param0 < -77) {
           qa.field_x = null;
           i.field_t = null;
           ti.field_c = null;
           return;
         }
+        an.a(32);
+        qa.field_x = null;
+        i.field_t = null;
+        ti.field_c = null;
     }
 
     static {

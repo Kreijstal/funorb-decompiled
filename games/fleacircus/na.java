@@ -13,40 +13,33 @@ final class na implements Iterator {
     private lh field_a;
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
-        Object var3;
-        lh var3_ref;
+        lh var3;
         lh var4;
         var2 = fleas.field_A ? 1 : 0;
-        if (this.field_g.field_f[-1 + this.field_d] == this.field_a) {
-          L0: while (true) {
-            if (this.field_g.field_g > this.field_d) {
-              fieldTemp$1 = this.field_d;
-              this.field_d = this.field_d + 1;
-              var3_ref = this.field_g.field_f[fieldTemp$1].field_h;
-              if (var3_ref == this.field_g.field_f[this.field_d + -1]) {
-                continue L0;
-              } else {
-                this.field_e = var3_ref;
-                this.field_a = var3_ref.field_h;
-                return var3_ref;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
           var4 = this.field_a;
           this.field_e = var4;
           this.field_a = var4.field_h;
           return var4;
         }
+        do {
+          if (this.field_g.field_g <= this.field_d) {
+            return null;
+          }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          var3 = this.field_g.field_f[fieldTemp$0].field_h;
+        } while (var3 == this.field_g.field_f[this.field_d - 1]);
+        this.field_e = var3;
+        this.field_a = var3.field_h;
+        return var3;
     }
 
     public final void remove() {
-        if (!(null != this.field_e)) {
-            throw new IllegalStateException();
+        if (null == this.field_e) {
+          throw new IllegalStateException();
         }
         this.field_e.c(-1);
         this.field_e = null;
@@ -54,7 +47,7 @@ final class na implements Iterator {
 
     final static void a(byte param0) {
         if (param0 >= -40) {
-            return;
+          return;
         }
         String var2 = (String) null;
         ij.a(-1, "", (String) null);
@@ -63,58 +56,54 @@ final class na implements Iterator {
     public static void b(int param0) {
         field_b = null;
         if (param0 <= 93) {
-            return;
+          return;
         }
         field_c = null;
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = fleas.field_A ? 1 : 0;
-        if (this.field_a == this.field_g.field_f[this.field_d - 1]) {
-          L0: while (true) {
-            if (this.field_d < this.field_g.field_g) {
-              fieldTemp$1 = this.field_d;
-              this.field_d = this.field_d + 1;
-              if (this.field_g.field_f[fieldTemp$1].field_h == this.field_g.field_f[-1 + this.field_d]) {
-                this.field_a = this.field_g.field_f[this.field_d - 1];
-                continue L0;
-              } else {
-                this.field_a = this.field_g.field_f[-1 + this.field_d].field_h;
-                return true;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_a != this.field_g.field_f[this.field_d - 1]) {
           return true;
         }
+        while (true) {
+          if (this.field_d >= this.field_g.field_g) {
+            return false;
+          }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          if (this.field_g.field_f[fieldTemp$0].field_h == this.field_g.field_f[-1 + this.field_d]) {
+            this.field_a = this.field_g.field_f[this.field_d - 1];
+            continue;
+          }
+          break;
+        }
+        this.field_a = this.field_g.field_f[-1 + this.field_d].field_h;
+        return true;
     }
 
     private final void a(int param0) {
-        if (param0 != -1) {
-          this.a(52);
-          this.field_d = 1;
-          this.field_e = null;
-          this.field_a = this.field_g.field_f[0].field_h;
-          return;
-        } else {
+        if (param0 == -1) {
           this.field_d = 1;
           this.field_e = null;
           this.field_a = this.field_g.field_f[0].field_h;
           return;
         }
+        this.a(52);
+        this.field_d = 1;
+        this.field_e = null;
+        this.field_a = this.field_g.field_f[0].field_h;
     }
 
     na(li param0) {
         this.field_e = null;
         try {
-            this.field_g = param0;
-            this.a(-1);
+          this.field_g = param0;
+          this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

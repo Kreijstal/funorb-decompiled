@@ -14,32 +14,11 @@ final class il extends pi {
     int field_r;
 
     final static boolean e(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != -31391) {
-          L0: {
-            field_t = (String[][]) null;
-            if (-16 == (pl.field_h ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-16 == (pl.field_h ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == -31391) {
+          return pl.field_h != 15 ? true : false;
         }
+        field_t = (String[][]) null;
+        return pl.field_h != 15 ? true : false;
     }
 
     public static void a(int param0) {
@@ -51,7 +30,7 @@ final class il extends pi {
     final static void a(int param0, byte param1) {
         s.a(-27911);
         if (param1 != -109) {
-            field_t = (String[][]) null;
+          field_t = (String[][]) null;
         }
     }
 

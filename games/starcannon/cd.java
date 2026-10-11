@@ -9,10 +9,10 @@ final class cd {
 
     public static void a(int param0) {
         if (param0 != 8192) {
-            cd.a(-57);
-            field_b = null;
-            field_a = null;
-            return;
+          cd.a(-57);
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

@@ -7,9 +7,9 @@ final class mba {
 
     final static void a(int param0) {
         if (param0 > -107) {
-            field_b = 31;
-            ls.field_q = false;
-            return;
+          field_b = 31;
+          ls.field_q = false;
+          return;
         }
         ls.field_q = false;
     }
@@ -17,7 +17,7 @@ final class mba {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 26) {
-            field_a = (ae) null;
+          field_a = (ae) null;
         }
     }
 

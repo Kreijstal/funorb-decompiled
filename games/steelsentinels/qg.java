@@ -30,51 +30,40 @@ final class qg implements qk {
         int var3;
         var3 = SteelSentinels.field_G;
         var2 = param1;
-        if (96 != var2) {
-          if (var2 != 97) {
-            if (var2 != 98) {
-              if (-100 != (var2 ^ -1)) {
-                if (100 != var2) {
-                  if (102 != var2) {
-                    if (103 != var2) {
-                      if (var2 != 104) {
-                        if ((var2 ^ -1) != -106) {
-                          if (var2 != 106) {
-                            if (param0 != -60) {
-                              return 104;
-                            } else {
-                              return -1;
-                            }
-                          } else {
-                            return 93;
-                          }
-                        } else {
-                          return 89;
-                        }
-                      } else {
-                        return 85;
-                      }
-                    } else {
-                      return 80;
-                    }
-                  } else {
-                    return 76;
-                  }
-                } else {
-                  return 70;
-                }
-              } else {
-                return 66;
-              }
-            } else {
-              return 58;
-            }
-          } else {
-            return 56;
-          }
-        } else {
+        if (96 == var2) {
           return 2;
         }
+        if (var2 == 97) {
+          return 56;
+        }
+        if (var2 == 98) {
+          return 58;
+        }
+        if (var2 == 99) {
+          return 66;
+        }
+        if (100 == var2) {
+          return 70;
+        }
+        if (102 == var2) {
+          return 76;
+        }
+        if (103 == var2) {
+          return 80;
+        }
+        if (var2 == 104) {
+          return 85;
+        }
+        if (var2 == 105) {
+          return 89;
+        }
+        if (var2 == 106) {
+          return 93;
+        }
+        if (param0 != -60) {
+          return 104;
+        }
+        return -1;
     }
 
     public static void b(byte param0) {
@@ -82,121 +71,84 @@ final class qg implements qk {
         field_n = null;
         field_o = null;
         field_g = null;
-        if (param0 != 105) {
-          field_i = (String) null;
-          field_i = null;
-          field_j = (boolean[][]) null;
-          field_l = null;
-          field_p = null;
-          return;
-        } else {
+        if (param0 == 105) {
           field_i = null;
           field_j = (boolean[][]) null;
           field_l = null;
           field_p = null;
           return;
         }
+        field_i = (String) null;
+        field_i = null;
+        field_j = (boolean[][]) null;
+        field_l = null;
+        field_p = null;
     }
 
     public final void a(int param0, lh param1, byte param2, boolean param3, int param4) {
+        int var10 = 0;
         lh stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
         int var11 = 0;
         um var12 = null;
         var11 = SteelSentinels.field_G;
         try {
-          L0: {
-            L1: {
-              if (param1 instanceof um) {
-                stackIn_4_0 = (lh) (param1);
-                break L1;
-              } else {
-                stackIn_4_0 = null;
-                break L1;
-              }
-            }
-            L2: {
-              var12 = (um) ((Object) stackIn_4_0);
-              pb.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
-              if (var12 != null) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var7 = -(2 * var12.field_Y) + param1.field_x;
-            var8 = var12.field_Y + (param1.field_o + param0);
-            var9 = var12.field_ab + (param1.field_z + param4);
-            pb.d(var8, var9, var7 + var8, var9, this.field_k);
-            var10 = -1 + var12.h(24129);
-            L3: while (true) {
-              if (-1 < (var10 ^ -1)) {
-                L4: {
-                  if (null != this.field_b) {
-                    this.field_b.a(var12.field_y, var8 - -(var7 / 2), var12.field_ab + this.field_b.field_W + var9, this.field_e, this.field_d);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if (param2 == -30) {
-                  break L0;
-                } else {
-                  field_o = (String) null;
-                  return;
-                }
-              } else {
-                pb.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
-                var10--;
-                continue L3;
-              }
-            }
+          if (param1 instanceof um) {
+            stackIn_4_0 = (lh) (param1);
+          } else {
+            stackIn_4_0 = null;
           }
+          var12 = (um) (stackIn_4_0);
+          pb.a(param0 + param1.field_o, param1.field_z + param4, param1.field_x, param1.field_E, this.field_m);
+          if (var12 != null) {
+          }
+          var7 = -(2 * var12.field_Y) + param1.field_x;
+          var8 = var12.field_Y + (param1.field_o + param0);
+          var9 = var12.field_ab + (param1.field_z + param4);
+          pb.d(var8, var9, var7 + var8, var9, this.field_k);
+          for (var10 = -1 + var12.h(24129); var10 >= 0; var10--) {
+            pb.e(var8 + var7 * var12.a(var10, -128) / var12.g((byte) 64), var9, this.field_c, this.field_h);
+          }
+          if (null != this.field_b) {
+            this.field_b.a(var12.field_y, var8 + var7 / 2, var12.field_ab + this.field_b.field_W + var9, this.field_e, this.field_d);
+          }
+          if (param2 == -30) {
+            return;
+          }
+          field_o = (String) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var6 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var6);
-
-            stackIn_16_1 = new StringBuilder().append("qg.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L5;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L5;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_16_0 = var6;
+          stackIn_16_1 = new StringBuilder().append("qg.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     qg(mi param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_e = param1;
-            this.field_h = param6;
-            this.field_k = param3;
-            this.field_d = param2;
-            this.field_m = param4;
-            this.field_b = param0;
-            this.field_c = param5;
+          this.field_e = param1;
+          this.field_h = param6;
+          this.field_k = param3;
+          this.field_d = param2;
+          this.field_m = param4;
+          this.field_b = param0;
+          this.field_c = param5;
         } catch (RuntimeException runtimeException) {
-            throw ci.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "qg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

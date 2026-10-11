@@ -19,75 +19,60 @@ final class cs {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 == 0) {
-          if (param0 < 65) {
-            if (97 <= param0) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            if (param0 > 90) {
-              if (97 <= param0) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        if (param1 != 0) {
           field_a = (tu) null;
-          if (param0 >= 65) {
-            if (param0 > 90) {
-              if (97 <= param0) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            if (97 <= param0) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
+          if (param0 < 65) {
+            if (97 > param0) {
               return false;
             }
+            if (param0 <= 122) {
+              return true;
+            }
+            return false;
           }
+          if (param0 <= 90) {
+            return true;
+          }
+          if (97 > param0) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
         }
+        if (param0 >= 65) {
+          if (param0 <= 90) {
+            return true;
+          }
+          if (97 > param0) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
+        }
+        if (97 > param0) {
+          return false;
+        }
+        if (param0 <= 122) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
-        if (param0 != 111) {
-          cs.b((byte) -34);
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 111) {
           field_c = null;
           field_b = null;
           field_a = null;
           return;
         }
+        cs.b((byte) -34);
+        field_c = null;
+        field_b = null;
+        field_a = null;
     }
 
     static {

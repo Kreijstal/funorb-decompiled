@@ -16,11 +16,11 @@ final class an extends bd {
 
     final void a(wk param0, int param1) {
         try {
-            param0.a(this.field_k, (byte) -89);
-            int var3_int = 124 / ((-35 - param1) / 36);
-            param0.a((byte) 7, this.field_i);
+          param0.a(this.field_k, (byte) -89);
+          int var3_int = 124 / ((-35 - param1) / 36);
+          param0.a((byte) 7, this.field_i);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "an.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -35,17 +35,17 @@ final class an extends bd {
 
     final ch a(int param0) {
         if (param0 != 0) {
-            return (ch) null;
+          return (ch) null;
         }
         return k.field_q;
     }
 
     an(String param0, String param1) {
         try {
-            this.field_k = param0;
-            this.field_i = param1;
+          this.field_k = param0;
+          this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "an.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

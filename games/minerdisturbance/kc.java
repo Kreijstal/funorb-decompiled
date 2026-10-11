@@ -12,20 +12,18 @@ final class kc {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 16574) {
-          field_c = (String) null;
-          field_f = null;
-          field_e = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 16574) {
           field_f = null;
           field_e = null;
           field_c = null;
           field_b = null;
           return;
         }
+        field_c = (String) null;
+        field_f = null;
+        field_e = null;
+        field_c = null;
+        field_b = null;
     }
 
     static {

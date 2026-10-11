@@ -15,18 +15,16 @@ final class dd {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 >= -124) {
-          field_i = (t) null;
-          field_i = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 < -124) {
           field_i = null;
           field_e = null;
           field_b = null;
           return;
         }
+        field_i = (t) null;
+        field_i = null;
+        field_e = null;
+        field_b = null;
     }
 
     static {

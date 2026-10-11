@@ -10,10 +10,10 @@ final class oh {
 
     oh(on param0, long param1, qj[] param2) {
         try {
-            this.field_a = param0;
-            this.field_d = param1;
+          this.field_a = param0;
+          this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "oh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -21,7 +21,7 @@ final class oh {
         field_c = null;
         field_b = null;
         if (param0 != -60) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

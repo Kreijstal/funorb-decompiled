@@ -13,41 +13,28 @@ final class mf {
     static fi[] field_a;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
+        int var6 = 0;
         int var7;
         var7 = fleas.field_A ? 1 : 0;
-        var6 = -1 + this.field_f.length;
-        L0: while (true) {
-          if (-1 < (var6 ^ -1)) {
-            if (param3 == -4575) {
-              return;
-            } else {
-              this.a(-12, -98, -85, -78, -93);
-              return;
-            }
+        for (var6 = -1 + this.field_f.length; var6 >= 0; var6--) {
+          if (null == this.field_f[var6]) {
+            this.field_f[var6] = new nj(param2, param0, param1, param4, this.field_d);
           } else {
-            if (null == this.field_f[var6]) {
+            if (this.field_f[var6].b(param3 + 4522)) {
               this.field_f[var6] = new nj(param2, param0, param1, param4, this.field_d);
-              var6--;
-              continue L0;
-            } else {
-              if (this.field_f[var6].b(param3 + 4522)) {
-                this.field_f[var6] = new nj(param2, param0, param1, param4, this.field_d);
-                var6--;
-                continue L0;
-              } else {
-                var6--;
-                continue L0;
-              }
             }
           }
         }
+        if (param3 == -4575) {
+          return;
+        }
+        this.a(-12, -98, -85, -78, -93);
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 != -9) {
-            return;
+          return;
         }
         field_a = null;
         field_g = null;
@@ -55,37 +42,28 @@ final class mf {
     }
 
     final void a(int param0) {
-        int var2;
+        int var2 = 0;
         int var3;
         var3 = fleas.field_A ? 1 : 0;
-        var2 = this.field_f.length - param0;
-        L0: while (true) {
-          if ((var2 ^ -1) > -1) {
-            return;
-          } else {
-            if (null != this.field_f[var2]) {
-              this.field_f[var2].c(-55);
-              var2--;
-              continue L0;
-            } else {
-              var2--;
-              continue L0;
-            }
+        for (var2 = this.field_f.length - param0; var2 >= 0; var2--) {
+          if (null != this.field_f[var2]) {
+            this.field_f[var2].c(-55);
           }
         }
     }
 
     final static Boolean a(boolean param0) {
         Boolean var1 = null;
+        Boolean var1Lifetime1;
         if (!param0) {
-            field_b = (dd) null;
-            var1 = bb.field_A;
-            bb.field_A = null;
-            return var1;
+          field_b = (dd) null;
+          var1 = bb.field_A;
+          bb.field_A = null;
+          return var1;
         }
-        var1 = bb.field_A;
+        var1Lifetime1 = bb.field_A;
         bb.field_A = null;
-        return var1;
+        return var1Lifetime1;
     }
 
     mf(int param0, int param1) {
@@ -94,7 +72,7 @@ final class mf {
         this.field_f = new nj[param0];
         this.field_d = new int[255];
         for (var3 = 0; var3 < 255; var3++) {
-            this.field_d[var3] = var3 * 65793;
+          this.field_d[var3] = var3 * 65793;
         }
     }
 

@@ -10,7 +10,7 @@ final class aj {
     public static void a(byte param0) {
         field_a = null;
         if (param0 >= -36) {
-            aj.a((byte) -44);
+          aj.a((byte) -44);
         }
     }
 

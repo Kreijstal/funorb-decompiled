@@ -17,8 +17,8 @@ public class gq {
 
     public static File a(String param0, int param1) {
         if (param1 >= -118) {
-            field_d = (Hashtable) null;
-            return gq.a(0, field_a, param0, field_e);
+          field_d = (Hashtable) null;
+          return gq.a(0, field_a, param0, field_e);
         }
         return gq.a(0, field_a, param0, field_e);
     }
@@ -26,41 +26,23 @@ public class gq {
     public static void a(byte param0, String param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == -110) {
-          field_a = param2;
-          field_e = param1;
-          try {
-            L0: {
-              L1: {
-                field_b = System.getProperty("user.home");
-                if (field_b == null) {
-                  break L1;
-                } else {
-                  field_b = field_b + "/";
-                  break L1;
-                }
-              }
-              break L0;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            L2: {
-              exception = (Exception) (Object) decompiledCaughtException;
-              break L2;
-            }
-          }
-          L3: {
-            field_c = true;
-            if (field_b == null) {
-              field_b = "~/";
-              break L3;
-            } else {
-              break L3;
-            }
-          }
+        if (param0 != -110) {
           return;
-        } else {
-          return;
+        }
+        field_a = param2;
+        field_e = param1;
+        try {
+          field_b = System.getProperty("user.home");
+          if (field_b != null) {
+            field_b = field_b + "/";
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          exception = (Exception) (Object) decompiledCaughtException;
+        }
+        field_c = true;
+        if (field_b == null) {
+          field_b = "~/";
         }
     }
 

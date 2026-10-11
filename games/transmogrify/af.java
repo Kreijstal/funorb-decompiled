@@ -8,7 +8,7 @@ final class af {
     public static void a(byte param0) {
         field_a = null;
         if (param0 <= 6) {
-            af.a((byte) -19);
+          af.a((byte) -19);
         }
     }
 

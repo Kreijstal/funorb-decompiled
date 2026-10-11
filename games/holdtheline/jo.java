@@ -8,7 +8,7 @@ abstract class jo {
 
     public static void a(byte param0) {
         if (param0 != 108) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

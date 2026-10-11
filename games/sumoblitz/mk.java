@@ -9,9 +9,9 @@ final class mk {
 
     public static void a(int param0) {
         if (param0 != -25140) {
-            mk.a(-127);
-            field_d = null;
-            return;
+          mk.a(-127);
+          field_d = null;
+          return;
         }
         field_d = null;
     }
@@ -23,10 +23,10 @@ final class mk {
 
     mk(fr param0, long param1, int param2) {
         try {
-            this.field_c = param0;
-            this.field_b = param1;
+          this.field_c = param0;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

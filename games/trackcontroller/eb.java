@@ -11,170 +11,112 @@ final class eb extends wj {
     private long field_d;
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 == 10) {
-          if (param5 >= param0) {
-            if (param0 - -param3 > param5) {
-              if (param4 <= param1) {
-                if (param6 + param4 <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param2 != 10) {
           eb.a(74, -120, 53, -42, -35, 107, -25);
-          if (param5 >= param0) {
-            if (param0 - -param3 > param5) {
-              if (param4 <= param1) {
-                if (param6 + param4 <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (param5 < param0) {
             return false;
           }
+          if (param0 + param3 <= param5) {
+            return false;
+          }
+          if (param4 > param1) {
+            return false;
+          }
+          if (param6 + param4 > param1) {
+            return true;
+          }
+          return false;
         }
+        if (param5 < param0) {
+          return false;
+        }
+        if (param0 + param3 <= param5) {
+          return false;
+        }
+        if (param4 > param1) {
+          return false;
+        }
+        if (param6 + param4 > param1) {
+          return true;
+        }
+        return false;
     }
 
     final void b(int param0) {
-        L0: {
-          this.field_c = 0L;
-          if ((this.field_d ^ -1L) < (this.field_e ^ -1L)) {
-            this.field_e = this.field_e + (this.field_d + -this.field_e);
-            break L0;
-          } else {
-            break L0;
-          }
+        this.field_c = 0L;
+        if (this.field_d > this.field_e) {
+          this.field_e = this.field_e + (this.field_d - this.field_e);
         }
-        if (param0 != -19635) {
-          return;
-        } else {
+        if (param0 == -19635) {
           return;
         }
     }
 
     private final long d(int param0) {
-        long var2;
-        long var4;
-        long var6;
-        int var8;
-        int var9;
-        var9 = TrackController.field_F ? 1 : 0;
-        var2 = System.nanoTime();
-        if (param0 == -14942) {
-          var4 = var2 - this.field_c;
-          this.field_c = var2;
-          if (var4 > -5000000000L) {
-            if (-5000000001L >= (var4 ^ -1L)) {
-              var6 = 0L;
-              var8 = 1;
-              L0: while (true) {
-                if (this.field_h < var8) {
-                  return var6 / (long)this.field_h;
-                } else {
-                  var6 = var6 + this.field_g[(this.field_f + -var8 - -10) % 10];
-                  var8++;
-                  continue L0;
-                }
-              }
-            } else {
-              L1: {
-                this.field_g[this.field_f] = var4;
-                if (-2 < (this.field_h ^ -1)) {
-                  this.field_h = this.field_h + 1;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              this.field_f = (this.field_f + 1) % 10;
-              var6 = 0L;
-              var8 = 1;
-              L2: while (true) {
-                if (this.field_h < var8) {
-                  return var6 / (long)this.field_h;
-                } else {
-                  var6 = var6 + this.field_g[(this.field_f + -var8 - -10) % 10];
-                  var8++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            var6 = 0L;
-            var8 = 1;
-            L3: while (true) {
-              if (this.field_h < var8) {
-                return var6 / (long)this.field_h;
-              } else {
-                var6 = var6 + this.field_g[(this.field_f + -var8 - -10) % 10];
-                var8++;
-                continue L3;
-              }
-            }
-          }
-        } else {
+        long var4 = 0L;
+        long var6 = 0L;
+        int var8 = 0;
+        int var9 = TrackController.field_F ? 1 : 0;
+        long var2 = System.nanoTime();
+        long var4Lifetime1;
+        long var6Lifetime1;
+        long var6Lifetime2;
+        long var6Lifetime3;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var8Lifetime3;
+        long var6Lifetime4;
+        int var8Lifetime4;
+        if (param0 != -14942) {
           eb.a(-86, 37, 79, 90, 127, -32, 104);
           var4 = var2 - this.field_c;
           this.field_c = var2;
-          if (var4 <= -5000000000L) {
-            var6 = 0L;
-            var8 = 1;
-            L4: while (true) {
-              if (this.field_h < var8) {
-                return var6 / (long)this.field_h;
-              } else {
-                var6 = var6 + this.field_g[(this.field_f + -var8 - -10) % 10];
-                var8++;
-                continue L4;
+          if (var4 > -5000000000L) {
+            if (var4 < 5000000000L) {
+              this.field_g[this.field_f] = var4;
+              if (this.field_h < 1) {
+                this.field_h = this.field_h + 1;
               }
-            }
-          } else {
-            L5: {
-              if (-5000000001L < (var4 ^ -1L)) {
-                L6: {
-                  this.field_g[this.field_f] = var4;
-                  if (-2 < (this.field_h ^ -1)) {
-                    this.field_h = this.field_h + 1;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                this.field_f = (this.field_f + 1) % 10;
-                break L5;
-              } else {
-                break L5;
-              }
+              this.field_f = (this.field_f + 1) % 10;
             }
             var6 = 0L;
-            var8 = 1;
-            L7: while (true) {
-              if (this.field_h < var8) {
-                return var6 / (long)this.field_h;
-              } else {
-                var6 = var6 + this.field_g[(this.field_f + -var8 - -10) % 10];
-                var8++;
-                continue L7;
-              }
+            for (var8 = 1; this.field_h >= var8; var8++) {
+              var6 = var6 + this.field_g[(this.field_f - var8 + 10) % 10];
             }
+            return var6 / (long)this.field_h;
           }
+          var6Lifetime4 = 0L;
+          for (var8Lifetime4 = 1; this.field_h >= var8Lifetime4; var8Lifetime4++) {
+            var6Lifetime4 = var6Lifetime4 + this.field_g[(this.field_f - var8Lifetime4 + 10) % 10];
+          }
+          return var6Lifetime4 / (long)this.field_h;
         }
+        var4Lifetime1 = var2 - this.field_c;
+        this.field_c = var2;
+        if (var4Lifetime1 <= -5000000000L) {
+          var6Lifetime1 = 0L;
+          for (var8Lifetime1 = 1; this.field_h >= var8Lifetime1; var8Lifetime1++) {
+            var6Lifetime1 = var6Lifetime1 + this.field_g[(this.field_f - var8Lifetime1 + 10) % 10];
+          }
+          return var6Lifetime1 / (long)this.field_h;
+        }
+        if (var4Lifetime1 < 5000000000L) {
+          this.field_g[this.field_f] = var4Lifetime1;
+          if (this.field_h < 1) {
+            this.field_h = this.field_h + 1;
+          }
+          this.field_f = (this.field_f + 1) % 10;
+          var6Lifetime2 = 0L;
+          for (var8Lifetime2 = 1; this.field_h >= var8Lifetime2; var8Lifetime2++) {
+            var6Lifetime2 = var6Lifetime2 + this.field_g[(this.field_f - var8Lifetime2 + 10) % 10];
+          }
+          return var6Lifetime2 / (long)this.field_h;
+        }
+        var6Lifetime3 = 0L;
+        for (var8Lifetime3 = 1; this.field_h >= var8Lifetime3; var8Lifetime3++) {
+          var6Lifetime3 = var6Lifetime3 + this.field_g[(this.field_f - var8Lifetime3 + 10) % 10];
+        }
+        return var6Lifetime3 / (long)this.field_h;
     }
 
     final int a(int param0, long param1) {
@@ -182,81 +124,56 @@ final class eb extends wj {
         int var5;
         var5 = TrackController.field_F ? 1 : 0;
         if (param0 > 103) {
-          if (this.field_d <= this.field_e) {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                this.field_d = this.field_d + param1;
-                var4++;
-                if (var4 >= 10) {
-                  break L1;
-                } else {
-                  if (this.field_e > this.field_d) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              if ((this.field_e ^ -1L) < (this.field_d ^ -1L)) {
-                this.field_d = this.field_e;
-                return var4;
-              } else {
-                return var4;
-              }
-            }
-          } else {
+          if (this.field_d > this.field_e) {
             this.field_c = this.field_c + (-this.field_e + this.field_d);
             this.field_e = this.field_e + (-this.field_e + this.field_d);
             this.field_d = this.field_d + param1;
             return 1;
           }
-        } else {
-          this.field_h = 85;
-          if (this.field_d <= this.field_e) {
-            var4 = 0;
-            L2: while (true) {
-              L3: {
-                this.field_d = this.field_d + param1;
-                var4++;
-                if (var4 >= 10) {
-                  break L3;
-                } else {
-                  if (this.field_e > this.field_d) {
-                    continue L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              if ((this.field_e ^ -1L) >= (this.field_d ^ -1L)) {
-                return var4;
-              } else {
-                this.field_d = this.field_e;
-                return var4;
-              }
-            }
-          } else {
-            this.field_c = this.field_c + (-this.field_e + this.field_d);
-            this.field_e = this.field_e + (-this.field_e + this.field_d);
+          var4 = 0;
+          do {
             this.field_d = this.field_d + param1;
-            return 1;
+            var4++;
+          } while (var4 < 10 &&
+            this.field_e > this.field_d);
+          if (this.field_e <= this.field_d) {
+            return var4;
           }
+          this.field_d = this.field_e;
+          return var4;
         }
+        this.field_h = 85;
+        if (this.field_d > this.field_e) {
+          this.field_c = this.field_c + (-this.field_e + this.field_d);
+          this.field_e = this.field_e + (-this.field_e + this.field_d);
+          this.field_d = this.field_d + param1;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          this.field_d = this.field_d + param1;
+          var4++;
+        } while (var4 < 10 &&
+          this.field_e > this.field_d);
+        if (this.field_e <= this.field_d) {
+          return var4;
+        }
+        this.field_d = this.field_e;
+        return var4;
     }
 
     final long a(int param0) {
         if (param0 != -27042) {
-            this.b(120);
-            this.field_e = this.field_e + this.d(-14942);
-            if (!((this.field_e ^ -1L) <= (this.field_d ^ -1L))) {
-                return (this.field_d - this.field_e) / 1000000L;
-            }
-            return 0L;
+          this.b(120);
+          this.field_e = this.field_e + this.d(-14942);
+          if (this.field_e < this.field_d) {
+            return (this.field_d - this.field_e) / 1000000L;
+          }
+          return 0L;
         }
         this.field_e = this.field_e + this.d(-14942);
-        if (!((this.field_e ^ -1L) <= (this.field_d ^ -1L))) {
-            return (this.field_d - this.field_e) / 1000000L;
+        if (this.field_e < this.field_d) {
+          return (this.field_d - this.field_e) / 1000000L;
         }
         return 0L;
     }

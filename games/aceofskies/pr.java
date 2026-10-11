@@ -10,7 +10,7 @@ final class pr {
         field_b = null;
         field_a = null;
         if (param0 > -70) {
-            pr.a(-62);
+          pr.a(-62);
         }
     }
 

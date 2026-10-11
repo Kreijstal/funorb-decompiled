@@ -17,13 +17,13 @@ final class sb extends oh {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            param1.removeMouseListener(pd.field_j);
-            param1.removeMouseMotionListener(pd.field_j);
-            param1.removeFocusListener(pd.field_j);
-            v.field_d = 0;
-            int var2_int = -125 % ((param0 - -60) / 36);
+          param1.removeMouseListener(pd.field_j);
+          param1.removeMouseMotionListener(pd.field_j);
+          param1.removeFocusListener(pd.field_j);
+          v.field_d = 0;
+          int var2_int = -125 % ((param0 + 60) / 36);
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -40,8 +40,8 @@ final class sb extends oh {
         this.field_l = param0;
         this.field_k = param2;
         for (var9 = 0; var9 < 50; var9++) {
-            this.field_o[var9] = this.field_l;
-            this.field_i[var9] = this.field_n;
+          this.field_o[var9] = this.field_l;
+          this.field_i[var9] = this.field_n;
         }
         this.field_q = 0;
     }

@@ -31,137 +31,93 @@ abstract class uh {
     }
 
     final int e(int param0) {
-        if (param0 != -10236) {
-          this.c((byte) -50);
-          return this.field_a.a((byte) 16) - -this.field_n.a((byte) 16);
-        } else {
-          return this.field_a.a((byte) 16) - -this.field_n.a((byte) 16);
+        if (param0 == -10236) {
+          return this.field_a.a((byte) 16) + this.field_n.a((byte) 16);
         }
+        this.c((byte) -50);
+        return this.field_a.a((byte) 16) + this.field_n.a((byte) 16);
     }
 
     public static void c(int param0) {
-        lc var2;
-        if (param0 != -21) {
-          var2 = (lc) null;
-          uh.a((java.awt.Component) null, 16, -39, (fe) null, (lc) null, true);
-          field_d = null;
-          field_o = null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 == -21) {
           field_d = null;
           field_o = null;
           field_r = null;
           return;
         }
+        lc var2 = (lc) null;
+        uh.a((java.awt.Component) null, 16, -39, (fe) null, (lc) null, true);
+        field_d = null;
+        field_o = null;
+        field_r = null;
     }
 
     final boolean b(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 6) {
-          L0: {
-            field_q = -40;
-            if ((this.a((byte) 72) ^ -1) > -21) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((this.a((byte) 72) ^ -1) > -21) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 6) {
+          return this.a((byte) 72) >= 20 ? true : false;
         }
+        field_q = -40;
+        return this.a((byte) 72) >= 20 ? true : false;
     }
 
     final static void a(java.awt.Component param0, int param1, int param2, fe param3, lc param4, boolean param5) {
         try {
-            aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
-            if (param2 != -21) {
-                field_q = 117;
-            }
+          aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
+          if (param2 != -21) {
+            field_q = 117;
+          }
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "uh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "uh.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     final pj a(int param0, boolean param1, boolean param2, byte param3, int param4) {
         pj stackIn_2_0 = null;
-        pj stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
+        boolean stackIn_3_1 = false;
         long var6;
         pj var8;
         lc var9;
-        L0: {
-          var6 = (long)param4 + ((long)param0 << -2025316960);
-          var8 = new pj();
-          var8.field_z = param3;
-          stackIn_2_0 = (pj) (var8);
-
-          if (!param2) {
-            stackIn_3_0 = (pj) ((Object) stackIn_2_0);
-            stackIn_3_1 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = (pj) ((Object) stackIn_2_0);
-            stackIn_3_1 = 1;
-            break L0;
-          }
-        }
-        stackIn_3_0.field_p = stackIn_3_1 != 0;
+        var6 = (long)param4 + ((long)param0 << 32);
+        var8 = new pj();
+        var8.field_z = param3;
+        stackIn_2_0 = var8;
+        stackIn_3_1 = (!param2) ? false : true;
+        stackIn_2_0.field_p = stackIn_3_1;
         if (!param1) {
           var8.field_j = var6;
           if (param2) {
-            if (-21 >= (this.a((byte) -110) ^ -1)) {
+            if (this.a((byte) -110) >= 20) {
               throw new RuntimeException();
-            } else {
-              this.field_c.a((byte) -128, var8);
-              return var8;
             }
-          } else {
-            if (-21 >= (this.e(-10236) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_a.a((byte) -128, var8);
-              return var8;
-            }
+            this.field_c.a((byte) -128, var8);
+            return var8;
           }
-        } else {
-          var9 = (lc) null;
-          uh.a((java.awt.Component) null, -79, 112, (fe) null, (lc) null, false);
-          var8.field_j = var6;
-          if (param2) {
-            if (-21 >= (this.a((byte) -110) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_c.a((byte) -128, var8);
-              return var8;
-            }
-          } else {
-            if (-21 >= (this.e(-10236) ^ -1)) {
-              throw new RuntimeException();
-            } else {
-              this.field_a.a((byte) -128, var8);
-              return var8;
-            }
+          if (this.e(-10236) >= 20) {
+            throw new RuntimeException();
           }
+          this.field_a.a((byte) -128, var8);
+          return var8;
         }
+        var9 = (lc) null;
+        uh.a((java.awt.Component) null, -79, 112, (fe) null, (lc) null, false);
+        var8.field_j = var6;
+        if (param2) {
+          if (this.a((byte) -110) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_c.a((byte) -128, var8);
+          return var8;
+        }
+        if (this.e(-10236) >= 20) {
+          throw new RuntimeException();
+        }
+        this.field_a.a((byte) -128, var8);
+        return var8;
     }
 
     final boolean b(byte param0) {
         if (param0 < 68) {
-            return true;
+          return true;
         }
         return this.e(-10236) >= 20 ? true : false;
     }

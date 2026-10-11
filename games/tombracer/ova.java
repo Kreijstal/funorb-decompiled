@@ -8,7 +8,7 @@ final class ova extends me {
     public static void d(byte param0) {
         field_k = null;
         if (param0 > -35) {
-            return;
+          return;
         }
         field_j = null;
     }
@@ -19,14 +19,11 @@ final class ova extends me {
     }
 
     final void b(byte param0) {
-        int var2;
-        int var3;
-        int var4;
-        la var5;
-        var2 = 16777215;
-        if (param0 >= -13) {
-          return;
-        } else {
+        int var3 = 0;
+        int var4 = 0;
+        la var5 = null;
+        int var2 = 16777215;
+        if (param0 < -13) {
           var3 = 160;
           rba.a(192, 160, 3145728, 240, (byte) 22, var3, 200);
           tp.a(200, (byte) -85, var3, 5242880, 2, 160, 240);
@@ -42,18 +39,17 @@ final class ova extends me {
     }
 
     final static int a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (!param2) {
-          field_j = (String) null;
-          return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
-        } else {
+        if (param2) {
           return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
         }
+        field_j = (String) null;
+        return et.b(param1, param0, -81) - iia.d(param3, param4, 2);
     }
 
     final void a(byte param0) {
         if (param0 > -107) {
-            lu var3 = (lu) null;
-            ova.a((byte) 21, true, 36, (lu) null, true);
+          lu var3 = (lu) null;
+          ova.a((byte) 21, true, 36, (lu) null, true);
         }
     }
 
@@ -63,18 +59,18 @@ final class ova extends me {
 
     final boolean a(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final static boolean c(int param0) {
         if (param0 != 2) {
-            return false;
+          return false;
         }
         lqa var1 = uv.b(false);
         if (var1 == null) {
-            return false;
+          return false;
         }
         return var1.field_f;
     }
@@ -82,132 +78,75 @@ final class ova extends me {
     final static void a(byte param0, boolean param1, int param2, lu param3, boolean param4) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_27_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         String var7 = null;
         try {
-          L0: {
-            qi.field_K[0] = lpa.field_p.nextInt();
-            qi.field_K[1] = lpa.field_p.nextInt();
-            jg.field_a.field_h = 0;
-            qi.field_K[3] = (int)ra.field_L;
-            qi.field_K[2] = (int)(ra.field_L >> -1919320224);
-            jg.field_a.a(qi.field_K[0], (byte) 80);
-            jg.field_a.a(qi.field_K[1], (byte) 124);
-            jg.field_a.a(qi.field_K[2], (byte) -28);
-            if (param0 >= 19) {
-              L1: {
-                jg.field_a.a(qi.field_K[3], (byte) 104);
-                ni.a(jg.field_a, (byte) 77);
-                jg.field_a.f(-1477662136, param2);
-                param3.a(jg.field_a, false);
-                ql.field_k.field_h = 0;
-                if (!param1) {
-                  ql.field_k.i(16, 0);
-                  break L1;
-                } else {
-                  ql.field_k.i(18, 0);
-                  break L1;
-                }
-              }
-              L2: {
-                ql.field_k.field_h = ql.field_k.field_h + 2;
-                var5_int = ql.field_k.field_h;
-                ql.field_k.a(lr.field_c, (byte) 125);
-                ql.field_k.a(1736565456, du.field_h);
-                var6 = 0;
-                if (ft.field_a) {
-                  var6 = var6 | 1;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (q.field_r) {
-                  var6 = var6 | 4;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (param4) {
-                  var6 = var6 | 8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (ji.field_d != null) {
-                  var6 = var6 | 16;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              L6: {
-                ql.field_k.i(var6, 0);
-                var7 = qla.a(0, di.a(46));
-                if (var7 == null) {
-                  var7 = "";
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                ql.field_k.a(var7, false);
-                if (null == ji.field_d) {
-                  break L7;
-                } else {
-                  ql.field_k.a(ji.field_d, (byte) 0);
-                  break L7;
-                }
-              }
-              bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
-              ql.field_k.b(ql.field_k.field_h - var5_int, (byte) 114);
-              bl.a(-1, -1);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          qi.field_K[0] = lpa.field_p.nextInt();
+          qi.field_K[1] = lpa.field_p.nextInt();
+          jg.field_a.field_h = 0;
+          qi.field_K[3] = (int)ra.field_L;
+          qi.field_K[2] = (int)(ra.field_L >> 32);
+          jg.field_a.a(qi.field_K[0], (byte) 80);
+          jg.field_a.a(qi.field_K[1], (byte) 124);
+          jg.field_a.a(qi.field_K[2], (byte) -28);
+          if (param0 < 19) {
+            return;
           }
+          jg.field_a.a(qi.field_K[3], (byte) 104);
+          ni.a(jg.field_a, (byte) 77);
+          jg.field_a.f(-1477662136, param2);
+          param3.a(jg.field_a, false);
+          ql.field_k.field_h = 0;
+          if (!param1) {
+            ql.field_k.i(16, 0);
+          } else {
+            ql.field_k.i(18, 0);
+          }
+          ql.field_k.field_h = ql.field_k.field_h + 2;
+          var5_int = ql.field_k.field_h;
+          ql.field_k.a(lr.field_c, (byte) 125);
+          ql.field_k.a(1736565456, du.field_h);
+          var6 = 0;
+          if (ft.field_a) {
+            var6 = var6 | 1;
+          }
+          if (q.field_r) {
+            var6 = var6 | 4;
+          }
+          if (param4) {
+            var6 = var6 | 8;
+          }
+          if (ji.field_d != null) {
+            var6 = var6 | 16;
+          }
+          ql.field_k.i(var6, 0);
+          var7 = qla.a(0, di.a(46));
+          if (var7 == null) {
+            var7 = "";
+          }
+          ql.field_k.a(var7, false);
+          if (null != ji.field_d) {
+            ql.field_k.a(ji.field_d, (byte) 0);
+          }
+          bna.a(oca.field_a, false, c.field_f, ql.field_k, jg.field_a);
+          ql.field_k.b(ql.field_k.field_h - var5_int, (byte) 114);
+          bl.a(-1, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var5 = decompiledCaughtException;
-            stackIn_26_0 = (RuntimeException) (var5);
-
-            stackIn_26_1 = new StringBuilder().append("ova.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "null";
-              break L8;
-            } else {
-              stackIn_27_0 = (RuntimeException) ((Object) stackIn_26_0);
-              stackIn_27_1 = (StringBuilder) ((Object) stackIn_26_1);
-              stackIn_27_2 = "{...}";
-              break L8;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_26_0 = var5;
+          stackIn_26_1 = new StringBuilder().append("ova.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_27_0), stackIn_27_2 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(')').toString());
         }
     }
 

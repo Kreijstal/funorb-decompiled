@@ -6,11 +6,11 @@ final class kh implements io {
 
     public final void a(int param0, boolean param1, int param2, ga param3, int param4) {
         try {
-            if (param0 != 16777215) {
-                field_a = (vn) null;
-            }
+          if (param0 != 16777215) {
+            field_a = (vn) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "kh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class kh implements io {
         tm var2 = new tm(param0);
         kn.field_L.a(0, var2);
         if (param1) {
-            return (fn) null;
+          return (fn) null;
         }
         return var2.field_j;
     }

@@ -14,94 +14,76 @@ final class uf extends le {
 
     final void a(int param0, byte param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
         try {
-            this.field_h = param3;
-            this.field_j = param6;
-            this.field_l = param2;
-            this.field_i = param7;
-            this.field_m = param0;
-            this.field_k = param4;
-            this.field_p = param5;
-            if (param1 != -29) {
-                this.field_p = (int[]) null;
-            }
+          this.field_h = param3;
+          this.field_j = param6;
+          this.field_l = param2;
+          this.field_i = param7;
+          this.field_m = param0;
+          this.field_k = param4;
+          this.field_p = param5;
+          if (param1 != -29) {
+            this.field_p = (int[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sh.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
+          throw sh.a((Throwable) ((Object) runtimeException), "uf.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 > -17) {
-            field_n = (int[]) null;
-            field_n = null;
-            field_o = null;
-            return;
+          field_n = (int[]) null;
+          field_n = null;
+          field_o = null;
+          return;
         }
         field_n = null;
         field_o = null;
     }
 
     final static int a(int param0, int param1) {
-        L0: {
-          if (param1 == 12832) {
-            break L0;
-          } else {
-            uf.a(-45);
-            break L0;
-          }
+        if (param1 != 12832) {
+          uf.a(-45);
         }
-        if (((long)param0 ^ -1L) <= -65537L) {
-          if (((long)param0 ^ -1L) > -16777217L) {
-            if (((long)param0 ^ -1L) > -1048577L) {
-              if (((long)param0 ^ -1L) <= -262145L) {
-                return fo.field_a[param0 >> 134291244] >> 2011158982;
-              } else {
-                return fo.field_a[param0 >> -1570979094] >> 1068834599;
-              }
-            } else {
-              if (-4194305L < ((long)param0 ^ -1L)) {
-                return fo.field_a[param0 >> -1950894642] >> -486797179;
-              } else {
-                return fo.field_a[param0 >> 29300272] >> -963688860;
-              }
-            }
-          } else {
-            if (((long)param0 ^ -1L) <= -268435457L) {
-              if (((long)param0 ^ -1L) <= -1073741825L) {
-                return fo.field_a[param0 >> 768133944];
-              } else {
-                return fo.field_a[param0 >> -1316965162] >> -1550157759;
-              }
-            } else {
-              if ((long)param0 < 67108864L) {
-                return fo.field_a[param0 >> 1981898386] >> 2125788387;
-              } else {
-                return fo.field_a[param0 >> -1643216172] >> 709401602;
-              }
-            }
-          }
-        } else {
-          if (256L <= (long)param0) {
-            if ((long)param0 >= 4096L) {
-              if (-16385L < ((long)param0 ^ -1L)) {
-                return fo.field_a[param0 >> 1057038982] >> -1360169079;
-              } else {
-                return fo.field_a[param0 >> 1861873864] >> -1273087256;
-              }
-            } else {
-              if ((long)param0 < 1024L) {
-                return fo.field_a[param0 >> 198716194] >> 358742443;
-              } else {
-                return fo.field_a[param0 >> -50109884] >> -1062905878;
-              }
-            }
-          } else {
+        if ((long)param0 < 65536L) {
+          if (256L > (long)param0) {
             if (param0 >= 0) {
-              return fo.field_a[param0] >> -1519921492;
-            } else {
-              return -1;
+              return fo.field_a[param0] >> 12;
             }
+            return -1;
           }
+          if ((long)param0 >= 4096L) {
+            if ((long)param0 < 16384L) {
+              return fo.field_a[param0 >> 6] >> 9;
+            }
+            return fo.field_a[param0 >> 8] >> 8;
+          }
+          if ((long)param0 < 1024L) {
+            return fo.field_a[param0 >> 2] >> 11;
+          }
+          return fo.field_a[param0 >> 4] >> 10;
         }
+        if ((long)param0 < 16777216L) {
+          if ((long)param0 < 1048576L) {
+            if ((long)param0 >= 262144L) {
+              return fo.field_a[param0 >> 12] >> 6;
+            }
+            return fo.field_a[param0 >> 10] >> 7;
+          }
+          if ((long)param0 < 4194304L) {
+            return fo.field_a[param0 >> 14] >> 5;
+          }
+          return fo.field_a[param0 >> 16] >> 4;
+        }
+        if ((long)param0 >= 268435456L) {
+          if ((long)param0 >= 1073741824L) {
+            return fo.field_a[param0 >> 24];
+          }
+          return fo.field_a[param0 >> 22] >> 1;
+        }
+        if ((long)param0 < 67108864L) {
+          return fo.field_a[param0 >> 18] >> 3;
+        }
+        return fo.field_a[param0 >> 20] >> 2;
     }
 
     uf() {

@@ -11,59 +11,59 @@ class mfb {
 
     int g(byte param0) {
         if (param0 > -12) {
-            return 45;
+          return 45;
         }
         return 0;
     }
 
     int a(boolean param0) {
         if (param0) {
-            field_a = true;
-            return -1;
+          field_a = true;
+          return -1;
         }
         return -1;
     }
 
     boolean h(int param0) {
         if (param0 != -2291) {
-            this.d(62);
-            return false;
+          this.d(62);
+          return false;
         }
         return false;
     }
 
     boolean h(byte param0) {
         if (param0 < 18) {
-            field_a = true;
-            return true;
+          field_a = true;
+          return true;
         }
         return true;
     }
 
     int a(byte param0) {
-        int var2 = 66 % ((param0 - -48) / 43);
+        int var2 = 66 % ((param0 + 48) / 43);
         return oq.field_x;
     }
 
     int f(int param0) {
         if (param0 != 1024) {
-            this.f((byte) 1);
-            return 0;
+          this.f((byte) 1);
+          return 0;
         }
         return 0;
     }
 
     int a(int param0) {
         if (param0 != 0) {
-            field_a = false;
-            return 50;
+          field_a = false;
+          return 50;
         }
         return 50;
     }
 
     int f(byte param0) {
         if (param0 <= 0) {
-            return -15;
+          return -15;
         }
         return 0;
     }
@@ -75,15 +75,15 @@ class mfb {
 
     int c(int param0) {
         if (param0 != 0) {
-            return -113;
+          return -113;
         }
         return 128;
     }
 
     int k(int param0) {
         if (param0 != 0) {
-            this.f(-94);
-            return 0;
+          this.f(-94);
+          return 0;
         }
         return 0;
     }
@@ -92,80 +92,55 @@ class mfb {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (fja.field_p == null) {
-                break L1;
-              } else {
-                fja.field_p.field_C.a(args, 0);
-                break L1;
-              }
-            }
-            L2: {
-              if (null != fib.field_j) {
-                fib.field_j.field_v.a(args, param1 + -11113);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (param1 == 11113) {
-              break L0;
-            } else {
-              field_a = false;
-              return;
-            }
+          if (fja.field_p != null) {
+            fja.field_p.field_C.a(args, 0);
           }
+          if (null != fib.field_j) {
+            fib.field_j.field_v.a(args, param1 - 11113);
+          }
+          if (param1 == 11113) {
+            return;
+          }
+          field_a = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("mfb.U(");
-
-            if (args == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("mfb.U(");
+          if (args == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final int d(int param0) {
         if (param0 != 27918) {
-            this.c(84);
-            return lob.field_b;
+          this.c(84);
+          return lob.field_b;
         }
         return lob.field_b;
     }
 
     int b(byte param0) {
         if (param0 <= 27) {
-            field_a = true;
-            return 0;
+          field_a = true;
+          return 0;
         }
         return 0;
     }
 
     int b(boolean param0) {
         if (param0) {
-            String[] var3 = (String[]) null;
-            mfb.a((String[]) null, 41);
-            return 1;
+          String[] var3 = (String[]) null;
+          mfb.a((String[]) null, 41);
+          return 1;
         }
         return 1;
     }
@@ -177,30 +152,30 @@ class mfb {
 
     int g(int param0) {
         if (param0 != 2769) {
-            return 83;
+          return 83;
         }
         return 5;
     }
 
     boolean c(boolean param0) {
         if (!param0) {
-            field_a = false;
-            return false;
+          field_a = false;
+          return false;
         }
         return false;
     }
 
     boolean i(int param0) {
         if (param0 != 1024) {
-            return true;
+          return true;
         }
         return false;
     }
 
     int d(byte param0) {
         if (param0 >= -52) {
-            this.c((byte) 118);
-            return 256;
+          this.c((byte) 118);
+          return 256;
         }
         return 256;
     }
@@ -212,8 +187,8 @@ class mfb {
 
     int e(byte param0) {
         if (param0 != -63) {
-            field_a = true;
-            return 0;
+          field_a = true;
+          return 0;
         }
         return 0;
     }

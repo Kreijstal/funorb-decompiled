@@ -7,7 +7,7 @@ final class wca extends mfb {
 
     final int k(int param0) {
         if (param0 != 0) {
-            return -53;
+          return -53;
         }
         return 4;
     }
@@ -16,13 +16,13 @@ final class wca extends mfb {
         field_c = null;
         field_b = null;
         if (param0 > -27) {
-            wca.l(-69);
+          wca.l(-69);
         }
     }
 
     final int d(byte param0) {
         if (param0 > -52) {
-            return 7;
+          return 7;
         }
         return ftb.field_o;
     }
@@ -42,52 +42,52 @@ final class wca extends mfb {
 
     final int f(byte param0) {
         if (param0 <= 0) {
-            return 27;
+          return 27;
         }
         return qea.field_q;
     }
 
     final int a(boolean param0) {
         if (param0) {
-            return -97;
+          return -97;
         }
         return 42;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            field_b = (dla) null;
-            return nnb.field_e;
+          field_b = (dla) null;
+          return nnb.field_e;
         }
         return nnb.field_e;
     }
 
     final int g(byte param0) {
         if (param0 >= -12) {
-            field_c = (String) null;
-            return itb.field_o;
+          field_c = (String) null;
+          return itb.field_o;
         }
         return itb.field_o;
     }
 
     final int a(int param0) {
         if (param0 != 0) {
-            return 87;
+          return 87;
         }
         return spa.field_a;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            this.g(-21);
-            return fj.field_b;
+          this.g(-21);
+          return fj.field_b;
         }
         return fj.field_b;
     }
 
     final int g(int param0) {
         if (param0 != 2769) {
-            return -80;
+          return -80;
         }
         return jtb.field_m;
     }

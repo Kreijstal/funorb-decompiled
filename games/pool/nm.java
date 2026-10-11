@@ -13,7 +13,7 @@ final class nm {
 
     final static void a(byte param0) {
         if (param0 != 41) {
-            return;
+          return;
         }
         qa.a(true, re.field_d, -104, eo.field_Rb);
         to.field_q = true;
@@ -22,17 +22,17 @@ final class nm {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         nj.a(this.field_h, (byte) -72, param0, param3, param1, param4);
         if (param2 != -6316) {
-            nm.a((byte) -25);
+          nm.a((byte) -25);
         }
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            nm.a(true);
-            field_a = null;
-            field_g = null;
-            field_d = null;
-            return;
+          nm.a(true);
+          field_a = null;
+          field_g = null;
+          field_d = null;
+          return;
         }
         field_a = null;
         field_g = null;
@@ -41,9 +41,9 @@ final class nm {
 
     nm(dd[] param0) {
         try {
-            this.field_h = param0;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "nm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,7 +11,7 @@ final class kha extends bw {
 
     final void c(byte param0) {
         this.field_g = this.field_g - 1;
-        int var2 = 41 % ((param0 - -14) / 40);
+        int var2 = 41 % ((param0 + 14) / 40);
     }
 
     kha(int param0, int param1) {
@@ -21,10 +21,10 @@ final class kha extends bw {
 
     public static void a(int param0) {
         if (param0 > -111) {
-            kha.a(36);
-            field_j = null;
-            field_i = null;
-            return;
+          kha.a(36);
+          field_j = null;
+          field_i = null;
+          return;
         }
         field_j = null;
         field_i = null;

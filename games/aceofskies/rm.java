@@ -14,25 +14,25 @@ final class rm {
         field_g = null;
         field_c = null;
         if (param0 <= 109) {
-            field_g = (int[]) null;
+          field_g = (int[]) null;
         }
     }
 
     final static boolean a(int param0) {
-        if (!((ag.field_s ^ -1) != param0)) {
-            if (!(wo.a(1, true))) {
-                return false;
-            }
-            ag.field_s = nm.field_c.g(43);
-            nm.field_c.field_g = 0;
-        }
-        if (!((ag.field_s ^ -1) != 1)) {
-            if (wo.a(2, true)) {
-                ag.field_s = nm.field_c.i((byte) 0);
-                nm.field_c.field_g = 0;
-                return wo.a(ag.field_s, true);
-            }
+        if (~ag.field_s == param0) {
+          if (!wo.a(1, true)) {
             return false;
+          }
+          ag.field_s = nm.field_c.g(43);
+          nm.field_c.field_g = 0;
+        }
+        if (ag.field_s == -2) {
+          if (wo.a(2, true)) {
+            ag.field_s = nm.field_c.i((byte) 0);
+            nm.field_c.field_g = 0;
+            return wo.a(ag.field_s, true);
+          }
+          return false;
         }
         return wo.a(ag.field_s, true);
     }

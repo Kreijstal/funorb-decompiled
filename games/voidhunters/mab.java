@@ -18,24 +18,22 @@ abstract class mab {
     final void a(byte param0) {
         dma.a(this.field_c, this.field_d, this.field_b);
         if (param0 != -108) {
-            java.awt.Component var3 = (java.awt.Component) null;
-            this.a(-98, 3, (java.awt.Component) null, (byte) -19);
+          java.awt.Component var3 = (java.awt.Component) null;
+          this.a(-98, 3, (java.awt.Component) null, (byte) -19);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -23483) {
-          mab.a(83);
-          field_e = null;
-          field_a = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -23483) {
           field_e = null;
           field_a = null;
           field_h = null;
           return;
         }
+        mab.a(83);
+        field_e = null;
+        field_a = null;
+        field_h = null;
     }
 
     static {

@@ -20,163 +20,112 @@ final class gd {
     final static String a(boolean param0, int param1, int param2, int param3) {
         int var4;
         int var5;
-        if (param3 > 0) {
-          if (!param0) {
-            if (-1 == (param1 ^ -1)) {
-              var4 = param3 % 100;
-              if (-12 < (var4 ^ -1)) {
-                var5 = param3 % 10;
-                if ((var5 ^ -1) == -2) {
-                  return param3 + "st";
-                } else {
-                  if (var5 == 2) {
-                    return param3 + "nd";
-                  } else {
-                    if ((var5 ^ -1) == -4) {
-                      return param3 + "rd";
-                    } else {
-                      return param3 + "th";
-                    }
-                  }
-                }
-              } else {
-                if (-14 > (var4 ^ -1)) {
-                  var5 = param3 % 10;
-                  if ((var5 ^ -1) == -2) {
-                    return param3 + "st";
-                  } else {
-                    if (var5 == 2) {
-                      return param3 + "nd";
-                    } else {
-                      if ((var5 ^ -1) == -4) {
-                        return param3 + "rd";
-                      } else {
-                        return param3 + "th";
-                      }
-                    }
-                  }
-                } else {
-                  return param3 + "th";
-                }
-              }
-            } else {
-              if ((param1 ^ -1) == -2) {
-                return param3 + ".";
-              } else {
-                if (2 != param1) {
-                  if (-4 != (param1 ^ -1)) {
-                    if ((param1 ^ -1) != -5) {
-                      throw new IllegalArgumentException("Unsupported language " + param1);
-                    } else {
-                      return param3 + "e";
-                    }
-                  } else {
-                    if ((param2 ^ -1) != -3) {
-                      return param3 + "º";
-                    } else {
-                      return param3 + "ª";
-                    }
-                  }
-                } else {
-                  if (-2 == (param3 ^ -1)) {
-                    if (2 != param2) {
-                      return param3 + "er";
-                    } else {
-                      return param3 + "ère";
-                    }
-                  } else {
-                    return param3 + "ème";
-                  }
-                }
-              }
-            }
-          } else {
-            gd.a(false, 12, -120, -73);
-            if (-1 == (param1 ^ -1)) {
-              var4 = param3 % 100;
-              if (-12 >= (var4 ^ -1)) {
-                if (-14 <= (var4 ^ -1)) {
-                  return param3 + "th";
-                } else {
-                  var5 = param3 % 10;
-                  if ((var5 ^ -1) == -2) {
-                    return param3 + "st";
-                  } else {
-                    if (var5 == 2) {
-                      return param3 + "nd";
-                    } else {
-                      if ((var5 ^ -1) == -4) {
-                        return param3 + "rd";
-                      } else {
-                        return param3 + "th";
-                      }
-                    }
-                  }
-                }
-              } else {
-                var5 = param3 % 10;
-                if ((var5 ^ -1) == -2) {
-                  return param3 + "st";
-                } else {
-                  if (var5 == 2) {
-                    return param3 + "nd";
-                  } else {
-                    if ((var5 ^ -1) == -4) {
-                      return param3 + "rd";
-                    } else {
-                      return param3 + "th";
-                    }
-                  }
-                }
-              }
-            } else {
-              if ((param1 ^ -1) == -2) {
-                return param3 + ".";
-              } else {
-                if (2 != param1) {
-                  if (-4 != (param1 ^ -1)) {
-                    if ((param1 ^ -1) == -5) {
-                      return param3 + "e";
-                    } else {
-                      throw new IllegalArgumentException("Unsupported language " + param1);
-                    }
-                  } else {
-                    if ((param2 ^ -1) != -3) {
-                      return param3 + "º";
-                    } else {
-                      return param3 + "ª";
-                    }
-                  }
-                } else {
-                  if (-2 == (param3 ^ -1)) {
-                    if (2 != param2) {
-                      return param3 + "er";
-                    } else {
-                      return param3 + "ère";
-                    }
-                  } else {
-                    return param3 + "ème";
-                  }
-                }
-              }
-            }
-          }
-        } else {
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        if (param3 <= 0) {
           throw new IllegalArgumentException("Can only get ordinal for positive numbers");
         }
+        if (param0) {
+          gd.a(false, 12, -120, -73);
+          if (param1 == 0) {
+            var4 = param3 % 100;
+            if (var4 >= 11 &&
+              var4 <= 13) {
+              return param3 + "th";
+            }
+            var5 = param3 % 10;
+            if (var5 == 1) {
+              return param3 + "st";
+            }
+            if (var5 == 2) {
+              return param3 + "nd";
+            }
+            if (var5 == 3) {
+              return param3 + "rd";
+            }
+            return param3 + "th";
+          }
+          if (param1 == 1) {
+            return param3 + ".";
+          }
+          if (2 == param1) {
+            if (param3 != 1) {
+              return param3 + "ème";
+            }
+            if (2 != param2) {
+              return param3 + "er";
+            }
+            return param3 + "ère";
+          }
+          if (param1 != 3) {
+            if (param1 == 4) {
+              return param3 + "e";
+            }
+            throw new IllegalArgumentException("Unsupported language " + param1);
+          }
+          if (param2 != 2) {
+            return param3 + "º";
+          }
+          return param3 + "ª";
+        }
+        if (param1 != 0) {
+          if (param1 == 1) {
+            return param3 + ".";
+          }
+          if (2 == param1) {
+            if (param3 != 1) {
+              return param3 + "ème";
+            }
+            if (2 != param2) {
+              return param3 + "er";
+            }
+            return param3 + "ère";
+          }
+          if (param1 != 3) {
+            if (param1 != 4) {
+              throw new IllegalArgumentException("Unsupported language " + param1);
+            }
+            return param3 + "e";
+          }
+          if (param2 != 2) {
+            return param3 + "º";
+          }
+          return param3 + "ª";
+        }
+        var4Lifetime1 = param3 % 100;
+        if (var4Lifetime1 < 11) {
+          var5Lifetime1 = param3 % 10;
+          if (var5Lifetime1 == 1) {
+            return param3 + "st";
+          }
+          if (var5Lifetime1 == 2) {
+            return param3 + "nd";
+          }
+          if (var5Lifetime1 == 3) {
+            return param3 + "rd";
+          }
+          return param3 + "th";
+        }
+        if (var4Lifetime1 <= 13) {
+          return param3 + "th";
+        }
+        var5Lifetime2 = param3 % 10;
+        if (var5Lifetime2 == 1) {
+          return param3 + "st";
+        }
+        if (var5Lifetime2 == 2) {
+          return param3 + "nd";
+        }
+        if (var5Lifetime2 == 3) {
+          return param3 + "rd";
+        }
+        return param3 + "th";
     }
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != -118) {
-          gd.a(90, -20, -14, (byte) 115);
-          field_i = null;
-          field_g = null;
-          field_d = null;
-          field_h = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == -118) {
           field_i = null;
           field_g = null;
           field_d = null;
@@ -184,6 +133,12 @@ final class gd {
           field_a = null;
           return;
         }
+        gd.a(90, -20, -14, (byte) 115);
+        field_i = null;
+        field_g = null;
+        field_d = null;
+        field_h = null;
+        field_a = null;
     }
 
     static {

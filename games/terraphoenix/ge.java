@@ -15,7 +15,7 @@ final class ge {
         field_c = null;
         field_a = null;
         if (param0 <= -102) {
-            return;
+          return;
         }
         field_b = -22;
     }
@@ -26,49 +26,30 @@ final class ge {
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var3_intLifetime1;
         var4 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (param0 == -1) {
-              L1: {
-                if (param1 <= param2) {
-                  break L1;
-                } else {
-                  var3_int = param2;
-                  param2 = param1;
-                  param1 = var3_int;
-                  break L1;
-                }
-              }
-              L2: while (true) {
-                if (-1 == (param1 ^ -1)) {
-                  stackIn_9_0 = param2;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var3_int = param2 % param1;
-                  param2 = param1;
-                  param1 = var3_int;
-                  continue L2;
-                }
-              }
-            } else {
-              stackIn_3_0 = -89;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != -1) {
+            stackIn_3_0 = -89;
+            return stackIn_3_0;
           }
+          if (param1 > param2) {
+            var3_int = param2;
+            param2 = param1;
+            param1 = var3_int;
+          }
+          while (param1 != 0) {
+            var3_intLifetime1 = param2 % param1;
+            param2 = param1;
+            param1 = var3_intLifetime1;
+          }
+          stackIn_9_0 = param2;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw qk.a((Throwable) ((Object) var3), "ge.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_9_0;
         }
     }
 

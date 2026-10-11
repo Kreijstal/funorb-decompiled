@@ -13,9 +13,9 @@ final class dj {
         field_b = null;
         field_c = null;
         if (param0 != 16363) {
-            dj.a(7);
-            field_d = null;
-            return;
+          dj.a(7);
+          field_d = null;
+          return;
         }
         field_d = null;
     }

@@ -17,73 +17,56 @@ final class na {
 
     final static void a(int param0, int param1, int param2, pb[] param3) {
         try {
-            eh.field_a = new qc(param3);
-            sa.field_h = param2;
-            if (param1 != 256) {
-                na.a(67, 84, 117, false, true, true);
-            }
-            ka.field_q = param0;
-            tf.a(0);
+          eh.field_a = new qc(param3);
+          sa.field_h = param2;
+          if (param1 != 256) {
+            na.a(67, 84, 117, false, true, true);
+          }
+          ka.field_q = param0;
+          tf.a(0);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "na.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "na.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     private final void d(int param0) {
-        int fieldTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
-        L0: {
-          var5 = stellarshard.field_B;
-          fieldTemp$0 = this.field_c + 1;
-          this.field_c = this.field_c + 1;
-          this.field_i = this.field_i + fieldTemp$0;
-          var2 = 0;
-          if (param0 >= 113) {
-            break L0;
-          } else {
-            this.d(20);
-            break L0;
-          }
+        var5 = stellarshard.field_B;
+        int fieldTemp$0 = this.field_c + 1;
+        this.field_c = this.field_c + 1;
+        this.field_i = this.field_i + fieldTemp$0;
+        var2 = 0;
+        if (param0 < 113) {
+          this.d(20);
         }
-        L1: while (true) {
-          if (var2 >= 256) {
-            return;
-          } else {
-            L2: {
-              var3 = this.field_g[var2];
-              if (0 != (2 & var2)) {
-                if (-1 == (var2 & 1 ^ -1)) {
-                  this.field_f = this.field_f ^ this.field_f << -1564717726;
-                  break L2;
-                } else {
-                  this.field_f = this.field_f ^ this.field_f >>> 442674960;
-                  break L2;
-                }
-              } else {
-                if (0 == (1 & var2)) {
-                  this.field_f = this.field_f ^ this.field_f << 101641421;
-                  break L2;
-                } else {
-                  this.field_f = this.field_f ^ this.field_f >>> -1451562234;
-                  break L2;
-                }
-              }
+        while (var2 < 256) {
+          var3 = this.field_g[var2];
+          if (0 != (2 & var2)) {
+            if ((var2 & 1) == 0) {
+              this.field_f = this.field_f ^ this.field_f << 2;
+            } else {
+              this.field_f = this.field_f ^ this.field_f >>> 16;
             }
-            this.field_f = this.field_f + this.field_g[128 + var2 & 255];
-            dupTemp$1 = this.field_f + this.field_g[sa.a(var3 >> 937937890, 255)] + this.field_i;
-            var4 = dupTemp$1;
-            this.field_g[var2] = dupTemp$1;
-            dupTemp$2 = var3 + this.field_g[sa.a(1020, var4 >> 415082504) >> -1184775454];
-            this.field_i = dupTemp$2;
-            this.field_h[var2] = dupTemp$2;
-            var2++;
-            continue L1;
+          } else {
+            if (0 == (1 & var2)) {
+              this.field_f = this.field_f ^ this.field_f << 13;
+            } else {
+              this.field_f = this.field_f ^ this.field_f >>> 6;
+            }
           }
+          this.field_f = this.field_f + this.field_g[128 + var2 & 255];
+          dupTemp$1 = this.field_f + this.field_g[sa.a(var3 >> 2, 255)] + this.field_i;
+          var4 = dupTemp$1;
+          this.field_g[var2] = dupTemp$1;
+          dupTemp$2 = var3 + this.field_g[sa.a(1020, var4 >> 8) >> 2];
+          this.field_i = dupTemp$2;
+          this.field_h[var2] = dupTemp$2;
+          var2++;
         }
     }
 
@@ -96,120 +79,122 @@ final class na {
         int var5 = -1640531527;
         int var9 = -1640531527;
         int var8 = -1640531527;
+        int var2Lifetime1;
+        int var2Lifetime2;
         if (param0 != 1301311304) {
-            field_a = -6;
+          field_a = -6;
         }
         int var6 = -1640531527;
         int var7 = -1640531527;
-        for (var2 = 0; -5 < (var2 ^ -1); var2++) {
-            var3 = var3 ^ var4 << 687389163;
-            var6 = var6 + var3;
-            var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> -1940095134;
-            var7 = var7 + var4;
-            var5 = var5 + var6;
-            var5 = var5 ^ var6 << -609392408;
-            var6 = var6 + var7;
-            var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> 1151468944;
-            var7 = var7 + var8;
-            var9 = var9 + var6;
-            var7 = var7 ^ var8 << 249775722;
-            var10 = var10 + var7;
-            var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> 1177742628;
-            var3 = var3 + var8;
-            var9 = var9 + var10;
-            var9 = var9 ^ var10 << -933280216;
-            var10 = var10 + var3;
-            var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> -284536311;
-            var5 = var5 + var10;
-            var3 = var3 + var4;
+        for (var2 = 0; var2 < 4; var2++) {
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var7 = var7 + var4;
+          var5 = var5 + var6;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var7 = var7 + var8;
+          var9 = var9 + var6;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var10 = var10 + var3;
+          var4 = var4 + var9;
+          var10 = var10 ^ var3 >>> 9;
+          var5 = var5 + var10;
+          var3 = var3 + var4;
         }
-        for (var2 = 0; -257 < (var2 ^ -1); var2 += 8) {
-            var4 = var4 + this.field_h[var2 - -1];
-            var7 = var7 + this.field_h[var2 + 4];
-            var10 = var10 + this.field_h[var2 + 7];
-            var8 = var8 + this.field_h[5 + var2];
-            var6 = var6 + this.field_h[var2 - -3];
-            var9 = var9 + this.field_h[6 + var2];
-            var5 = var5 + this.field_h[2 + var2];
-            var3 = var3 + this.field_h[var2];
-            var3 = var3 ^ var4 << -228956501;
-            var4 = var4 + var5;
-            var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -609265118;
-            var5 = var5 + var6;
-            var7 = var7 + var4;
-            var5 = var5 ^ var6 << -1934787544;
-            var6 = var6 + var7;
-            var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1479679568;
-            var9 = var9 + var6;
-            var7 = var7 + var8;
-            var7 = var7 ^ var8 << -24668310;
-            var8 = var8 + var9;
-            var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 111720900;
-            var3 = var3 + var8;
-            var9 = var9 + var10;
-            var9 = var9 ^ var10 << -1927956344;
-            var10 = var10 + var3;
-            var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> -2007241687;
-            var3 = var3 + var4;
-            var5 = var5 + var10;
-            this.field_g[var2] = var3;
-            this.field_g[1 + var2] = var4;
-            this.field_g[var2 + 2] = var5;
-            this.field_g[3 + var2] = var6;
-            this.field_g[4 + var2] = var7;
-            this.field_g[var2 + 5] = var8;
-            this.field_g[6 + var2] = var9;
-            this.field_g[var2 + 7] = var10;
+        for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
+          var4 = var4 + this.field_h[var2Lifetime1 + 1];
+          var7 = var7 + this.field_h[var2Lifetime1 + 4];
+          var10 = var10 + this.field_h[var2Lifetime1 + 7];
+          var8 = var8 + this.field_h[5 + var2Lifetime1];
+          var6 = var6 + this.field_h[var2Lifetime1 + 3];
+          var9 = var9 + this.field_h[6 + var2Lifetime1];
+          var5 = var5 + this.field_h[2 + var2Lifetime1];
+          var3 = var3 + this.field_h[var2Lifetime1];
+          var3 = var3 ^ var4 << 11;
+          var4 = var4 + var5;
+          var6 = var6 + var3;
+          var4 = var4 ^ var5 >>> 2;
+          var5 = var5 + var6;
+          var7 = var7 + var4;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var8 = var8 + var9;
+          var10 = var10 + var7;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var10 = var10 + var3;
+          var4 = var4 + var9;
+          var10 = var10 ^ var3 >>> 9;
+          var3 = var3 + var4;
+          var5 = var5 + var10;
+          this.field_g[var2Lifetime1] = var3;
+          this.field_g[1 + var2Lifetime1] = var4;
+          this.field_g[var2Lifetime1 + 2] = var5;
+          this.field_g[3 + var2Lifetime1] = var6;
+          this.field_g[4 + var2Lifetime1] = var7;
+          this.field_g[var2Lifetime1 + 5] = var8;
+          this.field_g[6 + var2Lifetime1] = var9;
+          this.field_g[var2Lifetime1 + 7] = var10;
         }
-        for (var2 = 0; var2 < 256; var2 += 8) {
-            var7 = var7 + this.field_g[4 + var2];
-            var10 = var10 + this.field_g[var2 + 7];
-            var4 = var4 + this.field_g[var2 + 1];
-            var8 = var8 + this.field_g[5 + var2];
-            var3 = var3 + this.field_g[var2];
-            var9 = var9 + this.field_g[var2 + 6];
-            var5 = var5 + this.field_g[var2 + 2];
-            var6 = var6 + this.field_g[3 + var2];
-            var3 = var3 ^ var4 << -525578229;
-            var6 = var6 + var3;
-            var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 1569970690;
-            var7 = var7 + var4;
-            var5 = var5 + var6;
-            var5 = var5 ^ var6 << 265629384;
-            var6 = var6 + var7;
-            var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1979210352;
-            var7 = var7 + var8;
-            var9 = var9 + var6;
-            var7 = var7 ^ var8 << -174994422;
-            var10 = var10 + var7;
-            var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -1700292252;
-            var3 = var3 + var8;
-            var9 = var9 + var10;
-            var9 = var9 ^ var10 << 1301311304;
-            var10 = var10 + var3;
-            var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> 1164307913;
-            var5 = var5 + var10;
-            var3 = var3 + var4;
-            this.field_g[var2] = var3;
-            this.field_g[1 + var2] = var4;
-            this.field_g[2 + var2] = var5;
-            this.field_g[3 + var2] = var6;
-            this.field_g[var2 - -4] = var7;
-            this.field_g[5 + var2] = var8;
-            this.field_g[6 + var2] = var9;
-            this.field_g[var2 - -7] = var10;
+        for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
+          var7 = var7 + this.field_g[4 + var2Lifetime2];
+          var10 = var10 + this.field_g[var2Lifetime2 + 7];
+          var4 = var4 + this.field_g[var2Lifetime2 + 1];
+          var8 = var8 + this.field_g[5 + var2Lifetime2];
+          var3 = var3 + this.field_g[var2Lifetime2];
+          var9 = var9 + this.field_g[var2Lifetime2 + 6];
+          var5 = var5 + this.field_g[var2Lifetime2 + 2];
+          var6 = var6 + this.field_g[3 + var2Lifetime2];
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var7 = var7 + var4;
+          var5 = var5 + var6;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var7 = var7 + var8;
+          var9 = var9 + var6;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var10 = var10 + var3;
+          var4 = var4 + var9;
+          var10 = var10 ^ var3 >>> 9;
+          var5 = var5 + var10;
+          var3 = var3 + var4;
+          this.field_g[var2Lifetime2] = var3;
+          this.field_g[1 + var2Lifetime2] = var4;
+          this.field_g[2 + var2Lifetime2] = var5;
+          this.field_g[3 + var2Lifetime2] = var6;
+          this.field_g[var2Lifetime2 + 4] = var7;
+          this.field_g[5 + var2Lifetime2] = var8;
+          this.field_g[6 + var2Lifetime2] = var9;
+          this.field_g[var2Lifetime2 + 7] = var10;
         }
         this.d(116);
         this.field_b = 256;
@@ -217,90 +202,57 @@ final class na {
 
     final static pf a(int param0, int param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            wc var8 = null;
-            pf stackIn_16_0 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  var6 = null;
-                  if (null != fa.field_p.field_f) {
-                    ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
-                    fa.field_p.field_f = null;
-                    var6 = new gi(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  var7 = null;
-                  if (null == ma.field_s) {
-                    break L2;
-                  } else {
-                    L3: {
-                      if (df.field_d != null) {
-                        break L3;
-                      } else {
-                        df.field_d = new pc[fa.field_p.field_l.length];
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (null == df.field_d[param2]) {
-                        df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
-                        fa.field_p.field_l[param2] = null;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    var7 = new gi(param2, ma.field_s, df.field_d[param2], 2097152);
-                    break L2;
-                  }
-                }
-                L5: {
-                  if (param1 == 255) {
-                    break L5;
-                  } else {
-                    field_e = (pb) null;
-                    break L5;
-                  }
-                }
-                L6: {
-                  var8 = mc.field_c.a(64, (gi) (var7), (gi) (var6), param4, param2);
-                  if (param3) {
-                    var8.d(2);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                stackIn_16_0 = new pf(var8, param5, param0);
-                break L0;
-              }
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) (var6)).toString());
+          Object var6 = null;
+          Object var7 = null;
+          wc var8 = null;
+          pf stackIn_16_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            var6 = null;
+            if (null != fa.field_p.field_f) {
+              ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
+              fa.field_p.field_f = null;
+              var6 = new gi(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
             }
+            var7 = null;
+            if (null != ma.field_s) {
+              if (df.field_d == null) {
+                df.field_d = new pc[fa.field_p.field_l.length];
+              }
+              if (null == df.field_d[param2]) {
+                df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
+                fa.field_p.field_l[param2] = null;
+              }
+              var7 = new gi(param2, ma.field_s, df.field_d[param2], 2097152);
+            }
+            if (param1 != 255) {
+              field_e = (pb) null;
+            }
+            var8 = mc.field_c.a(64, (gi) (var7), (gi) (var6), param4, param2);
+            if (param3) {
+              var8.d(2);
+            }
+            stackIn_16_0 = new pf(var8, param5, param0);
             return stackIn_16_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final int a(int param0) {
         if (param0 != -609392408) {
-            this.c(22);
+          this.c(22);
         }
         if (this.field_b == 0) {
-            this.d(120);
-            this.field_b = 256;
+          this.d(120);
+          this.field_b = 256;
         }
         int fieldTemp$0 = this.field_b - 1;
         this.field_b = this.field_b - 1;
@@ -317,14 +269,14 @@ final class na {
     na(int[] param0) {
         int var2_int = 0;
         try {
-            this.field_g = new int[256];
-            this.field_h = new int[256];
-            for (var2_int = 0; param0.length > var2_int; var2_int++) {
-                this.field_h[var2_int] = param0[var2_int];
-            }
-            this.c(1301311304);
+          this.field_g = new int[256];
+          this.field_h = new int[256];
+          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+            this.field_h[var2_int] = param0[var2_int];
+          }
+          this.c(1301311304);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

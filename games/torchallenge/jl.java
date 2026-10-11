@@ -14,10 +14,10 @@ abstract class jl {
     final int a(byte param0, long param1) {
         long var4 = this.c(121);
         if (param0 != -12) {
-            this.a(69L, 62);
+          this.a(69L, 62);
         }
-        if (-1L > (var4 ^ -1L)) {
-            c.a(-127, var4);
+        if (var4 > 0L) {
+          c.a(-127, var4);
         }
         return this.a(param1, param0 ^ -24);
     }
@@ -39,7 +39,6 @@ abstract class jl {
     abstract long c(int param0);
 
     final static void a(byte param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -53,237 +52,159 @@ abstract class jl {
         int var9 = 0;
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5 = 0;
-              var6 = 28;
-              if (hf.field_d == null) {
-                break L1;
-              } else {
-                if (var6 > hf.field_d.length) {
-                  break L1;
+          var5 = 0;
+          var6 = 28;
+          if (hf.field_d != null &&
+            var6 <= hf.field_d.length) {
+            for (var7 = 0; var7 < 3; var7++) {
+              var1_int = 0;
+              for (var8 = 0; var8 < 4; var8++) {
+                var3 = 0;
+                var4 = 0;
+                if (0 == var8) {
+                  var4 = 255;
                 } else {
-                  var7 = 0;
-                  L2: while (true) {
-                    if (-4 >= (var7 ^ -1)) {
-                      var1_int = 0;
-                      var7 = 0;
-                      L3: while (true) {
-                        if (4 <= var7) {
-                          var3 = 0;
-                          var7 = 0;
-                          L4: while (true) {
-                            if (var7 >= 3) {
-                              L5: {
-                                var3 = var3 | var1_int & 31;
-                                hd.field_c[0] = p.a(hd.field_c[0], jh.a(var3, 31));
-                                if (param0 > 111) {
-                                  break L5;
-                                } else {
-                                  field_h = 53L;
-                                  break L5;
-                                }
-                              }
-                              var3 = 0;
-                              var3 = var3 | (var1_int & 992) >> 165654725;
-                              hd.field_c[1] = p.a(hd.field_c[1], jh.a(var3, 31));
-                              var3 = 0;
-                              var3 = var3 | (var1_int & 31744) >> -1439695254;
-                              hd.field_c[2] = p.a(hd.field_c[2], jh.a(var3, 31));
-                              decompiledRegionSelector0 = 1;
-                              break L0;
-                            } else {
-                              hd.field_c[var7] = 0;
-                              var7++;
-                              continue L4;
-                            }
-                          }
-                        } else {
-                          L6: {
-                            var4 = 0;
-                            var3 = 0;
-                            var3 = var3 | hf.field_d[var5 - -var7];
-                            if (-1 == (var7 ^ -1)) {
-                              var4 = 255;
-                              break L6;
-                            } else {
-                              if ((var7 ^ -1) == -2) {
-                                var4 = 65280;
-                                break L6;
-                              } else {
-                                if ((var7 ^ -1) != -3) {
-                                  if (var7 == 3) {
-                                    var4 = -16777216;
-                                    break L6;
-                                  } else {
-                                    var1_int = var1_int | var4 & (255 & var3) << var7 * 8;
-                                    var7++;
-                                    continue L3;
-                                  }
-                                } else {
-                                  var4 = 16711680;
-                                  break L6;
-                                }
-                              }
-                            }
-                          }
-                          var1_int = var1_int | var4 & (255 & var3) << var7 * 8;
-                          var7++;
-                          continue L3;
-                        }
-                      }
+                  if (1 == var8) {
+                    var4 = 65280;
+                  } else {
+                    if (var8 == 2) {
+                      var4 = 16711680;
                     } else {
-                      var1_int = 0;
-                      var8 = 0;
-                      L7: while (true) {
-                        if (-5 >= (var8 ^ -1)) {
-                          var2 = 0;
-                          var8 = 0;
-                          L8: while (true) {
-                            if (-5 >= (var8 ^ -1)) {
-                              var8 = 0;
-                              L9: while (true) {
-                                if (5 <= var8) {
-                                  var3 = 0;
-                                  var3 = var3 | 31 & var1_int;
-                                  pi.field_d[var7][0] = p.a(pi.field_d[var7][0], jh.a(31, var3));
-                                  var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> 1694637798;
-                                  pi.field_d[var7][1] = p.a(pi.field_d[var7][1], jh.a(var3, 31));
-                                  var3 = 0;
-                                  var3 = var3 | var1_int >> -1972835892 & 31;
-                                  pi.field_d[var7][2] = p.a(pi.field_d[var7][2], jh.a(31, var3));
-                                  var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> -127324206;
-                                  pi.field_d[var7][3] = p.a(pi.field_d[var7][3], jh.a(31, var3));
-                                  var3 = 0;
-                                  var3 = var3 | 31 & var1_int >> -1934140776;
-                                  pi.field_d[var7][4] = p.a(pi.field_d[var7][4], jh.a(31, var3));
-                                  var3 = 0;
-                                  var3 = var3 | (var1_int & -1073741824) >> 554067358;
-                                  pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
-                                  var3 = 0;
-                                  var3 = var3 | 28 & var2 << -823824190;
-                                  pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
-                                  hk.field_c[var7] = 0;
-                                  var3 = 0;
-                                  var3 = var3 | var1_int >> -1176210581 & 1;
-                                  hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 1));
-                                  var3 = 0;
-                                  var3 = var3 | 2 & var1_int >> 582396246;
-                                  hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(2, var3));
-                                  var3 = 0;
-                                  var3 = var3 | var2 >> 488680033 & 4;
-                                  hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 4));
-                                  var3 = 0;
-                                  k.field_b[var7] = 0;
-                                  var3 = var3 | 1 & var1_int >> 1184433829;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 1));
-                                  var3 = 0;
-                                  var3 = var3 | (var1_int & 2048) >> -1593412758;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(2, var3));
-                                  var3 = 0;
-                                  var3 = var3 | (131072 & var1_int) >> -726796017;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(4, var3));
-                                  var3 = 0;
-                                  var3 = var3 | (var1_int & 8388608) >> -1345642156;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(8, var3));
-                                  var3 = 0;
-                                  var3 = var3 | (var1_int & 536870912) >> 2998521;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 16));
-                                  var3 = 0;
-                                  var3 = var3 | (var2 & 8) << -1839608574;
-                                  var5 += 8;
-                                  k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 32));
-                                  var7++;
-                                  continue L2;
-                                } else {
-                                  pi.field_d[var7][var8] = 0;
-                                  var8++;
-                                  continue L9;
-                                }
-                              }
-                            } else {
-                              L10: {
-                                var3 = 0;
-                                var4 = 0;
-                                if (var8 == 0) {
-                                  var4 = 255;
-                                  break L10;
-                                } else {
-                                  if (-2 != (var8 ^ -1)) {
-                                    if (2 == var8) {
-                                      var4 = 16711680;
-                                      break L10;
-                                    } else {
-                                      if ((var8 ^ -1) == -4) {
-                                        var4 = -16777216;
-                                        break L10;
-                                      } else {
-                                        break L10;
-                                      }
-                                    }
-                                  } else {
-                                    var4 = 65280;
-                                    break L10;
-                                  }
-                                }
-                              }
-                              var3 = var3 | hf.field_d[var5 - (-4 - var8)];
-                              var2 = var2 | (255 & var3) << var8 * 8 & var4;
-                              var8++;
-                              continue L8;
-                            }
-                          }
-                        } else {
-                          L11: {
-                            var3 = 0;
-                            var4 = 0;
-                            if (0 == var8) {
-                              var4 = 255;
-                              break L11;
-                            } else {
-                              if (1 == var8) {
-                                var4 = 65280;
-                                break L11;
-                              } else {
-                                if (-3 == (var8 ^ -1)) {
-                                  var4 = 16711680;
-                                  break L11;
-                                } else {
-                                  if (var8 == 3) {
-                                    var4 = -16777216;
-                                    break L11;
-                                  } else {
-                                    break L11;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          var3 = var3 | hf.field_d[var5 + var8];
-                          var1_int = var1_int | var4 & (255 & var3) << 8 * var8;
-                          var8++;
-                          continue L7;
-                        }
+                      if (var8 == 3) {
+                        var4 = -16777216;
                       }
                     }
                   }
                 }
+                var3 = var3 | hf.field_d[var5 + var8];
+                var1_int = var1_int | var4 & (255 & var3) << 8 * var8;
+              }
+              var2 = 0;
+              for (var8 = 0; var8 < 4; var8++) {
+                var3 = 0;
+                var4 = 0;
+                if (var8 == 0) {
+                  var4 = 255;
+                } else {
+                  if (var8 != 1) {
+                    if (2 == var8) {
+                      var4 = 16711680;
+                    } else {
+                      if (var8 == 3) {
+                        var4 = -16777216;
+                      }
+                    }
+                  } else {
+                    var4 = 65280;
+                  }
+                }
+                var3 = var3 | hf.field_d[var5 - (-4 - var8)];
+                var2 = var2 | (255 & var3) << var8 * 8 & var4;
+              }
+              for (var8 = 0; 5 > var8; var8++) {
+                pi.field_d[var7][var8] = 0;
+              }
+              var3 = 0;
+              var3 = var3 | 31 & var1_int;
+              pi.field_d[var7][0] = p.a(pi.field_d[var7][0], jh.a(31, var3));
+              var3 = 0;
+              var3 = var3 | 31 & var1_int >> 6;
+              pi.field_d[var7][1] = p.a(pi.field_d[var7][1], jh.a(var3, 31));
+              var3 = 0;
+              var3 = var3 | var1_int >> 12 & 31;
+              pi.field_d[var7][2] = p.a(pi.field_d[var7][2], jh.a(31, var3));
+              var3 = 0;
+              var3 = var3 | 31 & var1_int >> 18;
+              pi.field_d[var7][3] = p.a(pi.field_d[var7][3], jh.a(31, var3));
+              var3 = 0;
+              var3 = var3 | 31 & var1_int >> 24;
+              pi.field_d[var7][4] = p.a(pi.field_d[var7][4], jh.a(31, var3));
+              var3 = 0;
+              var3 = var3 | (var1_int & -1073741824) >> 30;
+              pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
+              var3 = 0;
+              var3 = var3 | 28 & var2 << 2;
+              pi.field_d[var7][5] = p.a(pi.field_d[var7][5], jh.a(var3, 31));
+              hk.field_c[var7] = 0;
+              var3 = 0;
+              var3 = var3 | var1_int >> 11 & 1;
+              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 1));
+              var3 = 0;
+              var3 = var3 | 2 & var1_int >> 22;
+              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(2, var3));
+              var3 = 0;
+              var3 = var3 | var2 >> 1 & 4;
+              hk.field_c[var7] = p.a(hk.field_c[var7], jh.a(var3, 4));
+              var3 = 0;
+              k.field_b[var7] = 0;
+              var3 = var3 | 1 & var1_int >> 5;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 1));
+              var3 = 0;
+              var3 = var3 | (var1_int & 2048) >> 10;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(2, var3));
+              var3 = 0;
+              var3 = var3 | (131072 & var1_int) >> 15;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(4, var3));
+              var3 = 0;
+              var3 = var3 | (var1_int & 8388608) >> 20;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(8, var3));
+              var3 = 0;
+              var3 = var3 | (var1_int & 536870912) >> 25;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 16));
+              var3 = 0;
+              var3 = var3 | (var2 & 8) << 2;
+              var5 += 8;
+              k.field_b[var7] = p.a(k.field_b[var7], jh.a(var3, 32));
+            }
+            var1_int = 0;
+            for (var7 = 0; 4 > var7; var7++) {
+              L5: {
+                var4 = 0;
+                var3 = 0;
+                var3 = var3 | hf.field_d[var5 + var7];
+                if (var7 == 0) {
+                  var4 = 255;
+                } else {
+                  switch (var7) {
+                    case 1:
+                      var4 = 65280;
+                      break;
+                    default:
+                      var1_int = var1_int | var4 & (255 & var3) << var7 * 8;
+                      break L5;
+                    case 3:
+                      var4 = -16777216;
+                      break;
+                    case 2:
+                      var4 = 16711680;
+                      break;
+                  }
+                }
+                var1_int = var1_int | var4 & (255 & var3) << var7 * 8;
               }
             }
-            decompiledRegionSelector0 = 0;
-            break L0;
+            var3 = 0;
+            for (var7 = 0; var7 < 3; var7++) {
+              hd.field_c[var7] = 0;
+            }
+            var3 = var3 | var1_int & 31;
+            hd.field_c[0] = p.a(hd.field_c[0], jh.a(var3, 31));
+            if (param0 <= 111) {
+              field_h = 53L;
+            }
+            var3 = 0;
+            var3 = var3 | (var1_int & 992) >> 5;
+            hd.field_c[1] = p.a(hd.field_c[1], jh.a(var3, 31));
+            var3 = 0;
+            var3 = var3 | (var1_int & 31744) >> 10;
+            hd.field_c[2] = p.a(hd.field_c[2], jh.a(var3, 31));
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw oj.a((Throwable) ((Object) var1), "jl.F(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -293,55 +214,30 @@ abstract class jl {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 < -57) {
-                break L1;
-              } else {
-                jl.a((byte) 92);
-                break L1;
-              }
-            }
-            L2: {
-              var2 = vf.a(116, lg.a(param1, -1));
-              if (var2 == null) {
-                var2 = "";
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            stackIn_6_0 = (String) (var2);
-            break L0;
+          if (param0 >= -57) {
+            jl.a((byte) 92);
           }
+          var2 = vf.a(116, lg.a(param1, -1));
+          if (var2 == null) {
+            var2 = "";
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2_ref);
-
-            stackIn_9_1 = new StringBuilder().append("jl.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("jl.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     static {

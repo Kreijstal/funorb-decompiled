@@ -21,15 +21,15 @@ final class gd {
 
     final boolean c(int param0) {
         if (param0 != 1) {
-            this.field_g = (String) null;
-            return this.field_f;
+          this.field_g = (String) null;
+          return this.field_f;
         }
         return this.field_f;
     }
 
     public static void b(int param0) {
         if (param0 != 25284) {
-            return;
+          return;
         }
         field_d = null;
         field_b = null;
@@ -39,78 +39,41 @@ final class gd {
 
     gd(String param0, boolean param1) {
         RuntimeException var3 = null;
-        Object stackIn_3_0 = null;
-        Object stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              this.field_g = param0;
-              stackIn_3_0 = this;
-
-              if (!param1) {
-                stackIn_4_0 = this;
-                stackIn_4_1 = 0;
-                break L1;
-              } else {
-                stackIn_4_0 = this;
-                stackIn_4_1 = 1;
-                break L1;
-              }
-            }
-            L2: {
-              ((gd) (this)).field_f = stackIn_4_1 != 0;
-              if (this.field_g != null) {
-                break L2;
-              } else {
-                this.field_g = "";
-                break L2;
-              }
-            }
-            if (-1 == (this.field_g.length() ^ -1)) {
-              this.field_f = false;
-              break L0;
-            } else {
-              return;
-            }
+          this.field_g = param0;
+          stackIn_4_1 = (param1);
+          this.field_f = stackIn_4_1;
+          if (this.field_g == null) {
+            this.field_g = "";
           }
+          if (this.field_g.length() != 0) {
+            return;
+          }
+          this.field_f = false;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var3);
-
-            stackIn_12_1 = new StringBuilder().append("gd.<init>(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("gd.<init>(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw qk.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, ci[] param1, int param2, int param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -121,76 +84,38 @@ final class gd {
         int var10 = 0;
         var10 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (param3 >= 114) {
-              L1: {
-                if (param1 == null) {
-                  break L1;
-                } else {
-                  if (-1 > (param4 ^ -1)) {
-                    var5_int = param1[0].field_q;
-                    var6 = param1[2].field_q;
-                    var7 = param1[1].field_q;
-                    param1[0].b(param2, param0);
-                    param1[2].b(param2 + param4 + -var6, param0);
-                    l.b(vl.field_e);
-                    l.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
-                    var8 = param2 + var5_int;
-                    var9 = -var6 + (param2 - -param4);
-                    param2 = var8;
-                    L2: while (true) {
-                      if (var9 <= param2) {
-                        l.a(vl.field_e);
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        param1[1].b(param2, param0);
-                        param2 = param2 + var7;
-                        continue L2;
-                      }
-                    }
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param3 < 114) {
+            return;
           }
+          if (param1 != null &&
+            param4 > 0) {
+            var5_int = param1[0].field_q;
+            var6 = param1[2].field_q;
+            var7 = param1[1].field_q;
+            param1[0].b(param2, param0);
+            param1[2].b(param2 + param4 - var6, param0);
+            l.b(vl.field_e);
+            l.i(param2 + var5_int, param0, param2 - (-param4 + var6), param0 + param1[1].field_u);
+            var8 = param2 + var5_int;
+            var9 = -var6 + (param2 + param4);
+            for (param2 = var8; var9 > param2; param2 = param2 + var7) {
+              param1[1].b(param2, param0);
+            }
+            l.a(vl.field_e);
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var5);
-
-            stackIn_13_1 = new StringBuilder().append("gd.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
-          }
-          throw qk.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("gd.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return;
+            stackIn_14_2 = "{...}";
           }
+          throw qk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

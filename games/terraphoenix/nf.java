@@ -16,6 +16,7 @@ final class nf implements Runnable {
         int var1_int = 0;
         nk var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -24,46 +25,28 @@ final class nf implements Runnable {
         var4 = Terraphoenix.field_V;
         this.field_i = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_b) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (2 <= var1_int) {
-                        gi.a((byte) -68, 10L);
-                        var5 = (Object) null;
-                        cf.a(this.field_e, false, (Object) null);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_d[var1_int];
-                          if (var2 == null) {
-                            break L4;
-                          } else {
-                            var2.c();
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_b) {
+              for (var1_int = 0; 2 > var1_int; var1_int++) {
+                var2 = this.field_d[var1_int];
+                if (var2 != null) {
+                  var2.c();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              bd.a((Throwable) ((Object) var1), (String) null, 98);
-              this.field_i = false;
-              return;
+              gi.a((byte) -68, 10L);
+              var5 = (Object) null;
+              cf.a(this.field_e, false, (Object) null);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var6 = (String) null;
+            bd.a((Throwable) ((Object) var1), (String) null, 98);
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -76,7 +59,7 @@ final class nf implements Runnable {
 
     public static void a(byte param0) {
         if (param0 >= -118) {
-            return;
+          return;
         }
         field_g = null;
         field_f = null;
@@ -85,9 +68,9 @@ final class nf implements Runnable {
 
     final static void a(boolean param0, int param1) {
         if (param1 != -1260) {
-            nf.a(true, 64);
-            ad.a(param0, 0, true);
-            return;
+          nf.a(true, 64);
+          ad.a(param0, 0, true);
+          return;
         }
         ad.a(param0, 0, true);
     }

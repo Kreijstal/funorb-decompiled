@@ -11,11 +11,14 @@ final class fl {
     private int field_b;
 
     final void a(float[] param0, int param1, boolean param2) {
+        int var8 = 0;
+        int var17 = 0;
+        int var16 = 0;
+        int var18 = 0;
         int var4;
         int var5;
         int var6;
         int[] var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -23,139 +26,74 @@ final class fl {
         int var13;
         db var14;
         int var15;
-        int var16;
-        int var17;
-        int var18;
         int[] var19;
         int[] var22;
         float[] var27;
         float[] var28;
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= param1) {
-            if (!param2) {
-              var4 = t.field_q[this.field_d].field_b;
-              var5 = this.field_a - this.field_c;
-              var6 = var5 / this.field_e;
-              var22 = new int[var6];
-              var19 = var22;
-              var7 = var19;
-              var8 = 0;
-              L1: while (true) {
-                if (var8 >= 8) {
-                  return;
+        int var4Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int[] var22Lifetime1;
+        for (var4 = 0; var4 < param1; var4++) {
+          param0[var4] = 0.0f;
+        }
+        if (param2) {
+          return;
+        }
+        var4Lifetime1 = t.field_q[this.field_d].field_b;
+        var5 = this.field_a - this.field_c;
+        var6 = var5 / this.field_e;
+        var22 = new int[var6];
+        var19 = var22;
+        var7 = var19;
+        for (var8 = 0; var8 < 8; var8++) {
+          var9 = 0;
+          while (var9 < var6) {
+            if (var8 == 0) {
+              var10 = t.field_q[this.field_d].a();
+              for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
+                if (var9 + var11 < var6) {
+                  var7[var9 + var11] = var10 % this.field_f;
+                }
+                var10 = var10 / this.field_f;
+              }
+            }
+            var22Lifetime1 = var19;
+            var10Lifetime1 = 0;
+            while (var10Lifetime1 < var4Lifetime1) {
+              var11Lifetime1 = var22Lifetime1[var9];
+              var12 = this.field_g[var11Lifetime1 * 8 + var8];
+              if (var12 >= 0) {
+                var13 = this.field_c + var9 * this.field_e;
+                var14 = t.field_q[var12];
+                if (this.field_b != 0) {
+                  var15 = 0;
+                  while (var15 < this.field_e) {
+                    var28 = var14.c();
+                    for (var17 = 0; var17 < var14.field_b; var17++) {
+                      param0[var13 + var15] = param0[var13 + var15] + var28[var17];
+                      var15++;
+                    }
+                  }
                 } else {
-                  var9 = 0;
-                  L2: while (true) {
-                    if (var9 >= var6) {
-                      var8++;
-                      continue L1;
-                    } else {
-                      L3: {
-                        if (var8 != 0) {
-                          break L3;
-                        } else {
-                          var10 = t.field_q[this.field_d].a();
-                          var11 = var4 - 1;
-                          L4: while (true) {
-                            if (var11 < 0) {
-                              break L3;
-                            } else {
-                              L5: {
-                                if (var9 + var11 >= var6) {
-                                  break L5;
-                                } else {
-                                  var7[var9 + var11] = var10 % this.field_f;
-                                  break L5;
-                                }
-                              }
-                              var10 = var10 / this.field_f;
-                              var11--;
-                              continue L4;
-                            }
-                          }
-                        }
-                      }
-                      var22 = var19;
-                      var10 = 0;
-                      L6: while (true) {
-                        if (var10 >= var4) {
-                          continue L2;
-                        } else {
-                          L7: {
-                            var11 = var22[var9];
-                            var12 = this.field_g[var11 * 8 + var8];
-                            if (var12 < 0) {
-                              break L7;
-                            } else {
-                              var13 = this.field_c + var9 * this.field_e;
-                              var14 = t.field_q[var12];
-                              if (this.field_b != 0) {
-                                var15 = 0;
-                                L8: while (true) {
-                                  if (var15 >= this.field_e) {
-                                    break L7;
-                                  } else {
-                                    var28 = var14.c();
-                                    var17 = 0;
-                                    L9: while (true) {
-                                      if (var17 >= var14.field_b) {
-                                        continue L8;
-                                      } else {
-                                        param0[var13 + var15] = param0[var13 + var15] + var28[var17];
-                                        var15++;
-                                        var17++;
-                                        continue L9;
-                                      }
-                                    }
-                                  }
-                                }
-                              } else {
-                                var15 = this.field_e / var14.field_b;
-                                var16 = 0;
-                                L10: while (true) {
-                                  if (var16 >= var15) {
-                                    break L7;
-                                  } else {
-                                    var27 = var14.c();
-                                    var18 = 0;
-                                    L11: while (true) {
-                                      if (var18 >= var14.field_b) {
-                                        var16++;
-                                        continue L10;
-                                      } else {
-                                        param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
-                                        var18++;
-                                        continue L11;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          var9++;
-                          if (var9 < var6) {
-                            var10++;
-                            continue L6;
-                          } else {
-                            continue L2;
-                          }
-                        }
-                      }
+                  var15 = this.field_e / var14.field_b;
+                  for (var16 = 0; var16 < var15; var16++) {
+                    var27 = var14.c();
+                    for (var18 = 0; var18 < var14.field_b; var18++) {
+                      param0[var13 + var16 + var18 * var15] = param0[var13 + var16 + var18 * var15] + var27[var18];
                     }
                   }
                 }
               }
-            } else {
-              return;
+              var9++;
+              if (var9 >= var6) {
+                break;
+              }
+              var10Lifetime1++;
             }
-          } else {
-            param0[var4] = 0.0f;
-            var4++;
-            continue L0;
           }
         }
+        return;
     }
 
     fl() {
@@ -163,6 +101,7 @@ final class fl {
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
+        int var2Lifetime1;
         this.field_b = t.d(16);
         this.field_c = t.d(24);
         this.field_a = t.d(24);
@@ -171,20 +110,20 @@ final class fl {
         this.field_d = t.d(8);
         int[] var1 = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
-            var3 = 0;
-            var4 = t.d(3);
-            var5 = t.b() != 0 ? 1 : 0;
-            if (var5 != 0) {
-                var3 = t.d(5);
-            }
-            var1[var2] = var3 << 3 | var4;
+          var3 = 0;
+          var4 = t.d(3);
+          var5 = t.b() != 0 ? 1 : 0;
+          if (var5 != 0) {
+            var3 = t.d(5);
+          }
+          var1[var2] = var3 << 3 | var4;
         }
         this.field_g = new int[this.field_f * 8];
         int var6 = 0;
-        var2 = var6;
+        var2Lifetime1 = var6;
         while (var6 < this.field_f * 8) {
-            this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? t.d(8) : -1;
-            var6++;
+          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? t.d(8) : -1;
+          var6++;
         }
     }
 }

@@ -15,16 +15,16 @@ abstract class mi extends uh {
         String var3 = null;
         long var4 = 0L;
         try {
-            ve.field_d = true;
-            if (param0 != 1048576) {
-                mi.d(35);
-            }
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            var4 = -1L;
-            wg.a((byte) 111, var3, param1, var2, var4);
+          ve.field_d = true;
+          if (param0 != 1048576) {
+            mi.d(35);
+          }
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          var4 = -1L;
+          wg.a((byte) 111, var3, param1, var2, var4);
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "mi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "mi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,75 +34,54 @@ abstract class mi extends uh {
 
     final static void e(byte param0) {
         try {
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            java.lang.reflect.Method var1 = null;
-            Exception var1_ref = null;
-            Runtime var2 = null;
-            Throwable var2_ref = null;
-            Long var3 = null;
-            Object[] var4 = null;
-            try {
-              L0: {
-                L1: {
-                  var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
-                  if (var1 == null) {
-                    break L1;
-                  } else {
-                    try {
-                      L2: {
-                        var2 = Runtime.getRuntime();
-                        var4 = (Object[]) null;
-                        var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                        la.field_b = (int)(var3.longValue() / 1048576L) + 1;
-                        decompiledRegionSelector0 = 0;
-                        break L2;
-                      }
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L3: {
-                        var2_ref = decompiledCaughtException;
-                        decompiledRegionSelector0 = 1;
-                        break L3;
-                      }
-                    }
-                    if (decompiledRegionSelector0 == 0) {
-                      if (param0 == -6) {
-                        return;
-                      } else {
-                        field_n = (String) null;
-                        return;
-                      }
-                    } else {
-                      break L1;
-                    }
-                  }
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1 = null;
+          Exception var1_ref = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          try {
+            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (var1 != null) {
+              try {
+                var2 = Runtime.getRuntime();
+                var4 = (Object[]) null;
+                var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+                la.field_b = (int)(var3.longValue() / 1048576L) + 1;
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = decompiledCaughtException;
+                decompiledRegionSelector0 = 1;
+              }
+              if (decompiledRegionSelector0 == 0) {
+                if (param0 == -6) {
+                  return;
                 }
-                break L0;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var1_ref = (Exception) (Object) decompiledCaughtException;
-                break L4;
+                field_n = (String) null;
+                return;
               }
             }
-            if (param0 != -6) {
-              field_n = (String) null;
-              return;
-            } else {
-              return;
-            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref = (Exception) (Object) decompiledCaughtException;
+          }
+          if (param0 == -6) {
+            return;
+          }
+          field_n = (String) null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void d(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_n = null;
     }

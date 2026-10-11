@@ -13,124 +13,48 @@ final class jra {
         Object var5;
         String var6;
         CharSequence var11;
-        if (ola.field_p == null) {
-          if (param2 == 19717) {
-            return;
-          } else {
-            jra.a(-70, false, 63);
-            return;
-          }
-        } else {
+        Object var5Lifetime1;
+        Object var5Lifetime2;
+        if (ola.field_p != null) {
           var3 = ola.field_p.a(0, param1);
           if (0 != var3) {
-            if (var3 == 2) {
-              if (ola.field_p.field_R == null) {
-                rc.field_b = -1;
-                ola.field_p = null;
-                if (param2 == 19717) {
-                  return;
-                } else {
-                  jra.a(-70, false, 63);
-                  return;
-                }
+            if (var3 == 2 &&
+              ola.field_p.field_R != null &&
+              !ola.field_p.field_R.equals("")) {
+              if (91 == ola.field_p.field_R.charAt(0)) {
+                var4 = ola.field_p.field_R;
+                var5 = var4;
+                var5Lifetime2 = var4;
               } else {
-                if (ola.field_p.field_R.equals("")) {
-                  rc.field_b = -1;
-                  ola.field_p = null;
-                  if (param2 == 19717) {
-                    return;
-                  } else {
-                    jra.a(-70, false, 63);
-                    return;
-                  }
-                } else {
-                  L0: {
-                    if (91 == ola.field_p.field_R.charAt(0)) {
-                      var4 = ola.field_p.field_R;
-                      var5 = var4;
-                      var5 = var4;
-                      break L0;
-                    } else {
-                      var11 = (CharSequence) ((Object) ola.field_p.field_R);
-                      var4 = jwa.a(false, var11);
-                      break L0;
-                    }
-                  }
-                  L1: {
-                    var5 = null;
-                    if (0 == rc.field_b) {
-                      var5 = ukb.a(var4, param0, param2 + -10115);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  L2: {
-                    if ((rc.field_b ^ -1) != -2) {
-                      break L2;
-                    } else {
-                      var5 = npa.a((byte) 90, var4, param0);
-                      break L2;
-                    }
-                  }
-                  L3: {
-                    if (2 != rc.field_b) {
-                      break L3;
-                    } else {
-                      var5 = tba.a(2, var4, param0);
-                      break L3;
-                    }
-                  }
-                  L4: {
-                    if (rc.field_b != 3) {
-                      break L4;
-                    } else {
-                      var5 = iab.a(param0, var4, var4, (byte) -76);
-                      break L4;
-                    }
-                  }
-                  if (var5 == null) {
-                    rc.field_b = -1;
-                    ola.field_p = null;
-                    if (param2 == 19717) {
-                      return;
-                    } else {
-                      jra.a(-70, false, 63);
-                      return;
-                    }
-                  } else {
-                    var6 = (String) null;
-                    lh.a((byte) -86, 0, (String) null, var4, (String) (var5), 2);
-                    rc.field_b = -1;
-                    ola.field_p = null;
-                    if (param2 == 19717) {
-                      return;
-                    } else {
-                      jra.a(-70, false, 63);
-                      return;
-                    }
-                  }
-                }
+                var11 = (CharSequence) ((Object) ola.field_p.field_R);
+                var4 = jwa.a(false, var11);
               }
-            } else {
-              rc.field_b = -1;
-              ola.field_p = null;
-              if (param2 == 19717) {
-                return;
-              } else {
-                jra.a(-70, false, 63);
-                return;
+              var5Lifetime1 = null;
+              if (0 == rc.field_b) {
+                var5Lifetime1 = ukb.a(var4, param0, param2 - 10115);
+              }
+              if (rc.field_b == 1) {
+                var5Lifetime1 = npa.a((byte) 90, var4, param0);
+              }
+              if (2 == rc.field_b) {
+                var5Lifetime1 = tba.a(2, var4, param0);
+              }
+              if (rc.field_b == 3) {
+                var5Lifetime1 = iab.a(param0, var4, var4, (byte) -76);
+              }
+              if (var5Lifetime1 != null) {
+                var6 = (String) null;
+                lh.a((byte) -86, 0, (String) null, var4, (String) (var5Lifetime1), 2);
               }
             }
-          } else {
-            if (param2 == 19717) {
-              return;
-            } else {
-              jra.a(-70, false, 63);
-              return;
-            }
+            rc.field_b = -1;
+            ola.field_p = null;
           }
         }
+        if (param2 == 19717) {
+          return;
+        }
+        jra.a(-70, false, 63);
     }
 
     public final String toString() {

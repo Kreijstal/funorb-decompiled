@@ -11,7 +11,7 @@ final class fm {
 
     public static void a(int param0) {
         if (param0 > -3) {
-            return;
+          return;
         }
         field_c = null;
         field_b = null;

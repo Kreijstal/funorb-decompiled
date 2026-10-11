@@ -12,10 +12,10 @@ final class fa extends bh {
     public static void c(byte param0) {
         field_o = null;
         if (param0 != -74) {
-            fa.c((byte) -12);
-            field_r = null;
-            field_q = null;
-            return;
+          fa.c((byte) -12);
+          field_r = null;
+          field_q = null;
+          return;
         }
         field_r = null;
         field_q = null;

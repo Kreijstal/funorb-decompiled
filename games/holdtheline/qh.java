@@ -9,35 +9,18 @@ final class qh {
     static String field_c;
 
     final static void a(int param0, int param1) {
-        L0: {
-          L1: {
-            if (bd.field_Q == null) {
-              break L1;
-            } else {
-              if (null != i.field_k[param1]) {
-                lc.field_d = i.field_k[param1];
-                gn.a(false, i.field_k[param1], (byte) 69, 30);
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          if ((ab.field_jb ^ -1) != 0) {
-            break L0;
-          } else {
+        if (bd.field_Q != null &&
+          null != i.field_k[param1]) {
+          lc.field_d = i.field_k[param1];
+          gn.a(false, i.field_k[param1], (byte) 69, 30);
+        } else {
+          if (ab.field_jb == -1) {
             bi.field_e = 2;
             ab.field_jb = param1;
-            break L0;
           }
         }
-        L2: {
-          if (param0 == 0) {
-            break L2;
-          } else {
-            field_a = (String) null;
-            break L2;
-          }
+        if (param0 != 0) {
+          field_a = (String) null;
         }
     }
 
@@ -46,78 +29,46 @@ final class qh {
         RuntimeException var2 = null;
         int var3 = 0;
         ei var4 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = HoldTheLine.field_D;
         try {
-          L0: {
-            L1: {
-              if (param0 == -63) {
-                break L1;
-              } else {
-                var4 = (ei) null;
-                qh.a((byte) -114, (ei) null);
-                break L1;
-              }
-            }
-            var2_int = 0;
-            L2: while (true) {
-              if (var2_int >= param1.field_e) {
-                stackIn_10_0 = 0;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (((vj) (param1.field_b[var2_int])).field_q) {
-                  var2_int++;
-                  continue L2;
-                } else {
-                  stackIn_7_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              }
-            }
+          if (param0 != -63) {
+            var4 = (ei) null;
+            qh.a((byte) -114, (ei) null);
           }
+          var2_int = 0;
+          while (true) {
+            if (var2_int >= param1.field_e) {
+              return false;
+            }
+            if (((vj) (param1.field_b[var2_int])).field_q) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("qh.E(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("qh.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw kk.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          return stackIn_10_0 != 0;
+          throw kk.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         field_a = null;
         if (param0 != 30) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -127,7 +78,7 @@ final class qh {
 
     final static fg a(int param0) {
         if (param0 < 80) {
-            qh.a(67);
+          qh.a(67);
         }
         return pk.field_H;
     }
@@ -136,31 +87,22 @@ final class qh {
         Object var1 = null;
         Object var1_ref = null;
         Throwable var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
         var1_ref = tf.field_n;
         synchronized (var1_ref) {
-          L0: {
-            if (qd.field_i != vj.field_l) {
-              aa.field_n = p.field_a[vj.field_l];
-              pk.field_M = d.field_b[vj.field_l];
-              if (param0 < -23) {
-                vj.field_l = 127 & 1 + vj.field_l;
-                stackIn_8_0 = 1;
-                break L0;
-              } else {
-                stackIn_6_0 = 0;
-                return stackIn_6_0 != 0;
-              }
-            } else {
-              stackIn_3_0 = 0;
-              return stackIn_3_0 != 0;
-            }
+          if (qd.field_i == vj.field_l) {
+            return false;
           }
+          aa.field_n = p.field_a[vj.field_l];
+          pk.field_M = d.field_b[vj.field_l];
+          if (param0 >= -23) {
+            return false;
+          }
+          vj.field_l = 127 & 1 + vj.field_l;
+          stackIn_8_0 = true;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_8_0;
     }
 
     static {

@@ -19,11 +19,11 @@ final class rf extends oh {
         var2.a(0, id.field_c.length, id.field_c, 22186);
         var2.c(qj.field_b, (byte) -114);
         if (param1 <= 64) {
-            return;
+          return;
         }
         var2.c(rj.field_q, (byte) -58);
         var2.a(0, qj.field_f.length, qj.field_f, 22186);
-        var2.b(var2.field_j + -var3, (byte) 126);
+        var2.b(var2.field_j - var3, (byte) 126);
     }
 
     rf(fs param0, fs param1) {
@@ -33,7 +33,7 @@ final class rf extends oh {
         field_m = null;
         field_l = null;
         if (!param0) {
-            return;
+          return;
         }
         field_h = null;
         field_k = null;
@@ -48,7 +48,7 @@ final class rf extends oh {
         field_h = new bi(270, 70);
         field_j = new wq[255];
         for (var0 = 0; var0 < field_j.length; var0++) {
-            field_j[var0] = new wq();
+          field_j[var0] = new wq();
         }
     }
 }

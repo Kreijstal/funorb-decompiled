@@ -10,37 +10,34 @@ final class of {
         qg.field_a = param1;
         vg.field_f = param0;
         if (param2 != 11) {
-            of.a(-36);
+          of.a(-36);
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 63) {
-            field_b = (String) null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     final static void a(int param0) {
-        if (param0 != uj.field_d) {
-          if (a.a(105)) {
-            rg.field_h = true;
-            return;
-          } else {
-            va.a(29);
-            uj.field_d = 11;
-            rg.field_h = true;
-            return;
-          }
-        } else {
+        if (param0 == uj.field_d) {
           va.a(29);
           uj.field_d = 11;
           rg.field_h = true;
           return;
         }
+        if (!a.a(105)) {
+          va.a(29);
+          uj.field_d = 11;
+          rg.field_h = true;
+          return;
+        }
+        rg.field_h = true;
     }
 
     static {

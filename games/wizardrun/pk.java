@@ -17,46 +17,41 @@ final class pk extends wl {
 
     final static void a(o param0, boolean param1) {
         try {
-            if (param1) {
-                o var3 = (o) null;
-                pk.a((o) null, true);
-            }
-            ag.field_v = param0;
+          if (param1) {
+            o var3 = (o) null;
+            pk.a((o) null, true);
+          }
+          ag.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "pk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 == -35) {
-          if (null != kj.field_b) {
-            if (kj.field_b.f(0) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -35) {
           pk.a(63);
-          if (null != kj.field_b) {
-            if (kj.field_b.f(0) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == kj.field_b) {
             return false;
           }
+          if (kj.field_b.f(0) != null) {
+            return true;
+          }
+          return false;
         }
+        if (null == kj.field_b) {
+          return false;
+        }
+        if (kj.field_b.f(0) != null) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
         field_n = null;
         field_q = null;
         if (param0 != -15563) {
-            pk.a((byte) 103);
+          pk.a((byte) 103);
         }
     }
 

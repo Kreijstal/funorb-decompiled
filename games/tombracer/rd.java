@@ -7,7 +7,7 @@ final class rd extends wv {
 
     public static void d(int param0) {
         if (param0 > -126) {
-            return;
+          return;
         }
         field_r = null;
     }
@@ -18,82 +18,62 @@ final class rd extends wv {
     }
 
     final int a(int param0, byte param1) {
-        if (param1 != -48) {
-          field_r = (ur) null;
-          return this.a((byte) 122, param0) - -this.field_m[param0].e(-163);
-        } else {
-          return this.a((byte) 122, param0) - -this.field_m[param0].e(-163);
+        if (param1 == -48) {
+          return this.a((byte) 122, param0) + this.field_m[param0].e(-163);
         }
+        field_r = (ur) null;
+        return this.a((byte) 122, param0) + this.field_m[param0].e(-163);
     }
 
     final int g(int param0, int param1) {
         if (param1 != 30) {
-            this.a(false, false, 33);
-            return this.field_n;
+          this.a(false, false, 33);
+          return this.field_n;
         }
         return this.field_n;
     }
 
     final static boolean b(boolean param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (!param0) {
-          if (!vpa.a(47)) {
-            if ((wla.field_ub ^ -1) >= -1) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0) {
           field_r = (ur) null;
-          if (vpa.a(47)) {
-            return true;
-          } else {
-            L0: {
-              if ((wla.field_ub ^ -1) < -1) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (!vpa.a(47)) {
+            return wla.field_ub <= 0 ? true : false;
           }
+          return true;
         }
+        if (vpa.a(47)) {
+          return true;
+        }
+        if (wla.field_ub > 0) {
+          return false;
+        }
+        return true;
     }
 
     final void a(byte param0, boolean param1) {
         int var3 = this.field_q.e(param0 + 111);
-        gg.field_f.a(aaa.a(false) - gg.field_f.a() >> 1056365473, var3 - -(gg.field_f.c() / 2));
+        gg.field_f.a(aaa.a(false) - gg.field_f.a() >> 1, var3 + gg.field_f.c() / 2);
         this.h(var3, 3);
         super.a(param0, param1);
     }
 
     final int a(byte param0, int param1) {
-        if (param0 < 111) {
-          this.field_q = (dea) null;
-          return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) - -(param1 * this.field_m[param1].e(-163)));
-        } else {
-          return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) - -(param1 * this.field_m[param1].e(-163)));
+        if (param0 >= 111) {
+          return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) + param1 * this.field_m[param1].e(-163));
         }
+        this.field_q = (dea) null;
+        return aaa.a(false) / 2 + (-(this.field_m.length * this.field_m[param1].e(-163) / 2) + param1 * this.field_m[param1].e(-163));
     }
 
     private final void h(int param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        da var6;
-        int var7;
-        int var8;
-        String var9;
-        if (param1 != 3) {
-          return;
-        } else {
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        da var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        String var9 = null;
+        if (param1 == 3) {
           var3 = 500;
           var4 = aaa.a(false) / 2 - var3 / 2;
           var5 = param0 + 100;
@@ -111,9 +91,9 @@ final class rd extends wv {
         super(param0, param1, param2, param3, param4, param5);
         this.field_q = new dea();
         try {
-            this.field_o = false;
+          this.field_o = false;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rd.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

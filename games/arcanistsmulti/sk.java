@@ -13,43 +13,37 @@ final class sk {
     static qb[] field_f;
 
     final static String a(int param0) {
-        if (!oh.field_i) {
-          if (oa.field_e <= jh.field_f) {
-            if (oa.field_e - -qc.field_e <= jh.field_f) {
-              if (param0 == -14150) {
-                return null;
-              } else {
-                return (String) null;
-              }
-            } else {
-              return cb.field_c;
-            }
-          } else {
-            if (param0 == -14150) {
-              return null;
-            } else {
-              return (String) null;
-            }
-          }
-        } else {
-          if (param0 == -14150) {
-            return null;
-          } else {
+        if (oh.field_i) {
+          if (param0 != -14150) {
             return (String) null;
           }
+          return null;
         }
+        if (oa.field_e > jh.field_f) {
+          if (param0 != -14150) {
+            return (String) null;
+          }
+          return null;
+        }
+        if (oa.field_e + qc.field_e > jh.field_f) {
+          return cb.field_c;
+        }
+        if (param0 != -14150) {
+          return (String) null;
+        }
+        return null;
     }
 
     final static void a(ec param0, int param1, int param2, int param3) {
         try {
-            mj.field_r = param2;
-            if (param1 != -28995) {
-                sk.a(-70);
-            }
-            ol.field_f = param0;
-            tg.field_d = param3;
+          mj.field_r = param2;
+          if (param1 != -28995) {
+            sk.a(-70);
+          }
+          ol.field_f = param0;
+          tg.field_d = param3;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "sk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "sk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -10,10 +10,10 @@ final class i extends ka implements e {
 
     final void a(gda param0, el param1, int param2) {
         if (param1 == null) {
-            this.field_f.m().a((ka) (this), param0, (int[]) null, param2);
+          this.field_f.m().a((ka) (this), param0, (int[]) null, param2);
         } else {
-            oa.field_t[5] = 0;
-            this.field_f.m().a((ka) (this), param0, oa.field_t, param2);
+          oa.field_t[5] = 0;
+          this.field_f.m().a((ka) (this), param0, oa.field_t, param2);
         }
     }
 
@@ -24,19 +24,11 @@ final class i extends ka implements e {
     final void b() {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        L0: {
-          if (this.field_f.field_l <= 1) {
-            break L0;
-          } else {
-            var1 = this;
-            synchronized (var1) {
-              L1: {
-                this.field_a = false;
-                this.notifyAll();
-                break L1;
-              }
-            }
-            break L0;
+        if (this.field_f.field_l > 1) {
+          var1 = this;
+          synchronized (var1) {
+            this.field_a = false;
+            this.notifyAll();
           }
         }
     }
@@ -45,7 +37,7 @@ final class i extends ka implements e {
     }
 
     final ka a(byte param0, int param1, boolean param2) {
-        return this.field_f.m().a((i) (this), param0, param1, param2);
+        return this.field_f.m().a(this, param0, param1, param2);
     }
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -64,45 +56,27 @@ final class i extends ka implements e {
 
     final void a() {
         try {
-            Throwable decompiledCaughtException = null;
-            Object var1 = null;
-            InterruptedException var2 = null;
-            L0: {
-              if (this.field_f.field_l <= 1) {
-                break L0;
-              } else {
-                var1 = this;
-                synchronized (var1) {
-                  L1: {
-                    L2: while (true) {
-                      if (!this.field_a) {
-                        this.field_a = true;
-                        break L1;
-                      } else {
-                        try {
-                          L3: {
-                            this.wait();
-                            break L3;
-                          }
-                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L4: {
-                            var2 = (InterruptedException) (Object) decompiledCaughtException;
-                            break L4;
-                          }
-                        }
-                        continue L2;
-                      }
-                    }
-                  }
+          Throwable decompiledCaughtException = null;
+          Object var1 = null;
+          InterruptedException var2 = null;
+          if (this.field_f.field_l > 1) {
+            var1 = this;
+            synchronized (var1) {
+              while (this.field_a) {
+                try {
+                  this.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (InterruptedException) (Object) decompiledCaughtException;
                 }
-                break L0;
               }
+              this.field_a = true;
             }
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -114,16 +88,16 @@ final class i extends ka implements e {
 
     final void a(gda param0, el param1, int param2, int param3) {
         if (param1 == null) {
-            this.field_f.m().a((ka) (this), param0, (int[]) null, param2, param3);
+          this.field_f.m().a((ka) (this), param0, (int[]) null, param2, param3);
         } else {
-            oa.field_t[5] = 0;
-            this.field_f.m().a((ka) (this), param0, oa.field_t, param2, param3);
+          oa.field_t[5] = 0;
+          this.field_f.m().a((ka) (this), param0, oa.field_t, param2, param3);
         }
     }
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-            ho.a(-1, (e) (this));
+          ho.a(-1, (e) (this));
         }
     }
 
@@ -146,6 +120,9 @@ final class i extends ka implements e {
         int incrementValue$11 = 0;
         int var12 = 0;
         int var15 = 0;
+        int var15Lifetime1;
+        int var12Lifetime1;
+        int var12Lifetime2;
         this.field_f = param0;
         this.field_g = param1;
         this.field_e = param2.field_B;
@@ -157,60 +134,60 @@ final class i extends ka implements e {
         int[] var22 = var24;
         int[] var11 = var22;
         for (var12 = 0; var12 < var8; var12++) {
-            incrementValue$0 = var10;
-            var10++;
-            var11[incrementValue$0] = this.field_e[var12].field_a;
-            incrementValue$1 = var10;
-            var10++;
-            var11[incrementValue$1] = this.field_e[var12].field_c;
-            incrementValue$2 = var10;
-            var10++;
-            var11[incrementValue$2] = this.field_e[var12].field_b;
+          incrementValue$0 = var10;
+          var10++;
+          var11[incrementValue$0] = this.field_e[var12].field_a;
+          incrementValue$1 = var10;
+          var10++;
+          var11[incrementValue$1] = this.field_e[var12].field_c;
+          incrementValue$2 = var10;
+          var10++;
+          var11[incrementValue$2] = this.field_e[var12].field_b;
         }
-        for (var12 = 0; var12 < var9; var12++) {
-            incrementValue$3 = var10;
-            var10++;
-            var11[incrementValue$3] = this.field_d[var12].field_a;
+        for (var12Lifetime1 = 0; var12Lifetime1 < var9; var12Lifetime1++) {
+          incrementValue$3 = var10;
+          var10++;
+          var11[incrementValue$3] = this.field_d[var12Lifetime1].field_a;
         }
-        var12 = param2.field_m == null ? 0 : param2.field_m.length;
-        int[] var25 = new int[var12 * 8];
+        var12Lifetime2 = param2.field_m == null ? 0 : param2.field_m.length;
+        int[] var25 = new int[var12Lifetime2 * 8];
         int[] var23 = var25;
         int[] var13 = var23;
         int var14 = 0;
-        for (var15 = 0; var15 < var12; var15++) {
-            var18 = param2.field_m[var15];
-            var21 = var18;
-            var17 = fw.a(var21.field_d, false);
-            incrementValue$4 = var14;
-            var14++;
-            var13[incrementValue$4] = var18.field_a;
-            incrementValue$5 = var14;
-            var14++;
-            var13[incrementValue$5] = var17.field_d;
-            incrementValue$6 = var14;
-            var14++;
-            var13[incrementValue$6] = var17.field_b;
-            incrementValue$7 = var14;
-            var14++;
-            var13[incrementValue$7] = var17.field_f;
-            incrementValue$8 = var14;
-            var14++;
-            var13[incrementValue$8] = var17.field_c;
-            incrementValue$9 = var14;
-            var14++;
-            var13[incrementValue$9] = var17.field_e;
-            incrementValue$10 = var14;
-            var14++;
-            var13[incrementValue$10] = var17.field_i ? -1 : 0;
+        for (var15 = 0; var15 < var12Lifetime2; var15++) {
+          var18 = param2.field_m[var15];
+          var21 = var18;
+          var17 = fw.a(var21.field_d, false);
+          incrementValue$4 = var14;
+          var14++;
+          var13[incrementValue$4] = var18.field_a;
+          incrementValue$5 = var14;
+          var14++;
+          var13[incrementValue$5] = var17.field_d;
+          incrementValue$6 = var14;
+          var14++;
+          var13[incrementValue$6] = var17.field_b;
+          incrementValue$7 = var14;
+          var14++;
+          var13[incrementValue$7] = var17.field_f;
+          incrementValue$8 = var14;
+          var14++;
+          var13[incrementValue$8] = var17.field_c;
+          incrementValue$9 = var14;
+          var14++;
+          var13[incrementValue$9] = var17.field_e;
+          incrementValue$10 = var14;
+          var14++;
+          var13[incrementValue$10] = var17.field_i ? -1 : 0;
         }
         int var20 = 0;
-        var15 = var20;
-        while (var20 < var12) {
-            var19 = param2.field_m[var20];
-            incrementValue$11 = var14;
-            var14++;
-            var13[incrementValue$11] = var19.field_b;
-            var20++;
+        var15Lifetime1 = var20;
+        while (var20 < var12Lifetime2) {
+          var19 = param2.field_m[var20];
+          incrementValue$11 = var14;
+          var14++;
+          var13[incrementValue$11] = var19.field_b;
+          var20++;
         }
         this.R(this.field_f, this.field_g, param2.field_E, param2.field_L, param2.field_b, param2.field_I, param2.field_p, param2.field_l, param2.field_y, param2.field_o, param2.field_a, param2.field_t, param2.field_J, param2.field_G, param2.field_C, param2.field_n, param2.field_g, param2.field_A, param2.field_r, param2.field_D, param2.field_k, param2.field_h, param2.field_F, param2.field_u, param2.field_s, param2.field_q, param2.field_K, param2.field_j, param2.field_f, param2.field_x, param2.field_i, param2.field_z, param2.field_d, param2.field_v, param2.field_c, var24, var8, var9, param3, param4, param5, param6, var25);
     }

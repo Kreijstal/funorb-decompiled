@@ -20,7 +20,7 @@ abstract class nk extends ta {
         field_s = null;
         field_u = null;
         if (param0 != 256) {
-            nk.a(41);
+          nk.a(41);
         }
     }
 

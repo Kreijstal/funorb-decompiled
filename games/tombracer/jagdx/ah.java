@@ -6,9 +6,9 @@ package jagdx;
 public final class ah {
     public final static boolean a(int param0, int param1) {
         if (param1 != 10643) {
-            return true;
+          return true;
         }
-        return (param0 ^ -1) > -1 ? true : false;
+        return param0 < 0 ? true : false;
     }
 
     public final static boolean a(int param0, byte param1) {

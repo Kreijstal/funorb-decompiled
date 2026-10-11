@@ -12,8 +12,8 @@ final class bna extends is {
 
     final Object a(int param0) {
         if (param0 < 85) {
-            field_m = (String) null;
-            return this.field_l.get();
+          field_m = (String) null;
+          return this.field_l.get();
         }
         return this.field_l.get();
     }
@@ -21,25 +21,25 @@ final class bna extends is {
     bna(Object param0, int param1) {
         super(param1);
         try {
-            this.field_l = new java.lang.ref.SoftReference(param0);
+          this.field_l = new java.lang.ref.SoftReference(param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "bna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean e(byte param0) {
         if (param0 <= 29) {
-            this.a(-10);
-            return true;
+          this.a(-10);
+          return true;
         }
         return true;
     }
 
     public static void a(boolean param0) {
         if (!param0) {
-            bna.a(false);
-            field_m = null;
-            return;
+          bna.a(false);
+          field_m = null;
+          return;
         }
         field_m = null;
     }

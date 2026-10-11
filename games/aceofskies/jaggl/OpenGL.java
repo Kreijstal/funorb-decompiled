@@ -19,7 +19,7 @@ public class OpenGL {
 
     public final synchronized boolean a() {
         if (this.a != Thread.currentThread()) {
-            return false;
+          return false;
         }
         this.detachPeer();
         b.remove(this.a);
@@ -105,33 +105,28 @@ public class OpenGL {
         int var4_int;
         String var5;
         String var4;
-        if (null == this.c) {
-          this.c = new Hashtable();
-          var2 = jaggl.OpenGL.glGetString(7939);
-          var3 = 0;
-          L0: while (true) {
-            var4_int = var2.indexOf(' ', var3);
-            if (0 == (var4_int ^ -1)) {
-              var4 = var2.substring(var3).trim();
-              if (var4.length() != 0) {
-                this.c.put(var4, var4);
-                return this.c.containsKey(param0);
-              } else {
-                return this.c.containsKey(param0);
-              }
-            } else {
-              var5 = var2.substring(var3, var4_int).trim();
-              var3 = 1 + var4_int;
-              if (var5.length() != 0) {
-                this.c.put(var5, var5);
-                continue L0;
-              } else {
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (null != this.c) {
           return this.c.containsKey(param0);
+        }
+        this.c = new Hashtable();
+        var2 = jaggl.OpenGL.glGetString(7939);
+        var3 = 0;
+        while (true) {
+          var4_int = var2.indexOf(' ', var3);
+          if (var4_int == -1) {
+            var4 = var2.substring(var3).trim();
+            if (var4.length() == 0) {
+              return this.c.containsKey(param0);
+            }
+            this.c.put(var4, var4);
+            return this.c.containsKey(param0);
+          }
+          var5 = var2.substring(var3, var4_int).trim();
+          var3 = 1 + var4_int;
+          if (var5.length() == 0) {
+            continue;
+          }
+          this.c.put(var5, var5);
         }
     }
 
@@ -370,24 +365,17 @@ public class OpenGL {
     public final native static String glGetString(int param0);
 
     public final synchronized boolean b() {
-        Thread var1;
-        jaggl.OpenGL var3;
-        var1 = Thread.currentThread();
-        if (!this.attachPeer()) {
-          return false;
-        } else {
-          L0: {
-            var3 = (jaggl.OpenGL) (b.put(var1, this));
-            if (var3 != null) {
-              var3.a = null;
-              break L0;
-            } else {
-              break L0;
-            }
+        jaggl.OpenGL var3 = null;
+        Thread var1 = Thread.currentThread();
+        if (this.attachPeer()) {
+          var3 = (jaggl.OpenGL) (b.put(var1, this));
+          if (var3 != null) {
+            var3.a = null;
           }
           this.a = var1;
           return true;
         }
+        return false;
     }
 
     public final native static void glGenerateMipmapEXT(int param0);

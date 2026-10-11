@@ -29,114 +29,82 @@ final class bj extends ci {
         int var11;
         int[] var12;
         int[] var13;
-        L0: {
-          var10 = TombRacer.field_G ? 1 : 0;
-          var13 = this.field_i.a((byte) -113, param1);
-          var12 = var13;
-          var3 = var12;
-          if (param0 == 1) {
-            break L0;
-          } else {
-            this.c(-75);
-            break L0;
-          }
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var9Lifetime1;
+        int[] var13Lifetime1;
+        int[] var13Lifetime1Lifetime1;
+        var10 = TombRacer.field_G ? 1 : 0;
+        var13 = this.field_i.a((byte) -113, param1);
+        var12 = var13;
+        var3 = var12;
+        if (param0 != 1) {
+          this.c(-75);
         }
-        L1: {
-          if (!this.field_i.field_d) {
-            break L1;
-          } else {
-            var4 = sj.field_b[param1];
-            if (-1 == (this.field_q ^ -1)) {
-              var13 = var12;
-              var5 = 0;
-              var6 = 0;
-              L2: while (true) {
-                L3: {
-                  if (this.field_n <= var6) {
+        boolean decompiledFrameRemainder0 = true;
+        if (this.field_i.field_d) {
+          var4 = sj.field_b[param1];
+          if (this.field_q == 0) {
+            var13Lifetime1 = var12;
+            var5 = 0;
+            var6 = 0;
+            L3: while (true) {
+              if (this.field_n > var6) {
+                if (this.field_o[var6] <= var4 &&
+                  var4 < this.field_o[1 + var6]) {
+                  if (var4 < this.field_m[var6]) {
+                    var5 = 4096;
                     break L3;
-                  } else {
-                    if (this.field_o[var6] <= var4) {
-                      if (var4 < this.field_o[1 + var6]) {
-                        if (var4 < this.field_m[var6]) {
-                          var5 = 4096;
-                          break L3;
-                        } else {
-                          lua.a(var13, 0, ns.field_g, var5);
-                          return var3;
-                        }
-                      } else {
-                        var6++;
-                        continue L2;
-                      }
-                    } else {
-                      var6++;
-                      continue L2;
-                    }
                   }
+                  lua.a(var13Lifetime1, 0, ns.field_g, var5);
+                  return var3;
                 }
-                lua.a(var13, 0, ns.field_g, var5);
-                break L1;
+                var6++;
+                continue;
               }
-            } else {
-              var5 = 0;
-              L4: while (true) {
-                if (ns.field_g <= var5) {
-                  break L1;
+              break;
+            }
+            lua.a(var13Lifetime1, 0, ns.field_g, var5);
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            var5Lifetime1 = 0;
+            while (!(ns.field_g <= var5Lifetime1)) {
+              var6Lifetime1 = 0;
+              var7 = 0;
+              var8 = ht.field_Fb[var5Lifetime1];
+              var9 = this.field_q;
+              if (var9 != 1) {
+                if (var9 != 2) {
+                  if (var9 == 3) {
+                    var6Lifetime1 = (var8 - var4 >> 1) + 2048;
+                  }
                 } else {
-                  L5: {
-                    var6 = 0;
-                    var7 = 0;
-                    var8 = ht.field_Fb[var5];
-                    var9 = this.field_q;
-                    if (-2 != (var9 ^ -1)) {
-                      if (var9 != 2) {
-                        if ((var9 ^ -1) == -4) {
-                          var6 = (var8 - var4 >> -1382297183) + 2048;
-                          break L5;
-                        } else {
-                          break L5;
-                        }
-                      } else {
-                        var6 = (var8 - -var4 - 4096 >> 824038273) + 2048;
-                        break L5;
-                      }
-                    } else {
-                      var6 = var8;
-                      break L5;
-                    }
-                  }
-                  var11 = 0;
-                  var9 = var11;
-                  L6: while (true) {
-                    L7: {
-                      if (this.field_n <= var11) {
-                        break L7;
-                      } else {
-                        if (var6 >= this.field_o[var11]) {
-                          if (this.field_o[var11 + 1] > var6) {
-                            if (this.field_m[var11] <= var6) {
-                              break L7;
-                            } else {
-                              var7 = 4096;
-                              break L7;
-                            }
-                          } else {
-                            var11++;
-                            continue L6;
-                          }
-                        } else {
-                          var11++;
-                          continue L6;
-                        }
-                      }
-                    }
-                    var13 = var12;
-                    var13[var5] = var7;
-                    var5++;
-                    continue L4;
-                  }
+                  var6Lifetime1 = (var8 + var4 - 4096 >> 1) + 2048;
                 }
+              } else {
+                var6Lifetime1 = var8;
               }
+              var11 = 0;
+              var9Lifetime1 = var11;
+              L8: while (true) {
+                if (this.field_n > var11) {
+                  if (var6Lifetime1 >= this.field_o[var11] &&
+                    this.field_o[var11 + 1] > var6Lifetime1) {
+                    if (this.field_m[var11] <= var6Lifetime1) {
+                      break L8;
+                    }
+                    var7 = 4096;
+                    break L8;
+                  }
+                  var11++;
+                  continue;
+                }
+                break;
+              }
+              var13Lifetime1Lifetime1 = var12;
+              var13Lifetime1Lifetime1[var5Lifetime1] = var7;
+              var5Lifetime1++;
             }
           }
         }
@@ -146,7 +114,7 @@ final class bj extends ci {
     final void b(byte param0) {
         this.c(param0 ^ -117);
         if (param0 != 116) {
-            this.field_o = (int[]) null;
+          this.field_o = (int[]) null;
         }
     }
 
@@ -157,11 +125,11 @@ final class bj extends ci {
         this.field_m = new int[1 + this.field_n];
         int var2 = 0;
         int var3 = 4096 / this.field_n;
-        int var4 = var3 * this.field_r >> 792561100;
+        int var4 = var3 * this.field_r >> 12;
         for (var5 = 0; this.field_n > var5; var5++) {
-            this.field_o[var5] = var2;
-            this.field_m[var5] = var2 - -var4;
-            var2 = var2 + var3;
+          this.field_o[var5] = var2;
+          this.field_m[var5] = var2 + var4;
+          var2 = var2 + var3;
         }
         this.field_o[this.field_n] = 4096;
         this.field_m[this.field_n] = this.field_m[0] + 4096;
@@ -170,7 +138,7 @@ final class bj extends ci {
     public static void a(boolean param0) {
         field_s = null;
         if (!param0) {
-            bj.a(true);
+          bj.a(true);
         }
         field_p = null;
     }
@@ -180,64 +148,38 @@ final class bj extends ci {
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         var5 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var4_int = param2;
-              if (-1 == (var4_int ^ -1)) {
-                this.field_n = param1.h(255);
-                break L1;
-              } else {
-                if (var4_int == 1) {
-                  this.field_r = param1.d(121);
-                  break L1;
-                } else {
-                  if (2 != var4_int) {
-                    break L1;
-                  } else {
-                    this.field_q = param1.h(255);
-                    break L1;
-                  }
-                }
+          var4_int = param2;
+          if (var4_int == 0) {
+            this.field_n = param1.h(255);
+          } else {
+            if (var4_int == 1) {
+              this.field_r = param1.d(121);
+            } else {
+              if (2 == var4_int) {
+                this.field_q = param1.h(255);
               }
             }
-            L2: {
-              if (param0 == 107) {
-                break L2;
-              } else {
-                this.field_q = 15;
-                break L2;
-              }
-            }
-            break L0;
           }
+          if (param0 != 107) {
+            this.field_q = 15;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var4);
-
-            stackIn_13_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L3;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_13_0 = var4;
+          stackIn_13_1 = new StringBuilder().append("bj.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -246,7 +188,7 @@ final class bj extends ci {
         field_p = new sla();
         field_s = new ti[255];
         for (var0 = 0; var0 < field_s.length; var0++) {
-            field_s[var0] = new ti();
+          field_s[var0] = new ti();
         }
     }
 }

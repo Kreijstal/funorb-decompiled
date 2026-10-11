@@ -9,7 +9,7 @@ final class dr {
         awa.field_p.setLength(0);
         ow.field_b = 0;
         if (param0 != 26718) {
-            field_a = 106;
+          field_a = 106;
         }
     }
 

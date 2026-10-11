@@ -14,40 +14,33 @@ final class co extends vf {
     static String[] field_J;
 
     final static String e(byte param0) {
-        if (param0 > 13) {
-          if (ol.field_i == ql.field_f) {
-            return he.field_m;
-          } else {
-            if (!im.field_b.b(36)) {
-              return im.field_b.c(-2085);
-            } else {
-              if (wd.field_d == ql.field_f) {
-                return im.field_b.c(-2085);
-              } else {
-                return field_C;
-              }
-            }
-          }
-        } else {
+        if (param0 <= 13) {
           return (String) null;
         }
+        if (ol.field_i == ql.field_f) {
+          return he.field_m;
+        }
+        if (!im.field_b.b(36)) {
+          return im.field_b.c(-2085);
+        }
+        if (wd.field_d != ql.field_f) {
+          return field_C;
+        }
+        return im.field_b.c(-2085);
     }
 
     final byte[] b(boolean param0) {
-        if (param0) {
-          if (this.field_v) {
-            throw new RuntimeException();
-          } else {
-            return this.field_D;
-          }
-        } else {
+        if (!param0) {
           field_E = (String) null;
-          if (this.field_v) {
-            throw new RuntimeException();
-          } else {
+          if (!this.field_v) {
             return this.field_D;
           }
+          throw new RuntimeException();
         }
+        if (!this.field_v) {
+          return this.field_D;
+        }
+        throw new RuntimeException();
     }
 
     public static void e(int param0) {
@@ -62,10 +55,10 @@ final class co extends vf {
 
     final int d(byte param0) {
         if (param0 <= 98) {
-            return -12;
+          return -12;
         }
-        if (!(!this.field_v)) {
-            return 0;
+        if (this.field_v) {
+          return 0;
         }
         return 100;
     }

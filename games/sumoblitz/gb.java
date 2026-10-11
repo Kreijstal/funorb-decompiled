@@ -13,7 +13,7 @@ final class gb extends nt {
 
     public static void e(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_t = null;
     }
@@ -22,18 +22,18 @@ final class gb extends nt {
         int var3_int = (int)(255.0 * ((double)this.field_p / 30.0));
         int var4 = 0;
         if (param1 > -121) {
-            return;
+          return;
         }
         try {
-            if (this.field_u) {
-                var4 = (int)((double)(30 - this.field_p) / 30.0 * 8192.0);
-            } else {
-                var4 = (int)(8192.0 * ((double)this.field_p / 30.0));
-            }
-            var4 = var4 * 2;
-            am.field_j[4].a((float)(this.field_k >> 167752904), (float)(this.field_o >> 1969306952), var4, 0, 1, var3_int << -694286696, 1);
+          if (this.field_u) {
+            var4 = (int)((double)(30 - this.field_p) / 30.0 * 8192.0);
+          } else {
+            var4 = (int)(8192.0 * ((double)this.field_p / 30.0));
+          }
+          var4 = var4 * 2;
+          am.field_j[4].a((float)(this.field_k >> 8), (float)(this.field_o >> 8), var4, 0, 1, var3_int << 24, 1);
         } catch (RuntimeException runtimeException) {
-            throw qo.a((Throwable) ((Object) runtimeException), "gb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qo.a((Throwable) ((Object) runtimeException), "gb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

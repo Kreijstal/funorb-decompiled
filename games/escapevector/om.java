@@ -18,16 +18,14 @@ final class om {
         field_c = null;
         field_b = null;
         field_g = null;
-        if (param0 != 5468) {
-          om.a(-50);
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 5468) {
           field_e = null;
           field_a = null;
           return;
         }
+        om.a(-50);
+        field_e = null;
+        field_a = null;
     }
 
     om(int param0, int param1, int param2, int param3) {

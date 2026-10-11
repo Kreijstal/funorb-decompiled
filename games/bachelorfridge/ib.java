@@ -8,9 +8,9 @@ final class ib {
     boolean field_c;
 
     final int a(byte param0) {
+        int var4 = 0;
         int var2;
         aga[] var3;
-        int var4;
         int var5;
         aga var6;
         int var7;
@@ -18,22 +18,13 @@ final class ib {
         var2 = 0;
         var3 = this.field_b;
         var5 = 10 % ((54 - param0) / 44);
-        var4 = 0;
-        L0: while (true) {
-          if (var4 >= var3.length) {
-            return var2;
-          } else {
-            var6 = var3[var4];
-            if (var6 != null) {
-              var2++;
-              var4++;
-              continue L0;
-            } else {
-              var4++;
-              continue L0;
-            }
+        for (var4 = 0; var4 < var3.length; var4++) {
+          var6 = var3[var4];
+          if (var6 != null) {
+            var2++;
           }
         }
+        return var2;
     }
 
     final static int a(boolean param0) {
@@ -48,211 +39,117 @@ final class ib {
         int var7 = 0;
         var7 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              var1_int = 0;
-              var2 = 0;
-              if (param0) {
-                break L1;
-              } else {
-                field_d = (be[]) null;
-                break L1;
-              }
+          var1_int = 0;
+          var2 = 0;
+          if (!param0) {
+            field_d = (be[]) null;
+          }
+          while (kaa.b(127)) {
+            dp.field_o.b(true);
+            if (dp.field_o.e(0)) {
+              var1_int = 1;
             }
-            L2: while (true) {
-              if (!kaa.b(127)) {
-                L3: {
-                  dp.field_o.a(rla.a(nfa.field_a, jc.field_r, -126), -122, rla.a(mk.field_p, gd.field_m, -125));
-                  if (dp.field_o.e(0)) {
-                    var1_int = 1;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  L5: {
-                    var3 = 0;
-                    if (var1_int == 0) {
-                      break L5;
-                    } else {
-                      if (dp.field_o.field_g < 0) {
-                        break L5;
-                      } else {
-                        L6: {
-                          var3 = mu.field_l[dp.field_o.field_g];
-                          if (-3 == (var3 ^ -1)) {
-                            break L6;
-                          } else {
-                            if ((var3 ^ -1) == -6) {
-                              break L6;
-                            } else {
-                              break L4;
-                            }
-                          }
-                        }
-                        qja.a(0);
-                        break L4;
-                      }
-                    }
-                  }
-                  if (var2 == 0) {
-                    break L4;
-                  } else {
-                    if ((ub.field_j ^ -1) != -3) {
-                      qja.a(0);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                L7: {
-                  if (0 != var3) {
-                    break L7;
-                  } else {
-                    if ((ub.field_j ^ -1) == -3) {
-                      var4 = f.b((byte) 73) - ph.field_P;
-                      var6 = (int)((10999L + -var4) / 1000L);
-                      if (-1 > (var6 ^ -1)) {
-                        break L7;
-                      } else {
-                        tfa.a(5, 1, true);
-                        var3 = 2;
-                        break L7;
-                      }
-                    } else {
-                      break L7;
-                    }
-                  }
-                }
-                stackIn_27_0 = var3;
-                break L0;
-              } else {
-                L8: {
-                  dp.field_o.b(true);
-                  if (!dp.field_o.e(0)) {
-                    break L8;
-                  } else {
-                    var1_int = 1;
-                    break L8;
-                  }
-                }
-                if (-14 != (gf.field_k ^ -1)) {
-                  continue L2;
-                } else {
-                  var2 = 1;
-                  continue L2;
-                }
-              }
+            if (gf.field_k != 13) {
+              continue;
+            }
+            var2 = 1;
+          }
+          dp.field_o.a(rla.a(nfa.field_a, jc.field_r, -126), -122, rla.a(mk.field_p, gd.field_m, -125));
+          if (dp.field_o.e(0)) {
+            var1_int = 1;
+          }
+          var3 = 0;
+          if (var1_int != 0 &&
+            dp.field_o.field_g >= 0) {
+            var3 = mu.field_l[dp.field_o.field_g];
+            if (var3 == 2 ||
+              var3 == 5) {
+              qja.a(0);
+            }
+          } else {
+            if (var2 != 0 &&
+              ub.field_j != 2) {
+              qja.a(0);
             }
           }
+          if (0 == var3 &&
+            ub.field_j == 2) {
+            var4 = f.b((byte) 73) - ph.field_P;
+            var6 = (int)((10999L - var4) / 1000L);
+            if (var6 <= 0) {
+              tfa.a(5, 1, true);
+              var3 = 2;
+            }
+          }
+          stackIn_27_0 = var3;
+          return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw pe.a((Throwable) ((Object) var1), "ib.C(" + param0 + ')');
         }
-        return stackIn_27_0;
     }
 
     public static void a(int param0) {
         field_d = null;
         if (param0 > -71) {
-            field_d = (be[]) null;
+          field_d = (be[]) null;
         }
     }
 
     final int b(byte param0) {
+        int var4 = 0;
         int var2;
         aga[] var3;
-        int var4;
         aga var5;
         int var6;
-        L0: {
-          var6 = BachelorFridge.field_y;
-          if (param0 >= 58) {
-            break L0;
-          } else {
-            this.field_a = 80;
-            break L0;
-          }
+        var6 = BachelorFridge.field_y;
+        if (param0 < 58) {
+          this.field_a = 80;
         }
         var2 = 0;
         var3 = this.field_b;
-        var4 = 0;
-        L1: while (true) {
-          if (var3.length <= var4) {
-            return var2;
-          } else {
-            var5 = var3[var4];
-            if (var5 != null) {
-              if (!var5.i(-85)) {
-                var2++;
-                var4++;
-                continue L1;
-              } else {
-                var4++;
-                continue L1;
-              }
-            } else {
-              var4++;
-              continue L1;
-            }
+        for (var4 = 0; var3.length > var4; var4++) {
+          var5 = var3[var4];
+          if (var5 != null &&
+            !var5.i(-85)) {
+            var2++;
           }
         }
+        return var2;
     }
 
     final boolean a(byte param0, int param1) {
+        int var4 = 0;
         aga[] var3;
-        int var4;
         aga var5;
         int var6;
-        L0: {
-          var6 = BachelorFridge.field_y;
-          var3 = this.field_b;
-          if (param0 <= -19) {
-            break L0;
-          } else {
-            ib.a(false);
-            break L0;
+        var6 = BachelorFridge.field_y;
+        var3 = this.field_b;
+        if (param0 > -19) {
+          ib.a(false);
+        }
+        for (var4 = 0; var3.length > var4; var4++) {
+          var5 = var3[var4];
+          if (var5 != null &&
+            !var5.i(-73) &&
+            var5.field_y == param1) {
+            return true;
           }
         }
-        var4 = 0;
-        L1: while (true) {
-          if (var3.length <= var4) {
-            return false;
-          } else {
-            var5 = var3[var4];
-            if (var5 != null) {
-              if (!var5.i(-73)) {
-                if (var5.field_y == param1) {
-                  return true;
-                } else {
-                  var4++;
-                  continue L1;
-                }
-              } else {
-                var4++;
-                continue L1;
-              }
-            } else {
-              var4++;
-              continue L1;
-            }
-          }
-        }
+        return false;
     }
 
     final void a(int param0, aga param1) {
         if (param0 != -20836) {
-            return;
+          return;
         }
         try {
-            param1.field_u = this.field_a;
-            this.field_b[this.field_a] = param1;
-            this.field_a = this.field_a + 1;
+          param1.field_u = this.field_a;
+          this.field_b[this.field_a] = param1;
+          this.field_a = this.field_a + 1;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ib.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

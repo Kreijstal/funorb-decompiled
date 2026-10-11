@@ -12,7 +12,7 @@ final class vc {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_c = null;
         field_f = null;

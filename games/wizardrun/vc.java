@@ -19,90 +19,63 @@ final class vc extends pe implements qd {
         pl stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4 = new pl(param1, param2);
-            var4.field_w = (bf) ((Object) new jl());
-            var5 = -2 + this.field_n;
-            this.a(param0 ^ 111, 0, this.field_n - -34, this.field_r, param0);
-            var4.a(110, var5, 30, this.field_r - 14, 7);
-            this.a((ub) (var4), (byte) 98);
-            stackIn_1_0 = (pl) (var4);
-            break L0;
-          }
+          var4 = new pl(param1, param2);
+          var4.field_w = (bf) ((Object) new jl());
+          var5 = -2 + this.field_n;
+          this.a(param0 ^ 111, 0, this.field_n + 34, this.field_r, param0);
+          var4.a(110, var5, 30, this.field_r - 14, 7);
+          this.a((ub) (var4), (byte) 98);
+          stackIn_1_0 = var4;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4_ref = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4_ref);
-
-            stackIn_4_1 = new StringBuilder().append("vc.HA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_4_0 = var4_ref;
+          stackIn_4_1 = new StringBuilder().append("vc.HA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     final void a(byte param0, String param1, int param2) {
         int var4_int = 0;
         try {
-            if (param0 != -31) {
-                this.field_E = (int[]) null;
-            }
-            var4_int = this.field_H;
-            this.a(1 + var4_int, (byte) 109);
-            this.field_F[var4_int] = this.a(0, param1, (ce) (this));
-            this.field_E[var4_int] = param2;
+          if (param0 != -31) {
+            this.field_E = (int[]) null;
+          }
+          var4_int = this.field_H;
+          this.a(1 + var4_int, (byte) 109);
+          this.field_F[var4_int] = this.a(0, param1, (ce) (this));
+          this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "vc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "vc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, param1 + 0, param2, param3);
-        this.field_J.a(this.field_I, param0 - -this.field_o - -14, this.field_l + (param3 + 10), this.field_r - 28, this.field_n, 16777215, -1, param1, 0, this.field_J.field_M);
+        this.field_J.a(this.field_I, param0 + this.field_o + 14, this.field_l + (param3 + 10), this.field_r - 28, this.field_n, 16777215, -1, param1, 0, this.field_J.field_M);
     }
 
     public static void d(boolean param0) {
         field_K = null;
         if (param0) {
-            field_K = (ta) null;
+          field_K = (ta) null;
         }
     }
 
@@ -111,13 +84,13 @@ final class vc extends pe implements qd {
         int var4_int = 0;
         this.field_H = 0;
         try {
-            this.field_I = param2;
-            this.field_L = param0;
-            this.field_J = param1;
-            var4_int = this.field_I != null ? this.field_J.a(this.field_I, 260, this.field_J.field_M) : 0;
-            this.a(123, 0, 22 - -var4_int, 288, 0);
+          this.field_I = param2;
+          this.field_L = param0;
+          this.field_J = param1;
+          var4_int = this.field_I != null ? this.field_J.a(this.field_I, 260, this.field_J.field_M) : 0;
+          this.a(123, 0, 22 + var4_int, 288, 0);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "vc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -127,67 +100,38 @@ final class vc extends pe implements qd {
         int var8 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var8 = wizardrun.field_H;
         try {
-          L0: {
-            L1: {
-              if (param0 == -18905) {
-                break L1;
-              } else {
-                this.field_L = (mh) null;
-                break L1;
-              }
-            }
-            var6_int = 0;
-            L2: while (true) {
-              L3: {
-                if (this.field_H <= var6_int) {
-                  break L3;
-                } else {
-                  if (param1 != this.field_F[var6_int]) {
-                    var6_int++;
-                    continue L2;
-                  } else {
-                    var7 = this.field_E[var6_int];
-                    if (-1 != var7) {
-                      jc.a((byte) 94, this.field_E[var6_int]);
-                      break L3;
-                    } else {
-                      this.field_L.l(param0 ^ 9704);
-                      break L3;
-                    }
-                  }
-                }
-              }
-              break L0;
-            }
+          if (param0 != -18905) {
+            this.field_L = (mh) null;
           }
+          for (var6_int = 0; this.field_H > var6_int; var6_int++) {
+            if (param1 != this.field_F[var6_int]) {
+              continue;
+            }
+            var7 = this.field_E[var6_int];
+            if (-1 != var7) {
+              jc.a((byte) 94, this.field_E[var6_int]);
+            } else {
+              this.field_L.l(param0 ^ 9704);
+            }
+            break;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var6);
-
-            stackIn_13_1 = new StringBuilder().append("vc.DA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("vc.DA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -197,22 +141,22 @@ final class vc extends pe implements qd {
         bh.field_a = null;
         cf.field_i = false;
         if (param0 != 260) {
-            field_M = false;
+          field_M = false;
         }
         if (wi.field_J) {
-            aa.field_lb.n(8);
+          aa.field_lb.n(8);
         } else {
-            var1 = ei.field_t;
-            if (-1 > (var1 ^ -1)) {
-                if ((var1 ^ -1) == -2) {
-                    bh.field_a = ib.field_d;
-                } else {
-                    bh.field_a = di.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
-                }
-                bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pf.field_c)}, 550);
+          var1 = ei.field_t;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              bh.field_a = ib.field_d;
+            } else {
+              bh.field_a = di.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
             }
-            aa.field_lb.l(-27697);
-            uh.a((byte) 125);
+            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pf.field_c)}, 550);
+          }
+          aa.field_lb.l(-27697);
+          uh.a((byte) 125);
         }
     }
 
@@ -220,15 +164,15 @@ final class vc extends pe implements qd {
         int var6 = 0;
         int var7 = wizardrun.field_H;
         if (this.field_H >= param0) {
-            return;
+          return;
         }
         pl[] var8 = new pl[param0];
         pl[] var3 = var8;
         int var4 = 125 % ((param1 - 8) / 33);
         int[] var5 = new int[param0];
         for (var6 = 0; var6 < this.field_H; var6++) {
-            var8[var6] = this.field_F[var6];
-            var5[var6] = this.field_E[var6];
+          var8[var6] = this.field_F[var6];
+          var5[var6] = this.field_E[var6];
         }
         this.field_F = var3;
         this.field_H = param0;
@@ -237,13 +181,13 @@ final class vc extends pe implements qd {
 
     final static void a(int param0, String param1) {
         try {
-            va.a(-2, param1);
-            if (param0 >= -67) {
-                field_G = -79;
-            }
-            fc.a(sd.field_c, false, -120);
+          va.a(-2, param1);
+          if (param0 >= -67) {
+            field_G = -79;
+          }
+          fc.a(sd.field_c, false, -120);
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "vc.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,37 +13,32 @@ final class fua implements isa {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 <= 88) {
-            return true;
+          return true;
         }
-        return (param1 & 32768 ^ -1) != -1 ? true : false;
+        return (param1 & 32768) != 0 ? true : false;
     }
 
     public static void a(int param0) {
         field_f = null;
         field_a = null;
-        if (param0 >= -118) {
-          field_h = (int[]) null;
-          field_b = null;
-          field_h = null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 < -118) {
           field_b = null;
           field_h = null;
           field_e = null;
           field_c = null;
           return;
         }
+        field_h = (int[]) null;
+        field_b = null;
+        field_h = null;
+        field_e = null;
+        field_c = null;
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -52,82 +47,47 @@ final class fua implements isa {
         String var9 = null;
         int var10 = 0;
         try {
-          L0: {
-            if (param2 == 16777215) {
-              L1: {
-                var6_int = param1 + param0.field_i;
-                var7 = param0.field_n + param3;
-                bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
-                if (param0.b((byte) -34)) {
-                  nn.a(var6_int - -2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              L2: {
-                bea.b(var6_int, var7, var6_int + (param0.field_m + -2), var7 - -param0.field_p);
-                var8 = this.field_d.field_z.d(124);
-                if (var8 != null) {
-                  var9 = var8.toString();
-                  this.field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + this.field_d.field_H.field_w >> 198752417) + var7, 10000536, -1);
-                  if (!this.field_d.b((byte) -34)) {
-                    break L2;
-                  } else {
-                    if (!var9.startsWith(this.field_d.field_w)) {
-                      break L2;
-                    } else {
-                      var10 = this.field_d.field_H.b(this.field_d.field_w);
-                      bea.c(2 + var6_int, var7 - -2, var10, -4 + param0.field_p, 2188450, 100);
-                      break L2;
-                    }
-                  }
-                } else {
-                  break L2;
-                }
-              }
-              bea.b();
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param2 != 16777215) {
+            return;
+          }
+          var6_int = param1 + param0.field_i;
+          var7 = param0.field_n + param3;
+          bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
+          if (param0.b((byte) -34)) {
+            nn.a(var6_int + 2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
+          }
+          bea.b(var6_int, var7, var6_int + (param0.field_m - 2), var7 + param0.field_p);
+          var8 = this.field_d.field_z.d(124);
+          if (var8 != null) {
+            var9 = var8.toString();
+            this.field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + this.field_d.field_H.field_w >> 1) + var7, 10000536, -1);
+            if (this.field_d.b((byte) -34) &&
+              var9.startsWith(this.field_d.field_w)) {
+              var10 = this.field_d.field_H.b(this.field_d.field_w);
+              bea.c(2 + var6_int, var7 + 2, var10, -4 + param0.field_p, 2188450, 100);
             }
           }
+          bea.b();
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var6 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var6);
-
-            stackIn_14_1 = new StringBuilder().append("fua.B(");
-
-            if (param0 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("fua.B(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     fua(rla param0) {
         try {
-            this.field_d = param0;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

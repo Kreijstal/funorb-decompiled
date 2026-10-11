@@ -16,7 +16,7 @@ final class sg {
 
     final static String b(int param0) {
         if (null == ri.field_c) {
-            return "";
+          return "";
         }
         int var1 = 38 / ((param0 - 55) / 46);
         return ri.field_c;
@@ -25,26 +25,24 @@ final class sg {
     public static void a(int param0) {
         field_g = null;
         field_f = null;
-        if (param0 != 511) {
-          field_g = (int[]) null;
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 511) {
           field_d = null;
           field_c = null;
           field_e = null;
           field_a = null;
           return;
         }
+        field_g = (int[]) null;
+        field_d = null;
+        field_c = null;
+        field_e = null;
+        field_a = null;
     }
 
     final static void a(byte param0) {
         ua.field_F = null;
         if (param0 != -12) {
-            return;
+          return;
         }
         hk.field_a = null;
     }

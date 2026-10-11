@@ -9,85 +9,36 @@ final class cn {
     static double[] field_d;
 
     final static boolean b(int param0) {
+        int var3 = 0;
         pi var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
         pi var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_17_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
         try {
-          L0: {
-            var5 = (pi) ((Object) hc.field_b.g(32073));
-            var1 = var5;
-            if (var1 != null) {
-              var2 = -85 % ((param0 - 23) / 39);
-              var3 = 0;
-              L1: while (true) {
-                if (var1.field_i <= var3) {
-                  stackIn_17_0 = 1;
-                  decompiledRegionSelector0 = 3;
-                  break L0;
-                } else {
-                  L2: {
-                    if (var5.field_k[var3] == null) {
-                      break L2;
-                    } else {
-                      if (var5.field_k[var3].field_a != 0) {
-                        break L2;
-                      } else {
-                        stackIn_9_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  L3: {
-                    if (null == var5.field_m[var3]) {
-                      break L3;
-                    } else {
-                      if (var5.field_m[var3].field_a == 0) {
-                        stackIn_14_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L0;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var3++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var5 = (pi) (hc.field_b.g(32073));
+          var1 = var5;
+          if (var1 == null) {
+            return false;
+          }
+          var2 = -85 % ((param0 - 23) / 39);
+          for (var3 = 0; var1.field_i > var3; var3++) {
+            if (var5.field_k[var3] != null &&
+              var5.field_k[var3].field_a == 0) {
+              return false;
+            }
+            if (null != var5.field_m[var3] &&
+              var5.field_m[var3].field_a == 0) {
+              return false;
             }
           }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
           throw dn.a((Throwable) ((Object) var1_ref), "cn.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_14_0 != 0;
-            } else {
-              return stackIn_17_0 != 0;
-            }
-          }
         }
     }
 
@@ -96,9 +47,9 @@ final class cn {
         field_b = null;
         field_d = null;
         if (param0 < 9) {
-            field_c = (dl[]) null;
-            field_e = null;
-            return;
+          field_c = (dl[]) null;
+          field_e = null;
+          return;
         }
         field_e = null;
     }

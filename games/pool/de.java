@@ -14,7 +14,7 @@ final class de {
 
     final static float a(int param0, int param1, int param2) {
         if (param0 != -1) {
-            return -0.7121016979217529f;
+          return -0.7121016979217529f;
         }
         return (float)param2 / (float)(1 << param1);
     }
@@ -26,7 +26,7 @@ final class de {
         field_b = null;
         field_c = null;
         if (param0 != -1) {
-            de.b(73);
+          de.b(73);
         }
     }
 
@@ -34,41 +34,23 @@ final class de {
         if (fk.field_ab == 10) {
           ga.b(false);
           fk.field_ab = 11;
-          if (param0 == 11) {
-            uh.field_o = true;
-            return;
-          } else {
-            de.a(48, 16, -49);
-            uh.field_o = true;
-            return;
-          }
         } else {
           if (!uc.a(-114)) {
             ga.b(false);
             fk.field_ab = 11;
-            if (param0 != 11) {
-              de.a(48, 16, -49);
-              uh.field_o = true;
-              return;
-            } else {
-              uh.field_o = true;
-              return;
-            }
-          } else {
-            if (param0 == 11) {
-              uh.field_o = true;
-              return;
-            } else {
-              de.a(48, 16, -49);
-              uh.field_o = true;
-              return;
-            }
           }
         }
+        if (param0 != 11) {
+          de.a(48, 16, -49);
+        }
+        uh.field_o = true;
     }
 
     final static void a(int param0) {
-        if (aq.field_a == null) {
+        if (aq.field_a != null) {
+          if (!vj.field_c[59]) {
+            return;
+          }
           aq.field_a = new ci[11];
           aq.field_a[0] = new ci(0.0f, 1.0f, 0);
           aq.field_a[1] = new ci(0.0f, 1.0f, 1);
@@ -84,121 +66,82 @@ final class de {
             aq.field_a[9] = new ci(0.0f, 15.0f, 9);
             aq.field_a[10] = new ci(0.0f, 0.25f, 10);
             return;
-          } else {
-            aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-            aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-            aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-            aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-            aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-            aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-            aq.field_a[10] = new ci(0.0f, 0.25f, 10);
-            return;
           }
-        } else {
-          if (vj.field_c[59]) {
-            aq.field_a = new ci[11];
-            aq.field_a[0] = new ci(0.0f, 1.0f, 0);
-            aq.field_a[1] = new ci(0.0f, 1.0f, 1);
-            aq.field_a[2] = new ci(0.0f, 1.0f, 2);
-            aq.field_a[3] = new ci(0.0f, 1.0f, 3);
-            if (param0 < -73) {
-              aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-              aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-              aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-              aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-              aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-              aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-              aq.field_a[10] = new ci(0.0f, 0.25f, 10);
-              return;
-            } else {
-              field_a = -42;
-              aq.field_a[4] = new ci(0.0f, 0.5f, 4);
-              aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
-              aq.field_a[6] = new ci(0.0f, 4.0f, 6);
-              aq.field_a[7] = new ci(0.0f, 2.0f, 7);
-              aq.field_a[8] = new ci(0.5f, 1.0f, 8);
-              aq.field_a[9] = new ci(0.0f, 15.0f, 9);
-              aq.field_a[10] = new ci(0.0f, 0.25f, 10);
-              return;
-            }
-          } else {
-            return;
-          }
+          aq.field_a[4] = new ci(0.0f, 0.5f, 4);
+          aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
+          aq.field_a[6] = new ci(0.0f, 4.0f, 6);
+          aq.field_a[7] = new ci(0.0f, 2.0f, 7);
+          aq.field_a[8] = new ci(0.5f, 1.0f, 8);
+          aq.field_a[9] = new ci(0.0f, 15.0f, 9);
+          aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+          return;
         }
+        aq.field_a = new ci[11];
+        aq.field_a[0] = new ci(0.0f, 1.0f, 0);
+        aq.field_a[1] = new ci(0.0f, 1.0f, 1);
+        aq.field_a[2] = new ci(0.0f, 1.0f, 2);
+        aq.field_a[3] = new ci(0.0f, 1.0f, 3);
+        if (param0 < -73) {
+          aq.field_a[4] = new ci(0.0f, 0.5f, 4);
+          aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
+          aq.field_a[6] = new ci(0.0f, 4.0f, 6);
+          aq.field_a[7] = new ci(0.0f, 2.0f, 7);
+          aq.field_a[8] = new ci(0.5f, 1.0f, 8);
+          aq.field_a[9] = new ci(0.0f, 15.0f, 9);
+          aq.field_a[10] = new ci(0.0f, 0.25f, 10);
+          return;
+        }
+        field_a = -42;
+        aq.field_a[4] = new ci(0.0f, 0.5f, 4);
+        aq.field_a[5] = new ci(0.0f, 0.0625f, 5);
+        aq.field_a[6] = new ci(0.0f, 4.0f, 6);
+        aq.field_a[7] = new ci(0.0f, 2.0f, 7);
+        aq.field_a[8] = new ci(0.5f, 1.0f, 8);
+        aq.field_a[9] = new ci(0.0f, 15.0f, 9);
+        aq.field_a[10] = new ci(0.0f, 0.25f, 10);
     }
 
     final static void a(int param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            IOException var2 = null;
-            if (param1 == 0) {
-              L0: {
-                if (jd.field_c == null) {
-                  break L0;
-                } else {
-                  L1: {
-                    if (param0 >= 0) {
-                      if (tl.field_J != ta.field_a) {
-                        break L0;
-                      } else {
-                        if (ej.field_j.field_v != 0) {
-                          break L1;
-                        } else {
-                          if (rl.a((byte) -108) <= nf.field_Q - -10000L) {
-                            break L1;
-                          } else {
-                            ej.field_j.b(false, param0);
-                            break L1;
-                          }
-                        }
-                      }
-                    } else {
-                      if (ej.field_j.field_v != 0) {
-                        break L1;
-                      } else {
-                        if (rl.a((byte) -108) <= nf.field_Q - -10000L) {
-                          break L1;
-                        } else {
-                          ej.field_j.b(false, param0);
-                          break L1;
-                        }
-                      }
-                    }
-                  }
-                  L2: {
-                    if ((ej.field_j.field_v ^ -1) < -1) {
-                      try {
-                        L3: {
-                          jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
-                          nf.field_Q = rl.a((byte) -111);
-                          break L3;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L4: {
-                          var2 = (IOException) (Object) decompiledCaughtException;
-                          dn.c(-74);
-                          break L4;
-                        }
-                      }
-                      ej.field_j.field_v = 0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  return;
-                }
+          Throwable decompiledCaughtException = null;
+          IOException var2 = null;
+          if (param1 != 0) {
+            return;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          if (jd.field_c != null) {
+            if (param0 >= 0) {
+              decompiledFrameRemainder0 = (tl.field_J == ta.field_a);
+              if ((decompiledFrameRemainder0) && (ej.field_j.field_v == 0 &&
+                rl.a((byte) -108) > nf.field_Q + 10000L)) {
+                ej.field_j.b(false, param0);
               }
-              ej.field_j.field_v = 0;
-              return;
             } else {
+              if (ej.field_j.field_v == 0 &&
+                rl.a((byte) -108) > nf.field_Q + 10000L) {
+                ej.field_j.b(false, param0);
+              }
+            }
+            if (decompiledFrameRemainder0) {
+              if (ej.field_j.field_v > 0) {
+                try {
+                  jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
+                  nf.field_Q = rl.a((byte) -111);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  dn.c(-74);
+                }
+                ej.field_j.field_v = 0;
+              }
               return;
             }
+          }
+          ej.field_j.field_v = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -211,67 +154,41 @@ final class de {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2_int = param1.g(-112);
-              if ((var2_int ^ -1) == -2) {
-                stackIn_3_0 = 1;
-                break L1;
-              } else {
-                stackIn_3_0 = 0;
-                break L1;
-              }
-            }
-            var3 = stackIn_3_0;
-            var4 = 127 / ((13 - param0) / 63);
-            stackIn_4_0 = var3;
-            break L0;
-          }
+          var2_int = param1.g(-112);
+          stackIn_3_0 = (var2_int == 1) ? 1 : 0;
+          var3 = stackIn_3_0;
+          var4 = 127 / ((13 - param0) / 63);
+          stackIn_4_0 = var3;
+          return stackIn_4_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("de.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("de.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_4_0 != 0;
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param0 + param2 <= qh.field_l) {
+        if (!(param0 + param2 > qh.field_l)) {
           return param2;
-        } else {
-          if (-1 < (param1 + param2 + -param0 ^ -1)) {
-            if (param3 != 0) {
-              field_f = (String) null;
-              return qh.field_l - param0;
-            } else {
-              return qh.field_l - param0;
-            }
-          } else {
-            return param2 + (param1 + -param0);
-          }
         }
+        if (param1 + param2 - param0 >= 0) {
+          return param2 + (param1 - param0);
+        }
+        if (param3 == 0) {
+          return qh.field_l - param0;
+        }
+        field_f = (String) null;
+        return qh.field_l - param0;
     }
 
     static {

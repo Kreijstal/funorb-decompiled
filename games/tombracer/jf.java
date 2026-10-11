@@ -14,42 +14,27 @@ final class jf extends ela {
     }
 
     final static iu a(int param0, int param1, int param2) {
-        iu var3;
-        int var4;
-        int var5;
-        iu var6;
-        var5 = TombRacer.field_G ? 1 : 0;
-        var6 = new iu(param2, param2);
-        var3 = var6;
-        if (param1 <= 36) {
-          jf.a(44, 69, 69);
-          var4 = 0;
-          L0: while (true) {
-            if (var3.field_r.length <= var4) {
-              return var3;
-            } else {
-              var6.field_r[var4] = param0;
-              var4++;
-              continue L0;
-            }
+        int var4 = 0;
+        int var5 = TombRacer.field_G ? 1 : 0;
+        iu var6 = new iu(param2, param2);
+        iu var3 = var6;
+        int var4Lifetime1;
+        if (param1 > 36) {
+          for (var4 = 0; var3.field_r.length > var4; var4++) {
+            var6.field_r[var4] = param0;
           }
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            if (var3.field_r.length <= var4) {
-              return var3;
-            } else {
-              var6.field_r[var4] = param0;
-              var4++;
-              continue L1;
-            }
-          }
+          return var3;
         }
+        jf.a(44, 69, 69);
+        for (var4Lifetime1 = 0; var3.field_r.length > var4Lifetime1; var4Lifetime1++) {
+          var6.field_r[var4Lifetime1] = param0;
+        }
+        return var3;
     }
 
     public static void a(byte param0) {
         if (param0 != 2) {
-            return;
+          return;
         }
         field_t = null;
         field_p = null;
@@ -62,46 +47,26 @@ final class jf extends ela {
         bfa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_p = (dk[]) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new bfa(sra.a((String) (param0[0].field_d), 85));
-            break L0;
+          if (param1 != 0) {
+            field_p = (dk[]) null;
           }
+          stackIn_3_0 = new bfa(sra.a((String) (param0[0].field_d), 85));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("jf.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("jf.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {

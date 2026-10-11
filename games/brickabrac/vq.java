@@ -16,7 +16,7 @@ final class vq extends oq {
 
     public static void h(int param0) {
         if (param0 != -257) {
-            vq.h(-94);
+          vq.h(-94);
         }
         field_D = null;
         field_F = null;
@@ -30,18 +30,18 @@ final class vq extends oq {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 != 1273378209) {
-            field_E = (String[]) null;
+          field_E = (String[]) null;
         }
-        int var3 = 4 - -ip.field_r.a(-37880252, -4 + param0);
+        int var3 = 4 + ip.field_r.a(-37880252, -4 + param0);
         int var4 = ip.field_r.a(-37880252, -8 + param2) + 8;
-        ob.field_E.a(new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k - -ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
+        ob.field_E.a(new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k + ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
         dl.field_f = dl.field_f + 1;
     }
 
     final void b(byte param0) {
         pe.field_o.b((byte) -19);
         if (param0 > -14) {
-            field_J = (String) null;
+          field_J = (String) null;
         }
         lb.b(0, 0, 640, 480);
         this.g(124);
@@ -55,47 +55,30 @@ final class vq extends oq {
 
     final void c(int param0) {
         if (param0 != -1) {
-            this.b((byte) 35);
+          this.b((byte) 35);
         }
     }
 
     static {
-        $cfr$clinit: {
-            int var0;
-            int var1;
-            int var2;
-            field_D = new int[256];
-            var1 = 0;
-            L0: while (true) {
-              if ((var1 ^ -1) <= -257) {
-                field_E = new String[]{"By rating", "By win percentage"};
-                field_z = "Please send me news and updates (I can unsubscribe at any time)";
-                field_J = null;
-                field_B = new String[255];
-                field_G = new int[8192];
-                break $cfr$clinit;
-              } else {
-                var0 = var1;
-                var2 = 0;
-                L1: while (true) {
-                  if (var2 >= 8) {
-                    field_D[var1] = var0;
-                    var1++;
-                    continue L0;
-                  } else {
-                    if ((var0 & 1) == 1) {
-                      var0 = var0 >>> 1273378209 ^ -306674912;
-                      var2++;
-                      continue L1;
-                    } else {
-                      var0 = var0 >>> 1;
-                      var2++;
-                      continue L1;
-                    }
-                  }
-                }
-              }
+        int var1 = 0;
+        int var2 = 0;
+        int var0;
+        field_D = new int[256];
+        for (var1 = 0; var1 < 256; var1++) {
+          var0 = var1;
+          for (var2 = 0; var2 < 8; var2++) {
+            if ((var0 & 1) == 1) {
+              var0 = var0 >>> 1 ^ -306674912;
+            } else {
+              var0 = var0 >>> 1;
             }
+          }
+          field_D[var1] = var0;
         }
+        field_E = new String[]{"By rating", "By win percentage"};
+        field_z = "Please send me news and updates (I can unsubscribe at any time)";
+        field_J = null;
+        field_B = new String[255];
+        field_G = new int[8192];
     }
 }

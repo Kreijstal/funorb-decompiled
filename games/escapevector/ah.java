@@ -19,50 +19,44 @@ abstract class ah extends sm implements rj {
 
     public final void a(boolean param0, ul param1) {
         try {
-            if (!param0) {
-                field_l = (String) null;
-            }
+          if (!param0) {
+            field_l = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ah.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract rf a(int param0, String param1);
 
     public final boolean c(int param0) {
-        int var2;
-        int stackIn_3_0 = 0;
-        var2 = -113 % ((41 - param0) / 50);
-        if (this.field_f.field_l != null) {
-          if (this.field_f.field_l.length() == 0) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          stackIn_3_0 = 1;
-          return stackIn_3_0 != 0;
+        int var2 = -113 % ((41 - param0) / 50);
+        if (this.field_f.field_l == null) {
+          return true;
         }
+        if (this.field_f.field_l.length() != 0) {
+          return false;
+        }
+        return true;
     }
 
     public final void a(ul param0, int param1) {
         if (param1 != 0) {
-            return;
+          return;
         }
         try {
-            this.a(false);
+          this.a(false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final rf d(int param0) {
-        if (param0 >= -60) {
-          ah.f(-116);
-          return this.a(-1, this.field_f.field_l);
-        } else {
+        if (param0 < -60) {
           return this.a(-1, this.field_f.field_l);
         }
+        ah.f(-116);
+        return this.a(-1, this.field_f.field_l);
     }
 
     abstract String a(byte param0, String param1);
@@ -75,28 +69,28 @@ abstract class ah extends sm implements rj {
         field_k = null;
         field_i = null;
         if (param0 != -16187) {
-            java.awt.Canvas var2 = (java.awt.Canvas) null;
-            ah.a((java.awt.Canvas) null, -55);
+          java.awt.Canvas var2 = (java.awt.Canvas) null;
+          ah.a((java.awt.Canvas) null, -55);
         }
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-            if (!(-12 != (ff.field_e ^ -1))) {
-                bm.b((byte) 62);
-            }
-            si.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
-            nn.a(param0, param1, param1 + -1, 0);
+          if (ff.field_e == 11) {
+            bm.b((byte) 62);
+          }
+          si.a(pl.field_t, hd.field_e, pb.field_d, (byte) 14);
+          nn.a(param0, param1, param1 - 1, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     ah(ul param0) {
         try {
-            this.field_f = param0;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ah.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -107,7 +101,7 @@ abstract class ah extends sm implements rj {
         tb.field_G = null;
         tb.field_D = false;
         if (param0 != 0) {
-            field_e = -59L;
+          field_e = -59L;
         }
     }
 

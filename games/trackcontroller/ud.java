@@ -6,25 +6,25 @@ final class ud {
     static String field_b;
 
     final static int a(byte param0, int param1) {
-        int var2 = 108 / ((param0 - -15) / 39);
+        int var2 = 108 / ((param0 + 15) / 39);
         if (0 != (e.field_a[param1] & 41)) {
-            return 512;
+          return 512;
         }
-        if (!(-16 == (param1 ^ -1))) {
-            return 1024;
+        if (param1 != 15) {
+          return 1024;
         }
         return 128;
     }
 
     final static void a(int param0, float param1, String param2) {
         try {
-            pb.field_a = param1;
-            if (param0 != 128) {
-                field_a = (int[][]) null;
-            }
-            qi.field_k = param2;
+          pb.field_a = param1;
+          if (param0 != 128) {
+            field_a = (int[][]) null;
+          }
+          qi.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "ud.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "ud.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,14 +33,6 @@ final class ud {
     }
 
     final static void a(int param0) {
-        int incrementValue$8 = 0;
-        int incrementValue$9 = 0;
-        int incrementValue$10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int incrementValue$13 = 0;
-        int incrementValue$14 = 0;
-        int incrementValue$15 = 0;
         int[] var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -50,48 +42,25 @@ final class ud {
         RuntimeException decompiledCaughtException = null;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            var5 = rf.field_a;
-            var1 = var5;
-            var2 = 0;
-            var3 = var5.length;
-            L1: while (true) {
-              if (var2 >= var3) {
-                if (param0 < -78) {
-                  break L0;
-                } else {
-                  ud.a(30);
-                  return;
-                }
-              } else {
-                incrementValue$8 = var2;
-                var2++;
-                var5[incrementValue$8] = 0;
-                incrementValue$9 = var2;
-                var2++;
-                var5[incrementValue$9] = 0;
-                incrementValue$10 = var2;
-                var2++;
-                var5[incrementValue$10] = 0;
-                incrementValue$11 = var2;
-                var2++;
-                var5[incrementValue$11] = 0;
-                incrementValue$12 = var2;
-                var2++;
-                var5[incrementValue$12] = 0;
-                incrementValue$13 = var2;
-                var2++;
-                var5[incrementValue$13] = 0;
-                incrementValue$14 = var2;
-                var2++;
-                var5[incrementValue$14] = 0;
-                incrementValue$15 = var2;
-                var2++;
-                var5[incrementValue$15] = 0;
-                continue L1;
-              }
-            }
+          var5 = rf.field_a;
+          var1 = var5;
+          var2 = 0;
+          var3 = var5.length;
+          while (var2 < var3) {
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
+            var5[var2++] = 0;
           }
+          if (param0 < -78) {
+            return;
+          }
+          ud.a(30);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -101,10 +70,10 @@ final class ud {
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_b = (String) null;
-            field_a = (int[][]) null;
-            field_b = null;
-            return;
+          field_b = (String) null;
+          field_a = (int[][]) null;
+          field_b = null;
+          return;
         }
         field_a = (int[][]) null;
         field_b = null;

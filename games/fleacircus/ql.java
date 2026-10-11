@@ -19,7 +19,7 @@ final class ql extends lh {
         field_l = null;
         field_j = null;
         if (param0 != -92) {
-            return;
+          return;
         }
         field_k = null;
     }
@@ -35,34 +35,22 @@ final class ql extends lh {
     }
 
     final static fh a(int param0, int param1) {
+        int var3 = 0;
         fh[] var2;
-        int var3;
         int var4;
         fh[] var5;
-        L0: {
-          var4 = fleas.field_A ? 1 : 0;
-          if (param0 == -22471) {
-            break L0;
-          } else {
-            field_l = (ae) null;
-            break L0;
-          }
+        var4 = fleas.field_A ? 1 : 0;
+        if (param0 != -22471) {
+          field_l = (ae) null;
         }
         var5 = al.b(true);
         var2 = var5;
-        var3 = 0;
-        L1: while (true) {
-          if (var3 < var5.length) {
-            if (var5[var3].field_d != param1) {
-              var3++;
-              continue L1;
-            } else {
-              return var5[var3];
-            }
-          } else {
-            return null;
+        for (var3 = 0; var3 < var5.length; var3++) {
+          if (var5[var3].field_d == param1) {
+            return var5[var3];
           }
         }
+        return null;
     }
 
     ql(int param0, int param1, int param2, int param3, int param4, int param5) {

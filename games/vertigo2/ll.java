@@ -11,16 +11,14 @@ final class ll {
     public static void a(int param0) {
         field_e = null;
         field_c = null;
-        if (param0 != 3) {
-          field_c = (String) null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 3) {
           field_a = null;
           field_d = null;
           return;
         }
+        field_c = (String) null;
+        field_a = null;
+        field_d = null;
     }
 
     public final String toString() {
@@ -33,7 +31,7 @@ final class ll {
         eo.field_l = new tn[param1 * 15];
         no.field_d = 0;
         if (param0 > -71) {
-            ll.a((byte) -33, -122);
+          ll.a((byte) -33, -122);
         }
     }
 

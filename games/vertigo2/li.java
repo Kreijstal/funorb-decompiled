@@ -26,57 +26,44 @@ class li {
         field_g = null;
         field_m = null;
         if (param0 != 55) {
-            li.d(-58);
+          li.d(-58);
         }
     }
 
     final static ve a(int param0, int param1) {
+        int var3 = 0;
         ve[] var2;
-        int var3;
         int var4;
         ve[] var5;
-        L0: {
-          var4 = Vertigo2.field_L ? 1 : 0;
-          if (param1 < -21) {
-            break L0;
-          } else {
-            field_g = (int[]) null;
-            break L0;
-          }
+        var4 = Vertigo2.field_L ? 1 : 0;
+        if (param1 >= -21) {
+          field_g = (int[]) null;
         }
         var5 = k.a(-15922);
         var2 = var5;
-        var3 = 0;
-        L1: while (true) {
-          if (var3 < var5.length) {
-            if (var5[var3].field_e == param0) {
-              return var5[var3];
-            } else {
-              var3++;
-              continue L1;
-            }
-          } else {
-            return null;
+        for (var3 = 0; var3 < var5.length; var3++) {
+          if (var5[var3].field_e == param0) {
+            return var5[var3];
           }
         }
+        return null;
     }
 
     final boolean b(int param0) {
         if (param0 < 76) {
-            this.field_a = (li) null;
+          this.field_a = (li) null;
         }
         if (this.field_a != null) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final static int a(int param0, boolean param1, CharSequence param2, boolean param3) {
+        int var8 = 0;
         int stackIn_42_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
-        RuntimeException stackIn_46_0 = null;
-        StringBuilder stackIn_46_1 = null;
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -84,165 +71,83 @@ class li {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 < 2) {
-                break L1;
-              } else {
-                if (36 < param0) {
-                  break L1;
+          if (param0 >= 2 &&
+            36 >= param0) {
+            var4_int = 0;
+            var5 = 0;
+            var6 = 0;
+            if (!param3) {
+              field_b = (String) null;
+            }
+            var7 = param2.length();
+            for (var8 = 0; var7 > var8; var8++) {
+              boolean decompiledFrameRemainder0 = true;
+              var9 = param2.charAt(var8);
+              if ((var8 == 0) &&
+                (var9 == 45)) {
+                var4_int = 1;
+                decompiledFrameRemainder0 = false;
+              }
+              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+                !param1))) {
+                if (48 <= var9 &&
+                  var9 <= 57) {
+                  var9 -= 48;
+                } else if (var9 >= 65 &&
+                  var9 <= 90) {
+                  var9 -= 55;
+                } else if (var9 >= 97 &&
+                  var9 <= 122) {
+                  var9 -= 87;
                 } else {
-                  L2: {
-                    var4_int = 0;
-                    var5 = 0;
-                    var6 = 0;
-                    if (param3) {
-                      break L2;
-                    } else {
-                      field_b = (String) null;
-                      break L2;
-                    }
-                  }
-                  var7 = param2.length();
-                  var8 = 0;
-                  L3: while (true) {
-                    if (var7 <= var8) {
-                      if (var5 != 0) {
-                        stackIn_42_0 = var6;
-                        break L0;
-                      } else {
-                        throw new NumberFormatException();
-                      }
-                    } else {
-                      L4: {
-                        L5: {
-                          var9 = param2.charAt(var8);
-                          if (var8 == 0) {
-                            if (var9 == 45) {
-                              var4_int = 1;
-                              break L4;
-                            } else {
-                              if (var9 != 43) {
-                                break L5;
-                              } else {
-                                if (!param1) {
-                                  break L5;
-                                } else {
-                                  var8++;
-                                  continue L3;
-                                }
-                              }
-                            }
-                          } else {
-                            break L5;
-                          }
-                        }
-                        L6: {
-                          L7: {
-                            if (48 > var9) {
-                              break L7;
-                            } else {
-                              if (var9 > 57) {
-                                break L7;
-                              } else {
-                                var9 -= 48;
-                                break L6;
-                              }
-                            }
-                          }
-                          L8: {
-                            if (var9 < 65) {
-                              break L8;
-                            } else {
-                              if (var9 <= 90) {
-                                var9 -= 55;
-                                break L6;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          L9: {
-                            if (var9 < 97) {
-                              break L9;
-                            } else {
-                              if (var9 <= 122) {
-                                var9 -= 87;
-                                break L6;
-                              } else {
-                                break L9;
-                              }
-                            }
-                          }
-                          throw new NumberFormatException();
-                        }
-                        if (param0 > var9) {
-                          L10: {
-                            if (var4_int == 0) {
-                              break L10;
-                            } else {
-                              var9 = -var9;
-                              break L10;
-                            }
-                          }
-                          var10 = param0 * var6 - -var9;
-                          if (var6 != var10 / param0) {
-                            throw new NumberFormatException();
-                          } else {
-                            var5 = 1;
-                            var6 = var10;
-                            break L4;
-                          }
-                        } else {
-                          throw new NumberFormatException();
-                        }
-                      }
-                      var8++;
-                      continue L3;
-                    }
-                  }
+                  throw new NumberFormatException();
                 }
+                if (param0 <= var9) {
+                  throw new NumberFormatException();
+                }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = param0 * var6 + var9;
+                if (var6 != var10 / param0) {
+                  throw new NumberFormatException();
+                }
+                var5 = 1;
+                var6 = var10;
               }
             }
-            throw new IllegalArgumentException("" + param0);
+            if (var5 == 0) {
+              throw new NumberFormatException();
+            }
+            stackIn_42_0 = var6;
+            return stackIn_42_0;
           }
+          throw new IllegalArgumentException("" + param0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
-            var4 = decompiledCaughtException;
-            stackIn_45_0 = (RuntimeException) (var4);
-
-            stackIn_45_1 = new StringBuilder().append("li.RB(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "null";
-              break L11;
-            } else {
-              stackIn_46_0 = (RuntimeException) ((Object) stackIn_45_0);
-              stackIn_46_1 = (StringBuilder) ((Object) stackIn_45_1);
-              stackIn_46_2 = "{...}";
-              break L11;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_45_0 = var4;
+          stackIn_45_1 = new StringBuilder().append("li.RB(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_46_2 = "null";
+          } else {
+            stackIn_46_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_46_0), stackIn_46_2 + ',' + param3 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_42_0;
     }
 
     final void c(int param0) {
         if (param0 != 2) {
-            li.a(true, -15);
+          li.a(true, -15);
         }
         if (null == this.field_a) {
-            return;
+          return;
         }
         this.field_a.field_c = this.field_c;
         this.field_c.field_a = this.field_a;
@@ -255,7 +160,7 @@ class li {
         eb.field_a = f.field_I[param1];
         bq.field_A = Vertigo2.field_H[param1];
         if (!param0) {
-            field_d = 61;
+          field_d = 61;
         }
     }
 

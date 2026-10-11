@@ -18,7 +18,7 @@ final class fn extends RuntimeException {
 
     public static void a(int param0) {
         if (param0 != 26677) {
-            return;
+          return;
         }
         field_a = null;
         field_g = null;
@@ -29,22 +29,16 @@ final class fn extends RuntimeException {
     }
 
     final static uo a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        uo var6;
-        if (param3 <= 86) {
-          return (uo) null;
-        } else {
-          L0: {
-            var6 = (uo) ((Object) ic.field_c.g(62));
-            if (var6 != null) {
-              break L0;
-            } else {
-              var6 = new uo();
-              break L0;
-            }
+        uo var6 = null;
+        if (param3 > 86) {
+          var6 = (uo) (ic.field_c.g(62));
+          if (var6 == null) {
+            var6 = new uo();
           }
           var6.a(param4, param5, param1, param2, (byte) 14, param0);
           return var6;
         }
+        return (uo) null;
     }
 
     fn(Throwable param0, String param1) {

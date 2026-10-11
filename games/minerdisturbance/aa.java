@@ -17,51 +17,40 @@ final class aa {
 
     final static void a(int param0, ac param1, int param2, int param3, ac param4, int param5) {
         try {
-            s.field_O = param1;
-            sn.field_d = param5;
-            mf.field_j = param4;
-            if (param2 != -1) {
-                ac var7 = (ac) null;
-                aa.a(-42, (ac) null, -120, -123, (ac) null, -33);
-            }
-            ka.field_a = param3;
-            hi.field_z = param0;
+          s.field_O = param1;
+          sn.field_d = param5;
+          mf.field_j = param4;
+          if (param2 != -1) {
+            ac var7 = (ac) null;
+            aa.a(-42, (ac) null, -120, -123, (ac) null, -33);
+          }
+          ka.field_a = param3;
+          hi.field_z = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "aa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "aa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
     private final int a(int param0, int param1) {
         int var3;
         int var4;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          if (param0 == -32676) {
-            break L0;
-          } else {
-            this.field_c = (int[]) null;
-            break L0;
-          }
+        var4 = MinerDisturbance.field_ab;
+        if (param0 != -32676) {
+          this.field_c = (int[]) null;
         }
         var3 = this.field_c.length;
-        L1: while (true) {
-          if (var3 > param1) {
-            return var3;
-          } else {
-            if (!this.field_k) {
-              var3 = var3 + this.field_a;
-              continue L1;
-            } else {
-              if (0 == var3) {
-                var3 = 1;
-                continue L1;
-              } else {
-                var3 = var3 * this.field_a;
-                continue L1;
-              }
-            }
+        while (var3 <= param1) {
+          if (!this.field_k) {
+            var3 = var3 + this.field_a;
+            continue;
           }
+          if (0 == var3) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_a;
         }
+        return var3;
     }
 
     final static ln[] a(int param0) {
@@ -69,10 +58,10 @@ final class aa {
         int var3 = MinerDisturbance.field_ab;
         ln[] var1 = new ln[sc.field_d];
         if (param0 >= -104) {
-            return (ln[]) null;
+          return (ln[]) null;
         }
         for (var2 = 0; var2 < sc.field_d; var2++) {
-            var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], db.field_b[var2], af.field_p);
+          var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], db.field_b[var2], af.field_p);
         }
         ec.a((byte) -76);
         return var1;
@@ -83,34 +72,35 @@ final class aa {
         int[] var3 = var4;
         ai.a(this.field_c, 0, var4, 0, this.field_c.length);
         if (param0 > -27) {
-            this.field_k = false;
+          this.field_k = false;
         }
         this.field_c = var4;
     }
 
     final void c(int param0, int param1) {
         if (param1 != 0) {
-            this.a(121, (byte) 110);
+          this.a(121, (byte) 110);
         }
-        if (-1 < (param0 ^ -1) || param0 > this.field_g) {
-            throw new ArrayIndexOutOfBoundsException(param0);
+        if (param0 < 0 ||
+          param0 > this.field_g) {
+          throw new ArrayIndexOutOfBoundsException(param0);
         }
-        if (!(this.field_g == param0)) {
-            ai.a(this.field_c, param0 - -1, this.field_c, param0, -param0 + this.field_g);
+        if (this.field_g != param0) {
+          ai.a(this.field_c, param0 + 1, this.field_c, param0, -param0 + this.field_g);
         }
         this.field_g = this.field_g - 1;
     }
 
     final void d(int param0, int param1) {
         if (param0 != 6524) {
-            return;
+          return;
         }
-        this.a(1 + this.field_g, param1, param0 + -6632);
+        this.a(1 + this.field_g, param1, param0 - 6632);
     }
 
     public static void a(byte param0) {
         if (param0 > -117) {
-            return;
+          return;
         }
         field_h = null;
         field_l = null;
@@ -122,30 +112,30 @@ final class aa {
 
     private final void a(int param0, int param1, int param2) {
         if (this.field_g < param0) {
-            this.field_g = param0;
+          this.field_g = param0;
         }
         if (param0 >= this.field_c.length) {
-            this.b(-121, param0);
+          this.b(-121, param0);
         }
         if (param2 >= 0) {
-            return;
+          return;
         }
         this.field_c[param0] = param1;
     }
 
     final int a(int param0, byte param1) {
         if (this.field_g < param0) {
-            throw new ArrayIndexOutOfBoundsException(param0);
+          throw new ArrayIndexOutOfBoundsException(param0);
         }
-        int var3 = 17 % ((param1 - -65) / 47);
+        int var3 = 17 % ((param1 + 65) / 47);
         return this.field_c[param0];
     }
 
     final int b(int param0) {
         if (param0 != 5717) {
-            field_l = (ae) null;
+          field_l = (ae) null;
         }
-        return this.field_g - -1;
+        return this.field_g + 1;
     }
 
     private aa() throws Throwable {

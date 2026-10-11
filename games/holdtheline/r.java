@@ -9,10 +9,10 @@ final class r {
 
     public static void b(int param0) {
         if (param0 != -14078) {
-            r.b(-16);
-            field_a = null;
-            field_d = null;
-            return;
+          r.b(-16);
+          field_a = null;
+          field_d = null;
+          return;
         }
         field_a = null;
         field_d = null;
@@ -20,11 +20,11 @@ final class r {
 
     final static void a(int param0) {
         if (param0 != -28036) {
-            return;
+          return;
         }
-        if (!(null == lk.field_h)) {
-            lk.field_h.d(param0 + 49171);
-            lk.field_h = null;
+        if (null != lk.field_h) {
+          lk.field_h.d(param0 + 49171);
+          lk.field_h = null;
         }
     }
 

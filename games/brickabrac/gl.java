@@ -13,7 +13,7 @@ public class gl {
 
     public static File a(String param0, int param1) {
         if (param1 != -1) {
-            return (File) null;
+          return (File) null;
         }
         return gl.a(-1, param0, field_c, field_d);
     }
@@ -28,53 +28,29 @@ public class gl {
         field_c = param2;
         field_d = param1;
         try {
-          L0: {
-            L1: {
-              field_a = System.getProperty("user.home");
-              if (param0 > 87) {
-                break L1;
-              } else {
-                field_c = (String) null;
-                break L1;
-              }
-            }
-            if (field_a != null) {
-              field_a = field_a + "/";
-              break L0;
-            } else {
-              L2: {
-                if (null == field_a) {
-                  field_a = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              field_e = true;
-              return;
-            }
+          field_a = System.getProperty("user.home");
+          if (param0 <= 87) {
+            field_c = (String) null;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          if (field_a == null) {
             if (null == field_a) {
               field_a = "~/";
-              break L3;
-            } else {
-              break L3;
             }
+            field_e = true;
+            return;
+          }
+          field_a = field_a + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (null == field_a) {
+            field_a = "~/";
           }
           field_e = true;
           return;
         }
-        L4: {
-          if (null == field_a) {
-            field_a = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        if (null == field_a) {
+          field_a = "~/";
         }
         field_e = true;
     }

@@ -16,40 +16,34 @@ final class gl extends pi {
     static String[] field_x;
 
     final static void a(int param0, int param1) {
-        if (ke.field_V) {
-          if (sc.field_b) {
-            ke.field_X[param0] = true;
-            if (param1 != 25) {
-              gl.a(-79);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (param1 != 25) {
-              gl.a(-79);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param1 != 25) {
-            gl.a(-79);
-            return;
-          } else {
+        if (!ke.field_V) {
+          if (param1 == 25) {
             return;
           }
+          gl.a(-79);
+          return;
         }
+        if (!sc.field_b) {
+          if (param1 == 25) {
+            return;
+          }
+          gl.a(-79);
+          return;
+        }
+        ke.field_X[param0] = true;
+        if (param1 == 25) {
+          return;
+        }
+        gl.a(-79);
     }
 
     public static void a(int param0) {
         field_u = null;
         field_x = null;
         if (param0 != -2869) {
-            gl.a(30, 98);
-            field_t = null;
-            return;
+          gl.a(30, 98);
+          field_t = null;
+          return;
         }
         field_t = null;
     }

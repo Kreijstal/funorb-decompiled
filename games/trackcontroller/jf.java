@@ -13,7 +13,7 @@ final class jf extends fc {
         vg.field_o = false;
         qc.b(-1, (byte) -42);
         if (param0 != 640) {
-            return;
+          return;
         }
         rk.field_X = hf.field_f;
         fd.field_h = hf.field_f;
@@ -21,10 +21,10 @@ final class jf extends fc {
 
     public static void d(int param0) {
         if (param0 != 640) {
-            jf.d(-73);
-            field_l = null;
-            field_i = null;
-            return;
+          jf.d(-73);
+          field_l = null;
+          field_i = null;
+          return;
         }
         field_l = null;
         field_i = null;

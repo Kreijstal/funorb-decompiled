@@ -17,16 +17,7 @@ abstract class qc {
         field_i = null;
         field_b = null;
         field_e = null;
-        if (param0 != -108) {
-          field_c = (je) null;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_h = null;
-          field_f = null;
-          return;
-        } else {
+        if (param0 == -108) {
           field_c = null;
           field_a = null;
           field_d = null;
@@ -35,62 +26,57 @@ abstract class qc {
           field_f = null;
           return;
         }
+        field_c = (je) null;
+        field_c = null;
+        field_a = null;
+        field_d = null;
+        field_g = null;
+        field_h = null;
+        field_f = null;
     }
 
     final static wk a(int param0, int param1) {
-        co var2;
-        if (param1 == 8806) {
-          if (vc.field_m != null) {
-            if ((param0 ^ -1) <= -1) {
-              if (mc.field_d.length <= param0) {
-                return null;
-              } else {
-                var2 = mc.field_d[param0];
-                return var2.c((byte) -116);
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        co var2 = null;
+        co var2Lifetime1;
+        if (param1 != 8806) {
           field_h = (qc) null;
-          if (vc.field_m != null) {
-            if ((param0 ^ -1) <= -1) {
-              if (mc.field_d.length <= param0) {
-                return null;
-              } else {
-                var2 = mc.field_d[param0];
-                return var2.c((byte) -116);
-              }
-            } else {
-              return null;
-            }
-          } else {
+          if (vc.field_m == null) {
             return null;
           }
+          if (param0 < 0) {
+            return null;
+          }
+          if (mc.field_d.length > param0) {
+            var2 = mc.field_d[param0];
+            return var2.c((byte) -116);
+          }
+          return null;
         }
+        if (vc.field_m == null) {
+          return null;
+        }
+        if (param0 < 0) {
+          return null;
+        }
+        if (mc.field_d.length > param0) {
+          var2Lifetime1 = mc.field_d[param0];
+          return var2Lifetime1.c((byte) -116);
+        }
+        return null;
     }
 
     abstract int a(long param0, int param1);
 
     final int a(int param0, long param1) {
-        long var4;
-        if (param0 >= -124) {
-          return -53;
-        } else {
-          L0: {
-            var4 = this.b((byte) -103);
-            if ((var4 ^ -1L) < -1L) {
-              nu.a(var4, 0);
-              break L0;
-            } else {
-              break L0;
-            }
+        long var4 = 0L;
+        if (param0 < -124) {
+          var4 = this.b((byte) -103);
+          if (var4 > 0L) {
+            nu.a(var4, 0);
           }
           return this.a(param1, 0);
         }
+        return -53;
     }
 
     abstract long b(byte param0);

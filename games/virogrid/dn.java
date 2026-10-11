@@ -9,15 +9,15 @@ final class dn {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-            param1.removeKeyListener(w.field_L);
-            if (param0 != 2) {
-                java.awt.Component var3 = (java.awt.Component) null;
-                dn.a(-122, (java.awt.Component) null);
-            }
-            param1.removeFocusListener(w.field_L);
-            ch.field_f = -1;
+          param1.removeKeyListener(w.field_L);
+          if (param0 != 2) {
+            java.awt.Component var3 = (java.awt.Component) null;
+            dn.a(-122, (java.awt.Component) null);
+          }
+          param1.removeFocusListener(w.field_L);
+          ch.field_f = -1;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "dn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "dn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,24 +27,21 @@ final class dn {
         field_a = null;
         field_d = null;
         if (param0 < 34) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 
     final static void a(int param0) {
         if (!oi.field_d) {
           throw new IllegalStateException();
-        } else {
-          pg.field_h = true;
-          j.a(true, param0 ^ -8319);
-          j.field_l = 0;
-          if (param0 != 8192) {
-            dn.a((byte) 73);
-            return;
-          } else {
-            return;
-          }
         }
+        pg.field_h = true;
+        j.a(true, param0 ^ -8319);
+        j.field_l = 0;
+        if (param0 == 8192) {
+          return;
+        }
+        dn.a((byte) 73);
     }
 
     static {

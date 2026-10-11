@@ -15,33 +15,32 @@ class dk extends am {
     dk field_j;
 
     final static String a(byte param0, long param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        cl var10;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
         uh.field_h.setTime(new Date(param1));
-        var3 = uh.field_h.get(7);
-        var4 = uh.field_h.get(5);
-        var5 = uh.field_h.get(2);
-        if (param0 != -41) {
-          var10 = (cl) null;
-          dk.a((cl) null, -84, 103);
-          var6 = uh.field_h.get(1);
-          var7 = uh.field_h.get(11);
-          var8 = uh.field_h.get(12);
-          var9 = uh.field_h.get(13);
-          return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
-        } else {
+        int var3 = uh.field_h.get(7);
+        int var4 = uh.field_h.get(5);
+        int var5 = uh.field_h.get(2);
+        if (param0 == -41) {
           var6 = uh.field_h.get(1);
           var7 = uh.field_h.get(11);
           var8 = uh.field_h.get(12);
           var9 = uh.field_h.get(13);
           return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
+        cl var10 = (cl) null;
+        dk.a((cl) null, -84, 103);
+        var6Lifetime1 = uh.field_h.get(1);
+        var7Lifetime1 = uh.field_h.get(11);
+        var8Lifetime1 = uh.field_h.get(12);
+        var9Lifetime1 = uh.field_h.get(13);
+        return gb.field_k[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ea.field_f[var5] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     static long a(long param0, long param1) {
@@ -51,15 +50,15 @@ class dk extends am {
     final static void a(cl param0, int param1, int param2) {
         en var3 = null;
         try {
-            var3 = s.field_b;
-            var3.i(19319, param1);
-            var3.d(param2 ^ 97, param0.field_m);
-            if (param2 != 10) {
-                field_m = (int[]) null;
-            }
-            var3.a((byte) -120, param0.field_n);
+          var3 = s.field_b;
+          var3.i(19319, param1);
+          var3.d(param2 ^ 97, param0.field_m);
+          if (param2 != 10) {
+            field_m = (int[]) null;
+          }
+          var3.a((byte) -120, param0.field_n);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "dk.OB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -67,7 +66,7 @@ class dk extends am {
         field_l = null;
         field_m = null;
         if (param0 != 71) {
-            return;
+          return;
         }
         field_n = null;
         field_k = null;
@@ -76,20 +75,17 @@ class dk extends am {
     final void c(int param0) {
         if (null == this.field_i) {
           return;
-        } else {
-          this.field_i.field_j = this.field_j;
-          this.field_j.field_i = this.field_i;
-          if (param0 != -1) {
-            this.field_i = (dk) null;
-            this.field_i = null;
-            this.field_j = null;
-            return;
-          } else {
-            this.field_i = null;
-            this.field_j = null;
-            return;
-          }
         }
+        this.field_i.field_j = this.field_j;
+        this.field_j.field_i = this.field_i;
+        if (param0 == -1) {
+          this.field_i = null;
+          this.field_j = null;
+          return;
+        }
+        this.field_i = (dk) null;
+        this.field_i = null;
+        this.field_j = null;
     }
 
     protected dk() {

@@ -14,7 +14,7 @@ final class nc {
         field_b = null;
         field_e = null;
         if (param0 != 105) {
-            return;
+          return;
         }
         field_f = null;
         field_c = null;

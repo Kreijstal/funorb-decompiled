@@ -6,9 +6,9 @@ final class ag extends hm implements java.awt.event.MouseWheelListener {
 
     final void a(int param0, java.awt.Component param1) {
         if (param0 <= 10) {
-            this.field_f = 89;
-            param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_f = 89;
+          param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -21,8 +21,8 @@ final class ag extends hm implements java.awt.event.MouseWheelListener {
     final void a(java.awt.Component param0, int param1) {
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != -63) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, 100);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((java.awt.Component) null, 100);
         }
     }
 
@@ -31,15 +31,13 @@ final class ag extends hm implements java.awt.event.MouseWheelListener {
     }
 
     final synchronized int a(int param0) {
-        int var2;
-        var2 = this.field_f;
-        if (param0 != 60) {
-          this.field_f = 41;
-          this.field_f = 0;
-          return var2;
-        } else {
+        int var2 = this.field_f;
+        if (param0 == 60) {
           this.field_f = 0;
           return var2;
         }
+        this.field_f = 41;
+        this.field_f = 0;
+        return var2;
     }
 }

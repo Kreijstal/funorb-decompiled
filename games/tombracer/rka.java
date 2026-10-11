@@ -13,17 +13,17 @@ abstract class rka {
 
     final static void a(String param0, boolean param1) {
         try {
-            wta.a(param0, (byte) -55);
-            vn.a(100, gja.field_bb, param1);
+          wta.a(param0, (byte) -55);
+          vn.a(100, gja.field_bb, param1);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "rka.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(boolean param0) {
         kn.field_p = null;
         if (param0) {
-            return;
+          return;
         }
         eda.field_f = null;
         qf.field_j = null;
@@ -34,41 +34,29 @@ abstract class rka {
     abstract void b(int param0, int param1);
 
     final static String a(int param0, boolean param1) {
-        if (!param1) {
-          return (String) null;
-        } else {
+        if (param1) {
           return 1 + param0 + "/" + 11;
         }
+        return (String) null;
     }
 
     final static String a(int param0, int param1) {
-        int var2;
-        int var3;
-        int var4;
-        L0: {
-          var2 = param0;
-          if (var2 > 20) {
-            var2 = var2 % 10;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var2 = param0;
+        if (var2 > 20) {
+          var2 = var2 % 10;
         }
-        var3 = -23 / ((-16 - param1) / 42);
-        var4 = var2;
-        if (-2 != (var4 ^ -1)) {
-          if (var4 != 2) {
-            if (3 != var4) {
-              return param0 + "th";
-            } else {
-              return param0 + "rd";
-            }
-          } else {
-            return param0 + "nd";
-          }
-        } else {
+        int var3 = -23 / ((-16 - param1) / 42);
+        int var4 = var2;
+        if (var4 == 1) {
           return param0 + "st";
         }
+        if (var4 == 2) {
+          return param0 + "nd";
+        }
+        if (3 == var4) {
+          return param0 + "rd";
+        }
+        return param0 + "th";
     }
 
     static {

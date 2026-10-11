@@ -12,60 +12,56 @@ class wj extends kk {
     static int field_h;
 
     final static void b(int param0) {
-        if (param0 != 480) {
-          wj.b(122);
-          fd.a(param0 ^ 410, true, ta.field_h, hf.field_g);
-          hd.field_b = true;
-          return;
-        } else {
+        if (param0 == 480) {
           fd.a(param0 ^ 410, true, ta.field_h, hf.field_g);
           hd.field_b = true;
           return;
         }
+        wj.b(122);
+        fd.a(param0 ^ 410, true, ta.field_h, hf.field_g);
+        hd.field_b = true;
     }
 
     final void a(byte param0, oa param1) {
         try {
-            param1.b(1908720528, this.field_m);
-            if (param0 > -50) {
-                wj.b(-65);
-            }
-            param1.a((byte) 112, this.field_n);
+          param1.b(1908720528, this.field_m);
+          if (param0 > -50) {
+            wj.b(-65);
+          }
+          param1.a((byte) 112, this.field_n);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "wj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(int param0) {
         field_k = null;
-        if (param0 != 480) {
-          field_j = (ib) null;
-          field_l = null;
-          field_i = null;
-          field_j = null;
-          return;
-        } else {
+        if (param0 == 480) {
           field_l = null;
           field_i = null;
           field_j = null;
           return;
         }
+        field_j = (ib) null;
+        field_l = null;
+        field_i = null;
+        field_j = null;
     }
 
     nk a(int param0) {
         if (param0 != -184) {
-            this.a(52);
-            return vc.field_G;
+          this.a(52);
+          return vc.field_G;
         }
         return vc.field_G;
     }
 
     wj(long param0, String param1) {
         try {
-            this.field_n = param1;
-            this.field_m = param0;
+          this.field_n = param1;
+          this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "wj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

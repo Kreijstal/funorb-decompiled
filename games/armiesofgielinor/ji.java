@@ -13,104 +13,53 @@ final class ji {
         wd stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_c = (int[]) null;
-                break L1;
-              }
-            }
-            if (mh.field_b != du.field_d) {
-              L2: {
-                if (mh.field_b != lm.field_d) {
-                  break L2;
-                } else {
-                  if (param1.equals(jh.field_j)) {
-                    mh.field_b = nb.field_i;
-                    stackIn_11_0 = vl.field_k;
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              jh.field_j = param1;
-              mh.field_b = du.field_d;
-              vl.field_k = null;
-              stackIn_9_0 = null;
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 0) {
+            field_c = (int[]) null;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var2);
-
-            stackIn_14_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L3;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L3;
-            }
+          if (mh.field_b == du.field_d) {
+            stackIn_4_0 = null;
+            return (wd) (stackIn_4_0);
           }
-          throw ig.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (wd) ((Object) stackIn_4_0);
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return (wd) ((Object) stackIn_9_0);
-          } else {
+          if (mh.field_b == lm.field_d &&
+            param1.equals(jh.field_j)) {
+            mh.field_b = nb.field_i;
+            stackIn_11_0 = vl.field_k;
             return stackIn_11_0;
           }
+          jh.field_j = param1;
+          mh.field_b = du.field_d;
+          vl.field_k = null;
+          stackIn_9_0 = null;
+          return (wd) (stackIn_9_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_14_0 = var2;
+          stackIn_14_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
     final static lk a(boolean param0) {
-        if (!param0) {
-          L0: {
-            ji.a(false);
-            if (wi.field_f == null) {
-              wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return wi.field_f;
-        } else {
-          L1: {
-            if (wi.field_f == null) {
-              wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
-              break L1;
-            } else {
-              break L1;
-            }
+        if (param0) {
+          if (wi.field_f == null) {
+            wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
           }
           return wi.field_f;
         }
+        ji.a(false);
+        if (wi.field_f == null) {
+          wi.field_f = new lk(gl.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, gl.field_e.field_H, -1, 2147483647, true);
+        }
+        return wi.field_f;
     }
 
     public static void a(int param0) {
@@ -118,7 +67,7 @@ final class ji {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

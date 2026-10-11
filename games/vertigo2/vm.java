@@ -8,46 +8,41 @@ final class vm {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.setFocusTraversalKeysEnabled(false);
-            if (param1 != 11631) {
-                vm.a(-6);
-            }
-            param0.addKeyListener(kb.field_a);
-            param0.addFocusListener(kb.field_a);
+          param0.setFocusTraversalKeysEnabled(false);
+          if (param1 != 11631) {
+            vm.a(-6);
+          }
+          param0.addKeyListener(kb.field_a);
+          param0.addFocusListener(kb.field_a);
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "vm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        if (!pe.field_r) {
-          if (pm.field_a) {
-            return cf.a(31077, param0, param3);
-          } else {
-            if (mp.a(param3, param0, param2 ^ 1899)) {
-              return true;
-            } else {
-              if (param2 == 19466) {
-                if (hj.field_b) {
-                  return false;
-                } else {
-                  return gf.a(param0, param1, 69);
-                }
-              } else {
-                return true;
-              }
-            }
-          }
-        } else {
+        if (pe.field_r) {
           return lq.field_a.a(-88, de.field_f, ji.field_r);
         }
+        if (pm.field_a) {
+          return cf.a(31077, param0, param3);
+        }
+        if (mp.a(param3, param0, param2 ^ 1899)) {
+          return true;
+        }
+        if (param2 != 19466) {
+          return true;
+        }
+        if (!hj.field_b) {
+          return gf.a(param0, param1, 69);
+        }
+        return false;
     }
 
     public static void a(int param0) {
         if (param0 != -586) {
-            field_b = 106;
-            field_a = null;
-            return;
+          field_b = 106;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

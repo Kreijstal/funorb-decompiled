@@ -17,23 +17,21 @@ final class wb extends IOException {
         uj.field_c = false;
         ea.field_m = -1;
         ga.field_j = 0;
-        if (param0 <= 77) {
-          wb.a(27);
-          cc.field_j = null;
-          lb.field_b = -1;
-          return;
-        } else {
+        if (param0 > 77) {
           cc.field_j = null;
           lb.field_b = -1;
           return;
         }
+        wb.a(27);
+        cc.field_j = null;
+        lb.field_b = -1;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_h = null;
         field_b = null;
-        int var1 = -76 / ((param0 - -70) / 49);
+        int var1 = -76 / ((param0 + 70) / 49);
     }
 
     wb(String param0) {

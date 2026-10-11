@@ -8,38 +8,17 @@ final class us {
 
     final static boolean b(int param0) {
         if (param0 <= 74) {
-            return true;
+          return true;
         }
         return oi.field_c.a((byte) 14);
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (!param0) {
-          L0: {
-            us.a(125);
-            if (null == jl.field_b) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (null == jl.field_b) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0) {
+          return null != jl.field_b ? true : false;
         }
+        us.a(125);
+        return null != jl.field_b ? true : false;
     }
 
     final static int a(int param0, byte param1) {
@@ -47,64 +26,34 @@ final class us {
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
         int var2;
-        var2 = -69 % ((param1 - -61) / 59);
-        if (null != jf.field_C.field_T) {
-          if ((4 & jf.field_C.field_vb.field_e[param0]) == 0) {
-            return 0;
-          } else {
-            if (!jf.field_C.field_vb.field_w) {
-              if (!jf.field_C.field_T.field_s) {
-                if ((2 & jf.field_C.field_vb.field_e[param0]) == 0) {
-                  return 0;
-                } else {
-                  L0: {
-                    if (bv.field_w.field_gb != jf.field_C.field_q) {
-                      stackIn_22_0 = 128;
-                      break L0;
-                    } else {
-                      stackIn_22_0 = 256;
-                      break L0;
-                    }
-                  }
-                  return stackIn_22_0;
-                }
-              } else {
-                if (-1 == (jf.field_C.field_T.field_B ^ -1)) {
-                  L1: {
-                    if (0 == (jf.field_C.field_vb.field_e[param0] & 2)) {
-                      stackIn_16_0 = 0;
-                      break L1;
-                    } else {
-                      stackIn_16_0 = 128;
-                      break L1;
-                    }
-                  }
-                  return stackIn_16_0;
-                } else {
-                  L2: {
-                    if (-1 == (jf.field_C.field_vb.field_e[param0] & 1 ^ -1)) {
-                      stackIn_12_0 = 0;
-                      break L2;
-                    } else {
-                      stackIn_12_0 = 256;
-                      break L2;
-                    }
-                  }
-                  return stackIn_12_0;
-                }
-              }
-            } else {
-              return 0;
-            }
-          }
-        } else {
+        var2 = -69 % ((param1 + 61) / 59);
+        if (null == jf.field_C.field_T) {
           return 0;
         }
+        if ((4 & jf.field_C.field_vb.field_e[param0]) == 0) {
+          return 0;
+        }
+        if (jf.field_C.field_vb.field_w) {
+          return 0;
+        }
+        if (!jf.field_C.field_T.field_s) {
+          if ((2 & jf.field_C.field_vb.field_e[param0]) == 0) {
+            return 0;
+          }
+          stackIn_22_0 = (bv.field_w.field_gb != jf.field_C.field_q) ? 128 : 256;
+          return stackIn_22_0;
+        }
+        if (jf.field_C.field_T.field_B == 0) {
+          stackIn_16_0 = (0 == (jf.field_C.field_vb.field_e[param0] & 2)) ? 0 : 128;
+          return stackIn_16_0;
+        }
+        stackIn_12_0 = ((jf.field_C.field_vb.field_e[param0] & 1) == 0) ? 0 : 256;
+        return stackIn_12_0;
     }
 
     public static void a(int param0) {
         if (param0 >= -60) {
-            return;
+          return;
         }
         field_b = null;
     }

@@ -9,22 +9,22 @@ final class lda extends kna {
 
     final int t(int param0) {
         if (param0 != 8) {
-            this.field_H = 63;
-            return 7;
+          this.field_H = 63;
+          return 7;
         }
         return 7;
     }
 
     final boolean s(int param0) {
         if (param0 != -15254) {
-            return false;
+          return false;
         }
         return false;
     }
 
     final boolean v(int param0) {
         if (param0 != 555277520) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -36,26 +36,26 @@ final class lda extends kna {
     lda(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
         try {
-            this.field_H = param2.b((byte) 44, 4);
+          this.field_H = param2.b((byte) 44, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "lda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "lda.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean n(byte param0) {
         if (param0 != -122) {
-            this.field_H = -119;
-            return false;
+          this.field_H = -119;
+          return false;
         }
         return false;
     }
 
     final void a(boolean param0, kh param1) {
         try {
-            super.a(param0, param1);
-            param1.a((byte) -125, this.field_H, 4);
+          super.a(param0, param1);
+          param1.a((byte) -125, this.field_H, 4);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "lda.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "lda.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,97 +74,74 @@ final class lda extends kna {
         fsa stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var12 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var13 = new fsa(param2, param0);
-              var4 = var13;
-              if ((this.field_m ^ -1) != -47) {
-                var13.b((byte) -11, this.field_k, 4194304);
-                break L1;
-              } else {
-                var13.b((byte) -11, 4194304, this.field_l);
-                break L1;
-              }
-            }
-            L2: {
-              var5 = new lpa(param2, param0);
-              var5.b(-5, this.field_H);
-              var13.a((byte) 83, (nv) (var5));
-              var6 = new fsa(param2, param0);
-              var7 = new fsa(param2, param0);
-              if (-47 == (this.field_m ^ -1)) {
-                var6.b((byte) -11, 524288, this.field_l);
-                var6.b(437453352, -1835008, 0);
-                var7.b((byte) -11, 524288, this.field_l);
-                var7.b(437453352, 1835008, 0);
-                break L2;
-              } else {
-                var6.b((byte) -11, this.field_k, 524288);
-                var6.b(437453352, 0, -1835008);
-                var7.b((byte) -11, this.field_k, 524288);
-                var7.b(437453352, 0, 1835008);
-                break L2;
-              }
-            }
-            var6.b((byte) 17, false);
-            var6.h(3, param1 + -3);
-            var8 = new eq(param2, param0);
-            var8.a(true, -45);
-            var8.a(-28592, true);
-            var6.a((byte) 83, (nv) (var8));
-            var7.b((byte) 17, false);
-            var7.h(param1, 0);
-            var9 = new eq(param2, param0);
-            var9.a(true, -128);
-            var9.a(-28592, true);
-            var7.a((byte) 83, (nv) (var9));
-            var13.a(-107, var6);
-            var13.a(param1 ^ -61, var7);
-            var10 = rm.field_a;
-            var11 = (vsa) ((Object) var10.a(19, param1 ^ 106));
-            var11.b((byte) 80, 0);
-            var13.a(var5, (byte) 124, var11);
-            stackIn_8_0 = (fsa) (var13);
-            break L0;
+          var13 = new fsa(param2, param0);
+          var4 = var13;
+          if (this.field_m != 46) {
+            var13.b((byte) -11, this.field_k, 4194304);
+          } else {
+            var13.b((byte) -11, 4194304, this.field_l);
           }
+          var5 = new lpa(param2, param0);
+          var5.b(-5, this.field_H);
+          var13.a((byte) 83, (nv) (var5));
+          var6 = new fsa(param2, param0);
+          var7 = new fsa(param2, param0);
+          if (this.field_m == 46) {
+            var6.b((byte) -11, 524288, this.field_l);
+            var6.b(437453352, -1835008, 0);
+            var7.b((byte) -11, 524288, this.field_l);
+            var7.b(437453352, 1835008, 0);
+          } else {
+            var6.b((byte) -11, this.field_k, 524288);
+            var6.b(437453352, 0, -1835008);
+            var7.b((byte) -11, this.field_k, 524288);
+            var7.b(437453352, 0, 1835008);
+          }
+          var6.b((byte) 17, false);
+          var6.h(3, param1 - 3);
+          var8 = new eq(param2, param0);
+          var8.a(true, -45);
+          var8.a(-28592, true);
+          var6.a((byte) 83, (nv) (var8));
+          var7.b((byte) 17, false);
+          var7.h(param1, 0);
+          var9 = new eq(param2, param0);
+          var9.a(true, -128);
+          var9.a(-28592, true);
+          var7.a((byte) 83, (nv) (var9));
+          var13.a(-107, var6);
+          var13.a(param1 ^ -61, var7);
+          var10 = rm.field_a;
+          var11 = (vsa) (var10.a(19, param1 ^ 106));
+          var11.b((byte) 80, 0);
+          var13.a(var5, (byte) 124, var11);
+          stackIn_8_0 = var13;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4_ref = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var4_ref);
-
-            stackIn_11_1 = new StringBuilder().append("lda.AC(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_11_0 = var4_ref;
+          stackIn_11_1 = new StringBuilder().append("lda.AC(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
-        return stackIn_8_0;
     }
 
     public static void r(byte param0) {
         field_G = null;
         if (param0 >= -38) {
-            field_G = (String) null;
-            field_F = null;
-            field_I = null;
-            return;
+          field_G = (String) null;
+          field_F = null;
+          field_I = null;
+          return;
         }
         field_F = null;
         field_I = null;
@@ -172,8 +149,8 @@ final class lda extends kna {
 
     final boolean z(int param0) {
         if (param0 != 0) {
-            this.s(26);
-            return false;
+          this.s(26);
+          return false;
         }
         return false;
     }

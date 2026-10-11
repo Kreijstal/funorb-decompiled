@@ -17,16 +17,16 @@ final class wa {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_g >= this.field_h) {
-            fieldTemp$0 = this.field_e;
-            this.field_e = this.field_e + 1;
-            this.field_j = this.field_f[fieldTemp$0] << 15;
-            if (this.field_e >= this.field_c) {
-                this.field_e = this.field_c - 1;
-            }
-            this.field_h = (int)((double)this.field_d[this.field_e] / 65536.0 * (double)param0);
-            if (this.field_h > this.field_g) {
-                this.field_b = ((this.field_f[this.field_e] << 15) - this.field_j) / (this.field_h - this.field_g);
-            }
+          fieldTemp$0 = this.field_e;
+          this.field_e = this.field_e + 1;
+          this.field_j = this.field_f[fieldTemp$0] << 15;
+          if (this.field_e >= this.field_c) {
+            this.field_e = this.field_c - 1;
+          }
+          this.field_h = (int)((double)this.field_d[this.field_e] / 65536.0 * (double)param0);
+          if (this.field_h > this.field_g) {
+            this.field_b = ((this.field_f[this.field_e] << 15) - this.field_j) / (this.field_h - this.field_g);
+          }
         }
         this.field_j = this.field_j + this.field_b;
         this.field_g = this.field_g + 1;
@@ -54,8 +54,8 @@ final class wa {
         this.field_d = new int[this.field_c];
         this.field_f = new int[this.field_c];
         for (var2 = 0; var2 < this.field_c; var2++) {
-            this.field_d[var2] = param0.i(65280);
-            this.field_f[var2] = param0.i(65280);
+          this.field_d[var2] = param0.i(65280);
+          this.field_f[var2] = param0.i(65280);
         }
     }
 

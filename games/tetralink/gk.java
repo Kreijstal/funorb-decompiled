@@ -17,14 +17,14 @@ final class gk {
         field_e = null;
         field_c = null;
         if (param0 != 3) {
-            gk.b(-19);
+          gk.b(-19);
         }
     }
 
     final static hl a(int param0) {
         if (param0 != 21) {
-            gk.a(47);
-            return hn.field_Q.field_Pb;
+          gk.a(47);
+          return hn.field_Q.field_Pb;
         }
         return hn.field_Q.field_Pb;
     }

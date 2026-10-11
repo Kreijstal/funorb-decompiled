@@ -14,18 +14,18 @@ abstract class sh extends vd implements mca {
 
     void a(gl param0, byte param1) {
         if (param1 <= 111) {
-            return;
+          return;
         }
         try {
-            this.field_F = param0;
-            this.field_F.field_e = (sh) (this);
+          this.field_F = param0;
+          this.field_F.field_e = this;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "sh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void l(int param0) {
-        int decompiledRegionSelector0 = 0;
+        int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -35,7 +35,6 @@ abstract class sh extends vd implements mca {
         int[] var5 = null;
         pf var6 = null;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int[] var11 = null;
         int[] var12 = null;
@@ -44,87 +43,56 @@ abstract class sh extends vd implements mca {
         kka var15 = null;
         var9 = BachelorFridge.field_y;
         try {
-          L0: {
-            var1_int = -96 / ((19 - param0) / 53);
-            var2 = ig.field_m;
-            var3 = var2.b(16711935);
-            if (var3 != 0) {
-              if ((var3 ^ -1) != -2) {
-                if (var3 == 2) {
-                  var15 = (kka) ((Object) gs.field_l.b((byte) 90));
-                  if (var15 == null) {
-                    vc.a((byte) -100);
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var15.field_m = vv.a((byte) 113);
-                    var15.field_j = true;
-                    var15.a(false);
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  }
-                } else {
-                  cv.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
-                  vc.a((byte) -115);
-                  return;
-                }
-              } else {
-                var13 = (cfa) ((Object) eaa.field_d.b((byte) 90));
-                if (var13 != null) {
-                  var13.a(false);
-                  return;
-                } else {
-                  vc.a((byte) -99);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              }
-            } else {
-              var12 = vv.a((byte) 123);
-              var4 = var12;
-              var11 = var12;
-              var5 = var11;
-              var6 = var2;
-              var7 = ((lu) ((Object) var6)).b(16711935);
-              var8 = 0;
-              L1: while (true) {
-                if (var7 <= var8) {
-                  var14 = (kka) ((Object) gs.field_l.b((byte) 90));
-                  if (var14 == null) {
-                    vc.a((byte) -70);
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  } else {
-                    var14.field_m = var4;
-                    var14.field_j = true;
-                    var14.a(false);
-                    return;
-                  }
-                } else {
-                  var11[var8] = ((lu) ((Object) var6)).f(-61);
-                  var8++;
-                  continue L1;
-                }
-              }
+          var1_int = -96 / ((19 - param0) / 53);
+          var2 = ig.field_m;
+          var3 = var2.b(16711935);
+          if (var3 == 0) {
+            var12 = vv.a((byte) 123);
+            var4 = var12;
+            var11 = var12;
+            var5 = var11;
+            var6 = var2;
+            var7 = ((lu) ((Object) var6)).b(16711935);
+            for (var8 = 0; var7 > var8; var8++) {
+              var11[var8] = ((lu) ((Object) var6)).f(-61);
             }
+            var14 = (kka) (gs.field_l.b((byte) 90));
+            if (var14 == null) {
+              vc.a((byte) -70);
+              return;
+            }
+            var14.field_m = var4;
+            var14.field_j = true;
+            var14.a(false);
+            return;
           }
+          if (var3 == 1) {
+            var13 = (cfa) (eaa.field_d.b((byte) 90));
+            if (var13 != null) {
+              var13.a(false);
+              return;
+            }
+            vc.a((byte) -99);
+            return;
+          }
+          if (var3 != 2) {
+            cv.a(1, "A1: " + nia.d((byte) -108), (Throwable) null);
+            vc.a((byte) -115);
+            return;
+          }
+          var15 = (kka) (gs.field_l.b((byte) 90));
+          if (var15 == null) {
+            vc.a((byte) -100);
+            return;
+          }
+          var15.field_m = vv.a((byte) 113);
+          var15.field_j = true;
+          var15.a(false);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw pe.a((Throwable) ((Object) var1), "sh.T(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              return;
-            }
-          }
         }
     }
 
@@ -138,7 +106,7 @@ abstract class sh extends vd implements mca {
 
     public final qu a(int param0) {
         if (param0 != 16728128) {
-            return (qu) null;
+          return (qu) null;
         }
         return (qu) ((Object) this.field_F);
     }
@@ -149,7 +117,7 @@ abstract class sh extends vd implements mca {
         field_H = null;
         field_C = null;
         if (param0 != -92) {
-            return;
+          return;
         }
         field_D = null;
     }

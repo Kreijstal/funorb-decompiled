@@ -8,36 +8,40 @@ final class d {
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
         try {
-            String var3 = null;
-            String var5 = null;
-            String var4 = null;
-            hm.field_c = param2;
-            try {
-                var3 = param0.getParameter("cookieprefix");
-                var5 = var3;
-                var5 = var3;
-                var4 = param0.getParameter("cookiehost");
-                var5 = var4;
-                var5 = var4;
-                var5 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                if (0 == param2.length()) {
-                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                }
-                hi.a("document.cookie=\"" + var5 + "\"", param0, (byte) 77);
-            } catch (Throwable throwable) {
+          String var3 = null;
+          String var5 = null;
+          String var4 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          hm.field_c = param2;
+          try {
+            var3 = param0.getParameter("cookieprefix");
+            var5 = var3;
+            var5Lifetime1 = var3;
+            var4 = param0.getParameter("cookiehost");
+            var5Lifetime2 = var4;
+            var5Lifetime3 = var4;
+            var5Lifetime4 = var3 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+            if (0 == param2.length()) {
+              var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            if (param1 <= 110) {
-                return;
-            }
-            try {
-                hk.a(1, param0);
-            } catch (RuntimeException runtimeException) {
-                throw dn.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
-            }
+            hi.a("document.cookie=\"" + var5Lifetime4 + "\"", param0, (byte) 77);
+          } catch (Throwable throwable) {
+          }
+          if (param1 <= 110) {
+            return;
+          }
+          try {
+            hk.a(1, param0);
+          } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) ((Object) runtimeException), "d.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -51,8 +55,8 @@ final class d {
         field_b = null;
         field_a = null;
         if (param0 != -8130) {
-            String var2 = (String) null;
-            d.a((java.applet.Applet) null, (byte) -76, (String) null);
+          String var2 = (String) null;
+          d.a((java.applet.Applet) null, (byte) -76, (String) null);
         }
     }
 

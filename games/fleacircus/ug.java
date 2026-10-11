@@ -13,7 +13,7 @@ final class ug {
         field_b = null;
         field_e = null;
         if (param0 != -73) {
-            field_c = 47;
+          field_c = 47;
         }
     }
 

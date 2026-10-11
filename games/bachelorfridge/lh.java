@@ -11,7 +11,7 @@ final class lh extends cia {
         field_t = null;
         field_s = null;
         if (param0 != -12847) {
-            lh.b(63);
+          lh.b(63);
         }
     }
 

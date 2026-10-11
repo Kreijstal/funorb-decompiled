@@ -10,7 +10,7 @@ final class ob {
     public static void a(int param0) {
         field_a = null;
         if (param0 < 30) {
-            return;
+          return;
         }
         field_b = (vn[][]) null;
         field_c = null;

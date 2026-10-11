@@ -15,13 +15,10 @@ final class jg {
     }
 
     final static void b(int param0, int param1) {
-        pl var2;
-        var2 = as.field_v;
+        pl var2 = as.field_v;
         var2.g(param1, 8);
         var2.b((byte) 106, 1);
-        if (param0 != 11044) {
-          return;
-        } else {
+        if (param0 == 11044) {
           var2.b((byte) 79, 0);
           return;
         }
@@ -33,104 +30,58 @@ final class jg {
 
     final void a(byte[] param0, byte param1, fs param2) {
         try {
-            Exception exception = null;
-            RuntimeException runtimeException = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            RuntimeException stackIn_16_0 = null;
-            StringBuilder stackIn_16_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            StringBuilder stackIn_19_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                L1: {
-                  if (param2.field_n[param2.field_p] != 31) {
-                    break L1;
-                  } else {
-                    if (116 != (param2.field_n[1 + param2.field_p] ^ -1)) {
-                      break L1;
-                    } else {
-                      L2: {
-                        if (null != this.field_c) {
-                          break L2;
-                        } else {
-                          this.field_c = new java.util.zip.Inflater(true);
-                          break L2;
-                        }
-                      }
-                      L3: {
-                        if (param1 == -104) {
-                          break L3;
-                        } else {
-                          this.field_c = (java.util.zip.Inflater) null;
-                          break L3;
-                        }
-                      }
-                      try {
-                        L4: {
-                          this.field_c.setInput(param2.field_n, 10 + param2.field_p, param2.field_n.length + (-param2.field_p + -10 - 8));
-                          this.field_c.inflate(param0);
-                          break L4;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        exception = (Exception) (Object) decompiledCaughtException;
-                        this.field_c.reset();
-                        throw new RuntimeException("");
-                      }
-                      this.field_c.reset();
-                      break L0;
-                    }
-                  }
-                }
+          Exception exception = null;
+          RuntimeException runtimeException = null;
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param2.field_n[param2.field_p] == 31 &&
+              param2.field_n[1 + param2.field_p] == -117) {
+              if (null == this.field_c) {
+                this.field_c = new java.util.zip.Inflater(true);
+              }
+              if (param1 != -104) {
+                this.field_c = (java.util.zip.Inflater) null;
+              }
+              try {
+                this.field_c.setInput(param2.field_n, 10 + param2.field_p, param2.field_n.length + (-param2.field_p - 10 - 8));
+                this.field_c.inflate(param0);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                exception = (Exception) (Object) decompiledCaughtException;
+                this.field_c.reset();
                 throw new RuntimeException("");
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L5: {
-                runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_15_0 = (RuntimeException) (runtimeException);
-
-                stackIn_15_1 = new StringBuilder().append("jg.C(");
-
-                if (param0 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-                  stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-                  stackIn_16_2 = "{...}";
-                  break L5;
-                }
-              }
-              L6: {
-
-
-                stackIn_18_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(',').append(param1).append(',');
-
-                if (param2 == null) {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "null";
-                  break L6;
-                } else {
-                  stackIn_16_0 = (RuntimeException) ((Object) stackIn_16_0);
-                  stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-                  stackIn_19_2 = "{...}";
-                  break L6;
-                }
-              }
-              throw qo.a((Throwable) ((Object) stackIn_16_0), stackIn_19_2 + ')');
+              this.field_c.reset();
+              return;
             }
+            throw new RuntimeException("");
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = runtimeException;
+            stackIn_15_1 = new StringBuilder().append("jg.C(");
+            if (param0 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw qo.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -141,7 +92,7 @@ final class jg {
         field_b = null;
         field_e = null;
         if (param0 < 2) {
-            field_a = true;
+          field_a = true;
         }
     }
 

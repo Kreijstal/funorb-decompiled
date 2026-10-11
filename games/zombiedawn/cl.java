@@ -8,16 +8,16 @@ final class cl implements wa {
 
     public final void a(int param0, int param1, int param2) {
         gd.a(param0, 32767, param2);
-        int var4 = 126 % ((param1 - -83) / 35);
+        int var4 = 126 % ((param1 + 83) / 35);
     }
 
     public static void a(byte param0) {
         field_c = (byte[][][]) null;
         field_b = null;
         if (param0 < 80) {
-            field_b = (mf) null;
-            field_a = null;
-            return;
+          field_b = (mf) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

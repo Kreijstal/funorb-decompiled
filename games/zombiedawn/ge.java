@@ -14,9 +14,9 @@ final class ge {
         field_b = null;
         field_d = null;
         if (param0 != 256) {
-            ge.a(0);
-            field_a = null;
-            return;
+          ge.a(0);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

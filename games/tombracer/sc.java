@@ -10,84 +10,57 @@ final class sc extends cg {
         if (this.field_l > param0) {
           this.field_l = this.field_l - param0;
           return;
-        } else {
-          param0 = param0 - this.field_l;
-          this.field_j.field_a = this.field_a;
-          this.field_l = 0;
-          this.field_j.field_e = this.field_e;
-          this.field_e.field_a = (vg) ((Object) this.field_j);
-          this.field_a.field_e = (vg) ((Object) this.field_j);
-          this.field_e = null;
-          this.field_a = null;
-          if (param0 > 0) {
-            this.field_j.a(param0);
-            return;
-          } else {
-            return;
-          }
         }
+        param0 = param0 - this.field_l;
+        this.field_j.field_a = this.field_a;
+        this.field_l = 0;
+        this.field_j.field_e = this.field_e;
+        this.field_e.field_a = (vg) ((Object) this.field_j);
+        this.field_a.field_e = (vg) ((Object) this.field_j);
+        this.field_e = null;
+        this.field_a = null;
+        if (param0 <= 0) {
+          return;
+        }
+        this.field_j.a(param0);
     }
 
     final void b(int[] param0, int param1, int param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param2 >= this.field_l) {
-              param2 = param2 - this.field_l;
-              param1 = param1 + this.field_l;
-              this.field_l = 0;
-              this.field_j.field_a = this.field_a;
-              this.field_j.field_e = this.field_e;
-              this.field_e.field_a = (vg) ((Object) this.field_j);
-              this.field_a.field_e = (vg) ((Object) this.field_j);
-              this.field_a = null;
-              this.field_e = null;
-              if (param2 > 0) {
-                this.field_j.b(param0, param1, param2);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                return;
-              }
-            } else {
-              this.field_l = this.field_l - param2;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 < this.field_l) {
+            this.field_l = this.field_l - param2;
+            return;
           }
+          param2 = param2 - this.field_l;
+          param1 = param1 + this.field_l;
+          this.field_l = 0;
+          this.field_j.field_a = this.field_a;
+          this.field_j.field_e = this.field_e;
+          this.field_e.field_a = (vg) ((Object) this.field_j);
+          this.field_a.field_e = (vg) ((Object) this.field_j);
+          this.field_a = null;
+          this.field_e = null;
+          if (param2 <= 0) {
+            return;
+          }
+          this.field_j.b(param0, param1, param2);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("sc.D(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L1;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("sc.D(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw tba.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -105,11 +78,11 @@ final class sc extends cg {
 
     sc(cg param0, int param1) {
         try {
-            this.field_j = param0;
-            this.field_l = param1;
-            this.field_i = this.field_j.field_i;
+          this.field_j = param0;
+          this.field_l = param1;
+          this.field_i = this.field_j.field_i;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "sc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

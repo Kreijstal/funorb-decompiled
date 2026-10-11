@@ -43,110 +43,62 @@ final class th {
         field_y = null;
         field_G = null;
         if (param0 != 8192) {
-            field_y = (int[]) null;
-            field_v = null;
-            return;
+          field_y = (int[]) null;
+          field_v = null;
+          return;
         }
         field_v = null;
     }
 
     final static void a(boolean param0, boolean param1, java.applet.Applet param2, String param3) {
         try {
-            RuntimeException var4 = null;
-            RuntimeException stackIn_13_0 = null;
-            StringBuilder stackIn_13_1 = null;
-            RuntimeException stackIn_14_0 = null;
-            StringBuilder stackIn_14_1 = null;
-            String stackIn_14_2 = null;
-            StringBuilder stackIn_16_1 = null;
-            StringBuilder stackIn_17_1 = null;
-            String stackIn_17_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            java.net.MalformedURLException var4_ref = null;
+          RuntimeException var4 = null;
+          RuntimeException stackIn_13_0 = null;
+          StringBuilder stackIn_13_1 = null;
+          String stackIn_14_2 = null;
+          StringBuilder stackIn_16_1 = null;
+          String stackIn_17_2 = null;
+          Throwable decompiledCaughtException = null;
+          java.net.MalformedURLException var4_ref = null;
+          try {
+            if (lk.field_e.startsWith("win") &&
+              dl.a((byte) 38, param3)) {
+              return;
+            }
             try {
-              L0: {
-                L1: {
-                  if (lk.field_e.startsWith("win")) {
-                    if (dl.a((byte) 38, param3)) {
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    } else {
-                      break L1;
-                    }
-                  } else {
-                    break L1;
-                  }
-                }
-                try {
-                  L2: {
-                    param2.getAppletContext().showDocument(new java.net.URL(param3), "_blank");
-                    break L2;
-                  }
-                } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L3: {
-                    var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                    pf.a(false, "MGR1: " + param3, (Throwable) null);
-                    break L3;
-                  }
-                }
-                if (param0) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  field_p = -75;
-                  return;
-                }
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              L4: {
-                var4 = (RuntimeException) (Object) decompiledCaughtException;
-                stackIn_13_0 = (RuntimeException) (var4);
-
-                stackIn_13_1 = new StringBuilder().append("th.B(").append(param0).append(',').append(param1).append(',');
-
-                if (param2 == null) {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-                  stackIn_14_2 = "null";
-                  break L4;
-                } else {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-                  stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-                  stackIn_14_2 = "{...}";
-                  break L4;
-                }
-              }
-              L5: {
-
-
-                stackIn_16_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(',');
-
-                if (param3 == null) {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-                  stackIn_17_2 = "null";
-                  break L5;
-                } else {
-                  stackIn_14_0 = (RuntimeException) ((Object) stackIn_14_0);
-                  stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-                  stackIn_17_2 = "{...}";
-                  break L5;
-                }
-              }
-              throw t.a((Throwable) ((Object) stackIn_14_0), stackIn_17_2 + ')');
+              param2.getAppletContext().showDocument(new java.net.URL(param3), "_blank");
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              pf.a(false, "MGR1: " + param3, (Throwable) null);
             }
-            if (decompiledRegionSelector0 == 0) {
+            if (param0) {
               return;
+            }
+            field_p = -75;
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_13_0 = var4;
+            stackIn_13_1 = new StringBuilder().append("th.B(").append(param0).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_14_2 = "null";
             } else {
-              return;
+              stackIn_14_2 = "{...}";
             }
+            stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+            if (param3 == null) {
+              stackIn_17_2 = "null";
+            } else {
+              stackIn_17_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

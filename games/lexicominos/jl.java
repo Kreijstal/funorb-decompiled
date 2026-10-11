@@ -8,10 +8,10 @@ final class jl {
 
     public static void a(int param0) {
         if (param0 != -15699) {
-            field_a = (ng) null;
-            field_b = null;
-            field_a = null;
-            return;
+          field_a = (ng) null;
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -19,11 +19,11 @@ final class jl {
 
     final static void a(String param0, byte param1) {
         try {
-            int var2_int = -48 / ((0 - param1) / 37);
-            si.field_q = param0;
-            ni.a(-124, 12);
+          int var2_int = -48 / ((0 - param1) / 37);
+          si.field_q = param0;
+          ni.a(-124, 12);
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

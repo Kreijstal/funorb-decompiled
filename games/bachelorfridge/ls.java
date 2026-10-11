@@ -11,16 +11,14 @@ final class ls {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 > -28) {
-          ls.a(91);
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 <= -28) {
           field_d = null;
           field_c = null;
           return;
         }
+        ls.a(91);
+        field_d = null;
+        field_c = null;
     }
 
     static {

@@ -11,7 +11,7 @@ final class vqb extends rqa {
     public static void e(byte param0) {
         field_o = null;
         if (param0 >= -15) {
-            field_o = (llb) null;
+          field_o = (llb) null;
         }
     }
 
@@ -21,49 +21,26 @@ final class vqb extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc(frb.a(150, 94));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc(frb.a(150, 94));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("vqb.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("vqb.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -74,9 +51,7 @@ final class vqb extends rqa {
         egb.field_o[15] = rq.field_G;
         egb.field_o[17] = otb.field_p;
         egb.field_o[9] = vqa.field_j;
-        if (param0 > -75) {
-          return;
-        } else {
+        if (param0 <= -75) {
           egb.field_o[11] = fk.field_d;
           egb.field_o[7] = gcb.field_o;
           egb.field_o[19] = cfa.field_e;
@@ -96,60 +71,28 @@ final class vqb extends rqa {
         if (param15 >= param5) {
           if (param15 < param11) {
             emb.a(param7, param6, param14, param11, dma.field_i, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
-            if (param9 != -18419) {
-              vqb.a(true, -61);
-              return;
-            } else {
-              return;
-            }
           } else {
             if (param11 <= param5) {
               emb.a(param1, param2, param8, param15, dma.field_i, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
             } else {
               emb.a(param4, param0, param14, param15, dma.field_i, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
             }
           }
         } else {
           if (param11 > param5) {
             emb.a(param1, param2, param12, param11, dma.field_i, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
-            if (param9 == -18419) {
-              return;
-            } else {
-              vqb.a(true, -61);
-              return;
-            }
           } else {
             if (param15 >= param11) {
               emb.a(param7, param6, param8, param5, dma.field_i, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
-              if (param9 == -18419) {
-                return;
-              } else {
-                vqb.a(true, -61);
-                return;
-              }
             } else {
               emb.a(param4, param0, param12, param5, dma.field_i, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
-              if (param9 != -18419) {
-                vqb.a(true, -61);
-                return;
-              } else {
-                return;
-              }
             }
           }
         }
+        if (param9 == -18419) {
+          return;
+        }
+        vqb.a(true, -61);
     }
 
     final static void a(boolean param0, int param1) {

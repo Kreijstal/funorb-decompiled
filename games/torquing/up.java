@@ -27,23 +27,23 @@ final class up {
 
     final boolean a(int param0) {
         if (param0 != 484) {
-            this.a(36, true);
-            return this.field_g;
+          this.a(36, true);
+          return this.field_g;
         }
         return this.field_g;
     }
 
     final String a(byte param0) {
         if (param0 >= -93) {
-            field_a = (no) null;
-            return this.field_c;
+          field_a = (no) null;
+          return this.field_c;
         }
         return this.field_c;
     }
 
     final boolean c(int param0) {
         if (param0 != 484) {
-            return false;
+          return false;
         }
         return this.field_f;
     }
@@ -52,9 +52,9 @@ final class up {
         this.field_f = false;
         this.field_g = false;
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "up.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

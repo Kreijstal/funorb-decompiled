@@ -14,7 +14,7 @@ final class aba {
         field_a = null;
         field_c = null;
         if (!param0) {
-            field_a = (vna) null;
+          field_a = (vna) null;
         }
     }
 

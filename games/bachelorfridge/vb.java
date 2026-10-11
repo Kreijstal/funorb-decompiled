@@ -21,10 +21,10 @@ final class vb extends vo {
 
     final void b(int param0, int param1, int param2) {
         int var4 = 106 % ((14 - param1) / 62);
-        int var5 = this.field_m * param0 >> -1004629652;
-        int var6 = param0 * this.field_i >> 1652359596;
-        int var7 = param2 * this.field_k >> 2062121068;
-        int var8 = param2 * this.field_l >> 2102880428;
+        int var5 = this.field_m * param0 >> 12;
+        int var6 = param0 * this.field_i >> 12;
+        int var7 = param2 * this.field_k >> 12;
+        int var8 = param2 * this.field_l >> 12;
         gb.a(0, var6, this.field_a, var7, var5, var8);
     }
 
@@ -33,76 +33,69 @@ final class vb extends vo {
         field_n = null;
         field_g = null;
         if (param0 >= -125) {
-            field_g = (java.lang.reflect.Constructor) null;
-            field_j = null;
-            return;
+          field_g = (java.lang.reflect.Constructor) null;
+          field_j = null;
+          return;
         }
         field_j = null;
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        if (param0 > -70) {
-          return;
-        } else {
-          var4 = param2 * this.field_m >> -299736980;
-          var5 = this.field_i * param2 >> 1724174508;
-          var6 = param1 * this.field_k >> -1452163828;
-          var7 = param1 * this.field_l >> -1427848116;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        if (param0 <= -70) {
+          var4 = param2 * this.field_m >> 12;
+          var5 = this.field_i * param2 >> 12;
+          var6 = param1 * this.field_k >> 12;
+          var7 = param1 * this.field_l >> 12;
           jka.a(var5, var4, this.field_e, this.field_a, var7, (byte) 88, var6, this.field_f);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var4 = param0 * this.field_m >> 1804630796;
-        var5 = this.field_i * param0 >> 328140012;
-        var6 = this.field_k * param2 >> -352612180;
-        if (param1 != -25222) {
-          return;
-        } else {
-          var7 = this.field_l * param2 >> -57420724;
+        int var7 = 0;
+        int var4 = param0 * this.field_m >> 12;
+        int var5 = this.field_i * param0 >> 12;
+        int var6 = this.field_k * param2 >> 12;
+        if (param1 == -25222) {
+          var7 = this.field_l * param2 >> 12;
           wt.a(var5, 1, this.field_e, var6, var7, var4, this.field_f);
           return;
         }
     }
 
     static {
-        $cfr$clinit: {
-            Throwable decompiledCaughtException = null;
-            Class var0 = null;
-            ClassNotFoundException var0_ref = null;
-            NoSuchMethodException var0_ref2 = null;
-            Class[] var1 = null;
-            Class var2 = null;
-            field_h = new int[24];
-            try {
-              L0: {
-                var2 = Class.forName("java.lang.ref.SoftReference");
-                var0 = var2;
-                field_g = var2.getConstructor(new Class[]{Object.class});
-                var1 = (Class[]) null;
-                field_n = var0.getMethod("get", (Class[]) null);
-                break L0;
-              }
-            } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var0_ref = (ClassNotFoundException) (Object) decompiledCaughtException;
-              field_g = null;
-              break $cfr$clinit;
-            } catch (java.lang.NoSuchMethodException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var0_ref2 = (NoSuchMethodException) (Object) decompiledCaughtException;
-              field_g = null;
-              break $cfr$clinit;
-            }
+        $cfr$clinit();
+    }
+
+    private static void $cfr$clinit() {
+        Throwable decompiledCaughtException = null;
+        Class var0 = null;
+        ClassNotFoundException var0_ref = null;
+        NoSuchMethodException var0_ref2 = null;
+        Class[] var1 = null;
+        Class var2 = null;
+        field_h = new int[24];
+        try {
+          var2 = Class.forName("java.lang.ref.SoftReference");
+          var0 = var2;
+          field_g = var2.getConstructor(new Class[]{Object.class});
+          var1 = (Class[]) null;
+          field_n = var0.getMethod("get", (Class[]) null);
+          return;
+        } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var0_ref = (ClassNotFoundException) (Object) decompiledCaughtException;
+          field_g = null;
+          return;
+        } catch (java.lang.NoSuchMethodException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var0_ref2 = (NoSuchMethodException) (Object) decompiledCaughtException;
+          field_g = null;
+          return;
         }
     }
 }

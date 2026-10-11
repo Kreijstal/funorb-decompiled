@@ -21,7 +21,7 @@ abstract class tg extends w {
         field_r = null;
         field_w = (int[][][][]) null;
         if (param0) {
-            tg.b(true);
+          tg.b(true);
         }
     }
 

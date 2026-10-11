@@ -13,8 +13,8 @@ public class kj {
 
     public static File a(int param0, String param1) {
         if (param0 != 20926) {
-            field_e = (String) null;
-            return kj.a(field_e, -2, field_a, param1);
+          field_e = (String) null;
+          return kj.a(field_e, -2, field_a, param1);
         }
         return kj.a(field_e, -2, field_a, param1);
     }
@@ -29,42 +29,32 @@ public class kj {
         field_e = param0;
         field_a = param1;
         try {
-          L0: {
-            field_c = System.getProperty("user.home");
-            if (field_c != null) {
-              field_c = field_c + "/";
-              break L0;
-            } else {
-              if (field_c != null) {
-                field_d = param2;
-                return;
-              } else {
-                field_c = "~/";
-                field_d = param2;
-                return;
-              }
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          field_c = System.getProperty("user.home");
           if (field_c == null) {
+            if (field_c != null) {
+              field_d = param2;
+              return;
+            }
             field_c = "~/";
             field_d = param2;
             return;
-          } else {
+          }
+          field_c = field_c + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (field_c != null) {
             field_d = param2;
             return;
           }
-        }
-        if (field_c == null) {
           field_c = "~/";
           field_d = param2;
           return;
-        } else {
-          field_d = param2;
-          return;
         }
+        if (field_c == null) {
+          field_c = "~/";
+        }
+        field_d = param2;
     }
 
     private kj() throws Throwable {

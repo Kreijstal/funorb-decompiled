@@ -17,12 +17,12 @@ final class ala {
 
     final static void a(int param0, kia param1) {
         try {
-            pka.a(param1, true, (byte) 73);
-            if (param0 != 26219) {
-                ala.a(101);
-            }
+          pka.a(param1, true, (byte) 73);
+          if (param0 != 26219) {
+            ala.a(101);
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ala.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ala.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

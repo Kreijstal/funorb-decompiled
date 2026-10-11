@@ -237,9 +237,9 @@ final class ag extends q {
           for (var3 = 0; var3 < 8; var3++) {
             if (1L != (1L & var0)) {
               var0 = var0 >>> 1;
-              continue;
+            } else {
+              var0 = -3932672073523589310L ^ var0 >>> 1;
             }
-            var0 = -3932672073523589310L ^ var0 >>> 1;
           }
           field_m[var2] = var0;
         }

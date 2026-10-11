@@ -13,8 +13,8 @@ public class bj {
 
     public static File a(String param0, int param1) {
         if (param1 != 0) {
-            field_a = (String) null;
-            return bj.a(param0, field_c, field_b, false);
+          field_a = (String) null;
+          return bj.a(param0, field_c, field_b, false);
         }
         return bj.a(param0, field_c, field_b, false);
     }
@@ -30,44 +30,23 @@ public class bj {
     public static void a(String param0, byte param1, int param2) {
         Exception exception = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          field_b = param2;
-          field_c = param0;
-          if (param1 == -99) {
-            break L0;
-          } else {
-            field_b = -5;
-            break L0;
-          }
+        field_b = param2;
+        field_c = param0;
+        if (param1 != -99) {
+          field_b = -5;
         }
         try {
-          L1: {
-            L2: {
-              field_a = System.getProperty("user.home");
-              if (null == field_a) {
-                break L2;
-              } else {
-                field_a = field_a + "/";
-                break L2;
-              }
-            }
-            break L1;
+          field_a = System.getProperty("user.home");
+          if (null != field_a) {
+            field_a = field_a + "/";
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            exception = (Exception) (Object) decompiledCaughtException;
-            break L3;
-          }
+          exception = (Exception) (Object) decompiledCaughtException;
         }
-        L4: {
-          field_e = true;
-          if (field_a == null) {
-            field_a = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        field_e = true;
+        if (field_a == null) {
+          field_a = "~/";
         }
     }
 

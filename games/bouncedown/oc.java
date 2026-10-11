@@ -10,10 +10,10 @@ final class oc {
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-            oc.a(true);
-            field_a = null;
-            field_c = null;
-            return;
+          oc.a(true);
+          field_a = null;
+          field_c = null;
+          return;
         }
         field_a = null;
         field_c = null;

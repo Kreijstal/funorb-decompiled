@@ -12,7 +12,7 @@ abstract class ih {
         field_c = null;
         field_a = null;
         if (param0 != -46) {
-            field_c = (String) null;
+          field_c = (String) null;
         }
     }
 

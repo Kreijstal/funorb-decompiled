@@ -20,20 +20,17 @@ abstract class un {
     final static void a(boolean param0, byte param1) {
         lg.field_w.a(0, 0, 452);
         if (param1 != -106) {
-            un.a(-99, (byte) -119, 66, 70, false);
+          un.a(-99, (byte) -119, 66, 70, false);
         }
     }
 
     final static void a(int param0, byte param1, int param2, int param3, boolean param4) {
-        int var5;
-        var5 = 91 / ((-26 - param1) / 59);
-        if (!param4) {
-          vd.a(param2, 0, -14561, 0, param0, param3);
-          return;
-        } else {
+        int var5 = 91 / ((-26 - param1) / 59);
+        if (param4) {
           vd.a(param2, 1, -14561, 1, param0, param3);
           return;
         }
+        vd.a(param2, 0, -14561, 0, param0, param3);
     }
 
     abstract void a(byte[] param0, int param1);

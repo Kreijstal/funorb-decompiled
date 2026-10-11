@@ -9,57 +9,47 @@ final class hh {
     static String field_b;
 
     final static int a(int param0) {
-        if (param0 > 32) {
-          if (!va.field_k) {
-            if (HoldTheLine.field_A <= ol.field_f) {
-              if (ol.field_f >= HoldTheLine.field_A - -lc.field_h) {
-                return -1;
-              } else {
-                return a.field_I;
-              }
-            } else {
-              return -1;
-            }
-          } else {
-            return -1;
-          }
-        } else {
+        if (param0 <= 32) {
           field_e = (hj) null;
-          if (!va.field_k) {
-            if (HoldTheLine.field_A <= ol.field_f) {
-              if (ol.field_f < HoldTheLine.field_A - -lc.field_h) {
-                return a.field_I;
-              } else {
-                return -1;
-              }
-            } else {
-              return -1;
-            }
-          } else {
+          if (va.field_k) {
             return -1;
           }
+          if (HoldTheLine.field_A > ol.field_f) {
+            return -1;
+          }
+          if (!(ol.field_f >= HoldTheLine.field_A + lc.field_h)) {
+            return a.field_I;
+          }
+          return -1;
         }
+        if (va.field_k) {
+          return -1;
+        }
+        if (HoldTheLine.field_A > ol.field_f) {
+          return -1;
+        }
+        if (ol.field_f < HoldTheLine.field_A + lc.field_h) {
+          return a.field_I;
+        }
+        return -1;
     }
 
     final static void a(int param0, byte param1) {
-        da var2;
-        var2 = da.field_p;
+        da var2 = da.field_p;
         var2.c((byte) 33, param0);
         var2.f(111, 1);
-        if (param1 != -23) {
-          hh.b(111);
-          var2.f(param1 + 134, 2);
-          return;
-        } else {
+        if (param1 == -23) {
           var2.f(param1 + 134, 2);
           return;
         }
+        hh.b(111);
+        var2.f(param1 + 134, 2);
     }
 
     public static void b(int param0) {
         field_d = null;
         if (param0 != 10) {
-            return;
+          return;
         }
         field_e = null;
         field_a = null;

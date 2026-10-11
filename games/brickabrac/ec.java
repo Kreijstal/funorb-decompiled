@@ -19,16 +19,16 @@ final class ec extends ib implements en {
     final void a(boolean param0, String param1, int param2) {
         int var4_int = 0;
         try {
-            if (param0) {
-                d var5 = (d) null;
-                this.a(117, -42, (byte) 27, -108, (d) null);
-            }
-            var4_int = this.field_M;
-            this.a((byte) -106, 1 + var4_int);
-            this.field_I[var4_int] = this.a((byte) 126, param1, (uh) (this));
-            this.field_T[var4_int] = param2;
+          if (param0) {
+            d var5 = (d) null;
+            this.a(117, -42, (byte) 27, -108, (d) null);
+          }
+          var4_int = this.field_M;
+          this.a((byte) -106, 1 + var4_int);
+          this.field_I[var4_int] = this.a((byte) 126, param1, (uh) (this));
+          this.field_T[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ec.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ec.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -38,67 +38,38 @@ final class ec extends ib implements en {
         int var8 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            var6_int = 0;
-            L1: while (true) {
-              L2: {
-                if (var6_int >= this.field_M) {
-                  break L2;
-                } else {
-                  if (param4 != this.field_I[var6_int]) {
-                    var6_int++;
-                    continue L1;
-                  } else {
-                    var7 = this.field_T[var6_int];
-                    if (var7 != -1) {
-                      bd.a(this.field_T[var6_int], true);
-                      break L2;
-                    } else {
-                      this.field_K.m(17);
-                      break L2;
-                    }
-                  }
-                }
-              }
-              L3: {
-                if (param2 <= -22) {
-                  break L3;
-                } else {
-                  field_O = false;
-                  break L3;
-                }
-              }
-              break L0;
+          for (var6_int = 0; var6_int < this.field_M; var6_int++) {
+            if (param4 != this.field_I[var6_int]) {
+              continue;
             }
+            var7 = this.field_T[var6_int];
+            if (var7 != -1) {
+              bd.a(this.field_T[var6_int], true);
+            } else {
+              this.field_K.m(17);
+            }
+            break;
           }
+          if (param2 > -22) {
+            field_O = false;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var6 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var6);
-
-            stackIn_13_1 = new StringBuilder().append("ec.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("ec.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -108,14 +79,14 @@ final class ec extends ib implements en {
         sa.field_E = true;
         mf.field_f.a(-126);
         if (param0 != 6846) {
-            ec.a(-62);
+          ec.a(-62);
         }
         pq.a(0, gf.field_b, false);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, param3);
-        this.field_H.a(this.field_R, 14 + (param1 - -this.field_o), 10 + (param0 - -this.field_w), this.field_t - 28, this.field_s, 16777215, -1, 0, 0, this.field_H.field_F);
+        this.field_H.a(this.field_R, 14 + (param1 + this.field_o), 10 + (param0 + this.field_w), this.field_t - 28, this.field_s, 16777215, -1, 0, 0, this.field_H.field_F);
     }
 
     final d a(byte param0, String param1, uh param2) {
@@ -126,90 +97,62 @@ final class ec extends ib implements en {
         d stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_5_2 = null;
         StringBuilder stackIn_7_1 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var4_int = -104 / ((param0 - 89) / 37);
-            var5 = new d(param1, param2);
-            var5.field_l = (ub) ((Object) new hi());
-            var6 = this.field_s + -2;
-            this.a(34 + this.field_s, 0, 0, (byte) -119, this.field_t);
-            var5.a(30, 7, var6, (byte) -119, -14 + this.field_t);
-            this.a(var5, true);
-            stackIn_1_0 = (d) (var5);
-            break L0;
-          }
+          var4_int = -104 / ((param0 - 89) / 37);
+          var5 = new d(param1, param2);
+          var5.field_l = (ub) ((Object) new hi());
+          var6 = this.field_s - 2;
+          this.a(34 + this.field_s, 0, 0, (byte) -119, this.field_t);
+          var5.a(30, 7, var6, (byte) -119, -14 + this.field_t);
+          this.a(var5, true);
+          stackIn_1_0 = var5;
+          return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_4_0 = (RuntimeException) (var4);
-
-            stackIn_4_1 = new StringBuilder().append("ec.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "null";
-              break L1;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_4_0);
-              stackIn_5_1 = (StringBuilder) ((Object) stackIn_4_1);
-              stackIn_5_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_4_0 = var4;
+          stackIn_4_1 = new StringBuilder().append("ec.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_7_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(',');
-
-            if (param2 == null) {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_5_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_5_0), stackIn_8_2 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_1_0;
     }
 
     private final void a(byte param0, int param1) {
         int var5 = 0;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        if (!(param1 > this.field_M)) {
-            return;
+        if (param1 <= this.field_M) {
+          return;
         }
         d[] var7 = new d[param1];
         d[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_M; var5++) {
-            var7[var5] = this.field_I[var5];
-            var4[var5] = this.field_T[var5];
+          var7[var5] = this.field_I[var5];
+          var4[var5] = this.field_T[var5];
         }
         this.field_T = var4;
         if (param0 > -54) {
-            return;
+          return;
         }
         this.field_I = var3;
         this.field_M = param1;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
@@ -238,215 +181,121 @@ final class ec extends ib implements en {
         int var31 = 0;
         int[] var32 = null;
         int[] var33 = null;
+        int var15Lifetime1;
+        int var16Lifetime1;
         var31 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var8_int = param2 + (-param1 + -param7);
-              var9 = -param7 + param4 - param1;
-              var10 = param1 + (param2 + param7);
-              if (lb.field_f >= var10) {
-                break L1;
-              } else {
-                var10 = lb.field_f;
-                break L1;
-              }
-            }
-            L2: {
-              if (lb.field_i <= var8_int) {
-                break L2;
-              } else {
-                var8_int = lb.field_i;
-                break L2;
-              }
-            }
-            L3: {
-              var11 = param4 + param1 + param7;
-              if (var9 < lb.field_b) {
-                var9 = lb.field_b;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (var11 > lb.field_j) {
-                var11 = lb.field_j;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            var33 = new int[32];
-            var32 = var33;
-            var12 = var32;
-            var13 = 16711935 & param0;
-            var14 = 65280 & param0;
-            var15 = 0;
-            L5: while (true) {
-              if (var15 >= 16) {
-                L6: {
-                  var15 = var10 - var8_int;
-                  var16 = -var9 + var11;
-                  if (param3 == 99) {
-                    break L6;
+          var8_int = param2 + (-param1 - param7);
+          var9 = -param7 + param4 - param1;
+          var10 = param1 + (param2 + param7);
+          if (lb.field_f < var10) {
+            var10 = lb.field_f;
+          }
+          if (lb.field_i > var8_int) {
+            var8_int = lb.field_i;
+          }
+          var11 = param4 + param1 + param7;
+          if (var9 < lb.field_b) {
+            var9 = lb.field_b;
+          }
+          if (var11 > lb.field_j) {
+            var11 = lb.field_j;
+          }
+          var33 = new int[32];
+          var32 = var33;
+          var12 = var32;
+          var13 = 16711935 & param0;
+          var14 = 65280 & param0;
+          for (var15 = 0; var15 < 16; var15++) {
+            var16 = param6 * var15 >> 4;
+            var12[var15] = ud.d(ik.a(var16 * var14, 16711680), ik.a(var13 * var16, -16711936)) >>> 8;
+            var12[-var15 + 31] = ud.d(ik.a(var16 * var13, -16711936), ik.a(16711680, var16 * var14)) >>> 8;
+          }
+          var15Lifetime1 = var10 - var8_int;
+          var16Lifetime1 = -var9 + var11;
+          if (param3 != 99) {
+            field_O = false;
+          }
+          if (var15Lifetime1 > 0 &&
+            var16Lifetime1 > 0) {
+            var17 = new jp(var15Lifetime1, var16Lifetime1);
+            var18 = param1 * param1;
+            var19 = (param7 + param1) * (param7 + param1);
+            var20 = 0;
+            var21 = -param4 + var9;
+            var22 = 0;
+            while (var22 < var16Lifetime1) {
+              var23 = -param2 + var8_int;
+              var24 = var23 * var23 + var21 * var21;
+              var25 = 0;
+              while (var25 < var15Lifetime1) {
+                var26 = var22 + var9;
+                var27 = var25 + var8_int;
+                if (var24 != 0) {
+                  if (var24 < var18) {
+                    var28 = ap.a(var24 << 12, -55);
+                    var29 = (param1 << 6) - var28;
+                    var30 = var28 - ((-BrickABrac.c(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
+                    var26 = var21 * var30 / var28 + param4;
+                    var27 = var30 * var23 / var28 + param2;
+                    if (lb.field_i > var27) {
+                      var27 = lb.field_i;
+                    }
+                    if (lb.field_b > var26) {
+                      var26 = lb.field_b;
+                    }
+                    if (var27 >= lb.field_f) {
+                      var27 = lb.field_f;
+                    }
+                    if (var26 >= lb.field_j) {
+                      var26 = lb.field_j;
+                    }
                   } else {
-                    field_O = false;
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (var15 <= 0) {
-                    break L7;
-                  } else {
-                    if ((var16 ^ -1) >= -1) {
-                      break L7;
-                    } else {
-                      var17 = new jp(var15, var16);
-                      var18 = param1 * param1;
-                      var19 = (param7 + param1) * (param7 + param1);
-                      var20 = 0;
-                      var21 = -param4 + var9;
-                      var22 = 0;
-                      L8: while (true) {
-                        if (var22 >= var16) {
-                          var17.d(var8_int, var9);
-                          lb.b(param2 << 115531684, param4 << 1836466148, param7 + param1 << -1406578268, 255, var33);
-                          decompiledRegionSelector0 = 1;
-                          break L0;
-                        } else {
-                          var23 = -param2 + var8_int;
-                          var24 = var23 * var23 + var21 * var21;
-                          var25 = 0;
-                          L9: while (true) {
-                            if (var25 >= var15) {
-                              var22++;
-                              var21++;
-                              continue L8;
-                            } else {
-                              L10: {
-                                var26 = var22 + var9;
-                                var27 = var25 + var8_int;
-                                if (-1 != (var24 ^ -1)) {
-                                  if (var24 < var18) {
-                                    L11: {
-                                      var28 = ap.a(var24 << -1374747828, -55);
-                                      var29 = (param1 << -994024410) - var28;
-                                      var30 = var28 + -((-BrickABrac.c(2048, (var29 << 1673200391) / param1) + 65536) * param5 >> -2094138581);
-                                      var26 = var21 * var30 / var28 + param4;
-                                      var27 = var30 * var23 / var28 + param2;
-                                      if (lb.field_i <= var27) {
-                                        break L11;
-                                      } else {
-                                        var27 = lb.field_i;
-                                        break L11;
-                                      }
-                                    }
-                                    L12: {
-                                      if (lb.field_b > var26) {
-                                        var26 = lb.field_b;
-                                        break L12;
-                                      } else {
-                                        break L12;
-                                      }
-                                    }
-                                    L13: {
-                                      if (var27 < lb.field_f) {
-                                        break L13;
-                                      } else {
-                                        var27 = lb.field_f;
-                                        break L13;
-                                      }
-                                    }
-                                    if (var26 >= lb.field_j) {
-                                      var26 = lb.field_j;
-                                      break L10;
-                                    } else {
-                                      break L10;
-                                    }
-                                  } else {
-                                    if (var19 > var24) {
-                                      L14: {
-                                        var28 = ap.a(var24 << 1166374924, -100);
-                                        var29 = -(param1 << -769204474) + var28;
-                                        var30 = var28 - (param5 * (-BrickABrac.c(2048, (var29 << 582318919) / param7) + 65536) >> 427691819);
-                                        var27 = param2 - -(var23 * var30 / var28);
-                                        var26 = var30 * var21 / var28 + param4;
-                                        if (lb.field_i <= var27) {
-                                          break L14;
-                                        } else {
-                                          var27 = lb.field_i;
-                                          break L14;
-                                        }
-                                      }
-                                      L15: {
-                                        if (lb.field_b > var26) {
-                                          var26 = lb.field_b;
-                                          break L15;
-                                        } else {
-                                          break L15;
-                                        }
-                                      }
-                                      L16: {
-                                        if (lb.field_j > var26) {
-                                          break L16;
-                                        } else {
-                                          var26 = lb.field_j;
-                                          break L16;
-                                        }
-                                      }
-                                      if (var27 < lb.field_f) {
-                                        break L10;
-                                      } else {
-                                        var27 = lb.field_f;
-                                        break L10;
-                                      }
-                                    } else {
-                                      var17.field_G[var20] = lb.field_l[lb.field_c * var26 - -var27];
-                                      var20++;
-                                      var23++;
-                                      var25++;
-                                      var24 = var24 + (-1 + var23 * 2);
-                                      continue L9;
-                                    }
-                                  }
-                                } else {
-                                  break L10;
-                                }
-                              }
-                              var17.field_G[var20] = lb.field_l[lb.field_c * var26 - -var27];
-                              var20++;
-                              var23++;
-                              var25++;
-                              var24 = var24 + (-1 + var23 * 2);
-                              continue L9;
-                            }
-                          }
-                        }
-                      }
+                    if (var19 <= var24) {
+                      var17.field_G[var20] = lb.field_l[lb.field_c * var26 + var27];
+                      var20++;
+                      var23++;
+                      var25++;
+                      var24 = var24 + (-1 + var23 * 2);
+                      continue;
+                    }
+                    var28 = ap.a(var24 << 12, -100);
+                    var29 = -(param1 << 6) + var28;
+                    var30 = var28 - (param5 * (-BrickABrac.c(2048, (var29 << 7) / param7) + 65536) >> 11);
+                    var27 = param2 + var23 * var30 / var28;
+                    var26 = var30 * var21 / var28 + param4;
+                    if (lb.field_i > var27) {
+                      var27 = lb.field_i;
+                    }
+                    if (lb.field_b > var26) {
+                      var26 = lb.field_b;
+                    }
+                    if (lb.field_j <= var26) {
+                      var26 = lb.field_j;
+                    }
+                    if (var27 >= lb.field_f) {
+                      var27 = lb.field_f;
                     }
                   }
                 }
-                decompiledRegionSelector0 = 0;
-                break L0;
-              } else {
-                var16 = param6 * var15 >> -1834423452;
-                var12[var15] = ud.d(ik.a(var16 * var14, 16711680), ik.a(var13 * var16, -16711936)) >>> 281720008;
-                var12[-var15 + 31] = ud.d(ik.a(var16 * var13, -16711936), ik.a(16711680, var16 * var14)) >>> -618571864;
-                var15++;
-                continue L5;
+                var17.field_G[var20] = lb.field_l[lb.field_c * var26 + var27];
+                var20++;
+                var23++;
+                var25++;
+                var24 = var24 + (-1 + var23 * 2);
               }
+              var22++;
+              var21++;
             }
+            var17.d(var8_int, var9);
+            lb.b(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var33);
+            return;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           throw qb.a((Throwable) ((Object) var8), "ec.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -455,20 +304,20 @@ final class ec extends ib implements en {
         int var4_int = 0;
         this.field_M = 0;
         try {
-            this.field_K = param0;
-            this.field_R = param2;
-            this.field_H = param1;
-            var4_int = this.field_R == null ? 0 : this.field_H.b(this.field_R, 260, this.field_H.field_F);
-            this.a(22 + var4_int, 0, 0, (byte) -119, 288);
+          this.field_K = param0;
+          this.field_R = param2;
+          this.field_H = param1;
+          var4_int = this.field_R == null ? 0 : this.field_H.b(this.field_R, 260, this.field_H.field_F);
+          this.a(22 + var4_int, 0, 0, (byte) -119, 288);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         field_Q = null;
         if (param0 != 0) {
-            field_Q = (ki) null;
+          field_Q = (ki) null;
         }
         field_N = null;
         field_L = null;

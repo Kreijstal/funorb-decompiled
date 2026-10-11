@@ -17,7 +17,7 @@ final class ej {
         byte[] var3 = se.field_y[0];
         int[] var4 = new int[var2];
         for (var5_int = 0; var5_int < var2; var5_int++) {
-            var4[var5_int] = in.field_c[b.a(255, (int) var3[var5_int])];
+          var4[var5_int] = in.field_c[b.a(255, (int) var3[var5_int])];
         }
         er var5 = new er(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var4);
         la.a((byte) 17);
@@ -34,10 +34,10 @@ final class ej {
 
     final void a(java.applet.Applet param0, byte param1) {
         try {
-            int var3_int = 121 / ((-13 - param1) / 47);
-            gl.a(-11, 31536000L, param0, this.field_a, "jagex-last-login-method");
+          int var3_int = 121 / ((-13 - param1) / 47);
+          gl.a(-11, 31536000L, param0, this.field_a, "jagex-last-login-method");
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ej.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -47,9 +47,9 @@ final class ej {
 
     ej(String param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -59,52 +59,32 @@ final class ej {
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 31588) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                this.a(-78, (String) null);
-                break L1;
-              }
-            }
-            stackIn_3_0 = this.field_a.equals(param1);
-            break L0;
+          if (param0 != 31588) {
+            var4 = (String) null;
+            this.a(-78, (String) null);
           }
+          stackIn_3_0 = this.field_a.equals(param1);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("ej.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ej.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static String a(byte param0, int param1, int param2) {
         if (param0 <= 101) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         return Vertigo2.a(new String[]{Integer.toString(param1), Integer.toString(param2)}, lp.field_z, -116);
     }

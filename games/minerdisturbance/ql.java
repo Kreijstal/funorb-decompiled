@@ -21,78 +21,47 @@ final class ql {
     public static void b(int param0) {
         field_m = null;
         if (param0 != 0) {
-            ql.b(70);
+          ql.b(70);
         }
     }
 
     final static boolean a(ld param0, byte param1) {
         RuntimeException var2 = null;
-        int stackIn_5_0 = 0;
+        boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 100) {
-                break L1;
-              } else {
-                field_m = (vm) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (param0.c((byte) -119, 1) != 1) {
-                stackIn_5_0 = 0;
-                break L2;
-              } else {
-                stackIn_5_0 = 1;
-                break L2;
-              }
-            }
-            break L0;
+          if (param1 != 100) {
+            field_m = (vm) null;
           }
+          stackIn_5_0 = (param0.c((byte) -119, 1) == 1);
+          return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("ql.B(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("ql.B(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_5_0 != 0;
     }
 
     final static void a(int param0) {
-        ld var2;
-        if (param0 >= -64) {
-          var2 = (ld) null;
-          ql.a((ld) null, (byte) 45);
-          aj.field_c.field_o = 0;
-          aj.field_c.field_j = 0;
-          return;
-        } else {
+        if (param0 < -64) {
           aj.field_c.field_o = 0;
           aj.field_c.field_j = 0;
           return;
         }
+        ld var2 = (ld) null;
+        ql.a((ld) null, (byte) 45);
+        aj.field_c.field_o = 0;
+        aj.field_c.field_j = 0;
     }
 
     final static gj a(boolean param0, String param1) {
@@ -105,100 +74,64 @@ final class ql {
         gj stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                field_m = (vm) null;
-                break L1;
-              }
-            }
-            var2_int = param1.length();
-            var3 = 0;
-            L2: while (true) {
-              if (var2_int <= var3) {
-                stackIn_12_0 = vh.field_f;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var4 = param1.charAt(var3);
-                if (var4 >= 48) {
-                  if (var4 <= 57) {
-                    var3++;
-                    continue L2;
-                  } else {
-                    stackIn_9_0 = null;
-                    decompiledRegionSelector0 = 0;
-                    break L0;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            }
+          if (!param0) {
+            field_m = (vm) null;
           }
+          var2_int = param1.length();
+          var3 = 0;
+          while (true) {
+            if (var2_int <= var3) {
+              stackIn_12_0 = vh.field_f;
+              return stackIn_12_0;
+            }
+            var4 = param1.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 <= 57) {
+              var3++;
+              continue;
+            }
+            break;
+          }
+          stackIn_9_0 = null;
+          return (gj) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("ql.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("ql.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (gj) ((Object) stackIn_9_0);
-        } else {
-          return stackIn_12_0;
+          throw lj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        var3 = nm.a(param0, (byte) -128);
-        var4 = j.a(param0, -121);
-        var5 = nm.a(param1, (byte) 85);
-        var6 = j.a(param1, -31);
-        var7 = (int)((long)var5 * (long)var3 >> -258832112);
-        var8 = (int)((long)var6 * (long)var3 >> -981011824);
-        if (param2 < 89) {
-          ql.b(-98);
-          var9 = (int)((long)var5 * (long)var4 >> 1226418640);
-          var10 = (int)((long)var6 * (long)var4 >> -1898957424);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
-        } else {
-          var9 = (int)((long)var5 * (long)var4 >> 1226418640);
-          var10 = (int)((long)var6 * (long)var4 >> -1898957424);
+        int var9 = 0;
+        int var10 = 0;
+        int var3 = nm.a(param0, (byte) -128);
+        int var4 = j.a(param0, -121);
+        int var5 = nm.a(param1, (byte) 85);
+        int var6 = j.a(param1, -31);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var6 * (long)var3 >> 16);
+        if (param2 >= 89) {
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
+        ql.b(-98);
+        var9 = (int)((long)var5 * (long)var4 >> 16);
+        var10 = (int)((long)var6 * (long)var4 >> 16);
+        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     ql() {

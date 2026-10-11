@@ -8,18 +8,16 @@ final class be {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 20342) {
-          be.a(85);
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 20342) {
           field_b = null;
           field_c = null;
           field_a = null;
           return;
         }
+        be.a(85);
+        field_b = null;
+        field_c = null;
+        field_a = null;
     }
 
     static {

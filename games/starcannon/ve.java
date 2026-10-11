@@ -14,63 +14,47 @@ final class ve {
         field_f = null;
         field_g = null;
         if (param0 != 32729) {
-            field_d = true;
+          field_d = true;
         }
     }
 
     final int a(boolean param0) {
         if (!param0) {
-            this.a(99, -59);
-            return this.field_c - -1;
+          this.a(99, -59);
+          return this.field_c + 1;
         }
-        return this.field_c - -1;
+        return this.field_c + 1;
     }
 
     final int a(int param0, int param1) {
-        if (param1 <= this.field_c) {
-          if (param0 != 0) {
-            this.b(-84, 4);
-            return this.field_e[param1];
-          } else {
-            return this.field_e[param1];
-          }
-        } else {
+        if (param1 > this.field_c) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param0 == 0) {
+          return this.field_e[param1];
+        }
+        this.b(-84, 4);
+        return this.field_e[param1];
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        if (param0 <= this.field_c) {
-          L0: {
-            if (this.field_e.length <= param0) {
-              this.d(param0, 0);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 > this.field_c) {
+          this.field_c = param0;
+          if (this.field_e.length <= param0) {
+            this.d(param0, 0);
           }
-          if (!param2) {
-            return;
-          } else {
+          if (param2) {
             this.field_e[param0] = param1;
             return;
           }
-        } else {
-          L1: {
-            this.field_c = param0;
-            if (this.field_e.length <= param0) {
-              this.d(param0, 0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (!param2) {
-            return;
-          } else {
-            this.field_e[param0] = param1;
-            return;
-          }
+          return;
+        }
+        if (this.field_e.length <= param0) {
+          this.d(param0, 0);
+        }
+        if (param2) {
+          this.field_e[param0] = param1;
+          return;
         }
     }
 
@@ -87,50 +71,35 @@ final class ve {
         var4 = StarCannon.field_A;
         if (param1 != -77) {
           return -123;
-        } else {
-          var3 = this.field_e.length;
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (this.field_b) {
-                if (-1 == (var3 ^ -1)) {
-                  var3 = 1;
-                  continue L0;
-                } else {
-                  var3 = var3 * this.field_a;
-                  continue L0;
-                }
-              } else {
-                var3 = var3 + this.field_a;
-                continue L0;
-              }
-            }
-          }
         }
+        var3 = this.field_e.length;
+        while (param0 >= var3) {
+          if (!this.field_b) {
+            var3 = var3 + this.field_a;
+            continue;
+          }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_a;
+        }
+        return var3;
     }
 
     final void c(int param0, int param1) {
-        int var3;
-        if (-1 >= (param1 ^ -1)) {
-          if (param1 > this.field_c) {
-            throw new ArrayIndexOutOfBoundsException(param1);
-          } else {
-            L0: {
-              if (param1 != this.field_c) {
-                ug.a(this.field_e, param1 - -1, this.field_e, param1, this.field_c - param1);
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            this.field_c = this.field_c - 1;
-            var3 = 50 % ((param0 - 50) / 54);
-            return;
-          }
-        } else {
+        if (param1 < 0) {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
+        if (param1 <= this.field_c) {
+          if (param1 != this.field_c) {
+            ug.a(this.field_e, param1 + 1, this.field_e, param1, this.field_c - param1);
+          }
+          this.field_c = this.field_c - 1;
+          int var3 = 50 % ((param0 - 50) / 54);
+          return;
+        }
+        throw new ArrayIndexOutOfBoundsException(param1);
     }
 
     final void b(int param0, int param1) {

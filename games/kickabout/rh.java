@@ -7,8 +7,8 @@ final class rh extends rg implements java.awt.event.MouseWheelListener {
     final void a(byte param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != -68) {
-            java.awt.Component var4 = (java.awt.Component) null;
-            this.a((byte) -106, (java.awt.Component) null);
+          java.awt.Component var4 = (java.awt.Component) null;
+          this.a((byte) -106, (java.awt.Component) null);
         }
     }
 
@@ -16,7 +16,7 @@ final class rh extends rg implements java.awt.event.MouseWheelListener {
         int var2 = this.field_g;
         this.field_g = 0;
         if (param0 != -22) {
-            return -111;
+          return -111;
         }
         return var2;
     }

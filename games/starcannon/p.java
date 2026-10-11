@@ -17,42 +17,26 @@ final class p {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = StarCannon.field_A;
         try {
-          L0: {
-            gl.b();
-            sd.field_e = new int[260];
-            fb.field_r = 11;
-            var1_int = 0;
-            L1: while (true) {
-              if ((var1_int ^ -1) <= -257) {
-                var5 = 256;
-                var1_int = var5;
-                L2: while (true) {
-                  if (sd.field_e.length <= var5) {
-                    L3: {
-                      if (param0 == -68) {
-                        break L3;
-                      } else {
-                        field_g = 120;
-                        break L3;
-                      }
-                    }
-                    break L0;
-                  } else {
-                    sd.field_e[var5] = 255;
-                    var5++;
-                    continue L2;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                sd.field_e[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L1;
-              }
-            }
+          gl.b();
+          sd.field_e = new int[260];
+          fb.field_r = 11;
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            sd.field_e[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (sd.field_e.length > var5) {
+            sd.field_e[var5] = 255;
+            var5++;
+          }
+          if (param0 != -68) {
+            field_g = 120;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -67,7 +51,7 @@ final class p {
         field_d = null;
         field_b = null;
         if (param0 != 11) {
-            p.a((byte) -118);
+          p.a((byte) -118);
         }
     }
 

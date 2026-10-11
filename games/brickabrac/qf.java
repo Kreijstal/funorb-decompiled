@@ -9,56 +9,50 @@ final class qf extends lp implements en {
 
     final static void a(int param0, pb param1, int param2, jp param3, int param4, boolean param5) {
         try {
-            if (param5) {
-                field_Cb = -58;
-            }
-            fc.a(-77, param1.field_p);
-            lb.g(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
-            param3.b((-param3.field_x + param1.field_i) / 2 - 80 / param2, -param3.field_z + (param1.field_q + param4 - 201 / param2), 41, 110);
-            sc.b(-107);
+          if (param5) {
+            field_Cb = -58;
+          }
+          fc.a(-77, param1.field_p);
+          lb.g(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
+          param3.b((-param3.field_x + param1.field_i) / 2 - 80 / param2, -param3.field_z + (param1.field_q + param4 - 201 / param2), 41, 110);
+          sc.b(-107);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final boolean h(int param0) {
-        oh var2;
-        if (param0 == 0) {
-          if (this.field_N) {
-            if (!this.field_Db) {
-              var2 = l.a(106);
-              if (var2 == null) {
-                return super.h(0);
-              } else {
-                this.a(-7, var2, false);
-                return super.h(0);
-              }
-            } else {
-              return super.h(0);
-            }
-          } else {
-            return super.h(0);
-          }
-        } else {
+        if (param0 != 0) {
           return true;
         }
+        if (!this.field_N) {
+          return super.h(0);
+        }
+        if (this.field_Db) {
+          return super.h(0);
+        }
+        oh var2 = l.a(106);
+        if (var2 != null) {
+          this.a(-7, var2, false);
+          return super.h(0);
+        }
+        return super.h(0);
     }
 
     final static int p(int param0) {
-        if (param0 != 248) {
-          field_Cb = 19;
-          return to.field_a + ((md.field_v << -1211210622) + (md.field_r << -2046869340));
-        } else {
-          return to.field_a + ((md.field_v << -1211210622) + (md.field_r << -2046869340));
+        if (param0 == 248) {
+          return to.field_a + ((md.field_v << 2) + (md.field_r << 4));
         }
+        field_Cb = 19;
+        return to.field_a + ((md.field_v << 2) + (md.field_r << 4));
     }
 
     qf(cp param0, dk param1) {
         super(param0, wm.field_a, ie.field_o, false, false);
         try {
-            this.field_Eb = param1;
+          this.field_Eb = param1;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,17 +62,17 @@ final class qf extends lp implements en {
 
     public final void a(int param0, int param1, byte param2, int param3, d param4) {
         if (this.field_Fb) {
-            ag.a((byte) -16, true, false);
-            return;
+          ag.a((byte) -16, true, false);
+          return;
         }
         if (param2 >= -22) {
-            return;
+          return;
         }
         try {
-            ek.l(64);
-            this.m(17);
+          ek.l(64);
+          this.m(17);
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -89,10 +83,7 @@ final class qf extends lp implements en {
     private final void a(int param0, oh param1, boolean param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_32_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
@@ -100,116 +91,69 @@ final class qf extends lp implements en {
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              this.field_Db = true;
-              if (param1.field_c) {
-                var4 = lh.field_r;
-                break L1;
-              } else {
-                if (null != param1.field_e) {
-                  var4 = ng.field_f;
-                  if (null != this.field_Eb) {
-                    this.field_Eb.a((byte) 124);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  var4 = param1.field_g;
-                  if (param1.field_d != 248) {
-                    break L1;
-                  } else {
-                    L2: {
-                      if (!param2) {
-                        jq.e(-77);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    this.field_Fb = true;
-                    var4 = no.field_q;
-                    break L1;
-                  }
-                }
+          this.field_Db = true;
+          if (param1.field_c) {
+            var4 = lh.field_r;
+          } else {
+            if (null != param1.field_e) {
+              var4 = ng.field_f;
+              if (null != this.field_Eb) {
+                this.field_Eb.a((byte) 124);
               }
-            }
-            L3: {
-              var5 = new ec((lp) (this), wm.field_a, var4);
-              if (param1.field_c) {
-                if (!param1.field_a) {
-                  var5.a((byte) 126, ri.field_L, (uh) (this));
-                  break L3;
-                } else {
-                  this.b((byte) 118, new ig((qf) (this)));
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                L4: {
-                  if (this.field_Fb) {
-                    var5.a((byte) -37, ri.field_L, (uh) (this));
-                    break L4;
-                  } else {
-                    if (param1.field_d != 5) {
-                      var5.a(false, dp.field_s, -1);
-                      break L4;
-                    } else {
-                      var5.a(false, ec.field_L, 11);
-                      var5.a(false, wc.field_a, 17);
-                      break L4;
-                    }
-                  }
-                }
-                if (3 == param1.field_d) {
-                  var5.a(false, vn.field_H, 7);
-                  break L3;
-                } else {
-                  if ((param1.field_d ^ -1) != -7) {
-                    break L3;
-                  } else {
-                    var5.a(false, cb.field_p, 9);
-                    break L3;
-                  }
-                }
-              }
-            }
-            this.b((byte) 106, var5);
-            if (param0 == -7) {
-              decompiledRegionSelector0 = 1;
-              break L0;
             } else {
-              this.field_Eb = (dk) null;
+              var4 = param1.field_g;
+              if (param1.field_d == 248) {
+                if (!param2) {
+                  jq.e(-77);
+                }
+                this.field_Fb = true;
+                var4 = no.field_q;
+              }
+            }
+          }
+          var5 = new ec((lp) (this), wm.field_a, var4);
+          if (param1.field_c) {
+            if (param1.field_a) {
+              this.b((byte) 118, new ig(this));
               return;
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_31_0 = (RuntimeException) (var4_ref);
-
-            stackIn_31_1 = new StringBuilder().append("qf.L(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "null";
-              break L5;
+            var5.a((byte) 126, ri.field_L, (uh) (this));
+          } else {
+            if (this.field_Fb) {
+              var5.a((byte) -37, ri.field_L, (uh) (this));
             } else {
-              stackIn_32_0 = (RuntimeException) ((Object) stackIn_31_0);
-              stackIn_32_1 = (StringBuilder) ((Object) stackIn_31_1);
-              stackIn_32_2 = "{...}";
-              break L5;
+              if (param1.field_d != 5) {
+                var5.a(false, dp.field_s, -1);
+              } else {
+                var5.a(false, ec.field_L, 11);
+                var5.a(false, wc.field_a, 17);
+              }
+            }
+            if (3 == param1.field_d) {
+              var5.a(false, vn.field_H, 7);
+            } else {
+              if (param1.field_d == 6) {
+                var5.a(false, cb.field_p, 9);
+              }
             }
           }
-          throw qb.a((Throwable) ((Object) stackIn_32_0), stackIn_32_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
+          this.b((byte) 106, var5);
+          if (param0 == -7) {
+            return;
+          }
+          this.field_Eb = (dk) null;
           return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_31_0 = var4_ref;
+          stackIn_31_1 = new StringBuilder().append("qf.L(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_32_2 = "null";
+          } else {
+            stackIn_32_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

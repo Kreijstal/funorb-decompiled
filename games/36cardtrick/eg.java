@@ -13,7 +13,7 @@ final class eg {
         field_e = null;
         field_a = null;
         if (param0 != 38) {
-            return;
+          return;
         }
         field_c = null;
     }

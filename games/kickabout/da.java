@@ -36,111 +36,87 @@ final class da extends gn {
         this.field_g = null;
         this.field_F = null;
         this.field_j = null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           da.b(97);
           return;
         }
     }
 
     final static ut b(int param0, int param1) {
-        if (-1 == (param1 ^ -1)) {
+        if (param1 == 0) {
           return mc.field_k[1];
-        } else {
-          if (param1 == 1) {
-            return mc.field_k[0];
-          } else {
-            if ((param1 ^ -1) == -26) {
-              return mc.field_k[0];
-            } else {
-              if (param0 == param1) {
-                return mc.field_k[1];
-              } else {
-                if (3 == param1) {
-                  return mc.field_k[1];
-                } else {
-                  if (4 != param1) {
-                    if (-6 != (param1 ^ -1)) {
-                      if ((param1 ^ -1) == -7) {
-                        return mc.field_k[1];
-                      } else {
-                        if (param1 == 7) {
-                          return mc.field_k[1];
-                        } else {
-                          if (param1 != 22) {
-                            if (-9 != (param1 ^ -1)) {
-                              if ((param1 ^ -1) == -29) {
-                                return mc.field_k[1];
-                              } else {
-                                if (9 == param1) {
-                                  return kb.field_E[6];
-                                } else {
-                                  if (param1 != 35) {
-                                    if ((param1 ^ -1) != -37) {
-                                      if ((param1 ^ -1) == -39) {
-                                        return mc.field_k[1];
-                                      } else {
-                                        if (-40 != (param1 ^ -1)) {
-                                          if (param1 == 40) {
-                                            return mc.field_k[1];
-                                          } else {
-                                            return null;
-                                          }
-                                        } else {
-                                          return mc.field_k[1];
-                                        }
-                                      }
-                                    } else {
-                                      return (ut) ((Object) sh.field_g);
-                                    }
-                                  } else {
-                                    return mc.field_k[1];
-                                  }
-                                }
-                              }
-                            } else {
-                              return mc.field_k[0];
-                            }
-                          } else {
-                            return mc.field_k[1];
-                          }
-                        }
-                      }
-                    } else {
-                      return mc.field_k[1];
-                    }
-                  } else {
-                    return mc.field_k[1];
-                  }
-                }
-              }
-            }
-          }
         }
+        if (param1 == 1) {
+          return mc.field_k[0];
+        }
+        if (param1 == 25) {
+          return mc.field_k[0];
+        }
+        if (param0 == param1) {
+          return mc.field_k[1];
+        }
+        if (3 == param1) {
+          return mc.field_k[1];
+        }
+        if (4 == param1) {
+          return mc.field_k[1];
+        }
+        if (param1 == 5) {
+          return mc.field_k[1];
+        }
+        if (param1 == 6) {
+          return mc.field_k[1];
+        }
+        if (param1 == 7) {
+          return mc.field_k[1];
+        }
+        if (param1 == 22) {
+          return mc.field_k[1];
+        }
+        if (param1 == 8) {
+          return mc.field_k[0];
+        }
+        if (param1 == 28) {
+          return mc.field_k[1];
+        }
+        if (9 == param1) {
+          return kb.field_E[6];
+        }
+        if (param1 == 35) {
+          return mc.field_k[1];
+        }
+        if (param1 == 36) {
+          return (ut) ((Object) sh.field_g);
+        }
+        if (param1 == 38) {
+          return mc.field_k[1];
+        }
+        if (param1 == 39) {
+          return mc.field_k[1];
+        }
+        if (param1 == 40) {
+          return mc.field_k[1];
+        }
+        return null;
     }
 
     final static void b(int param0) {
-        if (param0 >= 64) {
-          if (null != wi.field_v) {
-            if (null == wi.field_v.field_g) {
-              wi.field_v = null;
-              ig.field_f = null;
-              return;
-            } else {
-              wi.field_v.field_g.field_I = false;
-              wi.field_v = null;
-              ig.field_f = null;
-              return;
-            }
-          } else {
-            wi.field_v = null;
-            ig.field_f = null;
-            return;
-          }
-        } else {
+        if (param0 < 64) {
           return;
         }
+        if (null == wi.field_v) {
+          wi.field_v = null;
+          ig.field_f = null;
+          return;
+        }
+        if (null != wi.field_v.field_g) {
+          wi.field_v.field_g.field_I = false;
+          wi.field_v = null;
+          ig.field_f = null;
+          return;
+        }
+        wi.field_v = null;
+        ig.field_f = null;
     }
 
     public static void a(byte param0) {
@@ -150,7 +126,7 @@ final class da extends gn {
         field_i = null;
         field_x = null;
         field_k = (int[][]) null;
-        int var1 = -77 % ((param0 - -16) / 40);
+        int var1 = -77 % ((param0 + 16) / 40);
     }
 
     final static void a(int param0) {
@@ -161,16 +137,16 @@ final class da extends gn {
     final static void a(sj param0, boolean param1, sj param2, sj param3, int param4) {
         lc.field_e = su.a(-3505, "");
         if (param4 >= -118) {
-            return;
+          return;
         }
         try {
-            lc.field_e.a(false, (byte) 108);
-            id.a(param0, param3, false, param2);
-            lf.a(-93);
-            mj.field_a = vj.field_a;
-            wk.field_f = vj.field_a;
+          lc.field_e.a(false, (byte) 108);
+          id.a(param0, param3, false, param2);
+          lf.a(-93);
+          mj.field_a = vj.field_a;
+          wk.field_f = vj.field_a;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "da.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -181,26 +157,15 @@ final class da extends gn {
         RuntimeException var2 = null;
         var3 = Kickabout.field_G;
         try {
-          L0: {
-            L1: {
-              var4 = (fa) ((Object) nl.field_f.g(param0 + 24009));
-              if (param0 == 0) {
-                break L1;
-              } else {
-                da.b(79);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if (var4 == null) {
-                break L0;
-              } else {
-                sp.a(param1, var4, -51265247);
-                var4 = (fa) ((Object) nl.field_f.c(33));
-                continue L2;
-              }
-            }
+          var4 = (fa) (nl.field_f.g(param0 + 24009));
+          if (param0 != 0) {
+            da.b(79);
           }
+          while (var4 != null) {
+            sp.a(param1, var4, -51265247);
+            var4 = (fa) (nl.field_f.c(33));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;

@@ -12,9 +12,9 @@ final class sk {
         field_c = null;
         field_b = null;
         if (param0 >= -47) {
-            sk.a((byte) 45);
-            field_a = null;
-            return;
+          sk.a((byte) 45);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

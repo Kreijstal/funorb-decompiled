@@ -16,7 +16,7 @@ final class oi extends wf {
         field_j = null;
         field_l = null;
         if (param0 >= -36) {
-            field_g = (ci) null;
+          field_g = (ci) null;
         }
     }
 

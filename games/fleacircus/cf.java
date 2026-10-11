@@ -10,23 +10,21 @@ final class cf {
     public static void b(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 != 21230) {
-          field_d = (vc) null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 21230) {
           field_c = null;
           field_b = null;
           return;
         }
+        field_d = (vc) null;
+        field_c = null;
+        field_b = null;
     }
 
     final static void a(int param0) {
         ej.a((byte) -39);
         tg.field_g = false;
         if (param0 != -25319) {
-            cf.a(-108);
+          cf.a(-108);
         }
     }
 

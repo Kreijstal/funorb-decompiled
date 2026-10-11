@@ -11,134 +11,59 @@ public final class pf {
     public final void b(int param0) {
         this.a(false);
         if (param0 == 12575) {
-            return;
+          return;
         }
         this.c = (jaclib.peer.PeerReference) null;
     }
 
     private final void a(int param0, jaclib.peer.PeerReference param1) {
-        L0: {
-          param1.a(param0 + -19176);
-          if (this.b == param1) {
-            this.b = param1.b;
-            break L0;
-          } else {
-            break L0;
-          }
+        param1.a(param0 - 19176);
+        if (this.b == param1) {
+          this.b = param1.b;
         }
-        if (this.c != param1) {
-          if (param1.b == null) {
-            L1: {
-              if (param1.a != null) {
-                param1.a.b = param1.b;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if (param0 == 19176) {
-              return;
-            } else {
-              this.b = (jaclib.peer.PeerReference) null;
-              return;
-            }
-          } else {
-            L2: {
-              param1.b.a = param1.a;
-              if (param1.a != null) {
-                param1.a.b = param1.b;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (param0 == 19176) {
-              return;
-            } else {
-              this.b = (jaclib.peer.PeerReference) null;
-              return;
-            }
-          }
-        } else {
+        if (this.c == param1) {
           this.c = param1.a;
-          if (param1.b != null) {
-            L3: {
-              param1.b.a = param1.a;
-              if (param1.a != null) {
-                param1.a.b = param1.b;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            if (param0 == 19176) {
-              return;
-            } else {
-              this.b = (jaclib.peer.PeerReference) null;
-              return;
-            }
-          } else {
-            L4: {
-              if (param1.a != null) {
-                param1.a.b = param1.b;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            if (param0 == 19176) {
-              return;
-            } else {
-              this.b = (jaclib.peer.PeerReference) null;
-              return;
-            }
-          }
         }
+        if (param1.b != null) {
+          param1.b.a = param1.a;
+        }
+        if (param1.a != null) {
+          param1.a.b = param1.b;
+        }
+        if (param0 == 19176) {
+          return;
+        }
+        this.b = (jaclib.peer.PeerReference) null;
     }
 
     public final void a(int param0) {
-        jaclib.peer.PeerReference var3;
-        if (param0 == -25924) {
-          this.a(false);
-          L0: while (true) {
-            if (this.c == null) {
-              this.a(false);
-              return;
-            } else {
-              this.a(19176, this.c);
-              continue L0;
-            }
-          }
-        } else {
+        jaclib.peer.PeerReference var3 = null;
+        if (param0 != -25924) {
           var3 = (jaclib.peer.PeerReference) null;
           this.a((jaclib.peer.PeerReference) null, -79);
+        } else {
           this.a(false);
-          L1: while (true) {
-            if (this.c == null) {
-              this.a(false);
-              return;
-            } else {
-              this.a(19176, this.c);
-              continue L1;
-            }
+          while (this.c != null) {
+            this.a(19176, this.c);
           }
+          this.a(false);
+          return;
         }
+        this.a(false);
+        while (this.c != null) {
+          this.a(19176, this.c);
+        }
+        this.a(false);
     }
 
     final void a(jaclib.peer.PeerReference param0, int param1) {
-        if (param1 != -13587) {
-          return;
-        } else {
-          L0: {
-            param0.b = null;
-            param0.a = this.c;
-            if (null == this.b) {
-              this.b = param0;
-              break L0;
-            } else {
-              this.c.b = param0;
-              break L0;
-            }
+        if (param1 == -13587) {
+          param0.b = null;
+          param0.a = this.c;
+          if (null != this.b) {
+            this.c.b = param0;
+          } else {
+            this.b = param0;
           }
           this.c = param0;
           return;
@@ -148,19 +73,16 @@ public final class pf {
     private final void a(boolean param0) {
         java.lang.ref.Reference var2;
         jaclib.peer.PeerReference var3;
-        if (!param0) {
-          L0: while (true) {
-            var2 = this.a.poll();
-            if (var2 != null) {
-              var3 = (jaclib.peer.PeerReference) ((Object) var2);
-              this.a(19176, var3);
-              continue L0;
-            } else {
-              return;
-            }
-          }
-        } else {
+        if (param0) {
           return;
+        }
+        while (true) {
+          var2 = this.a.poll();
+          if (var2 == null) {
+            return;
+          }
+          var3 = (jaclib.peer.PeerReference) ((Object) var2);
+          this.a(19176, var3);
         }
     }
 

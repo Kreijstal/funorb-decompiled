@@ -26,7 +26,7 @@ final class mj {
         field_f = null;
         field_g = null;
         if (param0 < 5) {
-            mj.a(31);
+          mj.a(31);
         }
     }
 

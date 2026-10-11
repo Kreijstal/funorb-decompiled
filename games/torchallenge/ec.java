@@ -12,9 +12,9 @@ final class ec {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -1) {
-            ec.a(-66);
-            field_c = null;
-            return;
+          ec.a(-66);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

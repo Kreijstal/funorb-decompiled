@@ -226,42 +226,31 @@ public class OpenGL {
     public final native static void glVertexPointer(int param0, int param1, int param2, long param3);
 
     public final boolean a(String param0) {
-        String var2;
-        int var3;
-        int var4_int;
-        String var4;
-        String var5;
-        if (this.b == null) {
-          this.b = new Hashtable();
-          var2 = jaggl.OpenGL.glGetString(7939);
-          var3 = 0;
-          L0: while (true) {
-            var4_int = var2.indexOf(' ', var3);
-            if (var4_int == -1) {
-              var4 = var2.substring(var3).trim();
-              if (var4.length() == 0) {
-                return this.b.containsKey(param0);
-              } else {
-                this.b.put(var4, var4);
-                return this.b.containsKey(param0);
-              }
-            } else {
-              L1: {
-                var5 = var2.substring(var3, var4_int).trim();
-                if (var5.length() != 0) {
-                  this.b.put(var5, var5);
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var3 = var4_int + 1;
-              continue L0;
-            }
-          }
-        } else {
+        int var4_int = 0;
+        String var5 = null;
+        if (this.b != null) {
           return this.b.containsKey(param0);
         }
+        this.b = new Hashtable();
+        String var2 = jaggl.OpenGL.glGetString(7939);
+        int var3 = 0;
+        while (true) {
+          var4_int = var2.indexOf(' ', var3);
+          if (var4_int == -1) {
+            break;
+          }
+          var5 = var2.substring(var3, var4_int).trim();
+          if (var5.length() != 0) {
+            this.b.put(var5, var5);
+          }
+          var3 = var4_int + 1;
+        }
+        String var4 = var2.substring(var3).trim();
+        if (var4.length() != 0) {
+          this.b.put(var4, var4);
+          return this.b.containsKey(param0);
+        }
+        return this.b.containsKey(param0);
     }
 
     public final native static void glFinish();
@@ -333,8 +322,8 @@ public class OpenGL {
     public final native static void glScissor(int param0, int param1, int param2, int param3);
 
     public final synchronized boolean a() {
-        if (!(this.c == Thread.currentThread())) {
-            return false;
+        if (this.c != Thread.currentThread()) {
+          return false;
         }
         this.detachPeer();
         a.remove(this.c);
@@ -399,22 +388,18 @@ public class OpenGL {
     public final native static void glGetObjectParameterivARB(long param0, int param1, int[] param2, int param3);
 
     public final synchronized boolean b() {
-        Thread var1;
-        jaggl.OpenGL var2;
-        var1 = Thread.currentThread();
-        if (this.attachPeer()) {
-          var2 = (jaggl.OpenGL) (a.put(var1, this));
-          if (var2 != null) {
-            var2.c = null;
-            this.c = var1;
-            return true;
-          } else {
-            this.c = var1;
-            return true;
-          }
-        } else {
+        Thread var1 = Thread.currentThread();
+        if (!this.attachPeer()) {
           return false;
         }
+        jaggl.OpenGL var2 = (jaggl.OpenGL) (a.put(var1, this));
+        if (var2 == null) {
+          this.c = var1;
+          return true;
+        }
+        var2.c = null;
+        this.c = var1;
+        return true;
     }
 
     private final native boolean attachPeer();

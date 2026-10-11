@@ -10,7 +10,7 @@ final class gi extends za {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         return cu.field_r;
     }
@@ -22,7 +22,7 @@ final class gi extends za {
     final void d(int param0) {
         this.field_h.a();
         if (param0 <= 124) {
-            gi.a(-62);
+          gi.a(-62);
         }
     }
 
@@ -31,9 +31,9 @@ final class gi extends za {
         field_i = null;
         field_f = null;
         if (param0 != -12085) {
-            gi.a(false);
-            field_e = null;
-            return;
+          gi.a(false);
+          field_e = null;
+          return;
         }
         field_e = null;
     }

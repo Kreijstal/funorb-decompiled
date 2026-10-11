@@ -11,7 +11,7 @@ final class kg implements Iterator {
 
     public final void remove() {
         if (null == this.field_a) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_a.b(false);
         this.field_a = null;
@@ -20,10 +20,10 @@ final class kg implements Iterator {
     public final Object next() {
         Object var1 = this.field_d;
         if (var1 == this.field_b.field_b) {
-            this.field_d = null;
-            var1 = null;
+          this.field_d = null;
+          var1 = null;
         } else {
-            this.field_d = ((rk) (var1)).field_i;
+          this.field_d = ((rk) (var1)).field_i;
         }
         this.field_a = (rk) (var1);
         return var1;
@@ -36,11 +36,11 @@ final class kg implements Iterator {
     kg(de param0) {
         this.field_a = null;
         try {
-            this.field_b = param0;
-            this.field_d = this.field_b.field_b.field_i;
-            this.field_a = null;
+          this.field_b = param0;
+          this.field_d = this.field_b.field_b.field_i;
+          this.field_a = null;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

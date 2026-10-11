@@ -6,60 +6,31 @@ final class bb {
     static h field_a;
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 > -44) {
-          L0: {
-            field_b = -103L;
-            if (field_a.a(0)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (field_a.a(0)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 <= -44) {
+          return !field_a.a(0) ? true : false;
         }
+        field_b = -103L;
+        return !field_a.a(0) ? true : false;
     }
 
     final static void a(int param0) {
+        int var3 = 0;
         int var1_int = 0;
         int var2 = 0;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            var1_int = hb.field_l[0];
-            var2 = 32 % ((param0 - -17) / 41);
-            var3 = 1;
-            L1: while (true) {
-              if (hb.field_l.length <= var3) {
-                break L0;
-              } else {
-                var4 = hb.field_l[var3];
-                gl.a(dj.field_c, var3 << 1651852708, dj.field_c, var1_int, var4);
-                var1_int = var1_int + var4;
-                var3++;
-                continue L1;
-              }
-            }
+          var1_int = hb.field_l[0];
+          var2 = 32 % ((param0 + 17) / 41);
+          for (var3 = 1; hb.field_l.length > var3; var3++) {
+            var4 = hb.field_l[var3];
+            gl.a(dj.field_c, var3 << 4, dj.field_c, var1_int, var4);
+            var1_int = var1_int + var4;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -70,7 +41,7 @@ final class bb {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            field_a = (h) null;
+          field_a = (h) null;
         }
     }
 

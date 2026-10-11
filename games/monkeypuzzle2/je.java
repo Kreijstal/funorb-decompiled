@@ -17,21 +17,21 @@ final class je {
         la var6_ref = null;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-            if (!(param1 <= this.field_d)) {
-                throw new IllegalStateException();
-            }
-            this.a(0, param3);
-            this.field_e = this.field_e - param1;
-            while (this.field_e < 0) {
-                var6 = (b) ((Object) this.field_g.b((byte) -86));
-                this.a(var6, 4821);
-            }
-            var6_ref = new la(param0, param1);
-            this.field_b.a(param3, true, var6_ref);
-            this.field_g.a(12, var6_ref);
-            ((b) ((Object) var6_ref)).field_f = (long)param2;
+          if (param1 > this.field_d) {
+            throw new IllegalStateException();
+          }
+          this.a(0, param3);
+          this.field_e = this.field_e - param1;
+          while (this.field_e < 0) {
+            var6 = (b) (this.field_g.b((byte) -86));
+            this.a(var6, 4821);
+          }
+          var6_ref = new la(param0, param1);
+          this.field_b.a(param3, true, var6_ref);
+          this.field_g.a(12, var6_ref);
+          ((b) ((Object) var6_ref)).field_f = (long)param2;
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "je.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "je.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -46,108 +46,78 @@ final class je {
         Object var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 4821) {
-                break L1;
-              } else {
-                var4 = (Object) null;
-                this.a(72L, (Object) null, 37);
-                break L1;
-              }
-            }
-            if (param0 == null) {
-              break L0;
-            } else {
-              param0.c(param1 + -24643);
-              param0.a(7847);
-              this.field_e = this.field_e + param0.field_n;
-              return;
-            }
+          if (param1 != 4821) {
+            var4 = (Object) null;
+            this.a(72L, (Object) null, 37);
           }
+          if (param0 == null) {
+            return;
+          }
+          param0.c(param1 - 24643);
+          param0.a(7847);
+          this.field_e = this.field_e + param0.field_n;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("je.C(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("je.C(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
+          throw la.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final void a(long param0, Object param1, int param2) {
         try {
-            int var5_int = -91 / ((-39 - param2) / 45);
-            this.a(param1, 1, 0, param0);
+          int var5_int = -91 / ((-39 - param2) / 45);
+          this.a(param1, 1, 0, param0);
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "je.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "je.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final Object a(long param0, byte param1) {
-        int var5;
-        Object var6;
-        la var7;
-        b var8;
-        var8 = (b) ((Object) this.field_b.a((byte) -83, param0));
-        var5 = -6 / ((param1 - -61) / 51);
-        if (var8 != null) {
-          var6 = var8.a((byte) -78);
-          if (var6 != null) {
-            if (var8.b((byte) 63)) {
-              var7 = new la(var6, var8.field_n);
-              this.field_b.a(var8.field_a, true, var7);
-              this.field_g.a(12, var7);
-              ((b) ((Object) var7)).field_f = 0L;
-              var8.c(-19822);
-              var8.a(7847);
-              return var6;
-            } else {
-              this.field_g.a(12, var8);
-              var8.field_f = 0L;
-              return var6;
-            }
-          } else {
-            var8.c(-19822);
-            var8.a(7847);
-            this.field_e = this.field_e + var8.field_n;
-            return null;
-          }
-        } else {
+        b var8 = (b) (this.field_b.a((byte) -83, param0));
+        int var5 = -6 / ((param1 + 61) / 51);
+        if (var8 == null) {
           return null;
         }
+        Object var6 = var8.a((byte) -78);
+        if (var6 == null) {
+          var8.c(-19822);
+          var8.a(7847);
+          this.field_e = this.field_e + var8.field_n;
+          return null;
+        }
+        if (!var8.b((byte) 63)) {
+          this.field_g.a(12, var8);
+          var8.field_f = 0L;
+          return var6;
+        }
+        la var7 = new la(var6, var8.field_n);
+        this.field_b.a(var8.field_a, true, var7);
+        this.field_g.a(12, var7);
+        ((b) ((Object) var7)).field_f = 0L;
+        var8.c(-19822);
+        var8.a(7847);
+        return var6;
     }
 
     private final void a(int param0, long param1) {
-        b var4;
-        var4 = (b) ((Object) this.field_b.a((byte) -85, param1));
-        if (param0 != 0) {
-          this.field_d = 94;
-          this.a(var4, 4821);
-          return;
-        } else {
+        b var4 = (b) (this.field_b.a((byte) -85, param1));
+        if (param0 == 0) {
           this.a(var4, 4821);
           return;
         }
+        this.field_d = 94;
+        this.a(var4, 4821);
     }
 
     final static k a(int param0, int param1) {
@@ -159,18 +129,16 @@ final class je {
     }
 
     public static void a(byte param0) {
-        if (param0 != 12) {
-          je.a((byte) -81);
-          field_a = null;
-          field_f = null;
-          field_i = null;
-          return;
-        } else {
+        if (param0 == 12) {
           field_a = null;
           field_f = null;
           field_i = null;
           return;
         }
+        je.a((byte) -81);
+        field_a = null;
+        field_f = null;
+        field_i = null;
     }
 
     private je() throws Throwable {

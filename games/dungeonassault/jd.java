@@ -11,31 +11,20 @@ final class jd extends ne {
     static String field_i;
 
     final static void b(boolean param0) {
-        int var1;
-        L0: {
-          if (ql.field_d > 32) {
-            L1: {
-              var1 = ql.field_d % 32;
-              if (0 != var1) {
-                break L1;
-              } else {
-                var1 = 32;
-                break L1;
-              }
-            }
-            um.a(-var1 + ql.field_d, false);
-            break L0;
-          } else {
-            um.a(0, false);
-            break L0;
-          }
-        }
-        if (!param0) {
-          field_i = (String) null;
-          return;
+        int var1 = 0;
+        if (ql.field_d <= 32) {
+          um.a(0, false);
         } else {
+          var1 = ql.field_d % 32;
+          if (0 == var1) {
+            var1 = 32;
+          }
+          um.a(-var1 + ql.field_d, false);
+        }
+        if (param0) {
           return;
         }
+        field_i = (String) null;
     }
 
     private jd() throws Throwable {
@@ -47,7 +36,7 @@ final class jd extends ne {
         field_i = null;
         field_n = null;
         if (param0 != 1) {
-            jd.a(-38);
+          jd.a(-38);
         }
     }
 

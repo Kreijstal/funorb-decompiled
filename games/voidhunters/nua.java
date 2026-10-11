@@ -14,47 +14,27 @@ final class nua extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_o = 76;
-                break L1;
-              }
-            }
-            si.a(25, 62, param0[0].a(44));
-            stackIn_3_0 = new nc("void");
-            break L0;
+          if (param1 > -119) {
+            field_o = 76;
           }
+          si.a(25, 62, param0[0].a(44));
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("nua.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("nua.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static int a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -64,57 +44,34 @@ final class nua extends rqa {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var12_int = -16 / ((param8 - 32) / 48);
-            if (!li.field_i) {
-              stackIn_4_0 = ita.a(param11, 7988).a(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = nma.field_b[param11].a(param1, param3, param4, 0, param9, param2, (int[]) null, false, 0, param7, param5, param10, param0, (aja[]) null, -16777216 | param6, (aa) null);
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var12_int = -16 / ((param8 - 32) / 48);
+          if (!li.field_i) {
+            stackIn_4_0 = ita.a(param11, 7988).a(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = nma.field_b[param11].a(param1, param3, param4, 0, param9, param2, (int[]) null, false, 0, param7, param5, param10, param0, (aja[]) null, -16777216 | param6, (aa) null);
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var12 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var12);
-
-            stackIn_7_1 = new StringBuilder().append("nua.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var12 = decompiledCaughtException;
+          stackIn_7_0 = var12;
+          stackIn_7_1 = new StringBuilder().append("nua.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(')').toString());
         }
     }
 
     final static boolean b(boolean param0) {
         if (!param0) {
-            field_o = -106;
-            return true;
+          field_o = -106;
+          return true;
         }
         return true;
     }

@@ -12,26 +12,16 @@ final class jdb implements dja {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            ds var2 = (ds) null;
-            jdb.a(-105, (byte) 0, 18, (ds) null, 3);
+          ds var2 = (ds) null;
+          jdb.a(-105, (byte) 0, 18, (ds) null, 3);
         }
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int var26 = 0;
+        int var27 = 0;
+        int incrementValue$9 = 0;
         int var8_int = 0;
-        RuntimeException var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -49,175 +39,117 @@ final class jdb implements dja {
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
         int var28 = 0;
         ds var29 = null;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var8 = null;
         var28 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (-1 <= (param7 ^ -1)) {
-                break L1;
-              } else {
-                if (bd.a(param7, (byte) -95)) {
-                  break L1;
-                } else {
-                  throw new IllegalArgumentException("");
-                }
-              }
+          if (param7 > 0 &&
+            !bd.a(param7, (byte) -95)) {
+            throw new IllegalArgumentException("");
+          }
+          if (param6 > 0 &&
+            !bd.a(param6, (byte) -95)) {
+            throw new IllegalArgumentException("");
+          }
+          if (param5 != 32993) {
+            throw new IllegalArgumentException("");
+          }
+          if (param2 != 29175) {
+            var29 = (ds) null;
+            jdb.a(-98, (byte) 61, -25, (ds) null, -48);
+          }
+          var8_int = 0;
+          stackIn_14_0 = (param7 >= param6) ? param6 : param7;
+          var9 = stackIn_14_0;
+          var10 = param7 >> 1;
+          var11 = param6 >> 1;
+          var12 = param0;
+          var13 = new int[var10 * var11];
+          while (true) {
+            jaggl.OpenGL.glTexImage2Di(param4, var8_int, param3, param7, param6, 0, param5, param1, var12, 0);
+            if (var9 <= 1) {
+              return;
             }
-            L2: {
-              if (-1 <= (param6 ^ -1)) {
-                break L2;
-              } else {
-                if (bd.a(param6, (byte) -95)) {
-                  break L2;
-                } else {
-                  throw new IllegalArgumentException("");
-                }
+            var15 = 0;
+            var24 = 0;
+            var25 = var24 + param7;
+            var14 = var13;
+            for (var26 = 0; var26 < var11; var26++) {
+              for (var27 = 0; var10 > var27; var27++) {
+                var16 = var12[var24++];
+                var17 = var12[var24++];
+                var18 = var12[var25++];
+                var22 = var16 & 255;
+                var21 = (65332 & var16) >> 8;
+                var20 = var16 >> 16 & 255;
+                var23 = 255 & var16 >> 24;
+                var19 = var12[var25++];
+                var21 = var21 + ((var17 & 65394) >> 8);
+                var23 = var23 + (255 & var17 >> 24);
+                var22 = var22 + (255 & var17);
+                var20 = var20 + ((var17 & 16763127) >> 16);
+                var20 = var20 + (255 & var18 >> 16);
+                var23 = var23 + (255 & var18 >> 24);
+                var22 = var22 + (255 & var18);
+                var21 = var21 + (var18 >> 8 & 255);
+                var20 = var20 + ((var19 & 16752225) >> 16);
+                var23 = var23 + (var19 >> 24 & 255);
+                var21 = var21 + (255 & var19 >> 8);
+                var22 = var22 + (var19 & 255);
+                incrementValue$9 = var15;
+                var15++;
+                var13[incrementValue$9] = knb.a(dla.a(var22 >> 2, 255), knb.a(dla.a(var21, 1020) << 6, knb.a(dla.a(16711680, var20 << 14), dla.a(-16777216, var23 << 22))));
               }
+              var24 = var24 + param7;
+              var25 = var25 + param7;
             }
-            if ((param5 ^ -1) == -32994) {
-              L3: {
-                if (param2 == 29175) {
-                  break L3;
-                } else {
-                  var29 = (ds) null;
-                  jdb.a(-98, (byte) 61, -25, (ds) null, -48);
-                  break L3;
-                }
-              }
-              L4: {
-                var8_int = 0;
-                if (param7 >= param6) {
-                  stackIn_14_0 = param6;
-                  break L4;
-                } else {
-                  stackIn_14_0 = param7;
-                  break L4;
-                }
-              }
-              var9 = stackIn_14_0;
-              var10 = param7 >> -66846175;
-              var11 = param6 >> -273607167;
-              var12 = param0;
-              var13 = new int[var10 * var11];
-              L5: while (true) {
-                jaggl.OpenGL.glTexImage2Di(param4, var8_int, param3, param7, param6, 0, param5, param1, var12, 0);
-                if (-2 > (var9 ^ -1)) {
-                  var15 = 0;
-                  var24 = 0;
-                  var25 = var24 - -param7;
-                  var14 = var13;
-                  var26 = 0;
-                  L6: while (true) {
-                    if (var26 >= var11) {
-                      var13 = var12;
-                      param6 = var11;
-                      param7 = var10;
-                      var12 = var14;
-                      var11 = var11 >> 1;
-                      var10 = var10 >> 1;
-                      var8_int++;
-                      var9 = var9 >> 1;
-                      continue L5;
-                    } else {
-                      var27 = 0;
-                      L7: while (true) {
-                        if (var10 <= var27) {
-                          var24 = var24 + param7;
-                          var25 = var25 + param7;
-                          var26++;
-                          continue L6;
-                        } else {
-                          incrementValue$0 = var24;
-                          var24++;
-                          var16 = var12[incrementValue$0];
-                          incrementValue$1 = var24;
-                          var24++;
-                          var17 = var12[incrementValue$1];
-                          incrementValue$2 = var25;
-                          var25++;
-                          var18 = var12[incrementValue$2];
-                          var22 = var16 & 255;
-                          var21 = (65332 & var16) >> 22046440;
-                          var20 = var16 >> -982856080 & 255;
-                          var23 = 255 & var16 >> 586259768;
-                          incrementValue$3 = var25;
-                          var25++;
-                          var19 = var12[incrementValue$3];
-                          var21 = var21 + ((var17 & 65394) >> -956582744);
-                          var23 = var23 + (255 & var17 >> -1462772520);
-                          var22 = var22 + (255 & var17);
-                          var20 = var20 + ((var17 & 16763127) >> 792757296);
-                          var20 = var20 + (255 & var18 >> -775701552);
-                          var23 = var23 + (255 & var18 >> 1003568984);
-                          var22 = var22 + (255 & var18);
-                          var21 = var21 + (var18 >> 1110595624 & 255);
-                          var20 = var20 + ((var19 & 16752225) >> -1214169072);
-                          var23 = var23 + (var19 >> -1088638600 & 255);
-                          var21 = var21 + (255 & var19 >> 1979607016);
-                          var22 = var22 + (var19 & 255);
-                          incrementValue$4 = var15;
-                          var15++;
-                          var13[incrementValue$4] = knb.a(dla.a(var22 >> 1711715138, 255), knb.a(dla.a(var21, 1020) << 1460677958, knb.a(dla.a(16711680, var20 << 1474318), dla.a(-16777216, var23 << 905053302))));
-                          var27++;
-                          continue L7;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  break L0;
-                }
-              }
-            } else {
-              throw new IllegalArgumentException("");
-            }
+            var13 = var12;
+            param6 = var11;
+            param7 = var10;
+            var12 = var14;
+            var11 = var11 >> 1;
+            var10 = var10 >> 1;
+            var8_int++;
+            var9 = var9 >> 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var8 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var8);
-
-            stackIn_27_1 = new StringBuilder().append("jdb.C(");
-
-            if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L8;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L8;
-            }
+          var8 = decompiledCaughtException;
+          stackIn_27_0 = var8;
+          stackIn_27_1 = new StringBuilder().append("jdb.C(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
     final static void a(int param0, byte param1, int param2, ds param3, int param4) {
         try {
-            if (param1 != -48) {
-                field_a = (String) null;
-            }
-            param3.c(param1 ^ -48, 12);
-            param3.a(17, true);
-            param3.a(param2, true);
-            param3.a(param4, true);
-            param3.c(0, param0);
+          if (param1 != -48) {
+            field_a = (String) null;
+          }
+          param3.c(param1 ^ -48, 12);
+          param3.a(17, true);
+          param3.a(param2, true);
+          param3.a(param4, true);
+          param3.c(0, param0);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            return (tv[]) null;
+          return (tv[]) null;
         }
         return (tv[]) ((Object) new cf[param1]);
     }

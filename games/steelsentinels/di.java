@@ -14,7 +14,7 @@ final class di {
     final static void a(byte param0) {
         ln.field_a = 0;
         if (param0 != -128) {
-            di.a(112);
+          di.a(112);
         }
     }
 
@@ -23,7 +23,7 @@ final class di {
         field_f = null;
         field_e = null;
         if (param0 != -1) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 

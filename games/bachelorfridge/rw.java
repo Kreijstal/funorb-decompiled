@@ -10,7 +10,7 @@ final class rw {
         field_b = null;
         field_a = null;
         if (param0 >= -48) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

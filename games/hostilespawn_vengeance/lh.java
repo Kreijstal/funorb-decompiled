@@ -10,20 +10,18 @@ final class lh {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 >= -15) {
-          field_c = (String) null;
-          field_e = null;
-          field_d = null;
-          field_c = null;
-          field_b = (int[][]) null;
-          return;
-        } else {
+        if (param0 < -15) {
           field_e = null;
           field_d = null;
           field_c = null;
           field_b = (int[][]) null;
           return;
         }
+        field_c = (String) null;
+        field_e = null;
+        field_d = null;
+        field_c = null;
+        field_b = (int[][]) null;
     }
 
     static {

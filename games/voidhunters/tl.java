@@ -12,10 +12,10 @@ final class tl extends rqa {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 != -22699) {
-            tl.e((byte) -97);
-            alb.field_b = param2;
-            pba.field_r = param0;
-            return;
+          tl.e((byte) -97);
+          alb.field_b = param2;
+          pba.field_r = param0;
+          return;
         }
         alb.field_b = param2;
         pba.field_r = param0;
@@ -26,55 +26,35 @@ final class tl extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                tl.b(125, -116, 41);
-                break L1;
-              }
-            }
-            si.a(231, 62, param0[0].a(21));
-            stackIn_3_0 = new nc("void");
-            break L0;
+          if (param1 >= -119) {
+            tl.b(125, -116, 41);
           }
+          si.a(231, 62, param0[0].a(21));
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("tl.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("tl.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void e(byte param0) {
         field_o = null;
         if (param0 != -15) {
-            tl.b(-46, 57, -52);
-            field_q = null;
-            return;
+          tl.b(-46, 57, -52);
+          field_q = null;
+          return;
         }
         field_q = null;
     }
@@ -111,261 +91,164 @@ final class tl extends rqa {
         String var45;
         Object var46;
         CharSequence var47;
-        L0: {
-          var46 = null;
-          var11 = VoidHunters.field_G;
-          var3 = 1;
-          if (lf.field_o) {
-            break L0;
-          } else {
-            if (qw.field_l == null) {
-              var3 = 0;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
+        int var5Lifetime1;
+        var46 = null;
+        var11 = VoidHunters.field_G;
+        var3 = 1;
+        if (!lf.field_o &&
+          qw.field_l == null) {
+          var3 = 0;
         }
-        L1: {
-          if (0 != ow.field_b) {
-            break L1;
-          } else {
-            if (ohb.field_o == null) {
-              break L1;
-            } else {
-              var3 = 0;
-              break L1;
-            }
-          }
+        if (0 == ow.field_b &&
+          ohb.field_o != null) {
+          var3 = 0;
         }
-        L2: {
-          if (2 != ow.field_b) {
-            break L2;
-          } else {
-            if (ws.a(param2 + 85)) {
-              break L2;
-            } else {
-              var3 = 0;
-              break L2;
-            }
-          }
+        if (2 == ow.field_b &&
+          !ws.a(param2 + 85)) {
+          var3 = 0;
         }
-        if (param2 == (pma.field_o ^ -1)) {
-          if (var3 != 0) {
-            if ((awa.field_p.length() ^ -1) >= -1) {
-              dr.a(26718);
-              return true;
-            } else {
-              L3: {
-                var4_ref_String = awa.field_p.toString();
-                if (!hnb.a((byte) -92, var4_ref_String)) {
-                  L4: {
-                    var5 = ow.field_b;
-                    if (-1 != (var5 ^ -1)) {
-                      break L4;
-                    } else {
-                      if (lqa.field_o != null) {
-                        var5 = 1;
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  L5: {
-                    if (2 == jia.a(var5, (byte) 19)) {
-                      mea.a(1, (byte) -76, param1, var5);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
-                  }
-                  va.a(var4_ref_String, param2 + -25634, -1, param0, ow.field_b, waa.field_x);
-                  break L3;
-                } else {
-                  var13 = (String) null;
-                  var12 = (String) null;
-                  lh.a((byte) -70, 0, (String) null, (String) null, wl.field_p, 2);
-                  var15 = (String) null;
-                  var14 = (String) null;
-                  lh.a((byte) -62, 0, (String) null, (String) null, lv.field_o, 2);
-                  break L3;
-                }
-              }
-              dr.a(26718);
+        if (param2 == ~pma.field_o) {
+          if (var3 == 0) {
+            if (ow.field_b == 0) {
               return true;
             }
-          } else {
-            if (ow.field_b != 0) {
-              dr.a(26718);
-              return true;
-            } else {
-              return true;
-            }
-          }
-        } else {
-          if (pma.field_o != 85) {
-            var4 = jl.field_r;
-            if (oga.a((char) var4, (byte) 32)) {
-              if (var3 != 0) {
-                if (awa.field_p.length() < 80) {
-                  L6: {
-                    discarded$0 = awa.field_p.append((char) var4);
-                    var5 = 485;
-                    var17 = kca.field_a;
-                    var16 = gfb.a(1, var17);
-                    var19 = var16;
-                    if ((ow.field_b ^ -1) != -3) {
-                      var7 = "";
-                      if (0 == ow.field_b) {
-                        L7: {
-                          if (lqa.field_o != null) {
-                            break L7;
-                          } else {
-                            if (cqb.field_e) {
-                              var7 = "[" + bib.field_e + "] ";
-                              break L7;
-                            } else {
-                              L8: {
-                                if (lqa.field_o == null) {
-                                  break L8;
-                                } else {
-                                  if (nv.field_n) {
-                                    if (null != vla.field_E) {
-                                      var7 = "[" + vla.field_E + "] ";
-                                      break L8;
-                                    } else {
-                                      L9: {
-                                        var36 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
-                                        var37 = var36 + var19 + ": ";
-                                        var5 = var5 - ej.field_c.b(var37);
-                                        if (var5 >= ej.field_c.b(awa.field_p.toString())) {
-                                          break L9;
-                                        } else {
-                                          npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                                          break L9;
-                                        }
-                                      }
-                                      return true;
-                                    }
-                                  } else {
-                                    L10: {
-                                      var38 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
-                                      var39 = var38 + var19 + ": ";
-                                      var5 = var5 - ej.field_c.b(var39);
-                                      if (var5 >= ej.field_c.b(awa.field_p.toString())) {
-                                        break L10;
-                                      } else {
-                                        npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                                        break L10;
-                                      }
-                                    }
-                                    return true;
-                                  }
-                                }
-                              }
-                              var40 = var7 + var19 + ": ";
-                              var5 = var5 - ej.field_c.b(var40);
-                              if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                                return true;
-                              } else {
-                                return true;
-                              }
-                            }
-                          }
-                        }
-                        L11: {
-                          if (lqa.field_o == null) {
-                            break L11;
-                          } else {
-                            if (!nv.field_n) {
-                              var43 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
-                              var44 = var43 + var19 + ": ";
-                              var5 = var5 - ej.field_c.b(var44);
-                              if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                                return true;
-                              } else {
-                                return true;
-                              }
-                            } else {
-                              if (null != vla.field_E) {
-                                var7 = "[" + vla.field_E + "] ";
-                                break L11;
-                              } else {
-                                var41 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
-                                var42 = var41 + var19 + ": ";
-                                var5 = var5 - ej.field_c.b(var42);
-                                if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                                  npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                                  return true;
-                                } else {
-                                  return true;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        var45 = var7 + var19 + ": ";
-                        var5 = var5 - ej.field_c.b(var45);
-                        break L6;
-                      } else {
-                        var35 = var7 + var19 + ": ";
-                        var5 = var5 - ej.field_c.b(var35);
-                        if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                          npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                          return true;
-                        } else {
-                          return true;
-                        }
-                      }
-                    } else {
-                      var47 = (CharSequence) ((Object) waa.field_x);
-                      var18 = isa.a(tia.field_G, new String[]{joa.a(var47, false)}, 108);
-                      var8 = isa.a(ejb.field_o, new String[]{var16}, param2 ^ -30);
-                      var9 = ej.field_c.b(var18);
-                      var10 = ej.field_c.b(var8);
-                      if (var10 >= var9) {
-                        var5 = var5 - var10;
-                        break L6;
-                      } else {
-                        var5 = var5 - var9;
-                        break L6;
-                      }
-                    }
-                  }
-                  if (var5 < ej.field_c.b(awa.field_p.toString())) {
-                    npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
-                    return true;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            L12: {
-              if (var3 == 0) {
-                break L12;
-              } else {
-                if (awa.field_p.length() <= 0) {
-                  break L12;
-                } else {
-                  npa.a(-1 + awa.field_p.length(), false, awa.field_p, ' ');
-                  break L12;
-                }
-              }
-            }
+            dr.a(26718);
             return true;
           }
+          if (awa.field_p.length() <= 0) {
+            dr.a(26718);
+            return true;
+          }
+          var4_ref_String = awa.field_p.toString();
+          if (!hnb.a((byte) -92, var4_ref_String)) {
+            var5 = ow.field_b;
+            if (var5 == 0 &&
+              lqa.field_o != null) {
+              var5 = 1;
+            }
+            if (2 == jia.a(var5, (byte) 19)) {
+              mea.a(1, (byte) -76, param1, var5);
+            }
+            va.a(var4_ref_String, param2 - 25634, -1, param0, ow.field_b, waa.field_x);
+          } else {
+            var13 = (String) null;
+            var12 = (String) null;
+            lh.a((byte) -70, 0, (String) null, (String) null, wl.field_p, 2);
+            var15 = (String) null;
+            var14 = (String) null;
+            lh.a((byte) -62, 0, (String) null, (String) null, lv.field_o, 2);
+          }
+          dr.a(26718);
+          return true;
         }
+        if (pma.field_o == 85) {
+          if (var3 != 0 &&
+            awa.field_p.length() > 0) {
+            npa.a(-1 + awa.field_p.length(), false, awa.field_p, ' ');
+          }
+          return true;
+        }
+        var4 = jl.field_r;
+        if (!oga.a((char) var4, (byte) 32)) {
+          return false;
+        }
+        if (var3 == 0) {
+          return true;
+        }
+        if (awa.field_p.length() >= 80) {
+          return true;
+        }
+        discarded$0 = awa.field_p.append((char) var4);
+        var5Lifetime1 = 485;
+        var17 = kca.field_a;
+        var16 = gfb.a(1, var17);
+        var19 = var16;
+        if (ow.field_b != 2) {
+          var7 = "";
+          if (0 != ow.field_b) {
+            var35 = var7 + var19 + ": ";
+            var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var35);
+            if (var5Lifetime1 >= ej.field_c.b(awa.field_p.toString())) {
+              return true;
+            }
+            npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+            return true;
+          }
+          if (lqa.field_o == null) {
+            if (!cqb.field_e) {
+              if (lqa.field_o != null) {
+                if (!nv.field_n) {
+                  var38 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
+                  var39 = var38 + var19 + ": ";
+                  var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var39);
+                  if (var5Lifetime1 < ej.field_c.b(awa.field_p.toString())) {
+                    npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                  }
+                  return true;
+                }
+                if (null == vla.field_E) {
+                  var36 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
+                  var37 = var36 + var19 + ": ";
+                  var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var37);
+                  if (var5Lifetime1 < ej.field_c.b(awa.field_p.toString())) {
+                    npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+                  }
+                  return true;
+                }
+                var7 = "[" + vla.field_E + "] ";
+              }
+              var40 = var7 + var19 + ": ";
+              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var40);
+              if (var5Lifetime1 >= ej.field_c.b(awa.field_p.toString())) {
+                return true;
+              }
+              npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+              return true;
+            }
+            var7 = "[" + bib.field_e + "] ";
+          }
+          if (lqa.field_o != null) {
+            if (!nv.field_n) {
+              var43 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
+              var44 = var43 + var19 + ": ";
+              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var44);
+              if (var5Lifetime1 >= ej.field_c.b(awa.field_p.toString())) {
+                return true;
+              }
+              npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+              return true;
+            }
+            if (null == vla.field_E) {
+              var41 = "[" + isa.a(wt.field_b, new String[]{lqa.field_o.field_Vb}, 80) + "] ";
+              var42 = var41 + var19 + ": ";
+              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var42);
+              if (var5Lifetime1 >= ej.field_c.b(awa.field_p.toString())) {
+                return true;
+              }
+              npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+              return true;
+            }
+            var7 = "[" + vla.field_E + "] ";
+          }
+          var45 = var7 + var19 + ": ";
+          var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var45);
+        } else {
+          var47 = (CharSequence) ((Object) waa.field_x);
+          var18 = isa.a(tia.field_G, new String[]{joa.a(var47, false)}, 108);
+          var8 = isa.a(ejb.field_o, new String[]{var16}, param2 ^ -30);
+          var9 = ej.field_c.b(var18);
+          var10 = ej.field_c.b(var8);
+          if (var10 >= var9) {
+            var5Lifetime1 = var5Lifetime1 - var10;
+          } else {
+            var5Lifetime1 = var5Lifetime1 - var9;
+          }
+        }
+        if (var5Lifetime1 >= ej.field_c.b(awa.field_p.toString())) {
+          return true;
+        }
+        npa.a(awa.field_p.length() - 1, false, awa.field_p, ' ');
+        return true;
     }
 
     static {

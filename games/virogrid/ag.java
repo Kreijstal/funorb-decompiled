@@ -15,63 +15,48 @@ final class ag extends java.awt.Canvas {
     static km field_d;
 
     final static boolean c(int param0) {
-        int stackIn_10_0 = 0;
-        int stackIn_20_0 = 0;
+        boolean stackIn_10_0 = false;
+        boolean stackIn_20_0 = false;
         if (param0 <= -95) {
-          if (md.field_e == null) {
-            if (!md.a(false)) {
-              L0: {
-                if (null != km.field_yb) {
-                  stackIn_20_0 = 1;
-                  break L0;
-                } else {
-                  if (!af.a(false)) {
-                    stackIn_20_0 = 0;
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return stackIn_20_0 != 0;
-            } else {
-              return true;
-            }
-          } else {
+          if (md.field_e != null) {
             return true;
           }
-        } else {
-          ag.b(55);
-          if (md.field_e == null) {
-            if (!md.a(false)) {
-              L1: {
-                if (null != km.field_yb) {
-                  stackIn_10_0 = 1;
-                  break L1;
-                } else {
-                  if (!af.a(false)) {
-                    stackIn_10_0 = 0;
-                    break L1;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return stackIn_10_0 != 0;
-            } else {
-              return true;
-            }
-          } else {
+          if (md.a(false)) {
             return true;
           }
+          if (null != km.field_yb) {
+            stackIn_20_0 = true;
+          } else {
+            if (af.a(false)) {
+              return true;
+            }
+            stackIn_20_0 = false;
+          }
+          return stackIn_20_0;
         }
+        ag.b(55);
+        if (md.field_e != null) {
+          return true;
+        }
+        if (md.a(false)) {
+          return true;
+        }
+        if (null != km.field_yb) {
+          stackIn_10_0 = true;
+        } else {
+          if (af.a(false)) {
+            return true;
+          }
+          stackIn_10_0 = false;
+        }
+        return stackIn_10_0;
     }
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_k.update(param0);
+          this.field_k.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ag.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ag.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,42 +67,26 @@ final class ag extends java.awt.Canvas {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = Virogrid.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              fk.a();
-              dm.field_x = new int[260];
-              if (param0 == 255) {
-                break L1;
-              } else {
-                ag.a(false);
-                break L1;
-              }
-            }
-            gb.field_N = 11;
-            var1_int = 0;
-            L2: while (true) {
-              if (256 <= var1_int) {
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= dm.field_x.length) {
-                    break L0;
-                  } else {
-                    dm.field_x[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                dm.field_x[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
-                var1_int++;
-                continue L2;
-              }
-            }
+          fk.a();
+          dm.field_x = new int[260];
+          if (param0 != 255) {
+            ag.a(false);
           }
+          gb.field_N = 11;
+          for (var1_int = 0; 256 > var1_int; var1_int++) {
+            var2 = 15.0;
+            dm.field_x[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < dm.field_x.length) {
+            dm.field_x[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -132,7 +101,7 @@ final class ag extends java.awt.Canvas {
         field_a = null;
         field_f = null;
         if (param0 != 25) {
-            return;
+          return;
         }
         field_g = null;
         field_b = null;
@@ -141,25 +110,25 @@ final class ag extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_k.paint(param0);
+          this.field_k.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ag.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ag.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(boolean param0) {
         if (!param0) {
-            ag.b(39);
-            return nf.field_d;
+          ag.b(39);
+          return nf.field_d;
         }
         return nf.field_d;
     }
 
     ag(java.awt.Component param0) {
         try {
-            this.field_k = param0;
+          this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "ag.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

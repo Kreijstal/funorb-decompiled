@@ -389,12 +389,11 @@ class dm extends wh {
                   var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
                   if (var38 == 0) {
                     var34++;
-                    var37++;
-                    continue;
+                  } else {
+                    incrementValue$8 = var34;
+                    var34++;
+                    vb.field_c[incrementValue$8] = var38;
                   }
-                  incrementValue$8 = var34;
-                  var34++;
-                  vb.field_c[incrementValue$8] = var38;
                   var37++;
                 }
               }
@@ -914,37 +913,26 @@ class dm extends wh {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var11 = 0;
+        int var12 = 0;
         int incrementValue$12 = 0;
         int var10;
-        int var11;
-        int var12;
         int var13;
         var10 = 256 - param9;
-        var11 = -param6;
-        while (true) {
-          if (var11 >= 0) {
-            return;
-          }
-          var12 = -param5;
-          while (true) {
-            if (var12 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var11++;
-              break;
-            }
+        for (var11 = -param6; var11 < 0; var11++) {
+          for (var12 = -param5; var12 < 0; var12++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
-              var12++;
-              continue;
+            } else {
+              var13 = param0[param4];
+              incrementValue$12 = param4;
+              param4++;
+              param0[incrementValue$12] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
             }
-            var13 = param0[param4];
-            incrementValue$12 = param4;
-            param4++;
-            param0[incrementValue$12] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
-            var12++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -1147,45 +1135,33 @@ class dm extends wh {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var10 = 0;
+        int var11 = 0;
         int incrementValue$5 = 0;
-        int var10;
-        int var11;
         int var12;
         int var13;
         int var14;
-        var10 = -param7;
-        while (true) {
-          if (var10 >= 0) {
-            return;
-          }
-          var11 = -param6;
-          while (true) {
-            if (var11 >= 0) {
-              param5 = param5 + param8;
-              param4 = param4 + param9;
-              var10++;
-              break;
-            }
+        for (var10 = -param7; var10 < 0; var10++) {
+          for (var11 = -param6; var11 < 0; var11++) {
             param3 = param2[param4++];
-            if (param3 == 0) {
+            if (param3 != 0) {
+              param0 = param1[param5];
+              if (param0 != 0) {
+                var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
+                var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
+                var14 = (param3 & 255) * (param0 & 255) >>> 8;
+                incrementValue$5 = param5;
+                param5++;
+                param1[incrementValue$5] = (var12 << 16) + (var13 << 8) + var14;
+              } else {
+                param5++;
+              }
+            } else {
               param5++;
-              var11++;
-              continue;
             }
-            param0 = param1[param5];
-            if (param0 == 0) {
-              param5++;
-              var11++;
-              continue;
-            }
-            var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
-            var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
-            var14 = (param3 & 255) * (param0 & 255) >>> 8;
-            incrementValue$5 = param5;
-            param5++;
-            param1[incrementValue$5] = (var12 << 16) + (var13 << 8) + var14;
-            var11++;
           }
+          param5 = param5 + param8;
+          param4 = param4 + param9;
         }
     }
 
@@ -1218,6 +1194,8 @@ class dm extends wh {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var15 = 0;
+        int var16 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int var10;
@@ -1225,8 +1203,6 @@ class dm extends wh {
         int var12;
         int var13;
         int var14;
-        int var15;
-        int var16;
         int var17;
         int var18;
         int var19;
@@ -1236,46 +1212,36 @@ class dm extends wh {
         var13 = -(param5 >> 2);
         param5 = -(param5 & 3);
         var14 = var13 + var13 + var13 + var13 + param5;
-        var15 = -param6;
-        while (true) {
-          if (var15 >= 0) {
-            return;
-          }
-          var16 = var14;
-          while (true) {
-            if (var16 >= 0) {
-              param4 = param4 + param7;
-              param3 = param3 + param8;
-              var15++;
-              break;
-            }
+        for (var15 = -param6; var15 < 0; var15++) {
+          for (var16 = var14; var16 < 0; var16++) {
+            boolean decompiledFrameRemainder0 = true;
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
-              var16++;
-              continue;
-            }
-            var17 = param2 >> 16 & 255;
-            var18 = param2 >> 8 & 255;
-            var19 = param2 & 255;
-            if (var17 == var18 &&
-              var18 == var19) {
-              if (var17 > 128) {
-                incrementValue$1 = param4;
-                param4++;
-                param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
-                var16++;
-                continue;
+            } else {
+              var17 = param2 >> 16 & 255;
+              var18 = param2 >> 8 & 255;
+              var19 = param2 & 255;
+              if (var17 == var18 &&
+                var18 == var19) {
+                if (var17 > 128) {
+                  incrementValue$1 = param4;
+                  param4++;
+                  param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
+                } else {
+                  incrementValue$2 = param4;
+                  param4++;
+                  param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
+                }
+                decompiledFrameRemainder0 = false;
               }
-              incrementValue$2 = param4;
-              param4++;
-              param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
-              var16++;
-              continue;
+              else {
+                param0[param4++] = param2;
+              }
             }
-            param0[param4++] = param2;
-            var16++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -1480,64 +1446,49 @@ class dm extends wh {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var10 = 0;
         int var9;
-        int var10;
         int var11;
+        int var11Lifetime1;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = var9; var11 < 0; var11++) {
+            param2 = param1[param3++];
+            if (param2 == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            param2 = param1[param3++];
+            if (param2 == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            param2 = param1[param3++];
+            if (param2 == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            param2 = param1[param3++];
+            if (param2 == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
           }
-          var11 = var9;
-          while (true) {
-            if (var11 >= 0) {
-              var11 = param5;
-              while (true) {
-                if (var11 >= 0) {
-                  param4 = param4 + param7;
-                  param3 = param3 + param8;
-                  var10++;
-                  continue L0;
-                }
-                param2 = param1[param3++];
-                if (param2 == 0) {
-                  param4++;
-                  var11++;
-                  continue;
-                }
-                param0[param4++] = param2;
-                var11++;
-              }
-            }
+          for (var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            param2 = param1[param3++];
-            if (param2 == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            param2 = param1[param3++];
-            if (param2 == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            param2 = param1[param3++];
-            if (param2 == 0) {
-              param4++;
-              var11++;
-              continue;
-            }
-            param0[param4++] = param2;
-            var11++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -1689,59 +1640,44 @@ class dm extends wh {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int var10 = 0;
         int var9;
-        int var10;
         int var11;
+        int var11Lifetime1;
         var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
+        for (var10 = -param6; var10 < 0; var10++) {
+          for (var11 = var9; var11 < 0; var11++) {
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
+            if (param1[param3++] == 0) {
+              param4++;
+            } else {
+              param0[param4++] = param2;
+            }
           }
-          var11 = var9;
-          while (true) {
-            if (var11 >= 0) {
-              var11 = param5;
-              while (true) {
-                if (var11 >= 0) {
-                  param4 = param4 + param7;
-                  param3 = param3 + param8;
-                  var10++;
-                  continue L0;
-                }
-                if (param1[param3++] == 0) {
-                  param4++;
-                  var11++;
-                  continue;
-                }
-                param0[param4++] = param2;
-                var11++;
-              }
-            }
+          for (var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
             if (param1[param3++] == 0) {
               param4++;
             } else {
               param0[param4++] = param2;
             }
-            if (param1[param3++] == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            if (param1[param3++] == 0) {
-              param4++;
-            } else {
-              param0[param4++] = param2;
-            }
-            if (param1[param3++] == 0) {
-              param4++;
-              var11++;
-              continue;
-            }
-            param0[param4++] = param2;
-            var11++;
           }
+          param4 = param4 + param7;
+          param3 = param3 + param8;
         }
     }
 
@@ -1824,20 +1760,12 @@ class dm extends wh {
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
-        param8 = -param10;
-        while (true) {
-          if (param8 >= 0) {
-            return;
-          }
-          param6 = -param9;
-          {
-            while (!(param6 >= 0)) {
-              param0 = param4[param5++];
-              if (param0 == 0) {
-                param7++;
-                param6++;
-                continue;
-              }
+        for (param8 = -param10; param8 < 0; param8++) {
+          for (param6 = -param9; param6 < 0; param6++) {
+            param0 = param4[param5++];
+            if (param0 == 0) {
+              param7++;
+            } else {
               param1 = (param0 & 16711935) * param13;
               param0 = (param1 & -16711936) + (param0 * param13 - param1 & 16711680) >>> 8;
               param1 = param3[param7];
@@ -1847,14 +1775,10 @@ class dm extends wh {
               incrementValue$12 = param7;
               param7++;
               param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
-              param6++;
-            }
-            {
-              param7 = param7 + param11;
-              param5 = param5 + param12;
-              param8++;
             }
           }
+          param7 = param7 + param11;
+          param5 = param5 + param12;
         }
     }
 
@@ -1930,37 +1854,24 @@ class dm extends wh {
         int var13;
         var12 = param11 & 16711935;
         var13 = param11 >> 8 & 255;
-        param6 = -param8;
-        while (true) {
-          if (param6 >= 0) {
-            return;
-          }
-          param5 = -param7;
-          {
-            while (!(param5 >= 0)) {
-              param2 = param1[param3++];
-              if (param2 == 0) {
-                param4++;
-                param5++;
-                continue;
-              }
+        for (param6 = -param8; param6 < 0; param6++) {
+          for (param5 = -param7; param5 < 0; param5++) {
+            param2 = param1[param3++];
+            if (param2 == 0) {
+              param4++;
+            } else {
               if (param2 >> 8 != (param2 & 65535)) {
                 param0[param4++] = param2;
-                param5++;
-                continue;
+              } else {
+                param2 = param2 & 255;
+                incrementValue$14 = param4;
+                param4++;
+                param0[incrementValue$14] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
               }
-              param2 = param2 & 255;
-              incrementValue$14 = param4;
-              param4++;
-              param0[incrementValue$14] = (param2 * var12 >> 8 & 16711934) + (param2 * var13 & 65280) + 1;
-              param5++;
-            }
-            {
-              param4 = param4 + param9;
-              param3 = param3 + param10;
-              param6++;
             }
           }
+          param4 = param4 + param9;
+          param3 = param3 + param10;
         }
     }
 
@@ -2451,20 +2362,12 @@ class dm extends wh {
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
-        param8 = -param10;
-        while (true) {
-          if (param8 >= 0) {
-            return;
-          }
-          param6 = -param9;
-          {
-            while (!(param6 >= 0)) {
-              param0 = param4[param5++];
-              if (param0 == 0) {
-                param7++;
-                param6++;
-                continue;
-              }
+        for (param8 = -param10; param8 < 0; param8++) {
+          for (param6 = -param9; param6 < 0; param6++) {
+            param0 = param4[param5++];
+            if (param0 == 0) {
+              param7++;
+            } else {
               param1 = param3[param7];
               param2 = param0 + param1;
               param0 = (param0 & 16711935) + (param1 & 16711935);
@@ -2472,14 +2375,10 @@ class dm extends wh {
               incrementValue$12 = param7;
               param7++;
               param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
-              param6++;
-            }
-            {
-              param7 = param7 + param11;
-              param5 = param5 + param12;
-              param8++;
             }
           }
+          param7 = param7 + param11;
+          param5 = param5 + param12;
         }
     }
 

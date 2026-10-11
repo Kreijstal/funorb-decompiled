@@ -31,112 +31,81 @@ final class sa {
     static int[] field_w;
 
     final static String a(boolean param0) {
-        if (ra.field_e != wd.field_Lb) {
-          if (!param0) {
-            if (pa.field_I == ra.field_e) {
-              return l.field_c;
-            } else {
-              if (!ig.field_j.a(88)) {
-                return l.field_c;
-              } else {
-                return qo.field_x;
-              }
-            }
-          } else {
-            sa.a(38);
-            if (pa.field_I == ra.field_e) {
-              return l.field_c;
-            } else {
-              if (!ig.field_j.a(88)) {
-                return l.field_c;
-              } else {
-                return qo.field_x;
-              }
-            }
-          }
-        } else {
+        if (ra.field_e == wd.field_Lb) {
           return vq.field_Xb;
         }
+        if (param0) {
+          sa.a(38);
+          if (pa.field_I == ra.field_e) {
+            return l.field_c;
+          }
+          if (ig.field_j.a(88)) {
+            return qo.field_x;
+          }
+          return l.field_c;
+        }
+        if (pa.field_I == ra.field_e) {
+          return l.field_c;
+        }
+        if (ig.field_j.a(88)) {
+          return qo.field_x;
+        }
+        return l.field_c;
     }
 
     final static boolean a(byte param0, boolean param1) {
         try {
-            long dupTemp$0 = 0L;
-            int stackIn_8_0 = 0;
-            Throwable decompiledCaughtException = null;
-            IOException var2 = null;
-            oq var4 = null;
-            oq var5 = null;
-            L0: {
-              if (ge.field_u != null) {
-                break L0;
-              } else {
-                ge.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
-                break L0;
+          long dupTemp$1 = 0L;
+          IOException var2 = null;
+          oq var4 = null;
+          oq var5 = null;
+          int stackIn_8_0 = 0;
+          Throwable decompiledCaughtException = null;
+          if (ge.field_u == null) {
+            ge.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
+          }
+          if (ge.field_u.field_f == 0) {
+            return false;
+          }
+          dupTemp$1 = rl.a((byte) -95);
+          nf.field_Q = dupTemp$1;
+          ob.field_v = dupTemp$1;
+          if (ge.field_u.field_f != 1) {
+            tl.field_J = vk.field_V;
+          } else {
+            try {
+              jd.field_c = new vb((java.net.Socket) (ge.field_u.field_e), nd.field_a);
+              var4 = kn.field_e;
+              var5 = var4;
+              ej.field_j.field_v = 0;
+              var5.field_v = 0;
+              stackIn_8_0 = (!param1) ? -1 : -2;
+              hb.field_e = stackIn_8_0;
+              vd.field_g = stackIn_8_0;
+              ia.field_l = stackIn_8_0;
+              tl.field_J = no.field_h;
+              fm.a(ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
+              de.a(-1, 0);
+            } catch (java.io.IOException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = (IOException) (Object) decompiledCaughtException;
+              tl.field_J = vk.field_V;
+              if (param0 != 65) {
+                return false;
               }
+              ge.field_u = null;
+              return true;
             }
-            if (ge.field_u.field_f != 0) {
-              dupTemp$0 = rl.a((byte) -95);
-              nf.field_Q = dupTemp$0;
-              ob.field_v = dupTemp$0;
-              if ((ge.field_u.field_f ^ -1) != -2) {
-                tl.field_J = vk.field_V;
-                if (param0 != 65) {
-                  return false;
-                } else {
-                  ge.field_u = null;
-                  return true;
-                }
-              } else {
-                try {
-                  L1: {
-                    L2: {
-                      jd.field_c = new vb((java.net.Socket) (ge.field_u.field_e), nd.field_a);
-                      var4 = kn.field_e;
-                      var5 = var4;
-                      ej.field_j.field_v = 0;
-                      var5.field_v = 0;
-                      if (!param1) {
-                        stackIn_8_0 = -1;
-                        break L2;
-                      } else {
-                        stackIn_8_0 = -2;
-                        break L2;
-                      }
-                    }
-                    hb.field_e = stackIn_8_0;
-                    vd.field_g = stackIn_8_0;
-                    ia.field_l = stackIn_8_0;
-                    tl.field_J = no.field_h;
-                    fm.a(ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
-                    de.a(-1, 0);
-                    break L1;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  tl.field_J = vk.field_V;
-                  if (param0 != 65) {
-                    return false;
-                  } else {
-                    ge.field_u = null;
-                    return true;
-                  }
-                }
-                if (param0 != 65) {
-                  return false;
-                } else {
-                  ge.field_u = null;
-                  return true;
-                }
-              }
-            } else {
-              return false;
-            }
+          }
+          if (param0 != 65) {
+            return false;
+          }
+          ge.field_u = null;
+          return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -151,16 +120,7 @@ final class sa {
         field_b = null;
         field_y = null;
         field_e = null;
-        if (param0 != -13265) {
-          sa.a((byte) 89, true);
-          field_q = null;
-          field_f = null;
-          field_o = null;
-          field_r = null;
-          field_g = null;
-          field_w = null;
-          return;
-        } else {
+        if (param0 == -13265) {
           field_q = null;
           field_f = null;
           field_o = null;
@@ -169,6 +129,13 @@ final class sa {
           field_w = null;
           return;
         }
+        sa.a((byte) 89, true);
+        field_q = null;
+        field_f = null;
+        field_o = null;
+        field_r = null;
+        field_g = null;
+        field_w = null;
     }
 
     static {

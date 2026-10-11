@@ -8,12 +8,12 @@ abstract class ib implements noa {
 
     void a(kh param0, byte param1) {
         try {
-            param0.a((byte) -126, this.a(true), 4);
-            if (param1 != 52) {
-                this.a(true);
-            }
+          param0.a((byte) -126, this.a(true), 4);
+          if (param1 != 52) {
+            this.a(true);
+          }
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ib.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ib.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -31,9 +31,9 @@ abstract class ib implements noa {
 
     private ib(la param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

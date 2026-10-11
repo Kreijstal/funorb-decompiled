@@ -22,97 +22,68 @@ final class jf implements Iterator {
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var2_int = 63 / ((64 - param1) / 44);
-            param0.a(true);
-            var3 = (cg) ((Object) gm.field_j.b(12623));
-            L1: while (true) {
-              L2: {
-                if (var3 == null) {
-                  break L2;
-                } else {
-                  if (!var3.a((byte) 121, param0)) {
-                    break L2;
-                  } else {
-                    var3 = (cg) ((Object) gm.field_j.a(0));
-                    continue L1;
-                  }
-                }
-              }
-              if (var3 != null) {
-                da.a(var3, 20, param0);
-                break L0;
-              } else {
-                gm.field_j.b(param0, -1);
-                return;
-              }
+          var2_int = 63 / ((64 - param1) / 44);
+          param0.a(true);
+          var3 = (cg) (gm.field_j.b(12623));
+          while (var3 != null) {
+            if (var3.a((byte) 121, param0)) {
+              var3 = (cg) (gm.field_j.a(0));
+              continue;
             }
+            break;
           }
+          if (var3 != null) {
+            da.a(var3, 20, param0);
+            return;
+          }
+          gm.field_j.b(param0, -1);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var2);
-
-            stackIn_11_1 = new StringBuilder().append("jf.B(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L3;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_11_0 = var2;
+          stackIn_11_1 = new StringBuilder().append("jf.B(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public final Object next() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
-        Object var3;
-        pg var3_ref;
+        pg var3;
         pg var4;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
-        if (this.field_c.field_c[-1 + this.field_b] == this.field_g) {
-          L0: while (true) {
-            if (this.field_c.field_d > this.field_b) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              var3_ref = this.field_c.field_c[fieldTemp$1].field_b;
-              if (this.field_c.field_c[-1 + this.field_b] == var3_ref) {
-                continue L0;
-              } else {
-                this.field_h = var3_ref;
-                this.field_g = var3_ref.field_b;
-                return var3_ref;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (this.field_c.field_c[-1 + this.field_b] != this.field_g) {
           var4 = this.field_g;
           this.field_g = var4.field_b;
           this.field_h = var4;
           return var4;
         }
+        do {
+          if (this.field_c.field_d <= this.field_b) {
+            return null;
+          }
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          var3 = this.field_c.field_c[fieldTemp$0].field_b;
+        } while (this.field_c.field_c[-1 + this.field_b] == var3);
+        this.field_h = var3;
+        this.field_g = var3.field_b;
+        return var3;
     }
 
     public final void remove() {
         if (null == this.field_h) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_h.a(true);
         this.field_h = null;
@@ -121,98 +92,98 @@ final class jf implements Iterator {
     private final void a(int param0) {
         this.field_h = null;
         this.field_g = this.field_c.field_c[0].field_b;
-        if (param0 != -1) {
-          return;
-        } else {
+        if (param0 == -1) {
           this.field_b = 1;
           return;
         }
     }
 
     public final boolean hasNext() {
-        int fieldTemp$1 = 0;
+        int fieldTemp$0 = 0;
         int var2;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
-        if (this.field_c.field_c[this.field_b + -1] == this.field_g) {
-          L0: while (true) {
-            if (this.field_c.field_d > this.field_b) {
-              fieldTemp$1 = this.field_b;
-              this.field_b = this.field_b + 1;
-              if (this.field_c.field_c[fieldTemp$1].field_b == this.field_c.field_c[this.field_b - 1]) {
-                this.field_g = this.field_c.field_c[-1 + this.field_b];
-                continue L0;
-              } else {
-                this.field_g = this.field_c.field_c[-1 + this.field_b].field_b;
-                return true;
-              }
-            } else {
-              return false;
-            }
-          }
-        } else {
+        if (this.field_c.field_c[this.field_b - 1] != this.field_g) {
           return true;
         }
+        while (true) {
+          if (this.field_c.field_d <= this.field_b) {
+            return false;
+          }
+          fieldTemp$0 = this.field_b;
+          this.field_b = this.field_b + 1;
+          if (this.field_c.field_c[fieldTemp$0].field_b == this.field_c.field_c[this.field_b - 1]) {
+            this.field_g = this.field_c.field_c[-1 + this.field_b];
+            continue;
+          }
+          break;
+        }
+        this.field_g = this.field_c.field_c[-1 + this.field_b].field_b;
+        return true;
     }
 
     final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
-            String var6 = null;
-            String var5 = null;
-            String var4 = null;
-            String var7 = null;
+          String var6 = null;
+          String var5 = null;
+          String var4 = null;
+          String var7 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          String var5Lifetime5;
+          String var5Lifetime6;
+          try {
+            vm.field_b = param0;
             try {
-                vm.field_b = param0;
-                try {
-                    var6 = param1.getParameter("cookieprefix");
-                    var5 = var6;
-                    var5 = var6;
-                    var4 = param1.getParameter("cookiehost");
-                    var5 = var4;
-                    var5 = var4;
-                    var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
-                    var5 = var7;
-                    var5 = var7;
-                    if (param0.length() != param2) {
-                        var5 = var7 + "; Expires=" + di.a(-62, 94608000000L + qj.b(-26572)) + "; Max-Age=" + 94608000L;
-                    } else {
-                        var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    ei.a("document.cookie=\"" + var5 + "\"", param1, param2 ^ 269);
-                } catch (Throwable throwable) {
-                }
-                ml.a(-122, param1);
-            } catch (RuntimeException runtimeException) {
-                throw aa.a((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+              var6 = param1.getParameter("cookieprefix");
+              var5 = var6;
+              var5Lifetime1 = var6;
+              var4 = param1.getParameter("cookiehost");
+              var5Lifetime2 = var4;
+              var5Lifetime3 = var4;
+              var7 = var6 + "settings=" + param0 + "; version=1; path=/; domain=" + var4;
+              var5Lifetime4 = var7;
+              var5Lifetime5 = var7;
+              if (param0.length() != param2) {
+                var5Lifetime6 = var7 + "; Expires=" + di.a(-62, 94608000000L + qj.b(-26572)) + "; Max-Age=" + 94608000L;
+              } else {
+                var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              ei.a("document.cookie=\"" + var5Lifetime6 + "\"", param1, param2 ^ 269);
+            } catch (Throwable throwable) {
             }
+            ml.a(-122, param1);
+          } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) ((Object) runtimeException), "jf.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_f = null;
-        if (param0 >= -59) {
-          field_i = (String) null;
-          field_i = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -59) {
           field_i = null;
           field_d = null;
           return;
         }
+        field_i = (String) null;
+        field_i = null;
+        field_d = null;
     }
 
     jf(pk param0) {
         this.field_h = null;
         try {
-            this.field_c = param0;
-            this.a(-1);
+          this.field_c = param0;
+          this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class pc {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -43) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -23,16 +23,17 @@ final class pc {
 
     final static void a(int param0) {
         int var1 = 0;
+        int var1Lifetime1;
         if (wc.field_a <= 32) {
-            ah.a((byte) -102, 0);
+          ah.a((byte) -102, 0);
         } else {
-            var1 = wc.field_a % 32;
-            if (!(var1 != 0)) {
-                var1 = 32;
-            }
-            ah.a((byte) -68, -var1 + wc.field_a);
+          var1 = wc.field_a % 32;
+          if (var1 == 0) {
+            var1 = 32;
+          }
+          ah.a((byte) -68, -var1 + wc.field_a);
         }
-        var1 = 57 % ((param0 - -18) / 58);
+        var1Lifetime1 = 57 % ((param0 + 18) / 58);
     }
 
     static {

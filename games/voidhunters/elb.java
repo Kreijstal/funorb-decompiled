@@ -52,8 +52,19 @@ abstract class elb {
         int var34 = 0;
         int var42 = 0;
         int var43 = VoidHunters.field_G;
+        int var29Lifetime1;
+        int var29Lifetime2;
+        int var29Lifetime3;
+        int var30Lifetime1;
+        int var30Lifetime2;
+        int var30Lifetime3;
+        int var31Lifetime1;
+        int var32Lifetime1;
+        int var42Lifetime1;
+        int var42Lifetime2;
+        int var42Lifetime3;
         if (param1 != -10) {
-            return;
+          return;
         }
         int[] var49 = new int[param0];
         int[] var46 = var49;
@@ -65,112 +76,115 @@ abstract class elb {
         int[] var45 = var48;
         int[] var41 = var45;
         for (var42 = 0; param0 > var42; var42++) {
-            var39[var42] = (var42 << 182659212) / param0;
+          var39[var42] = (var42 << 12) / param0;
         }
-        for (var42 = 0; var42 < param2; var42++) {
-            var40[var42] = (var42 << -829729012) / param2;
+        for (var42Lifetime1 = 0; var42Lifetime1 < param2; var42Lifetime1++) {
+          var40[var42Lifetime1] = (var42Lifetime1 << 12) / param2;
         }
-        for (var42 = 0; param3 > var42; var42++) {
-            var41[var42] = (var42 << -2074107732) / param3;
+        for (var42Lifetime2 = 0; param3 > var42Lifetime2; var42Lifetime2++) {
+          var41[var42Lifetime2] = (var42Lifetime2 << 12) / param3;
         }
         this.a(true);
         for (var37 = 0; param3 > var37; var37++) {
-            for (var36 = 0; param2 > var36; var36++) {
-                for (var35 = 0; var35 < param0; var35++) {
-                    for (var38 = 0; this.field_a > var38; var38++) {
-                        var42 = this.field_c[var38] << 1015007500;
-                        var6 = var47[var36] * var42 >> -1635727892;
-                        var7 = var48[var37] * var42 >> -1428467700;
-                        var9 = var42 * this.field_b >> 1863301068;
-                        var10 = this.field_g * var42 >> -1430736340;
-                        var5 = var42 * var49[var35] >> 1916810700;
-                        var8 = this.field_h * var42 >> 655373420;
-                        var6 = var6 * this.field_b;
-                        var5 = var5 * this.field_h;
-                        var7 = var7 * this.field_g;
-                        var11 = var5 >> -1948962676;
-                        var12 = 1 + var11;
-                        var11 = var11 & 255;
-                        var13 = var6 >> -73329172;
-                        var14 = 1 + var13;
-                        var13 = var13 & 255;
-                        var15 = var7 >> -1253312500;
-                        var16 = 1 + var15;
-                        if (var16 >= var10) {
-                            var16 = 0;
-                        } else {
-                            var16 = var16 & 255;
-                        }
-                        var7 = var7 & 4095;
-                        if (var14 >= var9) {
-                            var14 = 0;
-                        } else {
-                            var14 = var14 & 255;
-                        }
-                        if (var12 >= var8) {
-                            var12 = 0;
-                        } else {
-                            var12 = var12 & 255;
-                        }
-                        var6 = var6 & 4095;
-                        var15 = var15 & 255;
-                        var5 = var5 & 4095;
-                        var20 = var5 + -4096;
-                        var18 = ocb.field_h[var6];
-                        var19 = ocb.field_h[var7];
-                        var22 = var7 - 4096;
-                        var17 = ocb.field_h[var5];
-                        var23 = this.field_d[var15];
-                        var24 = this.field_d[var16];
-                        var21 = -4096 + var6;
-                        var25 = this.field_d[var23 + var13];
-                        var28 = this.field_d[var24 + var14];
-                        var27 = this.field_d[var13 + var24];
-                        var26 = this.field_d[var14 + var23];
-                        var29 = hcb.a(var7, var6, var5, (byte) -113, (int) this.field_d[var25 + var11]);
-                        var30 = hcb.a(var7, var6, var20, (byte) 47, (int) this.field_d[var12 - -var25]);
-                        var31 = var29 + ((-var29 + var30) * var17 >> 1438881868);
-                        var29 = hcb.a(var7, var21, var5, (byte) -89, (int) this.field_d[var11 + var26]);
-                        var30 = hcb.a(var7, var21, var20, (byte) -121, (int) this.field_d[var26 + var12]);
-                        var32 = var29 - -(var17 * (-var29 + var30) >> -1739735220);
-                        var29 = hcb.a(var22, var6, var5, (byte) 63, (int) this.field_d[var27 + var11]);
-                        var33 = var31 + ((var32 - var31) * var18 >> 1618424172);
-                        var30 = hcb.a(var22, var6, var20, (byte) -95, (int) this.field_d[var12 - -var27]);
-                        var31 = var29 - -(var17 * (-var29 + var30) >> 1773262636);
-                        var29 = hcb.a(var22, var21, var5, (byte) -122, (int) this.field_d[var11 + var28]);
-                        var30 = hcb.a(var22, var21, var20, (byte) -122, (int) this.field_d[var28 + var12]);
-                        var32 = var29 + (var17 * (-var29 + var30) >> 1424903724);
-                        var34 = var31 - -(var18 * (var32 - var31) >> 1372941196);
-                        this.a(-115, var38, (var19 * (var34 + -var33) >> -230604116) + var33);
-                    }
-                    this.a(1424903724);
+          for (var36 = 0; param2 > var36; var36++) {
+            for (var35 = 0; var35 < param0; var35++) {
+              for (var38 = 0; this.field_a > var38; var38++) {
+                var42Lifetime3 = this.field_c[var38] << 12;
+                var6 = var47[var36] * var42Lifetime3 >> 12;
+                var7 = var48[var37] * var42Lifetime3 >> 12;
+                var9 = var42Lifetime3 * this.field_b >> 12;
+                var10 = this.field_g * var42Lifetime3 >> 12;
+                var5 = var42Lifetime3 * var49[var35] >> 12;
+                var8 = this.field_h * var42Lifetime3 >> 12;
+                var6 = var6 * this.field_b;
+                var5 = var5 * this.field_h;
+                var7 = var7 * this.field_g;
+                var11 = var5 >> 12;
+                var12 = 1 + var11;
+                var11 = var11 & 255;
+                var13 = var6 >> 12;
+                var14 = 1 + var13;
+                var13 = var13 & 255;
+                var15 = var7 >> 12;
+                var16 = 1 + var15;
+                if (var16 >= var10) {
+                  var16 = 0;
+                } else {
+                  var16 = var16 & 255;
                 }
+                var7 = var7 & 4095;
+                if (var14 >= var9) {
+                  var14 = 0;
+                } else {
+                  var14 = var14 & 255;
+                }
+                if (var12 >= var8) {
+                  var12 = 0;
+                } else {
+                  var12 = var12 & 255;
+                }
+                var6 = var6 & 4095;
+                var15 = var15 & 255;
+                var5 = var5 & 4095;
+                var20 = var5 - 4096;
+                var18 = ocb.field_h[var6];
+                var19 = ocb.field_h[var7];
+                var22 = var7 - 4096;
+                var17 = ocb.field_h[var5];
+                var23 = this.field_d[var15];
+                var24 = this.field_d[var16];
+                var21 = -4096 + var6;
+                var25 = this.field_d[var23 + var13];
+                var28 = this.field_d[var24 + var14];
+                var27 = this.field_d[var13 + var24];
+                var26 = this.field_d[var14 + var23];
+                var29 = hcb.a(var7, var6, var5, (byte) -113, (int) this.field_d[var25 + var11]);
+                var30 = hcb.a(var7, var6, var20, (byte) 47, (int) this.field_d[var12 + var25]);
+                var31 = var29 + ((-var29 + var30) * var17 >> 12);
+                var29Lifetime1 = hcb.a(var7, var21, var5, (byte) -89, (int) this.field_d[var11 + var26]);
+                var30Lifetime1 = hcb.a(var7, var21, var20, (byte) -121, (int) this.field_d[var26 + var12]);
+                var32 = var29Lifetime1 + (var17 * (-var29Lifetime1 + var30Lifetime1) >> 12);
+                var29Lifetime2 = hcb.a(var22, var6, var5, (byte) 63, (int) this.field_d[var27 + var11]);
+                var33 = var31 + ((var32 - var31) * var18 >> 12);
+                var30Lifetime2 = hcb.a(var22, var6, var20, (byte) -95, (int) this.field_d[var12 + var27]);
+                var31Lifetime1 = var29Lifetime2 + (var17 * (-var29Lifetime2 + var30Lifetime2) >> 12);
+                var29Lifetime3 = hcb.a(var22, var21, var5, (byte) -122, (int) this.field_d[var11 + var28]);
+                var30Lifetime3 = hcb.a(var22, var21, var20, (byte) -122, (int) this.field_d[var28 + var12]);
+                var32Lifetime1 = var29Lifetime3 + (var17 * (-var29Lifetime3 + var30Lifetime3) >> 12);
+                var34 = var31Lifetime1 + (var18 * (var32Lifetime1 - var31Lifetime1) >> 12);
+                this.a(-115, var38, (var19 * (var34 - var33) >> 12) + var33);
+              }
+              this.a(1424903724);
             }
+          }
         }
     }
 
     abstract void a(int param0);
 
     private final void b(byte param0) {
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var3 = 0;
-        int var7 = VoidHunters.field_G;
-        Random var2 = new Random((long)this.field_e);
+        Random var2;
+        int var3;
+        int var4;
+        int var5;
+        int var6;
+        int var7;
+        int var3Lifetime1;
+        var7 = VoidHunters.field_G;
+        var2 = new Random((long)this.field_e);
         for (var3 = 0; var3 < 255; var3++) {
-            this.field_d[var3] = (short)var3;
+          this.field_d[var3] = (short)var3;
         }
-        for (var3 = 0; (var3 ^ -1) > -256; var3++) {
-            var4 = 255 - var3;
-            var5 = hob.a(var2, var4, 116);
-            var6 = this.field_d[var5];
-            this.field_d[var5] = this.field_d[var4];
-            this.field_d[var4 - -256] = (short) var6;
-            this.field_d[var4] = (short) var6;
+        for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
+          var4 = 255 - var3Lifetime1;
+          var5 = hob.a(var2, var4, 116);
+          var6 = this.field_d[var5];
+          this.field_d[var5] = this.field_d[var4];
+          this.field_d[var4 + 256] = (short) var6;
+          this.field_d[var4] = (short) var6;
         }
         if (param0 != 23) {
-            elb.c((byte) 43);
+          elb.c((byte) 43);
         }
     }
 
@@ -179,10 +193,10 @@ abstract class elb {
         int var3 = VoidHunters.field_G;
         this.field_c = new short[this.field_a];
         if (param0 <= 82) {
-            return;
+          return;
         }
         for (var2 = 0; var2 < this.field_a; var2++) {
-            this.field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
+          this.field_c[var2] = (short)(int)Math.pow(2.0, (double)var2);
         }
     }
 
@@ -207,7 +221,7 @@ abstract class elb {
     public static void c(byte param0) {
         field_f = null;
         if (param0 < 35) {
-            elb.c((byte) 62);
+          elb.c((byte) 62);
         }
     }
 

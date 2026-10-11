@@ -14,16 +14,16 @@ final class oa implements Runnable {
 
     final static String a(int param0, byte param1, int param2) {
         if (param1 != -2) {
-            return (String) null;
+          return (String) null;
         }
         return param2 + "/" + param0;
     }
 
     final static df a(boolean param0, java.applet.Applet param1) {
+        int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
         df[] var3 = null;
-        int var4 = 0;
         df var5 = null;
         int var6 = 0;
         df stackIn_3_0 = null;
@@ -31,71 +31,36 @@ final class oa implements Runnable {
         df stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var2 = li.a(param1, "jagex-last-login-method", param0);
-            if (var2 != null) {
-              var3 = nd.a(-1);
-              var4 = 0;
-              L1: while (true) {
-                if (var3.length <= var4) {
-                  stackIn_12_0 = jc.field_a;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  var5 = var3[var4];
-                  if (var5.a(-68, var2)) {
-                    stackIn_9_0 = (df) (var5);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  } else {
-                    var4++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = jc.field_a;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          var2 = li.a(param1, "jagex-last-login-method", param0);
+          if (var2 == null) {
+            stackIn_3_0 = jc.field_a;
+            return stackIn_3_0;
+          }
+          var3 = nd.a(-1);
+          for (var4 = 0; var3.length > var4; var4++) {
+            var5 = var3[var4];
+            if (var5.a(-68, var2)) {
+              stackIn_9_0 = var5;
+              return stackIn_9_0;
             }
           }
+          stackIn_12_0 = jc.field_a;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2_ref);
-
-            stackIn_15_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
-          }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_15_0 = var2_ref;
+          stackIn_15_1 = new StringBuilder().append("oa.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
           } else {
-            return stackIn_12_0;
+            stackIn_16_2 = "{...}";
           }
+          throw dd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -105,22 +70,22 @@ final class oa implements Runnable {
         int var4 = OrbDefence.field_D ? 1 : 0;
         this.field_b = true;
         try {
-            while (!this.field_h) {
-                for (var1_int = 0; var1_int < 2; var1_int++) {
-                    var2 = this.field_c[var1_int];
-                    if (var2 == null) {
-                    } else {
-                        var2.a();
-                    }
-                }
-                hb.a(10L, 116);
-                vf.a((Object) null, 50, this.field_g);
+          while (!this.field_h) {
+            for (var1_int = 0; var1_int < 2; var1_int++) {
+              var2 = this.field_c[var1_int];
+              if (var2 == null) {
+              } else {
+                var2.a();
+              }
             }
+            hb.a(10L, 116);
+            vf.a((Object) null, 50, this.field_g);
+          }
         } catch (Exception exception) {
-            String var5 = (String) null;
-            pe.a((byte) -13, (Throwable) ((Object) exception), (String) null);
+          String var5 = (String) null;
+          pe.a((byte) -13, (Throwable) ((Object) exception), (String) null);
         } finally {
-            this.field_b = false;
+          this.field_b = false;
         }
     }
 
@@ -131,7 +96,7 @@ final class oa implements Runnable {
         field_a = null;
         field_f = null;
         if (param0 != 90) {
-            field_d = (im) null;
+          field_d = (im) null;
         }
     }
 

@@ -10,19 +10,17 @@ final class ie extends hl {
     boolean field_m;
 
     final static fo a(int param0, int param1, int param2, int param3) {
-        fo var4;
-        var4 = new fo();
+        fo var4 = new fo();
         var4.field_j = param0;
         var4.field_l = param3;
         ji.field_a.a((byte) -94, var4);
-        if (param1 != 31043) {
-          field_j = -119;
-          v.a(3, param2, var4);
-          return var4;
-        } else {
+        if (param1 == 31043) {
           v.a(3, param2, var4);
           return var4;
         }
+        field_j = -119;
+        v.a(3, param2, var4);
+        return var4;
     }
 
     ie() {
@@ -32,7 +30,7 @@ final class ie extends hl {
         field_i = null;
         field_k = null;
         if (param0 <= 67) {
-            field_k = (go) null;
+          field_k = (go) null;
         }
     }
 

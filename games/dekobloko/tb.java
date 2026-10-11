@@ -12,67 +12,35 @@ final class tb {
         if (param5 > param0) {
           if (param1 > param5) {
             ib.a(param2, param5, param7, param1, param3, (byte) 117, param4, param0, hk.field_l);
-            if (param6 <= 8) {
-              field_c = (w) null;
-              return;
-            } else {
-              return;
-            }
           } else {
             if (param0 >= param1) {
               ib.a(param7, param0, param4, param5, param3, (byte) 117, param2, param1, hk.field_l);
-              if (param6 <= 8) {
-                field_c = (w) null;
-                return;
-              } else {
-                return;
-              }
             } else {
               ib.a(param2, param1, param4, param5, param3, (byte) 117, param7, param0, hk.field_l);
-              if (param6 <= 8) {
-                field_c = (w) null;
-                return;
-              } else {
-                return;
-              }
             }
           }
         } else {
           if (param0 < param1) {
             ib.a(param4, param0, param7, param1, param3, (byte) 117, param2, param5, hk.field_l);
-            if (param6 > 8) {
-              return;
-            } else {
-              field_c = (w) null;
-              return;
-            }
           } else {
             if (param1 <= param5) {
               ib.a(param7, param5, param2, param0, param3, (byte) 117, param4, param1, hk.field_l);
-              if (param6 > 8) {
-                return;
-              } else {
-                field_c = (w) null;
-                return;
-              }
             } else {
               ib.a(param4, param1, param2, param0, param3, (byte) 117, param7, param5, hk.field_l);
-              if (param6 <= 8) {
-                field_c = (w) null;
-                return;
-              } else {
-                return;
-              }
             }
           }
         }
+        if (param6 > 8) {
+          return;
+        }
+        field_c = (w) null;
     }
 
     final static void a(int param0, int param1, int param2) {
         af.field_f = param0;
         kk.field_e = param2;
         if (param1 != -25073) {
-            tb.a(-106, -58, 44, 19, 93, -115, 108, -54);
+          tb.a(-106, -58, 44, 19, 93, -115, 108, -54);
         }
     }
 
@@ -82,13 +50,13 @@ final class tb {
 
     final static void a(boolean param0, ck param1) {
         try {
-            uh.a(-9074);
-            hk.a(param1.field_D, param1.field_K, param1.field_C);
-            if (!param0) {
-                tb.a(60, 93, -89);
-            }
+          uh.a(-9074);
+          hk.a(param1.field_D, param1.field_K, param1.field_C);
+          if (!param0) {
+            tb.a(60, 93, -89);
+          }
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "tb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "tb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +65,7 @@ final class tb {
         field_c = null;
         field_a = null;
         if (param0 != 20908) {
-            field_c = (w) null;
+          field_c = (w) null;
         }
     }
 

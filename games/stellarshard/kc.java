@@ -8,14 +8,13 @@ final class kc {
 
     public static void a(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;
     }
 
     final static void a(int param0) {
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2_int = 0;
@@ -26,130 +25,71 @@ final class kc {
         pb var6 = null;
         pb var7 = null;
         pb var8 = null;
+        pb var7Lifetime1;
+        pb var7Lifetime2;
+        int var3Lifetime1;
         var4 = stellarshard.field_B;
         try {
-          L0: {
-            ti.b(243, 197, 369, 143, 16777215);
-            ti.f(244, 198, 367, 141, 0);
-            if (ed.field_a != null) {
-              L1: {
-                var6 = ed.field_a[nk.field_c];
-                var7 = var6;
-                var7 = var6;
-                if (var6 == null) {
-                  if (fj.field_f != null) {
-                    fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                } else {
-                  var6.e(245, 199);
-                  break L1;
-                }
-              }
-              if (param0 >= 18) {
-                L2: {
-                  if (cj.field_c <= ha.field_w) {
-                    break L2;
-                  } else {
-                    var7 = ed.field_a[tc.field_w];
-                    if (var7 == null) {
-                      break L2;
-                    } else {
-                      var2_int = (var7.field_w - -60) * ha.field_w / cj.field_c;
-                      var3 = -30 + var2_int;
-                      if (!nj.field_g) {
-                        ua.a((-var3 + var7.field_w) * 256 / 30, -256 * var3 / 30, var7, 0, 245, 199);
-                        break L2;
-                      } else {
-                        ua.a(var3 * -256 / 30, 256 * (-var3 + var7.field_w) / 30, var7, 0, 245, 199);
-                        break L2;
-                      }
-                    }
-                  }
-                }
-                L3: {
-                  if (fj.field_f != null) {
-                    var2 = null;
-                    var5 = 0;
-                    var3 = var5;
-                    L4: while (true) {
-                      if (var5 >= ed.field_a.length) {
-                        if (var2 == null) {
-                          break L3;
-                        } else {
-                          fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
-                          break L3;
-                        }
-                      } else {
-                        var8 = ed.field_a[var5];
-                        if (var8 != null) {
-                          L5: {
-                            if (-366 != (var8.field_w ^ -1)) {
-                              break L5;
-                            } else {
-                              if ((var8.field_x ^ -1) != -140) {
-                                break L5;
-                              } else {
-                                var5++;
-                                continue L4;
-                              }
-                            }
-                          }
-                          L6: {
-                            if (var2 == null) {
-                              var2 = Integer.toString(var5);
-                              break L6;
-                            } else {
-                              var2 = (String) (var2) + ", " + var5;
-                              break L6;
-                            }
-                          }
-                          var5++;
-                          continue L4;
-                        } else {
-                          var5++;
-                          continue L4;
-                        }
-                      }
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-                decompiledRegionSelector0 = 2;
-                break L0;
+          ti.b(243, 197, 369, 143, 16777215);
+          ti.f(244, 198, 367, 141, 0);
+          if (ed.field_a == null) {
+            if (fj.field_f != null) {
+              fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            }
+            return;
+          }
+          var6 = ed.field_a[nk.field_c];
+          var7 = var6;
+          var7Lifetime1 = var6;
+          if (var6 == null) {
+            if (fj.field_f != null) {
+              fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            }
+          } else {
+            var6.e(245, 199);
+          }
+          if (param0 < 18) {
+            return;
+          }
+          if (cj.field_c > ha.field_w) {
+            var7Lifetime2 = ed.field_a[tc.field_w];
+            if (var7Lifetime2 != null) {
+              var2_int = (var7Lifetime2.field_w + 60) * ha.field_w / cj.field_c;
+              var3 = -30 + var2_int;
+              if (!nj.field_g) {
+                ua.a((-var3 + var7Lifetime2.field_w) * 256 / 30, -256 * var3 / 30, var7Lifetime2, 0, 245, 199);
               } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
+                ua.a(var3 * -256 / 30, 256 * (-var3 + var7Lifetime2.field_w) / 30, var7Lifetime2, 0, 245, 199);
               }
-            } else {
-              L7: {
-                if (fj.field_f != null) {
-                  fj.field_f.a(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          if (fj.field_f != null) {
+            var2 = null;
+            var5 = 0;
+            var3Lifetime1 = var5;
+            while (var5 < ed.field_a.length) {
+              var8 = ed.field_a[var5];
+              if (var8 != null && (var8.field_w != 365 ||
+                var8.field_x != 139)) {
+                if (var2 == null) {
+                  var2 = Integer.toString(var5);
+                } else {
+                  var2 = (String) (var2) + ", " + var5;
+                }
+              }
+              var5++;
+            }
+            if (var2 == null) {
+              return;
+            }
+            fj.field_f.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            return;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw ma.a((Throwable) ((Object) var1), "kc.A(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            return;
-          }
         }
     }
 

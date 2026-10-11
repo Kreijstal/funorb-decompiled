@@ -12,21 +12,21 @@ final class la extends be {
     final int d(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = TrackController.field_F ? 1 : 0;
-        int var3 = this.field_r >> -1900129789;
-        int var4 = 8 + -(this.field_r & 7);
+        int var3 = this.field_r >> 3;
+        int var4 = 8 - (this.field_r & 7);
         int var5 = param0;
         this.field_r = this.field_r + param1;
         while (var4 < param1) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((pf.field_c[var4] & this.field_j[incrementValue$0]) << -var4 + param1);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((pf.field_c[var4] & this.field_j[incrementValue$0]) << -var4 + param1);
+          param1 = param1 - var4;
+          var4 = 8;
         }
         if (param1 == var4) {
-            var5 = var5 + (this.field_j[var3] & pf.field_c[var4]);
+          var5 = var5 + (this.field_j[var3] & pf.field_c[var4]);
         } else {
-            var5 = var5 + (this.field_j[var3] >> var4 + -param1 & pf.field_c[param1]);
+          var5 = var5 + (this.field_j[var3] >> var4 - param1 & pf.field_c[param1]);
         }
         return var5;
     }
@@ -36,84 +36,57 @@ final class la extends be {
     }
 
     final void a(int param0, boolean param1, int param2, byte[] param3) {
-        int fieldTemp$2 = 0;
-        int var5_int = 0;
-        int var6 = 0;
+        int fieldTemp$0 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var5_int = 0;
         RuntimeException var5 = null;
+        int var6 = 0;
         var6 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
-            var5_int = 0;
-            if (!param1) {
-              L1: while (true) {
-                if (var5_int >= param0) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  fieldTemp$2 = this.field_k;
-                  this.field_k = this.field_k + 1;
-                  param3[var5_int + param2] = (byte)(this.field_j[fieldTemp$2] + -this.field_n.c(127));
-                  var5_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var5_int = 0;
+          if (param1) {
+            return;
           }
+          while (var5_int < param0) {
+            fieldTemp$0 = this.field_k;
+            this.field_k = this.field_k + 1;
+            param3[var5_int + param2] = (byte)(this.field_j[fieldTemp$0] - this.field_n.c(127));
+            var5_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5);
-
-            stackIn_8_1 = new StringBuilder().append("la.UA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("la.UA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw sl.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw sl.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
     final void g(byte param0) {
-        this.field_k = (this.field_r - -7) / 8;
+        this.field_k = (this.field_r + 7) / 8;
         if (param0 <= -25) {
-            return;
+          return;
         }
         field_p = (int[]) null;
     }
 
     final void a(byte param0, int[] param1) {
         if (param0 != -83) {
-            return;
+          return;
         }
         try {
-            this.field_n = new nf(param1);
+          this.field_n = new nf(param1);
         } catch (RuntimeException runtimeException) {
-            throw sl.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sl.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +96,7 @@ final class la extends be {
 
     public static void d(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_p = null;
         field_q = null;
@@ -132,7 +105,7 @@ final class la extends be {
     final void h(byte param0) {
         this.field_r = 8 * this.field_k;
         if (param0 == 31) {
-            return;
+          return;
         }
         this.field_r = -2;
     }
@@ -142,7 +115,7 @@ final class la extends be {
         this.field_k = this.field_k + 1;
         this.field_j[fieldTemp$0] = (byte)(this.field_n.c(126) + param0);
         if (param1 == 7) {
-            return;
+          return;
         }
         this.g((byte) 52);
     }
@@ -150,11 +123,11 @@ final class la extends be {
     final int e(boolean param0) {
         int fieldTemp$0 = 0;
         if (param0) {
-            byte[] var3 = (byte[]) null;
-            this.a(-123, false, 4, (byte[]) null);
-            fieldTemp$0 = this.field_k;
-            this.field_k = this.field_k + 1;
-            return this.field_j[fieldTemp$0] - this.field_n.c(125) & 255;
+          byte[] var3 = (byte[]) null;
+          this.a(-123, false, 4, (byte[]) null);
+          fieldTemp$0 = this.field_k;
+          this.field_k = this.field_k + 1;
+          return this.field_j[fieldTemp$0] - this.field_n.c(125) & 255;
         }
         int fieldTemp$1 = this.field_k;
         this.field_k = this.field_k + 1;

@@ -14,68 +14,52 @@ final class ed {
         int var4 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var3_intLifetime1;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == 0) {
-                break L1;
-              } else {
-                field_a = (String) null;
-                break L1;
-              }
-            }
-            L2: {
-              if (param1 <= param0) {
-                break L2;
-              } else {
-                var3_int = param0;
-                param0 = param1;
-                param1 = var3_int;
-                break L2;
-              }
-            }
-            L3: while (true) {
-              if (0 == param1) {
-                stackIn_8_0 = param0;
-                break L0;
-              } else {
-                var3_int = param0 % param1;
-                param0 = param1;
-                param1 = var3_int;
-                continue L3;
-              }
-            }
+          if (param2 != 0) {
+            field_a = (String) null;
           }
+          if (param1 > param0) {
+            var3_int = param0;
+            param0 = param1;
+            param1 = var3_int;
+          }
+          while (0 != param1) {
+            var3_intLifetime1 = param0 % param1;
+            param0 = param1;
+            param1 = var3_intLifetime1;
+          }
+          stackIn_8_0 = param0;
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw la.a((Throwable) ((Object) var3), "ed.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
-        return stackIn_8_0;
     }
 
     final static void a(ad param0, int param1) {
         sf var2 = null;
         try {
-            sf.a(param0.a("", "headers.packvorbis", 30));
-            if (param1 < 44) {
-                ed.a(-96, -76, 44);
-            }
-            var2 = sf.a(param0, "jagex logo2.packvorbis", "");
-            var2.a();
+          sf.a(param0.a("", "headers.packvorbis", 30));
+          if (param1 < 44) {
+            ed.a(-96, -76, 44);
+          }
+          var2 = sf.a(param0, "jagex logo2.packvorbis", "");
+          var2.a();
         } catch (RuntimeException runtimeException) {
-            throw la.a((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw la.a((Throwable) ((Object) runtimeException), "ed.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (param0) {
-            field_a = (String) null;
-            field_c = null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_c = null;
         field_a = null;

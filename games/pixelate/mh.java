@@ -7,90 +7,63 @@ final class mh {
 
     final static void a(te param0, byte param1) {
         if (param0 == null) {
-            return;
+          return;
         }
         try {
-            bo.field_h = param0;
-            bn.field_I.field_L.e(43);
-            if (param1 < 73) {
-                field_b = 37;
-            }
-            bn.field_I.a(bo.field_h, (byte) 26);
-            un.field_l = true;
+          bo.field_h = param0;
+          bn.field_I.field_L.e(43);
+          if (param1 < 73) {
+            field_b = 37;
+          }
+          bn.field_I.a(bo.field_h, (byte) 26);
+          un.field_l = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "mh.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        L0: {
-          param2 = param2 + hp.field_Gb.field_D;
-          param0 = param0 + hp.field_Gb.field_y;
-          var4 = param2 - -(param0 * t.field_j);
-          var5 = 0;
-          var6 = hp.field_Gb.field_E;
-          var7 = hp.field_Gb.field_F;
-          var8 = t.field_j + -var7;
-          if (param0 < t.field_f) {
-            var10 = -param0 + t.field_f;
-            var4 = var4 + var10 * t.field_j;
-            var6 = var6 - var10;
-            param0 = t.field_f;
-            var5 = var5 + var10 * var7;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        param2 = param2 + hp.field_Gb.field_D;
+        param0 = param0 + hp.field_Gb.field_y;
+        int var4 = param2 + param0 * t.field_j;
+        int var5 = 0;
+        int var6 = hp.field_Gb.field_E;
+        int var7 = hp.field_Gb.field_F;
+        int var8 = t.field_j - var7;
+        if (!(param0 >= t.field_f)) {
+          var10 = -param0 + t.field_f;
+          var4 = var4 + var10 * t.field_j;
+          var6 = var6 - var10;
+          param0 = t.field_f;
+          var5 = var5 + var10 * var7;
         }
-        L1: {
-          var9 = param3;
-          if (t.field_e <= param2) {
-            break L1;
-          } else {
-            var10 = -param2 + t.field_e;
-            var4 = var4 + var10;
-            param2 = t.field_e;
-            var5 = var5 + var10;
-            var8 = var8 + var10;
-            var9 = var9 + var10;
-            var7 = var7 - var10;
-            break L1;
-          }
+        int var9 = param3;
+        if (t.field_e > param2) {
+          var10Lifetime1 = -param2 + t.field_e;
+          var4 = var4 + var10Lifetime1;
+          param2 = t.field_e;
+          var5 = var5 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var7 = var7 - var10Lifetime1;
         }
-        L2: {
-          if (t.field_a < param0 - -var6) {
-            var6 = var6 - (var6 + (param0 - t.field_a));
-            break L2;
-          } else {
-            break L2;
-          }
+        if (!(t.field_a >= param0 + var6)) {
+          var6 = var6 - (var6 + (param0 - t.field_a));
         }
-        L3: {
-          if (var7 + param2 <= t.field_h) {
-            break L3;
-          } else {
-            var10 = var7 + (param2 - t.field_h);
-            var8 = var8 + var10;
-            var9 = var9 + var10;
-            var7 = var7 - var10;
-            break L3;
-          }
+        if (var7 + param2 > t.field_h) {
+          var10Lifetime2 = var7 + (param2 - t.field_h);
+          var8 = var8 + var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var7 = var7 - var10Lifetime2;
         }
-        if (-1 > (var7 ^ -1)) {
-          if (var6 <= 0) {
-            return;
-          } else {
-            wd.a(t.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
-            return;
-          }
-        } else {
+        if (var7 <= 0) {
+          return;
+        }
+        if (var6 > 0) {
+          wd.a(t.field_k, param3 ^ -123, param1, var6, var9, var4, var5, var7, var8, hp.field_Gb.field_G);
           return;
         }
     }

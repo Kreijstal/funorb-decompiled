@@ -15,7 +15,7 @@ final class ea extends ksa {
     public static void a(int param0) {
         field_k = null;
         if (param0 != 10) {
-            ea.a(-25);
+          ea.a(-25);
         }
     }
 

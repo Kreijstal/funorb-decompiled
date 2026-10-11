@@ -18,9 +18,7 @@ final class oa {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 32) {
-          return;
-        } else {
+        if (param0 == 32) {
           field_i = null;
           field_c = null;
           field_j = null;
@@ -53,29 +51,29 @@ final class oa {
         int var23 = 0;
         int var24 = 0;
         try {
-            var6 = param3 << 2146270914;
-            var7 = param1 << -1619765406;
-            var12 = param2.field_c;
-            var14 = 25.0;
-            var16 = var12 * 3.141592653589793 / 128.0;
-            var18 = Math.sin(var16) * -var14;
-            var20 = Math.cos(var16) * -var14;
-            var4_int = (int)(-var18 + (double)var6);
-            var8 = 8;
-            if (param0 != -17652) {
-                field_i = (bd) null;
-            }
-            var10 = 1;
-            var5 = (int)(-var20 + (double)var7);
-            var11 = 1;
-            var9 = 16;
-            var22 = 200 * (-param2.field_e + 32) / 32;
-            km.a((byte) var10, var7, var5, ni.field_c, var9, var6, (byte) var11, param0 + 17752, var4_int, var22, var8);
-            var23 = (int)((double)var8 / 1.3);
-            var24 = (int)((double)var9 / 1.3);
-            bh.a((byte) var10, HostileSpawn.field_E, (byte) var11, var23, var4_int, var5, var7, var24, var22, var6, 9233);
+          var6 = param3 << 2;
+          var7 = param1 << 2;
+          var12 = param2.field_c;
+          var14 = 25.0;
+          var16 = var12 * 3.141592653589793 / 128.0;
+          var18 = Math.sin(var16) * -var14;
+          var20 = Math.cos(var16) * -var14;
+          var4_int = (int)(-var18 + (double)var6);
+          var8 = 8;
+          if (param0 != -17652) {
+            field_i = (bd) null;
+          }
+          var10 = 1;
+          var5 = (int)(-var20 + (double)var7);
+          var11 = 1;
+          var9 = 16;
+          var22 = 200 * (-param2.field_e + 32) / 32;
+          km.a((byte) var10, var7, var5, ni.field_c, var9, var6, (byte) var11, param0 + 17752, var4_int, var22, var8);
+          var23 = (int)((double)var8 / 1.3);
+          var24 = (int)((double)var9 / 1.3);
+          bh.a((byte) var10, HostileSpawn.field_E, (byte) var11, var23, var4_int, var5, var7, var24, var22, var6, 9233);
         } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw wg.a((Throwable) ((Object) runtimeException), "oa.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -86,52 +84,29 @@ final class oa {
         jd stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (!param5) {
-              var9 = new jd(param2, param6, param4, param3, param7, param8, param0);
-              ib.field_a.a(var9, 117);
-              ea.a(var9, param1, 62);
-              stackIn_4_0 = (jd) (var9);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (jd) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param5) {
+            stackIn_2_0 = (jd) null;
+            return stackIn_2_0;
           }
+          var9 = new jd(param2, param6, param4, param3, param7, param8, param0);
+          ib.field_a.a(var9, 117);
+          ea.a(var9, param1, 62);
+          stackIn_4_0 = var9;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var9_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var9_ref);
-
-            stackIn_7_1 = new StringBuilder().append("oa.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var9_ref = decompiledCaughtException;
+          stackIn_7_0 = var9_ref;
+          stackIn_7_1 = new StringBuilder().append("oa.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw wg.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -146,77 +121,46 @@ final class oa {
         vb stackIn_15_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
-          L0: {
-            if (null != n.field_t) {
-              L1: {
-                var3 = -23 / ((34 - param0) / 41);
-                var7 = (CharSequence) ((Object) param1);
-                var2 = mf.a(false, var7);
-                if (var2 == null) {
-                  var2 = param1;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              var4 = (vb) ((Object) n.field_t.a((long)var2.hashCode(), -30828));
-              L2: while (true) {
-                if (var4 != null) {
-                  L3: {
-                    var8 = (CharSequence) ((Object) var4.field_Ib);
-                    var5 = mf.a(false, var8);
-                    if (var5 != null) {
-                      break L3;
-                    } else {
-                      var5 = var4.field_Ib;
-                      break L3;
-                    }
-                  }
-                  if (var5.equals(var2)) {
-                    stackIn_15_0 = (vb) (var4);
-                    break L0;
-                  } else {
-                    var4 = (vb) ((Object) n.field_t.a(83));
-                    continue L2;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              return null;
-            }
+          if (null == n.field_t) {
+            return null;
           }
+          var3 = -23 / ((34 - param0) / 41);
+          var7 = (CharSequence) ((Object) param1);
+          var2 = mf.a(false, var7);
+          if (var2 == null) {
+            var2 = param1;
+          }
+          var4 = (vb) (n.field_t.a((long)var2.hashCode(), -30828));
+          while (var4 != null) {
+            var8 = (CharSequence) ((Object) var4.field_Ib);
+            var5 = mf.a(false, var8);
+            if (var5 == null) {
+              var5 = var4.field_Ib;
+            }
+            if (var5.equals(var2)) {
+              stackIn_15_0 = var4;
+              return stackIn_15_0;
+            }
+            var4 = (vb) (n.field_t.a(83));
+          }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var2_ref = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var2_ref);
-
-            stackIn_20_1 = new StringBuilder().append("oa.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L4;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L4;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_20_0 = var2_ref;
+          stackIn_20_1 = new StringBuilder().append("oa.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw wg.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ')');
+          throw wg.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
-        return stackIn_15_0;
     }
 
     static {

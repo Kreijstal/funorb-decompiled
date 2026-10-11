@@ -12,23 +12,20 @@ final class bm extends pp {
         field_m = null;
         field_i = null;
         if (param0 != 3) {
-            field_m = (String) null;
+          field_m = (String) null;
         }
     }
 
     final static int a(int param0, int param1) {
-        String var2;
-        ji var3;
-        var2 = lka.field_E[param1][5];
+        String var2 = lka.field_E[param1][5];
         var2 = var2.toLowerCase();
         var2 = var2.trim();
-        var3 = (ji) ((Object) fi.field_m.a(true, (long)var2.hashCode()));
-        if (param0 <= 58) {
-          field_m = (String) null;
-          return var3.field_h;
-        } else {
+        ji var3 = (ji) (fi.field_m.a(true, (long)var2.hashCode()));
+        if (param0 > 58) {
           return var3.field_h;
         }
+        field_m = (String) null;
+        return var3.field_h;
     }
 
     bm(int param0, int param1, int param2) {
@@ -39,25 +36,25 @@ final class bm extends pp {
 
     final void a(lu param0, byte param1) {
         try {
-            int var3_int = 96 / ((34 - param1) / 58);
-            super.a(param0, (byte) -58);
-            param0.d(this.field_j, 0);
-            param0.d(this.field_k, 0);
-            param0.d(this.field_l, 0);
+          int var3_int = 96 / ((34 - param1) / 58);
+          super.a(param0, (byte) -58);
+          param0.d(this.field_j, 0);
+          param0.d(this.field_k, 0);
+          param0.d(this.field_l, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "bm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "bm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(aga param0, op param1, int param2) {
         try {
-            if (param2 != 12) {
-                lu var5 = (lu) null;
-                this.a((lu) null, (byte) 36);
-            }
-            param1.b((byte) 76, this.field_j, this.field_k, this.field_l);
+          if (param2 != 12) {
+            lu var5 = (lu) null;
+            this.a((lu) null, (byte) 36);
+          }
+          param1.b((byte) 76, this.field_j, this.field_k, this.field_l);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -66,7 +63,7 @@ final class bm extends pp {
         ha.field_n = param0;
         eo.field_l = param4;
         if (param3 != -14702) {
-            return;
+          return;
         }
         pw.field_x = param2;
     }

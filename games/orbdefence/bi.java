@@ -16,73 +16,42 @@ final class bi {
     }
 
     final static int a(CharSequence param0, char param1, int param2) {
+        int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            var3_int = 0;
-            var4 = param0.length();
-            var5 = 0;
-            L1: while (true) {
-              if (var4 <= var5) {
-                L2: {
-                  if (param2 >= 123) {
-                    break L2;
-                  } else {
-                    field_c = (byte[]) null;
-                    break L2;
-                  }
-                }
-                stackIn_12_0 = var3_int;
-                break L0;
-              } else {
-                L3: {
-                  if (param0.charAt(var5) == param1) {
-                    var3_int++;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var5++;
-                continue L1;
-              }
+          var3_int = 0;
+          var4 = param0.length();
+          for (var5 = 0; var4 > var5; var5++) {
+            if (param0.charAt(var5) == param1) {
+              var3_int++;
             }
           }
+          if (param2 < 123) {
+            field_c = (byte[]) null;
+          }
+          stackIn_12_0 = var3_int;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var3);
-
-            stackIn_15_1 = new StringBuilder().append("bi.A(");
-
-            if (param0 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L4;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("bi.A(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ',' + param1 + ',' + param2 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_12_0;
     }
 
     static {

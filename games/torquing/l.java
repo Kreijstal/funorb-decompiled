@@ -11,44 +11,36 @@ final class l {
         df var5 = null;
         int var4 = 0;
         try {
-            var5 = wa.field_d;
-            var5.f(param2 ^ 117, param0);
-            var5.field_n = var5.field_n + 1;
-            var4 = var5.field_n;
-            var5.b(90, param2);
-            var5.b(90, param1.field_p);
-            var5.b(90, param1.field_m);
-            var5.b((byte) 60, param1.field_l);
-            var5.b((byte) 60, param1.field_k);
-            var5.b((byte) 60, param1.field_q);
-            var5.b((byte) 60, param1.field_n);
-            var5.a(var4, true);
-            var5.c((byte) 48, var5.field_n + -var4);
+          var5 = wa.field_d;
+          var5.f(param2 ^ 117, param0);
+          var5.field_n = var5.field_n + 1;
+          var4 = var5.field_n;
+          var5.b(90, param2);
+          var5.b(90, param1.field_p);
+          var5.b(90, param1.field_m);
+          var5.b((byte) 60, param1.field_l);
+          var5.b((byte) 60, param1.field_k);
+          var5.b((byte) 60, param1.field_q);
+          var5.b((byte) 60, param1.field_n);
+          var5.a(var4, true);
+          var5.c((byte) 48, var5.field_n - var4);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "l.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static tl a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        int var6;
-        if (param3 != 83) {
-          return (tl) null;
-        } else {
-          L0: {
-            if (-1 != (param2 ^ -1)) {
-              break L0;
-            } else {
-              var6 = param1;
-              if (1 != var6) {
-                break L0;
-              } else {
-                param2 = 1000;
-                break L0;
-              }
+        int var6 = 0;
+        if (param3 == 83) {
+          if (param2 == 0) {
+            var6 = param1;
+            if (1 == var6) {
+              param2 = 1000;
             }
           }
           return new tl(param0, param5, param4, param1, param2);
         }
+        return (tl) null;
     }
 
     public static void a(byte param0) {
@@ -75,112 +67,54 @@ final class l {
         byte[] stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          L0: {
-            L1: {
-              var9 = new fj(param1);
-              var3 = var9.i((byte) -101);
-              var4 = var9.c((byte) -102);
-              if (param0 > var4) {
-                break L1;
+          var9 = new fj(param1);
+          var3 = var9.i((byte) -101);
+          var4 = var9.c((byte) -102);
+          if (param0 <= var4 && (0 == ee.field_v ||
+            !(var4 > ee.field_v))) {
+            if (0 == var3) {
+              var13 = new byte[var4];
+              var11 = var13;
+              var5 = var11;
+              var9.a(48, var4, var13, 0);
+              stackIn_21_0 = var5;
+              return stackIn_21_0;
+            }
+            var5_int = var9.c((byte) -108);
+            if (var5_int >= 0 && (ee.field_v == 0 ||
+              !(var5_int > ee.field_v))) {
+              var12 = new byte[var5_int];
+              var10 = var12;
+              var6 = var10;
+              if (var3 == 1) {
+                fc.a(var12, var5_int, param1, var4, 9);
               } else {
-                L2: {
-                  if (0 == ee.field_v) {
-                    break L2;
-                  } else {
-                    if (var4 <= ee.field_v) {
-                      break L2;
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                if (0 == var3) {
-                  var13 = new byte[var4];
-                  var11 = var13;
-                  var5 = var11;
-                  var9.a(48, var4, var13, 0);
-                  stackIn_21_0 = (byte[]) (var5);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    var5_int = var9.c((byte) -108);
-                    if (-1 < (var5_int ^ -1)) {
-                      break L3;
-                    } else {
-                      L4: {
-                        if (ee.field_v == 0) {
-                          break L4;
-                        } else {
-                          if (var5_int > ee.field_v) {
-                            break L3;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                      L5: {
-                        var12 = new byte[var5_int];
-                        var10 = var12;
-                        var6 = var10;
-                        if (-2 == (var3 ^ -1)) {
-                          fc.a(var12, var5_int, param1, var4, 9);
-                          break L5;
-                        } else {
-                          var7 = wo.field_d;
-                          synchronized (var7) {
-                            L6: {
-                              wo.field_d.a((byte) -67, var9, var12);
-                              break L6;
-                            }
-                          }
-                          break L5;
-                        }
-                      }
-                      stackIn_19_0 = (byte[]) (var6);
-                      decompiledRegionSelector0 = 0;
-                      break L0;
-                    }
-                  }
-                  throw new RuntimeException();
+                var7 = wo.field_d;
+                synchronized (var7) {
+                  wo.field_d.a((byte) -67, var9, var12);
                 }
               }
+              stackIn_19_0 = var6;
+              return stackIn_19_0;
             }
             throw new RuntimeException();
           }
+          throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2);
-
-            stackIn_24_1 = new StringBuilder().append("l.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L7;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L7;
-            }
+          var2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("l.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_19_0;
-        } else {
-          return stackIn_21_0;
+          throw rb.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -188,49 +122,44 @@ final class l {
         df var5 = null;
         int var4 = 0;
         try {
-            var5 = wa.field_d;
-            df var3 = var5;
-            var5.f(127, param1);
-            var5.field_n = var5.field_n + 1;
-            var4 = var5.field_n;
-            var5.b(90, param2);
-            if (param0.field_j != null) {
-                var5.b(90, param0.field_j.length);
-                var5.a(param0.field_j.length, 0, param0.field_j, (byte) -58);
-            } else {
-                var5.b(90, 0);
-            }
-            var5.a(var4, true);
-            var5.field_n = var5.field_n - 4;
-            param0.field_k = var5.c((byte) -88);
-            var5.c((byte) 48, -var4 + var5.field_n);
+          var5 = wa.field_d;
+          df var3 = var5;
+          var5.f(127, param1);
+          var5.field_n = var5.field_n + 1;
+          var4 = var5.field_n;
+          var5.b(90, param2);
+          if (param0.field_j != null) {
+            var5.b(90, param0.field_j.length);
+            var5.a(param0.field_j.length, 0, param0.field_j, (byte) -58);
+          } else {
+            var5.b(90, 0);
+          }
+          var5.a(var4, true);
+          var5.field_n = var5.field_n - 4;
+          param0.field_k = var5.c((byte) -88);
+          var5.c((byte) 48, -var4 + var5.field_n);
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "l.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param2 == 23273) {
-          if (param3 >= param5) {
-            if (param4 + param5 > param3) {
-              if (param6 <= param1) {
-                if (param1 >= param0 + param6) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param2 != 23273) {
           return true;
         }
+        if (param3 < param5) {
+          return false;
+        }
+        if (param4 + param5 <= param3) {
+          return false;
+        }
+        if (param6 > param1) {
+          return false;
+        }
+        if (param1 < param0 + param6) {
+          return true;
+        }
+        return false;
     }
 
     static {

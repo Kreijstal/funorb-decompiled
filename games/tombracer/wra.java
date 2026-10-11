@@ -18,26 +18,13 @@ final class wra extends IOException {
         RuntimeException var1 = null;
         var2 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_b = (String) null;
-                break L1;
-              }
-            }
-            var1_int = 0;
-            L2: while (true) {
-              if (db.field_h.field_c.length <= var1_int) {
-                break L0;
-              } else {
-                db.field_h.field_c[var1_int] = vba.field_x[var1_int];
-                var1_int++;
-                continue L2;
-              }
-            }
+          if (param0 != 0) {
+            field_b = (String) null;
           }
+          for (var1_int = 0; db.field_h.field_c.length > var1_int; var1_int++) {
+            db.field_h.field_c[var1_int] = vba.field_x[var1_int];
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -48,9 +35,9 @@ final class wra extends IOException {
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
-            field_a = (String) null;
-            field_b = null;
-            return;
+          field_a = (String) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

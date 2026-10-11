@@ -15,100 +15,71 @@ final class ol extends km {
     final void a(int param0, int param1, char param2) {
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == -120) {
-          L0: {
-            if ((this.field_h.field_j ^ -1) <= -1) {
-              L1: {
-                if (param1 == 98) {
-                  break L1;
+        if (param0 != -120) {
+          return;
+        }
+        boolean decompiledFrameRemainder0 = true;
+        if (this.field_h.field_j >= 0) {
+          if (param1 != 98 &&
+            param1 != 99) {
+            if (param1 == 96) {
+              if (1 == this.field_h.field_j) {
+                this.field_h.a(false, 2);
+              } else {
+                if ((this.field_h.field_j == 2)) {
+                  this.field_h.a(false, 1);
+                }
+              }
+            } else {
+              if ((param1 == 97)) {
+                if (this.field_h.field_j == 2) {
+                  this.field_h.a(false, 1);
                 } else {
-                  if (param1 != 99) {
-                    if (-97 == (param1 ^ -1)) {
-                      if (1 != this.field_h.field_j) {
-                        if (-3 != (this.field_h.field_j ^ -1)) {
-                          break L0;
-                        } else {
-                          this.field_h.a(false, 1);
-                          break L0;
-                        }
-                      } else {
-                        this.field_h.a(false, 2);
-                        break L0;
-                      }
-                    } else {
-                      if ((param1 ^ -1) == -98) {
-                        if (this.field_h.field_j == 2) {
-                          this.field_h.a(false, 1);
-                          break L0;
-                        } else {
-                          if (-2 != (this.field_h.field_j ^ -1)) {
-                            break L0;
-                          } else {
-                            this.field_h.a(false, 2);
-                            break L0;
-                          }
-                        }
-                      } else {
-                        break L0;
-                      }
-                    }
-                  } else {
-                    break L1;
+                  if ((this.field_h.field_j == 1)) {
+                    this.field_h.a(false, 2);
                   }
                 }
               }
-              if (this.field_h.field_j == 0) {
-                this.field_h.a(false, 1);
-                break L0;
-              } else {
-                this.field_h.a(false, 0);
-                break L0;
-              }
+            }
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            if (this.field_h.field_j == 0) {
+              this.field_h.a(false, 1);
             } else {
               this.field_h.a(false, 0);
-              break L0;
             }
           }
-          return;
         } else {
-          return;
+          this.field_h.a(false, 0);
         }
+
     }
 
     final boolean a(int param0, boolean param1, byte param2) {
         int var4;
         int var5;
         int var6;
-        L0: {
-          var6 = BrickABrac.field_J ? 1 : 0;
-          var4 = this.field_m[param0].field_f;
-          var5 = var4;
-          if (var5 != 40) {
-            if ((var5 ^ -1) != -42) {
-              return super.a(param0, param1, (byte) 123);
-            } else {
-              if (!this.field_h.a((byte) 113)) {
-                break L0;
-              } else {
-                ng.a(param1, 54, 15);
-                break L0;
-              }
-            }
-          } else {
-            if (this.field_h.a((byte) 113)) {
-              ng.a(param1, param2 + -54, 13);
-              break L0;
-            } else {
-              break L0;
-            }
+        var6 = BrickABrac.field_J ? 1 : 0;
+        var4 = this.field_m[param0].field_f;
+        var5 = var4;
+        if (var5 != 40) {
+          if (var5 != 41) {
+            return super.a(param0, param1, (byte) 123);
+          }
+          if (this.field_h.a((byte) 113)) {
+            ng.a(param1, 54, 15);
+          }
+        } else {
+          if (this.field_h.a((byte) 113)) {
+            ng.a(param1, param2 - 54, 13);
           }
         }
         if (param2 == 123) {
           return false;
-        } else {
-          field_x = (String) null;
-          return false;
         }
+        field_x = (String) null;
+        return false;
     }
 
     public static void f(int param0) {
@@ -116,17 +87,17 @@ final class ol extends km {
         field_v = null;
         field_x = null;
         if (param0 != 14529) {
-            field_z = (jp[]) null;
+          field_z = (jp[]) null;
         }
         field_z = null;
     }
 
     final void b(boolean param0) {
         int dupTemp$0 = 0;
+        int var4 = 0;
         String stackIn_7_0 = null;
         int var2;
         int var3;
-        int var4;
         q var5;
         String var5_ref;
         int var6;
@@ -136,68 +107,49 @@ final class ol extends km {
         String var10;
         q var11;
         q var12;
+        int var3Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
-        if (param0) {
-          var2 = 0;
-          var3 = 0;
-          L0: while (true) {
-            if (1 <= var3) {
-              var3 = (640 - var2) / 2;
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= 1) {
-                  var8 = this.field_m[1];
-                  var12 = var8;
-                  var8.field_j = hq.field_s[0].field_x + 60;
-                  var12.field_d = var12.field_j;
-                  var12.field_c = (600 + -(2 * var12.field_j)) / 2;
-                  var12.field_a = (523 + -var12.field_d) / 2;
-                  var5 = this.field_m[2];
-                  var5.field_a = var12.field_a;
-                  var5.field_d = var12.field_d;
-                  var5.field_c = 340;
-                  var5.field_j = var12.field_j;
-                  return;
-                } else {
-                  var11 = this.field_m[var4];
-                  var11.field_c = var3;
-                  var11.field_a = this.b(var4, 1);
-                  var11.field_d = this.b((byte) -112, var4);
-                  var3 = var3 + (var11.field_j + 10);
-                  var4++;
-                  continue L1;
-                }
-              }
-            } else {
-              L2: {
-                var7 = this.field_m[var3];
-                var9 = var7;
-                if (var9.field_f == 8) {
-                  stackIn_7_0 = this.e((byte) 81);
-                  break L2;
-                } else {
-                  stackIn_7_0 = ag.field_D[var7.field_f];
-                  break L2;
-                }
-              }
-              var10 = stackIn_7_0;
-              var5_ref = var10;
-              dupTemp$0 = nn.field_g.c(var10) - -30;
-              var9.field_j = dupTemp$0;
-              var2 = var2 + dupTemp$0;
-              if (var3 > 0) {
-                var2 += 10;
-                var3++;
-                continue L0;
-              } else {
-                var3++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (!param0) {
           return;
         }
+        var2 = 0;
+        for (var3 = 0; 1 > var3; var3++) {
+          var7 = this.field_m[var3];
+          var9 = var7;
+          if (var9.field_f == 8) {
+            stackIn_7_0 = this.e((byte) 81);
+          } else {
+            stackIn_7_0 = ag.field_D[var7.field_f];
+          }
+          var10 = stackIn_7_0;
+          var5_ref = var10;
+          dupTemp$0 = nn.field_g.c(var10) + 30;
+          var9.field_j = dupTemp$0;
+          var2 = var2 + dupTemp$0;
+          if (var3 > 0) {
+            var2 += 10;
+          }
+        }
+        var3Lifetime1 = (640 - var2) / 2;
+        for (var4 = 0; var4 < 1; var4++) {
+          var11 = this.field_m[var4];
+          var11.field_c = var3Lifetime1;
+          var11.field_a = this.b(var4, 1);
+          var11.field_d = this.b((byte) -112, var4);
+          var3Lifetime1 = var3Lifetime1 + (var11.field_j + 10);
+        }
+        var8 = this.field_m[1];
+        var12 = var8;
+        var8.field_j = hq.field_s[0].field_x + 60;
+        var12.field_d = var12.field_j;
+        var12.field_c = (600 - 2 * var12.field_j) / 2;
+        var12.field_a = (523 - var12.field_d) / 2;
+        var5 = this.field_m[2];
+        var5.field_a = var12.field_a;
+        var5.field_d = var12.field_d;
+        var5.field_c = 340;
+        var5.field_j = var12.field_j;
+        return;
     }
 
     ol() {
@@ -214,7 +166,7 @@ final class ol extends km {
         this.field_u.a((byte) 105);
         this.field_t.a((byte) 116);
         if (param0 >= -14) {
-            field_z = (jp[]) null;
+          field_z = (jp[]) null;
         }
     }
 
@@ -223,7 +175,7 @@ final class ol extends km {
         this.field_u.b((byte) -75);
         this.field_t.b((byte) -75);
         if (param2 > -52) {
-            field_r = (jp) null;
+          field_r = (jp) null;
         }
     }
 

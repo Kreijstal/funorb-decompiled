@@ -18,16 +18,14 @@ final class oo {
         field_c = null;
         field_d = null;
         field_b = null;
-        if (param0 != -18178) {
-          field_e = (int[]) null;
-          field_a = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 == -18178) {
           field_a = null;
           field_h = null;
           return;
         }
+        field_e = (int[]) null;
+        field_a = null;
+        field_h = null;
     }
 
     static {

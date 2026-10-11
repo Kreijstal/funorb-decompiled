@@ -12,18 +12,16 @@ final class eo {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        if (param0 != 6) {
-          eo.a(20);
-          field_d = (int[][]) null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
+        if (param0 == 6) {
           field_d = (int[][]) null;
           field_e = null;
           field_a = null;
           return;
         }
+        eo.a(20);
+        field_d = (int[][]) null;
+        field_e = null;
+        field_a = null;
     }
 
     static {

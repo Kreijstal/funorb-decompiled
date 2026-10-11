@@ -10,36 +10,39 @@ final class hm extends rqa {
 
     final static String e(int param0) {
         int var2 = 0;
-        String var7 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var8 = null;
-        int var5 = VoidHunters.field_G;
-        String var6 = "(" + iq.field_a + " " + foa.field_o + " " + fd.field_r + ") " + ow.field_a;
-        String var1 = var6;
+        String var1;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        var5 = VoidHunters.field_G;
+        var6 = "(" + iq.field_a + " " + foa.field_o + " " + fd.field_r + ") " + ow.field_a;
+        var1 = var6;
         if (param0 != -13514) {
-            hm.e(-111);
+          hm.e(-111);
         }
         if (0 < vja.field_a) {
-            var1 = var6 + ":";
-            for (var2 = 0; var2 < vja.field_a; var2++) {
-                var7 = var1 + ' ';
-                var3 = qga.field_b.field_h[var2] & 255;
-                var4 = var3 >> -203240348;
-                var3 = var3 & 15;
-                if ((var4 ^ -1) > -11) {
-                    var4 += 48;
-                } else {
-                    var4 += 55;
-                }
-                if (-11 < (var3 ^ -1)) {
-                    var3 += 48;
-                } else {
-                    var3 += 55;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
+          var1 = var6 + ":";
+          for (var2 = 0; var2 < vja.field_a; var2++) {
+            var7 = var1 + ' ';
+            var3 = qga.field_b.field_h[var2] & 255;
+            var4 = var3 >> 4;
+            var3 = var3 & 15;
+            if (var4 >= 10) {
+              var4 += 55;
+            } else {
+              var4 += 48;
             }
+            if (var3 >= 10) {
+              var3 += 55;
+            } else {
+              var3 += 48;
+            }
+            var8 = var7 + (char)var4;
+            var1 = var8 + (char)var3;
+          }
         }
         return var1;
     }
@@ -49,53 +52,33 @@ final class hm extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              si.a(220, 62, param0[0].a(104));
-              if (param1 < -119) {
-                break L1;
-              } else {
-                hm.a(-107);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc("void");
-            break L0;
+          si.a(220, 62, param0[0].a(104));
+          if (param1 >= -119) {
+            hm.a(-107);
           }
+          stackIn_3_0 = new nc("void");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("hm.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("hm.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
         field_o = null;
         if (param0 >= -120) {
-            hm.a(67);
+          hm.a(67);
         }
     }
 

@@ -19,7 +19,7 @@ final class ad extends qb {
 
     final static void a(int param0) {
         if (param0 < 40) {
-            ad.d(90);
+          ad.d(90);
         }
     }
 
@@ -28,31 +28,29 @@ final class ad extends qb {
         field_q = null;
         field_i = null;
         field_j = null;
-        if (param0 < 65) {
-          field_g = (int[]) null;
-          field_t = null;
-          return;
-        } else {
+        if (param0 >= 65) {
           field_t = null;
           return;
         }
+        field_g = (int[]) null;
+        field_t = null;
     }
 
     ad(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         int fieldTemp$0 = 0;
         try {
-            this.field_n = param4;
-            this.field_l = param3;
-            this.field_m = param1;
-            this.field_s = param5;
-            this.field_r = param0;
-            this.field_o = param6;
-            this.field_k = param2;
-            fieldTemp$0 = bj.field_h;
-            bj.field_h = bj.field_h + 1;
-            this.field_p = 65535 & fieldTemp$0;
+          this.field_n = param4;
+          this.field_l = param3;
+          this.field_m = param1;
+          this.field_s = param5;
+          this.field_r = param0;
+          this.field_o = param6;
+          this.field_k = param2;
+          fieldTemp$0 = bj.field_h;
+          bj.field_h = bj.field_h + 1;
+          this.field_p = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ad.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ad.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -17,63 +17,40 @@ public class gh {
         field_d = param2;
         field_c = param0;
         try {
-          L0: {
-            field_a = System.getProperty("user.home");
-            if (null != field_a) {
-              field_a = field_a + "/";
-              break L0;
-            } else {
-              L1: {
-                field_b = true;
-                if (field_a == null) {
-                  field_a = "~/";
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              if (param1 >= 118) {
-                return;
-              } else {
-                field_c = -6;
-                return;
-              }
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_a = System.getProperty("user.home");
+          if (null == field_a) {
             field_b = true;
             if (field_a == null) {
               field_a = "~/";
-              break L2;
-            } else {
-              break L2;
             }
-          }
-          if (param1 < 118) {
+            if (param1 >= 118) {
+              return;
+            }
             field_c = -6;
             return;
-          } else {
-            return;
           }
-        }
-        L3: {
+          field_a = field_a + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
           field_b = true;
           if (field_a == null) {
             field_a = "~/";
-            break L3;
-          } else {
-            break L3;
           }
-        }
-        if (param1 < 118) {
+          if (param1 >= 118) {
+            return;
+          }
           field_c = -6;
           return;
-        } else {
+        }
+        field_b = true;
+        if (field_a == null) {
+          field_a = "~/";
+        }
+        if (param1 >= 118) {
           return;
         }
+        field_c = -6;
     }
 
     private gh() throws Throwable {
@@ -82,7 +59,7 @@ public class gh {
 
     public static File a(int param0, String param1) {
         if (param0 >= -2) {
-            return (File) null;
+          return (File) null;
         }
         return gh.a(field_d, field_c, (byte) 21, param1);
     }

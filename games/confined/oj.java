@@ -13,15 +13,7 @@ final class oj extends nd {
     static int field_x;
 
     public static void e(int param0) {
-        if (param0 != 20) {
-          field_B = -32;
-          field_w = null;
-          field_y = null;
-          field_C = null;
-          field_z = null;
-          field_D = null;
-          return;
-        } else {
+        if (param0 == 20) {
           field_w = null;
           field_y = null;
           field_C = null;
@@ -29,28 +21,34 @@ final class oj extends nd {
           field_D = null;
           return;
         }
+        field_B = -32;
+        field_w = null;
+        field_y = null;
+        field_C = null;
+        field_z = null;
+        field_D = null;
     }
 
     oj(Object param0, int param1) {
         super(param1);
         try {
-            this.field_v = param0;
+          this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final boolean f(byte param0) {
         if (param0 > -100) {
-            return true;
+          return true;
         }
         return false;
     }
 
     final Object d(int param0) {
         if (param0 != -4) {
-            oj.e(-107);
-            return this.field_v;
+          oj.e(-107);
+          return this.field_v;
         }
         return this.field_v;
     }

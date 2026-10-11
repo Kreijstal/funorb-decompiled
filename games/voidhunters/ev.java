@@ -16,7 +16,7 @@ abstract class ev {
         field_c = null;
         field_b = null;
         if (param0 != 28378) {
-            ev.a(72);
+          ev.a(72);
         }
     }
 

@@ -9,7 +9,7 @@ final class ji {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-            field_b = (int[]) null;
+          field_b = (int[]) null;
         }
     }
 
@@ -17,74 +17,40 @@ final class ji {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
+        int var3_intLifetime1;
         var4 = AceOfSkies.field_G ? 1 : 0;
         try {
-          L0: {
-            if (param2 == 37) {
-              L1: {
-                if (ms.field_d != param1) {
-                  ct.field_v = new int[param1];
-                  var3_int = 0;
-                  L2: while (true) {
-                    if (param1 <= var3_int) {
-                      ms.field_d = param1;
-                      break L1;
-                    } else {
-                      ct.field_v[var3_int] = (var3_int << 86340652) / param1;
-                      var3_int++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  break L1;
-                }
-              }
-              L3: {
-                if (df.field_f == param0) {
-                  break L3;
-                } else {
-                  L4: {
-                    if (ms.field_d == param0) {
-                      mo.field_c = ct.field_v;
-                      break L4;
-                    } else {
-                      mo.field_c = new int[param0];
-                      var5 = 0;
-                      var3_int = var5;
-                      L5: while (true) {
-                        if (param0 <= var5) {
-                          break L4;
-                        } else {
-                          mo.field_c[var5] = (var5 << 1349979692) / param0;
-                          var5++;
-                          continue L5;
-                        }
-                      }
-                    }
-                  }
-                  df.field_f = param0;
-                  break L3;
-                }
-              }
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param2 != 37) {
+            return;
           }
+          if (ms.field_d != param1) {
+            ct.field_v = new int[param1];
+            for (var3_int = 0; param1 > var3_int; var3_int++) {
+              ct.field_v[var3_int] = (var3_int << 12) / param1;
+            }
+            ms.field_d = param1;
+          }
+          if (df.field_f != param0) {
+            if (ms.field_d != param0) {
+              mo.field_c = new int[param0];
+              var5 = 0;
+              var3_intLifetime1 = var5;
+              while (param0 > var5) {
+                mo.field_c[var5] = (var5 << 12) / param0;
+                var5++;
+              }
+            } else {
+              mo.field_c = ct.field_v;
+            }
+            df.field_f = param0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "ji.B(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

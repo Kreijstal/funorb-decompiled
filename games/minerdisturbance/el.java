@@ -8,63 +8,18 @@ final class el {
     static char field_d;
 
     final static void a(int param0, int param1) {
-        L0: {
-          if (al.field_s == de.field_b) {
-            break L0;
-          } else {
-            if (aa.field_e != de.field_b) {
-              if (param1 == -5629) {
-                if (-1 == (param0 ^ -1)) {
-                  L1: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
-                    if ((param0 ^ -1) == -2) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  return;
-                } else {
-                  L2: {
-                    if ((param0 ^ -1) == -2) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                el.a(53, -55);
-                if (-1 != (param0 ^ -1)) {
-                  L3: {
-                    if ((param0 ^ -1) == -2) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return;
-                } else {
-                  L4: {
-                    mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
-                    if ((param0 ^ -1) == -2) {
-                      mm.a(false, eg.field_p, 2, 1, true, 2);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              break L0;
-            }
+        if (al.field_s != de.field_b &&
+          aa.field_e != de.field_b) {
+          if (param1 != -5629) {
+            el.a(53, -55);
           }
+          if (param0 == 0) {
+            mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
+          }
+          if (param0 == 1) {
+            mm.a(false, eg.field_p, 2, 1, true, 2);
+          }
+          return;
         }
     }
 
@@ -74,64 +29,36 @@ final class el {
         ea stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param3 == 2) {
-                break L1;
-              } else {
-                el.a(115, 46);
-                break L1;
-              }
-            }
-            if (cn.a(param0, param3 + 256, param1, param2)) {
-              stackIn_6_0 = ti.a(0);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_4_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param3 != 2) {
+            el.a(115, 46);
           }
+          if (cn.a(param0, param3 + 256, param1, param2)) {
+            stackIn_6_0 = ti.a(0);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (ea) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var4 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var4);
-
-            stackIn_9_1 = new StringBuilder().append("el.C(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("el.C(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (ea) ((Object) stackIn_4_0);
-        } else {
-          return stackIn_6_0;
+          throw lj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_a = null;
         if (param0 != 2) {
-            return;
+          return;
         }
         field_b = null;
     }

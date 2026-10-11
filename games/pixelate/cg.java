@@ -11,32 +11,32 @@ final class cg extends gn {
 
     final static String b(boolean param0) {
         if (param0) {
-            field_F = -79;
-            if (null == kn.field_J) {
-                return "";
-            }
-            return kn.field_J;
+          field_F = -79;
+          if (null == kn.field_J) {
+            return "";
+          }
+          return kn.field_J;
         }
         if (null == kn.field_J) {
-            return "";
+          return "";
         }
         return kn.field_J;
     }
 
     public static void i(int param0) {
         if (param0 != 100) {
-            return;
+          return;
         }
         field_H = null;
     }
 
     final int g(int param0) {
         if (this.field_v) {
-            return 0;
+          return 0;
         }
         if (param0 >= -92) {
-            this.field_C = -114;
-            return 100;
+          this.field_C = -114;
+          return 100;
         }
         return 100;
     }
@@ -74,87 +74,89 @@ final class cg extends gn {
         int var6 = 0;
         int var7 = 0;
         tf var30 = null;
+        tf var30Lifetime1;
+        tf var30Lifetime2;
+        tf var30Lifetime3;
+        tf var30Lifetime4;
+        tf var30Lifetime5;
+        tf var30Lifetime6;
         try {
-            em.a((String) null, 0L, (String) null, -1, param1, -163, (gp) null, (int[]) null, param2);
-            if (!(0 != param2)) {
-                var11 = eg.field_n;
-                var12 = h.field_V[0];
-                var30 = var12;
-                var30 = var12;
-                var13 = dg.field_e;
-                var11.field_b.a(0, 11, var12, var13);
-                var14 = eg.field_n;
-                var15 = h.field_V[1];
-                var30 = var15;
-                var30 = var15;
-                var16 = ap.field_b;
-                var14.field_b.a(param0 + 13, 12, var15, var16);
-                var17 = eg.field_n;
-                var18 = h.field_V[2];
-                var30 = var18;
-                var30 = var18;
-                var19 = uo.field_d;
-                var17.field_b.a(0, 13, var18, var19);
-            }
-            if (1 == param2) {
-                var20 = eg.field_n;
-                var21 = h.field_V[0];
-                var22 = bm.field_m;
-                var20.field_b.a(param0 + 13, 11, var21, var22);
-                var23 = eg.field_n;
-                var24 = h.field_V[1];
-                var25 = cl.field_i;
-                var23.field_b.a(param0 ^ -13, 12, var24, var25);
-                var26 = eg.field_n;
-                var27 = h.field_V[2];
-                var28 = ec.field_n;
-                var26.field_b.a(0, 13, var27, var28);
-            }
-            if ((param2 ^ -1) == -3) {
-                var29 = eg.field_n;
-                var30 = h.field_V[0];
-                var31 = vd.field_b;
-                var29.field_b.a(0, 11, var30, var31);
-                var32 = eg.field_n;
-                var33 = h.field_V[1];
-                var34 = ge.field_e;
-                var32.field_b.a(0, 12, var33, var34);
-                var35 = eg.field_n;
-                var36 = h.field_V[2];
-                var37 = sf.field_a;
-                var35.field_b.a(0, 13, var36, var37);
-            }
-            var38 = eg.field_n;
-            var4 = param1.field_tb;
-            var5 = param1.field_gb;
-            var6 = param1.field_K;
-            var7 = param1.field_nb;
-            if (param0 != -13) {
-                field_H = (pb) null;
-            }
-            var38.field_b.b(var7, var4, 91, var5, var6);
+          em.a((String) null, 0L, (String) null, -1, param1, -163, (gp) null, (int[]) null, param2);
+          if (0 == param2) {
+            var11 = eg.field_n;
+            var12 = h.field_V[0];
+            var30 = var12;
+            var30Lifetime2 = var12;
+            var13 = dg.field_e;
+            var11.field_b.a(0, 11, var12, var13);
+            var14 = eg.field_n;
+            var15 = h.field_V[1];
+            var30Lifetime3 = var15;
+            var30Lifetime4 = var15;
+            var16 = ap.field_b;
+            var14.field_b.a(param0 + 13, 12, var15, var16);
+            var17 = eg.field_n;
+            var18 = h.field_V[2];
+            var30Lifetime5 = var18;
+            var30Lifetime6 = var18;
+            var19 = uo.field_d;
+            var17.field_b.a(0, 13, var18, var19);
+          }
+          if (1 == param2) {
+            var20 = eg.field_n;
+            var21 = h.field_V[0];
+            var22 = bm.field_m;
+            var20.field_b.a(param0 + 13, 11, var21, var22);
+            var23 = eg.field_n;
+            var24 = h.field_V[1];
+            var25 = cl.field_i;
+            var23.field_b.a(param0 ^ -13, 12, var24, var25);
+            var26 = eg.field_n;
+            var27 = h.field_V[2];
+            var28 = ec.field_n;
+            var26.field_b.a(0, 13, var27, var28);
+          }
+          if (param2 == 2) {
+            var29 = eg.field_n;
+            var30Lifetime1 = h.field_V[0];
+            var31 = vd.field_b;
+            var29.field_b.a(0, 11, var30Lifetime1, var31);
+            var32 = eg.field_n;
+            var33 = h.field_V[1];
+            var34 = ge.field_e;
+            var32.field_b.a(0, 12, var33, var34);
+            var35 = eg.field_n;
+            var36 = h.field_V[2];
+            var37 = sf.field_a;
+            var35.field_b.a(0, 13, var36, var37);
+          }
+          var38 = eg.field_n;
+          var4 = param1.field_tb;
+          var5 = param1.field_gb;
+          var6 = param1.field_K;
+          var7 = param1.field_nb;
+          if (param0 != -13) {
+            field_H = (pb) null;
+          }
+          var38.field_b.b(var7, var4, 91, var5, var6);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "cg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final byte[] h(int param0) {
-        ak var3;
-        if (param0 == 0) {
-          if (this.field_v) {
-            throw new RuntimeException();
-          } else {
-            return this.field_D;
-          }
-        } else {
-          var3 = (ak) null;
+        if (param0 != 0) {
+          ak var3 = (ak) null;
           cg.a((byte) 66, (ak) null, -96);
-          if (this.field_v) {
-            throw new RuntimeException();
-          } else {
+          if (!this.field_v) {
             return this.field_D;
           }
+          throw new RuntimeException();
         }
+        if (!this.field_v) {
+          return this.field_D;
+        }
+        throw new RuntimeException();
     }
 
     cg() {

@@ -17,20 +17,18 @@ final class wc {
 
     final static int a(int param0, int param1, int param2) {
         if (param0 != 29292) {
-            field_j = (ga) null;
+          field_j = (ga) null;
         }
-        if (!(ef.field_H != null)) {
-            return -1;
+        if (ef.field_H == null) {
+          return -1;
         }
-        if (param2 >= wk.field_c && ef.field_H.field_z + wk.field_c > param2 && qc.field_L <= param1) {
-            if (!(qc.field_L + ef.field_H.field_p <= param1)) {
-                return 0;
-            }
+        if (param2 >= wk.field_c && ef.field_H.field_z + wk.field_c > param2 && qc.field_L <= param1 &&
+          !(qc.field_L + ef.field_H.field_p <= param1)) {
+          return 0;
         }
-        if (param2 >= hj.field_f && param2 < hj.field_f - -ef.field_H.field_z && param1 >= hf.field_b) {
-            if (!(ef.field_H.field_p + hf.field_b <= param1)) {
-                return 1;
-            }
+        if (param2 >= hj.field_f && param2 < hj.field_f + ef.field_H.field_z && param1 >= hf.field_b &&
+          !(ef.field_H.field_p + hf.field_b <= param1)) {
+          return 1;
         }
         return -1;
     }
@@ -39,51 +37,24 @@ final class wc {
         field_f = null;
         field_j = null;
         if (param0 != 2) {
-            field_j = (ga) null;
+          field_j = (ga) null;
         }
     }
 
     final int a(byte param0) {
-        L0: {
-          if (this.field_a) {
-            break L0;
-          } else {
-            L1: {
-              if (this.field_i != 2) {
-                break L1;
-              } else {
-                if (-1 > (this.field_g ^ -1)) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            L2: {
-              if (param0 == 102) {
-                break L2;
-              } else {
-                this.field_i = -108;
-                break L2;
-              }
-            }
-            if ((tg.field_e ^ -1L) == (this.field_e ^ -1L)) {
-              return 1;
-            } else {
-              L3: {
-                if (jg.field_k != 2) {
-                  break L3;
-                } else {
-                  if (!aa.a(this.field_b, (byte) -85)) {
-                    break L3;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-              return 0;
-            }
+        if (!this.field_a && (this.field_i != 2 ||
+          this.field_g <= 0)) {
+          if (param0 != 102) {
+            this.field_i = -108;
           }
+          if (~tg.field_e == ~this.field_e) {
+            return 1;
+          }
+          if (jg.field_k == 2 &&
+            aa.a(this.field_b, (byte) -85)) {
+            return 1;
+          }
+          return 0;
         }
         return 2;
     }
@@ -97,9 +68,9 @@ final class wc {
         this.field_d = ac.field_r;
         this.field_b = tg.field_b;
         if (!param0) {
-            this.field_l = null;
+          this.field_l = null;
         } else {
-            this.field_l = rh.field_m;
+          this.field_l = rh.field_m;
         }
         this.field_e = ug.field_N;
     }

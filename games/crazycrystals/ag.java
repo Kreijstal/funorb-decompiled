@@ -8,23 +8,23 @@ final class ag {
 
     final static void a(String param0, int param1) {
         try {
-            if (param1 != 48) {
-                field_b = false;
-            }
+          if (param1 != 48) {
+            field_b = false;
+          }
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "ag.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static boolean a(char param0, int param1) {
         if (param1 != 48) {
-            return false;
+          return false;
         }
         if (param0 < 48) {
-            return false;
+          return false;
         }
         if (param0 > 57) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -32,9 +32,9 @@ final class ag {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 19266) {
-            field_b = false;
-            field_c = null;
-            return;
+          field_b = false;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

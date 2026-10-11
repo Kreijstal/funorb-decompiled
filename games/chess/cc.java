@@ -10,11 +10,9 @@ final class cc extends ab {
     static String field_v;
 
     final static void a(byte param0, int param1) {
-        nk var2;
-        int var3;
-        if (param0 != 81) {
-          return;
-        } else {
+        nk var2 = null;
+        int var3 = 0;
+        if (param0 == 81) {
           var2 = qn.field_U;
           var2.f(param1, -118);
           var2.field_l = var2.field_l + 1;
@@ -32,9 +30,9 @@ final class cc extends ab {
     public static void e(byte param0) {
         field_v = null;
         if (param0 < 17) {
-            field_z = 70;
-            field_A = null;
-            return;
+          field_z = 70;
+          field_A = null;
+          return;
         }
         field_A = null;
     }
@@ -43,37 +41,31 @@ final class cc extends ab {
     }
 
     final int f(int param0) {
-        if (param0 > 51) {
-          if (null == this.field_y) {
-            return 0;
-          } else {
-            return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
-          }
-        } else {
+        if (param0 <= 51) {
           cc.a((byte) -115, 18);
-          if (null == this.field_y) {
-            return 0;
-          } else {
+          if (null != this.field_y) {
             return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
           }
+          return 0;
         }
+        if (null != this.field_y) {
+          return 100 * this.field_y.field_l / (this.field_y.field_o.length - this.field_x);
+        }
+        return 0;
     }
 
     final byte[] a(boolean param0) {
-        if (!this.field_s) {
-          if (-this.field_x + this.field_y.field_o.length <= this.field_y.field_l) {
-            if (param0) {
-              this.field_y = (p) null;
-              return this.field_y.field_o;
-            } else {
-              return this.field_y.field_o;
-            }
-          } else {
-            throw new RuntimeException();
-          }
-        } else {
+        if (this.field_s) {
           throw new RuntimeException();
         }
+        if (-this.field_x + this.field_y.field_o.length > this.field_y.field_l) {
+          throw new RuntimeException();
+        }
+        if (!param0) {
+          return this.field_y.field_o;
+        }
+        this.field_y = (p) null;
+        return this.field_y.field_o;
     }
 
     static {

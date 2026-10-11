@@ -20,17 +20,7 @@ final class kf extends ck {
     static gh field_y;
 
     public static void d(int param0) {
-        if (param0 != 90) {
-          field_B = (String) null;
-          field_r = null;
-          field_B = null;
-          field_t = null;
-          field_A = null;
-          field_o = null;
-          field_v = null;
-          field_y = null;
-          return;
-        } else {
+        if (param0 == 90) {
           field_r = null;
           field_B = null;
           field_t = null;
@@ -40,39 +30,40 @@ final class kf extends ck {
           field_y = null;
           return;
         }
+        field_B = (String) null;
+        field_r = null;
+        field_B = null;
+        field_t = null;
+        field_A = null;
+        field_o = null;
+        field_v = null;
+        field_y = null;
     }
 
     kf() {
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2;
-        var2 = -27 % ((10 - param1) / 49);
-        if (param0 < 65) {
-          if (97 <= param0) {
-            if (param0 <= 122) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          if (90 < param0) {
-            if (97 <= param0) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
-            }
-          } else {
+        int var2 = -27 % ((10 - param1) / 49);
+        if (param0 >= 65) {
+          if (90 >= param0) {
             return true;
           }
+          if (97 > param0) {
+            return false;
+          }
+          if (param0 <= 122) {
+            return true;
+          }
+          return false;
         }
+        if (97 > param0) {
+          return false;
+        }
+        if (param0 > 122) {
+          return false;
+        }
+        return true;
     }
 
     static {

@@ -11,9 +11,9 @@ final class lba {
 
     public static void a(byte param0) {
         if (param0 >= -30) {
-            lba.a((byte) -112);
-            field_c = null;
-            return;
+          lba.a((byte) -112);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

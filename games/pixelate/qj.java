@@ -12,30 +12,23 @@ final class qj {
         CharSequence var5 = null;
         jo.field_k = param0;
         if (param2 != 8) {
-            return;
+          return;
         }
         try {
-            ce.field_d = 2;
-            var5 = (CharSequence) ((Object) param0);
-            fp.field_d = dh.a(var5, (byte) 74);
-            fp.field_e = param1;
-            ib.b(param2 ^ 20550);
+          ce.field_d = 2;
+          var5 = (CharSequence) ((Object) param0);
+          fp.field_d = dh.a(var5, (byte) 74);
+          fp.field_e = param1;
+          ib.b(param2 ^ 20550);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        pc var3;
-        if (param0) {
-          qj.a(false);
-          var3 = aa.field_f;
-          var3.g(param2, 15514);
-          var3.e(160, 3);
-          var3.e(160, 10);
-          var3.b(1276387944, param1);
-          return;
-        } else {
+        pc var3 = null;
+        pc var3Lifetime1;
+        if (!param0) {
           var3 = aa.field_f;
           var3.g(param2, 15514);
           var3.e(160, 3);
@@ -43,6 +36,12 @@ final class qj {
           var3.b(1276387944, param1);
           return;
         }
+        qj.a(false);
+        var3Lifetime1 = aa.field_f;
+        var3Lifetime1.g(param2, 15514);
+        var3Lifetime1.e(160, 3);
+        var3Lifetime1.e(160, 10);
+        var3Lifetime1.b(1276387944, param1);
     }
 
     public static void a(boolean param0) {
@@ -50,7 +49,7 @@ final class qj {
         field_e = null;
         field_a = null;
         if (param0) {
-            field_e = (tc) null;
+          field_e = (tc) null;
         }
     }
 

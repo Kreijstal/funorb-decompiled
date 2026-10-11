@@ -11,7 +11,7 @@ final class og {
 
     public static void a(byte param0) {
         if (param0 != 92) {
-            return;
+          return;
         }
         field_d = null;
         field_c = (byte[][]) null;
@@ -24,17 +24,15 @@ final class og {
     }
 
     final static rj a(int param0, byte param1) {
-        rj var2;
-        var2 = new rj();
+        rj var2 = new rj();
         sd.field_d.b(124, var2);
-        if (param1 != 113) {
-          field_a = (ka) null;
-          u.a(param0, 1);
-          return var2;
-        } else {
+        if (param1 == 113) {
           u.a(param0, 1);
           return var2;
         }
+        field_a = (ka) null;
+        u.a(param0, 1);
+        return var2;
     }
 
     static {

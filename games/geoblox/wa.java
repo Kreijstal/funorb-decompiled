@@ -160,9 +160,9 @@ final class wa {
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -210,10 +210,9 @@ final class wa {
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
               var14 = this.field_m.a(dd.field_E[var13Lifetime2]);
-              if (var14 <= var9) {
-                continue;
+              if (var14 > var9) {
+                var9 = var14;
               }
-              var9 = var14;
             }
           }
           var12 = param2;
@@ -231,14 +230,14 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          stackIn_28_0 = var5;
-          stackIn_28_1 = new StringBuilder().append("wa.G(").append(param0).append(',');
+          stackIn_29_0 = var5;
+          stackIn_29_1 = new StringBuilder().append("wa.G(").append(param0).append(',');
           if (param1 == null) {
-            stackIn_29_2 = "null";
+            stackIn_30_2 = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            stackIn_30_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

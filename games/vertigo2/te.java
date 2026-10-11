@@ -18,18 +18,16 @@ final class te extends ji {
     }
 
     private final void d(int param0, int param1) {
-        if (param0 != -17016) {
-          field_y = (String) null;
-          this.field_K = 4080 & param1 >> 300287300;
-          this.field_G = (16711680 & param1) >> -688124244;
-          this.field_A = (255 & param1) << -1977088540;
-          return;
-        } else {
-          this.field_K = 4080 & param1 >> 300287300;
-          this.field_G = (16711680 & param1) >> -688124244;
-          this.field_A = (255 & param1) << -1977088540;
+        if (param0 == -17016) {
+          this.field_K = 4080 & param1 >> 4;
+          this.field_G = (16711680 & param1) >> 12;
+          this.field_A = (255 & param1) << 4;
           return;
         }
+        field_y = (String) null;
+        this.field_K = 4080 & param1 >> 4;
+        this.field_G = (16711680 & param1) >> 12;
+        this.field_A = (255 & param1) << 4;
     }
 
     private te(int param0) {
@@ -40,15 +38,15 @@ final class te extends ji {
     final void a(byte param0, int param1, ed param2) {
         int var4_int = 0;
         try {
-            if (param0 != 110) {
-                field_z = (nj) null;
-            }
-            var4_int = param1;
-            if (0 == var4_int) {
-                this.d(-17016, param2.m(0));
-            }
+          if (param0 != 110) {
+            field_z = (nj) null;
+          }
+          var4_int = param1;
+          if (0 == var4_int) {
+            this.d(-17016, param2.m(0));
+          }
         } catch (RuntimeException runtimeException) {
-            throw wn.a((Throwable) ((Object) runtimeException), "te.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wn.a((Throwable) ((Object) runtimeException), "te.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -60,71 +58,58 @@ final class te extends ji {
         int var7;
         int var8;
         int[][] var9;
+        int var7Lifetime1;
+        int[] var4Lifetime1;
+        int[] var5Lifetime1;
+        int[] var6Lifetime1;
         var8 = Vertigo2.field_L ? 1 : 0;
         var9 = this.field_v.a(param1, param0 + 3778);
         var3 = var9;
         if (param0 == -3780) {
           if (!this.field_v.field_c) {
             return var9;
-          } else {
-            var4 = var9[0];
-            var5 = var9[1];
-            var6 = var9[2];
-            var7 = 0;
-            L0: while (true) {
-              if (we.field_M <= var7) {
-                return var9;
-              } else {
-                var4[var7] = this.field_G;
-                var5[var7] = this.field_K;
-                var6[var7] = this.field_A;
-                var7++;
-                continue L0;
-              }
-            }
           }
-        } else {
-          field_I = (String) null;
-          if (this.field_v.field_c) {
-            var4 = var9[0];
-            var5 = var9[1];
-            var6 = var9[2];
-            var7 = 0;
-            L1: while (true) {
-              if (we.field_M > var7) {
-                var4[var7] = this.field_G;
-                var5[var7] = this.field_K;
-                var6[var7] = this.field_A;
-                var7++;
-                continue L1;
-              } else {
-                return var9;
-              }
-            }
-          } else {
-            return var9;
+          var4 = var9[0];
+          var5 = var9[1];
+          var6 = var9[2];
+          for (var7 = 0; we.field_M > var7; var7++) {
+            var4[var7] = this.field_G;
+            var5[var7] = this.field_K;
+            var6[var7] = this.field_A;
           }
+          return var9;
         }
+        field_I = (String) null;
+        if (!this.field_v.field_c) {
+          return var9;
+        }
+        var4Lifetime1 = var9[0];
+        var5Lifetime1 = var9[1];
+        var6Lifetime1 = var9[2];
+        for (var7Lifetime1 = 0; we.field_M > var7Lifetime1; var7Lifetime1++) {
+          var4Lifetime1[var7Lifetime1] = this.field_G;
+          var5Lifetime1[var7Lifetime1] = this.field_K;
+          var6Lifetime1[var7Lifetime1] = this.field_A;
+        }
+        return var9;
     }
 
     public static void g(int param0) {
         field_F = null;
         field_B = null;
         field_z = null;
-        if (param0 != -30443) {
-          field_z = (nj) null;
-          field_I = null;
-          field_D = (int[][]) null;
-          field_y = null;
-          field_H = null;
-          return;
-        } else {
+        if (param0 == -30443) {
           field_I = null;
           field_D = (int[][]) null;
           field_y = null;
           field_H = null;
           return;
         }
+        field_z = (nj) null;
+        field_I = null;
+        field_D = (int[][]) null;
+        field_y = null;
+        field_H = null;
     }
 
     static {

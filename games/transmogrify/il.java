@@ -8,8 +8,8 @@ final class il {
 
     final static int b(byte param0) {
         if (param0 != -20) {
-            il.b((byte) 61);
-            return vd.field_a;
+          il.b((byte) 61);
+          return vd.field_a;
         }
         return vd.field_a;
     }
@@ -18,9 +18,9 @@ final class il {
         field_c = (int[][]) null;
         field_b = null;
         if (param0 != -24) {
-            il.a((byte) -33);
-            field_a = null;
-            return;
+          il.a((byte) -33);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -12,55 +12,32 @@ final class ela extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 <= -119) {
-              stackIn_4_0 = new nc(frb.a(156, 98));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 <= -119) {
+            stackIn_4_0 = new nc(frb.a(156, 98));
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("ela.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ela.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static int[] a(byte param0, int[] param1) {
-        int[] var2 = null;
         int var3 = 0;
+        int[] var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -71,99 +48,53 @@ final class ela extends rqa {
         int[] stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var6 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              var10 = new int[4];
-              var9 = var10;
-              var8 = var9;
-              var2 = var8;
-              var10[1] = -2147483648;
-              var10[0] = 2147483647;
-              var10[2] = 2147483647;
-              var10[3] = -2147483648;
-              if (param0 <= -93) {
-                break L1;
-              } else {
-                var7 = (int[]) null;
-                ela.a((byte) -43, (int[]) null);
-                break L1;
-              }
+          var10 = new int[4];
+          var9 = var10;
+          var8 = var9;
+          var2 = var8;
+          var10[1] = -2147483648;
+          var10[0] = 2147483647;
+          var10[2] = 2147483647;
+          var10[3] = -2147483648;
+          if (param0 > -93) {
+            var7 = (int[]) null;
+            ela.a((byte) -43, (int[]) null);
+          }
+          for (var3 = 0; var3 < param1.length; var3 += 2) {
+            var4 = param1[var3];
+            var5 = param1[1 + var3];
+            if (var4 < var10[0]) {
+              var10[0] = var4;
             }
-            var3 = 0;
-            L2: while (true) {
-              if (var3 >= param1.length) {
-                stackIn_20_0 = (int[]) (var8);
-                break L0;
-              } else {
-                L3: {
-                  var4 = param1[var3];
-                  var5 = param1[1 + var3];
-                  if (var4 < var10[0]) {
-                    var10[0] = var4;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (var10[2] > var5) {
-                    var10[2] = var5;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (var5 > var10[3]) {
-                    var10[3] = var5;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (var10[1] < var4) {
-                    var10[1] = var4;
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                var3 += 2;
-                continue L2;
-              }
+            if (var10[2] > var5) {
+              var10[2] = var5;
+            }
+            if (var5 > var10[3]) {
+              var10[3] = var5;
+            }
+            if (var10[1] < var4) {
+              var10[1] = var4;
             }
           }
+          stackIn_20_0 = var8;
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2_ref = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2_ref);
-
-            stackIn_23_1 = new StringBuilder().append("ela.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L7;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L7;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_23_0 = var2_ref;
+          stackIn_23_1 = new StringBuilder().append("ela.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
-        return stackIn_20_0;
     }
 
     ela(String param0, Class[] param1, String param2) {

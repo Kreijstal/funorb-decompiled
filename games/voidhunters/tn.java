@@ -8,7 +8,7 @@ final class tn {
     public static void a(byte param0) {
         field_b = null;
         if (param0 != 110) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 

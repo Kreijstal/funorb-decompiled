@@ -23,9 +23,9 @@ final class tl extends wg {
     }
 
     final wg b() {
-        if (!(!this.field_o)) {
-            this.field_o = false;
-            return (wg) ((Object) this.field_q);
+        if (this.field_o) {
+          this.field_o = false;
+          return (wg) ((Object) this.field_q);
         }
         return null;
     }
@@ -33,87 +33,64 @@ final class tl extends wg {
     final void b(int[] param0, int param1, int param2) {
         int var5 = EscapeVector.field_A;
         try {
-            while (param2 > this.field_m) {
-                this.field_k.a(param0, param1, this.field_m);
-                this.field_q.a(param0, param1, this.field_m);
-                param1 = param1 + this.field_m;
-                param2 = param2 - this.field_m;
-                this.e(117);
-            }
-            this.field_k.a(param0, param1, param2);
-            this.field_q.a(param0, param1, param2);
-            this.field_m = this.field_m - param2;
+          while (param2 > this.field_m) {
+            this.field_k.a(param0, param1, this.field_m);
+            this.field_q.a(param0, param1, this.field_m);
+            param1 = param1 + this.field_m;
+            param2 = param2 - this.field_m;
+            this.e(117);
+          }
+          this.field_k.a(param0, param1, param2);
+          this.field_q.a(param0, param1, param2);
+          this.field_m = this.field_m - param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void e(int param0) {
-        int var2;
-        int var3;
-        int var4;
-        int stackIn_4_0 = 0;
-        int stackIn_11_0 = 0;
-        var2 = this.field_p;
-        if (0 == var2) {
-          L0: {
-            this.field_r = 0;
-            if ((this.field_r & 65536) == 0) {
-              stackIn_11_0 = 0;
-              break L0;
-            } else {
-              stackIn_11_0 = this.field_s;
-              break L0;
-            }
-          }
-          var3 = stackIn_11_0;
+        int var3 = 0;
+        int var4 = 0;
+        int var2 = this.field_p;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        if (0 != var2) {
+          this.field_r = this.field_r - var2;
+          var3 = (this.field_r & 65536) != 0 ? this.field_s : 0;
           var4 = this.field_n;
           this.field_k.a(ie.field_q / 200, var3, var4);
-          this.field_q.a(ie.field_q / 200, var3 >> -1534028894, var4);
-          if (param0 < 96) {
-            return;
-          } else {
+          this.field_q.a(ie.field_q / 200, var3 >> 2, var4);
+          if (param0 >= 96) {
             this.field_m = ie.field_q / 100;
             return;
           }
-        } else {
-          L1: {
-            this.field_r = this.field_r - var2;
-            if ((this.field_r & 65536) == 0) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = this.field_s;
-              break L1;
-            }
-          }
-          var3 = stackIn_4_0;
-          var4 = this.field_n;
-          this.field_k.a(ie.field_q / 200, var3, var4);
-          this.field_q.a(ie.field_q / 200, var3 >> -1534028894, var4);
-          if (param0 < 96) {
-            return;
-          } else {
-            this.field_m = ie.field_q / 100;
-            return;
-          }
+          return;
+        }
+        this.field_r = 0;
+        var3Lifetime1 = (this.field_r & 65536) != 0 ? this.field_s : 0;
+        var4Lifetime1 = this.field_n;
+        this.field_k.a(ie.field_q / 200, var3Lifetime1, var4Lifetime1);
+        this.field_q.a(ie.field_q / 200, var3Lifetime1 >> 2, var4Lifetime1);
+        if (param0 >= 96) {
+          this.field_m = ie.field_q / 100;
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_t = null;
         if (param0 != -43) {
-            tl.a((byte) -61);
+          tl.a((byte) -61);
         }
     }
 
     final void d(int param0) {
         int var3 = EscapeVector.field_A;
         while (param0 > this.field_m) {
-            this.field_k.d(this.field_m);
-            this.field_q.d(this.field_m);
-            param0 = param0 - this.field_m;
-            this.e(122);
+          this.field_k.d(this.field_m);
+          this.field_q.d(this.field_m);
+          param0 = param0 - this.field_m;
+          this.e(122);
         }
         this.field_k.d(param0);
         this.field_q.d(param0);

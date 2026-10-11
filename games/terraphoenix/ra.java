@@ -12,28 +12,23 @@ final class ra extends uf {
     byte[] field_k;
 
     final static boolean c(byte param0) {
-        if (param0 >= 26) {
-          if (null != ig.field_e) {
-            if (mh.field_a != od.field_g) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 < 26) {
           field_j = (String) null;
-          if (null != ig.field_e) {
-            if (mh.field_a != od.field_g) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == ig.field_e) {
             return false;
           }
+          if (mh.field_a == od.field_g) {
+            return true;
+          }
+          return false;
         }
+        if (null == ig.field_e) {
+          return false;
+        }
+        if (mh.field_a == od.field_g) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(int param0) {
@@ -41,7 +36,7 @@ final class ra extends uf {
         field_i = null;
         field_h = null;
         if (param0 != 7876) {
-            return;
+          return;
         }
         field_m = null;
         field_l = null;
@@ -49,11 +44,11 @@ final class ra extends uf {
 
     ra(long param0, int param1, byte[] param2) {
         try {
-            this.field_o = param0;
-            this.field_k = param2;
-            this.field_n = param1;
+          this.field_o = param0;
+          this.field_k = param2;
+          this.field_n = param1;
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "ra.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

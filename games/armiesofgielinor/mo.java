@@ -27,46 +27,19 @@ final class mo {
     boolean field_f;
 
     final int a(boolean param0) {
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            this.field_q = (String) null;
-            break L0;
-          }
+        if (!param0) {
+          this.field_q = (String) null;
         }
-        L1: {
-          if (this.field_f) {
-            break L1;
-          } else {
-            L2: {
-              if (2 != this.field_b) {
-                break L2;
-              } else {
-                if (-1 > (this.field_p ^ -1)) {
-                  break L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            if (oh.field_H != this.field_n) {
-              L3: {
-                if (th.field_a != 2) {
-                  break L3;
-                } else {
-                  if (!jj.a(82, this.field_m)) {
-                    break L3;
-                  } else {
-                    return 1;
-                  }
-                }
-              }
-              return 0;
-            } else {
-              return 1;
-            }
+        if (!this.field_f && (2 != this.field_b ||
+          this.field_p <= 0)) {
+          if (oh.field_H == this.field_n) {
+            return 1;
           }
+          if (th.field_a == 2 &&
+            jj.a(82, this.field_m)) {
+            return 1;
+          }
+          return 0;
         }
         return 2;
     }
@@ -74,20 +47,20 @@ final class mo {
     final static boolean a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var7 = param1;
         if (var7 > param3) {
-            return false;
+          return false;
         }
-        int var8 = -73 / ((param5 - -46) / 53);
+        int var8 = -73 / ((param5 + 46) / 53);
         int var9 = var7 + param4;
         if (var9 < param3) {
-            return false;
+          return false;
         }
         int var10 = param2;
-        if (!(var10 <= param0)) {
-            return false;
+        if (var10 > param0) {
+          return false;
         }
         int var11 = var10 + param6;
         if (var11 < param0) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -100,16 +73,16 @@ final class mo {
         field_t = null;
         field_i = null;
         if (param0 != 0) {
-            mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
+          mo.a(-123, 18, -64, -107, -63, (byte) 82, 91);
         }
     }
 
     mo(boolean param0) {
         this.field_h = dg.field_b;
         if (param0) {
-            this.field_d = hv.field_R;
+          this.field_d = hv.field_R;
         } else {
-            this.field_d = null;
+          this.field_d = null;
         }
         this.field_a = rh.field_e;
         this.field_b = u.field_k;
@@ -125,20 +98,20 @@ final class mo {
 
     mo(int param0, String param1, int param2, String param3, String param4) {
         try {
-            this.field_m = param1;
-            this.field_q = param1;
-            this.field_f = true;
-            this.field_n = 0L;
-            this.field_k = param3;
-            this.field_v = param2;
-            this.field_p = 0;
-            this.field_d = null;
-            this.field_e = 0;
-            this.field_b = param0;
-            this.field_h = param4;
-            this.field_a = 0;
+          this.field_m = param1;
+          this.field_q = param1;
+          this.field_f = true;
+          this.field_n = 0L;
+          this.field_k = param3;
+          this.field_v = param2;
+          this.field_p = 0;
+          this.field_d = null;
+          this.field_e = 0;
+          this.field_b = param0;
+          this.field_h = param4;
+          this.field_a = 0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "mo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

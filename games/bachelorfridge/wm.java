@@ -7,7 +7,7 @@ final class wm extends pu {
 
     public static void b(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         field_l = null;
     }

@@ -15,10 +15,10 @@ final class rp extends km {
     final int b(int param0, int param1) {
         int var3 = this.field_m[param0].field_f;
         if (param1 != 1) {
-            field_t = (mh) null;
+          field_t = (mh) null;
         }
-        if ((var3 ^ -1) == -43) {
-            return super.b(7, 1);
+        if (var3 == 42) {
+          return super.b(7, 1);
         }
         return super.b(param0, 1);
     }
@@ -33,74 +33,35 @@ final class rp extends km {
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (lb.field_i > param0) {
-                param2 = param2 - (-param0 + lb.field_i);
-                param0 = lb.field_i;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (param5 >= lb.field_b) {
-                break L2;
-              } else {
-                param4 = param4 - (-param5 + lb.field_b);
-                param5 = lb.field_b;
-                break L2;
-              }
-            }
-            L3: {
-              if (param0 + param2 > lb.field_f) {
-                param2 = -param0 + lb.field_f;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (lb.field_j < param4 + param5) {
-                param4 = lb.field_j + -param5;
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            var6_int = -param2 + lb.field_c;
-            var7 = lb.field_c * param5 + param0;
-            param5 = 0;
-            L5: while (true) {
-              if (param4 <= param5) {
-                L6: {
-                  if (param1 == 65280) {
-                    break L6;
-                  } else {
-                    field_y = (String) null;
-                    break L6;
-                  }
-                }
-                break L0;
-              } else {
-                param0 = -param2;
-                L7: while (true) {
-                  if (param0 >= 0) {
-                    var7 = var7 + var6_int;
-                    param5++;
-                    continue L5;
-                  } else {
-                    var8 = lb.field_l[var7];
-                    incrementValue$0 = var7;
-                    var7++;
-                    lb.field_l[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 1844834056;
-                    param0++;
-                    continue L7;
-                  }
-                }
-              }
-            }
+          if (lb.field_i > param0) {
+            param2 = param2 - (-param0 + lb.field_i);
+            param0 = lb.field_i;
           }
+          if (param5 < lb.field_b) {
+            param4 = param4 - (-param5 + lb.field_b);
+            param5 = lb.field_b;
+          }
+          if (param0 + param2 > lb.field_f) {
+            param2 = -param0 + lb.field_f;
+          }
+          if (lb.field_j < param4 + param5) {
+            param4 = lb.field_j - param5;
+          }
+          var6_int = -param2 + lb.field_c;
+          var7 = lb.field_c * param5 + param0;
+          for (param5 = 0; param4 > param5; param5++) {
+            for (param0 = -param2; param0 < 0; param0++) {
+              var8 = lb.field_l[var7];
+              incrementValue$0 = var7;
+              var7++;
+              lb.field_l[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 8;
+            }
+            var7 = var7 + var6_int;
+          }
+          if (param1 != 65280) {
+            field_y = (String) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -111,10 +72,10 @@ final class rp extends km {
     final int a(boolean param0, int param1) {
         int var3 = this.field_m[param1].field_f;
         if (!param0) {
-            field_s = (jp) null;
+          field_s = (jp) null;
         }
-        if (-43 != (var3 ^ -1)) {
-            return super.a(true, param1);
+        if (var3 != 42) {
+          return super.a(true, param1);
         }
         return 19;
     }
@@ -127,15 +88,15 @@ final class rp extends km {
         vi.a((byte) -105);
         this.a(0);
         if (param0 > -14) {
-            field_s = (jp) null;
+          field_s = (jp) null;
         }
         si.a(pq.field_k, (byte) -118, po.field_a, hc.field_h);
         if (!pg.c(77)) {
-            var4 = (nq) ((Object) this.field_v.d(-90));
-            while (var4 != null) {
-                var4.a(2);
-                var4 = (nq) ((Object) this.field_v.a((byte) 116));
-            }
+          var4 = (nq) (this.field_v.d(-90));
+          while (var4 != null) {
+            var4.a(2);
+            var4 = (nq) (this.field_v.a((byte) 116));
+          }
         }
     }
 
@@ -145,99 +106,81 @@ final class rp extends km {
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.a(param0, param1, -95);
         if (param2 > -52) {
-            this.b((byte) 59, 93);
+          this.b((byte) 59, 93);
         }
-        if (param1 && -1 > (c.field_g ^ -1)) {
-            fieldTemp$0 = c.field_g - 1;
-            c.field_g = c.field_g - 1;
-            if (0 == fieldTemp$0) {
-                fc.a(-59, field_s);
-                pa.a(true);
-                sc.b(-96);
-                if (si.field_k != null) {
-                    pe.field_n = si.field_k.field_m;
-                }
-                si.field_k = rd.a(0, (byte) 19);
-                hc.field_h = 2 * hi.field_w.a(-37880252, 2);
-                im.field_e = 50;
+        if (param1 &&
+          c.field_g > 0) {
+          fieldTemp$0 = c.field_g - 1;
+          c.field_g = c.field_g - 1;
+          if (0 == fieldTemp$0) {
+            fc.a(-59, field_s);
+            pa.a(true);
+            sc.b(-96);
+            if (si.field_k != null) {
+              pe.field_n = si.field_k.field_m;
             }
+            si.field_k = rd.a(0, (byte) 19);
+            hc.field_h = 2 * hi.field_w.a(-37880252, 2);
+            im.field_e = 50;
+          }
         }
         if (!pg.c(112)) {
-            var6 = (nq) ((Object) this.field_v.d(-90));
-            while (var6 != null) {
-                var6.c(0);
-                var6 = (nq) ((Object) this.field_v.a((byte) 116));
-            }
+          var6 = (nq) (this.field_v.d(-90));
+          while (var6 != null) {
+            var6.c(0);
+            var6 = (nq) (this.field_v.a((byte) 116));
+          }
         }
     }
 
     final void a(int param0, int param1, char param2) {
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == -120) {
-          L0: {
-            if (pg.c(117)) {
-              if ((this.field_h.field_j ^ -1) == -10) {
-                if (-100 == (param1 ^ -1)) {
-                  this.field_h.a(false, 0);
-                  break L0;
-                } else {
-                  if ((param1 ^ -1) == -97) {
-                    this.field_h.a(false, 0);
-                    break L0;
-                  } else {
-                    if ((param1 ^ -1) == -98) {
-                      this.field_h.a(false, 0);
-                      break L0;
-                    } else {
-                      if (-99 != (param1 ^ -1)) {
-                        break L0;
-                      } else {
-                        this.field_h.a(false, 8);
-                        break L0;
-                      }
-                    }
-                  }
-                }
-              } else {
-                L1: {
-                  if (96 == param1) {
-                    break L1;
-                  } else {
-                    if ((param1 ^ -1) != -98) {
-                      if (param1 == 99) {
-                        this.field_h.a(false, 1 - -this.field_h.field_j);
-                        break L0;
-                      } else {
-                        if (param1 == 98) {
-                          if ((this.field_h.field_j ^ -1) >= -1) {
-                            this.field_h.a(false, 9);
-                            break L0;
-                          } else {
-                            this.field_h.a(false, -1 + this.field_h.field_j);
-                            break L0;
-                          }
-                        } else {
-                          break L0;
-                        }
-                      }
-                    } else {
-                      break L1;
-                    }
-                  }
-                }
-                this.field_h.a(false, 9);
-                break L0;
-              }
-            } else {
-              super.a(-120, param1, param2);
-              break L0;
-            }
-          }
-          return;
-        } else {
+        if (param0 != -120) {
           return;
         }
+        boolean decompiledFrameRemainder0 = true;
+        if (pg.c(117)) {
+          if (this.field_h.field_j == 9) {
+            if (param1 == 99) {
+              this.field_h.a(false, 0);
+            } else {
+              if (param1 == 96) {
+                this.field_h.a(false, 0);
+              } else {
+                if (param1 == 97) {
+                  this.field_h.a(false, 0);
+                } else {
+                  if (param1 == 98) {
+                    this.field_h.a(false, 8);
+                  }
+                }
+              }
+            }
+          } else {
+            if (96 != param1 &&
+              param1 != 97) {
+              if (param1 == 99) {
+                this.field_h.a(false, 1 + this.field_h.field_j);
+              } else {
+                if ((param1 == 98)) {
+                  if (this.field_h.field_j <= 0) {
+                    this.field_h.a(false, 9);
+                  } else {
+                    this.field_h.a(false, -1 + this.field_h.field_j);
+                  }
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              this.field_h.a(false, 9);
+            }
+          }
+        } else {
+          super.a(-120, param1, param2);
+        }
+
     }
 
     public static void c(boolean param0) {
@@ -248,28 +191,28 @@ final class rp extends km {
         field_y = null;
         field_w = null;
         if (param0) {
-            int[] var2 = (int[]) null;
-            rp.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
+          int[] var2 = (int[]) null;
+          rp.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
         }
         field_r = null;
     }
 
     final void d(int param0) {
         if (param0 > -60) {
-            rp.c(false);
+          rp.c(false);
         }
         if (!pg.c(102)) {
-            this.a(g.field_o, 0);
+          this.a(g.field_o, 0);
         }
     }
 
     final int a(int param0, int param1) {
         if (param0 > -71) {
-            field_u = (jp) null;
+          field_u = (jp) null;
         }
         int var3 = this.field_m[param1].field_f;
-        if ((var3 ^ -1) == -43) {
-            return 147;
+        if (var3 == 42) {
+          return 147;
         }
         return super.a(-106, param1);
     }
@@ -293,64 +236,43 @@ final class rp extends km {
         int[] var17 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 > 115) {
-                break L1;
-              } else {
-                field_y = (String) null;
-                break L1;
-              }
+          if (param0 <= 115) {
+            field_y = (String) null;
+          }
+          while (true) {
+            param6--;
+            if (0 > param6) {
+              return;
             }
-            L2: while (true) {
-              param6--;
-              if (0 > param6) {
-                break L0;
-              } else {
-                var17 = param8;
-                var10 = var17;
-                var11 = param5;
-                var12 = param7;
-                var13 = param9;
-                var14 = param1;
-                var15 = var17[var11] >> -467298431 & 8355711;
-                var10[var11] = ik.a(255, var14 >> 1004577617) - (-ik.a(var12 >> -1763585791, 16711680) + (-(ik.a(33423869, var13) >> 155375881) - var15));
-                param9 = param9 + param4;
-                param1 = param1 + param2;
-                param5++;
-                param7 = param7 + param3;
-                continue L2;
-              }
-            }
+            var17 = param8;
+            var10 = var17;
+            var11 = param5;
+            var12 = param7;
+            var13 = param9;
+            var14 = param1;
+            var15 = var17[var11] >> 1 & 8355711;
+            var10[var11] = ik.a(255, var14 >> 17) - (-ik.a(var12 >> 1, 16711680) + (-(ik.a(33423869, var13) >> 9) - var15));
+            param9 = param9 + param4;
+            param1 = param1 + param2;
+            param5++;
+            param7 = param7 + param3;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var10_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var10_ref);
-
-            stackIn_8_1 = new StringBuilder().append("rp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-
-            if (param8 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var10_ref = decompiledCaughtException;
+          stackIn_8_0 = var10_ref;
+          stackIn_8_1 = new StringBuilder().append("rp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
+          if (param8 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param9 + ')');
+          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -358,9 +280,9 @@ final class rp extends km {
         int var4 = -61 % ((param0 - 66) / 45);
         int var3 = this.field_m[param1].field_f;
         if (42 != var3) {
-            return super.b((byte) 121, param1);
+          return super.b((byte) 121, param1);
         }
-        return this.field_q - -super.b((byte) 8, param1);
+        return this.field_q + super.b((byte) 8, param1);
     }
 
     static {

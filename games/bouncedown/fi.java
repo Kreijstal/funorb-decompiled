@@ -8,34 +8,29 @@ final class fi {
 
     public static void a(int param0) {
         if (param0 != -14935) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static boolean b(int param0) {
-        if (param0 == 21856) {
-          if (null != kf.field_b) {
-            if (kf.field_b.a(false) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 21856) {
           fi.a(93);
-          if (null != kf.field_b) {
-            if (kf.field_b.a(false) == null) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == kf.field_b) {
             return false;
           }
+          if (kf.field_b.a(false) != null) {
+            return true;
+          }
+          return false;
         }
+        if (null == kf.field_b) {
+          return false;
+        }
+        if (kf.field_b.a(false) != null) {
+          return true;
+        }
+        return false;
     }
 
     static {

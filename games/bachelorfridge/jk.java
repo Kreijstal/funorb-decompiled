@@ -16,9 +16,9 @@ final class jk extends at {
         mha.field_g = param2;
         jo.field_t = param1;
         if (param3 != -64) {
-            field_j = (String) null;
-            ah.field_l = param4;
-            return;
+          field_j = (String) null;
+          ah.field_l = param4;
+          return;
         }
         ah.field_l = param4;
     }
@@ -32,64 +32,36 @@ final class jk extends at {
         int var2 = 0;
         var3 = BachelorFridge.field_y;
         try {
-          L0: {
-            var1_int = 0;
-            L1: while (true) {
-              if (!kaa.b(127)) {
-                L2: {
-                  fw.field_i.a(rh.a(nfa.field_a, (byte) -128, jc.field_r), -119, rh.a(mk.field_p, (byte) -123, gd.field_m));
-                  if (!fw.field_i.e(0)) {
-                    break L2;
-                  } else {
-                    var1_int = 1;
-                    break L2;
-                  }
-                }
-                L3: {
-                  var2 = 0;
-                  if (var1_int == 0) {
-                    break L3;
-                  } else {
-                    if ((fw.field_i.field_g ^ -1) <= -1) {
-                      var2 = st.field_a[fw.field_i.field_g];
-                      if (2 == var2) {
-                        nh.b(param0 + -16);
-                        break L3;
-                      } else {
-                        break L3;
-                      }
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (param0 == 2) {
-                    break L4;
-                  } else {
-                    jk.a(-119, 95, 106, (byte) -117, -51);
-                    break L4;
-                  }
-                }
-                stackIn_17_0 = var2;
-                break L0;
-              } else {
-                fw.field_i.b(true);
-                if (fw.field_i.e(0)) {
-                  var1_int = 1;
-                  continue L1;
-                } else {
-                  continue L1;
-                }
-              }
+          var1_int = 0;
+          while (kaa.b(127)) {
+            fw.field_i.b(true);
+            if (!fw.field_i.e(0)) {
+              continue;
+            }
+            var1_int = 1;
+          }
+          fw.field_i.a(rh.a(nfa.field_a, (byte) -128, jc.field_r), -119, rh.a(mk.field_p, (byte) -123, gd.field_m));
+          if (fw.field_i.e(0)) {
+            var1_int = 1;
+          }
+          var2 = 0;
+          if (var1_int != 0 &&
+            fw.field_i.field_g >= 0) {
+            var2 = st.field_a[fw.field_i.field_g];
+            if (2 == var2) {
+              nh.b(param0 - 16);
             }
           }
+          if (param0 != 2) {
+            jk.a(-119, 95, 106, (byte) -117, -51);
+          }
+          stackIn_17_0 = var2;
+          return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw pe.a((Throwable) ((Object) var1), "jk.C(" + param0 + ')');
         }
-        return stackIn_17_0;
     }
 
     public static void d(byte param0) {
@@ -99,7 +71,7 @@ final class jk extends at {
         field_l = null;
         field_o = null;
         if (param0 >= -77) {
-            jk.d(-67);
+          jk.d(-67);
         }
     }
 
@@ -108,51 +80,54 @@ final class jk extends at {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var2 = 0;
-        if ((this.field_m ^ -1) == -26) {
-            if (this.field_q.field_s.i(-90)) {
-                fieldTemp$0 = this.field_m - 1;
-                this.field_m = this.field_m - 1;
-                if (!((fieldTemp$0 ^ -1) < -1)) {
-                    return false;
-                }
-                var2 = 56 / ((71 - param0) / 47);
-                return true;
-            }
-            if (this.field_n.field_i) {
-                this.field_q.b(-1, 7);
-                fieldTemp$1 = this.field_m - 1;
-                this.field_m = this.field_m - 1;
-                if (!((fieldTemp$1 ^ -1) < -1)) {
-                    return false;
-                }
-                var2 = 56 / ((71 - param0) / 47);
-                return true;
-            }
-            this.field_q.b(-1, 5);
-            fieldTemp$2 = this.field_m - 1;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        if (this.field_m == 25) {
+          if (this.field_q.field_s.i(-90)) {
+            fieldTemp$0 = this.field_m - 1;
             this.field_m = this.field_m - 1;
-            if (!((fieldTemp$2 ^ -1) < -1)) {
-                return false;
+            if (fieldTemp$0 <= 0) {
+              return false;
             }
             var2 = 56 / ((71 - param0) / 47);
             return true;
+          }
+          if (this.field_n.field_i) {
+            this.field_q.b(-1, 7);
+            fieldTemp$1 = this.field_m - 1;
+            this.field_m = this.field_m - 1;
+            if (fieldTemp$1 <= 0) {
+              return false;
+            }
+            var2Lifetime2 = 56 / ((71 - param0) / 47);
+            return true;
+          }
+          this.field_q.b(-1, 5);
+          fieldTemp$2 = this.field_m - 1;
+          this.field_m = this.field_m - 1;
+          if (fieldTemp$2 <= 0) {
+            return false;
+          }
+          var2Lifetime3 = 56 / ((71 - param0) / 47);
+          return true;
         }
         int fieldTemp$3 = this.field_m - 1;
         this.field_m = this.field_m - 1;
-        if (!((fieldTemp$3 ^ -1) < -1)) {
-            return false;
+        if (fieldTemp$3 <= 0) {
+          return false;
         }
-        var2 = 56 / ((71 - param0) / 47);
+        var2Lifetime1 = 56 / ((71 - param0) / 47);
         return true;
     }
 
     jk(gj param0, ad param1, mh param2) {
         try {
-            this.field_m = 25;
-            this.field_q = param1;
-            this.field_n = param2;
+          this.field_m = 25;
+          this.field_q = param1;
+          this.field_n = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

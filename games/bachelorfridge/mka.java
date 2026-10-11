@@ -16,72 +16,52 @@ final class mka extends bw {
         sna stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var8 = new sna(0L, (sna) null);
-              var8.field_eb = qaa.a(param2, -94);
-              var8.field_A = qaa.a(param5, -68);
-              var8.field_db = qaa.a(param7, -127);
-              var8.field_K = qaa.a(param1, -74);
-              var8.field_X = qaa.a(param0, -58);
-              var8.field_jb = param4;
-              var8.field_gb = param6;
-              if (param3 <= -118) {
-                break L1;
-              } else {
-                mka.b(true);
-                break L1;
-              }
-            }
-            stackIn_3_0 = (sna) (var8);
-            break L0;
+          var8 = new sna(0L, (sna) null);
+          var8.field_eb = qaa.a(param2, -94);
+          var8.field_A = qaa.a(param5, -68);
+          var8.field_db = qaa.a(param7, -127);
+          var8.field_K = qaa.a(param1, -74);
+          var8.field_X = qaa.a(param0, -58);
+          var8.field_jb = param4;
+          var8.field_gb = param6;
+          if (param3 > -118) {
+            mka.b(true);
           }
+          stackIn_3_0 = var8;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var8_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var8_ref);
-
-            stackIn_6_1 = new StringBuilder().append("mka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var8_ref = decompiledCaughtException;
+          stackIn_6_0 = var8_ref;
+          stackIn_6_1 = new StringBuilder().append("mka.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void b(boolean param0) {
         field_f = null;
         field_i = null;
         if (param0) {
-            mka.b(true);
+          mka.b(true);
         }
     }
 
     mka(mka param0, int param1, int param2, int param3) {
         try {
-            this.field_l = param3;
-            this.field_k = param1;
-            this.field_h = param0;
-            this.field_g = param2;
+          this.field_l = param3;
+          this.field_k = param1;
+          this.field_h = param0;
+          this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "mka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "mka.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -20,7 +20,7 @@ abstract class oe {
         field_b = null;
         field_j = null;
         if (param0 != -15721) {
-            oe.b(-127);
+          oe.b(-127);
         }
     }
 

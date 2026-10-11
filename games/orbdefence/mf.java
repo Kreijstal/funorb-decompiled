@@ -9,41 +9,19 @@ final class mf {
 
     public static void a(int param0) {
         if (param0 < 84) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
     }
 
     final static int a(int param0, int param1) {
-        int var2;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        var2 = 12 / ((-77 - param1) / 45);
+        int var2 = 12 / ((-77 - param1) / 45);
         param0 = param0 & 8191;
-        if (-4097 >= (param0 ^ -1)) {
-          L0: {
-            if ((param0 ^ -1) <= -6145) {
-              stackIn_8_0 = th.field_c[param0 + -6144];
-              break L0;
-            } else {
-              stackIn_8_0 = -th.field_c[6144 - param0];
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (param0 < 2048) {
-              stackIn_4_0 = th.field_c[2048 - param0];
-              break L1;
-            } else {
-              stackIn_4_0 = -th.field_c[param0 - 2048];
-              break L1;
-            }
-          }
-          return stackIn_4_0;
+        if (param0 < 4096) {
+          return param0 >= 2048 ? -th.field_c[param0 - 2048] : th.field_c[2048 - param0];
         }
+        return param0 < 6144 ? -th.field_c[6144 - param0] : th.field_c[param0 - 6144];
     }
 
     static {

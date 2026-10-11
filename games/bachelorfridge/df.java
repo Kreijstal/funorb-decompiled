@@ -13,27 +13,27 @@ final class df extends ii {
     final void a(byte param0, lu param1) {
         int var3_int = 0;
         try {
-            var3_int = this.field_n << 922195939 | this.field_p;
-            if (param0 > -12) {
-                field_o = -50;
-            }
-            if (!(!this.field_t)) {
-                var3_int = var3_int | 128;
-            }
-            param1.d(var3_int, 0);
+          var3_int = this.field_n << 3 | this.field_p;
+          if (param0 > -12) {
+            field_o = -50;
+          }
+          if (this.field_t) {
+            var3_int = var3_int | 128;
+          }
+          param1.d(var3_int, 0);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "df.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     df(int param0, nq param1, int param2, int param3, boolean param4) {
         super(2, param0, param1);
         try {
-            this.field_p = param2;
-            this.field_t = param4 ? true : false;
-            this.field_n = param3;
+          this.field_p = param2;
+          this.field_t = param4 ? true : false;
+          this.field_n = param3;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -43,47 +43,27 @@ final class df extends ii {
         qf stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 5) {
-                break L1;
-              } else {
-                var4 = (op) null;
-                this.a((op) null, false);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new qf(param1, (df) (this));
-            break L0;
+          if (param0 != 5) {
+            var4 = (op) null;
+            this.a((op) null, false);
           }
+          stackIn_3_0 = new qf(param1, this);
+          return (at) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("df.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("df.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (at) ((Object) stackIn_3_0);
     }
 
     final static pp b(lu param0, int param1) {
@@ -95,66 +75,49 @@ final class df extends ii {
         bm stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 >= 33) {
-                break L1;
-              } else {
-                var5 = (lu) null;
-                df.b((lu) null, -113);
-                break L1;
-              }
-            }
-            var2_int = param0.b(16711935);
-            var3 = param0.b(16711935);
-            var4 = param0.b(16711935);
-            stackIn_3_0 = new bm(var2_int, var3, var4);
-            break L0;
+          if (param1 < 33) {
+            var5 = (lu) null;
+            df.b((lu) null, -113);
           }
+          var2_int = param0.b(16711935);
+          var3 = param0.b(16711935);
+          var4 = param0.b(16711935);
+          stackIn_3_0 = new bm(var2_int, var3, var4);
+          return (pp) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("df.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("df.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return (pp) ((Object) stackIn_3_0);
     }
 
     final void a(op param0, boolean param1) {
         aga var3 = null;
         try {
-            var3 = this.field_l.a(103, param0);
-            var3.d(this.field_k, (byte) -104);
-            var3.a(param1, this.field_n, this.field_p);
-            var3.field_s = this.field_p;
-            if (hl.a((byte) 109, this.field_k) && !var3.g((byte) 85) && 33 != var3.field_y && (var3.field_y ^ -1) != -32) {
-                var3.b((byte) 123, 2);
-                var3.field_C = var3.field_C - 1;
-                return;
-            }
+          var3 = this.field_l.a(103, param0);
+          var3.d(this.field_k, (byte) -104);
+          var3.a(param1, this.field_n, this.field_p);
+          var3.field_s = this.field_p;
+          if (hl.a((byte) 109, this.field_k) &&
+            !var3.g((byte) 85) &&
+            33 != var3.field_y &&
+            var3.field_y != 31) {
+            var3.b((byte) 123, 2);
+            var3.field_C = var3.field_C - 1;
+            return;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "df.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "df.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -162,12 +125,12 @@ final class df extends ii {
         super(2, param0);
         int var2_int = 0;
         try {
-            var2_int = param0.b(16711935);
-            this.field_p = 7 & var2_int;
-            this.field_n = 15 & var2_int >> 888703523;
-            this.field_t = -1 != (var2_int & 128 ^ -1) ? true : false;
+          var2_int = param0.b(16711935);
+          this.field_p = 7 & var2_int;
+          this.field_n = 15 & var2_int >> 3;
+          this.field_t = (var2_int & 128) != 0 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,7 +138,7 @@ final class df extends ii {
         field_q = null;
         field_s = null;
         if (param0 != 15) {
-            field_s = (String) null;
+          field_s = (String) null;
         }
     }
 

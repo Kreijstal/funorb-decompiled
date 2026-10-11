@@ -7,14 +7,14 @@ final class dja extends pu {
 
     final static void b(boolean param0) {
         if (param0) {
-            dja.b(false);
+          dja.b(false);
         }
     }
 
     public static void b(int param0) {
         field_l = null;
         if (param0 != -14190) {
-            field_m = 47;
+          field_m = 47;
         }
     }
 

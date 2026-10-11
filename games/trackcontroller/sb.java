@@ -9,7 +9,7 @@ final class sb {
     public static void a(byte param0) {
         field_b = null;
         if (param0 <= 102) {
-            sb.a((byte) 86);
+          sb.a((byte) 86);
         }
     }
 

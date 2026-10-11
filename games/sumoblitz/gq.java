@@ -7,53 +7,28 @@ final class gq extends ve {
     static int[] field_q;
 
     final boolean d(int param0) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        if (param0 == -8111) {
-          if (this.field_m.field_xc) {
-            if (!this.field_m.field_wb) {
-              return false;
-            } else {
-              L0: {
-                if (!this.field_m.field_Hb) {
-                  stackIn_16_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_16_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_16_0 != 0;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != -8111) {
           this.c(-104);
-          if (this.field_m.field_xc) {
-            if (!this.field_m.field_wb) {
-              return false;
-            } else {
-              L1: {
-                if (!this.field_m.field_Hb) {
-                  stackIn_7_0 = 0;
-                  break L1;
-                } else {
-                  stackIn_7_0 = 1;
-                  break L1;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
+          if (!this.field_m.field_xc) {
             return false;
           }
+          if (this.field_m.field_wb) {
+            return this.field_m.field_Hb ? true : false;
+          }
+          return false;
         }
+        if (!this.field_m.field_xc) {
+          return false;
+        }
+        if (this.field_m.field_wb) {
+          return this.field_m.field_Hb ? true : false;
+        }
+        return false;
     }
 
     final void c(int param0) {
         if (param0 != 50) {
-            field_p = (String) null;
+          field_p = (String) null;
         }
     }
 
@@ -62,7 +37,7 @@ final class gq extends ve {
         field_p = null;
         field_o = null;
         if (param0) {
-            gq.c(true);
+          gq.c(true);
         }
     }
 

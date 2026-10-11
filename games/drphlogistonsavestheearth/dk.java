@@ -9,9 +9,9 @@ final class dk {
 
     public static void a(int param0) {
         if (param0 != 24) {
-            field_a = (int[]) null;
-            field_a = null;
-            return;
+          field_a = (int[]) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

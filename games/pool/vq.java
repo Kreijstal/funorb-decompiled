@@ -25,7 +25,7 @@ final class vq extends vh {
     public static void f(int param0) {
         field_bc = null;
         if (param0 < 109) {
-            field_Yb = (dd) null;
+          field_Yb = (dd) null;
         }
         field_Zb = null;
         field_Ub = null;
@@ -34,125 +34,75 @@ final class vq extends vh {
     }
 
     final boolean f(byte param0) {
-        if (!(-2 == this.field_Qb)) {
-            return false;
+        if (-2 != this.field_Qb) {
+          return false;
         }
-        if ((qi.field_a ^ -1) == -14) {
-            this.field_Qb = -1;
+        if (qi.field_a == 13) {
+          this.field_Qb = -1;
         }
         int var2 = -37 % ((7 - param0) / 56);
         return true;
     }
 
     final static boolean a(char param0, int param1) {
-        int stackIn_10_0 = 0;
-        L0: {
-          if (param1 == 22987) {
-            break L0;
-          } else {
-            field_Xb = (String) null;
-            break L0;
-          }
+        boolean stackIn_10_0 = false;
+        if (param1 != 22987) {
+          field_Xb = (String) null;
         }
-        L1: {
-          L2: {
-            L3: {
-              if (param0 < 65) {
-                break L3;
-              } else {
-                if (param0 <= 90) {
-                  break L2;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            L4: {
-              if (param0 < 97) {
-                break L4;
-              } else {
-                if (param0 > 122) {
-                  break L4;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            stackIn_10_0 = 0;
-            break L1;
-          }
-          stackIn_10_0 = 1;
-          break L1;
-        }
-        return stackIn_10_0 != 0;
+        stackIn_10_0 = ((!(param0 < 65) &&
+          !(param0 > 90)) ||
+          (!(param0 < 97) &&
+          !(param0 > 122)));
+        return stackIn_10_0;
     }
 
     final void a(String param0, int param1, int param2) {
         try {
-            this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (dd) null, param0);
-            this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
-            this.field_Rb[this.field_Nb].field_J = true;
-            this.field_Rb[this.field_Nb].field_cb = 1;
-            this.a(-103, this.field_Rb[this.field_Nb]);
-            this.field_dc[this.field_Nb] = param2;
-            this.field_Nb = this.field_Nb + 1;
-            if (param1 != 17130) {
-                String var5 = (String) null;
-                this.a(-100, (byte) -124, (dd) null, (String) null);
-            }
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, (dd) null, param0);
+          this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
+          this.field_Rb[this.field_Nb].field_J = true;
+          this.field_Rb[this.field_Nb].field_cb = 1;
+          this.a(-103, this.field_Rb[this.field_Nb]);
+          this.field_dc[this.field_Nb] = param2;
+          this.field_Nb = this.field_Nb + 1;
+          if (param1 != 17130) {
+            String var5 = (String) null;
+            this.a(-100, (byte) -124, (dd) null, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "vq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "vq.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4) {
+        int var10 = 0;
         int var6;
         int var7;
         int var8;
         int var9;
-        int var10;
-        L0: {
-          if (-1 != (this.field_Nb ^ -1)) {
-            break L0;
-          } else {
-            this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (dd) null, np.field_g);
-            this.field_Rb[this.field_Nb].field_cb = 1;
-            this.a(76, this.field_Rb[this.field_Nb]);
-            this.field_dc[this.field_Nb] = -1;
-            this.field_Nb = this.field_Nb + 1;
-            break L0;
-          }
+        int var7Lifetime1;
+        int var8Lifetime1;
+        if (this.field_Nb == 0) {
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Wb, (dd) null, np.field_g);
+          this.field_Rb[this.field_Nb].field_cb = 1;
+          this.a(76, this.field_Rb[this.field_Nb]);
+          this.field_dc[this.field_Nb] = -1;
+          this.field_Nb = this.field_Nb + 1;
         }
         var6 = 0;
-        var7 = 0;
-        L1: while (true) {
-          if (var7 >= this.field_Nb) {
-            var6 = var6 + 2 * this.field_Mb;
-            var7 = this.field_Nb * this.field_ac + this.field_Lb - -this.field_Lb;
-            var8 = de.a(var6, param0, param2, 0);
-            var9 = sh.a(var7, param4, param3 + -1, param1);
-            this.b(var9, 2147483647, var8, var6, var7);
-            var10 = param3;
-            L2: while (true) {
-              if (this.field_Nb <= var10) {
-                return;
-              } else {
-                this.field_Rb[var10].a(this.field_Mb, true, this.field_Vb, this.field_ac, this.field_cc, var6 - this.field_Mb * 2, this.field_Lb + this.field_ac * var10);
-                var10++;
-                continue L2;
-              }
-            }
-          } else {
-            var8 = this.field_Rb[var7].a(0, this.field_cc, this.field_Vb);
-            if (var6 < var8) {
-              var6 = var8;
-              var7++;
-              continue L1;
-            } else {
-              var7++;
-              continue L1;
-            }
+        for (var7 = 0; var7 < this.field_Nb; var7++) {
+          var8 = this.field_Rb[var7].a(0, this.field_cc, this.field_Vb);
+          if (var6 < var8) {
+            var6 = var8;
           }
+        }
+        var6 = var6 + 2 * this.field_Mb;
+        var7Lifetime1 = this.field_Nb * this.field_ac + this.field_Lb + this.field_Lb;
+        var8Lifetime1 = de.a(var6, param0, param2, 0);
+        var9 = sh.a(var7Lifetime1, param4, param3 - 1, param1);
+        this.b(var9, 2147483647, var8Lifetime1, var6, var7Lifetime1);
+        for (var10 = param3; this.field_Nb > var10; var10++) {
+          this.field_Rb[var10].a(this.field_Mb, true, this.field_Vb, this.field_ac, this.field_cc, var6 - this.field_Mb * 2, this.field_Lb + this.field_ac * var10);
         }
     }
 
@@ -162,16 +112,16 @@ final class vq extends vh {
         this.field_Rb = new uo[256];
         this.field_dc = new int[256];
         try {
-            this.field_ac = param8;
-            this.field_Lb = param7;
-            this.field_Mb = param4;
-            this.field_Tb = param3;
-            this.field_cc = param6;
-            this.field_Wb = param2;
-            this.field_Vb = param5;
-            this.field_Pb = param1;
+          this.field_ac = param8;
+          this.field_Lb = param7;
+          this.field_Mb = param4;
+          this.field_Tb = param3;
+          this.field_cc = param6;
+          this.field_Wb = param2;
+          this.field_Vb = param5;
+          this.field_Pb = param1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "vq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "vq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -180,34 +130,34 @@ final class vq extends vh {
         int var4 = Pool.field_O;
         this.a(param1, false);
         if (!param1) {
-            return -2;
+          return -2;
         }
         if (param0 < 8) {
-            return -81;
+          return -81;
         }
         for (var3 = 0; var3 < this.field_Nb; var3++) {
-            if (!(this.field_Rb[var3].field_R == 0)) {
-                return this.field_dc[var3];
-            }
+          if (this.field_Rb[var3].field_R != 0) {
+            return this.field_dc[var3];
+          }
         }
-        if (-1 != (ne.field_s ^ -1)) {
-            return -1;
+        if (ne.field_s != 0) {
+          return -1;
         }
         return this.field_Qb;
     }
 
     final void a(int param0, byte param1, dd param2, String param3) {
         try {
-            this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, param2, param3);
-            this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
-            this.field_Rb[this.field_Nb].field_J = true;
-            this.field_Rb[this.field_Nb].field_cb = 1;
-            this.a(73, this.field_Rb[this.field_Nb]);
-            int var5_int = -81 / ((20 - param1) / 60);
-            this.field_dc[this.field_Nb] = param0;
-            this.field_Nb = this.field_Nb + 1;
+          this.field_Rb[this.field_Nb] = new uo(0L, (vh) null, (vh) null, this.field_Tb, param2, param3);
+          this.field_Rb[this.field_Nb].field_Gb = this.field_Pb;
+          this.field_Rb[this.field_Nb].field_J = true;
+          this.field_Rb[this.field_Nb].field_cb = 1;
+          this.a(73, this.field_Rb[this.field_Nb]);
+          int var5_int = -81 / ((20 - param1) / 60);
+          this.field_dc[this.field_Nb] = param0;
+          this.field_Nb = this.field_Nb + 1;
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "vq.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "vq.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

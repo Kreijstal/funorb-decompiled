@@ -7,7 +7,7 @@ final class mf {
 
     public static void a(byte param0) {
         if (param0 >= -41) {
-            return;
+          return;
         }
         field_a = null;
     }

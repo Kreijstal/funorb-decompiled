@@ -12,12 +12,12 @@ final class rf {
     static int field_c;
 
     final static String a(byte param0) {
-        if (!(null != di.field_j)) {
-            return "";
+        if (null == di.field_j) {
+          return "";
         }
         if (param0 > -85) {
-            field_d = 115;
-            return di.field_j;
+          field_d = 115;
+          return di.field_j;
         }
         return di.field_j;
     }
@@ -29,129 +29,76 @@ final class rf {
         field_f = null;
         field_g = null;
         if (param0) {
-            return;
+          return;
         }
         field_h = null;
     }
 
     final static int a(int param0, int param1) {
         int var2;
+        int var2Lifetime1;
         if (param0 == 0) {
           return 0;
-        } else {
-          if (0 > param0) {
-            throw new IllegalArgumentException("");
-          } else {
-            if (32768 > param0) {
-              if (128 <= param0) {
-                if ((param0 ^ -1) > -2049) {
-                  if (-513 < (param0 ^ -1)) {
-                    var2 = 4;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  } else {
-                    var2 = 3;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  }
-                } else {
-                  if ((param0 ^ -1) <= -8193) {
-                    var2 = 1;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  } else {
-                    var2 = 2;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  }
-                }
-              } else {
-                if ((param0 ^ -1) > -9) {
-                  if (2 <= param0) {
-                    var2 = 7;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  } else {
-                    return 256;
-                  }
-                } else {
-                  if (param0 < 32) {
-                    var2 = 6;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  } else {
-                    var2 = 5;
-                    param0 = param0 << (var2 << 678062721);
-                    return ac.field_o[param0 + -32768] >> var2;
-                  }
-                }
+        }
+        if (0 > param0) {
+          throw new IllegalArgumentException("");
+        }
+        if (32768 > param0) {
+          if (128 > param0) {
+            if (param0 < 8) {
+              if (2 > param0) {
+                return 256;
               }
+              var2 = 7;
             } else {
-              if (-131073 < (param0 ^ -1)) {
-                if (param1 > -119) {
-                  field_f = (String) null;
-                  return ac.field_o[-32768 + param0];
-                } else {
-                  return ac.field_o[-32768 + param0];
-                }
-              } else {
-                if ((param0 ^ -1) <= -33554433) {
-                  if (-536870913 < (param0 ^ -1)) {
-                    if ((param0 ^ -1) <= -134217729) {
-                      var2 = 6;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    } else {
-                      var2 = 5;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    }
-                  } else {
-                    var2 = 7;
-                    param0 = param0 >> (var2 << -979488383);
-                    return ac.field_o[param0 + -32768] << var2;
-                  }
-                } else {
-                  if (param0 < 2097152) {
-                    if (-524289 >= (param0 ^ -1)) {
-                      var2 = 2;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    } else {
-                      var2 = 1;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    }
-                  } else {
-                    if (-8388609 < (param0 ^ -1)) {
-                      var2 = 3;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    } else {
-                      var2 = 4;
-                      param0 = param0 >> (var2 << -979488383);
-                      return ac.field_o[param0 + -32768] << var2;
-                    }
-                  }
-                }
-              }
+              var2 = (param0 < 32) ? 6 : 5;
+            }
+          } else {
+            if (param0 < 2048) {
+              var2 = (param0 < 512) ? 4 : 3;
+            } else {
+              var2 = (param0 >= 8192) ? 1 : 2;
             }
           }
+          param0 = param0 << (var2 << 1);
+          return ac.field_o[param0 - 32768] >> var2;
         }
+        if (param0 < 131072) {
+          if (param1 <= -119) {
+            return ac.field_o[-32768 + param0];
+          }
+          field_f = (String) null;
+          return ac.field_o[-32768 + param0];
+        }
+        if (param0 >= 33554432) {
+          if (param0 >= 536870912) {
+            var2Lifetime1 = 7;
+          } else {
+            var2Lifetime1 = (param0 >= 134217728) ? 6 : 5;
+          }
+        } else {
+          if (param0 < 2097152) {
+            var2Lifetime1 = (param0 >= 524288) ? 2 : 1;
+          } else {
+            var2Lifetime1 = (param0 < 8388608) ? 3 : 4;
+          }
+        }
+        param0 = param0 >> (var2Lifetime1 << 1);
+        return ac.field_o[param0 - 32768] << var2Lifetime1;
     }
 
     final static void a(String param0, int param1, String param2) {
         try {
-            if (param1 > -116) {
-                field_g = (dd) null;
-            }
-            if (d.field_d != null) {
-                d.field_d.k(17);
-            }
-            vj.field_j = new ui(param2, param0, false, true, true);
-            tn.field_n.d(vj.field_j, 30);
+          if (param1 > -116) {
+            field_g = (dd) null;
+          }
+          if (d.field_d != null) {
+            d.field_d.k(17);
+          }
+          vj.field_j = new ui(param2, param0, false, true, true);
+          tn.field_n.d(vj.field_j, 30);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

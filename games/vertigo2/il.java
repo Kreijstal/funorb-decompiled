@@ -20,17 +20,7 @@ abstract class il {
     abstract void a(java.awt.Component param0, int param1);
 
     public static void b(int param0) {
-        if (param0 != 0) {
-          il.b(26);
-          field_i = null;
-          field_c = null;
-          field_g = null;
-          field_j = null;
-          field_b = (int[][]) null;
-          field_f = null;
-          field_k = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_i = null;
           field_c = null;
           field_g = null;
@@ -40,6 +30,14 @@ abstract class il {
           field_k = null;
           return;
         }
+        il.b(26);
+        field_i = null;
+        field_c = null;
+        field_g = null;
+        field_j = null;
+        field_b = (int[][]) null;
+        field_f = null;
+        field_k = null;
     }
 
     abstract void a(java.awt.Component param0, boolean param1);

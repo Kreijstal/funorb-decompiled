@@ -7,31 +7,26 @@ final class ll extends lk {
 
     final db b(byte param0) {
         if (param0 != -98) {
-            this.b((byte) -62);
-            return j.field_V;
+          this.b((byte) -62);
+          return j.field_V;
         }
         return j.field_V;
     }
 
     public static void d(byte param0) {
-        String var2;
-        if (param0 != 104) {
-          var2 = (String) null;
-          ll.a(61, (String) null);
-          field_p = null;
-          field_o = (byte[][]) null;
-          return;
-        } else {
+        if (param0 == 104) {
           field_p = null;
           field_o = (byte[][]) null;
           return;
         }
+        String var2 = (String) null;
+        ll.a(61, (String) null);
+        field_p = null;
+        field_o = (byte[][]) null;
     }
 
     final static void a(int param0, String param1) {
-        if (param0 != -1054) {
-          return;
-        } else {
+        if (param0 == -1054) {
           System.out.println("Error: " + qb.a("%0a", (byte) 127, "\n", param1));
           return;
         }

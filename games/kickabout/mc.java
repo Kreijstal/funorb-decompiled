@@ -35,7 +35,8 @@ abstract class mc {
         b.field_N = null;
         mu.field_Y = null;
         h.field_e = null;
-        if (param0 < -82) {
+        if (param0 >= -82) {
+          mc.a((byte) 24);
           if (null != jl.field_f) {
             ei.field_b = jl.field_f;
             ij.field_s = qt.field_n;
@@ -45,63 +46,46 @@ abstract class mc {
             jl.field_f = null;
             Kickabout.field_H = null;
             return;
-          } else {
-            Kickabout.field_H = null;
-            return;
           }
-        } else {
-          mc.a((byte) 24);
-          if (null == jl.field_f) {
-            Kickabout.field_H = null;
-            return;
-          } else {
-            ei.field_b = jl.field_f;
-            ij.field_s = qt.field_n;
-            qt.field_n = null;
-            ei.field_b.field_ab = -1;
-            ei.field_b.field_ub = -1;
-            jl.field_f = null;
-            Kickabout.field_H = null;
-            return;
-          }
+          Kickabout.field_H = null;
+          return;
         }
+        if (null == jl.field_f) {
+          Kickabout.field_H = null;
+          return;
+        }
+        ei.field_b = jl.field_f;
+        ij.field_s = qt.field_n;
+        qt.field_n = null;
+        ei.field_b.field_ab = -1;
+        ei.field_b.field_ub = -1;
+        jl.field_f = null;
+        Kickabout.field_H = null;
     }
 
     final static boolean a(long param0, boolean param1) {
-        int stackIn_5_0 = 0;
-        if (param1) {
-          if (-1272878999116L != (param0 ^ -1L)) {
-            if ((param0 ^ -1L) == -1272878132286L) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_5_0 = 1;
-            return stackIn_5_0 != 0;
-          }
-        } else {
+        if (!param1) {
           return true;
         }
+        if (param0 == 1272878999115L) {
+          return true;
+        }
+        if (param0 != 1272878132285L) {
+          return false;
+        }
+        return true;
     }
 
     final int a(byte param0, long param1) {
-        long var4;
-        L0: {
-          var4 = this.b((byte) -36);
-          if (-1L > (var4 ^ -1L)) {
-            aj.a(var4, 1);
-            break L0;
-          } else {
-            break L0;
-          }
+        long var4 = this.b((byte) -36);
+        if (var4 > 0L) {
+          aj.a(var4, 1);
         }
-        if (param0 > -51) {
-          mc.a(19);
-          return this.a(114, param1);
-        } else {
+        if (param0 <= -51) {
           return this.a(114, param1);
         }
+        mc.a(19);
+        return this.a(114, param1);
     }
 
     abstract int a(int param0, long param1);
@@ -112,8 +96,8 @@ abstract class mc {
 
     final static double a(double param0, double param1, boolean param2) {
         if (param2) {
-            mc.a((byte) -58);
-            return Math.sqrt(param0 * (1.7 * param1));
+          mc.a((byte) -58);
+          return Math.sqrt(param0 * (1.7 * param1));
         }
         return Math.sqrt(param0 * (1.7 * param1));
     }

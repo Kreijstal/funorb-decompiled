@@ -13,34 +13,29 @@ final class qp {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0) {
-          qp.a(-100, -97, (byte) -12);
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (!param0) {
           field_f = null;
           field_d = null;
           field_e = null;
           return;
         }
+        qp.a(-100, -97, (byte) -12);
+        field_f = null;
+        field_d = null;
+        field_e = null;
     }
 
     final static int a(int param0, int param1, byte param2) {
-        if (param2 == -22) {
-          if (param0 < 2) {
-            if (-6 >= (param1 ^ -1)) {
-              return 1;
-            } else {
-              return 0;
-            }
-          } else {
-            return 2;
-          }
-        } else {
+        if (param2 != -22) {
           return -88;
         }
+        if (param0 >= 2) {
+          return 2;
+        }
+        if (param1 < 5) {
+          return 0;
+        }
+        return 1;
     }
 
     static {

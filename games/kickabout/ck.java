@@ -14,7 +14,7 @@ final class ck {
         field_c = null;
         field_e = null;
         if (param0) {
-            ck.a(false);
+          ck.a(false);
         }
     }
 

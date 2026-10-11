@@ -15,16 +15,14 @@ final class tn {
         field_f = null;
         field_c = null;
         field_d = null;
-        if (param0) {
-          tn.a(false);
-          field_g = (String[][]) null;
-          field_e = null;
-          return;
-        } else {
+        if (!param0) {
           field_g = (String[][]) null;
           field_e = null;
           return;
         }
+        tn.a(false);
+        field_g = (String[][]) null;
+        field_e = null;
     }
 
     static {

@@ -12,16 +12,14 @@ final class eg extends le {
     int field_j;
 
     public static void c(int param0) {
-        if (param0 != -26441) {
-          field_o = (int[][]) null;
-          field_n = null;
-          field_o = (int[][]) null;
-          return;
-        } else {
+        if (param0 == -26441) {
           field_n = null;
           field_o = (int[][]) null;
           return;
         }
+        field_o = (int[][]) null;
+        field_n = null;
+        field_o = (int[][]) null;
     }
 
     static int a(int param0, int param1) {
@@ -30,146 +28,120 @@ final class eg extends le {
 
     final static String a(int param0) {
         if (param0 <= 71) {
-            field_n = (String) null;
-            if (qo.field_x) {
-                return null;
-            }
-            if (td.field_d > pl.field_m) {
-                return null;
-            }
-            if (!(td.field_d + vf.field_k <= pl.field_m)) {
-                return da.field_m;
-            }
+          field_n = (String) null;
+          if (qo.field_x) {
             return null;
+          }
+          if (td.field_d > pl.field_m) {
+            return null;
+          }
+          if (!(td.field_d + vf.field_k <= pl.field_m)) {
+            return da.field_m;
+          }
+          return null;
         }
         if (qo.field_x) {
-            return null;
+          return null;
         }
         if (td.field_d > pl.field_m) {
-            return null;
+          return null;
         }
         if (!(td.field_d + vf.field_k <= pl.field_m)) {
-            return da.field_m;
+          return da.field_m;
         }
         return null;
     }
 
     final static void d(int param0) {
-        int var1;
-        int var2;
-        int var3;
-        int var4;
-        if (!df.field_h) {
-          if ((ma.field_r ^ -1) != 1) {
-            if (ma.field_r == -3) {
-              L0: {
-                if (param0 == 0) {
-                  break L0;
-                } else {
-                  eg.c(-13);
-                  break L0;
-                }
-              }
-              L1: {
-                if ((vj.field_o ^ -1) < -1) {
-                  var1 = 7 * nh.field_P / 8;
-                  var2 = vh.field_b - -100;
-                  var3 = var2 + (-vj.field_o + 400 >> -993972991);
-                  var4 = 40 + vj.field_o;
-                  bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
-                  bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
-                  so.b(s.field_j, var2, -te.field_bb + var1, 192);
-                  ch.field_a.b(var2, -te.field_bb + var1);
-                  ch.field_a.f(var2, var1 - 5);
-                  hi.field_x.b(var3, var1 - te.field_bb);
-                  hi.field_x.c(var4 + (var3 + -5), -te.field_bb + var1);
-                  vo.field_a[0].b(var3, var1 - te.field_bb);
-                  vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
-                  vo.field_a[2].b(var3, -5 + var1);
-                  vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-                  bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
-                  bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
-                  bi.c();
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L2: {
-              if (param0 == 0) {
-                break L2;
-              } else {
-                eg.c(-13);
-                break L2;
-              }
-            }
-            L3: {
-              if ((vj.field_o ^ -1) < -1) {
-                var1 = 7 * nh.field_P / 8;
-                var2 = vh.field_b - -100;
-                var3 = var2 + (-vj.field_o + 400 >> -993972991);
-                var4 = 40 + vj.field_o;
-                bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
-                bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
-                so.b(s.field_j, var2, -te.field_bb + var1, 192);
-                ch.field_a.b(var2, -te.field_bb + var1);
-                ch.field_a.f(var2, var1 - 5);
-                hi.field_x.b(var3, var1 - te.field_bb);
-                hi.field_x.c(var4 + (var3 + -5), -te.field_bb + var1);
-                vo.field_a[0].b(var3, var1 - te.field_bb);
-                vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
-                vo.field_a[2].b(var3, -5 + var1);
-                vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-                bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
-                bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
-                bi.c();
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return;
+        int var1 = 0;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var1Lifetime1;
+        int var1Lifetime2;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        if (df.field_h) {
+          if (param0 != 0) {
+            eg.c(-13);
           }
-        } else {
-          L4: {
-            if (param0 == 0) {
-              break L4;
-            } else {
-              eg.c(-13);
-              break L4;
-            }
-          }
-          L5: {
-            if ((vj.field_o ^ -1) < -1) {
-              var1 = 7 * nh.field_P / 8;
-              var2 = vh.field_b - -100;
-              var3 = var2 + (-vj.field_o + 400 >> -993972991);
-              var4 = 40 + vj.field_o;
-              bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
-              bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
-              so.b(s.field_j, var2, -te.field_bb + var1, 192);
-              ch.field_a.b(var2, -te.field_bb + var1);
-              ch.field_a.f(var2, var1 - 5);
-              hi.field_x.b(var3, var1 - te.field_bb);
-              hi.field_x.c(var4 + (var3 + -5), -te.field_bb + var1);
-              vo.field_a[0].b(var3, var1 - te.field_bb);
-              vo.field_a[1].b(-5 + var3 + var4, var1 + -te.field_bb);
-              vo.field_a[2].b(var3, -5 + var1);
-              vo.field_a[3].b(var3 + var4 + -5, -5 + var1);
-              bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
-              bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
-              bi.c();
-              break L5;
-            } else {
-              break L5;
-            }
+          if (!(vj.field_o <= 0)) {
+            var1 = 7 * nh.field_P / 8;
+            var2 = vh.field_b + 100;
+            var3 = var2 + (-vj.field_o + 400 >> 1);
+            var4 = 40 + vj.field_o;
+            bi.f(var3, var1 - te.field_bb, var4 + var3, var1);
+            bi.a(var3, var1 - te.field_bb, var4, te.field_bb, 2560, 160);
+            so.b(s.field_j, var2, -te.field_bb + var1, 192);
+            ch.field_a.b(var2, -te.field_bb + var1);
+            ch.field_a.f(var2, var1 - 5);
+            hi.field_x.b(var3, var1 - te.field_bb);
+            hi.field_x.c(var4 + (var3 - 5), -te.field_bb + var1);
+            vo.field_a[0].b(var3, var1 - te.field_bb);
+            vo.field_a[1].b(-5 + var3 + var4, var1 - te.field_bb);
+            vo.field_a[2].b(var3, -5 + var1);
+            vo.field_a[3].b(var3 + var4 - 5, -5 + var1);
+            bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
+            bj.field_q.a(ip.field_o, 300 + var2, var1 - 14, 10066329, 0);
+            bi.c();
           }
           return;
+        }
+        if (ma.field_r == -2) {
+          if (param0 != 0) {
+            eg.c(-13);
+          }
+          if (!(vj.field_o <= 0)) {
+            var1Lifetime1 = 7 * nh.field_P / 8;
+            var2Lifetime1 = vh.field_b + 100;
+            var3Lifetime1 = var2Lifetime1 + (-vj.field_o + 400 >> 1);
+            var4Lifetime1 = 40 + vj.field_o;
+            bi.f(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1 + var3Lifetime1, var1Lifetime1);
+            bi.a(var3Lifetime1, var1Lifetime1 - te.field_bb, var4Lifetime1, te.field_bb, 2560, 160);
+            so.b(s.field_j, var2Lifetime1, -te.field_bb + var1Lifetime1, 192);
+            ch.field_a.b(var2Lifetime1, -te.field_bb + var1Lifetime1);
+            ch.field_a.f(var2Lifetime1, var1Lifetime1 - 5);
+            hi.field_x.b(var3Lifetime1, var1Lifetime1 - te.field_bb);
+            hi.field_x.c(var4Lifetime1 + (var3Lifetime1 - 5), -te.field_bb + var1Lifetime1);
+            vo.field_a[0].b(var3Lifetime1, var1Lifetime1 - te.field_bb);
+            vo.field_a[1].b(-5 + var3Lifetime1 + var4Lifetime1, var1Lifetime1 - te.field_bb);
+            vo.field_a[2].b(var3Lifetime1, -5 + var1Lifetime1);
+            vo.field_a[3].b(var3Lifetime1 + var4Lifetime1 - 5, -5 + var1Lifetime1);
+            bj.field_q.a(jd.field_c, 20 + var2Lifetime1, -10 + var1Lifetime1 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
+            bj.field_q.a(ip.field_o, 300 + var2Lifetime1, var1Lifetime1 - 14, 10066329, 0);
+            bi.c();
+          }
+          return;
+        }
+        if (ma.field_r != -3) {
+          return;
+        }
+        if (param0 != 0) {
+          eg.c(-13);
+        }
+        if (!(vj.field_o <= 0)) {
+          var1Lifetime2 = 7 * nh.field_P / 8;
+          var2Lifetime2 = vh.field_b + 100;
+          var3Lifetime2 = var2Lifetime2 + (-vj.field_o + 400 >> 1);
+          var4Lifetime2 = 40 + vj.field_o;
+          bi.f(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2 + var3Lifetime2, var1Lifetime2);
+          bi.a(var3Lifetime2, var1Lifetime2 - te.field_bb, var4Lifetime2, te.field_bb, 2560, 160);
+          so.b(s.field_j, var2Lifetime2, -te.field_bb + var1Lifetime2, 192);
+          ch.field_a.b(var2Lifetime2, -te.field_bb + var1Lifetime2);
+          ch.field_a.f(var2Lifetime2, var1Lifetime2 - 5);
+          hi.field_x.b(var3Lifetime2, var1Lifetime2 - te.field_bb);
+          hi.field_x.c(var4Lifetime2 + (var3Lifetime2 - 5), -te.field_bb + var1Lifetime2);
+          vo.field_a[0].b(var3Lifetime2, var1Lifetime2 - te.field_bb);
+          vo.field_a[1].b(-5 + var3Lifetime2 + var4Lifetime2, var1Lifetime2 - te.field_bb);
+          vo.field_a[2].b(var3Lifetime2, -5 + var1Lifetime2);
+          vo.field_a[3].b(var3Lifetime2 + var4Lifetime2 - 5, -5 + var1Lifetime2);
+          bj.field_q.a(jd.field_c, 20 + var2Lifetime2, -10 + var1Lifetime2 + (-te.field_bb + 20), 400, -40 + te.field_bb - 4, 16777215, 0, 0, 2, 0);
+          bj.field_q.a(ip.field_o, 300 + var2Lifetime2, var1Lifetime2 - 14, 10066329, 0);
+          bi.c();
         }
     }
 

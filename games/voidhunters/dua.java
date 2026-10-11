@@ -11,58 +11,35 @@ final class dua extends rqa {
         nc stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            si.a(98, 62, param0[0].a(78));
-            if (param1 < -119) {
-              stackIn_4_0 = new nc("void");
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (nc) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          si.a(98, 62, param0[0].a(78));
+          if (param1 < -119) {
+            stackIn_4_0 = new nc("void");
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (nc) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("dua.A(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("dua.A(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw rta.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void f(byte param0) {
         if (param0 < 88) {
-            field_p = (khb) null;
-            field_p = null;
-            return;
+          field_p = (khb) null;
+          field_p = null;
+          return;
         }
         field_p = null;
     }
@@ -72,56 +49,37 @@ final class dua extends rqa {
     }
 
     final static String e(byte param0) {
-        if ((ef.field_z ^ -1) > -3) {
+        if (ef.field_z < 2) {
           return tdb.field_p;
-        } else {
-          if (ppb.field_a == null) {
-            if (btb.field_b.b((byte) 115)) {
-              if (!btb.field_b.a(32171, "commonui")) {
-                return drb.field_k + " - " + btb.field_b.a("commonui", -2118) + "%";
-              } else {
-                if (dt.field_o.b((byte) 122)) {
-                  if (dt.field_o.a(32171, "commonui")) {
-                    if (param0 < -18) {
-                      if (gdb.field_i.b((byte) -41)) {
-                        if (!gdb.field_i.a(35)) {
-                          return lwa.field_vb + " - " + gdb.field_i.b(-115) + "%";
-                        } else {
-                          return neb.field_p;
-                        }
-                      } else {
-                        return ltb.field_q;
-                      }
-                    } else {
-                      field_o = true;
-                      if (gdb.field_i.b((byte) -41)) {
-                        if (!gdb.field_i.a(35)) {
-                          return lwa.field_vb + " - " + gdb.field_i.b(-115) + "%";
-                        } else {
-                          return neb.field_p;
-                        }
-                      } else {
-                        return ltb.field_q;
-                      }
-                    }
-                  } else {
-                    return am.field_p + " - " + dt.field_o.a("commonui", -2118) + "%";
-                  }
-                } else {
-                  return wqb.field_b;
-                }
-              }
-            } else {
-              return wea.field_o;
-            }
-          } else {
-            if (!ppb.field_a.b((byte) -37)) {
-              return ocb.field_i;
-            } else {
-              return lo.field_d;
-            }
-          }
         }
+        if (ppb.field_a != null) {
+          if (!ppb.field_a.b((byte) -37)) {
+            return ocb.field_i;
+          }
+          return lo.field_d;
+        }
+        if (!btb.field_b.b((byte) 115)) {
+          return wea.field_o;
+        }
+        if (!btb.field_b.a(32171, "commonui")) {
+          return drb.field_k + " - " + btb.field_b.a("commonui", -2118) + "%";
+        }
+        if (!dt.field_o.b((byte) 122)) {
+          return wqb.field_b;
+        }
+        if (!dt.field_o.a(32171, "commonui")) {
+          return am.field_p + " - " + dt.field_o.a("commonui", -2118) + "%";
+        }
+        if (param0 >= -18) {
+          field_o = true;
+        }
+        if (!gdb.field_i.b((byte) -41)) {
+          return ltb.field_q;
+        }
+        if (!gdb.field_i.a(35)) {
+          return lwa.field_vb + " - " + gdb.field_i.b(-115) + "%";
+        }
+        return neb.field_p;
     }
 
     static {

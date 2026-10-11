@@ -14,62 +14,43 @@ final class hd {
         int stackIn_19_0 = 0;
         if (param1 >= 28) {
           param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L0: {
-              if ((param0 ^ -1) <= -2049) {
-                stackIn_19_0 = fh.field_h[4096 - param0];
-                break L0;
-              } else {
-                stackIn_19_0 = fh.field_h[param0];
-                break L0;
-              }
+          if (param0 < 4096) {
+            if (param0 >= 2048) {
+              stackIn_19_0 = fh.field_h[4096 - param0];
+            } else {
+              stackIn_19_0 = fh.field_h[param0];
             }
             return stackIn_19_0;
-          } else {
-            L1: {
-              if (-6145 >= (param0 ^ -1)) {
-                stackIn_15_0 = -fh.field_h[-param0 + 8192];
-                break L1;
-              } else {
-                stackIn_15_0 = -fh.field_h[-4096 + param0];
-                break L1;
-              }
-            }
-            return stackIn_15_0;
           }
-        } else {
-          hd.a(-38, -105);
-          param0 = param0 & 8191;
-          if (-4097 < (param0 ^ -1)) {
-            L2: {
-              if ((param0 ^ -1) <= -2049) {
-                stackIn_9_0 = fh.field_h[4096 - param0];
-                break L2;
-              } else {
-                stackIn_9_0 = fh.field_h[param0];
-                break L2;
-              }
-            }
-            return stackIn_9_0;
+          if (param0 >= 6144) {
+            stackIn_15_0 = -fh.field_h[-param0 + 8192];
           } else {
-            L3: {
-              if (-6145 >= (param0 ^ -1)) {
-                stackIn_5_0 = -fh.field_h[-param0 + 8192];
-                break L3;
-              } else {
-                stackIn_5_0 = -fh.field_h[-4096 + param0];
-                break L3;
-              }
-            }
-            return stackIn_5_0;
+            stackIn_15_0 = -fh.field_h[-4096 + param0];
           }
+          return stackIn_15_0;
         }
+        hd.a(-38, -105);
+        param0 = param0 & 8191;
+        if (param0 < 4096) {
+          if (param0 >= 2048) {
+            stackIn_9_0 = fh.field_h[4096 - param0];
+          } else {
+            stackIn_9_0 = fh.field_h[param0];
+          }
+          return stackIn_9_0;
+        }
+        if (param0 >= 6144) {
+          stackIn_5_0 = -fh.field_h[-param0 + 8192];
+        } else {
+          stackIn_5_0 = -fh.field_h[-4096 + param0];
+        }
+        return stackIn_5_0;
     }
 
     public static void a(byte param0) {
         field_c = null;
         if (param0 != -41) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;

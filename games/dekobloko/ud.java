@@ -9,27 +9,20 @@ final class ud extends ti {
     int field_s;
 
     final ud a(je param0) {
-        int dupTemp$1 = 0;
         this.field_o = param0.a(14, this.field_o);
         this.field_p = param0.a(false, this.field_p);
-        if (this.field_q == this.field_s) {
-          dupTemp$1 = param0.b(this.field_q, 114);
-          this.field_s = dupTemp$1;
-          this.field_q = dupTemp$1;
-          return (ud) (this);
-        } else {
-          L0: {
-            this.field_q = param0.b(this.field_q, 86);
-            this.field_s = param0.b(this.field_s, 36);
-            if (this.field_q != this.field_s) {
-              break L0;
-            } else {
-              this.field_q = this.field_q - 1;
-              break L0;
-            }
+        if (this.field_q != this.field_s) {
+          this.field_q = param0.b(this.field_q, 86);
+          this.field_s = param0.b(this.field_s, 36);
+          if (this.field_q == this.field_s) {
+            this.field_q = this.field_q - 1;
           }
-          return (ud) (this);
+          return this;
         }
+        int dupTemp$0 = param0.b(this.field_q, 114);
+        this.field_s = dupTemp$0;
+        this.field_q = dupTemp$0;
+        return this;
     }
 
     ud(int param0, byte[] param1, int param2, int param3) {

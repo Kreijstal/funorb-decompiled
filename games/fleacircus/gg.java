@@ -14,20 +14,20 @@ abstract class gg implements jb {
 
     public final wd a(boolean param0) {
         if (param0) {
-            field_h = (ei) null;
-            if (this.b(true)) {
-                return uk.field_b;
-            }
-            if (!((350L + this.field_c ^ -1L) >= (lj.a((byte) -31) ^ -1L))) {
-                return ea.field_b;
-            }
-            return this.a((byte) -8);
+          field_h = (ei) null;
+          if (this.b(true)) {
+            return uk.field_b;
+          }
+          if (!((350L + this.field_c) <= lj.a((byte) -31))) {
+            return ea.field_b;
+          }
+          return this.a((byte) -8);
         }
         if (this.b(true)) {
-            return uk.field_b;
+          return uk.field_b;
         }
-        if (!((350L + this.field_c ^ -1L) >= (lj.a((byte) -31) ^ -1L))) {
-            return ea.field_b;
+        if (!((350L + this.field_c) <= lj.a((byte) -31))) {
+          return ea.field_b;
         }
         return this.a((byte) -8);
     }
@@ -38,7 +38,7 @@ abstract class gg implements jb {
         field_h = null;
         field_i = null;
         if (param0 < 123) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -47,23 +47,20 @@ abstract class gg implements jb {
     abstract wd a(byte param0);
 
     public final String b(int param0) {
-        int var2;
-        if (!this.b(true)) {
-          var2 = 93 % ((param0 - 54) / 33);
-          if (this.field_c - -350L > lj.a((byte) -23)) {
-            return null;
-          } else {
-            return this.b((byte) 95);
-          }
-        } else {
+        if (this.b(true)) {
           return null;
         }
+        int var2 = 93 % ((param0 - 54) / 33);
+        if (this.field_c + 350L <= lj.a((byte) -23)) {
+          return this.b((byte) 95);
+        }
+        return null;
     }
 
     public final void a(int param0) {
         this.field_c = lj.a((byte) -116);
         if (param0 != -1283) {
-            field_f = 78;
+          field_f = 78;
         }
     }
 

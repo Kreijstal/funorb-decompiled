@@ -11,9 +11,9 @@ final class jm {
         field_d = null;
         field_c = null;
         if (param0 != -23787) {
-            jm.b(123);
-            field_a = null;
-            return;
+          jm.b(123);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
@@ -22,21 +22,15 @@ final class jm {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (param0 == 28679) {
-          if (wk.field_h == null) {
-            return;
-          } else {
-            var1 = wk.field_h;
-            synchronized (var1) {
-              L0: {
-                wk.field_h = null;
-                break L0;
-              }
-            }
-            return;
-          }
-        } else {
+        if (param0 != 28679) {
           return;
+        }
+        if (wk.field_h == null) {
+          return;
+        }
+        var1 = wk.field_h;
+        synchronized (var1) {
+          wk.field_h = null;
         }
     }
 

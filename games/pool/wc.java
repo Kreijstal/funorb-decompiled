@@ -16,78 +16,45 @@ final class wc {
         an stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 > 40) {
-                break L1;
-              } else {
-                var6 = (di) null;
-                wc.a((di) null, -35, -8, (di) null, -32);
-                break L1;
-              }
-            }
-            if (vj.a(param2, param0, param4, (byte) 121)) {
-              stackIn_6_0 = fn.a((byte) 126, param3.a(123, param4, param2));
-              break L0;
-            } else {
-              return null;
-            }
+          if (param1 <= 40) {
+            var6 = (di) null;
+            wc.a((di) null, -35, -8, (di) null, -32);
           }
+          if (!vj.a(param2, param0, param4, (byte) 121)) {
+            return null;
+          }
+          stackIn_6_0 = fn.a((byte) 126, param3.a(123, param4, param2));
+          return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("wc.B(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("wc.B(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw wm.a((Throwable) ((Object) stackIn_10_0), stackIn_13_2 + ',' + param4 + ')');
+          throw wm.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(')').toString());
         }
-        return stackIn_6_0;
     }
 
     public static void a(int param0) {
         field_a = null;
         field_d = null;
         if (param0 <= 65) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 
@@ -99,59 +66,27 @@ final class wc {
         RuntimeException var1 = null;
         var3 = Pool.field_O;
         try {
-          L0: {
-            var1_int = 0;
-            var2 = 101 % ((32 - param0) / 49);
-            L1: while (true) {
-              if (var1_int >= no.field_n.length) {
-                break L0;
-              } else {
-                L2: {
-                  L3: {
-                    if (no.field_n[var1_int] != 0) {
-                      break L3;
-                    } else {
-                      if (0 >= ji.field_b[var1_int]) {
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  L4: {
-                    no.field_n[var1_int] = no.field_n[var1_int] + ji.field_b[var1_int];
-                    if (256 >= no.field_n[var1_int]) {
-                      break L4;
-                    } else {
-                      no.field_n[var1_int] = 256;
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if (ji.field_b[var1_int] >= 0) {
-                      break L5;
-                    } else {
-                      if (-1 <= (no.field_n[var1_int] ^ -1)) {
-                        no.field_n[var1_int] = 0;
-                        ji.field_b[var1_int] = 0;
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                  }
-                  if (ji.field_b[var1_int] <= -32) {
-                    break L2;
-                  } else {
-                    ji.field_b[var1_int] = ji.field_b[var1_int] - 1;
-                    break L2;
-                  }
-                }
-                var1_int++;
-                continue L1;
+          var1_int = 0;
+          var2 = 101 % ((32 - param0) / 49);
+          while (var1_int < no.field_n.length) {
+            if (no.field_n[var1_int] != 0 ||
+              !(0 >= ji.field_b[var1_int])) {
+              no.field_n[var1_int] = no.field_n[var1_int] + ji.field_b[var1_int];
+              if (256 < no.field_n[var1_int]) {
+                no.field_n[var1_int] = 256;
+              }
+              if (ji.field_b[var1_int] < 0 &&
+                no.field_n[var1_int] <= 0) {
+                no.field_n[var1_int] = 0;
+                ji.field_b[var1_int] = 0;
+              }
+              if (ji.field_b[var1_int] > -32) {
+                ji.field_b[var1_int] = ji.field_b[var1_int] - 1;
               }
             }
+            var1_int++;
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;

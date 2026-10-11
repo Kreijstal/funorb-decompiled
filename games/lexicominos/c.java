@@ -12,38 +12,35 @@ final class c extends kd {
     static String field_n;
 
     public static void a(int param0) {
-        if (param0 < 112) {
-          field_n = (String) null;
-          field_o = null;
-          field_m = null;
-          field_i = (int[][]) null;
-          field_n = null;
-          return;
-        } else {
+        if (param0 >= 112) {
           field_o = null;
           field_m = null;
           field_i = (int[][]) null;
           field_n = null;
           return;
         }
+        field_n = (String) null;
+        field_o = null;
+        field_m = null;
+        field_i = (int[][]) null;
+        field_n = null;
     }
 
     final static db[] a(int param0, int param1, int param2, int param3, int param4) {
-        if (param4 < 82) {
-          field_m = (ki) null;
-          return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
-        } else {
+        if (param4 >= 82) {
           return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
         }
+        field_m = (ki) null;
+        return rb.a(1, 1, param0, 1, param2, 1, param3, 3, param1);
     }
 
     c(long param0, int param1, byte[] param2) {
         try {
-            this.field_h = param2;
-            this.field_l = param0;
-            this.field_k = param1;
+          this.field_h = param2;
+          this.field_l = param0;
+          this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw ld.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ld.a((Throwable) ((Object) runtimeException), "c.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

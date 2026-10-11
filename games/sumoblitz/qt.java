@@ -12,42 +12,26 @@ abstract class qt {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var4 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                qt.a((byte) -32);
-                break L1;
-              }
-            }
-            nk.b();
-            sq.field_a = new int[260];
-            jn.field_b = 11;
-            var1_int = 0;
-            L2: while (true) {
-              if (-257 >= (var1_int ^ -1)) {
-                var5 = 256;
-                var1_int = var5;
-                L3: while (true) {
-                  if (var5 >= sq.field_a.length) {
-                    break L0;
-                  } else {
-                    sq.field_a[var5] = 255;
-                    var5++;
-                    continue L3;
-                  }
-                }
-              } else {
-                var2 = 15.0;
-                sq.field_a[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
-                var1_int++;
-                continue L2;
-              }
-            }
+          if (!param0) {
+            qt.a((byte) -32);
           }
+          nk.b();
+          sq.field_a = new int[260];
+          jn.field_b = 11;
+          for (var1_int = 0; var1_int < 256; var1_int++) {
+            var2 = 15.0;
+            sq.field_a[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+          }
+          var5 = 256;
+          var1_intLifetime1 = var5;
+          while (var5 < sq.field_a.length) {
+            sq.field_a[var5] = 255;
+            var5++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
@@ -57,36 +41,37 @@ abstract class qt {
 
     final static lj a(byte param0) {
         if (param0 != 21) {
-            return (lj) null;
+          return (lj) null;
         }
         String var1 = gi.c((byte) -2);
-        if (var1 != null && var1.indexOf('@') >= 0) {
-            var1 = "";
+        if (var1 != null &&
+          var1.indexOf('@') >= 0) {
+          var1 = "";
         }
-        return new lj(gi.c((byte) -2), kc.a(param0 + -3));
+        return new lj(gi.c((byte) -2), kc.a(param0 - 3));
     }
 
     final void b(byte param0) {
         if (param0 > -126) {
-            this.field_b = true;
-            this.field_b = false;
-            return;
+          this.field_b = true;
+          this.field_b = false;
+          return;
         }
         this.field_b = false;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            return true;
+          return true;
         }
         return this.field_b;
     }
 
     final void a(int param0) {
         if (param0 != 5295) {
-            qt.b(false);
-            this.field_b = true;
-            return;
+          qt.b(false);
+          this.field_b = true;
+          return;
         }
         this.field_b = true;
     }

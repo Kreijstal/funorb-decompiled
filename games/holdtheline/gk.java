@@ -10,28 +10,26 @@ final class gk {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        if (param0 != 115) {
-          gk.a((byte) 54);
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 115) {
           field_b = null;
           field_d = null;
           return;
         }
+        gk.a((byte) 54);
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(ic.field_d);
-            if (param1 <= 26) {
-                field_d = (float[]) null;
-            }
-            param0.addMouseMotionListener(ic.field_d);
-            param0.addFocusListener(ic.field_d);
+          param0.addMouseListener(ic.field_d);
+          if (param1 <= 26) {
+            field_d = (float[]) null;
+          }
+          param0.addMouseMotionListener(ic.field_d);
+          param0.addFocusListener(ic.field_d);
         } catch (RuntimeException runtimeException) {
-            throw kk.a((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw kk.a((Throwable) ((Object) runtimeException), "gk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

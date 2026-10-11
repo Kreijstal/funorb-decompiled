@@ -20,48 +20,35 @@ final class nv extends fh implements mda {
         field_p = null;
         field_r = null;
         if (param0 < 30) {
-            nv.e(-90);
+          nv.e(-90);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$2 = 0;
-        int incrementValue$3 = 0;
+        int incrementValue$0 = 0;
+        int incrementValue$1 = 0;
         int var6_int = 0;
-        int[] var7 = null;
-        int var8 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
+        int[] var7 = null;
+        int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              incrementValue$2 = param2;
-              param2++;
-              ww.a(param0, param5, rba.field_b[incrementValue$2], (byte) 75, param4);
-              if (param1 >= 57) {
-                break L1;
-              } else {
-                field_o = 108;
-                break L1;
-              }
-            }
-            incrementValue$3 = param3;
-            param3--;
-            ww.a(param0, param5, rba.field_b[incrementValue$3], (byte) 75, param4);
-            var6_int = param2;
-            L2: while (true) {
-              if (var6_int > param3) {
-                break L0;
-              } else {
-                var7 = rba.field_b[var6_int];
-                var7[param5] = param0;
-                var7[param4] = param0;
-                var6_int++;
-                continue L2;
-              }
-            }
+          incrementValue$0 = param2;
+          param2++;
+          ww.a(param0, param5, rba.field_b[incrementValue$0], (byte) 75, param4);
+          if (param1 < 57) {
+            field_o = 108;
           }
+          incrementValue$1 = param3;
+          param3--;
+          ww.a(param0, param5, rba.field_b[incrementValue$1], (byte) 75, param4);
+          for (var6_int = param2; var6_int <= param3; var6_int++) {
+            var7 = rba.field_b[var6_int];
+            var7[param5] = param0;
+            var7[param4] = param0;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -73,24 +60,24 @@ final class nv extends fh implements mda {
         faa var4 = null;
         int var5 = 0;
         try {
-            int var3_int = -87 % ((4 - param0) / 54);
-            var4 = dpa.field_p;
-            var4.h(24335, param2);
-            var4.field_e = var4.field_e + 1;
-            var5 = var4.field_e;
-            var4.c(0, 1);
-            if (null != param1.field_e) {
-                var4.c(0, param1.field_e.length);
-                var4.a(0, param1.field_e, -1, param1.field_e.length);
-            } else {
-                var4.c(0, 0);
-            }
-            var4.g(1595, var5);
-            var4.field_e = var4.field_e - 4;
-            param1.field_d = var4.h(35);
-            var4.e(var4.field_e - var5, -129);
+          int var3_int = -87 % ((4 - param0) / 54);
+          var4 = dpa.field_p;
+          var4.h(24335, param2);
+          var4.field_e = var4.field_e + 1;
+          var5 = var4.field_e;
+          var4.c(0, 1);
+          if (null != param1.field_e) {
+            var4.c(0, param1.field_e.length);
+            var4.a(0, param1.field_e, -1, param1.field_e.length);
+          } else {
+            var4.c(0, 0);
+          }
+          var4.g(1595, var5);
+          var4.field_e = var4.field_e - 4;
+          param1.field_d = var4.h(35);
+          var4.e(var4.field_e - var5, -129);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -100,28 +87,28 @@ final class nv extends fh implements mda {
     }
 
     final void e(byte param0) {
-        if (-1 > (this.field_l ^ -1)) {
-            this.field_t.a(this.field_m, this.field_l, (byte) 77);
-            this.field_l = 0;
-            if (param0 >= 106) {
-                return;
-            }
-            this.field_t = (qfa) null;
+        if (this.field_l > 0) {
+          this.field_t.a(this.field_m, this.field_l, (byte) 77);
+          this.field_l = 0;
+          if (param0 >= 106) {
             return;
+          }
+          this.field_t = (qfa) null;
+          return;
         }
         if (param0 < 106) {
-            this.field_t = (qfa) null;
-            return;
+          this.field_t = (qfa) null;
+          return;
         }
     }
 
     public final void a(int param0) {
         if (param0 != 31294) {
-            this.field_k = -106;
-            jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
-            this.field_q = -1;
-            this.field_s = -1;
-            return;
+          this.field_k = -106;
+          jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
+          this.field_q = -1;
+          this.field_s = -1;
+          return;
         }
         jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
         this.field_q = -1;
@@ -132,9 +119,9 @@ final class nv extends fh implements mda {
         jaggl.OpenGL.glFramebufferRenderbufferEXT(param2, param1, 36161, this.field_l);
         this.field_s = param1;
         if (param0 != 1) {
-            this.field_u = -15;
-            this.field_q = param2;
-            return;
+          this.field_u = -15;
+          this.field_q = param2;
+          return;
         }
         this.field_q = param2;
     }
@@ -145,105 +132,78 @@ final class nv extends fh implements mda {
         String stackIn_26_0 = null;
         String stackIn_30_0 = null;
         String stackIn_34_0 = null;
-        if (4 > param0) {
-          if (param1 >= 0) {
-            if (param1 < unb.field_p) {
-              var3 = param0;
-              if (-1 == (var3 ^ -1)) {
-                L0: {
-                  if (-1 != (param1 ^ -1)) {
-                    stackIn_22_0 = fcb.field_g;
-                    break L0;
-                  } else {
-                    stackIn_22_0 = cta.field_r;
-                    break L0;
-                  }
-                }
-                return stackIn_22_0;
-              } else {
-                if (-2 == (var3 ^ -1)) {
-                  L1: {
-                    if (param1 != 0) {
-                      stackIn_26_0 = csa.field_a;
-                      break L1;
-                    } else {
-                      stackIn_26_0 = fdb.field_T;
-                      break L1;
-                    }
-                  }
-                  return stackIn_26_0;
-                } else {
-                  if (2 == var3) {
-                    L2: {
-                      if (param1 != 0) {
-                        stackIn_30_0 = pbb.field_a;
-                        break L2;
-                      } else {
-                        stackIn_30_0 = jlb.field_t;
-                        break L2;
-                      }
-                    }
-                    return stackIn_30_0;
-                  } else {
-                    if (var3 == 3) {
-                      L3: {
-                        if (0 == param1) {
-                          stackIn_34_0 = ipa.field_q;
-                          break L3;
-                        } else {
-                          stackIn_34_0 = vm.field_q;
-                          break L3;
-                        }
-                      }
-                      return stackIn_34_0;
-                    } else {
-                      if (param2) {
-                        return aqa.field_a[param0];
-                      } else {
-                        return (String) null;
-                      }
-                    }
-                  }
-                }
-              }
-            } else {
-              if (param2) {
-                return aqa.field_a[param0];
-              } else {
-                return (String) null;
-              }
-            }
-          } else {
-            if (param2) {
-              return aqa.field_a[param0];
-            } else {
-              return (String) null;
-            }
-          }
-        } else {
+        if (4 <= param0) {
           if (param2) {
             return aqa.field_a[param0];
-          } else {
-            return (String) null;
           }
+          return (String) null;
         }
+        if (param1 < 0) {
+          if (param2) {
+            return aqa.field_a[param0];
+          }
+          return (String) null;
+        }
+        if (param1 >= unb.field_p) {
+          if (param2) {
+            return aqa.field_a[param0];
+          }
+          return (String) null;
+        }
+        var3 = param0;
+        if (var3 == 0) {
+          if (param1 != 0) {
+            stackIn_22_0 = fcb.field_g;
+          } else {
+            stackIn_22_0 = cta.field_r;
+          }
+          return stackIn_22_0;
+        }
+        if (var3 == 1) {
+          if (param1 != 0) {
+            stackIn_26_0 = csa.field_a;
+          } else {
+            stackIn_26_0 = fdb.field_T;
+          }
+          return stackIn_26_0;
+        }
+        if (2 == var3) {
+          if (param1 != 0) {
+            stackIn_30_0 = pbb.field_a;
+          } else {
+            stackIn_30_0 = jlb.field_t;
+          }
+          return stackIn_30_0;
+        }
+        if (var3 != 3) {
+          if (param2) {
+            return aqa.field_a[param0];
+          }
+          return (String) null;
+        }
+        if (0 == param1) {
+          stackIn_34_0 = ipa.field_q;
+        } else {
+          stackIn_34_0 = vm.field_q;
+        }
+        return stackIn_34_0;
     }
 
     nv(qfa param0, int param1, int param2, int param3) {
         this.field_s = -1;
         this.field_q = -1;
         try {
-            this.field_t = param0;
-            this.field_k = param1;
-            this.field_u = param3;
-            this.field_w = param2;
-            jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
-            this.field_l = job.field_p[0];
-            jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
-            jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_k, this.field_w, this.field_u);
-            this.field_m = this.field_u * this.field_w * this.field_t.e(this.field_k, 2);
+          this.field_t = param0;
+          this.field_k = param1;
+          this.field_u = param3;
+          this.field_w = param2;
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
+          this.field_l = job.field_p[0];
+          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
+          jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_k, this.field_w, this.field_u);
+          this.field_m = this.field_u * this.field_w * this.field_t.e(this.field_k, 2);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -251,17 +211,17 @@ final class nv extends fh implements mda {
         this.field_s = -1;
         this.field_q = -1;
         try {
-            this.field_k = param1;
-            this.field_t = param0;
-            this.field_u = param3;
-            this.field_w = param2;
-            jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
-            this.field_l = job.field_p[0];
-            jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
-            jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_k, this.field_w, this.field_u);
-            this.field_m = this.field_w * (this.field_u * this.field_t.e(this.field_k, 2));
+          this.field_k = param1;
+          this.field_t = param0;
+          this.field_u = param3;
+          this.field_w = param2;
+          jaggl.OpenGL.glGenRenderbuffersEXT(1, job.field_p, 0);
+          this.field_l = job.field_p[0];
+          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
+          jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_k, this.field_w, this.field_u);
+          this.field_m = this.field_w * (this.field_u * this.field_t.e(this.field_k, 2));
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

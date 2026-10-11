@@ -12,9 +12,9 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_e = true;
+          this.field_e = true;
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "uk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "uk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,57 +24,37 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == -118) {
-                break L1;
-              } else {
-                var3 = (CharSequence) null;
-                uk.a((CharSequence) null, (byte) 121);
-                break L1;
-              }
-            }
-            stackIn_3_0 = vk.a(false, param0, -123);
-            break L0;
+          if (param1 != -118) {
+            var3 = (CharSequence) null;
+            uk.a((CharSequence) null, (byte) 121);
           }
+          stackIn_3_0 = vk.a(false, param0, -123);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("uk.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("uk.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final void a(dl param0, byte param1) {
         try {
-            if (param1 != 67) {
-                field_f = (String) null;
-            }
-            fh.a(100, param0, this.field_b);
+          if (param1 != 67) {
+            field_f = (String) null;
+          }
+          fh.a(100, param0, this.field_b);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "uk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -108,17 +88,17 @@ final class uk extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_g = new wf[79];
         field_c = "Orb coins: <%0>";
         field_a = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)(-1 + (var0 << 753917857));
-            var6 = (long)(1 + (var0 << 1457081729));
-            var3 = (int)((var6 * var6 >> -1833308270) - 32768L);
-            var2 = (int)(-32768L + (var4 * var4 >> 500559250));
-            if (var3 >= field_a.length) {
-                var3 = field_a.length + -1;
-            }
-            for (var1 = 0 <= var2 ? var2 : 0; var3 >= var1; var1++) {
-                field_a[var1] = var0;
-            }
+        for (var0 = 92682; var0 >= 46341; var0--) {
+          var4 = (long)(-1 + (var0 << 1));
+          var6 = (long)(1 + (var0 << 1));
+          var3 = (int)((var6 * var6 >> 18) - 32768L);
+          var2 = (int)(-32768L + (var4 * var4 >> 18));
+          if (var3 >= field_a.length) {
+            var3 = field_a.length - 1;
+          }
+          for (var1 = 0 <= var2 ? var2 : 0; var3 >= var1; var1++) {
+            field_a[var1] = var0;
+          }
         }
         field_f = "Cog spells deal with changing the course of time and manipulating your opponents.";
     }

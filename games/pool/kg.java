@@ -14,11 +14,11 @@ final class kg extends ma {
 
     final static String c(byte param0) {
         if (wd.field_Lb == ra.field_e) {
-            return eo.field_Rb;
+          return eo.field_Rb;
         }
         if (param0 <= 44) {
-            kg.c((byte) 49);
-            return qg.field_a;
+          kg.c((byte) 49);
+          return qg.field_a;
         }
         return qg.field_a;
     }
@@ -28,7 +28,7 @@ final class kg extends ma {
         field_r = null;
         field_t = null;
         field_s = null;
-        int var1 = -63 % ((param0 - -36) / 40);
+        int var1 = -63 % ((param0 + 36) / 40);
         field_l = null;
     }
 
@@ -37,27 +37,14 @@ final class kg extends ma {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              hr.field_c = new ro[param0];
-              if (param1 == 49) {
-                break L1;
-              } else {
-                kg.d((byte) -107);
-                break L1;
-              }
-            }
-            var2_int = 0;
-            L2: while (true) {
-              if (hr.field_c.length <= var2_int) {
-                break L0;
-              } else {
-                hr.field_c[var2_int] = new ro();
-                var2_int++;
-                continue L2;
-              }
-            }
+          hr.field_c = new ro[param0];
+          if (param1 != 49) {
+            kg.d((byte) -107);
           }
+          for (var2_int = 0; hr.field_c.length > var2_int; var2_int++) {
+            hr.field_c[var2_int] = new ro();
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -71,18 +58,16 @@ final class kg extends ma {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         qe.field_y = param2;
-        if (!param1) {
-          kg.a(-104, true, -107, 21, 17);
-          vc.field_K = param4;
-          ch.field_I = param3;
-          mm.field_b = param0;
-          return;
-        } else {
+        if (param1) {
           vc.field_K = param4;
           ch.field_I = param3;
           mm.field_b = param0;
           return;
         }
+        kg.a(-104, true, -107, 21, 17);
+        vc.field_K = param4;
+        ch.field_I = param3;
+        mm.field_b = param0;
     }
 
     static {

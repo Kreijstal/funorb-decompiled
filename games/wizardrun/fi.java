@@ -13,10 +13,10 @@ final class fi extends ml {
     byte field_D;
 
     final static String a(CharSequence param0, int param1) {
+        int var5 = 0;
         int var2_int = 0;
         char[] var3 = null;
         int var4 = 0;
-        int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         char[] var8 = null;
@@ -24,123 +24,66 @@ final class fi extends ml {
         String stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var7 = wizardrun.field_H;
         try {
-          L0: {
-            L1: {
-              var2_int = param0.length();
-              if ((var2_int ^ -1) < -21) {
-                var2_int = 20;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            var9 = new char[var2_int];
-            var8 = var9;
-            var3 = var8;
-            var4 = 103 % ((param1 - -14) / 61);
-            var5 = 0;
-            L2: while (true) {
-              if (var5 >= var2_int) {
-                stackIn_20_0 = new String(var9);
-                break L0;
-              } else {
-                L3: {
-                  L4: {
-                    var6 = param0.charAt(var5);
-                    if (var6 < 65) {
-                      break L4;
-                    } else {
-                      if (var6 <= 90) {
-                        var3[var5] = (char)(var6 + -65 - -97);
-                        break L3;
-                      } else {
-                        break L4;
-                      }
-                    }
-                  }
-                  L5: {
-                    L6: {
-                      if (97 > var6) {
-                        break L6;
-                      } else {
-                        if (var6 <= 122) {
-                          break L5;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    L7: {
-                      if (48 > var6) {
-                        break L7;
-                      } else {
-                        if (var6 <= 57) {
-                          break L5;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    var3[var5] = (char)95;
-                    break L3;
-                  }
-                  var3[var5] = (char)var6;
-                  break L3;
-                }
-                var5++;
-                continue L2;
-              }
+          var2_int = param0.length();
+          if (var2_int > 20) {
+            var2_int = 20;
+          }
+          var9 = new char[var2_int];
+          var8 = var9;
+          var3 = var8;
+          var4 = 103 % ((param1 + 14) / 61);
+          for (var5 = 0; var5 < var2_int; var5++) {
+            var6 = param0.charAt(var5);
+            if (var6 >= 65 &&
+              var6 <= 90) {
+              var3[var5] = (char)(var6 - 65 + 97);
+            } else if ((97 > var6 ||
+              var6 > 122) &&
+              (48 > var6 ||
+              var6 > 57)) {
+              var3[var5] = (char)95;
+            } else {
+              var3[var5] = (char)var6;
             }
           }
+          stackIn_20_0 = new String(var9);
+          return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L8: {
-            var2 = decompiledCaughtException;
-            stackIn_23_0 = (RuntimeException) (var2);
-
-            stackIn_23_1 = new StringBuilder().append("fi.M(");
-
-            if (param0 == null) {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "null";
-              break L8;
-            } else {
-              stackIn_24_0 = (RuntimeException) ((Object) stackIn_23_0);
-              stackIn_24_1 = (StringBuilder) ((Object) stackIn_23_1);
-              stackIn_24_2 = "{...}";
-              break L8;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_23_0 = var2;
+          stackIn_23_1 = new StringBuilder().append("fi.M(");
+          if (param0 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_24_0), stackIn_24_2 + ',' + param1 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_20_0;
     }
 
     final static void f(int param0) {
         try {
-            if (ub.field_t != null) {
-                try {
-                    ub.field_t.a(0L, (byte) -64);
-                    ub.field_t.a(18729, nk.field_N.field_k, 24, nk.field_N.field_m);
-                } catch (Exception exception) {
-                }
+          if (ub.field_t != null) {
+            try {
+              ub.field_t.a(0L, (byte) -64);
+              ub.field_t.a(18729, nk.field_N.field_k, 24, nk.field_N.field_m);
+            } catch (Exception exception) {
             }
-            nk.field_N.field_m = nk.field_N.field_m + 24;
-            if (param0 != 95) {
-                field_A = 49;
-            }
+          }
+          nk.field_N.field_m = nk.field_N.field_m + 24;
+          if (param0 != 95) {
+            field_A = 49;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -152,20 +95,21 @@ final class fi extends ml {
 
     final int c(boolean param0) {
         if (param0) {
-            this.d(123);
+          this.d(123);
         }
-        if (!(null != this.field_C)) {
-            return 0;
+        if (null == this.field_C) {
+          return 0;
         }
         return this.field_C.field_m * 100 / (-this.field_D + this.field_C.field_k.length);
     }
 
     final byte[] d(int param0) {
-        if (this.field_s || this.field_C.field_m < -this.field_D + this.field_C.field_k.length) {
-            throw new RuntimeException();
+        if (this.field_s ||
+          this.field_C.field_m < -this.field_D + this.field_C.field_k.length) {
+          throw new RuntimeException();
         }
         if (param0 != 95) {
-            this.d(-58);
+          this.d(-58);
         }
         return this.field_C.field_k;
     }

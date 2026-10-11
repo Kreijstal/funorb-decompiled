@@ -9,8 +9,8 @@ final class dm {
 
     final static w a(byte param0) {
         if (param0 <= 95) {
-            dm.a(-23);
-            return ge.field_f.field_Sb;
+          dm.a(-23);
+          return ge.field_f.field_Sb;
         }
         return ge.field_f.field_Sb;
     }

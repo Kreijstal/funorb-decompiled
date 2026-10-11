@@ -14,7 +14,7 @@ final class lj {
         field_e = null;
         field_d = null;
         if (param0 != -60) {
-            return;
+          return;
         }
         field_c = null;
         field_f = null;

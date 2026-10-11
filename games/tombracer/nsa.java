@@ -21,30 +21,29 @@ final class nsa {
         field_f = null;
         field_i = null;
         if (param0) {
-            nsa.a(false);
+          nsa.a(false);
         }
     }
 
     final nsa a(int param0) {
-        if (param0 != -2707) {
-          this.field_j = 95;
-          return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
-        } else {
+        if (param0 == -2707) {
           return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
         }
+        this.field_j = 95;
+        return new nsa(this.field_k, this.field_m, this.field_g, this.field_b, this.field_a, this.field_j);
     }
 
     final void a(nsa param0, byte param1) {
         try {
-            this.field_g = param0.field_g;
-            this.field_k = param0.field_k;
-            this.field_m = param0.field_m;
-            int var3_int = 44 % ((64 - param1) / 55);
-            this.field_j = param0.field_j;
-            this.field_a = param0.field_a;
-            this.field_b = param0.field_b;
+          this.field_g = param0.field_g;
+          this.field_k = param0.field_k;
+          this.field_m = param0.field_m;
+          int var3_int = 44 % ((64 - param1) / 55);
+          this.field_j = param0.field_j;
+          this.field_a = param0.field_a;
+          this.field_b = param0.field_b;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nsa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -11,20 +11,14 @@ final class iqa {
     static String field_g;
 
     final soa a(byte param0) {
-        if (param0 >= -12) {
-          return (soa) null;
-        } else {
-          L0: {
-            if (null == this.field_e) {
-              this.field_e = new soa();
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param0 < -12) {
+          if (null == this.field_e) {
+            this.field_e = new soa();
           }
-          this.field_e.a(127, (iqa) (this));
+          this.field_e.a(127, this);
           return this.field_e;
         }
+        return (soa) null;
     }
 
     public static void a(int param0) {
@@ -42,60 +36,34 @@ final class iqa {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (pka.field_b > -param4 + param3) {
           nfa.a(0, param4, param2, param3, param1);
-          if (param0 == 30237) {
-            return;
-          } else {
-            iqa.a(114, -54, -16, -30, -116);
-            return;
-          }
         } else {
           if (param3 + param4 > ss.field_c) {
             nfa.a(0, param4, param2, param3, param1);
-            if (param0 != 30237) {
-              iqa.a(114, -54, -16, -30, -116);
-              return;
-            } else {
-              return;
-            }
           } else {
-            if (gca.field_d > param1 + -param4) {
+            if (gca.field_d > param1 - param4) {
               nfa.a(0, param4, param2, param3, param1);
-              if (param0 != 30237) {
-                iqa.a(114, -54, -16, -30, -116);
-                return;
-              } else {
-                return;
-              }
             } else {
-              if (param1 - -param4 > hc.field_h) {
+              if (param1 + param4 > hc.field_h) {
                 nfa.a(0, param4, param2, param3, param1);
-                if (param0 != 30237) {
-                  iqa.a(114, -54, -16, -30, -116);
-                  return;
-                } else {
-                  return;
-                }
               } else {
                 bq.a(param1, param3, param2, (byte) -13, param4);
-                if (param0 == 30237) {
-                  return;
-                } else {
-                  iqa.a(114, -54, -16, -30, -116);
-                  return;
-                }
               }
             }
           }
         }
+        if (param0 == 30237) {
+          return;
+        }
+        iqa.a(114, -54, -16, -30, -116);
     }
 
     iqa(ha param0, ei param1, java.awt.Canvas param2) {
         try {
-            this.field_a = param2;
-            this.field_d = param0;
-            this.field_b = param1;
+          this.field_a = param2;
+          this.field_d = param0;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "iqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "iqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

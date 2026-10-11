@@ -22,66 +22,43 @@ final class mm extends ne {
         di stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var2 = new di();
-              if (!param1) {
-                break L1;
-              } else {
-                var3 = (ec) null;
-                mm.a((ec) null, false);
-                break L1;
-              }
-            }
-            var2.a(param0, -1);
-            stackIn_3_0 = (di) (var2);
-            break L0;
+          var2 = new di();
+          if (param1) {
+            var3 = (ec) null;
+            mm.a((ec) null, false);
           }
+          var2.a(param0, -1);
+          stackIn_3_0 = var2;
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2_ref);
-
-            stackIn_6_1 = new StringBuilder().append("mm.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("mm.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void a(int param0) {
-        ec var2;
-        if (param0 <= 110) {
-          var2 = (ec) null;
-          mm.a((ec) null, false);
-          field_m = null;
-          field_j = null;
-          field_s = null;
-          return;
-        } else {
+        if (param0 > 110) {
           field_m = null;
           field_j = null;
           field_s = null;
           return;
         }
+        ec var2 = (ec) null;
+        mm.a((ec) null, false);
+        field_m = null;
+        field_j = null;
+        field_s = null;
     }
 
     private mm() throws Throwable {
@@ -89,11 +66,10 @@ final class mm extends ne {
     }
 
     final static int a(CharSequence param0, boolean param1, int param2, int param3) {
+        int var8 = 0;
         int stackIn_41_0 = 0;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
-        RuntimeException stackIn_45_0 = null;
-        StringBuilder stackIn_45_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -101,158 +77,77 @@ final class mm extends ne {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         ec var12 = null;
         var11 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (-3 < (param2 ^ -1)) {
-                break L1;
-              } else {
-                if (-37 <= (param2 ^ -1)) {
-                  L2: {
-                    var4_int = 0;
-                    var5 = 0;
-                    var6 = 0;
-                    var7 = param0.length();
-                    if (param3 == 3703) {
-                      break L2;
-                    } else {
-                      var12 = (ec) null;
-                      mm.a((ec) null, false);
-                      break L2;
-                    }
-                  }
-                  var8 = 0;
-                  L3: while (true) {
-                    if (var7 <= var8) {
-                      if (var5 == 0) {
-                        throw new NumberFormatException();
-                      } else {
-                        stackIn_41_0 = var6;
-                        break L0;
-                      }
-                    } else {
-                      L4: {
-                        L5: {
-                          var9 = param0.charAt(var8);
-                          if (var8 != 0) {
-                            break L5;
-                          } else {
-                            if (45 != var9) {
-                              if (var9 != 43) {
-                                break L5;
-                              } else {
-                                if (param1) {
-                                  break L4;
-                                } else {
-                                  break L5;
-                                }
-                              }
-                            } else {
-                              var4_int = 1;
-                              break L4;
-                            }
-                          }
-                        }
-                        L6: {
-                          L7: {
-                            if (var9 < 48) {
-                              break L7;
-                            } else {
-                              if (var9 > 57) {
-                                break L7;
-                              } else {
-                                var9 -= 48;
-                                break L6;
-                              }
-                            }
-                          }
-                          L8: {
-                            if (var9 < 65) {
-                              break L8;
-                            } else {
-                              if (var9 <= 90) {
-                                var9 -= 55;
-                                break L6;
-                              } else {
-                                break L8;
-                              }
-                            }
-                          }
-                          L9: {
-                            if (var9 < 97) {
-                              break L9;
-                            } else {
-                              if (122 < var9) {
-                                break L9;
-                              } else {
-                                var9 -= 87;
-                                break L6;
-                              }
-                            }
-                          }
-                          throw new NumberFormatException();
-                        }
-                        if (var9 >= param2) {
-                          throw new NumberFormatException();
-                        } else {
-                          L10: {
-                            if (var4_int != 0) {
-                              var9 = -var9;
-                              break L10;
-                            } else {
-                              break L10;
-                            }
-                          }
-                          var10 = var9 + var6 * param2;
-                          if (var10 / param2 == var6) {
-                            var5 = 1;
-                            var6 = var10;
-                            break L4;
-                          } else {
-                            throw new NumberFormatException();
-                          }
-                        }
-                      }
-                      var8++;
-                      continue L3;
-                    }
-                  }
+          if (param2 >= 2 &&
+            param2 <= 36) {
+            var4_int = 0;
+            var5 = 0;
+            var6 = 0;
+            var7 = param0.length();
+            if (param3 != 3703) {
+              var12 = (ec) null;
+              mm.a((ec) null, false);
+            }
+            for (var8 = 0; var7 > var8; var8++) {
+              boolean decompiledFrameRemainder0 = true;
+              var9 = param0.charAt(var8);
+              if ((var8 == 0) &&
+                (45 == var9)) {
+                var4_int = 1;
+                decompiledFrameRemainder0 = false;
+              }
+              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+                !param1))) {
+                if (var9 >= 48 &&
+                  var9 <= 57) {
+                  var9 -= 48;
+                } else if (var9 >= 65 &&
+                  var9 <= 90) {
+                  var9 -= 55;
+                } else if (var9 >= 97 &&
+                  122 >= var9) {
+                  var9 -= 87;
                 } else {
-                  break L1;
+                  throw new NumberFormatException();
                 }
+                if (var9 >= param2) {
+                  throw new NumberFormatException();
+                }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = var9 + var6 * param2;
+                if (var10 / param2 != var6) {
+                  throw new NumberFormatException();
+                }
+                var5 = 1;
+                var6 = var10;
               }
             }
-            throw new IllegalArgumentException("" + param2);
+            if (var5 == 0) {
+              throw new NumberFormatException();
+            }
+            stackIn_41_0 = var6;
+            return stackIn_41_0;
           }
+          throw new IllegalArgumentException("" + param2);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L11: {
-            var4 = decompiledCaughtException;
-            stackIn_44_0 = (RuntimeException) (var4);
-
-            stackIn_44_1 = new StringBuilder().append("mm.B(");
-
-            if (param0 == null) {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "null";
-              break L11;
-            } else {
-              stackIn_45_0 = (RuntimeException) ((Object) stackIn_44_0);
-              stackIn_45_1 = (StringBuilder) ((Object) stackIn_44_1);
-              stackIn_45_2 = "{...}";
-              break L11;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_44_0 = var4;
+          stackIn_44_1 = new StringBuilder().append("mm.B(");
+          if (param0 == null) {
+            stackIn_45_2 = "null";
+          } else {
+            stackIn_45_2 = "{...}";
           }
-          throw vk.a((Throwable) ((Object) stackIn_45_0), stackIn_45_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw vk.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_41_0;
     }
 
     static {

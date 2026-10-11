@@ -9,165 +9,96 @@ abstract class vj {
 
     public static void a(int param0) {
         if (param0 > -99) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+        int var11 = 0;
         int incrementValue$0 = 0;
         int stackIn_25_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var14 = EscapeVector.field_A;
         try {
-          L0: {
-            if (param6 < param2) {
-              if (param1 > param6 + 1) {
-                L1: {
-                  if (param1 <= param6 - -5) {
-                    break L1;
-                  } else {
-                    if (param3 == param5) {
-                      break L1;
-                    } else {
-                      var7_int = (param3 >> 1216373889) + (param5 >> -955460319) + (1 & (param5 & param3));
-                      var8 = param6;
-                      var9 = param3;
-                      var10 = param5;
-                      if (param0 < -87) {
-                        var11 = param6;
-                        L2: while (true) {
-                          if (var11 >= param1) {
-                            vj.a((byte) -109, var8, param2, param3, param4, var9, param6);
-                            vj.a((byte) -96, param1, param2, var10, param4, param5, var8);
-                            decompiledRegionSelector0 = 4;
-                            break L0;
-                          } else {
-                            L3: {
-                              var12 = cd.field_q[var11];
-                              if (param4) {
-                                stackIn_25_0 = fl.field_k[var12];
-                                break L3;
-                              } else {
-                                stackIn_25_0 = th.field_v[var12];
-                                break L3;
-                              }
-                            }
-                            L4: {
-                              var13 = stackIn_25_0;
-                              if (var7_int < var13) {
-                                L5: {
-                                  cd.field_q[var11] = cd.field_q[var8];
-                                  if (var9 <= var13) {
-                                    break L5;
-                                  } else {
-                                    var9 = var13;
-                                    break L5;
-                                  }
-                                }
-                                incrementValue$0 = var8;
-                                var8++;
-                                cd.field_q[incrementValue$0] = var12;
-                                break L4;
-                              } else {
-                                if (var13 > var10) {
-                                  var10 = var13;
-                                  break L4;
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                            var11++;
-                            continue L2;
-                          }
-                        }
-                      } else {
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      }
-                    }
-                  }
-                }
-                var7_int = -1 + param1;
-                L6: while (true) {
-                  if (param6 >= var7_int) {
-                    decompiledRegionSelector0 = 2;
-                    break L0;
-                  } else {
-                    var8 = param6;
-                    L7: while (true) {
-                      if (var7_int <= var8) {
-                        var7_int--;
-                        continue L6;
-                      } else {
-                        L8: {
-                          var9 = cd.field_q[var8];
-                          var10 = cd.field_q[var8 - -1];
-                          if (ke.a(var9, 2, var10, param4)) {
-                            cd.field_q[var8] = var10;
-                            cd.field_q[var8 + 1] = var9;
-                            break L8;
-                          } else {
-                            break L8;
-                          }
-                        }
-                        var8++;
-                        continue L7;
-                      }
-                    }
-                  }
-                }
+          if (param6 >= param2) {
+            return;
+          }
+          if (param1 <= param6 + 1) {
+            return;
+          }
+          if (param1 > param6 + 5 &&
+            param3 != param5) {
+            var7_int = (param3 >> 1) + (param5 >> 1) + (1 & (param5 & param3));
+            var8 = param6;
+            var9 = param3;
+            var10 = param5;
+            if (param0 >= -87) {
+              return;
+            }
+            for (var11 = param6; var11 < param1; var11++) {
+              var12 = cd.field_q[var11];
+              if (param4) {
+                stackIn_25_0 = fl.field_k[var12];
               } else {
-                decompiledRegionSelector0 = 1;
-                break L0;
+                stackIn_25_0 = th.field_v[var12];
               }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+              var13 = stackIn_25_0;
+              if (var7_int < var13) {
+                cd.field_q[var11] = cd.field_q[var8];
+                if (var9 > var13) {
+                  var9 = var13;
+                }
+                incrementValue$0 = var8;
+                var8++;
+                cd.field_q[incrementValue$0] = var12;
+              } else {
+                if (var13 > var10) {
+                  var10 = var13;
+                }
+              }
+            }
+            vj.a((byte) -109, var8, param2, param3, param4, var9, param6);
+            vj.a((byte) -96, param1, param2, var10, param4, param5, var8);
+            return;
+          }
+          for (var7_intLifetime1 = -1 + param1; param6 < var7_intLifetime1; var7_intLifetime1--) {
+            for (var8Lifetime1 = param6; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
+              var9Lifetime1 = cd.field_q[var8Lifetime1];
+              var10Lifetime1 = cd.field_q[var8Lifetime1 + 1];
+              if (ke.a(var9Lifetime1, 2, var10Lifetime1, param4)) {
+                cd.field_q[var8Lifetime1] = var10Lifetime1;
+                cd.field_q[var8Lifetime1 + 1] = var9Lifetime1;
+              }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           throw t.a((Throwable) ((Object) var7), "vj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return;
-              } else {
-                return;
-              }
-            }
-          }
-        }
     }
 
     final static void b(int param0) {
         if (param0 < 82) {
-            return;
+          return;
         }
-        if (!(bk.field_r == null)) {
-            bk.field_r.a((byte) -121);
+        if (bk.field_r != null) {
+          bk.field_r.a((byte) -121);
         }
     }
 

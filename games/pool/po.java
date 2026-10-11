@@ -6,7 +6,7 @@ final class po extends id implements java.awt.event.MouseWheelListener {
 
     final synchronized int b(int param0) {
         if (param0 != 2) {
-            return 48;
+          return 48;
         }
         int var2 = this.field_e;
         this.field_e = 0;

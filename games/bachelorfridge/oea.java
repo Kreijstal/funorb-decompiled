@@ -9,8 +9,8 @@ final class oea extends ul {
 
     final boolean f(int param0) {
         if (param0 <= 123) {
-            oea.g(-45);
-            return false;
+          oea.g(-45);
+          return false;
         }
         return false;
     }
@@ -18,15 +18,15 @@ final class oea extends ul {
     oea(Object param0, int param1) {
         super(param1);
         try {
-            this.field_r = param0;
+          this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "oea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final Object e(int param0) {
         if (param0 != -19795) {
-            return (Object) null;
+          return (Object) null;
         }
         return this.field_r;
     }
@@ -34,10 +34,10 @@ final class oea extends ul {
     public static void g(int param0) {
         field_p = null;
         if (param0 != -8333) {
-            field_s = (kv[]) null;
-            field_s = null;
-            field_q = null;
-            return;
+          field_s = (kv[]) null;
+          field_s = null;
+          field_q = null;
+          return;
         }
         field_s = null;
         field_q = null;

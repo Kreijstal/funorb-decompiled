@@ -12,112 +12,53 @@ final class ao {
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var2_intLifetime1;
         var4 = TetraLink.field_J;
         try {
-          L0: {
-            if (null == param0.field_h) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                L2: {
-                  if (param0.field_g != 0) {
-                    break L2;
-                  } else {
-                    if (-1 == (param0.field_s ^ -1)) {
-                      break L1;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                var2_int = 0;
-                L3: while (true) {
-                  if (var2_int >= pl.field_d) {
-                    break L1;
-                  } else {
-                    L4: {
-                      var3 = n.field_L[var2_int];
-                      if ((var3.field_i ^ -1) != -3) {
-                        break L4;
-                      } else {
-                        if (var3.field_g != param0.field_g) {
-                          break L4;
-                        } else {
-                          if (param0.field_s == var3.field_s) {
-                            decompiledRegionSelector0 = 1;
-                            break L0;
-                          } else {
-                            break L4;
-                          }
-                        }
-                      }
-                    }
-                    var2_int++;
-                    continue L3;
-                  }
-                }
+          if (null == param0.field_h) {
+            return;
+          }
+          if (param0.field_g != 0 ||
+            param0.field_s != 0) {
+            for (var2_int = 0; var2_int < pl.field_d; var2_int++) {
+              var3 = n.field_L[var2_int];
+              if (var3.field_i == 2 &&
+                var3.field_g == param0.field_g &&
+                param0.field_s == var3.field_s) {
+                return;
               }
-              L5: {
-                var2_int = -43 % ((param1 - 48) / 38);
-                if (null == param0.field_a) {
-                  break L5;
-                } else {
-                  ml.field_jb = param0.field_r;
-                  vf.field_b = param0.field_i;
-                  ba.field_N = param0.field_a;
-                  vd.field_h = param0.field_n;
-                  break L5;
-                }
-              }
-              ei.a(-2792, param0);
-              decompiledRegionSelector0 = 2;
-              break L0;
             }
           }
+          var2_intLifetime1 = -43 % ((param1 - 48) / 38);
+          if (null != param0.field_a) {
+            ml.field_jb = param0.field_r;
+            vf.field_b = param0.field_i;
+            ba.field_N = param0.field_a;
+            vd.field_h = param0.field_n;
+          }
+          ei.a(-2792, param0);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var2 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var2);
-
-            stackIn_21_1 = new StringBuilder().append("ao.A(");
-
-            if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L6;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L6;
-            }
-          }
-          throw oi.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return;
+          var2 = decompiledCaughtException;
+          stackIn_21_0 = var2;
+          stackIn_21_1 = new StringBuilder().append("ao.A(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
           } else {
-            return;
+            stackIn_22_2 = "{...}";
           }
+          throw oi.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
-            field_c = (tl) null;
+          field_c = (tl) null;
         }
     }
 

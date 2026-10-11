@@ -35,52 +35,36 @@ final class bq {
         RuntimeException var5 = null;
         var13 = TombRacer.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5_int = 0;
-              var6 = param4;
-              var7 = -param4;
-              var8 = -1;
-              if (param3 == -13) {
-                break L1;
-              } else {
-                bq.a(61, -28, 117, (byte) -18, -123);
-                break L1;
-              }
-            }
-            nra.a((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
-            L2: while (true) {
-              if (var6 <= var5_int) {
-                break L0;
-              } else {
-                L3: {
-                  var8 += 2;
-                  var5_int++;
-                  var7 = var7 + var8;
-                  if (0 > var7) {
-                    break L3;
-                  } else {
-                    var6--;
-                    var7 = var7 - (var6 << -1333958623);
-                    var9_ref_int__ = vaa.field_a[var6 + param0];
-                    var10_ref_int__ = vaa.field_a[-var6 + param0];
-                    var11_int = param1 + var5_int;
-                    var12_int = -var5_int + param1;
-                    nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
-                    nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
-                    break L3;
-                  }
-                }
-                var9 = param1 + var6;
-                var10 = param1 - var6;
-                var11 = vaa.field_a[var5_int + param0];
-                var12 = vaa.field_a[-var5_int + param0];
-                nra.a((byte) -55, param2, var9, var11, var10);
-                nra.a((byte) -55, param2, var9, var12, var10);
-                continue L2;
-              }
-            }
+          var5_int = 0;
+          var6 = param4;
+          var7 = -param4;
+          var8 = -1;
+          if (param3 != -13) {
+            bq.a(61, -28, 117, (byte) -18, -123);
           }
+          nra.a((byte) -55, param2, param4 + param1, vaa.field_a[param0], -param4 + param1);
+          while (var6 > var5_int) {
+            var8 += 2;
+            var5_int++;
+            var7 = var7 + var8;
+            if (0 <= var7) {
+              var6--;
+              var7 = var7 - (var6 << 1);
+              var9_ref_int__ = vaa.field_a[var6 + param0];
+              var10_ref_int__ = vaa.field_a[-var6 + param0];
+              var11_int = param1 + var5_int;
+              var12_int = -var5_int + param1;
+              nra.a((byte) -55, param2, var11_int, var9_ref_int__, var12_int);
+              nra.a((byte) -55, param2, var11_int, var10_ref_int__, var12_int);
+            }
+            var9 = param1 + var6;
+            var10 = param1 - var6;
+            var11 = vaa.field_a[var5_int + param0];
+            var12 = vaa.field_a[-var5_int + param0];
+            nra.a((byte) -55, param2, var9, var11, var10);
+            nra.a((byte) -55, param2, var9, var12, var10);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

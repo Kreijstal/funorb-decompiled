@@ -12,8 +12,8 @@ final class rb extends mi {
 
     final fe a(byte param0) {
         if (param0 != -24) {
-            rb.d(-84);
-            return h.field_I;
+          rb.d(-84);
+          return h.field_I;
         }
         return h.field_I;
     }
@@ -22,7 +22,7 @@ final class rb extends mi {
         field_h = null;
         field_f = null;
         if (param0 >= -70) {
-            rb.d(69);
+          rb.d(69);
         }
     }
 

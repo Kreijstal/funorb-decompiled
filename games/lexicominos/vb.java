@@ -25,64 +25,43 @@ final class vb extends kd {
         int[] var17 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
         var16 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param5 == -95) {
-                break L1;
-              } else {
-                field_m = (ng) null;
-                break L1;
-              }
+          if (param5 != -95) {
+            field_m = (ng) null;
+          }
+          while (true) {
+            param2--;
+            if (0 > param2) {
+              return;
             }
-            L2: while (true) {
-              param2--;
-              if (0 > param2) {
-                break L0;
-              } else {
-                var17 = param6;
-                var10 = var17;
-                var11 = param8;
-                var12 = param4;
-                var13 = param1;
-                var14 = param9;
-                var15 = (16711422 & var17[var11]) >> 2087352065;
-                var10[var11] = vg.a(var13 >> -1801119671, 65280) + vg.a(var12 >> -1304186335, 16711680) + (vg.a(var14, 33440375) >> 422246321) + var15;
-                param9 = param9 + param3;
-                param4 = param4 + param0;
-                param1 = param1 + param7;
-                param8++;
-                continue L2;
-              }
-            }
+            var17 = param6;
+            var10 = var17;
+            var11 = param8;
+            var12 = param4;
+            var13 = param1;
+            var14 = param9;
+            var15 = (16711422 & var17[var11]) >> 1;
+            var10[var11] = vg.a(var13 >> 9, 65280) + vg.a(var12 >> 1, 16711680) + (vg.a(var14, 33440375) >> 17) + var15;
+            param9 = param9 + param3;
+            param4 = param4 + param0;
+            param1 = param1 + param7;
+            param8++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var10_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var10_ref);
-
-            stackIn_8_1 = new StringBuilder().append("vb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-
-            if (param6 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var10_ref = decompiledCaughtException;
+          stackIn_8_0 = var10_ref;
+          stackIn_8_1 = new StringBuilder().append("vb.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          if (param6 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw ld.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw ld.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -90,7 +69,7 @@ final class vb extends kd {
         field_k = null;
         field_l = null;
         if (param0 < 66) {
-            return;
+          return;
         }
         field_m = null;
         field_r = null;
@@ -104,80 +83,45 @@ final class vb extends kd {
         int var5 = 0;
         int var6 = 0;
         char[] var7 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
+        char[] var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
-          L0: {
-            if (!Character.isISOControl(param1)) {
-              if (jd.a((byte) -16, param1)) {
-                stackIn_7_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                var7 = hb.field_a;
-                var2 = var7;
-                var3 = 97 % ((28 - param0) / 61);
-                var4 = 0;
-                L1: while (true) {
-                  if (var4 >= var7.length) {
-                    var2 = n.field_l;
-                    var3 = 0;
-                    L2: while (true) {
-                      if (var3 >= var2.length) {
-                        stackIn_22_0 = 0;
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      } else {
-                        var4 = var2[var3];
-                        if (var4 != param1) {
-                          var3++;
-                          continue L2;
-                        } else {
-                          stackIn_19_0 = 1;
-                          decompiledRegionSelector0 = 2;
-                          break L0;
-                        }
-                      }
-                    }
-                  } else {
-                    var5 = var7[var4];
-                    if ((param1 ^ -1) != (var5 ^ -1)) {
-                      var4++;
-                      continue L1;
-                    } else {
-                      return true;
-                    }
-                  }
-                }
-              }
-            } else {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (Character.isISOControl(param1)) {
+            return false;
+          }
+          if (jd.a((byte) -16, param1)) {
+            return true;
+          }
+          var7 = hb.field_a;
+          var2 = var7;
+          var3 = 97 % ((28 - param0) / 61);
+          for (var4 = 0; var4 < var7.length; var4++) {
+            var5 = var7[var4];
+            if (~param1 == ~var5) {
+              return true;
             }
           }
+          var2Lifetime1 = n.field_l;
+          var3Lifetime1 = 0;
+          while (true) {
+            if (var3Lifetime1 >= var2Lifetime1.length) {
+              return false;
+            }
+            var4Lifetime1 = var2Lifetime1[var3Lifetime1];
+            if (var4Lifetime1 != param1) {
+              var3Lifetime1++;
+              continue;
+            }
+            break;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           throw ld.a((Throwable) ((Object) var2_ref), "vb.C(" + param0 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0 != 0;
-          } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_19_0 != 0;
-            } else {
-              return stackIn_22_0 != 0;
-            }
-          }
         }
     }
 

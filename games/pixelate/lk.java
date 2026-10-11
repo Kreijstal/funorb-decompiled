@@ -11,29 +11,25 @@ final class lk extends jj {
         super.c(param0);
         this.field_m = this.field_m + 1;
         this.field_p = this.field_p + 2;
-        if (f.field_f.length > this.field_m) {
+        if (f.field_f.length <= this.field_m) {
+          this.field_m = this.field_m - f.field_f.length;
           if (f.field_f.length <= this.field_p) {
             this.field_p = this.field_p - f.field_f.length;
             return;
-          } else {
-            return;
           }
-        } else {
-          this.field_m = this.field_m - f.field_f.length;
-          if (f.field_f.length > this.field_p) {
-            return;
-          } else {
-            this.field_p = this.field_p - f.field_f.length;
-            return;
-          }
+          return;
         }
+        if (f.field_f.length > this.field_p) {
+          return;
+        }
+        this.field_p = this.field_p - f.field_f.length;
     }
 
     public static void d(int param0) {
         if (param0 != 0) {
-            lk.d(35);
-            field_o = null;
-            return;
+          lk.d(35);
+          field_o = null;
+          return;
         }
         field_o = null;
     }
@@ -43,24 +39,19 @@ final class lk extends jj {
     }
 
     final void a(boolean param0) {
-        int var2;
         t.g(0, 0, 640, 480, f.field_f[this.field_m], f.field_f[this.field_p]);
-        if (!param0) {
-          var2 = this.field_m;
-          if (var2 <= 512) {
-            if ((var2 ^ -1) < -257) {
-              var2 = 512 - var2;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            var2 = 0;
-            return;
-          }
-        } else {
+        if (param0) {
           return;
         }
+        int var2 = this.field_m;
+        if (var2 > 512) {
+          var2 = 0;
+          return;
+        }
+        if (var2 <= 256) {
+          return;
+        }
+        var2 = 512 - var2;
     }
 
     static {

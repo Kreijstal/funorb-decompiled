@@ -9,18 +9,14 @@ final class vj {
     static String[] field_b;
 
     final static void a(byte param0) {
-        int var1;
-        int var2;
-        var1 = pf.b(1);
-        var2 = al.a((byte) 113);
-        hh.field_u.a(var1 + (rb.field_cb << 2134357441), -rb.field_cb + sc.field_g, false, -wg.field_h + fb.field_k, (wg.field_h << -1565569887) + var2);
+        int var1 = pf.b(1);
+        int var2 = al.a((byte) 113);
+        hh.field_u.a(var1 + (rb.field_cb << 1), -rb.field_cb + sc.field_g, false, -wg.field_h + fb.field_k, (wg.field_h << 1) + var2);
         ne.a((byte) -107);
-        if (param0 != -123) {
-          vj.a(42, -55);
-          return;
-        } else {
+        if (param0 == -123) {
           return;
         }
+        vj.a(42, -55);
     }
 
     public static void a(int param0) {
@@ -30,8 +26,8 @@ final class vj {
         field_b = null;
         field_a = null;
         if (param0 != 17812) {
-            float[] var2 = (float[]) null;
-            vj.a((float[]) null, (byte) 107, (float[]) null);
+          float[] var2 = (float[]) null;
+          vj.a((float[]) null, (byte) 107, (float[]) null);
         }
     }
 
@@ -43,81 +39,46 @@ final class vj {
         float[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         StringBuilder stackIn_10_1 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param1 == -2) {
-              var4 = new float[2];
-              var3 = var4;
-              var4[0] = param0[0] + param2[0];
-              var4[1] = param2[1] + param0[1];
-              stackIn_4_0 = (float[]) (var4);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (float[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 != -2) {
+            stackIn_2_0 = (float[]) null;
+            return stackIn_2_0;
           }
+          var4 = new float[2];
+          var3 = var4;
+          var4[0] = param0[0] + param2[0];
+          var4[1] = param2[1] + param0[1];
+          stackIn_4_0 = var4;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3_ref);
-
-            stackIn_7_1 = new StringBuilder().append("vj.D(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("vj.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          L2: {
-
-
-            stackIn_10_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L2;
-            }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw la.a((Throwable) ((Object) stackIn_8_0), stackIn_11_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw la.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     final static int a(int param0, int param1) {
         byte[] var4 = wc.field_d.a("level" + (param1 + param0), "", -125);
         byte[] var2 = var4;
-        if (!(var4 != null)) {
-            return -1;
+        if (var4 == null) {
+          return -1;
         }
         gk var3 = new gk(var4);
         var3.a((byte) 114);
@@ -125,16 +86,13 @@ final class vj {
     }
 
     final static void a(int param0, boolean param1) {
-        float[] var3;
-        if (param0 != 1) {
-          var3 = (float[]) null;
-          vj.a((float[]) null, (byte) 50, (float[]) null);
-          wg.field_j.a(0, 0, 112);
-          return;
-        } else {
+        if (param0 == 1) {
           wg.field_j.a(0, 0, 112);
           return;
         }
+        float[] var3 = (float[]) null;
+        vj.a((float[]) null, (byte) 50, (float[]) null);
+        wg.field_j.a(0, 0, 112);
     }
 
     static {

@@ -12,21 +12,21 @@ final class vl implements Iterable {
 
     final void a(long param0, byte param1, q param2) {
         q var5 = null;
-        if (!(param2.field_h == null)) {
-            param2.f(0);
+        if (param2.field_h != null) {
+          param2.f(0);
         }
         if (param1 < 7) {
-            return;
+          return;
         }
         try {
-            var5 = this.field_a[(int)((long)(this.field_e + -1) & param0)];
-            param2.field_h = var5.field_h;
-            param2.field_e = var5;
-            param2.field_h.field_e = param2;
-            param2.field_e.field_h = param2;
-            param2.field_f = param0;
+          var5 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
+          param2.field_h = var5.field_h;
+          param2.field_e = var5;
+          param2.field_h.field_e = param2;
+          param2.field_e.field_h = param2;
+          param2.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -39,33 +39,32 @@ final class vl implements Iterable {
         var4 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
         this.field_b = var4.field_e;
         var5 = -94 % ((24 - param1) / 41);
-        L0: while (true) {
-          if (this.field_b != var4) {
-            if (this.field_b.field_f == param0) {
-              var6 = this.field_b;
-              this.field_b = this.field_b.field_e;
-              return var6;
-            } else {
-              this.field_b = this.field_b.field_e;
-              continue L0;
-            }
-          } else {
+        while (true) {
+          if (this.field_b == var4) {
             this.field_b = null;
             return null;
           }
+          if (this.field_b.field_f != param0) {
+            this.field_b = this.field_b.field_e;
+            continue;
+          }
+          break;
         }
+        var6 = this.field_b;
+        this.field_b = this.field_b.field_e;
+        return var6;
     }
 
     public static void a(byte param0) {
         if (param0 != 93) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new dh((vl) (this)));
+        return (Iterator) ((Object) new dh(this));
     }
 
     private vl() throws Throwable {

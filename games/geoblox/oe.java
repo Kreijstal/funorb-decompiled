@@ -437,58 +437,48 @@ abstract class oe extends dd {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 < vb.field_i) {
-            var8++;
-            var7++;
-            continue;
-          }
-          if (vb.field_d <= var8) {
-            var8++;
-            var7++;
-            continue;
-          }
-          var9 = (-var5 + var6) * var7 / var4 + var5;
-          var10 = 0;
-          var11 = this.field_r;
-          if (var7 <= 20) {
-            while (var10 <= 20) {
-              var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
-              if (var12 > 462) {
+          if (var8 >= vb.field_i &&
+            vb.field_d > var8) {
+            var9 = (-var5 + var6) * var7 / var4 + var5;
+            var10 = 0;
+            var11 = this.field_r;
+            if (var7 <= 20) {
+              while (var10 <= 20) {
+                var12 = (-var7 + 20) * (-var7 + 20) + (-var10 + 20) * (20 - var10);
+                if (var12 <= 462) {
+                  if (var12 < 420) {
+                    break;
+                  }
+                  var13 = (-var12 + 462) * var9 / 42;
+                  var13 = var13 | (var13 << 8 | var13 << 16);
+                  vb.field_c[var8 * vb.field_f + param0 + var10] = var13;
+                }
                 var10++;
-                continue;
               }
-              if (var12 < 420) {
-                break;
-              }
-              var13 = (-var12 + 462) * var9 / 42;
-              var13 = var13 | (var13 << 8 | var13 << 16);
-              vb.field_c[var8 * vb.field_f + param0 + var10] = var13;
-              var10++;
             }
-          }
-          if (20 >= var7) {
-            var12Lifetime1 = var11;
-            var11 -= 21;
-            for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
-              var14 = (-var7 + 20) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
-              if (var14 <= 462) {
-                if (var14 < 420) {
-                  var12Lifetime1 = var11 + 1;
+            if (20 >= var7) {
+              var12Lifetime1 = var11;
+              var11 -= 21;
+              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                var14 = (-var7 + 20) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
+                if (var14 <= 462) {
+                  if (var14 < 420) {
+                    var12Lifetime1 = var11 + 1;
+                  } else {
+                    var15 = var9 * (462 - var14) / 42;
+                    var15 = var15 | (var15 << 8 | var15 << 16);
+                    vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
+                  }
                   var11++;
                   continue;
                 }
-                var15 = var9 * (462 - var14) / 42;
-                var15 = var15 | (var15 << 8 | var15 << 16);
-                vb.field_c[var11 + param0 + vb.field_f * var8] = var15;
-                var11++;
-                continue;
+                break;
               }
-              break;
+              var11 = var12Lifetime1;
             }
-            var11 = var12Lifetime1;
+            var9 = var9 | (var9 << 16 | var9 << 8);
+            vb.c(var10 + param0, var8, var11 - var10, var9);
           }
-          var9 = var9 | (var9 << 16 | var9 << 8);
-          vb.c(var10 + param0, var8, var11 - var10, var9);
           var8++;
           var7++;
         }

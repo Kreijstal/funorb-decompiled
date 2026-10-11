@@ -12,16 +12,14 @@ final class ab extends la {
     static cf field_p;
 
     final byte[] b(boolean param0) {
-        if (!this.field_n) {
-          if (!param0) {
-            this.field_r = (byte[]) null;
-            return this.field_r;
-          } else {
-            return this.field_r;
-          }
-        } else {
+        if (this.field_n) {
           throw new RuntimeException();
         }
+        if (param0) {
+          return this.field_r;
+        }
+        this.field_r = (byte[]) null;
+        return this.field_r;
     }
 
     final static void a(qk param0, int param1) {
@@ -29,29 +27,29 @@ final class ab extends la {
         int var3 = 0;
         int var4 = 0;
         try {
-            var2 = new kc(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
-            var3 = var2.field_p;
-            var4 = var2.field_o;
-            ji.a(true);
-            sg.field_d = new kc(var3, 3 * var4 / 4);
-            sg.field_d.c();
-            var2.b(param1, 0);
-            qg.field_z = new kc(var3, var4 - sg.field_d.field_o);
-            qg.field_z.c();
-            var2.b(0, -sg.field_d.field_o);
-            qg.field_z.field_n = sg.field_d.field_o;
-            gg.a(14756);
+          var2 = new kc(param0.a((byte) 7, "", "final_frame.jpg"), (java.awt.Component) ((Object) tb.field_c));
+          var3 = var2.field_p;
+          var4 = var2.field_o;
+          ji.a(true);
+          sg.field_d = new kc(var3, 3 * var4 / 4);
+          sg.field_d.c();
+          var2.b(param1, 0);
+          qg.field_z = new kc(var3, var4 - sg.field_d.field_o);
+          qg.field_z.c();
+          var2.b(0, -sg.field_d.field_o);
+          qg.field_z.field_n = sg.field_d.field_o;
+          gg.a(14756);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "ab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "ab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final int a(boolean param0) {
         if (param0) {
-            return 42;
+          return 42;
         }
         if (this.field_n) {
-            return 0;
+          return 0;
         }
         return 100;
     }
@@ -59,7 +57,7 @@ final class ab extends la {
     public static void e(int param0) {
         field_p = null;
         if (param0 >= -67) {
-            return;
+          return;
         }
         field_w = null;
         field_u = null;
@@ -77,61 +75,38 @@ final class ab extends la {
         String stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  var3_int = param0.a(0);
-                  if (var3_int > param2) {
-                    var3_int = param2;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                var4 = new byte[var3_int];
-                var5 = 54 % ((6 - param1) / 55);
-                param0.field_i = param0.field_i + qf.field_J.a(var3_int, var4, param0.field_g, 0, 109, param0.field_i);
-                var6 = bd.a(255, 0, var4, var3_int);
-                stackIn_4_0 = (String) (var6);
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              stackIn_6_0 = "Cabbage";
-              return stackIn_6_0;
+          try {
+            var3_int = param0.a(0);
+            if (var3_int > param2) {
+              var3_int = param2;
             }
-            break L0;
+            var4 = new byte[var3_int];
+            var5 = 54 % ((6 - param1) / 55);
+            param0.field_i = param0.field_i + qf.field_J.a(var3_int, var4, param0.field_g, 0, 109, param0.field_i);
+            var6 = bd.a(255, 0, var4, var3_int);
+            stackIn_4_0 = var6;
+            return stackIn_4_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_6_0 = "Cabbage";
+            return stackIn_6_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3_ref);
-
-            stackIn_9_1 = new StringBuilder().append("ab.D(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("ab.D(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ',' + param2 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     ab() {

@@ -22,50 +22,27 @@ final class hl {
     long field_r;
 
     final int b(byte param0) {
-        L0: {
-          if (this.field_j) {
-            break L0;
-          } else {
-            L1: {
-              if (2 != this.field_m) {
-                break L1;
-              } else {
-                if (-1 > (this.field_l ^ -1)) {
-                  break L0;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if ((uc.field_g ^ -1L) != (this.field_r ^ -1L)) {
-              L2: {
-                if (2 != jj.field_b) {
-                  break L2;
-                } else {
-                  if (qe.a(this.field_o, 3)) {
-                    return 1;
-                  } else {
-                    break L2;
-                  }
-                }
-              }
-              if (param0 == 94) {
-                return 0;
-              } else {
-                this.field_p = (String) null;
-                return 0;
-              }
-            } else {
-              return 1;
-            }
+        if (!this.field_j && (2 != this.field_m ||
+          this.field_l <= 0)) {
+          if (~uc.field_g == ~this.field_r) {
+            return 1;
           }
+          if (2 == jj.field_b &&
+            qe.a(this.field_o, 3)) {
+            return 1;
+          }
+          if (param0 == 94) {
+            return 0;
+          }
+          this.field_p = (String) null;
+          return 0;
         }
         return 2;
     }
 
     final static boolean a(byte param0) {
         if (param0 != -53) {
-            return false;
+          return false;
         }
         return sg.a(cf.field_c, 113, fm.field_d);
     }
@@ -74,62 +51,38 @@ final class hl {
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            L1: {
-              db.a((java.awt.Component) ((Object) param0), false);
-              if (param1 < -29) {
-                break L1;
-              } else {
-                var3 = (java.awt.Canvas) null;
-                hl.a((java.awt.Canvas) null, (byte) -79);
-                break L1;
-              }
-            }
-            L2: {
-              al.a(-2204, (java.awt.Component) ((Object) param0));
-              if (uc.field_e != null) {
-                uc.field_e.a((java.awt.Component) ((Object) param0), -63);
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            break L0;
+          db.a((java.awt.Component) ((Object) param0), false);
+          if (param1 >= -29) {
+            var3 = (java.awt.Canvas) null;
+            hl.a((java.awt.Canvas) null, (byte) -79);
           }
+          al.a(-2204, (java.awt.Component) ((Object) param0));
+          if (uc.field_e != null) {
+            uc.field_e.a((java.awt.Component) ((Object) param0), -63);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var2);
-
-            stackIn_8_1 = new StringBuilder().append("hl.C(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_8_0 = var2;
+          stackIn_8_1 = new StringBuilder().append("hl.C(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         if (param0 != -21128) {
-            hl.a(-128);
+          hl.a(-128);
         }
         field_e = null;
         field_a = null;
@@ -144,9 +97,9 @@ final class hl {
         this.field_n = ic.field_a;
         this.field_l = tg.field_c;
         if (!param0) {
-            this.field_q = null;
+          this.field_q = null;
         } else {
-            this.field_q = fa.field_q;
+          this.field_q = fa.field_q;
         }
         this.field_m = mf.field_R;
         this.field_j = fm.field_f;
@@ -157,20 +110,20 @@ final class hl {
 
     hl(int param0, String param1, int param2, String param3, String param4) {
         try {
-            this.field_i = 0;
-            this.field_n = 0;
-            this.field_m = param0;
-            this.field_g = param3;
-            this.field_l = 0;
-            this.field_k = param2;
-            this.field_q = null;
-            this.field_r = 0L;
-            this.field_o = param1;
-            this.field_h = param4;
-            this.field_j = true;
-            this.field_p = param1;
+          this.field_i = 0;
+          this.field_n = 0;
+          this.field_m = param0;
+          this.field_g = param3;
+          this.field_l = 0;
+          this.field_k = param2;
+          this.field_q = null;
+          this.field_r = 0L;
+          this.field_o = param1;
+          this.field_h = param4;
+          this.field_j = true;
+          this.field_p = param1;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "hl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "hl.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

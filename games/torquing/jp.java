@@ -22,12 +22,11 @@ abstract class jp {
     abstract boolean b(int param0);
 
     final int c(byte param0) {
-        if (param0 != 0) {
-          this.a(23);
-          return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
-        } else {
+        if (param0 == 0) {
           return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
         }
+        this.a(23);
+        return this.field_a.b(param0 ^ -24088) + this.field_h.b(param0 ^ -24088);
     }
 
     abstract void a(Object param0, boolean param1, byte param2);
@@ -40,147 +39,63 @@ abstract class jp {
     }
 
     final boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 20) {
-          L0: {
-            this.field_a = (gb) null;
-            if (20 > this.c((byte) 0)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (20 > this.c((byte) 0)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 20) {
+          return 20 <= this.c((byte) 0) ? true : false;
         }
+        this.field_a = (gb) null;
+        return 20 <= this.c((byte) 0) ? true : false;
     }
 
     final ac a(byte param0, int param1, boolean param2, byte param3, int param4) {
         ac stackIn_3_0 = null;
-        ac stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
+        boolean stackIn_4_1 = false;
         ac stackIn_15_0 = null;
-        ac stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
+        boolean stackIn_16_1 = false;
         long var6;
         ac var8;
-        var6 = ((long)param1 << -490022304) + (long)param4;
+        var6 = ((long)param1 << 32) + (long)param4;
         var8 = new ac();
         var8.field_l = var6;
         var8.field_y = param0;
         if (param3 == -51) {
-          L0: {
-            stackIn_15_0 = (ac) (var8);
-
-            if (!param2) {
-              stackIn_16_0 = (ac) ((Object) stackIn_15_0);
-              stackIn_16_1 = 0;
-              break L0;
-            } else {
-              stackIn_16_0 = (ac) ((Object) stackIn_15_0);
-              stackIn_16_1 = 1;
-              break L0;
-            }
-          }
-          stackIn_16_0.field_w = stackIn_16_1 != 0;
-          if (param2) {
-            if ((this.c((byte) 0) ^ -1) <= -21) {
-              throw new RuntimeException();
-            } else {
-              this.field_a.a((byte) 119, var8);
-              return var8;
-            }
-          } else {
-            if ((this.c(-6292) ^ -1) > -21) {
-              this.field_m.a((byte) 121, var8);
-              return var8;
-            } else {
-              throw new RuntimeException();
-            }
-          }
+          stackIn_15_0 = var8;
+          stackIn_16_1 = (!param2) ? false : true;
+          stackIn_15_0.field_w = stackIn_16_1;
         } else {
-          L1: {
-            this.e((byte) -94);
-            stackIn_3_0 = (ac) (var8);
-
-            if (!param2) {
-              stackIn_4_0 = (ac) ((Object) stackIn_3_0);
-              stackIn_4_1 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = (ac) ((Object) stackIn_3_0);
-              stackIn_4_1 = 1;
-              break L1;
-            }
-          }
-          stackIn_4_0.field_w = stackIn_4_1 != 0;
-          if (param2) {
-            if ((this.c((byte) 0) ^ -1) <= -21) {
-              throw new RuntimeException();
-            } else {
-              this.field_a.a((byte) 119, var8);
-              return var8;
-            }
-          } else {
-            if ((this.c(-6292) ^ -1) > -21) {
-              this.field_m.a((byte) 121, var8);
-              return var8;
-            } else {
-              throw new RuntimeException();
-            }
-          }
+          this.e((byte) -94);
+          stackIn_3_0 = var8;
+          stackIn_4_1 = (!param2) ? false : true;
+          stackIn_3_0.field_w = stackIn_4_1;
         }
+        if (param2) {
+          if (this.c((byte) 0) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_a.a((byte) 119, var8);
+          return var8;
+        }
+        if (this.c(-6292) >= 20) {
+          throw new RuntimeException();
+        }
+        this.field_m.a((byte) 121, var8);
+        return var8;
     }
 
     abstract void e(byte param0);
 
     final boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 <= 100) {
-          L0: {
-            this.b((byte) 57);
-            if (this.c(-6292) < 20) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.c(-6292) < 20) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 > 100) {
+          return this.c(-6292) >= 20 ? true : false;
         }
+        this.b((byte) 57);
+        return this.c(-6292) >= 20 ? true : false;
     }
 
     final int c(int param0) {
         if (param0 != -6292) {
-            return -67;
+          return -67;
         }
-        return this.field_m.b(param0 ^ 18052) - -this.field_b.b(-24088);
+        return this.field_m.b(param0 ^ 18052) + this.field_b.b(-24088);
     }
 
     abstract void b(byte param0);

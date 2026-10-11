@@ -19,11 +19,11 @@ final class fb extends cj {
 
     final static void a(int param0, boolean param1) {
         if (null != field_J) {
-            on.g(on.field_b, on.field_e, -on.field_b + on.field_c, on.field_h + -on.field_e);
-            field_J.a(param0 ^ 30543, param1);
+          on.g(on.field_b, on.field_e, -on.field_b + on.field_c, on.field_h - on.field_e);
+          field_J.a(param0 ^ 30543, param1);
         }
         if (param0 != 30521) {
-            fb.n(81);
+          fb.n(81);
         }
     }
 
@@ -31,78 +31,45 @@ final class fb extends cj {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        if (param0 > 79) {
-          try {
-            L0: {
-              stackIn_3_0 = Integer.parseInt(this.field_L.field_q);
-              break L0;
-            }
-          } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (NumberFormatException) (Object) decompiledCaughtException;
-            return -1;
-          }
-          return stackIn_3_0;
-        } else {
+        if (param0 <= 79) {
           return 33;
+        }
+        try {
+          stackIn_3_0 = Integer.parseInt(this.field_L.field_q);
+          return stackIn_3_0;
+        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          return -1;
         }
     }
 
     final boolean b(boolean param0) {
-        int stackIn_14_0 = 0;
-        L0: {
-          if (param0) {
-            break L0;
-          } else {
-            field_Q = (int[]) null;
-            break L0;
-          }
+        boolean stackIn_14_0 = false;
+        if (!param0) {
+          field_Q = (int[]) null;
         }
-        L1: {
-          if (this.field_L.field_q == null) {
-            break L1;
-          } else {
-            if (0 == this.field_L.field_q.length()) {
-              break L1;
-            } else {
-              if (this.field_K.field_q == null) {
-                return true;
-              } else {
-                if (this.field_K.field_q.length() != 0) {
-                  L2: {
-                    L3: {
-                      if (null == this.field_P.field_q) {
-                        break L3;
-                      } else {
-                        if (this.field_P.field_q.length() == 0) {
-                          break L3;
-                        } else {
-                          stackIn_14_0 = 0;
-                          break L2;
-                        }
-                      }
-                    }
-                    stackIn_14_0 = 1;
-                    break L2;
-                  }
-                  return stackIn_14_0 != 0;
-                } else {
-                  return true;
-                }
-              }
-            }
+        if (this.field_L.field_q != null &&
+          0 != this.field_L.field_q.length()) {
+          if (this.field_K.field_q == null) {
+            return true;
           }
+          if (this.field_K.field_q.length() == 0) {
+            return true;
+          }
+          stackIn_14_0 = (null == this.field_P.field_q) || (this.field_P.field_q.length() == 0);
+          return stackIn_14_0;
         }
         return true;
     }
 
     final String f(int param0) {
         String var2 = this.field_K.f(param0);
-        if (!(var2 == null)) {
-            return var2;
+        if (var2 != null) {
+          return var2;
         }
         if (!this.field_m) {
-            return null;
+          return null;
         }
         return null != this.field_u ? this.field_u : this.field_q;
     }
@@ -112,57 +79,49 @@ final class fb extends cj {
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 48) {
-                break L1;
-              } else {
-                this.a(-35, -39, 1, -65);
-                break L1;
-              }
-            }
-            stackIn_3_0 = -1 + Integer.parseInt(this.field_K.field_q);
-            break L0;
+          if (param0 != 48) {
+            this.a(-35, -39, 1, -65);
           }
+          stackIn_3_0 = -1 + Integer.parseInt(this.field_K.field_q);
+          return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
         }
-        return stackIn_3_0;
     }
 
     private fb(gj param0, boolean param1) {
         super(0, 0, 0, 0, (gj) null);
         try {
-            this.field_L = (ga) ((Object) new mr("", (jv) null, 2));
-            this.field_K = (ga) ((Object) new mr("", (jv) null, 2));
-            this.field_P = (ga) ((Object) new mr("", (jv) null, 4));
-            this.field_P.field_r = param0;
-            this.field_K.field_r = param0;
-            this.field_L.field_r = param0;
-            this.field_U = param1 ? true : false;
-            if (this.field_U) {
-                this.a(-126, this.field_K);
-                this.a(-20, this.field_L);
-            } else {
-                this.a(-123, this.field_L);
-                this.a(-46, this.field_K);
-            }
-            this.a(-57, this.field_P);
+          this.field_L = (ga) ((Object) new mr("", (jv) null, 2));
+          this.field_K = (ga) ((Object) new mr("", (jv) null, 2));
+          this.field_P = (ga) ((Object) new mr("", (jv) null, 4));
+          this.field_P.field_r = param0;
+          this.field_K.field_r = param0;
+          this.field_L.field_r = param0;
+          this.field_U = param1 ? true : false;
+          if (this.field_U) {
+            this.a(-126, this.field_K);
+            this.a(-20, this.field_L);
+          } else {
+            this.a(-123, this.field_L);
+            this.a(-46, this.field_K);
+          }
+          this.a(-57, this.field_P);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(hl param0, int param1) {
         try {
-            super.a(param0, param1);
-            this.field_L.field_k = (jv) ((Object) param0);
-            this.field_K.field_k = (jv) ((Object) param0);
-            this.field_P.field_k = (jv) ((Object) param0);
+          super.a(param0, param1);
+          this.field_L.field_k = (jv) ((Object) param0);
+          this.field_K.field_k = (jv) ((Object) param0);
+          this.field_P.field_k = (jv) ((Object) param0);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "fb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "fb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -171,43 +130,35 @@ final class fb extends cj {
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                fb.a(-65, false);
-                break L1;
-              }
-            }
-            stackIn_3_0 = Integer.parseInt(this.field_P.field_q);
-            break L0;
+          if (param0 != -1) {
+            fb.a(-65, false);
           }
+          stackIn_3_0 = Integer.parseInt(this.field_P.field_q);
+          return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
           return -1;
         }
-        return stackIn_3_0;
     }
 
     fb(gj param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-            this.a(param5, 1, param2, param4, param3);
+          this.a(param5, 1, param2, param4, param3);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "fb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     private final void a(fd param0, String param1, int param2, byte param3, int param4) {
         try {
-            if (param3 < 86) {
-                field_R = 41;
-            }
-            qo.field_k.d(param1, param4 + param0.field_t - -(param0.field_n >> -1702966015), -5 + param0.field_g + param2, 16777215, -1);
+          if (param3 < 86) {
+            field_R = 41;
+          }
+          qo.field_k.d(param1, param4 + param0.field_t + (param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "fb.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -216,10 +167,10 @@ final class fb extends cj {
         int var3 = Kickabout.field_G;
         kg[] var1 = new kg[io.field_l];
         for (var2 = 0; var2 < io.field_l; var2++) {
-            var1[var2] = new kg(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
+          var1[var2] = new kg(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
         }
         if (param0 <= 78) {
-            fb.n(-91);
+          fb.n(-91);
         }
         tk.h((byte) -118);
         return var1;
@@ -227,13 +178,13 @@ final class fb extends cj {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(param0, param1 + 0, param2, param3, param4);
-        int var6 = -130 + param3 >> 1267612225;
+        int var6 = -130 + param3 >> 1;
         if (this.field_U) {
-            this.field_K.a(param0, 1, var6, 25, 0);
-            this.field_L.a(param0, param1 + 0, 45 + var6, 25, 0);
+          this.field_K.a(param0, 1, var6, 25, 0);
+          this.field_L.a(param0, param1 + 0, 45 + var6, 25, 0);
         } else {
-            this.field_L.a(param0, 1, var6, 25, 0);
-            this.field_K.a(param0, param1 + 0, var6 - -45, 25, 0);
+          this.field_L.a(param0, 1, var6, 25, 0);
+          this.field_K.a(param0, param1 + 0, var6 + 45, 25, 0);
         }
         this.field_P.a(param0, param1, 90 + var6, 40, 0);
     }
@@ -241,7 +192,7 @@ final class fb extends cj {
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, (int) (char)param1, param2, param3);
         if (param0 != 0) {
-            return;
+          return;
         }
         param3 = param3 + this.field_g;
         param2 = param2 + this.field_t;
@@ -256,7 +207,7 @@ final class fb extends cj {
         field_J = null;
         field_N = null;
         if (param0 != -23192) {
-            return;
+          return;
         }
         field_M = null;
         field_O = null;

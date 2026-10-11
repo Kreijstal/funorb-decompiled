@@ -9,27 +9,20 @@ final class gg extends id {
     boolean field_i;
 
     final gg a(m param0) {
-        int dupTemp$1 = 0;
         this.field_k = param0.a((byte) 109, this.field_k);
         this.field_l = param0.a(this.field_l, true);
-        if (this.field_j == this.field_m) {
-          dupTemp$1 = param0.a((byte) 46, this.field_j);
-          this.field_m = dupTemp$1;
-          this.field_j = dupTemp$1;
-          return (gg) (this);
-        } else {
-          L0: {
-            this.field_j = param0.a((byte) 46, this.field_j);
-            this.field_m = param0.a((byte) 46, this.field_m);
-            if (this.field_j != this.field_m) {
-              break L0;
-            } else {
-              this.field_j = this.field_j - 1;
-              break L0;
-            }
+        if (this.field_j != this.field_m) {
+          this.field_j = param0.a((byte) 46, this.field_j);
+          this.field_m = param0.a((byte) 46, this.field_m);
+          if (this.field_j == this.field_m) {
+            this.field_j = this.field_j - 1;
           }
-          return (gg) (this);
+          return this;
         }
+        int dupTemp$0 = param0.a((byte) 46, this.field_j);
+        this.field_m = dupTemp$0;
+        this.field_j = dupTemp$0;
+        return this;
     }
 
     gg(int param0, byte[] param1, int param2, int param3) {

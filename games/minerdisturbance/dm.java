@@ -18,8 +18,6 @@ final class dm {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -28,40 +26,29 @@ final class dm {
           if (param2 != 0) {
             this.field_g = param0.field_l + " - " + param2 + "%";
             return;
-          } else {
-            this.field_g = param0.field_m;
-            return;
           }
+          this.field_g = param0.field_m;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L0: {
-            var4 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var4);
-
-            stackIn_6_1 = new StringBuilder().append("dm.B(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L0;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L0;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("dm.B(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         if (param0 != 20583) {
-            dm.a(-62);
-            field_f = null;
-            field_d = null;
-            return;
+          dm.a(-62);
+          field_f = null;
+          field_d = null;
+          return;
         }
         field_f = null;
         field_d = null;
@@ -72,69 +59,36 @@ final class dm {
         int var3;
         hj var4;
         var3 = MinerDisturbance.field_ab;
-        if (param0) {
-          L0: while (true) {
-            if (this.field_e < this.field_i) {
-              var4 = this.field_h[this.field_e];
-              var2 = var4;
-              if (var4.field_j.a((byte) 102)) {
-                L1: {
-                  if (0 > var4.field_d) {
-                    break L1;
-                  } else {
-                    if (var4.field_j.d(var4.field_d, 0)) {
-                      break L1;
-                    } else {
-                      this.a(var2, 100, var4.field_j.a(var4.field_d, true));
-                      return false;
-                    }
-                  }
-                }
-                L2: {
-                  if (null == var4.field_g) {
-                    break L2;
-                  } else {
-                    if (!var4.field_j.a(false, var4.field_g)) {
-                      this.a(var2, 100, var4.field_j.a(var4.field_g, -128));
-                      return false;
-                    } else {
-                      break L2;
-                    }
-                  }
-                }
-                L3: {
-                  if ((var4.field_d ^ -1) <= -1) {
-                    break L3;
-                  } else {
-                    if (var4.field_g != null) {
-                      break L3;
-                    } else {
-                      if (var4.field_l == null) {
-                        break L3;
-                      } else {
-                        if (var4.field_j.b(-1)) {
-                          break L3;
-                        } else {
-                          this.a(var2, 100, var4.field_j.c(-14858));
-                          return false;
-                        }
-                      }
-                    }
-                  }
-                }
-                this.field_e = this.field_e + 1;
-                continue L0;
-              } else {
-                this.a(var4, 100, 0);
-                return false;
-              }
-            } else {
-              return true;
-            }
-          }
-        } else {
+        if (!param0) {
           return true;
         }
+        while (this.field_e < this.field_i) {
+          var4 = this.field_h[this.field_e];
+          var2 = var4;
+          if (!var4.field_j.a((byte) 102)) {
+            this.a(var4, 100, 0);
+            return false;
+          }
+          if (0 <= var4.field_d &&
+            !var4.field_j.d(var4.field_d, 0)) {
+            this.a(var2, 100, var4.field_j.a(var4.field_d, true));
+            return false;
+          }
+          if (null != var4.field_g &&
+            !var4.field_j.a(false, var4.field_g)) {
+            this.a(var2, 100, var4.field_j.a(var4.field_g, -128));
+            return false;
+          }
+          if (var4.field_d < 0 &&
+            var4.field_g == null &&
+            var4.field_l != null &&
+            !var4.field_j.b(-1)) {
+            this.a(var2, 100, var4.field_j.c(-14858));
+            return false;
+          }
+          this.field_e = this.field_e + 1;
+        }
+        return true;
     }
 
     private dm() throws Throwable {

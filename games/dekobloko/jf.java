@@ -15,81 +15,55 @@ final class jf {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (ca.field_vb >= 10) {
-                if (!dl.a(480)) {
-                  hk.b();
-                  qc.a(240, 320, param2 ^ -21986);
-                  mf.a(1, 0, 0, param0);
-                  break L1;
-                } else {
-                  if (hc.field_d != 0) {
-                    cn.a(true, param0);
-                    break L1;
-                  } else {
-                    uc.a(false, param1, 78);
-                    mf.a(1, 0, 0, param0);
-                    break L1;
-                  }
-                }
+          if (ca.field_vb >= 10) {
+            if (!dl.a(480)) {
+              hk.b();
+              qc.a(240, 320, param2 ^ -21986);
+              mf.a(1, 0, 0, param0);
+            } else {
+              if (hc.field_d != 0) {
+                cn.a(true, param0);
               } else {
-                L2: {
-                  var3_int = 0;
-                  if (cd.field_g) {
-                    var3_int = 1;
-                    cd.field_g = false;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
-                break L1;
+                uc.a(false, param1, 78);
+                mf.a(1, 0, 0, param0);
               }
             }
-            if (param2 == -6351) {
-              break L0;
-            } else {
-              jf.a(-78);
-              return;
+          } else {
+            var3_int = 0;
+            if (cd.field_g) {
+              var3_int = 1;
+              cd.field_g = false;
             }
+            bf.a(cn.b(true), var3_int != 0, 6, cf.a(-11777), fb.field_g);
           }
+          if (param2 == -6351) {
+            return;
+          }
+          jf.a(-78);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var3);
-
-            stackIn_16_1 = new StringBuilder().append("jf.B(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L3;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_16_0 = var3;
+          stackIn_16_1 = new StringBuilder().append("jf.B(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ',' + param2 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
     public static void a(int param0) {
         field_e = null;
         field_f = null;
-        int var1 = -128 % ((param0 - -47) / 61);
+        int var1 = -128 % ((param0 + 47) / 61);
         field_b = null;
         field_g = null;
         field_a = null;

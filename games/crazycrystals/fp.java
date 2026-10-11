@@ -13,16 +13,14 @@ final class fp {
         field_d = null;
         field_f = null;
         field_c = null;
-        if (param0 < 80) {
-          fp.a(true, false, false, (byte) 3);
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 >= 80) {
           field_b = null;
           field_e = null;
           return;
         }
+        fp.a(true, false, false, (byte) 3);
+        field_b = null;
+        field_e = null;
     }
 
     public final String toString() {
@@ -30,64 +28,35 @@ final class fp {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, byte param3) {
-        int var4;
-        L0: {
-          var4 = 0;
-          if (param0) {
-            var4 += 4;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var4 = 0;
+        if (param0) {
+          var4 += 4;
         }
-        if (param3 == -69) {
-          if (param1) {
-            L1: {
-              var4 += 2;
-              if (param2) {
-                var4++;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            return wh.field_a[var4];
-          } else {
-            L2: {
-              if (param2) {
-                var4++;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            return wh.field_a[var4];
-          }
-        } else {
+        if (param3 != -69) {
           fp.a((byte) -43);
-          if (!param1) {
-            L3: {
-              if (param2) {
-                var4++;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return wh.field_a[var4];
-          } else {
-            L4: {
-              var4 += 2;
-              if (param2) {
-                var4++;
-                break L4;
-              } else {
-                break L4;
-              }
+          if (param1) {
+            var4 += 2;
+            if (param2) {
+              var4++;
             }
             return wh.field_a[var4];
           }
+          if (param2) {
+            var4++;
+          }
+          return wh.field_a[var4];
         }
+        if (!param1) {
+          if (param2) {
+            var4++;
+          }
+          return wh.field_a[var4];
+        }
+        var4 += 2;
+        if (param2) {
+          var4++;
+        }
+        return wh.field_a[var4];
     }
 
     static {

@@ -8,25 +8,23 @@ final class cna {
     static String[] field_b;
 
     final static bna a(int param0, int param1) {
-        bna var2;
-        var2 = new bna();
+        bna var2 = new bna();
         tca.field_N.b((byte) -109, var2);
-        rh.b(param0, param1 + -228);
-        if (param1 != 128) {
-          cna.a(-55);
-          return var2;
-        } else {
+        rh.b(param0, param1 - 228);
+        if (param1 == 128) {
           return var2;
         }
+        cna.a(-55);
+        return var2;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_d = null;
         if (param0 > -75) {
-            field_c = (int[]) null;
-            field_c = null;
-            return;
+          field_c = (int[]) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }

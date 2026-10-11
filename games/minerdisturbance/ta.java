@@ -14,65 +14,64 @@ final class ta {
 
     final static boolean a(int param0, int param1) {
         try {
-            if (kj.field_a.field_o >= param1) {
-                return true;
-            }
-            if (!(ci.field_i != null)) {
-                return false;
-            }
-            int var2_int = ci.field_i.c(0);
-            if (!(var2_int <= 0)) {
-                if (var2_int > param1 - kj.field_a.field_o) {
-                    var2_int = -kj.field_a.field_o + param1;
-                }
-                ci.field_i.a(false, kj.field_a.field_u, kj.field_a.field_o, var2_int);
-                sk.field_c = sf.a((byte) -15);
-                kj.field_a.field_o = kj.field_a.field_o + var2_int;
-                if (kj.field_a.field_o < param1) {
-                    return false;
-                }
-                kj.field_a.field_o = 0;
-                return true;
-            }
-            try {
-                if (false) throw (IOException) null;
-                if (var2_int >= param0 && -30001L <= (qa.a(param0 + -125) ^ -1L)) {
-                    return false;
-                }
-                si.a(-124);
-            } catch (IOException iOException) {
-                si.a(param0 + -80);
-            }
+          if (kj.field_a.field_o >= param1) {
+            return true;
+          }
+          if (ci.field_i == null) {
             return false;
+          }
+          int var2_int = ci.field_i.c(0);
+          if (var2_int > 0) {
+            if (var2_int > param1 - kj.field_a.field_o) {
+              var2_int = -kj.field_a.field_o + param1;
+            }
+            ci.field_i.a(false, kj.field_a.field_u, kj.field_a.field_o, var2_int);
+            sk.field_c = sf.a((byte) -15);
+            kj.field_a.field_o = kj.field_a.field_o + var2_int;
+            if (kj.field_a.field_o < param1) {
+              return false;
+            }
+            kj.field_a.field_o = 0;
+            return true;
+          }
+          try {
+            if (false) throw (IOException) null;
+            if (var2_int >= param0 &&
+              qa.a(param0 - 125) <= 30000L) {
+              return false;
+            }
+            si.a(-124);
+          } catch (IOException iOException) {
+            si.a(param0 - 80);
+          }
+          return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final pi b(byte param0) {
-        pi var2;
-        if (param0 == 56) {
-          var2 = this.field_e;
-          if (var2 == this.field_c) {
-            this.field_e = null;
-            return null;
-          } else {
-            this.field_e = var2.field_f;
-            return var2;
-          }
-        } else {
+        pi var2 = null;
+        pi var2Lifetime1;
+        if (param0 != 56) {
           ta.a(115, -34);
           var2 = this.field_e;
-          if (var2 == this.field_c) {
-            this.field_e = null;
-            return null;
-          } else {
+          if (var2 != this.field_c) {
             this.field_e = var2.field_f;
             return var2;
           }
+          this.field_e = null;
+          return null;
         }
+        var2Lifetime1 = this.field_e;
+        if (var2Lifetime1 != this.field_c) {
+          this.field_e = var2Lifetime1.field_f;
+          return var2Lifetime1;
+        }
+        this.field_e = null;
+        return null;
     }
 
     final int c(byte param0) {
@@ -81,187 +80,151 @@ final class ta {
         int var3 = 0;
         pi var4 = this.field_c.field_f;
         while (this.field_c != var4) {
-            var3++;
-            var4 = var4.field_f;
+          var3++;
+          var4 = var4.field_f;
         }
         return var3;
     }
 
     final void a(pi param0, int param1) {
         try {
-            if (!(param0.field_c == null)) {
-                param0.b(34);
-            }
-            param0.field_f = this.field_c.field_f;
-            param0.field_c = this.field_c;
-            param0.field_c.field_f = param0;
-            if (param1 != 27862) {
-                ta.a(-86, 37);
-            }
-            param0.field_f.field_c = param0;
+          if (param0.field_c != null) {
+            param0.b(34);
+          }
+          param0.field_f = this.field_c.field_f;
+          param0.field_c = this.field_c;
+          param0.field_c.field_f = param0;
+          if (param1 != 27862) {
+            ta.a(-86, 37);
+          }
+          param0.field_f.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ta.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final pi a(int param0) {
-        pi var2;
-        var2 = this.field_e;
+        pi var2 = this.field_e;
         if (var2 == this.field_c) {
           this.field_e = null;
           return null;
-        } else {
-          this.field_e = var2.field_c;
-          if (param0 != 21510) {
-            this.field_c = (pi) null;
-            return var2;
-          } else {
-            return var2;
-          }
         }
+        this.field_e = var2.field_c;
+        if (param0 == 21510) {
+          return var2;
+        }
+        this.field_c = (pi) null;
+        return var2;
     }
 
     final pi b(int param0) {
         pi var2 = null;
+        pi var2Lifetime1;
         if (param0 < 60) {
-            ta.a(73, -87);
-            var2 = this.field_c.field_f;
-            if (!(this.field_c != var2)) {
-                this.field_e = null;
-                return null;
-            }
-            this.field_e = var2.field_f;
-            return var2;
-        }
-        var2 = this.field_c.field_f;
-        if (!(this.field_c != var2)) {
+          ta.a(73, -87);
+          var2 = this.field_c.field_f;
+          if (this.field_c == var2) {
             this.field_e = null;
             return null;
+          }
+          this.field_e = var2.field_f;
+          return var2;
         }
-        this.field_e = var2.field_f;
-        return var2;
+        var2Lifetime1 = this.field_c.field_f;
+        if (this.field_c == var2Lifetime1) {
+          this.field_e = null;
+          return null;
+        }
+        this.field_e = var2Lifetime1.field_f;
+        return var2Lifetime1;
     }
 
     final void a(byte param0) {
-        pi var2;
-        int var3;
-        var3 = MinerDisturbance.field_ab;
-        L0: while (true) {
+        pi var2 = null;
+        int var3 = MinerDisturbance.field_ab;
+        while (true) {
           var2 = this.field_c.field_f;
           if (var2 == this.field_c) {
-            this.field_e = null;
-            if (param0 != 55) {
-              this.b((byte) 87);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            var2.b(34);
-            continue L0;
+            break;
           }
+          var2.b(34);
         }
+        this.field_e = null;
+        if (param0 == 55) {
+          return;
+        }
+        this.b((byte) 87);
     }
 
     final pi d(int param0) {
-        pi var2;
-        var2 = this.field_c.field_c;
+        pi var2 = this.field_c.field_c;
         if (var2 == this.field_c) {
           this.field_e = null;
           return null;
-        } else {
-          if (param0 != 59287) {
-            this.field_c = (pi) null;
-            this.field_e = var2.field_c;
-            return var2;
-          } else {
-            this.field_e = var2.field_c;
-            return var2;
-          }
         }
+        if (param0 == 59287) {
+          this.field_e = var2.field_c;
+          return var2;
+        }
+        this.field_c = (pi) null;
+        this.field_e = var2.field_c;
+        return var2;
     }
 
     final void a(byte param0, pi param1) {
         try {
-            if (param1.field_c != null) {
-                param1.b(34);
-            }
-            param1.field_c = this.field_c.field_c;
-            int var3_int = 7 / ((-29 - param0) / 56);
-            param1.field_f = this.field_c;
-            param1.field_c.field_f = param1;
-            param1.field_f.field_c = param1;
+          if (param1.field_c != null) {
+            param1.b(34);
+          }
+          param1.field_c = this.field_c.field_c;
+          int var3_int = 7 / ((-29 - param0) / 56);
+          param1.field_f = this.field_c;
+          param1.field_c.field_f = param1;
+          param1.field_f.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final pi c(int param0) {
-        pi var2;
-        var2 = this.field_c.field_c;
-        if (var2 != this.field_c) {
-          if (param0 != 51510) {
-            this.field_e = (pi) null;
-            var2.b(34);
-            return var2;
-          } else {
-            var2.b(34);
-            return var2;
-          }
-        } else {
+        pi var2 = this.field_c.field_c;
+        if (var2 == this.field_c) {
           return null;
         }
+        if (param0 == 51510) {
+          var2.b(34);
+          return var2;
+        }
+        this.field_e = (pi) null;
+        var2.b(34);
+        return var2;
     }
 
     final static void f(byte param0) {
         oj.a(17, 3);
         if (param0 != 67) {
-            ta.f((byte) 88);
+          ta.f((byte) 88);
         }
     }
 
     final boolean e(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 <= 98) {
-          L0: {
-            this.field_e = (pi) null;
-            if (this.field_c != this.field_c.field_f) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (this.field_c != this.field_c.field_f) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 > 98) {
+          return this.field_c == this.field_c.field_f ? true : false;
         }
+        this.field_e = (pi) null;
+        return this.field_c == this.field_c.field_f ? true : false;
     }
 
     final pi e(int param0) {
-        pi var2;
-        var2 = this.field_c.field_f;
-        if (this.field_c != var2) {
-          if (param0 != 63854) {
-            return (pi) null;
-          } else {
-            var2.b(34);
-            return var2;
-          }
-        } else {
+        pi var2 = this.field_c.field_f;
+        if (this.field_c == var2) {
           return null;
         }
+        if (param0 == 63854) {
+          var2.b(34);
+          return var2;
+        }
+        return (pi) null;
     }
 
     public ta() {
@@ -275,14 +238,12 @@ final class ta {
         field_f = null;
         field_a = null;
         field_b = null;
-        if (param0 >= -81) {
-          ta.d((byte) -73);
-          field_d = null;
-          return;
-        } else {
+        if (param0 < -81) {
           field_d = null;
           return;
         }
+        ta.d((byte) -73);
+        field_d = null;
     }
 
     static {

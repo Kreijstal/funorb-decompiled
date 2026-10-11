@@ -14,7 +14,7 @@ final class qh {
 
     final boolean b(int param0) {
         if (param0 < 37) {
-            return false;
+          return false;
         }
         return this.field_f;
     }
@@ -27,14 +27,14 @@ final class qh {
 
     final String a(byte param0) {
         if (param0 > -30) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_a;
     }
 
     final boolean a(int param0) {
         if (param0 != 1000) {
-            return false;
+          return false;
         }
         return this.field_h;
     }
@@ -43,53 +43,51 @@ final class qh {
         ii var5 = null;
         int var4 = 0;
         try {
-            var5 = hh.field_p;
-            var5.a(true, param1);
-            var5.field_h = var5.field_h + 1;
-            var4 = var5.field_h;
-            var5.a(1, (byte) 107);
-            var5.a(param0.field_g, (byte) 54);
-            var5.a(param0.field_i, (byte) 48);
-            if (param2 != -22762) {
-                qh.b((byte) 16);
-            }
-            var5.b(param0.field_h, (byte) 101);
-            var5.b(param0.field_k, (byte) 97);
-            var5.b(param0.field_j, (byte) 124);
-            var5.b(param0.field_o, (byte) 106);
-            var5.b(var4, param2 ^ 22761);
-            var5.b(-var4 + var5.field_h, true);
+          var5 = hh.field_p;
+          var5.a(true, param1);
+          var5.field_h = var5.field_h + 1;
+          var4 = var5.field_h;
+          var5.a(1, (byte) 107);
+          var5.a(param0.field_g, (byte) 54);
+          var5.a(param0.field_i, (byte) 48);
+          if (param2 != -22762) {
+            qh.b((byte) 16);
+          }
+          var5.b(param0.field_h, (byte) 101);
+          var5.b(param0.field_k, (byte) 97);
+          var5.b(param0.field_j, (byte) 124);
+          var5.b(param0.field_o, (byte) 106);
+          var5.b(var4, param2 ^ 22761);
+          var5.b(-var4 + var5.field_h, true);
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "qh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "qh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void b(byte param0) {
         field_i = null;
         field_g = null;
-        if (param0 != -101) {
-          qh.b((byte) 75);
-          field_b = (byte[][]) null;
-          field_d = null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -101) {
           field_b = (byte[][]) null;
           field_d = null;
           field_e = null;
           field_c = null;
           return;
         }
+        qh.b((byte) 75);
+        field_b = (byte[][]) null;
+        field_d = null;
+        field_e = null;
+        field_c = null;
     }
 
     qh(String param0) {
         this.field_f = false;
         this.field_h = false;
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw ii.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ii.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

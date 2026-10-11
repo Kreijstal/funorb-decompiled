@@ -11,27 +11,27 @@ public final class Stream {
     private int e;
 
     public final void a(int param0) {
-        if (!(this.a + 1 < this.c.length)) {
-            this.a();
+        if (this.a + 1 >= this.c.length) {
+          this.a();
         }
         int fieldTemp$0 = this.a;
         this.a = this.a + 1;
-        this.c[fieldTemp$0] = (byte)(param0 >> 925983208);
+        this.c[fieldTemp$0] = (byte)(param0 >> 8);
         int fieldTemp$1 = this.a;
         this.a = this.a + 1;
         this.c[fieldTemp$1] = (byte)param0;
     }
 
     public final void b(int param0) {
-        if (!(this.c.length > this.a + 1)) {
-            this.a();
+        if (this.c.length <= this.a + 1) {
+          this.a();
         }
         int fieldTemp$0 = this.a;
         this.a = this.a + 1;
         this.c[fieldTemp$0] = (byte)param0;
         int fieldTemp$1 = this.a;
         this.a = this.a + 1;
-        this.c[fieldTemp$1] = (byte)(param0 >> 1309083400);
+        this.c[fieldTemp$1] = (byte)(param0 >> 8);
     }
 
     private final native static byte getLSB(int param0);
@@ -47,55 +47,50 @@ public final class Stream {
     }
 
     public final void a(float param0) {
-        int fieldTemp$8 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$12 = 0;
-        int fieldTemp$13 = 0;
-        int fieldTemp$14 = 0;
-        int fieldTemp$15 = 0;
-        int var2;
-        if (this.c.length <= this.a - -3) {
-          this.a();
+        int fieldTemp$0 = 0;
+        int fieldTemp$1 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$3 = 0;
+        int var2 = 0;
+        int var2Lifetime1;
+        if (this.c.length > this.a + 3) {
           var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$8 = this.a;
+          fieldTemp$0 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$8] = (byte)var2;
-          fieldTemp$9 = this.a;
+          this.c[fieldTemp$0] = (byte)var2;
+          fieldTemp$1 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$9] = (byte)(var2 >> -1697071448);
-          fieldTemp$10 = this.a;
+          this.c[fieldTemp$1] = (byte)(var2 >> 8);
+          fieldTemp$2 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$10] = (byte)(var2 >> -959246672);
-          fieldTemp$11 = this.a;
+          this.c[fieldTemp$2] = (byte)(var2 >> 16);
+          fieldTemp$3 = this.a;
           this.a = this.a + 1;
-          this.c[fieldTemp$11] = (byte)(var2 >> -1248572904);
-          return;
-        } else {
-          var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$12 = this.a;
-          this.a = this.a + 1;
-          this.c[fieldTemp$12] = (byte)var2;
-          fieldTemp$13 = this.a;
-          this.a = this.a + 1;
-          this.c[fieldTemp$13] = (byte)(var2 >> -1697071448);
-          fieldTemp$14 = this.a;
-          this.a = this.a + 1;
-          this.c[fieldTemp$14] = (byte)(var2 >> -959246672);
-          fieldTemp$15 = this.a;
-          this.a = this.a + 1;
-          this.c[fieldTemp$15] = (byte)(var2 >> -1248572904);
+          this.c[fieldTemp$3] = (byte)(var2 >> 24);
           return;
         }
+        this.a();
+        var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
+        int fieldTemp$4 = this.a;
+        this.a = this.a + 1;
+        this.c[fieldTemp$4] = (byte)var2Lifetime1;
+        int fieldTemp$5 = this.a;
+        this.a = this.a + 1;
+        this.c[fieldTemp$5] = (byte)(var2Lifetime1 >> 8);
+        int fieldTemp$6 = this.a;
+        this.a = this.a + 1;
+        this.c[fieldTemp$6] = (byte)(var2Lifetime1 >> 16);
+        int fieldTemp$7 = this.a;
+        this.a = this.a + 1;
+        this.c[fieldTemp$7] = (byte)(var2Lifetime1 >> 24);
     }
 
     public final void a() {
         if (0 >= this.a) {
-            return;
+          return;
         }
-        if (!(this.a + this.d <= this.e)) {
-            throw new RuntimeException();
+        if (this.a + this.d > this.e) {
+          throw new RuntimeException();
         }
         this.b.a(this.c, 0, this.d, this.a);
         this.d = this.d + this.a;
@@ -107,27 +102,26 @@ public final class Stream {
         this.b = param0;
         this.d = param1;
         this.e = param1 + param2;
-        if (this.e > param0.getSize()) {
-          throw new RuntimeException();
-        } else {
+        if (this.e <= param0.getSize()) {
           return;
         }
+        throw new RuntimeException();
     }
 
     public final void b(float param0) {
-        if (!(this.a + 3 < this.c.length)) {
-            this.a();
+        if (this.a + 3 >= this.c.length) {
+          this.a();
         }
         int var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$0 = this.a;
         this.a = this.a + 1;
-        this.c[fieldTemp$0] = (byte)(var2 >> -484083720);
+        this.c[fieldTemp$0] = (byte)(var2 >> 24);
         int fieldTemp$1 = this.a;
         this.a = this.a + 1;
-        this.c[fieldTemp$1] = (byte)(var2 >> -860722576);
+        this.c[fieldTemp$1] = (byte)(var2 >> 16);
         int fieldTemp$2 = this.a;
         this.a = this.a + 1;
-        this.c[fieldTemp$2] = (byte)(var2 >> 1994507336);
+        this.c[fieldTemp$2] = (byte)(var2 >> 8);
         int fieldTemp$3 = this.a;
         this.a = this.a + 1;
         this.c[fieldTemp$3] = (byte)var2;
@@ -138,6 +132,6 @@ public final class Stream {
     }
 
     public final static boolean b() {
-        return 0 == (jaclib.memory.Stream.getLSB(-65536) ^ -1);
+        return jaclib.memory.Stream.getLSB(-65536) == -1;
     }
 }

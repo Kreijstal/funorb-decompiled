@@ -10,22 +10,22 @@ final class im {
     final ca a(byte param0) {
         ca var2 = this.field_d.field_c;
         if (this.field_d == var2) {
-            return null;
+          return null;
         }
-        int var3 = -80 / ((param0 - -14) / 34);
+        int var3 = -80 / ((param0 + 14) / 34);
         var2.b(57);
         return var2;
     }
 
     final ca d(int param0) {
         ca var2 = this.field_c;
-        if (!(this.field_d != var2)) {
-            this.field_c = null;
-            return null;
+        if (this.field_d == var2) {
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_e;
         if (param0 != 853) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
         return var2;
     }
@@ -33,8 +33,8 @@ final class im {
     final ca b(byte param0) {
         ca var2 = this.field_d.field_e;
         if (var2 == this.field_d) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         int var3 = -122 / ((58 - param0) / 56);
         this.field_c = var2.field_e;
@@ -43,7 +43,7 @@ final class im {
 
     final boolean c(int param0) {
         if (param0 != -3088) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
         return this.field_d.field_e == this.field_d ? true : false;
     }
@@ -51,30 +51,30 @@ final class im {
     final ca d(byte param0) {
         ca var2 = this.field_d.field_c;
         if (var2 == this.field_d) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_c;
         if (param0 != -122) {
-            this.field_c = (ca) null;
+          this.field_c = (ca) null;
         }
         return var2;
     }
 
     final void a(int param0, ca param1) {
         if (null != param1.field_c) {
-            param1.b(57);
+          param1.b(57);
         }
         if (param0 >= -68) {
-            return;
+          return;
         }
         try {
-            param1.field_c = this.field_d.field_c;
-            param1.field_e = this.field_d;
-            param1.field_c.field_e = param1;
-            param1.field_e.field_c = param1;
+          param1.field_c = this.field_d.field_c;
+          param1.field_e = this.field_d;
+          param1.field_c.field_e = param1;
+          param1.field_e.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "im.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "im.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -83,10 +83,11 @@ final class im {
         int var5 = OrbDefence.field_D ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
+        int var4Lifetime1;
         for (var4 = 0; var4 < param1; var4++) {
-            var6[var4] = param0;
+          var6[var4] = param0;
         }
-        var4 = 70 / ((0 - param2) / 53);
+        var4Lifetime1 = 70 / ((0 - param2) / 53);
         return new String(var3);
     }
 
@@ -95,18 +96,18 @@ final class im {
         int var2 = 0;
         ca var3 = this.field_d.field_e;
         if (param0 != 52) {
-            this.field_d = (ca) null;
+          this.field_d = (ca) null;
         }
         while (this.field_d != var3) {
-            var2++;
-            var3 = var3.field_e;
+          var2++;
+          var3 = var3.field_e;
         }
         return var2;
     }
 
     public static void a(int param0) {
         if (param0 != 9) {
-            im.a('O', 32, 30);
+          im.a('O', 32, 30);
         }
         field_b = null;
         field_a = null;
@@ -115,11 +116,11 @@ final class im {
     final ca b(int param0) {
         ca var2 = this.field_c;
         if (param0 != 10708) {
-            this.a((byte) 52);
+          this.a((byte) 52);
         }
-        if (!(var2 != this.field_d)) {
-            this.field_c = null;
-            return null;
+        if (var2 == this.field_d) {
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_c;
         return var2;
@@ -133,18 +134,18 @@ final class im {
 
     final void a(ca param0, int param1) {
         if (param0.field_c != null) {
-            param0.b(57);
+          param0.b(57);
         }
         if (param1 != 9) {
-            return;
+          return;
         }
         try {
-            param0.field_e = this.field_d.field_e;
-            param0.field_c = this.field_d;
-            param0.field_c.field_e = param0;
-            param0.field_e.field_c = param0;
+          param0.field_e = this.field_d.field_e;
+          param0.field_c = this.field_d;
+          param0.field_c.field_e = param0;
+          param0.field_e.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dd.a((Throwable) ((Object) runtimeException), "im.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw dd.a((Throwable) ((Object) runtimeException), "im.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -152,25 +153,25 @@ final class im {
         ca var2 = null;
         int var3 = OrbDefence.field_D ? 1 : 0;
         while (true) {
-            var2 = this.field_d.field_e;
-            if (var2 == this.field_d) {
-                break;
-            }
-            var2.b(57);
+          var2 = this.field_d.field_e;
+          if (var2 == this.field_d) {
+            break;
+          }
+          var2.b(57);
         }
         if (param0) {
-            this.d(79);
+          this.d(79);
         }
         this.field_c = null;
     }
 
     final ca e(int param0) {
         if (param0 != 0) {
-            this.field_c = (ca) null;
+          this.field_c = (ca) null;
         }
         ca var2 = this.field_d.field_e;
         if (this.field_d == var2) {
-            return null;
+          return null;
         }
         var2.b(param0 ^ 57);
         return var2;

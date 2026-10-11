@@ -14,7 +14,7 @@ final class sd {
         field_b = null;
         field_f = null;
         if (param0 != 113) {
-            return;
+          return;
         }
         field_d = null;
         field_a = null;
@@ -29,7 +29,7 @@ final class sd {
         int var3 = var2.field_l;
         var2.a(5, 122);
         var2.a(wl.field_d.field_vc, 101);
-        int var4 = (wl.field_d.field_lc << -279921594) + wl.field_d.field_fc;
+        int var4 = (wl.field_d.field_lc << 6) + wl.field_d.field_fc;
         var2.a(var4, param0 ^ -74);
         var2.a(wl.field_d.field_Pb, wl.field_d.field_Pb.length, param0, (byte) -126);
         var2.b(-var3 + var2.field_l, -1);
@@ -37,156 +37,49 @@ final class sd {
 
     final static boolean a(int param0) {
         if (param0 != -11532) {
-            java.applet.Applet var2 = (java.applet.Applet) null;
-            sd.a(119, (java.applet.Applet) null);
-            return kb.field_c;
+          java.applet.Applet var2 = (java.applet.Applet) null;
+          sd.a(119, (java.applet.Applet) null);
+          return kb.field_c;
         }
         return kb.field_c;
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
         int var4;
-        var4 = -72 / ((param3 - -13) / 32);
-        if (0 == param2) {
-          if (param0 != ca.field_D) {
-            L0: {
-              ad.field_l = true;
-              ca.field_D = param0;
-              sh.a((byte) -112, param1);
-              if (param2 != 1) {
-                break L0;
-              } else {
-                if (qe.field_m == param0) {
-                  break L0;
-                } else {
-                  qe.field_m = param0;
-                  ad.field_l = true;
-                  sh.a((byte) -112, param1);
-                  if (param2 == 2) {
-                    if (param0 == el.field_t) {
-                      return;
-                    } else {
-                      el.field_t = param0;
-                      ad.field_l = true;
-                      sh.a((byte) -112, param1);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-            if (param2 == 2) {
-              if (param0 != el.field_t) {
-                el.field_t = param0;
-                ad.field_l = true;
-                sh.a((byte) -112, param1);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            L1: {
-              if (param2 != 1) {
-                break L1;
-              } else {
-                if (qe.field_m == param0) {
-                  break L1;
-                } else {
-                  qe.field_m = param0;
-                  ad.field_l = true;
-                  sh.a((byte) -112, param1);
-                  if (param2 == 2) {
-                    if (param0 != el.field_t) {
-                      el.field_t = param0;
-                      ad.field_l = true;
-                      sh.a((byte) -112, param1);
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              }
-            }
-            if (param2 == 2) {
-              if (param0 != el.field_t) {
-                el.field_t = param0;
-                ad.field_l = true;
-                sh.a((byte) -112, param1);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          if (param2 == 1) {
-            if (qe.field_m != param0) {
-              qe.field_m = param0;
-              ad.field_l = true;
-              sh.a((byte) -112, param1);
-              if (param2 == 2) {
-                if (param0 == el.field_t) {
-                  return;
-                } else {
-                  el.field_t = param0;
-                  ad.field_l = true;
-                  sh.a((byte) -112, param1);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              if (param2 == 2) {
-                if (param0 != el.field_t) {
-                  el.field_t = param0;
-                  ad.field_l = true;
-                  sh.a((byte) -112, param1);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (param2 == 2) {
-              if (param0 == el.field_t) {
-                return;
-              } else {
-                el.field_t = param0;
-                ad.field_l = true;
-                sh.a((byte) -112, param1);
-                return;
-              }
-            } else {
-              return;
-            }
-          }
+        var4 = -72 / ((param3 + 13) / 32);
+        if (0 == param2 &&
+          param0 != ca.field_D) {
+          ad.field_l = true;
+          ca.field_D = param0;
+          sh.a((byte) -112, param1);
         }
+        if (param2 == 1 &&
+          qe.field_m != param0) {
+          qe.field_m = param0;
+          ad.field_l = true;
+          sh.a((byte) -112, param1);
+        }
+        if (param2 != 2) {
+          return;
+        }
+        if (param0 == el.field_t) {
+          return;
+        }
+        el.field_t = param0;
+        ad.field_l = true;
+        sh.a((byte) -112, param1);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            qk.a("", param1, -1);
-            if (param0 != 5) {
-                java.applet.Applet var3 = (java.applet.Applet) null;
-                sd.a(99, (java.applet.Applet) null);
-            }
-            dc.a(-11670, param1);
+          qk.a("", param1, -1);
+          if (param0 != 5) {
+            java.applet.Applet var3 = (java.applet.Applet) null;
+            sd.a(99, (java.applet.Applet) null);
+          }
+          dc.a(-11670, param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "sd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

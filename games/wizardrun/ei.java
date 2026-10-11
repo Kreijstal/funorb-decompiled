@@ -23,7 +23,7 @@ final class ei extends wl {
         field_n = null;
         field_m = null;
         if (param0 == 1) {
-            return;
+          return;
         }
         ei.a((byte) 91, -43);
     }
@@ -32,56 +32,50 @@ final class ei extends wl {
         this.field_o = param1;
         this.field_v = param4;
         if (param5 != -24536) {
-            return;
+          return;
         }
         try {
-            this.field_r = param2;
-            this.field_s = param6;
-            this.field_q = param0;
-            this.field_u = param7;
-            this.field_p = param3;
+          this.field_r = param2;
+          this.field_s = param6;
+          this.field_q = param0;
+          this.field_u = param7;
+          this.field_p = param3;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "ei.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     final static o[] a(int param0, int param1, int param2, int param3, int param4) {
-        o dupTemp$4 = null;
-        o dupTemp$5 = null;
-        o[] var5;
-        o[] var6;
-        var6 = new o[9];
-        var5 = var6;
-        o dupTemp$3 = id.a((byte) 107, param1, param3);
-        var6[6] = dupTemp$3;
-        var5[3] = dupTemp$3;
-        var5[2] = dupTemp$3;
-        var5[1] = dupTemp$3;
-        var5[0] = dupTemp$3;
-        if (param4 == 20230) {
-          dupTemp$4 = id.a((byte) 76, param0, param3);
-          var6[8] = dupTemp$4;
-          var5[7] = dupTemp$4;
-          var5[5] = dupTemp$4;
-          if (-1 != (param2 ^ -1)) {
-            var6[4] = id.a((byte) 98, param2, 64);
-            return var5;
-          } else {
-            return var5;
-          }
-        } else {
+        o dupTemp$1 = null;
+        o[] var6 = new o[9];
+        o[] var5 = var6;
+        o dupTemp$0 = id.a((byte) 107, param1, param3);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        if (param4 != 20230) {
           ei.a(-59);
-          dupTemp$5 = id.a((byte) 76, param0, param3);
-          var6[8] = dupTemp$5;
-          var5[7] = dupTemp$5;
-          var5[5] = dupTemp$5;
-          if (-1 == (param2 ^ -1)) {
-            return var5;
-          } else {
+          dupTemp$1 = id.a((byte) 76, param0, param3);
+          var6[8] = dupTemp$1;
+          var5[7] = dupTemp$1;
+          var5[5] = dupTemp$1;
+          if (param2 != 0) {
             var6[4] = id.a((byte) 98, param2, 64);
             return var5;
           }
+          return var5;
         }
+        o dupTemp$2 = id.a((byte) 76, param0, param3);
+        var6[8] = dupTemp$2;
+        var5[7] = dupTemp$2;
+        var5[5] = dupTemp$2;
+        if (param2 == 0) {
+          return var5;
+        }
+        var6[4] = id.a((byte) 98, param2, 64);
+        return var5;
     }
 
     final static void a(byte param0, int param1) {
@@ -92,32 +86,21 @@ final class ei extends wl {
         RuntimeException decompiledCaughtException = null;
         var3 = wizardrun.field_H;
         try {
-          L0: {
-            var4 = (pg) ((Object) sf.field_j.b((byte) 115));
-            L1: while (true) {
-              if (var4 == null) {
-                var2 = bk.field_d.b((byte) 96);
-                L2: while (true) {
-                  if (var2 == null) {
-                    if (param0 == 51) {
-                      break L0;
-                    } else {
-                      ei.a(122, 75, 31, 20, 79);
-                      return;
-                    }
-                  } else {
-                    hg.a(param1, (byte) 106);
-                    var2 = bk.field_d.d(param0 + 8141);
-                    continue L2;
-                  }
-                }
-              } else {
-                pg.a(param1, true, var4);
-                var4 = (pg) ((Object) sf.field_j.d(8192));
-                continue L1;
-              }
-            }
+          var4 = (pg) (sf.field_j.b((byte) 115));
+          while (var4 != null) {
+            pg.a(param1, true, var4);
+            var4 = (pg) (sf.field_j.d(8192));
           }
+          var2 = bk.field_d.b((byte) 96);
+          while (var2 != null) {
+            hg.a(param1, (byte) 106);
+            var2 = bk.field_d.d(param0 + 8141);
+          }
+          if (param0 == 51) {
+            return;
+          }
+          ei.a(122, 75, 31, 20, 79);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;

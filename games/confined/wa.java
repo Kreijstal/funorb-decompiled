@@ -12,7 +12,7 @@ final class wa {
     public static void a(byte param0) {
         field_d = null;
         if (param0 >= -59) {
-            wa.a(38, (byte) 118);
+          wa.a(38, (byte) 118);
         }
     }
 
@@ -23,33 +23,19 @@ final class wa {
         RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
-              if (param1 == 117) {
-                break L1;
-              } else {
-                wa.a(-119);
-                break L1;
-              }
-            }
-            var2_int = 0;
-            L2: while (true) {
-              if (mc.field_c <= var2_int) {
-                sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
-                if (mc.field_c <= param0) {
-                  break L0;
-                } else {
-                  mc.field_c = param0;
-                  return;
-                }
-              } else {
-                sj.field_rb[param0 + var2_int] = var2_int;
-                var2_int++;
-                continue L2;
-              }
-            }
+          sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
+          if (param1 != 117) {
+            wa.a(-119);
           }
+          for (var2_int = 0; mc.field_c > var2_int; var2_int++) {
+            sj.field_rb[param0 + var2_int] = var2_int;
+          }
+          sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
+          if (mc.field_c <= param0) {
+            return;
+          }
+          mc.field_c = param0;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -60,7 +46,7 @@ final class wa {
     final static void a(int param0) {
         vf.a((byte) -126, 17);
         if (param0 != -20683) {
-            field_d = (int[]) null;
+          field_d = (int[]) null;
         }
     }
 

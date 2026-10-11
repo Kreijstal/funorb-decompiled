@@ -16,173 +16,102 @@ final class nl extends ug {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param3 == 13416) {
-              break L0;
-            } else {
-              field_k = -9;
-              break L0;
-            }
+          if (param3 != 13416) {
+            field_k = -9;
           }
           if (hq.a(124, param1, param0, param2)) {
             return vd.a((byte) 76);
-          } else {
-            return null;
           }
+          return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var4 = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4);
-
-            stackIn_8_1 = new StringBuilder().append("nl.K(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L1;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L1;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_8_0 = var4;
+          stackIn_8_1 = new StringBuilder().append("nl.K(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw wn.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
+          throw wn.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
     private final long d(int param0) {
-        long var2;
-        long var4;
-        long var6;
-        int var8;
-        int var9;
-        var9 = Vertigo2.field_L ? 1 : 0;
-        var2 = System.nanoTime();
-        var4 = var2 + -this.field_f;
+        long var6 = 0L;
+        int var8 = 0;
+        int var9 = Vertigo2.field_L ? 1 : 0;
+        long var2 = System.nanoTime();
+        long var4 = var2 - this.field_f;
+        long var6Lifetime1;
+        long var6Lifetime2;
+        long var6Lifetime3;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var8Lifetime3;
         this.field_f = var2;
-        if (param0 == -9830) {
-          if ((var4 ^ -1L) < 4999999999L) {
-            if (5000000000L > var4) {
-              this.field_l[this.field_g] = var4;
-              this.field_g = (1 + this.field_g) % 10;
-              if (-2 < (this.field_i ^ -1)) {
-                this.field_i = this.field_i + 1;
-                var6 = 0L;
-                var8 = 1;
-                L0: while (true) {
-                  if (this.field_i < var8) {
-                    return var6 / (long)this.field_i;
-                  } else {
-                    var6 = var6 + this.field_l[(-var8 + (this.field_g - -10)) % 10];
-                    var8++;
-                    continue L0;
-                  }
-                }
-              } else {
-                var6 = 0L;
-                var8 = 1;
-                L1: while (true) {
-                  if (this.field_i < var8) {
-                    return var6 / (long)this.field_i;
-                  } else {
-                    var6 = var6 + this.field_l[(-var8 + (this.field_g - -10)) % 10];
-                    var8++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              var6 = 0L;
-              var8 = 1;
-              L2: while (true) {
-                if (this.field_i < var8) {
-                  return var6 / (long)this.field_i;
-                } else {
-                  var6 = var6 + this.field_l[(-var8 + (this.field_g - -10)) % 10];
-                  var8++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            var6 = 0L;
-            var8 = 1;
-            L3: while (true) {
-              if (this.field_i < var8) {
-                return var6 / (long)this.field_i;
-              } else {
-                var6 = var6 + this.field_l[(-var8 + (this.field_g - -10)) % 10];
-                var8++;
-                continue L3;
-              }
-            }
-          }
-        } else {
+        if (param0 != -9830) {
           return -86L;
         }
+        if (var4 <= -5000000000L) {
+          var6 = 0L;
+          for (var8 = 1; this.field_i >= var8; var8++) {
+            var6 = var6 + this.field_l[(-var8 + (this.field_g + 10)) % 10];
+          }
+          return var6 / (long)this.field_i;
+        }
+        if (5000000000L <= var4) {
+          var6Lifetime1 = 0L;
+          for (var8Lifetime1 = 1; this.field_i >= var8Lifetime1; var8Lifetime1++) {
+            var6Lifetime1 = var6Lifetime1 + this.field_l[(-var8Lifetime1 + (this.field_g + 10)) % 10];
+          }
+          return var6Lifetime1 / (long)this.field_i;
+        }
+        this.field_l[this.field_g] = var4;
+        this.field_g = (1 + this.field_g) % 10;
+        if (this.field_i >= 1) {
+          var6Lifetime2 = 0L;
+          for (var8Lifetime2 = 1; this.field_i >= var8Lifetime2; var8Lifetime2++) {
+            var6Lifetime2 = var6Lifetime2 + this.field_l[(-var8Lifetime2 + (this.field_g + 10)) % 10];
+          }
+          return var6Lifetime2 / (long)this.field_i;
+        }
+        this.field_i = this.field_i + 1;
+        var6Lifetime3 = 0L;
+        for (var8Lifetime3 = 1; this.field_i >= var8Lifetime3; var8Lifetime3++) {
+          var6Lifetime3 = var6Lifetime3 + this.field_l[(-var8Lifetime3 + (this.field_g + 10)) % 10];
+        }
+        return var6Lifetime3 / (long)this.field_i;
     }
 
     final long a(int param0) {
         this.field_h = this.field_h + this.d(-9830);
         int var2 = -114 / ((param0 - 8) / 62);
-        if (!(this.field_j <= this.field_h)) {
-            return (-this.field_h + this.field_j) / 1000000L;
+        if (this.field_j > this.field_h) {
+          return (-this.field_h + this.field_j) / 1000000L;
         }
         return 0L;
     }
 
     final void b(int param0) {
-        L0: {
-          if (this.field_j > this.field_h) {
-            this.field_h = this.field_h + (-this.field_h + this.field_j);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_j > this.field_h) {
+          this.field_h = this.field_h + (-this.field_h + this.field_j);
         }
-        if (param0 != -1) {
-          return;
-        } else {
+        if (param0 == -1) {
           this.field_f = 0L;
           return;
         }
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        if (param0 != 107) {
-          L0: {
-            field_k = -83;
-            if (250 >= hm.field_F) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (250 >= hm.field_F) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        if (param0 == 107) {
+          return 250 < hm.field_F ? true : false;
         }
+        field_k = -83;
+        return 250 < hm.field_F ? true : false;
     }
 
     public static void e(int param0) {
@@ -193,46 +122,25 @@ final class nl extends ug {
     final int a(boolean param0, long param1) {
         int var4;
         int var5;
-        L0: {
-          var5 = Vertigo2.field_L ? 1 : 0;
-          if (param0) {
-            break L0;
-          } else {
-            break L0;
-          }
+        var5 = Vertigo2.field_L ? 1 : 0;
+        if (param0) {
         }
-        if ((this.field_j ^ -1L) < (this.field_h ^ -1L)) {
+        if (this.field_j > this.field_h) {
           this.field_f = this.field_f + (this.field_j - this.field_h);
           this.field_h = this.field_h + (this.field_j - this.field_h);
           this.field_j = this.field_j + param1;
           return 1;
-        } else {
-          var4 = 0;
-          L1: while (true) {
-            L2: {
-              this.field_j = this.field_j + param1;
-              var4++;
-              if (var4 >= 10) {
-                break L2;
-              } else {
-                if ((this.field_j ^ -1L) > (this.field_h ^ -1L)) {
-                  continue L1;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              if ((this.field_h ^ -1L) < (this.field_j ^ -1L)) {
-                this.field_j = this.field_h;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            return var4;
-          }
         }
+        var4 = 0;
+        do {
+          this.field_j = this.field_j + param1;
+          var4++;
+        } while (var4 < 10 &&
+          this.field_j < this.field_h);
+        if (this.field_h > this.field_j) {
+          this.field_j = this.field_h;
+        }
+        return var4;
     }
 
     nl() {

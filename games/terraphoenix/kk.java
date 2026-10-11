@@ -7,86 +7,63 @@ final class kk {
     static String[] field_b;
 
     final static int a(int param0, int param1, int param2) {
-        if (param0 == 10472) {
-          if (uf.field_f != null) {
-            if (param1 >= qk.field_i) {
-              if (qk.field_i - -uf.field_f.field_r > param1) {
-                L0: {
-                  if (sl.field_d > param2) {
-                    break L0;
-                  } else {
-                    if (uf.field_f.field_t + sl.field_d <= param2) {
-                      break L0;
-                    } else {
-                      return 0;
-                    }
-                  }
-                }
-                if (param1 >= nj.field_j) {
-                  if (param1 < uf.field_f.field_r + nj.field_j) {
-                    if (param2 >= gf.field_C) {
-                      if (param2 >= uf.field_f.field_t + gf.field_C) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                if (param1 >= nj.field_j) {
-                  if (param1 < uf.field_f.field_r + nj.field_j) {
-                    if (param2 >= gf.field_C) {
-                      if (param2 < uf.field_f.field_t + gf.field_C) {
-                        return 1;
-                      } else {
-                        return -1;
-                      }
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              }
-            } else {
-              if (param1 >= nj.field_j) {
-                if (param1 < uf.field_f.field_r + nj.field_j) {
-                  if (param2 >= gf.field_C) {
-                    if (param2 < uf.field_f.field_t + gf.field_C) {
-                      return 1;
-                    } else {
-                      return -1;
-                    }
-                  } else {
-                    return -1;
-                  }
-                } else {
-                  return -1;
-                }
-              } else {
-                return -1;
-              }
-            }
-          } else {
-            return -1;
-          }
-        } else {
+        if (param0 != 10472) {
           return 47;
         }
+        if (uf.field_f == null) {
+          return -1;
+        }
+        if (param1 < qk.field_i) {
+          if (param1 < nj.field_j) {
+            return -1;
+          }
+          if (param1 >= uf.field_f.field_r + nj.field_j) {
+            return -1;
+          }
+          if (param2 < gf.field_C) {
+            return -1;
+          }
+          if (param2 < uf.field_f.field_t + gf.field_C) {
+            return 1;
+          }
+          return -1;
+        }
+        if (qk.field_i + uf.field_f.field_r <= param1) {
+          if (param1 < nj.field_j) {
+            return -1;
+          }
+          if (param1 >= uf.field_f.field_r + nj.field_j) {
+            return -1;
+          }
+          if (param2 < gf.field_C) {
+            return -1;
+          }
+          if (param2 < uf.field_f.field_t + gf.field_C) {
+            return 1;
+          }
+          return -1;
+        }
+        if (sl.field_d <= param2 &&
+          uf.field_f.field_t + sl.field_d > param2) {
+          return 0;
+        }
+        if (param1 < nj.field_j) {
+          return -1;
+        }
+        if (param1 >= uf.field_f.field_r + nj.field_j) {
+          return -1;
+        }
+        if (param2 < gf.field_C) {
+          return -1;
+        }
+        if (param2 >= uf.field_f.field_t + gf.field_C) {
+          return -1;
+        }
+        return 1;
     }
 
     final static void a(int param0, int param1) {
-        ke.field_e = (param0 << 81695984) / 150;
+        ke.field_e = (param0 << 16) / 150;
         ke.field_c = param1 * param0 / 150;
         ke.field_f = param0 * 400 / 150;
     }
@@ -94,10 +71,10 @@ final class kk {
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 67) {
-            kk.a(-26, -65);
-            field_b = null;
-            field_c = null;
-            return;
+          kk.a(-26, -65);
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;

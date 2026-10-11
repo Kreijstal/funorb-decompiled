@@ -10,9 +10,7 @@ final class o extends l {
     final static void b(int param0) {
         rg.field_a[93] = 43;
         rg.field_a[192] = 28;
-        if (param0 != -25281) {
-          return;
-        } else {
+        if (param0 == -25281) {
           rg.field_a[520] = 59;
           rg.field_a[222] = 58;
           rg.field_a[44] = 71;
@@ -28,56 +26,35 @@ final class o extends l {
     }
 
     final l a(int param0) {
-        Object stackIn_4_0 = null;
-        Object stackIn_8_0 = null;
         this.field_e = this.field_e - 1;
-        if (param0 != -2) {
-          L0: {
-            this.field_e = 15;
-            if (0 != this.field_e) {
-              stackIn_8_0 = this;
-              break L0;
-            } else {
-              stackIn_8_0 = this.field_g;
-              break L0;
-            }
-          }
-          return (l) (this);
-        } else {
-          L1: {
-            if (0 != this.field_e) {
-              stackIn_4_0 = this;
-              break L1;
-            } else {
-              stackIn_4_0 = this.field_g;
-              break L1;
-            }
-          }
-          return (l) (this);
+        if (param0 == -2) {
+          return 0 == this.field_e ? this.field_g : (l) (this);
         }
+        this.field_e = 15;
+        return 0 == this.field_e ? this.field_g : (l) (this);
     }
 
     final l b(byte param0) {
         if (param0 != -90) {
-            o.c(-31);
-            return this.field_g;
+          o.c(-31);
+          return this.field_g;
         }
         return this.field_g;
     }
 
     public static void c(int param0) {
         if (param0 != 58) {
-            return;
+          return;
         }
         field_h = null;
     }
 
     o(int param0, l param1) {
         try {
-            this.field_g = param1;
-            this.field_e = param0;
+          this.field_g = param1;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "o.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "o.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

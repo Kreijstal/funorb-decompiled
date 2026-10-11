@@ -10,11 +10,11 @@ final class tf extends dk {
     tf(qa param0) {
         super(param0.field_y, param0.field_z, param0.field_u, param0.field_j, (ch) null, (kd) null);
         try {
-            param0.a(0, this.field_u, 0, this.field_j, 80);
-            this.field_A = param0;
-            this.field_F = 256;
+          param0.a(0, this.field_u, 0, this.field_j, 80);
+          this.field_A = param0;
+          this.field_F = 256;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,60 +33,37 @@ final class tf extends dk {
         String stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: {
-                  var3_int = param0.d(-13583);
-                  if (var3_int <= param2) {
-                    break L2;
-                  } else {
-                    var3_int = param2;
-                    break L2;
-                  }
-                }
-                var4 = new byte[var3_int];
-                param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, param1 + -1);
-                var5 = pg.a(var3_int, 0, var4, param1);
-                stackIn_3_0 = (String) (var5);
-                break L1;
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              stackIn_5_0 = "Cabbage";
-              return stackIn_5_0;
+          try {
+            var3_int = param0.d(-13583);
+            if (var3_int > param2) {
+              var3_int = param2;
             }
-            break L0;
+            var4 = new byte[var3_int];
+            param0.field_i = param0.field_i + qg.field_e.a(param0.field_k, param0.field_i, 0, var3_int, var4, param1 - 1);
+            var5 = pg.a(var3_int, 0, var4, param1);
+            stackIn_3_0 = var5;
+            return stackIn_3_0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            stackIn_5_0 = "Cabbage";
+            return stackIn_5_0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L3: {
-            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var3_ref);
-
-            stackIn_8_1 = new StringBuilder().append("tf.DA(");
-
-            if (param0 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_8_0 = var3_ref;
+          stackIn_8_1 = new StringBuilder().append("tf.DA(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param1 + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void i(int param0) {
@@ -94,25 +71,25 @@ final class tf extends dk {
         field_H = null;
         field_E = null;
         if (param0 == 0) {
-            return;
+          return;
         }
         ni var2 = (ni) null;
         tf.a((ni) null, 24, -4);
     }
 
     final void b(int param0, int param1, boolean param2, int param3) {
-        if (!(param3 == 0)) {
-            return;
+        if (param3 != 0) {
+          return;
         }
-        if (!(this.field_A != null)) {
-            return;
+        if (this.field_A == null) {
+          return;
         }
         if (this.field_F == 0) {
-            return;
+          return;
         }
-        if (!(-257 != (this.field_F ^ -1))) {
-            this.field_A.b(this.field_z + param0, this.field_y + param1, true, param3);
-            return;
+        if (this.field_F == 256) {
+          this.field_A.b(this.field_z + param0, this.field_y + param1, true, param3);
+          return;
         }
         dd var6 = new dd(this.field_A.field_u, this.field_A.field_j);
         r.a(var6, 45);
@@ -126,77 +103,48 @@ final class tf extends dk {
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 0) {
-                break L1;
-              } else {
-                field_G = (ob) null;
-                break L1;
-              }
-            }
-            stackIn_3_0 = em.field_c.a(0, param1, "");
-            break L0;
+          if (param0 != 0) {
+            field_G = (ob) null;
           }
+          stackIn_3_0 = em.field_c.a(0, param1, "");
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("tf.EA(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("tf.EA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pf.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void d(boolean param0) {
-        L0: {
-          if (nb.field_a != null) {
-            nb.field_a.k(-110);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (nb.field_a != null) {
+          nb.field_a.k(-110);
         }
-        if (em.field_g == null) {
+        if (em.field_g != null) {
+          em.field_g.n(100);
           if (!param0) {
             field_H = (ob) null;
             bc.s(-33);
             return;
-          } else {
-            bc.s(-33);
-            return;
           }
-        } else {
-          em.field_g.n(100);
-          if (param0) {
-            bc.s(-33);
-            return;
-          } else {
-            field_H = (ob) null;
-            bc.s(-33);
-            return;
-          }
+          bc.s(-33);
+          return;
         }
+        if (param0) {
+          bc.s(-33);
+          return;
+        }
+        field_H = (ob) null;
+        bc.s(-33);
     }
 
     final static int b(int param0, int param1, int param2) {
@@ -204,56 +152,31 @@ final class tf extends dk {
         int var4 = 0;
         int stackIn_12_0 = 0;
         int stackIn_14_0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3_int = 1;
-              if (param2 == -2) {
-                break L1;
-              } else {
-                tf.d(false);
-                break L1;
-              }
-            }
-            L2: while (true) {
-              if ((param1 ^ -1) >= -2) {
-                if (1 == param1) {
-                  stackIn_12_0 = var3_int * param0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  stackIn_14_0 = var3_int;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                }
-              } else {
-                L3: {
-                  if (-1 != (1 & param1 ^ -1)) {
-                    var3_int = var3_int * param0;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                param0 = param0 * param0;
-                param1 = param1 >> 1;
-                continue L2;
-              }
-            }
+          var3_int = 1;
+          if (param2 != -2) {
+            tf.d(false);
           }
+          while (param1 > 1) {
+            if ((1 & param1) != 0) {
+              var3_int = var3_int * param0;
+            }
+            param0 = param0 * param0;
+            param1 = param1 >> 1;
+          }
+          if (1 == param1) {
+            stackIn_12_0 = var3_int * param0;
+            return stackIn_12_0;
+          }
+          stackIn_14_0 = var3_int;
+          return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw pf.a((Throwable) ((Object) var3), "tf.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          return stackIn_14_0;
         }
     }
 

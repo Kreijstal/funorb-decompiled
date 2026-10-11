@@ -10,7 +10,7 @@ final class lu extends aa {
         field_g = null;
         field_e = null;
         if (param0) {
-            field_e = (hr) null;
+          field_e = (hr) null;
         }
     }
 

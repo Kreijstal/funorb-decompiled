@@ -13,80 +13,55 @@ final class tba extends bca {
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var4 = BachelorFridge.field_y;
         try {
-          L0: {
-            super.a((byte) -26, param1);
-            param1.d(this.field_q, 0);
-            param1.d(this.field_s, 0);
-            var3_int = 0;
-            L1: while (true) {
-              if ((var3_int ^ -1) <= -7) {
-                L2: {
-                  if (param0 <= -12) {
-                    break L2;
-                  } else {
-                    field_u = 75;
-                    break L2;
-                  }
-                }
-                break L0;
-              } else {
-                param1.d(this.field_t[var3_int][0], 0);
-                param1.d(this.field_t[var3_int][1], 0);
-                var3_int++;
-                continue L1;
-              }
-            }
+          super.a((byte) -26, param1);
+          param1.d(this.field_q, 0);
+          param1.d(this.field_s, 0);
+          for (var3_int = 0; var3_int < 6; var3_int++) {
+            param1.d(this.field_t[var3_int][0], 0);
+            param1.d(this.field_t[var3_int][1], 0);
           }
+          if (param0 > -12) {
+            field_u = 75;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var3);
-
-            stackIn_9_1 = new StringBuilder().append("tba.F(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("tba.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     public static void d(int param0) {
         if (param0 != 9) {
-            return;
+          return;
         }
         field_r = null;
     }
 
     final void a(op param0, int param1) {
         try {
-            this.a(param0, (byte) -2);
-            int var3_int = 64 / ((param1 - 12) / 35);
+          this.a(param0, (byte) -2);
+          int var3_int = 64 / ((param1 - 12) / 35);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "tba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "tba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
         if (param0 < 84) {
-            return;
+          return;
         }
         dm.field_g.field_g = 0;
         dm.field_g.d(12, 0);
@@ -109,54 +84,34 @@ final class tba extends bca {
         qr stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == 5) {
-                break L1;
-              } else {
-                this.field_s = -125;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new qr(param1, (tba) (this));
-            break L0;
+          if (param0 != 5) {
+            this.field_s = -125;
           }
+          stackIn_3_0 = new qr(param1, this);
+          return (at) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("tba.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("tba.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
-        return (at) ((Object) stackIn_3_0);
     }
 
     tba(int param0, nq param1) {
         super(param0, param1);
         try {
-            this.field_t = new int[6][2];
+          this.field_t = new int[6][2];
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "tba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "tba.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,63 +150,43 @@ final class tba extends bca {
 
     tba(lu param0) {
         super(param0);
-        int var2_int = 0;
         int var3 = 0;
+        int var2_int = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            this.field_k = param0.e((byte) 84);
-            this.field_o = new eaa();
-            var2_int = param0.b(16711935);
-            L1: while (true) {
-              var2_int--;
-              if (0 > var2_int) {
-                this.field_q = param0.b(16711935);
-                this.field_s = param0.b(16711935);
-                this.field_t = new int[6][2];
-                var3 = 0;
-                L2: while (true) {
-                  if (-7 >= (var3 ^ -1)) {
-                    break L0;
-                  } else {
-                    this.field_t[var3] = new int[]{param0.b(16711935), param0.b(16711935)};
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                this.field_o.a(dca.a((byte) 102, param0), true);
-                continue L1;
-              }
+          this.field_k = param0.e((byte) 84);
+          this.field_o = new eaa();
+          var2_int = param0.b(16711935);
+          while (true) {
+            var2_int--;
+            if (0 <= var2_int) {
+              this.field_o.a(dca.a((byte) 102, param0), true);
+              continue;
             }
+            break;
           }
+          this.field_q = param0.b(16711935);
+          this.field_s = param0.b(16711935);
+          this.field_t = new int[6][2];
+          for (var3 = 0; var3 < 6; var3++) {
+            this.field_t[var3] = new int[]{param0.b(16711935), param0.b(16711935)};
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("tba.<init>(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("tba.<init>(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

@@ -52,9 +52,9 @@ final class pf {
         int var6 = 0;
         int var8 = TrackController.field_F ? 1 : 0;
         for (var6 = 0; this.field_q > var6; var6++) {
-            this.field_y[var6] = (short)(param3 * this.field_y[var6] / param1);
-            this.field_o[var6] = (short)(param4 * this.field_o[var6] / param1);
-            this.field_S[var6] = (short)(param0 * this.field_S[var6] / param1);
+          this.field_y[var6] = (short)(param3 * this.field_y[var6] / param1);
+          this.field_o[var6] = (short)(param4 * this.field_o[var6] / param1);
+          this.field_S[var6] = (short)(param0 * this.field_S[var6] / param1);
         }
         int var7 = -31 / ((param2 - 43) / 48);
         this.a((byte) -84);
@@ -66,7 +66,7 @@ final class pf {
         field_P = null;
         field_C = null;
         if (param0 < 54) {
-            pf.a(100);
+          pf.a(100);
         }
     }
 
@@ -77,57 +77,37 @@ final class pf {
 
     final static void a(int param0, long param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
-            try {
-              L0: {
-                L1: {
-                  Thread.sleep(param1);
-                  if (param0 == 3) {
-                    break L1;
-                  } else {
-                    field_P = (wb[]) null;
-                    break L1;
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var3 = (InterruptedException) (Object) decompiledCaughtException;
-                break L2;
-              }
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          try {
+            Thread.sleep(param1);
+            if (param0 != 3) {
+              field_P = (wb[]) null;
             }
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var6 = TrackController.field_F ? 1 : 0;
-        var5 = 0;
-        L0: while (true) {
-          if (this.field_q <= var5) {
-            this.a((byte) -40);
-            if (param1 < 100) {
-              this.a((byte) -59);
-              return;
-            } else {
-              return;
-            }
-          } else {
-            this.field_y[var5] = (short)(this.field_y[var5] + param2);
-            this.field_o[var5] = (short)(this.field_o[var5] + param3);
-            this.field_S[var5] = (short)(this.field_S[var5] + param0);
-            var5++;
-            continue L0;
-          }
+        int var5 = 0;
+        int var6 = TrackController.field_F ? 1 : 0;
+        for (var5 = 0; this.field_q > var5; var5++) {
+          this.field_y[var5] = (short)(this.field_y[var5] + param2);
+          this.field_o[var5] = (short)(this.field_o[var5] + param3);
+          this.field_S[var5] = (short)(this.field_S[var5] + param0);
         }
+        this.a((byte) -40);
+        if (param1 >= 100) {
+          return;
+        }
+        this.a((byte) -59);
     }
 
     pf() {
@@ -147,157 +127,96 @@ final class pf {
         int var10;
         int var11;
         int var12;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
         var12 = TrackController.field_F ? 1 : 0;
-        if (!this.field_F) {
-          if (param0 == 14702) {
-            this.field_F = true;
-            var2 = 32767;
-            var3 = 32767;
-            var4 = 32767;
-            var5 = -32768;
-            var6 = -32768;
-            var7 = -32768;
-            var8 = 0;
-            L0: while (true) {
-              if (this.field_q > var8) {
-                L1: {
-                  var9 = this.field_y[var8];
-                  var10 = this.field_o[var8];
-                  if (var3 > var10) {
-                    var3 = var10;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  var11 = this.field_S[var8];
-                  if (var5 < var9) {
-                    var5 = var9;
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (var6 < var10) {
-                    var6 = var10;
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (var2 > var9) {
-                    var2 = var9;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (var11 < var4) {
-                    var4 = var11;
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                if (var7 < var11) {
-                  var7 = var11;
-                  var8++;
-                  continue L0;
-                } else {
-                  var8++;
-                  continue L0;
-                }
-              } else {
-                this.field_u = var5;
-                this.field_n = var3;
-                this.field_p = var6;
-                this.field_k = var4;
-                this.field_w = var7;
-                this.field_i = var2;
-                return;
-              }
-            }
-          } else {
-            pf.a(-106, 23L);
-            this.field_F = true;
-            var2 = 32767;
-            var3 = 32767;
-            var4 = 32767;
-            var5 = -32768;
-            var6 = -32768;
-            var7 = -32768;
-            var8 = 0;
-            L6: while (true) {
-              if (this.field_q > var8) {
-                L7: {
-                  var9 = this.field_y[var8];
-                  var10 = this.field_o[var8];
-                  if (var3 > var10) {
-                    var3 = var10;
-                    break L7;
-                  } else {
-                    break L7;
-                  }
-                }
-                L8: {
-                  var11 = this.field_S[var8];
-                  if (var5 < var9) {
-                    var5 = var9;
-                    break L8;
-                  } else {
-                    break L8;
-                  }
-                }
-                L9: {
-                  if (var6 < var10) {
-                    var6 = var10;
-                    break L9;
-                  } else {
-                    break L9;
-                  }
-                }
-                L10: {
-                  if (var2 > var9) {
-                    var2 = var9;
-                    break L10;
-                  } else {
-                    break L10;
-                  }
-                }
-                L11: {
-                  if (var11 < var4) {
-                    var4 = var11;
-                    break L11;
-                  } else {
-                    break L11;
-                  }
-                }
-                if (var7 < var11) {
-                  var7 = var11;
-                  var8++;
-                  continue L6;
-                } else {
-                  var8++;
-                  continue L6;
-                }
-              } else {
-                this.field_u = var5;
-                this.field_n = var3;
-                this.field_p = var6;
-                this.field_k = var4;
-                this.field_w = var7;
-                this.field_i = var2;
-                return;
-              }
-            }
-          }
-        } else {
+        if (this.field_F) {
           return;
         }
+        if (param0 == 14702) {
+          this.field_F = true;
+          var2 = 32767;
+          var3 = 32767;
+          var4 = 32767;
+          var5 = -32768;
+          var6 = -32768;
+          var7 = -32768;
+          for (var8 = 0; this.field_q > var8; var8++) {
+            var9 = this.field_y[var8];
+            var10 = this.field_o[var8];
+            if (var3 > var10) {
+              var3 = var10;
+            }
+            var11 = this.field_S[var8];
+            if (var5 < var9) {
+              var5 = var9;
+            }
+            if (var6 < var10) {
+              var6 = var10;
+            }
+            if (var2 > var9) {
+              var2 = var9;
+            }
+            if (var11 < var4) {
+              var4 = var11;
+            }
+            if (var7 < var11) {
+              var7 = var11;
+            }
+          }
+          this.field_u = var5;
+          this.field_n = var3;
+          this.field_p = var6;
+          this.field_k = var4;
+          this.field_w = var7;
+          this.field_i = var2;
+          return;
+        }
+        pf.a(-106, 23L);
+        this.field_F = true;
+        var2Lifetime1 = 32767;
+        var3Lifetime1 = 32767;
+        var4Lifetime1 = 32767;
+        var5Lifetime1 = -32768;
+        var6Lifetime1 = -32768;
+        var7Lifetime1 = -32768;
+        for (var8Lifetime1 = 0; this.field_q > var8Lifetime1; var8Lifetime1++) {
+          var9Lifetime1 = this.field_y[var8Lifetime1];
+          var10Lifetime1 = this.field_o[var8Lifetime1];
+          if (var3Lifetime1 > var10Lifetime1) {
+            var3Lifetime1 = var10Lifetime1;
+          }
+          var11Lifetime1 = this.field_S[var8Lifetime1];
+          if (var5Lifetime1 < var9Lifetime1) {
+            var5Lifetime1 = var9Lifetime1;
+          }
+          if (var6Lifetime1 < var10Lifetime1) {
+            var6Lifetime1 = var10Lifetime1;
+          }
+          if (var2Lifetime1 > var9Lifetime1) {
+            var2Lifetime1 = var9Lifetime1;
+          }
+          if (var11Lifetime1 < var4Lifetime1) {
+            var4Lifetime1 = var11Lifetime1;
+          }
+          if (var7Lifetime1 < var11Lifetime1) {
+            var7Lifetime1 = var11Lifetime1;
+          }
+        }
+        this.field_u = var5Lifetime1;
+        this.field_n = var3Lifetime1;
+        this.field_p = var6Lifetime1;
+        this.field_k = var4Lifetime1;
+        this.field_w = var7Lifetime1;
+        this.field_i = var2Lifetime1;
     }
 
     static {

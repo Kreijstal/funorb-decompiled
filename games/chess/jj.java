@@ -10,38 +10,27 @@ final class jj {
     static hn field_a;
 
     final static void c(int param0) {
-        int fieldTemp$2 = 0;
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
         nk var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
         var3 = Chess.field_G;
         try {
-          L0: {
-            L1: {
-              if (param0 == 8) {
-                break L1;
-              } else {
-                field_e = (um) null;
-                break L1;
-              }
-            }
-            var1 = qn.field_U;
-            L2: while (true) {
-              if (!ci.g(param0 + 2147483639)) {
-                break L0;
-              } else {
-                var1.f(8, -65);
-                fieldTemp$2 = var1.field_l + 1;
-                var1.field_l = var1.field_l + 1;
-                var2 = fieldTemp$2;
-                de.a(var1, (byte) 67);
-                qn.field_U.a(var1.field_l + -var2, -1);
-                continue L2;
-              }
-            }
+          if (param0 != 8) {
+            field_e = (um) null;
           }
+          var1 = qn.field_U;
+          while (ci.g(param0 + 2147483639)) {
+            var1.f(8, -65);
+            fieldTemp$0 = var1.field_l + 1;
+            var1.field_l = var1.field_l + 1;
+            var2 = fieldTemp$0;
+            de.a(var1, (byte) 67);
+            qn.field_U.a(var1.field_l - var2, -1);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -52,7 +41,7 @@ final class jj {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 7) {
-            return;
+          return;
         }
         field_c = null;
         field_a = null;
@@ -62,50 +51,31 @@ final class jj {
     }
 
     final static boolean b(int param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 == 7) {
-          if (cd.field_x == null) {
-            if (an.field_c) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 != 7) {
           field_c = (dd[]) null;
-          if (cd.field_x != null) {
-            return true;
-          } else {
-            L0: {
-              if (!an.field_c) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (cd.field_x == null) {
+            return an.field_c ? true : false;
           }
+          return true;
         }
+        if (cd.field_x != null) {
+          return true;
+        }
+        if (!an.field_c) {
+          return false;
+        }
+        return true;
     }
 
     final static boolean d(int param0) {
-        int var1;
-        var1 = -103 / ((75 - param0) / 42);
-        if (ch.field_gb != null) {
-          if (!ch.field_gb.b(-1)) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        int var1 = -103 / ((75 - param0) / 42);
+        if (ch.field_gb == null) {
           return false;
         }
+        if (ch.field_gb.b(-1)) {
+          return true;
+        }
+        return false;
     }
 
     static {

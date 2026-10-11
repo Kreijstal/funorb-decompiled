@@ -10,7 +10,7 @@ final class u {
     public static void b(int param0) {
         field_b = null;
         if (param0 > -22) {
-            return;
+          return;
         }
         field_d = null;
         field_c = null;
@@ -19,36 +19,36 @@ final class u {
     final static void a(boolean param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1) {
-            u.b(58);
-            if (2 == (vr.field_c ^ -1)) {
-                ts.a(6493);
-            } else {
-                if (null != ce.field_x) {
-                    on.a(1, param0);
-                    return;
-                }
-                if (null == in.field_g) {
-                    fr.f((byte) -99);
-                    return;
-                }
-                on.a(1, param0);
-                return;
-            }
-            return;
-        }
-        if (2 == (vr.field_c ^ -1)) {
+          u.b(58);
+          if (vr.field_c == -3) {
             ts.a(6493);
-        } else {
+          } else {
             if (null != ce.field_x) {
-                on.a(1, param0);
-                return;
+              on.a(1, param0);
+              return;
             }
             if (null == in.field_g) {
-                fr.f((byte) -99);
-                return;
+              fr.f((byte) -99);
+              return;
             }
             on.a(1, param0);
             return;
+          }
+          return;
+        }
+        if (vr.field_c == -3) {
+          ts.a(6493);
+        } else {
+          if (null != ce.field_x) {
+            on.a(1, param0);
+            return;
+          }
+          if (null == in.field_g) {
+            fr.f((byte) -99);
+            return;
+          }
+          on.a(1, param0);
+          return;
         }
     }
 
@@ -58,40 +58,43 @@ final class u {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6 = 0;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime1Lifetime1;
         param0 = param0 >> 4;
         param3 = param3 >> 4;
         param2 = param2 >> 4;
         param4 = param4 >> 4;
         if (param3 > param2) {
-            var6 = param3;
-            param3 = param2;
-            param2 = var6;
-            var6 = param0;
-            param0 = param4;
-            param4 = var6;
+          var6 = param3;
+          param3 = param2;
+          param2 = var6;
+          var6Lifetime2 = param0;
+          param0 = param4;
+          param4 = var6Lifetime2;
         }
         if (param2 < gf.field_i) {
-            return;
+          return;
         }
         if (param3 > gf.field_l) {
-            return;
+          return;
         }
         if (param4 < param0) {
-            var6 = param3;
-            param3 = param2;
-            param2 = var6;
-            var6 = param0;
-            param0 = param4;
-            param4 = var6;
+          var6Lifetime1 = param3;
+          param3 = param2;
+          param2 = var6Lifetime1;
+          var6Lifetime1Lifetime1 = param0;
+          param0 = param4;
+          param4 = var6Lifetime1Lifetime1;
         }
         if (param1 > -7) {
-            return;
+          return;
         }
         if (param4 < gf.field_a) {
-            return;
+          return;
         }
         if (!(gf.field_f >= param0)) {
-            return;
+          return;
         }
         gf.g(param3, param0, param2, param4, param5);
     }
@@ -99,35 +102,34 @@ final class u {
     final static void c(int param0) {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var1_intLifetime1;
         oe.field_d.b(-1432175600);
-        for (var1_int = 0; -33 < (var1_int ^ -1); var1_int++) {
-            nm.field_b[var1_int] = 0L;
+        for (var1_int = 0; var1_int < 32; var1_int++) {
+          nm.field_b[var1_int] = 0L;
         }
-        for (var1_int = 0; 32 > var1_int; var1_int++) {
-            fb.field_Cb[var1_int] = 0L;
+        for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
+          fb.field_Cb[var1_intLifetime1] = 0L;
         }
         if (param0 <= 120) {
-            return;
+          return;
         }
         try {
-            hp.field_p = 0;
+          hp.field_p = 0;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "u.A(" + param0 + ')');
         }
     }
 
     final static int a(int param0) {
         lg.field_c.c(123);
-        if (vp.field_o.d(0)) {
-          if (param0 >= -28) {
-            field_a = -120;
-            return 0;
-          } else {
-            return 0;
-          }
-        } else {
+        if (!vp.field_o.d(0)) {
           return mh.b((byte) 115);
         }
+        if (param0 < -28) {
+          return 0;
+        }
+        field_a = -120;
+        return 0;
     }
 
     static {

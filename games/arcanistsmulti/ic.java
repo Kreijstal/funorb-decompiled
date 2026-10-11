@@ -9,9 +9,9 @@ final class ic {
     public static void a(int param0) {
         field_b = null;
         if (param0 != 0) {
-            ic.a(52);
-            field_c = null;
-            return;
+          ic.a(52);
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -25,63 +25,34 @@ final class ic {
         qb[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_12_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            if (param1 <= -72) {
-              var2_int = 0;
-              L1: while (true) {
-                if (param0.length <= var2_int) {
-                  stackIn_8_0 = (qb[]) (param0);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var3 = param0[var2_int];
-                  param0[var2_int].field_o = 0;
-                  var3.field_x = 0;
-                  param0[var2_int].field_n = param0[var2_int].field_q;
-                  param0[var2_int].field_w = param0[var2_int].field_y;
-                  var2_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              stackIn_3_0 = (qb[]) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param1 > -72) {
+            stackIn_3_0 = (qb[]) null;
+            return stackIn_3_0;
           }
+          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+            var3 = param0[var2_int];
+            param0[var2_int].field_o = 0;
+            var3.field_x = 0;
+            param0[var2_int].field_n = param0[var2_int].field_q;
+            param0[var2_int].field_w = param0[var2_int].field_y;
+          }
+          stackIn_8_0 = (qb[]) (param0);
+          return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_11_0 = (RuntimeException) (var2);
-
-            stackIn_11_1 = new StringBuilder().append("ic.A(");
-
-            if (param0 == null) {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "null";
-              break L2;
-            } else {
-              stackIn_12_0 = (RuntimeException) ((Object) stackIn_11_0);
-              stackIn_12_1 = (StringBuilder) ((Object) stackIn_11_1);
-              stackIn_12_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_11_0 = var2;
+          stackIn_11_1 = new StringBuilder().append("ic.A(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_12_0), stackIn_12_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return stackIn_8_0;
+          throw aa.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

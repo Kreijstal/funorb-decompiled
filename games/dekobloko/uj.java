@@ -11,6 +11,7 @@ final class uj {
     static ck[][] field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        int var13 = 0;
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -18,71 +19,46 @@ final class uj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
+        int var8Lifetime1;
         var15 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var6_int = param1 + (2 + (485 + param4) + 16);
-              var7 = -37 / ((-64 - param5) / 62);
-              re.field_x.a(-6 + var6_int, 0, 3, -6 + ea.field_D.field_N, 3);
-              var8 = -5 + re.field_x.field_N;
-              sk.field_c.a(2 + (485 + param4) - -param1, 0, -param0 + var8, param0, 5);
-              wj.field_Mb.a(sk.field_c.field_mb - (param4 + jb.field_f.field_mb), 0, 0, param0, param4);
-              var8 = var8 - (param0 - -2);
-              jb.field_f.a(jb.field_f.field_mb, 0, 0, param0, param4 + wj.field_Mb.field_mb);
-              dn.field_l.a(6, 5, param1, 5, var8 - 5, 487 + param4 - -param1, 2);
-              if (null == bc.field_E) {
-                break L1;
+          var6_int = param1 + (2 + (485 + param4) + 16);
+          var7 = -37 / ((-64 - param5) / 62);
+          re.field_x.a(-6 + var6_int, 0, 3, -6 + ea.field_D.field_N, 3);
+          var8 = -5 + re.field_x.field_N;
+          sk.field_c.a(2 + (485 + param4) + param1, 0, -param0 + var8, param0, 5);
+          wj.field_Mb.a(sk.field_c.field_mb - (param4 + jb.field_f.field_mb), 0, 0, param0, param4);
+          var8 = var8 - (param0 + 2);
+          jb.field_f.a(jb.field_f.field_mb, 0, 0, param0, param4 + wj.field_Mb.field_mb);
+          dn.field_l.a(6, 5, param1, 5, var8 - 5, 487 + param4 + param1, 2);
+          if (null != bc.field_E) {
+            bc.field_E.b(dn.field_l.field_N, dn.field_l.field_mb, dn.field_l.field_vb, dn.field_l.field_Ib, -16555);
+          }
+          var9 = -var6_int + (-param4 + ea.field_D.field_mb);
+          var10 = var9 / 2;
+          var11 = param2 + (var10 + param4);
+          var12 = 0;
+          for (var13 = 0; var13 < 6; var13++) {
+            if (var13 >= 5 ||
+              null != dh.field_c[var13]) {
+              var14 = 3 + (-6 + (ea.field_D.field_N + 2)) * var12 / (dh.field_f + 1);
+              var12++;
+              var8Lifetime1 = 1 + ((-4 + ea.field_D.field_N) * var12 / (1 + dh.field_f) - var14);
+              if (var13 >= 5) {
+                qb.field_p.a(var9, 0, var14, var8Lifetime1, var6_int);
               } else {
-                bc.field_E.b(dn.field_l.field_N, dn.field_l.field_mb, dn.field_l.field_vb, dn.field_l.field_Ib, -16555);
-                break L1;
-              }
-            }
-            var9 = -var6_int + (-param4 + ea.field_D.field_mb);
-            var10 = var9 / 2;
-            var11 = param2 + (var10 + param4);
-            var12 = 0;
-            var13 = 0;
-            L2: while (true) {
-              if ((var13 ^ -1) <= -7) {
-                break L0;
-              } else {
-                L3: {
-                  L4: {
-                    if ((var13 ^ -1) <= -6) {
-                      break L4;
-                    } else {
-                      if (null != dh.field_c[var13]) {
-                        break L4;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var14 = 3 - -((-6 + (ea.field_D.field_N - -2)) * var12 / (dh.field_f - -1));
-                  var12++;
-                  var8 = 1 + ((-4 + ea.field_D.field_N) * var12 / (1 + dh.field_f) - var14);
-                  if (var13 >= 5) {
-                    qb.field_p.a(var9, 0, var14, var8, var6_int);
-                    break L3;
-                  } else {
-                    dh.field_c[var13].a(var9, 0, var14, var8, var6_int);
-                    ui.field_E[var13].a(-param4 + var10, 0, 0, var8, param4);
-                    si.field_b[var13].a(param2, 0, param3, -param3 + (var8 - param3), var10);
-                    le.field_D[var13].a(-var11 + (-param4 + var9), 0, param3, -param3 + (var8 - param3), var11);
-                    break L3;
-                  }
-                }
-                var13++;
-                continue L2;
+                dh.field_c[var13].a(var9, 0, var14, var8Lifetime1, var6_int);
+                ui.field_E[var13].a(-param4 + var10, 0, 0, var8Lifetime1, param4);
+                si.field_b[var13].a(param2, 0, param3, -param3 + (var8Lifetime1 - param3), var10);
+                le.field_D[var13].a(-var11 + (-param4 + var9), 0, param3, -param3 + (var8Lifetime1 - param3), var11);
               }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -95,7 +71,7 @@ final class uj {
         field_f = null;
         field_c = null;
         if (param0 <= 99) {
-            return;
+          return;
         }
         field_e = null;
         field_d = (ck[][]) null;
@@ -106,90 +82,54 @@ final class uj {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int fieldTemp$5 = 0;
+        int var2 = 0;
         int dupTemp$6 = 0;
         byte[][] arrayValue$7 = null;
         byte[] var2_ref_byte__;
-        int var2;
         byte[] var3;
-        L0: {
-          if (param1 != 100) {
-            break L0;
-          } else {
-            if (rb.field_h > 0) {
-              fieldTemp$3 = rb.field_h - 1;
-              rb.field_h = rb.field_h - 1;
-              var2_ref_byte__ = of.field_f[fieldTemp$3];
-              of.field_f[rb.field_h] = null;
-              return var2_ref_byte__;
-            } else {
-              break L0;
-            }
-          }
+        byte[] var2_ref_byte__Lifetime1;
+        byte[] var2_ref_byte__Lifetime2;
+        if (param1 == 100 &&
+          rb.field_h > 0) {
+          fieldTemp$3 = rb.field_h - 1;
+          rb.field_h = rb.field_h - 1;
+          var2_ref_byte__ = of.field_f[fieldTemp$3];
+          of.field_f[rb.field_h] = null;
+          return var2_ref_byte__;
         }
-        L1: {
-          if ((param1 ^ -1) != -5001) {
-            break L1;
-          } else {
-            if (la.field_a <= 0) {
-              break L1;
-            } else {
-              fieldTemp$4 = la.field_a - 1;
-              la.field_a = la.field_a - 1;
-              var2_ref_byte__ = vk.field_c[fieldTemp$4];
-              vk.field_c[la.field_a] = null;
-              return var2_ref_byte__;
-            }
-          }
+        if (param1 == 5000 &&
+          la.field_a > 0) {
+          fieldTemp$4 = la.field_a - 1;
+          la.field_a = la.field_a - 1;
+          var2_ref_byte__Lifetime1 = vk.field_c[fieldTemp$4];
+          vk.field_c[la.field_a] = null;
+          return var2_ref_byte__Lifetime1;
         }
-        if (param0 == 5) {
-          L2: {
-            if (param1 != 30000) {
-              break L2;
-            } else {
-              if ((d.field_c ^ -1) >= -1) {
-                break L2;
-              } else {
-                fieldTemp$5 = d.field_c - 1;
-                d.field_c = d.field_c - 1;
-                var2_ref_byte__ = gk.field_yb[fieldTemp$5];
-                gk.field_yb[d.field_c] = null;
-                return var2_ref_byte__;
-              }
-            }
-          }
-          L3: {
-            if (null != jg.field_b) {
-              var2 = 0;
-              L4: while (true) {
-                if (ln.field_d.length <= var2) {
-                  break L3;
-                } else {
-                  if (ln.field_d[var2] == param1) {
-                    if ((wa.field_d[var2] ^ -1) < -1) {
-                      dupTemp$6 = wa.field_d[var2] - 1;
-                      arrayValue$7 = jg.field_b[var2];
-                      wa.field_d[var2] = dupTemp$6;
-                      var3 = arrayValue$7[dupTemp$6];
-                      jg.field_b[var2][wa.field_d[var2]] = null;
-                      return var3;
-                    } else {
-                      var2++;
-                      continue L4;
-                    }
-                  } else {
-                    var2++;
-                    continue L4;
-                  }
-                }
-              }
-            } else {
-              break L3;
-            }
-          }
-          return new byte[param1];
-        } else {
+        if (param0 != 5) {
           return (byte[]) null;
         }
+        if (param1 == 30000 &&
+          d.field_c > 0) {
+          fieldTemp$5 = d.field_c - 1;
+          d.field_c = d.field_c - 1;
+          var2_ref_byte__Lifetime2 = gk.field_yb[fieldTemp$5];
+          gk.field_yb[d.field_c] = null;
+          return var2_ref_byte__Lifetime2;
+        }
+        if (null != jg.field_b) {
+          for (var2 = 0; ln.field_d.length > var2; var2++) {
+            if (ln.field_d[var2] == param1 &&
+              wa.field_d[var2] > 0) {
+              dupTemp$6 = wa.field_d[var2] - 1;
+              arrayValue$7 = jg.field_b[var2];
+              wa.field_d[var2] = dupTemp$6;
+              var3 = arrayValue$7[dupTemp$6];
+              jg.field_b[var2][wa.field_d[var2]] = null;
+              return var3;
+            }
+          }
+        }
+        return new byte[param1];
     }
 
     static {

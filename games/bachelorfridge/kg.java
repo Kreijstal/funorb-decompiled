@@ -21,8 +21,8 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public static void a(byte param0) {
         if (param0 != 36) {
-            vr var2 = (vr) null;
-            kg.a((vr) null, -47);
+          vr var2 = (vr) null;
+          kg.a((vr) null, -47);
         }
         field_d = null;
         field_c = null;
@@ -32,28 +32,28 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-            this.field_f = true;
+          this.field_f = true;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "kg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
         String var7 = null;
-        if ((gk.field_d ^ -1) != param4) {
-            var7 = ama.field_k;
+        if (~gk.field_d != param4) {
+          var7 = ama.field_k;
         } else {
-            var7 = oka.field_t;
+          var7 = oka.field_t;
         }
         jna.a(param1, param2, -1, param3, var7, param5, param6, param0);
     }
 
     final void a(int param0, ht param1) {
         try {
-            int var3_int = 80 / ((-61 - param0) / 41);
-            gv.a(-110, param1, this.field_g);
+          int var3_int = 80 / ((-61 - param0) / 41);
+          gv.a(-110, param1, this.field_g);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "kg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,81 +71,49 @@ final class kg extends java.awt.Canvas implements java.awt.event.FocusListener {
         pf var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = BachelorFridge.field_y;
         try {
-          L0: {
-            var8 = new pf(param0.a((byte) 123, "", "logo.fo3d"));
-            var10 = var8;
-            var3 = var10.b(16711935);
-            var10.m(1);
-            ld.field_o = ni.a((byte) 41, var10);
-            bd.field_l = new int[var3][];
-            gaa.field_i = new ma[var3];
-            if (param1 >= 110) {
-              var4 = 0;
-              L1: while (true) {
-                if (var4 >= var3) {
-                  var10.i((byte) -86);
-                  var9 = 0;
-                  var4 = var9;
-                  L2: while (true) {
-                    if (var3 <= var9) {
-                      decompiledRegionSelector0 = 1;
-                      break L0;
-                    } else {
-                      var5 = gaa.field_i[var9];
-                      var5.a(0, 6, 6, 6, 1);
-                      var5.b(117);
-                      var6 = new int[]{var5.field_u + var5.field_A >> 1139542017, var5.field_G - -var5.field_B >> -1853191519, var5.field_q + var5.field_I >> 882145889};
-                      bd.field_l[var9] = var6;
-                      var5.a(-var6[2], 0, -var6[1], -var6[0]);
-                      var9++;
-                      continue L2;
-                    }
-                  }
-                } else {
-                  gaa.field_i[var4] = sa.a(false, var8);
-                  var4++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var8 = new pf(param0.a((byte) 123, "", "logo.fo3d"));
+          var10 = var8;
+          var3 = var10.b(16711935);
+          var10.m(1);
+          ld.field_o = ni.a((byte) 41, var10);
+          bd.field_l = new int[var3][];
+          gaa.field_i = new ma[var3];
+          if (param1 < 110) {
+            return;
           }
+          for (var4 = 0; var4 < var3; var4++) {
+            gaa.field_i[var4] = sa.a(false, var8);
+          }
+          var10.i((byte) -86);
+          var9 = 0;
+          var4Lifetime1 = var9;
+          while (var3 > var9) {
+            var5 = gaa.field_i[var9];
+            var5.a(0, 6, 6, 6, 1);
+            var5.b(117);
+            var6 = new int[]{var5.field_u + var5.field_A >> 1, var5.field_G + var5.field_B >> 1, var5.field_q + var5.field_I >> 1};
+            bd.field_l[var9] = var6;
+            var5.a(-var6[2], 0, -var6[1], -var6[0]);
+            var9++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_12_0 = (RuntimeException) (var2);
-
-            stackIn_12_1 = new StringBuilder().append("kg.A(");
-
-            if (param0 == null) {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L3;
-            } else {
-              stackIn_13_0 = (RuntimeException) ((Object) stackIn_12_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_12_0 = var2;
+          stackIn_12_1 = new StringBuilder().append("kg.A(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_13_0), stackIn_13_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw pe.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 

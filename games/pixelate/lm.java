@@ -17,7 +17,7 @@ class lm extends fa {
         field_l = null;
         field_o = null;
         if (param0 != -2575) {
-            return;
+          return;
         }
         field_n = null;
         field_k = null;
@@ -26,58 +26,49 @@ class lm extends fa {
 
     final long a(boolean param0) {
         if (!param0) {
-            this.e(-120);
-            return this.field_q;
+          this.e(-120);
+          return this.field_q;
         }
         return this.field_q;
     }
 
     final void e(int param0) {
-        if (null != this.field_r) {
-          this.field_r.field_p = this.field_p;
-          if (param0 != 17) {
-            return;
-          } else {
-            this.field_p.field_r = this.field_r;
-            this.field_r = null;
-            this.field_p = null;
-            return;
-          }
-        } else {
+        if (null == this.field_r) {
+          return;
+        }
+        this.field_r.field_p = this.field_p;
+        if (param0 == 17) {
+          this.field_p.field_r = this.field_r;
+          this.field_r = null;
+          this.field_p = null;
           return;
         }
     }
 
     final boolean f(int param0) {
-        if (param0 == 0) {
-          if (this.field_r == null) {
-            return false;
-          } else {
-            return true;
-          }
-        } else {
+        if (param0 != 0) {
           this.e(-41);
-          if (this.field_r == null) {
-            return false;
-          } else {
+          if (this.field_r != null) {
             return true;
           }
+          return false;
         }
+        if (this.field_r != null) {
+          return true;
+        }
+        return false;
     }
 
     final void a(long param0, int param1) {
-        if (null == this.field_r) {
-          if (param1 != 29574) {
-            this.field_p = (lm) null;
-            this.field_q = param0;
-            return;
-          } else {
-            this.field_q = param0;
-            return;
-          }
-        } else {
+        if (null != this.field_r) {
           throw new RuntimeException();
         }
+        if (param1 == 29574) {
+          this.field_q = param0;
+          return;
+        }
+        this.field_p = (lm) null;
+        this.field_q = param0;
     }
 
     protected lm() {

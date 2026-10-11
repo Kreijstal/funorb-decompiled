@@ -6,7 +6,7 @@ final class af extends kf implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, boolean param1) {
         if (param1) {
-            return;
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
@@ -18,9 +18,9 @@ final class af extends kf implements java.awt.event.MouseWheelListener {
     final synchronized int a(int param0) {
         int var2 = this.field_c;
         if (param0 >= 0) {
-            this.field_c = 41;
-            this.field_c = 0;
-            return var2;
+          this.field_c = 41;
+          this.field_c = 0;
+          return var2;
         }
         this.field_c = 0;
         return var2;
@@ -34,7 +34,7 @@ final class af extends kf implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 != 55) {
-            this.field_c = 14;
+          this.field_c = 14;
         }
     }
 }

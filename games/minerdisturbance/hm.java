@@ -10,92 +10,64 @@ final class hm extends jc {
 
     final static void d(byte param0) {
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            L1: {
-              if (param0 == 22) {
-                break L1;
-              } else {
-                field_J = (String[]) null;
-                break L1;
-              }
-            }
-            if (tk.b(127)) {
-              ll.field_a.a(true, ql.field_c, cl.field_T, 0);
-              ll.field_a.o(-256);
-              L2: while (true) {
-                if (!mm.b((byte) 118)) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
-                  continue L2;
-                }
-              }
-            } else {
-              L3: {
-                if (null == kf.field_d) {
-                  break L3;
-                } else {
-                  if (kf.field_d.field_b) {
-                    ng.a((byte) 81);
-                    ll.field_a.b(param0 ^ 23, new bh(ll.field_a, od.field_k));
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 != 22) {
+            field_J = (String[]) null;
           }
+          if (tk.b(127)) {
+            ll.field_a.a(true, ql.field_c, cl.field_T, 0);
+            ll.field_a.o(-256);
+            while (mm.b((byte) 118)) {
+              ll.field_a.a((byte) -65, lj.field_t, ud.field_c);
+            }
+            return;
+          }
+          if (null != kf.field_d &&
+            kf.field_d.field_b) {
+            ng.a((byte) 81);
+            ll.field_a.b(param0 ^ 23, new bh(ll.field_a, od.field_k));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw lj.a((Throwable) ((Object) var1), "hm.Q(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
     final void b(int param0, fe param1) {
         cc var3 = null;
         try {
-            if (!(param1 instanceof cc)) {
-                throw new IllegalArgumentException();
-            }
-            if (param0 != 1) {
-                this.n(31);
-            }
-            var3 = (cc) ((Object) param1);
-            this.field_K.a(var3, 27862);
-            var3.field_K = true;
-            var3.a((fe) (this), 127);
+          if (!(param1 instanceof cc)) {
+            throw new IllegalArgumentException();
+          }
+          if (param0 != 1) {
+            this.n(31);
+          }
+          var3 = (cc) (param1);
+          this.field_K.a(var3, 27862);
+          var3.field_K = true;
+          var3.a((fe) (this), 127);
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "hm.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "hm.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void o(int param0) {
         int var4 = MinerDisturbance.field_ab;
         if (param0 != -256) {
-            return;
+          return;
         }
         hh var2 = new hh(this.field_K);
-        cc var3 = (cc) ((Object) var2.d(param0 + -19608));
+        cc var3 = (cc) (var2.d(param0 - 19608));
         while (var3 != null) {
-            if (var3.n(-4)) {
-                var3.b(34);
-            }
-            var3 = (cc) ((Object) var2.a(12537));
+          if (var3.n(-4)) {
+            var3.b(34);
+          }
+          var3 = (cc) (var2.a(12537));
         }
         this.field_I = (fe) ((Object) this.e((byte) 83));
     }
@@ -109,7 +81,7 @@ final class hm extends jc {
         field_M = null;
         field_N = null;
         if (param0 < 111) {
-            field_J = (String[]) null;
+          field_J = (String[]) null;
         }
         field_L = null;
         field_J = null;
@@ -118,22 +90,22 @@ final class hm extends jc {
     final void a(byte param0, int param1, int param2, int param3) {
         int var7 = MinerDisturbance.field_ab;
         if (null != this.field_A) {
-            this.field_A.a(12088, param1, (fe) (this), param2, true);
+          this.field_A.a(12088, param1, (fe) (this), param2, true);
         }
         hh var5 = new hh(this.field_K);
         if (param0 != 4) {
-            this.a(false);
+          this.a(false);
         }
-        fe var6 = (fe) ((Object) var5.a(true));
+        fe var6 = (fe) (var5.a(true));
         while (var6 != null) {
-            var6.a((byte) 4, param1 + this.field_u, this.field_t + param2, param3);
-            var6 = (fe) ((Object) var5.c(-127));
+          var6.a((byte) 4, param1 + this.field_u, this.field_t + param2, param3);
+          var6 = (fe) (var5.c(-127));
         }
     }
 
     final static int f(byte param0) {
         if (param0 != -67) {
-            field_N = (String) null;
+          field_N = (String) null;
         }
         return mj.field_p;
     }
@@ -141,13 +113,13 @@ final class hm extends jc {
     final void n(int param0) {
         int var4 = MinerDisturbance.field_ab;
         hh var2 = new hh(this.field_K);
-        cc var3 = (cc) ((Object) var2.d(-19864));
+        cc var3 = (cc) (var2.d(-19864));
         while (var3 != null) {
-            var3.field_K = false;
-            var3 = (cc) ((Object) var2.a(12537));
+          var3.field_K = false;
+          var3 = (cc) (var2.a(12537));
         }
         if (param0 != 21974) {
-            field_J = (String[]) null;
+          field_J = (String[]) null;
         }
         this.field_I = null;
     }
@@ -156,43 +128,33 @@ final class hm extends jc {
         hh var2;
         cc var3;
         int var4;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          if (param0 == -21923) {
-            break L0;
-          } else {
-            field_J = (String[]) null;
-            break L0;
-          }
+        var4 = MinerDisturbance.field_ab;
+        if (param0 != -21923) {
+          field_J = (String[]) null;
         }
         var2 = new hh(this.field_K);
-        var3 = (cc) ((Object) var2.d(-19864));
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_K) {
-              var3 = (cc) ((Object) var2.a(12537));
-              continue L1;
-            } else {
-              return var3.m(124);
-            }
-          } else {
-            return null;
+        var3 = (cc) (var2.d(-19864));
+        while (var3 != null) {
+          if (var3.field_K) {
+            return var3.m(124);
           }
+          var3 = (cc) (var2.a(12537));
         }
+        return null;
     }
 
     final void a(boolean param0) {
         int var4 = MinerDisturbance.field_ab;
         if (!param0) {
-            field_L = (String) null;
+          field_L = (String) null;
         }
         hh var2 = new hh(this.field_K);
-        cc var3 = (cc) ((Object) var2.d(-19864));
+        cc var3 = (cc) (var2.d(-19864));
         while (var3 != null) {
-            if (var3.a(false)) {
-                var3.b(34);
-            }
-            var3 = (cc) ((Object) var2.a(12537));
+          if (var3.a(false)) {
+            var3.b(34);
+          }
+          var3 = (cc) (var2.a(12537));
         }
     }
 
@@ -200,29 +162,19 @@ final class hm extends jc {
         hh var2;
         cc var3;
         int var4;
-        L0: {
-          var4 = MinerDisturbance.field_ab;
-          var2 = new hh(this.field_K);
-          var3 = (cc) ((Object) var2.d(-19864));
-          if (param0 == 83) {
-            break L0;
-          } else {
-            hm.c((byte) 111);
-            break L0;
-          }
+        var4 = MinerDisturbance.field_ab;
+        var2 = new hh(this.field_K);
+        var3 = (cc) (var2.d(-19864));
+        if (param0 != 83) {
+          hm.c((byte) 111);
         }
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_K) {
-              var3 = (cc) ((Object) var2.a(12537));
-              continue L1;
-            } else {
-              return var3;
-            }
-          } else {
-            return null;
+        while (var3 != null) {
+          if (var3.field_K) {
+            return var3;
           }
+          var3 = (cc) (var2.a(12537));
         }
+        return null;
     }
 
     final static gj a(String param0, boolean param1) {
@@ -241,101 +193,55 @@ final class hm extends jc {
         gj stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var8 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var2_int = param0.length();
-            if (0 != var2_int) {
-              if ((var2_int ^ -1) >= -256) {
-                var3 = h.a('.', param1, param0);
-                if ((var3.length ^ -1) <= -3) {
-                  L1: {
-                    if (param1) {
-                      break L1;
-                    } else {
-                      hm.c((byte) 7);
-                      break L1;
-                    }
-                  }
-                  var4 = var3;
-                  var5 = 0;
-                  L2: while (true) {
-                    if (var4.length <= var5) {
-                      stackIn_19_0 = ql.a(param1, var3[var3.length - 1]);
-                      decompiledRegionSelector0 = 4;
-                      break L0;
-                    } else {
-                      var6 = var4[var5];
-                      var7 = rg.a(var6, true);
-                      if (var7 == null) {
-                        var5++;
-                        continue L2;
-                      } else {
-                        stackIn_16_0 = (gj) (var7);
-                        decompiledRegionSelector0 = 3;
-                        break L0;
-                      }
-                    }
-                  }
-                } else {
-                  stackIn_9_0 = dh.field_d;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              } else {
-                stackIn_6_0 = ec.field_d;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            } else {
-              stackIn_3_0 = dh.field_d;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var2_int = param0.length();
+          if (0 == var2_int) {
+            stackIn_3_0 = dh.field_d;
+            return stackIn_3_0;
           }
+          if (var2_int > 255) {
+            stackIn_6_0 = ec.field_d;
+            return stackIn_6_0;
+          }
+          var3 = h.a('.', param1, param0);
+          if (var3.length < 2) {
+            stackIn_9_0 = dh.field_d;
+            return stackIn_9_0;
+          }
+          if (!param1) {
+            hm.c((byte) 7);
+          }
+          var4 = var3;
+          var5 = 0;
+          while (true) {
+            if (var4.length <= var5) {
+              stackIn_19_0 = ql.a(param1, var3[var3.length - 1]);
+              return stackIn_19_0;
+            }
+            var6 = var4[var5];
+            var7 = rg.a(var6, true);
+            if (var7 == null) {
+              var5++;
+              continue;
+            }
+            break;
+          }
+          stackIn_16_0 = var7;
+          return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var2);
-
-            stackIn_22_1 = new StringBuilder().append("hm.L(");
-
-            if (param0 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L3;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L3;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_6_0;
+          var2 = decompiledCaughtException;
+          stackIn_22_0 = var2;
+          stackIn_22_1 = new StringBuilder().append("hm.L(");
+          if (param0 == null) {
+            stackIn_23_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_9_0;
-            } else {
-              if (decompiledRegionSelector0 == 3) {
-                return stackIn_16_0;
-              } else {
-                return stackIn_19_0;
-              }
-            }
+            stackIn_23_2 = "{...}";
           }
+          throw lj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -352,72 +258,43 @@ final class hm extends jc {
         sj stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var7 = MinerDisturbance.field_ab;
         try {
-          L0: {
-            var2 = kn.a("jagex-last-login-method", (byte) 114, param1);
-            if (var2 == null) {
-              stackIn_4_0 = li.field_d;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              var3 = 121 % ((-63 - param0) / 48);
-              var4 = im.b(111);
-              var5 = 0;
-              L1: while (true) {
-                if (var5 >= var4.length) {
-                  stackIn_12_0 = li.field_d;
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                } else {
-                  var6 = var4[var5];
-                  if (!var6.a(2, var2)) {
-                    var5++;
-                    continue L1;
-                  } else {
-                    stackIn_9_0 = (sj) (var6);
-                    decompiledRegionSelector0 = 1;
-                    break L0;
-                  }
-                }
-              }
-            }
+          var2 = kn.a("jagex-last-login-method", (byte) 114, param1);
+          if (var2 == null) {
+            stackIn_4_0 = li.field_d;
+            return stackIn_4_0;
           }
+          var3 = 121 % ((-63 - param0) / 48);
+          var4 = im.b(111);
+          var5 = 0;
+          while (true) {
+            if (var5 >= var4.length) {
+              stackIn_12_0 = li.field_d;
+              return stackIn_12_0;
+            }
+            var6 = var4[var5];
+            if (!var6.a(2, var2)) {
+              var5++;
+              continue;
+            }
+            break;
+          }
+          stackIn_9_0 = var6;
+          return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2_ref = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2_ref);
-
-            stackIn_15_1 = new StringBuilder().append("hm.N(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L2;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L2;
-            }
-          }
-          throw lj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_4_0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_9_0;
+          var2_ref = decompiledCaughtException;
+          stackIn_15_0 = var2_ref;
+          stackIn_15_1 = new StringBuilder().append("hm.N(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
           } else {
-            return stackIn_12_0;
+            stackIn_16_2 = "{...}";
           }
+          throw lj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

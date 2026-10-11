@@ -9,77 +9,46 @@ final class ik {
     static String[] field_c;
 
     final static ri a(int param0, String param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         ri stackIn_12_0 = null;
         ri stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            var2_int = param1.length();
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= var2_int) {
-                if (param0 == -58) {
-                  stackIn_14_0 = n.field_b;
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  stackIn_12_0 = (ri) null;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                }
-              } else {
-                var4 = param1.charAt(var3);
-                if ((var4 ^ -1) <= -49) {
-                  if (var4 <= 57) {
-                    var3++;
-                    continue L1;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  return null;
-                }
-              }
+          var2_int = param1.length();
+          for (var3 = 0; var3 < var2_int; var3++) {
+            var4 = param1.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
             }
           }
+          if (param0 == -58) {
+            stackIn_14_0 = n.field_b;
+            return stackIn_14_0;
+          }
+          stackIn_12_0 = (ri) null;
+          return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var2);
-
-            stackIn_17_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L2;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_17_0 = var2;
+          stackIn_17_1 = new StringBuilder().append("ik.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_12_0;
-        } else {
-          return stackIn_14_0;
+          throw aa.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -107,7 +76,7 @@ final class ik {
 
     public static void a(int param0) {
         if (param0 != 0) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
         field_a = null;
         field_c = null;
@@ -117,20 +86,20 @@ final class ik {
 
     final static void b(int param0) {
         if (param0 != 0) {
-            field_d = (int[]) null;
+          field_d = (int[]) null;
         }
-        if ((mj.field_p ^ -1) > -7) {
-            rk.field_O.c(param0 ^ -4207, -1);
+        if (mj.field_p < 6) {
+          rk.field_O.c(param0 ^ -4207, -1);
         }
     }
 
     final static void a(byte param0) {
         if (param0 != -85) {
-            return;
+          return;
         }
         se.field_H = new kc(0L, (kc) null);
         if (fc.field_a) {
-            se.field_H.a(kg.field_c, 14);
+          se.field_H.a(kg.field_c, 14);
         }
         se.field_H.a(mj.field_s, 39);
         aj.field_h = new i(lj.field_p, se.field_H);

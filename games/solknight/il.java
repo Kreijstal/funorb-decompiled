@@ -13,81 +13,61 @@ class il extends aa {
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 6054) {
-                break L1;
-              } else {
-                il.c(10);
-                break L1;
-              }
-            }
-            stackIn_3_0 = v.a(param1 + -6138, param0, 10, true);
-            break L0;
+          if (param1 != 6054) {
+            il.c(10);
           }
+          stackIn_3_0 = v.a(param1 - 6138, param0, 10, true);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var2);
-
-            stackIn_6_1 = new StringBuilder().append("il.K(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("il.K(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw fc.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw fc.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     wb a(int param0) {
         if (param0 <= 30) {
-            gb var3 = (gb) null;
-            this.a(-115, (gb) null);
-            return qb.field_L;
+          gb var3 = (gb) null;
+          this.a(-115, (gb) null);
+          return qb.field_L;
         }
         return qb.field_L;
     }
 
     final static boolean b(int param0) {
         if (param0 != 507) {
-            il.b(-102);
-            return lh.field_l;
+          il.b(-102);
+          return lh.field_l;
         }
         return lh.field_l;
     }
 
     final void a(int param0, gb param1) {
         try {
-            param1.a(this.field_a, (byte) 89);
-            param1.a(111, this.field_b);
-            if (param0 != -12518) {
-                gb var4 = (gb) null;
-                this.a(-37, (gb) null);
-            }
+          param1.a(this.field_a, (byte) 89);
+          param1.a(111, this.field_b);
+          if (param0 != -12518) {
+            gb var4 = (gb) null;
+            this.a(-37, (gb) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "il.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "il.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void c(int param0) {
         if (param0 != 2113536) {
-            return;
+          return;
         }
         field_c = null;
         field_d = null;
@@ -96,10 +76,10 @@ class il extends aa {
 
     il(long param0, String param1) {
         try {
-            this.field_a = param0;
-            this.field_b = param1;
+          this.field_a = param0;
+          this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw fc.a((Throwable) ((Object) runtimeException), "il.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw fc.a((Throwable) ((Object) runtimeException), "il.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,10 +9,13 @@ final class pda {
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         if (param3 != 256) {
-            return true;
+          return true;
         }
-        if (param7 > param0 && param4 > param2 && param5 > param6 && param8 < param1) {
-            return true;
+        if (param7 > param0 &&
+          param4 > param2 &&
+          param5 > param6 &&
+          param8 < param1) {
+          return true;
         }
         return false;
     }
@@ -23,7 +26,7 @@ final class pda {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 42 % ((param0 - -68) / 42);
+        int var1 = 42 % ((param0 + 68) / 42);
         field_d = (iu[][]) null;
         field_b = null;
     }
@@ -35,11 +38,11 @@ final class pda {
         field_b = new byte[32896];
         int var0 = 0;
         for (var1 = 0; var1 < 256; var1++) {
-            for (var2 = 0; var1 >= var2; var2++) {
-                incrementValue$0 = var0;
-                var0++;
-                field_b[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + var1 * var1 + var2 * var2) / 65535.0f)));
-            }
+          for (var2 = 0; var1 >= var2; var2++) {
+            incrementValue$0 = var0;
+            var0++;
+            field_b[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + var1 * var1 + var2 * var2) / 65535.0f)));
+          }
         }
         field_a = "Show all game chat";
     }

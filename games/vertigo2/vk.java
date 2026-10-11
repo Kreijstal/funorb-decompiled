@@ -18,16 +18,16 @@ final class vk extends il implements java.awt.event.MouseWheelListener {
 
     final void a(java.awt.Component param0, boolean param1) {
         if (!param1) {
-            this.field_l = 69;
-            param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
-            return;
+          this.field_l = 69;
+          param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
+          return;
         }
         param0.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }
 
     final void a(java.awt.Component param0, int param1) {
         if (param1 != 0) {
-            return;
+          return;
         }
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
     }

@@ -9,59 +9,50 @@ final class rla extends dqa implements oo {
     static int field_x;
 
     final static boolean c(boolean param0) {
-        if (!param0) {
-          if (upa.field_a) {
-            if (0 == (pk.field_o ^ -1)) {
-              if (-1 != noa.field_q) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0) {
           rla.i((byte) -52);
-          if (upa.field_a) {
-            if (0 == (pk.field_o ^ -1)) {
-              if (-1 == noa.field_q) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (!upa.field_a) {
             return false;
           }
+          if (pk.field_o != -1) {
+            return true;
+          }
+          if (-1 != noa.field_q) {
+            return true;
+          }
+          return false;
         }
+        if (!upa.field_a) {
+          return false;
+        }
+        if (pk.field_o != -1) {
+          return true;
+        }
+        if (-1 == noa.field_q) {
+          return false;
+        }
+        return true;
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        var5 = param0 + this.field_g;
-        if (param2 <= 47) {
-          this.field_z = (htb) null;
+        int var6 = 0;
+        int var5 = param0 + this.field_g;
+        int var6Lifetime1;
+        if (param2 > 47) {
           var6 = param3 + this.field_r;
-          loa.field_o.a(dkb.field_a, 20 + var5, var6 - -20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
-          super.b(param0, param1, 94, param3);
-          return;
-        } else {
-          var6 = param3 + this.field_r;
-          loa.field_o.a(dkb.field_a, 20 + var5, var6 - -20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
+          loa.field_o.a(dkb.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
           super.b(param0, param1, 94, param3);
           return;
         }
+        this.field_z = (htb) null;
+        var6Lifetime1 = param3 + this.field_r;
+        loa.field_o.a(dkb.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, loa.field_o.field_k);
+        super.b(param0, param1, 94, param3);
     }
 
     public static void i(byte param0) {
         if (param0 < 45) {
-            return;
+          return;
         }
         field_v = null;
     }
@@ -77,10 +68,10 @@ final class rla extends dqa implements oo {
         this.field_z.field_q = (wwa) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 + -var2 >> -1902442207;
-        this.field_y.a(this.field_h + -var3 >> 1515051169, var4, 30, 1, -48 + this.field_f + -var2);
-        this.field_z.a(var4 + ((this.field_h + -var3 >> 1695873185) + var2), var4, 30, 1, -var2 + -48 + this.field_f);
-        this.field_w.a(this.field_h + -var3 >> -334053983, var3, 30, 1, -78 + (this.field_f + -(var2 * 2)));
+        int var4 = var3 - var2 >> 1;
+        this.field_y.a(this.field_h - var3 >> 1, var4, 30, 1, -48 + this.field_f - var2);
+        this.field_z.a(var4 + ((this.field_h - var3 >> 1) + var2), var4, 30, 1, -var2 - 48 + this.field_f);
+        this.field_w.a(this.field_h - var3 >> 1, var3, 30, 1, -78 + (this.field_f - var2 * 2));
         this.field_y.field_l = (sba) (this);
         this.field_w.field_l = (sba) (this);
         this.field_z.field_l = (sba) (this);
@@ -93,80 +84,40 @@ final class rla extends dqa implements oo {
 
     final boolean a(int param0, int param1, shb param2, char param3) {
         RuntimeException var5 = null;
-        int stackIn_3_0 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
-        int stackIn_14_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_18_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (super.a(param0 + 0, param1, param2, param3)) {
-              stackIn_3_0 = 1;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              if (param1 == 98) {
-                stackIn_7_0 = this.a(param2, param0 ^ -15834);
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if ((param1 ^ -1) != -100) {
-                  if (param0 == -15834) {
-                    stackIn_14_0 = 0;
-                    decompiledRegionSelector0 = 3;
-                    break L0;
-                  } else {
-                    field_x = -28;
-                    return false;
-                  }
-                } else {
-                  stackIn_10_0 = this.a(true, param2);
-                  decompiledRegionSelector0 = 2;
-                  break L0;
-                }
-              }
-            }
+          if (super.a(param0 + 0, param1, param2, param3)) {
+            return true;
           }
+          if (param1 == 98) {
+            stackIn_7_0 = this.a(param2, param0 ^ -15834);
+            return stackIn_7_0;
+          }
+          if (param1 == 99) {
+            stackIn_10_0 = this.a(true, param2);
+            return stackIn_10_0;
+          }
+          if (param0 == -15834) {
+            return false;
+          }
+          field_x = -28;
+          return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var5 = decompiledCaughtException;
-            stackIn_17_0 = (RuntimeException) (var5);
-
-            stackIn_17_1 = new StringBuilder().append("rla.N(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "null";
-              break L1;
-            } else {
-              stackIn_18_0 = (RuntimeException) ((Object) stackIn_17_0);
-              stackIn_18_1 = (StringBuilder) ((Object) stackIn_17_1);
-              stackIn_18_2 = "{...}";
-              break L1;
-            }
-          }
-          throw rta.a((Throwable) ((Object) stackIn_18_0), stackIn_18_2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_7_0;
+          var5 = decompiledCaughtException;
+          stackIn_17_0 = var5;
+          stackIn_17_1 = new StringBuilder().append("rla.N(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_18_2 = "null";
           } else {
-            if (decompiledRegionSelector0 == 2) {
-              return stackIn_10_0;
-            } else {
-              return stackIn_14_0 != 0;
-            }
+            stackIn_18_2 = "{...}";
           }
+          throw rta.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -174,60 +125,38 @@ final class rla extends dqa implements oo {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         var7 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (this.field_y == param3) {
-                ot.a(-96);
-                break L1;
-              } else {
-                if (this.field_w == param3) {
-                  kga.a(70);
-                  break L1;
-                } else {
-                  if (param3 == this.field_z) {
-                    pr.a(17496);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
+          if (this.field_y == param3) {
+            ot.a(-96);
+          } else {
+            if (this.field_w == param3) {
+              kga.a(70);
+            } else {
+              if (param3 == this.field_z) {
+                pr.a(17496);
               }
             }
-            if (param0 == 11) {
-              break L0;
-            } else {
-              this.field_y = (htb) null;
-              return;
-            }
           }
+          if (param0 == 11) {
+            return;
+          }
+          this.field_y = (htb) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var6 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var6);
-
-            stackIn_13_1 = new StringBuilder().append("rla.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L2;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L2;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_13_0 = var6;
+          stackIn_13_1 = new StringBuilder().append("rla.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param4 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 

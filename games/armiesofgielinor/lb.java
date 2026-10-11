@@ -12,32 +12,30 @@ final class lb {
         ai.field_T.field_q = 0;
         ai.field_T.field_p = 0;
         if (param0 != -8) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-            field_e = (ru[]) null;
-            return ub.field_e;
+          field_e = (ru[]) null;
+          return ub.field_e;
         }
         return ub.field_e;
     }
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 13916) {
-          lb.a((byte) 83);
-          field_c = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 13916) {
           field_c = null;
           field_e = null;
           field_b = null;
           return;
         }
+        lb.a((byte) 83);
+        field_c = null;
+        field_e = null;
+        field_b = null;
     }
 
     static {

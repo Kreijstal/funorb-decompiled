@@ -26,88 +26,64 @@ final class ve {
         fl.field_s = false;
         fi.field_Db = -1;
         if (param0 != -83) {
-            field_b = 56;
+          field_b = 56;
         }
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 < 115) {
-          field_f = (String) null;
-          field_f = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 115) {
           field_f = null;
           field_d = null;
           field_c = null;
           return;
         }
+        field_f = (String) null;
+        field_f = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static void a(int param0, String param1, String param2) {
         try {
-            if (null != fl.field_u) {
-                fl.field_u.r(-127);
-            }
-            ao.field_c = new tl(param2, param1, false, true, true);
-            if (param0 != -1) {
-                field_a = (int[]) null;
-            }
-            mm.field_u.e(ao.field_c, param0 + -27666);
+          if (null != fl.field_u) {
+            fl.field_u.r(-127);
+          }
+          ao.field_c = new tl(param2, param1, false, true, true);
+          if (param0 != -1) {
+            field_a = (int[]) null;
+          }
+          mm.field_u.e(ao.field_c, param0 - 27666);
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ve.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ve.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1) {
         jj.field_a = param0;
-        if (param1 <= 18) {
-          L0: {
-            field_f = (String) null;
-            if (ic.field_b != null) {
-              ic.field_b.a((byte) 98, param0);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (param1 > 18) {
+          if (ic.field_b != null) {
+            ic.field_b.a((byte) 98, param0);
           }
-          L1: {
-            if (bn.field_c != null) {
-              bn.field_c.b(param0, 1);
-              break L1;
-            } else {
-              break L1;
-            }
+          if (bn.field_c != null) {
+            bn.field_c.b(param0, 1);
           }
           return;
-        } else {
-          L2: {
-            if (ic.field_b != null) {
-              ic.field_b.a((byte) 98, param0);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            if (bn.field_c != null) {
-              bn.field_c.b(param0, 1);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+        }
+        field_f = (String) null;
+        if (ic.field_b != null) {
+          ic.field_b.a((byte) 98, param0);
+        }
+        if (bn.field_c != null) {
+          bn.field_c.b(param0, 1);
         }
     }
 
     ve(oh[] param0) {
         try {
-            this.field_e = param0;
+          this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "ve.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

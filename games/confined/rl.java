@@ -17,9 +17,9 @@ abstract class rl extends jl {
     public static void c(int param0) {
         field_u = null;
         if (param0 > -90) {
-            rl.c(69);
-            field_s = null;
-            return;
+          rl.c(69);
+          field_s = null;
+          return;
         }
         field_s = null;
     }

@@ -14,23 +14,22 @@ final class ia {
     final static void a(boolean param0, int param1) {
         lc.field_e.a(param0, (byte) -124);
         if (param1 != -23249) {
-            field_c = true;
+          field_c = true;
         }
     }
 
     final static int a(int param0, int param1) {
-        if (param0 != 56082116) {
-          field_c = true;
-          return param1 >>> -1475811460 | param1 << 56082116;
-        } else {
-          return param1 >>> -1475811460 | param1 << 56082116;
+        if (param0 == 56082116) {
+          return param1 >>> 28 | param1 << 4;
         }
+        field_c = true;
+        return param1 >>> 28 | param1 << 4;
     }
 
     final static gq a(int param0) {
         if (param0 != 55) {
-            ia.a((byte) 3);
-            return mg.field_a;
+          ia.a((byte) 3);
+          return mg.field_a;
         }
         return mg.field_a;
     }
@@ -38,16 +37,14 @@ final class ia {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
-        if (param0 < 71) {
-          field_c = false;
-          field_d = null;
-          field_h = null;
-          return;
-        } else {
+        if (param0 >= 71) {
           field_d = null;
           field_h = null;
           return;
         }
+        field_c = false;
+        field_d = null;
+        field_h = null;
     }
 
     static {

@@ -9,7 +9,7 @@ final class lp implements dja {
         field_a = null;
         field_b = null;
         if (param0 < 41) {
-            lp.b((byte) 78);
+          lp.b((byte) 78);
         }
     }
 
@@ -20,8 +20,8 @@ final class lp implements dja {
 
     public final tv[] a(int param0, int param1) {
         if (param0 != 11995) {
-            field_a = (String) null;
-            return (tv[]) ((Object) new uqb[param1]);
+          field_a = (String) null;
+          return (tv[]) ((Object) new uqb[param1]);
         }
         return (tv[]) ((Object) new uqb[param1]);
     }

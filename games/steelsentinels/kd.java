@@ -19,7 +19,7 @@ class kd extends ck {
         field_q = null;
         field_x = null;
         if (param0 != 8191) {
-            return;
+          return;
         }
         field_s = null;
     }
@@ -27,46 +27,43 @@ class kd extends ck {
     final void e(int param0) {
         if (this.field_v == null) {
           return;
-        } else {
-          this.field_v.field_o = this.field_o;
-          this.field_o.field_v = this.field_v;
-          if (param0 != 480) {
-            field_x = (cm) null;
-            this.field_v = null;
-            this.field_o = null;
-            return;
-          } else {
-            this.field_v = null;
-            this.field_o = null;
-            return;
-          }
         }
+        this.field_v.field_o = this.field_o;
+        this.field_o.field_v = this.field_v;
+        if (param0 == 480) {
+          this.field_v = null;
+          this.field_o = null;
+          return;
+        }
+        field_x = (cm) null;
+        this.field_v = null;
+        this.field_o = null;
     }
 
     final long d(int param0) {
         if (param0 < 84) {
-            return -44L;
+          return -44L;
         }
         return this.field_w;
     }
 
     final void a(byte param0, long param1) {
         if (param0 <= 41) {
-            return;
+          return;
         }
         if (null != this.field_v) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         this.field_w = param1;
     }
 
     final boolean a(byte param0) {
         if (this.field_v == null) {
-            return false;
+          return false;
         }
         if (param0 != 30) {
-            field_s = (String) null;
-            return true;
+          field_s = (String) null;
+          return true;
         }
         return true;
     }

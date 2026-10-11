@@ -9,34 +9,30 @@ final class kf {
     static String[] field_b;
 
     final static void a(boolean param0, boolean param1, byte param2) {
-        if (param2 < -110) {
-          if (!param1) {
-            wj.c();
-            a.a((byte) -123, param1);
-            return;
-          } else {
-            wj.d(0, 0, wj.field_k, wj.field_c, 0, 192);
-            a.a((byte) -123, param1);
-            return;
-          }
-        } else {
+        if (param2 >= -110) {
           field_e = (he[]) null;
-          if (!param1) {
-            wj.c();
-            a.a((byte) -123, param1);
-            return;
-          } else {
+          if (param1) {
             wj.d(0, 0, wj.field_k, wj.field_c, 0, 192);
             a.a((byte) -123, param1);
             return;
           }
+          wj.c();
+          a.a((byte) -123, param1);
+          return;
         }
+        if (param1) {
+          wj.d(0, 0, wj.field_k, wj.field_c, 0, 192);
+          a.a((byte) -123, param1);
+          return;
+        }
+        wj.c();
+        a.a((byte) -123, param1);
     }
 
     final static int a(boolean param0) {
         if (param0) {
-            field_a = (og) null;
-            return hi.field_a;
+          field_a = (og) null;
+          return hi.field_a;
         }
         return hi.field_a;
     }
@@ -48,7 +44,7 @@ final class kf {
         field_d = null;
         field_e = null;
         if (param0 != 23050) {
-            kf.a(-121);
+          kf.a(-121);
         }
     }
 

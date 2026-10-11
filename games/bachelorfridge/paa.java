@@ -40,98 +40,90 @@ final class paa {
     public static void b(int param0) {
         field_h = null;
         if (param0 != 2) {
-            field_h = (String) null;
+          field_h = (String) null;
         }
     }
 
     final tk a(byte param0, int param1) {
-        int var3;
-        int var4;
-        var4 = BachelorFridge.field_y;
-        var3 = 0;
-        if (1 != this.field_z.field_o) {
-          if (2 == this.field_z.field_o) {
-            var3 = this.field_A[param1];
-            if (param0 != 9) {
-              paa.b(-63);
-              return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-            } else {
-              return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-            }
-          } else {
-            if ((this.field_z.field_o ^ -1) == -4) {
-              var3 = this.field_s[param1];
-              if (param0 != 9) {
-                paa.b(-63);
-                return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-              } else {
-                return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-              }
-            } else {
-              if (param0 == 9) {
-                return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-              } else {
-                paa.b(-63);
-                return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-              }
-            }
-          }
-        } else {
+        int var4 = BachelorFridge.field_y;
+        int var3 = 0;
+        int var3Lifetime1;
+        if (1 == this.field_z.field_o) {
           var3 = this.field_w[param1];
-          if (param0 == 9) {
-            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
-          } else {
+          if (param0 != 9) {
             paa.b(-63);
             return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
           }
+          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
         }
+        if (2 != this.field_z.field_o) {
+          if (this.field_z.field_o != 3) {
+            if (param0 != 9) {
+              paa.b(-63);
+              return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+            }
+            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+          }
+          var3 = this.field_s[param1];
+          if (param0 == 9) {
+            return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+          }
+          paa.b(-63);
+          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3);
+        }
+        var3Lifetime1 = this.field_A[param1];
+        if (param0 == 9) {
+          return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
+        }
+        paa.b(-63);
+        return new tk(this.field_f[param1], this.field_b[param1], this.field_F[param1], this.field_i[param1], this.field_l[param1], this.field_v[param1], this.field_E[param1], this.field_e[param1], this.field_p[param1], this.field_I[param1], this.field_D[param1], this.field_B[param1], this.field_k[param1], this.field_c[param1], this.field_o[param1], this.field_g[param1], this.field_q[param1], var3Lifetime1);
     }
 
     final static boolean a(int param0) {
         lna.field_f = true;
         sja.field_hb = f.b((byte) 73) + (long)param0;
-        return (jv.field_j ^ -1) == -12 ? true : false;
+        return jv.field_j == 11 ? true : false;
     }
 
     paa(op param0) {
         int var2_int = 0;
         try {
-            this.field_z = param0;
-            var2_int = this.field_z.field_d;
-            this.field_m = new int[var2_int][50];
-            this.field_v = new int[var2_int];
-            this.field_C = new long[var2_int];
-            this.field_o = new int[var2_int];
-            this.field_B = new int[var2_int];
-            this.field_q = new int[var2_int];
-            this.field_f = new int[var2_int];
-            this.field_g = new int[var2_int];
-            this.field_G = new boolean[var2_int];
-            this.field_p = new int[var2_int];
-            this.field_l = new int[var2_int];
-            this.field_F = new int[var2_int];
-            this.field_n = new int[var2_int];
-            this.field_s = new int[var2_int];
-            this.field_w = new int[var2_int];
-            this.field_I = new int[var2_int];
-            this.field_d = new boolean[var2_int];
-            this.field_A = new int[var2_int];
-            this.field_a = new boolean[var2_int];
-            this.field_i = new int[var2_int];
-            this.field_j = new boolean[var2_int];
-            this.field_k = new int[var2_int];
-            this.field_e = new int[var2_int];
-            this.field_E = new int[var2_int];
-            this.field_t = new long[var2_int];
-            this.field_b = new int[var2_int];
-            this.field_r = new long[var2_int];
-            this.field_x = new boolean[var2_int];
-            this.field_y = new int[var2_int];
-            this.field_D = new int[var2_int];
-            this.field_u = new boolean[var2_int];
-            this.field_c = new int[var2_int];
+          this.field_z = param0;
+          var2_int = this.field_z.field_d;
+          this.field_m = new int[var2_int][50];
+          this.field_v = new int[var2_int];
+          this.field_C = new long[var2_int];
+          this.field_o = new int[var2_int];
+          this.field_B = new int[var2_int];
+          this.field_q = new int[var2_int];
+          this.field_f = new int[var2_int];
+          this.field_g = new int[var2_int];
+          this.field_G = new boolean[var2_int];
+          this.field_p = new int[var2_int];
+          this.field_l = new int[var2_int];
+          this.field_F = new int[var2_int];
+          this.field_n = new int[var2_int];
+          this.field_s = new int[var2_int];
+          this.field_w = new int[var2_int];
+          this.field_I = new int[var2_int];
+          this.field_d = new boolean[var2_int];
+          this.field_A = new int[var2_int];
+          this.field_a = new boolean[var2_int];
+          this.field_i = new int[var2_int];
+          this.field_j = new boolean[var2_int];
+          this.field_k = new int[var2_int];
+          this.field_e = new int[var2_int];
+          this.field_E = new int[var2_int];
+          this.field_t = new long[var2_int];
+          this.field_b = new int[var2_int];
+          this.field_r = new long[var2_int];
+          this.field_x = new boolean[var2_int];
+          this.field_y = new int[var2_int];
+          this.field_D = new int[var2_int];
+          this.field_u = new boolean[var2_int];
+          this.field_c = new int[var2_int];
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "paa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

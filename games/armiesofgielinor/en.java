@@ -11,7 +11,7 @@ abstract class en extends tj implements eg {
 
     public static void n(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_G = null;
         field_E = null;
@@ -19,80 +19,54 @@ abstract class en extends tj implements eg {
 
     void a(byte param0, sb param1) {
         try {
-            if (param0 >= -21) {
-                vh var4 = (vh) null;
-                en.a((vh) null, (byte) -110);
-            }
-            this.field_H = param1;
-            this.field_H.field_j = (en) (this);
+          if (param0 >= -21) {
+            vh var4 = (vh) null;
+            en.a((vh) null, (byte) -110);
+          }
+          this.field_H = param1;
+          this.field_H.field_j = this;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "en.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "en.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     abstract int l(int param0);
 
     final static int[] a(vh param0, byte param1) {
+        int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
-        int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
         int[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param1 == -24) {
-                break L1;
-              } else {
-                en.n(-95);
-                break L1;
-              }
-            }
-            var5 = new int[param0.k(param1 ^ -24)];
-            var2 = var5;
-            var3 = 0;
-            L2: while (true) {
-              if (var5.length <= var3) {
-                stackIn_7_0 = (int[]) (var2);
-                break L0;
-              } else {
-                var5[var3] = param0.k(0);
-                var3++;
-                continue L2;
-              }
-            }
+          if (param1 != -24) {
+            en.n(-95);
           }
+          var5 = new int[param0.k(param1 ^ -24)];
+          var2 = var5;
+          for (var3 = 0; var5.length > var3; var3++) {
+            var5[var3] = param0.k(0);
+          }
+          stackIn_7_0 = var2;
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2_ref = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2_ref);
-
-            stackIn_10_1 = new StringBuilder().append("en.D(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2_ref = decompiledCaughtException;
+          stackIn_10_0 = var2_ref;
+          stackIn_10_1 = new StringBuilder().append("en.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ')');
+          throw ig.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     en(int param0, int param1, int param2, int param3, kh param4) {
@@ -101,9 +75,9 @@ abstract class en extends tj implements eg {
 
     public final n a(int param0) {
         if (param0 != -918933630) {
-            vh var3 = (vh) null;
-            en.a((vh) null, (byte) 126);
-            return (n) ((Object) this.field_H);
+          vh var3 = (vh) null;
+          en.a((vh) null, (byte) 126);
+          return (n) ((Object) this.field_H);
         }
         return (n) ((Object) this.field_H);
     }

@@ -19,8 +19,6 @@ final class oq extends hq {
         int stackIn_18_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
@@ -28,88 +26,44 @@ final class oq extends hq {
         int var7 = 0;
         int var8 = 0;
         try {
-          L0: {
-            L1: {
-              if (param2 == -15112) {
-                break L1;
-              } else {
-                this.field_s = 28;
-                break L1;
-              }
-            }
-            L2: {
-              if (!param4.field_l) {
-                if (param4.c(124)) {
-                  stackIn_8_0 = 1;
-                  break L2;
-                } else {
-                  stackIn_8_0 = 0;
-                  break L2;
-                }
-              } else {
-                stackIn_8_0 = 1;
-                break L2;
-              }
-            }
-            L3: {
-              var6_int = stackIn_8_0;
-              if (!(param4 instanceof gn)) {
-                break L3;
-              } else {
-                param0 = param0 & ((gn) ((Object) param4)).field_F;
-                break L3;
-              }
-            }
-            L4: {
-              if (param0) {
-                if (var6_int == 0) {
-                  stackIn_15_0 = this.field_s;
-                  break L4;
-                } else {
-                  stackIn_15_0 = this.field_C;
-                  break L4;
-                }
-              } else {
-                stackIn_15_0 = this.field_y;
-                break L4;
-              }
-            }
-            L5: {
-              var7 = stackIn_15_0;
-              if (!param0) {
-                stackIn_18_0 = 7105644;
-                break L5;
-              } else {
-                stackIn_18_0 = 16777215;
-                break L5;
-              }
-            }
-            var8 = stackIn_18_0;
-            jm.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> -333783327) + (param4.field_i + param1), param4.field_n);
-            this.field_j.a(param4.field_j, param3 - -param4.field_y, param4.field_i + (param1 + -2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.field_C);
-            break L0;
+          if (param2 != -15112) {
+            this.field_s = 28;
           }
+          if (!param4.field_l) {
+            stackIn_8_0 = (param4.c(124)) ? 1 : 0;
+          } else {
+            stackIn_8_0 = 1;
+          }
+          var6_int = stackIn_8_0;
+          if (param4 instanceof gn) {
+            param0 = param0 & ((gn) (param4)).field_F;
+          }
+          if (param0) {
+            if (var6_int == 0) {
+              stackIn_15_0 = this.field_s;
+            } else {
+              stackIn_15_0 = this.field_C;
+            }
+          } else {
+            stackIn_15_0 = this.field_y;
+          }
+          var7 = stackIn_15_0;
+          stackIn_18_0 = (!param0) ? 7105644 : 16777215;
+          var8 = stackIn_18_0;
+          jm.a(var7, true, param3 + param4.field_y, this.field_A, (-this.field_A[0].field_u + param4.field_w >> 1) + (param4.field_i + param1), param4.field_n);
+          this.field_j.a(param4.field_j, param3 + param4.field_y, param4.field_i + (param1 - 2), param4.field_n, param4.field_w, var8, -1, 1, 1, this.field_j.field_C);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var6 = decompiledCaughtException;
-            stackIn_22_0 = (RuntimeException) (var6);
-
-            stackIn_22_1 = new StringBuilder().append("oq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "null";
-              break L6;
-            } else {
-              stackIn_23_0 = (RuntimeException) ((Object) stackIn_22_0);
-              stackIn_23_1 = (StringBuilder) ((Object) stackIn_22_1);
-              stackIn_23_2 = "{...}";
-              break L6;
-            }
+          var6 = decompiledCaughtException;
+          stackIn_22_0 = var6;
+          stackIn_22_1 = new StringBuilder().append("oq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_23_2 = "null";
+          } else {
+            stackIn_23_2 = "{...}";
           }
-          throw fa.a((Throwable) ((Object) stackIn_23_0), stackIn_23_2 + ')');
+          throw fa.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -118,31 +72,16 @@ final class oq extends hq {
           se.field_E = 0;
           qj.field_p = false;
           io.field_g = false;
-          if (param0 >= 117) {
-            return;
-          } else {
-            oq.c((byte) -11);
-            return;
-          }
         } else {
           qj.field_p = true;
-          if (!pp.field_n) {
-            if (param0 < 117) {
-              oq.c((byte) -11);
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (pp.field_n) {
             ah.a((byte) -86, 21);
-            if (param0 >= 117) {
-              return;
-            } else {
-              oq.c((byte) -11);
-              return;
-            }
           }
         }
+        if (param0 >= 117) {
+          return;
+        }
+        oq.c((byte) -11);
     }
 
     public oq() {

@@ -17,8 +17,6 @@ final class mj {
     final void a(byte[] param0, long param1, byte param2) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
@@ -30,125 +28,77 @@ final class mj {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var8Lifetime1;
         var13 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              var5_int = 0;
-              var6 = 7 & 8 + -((int)param1 & 7);
-              var7 = 7 & this.field_b;
-              if (param2 > 84) {
-                break L1;
-              } else {
-                this.a((byte[]) null, -89L, (byte) -88);
-                break L1;
-              }
-            }
-            var9 = param1;
-            var11 = 31;
-            var12 = 0;
-            L2: while (true) {
-              if (var11 < 0) {
-                L3: while (true) {
-                  if (param1 <= 8L) {
-                    L4: {
-                      if (-1L <= (param1 ^ -1L)) {
-                        var8 = 0;
-                        break L4;
-                      } else {
-                        var8 = param0[var5_int] << var6 & 255;
-                        this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8 >>> var7);
-                        break L4;
-                      }
-                    }
-                    L5: {
-                      if (param1 + (long)var7 < 8L) {
-                        this.field_b = (int)((long)this.field_b + param1);
-                        break L5;
-                      } else {
-                        L6: {
-                          this.field_b = this.field_b + (-var7 + 8);
-                          param1 = param1 - (long)(-var7 + 8);
-                          this.field_e = this.field_e + 1;
-                          if (512 != this.field_b) {
-                            break L6;
-                          } else {
-                            this.b((byte) 90);
-                            this.field_b = 0;
-                            this.field_e = 0;
-                            break L6;
-                          }
-                        }
-                        this.field_h[this.field_e] = (byte)ie.a(255, var8 << -var7 + 8);
-                        this.field_b = this.field_b + (int)param1;
-                        break L5;
-                      }
-                    }
-                    break L0;
-                  } else {
-                    L7: {
-                      var8 = param0[var5_int] << var6 & 255 | (param0[1 + var5_int] & 255) >>> 8 + -var6;
-                      if ((var8 ^ -1) > -1) {
-                        break L7;
-                      } else {
-                        if (-257 < (var8 ^ -1)) {
-                          L8: {
-                            this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8 >>> var7);
-                            this.field_b = this.field_b + (-var7 + 8);
-                            this.field_e = this.field_e + 1;
-                            if (-513 != (this.field_b ^ -1)) {
-                              break L8;
-                            } else {
-                              this.b((byte) 87);
-                              this.field_b = 0;
-                              this.field_e = 0;
-                              break L8;
-                            }
-                          }
-                          this.field_h[this.field_e] = (byte)ie.a(255, var8 << 8 + -var7);
-                          var5_int++;
-                          this.field_b = this.field_b + var7;
-                          param1 = param1 - 8L;
-                          continue L3;
-                        } else {
-                          break L7;
-                        }
-                      }
-                    }
-                    throw new RuntimeException("LOGIC ERROR");
-                  }
-                }
-              } else {
-                var12 = var12 + ((255 & (int)var9) + (255 & this.field_c[var11]));
-                this.field_c[var11] = (byte)var12;
-                var12 = var12 >>> 8;
-                var9 = var9 >>> 8;
-                var11--;
-                continue L2;
-              }
-            }
+          var5_int = 0;
+          var6 = 7 & 8 - ((int)param1 & 7);
+          var7 = 7 & this.field_b;
+          if (param2 <= 84) {
+            this.a((byte[]) null, -89L, (byte) -88);
           }
+          var9 = param1;
+          var11 = 31;
+          var12 = 0;
+          while (var11 >= 0) {
+            var12 = var12 + ((255 & (int)var9) + (255 & this.field_c[var11]));
+            this.field_c[var11] = (byte)var12;
+            var12 = var12 >>> 8;
+            var9 = var9 >>> 8;
+            var11--;
+          }
+          while (param1 > 8L) {
+            var8 = param0[var5_int] << var6 & 255 | (param0[1 + var5_int] & 255) >>> 8 - var6;
+            if (var8 >= 0 &&
+              var8 < 256) {
+              this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8 >>> var7);
+              this.field_b = this.field_b + (-var7 + 8);
+              this.field_e = this.field_e + 1;
+              if (this.field_b == 512) {
+                this.b((byte) 87);
+                this.field_b = 0;
+                this.field_e = 0;
+              }
+              this.field_h[this.field_e] = (byte)ie.a(255, var8 << 8 - var7);
+              var5_int++;
+              this.field_b = this.field_b + var7;
+              param1 = param1 - 8L;
+              continue;
+            }
+            throw new RuntimeException("LOGIC ERROR");
+          }
+          if (param1 <= 0L) {
+            var8Lifetime1 = 0;
+          } else {
+            var8Lifetime1 = param0[var5_int] << var6 & 255;
+            this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], var8Lifetime1 >>> var7);
+          }
+          if (param1 + (long)var7 < 8L) {
+            this.field_b = (int)((long)this.field_b + param1);
+          } else {
+            this.field_b = this.field_b + (-var7 + 8);
+            param1 = param1 - (long)(-var7 + 8);
+            this.field_e = this.field_e + 1;
+            if (512 == this.field_b) {
+              this.b((byte) 90);
+              this.field_b = 0;
+              this.field_e = 0;
+            }
+            this.field_h[this.field_e] = (byte)ie.a(255, var8Lifetime1 << -var7 + 8);
+            this.field_b = this.field_b + (int)param1;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L9: {
-            var5 = decompiledCaughtException;
-            stackIn_27_0 = (RuntimeException) (var5);
-
-            stackIn_27_1 = new StringBuilder().append("mj.C(");
-
-            if (param0 == null) {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "null";
-              break L9;
-            } else {
-              stackIn_28_0 = (RuntimeException) ((Object) stackIn_27_0);
-              stackIn_28_1 = (StringBuilder) ((Object) stackIn_27_1);
-              stackIn_28_2 = "{...}";
-              break L9;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_27_0 = var5;
+          stackIn_27_1 = new StringBuilder().append("mj.C(");
+          if (param0 == null) {
+            stackIn_28_2 = "null";
+          } else {
+            stackIn_28_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_28_0), stackIn_28_2 + ',' + param1 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -157,8 +107,6 @@ final class mj {
         int fieldTemp$1 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
@@ -168,80 +116,51 @@ final class mj {
         int var8 = 0;
         var8 = Torquing.field_u;
         try {
-          L0: {
-            L1: {
-              this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], param2 >>> ie.a(7, this.field_b));
+          this.field_h[this.field_e] = (byte)gm.a((int) this.field_h[this.field_e], param2 >>> ie.a(7, this.field_b));
+          this.field_e = this.field_e + 1;
+          if (this.field_e > 32) {
+            while (64 > this.field_e) {
+              fieldTemp$0 = this.field_e;
               this.field_e = this.field_e + 1;
-              if (this.field_e > 32) {
-                L2: while (true) {
-                  if (64 <= this.field_e) {
-                    this.b((byte) 110);
-                    this.field_e = 0;
-                    break L1;
-                  } else {
-                    fieldTemp$0 = this.field_e;
-                    this.field_e = this.field_e + 1;
-                    this.field_h[fieldTemp$0] = (byte) 0;
-                    continue L2;
-                  }
-                }
-              } else {
-                break L1;
-              }
+              this.field_h[fieldTemp$0] = (byte) 0;
             }
-            L3: while (true) {
-              if (this.field_e >= 32) {
-                dk.a(this.field_c, 0, this.field_h, 32, 32);
-                this.b((byte) 126);
-                var4_int = 0;
-                var5 = param0;
-                L4: while (true) {
-                  if (8 <= var4_int) {
-                    break L0;
-                  } else {
-                    var6 = this.field_f[var4_int];
-                    param1[var5] = (byte)(int)(var6 >>> 1665265464);
-                    param1[1 + var5] = (byte)(int)(var6 >>> -1397754704);
-                    param1[2 + var5] = (byte)(int)(var6 >>> 1013537768);
-                    param1[3 + var5] = (byte)(int)(var6 >>> 1112945312);
-                    param1[4 + var5] = (byte)(int)(var6 >>> -1733071848);
-                    param1[var5 - -5] = (byte)(int)(var6 >>> 103176016);
-                    param1[6 + var5] = (byte)(int)(var6 >>> -2019297784);
-                    param1[var5 + 7] = (byte)(int)var6;
-                    var4_int++;
-                    var5 += 8;
-                    continue L4;
-                  }
-                }
-              } else {
-                fieldTemp$1 = this.field_e;
-                this.field_e = this.field_e + 1;
-                this.field_h[fieldTemp$1] = (byte) 0;
-                continue L3;
-              }
-            }
+            this.b((byte) 110);
+            this.field_e = 0;
           }
+          while (this.field_e < 32) {
+            fieldTemp$1 = this.field_e;
+            this.field_e = this.field_e + 1;
+            this.field_h[fieldTemp$1] = (byte) 0;
+          }
+          dk.a(this.field_c, 0, this.field_h, 32, 32);
+          this.b((byte) 126);
+          var4_int = 0;
+          var5 = param0;
+          while (8 > var4_int) {
+            var6 = this.field_f[var4_int];
+            param1[var5] = (byte)(int)(var6 >>> 56);
+            param1[1 + var5] = (byte)(int)(var6 >>> 48);
+            param1[2 + var5] = (byte)(int)(var6 >>> 40);
+            param1[3 + var5] = (byte)(int)(var6 >>> 32);
+            param1[4 + var5] = (byte)(int)(var6 >>> 24);
+            param1[var5 + 5] = (byte)(int)(var6 >>> 16);
+            param1[6 + var5] = (byte)(int)(var6 >>> 8);
+            param1[var5 + 7] = (byte)(int)var6;
+            var4_int++;
+            var5 += 8;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4 = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4);
-
-            stackIn_14_1 = new StringBuilder().append("mj.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_14_0 = var4;
+          stackIn_14_1 = new StringBuilder().append("mj.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw rb.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
+          throw rb.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -255,130 +174,80 @@ final class mj {
         int var6;
         byte[] var7;
         int var8;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var3Lifetime1Lifetime1;
+        int var3Lifetime1Lifetime2;
+        int var3Lifetime1Lifetime3;
         var6 = Torquing.field_u;
         var2 = 0;
         var3 = 0;
-        L0: while (true) {
-          if (-9 >= (var2 ^ -1)) {
-            L1: {
-              if (param0 >= 52) {
-                break L1;
-              } else {
-                var7 = (byte[]) null;
-                this.a(-31, (byte[]) null, -11);
-                break L1;
-              }
+        while (var2 < 8) {
+          this.field_j[var2] = vb.a(vb.a(on.a((long)this.field_h[6 + var3], 255L) << 8, vb.a(vb.a(on.a((long)this.field_h[4 + var3], 255L) << 24, vb.a(on.a(255L, (long)this.field_h[var3 + 3]) << 32, vb.a(vb.a(on.a(255L, (long)this.field_h[var3 + 1]) << 48, (long)this.field_h[var3] << 56), on.a((long)this.field_h[var3 + 2] << 40, 280375465082880L)))), on.a((long)this.field_h[var3 + 5] << 16, 16711680L))), on.a((long)this.field_h[var3 + 7], 255L));
+          var2++;
+          var3 += 8;
+        }
+        if (param0 < 52) {
+          var7 = (byte[]) null;
+          this.a(-31, (byte[]) null, -11);
+        }
+        for (var2Lifetime1 = 0; 8 > var2Lifetime1; var2Lifetime1++) {
+          dupTemp$0 = this.field_f[var2Lifetime1];
+          arrayValue$1 = this.field_j[var2Lifetime1];
+          this.field_g[var2Lifetime1] = dupTemp$0;
+          this.field_i[var2Lifetime1] = vb.a(arrayValue$1, dupTemp$0);
+        }
+        for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
+          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
+            this.field_a[var3Lifetime1] = 0L;
+            var4 = 0;
+            var5 = 56;
+            while (var4 < 8) {
+              this.field_a[var3Lifetime1] = vb.a(this.field_a[var3Lifetime1], tp.field_e[var4][ie.a((int)(this.field_g[ie.a(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              var5 -= 8;
+              var4++;
             }
-            var2 = 0;
-            L2: while (true) {
-              if (8 <= var2) {
-                var2 = 1;
-                L3: while (true) {
-                  if (10 < var2) {
-                    var2 = 0;
-                    L4: while (true) {
-                      if (8 <= var2) {
-                        return;
-                      } else {
-                        this.field_f[var2] = vb.a(this.field_f[var2], vb.a(this.field_j[var2], this.field_i[var2]));
-                        var2++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var3 = 0;
-                    L5: while (true) {
-                      if ((var3 ^ -1) <= -9) {
-                        var3 = 0;
-                        L6: while (true) {
-                          if ((var3 ^ -1) <= -9) {
-                            this.field_g[0] = vb.a(this.field_g[0], tp.field_m[var2]);
-                            var3 = 0;
-                            L7: while (true) {
-                              if (var3 >= 8) {
-                                var3 = 0;
-                                L8: while (true) {
-                                  if (-9 >= (var3 ^ -1)) {
-                                    var2++;
-                                    continue L3;
-                                  } else {
-                                    this.field_i[var3] = this.field_a[var3];
-                                    var3++;
-                                    continue L8;
-                                  }
-                                }
-                              } else {
-                                this.field_a[var3] = this.field_g[var3];
-                                var8 = 0;
-                                var4 = var8;
-                                var5 = 56;
-                                L9: while (true) {
-                                  if (8 <= var8) {
-                                    var3++;
-                                    continue L7;
-                                  } else {
-                                    this.field_a[var3] = vb.a(this.field_a[var3], tp.field_e[var8][ie.a((int)(this.field_i[ie.a(7, -var8 + var3)] >>> var5), 255)]);
-                                    var5 -= 8;
-                                    var8++;
-                                    continue L9;
-                                  }
-                                }
-                              }
-                            }
-                          } else {
-                            this.field_g[var3] = this.field_a[var3];
-                            var3++;
-                            continue L6;
-                          }
-                        }
-                      } else {
-                        this.field_a[var3] = 0L;
-                        var4 = 0;
-                        var5 = 56;
-                        L10: while (true) {
-                          if (-9 >= (var4 ^ -1)) {
-                            var3++;
-                            continue L5;
-                          } else {
-                            this.field_a[var3] = vb.a(this.field_a[var3], tp.field_e[var4][ie.a((int)(this.field_g[ie.a(7, var3 - var4)] >>> var5), 255)]);
-                            var5 -= 8;
-                            var4++;
-                            continue L10;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              } else {
-                dupTemp$0 = this.field_f[var2];
-                arrayValue$1 = this.field_j[var2];
-                this.field_g[var2] = dupTemp$0;
-                this.field_i[var2] = vb.a(arrayValue$1, dupTemp$0);
-                var2++;
-                continue L2;
-              }
-            }
-          } else {
-            this.field_j[var2] = vb.a(vb.a(on.a((long)this.field_h[6 + var3], 255L) << -1895602744, vb.a(vb.a(on.a((long)this.field_h[4 + var3], 255L) << -925252968, vb.a(on.a(255L, (long)this.field_h[var3 + 3]) << -517151712, vb.a(vb.a(on.a(255L, (long)this.field_h[var3 + 1]) << 776148080, (long)this.field_h[var3] << -1683335560), on.a((long)this.field_h[var3 - -2] << 1396929064, 280375465082880L)))), on.a((long)this.field_h[var3 - -5] << -262526960, 16711680L))), on.a((long)this.field_h[var3 + 7], 255L));
-            var2++;
-            var3 += 8;
-            continue L0;
           }
+          for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
+            this.field_g[var3Lifetime1Lifetime1] = this.field_a[var3Lifetime1Lifetime1];
+          }
+          this.field_g[0] = vb.a(this.field_g[0], tp.field_m[var2Lifetime2]);
+          for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
+            this.field_a[var3Lifetime1Lifetime2] = this.field_g[var3Lifetime1Lifetime2];
+            var8 = 0;
+            var4Lifetime1 = var8;
+            var5Lifetime1 = 56;
+            while (8 > var8) {
+              this.field_a[var3Lifetime1Lifetime2] = vb.a(this.field_a[var3Lifetime1Lifetime2], tp.field_e[var8][ie.a((int)(this.field_i[ie.a(7, -var8 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              var5Lifetime1 -= 8;
+              var8++;
+            }
+          }
+          for (var3Lifetime1Lifetime3 = 0; var3Lifetime1Lifetime3 < 8; var3Lifetime1Lifetime3++) {
+            this.field_i[var3Lifetime1Lifetime3] = this.field_a[var3Lifetime1Lifetime3];
+          }
+        }
+        for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
+          this.field_f[var2Lifetime3] = vb.a(this.field_f[var2Lifetime3], vb.a(this.field_j[var2Lifetime3], this.field_i[var2Lifetime3]));
         }
     }
 
     final void a(byte param0) {
         int var2 = 0;
         int var3 = Torquing.field_u;
+        int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
-            this.field_c[var2] = (byte) 0;
+          this.field_c[var2] = (byte) 0;
         }
         this.field_e = 0;
         this.field_h[0] = (byte)param0;
         this.field_b = 0;
-        for (var2 = 0; (var2 ^ -1) > -9; var2++) {
-            this.field_f[var2] = 0L;
+        for (var2Lifetime1 = 0; var2Lifetime1 < 8; var2Lifetime1++) {
+          this.field_f[var2Lifetime1] = 0L;
         }
     }
 

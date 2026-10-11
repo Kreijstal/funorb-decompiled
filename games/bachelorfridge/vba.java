@@ -7,62 +7,47 @@ final class vba extends bca {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          L0: {
-            this.field_k = param0.e((byte) 88);
-            this.field_o = new eaa();
-            var2_int = param0.b(16711935);
-            L1: while (true) {
-              var2_int--;
-              if ((var2_int ^ -1) > -1) {
-                break L0;
-              } else {
-                this.field_o.a(dca.a((byte) 102, param0), true);
-                continue L1;
-              }
+          this.field_k = param0.e((byte) 88);
+          this.field_o = new eaa();
+          var2_int = param0.b(16711935);
+          while (true) {
+            var2_int--;
+            if (var2_int < 0) {
+              return;
             }
+            this.field_o.a(dca.a((byte) 102, param0), true);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("vba.<init>(");
-
-            if (param0 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("vba.<init>(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     final void a(byte param0, lu param1) {
         if (param0 > -12) {
-            return;
+          return;
         }
         try {
-            super.a((byte) -120, param1);
+          super.a((byte) -120, param1);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "vba.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "vba.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        int var24 = 0;
         RuntimeException runtimeException = null;
         int var10_int = 0;
         int var11 = 0;
@@ -78,7 +63,6 @@ final class vba extends bca {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        int var24 = 0;
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
@@ -91,70 +75,47 @@ final class vba extends bca {
         int var34 = 0;
         int var35 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var10_intLifetime1;
         var35 = BachelorFridge.field_y;
         try {
-          L0: {
-            L1: {
-              L2: {
-                if (param0 != param1) {
-                  break L2;
-                } else {
-                  if (param3 != param9) {
-                    break L2;
-                  } else {
-                    if (param6 != param2) {
-                      break L2;
-                    } else {
-                      if (param5 != param8) {
-                        break L2;
-                      } else {
-                        pna.a(param8, param4, 0, param6, param0, param3);
-                        break L1;
-                      }
-                    }
-                  }
-                }
-              }
-              var10_int = param0;
-              var11 = param3;
-              var12 = 3 * param0;
-              var13 = param3 * 3;
-              var14 = 3 * param1;
-              var15 = 3 * param9;
-              var16 = param2 * 3;
-              var17 = 3 * param5;
-              var18 = param6 + -var16 - -var14 - param0;
-              var19 = var15 + (-var17 + param8 - param3);
-              var20 = -var14 + (-var14 + var16) + var12;
-              var21 = var13 + var17 + -var15 - var15;
-              var22 = var14 - var12;
-              var23 = -var13 + var15;
-              var24 = 128;
-              L3: while (true) {
-                if (4096 < var24) {
-                  break L1;
-                } else {
-                  var25 = var24 * var24 >> -1079612276;
-                  var26 = var25 * var24 >> -1233377812;
-                  var27 = var26 * var18;
-                  var28 = var26 * var19;
-                  var29 = var25 * var20;
-                  var30 = var25 * var21;
-                  var31 = var24 * var22;
-                  var32 = var23 * var24;
-                  var33 = (var29 + (var27 + var31) >> 2142841420) + param0;
-                  var34 = param3 - -(var28 + (var30 + var32) >> 1032604460);
-                  pna.a(var34, param4, 0, var33, var10_int, var11);
-                  var11 = var34;
-                  var10_int = var33;
-                  var24 += 128;
-                  continue L3;
-                }
-              }
+          if (param0 == param1 &&
+            param3 == param9 &&
+            param6 == param2 &&
+            param5 == param8) {
+            pna.a(param8, param4, 0, param6, param0, param3);
+          } else {
+            var10_int = param0;
+            var11 = param3;
+            var12 = 3 * param0;
+            var13 = param3 * 3;
+            var14 = 3 * param1;
+            var15 = 3 * param9;
+            var16 = param2 * 3;
+            var17 = 3 * param5;
+            var18 = param6 - var16 + var14 - param0;
+            var19 = var15 + (-var17 + param8 - param3);
+            var20 = -var14 + (-var14 + var16) + var12;
+            var21 = var13 + var17 - var15 - var15;
+            var22 = var14 - var12;
+            var23 = -var13 + var15;
+            for (var24 = 128; 4096 >= var24; var24 += 128) {
+              var25 = var24 * var24 >> 12;
+              var26 = var25 * var24 >> 12;
+              var27 = var26 * var18;
+              var28 = var26 * var19;
+              var29 = var25 * var20;
+              var30 = var25 * var21;
+              var31 = var24 * var22;
+              var32 = var23 * var24;
+              var33 = (var29 + (var27 + var31) >> 12) + param0;
+              var34 = param3 + (var28 + (var30 + var32) >> 12);
+              pna.a(var34, param4, 0, var33, var10_int, var11);
+              var11 = var34;
+              var10_int = var33;
             }
-            var10_int = -96 / ((-59 - param7) / 57);
-            break L0;
           }
+          var10_intLifetime1 = -96 / ((-59 - param7) / 57);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
@@ -167,71 +128,40 @@ final class vba extends bca {
     }
 
     final void a(op param0, int param1) {
-        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
+        int var3_int = 0;
         wia var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var7 = BachelorFridge.field_y;
         try {
-          L0: {
-            this.field_l.a(35, param0);
-            var3_int = -76 / ((param1 - 12) / 35);
-            var4 = 0;
-            L1: while (true) {
-              if (param0.field_z <= var4) {
-                break L0;
-              } else {
-                var5 = 0;
-                L2: while (true) {
-                  if (param0.field_B <= var5) {
-                    var4++;
-                    continue L1;
-                  } else {
-                    L3: {
-                      var6 = param0.field_a[var4][var5];
-                      if (!var6.c(-87)) {
-                        break L3;
-                      } else {
-                        var6.field_m = true;
-                        break L3;
-                      }
-                    }
-                    var5++;
-                    continue L2;
-                  }
-                }
+          this.field_l.a(35, param0);
+          var3_int = -76 / ((param1 - 12) / 35);
+          for (var4 = 0; param0.field_z > var4; var4++) {
+            for (var5 = 0; param0.field_B > var5; var5++) {
+              var6 = param0.field_a[var4][var5];
+              if (var6.c(-87)) {
+                var6.field_m = true;
               }
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L4: {
-            var3 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var3);
-
-            stackIn_13_1 = new StringBuilder().append("vba.E(");
-
-            if (param0 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L4;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L4;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_13_0 = var3;
+          stackIn_13_1 = new StringBuilder().append("vba.E(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ',' + param1 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -241,49 +171,26 @@ final class vba extends bca {
         oi stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 == 5) {
-              stackIn_4_0 = new oi(param1, (vba) (this));
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (at) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 == 5) {
+            stackIn_4_0 = new oi(param1, this);
+            return (at) ((Object) stackIn_4_0);
           }
+          stackIn_2_0 = (at) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("vba.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("vba.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return (at) ((Object) stackIn_4_0);
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

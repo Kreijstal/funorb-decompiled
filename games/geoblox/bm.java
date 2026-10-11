@@ -51,9 +51,9 @@ final class bm {
         int[] array$8 = null;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
-        RuntimeException stackIn_97_0 = null;
-        StringBuilder stackIn_97_1 = null;
-        String stackIn_98_2 = null;
+        RuntimeException stackIn_99_0 = null;
+        StringBuilder stackIn_99_1 = null;
+        String stackIn_100_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -209,10 +209,9 @@ final class bm {
                   dupTemp$7 = this.field_o[var11];
                   dupTemp$7[var14] = dupTemp$6;
                   var15 = dupTemp$6;
-                  if (var13 >= var15) {
-                    continue;
+                  if (var13 < var15) {
+                    var13 = var15;
                   }
-                  var13 = var15;
                 }
                 this.field_k[var11] = var13 + 1;
                 if (var12 == 1 + var13) {
@@ -249,14 +248,14 @@ final class bm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_97_0 = var3;
-          stackIn_97_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
+          stackIn_99_0 = var3;
+          stackIn_99_1 = new StringBuilder().append("bm.A(").append(param0).append(',');
           if (param1 == null) {
-            stackIn_98_2 = "null";
+            stackIn_100_2 = "null";
           } else {
-            stackIn_98_2 = "{...}";
+            stackIn_100_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_97_0), ((StringBuilder) (Object) stackIn_97_1).append(stackIn_98_2).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_99_1).append(stackIn_100_2).append(')').toString());
         }
     }
 

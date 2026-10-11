@@ -11,31 +11,28 @@ abstract class hf implements kf {
     static hj field_f;
 
     public final na b(boolean param0) {
-        if (!this.a(true)) {
-          if (pf.a(0) >= 350L + this.field_e) {
-            if (param0) {
-              return (na) null;
-            } else {
-              return this.c(1);
-            }
-          } else {
-            return ke.field_d;
-          }
-        } else {
+        if (this.a(true)) {
           return uc.field_e;
         }
+        if (pf.a(0) < 350L + this.field_e) {
+          return ke.field_d;
+        }
+        if (!param0) {
+          return this.c(1);
+        }
+        return (na) null;
     }
 
     final static String b(int param0) {
         String var1 = "";
         if (null != j.field_e) {
-            var1 = j.field_e.a(32);
+          var1 = j.field_e.a(32);
         }
-        if (!(0 != var1.length())) {
-            var1 = ka.c(10367);
+        if (0 == var1.length()) {
+          var1 = ka.c(10367);
         }
-        if (!(param0 != var1.length())) {
-            var1 = pg.field_c;
+        if (param0 == var1.length()) {
+          var1 = pg.field_c;
         }
         return var1;
     }
@@ -43,7 +40,7 @@ abstract class hf implements kf {
     public static void a(int param0) {
         field_c = null;
         if (param0 > -113) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -55,23 +52,20 @@ abstract class hf implements kf {
     abstract na c(int param0);
 
     public final String b(byte param0) {
-        int var2;
-        var2 = -15 / ((param0 - 20) / 44);
-        if (!this.a(true)) {
-          if ((pf.a(0) ^ -1L) > (350L + this.field_e ^ -1L)) {
-            return null;
-          } else {
-            return this.c((byte) -58);
-          }
-        } else {
+        int var2 = -15 / ((param0 - 20) / 44);
+        if (this.a(true)) {
           return null;
         }
+        if (pf.a(0) >= (350L + this.field_e)) {
+          return this.c((byte) -58);
+        }
+        return null;
     }
 
     public final void a(byte param0) {
         this.field_e = pf.a(0);
         if (param0 > -87) {
-            hf.a(-14);
+          hf.a(-14);
         }
     }
 

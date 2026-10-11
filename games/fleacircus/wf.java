@@ -12,72 +12,58 @@ final class wf implements Iterable {
 
     final static wj c(int param0) {
         if (param0 != 0) {
-            wf.c(120);
-            return (wj) ((Object) new o());
+          wf.c(120);
+          return (wj) ((Object) new o());
         }
         return (wj) ((Object) new o());
     }
 
     final void a(int param0, pa param1) {
         try {
-            if (param1.field_m != null) {
-                param1.e(-122);
-            }
-            int var3_int = -53 % ((param0 - 9) / 32);
-            param1.field_p = this.field_a;
-            param1.field_m = this.field_a.field_m;
-            param1.field_m.field_p = param1;
-            param1.field_p.field_m = param1;
+          if (param1.field_m != null) {
+            param1.e(-122);
+          }
+          int var3_int = -53 % ((param0 - 9) / 32);
+          param1.field_p = this.field_a;
+          param1.field_m = this.field_a.field_m;
+          param1.field_m.field_p = param1;
+          param1.field_p.field_m = param1;
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "wf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 < -90) {
-            break L0;
-          } else {
-            field_d = (String) null;
-            break L0;
-          }
+        if (param0 >= -90) {
+          field_d = (String) null;
         }
         var1 = rh.field_f;
         synchronized (var1) {
-          L1: {
-            if (tl.field_o == tc.field_h) {
-              stackIn_6_0 = 0;
-              return stackIn_6_0 != 0;
-            } else {
-              ji.field_a = hj.field_b[tl.field_o];
-              id.field_b = pf.field_d[tl.field_o];
-              tl.field_o = 1 + tl.field_o & 127;
-              stackIn_8_0 = 1;
-              break L1;
-            }
+          if (tl.field_o == tc.field_h) {
+            return false;
           }
+          ji.field_a = hj.field_b[tl.field_o];
+          id.field_b = pf.field_d[tl.field_o];
+          tl.field_o = 1 + tl.field_o & 127;
+          stackIn_8_0 = true;
         }
-        return stackIn_8_0 != 0;
+        return stackIn_8_0;
     }
 
     final pa d(int param0) {
-        pa var2;
-        if (param0 == -27593) {
-          var2 = this.field_a.field_p;
-          if (this.field_a == var2) {
-            return null;
-          } else {
-            var2.e(123);
-            return var2;
-          }
-        } else {
+        if (param0 != -27593) {
           return (pa) null;
         }
+        pa var2 = this.field_a.field_p;
+        if (this.field_a != var2) {
+          var2.e(123);
+          return var2;
+        }
+        return null;
     }
 
     private wf() throws Throwable {
@@ -93,77 +79,54 @@ final class wf implements Iterable {
         vb stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = pf.a(param0 + 18316, param2, param5, param3, param1, param4);
-            var6 = var8;
-            if (var8 != null) {
-              var7 = new vb();
-              var7.field_b = var8;
-              var7.field_b.add((java.awt.Component) ((Object) var7));
-              var7.setBounds(param0, 0, param1, param5);
-              var7.addFocusListener(var7);
-              var7.requestFocus();
-              stackIn_4_0 = (vb) (var7);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var8 = pf.a(param0 + 18316, param2, param5, param3, param1, param4);
+          var6 = var8;
+          if (var8 == null) {
+            stackIn_2_0 = null;
+            return (vb) (stackIn_2_0);
           }
+          var7 = new vb();
+          var7.field_b = var8;
+          var7.field_b.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(param0, 0, param1, param5);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          stackIn_4_0 = var7;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6_ref);
-
-            stackIn_7_1 = new StringBuilder().append("wf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_7_0 = var6_ref;
+          stackIn_7_1 = new StringBuilder().append("wf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pf.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ',' + param4 + ',' + param5 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return (vb) ((Object) stackIn_2_0);
-        } else {
-          return stackIn_4_0;
+          throw pf.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
     final static void a(String param0, boolean param1, boolean param2) {
         try {
-            ah.field_c = true;
-            ud.field_c = param2 ? true : false;
-            ok.field_x = new bd(nb.field_a, rg.field_o, param0, jg.field_d, ud.field_c);
-            nb.field_a.b(ok.field_x, (byte) -35);
-            if (param1) {
-                field_e = (String) null;
-            }
+          ah.field_c = true;
+          ud.field_c = param2 ? true : false;
+          ok.field_x = new bd(nb.field_a, rg.field_o, param0, jg.field_d, ud.field_c);
+          nb.field_a.b(ok.field_x, (byte) -35);
+          if (param1) {
+            field_e = (String) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw pf.a((Throwable) ((Object) runtimeException), "wf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pf.a((Throwable) ((Object) runtimeException), "wf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;
@@ -171,7 +134,7 @@ final class wf implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new rc((wf) (this)));
+        return (Iterator) ((Object) new rc(this));
     }
 
     static {

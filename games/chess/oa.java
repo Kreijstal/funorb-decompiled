@@ -13,13 +13,13 @@ final class oa extends IOException {
         field_b = null;
         field_a = null;
         if (param0 != 17) {
-            oa.b(76);
+          oa.b(76);
         }
     }
 
     final static void b(int param0) {
         if (param0 != -16586) {
-            return;
+          return;
         }
         uk.a(false, 17);
     }

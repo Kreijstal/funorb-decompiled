@@ -9,10 +9,10 @@ final class sga extends hha {
 
     final int a(byte param0) {
         if (param0 >= -7) {
-            return -69;
+          return -69;
         }
-        if (!(!this.field_m)) {
-            return 0;
+        if (this.field_m) {
+          return 0;
         }
         return 100;
     }
@@ -20,19 +20,17 @@ final class sga extends hha {
     final byte[] b(byte param0) {
         if (this.field_m) {
           throw new RuntimeException();
-        } else {
-          if (param0 != -126) {
-            this.field_o = (ppa) null;
-            return this.field_p;
-          } else {
-            return this.field_p;
-          }
         }
+        if (param0 == -126) {
+          return this.field_p;
+        }
+        this.field_o = (ppa) null;
+        return this.field_p;
     }
 
     public static void c(byte param0) {
         if (param0 >= -100) {
-            return;
+          return;
         }
         field_n = null;
     }

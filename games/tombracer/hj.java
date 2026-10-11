@@ -10,80 +10,69 @@ final class hj {
     private static String[] field_d;
 
     final boolean a(int param0, int param1, byte param2) {
-        if (param2 == -128) {
-          if (0 <= param0) {
-            if (0 <= param1) {
-              if (this.field_f > param0) {
-                if (this.field_a <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param2 != -128) {
           this.a(52, -84, (byte) -119);
-          if (0 <= param0) {
-            if (0 <= param1) {
-              if (this.field_f > param0) {
-                if (this.field_a <= param1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (0 > param0) {
             return false;
           }
+          if (0 > param1) {
+            return false;
+          }
+          if (this.field_f <= param0) {
+            return false;
+          }
+          if (this.field_a > param1) {
+            return true;
+          }
+          return false;
         }
+        if (0 > param0) {
+          return false;
+        }
+        if (0 > param1) {
+          return false;
+        }
+        if (this.field_f <= param0) {
+          return false;
+        }
+        if (this.field_a > param1) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(boolean param0) {
         field_e = null;
         field_d = null;
         if (param0) {
-            hj.a(false);
-            field_b = null;
-            return;
+          hj.a(false);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
 
     private final int a(byte param0, int param1, int param2) {
-        if (param0 != -37) {
-          field_d = (String[]) null;
-          return param2 + this.field_f * param1;
-        } else {
+        if (param0 == -37) {
           return param2 + this.field_f * param1;
         }
+        field_d = (String[]) null;
+        return param2 + this.field_f * param1;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         this.field_c[this.a((byte) -37, param0, param3)] = param1;
         if (param2 != 0) {
-            field_d = (String[]) null;
+          field_d = (String[]) null;
         }
     }
 
     final int b(byte param0, int param1, int param2) {
-        if (param0 != -5) {
-          field_d = (String[]) null;
-          return this.field_c[this.a((byte) -37, param1, param2)];
-        } else {
+        if (param0 == -5) {
           return this.field_c[this.a((byte) -37, param1, param2)];
         }
+        field_d = (String[]) null;
+        return this.field_c[this.a((byte) -37, param1, param2)];
     }
 
     hj(int param0, int param1, int param2) {
@@ -92,18 +81,18 @@ final class hj {
         this.field_a = param1;
         this.field_f = param0;
         for (var4 = 0; this.field_c.length > var4; var4++) {
-            this.field_c[var4] = param2;
+          this.field_c[var4] = param2;
         }
     }
 
     final static void a(eua param0, byte param1) {
         try {
-            if (param1 < 120) {
-                field_d = (String[]) null;
-            }
-            rua.field_gb.b(-127, param0);
+          if (param1 < 120) {
+            field_d = (String[]) null;
+          }
+          rua.field_gb.b(-127, param0);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "hj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -11,41 +11,37 @@ final class wh extends ul implements j {
 
     final void a(int param0, dm param1) {
         try {
-            if (param0 != -18312) {
-                this.field_bb = 119;
-            }
-            this.field_db = param1;
+          if (param0 != -18312) {
+            this.field_bb = 119;
+          }
+          this.field_db = param1;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "wh.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "wh.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void k(byte param0) {
         super.k((byte) -128);
-        if (null == this.field_db) {
+        if (null != this.field_db) {
+          this.field_db.b(-71);
           if (param0 > -117) {
             this.field_db = (dm) null;
             return;
-          } else {
-            return;
           }
-        } else {
-          this.field_db.b(-71);
-          if (param0 <= -117) {
-            return;
-          } else {
-            this.field_db = (dm) null;
-            return;
-          }
+          return;
         }
+        if (param0 <= -117) {
+          return;
+        }
+        this.field_db = (dm) null;
     }
 
     final void a(fj param0, int param1, int param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_bb = -this.field_q + ld.field_l - param2;
+          super.a(param0, param1, param2, param3);
+          this.field_bb = -this.field_q + ld.field_l - param2;
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "wh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "wh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -54,33 +50,30 @@ final class wh extends ul implements j {
     }
 
     final String f(byte param0) {
-        if (this.field_w) {
-          if (this.field_C != null) {
-            fb.a(jh.field_R, -25, ld.field_l + (-this.field_bb + this.field_F));
-            if (param0 >= -82) {
-              return (String) null;
-            } else {
-              return this.field_C;
-            }
-          } else {
-            return null;
-          }
-        } else {
+        if (!this.field_w) {
           return null;
         }
+        if (this.field_C == null) {
+          return null;
+        }
+        fb.a(jh.field_R, -25, ld.field_l + (-this.field_bb + this.field_F));
+        if (param0 < -82) {
+          return this.field_C;
+        }
+        return (String) null;
     }
 
     public final dm a(byte param0) {
         if (param0 != -9) {
-            field_fb = (ve) null;
-            return this.field_db;
+          field_fb = (ve) null;
+          return this.field_db;
         }
         return this.field_db;
     }
 
     public static void l(int param0) {
         if (param0 != -9466) {
-            return;
+          return;
         }
         field_fb = null;
         field_cb = null;

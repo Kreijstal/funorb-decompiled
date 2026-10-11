@@ -24,16 +24,16 @@ final class pe {
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_f >= this.field_j) {
-            fieldTemp$0 = this.field_d;
-            this.field_d = this.field_d + 1;
-            this.field_i = this.field_c[fieldTemp$0] << 15;
-            if (this.field_d >= this.field_b) {
-                this.field_d = this.field_b - 1;
-            }
-            this.field_j = (int)((double)this.field_a[this.field_d] / 65536.0 * (double)param0);
-            if (this.field_j > this.field_f) {
-                this.field_k = ((this.field_c[this.field_d] << 15) - this.field_i) / (this.field_j - this.field_f);
-            }
+          fieldTemp$0 = this.field_d;
+          this.field_d = this.field_d + 1;
+          this.field_i = this.field_c[fieldTemp$0] << 15;
+          if (this.field_d >= this.field_b) {
+            this.field_d = this.field_b - 1;
+          }
+          this.field_j = (int)((double)this.field_a[this.field_d] / 65536.0 * (double)param0);
+          if (this.field_j > this.field_f) {
+            this.field_k = ((this.field_c[this.field_d] << 15) - this.field_i) / (this.field_j - this.field_f);
+          }
         }
         this.field_i = this.field_i + this.field_k;
         this.field_f = this.field_f + 1;
@@ -46,8 +46,8 @@ final class pe {
         this.field_a = new int[this.field_b];
         this.field_c = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
-            this.field_a[var2] = param0.d((byte) 69);
-            this.field_c[var2] = param0.d((byte) 69);
+          this.field_a[var2] = param0.d((byte) 69);
+          this.field_c[var2] = param0.d((byte) 69);
         }
     }
 

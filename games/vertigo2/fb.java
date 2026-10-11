@@ -25,35 +25,19 @@ abstract class fb extends gp {
     }
 
     final static boolean i(int param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        if (param0 == 11) {
-          if (!sp.field_V) {
-            if (ag.b(49)) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            if (!vj.field_h) {
-              L0: {
-                if (!ag.b(49)) {
-                  stackIn_10_0 = 0;
-                  break L0;
-                } else {
-                  stackIn_10_0 = 1;
-                  break L0;
-                }
-              }
-              return stackIn_10_0 != 0;
-            } else {
-              stackIn_6_0 = 1;
-              return stackIn_6_0 != 0;
-            }
-          }
-        } else {
+        if (param0 != 11) {
           return false;
         }
+        if (sp.field_V) {
+          if (vj.field_h) {
+            return true;
+          }
+          return ag.b(49) ? true : false;
+        }
+        if (!ag.b(49)) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(byte param0) {
@@ -61,19 +45,17 @@ abstract class fb extends gp {
         field_D = null;
         field_A = null;
         field_u = null;
-        if (param0 < 91) {
-          fb.a(-125, false);
-          field_w = (boolean[][]) null;
-          return;
-        } else {
+        if (param0 >= 91) {
           field_w = (boolean[][]) null;
           return;
         }
+        fb.a(-125, false);
+        field_w = (boolean[][]) null;
     }
 
     final static void a(int param0, boolean param1) {
-        if (!(!tf.a((byte) 117))) {
-            param1 = false;
+        if (tf.a((byte) 117)) {
+          param1 = false;
         }
         d.a(69, param1);
         kp.i(param0);

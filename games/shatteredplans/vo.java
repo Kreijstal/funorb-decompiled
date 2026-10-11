@@ -10,26 +10,26 @@ final class vo {
         field_a = null;
         field_c = null;
         if (param0 != 256) {
-            vo.a(45);
+          vo.a(45);
         }
     }
 
     final static void a(bc param0, bc param1, int param2) {
         try {
-            mj.field_Sb = new io(param1, param0);
-            gg.a(param2 + 28, 153, "shatteredplans_menu_open");
-            gg.a(128, 153, "shatteredplans_menu_close");
-            us.field_d = gg.a(128, 256, "shatteredplans_ship_selection");
-            hs.field_l = gg.a(128, 256, "shatteredplans_ship_move_order");
-            jj.field_l = gg.a(128, 256, "shatteredplans_ship_attack_order");
-            qc.field_w = gg.a(128, 256, "shatteredplans_factory_noise");
-            pd.field_m = jj.a((byte) -111, 120, "shatteredplans_explosion");
-            gg.a(128, param2, "shatteredplans_tab_open");
-            gg.a(128, 100, "shatteredplans_tab_close");
-            ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
-            sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
+          mj.field_Sb = new io(param1, param0);
+          gg.a(param2 + 28, 153, "shatteredplans_menu_open");
+          gg.a(128, 153, "shatteredplans_menu_close");
+          us.field_d = gg.a(128, 256, "shatteredplans_ship_selection");
+          hs.field_l = gg.a(128, 256, "shatteredplans_ship_move_order");
+          jj.field_l = gg.a(128, 256, "shatteredplans_ship_attack_order");
+          qc.field_w = gg.a(128, 256, "shatteredplans_factory_noise");
+          pd.field_m = jj.a((byte) -111, 120, "shatteredplans_explosion");
+          gg.a(128, param2, "shatteredplans_tab_open");
+          gg.a(128, 100, "shatteredplans_tab_close");
+          ub.field_yb = gg.a(param2 ^ 228, 256, "shatteredplans_next_open");
+          sf.field_g = gg.a(128, 256, "shatteredplans_next_close");
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "vo.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

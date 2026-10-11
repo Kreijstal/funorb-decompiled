@@ -11,12 +11,12 @@ final class od extends wf {
 
     od(bb param0, wf param1) {
         try {
-            this.field_j = param0;
-            this.field_k = param0.h();
-            this.field_i = param1;
-            this.field_j.i(128 + kc.field_g * this.field_k >> -42162840);
+          this.field_j = param0;
+          this.field_k = param0.h();
+          this.field_i = param1;
+          this.field_j.i(128 + kc.field_g * this.field_k >> 8);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -24,7 +24,7 @@ final class od extends wf {
         field_g = null;
         field_h = null;
         if (!param0) {
-            return;
+          return;
         }
         field_l = null;
     }
@@ -33,7 +33,7 @@ final class od extends wf {
         int var0 = 0;
         field_l = new ta[255];
         for (var0 = 0; var0 < field_l.length; var0++) {
-            field_l[var0] = new ta();
+          field_l[var0] = new ta();
         }
         field_g = new j(12, 34, 114);
     }

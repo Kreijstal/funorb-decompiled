@@ -10,7 +10,7 @@ final class wlb extends rqa {
 
     final static dj g(byte param0) {
         if (param0 != -65) {
-            wlb.g((byte) 0);
+          wlb.g((byte) 0);
         }
         return new dj(wpa.a(param0 + 117), sva.e((byte) -34));
     }
@@ -37,52 +37,36 @@ final class wlb extends rqa {
         RuntimeException var5 = null;
         var13 = VoidHunters.field_G;
         try {
-          L0: {
-            L1: {
-              if (param4 == 2) {
-                break L1;
-              } else {
-                wlb.f((byte) -69);
-                break L1;
-              }
-            }
-            var5_int = 0;
-            var6 = param3;
-            var7 = -param3;
-            ww.a(param0, param3 + param1, rba.field_b[param2], (byte) 75, param1 + -param3);
-            var8 = -1;
-            L2: while (true) {
-              if (var6 <= var5_int) {
-                break L0;
-              } else {
-                L3: {
-                  var8 += 2;
-                  var7 = var7 + var8;
-                  var5_int++;
-                  if (-1 >= (var7 ^ -1)) {
-                    var6--;
-                    var7 = var7 - (var6 << 1421120641);
-                    var9_ref_int__ = rba.field_b[param2 - -var6];
-                    var10_ref_int__ = rba.field_b[-var6 + param2];
-                    var11_int = param1 - -var5_int;
-                    var12_int = param1 - var5_int;
-                    ww.a(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
-                    ww.a(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                var9 = param1 + var6;
-                var10 = -var6 + param1;
-                var11 = rba.field_b[var5_int + param2];
-                var12 = rba.field_b[-var5_int + param2];
-                ww.a(param0, var9, var11, (byte) 75, var10);
-                ww.a(param0, var9, var12, (byte) 75, var10);
-                continue L2;
-              }
-            }
+          if (param4 != 2) {
+            wlb.f((byte) -69);
           }
+          var5_int = 0;
+          var6 = param3;
+          var7 = -param3;
+          ww.a(param0, param3 + param1, rba.field_b[param2], (byte) 75, param1 - param3);
+          var8 = -1;
+          while (var6 > var5_int) {
+            var8 += 2;
+            var7 = var7 + var8;
+            var5_int++;
+            if (var7 >= 0) {
+              var6--;
+              var7 = var7 - (var6 << 1);
+              var9_ref_int__ = rba.field_b[param2 + var6];
+              var10_ref_int__ = rba.field_b[-var6 + param2];
+              var11_int = param1 + var5_int;
+              var12_int = param1 - var5_int;
+              ww.a(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
+              ww.a(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
+            }
+            var9 = param1 + var6;
+            var10 = -var6 + param1;
+            var11 = rba.field_b[var5_int + param2];
+            var12 = rba.field_b[-var5_int + param2];
+            ww.a(param0, var9, var11, (byte) 75, var10);
+            ww.a(param0, var9, var12, (byte) 75, var10);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -92,7 +76,7 @@ final class wlb extends rqa {
 
     public static void e(byte param0) {
         if (param0 != -70) {
-            field_o = -17;
+          field_o = -17;
         }
         field_q = null;
     }
@@ -197,15 +181,118 @@ final class wlb extends rqa {
             int[] var97;
             int[] var98;
             int[] var99;
-            int statePc;
-            Throwable caughtException;
+            RuntimeException decompiledCaughtException;
             RuntimeException var1;
             int var15;
-            final byte param0;
+            int statePc;
+            Throwable caughtException;
+            byte param0;
             boolean finished;
             $CfrPartitionedState(byte initialParam0) {
                 this.param0 = initialParam0;
+                this.var1_int = 0;
+                this.var2 = 0;
+                this.var3 = 0;
+                this.var4 = 0;
+                this.var4_long = 0L;
+                this.var4_ref_Random = null;
+                this.var5 = 0;
+                this.var6 = null;
+                this.var6_int = 0;
+                this.var6_array = null;
+                this.var7_ref_int__ = null;
+                this.var7 = 0;
+                this.var8_ref_wfb = null;
+                this.var8 = 0;
+                this.var9 = 0;
+                this.var10 = 0L;
+                this.var12 = 0L;
+                this.var14 = 0;
+                this.var16 = null;
+                this.var16_ref = null;
+                this.var17 = null;
+                this.var17_ref = null;
+                this.var18 = null;
+                this.var18_ref = null;
+                this.var19 = null;
+                this.var19_ref = null;
+                this.var20 = null;
+                this.var21 = null;
+                this.var22 = null;
+                this.var22_ref = null;
+                this.var23 = null;
+                this.var24 = null;
+                this.var24_ref = null;
+                this.var25 = null;
+                this.var25_ref = null;
+                this.var26 = null;
+                this.var27 = null;
+                this.var27_ref = null;
+                this.var28 = null;
+                this.var29 = null;
+                this.var29_ref = null;
+                this.var30 = null;
+                this.var30_ref = null;
+                this.var31 = null;
+                this.var31_ref = null;
+                this.var32 = null;
+                this.var32_ref = null;
+                this.var33 = null;
+                this.var34 = null;
+                this.var34_ref = null;
+                this.var35 = null;
+                this.var36 = null;
+                this.var36_ref = null;
+                this.var37 = null;
+                this.var38 = null;
+                this.var38_ref = null;
+                this.var39 = null;
+                this.var39_ref = null;
+                this.var40 = null;
+                this.var40_ref = null;
+                this.var41 = null;
+                this.var44 = null;
+                this.var44_ref = null;
+                this.var46 = null;
+                this.var46_ref = null;
+                this.var48 = null;
+                this.var48_ref = null;
+                this.var50 = null;
+                this.var50_ref = null;
+                this.var52 = null;
+                this.var52_ref = null;
+                this.var54 = null;
+                this.var54_ref = null;
+                this.var56 = null;
+                this.var56_ref = null;
+                this.var58 = null;
+                this.var58_ref = null;
+                this.var60 = null;
+                this.var60_ref = null;
+                this.var61 = null;
+                this.var62 = null;
+                this.var63 = null;
+                this.var64 = null;
+                this.var65 = null;
+                this.var66 = null;
+                this.var67 = null;
+                this.var78 = null;
+                this.var79 = null;
+                this.var90 = null;
+                this.var91 = null;
+                this.var92 = null;
+                this.var93 = null;
+                this.var94 = null;
+                this.var95 = null;
+                this.var96 = null;
+                this.var97 = null;
+                this.var98 = null;
+                this.var99 = null;
+                this.decompiledCaughtException = null;
+                this.var1 = null;
+                this.var15 = 0;
                 this.statePc = 0;
+                this.caughtException = null;
             }
             void runPartition0() {
                 stateLoop: while (true) {
@@ -246,7 +333,7 @@ final class wlb extends rqa {
                                 hab.field_g = new wfb[56];
                                 var16_ref = new wfb(new int[]{5, 0, -5, 4, -5, -4}, 0, 0);
                                 var16_ref.a(1, new lsb(5, 0, 0));
-                                var16_ref.a(param0 + -27, new lsb(2, -2, -2048));
+                                var16_ref.a(param0 - 27, new lsb(2, -2, -2048));
                                 var16_ref.a(102, new lsb(2, 2, 2048));
                                 var16_ref.a(param0 ^ -56, new lsb(-1, 0, 0));
                                 var16_ref.a(-120, new lsb(-5, 0, 4096));
@@ -263,7 +350,7 @@ final class wlb extends rqa {
                                 hab.field_g[2].a(10, new lsb(10, 0, 0));
                                 hab.field_g[2].a(31, new lsb(0, 10, 2048));
                                 hab.field_g[2].a(-120, new lsb(-10, 0, 4096));
-                                hab.field_g[2].a(param0 + -71, new lsb(0, -10, -2048));
+                                hab.field_g[2].a(param0 - 71, new lsb(0, -10, -2048));
                                 hab.field_g[2].a(1024, true);
                                 var17_ref = new wfb(new int[]{2, 0, -2, 1, -2, -1}, 0, 0);
                                 var17_ref.field_t = new aqa();
@@ -310,7 +397,7 @@ final class wlb extends rqa {
                                 hab.field_g[29] = new wfb(new int[]{5, -5, 5, 5, -5, 5, -5, -5}, -5, 0);
                                 hab.field_g[29].a(12, new lsb(5, 0, 0));
                                 hab.field_g[29].a(-115, new lsb(0, 5, 2048));
-                                hab.field_g[29].a(param0 + -190, new lsb(0, -5, -2048));
+                                hab.field_g[29].a(param0 - 190, new lsb(0, -5, -2048));
                                 hab.field_g[29].field_a = 2;
                                 hab.field_g[23] = new wfb(new int[]{3, -3, 3, 3, -3, 1, -3, -1}, -3, 0);
                                 hab.field_g[23].field_c = new qjb(4);
@@ -324,24 +411,21 @@ final class wlb extends rqa {
                                 hab.field_g[25].field_c = new qjb(7);
                                 if (param0 == 64) {
                                     statePc = 3;
+                                    continue stateLoop;
                                 } else {
-                                    statePc = 2;
+                                    /* Inlined CFG state: 2. */
+                                    {
+                                        wlb.e((byte) 124);
+                                        statePc = 3;
+                                        continue stateLoop;
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_1) {
+                                statePc = (stateCaught_1 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
+                                }
                                 caughtException = stateCaught_1;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 2: {
-                            try {
-                                wlb.e((byte) 124);
-                                statePc = 3;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_2) {
-                                caughtException = stateCaught_2;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -380,8 +464,11 @@ final class wlb extends rqa {
                                 statePc = 4;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_3) {
+                                statePc = (stateCaught_3 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
+                                }
                                 caughtException = stateCaught_3;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -389,49 +476,33 @@ final class wlb extends rqa {
                             try {
                                 if (hab.field_g.length <= var1_int) {
                                     statePc = 9;
+                                    continue stateLoop;
                                 } else {
-                                    statePc = 5;
+                                    /* Inlined CFG state: 5. */
+                                    {
+                                        if (hab.field_g[var1_int] != null) {
+                                            /* Inlined CFG state: 7. */
+                                            {
+                                                hab.field_g[var1_int].a(1, 89, true);
+                                                hab.field_g[var1_int].a(8, param0 - 1, false);
+                                                statePc = 8;
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            /* Inlined CFG state: 6. */
+                                            {
+                                                statePc = 8;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_4) {
-                                caughtException = stateCaught_4;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 5: {
-                            try {
-                                if (hab.field_g[var1_int] != null) {
-                                    statePc = 7;
-                                } else {
-                                    statePc = 6;
+                                statePc = (stateCaught_4 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                                 }
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_5) {
-                                caughtException = stateCaught_5;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 6: {
-                            try {
-                                statePc = 8;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_6) {
-                                caughtException = stateCaught_6;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 7: {
-                            try {
-                                hab.field_g[var1_int].a(1, 89, true);
-                                hab.field_g[var1_int].a(8, param0 + -1, false);
-                                statePc = 8;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_7) {
-                                caughtException = stateCaught_7;
-                                statePc = 34;
+                                caughtException = stateCaught_4;
                                 continue stateLoop;
                             }
                         }
@@ -441,8 +512,11 @@ final class wlb extends rqa {
                                 statePc = 4;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_8) {
+                                statePc = (stateCaught_8 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
+                                }
                                 caughtException = stateCaught_8;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -463,8 +537,8 @@ final class wlb extends rqa {
                                 hab.field_g[30].a(param0 + 50, new lsb(0, -var1_int / 2, -var3));
                                 hab.field_g[30].a(106, 15);
                                 hab.field_g[30].field_a = 2;
-                                var20 = new wfb(new int[]{-var1_int, -var1_int, var1_int, -var1_int, var1_int - -(var2 * 2), 0, var1_int, var1_int, -var1_int, var1_int}, -var1_int, 0);
-                                var20.a(-116, new lsb(var1_int - -var2, var1_int / 2, var3));
+                                var20 = new wfb(new int[]{-var1_int, -var1_int, var1_int, -var1_int, var1_int + var2 * 2, 0, var1_int, var1_int, -var1_int, var1_int}, -var1_int, 0);
+                                var20.a(-116, new lsb(var1_int + var2, var1_int / 2, var3));
                                 var20.a(96, new lsb(var2 + var1_int, -var1_int / 2, -var3));
                                 var20.a(-126, new lsb(0, var1_int, 2048));
                                 var20.a(-11, new lsb(0, -var1_int, -2048));
@@ -474,35 +548,35 @@ final class wlb extends rqa {
                                 var4 = -var1_int;
                                 var5 = var1_int;
                                 var4 += 0;
-                                int localTemp$116 = var5;
-                                int localTemp$117 = var5 - 2 * var1_int;
-                                var5 = localTemp$117;
+                                int localTemp$174 = var5;
+                                int localTemp$175 = var5 - 2 * var1_int;
+                                var5 = localTemp$175;
                                 var4 += 0;
-                                int localTemp$118 = var5 - var1_int * 2;
-                                var5 = localTemp$118;
-                                int localTemp$119 = var4;
-                                int localTemp$120 = var4;
-                                int localTemp$121 = var4;
-                                int localTemp$122 = var4 + 2 * var1_int;
-                                var4 = localTemp$122;
+                                int localTemp$176 = var5 - var1_int * 2;
+                                var5 = localTemp$176;
+                                int localTemp$177 = var4;
+                                int localTemp$178 = var4;
+                                int localTemp$179 = var4;
+                                int localTemp$180 = var4 + 2 * var1_int;
+                                var4 = localTemp$180;
                                 var5 += 0;
                                 var4 += 0;
-                                int localTemp$123 = var5;
-                                int localTemp$124 = var5 + var1_int * 2;
-                                var5 = localTemp$124;
+                                int localTemp$181 = var5;
+                                int localTemp$182 = var5 + var1_int * 2;
+                                var5 = localTemp$182;
                                 var4 += 0;
-                                int localTemp$125 = var5 + 2 * var1_int;
-                                var5 = localTemp$125;
+                                int localTemp$183 = var5 + 2 * var1_int;
+                                var5 = localTemp$183;
                                 var4 += 0;
-                                int localTemp$126 = var5 + var1_int * 2;
-                                var5 = localTemp$126;
-                                int localTemp$127 = var4;
-                                int localTemp$128 = var4;
-                                int localTemp$129 = var4;
-                                int localTemp$130 = var4 - 2 * var1_int;
-                                var4 = localTemp$130;
+                                int localTemp$184 = var5 + var1_int * 2;
+                                var5 = localTemp$184;
+                                int localTemp$185 = var4;
+                                int localTemp$186 = var4;
+                                int localTemp$187 = var4;
+                                int localTemp$188 = var4 - 2 * var1_int;
+                                var4 = localTemp$188;
                                 var5 += 0;
-                                var21 = new int[]{localTemp$119, localTemp$116, localTemp$120, localTemp$117, localTemp$121, localTemp$118, localTemp$122, localTemp$123, localTemp$127, localTemp$124, localTemp$128, localTemp$125, localTemp$129, localTemp$126, localTemp$130, var5};
+                                var21 = new int[]{localTemp$177, localTemp$174, localTemp$178, localTemp$175, localTemp$179, localTemp$176, localTemp$180, localTemp$181, localTemp$185, localTemp$182, localTemp$186, localTemp$183, localTemp$187, localTemp$184, localTemp$188, var5};
                                 var6 = var21;
                                 var22_ref = new wfb(var6, -var1_int, 0);
                                 ta.a(var21, 124, var22_ref);
@@ -529,29 +603,29 @@ final class wlb extends rqa {
                                 var25_ref.field_B = 0;
                                 var25_ref.field_q = 0;
                                 var4 = 0;
-                                var5 = 2 * -var2 + -var1_int;
-                                int localTemp$131 = var4;
-                                int localTemp$132 = var4 + var1_int;
-                                var4 = localTemp$132;
-                                int localTemp$133 = var5;
-                                int localTemp$134 = var5 + 2 * var2;
-                                var5 = localTemp$134;
+                                var5 = 2 * -var2 - var1_int;
+                                int localTemp$189 = var4;
+                                int localTemp$190 = var4 + var1_int;
+                                var4 = localTemp$190;
+                                int localTemp$191 = var5;
+                                int localTemp$192 = var5 + 2 * var2;
+                                var5 = localTemp$192;
                                 var4 += 0;
-                                int localTemp$135 = var5 + var1_int * 2;
-                                var5 = localTemp$135;
-                                int localTemp$136 = var4;
-                                int localTemp$137 = var4 - var1_int;
-                                var4 = localTemp$137;
-                                int localTemp$138 = var5 + var2 * 2;
-                                var5 = localTemp$138;
-                                int localTemp$139 = var4 - var1_int;
-                                var4 = localTemp$139;
-                                int localTemp$140 = var5 - var2 * 2;
-                                var5 = localTemp$140;
+                                int localTemp$193 = var5 + var1_int * 2;
+                                var5 = localTemp$193;
+                                int localTemp$194 = var4;
+                                int localTemp$195 = var4 - var1_int;
+                                var4 = localTemp$195;
+                                int localTemp$196 = var5 + var2 * 2;
+                                var5 = localTemp$196;
+                                int localTemp$197 = var4 - var1_int;
+                                var4 = localTemp$197;
+                                int localTemp$198 = var5 - var2 * 2;
+                                var5 = localTemp$198;
                                 var4 += 0;
-                                int localTemp$141 = var5 - var1_int * 2;
-                                var5 = localTemp$141;
-                                var26 = new int[]{localTemp$131, localTemp$133, localTemp$132, localTemp$134, localTemp$136, localTemp$135, localTemp$137, localTemp$138, localTemp$139, localTemp$140, var4, localTemp$141};
+                                int localTemp$199 = var5 - var1_int * 2;
+                                var5 = localTemp$199;
+                                var26 = new int[]{localTemp$189, localTemp$191, localTemp$190, localTemp$192, localTemp$194, localTemp$193, localTemp$195, localTemp$196, localTemp$197, localTemp$198, var4, localTemp$199};
                                 var6 = var26;
                                 var27_ref = new wfb(var6, -var1_int, 0);
                                 ta.a(var26, 127, var27_ref);
@@ -560,37 +634,37 @@ final class wlb extends rqa {
                                 var27_ref.field_a = 2;
                                 var4 = 5120;
                                 var5 = 0;
-                                var6_int = -fnb.field_a + -(var4 / 2);
-                                int localTemp$142 = var5;
-                                int localTemp$143 = var5 + var4 / 2;
-                                var5 = localTemp$143;
-                                int localTemp$144 = var6_int;
-                                int localTemp$145 = var6_int + fnb.field_a;
-                                var6_int = localTemp$145;
-                                int localTemp$146 = var5 + var4;
-                                var5 = localTemp$146;
+                                var6_int = -fnb.field_a - var4 / 2;
+                                int localTemp$200 = var5;
+                                int localTemp$201 = var5 + var4 / 2;
+                                var5 = localTemp$201;
+                                int localTemp$202 = var6_int;
+                                int localTemp$203 = var6_int + fnb.field_a;
+                                var6_int = localTemp$203;
+                                int localTemp$204 = var5 + var4;
+                                var5 = localTemp$204;
                                 var6_int += 0;
                                 var5 += 0;
-                                int localTemp$147 = var6_int;
-                                int localTemp$148 = var6_int + var4;
-                                var6_int = localTemp$148;
-                                int localTemp$149 = var5;
-                                int localTemp$150 = var5 - var4;
-                                var5 = localTemp$150;
+                                int localTemp$205 = var6_int;
+                                int localTemp$206 = var6_int + var4;
+                                var6_int = localTemp$206;
+                                int localTemp$207 = var5;
+                                int localTemp$208 = var5 - var4;
+                                var5 = localTemp$208;
                                 var6_int += 0;
-                                int localTemp$151 = var5 - var4 / 2;
-                                var5 = localTemp$151;
-                                int localTemp$152 = var6_int;
-                                int localTemp$153 = var6_int + fnb.field_a;
-                                var6_int = localTemp$153;
-                                int localTemp$154 = var5 - var4 / 2;
-                                var5 = localTemp$154;
-                                int localTemp$155 = var6_int - fnb.field_a;
-                                var6_int = localTemp$155;
+                                int localTemp$209 = var5 - var4 / 2;
+                                var5 = localTemp$209;
+                                int localTemp$210 = var6_int;
+                                int localTemp$211 = var6_int + fnb.field_a;
+                                var6_int = localTemp$211;
+                                int localTemp$212 = var5 - var4 / 2;
+                                var5 = localTemp$212;
+                                int localTemp$213 = var6_int - fnb.field_a;
+                                var6_int = localTemp$213;
                                 var5 += 0;
-                                int localTemp$156 = var6_int - var4;
-                                var6_int = localTemp$156;
-                                var28 = new int[]{localTemp$142, localTemp$144, localTemp$143, localTemp$145, localTemp$146, localTemp$147, localTemp$149, localTemp$148, localTemp$150, localTemp$152, localTemp$151, localTemp$153, localTemp$154, localTemp$155, var5, localTemp$156};
+                                int localTemp$214 = var6_int - var4;
+                                var6_int = localTemp$214;
+                                var28 = new int[]{localTemp$200, localTemp$202, localTemp$201, localTemp$203, localTemp$204, localTemp$205, localTemp$207, localTemp$206, localTemp$208, localTemp$210, localTemp$209, localTemp$211, localTemp$212, localTemp$213, var5, localTemp$214};
                                 var7_ref_int__ = var28;
                                 var29_ref = new wfb(var7_ref_int__, -var4 / 2, 0);
                                 ta.a(var28, 114, var29_ref);
@@ -686,40 +760,40 @@ final class wlb extends rqa {
                                 var40_ref.field_B = 896;
                                 var4 = 6 * -var1_int;
                                 var5 = 0;
-                                int localTemp$157 = var4;
-                                int localTemp$158 = var4 + var1_int;
-                                var4 = localTemp$158;
-                                int localTemp$159 = var5;
-                                int localTemp$160 = var5 + -var2 * 2;
-                                var5 = localTemp$160;
-                                int localTemp$161 = var4 + 2 * var2;
-                                var4 = localTemp$161;
-                                int localTemp$162 = var5 - var1_int;
-                                var5 = localTemp$162;
-                                int localTemp$163 = var4 + var2 * 2;
-                                var4 = localTemp$163;
-                                int localTemp$164 = var5 - var1_int;
-                                var5 = localTemp$164;
-                                int localTemp$165 = var4 + 2 * var2;
-                                var4 = localTemp$165;
-                                int localTemp$166 = var5 + var1_int;
-                                var5 = localTemp$166;
-                                int localTemp$167 = var4 + 2 * var1_int;
-                                var4 = localTemp$167;
+                                int localTemp$215 = var4;
+                                int localTemp$216 = var4 + var1_int;
+                                var4 = localTemp$216;
+                                int localTemp$217 = var5;
+                                int localTemp$218 = var5 + -var2 * 2;
+                                var5 = localTemp$218;
+                                int localTemp$219 = var4 + 2 * var2;
+                                var4 = localTemp$219;
+                                int localTemp$220 = var5 - var1_int;
+                                var5 = localTemp$220;
+                                int localTemp$221 = var4 + var2 * 2;
+                                var4 = localTemp$221;
+                                int localTemp$222 = var5 - var1_int;
+                                var5 = localTemp$222;
+                                int localTemp$223 = var4 + 2 * var2;
+                                var4 = localTemp$223;
+                                int localTemp$224 = var5 + var1_int;
+                                var5 = localTemp$224;
+                                int localTemp$225 = var4 + 2 * var1_int;
+                                var4 = localTemp$225;
                                 var5 += 0;
-                                int localTemp$168 = var4 + var2 * 2;
-                                var4 = localTemp$168;
-                                int localTemp$169 = var5;
-                                int localTemp$170 = var5 - var1_int;
-                                var5 = localTemp$170;
-                                int localTemp$171 = var4 + var1_int;
-                                var4 = localTemp$171;
-                                int localTemp$172 = var5 + var2 * 2;
-                                var5 = localTemp$172;
+                                int localTemp$226 = var4 + var2 * 2;
+                                var4 = localTemp$226;
+                                int localTemp$227 = var5;
+                                int localTemp$228 = var5 - var1_int;
+                                var5 = localTemp$228;
+                                int localTemp$229 = var4 + var1_int;
+                                var4 = localTemp$229;
+                                int localTemp$230 = var5 + var2 * 2;
+                                var5 = localTemp$230;
                                 var4 += 0;
-                                int localTemp$173 = var5 + 2 * var1_int;
-                                var5 = localTemp$173;
-                                var41 = new int[]{localTemp$157, localTemp$159, localTemp$158, localTemp$160, localTemp$161, localTemp$162, localTemp$163, localTemp$164, localTemp$165, localTemp$166, localTemp$167, localTemp$169, localTemp$168, localTemp$170, localTemp$171, localTemp$172, var4, localTemp$173};
+                                int localTemp$231 = var5 + 2 * var1_int;
+                                var5 = localTemp$231;
+                                var41 = new int[]{localTemp$215, localTemp$217, localTemp$216, localTemp$218, localTemp$219, localTemp$220, localTemp$221, localTemp$222, localTemp$223, localTemp$224, localTemp$225, localTemp$227, localTemp$226, localTemp$228, localTemp$229, localTemp$230, var4, localTemp$231};
                                 var90 = gca.a((byte) 104, var41);
                                 var91 = qfa.a(1, var90);
                                 var44_ref = new wfb(var91, 0, 0);
@@ -825,114 +899,69 @@ final class wlb extends rqa {
                                 var60_ref.field_A = new int[][]{new int[]{0, 1, 2, 3, 4, 23, 24, 25}, new int[]{4, 5, 22, 23}, new int[]{5, 6, 7, 8, 19, 20, 21, 22}, new int[]{8, 9, 10, 17, 18, 19}, new int[]{10, 11, 12, 13, 14, 15, 16, 17}};
                                 var4_long = 32L;
                                 var6_int = 12;
-                                var78 = new int[var6_int << 665926529];
+                                var78 = new int[var6_int << 1];
                                 var61 = var78;
                                 var7_ref_int__ = var61;
                                 var8 = 0;
                                 statePc = 10;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_9) {
+                                statePc = (stateCaught_9 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
+                                }
                                 caughtException = stateCaught_9;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
                         case 10: {
                             try {
                                 if (var8 >= var78.length) {
-                                    statePc = 12;
+                                    /* Inlined CFG state: 12. */
+                                    {
+                                        hab.field_g[22] = new wfb(var78, 0, 0);
+                                        var62 = hab.field_g[22];
+                                        var62.field_w = new int[][]{new int[]{-8198, 0, -7236, -4099, -4392, -7194, 0, -8198, 3848, -7194, 6943, -4392, 8198, 0}, new int[]{-8198, 0, -8784, -2467, -7236, -4099, -6567, -6400, -4350, -7194, -2551, -8575, 0, -8198, 2509, -8491, 3848, -7194, 5981, -6483, 6901, -4392, 8282, -2509, 8156, 0}};
+                                        var62.field_a = 0;
+                                        var62.field_c = new qjb(5);
+                                        var62.a(128, true);
+                                        var62.field_p = var62.field_p >> 8;
+                                        var62.field_u = var62.field_u >> 16;
+                                        var4_ref_Random = new Random(135435642L);
+                                        hab.field_g[21] = jba.a(new int[][]{new int[]{-334, -50865, -28779, -43837, -43503, -24094, -43168, 3346, -48857, 21416, -40156, 38149, -5688, 46515, 10708, 38818, 38483, 39152, 53207, 18405, 56888, -9704, 45176, -20747, 36475, -42499, 17735, -44172}, new int[]{-26771, -40826, -38149, -23090, -28779, -3346, -36141, 14724, -26436, 27775, -3011, 18739, 17401, 26101, 42164, 18405, 52538, -7362, 42499, -18405, 33798, -39152, 16732, -40156, -334, -47518}, new int[]{-669, -43837, -21416, -35806, -27105, -25767, -20413, -10708, 334, -13050, 12047, 6692, 31456, 8366, 39822, -7027, 32460, -13385, 30117, -33129, 13385, -35471}}, 1000L, 12, var4_ref_Random, mgb.a((int) param0, 47), 2500L);
+                                        hab.field_g[48] = jba.a(new int[][]{new int[]{-4684, -53877, -25767, -48522, -29783, -36141, -48522, -21416, -49861, 10039, -29448, 20413, -8700, 41495, 32460, 39152, 45845, 28779, 45845, 6358, 56219, -20747, 46180, -41495, 22086, -50865}, new int[]{-4350, -50530, -20747, -45176, -23424, -32794, -35471, -17735, -28109, 1673, -6692, -334, 17401, 19743, 36475, 18739, 39487, 4350, 50530, -19743, 41830, -37479, 21082, -47853}, new int[]{-4015, -46849, -14389, -40826, -14724, -29783, -17735, -15393, 4350, -11043, 19074, -18739, 36810, -18070, 35806, -32125, 20413, -43503}}, 1000L, 12, var4_ref_Random, mgb.a((int) param0, 61), 2500L);
+                                        hab.field_g[49] = jba.a(new int[][]{new int[]{-669, -23759, -22086, -18405, -26771, 7027, -10039, 30452, 7027, 33129, 21082, 15058, 34133, 8700, 29113, -9704, 13050, -13720}, new int[]{-2342, -19074, -17735, -13720, -17066, 2342, -1673, 18739, 14389, 12381, 19743, -2677, 8366, -9369}, new int[]{-3011, -14054, -13720, -11043, -8700, 1003, 3681, 5354, 7027, -5354}}, 500L, 12, var4_ref_Random, param0 + 45, 1250L);
+                                        hab.field_g[50] = jba.a(new int[][]{new int[]{9369, -28109, -12716, -23424, -22420, -5354, -14724, 8366, -10708, 26101, 11377, 30117, 30117, 13385, 27105, -3011, 26771, -21082}, new int[]{8700, -23759, -9035, -19074, -14054, -5354, -5019, 3681, -334, 16062, 16397, 8700, 19074, -15058}, new int[]{7696, -19409, -5354, -15728, -2007, -4350, 10039, 1338, 15058, -13385}}, 500L, 12, var4_ref_Random, mgb.a((int) param0, -10), 1250L);
+                                        hab.field_g[52] = jba.a(new int[][]{new int[]{1003, -55550, -24428, -54211, -37479, -47184, -39822, -33798, -56888, -20078, -61573, 7696, -48188, 37145, -27105, 40156, -13385, 55884, 19409, 59231, 41160, 46515, 56219, 29448, 50865, 10039, 53207, -6692, 41160, -22755, 39487, -39152, 24763, -50530}, new int[]{-19743, -49192, -31456, -42833, -32794, -27105, -49526, -13385, -48857, 11712, -32125, 21751, -10708, 17066, 8366, 29448, 27440, 29448, 32794, 11043, 43168, -4350, 36810, -19074, 24763, -32125, 22086, -45176, 0, -50865}, new int[]{-17735, -44841, -26101, -39152, -25098, -22420, -37479, -5354, -32794, 8366, -7362, -334, 11712, 4350, 30117, -10708, 16397, -26436, 13720, -41830, -2342, -40156}}, 1500L, 12, var4_ref_Random, -127, 3000L);
+                                        hab.field_g[53] = jba.a(new int[][]{new int[]{-1003, -63916, -30452, -63581, -39822, -47518, -62912, -37479, -74290, 2007, -61239, 35471, -38818, 40826, -32125, 56888, 1338, 67597, 29448, 58227, 64250, 57558, 77636, 31456, 66928, 7362, 70943, -20747, 46849, -41495, 32125, -60235}, new int[]{-26436, -57892, -32794, -41160, -54546, -30117, -56888, 334, -31790, 15058, -19409, 39152, 13385, 39822, 24094, 13385, 48857, 3681, 54881, -20747, 41830, -34802, 28109, -53877, -669, -59231}, new int[]{-20413, -51534, -24094, -35471, -40156, -20413, -38818, -6023, -13050, 2677, 6023, -13720, 30117, -10708, 37145, -25098, 22755, -46180, -669, -54211}}, 1500L, 12, var4_ref_Random, 123, 3000L);
+                                        hab.field_g[54] = jba.a(new int[][]{new int[]{-3681, -11294, -11126, -5103, -11126, 5856, 83, 12549, 11294, 8115, 10373, -8533}, new int[]{-3011, -9202, -8700, -4433, -7445, 3681, -501, 5521, 6609, 3262, 7362, -6525}, new int[]{-2509, -7529, -6609, -3764, -2258, 585, 3262, -1422, 4099, -5688}}, 250L, 10, var4_ref_Random, mgb.a((int) param0, -108), 625L);
+                                        hab.field_g[55] = jba.a(new int[][]{new int[]{-3848, -11377, -12800, -5605, -12632, 6609, -6525, 12130, 10708, 8784, 12800, -250, 4183, -11294}, new int[]{-3346, -9118, -10206, -3764, -8951, 4433, 5186, 6190, 7362, 836, 3179, -8951}, new int[]{-2844, -6943, -7027, -3346, -4099, 1840, 2426, 1338, 1840, -6776}}, 250L, 10, var4_ref_Random, 122, 625L);
+                                        oea.field_o = 0;
+                                        gn.field_m = 0;
+                                        var4 = 0;
+                                        var5 = 0;
+                                        statePc = 13;
+                                        continue stateLoop;
+                                    }
                                 } else {
-                                    statePc = 11;
+                                    /* Inlined CFG state: 11. */
+                                    {
+                                        var9 = (8192 * (var8 >> 1) + 8192) / var6_int;
+                                        var10 = (long)fc.a(var9, (byte) -86) * var4_long >> 8;
+                                        var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 8;
+                                        var7_ref_int__[var8] = (int)var10;
+                                        var7_ref_int__[var8 + 1] = (int)var12;
+                                        var8 += 2;
+                                        statePc = 10;
+                                        continue stateLoop;
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_10) {
+                                statePc = (stateCaught_10 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
+                                }
                                 caughtException = stateCaught_10;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 11: {
-                            try {
-                                var9 = (8192 * (var8 >> 1411174625) - -8192) / var6_int;
-                                var10 = (long)fc.a(var9, (byte) -86) * var4_long >> 405153800;
-                                var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 1564010952;
-                                var7_ref_int__[var8] = (int)var10;
-                                var7_ref_int__[var8 + 1] = (int)var12;
-                                var8 += 2;
-                                statePc = 10;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_11) {
-                                caughtException = stateCaught_11;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 12: {
-                            try {
-                                hab.field_g[22] = new wfb(var78, 0, 0);
-                                var62 = hab.field_g[22];
-                                var62.field_w = new int[][]{new int[]{-8198, 0, -7236, -4099, -4392, -7194, 0, -8198, 3848, -7194, 6943, -4392, 8198, 0}, new int[]{-8198, 0, -8784, -2467, -7236, -4099, -6567, -6400, -4350, -7194, -2551, -8575, 0, -8198, 2509, -8491, 3848, -7194, 5981, -6483, 6901, -4392, 8282, -2509, 8156, 0}};
-                                var62.field_a = 0;
-                                var62.field_c = new qjb(5);
-                                var62.a(128, true);
-                                var62.field_p = var62.field_p >> 8;
-                                var62.field_u = var62.field_u >> 16;
-                                var4_ref_Random = new Random(135435642L);
-                                hab.field_g[21] = jba.a(new int[][]{new int[]{-334, -50865, -28779, -43837, -43503, -24094, -43168, 3346, -48857, 21416, -40156, 38149, -5688, 46515, 10708, 38818, 38483, 39152, 53207, 18405, 56888, -9704, 45176, -20747, 36475, -42499, 17735, -44172}, new int[]{-26771, -40826, -38149, -23090, -28779, -3346, -36141, 14724, -26436, 27775, -3011, 18739, 17401, 26101, 42164, 18405, 52538, -7362, 42499, -18405, 33798, -39152, 16732, -40156, -334, -47518}, new int[]{-669, -43837, -21416, -35806, -27105, -25767, -20413, -10708, 334, -13050, 12047, 6692, 31456, 8366, 39822, -7027, 32460, -13385, 30117, -33129, 13385, -35471}}, 1000L, 12, var4_ref_Random, mgb.a((int) param0, 47), 2500L);
-                                hab.field_g[48] = jba.a(new int[][]{new int[]{-4684, -53877, -25767, -48522, -29783, -36141, -48522, -21416, -49861, 10039, -29448, 20413, -8700, 41495, 32460, 39152, 45845, 28779, 45845, 6358, 56219, -20747, 46180, -41495, 22086, -50865}, new int[]{-4350, -50530, -20747, -45176, -23424, -32794, -35471, -17735, -28109, 1673, -6692, -334, 17401, 19743, 36475, 18739, 39487, 4350, 50530, -19743, 41830, -37479, 21082, -47853}, new int[]{-4015, -46849, -14389, -40826, -14724, -29783, -17735, -15393, 4350, -11043, 19074, -18739, 36810, -18070, 35806, -32125, 20413, -43503}}, 1000L, 12, var4_ref_Random, mgb.a((int) param0, 61), 2500L);
-                                hab.field_g[49] = jba.a(new int[][]{new int[]{-669, -23759, -22086, -18405, -26771, 7027, -10039, 30452, 7027, 33129, 21082, 15058, 34133, 8700, 29113, -9704, 13050, -13720}, new int[]{-2342, -19074, -17735, -13720, -17066, 2342, -1673, 18739, 14389, 12381, 19743, -2677, 8366, -9369}, new int[]{-3011, -14054, -13720, -11043, -8700, 1003, 3681, 5354, 7027, -5354}}, 500L, 12, var4_ref_Random, param0 + 45, 1250L);
-                                hab.field_g[50] = jba.a(new int[][]{new int[]{9369, -28109, -12716, -23424, -22420, -5354, -14724, 8366, -10708, 26101, 11377, 30117, 30117, 13385, 27105, -3011, 26771, -21082}, new int[]{8700, -23759, -9035, -19074, -14054, -5354, -5019, 3681, -334, 16062, 16397, 8700, 19074, -15058}, new int[]{7696, -19409, -5354, -15728, -2007, -4350, 10039, 1338, 15058, -13385}}, 500L, 12, var4_ref_Random, mgb.a((int) param0, -10), 1250L);
-                                hab.field_g[52] = jba.a(new int[][]{new int[]{1003, -55550, -24428, -54211, -37479, -47184, -39822, -33798, -56888, -20078, -61573, 7696, -48188, 37145, -27105, 40156, -13385, 55884, 19409, 59231, 41160, 46515, 56219, 29448, 50865, 10039, 53207, -6692, 41160, -22755, 39487, -39152, 24763, -50530}, new int[]{-19743, -49192, -31456, -42833, -32794, -27105, -49526, -13385, -48857, 11712, -32125, 21751, -10708, 17066, 8366, 29448, 27440, 29448, 32794, 11043, 43168, -4350, 36810, -19074, 24763, -32125, 22086, -45176, 0, -50865}, new int[]{-17735, -44841, -26101, -39152, -25098, -22420, -37479, -5354, -32794, 8366, -7362, -334, 11712, 4350, 30117, -10708, 16397, -26436, 13720, -41830, -2342, -40156}}, 1500L, 12, var4_ref_Random, -127, 3000L);
-                                hab.field_g[53] = jba.a(new int[][]{new int[]{-1003, -63916, -30452, -63581, -39822, -47518, -62912, -37479, -74290, 2007, -61239, 35471, -38818, 40826, -32125, 56888, 1338, 67597, 29448, 58227, 64250, 57558, 77636, 31456, 66928, 7362, 70943, -20747, 46849, -41495, 32125, -60235}, new int[]{-26436, -57892, -32794, -41160, -54546, -30117, -56888, 334, -31790, 15058, -19409, 39152, 13385, 39822, 24094, 13385, 48857, 3681, 54881, -20747, 41830, -34802, 28109, -53877, -669, -59231}, new int[]{-20413, -51534, -24094, -35471, -40156, -20413, -38818, -6023, -13050, 2677, 6023, -13720, 30117, -10708, 37145, -25098, 22755, -46180, -669, -54211}}, 1500L, 12, var4_ref_Random, 123, 3000L);
-                                hab.field_g[54] = jba.a(new int[][]{new int[]{-3681, -11294, -11126, -5103, -11126, 5856, 83, 12549, 11294, 8115, 10373, -8533}, new int[]{-3011, -9202, -8700, -4433, -7445, 3681, -501, 5521, 6609, 3262, 7362, -6525}, new int[]{-2509, -7529, -6609, -3764, -2258, 585, 3262, -1422, 4099, -5688}}, 250L, 10, var4_ref_Random, mgb.a((int) param0, -108), 625L);
-                                hab.field_g[55] = jba.a(new int[][]{new int[]{-3848, -11377, -12800, -5605, -12632, 6609, -6525, 12130, 10708, 8784, 12800, -250, 4183, -11294}, new int[]{-3346, -9118, -10206, -3764, -8951, 4433, 5186, 6190, 7362, 836, 3179, -8951}, new int[]{-2844, -6943, -7027, -3346, -4099, 1840, 2426, 1338, 1840, -6776}}, 250L, 10, var4_ref_Random, 122, 625L);
-                                oea.field_o = 0;
-                                gn.field_m = 0;
-                                var4 = 0;
-                                var5 = 0;
-                                statePc = 13;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_12) {
-                                caughtException = stateCaught_12;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 13: {
-                            try {
-                                if (var5 >= hab.field_g.length) {
-                                    statePc = 32;
-                                } else {
-                                    statePc = 14;
-                                }
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_13) {
-                                caughtException = stateCaught_13;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 14: {
-                            try {
-                                if (tnb.a(130, var5)) {
-                                    statePc = 16;
-                                } else {
-                                    statePc = 15;
-                                }
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_14) {
-                                caughtException = stateCaught_14;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 15: {
-                            try {
-                                statePc = 17;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_15) {
-                                caughtException = stateCaught_15;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -943,14 +972,41 @@ final class wlb extends rqa {
             void runPartition2() {
                 stateLoop: while (true) {
                     switch (statePc) {
-                        case 16: {
+                        case 13: {
                             try {
-                                gn.field_m = gn.field_m + 1;
-                                statePc = 17;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_16) {
-                                caughtException = stateCaught_16;
-                                statePc = 34;
+                                if (var5 >= hab.field_g.length) {
+                                    /* Inlined CFG state: 32. */
+                                    {
+                                        kg.field_p = new int[var4];
+                                        feb.field_b = new int[var4];
+                                        statePc = 35;
+                                        continue stateLoop;
+                                    }
+                                } else {
+                                    /* Inlined CFG state: 14. */
+                                    {
+                                        if (tnb.a(130, var5)) {
+                                            /* Inlined CFG state: 16. */
+                                            {
+                                                gn.field_m = gn.field_m + 1;
+                                                statePc = 17;
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            /* Inlined CFG state: 15. */
+                                            {
+                                                statePc = 17;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Throwable stateCaught_13) {
+                                statePc = (stateCaught_13 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
+                                }
+                                caughtException = stateCaught_13;
                                 continue stateLoop;
                             }
                         }
@@ -963,43 +1019,36 @@ final class wlb extends rqa {
                                 }
                                 continue stateLoop;
                             } catch (Throwable stateCaught_17) {
+                                statePc = (stateCaught_17 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_17);
+                                }
                                 caughtException = stateCaught_17;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
                         case 18: {
                             try {
                                 if (tr.a(125, var5)) {
-                                    statePc = 20;
+                                    /* Inlined CFG state: 20. */
+                                    {
+                                        oea.field_o = oea.field_o + 1;
+                                        statePc = 21;
+                                        continue stateLoop;
+                                    }
                                 } else {
-                                    statePc = 19;
+                                    /* Inlined CFG state: 19. */
+                                    {
+                                        statePc = 21;
+                                        continue stateLoop;
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_18) {
+                                statePc = (stateCaught_18 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_18);
+                                }
                                 caughtException = stateCaught_18;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 19: {
-                            try {
-                                statePc = 21;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_19) {
-                                caughtException = stateCaught_19;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 20: {
-                            try {
-                                oea.field_o = oea.field_o + 1;
-                                statePc = 21;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_20) {
-                                caughtException = stateCaught_20;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -1009,62 +1058,39 @@ final class wlb extends rqa {
                                 var63 = var79;
                                 var6_array = var63;
                                 if (var6_array != null) {
-                                    statePc = 25;
+                                    /* Inlined CFG state: 25. */
+                                    {
+                                        var15 = 0;
+                                        var7 = var15;
+                                        statePc = 26;
+                                        continue stateLoop;
+                                    }
                                 } else {
-                                    statePc = 22;
+                                    /* Inlined CFG state: 22. */
+                                    {
+                                        var7 = hab.field_g[var5].field_v.length;
+                                        if (var7 > var4) {
+                                            /* Inlined CFG state: 24. */
+                                            {
+                                                var4 = var7;
+                                                statePc = 31;
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            /* Inlined CFG state: 23. */
+                                            {
+                                                statePc = 31;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_21) {
-                                caughtException = stateCaught_21;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 22: {
-                            try {
-                                var7 = hab.field_g[var5].field_v.length;
-                                if (var7 > var4) {
-                                    statePc = 24;
-                                } else {
-                                    statePc = 23;
+                                statePc = (stateCaught_21 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                                 }
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_22) {
-                                caughtException = stateCaught_22;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 23: {
-                            try {
-                                statePc = 31;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_23) {
-                                caughtException = stateCaught_23;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 24: {
-                            try {
-                                var4 = var7;
-                                statePc = 31;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_24) {
-                                caughtException = stateCaught_24;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 25: {
-                            try {
-                                int var15 = 0;
-                                var7 = var15;
-                                statePc = 26;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_25) {
-                                caughtException = stateCaught_25;
-                                statePc = 34;
+                                caughtException = stateCaught_21;
                                 continue stateLoop;
                             }
                         }
@@ -1072,49 +1098,33 @@ final class wlb extends rqa {
                             try {
                                 if (var15 >= var79.length) {
                                     statePc = 31;
+                                    continue stateLoop;
                                 } else {
-                                    statePc = 27;
+                                    /* Inlined CFG state: 27. */
+                                    {
+                                        var8 = var79[var15].length;
+                                        if (var8 > var4) {
+                                            /* Inlined CFG state: 29. */
+                                            {
+                                                var4 = var8;
+                                                statePc = 30;
+                                                continue stateLoop;
+                                            }
+                                        } else {
+                                            /* Inlined CFG state: 28. */
+                                            {
+                                                statePc = 30;
+                                                continue stateLoop;
+                                            }
+                                        }
+                                    }
                                 }
-                                continue stateLoop;
                             } catch (Throwable stateCaught_26) {
-                                caughtException = stateCaught_26;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 27: {
-                            try {
-                                var8 = var79[var15].length;
-                                if (var8 > var4) {
-                                    statePc = 29;
-                                } else {
-                                    statePc = 28;
+                                statePc = (stateCaught_26 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_26);
                                 }
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_27) {
-                                caughtException = stateCaught_27;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 28: {
-                            try {
-                                statePc = 30;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_28) {
-                                caughtException = stateCaught_28;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 29: {
-                            try {
-                                var4 = var8;
-                                statePc = 30;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_29) {
-                                caughtException = stateCaught_29;
-                                statePc = 34;
+                                caughtException = stateCaught_26;
                                 continue stateLoop;
                             }
                         }
@@ -1124,8 +1134,11 @@ final class wlb extends rqa {
                                 statePc = 26;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_30) {
+                                statePc = (stateCaught_30 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
+                                }
                                 caughtException = stateCaught_30;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
@@ -1135,25 +1148,16 @@ final class wlb extends rqa {
                                 statePc = 13;
                                 continue stateLoop;
                             } catch (Throwable stateCaught_31) {
+                                statePc = (stateCaught_31 instanceof RuntimeException ? 34 : -1);
+                                if (statePc == -1) {
+                                    throw wlb.<RuntimeException>$cfr$sneakyThrow(stateCaught_31);
+                                }
                                 caughtException = stateCaught_31;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                        case 32: {
-                            try {
-                                kg.field_p = new int[var4];
-                                feb.field_b = new int[var4];
-                                statePc = 35;
-                                continue stateLoop;
-                            } catch (Throwable stateCaught_32) {
-                                caughtException = stateCaught_32;
-                                statePc = 34;
                                 continue stateLoop;
                             }
                         }
                         case 34: {
-                            RuntimeException var1 = (RuntimeException) ((Object) caughtException);
+                            var1 = (RuntimeException) ((Object) caughtException);
                             throw rta.a((Throwable) ((Object) var1), "wlb.D(" + param0 + ')');
                         }
                         case 35: {
@@ -1168,7 +1172,7 @@ final class wlb extends rqa {
                     if (statePc <= 8) {
                         runPartition0();
                     }
-                    else if (statePc <= 15) {
+                    else if (statePc <= 10) {
                         runPartition1();
                     }
                     else if (statePc <= 35) {
@@ -1189,50 +1193,35 @@ final class wlb extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -119) {
-                break L1;
-              } else {
-                field_o = 94;
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(frb.a(27, 82));
-            break L0;
+          if (param1 > -119) {
+            field_o = 94;
           }
+          stackIn_3_0 = new nc(frb.a(27, 82));
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("wlb.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("wlb.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     static {
         field_q = (dja) ((Object) new agb());
         field_p = 0;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

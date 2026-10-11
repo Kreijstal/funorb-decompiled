@@ -12,9 +12,9 @@ final class nf {
         qo.field_c = param2;
         bg.field_b = 1;
         if (param0 != 25368) {
-            field_a = false;
-            ru.field_b = param1;
-            return;
+          field_a = false;
+          ru.field_b = param1;
+          return;
         }
         ru.field_b = param1;
     }

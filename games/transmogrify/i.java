@@ -13,97 +13,53 @@ final class i {
         if (32 <= param0) {
           if (param0 <= 126) {
             return true;
-          } else {
-            L0: {
-              if (param0 < param1) {
-                break L0;
-              } else {
-                if (255 < param0) {
-                  break L0;
-                } else {
-                  return true;
-                }
-              }
-            }
-            L1: {
-              if (param0 == 8364) {
-                break L1;
-              } else {
-                if (param0 == 338) {
-                  break L1;
-                } else {
-                  if (param0 == 8212) {
-                    break L1;
-                  } else {
-                    if (param0 == 339) {
-                      break L1;
-                    } else {
-                      if (376 != param0) {
-                        return false;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                }
-              }
+          }
+          if (param0 >= param1 &&
+            255 >= param0) {
+            return true;
+          }
+          if (param0 != 8364 &&
+            param0 != 338 &&
+            param0 != 8212 &&
+            param0 != 339) {
+            if (376 != param0) {
+              return false;
             }
             return true;
           }
-        } else {
-          if (param0 >= param1) {
-            if (255 >= param0) {
-              return true;
-            } else {
-              L2: {
-                if (param0 == 8364) {
-                  break L2;
-                } else {
-                  if (param0 == 338) {
-                    break L2;
-                  } else {
-                    if (param0 == 8212) {
-                      break L2;
-                    } else {
-                      if (param0 == 339) {
-                        break L2;
-                      } else {
-                        if (376 != param0) {
-                          return false;
-                        } else {
-                          return true;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              return true;
-            }
-          } else {
-            if (param0 != 8364) {
-              if (param0 != 338) {
-                if (param0 != 8212) {
-                  if (param0 != 339) {
-                    if (376 != param0) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
-              }
-            } else {
-              return true;
-            }
-          }
+          return true;
         }
+        if (param0 >= param1) {
+          if (255 >= param0) {
+            return true;
+          }
+          if (param0 != 8364 &&
+            param0 != 338 &&
+            param0 != 8212 &&
+            param0 != 339) {
+            if (376 != param0) {
+              return false;
+            }
+            return true;
+          }
+          return true;
+        }
+        if (param0 == 8364) {
+          return true;
+        }
+        if (param0 == 338) {
+          return true;
+        }
+        if (param0 == 8212) {
+          return true;
+        }
+        if (param0 == 339) {
+          return true;
+        }
+        if (376 != param0) {
+          return false;
+        }
+        return true;
     }
 
     final static void a(boolean param0) {
@@ -115,41 +71,28 @@ final class i {
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-          if (null != nk.field_b) {
-            if (lj.field_z != ll.field_Q) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (!param0) {
           field_c = (String) null;
-          if (null != nk.field_b) {
-            if (lj.field_z != ll.field_Q) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (null == nk.field_b) {
             return false;
           }
+          if (lj.field_z == ll.field_Q) {
+            return true;
+          }
+          return false;
         }
+        if (null == nk.field_b) {
+          return false;
+        }
+        if (lj.field_z == ll.field_Q) {
+          return true;
+        }
+        return false;
     }
 
     public static void c(boolean param0) {
         field_f = null;
-        if (!param0) {
-          field_e = (String) null;
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0) {
           field_d = null;
           field_e = null;
           field_b = null;
@@ -157,6 +100,12 @@ final class i {
           field_c = null;
           return;
         }
+        field_e = (String) null;
+        field_d = null;
+        field_e = null;
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

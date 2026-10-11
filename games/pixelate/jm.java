@@ -35,10 +35,10 @@ final class jm {
         this.field_f = (int)((this.field_e + 0.2) * 120.0);
         this.field_n = ok.a(ea.field_b, -108, 2);
         if (ok.a(ea.field_b, -126, 2) != 1) {
-            this.field_m = (double)(-this.field_a);
+          this.field_m = (double)(-this.field_a);
         } else {
-            this.field_e = -this.field_e;
-            this.field_m = 640.0;
+          this.field_e = -this.field_e;
+          this.field_m = 640.0;
         }
     }
 
@@ -49,7 +49,7 @@ final class jm {
         field_s = null;
         field_h = null;
         if (param0 != -1345) {
-            return;
+          return;
         }
         field_d = null;
         field_r = (boolean[][]) null;
@@ -60,45 +60,47 @@ final class jm {
 
     final static String b(int param0) {
         int var2 = 0;
-        String var7 = null;
-        int var3 = 0;
-        int var4 = 0;
-        String var8 = null;
-        int var5 = Pixelate.field_H ? 1 : 0;
-        String var6 = "(" + oj.field_G + " " + gb.field_d + " " + tm.field_U + ") " + mn.field_e;
-        String var1 = var6;
-        if (0 >= jj.field_b) {
-        } else {
-            var1 = var6 + ":";
-            for (var2 = 0; var2 < jj.field_b; var2++) {
-                var7 = var1 + ' ';
-                var1 = var7;
-                var3 = 255 & vi.field_o.field_k[var2];
-                var4 = var3 >> -1773592156;
-                if (10 > var4) {
-                    var4 += 48;
-                } else {
-                    var4 += 55;
-                }
-                var3 = var3 & 15;
-                if (-11 >= (var3 ^ -1)) {
-                    var3 += 55;
-                } else {
-                    var3 += 48;
-                }
-                var8 = var7 + (char)var4;
-                var1 = var8 + (char)var3;
+        String var1;
+        int var3;
+        int var4;
+        int var5;
+        String var6;
+        String var7;
+        String var8;
+        var5 = Pixelate.field_H ? 1 : 0;
+        var6 = "(" + oj.field_G + " " + gb.field_d + " " + tm.field_U + ") " + mn.field_e;
+        var1 = var6;
+        if (0 < jj.field_b) {
+          var1 = var6 + ":";
+          for (var2 = 0; var2 < jj.field_b; var2++) {
+            var7 = var1 + ' ';
+            var1 = var7;
+            var3 = 255 & vi.field_o.field_k[var2];
+            var4 = var3 >> 4;
+            if (10 <= var4) {
+              var4 += 55;
+            } else {
+              var4 += 48;
             }
+            var3 = var3 & 15;
+            if (var3 < 10) {
+              var3 += 48;
+            } else {
+              var3 += 55;
+            }
+            var8 = var7 + (char)var4;
+            var1 = var8 + (char)var3;
+          }
         }
         if (param0 >= -4) {
-            jm.b(-28);
+          jm.b(-28);
         }
         return var1;
     }
 
     jm() {
         this.a((byte) -107);
-        this.field_m = (double)(ok.a(ea.field_b, -114, 640) + -100);
+        this.field_m = (double)(ok.a(ea.field_b, -114, 640) - 100);
     }
 
     static {

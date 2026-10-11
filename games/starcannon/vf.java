@@ -8,183 +8,108 @@ final class vf {
     static String field_a;
 
     final static sk a(String param0, byte param1) {
+        int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
-        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         rb var6 = null;
         sk stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = StarCannon.field_A;
         try {
-          L0: {
-            var2_int = param0.length();
-            var3 = 0;
-            L1: while (true) {
-              if (var2_int <= var3) {
-                L2: {
-                  if (param1 < -13) {
-                    break L2;
-                  } else {
-                    var6 = (rb) null;
-                    vf.a((rb) null, -44);
-                    break L2;
-                  }
-                }
-                stackIn_13_0 = ra.field_t;
-                break L0;
-              } else {
-                var4 = param0.charAt(var3);
-                if (var4 >= 48) {
-                  if (var4 <= 57) {
-                    var3++;
-                    continue L1;
-                  } else {
-                    return null;
-                  }
-                } else {
-                  return null;
-                }
-              }
+          var2_int = param0.length();
+          for (var3 = 0; var2_int > var3; var3++) {
+            var4 = param0.charAt(var3);
+            if (var4 < 48) {
+              return null;
+            }
+            if (var4 > 57) {
+              return null;
             }
           }
+          if (param1 >= -13) {
+            var6 = (rb) null;
+            vf.a((rb) null, -44);
+          }
+          stackIn_13_0 = ra.field_t;
+          return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_16_0 = (RuntimeException) (var2);
-
-            stackIn_16_1 = new StringBuilder().append("vf.B(");
-
-            if (param0 == null) {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "null";
-              break L3;
-            } else {
-              stackIn_17_0 = (RuntimeException) ((Object) stackIn_16_0);
-              stackIn_17_1 = (StringBuilder) ((Object) stackIn_16_1);
-              stackIn_17_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_16_0 = var2;
+          stackIn_16_1 = new StringBuilder().append("vf.B(");
+          if (param0 == null) {
+            stackIn_17_2 = "null";
+          } else {
+            stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), stackIn_17_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_13_0;
     }
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            int var1_int = 0;
-            int var3 = 0;
-            String var4 = null;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = StarCannon.field_A;
-            try {
-              L0: {
-                L1: {
-                  if (null == jh.field_b) {
-                    break L1;
-                  } else {
-                    jh.field_b.a(-4628);
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (bc.field_j == null) {
-                    break L2;
-                  } else {
-                    bc.field_j.a(6843);
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (param0 >= 52) {
-                    break L3;
-                  } else {
-                    var4 = (String) null;
-                    vf.a((String) null, (byte) -52);
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (null == ne.field_l) {
-                    break L4;
-                  } else {
-                    try {
-                      L5: {
-                        ne.field_l.a(40);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        break L6;
-                      }
-                    }
-                    break L4;
-                  }
-                }
-                L7: {
-                  if (fe.field_J != null) {
-                    var1_int = 0;
-                    L8: while (true) {
-                      if (var1_int >= fe.field_J.length) {
-                        break L7;
-                      } else {
-                        if (fe.field_J[var1_int] != null) {
-                          try {
-                            L9: {
-                              fe.field_J[var1_int].a(49);
-                              break L9;
-                            }
-                          } catch (java.io.IOException decompiledCaughtParameter1) {
-                            decompiledCaughtException = decompiledCaughtParameter1;
-                            L10: {
-                              var2 = (IOException) (Object) decompiledCaughtException;
-                              break L10;
-                            }
-                          }
-                          var1_int++;
-                          continue L8;
-                        } else {
-                          var1_int++;
-                          continue L8;
-                        }
-                      }
-                    }
-                  } else {
-                    break L7;
-                  }
-                }
-                break L0;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw sd.a((Throwable) ((Object) var1), "vf.D(" + param0 + ')');
+          int var1_int = 0;
+          IOException iOException = null;
+          int var3 = 0;
+          String var4 = null;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          IOException var2 = null;
+          var3 = StarCannon.field_A;
+          try {
+            if (null != jh.field_b) {
+              jh.field_b.a(-4628);
             }
+            if (bc.field_j != null) {
+              bc.field_j.a(6843);
+            }
+            if (param0 < 52) {
+              var4 = (String) null;
+              vf.a((String) null, (byte) -52);
+            }
+            if (null != ne.field_l) {
+              try {
+                ne.field_l.a(40);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+              }
+            }
+            if (fe.field_J != null) {
+              for (var1_int = 0; var1_int < fe.field_J.length; var1_int++) {
+                if (fe.field_J[var1_int] != null) {
+                  try {
+                    fe.field_J[var1_int].a(49);
+                  } catch (java.io.IOException decompiledCaughtParameter1) {
+                    decompiledCaughtException = decompiledCaughtParameter1;
+                    var2 = (IOException) (Object) decompiledCaughtException;
+                  }
+                }
+              }
+              return;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw sd.a((Throwable) ((Object) var1), "vf.D(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            vf.a(false);
+          vf.a(false);
         }
     }
 
@@ -196,57 +121,29 @@ final class vf {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == 0) {
-                break L1;
-              } else {
-                field_a = (String) null;
-                break L1;
-              }
-            }
-            L2: {
-              var2_int = param0.j(7909);
-              if (var2_int == 1) {
-                stackIn_5_0 = 1;
-                break L2;
-              } else {
-                stackIn_5_0 = 0;
-                break L2;
-              }
-            }
-            var3 = stackIn_5_0;
-            stackIn_6_0 = var3;
-            break L0;
+          if (param1 != 0) {
+            field_a = (String) null;
           }
+          var2_int = param0.j(7909);
+          stackIn_5_0 = (var2_int == 1) ? 1 : 0;
+          var3 = stackIn_5_0;
+          stackIn_6_0 = var3;
+          return stackIn_6_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var2);
-
-            stackIn_9_1 = new StringBuilder().append("vf.C(");
-
-            if (param0 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_9_0 = var2;
+          stackIn_9_1 = new StringBuilder().append("vf.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ',' + param1 + ')');
+          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_6_0 != 0;
     }
 
     static {

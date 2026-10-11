@@ -17,55 +17,35 @@ final class ll {
         java.awt.Canvas var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         try {
           try {
-            L0: {
-              L1: {
-                var4 = param2.getGraphics();
-                gf.field_e.a(var4, param3, param0, (byte) 123);
-                if (param1 == 115) {
-                  break L1;
-                } else {
-                  var5 = (java.awt.Canvas) null;
-                  ll.a(95, (byte) 7, (java.awt.Canvas) null, 48);
-                  break L1;
-                }
-              }
-              var4.dispose();
-              break L0;
+            var4 = param2.getGraphics();
+            gf.field_e.a(var4, param3, param0, (byte) 123);
+            if (param1 != 115) {
+              var5 = (java.awt.Canvas) null;
+              ll.a(95, (byte) 7, (java.awt.Canvas) null, 48);
             }
+            var4.dispose();
+            return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var4_ref = (Exception) (Object) decompiledCaughtException;
             param2.repaint();
             return;
           }
-          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L2: {
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var4_ref2);
-
-            stackIn_8_1 = new StringBuilder().append("ll.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L2;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L2;
-            }
+          var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_8_0 = var4_ref2;
+          stackIn_8_1 = new StringBuilder().append("ll.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw ma.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ')');
+          throw ma.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -73,7 +53,7 @@ final class ll {
         field_e = null;
         field_b = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_a = null;
         field_f = null;

@@ -12,7 +12,7 @@ class oq extends lh {
         field_w = null;
         field_u = null;
         if (param0 != -34) {
-            return;
+          return;
         }
         field_v = null;
     }
@@ -20,26 +20,23 @@ class oq extends lh {
     final void d(int param0) {
         this.a(this.field_y, 0);
         if (param0 > -60) {
-            field_u = (String) null;
+          field_u = (String) null;
         }
     }
 
     final int b(int param0, int param1) {
-        int var3;
-        int var4;
-        var3 = (this.field_q * 2 * this.field_h.field_r - -this.field_q) / 2;
-        var4 = (480 - var3) / 2;
-        if (param0 == this.field_h.field_r - param1) {
-          return -this.field_q + (var3 + var4);
-        } else {
-          return var4 - -(param0 * this.field_q);
+        int var3 = (this.field_q * 2 * this.field_h.field_r + this.field_q) / 2;
+        int var4 = (480 - var3) / 2;
+        if (param0 != this.field_h.field_r - param1) {
+          return var4 + param0 * this.field_q;
         }
+        return -this.field_q + (var3 + var4);
     }
 
     final int a(boolean param0) {
         if (!param0) {
-            field_v = (String) null;
-            return -1;
+          field_v = (String) null;
+          return -1;
         }
         return -1;
     }
@@ -47,9 +44,9 @@ class oq extends lh {
     oq(int param0, int[] param1, int[] param2) {
         super(param0, 180, 460, 150, 35, param1);
         try {
-            this.field_y = param2;
+          this.field_y = param2;
         } catch (RuntimeException runtimeException) {
-            throw qb.a((Throwable) ((Object) runtimeException), "oq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "oq.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,14 +55,12 @@ class oq extends lh {
         lb.b(0, 0, 640, 480);
         this.g(102);
         pg.d(0);
-        if (param0 > -14) {
-          field_v = (String) null;
-          this.a(0);
-          return;
-        } else {
+        if (param0 <= -14) {
           this.a(0);
           return;
         }
+        field_v = (String) null;
+        this.a(0);
     }
 
     static {

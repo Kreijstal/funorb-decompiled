@@ -14,7 +14,7 @@ final class dj {
 
     public static void a(byte param0) {
         if (param0 != 38) {
-            return;
+          return;
         }
         field_g = null;
         field_d = null;
@@ -22,100 +22,66 @@ final class dj {
     }
 
     final static String a(int param0, String param1) {
+        int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         char[] var3 = null;
-        int var4 = 0;
         int var5 = 0;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = TetraLink.field_J;
         try {
-          L0: {
-            L1: {
-              var2_int = param1.length();
-              var3 = new char[var2_int];
-              if (param0 > 53) {
-                break L1;
-              } else {
-                field_d = (String) null;
-                break L1;
-              }
-            }
-            var4 = 0;
-            L2: while (true) {
-              if (var2_int <= var4) {
-                stackIn_7_0 = new String(var3);
-                break L0;
-              } else {
-                var3[-var4 + (var2_int + -1)] = param1.charAt(var4);
-                var4++;
-                continue L2;
-              }
-            }
+          var2_int = param1.length();
+          var3 = new char[var2_int];
+          if (param0 <= 53) {
+            field_d = (String) null;
           }
+          for (var4 = 0; var2_int > var4; var4++) {
+            var3[-var4 + (var2_int - 1)] = param1.charAt(var4);
+          }
+          stackIn_7_0 = new String(var3);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var2);
-
-            stackIn_10_1 = new StringBuilder().append("dj.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("dj.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw oi.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ')');
+          throw oi.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     final mc a(long param0, byte param1) {
-        mc var4;
-        mc var5;
-        int var6;
-        var6 = TetraLink.field_J;
-        var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
+        mc var5 = null;
+        int var6 = TetraLink.field_J;
+        mc var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
         this.field_a = var4.field_j;
-        L0: while (true) {
-          if (var4 == this.field_a) {
-            if (param1 != -43) {
-              return (mc) null;
-            } else {
-              this.field_a = null;
-              return null;
-            }
-          } else {
-            if ((param0 ^ -1L) == (this.field_a.field_c ^ -1L)) {
-              var5 = this.field_a;
-              this.field_a = this.field_a.field_j;
-              return var5;
-            } else {
-              this.field_a = this.field_a.field_j;
-              continue L0;
-            }
+        while (var4 != this.field_a) {
+          if (~param0 == ~this.field_a.field_c) {
+            var5 = this.field_a;
+            this.field_a = this.field_a.field_j;
+            return var5;
           }
+          this.field_a = this.field_a.field_j;
         }
+        if (param1 == -43) {
+          this.field_a = null;
+          return null;
+        }
+        return (mc) null;
     }
 
     final mc b(int param0) {
         this.field_i = 0;
         if (param0 < 21) {
-            return (mc) null;
+          return (mc) null;
         }
         return this.a(-1);
     }
@@ -123,132 +89,100 @@ final class dj {
     final void a(long param0, int param1, mc param2) {
         mc var5 = null;
         try {
-            if (!(param2.field_e == null)) {
-                param2.b(false);
-            }
-            var5 = this.field_e[(int)((long)(this.field_f + -1) & param0)];
-            if (param1 > -48) {
-                this.field_e = (mc[]) null;
-            }
-            param2.field_j = var5;
-            param2.field_e = var5.field_e;
-            param2.field_e.field_j = param2;
-            param2.field_c = param0;
-            param2.field_j.field_e = param2;
+          if (param2.field_e != null) {
+            param2.b(false);
+          }
+          var5 = this.field_e[(int)((long)(this.field_f - 1) & param0)];
+          if (param1 > -48) {
+            this.field_e = (mc[]) null;
+          }
+          param2.field_j = var5;
+          param2.field_e = var5.field_e;
+          param2.field_e.field_j = param2;
+          param2.field_c = param0;
+          param2.field_j.field_e = param2;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final mc a(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
-        int fieldTemp$5 = 0;
+        int fieldTemp$0 = 0;
+        int fieldTemp$2 = 0;
+        int fieldTemp$1 = 0;
         mc var2;
         int var3;
         var3 = TetraLink.field_J;
         if (param0 == -1) {
-          L0: {
-            if (0 >= this.field_i) {
-              break L0;
-            } else {
-              if (this.field_e[this.field_i + -1] == this.field_b) {
-                break L0;
-              } else {
-                var2 = this.field_b;
-                this.field_b = var2.field_j;
-                return var2;
-              }
-            }
+          if (0 < this.field_i &&
+            this.field_e[this.field_i - 1] != this.field_b) {
+            var2 = this.field_b;
+            this.field_b = var2.field_j;
+            return var2;
           }
-          L1: while (true) {
-            if (this.field_f > this.field_i) {
-              fieldTemp$3 = this.field_i;
-              this.field_i = this.field_i + 1;
-              var2 = this.field_e[fieldTemp$3].field_j;
-              if (this.field_e[-1 + this.field_i] != var2) {
-                this.field_b = var2.field_j;
-                return var2;
-              } else {
-                continue L1;
-              }
-            } else {
+          do {
+            if (this.field_f <= this.field_i) {
               return null;
             }
-          }
-        } else {
-          field_g = (db) null;
-          if (0 < this.field_i) {
-            if (this.field_e[this.field_i + -1] == this.field_b) {
-              L2: while (true) {
-                if (this.field_f > this.field_i) {
-                  fieldTemp$4 = this.field_i;
-                  this.field_i = this.field_i + 1;
-                  var2 = this.field_e[fieldTemp$4].field_j;
-                  if (this.field_e[-1 + this.field_i] != var2) {
-                    this.field_b = var2.field_j;
-                    return var2;
-                  } else {
-                    continue L2;
-                  }
-                } else {
-                  return null;
-                }
-              }
-            } else {
-              var2 = this.field_b;
-              this.field_b = var2.field_j;
-              return var2;
-            }
-          } else {
-            L3: while (true) {
-              if (this.field_f > this.field_i) {
-                fieldTemp$5 = this.field_i;
-                this.field_i = this.field_i + 1;
-                var2 = this.field_e[fieldTemp$5].field_j;
-                if (this.field_e[-1 + this.field_i] != var2) {
-                  this.field_b = var2.field_j;
-                  return var2;
-                } else {
-                  continue L3;
-                }
-              } else {
-                return null;
-              }
-            }
-          }
+            fieldTemp$0 = this.field_i;
+            this.field_i = this.field_i + 1;
+            var2 = this.field_e[fieldTemp$0].field_j;
+          } while (this.field_e[-1 + this.field_i] == var2);
+          this.field_b = var2.field_j;
+          return var2;
         }
+        field_g = (db) null;
+        if (0 >= this.field_i) {
+          do {
+            if (this.field_f <= this.field_i) {
+              return null;
+            }
+            fieldTemp$2 = this.field_i;
+            this.field_i = this.field_i + 1;
+            var2 = this.field_e[fieldTemp$2].field_j;
+          } while (this.field_e[-1 + this.field_i] == var2);
+          this.field_b = var2.field_j;
+          return var2;
+        }
+        if (this.field_e[this.field_i - 1] != this.field_b) {
+          var2 = this.field_b;
+          this.field_b = var2.field_j;
+          return var2;
+        }
+        do {
+          if (this.field_f <= this.field_i) {
+            return null;
+          }
+          fieldTemp$1 = this.field_i;
+          this.field_i = this.field_i + 1;
+          var2 = this.field_e[fieldTemp$1].field_j;
+        } while (this.field_e[-1 + this.field_i] == var2);
+        this.field_b = var2.field_j;
+        return var2;
     }
 
     dj(int param0) {
+        int var2 = 0;
         mc dupTemp$1 = null;
-        int var2;
         mc var3;
         this.field_i = 0;
         this.field_e = new mc[param0];
         this.field_f = param0;
-        var2 = 0;
-        L0: while (true) {
-          if (param0 > var2) {
-            dupTemp$1 = new mc();
-            var3 = dupTemp$1;
-            this.field_e[var2] = dupTemp$1;
-            var3.field_j = var3;
-            var3.field_e = var3;
-            var2++;
-            continue L0;
-          } else {
-            return;
-          }
+        for (var2 = 0; param0 > var2; var2++) {
+          dupTemp$1 = new mc();
+          var3 = dupTemp$1;
+          this.field_e[var2] = dupTemp$1;
+          var3.field_j = var3;
+          var3.field_e = var3;
         }
     }
 
     final static void a(byte param0, f param1) {
         try {
-            int var2_int = 29 / ((-63 - param0) / 49);
-            im.field_c = param1;
+          int var2_int = 29 / ((-63 - param0) / 49);
+          im.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw oi.a((Throwable) ((Object) runtimeException), "dj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oi.a((Throwable) ((Object) runtimeException), "dj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

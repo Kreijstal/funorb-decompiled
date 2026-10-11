@@ -12,12 +12,12 @@ final class sk extends oh {
         field_i = null;
         field_k = null;
         if (param0 >= -6) {
-            sk.a(false, 27);
+          sk.a(false, 27);
         }
     }
 
     final static nf a(boolean param0, int param1) {
-        int stackIn_3_0 = 0;
+        boolean stackIn_3_0 = false;
         int stackIn_9_0 = 0;
         int[] stackIn_22_0 = null;
         Throwable decompiledCaughtException = null;
@@ -28,112 +28,70 @@ final class sk extends oh {
         int var7 = 0;
         sl var8 = null;
         dp var9 = null;
-        L0: {
-          var7 = ShatteredPlansClient.field_F ? 1 : 0;
-          var8 = sa.field_a;
-          var3 = var8.j(param1 ^ 113);
-          if (param1 == (128 & var3 ^ -1)) {
-            stackIn_3_0 = 0;
-            break L0;
-          } else {
-            stackIn_3_0 = 1;
-            break L0;
-          }
-        }
-        L1: {
-          kr.field_b = stackIn_3_0 != 0;
-          ob.field_k = var3 & 127;
-          nj.field_a = var8.j(-77);
-          sp.field_j = var8.d(param1 ^ -31);
-          if (ob.field_k != 2) {
-            el.field_f = 0;
-            va.field_b = 0;
-            break L1;
-          } else {
-            el.field_f = var8.f(param1 + -20975);
-            va.field_b = var8.k(param1 + 256);
-            break L1;
-          }
-        }
-        L2: {
-          if (1 != var8.j(param1 + -66)) {
-            stackIn_9_0 = 0;
-            break L2;
-          } else {
-            stackIn_9_0 = 1;
-            break L2;
-          }
-        }
-        L3: {
-          var4 = stackIn_9_0;
-          jc.field_s = var8.e(param1 ^ 0);
-          if (var4 == 0) {
-            em.field_a = jc.field_s;
-            break L3;
-          } else {
-            em.field_a = var8.e(-1);
-            break L3;
-          }
-        }
-        L4: {
-          L5: {
-            if (-2 == (ob.field_k ^ -1)) {
-              break L5;
-            } else {
-              if ((ob.field_k ^ -1) == -5) {
-                break L5;
-              } else {
-                fm.field_f = 0;
-                mc.field_q = null;
-                break L4;
-              }
-            }
-          }
-          fm.field_f = var8.f(param1 + -20975);
-          mc.field_q = var8.e(param1 + 0);
-          break L4;
-        }
-        if (param0) {
-          var5 = var8.f(-20976);
-          try {
-            L6: {
-              L7: {
-                var9 = dh.field_c.a((byte) 47, var5);
-                ke.field_h = var9.f(80);
-                if (em.field_a.equals(ln.field_o)) {
-                  stackIn_22_0 = null;
-                  break L7;
-                } else {
-                  stackIn_22_0 = var9.field_o;
-                  break L7;
-                }
-              }
-              mb.field_p = stackIn_22_0;
-              break L6;
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
-            jq.a(param1 + -29900, (Throwable) ((Object) var6), "CC1");
-            ke.field_h = null;
-            mb.field_p = null;
-            return new nf(param0);
-          }
-          return new nf(param0);
+        var7 = ShatteredPlansClient.field_F ? 1 : 0;
+        var8 = sa.field_a;
+        var3 = var8.j(param1 ^ 113);
+        stackIn_3_0 = (param1 != ~(128 & var3));
+        kr.field_b = stackIn_3_0;
+        ob.field_k = var3 & 127;
+        nj.field_a = var8.j(-77);
+        sp.field_j = var8.d(param1 ^ -31);
+        if (ob.field_k != 2) {
+          el.field_f = 0;
+          va.field_b = 0;
         } else {
+          el.field_f = var8.f(param1 - 20975);
+          va.field_b = var8.k(param1 + 256);
+        }
+        stackIn_9_0 = (1 != var8.j(param1 - 66)) ? 0 : 1;
+        var4 = stackIn_9_0;
+        jc.field_s = var8.e(param1 ^ 0);
+        if (var4 == 0) {
+          em.field_a = jc.field_s;
+        } else {
+          em.field_a = var8.e(-1);
+        }
+        if (ob.field_k != 1 &&
+          ob.field_k != 4) {
+          fm.field_f = 0;
+          mc.field_q = null;
+        } else {
+          fm.field_f = var8.f(param1 - 20975);
+          mc.field_q = var8.e(param1 + 0);
+        }
+        if (!param0) {
           ke.field_h = pe.a(var8, param1 + 1, 80);
           mb.field_p = null;
           return new nf(param0);
         }
+        var5 = var8.f(-20976);
+        try {
+          var9 = dh.field_c.a((byte) 47, var5);
+          ke.field_h = var9.f(80);
+          if (em.field_a.equals(ln.field_o)) {
+            stackIn_22_0 = null;
+          } else {
+            stackIn_22_0 = var9.field_o;
+          }
+          mb.field_p = stackIn_22_0;
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = (Exception) (Object) decompiledCaughtException;
+          jq.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
+          ke.field_h = null;
+          mb.field_p = null;
+          return new nf(param0);
+        }
+        return new nf(param0);
     }
 
     sk(long param0, int param1, byte[] param2) {
         try {
-            this.field_l = param0;
-            this.field_j = param1;
-            this.field_h = param2;
+          this.field_l = param0;
+          this.field_j = param1;
+          this.field_h = param2;
         } catch (RuntimeException runtimeException) {
-            throw r.a((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw r.a((Throwable) ((Object) runtimeException), "sk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

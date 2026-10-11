@@ -10,47 +10,30 @@ final class md {
     static String[] field_a;
 
     final static int a(boolean param0, long param1) {
-        int var3_int = 0;
         int var4 = 0;
+        int var3_int = 0;
         int var5 = 0;
-        int stackIn_9_0 = 0;
+        int stackIn_11_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         var5 = ArcanistsMulti.field_G ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var3_int = 0;
-              if (!param0) {
-                break L1;
-              } else {
-                md.a((byte) 28);
-                break L1;
-              }
-            }
-            var4 = 0;
-            L2: while (true) {
-              if ((var4 ^ -1) <= -59) {
-                stackIn_9_0 = var3_int;
-                break L0;
-              } else {
-                if ((param1 & 1L << var4) != 0L) {
-                  var3_int = var3_int + ta.a(true, var4);
-                  var4++;
-                  continue L2;
-                } else {
-                  var4++;
-                  continue L2;
-                }
-              }
+          var3_int = 0;
+          if (param0) {
+            md.a((byte) 28);
+          }
+          for (var4 = 0; var4 < 58; var4++) {
+            if ((param1 & 1L << var4) != 0L) {
+              var3_int = var3_int + ta.a(true, var4);
             }
           }
+          stackIn_11_0 = var3_int;
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           throw aa.a((Throwable) ((Object) var3), "md.A(" + param0 + ',' + param1 + ')');
         }
-        return stackIn_9_0;
     }
 
     public static void a(byte param0) {

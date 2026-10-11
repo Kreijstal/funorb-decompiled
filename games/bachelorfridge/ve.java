@@ -8,18 +8,16 @@ final class ve extends pu {
     private static String field_z;
 
     public static void d(byte param0) {
-        if (param0 >= -12) {
-          ve.d((byte) 107);
-          field_m = (kv[][]) null;
-          field_n = null;
-          field_l = null;
-          return;
-        } else {
+        if (param0 < -12) {
           field_m = (kv[][]) null;
           field_n = null;
           field_l = null;
           return;
         }
+        ve.d((byte) 107);
+        field_m = (kv[][]) null;
+        field_n = null;
+        field_l = null;
     }
 
     static {

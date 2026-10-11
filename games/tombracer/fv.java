@@ -25,63 +25,44 @@ final class fv {
     }
 
     final void a(int param0) {
-        int var2;
-        ha var3_ref_ha;
-        int var3;
-        int var4_int;
-        nh var4;
-        int var5;
-        int var6;
-        int var7;
-        nh[] var8;
-        L0: {
-          var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
-          var3_ref_ha = tga.field_a;
-          var4_int = this.field_g;
-          var5 = this.field_c;
-          var6 = this.field_j;
-          var7 = this.field_i;
-          var8 = dr.field_a;
-          tra.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
-          if (var2 == -1) {
-            break L0;
-          } else {
-            var3 = bta.field_n[var2];
-            var4 = eca.field_c[var3];
-            var4.a((this.field_j >> -1388118751) + this.field_g - (var4.a() >> 578394689), (this.field_i >> 476067553) + (this.field_c + -(var4.c() >> -897548031)));
-            break L0;
-          }
+        int var3 = 0;
+        nh var4 = null;
+        int var2 = this.field_h.b((byte) -75).a(param0 ^ 28, this.field_f);
+        ha var3_ref_ha = tga.field_a;
+        int var4_int = this.field_g;
+        int var5 = this.field_c;
+        int var6 = this.field_j;
+        int var7 = this.field_i;
+        nh[] var8 = dr.field_a;
+        tra.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
+        if (var2 != -1) {
+          var3 = bta.field_n[var2];
+          var4 = eca.field_c[var3];
+          var4.a((this.field_j >> 1) + this.field_g - (var4.a() >> 1), (this.field_i >> 1) + (this.field_c - (var4.c() >> 1)));
         }
-        if (0 > var2) {
-          return;
-        } else {
-          sta.field_y[bta.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1426122529)), (this.field_i >> -367273535) + this.field_c + -10);
+        if (0 <= var2) {
+          sta.field_y[bta.field_f[var2]].a(-20 + (this.field_g + (this.field_j >> 1)), (this.field_i >> 1) + this.field_c - 10);
           return;
         }
     }
 
     final boolean a(int param0, boolean param1, int param2) {
-        if (!param1) {
-          if (this.field_g <= param2) {
-            if (param0 >= this.field_c) {
-              if (this.field_j + this.field_g > param2) {
-                if (param0 >= this.field_i + this.field_c) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param1) {
           return true;
         }
+        if (this.field_g > param2) {
+          return false;
+        }
+        if (param0 < this.field_c) {
+          return false;
+        }
+        if (this.field_j + this.field_g <= param2) {
+          return false;
+        }
+        if (param0 < this.field_i + this.field_c) {
+          return true;
+        }
+        return false;
     }
 
     public static void a(byte param0) {
@@ -92,14 +73,14 @@ final class fv {
 
     fv(ab param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-            this.field_f = param1;
-            this.field_j = param4;
-            this.field_c = param3;
-            this.field_g = param2;
-            this.field_i = param5;
-            this.field_h = param0;
+          this.field_f = param1;
+          this.field_j = param4;
+          this.field_c = param3;
+          this.field_g = param2;
+          this.field_i = param5;
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "fv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

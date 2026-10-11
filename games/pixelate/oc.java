@@ -25,29 +25,24 @@ final class oc extends ng {
     static String field_X;
 
     private final void d(byte param0) {
-        ng var3;
         this.field_P = new tf[]{this.a(this.field_Z, this.field_I, (byte) -121), this.a(this.field_V, this.field_T, (byte) -125)};
-        if (param0 <= 73) {
-          var3 = (ng) null;
-          this.a(59, -16, -71, (ng) null);
+        if (param0 > 73) {
           this.field_F = this.c(true);
           this.field_K = this.field_F.e();
-          this.field_L = new tf(this.field_C >> -1648378015, this.field_C);
-          return;
-        } else {
-          this.field_F = this.c(true);
-          this.field_K = this.field_F.e();
-          this.field_L = new tf(this.field_C >> -1648378015, this.field_C);
+          this.field_L = new tf(this.field_C >> 1, this.field_C);
           return;
         }
+        ng var3 = (ng) null;
+        this.a(59, -16, -71, (ng) null);
+        this.field_F = this.c(true);
+        this.field_K = this.field_F.e();
+        this.field_L = new tf(this.field_C >> 1, this.field_C);
     }
 
     public static void a(byte param0) {
         field_U = null;
         field_H = null;
-        if (param0 != -9) {
-          return;
-        } else {
+        if (param0 == -9) {
           field_N = null;
           field_S = null;
           field_O = null;
@@ -58,211 +53,127 @@ final class oc extends ng {
     }
 
     private final tf c(boolean param0) {
-        int var2;
-        int var4;
-        int var5;
-        double var6;
-        int var8;
-        int var9;
-        tf var10;
-        tf var11;
-        int stackIn_10_0 = 0;
-        int stackIn_23_0 = 0;
-        var9 = Pixelate.field_H ? 1 : 0;
-        var2 = this.field_C >> 1529768609;
-        if (!param0) {
-          this.a(-24, 16, 122, (byte) -10);
-          var10 = new tf(var2, this.field_C);
-          h.a(-72, var10);
-          var4 = 0;
-          L0: while (true) {
-            if (this.field_C <= var4) {
-              ia.a((byte) 92);
-              return var10;
-            } else {
-              var5 = 0;
-              L1: while (true) {
-                if (var2 <= var5) {
-                  var4++;
-                  continue L0;
-                } else {
-                  L2: {
-                    var6 = (double)var5 * (double)var5 / (double)((this.field_C + -var4) * var4);
-                    var8 = 1;
-                    if (var6 < 1.0) {
-                      L3: {
-                        var6 = Math.sqrt(-var6 + 1.0);
-                        if (1.0 <= var6) {
-                          stackIn_23_0 = 255;
-                          break L3;
-                        } else {
-                          stackIn_23_0 = (int)(var6 * 255.0);
-                          break L3;
-                        }
-                      }
-                      var8 = stackIn_23_0;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  t.a(var5, var4, var8 << -1687818648 | var8 | var8 << -235718512);
-                  var5++;
-                  continue L1;
-                }
-              }
-            }
-          }
-        } else {
+        tf var11 = null;
+        int var4 = 0;
+        int var5 = 0;
+        double var6 = 0.0;
+        int var8 = 0;
+        int var9 = Pixelate.field_H ? 1 : 0;
+        int var2 = this.field_C >> 1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        double var6Lifetime1;
+        int var8Lifetime1;
+        if (param0) {
           var11 = new tf(var2, this.field_C);
           h.a(-72, var11);
-          var4 = 0;
-          L4: while (true) {
-            if (this.field_C <= var4) {
-              ia.a((byte) 92);
-              return var11;
-            } else {
-              var5 = 0;
-              L5: while (true) {
-                if (var2 <= var5) {
-                  var4++;
-                  continue L4;
-                } else {
-                  L6: {
-                    var6 = (double)var5 * (double)var5 / (double)((this.field_C + -var4) * var4);
-                    var8 = 1;
-                    if (var6 < 1.0) {
-                      L7: {
-                        var6 = Math.sqrt(-var6 + 1.0);
-                        if (1.0 <= var6) {
-                          stackIn_10_0 = 255;
-                          break L7;
-                        } else {
-                          stackIn_10_0 = (int)(var6 * 255.0);
-                          break L7;
-                        }
-                      }
-                      var8 = stackIn_10_0;
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  t.a(var5, var4, var8 << -1687818648 | var8 | var8 << -235718512);
-                  var5++;
-                  continue L5;
-                }
+          for (var4 = 0; this.field_C > var4; var4++) {
+            for (var5 = 0; var2 > var5; var5++) {
+              var6 = (double)var5 * (double)var5 / (double)((this.field_C - var4) * var4);
+              var8 = 1;
+              if (var6 < 1.0) {
+                var6 = Math.sqrt(-var6 + 1.0);
+                var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
               }
+              t.a(var5, var4, var8 << 8 | var8 | var8 << 16);
             }
           }
+          ia.a((byte) 92);
+          return var11;
         }
+        this.a(-24, 16, 122, (byte) -10);
+        tf var10 = new tf(var2, this.field_C);
+        h.a(-72, var10);
+        for (var4Lifetime1 = 0; this.field_C > var4Lifetime1; var4Lifetime1++) {
+          for (var5Lifetime1 = 0; var2 > var5Lifetime1; var5Lifetime1++) {
+            var6Lifetime1 = (double)var5Lifetime1 * (double)var5Lifetime1 / (double)((this.field_C - var4Lifetime1) * var4Lifetime1);
+            var8Lifetime1 = 1;
+            if (var6Lifetime1 < 1.0) {
+              var6Lifetime1 = Math.sqrt(-var6Lifetime1 + 1.0);
+              var8Lifetime1 = !(1.0 <= var6Lifetime1) ? (int)(var6Lifetime1 * 255.0) : 255;
+            }
+            t.a(var5Lifetime1, var4Lifetime1, var8Lifetime1 << 8 | var8Lifetime1 | var8Lifetime1 << 16);
+          }
+        }
+        ia.a((byte) 92);
+        return var10;
     }
 
     final static void a(te param0, boolean param1) {
         if (!param1) {
-            return;
+          return;
         }
         try {
-            bn.field_I.a(param0, (byte) 26);
+          bn.field_I.a(param0, (byte) 26);
         } catch (RuntimeException runtimeException) {
-            throw aa.a((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw aa.a((Throwable) ((Object) runtimeException), "oc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     oc(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 250501985, (16711422 & param6) >> -1947667999);
+        this(param0, param1, param2, param3, param4, param5, param6, (16711422 & param5) >> 1, (16711422 & param6) >> 1);
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        int var5;
-        int var6;
-        int var7;
-        if (param1 == 0) {
-          var5 = 19 % ((param3 - 70) / 49);
-          var6 = this.field_z + param2;
-          var7 = this.field_p + param0;
-          this.a(this.field_P[0], 1177347297, var6, var7);
-          if (65536 > this.field_Q) {
-            hp.a(var6 + (this.field_E * this.field_Q >> -2029193488), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
-            this.a(this.field_P[1], 1177347297, var6, var7);
-            ia.a((byte) 92);
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param1 != 0) {
           return;
         }
+        int var5 = 19 % ((param3 - 70) / 49);
+        int var6 = this.field_z + param2;
+        int var7 = this.field_p + param0;
+        this.a(this.field_P[0], 1177347297, var6, var7);
+        if (65536 <= this.field_Q) {
+          return;
+        }
+        hp.a(var6 + (this.field_E * this.field_Q >> 16), this.field_C + var7, var6 + this.field_E, (byte) -126, var7);
+        this.a(this.field_P[1], 1177347297, var6, var7);
+        ia.a((byte) 92);
     }
 
     final void a(byte param0, int param1, int param2) {
         this.field_Z = param1;
-        this.field_V = (16711422 & param1) >> -1145291679;
-        if (param0 <= 87) {
-          field_O = (ak) null;
+        this.field_V = (16711422 & param1) >> 1;
+        if (param0 > 87) {
           this.field_I = param2;
-          this.field_T = param2 >> -2002775423 & 8355711;
-          this.d((byte) 120);
-          return;
-        } else {
-          this.field_I = param2;
-          this.field_T = param2 >> -2002775423 & 8355711;
+          this.field_T = param2 >> 1 & 8355711;
           this.d((byte) 120);
           return;
         }
+        field_O = (ak) null;
+        this.field_I = param2;
+        this.field_T = param2 >> 1 & 8355711;
+        this.d((byte) 120);
     }
 
     final void a(int param0, int param1, int param2, ng param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (!this.field_Y) {
-                break L1;
-              } else {
-                this.field_R = this.field_R + 1;
-                if (2 * this.field_M < this.field_R) {
-                  this.field_R = this.field_R - this.field_M * 2;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-            }
-            if (param0 == 40) {
-              break L0;
-            } else {
-              this.field_Q = 103;
-              return;
+          if (this.field_Y) {
+            this.field_R = this.field_R + 1;
+            if (2 * this.field_M < this.field_R) {
+              this.field_R = this.field_R - this.field_M * 2;
             }
           }
+          if (param0 == 40) {
+            return;
+          }
+          this.field_Q = 103;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_9_0 = (RuntimeException) (var5);
-
-            stackIn_9_1 = new StringBuilder().append("oc.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-
-            if (param3 == null) {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L2;
-            } else {
-              stackIn_10_0 = (RuntimeException) ((Object) stackIn_9_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_9_0 = var5;
+          stackIn_9_1 = new StringBuilder().append("oc.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_10_0), stackIn_10_2 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -270,210 +181,132 @@ final class oc extends ng {
         super.a(param0, (byte) 94, param2, param3, param4);
         this.d((byte) 96);
         if (param1 < 19) {
-            this.field_M = -109;
+          this.field_M = -109;
         }
     }
 
     private final tf a(int param0, int param1, byte param2) {
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        tf var15;
-        tf var16;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        var13 = Pixelate.field_H ? 1 : 0;
-        if (param2 >= -119) {
-          field_U = (ak) null;
-          var15 = new tf(2 * this.field_M, this.field_C);
-          h.a(-66, var15);
-          var5 = this.field_C >> 1177347297;
-          var6 = 0;
-          L0: while (true) {
-            if (this.field_C <= var6) {
-              ia.a((byte) 92);
-              return var15;
-            } else {
-              L1: {
-                var7 = (2 * this.field_M - 1) * (var6 >> -434876063) % (2 * this.field_M);
-                var8 = 16711935 & param0;
-                var9 = param0 & 65280;
-                var10 = var6 - var5;
-                var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
-                if (256 > var11) {
-                  stackIn_16_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
-                  break L1;
-                } else {
-                  stackIn_16_0 = var9 | var8;
-                  break L1;
-                }
-              }
-              L2: {
-                var12 = stackIn_16_0;
-                t.b(var7, var6, this.field_M, var12);
-                t.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
-                var9 = param1 & 65280;
-                var8 = param1 & 16711935;
-                if (var11 >= 256) {
-                  stackIn_19_0 = var8 | var9;
-                  break L2;
-                } else {
-                  stackIn_19_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
-                  break L2;
-                }
-              }
-              var12 = stackIn_19_0;
-              t.b(this.field_M + var7, var6, this.field_M, var12);
-              t.b(-this.field_M + var7, var6, this.field_M, var12);
-              var6++;
-              continue L0;
-            }
-          }
-        } else {
+        tf var16 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = Pixelate.field_H ? 1 : 0;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime2;
+        int var12Lifetime2;
+        int var8Lifetime1Lifetime1;
+        int var9Lifetime1Lifetime1;
+        int var12Lifetime1Lifetime1;
+        if (param2 < -119) {
           var16 = new tf(2 * this.field_M, this.field_C);
           h.a(-66, var16);
-          var5 = this.field_C >> 1177347297;
-          var6 = 0;
-          L3: while (true) {
-            if (this.field_C <= var6) {
-              ia.a((byte) 92);
-              return var16;
-            } else {
-              L4: {
-                var7 = (2 * this.field_M - 1) * (var6 >> -434876063) % (2 * this.field_M);
-                var8 = 16711935 & param0;
-                var9 = param0 & 65280;
-                var10 = var6 - var5;
-                var11 = 128 - -(int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
-                if (256 > var11) {
-                  stackIn_6_0 = (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 624566664;
-                  break L4;
-                } else {
-                  stackIn_6_0 = var9 | var8;
-                  break L4;
-                }
-              }
-              L5: {
-                var12 = stackIn_6_0;
-                t.b(var7, var6, this.field_M, var12);
-                t.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
-                var9 = param1 & 65280;
-                var8 = param1 & 16711935;
-                if (var11 >= 256) {
-                  stackIn_9_0 = var8 | var9;
-                  break L5;
-                } else {
-                  stackIn_9_0 = (-16711936 & var8 * var11 | 16711680 & var11 * var9) >>> 2054322600;
-                  break L5;
-                }
-              }
-              var12 = stackIn_9_0;
-              t.b(this.field_M + var7, var6, this.field_M, var12);
-              t.b(-this.field_M + var7, var6, this.field_M, var12);
-              var6++;
-              continue L3;
-            }
+          var5 = this.field_C >> 1;
+          for (var6 = 0; this.field_C > var6; var6++) {
+            var7 = (2 * this.field_M - 1) * (var6 >> 1) % (2 * this.field_M);
+            var8 = 16711935 & param0;
+            var9 = param0 & 65280;
+            var10 = var6 - var5;
+            var11 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5));
+            var12 = 256 <= var11 ? var9 | var8 : (-16711936 & var8 * var11 | var9 * var11 & 16711680) >>> 8;
+            t.b(var7, var6, this.field_M, var12);
+            t.b(-(this.field_M * 2) + var7, var6, this.field_M, var12);
+            var9Lifetime2 = param1 & 65280;
+            var8Lifetime2 = param1 & 16711935;
+            var12Lifetime2 = var11 < 256 ? (-16711936 & var8Lifetime2 * var11 | 16711680 & var11 * var9Lifetime2) >>> 8 : var8Lifetime2 | var9Lifetime2;
+            t.b(this.field_M + var7, var6, this.field_M, var12Lifetime2);
+            t.b(-this.field_M + var7, var6, this.field_M, var12Lifetime2);
           }
+          ia.a((byte) 92);
+          return var16;
         }
+        field_U = (ak) null;
+        tf var15 = new tf(2 * this.field_M, this.field_C);
+        h.a(-66, var15);
+        var5Lifetime1 = this.field_C >> 1;
+        for (var6Lifetime1 = 0; this.field_C > var6Lifetime1; var6Lifetime1++) {
+          var7Lifetime1 = (2 * this.field_M - 1) * (var6Lifetime1 >> 1) % (2 * this.field_M);
+          var8Lifetime1 = 16711935 & param0;
+          var9Lifetime1 = param0 & 65280;
+          var10Lifetime1 = var6Lifetime1 - var5Lifetime1;
+          var11Lifetime1 = 128 + (int)(128.0 * (Math.sqrt((double)(-(var10Lifetime1 * var10Lifetime1) + var5Lifetime1 * var5Lifetime1)) / (double)var5Lifetime1));
+          var12Lifetime1 = 256 <= var11Lifetime1 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var8Lifetime1 * var11Lifetime1 | var9Lifetime1 * var11Lifetime1 & 16711680) >>> 8;
+          t.b(var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          t.b(-(this.field_M * 2) + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1);
+          var9Lifetime1Lifetime1 = param1 & 65280;
+          var8Lifetime1Lifetime1 = param1 & 16711935;
+          var12Lifetime1Lifetime1 = var11Lifetime1 < 256 ? (-16711936 & var8Lifetime1Lifetime1 * var11Lifetime1 | 16711680 & var11Lifetime1 * var9Lifetime1Lifetime1) >>> 8 : var8Lifetime1Lifetime1 | var9Lifetime1Lifetime1;
+          t.b(this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+          t.b(-this.field_M + var7Lifetime1, var6Lifetime1, this.field_M, var12Lifetime1Lifetime1);
+        }
+        ia.a((byte) 92);
+        return var15;
     }
 
     private final void a(tf param0, int param1, int param2, int param3) {
+        int var6 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         var8 = Pixelate.field_H ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var5_int = param2 + this.field_E;
-              if (param1 == 1177347297) {
-                break L1;
-              } else {
-                this.field_M = -54;
-                break L1;
-              }
-            }
-            hp.a(this.field_F.field_F + param2, this.field_C + param3, var5_int - this.field_F.field_F, (byte) -112, param3);
-            var6 = param2 - this.field_R;
-            L2: while (true) {
-              if (var5_int <= var6) {
-                L3: {
-                  ia.a((byte) 92);
-                  if (this.field_F.field_F + param2 >= t.field_e) {
-                    h.a(-122, this.field_L);
-                    param0.b(-this.field_R, 0);
-                    param0.b(-this.field_R + this.field_M * 2, 0);
-                    this.field_K.g(0, 0);
-                    ia.a((byte) 92);
-                    this.field_L.b(param2, param3);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if (-this.field_F.field_F + var5_int <= t.field_h) {
-                  h.a(param1 + -1177347371, this.field_L);
-                  var7 = this.field_E - (this.field_F.field_F + -this.field_R);
-                  L4: while (true) {
-                    if (this.field_M * 2 >= var7) {
-                      param0.b(-var7, 0);
-                      param0.b(-var7 + this.field_M * 2, 0);
-                      this.field_F.g(0, 0);
-                      ia.a((byte) 92);
-                      this.field_L.b(-this.field_F.field_F + var5_int, param3);
-                      break L0;
-                    } else {
-                      var7 = var7 - 2 * this.field_M;
-                      continue L4;
-                    }
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                param0.b(var6, param3);
-                var6 = var6 + param0.field_F;
-                continue L2;
-              }
-            }
+          var5_int = param2 + this.field_E;
+          if (param1 != 1177347297) {
+            this.field_M = -54;
           }
+          hp.a(this.field_F.field_F + param2, this.field_C + param3, var5_int - this.field_F.field_F, (byte) -112, param3);
+          for (var6 = param2 - this.field_R; var5_int > var6; var6 = var6 + param0.field_F) {
+            param0.b(var6, param3);
+          }
+          ia.a((byte) 92);
+          if (this.field_F.field_F + param2 >= t.field_e) {
+            h.a(-122, this.field_L);
+            param0.b(-this.field_R, 0);
+            param0.b(-this.field_R + this.field_M * 2, 0);
+            this.field_K.g(0, 0);
+            ia.a((byte) 92);
+            this.field_L.b(param2, param3);
+          }
+          if (-this.field_F.field_F + var5_int > t.field_h) {
+            return;
+          }
+          h.a(param1 - 1177347371, this.field_L);
+          for (var7 = this.field_E - (this.field_F.field_F - this.field_R); this.field_M * 2 < var7; var7 = var7 - 2 * this.field_M) {
+          }
+          param0.b(-var7, 0);
+          param0.b(-var7 + this.field_M * 2, 0);
+          this.field_F.g(0, 0);
+          ia.a((byte) 92);
+          this.field_L.b(-this.field_F.field_F + var5_int, param3);
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var5 = decompiledCaughtException;
-            stackIn_18_0 = (RuntimeException) (var5);
-
-            stackIn_18_1 = new StringBuilder().append("oc.A(");
-
-            if (param0 == null) {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "null";
-              break L5;
-            } else {
-              stackIn_19_0 = (RuntimeException) ((Object) stackIn_18_0);
-              stackIn_19_1 = (StringBuilder) ((Object) stackIn_18_1);
-              stackIn_19_2 = "{...}";
-              break L5;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_18_0 = var5;
+          stackIn_18_1 = new StringBuilder().append("oc.A(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
           }
-          throw aa.a((Throwable) ((Object) stackIn_19_0), stackIn_19_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw aa.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

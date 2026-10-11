@@ -17,33 +17,28 @@ final class bg extends nm {
     int field_i;
 
     final static int a(int param0, int param1, int param2) {
-        if (param1 == 29) {
-          if (-2 == (param2 ^ -1)) {
-            if (!gq.b(param0, -1)) {
-              return rh.field_b[param2];
-            } else {
-              return 29;
-            }
-          } else {
-            return rh.field_b[param2];
-          }
-        } else {
+        if (param1 != 29) {
           bg.a(6);
-          if (-2 == (param2 ^ -1)) {
-            if (gq.b(param0, -1)) {
-              return 29;
-            } else {
-              return rh.field_b[param2];
-            }
-          } else {
+          if (param2 != 1) {
             return rh.field_b[param2];
           }
+          if (gq.b(param0, -1)) {
+            return 29;
+          }
+          return rh.field_b[param2];
         }
+        if (param2 != 1) {
+          return rh.field_b[param2];
+        }
+        if (gq.b(param0, -1)) {
+          return 29;
+        }
+        return rh.field_b[param2];
     }
 
     public static void a(int param0) {
         if (param0 != 6) {
-            return;
+          return;
         }
         field_n = (int[][]) null;
         field_o = null;
@@ -52,44 +47,35 @@ final class bg extends nm {
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        if (param3 > 32) {
-          if (param5 >= param0) {
-            if (param0 + param2 > param5) {
-              if (param6 <= param4) {
-                if (param1 + param6 <= param4) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param3 <= 32) {
           field_r = -47;
-          if (param5 >= param0) {
-            if (param0 + param2 > param5) {
-              if (param6 <= param4) {
-                if (param1 + param6 <= param4) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+          if (param5 < param0) {
             return false;
           }
+          if (param0 + param2 <= param5) {
+            return false;
+          }
+          if (param6 > param4) {
+            return false;
+          }
+          if (param1 + param6 > param4) {
+            return true;
+          }
+          return false;
         }
+        if (param5 < param0) {
+          return false;
+        }
+        if (param0 + param2 <= param5) {
+          return false;
+        }
+        if (param6 > param4) {
+          return false;
+        }
+        if (param1 + param6 > param4) {
+          return true;
+        }
+        return false;
     }
 
     bg() {

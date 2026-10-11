@@ -6,34 +6,30 @@ final class ti {
     static String field_b;
 
     final static String a(byte param0) {
-        int var1;
         if (cb.field_v == wi.field_f) {
           return oa.field_o;
-        } else {
-          if (!uc.field_c.a(-117)) {
-            return uc.field_c.c(-16955);
-          } else {
-            var1 = 76 % ((param0 - -86) / 33);
-            if (wi.field_f == ui.field_kb) {
-              return uc.field_c.c(-16955);
-            } else {
-              return aa.field_s;
-            }
-          }
         }
+        if (!uc.field_c.a(-117)) {
+          return uc.field_c.c(-16955);
+        }
+        int var1 = 76 % ((param0 + 86) / 33);
+        if (wi.field_f != ui.field_kb) {
+          return aa.field_s;
+        }
+        return uc.field_c.c(-16955);
     }
 
     final static boolean b(int param0) {
         if (param0 != 10618) {
-            ti.a((byte) -1);
-            return ma.a(-120, rl.a((byte) -77));
+          ti.a((byte) -1);
+          return ma.a(-120, rl.a((byte) -77));
         }
         return ma.a(-120, rl.a((byte) -77));
     }
 
     public static void a(int param0) {
         if (param0 != -23740) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

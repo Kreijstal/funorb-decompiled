@@ -7,12 +7,12 @@ final class on extends mab {
     private java.awt.Component field_i;
 
     final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
-        int var5 = -11 / ((param2 - -6) / 41);
+        int var5 = -11 / ((param2 + 6) / 41);
         param0.drawImage(this.field_g, param1, param3, (java.awt.image.ImageObserver) ((Object) this.field_i));
     }
 
     final void a(int param0, int param1, java.awt.Component param2, byte param3) {
-        this.field_c = new int[param1 * param0 - -1];
+        this.field_c = new int[param1 * param0 + 1];
         this.field_d = param0;
         this.field_b = param1;
         java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_c, this.field_c.length);

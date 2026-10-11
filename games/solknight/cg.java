@@ -8,10 +8,10 @@ final class cg {
 
     public static void a(int param0) {
         if (param0 != -24856) {
-            cg.a(15);
-            field_b = null;
-            field_a = null;
-            return;
+          cg.a(15);
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

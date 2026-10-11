@@ -14,35 +14,29 @@ abstract class cj extends wj implements cw {
     abstract int m(int param0);
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
-        String var7;
-        L0: {
-          if (-3 != (ov.field_b ^ -1)) {
-            var7 = vo.field_db;
-            break L0;
-          } else {
-            var7 = ds.field_e;
-            break L0;
-          }
-        }
-        if (param4) {
-          cj.a(-38);
-          wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
-          return;
+        String var7 = null;
+        if (ov.field_b == 2) {
+          var7 = ds.field_e;
         } else {
+          var7 = vo.field_db;
+        }
+        if (!param4) {
           wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
           return;
         }
+        cj.a(-38);
+        wb.a(param0, var7, param6, param3, param2, 73, param5, param1);
     }
 
     void a(hl param0, int param1) {
         try {
-            this.field_B = param0;
-            if (param1 != -20274) {
-                cj.a(-16);
-            }
-            this.field_B.field_g = (cj) (this);
+          this.field_B = param0;
+          if (param1 != -20274) {
+            cj.a(-16);
+          }
+          this.field_B.field_g = this;
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "cj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -57,17 +51,17 @@ abstract class cj extends wj implements cw {
         field_F = null;
         field_E = null;
         if (param0 > -88) {
-            cj.k(94);
-            field_D = null;
-            return;
+          cj.k(94);
+          field_D = null;
+          return;
         }
         field_D = null;
     }
 
     final static int k(int param0) {
         if (param0 != 256) {
-            cj.k(38);
-            return 256;
+          cj.k(38);
+          return 256;
         }
         return 256;
     }
@@ -76,7 +70,7 @@ abstract class cj extends wj implements cw {
 
     public final l a(byte param0) {
         if (param0 > -107) {
-            return (l) null;
+          return (l) null;
         }
         return (l) ((Object) this.field_B);
     }

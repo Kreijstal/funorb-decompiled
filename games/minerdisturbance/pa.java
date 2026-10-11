@@ -8,15 +8,15 @@ final class pa {
     static int[][] field_b;
 
     final static ed a(byte param0) {
-        if (!(ic.field_l != mc.field_t)) {
-            throw new IllegalStateException();
+        if (ic.field_l == mc.field_t) {
+          throw new IllegalStateException();
         }
         if (param0 >= -19) {
-            return (ed) null;
+          return (ed) null;
         }
-        if (!(kd.field_p != ic.field_l)) {
-            ic.field_l = mc.field_t;
-            return vk.field_g;
+        if (kd.field_p == ic.field_l) {
+          ic.field_l = mc.field_t;
+          return vk.field_g;
         }
         return null;
     }
@@ -24,21 +24,21 @@ final class pa {
     public static void a(int param0) {
         field_b = (int[][]) null;
         if (param0 != 3) {
-            return;
+          return;
         }
         field_a = null;
     }
 
     final static void a(boolean param0, String param1, float param2) {
         try {
-            bj.field_c = param1;
-            oe.field_d = param2;
-            if (!param0) {
-                String var4 = (String) null;
-                pa.a(false, (String) null, -0.23309962451457977f);
-            }
+          bj.field_c = param1;
+          oe.field_d = param2;
+          if (!param0) {
+            String var4 = (String) null;
+            pa.a(false, (String) null, -0.23309962451457977f);
+          }
         } catch (RuntimeException runtimeException) {
-            throw lj.a((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw lj.a((Throwable) ((Object) runtimeException), "pa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

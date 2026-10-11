@@ -18,14 +18,14 @@ class am extends gn {
         field_m = null;
         field_g = null;
         if (param0 != 13421568) {
-            field_j = (byte[]) null;
+          field_j = (byte[]) null;
         }
         field_j = null;
     }
 
     final long f(byte param0) {
         if (param0 <= 58) {
-            this.field_f = (am) null;
+          this.field_f = (am) null;
         }
         return this.field_l;
     }
@@ -34,33 +34,33 @@ class am extends gn {
     }
 
     final boolean a(byte param0) {
-        if (!(this.field_e != null)) {
-            return false;
+        if (this.field_e == null) {
+          return false;
         }
         if (param0 != -60) {
-            this.f((byte) 24);
-            return true;
+          this.f((byte) 24);
+          return true;
         }
         return true;
     }
 
     final void f(int param0) {
-        if (!(null != this.field_e)) {
-            return;
+        if (null == this.field_e) {
+          return;
         }
         this.field_e.field_f = this.field_f;
         this.field_f.field_e = this.field_e;
         this.field_e = null;
         this.field_f = null;
-        int var2 = 96 % ((param0 - -38) / 33);
+        int var2 = 96 % ((param0 + 38) / 33);
     }
 
     final void a(long param0, byte param1) {
         if (param1 >= -110) {
-            return;
+          return;
         }
-        if (!(this.field_e == null)) {
-            throw new RuntimeException();
+        if (this.field_e != null) {
+          throw new RuntimeException();
         }
         this.field_l = param0;
     }
@@ -69,7 +69,7 @@ class am extends gn {
         int var0 = 0;
         field_j = new byte[4096];
         for (var0 = 0; var0 < 4096; var0++) {
-            field_j[var0] = (byte) 1;
+          field_j[var0] = (byte) 1;
         }
         field_m = "Add <%0> to friend list";
         field_k = -1;

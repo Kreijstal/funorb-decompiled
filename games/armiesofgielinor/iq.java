@@ -17,136 +17,89 @@ final class iq {
     final static boolean a(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_10_0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_14_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (-2 != (param1.length() ^ -1)) {
-              stackIn_3_0 = 0;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              L1: {
-                if (param0 == 30) {
-                  break L1;
-                } else {
-                  iq.c(70);
-                  break L1;
-                }
-              }
-              var2_int = param1.charAt(0);
-              if (!Character.isLowerCase((char) var2_int)) {
-                stackIn_10_0 = 0;
-                decompiledRegionSelector0 = 2;
-                break L0;
-              } else {
-                stackIn_8_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              }
-            }
+          if (param1.length() != 1) {
+            return false;
           }
+          if (param0 != 30) {
+            iq.c(70);
+          }
+          var2_int = param1.charAt(0);
+          if (!Character.isLowerCase((char) var2_int)) {
+            return false;
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var2 = decompiledCaughtException;
-            stackIn_13_0 = (RuntimeException) (var2);
-
-            stackIn_13_1 = new StringBuilder().append("iq.C(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "null";
-              break L2;
-            } else {
-              stackIn_14_0 = (RuntimeException) ((Object) stackIn_13_0);
-              stackIn_14_1 = (StringBuilder) ((Object) stackIn_13_1);
-              stackIn_14_2 = "{...}";
-              break L2;
-            }
-          }
-          throw ig.a((Throwable) ((Object) stackIn_14_0), stackIn_14_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0 != 0;
-        } else {
-          if (decompiledRegionSelector0 == 1) {
-            return stackIn_8_0 != 0;
+          var2 = decompiledCaughtException;
+          stackIn_13_0 = var2;
+          stackIn_13_1 = new StringBuilder().append("iq.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
           } else {
-            return stackIn_10_0 != 0;
+            stackIn_14_2 = "{...}";
           }
+          throw ig.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final void a(int param0) {
-        if (wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(30 + this.field_c, (byte) 94))) {
-          fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, ci.field_e, 0, 0);
-          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);
-          return;
-        } else {
+        if (!wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(30 + this.field_c, (byte) 94))) {
           fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, nd.field_b, 0, 0);
-          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c - -30, (byte) 94), param0, true);
+          fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
           return;
         }
+        fe.a(db.a(true, this.field_f), u.a(this.field_c, (byte) 94), this.field_i, 30, il.field_s, ci.field_e, 0, 0);
+        fe.c(this.field_d, db.a(true, this.field_i / 2 + this.field_f), u.a(this.field_c + 30, (byte) 94), param0, true);
     }
 
     final static void b(int param0) {
-        if (bl.field_b) {
-          it.field_b = true;
-          if (param0 != -20267) {
-            iq.c(56);
-            wc.a(false, -49);
-            p.field_b = 0;
-            return;
-          } else {
-            wc.a(false, -49);
-            p.field_b = 0;
-            return;
-          }
-        } else {
+        if (!bl.field_b) {
           throw new IllegalStateException();
         }
+        it.field_b = true;
+        if (param0 == -20267) {
+          wc.a(false, -49);
+          p.field_b = 0;
+          return;
+        }
+        iq.c(56);
+        wc.a(false, -49);
+        p.field_b = 0;
     }
 
     public static void c(int param0) {
         field_e = null;
-        if (param0 != 0) {
-          field_e = (Random) null;
-          field_a = null;
-          field_g = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_a = null;
           field_g = null;
           field_b = null;
           return;
         }
+        field_e = (Random) null;
+        field_a = null;
+        field_g = null;
+        field_b = null;
     }
 
     iq(String param0, int param1, int param2, int param3) {
         try {
-            this.field_c = param2;
-            this.field_f = param1;
-            this.field_i = param3;
-            this.field_d = param0;
+          this.field_c = param2;
+          this.field_f = param1;
+          this.field_i = param3;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw ig.a((Throwable) ((Object) runtimeException), "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final boolean a(byte param0) {
         int var2 = -106 / ((param0 - 17) / 39);
-        return wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f - -this.field_i), u.a(this.field_c, (byte) 94), u.a(this.field_c + 30, (byte) 94));
+        return wg.a(-33, db.a(true, this.field_f), db.a(true, this.field_f + this.field_i), u.a(this.field_c, (byte) 94), u.a(this.field_c + 30, (byte) 94));
     }
 
     static {

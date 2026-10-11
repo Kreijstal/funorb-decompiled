@@ -10,7 +10,7 @@ final class sq {
         field_a = null;
         field_b = null;
         if (param0 >= -79) {
-            sq.a(62);
+          sq.a(62);
         }
     }
 

@@ -9,24 +9,22 @@ final class bfa {
     static String field_b;
 
     public static void a(int param0) {
-        if (param0 != 17049) {
-          field_b = (String) null;
-          field_c = null;
-          field_b = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 17049) {
           field_c = null;
           field_b = null;
           field_e = null;
           return;
         }
+        field_b = (String) null;
+        field_c = null;
+        field_b = null;
+        field_e = null;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
-            bfa.a(-40);
-            return ((Boolean) (this.field_d)).booleanValue();
+          bfa.a(-40);
+          return ((Boolean) (this.field_d)).booleanValue();
         }
         return ((Boolean) (this.field_d)).booleanValue();
     }
@@ -34,42 +32,33 @@ final class bfa {
     private final long b(int param0) {
         if (this.field_d instanceof Long) {
           return ((Long) (this.field_d)).longValue();
-        } else {
-          if (!(this.field_d instanceof Integer)) {
-            if (!(this.field_d instanceof Short)) {
-              if (!(this.field_d instanceof Byte)) {
-                if (param0 == -18486) {
-                  if (!(this.field_d instanceof Double)) {
-                    if (this.field_d instanceof Float) {
-                      return ((Float) (this.field_d)).longValue();
-                    } else {
-                      throw new ClassCastException();
-                    }
-                  } else {
-                    return ((Double) (this.field_d)).longValue();
-                  }
-                } else {
-                  field_b = (String) null;
-                  if (!(this.field_d instanceof Double)) {
-                    if (this.field_d instanceof Float) {
-                      return ((Float) (this.field_d)).longValue();
-                    } else {
-                      throw new ClassCastException();
-                    }
-                  } else {
-                    return ((Double) (this.field_d)).longValue();
-                  }
-                }
-              } else {
-                return ((Byte) (this.field_d)).longValue();
-              }
-            } else {
-              return ((Short) (this.field_d)).longValue();
-            }
-          } else {
-            return ((Integer) (this.field_d)).longValue();
-          }
         }
+        if (this.field_d instanceof Integer) {
+          return ((Integer) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Short) {
+          return ((Short) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Byte) {
+          return ((Byte) (this.field_d)).longValue();
+        }
+        if (param0 != -18486) {
+          field_b = (String) null;
+          if (this.field_d instanceof Double) {
+            return ((Double) (this.field_d)).longValue();
+          }
+          if (!(this.field_d instanceof Float)) {
+            throw new ClassCastException();
+          }
+          return ((Float) (this.field_d)).longValue();
+        }
+        if (this.field_d instanceof Double) {
+          return ((Double) (this.field_d)).longValue();
+        }
+        if (!(this.field_d instanceof Float)) {
+          throw new ClassCastException();
+        }
+        return ((Float) (this.field_d)).longValue();
     }
 
     bfa(int param0) {
@@ -84,24 +73,22 @@ final class bfa {
 
     public final String toString() {
         if (this.field_a) {
-            return jd.a(this.field_d, 0) + "{" + this.field_d + "}";
+          return jd.a(this.field_d, 0) + "{" + this.field_d + "}";
         }
-        if (!(null != this.field_d)) {
-            return "null";
+        if (null == this.field_d) {
+          return "null";
         }
         return this.field_d.toString();
     }
 
     final int c(int param0) {
-        if (param0 == -178) {
-          if (this.field_d instanceof Integer) {
-            return ((Integer) (this.field_d)).intValue();
-          } else {
-            return (int)this.b(param0 ^ 18564);
-          }
-        } else {
+        if (param0 != -178) {
           return -29;
         }
+        if (!(this.field_d instanceof Integer)) {
+          return (int)this.b(param0 ^ 18564);
+        }
+        return ((Integer) (this.field_d)).intValue();
     }
 
     bfa(boolean param0) {
@@ -126,10 +113,10 @@ final class bfa {
 
     bfa(Object param0) {
         try {
-            this.field_a = false;
-            this.field_d = param0;
+          this.field_a = false;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "bfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "bfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -12,6 +12,7 @@ final class ch implements Runnable {
         int var1_int = 0;
         kta var2 = null;
         int var4 = 0;
+        int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
         Exception var1 = null;
         Throwable var3 = null;
@@ -20,46 +21,28 @@ final class ch implements Runnable {
         var4 = TombRacer.field_G ? 1 : 0;
         this.field_b = true;
         try {
-          L0: {
-            try {
-              L1: {
-                L2: while (true) {
-                  if (this.field_a) {
-                    break L1;
-                  } else {
-                    var1_int = 0;
-                    L3: while (true) {
-                      if (2 <= var1_int) {
-                        vja.a(0, 10L);
-                        var5 = (Object) null;
-                        kla.a(this.field_d, (byte) 50, (Object) null);
-                        continue L2;
-                      } else {
-                        L4: {
-                          var2 = this.field_c[var1_int];
-                          if (var2 == null) {
-                            break L4;
-                          } else {
-                            var2.c();
-                            break L4;
-                          }
-                        }
-                        var1_int++;
-                        continue L3;
-                      }
-                    }
-                  }
+          try {
+            while (!this.field_a) {
+              for (var1_int = 0; 2 > var1_int; var1_int++) {
+                var2 = this.field_c[var1_int];
+                if (var2 != null) {
+                  var2.c();
                 }
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
-              ssa.a((String) null, (byte) 121, (Throwable) ((Object) var1));
-              this.field_b = false;
-              return;
+              vja.a(0, 10L);
+              var5 = (Object) null;
+              kla.a(this.field_d, (byte) 50, (Object) null);
             }
-            break L0;
+            decompiledRegionSelector0 = 0;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var6 = (String) null;
+            ssa.a((String) null, (byte) 121, (Throwable) ((Object) var1));
+            decompiledRegionSelector0 = 1;
+          }
+          if (decompiledRegionSelector0 == 0) {
+          } else {
           }
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

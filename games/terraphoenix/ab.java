@@ -20,15 +20,15 @@ final class ab {
 
     final static int b(int param0) {
         if (param0 != -27737) {
-            return -43;
+          return -43;
         }
         return wf.field_q;
     }
 
     final static String c(int param0) {
         if (param0 != -14700) {
-            ab.c(23);
-            return mk.field_j.e(-1);
+          ab.c(23);
+          return mk.field_j.e(-1);
         }
         return mk.field_j.e(-1);
     }
@@ -39,17 +39,12 @@ final class ab {
         Throwable var3 = null;
         Throwable decompiledCaughtException = null;
         var1 = 23 / ((-57 - param0) / 59);
-        if (null != th.field_g) {
-          var2 = th.field_g;
-          synchronized (var2) {
-            L0: {
-              th.field_g = null;
-              break L0;
-            }
-          }
+        if (null == th.field_g) {
           return;
-        } else {
-          return;
+        }
+        var2 = th.field_g;
+        synchronized (var2) {
+          th.field_g = null;
         }
     }
 
@@ -60,9 +55,7 @@ final class ab {
         field_g = null;
         field_a = null;
         field_j = null;
-        if (param0 != 0) {
-          return;
-        } else {
+        if (param0 == 0) {
           field_e = null;
           field_d = null;
           field_c = null;

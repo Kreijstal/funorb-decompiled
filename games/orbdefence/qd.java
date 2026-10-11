@@ -9,9 +9,9 @@ final class qd {
 
     final static void a(int param0, boolean param1) {
         if (param0 <= 1) {
-            qd.a(-55, true);
-            wj.a(-100, param1, false);
-            return;
+          qd.a(-55, true);
+          wj.a(-100, param1, false);
+          return;
         }
         wj.a(-100, param1, false);
     }
@@ -23,7 +23,7 @@ final class qd {
     final static void a(byte param0) {
         kg.field_j.a(false, new hm());
         if (param0 < 116) {
-            qd.a((byte) -27);
+          qd.a((byte) -27);
         }
     }
 

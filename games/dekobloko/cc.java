@@ -12,16 +12,14 @@ final class cc {
     static String field_e;
 
     final static f a(int param0, byte param1) {
-        f var2;
-        var2 = new f();
+        f var2 = new f();
         rc.field_e.a(var2, 2777);
         gm.b(param0, 65);
-        if (param1 > -81) {
-          field_a = 118;
-          return var2;
-        } else {
+        if (param1 <= -81) {
           return var2;
         }
+        field_a = 118;
+        return var2;
     }
 
     public static void a(byte param0) {
@@ -30,33 +28,31 @@ final class cc {
         field_h = null;
         field_e = null;
         field_b = null;
-        if (param0 != -94) {
-          field_g = (String) null;
-          field_f = (pi[][]) null;
-          return;
-        } else {
+        if (param0 == -94) {
           field_f = (pi[][]) null;
           return;
         }
+        field_g = (String) null;
+        field_f = (pi[][]) null;
     }
 
     final static void a(int param0) {
         kb.field_i = new bk(ui.field_x, tg.field_h, ib.field_nb, ua.field_H, al.field_h, df.field_ab);
         if (param0 != 8) {
-            cc.a((byte) 88);
+          cc.a((byte) 88);
         }
     }
 
     cc(ck[] param0) {
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw dh.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw dh.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = -29 / ((param1 - -69) / 54);
+        int var6 = -29 / ((param1 + 69) / 54);
         vk.a(param4, (byte) 50, this.field_c, param0, param3, param2);
     }
 

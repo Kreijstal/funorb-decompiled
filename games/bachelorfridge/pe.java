@@ -10,34 +10,29 @@ final class pe extends k {
     public static void d(int param0) {
         field_n = null;
         if (param0 >= -18) {
-            field_m = -104;
-            field_l = null;
-            return;
+          field_m = -104;
+          field_l = null;
+          return;
         }
         field_l = null;
     }
 
     final int[] a(int param0, int param1) {
-        int[] var3;
-        int[] var4;
-        var4 = this.field_j.a(param0, -1);
-        var3 = var4;
-        if (param1 == 0) {
+        int[] var4 = this.field_j.a(param0, -1);
+        int[] var3 = var4;
+        if (param1 != 0) {
+          field_n = (String) null;
           if (this.field_j.field_m) {
             bl.a(var4, 0, hh.field_d, tj.field_f[param0]);
             return var4;
-          } else {
-            return var4;
           }
-        } else {
-          field_n = (String) null;
-          if (!this.field_j.field_m) {
-            return var4;
-          } else {
-            bl.a(var4, 0, hh.field_d, tj.field_f[param0]);
-            return var4;
-          }
+          return var4;
         }
+        if (!this.field_j.field_m) {
+          return var4;
+        }
+        bl.a(var4, 0, hh.field_d, tj.field_f[param0]);
+        return var4;
     }
 
     public pe() {
@@ -47,10 +42,10 @@ final class pe extends k {
     final static gi a(Throwable param0, String param1) {
         gi var2 = null;
         if (!(param0 instanceof gi)) {
-            var2 = new gi(param0, param1);
+          var2 = new gi(param0, param1);
         } else {
-            var2 = (gi) ((Object) param0);
-            var2.field_e = var2.field_e + ' ' + param1;
+          var2 = (gi) ((Object) param0);
+          var2.field_e = var2.field_e + ' ' + param1;
         }
         return var2;
     }

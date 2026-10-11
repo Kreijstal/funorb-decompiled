@@ -9,10 +9,10 @@ final class afa {
 
     public static void a(byte param0) {
         if (param0 != 58) {
-            afa.a((byte) 121);
-            field_b = null;
-            field_c = null;
-            return;
+          afa.a((byte) 121);
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;

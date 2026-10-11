@@ -15,86 +15,42 @@ final class jc {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
+        int var7Lifetime1;
+        int var7Lifetime2;
         var8 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              var6_int = wh.field_g.field_d;
-              if (param3 == param4) {
-                param2 = param2 + var6_int;
-                param0 = param0 - var6_int;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              jh.c();
-              if (2 == param5) {
-                param0 = param0 - var6_int;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            gf.e(param1, param2, 8 + param1, param0 + param2);
-            var7 = 0;
-            L3: while (true) {
-              if (var7 >= param0) {
-                L4: {
-                  jh.b();
-                  if (2 == param3) {
-                    ac.field_w.j(param1, -var6_int + param2);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if ((param5 ^ -1) == -3) {
-                    ac.field_w.h(param1, param0 + param2);
-                    break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  if (1 != param3) {
-                    break L6;
-                  } else {
-                    var7 = 0;
-                    L7: while (true) {
-                      if (8 <= var7) {
-                        break L6;
-                      } else {
-                        gf.d(param1, var7 + param2, 8, 0, -(var7 * 24) + 192);
-                        var7++;
-                        continue L7;
-                      }
-                    }
-                  }
-                }
-                if (1 == param5) {
-                  var7 = 0;
-                  L8: while (true) {
-                    if (-9 >= (var7 ^ -1)) {
-                      break L0;
-                    } else {
-                      gf.d(param1, param2 + (param0 - 1) - var7, 8, 0, 192 - var7 * 24);
-                      var7++;
-                      continue L8;
-                    }
-                  }
-                } else {
-                  return;
-                }
-              } else {
-                be.field_o.b(param1, param2 - -var7);
-                var7 = var7 + be.field_o.field_b;
-                continue L3;
-              }
+          var6_int = wh.field_g.field_d;
+          if (param3 == param4) {
+            param2 = param2 + var6_int;
+            param0 = param0 - var6_int;
+          }
+          jh.c();
+          if (2 == param5) {
+            param0 = param0 - var6_int;
+          }
+          gf.e(param1, param2, 8 + param1, param0 + param2);
+          for (var7 = 0; var7 < param0; var7 = var7 + be.field_o.field_b) {
+            be.field_o.b(param1, param2 + var7);
+          }
+          jh.b();
+          if (2 == param3) {
+            ac.field_w.j(param1, -var6_int + param2);
+          }
+          if (param5 == 2) {
+            ac.field_w.h(param1, param0 + param2);
+          }
+          if (1 == param3) {
+            for (var7Lifetime1 = 0; 8 > var7Lifetime1; var7Lifetime1++) {
+              gf.d(param1, var7Lifetime1 + param2, 8, 0, -(var7Lifetime1 * 24) + 192);
             }
           }
+          if (1 != param5) {
+            return;
+          }
+          for (var7Lifetime2 = 0; var7Lifetime2 < 8; var7Lifetime2++) {
+            gf.d(param1, param2 + (param0 - 1) - var7Lifetime2, 8, 0, 192 - var7Lifetime2 * 24);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -103,27 +59,20 @@ final class jc {
     }
 
     final static boolean a(char param0, int param1) {
-        int var2;
-        int stackIn_7_0 = 0;
-        var2 = 82 % ((-4 - param1) / 40);
-        if (param0 != 160) {
-          if (32 != param0) {
-            if (param0 != 95) {
-              if (param0 == 45) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              stackIn_7_0 = 1;
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return true;
-          }
-        } else {
+        int var2 = 82 % ((-4 - param1) / 40);
+        if (param0 == 160) {
           return true;
         }
+        if (32 == param0) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (param0 != 45) {
+          return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {
@@ -133,7 +82,7 @@ final class jc {
         field_b = null;
         field_d = null;
         if (param0 != 0) {
-            field_c = (cn) null;
+          field_c = (cn) null;
         }
     }
 

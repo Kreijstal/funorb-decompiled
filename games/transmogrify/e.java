@@ -48,110 +48,73 @@ final class e {
     short[] field_h;
 
     final void a(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = Transmogrify.field_A ? 1 : 0;
-        if (!this.field_z) {
-          this.field_z = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          if (param0 == 22856) {
-            var5 = -32768;
-            var6 = -32768;
-            var7 = -32768;
-            var8 = 0;
-            L0: while (true) {
-              if (var8 >= this.field_M) {
-                this.field_P = var2;
-                this.field_i = var7;
-                this.field_u = var6;
-                this.field_O = var3;
-                this.field_t = var5;
-                this.field_k = var4;
-                return;
-              } else {
-                L1: {
-                  var9 = this.field_v[var8];
-                  var10 = this.field_d[var8];
-                  if (var10 > var6) {
-                    var6 = var10;
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                L2: {
-                  if (var9 <= var5) {
-                    break L2;
-                  } else {
-                    var5 = var9;
-                    break L2;
-                  }
-                }
-                L3: {
-                  if (var10 >= var3) {
-                    break L3;
-                  } else {
-                    var3 = var10;
-                    break L3;
-                  }
-                }
-                L4: {
-                  var11 = this.field_B[var8];
-                  if (var9 < var2) {
-                    var2 = var9;
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                L5: {
-                  if (var11 >= var4) {
-                    break L5;
-                  } else {
-                    var4 = var11;
-                    break L5;
-                  }
-                }
-                if (var7 < var11) {
-                  var7 = var11;
-                  var8++;
-                  continue L0;
-                } else {
-                  var8++;
-                  continue L0;
-                }
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
+        if (this.field_z) {
           return;
         }
+        this.field_z = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        if (param0 != 22856) {
+          return;
+        }
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_M; var8++) {
+          var9 = this.field_v[var8];
+          var10 = this.field_d[var8];
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var9 > var5) {
+            var5 = var9;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          var11 = this.field_B[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          if (var11 < var4) {
+            var4 = var11;
+          }
+          if (var7 < var11) {
+            var7 = var11;
+          }
+        }
+        this.field_P = var2;
+        this.field_i = var7;
+        this.field_u = var6;
+        this.field_O = var3;
+        this.field_t = var5;
+        this.field_k = var4;
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
         int var6 = Transmogrify.field_A ? 1 : 0;
         int var5 = 0;
         if (param3 >= -126) {
-            this.field_h = (short[]) null;
+          this.field_h = (short[]) null;
         }
         while (this.field_M > var5) {
-            this.field_v[var5] = (short)(this.field_v[var5] + param1);
-            this.field_d[var5] = (short)(this.field_d[var5] + param2);
-            this.field_B[var5] = (short)(this.field_B[var5] + param0);
-            var5++;
+          this.field_v[var5] = (short)(this.field_v[var5] + param1);
+          this.field_d[var5] = (short)(this.field_d[var5] + param2);
+          this.field_B[var5] = (short)(this.field_B[var5] + param0);
+          var5++;
         }
         this.c(10);
     }
@@ -164,7 +127,7 @@ final class e {
         int var6 = v.field_a.get(1);
         int var7 = v.field_a.get(11);
         if (param1 >= -76) {
-            e.a(-53L, (byte) 59);
+          e.a(-53L, (byte) 59);
         }
         int var8 = v.field_a.get(12);
         int var9 = v.field_a.get(13);
@@ -173,7 +136,7 @@ final class e {
 
     public static void b(int param0) {
         if (param0 <= 38) {
-            field_q = (String) null;
+          field_q = (String) null;
         }
         field_q = null;
         field_I = null;
@@ -184,20 +147,20 @@ final class e {
         int var6 = 0;
         int var7 = Transmogrify.field_A ? 1 : 0;
         for (var6 = 0; var6 < this.field_M; var6++) {
-            this.field_v[var6] = (short)(param2 * this.field_v[var6] / param0);
-            this.field_d[var6] = (short)(param3 * this.field_d[var6] / param0);
-            this.field_B[var6] = (short)(this.field_B[var6] * param4 / param0);
+          this.field_v[var6] = (short)(param2 * this.field_v[var6] / param0);
+          this.field_d[var6] = (short)(param3 * this.field_d[var6] / param0);
+          this.field_B[var6] = (short)(this.field_B[var6] * param4 / param0);
         }
         this.c(param1 ^ -22855);
         if (param1 != -22861) {
-            this.c(118);
+          this.c(118);
         }
     }
 
     private final void c(int param0) {
         this.field_z = false;
         if (param0 != 10) {
-            this.c(93);
+          this.c(93);
         }
     }
 

@@ -11,25 +11,17 @@ final class ik {
     final static void a(String param0, int param1, int param2) {
         sa.field_f = param2;
         if (param1 < 10) {
-            return;
+          return;
         }
         try {
-            fm.field_a = dg.field_H;
+          fm.field_a = dg.field_H;
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ik.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          ik.a(75);
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
+        if (param0 == 0) {
           field_a = null;
           field_b = null;
           field_c = null;
@@ -37,16 +29,22 @@ final class ik {
           field_e = null;
           return;
         }
+        ik.a(75);
+        field_a = null;
+        field_b = null;
+        field_c = null;
+        field_d = null;
+        field_e = null;
     }
 
     final static void a(Object[] param0, int param1, int[] param2) {
         if (param1 > -85) {
-            return;
+          return;
         }
         try {
-            uo.a(256, -1 + param2.length, param2, param0, 0);
+          uo.a(256, -1 + param2.length, param2, param0, 0);
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ik.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

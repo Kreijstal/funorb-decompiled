@@ -8,18 +8,16 @@ final class jj {
     static og field_d;
 
     public static void a(int param0) {
-        if (param0 < 109) {
-          field_b = 95;
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 >= 109) {
           field_c = null;
           field_a = null;
           field_d = null;
           return;
         }
+        field_b = 95;
+        field_c = null;
+        field_a = null;
+        field_d = null;
     }
 
     final static boolean b(int param0) {
@@ -29,10 +27,10 @@ final class jj {
 
     final static int c(int param0) {
         if (param0 != 32059) {
-            field_b = -26;
-            return uk.field_e + -hg.field_rb;
+          field_b = -26;
+          return uk.field_e - hg.field_rb;
         }
-        return uk.field_e + -hg.field_rb;
+        return uk.field_e - hg.field_rb;
     }
 
     static {

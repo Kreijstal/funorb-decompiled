@@ -17,8 +17,8 @@ public class qi {
 
     public static File a(boolean param0, String param1) {
         if (!param0) {
-            field_b = (String) null;
-            return qi.a(param1, field_a, 42, field_d);
+          field_b = (String) null;
+          return qi.a(param1, field_a, 42, field_d);
         }
         return qi.a(param1, field_a, 42, field_d);
     }
@@ -26,57 +26,33 @@ public class qi {
     public static void a(int param0, String param1, int param2) {
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          field_d = param1;
-          field_a = param0;
-          if (param2 == 1) {
-            break L0;
-          } else {
-            field_c = (Hashtable) null;
-            break L0;
-          }
+        field_d = param1;
+        field_a = param0;
+        if (param2 != 1) {
+          field_c = (Hashtable) null;
         }
         try {
-          L1: {
-            field_b = System.getProperty("user.home");
-            if (field_b != null) {
-              field_b = field_b + "/";
-              break L1;
-            } else {
-              L2: {
-                field_e = true;
-                if (field_b == null) {
-                  field_b = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return;
-            }
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_b = System.getProperty("user.home");
+          if (field_b == null) {
             field_e = true;
             if (field_b == null) {
               field_b = "~/";
-              break L3;
-            } else {
-              break L3;
             }
+            return;
           }
-          return;
-        }
-        L4: {
+          field_b = field_b + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
           field_e = true;
           if (field_b == null) {
             field_b = "~/";
-            break L4;
-          } else {
-            break L4;
           }
+          return;
+        }
+        field_e = true;
+        if (field_b == null) {
+          field_b = "~/";
         }
     }
 

@@ -31,54 +31,30 @@ public class ai {
         field_c = param1;
         field_a = param0;
         try {
-          L0: {
-            L1: {
-              if (param2 <= -12) {
-                break L1;
-              } else {
-                var4 = (String) null;
-                ai.a((String) null, 107, 50, (String) null);
-                break L1;
-              }
-            }
-            field_b = System.getProperty("user.home");
-            if (null != field_b) {
-              field_b = field_b + "/";
-              break L0;
-            } else {
-              L2: {
-                if (null == field_b) {
-                  field_b = "~/";
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              field_e = true;
-              return;
-            }
+          if (param2 > -12) {
+            var4 = (String) null;
+            ai.a((String) null, 107, 50, (String) null);
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var3 = (Exception) (Object) decompiledCaughtException;
+          field_b = System.getProperty("user.home");
+          if (null == field_b) {
             if (null == field_b) {
               field_b = "~/";
-              break L3;
-            } else {
-              break L3;
             }
+            field_e = true;
+            return;
+          }
+          field_b = field_b + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          if (null == field_b) {
+            field_b = "~/";
           }
           field_e = true;
           return;
         }
-        L4: {
-          if (null == field_b) {
-            field_b = "~/";
-            break L4;
-          } else {
-            break L4;
-          }
+        if (null == field_b) {
+          field_b = "~/";
         }
         field_e = true;
     }

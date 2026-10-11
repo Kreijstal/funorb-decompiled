@@ -15,45 +15,36 @@ public class fd {
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
         field_b = param1;
-        if (param2 >= 124) {
-          field_c = param0;
-          try {
-            L0: {
-              field_e = System.getProperty("user.home");
-              if (null != field_e) {
-                field_e = field_e + "/";
-                break L0;
-              } else {
-                field_d = true;
-                if (field_e != null) {
-                  return;
-                } else {
-                  field_e = "~/";
-                  return;
-                }
-              }
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
-            field_d = true;
-            if (field_e == null) {
-              field_e = "~/";
-              return;
-            } else {
-              return;
-            }
-          }
-          field_d = true;
-          if (field_e == null) {
-            field_e = "~/";
-            return;
-          } else {
-            return;
-          }
-        } else {
+        if (param2 < 124) {
           return;
         }
+        field_c = param0;
+        try {
+          field_e = System.getProperty("user.home");
+          if (null == field_e) {
+            field_d = true;
+            if (field_e != null) {
+              return;
+            }
+            field_e = "~/";
+            return;
+          }
+          field_e = field_e + "/";
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = (Exception) (Object) decompiledCaughtException;
+          field_d = true;
+          if (field_e != null) {
+            return;
+          }
+          field_e = "~/";
+          return;
+        }
+        field_d = true;
+        if (field_e != null) {
+          return;
+        }
+        field_e = "~/";
     }
 
     public static File a(String param0, int param1, String param2, int param3) {
@@ -66,8 +57,8 @@ public class fd {
 
     public static File a(String param0, byte param1) {
         if (param1 != 115) {
-            field_c = (String) null;
-            return fd.a(param0, field_b, field_c, 66);
+          field_c = (String) null;
+          return fd.a(param0, field_b, field_c, 66);
         }
         return fd.a(param0, field_b, field_c, 66);
     }

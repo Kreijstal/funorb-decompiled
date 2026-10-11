@@ -9,17 +9,17 @@ final class dl extends qb {
 
     final static void a(int param0, kc param1) {
         try {
-            ji.a(true);
-            vj.a(param1.field_r, param1.field_l, param1.field_k);
-            int var2_int = -40 % ((param0 - 27) / 52);
+          ji.a(true);
+          vj.a(param1.field_r, param1.field_l, param1.field_k);
+          int var2_int = -40 % ((param0 - 27) / 52);
         } catch (RuntimeException runtimeException) {
-            throw ma.a((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ma.a((Throwable) ((Object) runtimeException), "dl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static boolean d(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         return vg.field_d;
     }
@@ -31,8 +31,8 @@ final class dl extends qb {
     public static void a(int param0) {
         field_j = null;
         if (param0 != 8996) {
-            kc var2 = (kc) null;
-            dl.a(51, (kc) null);
+          kc var2 = (kc) null;
+          dl.a(51, (kc) null);
         }
     }
 

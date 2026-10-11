@@ -7,7 +7,7 @@ final class fe {
 
     final static void a(boolean param0) {
         if (param0) {
-            field_a = true;
+          field_a = true;
         }
     }
 

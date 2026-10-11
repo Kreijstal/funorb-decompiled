@@ -9,80 +9,52 @@ final class vf {
     static String field_d;
 
     public static void a(int param0) {
-        if (param0 != 27067) {
-          field_a = false;
-          field_e = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == 27067) {
           field_e = null;
           field_d = null;
           field_c = null;
           return;
         }
+        field_a = false;
+        field_e = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
+        int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
         int var6 = 0;
         StringBuilder stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = client.field_A ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              var4_int = param0.length();
-              param0.setLength(param2);
-              if (param1 == -23510) {
-                break L1;
-              } else {
-                field_c = (String) null;
-                break L1;
-              }
-            }
-            var5 = var4_int;
-            L2: while (true) {
-              if (param2 <= var5) {
-                stackIn_7_0 = (StringBuilder) (param0);
-                break L0;
-              } else {
-                param0.setCharAt(var5, param3);
-                var5++;
-                continue L2;
-              }
-            }
+          var4_int = param0.length();
+          param0.setLength(param2);
+          if (param1 != -23510) {
+            field_c = (String) null;
           }
+          for (var5 = var4_int; param2 > var5; var5++) {
+            param0.setCharAt(var5, param3);
+          }
+          stackIn_7_0 = (StringBuilder) (param0);
+          return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var4 = decompiledCaughtException;
-            stackIn_10_0 = (RuntimeException) (var4);
-
-            stackIn_10_1 = new StringBuilder().append("vf.B(");
-
-            if (param0 == null) {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "null";
-              break L3;
-            } else {
-              stackIn_11_0 = (RuntimeException) ((Object) stackIn_10_0);
-              stackIn_11_1 = (StringBuilder) ((Object) stackIn_10_1);
-              stackIn_11_2 = "{...}";
-              break L3;
-            }
+          var4 = decompiledCaughtException;
+          stackIn_10_0 = var4;
+          stackIn_10_1 = new StringBuilder().append("vf.B(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
           }
-          throw dh.a((Throwable) ((Object) stackIn_11_0), stackIn_11_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw dh.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
-        return stackIn_7_0;
     }
 
     static {

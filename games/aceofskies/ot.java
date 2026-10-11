@@ -10,66 +10,58 @@ final class ot {
     static int field_a;
 
     private final void c(int param0, int param1) {
-        int[] var3;
-        int[] var4;
-        if (param0 != -1) {
-          this.a((byte) -66);
-          var4 = new int[this.b((byte) -82, param1)];
-          var3 = var4;
-          au.a(this.field_c, 0, var4, 0, this.field_c.length);
-          this.field_c = var4;
-          return;
-        } else {
+        int[] var4 = null;
+        int[] var3 = null;
+        int[] var4Lifetime1;
+        int[] var3Lifetime1;
+        if (param0 == -1) {
           var4 = new int[this.b((byte) -82, param1)];
           var3 = var4;
           au.a(this.field_c, 0, var4, 0, this.field_c.length);
           this.field_c = var4;
           return;
         }
+        this.a((byte) -66);
+        var4Lifetime1 = new int[this.b((byte) -82, param1)];
+        var3Lifetime1 = var4Lifetime1;
+        au.a(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
+        this.field_c = var4Lifetime1;
     }
 
     final void a(int param0, byte param1) {
-        if (param1 == -58) {
-          if ((param0 ^ -1) <= -1) {
-            if (param0 <= this.field_f) {
-              if (this.field_f != param0) {
-                au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
-                this.field_f = this.field_f - 1;
-                return;
-              } else {
-                this.field_f = this.field_f - 1;
-                return;
-              }
-            } else {
-              throw new ArrayIndexOutOfBoundsException(param0);
-            }
-          } else {
-            throw new ArrayIndexOutOfBoundsException(param0);
-          }
-        } else {
+        if (param1 != -58) {
           this.a((byte) 9, 30);
-          if ((param0 ^ -1) <= -1) {
-            if (param0 <= this.field_f) {
-              if (this.field_f != param0) {
-                au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
-                this.field_f = this.field_f - 1;
-                return;
-              } else {
-                this.field_f = this.field_f - 1;
-                return;
-              }
-            } else {
-              throw new ArrayIndexOutOfBoundsException(param0);
-            }
-          } else {
+          if (param0 < 0) {
             throw new ArrayIndexOutOfBoundsException(param0);
           }
+          if (param0 > this.field_f) {
+            throw new ArrayIndexOutOfBoundsException(param0);
+          }
+          if (this.field_f == param0) {
+            this.field_f = this.field_f - 1;
+            return;
+          }
+          au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
+          this.field_f = this.field_f - 1;
+          return;
         }
+        if (param0 < 0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param0 > this.field_f) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (this.field_f == param0) {
+          this.field_f = this.field_f - 1;
+          return;
+        }
+        au.a(this.field_c, 1 + param0, this.field_c, param0, this.field_f - param0);
+        this.field_f = this.field_f - 1;
     }
 
     final static gk a(int param0, int param1) {
         if (param0 > -23) {
-            return (gk) null;
+          return (gk) null;
         }
         return lc.a(true, false, false, (byte) -65, 1, param1);
     }
@@ -77,7 +69,7 @@ final class ot {
     final void a(byte param0, int param1) {
         this.a((byte) -70, this.field_f + 1, param1);
         if (param0 != -50) {
-            this.field_d = -75;
+          this.field_d = -75;
         }
     }
 
@@ -86,33 +78,26 @@ final class ot {
         int var4;
         var4 = AceOfSkies.field_G ? 1 : 0;
         var3 = this.field_c.length;
-        L0: while (true) {
-          if (param1 < var3) {
-            if (param0 >= -35) {
-              return -27;
-            } else {
-              return var3;
-            }
-          } else {
-            if (this.field_e) {
-              if (var3 == 0) {
-                var3 = 1;
-                continue L0;
-              } else {
-                var3 = var3 * this.field_d;
-                continue L0;
-              }
-            } else {
-              var3 = var3 + this.field_d;
-              continue L0;
-            }
+        while (param1 >= var3) {
+          if (!this.field_e) {
+            var3 = var3 + this.field_d;
+            continue;
           }
+          if (var3 == 0) {
+            var3 = 1;
+            continue;
+          }
+          var3 = var3 * this.field_d;
         }
+        if (param0 >= -35) {
+          return -27;
+        }
+        return var3;
     }
 
     public static void b(byte param0) {
         if (param0 > -36) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -122,22 +107,22 @@ final class ot {
     }
 
     private final void a(byte param0, int param1, int param2) {
-        if (!(this.field_f >= param1)) {
-            this.field_f = param1;
+        if (this.field_f < param1) {
+          this.field_f = param1;
         }
-        if (!(param1 < this.field_c.length)) {
-            this.c(-1, param1);
+        if (param1 >= this.field_c.length) {
+          this.c(-1, param1);
         }
-        int var4 = 117 % ((param0 - -31) / 32);
+        int var4 = 117 % ((param0 + 31) / 32);
         this.field_c[param1] = param2;
     }
 
     final int b(int param0, int param1) {
         if (param1 != 1) {
-            return 54;
+          return 54;
         }
-        if (!(this.field_f >= param0)) {
-            throw new ArrayIndexOutOfBoundsException(param0);
+        if (this.field_f < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
         }
         return this.field_c[param0];
     }

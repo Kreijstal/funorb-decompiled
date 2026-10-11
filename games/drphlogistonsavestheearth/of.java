@@ -20,7 +20,7 @@ class of extends uh {
         field_x = null;
         field_u = null;
         if (param0 != 1024) {
-            of.g(47);
+          of.g(47);
         }
     }
 

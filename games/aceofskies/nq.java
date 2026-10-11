@@ -9,7 +9,7 @@ final class nq {
     public static void a(boolean param0) {
         field_b = null;
         if (!param0) {
-            nq.a(false);
+          nq.a(false);
         }
     }
 

@@ -24,7 +24,7 @@ abstract class ce extends ms {
         field_q = null;
         field_o = null;
         if (param0 >= -19) {
-            field_l = (String) null;
+          field_l = (String) null;
         }
     }
 

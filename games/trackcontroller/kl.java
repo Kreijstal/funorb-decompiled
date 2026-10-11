@@ -9,9 +9,9 @@ final class kl {
     public static void a(int param0) {
         field_b = null;
         if (param0 <= 18) {
-            field_b = (String) null;
-            field_a = null;
-            return;
+          field_b = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

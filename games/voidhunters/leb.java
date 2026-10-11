@@ -8,24 +8,24 @@ final class leb extends rqa {
         ml var3 = null;
         ml var4 = null;
         try {
-            param1.a(1, 2, new ml(13));
-            param1.a(1, 3, new ml(13));
-            param1.a(1, 13, new ml(13));
-            param1.a(1, 12, new ml(13));
-            param1.a(1, 7, new ml(25));
-            param1.a(1, 8, new ml(25));
-            param1.a(1, 16, new ml(18));
-            var3 = new ml(29);
-            var3.a(1, 0, new ml(27));
-            param1.a(1, 4, var3);
-            if (param0 >= -77) {
-                field_o = (dja) null;
-            }
-            var4 = new ml(29);
-            var4.a(1, 0, new ml(27));
-            param1.a(1, 11, var4);
+          param1.a(1, 2, new ml(13));
+          param1.a(1, 3, new ml(13));
+          param1.a(1, 13, new ml(13));
+          param1.a(1, 12, new ml(13));
+          param1.a(1, 7, new ml(25));
+          param1.a(1, 8, new ml(25));
+          param1.a(1, 16, new ml(18));
+          var3 = new ml(29);
+          var3.a(1, 0, new ml(27));
+          param1.a(1, 4, var3);
+          if (param0 >= -77) {
+            field_o = (dja) null;
+          }
+          var4 = new ml(29);
+          var4.a(1, 0, new ml(27));
+          param1.a(1, 11, var4);
         } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) ((Object) runtimeException), "leb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw rta.a((Throwable) ((Object) runtimeException), "leb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,47 +35,27 @@ final class leb extends rqa {
         nc stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 < -119) {
-                break L1;
-              } else {
-                var4 = (nc[]) null;
-                this.a((nc[]) null, -56);
-                break L1;
-              }
-            }
-            stackIn_3_0 = new nc(tkb.field_p);
-            break L0;
+          if (param1 >= -119) {
+            var4 = (nc[]) null;
+            this.a((nc[]) null, -56);
           }
+          stackIn_3_0 = new nc(tkb.field_p);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var3);
-
-            stackIn_6_1 = new StringBuilder().append("leb.A(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("leb.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_7_0), stackIn_7_2 + ',' + param1 + ')');
+          throw rta.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     public static void e(byte param0) {

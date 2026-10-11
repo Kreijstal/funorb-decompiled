@@ -12,24 +12,22 @@ abstract class jm {
     static int field_d;
 
     public static void a(int param0) {
-        if (param0 < 21) {
-          jm.a(-62);
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 21) {
           field_b = null;
           field_a = null;
           field_c = null;
           return;
         }
+        jm.a(-62);
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
     final java.net.Socket b(byte param0) throws IOException {
-        int var2 = -124 / ((param0 - -69) / 34);
+        int var2 = -124 / ((param0 + 69) / 34);
         return new java.net.Socket(this.field_e, this.field_f);
     }
 

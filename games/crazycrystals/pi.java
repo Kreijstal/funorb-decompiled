@@ -15,28 +15,25 @@ final class pi extends jb {
 
     public static void a(int param0) {
         if (param0 < 76) {
-            field_o = 112;
-            field_j = null;
-            return;
+          field_o = 112;
+          field_j = null;
+          return;
         }
         field_j = null;
     }
 
     final static java.awt.Container d(int param0) {
-        if (param0 == 0) {
-          if (null != uc.field_d) {
-            return (java.awt.Container) ((Object) uc.field_d);
-          } else {
-            return (java.awt.Container) ((Object) le.b((byte) -20));
-          }
-        } else {
+        if (param0 != 0) {
           pi.a(32, 84);
-          if (null != uc.field_d) {
-            return (java.awt.Container) ((Object) uc.field_d);
-          } else {
+          if (null == uc.field_d) {
             return (java.awt.Container) ((Object) le.b((byte) -20));
           }
+          return (java.awt.Container) ((Object) uc.field_d);
         }
+        if (null == uc.field_d) {
+          return (java.awt.Container) ((Object) le.b((byte) -20));
+        }
+        return (java.awt.Container) ((Object) uc.field_d);
     }
 
     pi() {
@@ -44,7 +41,7 @@ final class pi extends jb {
 
     final static void a(int param0, int param1) {
         ga.p(-1);
-        int var2 = 97 / ((param1 - -34) / 55);
+        int var2 = 97 / ((param1 + 34) / 55);
     }
 
     static {

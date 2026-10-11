@@ -10,7 +10,7 @@ final class uc {
         field_c = null;
         field_a = null;
         if (param0 != -8749) {
-            field_b = '';
+          field_b = '\016';
         }
     }
 

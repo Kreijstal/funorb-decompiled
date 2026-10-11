@@ -12,26 +12,24 @@ final class ra {
     public static void a(boolean param0) {
         field_e = null;
         field_c = null;
-        if (param0) {
-          ra.a(false);
-          field_d = null;
-          field_a = null;
-          field_b = (int[][]) null;
-          field_f = null;
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_a = null;
           field_b = (int[][]) null;
           field_f = null;
           return;
         }
+        ra.a(false);
+        field_d = null;
+        field_a = null;
+        field_b = (int[][]) null;
+        field_f = null;
     }
 
     final static void a(byte param0) {
         re.field_b = false;
         if (param0 != -108) {
-            ra.a((byte) -36);
+          ra.a((byte) -36);
         }
     }
 
@@ -49,12 +47,12 @@ final class ra {
         var5.a(true, param1.field_p);
         var5.d(-1, var4);
         if (param2 > -23) {
-            return;
+          return;
         }
         try {
-            var5.b(var5.field_v + -var4, true);
+          var5.b(var5.field_v - var4, true);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

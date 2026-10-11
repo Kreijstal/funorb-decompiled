@@ -12,7 +12,7 @@ final class rc {
 
     final static String b(boolean param0) {
         if (!param0) {
-            return (String) null;
+          return (String) null;
         }
         return th.field_g;
     }
@@ -23,14 +23,12 @@ final class rc {
         field_g = null;
         field_a = null;
         field_e = null;
-        if (!param0) {
-          rc.b(false);
-          field_f = null;
-          return;
-        } else {
+        if (param0) {
           field_f = null;
           return;
         }
+        rc.b(false);
+        field_f = null;
     }
 
     static {

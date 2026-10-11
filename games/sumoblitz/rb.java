@@ -8,16 +8,15 @@ abstract class rb {
     static hr[] field_a;
 
     final static void a(int param0) {
+        int var4 = 0;
+        int var7 = 0;
         int incrementValue$0 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
         RuntimeException var1 = null;
         int var3 = 0;
-        int var4 = 0;
         float var5 = 0.0f;
         float var6 = 0.0f;
-        int var7 = 0;
         float var8 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
@@ -36,119 +35,82 @@ abstract class rb {
         int var23 = 0;
         var23 = Sumoblitz.field_L ? 1 : 0;
         try {
-          L0: {
-            if (null != jg.field_b) {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            } else {
-              jg.field_b = new int[65536];
-              L1: {
-                var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
-                var3 = 0;
-                if (param0 == -129) {
-                  break L1;
+          if (null != jg.field_b) {
+            return;
+          }
+          jg.field_b = new int[65536];
+          var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
+          var3 = 0;
+          if (param0 != -129) {
+            field_c = (String) null;
+          }
+          for (var4 = 0; var4 < 512; var4++) {
+            var5 = (0.0078125f + (float)(var4 >> 3) / 64.0f) * 360.0f;
+            var6 = 0.0625f + (float)(var4 & 7) / 8.0f;
+            for (var7 = 0; var7 < 128; var7++) {
+              var8 = (float)var7 / 128.0f;
+              var9 = 0.0f;
+              var10 = 0.0f;
+              var11 = 0.0f;
+              var12 = var5 / 60.0f;
+              var13 = (int)var12;
+              var14 = var13 % 6;
+              var15 = var12 - (float)var13;
+              var16 = (-var6 + 1.0f) * var8;
+              var17 = (1.0f - var15 * var6) * var8;
+              var18 = (-((1.0f - var15) * var6) + 1.0f) * var8;
+              if (var14 == 0) {
+                var10 = var18;
+                var9 = var8;
+                var11 = var16;
+              } else {
+                if (1 == var14) {
+                  var9 = var17;
+                  var10 = var8;
+                  var11 = var16;
                 } else {
-                  field_c = (String) null;
-                  break L1;
-                }
-              }
-              var4 = 0;
-              L2: while (true) {
-                if ((var4 ^ -1) <= -513) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var5 = (0.0078125f + (float)(var4 >> -591842621) / 64.0f) * 360.0f;
-                  var6 = 0.0625f + (float)(var4 & 7) / 8.0f;
-                  var7 = 0;
-                  L3: while (true) {
-                    if ((var7 ^ -1) <= -129) {
-                      var4++;
-                      continue L2;
-                    } else {
-                      L4: {
-                        var8 = (float)var7 / 128.0f;
-                        var9 = 0.0f;
-                        var10 = 0.0f;
-                        var11 = 0.0f;
-                        var12 = var5 / 60.0f;
-                        var13 = (int)var12;
-                        var14 = var13 % 6;
-                        var15 = var12 - (float)var13;
-                        var16 = (-var6 + 1.0f) * var8;
-                        var17 = (1.0f - var15 * var6) * var8;
-                        var18 = (-((1.0f - var15) * var6) + 1.0f) * var8;
-                        if (var14 == 0) {
-                          var10 = var18;
+                  if (var14 == 2) {
+                    var9 = var16;
+                    var10 = var8;
+                    var11 = var18;
+                  } else {
+                    if (var14 != 3) {
+                      if (var14 != 4) {
+                        if (5 == var14) {
                           var9 = var8;
-                          var11 = var16;
-                          break L4;
-                        } else {
-                          if (1 == var14) {
-                            var9 = var17;
-                            var10 = var8;
-                            var11 = var16;
-                            break L4;
-                          } else {
-                            if ((var14 ^ -1) == -3) {
-                              var9 = var16;
-                              var10 = var8;
-                              var11 = var18;
-                              break L4;
-                            } else {
-                              if (var14 != 3) {
-                                if (var14 != 4) {
-                                  if (5 != var14) {
-                                    break L4;
-                                  } else {
-                                    var9 = var8;
-                                    var10 = var16;
-                                    var11 = var17;
-                                    break L4;
-                                  }
-                                } else {
-                                  var9 = var18;
-                                  var10 = var16;
-                                  var11 = var8;
-                                  break L4;
-                                }
-                              } else {
-                                var11 = var8;
-                                var10 = var17;
-                                var9 = var16;
-                                break L4;
-                              }
-                            }
-                          }
+                          var10 = var16;
+                          var11 = var17;
                         }
+                      } else {
+                        var9 = var18;
+                        var10 = var16;
+                        var11 = var8;
                       }
-                      var9 = (float)Math.pow((double)var9, var1_double);
-                      var10 = (float)Math.pow((double)var10, var1_double);
-                      var11 = (float)Math.pow((double)var11, var1_double);
-                      var19 = (int)(256.0f * var9);
-                      var20 = (int)(var10 * 256.0f);
-                      var21 = (int)(256.0f * var11);
-                      var22 = (var20 << -436219704) + (var19 << -1030549680) + (-16777216 - -var21);
-                      incrementValue$0 = var3;
-                      var3++;
-                      jg.field_b[incrementValue$0] = var22;
-                      var7++;
-                      continue L3;
+                    } else {
+                      var11 = var8;
+                      var10 = var17;
+                      var9 = var16;
                     }
                   }
                 }
               }
+              var9 = (float)Math.pow((double)var9, var1_double);
+              var10 = (float)Math.pow((double)var10, var1_double);
+              var11 = (float)Math.pow((double)var11, var1_double);
+              var19 = (int)(256.0f * var9);
+              var20 = (int)(var10 * 256.0f);
+              var21 = (int)(256.0f * var11);
+              var22 = (var20 << 8) + (var19 << 16) + (-16777216 + var21);
+              incrementValue$0 = var3;
+              var3++;
+              jg.field_b[incrementValue$0] = var22;
             }
           }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw qo.a((Throwable) ((Object) var1), "rb.K(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -159,7 +121,7 @@ abstract class rb {
         field_d = null;
         field_c = null;
         if (param0 != -45) {
-            field_b = -92;
+          field_b = -92;
         }
     }
 

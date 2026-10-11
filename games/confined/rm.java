@@ -48,23 +48,24 @@ final class rm {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = Confined.field_J ? 1 : 0;
+        int var5Lifetime1;
         for (var5 = 0; this.field_b > var5; var5++) {
-            this.field_x[var5] = (short)(this.field_x[var5] + param3);
-            this.field_v[var5] = (short)(this.field_v[var5] + param0);
-            this.field_F[var5] = (short)(this.field_F[var5] + param1);
+          this.field_x[var5] = (short)(this.field_x[var5] + param3);
+          this.field_v[var5] = (short)(this.field_v[var5] + param0);
+          this.field_F[var5] = (short)(this.field_F[var5] + param1);
         }
-        var5 = 104 % ((67 - param2) / 37);
+        var5Lifetime1 = 104 % ((67 - param2) / 37);
         this.a((byte) 67);
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
@@ -72,103 +73,62 @@ final class rm {
         var12 = Confined.field_J ? 1 : 0;
         if (this.field_p) {
           return;
-        } else {
-          this.field_p = true;
-          var2 = 32767;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= this.field_b) {
-              L1: {
-                this.field_t = var4;
-                if (param0 == 27915) {
-                  break L1;
-                } else {
-                  this.field_m = (short[]) null;
-                  break L1;
-                }
-              }
-              this.field_s = var7;
-              this.field_I = var5;
-              this.field_O = var2;
-              this.field_e = var6;
-              this.field_L = var3;
-              return;
-            } else {
-              L2: {
-                var9 = this.field_x[var8];
-                var10 = this.field_v[var8];
-                if (var9 >= var2) {
-                  break L2;
-                } else {
-                  var2 = var9;
-                  break L2;
-                }
-              }
-              L3: {
-                var11 = this.field_F[var8];
-                if (var10 > var6) {
-                  var6 = var10;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var5 < var9) {
-                  var5 = var9;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (var3 <= var10) {
-                  break L5;
-                } else {
-                  var3 = var10;
-                  break L5;
-                }
-              }
-              L6: {
-                if (var11 < var4) {
-                  var4 = var11;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              if (var7 < var11) {
-                var7 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
+        }
+        this.field_p = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_b; var8++) {
+          var9 = this.field_x[var8];
+          var10 = this.field_v[var8];
+          if (var9 < var2) {
+            var2 = var9;
+          }
+          var11 = this.field_F[var8];
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          if (var11 < var4) {
+            var4 = var11;
+          }
+          if (var7 < var11) {
+            var7 = var11;
           }
         }
+        this.field_t = var4;
+        if (param0 != 27915) {
+          this.field_m = (short[]) null;
+        }
+        this.field_s = var7;
+        this.field_I = var5;
+        this.field_O = var2;
+        this.field_e = var6;
+        this.field_L = var3;
     }
 
     final static void a(String param0, byte param1, String param2) {
         try {
-            bj.a(false, param2, 14451, param0);
-            if (param1 != 38) {
-                field_f = (eg) null;
-            }
+          bj.a(false, param2, 14451, param0);
+          if (param1 != 38) {
+            field_f = (eg) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "rm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw sd.a((Throwable) ((Object) runtimeException), "rm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_f = null;
         field_K = null;
@@ -177,7 +137,7 @@ final class rm {
 
     private final void a(byte param0) {
         if (param0 != 67) {
-            this.a(-14, 92, -74, (byte) 120, -21);
+          this.a(-14, 92, -74, (byte) 120, -21);
         }
         this.field_p = false;
     }
@@ -186,13 +146,13 @@ final class rm {
         int var6 = 0;
         int var7 = Confined.field_J ? 1 : 0;
         for (var6 = 0; this.field_b > var6; var6++) {
-            this.field_x[var6] = (short)(param4 * this.field_x[var6] / param1);
-            this.field_v[var6] = (short)(this.field_v[var6] * param2 / param1);
-            this.field_F[var6] = (short)(param0 * this.field_F[var6] / param1);
+          this.field_x[var6] = (short)(param4 * this.field_x[var6] / param1);
+          this.field_v[var6] = (short)(this.field_v[var6] * param2 / param1);
+          this.field_F[var6] = (short)(param0 * this.field_F[var6] / param1);
         }
         if (param3 != 56) {
-            String var8 = (String) null;
-            rm.a((String) null, (byte) -76, (String) null);
+          String var8 = (String) null;
+          rm.a((String) null, (byte) -76, (String) null);
         }
         this.a((byte) 67);
     }

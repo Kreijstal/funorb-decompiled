@@ -15,15 +15,15 @@ final class ia {
         field_a = null;
         field_d = null;
         if (param0 != 25268) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     final static int a(byte param0) {
         if (param0 < 58) {
-            ia.a((byte) 26);
-            return wc.field_Ob;
+          ia.a((byte) 26);
+          return wc.field_Ob;
         }
         return wc.field_Ob;
     }

@@ -8,54 +8,44 @@ final class tf {
     static String field_b;
 
     final static dd a(int param0, int param1) {
-        if (param0 == -17104) {
-          if (mp.field_V <= 0) {
-            if (!ap.field_w[param1]) {
-              return ua.field_r;
-            } else {
-              return mm.field_j;
-            }
-          } else {
-            return ua.field_r;
-          }
-        } else {
+        if (param0 != -17104) {
           field_a = (tm) null;
-          if (mp.field_V <= 0) {
-            if (!ap.field_w[param1]) {
-              return ua.field_r;
-            } else {
-              return mm.field_j;
-            }
-          } else {
+          if (mp.field_V > 0) {
             return ua.field_r;
           }
+          if (ap.field_w[param1]) {
+            return mm.field_j;
+          }
+          return ua.field_r;
         }
+        if (mp.field_V > 0) {
+          return ua.field_r;
+        }
+        if (ap.field_w[param1]) {
+          return mm.field_j;
+        }
+        return ua.field_r;
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (-14 != (qi.field_a ^ -1)) {
-          if (qi.field_a != 102) {
-            if (param0 == 15585) {
-              if (null != im.field_Ub) {
-                if (!im.field_Ub.a(param2, param1, 85)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            im.field_Ub.f(param0 ^ 30860);
-            return true;
-          }
-        } else {
+        if (qi.field_a == 13) {
           th.b(-1);
           return true;
         }
+        if (qi.field_a == 102) {
+          im.field_Ub.f(param0 ^ 30860);
+          return true;
+        }
+        if (param0 != 15585) {
+          return true;
+        }
+        if (null == im.field_Ub) {
+          return false;
+        }
+        if (im.field_Ub.a(param2, param1, 85)) {
+          return true;
+        }
+        return false;
     }
 
     public final String toString() {

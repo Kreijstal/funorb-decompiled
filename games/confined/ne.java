@@ -17,55 +17,33 @@ final class ne {
     final static void a(int param0) {
         int var1_int = 0;
         int var3 = 0;
-        ce stackIn_9_0 = null;
-        int decompiledRegionSelector0 = 0;
+        ce stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         ce var2 = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          L0: {
-            var1_int = 0;
-            if (param0 == -11) {
-              L1: while (true) {
-                if ((var1_int ^ -1) <= -11) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  if (fb.field_d[var1_int] != null) {
-                    L2: {
-                      if ((ih.field_a & 1 << var1_int) == 0) {
-                        stackIn_9_0 = pn.field_a;
-                        break L2;
-                      } else {
-                        stackIn_9_0 = vg.field_I;
-                        break L2;
-                      }
-                    }
-                    var2 = stackIn_9_0;
-                    var2.c(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 836370724, 16777215, -1);
-                    var1_int++;
-                    continue L1;
-                  } else {
-                    var1_int++;
-                    continue L1;
-                  }
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          var1_int = 0;
+          if (param0 != -11) {
+            return;
           }
+          while (var1_int < 10) {
+            if (fb.field_d[var1_int] != null) {
+              if ((ih.field_a & 1 << var1_int) == 0) {
+                stackIn_10_0 = pn.field_a;
+              } else {
+                stackIn_10_0 = vg.field_I;
+              }
+              var2 = stackIn_10_0;
+              var2.c(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);
+            }
+            var1_int++;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw sd.a((Throwable) ((Object) var1), "ne.B(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 

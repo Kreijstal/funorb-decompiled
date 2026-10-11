@@ -12,173 +12,91 @@ final class ji extends da {
     final void a(lm param0, int param1) {
         rf var3 = null;
         if (!(param0 instanceof rf)) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         if (param1 != -1) {
-            return;
+          return;
         }
         try {
-            var3 = (rf) ((Object) param0);
-            this.field_I.b(var3, false);
-            var3.field_T = true;
-            var3.a(34, (lm) (this));
+          var3 = (rf) (param0);
+          this.field_I.b(var3, false);
+          var3.field_T = true;
+          var3.a(34, (lm) (this));
         } catch (RuntimeException runtimeException) {
-            throw vk.a((Throwable) ((Object) runtimeException), "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw vk.a((Throwable) ((Object) runtimeException), "ji.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         int var7 = DungeonAssault.field_K;
-        if (!(this.field_o == null)) {
-            this.field_o.a((byte) 34, (lm) (this), param1, param3, true);
+        if (this.field_o != null) {
+          this.field_o.a((byte) 34, (lm) (this), param1, param3, true);
         }
         dj var5 = new dj(this.field_I);
         if (param2 != 0) {
-            this.field_I = (md) null;
+          this.field_I = (md) null;
         }
-        lm var6 = (lm) ((Object) var5.b(-1225818257));
+        lm var6 = (lm) (var5.b(-1225818257));
         while (var6 != null) {
-            var6.a(param0, param1 + this.field_q, 0, param3 - -this.field_v);
-            var6 = (lm) ((Object) var5.d(1834857157));
+          var6.a(param0, param1 + this.field_q, 0, param3 + this.field_v);
+          var6 = (lm) (var5.d(1834857157));
         }
     }
 
     final static int a(int param0, boolean param1, int param2) {
         if (param1) {
-            return 48;
+          return 48;
         }
-        return uj.a(ld.field_f, 37, 1 + -param2 + param0) + param2;
+        return uj.a(ld.field_f, 37, 1 - param2 + param0) + param2;
     }
 
     final static boolean a(String param0, int param1) {
+        int var3 = 0;
         String var2 = null;
         Exception var2_ref = null;
         RuntimeException var2_ref2 = null;
-        int var3 = 0;
         int var4 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_25_2 = null;
-        int decompiledRegionSelector0 = 0;
-        int decompiledRegionSelector1 = 0;
         Throwable decompiledCaughtException = null;
         var4 = DungeonAssault.field_K;
         try {
-          L0: {
-            L1: {
-              if (param1 <= -30) {
-                break L1;
-              } else {
-                field_G = (cn) null;
-                break L1;
+          if (param1 > -30) {
+            field_G = (cn) null;
+          }
+          try {
+            if (!qg.field_n.startsWith("win")) {
+              return false;
+            }
+            if (!param0.startsWith("http://") &&
+              !param0.startsWith("https://")) {
+              return false;
+            }
+            var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+            for (var3 = 0; param0.length() > var3; var3++) {
+              if (-1 == var2.indexOf((int) param0.charAt(var3))) {
+                return false;
               }
             }
-            try {
-              L2: {
-                if (qg.field_n.startsWith("win")) {
-                  L3: {
-                    if (param0.startsWith("http://")) {
-                      break L3;
-                    } else {
-                      if (!param0.startsWith("https://")) {
-                        stackIn_10_0 = 0;
-                        decompiledRegionSelector0 = 1;
-                        break L2;
-                      } else {
-                        break L3;
-                      }
-                    }
-                  }
-                  var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                  var3 = 0;
-                  L4: while (true) {
-                    if (param0.length() <= var3) {
-                      Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                      stackIn_19_0 = 1;
-                      decompiledRegionSelector0 = 3;
-                      break L2;
-                    } else {
-                      if (-1 == var2.indexOf((int) param0.charAt(var3))) {
-                        stackIn_16_0 = 0;
-                        decompiledRegionSelector0 = 2;
-                        break L2;
-                      } else {
-                        var3++;
-                        continue L4;
-                      }
-                    }
-                  }
-                } else {
-                  stackIn_5_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L2;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              stackIn_21_0 = 0;
-              return stackIn_21_0 != 0;
-            }
-            if (decompiledRegionSelector0 == 0) {
-              decompiledRegionSelector1 = 0;
-              break L0;
-            } else {
-              if (decompiledRegionSelector0 == 1) {
-                decompiledRegionSelector1 = 1;
-                break L0;
-              } else {
-                if (decompiledRegionSelector0 == 2) {
-                  decompiledRegionSelector1 = 2;
-                  break L0;
-                } else {
-                  decompiledRegionSelector1 = 3;
-                  break L0;
-                }
-              }
-            }
+            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+            return true;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            return false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          L5: {
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_24_0 = (RuntimeException) (var2_ref2);
-
-            stackIn_24_1 = new StringBuilder().append("ji.A(");
-
-            if (param0 == null) {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "null";
-              break L5;
-            } else {
-              stackIn_25_0 = (RuntimeException) ((Object) stackIn_24_0);
-              stackIn_25_1 = (StringBuilder) ((Object) stackIn_24_1);
-              stackIn_25_2 = "{...}";
-              break L5;
-            }
-          }
-          throw vk.a((Throwable) ((Object) stackIn_25_0), stackIn_25_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector1 == 0) {
-          return stackIn_5_0 != 0;
-        } else {
-          if (decompiledRegionSelector1 == 1) {
-            return stackIn_10_0 != 0;
+          var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_24_0 = var2_ref2;
+          stackIn_24_1 = new StringBuilder().append("ji.A(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
           } else {
-            if (decompiledRegionSelector1 == 2) {
-              return stackIn_16_0 != 0;
-            } else {
-              return stackIn_19_0 != 0;
-            }
+            stackIn_25_2 = "{...}";
           }
+          throw vk.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -186,14 +104,14 @@ final class ji extends da {
         int var4 = DungeonAssault.field_K;
         dj var2 = new dj(this.field_I);
         if (!param0) {
-            ji.a(-59, true, -77);
+          ji.a(-59, true, -77);
         }
-        rf var3 = (rf) ((Object) var2.a(-479592473));
+        rf var3 = (rf) (var2.a(-479592473));
         while (var3 != null) {
-            if (!(!var3.f((byte) -90))) {
-                var3.a(false);
-            }
-            var3 = (rf) ((Object) var2.c(17756));
+          if (var3.f((byte) -90)) {
+            var3.a(false);
+          }
+          var3 = (rf) (var2.c(17756));
         }
         this.field_D = (lm) ((Object) this.i(32));
     }
@@ -207,14 +125,14 @@ final class ji extends da {
         int var4 = DungeonAssault.field_K;
         dj var2 = new dj(this.field_I);
         if (param0 != -33) {
-            ji.a(-41, true, -105);
+          ji.a(-41, true, -105);
         }
-        rf var3 = (rf) ((Object) var2.a(-479592473));
+        rf var3 = (rf) (var2.a(-479592473));
         while (var3 != null) {
-            if (var3.i(462)) {
-                var3.a(false);
-            }
-            var3 = (rf) ((Object) var2.c(17756));
+          if (var3.i(462)) {
+            var3.a(false);
+          }
+          var3 = (rf) (var2.c(17756));
         }
     }
 
@@ -223,42 +141,32 @@ final class ji extends da {
         rf var3;
         int var4;
         lm var5;
-        L0: {
-          var4 = DungeonAssault.field_K;
-          if (param0 == 1) {
-            break L0;
-          } else {
-            var5 = (lm) null;
-            this.a((lm) null, 10);
-            break L0;
-          }
+        var4 = DungeonAssault.field_K;
+        if (param0 != 1) {
+          var5 = (lm) null;
+          this.a((lm) null, 10);
         }
         var2 = new dj(this.field_I);
-        var3 = (rf) ((Object) var2.a(-479592473));
-        L1: while (true) {
-          if (var3 != null) {
-            if (!var3.field_T) {
-              var3 = (rf) ((Object) var2.c(param0 + 17755));
-              continue L1;
-            } else {
-              return var3.g(param0 + -20312);
-            }
-          } else {
-            return null;
+        var3 = (rf) (var2.a(-479592473));
+        while (var3 != null) {
+          if (var3.field_T) {
+            return var3.g(param0 - 20312);
           }
+          var3 = (rf) (var2.c(param0 + 17755));
         }
+        return null;
     }
 
     final void h(int param0) {
         int var4 = DungeonAssault.field_K;
         if (param0 != 1) {
-            field_F = (int[]) null;
+          field_F = (int[]) null;
         }
         dj var2 = new dj(this.field_I);
-        rf var3 = (rf) ((Object) var2.a(-479592473));
+        rf var3 = (rf) (var2.a(-479592473));
         while (var3 != null) {
-            var3.field_T = false;
-            var3 = (rf) ((Object) var2.c(param0 ^ 17757));
+          var3.field_T = false;
+          var3 = (rf) (var2.c(param0 ^ 17757));
         }
         this.field_D = null;
     }
@@ -267,7 +175,7 @@ final class ji extends da {
         field_H = null;
         field_G = null;
         if (param0 != -98) {
-            ji.f((byte) -89);
+          ji.f((byte) -89);
         }
         field_F = null;
     }
@@ -277,33 +185,27 @@ final class ji extends da {
         rf var3;
         int var4;
         var4 = DungeonAssault.field_K;
-        if (param0 == 32) {
-          var2 = new dj(this.field_I);
-          var3 = (rf) ((Object) var2.a(-479592473));
-          L0: while (true) {
-            if (var3 != null) {
-              if (!var3.field_T) {
-                var3 = (rf) ((Object) var2.c(17756));
-                continue L0;
-              } else {
-                return var3;
-              }
-            } else {
-              return null;
-            }
-          }
-        } else {
+        if (param0 != 32) {
           return (rf) null;
         }
+        var2 = new dj(this.field_I);
+        var3 = (rf) (var2.a(-479592473));
+        while (var3 != null) {
+          if (var3.field_T) {
+            return var3;
+          }
+          var3 = (rf) (var2.c(17756));
+        }
+        return null;
     }
 
     static {
         int var0 = 0;
         int var1 = 0;
         field_F = new int[32];
-        for (var0 = 0; -33 < (var0 ^ -1); var0++) {
-            var1 = var0 * 1 + 32;
-            field_F[var0] = 65793 * var1;
+        for (var0 = 0; var0 < 32; var0++) {
+          var1 = var0 * 1 + 32;
+          field_F[var0] = 65793 * var1;
         }
         field_H = "You have collected <%0> consecutive bounties";
     }

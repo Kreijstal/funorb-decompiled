@@ -10,23 +10,23 @@ final class ira extends mfb {
 
     final boolean h(byte param0) {
         if (param0 <= 18) {
-            this.a(false);
-            return false;
+          this.a(false);
+          return false;
         }
         return false;
     }
 
     final int b(boolean param0) {
         if (param0) {
-            return 72;
+          return 72;
         }
         return qh.field_J;
     }
 
     final int a(boolean param0) {
         if (param0) {
-            field_b = (lkb) null;
-            return 41;
+          field_b = (lkb) null;
+          return 41;
         }
         return 41;
     }
@@ -38,8 +38,8 @@ final class ira extends mfb {
 
     final int f(byte param0) {
         if (param0 < 0) {
-            field_c = (java.awt.Frame) null;
-            return fja.field_o;
+          field_c = (java.awt.Frame) null;
+          return fja.field_o;
         }
         return fja.field_o;
     }
@@ -53,30 +53,30 @@ final class ira extends mfb {
         field_b = null;
         field_c = null;
         if (param0 != 17036) {
-            String var2 = (String) null;
-            ira.a(25L, (String) null, -89);
+          String var2 = (String) null;
+          ira.a(25L, (String) null, -89);
         }
     }
 
     final int a(int param0) {
         if (param0 != 0) {
-            this.c((byte) -16);
-            return eg.field_o;
+          this.c((byte) -16);
+          return eg.field_o;
         }
         return eg.field_o;
     }
 
     final int g(byte param0) {
         if (param0 > -12) {
-            this.d((byte) -91);
-            return nob.field_p;
+          this.d((byte) -91);
+          return nob.field_p;
         }
         return nob.field_p;
     }
 
     final int k(int param0) {
         if (param0 != 0) {
-            return -72;
+          return -72;
         }
         return 3;
     }
@@ -90,120 +90,69 @@ final class ira extends mfb {
         vu var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_11_0 = 0;
+        boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_15_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var4 = di.a(param1, 0);
-              if (param2 == 41) {
-                break L1;
-              } else {
-                var5 = (String) null;
-                ira.a(1L, (String) null, 31);
-                break L1;
-              }
-            }
-            L2: {
-              if (var4 == null) {
-                break L2;
-              } else {
-                if (null != var4.field_Ab) {
-                  stackIn_6_0 = 1;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  break L2;
-                }
-              }
-            }
-            L3: {
-              L4: {
-                if (null == lqa.field_o) {
-                  break L4;
-                } else {
-                  if (null == pjb.a(param0, true)) {
-                    break L4;
-                  } else {
-                    stackIn_11_0 = 1;
-                    break L3;
-                  }
-                }
-              }
-              stackIn_11_0 = 0;
-              break L3;
-            }
-            decompiledRegionSelector0 = 1;
-            break L0;
+          var4 = di.a(param1, 0);
+          if (param2 != 41) {
+            var5 = (String) null;
+            ira.a(1L, (String) null, 31);
           }
+          if (var4 != null &&
+            null != var4.field_Ab) {
+            return true;
+          }
+          stackIn_11_0 = (null != lqa.field_o) && (null != pjb.a(param0, true));
+          return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var4_ref = decompiledCaughtException;
-            stackIn_14_0 = (RuntimeException) (var4_ref);
-
-            stackIn_14_1 = new StringBuilder().append("ira.G(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "null";
-              break L5;
-            } else {
-              stackIn_15_0 = (RuntimeException) ((Object) stackIn_14_0);
-              stackIn_15_1 = (StringBuilder) ((Object) stackIn_14_1);
-              stackIn_15_2 = "{...}";
-              break L5;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_14_0 = var4_ref;
+          stackIn_14_1 = new StringBuilder().append("ira.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
           }
-          throw rta.a((Throwable) ((Object) stackIn_15_0), stackIn_15_2 + ',' + param2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_6_0 != 0;
-        } else {
-          return stackIn_11_0 != 0;
+          throw rta.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
     final int g(int param0) {
         if (param0 != 2769) {
-            return 6;
+          return 6;
         }
         return uh.field_q;
     }
 
     final boolean h(int param0) {
         if (param0 != -2291) {
-            field_b = (lkb) null;
-            return true;
+          field_b = (lkb) null;
+          return true;
         }
         return true;
     }
 
     final int d(byte param0) {
         if (param0 >= -52) {
-            field_b = (lkb) null;
-            return mqa.field_s;
+          field_b = (lkb) null;
+          return mqa.field_s;
         }
         return mqa.field_s;
     }
 
     final int c(int param0) {
         if (param0 != 0) {
-            return -95;
+          return -95;
         }
         return asa.field_e;
     }
 
     final int a(byte param0) {
-        int var2 = 106 % ((param0 - -48) / 43);
+        int var2 = 106 % ((param0 + 48) / 43);
         return 1;
     }
 

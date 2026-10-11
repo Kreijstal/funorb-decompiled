@@ -8,8 +8,8 @@ final class vm {
 
     final static int a(int param0) {
         if (param0 > -30) {
-            vm.a(-16);
-            return (int)(1000000000L / pj.field_p);
+          vm.a(-16);
+          return (int)(1000000000L / pj.field_p);
         }
         return (int)(1000000000L / pj.field_p);
     }
@@ -17,10 +17,10 @@ final class vm {
     public static void a(byte param0) {
         field_c = null;
         if (param0 < 101) {
-            field_b = (char[]) null;
-            field_b = null;
-            field_a = null;
-            return;
+          field_b = (char[]) null;
+          field_b = null;
+          field_a = null;
+          return;
         }
         field_b = null;
         field_a = null;

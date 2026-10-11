@@ -12,33 +12,30 @@ class bw {
         field_d = null;
         field_a = null;
         if (param0 != 127) {
-            bw.b((byte) 117);
+          bw.b((byte) 117);
         }
     }
 
     final void a(boolean param0) {
-        if (this.field_e != null) {
-          if (param0) {
-            return;
-          } else {
-            this.field_e.field_b = this.field_b;
-            this.field_b.field_e = this.field_e;
-            this.field_e = null;
-            this.field_b = null;
-            return;
-          }
-        } else {
+        if (this.field_e == null) {
+          return;
+        }
+        if (!param0) {
+          this.field_e.field_b = this.field_b;
+          this.field_b.field_e = this.field_e;
+          this.field_e = null;
+          this.field_b = null;
           return;
         }
     }
 
     final boolean a(byte param0) {
-        if (!(null != this.field_e)) {
-            return false;
+        if (null == this.field_e) {
+          return false;
         }
         if (param0 != -106) {
-            field_a = (sna) null;
-            return true;
+          field_a = (sna) null;
+          return true;
         }
         return true;
     }

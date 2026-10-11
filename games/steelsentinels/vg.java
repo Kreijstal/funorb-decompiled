@@ -24,7 +24,7 @@ final class vg extends IOException {
         field_b = null;
         field_e = null;
         if (param0 >= -27) {
-            vg.a(-125);
+          vg.a(-125);
         }
     }
 

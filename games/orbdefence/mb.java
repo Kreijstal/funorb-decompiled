@@ -20,58 +20,37 @@ final class mb {
         int[] var9 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param4) {
-                break L1;
-              } else {
-                field_b = (hg) null;
-                break L1;
-              }
+          if (!param4) {
+            field_b = (hg) null;
+          }
+          while (true) {
+            param0--;
+            if (param0 < 0) {
+              return;
             }
-            L2: while (true) {
-              param0--;
-              if (-1 < (param0 ^ -1)) {
-                break L0;
-              } else {
-                var9 = param2;
-                var5 = var9;
-                var6 = param1;
-                var7 = param3;
-                var9[var6] = (vi.a(16711422, var9[var6]) >> 1079794145) + var7;
-                param1++;
-                continue L2;
-              }
-            }
+            var9 = param2;
+            var5 = var9;
+            var6 = param1;
+            var7 = param3;
+            var9[var6] = (vi.a(16711422, var9[var6]) >> 1) + var7;
+            param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var5_ref = decompiledCaughtException;
-            stackIn_8_0 = (RuntimeException) (var5_ref);
-
-            stackIn_8_1 = new StringBuilder().append("mb.B(").append(param0).append(',').append(param1).append(',');
-
-            if (param2 == null) {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "null";
-              break L3;
-            } else {
-              stackIn_9_0 = (RuntimeException) ((Object) stackIn_8_0);
-              stackIn_9_1 = (StringBuilder) ((Object) stackIn_8_1);
-              stackIn_9_2 = "{...}";
-              break L3;
-            }
+          var5_ref = decompiledCaughtException;
+          stackIn_8_0 = var5_ref;
+          stackIn_8_1 = new StringBuilder().append("mb.B(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
           }
-          throw dd.a((Throwable) ((Object) stackIn_9_0), stackIn_9_2 + ',' + param3 + ',' + param4 + ')');
+          throw dd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

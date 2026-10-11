@@ -17,77 +17,26 @@ final class dh extends qb {
         field_o = null;
         field_g = null;
         if (param0 != -36) {
-            field_m = -63L;
+          field_m = -63L;
         }
     }
 
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4;
         var4 = 0;
-        if (!param0) {
-          if (!param3) {
-            if (param1 > -86) {
-              return (String) null;
-            } else {
-              L0: {
-                if (param2) {
-                  var4++;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return ek.field_a[var4];
-            }
-          } else {
-            var4 += 2;
-            if (param1 > -86) {
-              return (String) null;
-            } else {
-              L1: {
-                if (param2) {
-                  var4++;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              return ek.field_a[var4];
-            }
-          }
-        } else {
+        if (param0) {
           var4 += 4;
-          if (param3) {
-            var4 += 2;
-            if (param1 > -86) {
-              return (String) null;
-            } else {
-              L2: {
-                if (param2) {
-                  var4++;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return ek.field_a[var4];
-            }
-          } else {
-            if (param1 > -86) {
-              return (String) null;
-            } else {
-              L3: {
-                if (param2) {
-                  var4++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return ek.field_a[var4];
-            }
-          }
         }
+        if (param3) {
+          var4 += 2;
+        }
+        if (param1 > -86) {
+          return (String) null;
+        }
+        if (param2) {
+          var4++;
+        }
+        return ek.field_a[var4];
     }
 
     dh(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -103,5 +52,24 @@ final class dh extends qb {
         field_g = "You have 1 unread message!";
         field_m = 0L;
         field_o = "Loading music";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static String $cfr$intArgs$a$feb7e63b59d8(boolean param0, int param1, boolean param2, boolean param3) {
+        int var4;
+        var4 = 0;
+        if (param0) {
+          var4 += 4;
+        }
+        if (param3) {
+          var4 += 2;
+        }
+        if (param1 > -86) {
+          return (String) null;
+        }
+        if (param2) {
+          var4++;
+        }
+        return ek.field_a[var4];
     }
 }

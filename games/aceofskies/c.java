@@ -10,14 +10,12 @@ final class c extends oe {
     private java.awt.Rectangle field_l;
 
     final void a(int param0, int param1, java.awt.Canvas param2, int param3) {
-        java.awt.image.DataBufferInt var5;
-        java.awt.image.DirectColorModel var6;
-        java.awt.image.WritableRaster var7;
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
         this.field_j = param2;
         this.field_l = new java.awt.Rectangle();
-        if (param0 != -12189) {
-          return;
-        } else {
+        if (param0 == -12189) {
           this.field_g = param1;
           this.field_h = param3;
           this.field_e = new int[this.field_g * this.field_h];
@@ -37,7 +35,7 @@ final class c extends oe {
         this.field_l.width = param0;
         param5.setClip((java.awt.Shape) ((Object) this.field_l));
         int var9 = -6 % ((65 - param4) / 59);
-        param5.drawImage(this.field_k, param2 + -param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        param5.drawImage(this.field_k, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_j));
         param5.setClip(this.field_i);
     }
 

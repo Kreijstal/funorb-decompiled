@@ -8,24 +8,22 @@ final class qa {
 
     final static long a(int param0) {
         if (param0 > -103) {
-            return -13L;
+          return -13L;
         }
         return sf.a((byte) -23) - sk.field_c;
     }
 
     final static sl a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7) {
-        sl var8;
-        var8 = new sl(param2, param6, param3, param0, param7, param1);
-        if (param4 != 56) {
-          field_a = (vf) null;
-          tc.field_v.a((byte) -98, var8);
-          fg.a((byte) 5, var8, param5);
-          return var8;
-        } else {
+        sl var8 = new sl(param2, param6, param3, param0, param7, param1);
+        if (param4 == 56) {
           tc.field_v.a((byte) -98, var8);
           fg.a((byte) 5, var8, param5);
           return var8;
         }
+        field_a = (vf) null;
+        tc.field_v.a((byte) -98, var8);
+        fg.a((byte) 5, var8, param5);
+        return var8;
     }
 
     public static void a(byte param0) {
@@ -33,7 +31,7 @@ final class qa {
         field_b = (byte[][]) null;
         field_c = null;
         if (param0 >= -40) {
-            qa.a(-65);
+          qa.a(-65);
         }
     }
 
@@ -43,49 +41,26 @@ final class qa {
         String stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            if (param0 >= 27) {
-              stackIn_4_0 = fl.a((byte) 93, param1, false);
-              decompiledRegionSelector0 = 1;
-              break L0;
-            } else {
-              stackIn_2_0 = (String) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0 >= 27) {
+            stackIn_4_0 = fl.a((byte) 93, param1, false);
+            return stackIn_4_0;
           }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var2 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var2);
-
-            stackIn_7_1 = new StringBuilder().append("qa.D(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("qa.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw lj.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_2_0;
-        } else {
-          return stackIn_4_0;
+          throw lj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

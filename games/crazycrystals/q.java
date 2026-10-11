@@ -8,26 +8,22 @@ final class q {
     static String[] field_c;
 
     final static void a(boolean param0) {
-        if (!param0) {
+        if (param0) {
+          field_b = (dl[]) null;
           if (ph.field_E != null) {
             fq.a(-75, ph.field_E);
             ph.field_E.a(te.field_a, (byte) -92);
             ph.field_E = null;
             return;
-          } else {
-            return;
           }
-        } else {
-          field_b = (dl[]) null;
-          if (ph.field_E == null) {
-            return;
-          } else {
-            fq.a(-75, ph.field_E);
-            ph.field_E.a(te.field_a, (byte) -92);
-            ph.field_E = null;
-            return;
-          }
+          return;
         }
+        if (ph.field_E == null) {
+          return;
+        }
+        fq.a(-75, ph.field_E);
+        ph.field_E.a(te.field_a, (byte) -92);
+        ph.field_E = null;
     }
 
     public static void a(int param0) {
@@ -36,7 +32,7 @@ final class q {
         field_b = null;
         field_c = null;
         if (param0 != -3591) {
-            q.a(18);
+          q.a(18);
         }
     }
 

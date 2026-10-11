@@ -10,39 +10,34 @@ final class gp extends ag {
     rb field_u;
 
     final byte[] a(boolean param0) {
-        if (param0) {
-          if (!this.field_p) {
-            if (this.field_u.field_g < -this.field_z + this.field_u.field_f.length) {
-              throw new RuntimeException();
-            } else {
-              return this.field_u.field_f;
-            }
-          } else {
-            throw new RuntimeException();
-          }
-        } else {
+        if (!param0) {
           return (byte[]) null;
         }
+        if (this.field_p) {
+          throw new RuntimeException();
+        }
+        if (this.field_u.field_g >= -this.field_z + this.field_u.field_f.length) {
+          return this.field_u.field_f;
+        }
+        throw new RuntimeException();
     }
 
     public static void c(byte param0) {
         field_v = null;
         field_y = null;
         if (param0 <= 74) {
-            gp.c((byte) -48);
+          gp.c((byte) -48);
         }
     }
 
     final int e(int param0) {
-        if (null != this.field_u) {
-          if (param0 != 21513) {
-            return 115;
-          } else {
-            return 100 * this.field_u.field_g / (this.field_u.field_f.length + -this.field_z);
-          }
-        } else {
+        if (null == this.field_u) {
           return 0;
         }
+        if (param0 == 21513) {
+          return 100 * this.field_u.field_g / (this.field_u.field_f.length - this.field_z);
+        }
+        return 115;
     }
 
     gp() {

@@ -10,7 +10,7 @@ final class ci {
     public static void a(int param0) {
         field_c = null;
         if (param0 != 64) {
-            ci.a(16);
+          ci.a(16);
         }
     }
 

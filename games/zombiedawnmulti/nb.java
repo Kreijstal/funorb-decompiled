@@ -8,7 +8,7 @@ final class nb {
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 95) {
-            nb.a((byte) -95);
+          nb.a((byte) -95);
         }
     }
 

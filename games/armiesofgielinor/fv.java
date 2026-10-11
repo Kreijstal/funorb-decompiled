@@ -19,11 +19,9 @@ final class fv implements com.ms.directX.IEnumModesCallback {
     }
 
     final void a(int param0, int param1, java.awt.Frame param2, int param3, int param4, boolean param5) {
-        com.ms.awt.WComponentPeer var7;
-        int var8;
-        if (param5) {
-          return;
-        } else {
+        com.ms.awt.WComponentPeer var7 = null;
+        int var8 = 0;
+        if (!param5) {
           param2.setVisible(true);
           var7 = (com.ms.awt.WComponentPeer) null;
           var8 = var7.getHwnd();
@@ -55,20 +53,20 @@ final class fv implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (field_b == null) {
-            field_a = field_a + 4;
+          field_a = field_a + 4;
         } else {
-            fieldTemp$0 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_a;
-            field_a = field_a + 1;
-            field_b[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_a;
+          field_a = field_a + 1;
+          field_b[fieldTemp$3] = param0.refreshRate;
         }
     }
 }

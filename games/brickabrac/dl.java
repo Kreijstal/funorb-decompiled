@@ -17,17 +17,16 @@ abstract class dl {
         field_d = null;
         field_e = null;
         if (param0 != -9125) {
-            field_b = 15;
+          field_b = 15;
         }
     }
 
     final java.net.Socket a(byte param0) throws IOException {
-        if (param0 != -76) {
-          dl.b(53);
-          return new java.net.Socket(this.field_a, this.field_c);
-        } else {
+        if (param0 == -76) {
           return new java.net.Socket(this.field_a, this.field_c);
         }
+        dl.b(53);
+        return new java.net.Socket(this.field_a, this.field_c);
     }
 
     static {

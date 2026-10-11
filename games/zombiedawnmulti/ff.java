@@ -11,70 +11,54 @@ class ff extends qa {
     static String field_t;
 
     final static void f(int param0) {
-        int var1;
-        int var2;
-        var1 = bl.c(-42);
-        if (param0 != -4604) {
-          field_t = (String) null;
+        int var2 = 0;
+        int var1 = bl.c(-42);
+        int var2Lifetime1;
+        if (param0 == -4604) {
           var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
-          up.b(-125);
-          return;
-        } else {
-          var2 = ii.b((byte) -126);
-          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << -1406805983) + var1, var2 - -(ic.field_g << -1130232991), 12018);
+          qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2 + (ic.field_g << 1), 12018);
           up.b(-125);
           return;
         }
+        field_t = (String) null;
+        var2Lifetime1 = ii.b((byte) -126);
+        qf.field_c.a(-ic.field_g + eb.field_M, ch.field_i - e.field_a, (e.field_a << 1) + var1, var2Lifetime1 + (ic.field_g << 1), 12018);
+        up.b(-125);
     }
 
     final void c(byte param0) {
-        if (null != this.field_w) {
-          if (param0 != -70) {
-            ff.f(-48);
-            this.field_w.field_v = this.field_v;
-            this.field_v.field_w = this.field_w;
-            this.field_w = null;
-            this.field_v = null;
-            return;
-          } else {
-            this.field_w.field_v = this.field_v;
-            this.field_v.field_w = this.field_w;
-            this.field_w = null;
-            this.field_v = null;
-            return;
-          }
-        } else {
+        if (null == this.field_w) {
           return;
         }
+        if (param0 == -70) {
+          this.field_w.field_v = this.field_v;
+          this.field_v.field_w = this.field_w;
+          this.field_w = null;
+          this.field_v = null;
+          return;
+        }
+        ff.f(-48);
+        this.field_w.field_v = this.field_v;
+        this.field_v.field_w = this.field_w;
+        this.field_w = null;
+        this.field_v = null;
     }
 
     final static void a(int param0, int param1) {
-        int var2;
+        int var2 = 0;
+        int var2Lifetime1;
         uk.field_S = param0;
-        if (wd.field_L != null) {
-          L0: {
-            wd.field_L.a(param0, (byte) 116);
-            var2 = 8 % ((-28 - param1) / 48);
-            if (ra.field_m != null) {
-              ra.field_m.a(param0, 18813);
-              break L0;
-            } else {
-              break L0;
-            }
+        if (wd.field_L == null) {
+          var2 = 8 % ((-28 - param1) / 48);
+          if (ra.field_m != null) {
+            ra.field_m.a(param0, 18813);
           }
           return;
-        } else {
-          L1: {
-            var2 = 8 % ((-28 - param1) / 48);
-            if (ra.field_m != null) {
-              ra.field_m.a(param0, 18813);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        }
+        wd.field_L.a(param0, (byte) 116);
+        var2Lifetime1 = 8 % ((-28 - param1) / 48);
+        if (ra.field_m != null) {
+          ra.field_m.a(param0, 18813);
         }
     }
 
@@ -88,26 +72,15 @@ class ff extends qa {
         RuntimeException var2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
-            L1: {
-              if (param0 == 126) {
-                break L1;
-              } else {
-                ff.a(-116, -3);
-                break L1;
-              }
-            }
-            var4 = (vg) ((Object) ag.field_i.c(param0 + -74));
-            L2: while (true) {
-              if (var4 == null) {
-                break L0;
-              } else {
-                vi.a(param1, var4, (byte) -123);
-                var4 = (vg) ((Object) ag.field_i.b(6));
-                continue L2;
-              }
-            }
+          if (param0 != 126) {
+            ff.a(-116, -3);
           }
+          var4 = (vg) (ag.field_i.c(param0 - 74));
+          while (var4 != null) {
+            vi.a(param1, var4, (byte) -123);
+            var4 = (vg) (ag.field_i.b(6));
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -120,9 +93,9 @@ class ff extends qa {
         field_u = null;
         field_t = null;
         if (param0 != -1130232991) {
-            field_r = (ca) null;
-            field_r = null;
-            return;
+          field_r = (ca) null;
+          field_r = null;
+          return;
         }
         field_r = null;
     }

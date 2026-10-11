@@ -11,22 +11,22 @@ final class lra extends ora implements va {
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
         try {
-            this.a(param3, param1);
-            if (param2 > -109) {
-                this.b(-37);
-            }
-            this.field_h = param0;
+          this.a(param3, param1);
+          if (param2 > -109) {
+            this.b(-37);
+          }
+          this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "lra.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "lra.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     lra(cka param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
         try {
-            this.field_h = param1;
+          this.field_h = param1;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "lra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "lra.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -37,8 +37,8 @@ final class lra extends ora implements va {
 
     public final int a(boolean param0) {
         if (!param0) {
-            this.a(-89);
-            return 0;
+          this.a(-89);
+          return 0;
         }
         return 0;
     }
@@ -48,14 +48,14 @@ final class lra extends ora implements va {
         field_c = null;
         field_e = null;
         if (param0 != 18168) {
-            lra.c(16);
+          lra.c(16);
         }
     }
 
     public final int a(int param0) {
         if (param0 != 26653) {
-            field_g = 30;
-            return this.field_h;
+          field_g = 30;
+          return this.field_h;
         }
         return this.field_h;
     }

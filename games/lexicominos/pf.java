@@ -10,11 +10,11 @@ final class pf extends fk {
 
     public static void c(boolean param0) {
         if (param0) {
-            pf.c(false);
-            field_l = null;
-            field_n = null;
-            field_k = null;
-            return;
+          pf.c(false);
+          field_l = null;
+          field_n = null;
+          field_k = null;
+          return;
         }
         field_l = null;
         field_n = null;
@@ -27,8 +27,8 @@ final class pf extends fk {
 
     final bj a(byte param0) {
         if (param0 != 45) {
-            pf.c(true);
-            return jf.field_L;
+          pf.c(true);
+          return jf.field_L;
         }
         return jf.field_L;
     }

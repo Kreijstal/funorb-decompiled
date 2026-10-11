@@ -7,22 +7,12 @@ final class ac implements com.ms.directX.IEnumModesCallback {
     private static int field_c;
 
     final int[] a(int param0) {
-        int[] var2;
-        java.awt.Frame var3;
-        int[] var4;
+        int[] var4 = null;
+        int[] var2 = null;
+        int[] var4Lifetime1;
+        int[] var2Lifetime1;
         this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        if (param0 != -7581) {
-          var3 = (java.awt.Frame) null;
-          this.a((java.awt.Frame) null, 39);
-          field_a = new int[field_c];
-          field_c = 0;
-          this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-          var4 = field_a;
-          var2 = var4;
-          field_a = null;
-          field_c = 0;
-          return var4;
-        } else {
+        if (param0 == -7581) {
           field_a = new int[field_c];
           field_c = 0;
           this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
@@ -32,12 +22,22 @@ final class ac implements com.ms.directX.IEnumModesCallback {
           field_c = 0;
           return var4;
         }
+        java.awt.Frame var3 = (java.awt.Frame) null;
+        this.a((java.awt.Frame) null, 39);
+        field_a = new int[field_c];
+        field_c = 0;
+        this.field_b.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+        var4Lifetime1 = field_a;
+        var2Lifetime1 = var4Lifetime1;
+        field_a = null;
+        field_c = 0;
+        return var4Lifetime1;
     }
 
     final void a(java.awt.Frame param0, int param1) {
         this.field_b.restoreDisplayMode();
         if (param1 <= 94) {
-            return;
+          return;
         }
         this.field_b.setCooperativeLevel((java.awt.Component) ((Object) param0), 8);
     }
@@ -53,20 +53,20 @@ final class ac implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         if (null == field_a) {
-            field_c = field_c + 4;
+          field_c = field_c + 4;
         } else {
-            fieldTemp$0 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$0] = param0.width;
-            fieldTemp$1 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$1] = param0.height;
-            fieldTemp$2 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$2] = param0.rgbBitCount;
-            fieldTemp$3 = field_c;
-            field_c = field_c + 1;
-            field_a[fieldTemp$3] = param0.refreshRate;
+          fieldTemp$0 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$0] = param0.width;
+          fieldTemp$1 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$1] = param0.height;
+          fieldTemp$2 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$2] = param0.rgbBitCount;
+          fieldTemp$3 = field_c;
+          field_c = field_c + 1;
+          field_a[fieldTemp$3] = param0.refreshRate;
         }
     }
 

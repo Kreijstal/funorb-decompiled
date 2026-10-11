@@ -18,346 +18,135 @@ final class vd {
         fh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_7_2 = null;
         StringBuilder stackIn_9_1 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_13_2 = null;
         StringBuilder stackIn_15_1 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              var5_int = param2.a(param1, 45);
-              if (param3 == -1) {
-                break L1;
-              } else {
-                vd.a((byte) 19);
-                break L1;
-              }
-            }
-            var6 = param2.a(var5_int, -32759, param4);
-            stackIn_3_0 = dh.a(var5_int, var6, param2, (byte) 126, param0);
-            break L0;
+          var5_int = param2.a(param1, 45);
+          if (param3 != -1) {
+            vd.a((byte) 19);
           }
+          var6 = param2.a(var5_int, -32759, param4);
+          stackIn_3_0 = dh.a(var5_int, var6, param2, (byte) 126, param0);
+          return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var5 = decompiledCaughtException;
-            stackIn_6_0 = (RuntimeException) (var5);
-
-            stackIn_6_1 = new StringBuilder().append("vd.C(");
-
-            if (param0 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "null";
-              break L2;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_6_0);
-              stackIn_7_1 = (StringBuilder) ((Object) stackIn_6_1);
-              stackIn_7_2 = "{...}";
-              break L2;
-            }
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("vd.C(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
           }
-          L3: {
-
-
-            stackIn_9_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(',');
-
-            if (param1 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "null";
-              break L3;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_10_1 = (StringBuilder) ((Object) stackIn_9_1);
-              stackIn_10_2 = "{...}";
-              break L3;
-            }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
           }
-          L4: {
-
-
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(',');
-
-            if (param2 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "null";
-              break L4;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_13_1 = (StringBuilder) ((Object) stackIn_12_1);
-              stackIn_13_2 = "{...}";
-              break L4;
-            }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param2 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
           }
-          L5: {
-
-
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(',').append(param3).append(',');
-
-            if (param4 == null) {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L5;
-            } else {
-              stackIn_7_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L5;
-            }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_7_0), stackIn_16_2 + ')');
+          throw ci.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
-        return stackIn_3_0;
     }
 
     final static void a(byte param0) {
         int var2;
         var2 = SteelSentinels.field_G;
-        if (-1 > (je.field_t ^ -1)) {
+        boolean decompiledFrameRemainder0 = true;
+        if (je.field_t > 0) {
           je.field_t = je.field_t - 1;
-          if (-1 <= (je.field_t ^ -1)) {
-            L0: {
+        } else {
+          if (bd.field_c > 0) {
+            bd.field_c = bd.field_c - 1;
+            if (je.field_t <= 0) {
               if (0 < bd.field_c) {
-                vb.a((byte) 112, bd.field_c);
-                break L0;
-              } else {
-                break L0;
+                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
               }
-            }
-            if (0 >= fj.field_f) {
-              if (param0 == 63) {
-                return;
-              } else {
-                vd.b((byte) 112);
-                return;
+              if (0 < fj.field_f) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             } else {
-              vb.a((byte) 84, fj.field_f);
-              if (param0 == 63) {
-                return;
-              } else {
-                vd.b((byte) 112);
-                return;
-              }
-            }
-          } else {
-            L1: {
               bh.a(0);
               if (0 < bd.field_c) {
-                vb.a((byte) 112, bd.field_c);
-                break L1;
-              } else {
-                break L1;
+                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+              }
+              decompiledFrameRemainder0 = !(0 >= fj.field_f);
+              if (decompiledFrameRemainder0) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             }
-            if (0 >= fj.field_f) {
-              if (param0 == 63) {
-                return;
-              } else {
-                vd.b((byte) 112);
-                return;
-              }
-            } else {
-              vb.a((byte) 84, fj.field_f);
+            if (decompiledFrameRemainder0) {
               if (param0 != 63) {
                 vd.b((byte) 112);
-                return;
-              } else {
-                return;
               }
+              return;
             }
           }
-        } else {
-          if (-1 <= (bd.field_c ^ -1)) {
-            if (fj.field_f <= 0) {
-              if (-1 <= (je.field_t ^ -1)) {
-                L2: {
-                  if (0 < bd.field_c) {
-                    vb.a((byte) 112, bd.field_c);
-                    break L2;
-                  } else {
-                    break L2;
-                  }
-                }
-                if (0 >= fj.field_f) {
-                  if (param0 == 63) {
-                    return;
-                  } else {
-                    vd.b((byte) 112);
-                    return;
-                  }
-                } else {
-                  vb.a((byte) 84, fj.field_f);
-                  if (param0 == 63) {
-                    return;
-                  } else {
-                    vd.b((byte) 112);
-                    return;
-                  }
-                }
-              } else {
-                L3: {
-                  bh.a(0);
-                  if (0 < bd.field_c) {
-                    vb.a((byte) 112, bd.field_c);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                if (0 >= fj.field_f) {
-                  if (param0 == 63) {
-                    return;
-                  } else {
-                    vd.b((byte) 112);
-                    return;
-                  }
-                } else {
-                  vb.a((byte) 84, fj.field_f);
-                  if (param0 == 63) {
-                    return;
-                  } else {
-                    vd.b((byte) 112);
-                    return;
-                  }
-                }
+          if ((decompiledFrameRemainder0) &&
+            (fj.field_f > 0)) {
+            fj.field_f = fj.field_f - 1;
+            if (je.field_t > 0) {
+              bh.a(0);
+              if (0 < bd.field_c) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+              }
+              if (0 < fj.field_f) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             } else {
-              fj.field_f = fj.field_f - 1;
-              if (-1 <= (je.field_t ^ -1)) {
-                L4: {
-                  if (0 < bd.field_c) {
-                    vb.a((byte) 112, bd.field_c);
-                    break L4;
-                  } else {
-                    break L4;
-                  }
-                }
-                if (0 >= fj.field_f) {
-                  if (param0 != 63) {
-                    vd.b((byte) 112);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  L5: {
-                    vb.a((byte) 84, fj.field_f);
-                    if (param0 == 63) {
-                      break L5;
-                    } else {
-                      vd.b((byte) 112);
-                      break L5;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L6: {
-                  bh.a(0);
-                  if (0 < bd.field_c) {
-                    vb.a((byte) 112, bd.field_c);
-                    break L6;
-                  } else {
-                    break L6;
-                  }
-                }
-                L7: {
-                  if (0 >= fj.field_f) {
-                    break L7;
-                  } else {
-                    vb.a((byte) 84, fj.field_f);
-                    break L7;
-                  }
-                }
-                L8: {
-                  if (param0 == 63) {
-                    break L8;
-                  } else {
-                    vd.b((byte) 112);
-                    break L8;
-                  }
-                }
-                return;
+              if (0 < bd.field_c) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+              }
+              decompiledFrameRemainder0 = !(0 >= fj.field_f);
+              if (decompiledFrameRemainder0) {
+                vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
               }
             }
-          } else {
-            bd.field_c = bd.field_c - 1;
-            if (-1 > (je.field_t ^ -1)) {
-              L9: {
-                bh.a(0);
-                if (0 < bd.field_c) {
-                  vb.a((byte) 112, bd.field_c);
-                  break L9;
-                } else {
-                  break L9;
-                }
-              }
-              if (0 >= fj.field_f) {
-                if (param0 == 63) {
-                  return;
-                } else {
-                  vd.b((byte) 112);
-                  return;
-                }
-              } else {
-                L10: {
-                  vb.a((byte) 84, fj.field_f);
-                  if (param0 == 63) {
-                    break L10;
-                  } else {
-                    vd.b((byte) 112);
-                    break L10;
-                  }
-                }
-                return;
-              }
-            } else {
-              L11: {
-                if (0 < bd.field_c) {
-                  vb.a((byte) 112, bd.field_c);
-                  break L11;
-                } else {
-                  break L11;
-                }
-              }
-              L12: {
-                if (0 >= fj.field_f) {
-                  break L12;
-                } else {
-                  vb.a((byte) 84, fj.field_f);
-                  break L12;
-                }
-              }
-              L13: {
-                if (param0 == 63) {
-                  break L13;
-                } else {
-                  vd.b((byte) 112);
-                  break L13;
-                }
+            if (decompiledFrameRemainder0) {
+              if (param0 != 63) {
+                vd.b((byte) 112);
               }
               return;
             }
           }
         }
+        if (decompiledFrameRemainder0) {
+          if (je.field_t > 0) {
+            bh.a(0);
+          }
+          if (0 < bd.field_c) {
+            vb.$cfr$intArgs$a$e9dea5688aa5(112, bd.field_c);
+          }
+          if (0 < fj.field_f) {
+            vb.$cfr$intArgs$a$e9dea5688aa5(84, fj.field_f);
+          }
+        }
+        if (param0 == 63) {
+          return;
+        }
+        vd.b((byte) 112);
     }
 
     public static void b(byte param0) {
         if (param0 != 56) {
-            return;
+          return;
         }
         field_a = null;
         field_d = null;

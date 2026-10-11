@@ -8,18 +8,13 @@ public class IUnknown extends jaclib.peer.Peer {
         RuntimeException var2;
         if (param0 == -22671) {
           return super.a();
-        } else {
-          return -115L;
         }
+        return -115L;
     }
 
     public final native long AddRef();
 
     protected IUnknown(jaclib.peer.pf param0) {
-        try {
-            this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.IUnknownReference((jaclib.peer.IUnknown) (this), param0));
-        } catch (RuntimeException runtimeException) {
-            throw runtimeException;
-        }
+        this.reference = (jaclib.peer.PeerReference) ((Object) new jaclib.peer.IUnknownReference(this, param0));
     }
 }

@@ -10,75 +10,37 @@ final class qf {
     static ge[] field_e;
 
     final static boolean a(int param0, String param1) {
-        int var2_int = 0;
         int var3 = 0;
+        int var2_int = 0;
         int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_16_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          L0: {
-            var2_int = param1.charAt(0);
-            var3 = 1;
-            L1: while (true) {
-              if (var3 >= param1.length()) {
-                L2: {
-                  if (param0 == -8503) {
-                    break L2;
-                  } else {
-                    qf.a((byte) 86);
-                    break L2;
-                  }
-                }
-                stackIn_12_0 = 1;
-                decompiledRegionSelector0 = 1;
-                break L0;
-              } else {
-                if (var2_int != param1.charAt(var3)) {
-                  stackIn_7_0 = 0;
-                  decompiledRegionSelector0 = 0;
-                  break L0;
-                } else {
-                  var3++;
-                  continue L1;
-                }
-              }
+          var2_int = param1.charAt(0);
+          for (var3 = 1; var3 < param1.length(); var3++) {
+            if (var2_int != param1.charAt(var3)) {
+              return false;
             }
           }
+          if (param0 != -8503) {
+            qf.a((byte) 86);
+          }
+          return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L3: {
-            var2 = decompiledCaughtException;
-            stackIn_15_0 = (RuntimeException) (var2);
-
-            stackIn_15_1 = new StringBuilder().append("qf.A(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "null";
-              break L3;
-            } else {
-              stackIn_16_0 = (RuntimeException) ((Object) stackIn_15_0);
-              stackIn_16_1 = (StringBuilder) ((Object) stackIn_15_1);
-              stackIn_16_2 = "{...}";
-              break L3;
-            }
+          var2 = decompiledCaughtException;
+          stackIn_15_0 = var2;
+          stackIn_15_1 = new StringBuilder().append("qf.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), stackIn_16_2 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_7_0 != 0;
-        } else {
-          return stackIn_12_0 != 0;
+          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -86,7 +48,7 @@ final class qf {
         field_d = null;
         field_c = null;
         if (param0 != 75) {
-            return;
+          return;
         }
         field_e = null;
         field_a = null;
@@ -97,13 +59,13 @@ final class qf {
         int var4 = 126 % ((40 - param0) / 33);
         int var5 = 0;
         if (param1) {
-            var5 += 4;
+          var5 += 4;
         }
         if (param2) {
-            var5 += 2;
+          var5 += 2;
         }
         if (param3) {
-            var5++;
+          var5++;
         }
         return tf.field_z[var5];
     }
@@ -113,5 +75,21 @@ final class qf {
         field_d = "The account name you use to access RuneScape and other Jagex.com games";
         field_e = null;
         field_f = 0;
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static String $cfr$intArgs$a$c7de0d339b2a(int param0, boolean param1, boolean param2, boolean param3) {
+        int var4 = 126 % ((40 - param0) / 33);
+        int var5 = 0;
+        if (param1) {
+          var5 += 4;
+        }
+        if (param2) {
+          var5 += 2;
+        }
+        if (param3) {
+          var5++;
+        }
+        return tf.field_z[var5];
     }
 }

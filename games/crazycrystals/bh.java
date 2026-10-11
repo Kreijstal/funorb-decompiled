@@ -10,53 +10,34 @@ final class bh {
     static String field_a;
 
     final int a(int param0, int param1) {
-        int var3;
+        int var3 = 0;
         int var4;
-        L0: {
-          var4 = CrazyCrystals.field_B;
-          if (param0 <= -32) {
-            break L0;
-          } else {
-            this.b(-83);
-            break L0;
-          }
+        var4 = CrazyCrystals.field_B;
+        if (param0 > -32) {
+          this.b(-83);
         }
-        L1: {
-          if (null == this.field_e) {
-            break L1;
-          } else {
-            if (this.field_e.length == 0) {
-              break L1;
-            } else {
-              var3 = 1;
-              L2: while (true) {
-                if (var3 >= this.field_e.length) {
-                  return this.field_e.length - 1;
-                } else {
-                  if (this.field_e[-1 + var3] - -this.field_e[var3] >> -2051005375 > param1) {
-                    return var3 - 1;
-                  } else {
-                    var3++;
-                    continue L2;
-                  }
-                }
-              }
+        if (null != this.field_e &&
+          this.field_e.length != 0) {
+          for (var3 = 1; var3 < this.field_e.length; var3++) {
+            if (this.field_e[-1 + var3] + this.field_e[var3] >> 1 > param1) {
+              return var3 - 1;
             }
           }
+          return this.field_e.length - 1;
         }
         return 0;
     }
 
     final static boolean a(byte param0) {
         if (param0 != 78) {
-            return false;
+          return false;
         }
         return qh.field_f;
     }
 
     public static void a(int param0) {
         if (param0 != -1) {
-            field_c = 3;
+          field_c = 3;
         }
         field_d = null;
         field_a = null;
@@ -64,29 +45,14 @@ final class bh {
 
     final int b(int param0) {
         int stackIn_7_0 = 0;
-        L0: {
-          if (param0 == -2288) {
-            break L0;
-          } else {
-            this.a(-44, -4);
-            break L0;
-          }
+        if (param0 != -2288) {
+          this.a(-44, -4);
         }
-        L1: {
-          L2: {
-            if (null == this.field_e) {
-              break L2;
-            } else {
-              if (this.field_e.length != 0) {
-                stackIn_7_0 = this.field_e[this.field_e.length + -1];
-                break L1;
-              } else {
-                break L2;
-              }
-            }
-          }
+        if (null != this.field_e &&
+          this.field_e.length != 0) {
+          stackIn_7_0 = this.field_e[this.field_e.length - 1];
+        } else {
           stackIn_7_0 = 0;
-          break L1;
         }
         return stackIn_7_0;
     }

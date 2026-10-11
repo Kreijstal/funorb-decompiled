@@ -8,34 +8,29 @@ final class hp {
     static cf[] field_c;
 
     final static void a(int param0, byte param1) {
-        wj var2;
-        var2 = ac.field_B;
+        wj var2 = ac.field_B;
         var2.d((byte) -88, param0);
-        if (param1 <= 66) {
-          field_a = (String) null;
-          var2.a(6, 1);
-          var2.a(6, 0);
-          return;
-        } else {
+        if (param1 > 66) {
           var2.a(6, 1);
           var2.a(6, 0);
           return;
         }
+        field_a = (String) null;
+        var2.a(6, 1);
+        var2.a(6, 0);
     }
 
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != 35) {
-          field_d = (String) null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
+        if (param0 == 35) {
           field_a = null;
           field_b = null;
           return;
         }
+        field_d = (String) null;
+        field_a = null;
+        field_b = null;
     }
 
     static {

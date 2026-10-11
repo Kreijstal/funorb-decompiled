@@ -15,93 +15,84 @@ final class gb {
     static long field_j;
 
     final al a(byte param0) {
-        int var2;
-        if (gh.field_j != this) {
-          if (this == kk.field_N) {
-            return lj.field_c[1];
-          } else {
-            if (sl.field_p == this) {
-              return lj.field_c[2];
-            } else {
-              if (this != gm.field_y) {
-                if (qq.field_g == this) {
-                  return lj.field_c[4];
-                } else {
-                  var2 = -41 % ((param0 - -5) / 58);
-                  if (id.field_f == this) {
-                    return lj.field_c[4];
-                  } else {
-                    if (ju.field_k == this) {
-                      return lj.field_c[5];
-                    } else {
-                      if (this == ro.field_u) {
-                        return lj.field_c[6];
-                      } else {
-                        throw new RuntimeException();
-                      }
-                    }
-                  }
-                }
-              } else {
-                return lj.field_c[3];
-              }
-            }
-          }
-        } else {
+        if (gh.field_j == this) {
           return lj.field_c[0];
         }
+        if (this == kk.field_N) {
+          return lj.field_c[1];
+        }
+        if (sl.field_p == this) {
+          return lj.field_c[2];
+        }
+        if (this == gm.field_y) {
+          return lj.field_c[3];
+        }
+        if (qq.field_g == this) {
+          return lj.field_c[4];
+        }
+        int var2 = -41 % ((param0 + 5) / 58);
+        if (id.field_f == this) {
+          return lj.field_c[4];
+        }
+        if (ju.field_k == this) {
+          return lj.field_c[5];
+        }
+        if (this != ro.field_u) {
+          throw new RuntimeException();
+        }
+        return lj.field_c[6];
     }
 
     final static boolean a(int param0) {
         if (param0 != 0) {
-            return false;
+          return false;
         }
         return lq.a(bm.m(116), 61);
     }
 
     final pa[] b(int param0) {
-        if (!(gh.field_j != this)) {
-            return hr.field_d[0];
+        if (gh.field_j == this) {
+          return hr.field_d[0];
         }
         if (this == kk.field_N) {
-            return hr.field_d[1];
+          return hr.field_d[1];
         }
         if (this == sl.field_p) {
-            return hr.field_d[2];
+          return hr.field_d[2];
         }
         if (param0 != -32275) {
-            this.toString();
-            if (gm.field_y == this) {
-                return hr.field_d[3];
-            }
-            if (!(this != qq.field_g)) {
-                return hr.field_d[4];
-            }
-            if (id.field_f == this) {
-                return hr.field_d[7];
-            }
-            if (!(ju.field_k != this)) {
-                return hr.field_d[5];
-            }
-            if (!(this != ro.field_u)) {
-                return hr.field_d[6];
-            }
-            throw new RuntimeException();
+          this.toString();
+          if (gm.field_y == this) {
+            return hr.field_d[3];
+          }
+          if (this == qq.field_g) {
+            return hr.field_d[4];
+          }
+          if (id.field_f == this) {
+            return hr.field_d[7];
+          }
+          if (ju.field_k == this) {
+            return hr.field_d[5];
+          }
+          if (this == ro.field_u) {
+            return hr.field_d[6];
+          }
+          throw new RuntimeException();
         }
         if (gm.field_y == this) {
-            return hr.field_d[3];
+          return hr.field_d[3];
         }
-        if (!(this != qq.field_g)) {
-            return hr.field_d[4];
+        if (this == qq.field_g) {
+          return hr.field_d[4];
         }
         if (id.field_f == this) {
-            return hr.field_d[7];
+          return hr.field_d[7];
         }
-        if (!(ju.field_k != this)) {
-            return hr.field_d[5];
+        if (ju.field_k == this) {
+          return hr.field_d[5];
         }
-        if (!(this != ro.field_u)) {
-            return hr.field_d[6];
+        if (this == ro.field_u) {
+          return hr.field_d[6];
         }
         throw new RuntimeException();
     }

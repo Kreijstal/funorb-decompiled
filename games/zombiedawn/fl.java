@@ -9,44 +9,25 @@ final class fl {
     static int field_a;
 
     final static eo a(int param0, boolean param1) {
-        eo var2;
-        eo stackIn_3_0 = null;
-        eo stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        if (param0 != 5) {
-          return (eo) null;
-        } else {
-          L0: {
-            var2 = new eo(true);
-            stackIn_3_0 = (eo) (var2);
-
-            if (!param1) {
-              stackIn_4_0 = (eo) ((Object) stackIn_3_0);
-              stackIn_4_1 = 0;
-              break L0;
-            } else {
-              stackIn_4_0 = (eo) ((Object) stackIn_3_0);
-              stackIn_4_1 = 1;
-              break L0;
-            }
-          }
-          stackIn_4_0.field_d = stackIn_4_1 != 0;
+        eo var2 = null;
+        if (param0 == 5) {
+          var2 = new eo(true);
+          var2.field_d = param1 ? true : false;
           return var2;
         }
+        return (eo) null;
     }
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 != -54) {
-          fl.a(44, false);
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 == -54) {
           field_b = null;
           field_c = null;
           return;
         }
+        fl.a(44, false);
+        field_b = null;
+        field_c = null;
     }
 
     static {

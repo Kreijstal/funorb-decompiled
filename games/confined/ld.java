@@ -16,166 +16,82 @@ abstract class ld {
     static df field_k;
 
     final static boolean a(byte param0, char param1) {
-        int stackIn_23_0 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_40_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_64_0 = 0;
-        int stackIn_67_0 = 0;
-        if (param0 == -21) {
+        boolean stackIn_28_0 = false;
+        boolean stackIn_50_0 = false;
+        boolean stackIn_64_0 = false;
+        if (param0 != -21) {
+          ld.a((byte) -32, '\005');
           if (48 > param1) {
-            if (param1 < 65) {
-              if (param1 >= 97) {
-                if (param1 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              if (param1 <= 90) {
-                stackIn_67_0 = 1;
-                return stackIn_67_0 != 0;
-              } else {
-                L0: {
-                  L1: {
-                    if (param1 < 97) {
-                      break L1;
-                    } else {
-                      if (param1 > 122) {
-                        break L1;
-                      } else {
-                        stackIn_64_0 = 1;
-                        break L0;
-                      }
-                    }
-                  }
-                  stackIn_64_0 = 0;
-                  break L0;
-                }
-                return stackIn_64_0 != 0;
-              }
-            }
-          } else {
-            if (param1 > 57) {
-              if (param1 < 65) {
-                if (param1 >= 97) {
-                  if (param1 > 122) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param1 > 90) {
-                  L2: {
-                    L3: {
-                      if (param1 < 97) {
-                        break L3;
-                      } else {
-                        if (param1 > 122) {
-                          break L3;
-                        } else {
-                          stackIn_50_0 = 1;
-                          break L2;
-                        }
-                      }
-                    }
-                    stackIn_50_0 = 0;
-                    break L2;
-                  }
-                  return stackIn_50_0 != 0;
-                } else {
-                  stackIn_45_0 = 1;
-                  return stackIn_45_0 != 0;
-                }
-              }
-            } else {
-              stackIn_40_0 = 1;
-              return stackIn_40_0 != 0;
-            }
-          }
-        } else {
-          ld.a((byte) -32, '');
-          if (48 <= param1) {
-            if (param1 > 57) {
-              if (param1 < 65) {
-                if (param1 >= 97) {
-                  if (param1 <= 122) {
-                    return true;
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                if (param1 > 90) {
-                  L4: {
-                    L5: {
-                      if (param1 < 97) {
-                        break L5;
-                      } else {
-                        if (param1 > 122) {
-                          break L5;
-                        } else {
-                          stackIn_28_0 = 1;
-                          break L4;
-                        }
-                      }
-                    }
-                    stackIn_28_0 = 0;
-                    break L4;
-                  }
-                  return stackIn_28_0 != 0;
-                } else {
-                  stackIn_23_0 = 1;
-                  return stackIn_23_0 != 0;
-                }
-              }
-            } else {
+            if (param1 >= 65 &&
+              param1 <= 90) {
               return true;
             }
-          } else {
-            if (param1 < 65) {
-              if (param1 >= 97) {
-                if (param1 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              if (param1 > 90) {
-                if (param1 >= 97) {
-                  if (param1 > 122) {
-                    return false;
-                  } else {
-                    return true;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return true;
-              }
+            if (param1 < 97) {
+              return false;
             }
+            if (param1 > 122) {
+              return false;
+            }
+            return true;
           }
+          if (param1 <= 57) {
+            return true;
+          }
+          if (param1 < 65) {
+            if (param1 < 97) {
+              return false;
+            }
+            if (param1 <= 122) {
+              return true;
+            }
+            return false;
+          }
+          if (param1 <= 90) {
+            return true;
+          }
+          stackIn_28_0 = (param1 >= 97) && (param1 <= 122);
+          return stackIn_28_0;
         }
+        if (48 > param1) {
+          if (param1 < 65) {
+            if (param1 < 97) {
+              return false;
+            }
+            if (param1 > 122) {
+              return false;
+            }
+            return true;
+          }
+          if (param1 <= 90) {
+            return true;
+          }
+          stackIn_64_0 = (param1 >= 97) && (param1 <= 122);
+          return stackIn_64_0;
+        }
+        if (param1 <= 57) {
+          return true;
+        }
+        if (param1 < 65) {
+          if (param1 < 97) {
+            return false;
+          }
+          if (param1 > 122) {
+            return false;
+          }
+          return true;
+        }
+        if (param1 <= 90) {
+          return true;
+        }
+        stackIn_50_0 = (param1 >= 97) && (param1 <= 122);
+        return stackIn_50_0;
     }
 
     abstract void a(int param0, int param1);
 
     public static void a(int param0) {
         if (param0 != 0) {
-            return;
+          return;
         }
         field_d = null;
         field_j = null;

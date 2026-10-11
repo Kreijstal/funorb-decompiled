@@ -16,7 +16,7 @@ final class eh {
         field_h = null;
         field_c = null;
         if (!param0) {
-            return;
+          return;
         }
         field_b = null;
         field_f = null;
@@ -44,48 +44,48 @@ final class eh {
         int var11 = 24;
         int var12 = 24;
         if (param1 < 0) {
-            var12 = var12 + param1;
-            param2 = param2 - param4 * param1;
-            param3 = param3 - param5 * param1;
-            param1 = 0;
+          var12 = var12 + param1;
+          param2 = param2 - param4 * param1;
+          param3 = param3 - param5 * param1;
+          param1 = 0;
         }
         if (param1 + var12 > var7) {
-            var12 = var7 - param1;
+          var12 = var7 - param1;
         }
         if (param0 < 0) {
-            var11 = var11 + param0;
-            param0 = 0;
-            param2 = param2 - param3 * param0;
-            param4 = param4 - param5 * param0;
+          var11 = var11 + param0;
+          param0 = 0;
+          param2 = param2 - param3 * param0;
+          param4 = param4 - param5 * param0;
         }
         if (param0 + var11 > var6) {
-            var11 = var6 - param0;
+          var11 = var6 - param0;
         }
         int var13 = param0 + var6 * param1;
         int var14 = var6 - var11;
         for (var15 = -var12; var15 < 0; var15++) {
-            var8 = param2;
-            for (var16 = -var11; var16 < 0; var16++) {
-                var9 = var8 >> 16;
-                var10 = si.field_i[var13];
-                incrementValue$0 = var13;
-                var13++;
-                si.field_i[incrementValue$0] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
-                var8 = var8 + param3;
-            }
-            param2 = param2 + param4;
-            param3 = param3 + param5;
-            var13 = var13 + var14;
+          var8 = param2;
+          for (var16 = -var11; var16 < 0; var16++) {
+            var9 = var8 >> 16;
+            var10 = si.field_i[var13];
+            incrementValue$0 = var13;
+            var13++;
+            si.field_i[incrementValue$0] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
+            var8 = var8 + param3;
+          }
+          param2 = param2 + param4;
+          param3 = param3 + param5;
+          var13 = var13 + var14;
         }
     }
 
     final static void b(boolean param0) {
         if (param0) {
-            eh.a(false);
+          eh.a(false);
         }
-        hk var1 = (hk) ((Object) ak.field_i.b(-27493));
+        hk var1 = (hk) (ak.field_i.b(-27493));
         if (var1 == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         si.a(var1.field_i, var1.field_j, var1.field_p);
         si.d(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
@@ -95,7 +95,7 @@ final class eh {
 
     final static int a(byte param0) {
         if (param0 >= -56) {
-            return 34;
+          return 34;
         }
         return (int)(1000000000L / ch.field_a);
     }

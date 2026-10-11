@@ -19,50 +19,30 @@ final class pha {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              if (param1 == null) {
-                break L1;
-              } else {
-                param1.a(false);
-                param1.b(param0 + 29063);
-                this.field_e = this.field_e + param1.field_n;
-                break L1;
-              }
-            }
-            if (param0 == -29063) {
-              break L0;
-            } else {
-              field_h = (int[][]) null;
-              return;
-            }
+          if (param1 != null) {
+            param1.a(false);
+            param1.b(param0 + 29063);
+            this.field_e = this.field_e + param1.field_n;
           }
+          if (param0 == -29063) {
+            return;
+          }
+          field_h = (int[][]) null;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var3);
-
-            stackIn_7_1 = new StringBuilder().append("pha.B(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L2;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L2;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("pha.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw pe.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -73,55 +53,46 @@ final class pha {
 
     private final void a(byte param0, long param1) {
         if (param0 != -76) {
-            return;
+          return;
         }
-        ul var4 = (ul) ((Object) this.field_d.a(param1, (byte) -122));
+        ul var4 = (ul) (this.field_d.a(param1, (byte) -122));
         this.a(-29063, var4);
     }
 
     final void a(long param0, int param1, Object param2) {
         try {
-            this.a(126, param1, param0, param2);
+          this.a(126, param1, param0, param2);
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pha.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final Object a(int param0, long param1) {
-        int var4;
-        ul var5;
-        Object var6;
-        oea var7;
-        var4 = 78 % ((30 - param0) / 60);
-        var5 = (ul) ((Object) this.field_d.a(param1, (byte) -119));
-        if (var5 != null) {
-          var6 = var5.e(-19795);
-          if (var6 == null) {
-            var5.a(false);
-            var5.b(0);
-            this.field_e = this.field_e + var5.field_n;
-            return null;
-          } else {
-            L0: {
-              if (var5.f(125)) {
-                var7 = new oea(var6, var5.field_n);
-                this.field_d.a(0, var5.field_c, var7);
-                this.field_b.a(var7, (byte) -118);
-                ((ul) ((Object) var7)).field_h = 0L;
-                var5.a(false);
-                var5.b(0);
-                break L0;
-              } else {
-                this.field_b.a(var5, (byte) -118);
-                var5.field_h = 0L;
-                break L0;
-              }
-            }
-            return var6;
-          }
-        } else {
+        oea var7 = null;
+        int var4 = 78 % ((30 - param0) / 60);
+        ul var5 = (ul) (this.field_d.a(param1, (byte) -119));
+        if (var5 == null) {
           return null;
         }
+        Object var6 = var5.e(-19795);
+        if (var6 != null) {
+          if (!var5.f(125)) {
+            this.field_b.a(var5, (byte) -118);
+            var5.field_h = 0L;
+          } else {
+            var7 = new oea(var6, var5.field_n);
+            this.field_d.a(0, var5.field_c, var7);
+            this.field_b.a(var7, (byte) -118);
+            ((ul) ((Object) var7)).field_h = 0L;
+            var5.a(false);
+            var5.b(0);
+          }
+          return var6;
+        }
+        var5.a(false);
+        var5.b(0);
+        this.field_e = this.field_e + var5.field_n;
+        return null;
     }
 
     private final void a(int param0, int param1, long param2, Object param3) {
@@ -129,22 +100,22 @@ final class pha {
         oea var7_ref = null;
         int var8 = BachelorFridge.field_y;
         try {
-            if (!(this.field_c >= param1)) {
-                throw new IllegalStateException();
-            }
-            this.a((byte) -76, param2);
-            this.field_e = this.field_e - param1;
-            int var6_int = 10 / ((-23 - param0) / 35);
-            while (0 > this.field_e) {
-                var7 = (ul) ((Object) this.field_b.a(24383));
-                this.a(-29063, var7);
-            }
-            var7_ref = new oea(param3, param1);
-            this.field_d.a(0, param2, var7_ref);
-            this.field_b.a(var7_ref, (byte) -118);
-            ((ul) ((Object) var7_ref)).field_h = 0L;
+          if (this.field_c < param1) {
+            throw new IllegalStateException();
+          }
+          this.a((byte) -76, param2);
+          this.field_e = this.field_e - param1;
+          int var6_int = 10 / ((-23 - param0) / 35);
+          while (0 > this.field_e) {
+            var7 = (ul) (this.field_b.a(24383));
+            this.a(-29063, var7);
+          }
+          var7_ref = new oea(param3, param1);
+          this.field_d.a(0, param2, var7_ref);
+          this.field_b.a(var7_ref, (byte) -118);
+          ((ul) ((Object) var7_ref)).field_h = 0L;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "pha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "pha.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -152,7 +123,7 @@ final class pha {
         field_f = null;
         field_h = (int[][]) null;
         if (!param0) {
-            pha.a(-21);
+          pha.a(-21);
         }
     }
 
@@ -162,20 +133,19 @@ final class pha {
         this.field_c = param0;
         this.field_e = param0;
         var3 = 1;
-        L0: while (true) {
-          if (var3 + var3 < param0) {
-            if (param1 > var3) {
-              var3 = var3 + var3;
-              continue L0;
-            } else {
-              this.field_d = new wha(var3);
-              return;
-            }
-          } else {
+        while (true) {
+          if (var3 + var3 >= param0) {
             this.field_d = new wha(var3);
             return;
           }
+          if (param1 > var3) {
+            var3 = var3 + var3;
+            continue;
+          }
+          break;
         }
+        this.field_d = new wha(var3);
+        return;
     }
 
     static {

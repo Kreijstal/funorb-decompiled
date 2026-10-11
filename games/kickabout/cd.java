@@ -8,7 +8,7 @@ final class cd {
     final static void a(byte param0, int param1, int param2) {
         ku.a(16777215, al.a(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
-            cd.a((byte) 70);
+          cd.a((byte) 70);
         }
     }
 
@@ -16,14 +16,14 @@ final class cd {
         field_b = null;
         field_a = null;
         if (param0 != -98) {
-            field_a = (int[]) null;
+          field_a = (int[]) null;
         }
     }
 
     final static boolean a(int param0) {
         if (param0 != 3) {
-            cd.a((byte) -84);
-            return hk.field_G;
+          cd.a((byte) -84);
+          return hk.field_G;
         }
         return hk.field_G;
     }

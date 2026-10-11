@@ -13,37 +13,24 @@ abstract class nl {
     static String field_f;
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        L0: {
-          if (param0 <= -110) {
-            break L0;
-          } else {
-            nl.a((byte) 75);
-            break L0;
-          }
+        if (param0 > -110) {
+          nl.a((byte) 75);
         }
-        var3 = hd.a(param1, 49);
-        var4 = lc.a(param1, false);
-        var5 = hd.a(param2, 116);
-        var6 = lc.a(param2, false);
-        var7 = (int)((long)var5 * (long)var3 >> -970259888);
-        var8 = (int)((long)var3 * (long)var6 >> -605484208);
-        var9 = (int)((long)var5 * (long)var4 >> 2118858000);
-        var10 = (int)((long)var6 * (long)var4 >> 561206736);
+        int var3 = hd.a(param1, 49);
+        int var4 = lc.a(param1, false);
+        int var5 = hd.a(param2, 116);
+        int var6 = lc.a(param2, false);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var3 * (long)var6 >> 16);
+        int var9 = (int)((long)var5 * (long)var4 >> 16);
+        int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     public static void a(byte param0) {
         field_b = null;
         if (param0 < 45) {
-            return;
+          return;
         }
         field_e = null;
         field_f = null;
@@ -54,12 +41,11 @@ abstract class nl {
     abstract java.net.Socket b(int param0) throws IOException;
 
     final java.net.Socket a(int param0) throws IOException {
-        if (param0 != -28548) {
-          field_a = (String) null;
-          return new java.net.Socket(this.field_c, this.field_g);
-        } else {
+        if (param0 == -28548) {
           return new java.net.Socket(this.field_c, this.field_g);
         }
+        field_a = (String) null;
+        return new java.net.Socket(this.field_c, this.field_g);
     }
 
     static {

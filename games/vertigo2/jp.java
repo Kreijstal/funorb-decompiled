@@ -52,128 +52,75 @@ final class jp {
         field_R = null;
         field_u = null;
         if (!param0) {
-            return;
+          return;
         }
         field_j = null;
     }
 
     final void a(byte param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = Vertigo2.field_L ? 1 : 0;
-        if (!this.field_i) {
-          L0: {
-            this.field_i = true;
-            var2 = 32767;
-            var3 = 32767;
-            var4 = 32767;
-            if (param0 == 117) {
-              break L0;
-            } else {
-              this.a((byte) -11);
-              break L0;
-            }
-          }
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L1: while (true) {
-            if (var8 >= this.field_F) {
-              this.field_S = var2;
-              this.field_t = var3;
-              this.field_D = var5;
-              this.field_B = var4;
-              this.field_E = var6;
-              this.field_k = var7;
-              return;
-            } else {
-              L2: {
-                var9 = this.field_I[var8];
-                var10 = this.field_r[var8];
-                if (var9 <= var5) {
-                  break L2;
-                } else {
-                  var5 = var9;
-                  break L2;
-                }
-              }
-              L3: {
-                if (var2 > var9) {
-                  var2 = var9;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var6 >= var10) {
-                  break L4;
-                } else {
-                  var6 = var10;
-                  break L4;
-                }
-              }
-              L5: {
-                if (var10 >= var3) {
-                  break L5;
-                } else {
-                  var3 = var10;
-                  break L5;
-                }
-              }
-              L6: {
-                var11 = this.field_m[var8];
-                if (var11 < var4) {
-                  var4 = var11;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              if (var11 > var7) {
-                var7 = var11;
-                var8++;
-                continue L1;
-              } else {
-                var8++;
-                continue L1;
-              }
-            }
-          }
-        } else {
+        if (this.field_i) {
           return;
         }
+        this.field_i = true;
+        var2 = 32767;
+        var3 = 32767;
+        var4 = 32767;
+        if (param0 != 117) {
+          this.a((byte) -11);
+        }
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_F; var8++) {
+          var9 = this.field_I[var8];
+          var10 = this.field_r[var8];
+          if (var9 > var5) {
+            var5 = var9;
+          }
+          if (var2 > var9) {
+            var2 = var9;
+          }
+          if (var6 < var10) {
+            var6 = var10;
+          }
+          if (var10 < var3) {
+            var3 = var10;
+          }
+          var11 = this.field_m[var8];
+          if (var11 < var4) {
+            var4 = var11;
+          }
+          if (var11 > var7) {
+            var7 = var11;
+          }
+        }
+        this.field_S = var2;
+        this.field_t = var3;
+        this.field_D = var5;
+        this.field_B = var4;
+        this.field_E = var6;
+        this.field_k = var7;
     }
 
     final static char a(boolean param0, char param1) {
-        L0: {
-          if (param1 == 181) {
-            break L0;
-          } else {
-            if (param1 == 402) {
-              break L0;
-            } else {
-              L1: {
-                if (param0) {
-                  break L1;
-                } else {
-                  jp.a(true, 'f');
-                  break L1;
-                }
-              }
-              return Character.toTitleCase(param1);
-            }
+        if (param1 != 181 &&
+          param1 != 402) {
+          if (!param0) {
+            jp.a(true, 'f');
           }
+          return Character.toTitleCase(param1);
         }
         return param1;
     }
@@ -181,7 +128,7 @@ final class jp {
     private final void b(boolean param0) {
         this.field_i = false;
         if (!param0) {
-            this.field_O = (short[]) null;
+          this.field_O = (short[]) null;
         }
     }
 
@@ -189,9 +136,9 @@ final class jp {
         int var6 = 0;
         int var8 = Vertigo2.field_L ? 1 : 0;
         for (var6 = 0; this.field_F > var6; var6++) {
-            this.field_I[var6] = (short)(param0 * this.field_I[var6] / param4);
-            this.field_r[var6] = (short)(param2 * this.field_r[var6] / param4);
-            this.field_m[var6] = (short)(this.field_m[var6] * param3 / param4);
+          this.field_I[var6] = (short)(param0 * this.field_I[var6] / param4);
+          this.field_r[var6] = (short)(param2 * this.field_r[var6] / param4);
+          this.field_m[var6] = (short)(this.field_m[var6] * param3 / param4);
         }
         int var7 = -7 / ((-70 - param1) / 45);
         this.b(true);
@@ -202,9 +149,9 @@ final class jp {
         int var7 = Vertigo2.field_L ? 1 : 0;
         int var5 = -72 % ((param3 - 67) / 57);
         for (var6 = 0; var6 < this.field_F; var6++) {
-            this.field_I[var6] = (short)(this.field_I[var6] + param2);
-            this.field_r[var6] = (short)(this.field_r[var6] + param0);
-            this.field_m[var6] = (short)(this.field_m[var6] + param1);
+          this.field_I[var6] = (short)(this.field_I[var6] + param2);
+          this.field_r[var6] = (short)(this.field_r[var6] + param0);
+          this.field_m[var6] = (short)(this.field_m[var6] + param1);
         }
         this.b(true);
     }

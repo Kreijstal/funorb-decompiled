@@ -16,35 +16,14 @@ final class kk {
     static double field_b;
 
     final boolean b(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
         this.field_i = this.field_i - this.field_f;
         this.field_c = this.field_c - 1;
-        this.field_f = this.field_f - (this.field_f - -3 >> -1701764574);
-        if (param0 >= -35) {
-          L0: {
-            this.field_c = -69;
-            if (-1 <= (this.field_c ^ -1)) {
-              stackIn_8_0 = 0;
-              break L0;
-            } else {
-              stackIn_8_0 = 1;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (-1 <= (this.field_c ^ -1)) {
-              stackIn_4_0 = 0;
-              break L1;
-            } else {
-              stackIn_4_0 = 1;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
+        this.field_f = this.field_f - (this.field_f + 3 >> 2);
+        if (param0 < -35) {
+          return this.field_c > 0 ? true : false;
         }
+        this.field_c = -69;
+        return this.field_c > 0 ? true : false;
     }
 
     public static void a(int param0) {
@@ -53,7 +32,7 @@ final class kk {
         field_e = null;
         field_j = null;
         if (param0 > -56) {
-            field_k = (String[]) null;
+          field_k = (String[]) null;
         }
     }
 
@@ -61,18 +40,18 @@ final class kk {
         this.field_f = 64;
         this.field_c = 16;
         try {
-            this.field_h = param2;
-            this.field_i = param1 << 2048818916;
-            this.field_d = param0;
+          this.field_h = param2;
+          this.field_i = param1 << 4;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw dn.a((Throwable) ((Object) runtimeException), "kk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw dn.a((Throwable) ((Object) runtimeException), "kk.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void a(byte param0) {
-        an.field_q.c(this.field_h, this.field_d, this.field_i >> 2062697124, 16760896, -1);
+        an.field_q.c(this.field_h, this.field_d, this.field_i >> 4, 16760896, -1);
         if (param0 != 35) {
-            this.b(-48);
+          this.b(-48);
         }
     }
 

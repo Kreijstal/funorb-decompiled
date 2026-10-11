@@ -11,28 +11,26 @@ final class cc {
 
     final static jm b(byte param0) {
         int var1 = 125 % ((34 - param0) / 49);
-        if (!(field_f != null)) {
-            field_f = new jm(vc.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, vc.field_e.field_C, -1, 2147483647, true);
+        if (field_f == null) {
+          field_f = new jm(vc.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, vc.field_e.field_C, -1, 2147483647, true);
         }
         return field_f;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param2 <= -86) {
-          if (param1 >= param0) {
-            return tk.a(-4, (param0 << 585076368) / param1);
-          } else {
-            return -tk.a(-4, (param1 << 466167024) / param0) + 2048;
-          }
-        } else {
+        if (param2 > -86) {
           return -113;
         }
+        if (param1 < param0) {
+          return -tk.a(-4, (param1 << 16) / param0) + 2048;
+        }
+        return tk.a(-4, (param0 << 16) / param1);
     }
 
     final static boolean c(byte param0) {
         if (param0 != 118) {
-            cc.c((byte) 58);
-            return eh.field_e != null ? true : false;
+          cc.c((byte) 58);
+          return eh.field_e != null ? true : false;
         }
         return eh.field_e != null ? true : false;
     }
@@ -45,7 +43,7 @@ final class cc {
         field_e = null;
         field_a = null;
         if (param0 <= 101) {
-            field_f = (jm) null;
+          field_f = (jm) null;
         }
     }
 

@@ -51,117 +51,76 @@ final class ja {
         int var5 = 0;
         int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         for (var5 = param2; this.field_q > var5; var5++) {
-            this.field_J[var5] = (short)(this.field_J[var5] + param0);
-            this.field_w[var5] = (short)(this.field_w[var5] + param3);
-            this.field_P[var5] = (short)(this.field_P[var5] + param1);
+          this.field_J[var5] = (short)(this.field_J[var5] + param0);
+          this.field_w[var5] = (short)(this.field_w[var5] + param3);
+          this.field_P[var5] = (short)(this.field_P[var5] + param1);
         }
         this.c(param2 ^ 17503);
     }
 
     final static void a(fg param0, byte param1) {
-        int dupTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int incrementValue$2 = 0;
         int dupTemp$3 = 0;
+        int dupTemp$0 = 0;
+        int var4 = 0;
+        int incrementValue$2 = 0;
+        int fieldTemp$1 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var2_intLifetime1;
+        int var3Lifetime1;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          L0: {
-            var2_int = 0;
-            L1: while (true) {
-              if (-4 >= (var2_int ^ -1)) {
-                var2_int = 96 / ((80 - param1) / 36);
-                var3 = 0;
-                L2: while (true) {
-                  if (var3 >= sf.field_e) {
-                    dupTemp$0 = param0.a((byte) -99);
-                    fm.field_e[dupTemp$0] = fm.field_e[dupTemp$0] + 1;
-                    var3 = 0;
-                    var4 = 0;
-                    L3: while (true) {
-                      if (var4 >= sf.field_e) {
-                        sf.field_e = var3;
-                        fieldTemp$1 = sf.field_e;
-                        sf.field_e = sf.field_e + 1;
-                        mi.field_c[fieldTemp$1] = param0;
-                        break L0;
-                      } else {
-                        L4: {
-                          L5: {
-                            if (param0.field_a != mi.field_c[var4].field_a) {
-                              break L5;
-                            } else {
-                              var5 = mi.field_c[var4].a((byte) -79);
-                              if (fm.field_e[var5] > ee.field_a) {
-                                fm.field_e[var5] = fm.field_e[var5] - 1;
-                                break L4;
-                              } else {
-                                break L5;
-                              }
-                            }
-                          }
-                          incrementValue$2 = var3;
-                          var3++;
-                          mi.field_c[incrementValue$2] = mi.field_c[var4];
-                          break L4;
-                        }
-                        var4++;
-                        continue L3;
-                      }
-                    }
-                  } else {
-                    L6: {
-                      if (param0.field_a != mi.field_c[var3].field_a) {
-                        break L6;
-                      } else {
-                        dupTemp$3 = mi.field_c[var3].a((byte) -93);
-                        fm.field_e[dupTemp$3] = fm.field_e[dupTemp$3] + 1;
-                        break L6;
-                      }
-                    }
-                    var3++;
-                    continue L2;
-                  }
-                }
-              } else {
-                fm.field_e[var2_int] = 0;
-                var2_int++;
-                continue L1;
+          for (var2_int = 0; var2_int < 3; var2_int++) {
+            fm.field_e[var2_int] = 0;
+          }
+          var2_intLifetime1 = 96 / ((80 - param1) / 36);
+          for (var3 = 0; var3 < sf.field_e; var3++) {
+            if (param0.field_a == mi.field_c[var3].field_a) {
+              dupTemp$3 = mi.field_c[var3].a((byte) -93);
+              fm.field_e[dupTemp$3] = fm.field_e[dupTemp$3] + 1;
+            }
+          }
+          dupTemp$0 = param0.a((byte) -99);
+          fm.field_e[dupTemp$0] = fm.field_e[dupTemp$0] + 1;
+          var3Lifetime1 = 0;
+          for (var4 = 0; var4 < sf.field_e; var4++) {
+            boolean decompiledFrameRemainder0 = true;
+            if (param0.field_a == mi.field_c[var4].field_a) {
+              var5 = mi.field_c[var4].a((byte) -79);
+              if (fm.field_e[var5] > ee.field_a) {
+                fm.field_e[var5] = fm.field_e[var5] - 1;
+                decompiledFrameRemainder0 = false;
               }
             }
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L7: {
-            var2 = decompiledCaughtException;
-            stackIn_21_0 = (RuntimeException) (var2);
-
-            stackIn_21_1 = new StringBuilder().append("ja.F(");
-
-            if (param0 == null) {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "null";
-              break L7;
-            } else {
-              stackIn_22_0 = (RuntimeException) ((Object) stackIn_21_0);
-              stackIn_22_1 = (StringBuilder) ((Object) stackIn_21_1);
-              stackIn_22_2 = "{...}";
-              break L7;
+            if (decompiledFrameRemainder0) {
+              incrementValue$2 = var3Lifetime1;
+              var3Lifetime1++;
+              mi.field_c[incrementValue$2] = mi.field_c[var4];
             }
           }
-          throw ie.a((Throwable) ((Object) stackIn_22_0), stackIn_22_2 + ',' + param1 + ')');
+          sf.field_e = var3Lifetime1;
+          fieldTemp$1 = sf.field_e;
+          sf.field_e = sf.field_e + 1;
+          mi.field_c[fieldTemp$1] = param0;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_21_0 = var2;
+          stackIn_21_1 = new StringBuilder().append("ja.F(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -178,125 +137,89 @@ final class ja {
         int var3 = dg.a(-20870, param0);
         int var4 = u.a(param0, (byte) 74);
         if (param2 != 32767) {
-            fg var11 = (fg) null;
-            ja.a((fg) null, (byte) -56);
+          fg var11 = (fg) null;
+          ja.a((fg) null, (byte) -56);
         }
         int var5 = dg.a(-20870, param1);
         int var6 = u.a(param1, (byte) 74);
-        int var7 = (int)((long)var3 * (long)var5 >> 737881936);
-        int var8 = (int)((long)var3 * (long)var6 >> -747204656);
-        int var9 = (int)((long)var5 * (long)var4 >> -1792147056);
-        int var10 = (int)((long)var6 * (long)var4 >> 494656336);
+        int var7 = (int)((long)var3 * (long)var5 >> 16);
+        int var8 = (int)((long)var3 * (long)var6 >> 16);
+        int var9 = (int)((long)var5 * (long)var4 >> 16);
+        int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
     final void b(int param0) {
+        int var8 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        int var8;
         int var9;
         int var10;
         int var11;
         int var12;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (!this.field_F) {
-          this.field_F = true;
-          var2 = param0;
-          var3 = 32767;
-          var4 = 32767;
-          var5 = -32768;
-          var6 = -32768;
-          var7 = -32768;
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= this.field_q) {
-              this.field_d = var3;
-              this.field_C = var7;
-              this.field_s = var2;
-              this.field_j = var4;
-              this.field_I = var5;
-              this.field_N = var6;
-              return;
-            } else {
-              L1: {
-                var9 = this.field_J[var8];
-                var10 = this.field_w[var8];
-                var11 = this.field_P[var8];
-                if (var3 <= var10) {
-                  break L1;
-                } else {
-                  var3 = var10;
-                  break L1;
-                }
-              }
-              L2: {
-                if (var5 < var9) {
-                  var5 = var9;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if (var10 > var6) {
-                  var6 = var10;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              L4: {
-                if (var2 > var9) {
-                  var2 = var9;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (var7 < var11) {
-                  var7 = var11;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              if (var11 < var4) {
-                var4 = var11;
-                var8++;
-                continue L0;
-              } else {
-                var8++;
-                continue L0;
-              }
-            }
-          }
-        } else {
+        if (this.field_F) {
           return;
         }
+        this.field_F = true;
+        var2 = param0;
+        var3 = 32767;
+        var4 = 32767;
+        var5 = -32768;
+        var6 = -32768;
+        var7 = -32768;
+        for (var8 = 0; var8 < this.field_q; var8++) {
+          var9 = this.field_J[var8];
+          var10 = this.field_w[var8];
+          var11 = this.field_P[var8];
+          if (var3 > var10) {
+            var3 = var10;
+          }
+          if (var5 < var9) {
+            var5 = var9;
+          }
+          if (var10 > var6) {
+            var6 = var10;
+          }
+          if (var2 > var9) {
+            var2 = var9;
+          }
+          if (var7 < var11) {
+            var7 = var11;
+          }
+          if (var11 < var4) {
+            var4 = var11;
+          }
+        }
+        this.field_d = var3;
+        this.field_C = var7;
+        this.field_s = var2;
+        this.field_j = var4;
+        this.field_I = var5;
+        this.field_N = var6;
     }
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = 0;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         for (var6 = 0; var6 < this.field_q; var6++) {
-            this.field_J[var6] = (short)(param2 * this.field_J[var6] / param4);
-            this.field_w[var6] = (short)(this.field_w[var6] * param0 / param4);
-            this.field_P[var6] = (short)(this.field_P[var6] * param1 / param4);
+          this.field_J[var6] = (short)(param2 * this.field_J[var6] / param4);
+          this.field_w[var6] = (short)(this.field_w[var6] * param0 / param4);
+          this.field_P[var6] = (short)(this.field_P[var6] * param1 / param4);
         }
         if (param3 > -32) {
-            this.field_d = 30;
+          this.field_d = 30;
         }
         this.c(17503);
     }
 
     private final void c(int param0) {
         if (param0 != 17503) {
-            this.field_C = 87;
+          this.field_C = 87;
         }
         this.field_F = false;
     }

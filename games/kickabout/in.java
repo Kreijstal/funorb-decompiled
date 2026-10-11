@@ -10,41 +10,27 @@ final class in {
         field_c = (int[][][][][]) null;
         field_a = null;
         if (param0 != 31349) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        L0: {
-          if (!eq.a(false)) {
-            break L0;
-          } else {
-            L1: {
-              jd.a(param5, param3, 14686, param0);
-              if (wi.field_v == null) {
-                break L1;
-              } else {
-                if (!wi.field_v.a(param3, param1 + -52, param4, param2, param5)) {
-                  break L1;
-                } else {
-                  param3 = false;
-                  da.b(98);
-                  break L1;
-                }
-              }
-            }
-            lc.a(param1 + -6, param5, param3);
-            dn.a(param3, param6, true);
+        if (eq.a(false)) {
+          jd.a(param5, param3, 14686, param0);
+          if (wi.field_v != null &&
+            wi.field_v.a(param3, param1 - 52, param4, param2, param5)) {
             param3 = false;
-            break L0;
+            da.b(98);
           }
+          lc.a(param1 - 6, param5, param3);
+          dn.a(param3, param6, true);
+          param3 = false;
         }
-        if (param1 != 50) {
-          field_b = -69L;
-          return param3;
-        } else {
+        if (param1 == 50) {
           return param3;
         }
+        field_b = -69L;
+        return param3;
     }
 
     final static void a(boolean param0, int param1) {
@@ -55,36 +41,20 @@ final class in {
     }
 
     final static boolean a(byte param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        if (param0 >= 64) {
-          if (null == fb.field_J) {
-            if (kd.field_s) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackIn_11_0 = 1;
-            return stackIn_11_0 != 0;
-          }
-        } else {
+        if (param0 < 64) {
           in.a((byte) 24);
-          if (null != fb.field_J) {
-            return true;
-          } else {
-            L0: {
-              if (!kd.field_s) {
-                stackIn_5_0 = 0;
-                break L0;
-              } else {
-                stackIn_5_0 = 1;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
+          if (null == fb.field_J) {
+            return kd.field_s ? true : false;
           }
+          return true;
         }
+        if (null != fb.field_J) {
+          return true;
+        }
+        if (!kd.field_s) {
+          return false;
+        }
+        return true;
     }
 
     static {

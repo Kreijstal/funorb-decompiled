@@ -7,7 +7,7 @@ final class tga {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         gb.a(-29711);
         if (param0 != -21953) {
-            return;
+          return;
         }
         bea.g(param1, param3, param2, param4);
     }
@@ -15,7 +15,7 @@ final class tga {
     public static void a(int param0) {
         field_a = null;
         if (param0 < 40) {
-            field_a = (ha) null;
+          field_a = (ha) null;
         }
     }
 

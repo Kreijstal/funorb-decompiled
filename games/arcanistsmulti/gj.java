@@ -13,77 +13,39 @@ final class gj {
     final static void a(boolean param0, boolean param1, int param2, int param3) {
         int var4;
         th.field_f = param3;
-        if (!param1) {
-          L0: {
-            field_b = (String) null;
-            if (param2 != 0) {
-              break L0;
-            } else {
-              if (!dg.field_s) {
-                break L0;
-              } else {
-                jm.field_b = co.field_d;
-                dg.field_s = false;
-                param2 = 9;
-                break L0;
-              }
-            }
+        if (param1) {
+          if (param2 == 0 &&
+            dg.field_s) {
+            jm.field_b = co.field_d;
+            dg.field_s = false;
+            param2 = 9;
           }
-          L1: {
-            mn.field_r = param2;
-            km.field_c = 0;
-            if (!ij.b(mn.field_r, 10)) {
-              break L1;
-            } else {
-              L2: {
-                var4 = 0;
-                if (-11 == (mn.field_r ^ -1)) {
-                  var4 = -1;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
-              break L1;
+          mn.field_r = param2;
+          km.field_c = 0;
+          if (ij.b(mn.field_r, 10)) {
+            var4 = 0;
+            if (mn.field_r == 10) {
+              var4 = -1;
             }
+            tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
           }
-          return;
         } else {
-          L3: {
-            if (param2 != 0) {
-              break L3;
-            } else {
-              if (!dg.field_s) {
-                break L3;
-              } else {
-                jm.field_b = co.field_d;
-                dg.field_s = false;
-                param2 = 9;
-                break L3;
-              }
-            }
+          field_b = (String) null;
+          if (param2 == 0 &&
+            dg.field_s) {
+            jm.field_b = co.field_d;
+            dg.field_s = false;
+            param2 = 9;
           }
-          L4: {
-            mn.field_r = param2;
-            km.field_c = 0;
-            if (!ij.b(mn.field_r, 10)) {
-              break L4;
-            } else {
-              L5: {
-                var4 = 0;
-                if (-11 == (mn.field_r ^ -1)) {
-                  var4 = -1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
-              break L4;
+          mn.field_r = param2;
+          km.field_c = 0;
+          if (ij.b(mn.field_r, 10)) {
+            var4 = 0;
+            if (mn.field_r == 10) {
+              var4 = -1;
             }
+            tl.field_f[mn.field_r].a(param0, var4, (byte) -115);
           }
-          return;
         }
     }
 
@@ -92,9 +54,7 @@ final class gj {
         field_g = null;
         field_a = null;
         field_c = (int[][]) null;
-        if (param0) {
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_e = null;
           field_f = null;
@@ -109,28 +69,23 @@ final class gj {
     }
 
     final static boolean a(int param0) {
-        if (param0 == 29372) {
-          if (hk.c(0)) {
-            if (-1 != (jb.field_v & 8 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 29372) {
           gj.a((byte) -21);
-          if (hk.c(0)) {
-            if (-1 != (jb.field_v & 8 ^ -1)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (!hk.c(0)) {
             return false;
           }
+          if ((jb.field_v & 8) == 0) {
+            return true;
+          }
+          return false;
         }
+        if (!hk.c(0)) {
+          return false;
+        }
+        if ((jb.field_v & 8) == 0) {
+          return true;
+        }
+        return false;
     }
 
     final static oo b(int param0) {
@@ -140,33 +95,23 @@ final class gj {
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         try {
-          L0: {
-            L1: {
-              if (param0 == -16635) {
-                break L1;
-              } else {
-                field_e = (String) null;
-                break L1;
-              }
+          if (param0 != -16635) {
+            field_e = (String) null;
+          }
+          var1_int = 0;
+          while (true) {
+            var2 = bg.field_d.a(param0 + 16638, var1_int);
+            if (var2.field_A) {
+              stackIn_6_0 = var2;
+              return stackIn_6_0;
             }
-            var1_int = 0;
-            L2: while (true) {
-              var2 = bg.field_d.a(param0 + 16638, var1_int);
-              if (var2.field_A) {
-                stackIn_6_0 = (oo) (var2);
-                break L0;
-              } else {
-                var1_int++;
-                continue L2;
-              }
-            }
+            var1_int++;
           }
         } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
           return null;
         }
-        return stackIn_6_0;
     }
 
     static {

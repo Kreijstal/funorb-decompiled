@@ -12,7 +12,7 @@ final class vb extends ca {
         field_g = null;
         field_h = null;
         if (param0 != -26818) {
-            vb.c(-3);
+          vb.c(-3);
         }
     }
 

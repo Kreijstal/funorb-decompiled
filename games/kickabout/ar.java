@@ -18,52 +18,39 @@ final class ar {
         int var7 = 0;
         int var8 = 0;
         if (param0 != 15707) {
-            return;
+          return;
         }
         try {
-            var2_int = el.field_A;
-            var3 = n.field_m;
-            var4 = dw.field_e.field_X.b(param1, 500);
-            var5 = 6 + dw.field_e.field_X.a(param1, 500);
-            var6 = 2 + var4 * sh.field_c;
-            var7 = ou.b(var5, var2_int, 12, 127);
-            var8 = nj.a(var3, 20, var6, 29079);
-            on.e(var7, var8, var5, var6, 0);
-            on.a(var7 - -1, 1 + var8, var5 + -2, -2 + var6, 16777088);
-            dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
+          var2_int = el.field_A;
+          var3 = n.field_m;
+          var4 = dw.field_e.field_X.b(param1, 500);
+          var5 = 6 + dw.field_e.field_X.a(param1, 500);
+          var6 = 2 + var4 * sh.field_c;
+          var7 = ou.b(var5, var2_int, 12, 127);
+          var8 = nj.a(var3, 20, var6, 29079);
+          on.e(var7, var8, var5, var6, 0);
+          on.a(var7 + 1, 1 + var8, var5 - 2, -2 + var6, 16777088);
+          dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 - ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ar.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, int param1) {
         try {
-            Throwable throwable = null;
-            String var3 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              L0: {
-                mm.a(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
-                throwable = decompiledCaughtException;
-                break L1;
-              }
-            }
-            if (param0 != 500) {
-              var3 = (String) null;
-              ar.a(70, (String) null);
-              return;
-            } else {
-              return;
-            }
+          try {
+            mm.a(new Object[]{new Integer(param1)}, so.a(-120), "resizing", 25449);
+          } catch (Throwable throwable) {
+          }
+          if (param0 == 500) {
+            return;
+          }
+          String var3 = (String) null;
+          ar.a(70, (String) null);
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

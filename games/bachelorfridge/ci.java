@@ -14,15 +14,14 @@ final class ci extends td {
     }
 
     final ii a(op param0, int param1) {
+        int var10 = 0;
+        int var11 = 0;
         int fieldTemp$0 = 0;
         ii stackIn_3_0 = null;
         naa stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_30_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         naa var4 = null;
@@ -30,8 +29,6 @@ final class ci extends td {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         wia var14 = null;
@@ -40,132 +37,68 @@ final class ci extends td {
         int[][] var20 = null;
         var15 = BachelorFridge.field_y;
         try {
-          L0: {
-            var16 = this.field_h.a(param1 + 9, param0);
-            var4 = new naa(this.field_g, new nq(var16));
-            var4.field_t = this.field_n;
-            var4.field_q = this.field_k;
-            var20 = var4.d(9268);
-            var6 = 17;
-            var7 = 17;
-            var8 = -1 + var6 >> 1719895905;
-            var9 = -1 + var7 >> 849890977;
-            var4.field_u = 0;
-            if (param1 == 3) {
-              var10 = 0;
-              L1: while (true) {
-                if (var6 <= var10) {
-                  L2: {
-                    if (-1 <= (var4.field_u ^ -1)) {
-                      break L2;
-                    } else {
-                      var4.field_r = kla.a(var4.field_u, param0.field_w, -2147483648);
-                      break L2;
-                    }
-                  }
-                  stackIn_26_0 = (naa) (var4);
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  var11 = 0;
-                  L3: while (true) {
-                    if (var11 >= var7) {
-                      var10++;
-                      continue L1;
-                    } else {
-                      L4: {
-                        if (-2 != (var20[var10][var11] ^ -1)) {
-                          break L4;
-                        } else {
-                          var12 = -var8 + (var10 + this.field_k);
-                          var13 = this.field_n + var11 + -var9;
-                          if (0 > var12) {
-                            break L4;
-                          } else {
-                            if (var12 >= param0.field_z) {
-                              break L4;
-                            } else {
-                              if (var13 < 0) {
-                                break L4;
-                              } else {
-                                if (param0.field_B > var13) {
-                                  var14 = param0.field_a[var12][var13];
-                                  if (0 != var14.field_n) {
-                                    break L4;
-                                  } else {
-                                    if (var14.field_l == null) {
-                                      if (6 <= var4.field_u) {
-                                        break L4;
-                                      } else {
-                                        if (kla.a(10, param0.field_w, -2147483648) <= 3) {
-                                          fieldTemp$0 = var4.field_u;
-                                          var4.field_u = var4.field_u + 1;
-                                          var4.field_s[fieldTemp$0] = new aj(var12, var13);
-                                          break L4;
-                                        } else {
-                                          break L4;
-                                        }
-                                      }
-                                    } else {
-                                      break L4;
-                                    }
-                                  }
-                                } else {
-                                  break L4;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      var11++;
-                      continue L3;
-                    }
+          var16 = this.field_h.a(param1 + 9, param0);
+          var4 = new naa(this.field_g, new nq(var16));
+          var4.field_t = this.field_n;
+          var4.field_q = this.field_k;
+          var20 = var4.d(9268);
+          var6 = 17;
+          var7 = 17;
+          var8 = -1 + var6 >> 1;
+          var9 = -1 + var7 >> 1;
+          var4.field_u = 0;
+          if (param1 != 3) {
+            stackIn_3_0 = (ii) null;
+            return stackIn_3_0;
+          }
+          for (var10 = 0; var6 > var10; var10++) {
+            for (var11 = 0; var11 < var7; var11++) {
+              if (var20[var10][var11] == 1) {
+                var12 = -var8 + (var10 + this.field_k);
+                var13 = this.field_n + var11 - var9;
+                if (0 <= var12 &&
+                  var12 < param0.field_z &&
+                  var13 >= 0 &&
+                  param0.field_B > var13) {
+                  var14 = param0.field_a[var12][var13];
+                  if (0 == var14.field_n &&
+                    var14.field_l == null &&
+                    6 > var4.field_u &&
+                    kla.a(10, param0.field_w, -2147483648) <= 3) {
+                    fieldTemp$0 = var4.field_u;
+                    var4.field_u = var4.field_u + 1;
+                    var4.field_s[fieldTemp$0] = new aj(var12, var13);
                   }
                 }
               }
-            } else {
-              stackIn_3_0 = (ii) null;
-              decompiledRegionSelector0 = 0;
-              break L0;
             }
           }
+          if (var4.field_u > 0) {
+            var4.field_r = kla.a(var4.field_u, param0.field_w, -2147483648);
+          }
+          stackIn_26_0 = var4;
+          return (ii) ((Object) stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L5: {
-            var3 = decompiledCaughtException;
-            stackIn_29_0 = (RuntimeException) (var3);
-
-            stackIn_29_1 = new StringBuilder().append("ci.A(");
-
-            if (param0 == null) {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "null";
-              break L5;
-            } else {
-              stackIn_30_0 = (RuntimeException) ((Object) stackIn_29_0);
-              stackIn_30_1 = (StringBuilder) ((Object) stackIn_29_1);
-              stackIn_30_2 = "{...}";
-              break L5;
-            }
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = var3;
+          stackIn_29_1 = new StringBuilder().append("ci.A(");
+          if (param0 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
           }
-          throw pe.a((Throwable) ((Object) stackIn_30_0), stackIn_30_2 + ',' + param1 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return stackIn_3_0;
-        } else {
-          return (ii) ((Object) stackIn_26_0);
+          throw pe.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(')').toString());
         }
     }
 
     ci(int param0, aga param1, int param2, int param3) {
         super(param0, param1);
         try {
-            this.field_n = param3;
-            this.field_k = param2;
+          this.field_n = param3;
+          this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-            throw pe.a((Throwable) ((Object) runtimeException), "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pe.a((Throwable) ((Object) runtimeException), "ci.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

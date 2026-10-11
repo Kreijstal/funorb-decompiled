@@ -12,15 +12,7 @@ final class hf extends dj {
     static ti[] field_d;
 
     public static void a(byte param0) {
-        if (param0 != 118) {
-          field_f = (int[][]) null;
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_k = null;
-          field_f = (int[][]) null;
-          return;
-        } else {
+        if (param0 == 118) {
           field_h = null;
           field_g = null;
           field_d = null;
@@ -28,20 +20,24 @@ final class hf extends dj {
           field_f = (int[][]) null;
           return;
         }
+        field_f = (int[][]) null;
+        field_h = null;
+        field_g = null;
+        field_d = null;
+        field_k = null;
+        field_f = (int[][]) null;
     }
 
     final byte[] a(boolean param0) {
-        byte[] var2;
-        byte[] var3;
-        if (param0) {
-          return (byte[]) null;
-        } else {
+        byte[] var3 = null;
+        if (!param0) {
           var3 = new byte[this.field_e.capacity()];
-          var2 = var3;
+          byte[] var2 = var3;
           this.field_e.position(0);
           this.field_e.get(var3);
           return var3;
         }
+        return (byte[]) null;
     }
 
     hf() {
@@ -49,12 +45,12 @@ final class hf extends dj {
 
     final void a(byte[] param0, byte param1) {
         try {
-            int var3_int = -63 % ((-59 - param1) / 55);
-            this.field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
-            this.field_e.position(0);
-            this.field_e.put(param0);
+          int var3_int = -63 % ((-59 - param1) / 55);
+          this.field_e = java.nio.ByteBuffer.allocateDirect(param0.length);
+          this.field_e.position(0);
+          this.field_e.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ch.a((Throwable) ((Object) runtimeException), "hf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

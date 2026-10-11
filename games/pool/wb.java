@@ -11,49 +11,46 @@ final class wb {
 
     final static void a(boolean param0, java.applet.Applet param1) {
         try {
-            aj.a(param1, -18788, "");
-            if (param0) {
-                wb.a((byte) 31);
-            }
-            gg.a(param1, (byte) -85);
+          aj.a(param1, -18788, "");
+          if (param0) {
+            wb.a((byte) 31);
+          }
+          gg.a(param1, (byte) -85);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(ea param0, int param1, byte param2) {
         oq var3 = null;
         if (param2 != -96) {
-            return;
+          return;
         }
         try {
-            var3 = ej.field_j;
-            var3.b(false, param1);
-            var3.a(param0.field_s, false);
-            var3.a(param0.field_o, false);
+          var3 = ej.field_j;
+          var3.b(false, param1);
+          var3.a(param0.field_s, false);
+          var3.a(param0.field_o, false);
         } catch (RuntimeException runtimeException) {
-            throw wm.a((Throwable) ((Object) runtimeException), "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw wm.a((Throwable) ((Object) runtimeException), "wb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
-        ea var2;
         field_e = null;
-        if (param0 != 118) {
-          var2 = (ea) null;
-          wb.a((ea) null, 39, (byte) 43);
-          field_c = null;
-          field_b = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
+        if (param0 == 118) {
           field_c = null;
           field_b = null;
           field_f = null;
           field_d = null;
           return;
         }
+        ea var2 = (ea) null;
+        wb.a((ea) null, 39, (byte) 43);
+        field_c = null;
+        field_b = null;
+        field_f = null;
+        field_d = null;
     }
 
     static {

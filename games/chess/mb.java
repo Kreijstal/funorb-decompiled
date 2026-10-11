@@ -24,7 +24,7 @@ final class mb extends vj {
 
     final void a(int param0, int param1, java.awt.Graphics param2, int param3) {
         if (param1 != 12105912) {
-            return;
+          return;
         }
         param2.drawImage(this.field_j, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_k));
     }

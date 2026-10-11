@@ -11,129 +11,69 @@ final class um extends km {
     static String field_Kb;
 
     private final void a(boolean param0, int param1, int param2, int param3, int param4) {
-        L0: {
-          if (this.field_Hb.f((byte) -87)) {
-            this.field_Jb.field_Cb = this.field_Jb.field_Cb + param4;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_Hb.f((byte) -87)) {
+          this.field_Jb.field_Cb = this.field_Jb.field_Cb + param4;
         }
-        L1: {
-          if (this.field_Hb.g(-1)) {
-            this.field_Jb.field_Cb = this.field_Jb.field_Cb - param4;
-            break L1;
-          } else {
-            break L1;
-          }
+        if (this.field_Hb.g(-1)) {
+          this.field_Jb.field_Cb = this.field_Jb.field_Cb - param4;
         }
-        L2: {
-          if (this.field_Hb.h(-84)) {
-            this.field_Jb.field_Cb = this.field_Jb.field_Cb + param3;
-            break L2;
-          } else {
-            break L2;
-          }
+        if (this.field_Hb.h(-84)) {
+          this.field_Jb.field_Cb = this.field_Jb.field_Cb + param3;
         }
-        L3: {
-          if (this.field_Hb.g((byte) -29)) {
-            this.field_Jb.field_Cb = this.field_Jb.field_Cb - param3;
-            break L3;
-          } else {
-            break L3;
-          }
+        if (this.field_Hb.g((byte) -29)) {
+          this.field_Jb.field_Cb = this.field_Jb.field_Cb - param3;
         }
-        L4: {
-          if (this.field_S) {
-            this.field_Jb.field_Cb = this.field_Jb.field_Cb - param1;
-            break L4;
-          } else {
-            break L4;
-          }
+        if (this.field_S) {
+          this.field_Jb.field_Cb = this.field_Jb.field_Cb - param1;
         }
-        L5: {
-          if (param0) {
-            L6: {
-              if (-1 < (-(this.field_Jb.field_F - -this.field_Jb.field_Cb) ^ -1)) {
-                this.field_Jb.field_Cb = -this.field_Jb.field_F;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            if (-(this.field_Jb.field_Cb + this.field_Jb.field_F) <= -this.field_Eb.field_ub + (this.field_Jb.field_ub - -this.field_Jb.field_kb)) {
-              break L5;
-            } else {
-              this.field_Jb.field_Cb = -(this.field_Jb.field_ub - -this.field_Jb.field_kb + -this.field_Eb.field_ub) - this.field_Jb.field_F;
-              break L5;
-            }
-          } else {
-            L7: {
-              if (-this.field_Eb.field_ub + (this.field_Jb.field_kb + this.field_Jb.field_ub) >= -(this.field_Jb.field_F - -this.field_Jb.field_Cb)) {
-                break L7;
-              } else {
-                this.field_Jb.field_Cb = -this.field_Jb.field_F + -(this.field_Jb.field_ub - (-this.field_Jb.field_kb - -this.field_Eb.field_ub));
-                break L7;
-              }
-            }
-            if (0 <= -(this.field_Jb.field_F - -this.field_Jb.field_Cb)) {
-              break L5;
-            } else {
-              this.field_Jb.field_Cb = -this.field_Jb.field_F;
-              break L5;
-            }
+        if (param0) {
+          if (-(this.field_Jb.field_F + this.field_Jb.field_Cb) < 0) {
+            this.field_Jb.field_Cb = -this.field_Jb.field_F;
           }
-        }
-        if (param2 <= -97) {
-          L8: {
-            if (this.field_Hb.e((byte) 90)) {
-              this.field_Jb.field_F = -this.field_Hb.a((byte) 61, this.field_Eb.field_ub, param0, this.field_Jb.field_ub);
-              this.field_Jb.field_Cb = 0;
-              break L8;
-            } else {
-              break L8;
-            }
+          if (-(this.field_Jb.field_Cb + this.field_Jb.field_F) > -this.field_Eb.field_ub + (this.field_Jb.field_ub + this.field_Jb.field_kb)) {
+            this.field_Jb.field_Cb = -(this.field_Jb.field_ub + this.field_Jb.field_kb - this.field_Eb.field_ub) - this.field_Jb.field_F;
           }
-          this.field_Hb.a(this.field_Jb.field_ub, -this.field_Jb.field_F, this.field_Eb.field_ub, -1);
-          return;
         } else {
+          if (-this.field_Eb.field_ub + (this.field_Jb.field_kb + this.field_Jb.field_ub) < -(this.field_Jb.field_F + this.field_Jb.field_Cb)) {
+            this.field_Jb.field_Cb = -this.field_Jb.field_F - (this.field_Jb.field_ub - (-this.field_Jb.field_kb + this.field_Eb.field_ub));
+          }
+          if (0 > -(this.field_Jb.field_F + this.field_Jb.field_Cb)) {
+            this.field_Jb.field_Cb = -this.field_Jb.field_F;
+          }
+        }
+        if (param2 > -97) {
           return;
         }
+        if (this.field_Hb.e((byte) 90)) {
+          this.field_Jb.field_F = -this.field_Hb.a((byte) 61, this.field_Eb.field_ub, param0, this.field_Jb.field_ub);
+          this.field_Jb.field_Cb = 0;
+        }
+        this.field_Hb.a(this.field_Jb.field_ub, -this.field_Jb.field_F, this.field_Eb.field_ub, -1);
     }
 
     private final boolean a(int param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6) {
         int var8;
         int var9;
         int stackIn_8_0 = 0;
-        L0: {
-          if (!param2) {
-            if (this.field_S) {
-              if (!param4) {
-                stackIn_8_0 = 1;
-                break L0;
-              } else {
-                stackIn_8_0 = 0;
-                break L0;
-              }
-            } else {
-              stackIn_8_0 = 0;
-              break L0;
-            }
+        if (!param2) {
+          if (this.field_S) {
+            stackIn_8_0 = (!param4) ? 1 : 0;
           } else {
-            stackIn_8_0 = 1;
-            break L0;
+            stackIn_8_0 = 0;
           }
+        } else {
+          stackIn_8_0 = 1;
         }
         var8 = stackIn_8_0;
         this.field_Jb.a(var8 != 0, param6, 0, this.field_Eb.field_ub);
-        var9 = 72 % ((param1 - -3) / 59);
+        var9 = 72 % ((param1 + 3) / 59);
         this.a(false, param0, -102, param5, param3);
         return var8 != 0;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param1 > -97) {
-            field_Ib = (String) null;
+          field_Ib = (String) null;
         }
         this.field_ub = param4;
         this.field_K = param2;
@@ -145,10 +85,10 @@ final class um extends km {
     private final void a(byte param0, int param1, int param2) {
         this.field_Eb.field_ub = this.field_ub;
         if (param0 != 64) {
-            um.e((byte) -121);
+          um.e((byte) -121);
         }
         this.field_Jb.field_tb = 0;
-        this.field_Eb.field_K = this.field_K - (param2 - -param1);
+        this.field_Eb.field_K = this.field_K - (param2 + param1);
         this.field_Jb.field_K = -param1 + (-param2 + this.field_K);
         this.field_Hb.a(0, this.field_ub, this.field_Jb.field_ub, -this.field_Jb.field_F, 0, this.field_K - param2, param2, this.field_Eb.field_ub);
     }
@@ -156,31 +96,31 @@ final class um extends km {
     final void a(int param0, int param1, boolean param2, int param3) {
         this.a(param2, param3, -118, this.field_Eb.field_ub, param1);
         if (param0 != -1) {
-            this.a((byte) -116, 107, -74);
+          this.a((byte) -116, 107, -74);
         }
     }
 
     um(long param0, km param1, km param2, qm param3) {
         super(param0, (km) null);
         try {
-            this.field_Eb = new km(0L, param2);
-            this.field_Hb = new qm(0L, param3);
-            this.a(0, this.field_Eb);
-            this.a(0, this.field_Hb);
-            this.field_Jb = param1;
-            this.field_Eb.a(0, param1);
+          this.field_Eb = new km(0L, param2);
+          this.field_Hb = new qm(0L, param3);
+          this.a(0, this.field_Eb);
+          this.a(0, this.field_Hb);
+          this.field_Jb = param1;
+          this.field_Eb.a(0, param1);
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "um.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "um.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static rm[] e(byte param0) {
         int var3 = 0;
         int var4 = Virogrid.field_F ? 1 : 0;
-        int var2 = 58 / ((param0 - -85) / 39);
+        int var2 = 58 / ((param0 + 85) / 39);
         rm[] var1 = new rm[rj.field_h];
         for (var3 = 0; var3 < rj.field_h; var3++) {
-            var1[var3] = new rm(oj.field_Kb, se.field_d, el.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
+          var1[var3] = new rm(oj.field_Kb, se.field_d, el.field_w[var3], mb.field_bb[var3], db.field_k[var3], gb.field_F[var3], lj.field_j[var3], k.field_c);
         }
         pe.b((byte) -28);
         return var1;
@@ -188,14 +128,14 @@ final class um extends km {
 
     final boolean a(int param0, boolean param1, boolean param2, int param3, int param4, boolean param5) {
         if (param2) {
-            this.a(-108, false, true, 15, -127, false);
+          this.a(-108, false, true, 15, -127, false);
         }
         return this.a(param4, 110, param5, param0, param1, this.field_Eb.field_ub, param3);
     }
 
     public static void g(int param0) {
         if (param0 != 0) {
-            um.e((byte) 120);
+          um.e((byte) 120);
         }
         field_Ib = null;
         field_Kb = null;

@@ -10,7 +10,7 @@ final class rb extends hg {
 
     public static void a(byte param0) {
         if (param0 != -85) {
-            return;
+          return;
         }
         field_h = null;
         field_k = null;
@@ -18,33 +18,28 @@ final class rb extends hg {
     }
 
     final static boolean a(boolean param0) {
-        if (param0) {
-          if (pg.field_c != null) {
-            if (al.field_d != ck.field_t) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
+        if (!param0) {
           rb.a((byte) -76);
-          if (pg.field_c != null) {
-            if (al.field_d != ck.field_t) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+          if (pg.field_c == null) {
             return false;
           }
+          if (al.field_d == ck.field_t) {
+            return true;
+          }
+          return false;
         }
+        if (pg.field_c == null) {
+          return false;
+        }
+        if (al.field_d == ck.field_t) {
+          return true;
+        }
+        return false;
     }
 
     final static void a(dk[] param0, int param1, int param2, byte param3) {
-        dk[] var4 = null;
         int var5 = 0;
+        dk[] var4 = null;
         dk var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -55,106 +50,51 @@ final class rb extends hg {
         int stackIn_12_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_21_2 = null;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         var10 = EscapeVector.field_A;
         try {
-          L0: {
-            if (param0 != null) {
-              var11 = param0;
-              var4 = var11;
-              var5 = 0;
-              L1: while (true) {
-                if (var11.length <= var5) {
-                  L2: {
-                    if (param3 <= -5) {
-                      break L2;
-                    } else {
-                      field_k = (qh[]) null;
-                      break L2;
-                    }
-                  }
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  L3: {
-                    var6 = var11[var5];
-                    if (var6 == null) {
-                      break L3;
-                    } else {
-                      L4: {
-                        var7 = var6.field_c;
-                        if (param2 != var7) {
-                          stackIn_9_0 = 0;
-                          break L4;
-                        } else {
-                          stackIn_9_0 = 1;
-                          break L4;
-                        }
-                      }
-                      L5: {
-                        var8 = stackIn_9_0;
-                        if (var7 != param1) {
-                          stackIn_12_0 = 0;
-                          break L5;
-                        } else {
-                          stackIn_12_0 = 1;
-                          break L5;
-                        }
-                      }
-                      var9 = stackIn_12_0;
-                      var6.a(var8 != 0, var9 != 0, (byte) 81);
-                      break L3;
-                    }
-                  }
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
+          if (param0 == null) {
+            return;
+          }
+          var11 = param0;
+          var4 = var11;
+          for (var5 = 0; var11.length > var5; var5++) {
+            var6 = var11[var5];
+            if (var6 != null) {
+              var7 = var6.field_c;
+              stackIn_9_0 = (param2 != var7) ? 0 : 1;
+              var8 = stackIn_9_0;
+              stackIn_12_0 = (var7 != param1) ? 0 : 1;
+              var9 = stackIn_12_0;
+              var6.a(var8 != 0, var9 != 0, (byte) 81);
             }
           }
+          if (param3 > -5) {
+            field_k = (qh[]) null;
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L6: {
-            var4_ref = decompiledCaughtException;
-            stackIn_20_0 = (RuntimeException) (var4_ref);
-
-            stackIn_20_1 = new StringBuilder().append("rb.A(");
-
-            if (param0 == null) {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "null";
-              break L6;
-            } else {
-              stackIn_21_0 = (RuntimeException) ((Object) stackIn_20_0);
-              stackIn_21_1 = (StringBuilder) ((Object) stackIn_20_1);
-              stackIn_21_2 = "{...}";
-              break L6;
-            }
+          var4_ref = decompiledCaughtException;
+          stackIn_20_0 = var4_ref;
+          stackIn_20_1 = new StringBuilder().append("rb.A(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_21_0), stackIn_21_2 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
+          throw t.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     rb(String param0, int param1) {
         try {
-            this.field_g = param0;
-            this.field_i = param1;
+          this.field_g = param0;
+          this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

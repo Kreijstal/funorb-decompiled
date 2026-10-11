@@ -12,18 +12,16 @@ final class hb extends wl {
     int field_j;
 
     public static void a(int param0) {
-        if (param0 != 24944) {
-          field_n = -61;
-          field_k = null;
-          field_i = null;
-          field_o = null;
-          return;
-        } else {
+        if (param0 == 24944) {
           field_k = null;
           field_i = null;
           field_o = null;
           return;
         }
+        field_n = -61;
+        field_k = null;
+        field_i = null;
+        field_o = null;
     }
 
     final static ui a(int param0, int param1, int param2, int param3, int param4, vh param5) {
@@ -34,59 +32,43 @@ final class hb extends wl {
         ui stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var8 = da.a(param3, param1, param0, param5, param2, param4);
-            var6 = var8;
-            if (var8 != null) {
-              var7 = new ui();
-              var7.field_c = var8;
-              var7.field_c.add((java.awt.Component) ((Object) var7));
-              var7.setBounds(0, 0, param1, param3);
-              var7.addFocusListener(var7);
-              var7.requestFocus();
-              stackIn_4_0 = (ui) (var7);
-              break L0;
-            } else {
-              return null;
-            }
+          var8 = da.a(param3, param1, param0, param5, param2, param4);
+          var6 = var8;
+          if (var8 == null) {
+            return null;
           }
+          var7 = new ui();
+          var7.field_c = var8;
+          var7.field_c.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(0, 0, param1, param3);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          stackIn_4_0 = var7;
+          return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var6_ref = decompiledCaughtException;
-            stackIn_7_0 = (RuntimeException) (var6_ref);
-
-            stackIn_7_1 = new StringBuilder().append("hb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-
-            if (param5 == null) {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "null";
-              break L1;
-            } else {
-              stackIn_8_0 = (RuntimeException) ((Object) stackIn_7_0);
-              stackIn_8_1 = (StringBuilder) ((Object) stackIn_7_1);
-              stackIn_8_2 = "{...}";
-              break L1;
-            }
+          var6_ref = decompiledCaughtException;
+          stackIn_7_0 = var6_ref;
+          stackIn_7_1 = new StringBuilder().append("hb.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
           }
-          throw bd.a((Throwable) ((Object) stackIn_8_0), stackIn_8_2 + ')');
+          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
-        return stackIn_4_0;
     }
 
     hb(long param0, int param1, byte[] param2) {
         try {
-            this.field_p = param0;
-            this.field_l = param2;
-            this.field_j = param1;
+          this.field_p = param0;
+          this.field_l = param2;
+          this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw bd.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw bd.a((Throwable) ((Object) runtimeException), "hb.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

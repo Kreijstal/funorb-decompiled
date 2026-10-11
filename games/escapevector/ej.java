@@ -12,23 +12,23 @@ final class ej {
 
     final static void a(byte param0, String param1) {
         try {
-            lb.b(-10002, param1);
-            uf.a((byte) 125, mm.field_a, false);
-            if (param0 > -113) {
-                String var3 = (String) null;
-                ej.a((byte) -29, (String) null);
-            }
+          lb.b(-10002, param1);
+          uf.a((byte) 125, mm.field_a, false);
+          if (param0 > -113) {
+            String var3 = (String) null;
+            ej.a((byte) -29, (String) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ej.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static int a(int param0, int param1) {
-        param1 = ((param1 & -1431655765) >>> -1516128639) + (param1 & 1431655765);
-        param1 = (param1 & param0) + ((-858993460 & param1) >>> 1378065122);
-        param1 = (param1 >>> -1166604636) + param1 & 252645135;
-        param1 = param1 + (param1 >>> 320507944);
-        param1 = param1 + (param1 >>> -2087009456);
+        param1 = ((param1 & -1431655765) >>> 1) + (param1 & 1431655765);
+        param1 = (param1 & param0) + ((-858993460 & param1) >>> 2);
+        param1 = (param1 >>> 4) + param1 & 252645135;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
         return param1 & 255;
     }
 
@@ -37,14 +37,12 @@ final class ej {
         field_a = null;
         field_f = null;
         field_g = null;
-        if (param0 < 13) {
-          field_c = (String) null;
-          field_c = null;
-          return;
-        } else {
+        if (param0 >= 13) {
           field_c = null;
           return;
         }
+        field_c = (String) null;
+        field_c = null;
     }
 
     static {

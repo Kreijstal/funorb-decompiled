@@ -16,52 +16,32 @@ final class bd extends jl {
     static String field_n;
 
     final static void a(int param0, int param1) {
-        int var2;
-        L0: {
-          var2 = -81 % ((param0 - 24) / 63);
-          mg.field_b = param1 >> 60057860 & 3;
-          if (2 < mg.field_b) {
-            mg.field_b = 2;
-            break L0;
-          } else {
-            break L0;
-          }
+        int var2 = -81 % ((param0 - 24) / 63);
+        mg.field_b = param1 >> 4 & 3;
+        if (!(2 >= mg.field_b)) {
+          mg.field_b = 2;
         }
-        wb.field_j = param1 >> 1265648866 & 3;
+        wb.field_j = param1 >> 2 & 3;
         o.field_i = param1 & 3;
-        if ((wb.field_j ^ -1) < -3) {
-          L1: {
-            wb.field_j = 2;
-            if ((o.field_i ^ -1) < -3) {
-              o.field_i = 2;
-              break L1;
-            } else {
-              break L1;
-            }
+        if (wb.field_j <= 2) {
+          if (!(o.field_i <= 2)) {
+            o.field_i = 2;
           }
           return;
-        } else {
-          L2: {
-            if ((o.field_i ^ -1) < -3) {
-              o.field_i = 2;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return;
+        }
+        wb.field_j = 2;
+        if (!(o.field_i <= 2)) {
+          o.field_i = 2;
         }
     }
 
     final long c(int param0) {
-        int var2;
-        var2 = 24 / ((55 - param0) / 61);
+        int var2 = 24 / ((55 - param0) / 61);
         this.field_i = this.field_i + this.f(122);
-        if (this.field_p > this.field_i) {
-          return (this.field_p - this.field_i) / 1000000L;
-        } else {
+        if (this.field_p <= this.field_i) {
           return 0L;
         }
+        return (this.field_p - this.field_i) / 1000000L;
     }
 
     public static void b(byte param0) {
@@ -69,7 +49,7 @@ final class bd extends jl {
         field_j = null;
         field_n = null;
         if (param0 != 126) {
-            return;
+          return;
         }
         field_t = null;
         field_m = null;
@@ -78,154 +58,108 @@ final class bd extends jl {
     final static void d(int param0) {
         qa.a(param0 ^ 120, (ej) null);
         if (param0 != 1) {
-            field_k = (Boolean) null;
+          field_k = (Boolean) null;
         }
     }
 
     private final long f(int param0) {
-        long var2;
-        long var4;
-        long var6;
-        int var8;
-        int var9;
-        var9 = TorChallenge.field_F ? 1 : 0;
-        if (param0 > 108) {
-          var2 = System.nanoTime();
-          var4 = var2 - this.field_r;
-          this.field_r = var2;
-          if ((var4 ^ -1L) < 4999999999L) {
-            if (5000000000L <= var4) {
-              var6 = 0L;
-              var8 = 1;
-              L0: while (true) {
-                if (this.field_s < var8) {
-                  return var6 / (long)this.field_s;
-                } else {
-                  var6 = var6 + this.field_q[(this.field_o - var8 - -10) % 10];
-                  var8++;
-                  continue L0;
-                }
-              }
-            } else {
-              L1: {
-                this.field_q[this.field_o] = var4;
-                if (1 > this.field_s) {
-                  this.field_s = this.field_s + 1;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              this.field_o = (1 + this.field_o) % 10;
-              var6 = 0L;
-              var8 = 1;
-              L2: while (true) {
-                if (this.field_s < var8) {
-                  return var6 / (long)this.field_s;
-                } else {
-                  var6 = var6 + this.field_q[(this.field_o - var8 - -10) % 10];
-                  var8++;
-                  continue L2;
-                }
-              }
-            }
-          } else {
-            var6 = 0L;
-            var8 = 1;
-            L3: while (true) {
-              if (this.field_s < var8) {
-                return var6 / (long)this.field_s;
-              } else {
-                var6 = var6 + this.field_q[(this.field_o - var8 - -10) % 10];
-                var8++;
-                continue L3;
-              }
-            }
-          }
-        } else {
+        long var6 = 0L;
+        int var8 = 0;
+        int var9 = TorChallenge.field_F ? 1 : 0;
+        long var6Lifetime1;
+        long var6Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        if (param0 <= 108) {
           return 3L;
         }
+        long var2 = System.nanoTime();
+        long var4 = var2 - this.field_r;
+        this.field_r = var2;
+        if (var4 <= -5000000000L) {
+          var6 = 0L;
+          for (var8 = 1; this.field_s >= var8; var8++) {
+            var6 = var6 + this.field_q[(this.field_o - var8 + 10) % 10];
+          }
+          return var6 / (long)this.field_s;
+        }
+        if (5000000000L > var4) {
+          this.field_q[this.field_o] = var4;
+          if (1 > this.field_s) {
+            this.field_s = this.field_s + 1;
+          }
+          this.field_o = (1 + this.field_o) % 10;
+          var6Lifetime1 = 0L;
+          for (var8Lifetime1 = 1; this.field_s >= var8Lifetime1; var8Lifetime1++) {
+            var6Lifetime1 = var6Lifetime1 + this.field_q[(this.field_o - var8Lifetime1 + 10) % 10];
+          }
+          return var6Lifetime1 / (long)this.field_s;
+        }
+        var6Lifetime2 = 0L;
+        for (var8Lifetime2 = 1; this.field_s >= var8Lifetime2; var8Lifetime2++) {
+          var6Lifetime2 = var6Lifetime2 + this.field_q[(this.field_o - var8Lifetime2 + 10) % 10];
+        }
+        return var6Lifetime2 / (long)this.field_s;
     }
 
     final int a(long param0, int param1) {
         int var4;
         int var5;
         var5 = TorChallenge.field_F ? 1 : 0;
-        if (param1 == 28) {
-          if (this.field_i < this.field_p) {
-            this.field_r = this.field_r + (this.field_p + -this.field_i);
-            this.field_i = this.field_i + (-this.field_i + this.field_p);
-            this.field_p = this.field_p + param0;
-            return 1;
-          } else {
-            var4 = 0;
-            L0: while (true) {
-              L1: {
-                var4++;
-                this.field_p = this.field_p + param0;
-                if (-11 >= (var4 ^ -1)) {
-                  break L1;
-                } else {
-                  if ((this.field_p ^ -1L) > (this.field_i ^ -1L)) {
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
-              }
-              L2: {
-                if (this.field_i > this.field_p) {
-                  this.field_p = this.field_i;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return var4;
-            }
-          }
-        } else {
+        if (param1 != 28) {
           return 101;
         }
+        if (this.field_i < this.field_p) {
+          this.field_r = this.field_r + (this.field_p - this.field_i);
+          this.field_i = this.field_i + (-this.field_i + this.field_p);
+          this.field_p = this.field_p + param0;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          var4++;
+          this.field_p = this.field_p + param0;
+        } while (var4 < 10 &&
+          this.field_p < this.field_i);
+        if (this.field_i > this.field_p) {
+          this.field_p = this.field_i;
+        }
+        return var4;
     }
 
     final static int e(int param0) {
         if (param0 != 0) {
-            bd.e(0);
-            wf.field_i.a((byte) -120);
-            if (!gb.field_d.b(-59)) {
-                return df.c((byte) 35);
-            }
-            return 0;
+          bd.e(0);
+          wf.field_i.a((byte) -120);
+          if (!gb.field_d.b(-59)) {
+            return df.c((byte) 35);
+          }
+          return 0;
         }
         wf.field_i.a((byte) -120);
-        if (!(gb.field_d.b(-59))) {
-            return df.c((byte) 35);
+        if (!gb.field_d.b(-59)) {
+          return df.c((byte) 35);
         }
         return 0;
     }
 
     final void a(int param0) {
-        if (param0 == 65280) {
-          if ((this.field_i ^ -1L) > (this.field_p ^ -1L)) {
-            this.field_i = this.field_i + (this.field_p + -this.field_i);
-            this.field_r = 0L;
-            return;
-          } else {
-            this.field_r = 0L;
-            return;
-          }
-        } else {
+        if (param0 != 65280) {
           bd.a(-25, -91);
-          if ((this.field_i ^ -1L) <= (this.field_p ^ -1L)) {
-            this.field_r = 0L;
-            return;
-          } else {
-            this.field_i = this.field_i + (this.field_p + -this.field_i);
+          if (this.field_i < this.field_p) {
+            this.field_i = this.field_i + (this.field_p - this.field_i);
             this.field_r = 0L;
             return;
           }
+          this.field_r = 0L;
+          return;
         }
+        if (this.field_i >= this.field_p) {
+          this.field_r = 0L;
+          return;
+        }
+        this.field_i = this.field_i + (this.field_p - this.field_i);
+        this.field_r = 0L;
     }
 
     bd() {

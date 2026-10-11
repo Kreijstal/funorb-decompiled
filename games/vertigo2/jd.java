@@ -8,45 +8,29 @@ final class jd {
     static int field_d;
 
     final static qj a(boolean param0) {
-        String var1;
-        if (param0) {
-          L0: {
-            jd.a(13);
-            var1 = hr.h(-101);
-            if (var1 == null) {
-              break L0;
-            } else {
-              if (0 > var1.indexOf('@')) {
-                break L0;
-              } else {
-                var1 = "";
-                break L0;
-              }
-            }
-          }
-          return new qj(hr.h(-104), wa.b((byte) -119));
-        } else {
-          L1: {
-            var1 = hr.h(-101);
-            if (var1 == null) {
-              break L1;
-            } else {
-              if (0 > var1.indexOf('@')) {
-                break L1;
-              } else {
-                var1 = "";
-                break L1;
-              }
-            }
+        String var1 = null;
+        String var1Lifetime1;
+        if (!param0) {
+          var1 = hr.h(-101);
+          if (var1 != null &&
+            0 <= var1.indexOf('@')) {
+            var1 = "";
           }
           return new qj(hr.h(-104), wa.b((byte) -119));
         }
+        jd.a(13);
+        var1Lifetime1 = hr.h(-101);
+        if (var1Lifetime1 != null &&
+          0 <= var1Lifetime1.indexOf('@')) {
+          var1Lifetime1 = "";
+        }
+        return new qj(hr.h(-104), wa.b((byte) -119));
     }
 
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        int var1 = -61 % ((param0 - -10) / 34);
+        int var1 = -61 % ((param0 + 10) / 34);
         field_b = null;
     }
 

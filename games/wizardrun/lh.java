@@ -9,9 +9,9 @@ final class lh {
     public static void a(boolean param0) {
         field_a = null;
         if (param0) {
-            field_a = (bh) null;
-            field_b = null;
-            return;
+          field_a = (bh) null;
+          field_b = null;
+          return;
         }
         field_b = null;
     }

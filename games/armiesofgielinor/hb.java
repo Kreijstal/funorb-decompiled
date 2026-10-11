@@ -11,7 +11,7 @@ final class hb {
         field_a = null;
         field_b = null;
         if (param0 != -1) {
-            field_b = (String) null;
+          field_b = (String) null;
         }
     }
 
@@ -22,90 +22,105 @@ final class hb {
         qh.a(param11, param4, param1, param3, param5, param9, param0, -1, param12, param10);
         la.a(param3, param4, -1);
         if (!param8) {
-            field_b = (String) null;
+          field_b = (String) null;
         } else {
-            dl.a(param13, param4, 0, param11);
-            return;
+          dl.a(param13, param4, 0, param11);
+          return;
         }
         dl.a(param13, param4, 0, param11);
     }
 
     final static void a(byte param0, int param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            IOException var2 = null;
-            L0: {
-              if (null == am.field_z) {
-                break L0;
-              } else {
-                L1: {
-                  if (-1 >= (param1 ^ -1)) {
-                    if (kl.field_k != ov.field_g) {
-                      break L0;
-                    } else {
-                      if (0 != vl.field_n.field_q) {
-                        break L1;
-                      } else {
-                        if ((10000L + mb.field_G ^ -1L) <= (vi.b(-60) ^ -1L)) {
-                          break L1;
-                        } else {
-                          vl.field_n.h(32161, param1);
-                          break L1;
-                        }
-                      }
-                    }
-                  } else {
-                    if (0 != vl.field_n.field_q) {
-                      break L1;
-                    } else {
-                      if ((10000L + mb.field_G ^ -1L) <= (vi.b(-60) ^ -1L)) {
-                        break L1;
-                      } else {
-                        vl.field_n.h(32161, param1);
-                        break L1;
-                      }
-                    }
-                  }
-                }
-                if (param0 >= 8) {
-                  L2: {
-                    if (-1 <= (vl.field_n.field_q ^ -1)) {
-                      break L2;
-                    } else {
-                      try {
-                        L3: {
-                          am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
-                          mb.field_G = vi.b(51);
-                          break L3;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L4: {
-                          var2 = (IOException) (Object) decompiledCaughtException;
-                          dj.a((byte) -127);
-                          break L4;
-                        }
-                      }
-                      vl.field_n.field_q = 0;
-                      break L2;
-                    }
-                  }
-                  return;
-                } else {
-                  return;
-                }
+          Throwable decompiledCaughtException = null;
+          IOException var2 = null;
+          boolean decompiledFrameRemainder0 = true;
+          if (null != am.field_z) {
+            if (param1 >= 0) {
+              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60))) {
+                vl.field_n.h(32161, param1);
+              }
+            } else {
+              if (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60)) {
+                vl.field_n.h(32161, param1);
               }
             }
-            vl.field_n.field_q = 0;
+            if (decompiledFrameRemainder0) {
+              if (param0 < 8) {
+                return;
+              }
+              if (vl.field_n.field_q > 0) {
+                try {
+                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
+                  mb.field_G = vi.b(51);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  dj.a((byte) -127);
+                }
+                vl.field_n.field_q = 0;
+              }
+              return;
+            }
+          }
+          vl.field_n.field_q = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     static {
         field_b = "Create your own free Jagex account";
         field_a = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
+    }
+
+    /* Full JVM integer arguments; original narrow signature preserved. */
+    final static void $cfr$intArgs$a$e9dea5688aa5(int param0, int param1) {
+        try {
+          Throwable decompiledCaughtException = null;
+          IOException var2 = null;
+          boolean decompiledFrameRemainder0 = true;
+          if (null != am.field_z) {
+            if (param1 >= 0) {
+              decompiledFrameRemainder0 = (kl.field_k == ov.field_g);
+              if ((decompiledFrameRemainder0) && (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60))) {
+                vl.field_n.h(32161, param1);
+              }
+            } else {
+              if (0 == vl.field_n.field_q &&
+                (10000L + mb.field_G) < vi.b(-60)) {
+                vl.field_n.h(32161, param1);
+              }
+            }
+            if (decompiledFrameRemainder0) {
+              if (param0 < 8) {
+                return;
+              }
+              if (vl.field_n.field_q > 0) {
+                try {
+                  am.field_z.a(vl.field_n.field_o, (byte) 20, 0, vl.field_n.field_q);
+                  mb.field_G = vi.b(51);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = (IOException) (Object) decompiledCaughtException;
+                  dj.a((byte) -127);
+                }
+                vl.field_n.field_q = 0;
+              }
+              return;
+            }
+          }
+          vl.field_n.field_q = 0;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
     }
 }

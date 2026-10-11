@@ -12,45 +12,28 @@ abstract class ke {
 
     final static void a(byte param0) {
         if (param0 > -100) {
-            field_f = -51;
+          field_f = -51;
         }
     }
 
     final static void b(boolean param0) {
         int var1_int = 0;
         int var2 = 0;
-        int decompiledRegionSelector0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         var2 = Terraphoenix.field_V;
         try {
-          L0: {
-            if (!param0) {
-              var1_int = 0;
-              L1: while (true) {
-                if (4 <= var1_int) {
-                  decompiledRegionSelector0 = 1;
-                  break L0;
-                } else {
-                  sj.field_a[var1_int] = new lg(var1_int);
-                  var1_int++;
-                  continue L1;
-                }
-              }
-            } else {
-              decompiledRegionSelector0 = 0;
-              break L0;
-            }
+          if (param0) {
+            return;
           }
+          for (var1_int = 0; 4 > var1_int; var1_int++) {
+            sj.field_a[var1_int] = new lg(var1_int);
+          }
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
           throw qk.a((Throwable) ((Object) var1), "ke.E(" + param0 + ')');
-        }
-        if (decompiledRegionSelector0 == 0) {
-          return;
-        } else {
-          return;
         }
     }
 
@@ -63,31 +46,29 @@ abstract class ke {
         String var3 = null;
         long var4 = 0L;
         try {
-            bl.field_e = true;
-            var2 = "tuhstatbut";
-            var3 = "rvnadlm";
-            var4 = -1L;
-            ll.a(var3, var4, (byte) 116, param0, var2);
-            int var6 = -64 / ((param1 - -40) / 38);
+          bl.field_e = true;
+          var2 = "tuhstatbut";
+          var3 = "rvnadlm";
+          var4 = -1L;
+          ll.a(var3, var4, (byte) 116, param0, var2);
+          int var6 = -64 / ((param1 + 40) / 38);
         } catch (RuntimeException runtimeException) {
-            throw qk.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qk.a((Throwable) ((Object) runtimeException), "ke.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     public static void a(boolean param0) {
         field_g = null;
-        if (param0) {
-          field_g = (String) null;
-          field_d = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
+        if (!param0) {
           field_d = null;
           field_b = null;
           field_a = null;
           return;
         }
+        field_g = (String) null;
+        field_d = null;
+        field_b = null;
+        field_a = null;
     }
 
     static {

@@ -15,7 +15,7 @@ final class q extends rt {
         this.field_n = -1;
         this.field_m = -1;
         if (param0 != 11) {
-            field_q = (gk) null;
+          field_q = (gk) null;
         }
     }
 
@@ -34,13 +34,13 @@ final class q extends rt {
         this.field_m = -1;
         this.field_n = -1;
         try {
-            this.field_j.a((rt) (this), 1);
-            for (var7_int = 0; var7_int < 6; var7_int++) {
-                jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.field_b, param2, param2, 0, param5, 5121, param4[var7_int], 0);
-            }
-            this.a(true, -128);
+          this.field_j.a((rt) (this), 1);
+          for (var7_int = 0; var7_int < 6; var7_int++) {
+            jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.field_b, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+          }
+          this.a(true, -128);
         } catch (RuntimeException runtimeException) {
-            throw pn.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

@@ -21,29 +21,26 @@ class mc {
     }
 
     final void b(boolean param0) {
-        if (this.field_e != null) {
-          this.field_e.field_j = this.field_j;
-          this.field_j.field_e = this.field_e;
-          this.field_j = null;
-          if (param0) {
-            this.b(false);
-            this.field_e = null;
-            return;
-          } else {
-            this.field_e = null;
-            return;
-          }
-        } else {
+        if (this.field_e == null) {
           return;
         }
+        this.field_e.field_j = this.field_j;
+        this.field_j.field_e = this.field_e;
+        this.field_j = null;
+        if (!param0) {
+          this.field_e = null;
+          return;
+        }
+        this.b(false);
+        this.field_e = null;
     }
 
     final boolean a(byte param0) {
         if (param0 != 95) {
-            return true;
+          return true;
         }
         if (null == this.field_e) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -52,18 +49,16 @@ class mc {
         field_i = null;
         field_g = null;
         field_d = null;
-        if (param0 != 20043) {
-          mc.b(-4);
-          field_h = null;
-          field_a = null;
-          field_m = null;
-          return;
-        } else {
+        if (param0 == 20043) {
           field_h = null;
           field_a = null;
           field_m = null;
           return;
         }
+        mc.b(-4);
+        field_h = null;
+        field_a = null;
+        field_m = null;
     }
 
     static {

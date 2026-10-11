@@ -11,64 +11,50 @@ final class ee {
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -88) {
-            return;
+          return;
         }
         field_c = null;
     }
 
     final static void b(byte param0) {
-        L0: {
-          if (rq.field_D != null) {
-            pi.field_b.b(rq.field_D);
-            break L0;
-          } else {
-            break L0;
-          }
+        if (rq.field_D != null) {
+          pi.field_b.b(rq.field_D);
         }
-        if (param0 != -25) {
-          field_e = false;
-          qd.field_c = null;
-          vg.field_Bb = null;
-          rq.field_D = null;
-          return;
-        } else {
+        if (param0 == -25) {
           qd.field_c = null;
           vg.field_Bb = null;
           rq.field_D = null;
           return;
         }
+        field_e = false;
+        qd.field_c = null;
+        vg.field_Bb = null;
+        rq.field_D = null;
     }
 
     final static void a(int param0, int param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        if (param0 == 653278209) {
-          var3 = hw.field_i * iw.field_g.field_o >> -1233444280;
-          var4 = iw.field_g.field_o * hw.field_i >> 314556488;
-          var5 = hw.field_i * sa.field_e >> 221643528;
-          var6 = lr.field_m * hw.field_i >> -1718113176;
-          if (rg.field_f) {
-            iw.field_g.e(param1 - var5 + -(var3 >> 1562129825), -var6 + (param2 + -(var4 >> 39237793)), var3, var4, 256);
-            return;
-          } else {
-            eo.a(iw.field_g, -(var3 >> 653278209) + (-var5 + param1), -var6 + param2 + -(var4 >> -1916685887), var3, var4);
-            return;
-          }
-        } else {
+        if (param0 != 653278209) {
           return;
         }
+        int var3 = hw.field_i * iw.field_g.field_o >> 8;
+        int var4 = iw.field_g.field_o * hw.field_i >> 8;
+        int var5 = hw.field_i * sa.field_e >> 8;
+        int var6 = lr.field_m * hw.field_i >> 8;
+        if (!rg.field_f) {
+          eo.a(iw.field_g, -(var3 >> 1) + (-var5 + param1), -var6 + param2 - (var4 >> 1), var3, var4);
+          return;
+        }
+        iw.field_g.e(param1 - var5 - (var3 >> 1), -var6 + (param2 - (var4 >> 1)), var3, var4, 256);
     }
 
     final static void a(ks param0, boolean param1) {
         try {
-            os.field_I = param0;
-            if (param1) {
-                ee.b((byte) 1);
-            }
+          os.field_I = param0;
+          if (param1) {
+            ee.b((byte) 1);
+          }
         } catch (RuntimeException runtimeException) {
-            throw nb.a((Throwable) ((Object) runtimeException), "ee.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw nb.a((Throwable) ((Object) runtimeException), "ee.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

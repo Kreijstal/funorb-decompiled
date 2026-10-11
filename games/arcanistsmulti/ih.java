@@ -15,7 +15,7 @@ final class ih {
         field_d = null;
         field_a = null;
         if (param0 != 48) {
-            field_f = -128;
+          field_f = -128;
         }
     }
 
@@ -26,19 +26,16 @@ final class ih {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (de.field_e < param0 - -param1) {
-          if (0 > -param1 + param0 + param2) {
-            if (param3 != 246) {
-              return -40;
-            } else {
-              return -param1 + de.field_e;
-            }
-          } else {
-            return -param1 + (param2 + param0);
-          }
-        } else {
+        if (de.field_e >= param0 + param1) {
           return param0;
         }
+        if (0 <= -param1 + param0 + param2) {
+          return -param1 + (param2 + param0);
+        }
+        if (param3 == 246) {
+          return -param1 + de.field_e;
+        }
+        return -40;
     }
 
     public final String toString() {

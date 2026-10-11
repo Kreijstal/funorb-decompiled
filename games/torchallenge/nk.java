@@ -16,7 +16,7 @@ final class nk {
         field_b = (byte[][]) null;
         field_f = null;
         if (param0 != 250) {
-            return;
+          return;
         }
         field_g = null;
         field_d = null;

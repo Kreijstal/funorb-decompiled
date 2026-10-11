@@ -11,7 +11,7 @@ final class fr {
         field_a = null;
         field_b = null;
         if (param0 != 1) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
     }
 

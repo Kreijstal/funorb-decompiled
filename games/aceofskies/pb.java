@@ -9,9 +9,9 @@ final class pb {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != -53) {
-            pb.a((byte) -104);
-            field_b = null;
-            return;
+          pb.a((byte) -104);
+          field_b = null;
+          return;
         }
         field_b = null;
     }

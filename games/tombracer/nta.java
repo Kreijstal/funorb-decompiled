@@ -14,21 +14,21 @@ final class nta implements fo {
     static int field_h;
 
     final void a(byte param0, uw param1, int param2) {
-        if (!(param1 != null)) {
-            return;
+        if (param1 == null) {
+          return;
         }
         try {
-            param1.a((byte) -100, 2, (fo) (this));
-            int var4_int = 5 / ((-52 - param0) / 57);
+          param1.a((byte) -100, 2, (fo) (this));
+          int var4_int = 5 / ((-52 - param0) / 57);
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nta.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public final int e(byte param0) {
         if (param0 >= -86) {
-            field_e = (String) null;
-            return this.field_g;
+          field_e = (String) null;
+          return this.field_g;
         }
         return this.field_g;
     }
@@ -36,27 +36,20 @@ final class nta implements fo {
     public static void a(int param0) {
         field_e = null;
         if (param0 != -25821) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     public final void f(int param0) {
-        L0: {
-          if (-1 > (this.field_a ^ -1)) {
-            this.field_a = this.field_a - 1;
-            break L0;
-          } else {
-            break L0;
-          }
+        if (this.field_a > 0) {
+          this.field_a = this.field_a - 1;
         }
         this.field_f.a(0);
-        if (param0 != -4366) {
-          field_d = -24;
-          return;
-        } else {
+        if (param0 == -4366) {
           return;
         }
+        field_d = -24;
     }
 
     public final void a(int param0, iq param1) {
@@ -64,68 +57,50 @@ final class nta implements fo {
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          L0: {
-            var3 = this.field_f.b((byte) 74);
-            gqa.a(this.field_c, -83584144, this.c((byte) 106), this.b((byte) 90), var3, this.e((byte) -106));
-            if (param0 >= 103) {
-              break L0;
-            } else {
-              this.field_j = -39;
-              return;
-            }
+          var3 = this.field_f.b((byte) 74);
+          gqa.a(this.field_c, -83584144, this.c((byte) 106), this.b((byte) 90), var3, this.e((byte) -106));
+          if (param0 >= 103) {
+            return;
           }
+          this.field_j = -39;
+          return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          L1: {
-            var3_ref = decompiledCaughtException;
-            stackIn_5_0 = (RuntimeException) (var3_ref);
-
-            stackIn_5_1 = new StringBuilder().append("nta.DB(").append(param0).append(',');
-
-            if (param1 == null) {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "null";
-              break L1;
-            } else {
-              stackIn_6_0 = (RuntimeException) ((Object) stackIn_5_0);
-              stackIn_6_1 = (StringBuilder) ((Object) stackIn_5_1);
-              stackIn_6_2 = "{...}";
-              break L1;
-            }
+          var3_ref = decompiledCaughtException;
+          stackIn_5_0 = var3_ref;
+          stackIn_5_1 = new StringBuilder().append("nta.DB(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
           }
-          throw tba.a((Throwable) ((Object) stackIn_6_0), stackIn_6_2 + ')');
+          throw tba.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     public final int c(byte param0) {
         if (param0 <= 91) {
-            this.f(-64);
-            return this.field_i;
+          this.f(-64);
+          return this.field_i;
         }
         return this.field_i;
     }
 
     public final boolean d(byte param0) {
-        if (param0 == 48) {
-          if (-1 == (this.field_a ^ -1)) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
+        if (param0 != 48) {
           field_b = (String[]) null;
-          if (-1 == (this.field_a ^ -1)) {
-            return true;
-          } else {
+          if (this.field_a != 0) {
             return false;
           }
+          return true;
         }
+        if (this.field_a != 0) {
+          return false;
+        }
+        return true;
     }
 
     public final int b(byte param0) {
@@ -135,14 +110,14 @@ final class nta implements fo {
 
     nta(int param0, int param1, int param2, bua param3, int param4, int param5) {
         try {
-            this.field_a = param5;
-            this.field_j = param0;
-            this.field_c = param4;
-            this.field_i = param1;
-            this.field_g = param2;
-            this.field_f = param3;
+          this.field_a = param5;
+          this.field_j = param0;
+          this.field_c = param4;
+          this.field_i = param1;
+          this.field_g = param2;
+          this.field_f = param3;
         } catch (RuntimeException runtimeException) {
-            throw tba.a((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw tba.a((Throwable) ((Object) runtimeException), "nta.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

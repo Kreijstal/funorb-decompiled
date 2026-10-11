@@ -33,66 +33,67 @@ final class qg extends l {
         Object var22 = null;
         Object var23 = null;
         if (he.field_Xb == null) {
-            if (param0 != 7377) {
-                qg.a(119);
-                return;
-            }
+          if (param0 != 7377) {
+            qg.a(119);
             return;
+          }
+          return;
         }
         int var3 = he.field_Xb.b(param1, param0 ^ -29471);
         if (0 == var3) {
-            if (param0 == 7377) {
-                return;
-            }
-            qg.a(119);
+          if (param0 == 7377) {
             return;
+          }
+          qg.a(119);
+          return;
         }
-        if (-3 == (var3 ^ -1) && he.field_Xb.field_V != null) {
-            if (he.field_Xb.field_V.equals("")) {
-                he.field_Xb = null;
-                ge.field_d = -1;
-                if (param0 != 7377) {
-                    qg.a(119);
-                    return;
-                }
-                return;
+        if (var3 == 2 &&
+          he.field_Xb.field_V != null) {
+          if (he.field_Xb.field_V.equals("")) {
+            he.field_Xb = null;
+            ge.field_d = -1;
+            if (param0 != 7377) {
+              qg.a(119);
+              return;
             }
-            if (he.field_Xb.field_V.charAt(0) == 91) {
-                var4 = he.field_Xb.field_V;
-            } else {
-                var31 = (CharSequence) ((Object) he.field_Xb.field_V);
-                var4 = c.a(var31, true);
+            return;
+          }
+          if (he.field_Xb.field_V.charAt(0) == 91) {
+            var4 = he.field_Xb.field_V;
+          } else {
+            var31 = (CharSequence) ((Object) he.field_Xb.field_V);
+            var4 = c.a(var31, true);
+          }
+          var5 = null;
+          if (0 == ge.field_d) {
+            var5 = ab.a((byte) 73, var4, param2);
+          }
+          if (ge.field_d == 1) {
+            var5 = og.a(var4, true, param2);
+          }
+          if (ge.field_d == 2) {
+            var5 = g.a(var4, -128, param2);
+          }
+          if (ge.field_d == 3) {
+            var5 = og.a(var4, param2, (byte) 60, var4);
+          }
+          if (var5 != null) {
+            String var6 = (String) null;
+            gf.a(var4, 0, false, (String) (var5), 2, (String) null);
+            he.field_Xb = null;
+            ge.field_d = -1;
+            if (param0 != 7377) {
+              qg.a(119);
+              return;
             }
-            var5 = null;
-            if (!(0 != ge.field_d)) {
-                var5 = ab.a((byte) 73, var4, param2);
-            }
-            if (!((ge.field_d ^ -1) != -2)) {
-                var5 = og.a(var4, true, param2);
-            }
-            if (!(-3 != (ge.field_d ^ -1))) {
-                var5 = g.a(var4, -128, param2);
-            }
-            if (-4 == (ge.field_d ^ -1)) {
-                var5 = og.a(var4, param2, (byte) 60, var4);
-            }
-            if (var5 != null) {
-                String var6 = (String) null;
-                gf.a(var4, 0, false, (String) (var5), 2, (String) null);
-                he.field_Xb = null;
-                ge.field_d = -1;
-                if (param0 != 7377) {
-                    qg.a(119);
-                    return;
-                }
-                return;
-            }
+            return;
+          }
         }
         he.field_Xb = null;
         ge.field_d = -1;
         if (param0 != 7377) {
-            qg.a(119);
-            return;
+          qg.a(119);
+          return;
         }
     }
 
@@ -103,14 +104,12 @@ final class qg extends l {
         field_l = null;
         field_j = null;
         field_m = null;
-        if (param0 < 104) {
-          field_j = (mg[]) null;
-          field_r = null;
-          return;
-        } else {
+        if (param0 >= 104) {
           field_r = null;
           return;
         }
+        field_j = (mg[]) null;
+        field_r = null;
     }
 
     qg() {
@@ -118,18 +117,18 @@ final class qg extends l {
 
     final void a(int[] param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         try {
-            this.field_q = param4;
-            this.field_p = param0;
-            this.field_v = param5;
-            this.field_o = param1;
-            this.field_i = param2;
-            this.field_t = param7;
-            if (param3 != -45) {
-                this.field_k = 79;
-            }
-            this.field_k = param6;
+          this.field_q = param4;
+          this.field_p = param0;
+          this.field_v = param5;
+          this.field_o = param1;
+          this.field_i = param2;
+          this.field_t = param7;
+          if (param3 != -45) {
+            this.field_k = 79;
+          }
+          this.field_k = param6;
         } catch (RuntimeException runtimeException) {
-            throw kg.a((Throwable) ((Object) runtimeException), "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw kg.a((Throwable) ((Object) runtimeException), "qg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

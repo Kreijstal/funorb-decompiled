@@ -73,9 +73,9 @@ class qc extends hf {
 
     final void a(String param0, boolean param1) {
         int var8 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         long var3_long = 0L;
         RuntimeException var3 = null;
@@ -92,6 +92,7 @@ class qc extends hf {
           var5 = 0L;
           var7 = param0.length();
           for (var8 = 19; var8 >= 0; var8--) {
+            boolean decompiledFrameRemainder0 = true;
             var3_long = var3_long * 38L;
             if (var7 > var8) {
               var9 = param0.charAt(var8);
@@ -107,16 +108,14 @@ class qc extends hf {
               } else {
                 var3_long = var3_long + 1L;
               }
-              if (var8 != 10) {
-                continue;
-              }
+              decompiledFrameRemainder0 = (var8 == 10);
             } else {
-              if (var8 != 10) {
-                continue;
-              }
+              decompiledFrameRemainder0 = (var8 == 10);
             }
-            var5 = var3_long;
-            var3_long = 0L;
+            if (decompiledFrameRemainder0) {
+              var5 = var3_long;
+              var3_long = 0L;
+            }
           }
           this.a(-109, var3_long);
           this.a(-47, var5);
@@ -124,14 +123,14 @@ class qc extends hf {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_28_0 = var3;
-          stackIn_28_1 = new StringBuilder().append("qc.IA(");
+          stackIn_30_0 = var3;
+          stackIn_30_1 = new StringBuilder().append("qc.IA(");
           if (param0 == null) {
-            stackIn_29_2 = "null";
+            stackIn_31_2 = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            stackIn_31_2 = "{...}";
           }
-          throw t.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param1).append(')').toString());
+          throw t.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param1).append(')').toString());
         }
     }
 
